@@ -219,3 +219,8 @@ a {
   background: var(--aviso-suave);
   font-size: var(--texto-sm);
 }
+.sinal-negativo {
+  color: var(--texto-negativo);
+  display: inline-block;
+  transform: scaleX(1.5);
+}
