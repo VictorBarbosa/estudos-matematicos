@@ -1,0 +1,104 @@
+<app-topico-layout
+  titulo="Noção intuitiva de limite"
+  descricao="Aproximar-se de um valor sem necessariamente alcançá-lo."
+  topicoId="nocao-intuitiva-de-limite"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Caso a investigar">
+      @for (opcao of casos; track opcao.id) {
+        <button
+          type="button"
+          [class.ativo]="caso().id === opcao.id"
+          [attr.aria-pressed]="caso().id === opcao.id"
+          (click)="selecionar($index)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula
+        [tex]="'\\lim_{x \\to ' + caso().ponto + '} ' + caso().tex"
+        [bloco]="true"
+      />
+      <p class="observacao">{{ caso().explicacao }}</p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Pela esquerda</span>
+        <strong>{{ formatar(lateral().esquerda) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Pela direita</span>
+        <strong>{{ formatar(lateral().direita) }}</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Limite</span>
+        <strong>{{ lateral().existe ? formatar(lateral().valor!) : 'não existe' }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">f({{ caso().ponto }})</span>
+        <strong>{{ valorNoPonto() === null ? 'indefinido' : formatar(valorNoPonto()!) }}</strong>
+        <span class="legenda">valor no ponto</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Aproximando-se dos dois lados</h2>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th scope="col">x (pela esquerda)</th>
+            <th scope="col">f(x)</th>
+            <th scope="col">x (pela direita)</th>
+            <th scope="col">f(x)</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (linha of tabela(); track linha.xEsquerda) {
+            <tr>
+              <td>{{ formatar(linha.xEsquerda) }}</td>
+              <td>{{ formatar(linha.fxEsquerda) }}</td>
+              <td>{{ formatar(linha.xDireita) }}</td>
+              <td>{{ formatar(linha.fxDireita) }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <p class="observacao">
+        Note que o ponto exato nunca aparece na tabela — e não precisa. O limite se decide
+        apenas pelo que acontece ao redor dele.
+      </p>
+    </section>
+
+    <section>
+      <h2>O gráfico</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      @if (valorNoPonto() === null && lateral().existe) {
+        <p class="observacao">
+          O círculo vazado marca o ponto que falta: a curva chega até ali vinda dos dois
+          lados, mas o valor em si não está definido.
+        </p>
+      }
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

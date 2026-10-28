@@ -1,0 +1,20 @@
+<div class="campo" [attr.data-estado]="estado()">
+  <label [attr.for]="id">{{ rotulo() }}</label>
+  <input
+    #entrada
+    type="text"
+    inputmode="text"
+    autocomplete="off"
+    spellcheck="false"
+    [attr.id]="id"
+    [attr.placeholder]="ajuda()"
+    [attr.aria-describedby]="ajuda() ? id + '-ajuda' : null"
+    [value]="valor()"
+    [disabled]="bloqueado()"
+    (input)="valor.set($any($event.target).value)"
+    (keydown.enter)="enviar.emit()"
+  />
+  @if (ajuda(); as texto) {
+    <p class="ajuda" [attr.id]="id + '-ajuda'">{{ texto }}</p>
+  }
+</div>

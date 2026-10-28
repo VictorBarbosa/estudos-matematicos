@@ -1,0 +1,103 @@
+<app-topico-layout
+  titulo="Porcentagem"
+  descricao="Porcentagem como fração de cem, o fator multiplicativo e por que variações sucessivas não se somam."
+  topicoId="porcentagem"
+>
+  <div explorar class="explorar">
+    <section class="controles">
+      <app-controle-parametro
+        [(valor)]="valor"
+        rotulo="Valor inicial"
+        [min]="10"
+        [max]="1000"
+        [passo]="10"
+      />
+      <app-controle-parametro
+        [(valor)]="primeira"
+        rotulo="1ª variação (%)"
+        [min]="-90"
+        [max]="100"
+        [passo]="5"
+      />
+      <app-controle-parametro
+        [(valor)]="segunda"
+        rotulo="2ª variação (%)"
+        [min]="-90"
+        [max]="100"
+        [passo]="5"
+        dica="Use 0 para aplicar só a primeira."
+      />
+    </section>
+
+    <section class="resumo">
+      <div class="cartao-valor">
+        <span class="rotulo">{{ primeira() }}% de {{ formatar(valor()) }}</span>
+        <strong class="numero">{{ formatar(parte().resultado) }}</strong>
+        <span class="legenda">apenas a parte</span>
+      </div>
+      <div class="cartao-valor">
+        <span class="rotulo">Após a 1ª variação</span>
+        <strong class="numero">{{ formatar(umaVariacao().resultado) }}</strong>
+        <span class="legenda">fator {{ formatar(intermediario() / valor()) }}</span>
+      </div>
+      <div class="cartao-valor destaque">
+        <span class="rotulo">Valor final</span>
+        <strong class="numero">{{ formatar(sucessivas().resultado) }}</strong>
+        <span class="legenda">fator acumulado {{ formatar(fatorAcumulado()) }}</span>
+      </div>
+    </section>
+
+    <section class="armadilha">
+      <h2>Por que não se somam os percentuais</h2>
+      <p class="observacao">
+        Somar as duas variações daria
+        <strong>{{ somaIngenua() }}%</strong>, mas a variação real é de
+        <strong>{{ formatar(variacaoEquivalente()) }}%</strong>. A diferença aparece porque a
+        segunda variação incide sobre o valor já alterado, não sobre o original.
+      </p>
+      <app-formula
+        [tex]="
+          '(1 ' +
+          (primeira() >= 0 ? '+' : '-') +
+          ' \\frac{' +
+          (primeira() < 0 ? -primeira() : primeira()) +
+          '}{100})' +
+          ' \\times (1 ' +
+          (segunda() >= 0 ? '+' : '-') +
+          ' \\frac{' +
+          (segunda() < 0 ? -segunda() : segunda()) +
+          '}{100})' +
+          ' = ' +
+          fatorAcumulado().toFixed(4)
+        "
+        [bloco]="true"
+      />
+    </section>
+
+    <section class="grafico">
+      <h2>O caminho do valor</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [pontos]="pontos()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="340"
+      />
+      <p class="observacao">
+        A linha tracejada é o valor original. Repare que, com +10% e depois −10%, a linha cheia
+        termina abaixo dela.
+      </p>
+    </section>
+
+    <section class="passos">
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="sucessivas().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

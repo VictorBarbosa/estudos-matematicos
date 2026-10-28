@@ -1,0 +1,94 @@
+<app-topico-layout
+  titulo="MMC e MDC"
+  descricao="Fatoração em primos, o algoritmo de Euclides e onde cada um dos dois é usado."
+  topicoId="mmc-mdc"
+>
+  <div explorar class="explorar">
+    <section class="controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Primeiro número" [min]="2" [max]="200" />
+      <app-controle-parametro [(valor)]="b" rotulo="Segundo número" [min]="2" [max]="200" />
+    </section>
+
+    <section class="resumo">
+      <div class="cartao-valor">
+        <span class="rotulo">Fatorações</span>
+        <app-formula [tex]="a() + ' = ' + fatoracaoA()" [bloco]="true" />
+        <app-formula [tex]="b() + ' = ' + fatoracaoB()" [bloco]="true" />
+      </div>
+      <div class="cartao-valor destaque">
+        <span class="rotulo">MDC</span>
+        <strong class="numero">{{ mdc() }}</strong>
+        <span class="legenda">o maior que divide os dois</span>
+      </div>
+      <div class="cartao-valor destaque">
+        <span class="rotulo">MMC</span>
+        <strong class="numero">{{ mmc() }}</strong>
+        <span class="legenda">o menor múltiplo dos dois</span>
+      </div>
+    </section>
+
+    <section class="multiplos">
+      <h2>Onde os múltiplos se encontram</h2>
+      <p class="observacao">
+        Cada marca é um múltiplo. O MMC é simplesmente o primeiro ponto em que as duas sequências
+        coincidem — não há nada de misterioso nele.
+      </p>
+      <app-math-plot
+        [dominio]="dominioMultiplos()"
+        [marcas]="marcasMultiplos()"
+        [descricao]="descricaoMultiplos()"
+        [mostrarEixoY]="false"
+        [altura]="170"
+      />
+    </section>
+
+    <section class="divisores">
+      <h2>Divisores comuns</h2>
+      <p class="observacao">
+        Estes são todos os números que dividem {{ a() }} e {{ b() }} ao mesmo tempo. O MDC é o
+        último da lista.
+      </p>
+      <ul class="lista-divisores">
+        @for (divisor of divisoresComuns(); track divisor) {
+          <li [class.maior]="divisor === mdc()">{{ divisor }}</li>
+        }
+      </ul>
+    </section>
+
+    <section class="passos">
+      <h2>
+        Passo a passo
+        <span class="alternador" role="group" aria-label="Qual demonstração mostrar">
+          <button
+            type="button"
+            [class.ativo]="foco() === 'mdc'"
+            [attr.aria-pressed]="foco() === 'mdc'"
+            (click)="definirFoco('mdc')"
+          >
+            MDC
+          </button>
+          <button
+            type="button"
+            [class.ativo]="foco() === 'mmc'"
+            [attr.aria-pressed]="foco() === 'mmc'"
+            (click)="definirFoco('mmc')"
+          >
+            MMC
+          </button>
+        </span>
+      </h2>
+      <app-passo-a-passo [passos]="passosEmFoco()" />
+    </section>
+
+    <section class="relacao">
+      <h2>A relação entre os dois</h2>
+      <app-passo-a-passo [passos]="relacao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

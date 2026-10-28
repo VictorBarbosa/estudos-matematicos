@@ -1,0 +1,104 @@
+<app-topico-layout
+  titulo="Ângulos e triângulos"
+  descricao="Soma dos ângulos, congruência e a desigualdade triangular."
+  topicoId="angulos-e-triangulos"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="lados"
+        rotulo="Lados do polígono"
+        [min]="3"
+        [max]="12"
+        dica="As diagonais tracejadas mostram em quantos triângulos ele se reparte."
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="somaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Triângulos formados</span>
+        <strong>{{ lados() - 2 }}</strong>
+        <span class="legenda">n − 2</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Soma dos internos</span>
+        <strong>{{ analise().resultado }}°</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Cada interno (regular)</span>
+        <strong>{{ formatar(anguloInterno()) }}°</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Cada externo</span>
+        <strong>{{ formatar(anguloExterno()) }}°</strong>
+        <span class="legenda">somam 360°, sempre</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A decomposição em triângulos</h2>
+      <app-math-plot
+        [dominio]="dominioPoligono()"
+        [segmentos]="segmentosPoligono()"
+        [pontos]="pontosPoligono()"
+        [mostrarGrade]="false"
+        descricao="Polígono regular com as diagonais traçadas de um único vértice."
+        [altura]="360"
+      />
+      <p class="observacao">
+        As diagonais partem todas de um mesmo vértice e sempre produzem
+        <strong>{{ lados() - 2 }}</strong> triângulos — dois menos que o número de lados.
+        Nenhum ângulo do polígono é cortado em dois nem contado duas vezes, e é por isso que
+        a soma é exatamente (n − 2) · 180°.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Três medidas fecham um triângulo?</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="a" rotulo="Lado a" [min]="1" [max]="12" />
+        <app-controle-parametro [(valor)]="b" rotulo="Lado b" [min]="1" [max]="12" />
+        <app-controle-parametro [(valor)]="c" rotulo="Lado c" [min]="1" [max]="12" />
+      </div>
+
+      @if (valido()) {
+        <p class="observacao">
+          Classificação: <strong>{{ rotuloClassificacao() }}</strong>
+        </p>
+        <app-formula [tex]="comparacaoTex()" [bloco]="true" />
+        <app-math-plot
+          [dominio]="dominioTriangulo()"
+          [segmentos]="segmentosTriangulo()"
+          [mostrarGrade]="false"
+          descricao="Triângulo construído a partir dos três lados escolhidos."
+          [altura]="320"
+        />
+        <p class="observacao">
+          Comparar o quadrado do maior lado com a soma dos outros dois basta para saber o tipo
+          de ângulo — nenhum transferidor necessário. É a lei dos cossenos escondida: quando a
+          igualdade vale, o cosseno zerou, e o ângulo é reto.
+        </p>
+      } @else {
+        <p class="aviso">
+          Esses três lados não fecham um triângulo: o maior alcança ou passa a soma dos outros
+          dois, então os vértices ficam alinhados ou nem se encontram.
+        </p>
+      }
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

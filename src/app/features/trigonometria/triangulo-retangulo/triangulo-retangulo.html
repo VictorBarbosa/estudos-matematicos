@@ -1,0 +1,143 @@
+<app-topico-layout
+  titulo="Triângulo retângulo"
+  descricao="Seno, cosseno e tangente como razões entre lados, e a relação com Pitágoras."
+  topicoId="triangulo-retangulo"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="angulo"
+        rotulo="Ângulo θ (graus)"
+        [min]="5"
+        [max]="85"
+      />
+      <app-controle-parametro
+        [(valor)]="hipotenusa"
+        rotulo="Hipotenusa"
+        [min]="1"
+        [max]="20"
+      />
+    </section>
+
+    <section class="seletor-pills" role="group" aria-label="Ângulos notáveis">
+      @for (notavel of notaveis; track notavel.graus) {
+        @if (notavel.graus > 0 && notavel.graus < 90) {
+          <button
+            type="button"
+            [class.ativo]="anguloValido() === notavel.graus"
+            [attr.aria-pressed]="anguloValido() === notavel.graus"
+            (click)="usarNotavel(notavel.graus)"
+          >
+            {{ notavel.graus }}°
+          </button>
+        }
+      }
+    </section>
+
+    <section class="desenho-e-valores">
+      <figure class="desenho">
+        <svg
+          [attr.viewBox]="'0 0 ' + LARGURA + ' ' + ALTURA"
+          role="img"
+          [attr.aria-label]="descricaoTriangulo()"
+        >
+          <!-- O triângulo -->
+          <polygon
+            class="corpo"
+            [attr.points]="
+              vertices().a.x + ',' + vertices().a.y + ' ' +
+              vertices().b.x + ',' + vertices().b.y + ' ' +
+              vertices().c.x + ',' + vertices().c.y
+            "
+          />
+
+          <!-- Marca do ângulo reto -->
+          <polyline
+            class="angulo-reto"
+            [attr.points]="
+              (vertices().b.x - 14) + ',' + vertices().b.y + ' ' +
+              (vertices().b.x - 14) + ',' + (vertices().b.y - 14) + ' ' +
+              vertices().b.x + ',' + (vertices().b.y - 14)
+            "
+          />
+
+          <!-- Lados destacados -->
+          <line
+            class="lado adjacente"
+            [attr.x1]="vertices().a.x"
+            [attr.y1]="vertices().a.y"
+            [attr.x2]="vertices().b.x"
+            [attr.y2]="vertices().b.y"
+          />
+          <line
+            class="lado oposto"
+            [attr.x1]="vertices().b.x"
+            [attr.y1]="vertices().b.y"
+            [attr.x2]="vertices().c.x"
+            [attr.y2]="vertices().c.y"
+          />
+          <line
+            class="lado hipotenusa"
+            [attr.x1]="vertices().a.x"
+            [attr.y1]="vertices().a.y"
+            [attr.x2]="vertices().c.x"
+            [attr.y2]="vertices().c.y"
+          />
+
+          <text class="rotulo" [attr.x]="vertices().a.x + 26" [attr.y]="vertices().a.y - 8">
+            θ = {{ anguloValido() }}°
+          </text>
+        </svg>
+
+        <figcaption class="legenda">
+          <span class="item"><span class="amostra hip"></span>hipotenusa {{ hipotenusa() }}</span>
+          <span class="item"><span class="amostra opo"></span>oposto {{ formatar(catetos().oposto) }}</span>
+          <span class="item"><span class="amostra adj"></span>adjacente {{ formatar(catetos().adjacente) }}</span>
+        </figcaption>
+      </figure>
+
+      <div class="valores">
+        <div class="indicador">
+          <span class="rotulo">sen θ</span>
+          <strong>{{ formatar(razoes().seno) }}</strong>
+          <span class="legenda">oposto ÷ hipotenusa</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">cos θ</span>
+          <strong>{{ formatar(razoes().cosseno) }}</strong>
+          <span class="legenda">adjacente ÷ hipotenusa</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">tg θ</span>
+          <strong>{{ formatar(razoes().tangente) }}</strong>
+          <span class="legenda">oposto ÷ adjacente</span>
+        </div>
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">sen² + cos²</span>
+          <strong>{{ formatar(identidade()) }}</strong>
+          <span class="legenda">sempre 1</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section>
+      <h2>Por que as razões não dependem do tamanho</h2>
+      <p class="observacao">
+        Aumente a hipotenusa e observe: os catetos crescem, mas sen θ, cos θ e tg θ não mudam.
+        Triângulos com o mesmo ângulo são semelhantes, e semelhança preserva as razões entre
+        os lados. É isso que permite que essas razões sejam funções do ângulo apenas.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -1,0 +1,108 @@
+<app-topico-layout
+  titulo="Trajetória balística"
+  descricao="Lançamento oblíquo: alcance, altura máxima e tempo de voo."
+  topicoId="trajetoria-balistica"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="velocidade"
+        rotulo="Velocidade inicial (m/s)"
+        [min]="5"
+        [max]="60"
+      />
+      <app-controle-parametro [(valor)]="angulo" rotulo="Ângulo (graus)" [min]="5" [max]="85" />
+      <app-controle-parametro [(valor)]="altura" rotulo="Altura inicial (m)" [min]="0" [max]="50" />
+      <app-controle-parametro
+        [(valor)]="anguloComparacao"
+        rotulo="Ângulo de comparação"
+        [min]="5"
+        [max]="85"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Alcance</span>
+        <strong>{{ formatar(dados().alcance) }} m</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Altura máxima</span>
+        <strong>{{ formatar(dados().alturaMaxima) }} m</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Tempo de voo</span>
+        <strong>{{ formatar(dados().tempoDeVoo) }} s</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Componentes</span>
+        <strong>{{ formatar(dados().vx) }} / {{ formatar(dados().vy) }}</strong>
+        <span class="legenda">horizontal / vertical</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A trajetória</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        A curva é uma parábola — a mesma função quadrática do ensino médio, agora saindo da
+        física. Compare dois ângulos complementares, como 30° e 60°: com altura inicial zero,
+        eles alcançam exatamente a mesma distância, por caminhos bem diferentes.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>O ângulo de alcance máximo</h2>
+      <div class="indicadores">
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">Ângulo ótimo</span>
+          <strong>{{ anguloOtimo().graus }}°</strong>
+          <span class="legenda">alcance de {{ formatar(anguloOtimo().alcance) }} m</span>
+        </div>
+      </div>
+      <button type="button" class="usar-otimo" (click)="usarOtimo()">
+        Usar o ângulo ótimo
+      </button>
+      <p class="observacao">
+        @if (altura() === 0) {
+          Com lançamento do chão, o ótimo é exatamente 45°: aumentar o ângulo ganha tempo de
+          voo mas perde velocidade horizontal, e 45° equilibra os dois efeitos.
+        } @else {
+          Lançando de {{ altura() }} m de altura, o ângulo ótimo cai abaixo de 45° — o tempo
+          extra de queda já vem de graça, então compensa privilegiar a velocidade horizontal.
+        }
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Onde o currículo se encontra</h2>
+      <app-formula
+        [tex]="'y = h_0 + x\\tan\\theta - \\frac{g}{2v_0^{2}\\cos^{2}\\theta}x^{2}'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Esta única equação usa trigonometria para decompor a velocidade, função quadrática
+        para descrever a curva e derivada para encontrar o ponto mais alto. É o tópico em que
+        quase tudo o que veio antes se junta.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

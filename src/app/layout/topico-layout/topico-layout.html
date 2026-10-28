@@ -1,0 +1,47 @@
+<article class="topico">
+  <app-painel-etapa [topicoId]="topicoId()" />
+
+  <header class="cabecalho">
+    <h1>{{ titulo() }}</h1>
+    <p class="descricao">{{ descricao() }}</p>
+  </header>
+
+  <div class="abas" role="tablist" aria-label="Seções do tópico" (keydown)="aoTeclar($event)">
+    @for (nome of abas; track nome) {
+      <button
+        #botaoAba
+        type="button"
+        role="tab"
+        class="aba"
+        [id]="'aba-' + nome"
+        [attr.aria-controls]="'painel-' + nome"
+        [attr.aria-selected]="aba() === nome"
+        [attr.tabindex]="aba() === nome ? 0 : -1"
+        [class.ativa]="aba() === nome"
+        (click)="selecionar(nome)"
+      >
+        {{ rotulos[nome] }}
+      </button>
+    }
+  </div>
+
+  <div
+    id="painel-explorar"
+    role="tabpanel"
+    aria-labelledby="aba-explorar"
+    [hidden]="aba() !== 'explorar'"
+  >
+    <ng-content select="[explorar]" />
+  </div>
+
+  <div
+    id="painel-treinar"
+    role="tabpanel"
+    aria-labelledby="aba-treinar"
+    [hidden]="aba() !== 'treinar'"
+    class="painel-treino"
+  >
+    <ng-content select="[treinar]" />
+    <app-painel-progresso [topicoId]="topicoId()" />
+  </div>
+</article>

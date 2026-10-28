@@ -1,0 +1,126 @@
+:host {
+  display: block;
+}
+
+.circulo {
+  margin: 0;
+  background: var(--plot-fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  padding: var(--esp-2);
+}
+
+svg {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+.eixos line {
+  stroke: var(--plot-eixo);
+  stroke-width: 1.5;
+}
+
+.borda {
+  fill: none;
+  stroke: var(--borda-forte);
+  stroke-width: 2;
+}
+
+.reta-tangente {
+  stroke: var(--serie-3);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+  opacity: 0.7;
+}
+
+.arco {
+  fill: none;
+  stroke: var(--aviso);
+  stroke-width: 2.5;
+}
+
+.raio {
+  stroke: var(--acento);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.prolongamento {
+  stroke-dasharray: 4 4;
+  opacity: 0.8;
+}
+
+.projecao {
+  stroke-width: 3.5;
+  stroke-linecap: round;
+
+  &.cosseno {
+    stroke: var(--serie-1);
+  }
+
+  &.seno {
+    stroke: var(--serie-2);
+  }
+}
+
+.marca {
+  stroke: var(--superficie);
+  stroke-width: 2;
+
+  &.ponto {
+    fill: var(--acento);
+  }
+
+  &.tangente {
+    fill: var(--serie-3);
+  }
+}
+
+.rotulo-eixo {
+  fill: var(--plot-rotulo);
+  font-size: 13px;
+  font-family: var(--fonte-base);
+}
+
+.legenda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--esp-2) var(--esp-4);
+  margin-top: var(--esp-2);
+  font-size: var(--texto-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--texto-suave);
+
+  .item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--esp-2);
+  }
+
+  .amostra {
+    width: 0.875rem;
+    height: 0.25rem;
+    border-radius: var(--raio-pill);
+
+    &.cos {
+      background: var(--serie-1);
+    }
+
+    &.sen {
+      background: var(--serie-2);
+    }
+
+    &.tan {
+      background: var(--serie-3);
+    }
+  }
+
+  .quadrante {
+    font-weight: 600;
+    color: var(--acento);
+  }
+}

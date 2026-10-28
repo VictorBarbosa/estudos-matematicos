@@ -1,0 +1,79 @@
+<app-topico-layout
+  titulo="Potenciação e radiciação"
+  descricao="Propriedades das potências, expoentes negativos e raízes como potências de expoente fracionário."
+  topicoId="potenciacao-radiciacao"
+>
+  <div explorar class="explorar">
+    <section class="propriedades-seletor" role="group" aria-label="Propriedade a demonstrar">
+      @for (opcao of propriedades; track opcao.valor) {
+        <button
+          type="button"
+          [class.ativo]="propriedade() === opcao.valor"
+          [attr.aria-pressed]="propriedade() === opcao.valor"
+          (click)="definirPropriedade(opcao.valor)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="controles">
+      <app-controle-parametro [(valor)]="base" rotulo="Base (a)" [min]="2" [max]="10" />
+      <app-controle-parametro [(valor)]="m" rotulo="Expoente m" [min]="0" [max]="6" />
+      <app-controle-parametro [(valor)]="n" rotulo="Expoente n" [min]="0" [max]="6" />
+    </section>
+
+    <section class="resultado">
+      <app-formula [tex]="potenciaTex() + ' = ' + valor()" [bloco]="true" />
+    </section>
+
+    <section class="passos">
+      <h2>Por que a propriedade funciona</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <section class="grafico">
+      <h2>A potência como ponto de uma curva</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoCurva()"
+        [altura]="340"
+      />
+      <p class="observacao">
+        Expoentes negativos ficam à esquerda do eixo e dão valores entre 0 e 1 — é o mesmo gráfico
+        que reaparece na função exponencial.
+      </p>
+    </section>
+
+    <section class="radiciacao">
+      <h2>Simplificando raízes</h2>
+      <app-controle-parametro
+        [(valor)]="radicando"
+        rotulo="Radicando"
+        [min]="2"
+        [max]="400"
+        dica="Experimente 72, 50 ou 144."
+      />
+
+      <app-formula [tex]="'\\sqrt{' + radicando() + '} = ' + raizTex()" [bloco]="true" />
+
+      <p class="observacao">
+        @if (raizEhExata()) {
+          O radicando é um quadrado perfeito, então a raiz é exata e nada permanece sob o radical.
+        } @else {
+          Os fatores que aparecem em pares saem do radical; os demais permanecem.
+        }
+      </p>
+
+      <app-passo-a-passo [passos]="raiz().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

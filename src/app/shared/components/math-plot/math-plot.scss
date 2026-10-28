@@ -1,0 +1,110 @@
+:host {
+  display: block;
+}
+
+.plot {
+  margin: 0;
+  background: var(--plot-fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  padding: var(--esp-2);
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.grade line {
+  stroke: var(--plot-grade);
+  stroke-width: 1;
+}
+
+.eixos line {
+  stroke: var(--plot-eixo);
+  stroke-width: 1.5;
+}
+
+.marcacoes {
+  line {
+    stroke: var(--plot-eixo);
+    stroke-width: 1;
+  }
+
+  text {
+    fill: var(--plot-rotulo);
+    font-size: 13px;
+    font-family: var(--fonte-base);
+  }
+}
+
+.marcas-destacadas {
+  line {
+    stroke-width: 2.5;
+    stroke-linecap: round;
+  }
+
+  text {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--fonte-base);
+  }
+}
+
+.curva {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.area {
+  opacity: 0.18;
+}
+
+.retangulo {
+  opacity: 0.35;
+  stroke: var(--superficie);
+  stroke-width: 1;
+}
+
+.segmento {
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.pontos {
+  circle {
+    stroke-width: 2;
+  }
+
+  text {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--fonte-base);
+  }
+}
+
+.legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2) var(--esp-4);
+  margin: var(--esp-2) 0 var(--esp-1);
+  padding-inline: var(--esp-2);
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+
+  .item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--esp-2);
+  }
+
+  .amostra {
+    width: 0.875rem;
+    height: 0.25rem;
+    border-radius: var(--raio-pill);
+  }
+}

@@ -1,0 +1,77 @@
+<app-topico-layout
+  titulo="Inequações"
+  descricao="Desigualdades, a inversão do sinal e o conjunto solução representado na reta."
+  topicoId="inequacoes"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="a"
+        rotulo="Coeficiente a"
+        [min]="-8"
+        [max]="8"
+        dica="Experimente valores negativos."
+      />
+      <app-controle-parametro [(valor)]="b" rotulo="Termo b" [min]="-15" [max]="15" />
+      <app-controle-parametro [(valor)]="c" rotulo="Lado direito" [min]="-15" [max]="15" />
+    </section>
+
+    <section class="seletor-pills" role="group" aria-label="Relação de desigualdade">
+      @for (opcao of relacoes; track opcao.valor) {
+        <button
+          type="button"
+          [class.ativo]="relacao() === opcao.valor"
+          [attr.aria-pressed]="relacao() === opcao.valor"
+          [attr.aria-label]="'Relação ' + opcao.rotulo"
+          (click)="definirRelacao(opcao.valor)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="enunciadoTex()" [bloco]="true" />
+      <app-formula [tex]="'S = ' + solucao().intervaloTex" [bloco]="true" />
+    </section>
+
+    @if (houveInversao()) {
+      <p class="aviso">
+        O coeficiente de x é negativo, então ao dividir por ele o sentido da desigualdade se
+        <strong>inverte</strong>. Repare que o símbolo na solução não é o mesmo do enunciado.
+      </p>
+    }
+
+    <section>
+      <h2>O conjunto solução na reta</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">
+        A seta marca a região em que a reta cheia fica
+        {{ relacao() === '>' || relacao() === '>=' ? 'acima' : 'abaixo' }} da tracejada. A bolinha é
+        {{
+          solucao().inclusiva
+            ? 'preenchida, porque a fronteira entra na solução'
+            : 'vazada, porque a fronteira fica de fora'
+        }}.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

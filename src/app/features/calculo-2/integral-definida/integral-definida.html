@@ -1,0 +1,68 @@
+<app-topico-layout
+  titulo="Integral definida"
+  descricao="Área com sinal e as propriedades que simplificam o cálculo."
+  topicoId="integral-definida"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x" [min]="-4" [max]="4" />
+      <app-controle-parametro [(valor)]="c" rotulo="Termo constante" [min]="-4" [max]="4" />
+      <app-controle-parametro [(valor)]="de" rotulo="Limite inferior" [min]="-4" [max]="2" />
+      <app-controle-parametro [(valor)]="ate" rotulo="Limite superior" [min]="-1" [max]="5" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula
+        [tex]="'\\int_{' + de() + '}^{' + ate() + '} \\left(' + funcao().paraTex() + '\\right) dx = ' + formatar(comSinal())"
+        [bloco]="true"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Integral (área com sinal)</span>
+        <strong>{{ formatar(comSinal()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Área geométrica</span>
+        <strong>{{ formatar(areaGeometrica()) }}</strong>
+        <span class="legenda">somando os módulos</span>
+      </div>
+    </section>
+
+    @if (difereDaArea()) {
+      <p class="aviso">
+        As duas medidas diferem: parte da região está abaixo do eixo e entra na integral com
+        sinal negativo. Para a área geométrica é preciso integrar o módulo da função.
+      </p>
+    }
+
+    <section>
+      <h2>A região sombreada</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [areas]="areas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        Mova os limites para que parte da curva fique abaixo do eixo e compare os dois
+        números acima. Uma integral pode dar zero com uma região bem visível — basta que as
+        partes acima e abaixo se cancelem.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

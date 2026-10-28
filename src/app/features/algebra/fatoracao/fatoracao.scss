@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+.tipo {
+  margin-top: var(--esp-1);
+  text-align: center;
+  font-weight: 600;
+  color: var(--acento);
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}

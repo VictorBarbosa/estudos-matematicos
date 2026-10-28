@@ -1,0 +1,84 @@
+<app-topico-layout
+  titulo="Juros compostos"
+  descricao="Crescimento exponencial aplicado a dinheiro ao longo do tempo."
+  topicoId="juros-compostos"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="capital"
+        rotulo="Capital inicial (R$)"
+        [min]="100"
+        [max]="10000"
+        [passo]="100"
+      />
+      <app-controle-parametro [(valor)]="taxa" rotulo="Taxa por período (%)" [min]="1" [max]="25" />
+      <app-controle-parametro [(valor)]="periodos" rotulo="Períodos" [min]="1" [max]="40" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula
+        [tex]="'M = ' + capital() + '\\left(1 + ' + (taxa() / 100) + '\\right)^{' + periodos() + '} = ' + formatar(montante())"
+        [bloco]="true"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Montante (compostos)</span>
+        <strong>R$ {{ formatar(montante()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Se fosse simples</span>
+        <strong>R$ {{ formatar(simples()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Diferença</span>
+        <strong>R$ {{ formatar(diferenca()) }}</strong>
+        <span class="legenda">juro que rendeu sobre juro</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Dobra em</span>
+        <strong>{{ formatar(tempoParaDobrar()) }}</strong>
+        <span class="legenda">regra de 72: {{ formatar(regraDe72()) }}</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Exponencial contra linear</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        Nos primeiros períodos as duas curvas quase se confundem — é por isso que a diferença
+        parece desprezível no começo. Aumente o número de períodos e veja a exponencial se
+        descolar: é o mesmo fenômeno da função exponencial, agora com dinheiro.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>A regra de 72</h2>
+      <app-formula [tex]="'n = \\frac{\\ln 2}{\\ln(1+i)} \\approx \\frac{72}{i_{\\%}}'" [bloco]="true" />
+      <p class="observacao">
+        Dividir 72 pela taxa em porcentagem estima quantos períodos o capital leva para
+        dobrar. Compare acima com o valor exato: para taxas pequenas a aproximação é boa, e
+        ela se afasta conforme a taxa cresce.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

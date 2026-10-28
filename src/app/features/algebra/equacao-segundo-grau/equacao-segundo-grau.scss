@@ -1,0 +1,96 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.explorar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+section h2 {
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.controles {
+  @include cartao;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--esp-5);
+  padding: var(--esp-5);
+}
+
+.painel,
+.fatorada,
+.girard {
+  @include cartao;
+  padding: var(--esp-4) var(--esp-5);
+}
+
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-3);
+}
+
+.indicador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-1);
+  padding: var(--esp-3);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  background: var(--superficie-2);
+  text-align: center;
+
+  .rotulo {
+    font-size: var(--texto-xs);
+    color: var(--texto-tenue);
+  }
+
+  strong {
+    font-size: var(--texto-lg);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* O sinal do discriminante é marcado por cor e por borda. */
+  &[data-sinal='positivo'] {
+    border-color: var(--acerto);
+    strong {
+      color: var(--acerto);
+    }
+  }
+
+  &[data-sinal='zero'] {
+    border-color: var(--aviso);
+    strong {
+      color: var(--aviso);
+    }
+  }
+
+  &[data-sinal='negativo'] {
+    border-color: var(--erro);
+    strong {
+      color: var(--erro);
+    }
+  }
+}
+
+.observacao {
+  max-width: 70ch;
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.grafico .observacao {
+  margin-top: var(--esp-2);
+}

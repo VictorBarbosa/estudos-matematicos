@@ -1,0 +1,141 @@
+<app-topico-layout
+  titulo="Estática e torque"
+  descricao="Equilíbrio de forças e de momentos, centro de massa e estabilidade."
+  topicoId="estatica-e-torque"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="forca" rotulo="Força (N)" [min]="10" [max]="200" />
+      <app-controle-parametro
+        [(valor)]="braco"
+        rotulo="Braço r (m)"
+        [min]="0.2"
+        [max]="4"
+        [passo]="0.2"
+      />
+      <app-controle-parametro
+        [(valor)]="angulo"
+        rotulo="Ângulo com o braço (°)"
+        [min]="0"
+        [max]="180"
+        [passo]="5"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="torqueTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>Só a componente perpendicular gira</h2>
+      <app-math-plot
+        [dominio]="dominioTorque()"
+        [segmentos]="segmentos()"
+        [mostrarGrade]="false"
+        descricao="Braço, força aplicada e sua componente perpendicular."
+        [altura]="340"
+      />
+      <p class="observacao">
+        A seta verde é a parte da força que realmente produz rotação. Leve o ângulo a 0° ou
+        180° e ela desaparece: a força passa a apontar ao longo do braço, comprimindo-o sem
+        girar nada.
+      </p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Torque</span>
+        <strong>{{ formatar(analiseTorque().resultado) }} N·m</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Torque máximo possível</span>
+        <strong>{{ formatar(torqueMaximo()) }} N·m</strong>
+        <span class="legenda">a 90°</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Aproveitamento</span>
+        <strong>{{ percentual(aproveitamento()) }}</strong>
+        <span class="legenda">sen θ</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analiseTorque().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>A alavanca</h2>
+      <div class="grade-controles">
+        <app-controle-parametro
+          [(valor)]="pesoEsquerda"
+          rotulo="Força à esquerda (N)"
+          [min]="10"
+          [max]="400"
+        />
+        <app-controle-parametro
+          [(valor)]="distanciaEsquerda"
+          rotulo="Distância à esquerda (m)"
+          [min]="0.1"
+          [max]="3"
+          [passo]="0.1"
+        />
+        <app-controle-parametro
+          [(valor)]="forcaDireita"
+          rotulo="Força à direita (N)"
+          [min]="5"
+          [max]="400"
+        />
+      </div>
+
+      <app-passo-a-passo [passos]="alavanca().passos" />
+      <p class="observacao">
+        Reduza a força da direita e veja a distância necessária crescer na mesma proporção.
+        Nada de energia é criado: o que se ganha em força se perde em deslocamento. Essa é a
+        troca que toda máquina simples oferece.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Centro de massa</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="massa1" rotulo="Massa em x = 0 (kg)" [min]="1" [max]="20" />
+        <app-controle-parametro [(valor)]="massa2" rotulo="Massa em x = 10 (kg)" [min]="1" [max]="20" />
+      </div>
+
+      <app-math-plot
+        [dominio]="dominioBarra()"
+        [segmentos]="segmentosBarra()"
+        [pontos]="pontosCentro()"
+        [mostrarEixoY]="false"
+        [mostrarGrade]="false"
+        descricao="Barra com dois corpos e o centro de massa marcado."
+        [altura]="220"
+      />
+
+      <app-passo-a-passo [passos]="centroMassa().passos" />
+      <p class="observacao">
+        O centro de massa fica em <strong>x = {{ formatar(centroMassa().resultado) }} m</strong>,
+        sempre mais perto do corpo mais pesado. Um corpo tomba quando a vertical por esse ponto
+        sai da base de apoio — é por isso que veículos largos e baixos são estáveis, e que um
+        foguete alto e fino não se equilibra sem controle ativo.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Força resultante nula não garante equilíbrio</h2>
+      <app-formula [tex]="'\\sum \\vec{F} = 0 \\quad \\text{E} \\quad \\sum \\vec{\\tau} = 0'" [bloco]="true" />
+      <p class="observacao">
+        Duas forças iguais e opostas, aplicadas em pontos diferentes, têm resultante zero e
+        ainda assim giram o corpo. É o binário. Por isso o equilíbrio estático exige
+        <strong>duas</strong> condições, e esquecer a segunda é o erro mais frequente aqui.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

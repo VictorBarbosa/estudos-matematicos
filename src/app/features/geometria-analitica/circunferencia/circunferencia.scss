@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+.posicao {
+  margin-top: var(--esp-2);
+  font-weight: 600;
+
+  /* Reforçado pelo texto da própria frase, não só pela cor. */
+  &[data-posicao='dentro'] {
+    color: var(--acerto);
+  }
+
+  &[data-posicao='sobre'] {
+    color: var(--aviso);
+  }
+
+  &[data-posicao='fora'] {
+    color: var(--erro);
+  }
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}

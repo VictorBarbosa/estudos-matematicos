@@ -1,0 +1,112 @@
+<app-topico-layout
+  titulo="Leis dos senos e dos cossenos"
+  descricao="Resolver triângulos que não têm ângulo reto."
+  topicoId="lei-senos-cossenos"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="b" rotulo="Lado b" [min]="2" [max]="14" />
+      <app-controle-parametro [(valor)]="c" rotulo="Lado c" [min]="2" [max]="14" />
+      <app-controle-parametro
+        [(valor)]="anguloA"
+        rotulo="Ângulo A entre eles (graus)"
+        [min]="10"
+        [max]="170"
+        [passo]="5"
+        dica="Passe por 90° e veja a correção zerar."
+      />
+    </section>
+
+    <section class="desenho-e-valores">
+      <figure class="desenho">
+        <svg
+          [attr.viewBox]="'0 0 ' + LARGURA + ' ' + ALTURA"
+          role="img"
+          [attr.aria-label]="descricao()"
+        >
+          <polygon
+            class="corpo"
+            [attr.points]="
+              vertices().a.x + ',' + vertices().a.y + ' ' +
+              vertices().c.x + ',' + vertices().c.y + ' ' +
+              vertices().b.x + ',' + vertices().b.y
+            "
+          />
+          <line
+            class="lado c"
+            [attr.x1]="vertices().a.x"
+            [attr.y1]="vertices().a.y"
+            [attr.x2]="vertices().c.x"
+            [attr.y2]="vertices().c.y"
+          />
+          <line
+            class="lado b"
+            [attr.x1]="vertices().a.x"
+            [attr.y1]="vertices().a.y"
+            [attr.x2]="vertices().b.x"
+            [attr.y2]="vertices().b.y"
+          />
+          <line
+            class="lado a"
+            [attr.x1]="vertices().b.x"
+            [attr.y1]="vertices().b.y"
+            [attr.x2]="vertices().c.x"
+            [attr.y2]="vertices().c.y"
+          />
+          <text class="rotulo" [attr.x]="vertices().a.x + 18" [attr.y]="vertices().a.y - 10">
+            A = {{ anguloA() }}°
+          </text>
+        </svg>
+        <figcaption class="legenda">
+          <span class="item"><span class="amostra lado-b"></span>b = {{ b() }}</span>
+          <span class="item"><span class="amostra lado-c"></span>c = {{ c() }}</span>
+          <span class="item"><span class="amostra lado-a"></span>a = {{ formatar(ladoA()) }}</span>
+        </figcaption>
+      </figure>
+
+      <div class="valores">
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">Terceiro lado</span>
+          <strong>{{ formatar(ladoA()) }}</strong>
+          <span class="legenda">lei dos cossenos</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Só Pitágoras daria</span>
+          <strong>{{ formatar(pitagorasIngenuo()) }}</strong>
+          <span class="legenda">erro de {{ formatar(pitagorasIngenuo() - ladoA()) }}</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Termo de correção</span>
+          <strong>{{ formatar(correcao()) }}</strong>
+          <span class="legenda">ângulo {{ tipoDeAngulo() }}</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Outros ângulos</span>
+          <strong>{{ formatar(outrosAngulos().b) }}° / {{ formatar(outrosAngulos().c) }}°</strong>
+          <span class="legenda">lei dos senos</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="painel">
+      <h2>Pitágoras como caso particular</h2>
+      <app-formula [tex]="'a^{2} = b^{2} + c^{2} - 2bc\\cos A'" [bloco]="true" />
+      <p class="observacao">
+        Leve o ângulo a exatamente 90°: o cosseno zera, o termo de correção some e a fórmula
+        vira o teorema de Pitágoras. Abaixo de 90° a correção encurta o lado oposto; acima,
+        alonga.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

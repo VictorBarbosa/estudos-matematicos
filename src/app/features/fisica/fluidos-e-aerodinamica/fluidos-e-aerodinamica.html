@@ -1,0 +1,163 @@
+<app-topico-layout
+  titulo="Fluidos e aerodinâmica"
+  descricao="Pressão, empuxo, equação de Bernoulli e de onde vem a sustentação."
+  topicoId="fluidos-e-aerodinamica"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>Pressão com a profundidade</h2>
+      <app-controle-parametro
+        [(valor)]="profundidade"
+        rotulo="Profundidade (m)"
+        [min]="0"
+        [max]="100"
+      />
+
+      <app-formula [tex]="pressaoTex()" [bloco]="true" />
+
+      <app-math-plot
+        [dominio]="dominioPressao()"
+        [curvas]="curvasPressao()"
+        [pontos]="pontosPressao()"
+        descricao="Pressão total em função da profundidade na água."
+        [altura]="320"
+      />
+
+      <app-passo-a-passo [passos]="pressao().passos" />
+      <p class="observacao">
+        A cada 10 m de água, a pressão aumenta cerca de 1 atmosfera. E note o que a fórmula
+        <em>não</em> contém: a forma do recipiente. Um tubo fino e um lago com a mesma
+        profundidade exercem a mesma pressão no fundo.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Flutua ou afunda?</h2>
+      <div class="grade-controles">
+        <app-controle-parametro
+          [(valor)]="volumeLitros"
+          rotulo="Volume (litros)"
+          [min]="1"
+          [max]="100"
+        />
+      </div>
+
+      <div class="seletor-pills" role="group" aria-label="Material do corpo">
+        @for (material of materiais; track material.nome) {
+          <button
+            type="button"
+            [class.ativo]="densidadeCorpo() === material.densidade"
+            (click)="escolherMaterial(material.densidade)"
+          >
+            {{ material.nome }}
+          </button>
+        }
+      </div>
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">Empuxo</span>
+          <strong>{{ formatar(empuxo().resultado.empuxo) }} N</strong>
+          <span class="legenda">peso da água deslocada</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Peso do corpo</span>
+          <strong>{{ formatar(empuxo().resultado.peso) }} N</strong>
+        </div>
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">Resultado</span>
+          <strong>{{ empuxo().resultado.flutua ? 'flutua' : 'afunda' }}</strong>
+          <span class="legenda">
+            @if (empuxo().resultado.flutua) {
+              {{ percentual(empuxo().resultado.fracaoSubmersa) }} submerso
+            } @else {
+              mais denso que a água
+            }
+          </span>
+        </div>
+      </div>
+
+      <app-passo-a-passo [passos]="empuxo().passos" />
+      <p class="observacao">
+        Mude o volume e repare: o veredito não muda. O volume aparece tanto no empuxo quanto no
+        peso e se cancela — só as <strong>densidades</strong> decidem. É por isso que um navio
+        de aço flutua: sua densidade média, contando o ar interno, é menor que a da água.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Sustentação de uma asa</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="areaAsa" rotulo="Área da asa (m²)" [min]="5" [max]="120" />
+        <app-controle-parametro
+          [(valor)]="velocidadeInferior"
+          rotulo="Velocidade sob a asa (m/s)"
+          [min]="20"
+          [max]="100"
+        />
+        <app-controle-parametro
+          [(valor)]="velocidadeSuperior"
+          rotulo="Velocidade sobre a asa (m/s)"
+          [min]="20"
+          [max]="140"
+        />
+        <app-controle-parametro
+          [(valor)]="massaAviao"
+          rotulo="Massa do avião (kg)"
+          [min]="100"
+          [max]="3000"
+          [passo]="50"
+        />
+      </div>
+
+      <app-formula [tex]="sustentacaoTex()" [bloco]="true" />
+
+      <app-math-plot
+        [dominio]="dominioSustentacao()"
+        [curvas]="curvasSustentacao()"
+        [pontos]="pontosSustentacao()"
+        descricao="Sustentação em função da velocidade de voo, comparada ao peso do avião."
+        [altura]="360"
+      />
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">Sustentação</span>
+          <strong>{{ formatar(sustentacao().resultado) }} N</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Peso</span>
+          <strong>{{ formatar(pesoAviao()) }} N</strong>
+        </div>
+        <div class="indicador" [attr.data-destaque]="voa()">
+          <span class="rotulo">Voa?</span>
+          <strong>{{ voa() ? 'sim' : 'ainda não' }}</strong>
+          <span class="legenda">precisa L ≥ peso</span>
+        </div>
+      </div>
+
+      <app-passo-a-passo [passos]="sustentacao().passos" />
+      <p class="observacao">
+        A curva é uma parábola, não uma reta: a sustentação cresce com o <strong>quadrado</strong>
+        da velocidade. Onde ela cruza a linha tracejada do peso está a velocidade mínima de
+        decolagem — abaixo dela, nenhuma asa levanta aquele avião.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Bernoulli por trás disso</h2>
+      <app-passo-a-passo [passos]="bernoulli().passos" />
+      <p class="observacao">
+        Toda a sustentação se resume a isto: o ar mais rápido sobre a asa está a uma pressão
+        menor que o ar mais lento sob ela. A diferença, multiplicada pela área, levanta o
+        avião — e a física por baixo é apenas conservação de energia.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -1,0 +1,48 @@
+<section class="painel">
+  <h3>{{ topicoId() ? 'Seu desempenho neste tópico' : 'Seu progresso' }}</h3>
+
+  @if (respondidos() === 0) {
+    <p class="vazio">
+      Nenhum exercício respondido ainda. O desempenho aparece aqui assim que você treinar.
+    </p>
+  } @else {
+    <div class="resumo">
+      <div class="dominio" [attr.aria-label]="'Aproveitamento de ' + percentual() + ' por cento'">
+        @for (cheio of pontos(); track $index) {
+          <span class="ponto" [class.cheio]="cheio"></span>
+        }
+        <strong class="percentual">{{ percentual() }}%</strong>
+      </div>
+
+      <dl class="numeros">
+        <div>
+          <dt>Acertos</dt>
+          <dd>{{ acertos() }} de {{ respondidos() }}</dd>
+        </div>
+        @if (melhorSequencia(); as sequencia) {
+          <div>
+            <dt>Melhor sequência</dt>
+            <dd>{{ sequencia }}</dd>
+          </div>
+        }
+      </dl>
+    </div>
+  }
+
+  @if (paraRevisar().length > 0) {
+    <div class="revisar">
+      <p class="aviso">Vale revisar:</p>
+      <ul>
+        @for (conceito of paraRevisar(); track conceito.id) {
+          <li>
+            <app-botao-teoria [conceito]="conceito.id" [discreto]="true" />
+            <span class="contagem">
+              {{ conceito.erros }} {{ conceito.erros === 1 ? 'erro' : 'erros' }} em
+              {{ conceito.total }}
+            </span>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+</section>

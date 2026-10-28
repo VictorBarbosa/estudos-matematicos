@@ -1,0 +1,36 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.tabela-aproximacao {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+
+  th,
+  td {
+    padding: var(--esp-2) var(--esp-3);
+    text-align: right;
+    border-bottom: 1px solid var(--borda);
+  }
+
+  th:first-child,
+  td:first-child {
+    text-align: left;
+  }
+
+  thead th {
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  tbody tr:last-child {
+    background: var(--superficie-2);
+    font-weight: 600;
+  }
+}

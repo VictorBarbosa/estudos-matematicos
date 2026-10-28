@@ -1,0 +1,133 @@
+@use 'mixins' as *;
+
+.dialogo {
+  width: min(44rem, calc(100vw - 2rem));
+  max-height: min(85vh, 54rem);
+  padding: 0;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-lg);
+  background: var(--superficie);
+  color: var(--texto);
+  box-shadow: var(--sombra-3);
+  overflow: hidden;
+
+  &::backdrop {
+    background: oklch(20% 0.02 265 / 0.45);
+    backdrop-filter: blur(2px);
+  }
+
+  &[open] {
+    display: flex;
+  }
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+  width: 100%;
+  max-height: inherit;
+  overflow-y: auto;
+  padding: var(--esp-5);
+}
+
+.cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--esp-4);
+  padding-bottom: var(--esp-4);
+  border-bottom: 1px solid var(--borda);
+
+  h2 {
+    font-size: var(--texto-xl);
+  }
+}
+
+.resumo {
+  margin-top: var(--esp-1);
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.fechar {
+  @include botao-sutil;
+  flex-shrink: 0;
+  padding: var(--esp-2);
+  border-radius: var(--raio-pill);
+}
+
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+
+  h3 {
+    font-size: var(--texto-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--texto-tenue);
+  }
+
+  p {
+    font-size: var(--texto-md);
+    color: var(--texto);
+  }
+}
+
+.formula {
+  background: var(--superficie-2);
+  border-radius: var(--raio-md);
+  padding: var(--esp-2) var(--esp-4);
+}
+
+.legenda {
+  font-size: var(--texto-sm) !important;
+  color: var(--texto-suave) !important;
+  text-align: center;
+}
+
+.enunciado {
+  font-style: italic;
+  color: var(--texto-suave) !important;
+}
+
+.relacionados {
+  padding-top: var(--esp-4);
+  border-top: 1px solid var(--borda);
+
+  h3 {
+    font-size: var(--texto-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--texto-tenue);
+    margin-bottom: var(--esp-2);
+  }
+}
+
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+}
+
+.relacionado {
+  @include botao-secundario;
+  border-radius: var(--raio-pill);
+}
+
+@media (max-width: 40rem) {
+  .dialogo {
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 92vh;
+    margin: auto 0 0;
+    border-radius: var(--raio-lg) var(--raio-lg) 0 0;
+  }
+
+  .conteudo {
+    padding: var(--esp-4);
+  }
+}

@@ -1,0 +1,6 @@
+@if (html(); as conteudo) {
+  <span class="conteudo" [class.bloco]="bloco()" [innerHTML]="conteudo"></span>
+} @else {
+  <!-- Enquanto o KaTeX carrega, o LaTeX cru já informa o leitor. -->
+  <span class="carregando" [class.bloco]="bloco()">{{ tex() }}</span>
+}

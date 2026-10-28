@@ -1,0 +1,109 @@
+:host {
+  display: block;
+}
+
+.etapa {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--esp-3) var(--esp-5);
+  padding: var(--esp-3) var(--esp-5);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  background: var(--superficie-2);
+
+  &[data-concluida='true'] {
+    border-color: var(--acerto);
+  }
+}
+
+.identificacao {
+  display: flex;
+  flex-direction: column;
+
+  .numero {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .de {
+    color: var(--texto-suave);
+    font-weight: 400;
+  }
+
+  .area {
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+  }
+}
+
+.estado {
+  flex: 1 1 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+
+  p {
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+
+  .restante {
+    color: var(--texto-suave);
+  }
+
+  .vencida {
+    color: var(--acerto);
+    font-weight: 600;
+  }
+
+  .selo {
+    margin-right: var(--esp-1);
+  }
+}
+
+.marcadores {
+  display: flex;
+  gap: var(--esp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    width: 2.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: var(--borda);
+
+    &.cheio {
+      background: var(--acerto);
+    }
+  }
+}
+
+.avancar {
+  padding: var(--esp-2) var(--esp-4);
+  border-radius: var(--raio-sm);
+  background: var(--acento);
+  color: var(--acento-contraste);
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    filter: brightness(1.08);
+  }
+}
+
+.trancada {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.9375rem;
+}
+
+.aviso-livre {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.8125rem;
+}

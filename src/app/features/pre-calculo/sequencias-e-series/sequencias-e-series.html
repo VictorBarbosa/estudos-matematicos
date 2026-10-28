@@ -1,0 +1,100 @@
+<app-topico-layout
+  titulo="Sequências e séries"
+  descricao="Progressões, somas e o que significa somar infinitas parcelas."
+  topicoId="sequencias-e-series"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Tipo de progressão">
+      <button
+        type="button"
+        [class.ativo]="!geometrica()"
+        [attr.aria-pressed]="!geometrica()"
+        (click)="alternarTipo(false)"
+      >
+        Aritmética (soma)
+      </button>
+      <button
+        type="button"
+        [class.ativo]="geometrica()"
+        [attr.aria-pressed]="geometrica()"
+        (click)="alternarTipo(true)"
+      >
+        Geométrica (multiplica)
+      </button>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="primeiro" rotulo="Primeiro termo" [min]="1" [max]="20" />
+      <app-controle-parametro
+        [(valor)]="razaoEmDecimos"
+        [rotulo]="geometrica() ? 'Razão (em décimos)' : 'Razão'"
+        [min]="geometrica() ? 1 : -9"
+        [max]="geometrica() ? 25 : 9"
+        [dica]="geometrica() ? 'Razão atual: ' + formatar(razao()) : undefined"
+      />
+      <app-controle-parametro [(valor)]="quantidade" rotulo="Quantos termos" [min]="3" [max]="15" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="formulaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Último termo</span>
+        <strong>{{ formatar(termos()[termos().length - 1]!) }}</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Soma dos {{ quantidade() }}</span>
+        <strong>{{ formatar(soma().resultado) }}</strong>
+      </div>
+      @if (infinita(); as serie) {
+        <div class="indicador">
+          <span class="rotulo">Soma infinita</span>
+          <strong>
+            {{ serie.resultado === null ? 'diverge' : formatar(serie.resultado) }}
+          </strong>
+          <span class="legenda">{{ converge() ? '|q| < 1' : '|q| ≥ 1' }}</span>
+        </div>
+      }
+    </section>
+
+    <section>
+      <h2>Termos e somas acumuladas</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [pontos]="pontos()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">
+        Os pontos claros são os termos; os destacados são as somas parciais.
+        @if (converge()) {
+          A linha tracejada é o limite: repare que as somas se aproximam dela sem nunca
+          ultrapassá-la, mesmo somando infinitas parcelas.
+        } @else {
+          Sem convergência, as somas parciais crescem indefinidamente.
+        }
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo da soma</h2>
+      <app-passo-a-passo [passos]="soma().passos" />
+    </section>
+
+    @if (infinita(); as serie) {
+      <section>
+        <h2>A soma infinita</h2>
+        <app-passo-a-passo [passos]="serie.passos" />
+      </section>
+    }
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -1,0 +1,45 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.explorar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+section h2 {
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.conversao,
+.geratriz {
+  @include cartao;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-5);
+}
+
+.controles-linha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--esp-4);
+}
+
+.observacao {
+  max-width: 70ch;
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.reta .observacao {
+  margin-bottom: var(--esp-3);
+}

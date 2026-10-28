@@ -1,0 +1,141 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.explorar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+section h2 {
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.seletor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 3px;
+  background: var(--superficie-2);
+  border-radius: var(--raio-pill);
+
+  button {
+    @include botao-base;
+    flex: 1;
+    min-width: 10rem;
+    border-radius: var(--raio-pill);
+    color: var(--texto-suave);
+
+    &.ativo {
+      background: var(--superficie);
+      color: var(--texto);
+      box-shadow: var(--sombra-1);
+    }
+  }
+}
+
+.controles {
+  @include cartao;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--esp-5);
+  padding: var(--esp-5);
+}
+
+.identidade {
+  @include cartao;
+  padding: var(--esp-3) var(--esp-5);
+  text-align: center;
+  font-size: var(--texto-lg);
+}
+
+.lado-a-lado {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-3);
+}
+
+.caixa {
+  padding: var(--esp-3);
+  border-radius: var(--raio-md);
+  border: 1.5px solid var(--borda);
+  text-align: center;
+
+  .etiqueta {
+    display: block;
+    margin-bottom: var(--esp-1);
+    font-size: var(--texto-xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* Certo e errado se distinguem por borda e rótulo, não apenas por cor. */
+  &.errada {
+    border-color: var(--erro);
+    background: var(--erro-suave);
+
+    .etiqueta {
+      color: var(--erro);
+    }
+  }
+
+  &.certa {
+    border-color: var(--acerto);
+    background: var(--acerto-suave);
+
+    .etiqueta {
+      color: var(--acerto);
+    }
+  }
+}
+
+.quadrado {
+  display: grid;
+  grid-template-columns: var(--prop-a) var(--prop-b);
+  grid-template-rows: var(--prop-a) var(--prop-b);
+  width: min(100%, 22rem);
+  aspect-ratio: 1;
+  border: 2px solid var(--borda-forte);
+  border-radius: var(--raio-sm);
+  overflow: hidden;
+}
+
+.celula {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--borda-forte);
+  font-size: var(--texto-sm);
+  font-weight: 600;
+
+  &.aa {
+    background: color-mix(in oklab, var(--serie-1) 22%, transparent);
+  }
+
+  &.ab {
+    background: color-mix(in oklab, var(--serie-2) 30%, transparent);
+  }
+
+  &.bb {
+    background: color-mix(in oklab, var(--serie-3) 22%, transparent);
+  }
+}
+
+.observacao {
+  max-width: 70ch;
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.geometria .observacao {
+  margin-bottom: var(--esp-3);
+}

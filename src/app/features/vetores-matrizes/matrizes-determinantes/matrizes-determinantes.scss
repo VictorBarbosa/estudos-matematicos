@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+section > .aviso {
+  margin-top: var(--esp-3);
+}
+
+.painel .grade-controles {
+  margin-bottom: var(--esp-3);
+}

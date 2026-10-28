@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+.circulo-e-valores {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: var(--esp-4);
+  align-items: start;
+}
+
+.valores {
+  display: grid;
+  gap: var(--esp-2);
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+@media (max-width: 52rem) {
+  .circulo-e-valores {
+    grid-template-columns: 1fr;
+  }
+
+  .valores {
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  }
+}

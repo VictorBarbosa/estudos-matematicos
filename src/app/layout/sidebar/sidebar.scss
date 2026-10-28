@@ -1,0 +1,106 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+  padding: var(--esp-4);
+}
+
+.area {
+  h2 {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--esp-2);
+    margin-bottom: var(--esp-2);
+    font-size: var(--texto-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--texto-tenue);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+}
+
+.contagem {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+a,
+.pendente,
+.trancado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-2);
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: var(--raio-sm);
+  font-size: var(--texto-sm);
+  text-decoration: none;
+}
+
+a {
+  color: var(--texto);
+  transition: background var(--transicao);
+
+  &:hover {
+    background: var(--superficie-2);
+  }
+
+  /* O item ativo é marcado também pelo peso da fonte, não só pela cor. */
+  &.ativo {
+    background: var(--acento-suave);
+    color: var(--acento);
+    font-weight: 650;
+  }
+}
+
+.pendente,
+.trancado {
+  color: var(--texto-tenue);
+  cursor: default;
+}
+
+.etiqueta {
+  flex-shrink: 0;
+  padding: 1px var(--esp-2);
+  border-radius: var(--raio-pill);
+  background: var(--superficie-2);
+  font-size: 0.6875rem;
+}
+
+.aproveitamento {
+  flex-shrink: 0;
+  font-size: var(--texto-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--texto-tenue);
+}
+
+.cadeado {
+  flex-shrink: 0;
+  font-size: 0.6875rem;
+  /* O cadeado é redundante com o estado visual: some do leitor de tela pelo
+     aria-label do próprio elemento. */
+  opacity: 0.7;
+}
+
+.vencido {
+  flex-shrink: 0;
+  color: var(--acerto);
+  font-weight: 700;
+}

@@ -1,0 +1,84 @@
+<app-topico-layout
+  titulo="Seno, cosseno e tangente"
+  descricao="Como as três razões se relacionam e por que a tangente tem assíntotas."
+  topicoId="seno-cosseno-tangente"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="angulo"
+        rotulo="Ângulo θ (graus)"
+        [min]="0"
+        [max]="360"
+        [passo]="1"
+        dica="Aproxime-se de 90° e veja a tangente disparar."
+      />
+    </section>
+
+    <section class="circulo-e-valores">
+      <app-circulo-trigonometrico [anguloGraus]="angulo()" [mostrarTangente]="true" />
+
+      <div class="valores">
+        <div class="indicador">
+          <span class="rotulo">sen θ</span>
+          <strong>{{ formatar(seno()) }}</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">cos θ</span>
+          <strong>{{ formatar(cosseno()) }}</strong>
+        </div>
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">tg θ</span>
+          <strong>{{ tangente() === null ? 'não existe' : formatar(tangente()!) }}</strong>
+          <span class="legenda">sen ÷ cos</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Complementar</span>
+          <strong>{{ complementar() }}°</strong>
+          <span class="legenda">sen θ = cos({{ complementar() }}°)</span>
+        </div>
+      </div>
+    </section>
+
+    @if (perto90()) {
+      <p class="aviso">
+        O cosseno está muito perto de zero, e por isso a tangente dispara. Exatamente onde o
+        cosseno zera, a divisão é impossível — é ali que o gráfico tem uma assíntota.
+      </p>
+    }
+
+    <section>
+      <h2>As três ao longo de uma volta</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        Seno e cosseno oscilam entre −1 e 1 e nunca saem desse intervalo, porque são
+        coordenadas de um ponto num círculo de raio 1. A tangente, por ser um quociente,
+        não tem limite — e se parte em ramos onde o cosseno zera.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>A relação fundamental entre elas</h2>
+      <app-formula
+        [tex]="'\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} \\qquad \\sin^{2}\\theta + \\cos^{2}\\theta = 1'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Conhecendo uma das razões e o quadrante, as outras duas saem destas duas igualdades —
+        não é preciso tabela nem calculadora para relacioná-las.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

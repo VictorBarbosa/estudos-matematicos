@@ -1,0 +1,43 @@
+@if (topico().pronto && liberado()) {
+  <a class="cartao pronto" [class.atual]="eAtual()" [routerLink]="rota()">
+    <h3>
+      @if (etapa(); as etapa) {
+        <span class="numero">{{ etapa.numero }}.</span>
+      }
+      {{ topico().titulo }}
+    </h3>
+    <p>{{ topico().descricao }}</p>
+    <footer>
+      @if (concluido()) {
+        <span class="selo vencido">Etapa vencida ✓</span>
+      } @else if (eAtual()) {
+        <span class="selo atual">Sua vez</span>
+      } @else if (percentual() !== null) {
+        <span class="selo progresso">{{ percentual() }}% de acerto</span>
+      } @else {
+        <span class="selo">Disponível</span>
+      }
+    </footer>
+  </a>
+} @else if (topico().pronto) {
+  <div class="cartao trancado">
+    <h3>
+      @if (etapa(); as etapa) {
+        <span class="numero">{{ etapa.numero }}.</span>
+      }
+      {{ topico().titulo }}
+    </h3>
+    <p>{{ topico().descricao }}</p>
+    <footer>
+      <span class="selo">🔒 Vença as etapas anteriores</span>
+    </footer>
+  </div>
+} @else {
+  <div class="cartao pendente">
+    <h3>{{ topico().titulo }}</h3>
+    <p>{{ topico().descricao }}</p>
+    <footer>
+      <span class="selo">Em breve</span>
+    </footer>
+  </div>
+}

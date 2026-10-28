@@ -1,0 +1,86 @@
+<app-topico-layout
+  titulo="Aplicações da derivada"
+  descricao="Máximos e mínimos, concavidade e problemas de otimização."
+  topicoId="aplicacoes-da-derivada"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x³" [min]="-2" [max]="2" />
+      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x²" [min]="-4" [max]="4" />
+      <app-controle-parametro [(valor)]="c" rotulo="Coeficiente de x" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="d" rotulo="Termo constante" [min]="-5" [max]="5" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+      <app-formula [tex]="derivadaTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>Onde a tangente fica horizontal</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        Repare na curva tracejada da derivada: ela cruza o eixo exatamente onde a função tem
+        um extremo. E o sinal da segunda derivada ali decide se é máximo ou mínimo.
+      </p>
+    </section>
+
+    @if (criticos().length > 0) {
+      <section class="painel">
+        <h2>Pontos críticos encontrados</h2>
+        <ul class="criticos">
+          @for (critico of criticos(); track critico.x) {
+            <li>
+              <strong>x = {{ formatar(critico.x) }}</strong>
+              <span class="tipo" [attr.data-tipo]="critico.tipo">
+                {{ rotuloTipo[critico.tipo] }}
+              </span>
+              <span class="valor">f = {{ formatar(critico.y) }}</span>
+            </li>
+          }
+        </ul>
+      </section>
+    }
+
+    <section class="painel">
+      <h2>Otimização: o problema da cerca</h2>
+      <app-controle-parametro
+        [(valor)]="perimetro"
+        rotulo="Metros de cerca disponíveis"
+        [min]="20"
+        [max]="400"
+        [passo]="4"
+      />
+
+      <div class="indicadores">
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">Área máxima</span>
+          <strong>{{ formatar(cerca().area) }} m²</strong>
+          <span class="legenda">quadrado de lado {{ formatar(cerca().lado) }} m</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Se fosse mais estreito</span>
+          <strong>{{ formatar(cerca().alternativa.area) }} m²</strong>
+          <span class="legenda">largura {{ formatar(cerca().alternativa.largura) }} m</span>
+        </div>
+      </div>
+
+      <p class="observacao">
+        Com perímetro fixo, a área máxima é sempre a do quadrado — e a derivada prova isso em
+        três linhas. Qualquer retângulo mais alongado cerca menos terreno com a mesma cerca.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

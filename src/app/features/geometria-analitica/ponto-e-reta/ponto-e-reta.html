@@ -1,0 +1,90 @@
+<app-topico-layout
+  titulo="Ponto e reta"
+  descricao="Distância, ponto médio, equação da reta e posições relativas."
+  topicoId="ponto-e-reta"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="ax" rotulo="A: x" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="ay" rotulo="A: y" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="bx" rotulo="B: x" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="by" rotulo="B: y" [min]="-10" [max]="10" />
+    </section>
+
+    @if (coincidentes()) {
+      <p class="aviso">
+        Os dois pontos estão no mesmo lugar. Mova um deles: dois pontos coincidentes não
+        determinam uma reta.
+      </p>
+    } @else {
+      <section class="destaque-formula">
+        <app-formula [tex]="equacaoTex()" [bloco]="true" />
+      </section>
+
+      <section class="indicadores">
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">Distância AB</span>
+          <strong>{{ formatar(distancia().resultado) }}</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Ponto médio</span>
+          <strong>({{ formatar(medio().x) }}, {{ formatar(medio().y) }})</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Coeficiente angular</span>
+          <strong>
+            {{
+              reta()!.resultado.vertical
+                ? 'não existe'
+                : formatar(reta()!.resultado.coeficienteAngular!)
+            }}
+          </strong>
+          <span class="legenda">Δy ÷ Δx</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>O triângulo por trás da fórmula</h2>
+        <app-math-plot
+          [dominio]="dominio()"
+          [curvas]="curvas()"
+          [pontos]="pontos()"
+          [segmentos]="segmentos()"
+          [descricao]="descricaoGrafico()"
+          [altura]="400"
+        />
+        <p class="observacao">
+          Os segmentos tracejados são Δx e Δy. A distância AB é a hipotenusa desse triângulo —
+          por isso a fórmula é apenas Pitágoras com coordenadas.
+        </p>
+      </section>
+
+      <section class="painel">
+        <h2>Posição em relação a outra reta</h2>
+        <app-controle-parametro
+          [(valor)]="mComparacao"
+          rotulo="Inclinação da reta de comparação"
+          [min]="-5"
+          [max]="5"
+        />
+        <p class="observacao relacao">{{ relacao() }}</p>
+      </section>
+
+      <section>
+        <h2>Passo a passo da distância</h2>
+        <app-passo-a-passo [passos]="distancia().passos" />
+      </section>
+
+      <section>
+        <h2>Passo a passo da equação</h2>
+        <app-passo-a-passo [passos]="reta()!.passos" />
+      </section>
+    }
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

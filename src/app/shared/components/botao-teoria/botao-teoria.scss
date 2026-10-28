@@ -1,0 +1,32 @@
+@use 'mixins' as *;
+
+:host {
+  display: inline-flex;
+}
+
+.botao {
+  @include botao-base;
+  background: var(--acento-suave);
+  color: var(--acento);
+  font-size: var(--texto-sm);
+
+  &:hover {
+    background: color-mix(in oklab, var(--acento-suave) 70%, var(--acento) 30%);
+  }
+
+  &.discreto {
+    background: transparent;
+    padding-inline: var(--esp-1);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+
+    &:hover {
+      background: var(--acento-suave);
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}

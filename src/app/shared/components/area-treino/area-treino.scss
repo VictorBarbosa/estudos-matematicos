@@ -1,0 +1,210 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.treino {
+  @include cartao;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+  padding: var(--esp-5);
+}
+
+.barra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-4);
+}
+
+.niveis {
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  background: var(--superficie-2);
+  border-radius: var(--raio-pill);
+}
+
+/* Uma única expansão do mixin para os três botões do componente. */
+.nivel,
+.principal,
+.secundario {
+  @include botao-base;
+}
+
+.nivel {
+  padding: var(--esp-1) var(--esp-3);
+  border-radius: var(--raio-pill);
+  color: var(--texto-suave);
+  font-size: var(--texto-sm);
+
+  &.ativo {
+    background: var(--superficie);
+    color: var(--texto);
+    box-shadow: var(--sombra-1);
+  }
+}
+
+.placar {
+  display: flex;
+  gap: var(--esp-5);
+  margin: 0;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  dt {
+    font-size: var(--texto-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--texto-tenue);
+  }
+
+  dd {
+    margin: 0;
+    font-size: var(--texto-xl);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .certo {
+    color: var(--acerto);
+  }
+
+  .errado {
+    color: var(--erro);
+  }
+}
+
+.enunciado {
+  background: var(--superficie-2);
+  border-radius: var(--raio-md);
+  padding: var(--esp-4);
+  text-align: center;
+
+  p {
+    font-size: var(--texto-sm);
+    color: var(--texto-suave);
+  }
+
+  .dica {
+    font-size: var(--texto-xs);
+    color: var(--texto-tenue);
+  }
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-3);
+}
+
+.principal {
+  background: var(--acento);
+  color: var(--acento-contraste);
+
+  &:hover:not(:disabled) {
+    background: var(--acento-forte);
+  }
+}
+
+.secundario {
+  background: transparent;
+  color: var(--texto-suave);
+
+  &:hover:not(:disabled) {
+    background: var(--superficie-2);
+    color: var(--texto);
+  }
+}
+
+.veredito {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--esp-2);
+  padding: var(--esp-4);
+  border-radius: var(--raio-md);
+  border-left: 4px solid var(--borda-forte);
+  background: var(--superficie-2);
+
+  &[data-veredito='correto'] {
+    background: var(--acerto-suave);
+    border-left-color: var(--acerto);
+  }
+
+  &[data-veredito='incorreto'] {
+    background: var(--erro-suave);
+    border-left-color: var(--erro);
+  }
+
+  &[data-veredito='invalido'] {
+    background: var(--aviso-suave);
+    border-left-color: var(--aviso);
+  }
+}
+
+.mensagem {
+  font-weight: 650;
+}
+
+.diagnostico,
+.gabarito {
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.resolucao h3 {
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.conceitos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--esp-2);
+  padding-top: var(--esp-4);
+  border-top: 1px solid var(--borda);
+
+  .etiqueta {
+    font-size: var(--texto-xs);
+    color: var(--texto-tenue);
+  }
+}
+
+.desbloqueio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-3);
+  padding: var(--esp-3) var(--esp-4);
+  border: 1px solid var(--acerto);
+  border-radius: var(--raio-md);
+  background: var(--acerto-suave);
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.rumo-ao-desbloqueio {
+  margin: 0;
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}

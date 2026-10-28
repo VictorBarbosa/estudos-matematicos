@@ -1,0 +1,111 @@
+<app-topico-layout
+  titulo="Áreas de figuras planas"
+  descricao="De onde vem cada fórmula de área, e por que a razão de áreas é k²."
+  topicoId="areas-de-figuras-planas"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Figura">
+      @for (opcao of figuras; track opcao) {
+        <button
+          type="button"
+          [class.ativo]="figura() === opcao"
+          [attr.aria-pressed]="figura() === opcao"
+          (click)="selecionar(opcao)"
+        >
+          {{ nomeFigura[opcao] }}
+        </button>
+      }
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="base" rotulo="Base" [min]="2" [max]="14" />
+      <app-controle-parametro [(valor)]="altura" rotulo="Altura" [min]="1" [max]="12" />
+      @if (ehTrapezio()) {
+        <app-controle-parametro
+          [(valor)]="baseMenor"
+          rotulo="Base menor"
+          [min]="1"
+          [max]="13"
+        />
+      }
+      @if (usaInclinacao()) {
+        <app-controle-parametro
+          [(valor)]="inclinacao"
+          rotulo="Inclinação do topo"
+          [min]="-6"
+          [max]="6"
+          dica="Desloca o topo sem mudar base nem altura."
+        />
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="areaTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>A figura e seu retângulo</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [segmentos]="todosOsSegmentos()"
+        [mostrarGrade]="true"
+        descricao="Figura escolhida, sobreposta ao retângulo de mesma base e altura."
+        [altura]="380"
+      />
+      @if (usaInclinacao()) {
+        <p class="observacao">
+          Mexa na inclinação do topo: a área <strong>não muda</strong>. O que conta é a altura
+          — a distância entre as bases —, nunca o comprimento do lado inclinado. É o erro mais
+          comum em paralelogramos.
+        </p>
+      } @else if (ehTrapezio()) {
+        <p class="observacao">
+          Duas cópias deste trapézio, uma girada, formam um paralelogramo de base B + b. Daí a
+          área ser a média das bases multiplicada pela altura.
+        </p>
+      } @else {
+        <p class="observacao">
+          No retângulo a área é a própria definição: quantos quadrados de lado 1 cabem dentro.
+          Todas as outras fórmulas voltam a esta por corte e recomposição.
+        </p>
+      }
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Ampliando a figura</h2>
+      <app-controle-parametro [(valor)]="k" rotulo="Razão k" [min]="1" [max]="6" [passo]="0.5" />
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">Área original</span>
+          <strong>{{ formatar(area()) }}</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Fator da área</span>
+          <strong>k² = {{ formatar(escalaArea().resultado) }}</strong>
+        </div>
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">Área ampliada</span>
+          <strong>{{ formatar(areaEscalada()) }}</strong>
+        </div>
+      </div>
+
+      <p class="observacao">
+        Com k = 2 a área quadruplica, não dobra. Numa planta de escala 1:100, cada centímetro
+        quadrado do papel corresponde a 10 000 cm² reais — é por isso que estimar área "no
+        olho" por proporção linear erra tanto.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

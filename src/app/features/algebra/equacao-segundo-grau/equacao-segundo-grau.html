@@ -1,0 +1,102 @@
+<app-topico-layout
+  titulo="Equação do 2º grau"
+  descricao="Bhaskara, o discriminante e as três situações possíveis de raízes."
+  topicoId="equacao-segundo-grau"
+>
+  <div explorar class="explorar">
+    <section class="controles">
+      <app-controle-parametro
+        [(valor)]="a"
+        rotulo="Coeficiente a"
+        [min]="-5"
+        [max]="5"
+        dica="Zero é tratado como 1: sem ele não há 2º grau."
+      />
+      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente b" [min]="-12" [max]="12" />
+      <app-controle-parametro [(valor)]="c" rotulo="Coeficiente c" [min]="-12" [max]="12" />
+    </section>
+
+    <section class="painel">
+      <app-formula [tex]="equacaoTex()" [bloco]="true" />
+
+      <div class="indicadores">
+        <div
+          class="indicador"
+          [attr.data-sinal]="
+            solucao().delta > 0 ? 'positivo' : solucao().delta === 0 ? 'zero' : 'negativo'
+          "
+        >
+          <span class="rotulo">Discriminante</span>
+          <strong>{{ formatar(solucao().delta) }}</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Raízes reais</span>
+          <strong>{{ solucao().quantidadeDeRaizes }}</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Vértice</span>
+          <strong
+            >({{ formatar(solucao().vertice.x) }}, {{ formatar(solucao().vertice.y) }})</strong
+          >
+        </div>
+      </div>
+
+      <p class="observacao">{{ resumoDelta() }}</p>
+    </section>
+
+    <section class="grafico">
+      <h2>A parábola</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        A linha tracejada é o eixo de simetria. Quando há duas raízes, elas ficam à mesma distância
+        dele — por isso o vértice está sempre na média das raízes.
+      </p>
+    </section>
+
+    @if (formaFatorada(); as fatorada) {
+      <section class="fatorada">
+        <h2>Forma fatorada</h2>
+        <app-formula [tex]="equacaoTex().replace(' = 0', '') + ' = ' + fatorada" [bloco]="true" />
+        <p class="observacao">
+          Cada raiz vira um fator (x − raiz). Expandir de volta confirma que é a mesma equação.
+        </p>
+      </section>
+    }
+
+    <section class="girard">
+      <h2>Soma e produto das raízes</h2>
+      <app-formula
+        [tex]="
+          'x_1 + x_2 = ' +
+          formatar(girard().soma) +
+          ' \\qquad x_1 \\cdot x_2 = ' +
+          formatar(girard().produto)
+        "
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Essas relações saem direto dos coeficientes, sem resolver a equação. Em casos com raízes
+        inteiras pequenas, achar dois números com essa soma e esse produto é mais rápido que aplicar
+        Bhaskara.
+      </p>
+    </section>
+
+    <section class="passos">
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

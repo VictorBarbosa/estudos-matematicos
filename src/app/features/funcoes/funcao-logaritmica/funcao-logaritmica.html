@@ -1,0 +1,83 @@
+<app-topico-layout
+  titulo="Função logarítmica"
+  descricao="O logaritmo como inverso da exponencial, seu domínio e suas propriedades."
+  topicoId="funcao-logaritmica"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="indiceBase"
+        rotulo="Base"
+        [min]="0"
+        [max]="4"
+        [dica]="'Base atual: ' + formatar(base())"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+      <app-formula
+        [tex]="'\\log_{' + formatar(base()) + '} x = y \\iff ' + formatar(base()) + '^{y} = x'"
+        [bloco]="true"
+      />
+    </section>
+
+    <section>
+      <h2>
+        O espelho da exponencial
+        <button type="button" class="alternar" (click)="alternarExponencial()">
+          {{ mostrarExponencial() ? 'Mostrar só o logaritmo' : 'Comparar com a exponencial' }}
+        </button>
+      </h2>
+
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="420"
+      />
+
+      <p class="observacao">
+        As duas curvas são reflexos uma da outra na reta tracejada y = x. Onde a exponencial
+        tem assíntota horizontal, o logaritmo tem assíntota vertical — é a mesma restrição,
+        espelhada.
+      </p>
+    </section>
+
+    <section>
+      <h2>O logaritmo conta expoentes</h2>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th scope="col">x</th>
+            <th scope="col">log<sub>{{ formatar(base()) }}</sub>(x)</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (linha of tabela(); track linha.expoente) {
+            <tr>
+              <td>{{ formatar(linha.argumento) }}</td>
+              <td>{{ linha.expoente }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <p class="observacao">
+        Repare: o argumento é multiplicado pela base a cada linha, enquanto o logaritmo soma 1.
+        É exatamente isso que significa "transformar produto em soma".
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

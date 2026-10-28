@@ -1,0 +1,47 @@
+<nav class="sidebar" aria-label="Tópicos de estudo">
+  @for (area of areas(); track area.id) {
+    <section class="area">
+      <h2>
+        {{ area.titulo }}
+        <span
+          class="contagem"
+          [attr.aria-label]="area.prontos + ' de ' + area.topicos.length + ' prontos'"
+        >
+          {{ area.prontos }}/{{ area.topicos.length }}
+        </span>
+      </h2>
+
+      <ul>
+        @for (topico of area.topicos; track topico.id) {
+          <li>
+            @if (topico.pronto && topico.liberado) {
+              <a
+                [routerLink]="topico.rota"
+                routerLinkActive="ativo"
+                (click)="navegou.emit()"
+                [title]="topico.descricao"
+              >
+                {{ topico.titulo }}
+                @if (topico.concluido) {
+                  <span class="vencido" aria-label="etapa vencida">✓</span>
+                } @else if (topico.percentual !== null) {
+                  <span class="aproveitamento">{{ topico.percentual }}%</span>
+                }
+              </a>
+            } @else if (topico.pronto) {
+              <span class="trancado" [title]="'Vença as etapas anteriores para liberar: ' + topico.titulo">
+                {{ topico.titulo }}
+                <span class="cadeado" aria-label="trancado">🔒</span>
+              </span>
+            } @else {
+              <span class="pendente" [title]="topico.descricao">
+                {{ topico.titulo }}
+                <span class="etiqueta">em breve</span>
+              </span>
+            }
+          </li>
+        }
+      </ul>
+    </section>
+  }
+</nav>

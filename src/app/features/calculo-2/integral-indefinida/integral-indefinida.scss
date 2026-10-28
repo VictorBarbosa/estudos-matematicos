@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.observacao[data-confere='true'] {
+  color: var(--acerto);
+  font-weight: 500;
+}

@@ -1,0 +1,64 @@
+<app-topico-layout
+  titulo="Integral indefinida"
+  descricao="Antiderivadas e por que aparece a constante de integração."
+  topicoId="integral-indefinida"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="c" rotulo="Termo constante" [min]="-5" [max]="5" />
+      <app-controle-parametro
+        [(valor)]="constante"
+        rotulo="Constante C"
+        [min]="-6"
+        [max]="6"
+        dica="Desloca a primitiva na vertical."
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="integralTex()" [bloco]="true" />
+    </section>
+
+    <section class="painel">
+      <h2>Conferindo pela derivada</h2>
+      <app-formula [tex]="conferenciaTex()" [bloco]="true" />
+      <p class="observacao" [attr.data-confere]="confere()">
+        {{
+          confere()
+            ? 'A derivada da primitiva devolve exatamente o integrando — a integral está correta.'
+            : 'Derivando de volta não chegamos ao integrando.'
+        }}
+        Derivar a resposta é sempre a forma mais rápida de conferir uma integral.
+      </p>
+    </section>
+
+    <section>
+      <h2>A família de primitivas</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        As curvas tracejadas são outras primitivas da mesma função, com constantes
+        diferentes. Repare que são todas paralelas: em cada x elas têm a mesma inclinação,
+        que é justamente o valor do integrando ali. É por isso que a constante é
+        indeterminável sem uma condição inicial.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -1,0 +1,57 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+/* `hidden` precisa vencer o display dos painéis. */
+[hidden] {
+  display: none !important;
+}
+
+.topico {
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+.cabecalho h1 {
+  font-size: var(--texto-3xl);
+}
+
+.descricao {
+  margin-top: var(--esp-2);
+  max-width: 58ch;
+  font-size: var(--texto-lg);
+  color: var(--texto-suave);
+}
+
+.abas {
+  display: inline-flex;
+  align-self: flex-start;
+  gap: 2px;
+  padding: 3px;
+  background: var(--superficie-2);
+  border-radius: var(--raio-pill);
+}
+
+.aba {
+  @include botao-base;
+  padding: var(--esp-2) var(--esp-5);
+  border-radius: var(--raio-pill);
+  color: var(--texto-suave);
+
+  &.ativa {
+    background: var(--superficie);
+    color: var(--texto);
+    box-shadow: var(--sombra-1);
+  }
+}
+
+.painel-treino {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+}

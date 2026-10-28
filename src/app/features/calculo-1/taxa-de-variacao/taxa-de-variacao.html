@@ -1,0 +1,118 @@
+<app-topico-layout
+  titulo="Taxa de variação"
+  descricao="Velocidade e aceleração como derivadas da posição."
+  topicoId="taxa-de-variacao"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de t³" [min]="-2" [max]="2" />
+      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de t²" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="c" rotulo="Coeficiente de t" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="d" rotulo="Posição inicial" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="instante" rotulo="Instante t (s)" [min]="0" [max]="5" />
+      <app-controle-parametro
+        [(valor)]="delta"
+        rotulo="Intervalo Δt da secante"
+        [min]="0.1"
+        [max]="3"
+        [passo]="0.1"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="posicaoTex()" [bloco]="true" />
+      <app-formula [tex]="velocidadeTex()" [bloco]="true" />
+      <app-formula [tex]="aceleracaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Posição em t</span>
+        <strong>{{ formatar(movimento().posicao) }} m</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Velocidade instantânea</span>
+        <strong>{{ formatar(movimento().velocidade) }} m/s</strong>
+        <span class="legenda">a derivada da posição</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Aceleração</span>
+        <strong>{{ formatar(movimento().aceleracao) }} m/s²</strong>
+        <span class="legenda">a derivada da velocidade</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Velocidade média no Δt</span>
+        <strong>{{ formatar(taxaMedia()) }} m/s</strong>
+        <span class="legenda">inclinação da secante</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A secante girando até virar tangente</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="420"
+      />
+      <p class="observacao">
+        Diminua o Δt e observe a reta laranja se deitar sobre a tracejada: a velocidade média
+        do intervalo se aproxima da instantânea. Esse encontro é a derivada — e é por isso
+        que a velocidade de um instante faz sentido, mesmo sem intervalo nenhum.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>O limite, em números</h2>
+      <app-formula [tex]="limiteTex" [bloco]="true" />
+      <table class="tabela-aproximacao">
+        <caption class="observacao">
+          Velocidade média em intervalos cada vez menores a partir de t =
+          {{ formatar(instante()) }} s.
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Δt (s)</th>
+            <th scope="col">Velocidade média (m/s)</th>
+            <th scope="col">Distância até v(t)</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (linha of aproximacoes(); track linha.delta) {
+            <tr>
+              <td>{{ formatar(linha.delta) }}</td>
+              <td>{{ formatar(linha.taxaMedia) }}</td>
+              <td>{{ formatar(linha.erro) }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <p class="observacao">
+        A última coluna encolhe junto com o Δt. Ela nunca chega a zero na tabela — o valor
+        exato só aparece no limite, e é esse valor que chamamos de derivada.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Lendo os sinais</h2>
+      <p class="observacao">{{ leituraDosSinais() }}</p>
+      <p class="observacao">
+        Velocidade negativa não quer dizer "devagar", e aceleração negativa não quer dizer
+        "freando": quem decide se o corpo acelera ou freia é o sinal do produto das duas.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

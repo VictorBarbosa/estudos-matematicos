@@ -1,0 +1,76 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.explorar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+section h2 {
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.propriedades-seletor {
+  display: inline-flex;
+  align-self: flex-start;
+  gap: 2px;
+  padding: 3px;
+  background: var(--superficie-2);
+  border-radius: var(--raio-pill);
+
+  button {
+    @include botao-base;
+    padding: var(--esp-2) var(--esp-4);
+    border-radius: var(--raio-pill);
+    color: var(--texto-suave);
+    font-size: var(--texto-md);
+
+    &.ativo {
+      background: var(--superficie);
+      color: var(--texto);
+      box-shadow: var(--sombra-1);
+    }
+  }
+}
+
+.controles {
+  @include cartao;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--esp-5);
+  padding: var(--esp-5);
+}
+
+.resultado {
+  @include cartao;
+  padding: var(--esp-3) var(--esp-5);
+  text-align: center;
+  font-size: var(--texto-lg);
+}
+
+.radiciacao {
+  @include cartao;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-5);
+}
+
+.observacao {
+  max-width: 70ch;
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.grafico .observacao {
+  margin-top: var(--esp-2);
+}

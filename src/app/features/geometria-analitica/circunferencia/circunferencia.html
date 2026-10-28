@@ -1,0 +1,56 @@
+<app-topico-layout
+  titulo="Circunferência"
+  descricao="Equação reduzida e geral, e as posições relativas de ponto e reta."
+  topicoId="circunferencia"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="centroX" rotulo="Centro: x" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="centroY" rotulo="Centro: y" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="raio" rotulo="Raio" [min]="1" [max]="10" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="reduzidaTex()" [bloco]="true" />
+      <p class="observacao">Forma reduzida: centro e raio ficam à vista.</p>
+      <app-formula [tex]="geralTex()" [bloco]="true" />
+      <p class="observacao">Forma geral: a mesma circunferência, com tudo expandido.</p>
+    </section>
+
+    <section class="painel">
+      <h2>Onde está o ponto?</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="testeX" rotulo="Ponto de teste: x" [min]="-12" [max]="12" />
+        <app-controle-parametro [(valor)]="testeY" rotulo="Ponto de teste: y" [min]="-12" [max]="12" />
+      </div>
+      <p class="observacao posicao" [attr.data-posicao]="posicao()">{{ descricaoPosicao() }}</p>
+    </section>
+
+    <section>
+      <h2>A circunferência no plano</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="420"
+      />
+      <p class="observacao">
+        A linha cheia do centro é o raio; a tracejada é a distância até o ponto de teste.
+        Comparar essas duas medidas é tudo o que decide a posição relativa.
+      </p>
+    </section>
+
+    <section>
+      <h2>Da geral à reduzida, passo a passo</h2>
+      <app-passo-a-passo [passos]="conversao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

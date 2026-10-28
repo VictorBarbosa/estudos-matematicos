@@ -1,0 +1,101 @@
+<app-topico-layout
+  titulo="Identidades trigonométricas"
+  descricao="A identidade fundamental, soma de arcos e arco duplo — com os erros clássicos lado a lado."
+  topicoId="identidades-trigonometricas"
+>
+  <div explorar class="explorar">
+    <section>
+      <h2>A identidade fundamental, desenhada</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="340"
+      />
+      <p class="observacao">
+        Os quadrados do seno e do cosseno oscilam em oposição: quando um sobe, o outro desce
+        exatamente na mesma medida. Por isso a soma é a reta constante em 1 — e é isso que a
+        identidade afirma.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Ângulo a (graus)" [min]="0" [max]="180" [passo]="5" />
+      <app-controle-parametro [(valor)]="b" rotulo="Ângulo b (graus)" [min]="0" [max]="180" [passo]="5" />
+    </section>
+
+    <section class="painel">
+      <h2>Soma de arcos: o erro mais caro</h2>
+
+      <div class="comparacao">
+        <div class="caixa errada">
+          <span class="etiqueta">Errado</span>
+          <app-formula [tex]="'\\sin(a + b) = \\sin a + \\sin b'" [bloco]="true" />
+          <strong>{{ formatar(somaIngenua()) }}</strong>
+        </div>
+        <div class="caixa certa">
+          <span class="etiqueta">Correto</span>
+          <app-formula [tex]="'\\sin a \\cos b + \\cos a \\sin b'" [bloco]="true" />
+          <strong>{{ formatar(formulaSoma()) }}</strong>
+        </div>
+        <div class="caixa referencia">
+          <span class="etiqueta">Valor real</span>
+          <app-formula [tex]="'\\sin(a + b)'" [bloco]="true" />
+          <strong>{{ formatar(senoDaSoma()) }}</strong>
+        </div>
+      </div>
+
+      <p class="observacao">
+        A fórmula correta bate com o valor real em qualquer combinação de ângulos. A versão
+        ingênua só coincide por acaso, em casos isolados — e falha em todos os outros.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Cosseno da soma</h2>
+      <app-formula
+        [tex]="'\\cos(' + a() + '° + ' + b() + '°) = ' + formatar(cossenoDaSoma())"
+        [bloco]="true"
+      />
+      <app-formula
+        [tex]="'\\cos a\\cos b - \\sin a\\sin b = ' + formatar(formulaCosseno())"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Repare no sinal: na soma de arcos o cosseno leva MENOS no meio, ao contrário do seno.
+        Trocar esse sinal é o segundo erro mais comum do tema.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Arco duplo</h2>
+      <div class="comparacao">
+        <div class="caixa errada">
+          <span class="etiqueta">Errado</span>
+          <app-formula [tex]="'\\sin 2a = 2\\sin a'" [bloco]="true" />
+          <strong>{{ formatar(arcoDuplo().ingenuo) }}</strong>
+        </div>
+        <div class="caixa certa">
+          <span class="etiqueta">Correto</span>
+          <app-formula [tex]="'\\sin 2a = 2\\sin a\\cos a'" [bloco]="true" />
+          <strong>{{ formatar(arcoDuplo().formula) }}</strong>
+        </div>
+        <div class="caixa referencia">
+          <span class="etiqueta">Valor real</span>
+          <app-formula [tex]="'\\sin(2 \\cdot ' + a() + '°)'" [bloco]="true" />
+          <strong>{{ formatar(arcoDuplo().direto) }}</strong>
+        </div>
+      </div>
+      <p class="observacao">
+        O 2 multiplica o ângulo, não o resultado. Dobrar o ângulo não dobra o seno — ele pode
+        até diminuir, como acontece a partir de 45°.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

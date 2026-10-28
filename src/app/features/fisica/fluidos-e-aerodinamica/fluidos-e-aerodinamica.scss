@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.painel .grade-controles,
+.painel .seletor-pills,
+.painel .indicadores {
+  margin-bottom: var(--esp-3);
+}

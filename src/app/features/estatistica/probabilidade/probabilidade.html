@@ -1,0 +1,95 @@
+<app-topico-layout
+  titulo="Probabilidade"
+  descricao="Espaço amostral, eventos independentes e probabilidade condicional."
+  topicoId="probabilidade"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="favoraveis"
+        rotulo="Casos favoráveis"
+        [min]="0"
+        [max]="20"
+      />
+      <app-controle-parametro
+        [(valor)]="possiveis"
+        rotulo="Casos possíveis"
+        [min]="1"
+        [max]="20"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="probabilidadeTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>Probabilidade é contagem</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+      <p class="observacao">
+        Não há nada de misterioso na divisão: o difícil é contar certo os dois lados. Se o
+        resultado passar de 1 ou ficar negativo, o erro está na contagem, nunca na fórmula.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Com reposição e sem reposição</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="vermelhas" rotulo="Bolas vermelhas" [min]="2" [max]="12" />
+        <app-controle-parametro [(valor)]="azuis" rotulo="Bolas azuis" [min]="1" [max]="12" />
+      </div>
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">Duas vermelhas, com reposição</span>
+          <strong>{{ formatar(comReposicao().resultado) }}</strong>
+          <span class="legenda">eventos independentes</span>
+        </div>
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">Duas vermelhas, sem reposição</span>
+          <strong>{{ formatar(semReposicao().resultado) }}</strong>
+          <span class="legenda">a segunda depende da primeira</span>
+        </div>
+      </div>
+
+      <app-passo-a-passo [passos]="semReposicao().passos" />
+      <p class="observacao">
+        Sem reposição, a segunda retirada acontece numa urna diferente: uma vermelha menos e
+        uma bola menos no total. É por isso que a probabilidade cai — e é exatamente o que
+        significa probabilidade condicional.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ao menos um: use o complementar</h2>
+      <app-controle-parametro
+        [(valor)]="tentativas"
+        rotulo="Tentativas independentes"
+        [min]="1"
+        [max]="30"
+      />
+
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        descricao="Probabilidade de ao menos um sucesso e de nenhum, em função do número de tentativas."
+        [altura]="380"
+      />
+
+      <app-formula [tex]="'P(\\text{ao menos um}) = 1 - (1-p)^{n}'" [bloco]="true" />
+      <app-passo-a-passo [passos]="aoMenosUm().passos" />
+      <p class="observacao">
+        As duas curvas somam 1 em todo ponto — são complementares. Aumente as tentativas e
+        veja um evento improvável virar quase certo: é o raciocínio por trás de redundância em
+        projeto, e também do porquê de falhas raras acontecerem em sistemas grandes.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -1,0 +1,141 @@
+// Design tokens do EstudosMatemáticos.
+//
+// Todas as cores são declaradas como custom properties para que o tema escuro
+// seja apenas uma redefinição dos mesmos nomes — nenhum componente precisa
+// saber qual tema está ativo.
+//
+// O tema segue a preferência do sistema por padrão e pode ser forçado com
+// `data-tema="claro"` ou `data-tema="escuro"` no elemento raiz.
+
+@mixin tema-escuro {
+  --fundo: oklch(17% 0.012 265);
+  --superficie: oklch(21% 0.014 265);
+  --superficie-2: oklch(25% 0.016 265);
+  --superficie-3: oklch(29% 0.018 265);
+  --borda: oklch(31% 0.016 265);
+  --borda-forte: oklch(45% 0.02 265);
+  --texto: oklch(95% 0.005 265);
+  --texto-suave: oklch(74% 0.01 265);
+  --texto-tenue: oklch(60% 0.012 265);
+
+  --acento: oklch(72% 0.16 265);
+  --acento-forte: oklch(80% 0.14 265);
+  --acento-suave: oklch(30% 0.06 265);
+  --acento-contraste: oklch(17% 0.012 265);
+
+  --acerto: oklch(74% 0.15 150);
+  --acerto-suave: oklch(28% 0.05 150);
+  --erro: oklch(70% 0.17 25);
+  --erro-suave: oklch(29% 0.06 25);
+  --aviso: oklch(78% 0.14 75);
+  --aviso-suave: oklch(30% 0.05 75);
+
+  --serie-1: oklch(72% 0.15 255);
+  --serie-2: oklch(77% 0.14 60);
+  --serie-3: oklch(74% 0.12 185);
+  --serie-4: oklch(72% 0.16 320);
+  --serie-5: oklch(73% 0.16 10);
+  --serie-6: oklch(74% 0.14 145);
+
+  --plot-grade: oklch(27% 0.014 265);
+  --plot-grade-forte: oklch(33% 0.016 265);
+  --plot-eixo: oklch(68% 0.012 265);
+  --plot-rotulo: oklch(70% 0.012 265);
+
+  --sombra-1: 0 1px 2px oklch(0% 0 0 / 0.3), 0 1px 3px oklch(0% 0 0 / 0.25);
+  --sombra-2: 0 4px 12px oklch(0% 0 0 / 0.35);
+  --sombra-3: 0 12px 32px oklch(0% 0 0 / 0.45);
+}
+
+:root {
+  // ---- superfícies e texto ----------------------------------------
+  --fundo: oklch(98.5% 0.004 265);
+  --superficie: oklch(100% 0 0);
+  --superficie-2: oklch(96.5% 0.006 265);
+  --superficie-3: oklch(93.5% 0.008 265);
+  --borda: oklch(90% 0.008 265);
+  --borda-forte: oklch(78% 0.012 265);
+  --texto: oklch(22% 0.015 265);
+  --texto-suave: oklch(48% 0.012 265);
+  --texto-tenue: oklch(62% 0.01 265);
+
+  // ---- acento ------------------------------------------------------
+  --acento: oklch(52% 0.2 265);
+  --acento-forte: oklch(44% 0.21 265);
+  --acento-suave: oklch(95% 0.03 265);
+  --acento-contraste: oklch(100% 0 0);
+
+  // ---- estados semânticos ------------------------------------------
+  --acerto: oklch(52% 0.15 150);
+  --acerto-suave: oklch(95% 0.04 150);
+  --erro: oklch(53% 0.2 25);
+  --erro-suave: oklch(95% 0.035 25);
+  --aviso: oklch(60% 0.14 75);
+  --aviso-suave: oklch(95% 0.05 75);
+
+  // ---- série de cores para curvas e barras --------------------------
+  // Ordem escolhida para que as duas primeiras — o par mais frequente num
+  // gráfico didático — sejam distinguíveis também por quem não diferencia
+  // vermelho de verde.
+  --serie-1: oklch(53% 0.18 255);
+  --serie-2: oklch(60% 0.16 55);
+  --serie-3: oklch(55% 0.13 185);
+  --serie-4: oklch(52% 0.19 320);
+  --serie-5: oklch(57% 0.18 10);
+  --serie-6: oklch(55% 0.15 145);
+
+  // ---- plano cartesiano ---------------------------------------------
+  --plot-fundo: var(--superficie);
+  --plot-grade: oklch(92% 0.006 265);
+  --plot-grade-forte: oklch(86% 0.008 265);
+  --plot-eixo: oklch(45% 0.012 265);
+  --plot-rotulo: oklch(50% 0.012 265);
+
+  // ---- tipografia ----------------------------------------------------
+  --fonte-base:
+    system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji';
+  --fonte-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  --texto-xs: 0.75rem;
+  --texto-sm: 0.875rem;
+  --texto-md: 1rem;
+  --texto-lg: 1.125rem;
+  --texto-xl: 1.375rem;
+  --texto-2xl: 1.75rem;
+  --texto-3xl: 2.25rem;
+
+  // ---- espaçamento, raio e elevação -----------------------------------
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 0.75rem;
+  --esp-4: 1rem;
+  --esp-5: 1.5rem;
+  --esp-6: 2rem;
+  --esp-7: 3rem;
+
+  --raio-sm: 0.375rem;
+  --raio-md: 0.625rem;
+  --raio-lg: 1rem;
+  --raio-pill: 999px;
+
+  --sombra-1: 0 1px 2px oklch(20% 0.02 265 / 0.06), 0 1px 3px oklch(20% 0.02 265 / 0.08);
+  --sombra-2: 0 4px 12px oklch(20% 0.02 265 / 0.1);
+  --sombra-3: 0 12px 32px oklch(20% 0.02 265 / 0.16);
+
+  --largura-sidebar: 17.5rem;
+  --largura-conteudo: 68rem;
+
+  --transicao: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// O tema escuro vale quando o sistema pede e o usuário não forçou o claro.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema='claro']) {
+    @include tema-escuro;
+  }
+}
+
+:root[data-tema='escuro'] {
+  @include tema-escuro;
+}

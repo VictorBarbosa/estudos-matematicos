@@ -1,0 +1,111 @@
+<app-topico-layout
+  titulo="Polinômios"
+  descricao="Grau, divisão, teorema do resto e a busca das raízes."
+  topicoId="polinomios"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x³" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x²" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="c" rotulo="Coeficiente de x" [min]="-12" [max]="12" />
+      <app-controle-parametro [(valor)]="d" rotulo="Termo constante" [min]="-12" [max]="12" />
+      <app-controle-parametro
+        [(valor)]="raizTeste"
+        rotulo="Testar divisão por (x − a), com a ="
+        [min]="-5"
+        [max]="5"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="polinomioTex()" [bloco]="true" />
+      <p class="observacao">
+        Grau {{ polinomio().grau }} — então há no máximo {{ polinomio().grau }} raízes.
+      </p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" [attr.data-destaque]="ehFator()">
+        <span class="rotulo">Resto da divisão</span>
+        <strong>{{ formatar(resto().resultado) }}</strong>
+        <span class="legenda">
+          {{ ehFator() ? 'zero: é fator exato' : 'diferente de zero: não é fator' }}
+        </span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Raízes racionais</span>
+        <strong>{{ raizes().length }}</strong>
+        <span class="legenda">de {{ candidatas().length }} candidatas testadas</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Grau do quociente</span>
+        <strong>{{ divisao().resultado.quociente.grau }}</strong>
+        <span class="legenda">{{ polinomio().grau }} − 1</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Raiz e fator são a mesma informação</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        Mexa no valor testado: quando ele cai sobre um cruzamento da curva com o eixo x, o
+        resto zera e a divisão fica exata. Não é coincidência — é o teorema do resto: o resto
+        <em>é</em> a altura da curva naquele ponto.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Candidatas racionais</h2>
+      <p class="observacao">
+        Toda raiz racional tem numerador dividindo o termo constante e denominador dividindo o
+        coeficiente líder. Em vez de tentar números ao acaso, testa-se esta lista:
+      </p>
+      <div class="candidatas">
+        @for (candidata of candidatas(); track candidata.valor) {
+          <button
+            type="button"
+            [class.raiz]="candidata.anula"
+            [class.ativa]="raizTeste() === candidata.valor"
+            (click)="testar(candidata.valor)"
+          >
+            {{ formatar(candidata.valor) }}
+            @if (candidata.anula) {
+              <span aria-label="é raiz">✓</span>
+            }
+          </button>
+        }
+      </div>
+      <p class="observacao">
+        Clique numa candidata para dividir por ela. As marcadas com ✓ anulam o polinômio.
+      </p>
+    </section>
+
+    <section>
+      <h2>A divisão, passo a passo</h2>
+      <app-formula [tex]="divisaoTex()" [bloco]="true" />
+      <app-passo-a-passo [passos]="divisao().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Por que isso importa</h2>
+      <p class="observacao">
+        Bhaskara resolve grau 2, e nada além disso. A saída para graus maiores é derrubar o
+        grau: achar uma raiz, dividir por (x − raiz) e repetir. Um grau 3 vira grau 2, e aí a
+        fórmula que você já sabe termina o serviço.
+      </p>
+      <app-formula [tex]="'\\deg Q = \\deg P - \\deg D'" [bloco]="true" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

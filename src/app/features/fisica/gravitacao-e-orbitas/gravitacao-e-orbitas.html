@@ -1,0 +1,110 @@
+<app-topico-layout
+  titulo="Gravitação e órbitas"
+  descricao="Lei da gravitação, leis de Kepler, velocidade orbital e de escape."
+  topicoId="gravitacao-e-orbitas"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <app-controle-parametro
+        [(valor)]="altitudeKm"
+        rotulo="Altitude (km)"
+        [min]="0"
+        [max]="40000"
+        [passo]="100"
+      />
+
+      <div class="seletor-pills" role="group" aria-label="Órbitas de referência">
+        @for (referencia of referencias; track referencia.altitudeKm) {
+          <button
+            type="button"
+            [class.ativo]="altitudeKm() === referencia.altitudeKm"
+            (click)="irPara(referencia.altitudeKm)"
+          >
+            {{ referencia.nome }}
+          </button>
+        }
+      </div>
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="orbitaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Gravidade local</span>
+        <strong>{{ formatar(gravidade().resultado) }} m/s²</strong>
+        <span class="legenda">{{ percentual(fracaoDaGravidade()) }} da superfície</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Velocidade orbital</span>
+        <strong>{{ formatar(orbita().resultado.velocidade / 1000) }} km/s</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Período</span>
+        <strong>{{ formatarPeriodo(orbita().resultado.periodo) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Velocidade de escape daqui</span>
+        <strong>{{ formatar(escape().resultado / 1000) }} km/s</strong>
+        <span class="legenda">√2 × a orbital</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A gravidade não "acaba" no espaço</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        descricao="Aceleração da gravidade em função da distância, em raios terrestres."
+        [altura]="360"
+      />
+      <p class="observacao">
+        Na altitude da Estação Espacial, a gravidade ainda vale
+        <strong>{{ percentual(fracaoDaGravidade()) }}</strong> da que se sente no chão. Os
+        astronautas não flutuam por falta de gravidade — eles flutuam porque estão em
+        <strong>queda livre permanente</strong>, caindo junto com a estação.
+      </p>
+      <app-passo-a-passo [passos]="gravidade().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Órbita é cair para sempre</h2>
+      <app-passo-a-passo [passos]="orbita().passos" />
+      <p class="observacao">
+        A massa do satélite se cancela na dedução: um parafuso solto e a Estação Espacial
+        orbitam à mesma velocidade na mesma altitude. E note que órbitas mais altas são mais
+        <em>lentas</em> — subir custa energia e ainda reduz a velocidade.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Kepler confere com Newton</h2>
+      <app-passo-a-passo [passos]="kepler().passos" />
+      <p class="observacao">
+        Partindo da órbita de 400 km, a terceira lei de Kepler prevê o período nesta altitude
+        como <strong>{{ formatarPeriodo(kepler().resultado) }}</strong>; o cálculo direto deu
+        <strong>{{ formatarPeriodo(orbita().resultado.periodo) }}</strong>. Kepler obteve essa
+        relação de dados observacionais décadas antes de Newton deduzi-la — e foi essa
+        coincidência que fundou a confiança na gravitação.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Escapar custa pouco mais que orbitar</h2>
+      <app-passo-a-passo [passos]="escape().passos" />
+      <p class="observacao">
+        Apenas 41% mais velocidade separa orbitar de escapar da Terra para sempre. Parece
+        pouco — mas, pela equação de Tsiolkovsky, esse acréscimo de velocidade exige
+        muito mais combustível do que a proporção sugere.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

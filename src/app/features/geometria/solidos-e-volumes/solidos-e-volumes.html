@@ -1,0 +1,106 @@
+<app-topico-layout
+  titulo="Sólidos e volumes"
+  descricao="Prismas, cilindros, cones e esferas: volume, superfície e escala cúbica."
+  topicoId="solidos-e-volumes"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Sólido">
+      @for (opcao of solidos; track opcao) {
+        <button
+          type="button"
+          [class.ativo]="solido() === opcao"
+          [attr.aria-pressed]="solido() === opcao"
+          (click)="selecionar(opcao)"
+        >
+          {{ nomeSolido[opcao] }}
+        </button>
+      }
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="raio" rotulo="Raio" [min]="1" [max]="10" />
+      @if (usaAltura()) {
+        <app-controle-parametro [(valor)]="altura" rotulo="Altura" [min]="1" [max]="16" />
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="volumeTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Volume</span>
+        <strong>{{ formatar(volume()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Superfície</span>
+        <strong>{{ formatar(analiseSuperficie().resultado) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Cilindro equivalente</span>
+        <strong>{{ formatar(volumeCilindro()) }}</strong>
+        <span class="legenda">mesma base, mesma altura</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Fração do cilindro</span>
+        <strong>{{ percentual(fracaoDoCilindro()) }}</strong>
+        <span class="legenda">
+          {{ solido() === 'cone' ? 'exatamente 1/3' : solido() === 'esfera' ? 'exatamente 2/3' : 'o próprio' }}
+        </span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Por que esse volume</h2>
+      <app-passo-a-passo [passos]="analiseVolume().passos" />
+      <p class="observacao">
+        Troque de sólido e observe a última coluna acima: o cone fica em 33,3% do cilindro e a
+        esfera em 66,7%, sempre. Não são aproximações — são as frações exatas que Arquimedes
+        demonstrou sem cálculo.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Superfície</h2>
+      <app-passo-a-passo [passos]="analiseSuperficie().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Ampliar um projeto muda a física</h2>
+      <app-controle-parametro [(valor)]="k" rotulo="Razão k" [min]="1" [max]="8" [passo]="0.5" />
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">Volume × k³</span>
+          <strong>{{ formatar(volumeAmpliado()) }}</strong>
+          <span class="legenda">× {{ formatar(escala().resultado) }}</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Superfície × k²</span>
+          <strong>{{ formatar(superficieAmpliada()) }}</strong>
+          <span class="legenda">× {{ formatar(k() * k()) }}</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Superfície / volume</span>
+          <strong>{{ formatar(razaoSuperficieVolume()) }} → {{ formatar(razaoAmpliada()) }}</strong>
+          <span class="legenda">cai com 1/k</span>
+        </div>
+      </div>
+
+      <app-passo-a-passo [passos]="escala().passos" />
+      <p class="observacao">
+        Essa queda da razão superfície/volume é um dos fatos mais consequentes da engenharia.
+        A massa de um foguete cresce com k³, mas a área que dissipa calor e a secção que
+        resiste a esforços crescem só com k². Dobrar o tamanho não dobra o problema: o
+        multiplica por oito, com o dobro de área para resolvê-lo.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

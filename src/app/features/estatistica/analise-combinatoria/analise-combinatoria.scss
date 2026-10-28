@@ -1,0 +1,43 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.pascal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  margin: var(--esp-4) 0;
+  overflow-x: auto;
+  font-variant-numeric: tabular-nums;
+
+  .linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--esp-2);
+  }
+
+  .celula {
+    min-width: 2.5rem;
+    padding: 2px var(--esp-1);
+    text-align: center;
+    font-size: var(--texto-sm);
+    border-radius: var(--raio-sm);
+
+    &.destacada {
+      background: var(--acento-suave);
+      color: var(--acento);
+      font-weight: 700;
+    }
+  }
+
+  .soma {
+    margin-left: var(--esp-3);
+    color: var(--texto-tenue);
+    font-size: var(--texto-xs);
+  }
+}

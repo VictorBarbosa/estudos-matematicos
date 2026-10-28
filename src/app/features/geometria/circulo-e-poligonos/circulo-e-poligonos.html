@@ -1,0 +1,101 @@
+<app-topico-layout
+  titulo="Círculo e polígonos"
+  descricao="Comprimento, área do círculo, setores e polígonos regulares."
+  topicoId="circulo-e-poligonos"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="raio" rotulo="Raio" [min]="1" [max]="8" />
+      <app-controle-parametro
+        [(valor)]="anguloSetor"
+        rotulo="Ângulo do setor (°)"
+        [min]="10"
+        [max]="360"
+        [passo]="5"
+      />
+      <app-controle-parametro
+        [(valor)]="lados"
+        rotulo="Lados do polígono inscrito"
+        [min]="3"
+        [max]="60"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="comprimentoTex()" [bloco]="true" />
+      <app-formula [tex]="areaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Comprimento</span>
+        <strong>{{ formatar(comprimento().resultado) }}</strong>
+        <span class="legenda">2πr</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Área do círculo</span>
+        <strong>{{ formatar(areaCirculo().resultado) }}</strong>
+        <span class="legenda">πr²</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Área do setor</span>
+        <strong>{{ formatar(areaSetor().resultado) }}</strong>
+        <span class="legenda">{{ anguloSetor() }}°/360° do total</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>O círculo como limite dos polígonos</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [segmentos]="segmentos()"
+        [mostrarGrade]="false"
+        descricao="Círculo com um polígono regular inscrito."
+        [altura]="400"
+      />
+      <p class="observacao">
+        Aumente o número de lados e veja o polígono encostar na curva. Ele nunca é o círculo,
+        mas a diferença vai a zero — o mesmo raciocínio de limite que, formalizado, se torna a
+        integral.
+      </p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Área do polígono</span>
+        <strong>{{ formatar(inscrito().area) }}</strong>
+        <span class="legenda">p·a/2</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Cobertura do círculo</span>
+        <strong>{{ percentual(cobertura()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">π estimado pelo polígono</span>
+        <strong>{{ formatar(piEstimado()) }}</strong>
+        <span class="legenda">perímetro / diâmetro</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Por que a área é πr²</h2>
+      <app-passo-a-passo [passos]="areaCirculo().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>O setor, passo a passo</h2>
+      <app-passo-a-passo [passos]="areaSetor().passos" />
+      <p class="observacao">
+        O setor não pede fórmula nova: ele é uma fração do círculo, e a fração é a do ângulo
+        sobre 360°. Vale igualmente para o comprimento do arco, trocando πr² por 2πr.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

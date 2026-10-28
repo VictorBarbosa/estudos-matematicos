@@ -1,0 +1,61 @@
+<app-topico-layout
+  titulo="Conceito de função"
+  descricao="Domínio, contradomínio, imagem e o teste da reta vertical."
+  topicoId="conceito-funcao"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Relação a testar">
+      @for (opcao of relacoes; track opcao.id) {
+        <button
+          type="button"
+          [class.ativo]="relacao().id === opcao.id"
+          [attr.aria-pressed]="relacao().id === opcao.id"
+          (click)="selecionar($index)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="relacao().tex" [bloco]="true" />
+      <p class="veredito-relacao" [attr.data-funcao]="relacao().ehFuncao">
+        {{ relacao().ehFuncao ? 'É função' : 'Não é função' }}
+      </p>
+      <p class="observacao">{{ relacao().explicacao }}</p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="posicaoTeste"
+        rotulo="Posição da reta vertical"
+        [min]="-7"
+        [max]="7"
+        dica="Arraste e conte quantas vezes ela corta o gráfico."
+      />
+    </section>
+
+    <section>
+      <h2>O teste da reta vertical</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [segmentos]="segmentos()"
+        [pontos]="intersecoes()"
+        [descricao]="descricaoGrafico()"
+        [altura]="420"
+      />
+      <p class="observacao destaque-veredito">{{ veredito() }}</p>
+      <p class="observacao">
+        A regra é simples: se existe alguma posição em que a vertical corta o gráfico mais de
+        uma vez, aquela entrada teria duas saídas — e a relação deixa de ser função.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

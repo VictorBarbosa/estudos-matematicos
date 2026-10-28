@@ -1,0 +1,88 @@
+<app-topico-layout
+  titulo="Soma de Riemann"
+  descricao="Aproximar área por retângulos e refinar a partição até o limite."
+  topicoId="soma-de-riemann"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Onde tomar a altura">
+      @for (opcao of tipos; track opcao) {
+        <button
+          type="button"
+          [class.ativo]="tipo() === opcao"
+          [attr.aria-pressed]="tipo() === opcao"
+          (click)="definirTipo(opcao)"
+        >
+          {{ nomeTipo[opcao] }}
+        </button>
+      }
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="n"
+        rotulo="Número de retângulos"
+        [min]="1"
+        [max]="100"
+        dica="Aumente e veja o erro despencar."
+      />
+      <app-controle-parametro [(valor)]="de" rotulo="Início do intervalo" [min]="-3" [max]="2" />
+      <app-controle-parametro [(valor)]="ate" rotulo="Fim do intervalo" [min]="1" [max]="5" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Soma aproximada</span>
+        <strong>{{ formatar(soma()) }}</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Área exata</span>
+        <strong>{{ formatar(exata()) }}</strong>
+        <span class="legenda">a integral</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Erro</span>
+        <strong>{{ formatar(erro()) }}</strong>
+        <span class="legenda">{{ formatar(erroPercentual()) }}%</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Os retângulos cobrindo a área</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [retangulos]="retangulos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        Aumente o número de retângulos e observe os pedacinhos que sobram no topo de cada um
+        encolherem. É essa sobra que o limite elimina — e o resultado é a integral.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Por que a escolha da altura importa menos do que parece</h2>
+      <app-formula
+        [tex]="'\\int_{a}^{b} f(x)\\,dx = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(x_i)\\,\\Delta x'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Compare as quatro opções acima com poucos retângulos: os valores diferem bastante.
+        Agora aumente n e repita — todas convergem para o mesmo número. No limite, a escolha
+        do ponto deixa de fazer diferença.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

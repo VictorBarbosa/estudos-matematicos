@@ -1,0 +1,70 @@
+<app-topico-layout
+  titulo="Aplicações da integral"
+  descricao="Área entre curvas, volume de sólidos de revolução e comprimento de arco."
+  topicoId="aplicacoes-da-integral"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Aplicação">
+      @for (opcao of aplicacoes; track opcao.valor) {
+        <button
+          type="button"
+          [class.ativo]="aplicacao() === opcao.valor"
+          [attr.aria-pressed]="aplicacao() === opcao.valor"
+          (click)="definirAplicacao(opcao.valor)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Inclinação da reta" [min]="1" [max]="5" />
+      @if (aplicacao() !== 'area') {
+        <app-controle-parametro [(valor)]="ate" rotulo="Até x =" [min]="1" [max]="5" />
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="formulaTex()" [bloco]="true" />
+      <p class="observacao">{{ explicacao() }}</p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" [attr.data-destaque]="aplicacao() === 'area'">
+        <span class="rotulo">Área entre as curvas</span>
+        <strong>{{ formatar(area()) }}</strong>
+      </div>
+      <div class="indicador" [attr.data-destaque]="aplicacao() === 'volume'">
+        <span class="rotulo">Volume do cone</span>
+        <strong>{{ formatar(volume()) }}</strong>
+      </div>
+      <div class="indicador" [attr.data-destaque]="aplicacao() === 'comprimento'">
+        <span class="rotulo">Comprimento do arco</span>
+        <strong>{{ formatar(comprimento()) }}</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>A região em questão</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [areas]="areas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        Todas as três aplicações partem da mesma ideia: fatiar a figura em pedaços
+        infinitesimais cuja medida sabemos calcular, e somar tudo com uma integral. Muda
+        apenas o que cada fatia é — uma tira, um disco ou um segmento.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

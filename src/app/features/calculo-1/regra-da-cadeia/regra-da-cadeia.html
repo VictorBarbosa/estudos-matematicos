@@ -1,0 +1,67 @@
+<app-topico-layout
+  titulo="Regra da cadeia"
+  descricao="Derivar funções compostas e por que os diferenciais parecem se cancelar."
+  topicoId="regra-da-cadeia"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente interno (a)" [min]="1" [max]="5" />
+      <app-controle-parametro [(valor)]="b" rotulo="Constante interna (b)" [min]="-4" [max]="4" />
+      <app-controle-parametro [(valor)]="n" rotulo="Expoente (n)" [min]="2" [max]="4" />
+      <app-controle-parametro [(valor)]="ponto" rotulo="Ponto" [min]="-2" [max]="3" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+      <app-formula [tex]="derivadaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Com a cadeia (correto)</span>
+        <strong>{{ formatar(comCadeia()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Sem o fator interno</span>
+        <strong>{{ formatar(semFatorInterno()) }}</strong>
+        <span class="legenda">{{ a() }}× menor</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Conferência numérica</span>
+        <strong>{{ formatar(numerica()) }}</strong>
+        <span class="legenda">derivada por diferença</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>O custo de esquecer o fator interno</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        A curva tracejada é o que sai ao esquecer a derivada de dentro. Aumente o coeficiente
+        interno e veja o erro crescer proporcionalmente — com a = 1 as duas coincidem, e é
+        por isso que o engano passa despercebido nos primeiros exercícios.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Por que as taxas se multiplicam</h2>
+      <app-formula [tex]="'\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}'" [bloco]="true" />
+      <p class="observacao">
+        Se y muda três vezes mais rápido que u, e u muda duas vezes mais rápido que x, então
+        y muda seis vezes mais rápido que x. A regra da cadeia é essa composição de taxas, e
+        a notação de Leibniz a torna quase óbvia.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

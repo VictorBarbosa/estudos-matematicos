@@ -1,0 +1,117 @@
+<app-topico-layout
+  titulo="Frações"
+  descricao="Partes de um inteiro: como representar, comparar, simplificar e operar."
+  topicoId="fracoes"
+>
+  <div explorar class="explorar">
+    <section class="controles">
+      <div class="fracao-controle">
+        <h2>Primeira fração</h2>
+        <app-controle-parametro [(valor)]="numeradorA" rotulo="Numerador" [min]="-12" [max]="12" />
+        <app-controle-parametro
+          [(valor)]="denominadorA"
+          rotulo="Denominador"
+          [min]="1"
+          [max]="12"
+        />
+      </div>
+
+      <div class="operacao" role="group" aria-label="Operação">
+        @for (opcao of operacoes; track opcao.valor) {
+          <button
+            type="button"
+            class="simbolo"
+            [class.ativo]="operacao() === opcao.valor"
+            [attr.aria-pressed]="operacao() === opcao.valor"
+            [attr.aria-label]="opcao.nome"
+            [title]="opcao.nome"
+            (click)="definirOperacao(opcao.valor)"
+          >
+            {{ opcao.simbolo }}
+          </button>
+        }
+      </div>
+
+      <div class="fracao-controle">
+        <h2>Segunda fração</h2>
+        <app-controle-parametro [(valor)]="numeradorB" rotulo="Numerador" [min]="-12" [max]="12" />
+        <app-controle-parametro
+          [(valor)]="denominadorB"
+          rotulo="Denominador"
+          [min]="1"
+          [max]="12"
+        />
+      </div>
+    </section>
+
+    <section class="resultado">
+      @if (erro(); as mensagem) {
+        <p class="aviso" role="alert">{{ mensagem }}</p>
+      } @else if (resultado(); as valor) {
+        <app-formula [tex]="expressaoTex() + ' = ' + valor.paraTex()" [bloco]="true" />
+        <p class="decimal">Em decimal: {{ valor.paraDecimal() | number: '1.0-6' }}</p>
+      }
+    </section>
+
+    <section class="visual">
+      <h2>
+        Visualizando as partes
+        <app-botao-teoria conceito="fracoes.definicao" />
+      </h2>
+
+      @if (precisaDenominadorComum()) {
+        <p class="observacao">
+          As duas barras estão divididas em quantidades diferentes de partes. É por isso que não dá
+          para somar os numeradores diretamente: as fatias não têm o mesmo tamanho.
+          <app-botao-teoria conceito="fracoes.mmc" [discreto]="true" />
+        </p>
+      }
+
+      <div class="barras">
+        <app-barra-fracao [fracao]="fracaoA()" [rotulo]="fracaoA().toString()" cor="serie-1" />
+        <app-barra-fracao [fracao]="fracaoB()" [rotulo]="fracaoB().toString()" cor="serie-2" />
+        @if (resultado(); as valor) {
+          <app-barra-fracao
+            [fracao]="valor"
+            [rotulo]="'Resultado: ' + valor.toString()"
+            cor="acento"
+          />
+        }
+      </div>
+    </section>
+
+    <section class="reta">
+      <h2>Na reta numérica</h2>
+      <app-math-plot
+        [dominio]="dominioReta()"
+        [marcas]="marcas()"
+        [descricao]="descricaoReta()"
+        [mostrarEixoY]="false"
+        [altura]="150"
+      />
+    </section>
+
+    <section class="passos">
+      <h2>
+        Passo a passo
+        <app-botao-teoria conceito="fracoes.operacoes" />
+      </h2>
+
+      @if (resolucao(); as resolvido) {
+        <app-passo-a-passo [passos]="resolvido.passos" />
+      }
+    </section>
+
+    <footer class="conceitos">
+      <span class="etiqueta">Entenda a matemática:</span>
+      <app-botao-teoria conceito="fracoes.definicao" />
+      <app-botao-teoria conceito="fracoes.simplificacao" />
+      <app-botao-teoria conceito="fracoes.mmc" />
+      <app-botao-teoria conceito="fracoes.operacoes" />
+    </footer>
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

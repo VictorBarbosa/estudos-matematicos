@@ -1,0 +1,124 @@
+<app-topico-layout
+  titulo="Trabalho e energia"
+  descricao="Trabalho como produto escalar, energia cinética, potencial e conservação."
+  topicoId="trabalho-e-energia"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="massa" rotulo="Massa (kg)" [min]="1" [max]="20" />
+      <app-controle-parametro
+        [(valor)]="alturaInicial"
+        rotulo="Altura de partida (m)"
+        [min]="5"
+        [max]="80"
+      />
+      <app-controle-parametro
+        [(valor)]="alturaAtual"
+        rotulo="Altura atual (m)"
+        [min]="0"
+        [max]="80"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="energiaTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>A energia troca de forma, não de total</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        descricao="Energias potencial, cinética e total em função da altura, numa queda sem atrito."
+        [altura]="380"
+      />
+      <p class="observacao">
+        Desça a altura atual e acompanhe: a potencial cai exatamente na mesma medida em que a
+        cinética sobe, e a linha tracejada do total não se move. Energia não é consumida na
+        queda — ela muda de forma.
+      </p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Energia potencial</span>
+        <strong>{{ formatar(potencial()) }} J</strong>
+        <span class="legenda">mgh</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Energia cinética</span>
+        <strong>{{ formatar(cinetica()) }} J</strong>
+        <span class="legenda">mv²/2</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Total</span>
+        <strong>{{ formatar(total()) }} J</strong>
+        <span class="legenda">constante</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Velocidade atual</span>
+        <strong>{{ formatar(queda().resultado.velocidadeFinal) }} m/s</strong>
+        <span class="legenda">não depende da massa</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Passo a passo da conservação</h2>
+      <app-passo-a-passo [passos]="queda().passos" />
+      <p class="observacao">
+        Mude a massa e observe a velocidade atual: ela não se altera. A massa aparece em todos
+        os termos do balanço energético e se cancela — foi o que Galileu afirmou antes de haver
+        fórmula para isso.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Trabalho de uma força inclinada</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="forca" rotulo="Força (N)" [min]="0" [max]="200" />
+        <app-controle-parametro
+          [(valor)]="deslocamento"
+          rotulo="Deslocamento (m)"
+          [min]="0"
+          [max]="30"
+        />
+        <app-controle-parametro
+          [(valor)]="angulo"
+          rotulo="Ângulo com o deslocamento (°)"
+          [min]="0"
+          [max]="180"
+          [passo]="5"
+        />
+        <app-controle-parametro [(valor)]="tempo" rotulo="Tempo (s)" [min]="1" [max]="60" />
+      </div>
+
+      <app-formula [tex]="trabalhoTex()" [bloco]="true" />
+      <app-passo-a-passo [passos]="analiseTrabalho().passos" />
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">Trabalho</span>
+          <strong>{{ formatar(analiseTrabalho().resultado) }} J</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Potência média</span>
+          <strong>{{ formatar(analisePotencia().resultado) }} W</strong>
+          <span class="legenda">mesma energia, em {{ tempo() }} s</span>
+        </div>
+      </div>
+
+      <p class="observacao">
+        Leve o ângulo a 90°: o trabalho zera, por mais forte que seja a força. Passe de 90° e
+        ele fica negativo — é o que o atrito faz, retirando energia do movimento. E compare a
+        potência ao mudar só o tempo: a energia é a mesma, a exigência do motor não.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

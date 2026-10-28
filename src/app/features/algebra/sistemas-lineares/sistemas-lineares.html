@@ -1,0 +1,56 @@
+<app-topico-layout
+  titulo="Sistemas lineares"
+  descricao="Substituição e adição, com a solução vista como o cruzamento de duas retas."
+  topicoId="sistemas-lineares"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>1ª equação</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="a1" rotulo="a₁ (coef. de x)" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="b1" rotulo="b₁ (coef. de y)" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="c1" rotulo="c₁" [min]="-20" [max]="20" />
+      </div>
+    </section>
+
+    <section class="painel">
+      <h2>2ª equação</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="a2" rotulo="a₂ (coef. de x)" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="b2" rotulo="b₂ (coef. de y)" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="c2" rotulo="c₂" [min]="-20" [max]="20" />
+      </div>
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="sistemaTex()" [bloco]="true" />
+      <p class="observacao classificacao">{{ classificacao() }}</p>
+    </section>
+
+    <section>
+      <h2>As duas retas</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        Mexa nos coeficientes até as retas ficarem paralelas: o determinante zera e o sistema deixa
+        de ter solução única. É a mesma informação, vista de dois jeitos.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

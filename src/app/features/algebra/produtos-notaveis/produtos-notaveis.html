@@ -1,0 +1,88 @@
+<app-topico-layout
+  titulo="Produtos notáveis"
+  descricao="Quadrado da soma, diferença de quadrados e cubo — com a demonstração geométrica."
+  topicoId="produtos-notaveis"
+>
+  <div explorar class="explorar">
+    <section class="seletor" role="group" aria-label="Identidade">
+      @for (opcao of tipos; track opcao) {
+        <button
+          type="button"
+          [class.ativo]="tipo() === opcao"
+          [attr.aria-pressed]="tipo() === opcao"
+          (click)="definirTipo(opcao)"
+        >
+          {{ nomeDoTipo[opcao] }}
+        </button>
+      }
+    </section>
+
+    <section class="controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x" [min]="1" [max]="6" />
+      <app-controle-parametro [(valor)]="b" rotulo="Termo constante" [min]="1" [max]="9" />
+    </section>
+
+    <section class="identidade">
+      <app-formula [tex]="enunciado() + ' = ' + expandido().paraTex()" [bloco]="true" />
+    </section>
+
+    @if (ingenuo(); as errado) {
+      <section class="comparacao">
+        <h2>O erro mais comum</h2>
+        <div class="lado-a-lado">
+          <div class="caixa errada">
+            <span class="etiqueta">Errado</span>
+            <app-formula [tex]="enunciado() + ' = ' + errado" [bloco]="true" />
+          </div>
+          <div class="caixa certa">
+            <span class="etiqueta">Correto</span>
+            <app-formula [tex]="enunciado() + ' = ' + expandido().paraTex()" [bloco]="true" />
+          </div>
+        </div>
+        <p class="observacao">
+          A diferença entre os dois é exatamente o termo
+          <strong>{{ termoDoMeio() }}x</strong> — que corresponde a uma área real na figura abaixo,
+          e não a um detalhe de notação.
+        </p>
+      </section>
+    }
+
+    @if (mostraGeometria()) {
+      <section class="geometria">
+        <h2>Por que o termo do meio existe</h2>
+        <p class="observacao">
+          Um quadrado de lado (a + b) se divide em quatro pedaços. Os dois retângulos de área a·b
+          são o 2ab que se perde ao escrever apenas a² + b².
+        </p>
+
+        <div
+          class="quadrado"
+          [style.--prop-a.%]="areas().proporcaoA"
+          [style.--prop-b.%]="areas().proporcaoB"
+          role="img"
+          [attr.aria-label]="
+            'Quadrado de lado ' +
+            areas().total +
+            ' dividido em quatro regiões: um quadrado a ao quadrado, dois retângulos a vezes b e um quadrado b ao quadrado.'
+          "
+        >
+          <div class="celula aa"><span>a²</span></div>
+          <div class="celula ab"><span>ab</span></div>
+          <div class="celula ab"><span>ab</span></div>
+          <div class="celula bb"><span>b²</span></div>
+        </div>
+      </section>
+    }
+
+    <section class="passos">
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

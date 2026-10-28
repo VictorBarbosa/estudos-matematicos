@@ -1,0 +1,130 @@
+<app-topico-layout
+  titulo="Progressões"
+  descricao="PA e PG: termo geral, soma dos termos e onde cada padrão aparece."
+  topicoId="progressoes"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Tipo de progressão">
+      <button
+        type="button"
+        [class.ativo]="!geometrica()"
+        [attr.aria-pressed]="!geometrica()"
+        (click)="definirTipo(false)"
+      >
+        Aritmética (soma)
+      </button>
+      <button
+        type="button"
+        [class.ativo]="geometrica()"
+        [attr.aria-pressed]="geometrica()"
+        (click)="definirTipo(true)"
+      >
+        Geométrica (multiplica)
+      </button>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="primeiro" rotulo="Primeiro termo a₁" [min]="-10" [max]="12" />
+      <app-controle-parametro
+        [(valor)]="razao"
+        [rotulo]="geometrica() ? 'Razão q' : 'Razão r'"
+        [min]="geometrica() ? -3 : -8"
+        [max]="geometrica() ? 3 : 8"
+        [passo]="geometrica() ? 0.25 : 1"
+      />
+      <app-controle-parametro [(valor)]="quantidade" rotulo="Quantos termos" [min]="2" [max]="20" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="termoGeralTex()" [bloco]="true" />
+      <app-formula [tex]="somaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Último termo</span>
+        <strong>{{ formatar(ultimo()) }}</strong>
+        <span class="legenda">a<sub>{{ quantidade() }}</sub></span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Soma dos termos</span>
+        <strong>{{ formatar(analise().resultado) }}</strong>
+      </div>
+      @if (geometrica()) {
+        <div class="indicador">
+          <span class="rotulo">Soma infinita</span>
+          <strong>
+            {{ convergente() ? formatar(somaInfinita()!.resultado!) : 'diverge' }}
+          </strong>
+          <span class="legenda">
+            {{ convergente() ? '|q| < 1: converge' : '|q| ≥ 1: cresce sem limite' }}
+          </span>
+        </div>
+      }
+    </section>
+
+    <section>
+      <h2>Os termos e o acumulado</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [pontos]="todosOsPontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="legenda-pontos">
+        <span class="amostra serie-1"></span> termos aₙ
+        <span class="amostra serie-3"></span> soma acumulada Sₙ
+      </p>
+      <p class="observacao">
+        Na PA os termos ficam <strong>alinhados</strong> — a razão é a inclinação de uma reta.
+        Na PG eles se curvam, porque o termo geral é uma exponencial. Troque o tipo acima e
+        compare: por lenta que uma PG pareça no início, ela ultrapassa qualquer PA.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Termos, um a um</h2>
+      <table class="termos">
+        <thead>
+          <tr>
+            <th scope="col">n</th>
+            <th scope="col">aₙ</th>
+            <th scope="col">Sₙ</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (termo of termos(); track $index) {
+            <tr>
+              <td>{{ $index + 1 }}</td>
+              <td>{{ formatar(termo) }}</td>
+              <td>{{ formatar(parciais()[$index]!) }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>De onde vem a fórmula da soma</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    @if (geometrica()) {
+      <section class="painel">
+        <h2>Somar infinitos termos</h2>
+        <app-passo-a-passo [passos]="somaInfinita()!.passos" />
+        <p class="observacao">
+          Com |q| &lt; 1, cada parcela é uma fração da anterior, e o total nunca passa de
+          a₁/(1 − q). Esse é o primeiro encontro honesto com convergência — a mesma ideia que
+          sustenta todo o cálculo mais adiante.
+        </p>
+      </section>
+    }
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

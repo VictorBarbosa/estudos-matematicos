@@ -1,0 +1,69 @@
+<app-topico-layout
+  titulo="Definição de derivada"
+  descricao="Da reta secante à tangente: o limite do quociente de Newton."
+  topicoId="definicao-de-derivada"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="ponto" rotulo="Ponto x" [min]="-4" [max]="4" />
+      <app-controle-parametro
+        [(valor)]="hEmCentesimos"
+        rotulo="Distância h (em centésimos)"
+        [min]="1"
+        [max]="300"
+        [dica]="'h = ' + formatar(h()) + ' — diminua e veja a secante virar tangente'"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula
+        [tex]="'\\frac{f(x+h) - f(x)}{h} = ' + formatar(inclinacaoSecante())"
+        [bloco]="true"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Inclinação da secante</span>
+        <strong>{{ formatar(inclinacaoSecante()) }}</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Derivada (tangente)</span>
+        <strong>{{ formatar(derivadaExata()) }}</strong>
+        <span class="legenda">limite com h → 0</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Diferença</span>
+        <strong>{{ formatar(erro()) }}</strong>
+        <span class="legenda">some conforme h diminui</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A secante girando até virar tangente</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        Reduza o h e observe: os dois pontos se juntam, e a secante gira até coincidir com a
+        tangente tracejada. A derivada é exatamente o valor para o qual essa inclinação
+        converge — nunca o valor em h = 0, que daria 0/0.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

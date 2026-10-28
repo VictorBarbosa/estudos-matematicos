@@ -1,0 +1,176 @@
+<figure class="plot">
+  <svg
+    [attr.viewBox]="'0 0 ' + LARGURA + ' ' + altura()"
+    preserveAspectRatio="xMidYMid meet"
+    role="img"
+    [attr.aria-label]="descricao()"
+  >
+    <defs>
+      <clipPath [attr.id]="idClip">
+        <rect
+          [attr.x]="margens().esquerda"
+          [attr.y]="margens().topo"
+          [attr.width]="larguraUtil()"
+          [attr.height]="alturaUtil()"
+        />
+      </clipPath>
+    </defs>
+
+    @if (mostrarGrade()) {
+      <g class="grade">
+        @for (marca of marcacoesX(); track marca.valor) {
+          <line
+            [attr.x1]="marca.pos"
+            [attr.y1]="margens().topo"
+            [attr.x2]="marca.pos"
+            [attr.y2]="margens().topo + alturaUtil()"
+          />
+        }
+        @if (mostrarEixoY()) {
+          @for (marca of marcacoesY(); track marca.valor) {
+            <line
+              [attr.x1]="margens().esquerda"
+              [attr.y1]="marca.pos"
+              [attr.x2]="margens().esquerda + larguraUtil()"
+              [attr.y2]="marca.pos"
+            />
+          }
+        }
+      </g>
+    }
+
+    <g [attr.clip-path]="'url(#' + idClip + ')'">
+      @for (area of areasDesenhadas(); track $index) {
+        <path class="area" [attr.d]="area.d" [attr.fill]="area.cor" />
+      }
+
+      @for (retangulo of retangulosDesenhados(); track $index) {
+        <rect
+          class="retangulo"
+          [attr.x]="retangulo.x"
+          [attr.y]="retangulo.y"
+          [attr.width]="retangulo.largura"
+          [attr.height]="retangulo.altura"
+          [attr.fill]="retangulo.cor"
+        />
+      }
+
+      @for (curva of curvasDesenhadas(); track $index) {
+        <path
+          class="curva"
+          [attr.d]="curva.d"
+          [attr.stroke]="curva.cor"
+          [attr.stroke-dasharray]="curva.tracejada ? '7 5' : null"
+        />
+      }
+
+      @for (segmento of segmentosDesenhados(); track $index) {
+        <line
+          class="segmento"
+          [attr.x1]="segmento.x1"
+          [attr.y1]="segmento.y1"
+          [attr.x2]="segmento.x2"
+          [attr.y2]="segmento.y2"
+          [attr.stroke]="segmento.cor"
+          [attr.stroke-dasharray]="segmento.tracejado ? '6 4' : null"
+        />
+        @if (segmento.ponta) {
+          <path [attr.d]="segmento.ponta" [attr.fill]="segmento.cor" />
+        }
+      }
+    </g>
+
+    <!-- Eixos por cima do conteúdo, para continuarem legíveis sobre áreas. -->
+    <g class="eixos">
+      <line
+        [attr.x1]="margens().esquerda"
+        [attr.y1]="posicaoEixoX()"
+        [attr.x2]="margens().esquerda + larguraUtil()"
+        [attr.y2]="posicaoEixoX()"
+      />
+      @if (mostrarEixoY()) {
+        <line
+          [attr.x1]="posicaoEixoY()"
+          [attr.y1]="margens().topo"
+          [attr.x2]="posicaoEixoY()"
+          [attr.y2]="margens().topo + alturaUtil()"
+        />
+      }
+    </g>
+
+    <g class="marcacoes">
+      @for (marca of marcacoesX(); track marca.valor) {
+        <line
+          [attr.x1]="marca.pos"
+          [attr.y1]="posicaoEixoX()"
+          [attr.x2]="marca.pos"
+          [attr.y2]="posicaoEixoX() + 5"
+        />
+        <text [attr.x]="marca.pos" [attr.y]="posicaoEixoX() + 20" text-anchor="middle">
+          {{ marca.rotulo }}
+        </text>
+      }
+      @if (mostrarEixoY()) {
+        @for (marca of marcacoesY(); track marca.valor) {
+          <line
+            [attr.x1]="posicaoEixoY() - 5"
+            [attr.y1]="marca.pos"
+            [attr.x2]="posicaoEixoY()"
+            [attr.y2]="marca.pos"
+          />
+          <text [attr.x]="posicaoEixoY() - 10" [attr.y]="marca.pos + 4" text-anchor="end">
+            {{ marca.rotulo }}
+          </text>
+        }
+      }
+    </g>
+
+    <g class="marcas-destacadas">
+      @for (marca of marcasDesenhadas(); track $index) {
+        <line
+          [attr.x1]="marca.pos"
+          [attr.y1]="posicaoEixoX() - 11"
+          [attr.x2]="marca.pos"
+          [attr.y2]="posicaoEixoX() + 11"
+          [attr.stroke]="marca.cor"
+        />
+        <text
+          [attr.x]="marca.pos"
+          [attr.y]="posicaoEixoX() - 18"
+          [attr.fill]="marca.cor"
+          text-anchor="middle"
+        >
+          {{ marca.rotulo }}
+        </text>
+      }
+    </g>
+
+    <g class="pontos">
+      @for (ponto of pontosDesenhados(); track $index) {
+        <circle
+          [attr.cx]="ponto.cx"
+          [attr.cy]="ponto.cy"
+          r="5.5"
+          [attr.fill]="ponto.vazado ? 'var(--superficie)' : ponto.cor"
+          [attr.stroke]="ponto.cor"
+        />
+        @if (ponto.rotulo) {
+          <text [attr.x]="ponto.cx + 10" [attr.y]="ponto.cy - 9" [attr.fill]="ponto.cor">
+            {{ ponto.rotulo }}
+          </text>
+        }
+      }
+    </g>
+  </svg>
+
+  @if (legenda().length > 0) {
+    <figcaption class="legenda">
+      @for (item of legenda(); track item.rotulo) {
+        <span class="item">
+          <span class="amostra" [style.background]="item.cor"></span>
+          {{ item.rotulo }}
+        </span>
+      }
+    </figcaption>
+  }
+</figure>

@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+.veredito-relacao {
+  margin-top: var(--esp-2);
+  font-weight: 700;
+  font-size: var(--texto-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  /* Marcado por texto explícito, não apenas pela cor. */
+  &[data-funcao='true'] {
+    color: var(--acerto);
+  }
+
+  &[data-funcao='false'] {
+    color: var(--erro);
+  }
+}
+
+.destaque-veredito {
+  font-weight: 600;
+  color: var(--texto);
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}

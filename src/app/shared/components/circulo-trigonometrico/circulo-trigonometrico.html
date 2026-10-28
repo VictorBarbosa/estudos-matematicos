@@ -1,0 +1,82 @@
+<figure class="circulo">
+  <svg viewBox="0 0 340 340" role="img" [attr.aria-label]="descricao()">
+    <!-- Eixos -->
+    <g class="eixos">
+      <line x1="20" [attr.y1]="CENTRO" x2="320" [attr.y2]="CENTRO" />
+      <line [attr.x1]="CENTRO" y1="20" [attr.x2]="CENTRO" y2="320" />
+    </g>
+
+    <!-- A circunferência de raio 1 -->
+    <circle class="borda" [attr.cx]="CENTRO" [attr.cy]="CENTRO" [attr.r]="RAIO" />
+
+    @if (mostrarTangente()) {
+      <line
+        class="reta-tangente"
+        [attr.x1]="CENTRO + RAIO"
+        y1="20"
+        [attr.x2]="CENTRO + RAIO"
+        y2="320"
+      />
+    }
+
+    <!-- Arco do ângulo -->
+    <path class="arco" [attr.d]="arco()" />
+
+    @if (mostrarProjecoes()) {
+      <!-- Cosseno: projeção horizontal -->
+      <line
+        class="projecao cosseno"
+        [attr.x1]="CENTRO"
+        [attr.y1]="CENTRO"
+        [attr.x2]="ponto().x"
+        [attr.y2]="CENTRO"
+      />
+      <!-- Seno: projeção vertical -->
+      <line
+        class="projecao seno"
+        [attr.x1]="ponto().x"
+        [attr.y1]="CENTRO"
+        [attr.x2]="ponto().x"
+        [attr.y2]="ponto().y"
+      />
+    }
+
+    <!-- Raio até o ponto -->
+    <line
+      class="raio"
+      [attr.x1]="CENTRO"
+      [attr.y1]="CENTRO"
+      [attr.x2]="ponto().x"
+      [attr.y2]="ponto().y"
+    />
+
+    @if (mostrarTangente() && pontoTangente(); as pt) {
+      <line
+        class="raio prolongamento"
+        [attr.x1]="ponto().x"
+        [attr.y1]="ponto().y"
+        [attr.x2]="pt.x"
+        [attr.y2]="pt.y"
+      />
+      <circle class="marca tangente" [attr.cx]="pt.x" [attr.cy]="pt.y" r="5" />
+    }
+
+    <circle class="marca ponto" [attr.cx]="ponto().x" [attr.cy]="ponto().y" r="6" />
+
+    <!-- Rótulos dos eixos -->
+    <text class="rotulo-eixo" [attr.x]="CENTRO + RAIO + 8" [attr.y]="CENTRO - 8">1</text>
+    <text class="rotulo-eixo" [attr.x]="CENTRO + 8" [attr.y]="CENTRO - RAIO - 6">1</text>
+  </svg>
+
+  <figcaption class="legenda">
+    <span class="item"><span class="amostra cos"></span>cos θ = {{ formatar(cosseno()) }}</span>
+    <span class="item"><span class="amostra sen"></span>sen θ = {{ formatar(seno()) }}</span>
+    @if (mostrarTangente()) {
+      <span class="item">
+        <span class="amostra tan"></span>
+        tg θ = {{ tangente() === null ? 'não existe' : formatar(tangente()!) }}
+      </span>
+    }
+    <span class="item quadrante">{{ quadranteAtual() }}º quadrante</span>
+  </figcaption>
+</figure>

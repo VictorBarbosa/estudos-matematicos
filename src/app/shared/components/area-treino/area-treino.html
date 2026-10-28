@@ -1,0 +1,129 @@
+@let s = sessao();
+@let exercicio = s.exercicio();
+@let validacao = s.validacao();
+
+<section class="treino">
+  <header class="barra">
+    <div class="niveis" role="group" aria-label="Nível de dificuldade">
+      @for (nivel of niveis; track nivel) {
+        <button
+          type="button"
+          class="nivel"
+          [class.ativo]="s.nivel() === nivel"
+          [attr.aria-pressed]="s.nivel() === nivel"
+          (click)="s.definirNivel(nivel)"
+        >
+          {{ rotuloNivel[nivel] }}
+        </button>
+      }
+    </div>
+
+    <dl class="placar">
+      <div>
+        <dt>Acertos</dt>
+        <dd class="certo">{{ s.acertos() }}</dd>
+      </div>
+      <div>
+        <dt>Erros</dt>
+        <dd class="errado">{{ s.erros() }}</dd>
+      </div>
+      <div>
+        <dt>Sequência</dt>
+        <dd>{{ s.sequencia() }}</dd>
+      </div>
+    </dl>
+  </header>
+
+  <div class="enunciado">
+    <p>{{ exercicio.enunciado }}</p>
+    <app-formula [tex]="exercicio.enunciadoTex" [bloco]="true" />
+    @if (exercicio.dica; as dica) {
+      <p class="dica">{{ dica }}</p>
+    }
+  </div>
+
+  <app-campo-resposta
+    #campo
+    [(valor)]="s.resposta"
+    rotulo="Sua resposta"
+    [ajuda]="gerador().formatoResposta"
+    [estado]="estadoCampo()"
+    [bloqueado]="s.corrigido()"
+    (enviar)="aoEnviar()"
+  />
+
+  <div class="acoes">
+    @if (s.corrigido()) {
+      <button type="button" class="principal" (click)="proximo()">Próximo exercício</button>
+    } @else {
+      <button
+        type="button"
+        class="principal"
+        [disabled]="s.resposta().trim() === ''"
+        (click)="s.responder()"
+      >
+        Verificar
+      </button>
+      <button type="button" class="secundario" (click)="s.revelarResolucao()">
+        Não sei, mostrar a resolução
+      </button>
+    }
+  </div>
+
+  <!-- aria-live para que o veredito seja anunciado sem roubar o foco. -->
+  <div class="feedback" role="status" aria-live="polite">
+    @if (validacao) {
+      <div class="veredito" [attr.data-veredito]="validacao.veredito">
+        <p class="mensagem">{{ validacao.mensagem }}</p>
+        @if (validacao.diagnostico; as diagnostico) {
+          <p class="diagnostico">{{ diagnostico }}</p>
+        }
+        @if (validacao.veredito === 'incorreto') {
+          <p class="gabarito">
+            Resposta correta: <strong>{{ gerador().formatar(exercicio.gabarito) }}</strong>
+          </p>
+        }
+        @if (validacao.conceitoAssociado; as conceito) {
+          <app-botao-teoria [conceito]="conceito" />
+        }
+      </div>
+    }
+  </div>
+
+  @if (etapaVencida()) {
+    <div class="desbloqueio" role="status">
+      <p>
+        <strong>Etapa vencida!</strong> Você acertou {{ alvo }} seguidas neste tópico.
+      </p>
+      @if (proximaEtapa(); as proxima) {
+        <a class="principal" [routerLink]="proxima.rota">
+          Ir para {{ proxima.titulo }}
+          <span aria-hidden="true">→</span>
+        </a>
+      }
+    </div>
+  } @else if (s.sequencia() > 0) {
+    <p class="rumo-ao-desbloqueio" role="status">
+      Mais {{ faltamParaVencer() }} acerto(s) seguido(s) e a próxima etapa abre.
+    </p>
+  }
+
+  @if (s.resolucaoVisivel()) {
+    <section class="resolucao">
+      <h3>Como se resolve</h3>
+      <app-passo-a-passo
+        [passos]="exercicio.resolucao.passos"
+        [passoDestacado]="validacao?.passoDivergente ?? null"
+      />
+    </section>
+  }
+
+  @if (exercicio.conceitos.length > 0) {
+    <footer class="conceitos">
+      <span class="etiqueta">Conceitos deste exercício:</span>
+      @for (conceito of exercicio.conceitos; track conceito) {
+        <app-botao-teoria [conceito]="conceito" [discreto]="true" />
+      }
+    </footer>
+  }
+</section>

@@ -1,0 +1,11 @@
+<ol class="passos">
+  @for (passo of passos(); track $index) {
+    <li class="passo" [class.destacado]="$index === passoDestacado()">
+      <p class="descricao">{{ passo.descricao }}</p>
+      <app-formula [tex]="passo.tex" [bloco]="true" />
+      @if (passo.nota) {
+        <p class="nota">{{ passo.nota }}</p>
+      }
+    </li>
+  }
+</ol>

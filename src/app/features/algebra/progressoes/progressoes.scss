@@ -1,0 +1,59 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.termos {
+  width: 100%;
+  margin-top: var(--esp-3);
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+
+  th,
+  td {
+    padding: var(--esp-1) var(--esp-3);
+    text-align: right;
+    border-bottom: 1px solid var(--borda);
+  }
+
+  th:first-child,
+  td:first-child {
+    text-align: left;
+    color: var(--texto-suave);
+  }
+
+  thead th {
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
+  }
+}
+
+.legenda-pontos {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  margin-top: var(--esp-2);
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+
+  .amostra {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+
+    &.serie-1 {
+      background: var(--serie-1);
+    }
+
+    &.serie-3 {
+      background: var(--serie-3);
+    }
+  }
+
+  .amostra:not(:first-child) {
+    margin-left: var(--esp-3);
+  }
+}

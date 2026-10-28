@@ -1,0 +1,170 @@
+<app-topico-layout
+  titulo="Estatística e incerteza"
+  descricao="Média, desvio padrão, ajuste de reta e propagação de erro numa medida."
+  topicoId="estatistica-e-incerteza"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>Oito medidas do mesmo pêndulo</h2>
+      <div class="grade-controles">
+        <app-controle-parametro
+          [(valor)]="quantidade"
+          rotulo="Quantas medidas usar"
+          [min]="2"
+          [max]="8"
+        />
+      </div>
+
+      <button type="button" class="alternar" (click)="alternarOutlier()">
+        {{ comOutlier() ? 'Remover' : 'Acrescentar' }} uma medida discrepante (3,5 s)
+      </button>
+
+      <app-math-plot
+        [dominio]="dominioMedidas()"
+        [pontos]="pontosMedidas()"
+        [marcas]="marcas()"
+        [mostrarEixoY]="false"
+        [mostrarGrade]="false"
+        descricao="As medidas dispostas na reta real, com a média destacada."
+        [altura]="200"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="resultadoTex()" [bloco]="true" />
+      <p class="observacao">
+        Um resultado experimental não é um número: é um valor acompanhado de sua incerteza.
+      </p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Média</span>
+        <strong>{{ formatar(resumo().media) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Mediana</span>
+        <strong>{{ formatar(resumo().mediana) }}</strong>
+        <span class="legenda">resiste a valores extremos</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Desvio padrão</span>
+        <strong>{{ formatar(resumo().desvioPadrao) }}</strong>
+        <span class="legenda">dispersão das medidas</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Incerteza da média</span>
+        <strong>{{ formatar(resumo().incertezaDaMedia) }}</strong>
+        <span class="legenda">s / √n</span>
+      </div>
+    </section>
+
+    @if (comOutlier()) {
+      <p class="aviso">
+        Com a medida discrepante, a média se deslocou bem mais que a mediana. É por isso que a
+        mediana costuma ser reportada quando se suspeita de erro grosseiro em alguma leitura.
+      </p>
+    }
+
+    @if (analiseDesvio(); as analise) {
+      <section>
+        <h2>De onde vem o desvio padrão</h2>
+        <app-passo-a-passo [passos]="analise.passos" />
+        <p class="observacao">
+          Reduza o número de medidas e acompanhe os indicadores: o desvio padrão muda pouco,
+          porque descreve o instrumento e o procedimento. Já a incerteza da média cai com √n —
+          medir mais vezes não torna o experimento mais preciso, mas torna a média mais
+          confiável.
+        </p>
+      </section>
+    }
+
+    <section class="painel">
+      <h2>Propagação de incerteza</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="base" rotulo="Base (cm)" [min]="5" [max]="40" />
+        <app-controle-parametro [(valor)]="altura" rotulo="Altura (cm)" [min]="5" [max]="40" />
+        <app-controle-parametro
+          [(valor)]="incertezaBase"
+          rotulo="Incerteza da base"
+          [min]="0.1"
+          [max]="2"
+          [passo]="0.1"
+        />
+        <app-controle-parametro
+          [(valor)]="incertezaAltura"
+          rotulo="Incerteza da altura"
+          [min]="0.1"
+          [max]="2"
+          [passo]="0.1"
+        />
+      </div>
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">Incerteza da soma (quadratura)</span>
+          <strong>{{ formatar(propagacaoSoma().resultado) }}</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Se somássemos direto</span>
+          <strong>{{ formatar(somaDireta()) }}</strong>
+          <span class="legenda">superestima o erro</span>
+        </div>
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">Incerteza da área</span>
+          <strong>± {{ formatar(propagacaoProduto().resultado) }} cm²</strong>
+          <span class="legenda">área = {{ formatar(area()) }} cm²</span>
+        </div>
+      </div>
+
+      <app-passo-a-passo [passos]="propagacaoProduto().passos" />
+      <p class="observacao">
+        Em somas, combinam-se as incertezas <strong>absolutas</strong>; em produtos, as
+        <strong>relativas</strong>. Nos dois casos em quadratura, porque é improvável que todos
+        os erros apontem para o mesmo lado. E quando uma grandeza entra ao quadrado, sua
+        incerteza relativa pesa o dobro — vale medi-la melhor primeiro.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ajuste de reta: extrair a grandeza dos dados</h2>
+      <app-math-plot
+        [dominio]="dominioAjuste()"
+        [curvas]="curvasAjuste()"
+        [pontos]="pontosAjuste()"
+        descricao="Pontos experimentais com ruído e a reta ajustada por mínimos quadrados."
+        [altura]="380"
+      />
+
+      <div class="indicadores">
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">Inclinação medida</span>
+          <strong>{{ formatar(ajuste().resultado.inclinacao) }}</strong>
+          <span class="legenda">valor real usado: 2,5</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Intercepto</span>
+          <strong>{{ formatar(ajuste().resultado.intercepto) }}</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">R²</span>
+          <strong>{{ formatar(ajuste().resultado.r2) }}</strong>
+          <span class="legenda">quanto da variação a reta explica</span>
+        </div>
+      </div>
+
+      <app-passo-a-passo [passos]="ajuste().passos" />
+      <p class="observacao">
+        Os pontos foram gerados com inclinação 2,5 e depois perturbados com ruído. O ajuste
+        recupera um valor próximo disso — é assim que uma constante física se extrai de um
+        experimento: não de uma medida, mas da inclinação de muitas.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -1,0 +1,77 @@
+<app-topico-layout
+  titulo="Função modular"
+  descricao="Módulo como distância, o gráfico em V e as duas soluções das equações modulares."
+  topicoId="funcao-modular"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente a" [min]="-4" [max]="4" />
+      <app-controle-parametro [(valor)]="b" rotulo="Termo b" [min]="-10" [max]="10" />
+      <app-controle-parametro
+        [(valor)]="k"
+        rotulo="Reta horizontal y = k"
+        [min]="-2"
+        [max]="10"
+        dica="Experimente k negativo."
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Bico do V</span>
+        <strong>x = {{ formatar(bico().x) }}</strong>
+        <span class="legenda">onde o interior zera</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Soluções de |…| = {{ k() }}</span>
+        <strong>{{ solucoes().length }}</strong>
+        <span class="legenda">
+          @if (solucoes().length === 0) {
+            módulo nunca é negativo
+          } @else if (solucoes().length === 1) {
+            a reta passa pelo bico
+          } @else {
+            um de cada lado
+          }
+        </span>
+      </div>
+    </section>
+
+    <section>
+      <h2>
+        O V e a reta original
+        <button type="button" class="alternar" (click)="alternarSemModulo()">
+          {{ mostrarSemModulo() ? 'Esconder a reta sem módulo' : 'Mostrar a reta sem módulo' }}
+        </button>
+      </h2>
+
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+
+      <p class="observacao">
+        A reta tracejada é ax + b sem o módulo. Onde ela desce abaixo do eixo, o módulo a
+        espelha para cima — e é desse espelhamento que nasce o V.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

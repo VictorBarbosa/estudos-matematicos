@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.painel .grade-controles,
+.painel .indicadores {
+  margin-bottom: var(--esp-3);
+}
+
+.alternar {
+  margin-bottom: var(--esp-3);
+  padding: var(--esp-2) var(--esp-3);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-sm);
+  background: transparent;
+  color: var(--texto);
+  font-size: var(--texto-sm);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--acento);
+    color: var(--acento);
+  }
+}

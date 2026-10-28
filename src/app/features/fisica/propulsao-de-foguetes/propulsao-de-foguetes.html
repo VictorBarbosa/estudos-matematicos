@@ -1,0 +1,148 @@
+<app-topico-layout
+  titulo="Propulsão de foguetes"
+  descricao="Empuxo, impulso específico e a equação de Tsiolkovsky."
+  topicoId="propulsao-de-foguetes"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="massaSeca"
+        rotulo="Massa seca (t)"
+        [min]="1"
+        [max]="50"
+        dica="Estrutura, motores e carga útil."
+      />
+      <app-controle-parametro
+        [(valor)]="massaPropelente"
+        rotulo="Propelente (t)"
+        [min]="1"
+        [max]="500"
+        [passo]="5"
+      />
+      <app-controle-parametro
+        [(valor)]="exaustao"
+        rotulo="Velocidade de exaustão (m/s)"
+        [min]="1500"
+        [max]="4500"
+        [passo]="100"
+      />
+      <app-controle-parametro
+        [(valor)]="vazao"
+        rotulo="Vazão de propelente (kg/s)"
+        [min]="20"
+        [max]="1000"
+        [passo]="10"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="tsiolkovskyTex()" [bloco]="true" />
+      @if (missaoAlcancada(); as missao) {
+        <p class="observacao">
+          Com esse delta-v, a missão mais ambiciosa alcançada é: <strong>{{ missao.nome }}</strong>.
+        </p>
+      } @else {
+        <p class="aviso">
+          Esse delta-v ainda não chega aos 9,4 km/s necessários para a órbita baixa.
+        </p>
+      }
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Delta-v</span>
+        <strong>{{ formatar(deltaVKm()) }} km/s</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Razão de massas</span>
+        <strong>{{ formatar(analise().resultado.razaoMassas) }}</strong>
+        <span class="legenda">m₀/m_f</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Propelente</span>
+        <strong>{{ percentual(fracaoPropelente()) }}</strong>
+        <span class="legenda">da massa inicial</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Empuxo</span>
+        <strong>{{ formatar(empuxo().resultado / 1000) }} kN</strong>
+      </div>
+      <div class="indicador" [attr.data-destaque]="empuxoPeso() >= 1">
+        <span class="rotulo">Empuxo / peso</span>
+        <strong>{{ formatar(empuxoPeso()) }}</strong>
+        <span class="legenda">
+          {{ empuxoPeso() >= 1 ? 'decola' : 'não sai do chão' }}
+        </span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Tempo de queima</span>
+        <strong>{{ formatar(tempoDeQueima()) }} s</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>A tirania da equação do foguete</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [marcas]="marcas()"
+        descricao="Delta-v disponível em função da fração de propelente na massa inicial."
+        [altura]="400"
+      />
+      <p class="observacao">
+        Essa curva é o problema central da engenharia aeroespacial. Ela sobe devagar e só
+        dispara perto de 100% de propelente — porque o delta-v cresce com o
+        <strong>logaritmo</strong> da razão de massas. Para cruzar a linha dos 9,4 km/s com
+        exaustão de 3 km/s, é preciso que mais de 95% da massa inicial seja combustível.
+      </p>
+      <p class="observacao">
+        Daí a frase que resume o ofício: um foguete é um tanque de combustível com um motor
+        embaixo e uma carga minúscula no topo.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Empuxo e impulso específico</h2>
+      <app-passo-a-passo [passos]="empuxo().passos" />
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">Impulso específico</span>
+          <strong>{{ formatar(impulsoEspecifico()) }} s</strong>
+          <span class="legenda">vₑ / g₀</span>
+        </div>
+      </div>
+
+      <p class="observacao">
+        O empuxo tira o foguete do chão; o impulso específico decide até onde ele vai. São
+        exigências em tensão: motores químicos têm empuxo alto e Isp modesto (até ~450 s),
+        enquanto propulsão iônica tem Isp altíssimo e empuxo que não levantaria uma folha de
+        papel — ótima para o espaço, inútil para decolar.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Por que estágios</h2>
+      <app-formula [tex]="'\\Delta v_{total} = \\sum_i v_{e,i}\\ln\\frac{m_{0,i}}{m_{f,i}}'" [bloco]="true" />
+      <p class="observacao">
+        Tanques vazios continuam pesando, e cada quilo carregado desnecessariamente custa
+        delta-v. Separar o estágio gasto reinicia a conta com uma razão de massas melhor — e
+        como os delta-v se somam enquanto as razões de massa se multiplicam, o estagiamento é a
+        forma de vencer o logaritmo. Não é economia: é a única maneira conhecida de chegar à
+        órbita com química.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

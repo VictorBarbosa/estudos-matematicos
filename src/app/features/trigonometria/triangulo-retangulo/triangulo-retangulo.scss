@@ -1,0 +1,108 @@
+:host {
+  display: block;
+}
+
+.desenho-e-valores {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: var(--esp-4);
+  align-items: start;
+}
+
+.desenho {
+  margin: 0;
+  background: var(--plot-fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  padding: var(--esp-2);
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.corpo {
+  fill: color-mix(in oklab, var(--acento) 10%, transparent);
+  stroke: none;
+}
+
+.angulo-reto {
+  fill: none;
+  stroke: var(--texto-tenue);
+  stroke-width: 1.5;
+}
+
+.lado {
+  stroke-width: 3.5;
+  stroke-linecap: round;
+
+  &.hipotenusa {
+    stroke: var(--acento);
+  }
+
+  &.oposto {
+    stroke: var(--serie-2);
+  }
+
+  &.adjacente {
+    stroke: var(--serie-1);
+  }
+}
+
+.rotulo {
+  fill: var(--texto);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--fonte-base);
+}
+
+.legenda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--esp-2) var(--esp-4);
+  margin-top: var(--esp-2);
+  font-size: var(--texto-xs);
+  color: var(--texto-suave);
+
+  .item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--esp-1);
+  }
+
+  .amostra {
+    width: 0.75rem;
+    height: 0.2rem;
+    border-radius: var(--raio-pill);
+
+    &.hip {
+      background: var(--acento);
+    }
+
+    &.opo {
+      background: var(--serie-2);
+    }
+
+    &.adj {
+      background: var(--serie-1);
+    }
+  }
+}
+
+.valores {
+  display: grid;
+  gap: var(--esp-2);
+}
+
+@media (max-width: 52rem) {
+  .desenho-e-valores {
+    grid-template-columns: 1fr;
+  }
+
+  .valores {
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  }
+}

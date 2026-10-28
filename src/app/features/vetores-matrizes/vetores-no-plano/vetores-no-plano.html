@@ -1,0 +1,94 @@
+<app-topico-layout
+  titulo="Vetores no plano"
+  descricao="Módulo, direção e sentido, soma pela regra do paralelogramo e decomposição."
+  topicoId="vetores-no-plano"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="comprimentoA"
+        rotulo="Módulo de a"
+        [min]="1"
+        [max]="12"
+      />
+      <app-controle-parametro
+        [(valor)]="anguloA"
+        rotulo="Ângulo de a (°)"
+        [min]="0"
+        [max]="359"
+        [passo]="5"
+      />
+      <app-controle-parametro [(valor)]="bx" rotulo="Componente bₓ" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="by" rotulo="Componente b_y" [min]="-10" [max]="10" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="decomposicaoTex()" [bloco]="true" />
+      <app-formula [tex]="somaTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>A soma como diagonal do paralelogramo</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [segmentos]="todosOsSegmentos()"
+        [descricao]="'Vetores a e b, suas componentes e o vetor soma.'"
+        [altura]="420"
+      />
+      <p class="observacao">
+        O vetor roxo é a soma. Note que ele é a diagonal do paralelogramo formado pelos outros
+        dois — e que seu comprimento quase nunca é a soma dos comprimentos.
+      </p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">|a|</span>
+        <strong>{{ formatar(moduloA()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">|b|</span>
+        <strong>{{ formatar(moduloB()) }}</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">|a + b|</span>
+        <strong>{{ formatar(moduloSoma()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">|a| + |b|</span>
+        <strong>{{ formatar(somaDosModulos()) }}</strong>
+        <span class="legenda">quase sempre maior</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Direção da soma</span>
+        <strong>{{ formatar(direcaoSoma()) }}°</strong>
+      </div>
+    </section>
+
+    <section class="painel">
+      <h2>Por que o módulo da soma é menor</h2>
+      <app-passo-a-passo [passos]="analiseSoma().passos" />
+      <p class="observacao">
+        Gire o vetor a e acompanhe os dois últimos indicadores. Eles só coincidem quando a e b
+        apontam exatamente para o mesmo lado. Em qualquer outra configuração, parte de um
+        cancela parte do outro — é a desigualdade triangular aparecendo de novo.
+      </p>
+    </section>
+
+    <section>
+      <h2>Decomposição: de ângulo para componentes</h2>
+      <app-passo-a-passo [passos]="decomposicao().passos" />
+      <p class="observacao">
+        Decompor é o truque que resolve metade dos problemas de física: em vez de lidar com um
+        ângulo, lida-se com dois eixos independentes. Os tracejados no gráfico são justamente
+        os catetos desse triângulo.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -1,0 +1,42 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.alternar {
+  @include botao-secundario;
+  border-radius: var(--raio-pill);
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: var(--texto-xs);
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+
+  th,
+  td {
+    padding: var(--esp-2) var(--esp-3);
+    text-align: left;
+    border-bottom: 1px solid var(--borda);
+    font-size: var(--texto-sm);
+  }
+
+  th {
+    font-size: var(--texto-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--texto-tenue);
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+}

@@ -1,0 +1,73 @@
+<div class="shell">
+  <header class="cabecalho">
+    <button
+      type="button"
+      class="menu"
+      (click)="alternarMenu()"
+      [attr.aria-expanded]="menuAberto()"
+      aria-controls="navegacao"
+      aria-label="Abrir ou fechar o menu de tópicos"
+    >
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path fill="currentColor" d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z" />
+      </svg>
+    </button>
+
+    <a class="marca" routerLink="/" (click)="fecharMenu()">
+      <span class="simbolo" aria-hidden="true">∫</span>
+      <span class="nome">Estudos Matemáticos</span>
+    </a>
+
+    <button
+      type="button"
+      class="tema"
+      (click)="tema.alternar()"
+      [attr.aria-label]="'Alternar tema. Atual: ' + rotuloTema[tema.tema()]"
+      [title]="rotuloTema[tema.tema()]"
+    >
+      @switch (tema.tema()) {
+        @case ('claro') {
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-13.5V1h0v2.5ZM11 1h2v3h-2V1Zm0 19h2v3h-2v-3ZM1 11h3v2H1v-2Zm19 0h3v2h-3v-2ZM4.2 5.6 2.8 4.2l2.1-2.1 1.4 1.4-2.1 2.1Zm13.5 13.5-1.4-1.4 2.1-2.1 1.4 1.4-2.1 2.1Zm2.1-15.6 1.4 1.4-2.1 2.1-1.4-1.4 2.1-2.1ZM4.9 21.9l-2.1-2.1 1.4-1.4 2.1 2.1-1.4 1.4Z"
+            />
+          </svg>
+        }
+        @case ('escuro') {
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12.3 22c-5.5 0-10-4.5-10-10 0-4.8 3.4-8.9 8.1-9.8-.6 1.4-.9 2.9-.9 4.4 0 5.5 4.5 10 10 10 .6 0 1.2-.1 1.8-.2-1.7 3.4-5.2 5.6-9 5.6Z"
+            />
+          </svg>
+        }
+        @default {
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18V4a8 8 0 0 1 0 16Z"
+            />
+          </svg>
+        }
+      }
+    </button>
+  </header>
+
+  <div class="corpo">
+    <aside id="navegacao" class="lateral" [class.aberto]="menuAberto()">
+      <app-sidebar (navegou)="fecharMenu()" />
+    </aside>
+
+    @if (menuAberto()) {
+      <!-- Véu que fecha o menu no celular; o botão do cabeçalho mantém o acesso por teclado. -->
+      <div class="veu" (click)="fecharMenu()" aria-hidden="true"></div>
+    }
+
+    <main class="conteudo">
+      <router-outlet />
+    </main>
+  </div>
+</div>
+
+<app-teoria-dialog />

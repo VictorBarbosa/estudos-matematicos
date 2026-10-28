@@ -1,0 +1,221 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-base);
+  font-size: var(--texto-md);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  font-weight: 650;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--acento);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+:focus-visible {
+  @include foco-visivel;
+}
+
+/* Respeita quem pede menos movimento, sem desligar transições de cor. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* O KaTeX herda a cor do texto ao redor em vez de forçar preto. */
+.katex {
+  color: inherit;
+  font-size: 1.05em;
+}
+
+/* ---------------------------------------------------------------------------
+ * Padrões de layout dos tópicos.
+ *
+ * Estas classes se repetiam em todo tópico do currículo. Como estilos globais
+ * valem dentro dos componentes, mantê-las aqui evita recriar as mesmas regras
+ * em dezenas de arquivos — e garante que todos os tópicos fiquem iguais.
+ * ------------------------------------------------------------------------ */
+
+.explorar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+/* Título de seção dentro de um tópico. */
+.explorar section > h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+/* Bloco em cartão, usado para controles e painéis de resultado. */
+.painel {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-1);
+  padding: var(--esp-5);
+}
+
+/* Grade de controles de parâmetro que se adapta à largura. */
+.grade-controles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--esp-5);
+}
+
+/* Texto explicativo abaixo de um gráfico ou fórmula. */
+.observacao {
+  max-width: 70ch;
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+/* Fórmula em destaque, centralizada. */
+.destaque-formula {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-1);
+  padding: var(--esp-3) var(--esp-5);
+  text-align: center;
+  font-size: var(--texto-lg);
+}
+
+/* Grupo de botões em pílula, para alternar entre casos. */
+.seletor-pills {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  gap: 2px;
+  padding: 3px;
+  background: var(--superficie-2);
+  border-radius: var(--raio-pill);
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--esp-2) var(--esp-4);
+    border: 1px solid transparent;
+    border-radius: var(--raio-pill);
+    background: transparent;
+    color: var(--texto-suave);
+    font: inherit;
+    font-size: var(--texto-sm);
+    font-weight: 550;
+    cursor: pointer;
+    transition:
+      background var(--transicao),
+      color var(--transicao);
+
+    &:focus-visible {
+      outline: 2px solid var(--acento);
+      outline-offset: 2px;
+    }
+
+    &.ativo {
+      background: var(--superficie);
+      color: var(--texto);
+      box-shadow: var(--sombra-1);
+    }
+  }
+}
+
+/* Cartão de valor numérico em destaque. */
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--esp-3);
+}
+
+.indicador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-1);
+  padding: var(--esp-3);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  background: var(--superficie-2);
+  text-align: center;
+
+  .rotulo {
+    font-size: var(--texto-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--texto-tenue);
+  }
+
+  strong {
+    font-size: var(--texto-xl);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+  }
+
+  .legenda {
+    font-size: var(--texto-xs);
+    color: var(--texto-suave);
+  }
+
+  &[data-destaque='true'] {
+    border-color: var(--acento);
+
+    strong {
+      color: var(--acento);
+    }
+  }
+}
+
+/* Aviso de erro ou de atenção dentro de um tópico. */
+.aviso {
+  padding: var(--esp-3) var(--esp-4);
+  border-radius: var(--raio-md);
+  border-left: 4px solid var(--aviso);
+  background: var(--aviso-suave);
+  font-size: var(--texto-sm);
+}

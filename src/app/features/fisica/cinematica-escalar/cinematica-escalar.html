@@ -1,0 +1,93 @@
+<app-topico-layout
+  titulo="Cinemática escalar"
+  descricao="MRU e MRUV, os gráficos do movimento e a área sob a curva da velocidade."
+  topicoId="cinematica-escalar"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="velocidadeInicial"
+        rotulo="Velocidade inicial (m/s)"
+        [min]="0"
+        [max]="20"
+      />
+      <app-controle-parametro
+        [(valor)]="aceleracao"
+        rotulo="Aceleração (m/s²)"
+        [min]="-5"
+        [max]="6"
+      />
+      <app-controle-parametro [(valor)]="instante" rotulo="Instante t (s)" [min]="0" [max]="10" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="velocidadeTex()" [bloco]="true" />
+      <app-formula [tex]="posicaoTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>Área sob a velocidade é deslocamento</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvasVelocidade()"
+        [areas]="areaDeslocamento()"
+        [pontos]="pontos()"
+        descricao="Gráfico de velocidade por tempo, com a área sombreada até o instante escolhido."
+        [altura]="360"
+      />
+      <app-passo-a-passo [passos]="analiseArea().passos" />
+      <p class="observacao">
+        A região sombreada é um retângulo (da velocidade inicial) mais um triângulo (da
+        aceleração) — exatamente os dois termos da equação da posição. Isso não é analogia:
+        área sob a velocidade <em>é</em> deslocamento, e é a integral aparecendo antes do
+        tempo.
+      </p>
+    </section>
+
+    <section>
+      <h2>Inclinação da posição é velocidade</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvasPosicao()"
+        [pontos]="pontosPosicao()"
+        descricao="Gráfico de posição por tempo, com a tangente no instante escolhido."
+        [altura]="360"
+      />
+      <p class="observacao">
+        A reta tracejada é a tangente no instante escolhido, e sua inclinação é
+        <strong>{{ formatar(estado().velocidade) }} m/s</strong> — a velocidade naquele
+        momento. Posição curva, velocidade reta, aceleração constante: cada gráfico é a
+        inclinação do anterior.
+      </p>
+    </section>
+
+    @if (torricelli(); as torricelli) {
+      <section class="painel">
+        <h2>Quando o tempo não interessa</h2>
+        <app-passo-a-passo [passos]="torricelli.passos" />
+        <p class="observacao">
+          Torricelli não é uma lei nova: é o que resta quando se elimina o tempo entre as duas
+          equações. Útil justamente nos problemas em que a pergunta é "com que velocidade
+          chega?" e ninguém se importa com quando.
+        </p>
+      </section>
+    }
+
+    <section class="painel">
+      <h2>Por que o limite de velocidade existe</h2>
+      <app-formula [tex]="'\\Delta s_{frenagem} = \\frac{v_0^{2}}{2a}'" [bloco]="true" />
+      <p class="observacao">
+        A distância de frenagem depende do <strong>quadrado</strong> da velocidade. A 60 km/h
+        um carro para em certo espaço; a 120 km/h precisa de quatro vezes esse espaço, não o
+        dobro. É o mesmo fator quadrático da energia cinética — e nenhum reflexo humano
+        compensa isso.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

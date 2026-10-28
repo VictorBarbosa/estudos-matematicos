@@ -1,0 +1,21 @@
+:host {
+  display: inline;
+}
+
+.conteudo,
+.carregando {
+  &.bloco {
+    display: block;
+    text-align: center;
+    margin: var(--esp-3) 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: var(--esp-1);
+  }
+}
+
+.carregando {
+  font-family: var(--fonte-mono);
+  font-size: 0.9em;
+  color: var(--texto-tenue);
+}

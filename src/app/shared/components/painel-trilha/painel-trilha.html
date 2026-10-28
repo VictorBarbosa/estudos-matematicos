@@ -1,0 +1,61 @@
+<section class="trilha" aria-labelledby="titulo-trilha">
+  <header>
+    <h2 id="titulo-trilha">Sua trilha</h2>
+    <p class="contagem">{{ vencidas() }} de {{ total }} etapas vencidas</p>
+  </header>
+
+  <div
+    class="barra"
+    role="progressbar"
+    [attr.aria-valuenow]="vencidas()"
+    [attr.aria-valuemin]="0"
+    [attr.aria-valuemax]="total"
+    [attr.aria-label]="'Progresso na trilha: ' + percentual() + ' por cento'"
+  >
+    <div class="preenchida" [style.width.%]="percentual()"></div>
+  </div>
+
+  @if (completa()) {
+    <p class="celebracao">Trilha completa — todas as {{ total }} etapas vencidas. 🎉</p>
+  } @else if (atual(); as atual) {
+    <div class="atual">
+      <div class="texto">
+        <span class="rotulo">Etapa {{ atual.numero }} · {{ atual.areaTitulo }}</span>
+        <strong>{{ atual.titulo }}</strong>
+        <span class="meta">
+          {{ avancoNaAtual() }} de {{ alvo }} acertos seguidos para liberar a próxima.
+        </span>
+      </div>
+      <a class="continuar" [routerLink]="atual.rota">
+        {{ avancoNaAtual() > 0 ? 'Continuar' : 'Começar' }}
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  }
+
+  <footer class="ajustes">
+    <label class="modo-livre">
+      <input type="checkbox" [checked]="modoLivre()" (change)="alternarModoLivre($event)" />
+      <span>
+        Modo livre
+        <small>abre todos os tópicos para consulta, sem apagar o progresso da trilha.</small>
+      </span>
+    </label>
+
+    @if (confirmandoReinicio()) {
+      <div class="reinicio confirmando" role="alertdialog" aria-label="Confirmar reinício">
+        <p>Apagar todo o progresso e voltar à etapa 1?</p>
+        <div class="botoes">
+          <button type="button" class="perigo" (click)="confirmarReinicio()">
+            Sim, zerar tudo
+          </button>
+          <button type="button" class="discreto" (click)="cancelarReinicio()">Cancelar</button>
+        </div>
+      </div>
+    } @else {
+      <button type="button" class="reiniciar" (click)="pedirReinicio()">
+        Recomeçar do zero
+      </button>
+    }
+  </footer>
+</section>

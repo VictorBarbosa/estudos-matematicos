@@ -1,0 +1,127 @@
+<app-topico-layout
+  titulo="Grandezas e análise dimensional"
+  descricao="Dimensões das grandezas e como conferir uma fórmula sem calcular nada."
+  topicoId="analise-dimensional"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>Combine duas grandezas</h2>
+      <div class="selecoes">
+        <label>
+          Grandeza A
+          <select (change)="selecionarPrimeira($event)">
+            @for (grandeza of grandezas; track grandeza.nome) {
+              <option [value]="grandeza.nome" [selected]="primeira() === grandeza">
+                {{ grandeza.nome }} ({{ grandeza.unidade }})
+              </option>
+            }
+          </select>
+        </label>
+
+        <label>
+          Grandeza B
+          <select (change)="selecionarSegunda($event)">
+            @for (grandeza of grandezas; track grandeza.nome) {
+              <option [value]="grandeza.nome" [selected]="segunda() === grandeza">
+                {{ grandeza.nome }} ({{ grandeza.unidade }})
+              </option>
+            }
+          </select>
+        </label>
+      </div>
+
+      <div class="seletor-pills" role="group" aria-label="Operação">
+        @for (opcao of operacoes; track opcao.id) {
+          <button
+            type="button"
+            [class.ativo]="operacao() === opcao.id"
+            [attr.aria-pressed]="operacao() === opcao.id"
+            (click)="selecionarOperacao(opcao.id)"
+          >
+            {{ opcao.rotulo }}
+          </button>
+        }
+      </div>
+
+      <app-formula [tex]="resultadoTex()" [bloco]="true" />
+
+      @if (reconhecida(); as reconhecida) {
+        <p class="observacao">
+          Essa dimensão é de <strong>{{ reconhecida.nome }}</strong>, cuja unidade no SI é
+          {{ reconhecida.unidade }}.
+        </p>
+      } @else {
+        <p class="observacao">
+          Nenhuma das grandezas da tabela tem essa dimensão — o que não significa que ela não
+          exista, só que não está entre as usadas aqui.
+        </p>
+      }
+    </section>
+
+    <section>
+      <h2>Tabela de dimensões</h2>
+      <table class="dimensoes">
+        <thead>
+          <tr>
+            <th scope="col">Grandeza</th>
+            <th scope="col">Unidade (SI)</th>
+            <th scope="col">Dimensão</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (grandeza of grandezas; track grandeza.nome) {
+            <tr [class.destacada]="grandeza === primeira() || grandeza === segunda()">
+              <td>{{ grandeza.nome }}</td>
+              <td>{{ grandeza.unidade }}</td>
+              <td>
+                <app-formula [tex]="dimensaoTex(grandeza.dimensao)" />
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <p class="observacao">
+        Nenhuma linha dessa tabela precisa ser decorada: todas saem da definição da grandeza.
+        Força é massa vezes aceleração, energia é força vezes distância, potência é energia
+        por tempo.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Qual delas pode ser o período do pêndulo?</h2>
+      <table class="candidatas">
+        <tbody>
+          @for (candidata of candidatasPendulo(); track candidata.tex) {
+            <tr [class.correta]="candidata.correta">
+              <td><app-formula [tex]="candidata.tex" /></td>
+              <td><app-formula [tex]="dimensaoTex(candidata.dimensao)" /></td>
+              <td>{{ candidata.correta ? '✓ tem dimensão de tempo' : '✗ dimensão errada' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <p class="observacao">
+        Uma única candidata sobrevive ao teste dimensional — e, de passagem, ele revela que o
+        período não depende da massa do pêndulo, já que massa não aparece em lugar nenhum. O
+        que o teste <em>não</em> dá é o 2π: fatores numéricos são adimensionais e passam
+        livremente.
+      </p>
+    </section>
+
+    <section>
+      <h2>Comparando com a dimensão de energia</h2>
+      <app-passo-a-passo [passos]="verificacao().passos" />
+      <p class="observacao">
+        Monte combinações acima e veja quando elas batem com energia. Dimensão igual não prova
+        que a fórmula está certa; dimensão diferente prova que está errada. Em prova, é a
+        checagem mais rápida que existe.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

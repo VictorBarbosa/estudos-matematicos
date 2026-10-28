@@ -1,0 +1,50 @@
+<app-topico-layout
+  titulo="Equação do 1º grau"
+  descricao="Isolar a incógnita mantendo a igualdade, e ver a raiz como o cruzamento de duas retas."
+  topicoId="equacao-primeiro-grau"
+>
+  <div explorar class="explorar">
+    <section class="controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente a" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="b" rotulo="Termo b" [min]="-20" [max]="20" />
+      <app-controle-parametro [(valor)]="c" rotulo="Lado direito c" [min]="-20" [max]="20" />
+    </section>
+
+    <section class="equacao">
+      <app-formula [tex]="equacaoTex()" [bloco]="true" />
+      @if (erro(); as mensagem) {
+        <p class="aviso" role="alert">{{ mensagem }}</p>
+      } @else if (raiz(); as solucao) {
+        <app-formula [tex]="'x = ' + solucao.raiz.paraTex()" [bloco]="true" />
+      }
+    </section>
+
+    @if (!erro()) {
+      <section class="grafico">
+        <h2>A raiz é onde as retas se cruzam</h2>
+        <app-math-plot
+          [dominio]="dominio()"
+          [curvas]="curvas()"
+          [pontos]="pontos()"
+          [descricao]="descricaoGrafico()"
+          [altura]="360"
+        />
+        <p class="observacao">
+          Mexa no coeficiente a e repare: enquanto ele não for zero, a reta tem inclinação e cruza a
+          horizontal em exatamente um ponto. É por isso que a equação tem solução única.
+        </p>
+      </section>
+
+      <section class="passos">
+        <h2>Passo a passo</h2>
+        <app-passo-a-passo [passos]="passos()" />
+      </section>
+    }
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

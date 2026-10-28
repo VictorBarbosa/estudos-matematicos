@@ -1,0 +1,85 @@
+import { Routes } from '@angular/router';
+import { topicoLiberadoGuard } from '@core/progressao/topico-liberado.guard';
+
+/**
+ * Cada área do currículo é carregada sob demanda, em seu próprio chunk.
+ *
+ * A ordem aqui espelha a do currículo, que é a ordem de aprendizagem: nenhuma
+ * área aparece antes daquilo de que ela depende.
+ *
+ * O `topicoLiberadoGuard` em cada área é o que torna a trilha sequencial:
+ * tópicos à frente da etapa atual não abrem nem por URL digitada.
+ */
+export const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    title: 'Estudos Matemáticos',
+    loadComponent: () => import('@features/home/home').then((m) => m.Home),
+  },
+  {
+    path: 'matematica-basica',
+    loadChildren: () =>
+      import('@features/matematica-basica/matematica-basica.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'algebra',
+    loadChildren: () => import('@features/algebra/algebra.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'geometria',
+    loadChildren: () => import('@features/geometria/geometria.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'funcoes',
+    loadChildren: () => import('@features/funcoes/funcoes.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'trigonometria',
+    loadChildren: () =>
+      import('@features/trigonometria/trigonometria.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'vetores-matrizes',
+    loadChildren: () =>
+      import('@features/vetores-matrizes/vetores-matrizes.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'geometria-analitica',
+    loadChildren: () =>
+      import('@features/geometria-analitica/geometria-analitica.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'estatistica',
+    loadChildren: () => import('@features/estatistica/estatistica.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'fisica',
+    loadChildren: () => import('@features/fisica/fisica.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'pre-calculo',
+    loadChildren: () => import('@features/pre-calculo/pre-calculo.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'calculo-1',
+    loadChildren: () => import('@features/calculo-1/calculo-1.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'calculo-2',
+    loadChildren: () => import('@features/calculo-2/calculo-2.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  { path: '**', redirectTo: '' },
+];

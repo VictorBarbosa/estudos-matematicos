@@ -1,0 +1,75 @@
+<app-topico-layout
+  titulo="Limites laterais"
+  descricao="Chegar pela esquerda e pela direita, e quando o limite não existe."
+  topicoId="limites-laterais"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>Função definida por partes</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="ponto" rotulo="Ponto de transição" [min]="-4" [max]="5" />
+        <app-controle-parametro [(valor)]="a" rotulo="Esquerda: coef. de x" [min]="-4" [max]="4" />
+        <app-controle-parametro [(valor)]="b" rotulo="Esquerda: constante" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="c" rotulo="Direita: coef. de x" [min]="-4" [max]="4" />
+        <app-controle-parametro [(valor)]="d" rotulo="Direita: constante" [min]="-8" [max]="8" />
+      </div>
+      <button type="button" class="emendar" (click)="emendar()">
+        Ajustar para as sentenças se encontrarem
+      </button>
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="sistemaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Pela esquerda</span>
+        <strong>{{ formatar(valorEsquerda()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Pela direita</span>
+        <strong>{{ formatar(valorDireita()) }}</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Limite</span>
+        <strong>{{ limiteExiste() ? formatar(valorEsquerda()) : 'não existe' }}</strong>
+        <span class="legenda">
+          {{ limiteExiste() ? 'os lados concordam' : 'salto de ' + formatar(salto()) }}
+        </span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Os dois ramos</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        {{ descricaoGrafico() }}
+        A bolinha vazada marca o valor que a sentença da esquerda persegue sem assumir — o
+        ponto pertence à segunda sentença.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Por que isso importa</h2>
+      <p class="observacao">
+        O limite comum só existe quando os dois lados chegam ao mesmo lugar. Use o botão
+        acima para emendar as sentenças: o salto desaparece, os laterais passam a coincidir e
+        o limite existe. É exatamente essa condição que, somada ao valor no ponto, define a
+        continuidade.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

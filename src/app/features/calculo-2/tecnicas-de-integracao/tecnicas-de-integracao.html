@@ -1,0 +1,89 @@
+<app-topico-layout
+  titulo="Técnicas de integração"
+  descricao="Substituição e integração por partes — e como reconhecer qual usar."
+  topicoId="tecnicas-de-integracao"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Técnica">
+      <button
+        type="button"
+        [class.ativo]="tecnica() === 'substituicao'"
+        [attr.aria-pressed]="tecnica() === 'substituicao'"
+        (click)="definirTecnica('substituicao')"
+      >
+        Substituição
+      </button>
+      <button
+        type="button"
+        [class.ativo]="tecnica() === 'por-partes'"
+        [attr.aria-pressed]="tecnica() === 'por-partes'"
+        (click)="definirTecnica('por-partes')"
+      >
+        Por partes
+      </button>
+    </section>
+
+    @if (tecnica() === 'substituicao') {
+      <section class="painel grade-controles">
+        <app-controle-parametro [(valor)]="a" rotulo="Coeficiente interno" [min]="1" [max]="5" />
+        <app-controle-parametro [(valor)]="b" rotulo="Constante interna" [min]="-3" [max]="3" />
+        <app-controle-parametro [(valor)]="n" rotulo="Expoente" [min]="1" [max]="4" />
+        <app-controle-parametro [(valor)]="ate" rotulo="Limite superior" [min]="1" [max]="4" />
+      </section>
+    } @else {
+      <section class="painel grade-controles">
+        <app-controle-parametro [(valor)]="ate" rotulo="Limite superior" [min]="1" [max]="4" />
+      </section>
+    }
+
+    <section class="destaque-formula">
+      <app-formula [tex]="enunciadoTex() + ' = ' + formatar(valor())" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>Como a técnica desmonta a integral</h2>
+      <ol class="passos">
+        @for (passo of passos(); track $index) {
+          <li>
+            <p class="descricao">{{ passo.descricao }}</p>
+            <app-formula [tex]="passo.tex" [bloco]="true" />
+            @if (passo.nota) {
+              <p class="nota">{{ passo.nota }}</p>
+            }
+          </li>
+        }
+      </ol>
+    </section>
+
+    <section>
+      <h2>A região correspondente</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [areas]="areas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">
+        A técnica não muda a área — ela só torna possível calculá-la exatamente, em vez de
+        aproximá-la por retângulos.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Como escolher</h2>
+      <p class="observacao">
+        Procure dentro do integrando uma função composta acompanhada da derivada do seu
+        miolo: é o sinal da substituição. Se em vez disso houver um produto de naturezas
+        diferentes — polinômio com exponencial, por exemplo —, o caminho é por partes,
+        escolhendo como u a parte que simplifica ao ser derivada.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

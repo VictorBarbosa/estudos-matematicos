@@ -1,0 +1,51 @@
+<app-topico-layout
+  titulo="Expressões algébricas"
+  descricao="Variáveis, termos semelhantes e o valor numérico de uma expressão."
+  topicoId="expressoes-algebricas"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="-5" [max]="5" />
+      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="c" rotulo="Termo constante" [min]="-10" [max]="10" />
+      <app-controle-parametro
+        [(valor)]="x"
+        rotulo="Valor de x"
+        [min]="-5"
+        [max]="5"
+        dica="O número que substitui a letra."
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="expressao().paraTex()" [bloco]="true" />
+      <app-formula [tex]="'\\text{para } x = ' + x() + ': \\quad ' + valor()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>Substituindo passo a passo</h2>
+      <app-passo-a-passo [passos]="passos()" />
+    </section>
+
+    <section>
+      <h2>A expressão como curva</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="340"
+      />
+      <p class="observacao">
+        Mudar o valor de x move o ponto sobre a curva. Avaliar uma expressão é exatamente isto:
+        escolher uma posição horizontal e ler a altura correspondente.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

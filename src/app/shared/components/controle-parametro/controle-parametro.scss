@@ -1,0 +1,66 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.controle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+}
+
+.rotulo {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--esp-2);
+  font-size: var(--texto-sm);
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.valor {
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-md);
+  font-variant-numeric: tabular-nums;
+  color: var(--acento);
+}
+
+.entradas {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+}
+
+.deslizante {
+  flex: 1;
+  min-width: 0;
+  accent-color: var(--acento);
+  cursor: pointer;
+
+  &:focus-visible {
+    @include foco-visivel;
+  }
+}
+
+.numero {
+  width: 4.5rem;
+  padding: var(--esp-1) var(--esp-2);
+  border: 1px solid var(--borda-forte);
+  border-radius: var(--raio-sm);
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  font-size: var(--texto-sm);
+  font-variant-numeric: tabular-nums;
+
+  &:focus-visible {
+    @include foco-visivel;
+  }
+}
+
+.dica {
+  font-size: var(--texto-xs);
+  color: var(--texto-tenue);
+}

@@ -1,0 +1,99 @@
+<app-topico-layout
+  titulo="Função exponencial"
+  descricao="Crescimento multiplicativo, decaimento, meia-vida e a assíntota horizontal."
+  topicoId="funcao-exponencial"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="inicial"
+        rotulo="Valor inicial (a)"
+        [min]="1"
+        [max]="200"
+        [passo]="1"
+      />
+      <app-controle-parametro
+        [(valor)]="indiceBase"
+        rotulo="Base (b)"
+        [min]="0"
+        [max]="7"
+        [dica]="'Base atual: ' + formatar(base()) + (base() < 1 ? ' (decaimento)' : ' (crescimento)')"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+      <p class="observacao comportamento">{{ comportamento() }}</p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">f(0)</span>
+        <strong>{{ inicial() }}</strong>
+        <span class="legenda">valor inicial</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">{{ resultado().crescente ? 'Dobra em' : 'Cai à metade em' }}</span>
+        <strong>{{ formatar(resultado().tempoCaracteristico) }}</strong>
+        <span class="legenda">unidades de x</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Raízes</span>
+        <strong>0</strong>
+        <span class="legenda">nunca toca o eixo x</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Exponencial contra reta</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        A reta tracejada tem a mesma taxa de crescimento da exponencial no primeiro passo. Logo
+        depois elas se separam — e é essa separação que a intuição costuma subestimar.
+      </p>
+    </section>
+
+    <section>
+      <h2>Os primeiros valores</h2>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th scope="col">x</th>
+            <th scope="col">f(x)</th>
+            <th scope="col">razão com o anterior</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (linha of tabela(); track linha.x) {
+            <tr>
+              <td>{{ linha.x }}</td>
+              <td>{{ formatar(linha.valor) }}</td>
+              <td>{{ linha.razao === null ? '—' : '× ' + formatar(linha.razao) }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <p class="observacao">
+        A última coluna é sempre a mesma: é isso que define a exponencial. Numa função afim, a
+        coluna constante seria a da DIFERENÇA, não da razão.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

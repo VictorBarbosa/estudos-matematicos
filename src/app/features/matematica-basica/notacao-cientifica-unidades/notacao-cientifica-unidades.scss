@@ -1,0 +1,38 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.rotulo-grupo {
+  margin: var(--esp-3) 0 var(--esp-2);
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.referencias {
+  width: 100%;
+  margin-top: var(--esp-3);
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+
+  th,
+  td {
+    padding: var(--esp-2) var(--esp-3);
+    text-align: left;
+    border-bottom: 1px solid var(--borda);
+  }
+
+  thead th {
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
+  }
+
+  .destacada {
+    background: var(--acento-suave);
+    color: var(--acento);
+    font-weight: 600;
+  }
+}

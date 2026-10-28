@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+.excentricidade {
+  margin-top: var(--esp-2);
+  text-align: center;
+  font-weight: 600;
+  color: var(--acento);
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}

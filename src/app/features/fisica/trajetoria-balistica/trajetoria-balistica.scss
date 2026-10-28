@@ -1,0 +1,15 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.usar-otimo {
+  @include botao-secundario;
+  margin-top: var(--esp-3);
+  border-radius: var(--raio-pill);
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}

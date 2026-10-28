@@ -1,0 +1,50 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.explorar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+section h2 {
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.controles {
+  @include cartao;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--esp-5);
+  padding: var(--esp-5);
+}
+
+.equacao {
+  @include cartao;
+  padding: var(--esp-3) var(--esp-5);
+  text-align: center;
+  font-size: var(--texto-lg);
+}
+
+.aviso {
+  padding: var(--esp-3);
+  border-radius: var(--raio-md);
+  background: var(--aviso-suave);
+  color: var(--texto);
+  font-size: var(--texto-sm);
+}
+
+.observacao {
+  margin-top: var(--esp-2);
+  max-width: 70ch;
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}

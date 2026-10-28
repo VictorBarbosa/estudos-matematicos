@@ -1,0 +1,41 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.candidatas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+  margin: var(--esp-3) 0;
+
+  button {
+    padding: var(--esp-1) var(--esp-3);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-pill);
+    background: var(--superficie);
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--borda-forte);
+    }
+
+    &.raiz {
+      border-color: var(--acerto);
+      color: var(--acerto);
+      font-weight: 600;
+    }
+
+    &.ativa {
+      background: var(--acento-suave);
+      border-color: var(--acento);
+      color: var(--acento);
+    }
+  }
+}

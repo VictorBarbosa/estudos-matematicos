@@ -1,0 +1,72 @@
+<app-topico-layout
+  titulo="Função afim"
+  descricao="Coeficiente angular e linear, crescimento constante e o zero da função."
+  topicoId="funcao-afim"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="a"
+        rotulo="Coeficiente a (inclinação)"
+        [min]="-6"
+        [max]="6"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        rotulo="Coeficiente b (valor inicial)"
+        [min]="-12"
+        [max]="12"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+      <p class="observacao comportamento">{{ comportamento() }}</p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Raiz</span>
+        <strong>{{ resultado().raiz === null ? '—' : formatar(resultado().raiz!) }}</strong>
+        <span class="legenda">cruza o eixo x</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">f(0)</span>
+        <strong>{{ resultado().interceptoY }}</strong>
+        <span class="legenda">cruza o eixo y</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Taxa de variação</span>
+        <strong>{{ a() }}</strong>
+        <span class="legenda">por unidade de x</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A reta e sua inclinação</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        O triângulo marca um passo de 1 na horizontal e o salto correspondente na vertical. Esse
+        salto é sempre igual ao coeficiente a — e é por ser sempre igual que o gráfico sai reto.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

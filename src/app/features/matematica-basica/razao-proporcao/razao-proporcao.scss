@@ -1,0 +1,106 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.explorar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+section h2 {
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.razao-bloco,
+.tipo,
+.divisao {
+  @include cartao;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-5);
+}
+
+.controles-linha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--esp-4);
+}
+
+.seletor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 3px;
+  background: var(--superficie-2);
+  border-radius: var(--raio-pill);
+
+  button {
+    @include botao-base;
+    flex: 1;
+    border-radius: var(--raio-pill);
+    color: var(--texto-suave);
+
+    &.ativo {
+      background: var(--superficie);
+      color: var(--texto);
+      box-shadow: var(--sombra-1);
+    }
+  }
+}
+
+.comparacao {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--esp-3);
+}
+
+.caso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-1);
+  padding: var(--esp-3);
+  border: 1.5px dashed var(--borda);
+  border-radius: var(--raio-md);
+  text-align: center;
+
+  .rotulo {
+    font-size: var(--texto-xs);
+    color: var(--texto-tenue);
+  }
+
+  strong {
+    font-size: var(--texto-xl);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* O caso ativo é marcado por borda sólida e cor, não só por cor. */
+  &.ativo {
+    border-style: solid;
+    border-color: var(--acento);
+    background: var(--acento-suave);
+
+    strong {
+      color: var(--acento);
+    }
+  }
+}
+
+.observacao {
+  max-width: 70ch;
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.grafico .observacao {
+  margin-top: var(--esp-2);
+}

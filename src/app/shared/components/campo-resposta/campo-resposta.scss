@@ -1,0 +1,59 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+
+  label {
+    font-size: var(--texto-sm);
+    font-weight: 600;
+    color: var(--texto-suave);
+  }
+}
+
+input {
+  width: 100%;
+  padding: var(--esp-3) var(--esp-4);
+  border: 1.5px solid var(--borda-forte);
+  border-radius: var(--raio-md);
+  background: var(--superficie);
+  color: var(--texto);
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-lg);
+  transition:
+    border-color var(--transicao),
+    background var(--transicao);
+
+  &:focus-visible {
+    @include foco-visivel;
+    border-color: var(--acento);
+  }
+
+  &:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+}
+
+/* O estado também muda a espessura da borda, para não depender só de cor. */
+.campo[data-estado='correto'] input {
+  border-color: var(--acerto);
+  border-width: 2px;
+  background: var(--acerto-suave);
+}
+
+.campo[data-estado='incorreto'] input {
+  border-color: var(--erro);
+  border-width: 2px;
+  background: var(--erro-suave);
+}
+
+.ajuda {
+  font-size: var(--texto-xs);
+  color: var(--texto-tenue);
+}

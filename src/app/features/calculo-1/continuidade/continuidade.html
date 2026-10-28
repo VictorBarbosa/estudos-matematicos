@@ -1,0 +1,76 @@
+<app-topico-layout
+  titulo="Continuidade"
+  descricao="As três condições, os tipos de descontinuidade e o teorema do valor intermediário."
+  topicoId="continuidade"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Caso">
+      @for (opcao of casos; track opcao.id) {
+        <button
+          type="button"
+          [class.ativo]="caso().id === opcao.id"
+          [attr.aria-pressed]="caso().id === opcao.id"
+          (click)="selecionar($index)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="'f(x) = ' + caso().tex" [bloco]="true" />
+      <p class="veredito" [attr.data-continua]="continua()">
+        {{ continua() ? 'Contínua no ponto' : caso().tipo }}
+      </p>
+      <p class="observacao">{{ caso().explicacao }}</p>
+    </section>
+
+    <section class="painel">
+      <h2>As três condições, uma a uma</h2>
+      <ul class="condicoes">
+        @for (condicao of condicoes(); track condicao.texto) {
+          <li [attr.data-cumprida]="condicao.cumprida">
+            <span class="marca" aria-hidden="true">{{ condicao.cumprida ? '✓' : '✗' }}</span>
+            {{ condicao.texto }}
+            <span class="apenas-leitor">
+              {{ condicao.cumprida ? '(cumprida)' : '(não cumprida)' }}
+            </span>
+          </li>
+        }
+      </ul>
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">f({{ caso().ponto }})</span>
+          <strong>{{ formatar(valorNoPonto()) }}</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Limite</span>
+          <strong>{{ lateral().existe ? formatar(lateral().valor) : 'não existe' }}</strong>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>O gráfico</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">
+        A ideia intuitiva vale: uma função é contínua quando o gráfico pode ser traçado sem
+        tirar o lápis do papel. Cada tipo de descontinuidade é uma forma diferente de ser
+        obrigado a levantá-lo.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

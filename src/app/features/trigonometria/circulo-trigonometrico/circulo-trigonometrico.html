@@ -1,0 +1,87 @@
+<app-topico-layout
+  titulo="Círculo trigonométrico"
+  descricao="Do triângulo ao círculo de raio 1: radianos, quadrantes e ângulos além de 90°."
+  topicoId="circulo-trigonometrico"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="angulo"
+        rotulo="Ângulo θ (graus)"
+        [min]="-360"
+        [max]="720"
+        [passo]="5"
+        dica="Passe de 360° e veja os valores se repetirem."
+      />
+    </section>
+
+    <section class="seletor-pills" role="group" aria-label="Ângulos notáveis">
+      @for (graus of [0, 30, 45, 60, 90, 120, 135, 180, 270]; track graus) {
+        <button
+          type="button"
+          [class.ativo]="angulo() === graus"
+          [attr.aria-pressed]="angulo() === graus"
+          (click)="usarNotavel(graus)"
+        >
+          {{ graus }}°
+        </button>
+      }
+    </section>
+
+    <section class="circulo-e-valores">
+      <app-circulo-trigonometrico
+        [anguloGraus]="angulo()"
+        [mostrarTangente]="mostrarTangente()"
+      />
+
+      <div class="valores">
+        <div class="indicador">
+          <span class="rotulo">Em radianos</span>
+          <strong><app-formula [tex]="radianosTex()" /></strong>
+          <span class="legenda">{{ formatar(radianos()) }} rad</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Ângulo reduzido</span>
+          <strong>{{ anguloReduzido() }}°</strong>
+          <span class="legenda">na primeira volta</span>
+        </div>
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">cos² + sen²</span>
+          <strong>{{ formatar(identidade()) }}</strong>
+          <span class="legenda">sempre 1</span>
+        </div>
+        <button type="button" class="alternar" (click)="alternarTangente()">
+          {{ mostrarTangente() ? 'Esconder a tangente' : 'Mostrar a tangente' }}
+        </button>
+      </div>
+    </section>
+
+    <section class="painel">
+      <h2>Os sinais vêm da posição</h2>
+      <p class="observacao">{{ descricaoSinais() }}</p>
+      <p class="observacao">
+        Não há regra a decorar: o seno é a altura do ponto e o cosseno é o seu deslocamento
+        horizontal. Se o ponto está à esquerda, o cosseno é negativo — e pronto.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Por que os valores se repetem</h2>
+      <p class="observacao">
+        Aumente o ângulo além de 360°: o ponto dá a volta e retorna exatamente ao mesmo lugar.
+        Como seno e cosseno são as coordenadas desse ponto, eles também se repetem. É daí que
+        nasce a periodicidade das funções trigonométricas.
+      </p>
+      <app-formula
+        [tex]="'\\sin(\\theta + 360°) = \\sin\\theta \\qquad \\cos(\\theta + 360°) = \\cos\\theta'"
+        [bloco]="true"
+      />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

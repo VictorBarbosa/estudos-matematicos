@@ -1,0 +1,63 @@
+:host {
+  display: block;
+}
+
+.comparacao {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-3);
+}
+
+.caixa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--esp-3);
+  border: 1.5px solid var(--borda);
+  border-radius: var(--raio-md);
+  text-align: center;
+
+  .etiqueta {
+    font-size: var(--texto-xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  strong {
+    font-size: var(--texto-xl);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Cada caixa é identificada pelo rótulo, não apenas pela cor. */
+  &.errada {
+    border-color: var(--erro);
+    background: var(--erro-suave);
+
+    .etiqueta {
+      color: var(--erro);
+    }
+  }
+
+  &.certa {
+    border-color: var(--acerto);
+    background: var(--acerto-suave);
+
+    .etiqueta {
+      color: var(--acerto);
+    }
+  }
+
+  &.referencia {
+    border-style: dashed;
+
+    .etiqueta {
+      color: var(--texto-tenue);
+    }
+  }
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}

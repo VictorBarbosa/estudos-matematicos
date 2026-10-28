@@ -1,0 +1,61 @@
+:host {
+  display: block;
+}
+
+.passos {
+  list-style: none;
+  counter-reset: passo;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+}
+
+.passo {
+  counter-increment: passo;
+  position: relative;
+  padding: var(--esp-3) var(--esp-4) var(--esp-3) var(--esp-7);
+  background: var(--superficie-2);
+  border: 1px solid transparent;
+  border-radius: var(--raio-md);
+
+  &::before {
+    content: counter(passo);
+    position: absolute;
+    left: var(--esp-3);
+    top: var(--esp-3);
+    display: grid;
+    place-items: center;
+    width: 1.625rem;
+    height: 1.625rem;
+    border-radius: var(--raio-pill);
+    background: var(--acento-suave);
+    color: var(--acento);
+    font-size: var(--texto-xs);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* O destaque não depende só de cor: a borda e o peso do número também mudam. */
+  &.destacado {
+    background: var(--aviso-suave);
+    border-color: var(--aviso);
+
+    &::before {
+      background: var(--aviso);
+      color: var(--superficie);
+    }
+  }
+}
+
+.descricao {
+  font-size: var(--texto-sm);
+  color: var(--texto);
+}
+
+.nota {
+  margin-top: var(--esp-1);
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}

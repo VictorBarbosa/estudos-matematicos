@@ -1,0 +1,126 @@
+<app-topico-layout
+  titulo="Notação científica e unidades"
+  descricao="Ordens de grandeza, prefixos do SI, conversões e algarismos significativos."
+  topicoId="notacao-cientifica-unidades"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="mantissa"
+        rotulo="Mantissa"
+        [min]="1"
+        [max]="9.9"
+        [passo]="0.1"
+        dica="O dígito antes da vírgula e suas casas decimais."
+      />
+      <app-controle-parametro
+        [(valor)]="expoente"
+        rotulo="Expoente de 10"
+        [min]="-15"
+        [max]="15"
+        dica="Quantas casas a vírgula andou."
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="notacaoTex()" [bloco]="true" />
+      @if (referencia(); as referencia) {
+        <p class="observacao">
+          Ordem de grandeza comparável a: <strong>{{ referencia.oque }}</strong>.
+        </p>
+      }
+    </section>
+
+    <section>
+      <h2>Por que a notação existe</h2>
+      <p class="observacao">
+        Mexa no expoente e acompanhe o número por extenso acima. Entre 10⁻¹⁵ e 10¹¹ há
+        vinte e seis ordens de grandeza — a mesma física descreve o próton e a órbita da
+        Terra, e nenhuma delas caberia numa calculadora sem a potência de dez.
+      </p>
+      <table class="referencias">
+        <caption class="observacao">Algumas ordens de grandeza, em metros.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Notação</th>
+            <th scope="col">O que é</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of referencias; track item.oque) {
+            <tr [class.destacada]="referencia() === item">
+              <td>{{ item.valor.toExponential(1).replace('.', ',') }}</td>
+              <td>{{ item.oque }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+
+    <section class="painel">
+      <h2>Conversão entre prefixos</h2>
+
+      <p class="rotulo-grupo" id="rotulo-de">Converter de</p>
+      <div class="seletor-pills" role="group" aria-labelledby="rotulo-de">
+        @for (prefixo of prefixos; track prefixo.simbolo) {
+          <button
+            type="button"
+            [class.ativo]="de() === prefixo"
+            [attr.aria-pressed]="de() === prefixo"
+            (click)="selecionarDe(prefixo)"
+          >
+            {{ rotuloPrefixo(prefixo) }}
+          </button>
+        }
+      </div>
+
+      <p class="rotulo-grupo" id="rotulo-para">Para</p>
+      <div class="seletor-pills" role="group" aria-labelledby="rotulo-para">
+        @for (prefixo of prefixos; track prefixo.simbolo) {
+          <button
+            type="button"
+            [class.ativo]="para() === prefixo"
+            [attr.aria-pressed]="para() === prefixo"
+            (click)="selecionarPara(prefixo)"
+          >
+            {{ rotuloPrefixo(prefixo) }}
+          </button>
+        }
+      </div>
+
+      <app-formula [tex]="conversaoTex()" [bloco]="true" />
+      <app-passo-a-passo [passos]="conversao().passos" />
+      <p class="observacao">
+        Trocar por uma unidade <strong>menor</strong> faz o número <strong>crescer</strong>:
+        a mesma distância precisa de mais pedacinhos para ser contada. Se o seu resultado foi
+        no sentido oposto, a conversão está invertida.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Algarismos significativos</h2>
+      <p class="observacao">
+        Uma régua de milímetros não mede micrômetros. Os algarismos significativos são os
+        dígitos que a medida garante: zeros à esquerda só posicionam a vírgula, mas um zero
+        à direita da vírgula foi medido — <strong>1,50 cm</strong> afirma mais do que
+        <strong>1,5 cm</strong>.
+      </p>
+      <app-formula [tex]="'\\underbrace{1{,}5}_{2\\text{ sig.}} \\times \\underbrace{2{,}00}_{3\\text{ sig.}} = 3{,}0'" [bloco]="true" />
+      <p class="observacao">
+        Numa conta, o resultado não pode ser mais preciso que o pior dado de entrada.
+        Escrever 3,00 ali seria inventar precisão que nenhum instrumento forneceu.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

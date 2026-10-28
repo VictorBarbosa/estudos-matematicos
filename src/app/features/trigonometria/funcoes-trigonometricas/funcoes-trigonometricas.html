@@ -1,0 +1,89 @@
+<app-topico-layout
+  titulo="Funções trigonométricas"
+  descricao="Amplitude, período e fase: os parâmetros que dão forma à onda."
+  topicoId="funcoes-trigonometricas"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="amplitude"
+        rotulo="Amplitude A"
+        [min]="-6"
+        [max]="6"
+        dica="Negativa espelha a onda."
+      />
+      <app-controle-parametro
+        [(valor)]="frequencia"
+        rotulo="Coeficiente B"
+        [min]="1"
+        [max]="5"
+        dica="Comprime a onda na horizontal."
+      />
+      <app-controle-parametro
+        [(valor)]="faseEmDecimos"
+        rotulo="Fase C (em π/10)"
+        [min]="-20"
+        [max]="20"
+      />
+      <app-controle-parametro
+        [(valor)]="deslocamento"
+        rotulo="Deslocamento D"
+        [min]="-5"
+        [max]="5"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Amplitude</span>
+        <strong>{{ formatar(amplitude() < 0 ? -amplitude() : amplitude()) }}</strong>
+        <span class="legenda">do eixo até o pico</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Período</span>
+        <strong>{{ formatar(onda().periodo) }}</strong>
+        <span class="legenda">2π ÷ B</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Imagem</span>
+        <strong>[{{ formatar(minimo()) }}, {{ formatar(maximo()) }}]</strong>
+        <span class="legenda">mínimo e máximo</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Deslocamento horizontal</span>
+        <strong>{{ formatar(-fase() / (frequencia() === 0 ? 1 : frequencia())) }}</strong>
+        <span class="legenda">−C ÷ B</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A onda e seus limites</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        A linha cheia horizontal é o eixo da oscilação (y = D); as tracejadas marcam o máximo
+        e o mínimo. A curva cinza é o seno puro, para comparação.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

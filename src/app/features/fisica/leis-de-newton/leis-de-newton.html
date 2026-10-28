@@ -1,0 +1,124 @@
+<app-topico-layout
+  titulo="Leis de Newton"
+  descricao="Inércia, F = ma e ação e reação, com diagramas de corpo livre."
+  topicoId="leis-de-newton"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="massa" rotulo="Massa (kg)" [min]="1" [max]="30" />
+      <app-controle-parametro
+        [(valor)]="angulo"
+        rotulo="Inclinação do plano (°)"
+        [min]="0"
+        [max]="80"
+      />
+      <app-controle-parametro
+        [(valor)]="atrito"
+        rotulo="Coeficiente de atrito μ"
+        [min]="0"
+        [max]="1"
+        [passo]="0.05"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="planoTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>Diagrama de corpo livre</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [segmentos]="segmentos()"
+        [mostrarGrade]="false"
+        descricao="Bloco num plano inclinado, com peso, normal, componente do peso e atrito."
+        [altura]="400"
+      />
+      <p class="observacao">
+        O peso (azul) aponta sempre para baixo; a normal (verde-água) é perpendicular à rampa;
+        a componente Pₓ (laranja) é o que de fato puxa o bloco para baixo do plano, e o atrito
+        (verde) se opõe a ela. Aumente a inclinação e veja a normal encurtar enquanto Pₓ cresce.
+      </p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Peso total</span>
+        <strong>{{ formatar(peso()) }} N</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Normal</span>
+        <strong>{{ formatar(plano().resultado.normal) }} N</strong>
+        <span class="legenda">mg·cos θ</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Componente do peso</span>
+        <strong>{{ formatar(plano().resultado.componentePeso) }} N</strong>
+        <span class="legenda">mg·sen θ</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Aceleração</span>
+        <strong>{{ formatar(plano().resultado.aceleracao) }} m/s²</strong>
+        <span class="legenda">
+          {{ plano().resultado.desliza ? 'desliza' : 'em repouso: o atrito segura' }}
+        </span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Ângulo crítico</span>
+        <strong>{{ formatar(anguloCritico().resultado) }}°</strong>
+        <span class="legenda">tan θ = μ</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Passo a passo no plano</h2>
+      <app-passo-a-passo [passos]="plano().passos" />
+      <p class="observacao">
+        A massa desaparece no último passo: a aceleração no plano é
+        <strong>g(sen θ − μ·cos θ)</strong>, sem nenhum m. Um bloco de 1 kg e outro de 100 kg,
+        do mesmo material, descem juntos — exatamente como na queda livre.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Resultante no plano horizontal</h2>
+      <div class="grade-controles">
+        <app-controle-parametro
+          [(valor)]="forcaAplicada"
+          rotulo="Força aplicada (N)"
+          [min]="0"
+          [max]="150"
+        />
+        <app-controle-parametro
+          [(valor)]="forcaAtrito"
+          rotulo="Atrito (N)"
+          [min]="0"
+          [max]="150"
+        />
+      </div>
+
+      <app-passo-a-passo [passos]="horizontal().passos" />
+      <p class="observacao">
+        Iguale as duas forças e repare: a aceleração vai a zero, mas isso não significa que o
+        corpo pare. Pela primeira lei, ele mantém a velocidade que tiver — força não é
+        necessária para manter movimento, apenas para mudá-lo.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Ação e reação não se cancelam</h2>
+      <app-formula [tex]="'\\vec{F}_{AB} = -\\vec{F}_{BA}'" [bloco]="true" />
+      <p class="observacao">
+        A Terra te atrai com a mesma força com que você atrai a Terra. Essas forças são iguais
+        e opostas, mas atuam em <strong>corpos diferentes</strong> — e por isso jamais se
+        cancelam no diagrama de um único corpo. Se cancelassem, nada no universo aceleraria.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

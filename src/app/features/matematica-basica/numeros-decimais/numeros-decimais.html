@@ -1,0 +1,75 @@
+<app-topico-layout
+  titulo="Números decimais"
+  descricao="Decimais como frações de denominador dez, e por que algumas divisões nunca terminam."
+  topicoId="numeros-decimais"
+>
+  <div explorar class="explorar">
+    <section class="conversao">
+      <h2>De fração para decimal</h2>
+      <div class="controles-linha">
+        <app-controle-parametro [(valor)]="numerador" rotulo="Numerador" [min]="1" [max]="50" />
+        <app-controle-parametro [(valor)]="denominador" rotulo="Denominador" [min]="1" [max]="50" />
+      </div>
+
+      <app-formula
+        [tex]="fracao().paraTex() + ' = ' + decimal().texto.replace('.', '{,}')"
+        [bloco]="true"
+      />
+
+      <p class="observacao">
+        @if (decimal().ehPeriodico) {
+          O decimal é <strong>periódico</strong>, com período
+          <strong>{{ decimal().periodo }}</strong
+          >. Isso acontece porque o denominador irredutível ({{ motivoDoPeriodo().denominador }})
+          tem o fator {{ motivoDoPeriodo().outrosFatores }}, que não divide 10.
+        } @else {
+          O decimal é <strong>finito</strong>, porque o denominador irredutível ({{
+            motivoDoPeriodo().denominador
+          }}) só tem fatores 2 e 5 — exatamente os primos que formam o número dez.
+        }
+      </p>
+
+      <app-passo-a-passo [passos]="conversao().passos" />
+    </section>
+
+    <section class="reta">
+      <h2>Aproximações na reta</h2>
+      <p class="observacao">
+        Cada casa decimal a mais aproxima o valor exato sem nunca alcançá-lo, quando a dízima é
+        infinita.
+      </p>
+      <app-math-plot
+        [dominio]="dominioReta()"
+        [marcas]="marcas()"
+        [descricao]="descricaoReta()"
+        [mostrarEixoY]="false"
+        [altura]="160"
+      />
+    </section>
+
+    <section class="geratriz">
+      <h2>De dízima para fração</h2>
+      <app-controle-parametro
+        [(valor)]="periodo"
+        rotulo="Período (um dígito)"
+        [min]="1"
+        [max]="8"
+      />
+      <app-formula
+        [tex]="'0{,}\\overline{' + periodo() + '} = ' + geratriz().resultado.paraTex()"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        A subtração faz as infinitas casas decimais se cancelarem — é esse cancelamento que
+        transforma um número infinito numa equação de uma linha.
+      </p>
+      <app-passo-a-passo [passos]="geratriz().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

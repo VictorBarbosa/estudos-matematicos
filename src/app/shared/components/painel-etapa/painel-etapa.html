@@ -1,0 +1,52 @@
+@if (etapa(); as etapa) {
+  <aside class="etapa" [attr.data-concluida]="concluida()">
+    <div class="identificacao">
+      <span class="numero">Etapa {{ etapa.numero }}<span class="de">/{{ total }}</span></span>
+      <span class="area">{{ etapa.areaTitulo }}</span>
+    </div>
+
+    <div class="estado">
+      @if (concluida()) {
+        <p class="vencida">
+          <span class="selo" aria-hidden="true">✓</span>
+          Etapa vencida — você acertou {{ alvo }} seguidas aqui.
+        </p>
+      } @else {
+        <p class="meta">
+          Acerte <strong>{{ alvo }} exercícios seguidos</strong> na aba Treinar para liberar a
+          próxima etapa.
+          @if (avanco() > 0) {
+            <span class="restante">Faltam {{ faltam() }}.</span>
+          }
+        </p>
+      }
+
+      <ol class="marcadores" [attr.aria-label]="avanco() + ' de ' + alvo + ' acertos seguidos'">
+        @for (cheio of marcadores(); track $index) {
+          <li [class.cheio]="cheio"></li>
+        }
+      </ol>
+    </div>
+
+    @if (proxima(); as proxima) {
+      @if (proximaLiberada()) {
+        <a class="avancar" [routerLink]="proxima.rota">
+          Próxima etapa: {{ proxima.titulo }}
+          <span aria-hidden="true">→</span>
+        </a>
+      } @else {
+        <p class="trancada">
+          <span aria-hidden="true">🔒</span>
+          A seguir: {{ proxima.titulo }}
+        </p>
+      }
+    } @else {
+      <p class="trancada">Última etapa da trilha.</p>
+    }
+
+    @if (modoLivre()) {
+      <p class="aviso-livre">Modo livre ligado: tudo está acessível, mas as etapas continuam
+        contando.</p>
+    }
+  </aside>
+}

@@ -1,0 +1,17 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.alternar {
+  @include botao-secundario;
+  border-radius: var(--raio-pill);
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: var(--texto-xs);
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}

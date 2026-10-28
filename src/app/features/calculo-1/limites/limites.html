@@ -1,0 +1,80 @@
+<app-topico-layout
+  titulo="Limites"
+  descricao="Propriedades operatórias, técnicas para indeterminações e os limites notáveis."
+  topicoId="limites"
+>
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" aria-label="Técnica">
+      @for (opcao of casos; track opcao.id) {
+        <button
+          type="button"
+          [class.ativo]="caso().id === opcao.id"
+          [attr.aria-pressed]="caso().id === opcao.id"
+          (click)="selecionar($index)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula
+        [tex]="'\\lim_{x \\to ' + caso().ponto + '} ' + caso().tex + ' = ' + (lateral().existe ? formatar(lateral().valor!) : '?')"
+        [bloco]="true"
+      />
+      <p class="observacao">{{ caso().tecnica }}</p>
+    </section>
+
+    <section>
+      <h2>A convergência, em números</h2>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th scope="col">distância do ponto</th>
+            <th scope="col">pela esquerda</th>
+            <th scope="col">pela direita</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (linha of tabela(); track linha.distancia) {
+            <tr>
+              <td>{{ formatar(linha.distancia) }}</td>
+              <td>{{ formatar(linha.pelaEsquerda) }}</td>
+              <td>{{ formatar(linha.pelaDireita) }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <p class="observacao">
+        As duas colunas convergem para o mesmo valor conforme a distância diminui. É essa
+        concordância que garante a existência do limite.
+      </p>
+    </section>
+
+    <section>
+      <h2>O gráfico</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">
+        O círculo vazado marca o ponto em que a função não está definida. A curva passa por
+        toda a vizinhança dele, e é só disso que o limite trata.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

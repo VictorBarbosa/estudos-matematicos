@@ -1,0 +1,103 @@
+<app-topico-layout
+  titulo="Matrizes e determinantes"
+  descricao="Operações com matrizes, determinante como área e regra de Cramer."
+  topicoId="matrizes-determinantes"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a11" rotulo="a₁₁" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="a12" rotulo="a₁₂" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="a21" rotulo="a₂₁" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="a22" rotulo="a₂₂" [min]="-6" [max]="6" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="matrizTex()" [bloco]="true" />
+      <app-formula [tex]="determinanteTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>O determinante é uma área</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [segmentos]="segmentos()"
+        descricao="As duas linhas da matriz como vetores, e o paralelogramo que elas formam."
+        [altura]="400"
+      />
+      <p class="observacao">
+        As linhas da matriz, vistas como vetores, formam um paralelogramo. Sua área é
+        exatamente <strong>|det A| = {{ formatar(determinante() < 0 ? -determinante() : determinante()) }}</strong>.
+        O sinal do determinante indica apenas a orientação: se a segunda linha está no sentido
+        anti-horário em relação à primeira.
+      </p>
+
+      @if (singular()) {
+        <p class="aviso">
+          Determinante zero: as duas linhas ficaram alinhadas. Não há paralelogramo, a
+          transformação achata o plano numa reta, e o sistema associado perde a solução única.
+        </p>
+      }
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">det A</span>
+        <strong>{{ formatar(determinante()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">det(A·A)</span>
+        <strong>{{ formatar(determinanteDoQuadrado()) }}</strong>
+        <span class="legenda">= (det A)²</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Sistema associado</span>
+        <strong>{{ singular() ? 'sem solução única' : 'solução única' }}</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analiseDeterminante().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Produto de matrizes</h2>
+      <app-passo-a-passo [passos]="quadrado().passos" />
+      <p class="observacao">
+        Compare o determinante de A·A com o quadrado do determinante de A, nos indicadores
+        acima: eles coincidem sempre. Faz sentido — aplicar a mesma transformação duas vezes
+        multiplica a área duas vezes pelo mesmo fator.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Regra de Cramer</h2>
+      <div class="grade-controles">
+        <app-controle-parametro [(valor)]="b1" rotulo="Constante da 1ª equação" [min]="-20" [max]="20" />
+        <app-controle-parametro [(valor)]="b2" rotulo="Constante da 2ª equação" [min]="-20" [max]="20" />
+      </div>
+
+      <app-formula [tex]="sistemaTex()" [bloco]="true" />
+
+      @if (cramer(); as cramer) {
+        <app-passo-a-passo [passos]="cramer.passos" />
+        <p class="observacao">
+          Solução: x = {{ formatar(cramer.resultado.valores[0]!) }}, y =
+          {{ formatar(cramer.resultado.valores[1]!) }}. O determinante principal aparece no
+          denominador de todas as incógnitas — e é por isso que ele não pode ser zero.
+        </p>
+      } @else {
+        <p class="aviso">
+          Com determinante principal nulo, Cramer não se aplica: o sistema é impossível ou tem
+          infinitas soluções. Geometricamente, as duas retas são paralelas ou coincidentes.
+        </p>
+      }
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

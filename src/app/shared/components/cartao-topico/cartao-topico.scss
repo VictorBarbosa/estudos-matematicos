@@ -1,0 +1,97 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.cartao {
+  @include cartao;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  height: 100%;
+  padding: var(--esp-4);
+  text-decoration: none;
+  color: inherit;
+
+  h3 {
+    font-size: var(--texto-md);
+  }
+
+  p {
+    flex: 1;
+    font-size: var(--texto-sm);
+    color: var(--texto-suave);
+  }
+
+  footer {
+    margin-top: var(--esp-1);
+  }
+}
+
+.pronto {
+  transition:
+    border-color var(--transicao),
+    box-shadow var(--transicao);
+
+  &:hover {
+    border-color: var(--acento);
+    box-shadow: var(--sombra-2);
+  }
+}
+
+.pronto.atual {
+  border-color: var(--acento);
+  box-shadow: var(--sombra-2);
+}
+
+.trancado {
+  box-shadow: none;
+  background: transparent;
+
+  h3,
+  p {
+    color: var(--texto-tenue);
+  }
+}
+
+.pendente {
+  box-shadow: none;
+  background: transparent;
+  border-style: dashed;
+
+  h3,
+  p {
+    color: var(--texto-tenue);
+  }
+}
+
+.selo {
+  display: inline-block;
+  padding: 2px var(--esp-2);
+  border-radius: var(--raio-pill);
+  background: var(--superficie-2);
+  font-size: var(--texto-xs);
+  font-weight: 600;
+  color: var(--texto-tenue);
+
+  &.progresso {
+    background: var(--acento-suave);
+    color: var(--acento);
+  }
+
+  &.atual {
+    background: var(--acento);
+    color: var(--acento-contraste);
+  }
+
+  &.vencido {
+    background: var(--acerto-suave);
+    color: var(--acerto);
+  }
+}
+
+.numero {
+  color: var(--texto-tenue);
+  font-variant-numeric: tabular-nums;
+}

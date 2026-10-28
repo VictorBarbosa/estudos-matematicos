@@ -1,0 +1,134 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.explorar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+section h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.controles {
+  @include cartao;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--esp-5);
+  padding: var(--esp-5);
+}
+
+.resumo {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--esp-3);
+}
+
+.cartao-valor {
+  @include cartao;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  padding: var(--esp-4);
+
+  .rotulo {
+    font-size: var(--texto-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--texto-tenue);
+  }
+
+  &.destaque {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.numero {
+  font-size: var(--texto-3xl);
+  font-variant-numeric: tabular-nums;
+  color: var(--acento);
+  line-height: 1.1;
+}
+
+.legenda {
+  font-size: var(--texto-xs);
+  color: var(--texto-suave);
+}
+
+.observacao {
+  margin-bottom: var(--esp-3);
+  max-width: 70ch;
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.lista-divisores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: var(--esp-1) var(--esp-3);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-pill);
+    background: var(--superficie-2);
+    font-variant-numeric: tabular-nums;
+    font-size: var(--texto-sm);
+
+    /* O maior divisor comum é marcado por peso e borda, não só por cor. */
+    &.maior {
+      background: var(--acento-suave);
+      border-color: var(--acento);
+      color: var(--acento);
+      font-weight: 700;
+    }
+  }
+}
+
+.alternador {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--superficie-2);
+  border-radius: var(--raio-pill);
+
+  button {
+    @include botao-base;
+    padding: var(--esp-1) var(--esp-3);
+    border-radius: var(--raio-pill);
+    color: var(--texto-suave);
+    letter-spacing: 0;
+
+    &.ativo {
+      background: var(--superficie);
+      color: var(--texto);
+      box-shadow: var(--sombra-1);
+    }
+  }
+}
+
+@media (max-width: 52rem) {
+  .resumo {
+    grid-template-columns: 1fr;
+  }
+}

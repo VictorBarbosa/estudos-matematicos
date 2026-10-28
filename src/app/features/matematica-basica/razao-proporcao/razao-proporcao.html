@@ -1,0 +1,96 @@
+<app-topico-layout
+  titulo="Razão e proporção"
+  descricao="Comparar grandezas, montar proporções e decidir entre regra de três direta e inversa."
+  topicoId="razao-proporcao"
+>
+  <div explorar class="explorar">
+    <section class="razao-bloco">
+      <h2>Razão entre dois números</h2>
+      <div class="controles-linha">
+        <app-controle-parametro [(valor)]="a" rotulo="Primeiro termo" [min]="1" [max]="60" />
+        <app-controle-parametro [(valor)]="b" rotulo="Segundo termo" [min]="1" [max]="60" />
+      </div>
+      <app-formula [tex]="a() + ' : ' + b() + ' = ' + razao().resultado.paraTex()" [bloco]="true" />
+      <app-passo-a-passo [passos]="razao().passos" />
+    </section>
+
+    <section class="tipo">
+      <h2>Regra de três</h2>
+      <div class="seletor" role="group" aria-label="Tipo de proporcionalidade">
+        <button
+          type="button"
+          [class.ativo]="!inversa()"
+          [attr.aria-pressed]="!inversa()"
+          (click)="alternarTipo(false)"
+        >
+          Diretamente proporcionais
+        </button>
+        <button
+          type="button"
+          [class.ativo]="inversa()"
+          [attr.aria-pressed]="inversa()"
+          (click)="alternarTipo(true)"
+        >
+          Inversamente proporcionais
+        </button>
+      </div>
+
+      <app-controle-parametro [(valor)]="c" rotulo="Terceiro termo" [min]="1" [max]="60" />
+
+      <div class="comparacao">
+        <div class="caso" [class.ativo]="!inversa()">
+          <span class="rotulo">Se fosse direta</span>
+          <strong>{{ formatar(resultadoDireto()) }}</strong>
+        </div>
+        <div class="caso" [class.ativo]="inversa()">
+          <span class="rotulo">Se fosse inversa</span>
+          <strong>{{ formatar(resultadoInverso()) }}</strong>
+        </div>
+      </div>
+
+      <p class="observacao">
+        A conta é a mesma nos dois casos — o que muda é a montagem. Por isso a decisão entre direta
+        e inversa vem antes de qualquer cálculo.
+      </p>
+
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <section class="grafico">
+      <h2>Reta ou hipérbole</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">
+        Proporcionalidade direta é sempre uma reta passando pela origem; inversa é sempre uma
+        hipérbole. A curva tracejada é a que NÃO se aplica ao caso selecionado.
+      </p>
+    </section>
+
+    <section class="divisao">
+      <h2>Divisão proporcional</h2>
+      <div class="controles-linha">
+        <app-controle-parametro
+          [(valor)]="total"
+          rotulo="Total"
+          [min]="10"
+          [max]="2000"
+          [passo]="10"
+        />
+        <app-controle-parametro [(valor)]="peso1" rotulo="Peso 1" [min]="1" [max]="10" />
+        <app-controle-parametro [(valor)]="peso2" rotulo="Peso 2" [min]="1" [max]="10" />
+      </div>
+      <app-passo-a-passo [passos]="divisao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -1,0 +1,19 @@
+<div class="envolucro" [attr.aria-label]="descricaoAcessivel()" role="img">
+  @if (rotulo(); as texto) {
+    <span class="rotulo" aria-hidden="true">{{ texto }}</span>
+  }
+
+  <div class="barras" aria-hidden="true">
+    @if (fracao().ehNegativa) {
+      <span class="sinal">−</span>
+    }
+
+    @for (barra of barras(); track $index) {
+      <div class="barra" [style.--partes]="barra.total">
+        @for (parte of barra.partes; track $index) {
+          <span class="parte" [class.cheia]="parte" [style.--cor]="corResolvida()"></span>
+        }
+      </div>
+    }
+  </div>
+</div>

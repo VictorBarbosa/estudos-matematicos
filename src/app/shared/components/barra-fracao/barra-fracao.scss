@@ -1,0 +1,54 @@
+:host {
+  display: block;
+}
+
+.envolucro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+}
+
+.rotulo {
+  font-size: var(--texto-sm);
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.barras {
+  display: flex;
+  align-items: stretch;
+  gap: var(--esp-2);
+  min-height: 2.75rem;
+}
+
+.sinal {
+  display: flex;
+  align-items: center;
+  font-size: var(--texto-xl);
+  color: var(--texto-suave);
+}
+
+.barra {
+  display: grid;
+  grid-template-columns: repeat(var(--partes), 1fr);
+  flex: 1 1 0;
+  min-width: 0;
+  height: 2.75rem;
+  border: 1.5px solid var(--borda-forte);
+  border-radius: var(--raio-sm);
+  overflow: hidden;
+}
+
+.parte {
+  border-right: 1px solid var(--borda-forte);
+  background: var(--superficie-2);
+  transition: background var(--transicao);
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &.cheia {
+    background: var(--cor);
+  }
+}

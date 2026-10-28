@@ -1,0 +1,67 @@
+<dialog #dialogo class="dialogo" (close)="teoria.fechar()" (click)="aoClicar($event)">
+  @if (teoria.aberta(); as conteudo) {
+    <article class="conteudo">
+      <header class="cabecalho">
+        <div>
+          <h2>{{ conteudo.titulo }}</h2>
+          <p class="resumo">{{ conteudo.resumo }}</p>
+        </div>
+        <button type="button" class="fechar" (click)="teoria.fechar()" aria-label="Fechar">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.3 19.71 2.88 18.3 9.17 12 2.88 5.71 4.3 4.29l6.29 6.3 6.3-6.3z"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <section class="secao">
+        <h3>Definição</h3>
+        <p>{{ conteudo.definicao }}</p>
+      </section>
+
+      @if (conteudo.formulas.length > 0) {
+        <section class="secao">
+          <h3>Fórmula</h3>
+          @for (formula of conteudo.formulas; track $index) {
+            <div class="formula">
+              <app-formula [tex]="formula.tex" [bloco]="true" />
+              @if (formula.legenda) {
+                <p class="legenda">{{ formula.legenda }}</p>
+              }
+            </div>
+          }
+        </section>
+      }
+
+      @if (conteudo.demonstracao.length > 0) {
+        <section class="secao">
+          <h3>Por que funciona</h3>
+          <app-passo-a-passo [passos]="conteudo.demonstracao" />
+        </section>
+      }
+
+      @if (conteudo.exemplo; as exemplo) {
+        <section class="secao">
+          <h3>Exemplo</h3>
+          <p class="enunciado">{{ exemplo.enunciado }}</p>
+          <app-passo-a-passo [passos]="exemplo.passos" />
+        </section>
+      }
+
+      @if (conteudo.vejaTambem?.length) {
+        <footer class="relacionados">
+          <h3>Veja também</h3>
+          <div class="lista">
+            @for (id of conteudo.vejaTambem; track id) {
+              <button type="button" class="relacionado" (click)="teoria.abrir(id)">
+                {{ teoria.tituloDe(id) }}
+              </button>
+            }
+          </div>
+        </footer>
+      }
+    </article>
+  }
+</dialog>

@@ -1,0 +1,6 @@
+<footer class="conceitos">
+  <span class="etiqueta">{{ etiqueta() }}</span>
+  @for (conceito of conceitos(); track conceito) {
+    <app-botao-teoria [conceito]="conceito" />
+  }
+</footer>

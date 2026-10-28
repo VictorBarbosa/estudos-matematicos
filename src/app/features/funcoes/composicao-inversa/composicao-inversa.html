@@ -1,0 +1,100 @@
+<app-topico-layout
+  titulo="Composição e inversa"
+  descricao="Encadear funções e desfazê-las, com o gráfico refletido na reta y = x."
+  topicoId="composicao-inversa"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="fa" rotulo="f: coeficiente de x" [min]="-5" [max]="5" />
+      <app-controle-parametro [(valor)]="fb" rotulo="f: termo constante" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="ga" rotulo="g: coeficiente de x" [min]="-5" [max]="5" />
+      <app-controle-parametro [(valor)]="gb" rotulo="g: termo constante" [min]="-8" [max]="8" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="fTex() + ' \\qquad ' + gTex()" [bloco]="true" />
+    </section>
+
+    <section class="seletor-pills" role="group" aria-label="O que visualizar">
+      <button
+        type="button"
+        [class.ativo]="foco() === 'composicao'"
+        [attr.aria-pressed]="foco() === 'composicao'"
+        (click)="definirFoco('composicao')"
+      >
+        Composição
+      </button>
+      <button
+        type="button"
+        [class.ativo]="foco() === 'inversa'"
+        [attr.aria-pressed]="foco() === 'inversa'"
+        (click)="definirFoco('inversa')"
+      >
+        Inversa de f
+      </button>
+    </section>
+
+    @if (foco() === 'composicao') {
+      <section class="painel">
+        <h2>As duas ordens</h2>
+        <app-formula
+          [tex]="'(f \\circ g)(x) = ' + fComG().resultado.a + 'x ' + (fComG().resultado.b >= 0 ? '+' : '-') + ' ' + (fComG().resultado.b < 0 ? -fComG().resultado.b : fComG().resultado.b)"
+          [bloco]="true"
+        />
+        <app-formula
+          [tex]="'(g \\circ f)(x) = ' + gComF().resultado.a + 'x ' + (gComF().resultado.b >= 0 ? '+' : '-') + ' ' + (gComF().resultado.b < 0 ? -gComF().resultado.b : gComF().resultado.b)"
+          [bloco]="true"
+        />
+        <p class="observacao">
+          @if (ordemImporta()) {
+            As duas composições são <strong>diferentes</strong> — a ordem importa. Primeiro
+            somar e depois multiplicar não dá o mesmo que multiplicar e depois somar.
+          } @else {
+            Neste caso particular as duas ordens coincidem, mas isso é exceção, não regra.
+          }
+        </p>
+      </section>
+
+      <section>
+        <h2>Visualizando o encadeamento</h2>
+        <app-math-plot
+          [dominio]="dominio()"
+          [curvas]="curvas()"
+          [descricao]="descricaoGrafico()"
+          [altura]="400"
+        />
+      </section>
+
+      <section>
+        <h2>Passo a passo de f ∘ g</h2>
+        <app-passo-a-passo [passos]="fComG().passos" />
+      </section>
+    } @else {
+      <section>
+        <h2>O reflexo na reta y = x</h2>
+        <app-math-plot
+          [dominio]="dominio()"
+          [curvas]="curvas()"
+          [pontos]="pontos()"
+          [descricao]="descricaoGrafico()"
+          [altura]="420"
+        />
+        <p class="observacao">
+          Os dois pontos destacados têm as coordenadas trocadas. Fazer isso com todos os pontos
+          de uma curva é exatamente refleti-la na reta tracejada — e é isso que a inversa faz.
+        </p>
+      </section>
+
+      <section>
+        <h2>Passo a passo da inversa</h2>
+        <app-passo-a-passo [passos]="inversa().passos" />
+      </section>
+    }
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

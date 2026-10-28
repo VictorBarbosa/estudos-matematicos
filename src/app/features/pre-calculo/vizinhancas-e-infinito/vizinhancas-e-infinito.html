@@ -1,0 +1,79 @@
+<app-topico-layout
+  titulo="Vizinhanças e infinito"
+  descricao="Épsilon e delta, assíntotas e o comportamento das funções no infinito."
+  topicoId="vizinhancas-e-infinito"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="a (coef. do numerador)" [min]="1" [max]="9" />
+      <app-controle-parametro [(valor)]="b" rotulo="b (constante acima)" [min]="-9" [max]="9" />
+      <app-controle-parametro [(valor)]="c" rotulo="c (coef. do denominador)" [min]="1" [max]="9" />
+      <app-controle-parametro [(valor)]="d" rotulo="d (constante abaixo)" [min]="-9" [max]="9" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Limite no infinito</span>
+        <strong>{{ formatar(assintotaHorizontal()) }}</strong>
+        <span class="legenda">razão a ÷ c</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Verificação numérica</span>
+        <strong>{{ formatar(limiteInfinito()) }}</strong>
+        <span class="legenda">f(10⁶)</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Assíntota vertical</span>
+        <strong>x = {{ formatar(assintotaVertical()) }}</strong>
+        <span class="legenda">onde o denominador zera</span>
+      </div>
+    </section>
+
+    <section class="painel">
+      <h2>O jogo do épsilon</h2>
+      <app-controle-parametro
+        [(valor)]="epsilonEmCentesimos"
+        rotulo="Margem ε (em centésimos)"
+        [min]="1"
+        [max]="100"
+        [dica]="'ε = ' + formatar(epsilon())"
+      />
+
+      <p class="observacao">
+        @if (xSuficiente(); as limiar) {
+          Exigindo que f fique a menos de <strong>{{ formatar(epsilon()) }}</strong> do limite,
+          basta tomar x maior que <strong>{{ formatar(limiar) }}</strong>. Aperte o ε: o limiar
+          aumenta, mas sempre existe um — e é exatamente isso que a definição formal afirma.
+        } @else {
+          Com essa margem, a função não chega a entrar na faixa no intervalo testado.
+        }
+      </p>
+    </section>
+
+    <section>
+      <h2>A curva e suas assíntotas</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        A linha cheia é o limite; as tracejadas horizontais delimitam a faixa de tolerância ε.
+        A tracejada vertical marca onde a função explode. Repare que a curva entra na faixa e
+        não sai mais — ela persegue a assíntota sem jamais tocá-la.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

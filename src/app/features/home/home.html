@@ -1,0 +1,33 @@
+<div class="home">
+  <header class="intro">
+    <h1>Matemática, demonstrada passo a passo</h1>
+    <p class="chamada">
+      Cada tópico tem duas partes: <strong>Explorar</strong>, onde você mexe nos parâmetros e vê a
+      matemática reagir, e <strong>Treinar</strong>, onde você resolve exercícios e recebe uma
+      correção que diz <em>onde</em> o raciocínio saiu do trilho.
+    </p>
+    <p class="andamento">
+      {{ prontos }} de {{ total }} tópicos implementados. Eles abrem um a um: vença a etapa da
+      vez no treino para liberar a seguinte.
+    </p>
+  </header>
+
+  <app-painel-trilha />
+
+  <app-painel-progresso />
+
+  @for (area of areas; track area.id) {
+    <section class="area">
+      <header>
+        <h2>{{ area.titulo }}</h2>
+        <p>{{ area.descricao }}</p>
+      </header>
+
+      <div class="grade">
+        @for (topico of area.topicos; track topico.id) {
+          <app-cartao-topico [areaId]="area.id" [topico]="topico" />
+        }
+      </div>
+    </section>
+  }
+</div>

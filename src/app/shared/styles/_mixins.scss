@@ -1,0 +1,89 @@
+// Mixins reaproveitados pelos componentes.
+// Importe com `@use 'mixins' as *;` — `includePaths` já aponta para esta pasta.
+
+// Anel de foco consistente e sempre visível sobre qualquer superfície.
+@mixin foco-visivel {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+  border-radius: var(--raio-sm);
+}
+
+@mixin cartao {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-1);
+}
+
+@mixin botao-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--esp-2);
+  padding: var(--esp-2) var(--esp-4);
+  border-radius: var(--raio-md);
+  border: 1px solid transparent;
+  font: inherit;
+  font-size: var(--texto-sm);
+  font-weight: 550;
+  line-height: 1.4;
+  cursor: pointer;
+  transition:
+    background var(--transicao),
+    border-color var(--transicao),
+    color var(--transicao);
+
+  &:focus-visible {
+    @include foco-visivel;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@mixin botao-primario {
+  @include botao-base;
+  background: var(--acento);
+  color: var(--acento-contraste);
+
+  &:hover:not(:disabled) {
+    background: var(--acento-forte);
+  }
+}
+
+@mixin botao-secundario {
+  @include botao-base;
+  background: var(--superficie);
+  border-color: var(--borda-forte);
+  color: var(--texto);
+
+  &:hover:not(:disabled) {
+    background: var(--superficie-2);
+  }
+}
+
+@mixin botao-sutil {
+  @include botao-base;
+  background: transparent;
+  color: var(--texto-suave);
+
+  &:hover:not(:disabled) {
+    background: var(--superficie-2);
+    color: var(--texto);
+  }
+}
+
+// Esconde visualmente, mantendo o conteúdo para leitores de tela.
+@mixin apenas-leitor-de-tela {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

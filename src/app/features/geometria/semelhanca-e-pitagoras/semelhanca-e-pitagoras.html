@@ -1,0 +1,119 @@
+<app-topico-layout
+  titulo="Semelhança e Pitágoras"
+  descricao="Razão de semelhança, teorema de Tales e a demonstração de Pitágoras."
+  topicoId="semelhanca-e-pitagoras"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="cateto1" rotulo="Cateto b" [min]="1" [max]="12" />
+      <app-controle-parametro [(valor)]="cateto2" rotulo="Cateto c" [min]="1" [max]="12" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="pitagorasTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>A prova por semelhança</h2>
+      <app-math-plot
+        [dominio]="dominioTriangulo()"
+        [segmentos]="segmentos()"
+        [mostrarGrade]="false"
+        descricao="Triângulo retângulo com a altura traçada sobre a hipotenusa."
+        [altura]="340"
+      />
+      <p class="observacao">
+        A altura tracejada divide o triângulo em dois menores, ambos com os mesmos ângulos do
+        original — e portanto semelhantes a ele. Daí saem as duas relações métricas:
+      </p>
+      <app-formula [tex]="'b^{2} = a \\cdot m \\qquad c^{2} = a \\cdot n'" [bloco]="true" />
+      <p class="observacao">
+        Somando as duas, e lembrando que m + n = a, sobra a² = b² + c². Pitágoras é uma
+        consequência da semelhança, não um fato isolado.
+      </p>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Hipotenusa</span>
+        <strong>{{ formatar(hipotenusa()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Projeção m</span>
+        <strong>{{ formatar(projecoes().m) }}</strong>
+        <span class="legenda">b²/a</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Projeção n</span>
+        <strong>{{ formatar(projecoes().n) }}</strong>
+        <span class="legenda">c²/a</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Altura</span>
+        <strong>{{ formatar(projecoes().altura) }}</strong>
+        <span class="legenda">b·c/a</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Ampliar não é de graça</h2>
+      <app-controle-parametro
+        [(valor)]="k"
+        rotulo="Razão de semelhança k"
+        [min]="0.5"
+        [max]="6"
+        [passo]="0.5"
+      />
+
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">Comprimentos</span>
+          <strong>× {{ formatar(k()) }}</strong>
+          <span class="legenda">k</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Áreas</span>
+          <strong>× {{ formatar(escalaArea().resultado) }}</strong>
+          <span class="legenda">k²</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Volumes</span>
+          <strong>× {{ formatar(escalaVolume().resultado) }}</strong>
+          <span class="legenda">k³</span>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Superfície / volume</span>
+          <strong>× {{ formatar(razaoSuperficieVolume()) }}</strong>
+          <span class="legenda">1/k</span>
+        </div>
+      </div>
+
+      <app-passo-a-passo [passos]="escalaVolume().passos" />
+      <p class="observacao">
+        Essa última coluna é a razão pela qual um foguete grande não é um foguete pequeno
+        ampliado: a massa cresce com k³, mas a área que sustenta e dissipa calor cresce só com
+        k². Ampliar um projeto muda a física do problema.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Tales: medir o que não se alcança</h2>
+      <app-passo-a-passo [passos]="tales().passos" />
+      <p class="observacao">
+        Foi assim que Tales obteve a altura da pirâmide: comparando sua sombra com a sombra de
+        um bastão. Os raios do Sol funcionam como as paralelas, e a proporção faz o resto.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

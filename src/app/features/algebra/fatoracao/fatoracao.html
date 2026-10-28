@@ -1,0 +1,52 @@
+<app-topico-layout
+  titulo="Fatoração"
+  descricao="Fator comum, diferença de quadrados e trinômios — a distributiva ao contrário."
+  topicoId="fatoracao"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="0" [max]="6" />
+      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x" [min]="-12" [max]="12" />
+      <app-controle-parametro [(valor)]="c" rotulo="Termo constante" [min]="-20" [max]="20" />
+    </section>
+
+    <section class="destaque-formula">
+      @if (fatorou()) {
+        <app-formula
+          [tex]="polinomio().paraTex() + ' = ' + fatoracao().resultado.tex"
+          [bloco]="true"
+        />
+        <p class="observacao tipo">{{ tipoLegivel() }}</p>
+      } @else {
+        <app-formula [tex]="polinomio().paraTex()" [bloco]="true" />
+        <p class="observacao tipo">{{ tipoLegivel() }}</p>
+      }
+    </section>
+
+    <section>
+      <h2>Onde a expressão se anula</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="340"
+      />
+      <p class="observacao">
+        Cada fator (x − r) corresponde a um cruzamento com o eixo x em r. É por isso que fatorar
+        resolve equações: um produto só é zero quando algum fator é zero.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="fatoracao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

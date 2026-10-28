@@ -1,0 +1,147 @@
+<app-topico-layout
+  titulo="Termodinâmica e gases"
+  descricao="Gases ideais, primeira lei e o trabalho que uma expansão realiza."
+  topicoId="termodinamica-e-gases"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="mols" rotulo="Quantidade (mol)" [min]="1" [max]="10" />
+      <app-controle-parametro
+        [(valor)]="volumeLitros"
+        rotulo="Volume (L)"
+        [min]="1"
+        [max]="80"
+      />
+      <app-controle-parametro
+        [(valor)]="temperaturaCelsius"
+        rotulo="Temperatura (°C)"
+        [min]="-200"
+        [max]="400"
+        [passo]="5"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="estadoTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>A isoterma</h2>
+      <app-math-plot
+        [dominio]="dominioIsoterma()"
+        [curvas]="curvasIsoterma()"
+        descricao="Pressão em função do volume, a temperatura constante."
+        [altura]="340"
+      />
+      <p class="observacao">
+        A temperatura fixa, pressão e volume são inversamente proporcionais — a curva é uma
+        hipérbole. Aquecer o gás empurra a curva para cima e para a direita: mais pressão para
+        o mesmo volume, ou mais volume para a mesma pressão.
+      </p>
+      <app-passo-a-passo [passos]="estado().passos" />
+      <p class="observacao">
+        Leve a temperatura a −273 °C e repare que a pressão vai a zero. Esse é o zero absoluto,
+        e é por isso que a equação exige kelvin: em celsius, dobrar a temperatura de 10° para
+        20° não dobra nada.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Primeira lei: o balanço</h2>
+      <div class="grade-controles">
+        <app-controle-parametro
+          [(valor)]="calor"
+          rotulo="Calor recebido Q (J)"
+          [min]="-1000"
+          [max]="1000"
+          [passo]="50"
+        />
+        <app-controle-parametro
+          [(valor)]="trabalho"
+          rotulo="Trabalho realizado W (J)"
+          [min]="-1000"
+          [max]="1000"
+          [passo]="50"
+        />
+      </div>
+
+      <div class="indicadores">
+        <div class="indicador" data-destaque="true">
+          <span class="rotulo">ΔU = Q − W</span>
+          <strong>{{ formatar(primeiraLei().resultado) }} J</strong>
+          <span class="legenda">
+            {{
+              primeiraLei().resultado > 0
+                ? 'o gás esquentou'
+                : primeiraLei().resultado < 0
+                  ? 'o gás esfriou'
+                  : 'temperatura constante'
+            }}
+          </span>
+        </div>
+      </div>
+
+      <app-passo-a-passo [passos]="primeiraLei().passos" />
+      <p class="observacao">
+        Iguale Q e W: a energia interna não muda, e todo o calor recebido saiu como trabalho.
+        É o processo isotérmico, e é o princípio de funcionamento de qualquer máquina térmica.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Trabalho é área no diagrama p × V</h2>
+      <div class="grade-controles">
+        <app-controle-parametro
+          [(valor)]="pressaoAtm"
+          rotulo="Pressão (atm)"
+          [min]="1"
+          [max]="5"
+        />
+        <app-controle-parametro
+          [(valor)]="volumeInicial"
+          rotulo="Volume inicial (L)"
+          [min]="1"
+          [max]="60"
+        />
+        <app-controle-parametro
+          [(valor)]="volumeFinal"
+          rotulo="Volume final (L)"
+          [min]="1"
+          [max]="70"
+        />
+      </div>
+
+      <app-math-plot
+        [dominio]="dominioTrabalho()"
+        [curvas]="curvasTrabalho()"
+        [areas]="areaTrabalho()"
+        descricao="Processo isobárico no diagrama p × V, com a área do trabalho sombreada."
+        [altura]="320"
+      />
+
+      <app-passo-a-passo [passos]="trabalhoIsobarico().passos" />
+      <p class="observacao">
+        A área sombreada <em>é</em> o trabalho. A pressão constante ela é um retângulo, mas em
+        qualquer processo continua sendo a área sob a curva — ou seja, uma integral. É o mesmo
+        raciocínio que apareceu na cinemática, com a área sob a velocidade.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Por que isso importa num foguete</h2>
+      <app-formula [tex]="'pV = nRT \\qquad \\Delta U = Q - W'" [bloco]="true" />
+      <p class="observacao">
+        Na câmara de combustão, a reação eleva a temperatura a milhares de kelvin; a equação de
+        estado transforma isso em pressão, e a expansão pela tubeira converte pressão em
+        velocidade de exaustão. Quanto maior essa velocidade, mais eficiente o motor — e é
+        exatamente o vₑ que aparece na equação de Tsiolkovsky.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

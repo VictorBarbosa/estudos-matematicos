@@ -1,0 +1,77 @@
+<app-topico-layout
+  titulo="Teorema fundamental do cálculo"
+  descricao="A ponte que mostra que derivar e integrar são operações inversas."
+  topicoId="teorema-fundamental"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="0" [max]="3" />
+      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x" [min]="-3" [max]="4" />
+      <app-controle-parametro
+        [(valor)]="x"
+        rotulo="Limite superior x"
+        [min]="0"
+        [max]="5"
+        dica="Deslize e veja a área acumular."
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula
+        [tex]="'\\int_{0}^{' + x() + '} \\left(' + funcao().paraTex() + '\\right) dx = ' + formatar(areaAteX())"
+        [bloco]="true"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Área acumulada A(x)</span>
+        <strong>{{ formatar(areaAteX()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Altura f(x)</span>
+        <strong>{{ formatar(alturaNoPonto()) }}</strong>
+        <span class="legenda">é a inclinação de A ali</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Acumular e variar são operações opostas</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [areas]="areas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        A região sombreada é a área acumulada até x, e a curva de acento mostra como ela
+        cresce. Repare: onde a função é alta, a curva da área sobe depressa; onde ela cruza
+        o eixo, a curva da área fica horizontal. A altura de uma é a inclinação da outra —
+        esse é o teorema.
+      </p>
+    </section>
+
+    <section>
+      <h2>Passo a passo</h2>
+      <app-passo-a-passo [passos]="analise().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>O que o teorema economiza</h2>
+      <app-formula [tex]="'\\int_{a}^{b} f(x)\\,dx = F(b) - F(a)'" [bloco]="true" />
+      <p class="observacao">
+        Sem ele, cada área exigiria um limite de somas infinitas. Com ele, basta encontrar
+        uma antiderivada e subtrair dois valores. É a razão de o cálculo integral ser
+        praticável à mão.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

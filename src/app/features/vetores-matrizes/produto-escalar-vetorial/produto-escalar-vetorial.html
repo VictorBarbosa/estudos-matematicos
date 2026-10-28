@@ -1,0 +1,102 @@
+<app-topico-layout
+  titulo="Produto escalar e vetorial"
+  descricao="Projeção, ângulo entre vetores, trabalho e torque como produtos."
+  topicoId="produto-escalar-vetorial"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="ax" rotulo="aₓ" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="ay" rotulo="a_y" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="bx" rotulo="bₓ" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="by" rotulo="b_y" [min]="-8" [max]="8" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="escalarTex()" [bloco]="true" />
+      <app-formula [tex]="vetorialTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Produto escalar</span>
+        <strong>{{ formatar(escalar()) }}</strong>
+        <span class="legenda">
+          {{ escalar() > 0 ? 'ângulo agudo' : escalar() < 0 ? 'ângulo obtuso' : 'perpendiculares' }}
+        </span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Ângulo entre eles</span>
+        <strong>{{ formatar(analiseAngulo().resultado) }}°</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Projeção de a sobre b</span>
+        <strong>{{ formatar(analiseProjecao().resultado) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Área do paralelogramo</span>
+        <strong>{{ formatar(analiseArea().resultado) }}</strong>
+        <span class="legenda">|a × b|</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Os dois produtos, no mesmo desenho</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [segmentos]="segmentos()"
+        descricao="Vetores a e b, o paralelogramo que formam e a projeção de a sobre b."
+        [altura]="420"
+      />
+      <p class="observacao">
+        O segmento roxo é a projeção de <strong>a</strong> na direção de <strong>b</strong> —
+        é ela que o produto escalar mede. O paralelogramo tracejado é o que o produto vetorial
+        mede. Gire os vetores e repare: quando um dos produtos é máximo, o outro é zero.
+      </p>
+
+      @if (perpendiculares()) {
+        <p class="aviso">
+          Produto escalar nulo: os vetores são perpendiculares, e a área do paralelogramo está
+          no máximo para estes módulos.
+        </p>
+      } @else if (paralelos()) {
+        <p class="aviso">
+          Produto vetorial nulo: os vetores são paralelos, não formam paralelogramo, e o
+          produto escalar está no máximo.
+        </p>
+      }
+    </section>
+
+    <section>
+      <h2>O ângulo, passo a passo</h2>
+      <app-passo-a-passo [passos]="analiseAngulo().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Projeção: o que o trabalho mede</h2>
+      <app-passo-a-passo [passos]="analiseProjecao().passos" />
+      <app-formula [tex]="'W = \\vec{F}\\cdot\\vec{d} = Fd\\cos\\theta'" [bloco]="true" />
+      <p class="observacao">
+        Empurrar uma caixa obliquamente realiza menos trabalho do que empurrá-la na horizontal
+        — a componente vertical da força não acompanha o deslocamento. Com força perpendicular
+        ao movimento, o trabalho é exatamente zero.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Produto vetorial: o que o torque mede</h2>
+      <app-passo-a-passo [passos]="analiseArea().passos" />
+      <app-formula [tex]="'\\tau = rF\\sin\\theta'" [bloco]="true" />
+      <p class="observacao">
+        Aqui é o seno que aparece, e isso muda tudo: a força que aponta para o eixo de rotação
+        não gira nada. É por isso que ninguém abre uma porta empurrando pela dobradiça, por
+        mais força que faça.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

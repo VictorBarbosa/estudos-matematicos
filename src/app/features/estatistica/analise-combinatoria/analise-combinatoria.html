@@ -1,0 +1,89 @@
+<app-topico-layout
+  titulo="Análise combinatória"
+  descricao="Princípio multiplicativo, arranjos, permutações e combinações."
+  topicoId="analise-combinatoria"
+>
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="n" rotulo="Total de elementos (n)" [min]="1" [max]="20" />
+      <app-controle-parametro [(valor)]="p" rotulo="Quantos escolher (p)" [min]="0" [max]="20" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="arranjoTex()" [bloco]="true" />
+      <app-formula [tex]="combinacaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Com ordem (arranjo)</span>
+        <strong>{{ formatar(arranjo().resultado) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Ordens repetidas</span>
+        <strong>{{ formatar(ordensRepetidas()) }}</strong>
+        <span class="legenda">p!</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Sem ordem (combinação)</span>
+        <strong>{{ formatar(combinacao().resultado) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Escolher n − p</span>
+        <strong>{{ formatar(simetrica()) }}</strong>
+        <span class="legenda">mesmo valor, sempre</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A pergunta que decide tudo</h2>
+      <p class="observacao">
+        <strong>A ordem importa?</strong> Se importa, pare no arranjo. Se não importa, cada
+        grupo foi contado p! vezes — uma para cada ordem possível — e é preciso dividir. Não há
+        terceira fórmula a decorar: os indicadores acima mostram que a combinação é só o
+        arranjo dividido por p!.
+      </p>
+      <app-passo-a-passo [passos]="combinacao().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>Triângulo de Pascal</h2>
+      <app-controle-parametro
+        [(valor)]="linhasPascal"
+        rotulo="Linhas exibidas"
+        [min]="3"
+        [max]="12"
+      />
+
+      <div class="pascal" role="table" aria-label="Triângulo de Pascal">
+        @for (linha of pascal(); track $index) {
+          <div class="linha" role="row">
+            @for (celula of linha; track $index) {
+              <span class="celula" [class.destacada]="celula.destacado" role="cell">
+                {{ formatar(celula.valor) }}
+              </span>
+            }
+            <span class="soma">= {{ formatar(somasDasLinhas()[$index]!) }}</span>
+          </div>
+        }
+      </div>
+
+      <p class="observacao">
+        Cada número do triângulo é uma combinação C(n, p), e cada um é a soma dos dois acima —
+        porque escolher p elementos é escolher ou não escolher o último, e somar os dois casos.
+        À direita, a soma de cada linha: sempre 2ⁿ, o total de subconjuntos possíveis.
+      </p>
+    </section>
+
+    <section>
+      <h2>Arranjo, passo a passo</h2>
+      <app-passo-a-passo [passos]="arranjo().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>
