@@ -30,6 +30,9 @@
   --aviso: oklch(78% 0.14 75);
   --aviso-suave: oklch(30% 0.05 75);
 
+  // ---- negativos na interface --------------------------------------
+  --texto-negativo: oklch(70% 0.17 25);
+
   --serie-1: oklch(72% 0.15 255);
   --serie-2: oklch(77% 0.14 60);
   --serie-3: oklch(74% 0.12 185);
@@ -72,6 +75,9 @@
   --erro-suave: oklch(95% 0.035 25);
   --aviso: oklch(60% 0.14 75);
   --aviso-suave: oklch(95% 0.05 75);
+
+  // ---- negativos na interface --------------------------------------
+  --texto-negativo: oklch(53% 0.2 25);
 
   // ---- série de cores para curvas e barras --------------------------
   // Ordem escolhida para que as duas primeiras — o par mais frequente num
