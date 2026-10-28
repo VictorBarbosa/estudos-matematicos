@@ -61,7 +61,7 @@ function nomeDe(lados: number): string {
 }
 
 function exercicioSomaInternos(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const lados = rng.escolher([3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20]);
+  const lados = rng.inteiro(3, 30);
   const { resultado, passos } = somaAngulosInternosComPassos(lados);
 
   return {
@@ -107,7 +107,7 @@ function exercicioSomaInternos(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioAnguloRegular(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const lados = rng.escolher([3, 4, 5, 6, 8, 9, 10, 12, 18, 20]);
+  const lados = rng.inteiro(3, 30);
   const soma = somaAngulosInternosComPassos(lados).resultado;
   const resultado = anguloInternoRegular(lados);
 
@@ -151,8 +151,8 @@ function exercicioAnguloRegular(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioTerceiroAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const primeiro = rng.inteiro(20, 90);
-  const segundo = rng.inteiro(20, 160 - primeiro);
+  const primeiro = rng.inteiro(10, 120);
+  const segundo = rng.inteiro(10, Math.max(10, 170 - primeiro));
   const resultado = 180 - primeiro - segundo;
 
   return {
@@ -212,7 +212,7 @@ function exercicioTerceiroAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const lados = rng.escolher([5, 6, 8, 9, 10, 12, 15, 18, 20]);
+  const lados = rng.inteiro(5, 120);
   const angulo = anguloInternoRegular(lados);
 
   return {

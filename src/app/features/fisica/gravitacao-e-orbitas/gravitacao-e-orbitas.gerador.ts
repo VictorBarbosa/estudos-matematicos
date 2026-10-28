@@ -62,7 +62,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
 }
 
 function exercicioGravidade(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const altitudeKm = rng.escolher([0, 400, 1000, 2000, 10_000, 35_786]);
+  // Altitude em múltiplos de 10 km, do nível do mar à geoestacionária: a
+  // faixa inteira, e não meia dúzia de valores memorizáveis.
+  const altitudeKm = rng.booleano(0.1) ? 0 : rng.inteiro(10, 4000) * 10;
   const altitude = altitudeKm * 1000;
 
   const { resultado, passos } = gravidadeNaAltitudeComPassos(altitude);
@@ -115,7 +117,7 @@ function exercicioGravidade(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioVelocidadeOrbital(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const altitudeKm = rng.escolher([200, 400, 800, 1500, 5000, 20_000, 35_786]);
+  const altitudeKm = rng.inteiro(15, 4000) * 10;
   const { resultado, passos } = orbitaCircularComPassos(altitudeKm * 1000);
 
   // A resposta é pedida em km/s para ficar legível.
@@ -159,7 +161,7 @@ function exercicioVelocidadeOrbital(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioPeriodo(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const altitudeKm = rng.escolher([400, 800, 2000, 20_000, 35_786]);
+  const altitudeKm = rng.inteiro(20, 4000) * 10;
   const { resultado, passos } = orbitaCircularComPassos(altitudeKm * 1000);
 
   // Em minutos, que é como se fala de órbitas baixas.

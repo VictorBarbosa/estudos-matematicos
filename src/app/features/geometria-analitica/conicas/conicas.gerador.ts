@@ -1,3 +1,4 @@
+import { ternosPitagoricos } from '@core/math';
 import { Rng } from '@core/treino/rng';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
@@ -19,15 +20,14 @@ export const geradorConicas: GeradorExercicio<number> = {
     const pergunta = sortearPergunta(nivel, rng);
     const hiperbole = nivel === 'facil' ? false : rng.booleano();
 
-    // Ternos pitagóricos garantem c inteiro nos dois casos.
-    const [menor, maior] = rng.escolher([
-      [3, 5],
-      [4, 5],
-      [6, 10],
-      [8, 10],
-      [5, 13],
-      [12, 13],
-    ]);
+    // Ternos pitagóricos garantem c inteiro nos dois casos. Gerados, e não
+    // escolhidos de uma lista de seis: com a lista, o tópico tinha pouquíssimas
+    // cônicas distintas.
+    const ternos = ternosPitagoricos(90);
+    const terno = ternos[rng.inteiro(0, ternos.length - 1)]!;
+    const [menor, maior] = rng.booleano()
+      ? [terno[0], terno[2]]
+      : [terno[1], terno[2]];
 
     // Elipse: a = maior, b = menor, c² = a² − b².
     // Hipérbole: a e b são os catetos, c = hipotenusa.

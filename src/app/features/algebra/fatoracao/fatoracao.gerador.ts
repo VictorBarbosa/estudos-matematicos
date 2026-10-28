@@ -74,8 +74,8 @@ function sortear(nivel: Nivel, rng: Rng): Sorteio {
   switch (nivel) {
     case 'facil': {
       // Trinômio simples com raízes inteiras distintas.
-      let r1 = rng.inteiro(1, 7);
-      let r2 = rng.inteiro(1, 7);
+      let r1 = rng.inteiro(1, 20);
+      let r2 = rng.inteiro(1, 20);
       if (r1 === r2) {
         r2 = r1 + 1;
       }
@@ -88,8 +88,8 @@ function sortear(nivel: Nivel, rng: Rng): Sorteio {
     case 'medio': {
       if (rng.booleano()) {
         // Diferença de quadrados.
-        const k = rng.inteiro(1, 6);
-        const a = rng.inteiro(1, 4);
+        const k = rng.inteiro(1, 12);
+        const a = rng.inteiro(1, 9);
         return {
           polinomio: Polinomio.de(-(k * k), 0, a * a),
           raizes: [k / a, -k / a],
@@ -97,7 +97,7 @@ function sortear(nivel: Nivel, rng: Rng): Sorteio {
         };
       }
       // Trinômio com raízes de sinais diferentes.
-      const r1 = rng.inteiro(-7, -1);
+      const r1 = rng.inteiro(-14, -1);
       const r2 = rng.inteiro(1, 7);
       return {
         polinomio: Polinomio.de(r1 * r2, -(r1 + r2), 1),

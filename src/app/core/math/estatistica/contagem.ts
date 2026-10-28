@@ -58,7 +58,12 @@ export function combinacoesComPassos(n: number, p: number): Resolucao<number> {
 
   const arranjos = arranjosComPassos(n, p).resultado;
   const ordens = fatorial(p);
-  const resultado = arranjos / ordens;
+
+  // A divisão é exata na matemática, mas não em ponto flutuante: para n
+  // maiores, arranjos/p! chega a devolver 253.00000000000003. Como uma
+  // contagem é sempre inteira, arredondar aqui evita que o aluno digite o
+  // número certo e a comparação o repreove por um erro de representação.
+  const resultado = Math.round(arranjos / ordens);
 
   return {
     resultado,

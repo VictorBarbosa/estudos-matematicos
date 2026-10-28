@@ -3,7 +3,9 @@ import {
   GRANDEZAS,
   dimensaoParaTex,
   dimensoesIguais,
+  elevarDimensao,
   grandezaPorNome,
+  multiplicarDimensoes,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
@@ -11,7 +13,13 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/tr
 /** A resposta é o expoente de uma das dimensões de base. */
 const proximos = (a: number, b: number): boolean => a === b;
 
-type Pergunta = 'expoente-M' | 'expoente-L' | 'expoente-T' | 'consistencia' | 'conversao';
+type Pergunta =
+  | 'expoente-M'
+  | 'expoente-L'
+  | 'expoente-T'
+  | 'combinacao'
+  | 'consistencia'
+  | 'conversao';
 
 export const geradorDimensional: GeradorExercicio<number> = {
   topicoId: 'analise-dimensional',
@@ -25,6 +33,8 @@ export const geradorDimensional: GeradorExercicio<number> = {
         return exercicioExpoente('L', nivel, rng);
       case 'expoente-T':
         return exercicioExpoente('T', nivel, rng);
+      case 'combinacao':
+        return exercicioCombinacao(nivel, rng);
       case 'consistencia':
         return exercicioConsistencia(nivel, rng);
       case 'conversao':
@@ -45,11 +55,11 @@ export const geradorDimensional: GeradorExercicio<number> = {
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
   switch (nivel) {
     case 'facil':
-      return rng.escolher<Pergunta>(['expoente-L', 'expoente-T']);
+      return rng.escolher<Pergunta>(['expoente-L', 'expoente-T', 'expoente-M', 'combinacao']);
     case 'medio':
-      return rng.escolher<Pergunta>(['expoente-M', 'expoente-T', 'conversao']);
+      return rng.escolher<Pergunta>(['combinacao', 'expoente-M', 'expoente-T', 'conversao']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['consistencia', 'conversao', 'expoente-M']);
+      return rng.escolher<Pergunta>(['combinacao', 'consistencia', 'conversao', 'expoente-M']);
   }
 }
 
@@ -303,5 +313,89 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<number> {
       caso.fator,
       proximos,
     ),
+  };
+}
+
+/**
+ * Dimensão de um produto de duas grandezas, uma delas elevada a um expoente.
+ *
+ * É a pergunta que dá variedade de verdade ao tópico: perguntar o expoente de
+ * uma grandeza tabelada esgota a tabela em poucas dezenas de exercícios, mas
+ * combinar duas grandezas multiplica o espaço pelo tamanho da tabela.
+ */
+function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
+  const primeira = rng.escolher(GRANDEZAS);
+  const segunda = rng.escolher(GRANDEZAS);
+  const expoente = nivel === 'facil' ? 1 : rng.inteiro(2, 3);
+  const base = rng.escolher<keyof Dimensao>(['M', 'L', 'T']);
+
+  const dimensao = multiplicarDimensoes(
+    primeira.dimensao,
+    elevarDimensao(segunda.dimensao, expoente),
+  );
+
+  const gabarito = dimensao[base];
+  const potencia = expoente === 1 ? '' : `^{${expoente}}`;
+
+  return {
+    id: `dim-comb-${primeira.nome}-${segunda.nome}-${expoente}-${base}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado:
+      `Considere o produto de ${primeira.nome} por ${segunda.nome}` +
+      `${expoente === 1 ? '' : ` elevado${expoente === 2 ? ' ao quadrado' : ' ao cubo'}`}. ` +
+      `Na dimensão do resultado, qual é o expoente de ${base}? (responda 0 se não aparece)`,
+    enunciadoTex:
+      `\\left[\\text{${primeira.simbolo}} \\cdot \\text{${segunda.simbolo}}${potencia}\\right] = ?`,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: 'Escrevemos a dimensão de cada fator.',
+          tex:
+            `[\\text{${primeira.nome}}] = ${dimensaoParaTex(primeira.dimensao)} \\qquad ` +
+            `[\\text{${segunda.nome}}] = ${dimensaoParaTex(segunda.dimensao)}`,
+        },
+        {
+          descricao: 'Elevar a um expoente multiplica todos os expoentes da dimensão.',
+          tex: `\\left(${dimensaoParaTex(segunda.dimensao)}\\right)${potencia} = ${dimensaoParaTex(elevarDimensao(segunda.dimensao, expoente))}`,
+          nota: 'Nenhuma conta numérica: só aritmética de expoentes.',
+        },
+        {
+          descricao: 'Multiplicar as grandezas soma os expoentes correspondentes.',
+          tex: `${dimensaoParaTex(dimensao)}`,
+        },
+        {
+          descricao: `Lendo o expoente de ${base}.`,
+          tex: `${base}^{${gabarito}}`,
+        },
+      ],
+    },
+    conceitos: ['dimensional.grandezas'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: primeira.dimensao[base] + segunda.dimensao[base],
+          diagnostico:
+            expoente === 1
+              ? 'Confira a soma dos expoentes de cada fator nessa dimensão.'
+              : `O expoente ${expoente} multiplica os expoentes do segundo fator antes da soma. ` +
+                'Somar as dimensões diretamente ignora a potência.',
+          passo: 1,
+          conceito: 'dimensional.grandezas',
+        },
+        {
+          resposta: primeira.dimensao[base] * segunda.dimensao[base],
+          diagnostico:
+            'Multiplicar GRANDEZAS soma os expoentes; multiplicar os expoentes entre si seria ' +
+            'o efeito de uma potência de potência.',
+          passo: 2,
+          conceito: 'dimensional.grandezas',
+        },
+      ],
+      gabarito,
+      proximos,
+    ),
+    dica: nivel === 'facil' ? 'Multiplicar grandezas soma os expoentes de cada dimensão.' : undefined,
   };
 }

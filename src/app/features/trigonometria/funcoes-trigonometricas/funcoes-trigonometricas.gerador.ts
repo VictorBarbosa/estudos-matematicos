@@ -18,9 +18,11 @@ export const geradorOndas: GeradorExercicio<number> = {
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
 
-    const amplitude = rng.inteiro(1, 6) * (nivel === 'dificil' && rng.booleano(0.3) ? -1 : 1);
-    const frequencia = rng.escolher(nivel === 'facil' ? [1, 2] : [1, 2, 3, 4]);
-    const deslocamento = nivel === 'facil' ? 0 : rng.inteiro(-4, 4);
+    const amplitude = rng.inteiro(1, 12) * (nivel === 'dificil' && rng.booleano(0.3) ? -1 : 1);
+    const frequencia = rng.inteiro(1, nivel === 'facil' ? 4 : 8);
+    // No fácil o deslocamento é pequeno em vez de nulo: zerá-lo colapsava o
+    // número de ondas distintas que o aluno chega a ver.
+    const deslocamento = nivel === 'facil' ? rng.inteiro(-3, 3) : rng.inteiro(-9, 9);
 
     const funcaoTex =
       `y = ${amplitude === 1 ? '' : amplitude === -1 ? '-' : amplitude}` +

@@ -1,5 +1,6 @@
 import { paraRadianos, quadrante } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { anguloNaVolta } from '@core/treino/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
@@ -180,11 +181,16 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
 
 function sortearAngulo(nivel: Nivel, rng: Rng): number {
   if (nivel === 'facil') {
-    return rng.escolher([30, 45, 60, 90, 120, 135, 150, 180]);
+    // Qualquer ângulo da volta, não só os oito de sempre.
+    return anguloNaVolta(rng, nivel);
   }
   if (nivel === 'medio') {
-    return rng.escolher([120, 135, 150, 210, 225, 240, 300, 315, 330]);
+    return rng.inteiro(95, 355);
   }
-  // Difícil: inclui ângulos além da volta e negativos.
-  return rng.escolher([-30, -60, -135, 390, 420, 480, 585, 660, 750]);
+  // Difícil: ângulos além da volta e negativos, que é onde a redução ao
+  // primeiro giro importa. Sorteados num intervalo, e não de uma lista de
+  // nove: o aluno percebia a repetição em poucos cliques.
+  return rng.booleano()
+    ? -rng.inteiro(5, 355)
+    : rng.inteiro(365, 1080);
 }

@@ -1,5 +1,6 @@
 import { paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { anguloAgudo } from '@core/treino/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
@@ -13,9 +14,9 @@ export const geradorRazoes: GeradorExercicio<number> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
-    const graus = rng.escolher(
-      nivel === 'facil' ? [30, 45, 60] : [15, 20, 30, 40, 45, 55, 60, 70, 75, 120, 135, 150],
-    );
+    // Qualquer ângulo inteiro serve: o gabarito é decimal, então não há razão
+    // para restringir aos notáveis — e isso multiplica o espaço de exercícios.
+    const graus = anguloAgudo(rng, nivel);
     const radianos = paraRadianos(graus);
 
     if (pergunta === 'complementar') {

@@ -96,9 +96,9 @@ function armadilhaDeBase(
 }
 
 function exercicioProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const base = rng.escolher(nivel === 'facil' ? [2, 3, 5] : [2, 3, 4, 5, 6, 7]);
-  const m = rng.inteiro(1, nivel === 'facil' ? 3 : 4);
-  const n = rng.inteiro(1, nivel === 'facil' ? 3 : 4);
+  const base = rng.inteiro(2, nivel === 'facil' ? 7 : 12);
+  const m = rng.inteiro(1, nivel === 'facil' ? 6 : 9);
+  const n = rng.inteiro(1, nivel === 'facil' ? 6 : 9);
 
   const resolucao = produtoDePotenciasComPassos(base, m, n);
   const gabarito = avaliarPotencia(resolucao.resultado);
@@ -139,8 +139,8 @@ function exercicioProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const base = rng.escolher([2, 3, 5]);
-  const m = rng.inteiro(1, 5);
+  const base = rng.inteiro(2, 10);
+  const m = rng.inteiro(1, 10);
   // No difícil permitimos m < n, que leva a expoente zero ou negativo.
   const n = nivel === 'dificil' ? rng.inteiro(1, 6) : rng.inteiro(1, m);
 
@@ -192,7 +192,7 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioPotenciaDePotencia(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const base = rng.escolher([2, 3, 5]);
+  const base = rng.inteiro(2, 10);
   const m = rng.inteiro(2, 3);
   const n = rng.inteiro(2, nivel === 'dificil' ? 4 : 3);
 

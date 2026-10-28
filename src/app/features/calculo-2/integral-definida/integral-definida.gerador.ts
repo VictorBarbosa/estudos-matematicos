@@ -1,5 +1,6 @@
 import { Polinomio, teoremaFundamentalComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { coeficiente } from '@core/treino/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
@@ -10,15 +11,17 @@ export const geradorDefinida: GeradorExercicio<number> = {
   formatoResposta: 'um número, ex.: 9 ou -2,5',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
-    const a = rng.inteiro(1, 4);
-    const b = nivel === 'facil' ? 0 : rng.inteiro(-4, 4);
-    const c = nivel === 'facil' ? 0 : rng.inteiro(-4, 4);
+    const a = rng.inteiro(1, 9);
+    // Zerar b e c no nível fácil reduzia o tópico a poucas integrais; valores
+    // pequenos mantêm a conta simples sem colapsar a variedade.
+    const b = nivel === 'facil' ? coeficiente(rng, 4) : coeficiente(rng, 9);
+    const c = nivel === 'facil' ? coeficiente(rng, 5) : coeficiente(rng, 12);
 
     const p = Polinomio.de(c, b, a);
     const primitiva = p.integrar(0);
 
-    const de = nivel === 'dificil' ? rng.inteiro(-3, 0) : 0;
-    const ate = rng.inteiro(de + 1, de + 4);
+    const de = nivel === 'dificil' ? rng.inteiro(-5, 1) : rng.inteiro(0, 3);
+    const ate = rng.inteiro(de + 1, de + 7);
 
     const resolucao = teoremaFundamentalComPassos(p, de, ate);
     const gabarito = resolucao.resultado;

@@ -16,7 +16,7 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
 
     if (pergunta === 'otimizacao') {
       // Perímetro fixo: a área máxima é do quadrado de lado P/4.
-      const perimetro = rng.inteiro(5, 30) * 4;
+      const perimetro = rng.inteiro(5, 80) * 4;
       const lado = perimetro / 4;
       const gabarito = lado * lado;
 
@@ -80,7 +80,7 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
     }
 
     // f(x) = x³ − 3k²x tem pontos críticos em ±k.
-    const k = rng.inteiro(1, 5);
+    const k = rng.inteiro(1, 20);
     const p = Polinomio.de(0, -3 * k * k, 0, 1);
     const derivada = p.derivar();
 

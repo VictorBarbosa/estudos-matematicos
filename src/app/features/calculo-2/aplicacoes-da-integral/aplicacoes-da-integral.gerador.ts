@@ -1,4 +1,4 @@
-import { Polinomio, integralNumerica } from '@core/math';
+import { Polinomio, formatar, integralNumerica } from '@core/math';
 import { Rng } from '@core/treino/rng';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
@@ -16,8 +16,8 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
 
     if (pergunta === 'volume') {
       // Girando y = ax de 0 a h: cone de volume π a² h³/3.
-      const a = rng.inteiro(1, 3);
-      const h = rng.inteiro(1, 4);
+      const a = rng.inteiro(1, 9);
+      const h = rng.inteiro(1, 14);
       const gabarito = (Math.PI * a * a * h ** 3) / 3;
 
       return {
@@ -71,26 +71,28 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
     }
 
     if (pergunta === 'area-entre') {
-      // Entre y = ax e y = x²: cruzam em 0 e em a.
-      const a = rng.inteiro(2, 5);
-      const gabarito = integralNumerica((x) => a * x - x * x, 0, a);
+      // Entre y = ax e y = bx²: cruzam em 0 e em a/b.
+      const a = rng.inteiro(2, 20);
+      const b = rng.inteiro(1, 6);
+      const cruzamento = a / b;
+      const gabarito = integralNumerica((x) => a * x - b * x * x, 0, cruzamento);
 
       return {
-        id: `aplint-entre-${a}-${rng.inteiro(0, 9999)}`,
+        id: `aplint-entre-${a}_${b}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: 'Qual é a área da região entre as duas curvas? (3 casas decimais)',
-        enunciadoTex: `y = ${a}x \\qquad y = x^{2}`,
+        enunciadoTex: `y = ${a}x \\qquad y = ${b === 1 ? '' : b}x^{2}`,
         gabarito,
         resolucao: {
           resultado: gabarito,
           passos: [
             {
               descricao: 'Primeiro achamos onde as curvas se cruzam.',
-              tex: `${a}x = x^{2} \;\\Rightarrow\; x = 0 \;\\text{ou}\; x = ${a}`,
+              tex: `${a}x = ${b === 1 ? '' : b}x^{2} \;\\Rightarrow\; x = 0 \;\\text{ou}\; x = ${formatar(cruzamento)}`,
             },
             {
               descricao: 'Entre esses pontos, a reta está acima da parábola.',
-              tex: `${a}x \\geq x^{2} \\quad \\text{para} \\quad 0 \\leq x \\leq ${a}`,
+              tex: `${a}x \\geq ${b === 1 ? '' : b}x^{2} \\quad \\text{para} \\quad 0 \\leq x \\leq ${formatar(cruzamento)}`,
             },
             {
               descricao: 'Integramos a diferença.',
@@ -129,14 +131,16 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
       };
     }
 
-    // Área simples sob um polinômio.
-    const a = rng.inteiro(1, 4);
-    const ate = rng.inteiro(1, 4);
-    const p = Polinomio.de(0, 0, a);
-    const gabarito = (a * ate ** 3) / 3;
+    // Área simples sob um monômio ax^n. Variar o expoente, e não só o
+    // coeficiente, é o que dá variedade real a esta pergunta.
+    const a = rng.inteiro(1, 12);
+    const ate = rng.inteiro(1, 8);
+    const expoente = nivel === 'facil' ? 2 : rng.inteiro(1, 3);
+    const p = Polinomio.deGraus({ [expoente]: a });
+    const gabarito = (a * ate ** (expoente + 1)) / (expoente + 1);
 
     return {
-      id: `aplint-simples-${a}${ate}-${rng.inteiro(0, 9999)}`,
+      id: `aplint-simples-${a}_${expoente}_${ate}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: `Qual é a área sob a curva de 0 a ${ate}? (3 casas decimais)`,
       enunciadoTex: `y = ${p.paraTex()}`,
