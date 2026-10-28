@@ -65,6 +65,17 @@ describe('contagem', () => {
     }
   });
 
+  it('a combinação é sempre um inteiro exato, sem resíduo de ponto flutuante', () => {
+    // arranjos/p! é exato na matemática mas não em ponto flutuante: sem
+    // arredondamento, C(24,5) saía como 42504.000000000007.
+    for (let n = 1; n <= 30; n++) {
+      for (let p = 0; p <= n; p++) {
+        const valor = combinacoes(n, p);
+        expect(Number.isInteger(valor)).toBe(true);
+      }
+    }
+  });
+
   it('a soma de uma linha do triângulo de Pascal é 2ⁿ', () => {
     for (const n of [4, 6, 8]) {
       let soma = 0;

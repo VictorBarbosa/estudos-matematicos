@@ -1,5 +1,6 @@
 import { paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { anguloAgudo } from '@core/treino/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
@@ -20,7 +21,7 @@ export const geradorIdentidades: GeradorExercicio<number> = {
     const pergunta = sortearPergunta(nivel, rng);
 
     if (pergunta === 'fundamental') {
-      const graus = rng.escolher([20, 30, 37, 45, 53, 60, 70]);
+      const graus = anguloAgudo(rng, nivel);
       const seno = Math.sin(paraRadianos(graus));
       const gabarito = Math.cos(paraRadianos(graus));
 
@@ -69,7 +70,8 @@ export const geradorIdentidades: GeradorExercicio<number> = {
     }
 
     if (pergunta === 'arco-duplo') {
-      const graus = rng.escolher([15, 20, 25, 30, 40, 45]);
+      // Arco duplo: o ângulo vai até 44° para que 2θ fique agudo.
+      const graus = rng.inteiro(5, 44);
       const radianos = paraRadianos(graus);
       const gabarito = Math.sin(2 * radianos);
 
@@ -115,8 +117,8 @@ export const geradorIdentidades: GeradorExercicio<number> = {
     }
 
     // Soma de arcos, com ângulos notáveis.
-    const a = rng.escolher([30, 45, 60]);
-    const b = rng.escolher([30, 45, 60]);
+    const a = rng.inteiro(5, 80);
+    const b = rng.inteiro(5, 80);
     const radA = paraRadianos(a);
     const radB = paraRadianos(b);
     const gabarito = Math.sin(radA + radB);

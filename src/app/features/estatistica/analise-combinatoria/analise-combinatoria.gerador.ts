@@ -46,9 +46,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
 }
 
 function exercicioMultiplicativo(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const camisas = rng.inteiro(2, 6);
-  const calcas = rng.inteiro(2, 5);
-  const sapatos = rng.inteiro(2, 4);
+  const camisas = rng.inteiro(2, 12);
+  const calcas = rng.inteiro(2, 9);
+  const sapatos = rng.inteiro(2, 7);
 
   const resultado = camisas * calcas * sapatos;
 
@@ -100,8 +100,8 @@ function exercicioMultiplicativo(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioArranjo(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const n = rng.inteiro(5, 12);
-  const p = rng.inteiro(2, Math.min(4, n - 1));
+  const n = rng.inteiro(5, 20);
+  const p = rng.inteiro(2, Math.min(5, n - 1));
 
   const { resultado, passos } = arranjosComPassos(n, p);
 
@@ -141,7 +141,7 @@ function exercicioArranjo(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const n = rng.inteiro(5, 15);
+  const n = rng.inteiro(5, 24);
   const p = rng.inteiro(2, Math.min(5, n - 1));
 
   const { resultado, passos } = combinacoesComPassos(n, p);

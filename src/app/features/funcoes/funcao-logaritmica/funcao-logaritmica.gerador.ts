@@ -18,11 +18,11 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
-    const base = rng.escolher(nivel === 'facil' ? [2, 10] : [2, 3, 5, 10]);
+    const base = rng.inteiro(2, nivel === 'facil' ? 9 : 16);
 
     if (pergunta === 'propriedade') {
-      const m = rng.inteiro(1, 4);
-      const n = rng.inteiro(1, 4);
+      const m = rng.inteiro(1, 16);
+      const n = rng.inteiro(1, 16);
       const gabarito = m + n;
 
       return {
@@ -72,7 +72,7 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
     }
 
     if (pergunta === 'equacao') {
-      const y = rng.inteiro(1, 4);
+      const y = rng.inteiro(1, 8);
       const gabarito = base ** y;
 
       return {
@@ -119,7 +119,7 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
     }
 
     // Valor direto, inclusive com expoente negativo nos níveis mais altos.
-    const expoente = nivel === 'dificil' ? rng.inteiro(-3, 4) : rng.inteiro(0, 4);
+    const expoente = nivel === 'dificil' ? rng.inteiro(-5, 6) : rng.inteiro(0, 7);
     const argumento = base ** expoente;
 
     return {

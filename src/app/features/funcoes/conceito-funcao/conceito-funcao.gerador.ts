@@ -20,7 +20,7 @@ export const geradorConceito: GeradorExercicio<number> = {
 
     if (pergunta === 'dominio-excluido') {
       // f(x) = 1/(x - k): o valor proibido é k.
-      const k = rng.inteiro(-8, 8);
+      const k = rng.inteiro(-20, 20);
       const gabarito = k;
 
       return {
@@ -72,7 +72,7 @@ export const geradorConceito: GeradorExercicio<number> = {
 
     if (pergunta === 'imagem') {
       // f(x) = x² + k: a imagem começa em k.
-      const k = rng.inteiro(-8, 8);
+      const k = rng.inteiro(-20, 20);
       const gabarito = k;
 
       return {
@@ -124,9 +124,9 @@ export const geradorConceito: GeradorExercicio<number> = {
       };
     }
 
-    const a = rng.inteiro(1, 4);
-    const b = rng.inteiro(-8, 8);
-    const x = rng.inteiro(-5, 5);
+    const a = rng.inteiro(1, 20);
+    const b = rng.inteiro(-18, 18);
+    const x = rng.inteiro(-9, 9);
     const gabarito = a * x * x + b;
 
     return {

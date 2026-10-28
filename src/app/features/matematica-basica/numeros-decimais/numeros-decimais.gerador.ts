@@ -39,7 +39,7 @@ export const geradorDecimais: GeradorExercicio<Fracao> = {
 };
 
 function exercicioDecimalFinito(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
-  const casas = nivel === 'facil' ? rng.inteiro(1, 2) : rng.inteiro(2, 3);
+  const casas = nivel === 'facil' ? rng.inteiro(1, 3) : rng.inteiro(2, 4);
   const potencia = 10 ** casas;
   const numerador = rng.inteiro(1, potencia - 1);
   const decimal = numerador / potencia;
@@ -82,7 +82,7 @@ function exercicioDecimalFinito(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
 }
 
 function exercicioDizimaSimples(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
-  const periodo = String(rng.inteiro(1, 8));
+  const periodo = String(rng.inteiro(1, 98));
   const resolucao = dizimaParaFracaoComPassos(0, '', periodo);
   const gabarito = resolucao.resultado;
 

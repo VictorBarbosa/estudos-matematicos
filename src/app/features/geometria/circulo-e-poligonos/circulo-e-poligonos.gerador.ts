@@ -47,7 +47,7 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
 }
 
 function exercicioComprimento(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const raio = rng.inteiro(2, 20);
+  const raio = rng.inteiro(2, 60);
   const { resultado, passos } = perimetroCirculoComPassos(raio);
 
   return {
@@ -84,7 +84,7 @@ function exercicioComprimento(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioAreaCirculo(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const raio = rng.inteiro(2, 15);
+  const raio = rng.inteiro(2, 45);
   const { resultado, passos } = areaComPassos('circulo', { raio });
 
   return {
@@ -170,8 +170,9 @@ function exercicioRaioPelaArea(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioSetor(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const raio = rng.inteiro(2, 12);
-  const anguloGraus = rng.escolher([30, 45, 60, 90, 120, 135, 180, 270]);
+  const raio = rng.inteiro(2, 30);
+  // Qualquer ângulo múltiplo de 5°, não os oito de sempre.
+  const anguloGraus = rng.inteiro(2, 72) * 5;
 
   const { resultado, passos } = areaComPassos('setor', { raio, anguloGraus });
   const areaTotal = Math.PI * raio * raio;

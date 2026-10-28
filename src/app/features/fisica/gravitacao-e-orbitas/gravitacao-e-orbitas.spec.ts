@@ -81,13 +81,28 @@ describe('geradorGravitacao', () => {
   });
 
   it('o período da órbita geoestacionária é de cerca de 24 h', () => {
-    const geo = amostra('dificil', 200).find(
-      (e) => e.enunciado.includes('período orbital') && altitudeKm(e.enunciadoTex) === 35786,
+    // Verificado direto no core: as altitudes do gerador são sorteadas, então
+    // esperar a geoestacionária exata entre elas seria frágil.
+    const geo = orbitaCircularComPassos(35_786_000).resultado;
+
+    expect(geo.periodo / 3600).toBeCloseTo(24, 0);
+  });
+
+  it('o período pedido confere com a órbita daquela altitude', () => {
+    const exercicios = amostra('dificil', 200).filter((e) =>
+      e.enunciado.includes('período orbital'),
     );
 
-    expect(geo).toBeDefined();
-    // O gabarito está em minutos.
-    expect(geo!.gabarito / 60).toBeCloseTo(24, 0);
+    expect(exercicios.length).toBeGreaterThan(0);
+
+    for (const exercicio of exercicios) {
+      const altitude = altitudeKm(exercicio.enunciadoTex) * 1000;
+      const esperado = orbitaCircularComPassos(altitude).resultado.periodo / 60;
+
+      expect(exercicio.gabarito).toBeCloseTo(esperado, 4);
+      // Nenhuma órbita da Terra tem período menor que 84 minutos.
+      expect(exercicio.gabarito).toBeGreaterThan(84);
+    }
   });
 
   it('a velocidade de escape é √2 vezes a orbital rasante', () => {

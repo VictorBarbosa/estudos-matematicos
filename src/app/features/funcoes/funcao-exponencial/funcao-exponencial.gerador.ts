@@ -18,7 +18,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
     const base = sortearBase(nivel, rng);
-    const inicial = rng.escolher([1, 2, 5, 10, 50, 100]);
+    const inicial = rng.inteiro(1, 40) * rng.escolher([1, 5, 10]);
 
     const funcaoTex = `f(x) = ${inicial === 1 ? '' : inicial + ' \\cdot '}${base}^{x}`;
 
@@ -111,7 +111,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
       };
     }
 
-    const x = rng.inteiro(nivel === 'dificil' ? -3 : 1, 4);
+    const x = rng.inteiro(nivel === 'dificil' ? -5 : 1, 7);
     const gabarito = inicial * base ** x;
 
     return {

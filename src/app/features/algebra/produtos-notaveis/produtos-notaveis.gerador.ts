@@ -15,8 +15,9 @@ export const geradorProdutos: GeradorExercicio<number> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const tipo = sortearTipo(nivel, rng);
-    const a = nivel === 'facil' ? 1 : rng.inteiro(1, 5);
-    const b = rng.inteiro(1, 9) * (tipo === 'quadrado-da-diferenca' ? -1 : 1);
+    // Fixar a = 1 no fácil deixava o tópico com pouquíssimos produtos.
+    const a = nivel === 'facil' ? rng.inteiro(1, 4) : rng.inteiro(1, 9);
+    const b = rng.inteiro(1, 14) * (tipo === 'quadrado-da-diferenca' ? -1 : 1);
 
     const resolucao = expandirComPassos(tipo, a, b);
     const expandido = resolucao.resultado;

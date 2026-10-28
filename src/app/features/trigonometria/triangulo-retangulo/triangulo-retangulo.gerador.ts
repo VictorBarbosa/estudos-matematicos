@@ -1,5 +1,6 @@
 import { Razao, paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { anguloRedondo } from '@core/treino/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
@@ -15,10 +16,11 @@ export const geradorTriangulo: GeradorExercicio<number> = {
   formatoResposta: 'um número com até 2 casas, ex.: 8,66',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
-    const anguloGraus = rng.escolher(
-      nivel === 'facil' ? [30, 45, 60] : [20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70],
-    );
-    const hipotenusa = rng.inteiro(4, 20);
+    // Múltiplos de 5°: no fácil, entre 15° e 75°. Os notáveis continuam
+    // aparecendo, mas não são os únicos — era isso que limitava o tópico a
+    // três exercícios por nível.
+    const anguloGraus = anguloRedondo(rng, nivel);
+    const hipotenusa = rng.inteiro(4, 60);
     const radianos = paraRadianos(anguloGraus);
 
     const procurado: Razao = rng.booleano() ? 'seno' : 'cosseno';

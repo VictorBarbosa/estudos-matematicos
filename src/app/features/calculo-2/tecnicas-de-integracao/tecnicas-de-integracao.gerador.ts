@@ -14,12 +14,12 @@ export const geradorTecnicas: GeradorExercicio<number> = {
   formatoResposta: 'um número, ex.: 10,5',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
-    const a = rng.inteiro(2, nivel === 'facil' ? 3 : 5);
-    const b = rng.inteiro(-3, 3);
-    const n = rng.inteiro(2, nivel === 'dificil' ? 4 : 3);
+    const a = rng.inteiro(2, nivel === 'facil' ? 8 : 12);
+    const b = rng.inteiro(-9, 9);
+    const n = rng.inteiro(2, nivel === 'dificil' ? 6 : 4);
 
     const de = 0;
-    const ate = rng.inteiro(1, 3);
+    const ate = rng.inteiro(1, 6);
 
     // ∫(ax+b)^n dx = (ax+b)^(n+1) / (a(n+1))
     const primitiva = (x: number): number => (a * x + b) ** (n + 1) / (a * (n + 1));

@@ -28,7 +28,11 @@ describe('geradorDimensional', () => {
   }
 
   it('o expoente pedido confere com a tabela de grandezas', () => {
-    const exercicios = amostra('medio', 150).filter((e) => e.enunciado.includes('qual é o expoente'));
+    // "Na dimensão de X" é a pergunta sobre a tabela; a de combinação começa
+    // com "Considere o produto" e pode envolver grandezas de base.
+    const exercicios = amostra('medio', 150).filter((e) =>
+      e.enunciado.startsWith('Na dimensão de'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -42,7 +46,7 @@ describe('geradorDimensional', () => {
 
   it('nunca pergunta o expoente de uma grandeza de base', () => {
     for (const exercicio of amostra('medio', 150).filter((e) =>
-      e.enunciado.includes('qual é o expoente'),
+      e.enunciado.startsWith('Na dimensão de'),
     )) {
       const nome = /dimensão de (.*?) \(unidade/.exec(exercicio.enunciado)![1]!;
       expect(['comprimento', 'massa', 'tempo']).not.toContain(nome);

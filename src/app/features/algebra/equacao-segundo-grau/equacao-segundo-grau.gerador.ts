@@ -110,14 +110,14 @@ function sortear(nivel: Nivel, rng: Rng): { a: number; b: number; c: number } {
   switch (nivel) {
     case 'facil': {
       // Construída a partir de raízes inteiras, com a = 1.
-      const r1 = rng.inteiro(-6, 6);
-      const r2 = rng.inteiro(-6, 6);
+      const r1 = rng.inteiro(-14, 14);
+      const r2 = rng.inteiro(-14, 14);
       return { a: 1, b: -(r1 + r2), c: r1 * r2 };
     }
     case 'medio': {
       // Coeficiente líder diferente de 1, ainda com raízes exatas.
-      const a = rng.escolher([1, 2, 3, -1, -2]);
-      const r1 = rng.inteiro(-5, 5);
+      const a = rng.escolher([1, 1, 2, 3, 4, 5, -1, -2, -3]);
+      const r1 = rng.inteiro(-12, 12);
       const r2 = rng.inteiro(-5, 5);
       return { a, b: -a * (r1 + r2), c: a * r1 * r2 };
     }

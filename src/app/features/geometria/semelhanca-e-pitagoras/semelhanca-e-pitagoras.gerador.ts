@@ -1,4 +1,4 @@
-import { catetoComPassos, escalaComPassos, pitagorasComPassos, talesComPassos } from '@core/math';
+import { catetoComPassos, escalaComPassos, pitagorasComPassos, talesComPassos, ternosPitagoricos } from '@core/math';
 import { Rng } from '@core/treino/rng';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
@@ -6,16 +6,13 @@ const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
 
 type Pergunta = 'hipotenusa' | 'cateto' | 'tales' | 'area-escalada' | 'volume-escalado';
 
-/** Ternos pitagóricos, para que as respostas saiam inteiras no nível fácil. */
-const TERNOS: readonly (readonly [number, number, number])[] = [
-  [3, 4, 5],
-  [5, 12, 13],
-  [8, 15, 17],
-  [7, 24, 25],
-  [6, 8, 10],
-  [9, 12, 15],
-  [20, 21, 29],
-];
+/**
+ * Ternos pitagóricos, para que as respostas saiam inteiras no nível fácil.
+ *
+ * Gerados pela fórmula de Euclides: a lista escrita à mão tinha sete entradas,
+ * e o aluno reconhecia o 3-4-5 em poucos cliques.
+ */
+const TERNOS = ternosPitagoricos(120);
 
 export const geradorSemelhanca: GeradorExercicio<number> = {
   topicoId: 'semelhanca-e-pitagoras',

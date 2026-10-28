@@ -64,11 +64,19 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
 }
 
 function exercicioDado(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const faces = rng.escolher([6, 6, 8, 10, 12, 20]);
+  // Dados de 4 a 30 faces, não seis valores fixos.
+  const faces = rng.inteiro(4, 30);
+  // O limiar e o divisor entram sorteados: com textos fixos, o tópico tinha
+  // quatro perguntas apenas.
+  const limiar = rng.inteiro(2, Math.max(2, faces - 1));
+  const divisor = rng.inteiro(2, Math.min(9, Math.max(2, faces - 1)));
+
   const casos: readonly { readonly texto: string; readonly conta: (n: number) => number }[] = [
-    { texto: 'um número par', conta: (n) => n / 2 },
-    { texto: 'um número maior que 4', conta: (n) => Math.max(0, n - 4) },
-    { texto: 'um múltiplo de 3', conta: (n) => Math.floor(n / 3) },
+    { texto: 'um número par', conta: (n) => Math.floor(n / 2) },
+    { texto: 'um número ímpar', conta: (n) => Math.ceil(n / 2) },
+    { texto: `um número maior que ${limiar}`, conta: (n) => Math.max(0, n - limiar) },
+    { texto: `um número menor que ${limiar}`, conta: () => limiar - 1 },
+    { texto: `um múltiplo de ${divisor}`, conta: (n) => Math.floor(n / divisor) },
     { texto: 'o maior valor possível', conta: () => 1 },
   ];
 
@@ -111,8 +119,8 @@ function exercicioDado(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioSemReposicao(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const vermelhas = rng.inteiro(2, 6);
-  const azuis = rng.inteiro(2, 6);
+  const vermelhas = rng.inteiro(2, 14);
+  const azuis = rng.inteiro(2, 14);
   const total = vermelhas + azuis;
 
   const primeira = vermelhas / total;
@@ -163,7 +171,7 @@ function exercicioSemReposicao(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioAoMenosUm(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const faces = rng.escolher([6, 6, 10, 20]);
+  const faces = rng.inteiro(4, 24);
   const tentativas = rng.inteiro(2, 6);
   const p = 1 / faces;
 

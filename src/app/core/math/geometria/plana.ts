@@ -451,3 +451,44 @@ export function perimetroCirculoComPassos(raio: number): Resolucao<number> {
     ],
   };
 }
+
+/**
+ * Ternos pitagóricos gerados pela fórmula de Euclides.
+ *
+ * Para m > n > 0, a tripla (m² − n², 2mn, m² + n²) é pitagórica. Multiplicada
+ * por k, continua sendo. Gerar assim, em vez de manter uma lista de meia dúzia
+ * de ternos conhecidos, dá centenas de exercícios com hipotenusa inteira — e
+ * era a lista curta que fazia os tópicos de Pitágoras se repetirem.
+ */
+export function ternosPitagoricos(limiteHipotenusa = 120): readonly (readonly [
+  number,
+  number,
+  number,
+])[] {
+  const ternos: [number, number, number][] = [];
+
+  for (let m = 2; m * m <= limiteHipotenusa; m++) {
+    for (let n = 1; n < m; n++) {
+      // m e n de paridades diferentes e coprimos geram ternos primitivos; sem
+      // esse filtro a lista teria duplicatas em proporções diferentes, o que
+      // aqui não incomoda — variedade é o objetivo.
+      const cateto1 = m * m - n * n;
+      const cateto2 = 2 * m * n;
+      const hipotenusa = m * m + n * n;
+
+      for (let k = 1; k * hipotenusa <= limiteHipotenusa; k++) {
+        const terno: [number, number, number] = [
+          Math.min(cateto1, cateto2) * k,
+          Math.max(cateto1, cateto2) * k,
+          hipotenusa * k,
+        ];
+
+        if (!ternos.some(([a, b]) => a === terno[0] && b === terno[1])) {
+          ternos.push(terno);
+        }
+      }
+    }
+  }
+
+  return ternos;
+}

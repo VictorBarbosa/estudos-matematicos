@@ -41,6 +41,15 @@ export const GRANDEZAS: readonly Grandeza[] = [
   { nome: 'momento linear', simbolo: 'p', unidade: 'kg·m/s', dimensao: { M: 1, L: 1, T: -1 } },
   { nome: 'densidade', simbolo: 'ρ', unidade: 'kg/m³', dimensao: { M: 1, L: -3, T: 0 } },
   { nome: 'frequência', simbolo: 'f', unidade: 'Hz', dimensao: { M: 0, L: 0, T: -1 } },
+  { nome: 'torque', simbolo: 'τ', unidade: 'N·m', dimensao: { M: 1, L: 2, T: -2 } },
+  { nome: 'impulso', simbolo: 'J', unidade: 'N·s', dimensao: { M: 1, L: 1, T: -1 } },
+  { nome: 'vazão', simbolo: 'Q', unidade: 'm³/s', dimensao: { M: 0, L: 3, T: -1 } },
+  { nome: 'vazão mássica', simbolo: 'ṁ', unidade: 'kg/s', dimensao: { M: 1, L: 0, T: -1 } },
+  { nome: 'tensão superficial', simbolo: 'γ', unidade: 'N/m', dimensao: { M: 1, L: 0, T: -2 } },
+  { nome: 'constante elástica', simbolo: 'k', unidade: 'N/m', dimensao: { M: 1, L: 0, T: -2 } },
+  { nome: 'densidade superficial', simbolo: 'σ', unidade: 'kg/m²', dimensao: { M: 1, L: -2, T: 0 } },
+  { nome: 'aceleração angular', simbolo: 'α', unidade: 'rad/s²', dimensao: { M: 0, L: 0, T: -2 } },
+  { nome: 'momento de inércia', simbolo: 'I', unidade: 'kg·m²', dimensao: { M: 1, L: 2, T: 0 } },
 ];
 
 export function grandezaPorNome(nome: string): Grandeza | undefined {

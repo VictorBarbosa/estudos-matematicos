@@ -45,11 +45,22 @@ describe('geradorTriangulo', () => {
     }
   });
 
-  it('no nível fácil só aparecem ângulos notáveis', () => {
-    for (const exercicio of amostra('facil')) {
+  it('no nível fácil os ângulos são redondos e agudos', () => {
+    // Múltiplos de 5° entre 15° e 75°: amigáveis de situar mentalmente, e em
+    // quantidade suficiente para o aluno não reencontrar o mesmo exercício.
+    const vistos = new Set<number>();
+
+    for (const exercicio of amostra('facil', 120)) {
       const [, angulo] = /\\theta = (\d+)/.exec(exercicio.enunciadoTex)!;
-      expect([30, 45, 60]).toContain(Number(angulo));
+      const graus = Number(angulo);
+
+      expect(graus % 5).toBe(0);
+      expect(graus).toBeGreaterThanOrEqual(15);
+      expect(graus).toBeLessThanOrEqual(75);
+      vistos.add(graus);
     }
+
+    expect(vistos.size).toBeGreaterThan(8);
   });
 
   it('tolera arredondamento de duas casas', () => {

@@ -15,12 +15,12 @@ export const geradorRiemann: GeradorExercicio<number> = {
   formatoResposta: 'um número com até 3 casas, ex.: 0,219',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
-    const n = rng.escolher(nivel === 'facil' ? [2, 4] : [4, 5, 8]);
+    const n = nivel === 'facil' ? rng.inteiro(2, 6) : rng.inteiro(4, 12);
     const tipo = nivel === 'facil' ? 'esquerda' : rng.booleano() ? 'esquerda' : 'direita';
 
-    const a = rng.inteiro(1, 3);
+    const a = rng.inteiro(1, 8);
     const de = 0;
-    const ate = rng.inteiro(1, 3);
+    const ate = rng.inteiro(1, 6);
 
     const p = Polinomio.de(0, 0, a); // ax²
     const fn = (x: number) => p.avaliar(x);

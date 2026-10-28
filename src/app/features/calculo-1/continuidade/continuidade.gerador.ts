@@ -20,7 +20,7 @@ export const geradorContinuidade: GeradorExercicio<number> = {
 
     if (pergunta === 'buraco') {
       // (x² − k²)/(x − k): o buraco deveria valer 2k.
-      const k = rng.inteiro(1, 8);
+      const k = rng.inteiro(1, 24);
       const gabarito = 2 * k;
 
       return {
@@ -80,7 +80,7 @@ export const geradorContinuidade: GeradorExercicio<number> = {
 
     if (pergunta === 'tvi') {
       // x³ − k tem raiz entre dois inteiros consecutivos.
-      const raizInteira = rng.inteiro(2, 5);
+      const raizInteira = rng.inteiro(2, 12);
       const k = raizInteira ** 3 + rng.inteiro(1, raizInteira * 2);
       const gabarito = raizInteira;
 
@@ -129,8 +129,8 @@ export const geradorContinuidade: GeradorExercicio<number> = {
     }
 
     // Função por partes: achar o valor de k que emenda as sentenças.
-    const ponto = rng.inteiro(1, 5);
-    const a = rng.inteiro(1, 4);
+    const ponto = rng.inteiro(1, 12);
+    const a = rng.inteiro(1, 10);
     const b = rng.inteiro(-5, 5);
     const c = rng.inteiro(1, 4);
     const gabarito = a * ponto + b - c * ponto;
