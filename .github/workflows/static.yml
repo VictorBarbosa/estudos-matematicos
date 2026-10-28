@@ -1,4 +1,8 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Publica o preparatório no GitHub Pages.
+#
+# Partiu do template "Static HTML" do GitHub, adaptado para uma aplicação
+# Angular: o Pages serve arquivos estáticos, mas eles precisam ser construídos
+# antes — não há index.html na raiz do repositório, só código-fonte.
 name: Deploy static content to Pages
 
 on:
@@ -31,13 +35,36 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Preparar o Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # `npm ci` instala exatamente o que está no package-lock e falha se ele
+      # estiver dessincronizado do package.json.
+      - name: Instalar dependências
+        run: npm ci
+
+      # O site só vai ao ar se a suíte passar.
+      - name: Rodar os testes
+        run: npm test -- --watch=false
+
+      # Constrói com o base-href do repositório e gera 404.html e .nojekyll,
+      # que são o que faz as rotas do Angular funcionarem no Pages.
+      - name: Construir para o Pages
+        run: npm run build:pages
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Apenas a saída compilada, não o repositório inteiro.
+          path: 'dist/EstudosMatematicos/browser'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
