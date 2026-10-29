@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Fracao, dizimaParaFracaoComPassos, fracaoParaDecimalComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { MarcaPlot } from '@shared/components/math-plot/math-plot.model';
+import { MarcaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorDecimais } from './numeros-decimais.gerador';
-import { TEORIA_DECIMAIS } from './numeros-decimais.teoria';
+import { geradorDecimais } from '@features/matematica-basica/numeros-decimais/numeros-decimais.gerador';
+import { TEORIA_DECIMAIS } from '@features/matematica-basica/numeros-decimais/numeros-decimais.teoria';
 
 @Component({
   selector: 'app-numeros-decimais',

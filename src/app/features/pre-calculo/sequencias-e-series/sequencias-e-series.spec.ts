@@ -1,7 +1,7 @@
 import { termoGeral } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorSequencias } from './sequencias-e-series.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorSequencias } from '@features/pre-calculo/sequencias-e-series/sequencias-e-series.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(1919);

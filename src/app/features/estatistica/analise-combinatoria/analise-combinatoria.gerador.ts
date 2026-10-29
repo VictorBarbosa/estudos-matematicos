@@ -1,6 +1,6 @@
 import { arranjosComPassos, combinacoes, combinacoesComPassos, fatorial, permutacoesComPassos } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
+import { Rng } from '@core/treino/rng/rng';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 const proximos = (a: number, b: number): boolean => a === b;
 

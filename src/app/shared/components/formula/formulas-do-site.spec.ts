@@ -1,8 +1,8 @@
 import katex from 'katex';
-import { TODAS_AS_TEORIAS } from '@core/teoria/teorias.catalogo';
-import { TODOS_OS_GERADORES } from '@core/treino/geradores.catalogo';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS } from '@core/treino/treino.model';
+import { TODAS_AS_TEORIAS } from '@core/teoria/teorias.catalogo/teorias.catalogo';
+import { TODOS_OS_GERADORES } from '@core/treino/geradores.catalogo/geradores.catalogo';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS } from '@core/treino/models/treino.model';
 
 /**
  * Renderiza TODA fórmula do site com o KaTeX e exige que ela compile.

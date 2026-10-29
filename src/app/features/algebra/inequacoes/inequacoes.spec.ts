@@ -1,6 +1,6 @@
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorInequacoes } from './inequacoes.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorInequacoes } from '@features/algebra/inequacoes/inequacoes.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(606);

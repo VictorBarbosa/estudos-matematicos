@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { ErroMatematico, Resolucao, SolucaoLinear, resolverLinearComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorEquacao1 } from './equacao-primeiro-grau.gerador';
-import { TEORIA_EQUACAO_1 } from './equacao-primeiro-grau.teoria';
+import { geradorEquacao1 } from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.gerador';
+import { TEORIA_EQUACAO_1 } from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.teoria';
 
 @Component({
   selector: 'app-equacao-primeiro-grau',

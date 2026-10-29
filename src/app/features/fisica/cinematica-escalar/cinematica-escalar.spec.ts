@@ -1,7 +1,7 @@
 import { movimentoUniformementeVariado } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorCinematica } from './cinematica-escalar.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorCinematica } from '@features/fisica/cinematica-escalar/cinematica-escalar.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(3030);

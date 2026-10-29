@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { analisarAfimComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
@@ -11,10 +11,10 @@ import {
   CurvaPlot,
   PontoPlot,
   SegmentoPlot,
-} from '@shared/components/math-plot/math-plot.model';
+} from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorAfim } from './funcao-afim.gerador';
-import { TEORIA_AFIM } from './funcao-afim.teoria';
+import { geradorAfim } from '@features/funcoes/funcao-afim/funcao-afim.gerador';
+import { TEORIA_AFIM } from '@features/funcoes/funcao-afim/funcao-afim.teoria';
 
 @Component({
   selector: 'app-funcao-afim',

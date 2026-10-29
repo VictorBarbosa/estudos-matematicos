@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { derivadaNumerica } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot } from '@shared/components/math-plot/math-plot.model';
-import { geradorCadeia } from './regra-da-cadeia.gerador';
-import { TEORIA_CADEIA } from './regra-da-cadeia.teoria';
+import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { geradorCadeia } from '@features/calculo-1/regra-da-cadeia/regra-da-cadeia.gerador';
+import { TEORIA_CADEIA } from '@features/calculo-1/regra-da-cadeia/regra-da-cadeia.teoria';
 
 @Component({
   selector: 'app-regra-da-cadeia',

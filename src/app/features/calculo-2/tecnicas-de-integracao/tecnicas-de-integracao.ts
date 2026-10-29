@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { integralNumerica } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/math-plot.model';
-import { geradorTecnicas } from './tecnicas-de-integracao.gerador';
-import { TEORIA_TECNICAS } from './tecnicas-de-integracao.teoria';
+import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { geradorTecnicas } from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.gerador';
+import { TEORIA_TECNICAS } from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.teoria';
 
 type Tecnica = 'substituicao' | 'por-partes';
 

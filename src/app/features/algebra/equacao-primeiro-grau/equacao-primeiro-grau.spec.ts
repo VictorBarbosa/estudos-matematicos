@@ -1,7 +1,7 @@
 import { Fracao } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorEquacao1 } from './equacao-primeiro-grau.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorEquacao1 } from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(2718);

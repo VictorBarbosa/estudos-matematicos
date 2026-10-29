@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Polinomio, pontosCriticos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
-import { geradorAplicacoesDerivada } from './aplicacoes-da-derivada.gerador';
-import { TEORIA_APLICACOES_DERIVADA } from './aplicacoes-da-derivada.teoria';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { geradorAplicacoesDerivada } from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.gerador';
+import { TEORIA_APLICACOES_DERIVADA } from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.teoria';
 
 const ROTULO_TIPO: Readonly<Record<string, string>> = {
   maximo: 'máximo local',

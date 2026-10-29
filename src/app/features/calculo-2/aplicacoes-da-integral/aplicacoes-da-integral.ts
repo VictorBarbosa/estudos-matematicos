@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { areaEntreCurvas, integralNumerica } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { AreaPlot, CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
-import { geradorAplicacoesIntegral } from './aplicacoes-da-integral.gerador';
-import { TEORIA_APLICACOES_INTEGRAL } from './aplicacoes-da-integral.teoria';
+import { AreaPlot, CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { geradorAplicacoesIntegral } from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.gerador';
+import { TEORIA_APLICACOES_INTEGRAL } from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.teoria';
 
 type Aplicacao = 'area' | 'volume' | 'comprimento';
 

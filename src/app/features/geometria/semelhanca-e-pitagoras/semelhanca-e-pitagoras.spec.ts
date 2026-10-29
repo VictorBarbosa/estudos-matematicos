@@ -1,7 +1,7 @@
 import { classificarTriangulo, escalaComPassos } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorSemelhanca } from './semelhanca-e-pitagoras.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorSemelhanca } from '@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(1123);

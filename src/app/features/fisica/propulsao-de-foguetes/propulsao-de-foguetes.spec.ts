@@ -1,7 +1,7 @@
 import { tsiolkovskyComPassos } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorPropulsao } from './propulsao-de-foguetes.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorPropulsao } from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(1961);

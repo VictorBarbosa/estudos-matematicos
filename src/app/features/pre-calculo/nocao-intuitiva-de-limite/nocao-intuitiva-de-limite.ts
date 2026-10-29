@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { aproximar, limiteComPassos, limitesLaterais } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorLimiteIntuitivo } from './nocao-intuitiva-de-limite.gerador';
-import { TEORIA_LIMITE_INTUITIVO } from './nocao-intuitiva-de-limite.teoria';
+import { geradorLimiteIntuitivo } from '@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.gerador';
+import { TEORIA_LIMITE_INTUITIVO } from '@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.teoria';
 
 interface Caso {
   readonly id: string;

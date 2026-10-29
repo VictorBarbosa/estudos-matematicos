@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Ponto, posicaoRelativa } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
@@ -11,10 +11,10 @@ import {
   CurvaPlot,
   PontoPlot,
   SegmentoPlot,
-} from '@shared/components/math-plot/math-plot.model';
+} from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorCircunferencia } from './circunferencia.gerador';
-import { TEORIA_CIRCUNFERENCIA } from './circunferencia.teoria';
+import { geradorCircunferencia } from '@features/geometria-analitica/circunferencia/circunferencia.gerador';
+import { TEORIA_CIRCUNFERENCIA } from '@features/geometria-analitica/circunferencia/circunferencia.teoria';
 import { circunferenciaComPassos } from '@core/math';
 
 @Component({

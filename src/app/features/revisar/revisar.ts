@@ -6,9 +6,9 @@ import {
   signal,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ItemRevisao, RevisaoService } from '@core/revisao/revisao.service';
-import { CARREGAR_GERADOR } from '@core/treino/registro-geradores';
-import { GeradorExercicio } from '@core/treino/treino.model';
+import { ItemRevisao, RevisaoService } from '@core/revisao/services/revisao.service';
+import { CARREGAR_GERADOR } from '@core/treino/registro-geradores/registro-geradores';
+import { GeradorExercicio } from '@core/treino/models/treino.model';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
 

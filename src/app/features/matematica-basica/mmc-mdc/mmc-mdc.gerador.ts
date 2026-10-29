@@ -1,6 +1,6 @@
 import { fatorar, mdc, mdcComPassos, mmc, mmcComPassos } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel } from '@core/treino/treino.model';
+import { Rng } from '@core/treino/rng/rng';
+import { Armadilha, Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
 
 type Alvo = 'mdc' | 'mmc';
 

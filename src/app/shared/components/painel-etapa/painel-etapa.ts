@@ -4,8 +4,8 @@ import {
   ACERTOS_EXIGENTES,
   ACERTOS_NA_JANELA,
   RESPOSTAS_NA_JANELA,
-} from '@core/progressao/progressao.model';
-import { ProgressaoService } from '@core/progressao/progressao.service';
+} from '@core/progressao/models/progressao.model';
+import { ProgressaoService } from '@core/progressao/services/progressao.service';
 
 /**
  * A faixa de jogo no topo de cada tópico.

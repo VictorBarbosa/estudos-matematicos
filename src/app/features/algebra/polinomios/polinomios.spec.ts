@@ -1,7 +1,7 @@
 import { Polinomio, dividirComPassos } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorPolinomios } from './polinomios.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorPolinomios } from '@features/algebra/polinomios/polinomios.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(9901);

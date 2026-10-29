@@ -1,6 +1,6 @@
-import { Rng } from '@core/treino/rng';
-import { analisarNumero } from '@core/treino/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
+import { Rng } from '@core/treino/rng/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 /**
  * Tolerância de correção: as duas casas decimais que o enunciado pede, ou

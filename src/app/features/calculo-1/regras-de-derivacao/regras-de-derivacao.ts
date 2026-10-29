@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Polinomio, derivarPolinomioComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorRegras } from './regras-de-derivacao.gerador';
-import { TEORIA_REGRAS } from './regras-de-derivacao.teoria';
+import { geradorRegras } from '@features/calculo-1/regras-de-derivacao/regras-de-derivacao.gerador';
+import { TEORIA_REGRAS } from '@features/calculo-1/regras-de-derivacao/regras-de-derivacao.teoria';
 
 @Component({
   selector: 'app-regras-de-derivacao',

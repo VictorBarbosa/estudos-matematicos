@@ -1,7 +1,7 @@
 import { Fracao } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorAfim } from './funcao-afim.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorAfim } from '@features/funcoes/funcao-afim/funcao-afim.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(4004);

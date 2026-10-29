@@ -17,7 +17,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 
 const RAIZ = new URL('..', import.meta.url).pathname;
-const SAIDA = 'src/app/core/teoria/registro-teorias.ts';
+const SAIDA = 'src/app/core/teoria/registro-teorias/registro-teorias.ts';
 
 const arquivos = execSync('find src/app/features -name "*.teoria.ts"', {
   cwd: RAIZ,
@@ -74,7 +74,7 @@ const conteudo = `// Gerado por scripts/gerar-registro-teorias.mjs — não edit
 // Rode \`npm run gerar:teorias\` depois de criar, remover ou renomear um
 // conceito. O teste core/teoria/teorias.spec.ts garante que este índice
 // corresponde aos arquivos \`*.teoria.ts\`.
-import { Teoria } from './teoria.model';
+import { Teoria } from '@core/teoria/models/teoria.model';
 
 /** Título de cada conceito, conhecido antes de carregar a teoria dele. */
 export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {

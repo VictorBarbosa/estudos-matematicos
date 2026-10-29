@@ -5,9 +5,9 @@ import {
   multiplicarNotacaoComPassos,
   paraNotacaoCientificaComPassos,
 } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { analisarValorSimples } from '@core/treino/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
+import { Rng } from '@core/treino/rng/rng';
+import { analisarValorSimples } from '@core/treino/resposta-numerica/resposta-numerica';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 /**
  * Comparação relativa: 6,02×10²³ e 6,03×10²³ diferem por 10²¹ em valor

@@ -1,6 +1,6 @@
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorQuadratica } from './funcao-quadratica.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorQuadratica } from '@features/funcoes/funcao-quadratica/funcao-quadratica.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(7007);

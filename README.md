@@ -126,7 +126,7 @@ A janela é deslizante de propósito: o domínio medido é o atual, não o hist�
 A janela mede **constância**, não abrangência: dá para acertar dez somas seguidas e nunca ter
 dividido uma fração. Onde o tópico tem partes que precisam ser todas praticadas, há uma
 exigência de **cobertura** por cima dela — em Frações, cinco acertos em cada uma das quatro
-operações, contados por conceito (`REQUISITOS_POR_TOPICO` em `progressao.model.ts`). A área de
+operações, contados por conceito (`REQUISITOS_POR_TOPICO` em `models/progressao.model.ts`). A área de
 treino mostra a lista inteira, com o que falta em cada operação.
 
 O critério anterior era "3 acertos seguidos", sem olhar o nível — e isso abria a etapa para
@@ -136,9 +136,9 @@ zera, e o atalho de ler a resposta no último passo deixa de valer ponto.
 
 ```
 core/progressao/
-  progressao.model.ts        a trilha derivada do currículo e o critério de domínio
-  progressao.service.ts      quem está aberto, quem foi vencido, onde o estudo parou
-  topico-liberado.guard.ts   nem pela URL se pula a fila
+  models/progressao.model.ts           a trilha derivada do currículo e o critério de domínio
+  services/progressao.service.ts       quem está aberto, quem foi vencido, onde o estudo parou
+  topico-liberado.guard/               nem pela URL se pula a fila
 ```
 
 Nada disso guarda estado novo: a conquista é derivada do **histórico de tentativas** — nível,
@@ -156,22 +156,23 @@ por **tempo sem praticar** — a parte espaçada da revisão. A fila é derivada
 responder hoje muda a fila de amanhã.
 
 ```
-core/revisao/revisao.service.ts    como a fila de hoje é escolhida
-core/treino/registro-geradores.ts  índice gerado: cada tópico carrega seu gerador sob demanda
+core/revisao/services/revisao.service.ts          como a fila de hoje é escolhida
+core/treino/registro-geradores/registro-geradores.ts  índice gerado: cada tópico carrega
+                                                      seu gerador sob demanda
 ```
 
 ## Respostas: número, fração, raiz ou expressão
 
-O campo de resposta não aceita só decimais. `core/treino/resposta-numerica.ts` lê fração
+O campo de resposta não aceita só decimais. `core/treino/resposta-numerica/` lê fração
 (`3/4`), raiz (`(1+√5)/2`), π, notação científica e separador de milhar, de modo que a forma
 exata do gabarito seja sempre digitável — antes, metade das raízes do nível Difícil era
-impossível de escrever. E `core/treino/resposta-simbolica.ts` lê **expressões em x**, para
+impossível de escrever. E `core/treino/resposta-simbolica/` lê **expressões em x**, para
 que um tópico de cálculo possa pedir `f'(x)` e não apenas `f'(2)`; a comparação é por
 avaliação em vários pontos, então `6x + 4`, `4 + 6x` e `2(3x + 2)` contam igual.
 
 Quatro travas globais cuidam dessa parte, para os 75 geradores de uma vez
-(`core/treino/formato-resposta.spec.ts`, `shared/components/formula/formulas-do-site.spec.ts`,
-`core/teoria/teorias.spec.ts`):
+(`core/treino/formato-resposta/`, `shared/components/formula/formulas-do-site.spec.ts`,
+`core/teoria/teorias/`):
 
 - o gabarito é aceito na forma em que é exibido;
 - o arredondamento que o enunciado pede é aceito;
@@ -186,6 +187,11 @@ Quatro travas globais cuidam dessa parte, para os 75 geradores de uma vez
 - Novo control flow (`@if`, `@for` com `track`, `@switch`).
 - Template e estilo em arquivos separados: `.ts` / `.html` / `.scss`.
 - Imports por alias — `@core`, `@shared`, `@features`, `@layout`, `@curriculo` — nunca `../../`.
+- **Uma pasta por arquivo**, com o nome do arquivo: `core/treino/rng/rng.ts`, ao lado do seu
+  `.spec.ts`. O barril `index.ts` é a exceção — ele é a porta da pasta e fica na raiz dela.
+- **Serviços e modelos vão para pastas de papel dentro do próprio domínio**: `services/` e
+  `models/`. Quem usa não precisa saber onde o arquivo mora, porque o alias aponta para o
+  domínio: `@core/teoria/services/teoria.service`, `@core/treino/models/treino.model`.
 - Nomes de domínio em português (`Fracao`, `Resolucao`, `Passo`); APIs do framework em inglês.
 - Estilos usam os tokens de `shared/styles`; `@use 'mixins' as *;` resolve sem caminho relativo.
 

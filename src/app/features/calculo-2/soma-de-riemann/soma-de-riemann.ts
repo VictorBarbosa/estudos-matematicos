@@ -8,17 +8,17 @@ import {
   riemannComPassos,
   somaDeRiemann,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, RetanguloPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, RetanguloPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorRiemann } from './soma-de-riemann.gerador';
-import { TEORIA_RIEMANN } from './soma-de-riemann.teoria';
+import { geradorRiemann } from '@features/calculo-2/soma-de-riemann/soma-de-riemann.gerador';
+import { TEORIA_RIEMANN } from '@features/calculo-2/soma-de-riemann/soma-de-riemann.teoria';
 
 const TIPOS: readonly TipoSoma[] = ['esquerda', 'direita', 'ponto-medio', 'trapezio'];
 

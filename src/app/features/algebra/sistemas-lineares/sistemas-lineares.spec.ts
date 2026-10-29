@@ -1,6 +1,6 @@
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorSistemas } from './sistemas-lineares.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorSistemas } from '@features/algebra/sistemas-lineares/sistemas-lineares.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(999);

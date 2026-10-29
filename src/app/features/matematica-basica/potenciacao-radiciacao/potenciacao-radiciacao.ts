@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import {
   avaliarPotencia,
   potenciaDePotenciaComPassos,
@@ -9,7 +9,7 @@ import {
   raizParaTex,
   simplificarRaizComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
@@ -17,8 +17,8 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorPotencias } from './potenciacao-radiciacao.gerador';
-import { TEORIA_POTENCIAS } from './potenciacao-radiciacao.teoria';
+import { geradorPotencias } from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.gerador';
+import { TEORIA_POTENCIAS } from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.teoria';
 
 type Propriedade = 'produto' | 'quociente' | 'potencia';
 

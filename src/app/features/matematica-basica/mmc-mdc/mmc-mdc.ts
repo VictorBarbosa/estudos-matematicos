@@ -6,17 +6,17 @@ import {
   mmcComPassos,
   relacaoMdcMmcComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
-import { MarcaPlot } from '@shared/components/math-plot/math-plot.model';
+import { MarcaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorMmcMdc } from './mmc-mdc.gerador';
-import { TEORIA_MMC_MDC } from './mmc-mdc.teoria';
+import { geradorMmcMdc } from '@features/matematica-basica/mmc-mdc/mmc-mdc.gerador';
+import { TEORIA_MMC_MDC } from '@features/matematica-basica/mmc-mdc/mmc-mdc.teoria';
 
 @Component({
   selector: 'app-mmc-mdc',

@@ -6,7 +6,7 @@ import {
   formatarNumero,
   gerarMarcacoes,
   passoBonito,
-} from './math-plot.model';
+} from '@shared/components/math-plot/models/math-plot.model';
 
 const MARGENS = { topo: 10, direita: 10, baixo: 10, esquerda: 10 };
 

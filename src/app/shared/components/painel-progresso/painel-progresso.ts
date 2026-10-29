@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
-import { ProgressoService } from '@core/treino/progresso.service';
-import { TOPICO_DO_CONCEITO } from '@core/teoria/registro-teorias';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { ProgressoService } from '@core/treino/services/progresso.service';
+import { TOPICO_DO_CONCEITO } from '@core/teoria/registro-teorias/registro-teorias';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
 
 /** Quantos pontos de domínio a barra exibe. */

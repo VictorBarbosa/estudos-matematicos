@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
@@ -10,9 +10,9 @@ import {
   CurvaPlot,
   PontoPlot,
   SegmentoPlot,
-} from '@shared/components/math-plot/math-plot.model';
-import { geradorConceito } from './conceito-funcao.gerador';
-import { TEORIA_CONCEITO } from './conceito-funcao.teoria';
+} from '@shared/components/math-plot/models/math-plot.model';
+import { geradorConceito } from '@features/funcoes/conceito-funcao/conceito-funcao.gerador';
+import { TEORIA_CONCEITO } from '@features/funcoes/conceito-funcao/conceito-funcao.teoria';
 
 interface Relacao {
   readonly id: string;

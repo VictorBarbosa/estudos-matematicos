@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { NOME_PRODUTO, TipoProdutoNotavel, enunciadoParaTex, expandirComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { TIPOS_DISPONIVEIS, geradorProdutos } from './produtos-notaveis.gerador';
-import { TEORIA_PRODUTOS } from './produtos-notaveis.teoria';
+import { TIPOS_DISPONIVEIS, geradorProdutos } from '@features/algebra/produtos-notaveis/produtos-notaveis.gerador';
+import { TEORIA_PRODUTOS } from '@features/algebra/produtos-notaveis/produtos-notaveis.teoria';
 
 @Component({
   selector: 'app-produtos-notaveis',

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { paraRadianos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { CirculoTrigonometrico } from '@shared/components/circulo-trigonometrico/circulo-trigonometrico';
@@ -8,9 +8,9 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
-import { geradorRazoes } from './seno-cosseno-tangente.gerador';
-import { TEORIA_RAZOES } from './seno-cosseno-tangente.teoria';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { geradorRazoes } from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.gerador';
+import { TEORIA_RAZOES } from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.teoria';
 
 @Component({
   selector: 'app-seno-cosseno-tangente',

@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, computed, inject, output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CURRICULO, rotaDoTopico } from '@curriculo/curriculo';
-import { ProgressaoService } from '@core/progressao/progressao.service';
-import { RevisaoService } from '@core/revisao/revisao.service';
-import { ProgressoService } from '@core/treino/progresso.service';
+import { ProgressaoService } from '@core/progressao/services/progressao.service';
+import { RevisaoService } from '@core/revisao/services/revisao.service';
+import { ProgressoService } from '@core/treino/services/progresso.service';
 
 /**
  * Navegação pelo currículo.

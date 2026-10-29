@@ -8,7 +8,7 @@ import {
   operacaoParaTex,
   resolverComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { BarraFracao } from '@shared/components/barra-fracao/barra-fracao';
@@ -16,10 +16,10 @@ import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { MarcaPlot } from '@shared/components/math-plot/math-plot.model';
+import { MarcaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorFracoes } from './fracoes.gerador';
-import { TEORIA_FRACOES } from './fracoes.teoria';
+import { geradorFracoes } from '@features/matematica-basica/fracoes/fracoes.gerador';
+import { TEORIA_FRACOES } from '@features/matematica-basica/fracoes/fracoes.teoria';
 
 interface OpcaoOperacao {
   readonly valor: OperacaoFracao;

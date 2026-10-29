@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { RevisaoService } from '@core/revisao/revisao.service';
+import { RevisaoService } from '@core/revisao/services/revisao.service';
 import { CURRICULO, totalDeTopicos, totalDeTopicosProntos } from '@curriculo/curriculo';
 import { GLOSSARIO } from '@curriculo/glossario';
 import { CartaoTopico } from '@shared/components/cartao-topico/cartao-topico';

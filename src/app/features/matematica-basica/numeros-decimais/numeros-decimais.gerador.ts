@@ -4,8 +4,8 @@ import {
   dizimaParaFracaoComPassos,
   fracaoParaDecimalComPassos,
 } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
+import { Rng } from '@core/treino/rng/rng';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 const saoEquivalentes = (a: Fracao, b: Fracao): boolean => a.igualA(b);
 

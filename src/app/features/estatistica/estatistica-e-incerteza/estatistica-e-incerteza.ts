@@ -6,17 +6,17 @@ import {
   propagarSomaComPassos,
   resumirAmostra,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, MarcaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, MarcaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorIncerteza } from './estatistica-e-incerteza.gerador';
-import { TEORIA_INCERTEZA } from './estatistica-e-incerteza.teoria';
+import { geradorIncerteza } from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.gerador';
+import { TEORIA_INCERTEZA } from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.teoria';
 
 /** Uma série de medidas de exemplo: o período de um pêndulo, em segundos. */
 const MEDIDAS = [2.01, 1.98, 2.04, 1.99, 2.02, 2.05, 1.97, 2.0];

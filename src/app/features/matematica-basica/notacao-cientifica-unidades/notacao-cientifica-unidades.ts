@@ -6,15 +6,15 @@ import {
   notacaoParaTex,
   paraNotacaoCientificaComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorNotacao } from './notacao-cientifica-unidades.gerador';
-import { TEORIA_NOTACAO } from './notacao-cientifica-unidades.teoria';
+import { geradorNotacao } from '@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades.gerador';
+import { TEORIA_NOTACAO } from '@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades.teoria';
 
 /** Comparações para dar escala ao expoente escolhido. */
 const REFERENCIAS: readonly { readonly valor: number; readonly oque: string }[] = [

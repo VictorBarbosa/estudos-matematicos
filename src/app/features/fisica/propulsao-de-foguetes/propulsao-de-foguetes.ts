@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { empuxoDeMotorComPassos, tsiolkovskyComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, MarcaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, MarcaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorPropulsao } from './propulsao-de-foguetes.gerador';
-import { TEORIA_PROPULSAO } from './propulsao-de-foguetes.teoria';
+import { geradorPropulsao } from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.gerador';
+import { TEORIA_PROPULSAO } from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.teoria';
 
 /** Alvos de delta-v, em km/s, para situar o resultado. */
 const MISSOES: readonly { readonly nome: string; readonly deltaV: number }[] = [

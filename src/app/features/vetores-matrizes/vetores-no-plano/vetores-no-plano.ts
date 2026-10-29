@@ -7,17 +7,17 @@ import {
   somar,
   somarComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { SegmentoPlot } from '@shared/components/math-plot/math-plot.model';
+import { SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorVetores } from './vetores-no-plano.gerador';
-import { TEORIA_VETORES } from './vetores-no-plano.teoria';
+import { geradorVetores } from '@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.gerador';
+import { TEORIA_VETORES } from '@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.teoria';
 
 @Component({
   selector: 'app-vetores-no-plano',

@@ -8,17 +8,17 @@ import {
   terceiraLeiKeplerComPassos,
   velocidadeEscapeComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorGravitacao } from './gravitacao-e-orbitas.gerador';
-import { TEORIA_GRAVITACAO } from './gravitacao-e-orbitas.teoria';
+import { geradorGravitacao } from '@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.gerador';
+import { TEORIA_GRAVITACAO } from '@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.teoria';
 
 /** Órbitas de referência, para situar a altitude escolhida. */
 const REFERENCIAS: readonly { readonly altitudeKm: number; readonly nome: string }[] = [

@@ -1,13 +1,13 @@
 import { Polinomio } from '@core/math';
-import { Rng } from '@core/treino/rng';
+import { Rng } from '@core/treino/rng/rng';
 import {
   Simbolica,
   analisarSimbolica,
   simbolica,
   simbolicasEquivalentes,
   texParaTexto,
-} from '@core/treino/resposta-simbolica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
+} from '@core/treino/resposta-simbolica/resposta-simbolica';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 type Pergunta = 'polinomio' | 'produto' | 'coeficiente' | 'expressao';
 
