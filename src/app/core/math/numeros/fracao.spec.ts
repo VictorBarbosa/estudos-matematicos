@@ -15,11 +15,11 @@ describe('criação', () => {
   });
 
   it('recusa denominador zero', () => {
-    expect(() => Fracao.criar(1, 0)).toThrow(ErroMatematico);
+    expect(() => Fracao.criar(1, 0)).toThrowError(ErroMatematico);
   });
 
   it('recusa valores não inteiros', () => {
-    expect(() => Fracao.criar(1.5, 2)).toThrow(ErroMatematico);
+    expect(() => Fracao.criar(1.5, 2)).toThrowError(ErroMatematico);
   });
 
   it('não simplifica automaticamente: simplificar é um passo a mostrar', () => {
@@ -67,11 +67,11 @@ describe('operações', () => {
   });
 
   it('recusa divisão por zero', () => {
-    expect(() => Fracao.criar(1, 2).dividir(Fracao.ZERO)).toThrow(ErroMatematico);
+    expect(() => Fracao.criar(1, 2).dividir(Fracao.ZERO)).toThrowError(ErroMatematico);
   });
 
   it('recusa o inverso de zero', () => {
-    expect(() => Fracao.ZERO.inverter()).toThrow(ErroMatematico);
+    expect(() => Fracao.ZERO.inverter()).toThrowError(ErroMatematico);
   });
 
   it('eleva a expoentes positivos, negativos e zero', () => {
@@ -101,7 +101,7 @@ describe('conversão de denominador', () => {
   });
 
   it('recusa um denominador que mudaria o valor da fração', () => {
-    expect(() => Fracao.criar(1, 4).comDenominador(10)).toThrow(ErroMatematico);
+    expect(() => Fracao.criar(1, 4).comDenominador(10)).toThrowError(ErroMatematico);
   });
 });
 

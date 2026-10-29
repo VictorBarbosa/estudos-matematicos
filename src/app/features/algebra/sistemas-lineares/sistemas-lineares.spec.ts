@@ -34,7 +34,7 @@ describe('geradorSistemas', () => {
   it('o enunciado apresenta o sistema com as duas equações', () => {
     for (const exercicio of amostra('medio', 10)) {
       expect(exercicio.enunciadoTex).toContain('\\begin{cases}');
-      expect(exercicio.enunciadoTex.split('\\\\')).toHaveLength(2);
+      expect(exercicio.enunciadoTex.split('\\\\').length).toBe(2);
     }
   });
 

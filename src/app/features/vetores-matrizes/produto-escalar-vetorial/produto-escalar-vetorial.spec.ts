@@ -21,7 +21,7 @@ function vetores(enunciadoTex: string) {
   };
 }
 
-describe('geradorProdutos', () => {
+describe('geradorProdutos (produto escalar e vetorial)', () => {
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {

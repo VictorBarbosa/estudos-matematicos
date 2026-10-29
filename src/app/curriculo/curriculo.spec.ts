@@ -75,6 +75,7 @@ describe('currículo', () => {
   });
 
   it('todo tópico pronto tem rota na sua área', async () => {
+    // Carrega os módulos de rota de todas as áreas: lento na primeira vez.
     // Mover um tópico de área sem mover a rota produz um cartão que abre em
     // 404 — foi o risco ao levar Progressões da Álgebra para Funções.
     for (const area of CURRICULO) {
@@ -94,7 +95,7 @@ describe('currículo', () => {
           .toBe(true);
       }
     }
-  });
+  }, 30_000);
 
   it('nenhuma rota aponta para tópico que não está pronto', async () => {
     for (const area of CURRICULO) {
@@ -118,7 +119,7 @@ describe('currículo', () => {
           .toBe(true);
       }
     }
-  });
+  }, 30_000);
 
   it('a rota de um tópico é /área/tópico', () => {
     expect(rotaDoTopico('calculo-1', 'limites')).toBe('/calculo-1/limites');

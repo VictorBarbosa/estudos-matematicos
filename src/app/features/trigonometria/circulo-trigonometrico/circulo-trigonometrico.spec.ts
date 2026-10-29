@@ -8,7 +8,7 @@ function amostra(nivel: Nivel, quantidade = 60) {
   return Array.from({ length: quantidade }, () => geradorCirculo.gerar(nivel, rng));
 }
 
-describe('geradorCirculo', () => {
+describe('geradorCirculo (círculo trigonométrico)', () => {
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {

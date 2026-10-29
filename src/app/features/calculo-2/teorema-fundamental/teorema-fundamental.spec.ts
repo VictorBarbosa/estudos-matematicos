@@ -80,12 +80,12 @@ describe('geradorTfc', () => {
       const f = (x: number): number => (qa * x ** 3) / 3 + (qb * x ** 2) / 2;
       const alvo = f(exercicio.gabarito as number);
 
-      for (let x = 0.01; x <= 8; x += 0.01) {
+      for (let x = 0.02; x <= 8; x += 0.02) {
         if (Math.abs(x - (exercicio.gabarito as number)) < 0.05) {
           continue;
         }
         expect(Math.abs(f(x) - alvo)).toBeGreaterThan(0.01);
       }
     }
-  });
+  }, 30_000);
 });

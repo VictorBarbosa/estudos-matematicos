@@ -113,10 +113,16 @@ describe('registro de geradores', () => {
     );
   });
 
-  it('cada carregador entrega o gerador do próprio tópico', async () => {
-    for (const [topico, carregador] of Object.entries(CARREGAR_GERADOR)) {
-      const gerador = await carregador();
-      expect(gerador.topicoId, `${topico} carregou outro gerador`).toBe(topico);
-    }
-  });
+  it(
+    'cada carregador entrega o gerador do próprio tópico',
+    async () => {
+      for (const [topico, carregador] of Object.entries(CARREGAR_GERADOR)) {
+        const gerador = await carregador();
+        expect(gerador.topicoId, `${topico} carregou outro gerador`).toBe(topico);
+      }
+    },
+    // São 75 imports dinâmicos; o primeiro de cada chunk é lento na integração
+    // contínua.
+    30_000,
+  );
 });

@@ -17,6 +17,12 @@ import { TODAS_AS_TEORIAS } from './teorias.catalogo';
  * o id cru e abre um modal vazio — era o caso de 8 dos 483 links.
  */
 
+/** Exercícios sorteados por tópico e nível em cada varredura. */
+const AMOSTRAS = 30;
+
+/** Folga para o runner de duas CPUs da integração contínua. */
+const TEMPO_LIMITE = 30_000;
+
 const CONCEITOS = new Map(
   TODAS_AS_TEORIAS.flatMap(([, teorias]) => teorias.map((teoria) => [teoria.id, teoria] as const)),
 );
@@ -52,66 +58,85 @@ describe('integridade das teorias', () => {
     }
   });
 
-  it('todo conceito citado por um exercício existe', () => {
-    for (const [topico, gerador] of TODOS_OS_GERADORES) {
-      for (const nivel of NIVEIS) {
-        const rng = criarRng(4242);
+  /**
+   * Um caso por tópico, e não um só varrendo os 75.
+   *
+   * Varrer todos num único `it` custava ~27 mil sorteios e, no runner de duas
+   * CPUs da integração contínua, chegava perto do limite de 5 s. Separado, cada
+   * caso faz algumas centenas — e o nome do teste já diz qual tópico olhar.
+   */
+  for (const [topico, gerador] of TODOS_OS_GERADORES) {
+    it(
+      `${topico}: todo conceito citado por um exercício existe`,
+      () => {
+        for (const nivel of NIVEIS) {
+          const rng = criarRng(4242);
 
-        for (let i = 0; i < 120; i++) {
-          const exercicio = gerador.gerar(nivel, rng);
-          const citados = [
-            ...exercicio.conceitos,
-            ...exercicio.armadilhas.flatMap((a) => (a.conceito === undefined ? [] : [a.conceito])),
-          ];
+          for (let i = 0; i < AMOSTRAS; i++) {
+            const exercicio = gerador.gerar(nivel, rng);
+            const citados = [
+              ...exercicio.conceitos,
+              ...exercicio.armadilhas.flatMap((a) =>
+                a.conceito === undefined ? [] : [a.conceito],
+              ),
+            ];
 
-          for (const id of citados) {
-            expect(CONCEITOS.has(id), `${topico} cita o conceito "${id}", que não existe`).toBe(
-              true,
-            );
-          }
-        }
-      }
-    }
-  });
-
-  it('nenhum exercício cobra um conceito que a trilha ensina depois', () => {
-    // A trilha libera um tópico por vez: um exercício que exige conceito de
-    // etapa posterior cobra o que ainda não foi ensinado. Era o caso da
-    // Integral definida, cujos exercícios pediam F(b) − F(a) duas etapas antes
-    // do Teorema Fundamental.
-    const posicao = new Map(TRILHA.map((etapa, indice) => [etapa.topicoId, indice]));
-    const adiantados: string[] = [];
-
-    for (const [topico, gerador] of TODOS_OS_GERADORES) {
-      const minha = posicao.get(topico);
-      if (minha === undefined) {
-        continue;
-      }
-
-      for (const nivel of NIVEIS) {
-        const rng = criarRng(99_991);
-
-        for (let i = 0; i < 80; i++) {
-          const exercicio = gerador.gerar(nivel, rng);
-          const citados = [
-            ...exercicio.conceitos,
-            ...exercicio.armadilhas.flatMap((a) => (a.conceito === undefined ? [] : [a.conceito])),
-          ];
-
-          for (const id of citados) {
-            const dono = TOPICO_DO_CONCEITO[id];
-            const dele = dono === undefined ? undefined : posicao.get(dono);
-
-            if (dele !== undefined && dele > minha) {
-              adiantados.push(`${topico} (etapa ${minha + 1}) cobra ${id}, de ${dono} (etapa ${dele + 1})`);
+            for (const id of citados) {
+              expect(CONCEITOS.has(id), `${topico} cita o conceito "${id}", que não existe`).toBe(
+                true,
+              );
             }
           }
         }
-      }
-    }
+      },
+      TEMPO_LIMITE,
+    );
 
-    expect([...new Set(adiantados)]).toEqual([]);
-  });
+    it(
+      `${topico}: nenhum exercício cobra conceito que a trilha ensina depois`,
+      () => {
+        // A trilha libera um tópico por vez: um exercício que exige conceito de
+        // etapa posterior cobra o que ainda não foi ensinado. Era o caso da
+        // Integral definida, cujos exercícios pediam F(b) − F(a) duas etapas
+        // antes do Teorema Fundamental.
+        const posicao = new Map(TRILHA.map((etapa, indice) => [etapa.topicoId, indice]));
+        const minha = posicao.get(topico);
+        if (minha === undefined) {
+          return;
+        }
+
+        const adiantados: string[] = [];
+
+        for (const nivel of NIVEIS) {
+          const rng = criarRng(99_991);
+
+          for (let i = 0; i < AMOSTRAS; i++) {
+            const exercicio = gerador.gerar(nivel, rng);
+            const citados = [
+              ...exercicio.conceitos,
+              ...exercicio.armadilhas.flatMap((a) =>
+                a.conceito === undefined ? [] : [a.conceito],
+              ),
+            ];
+
+            for (const id of citados) {
+              const dono = TOPICO_DO_CONCEITO[id];
+              const dele = dono === undefined ? undefined : posicao.get(dono);
+
+              if (dele !== undefined && dele > minha) {
+                adiantados.push(
+                  `${topico} (etapa ${minha + 1}) cobra ${id}, de ${dono} (etapa ${dele + 1})`,
+                );
+              }
+            }
+          }
+        }
+
+        expect([...new Set(adiantados)]).toEqual([]);
+      },
+      TEMPO_LIMITE,
+    );
+  }
 
   it('o índice gerado cobre exatamente os conceitos existentes', () => {
     const esperados = [...CONCEITOS.keys()].sort();

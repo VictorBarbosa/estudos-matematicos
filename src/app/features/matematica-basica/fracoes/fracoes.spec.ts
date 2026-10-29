@@ -49,7 +49,7 @@ describe('Fracoes', () => {
 
   it('desenha as barras das duas frações e do resultado', () => {
     const barras = fixture.nativeElement.querySelectorAll('app-barra-fracao');
-    expect(barras).toHaveLength(3);
+    expect(barras.length).toBe(3);
   });
 
   it('desenha a reta numérica', () => {

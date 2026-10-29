@@ -12,8 +12,8 @@ import {
 
 describe('operações com matrizes', () => {
   it('exige linhas de mesmo tamanho', () => {
-    expect(() => dimensoes([[1, 2], [3]])).toThrow(ErroMatematico);
-    expect(() => dimensoes([])).toThrow(ErroMatematico);
+    expect(() => dimensoes([[1, 2], [3]])).toThrowError(ErroMatematico);
+    expect(() => dimensoes([])).toThrowError(ErroMatematico);
   });
 
   it('soma entrada por entrada', () => {
@@ -35,7 +35,7 @@ describe('operações com matrizes', () => {
   });
 
   it('não soma matrizes de ordens diferentes', () => {
-    expect(() => somarMatrizes([[1, 2]], [[1], [2]])).toThrow(ErroMatematico);
+    expect(() => somarMatrizes([[1, 2]], [[1], [2]])).toThrowError(ErroMatematico);
   });
 
   it('a transposta da transposta é a original', () => {
@@ -95,7 +95,7 @@ describe('operações com matrizes', () => {
   });
 
   it('recusa ordens incompatíveis', () => {
-    expect(() => multiplicarComPassos([[1, 2]], [[1, 2]])).toThrow(ErroMatematico);
+    expect(() => multiplicarComPassos([[1, 2]], [[1, 2]])).toThrowError(ErroMatematico);
   });
 
   it('escalar multiplica todas as entradas', () => {
@@ -170,7 +170,7 @@ describe('determinante', () => {
   });
 
   it('só existe para matrizes quadradas', () => {
-    expect(() => determinanteComPassos([[1, 2, 3]])).toThrow(ErroMatematico);
+    expect(() => determinanteComPassos([[1, 2, 3]])).toThrowError(ErroMatematico);
   });
 });
 
@@ -214,7 +214,7 @@ describe('regra de Cramer', () => {
         ],
         [3, 6],
       ),
-    ).toThrow(ErroMatematico);
+    ).toThrowError(ErroMatematico);
   });
 
   it('exige uma constante por equação', () => {
@@ -226,6 +226,6 @@ describe('regra de Cramer', () => {
         ],
         [5],
       ),
-    ).toThrow(ErroMatematico);
+    ).toThrowError(ErroMatematico);
   });
 });

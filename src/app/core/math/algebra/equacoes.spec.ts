@@ -33,8 +33,8 @@ describe('resolverLinearComPassos', () => {
   });
 
   it('recusa a = 0, que não é equação do 1º grau', () => {
-    expect(() => resolverLinearComPassos(0, 3, 3)).toThrow(ErroMatematico);
-    expect(() => resolverLinearComPassos(0, 3, 5)).toThrow(ErroMatematico);
+    expect(() => resolverLinearComPassos(0, 3, 3)).toThrowError(ErroMatematico);
+    expect(() => resolverLinearComPassos(0, 3, 5)).toThrowError(ErroMatematico);
   });
 });
 
@@ -71,7 +71,7 @@ describe('resolverQuadraticaComPassos', () => {
   });
 
   it('recusa a = 0', () => {
-    expect(() => resolverQuadraticaComPassos(0, 2, 1)).toThrow(ErroMatematico);
+    expect(() => resolverQuadraticaComPassos(0, 2, 1)).toThrowError(ErroMatematico);
   });
 });
 

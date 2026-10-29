@@ -39,7 +39,7 @@ describe('gerarMarcacoes', () => {
   });
 
   it('não perde a última marcação por erro de ponto flutuante', () => {
-    expect(gerarMarcacoes(0, 0.3, 0.1)).toHaveLength(4);
+    expect(gerarMarcacoes(0, 0.3, 0.1).length).toBe(4);
   });
 
   it('devolve lista vazia para passo inválido', () => {
@@ -107,7 +107,7 @@ describe('construirPathCurva', () => {
 
     expect(path.startsWith('M')).toBe(true);
     // Um único comando de "mover" significa que o traço não foi interrompido.
-    expect(path.match(/M/g)).toHaveLength(1);
+    expect(path.match(/M/g) ?? []).toEqual(['M']);
   });
 
   it('interrompe o traço em valores não finitos', () => {

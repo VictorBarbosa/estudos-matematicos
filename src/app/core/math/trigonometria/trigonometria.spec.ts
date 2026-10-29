@@ -50,10 +50,12 @@ describe('quadrantes', () => {
   });
 
   it('o seno é positivo acima do eixo e o cosseno à direita', () => {
-    expect(sinaisNoQuadrante(45)).toMatchObject({ seno: 1, cosseno: 1 });
-    expect(sinaisNoQuadrante(135)).toMatchObject({ seno: 1, cosseno: -1 });
-    expect(sinaisNoQuadrante(225)).toMatchObject({ seno: -1, cosseno: -1 });
-    expect(sinaisNoQuadrante(315)).toMatchObject({ seno: -1, cosseno: 1 });
+    // objectContaining compara só as chaves citadas: a tangente não entra
+    // nesta verificação.
+    expect(sinaisNoQuadrante(45)).toEqual(expect.objectContaining({ seno: 1, cosseno: 1 }));
+    expect(sinaisNoQuadrante(135)).toEqual(expect.objectContaining({ seno: 1, cosseno: -1 }));
+    expect(sinaisNoQuadrante(225)).toEqual(expect.objectContaining({ seno: -1, cosseno: -1 }));
+    expect(sinaisNoQuadrante(315)).toEqual(expect.objectContaining({ seno: -1, cosseno: 1 }));
   });
 });
 
@@ -73,8 +75,8 @@ describe('triângulo retângulo', () => {
   });
 
   it('recusa ângulos fora do intervalo agudo', () => {
-    expect(() => resolverTrianguloComPassos(0, 10)).toThrow(ErroMatematico);
-    expect(() => resolverTrianguloComPassos(90, 10)).toThrow(ErroMatematico);
+    expect(() => resolverTrianguloComPassos(0, 10)).toThrowError(ErroMatematico);
+    expect(() => resolverTrianguloComPassos(90, 10)).toThrowError(ErroMatematico);
   });
 });
 

@@ -37,7 +37,7 @@ describe('geradorDefinicaoDerivada', () => {
     for (const exercicio of exercicios) {
       expect(Number.isFinite(exercicio.gabarito)).toBe(true);
       // A secante difere da tangente, salvo coincidência: ambas são finitas.
-      expect(exercicio.resolucao.passos).toHaveLength(4);
+      expect(exercicio.resolucao.passos.length).toBe(4);
     }
   });
 

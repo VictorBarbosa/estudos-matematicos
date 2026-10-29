@@ -16,14 +16,14 @@ describe('resolverComPassos', () => {
     const { passos } = resolverComPassos(Fracao.criar(1, 4), 'somar', Fracao.criar(1, 6));
 
     // enunciado, MMC, conversão, soma dos numeradores e simplificação
-    expect(passos).toHaveLength(5);
+    expect(passos.length).toBe(5);
     expect(passos[1]?.tex).toContain('\\operatorname{mmc}(4, 6) = 12');
   });
 
   it('pula a conversão quando os denominadores já são iguais', () => {
     const { passos } = resolverComPassos(Fracao.criar(1, 5), 'somar', Fracao.criar(2, 5));
 
-    expect(passos).toHaveLength(4);
+    expect(passos.length).toBe(4);
     expect(passos[1]?.descricao).toContain('já são iguais');
   });
 

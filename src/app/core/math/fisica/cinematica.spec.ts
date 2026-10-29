@@ -70,7 +70,7 @@ describe('lançamento oblíquo', () => {
   });
 
   it('recusa velocidade não positiva', () => {
-    expect(() => resolverLancamentoComPassos({ ...base, velocidadeInicial: 0 })).toThrow(
+    expect(() => resolverLancamentoComPassos({ ...base, velocidadeInicial: 0 })).toThrowError(
       ErroMatematico,
     );
   });
@@ -95,8 +95,8 @@ describe('movimento harmônico', () => {
   });
 
   it('recusa massa ou constante não positivas', () => {
-    expect(() => resolverOscilacaoComPassos(1, 10, 0)).toThrow(ErroMatematico);
-    expect(() => resolverOscilacaoComPassos(1, 0, 2)).toThrow(ErroMatematico);
+    expect(() => resolverOscilacaoComPassos(1, 10, 0)).toThrowError(ErroMatematico);
+    expect(() => resolverOscilacaoComPassos(1, 0, 2)).toThrowError(ErroMatematico);
   });
 });
 
@@ -152,7 +152,7 @@ describe('taxa de variação', () => {
   });
 
   it('recusa dois instantes iguais', () => {
-    expect(() => taxaMediaComPassos(s, 2, 2)).toThrow(ErroMatematico);
+    expect(() => taxaMediaComPassos(s, 2, 2)).toThrowError(ErroMatematico);
   });
 
   it('a taxa média converge para a instantânea quando o intervalo encolhe', () => {

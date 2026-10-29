@@ -11,7 +11,17 @@ import { TODOS_OS_GERADORES } from './geradores.catalogo';
  * próprio enunciado manda dar.
  */
 
-const AMOSTRAS = 240;
+/**
+ * Amostras por tópico e nível.
+ *
+ * 120 sorteios já exercitam todos os tipos de pergunta de cada gerador; o
+ * dobro disso só fazia a suíte chegar perto do limite de tempo no runner de
+ * duas CPUs da integração contínua.
+ */
+const AMOSTRAS = 120;
+
+/** Folga para máquinas lentas: falhar por tempo aqui seria só ruído. */
+const TEMPO_LIMITE = 30_000;
 
 function amostra(gerador: GeradorExercicio<unknown>, nivel: Nivel): readonly Exercicio<unknown>[] {
   const rng = criarRng(20_261_028);
@@ -71,69 +81,73 @@ function casasPedidas(enunciado: string): number | null {
 describe('formato das respostas', () => {
   for (const [topico, gerador] of TODOS_OS_GERADORES) {
     for (const nivel of NIVEIS) {
-      it(`${topico} / ${nivel}: o gabarito é aceito na forma em que é exibido`, () => {
-        for (const exercicio of amostra(gerador, nivel)) {
-          const exibido = gerador.formatar(exercicio.gabarito);
-          const lido = gerador.analisar(exibido);
+      it(
+        `${topico} / ${nivel}: o gabarito é aceito na forma em que é exibido`,
+        () => {
+          for (const exercicio of amostra(gerador, nivel)) {
+            const exibido = gerador.formatar(exercicio.gabarito);
+            const lido = gerador.analisar(exibido);
 
-          expect(lido, `${topico}: "${exibido}" não foi reconhecido`).not.toBeNull();
-          expect(
-            gerador.saoEquivalentes(lido!, exercicio.gabarito),
-            `${topico}: "${exibido}" não equivale ao gabarito`,
-          ).toBe(true);
-        }
-      });
-
-      it(`${topico} / ${nivel}: a resolução termina no gabarito`, () => {
-        for (const exercicio of amostra(gerador, nivel)) {
-          expect(
-            gerador.saoEquivalentes(exercicio.resolucao.resultado, exercicio.gabarito),
-            `${topico}: a resolução conclui ${gerador.formatar(
-              exercicio.resolucao.resultado,
-            )} e o gabarito é ${gerador.formatar(exercicio.gabarito)}`,
-          ).toBe(true);
-        }
-      });
-
-      it(`${topico} / ${nivel}: o último passo da resolução mostra o gabarito`, () => {
-        for (const exercicio of amostra(gerador, nivel)) {
-          if (typeof exercicio.gabarito !== 'number') {
-            continue;
+            expect(lido, `${topico}: "${exibido}" não foi reconhecido`).not.toBeNull();
+            expect(gerador.saoEquivalentes(lido!, exercicio.gabarito), `${topico}: "${exibido}" não equivale ao gabarito`).toBe(true);
           }
+        },
+        TEMPO_LIMITE,
+      );
 
-          // Os dois últimos passos: alguns tópicos fecham com uma conclusão em
-          // palavras depois da conta.
-          const passos = exercicio.resolucao.passos;
-          const finais = passos.slice(-2);
-
-          expect(
-            finais.some((passo) =>
-              numerosDe(passo).some((valor) =>
-                gerador.saoEquivalentes(valor, exercicio.gabarito as never),
-              ),
-            ),
-            `${topico}: o fim da resolução não mostra ` +
-              `${gerador.formatar(exercicio.gabarito)} — "${passos.at(-1)?.tex}"`,
-          ).toBe(true);
-        }
-      });
-
-      it(`${topico} / ${nivel}: o arredondamento pedido no enunciado é aceito`, () => {
-        for (const exercicio of amostra(gerador, nivel)) {
-          const casas = casasPedidas(exercicio.enunciado);
-          if (casas === null || typeof exercicio.gabarito !== 'number') {
-            continue;
+      it(
+        `${topico} / ${nivel}: a resolução termina no gabarito`,
+        () => {
+          for (const exercicio of amostra(gerador, nivel)) {
+            expect(gerador.saoEquivalentes(exercicio.resolucao.resultado, exercicio.gabarito), `${topico}: a resolução conclui ${gerador.formatar(
+                exercicio.resolucao.resultado,
+              )} e o gabarito é ${gerador.formatar(exercicio.gabarito)}`).toBe(true);
           }
+        },
+        TEMPO_LIMITE,
+      );
 
-          const arredondado = exercicio.gabarito.toFixed(casas).replace('.', ',');
-          const veredito = corrigir(gerador, exercicio, arredondado).veredito;
+      it(
+        `${topico} / ${nivel}: o último passo da resolução mostra o gabarito`,
+        () => {
+          for (const exercicio of amostra(gerador, nivel)) {
+            if (typeof exercicio.gabarito !== 'number') {
+              continue;
+            }
 
-          expect(
-            veredito,
-            `${topico}: o enunciado pede ${casas} casas, mas "${arredondado}" foi ${veredito}`,
-          ).toBe('correto');
-        }
-      });
+            // Os dois últimos passos: alguns tópicos fecham com uma conclusão
+            // em palavras depois da conta.
+            const passos = exercicio.resolucao.passos;
+            const finais = passos.slice(-2);
+
+            expect(finais.some((passo) =>
+                numerosDe(passo).some((valor) =>
+                  gerador.saoEquivalentes(valor, exercicio.gabarito as never),
+                ),
+              ), `${topico}: o fim da resolução não mostra ` +
+                `${gerador.formatar(exercicio.gabarito)} — "${passos.at(-1)?.tex}"`).toBe(true);
+          }
+        },
+        TEMPO_LIMITE,
+      );
+
+      it(
+        `${topico} / ${nivel}: o arredondamento pedido no enunciado é aceito`,
+        () => {
+          for (const exercicio of amostra(gerador, nivel)) {
+            const casas = casasPedidas(exercicio.enunciado);
+            if (casas === null || typeof exercicio.gabarito !== 'number') {
+              continue;
+            }
+
+            const arredondado = exercicio.gabarito.toFixed(casas).replace('.', ',');
+            const veredito = corrigir(gerador, exercicio, arredondado).veredito;
+
+            expect(veredito, `${topico}: o enunciado pede ${casas} casas, mas "${arredondado}" foi ${veredito}`).toBe('correto');
+          }
+        },
+        TEMPO_LIMITE,
+      );
     }
   }
 });

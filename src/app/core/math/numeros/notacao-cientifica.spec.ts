@@ -48,7 +48,7 @@ describe('notação científica', () => {
   });
 
   it('recusa valores não finitos', () => {
-    expect(() => paraNotacaoCientificaComPassos(Infinity)).toThrow(ErroMatematico);
+    expect(() => paraNotacaoCientificaComPassos(Infinity)).toThrowError(ErroMatematico);
   });
 
   it('multiplica somando expoentes', () => {
@@ -124,13 +124,13 @@ describe('algarismos significativos', () => {
   });
 
   it('recusa o que não é número', () => {
-    expect(() => algarismosSignificativos('dois')).toThrow(ErroMatematico);
+    expect(() => algarismosSignificativos('dois')).toThrowError(ErroMatematico);
   });
 
   it('arredonda para a precisão pedida', () => {
     expect(arredondarParaSignificativos(3.14159, 3)).toBe(3.14);
     expect(arredondarParaSignificativos(98765, 2)).toBe(99000);
     expect(arredondarParaSignificativos(0, 3)).toBe(0);
-    expect(() => arredondarParaSignificativos(1, 0)).toThrow(ErroMatematico);
+    expect(() => arredondarParaSignificativos(1, 0)).toThrowError(ErroMatematico);
   });
 });

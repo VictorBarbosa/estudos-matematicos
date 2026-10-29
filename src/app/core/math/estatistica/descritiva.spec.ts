@@ -15,8 +15,8 @@ describe('estatística descritiva', () => {
   });
 
   it('recusa amostra vazia', () => {
-    expect(() => mediaComPassos([])).toThrow(ErroMatematico);
-    expect(() => resumirAmostra([])).toThrow(ErroMatematico);
+    expect(() => mediaComPassos([])).toThrowError(ErroMatematico);
+    expect(() => resumirAmostra([])).toThrowError(ErroMatematico);
   });
 
   it('o desvio padrão é zero quando todas as medidas são iguais', () => {
@@ -30,7 +30,7 @@ describe('estatística descritiva', () => {
   });
 
   it('exige ao menos duas medidas para o desvio', () => {
-    expect(() => desvioPadraoComPassos([3])).toThrow(ErroMatematico);
+    expect(() => desvioPadraoComPassos([3])).toThrowError(ErroMatematico);
   });
 
   it('a mediana não se deixa levar por um valor extremo', () => {
@@ -119,13 +119,13 @@ describe('ajuste de reta', () => {
   });
 
   it('recusa pontos insuficientes ou verticais', () => {
-    expect(() => ajustarRetaComPassos([{ x: 1, y: 1 }])).toThrow(ErroMatematico);
+    expect(() => ajustarRetaComPassos([{ x: 1, y: 1 }])).toThrowError(ErroMatematico);
     expect(() =>
       ajustarRetaComPassos([
         { x: 2, y: 1 },
         { x: 2, y: 5 },
       ]),
-    ).toThrow(ErroMatematico);
+    ).toThrowError(ErroMatematico);
   });
 });
 
@@ -144,7 +144,7 @@ describe('propagação de incerteza', () => {
   });
 
   it('recusa incerteza negativa', () => {
-    expect(() => propagarSomaComPassos([-1])).toThrow(ErroMatematico);
+    expect(() => propagarSomaComPassos([-1])).toThrowError(ErroMatematico);
   });
 
   it('num produto, as incertezas relativas se combinam', () => {
@@ -169,7 +169,7 @@ describe('propagação de incerteza', () => {
   });
 
   it('recusa medida nula', () => {
-    expect(() => propagarProdutoComPassos([{ valor: 0, incerteza: 0.1 }], 1)).toThrow(
+    expect(() => propagarProdutoComPassos([{ valor: 0, incerteza: 0.1 }], 1)).toThrowError(
       ErroMatematico,
     );
   });

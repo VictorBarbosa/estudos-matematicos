@@ -78,6 +78,6 @@ describe('resolverInequacaoComPassos', () => {
   });
 
   it('recusa a = 0', () => {
-    expect(() => resolverInequacaoComPassos(0, 1, '<', 2)).toThrow(ErroMatematico);
+    expect(() => resolverInequacaoComPassos(0, 1, '<', 2)).toThrowError(ErroMatematico);
   });
 });

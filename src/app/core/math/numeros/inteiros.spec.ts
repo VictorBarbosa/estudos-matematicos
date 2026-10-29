@@ -30,7 +30,7 @@ describe('mdc', () => {
   });
 
   it('recusa valores não inteiros', () => {
-    expect(() => mdc(1.5, 2)).toThrow(ErroMatematico);
+    expect(() => mdc(1.5, 2)).toThrowError(ErroMatematico);
   });
 });
 
@@ -95,6 +95,6 @@ describe('divisores', () => {
   });
 
   it('recusa o zero, que tem infinitos divisores', () => {
-    expect(() => divisores(0)).toThrow(ErroMatematico);
+    expect(() => divisores(0)).toThrowError(ErroMatematico);
   });
 });
