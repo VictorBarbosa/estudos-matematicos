@@ -99,6 +99,8 @@ Cada tópico segue a mesma anatomia:
 
 O sistema de progresso só desbloqueia o próximo tópico com **domínio medido**: 8 acertos nas últimas 10 tentativas, sendo 3 no nível Médio ou Difícil, e terminando com 3 acertos seguidos. Pedir a resolução conta como tentativa não resolvida — ler a resposta não libera etapa.
 
+A **dificuldade não se escolhe**: sobe a cada 3 acertos seguidos e desce a cada 2 erros seguidos. E onde o tópico tem partes que precisam ser todas praticadas, há uma exigência de cobertura — em Frações, cinco acertos em cada um dos nove tipos (as quatro operações com frações, as mesmas com números mistos, e a conversão de decimal).
+
 4. **Revisar** — uma fila diária de tópicos já vencidos, ordenada pelos conceitos que vêm sendo errados e pelo tempo sem praticar. É o contrapeso da trilha, que só anda para a frente.
 
 O **modo livre**, disponível na página inicial, destranca todos os tópicos para consulta sem apagar o progresso.

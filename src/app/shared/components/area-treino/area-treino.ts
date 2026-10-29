@@ -16,7 +16,7 @@ import {
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { SessaoTreino } from '@core/treino/sessao-treino/sessao-treino';
-import { GeradorExercicio, NIVEIS, ROTULO_NIVEL } from '@core/treino/models/treino.model';
+import { GeradorExercicio, ROTULO_NIVEL } from '@core/treino/models/treino.model';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
 import { CampoResposta } from '@shared/components/campo-resposta/campo-resposta';
 import { Formula } from '@shared/components/formula/formula';
@@ -43,7 +43,6 @@ export class AreaTreino {
   private readonly progressao = inject(ProgressaoService);
   private readonly campo = viewChild<CampoResposta>('campo');
 
-  protected readonly niveis = NIVEIS;
   protected readonly rotuloNivel = ROTULO_NIVEL;
 
   /**

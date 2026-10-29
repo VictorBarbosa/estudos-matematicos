@@ -1,7 +1,12 @@
 import { Fracao, mdc, resolverComPassos } from '@core/math';
 import { criarRng } from '@core/treino/rng/rng';
+import { REQUISITOS_POR_TOPICO } from '@core/progressao/models/progressao.model';
 import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
-import { CONCEITO_DA_OPERACAO, geradorFracoes } from '@features/matematica-basica/fracoes/fracoes.gerador';
+import {
+  CONCEITO_DA_OPERACAO,
+  CONCEITO_DA_OPERACAO_MISTA,
+  geradorFracoes,
+} from '@features/matematica-basica/fracoes/fracoes.gerador';
 
 /** Gera uma amostra de exercícios de um nível, de forma determinística. */
 function amostra(nivel: Nivel, quantidade = 60) {
@@ -160,11 +165,11 @@ describe('correção das respostas', () => {
 });
 
 describe('cobertura das quatro operações', () => {
-  /** A operação de um exercício, lida pelo conceito que ele declara. */
+  /** A operação de um exercício, seja ele com frações simples ou com mistos. */
   function operacaoDe(conceitos: readonly string[]): string | undefined {
-    return Object.entries(CONCEITO_DA_OPERACAO).find(([, conceito]) =>
-      conceitos.includes(conceito),
-    )?.[0];
+    const simples = Object.entries(CONCEITO_DA_OPERACAO).find(([, c]) => conceitos.includes(c));
+    const mista = Object.entries(CONCEITO_DA_OPERACAO_MISTA).find(([, c]) => conceitos.includes(c));
+    return (simples ?? mista)?.[0];
   }
 
   for (const nivel of NIVEIS) {
@@ -176,14 +181,17 @@ describe('cobertura das quatro operações', () => {
       expect([...vistas].sort()).toEqual(['dividir', 'multiplicar', 'somar', 'subtrair']);
     });
 
-    it(`no nível ${nivel}, todo exercício declara exatamente uma operação`, () => {
-      for (const exercicio of operacoes(nivel)) {
-        const declaradas = Object.values(CONCEITO_DA_OPERACAO).filter((conceito) =>
-          exercicio.conceitos.includes(conceito),
-        );
+    it(`no nível ${nivel}, todo exercício declara exatamente um tipo`, () => {
+      const todos = [
+        ...Object.values(CONCEITO_DA_OPERACAO),
+        ...Object.values(CONCEITO_DA_OPERACAO_MISTA),
+      ];
 
-        expect(declaradas.length).toBe(1);
-        // O conceito da operação vem primeiro: é ele que a progressão conta.
+      for (const exercicio of operacoes(nivel)) {
+        const declaradas = todos.filter((conceito) => exercicio.conceitos.includes(conceito));
+
+        expect(declaradas.length, exercicio.enunciadoTex).toBe(1);
+        // O conceito do tipo vem primeiro: é ele que a progressão conta.
         expect(exercicio.conceitos[0]).toBe(declaradas[0]);
       }
     });
@@ -382,9 +390,62 @@ describe('conversão de decimal em fração', () => {
     // A etapa pede cinco acertos por operação; a conversão é outro assunto e
     // não pode diluir essa contagem.
     for (const exercicio of conversoes('dificil', 200)) {
-      for (const conceito of Object.values(CONCEITO_DA_OPERACAO)) {
+      for (const conceito of [
+        ...Object.values(CONCEITO_DA_OPERACAO),
+        ...Object.values(CONCEITO_DA_OPERACAO_MISTA),
+      ]) {
         expect(exercicio.conceitos).not.toContain(conceito);
       }
+    }
+  });
+});
+
+describe('tipos de fração exigidos pela etapa', () => {
+  /** O conceito de tipo que o exercício declara — sempre o primeiro. */
+  function tipoDe(exercicio: { readonly conceitos: readonly string[] }): string {
+    return exercicio.conceitos[0]!;
+  }
+
+  it('os nove tipos da exigência são produzidos pelo gerador', () => {
+    const vistos = new Set<string>();
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 600)) vistos.add(tipoDe(exercicio));
+    }
+
+    for (const requisito of REQUISITOS_POR_TOPICO['fracoes']!) {
+      expect(vistos.has(requisito.conceito), `${requisito.rotulo} nunca é sorteado`).toBe(true);
+    }
+  });
+
+  it('cada operação aparece nas duas formas, simples e com mistos', () => {
+    const vistos = new Set<string>();
+    for (const nivel of ['medio', 'dificil'] as const) {
+      for (const exercicio of amostra(nivel, 600)) vistos.add(tipoDe(exercicio));
+    }
+
+    for (const operacao of ['somar', 'subtrair', 'multiplicar', 'dividir'] as const) {
+      expect(vistos.has(CONCEITO_DA_OPERACAO[operacao]), operacao).toBe(true);
+      expect(vistos.has(CONCEITO_DA_OPERACAO_MISTA[operacao]), `${operacao} com mistos`).toBe(true);
+    }
+  });
+
+  it('o exercício com mistos declara o conceito misto, não o simples', () => {
+    for (const nivel of ['medio', 'dificil'] as const) {
+      for (const exercicio of amostra(nivel, 300)) {
+        if (!exercicio.enunciado.includes('mistos')) continue;
+
+        expect(Object.values(CONCEITO_DA_OPERACAO_MISTA)).toContain(tipoDe(exercicio));
+        for (const simples of Object.values(CONCEITO_DA_OPERACAO)) {
+          expect(exercicio.conceitos).not.toContain(simples);
+        }
+      }
+    }
+  });
+
+  it('o fácil não produz tipos com mistos', () => {
+    // Eles são a recompensa de subir de nível: no Fácil não aparecem.
+    for (const exercicio of amostra('facil', 400)) {
+      expect(Object.values(CONCEITO_DA_OPERACAO_MISTA)).not.toContain(tipoDe(exercicio));
     }
   });
 });

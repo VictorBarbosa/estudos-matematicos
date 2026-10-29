@@ -33,6 +33,78 @@ export const ACERTOS_SEGUIDOS_FINAIS = 3;
 /** Níveis que contam como prova de domínio. */
 export const NIVEIS_EXIGENTES: readonly Nivel[] = ['medio', 'dificil'];
 
+/** Acertos seguidos que promovem ao nível seguinte. */
+export const ACERTOS_PARA_SUBIR = 3;
+
+/** Erros seguidos que devolvem ao nível anterior. */
+export const ERROS_PARA_DESCER = 2;
+
+/** A escada de dificuldade, do mais simples ao mais exigente. */
+const ESCADA: readonly Nivel[] = ['facil', 'medio', 'dificil'];
+
+/** Onde o estudo está na escada, e o que falta para o próximo degrau. */
+export interface NivelDoTopico {
+  readonly nivel: Nivel;
+  /** Acertos seguidos já feitos neste nível. */
+  readonly seguidos: number;
+  /** Quantos ainda faltam para subir, ou 0 quando já está no topo. */
+  readonly faltamParaSubir: number;
+  /** Subiu de nível na última tentativa? */
+  readonly acabouDeSubir: boolean;
+}
+
+/**
+ * O nível é consequência do desempenho, não uma escolha.
+ *
+ * Deixar o aluno escolher a dificuldade tem um problema conhecido: quase
+ * ninguém escolhe o difícil, e o fácil não exercita os tipos de questão que
+ * importam. Aqui a escada sobe sozinha depois de {@link ACERTOS_PARA_SUBIR}
+ * acertos seguidos e desce depois de {@link ERROS_PARA_DESCER} erros seguidos —
+ * descer importa tanto quanto subir, porque insistir num nível que ainda não
+ * se sustenta não ensina, só frustra.
+ *
+ * Nada disso é estado novo: o nível é relido do mesmo histórico de tentativas
+ * que a progressão já guarda, então um refresh devolve o aluno onde ele estava.
+ */
+export function nivelDoTopico(historico: readonly Tentativa[]): NivelDoTopico {
+  let degrau = 0;
+  let seguidosCertos = 0;
+  let seguidosErrados = 0;
+  let acabouDeSubir = false;
+
+  for (const tentativa of historico) {
+    acabouDeSubir = false;
+
+    if (tentativa.acertou) {
+      seguidosCertos++;
+      seguidosErrados = 0;
+
+      if (seguidosCertos >= ACERTOS_PARA_SUBIR && degrau < ESCADA.length - 1) {
+        degrau++;
+        seguidosCertos = 0;
+        acabouDeSubir = true;
+      }
+    } else {
+      seguidosErrados++;
+      seguidosCertos = 0;
+
+      if (seguidosErrados >= ERROS_PARA_DESCER && degrau > 0) {
+        degrau--;
+        seguidosErrados = 0;
+      }
+    }
+  }
+
+  const noTopo = degrau === ESCADA.length - 1;
+
+  return {
+    nivel: ESCADA[degrau]!,
+    seguidos: seguidosCertos,
+    faltamParaSubir: noTopo ? 0 : ACERTOS_PARA_SUBIR - seguidosCertos,
+    acabouDeSubir,
+  };
+}
+
 /**
  * Uma exigência de cobertura dentro de um tópico.
  *
@@ -48,8 +120,8 @@ export interface RequisitoDeConceito {
   readonly acertos: number;
 }
 
-/** Quantos acertos cada operação de frações exige para a etapa abrir. */
-export const ACERTOS_POR_OPERACAO = 5;
+/** Quantos acertos cada tipo de exercício exige para a etapa abrir. */
+export const ACERTOS_POR_TIPO = 5;
 
 /**
  * Exigências extras por tópico.
@@ -61,10 +133,27 @@ export const ACERTOS_POR_OPERACAO = 5;
  */
 export const REQUISITOS_POR_TOPICO: Readonly<Record<string, readonly RequisitoDeConceito[]>> = {
   fracoes: [
-    { conceito: 'fracoes.soma', rotulo: 'soma', acertos: ACERTOS_POR_OPERACAO },
-    { conceito: 'fracoes.subtracao', rotulo: 'subtração', acertos: ACERTOS_POR_OPERACAO },
-    { conceito: 'fracoes.multiplicacao', rotulo: 'multiplicação', acertos: ACERTOS_POR_OPERACAO },
-    { conceito: 'fracoes.divisao', rotulo: 'divisão', acertos: ACERTOS_POR_OPERACAO },
+    { conceito: 'fracoes.soma', rotulo: 'soma', acertos: ACERTOS_POR_TIPO },
+    { conceito: 'fracoes.subtracao', rotulo: 'subtração', acertos: ACERTOS_POR_TIPO },
+    { conceito: 'fracoes.multiplicacao', rotulo: 'multiplicação', acertos: ACERTOS_POR_TIPO },
+    { conceito: 'fracoes.divisao', rotulo: 'divisão', acertos: ACERTOS_POR_TIPO },
+    { conceito: 'fracoes.mista-soma', rotulo: 'soma com mistos', acertos: ACERTOS_POR_TIPO },
+    {
+      conceito: 'fracoes.mista-subtracao',
+      rotulo: 'subtração com mistos',
+      acertos: ACERTOS_POR_TIPO,
+    },
+    {
+      conceito: 'fracoes.mista-multiplicacao',
+      rotulo: 'multiplicação com mistos',
+      acertos: ACERTOS_POR_TIPO,
+    },
+    {
+      conceito: 'fracoes.mista-divisao',
+      rotulo: 'divisão com mistos',
+      acertos: ACERTOS_POR_TIPO,
+    },
+    { conceito: 'fracoes.decimais', rotulo: 'decimal em fração', acertos: ACERTOS_POR_TIPO },
   ],
 };
 

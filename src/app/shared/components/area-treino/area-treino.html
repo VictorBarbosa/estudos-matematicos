@@ -4,17 +4,15 @@
 
 <section class="treino">
   <header class="barra">
-    <div class="niveis" role="group" aria-label="Nível de dificuldade">
-      @for (nivel of niveis; track nivel) {
-        <button
-          type="button"
-          class="nivel"
-          [class.ativo]="s.nivel() === nivel"
-          [attr.aria-pressed]="s.nivel() === nivel"
-          (click)="s.definirNivel(nivel)"
-        >
-          {{ rotuloNivel[nivel] }}
-        </button>
+    <!-- O nível não se escolhe: ele acompanha o desempenho. -->
+    <div class="escada" role="status">
+      <span class="nivel-atual" [attr.data-nivel]="s.nivel()">{{ rotuloNivel[s.nivel()] }}</span>
+      @if (s.escada().faltamParaSubir > 0) {
+        <span class="rumo">
+          {{ s.escada().faltamParaSubir }} acerto(s) seguido(s) para subir
+        </span>
+      } @else {
+        <span class="rumo">nível máximo</span>
       }
     </div>
 
@@ -76,6 +74,9 @@
 
   <!-- aria-live para que o veredito seja anunciado sem roubar o foco. -->
   <div class="feedback" role="status" aria-live="polite">
+    @if (s.escada().acabouDeSubir) {
+      <p class="subiu">Nível {{ rotuloNivel[s.nivel()] }} — os exercícios ficam mais exigentes.</p>
+    }
     @if (s.desistiu()) {
       <div class="veredito" data-veredito="incorreto">
         <p class="mensagem">Resolução revelada — este exercício conta como não resolvido.</p>
