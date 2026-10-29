@@ -27,7 +27,7 @@ export const TEORIA_APLICACOES_INTEGRAL: readonly Teoria[] = [
       },
       {
         descricao: 'Os limites são os pontos onde as curvas se cruzam.',
-        tex: 'f(x) = g(x) \;\\Rightarrow\; \\text{limites de integração}',
+        tex: 'f(x) = g(x) \\;\\Rightarrow\\; \\text{limites de integração}',
         nota: 'Se as curvas trocam de posição, é preciso dividir em partes.',
       },
     ],

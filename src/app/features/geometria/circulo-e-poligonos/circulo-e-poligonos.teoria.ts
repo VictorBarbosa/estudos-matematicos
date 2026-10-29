@@ -11,7 +11,7 @@ export const TEORIA_CIRCULO: readonly Teoria[] = [
       'O fato notável não é o valor 3,14159…, e sim que essa razão seja a MESMA para todo ' +
       'círculo, do anel ao equador da Terra. É isso que a torna uma constante.',
     formulas: [
-      { tex: '\\pi = \\frac{C}{d} \;\\Rightarrow\; C = 2\\pi r' },
+      { tex: '\\pi = \\frac{C}{d} \\;\\Rightarrow\\; C = 2\\pi r' },
       { tex: 'A = \\pi r^{2}' },
     ],
     demonstracao: [
@@ -71,7 +71,7 @@ export const TEORIA_CIRCULO: readonly Teoria[] = [
       enunciado: 'A área de um círculo de raio 2.',
       passos: areaComPassos('circulo', { raio: 2 }).passos,
     },
-    vejaTambem: ['circulo.pi', 'circulo.poligonos', 'riemann.particao'],
+    vejaTambem: ['circulo.pi', 'circulo.poligonos', 'riemann.ideia'],
   },
   {
     id: 'circulo.poligonos',
@@ -84,7 +84,7 @@ export const TEORIA_CIRCULO: readonly Teoria[] = [
     formulas: [
       { tex: 'A = \\frac{p \\cdot a}{2}' },
       {
-        tex: 'n \\to \\infty: \\quad a \\to r, \; p \\to 2\\pi r, \; A \\to \\pi r^{2}',
+        tex: 'n \\to \\infty: \\quad a \\to r, \\; p \\to 2\\pi r, \\; A \\to \\pi r^{2}',
         legenda: 'O círculo como limite dos polígonos.',
       },
     ],

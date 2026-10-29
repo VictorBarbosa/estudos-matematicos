@@ -11,7 +11,7 @@ export const TEORIA_EXPRESSOES: readonly Teoria[] = [
       'toda propriedade da aritmética — comutativa, associativa, distributiva — continua ' +
       'valendo exatamente igual quando há letras na expressão.',
     formulas: [
-      { tex: '3x \;\\text{significa}\; 3 \\cdot x', legenda: 'A multiplicação fica implícita.' },
+      { tex: '3x \\;\\text{significa}\\; 3 \\cdot x', legenda: 'A multiplicação fica implícita.' },
       {
         tex: 'x + x = 2x \\qquad x \\cdot x = x^{2}',
         legenda: 'Somar não é o mesmo que multiplicar.',
@@ -20,7 +20,7 @@ export const TEORIA_EXPRESSOES: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Avaliar é substituir a letra por um número e calcular.',
-        tex: '3x + 2 \\quad \\text{com} \\quad x = 4 \;\\Rightarrow\; 3 \\cdot 4 + 2 = 14',
+        tex: '3x + 2 \\quad \\text{com} \\quad x = 4 \\;\\Rightarrow\\; 3 \\cdot 4 + 2 = 14',
       },
       {
         descricao: 'Somar x com x é contar duas parcelas iguais.',
@@ -53,7 +53,7 @@ export const TEORIA_EXPRESSOES: readonly Teoria[] = [
     formulas: [
       { tex: 'ax^{n} + bx^{n} = (a + b)x^{n}' },
       {
-        tex: '3x + 2x^{2} \;\\text{não reduz}',
+        tex: '3x + 2x^{2} \\;\\text{não reduz}',
         legenda: 'Expoentes diferentes, termos diferentes.',
       },
     ],
@@ -69,7 +69,7 @@ export const TEORIA_EXPRESSOES: readonly Teoria[] = [
       },
       {
         descricao: 'Por isso termos de graus diferentes permanecem separados.',
-        tex: '3x + 2x^{2} \;\\text{continua} \; 2x^{2} + 3x',
+        tex: '3x + 2x^{2} \\;\\text{continua} \\; 2x^{2} + 3x',
       },
     ],
     exemplo: {
@@ -111,7 +111,7 @@ export const TEORIA_EXPRESSOES: readonly Teoria[] = [
       },
       {
         descricao: 'Conferindo com números: para x = 5, os dois lados dão o mesmo.',
-        tex: '-(5 - 3) = -2 \\qquad -5 + 3 = -2 \;\\checkmark',
+        tex: '-(5 - 3) = -2 \\qquad -5 + 3 = -2 \\;\\checkmark',
       },
     ],
     exemplo: {

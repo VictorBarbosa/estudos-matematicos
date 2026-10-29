@@ -73,7 +73,7 @@ export const TEORIA_GRAVITACAO: readonly Teoria[] = [
       },
       {
         descricao: 'Órbitas mais altas são mais lentas.',
-        tex: 'r \\uparrow \;\\Rightarrow\; v \\downarrow',
+        tex: 'r \\uparrow \\;\\Rightarrow\\; v \\downarrow',
       },
     ],
     exemplo: {
@@ -154,6 +154,6 @@ export const TEORIA_GRAVITACAO: readonly Teoria[] = [
       enunciado: 'Prevendo o período de uma órbita mais alta a partir de outra conhecida.',
       passos: terceiraLeiKeplerComPassos(6.771e6, 5560, 4.2164e7).passos,
     },
-    vejaTambem: ['gravitacao.orbita', 'conicas.elipse'],
+    vejaTambem: ['gravitacao.orbita', 'conicas.elipse', 'conicas.orbitas'],
   },
 ];

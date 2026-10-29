@@ -66,7 +66,7 @@ export const TEORIA_PRODUTOS: readonly Teoria[] = [
       },
       {
         descricao: 'Com θ = 90°, a projeção é nula: força perpendicular não realiza trabalho.',
-        tex: '\\cos 90^\\circ = 0 \;\\Rightarrow\; W = 0',
+        tex: '\\cos 90^\\circ = 0 \\;\\Rightarrow\\; W = 0',
         nota: 'É por isso que carregar um peso andando na horizontal não realiza trabalho sobre ele.',
       },
     ],

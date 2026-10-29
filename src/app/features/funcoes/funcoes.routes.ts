@@ -43,6 +43,11 @@ export const rotas: Routes = [
     loadComponent: () => import('./composicao-inversa/composicao-inversa').then((m) => m.ComposicaoInversa),
   },
   {
+    path: 'progressoes',
+    title: 'Progressões · Estudos Matemáticos',
+    loadComponent: () => import('./progressoes/progressoes').then((m) => m.Progressoes),
+  },
+  {
     path: 'juros-compostos',
     title: 'Juros compostos · Estudos Matemáticos',
     loadComponent: () => import('./juros-compostos/juros-compostos').then((m) => m.JurosCompostos),

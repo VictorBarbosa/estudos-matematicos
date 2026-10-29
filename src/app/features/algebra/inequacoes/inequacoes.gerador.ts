@@ -1,45 +1,78 @@
-import { Relacao, resolverInequacaoComPassos } from '@core/math';
+import { Relacao, SIMBOLO_RELACAO, resolverInequacaoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero, formatarNumero, proximosEmCasas } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
-const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-9;
+/**
+ * A resposta de uma inequação: o conjunto solução, não só a fronteira.
+ *
+ * Antes o gerador pedia apenas o número da fronteira, e o SENTIDO da
+ * desigualdade — que é o assunto do tópico — nunca era avaliado: quem invertia
+ * o sinal ao dividir por um negativo acertava o exercício. A descrição do
+ * currículo já prometia "o conjunto solução na reta"; agora é isso que se pede.
+ */
+export interface ConjuntoSolucao {
+  readonly relacao: Relacao;
+  readonly fronteira: number;
+}
 
 const RELACOES: readonly Relacao[] = ['<', '<=', '>', '>='];
 
-const SIMBOLO: Readonly<Record<Relacao, string>> = {
+/** O oposto de cada relação, para a armadilha do sentido invertido. */
+const INVERSA: Readonly<Record<Relacao, Relacao>> = {
+  '<': '>',
+  '<=': '>=',
+  '>': '<',
+  '>=': '<=',
+};
+
+const proximaFronteira = proximosEmCasas(2, 1e-4);
+
+const mesmoConjunto = (a: ConjuntoSolucao, b: ConjuntoSolucao): boolean =>
+  a.relacao === b.relacao && proximaFronteira(a.fronteira, b.fronteira);
+
+/** `x > 3`, `x ≥ -1,5`, `> 3`, `3 < x` — e também `x>3/4` ou `x > √2`. */
+const FORMA_DIRETA = /^x?(<=|>=|<|>|≤|≥)(.+)$/;
+const FORMA_INVERTIDA = /^(.+?)(<=|>=|<|>|≤|≥)x$/;
+
+const RELACAO_DIGITADA: Readonly<Record<string, Relacao>> = {
   '<': '<',
-  '<=': '\\leq',
+  '<=': '<=',
+  '≤': '<=',
   '>': '>',
-  '>=': '\\geq',
+  '>=': '>=',
+  '≥': '>=',
 };
 
 /**
  * Exercícios de inequação do 1º grau.
  *
- * Pedimos a FRONTEIRA do conjunto solução — o número onde a desigualdade vira
- * igualdade. Assim a resposta é objetiva, e a armadilha do sinal invertido
- * aparece como um valor distinto.
+ * A resposta é o conjunto solução inteiro — sentido e fronteira —, porque é a
+ * inversão do sentido que o tópico ensina.
  */
-export const geradorInequacoes: GeradorExercicio<number> = {
+export const geradorInequacoes: GeradorExercicio<ConjuntoSolucao> = {
   topicoId: 'inequacoes',
-  formatoResposta: 'o valor da fronteira, ex.: 3 ou -1,5',
+  formatoResposta: 'o conjunto solução, ex.: x > 3 · x <= -1,5 · x > 3/4',
 
-  gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
+  gerar(nivel: Nivel, rng: Rng): Exercicio<ConjuntoSolucao> {
     const { a, b, c, relacao } = sortear(nivel, rng);
 
     const resolucao = resolverInequacaoComPassos(a, b, relacao, c);
-    const { fronteira, relacao: relacaoFinal } = resolucao.resultado;
+    const { fronteira, relacao: relacaoFinal, intervaloTex } = resolucao.resultado;
+    const gabarito: ConjuntoSolucao = { relacao: relacaoFinal, fronteira };
 
     const coeficiente = a === 1 ? '' : a === -1 ? '-' : String(a);
-    const enunciadoTex = `${coeficiente}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)} ${SIMBOLO[relacao]} ${c}`;
+    const enunciadoTex = `${coeficiente}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)} ${SIMBOLO_RELACAO[relacao]} ${c}`;
 
     return {
       id: `inequacoes-${nivel}-${a}-${b}-${c}-${relacao}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Resolva a inequação e informe o valor da fronteira do conjunto solução.',
+      enunciado:
+        'Resolva a inequação e informe o conjunto solução, no formato x > valor ' +
+        '(use <=, >= quando a fronteira entrar).',
       enunciadoTex,
-      gabarito: fronteira,
-      resolucao: { resultado: fronteira, passos: resolucao.passos },
+      gabarito,
+      resolucao: { resultado: gabarito, passos: resolucao.passos },
       conceitos:
         a < 0
           ? ['inequacoes.inversao', 'inequacoes.conjunto']
@@ -47,43 +80,81 @@ export const geradorInequacoes: GeradorExercicio<number> = {
       armadilhas: semColisoes(
         [
           {
-            resposta: (c + b) / a,
+            resposta: { relacao: INVERSA[relacaoFinal], fronteira },
             diagnostico:
-              `Você somou ${Math.abs(b)} em vez de subtrair ao isolar o termo com x. A operação ` +
-              'precisa DESFAZER o que está escrito na inequação.',
+              a < 0
+                ? `A fronteira está certa, mas o SENTIDO não: dividir por ${a}, que é ` +
+                  'negativo, inverte a desigualdade. Confira com um exemplo: 2 < 3, mas ' +
+                  '−2 > −3.'
+                : 'O sentido da desigualdade foi trocado sem motivo: o coeficiente de x é ' +
+                  'positivo, então ele se mantém do começo ao fim.',
+            passo: resolucao.passos.length - 2,
+            conceito: a < 0 ? 'inequacoes.inversao' : 'inequacoes.conjunto',
+          },
+          {
+            resposta: { relacao: relacaoFinal, fronteira: (c + b) / a },
+            diagnostico:
+              `Você somou ${Math.abs(b)} em vez de subtrair ao isolar o termo com x. A ` +
+              'operação precisa DESFAZER o que está escrito na inequação.',
             passo: 1,
             conceito: 'inequacoes.conjunto',
           },
           {
-            resposta: -fronteira,
+            resposta: { relacao: relacaoFinal, fronteira: -fronteira },
             diagnostico:
-              a < 0
-                ? 'O valor da fronteira ficou com o sinal trocado. Note que dividir por um ' +
-                  'coeficiente negativo inverte o SENTIDO da desigualdade, mas o quociente ' +
-                  'continua sendo calculado normalmente.'
-                : 'O sinal da fronteira está invertido. Confira a divisão pelo coeficiente de x.',
-            passo: 2,
-            conceito: a < 0 ? 'inequacoes.inversao' : 'inequacoes.conjunto',
+              'O sentido está certo, mas o sinal da fronteira não. Confira a divisão pelo ' +
+              'coeficiente de x.',
+            passo: resolucao.passos.length - 2,
+            conceito: 'inequacoes.conjunto',
+          },
+          {
+            resposta: {
+              relacao: relacaoFinal === '<' || relacaoFinal === '<=' ? '<=' : '>=',
+              fronteira,
+            },
+            diagnostico:
+              'A fronteira NÃO entra no conjunto: a desigualdade do enunciado é estrita, ' +
+              `então a resposta usa ${SIMBOLO_RELACAO[relacaoFinal] === '<' ? '<' : '>'} ` +
+              'e não ≤ ou ≥.',
+            passo: resolucao.passos.length - 1,
+            conceito: 'inequacoes.representacao',
           },
         ],
-        fronteira,
-        proximos,
+        gabarito,
+        mesmoConjunto,
       ),
       dica:
         a < 0 && nivel !== 'facil'
-          ? 'Atenção ao sinal do coeficiente de x antes de dividir.'
+          ? `O coeficiente de x é ${a}: ao dividir por ele, o sentido se inverte. ` +
+            `Na reta, a solução é ${intervaloTex}.`
           : undefined,
     };
   },
 
   analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
+    const limpo = entrada.trim().toLowerCase().replace(/\s+/g, '');
+
+    const direta = FORMA_DIRETA.exec(limpo);
+    if (direta) {
+      const fronteira = analisarNumero(direta[2]!);
+      return fronteira === null ? null : { relacao: RELACAO_DIGITADA[direta[1]!]!, fronteira };
+    }
+
+    // "3 < x" é o mesmo conjunto que "x > 3": vale aceitar as duas escritas.
+    const invertida = FORMA_INVERTIDA.exec(limpo);
+    if (invertida) {
+      const fronteira = analisarNumero(invertida[1]!);
+      return fronteira === null
+        ? null
+        : { relacao: INVERSA[RELACAO_DIGITADA[invertida[2]!]!], fronteira };
+    }
+
+    return null;
   },
 
-  saoEquivalentes: proximos,
-  formatar: (valor) =>
-    Number(valor.toFixed(4)).toLocaleString('pt-BR', { maximumFractionDigits: 4 }),
+  saoEquivalentes: mesmoConjunto,
+  formatar: ({ relacao, fronteira }) =>
+    `x ${relacao === '<=' ? '≤' : relacao === '>=' ? '≥' : relacao} ${formatarNumero(fronteira, 2)}`,
 };
 
 function sortear(nivel: Nivel, rng: Rng): { a: number; b: number; c: number; relacao: Relacao } {

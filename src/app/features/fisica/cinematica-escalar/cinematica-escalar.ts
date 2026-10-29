@@ -61,14 +61,14 @@ export class CinematicaEscalar {
 
   protected readonly velocidadeTex = computed(
     () =>
-      `v = ${this.velocidadeInicial()} + ${this.aceleracao()}t \;\\Rightarrow\; ` +
+      `v = ${this.velocidadeInicial()} + ${this.aceleracao()}t \\;\\Rightarrow\\; ` +
       `v(${this.instante()}) = ${this.formatar(this.estado().velocidade)}\\,\\text{m/s}`,
   );
 
   protected readonly posicaoTex = computed(
     () =>
       `\\Delta s = ${this.velocidadeInicial()}t + \\frac{${this.aceleracao()}t^{2}}{2} ` +
-      `\;\\Rightarrow\; ${this.formatar(this.estado().posicao)}\\,\\text{m}`,
+      `\\;\\Rightarrow\\; ${this.formatar(this.estado().posicao)}\\,\\text{m}`,
   );
 
   /** O gráfico de velocidade, cuja área é o deslocamento. */

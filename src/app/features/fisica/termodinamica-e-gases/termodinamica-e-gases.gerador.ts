@@ -5,6 +5,7 @@ import {
   trabalhoIsobaricoComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => {
@@ -36,10 +37,7 @@ export const geradorTermo: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+(e[+-]?\d+)?$/i.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -76,7 +74,16 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciadoTex:
       `n = ${mols}\\,\\text{mol} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C} \\qquad p = 1\\,\\text{atm}`,
     gabarito,
-    resolucao: { resultado: gabarito, passos },
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A resposta é pedida em litros, e 1 m³ são 1000 L.',
+          tex: `V = ${gabarito.toFixed(2).replace('.', '{,}')}\\,\\text{L}`,
+        },
+      ],
+    },
     conceitos: ['termo.gas-ideal'],
     armadilhas: semColisoes(
       [
@@ -126,7 +133,16 @@ function exercicioPressao(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciadoTex:
       `n = ${mols} \\qquad V = ${volumeLitros}\\,\\text{L} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C}`,
     gabarito,
-    resolucao: { resultado: gabarito, passos },
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A resposta é pedida em kPa, e 1 kPa são 1000 Pa.',
+          tex: `p = ${gabarito.toFixed(2).replace('.', '{,}')}\\,\\text{kPa}`,
+        },
+      ],
+    },
     conceitos: ['termo.gas-ideal'],
     armadilhas: semColisoes(
       [

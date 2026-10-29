@@ -10,16 +10,17 @@ function amostra(nivel: Nivel, quantidade = 60) {
 
 describe('geradorRegras', () => {
   for (const nivel of NIVEIS) {
-    it(`no nível ${nivel}, o gabarito é inteiro`, () => {
+    it(`no nível ${nivel}, o gabarito é avaliável em x`, () => {
       for (const exercicio of amostra(nivel)) {
-        expect(Number.isInteger(exercicio.gabarito)).toBe(true);
+        expect(Number.isFinite(exercicio.gabarito.avaliar(2))).toBe(true);
+        expect(exercicio.gabarito.tex.length).toBeGreaterThan(0);
       }
     });
 
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {
         for (const armadilha of exercicio.armadilhas) {
-          expect(Math.abs(armadilha.resposta - exercicio.gabarito)).toBeGreaterThan(0.01);
+          expect(geradorRegras.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(false);
         }
       }
     });
@@ -33,6 +34,46 @@ describe('geradorRegras', () => {
     expect(comProduto.length).toBeGreaterThan(0);
   });
 
+  it('pede a expressão da derivada, e não só um valor', () => {
+    const expressoes = amostra('dificil', 120).filter((e) =>
+      e.enunciado.includes('a expressão inteira'),
+    );
+
+    expect(expressoes.length).toBeGreaterThan(10);
+
+    for (const exercicio of expressoes) {
+      // A derivada de um polinômio não é constante: o gabarito depende de x.
+      const em1 = exercicio.gabarito.avaliar(1);
+      const em2 = exercicio.gabarito.avaliar(2);
+      expect(em1).not.toBe(em2);
+    }
+  });
+
+  it('aceita a derivada escrita de formas diferentes', () => {
+    const exercicio = amostra('facil', 120).find((e) =>
+      e.enunciado.includes('a expressão inteira'),
+    )!;
+
+    const tex = exercicio.gabarito.tex;
+    // O gabarito vem em LaTeX (`6x^{2}`); o aluno digita sem as chaves.
+    const digitado = tex.replace(/\^\{(\d+)\}/g, '^$1');
+
+    expect(corrigir(geradorRegras, exercicio, digitado).veredito).toBe('correto');
+    expect(corrigir(geradorRegras, exercicio, `(${digitado})`).veredito).toBe('correto');
+    expect(corrigir(geradorRegras, exercicio, `0 + ${digitado}`).veredito).toBe('correto');
+  });
+
+  it('aceita o valor pedido nas perguntas numéricas', () => {
+    const numericas = amostra('medio', 120).filter((e) => /f'\(-?\d+\)/.test(e.enunciado));
+
+    expect(numericas.length).toBeGreaterThan(5);
+
+    for (const exercicio of numericas) {
+      const valor = exercicio.gabarito.avaliar(0);
+      expect(corrigir(geradorRegras, exercicio, String(valor)).veredito).toBe('correto');
+    }
+  });
+
   it('diagnostica quem multiplica as derivadas', () => {
     const exercicio = amostra('dificil', 90).find((candidato) =>
       candidato.armadilhas.some((a) => a.diagnostico.includes('NÃO é o produto das derivadas')),
@@ -42,9 +83,25 @@ describe('geradorRegras', () => {
       a.diagnostico.includes('NÃO é o produto das derivadas'),
     )!;
 
-    const resultado = corrigir(geradorRegras, exercicio, String(armadilha.resposta));
+    const resultado = corrigir(geradorRegras, exercicio, armadilha.resposta.tex);
     expect(resultado.veredito).toBe('incorreto');
     expect(resultado.conceitoAssociado).toBe('regras.produto');
+  });
+
+  it('diagnostica quem desce o expoente sem diminuí-lo', () => {
+    const exercicio = amostra('dificil', 150).find((candidato) =>
+      candidato.armadilhas.some((a) => a.diagnostico.includes('desce como fator E diminui')),
+    )!;
+
+    const armadilha = exercicio.armadilhas.find((a) =>
+      a.diagnostico.includes('desce como fator E diminui'),
+    )!;
+
+    const digitado = armadilha.resposta.tex.replace(/\^\{(\d+)\}/g, '^$1');
+    const resultado = corrigir(geradorRegras, exercicio, digitado);
+
+    expect(resultado.veredito).toBe('incorreto');
+    expect(resultado.diagnostico).toContain('desce como fator E diminui');
   });
 
   it('diagnostica quem mantém o termo constante na derivada', () => {

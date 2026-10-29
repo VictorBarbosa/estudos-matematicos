@@ -50,18 +50,18 @@ export const TEORIA_TERMO: readonly Teoria[] = [
     formulas: [
       { tex: '\\Delta U = Q - W' },
       {
-        tex: '\\Delta U = 0 \;\\Rightarrow\; Q = W',
+        tex: '\\Delta U = 0 \\;\\Rightarrow\\; Q = W',
         legenda: 'Processo isotérmico: todo o calor recebido vira trabalho.',
       },
     ],
     demonstracao: [
       {
         descricao: 'O gás pode receber energia como calor.',
-        tex: 'Q > 0 \;\\text{aumenta } U',
+        tex: 'Q > 0 \\;\\text{aumenta } U',
       },
       {
         descricao: 'E pode entregar energia realizando trabalho ao expandir.',
-        tex: 'W > 0 \;\\text{diminui } U',
+        tex: 'W > 0 \\;\\text{diminui } U',
         nota: 'Daí o sinal negativo na fórmula: o trabalho sai do gás.',
       },
       {
@@ -105,13 +105,13 @@ export const TEORIA_TERMO: readonly Teoria[] = [
       },
       {
         descricao: 'Volume constante significa nenhum trabalho, por mais calor que entre.',
-        tex: '\\Delta V = 0 \;\\Rightarrow\; W = 0',
+        tex: '\\Delta V = 0 \\;\\Rightarrow\\; W = 0',
       },
     ],
     exemplo: {
       enunciado: 'Expansão isobárica de 10 para 30 L à pressão atmosférica.',
       passos: trabalhoIsobaricoComPassos(101325, 0.01, 0.03).passos,
     },
-    vejaTambem: ['termo.primeira-lei', 'termo.gas-ideal', 'integral-def.area'],
+    vejaTambem: ['termo.primeira-lei', 'termo.gas-ideal', 'integral-def.area-geometrica'],
   },
 ];

@@ -16,7 +16,7 @@ export interface Vetor {
 }
 
 export function vetorParaTex({ x, y }: Vetor): string {
-  return `(${formatar(x)},\; ${formatar(y)})`;
+  return `(${formatar(x)},\\; ${formatar(y)})`;
 }
 
 export function modulo({ x, y }: Vetor): number {

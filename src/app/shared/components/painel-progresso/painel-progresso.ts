@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { ProgressoService } from '@core/treino/progresso.service';
+import { TOPICO_DO_CONCEITO } from '@core/teoria/registro-teorias';
 import { TeoriaService } from '@core/teoria/teoria.service';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
 
@@ -67,14 +68,23 @@ export class PainelProgresso {
   protected readonly melhorSequencia = computed(() => this.estatistica()?.melhorSequencia ?? null);
 
   /**
-   * Conceitos a revisar. Num tópico específico, só os que pertencem a ele —
-   * os ids seguem o formato `topico.conceito`.
+   * Conceitos a revisar. Num tópico específico, só os que pertencem a ele.
+   *
+   * O dono de cada conceito vem do índice gerado, não do prefixo do id. O
+   * filtro antigo usava `startsWith(topicoId + '.')`, e os prefixos raramente
+   * coincidem com o nome da pasta — `operacoes-fundamentais` registra
+   * `operacoes.*` —, então a sugestão de revisão só funcionava em 12 dos 75
+   * tópicos. Além disso, o corte nos 8 piores conceitos do site vinha ANTES do
+   * filtro: bastava haver oito conceitos frágeis em outros tópicos para o
+   * painel ficar vazio aqui.
    */
   protected readonly paraRevisar = computed(() => {
     const id = this.topicoId();
-    const todos = this.progresso.conceitosParaRevisar(8);
-    const filtrados = id === undefined ? todos : todos.filter((c) => c.id.startsWith(`${id}.`));
-    return filtrados.slice(0, 3);
+    const frageis = this.progresso.conceitosFrageis();
+    const doTopico =
+      id === undefined ? frageis : frageis.filter((c) => TOPICO_DO_CONCEITO[c.id] === id);
+
+    return doTopico.slice(0, 3);
   });
 
   protected tituloConceito(id: string): string {

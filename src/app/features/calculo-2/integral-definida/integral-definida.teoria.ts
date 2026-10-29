@@ -12,12 +12,12 @@ export const TEORIA_DEFINIDA: readonly Teoria[] = [
       'falamos em área COM SINAL, e não simplesmente em área.',
     formulas: [
       { tex: '\\int_{a}^{b} f(x)\\,dx = \\lim_{n \\to \\infty} \\sum f(x_i)\\Delta x' },
-      { tex: '\\int_{a}^{b} f\\,dx < 0 \;\\text{se}\; f < 0 \;\\text{no intervalo}' },
+      { tex: '\\int_{a}^{b} f\\,dx < 0 \\;\\text{se}\\; f < 0 \\;\\text{no intervalo}' },
     ],
     demonstracao: [
       {
         descricao: 'Nos retângulos, a altura é f(xᵢ), que pode ser negativa.',
-        tex: 'f(x_i) < 0 \;\\Rightarrow\; \\text{contribuição negativa}',
+        tex: 'f(x_i) < 0 \\;\\Rightarrow\\; \\text{contribuição negativa}',
       },
       {
         descricao: 'Num intervalo simétrico de função ímpar, tudo se cancela.',

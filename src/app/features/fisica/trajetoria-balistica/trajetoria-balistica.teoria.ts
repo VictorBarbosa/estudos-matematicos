@@ -101,7 +101,7 @@ export const TEORIA_BALISTICA: readonly Teoria[] = [
       },
       {
         descricao: 'O seno vale no máximo 1, quando o arco é 90°.',
-        tex: '2\\theta = 90° \;\\Rightarrow\; \\theta = 45°',
+        tex: '2\\theta = 90° \\;\\Rightarrow\\; \\theta = 45°',
         nota: 'Por isso ângulos complementares, como 30° e 60°, dão o mesmo alcance.',
       },
     ],

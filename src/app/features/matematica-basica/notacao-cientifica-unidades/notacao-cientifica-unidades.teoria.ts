@@ -90,7 +90,7 @@ export const TEORIA_NOTACAO: readonly Teoria[] = [
       'porque alguém precisou medir até ali. O resultado de uma conta não pode ter mais ' +
       'precisão do que o dado menos preciso que entrou nela.',
     formulas: [
-      { tex: '0{,}00420 \;\\to\; 3 \\text{ algarismos significativos}' },
+      { tex: '0{,}00420 \\;\\to\\; 3 \\text{ algarismos significativos}' },
       {
         tex: '1{,}5 \\times 2{,}00 = 3{,}0',
         legenda: 'O produto herda a menor quantidade de significativos.',
@@ -104,7 +104,7 @@ export const TEORIA_NOTACAO: readonly Teoria[] = [
       },
       {
         descricao: 'O zero final sobrevive, porque informa precisão.',
-        tex: '4{,}20 \\ne 4{,}2 \;\\text{como medida}',
+        tex: '4{,}20 \\ne 4{,}2 \\;\\text{como medida}',
         nota: 'O primeiro diz "medi o centésimo e deu zero"; o segundo não mediu o centésimo.',
       },
       {

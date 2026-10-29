@@ -56,4 +56,36 @@ describe('geradorTfc', () => {
     expect(exercicio).toBeDefined();
     expect(exercicio.conceitos).toContain('tfc.enunciado');
   });
+
+  it('o k pedido é a única solução positiva', () => {
+    const rng = criarRng(31_415);
+    const exercicios = Array.from({ length: 400 }, () => geradorTfc.gerar('dificil', rng)).filter(
+      (e) => e.enunciado.includes('Para qual valor de k'),
+    );
+
+    expect(exercicios.length).toBeGreaterThan(20);
+
+    for (const exercicio of exercicios) {
+      const [, coefA, sinal, coefB] =
+        /\\int_\{0\}\^\{k\} \\left\((\d*)x\^\{2\}(?: ([+-]) (\d*)x)?\\right\)/.exec(
+          exercicio.enunciadoTex,
+        ) ?? [];
+
+      expect(coefA, exercicio.enunciadoTex).toBeDefined();
+
+      const qa = coefA === '' ? 1 : Number(coefA);
+      const qb = coefB === undefined ? 0 : (sinal === '-' ? -1 : 1) * (coefB === '' ? 1 : Number(coefB));
+
+      // F(x) = a x³/3 + b x²/2; procuramos outro k > 0 com o mesmo valor.
+      const f = (x: number): number => (qa * x ** 3) / 3 + (qb * x ** 2) / 2;
+      const alvo = f(exercicio.gabarito as number);
+
+      for (let x = 0.01; x <= 8; x += 0.01) {
+        if (Math.abs(x - (exercicio.gabarito as number)) < 0.05) {
+          continue;
+        }
+        expect(Math.abs(f(x) - alvo)).toBeGreaterThan(0.01);
+      }
+    }
+  });
 });

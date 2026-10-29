@@ -81,21 +81,21 @@ export const TEORIA_TFC: readonly Teoria[] = [
       'acumula área da esquerda até x, sua derivada em cada ponto é exatamente a altura da ' +
       'curva ali. Acumular e medir variação são operações opostas.',
     formulas: [
-      { tex: "A(x) = \\int_{a}^{x} f(t)\\,dt \;\\Rightarrow\; A'(x) = f(x)" },
+      { tex: "A(x) = \\int_{a}^{x} f(t)\\,dt \\;\\Rightarrow\\; A'(x) = f(x)" },
     ],
     demonstracao: [
       {
         descricao: 'Onde a função é alta, a área acumula depressa.',
-        tex: 'f \\text{ grande} \;\\Rightarrow\; A \\text{ cresce rápido}',
+        tex: 'f \\text{ grande} \\;\\Rightarrow\\; A \\text{ cresce rápido}',
       },
       {
         descricao: 'Onde a função é zero, a área para de crescer.',
-        tex: "f = 0 \;\\Rightarrow\; A' = 0",
+        tex: "f = 0 \\;\\Rightarrow\\; A' = 0",
         nota: 'A função acumulada tem um ponto crítico onde a curva cruza o eixo.',
       },
       {
         descricao: 'Onde a função é negativa, a área acumulada diminui.',
-        tex: 'f < 0 \;\\Rightarrow\; A \\text{ decresce}',
+        tex: 'f < 0 \\;\\Rightarrow\\; A \\text{ decresce}',
       },
     ],
     exemplo: {

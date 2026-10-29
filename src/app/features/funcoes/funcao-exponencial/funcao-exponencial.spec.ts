@@ -69,4 +69,18 @@ describe('geradorExponencial', () => {
     expect(resultado.veredito).toBe('incorreto');
     expect(resultado.diagnostico).toContain('UM');
   });
+
+  it('aceita o tempo de duplicação arredondado em 2 casas, como o enunciado pede', () => {
+    const rng = criarRng(606);
+    const duplicacoes = Array.from({ length: 200 }, () =>
+      geradorExponencial.gerar('dificil', rng),
+    ).filter((e) => e.enunciado.includes('DOBRAR'));
+
+    expect(duplicacoes.length).toBeGreaterThan(10);
+
+    for (const exercicio of duplicacoes) {
+      const comDuasCasas = exercicio.gabarito.toFixed(2).replace('.', ',');
+      expect(corrigir(geradorExponencial, exercicio, comDuasCasas).veredito).toBe('correto');
+    }
+  });
 });

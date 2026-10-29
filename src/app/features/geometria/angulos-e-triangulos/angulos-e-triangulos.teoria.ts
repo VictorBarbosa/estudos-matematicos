@@ -59,7 +59,7 @@ export const TEORIA_ANGULOS: readonly Teoria[] = [
     formulas: [
       { tex: '|b - c| < a < b + c' },
       {
-        tex: 'a^{2} = b^{2} + c^{2} \;\\Rightarrow\; \\text{retângulo}',
+        tex: 'a^{2} = b^{2} + c^{2} \\;\\Rightarrow\\; \\text{retângulo}',
         legenda: 'Maior que: obtusângulo. Menor que: acutângulo.',
       },
     ],
@@ -71,7 +71,7 @@ export const TEORIA_ANGULOS: readonly Teoria[] = [
       },
       {
         descricao: 'Se o maior lado empata com a soma, os três pontos ficam alinhados.',
-        tex: 'a = b + c \;\\Rightarrow\; \\text{triângulo degenerado}',
+        tex: 'a = b + c \\;\\Rightarrow\\; \\text{triângulo degenerado}',
       },
       {
         descricao: 'Pela lei dos cossenos, o sinal da diferença revela o maior ângulo.',
@@ -79,7 +79,7 @@ export const TEORIA_ANGULOS: readonly Teoria[] = [
       },
       {
         descricao: 'Com α = 90° o cosseno zera, e sobra exatamente Pitágoras.',
-        tex: '\\cos 90^\\circ = 0 \;\\Rightarrow\; a^{2} = b^{2} + c^{2}',
+        tex: '\\cos 90^\\circ = 0 \\;\\Rightarrow\\; a^{2} = b^{2} + c^{2}',
         nota: 'Pitágoras é o caso particular da lei dos cossenos.',
       },
     ],

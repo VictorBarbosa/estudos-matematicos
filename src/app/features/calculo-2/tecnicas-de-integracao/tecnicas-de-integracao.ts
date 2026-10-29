@@ -73,7 +73,7 @@ export class TecnicasDeIntegracao {
         },
         {
           descricao: 'Isolamos dx e substituímos.',
-          tex: `dx = \\frac{du}{${a}} \;\\Rightarrow\; \\frac{1}{${a}}\\int u^{${n}}\\,du`,
+          tex: `dx = \\frac{du}{${a}} \\;\\Rightarrow\\; \\frac{1}{${a}}\\int u^{${n}}\\,du`,
         },
         {
           descricao: 'Aplicamos a regra da potência.',

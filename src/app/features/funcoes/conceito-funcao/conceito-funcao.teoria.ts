@@ -11,20 +11,20 @@ export const TEORIA_CONCEITO: readonly Teoria[] = [
       'duas saídas. O contrário é permitido — duas entradas podem levar à mesma saída.',
     formulas: [
       { tex: 'f: A \\to B', legenda: 'A é o domínio, B é o contradomínio.' },
-      { tex: 'x_1 = x_2 \;\\Rightarrow\; f(x_1) = f(x_2)', legenda: 'Mesma entrada, mesma saída.' },
+      { tex: 'x_1 = x_2 \\;\\Rightarrow\\; f(x_1) = f(x_2)', legenda: 'Mesma entrada, mesma saída.' },
     ],
     demonstracao: [
       {
         descricao: 'Uma máquina que para cada entrada devolve uma saída previsível.',
-        tex: 'x \;\\longrightarrow\; \\boxed{f} \;\\longrightarrow\; f(x)',
+        tex: 'x \\;\\longrightarrow\\; \\boxed{f} \\;\\longrightarrow\\; f(x)',
       },
       {
         descricao: 'Duas entradas diferentes podem dar a mesma saída — isso é permitido.',
-        tex: 'f(x) = x^{2} \;\\Rightarrow\; f(2) = f(-2) = 4',
+        tex: 'f(x) = x^{2} \\;\\Rightarrow\\; f(2) = f(-2) = 4',
       },
       {
         descricao: 'Mas uma entrada com duas saídas não define função.',
-        tex: 'y^{2} = x \;\\Rightarrow\; x = 4 \\text{ daria } y = 2 \\text{ e } y = -2',
+        tex: 'y^{2} = x \\;\\Rightarrow\\; x = 4 \\text{ daria } y = 2 \\text{ e } y = -2',
         nota: 'Por isso essa relação não é função de x.',
       },
     ],
@@ -48,8 +48,8 @@ export const TEORIA_CONCEITO: readonly Teoria[] = [
       'subconjunto do contradomínio, podendo ser menor que ele.',
     formulas: [
       { tex: '\\operatorname{Im}(f) = \\{f(x) \\mid x \\in D\\} \\subseteq B' },
-      { tex: 'f(x) = \\frac{1}{x} \;\\Rightarrow\; D = \\mathbb{R} - \\{0\\}', legenda: 'Divisão por zero exclui o zero.' },
-      { tex: 'f(x) = \\sqrt{x} \;\\Rightarrow\; D = [0, +\\infty)', legenda: 'Raiz par exige radicando não negativo.' },
+      { tex: 'f(x) = \\frac{1}{x} \\;\\Rightarrow\\; D = \\mathbb{R} - \\{0\\}', legenda: 'Divisão por zero exclui o zero.' },
+      { tex: 'f(x) = \\sqrt{x} \\;\\Rightarrow\\; D = [0, +\\infty)', legenda: 'Raiz par exige radicando não negativo.' },
     ],
     demonstracao: [
       {
@@ -93,19 +93,19 @@ export const TEORIA_CONCEITO: readonly Teoria[] = [
       },
       {
         descricao: 'Se ela cruza o gráfico em dois pontos, há dois valores para o mesmo x.',
-        tex: '(a, y_1) \;\\text{e}\; (a, y_2) \;\\text{com}\; y_1 \\neq y_2',
+        tex: '(a, y_1) \\;\\text{e}\\; (a, y_2) \\;\\text{com}\\; y_1 \\neq y_2',
         nota: 'A regra deixaria de ser determinística.',
       },
       {
         descricao: 'A circunferência falha no teste; a parábola de boca para cima passa.',
-        tex: 'x^{2} + y^{2} = 1 \;\\text{não é função} \\qquad y = x^{2} \;\\text{é}',
+        tex: 'x^{2} + y^{2} = 1 \\;\\text{não é função} \\qquad y = x^{2} \\;\\text{é}',
       },
     ],
     exemplo: {
       enunciado: 'Por que y² = x não define y como função de x.',
       passos: [
         { descricao: 'Isolando y aparecem dois valores.', tex: 'y = \\pm\\sqrt{x}' },
-        { descricao: 'Para x = 9, por exemplo.', tex: 'y = 3 \;\\text{e}\; y = -3' },
+        { descricao: 'Para x = 9, por exemplo.', tex: 'y = 3 \\;\\text{e}\\; y = -3' },
         { descricao: 'Uma entrada com duas saídas quebra a definição.', tex: '\\text{não é função}' },
       ],
     },

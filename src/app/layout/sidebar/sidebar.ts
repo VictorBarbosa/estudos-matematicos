@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject, output } from '@a
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CURRICULO, rotaDoTopico } from '@curriculo/curriculo';
 import { ProgressaoService } from '@core/progressao/progressao.service';
+import { RevisaoService } from '@core/revisao/revisao.service';
 import { ProgressoService } from '@core/treino/progresso.service';
 
 /**
@@ -27,6 +28,10 @@ export class Sidebar {
 
   private readonly progresso = inject(ProgressoService);
   private readonly progressao = inject(ProgressaoService);
+  private readonly revisao = inject(RevisaoService);
+
+  /** Quantos tópicos a fila de revisão de hoje tem, para o atalho aparecer. */
+  protected readonly naFilaDeRevisao = computed(() => this.revisao.fila().length);
 
   protected readonly areas = computed(() =>
     CURRICULO.map((area) => ({

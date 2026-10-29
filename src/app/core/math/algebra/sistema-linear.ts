@@ -98,7 +98,7 @@ export function resolverSistemaComPassos(sistema: Sistema): Resolucao<SolucaoSis
 
   passos.push({
     descricao: 'Subtraindo, resta uma equação só com x.',
-    tex: `${formatar(determinante)}x = ${formatar(c1 * b2 - c2 * b1)} \;\\Rightarrow\; x = ${formatar(x)}`,
+    tex: `${formatar(determinante)}x = ${formatar(c1 * b2 - c2 * b1)} \\;\\Rightarrow\\; x = ${formatar(x)}`,
   });
 
   passos.push({
@@ -108,7 +108,7 @@ export function resolverSistemaComPassos(sistema: Sistema): Resolucao<SolucaoSis
 
   passos.push({
     descricao: 'A solução é o ponto onde as duas retas se cruzam.',
-    tex: `(x, y) = (${formatar(x)},\; ${formatar(y)})`,
+    tex: `(x, y) = (${formatar(x)},\\; ${formatar(y)})`,
   });
 
   return { resultado: { tipo: 'determinado', x, y, determinante }, passos };

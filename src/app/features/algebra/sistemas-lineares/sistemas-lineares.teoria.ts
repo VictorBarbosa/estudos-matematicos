@@ -46,7 +46,7 @@ export const TEORIA_SISTEMAS: readonly Teoria[] = [
       'múltiplos das equações para que uma variável desapareça.',
     formulas: [
       {
-        tex: 'b_2 \\cdot E_1 - b_1 \\cdot E_2 \;\\Rightarrow\; (a_1b_2 - a_2b_1)x = c_1b_2 - c_2b_1',
+        tex: 'b_2 \\cdot E_1 - b_1 \\cdot E_2 \\;\\Rightarrow\\; (a_1b_2 - a_2b_1)x = c_1b_2 - c_2b_1',
         legenda: 'O método da adição, escrito no caso geral.',
       },
     ],
@@ -88,16 +88,16 @@ export const TEORIA_SISTEMAS: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'O determinante zero significa coeficientes proporcionais.',
-        tex: 'a_1b_2 = a_2b_1 \;\\Longleftrightarrow\; \\frac{a_1}{a_2} = \\frac{b_1}{b_2}',
+        tex: 'a_1b_2 = a_2b_1 \\;\\Longleftrightarrow\\; \\frac{a_1}{a_2} = \\frac{b_1}{b_2}',
         nota: 'Proporção entre os coeficientes é o mesmo que igualdade de inclinações.',
       },
       {
         descricao: 'Se os termos independentes seguem a mesma proporção, é a mesma reta.',
-        tex: '\\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2} \;\\Rightarrow\; \\text{infinitas soluções}',
+        tex: '\\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2} \\;\\Rightarrow\\; \\text{infinitas soluções}',
       },
       {
         descricao: 'Se não seguem, as retas são paralelas distintas.',
-        tex: '\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2} \;\\Rightarrow\; \\text{nenhuma solução}',
+        tex: '\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2} \\;\\Rightarrow\\; \\text{nenhuma solução}',
       },
     ],
     exemplo: {

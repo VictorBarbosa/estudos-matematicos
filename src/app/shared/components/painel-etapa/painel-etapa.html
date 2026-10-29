@@ -9,19 +9,29 @@
       @if (concluida()) {
         <p class="vencida">
           <span class="selo" aria-hidden="true">✓</span>
-          Etapa vencida — você acertou {{ alvo }} seguidas aqui.
+          Etapa vencida — {{ dominio().acertos }} acertos nas últimas {{ janela }} tentativas,
+          {{ dominio().acertosExigentes }} delas no Médio ou no Difícil.
         </p>
       } @else {
         <p class="meta">
-          Acerte <strong>{{ alvo }} exercícios seguidos</strong> na aba Treinar para liberar a
-          próxima etapa.
-          @if (avanco() > 0) {
-            <span class="restante">Faltam {{ faltam() }}.</span>
+          Para liberar a próxima etapa, acerte
+          <strong>{{ alvo }} das últimas {{ janela }} tentativas</strong> na aba Treinar, com
+          <strong>{{ alvoExigente }} acertos no Médio ou no Difícil</strong>.
+          @if (dominio().respostas > 0) {
+            <span class="restante">
+              Agora: {{ dominio().acertos }}/{{ alvo }} acertos
+              @if (faltamExigentes() > 0) {
+                · faltam {{ faltamExigentes() }} no Médio ou Difícil
+              }
+            </span>
           }
         </p>
       }
 
-      <ol class="marcadores" [attr.aria-label]="avanco() + ' de ' + alvo + ' acertos seguidos'">
+      <ol
+        class="marcadores"
+        [attr.aria-label]="avanco() + ' de ' + alvo + ' acertos nas últimas ' + janela + ' tentativas'"
+      >
         @for (cheio of marcadores(); track $index) {
           <li [class.cheio]="cheio"></li>
         }

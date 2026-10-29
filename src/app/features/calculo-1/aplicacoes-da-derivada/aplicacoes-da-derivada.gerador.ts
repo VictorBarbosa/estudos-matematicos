@@ -1,10 +1,11 @@
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
-const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
+const { saoEquivalentes: proximos } = numeroComCasas(3, 1e-4);
 
-type Pergunta = 'ponto-critico' | 'valor-maximo' | 'otimizacao';
+type Pergunta = 'ponto-critico' | 'valor-maximo' | 'otimizacao' | 'taxas-relacionadas';
 
 /** Exercícios de aplicação da derivada: extremos e otimização. */
 export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
@@ -13,6 +14,10 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
+
+    if (pergunta === 'taxas-relacionadas') {
+      return exercicioTaxasRelacionadas(nivel, rng);
+    }
 
     if (pergunta === 'otimizacao') {
       // Perímetro fixo: a área máxima é do quadrado de lado P/4.
@@ -40,7 +45,7 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
             },
             {
               descricao: 'Derivamos e igualamos a zero.',
-              tex: `A'(x) = ${perimetro / 2} - 2x = 0 \;\\Rightarrow\; x = ${lado}`,
+              tex: `A'(x) = ${perimetro / 2} - 2x = 0 \\;\\Rightarrow\\; x = ${lado}`,
             },
             {
               descricao: 'A segunda derivada é negativa, confirmando o máximo.',
@@ -104,7 +109,7 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
             },
             {
               descricao: 'A segunda derivada classifica cada um.',
-              tex: `f''(x) = 6x \;\\Rightarrow\; f''(-${k}) < 0 \;\\text{(máximo)}`,
+              tex: `f''(x) = 6x \\;\\Rightarrow\\; f''(-${k}) < 0 \\;\\text{(máximo)}`,
             },
             {
               descricao: 'Avaliamos a função no ponto de máximo.',
@@ -155,7 +160,7 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
           },
           {
             descricao: 'Resolvendo a equação.',
-            tex: `3x^{2} = ${3 * k * k} \;\\Rightarrow\; x = \\pm${k}`,
+            tex: `3x^{2} = ${3 * k * k} \\;\\Rightarrow\\; x = \\pm${k}`,
           },
           { descricao: 'O maior deles é o pedido.', tex: `x = ${k}` },
         ],
@@ -184,14 +189,9 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
-  saoEquivalentes: proximos,
-  formatar: (valor) =>
-    Number(valor.toFixed(3)).toLocaleString('pt-BR', { maximumFractionDigits: 3 }),
+  ...numeroComCasas(3, 1e-4),
 };
 
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
@@ -199,8 +199,239 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'facil':
       return rng.escolher<Pergunta>(['ponto-critico', 'otimizacao']);
     case 'medio':
-      return rng.escolher<Pergunta>(['ponto-critico', 'valor-maximo', 'otimizacao']);
+      return rng.escolher<Pergunta>([
+        'ponto-critico',
+        'valor-maximo',
+        'otimizacao',
+        'taxas-relacionadas',
+      ]);
     case 'dificil':
-      return rng.escolher<Pergunta>(['valor-maximo', 'otimizacao']);
+      return rng.escolher<Pergunta>(['valor-maximo', 'otimizacao', 'taxas-relacionadas']);
   }
+}
+
+/** Os dois arquétipos de taxas relacionadas: a esfera inflando e a escada que escorrega. */
+type Cenario = 'esfera' | 'escada' | 'quadrado';
+
+/**
+ * Exercícios de taxas relacionadas.
+ *
+ * A descrição do tópico prometia o assunto e ele não existia — e é um dos
+ * itens cobrados em Calcul différentiel (0M02). A armadilha central é
+ * substituir o valor do instante ANTES de derivar, o que anula a derivada.
+ */
+function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
+  const cenario = rng.escolher<Cenario>(
+    nivel === 'dificil' ? ['escada', 'esfera', 'quadrado'] : ['esfera', 'quadrado'],
+  );
+
+  if (cenario === 'esfera') {
+    const raio = rng.inteiro(2, 12);
+    const taxaRaio = rng.inteiro(1, 6);
+    // dV/dt = 4πr²·dr/dt
+    const gabarito = 4 * Math.PI * raio * raio * taxaRaio;
+
+    return {
+      id: `aplic-taxas-esfera-${raio}-${taxaRaio}-${rng.inteiro(0, 9999)}`,
+      nivel,
+      enunciado:
+        `Um balão esférico é inflado e seu raio cresce ${taxaRaio} cm/s. A que taxa o VOLUME ` +
+        `cresce no instante em que o raio vale ${raio} cm? (em cm³/s, 2 casas decimais)`,
+      enunciadoTex:
+        `V = \\frac{4}{3}\\pi r^{3} \\qquad \\frac{dr}{dt} = ${taxaRaio} ` +
+        `\\qquad r = ${raio}`,
+      gabarito,
+      resolucao: {
+        resultado: gabarito,
+        passos: [
+          {
+            descricao: 'Partimos da relação que vale em qualquer instante.',
+            tex: 'V = \\frac{4}{3}\\pi r^{3}',
+          },
+          {
+            descricao: 'Derivamos os dois lados em relação ao tempo, pela regra da cadeia.',
+            tex: '\\frac{dV}{dt} = 4\\pi r^{2} \\frac{dr}{dt}',
+            nota: 'O fator 4πr² é a área da superfície da esfera.',
+          },
+          {
+            descricao: 'Só agora substituímos os valores do instante pedido.',
+            tex:
+              `\\frac{dV}{dt} = 4\\pi \\cdot ${raio}^{2} \\cdot ${taxaRaio} = ` +
+              `${(4 * raio * raio * taxaRaio)}\\pi \\approx ${gabarito.toFixed(2)}`,
+          },
+        ],
+      },
+      conceitos: ['aplic-derivada.taxas-relacionadas'],
+      armadilhas: semColisoes(
+        [
+          {
+            resposta: (4 / 3) * Math.PI * raio ** 3,
+            diagnostico:
+              'Esse é o VOLUME no instante, não a taxa com que ele cresce. A pergunta é por ' +
+              'dV/dt, que sai de derivar a relação.',
+            passo: 0,
+            conceito: 'aplic-derivada.taxas-relacionadas',
+          },
+          {
+            resposta: 4 * Math.PI * raio * raio,
+            diagnostico:
+              'Faltou multiplicar por dr/dt. A regra da cadeia dá dV/dt = (dV/dr)·(dr/dt), e ' +
+              `aqui dr/dt = ${taxaRaio}.`,
+            passo: 1,
+            conceito: 'aplic-derivada.taxas-relacionadas',
+          },
+          {
+            resposta: 4 * Math.PI * taxaRaio * taxaRaio * raio,
+            diagnostico:
+              'O que vai ao quadrado é o RAIO, não a taxa: dV/dt = 4πr²·(dr/dt).',
+            passo: 1,
+            conceito: 'aplic-derivada.taxas-relacionadas',
+          },
+        ],
+        gabarito,
+        proximos,
+      ),
+      dica: nivel === 'medio' ? 'Derive V em relação a t antes de substituir o raio.' : undefined,
+    };
+  }
+
+  if (cenario === 'quadrado') {
+    const lado = rng.inteiro(3, 20);
+    const taxaLado = rng.inteiro(1, 5);
+    // dA/dt = 2L·dL/dt
+    const gabarito = 2 * lado * taxaLado;
+
+    return {
+      id: `aplic-taxas-quadrado-${lado}-${taxaLado}-${rng.inteiro(0, 9999)}`,
+      nivel,
+      enunciado:
+        `O lado de um quadrado cresce ${taxaLado} cm/s. A que taxa cresce a ÁREA no instante ` +
+        `em que o lado mede ${lado} cm? (em cm²/s)`,
+      enunciadoTex:
+        `A = L^{2} \\qquad \\frac{dL}{dt} = ${taxaLado} \\qquad L = ${lado}`,
+      gabarito,
+      resolucao: {
+        resultado: gabarito,
+        passos: [
+          { descricao: 'A área em função do lado.', tex: 'A = L^{2}' },
+          {
+            descricao: 'Derivando em relação ao tempo.',
+            tex: '\\frac{dA}{dt} = 2L\\frac{dL}{dt}',
+            nota: 'O 2L é o perímetro dividido por 2: crescer o lado acrescenta duas faixas.',
+          },
+          {
+            descricao: 'Substituindo os valores do instante.',
+            tex: `\\frac{dA}{dt} = 2 \\cdot ${lado} \\cdot ${taxaLado} = ${gabarito}`,
+          },
+        ],
+      },
+      conceitos: ['aplic-derivada.taxas-relacionadas'],
+      armadilhas: semColisoes(
+        [
+          {
+            resposta: taxaLado * taxaLado,
+            diagnostico:
+              'A taxa da área não é o quadrado da taxa do lado. É preciso derivar A = L², o ' +
+              'que traz o lado ATUAL para a conta.',
+            passo: 1,
+            conceito: 'aplic-derivada.taxas-relacionadas',
+          },
+          {
+            resposta: lado * lado,
+            diagnostico: 'Esse é a área no instante, não a taxa com que ela cresce.',
+            passo: 0,
+            conceito: 'aplic-derivada.taxas-relacionadas',
+          },
+          {
+            resposta: 4 * taxaLado,
+            diagnostico: 'Essa é a taxa do PERÍMETRO: dP/dt = 4·dL/dt. A pergunta é pela área.',
+            passo: 1,
+            conceito: 'aplic-derivada.taxas-relacionadas',
+          },
+        ],
+        gabarito,
+        proximos,
+      ),
+    };
+  }
+
+  // Escada de comprimento L apoiada na parede: x² + y² = L².
+  const trio = rng.escolher([
+    [3, 4, 5],
+    [6, 8, 10],
+    [5, 12, 13],
+    [9, 12, 15],
+    [8, 15, 17],
+  ]);
+  const [x, y, comprimento] = trio as [number, number, number];
+  const taxaX = rng.inteiro(1, 4);
+  // x·dx/dt + y·dy/dt = 0  ⇒  dy/dt = −x·(dx/dt)/y
+  const gabarito = -(x * taxaX) / y;
+
+  return {
+    id: `aplic-taxas-escada-${x}-${y}-${taxaX}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado:
+      `Uma escada de ${comprimento} m escorrega: o pé dela se afasta da parede a ${taxaX} m/s. ` +
+      `A que taxa o topo desce quando o pé está a ${x} m da parede? ` +
+      '(em m/s, com sinal, 3 casas decimais)',
+    enunciadoTex:
+      `x^{2} + y^{2} = ${comprimento}^{2} \\qquad \\frac{dx}{dt} = ${taxaX} ` +
+      `\\qquad x = ${x}`,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: 'Pitágoras vale em todo instante: é a relação a derivar.',
+          tex: `x^{2} + y^{2} = ${comprimento ** 2}`,
+        },
+        {
+          descricao: 'Derivamos em relação ao tempo; o lado direito é constante.',
+          tex: '2x\\frac{dx}{dt} + 2y\\frac{dy}{dt} = 0',
+        },
+        {
+          descricao: 'Isolamos a taxa procurada.',
+          tex: '\\frac{dy}{dt} = -\\frac{x}{y}\\frac{dx}{dt}',
+        },
+        {
+          descricao: `Com x = ${x}, Pitágoras dá y = ${y}.`,
+          tex:
+            `\\frac{dy}{dt} = -\\frac{${x}}{${y}} \\cdot ${taxaX} = ` +
+            `${gabarito.toFixed(3)}`,
+          nota: 'O sinal negativo é a informação física: o topo DESCE enquanto o pé se afasta.',
+        },
+      ],
+    },
+    conceitos: ['aplic-derivada.taxas-relacionadas'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: (x * taxaX) / y,
+          diagnostico:
+            'O módulo está certo, mas falta o sinal: y diminui enquanto x cresce, então ' +
+            'dy/dt é negativo.',
+          passo: 2,
+          conceito: 'aplic-derivada.taxas-relacionadas',
+        },
+        {
+          resposta: -taxaX,
+          diagnostico:
+            'As duas taxas não são iguais em módulo. Elas se relacionam por x/y, que muda ' +
+            'conforme a escada escorrega — e perto do chão o topo desce muito mais rápido.',
+          passo: 2,
+          conceito: 'aplic-derivada.taxas-relacionadas',
+        },
+        {
+          resposta: -(y * taxaX) / x,
+          diagnostico: 'A razão está de cabeça para baixo: dy/dt = −(x/y)·(dx/dt).',
+          passo: 2,
+          conceito: 'aplic-derivada.taxas-relacionadas',
+        },
+      ],
+      gabarito,
+      proximos,
+    ),
+    dica: 'Derive x² + y² = L² em relação a t. O comprimento é constante.',
+  };
 }

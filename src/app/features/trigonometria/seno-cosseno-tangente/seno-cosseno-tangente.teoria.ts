@@ -25,7 +25,7 @@ export const TEORIA_RAZOES: readonly Teoria[] = [
       },
       {
         descricao: 'Onde o cosseno zera, a tangente deixa de existir.',
-        tex: '\\cos 90° = 0 \;\\Rightarrow\; \\tan 90° \\text{ indefinida}',
+        tex: '\\cos 90° = 0 \\;\\Rightarrow\\; \\tan 90° \\text{ indefinida}',
       },
     ],
     vejaTambem: ['razoes.assintotas', 'razoes.complementares'],

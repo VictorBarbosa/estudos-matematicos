@@ -12,7 +12,7 @@ export const TEORIA_OPERACOES: readonly Teoria[] = [
       'poderia valer 14 ou 20, e nenhuma fórmula seria confiável.',
     formulas: [
       {
-        tex: '\\text{( )} \;\\to\; x^{n} \;\\to\; \\times \;\\div \;\\to\; + \;-',
+        tex: '\\text{( )} \\;\\to\\; x^{n} \\;\\to\\; \\times \\;\\div \\;\\to\\; + \\;-',
         legenda: 'Dentro de cada nível, resolve-se da esquerda para a direita.',
       },
     ],

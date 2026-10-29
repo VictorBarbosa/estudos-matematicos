@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ACERTOS_PARA_LIBERAR } from '@core/progressao/progressao.model';
+import { ACERTOS_NA_JANELA, RESPOSTAS_NA_JANELA } from '@core/progressao/progressao.model';
 import { ProgressaoService } from '@core/progressao/progressao.service';
 
 /**
@@ -19,7 +19,8 @@ import { ProgressaoService } from '@core/progressao/progressao.service';
 export class PainelTrilha {
   private readonly progressao = inject(ProgressaoService);
 
-  protected readonly alvo = ACERTOS_PARA_LIBERAR;
+  protected readonly alvo = ACERTOS_NA_JANELA;
+  protected readonly janela = RESPOSTAS_NA_JANELA;
   protected readonly total = this.progressao.totalDeEtapas;
   protected readonly vencidas = this.progressao.etapasVencidas;
   protected readonly percentual = this.progressao.percentual;
@@ -27,7 +28,7 @@ export class PainelTrilha {
   protected readonly completa = this.progressao.trilhaCompleta;
   protected readonly modoLivre = this.progressao.modoLivre;
 
-  /** Quantos acertos seguidos já foram feitos na etapa da vez. */
+  /** Quantos acertos a janela recente já acumulou na etapa da vez. */
   protected readonly avancoNaAtual = computed(() => {
     const atual = this.atual();
     return atual === null ? 0 : this.progressao.avancoNa(atual.topicoId);

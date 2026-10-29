@@ -11,7 +11,7 @@ function amostra(nivel: Nivel, quantidade = 60) {
 /** Lê os dois vetores do enunciado em TeX. */
 function vetores(enunciadoTex: string) {
   const [, ax, ay, bx, by] =
-    /\\vec\{a\} = \((-?\d+),\; (-?\d+)\) \\qquad \\vec\{b\} = \((-?\d+),\; (-?\d+)\)/.exec(
+    /\\vec\{a\} = \((-?\d+),\\; (-?\d+)\) \\qquad \\vec\{b\} = \((-?\d+),\\; (-?\d+)\)/.exec(
       enunciadoTex,
     )!;
 

@@ -5,3 +5,34 @@
 section > .observacao {
   margin-top: var(--esp-2);
 }
+
+/* A tabela de convergência das somas de Riemann. */
+.convergencia {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+
+  caption {
+    margin-bottom: var(--esp-2);
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: var(--esp-2) var(--esp-3);
+    border-bottom: 1px solid var(--borda);
+    text-align: right;
+  }
+
+  th {
+    color: var(--texto-suave);
+    font-weight: 600;
+  }
+
+  th:first-child,
+  td:first-child {
+    text-align: left;
+  }
+}

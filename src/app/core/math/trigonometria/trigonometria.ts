@@ -155,11 +155,11 @@ export function leiDosCossenosComPassos(
       },
       {
         descricao: 'Calculando.',
-        tex: `a^{2} = ${formatar(aQuadrado)} \;\\Rightarrow\; a = ${formatar(a)}`,
+        tex: `a^{2} = ${formatar(aQuadrado)} \\;\\Rightarrow\\; a = ${formatar(a)}`,
       },
       {
         descricao: 'Com ângulo de 90°, o cosseno zera e sobra o teorema de Pitágoras.',
-        tex: '\\cos 90° = 0 \;\\Rightarrow\; a^{2} = b^{2} + c^{2}',
+        tex: '\\cos 90° = 0 \\;\\Rightarrow\\; a^{2} = b^{2} + c^{2}',
         nota: 'Pitágoras é o caso particular da lei dos cossenos para o ângulo reto.',
       },
     ],
@@ -219,7 +219,7 @@ export function analisarOndaComPassos(
       },
       {
         descricao: 'A amplitude estica o gráfico na vertical: ela é o afastamento máximo do eixo.',
-        tex: `|A| = ${formatar(Math.abs(amplitude))} \;\\Rightarrow\; y \\in [${formatar(deslocamento - Math.abs(amplitude))},\; ${formatar(deslocamento + Math.abs(amplitude))}]`,
+        tex: `|A| = ${formatar(Math.abs(amplitude))} \\;\\Rightarrow\\; y \\in [${formatar(deslocamento - Math.abs(amplitude))},\\; ${formatar(deslocamento + Math.abs(amplitude))}]`,
       },
       {
         descricao: 'O coeficiente de x comprime a onda: o período é 2π dividido por ele.',

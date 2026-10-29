@@ -123,7 +123,7 @@ export function somaInfinitaComPassos(primeiro: number, razao: number): Resoluca
       },
       {
         descricao: 'Na fórmula da soma finita, o termo com qⁿ desaparece.',
-        tex: `S_n = \\frac{a_1(1 - q^{n})}{1 - q} \;\\longrightarrow\; \\frac{a_1}{1 - q}`,
+        tex: `S_n = \\frac{a_1(1 - q^{n})}{1 - q} \\;\\longrightarrow\\; \\frac{a_1}{1 - q}`,
       },
       {
         descricao: 'Chegamos a um total finito, apesar de somar infinitas parcelas.',

@@ -42,7 +42,7 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
               { descricao: 'Dividimos pelo coeficiente de x.', tex: `x = ${gabarito.paraTex()}` },
               {
                 descricao: 'É o ponto em que a reta cruza o eixo horizontal.',
-                tex: `\\left(${gabarito.paraTex()},\; 0\\right)`,
+                tex: `\\left(${gabarito.paraTex()},\\; 0\\right)`,
               },
             ],
           },

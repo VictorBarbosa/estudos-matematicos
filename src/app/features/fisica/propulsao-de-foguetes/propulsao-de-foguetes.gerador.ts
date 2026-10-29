@@ -1,14 +1,10 @@
 import { empuxoDeMotorComPassos, tsiolkovskyComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
-const proximos = (a: number, b: number): boolean => {
-  if (a === b) {
-    return true;
-  }
-  const escala = Math.max(Math.abs(a), Math.abs(b));
-  return escala === 0 ? true : Math.abs(a - b) / escala < 0.005;
-};
+/** A mesma tolerância da correção: 2 casas, como o enunciado pede. */
+const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
 
 type Pergunta = 'empuxo' | 'impulso-especifico' | 'delta-v' | 'razao-massas' | 'fracao-combustivel';
 
@@ -31,14 +27,9 @@ export const geradorPropulsao: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+(e[+-]?\d+)?$/i.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
-  saoEquivalentes: proximos,
-  formatar: (valor) =>
-    Number(valor.toPrecision(6)).toLocaleString('pt-BR', { maximumFractionDigits: 4 }),
+  ...numeroComCasas(2, 1e-4),
 };
 
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
@@ -68,7 +59,16 @@ function exercicioEmpuxo(nivel: Nivel, rng: Rng): Exercicio<number> {
       `${exaustao} m/s. Qual é o empuxo, em kN? (2 casas decimais)`,
     enunciadoTex: `\\dot{m} = ${vazao}\\,\\text{kg/s} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
     gabarito,
-    resolucao: { resultado: gabarito, passos },
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A resposta é pedida em kN, e 1 kN são 1000 N.',
+          tex: `F = ${gabarito.toFixed(2).replace('.', '{,}')}\\,\\text{kN}`,
+        },
+      ],
+    },
     conceitos: ['propulsao.empuxo'],
     armadilhas: semColisoes(
       [
@@ -278,7 +278,16 @@ function exercicioFracaoCombustivel(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciadoTex:
       `m_0 = ${massaInicial}\\,\\text{kg} \\qquad m_f = ${Number(massaFinal.toFixed(0))}\\,\\text{kg}`,
     gabarito,
-    resolucao: { resultado: gabarito, passos },
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A pergunta é pela fração de propelente, que é o complementar do que sobrou.',
+          tex: `1 - \\frac{m_f}{m_0} = ${gabarito.toFixed(2).replace('.', '{,}')}`,
+        },
+      ],
+    },
     conceitos: ['propulsao.tsiolkovsky', 'propulsao.estagios'],
     armadilhas: semColisoes(
       [

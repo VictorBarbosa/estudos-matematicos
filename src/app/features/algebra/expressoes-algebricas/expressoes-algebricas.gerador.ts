@@ -1,5 +1,6 @@
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const saoIguais = (a: number, b: number): boolean => Math.abs(a - b) < 1e-9;
@@ -18,10 +19,7 @@ export const geradorExpressoes: GeradorExercicio<number> = {
     return nivel === 'facil' ? exercicioAvaliar(nivel, rng) : exercicioReduzir(nivel, rng);
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: saoIguais,
   formatar: (valor) =>

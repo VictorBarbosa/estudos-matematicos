@@ -90,7 +90,7 @@ export function resolverLancamentoComPassos(
       },
       {
         descricao: 'Na vertical, a velocidade zera no ponto mais alto.',
-        tex: `v_y - g\\,t = 0 \;\\Rightarrow\; t = \\frac{${formatar(vy)}}{${formatar(g)}} = ${formatar(tempoNoApice)}\\text{ s}`,
+        tex: `v_y - g\\,t = 0 \\;\\Rightarrow\\; t = \\frac{${formatar(vy)}}{${formatar(g)}} = ${formatar(tempoNoApice)}\\text{ s}`,
       },
       {
         descricao: 'Substituindo esse tempo na equação da altura.',
@@ -98,7 +98,7 @@ export function resolverLancamentoComPassos(
       },
       {
         descricao: 'O voo termina quando a altura volta a zero.',
-        tex: `${formatar(h0)} + ${formatar(vy)}t - \\frac{${formatar(g)}t^{2}}{2} = 0 \;\\Rightarrow\; t = ${formatar(tempoDeVoo)}\\text{ s}`,
+        tex: `${formatar(h0)} + ${formatar(vy)}t - \\frac{${formatar(g)}t^{2}}{2} = 0 \\;\\Rightarrow\\; t = ${formatar(tempoDeVoo)}\\text{ s}`,
       },
       {
         descricao: 'O alcance é a velocidade horizontal vezes o tempo total.',

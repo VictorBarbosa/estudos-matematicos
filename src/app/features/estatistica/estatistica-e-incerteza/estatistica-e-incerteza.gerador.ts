@@ -7,6 +7,7 @@ import {
   resumirAmostra,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
@@ -36,10 +37,7 @@ export const geradorIncerteza: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -97,7 +95,7 @@ function exercicioResumo(
         : [
             {
               descricao: 'Ordenamos as medidas.',
-              tex: [...medidas].sort((a, b) => a - b).join(',\; '),
+              tex: [...medidas].sort((a, b) => a - b).join(',\\; '),
             },
             {
               descricao:
@@ -125,7 +123,7 @@ function exercicioResumo(
     id: `inc-${oque}-${medidas.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: `Para as medidas ${medidas.join('; ')}, qual é ${rotulo}? (2 casas decimais)`,
-    enunciadoTex: medidas.map((valor) => String(valor).replace('.', '{,}')).join(',\; '),
+    enunciadoTex: medidas.map((valor) => String(valor).replace('.', '{,}')).join(',\\; '),
     gabarito,
     resolucao: { resultado: gabarito, passos: completos },
     conceitos: ['incerteza.dispersao'],

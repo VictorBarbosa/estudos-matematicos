@@ -28,7 +28,7 @@ export const geradorMmcMdc: GeradorExercicio<number> = {
         alvo === 'mdc'
           ? 'Qual é o máximo divisor comum dos dois números?'
           : 'Qual é o mínimo múltiplo comum dos dois números?',
-      enunciadoTex: `\\operatorname{${alvo}}(${a}, ${b}) = \;?`,
+      enunciadoTex: `\\operatorname{${alvo}}(${a}, ${b}) = \\;?`,
       gabarito: resolucao.resultado,
       resolucao,
       conceitos: ['mmc-mdc.fatoracao', alvo === 'mdc' ? 'mmc-mdc.mdc' : 'mmc-mdc.mmc'],

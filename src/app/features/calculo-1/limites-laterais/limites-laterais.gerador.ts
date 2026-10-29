@@ -1,4 +1,5 @@
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
@@ -41,7 +42,7 @@ export const geradorLaterais: GeradorExercicio<number> = {
       enunciado: `Calcule o limite pela ${lado} no ponto x = ${ponto}.`,
       enunciadoTex:
         `f(x) = \\begin{cases} ${esquerdaTex} & x < ${ponto} \\\\ ${direitaTex} & x \\geq ${ponto} \\end{cases}` +
-        ` \\qquad \\lim_{x \\to ${ponto}^{${lado === 'esquerda' ? '-' : '+'}}} f(x) = \;?`,
+        ` \\qquad \\lim_{x \\to ${ponto}^{${lado === 'esquerda' ? '-' : '+'}}} f(x) = \\;?`,
       gabarito,
       resolucao: {
         resultado: gabarito,
@@ -92,10 +93,7 @@ export const geradorLaterais: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>

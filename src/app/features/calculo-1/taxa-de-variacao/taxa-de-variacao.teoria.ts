@@ -33,7 +33,7 @@ export const TEORIA_TAXA: readonly Teoria[] = [
       },
       {
         descricao: 'Uma média pode esconder o percurso: ida e volta dão taxa zero.',
-        tex: 's(t_1) = s(t_0) \;\\Rightarrow\; \\bar{v} = 0',
+        tex: 's(t_1) = s(t_0) \\;\\Rightarrow\\; \\bar{v} = 0',
         nota: 'O corpo se moveu, mas terminou onde começou.',
       },
     ],
@@ -41,7 +41,7 @@ export const TEORIA_TAXA: readonly Teoria[] = [
       enunciado: 'A taxa média de s(t) = t³ − 6t² + 9t entre t = 0 e t = 3.',
       passos: taxaMediaComPassos(EXEMPLO, 0, 3).passos,
     },
-    vejaTambem: ['taxa.instantanea', 'derivada.definicao'],
+    vejaTambem: ['taxa.instantanea', 'derivada.secante'],
   },
   {
     id: 'taxa.instantanea',
@@ -83,7 +83,7 @@ export const TEORIA_TAXA: readonly Teoria[] = [
       enunciado: 'Posição, velocidade e aceleração de s(t) = t³ − 6t² + 9t em t = 2.',
       passos: analisarMovimentoComPassos(EXEMPLO, 2).passos,
     },
-    vejaTambem: ['taxa.media', 'taxa.sinais', 'derivada.definicao'],
+    vejaTambem: ['taxa.media', 'taxa.sinais', 'derivada.secante'],
   },
   {
     id: 'taxa.sinais',
@@ -95,9 +95,9 @@ export const TEORIA_TAXA: readonly Teoria[] = [
       'movimento acelera; quando têm sinais opostos, freia. E onde a velocidade zera, a ' +
       'posição atinge um extremo.',
     formulas: [
-      { tex: "v(t) > 0 \;\\Rightarrow\; s \\text{ cresce} \\qquad v(t) < 0 \;\\Rightarrow\; s \\text{ decresce}" },
+      { tex: "v(t) > 0 \\;\\Rightarrow\\; s \\text{ cresce} \\qquad v(t) < 0 \\;\\Rightarrow\\; s \\text{ decresce}" },
       {
-        tex: 'v(t)\\,a(t) > 0 \;\\Rightarrow\; \\text{acelera}',
+        tex: 'v(t)\\,a(t) > 0 \\;\\Rightarrow\\; \\text{acelera}',
         legenda: 'Mesmo sinal: o módulo da velocidade aumenta.',
       },
     ],
@@ -109,15 +109,15 @@ export const TEORIA_TAXA: readonly Teoria[] = [
       },
       {
         descricao: 'A aceleração desempata: positiva ali, a posição tem um mínimo.',
-        tex: "s''(t) > 0 \;\\Rightarrow\; \\text{mínimo local}",
+        tex: "s''(t) > 0 \\;\\Rightarrow\\; \\text{mínimo local}",
       },
       {
         descricao: 'Negativa, um máximo.',
-        tex: "s''(t) < 0 \;\\Rightarrow\; \\text{máximo local}",
+        tex: "s''(t) < 0 \\;\\Rightarrow\\; \\text{máximo local}",
       },
       {
         descricao: 'Frear é ter aceleração contrária ao movimento, não aceleração negativa.',
-        tex: 'v < 0,\; a > 0 \;\\Rightarrow\; \\text{o corpo freia}',
+        tex: 'v < 0,\\; a > 0 \\;\\Rightarrow\\; \\text{o corpo freia}',
         nota: 'Um carro de ré desacelerando tem aceleração positiva.',
       },
     ],
@@ -125,6 +125,6 @@ export const TEORIA_TAXA: readonly Teoria[] = [
       enunciado: 'Em t = 1 a velocidade zera: o corpo para e inverte o sentido.',
       passos: analisarMovimentoComPassos(EXEMPLO, 1).passos,
     },
-    vejaTambem: ['taxa.instantanea', 'derivada.aplicacoes'],
+    vejaTambem: ['taxa.instantanea', 'derivada.interpretacao'],
   },
 ];

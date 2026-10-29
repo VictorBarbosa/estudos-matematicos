@@ -25,7 +25,7 @@ export const TEORIA_INDEFINIDA: readonly Teoria[] = [
       },
       {
         descricao: 'Conferindo: derivando o resultado, voltamos ao integrando.',
-        tex: "\\frac{d}{dx}\\left(\\frac{x^{4}}{4}\\right) = x^{3} \;\\checkmark",
+        tex: "\\frac{d}{dx}\\left(\\frac{x^{4}}{4}\\right) = x^{3} \\;\\checkmark",
         nota: 'Derivar a resposta é sempre a melhor forma de conferir uma integral.',
       },
       {
@@ -66,7 +66,7 @@ export const TEORIA_INDEFINIDA: readonly Teoria[] = [
       },
       {
         descricao: 'Uma condição inicial determina qual delas é a procurada.',
-        tex: 'F(0) = 3 \;\\Rightarrow\; C = 3',
+        tex: 'F(0) = 3 \\;\\Rightarrow\\; C = 3',
       },
     ],
     exemplo: {

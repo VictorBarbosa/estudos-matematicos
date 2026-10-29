@@ -17,15 +17,15 @@ export const TEORIA_LATERAIS: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'O sinal de menos no expoente indica aproximação por valores menores.',
-        tex: 'x \\to a^{-} \;\\Rightarrow\; x < a',
+        tex: 'x \\to a^{-} \\;\\Rightarrow\\; x < a',
       },
       {
         descricao: 'O de mais, por valores maiores.',
-        tex: 'x \\to a^{+} \;\\Rightarrow\; x > a',
+        tex: 'x \\to a^{+} \\;\\Rightarrow\\; x > a',
       },
       {
         descricao: 'Se os dois destinos diferem, não há um valor único para o limite.',
-        tex: 'L^{-} \\neq L^{+} \;\\Rightarrow\; \\lim_{x \\to a} f(x) \;\\text{não existe}',
+        tex: 'L^{-} \\neq L^{+} \\;\\Rightarrow\\; \\lim_{x \\to a} f(x) \\;\\text{não existe}',
       },
     ],
     exemplo: {
@@ -51,11 +51,11 @@ export const TEORIA_LATERAIS: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'À esquerda do ponto, só a primeira sentença está em vigor.',
-        tex: 'x < a \;\\Rightarrow\; f(x) = g(x)',
+        tex: 'x < a \\;\\Rightarrow\\; f(x) = g(x)',
       },
       {
         descricao: 'À direita, só a segunda.',
-        tex: 'x > a \;\\Rightarrow\; f(x) = h(x)',
+        tex: 'x > a \\;\\Rightarrow\\; f(x) = h(x)',
       },
       {
         descricao: 'Para o limite existir, as duas precisam coincidir no ponto de emenda.',

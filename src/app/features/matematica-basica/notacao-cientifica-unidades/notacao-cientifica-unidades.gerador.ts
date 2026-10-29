@@ -6,6 +6,7 @@ import {
   paraNotacaoCientificaComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarValorSimples } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 /**
@@ -46,14 +47,21 @@ export const geradorNotacao: GeradorExercicio<number> = {
    * recusar a notação exponencial seria recusar a resposta na forma mais
    * natural de digitá-la.
    */
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+(e[+-]?\d+)?$/i.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarValorSimples,
 
   saoEquivalentes: proximos,
-  formatar: (valor) =>
-    Number(valor.toPrecision(10)).toLocaleString('pt-BR', { maximumFractionDigits: 10 }),
+  formatar: (valor) => {
+    const magnitude = Math.abs(valor);
+
+    // Fora da faixa decimal curta, a notação científica é tanto o conteúdo do
+    // tópico quanto a única forma fiel: um gabarito de 1,2×10⁻¹¹ aparecia como
+    // "0" na linha "Resposta correta".
+    if (valor !== 0 && (magnitude < 1e-3 || magnitude >= 1e6)) {
+      return valor.toExponential(6).replace('.', ',');
+    }
+
+    return Number(valor.toPrecision(10)).toLocaleString('pt-BR', { maximumFractionDigits: 10 });
+  },
 };
 
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
@@ -84,7 +92,16 @@ function exercicioExpoente(nivel: Nivel, rng: Rng): Exercicio<number> {
       `(responda só o expoente, ex.: -4)`,
     enunciadoTex: `${String(valor).replace('.', '{,}')}`,
     gabarito: expoente,
-    resolucao: { resultado: expoente, passos },
+    resolucao: {
+      resultado: expoente,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A pergunta é só pelo expoente de 10.',
+          tex: `${String(valor).replace('.', '{,}')} = ${mantissa.toString().replace('.', '{,}')} \\times 10^{${expoente}} \\Rightarrow n = ${expoente}`,
+        },
+      ],
+    },
     conceitos: ['notacao.cientifica'],
     armadilhas: semColisoes(
       [
@@ -138,7 +155,7 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Converta ${formatarValor(valor)} ${de.simbolo}${unidade} para ${para.simbolo}${unidade}.`,
     enunciadoTex:
-      `${formatarTex(valor)}\\,\\text{${de.simbolo}${unidade}} = \;?\;\\text{${para.simbolo}${unidade}}`,
+      `${formatarTex(valor)}\\,\\text{${de.simbolo}${unidade}} = \\;?\\;\\text{${para.simbolo}${unidade}}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
     conceitos: ['notacao.unidades', 'notacao.cientifica'],
@@ -182,7 +199,16 @@ function exercicioProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       `(${formatarTex(a.mantissa)} \\times 10^{${a.expoente}}) \\cdot ` +
       `(${formatarTex(b.mantissa)} \\times 10^{${b.expoente}})`,
     gabarito: resultado.expoente,
-    resolucao: { resultado: resultado.expoente, passos },
+    resolucao: {
+      resultado: resultado.expoente,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A pergunta é só pelo expoente de 10 do resultado normalizado.',
+          tex: `n = ${resultado.expoente}`,
+        },
+      ],
+    },
     conceitos: ['notacao.cientifica'],
     armadilhas: semColisoes(
       [
@@ -245,7 +271,7 @@ function exercicioSignificativos(nivel: Nivel, rng: Rng): Exercicio<number> {
           descricao: escrito.includes(',')
             ? 'Há vírgula, então os zeros à direita foram medidos e contam.'
             : 'Sem vírgula, os zeros à direita são ambíguos e, por convenção, não contam.',
-          tex: `${escrito.replace(',', '{,}')} \;\\to\; ${gabarito}`,
+          tex: `${escrito.replace(',', '{,}')} \\;\\to\\; ${gabarito}`,
         },
         {
           descricao: 'Conferindo pela notação científica: sobram só os dígitos da mantissa.',

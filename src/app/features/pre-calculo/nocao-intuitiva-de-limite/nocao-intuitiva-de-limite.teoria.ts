@@ -12,12 +12,12 @@ export const TEORIA_LIMITE_INTUITIVO: readonly Teoria[] = [
       'definida ali, e o limite existir mesmo assim.',
     formulas: [
       { tex: '\\lim_{x \\to a} f(x) = L' },
-      { tex: '\\lim_{x \\to a} f(x) \;\\text{independe de}\; f(a)' },
+      { tex: '\\lim_{x \\to a} f(x) \\;\\text{independe de}\\; f(a)' },
     ],
     demonstracao: [
       {
         descricao: 'Tomamos valores de x cada vez mais próximos de a.',
-        tex: 'x = a \\pm 0{,}1,\; a \\pm 0{,}01,\; a \\pm 0{,}001,\; \\ldots',
+        tex: 'x = a \\pm 0{,}1,\\; a \\pm 0{,}01,\\; a \\pm 0{,}001,\\; \\ldots',
       },
       {
         descricao: 'Observamos para onde f(x) caminha.',
@@ -44,7 +44,7 @@ export const TEORIA_LIMITE_INTUITIVO: readonly Teoria[] = [
       'que não exista. Significa apenas que a substituição direta não resolve — é preciso ' +
       'manipular a expressão primeiro.',
     formulas: [
-      { tex: '\\frac{0}{0} \;\\text{é uma indeterminação, não um valor}' },
+      { tex: '\\frac{0}{0} \\;\\text{é uma indeterminação, não um valor}' },
       { tex: '\\frac{x^{2}-1}{x-1} = \\frac{(x+1)(x-1)}{x-1} = x+1 \\quad (x \\neq 1)' },
     ],
     demonstracao: [
@@ -90,7 +90,7 @@ export const TEORIA_LIMITE_INTUITIVO: readonly Teoria[] = [
       },
       {
         descricao: 'Como os valores discordam, não há um único destino.',
-        tex: '\\lim_{x \\to 0} f(x) \;\\text{não existe}',
+        tex: '\\lim_{x \\to 0} f(x) \\;\\text{não existe}',
         nota: 'Não é que seja infinito: é que simplesmente não há um valor único.',
       },
     ],

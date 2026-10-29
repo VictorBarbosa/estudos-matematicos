@@ -1,4 +1,5 @@
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-6;
@@ -29,7 +30,7 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
         id: `log-propriedade-${base}-${m}-${n}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: 'Use a propriedade do produto e informe o valor.',
-        enunciadoTex: `\\log_{${base}} \\left(${base ** m} \\cdot ${base ** n}\\right) = \;?`,
+        enunciadoTex: `\\log_{${base}} \\left(${base ** m} \\cdot ${base ** n}\\right) = \\;?`,
         gabarito,
         resolucao: {
           resultado: gabarito,
@@ -40,7 +41,7 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
             },
             {
               descricao: 'Cada parcela é o expoente que leva a base até o número.',
-              tex: `${base}^{${m}} = ${base ** m} \;\\Rightarrow\; ${m} \\qquad ${base}^{${n}} = ${base ** n} \;\\Rightarrow\; ${n}`,
+              tex: `${base}^{${m}} = ${base ** m} \\;\\Rightarrow\\; ${m} \\qquad ${base}^{${n}} = ${base ** n} \\;\\Rightarrow\\; ${n}`,
             },
             { descricao: 'Somamos.', tex: `${m} + ${n} = ${gabarito}` },
           ],
@@ -128,8 +129,8 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
       enunciado: 'Calcule o logaritmo.',
       enunciadoTex:
         expoente < 0
-          ? `\\log_{${base}} \\frac{1}{${base ** -expoente}} = \;?`
-          : `\\log_{${base}} ${argumento} = \;?`,
+          ? `\\log_{${base}} \\frac{1}{${base ** -expoente}} = \\;?`
+          : `\\log_{${base}} ${argumento} = \\;?`,
       gabarito: expoente,
       resolucao: {
         resultado: expoente,
@@ -174,10 +175,7 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>

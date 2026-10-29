@@ -1,5 +1,6 @@
 import { resolverOscilacaoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
@@ -46,7 +47,22 @@ export const geradorMhs: GeradorExercicio<number> = {
         `com amplitude de ${amplitude} m. Qual é ${nome}? (3 casas)`,
       enunciadoTex: `m = ${massa}\\text{ kg} \\qquad k = ${constante}\\text{ N/m} \\qquad A = ${amplitude}\\text{ m}`,
       gabarito,
-      resolucao: { resultado: gabarito, passos: resolucao.passos },
+      resolucao: {
+        resultado: gabarito,
+        passos: [
+          ...resolucao.passos,
+          {
+            descricao: `A pergunta é por ${nome}.`,
+            tex:
+              pergunta === 'velocidade-maxima'
+                ? `v_{max} = A\\omega = ${amplitude} \\cdot ` +
+                  `${frequenciaAngular.toFixed(3).replace('.', '{,}')} = ` +
+                  `${gabarito.toFixed(3).replace('.', '{,}')}`
+                : `${pergunta === 'periodo' ? 'T' : '\\omega'} = ` +
+                  `${gabarito.toFixed(3).replace('.', '{,}')}`,
+          },
+        ],
+      },
       conceitos: ['mhs.periodo', 'mhs.equacao'],
       armadilhas: semColisoes(
         [
@@ -89,10 +105,9 @@ export const geradorMhs: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s|rad\/s|m\/s|s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  // A unidade digitada no fim é ruído; o "s" não pode ser removido do meio,
+  // ou "sqrt(2)" viraria "qrt(2)".
+  analisar: (entrada) => analisarNumero(entrada.trim().replace(/\s*(rad\/s|m\/s|s)$/, '')),
 
   saoEquivalentes: proximos,
   formatar: (valor) =>

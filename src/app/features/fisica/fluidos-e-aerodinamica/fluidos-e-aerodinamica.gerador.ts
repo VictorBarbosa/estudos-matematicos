@@ -7,6 +7,7 @@ import {
   sustentacaoComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => {
@@ -38,10 +39,7 @@ export const geradorFluidos: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+(e[+-]?\d+)?$/i.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -74,7 +72,16 @@ function exercicioPressao(nivel: Nivel, rng: Rng): Exercicio<number> {
       'decimais; considere a atmosfera de 101,325 kPa)',
     enunciadoTex: `h = ${profundidade}\\,\\text{m} \\qquad \\rho = 1000\\,\\text{kg/m}^{3}`,
     gabarito,
-    resolucao: { resultado: gabarito, passos },
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A resposta é pedida em kPa.',
+          tex: `p = ${gabarito.toFixed(2).replace('.', '{,}')}\\,\\text{kPa}`,
+        },
+      ],
+    },
     conceitos: ['fluidos.pressao'],
     armadilhas: semColisoes(
       [
@@ -115,7 +122,16 @@ function exercicioEmpuxo(nivel: Nivel, rng: Rng): Exercicio<number> {
       'newtons? (2 casas decimais)',
     enunciadoTex: `V = ${volumeLitros}\\,\\text{L} \\qquad \\rho_{água} = 1000\\,\\text{kg/m}^{3}`,
     gabarito: resultado.empuxo,
-    resolucao: { resultado: resultado.empuxo, passos },
+    resolucao: {
+      resultado: resultado.empuxo,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A pergunta é pelo empuxo, não pela força resultante sobre o corpo.',
+          tex: `E = ${resultado.empuxo.toFixed(2).replace('.', '{,}')}\\,\\text{N}`,
+        },
+      ],
+    },
     conceitos: ['fluidos.pressao'],
     armadilhas: semColisoes(
       [
@@ -199,7 +215,16 @@ function exercicioSustentacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciadoTex:
       `A = ${area}\\,\\text{m}^{2} \\qquad v_{sup} = ${superior} \\qquad v_{inf} = ${inferior}`,
     gabarito: resultado,
-    resolucao: { resultado, passos },
+    resolucao: {
+      resultado,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A pergunta é pela força de sustentação.',
+          tex: `L = ${resultado.toFixed(2).replace('.', '{,}')}\\,\\text{N}`,
+        },
+      ],
+    },
     conceitos: ['fluidos.sustentacao', 'fluidos.bernoulli'],
     armadilhas: semColisoes(
       [
@@ -235,37 +260,76 @@ function exercicioBernoulli(nivel: Nivel, rng: Rng): Exercicio<number> {
   const velocidadeA = rng.inteiro(5, 30);
   const velocidadeB = velocidadeA + rng.inteiro(5, 40);
 
-  const { resultado, passos } = bernoulliComPassos(101325, velocidadeA, velocidadeB);
-  const gabarito = resultado / 1000;
+  const { passos } = bernoulliComPassos(101325, velocidadeA, velocidadeB);
+
+  /*
+   * A grandeza cobrada é a QUEDA de pressão, e não a pressão final.
+   *
+   * Corrigindo pela pressão total (~101 kPa), a tolerância relativa de 0,5%
+   * valia ±0,5 kPa — mais que a própria queda em boa parte dos sorteios. Com
+   * isso "a pressão não muda" era aceito como resposta certa. Medindo Δp, a
+   * mesma tolerância passa a cobrar o conceito.
+   */
+  const gabarito = (DENSIDADE_AR * (velocidadeB ** 2 - velocidadeA ** 2)) / 2;
 
   return {
     id: `flu-bern-${velocidadeA}-${velocidadeB}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Ar à pressão atmosférica (101,325 kPa) acelera de ${velocidadeA} para ${velocidadeB} ` +
-      'm/s num duto horizontal. Qual é a nova pressão, em kPa? (2 casas decimais)',
+      `Ar acelera de ${velocidadeA} para ${velocidadeB} m/s num duto horizontal. ` +
+      'De quanto CAI a pressão, em Pa? (1 casa decimal)',
     enunciadoTex:
-      `p_A = 101{,}325\\,\\text{kPa} \\qquad v_A = ${velocidadeA} \\qquad v_B = ${velocidadeB}`,
+      `v_A = ${velocidadeA} \\qquad v_B = ${velocidadeB} \\qquad ` +
+      '\\rho = 1{,}225\\,\\text{kg/m}^{3}',
     gabarito,
-    resolucao: { resultado: gabarito, passos },
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...passos.slice(0, 2),
+        {
+          descricao: 'O duto é horizontal, então os termos de altura se cancelam.',
+          tex: '\\Delta p = p_A - p_B = \\frac{\\rho\\left(v_B^{2} - v_A^{2}\\right)}{2}',
+        },
+        {
+          descricao: 'Substituindo os valores.',
+          tex:
+            `= \\frac{1{,}225 \\cdot \\left(${velocidadeB ** 2} - ${velocidadeA ** 2}\\right)}{2}` +
+            ` = ${gabarito.toFixed(1)}\\,\\text{Pa}`,
+          nota: 'O fluido acelerou, então a pressão caiu — é o princípio da sustentação.',
+        },
+      ],
+    },
     conceitos: ['fluidos.bernoulli'],
     armadilhas: semColisoes(
       [
         {
-          resposta:
-            (101325 + (DENSIDADE_AR * (velocidadeB ** 2 - velocidadeA ** 2)) / 2) / 1000,
+          resposta: -gabarito,
           diagnostico:
-            'O sinal está invertido: onde o fluido ACELERA, a pressão CAI. Foi exatamente isso ' +
-            'que Bernoulli descobriu.',
+            'O sinal está invertido: onde o fluido ACELERA, a pressão CAI. A queda pedida é ' +
+            'positiva, e vale (v_B² − v_A²), não (v_A² − v_B²).',
           passo: 2,
           conceito: 'fluidos.bernoulli',
         },
         {
-          resposta: 101.325,
+          resposta: 0,
           diagnostico:
             'A pressão muda sim: parte da energia de pressão virou energia cinética do ' +
             'escoamento.',
           passo: 1,
+          conceito: 'fluidos.bernoulli',
+        },
+        {
+          resposta: (DENSIDADE_AR * (velocidadeB - velocidadeA) ** 2) / 2,
+          diagnostico:
+            'A diferença dos QUADRADOS não é o quadrado da diferença: ' +
+            'v_B² − v_A² ≠ (v_B − v_A)².',
+          passo: 2,
+          conceito: 'fluidos.bernoulli',
+        },
+        {
+          resposta: gabarito / 1000,
+          diagnostico: 'Esse valor está em kPa; o enunciado pede a queda em Pa.',
+          passo: 3,
           conceito: 'fluidos.bernoulli',
         },
       ],

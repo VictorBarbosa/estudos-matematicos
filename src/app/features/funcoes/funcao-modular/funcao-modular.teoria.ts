@@ -47,22 +47,22 @@ export const TEORIA_MODULAR: readonly Teoria[] = [
       'uma função modular de primeiro grau tem a forma de V — e o bico fica exatamente no ' +
       'ponto em que a expressão dentro do módulo se anula.',
     formulas: [
-      { tex: 'f(x) = |ax + b| \;\\Rightarrow\; \\text{bico em } x = -\\frac{b}{a}' },
+      { tex: 'f(x) = |ax + b| \\;\\Rightarrow\\; \\text{bico em } x = -\\frac{b}{a}' },
     ],
     demonstracao: [
       {
         descricao: 'À direita do ponto crítico, a expressão interna é positiva.',
-        tex: 'ax + b > 0 \;\\Rightarrow\; f(x) = ax + b',
+        tex: 'ax + b > 0 \\;\\Rightarrow\\; f(x) = ax + b',
         nota: 'O módulo não altera nada: é a reta original.',
       },
       {
         descricao: 'À esquerda, ela é negativa, e o módulo inverte o sinal.',
-        tex: 'ax + b < 0 \;\\Rightarrow\; f(x) = -(ax + b)',
+        tex: 'ax + b < 0 \\;\\Rightarrow\\; f(x) = -(ax + b)',
         nota: 'A reta é refletida para cima do eixo x.',
       },
       {
         descricao: 'As duas semirretas se encontram onde a expressão vale zero.',
-        tex: 'ax + b = 0 \;\\Rightarrow\; x = -\\frac{b}{a}',
+        tex: 'ax + b = 0 \\;\\Rightarrow\\; x = -\\frac{b}{a}',
         nota: 'Esse encontro é o bico — ponto em que a função não tem uma inclinação única.',
       },
     ],
@@ -81,17 +81,17 @@ export const TEORIA_MODULAR: readonly Teoria[] = [
       'distância da origem. Esquecer a segunda solução é o erro mais frequente. E se k for ' +
       'negativo, não há solução alguma.',
     formulas: [
-      { tex: '|u| = k \\iff u = k \;\\text{ou}\; u = -k \\quad (k > 0)' },
-      { tex: '|u| = k \;\\text{não tem solução se}\; k < 0' },
+      { tex: '|u| = k \\iff u = k \\;\\text{ou}\\; u = -k \\quad (k > 0)' },
+      { tex: '|u| = k \\;\\text{não tem solução se}\\; k < 0' },
     ],
     demonstracao: [
       {
         descricao: 'Dois números distintos têm a mesma distância até zero.',
-        tex: '|x| = 3 \;\\Rightarrow\; x = 3 \;\\text{ou}\; x = -3',
+        tex: '|x| = 3 \\;\\Rightarrow\\; x = 3 \\;\\text{ou}\\; x = -3',
       },
       {
         descricao: 'Com uma expressão dentro, o raciocínio é o mesmo.',
-        tex: '|x - 1| = 3 \;\\Rightarrow\; x - 1 = 3 \;\\text{ou}\; x - 1 = -3',
+        tex: '|x - 1| = 3 \\;\\Rightarrow\\; x - 1 = 3 \\;\\text{ou}\\; x - 1 = -3',
       },
       {
         descricao: 'Resolvendo cada caso separadamente.',
@@ -100,7 +100,7 @@ export const TEORIA_MODULAR: readonly Teoria[] = [
       },
       {
         descricao: 'Como o módulo nunca é negativo, uma igualdade a número negativo é impossível.',
-        tex: '|x - 1| = -3 \;\\Rightarrow\; S = \\varnothing',
+        tex: '|x - 1| = -3 \\;\\Rightarrow\\; S = \\varnothing',
       },
     ],
     exemplo: {

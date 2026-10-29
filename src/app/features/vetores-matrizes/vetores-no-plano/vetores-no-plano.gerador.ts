@@ -1,5 +1,6 @@
 import { decomporComPassos, direcaoGraus, modulo, somarComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
@@ -25,10 +26,8 @@ export const geradorVetores: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s|°/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  // O grau é ruído de unidade: a resposta em si é um número.
+  analisar: (entrada) => analisarNumero(entrada.replace(/°/g, '')),
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -57,7 +56,7 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `vet-mod-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: `Qual é o módulo do vetor (${x}, ${y})? (2 casas decimais)`,
-    enunciadoTex: `\\vec{v} = (${x},\; ${y})`,
+    enunciadoTex: `\\vec{v} = (${x},\\; ${y})`,
     gabarito: resultado,
     resolucao: {
       resultado,
@@ -120,7 +119,16 @@ function exercicioComponente(eixo: 'x' | 'y', nivel: Nivel, rng: Rng): Exercicio
       `${eixo === 'x' ? 'horizontal' : 'vertical'}? (2 casas decimais)`,
     enunciadoTex: `|\\vec{v}| = ${comprimento} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito,
-    resolucao: { resultado: gabarito, passos },
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...passos,
+        {
+          descricao: `A pergunta é pela componente ${eixo}.`,
+          tex: `v_${eixo} = ${gabarito.toFixed(2).replace('.', '{,}')}`,
+        },
+      ],
+    },
     conceitos: ['vetores.definicao'],
     armadilhas: semColisoes(
       [
@@ -169,7 +177,7 @@ function exercicioModuloDaSoma(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Qual é o módulo da soma dos vetores (${a.x}, ${a.y}) e (${b.x}, ${b.y})? ` +
       '(2 casas decimais)',
-    enunciadoTex: `\\vec{a} = (${a.x},\; ${a.y}) \\qquad \\vec{b} = (${b.x},\; ${b.y})`,
+    enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito,
     resolucao: {
       resultado: gabarito,
@@ -227,7 +235,7 @@ function exercicioDirecao(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Qual é o ângulo que o vetor (${x}, ${y}) forma com o eixo x positivo, medido no ` +
       'sentido anti-horário? (em graus, 2 casas)',
-    enunciadoTex: `\\vec{v} = (${x},\; ${y})`,
+    enunciadoTex: `\\vec{v} = (${x},\\; ${y})`,
     gabarito: resultado,
     resolucao: {
       resultado,

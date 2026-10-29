@@ -48,7 +48,7 @@ export const TEORIA_SEMELHANCA: readonly Teoria[] = [
     formulas: [
       { tex: '\\frac{AB}{BC} = \\frac{A\'B\'}{B\'C\'}' },
       {
-        tex: '\\frac{a}{b} = \\frac{c}{x} \;\\Rightarrow\; x = \\frac{bc}{a}',
+        tex: '\\frac{a}{b} = \\frac{c}{x} \\;\\Rightarrow\\; x = \\frac{bc}{a}',
         legenda: 'A quarta proporcional, por multiplicação em cruz.',
       },
     ],
@@ -95,12 +95,12 @@ export const TEORIA_SEMELHANCA: readonly Teoria[] = [
       },
       {
         descricao: 'Os dois triângulos menores têm os mesmos ângulos do original.',
-        tex: '\\frac{b}{a} = \\frac{m}{b} \;\\Rightarrow\; b^{2} = a m',
+        tex: '\\frac{b}{a} = \\frac{m}{b} \\;\\Rightarrow\\; b^{2} = a m',
         nota: 'Mesmos ângulos significa lados proporcionais.',
       },
       {
         descricao: 'O mesmo vale para o outro cateto.',
-        tex: '\\frac{c}{a} = \\frac{n}{c} \;\\Rightarrow\; c^{2} = a n',
+        tex: '\\frac{c}{a} = \\frac{n}{c} \\;\\Rightarrow\\; c^{2} = a n',
       },
       {
         descricao: 'Somando as duas relações e usando m + n = a.',

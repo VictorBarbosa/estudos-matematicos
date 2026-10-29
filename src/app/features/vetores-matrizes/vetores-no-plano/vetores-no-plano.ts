@@ -69,14 +69,14 @@ export class VetoresNoPlano {
   protected readonly decomposicaoTex = computed(() => {
     const { x, y } = this.a();
     return (
-      `\\vec{a} = (${this.formatar(x)},\; ${this.formatar(y)}) \\qquad ` +
+      `\\vec{a} = (${this.formatar(x)},\\; ${this.formatar(y)}) \\qquad ` +
       `|\\vec{a}| = ${this.formatar(this.moduloA())}`
     );
   });
 
   protected readonly somaTex = computed(() => {
     const s = this.soma();
-    return `\\vec{a} + \\vec{b} = (${this.formatar(s.x)},\; ${this.formatar(s.y)})`;
+    return `\\vec{a} + \\vec{b} = (${this.formatar(s.x)},\\; ${this.formatar(s.y)})`;
   });
 
   /** Os dois vetores, a soma e as linhas do paralelogramo. */

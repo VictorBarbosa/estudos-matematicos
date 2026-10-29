@@ -17,7 +17,7 @@ export const TEORIA_COMPOSICAO: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Aplicamos a função de dentro primeiro.',
-        tex: 'x \;\\longrightarrow\; \\boxed{g} \;\\longrightarrow\; g(x) \;\\longrightarrow\; \\boxed{f} \;\\longrightarrow\; f(g(x))',
+        tex: 'x \\;\\longrightarrow\\; \\boxed{g} \\;\\longrightarrow\\; g(x) \\;\\longrightarrow\\; \\boxed{f} \\;\\longrightarrow\\; f(g(x))',
       },
       {
         descricao: 'Com f(x) = 2x e g(x) = x + 3, compondo numa ordem.',
@@ -50,7 +50,7 @@ export const TEORIA_COMPOSICAO: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Partimos de y = f(x) e isolamos x.',
-        tex: 'y = 2x + 1 \;\\Rightarrow\; x = \\frac{y - 1}{2}',
+        tex: 'y = 2x + 1 \\;\\Rightarrow\\; x = \\frac{y - 1}{2}',
       },
       {
         descricao: 'Trocamos os nomes, por convenção de escrever a entrada como x.',
@@ -58,12 +58,12 @@ export const TEORIA_COMPOSICAO: readonly Teoria[] = [
       },
       {
         descricao: 'Conferindo: compor as duas devolve o próprio x.',
-        tex: 'f^{-1}(f(x)) = \\frac{(2x + 1) - 1}{2} = x \;\\checkmark',
+        tex: 'f^{-1}(f(x)) = \\frac{(2x + 1) - 1}{2} = x \\;\\checkmark',
         nota: 'Essa verificação é a definição de inversa, não um extra.',
       },
       {
         descricao: 'Cada operação é desfeita na ordem contrária.',
-        tex: '\\text{dobrar, somar 1} \;\\longrightarrow\; \\text{subtrair 1, dividir por 2}',
+        tex: '\\text{dobrar, somar 1} \\;\\longrightarrow\\; \\text{subtrair 1, dividir por 2}',
       },
     ],
     exemplo: {
@@ -91,11 +91,11 @@ export const TEORIA_COMPOSICAO: readonly Teoria[] = [
       },
       {
         descricao: 'Trocar as coordenadas de um ponto é refleti-lo na reta y = x.',
-        tex: '(a, b) \;\\longleftrightarrow\; (b, a)',
+        tex: '(a, b) \\;\\longleftrightarrow\\; (b, a)',
       },
       {
         descricao: 'Se duas entradas dessem a mesma saída, a volta seria ambígua.',
-        tex: 'f(2) = f(-2) = 4 \;\\Rightarrow\; f^{-1}(4) = ?',
+        tex: 'f(2) = f(-2) = 4 \\;\\Rightarrow\\; f^{-1}(4) = ?',
         nota: 'Por isso x² só tem inversa se restringirmos o domínio a x ≥ 0.',
       },
     ],

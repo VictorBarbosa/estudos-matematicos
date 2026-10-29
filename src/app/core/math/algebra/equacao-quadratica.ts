@@ -42,7 +42,7 @@ export function resolverQuadraticaComPassos(
   const passos: Passo[] = [
     {
       descricao: 'Identificamos os coeficientes.',
-      tex: `${equacao} = 0 \\qquad a = ${formatar(a)},\; b = ${formatar(b)},\; c = ${formatar(c)}`,
+      tex: `${equacao} = 0 \\qquad a = ${formatar(a)},\\; b = ${formatar(b)},\\; c = ${formatar(c)}`,
     },
     {
       descricao: 'Calculamos o discriminante, que decide quantas raízes existem.',

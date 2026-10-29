@@ -240,7 +240,7 @@ export function planoInclinadoComPassos(
         }
       : {
           descricao: 'O atrito dá conta da componente do peso: o bloco fica parado.',
-          tex: `P_x \\le f_{max} \;\\Rightarrow\; a = 0`,
+          tex: `P_x \\le f_{max} \\;\\Rightarrow\\; a = 0`,
           nota: 'Nesse caso o atrito vale exatamente Pₓ, não o máximo.',
         },
   );

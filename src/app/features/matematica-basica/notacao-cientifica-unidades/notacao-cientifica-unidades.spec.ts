@@ -49,7 +49,7 @@ describe('geradorNotacao', () => {
     for (const exercicio of exercicios) {
       // O enunciado em TeX carrega valor e as duas unidades.
       const [, valor, origem, destino] =
-        /^([\d{},]+)\\,\\text\{(\S*?)[a-zA-Z]\} = \;\?\;\\text\{(\S*?)[a-zA-Z]\}$/.exec(
+        /^([\d{},]+)\\,\\text\{(\S*?)[a-zA-Z]\} = \\;\?\\;\\text\{(\S*?)[a-zA-Z]\}$/.exec(
           exercicio.enunciadoTex,
         )!;
 

@@ -40,7 +40,7 @@ export const TEORIA_POLINOMIOS: readonly Teoria[] = [
       enunciado: 'Fatorando x³ − 6x² + 11x − 6 em três binômios de grau 1.',
       passos: fatorarPorRaizesComPassos(EXEMPLO).passos,
     },
-    vejaTambem: ['polinomios.divisao', 'polinomios.raizes', 'fatoracao.fator-comum'],
+    vejaTambem: ['polinomios.divisao', 'polinomios.raizes', 'fatoracao.ideia'],
   },
   {
     id: 'polinomios.divisao',
@@ -95,7 +95,7 @@ export const TEORIA_POLINOMIOS: readonly Teoria[] = [
         legenda: 'Teorema de D’Alembert: raiz e fator são a mesma informação.',
       },
       {
-        tex: '\\frac{p}{q}: \; p \\mid a_0, \; q \\mid a_n',
+        tex: '\\frac{p}{q}: \\; p \\mid a_0, \\; q \\mid a_n',
         legenda: 'As únicas raízes racionais possíveis.',
       },
     ],
@@ -123,6 +123,6 @@ export const TEORIA_POLINOMIOS: readonly Teoria[] = [
       enunciado: 'O resto de x³ − 6x² + 11x − 6 dividido por x − 2.',
       passos: restoPorBinomioComPassos(EXEMPLO, 2).passos,
     },
-    vejaTambem: ['polinomios.divisao', 'quadratica.bhaskara'],
+    vejaTambem: ['polinomios.divisao', 'equacao2.bhaskara'],
   },
 ];

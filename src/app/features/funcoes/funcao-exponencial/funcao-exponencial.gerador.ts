@@ -1,9 +1,22 @@
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
-const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-6;
+/**
+ * Tolerância de correção: as duas casas decimais que o enunciado pede, ou
+ * 0,01% relativos quando o valor é grande.
+ *
+ * Antes era 1e-6 absoluto na detecção de armadilhas e 0,01% relativo na
+ * correção, o que reprovava justamente a resposta pedida: com base 3, o tempo
+ * de duplicação é 0,6309 e "0,63" contava como erro.
+ */
+const proximos = (a: number, b: number): boolean =>
+  Math.abs(a - b) <= Math.max(0.005, Math.abs(b) * 1e-4);
 
-type Pergunta = 'valor' | 'inicial' | 'duplicacao';
+type Pergunta = 'valor' | 'inicial' | 'duplicacao' | 'meia-vida';
+
+/** O número e, a base natural, escrito como o enunciado o apresenta. */
+const E_TEX = 'e';
 
 /**
  * Exercícios de função exponencial.
@@ -20,7 +33,75 @@ export const geradorExponencial: GeradorExercicio<number> = {
     const base = sortearBase(nivel, rng);
     const inicial = rng.inteiro(1, 40) * rng.escolher([1, 5, 10]);
 
-    const funcaoTex = `f(x) = ${inicial === 1 ? '' : inicial + ' \\cdot '}${base}^{x}`;
+    const baseTex = base === Math.E ? E_TEX : String(base);
+    const funcaoTex = `f(x) = ${inicial === 1 ? '' : inicial + ' \\cdot '}${baseTex}^{x}`;
+
+    if (pergunta === 'meia-vida') {
+      // Decaimento N(t) = N₀·e^(−λt): a meia-vida é ln2/λ e não depende de N₀.
+      const lambda = rng.escolher([0.05, 0.1, 0.2, 0.25, 0.4, 0.5, 0.693]);
+      const gabarito = Math.log(2) / lambda;
+
+      return {
+        id: `exponencial-meiavida-${lambda}-${rng.inteiro(0, 9999)}`,
+        nivel,
+        enunciado:
+          `Uma amostra decai segundo N(t) = N₀·e^(−${String(lambda).replace('.', ',')}t), com t ` +
+          'em anos. Qual é a meia-vida? (arredonde para 2 casas)',
+        enunciadoTex: `N(t) = N_0 e^{-${String(lambda).replace('.', '{,}')}\\,t}`,
+        gabarito,
+        resolucao: {
+          resultado: gabarito,
+          passos: [
+            {
+              descricao: 'Meia-vida é o tempo em que resta metade da amostra.',
+              tex: `N_0 e^{-${String(lambda).replace('.', '{,}')}t} = \\frac{N_0}{2}`,
+            },
+            {
+              descricao: 'O N₀ se cancela: a meia-vida não depende da quantidade inicial.',
+              tex: `e^{-${String(lambda).replace('.', '{,}')}t} = \\frac{1}{2}`,
+            },
+            {
+              descricao: 'Aplicamos o logaritmo natural para tirar t do expoente.',
+              tex: `t = \\frac{\\ln 2}{${String(lambda).replace('.', '{,}')}} \\approx ${gabarito.toFixed(4)}`,
+              nota: 'Com três meias-vidas resta 1/8 da amostra — nunca zero.',
+            },
+          ],
+        },
+        conceitos: ['exponencial.meia-vida', 'exponencial.numero-e'],
+        armadilhas: semColisoes(
+          [
+            {
+              resposta: 1 / (2 * lambda),
+              diagnostico:
+                'Meia-vida não é "metade de 1/λ". O t está no EXPOENTE, então sair dele ' +
+                'exige logaritmo: t = ln2/λ.',
+              passo: 2,
+              conceito: 'exponencial.meia-vida',
+            },
+            {
+              resposta: Math.log(0.5) / lambda,
+              diagnostico:
+                'O sinal ficou invertido: ln(1/2) é negativo e o expoente também, e os dois ' +
+                'negativos se cancelam. A meia-vida é positiva.',
+              passo: 2,
+              conceito: 'exponencial.meia-vida',
+            },
+            {
+              resposta: Math.log(10) / lambda,
+              diagnostico: 'Esse é o tempo para cair a um DÉCIMO. Para a metade, usa-se ln 2.',
+              passo: 0,
+              conceito: 'exponencial.meia-vida',
+            },
+          ],
+          gabarito,
+          proximos,
+        ),
+        dica:
+          nivel === 'medio'
+            ? 'Divida os dois lados por N₀ e aplique ln. O que sobra é ln2/λ.'
+            : undefined,
+      };
+    }
 
     if (pergunta === 'duplicacao') {
       const gabarito = Math.log(2) / Math.log(base);
@@ -171,19 +252,9 @@ export const geradorExponencial: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
+  analisar: analisarNumero,
 
-    const fracao = /^([+-]?\d+)\/(\d+)$/.exec(limpo);
-    if (fracao) {
-      const denominador = Number(fracao[2]);
-      return denominador === 0 ? null : Number(fracao[1]) / denominador;
-    }
-
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
-
-  saoEquivalentes: (a, b) => Math.abs(a - b) < Math.max(1e-6, Math.abs(a) * 1e-4),
+  saoEquivalentes: proximos,
   formatar: (valor) =>
     Number(valor.toFixed(4)).toLocaleString('pt-BR', { maximumFractionDigits: 4 }),
 };
@@ -193,9 +264,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'facil':
       return rng.escolher<Pergunta>(['valor', 'inicial']);
     case 'medio':
-      return rng.escolher<Pergunta>(['valor', 'inicial', 'duplicacao']);
+      return rng.escolher<Pergunta>(['valor', 'inicial', 'duplicacao', 'meia-vida']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['valor', 'duplicacao']);
+      return rng.escolher<Pergunta>(['valor', 'duplicacao', 'meia-vida']);
   }
 }
 
@@ -203,5 +274,9 @@ function sortearBase(nivel: Nivel, rng: Rng): number {
   if (nivel === 'facil') {
     return rng.escolher([2, 3, 10]);
   }
-  return rng.escolher(nivel === 'medio' ? [2, 3, 4, 5, 10] : [2, 3, 5, 0.5, 0.2]);
+  // A base natural entra a partir do Médio: é a base do cálculo, e o currículo
+  // promete o número e neste tópico.
+  return rng.escolher(
+    nivel === 'medio' ? [2, 3, 4, 5, 10, Math.E] : [2, 3, 5, 0.5, 0.2, Math.E],
+  );
 }

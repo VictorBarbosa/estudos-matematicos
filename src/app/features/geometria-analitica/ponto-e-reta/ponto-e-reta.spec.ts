@@ -29,7 +29,7 @@ describe('geradorPontoReta', () => {
 
     for (const exercicio of exercicios) {
       const [, ax, ay, bx, by] =
-        /A\((-?\d+),\; (-?\d+)\) \\qquad B\((-?\d+),\; (-?\d+)\)/.exec(exercicio.enunciadoTex)!;
+        /A\((-?\d+),\\; (-?\d+)\) \\qquad B\((-?\d+),\\; (-?\d+)\)/.exec(exercicio.enunciadoTex)!;
 
       const esperado = Math.hypot(Number(bx) - Number(ax), Number(by) - Number(ay));
       expect(exercicio.gabarito).toBeCloseTo(esperado, 9);

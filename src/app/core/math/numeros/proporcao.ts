@@ -120,7 +120,7 @@ export function divisaoProporcionalComPassos(
       },
       {
         descricao: 'A soma das partes tem de dar o total, o que determina k.',
-        tex: `${pesos.join(' + ')} = ${soma} \;\\Rightarrow\; ${soma}k = ${formatar(total)} \;\\Rightarrow\; k = ${formatar(constante)}`,
+        tex: `${pesos.join(' + ')} = ${soma} \\;\\Rightarrow\\; ${soma}k = ${formatar(total)} \\;\\Rightarrow\\; k = ${formatar(constante)}`,
       },
       {
         descricao: 'Com k conhecido, cada parte fica determinada.',

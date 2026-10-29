@@ -50,7 +50,10 @@ export const TEORIA_CINEMATICA: readonly Teoria[] = [
     definicao:
       'No gráfico de posição, a inclinação é a velocidade. No de velocidade, a inclinação é a ' +
       'aceleração e a ÁREA é o deslocamento. Essas duas leituras — inclinação e área — são ' +
-      'exatamente a derivada e a integral, encontradas aqui antes de qualquer formalismo.',
+      'exatamente a derivada e a integral, encontradas aqui antes de qualquer formalismo: ' +
+      'nada neste tópico depende delas, e os exercícios se resolvem com as equações do ' +
+      'movimento. Quando a trilha chegar ao cálculo, estas duas frases ganharão a definição ' +
+      'formal — e o mesmo gráfico voltará a aparecer.',
     formulas: [
       { tex: 'v = \\text{inclinação de } s(t)' },
       { tex: '\\Delta s = \\text{área sob } v(t)' },
@@ -75,6 +78,6 @@ export const TEORIA_CINEMATICA: readonly Teoria[] = [
       enunciado: 'O deslocamento como área, com v₀ = 6 m/s, a = 2 m/s², em 4 s.',
       passos: deslocamentoPorAreaComPassos(6, 2, 4).passos,
     },
-    vejaTambem: ['cinematica.equacoes', 'riemann.particao', 'taxa.media'],
+    vejaTambem: ['cinematica.equacoes', 'riemann.ideia', 'taxa.media'],
   },
 ];

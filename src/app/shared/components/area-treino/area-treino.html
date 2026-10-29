@@ -67,12 +67,23 @@
       <button type="button" class="secundario" (click)="s.revelarResolucao()">
         Não sei, mostrar a resolução
       </button>
+      <p class="aviso-desistencia">
+        Mostrar a resolução conta como tentativa não resolvida: o campo tranca e a sequência
+        volta a zero.
+      </p>
     }
   </div>
 
   <!-- aria-live para que o veredito seja anunciado sem roubar o foco. -->
   <div class="feedback" role="status" aria-live="polite">
-    @if (validacao) {
+    @if (s.desistiu()) {
+      <div class="veredito" data-veredito="incorreto">
+        <p class="mensagem">Resolução revelada — este exercício conta como não resolvido.</p>
+        <p class="gabarito">
+          Resposta correta: <strong>{{ gerador().formatar(exercicio.gabarito) }}</strong>
+        </p>
+      </div>
+    } @else if (validacao) {
       <div class="veredito" [attr.data-veredito]="validacao.veredito">
         <p class="mensagem">{{ validacao.mensagem }}</p>
         @if (validacao.diagnostico; as diagnostico) {
@@ -93,7 +104,9 @@
   @if (etapaVencida()) {
     <div class="desbloqueio" role="status">
       <p>
-        <strong>Etapa vencida!</strong> Você acertou {{ alvo }} seguidas neste tópico.
+        <strong>Etapa vencida!</strong>
+        {{ dominio().acertos }} acertos nas últimas {{ janela }} tentativas,
+        {{ dominio().acertosExigentes }} delas no Médio ou no Difícil.
       </p>
       @if (proximaEtapa(); as proxima) {
         <a class="principal" [routerLink]="proxima.rota">
@@ -102,9 +115,12 @@
         </a>
       }
     </div>
-  } @else if (s.sequencia() > 0) {
+  } @else if (dominio().respostas > 0) {
     <p class="rumo-ao-desbloqueio" role="status">
-      Mais {{ faltamParaVencer() }} acerto(s) seguido(s) e a próxima etapa abre.
+      {{ dominio().acertos }} de {{ alvo }} acertos nas últimas {{ janela }} tentativas.
+      @if (faltamExigentes() > 0) {
+        Faltam {{ faltamExigentes() }} acerto(s) no Médio ou no Difícil.
+      }
     </p>
   }
 

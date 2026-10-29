@@ -54,7 +54,7 @@ export const TEORIA_PROBABILIDADE: readonly Teoria[] = [
     formulas: [
       { tex: 'P(A \\cap B) = P(A) \\cdot P(B \\mid A)' },
       {
-        tex: 'A, B \\text{ independentes} \;\\Rightarrow\; P(A \\cap B) = P(A)P(B)',
+        tex: 'A, B \\text{ independentes} \\;\\Rightarrow\\; P(A \\cap B) = P(A)P(B)',
         legenda: 'Moedas e dados não guardam memória.',
       },
       {

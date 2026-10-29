@@ -74,11 +74,11 @@ export const TEORIA_PROPORCAO: readonly Teoria[] = [
       'errado entre as duas é o erro mais comum do tema — e nenhuma conta corrige isso depois.',
     formulas: [
       {
-        tex: '\\frac{a}{b} = \\frac{c}{x} \;\\Rightarrow\; x = \\frac{b \\cdot c}{a}',
+        tex: '\\frac{a}{b} = \\frac{c}{x} \\;\\Rightarrow\\; x = \\frac{b \\cdot c}{a}',
         legenda: 'Diretamente proporcionais.',
       },
       {
-        tex: 'a \\cdot b = c \\cdot x \;\\Rightarrow\; x = \\frac{a \\cdot b}{c}',
+        tex: 'a \\cdot b = c \\cdot x \\;\\Rightarrow\\; x = \\frac{a \\cdot b}{c}',
         legenda: 'Inversamente proporcionais.',
       },
     ],
@@ -126,7 +126,7 @@ export const TEORIA_PROPORCAO: readonly Teoria[] = [
       },
       {
         descricao: 'A soma tem de reconstituir o total.',
-        tex: 'p_1 k + p_2 k = T \;\\Rightarrow\; k(p_1 + p_2) = T',
+        tex: 'p_1 k + p_2 k = T \\;\\Rightarrow\\; k(p_1 + p_2) = T',
       },
       {
         descricao: 'Isolando k, o problema fica resolvido.',

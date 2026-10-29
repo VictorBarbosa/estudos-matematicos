@@ -16,7 +16,7 @@ export const TEORIA_TECNICAS: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Escolhemos o miolo como nova variável.',
-        tex: 'u = 2x + 1 \;\\Rightarrow\; du = 2\\,dx',
+        tex: 'u = 2x + 1 \\;\\Rightarrow\\; du = 2\\,dx',
       },
       {
         descricao: 'Trocamos dx por du/2.',
@@ -61,7 +61,7 @@ export const TEORIA_TECNICAS: readonly Teoria[] = [
       },
       {
         descricao: 'A escolha de u deve simplificar a nova integral.',
-        tex: '\\int x e^{x}\\,dx: \; u = x \;\\Rightarrow\; du = dx',
+        tex: '\\int x e^{x}\\,dx: \\; u = x \\;\\Rightarrow\\; du = dx',
         nota: 'Derivar x o faz sumir; derivar eˣ não muda nada. Por isso u = x.',
       },
     ],
@@ -76,17 +76,17 @@ export const TEORIA_TECNICAS: readonly Teoria[] = [
       'interna. Por partes serve para produtos de naturezas diferentes. Reconhecer o padrão ' +
       'é metade do trabalho.',
     formulas: [
-      { tex: "\\text{composta} + g' \;\\to\; \\text{substituição}" },
-      { tex: '\\text{polinômio} \\times \\text{exponencial ou trig.} \;\\to\; \\text{por partes}' },
+      { tex: "\\text{composta} + g' \\;\\to\\; \\text{substituição}" },
+      { tex: '\\text{polinômio} \\times \\text{exponencial ou trig.} \\;\\to\\; \\text{por partes}' },
     ],
     demonstracao: [
       {
         descricao: 'Aqui o x de fora é quase a derivada de x²+1: substituição.',
-        tex: '\\int x\\sqrt{x^{2}+1}\\,dx \;\\Rightarrow\; u = x^{2}+1',
+        tex: '\\int x\\sqrt{x^{2}+1}\\,dx \\;\\Rightarrow\\; u = x^{2}+1',
       },
       {
         descricao: 'Aqui não há derivada interna à vista: por partes.',
-        tex: '\\int x\\cos x\\,dx \;\\Rightarrow\; u = x,\; dv = \\cos x\\,dx',
+        tex: '\\int x\\cos x\\,dx \\;\\Rightarrow\\; u = x,\\; dv = \\cos x\\,dx',
       },
       {
         descricao: 'E muitas integrais simplesmente não têm primitiva elementar.',
@@ -95,5 +95,55 @@ export const TEORIA_TECNICAS: readonly Teoria[] = [
       },
     ],
     vejaTambem: ['tecnicas.substituicao', 'tecnicas.por-partes'],
+  },
+  {
+    id: 'tecnicas.fracoes-parciais',
+    titulo: 'Frações parciais',
+    resumo: 'Quebrar uma fração em parcelas simples, cada uma com primitiva conhecida.',
+    definicao:
+      'Uma fração cujo denominador fatora pode ser reescrita como soma de frações mais simples, ' +
+      'uma por fator. Isso importa porque não existe regra para integrar um quociente, mas ' +
+      'cada parcela A/(x − r) integra direto em A·ln|x − r|. A técnica é o caminho inverso de ' +
+      'somar frações com denominadores diferentes.',
+    formulas: [
+      {
+        tex: '\\frac{px + q}{(x - r_1)(x - r_2)} = \\frac{A}{x - r_1} + \\frac{B}{x - r_2}',
+        legenda: 'Dois fatores lineares distintos: uma parcela para cada.',
+      },
+      {
+        tex: '\\int \\frac{A}{x - r}\\,dx = A\\ln|x - r| + C',
+        legenda: 'A primitiva de cada parcela. O módulo não é decoração.',
+      },
+      {
+        tex: 'A = \\frac{p r_1 + q}{r_1 - r_2} \\qquad B = \\frac{p r_2 + q}{r_2 - r_1}',
+        legenda: 'Os coeficientes, obtidos avaliando a identidade em cada raiz.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Fatoramos o denominador e propomos a decomposição.',
+        tex: '\\frac{5x - 1}{(x - 1)(x + 2)} = \\frac{A}{x - 1} + \\frac{B}{x + 2}',
+      },
+      {
+        descricao: 'Multiplicamos tudo pelo denominador comum.',
+        tex: '5x - 1 = A(x + 2) + B(x - 1)',
+      },
+      {
+        descricao: 'Avaliar em x = 1 mata o termo de B e entrega A.',
+        tex: '4 = 3A \\;\\Rightarrow\\; A = \\frac{4}{3}',
+        nota:
+          'Substituir as raízes é mais rápido que montar o sistema: cada raiz anula um dos ' +
+          'termos.',
+      },
+      {
+        descricao: 'Avaliar em x = −2 entrega B.',
+        tex: '-11 = -3B \\;\\Rightarrow\\; B = \\frac{11}{3}',
+      },
+      {
+        descricao: 'Agora cada parcela integra pela regra do logaritmo.',
+        tex: '\\int \\frac{5x - 1}{(x-1)(x+2)}dx = \\frac{4}{3}\\ln|x-1| + \\frac{11}{3}\\ln|x+2| + C',
+      },
+    ],
+    vejaTambem: ['tecnicas.substituicao', 'tecnicas.escolha', 'fatoracao.diferenca'],
   },
 ];

@@ -26,7 +26,7 @@ export const TEORIA_CIRCUNFERENCIA: readonly Teoria[] = [
       },
       {
         descricao: 'Atenção ao sinal: o centro é o OPOSTO do que aparece no parêntese.',
-        tex: '(x - 3)^{2} + (y + 2)^{2} = 25 \;\\Rightarrow\; C(3,\\, -2)',
+        tex: '(x - 3)^{2} + (y + 2)^{2} = 25 \\;\\Rightarrow\\; C(3,\\, -2)',
       },
     ],
     exemplo: {
@@ -57,7 +57,7 @@ export const TEORIA_CIRCUNFERENCIA: readonly Teoria[] = [
       },
       {
         descricao: 'O lado direito é r². Se ele for negativo, não existe circunferência real.',
-        tex: 'r^{2} > 0 \;\\Rightarrow\; \\text{circunferência} \\qquad r^{2} = 0 \;\\Rightarrow\; \\text{um ponto}',
+        tex: 'r^{2} > 0 \\;\\Rightarrow\\; \\text{circunferência} \\qquad r^{2} = 0 \\;\\Rightarrow\\; \\text{um ponto}',
       },
     ],
     exemplo: {
@@ -89,7 +89,7 @@ export const TEORIA_CIRCUNFERENCIA: readonly Teoria[] = [
       },
       {
         descricao: 'Para a reta, o que importa é a MENOR distância até o centro.',
-        tex: 'd = r \;\\Rightarrow\; \\text{reta tangente, um único ponto em comum}',
+        tex: 'd = r \\;\\Rightarrow\\; \\text{reta tangente, um único ponto em comum}',
       },
     ],
     exemplo: {

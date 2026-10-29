@@ -1,5 +1,6 @@
 import { GRAVIDADE, paraRadianos, resolverLancamentoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
@@ -94,7 +95,16 @@ export const geradorBalistica: GeradorExercicio<number> = {
         `v_0 = ${velocidadeInicial}\\text{ m/s} \\qquad \\theta = ${anguloGraus}° \\qquad ` +
         `h_0 = ${alturaInicial}\\text{ m} \\qquad g = 9{,}81\\text{ m/s}^{2}`,
       gabarito,
-      resolucao: { resultado: gabarito, passos: resolucao.passos },
+      resolucao: {
+        resultado: gabarito,
+        passos: [
+          ...resolucao.passos,
+          {
+            descricao: `Entre as grandezas do lançamento, a pergunta é por ${nome}.`,
+            tex: `${gabarito.toFixed(2).replace('.', '{,}')}\\text{ ${unidade}}`,
+          },
+        ],
+      },
       conceitos: ['balistica.independencia', 'balistica.alcance'],
       armadilhas: semColisoes(armadilhas, gabarito, proximos),
       dica:
@@ -104,10 +114,9 @@ export const geradorBalistica: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s|m\/s|m|s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  // A unidade digitada no fim é ruído; o "s" e o "m" não podem ser removidos
+  // do meio, ou "sqrt(2)" viraria "qrt(2)".
+  analisar: (entrada) => analisarNumero(entrada.trim().replace(/\s*(m\/s|m|s)$/, '')),
 
   saoEquivalentes: proximos,
   formatar: (valor) => valor.toFixed(2).replace('.', ','),

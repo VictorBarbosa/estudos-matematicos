@@ -1,5 +1,6 @@
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
@@ -174,17 +175,7 @@ export const geradorIndefinida: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-
-    const fracao = /^([+-]?\d+)\/(\d+)$/.exec(limpo);
-    if (fracao) {
-      const denominador = Number(fracao[2]);
-      return denominador === 0 ? null : Number(fracao[1]) / denominador;
-    }
-
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>

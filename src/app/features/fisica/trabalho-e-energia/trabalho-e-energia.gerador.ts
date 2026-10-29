@@ -7,6 +7,7 @@ import {
   trabalhoComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.1;
@@ -32,10 +33,7 @@ export const geradorEnergia: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -123,7 +121,7 @@ function exercicioCinetica(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           descricao: 'Dobrar a velocidade quadruplica a energia.',
-          tex: `2v \;\\Rightarrow\; 4E_c`,
+          tex: `2v \\;\\Rightarrow\\; 4E_c`,
           nota: 'É por isso que colisões a alta velocidade são tão mais destrutivas.',
         },
       ],

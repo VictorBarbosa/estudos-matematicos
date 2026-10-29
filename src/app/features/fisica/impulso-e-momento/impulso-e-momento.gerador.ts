@@ -1,5 +1,6 @@
 import { colisaoComPassos, energiaCinetica, impulsoComPassos, momentoLinear } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
@@ -25,10 +26,7 @@ export const geradorMomento: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -110,7 +108,16 @@ function exercicioImpulso(nivel: Nivel, rng: Rng): Exercicio<number> {
       'impulso, em N·s?',
     enunciadoTex: `F = ${forca}\\,\\text{N} \\qquad \\Delta t = ${tempo}\\,\\text{s} \\qquad m = ${massa}\\,\\text{kg}`,
     gabarito: resultado,
-    resolucao: { resultado, passos },
+    resolucao: {
+      resultado,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A pergunta é pelo impulso, em N·s — não pela variação de velocidade.',
+          tex: `J = F\\,\\Delta t = ${resultado}\\,\\text{N}\\cdot\\text{s}`,
+        },
+      ],
+    },
     conceitos: ['momento.impulso'],
     armadilhas: semColisoes(
       [

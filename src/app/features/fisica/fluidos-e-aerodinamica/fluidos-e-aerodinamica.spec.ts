@@ -106,8 +106,8 @@ describe('geradorFluidos', () => {
     }
   });
 
-  it('acelerando o ar, a pressão cai', () => {
-    const exercicios = amostra('dificil', 200).filter((e) => e.enunciado.includes('nova pressão'));
+  it('acelerando o ar, a queda de pressão confere com Bernoulli', () => {
+    const exercicios = amostra('dificil', 200).filter((e) => e.enunciado.includes('CAI a pressão'));
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -115,8 +115,24 @@ describe('geradorFluidos', () => {
       const [, vA, vB] = /v_A = (\d+) \\qquad v_B = (\d+)/.exec(exercicio.enunciadoTex)!;
 
       expect(Number(vB)).toBeGreaterThan(Number(vA));
-      // Fluido mais rápido, pressão menor que a atmosférica.
-      expect(exercicio.gabarito).toBeLessThan(101.325);
+
+      const esperado = (DENSIDADE_AR * (Number(vB) ** 2 - Number(vA) ** 2)) / 2;
+      expect(exercicio.gabarito).toBeCloseTo(esperado, 6);
+    }
+  });
+
+  it('"a pressão não muda" é reprovado em todo sorteio de Bernoulli', () => {
+    const exercicios = amostra('dificil', 200).filter((e) => e.enunciado.includes('CAI a pressão'));
+
+    expect(exercicios.length).toBeGreaterThan(0);
+
+    for (const exercicio of exercicios) {
+      // Era o furo do item 9: a tolerância sobre a pressão total (~101 kPa)
+      // era maior que a própria queda, e 0 passava como certo.
+      expect(corrigir(geradorFluidos, exercicio, '0').veredito).toBe('incorreto');
+      expect(corrigir(geradorFluidos, exercicio, String(-exercicio.gabarito)).veredito).toBe(
+        'incorreto',
+      );
     }
   });
 

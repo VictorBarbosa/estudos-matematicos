@@ -1,8 +1,9 @@
 import { anguloInternoRegular, somaAngulosInternosComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
-const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-6;
+const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
 
 type Pergunta = 'soma-internos' | 'angulo-regular' | 'terceiro-angulo' | 'lados-pelo-angulo';
 
@@ -23,14 +24,10 @@ export const geradorAngulos: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s|°/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  // O grau é ruído de unidade: a resposta em si é um número.
+  analisar: (entrada) => analisarNumero(entrada.replace(/°/g, '')),
 
-  saoEquivalentes: proximos,
-  formatar: (valor) =>
-    Number(valor.toFixed(4)).toLocaleString('pt-BR', { maximumFractionDigits: 4 }),
+  ...numeroComCasas(2, 1e-4),
 };
 
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {

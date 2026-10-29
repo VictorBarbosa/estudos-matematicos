@@ -13,7 +13,7 @@ export const TEORIA_NEWTON: readonly Teoria[] = [
       'comum do assunto é achar que movimento exige força; movimento exige apenas ausência de ' +
       'força contrária.',
     formulas: [
-      { tex: '\\vec{F}_R = 0 \;\\Rightarrow\; \\vec{v} = \\text{constante}' },
+      { tex: '\\vec{F}_R = 0 \\;\\Rightarrow\\; \\vec{v} = \\text{constante}' },
       { tex: '\\vec{F}_R = m\\vec{a}' },
       {
         tex: '\\vec{F}_{AB} = -\\vec{F}_{BA}',

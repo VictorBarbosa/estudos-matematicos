@@ -262,7 +262,7 @@ export function colisaoComPassos(
       {
         descricao: 'A energia cinética não se conserva: parte virou deformação e calor.',
         tex:
-          `E_i = ${formatar(Number(energiaAntes.toFixed(3)))}\\,\\text{J} \;\\to\; ` +
+          `E_i = ${formatar(Number(energiaAntes.toFixed(3)))}\\,\\text{J} \\;\\to\\; ` +
           `E_f = ${formatar(Number(energiaDepois.toFixed(3)))}\\,\\text{J}`,
         nota: `Perdeu-se ${formatar(Number((energiaAntes - energiaDepois).toFixed(3)))} J.`,
       },
