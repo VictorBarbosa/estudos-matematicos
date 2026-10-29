@@ -125,7 +125,7 @@ describe('cinemática e dinâmica', () => {
   });
 
   it('Torricelli recusa deslocamento inalcançável', () => {
-    expect(() => torricelliComPassos(2, -5, 100)).toThrow(ErroMatematico);
+    expect(() => torricelliComPassos(2, -5, 100)).toThrowError(ErroMatematico);
   });
 
   it('a área sob a velocidade é o deslocamento', () => {
@@ -153,7 +153,7 @@ describe('cinemática e dinâmica', () => {
   });
 
   it('recusa massa não positiva', () => {
-    expect(() => segundaLeiComPassos(0, [{ valor: 1, descricao: 'f' }])).toThrow(ErroMatematico);
+    expect(() => segundaLeiComPassos(0, [{ valor: 1, descricao: 'f' }])).toThrowError(ErroMatematico);
   });
 
   it('no plano inclinado, a normal cai e a componente do peso cresce com o ângulo', () => {
@@ -188,8 +188,8 @@ describe('cinemática e dinâmica', () => {
   });
 
   it('recusa ângulos e coeficientes inválidos', () => {
-    expect(() => planoInclinadoComPassos(1, 100, 0.2)).toThrow(ErroMatematico);
-    expect(() => planoInclinadoComPassos(1, 30, -0.1)).toThrow(ErroMatematico);
+    expect(() => planoInclinadoComPassos(1, 100, 0.2)).toThrowError(ErroMatematico);
+    expect(() => planoInclinadoComPassos(1, 30, -0.1)).toThrowError(ErroMatematico);
   });
 });
 
@@ -220,12 +220,12 @@ describe('energia, impulso e momento', () => {
   });
 
   it('recusa altura inalcançável', () => {
-    expect(() => conservacaoEnergiaComPassos(2, 0, 10)).toThrow(ErroMatematico);
+    expect(() => conservacaoEnergiaComPassos(2, 0, 10)).toThrowError(ErroMatematico);
   });
 
   it('potência é trabalho por tempo', () => {
     expect(potenciaMediaComPassos(600, 4).resultado).toBeCloseTo(150, 9);
-    expect(() => potenciaMediaComPassos(100, 0)).toThrow(ErroMatematico);
+    expect(() => potenciaMediaComPassos(100, 0)).toThrowError(ErroMatematico);
   });
 
   it('o impulso iguala a variação do momento', () => {
@@ -365,7 +365,7 @@ describe('gravitação e propulsão', () => {
   });
 
   it('recusa massa final maior que a inicial', () => {
-    expect(() => tsiolkovskyComPassos(1, 2, 3000)).toThrow(ErroMatematico);
+    expect(() => tsiolkovskyComPassos(1, 2, 3000)).toThrowError(ErroMatematico);
   });
 
   it('o empuxo é vazão vezes velocidade de exaustão', () => {
@@ -424,10 +424,10 @@ describe('fluidos e termodinâmica', () => {
   });
 
   it('exige exatamente três grandezas e temperatura em kelvin', () => {
-    expect(() => gasIdealComPassos({ pressao: 1, volume: 1 })).toThrow(ErroMatematico);
+    expect(() => gasIdealComPassos({ pressao: 1, volume: 1 })).toThrowError(ErroMatematico);
     expect(() =>
       gasIdealComPassos({ pressao: 1, volume: 1, temperatura: 0, mols: undefined }),
-    ).toThrow(ErroMatematico);
+    ).toThrowError(ErroMatematico);
   });
 
   it('a primeira lei contabiliza calor e trabalho', () => {

@@ -19,9 +19,9 @@ describe('contagem', () => {
   });
 
   it('recusa fatorial inválido ou fora de precisão', () => {
-    expect(() => fatorial(-1)).toThrow(ErroMatematico);
-    expect(() => fatorial(2.5)).toThrow(ErroMatematico);
-    expect(() => fatorial(200)).toThrow(ErroMatematico);
+    expect(() => fatorial(-1)).toThrowError(ErroMatematico);
+    expect(() => fatorial(2.5)).toThrowError(ErroMatematico);
+    expect(() => fatorial(200)).toThrowError(ErroMatematico);
   });
 
   it('arranjos contam com ordem', () => {
@@ -87,8 +87,8 @@ describe('contagem', () => {
   });
 
   it('recusa escolher mais do que existe', () => {
-    expect(() => combinacoesComPassos(3, 5)).toThrow(ErroMatematico);
-    expect(() => arranjosComPassos(3, 5)).toThrow(ErroMatematico);
+    expect(() => combinacoesComPassos(3, 5)).toThrowError(ErroMatematico);
+    expect(() => arranjosComPassos(3, 5)).toThrowError(ErroMatematico);
   });
 
   it('permutações com repetição dividem pelas ordens indistinguíveis', () => {
@@ -113,9 +113,9 @@ describe('probabilidade', () => {
   });
 
   it('recusa contagens impossíveis', () => {
-    expect(() => probabilidadeComPassos(5, 3)).toThrow(ErroMatematico);
-    expect(() => probabilidadeComPassos(1, 0)).toThrow(ErroMatematico);
-    expect(() => probabilidadeComPassos(-1, 5)).toThrow(ErroMatematico);
+    expect(() => probabilidadeComPassos(5, 3)).toThrowError(ErroMatematico);
+    expect(() => probabilidadeComPassos(1, 0)).toThrowError(ErroMatematico);
+    expect(() => probabilidadeComPassos(-1, 5)).toThrowError(ErroMatematico);
   });
 
   it('eventos independentes multiplicam', () => {
@@ -130,7 +130,7 @@ describe('probabilidade', () => {
   });
 
   it('recusa probabilidade fora de [0, 1]', () => {
-    expect(() => probabilidadeConjuntaComPassos(1.5, 0.5, true)).toThrow(ErroMatematico);
+    expect(() => probabilidadeConjuntaComPassos(1.5, 0.5, true)).toThrowError(ErroMatematico);
   });
 
   it('ao menos um é o complementar de nenhum', () => {
@@ -150,7 +150,7 @@ describe('probabilidade', () => {
   });
 
   it('recusa tentativas inválidas', () => {
-    expect(() => aoMenosUmComPassos(0.5, 0)).toThrow(ErroMatematico);
-    expect(() => aoMenosUmComPassos(0.5, 1.5)).toThrow(ErroMatematico);
+    expect(() => aoMenosUmComPassos(0.5, 0)).toThrowError(ErroMatematico);
+    expect(() => aoMenosUmComPassos(0.5, 1.5)).toThrowError(ErroMatematico);
   });
 });

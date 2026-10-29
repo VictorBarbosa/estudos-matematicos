@@ -21,7 +21,7 @@ describe('mmcComPassos', () => {
     const { resultado, passos } = mmcComPassos(12, 18);
 
     expect(resultado).toBe(36);
-    expect(passos).toHaveLength(2);
+    expect(passos.length).toBe(2);
     expect(passos[0]?.tex).toContain('2^{2} \\cdot 3');
     expect(passos[1]?.descricao).toContain('MAIOR expoente');
   });

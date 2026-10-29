@@ -8,7 +8,7 @@ function amostra(nivel: Nivel, quantidade = 60) {
   return Array.from({ length: quantidade }, () => geradorProdutos.gerar(nivel, rng));
 }
 
-describe('geradorProdutos', () => {
+describe('geradorProdutos (produtos notáveis)', () => {
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, o gabarito é inteiro`, () => {
       for (const exercicio of amostra(nivel)) {

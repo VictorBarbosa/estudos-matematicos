@@ -17,15 +17,29 @@ Cada tópico tem a mesma anatomia:
 ```bash
 npm install
 npm start          # http://localhost:4200
-npm test           # suíte com Vitest
+npm test           # suíte com Vitest (jsdom)
+npm run test:cobertura   # a mesma suíte, com cobertura por arquivo
 npm run build      # build de produção
 npm run build:pages  # build para o GitHub Pages
 npm run gerar:teorias    # reindexa os conceitos (title/tópico/carregador)
 npm run gerar:geradores  # reindexa os geradores de exercício
 ```
 
-Os dois últimos reescrevem índices gerados em `core/`. Rode-os depois de criar, remover ou
-renomear um conceito ou um tópico — há testes que falham se o índice sair de sincronia.
+`gerar:teorias` e `gerar:geradores` reescrevem índices gerados em `core/`. Rode-os depois de
+criar, remover ou renomear um conceito ou um tópico — há testes que falham se o índice sair de
+sincronia.
+
+### Cobertura
+
+`npm run test:cobertura` imprime a tabela por arquivo no terminal — percentual de instruções,
+ramos, funções e linhas, com os números das linhas descobertas — e grava dois relatórios em
+`coverage/EstudosMatematicos/`:
+
+- `index.html`: navegável, mostra o código com as linhas não cobertas destacadas;
+- `lcov.info`: formato que a extensão Coverage Gutters do VS Code, o Codecov e o SonarQube leem.
+
+Os índices gerados e os catálogos usados só por teste ficam fora da conta (`coverageExclude` em
+`angular.json`): são dados, e contá-los só diluía o número.
 
 ## Publicação
 

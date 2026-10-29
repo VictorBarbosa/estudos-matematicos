@@ -44,7 +44,7 @@ describe('reta por dois pontos', () => {
   });
 
   it('recusa dois pontos coincidentes', () => {
-    expect(() => retaPorDoisPontosComPassos({ x: 1, y: 1 }, { x: 1, y: 1 })).toThrow(
+    expect(() => retaPorDoisPontosComPassos({ x: 1, y: 1 }, { x: 1, y: 1 })).toThrowError(
       ErroMatematico,
     );
   });
@@ -67,7 +67,7 @@ describe('circunferência', () => {
   });
 
   it('recusa coeficientes que não geram círculo real', () => {
-    expect(() => circunferenciaComPassos(0, 0, 4)).toThrow(ErroMatematico);
+    expect(() => circunferenciaComPassos(0, 0, 4)).toThrowError(ErroMatematico);
   });
 
   it('classifica a posição de um ponto', () => {
@@ -86,7 +86,7 @@ describe('cônicas', () => {
     expect(resultado.tipo).toBe('elipse');
     expect(resultado.excentricidade).toBeGreaterThan(0);
     expect(resultado.excentricidade).toBeLessThan(1);
-    expect(resultado.focos).toHaveLength(2);
+    expect(resultado.focos.length).toBe(2);
   });
 
   it('semieixos iguais dão uma circunferência, de excentricidade zero', () => {
@@ -106,6 +106,6 @@ describe('cônicas', () => {
   });
 
   it('recusa semieixos não positivos', () => {
-    expect(() => conicaComPassos(0, 3, false)).toThrow(ErroMatematico);
+    expect(() => conicaComPassos(0, 3, false)).toThrowError(ErroMatematico);
   });
 });

@@ -76,7 +76,7 @@ describe('geradorAplicacoesDerivada', () => {
     const f = (x: number) => x ** 3 - 3 * x;
     const criticos = pontosCriticos(f, -3, 3);
 
-    expect(criticos).toHaveLength(2);
+    expect(criticos.length).toBe(2);
     expect(criticos[0]!.tipo).toBe('maximo');
     expect(criticos[1]!.tipo).toBe('minimo');
   });

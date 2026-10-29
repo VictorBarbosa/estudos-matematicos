@@ -51,7 +51,7 @@ describe('divisão de polinômios', () => {
   });
 
   it('recusa divisão por zero', () => {
-    expect(() => dividirComPassos(Polinomio.de(1, 1), Polinomio.ZERO)).toThrow(ErroMatematico);
+    expect(() => dividirComPassos(Polinomio.de(1, 1), Polinomio.ZERO)).toThrowError(ErroMatematico);
   });
 });
 

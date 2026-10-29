@@ -211,7 +211,8 @@ describe('ProgressaoService', () => {
     // das vezes dentro de 20 tentativas. Esta é a medição do critério novo.
     const rng = criarRng(2718);
     let liberou = 0;
-    const simulacoes = 400;
+    // 150 rodadas bastam para separar 15% de 79%, e cada uma recria o TestBed.
+    const simulacoes = 150;
 
     for (let s = 0; s < simulacoes; s++) {
       localStorage.clear();
@@ -242,5 +243,5 @@ describe('ProgressaoService', () => {
 
     // Medido: ~15%, contra 79% do critério de "3 seguidos".
     expect(liberou / simulacoes).toBeLessThan(0.25);
-  });
+  }, 30_000);
 });

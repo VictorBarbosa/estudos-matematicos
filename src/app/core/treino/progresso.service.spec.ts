@@ -105,16 +105,21 @@ describe('ProgressoService', () => {
   });
 
   it('continua funcionando quando o armazenamento não está disponível', () => {
-    const leitura = vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => {
+    const negar = (): never => {
       throw new Error('acesso negado');
-    });
-    const escrita = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
-      throw new Error('acesso negado');
-    });
+    };
+    const leitura = vi.spyOn(Storage.prototype, 'getItem').mockImplementation(negar);
+    const escrita = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(negar);
 
     try {
       const progresso = new ProgressoService();
-      progresso.registrar({ topicoId: 'fracoes', conceitos: [], acertou: true, sequencia: 1, nivel: 'facil' });
+      progresso.registrar({
+        topicoId: 'fracoes',
+        conceitos: [],
+        acertou: true,
+        sequencia: 1,
+        nivel: 'facil',
+      });
 
       // O treino segue válido na sessão, apenas não é lembrado depois.
       expect(progresso.estatisticaDe('fracoes').acertos).toBe(1);

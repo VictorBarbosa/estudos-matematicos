@@ -71,7 +71,16 @@
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "coverageReporters": [["text", { "maxCols": 200 }], "html", "lcovonly"],
+            "coverageExclude": [
+              "src/app/**/*.catalogo.ts",
+              "src/app/core/teoria/registro-teorias.ts",
+              "src/app/core/treino/registro-geradores.ts",
+              "src/main.ts"
+            ]
+          }
         }
       }
     }

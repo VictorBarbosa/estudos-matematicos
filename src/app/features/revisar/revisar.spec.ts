@@ -53,18 +53,19 @@ describe('Revisar', () => {
     expect(texto()).toContain('Item 1 de 1');
     expect(texto()).toContain(TRILHA[0]!.titulo);
 
-    // O gerador vem por import dinâmico: esperamos o chunk chegar.
-    for (let tentativa = 0; tentativa < 50; tentativa++) {
+    // O gerador vem por import dinâmico: esperamos o chunk chegar. O orçamento
+    // é generoso porque na integração contínua o primeiro import é mais lento.
+    for (let tentativa = 0; tentativa < 200; tentativa++) {
       if (fixture.nativeElement.querySelector('app-area-treino') !== null) {
         break;
       }
-      await new Promise((resolve) => setTimeout(resolve, 10));
+      await new Promise((resolve) => setTimeout(resolve, 25));
       await fixture.whenStable();
     }
 
     expect(fixture.nativeElement.querySelector('app-area-treino')).not.toBeNull();
     expect(texto()).toContain('Sua resposta');
-  });
+  }, 30_000);
 
   it('ao fim da fila, oferece montar outra', async () => {
     const progresso = TestBed.inject(ProgressoService);

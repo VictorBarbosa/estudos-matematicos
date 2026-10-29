@@ -69,8 +69,8 @@ describe('volumes', () => {
   });
 
   it('recusa medidas faltantes', () => {
-    expect(() => volumeComPassos('cilindro', { raio: 2 })).toThrow(ErroMatematico);
-    expect(() => volumeComPassos('esfera', { raio: 0 })).toThrow(ErroMatematico);
+    expect(() => volumeComPassos('cilindro', { raio: 2 })).toThrowError(ErroMatematico);
+    expect(() => volumeComPassos('esfera', { raio: 0 })).toThrowError(ErroMatematico);
   });
 });
 
@@ -104,7 +104,7 @@ describe('superfícies', () => {
   });
 
   it('recusa geratriz menor que o raio', () => {
-    expect(() => superficieComPassos('cone', { raio: 5, geratriz: 3 })).toThrow(ErroMatematico);
+    expect(() => superficieComPassos('cone', { raio: 5, geratriz: 3 })).toThrowError(ErroMatematico);
   });
 
   it('o prisma soma lateral desenrolada e duas bases', () => {
@@ -118,7 +118,7 @@ describe('superfícies', () => {
   });
 
   it('avisa que a pirâmide depende da base', () => {
-    expect(() => superficieComPassos('piramide', { areaBase: 9, altura: 4 })).toThrow(
+    expect(() => superficieComPassos('piramide', { areaBase: 9, altura: 4 })).toThrowError(
       ErroMatematico,
     );
   });
@@ -142,6 +142,6 @@ describe('semelhança espacial', () => {
   });
 
   it('recusa razão não positiva', () => {
-    expect(() => razaoDeVolumesComPassos(-1)).toThrow(ErroMatematico);
+    expect(() => razaoDeVolumesComPassos(-1)).toThrowError(ErroMatematico);
   });
 });

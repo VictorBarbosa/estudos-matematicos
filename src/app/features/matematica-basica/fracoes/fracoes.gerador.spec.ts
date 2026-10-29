@@ -67,7 +67,7 @@ describe('calibração dos níveis', () => {
         (encontro) => Number(encontro[1]),
       );
 
-      expect(encontrados).toHaveLength(2);
+      expect(encontrados.length).toBe(2);
       expect(mdc(encontrados[0]!, encontrados[1]!)).toBe(1);
     }
   });

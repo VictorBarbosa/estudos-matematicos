@@ -36,7 +36,7 @@ describe('geradorMmcMdc', () => {
       return mdc(Number(a), Number(b)) > 1;
     });
 
-    expect(comMdcMaiorQueUm).toHaveLength(60);
+    expect(comMdcMaiorQueUm.length).toBe(60);
   });
 
   it('lê apenas respostas inteiras', () => {

@@ -78,7 +78,7 @@ describe('números complexos', () => {
   it('não divide por zero', () => {
     expect(() =>
       dividirComplexosComPassos({ real: 1, imaginario: 1 }, { real: 0, imaginario: 0 }),
-    ).toThrow(ErroMatematico);
+    ).toThrowError(ErroMatematico);
   });
 
   it('a forma polar reconstrói o número', () => {
@@ -97,7 +97,7 @@ describe('números complexos', () => {
   });
 
   it('o zero complexo não tem argumento', () => {
-    expect(() => paraPolarComPassos({ real: 0, imaginario: 0 })).toThrow(ErroMatematico);
+    expect(() => paraPolarComPassos({ real: 0, imaginario: 0 })).toThrowError(ErroMatematico);
   });
 
   it('De Moivre confere com a multiplicação repetida', () => {
@@ -122,7 +122,7 @@ describe('números complexos', () => {
   });
 
   it('recusa expoente negativo ou fracionário', () => {
-    expect(() => potenciaComPassos({ real: 1, imaginario: 0 }, -1)).toThrow(ErroMatematico);
-    expect(() => potenciaComPassos({ real: 1, imaginario: 0 }, 1.5)).toThrow(ErroMatematico);
+    expect(() => potenciaComPassos({ real: 1, imaginario: 0 }, -1)).toThrowError(ErroMatematico);
+    expect(() => potenciaComPassos({ real: 1, imaginario: 0 }, 1.5)).toThrowError(ErroMatematico);
   });
 });

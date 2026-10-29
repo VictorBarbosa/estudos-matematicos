@@ -50,7 +50,7 @@ describe('vetores no plano', () => {
   });
 
   it('recusa módulo negativo', () => {
-    expect(() => decomporComPassos(-1, 30)).toThrow(ErroMatematico);
+    expect(() => decomporComPassos(-1, 30)).toThrowError(ErroMatematico);
   });
 
   it('normalizar mantém a direção e põe o módulo em 1', () => {
@@ -61,7 +61,7 @@ describe('vetores no plano', () => {
   });
 
   it('não normaliza o vetor nulo', () => {
-    expect(() => normalizar({ x: 0, y: 0 })).toThrow(ErroMatematico);
+    expect(() => normalizar({ x: 0, y: 0 })).toThrowError(ErroMatematico);
   });
 
   it('o módulo da soma não é a soma dos módulos', () => {
@@ -111,7 +111,7 @@ describe('produto escalar e vetorial', () => {
   });
 
   it('não há ângulo com o vetor nulo', () => {
-    expect(() => anguloEntreComPassos({ x: 0, y: 0 }, { x: 1, y: 1 })).toThrow(ErroMatematico);
+    expect(() => anguloEntreComPassos({ x: 0, y: 0 }, { x: 1, y: 1 })).toThrowError(ErroMatematico);
   });
 
   it('a projeção é o módulo vezes o cosseno do ângulo', () => {

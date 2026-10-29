@@ -89,7 +89,7 @@ describe('derivadas', () => {
   it('encontra e classifica pontos críticos', () => {
     // x² tem mínimo em 0; -x² tem máximo.
     const minimo = pontosCriticos((x) => x * x, -3, 3);
-    expect(minimo).toHaveLength(1);
+    expect(minimo.length).toBe(1);
     expect(minimo[0]!.tipo).toBe('minimo');
     expect(minimo[0]!.x).toBeCloseTo(0, 3);
 

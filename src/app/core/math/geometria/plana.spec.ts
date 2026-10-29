@@ -36,8 +36,8 @@ describe('ângulos de polígonos', () => {
   });
 
   it('recusa polígonos com menos de três lados', () => {
-    expect(() => somaAngulosInternosComPassos(2)).toThrow(ErroMatematico);
-    expect(() => somaAngulosInternosComPassos(3.5)).toThrow(ErroMatematico);
+    expect(() => somaAngulosInternosComPassos(2)).toThrowError(ErroMatematico);
+    expect(() => somaAngulosInternosComPassos(3.5)).toThrowError(ErroMatematico);
   });
 });
 
@@ -66,7 +66,7 @@ describe('triângulos', () => {
   });
 
   it('recusa classificar o que não é triângulo', () => {
-    expect(() => classificarTriangulo(1, 2, 3)).toThrow(ErroMatematico);
+    expect(() => classificarTriangulo(1, 2, 3)).toThrowError(ErroMatematico);
   });
 });
 
@@ -99,8 +99,8 @@ describe('Pitágoras', () => {
   });
 
   it('recusa medidas impossíveis', () => {
-    expect(() => pitagorasComPassos(0, 4)).toThrow(ErroMatematico);
-    expect(() => catetoComPassos(3, 5)).toThrow(ErroMatematico);
+    expect(() => pitagorasComPassos(0, 4)).toThrowError(ErroMatematico);
+    expect(() => catetoComPassos(3, 5)).toThrowError(ErroMatematico);
   });
 });
 
@@ -124,7 +124,7 @@ describe('Tales', () => {
   });
 
   it('recusa segmento nulo', () => {
-    expect(() => talesComPassos(0, 3, 4)).toThrow(ErroMatematico);
+    expect(() => talesComPassos(0, 3, 4)).toThrowError(ErroMatematico);
   });
 });
 
@@ -142,7 +142,7 @@ describe('escala e semelhança', () => {
   });
 
   it('recusa razão não positiva', () => {
-    expect(() => escalaComPassos(0, 2)).toThrow(ErroMatematico);
+    expect(() => escalaComPassos(0, 2)).toThrowError(ErroMatematico);
   });
 });
 
@@ -202,8 +202,8 @@ describe('áreas', () => {
   });
 
   it('recusa medidas faltantes ou inválidas', () => {
-    expect(() => areaComPassos('retangulo', { base: 5 })).toThrow(ErroMatematico);
-    expect(() => areaComPassos('circulo', { raio: -1 })).toThrow(ErroMatematico);
+    expect(() => areaComPassos('retangulo', { base: 5 })).toThrowError(ErroMatematico);
+    expect(() => areaComPassos('circulo', { raio: -1 })).toThrowError(ErroMatematico);
   });
 });
 
