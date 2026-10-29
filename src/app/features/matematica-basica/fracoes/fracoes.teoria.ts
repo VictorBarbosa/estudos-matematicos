@@ -434,4 +434,136 @@ export const TEORIA_FRACOES: readonly Teoria[] = [
     },
     vejaTambem: ['fracoes.simplificacao', 'fracoes.definicao', 'decimais.quando-finito'],
   },
+  {
+    id: 'fracoes.mista-soma',
+    titulo: 'Somar números mistos',
+    resumo: 'Converter primeiro evita o transporte.',
+    definicao:
+      'Há dois caminhos. O primeiro é somar as partes inteiras e as frações separadamente — e ' +
+      'funciona, desde que se lembre do transporte: se as frações passarem de um inteiro, esse ' +
+      'inteiro sobe. O segundo, mais seguro, é converter os dois mistos em frações impróprias, ' +
+      'somar como de costume e voltar à forma mista no fim. É o caminho que este tópico usa.',
+    formulas: [
+      { tex: 'n\\frac{a}{b} + m\\frac{c}{d} = \\frac{nb + a}{b} + \\frac{md + c}{d}' },
+      {
+        tex: '1\\frac{3}{4} + 2\\frac{1}{2} = \\frac{7}{4} + \\frac{5}{2} = \\frac{17}{4} = 4\\frac{1}{4}',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Convertemos os dois para fração imprópria.',
+        tex: '1\\frac{3}{4} = \\frac{7}{4} \\qquad 2\\frac{1}{2} = \\frac{5}{2}',
+      },
+      {
+        descricao: 'Somamos pelo denominador comum, como qualquer fração.',
+        tex: '\\frac{7}{4} + \\frac{10}{4} = \\frac{17}{4}',
+      },
+      {
+        descricao: 'Voltamos à forma mista no fim.',
+        tex: '\\frac{17}{4} = 4\\frac{1}{4}',
+        nota:
+          'Pelo outro caminho: 1 + 2 = 3 e 3/4 + 1/2 = 5/4, que é mais que um inteiro — esse ' +
+          'inteiro sobe e dá 4 1/4. O transporte é justamente o que se esquece.',
+      },
+    ],
+    vejaTambem: ['fracoes.mistas', 'fracoes.soma', 'fracoes.mista-subtracao'],
+  },
+  {
+    id: 'fracoes.mista-subtracao',
+    titulo: 'Subtrair números mistos',
+    resumo: 'Quando a fração de cima é menor, é preciso pedir emprestado.',
+    definicao:
+      'Subtrair mistos tem a armadilha do empréstimo: em 3 1/4 − 1 3/4, a fração de cima (1/4) ' +
+      'é menor que a de baixo (3/4), e não dá para subtrair direto. Pela conversão em frações ' +
+      'impróprias o problema desaparece sozinho — é a razão de preferir esse caminho.',
+    formulas: [
+      { tex: 'n\\frac{a}{b} - m\\frac{c}{d} = \\frac{nb + a}{b} - \\frac{md + c}{d}' },
+      {
+        tex: '3\\frac{1}{4} - 1\\frac{3}{4} = \\frac{13}{4} - \\frac{7}{4} = \\frac{6}{4} = 1\\frac{1}{2}',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Pelas partes separadas, a fração não dá para subtrair.',
+        tex: '\\frac{1}{4} - \\frac{3}{4} < 0',
+        nota: 'Seria preciso desmontar um inteiro: 3 1/4 = 2 + 5/4.',
+      },
+      {
+        descricao: 'Convertendo, a subtração é a de sempre.',
+        tex: '\\frac{13}{4} - \\frac{7}{4} = \\frac{6}{4}',
+      },
+      {
+        descricao: 'Simplificamos e voltamos à forma mista.',
+        tex: '\\frac{6}{4} = \\frac{3}{2} = 1\\frac{1}{2}',
+      },
+      {
+        descricao: 'O resultado pode ser negativo, e aí o sinal vale para o número inteiro.',
+        tex: '1\\frac{1}{4} - 3\\frac{1}{2} = \\frac{5}{4} - \\frac{7}{2} = -\\frac{9}{4} = -2\\frac{1}{4}',
+      },
+    ],
+    vejaTambem: ['fracoes.mistas', 'fracoes.subtracao', 'fracoes.mista-soma'],
+  },
+  {
+    id: 'fracoes.mista-multiplicacao',
+    titulo: 'Multiplicar números mistos',
+    resumo: 'Converter é obrigatório: as partes não se multiplicam separadamente.',
+    definicao:
+      'Aqui não há dois caminhos. Multiplicar inteiro com inteiro e fração com fração dá errado, ' +
+      'e por um motivo visível na distributiva: 2½ × 1½ é (2 + ½)(1 + ½), que tem quatro ' +
+      'parcelas, não duas. Converter em frações impróprias faz as quatro aparecerem sozinhas.',
+    formulas: [
+      { tex: 'n\\frac{a}{b} \\times m\\frac{c}{d} = \\frac{nb + a}{b} \\times \\frac{md + c}{d}' },
+      {
+        tex: '2\\frac{1}{2} \\times 1\\frac{1}{2} = \\frac{5}{2} \\times \\frac{3}{2} = \\frac{15}{4} = 3\\frac{3}{4}',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Multiplicar as partes separadamente dá um número menor que o certo.',
+        tex: '2 \\times 1 + \\frac{1}{2} \\times \\frac{1}{2} = 2\\frac{1}{4} \\neq 3\\frac{3}{4}',
+      },
+      {
+        descricao: 'A distributiva mostra o que ficou de fora: os termos cruzados.',
+        tex: '(2 + \\tfrac{1}{2})(1 + \\tfrac{1}{2}) = 2 + 1 + \\tfrac{1}{2} + \\tfrac{1}{4}',
+        nota: 'São 2·1, 2·½, ½·1 e ½·½ — quatro parcelas, e o atalho esquece duas.',
+      },
+      {
+        descricao: 'Convertido, é uma multiplicação comum, em linha.',
+        tex: '\\frac{5}{2} \\times \\frac{3}{2} = \\frac{15}{4} = 3\\frac{3}{4}',
+      },
+    ],
+    vejaTambem: ['fracoes.mistas', 'fracoes.multiplicacao', 'fracoes.mista-divisao'],
+  },
+  {
+    id: 'fracoes.mista-divisao',
+    titulo: 'Dividir números mistos',
+    resumo: 'Converter antes de inverter — nunca o contrário.',
+    definicao:
+      'Divisão de mistos junta as duas regras: primeiro converter os dois em frações impróprias, ' +
+      'depois multiplicar pelo inverso do divisor. A ordem importa. Inverter o misto como ele ' +
+      'está — trocar 1½ por ⅔ de cabeça, por exemplo — não produz o inverso de nada: o inverso ' +
+      'de 1½ é o inverso de 3/2, que é 2/3.',
+    formulas: [
+      { tex: 'n\\frac{a}{b} \\div m\\frac{c}{d} = \\frac{nb + a}{b} \\times \\frac{d}{md + c}' },
+      {
+        tex: '3\\frac{1}{2} \\div 1\\frac{1}{4} = \\frac{7}{2} \\times \\frac{4}{5} = \\frac{14}{5} = 2\\frac{4}{5}',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Convertemos os dois mistos.',
+        tex: '3\\frac{1}{2} = \\frac{7}{2} \\qquad 1\\frac{1}{4} = \\frac{5}{4}',
+      },
+      {
+        descricao: 'Só então invertemos o DIVISOR e multiplicamos.',
+        tex: '\\frac{7}{2} \\times \\frac{4}{5} = \\frac{28}{10} = \\frac{14}{5}',
+        nota: 'Inverter antes de converter trocaria 5/4 por algo que não é o inverso de 1¼.',
+      },
+      {
+        descricao: 'E voltamos à forma mista.',
+        tex: '\\frac{14}{5} = 2\\frac{4}{5}',
+      },
+    ],
+    vejaTambem: ['fracoes.mistas', 'fracoes.divisao', 'fracoes.mista-multiplicacao'],
+  },
 ];

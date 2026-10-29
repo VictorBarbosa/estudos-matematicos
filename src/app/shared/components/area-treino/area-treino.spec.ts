@@ -2,7 +2,12 @@ import { provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Fracao, resolverComPassos } from '@core/math';
-import { RESPOSTAS_NA_JANELA, TRILHA } from '@core/progressao/models/progressao.model';
+import {
+  ACERTOS_PARA_SUBIR,
+  ERROS_PARA_DESCER,
+  RESPOSTAS_NA_JANELA,
+  TRILHA,
+} from '@core/progressao/models/progressao.model';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
@@ -133,46 +138,69 @@ describe('AreaTreino', () => {
     expect(texto()).not.toContain('Correto!');
   });
 
-  /** Localiza um dos botões de nível pelo rótulo. */
-  function botaoDeNivel(rotulo: string): HTMLButtonElement {
-    return [...fixture.nativeElement.querySelectorAll('.nivel')].find(
-      (botao: HTMLButtonElement) => botao.textContent?.trim() === rotulo,
-    ) as HTMLButtonElement;
+  /** O nível mostrado agora, que não se escolhe. */
+  function nivelMostrado(): string {
+    return fixture.nativeElement.querySelector('.nivel-atual').textContent.trim() as string;
   }
 
-  it('marca como selecionado o nível em que se clica', async () => {
-    const medio = botaoDeNivel('Médio');
-    expect(medio.getAttribute('aria-pressed')).toBe('false');
+  /** Responde certo e passa ao próximo, quantas vezes for pedido. */
+  async function acertar(vezes: number): Promise<void> {
+    for (let i = 0; i < vezes; i++) {
+      await responder('5/12');
+      const proximo = [...fixture.nativeElement.querySelectorAll('button')].find(
+        (botao: HTMLButtonElement) => botao.textContent?.trim() === 'Próximo exercício',
+      ) as HTMLButtonElement;
+      proximo.click();
+      await fixture.whenStable();
+    }
+  }
 
-    medio.click();
-    await fixture.whenStable();
-
-    expect(medio.getAttribute('aria-pressed')).toBe('true');
-    expect(botaoDeNivel('Fácil').getAttribute('aria-pressed')).toBe('false');
-    expect(medio.classList).toContain('ativo');
+  it('começa no fácil e não oferece escolha de nível', () => {
+    expect(nivelMostrado()).toBe('Fácil');
+    expect(fixture.nativeElement.querySelectorAll('.nivel').length).toBe(0);
   });
 
-  it('preserva o placar da rodada ao trocar de nível', async () => {
-    await responder('5/12');
-    expect(fixture.nativeElement.querySelector('.certo').textContent.trim()).toBe('1');
-
-    botaoDeNivel('Difícil').click();
+  it('sobe de nível depois de acertos seguidos', async () => {
+    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
-    // A sessão continua a mesma: só o exercício muda.
-    expect(fixture.nativeElement.querySelector('.certo').textContent.trim()).toBe('1');
-    expect(botaoDeNivel('Difícil').getAttribute('aria-pressed')).toBe('true');
+    await acertar(ACERTOS_PARA_SUBIR);
+    expect(nivelMostrado()).toBe('Médio');
+
+    await acertar(ACERTOS_PARA_SUBIR);
+    expect(nivelMostrado()).toBe('Difícil');
   });
 
-  it('troca de nível duas vezes seguidas sem voltar ao primeiro', async () => {
-    botaoDeNivel('Médio').click();
-    await fixture.whenStable();
-    botaoDeNivel('Difícil').click();
+  it('desce de nível depois de erros seguidos', async () => {
+    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
-    expect(botaoDeNivel('Difícil').getAttribute('aria-pressed')).toBe('true');
-    expect(botaoDeNivel('Médio').getAttribute('aria-pressed')).toBe('false');
-    expect(botaoDeNivel('Fácil').getAttribute('aria-pressed')).toBe('false');
+    await acertar(ACERTOS_PARA_SUBIR);
+    expect(nivelMostrado()).toBe('Médio');
+
+    for (let i = 0; i < ERROS_PARA_DESCER; i++) {
+      await responder('1/2');
+      const proximo = [...fixture.nativeElement.querySelectorAll('button')].find(
+        (botao: HTMLButtonElement) => botao.textContent?.trim() === 'Próximo exercício',
+      ) as HTMLButtonElement;
+      proximo.click();
+      await fixture.whenStable();
+    }
+
+    expect(nivelMostrado()).toBe('Fácil');
+  });
+
+  it('diz quanto falta para o próximo degrau', async () => {
+    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    fixture.componentRef.setInput('gerador', naTrilha);
+    await fixture.whenStable();
+
+    expect(texto()).toContain(`${ACERTOS_PARA_SUBIR} acerto(s) seguido(s) para subir`);
+
+    await acertar(1);
+    expect(texto()).toContain(`${ACERTOS_PARA_SUBIR - 1} acerto(s) seguido(s) para subir`);
   });
 
   it('anuncia quanto falta para vencer a etapa', async () => {
@@ -210,32 +238,12 @@ describe('AreaTreino', () => {
     fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
-    // Agora são 8 acertos nas últimas 10 tentativas, com 3 no Médio ou no
-    // Difícil — e o gerador fixo responde igual em qualquer nível.
-    const dificil = [...fixture.nativeElement.querySelectorAll('.nivel')].find(
-      (b: HTMLButtonElement) => b.textContent?.trim() === 'Difícil',
-    ) as HTMLButtonElement;
-    dificil.click();
-    await fixture.whenStable();
-
-    for (let i = 0; i < RESPOSTAS_NA_JANELA; i++) {
-      await responder('5/12');
-      const proximo = [...fixture.nativeElement.querySelectorAll('button')].find(
-        (b: HTMLButtonElement) => b.textContent?.trim() === 'Próximo exercício',
-      ) as HTMLButtonElement;
-      proximo.click();
-      await fixture.whenStable();
-    }
+    // São 8 acertos nas últimas 10, com 3 no Médio ou no Difícil. Acertando
+    // sempre, a escada leva até lá sozinha — o gerador fixo responde igual em
+    // qualquer nível.
+    await acertar(RESPOSTAS_NA_JANELA);
 
     expect(texto()).toContain('Etapa vencida!');
     expect(texto()).toContain(TRILHA[1]!.titulo);
-  });
-
-  it('oferece os três níveis de dificuldade', () => {
-    const rotulos = [...fixture.nativeElement.querySelectorAll('.nivel')].map(
-      (b: HTMLButtonElement) => b.textContent?.trim(),
-    );
-
-    expect(rotulos).toEqual(['Fácil', 'Médio', 'Difícil']);
   });
 });

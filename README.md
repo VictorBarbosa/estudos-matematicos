@@ -120,14 +120,33 @@ libera a seguinte quando o tópico é **dominado**:
 - entre elas, **3 acertos no nível Médio ou Difícil**;
 - terminando com **3 acertos seguidos**, para a etapa não abrir logo depois de um erro.
 
+## O nível não se escolhe
+
+A dificuldade é consequência do desempenho, não uma opção: começa no Fácil, sobe um degrau a
+cada **3 acertos seguidos** e desce um a cada **2 erros seguidos**. Descer importa tanto quanto
+subir — insistir num nível que ainda não se sustenta não ensina, só frustra.
+
+Antes havia três botões, e o problema dessa escolha é conhecido: quase ninguém escolhe o
+Difícil, e o Fácil não sorteia todos os tipos de questão. Com a escada automática, o conteúdo
+mais exigente — em Frações, os números mistos — só aparece para quem chegou lá.
+
+O nível também não é estado novo: `nivelDoTopico` o relê do mesmo histórico de tentativas, então
+um refresh devolve o aluno no degrau em que estava.
+
 A janela é deslizante de propósito: o domínio medido é o atual, não o histórico. Errar as
 últimas tentativas tranca a etapa de novo.
 
 A janela mede **constância**, não abrangência: dá para acertar dez somas seguidas e nunca ter
 dividido uma fração. Onde o tópico tem partes que precisam ser todas praticadas, há uma
-exigência de **cobertura** por cima dela — em Frações, cinco acertos em cada uma das quatro
-operações, contados por conceito (`REQUISITOS_POR_TOPICO` em `models/progressao.model.ts`). A área de
-treino mostra a lista inteira, com o que falta em cada operação.
+exigência de **cobertura** por cima dela, contada por conceito (`REQUISITOS_POR_TOPICO` em
+`models/progressao.model.ts`). A área de treino mostra a lista inteira, com o que falta em cada
+tipo.
+
+Em Frações são **nove tipos, cinco acertos em cada** — 45 no mínimo. As quatro operações com
+frações, as mesmas quatro com números mistos e a conversão de decimal. Mistos são tipos à parte
+porque o erro é outro: o transporte na soma, o empréstimo na subtração, os termos cruzados na
+multiplicação (2½ × 1½ tem quatro parcelas, não duas), a ordem de converter e inverter na
+divisão. É muito de propósito: frações é o tópico cuja falha mais atrapalha adiante.
 
 O critério anterior era "3 acertos seguidos", sem olhar o nível — e isso abria a etapa para
 quem acerta metade dos exercícios em 79% das rodadas de 20 tentativas. Com o critério atual,

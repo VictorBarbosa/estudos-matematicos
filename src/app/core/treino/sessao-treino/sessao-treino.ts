@@ -1,4 +1,5 @@
 import { Signal, WritableSignal, computed, signal } from '@angular/core';
+import { nivelDoTopico } from '@core/progressao/models/progressao.model';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { Rng, criarRng, sementeAleatoria } from '@core/treino/rng/rng';
 import { Exercicio, GeradorExercicio, Nivel, Validacao, corrigir } from '@core/treino/models/treino.model';
@@ -13,7 +14,18 @@ import { Exercicio, GeradorExercicio, Nivel, Validacao, corrigir } from '@core/t
 export class SessaoTreino<T> {
   private rng: Rng = criarRng(sementeAleatoria());
 
-  readonly nivel = signal<Nivel>('facil');
+  /**
+   * O nível da vez, derivado do desempenho no tópico.
+   *
+   * Não é escolha: sobe com acertos seguidos e desce com erros seguidos, pela
+   * regra de {@link nivelDoTopico}. Como sai do histórico que o progresso já
+   * guarda, ele se recalcula sozinho a cada resposta — e o próximo exercício
+   * já sai na dificuldade nova.
+   */
+  readonly escada = computed(() => nivelDoTopico(this.progresso.historicoDe(this.gerador.topicoId)));
+
+  readonly nivel = computed<Nivel>(() => this.escada().nivel);
+
   readonly resposta = signal('');
   readonly validacao = signal<Validacao | null>(null);
   readonly resolucaoVisivel = signal(false);
@@ -93,15 +105,6 @@ export class SessaoTreino<T> {
   proximo(): void {
     this.exercicioAtual.set(this.gerador.gerar(this.nivel(), this.rng));
     this.limparResposta();
-  }
-
-  /** Troca o nível e já apresenta um exercício da nova dificuldade. */
-  definirNivel(nivel: Nivel): void {
-    if (nivel === this.nivel()) {
-      return;
-    }
-    this.nivel.set(nivel);
-    this.proximo();
   }
 
   /**

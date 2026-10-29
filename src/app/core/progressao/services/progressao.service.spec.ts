@@ -6,7 +6,7 @@ import { Nivel } from '@core/treino/models/treino.model';
 import {
   ACERTOS_EXIGENTES,
   ACERTOS_NA_JANELA,
-  ACERTOS_POR_OPERACAO,
+  ACERTOS_POR_TIPO,
   REQUISITOS_POR_TOPICO,
   RESPOSTAS_NA_JANELA,
   TRILHA,
@@ -261,15 +261,22 @@ describe('ProgressaoService', () => {
     expect(liberou / simulacoes).toBeLessThan(0.25);
   }, 30_000);
 
-  it('frações exige acertos em cada uma das quatro operações', () => {
+  it('frações exige acertos em cada um dos nove tipos', () => {
     const fracoes = 'fracoes';
     const operacoes = REQUISITOS_POR_TOPICO[fracoes]!;
 
+    // Quatro operações com frações simples, as mesmas quatro com números
+    // mistos — que têm armadilhas próprias — e a conversão de decimal.
     expect(operacoes.map((requisito) => requisito.rotulo)).toEqual([
       'soma',
       'subtração',
       'multiplicação',
       'divisão',
+      'soma com mistos',
+      'subtração com mistos',
+      'multiplicação com mistos',
+      'divisão com mistos',
+      'decimal em fração',
     ]);
 
     // Constância perfeita, mas só em soma: a etapa continua fechada.
@@ -286,11 +293,7 @@ describe('ProgressaoService', () => {
     const parcial = progressao.dominioEm(fracoes);
     expect(parcial.acertos).toBe(RESPOSTAS_NA_JANELA);
     expect(parcial.vencido).toBe(false);
-    expect(progressao.requisitosPendentes(fracoes).map((r) => r.rotulo)).toEqual([
-      'subtração',
-      'multiplicação',
-      'divisão',
-    ]);
+    expect(progressao.requisitosPendentes(fracoes).length).toBe(operacoes.length - 1);
 
     // Cumpridas as outras três, a etapa abre.
     for (const requisito of operacoes.slice(1)) {
@@ -309,11 +312,12 @@ describe('ProgressaoService', () => {
     expect(progressao.dominioEm(fracoes).vencido).toBe(true);
   });
 
-  it('quatro acertos numa operação não bastam: são cinco', () => {
+  it('quatro acertos num tipo não bastam: são cinco', () => {
     const fracoes = 'fracoes';
 
     for (const requisito of REQUISITOS_POR_TOPICO[fracoes]!) {
-      const quantos = requisito.rotulo === 'divisão' ? ACERTOS_POR_OPERACAO - 1 : requisito.acertos;
+      const quantos =
+        requisito.rotulo === 'divisão com mistos' ? ACERTOS_POR_TIPO - 1 : requisito.acertos;
 
       for (let i = 0; i < quantos; i++) {
         progresso.registrar({
@@ -327,8 +331,8 @@ describe('ProgressaoService', () => {
     }
 
     const pendentes = progressao.requisitosPendentes(fracoes);
-    expect(pendentes.map((r) => r.rotulo)).toEqual(['divisão']);
-    expect(pendentes[0]!.feitos).toBe(ACERTOS_POR_OPERACAO - 1);
+    expect(pendentes.map((r) => r.rotulo)).toEqual(['divisão com mistos']);
+    expect(pendentes[0]!.feitos).toBe(ACERTOS_POR_TIPO - 1);
     expect(progressao.dominioEm(fracoes).vencido).toBe(false);
   });
 

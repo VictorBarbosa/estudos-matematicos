@@ -40,12 +40,27 @@ const PARES_COPRIMOS: readonly (readonly [number, number])[] = [
  * armadilhas — os erros clássicos do tema, previstos de antemão para que a
  * correção diga *qual* foi o equívoco, e não apenas que houve um.
  */
-/** O conceito que cada operação exercita, um por operação. */
+/** O conceito de cada operação entre frações próprias ou impróprias. */
 export const CONCEITO_DA_OPERACAO: Readonly<Record<OperacaoFracao, string>> = {
   somar: 'fracoes.soma',
   subtrair: 'fracoes.subtracao',
   multiplicar: 'fracoes.multiplicacao',
   dividir: 'fracoes.divisao',
+};
+
+/**
+ * O conceito de cada operação COM NÚMEROS MISTOS.
+ *
+ * São conceitos à parte porque o erro é outro: em 2½ × 1½ a tentação é
+ * multiplicar inteiro com inteiro e fração com fração, o que não funciona;
+ * na divisão, esquecer de converter antes de inverter. Exigir os dois tipos
+ * separadamente é o que garante que as duas formas sejam praticadas.
+ */
+export const CONCEITO_DA_OPERACAO_MISTA: Readonly<Record<OperacaoFracao, string>> = {
+  somar: 'fracoes.mista-soma',
+  subtrair: 'fracoes.mista-subtracao',
+  multiplicar: 'fracoes.mista-multiplicacao',
+  dividir: 'fracoes.mista-divisao',
 };
 
 export const geradorFracoes: GeradorExercicio<Fracao> = {
@@ -287,11 +302,9 @@ function conceitosDe(
   b: Fracao,
   comMista: boolean,
 ): readonly string[] {
-  const conceitos = [CONCEITO_DA_OPERACAO[operacao], 'fracoes.operacoes'];
-
-  if (comMista) {
-    conceitos.push('fracoes.mistas');
-  }
+  const conceitos = comMista
+    ? [CONCEITO_DA_OPERACAO_MISTA[operacao], 'fracoes.mistas', 'fracoes.operacoes']
+    : [CONCEITO_DA_OPERACAO[operacao], 'fracoes.operacoes'];
 
   // O MMC só está em jogo quando há denominadores diferentes a igualar.
   if ((operacao === 'somar' || operacao === 'subtrair') && a.denominador !== b.denominador) {

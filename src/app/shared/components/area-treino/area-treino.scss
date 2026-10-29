@@ -20,33 +20,48 @@
   gap: var(--esp-4);
 }
 
-.niveis {
-  display: inline-flex;
-  padding: 3px;
-  gap: 2px;
-  background: var(--superficie-2);
-  border-radius: var(--raio-pill);
-}
 
-/* Uma única expansão do mixin para os três botões do componente. */
-.nivel,
+/* Uma única expansão do mixin para os botões do componente. */
 .principal,
 .secundario {
   @include botao-base;
 }
 
-.nivel {
+/*
+ * A escada de dificuldade.
+ *
+ * Era um grupo de três botões; virou indicador, porque o nível passou a ser
+ * consequência do desempenho e não escolha.
+ */
+.escada {
+  display: flex;
+  align-items: baseline;
+  gap: var(--esp-3);
+}
+
+.nivel-atual {
   padding: var(--esp-1) var(--esp-3);
   border-radius: var(--raio-pill);
-  color: var(--texto-suave);
-  font-size: var(--texto-sm);
+  background: var(--superficie);
+  color: var(--texto);
+  font-weight: 600;
+  box-shadow: var(--sombra-1);
 
-  &.ativo {
-    background: var(--superficie);
-    color: var(--texto);
-    box-shadow: var(--sombra-1);
+  &[data-nivel='dificil'] {
+    color: var(--acento);
   }
 }
+
+.rumo {
+  color: var(--texto-tenue);
+  font-size: var(--texto-sm);
+}
+
+.subiu {
+  color: var(--acerto);
+  font-weight: 600;
+}
+
 
 .placar {
   display: flex;

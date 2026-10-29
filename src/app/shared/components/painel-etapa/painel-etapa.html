@@ -19,7 +19,7 @@
           <strong>{{ alvoExigente }} acertos no Médio ou no Difícil</strong>.
           @if (requisitos().length > 0) {
             <span class="cobertura">
-              Além disso, {{ requisitos()[0]!.acertos }} acertos em cada operação:
+              Além disso, {{ requisitos()[0]!.acertos }} acertos em cada tipo de exercício:
               @for (requisito of requisitos(); track requisito.conceito; let ultimo = $last) {
                 <span [class.cumprido]="requisito.cumprido"
                   >{{ requisito.rotulo }} {{ requisito.feitos }}/{{ requisito.acertos }}</span
