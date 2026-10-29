@@ -9,6 +9,20 @@ function amostra(nivel: Nivel, quantidade = 60) {
   return Array.from({ length: quantidade }, () => geradorFracoes.gerar(nivel, rng));
 }
 
+/**
+ * O tópico tem dois tipos de exercício: operar duas frações e converter um
+ * decimal em fração. O segundo não tem dois operandos nem operação, então as
+ * travas que falam de denominadores só valem para o primeiro.
+ */
+function ehConversao(exercicio: { readonly conceitos: readonly string[] }): boolean {
+  return exercicio.conceitos.includes('fracoes.decimais');
+}
+
+/** Só os exercícios de operação entre duas frações. */
+function operacoes(nivel: Nivel, quantidade = 60) {
+  return amostra(nivel, quantidade).filter((exercicio) => !ehConversao(exercicio));
+}
+
 describe('determinismo', () => {
   it('a mesma semente produz o mesmo exercício', () => {
     const primeiro = geradorFracoes.gerar('medio', criarRng(7));
@@ -32,7 +46,10 @@ describe('consistência dos exercícios', () => {
       for (const exercicio of amostra(nivel)) {
         expect(exercicio.enunciadoTex).toContain('=');
         expect(exercicio.conceitos.length).toBeGreaterThan(0);
-        expect(exercicio.resolucao.passos.length).toBeGreaterThanOrEqual(3);
+        // A conversão se resolve em dois passos: ler as casas e simplificar.
+        expect(exercicio.resolucao.passos.length).toBeGreaterThanOrEqual(
+          ehConversao(exercicio) ? 2 : 3,
+        );
       }
     });
 
@@ -49,7 +66,7 @@ describe('consistência dos exercícios', () => {
 
 describe('calibração dos níveis', () => {
   it('no fácil, um denominador é múltiplo do outro e o resultado não é negativo', () => {
-    for (const exercicio of amostra('facil')) {
+    for (const exercicio of operacoes('facil')) {
       const [, esquerda, direita] = /\\frac\{-?\d+\}\{(\d+)\}.*\\frac\{-?\d+\}\{(\d+)\}/.exec(
         exercicio.enunciadoTex,
       ) ?? [undefined, undefined, undefined];
@@ -62,7 +79,7 @@ describe('calibração dos níveis', () => {
   });
 
   it('no médio, os denominadores são coprimos, exigindo o cálculo real do MMC', () => {
-    for (const exercicio of amostra('medio')) {
+    for (const exercicio of operacoes('medio')) {
       const encontrados = [...exercicio.enunciadoTex.matchAll(/\\frac\{-?\d+\}\{(\d+)\}/g)].map(
         (encontro) => Number(encontro[1]),
       );
@@ -154,13 +171,13 @@ describe('cobertura das quatro operações', () => {
     it(`no nível ${nivel}, as quatro operações aparecem`, () => {
       // A etapa exige cinco acertos em cada operação; se a divisão só
       // existisse no Difícil, cumprir a exigência obrigaria a trocar de nível.
-      const vistas = new Set(amostra(nivel, 200).map((e) => operacaoDe(e.conceitos)));
+      const vistas = new Set(operacoes(nivel, 200).map((e) => operacaoDe(e.conceitos)));
 
       expect([...vistas].sort()).toEqual(['dividir', 'multiplicar', 'somar', 'subtrair']);
     });
 
     it(`no nível ${nivel}, todo exercício declara exatamente uma operação`, () => {
-      for (const exercicio of amostra(nivel)) {
+      for (const exercicio of operacoes(nivel)) {
         const declaradas = Object.values(CONCEITO_DA_OPERACAO).filter((conceito) =>
           exercicio.conceitos.includes(conceito),
         );
@@ -258,6 +275,116 @@ describe('números mistos e negativos', () => {
 
     for (const forma of [gabarito.toString(), gabarito.toStringMisto()]) {
       expect(corrigir(geradorFracoes, exercicio, forma).veredito, forma).toBe('correto');
+    }
+  });
+});
+
+describe('conversão de decimal em fração', () => {
+  /** Só os exercícios de conversão. */
+  function conversoes(nivel: Nivel, quantidade = 300) {
+    return amostra(nivel, quantidade).filter(ehConversao);
+  }
+
+  /** O decimal que o enunciado mostra. */
+  function decimalDe(tex: string): number {
+    return Number(tex.replace(' = \\;?', '').replace('{,}', '.'));
+  }
+
+  for (const nivel of NIVEIS) {
+    it(`no nível ${nivel}, a conversão aparece no sorteio`, () => {
+      expect(conversoes(nivel).length).toBeGreaterThan(10);
+    });
+
+    it(`no nível ${nivel}, o gabarito é o decimal em forma irredutível`, () => {
+      for (const exercicio of conversoes(nivel)) {
+        const decimal = decimalDe(exercicio.enunciadoTex);
+
+        expect(Number.isNaN(decimal), exercicio.enunciadoTex).toBe(false);
+        expect(exercicio.gabarito.paraDecimal()).toBeCloseTo(decimal, 9);
+        expect(exercicio.gabarito.estaSimplificada, exercicio.gabarito.toString()).toBe(true);
+      }
+    });
+  }
+
+  it('aceita a fração, nas formas equivalentes', () => {
+    const exercicio = conversoes('facil').find((e) => !e.gabarito.ehInteira)!;
+    const gabarito = exercicio.gabarito;
+
+    expect(corrigir(geradorFracoes, exercicio, gabarito.toString()).veredito).toBe('correto');
+
+    // Equivalente não simplificada também vale: a correção é por valor.
+    const dobrada = Fracao.criar(gabarito.numerador * 2, gabarito.denominador * 2);
+    expect(corrigir(geradorFracoes, exercicio, dobrada.toString()).veredito).toBe('correto');
+  });
+
+  it('devolver o próprio decimal não conta como resposta', () => {
+    // O valor está certo, mas a pergunta é pela FORMA: aceitar 0,75 deixaria o
+    // aluno repetir o enunciado.
+    for (const exercicio of conversoes('medio', 200).slice(0, 20)) {
+      const decimal = decimalDe(exercicio.enunciadoTex);
+      const comVirgula = String(decimal).replace('.', ',');
+
+      for (const forma of [String(decimal), comVirgula]) {
+        const resultado = corrigir(geradorFracoes, exercicio, forma);
+
+        expect(resultado.veredito, forma).toBe('invalido');
+        expect(resultado.mensagem).toContain('fração');
+      }
+    }
+  });
+
+  it('o decimal só é recusado onde a forma é a pergunta', () => {
+    // Num exercício de operação, 0,75 continua sendo uma resposta legítima.
+    const exercicio = operacoes('facil').find((e) => e.gabarito.igualA(Fracao.criar(3, 4)));
+
+    if (exercicio !== undefined) {
+      expect(corrigir(geradorFracoes, exercicio, '0,75').veredito).toBe('correto');
+    }
+
+    expect(operacoes('facil').every((e) => e.exigeFracao !== true)).toBe(true);
+  });
+
+  it('a forma não simplificada é aceita, porque a correção é por valor', () => {
+    // 0,75 = 75/100 é uma resposta certa; o enunciado por isso não promete
+    // cobrar a forma irredutível.
+    const exercicio = conversoes('medio').find((e) => !e.gabarito.ehInteira)!;
+    const decimal = decimalDe(exercicio.enunciadoTex);
+    const casas = String(Math.abs(decimal)).split('.')[1]?.length ?? 0;
+    const potencia = 10 ** casas;
+
+    const semSimplificar = `${Math.round(decimal * potencia)}/${potencia}`;
+    expect(corrigir(geradorFracoes, exercicio, semSimplificar).veredito).toBe('correto');
+  });
+
+  it('diagnostica quem usa 10 como denominador seja qual for a casa', () => {
+    const exercicio = conversoes('medio', 400).find((e) =>
+      e.armadilhas.some((a) => a.diagnostico.includes('número de CASAS')),
+    )!;
+
+    const armadilha = exercicio.armadilhas.find((a) =>
+      a.diagnostico.includes('número de CASAS'),
+    )!;
+
+    const resultado = corrigir(geradorFracoes, exercicio, armadilha.resposta.toString());
+
+    expect(resultado.veredito).toBe('incorreto');
+    expect(resultado.conceitoAssociado).toBe('fracoes.decimais');
+  });
+
+  it('o nível difícil traz decimais negativos e com parte inteira', () => {
+    const difíceis = conversoes('dificil', 400);
+
+    expect(difíceis.some((e) => e.gabarito.ehNegativa)).toBe(true);
+    expect(difíceis.some((e) => Math.abs(e.gabarito.paraDecimal()) > 1)).toBe(true);
+  });
+
+  it('a conversão não entra na exigência das quatro operações', () => {
+    // A etapa pede cinco acertos por operação; a conversão é outro assunto e
+    // não pode diluir essa contagem.
+    for (const exercicio of conversoes('dificil', 200)) {
+      for (const conceito of Object.values(CONCEITO_DA_OPERACAO)) {
+        expect(exercicio.conceitos).not.toContain(conceito);
+      }
     }
   });
 });

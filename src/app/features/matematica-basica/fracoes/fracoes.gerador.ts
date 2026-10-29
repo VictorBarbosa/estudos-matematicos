@@ -1,4 +1,11 @@
-import { Fracao, OperacaoFracao, mmc, operacaoParaTex, resolverComPassos } from '@core/math';
+import {
+  Fracao,
+  OperacaoFracao,
+  decimalParaFracaoComPassos,
+  mmc,
+  operacaoParaTex,
+  resolverComPassos,
+} from '@core/math';
 import { Rng } from '@core/treino/rng';
 import { Armadilha, Exercicio, GeradorExercicio, Nivel } from '@core/treino/treino.model';
 
@@ -44,6 +51,13 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
   formatoResposta: 'ex.: 3/4, -2/5, 7 ou o misto 2 1/3',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
+    // Converter decimal em fração entra no sorteio sem competir com as
+    // operações: a etapa exige cinco acertos em cada uma delas, e diluí-las
+    // seria tornar a exigência mais lenta sem ensinar mais.
+    if (rng.booleano(0.15)) {
+      return exercicioConversao(nivel, rng);
+    }
+
     const { a, b, operacao, comMista } = sortear(nivel, rng);
 
     const resolucao = resolverComPassos(a, operacao, b);
@@ -87,6 +101,79 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
     valor.simplificar().ehImpropria ? valor.toStringMisto() : valor.toString(),
 };
 
+
+/**
+ * Decimais usados na conversão, por nível.
+ *
+ * Escolhidos à mão porque o que se aprende aqui é o VALOR POSICIONAL: 0,5 e
+ * 0,25 são os que já se reconhecem de cor; 0,375 e 0,875 obrigam a ir até os
+ * milésimos; e 1,2 ou 2,75 mostram que a parte inteira não atrapalha.
+ */
+const DECIMAIS_POR_NIVEL: Readonly<Record<Nivel, readonly number[]>> = {
+  facil: [0.5, 0.25, 0.75, 0.2, 0.4, 0.6, 0.8, 0.1],
+  medio: [0.35, 0.125, 0.375, 0.625, 0.875, 0.05, 0.45, 1.5, 1.25, 2.4],
+  dificil: [0.025, 0.0625, 0.104, 1.375, 2.75, 3.08, 0.015, 1.04],
+};
+
+/**
+ * Escreva o decimal como fração irredutível.
+ *
+ * O caminho é o mesmo que a teoria descreve: ler a última casa — décimos,
+ * centésimos, milésimos — para achar o denominador, e simplificar depois. A
+ * resposta precisa vir em forma de fração, senão devolver o próprio número
+ * dado passaria por acerto (ver `exigeFracao`).
+ */
+function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
+  const magnitude = rng.escolher(DECIMAIS_POR_NIVEL[nivel]);
+  // O sinal entra junto com os negativos do resto do tópico.
+  const decimal = nivel === 'facil' || rng.booleano(0.7) ? magnitude : -magnitude;
+
+  const { resultado, passos } = decimalParaFracaoComPassos(decimal);
+  const casas = String(Math.abs(decimal)).split('.')[1]?.length ?? 0;
+  const potencia = 10 ** casas;
+
+  return {
+    id: `fracoes-conv-${decimal}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    /*
+     * "Como fração", e não "como fração irredutível": a correção deste site é
+     * por VALOR — 75/100 conta como 3/4 —, então exigir a forma irredutível no
+     * enunciado prometeria uma cobrança que não existe. Simplificar continua
+     * sendo o último passo da resolução, e é o que a dica pede.
+     */
+    enunciado: 'Escreva este decimal como fração.',
+    enunciadoTex: `${String(decimal).replace('.', '{,}')} = \\;?`,
+    gabarito: resultado,
+    resolucao: { resultado, passos },
+    conceitos: ['fracoes.decimais', 'fracoes.simplificacao'],
+    exigeFracao: true,
+    armadilhas: semColisoesDeFracao(
+      [
+        {
+          resposta: Fracao.criar(Math.round(decimal * potencia), 10),
+          diagnostico:
+            'O denominador é 10 elevado ao número de CASAS decimais, não 10 sempre. Com ' +
+            `${casas} casas, ele vale ${potencia}.`,
+          passo: 0,
+          conceito: 'fracoes.decimais',
+        },
+        {
+          resposta: Fracao.criar(1, Math.max(2, Math.round(1 / Math.abs(decimal)) || 2)),
+          diagnostico:
+            'Inverter o decimal não é convertê-lo: 0,25 é 25 centésimos, ou seja 25/100 — o ' +
+            'fato de dar 1/4 vem da simplificação, não de dividir 1 pelo número.',
+          passo: 0,
+          conceito: 'fracoes.decimais',
+        },
+      ],
+      resultado,
+    ),
+    dica:
+      nivel === 'facil'
+        ? 'Quantas casas depois da vírgula? Esse é o expoente do 10. Simplifique no fim.'
+        : undefined,
+  };
+}
 
 interface Sorteio {
   readonly a: Fracao;
@@ -241,6 +328,19 @@ function armadilhasDe(
         ? armadilhasMultiplicacao(a, b)
         : armadilhasDivisao(a, b);
 
+  return semColisoesDeFracao(candidatas, gabarito);
+}
+
+/**
+ * Descarta armadilhas que caem sobre o gabarito ou sobre outra já listada.
+ *
+ * É a versão para frações de `semColisoes`: a comparação precisa ser por
+ * valor, porque 2/4 e 1/2 são a mesma resposta escrita de dois jeitos.
+ */
+function semColisoesDeFracao(
+  candidatas: readonly Armadilha<Fracao>[],
+  gabarito: Fracao,
+): readonly Armadilha<Fracao>[] {
   const vistas: Fracao[] = [];
 
   return candidatas.filter((armadilha) => {

@@ -1,4 +1,4 @@
-import { Fracao, resolverComPassos } from '@core/math';
+import { Fracao, decimalParaFracaoComPassos, resolverComPassos } from '@core/math';
 import { Teoria } from '@core/teoria/teoria.model';
 
 /**
@@ -385,5 +385,53 @@ export const TEORIA_FRACOES: readonly Teoria[] = [
       passos: resolverComPassos(Fracao.criar(7, 3), 'somar', Fracao.criar(3, 2)).passos,
     },
     vejaTambem: ['fracoes.definicao', 'fracoes.soma', 'fracoes.simplificacao'],
+  },
+  {
+    id: 'fracoes.decimais',
+    titulo: 'De decimal para fração',
+    resumo: 'A última casa diz o denominador.',
+    definicao:
+      'Todo decimal finito já é uma fração escrita de outro jeito: o que a vírgula faz é dizer ' +
+      'em quantas partes o inteiro foi dividido. Uma casa são décimos, duas são centésimos, ' +
+      'três são milésimos — então 0,75 são 75 centésimos, ou 75/100. O denominador é 10 elevado ' +
+      'ao número de casas; o numerador são os dígitos sem a vírgula. Depois é só simplificar, e ' +
+      'a conta acaba.',
+    formulas: [
+      {
+        tex: '0{,}d_1d_2\\ldots d_n = \\frac{d_1d_2\\ldots d_n}{10^{n}}',
+        legenda: 'n é o número de casas depois da vírgula.',
+      },
+      {
+        tex: '0{,}75 = \\frac{75}{100} = \\frac{3}{4}',
+        legenda: 'A forma irredutível é a resposta pedida.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Contamos as casas para achar o denominador.',
+        tex: '0{,}375 \\;\\Rightarrow\\; 3 \\text{ casas} \\;\\Rightarrow\\; 10^{3} = 1000',
+      },
+      {
+        descricao: 'Os dígitos, sem a vírgula, são o numerador.',
+        tex: '0{,}375 = \\frac{375}{1000}',
+        nota: 'O denominador NÃO é sempre 10: é 10 elevado ao número de casas.',
+      },
+      {
+        descricao: 'Simplificamos pelo mdc até a forma irredutível.',
+        tex: '\\frac{375 \\div 125}{1000 \\div 125} = \\frac{3}{8}',
+      },
+      {
+        descricao: 'Com parte inteira, ela permanece — e o sinal vale para tudo.',
+        tex: '-1{,}25 = -\\frac{125}{100} = -\\frac{5}{4}',
+        nota:
+          'Inverter o número não é convertê-lo: 0,25 vira 1/4 por simplificação, não por ' +
+          'dividir 1 por 0,25 — que daria 4.',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Escrevendo 0,875 como fração irredutível.',
+      passos: decimalParaFracaoComPassos(0.875).passos,
+    },
+    vejaTambem: ['fracoes.simplificacao', 'fracoes.definicao', 'decimais.quando-finito'],
   },
 ];

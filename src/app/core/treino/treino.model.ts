@@ -43,6 +43,16 @@ export interface Exercicio<T> {
   readonly conceitos: readonly string[];
   readonly armadilhas: readonly Armadilha<T>[];
   readonly dica?: string;
+  /**
+   * A resposta precisa estar escrita como fração?
+   *
+   * Existe para o exercício em que a forma É a pergunta: "escreva 0,75 como
+   * fração" tem 0,75 como resposta de valor correto, e aceitá-la deixaria o
+   * aluno devolver o enunciado. Quando isto está ligado, um decimal digitado
+   * não conta como erro de matemática — conta como formato, e a correção pede
+   * a outra escrita.
+   */
+  readonly exigeFracao?: boolean;
 }
 
 export type Veredito = 'correto' | 'incorreto' | 'invalido';
@@ -74,6 +84,11 @@ export interface GeradorExercicio<T> {
   saoEquivalentes(a: T, b: T): boolean;
   /** Forma legível do valor, para exibir o gabarito. */
   formatar(valor: T): string;
+}
+
+/** O que foi digitado é um decimal — com vírgula ou ponto — e não uma fração? */
+function ehDecimal(entrada: string): boolean {
+  return /^[+-]?\d*[.,]\d+$/.test(entrada.trim().replace(/\s+/g, ''));
 }
 
 /**
@@ -117,6 +132,16 @@ export function corrigir<T>(
     return {
       veredito: 'invalido',
       mensagem: `Não consegui ler essa resposta. Use o formato ${gerador.formatoResposta}.`,
+    };
+  }
+
+  // Onde a forma é a pergunta, repetir o decimal não responde nada.
+  if (exercicio.exigeFracao === true && ehDecimal(entrada)) {
+    return {
+      veredito: 'invalido',
+      mensagem:
+        'Esse é o número que o enunciado já deu, escrito do mesmo jeito. ' +
+        'A resposta é uma fração: escreva no formato 3/4.',
     };
   }
 
