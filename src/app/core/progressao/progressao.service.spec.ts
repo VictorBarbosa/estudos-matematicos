@@ -6,6 +6,8 @@ import { Nivel } from '@core/treino/treino.model';
 import {
   ACERTOS_EXIGENTES,
   ACERTOS_NA_JANELA,
+  ACERTOS_POR_OPERACAO,
+  REQUISITOS_POR_TOPICO,
   RESPOSTAS_NA_JANELA,
   TRILHA,
 } from './progressao.model';
@@ -18,6 +20,20 @@ import { ProgressaoService } from './progressao.service';
  * tentativas, com pelo menos 3 no Médio ou no Difícil.
  */
 function vencer(progresso: ProgressoService, topicoId: string): void {
+  // Tópicos com exigência de cobertura — Frações pede cinco acertos em cada
+  // operação — só abrem depois que ela é cumprida.
+  for (const requisito of REQUISITOS_POR_TOPICO[topicoId] ?? []) {
+    for (let i = 0; i < requisito.acertos; i++) {
+      progresso.registrar({
+        topicoId,
+        conceitos: [requisito.conceito],
+        acertou: true,
+        sequencia: i + 1,
+        nivel: 'medio',
+      });
+    }
+  }
+
   for (let i = 0; i < RESPOSTAS_NA_JANELA; i++) {
     // Os erros vêm primeiro: a janela precisa terminar em acertos.
     const acertou = i >= RESPOSTAS_NA_JANELA - ACERTOS_NA_JANELA;
@@ -244,4 +260,103 @@ describe('ProgressaoService', () => {
     // Medido: ~15%, contra 79% do critério de "3 seguidos".
     expect(liberou / simulacoes).toBeLessThan(0.25);
   }, 30_000);
+
+  it('frações exige acertos em cada uma das quatro operações', () => {
+    const fracoes = 'fracoes';
+    const operacoes = REQUISITOS_POR_TOPICO[fracoes]!;
+
+    expect(operacoes.map((requisito) => requisito.rotulo)).toEqual([
+      'soma',
+      'subtração',
+      'multiplicação',
+      'divisão',
+    ]);
+
+    // Constância perfeita, mas só em soma: a etapa continua fechada.
+    for (let i = 0; i < RESPOSTAS_NA_JANELA; i++) {
+      progresso.registrar({
+        topicoId: fracoes,
+        conceitos: ['fracoes.soma'],
+        acertou: true,
+        sequencia: i + 1,
+        nivel: 'dificil',
+      });
+    }
+
+    const parcial = progressao.dominioEm(fracoes);
+    expect(parcial.acertos).toBe(RESPOSTAS_NA_JANELA);
+    expect(parcial.vencido).toBe(false);
+    expect(progressao.requisitosPendentes(fracoes).map((r) => r.rotulo)).toEqual([
+      'subtração',
+      'multiplicação',
+      'divisão',
+    ]);
+
+    // Cumpridas as outras três, a etapa abre.
+    for (const requisito of operacoes.slice(1)) {
+      for (let i = 0; i < requisito.acertos; i++) {
+        progresso.registrar({
+          topicoId: fracoes,
+          conceitos: [requisito.conceito],
+          acertou: true,
+          sequencia: i + 1,
+          nivel: 'dificil',
+        });
+      }
+    }
+
+    expect(progressao.requisitosPendentes(fracoes)).toEqual([]);
+    expect(progressao.dominioEm(fracoes).vencido).toBe(true);
+  });
+
+  it('quatro acertos numa operação não bastam: são cinco', () => {
+    const fracoes = 'fracoes';
+
+    for (const requisito of REQUISITOS_POR_TOPICO[fracoes]!) {
+      const quantos = requisito.rotulo === 'divisão' ? ACERTOS_POR_OPERACAO - 1 : requisito.acertos;
+
+      for (let i = 0; i < quantos; i++) {
+        progresso.registrar({
+          topicoId: fracoes,
+          conceitos: [requisito.conceito],
+          acertou: true,
+          sequencia: i + 1,
+          nivel: 'dificil',
+        });
+      }
+    }
+
+    const pendentes = progressao.requisitosPendentes(fracoes);
+    expect(pendentes.map((r) => r.rotulo)).toEqual(['divisão']);
+    expect(pendentes[0]!.feitos).toBe(ACERTOS_POR_OPERACAO - 1);
+    expect(progressao.dominioEm(fracoes).vencido).toBe(false);
+  });
+
+  it('errar não conta como acerto da operação', () => {
+    for (let i = 0; i < 10; i++) {
+      progresso.registrar({
+        topicoId: 'fracoes',
+        conceitos: ['fracoes.divisao'],
+        acertou: false,
+        sequencia: 0,
+        nivel: 'dificil',
+      });
+    }
+
+    const divisao = progressao
+      .dominioEm('fracoes')
+      .requisitos.find((requisito) => requisito.rotulo === 'divisão')!;
+
+    expect(divisao.feitos).toBe(0);
+    expect(divisao.cumprido).toBe(false);
+  });
+
+  it('tópicos sem exigência de cobertura seguem só pela janela', () => {
+    const semRequisito = TRILHA.find((etapa) => REQUISITOS_POR_TOPICO[etapa.topicoId] === undefined)!;
+
+    vencer(progresso, semRequisito.topicoId);
+
+    expect(progressao.dominioEm(semRequisito.topicoId).requisitos).toEqual([]);
+    expect(progressao.estaConcluida(semRequisito.topicoId)).toBe(true);
+  });
 });

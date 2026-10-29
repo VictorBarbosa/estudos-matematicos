@@ -40,15 +40,49 @@ export class Fracao {
   }
 
   /**
-   * Interpreta texto digitado pelo aluno: `3/4`, `-2/5`, `7`, `0,5` ou `0.5`.
+   * Interpreta texto digitado pelo aluno: `3/4`, `-2/5`, `7`, `0,5`, `0.5` ou
+   * o número misto `2 1/3` (e `-2 1/3`).
+   *
    * Devolve `null` quando não for uma fração reconhecível — a validação da
    * resposta trata esse caso como "formato inválido", não como erro de cálculo.
    */
   static analisar(texto: string): Fracao | null {
-    const limpo = texto.trim().replace(/\s+/g, '');
-    if (limpo === '') {
+    const aparado = texto.trim();
+    if (aparado === '') {
       return null;
     }
+
+    /*
+     * O número misto é lido ANTES de remover os espaços, porque é justamente o
+     * espaço que o define: sem este passo, "1 1/2" virava "11/2" — onze meios
+     * em vez de um e meio.
+     *
+     * O sinal vale para o número inteiro: −2 1/3 é −(2 + 1/3), e não −2 + 1/3.
+     */
+    const comoMista = /^([+-]?)(\d+)\s+(\d+)\s*\/\s*(\d+)$/.exec(aparado);
+    if (comoMista) {
+      const denominador = Number(comoMista[4]);
+      if (denominador === 0) {
+        return null;
+      }
+
+      const inteiro = Number(comoMista[2]);
+      const numerador = Number(comoMista[3]);
+      const sinal = comoMista[1] === '-' ? -1 : 1;
+
+      return Fracao.criar(sinal * (inteiro * denominador + numerador), denominador);
+    }
+
+    /*
+     * Fora do número misto, espaço entre dígitos é ambiguidade, não folga:
+     * remover os espaços de "1 2 1/2" produziria 121/2, um valor que ninguém
+     * digitou. Espaço em volta do traço — "3 / 4" — continua tolerado.
+     */
+    if (/\d\s+\d/.test(aparado)) {
+      return null;
+    }
+
+    const limpo = aparado.replace(/\s+/g, '');
 
     const comoFracao = /^([+-]?\d+)\/([+-]?\d+)$/.exec(limpo);
     if (comoFracao) {
@@ -196,6 +230,27 @@ export class Fracao {
     return this.numerador / this.denominador;
   }
 
+  /**
+   * A fração como número misto: parte inteira e o que sobra dela.
+   *
+   * Sete terços são dois inteiros e um terço. Essa é a forma em que se diz a
+   * quantidade em voz alta — "duas pizzas e um terço" —, e por isso é a forma
+   * que o aluno precisa saber ler e escrever.
+   *
+   * O sinal acompanha a parte inteira: −7/3 é −(2 + 1/3).
+   */
+  paraMista(): { readonly inteiro: number; readonly numerador: number; readonly denominador: number } {
+    const simplificada = this.simplificar();
+    const absoluto = Math.abs(simplificada.numerador);
+    const sinal = simplificada.numerador < 0 ? -1 : 1;
+
+    return {
+      inteiro: sinal * Math.trunc(absoluto / simplificada.denominador),
+      numerador: absoluto % simplificada.denominador,
+      denominador: simplificada.denominador,
+    };
+  }
+
   /** `\frac{3}{4}`, ou apenas `3` quando a fração equivale a um inteiro. */
   paraTex(): string {
     if (this.denominador === 1) {
@@ -207,9 +262,39 @@ export class Fracao {
     return `\\frac{${this.numerador}}{${this.denominador}}`;
   }
 
+  /** `2\\frac{1}{3}` para sete terços; a forma simples quando não há parte inteira. */
+  paraTexMisto(): string {
+    const { inteiro, numerador, denominador } = this.paraMista();
+
+    if (numerador === 0) {
+      return String(inteiro);
+    }
+    if (inteiro === 0) {
+      return this.simplificar().paraTex();
+    }
+
+    const sinal = inteiro < 0 ? '-' : '';
+    return `${sinal}${Math.abs(inteiro)}\\frac{${numerador}}{${denominador}}`;
+  }
+
   toString(): string {
     return this.denominador === 1
       ? String(this.numerador)
       : `${this.numerador}/${this.denominador}`;
+  }
+
+  /** `2 1/3`, a forma que o campo de resposta também aceita de volta. */
+  toStringMisto(): string {
+    const { inteiro, numerador, denominador } = this.paraMista();
+
+    if (numerador === 0) {
+      return String(inteiro);
+    }
+    if (inteiro === 0) {
+      return this.simplificar().toString();
+    }
+
+    const sinal = inteiro < 0 ? '-' : '';
+    return `${sinal}${Math.abs(inteiro)} ${numerador}/${denominador}`;
   }
 }

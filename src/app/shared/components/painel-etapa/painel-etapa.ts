@@ -43,6 +43,9 @@ export class PainelEtapa {
     this.progressao.faltamExigentesPara(this.topicoId()),
   );
 
+  /** Exigências de cobertura do tópico — em Frações, as quatro operações. */
+  protected readonly requisitos = computed(() => this.dominio().requisitos);
+
   /** Um marcador por acerto exigido na janela, preenchido conforme ela avança. */
   protected readonly marcadores = computed(() =>
     Array.from({ length: ACERTOS_NA_JANELA }, (_, indice) => indice < this.avanco()),

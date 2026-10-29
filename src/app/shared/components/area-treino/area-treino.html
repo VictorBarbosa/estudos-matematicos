@@ -106,7 +106,9 @@
       <p>
         <strong>Etapa vencida!</strong>
         {{ dominio().acertos }} acertos nas últimas {{ janela }} tentativas,
-        {{ dominio().acertosExigentes }} delas no Médio ou no Difícil.
+        {{ dominio().acertosExigentes }} delas no Médio ou no Difícil@if (
+          requisitos().length > 0
+        ) {, com as {{ requisitos().length }} operações praticadas}.
       </p>
       @if (proximaEtapa(); as proxima) {
         <a class="principal" [routerLink]="proxima.rota">
@@ -115,13 +117,27 @@
         </a>
       }
     </div>
-  } @else if (dominio().respostas > 0) {
-    <p class="rumo-ao-desbloqueio" role="status">
-      {{ dominio().acertos }} de {{ alvo }} acertos nas últimas {{ janela }} tentativas.
-      @if (faltamExigentes() > 0) {
-        Faltam {{ faltamExigentes() }} acerto(s) no Médio ou no Difícil.
+  } @else if (dominio().respostas > 0 || requisitos().length > 0) {
+    <div class="rumo-ao-desbloqueio" role="status">
+      <p>
+        {{ dominio().acertos }} de {{ alvo }} acertos nas últimas {{ janela }} tentativas.
+        @if (faltamExigentes() > 0) {
+          Faltam {{ faltamExigentes() }} acerto(s) no Médio ou no Difícil.
+        }
+      </p>
+
+      @if (requisitos().length > 0) {
+        <ul class="requisitos">
+          @for (requisito of requisitos(); track requisito.conceito) {
+            <li [class.cumprido]="requisito.cumprido">
+              <span class="marca" aria-hidden="true">{{ requisito.cumprido ? '✓' : '·' }}</span>
+              {{ requisito.rotulo }}
+              <strong>{{ requisito.feitos }}/{{ requisito.acertos }}</strong>
+            </li>
+          }
+        </ul>
       }
-    </p>
+    </div>
   }
 
   @if (s.resolucaoVisivel()) {

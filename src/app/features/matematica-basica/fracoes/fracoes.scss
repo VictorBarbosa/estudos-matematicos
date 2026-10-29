@@ -121,3 +121,13 @@ section {
     width: 100%;
   }
 }
+
+/* O resultado impróprio também na forma em que se lê em voz alta. */
+.misto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--esp-2);
+  margin-top: var(--esp-2);
+  color: var(--texto-suave);
+}

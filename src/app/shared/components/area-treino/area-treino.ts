@@ -79,6 +79,15 @@ export class AreaTreino {
     this.progressao.faltamExigentesPara(this.gerador().topicoId),
   );
 
+  /**
+   * As exigências de cobertura do tópico, cumpridas ou não.
+   *
+   * Em Frações são as quatro operações. Mostrar a lista inteira — e não só o
+   * que falta — é o que permite ao aluno saber onde está antes de escolher o
+   * próximo exercício.
+   */
+  protected readonly requisitos = computed(() => this.dominio().requisitos);
+
   protected readonly etapaVencida = computed(() =>
     this.progressao.estaConcluida(this.gerador().topicoId),
   );
