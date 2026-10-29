@@ -2,10 +2,10 @@ import { provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Fracao, resolverComPassos } from '@core/math';
-import { RESPOSTAS_NA_JANELA, TRILHA } from '@core/progressao/progressao.model';
-import { ProgressoService } from '@core/treino/progresso.service';
-import { Exercicio, GeradorExercicio, Nivel } from '@core/treino/treino.model';
-import { AreaTreino } from './area-treino';
+import { RESPOSTAS_NA_JANELA, TRILHA } from '@core/progressao/models/progressao.model';
+import { ProgressoService } from '@core/treino/services/progresso.service';
+import { Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
+import { AreaTreino } from '@shared/components/area-treino/area-treino';
 
 /**
  * Gerador determinístico: sempre 1/4 + 1/6, cujo resultado é 5/12.

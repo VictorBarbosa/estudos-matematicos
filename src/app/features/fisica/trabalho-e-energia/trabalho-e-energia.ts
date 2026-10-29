@@ -7,17 +7,17 @@ import {
   potenciaMediaComPassos,
   trabalhoComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorEnergia } from './trabalho-e-energia.gerador';
-import { TEORIA_ENERGIA } from './trabalho-e-energia.teoria';
+import { geradorEnergia } from '@features/fisica/trabalho-e-energia/trabalho-e-energia.gerador';
+import { TEORIA_ENERGIA } from '@features/fisica/trabalho-e-energia/trabalho-e-energia.teoria';
 
 @Component({
   selector: 'app-trabalho-e-energia',

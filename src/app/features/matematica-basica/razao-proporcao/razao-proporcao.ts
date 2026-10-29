@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { divisaoProporcionalComPassos, razaoComPassos, regraDeTresComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorProporcao } from './razao-proporcao.gerador';
-import { TEORIA_PROPORCAO } from './razao-proporcao.teoria';
+import { geradorProporcao } from '@features/matematica-basica/razao-proporcao/razao-proporcao.gerador';
+import { TEORIA_PROPORCAO } from '@features/matematica-basica/razao-proporcao/razao-proporcao.teoria';
 
 @Component({
   selector: 'app-razao-proporcao',

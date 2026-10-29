@@ -1,7 +1,7 @@
 import { R_GASES } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorTermo } from './termodinamica-e-gases.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorTermo } from '@features/fisica/termodinamica-e-gases/termodinamica-e-gases.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(8314);

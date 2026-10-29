@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Polinomio, integrarPolinomioComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorIndefinida } from './integral-indefinida.gerador';
-import { TEORIA_INDEFINIDA } from './integral-indefinida.teoria';
+import { geradorIndefinida } from '@features/calculo-2/integral-indefinida/integral-indefinida.gerador';
+import { TEORIA_INDEFINIDA } from '@features/calculo-2/integral-indefinida/integral-indefinida.teoria';
 
 @Component({
   selector: 'app-integral-indefinida',

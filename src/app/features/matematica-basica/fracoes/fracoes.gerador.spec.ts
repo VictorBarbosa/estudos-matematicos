@@ -1,7 +1,7 @@
 import { Fracao, mdc, resolverComPassos } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { CONCEITO_DA_OPERACAO, geradorFracoes } from './fracoes.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { CONCEITO_DA_OPERACAO, geradorFracoes } from '@features/matematica-basica/fracoes/fracoes.gerador';
 
 /** Gera uma amostra de exercícios de um nível, de forma determinística. */
 function amostra(nivel: Nivel, quantidade = 60) {

@@ -7,9 +7,9 @@ import {
   orbitaCircularComPassos,
   velocidadeEscapeComPassos,
 } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
+import { Rng } from '@core/treino/rng/rng';
+import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 /** Comparação relativa: as grandezas aqui variam muitas ordens de magnitude. */
 const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ACERTOS_NA_JANELA, RESPOSTAS_NA_JANELA } from '@core/progressao/progressao.model';
-import { ProgressaoService } from '@core/progressao/progressao.service';
+import { ACERTOS_NA_JANELA, RESPOSTAS_NA_JANELA } from '@core/progressao/models/progressao.model';
+import { ProgressaoService } from '@core/progressao/services/progressao.service';
 
 /**
  * O placar da trilha, na página inicial.

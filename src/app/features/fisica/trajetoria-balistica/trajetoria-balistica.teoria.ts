@@ -1,5 +1,5 @@
 import { GRAVIDADE, resolverLancamentoComPassos } from '@core/math';
-import { Teoria } from '@core/teoria/teoria.model';
+import { Teoria } from '@core/teoria/models/teoria.model';
 
 const exemplo = { velocidadeInicial: 20, anguloGraus: 45, alturaInicial: 0, gravidade: GRAVIDADE };
 

@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { analisarExponencialComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorExponencial } from './funcao-exponencial.gerador';
-import { TEORIA_EXPONENCIAL } from './funcao-exponencial.teoria';
+import { geradorExponencial } from '@features/funcoes/funcao-exponencial/funcao-exponencial.gerador';
+import { TEORIA_EXPONENCIAL } from '@features/funcoes/funcao-exponencial/funcao-exponencial.teoria';
 
 /** Bases disponíveis, incluindo as menores que 1 para o decaimento. */
 const BASES = [0.2, 0.5, 1.5, 2, 2.718, 3, 5, 10] as const;

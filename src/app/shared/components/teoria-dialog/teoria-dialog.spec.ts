@@ -1,8 +1,8 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Teoria } from '@core/teoria/teoria.model';
-import { TeoriaService } from '@core/teoria/teoria.service';
-import { TeoriaDialog } from './teoria-dialog';
+import { Teoria } from '@core/teoria/models/teoria.model';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
+import { TeoriaDialog } from '@shared/components/teoria-dialog/teoria-dialog';
 
 const CONCEITOS: readonly Teoria[] = [
   {

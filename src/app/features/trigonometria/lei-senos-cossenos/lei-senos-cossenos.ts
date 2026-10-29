@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { leiDosCossenosComPassos, paraRadianos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorLeis } from './lei-senos-cossenos.gerador';
-import { TEORIA_LEIS } from './lei-senos-cossenos.teoria';
+import { geradorLeis } from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.gerador';
+import { TEORIA_LEIS } from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.teoria';
 
 const LARGURA = 360;
 const ALTURA = 260;

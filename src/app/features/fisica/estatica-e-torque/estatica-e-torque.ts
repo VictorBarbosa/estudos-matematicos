@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { centroDeMassaComPassos, equilibrioAlavancaComPassos, torqueComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/math-plot.model';
+import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorTorque } from './estatica-e-torque.gerador';
-import { TEORIA_TORQUE } from './estatica-e-torque.teoria';
+import { geradorTorque } from '@features/fisica/estatica-e-torque/estatica-e-torque.gerador';
+import { TEORIA_TORQUE } from '@features/fisica/estatica-e-torque/estatica-e-torque.teoria';
 
 @Component({
   selector: 'app-estatica-e-torque',

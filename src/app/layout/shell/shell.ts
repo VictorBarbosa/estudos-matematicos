@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { ROTULO_TEMA, TemaService } from '@core/tema/tema.service';
+import { ROTULO_TEMA, TemaService } from '@core/tema/services/tema.service';
 import { TeoriaDialog } from '@shared/components/teoria-dialog/teoria-dialog';
 import { Sidebar } from '@layout/sidebar/sidebar';
 

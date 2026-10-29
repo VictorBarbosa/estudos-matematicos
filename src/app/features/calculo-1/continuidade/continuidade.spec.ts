@@ -1,6 +1,6 @@
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorContinuidade } from './continuidade.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorContinuidade } from '@features/calculo-1/continuidade/continuidade.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(8484);

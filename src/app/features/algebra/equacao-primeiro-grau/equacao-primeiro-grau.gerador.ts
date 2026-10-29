@@ -1,12 +1,12 @@
 import { Fracao, resolverLinearComPassos } from '@core/math';
-import { Rng } from '@core/treino/rng';
+import { Rng } from '@core/treino/rng/rng';
 import {
   Armadilha,
   Exercicio,
   GeradorExercicio,
   Nivel,
   semColisoes,
-} from '@core/treino/treino.model';
+} from '@core/treino/models/treino.model';
 
 const saoEquivalentes = (a: Fracao, b: Fracao): boolean => a.igualA(b);
 

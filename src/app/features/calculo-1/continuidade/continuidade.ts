@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { ehContinua, limitesLaterais } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
-import { geradorContinuidade } from './continuidade.gerador';
-import { TEORIA_CONTINUIDADE } from './continuidade.teoria';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { geradorContinuidade } from '@features/calculo-1/continuidade/continuidade.gerador';
+import { TEORIA_CONTINUIDADE } from '@features/calculo-1/continuidade/continuidade.teoria';
 
 interface Caso {
   readonly id: string;

@@ -7,15 +7,15 @@ import {
   quocienteDePotenciasComPassos,
   simplificarRaizComPassos,
 } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { analisarValorSimples, numeroComCasas } from '@core/treino/resposta-numerica';
+import { Rng } from '@core/treino/rng/rng';
+import { analisarValorSimples, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import {
   Armadilha,
   Exercicio,
   GeradorExercicio,
   Nivel,
   semColisoes,
-} from '@core/treino/treino.model';
+} from '@core/treino/models/treino.model';
 
 /** A mesma tolerância da correção, para não listar armadilhas indistinguíveis. */
 const { saoEquivalentes: proximos } = numeroComCasas(6, 1e-4);

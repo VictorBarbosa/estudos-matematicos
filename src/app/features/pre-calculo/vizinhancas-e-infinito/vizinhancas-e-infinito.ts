@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { limiteNoInfinito } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, SegmentoPlot } from '@shared/components/math-plot/math-plot.model';
-import { geradorVizinhancas } from './vizinhancas-e-infinito.gerador';
-import { TEORIA_VIZINHANCAS } from './vizinhancas-e-infinito.teoria';
+import { CurvaPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { geradorVizinhancas } from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.gerador';
+import { TEORIA_VIZINHANCAS } from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.teoria';
 
 @Component({
   selector: 'app-vizinhancas-e-infinito',

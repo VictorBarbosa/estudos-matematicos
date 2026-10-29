@@ -6,8 +6,10 @@ import {
   operacaoParaTex,
   resolverComPassos,
 } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel } from '@core/treino/treino.model';
+ 
+import { Armadilha, Exercicio, GeradorExercicio, Nivel }  from '@core/treino/models/treino.model';
+
+import { Rng } from '@core/treino/rng/rng';
 
 /** Pares de denominadores sem fator comum, que forçam o cálculo real do MMC. */
 const PARES_COPRIMOS: readonly (readonly [number, number])[] = [

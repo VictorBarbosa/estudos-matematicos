@@ -1,7 +1,7 @@
 import { No, avaliar, expressaoParaTex, numero, op, resolverExpressaoComPassos } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { analisarValorSimples } from '@core/treino/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
+import { Rng } from '@core/treino/rng/rng';
+import { analisarValorSimples } from '@core/treino/resposta-numerica/resposta-numerica';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 const saoIguais = (a: number, b: number): boolean => Math.abs(a - b) < 1e-9;
 

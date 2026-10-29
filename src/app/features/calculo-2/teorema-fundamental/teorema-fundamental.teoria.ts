@@ -1,5 +1,5 @@
 import { Polinomio, teoremaFundamentalComPassos } from '@core/math';
-import { Teoria } from '@core/teoria/teoria.model';
+import { Teoria } from '@core/teoria/models/teoria.model';
 
 export const TEORIA_TFC: readonly Teoria[] = [
   {

@@ -1,7 +1,7 @@
 import { divisaoProporcionalComPassos, regraDeTresComPassos } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
+import { Rng } from '@core/treino/rng/rng';
+import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 const TOLERANCIA = 1e-6;
 const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);

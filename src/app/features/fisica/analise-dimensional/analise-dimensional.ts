@@ -10,14 +10,14 @@ import {
   multiplicarDimensoes,
   verificarEquacaoComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorDimensional } from './analise-dimensional.gerador';
-import { TEORIA_DIMENSIONAL } from './analise-dimensional.teoria';
+import { geradorDimensional } from '@features/fisica/analise-dimensional/analise-dimensional.gerador';
+import { TEORIA_DIMENSIONAL } from '@features/fisica/analise-dimensional/analise-dimensional.teoria';
 
 type Operacao = 'multiplicar' | 'dividir' | 'quadrado';
 

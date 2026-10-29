@@ -1,6 +1,6 @@
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorLaterais } from './limites-laterais.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorLaterais } from '@features/calculo-1/limites-laterais/limites-laterais.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(7474);

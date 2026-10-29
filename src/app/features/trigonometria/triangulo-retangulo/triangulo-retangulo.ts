@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { ANGULOS_NOTAVEIS, paraRadianos, resolverTrianguloComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorTriangulo } from './triangulo-retangulo.gerador';
-import { TEORIA_TRIANGULO } from './triangulo-retangulo.teoria';
+import { geradorTriangulo } from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.gerador';
+import { TEORIA_TRIANGULO } from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.teoria';
 
 /** Dimensões do desenho do triângulo, no sistema interno do SVG. */
 const LARGURA = 340;

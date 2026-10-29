@@ -6,15 +6,15 @@ import {
   superficieComPassos,
   volumeComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorSolidos } from './solidos-e-volumes.gerador';
-import { TEORIA_SOLIDOS } from './solidos-e-volumes.teoria';
+import { geradorSolidos } from '@features/geometria/solidos-e-volumes/solidos-e-volumes.gerador';
+import { TEORIA_SOLIDOS } from '@features/geometria/solidos-e-volumes/solidos-e-volumes.teoria';
 
 const SOLIDOS: readonly Solido[] = ['cilindro', 'cone', 'esfera'];
 

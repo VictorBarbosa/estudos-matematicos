@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { ANGULOS_NOTAVEIS, paraRadianos, quadrante, sinaisNoQuadrante } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { CirculoTrigonometrico as CirculoSvg } from '@shared/components/circulo-trigonometrico/circulo-trigonometrico';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
-import { geradorCirculo } from './circulo-trigonometrico.gerador';
-import { TEORIA_CIRCULO } from './circulo-trigonometrico.teoria';
+import { geradorCirculo } from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.gerador';
+import { TEORIA_CIRCULO } from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.teoria';
 
 @Component({
   selector: 'app-circulo-trigonometrico-topico',

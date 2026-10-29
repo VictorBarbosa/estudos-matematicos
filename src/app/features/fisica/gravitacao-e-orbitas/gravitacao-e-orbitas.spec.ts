@@ -1,7 +1,7 @@
 import { G, MASSA_TERRA, RAIO_TERRA, orbitaCircularComPassos } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorGravitacao } from './gravitacao-e-orbitas.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorGravitacao } from '@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(6674);

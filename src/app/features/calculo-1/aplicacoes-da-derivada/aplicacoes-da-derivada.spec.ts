@@ -1,7 +1,7 @@
 import { Polinomio, pontosCriticos } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorAplicacoesDerivada } from './aplicacoes-da-derivada.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorAplicacoesDerivada } from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(3636);

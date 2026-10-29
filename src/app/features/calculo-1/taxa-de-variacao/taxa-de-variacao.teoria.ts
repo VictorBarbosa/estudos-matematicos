@@ -1,5 +1,5 @@
 import { Polinomio, analisarMovimentoComPassos, taxaMediaComPassos } from '@core/math';
-import { Teoria } from '@core/teoria/teoria.model';
+import { Teoria } from '@core/teoria/models/teoria.model';
 
 /** s(t) = t³ − 6t² + 9t, usada como exemplo nos três conceitos. */
 const EXEMPLO = Polinomio.de(0, 9, -6, 1);

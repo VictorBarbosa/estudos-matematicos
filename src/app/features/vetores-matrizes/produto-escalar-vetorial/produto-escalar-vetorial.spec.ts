@@ -1,7 +1,7 @@
 import { modulo, produtoEscalar, produtoVetorialZ } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorProdutos } from './produto-escalar-vetorial.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorProdutos } from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(5309);

@@ -6,9 +6,9 @@ import {
   ACERTOS_NA_JANELA,
   RESPOSTAS_NA_JANELA,
   TRILHA,
-} from '@core/progressao/progressao.model';
-import { ProgressoService } from '@core/treino/progresso.service';
-import { Revisar } from './revisar';
+} from '@core/progressao/models/progressao.model';
+import { ProgressoService } from '@core/treino/services/progresso.service';
+import { Revisar } from '@features/revisar/revisar';
 
 /** Vence um tópico, para que ele entre na fila de revisão. */
 function vencer(progresso: ProgressoService, topicoId: string): void {

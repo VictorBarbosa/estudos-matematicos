@@ -1,7 +1,7 @@
 import { colisaoComPassos, energiaCinetica, momentoLinear } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorMomento } from './impulso-e-momento.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorMomento } from '@features/fisica/impulso-e-momento/impulso-e-momento.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(8628);

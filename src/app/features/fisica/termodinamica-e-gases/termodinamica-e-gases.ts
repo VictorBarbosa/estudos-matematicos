@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { gasIdealComPassos, primeiraLeiComPassos, trabalhoIsobaricoComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/math-plot.model';
+import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorTermo } from './termodinamica-e-gases.gerador';
-import { TEORIA_TERMO } from './termodinamica-e-gases.teoria';
+import { geradorTermo } from '@features/fisica/termodinamica-e-gases/termodinamica-e-gases.gerador';
+import { TEORIA_TERMO } from '@features/fisica/termodinamica-e-gases/termodinamica-e-gases.teoria';
 
 @Component({
   selector: 'app-termodinamica-e-gases',

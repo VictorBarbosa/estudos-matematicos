@@ -12,7 +12,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 
 const RAIZ = new URL('..', import.meta.url).pathname;
-const SAIDA = 'src/app/core/treino/registro-geradores.ts';
+const SAIDA = 'src/app/core/treino/registro-geradores/registro-geradores.ts';
 
 const arquivos = execSync('find src/app/features -name "*.gerador.ts"', {
   cwd: RAIZ,
@@ -48,7 +48,7 @@ const conteudo = `// Gerado por scripts/gerar-registro-geradores.mjs — não ed
 // Rode \`npm run gerar:geradores\` depois de criar, remover ou renomear um
 // tópico. O teste core/revisao/revisao.spec.ts garante que este índice
 // corresponde aos arquivos \`*.gerador.ts\`.
-import { GeradorExercicio } from './treino.model';
+import { GeradorExercicio } from '@core/treino/models/treino.model';
 
 /** Carrega sob demanda o gerador de exercícios de um tópico. */
 export const CARREGAR_GERADOR: Readonly<

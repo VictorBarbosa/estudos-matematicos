@@ -1,7 +1,7 @@
 import { GRAVIDADE_PADRAO, planoInclinadoComPassos } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorNewton } from './leis-de-newton.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorNewton } from '@features/fisica/leis-de-newton/leis-de-newton.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(1687);

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { Fracao } from '@core/math';
-import { CorPlot, corCss } from '@shared/components/math-plot/math-plot.model';
+import { CorPlot, corCss } from '@shared/components/math-plot/models/math-plot.model';
 
 /**
  * Representa uma fração como barra dividida em partes iguais.

@@ -1,7 +1,7 @@
 import { resumirAmostra } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorIncerteza } from './estatistica-e-incerteza.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorIncerteza } from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(7777);

@@ -6,17 +6,17 @@ import {
   termoGeral,
   termosIniciais,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorProgressoes } from './progressoes.gerador';
-import { TEORIA_PROGRESSOES } from './progressoes.teoria';
+import { geradorProgressoes } from '@features/funcoes/progressoes/progressoes.gerador';
+import { TEORIA_PROGRESSOES } from '@features/funcoes/progressoes/progressoes.teoria';
 
 @Component({
   selector: 'app-progressoes',

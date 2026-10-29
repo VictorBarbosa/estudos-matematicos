@@ -6,60 +6,60 @@
  * Função Quadrática e Equação do 2º grau usam as mesmas raízes, Frações e
  * MMC/MDC usam os mesmos inteiros.
  */
-export * from './tipos';
+export * from '@core/math/tipos/tipos';
 
 // Números
-export * from './numeros/inteiros';
-export * from './numeros/divisibilidade';
-export * from './numeros/fracao';
-export * from './numeros/fracao-operacoes';
-export * from './numeros/decimais';
-export * from './numeros/porcentagem';
-export * from './numeros/potencias';
-export * from './numeros/notacao-cientifica';
-export * from './numeros/proporcao';
-export * from './numeros/expressoes';
+export * from '@core/math/numeros/inteiros/inteiros';
+export * from '@core/math/numeros/divisibilidade/divisibilidade';
+export * from '@core/math/numeros/fracao/fracao';
+export * from '@core/math/numeros/fracao-operacoes/fracao-operacoes';
+export * from '@core/math/numeros/decimais/decimais';
+export * from '@core/math/numeros/porcentagem/porcentagem';
+export * from '@core/math/numeros/potencias/potencias';
+export * from '@core/math/numeros/notacao-cientifica/notacao-cientifica';
+export * from '@core/math/numeros/proporcao/proporcao';
+export * from '@core/math/numeros/expressoes/expressoes';
 
 // Álgebra
-export * from './algebra/polinomio';
-export * from './algebra/divisao-polinomial';
-export * from './algebra/equacao-linear';
-export * from './algebra/equacao-quadratica';
-export * from './algebra/produtos-notaveis';
-export * from './algebra/fatoracao';
-export * from './algebra/sistema-linear';
-export * from './algebra/inequacao';
-export * from './algebra/vetores';
-export * from './algebra/matrizes';
-export * from './algebra/complexos';
+export * from '@core/math/algebra/polinomio/polinomio';
+export * from '@core/math/algebra/divisao-polinomial/divisao-polinomial';
+export * from '@core/math/algebra/equacao-linear/equacao-linear';
+export * from '@core/math/algebra/equacao-quadratica/equacao-quadratica';
+export * from '@core/math/algebra/produtos-notaveis/produtos-notaveis';
+export * from '@core/math/algebra/fatoracao/fatoracao';
+export * from '@core/math/algebra/sistema-linear/sistema-linear';
+export * from '@core/math/algebra/inequacao/inequacao';
+export * from '@core/math/algebra/vetores/vetores';
+export * from '@core/math/algebra/matrizes/matrizes';
+export * from '@core/math/algebra/complexos/complexos';
 
 // Funções
-export * from './funcoes/elementares';
-export * from './funcoes/composicao';
+export * from '@core/math/funcoes/elementares/elementares';
+export * from '@core/math/funcoes/composicao/composicao';
 
 // Trigonometria
-export * from './trigonometria/trigonometria';
+export * from '@core/math/trigonometria/trigonometria/trigonometria';
 
 // Geometria analítica
-export * from './geometria/plana';
-export * from './geometria/espacial';
-export * from './geometria/analitica';
+export * from '@core/math/geometria/plana/plana';
+export * from '@core/math/geometria/espacial/espacial';
+export * from '@core/math/geometria/analitica/analitica';
 
 // Cálculo
-export * from './calculo/sequencias';
-export * from './calculo/limites';
-export * from './calculo/derivadas';
-export * from './calculo/integrais';
+export * from '@core/math/calculo/sequencias/sequencias';
+export * from '@core/math/calculo/limites/limites';
+export * from '@core/math/calculo/derivadas/derivadas';
+export * from '@core/math/calculo/integrais/integrais';
 
 // Combinatória e estatística
-export * from './estatistica/contagem';
-export * from './estatistica/descritiva';
+export * from '@core/math/estatistica/contagem/contagem';
+export * from '@core/math/estatistica/descritiva/descritiva';
 
 // Física e finanças
-export * from './fisica/dimensional';
-export * from './fisica/cinematica';
-export * from './fisica/mecanica';
-export * from './fisica/energia';
-export * from './fisica/gravitacao';
-export * from './fisica/fluidos';
-export * from './fisica/movimento';
+export * from '@core/math/fisica/dimensional/dimensional';
+export * from '@core/math/fisica/cinematica/cinematica';
+export * from '@core/math/fisica/mecanica/mecanica';
+export * from '@core/math/fisica/energia/energia';
+export * from '@core/math/fisica/gravitacao/gravitacao';
+export * from '@core/math/fisica/fluidos/fluidos';
+export * from '@core/math/fisica/movimento/movimento';

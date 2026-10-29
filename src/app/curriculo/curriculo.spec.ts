@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { routes } from '../app.routes';
-import { CURRICULO, rotaDoTopico, totalDeTopicos, totalDeTopicosProntos } from './curriculo';
-import { GLOSSARIO } from './glossario';
+import { routes } from '../app-routes/app.routes';
+import { CURRICULO, rotaDoTopico, totalDeTopicos, totalDeTopicosProntos } from '@curriculo/curriculo';
+import { GLOSSARIO } from '@curriculo/glossario';
 
 /**
  * O currículo é a fonte única da trilha, da navegação e da página inicial.

@@ -1,7 +1,7 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TeoriaService } from '@core/teoria/teoria.service';
-import { Fracoes } from './fracoes';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
+import { Fracoes } from '@features/matematica-basica/fracoes/fracoes';
 
 describe('Fracoes', () => {
   let fixture: ComponentFixture<Fracoes>;

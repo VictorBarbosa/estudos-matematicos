@@ -12,11 +12,11 @@ import {
   ACERTOS_EXIGENTES,
   ACERTOS_NA_JANELA,
   RESPOSTAS_NA_JANELA,
-} from '@core/progressao/progressao.model';
-import { ProgressaoService } from '@core/progressao/progressao.service';
-import { ProgressoService } from '@core/treino/progresso.service';
-import { SessaoTreino } from '@core/treino/sessao-treino';
-import { GeradorExercicio, NIVEIS, ROTULO_NIVEL } from '@core/treino/treino.model';
+} from '@core/progressao/models/progressao.model';
+import { ProgressaoService } from '@core/progressao/services/progressao.service';
+import { ProgressoService } from '@core/treino/services/progresso.service';
+import { SessaoTreino } from '@core/treino/sessao-treino/sessao-treino';
+import { GeradorExercicio, NIVEIS, ROTULO_NIVEL } from '@core/treino/models/treino.model';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
 import { CampoResposta } from '@shared/components/campo-resposta/campo-resposta';
 import { Formula } from '@shared/components/formula/formula';

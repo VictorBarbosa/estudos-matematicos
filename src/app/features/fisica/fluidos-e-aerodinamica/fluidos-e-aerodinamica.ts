@@ -6,17 +6,17 @@ import {
   pressaoHidrostaticaComPassos,
   sustentacaoComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorFluidos } from './fluidos-e-aerodinamica.gerador';
-import { TEORIA_FLUIDOS } from './fluidos-e-aerodinamica.teoria';
+import { geradorFluidos } from '@features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.gerador';
+import { TEORIA_FLUIDOS } from '@features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.teoria';
 
 /** Materiais de referência, com densidade em kg/m³. */
 const MATERIAIS: readonly { readonly nome: string; readonly densidade: number }[] = [

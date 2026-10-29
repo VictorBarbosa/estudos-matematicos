@@ -1,8 +1,8 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TOPICO_DO_CONCEITO } from '@core/teoria/registro-teorias';
-import { ProgressoService } from '@core/treino/progresso.service';
-import { PainelProgresso } from './painel-progresso';
+import { TOPICO_DO_CONCEITO } from '@core/teoria/registro-teorias/registro-teorias';
+import { ProgressoService } from '@core/treino/services/progresso.service';
+import { PainelProgresso } from '@shared/components/painel-progresso/painel-progresso';
 
 describe('PainelProgresso', () => {
   let fixture: ComponentFixture<PainelProgresso>;

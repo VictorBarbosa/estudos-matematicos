@@ -1,7 +1,7 @@
 import { Polinomio, derivadaNumerica, integralNumerica } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorTfc } from './teorema-fundamental.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorTfc } from '@features/calculo-2/teorema-fundamental/teorema-fundamental.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(7575);

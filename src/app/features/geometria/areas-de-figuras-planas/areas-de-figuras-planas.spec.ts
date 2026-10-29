@@ -1,7 +1,7 @@
 import { areaComPassos } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorAreas } from './areas-de-figuras-planas.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorAreas } from '@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(6064);

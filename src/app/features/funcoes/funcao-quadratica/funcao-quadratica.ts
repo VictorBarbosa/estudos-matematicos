@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Polinomio, resolverQuadraticaComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
@@ -11,10 +11,10 @@ import {
   CurvaPlot,
   PontoPlot,
   SegmentoPlot,
-} from '@shared/components/math-plot/math-plot.model';
+} from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorQuadratica } from './funcao-quadratica.gerador';
-import { TEORIA_QUADRATICA } from './funcao-quadratica.teoria';
+import { geradorQuadratica } from '@features/funcoes/funcao-quadratica/funcao-quadratica.gerador';
+import { TEORIA_QUADRATICA } from '@features/funcoes/funcao-quadratica/funcao-quadratica.teoria';
 
 @Component({
   selector: 'app-funcao-quadratica',

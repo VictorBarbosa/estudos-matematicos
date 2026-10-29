@@ -16,7 +16,7 @@ import {
   formatarNumero,
   gerarMarcacoes,
   passoBonito,
-} from './math-plot.model';
+} from '@shared/components/math-plot/models/math-plot.model';
 
 /** Largura fixa do sistema de coordenadas interno; o SVG escala por viewBox. */
 const LARGURA = 800;

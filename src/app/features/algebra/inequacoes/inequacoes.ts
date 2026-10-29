@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Relacao, SIMBOLO_RELACAO, resolverInequacaoComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot, SegmentoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorInequacoes } from './inequacoes.gerador';
-import { TEORIA_INEQUACOES } from './inequacoes.teoria';
+import { geradorInequacoes } from '@features/algebra/inequacoes/inequacoes.gerador';
+import { TEORIA_INEQUACOES } from '@features/algebra/inequacoes/inequacoes.teoria';
 
 const RELACOES: readonly { readonly valor: Relacao; readonly rotulo: string }[] = [
   { valor: '<', rotulo: '<' },

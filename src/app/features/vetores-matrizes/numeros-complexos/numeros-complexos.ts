@@ -7,17 +7,17 @@ import {
   paraPolarComPassos,
   potenciaComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/math-plot.model';
+import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorComplexos } from './numeros-complexos.gerador';
-import { TEORIA_COMPLEXOS } from './numeros-complexos.teoria';
+import { geradorComplexos } from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.gerador';
+import { TEORIA_COMPLEXOS } from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.teoria';
 
 @Component({
   selector: 'app-numeros-complexos',

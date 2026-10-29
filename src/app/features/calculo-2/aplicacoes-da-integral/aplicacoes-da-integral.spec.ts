@@ -1,7 +1,7 @@
 import { areaEntreCurvas, integralNumerica } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorAplicacoesIntegral } from './aplicacoes-da-integral.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorAplicacoesIntegral } from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.gerador';
 
 /** A mesma tolerância que o gerador usa para corrigir. */
 const proximos = (a: number, b: number): boolean =>

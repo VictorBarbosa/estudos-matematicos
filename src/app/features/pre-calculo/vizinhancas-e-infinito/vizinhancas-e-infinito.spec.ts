@@ -1,6 +1,6 @@
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorVizinhancas } from './vizinhancas-e-infinito.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorVizinhancas } from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(5959);

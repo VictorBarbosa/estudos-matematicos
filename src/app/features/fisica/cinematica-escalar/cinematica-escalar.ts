@@ -4,17 +4,17 @@ import {
   movimentoUniformementeVariado,
   torricelliComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { AreaPlot, CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { AreaPlot, CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorCinematica } from './cinematica-escalar.gerador';
-import { TEORIA_CINEMATICA } from './cinematica-escalar.teoria';
+import { geradorCinematica } from '@features/fisica/cinematica-escalar/cinematica-escalar.gerador';
+import { TEORIA_CINEMATICA } from '@features/fisica/cinematica-escalar/cinematica-escalar.teoria';
 
 @Component({
   selector: 'app-cinematica-escalar',

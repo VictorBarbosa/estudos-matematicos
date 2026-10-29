@@ -5,15 +5,15 @@ import {
   variacaoComPassos,
   variacaoPercentualComPassos,
 } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { analisarValorSimples } from '@core/treino/resposta-numerica';
+import { Rng } from '@core/treino/rng/rng';
+import { analisarValorSimples } from '@core/treino/resposta-numerica/resposta-numerica';
 import {
   Armadilha,
   Exercicio,
   GeradorExercicio,
   Nivel,
   semColisoes,
-} from '@core/treino/treino.model';
+} from '@core/treino/models/treino.model';
 
 type Modalidade = 'parte' | 'variacao' | 'sucessivas' | 'percentual';
 

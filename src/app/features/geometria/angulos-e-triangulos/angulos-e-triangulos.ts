@@ -5,17 +5,17 @@ import {
   desigualdadeTriangular,
   somaAngulosInternosComPassos,
 } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/math-plot.model';
+import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorAngulos } from './angulos-e-triangulos.gerador';
-import { TEORIA_ANGULOS } from './angulos-e-triangulos.teoria';
+import { geradorAngulos } from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.gerador';
+import { TEORIA_ANGULOS } from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.teoria';
 
 const ROTULO_FORMA = {
   equilatero: 'equilátero',

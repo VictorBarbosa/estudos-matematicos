@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Polinomio } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorExpressoes } from './expressoes-algebricas.gerador';
-import { TEORIA_EXPRESSOES } from './expressoes-algebricas.teoria';
+import { geradorExpressoes } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.gerador';
+import { TEORIA_EXPRESSOES } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.teoria';
 
 @Component({
   selector: 'app-expressoes-algebricas',

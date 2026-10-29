@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { ErroMatematico, Resolucao, resolverExpressaoComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorOperacoes } from './operacoes-fundamentais.gerador';
-import { TEORIA_OPERACOES } from './operacoes-fundamentais.teoria';
+import { geradorOperacoes } from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.gerador';
+import { TEORIA_OPERACOES } from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.teoria';
 
 /** Expressões prontas que evidenciam cada regra de precedência. */
 const EXEMPLOS: readonly { readonly rotulo: string; readonly expressao: string }[] = [

@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { arranjosComPassos, combinacoes, combinacoesComPassos, fatorial } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorCombinatoria } from './analise-combinatoria.gerador';
-import { TEORIA_COMBINATORIA } from './analise-combinatoria.teoria';
+import { geradorCombinatoria } from '@features/estatistica/analise-combinatoria/analise-combinatoria.gerador';
+import { TEORIA_COMBINATORIA } from '@features/estatistica/analise-combinatoria/analise-combinatoria.teoria';
 
 @Component({
   selector: 'app-analise-combinatoria',

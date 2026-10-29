@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Polinomio, teoremaFundamentalComPassos } from '@core/math';
-import { TeoriaService } from '@core/teoria/teoria.service';
+import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { AreaPlot, CurvaPlot, PontoPlot } from '@shared/components/math-plot/math-plot.model';
+import { AreaPlot, CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorTfc } from './teorema-fundamental.gerador';
-import { TEORIA_TFC } from './teorema-fundamental.teoria';
+import { geradorTfc } from '@features/calculo-2/teorema-fundamental/teorema-fundamental.gerador';
+import { TEORIA_TFC } from '@features/calculo-2/teorema-fundamental/teorema-fundamental.teoria';
 
 @Component({
   selector: 'app-teorema-fundamental',

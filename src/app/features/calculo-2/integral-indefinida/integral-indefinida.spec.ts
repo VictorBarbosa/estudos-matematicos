@@ -1,7 +1,7 @@
 import { Polinomio } from '@core/math';
-import { criarRng } from '@core/treino/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/treino.model';
-import { geradorIndefinida } from './integral-indefinida.gerador';
+import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { geradorIndefinida } from '@features/calculo-2/integral-indefinida/integral-indefinida.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(5353);

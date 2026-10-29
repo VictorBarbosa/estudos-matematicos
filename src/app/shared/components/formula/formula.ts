@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, effect, inject, input, signal, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { KatexService } from './katex.service';
+import { KatexService } from '@shared/components/formula/services/katex.service';
 
 /**
  * Renderiza uma expressão LaTeX.

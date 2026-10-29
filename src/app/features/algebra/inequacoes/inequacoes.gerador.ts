@@ -1,7 +1,7 @@
 import { Relacao, SIMBOLO_RELACAO, resolverInequacaoComPassos } from '@core/math';
-import { Rng } from '@core/treino/rng';
-import { analisarNumero, formatarNumero, proximosEmCasas } from '@core/treino/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
+import { Rng } from '@core/treino/rng/rng';
+import { analisarNumero, formatarNumero, proximosEmCasas } from '@core/treino/resposta-numerica/resposta-numerica';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 /**
  * A resposta de uma inequação: o conjunto solução, não só a fronteira.
