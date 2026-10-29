@@ -17,6 +17,16 @@
           Para liberar a próxima etapa, acerte
           <strong>{{ alvo }} das últimas {{ janela }} tentativas</strong> na aba Treinar, com
           <strong>{{ alvoExigente }} acertos no Médio ou no Difícil</strong>.
+          @if (requisitos().length > 0) {
+            <span class="cobertura">
+              Além disso, {{ requisitos()[0]!.acertos }} acertos em cada operação:
+              @for (requisito of requisitos(); track requisito.conceito; let ultimo = $last) {
+                <span [class.cumprido]="requisito.cumprido"
+                  >{{ requisito.rotulo }} {{ requisito.feitos }}/{{ requisito.acertos }}</span
+                >{{ ultimo ? '.' : ' · ' }}
+              }
+            </span>
+          }
           @if (dominio().respostas > 0) {
             <span class="restante">
               Agora: {{ dominio().acertos }}/{{ alvo }} acertos

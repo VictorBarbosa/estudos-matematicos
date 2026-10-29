@@ -95,7 +95,9 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'fracoes',
         titulo: 'Frações',
-        descricao: 'Partes de um inteiro, equivalência, simplificação e as quatro operações.',
+        descricao:
+          'Partes de um inteiro, equivalência, simplificação, números mistos e as quatro ' +
+          'operações — cinco acertos em cada uma para a etapa abrir.',
         pronto: true,
       },
       {

@@ -4,6 +4,7 @@ import {
   ACERTOS_EXIGENTES,
   ACERTOS_NA_JANELA,
   Dominio,
+  ProgressoDoRequisito,
   Etapa,
   RESPOSTAS_NA_JANELA,
   TRILHA,
@@ -43,11 +44,12 @@ export class ProgressaoService {
   /** Tópicos já vencidos, em qualquer ordem. */
   readonly concluidas = computed(() => {
     const historicos = this.progresso.porHistorico();
+    const conceitos = this.progresso.porConceito();
 
     return new Set(
-      TRILHA.filter((etapa) => dominioDe(historicos[etapa.topicoId] ?? []).vencido).map(
-        (etapa) => etapa.topicoId,
-      ),
+      TRILHA.filter(
+        (etapa) => dominioDe(historicos[etapa.topicoId] ?? [], etapa.topicoId, conceitos).vencido,
+      ).map((etapa) => etapa.topicoId),
     );
   });
 
@@ -109,7 +111,7 @@ export class ProgressaoService {
 
   /** Como o tópico está em relação ao critério de domínio. */
   dominioEm(topicoId: string): Dominio {
-    return dominioDe(this.progresso.historicoDe(topicoId));
+    return dominioDe(this.progresso.historicoDe(topicoId), topicoId, this.progresso.porConceito());
   }
 
   /** Acertos já contabilizados na janela recente, limitados ao alvo. */
@@ -125,6 +127,11 @@ export class ProgressaoService {
   /** Quantos acertos no Médio ou no Difícil ainda faltam. */
   faltamExigentesPara(topicoId: string): number {
     return Math.max(0, ACERTOS_EXIGENTES - this.dominioEm(topicoId).acertosExigentes);
+  }
+
+  /** As exigências de cobertura do tópico que ainda não foram cumpridas. */
+  requisitosPendentes(topicoId: string): readonly ProgressoDoRequisito[] {
+    return this.dominioEm(topicoId).requisitos.filter((requisito) => !requisito.cumprido);
   }
 
   /**

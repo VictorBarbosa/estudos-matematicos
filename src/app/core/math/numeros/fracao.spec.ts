@@ -134,3 +134,66 @@ describe('apresentação', () => {
     expect(Fracao.criar(1, 4).paraDecimal()).toBe(0.25);
   });
 });
+
+describe('números mistos', () => {
+  it('lê o número misto, que o espaço é quem define', () => {
+    // Sem tratar o espaço, "1 1/2" virava "11/2" — onze meios.
+    expect(Fracao.analisar('1 1/2')?.igualA(Fracao.criar(3, 2))).toBe(true);
+    expect(Fracao.analisar('2 1/3')?.igualA(Fracao.criar(7, 3))).toBe(true);
+    expect(Fracao.analisar('10 3/4')?.igualA(Fracao.criar(43, 4))).toBe(true);
+  });
+
+  it('o sinal do misto vale para o número inteiro', () => {
+    // −2 1/3 é −(2 + 1/3), e não −2 + 1/3.
+    expect(Fracao.analisar('-2 1/3')?.igualA(Fracao.criar(-7, 3))).toBe(true);
+    expect(Fracao.analisar('-1 1/2')?.igualA(Fracao.criar(-3, 2))).toBe(true);
+  });
+
+  it('continua lendo as formas de sempre', () => {
+    expect(Fracao.analisar('3/4')?.igualA(Fracao.criar(3, 4))).toBe(true);
+    expect(Fracao.analisar('-2/5')?.igualA(Fracao.criar(-2, 5))).toBe(true);
+    expect(Fracao.analisar('7')?.igualA(Fracao.deInteiro(7))).toBe(true);
+    expect(Fracao.analisar('0,5')?.igualA(Fracao.criar(1, 2))).toBe(true);
+  });
+
+  it('recusa um misto malformado', () => {
+    expect(Fracao.analisar('2 1/0')).toBeNull();
+    expect(Fracao.analisar('2 1/')).toBeNull();
+    expect(Fracao.analisar('1 2 1/2')).toBeNull();
+  });
+
+  it('espaço solto não vira parte inteira', () => {
+    // "2 /3" é dois terços digitado com folga, não um misto: só conta como
+    // parte inteira o número que vem antes de uma fração completa.
+    expect(Fracao.analisar('2 /3')?.igualA(Fracao.criar(2, 3))).toBe(true);
+    expect(Fracao.analisar(' 3 / 4 ')?.igualA(Fracao.criar(3, 4))).toBe(true);
+  });
+
+  it('separa a parte inteira do que sobra', () => {
+    expect(Fracao.criar(7, 3).paraMista()).toEqual({ inteiro: 2, numerador: 1, denominador: 3 });
+    expect(Fracao.criar(-7, 3).paraMista()).toEqual({ inteiro: -2, numerador: 1, denominador: 3 });
+    expect(Fracao.criar(3, 4).paraMista()).toEqual({ inteiro: 0, numerador: 3, denominador: 4 });
+    expect(Fracao.criar(6, 3).paraMista()).toEqual({ inteiro: 2, numerador: 0, denominador: 1 });
+  });
+
+  it('escreve o misto em texto e em LaTeX', () => {
+    expect(Fracao.criar(7, 3).toStringMisto()).toBe('2 1/3');
+    expect(Fracao.criar(-7, 3).toStringMisto()).toBe('-2 1/3');
+    expect(Fracao.criar(3, 4).toStringMisto()).toBe('3/4');
+    expect(Fracao.criar(6, 3).toStringMisto()).toBe('2');
+
+    expect(Fracao.criar(7, 3).paraTexMisto()).toBe('2\\frac{1}{3}');
+    expect(Fracao.criar(-7, 3).paraTexMisto()).toBe('-2\\frac{1}{3}');
+    expect(Fracao.criar(3, 4).paraTexMisto()).toBe('\\frac{3}{4}');
+  });
+
+  it('a forma mista é lida de volta no mesmo valor', () => {
+    for (const [n, d] of [[7, 3], [-7, 3], [43, 4], [-11, 4], [3, 4], [5, 1]]) {
+      const original = Fracao.criar(n!, d!);
+      const relido = Fracao.analisar(original.toStringMisto());
+
+      expect(relido, `${original.toStringMisto()} não voltou`).not.toBeNull();
+      expect(relido!.igualA(original)).toBe(true);
+    }
+  });
+});

@@ -21,9 +21,27 @@ export const NOME_OPERACAO: Readonly<Record<OperacaoFracao, string>> = {
   dividir: 'divisão',
 };
 
-/** Escreve `a ⊕ b` em LaTeX. */
-export function operacaoParaTex(a: Fracao, operacao: OperacaoFracao, b: Fracao): string {
-  return `${a.paraTex()} ${SIMBOLO_TEX[operacao]} ${b.paraTex()}`;
+/**
+ * Escreve `a ⊕ b` em LaTeX.
+ *
+ * O segundo operando ganha parênteses quando é negativo: sem eles, a
+ * subtração de um número negativo sai como "3/4 − −2/3", dois sinais colados
+ * que ninguém escreve à mão e que atrapalham justamente onde o erro de sinal
+ * já é comum.
+ *
+ * `misto` troca a fração imprópria pelo número misto — `2\frac{1}{3}` no lugar
+ * de `\frac{7}{3}` —, que é a forma em que a quantidade se lê em voz alta.
+ */
+export function operacaoParaTex(
+  a: Fracao,
+  operacao: OperacaoFracao,
+  b: Fracao,
+  misto = false,
+): string {
+  const escrever = (fracao: Fracao): string => (misto ? fracao.paraTexMisto() : fracao.paraTex());
+  const direita = b.ehNegativa ? `\\left(${escrever(b)}\\right)` : escrever(b);
+
+  return `${escrever(a)} ${SIMBOLO_TEX[operacao]} ${direita}`;
 }
 
 /**

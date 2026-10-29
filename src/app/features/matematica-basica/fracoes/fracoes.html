@@ -49,6 +49,13 @@
         <p class="aviso" role="alert">{{ mensagem }}</p>
       } @else if (resultado(); as valor) {
         <app-formula [tex]="expressaoTex() + ' = ' + valor.paraTex()" [bloco]="true" />
+        @if (valor.simplificar().ehImpropria && !valor.ehInteira) {
+          <p class="misto">
+            Como número misto:
+            <app-formula [tex]="valor.paraTexMisto()" />
+            <app-botao-teoria conceito="fracoes.mistas" [discreto]="true" />
+          </p>
+        }
         <p class="decimal">Em decimal: {{ valor.paraDecimal() | number: '1.0-6' }}</p>
       }
     </section>

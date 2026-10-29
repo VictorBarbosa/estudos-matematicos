@@ -123,6 +123,12 @@ libera a seguinte quando o tópico é **dominado**:
 A janela é deslizante de propósito: o domínio medido é o atual, não o histórico. Errar as
 últimas tentativas tranca a etapa de novo.
 
+A janela mede **constância**, não abrangência: dá para acertar dez somas seguidas e nunca ter
+dividido uma fração. Onde o tópico tem partes que precisam ser todas praticadas, há uma
+exigência de **cobertura** por cima dela — em Frações, cinco acertos em cada uma das quatro
+operações, contados por conceito (`REQUISITOS_POR_TOPICO` em `progressao.model.ts`). A área de
+treino mostra a lista inteira, com o que falta em cada operação.
+
 O critério anterior era "3 acertos seguidos", sem olhar o nível — e isso abria a etapa para
 quem acerta metade dos exercícios em 79% das rodadas de 20 tentativas. Com o critério atual,
 em 15%. **Pedir a resolução conta como tentativa não resolvida**: o campo tranca, a sequência
