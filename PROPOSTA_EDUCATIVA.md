@@ -97,7 +97,9 @@ Cada tópico segue a mesma anatomia:
 2. **Explorar** — parâmetros ajustáveis onde o aluno vê a matemática reagindo em tempo real.
 3. **Treinar** — exercícios gerados com semente (nunca repetem) e corrigidos com diagnóstico: cada erro é nomeado e explicado com base no passo em que ocorreu.
 
-O sistema de progresso exige **três acertos seguidos** para desbloquear o próximo tópico — o que garante domínio, e não apenas insistência.
+O sistema de progresso só desbloqueia o próximo tópico com **domínio medido**: 8 acertos nas últimas 10 tentativas, sendo 3 no nível Médio ou Difícil, e terminando com 3 acertos seguidos. Pedir a resolução conta como tentativa não resolvida — ler a resposta não libera etapa.
+
+4. **Revisar** — uma fila diária de tópicos já vencidos, ordenada pelos conceitos que vêm sendo errados e pelo tempo sem praticar. É o contrapeso da trilha, que só anda para a frente.
 
 O **modo livre**, disponível na página inicial, destranca todos os tópicos para consulta sem apagar o progresso.
 

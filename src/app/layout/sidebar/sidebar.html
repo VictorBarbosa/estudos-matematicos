@@ -1,4 +1,11 @@
 <nav class="sidebar" aria-label="Tópicos de estudo">
+  @if (naFilaDeRevisao() > 0) {
+    <a class="atalho-revisao" routerLink="/revisar" routerLinkActive="ativo" (click)="navegou.emit()">
+      Revisão de hoje
+      <span class="quantos">{{ naFilaDeRevisao() }}</span>
+    </a>
+  }
+
   @for (area of areas(); track area.id) {
     <section class="area">
       <h2>

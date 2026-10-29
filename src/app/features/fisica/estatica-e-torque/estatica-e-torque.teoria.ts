@@ -13,7 +13,7 @@ export const TEORIA_TORQUE: readonly Teoria[] = [
     formulas: [
       { tex: '\\tau = rF\\sin\\theta' },
       {
-        tex: '\\theta = 0 \;\\Rightarrow\; \\tau = 0',
+        tex: '\\theta = 0 \\;\\Rightarrow\\; \\tau = 0',
         legenda: 'Força na direção do braço não produz giro.',
       },
     ],
@@ -29,7 +29,7 @@ export const TEORIA_TORQUE: readonly Teoria[] = [
       },
       {
         descricao: 'Dobrar o braço dobra o torque com a mesma força.',
-        tex: '2r \;\\Rightarrow\; 2\\tau',
+        tex: '2r \\;\\Rightarrow\\; 2\\tau',
         nota: 'É a vantagem mecânica da alavanca e da chave de boca comprida.',
       },
     ],
@@ -55,7 +55,7 @@ export const TEORIA_TORQUE: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Resultante nula impede translação acelerada.',
-        tex: '\\sum F = 0 \;\\Rightarrow\; a = 0',
+        tex: '\\sum F = 0 \\;\\Rightarrow\\; a = 0',
       },
       {
         descricao: 'Mas duas forças opostas em pontos distintos ainda produzem giro.',

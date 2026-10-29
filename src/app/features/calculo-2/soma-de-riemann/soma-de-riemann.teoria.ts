@@ -87,11 +87,11 @@ export const TEORIA_RIEMANN: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Com poucos retângulos, sobram espaços grandes.',
-        tex: 'n = 4 \;\\Rightarrow\; \\text{erro visível}',
+        tex: 'n = 4 \\;\\Rightarrow\\; \\text{erro visível}',
       },
       {
         descricao: 'Dobrando n, o erro cai pela metade.',
-        tex: 'n = 8,\; 16,\; 32,\; \\ldots',
+        tex: 'n = 8,\\; 16,\\; 32,\\; \\ldots',
       },
       {
         descricao: 'No limite, o erro desaparece e sobra a área exata.',

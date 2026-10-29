@@ -1,8 +1,18 @@
 import { Polinomio, formatar, integralNumerica } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
-const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
+/**
+ * Tolerância de correção: 3 casas decimais nos valores pequenos e 0,2%
+ * relativos nos grandes.
+ *
+ * O volume do cone passa de mil com facilidade, e aí uma tolerância absoluta
+ * de 0,02 reprovava quem digitou o resultado obtido com π = 3,14 — um
+ * arredondamento, não um erro de conceito.
+ */
+const proximos = (a: number, b: number): boolean =>
+  Math.abs(a - b) <= Math.max(0.005, Math.abs(b) * 0.002);
 
 type Pergunta = 'area-entre' | 'volume' | 'area-simples';
 
@@ -88,19 +98,23 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
           passos: [
             {
               descricao: 'Primeiro achamos onde as curvas se cruzam.',
-              tex: `${a}x = ${b === 1 ? '' : b}x^{2} \;\\Rightarrow\; x = 0 \;\\text{ou}\; x = ${formatar(cruzamento)}`,
+              tex: `${a}x = ${b === 1 ? '' : b}x^{2} \\;\\Rightarrow\\; x = 0 \\;\\text{ou}\\; x = ${formatar(cruzamento)}`,
             },
             {
               descricao: 'Entre esses pontos, a reta está acima da parábola.',
               tex: `${a}x \\geq ${b === 1 ? '' : b}x^{2} \\quad \\text{para} \\quad 0 \\leq x \\leq ${formatar(cruzamento)}`,
             },
             {
-              descricao: 'Integramos a diferença.',
-              tex: `A = \\int_{0}^{${a}} \\left(${a}x - x^{2}\\right) dx`,
+              descricao: 'Integramos a diferença entre 0 e o cruzamento.',
+              tex:
+                `A = \\int_{0}^{${formatar(cruzamento)}} ` +
+                `\\left(${a}x - ${b === 1 ? '' : b}x^{2}\\right) dx`,
             },
             {
-              descricao: 'Calculando.',
-              tex: `= \\frac{${a} \\cdot ${a * a}}{2} - \\frac{${a ** 3}}{3} = ${gabarito.toFixed(4)}`,
+              descricao: 'Calculando pelas primitivas de cada termo.',
+              tex:
+                `= \\left[\\frac{${a}x^{2}}{2} - \\frac{${b === 1 ? '' : b}x^{3}}{3}\\right]` +
+                `_{0}^{${formatar(cruzamento)}} = ${gabarito.toFixed(4)}`,
             },
           ],
         },
@@ -108,7 +122,7 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
         armadilhas: semColisoes(
           [
             {
-              resposta: integralNumerica((x) => x * x - a * x, 0, a),
+              resposta: integralNumerica((x) => b * x * x - a * x, 0, cruzamento),
               diagnostico:
                 'A diferença está invertida, e por isso a área saiu negativa. Integra-se ' +
                 'sempre a curva de CIMA menos a de baixo.',
@@ -116,11 +130,19 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
               conceito: 'aplic-integral.area',
             },
             {
-              resposta: integralNumerica((x) => a * x, 0, a),
+              resposta: integralNumerica((x) => a * x, 0, cruzamento),
               diagnostico:
                 'Você integrou apenas a reta, obtendo a área sob ela. A região pedida é o ' +
                 'que fica ENTRE as duas curvas — falta descontar a parábola.',
               passo: 2,
+              conceito: 'aplic-integral.area',
+            },
+            {
+              resposta: integralNumerica((x) => a * x - b * x * x, 0, a),
+              diagnostico:
+                `O limite superior não é ${a}, e sim o cruzamento ${formatar(cruzamento)}: ` +
+                `de ${a}x = ${b === 1 ? '' : b}x^2 sai x = ${a}/${b}.`,
+              passo: 0,
               conceito: 'aplic-integral.area',
             },
           ],
@@ -154,7 +176,9 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
           },
           {
             descricao: 'Integrando pela regra da potência.',
-            tex: `= \\frac{${a}x^{3}}{3}\\Big|_{0}^{${ate}} = ${gabarito.toFixed(4)}`,
+            tex:
+              `= \\frac{${a}x^{${expoente + 1}}}{${expoente + 1}}\\Big|_{0}^{${ate}} = ` +
+              `${gabarito.toFixed(4)}`,
           },
         ],
       },
@@ -176,10 +200,7 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>

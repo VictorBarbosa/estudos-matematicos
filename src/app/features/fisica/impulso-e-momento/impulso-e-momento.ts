@@ -87,7 +87,7 @@ export class ImpulsoEMomento {
 
   protected readonly momentoTex = computed(
     () =>
-      `p_i = ${this.formatar(this.momentoAntes())} \;\\to\; p_f = ` +
+      `p_i = ${this.formatar(this.momentoAntes())} \\;\\to\\; p_f = ` +
       `${this.formatar(this.momentoDepois())}\\,\\text{kg·m/s}`,
   );
 

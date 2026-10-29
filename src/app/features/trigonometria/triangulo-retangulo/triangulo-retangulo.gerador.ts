@@ -1,5 +1,6 @@
 import { Razao, paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { anguloRedondo } from '@core/treino/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
@@ -39,7 +40,7 @@ export const geradorTriangulo: GeradorExercicio<number> = {
       enunciado:
         `Num triângulo retângulo com hipotenusa ${hipotenusa} e um ângulo de ${anguloGraus}°, ` +
         `qual é a medida do cateto ${nomeLado}? (2 casas decimais)`,
-      enunciadoTex: `h = ${hipotenusa} \\qquad \\theta = ${anguloGraus}° \\qquad \\text{cateto } ${nomeLado} = \;?`,
+      enunciadoTex: `h = ${hipotenusa} \\qquad \\theta = ${anguloGraus}° \\qquad \\text{cateto } ${nomeLado} = \\;?`,
       gabarito,
       resolucao: {
         resultado: gabarito,
@@ -100,10 +101,7 @@ export const geradorTriangulo: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) => valor.toFixed(2).replace('.', ','),

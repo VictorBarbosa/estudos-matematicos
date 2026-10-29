@@ -1,4 +1,27 @@
 <dialog #dialogo class="dialogo" (close)="teoria.fechar()" (click)="aoClicar($event)">
+  @if (teoria.aberta() === null && teoria.estaAberta()) {
+    <!-- A teoria de outro tópico vem num chunk separado: enquanto ela chega,
+         o modal já mostra o título em vez de aparecer vazio. -->
+    <article class="conteudo">
+      <header class="cabecalho">
+        <div>
+          <h2>{{ teoria.tituloAberto() }}</h2>
+          <p class="resumo">
+            {{ teoria.carregando() ? 'Carregando a explicação…' : 'Não foi possível carregar a explicação agora.' }}
+          </p>
+        </div>
+        <button type="button" class="fechar" (click)="teoria.fechar()" aria-label="Fechar">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.3 19.71 2.88 18.3 9.17 12 2.88 5.71 4.3 4.29l6.29 6.3 6.3-6.3z"
+            />
+          </svg>
+        </button>
+      </header>
+    </article>
+  }
+
   @if (teoria.aberta(); as conteudo) {
     <article class="conteudo">
       <header class="cabecalho">

@@ -8,7 +8,21 @@
  * **A ordem é um contrato.** As áreas estão dispostas por pré-requisito, e os
  * tópicos dentro de cada área também: nada aparece antes do que ele precisa.
  * É essa ordem que a trilha usa para liberar um tópico de cada vez, então
- * mover uma entrada daqui muda o que o estudante pode abrir.
+ * mover uma entrada daqui muda o que o estudante pode abrir. O teste
+ * `core/teoria/teorias.spec.ts` garante que nenhum exercício cobre conceito de
+ * etapa posterior.
+ *
+ * Quatro decisões de ordem que não são óbvias:
+ *
+ * - **Progressões ficam em Funções**, e não em Álgebra: a teoria as apresenta
+ *   como função afim (PA) e exponencial (PG), então elas dependem daquelas.
+ * - **Funções trigonométricas vêm antes das identidades**: as identidades se
+ *   leem no gráfico, não o contrário.
+ * - **No Pré-cálculo, do intuitivo ao formal**: a noção intuitiva de limite
+ *   vem primeiro, depois a definição ε-δ, e só então sequências e séries, que
+ *   usam limite.
+ * - **Combinatória e estatística vêm por último**: não são pré-requisito das
+ *   engenharias do Québec, e no meio da trilha adiavam o cálculo.
  *
  * Esta é também a fonte única da navegação e da página inicial. Tópicos ainda
  * não implementados continuam listados, com `pronto: false`: o que falta fica
@@ -28,11 +42,28 @@ export interface TopicoCurriculo {
   readonly pronto: boolean;
 }
 
+/** Leitura externa que cobre a área com mais profundidade do que um site. */
+export interface ReferenciaExterna {
+  /** Obra e capítulo, por exemplo "OpenStax Calculus Volume 1, cap. 3". */
+  readonly titulo: string;
+  readonly url: string;
+  /** Por que vale abrir: o que ela cobre que o site não cobre. */
+  readonly nota: string;
+}
+
 export interface AreaCurriculo {
   readonly id: string;
   readonly titulo: string;
   readonly descricao: string;
   readonly topicos: readonly TopicoCurriculo[];
+  /**
+   * Livros-texto abertos que cobrem a área.
+   *
+   * O site é bom para praticar e para ver a matemática reagir, mas não
+   * substitui a teoria longa de um livro nem o laboratório. Todas as obras
+   * indicadas são de acesso livre.
+   */
+  readonly referencias?: readonly ReferenciaExterna[];
 }
 
 export const CURRICULO: readonly AreaCurriculo[] = [
@@ -40,6 +71,14 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     id: 'matematica-basica',
     titulo: 'Matemática básica',
     descricao: 'O alicerce: como os números se combinam, se comparam e se medem.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Prealgebra 2e*',
+        url: 'https://openstax.org/details/books/prealgebra-2e',
+        nota:
+          'Frações, decimais, porcentagem e potências com exercícios resolvidos.',
+      },
+    ],
     topicos: [
       {
         id: 'operacoes-fundamentais',
@@ -95,6 +134,14 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     id: 'algebra',
     titulo: 'Álgebra',
     descricao: 'Trocar números por letras para resolver o caso geral de uma vez.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Intermediate Algebra 2e*',
+        url: 'https://openstax.org/details/books/intermediate-algebra-2e',
+        nota:
+          'Fatoração, equações e inequações, com o estudo de sinal que o site ainda não cobre.',
+      },
+    ],
     topicos: [
       {
         id: 'expressoes-algebricas',
@@ -144,18 +191,20 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'Grau, divisão, teorema do resto e a busca das raízes.',
         pronto: true,
       },
-      {
-        id: 'progressoes',
-        titulo: 'Progressões',
-        descricao: 'PA e PG: termo geral, soma dos termos e onde cada padrão aparece.',
-        pronto: true,
-      },
     ],
   },
   {
     id: 'geometria',
     titulo: 'Geometria plana e espacial',
     descricao: 'Medir o espaço: ângulos, áreas e volumes antes de levá-los a coordenadas.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Prealgebra 2e* (cap. 9)',
+        url: 'https://openstax.org/details/books/prealgebra-2e',
+        nota:
+          'Áreas, volumes e Pitágoras.',
+      },
+    ],
     topicos: [
       {
         id: 'angulos-e-triangulos',
@@ -193,6 +242,14 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     id: 'funcoes',
     titulo: 'Funções',
     descricao: 'A linguagem com que a engenharia descreve uma grandeza dependendo de outra.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *College Algebra 2e*',
+        url: 'https://openstax.org/details/books/college-algebra-2e',
+        nota:
+          'Funções, transformações de gráficos, exponenciais e logaritmos — inclusive as equações exponenciais que faltam aqui.',
+      },
+    ],
     topicos: [
       {
         id: 'conceito-funcao',
@@ -237,6 +294,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'progressoes',
+        titulo: 'Progressões',
+        descricao: 'PA e PG: termo geral, soma dos termos e onde cada padrão aparece.',
+        pronto: true,
+      },
+      {
         id: 'juros-compostos',
         titulo: 'Juros compostos',
         descricao: 'Crescimento exponencial aplicado a dinheiro ao longo do tempo.',
@@ -248,6 +311,14 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     id: 'trigonometria',
     titulo: 'Trigonometria',
     descricao: 'Ângulos viram números — e é assim que se calcula uma trajetória.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Algebra and Trigonometry 2e*',
+        url: 'https://openstax.org/details/books/algebra-and-trigonometry-2e',
+        nota:
+          'Identidades, equações trigonométricas e funções inversas.',
+      },
+    ],
     topicos: [
       {
         id: 'triangulo-retangulo',
@@ -268,6 +339,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'funcoes-trigonometricas',
+        titulo: 'Funções trigonométricas',
+        descricao: 'Amplitude, período e fase: a forma da onda.',
+        pronto: true,
+      },
+      {
         id: 'identidades-trigonometricas',
         titulo: 'Identidades trigonométricas',
         descricao: 'A identidade fundamental, arco duplo e soma de arcos.',
@@ -279,18 +356,26 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'Resolver triângulos que não têm ângulo reto.',
         pronto: true,
       },
-      {
-        id: 'funcoes-trigonometricas',
-        titulo: 'Funções trigonométricas',
-        descricao: 'Amplitude, período e fase: a forma da onda.',
-        pronto: true,
-      },
     ],
   },
   {
     id: 'vetores-matrizes',
     titulo: 'Vetores e matrizes',
     descricao: 'Grandezas com direção e tabelas de números: o ferramental da mecânica.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Calculus Volume 3* (cap. 2)',
+        url: 'https://openstax.org/details/books/calculus-volume-3',
+        nota:
+          'Vetores em R³, retas e planos no espaço — o que falta para o 0M04.',
+      },
+      {
+        titulo: 'Jim Hefferon, *Linear Algebra*',
+        url: 'https://hefferon.net/linearalgebra/',
+        nota:
+          'Gauss-Jordan, matriz inversa, independência linear e bases, com demonstrações completas.',
+      },
+    ],
     topicos: [
       {
         id: 'vetores-no-plano',
@@ -322,6 +407,14 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     id: 'geometria-analitica',
     titulo: 'Geometria analítica',
     descricao: 'Geometria resolvida com álgebra, depois que o plano ganhou coordenadas.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Algebra and Trigonometry 2e* (cap. 12)',
+        url: 'https://openstax.org/details/books/algebra-and-trigonometry-2e',
+        nota:
+          'Cônicas em detalhe, inclusive a forma polar usada em órbitas.',
+      },
+    ],
     topicos: [
       {
         id: 'ponto-e-reta',
@@ -344,34 +437,23 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     ],
   },
   {
-    id: 'estatistica',
-    titulo: 'Combinatória e estatística',
-    descricao: 'Contar possibilidades e medir incerteza — nenhuma medida real é exata.',
-    topicos: [
-      {
-        id: 'analise-combinatoria',
-        titulo: 'Análise combinatória',
-        descricao: 'Princípio multiplicativo, arranjos, permutações e combinações.',
-        pronto: true,
-      },
-      {
-        id: 'probabilidade',
-        titulo: 'Probabilidade',
-        descricao: 'Espaço amostral, eventos independentes e probabilidade condicional.',
-        pronto: true,
-      },
-      {
-        id: 'estatistica-e-incerteza',
-        titulo: 'Estatística e incerteza',
-        descricao: 'Média, desvio padrão, ajuste de reta e propagação de erro numa medida.',
-        pronto: true,
-      },
-    ],
-  },
-  {
     id: 'fisica',
     titulo: 'Física',
     descricao: 'A matemática aplicada ao mundo: do plano inclinado ao foguete em órbita.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *University Physics Volume 1*',
+        url: 'https://openstax.org/details/books/university-physics-volume-1',
+        nota:
+          'Mecânica no nível do 203-NYA, com cálculo: força variável, trabalho como integral e dinâmica de rotação.',
+      },
+      {
+        titulo: 'MIT OCW 8.01 — *Classical Mechanics*',
+        url: 'https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/',
+        nota:
+          'Aulas e problemas com laboratório — o que um site não entrega.',
+      },
+    ],
     topicos: [
       {
         id: 'analise-dimensional',
@@ -450,12 +532,21 @@ export const CURRICULO: readonly AreaCurriculo[] = [
   {
     id: 'pre-calculo',
     titulo: 'Pré-cálculo',
-    descricao: 'A ponte: a ideia de aproximação, antes da máquina do cálculo.',
+    descricao:
+      'A ponte: a ideia de aproximação, antes da máquina do cálculo — do intuitivo ao formal.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Calculus Volume 1* (cap. 2)',
+        url: 'https://openstax.org/details/books/calculus-volume-1',
+        nota:
+          'Limites, do intuitivo ao ε-δ, com os teoremas enunciados e provados.',
+      },
+    ],
     topicos: [
       {
-        id: 'sequencias-e-series',
-        titulo: 'Sequências e séries',
-        descricao: 'Progressões, somas infinitas e convergência.',
+        id: 'nocao-intuitiva-de-limite',
+        titulo: 'Noção intuitiva de limite',
+        descricao: 'Aproximar-se de um valor sem necessariamente alcançá-lo.',
         pronto: true,
       },
       {
@@ -465,9 +556,9 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
-        id: 'nocao-intuitiva-de-limite',
-        titulo: 'Noção intuitiva de limite',
-        descricao: 'Aproximar-se de um valor sem necessariamente alcançá-lo.',
+        id: 'sequencias-e-series',
+        titulo: 'Sequências e séries',
+        descricao: 'Progressões, somas infinitas e convergência.',
         pronto: true,
       },
     ],
@@ -476,6 +567,20 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     id: 'calculo-1',
     titulo: 'Cálculo 1',
     descricao: 'Derivadas: a matemática do que muda, instante a instante.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Calculus Volume 1* (cap. 3 a 4)',
+        url: 'https://openstax.org/details/books/calculus-volume-1',
+        nota:
+          'Derivadas de funções transcendentes, derivação implícita, taxas relacionadas, TVM e L’Hôpital.',
+      },
+      {
+        titulo: 'Vanier College — plano de curso 201-NYA',
+        url: 'https://euclid.vaniercollege.qc.ca/~iti/2021/cal1A21/outline_A21.pdf',
+        nota:
+          'A lista oficial do que o Calcul différentiel cobra no cégep.',
+      },
+    ],
     topicos: [
       {
         id: 'limites',
@@ -531,6 +636,20 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     id: 'calculo-2',
     titulo: 'Cálculo 2',
     descricao: 'Integrais: somar infinitas parcelas infinitamente pequenas.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Calculus Volume 2*',
+        url: 'https://openstax.org/details/books/calculus-volume-2',
+        nota:
+          'Técnicas de integração, integrais impróprias, séries, Taylor e EDOs separáveis.',
+      },
+      {
+        titulo: 'John Abbott College — plano de curso 201-NYB',
+        url: 'https://www.math.mcgill.ca/rags/JAC/CalIIOutline.html',
+        nota:
+          'A lista oficial do Calcul intégral.',
+      },
+    ],
     topicos: [
       {
         id: 'soma-de-riemann',
@@ -566,6 +685,41 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         id: 'aplicacoes-da-integral',
         titulo: 'Aplicações da integral',
         descricao: 'Área entre curvas, volume de sólidos de revolução e comprimento de arco.',
+        pronto: true,
+      },
+    ],
+  },
+  {
+    id: 'estatistica',
+    titulo: 'Combinatória e estatística',
+    descricao:
+      'Contar possibilidades e medir incerteza — nenhuma medida real é exata. ' +
+      'Não é pré-requisito das engenharias, e por isso fecha a trilha.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Introductory Statistics 2e*',
+        url: 'https://openstax.org/details/books/introductory-statistics-2e',
+        nota:
+          'Distribuições, intervalos de confiança e testes de hipótese.',
+      },
+    ],
+    topicos: [
+      {
+        id: 'analise-combinatoria',
+        titulo: 'Análise combinatória',
+        descricao: 'Princípio multiplicativo, arranjos, permutações e combinações.',
+        pronto: true,
+      },
+      {
+        id: 'probabilidade',
+        titulo: 'Probabilidade',
+        descricao: 'Espaço amostral, eventos independentes e probabilidade condicional.',
+        pronto: true,
+      },
+      {
+        id: 'estatistica-e-incerteza',
+        titulo: 'Estatística e incerteza',
+        descricao: 'Média, desvio padrão, ajuste de reta e propagação de erro numa medida.',
         pronto: true,
       },
     ],

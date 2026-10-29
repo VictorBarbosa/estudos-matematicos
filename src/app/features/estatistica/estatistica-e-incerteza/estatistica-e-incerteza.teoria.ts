@@ -108,9 +108,13 @@ export const TEORIA_INCERTEZA: readonly Teoria[] = [
         tex: 'S(a,b) = \\sum (y_i - ax_i - b)^{2}',
       },
       {
-        descricao: 'No mínimo, as derivadas parciais em relação a a e b se anulam.',
-        tex: '\\frac{\\partial S}{\\partial a} = 0 \\qquad \\frac{\\partial S}{\\partial b} = 0',
-        nota: 'É o critério de máximos e mínimos do cálculo, aplicado a duas variáveis.',
+        descricao: 'Fixando b, S é uma parábola em a — e no mínimo a derivada se anula.',
+        tex: "S'(a) = 0 \\qquad \\text{e, fixando } a, \\quad S'(b) = 0",
+        nota:
+          'Derivar em relação a uma variável por vez, mantendo a outra fixa, é o que a ' +
+          'notação ∂S/∂a significa. O ferramental de derivadas parciais pertence ao Cálculo ' +
+          'a várias variáveis, que vem depois desta trilha; aqui basta o critério de ' +
+          'máximos e mínimos de uma variável, aplicado duas vezes.',
       },
       {
         descricao: 'Isso dá um sistema linear em a e b, cuja solução é a fórmula acima.',

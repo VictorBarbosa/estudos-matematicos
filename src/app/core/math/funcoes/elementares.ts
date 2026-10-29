@@ -49,7 +49,7 @@ export function analisarAfimComPassos(a: number, b: number): Resolucao<AnaliseAf
     });
     passos.push({
       descricao: 'A raiz é o x em que a função se anula.',
-      tex: `${formatar(a)}x ${b >= 0 ? '+' : '-'} ${formatar(Math.abs(b))} = 0 \;\\Rightarrow\; x = ${formatar(raiz!)}`,
+      tex: `${formatar(a)}x ${b >= 0 ? '+' : '-'} ${formatar(Math.abs(b))} = 0 \\;\\Rightarrow\\; x = ${formatar(raiz!)}`,
     });
   }
 
@@ -101,7 +101,7 @@ export function analisarExponencialComPassos(
         descricao: crescente
           ? 'O tempo de duplicação é constante, não importa de onde se parta.'
           : 'A meia-vida é constante, não importa de onde se parta.',
-        tex: `${formatar(base)}^{t} = ${crescente ? 2 : '0{,}5'} \;\\Rightarrow\; t = ${formatar(tempoCaracteristico)}`,
+        tex: `${formatar(base)}^{t} = ${crescente ? 2 : '0{,}5'} \\;\\Rightarrow\\; t = ${formatar(tempoCaracteristico)}`,
       },
       {
         descricao: 'A função nunca chega a zero: o eixo x é uma assíntota horizontal.',
@@ -173,7 +173,7 @@ export function analisarModularComPassos(
       },
       {
         descricao: 'Por isso o gráfico tem um bico onde a expressão interna troca de sinal.',
-        tex: `${formatar(a)}x ${b >= 0 ? '+' : '-'} ${formatar(Math.abs(b))} = 0 \;\\Rightarrow\; x = ${formatar(xVertice)}`,
+        tex: `${formatar(a)}x ${b >= 0 ? '+' : '-'} ${formatar(Math.abs(b))} = 0 \\;\\Rightarrow\\; x = ${formatar(xVertice)}`,
       },
       {
         descricao: 'À direita do bico a expressão é positiva e o módulo não muda nada.',

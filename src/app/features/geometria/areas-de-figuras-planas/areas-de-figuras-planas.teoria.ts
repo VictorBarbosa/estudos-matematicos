@@ -88,7 +88,7 @@ export const TEORIA_AREAS: readonly Teoria[] = [
     formulas: [
       { tex: '\\frac{A\'}{A} = k^{2}' },
       {
-        tex: 'k = 2 \;\\Rightarrow\; A\' = 4A',
+        tex: 'k = 2 \\;\\Rightarrow\\; A\' = 4A',
         legenda: 'Dobrar o lado quadruplica a área.',
       },
     ],

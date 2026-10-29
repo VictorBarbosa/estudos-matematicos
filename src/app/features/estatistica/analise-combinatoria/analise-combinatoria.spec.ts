@@ -86,6 +86,26 @@ describe('geradorCombinatoria', () => {
     }
   });
 
+  it('o anagrama confere com a contagem por força bruta', () => {
+    const exercicios = amostra('dificil', 150).filter((e) => e.enunciado.includes('anagramas'));
+    const vistas = new Set<string>();
+
+    for (const exercicio of exercicios) {
+      const palavra = /\\text\{([A-Z]+)\}/.exec(exercicio.enunciadoTex)![1]!;
+      // Permutar 10 letras na mão custa 3,6 milhões de arranjos; acima de 7
+      // basta o teste anterior, que já compara com n! e a divisibilidade.
+      if (palavra.length > 7) {
+        continue;
+      }
+
+      vistas.add(palavra);
+      expect(exercicio.gabarito).toBe(anagramasDistintos(palavra));
+    }
+
+    // CARRO era o caso errado: declarada com repetições [2, 2], dava 30.
+    expect(vistas.has('CARRO')).toBe(true);
+  });
+
   it('a comissão mista multiplica as combinações de cada grupo', () => {
     const exercicios = amostra('dificil', 180).filter((e) => e.enunciado.includes('comissão'));
 
@@ -136,3 +156,25 @@ describe('geradorCombinatoria', () => {
     expect(geradorCombinatoria.analisar('muitos')).toBeNull();
   });
 });
+
+/** Conta anagramas distintos gerando todas as permutações e tirando repetidas. */
+function anagramasDistintos(palavra: string): number {
+  if (palavra.length <= 1) {
+    return 1;
+  }
+
+  const distintos = new Set<string>();
+
+  const permutar = (restantes: string, prefixo: string): void => {
+    if (restantes === '') {
+      distintos.add(prefixo);
+      return;
+    }
+    for (let i = 0; i < restantes.length; i++) {
+      permutar(restantes.slice(0, i) + restantes.slice(i + 1), prefixo + restantes[i]);
+    }
+  };
+
+  permutar(palavra, '');
+  return distintos.size;
+}

@@ -8,6 +8,7 @@ import {
   multiplicarDimensoes,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 /** A resposta é o expoente de uma das dimensões de base. */
@@ -42,10 +43,7 @@ export const geradorDimensional: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -185,7 +183,7 @@ function exercicioConsistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
       'número da opção.\n' +
       embaralhadas.map((candidata, indice) => `${indice + 1}) ${candidata.descricao}`).join('\n'),
     enunciadoTex: embaralhadas
-      .map((candidata, indice) => `${indice + 1})\; ${candidata.tex}`)
+      .map((candidata, indice) => `${indice + 1})\\; ${candidata.tex}`)
       .join(' \\qquad '),
     gabarito,
     resolucao: {
@@ -204,7 +202,7 @@ function exercicioConsistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           descricao: 'Apenas uma tem dimensão de tempo.',
-          tex: `${gabarito})\; ${embaralhadas[correta]!.tex}`,
+          tex: `${gabarito})\\; ${embaralhadas[correta]!.tex}`,
           nota: 'O teste não garante o fator 2π — esse vem da dinâmica, não das dimensões.',
         },
       ],

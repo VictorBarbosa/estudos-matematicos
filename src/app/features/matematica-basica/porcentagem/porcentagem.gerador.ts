@@ -6,6 +6,7 @@ import {
   variacaoPercentualComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarValorSimples } from '@core/treino/resposta-numerica';
 import {
   Armadilha,
   Exercicio,
@@ -48,16 +49,7 @@ export const geradorPorcentagem: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada
-      .trim()
-      .replace(/\s|%|R\$/g, '')
-      .replace(',', '.');
-    if (limpo === '' || !/^[+-]?\d*\.?\d+$/.test(limpo)) {
-      return null;
-    }
-    return Number(limpo);
-  },
+  analisar: (entrada) => analisarValorSimples(entrada.replace(/%|R\$/g, '')),
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -90,7 +82,7 @@ function exercicioParte(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: identificador('parte', rng),
     nivel,
     enunciado: 'Calcule a porcentagem indicada.',
-    enunciadoTex: `${percentual}\\% \\text{ de } ${valor} = \;?`,
+    enunciadoTex: `${percentual}\\% \\text{ de } ${valor} = \\;?`,
     gabarito: resolucao.resultado,
     resolucao,
     conceitos: ['porcentagem.definicao'],
@@ -130,7 +122,7 @@ function exercicioVariacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: identificador('variacao', rng),
     nivel,
     enunciado: `Um valor de ${valor} sofre ${aumentou ? 'um acréscimo' : 'um desconto'} de ${Math.abs(percentual)}%. Qual é o valor final?`,
-    enunciadoTex: `${valor} \;${aumentou ? '+' : '-'}\; ${Math.abs(percentual)}\\% = \;?`,
+    enunciadoTex: `${valor} \\;${aumentou ? '+' : '-'}\\; ${Math.abs(percentual)}\\% = \\;?`,
     gabarito: resolucao.resultado,
     resolucao,
     conceitos: ['porcentagem.fator', 'porcentagem.definicao'],
@@ -183,8 +175,8 @@ function exercicioSucessivas(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado: 'Aplique as duas variações, uma depois da outra, e informe o valor final.',
     enunciadoTex:
-      `${valor} \;\\xrightarrow{${primeiro > 0 ? '+' : ''}${primeiro}\\%}\; \\square ` +
-      `\;\\xrightarrow{${segundo > 0 ? '+' : ''}${segundo}\\%}\; ?`,
+      `${valor} \\;\\xrightarrow{${primeiro > 0 ? '+' : ''}${primeiro}\\%}\\; \\square ` +
+      `\\;\\xrightarrow{${segundo > 0 ? '+' : ''}${segundo}\\%}\\; ?`,
     gabarito: resolucao.resultado,
     resolucao,
     conceitos: ['porcentagem.sucessivas', 'porcentagem.fator'],
@@ -203,7 +195,7 @@ function exercicioPercentual(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: identificador('percentual', rng),
     nivel,
     enunciado: `De quantos por cento foi a variação de ${de} para ${para}? (use sinal negativo se houve queda)`,
-    enunciadoTex: `${de} \;\\longrightarrow\; ${para} \\qquad \\Delta\\% = \;?`,
+    enunciadoTex: `${de} \\;\\longrightarrow\\; ${para} \\qquad \\Delta\\% = \\;?`,
     gabarito: resolucao.resultado,
     resolucao,
     conceitos: ['porcentagem.variacao'],

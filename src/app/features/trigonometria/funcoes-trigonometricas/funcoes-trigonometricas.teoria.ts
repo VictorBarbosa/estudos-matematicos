@@ -17,7 +17,7 @@ export const TEORIA_ONDAS: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Depois de 2π radianos, o ponto volta exatamente ao lugar de partida.',
-        tex: '\\theta + 2\\pi \;\\longrightarrow\; \\text{mesmo ponto}',
+        tex: '\\theta + 2\\pi \\;\\longrightarrow\\; \\text{mesmo ponto}',
       },
       {
         descricao: 'Multiplicar x por B faz o argumento crescer B vezes mais rápido.',
@@ -39,8 +39,8 @@ export const TEORIA_ONDAS: readonly Teoria[] = [
       'Em y = A·sen(x) + D, o coeficiente A controla a altura da oscilação e D define a ' +
       'linha em torno da qual ela acontece. Juntos, determinam o conjunto imagem da função.',
     formulas: [
-      { tex: 'y = A\\sin x + D \;\\Rightarrow\; y \\in [D - |A|,\; D + |A|]' },
-      { tex: 'A < 0 \;\\Rightarrow\; \\text{a onda é espelhada verticalmente}' },
+      { tex: 'y = A\\sin x + D \\;\\Rightarrow\\; y \\in [D - |A|,\\; D + |A|]' },
+      { tex: 'A < 0 \\;\\Rightarrow\\; \\text{a onda é espelhada verticalmente}' },
     ],
     demonstracao: [
       {
@@ -72,17 +72,17 @@ export const TEORIA_ONDAS: readonly Teoria[] = [
       'não é C, e sim −C/B: é preciso dividir pelo coeficiente de x, porque ele comprime o ' +
       'eixo horizontal.',
     formulas: [
-      { tex: 'y = \\sin(Bx + C) \;\\Rightarrow\; \\text{deslocamento} = -\\frac{C}{B}' },
+      { tex: 'y = \\sin(Bx + C) \\;\\Rightarrow\\; \\text{deslocamento} = -\\frac{C}{B}' },
       { tex: '\\cos x = \\sin\\left(x + \\frac{\\pi}{2}\\right)', legenda: 'Cosseno é o seno adiantado em 90°.' },
     ],
     demonstracao: [
       {
         descricao: 'A onda começa seu ciclo onde o argumento vale zero.',
-        tex: 'Bx + C = 0 \;\\Rightarrow\; x = -\\frac{C}{B}',
+        tex: 'Bx + C = 0 \\;\\Rightarrow\\; x = -\\frac{C}{B}',
       },
       {
         descricao: 'Com C positivo, o início acontece antes: a onda se desloca para a esquerda.',
-        tex: 'C > 0 \;\\Rightarrow\; \\text{desloca para a esquerda}',
+        tex: 'C > 0 \\;\\Rightarrow\\; \\text{desloca para a esquerda}',
         nota: 'É contraintuitivo, mas o sinal do deslocamento é oposto ao de C.',
       },
       {

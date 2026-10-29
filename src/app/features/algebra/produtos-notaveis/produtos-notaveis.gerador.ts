@@ -1,5 +1,6 @@
 import { Polinomio, TipoProdutoNotavel, enunciadoParaTex, expandirComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 /**
@@ -32,9 +33,18 @@ export const geradorProdutos: GeradorExercicio<number> = {
         tipo === 'diferenca-de-quadrados'
           ? 'Expanda e informe o coeficiente de x no resultado.'
           : 'Expanda e informe o coeficiente do termo em x (o termo do meio).',
-      enunciadoTex: `${enunciadoParaTex(tipo, a, b)} = \;?`,
+      enunciadoTex: `${enunciadoParaTex(tipo, a, b)} = \\;?`,
       gabarito,
-      resolucao: { resultado: gabarito, passos: resolucao.passos },
+      resolucao: {
+        resultado: gabarito,
+        passos: [
+          ...resolucao.passos,
+          {
+            descricao: 'O enunciado pede apenas o coeficiente do termo em x.',
+            tex: `${expandido.paraTex()} \\Rightarrow \\text{coef. de } x = ${gabarito}`,
+          },
+        ],
+      },
       conceitos: [conceitoDe(tipo)],
       armadilhas: semColisoes(
         [
@@ -74,10 +84,7 @@ export const geradorProdutos: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: (a, b) => a === b,
   formatar: (valor) => String(valor),

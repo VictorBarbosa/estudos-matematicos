@@ -8,7 +8,11 @@ import {
   viewChild,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ACERTOS_PARA_LIBERAR } from '@core/progressao/progressao.model';
+import {
+  ACERTOS_EXIGENTES,
+  ACERTOS_NA_JANELA,
+  RESPOSTAS_NA_JANELA,
+} from '@core/progressao/progressao.model';
 import { ProgressaoService } from '@core/progressao/progressao.service';
 import { ProgressoService } from '@core/treino/progresso.service';
 import { SessaoTreino } from '@core/treino/sessao-treino';
@@ -56,11 +60,23 @@ export class AreaTreino {
     return untracked(() => new SessaoTreino<unknown>(gerador, this.progresso));
   });
 
-  protected readonly alvo = ACERTOS_PARA_LIBERAR;
+  protected readonly alvo = ACERTOS_NA_JANELA;
+  protected readonly janela = RESPOSTAS_NA_JANELA;
+  protected readonly alvoExigente = ACERTOS_EXIGENTES;
 
-  /** Quantos acertos seguidos faltam para vencer a etapa deste tópico. */
+  /** Como este tópico está em relação ao critério de domínio. */
+  protected readonly dominio = computed(() =>
+    this.progressao.dominioEm(this.gerador().topicoId),
+  );
+
+  /** Quantos acertos faltam na janela recente para vencer a etapa. */
   protected readonly faltamParaVencer = computed(() =>
     this.progressao.faltamPara(this.gerador().topicoId),
+  );
+
+  /** Quantos acertos no Médio ou no Difícil ainda faltam. */
+  protected readonly faltamExigentes = computed(() =>
+    this.progressao.faltamExigentesPara(this.gerador().topicoId),
   );
 
   protected readonly etapaVencida = computed(() =>

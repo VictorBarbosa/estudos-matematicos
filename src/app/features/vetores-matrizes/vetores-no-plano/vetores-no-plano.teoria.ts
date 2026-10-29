@@ -11,7 +11,7 @@ export const TEORIA_VETORES: readonly Teoria[] = [
       'aceleração não: elas têm direção, e duas forças de mesma intensidade podem se somar ou ' +
       'se cancelar. O vetor é o objeto que carrega módulo, direção e sentido de uma vez.',
     formulas: [
-      { tex: '\\vec{v} = (v_x,\; v_y)' },
+      { tex: '\\vec{v} = (v_x,\\; v_y)' },
       { tex: '|\\vec{v}| = \\sqrt{v_x^{2} + v_y^{2}}' },
       {
         tex: '\\theta = \\arctan\\frac{v_y}{v_x}',
@@ -48,7 +48,7 @@ export const TEORIA_VETORES: readonly Teoria[] = [
       'Geometricamente, é a diagonal do paralelogramo. O ponto que mais confunde: o módulo da ' +
       'soma NÃO é a soma dos módulos, exceto quando os vetores apontam para o mesmo lado.',
     formulas: [
-      { tex: '\\vec{a} + \\vec{b} = (a_x + b_x,\; a_y + b_y)' },
+      { tex: '\\vec{a} + \\vec{b} = (a_x + b_x,\\; a_y + b_y)' },
       {
         tex: '|\\vec{a}+\\vec{b}| \\le |\\vec{a}| + |\\vec{b}|',
         legenda: 'A desigualdade triangular, de novo.',
@@ -61,7 +61,7 @@ export const TEORIA_VETORES: readonly Teoria[] = [
       },
       {
         descricao: 'Nos eixos, os deslocamentos se acumulam separadamente.',
-        tex: '(a_x + b_x,\; a_y + b_y)',
+        tex: '(a_x + b_x,\\; a_y + b_y)',
         nota: 'O que acontece no eixo x não interfere no eixo y — é isso que a decomposição compra.',
       },
       {

@@ -182,21 +182,37 @@ function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   };
 }
 
+/**
+ * Quantas vezes cada letra repetida aparece, em ordem decrescente.
+ *
+ * Contar a partir da própria palavra evita o erro de declarar a lista à mão:
+ * CARRO foi listada como `[2, 2]` e o gabarito saía 30 em vez de 60, porque
+ * só o R repete.
+ */
+function repeticoesDe(palavra: string): readonly number[] {
+  const contagem = new Map<string, number>();
+  for (const letra of palavra) {
+    contagem.set(letra, (contagem.get(letra) ?? 0) + 1);
+  }
+
+  return [...contagem.values()].filter((quantidade) => quantidade > 1).sort((a, b) => b - a);
+}
+
 function exercicioAnagrama(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const palavras: readonly (readonly [string, readonly number[]])[] = [
-    ['ARARA', [3, 2]],
-    ['BANANA', [3, 2]],
-    ['CASA', [2]],
-    ['OVO', [2]],
-    ['BATATA', [3, 2]],
-    ['CARRO', [2, 2]],
-    ['LIVRO', []],
-    ['AMOR', []],
-    ['MATEMATICA', [3, 2, 2]],
+  const palavras: readonly string[] = [
+    'ARARA',
+    'BANANA',
+    'CASA',
+    'OVO',
+    'BATATA',
+    'CARRO',
+    'LIVRO',
+    'AMOR',
+    'MATEMATICA',
   ];
 
-  const [palavra, repeticoes] = rng.escolher(palavras);
-  const { resultado, passos } = permutacoesComPassos(palavra.length, repeticoes);
+  const palavra = rng.escolher(palavras);
+  const { resultado, passos } = permutacoesComPassos(palavra.length, repeticoesDe(palavra));
 
   return {
     id: `comb-ana-${palavra}-${rng.inteiro(0, 9999)}`,

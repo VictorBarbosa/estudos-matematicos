@@ -12,16 +12,16 @@ export const TEORIA_CONTINUIDADE: readonly Teoria[] = [
       'quebra a continuidade — e cada falha produz um tipo diferente de descontinuidade.',
     formulas: [
       { tex: 'f \\text{ contínua em } a \\iff \\lim_{x \\to a} f(x) = f(a)' },
-      { tex: '1)\; \\exists f(a) \\qquad 2)\; \\exists \\lim_{x \\to a} f(x) \\qquad 3)\; \\text{são iguais}' },
+      { tex: '1)\\; \\exists f(a) \\qquad 2)\\; \\exists \\lim_{x \\to a} f(x) \\qquad 3)\\; \\text{são iguais}' },
     ],
     demonstracao: [
       {
         descricao: 'Se a função não está definida no ponto, há um buraco.',
-        tex: '\\frac{x^{2}-1}{x-1} \;\\text{em}\; x = 1',
+        tex: '\\frac{x^{2}-1}{x-1} \\;\\text{em}\\; x = 1',
       },
       {
         descricao: 'Se os laterais discordam, há um salto.',
-        tex: '\\frac{|x|}{x} \;\\text{em}\; x = 0',
+        tex: '\\frac{|x|}{x} \\;\\text{em}\\; x = 0',
       },
       {
         descricao: 'Se existem mas não coincidem, o ponto está "fora do lugar".',
@@ -48,14 +48,14 @@ export const TEORIA_CONTINUIDADE: readonly Teoria[] = [
       'ponto para consertar. A de salto não tem conserto: os laterais discordam. A infinita ' +
       'ocorre junto de uma assíntota vertical.',
     formulas: [
-      { tex: '\\text{removível: } \\exists \\lim, \;\\text{mas} \\neq f(a) \;\\text{ou}\; \\nexists f(a)' },
+      { tex: '\\text{removível: } \\exists \\lim, \\;\\text{mas} \\neq f(a) \\;\\text{ou}\\; \\nexists f(a)' },
       { tex: '\\text{salto: } \\lim^{-} \\neq \\lim^{+}' },
       { tex: '\\text{infinita: } \\lim = \\pm\\infty' },
     ],
     demonstracao: [
       {
         descricao: 'Na removível, há um buraco que pode ser tapado.',
-        tex: 'f(x) = \\frac{x^{2}-4}{x-2} \;\\Rightarrow\; \\text{defina } f(2) = 4',
+        tex: 'f(x) = \\frac{x^{2}-4}{x-2} \\;\\Rightarrow\\; \\text{defina } f(2) = 4',
         nota: 'Com essa definição, a função passa a ser contínua.',
       },
       {
@@ -84,7 +84,7 @@ export const TEORIA_CONTINUIDADE: readonly Teoria[] = [
       'raiz naquele intervalo, mesmo sem saber calculá-la.',
     formulas: [
       {
-        tex: 'f \\text{ contínua em } [a,b],\; f(a) \\cdot f(b) < 0 \;\\Rightarrow\; \\exists c \\in (a,b) : f(c) = 0',
+        tex: 'f \\text{ contínua em } [a,b],\\; f(a) \\cdot f(b) < 0 \\;\\Rightarrow\\; \\exists c \\in (a,b) : f(c) = 0',
       },
     ],
     demonstracao: [
@@ -103,7 +103,7 @@ export const TEORIA_CONTINUIDADE: readonly Teoria[] = [
       },
       {
         descricao: 'Sem continuidade, a conclusão falha: a função pode pular o zero.',
-        tex: '\\frac{1}{x} \;\\text{vai de } -1 \\text{ a } 1 \\text{ sem passar por } 0',
+        tex: '\\frac{1}{x} \\;\\text{vai de } -1 \\text{ a } 1 \\text{ sem passar por } 0',
       },
     ],
     exemplo: {

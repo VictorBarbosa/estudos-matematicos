@@ -1,5 +1,6 @@
 import { centroDeMassaComPassos, equilibrioAlavancaComPassos, torqueComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
@@ -25,10 +26,7 @@ export const geradorTorque: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -156,7 +154,7 @@ function exercicioCentroMassa(nivel: Nivel, rng: Rng): Exercicio<number> {
       corpos.map((c) => `${c.massa} kg em x = ${c.posicao} m`).join(', ') +
       '. Onde fica o centro de massa, em metros? (2 casas decimais)',
     enunciadoTex: corpos
-      .map((c) => `m = ${c.massa},\; x = ${c.posicao}`)
+      .map((c) => `m = ${c.massa},\\; x = ${c.posicao}`)
       .join(' \\quad '),
     gabarito: resultado,
     resolucao: { resultado, passos },

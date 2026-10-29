@@ -15,7 +15,7 @@ export interface Ponto {
 }
 
 export function pontoParaTex({ x, y }: Ponto): string {
-  return `(${formatar(x)},\; ${formatar(y)})`;
+  return `(${formatar(x)},\\; ${formatar(y)})`;
 }
 
 /** Distância entre dois pontos: Pitágoras aplicado às diferenças. */
@@ -88,7 +88,7 @@ export function retaPorDoisPontosComPassos(a: Ponto, b: Ponto): Resolucao<Reta> 
       },
       {
         descricao: 'Substituímos um dos pontos para achar o coeficiente linear.',
-        tex: `${formatar(a.y)} = ${formatar(m)} \\cdot ${formatar(a.x)} + n \;\\Rightarrow\; n = ${formatar(n)}`,
+        tex: `${formatar(a.y)} = ${formatar(m)} \\cdot ${formatar(a.x)} + n \\;\\Rightarrow\\; n = ${formatar(n)}`,
       },
       {
         descricao: 'A equação reduzida da reta.',

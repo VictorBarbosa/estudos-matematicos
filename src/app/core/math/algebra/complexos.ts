@@ -71,7 +71,7 @@ export function multiplicarComplexosComPassos(a: Complexo, b: Complexo): Resoluc
       },
       {
         descricao: 'O termo com i² muda de natureza: i² = −1, então ele vira real.',
-        tex: `i^{2} = -1 \;\\Rightarrow\; ${formatar(a.imaginario)}\\cdot${formatar(b.imaginario)}i^{2} = ${formatar(-a.imaginario * b.imaginario)}`,
+        tex: `i^{2} = -1 \\;\\Rightarrow\\; ${formatar(a.imaginario)}\\cdot${formatar(b.imaginario)}i^{2} = ${formatar(-a.imaginario * b.imaginario)}`,
         nota: 'É daqui que vem o sinal de menos na parte real do produto.',
       },
       {

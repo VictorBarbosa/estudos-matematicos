@@ -54,7 +54,7 @@ export const TEORIA_DIMENSIONAL: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Somar grandezas de dimensões diferentes não tem sentido.',
-        tex: 'L + T \;\\text{não existe}',
+        tex: 'L + T \\;\\text{não existe}',
         nota: 'Comprimento mais tempo não é nada — nem com unidades convertidas.',
       },
       {
@@ -64,7 +64,7 @@ export const TEORIA_DIMENSIONAL: readonly Teoria[] = [
       },
       {
         descricao: 'Já uma fórmula errada se denuncia na hora.',
-        tex: '\\sqrt{\\frac{g}{L}} \;\\Rightarrow\; T^{-1} \\ne T',
+        tex: '\\sqrt{\\frac{g}{L}} \\;\\Rightarrow\\; T^{-1} \\ne T',
         nota: 'Isso é frequência, não período — e o teste dimensional mostra isso sem calcular.',
       },
     ],

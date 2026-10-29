@@ -14,6 +14,23 @@
 
   <app-painel-trilha />
 
+  @if (revisaoDeHoje().length > 0) {
+    <section class="revisao">
+      <div>
+        <h2>Revisão de hoje</h2>
+        <p>
+          {{ revisaoDeHoje().length }}
+          {{ revisaoDeHoje().length === 1 ? 'tópico já vencido pede' : 'tópicos já vencidos pedem' }}
+          uma passada — a trilha só anda para a frente, e esta fila faz o caminho de volta.
+        </p>
+      </div>
+      <a class="ir-revisar" routerLink="/revisar">
+        Revisar agora
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+  }
+
   <app-painel-progresso />
 
   @for (area of areas; track area.id) {
@@ -28,6 +45,46 @@
           <app-cartao-topico [areaId]="area.id" [topico]="topico" />
         }
       </div>
+
+      @if (glossarioDe(area.id).length > 0) {
+        <details class="glossario">
+          <summary>Vocabulário em francês e inglês</summary>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Português</th>
+                <th scope="col">Français</th>
+                <th scope="col">English</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (termo of glossarioDe(area.id); track termo.pt) {
+                <tr>
+                  <td>{{ termo.pt }}</td>
+                  <td lang="fr">{{ termo.fr }}</td>
+                  <td lang="en">{{ termo.en }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </details>
+      }
+
+      @if (area.referencias?.length) {
+        <details class="leitura">
+          <summary>Leitura externa desta área</summary>
+          <ul>
+            @for (referencia of area.referencias; track referencia.url) {
+              <li>
+                <a [href]="referencia.url" target="_blank" rel="noreferrer noopener">
+                  {{ referencia.titulo }}
+                </a>
+                <span class="nota">{{ referencia.nota }}</span>
+              </li>
+            }
+          </ul>
+        </details>
+      }
     </section>
   }
 </div>

@@ -12,7 +12,7 @@ export const TEORIA_FATORACAO: readonly Teoria[] = [
       'fatores é zero.',
     formulas: [
       { tex: 'ab + ac = a(b + c)', legenda: 'Fator comum em evidência.' },
-      { tex: 'A \\cdot B = 0 \\iff A = 0 \;\\text{ou}\; B = 0', legenda: 'O motivo de fatorar.' },
+      { tex: 'A \\cdot B = 0 \\iff A = 0 \\;\\text{ou}\\; B = 0', legenda: 'O motivo de fatorar.' },
     ],
     demonstracao: [
       {
@@ -26,7 +26,7 @@ export const TEORIA_FATORACAO: readonly Teoria[] = [
       },
       {
         descricao: 'A utilidade aparece nas equações: zero só surge de um fator nulo.',
-        tex: 'x^{2} - 5x + 6 = 0 \;\\Rightarrow\; (x-2)(x-3) = 0 \;\\Rightarrow\; x = 2 \\text{ ou } x = 3',
+        tex: 'x^{2} - 5x + 6 = 0 \\;\\Rightarrow\\; (x-2)(x-3) = 0 \\;\\Rightarrow\\; x = 2 \\text{ ou } x = 3',
       },
     ],
     exemplo: {
@@ -45,7 +45,7 @@ export const TEORIA_FATORACAO: readonly Teoria[] = [
       'evita um erro muito comum.',
     formulas: [
       { tex: 'a^{2} - b^{2} = (a + b)(a - b)' },
-      { tex: 'a^{2} + b^{2} \;\\text{não fatora em } \\mathbb{R}' },
+      { tex: 'a^{2} + b^{2} \\;\\text{não fatora em } \\mathbb{R}' },
     ],
     demonstracao: [
       {

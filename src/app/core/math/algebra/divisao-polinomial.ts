@@ -52,7 +52,7 @@ export function dividirComPassos(
       descricao: `Dividimos o termo de maior grau e subtraímos o produto.`,
       tex:
         `${termo.paraTex()} \\cdot \\left(${divisor.paraTex()}\\right) = ${subtraido.paraTex()}` +
-        ` \;\\Rightarrow\; ${novoResto.paraTex()}`,
+        ` \\;\\Rightarrow\\; ${novoResto.paraTex()}`,
     });
 
     quociente = quociente.somar(termo);
@@ -179,7 +179,7 @@ export function fatorarPorRaizesComPassos(p: Polinomio): Resolucao<readonly numb
       tex: candidatas
         .slice(0, 12)
         .map((c) => formatar(c))
-        .join(',\; '),
+        .join(',\\; '),
       nota: 'Uma lista curta para testar, em vez de tentar números ao acaso.',
     });
   }

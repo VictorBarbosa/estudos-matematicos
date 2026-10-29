@@ -8,6 +8,7 @@ import {
   simplificarRaizComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarValorSimples, numeroComCasas } from '@core/treino/resposta-numerica';
 import {
   Armadilha,
   Exercicio,
@@ -15,6 +16,9 @@ import {
   Nivel,
   semColisoes,
 } from '@core/treino/treino.model';
+
+/** A mesma tolerância da correção, para não listar armadilhas indistinguíveis. */
+const { saoEquivalentes: proximos } = numeroComCasas(6, 1e-4);
 
 type Modalidade = 'produto' | 'quociente' | 'potenciaDePotencia' | 'raiz';
 
@@ -44,22 +48,9 @@ export const geradorPotencias: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
+  analisar: analisarValorSimples,
 
-    // Aceita também a resposta escrita como fração, comum em expoente negativo.
-    const fracao = /^([+-]?\d+)\/(\d+)$/.exec(limpo);
-    if (fracao) {
-      const denominador = Number(fracao[2]);
-      return denominador === 0 ? null : Number(fracao[1]) / denominador;
-    }
-
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
-
-  saoEquivalentes: (a, b) => Math.abs(a - b) < 1e-9,
-  formatar: (valor) =>
-    Number(valor.toFixed(6)).toLocaleString('pt-BR', { maximumFractionDigits: 6 }),
+  ...numeroComCasas(6, 1e-4),
 };
 
 function sortearModalidade(nivel: Nivel, rng: Rng): Modalidade {
@@ -107,7 +98,7 @@ function exercicioProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: identificador('produto', rng),
     nivel,
     enunciado: 'Aplique a propriedade e informe o valor numérico.',
-    enunciadoTex: `${potenciaParaTex({ base, expoente: m })} \\cdot ${potenciaParaTex({ base, expoente: n })} = \;?`,
+    enunciadoTex: `${potenciaParaTex({ base, expoente: m })} \\cdot ${potenciaParaTex({ base, expoente: n })} = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
     conceitos: ['potencias.propriedades', 'potencias.definicao'],
@@ -132,7 +123,7 @@ function exercicioProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
       ],
       gabarito,
-      (a, b) => a === b,
+      proximos,
     ),
     dica: nivel === 'facil' ? 'As bases são iguais — o que acontece com os expoentes?' : undefined,
   };
@@ -151,7 +142,7 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: identificador('quociente', rng),
     nivel,
     enunciado: 'Simplifique e informe o valor numérico.',
-    enunciadoTex: `\\frac{${potenciaParaTex({ base, expoente: m })}}{${potenciaParaTex({ base, expoente: n })}} = \;?`,
+    enunciadoTex: `\\frac{${potenciaParaTex({ base, expoente: m })}}{${potenciaParaTex({ base, expoente: n })}} = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
     conceitos:
@@ -203,7 +194,7 @@ function exercicioPotenciaDePotencia(nivel: Nivel, rng: Rng): Exercicio<number> 
     id: identificador('potencia-de-potencia', rng),
     nivel,
     enunciado: 'Aplique a propriedade e informe o valor numérico.',
-    enunciadoTex: `\\left(${potenciaParaTex({ base, expoente: m })}\\right)^{${n}} = \;?`,
+    enunciadoTex: `\\left(${potenciaParaTex({ base, expoente: m })}\\right)^{${n}} = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
     conceitos: ['potencias.propriedades'],
@@ -227,7 +218,7 @@ function exercicioPotenciaDePotencia(nivel: Nivel, rng: Rng): Exercicio<number> 
         },
       ],
       gabarito,
-      (a, b) => a === b,
+      proximos,
     ),
   };
 }
@@ -244,7 +235,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
       id: identificador('raiz-exata', rng),
       nivel,
       enunciado: 'Calcule a raiz quadrada.',
-      enunciadoTex: `\\sqrt{${radicando}} = \;?`,
+      enunciadoTex: `\\sqrt{${radicando}} = \\;?`,
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },
       conceitos: ['potencias.raizes'],
@@ -260,7 +251,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
           },
         ],
         gabarito,
-        (a, b) => a === b,
+        proximos,
       ),
       dica: 'Qual número multiplicado por ele mesmo dá esse valor?',
     };
@@ -278,7 +269,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: identificador('raiz-simplificada', rng),
     nivel,
     enunciado: `Simplificando √${radicando}, qual é o número que SAI do radical?`,
-    enunciadoTex: `\\sqrt{${radicando}} = k\\sqrt{${dentro}} \\qquad k = \;?`,
+    enunciadoTex: `\\sqrt{${radicando}} = k\\sqrt{${dentro}} \\qquad k = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
     conceitos: ['potencias.raizes', 'potencias.propriedades'],
@@ -302,7 +293,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
       ],
       gabarito,
-      (a, b) => a === b,
+      proximos,
     ),
   };
 }

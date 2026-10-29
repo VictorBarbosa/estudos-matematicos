@@ -11,8 +11,8 @@ export const TEORIA_EQUACAO_1: readonly Teoria[] = [
       'quebrar essa igualdade, e isso só é possível aplicando a MESMA operação aos dois ' +
       'lados — como manter uma balança equilibrada.',
     formulas: [
-      { tex: 'a = b \;\\Longrightarrow\; a + k = b + k', legenda: 'Somar o mesmo nos dois lados.' },
-      { tex: 'a = b \;\\Longrightarrow\; a \\cdot k = b \\cdot k \\quad (k \\neq 0)' },
+      { tex: 'a = b \\;\\Longrightarrow\\; a + k = b + k', legenda: 'Somar o mesmo nos dois lados.' },
+      { tex: 'a = b \\;\\Longrightarrow\\; a \\cdot k = b \\cdot k \\quad (k \\neq 0)' },
     ],
     demonstracao: [
       {
@@ -21,12 +21,12 @@ export const TEORIA_EQUACAO_1: readonly Teoria[] = [
       },
       {
         descricao: 'Subtraímos 3 dos DOIS lados; a balança continua equilibrada.',
-        tex: '2x + 3 - 3 = 11 - 3 \;\\Rightarrow\; 2x = 8',
+        tex: '2x + 3 - 3 = 11 - 3 \\;\\Rightarrow\\; 2x = 8',
         nota: 'Isto é o que realmente acontece quando se diz "passa para o outro lado trocando o sinal".',
       },
       {
         descricao: 'Dividimos os dois lados por 2.',
-        tex: '\\frac{2x}{2} = \\frac{8}{2} \;\\Rightarrow\; x = 4',
+        tex: '\\frac{2x}{2} = \\frac{8}{2} \\;\\Rightarrow\\; x = 4',
       },
     ],
     exemplo: {
@@ -43,7 +43,7 @@ export const TEORIA_EQUACAO_1: readonly Teoria[] = [
       'A equação ax + b = 0 pergunta para qual x a função y = ax + b vale zero. Como essa ' +
       'função é uma reta, a resposta é o ponto em que ela corta o eixo horizontal — e, por ' +
       'ser uma reta não horizontal, esse ponto é único.',
-    formulas: [{ tex: 'ax + b = 0 \;\\Longrightarrow\; x = -\\frac{b}{a} \\quad (a \\neq 0)' }],
+    formulas: [{ tex: 'ax + b = 0 \\;\\Longrightarrow\\; x = -\\frac{b}{a} \\quad (a \\neq 0)' }],
     demonstracao: [
       {
         descricao: 'Pensamos no lado esquerdo como uma função.',
@@ -51,7 +51,7 @@ export const TEORIA_EQUACAO_1: readonly Teoria[] = [
       },
       {
         descricao: 'A equação pede o x em que essa função se anula.',
-        tex: 'y = 0 \;\\Longleftrightarrow\; ax + b = 0',
+        tex: 'y = 0 \\;\\Longleftrightarrow\\; ax + b = 0',
       },
       {
         descricao: 'Uma reta com inclinação não nula cruza o eixo x exatamente uma vez.',
@@ -74,20 +74,20 @@ export const TEORIA_EQUACAO_1: readonly Teoria[] = [
       'números: ou ela é falsa, e nenhum x serve, ou é verdadeira, e todo x serve.',
     formulas: [
       {
-        tex: '0 \\cdot x = k,\; k \\neq 0 \;\\Rightarrow\; S = \\varnothing',
+        tex: '0 \\cdot x = k,\\; k \\neq 0 \\;\\Rightarrow\\; S = \\varnothing',
         legenda: 'Impossível.',
       },
-      { tex: '0 \\cdot x = 0 \;\\Rightarrow\; S = \\mathbb{R}', legenda: 'Identidade.' },
+      { tex: '0 \\cdot x = 0 \\;\\Rightarrow\\; S = \\mathbb{R}', legenda: 'Identidade.' },
     ],
     demonstracao: [
       {
         descricao: 'Uma equação que simplifica para algo falso não tem solução.',
-        tex: '2x + 1 = 2x + 5 \;\\Rightarrow\; 1 = 5',
+        tex: '2x + 1 = 2x + 5 \\;\\Rightarrow\\; 1 = 5',
         nota: 'As duas retas são paralelas: nunca se encontram.',
       },
       {
         descricao: 'Já uma que simplifica para algo verdadeiro vale sempre.',
-        tex: '2(x + 1) = 2x + 2 \;\\Rightarrow\; 0 = 0',
+        tex: '2(x + 1) = 2x + 2 \\;\\Rightarrow\\; 0 = 0',
         nota: 'Os dois lados são a MESMA reta, escrita de dois jeitos.',
       },
     ],
@@ -109,7 +109,7 @@ export const TEORIA_EQUACAO_1: readonly Teoria[] = [
       },
       {
         descricao: 'Substituímos na equação original, não numa versão já manipulada.',
-        tex: '2 \\cdot 4 + 3 = 8 + 3 = 11 \;\\checkmark',
+        tex: '2 \\cdot 4 + 3 = 8 + 3 = 11 \\;\\checkmark',
         nota: 'Usar uma linha intermediária esconderia um erro cometido antes dela.',
       },
     ],

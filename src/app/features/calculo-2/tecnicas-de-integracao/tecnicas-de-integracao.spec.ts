@@ -19,14 +19,24 @@ describe('geradorTecnicas', () => {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {
         for (const armadilha of exercicio.armadilhas) {
-          expect(Math.abs(armadilha.resposta - exercicio.gabarito)).toBeGreaterThan(0.01);
+          // A régua é a tolerância da correção: uma armadilha que o gerador
+          // considera equivalente ao gabarito diagnosticaria quem acertou.
+          expect(geradorTecnicas.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(
+            false,
+          );
         }
       }
     });
   }
 
-  it('o gabarito confere com a integração numérica', () => {
-    for (const exercicio of amostra('medio', 40)) {
+  it('o gabarito da substituição confere com a integração numérica', () => {
+    const porSubstituicao = amostra('medio', 90).filter((e) =>
+      e.enunciado.includes('substituição'),
+    );
+
+    expect(porSubstituicao.length).toBeGreaterThan(5);
+
+    for (const exercicio of porSubstituicao) {
       const [, aTexto, sinal, bTexto, nTexto] =
         /\\left\((\d*)x ([+-]) (\d+)\\right\)\^\{(\d+)\}/.exec(exercicio.enunciadoTex)!;
       const [, ate] = /\\int_\{0\}\^\{(\d+)\}/.exec(exercicio.enunciadoTex)!;
@@ -60,5 +70,55 @@ describe('geradorTecnicas', () => {
     )!;
 
     expect(exercicio).toBeDefined();
+  });
+
+  it('a integração por partes confere com a integração numérica', () => {
+    const porPartes = amostra('dificil', 120).filter((e) => e.enunciado.includes('por partes'));
+
+    expect(porPartes.length).toBeGreaterThan(5);
+
+    for (const exercicio of porPartes) {
+      const [, limite, coeficiente] = /\\int_\{1\}\^\{(\d+)\} (\d*)x\\ln x/.exec(
+        exercicio.enunciadoTex,
+      )!;
+      const c = coeficiente === '' ? 1 : Number(coeficiente);
+
+      const numerica = integralNumerica((x) => c * x * Math.log(x), 1, Number(limite), 4000);
+      expect(exercicio.gabarito).toBeCloseTo(numerica, 4);
+    }
+  });
+
+  it('as frações parciais conferem com a integração numérica', () => {
+    const parciais = amostra('dificil', 120).filter((e) =>
+      e.enunciado.includes('frações parciais'),
+    );
+
+    expect(parciais.length).toBeGreaterThan(5);
+
+    for (const exercicio of parciais) {
+      const [, ate, p, sinal, q, m, n] =
+        /\\int_\{0\}\^\{(\d+)\} \\frac\{(\d*)x ([+-]) (\d+)\}\{\(x \+ (\d+)\)\(x \+ (\d+)\)\}/.exec(
+          exercicio.enunciadoTex,
+        )!;
+
+      const coefP = p === '' ? 1 : Number(p);
+      const coefQ = (sinal === '-' ? -1 : 1) * Number(q);
+
+      const numerica = integralNumerica(
+        (x) => (coefP * x + coefQ) / ((x + Number(m)) * (x + Number(n))),
+        0,
+        Number(ate),
+        4000,
+      );
+      expect(exercicio.gabarito).toBeCloseTo(numerica, 4);
+    }
+  });
+
+  it('as três técnicas aparecem nos níveis mais altos', () => {
+    const enunciados = amostra('dificil', 200).map((e) => e.enunciado);
+
+    expect(enunciados.some((e) => e.includes('substituição'))).toBe(true);
+    expect(enunciados.some((e) => e.includes('por partes'))).toBe(true);
+    expect(enunciados.some((e) => e.includes('frações parciais'))).toBe(true);
   });
 });

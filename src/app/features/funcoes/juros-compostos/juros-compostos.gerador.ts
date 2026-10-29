@@ -1,5 +1,6 @@
 import { jurosCompostosComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
@@ -90,7 +91,23 @@ export const geradorJuros: GeradorExercicio<number> = {
         `períodos, a juros compostos. Qual é ${pergunta === 'montante' ? 'o montante final' : 'o juro total'}? (2 casas)`,
       enunciadoTex: `C = ${capital} \\qquad i = ${taxa}\\% \\qquad n = ${periodos}`,
       gabarito,
-      resolucao: { resultado: gabarito, passos: resolucao.passos },
+      resolucao: {
+        resultado: gabarito,
+        passos: [
+          ...resolucao.passos,
+          {
+            descricao:
+              pergunta === 'montante'
+                ? 'A pergunta é pelo montante final.'
+                : 'A pergunta é pelo JURO, que é o montante menos o capital aplicado.',
+            tex:
+              pergunta === 'montante'
+                ? `M = ${montante.toFixed(2).replace('.', '{,}')}`
+                : `J = ${montante.toFixed(2).replace('.', '{,}')} - ${capital} = ` +
+                  `${gabarito.toFixed(2).replace('.', '{,}')}`,
+          },
+        ],
+      },
       conceitos: ['juros.compostos', 'juros.simples'],
       armadilhas: semColisoes(
         [
@@ -137,10 +154,11 @@ export const geradorJuros: GeradorExercicio<number> = {
    */
   analisar: (entrada) => {
     const semRuido = entrada.trim().replace(/\s|R\$/g, '');
+    // "1.200" é mil e duzentos, não 1,2: separador de milhar só quando não há
+    // vírgula decimal e os grupos têm três dígitos.
     const milhar = semRuido.includes(',') || /^[+-]?\d{1,3}(\.\d{3})+$/.test(semRuido);
-    const limpo = (milhar ? semRuido.replace(/\./g, '') : semRuido).replace(',', '.');
 
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
+    return analisarNumero(milhar ? semRuido.replace(/\./g, '') : semRuido);
   },
 
   saoEquivalentes: proximos,

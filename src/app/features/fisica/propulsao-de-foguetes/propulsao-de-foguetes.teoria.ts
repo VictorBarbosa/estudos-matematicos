@@ -18,7 +18,7 @@ export const TEORIA_PROPULSAO: readonly Teoria[] = [
       { tex: 'F = \\dot{m}\\,v_e' },
       { tex: 'I_{sp} = \\frac{v_e}{g_0}', legenda: 'Impulso específico, em segundos.' },
       {
-        tex: 'F > mg \;\\Rightarrow\; \\text{decola}',
+        tex: 'F > mg \\;\\Rightarrow\\; \\text{decola}',
         legenda: 'O empuxo precisa vencer o peso para sair do chão.',
       },
     ],

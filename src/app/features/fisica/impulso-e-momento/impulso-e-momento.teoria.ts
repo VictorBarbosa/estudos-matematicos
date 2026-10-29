@@ -30,7 +30,7 @@ export const TEORIA_MOMENTO: readonly Teoria[] = [
       },
       {
         descricao: 'Para a mesma variação de momento, estender o tempo reduz a força.',
-        tex: '\\Delta t \\uparrow \;\\Rightarrow\; F \\downarrow',
+        tex: '\\Delta t \\uparrow \\;\\Rightarrow\\; F \\downarrow',
         nota: 'Um airbag não reduz a variação de momento; ele a espalha no tempo.',
       },
     ],
@@ -110,7 +110,7 @@ export const TEORIA_MOMENTO: readonly Teoria[] = [
       },
       {
         descricao: 'Com massas iguais, a solução é a troca de velocidades.',
-        tex: 'm_1 = m_2 \;\\Rightarrow\; v_1\' = v_2,\; v_2\' = v_1',
+        tex: 'm_1 = m_2 \\;\\Rightarrow\\; v_1\' = v_2,\\; v_2\' = v_1',
         nota: 'É o que se vê no berço de Newton.',
       },
     ],

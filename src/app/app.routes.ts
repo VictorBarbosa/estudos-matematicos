@@ -18,6 +18,13 @@ export const routes: Routes = [
     loadComponent: () => import('@features/home/home').then((m) => m.Home),
   },
   {
+    // A revisão fica fora da trilha: ela só usa tópicos já vencidos, então não
+    // há o que o guard precise barrar aqui.
+    path: 'revisar',
+    title: 'Revisão de hoje · Estudos Matemáticos',
+    loadComponent: () => import('@features/revisar/revisar').then((m) => m.Revisar),
+  },
+  {
     path: 'matematica-basica',
     loadChildren: () =>
       import('@features/matematica-basica/matematica-basica.routes').then((m) => m.rotas),
@@ -57,11 +64,6 @@ export const routes: Routes = [
     canActivateChild: [topicoLiberadoGuard],
   },
   {
-    path: 'estatistica',
-    loadChildren: () => import('@features/estatistica/estatistica.routes').then((m) => m.rotas),
-    canActivateChild: [topicoLiberadoGuard],
-  },
-  {
     path: 'fisica',
     loadChildren: () => import('@features/fisica/fisica.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
@@ -79,6 +81,11 @@ export const routes: Routes = [
   {
     path: 'calculo-2',
     loadChildren: () => import('@features/calculo-2/calculo-2.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'estatistica',
+    loadChildren: () => import('@features/estatistica/estatistica.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
   { path: '**', redirectTo: '' },

@@ -1,6 +1,15 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { ProgressoService } from '@core/treino/progresso.service';
-import { ACERTOS_PARA_LIBERAR, Etapa, TRILHA, indiceNaTrilha } from './progressao.model';
+import {
+  ACERTOS_EXIGENTES,
+  ACERTOS_NA_JANELA,
+  Dominio,
+  Etapa,
+  RESPOSTAS_NA_JANELA,
+  TRILHA,
+  dominioDe,
+  indiceNaTrilha,
+} from './progressao.model';
 
 const CHAVE_MODO_LIVRE = 'estudos-matematicos.modo-livre.v1';
 
@@ -8,13 +17,16 @@ const CHAVE_MODO_LIVRE = 'estudos-matematicos.modo-livre.v1';
  * A trilha como um jogo: um tópico de cada vez.
  *
  * Cada etapa só abre depois que a anterior foi vencida — e vencer significa
- * acertar {@link ACERTOS_PARA_LIBERAR} exercícios seguidos na área de treino
- * daquele tópico. Isso evita o atalho mais comum do estudo por conta própria:
- * pular para derivadas sem ter frações no automático.
+ * demonstrar domínio no critério de {@link dominioDe}: acertar
+ * {@link ACERTOS_NA_JANELA} das últimas {@link RESPOSTAS_NA_JANELA} tentativas,
+ * com {@link ACERTOS_EXIGENTES} delas no Médio ou no Difícil. Isso evita o
+ * atalho mais comum do estudo por conta própria: pular para derivadas sem ter
+ * frações no automático.
  *
- * Nada aqui guarda estado novo: a conquista é derivada da melhor sequência que
- * o `ProgressoService` já registra por tópico, no mesmo `localStorage`. Um
- * refresh, portanto, devolve a trilha exatamente onde ela estava.
+ * Nada aqui guarda estado novo: a conquista é derivada do histórico de
+ * tentativas que o `ProgressoService` já registra por tópico, no mesmo
+ * `localStorage`. Um refresh, portanto, devolve a trilha exatamente onde ela
+ * estava.
  *
  * O modo livre é a válvula de escape, para quando o objetivo é consultar e não
  * jogar. Ele também é lembrado entre sessões.
@@ -30,12 +42,12 @@ export class ProgressaoService {
 
   /** Tópicos já vencidos, em qualquer ordem. */
   readonly concluidas = computed(() => {
-    const porTopico = this.progresso.porTopico();
+    const historicos = this.progresso.porHistorico();
 
     return new Set(
-      TRILHA.filter(
-        (etapa) => (porTopico[etapa.topicoId]?.melhorSequencia ?? 0) >= ACERTOS_PARA_LIBERAR,
-      ).map((etapa) => etapa.topicoId),
+      TRILHA.filter((etapa) => dominioDe(historicos[etapa.topicoId] ?? []).vencido).map(
+        (etapa) => etapa.topicoId,
+      ),
     );
   });
 
@@ -95,15 +107,24 @@ export class ProgressaoService {
     return indice === -1 || indice <= this.etapasVencidas();
   }
 
-  /** Melhor sequência já feita no tópico, limitada ao alvo. */
-  avancoNa(topicoId: string): number {
-    const melhor = this.progresso.estatisticaDe(topicoId).melhorSequencia;
-    return Math.min(melhor, ACERTOS_PARA_LIBERAR);
+  /** Como o tópico está em relação ao critério de domínio. */
+  dominioEm(topicoId: string): Dominio {
+    return dominioDe(this.progresso.historicoDe(topicoId));
   }
 
-  /** Quantos acertos seguidos ainda faltam para vencer o tópico. */
+  /** Acertos já contabilizados na janela recente, limitados ao alvo. */
+  avancoNa(topicoId: string): number {
+    return Math.min(this.dominioEm(topicoId).acertos, ACERTOS_NA_JANELA);
+  }
+
+  /** Quantos acertos ainda faltam na janela recente. */
   faltamPara(topicoId: string): number {
-    return ACERTOS_PARA_LIBERAR - this.avancoNa(topicoId);
+    return Math.max(0, ACERTOS_NA_JANELA - this.dominioEm(topicoId).acertos);
+  }
+
+  /** Quantos acertos no Médio ou no Difícil ainda faltam. */
+  faltamExigentesPara(topicoId: string): number {
+    return Math.max(0, ACERTOS_EXIGENTES - this.dominioEm(topicoId).acertosExigentes);
   }
 
   /**

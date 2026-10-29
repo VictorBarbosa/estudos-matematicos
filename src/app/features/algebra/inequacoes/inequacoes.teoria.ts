@@ -20,11 +20,11 @@ export const TEORIA_INEQUACOES: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'A fronteira é o valor que torna os dois lados iguais.',
-        tex: '2x > 6 \;\\Rightarrow\; \\text{fronteira em } 2x = 6,\; x = 3',
+        tex: '2x > 6 \\;\\Rightarrow\\; \\text{fronteira em } 2x = 6,\\; x = 3',
       },
       {
         descricao: 'Ela divide a reta em duas partes; basta testar um ponto de cada lado.',
-        tex: 'x = 4 \\to 8 > 6 \;\\checkmark \\qquad x = 0 \\to 0 > 6 \;\\times',
+        tex: 'x = 4 \\to 8 > 6 \\;\\checkmark \\qquad x = 0 \\to 0 > 6 \\;\\times',
         nota: 'O lado que passa no teste é o conjunto solução.',
       },
       {
@@ -47,10 +47,10 @@ export const TEORIA_INEQUACOES: readonly Teoria[] = [
       'por um número POSITIVO. Por um número negativo, a ordem se inverte, e esquecer disso é ' +
       'de longe o erro mais comum de todo o tema.',
     formulas: [
-      { tex: 'a < b \;\\Longrightarrow\; a + k < b + k', legenda: 'Soma não afeta o sentido.' },
-      { tex: 'a < b \;\\text{e}\; k > 0 \;\\Longrightarrow\; ak < bk' },
+      { tex: 'a < b \\;\\Longrightarrow\\; a + k < b + k', legenda: 'Soma não afeta o sentido.' },
+      { tex: 'a < b \\;\\text{e}\\; k > 0 \\;\\Longrightarrow\\; ak < bk' },
       {
-        tex: 'a < b \;\\text{e}\; k < 0 \;\\Longrightarrow\; ak > bk',
+        tex: 'a < b \\;\\text{e}\\; k < 0 \\;\\Longrightarrow\\; ak > bk',
         legenda: 'O sentido se inverte.',
       },
     ],
@@ -91,12 +91,12 @@ export const TEORIA_INEQUACOES: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Em x ≥ 3, o próprio 3 satisfaz a condição.',
-        tex: '3 \\geq 3 \;\\checkmark',
+        tex: '3 \\geq 3 \\;\\checkmark',
         nota: 'Por isso ele pertence ao conjunto: colchete e bolinha preenchida.',
       },
       {
         descricao: 'Em x > 3, o 3 não satisfaz.',
-        tex: '3 > 3 \;\\times',
+        tex: '3 > 3 \\;\\times',
         nota: 'Ele fica de fora: parêntese e bolinha vazada.',
       },
       {

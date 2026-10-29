@@ -25,7 +25,7 @@ export const TEORIA_IDENTIDADES: readonly Teoria[] = [
       },
       {
         descricao: 'Dividindo a identidade por cos²θ, surge uma segunda relação.',
-        tex: '\\frac{\\sin^{2}\\theta}{\\cos^{2}\\theta} + 1 = \\frac{1}{\\cos^{2}\\theta} \;\\Rightarrow\; \\tan^{2}\\theta + 1 = \\sec^{2}\\theta',
+        tex: '\\frac{\\sin^{2}\\theta}{\\cos^{2}\\theta} + 1 = \\frac{1}{\\cos^{2}\\theta} \\;\\Rightarrow\\; \\tan^{2}\\theta + 1 = \\sec^{2}\\theta',
       },
     ],
     vejaTambem: ['identidades.soma', 'identidades.arco-duplo'],
@@ -55,7 +55,7 @@ export const TEORIA_IDENTIDADES: readonly Teoria[] = [
       },
       {
         descricao: 'Pela fórmula correta.',
-        tex: '\\sin 30°\\cos 60° + \\cos 30°\\sin 60° = 0{,}25 + 0{,}75 = 1 \;\\checkmark',
+        tex: '\\sin 30°\\cos 60° + \\cos 30°\\sin 60° = 0{,}25 + 0{,}75 = 1 \\;\\checkmark',
       },
       {
         descricao: 'No cosseno, o sinal do meio é invertido em relação ao da soma dos arcos.',

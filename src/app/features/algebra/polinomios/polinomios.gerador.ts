@@ -6,6 +6,7 @@ import {
   restoPorBinomioComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-6;
@@ -29,14 +30,7 @@ export const geradorPolinomios: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    const fracao = /^([+-]?\d+)\/(\d+)$/.exec(limpo);
-    if (fracao) {
-      return Number(fracao[1]) / Number(fracao[2]);
-    }
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -191,7 +185,17 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
     gabarito,
     resolucao: {
       resultado: gabarito,
-      passos: fatorarPorRaizesComPassos(p).passos,
+      // Sem o passo final, a resolução parava na forma fatorada e não dizia
+      // qual das raízes o enunciado pede.
+      passos: [
+        ...fatorarPorRaizesComPassos(p).passos,
+        {
+          descricao: 'As raízes são os valores que anulam cada fator; a pergunta pede a menor.',
+          tex:
+            `x \\in \\{${[...encontradas].sort((um, outro) => um - outro).join(',\\; ')}\\}` +
+            ` \\Rightarrow \\min = ${gabarito}`,
+        },
+      ],
     },
     conceitos: ['polinomios.raizes'],
     armadilhas: semColisoes(
@@ -249,7 +253,16 @@ function exercicioCoeficienteQuociente(nivel: Nivel, rng: Rng): Exercicio<number
     enunciado: `Divida P(x) por (x ${sinal} ${Math.abs(a)}). No quociente, qual é ${termo}?`,
     enunciadoTex: `P(x) = ${p.paraTex()}`,
     gabarito,
-    resolucao: { resultado: gabarito, passos },
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...passos,
+        {
+          descricao: `Do quociente, o enunciado pede ${termo}.`,
+          tex: `Q(x) = ${quociente.paraTex()} \\Rightarrow ${grau === 0 ? 'a_0' : `a_${grau}`} = ${gabarito}`,
+        },
+      ],
+    },
     conceitos: ['polinomios.divisao'],
     armadilhas: semColisoes(
       [

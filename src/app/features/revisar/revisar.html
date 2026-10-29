@@ -1,0 +1,77 @@
+<div class="revisar">
+  <header class="intro">
+    <h1>Revisão de hoje</h1>
+    <p class="chamada">
+      A trilha só anda para a frente. Esta fila faz o caminho de volta: alguns exercícios de
+      matéria já vencida, escolhidos pelos conceitos que você vem errando e pelo tempo sem
+      praticar. Nada aqui tranca nem destranca etapa — o objetivo é não esquecer.
+    </p>
+  </header>
+
+  @if (fila().length === 0) {
+    <section class="vazio">
+      <p>
+        Ainda não há matéria antiga para revisar: a fila usa os tópicos que você já venceu.
+        Vença a etapa da vez no treino e volte aqui.
+      </p>
+      <a class="principal" routerLink="/">Ver a trilha</a>
+    </section>
+  } @else if (terminou()) {
+    <section class="vazio">
+      <p><strong>Fila de hoje concluída.</strong> {{ fila().length }} tópicos revisados.</p>
+      <div class="acoes">
+        <button type="button" class="principal" (click)="recarregar()">Montar outra fila</button>
+        <a class="secundario" routerLink="/">Voltar à trilha</a>
+      </div>
+    </section>
+  } @else if (atual(); as item) {
+    <section class="item">
+      <header>
+        <p class="posicao">Item {{ indice() + 1 }} de {{ fila().length }}</p>
+        <h2>
+          <a [routerLink]="item.etapa.rota">{{ item.etapa.titulo }}</a>
+        </h2>
+        <p class="porque">
+          @switch (item.motivo) {
+            @case ('conceito-fragil') {
+              Na fila porque estes conceitos vêm sendo errados:
+            }
+            @case ('descansado') {
+              Na fila por tempo sem praticar:
+              {{ item.diasSemPraticar }} {{ item.diasSemPraticar === 1 ? 'dia' : 'dias' }}.
+            }
+            @case ('nunca-praticado') {
+              Na fila porque este tópico não foi treinado nesta sessão.
+            }
+          }
+        </p>
+
+        @if (item.conceitosFrageis.length > 0) {
+          <div class="frageis">
+            @for (conceito of item.conceitosFrageis; track conceito) {
+              <app-botao-teoria [conceito]="conceito" [discreto]="true" />
+            }
+          </div>
+        }
+      </header>
+
+      @if (gerador(); as g) {
+        <app-area-treino [gerador]="g" />
+      } @else if (carregando()) {
+        <p class="carregando" role="status">Carregando os exercícios deste tópico…</p>
+      } @else {
+        <p class="carregando" role="status">
+          Não foi possível carregar os exercícios deste tópico agora.
+        </p>
+      }
+
+      <footer class="navegacao">
+        <button type="button" class="principal" (click)="avancar()">
+          Próximo da fila
+          <span aria-hidden="true">→</span>
+        </button>
+        <a class="secundario" [routerLink]="item.etapa.rota">Abrir o tópico inteiro</a>
+      </footer>
+    </section>
+  }
+</div>

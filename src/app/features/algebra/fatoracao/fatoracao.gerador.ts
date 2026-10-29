@@ -1,6 +1,10 @@
-import { Polinomio, fatorarComPassos, mdc } from '@core/math';
+import { Polinomio, fatorarComPassos, formatar, mdc } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
+
+/** A mesma tolerância da correção, para não listar armadilhas indistinguíveis. */
+const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
 
 /**
  * Exercícios de fatoração.
@@ -24,7 +28,22 @@ export const geradorFatoracao: GeradorExercicio<number> = {
         'Fatore a expressão e informe a MAIOR raiz, ou seja, o maior valor de x que a anula.',
       enunciadoTex: `${polinomio.paraTex()} = 0`,
       gabarito,
-      resolucao: { resultado: gabarito, passos: resolucao.passos },
+      resolucao: {
+        resultado: gabarito,
+        // A fatoração é o meio; a pergunta é pela raiz. Sem este passo, a
+        // resolução parava na forma fatorada e não respondia o que foi pedido.
+        passos: [
+          ...resolucao.passos,
+          {
+            descricao: 'Cada fator nulo dá uma raiz; o enunciado pede a maior delas.',
+            tex:
+              raizes.length > 1
+                ? `x = ${formatar(Math.min(...raizes))} \\text{ ou } x = ${formatar(gabarito)}` +
+                  ` \\Rightarrow \\max = ${formatar(gabarito)}`
+                : `x = ${formatar(gabarito)}`,
+          },
+        ],
+      },
       conceitos: ['fatoracao.ideia', tipo],
       armadilhas: semColisoes(
         [
@@ -46,7 +65,7 @@ export const geradorFatoracao: GeradorExercicio<number> = {
           },
         ],
         gabarito,
-        (a, b) => a === b,
+        proximos,
       ),
       dica:
         nivel === 'facil'
@@ -55,13 +74,9 @@ export const geradorFatoracao: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
-  saoEquivalentes: (a, b) => a === b,
-  formatar: (valor) => String(valor),
+  ...numeroComCasas(2, 1e-4),
 };
 
 interface Sorteio {

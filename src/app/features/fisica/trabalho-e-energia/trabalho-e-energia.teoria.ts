@@ -13,7 +13,7 @@ export const TEORIA_ENERGIA: readonly Teoria[] = [
     formulas: [
       { tex: 'W = \\vec{F}\\cdot\\vec{d} = Fd\\cos\\theta' },
       {
-        tex: '\\theta = 90^\\circ \;\\Rightarrow\; W = 0',
+        tex: '\\theta = 90^\\circ \\;\\Rightarrow\\; W = 0',
         legenda: 'Força perpendicular ao deslocamento não trabalha.',
       },
     ],
@@ -29,7 +29,7 @@ export const TEORIA_ENERGIA: readonly Teoria[] = [
       },
       {
         descricao: 'Força contrária ao movimento realiza trabalho negativo.',
-        tex: '\\cos 180^\\circ = -1 \;\\Rightarrow\; W = -Fd',
+        tex: '\\cos 180^\\circ = -1 \\;\\Rightarrow\\; W = -Fd',
         nota: 'É o caso do atrito, que retira energia do movimento.',
       },
     ],
@@ -101,7 +101,7 @@ export const TEORIA_ENERGIA: readonly Teoria[] = [
       },
       {
         descricao: 'A mesma energia entregue mais rápido exige potência maior.',
-        tex: '\\Delta t \\downarrow \;\\Rightarrow\; P \\uparrow',
+        tex: '\\Delta t \\downarrow \\;\\Rightarrow\\; P \\uparrow',
       },
     ],
     exemplo: {

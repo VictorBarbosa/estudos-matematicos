@@ -11,13 +11,13 @@ export const TEORIA_MHS: readonly Teoria[] = [
       'segunda lei de Newton, isso significa que a aceleração é proporcional à posição, com ' +
       'sinal oposto — e o cosseno é exatamente a função que satisfaz essa condição.',
     formulas: [
-      { tex: 'F = -kx \;\\Rightarrow\; a = -\\frac{k}{m}x' },
+      { tex: 'F = -kx \\;\\Rightarrow\\; a = -\\frac{k}{m}x' },
       { tex: 'x(t) = A\\cos(\\omega t + \\varphi), \\quad \\omega = \\sqrt{\\frac{k}{m}}' },
     ],
     demonstracao: [
       {
         descricao: 'Derivando o cosseno duas vezes, voltamos ao cosseno negativo.',
-        tex: "x = A\\cos(\\omega t) \;\\Rightarrow\; x'' = -A\\omega^{2}\\cos(\\omega t)",
+        tex: "x = A\\cos(\\omega t) \\;\\Rightarrow\\; x'' = -A\\omega^{2}\\cos(\\omega t)",
       },
       {
         descricao: 'Ou seja, a segunda derivada é proporcional à própria função.',
@@ -25,7 +25,7 @@ export const TEORIA_MHS: readonly Teoria[] = [
       },
       {
         descricao: 'Comparando com a equação da física, identificamos ω.',
-        tex: '\\omega^{2} = \\frac{k}{m} \;\\Rightarrow\; \\omega = \\sqrt{\\frac{k}{m}}',
+        tex: '\\omega^{2} = \\frac{k}{m} \\;\\Rightarrow\\; \\omega = \\sqrt{\\frac{k}{m}}',
         nota: 'A trigonometria entra não por acaso, mas porque resolve essa equação.',
       },
     ],
@@ -59,7 +59,7 @@ export const TEORIA_MHS: readonly Teoria[] = [
       },
       {
         descricao: 'Mais massa deixa o movimento mais lento; mola mais rígida, mais rápido.',
-        tex: 'm \\uparrow \;\\Rightarrow\; T \\uparrow \\qquad k \\uparrow \;\\Rightarrow\; T \\downarrow',
+        tex: 'm \\uparrow \\;\\Rightarrow\\; T \\uparrow \\qquad k \\uparrow \\;\\Rightarrow\\; T \\downarrow',
       },
     ],
     exemplo: {
@@ -84,11 +84,11 @@ export const TEORIA_MHS: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Nos extremos, o corpo para por um instante.',
-        tex: 'x = \\pm A \;\\Rightarrow\; v = 0',
+        tex: 'x = \\pm A \\;\\Rightarrow\\; v = 0',
       },
       {
         descricao: 'No centro, a velocidade é máxima e a aceleração é nula.',
-        tex: 'x = 0 \;\\Rightarrow\; |v| = A\\omega,\; a = 0',
+        tex: 'x = 0 \\;\\Rightarrow\\; |v| = A\\omega,\\; a = 0',
         nota: 'A força da mola é zero ali, porque não há deslocamento.',
       },
       {

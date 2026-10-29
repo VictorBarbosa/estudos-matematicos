@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { Polinomio, integralNumerica, teoremaFundamentalComPassos } from '@core/math';
+import { Polinomio, integralNumerica, somaDeRiemann } from '@core/math';
 import { TeoriaService } from '@core/teoria/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
@@ -8,7 +8,6 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/math-plot.model';
-import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
 import { geradorDefinida } from './integral-definida.gerador';
 import { TEORIA_DEFINIDA } from './integral-definida.teoria';
 
@@ -21,7 +20,6 @@ import { TEORIA_DEFINIDA } from './integral-definida.teoria';
     ControleParametro,
     Formula,
     MathPlot,
-    PassoAPasso,
     TopicoLayout,
   ],
   templateUrl: './integral-definida.html',
@@ -44,11 +42,29 @@ export class IntegralDefinida {
     return (x: number) => p.avaliar(x);
   });
 
-  protected readonly analise = computed(() =>
-    teoremaFundamentalComPassos(this.funcao(), this.de(), this.ate()),
+  /**
+   * O valor da integral, por somas cada vez mais finas.
+   *
+   * Aqui a integral é apresentada como ela é definida — um limite de somas de
+   * Riemann —, e não por F(b) − F(a): o Teorema Fundamental só aparece duas
+   * etapas adiante na trilha, e usá-lo aqui era cobrar o que ainda não havia
+   * sido ensinado.
+   */
+  protected readonly comSinal = computed(() =>
+    integralNumerica(this.fn(), this.de(), this.ate()),
   );
 
-  protected readonly comSinal = computed(() => this.analise().resultado);
+  /** A convergência das somas de Riemann, para ver o limite acontecendo. */
+  protected readonly convergencia = computed(() => {
+    const fn = this.fn();
+    const de = this.de();
+    const ate = this.ate();
+
+    return [4, 10, 50, 200, 1000].map((n) => ({
+      n,
+      valor: somaDeRiemann(fn, de, ate, n, 'trapezio'),
+    }));
+  });
 
   /** A área geométrica soma os módulos, separando pelos pontos onde f muda de sinal. */
   protected readonly areaGeometrica = computed(() =>

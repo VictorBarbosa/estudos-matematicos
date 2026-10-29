@@ -1,5 +1,6 @@
 import { paraRadianos, quadrante } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { anguloNaVolta } from '@core/treino/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
@@ -70,7 +71,7 @@ export const geradorCirculo: GeradorExercicio<number> = {
         id: `circulo-radianos-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: `Converta ${graus}° para radianos. (2 casas decimais)`,
-        enunciadoTex: `${graus}° = \;?\\text{ rad}`,
+        enunciadoTex: `${graus}° = \\;?\\text{ rad}`,
         gabarito,
         resolucao: {
           resultado: gabarito,
@@ -110,7 +111,7 @@ export const geradorCirculo: GeradorExercicio<number> = {
       id: `circulo-valor-${graus}-${ehSeno}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: `Qual é o valor de ${ehSeno ? 'sen' : 'cos'} ${graus}°? (2 casas decimais)`,
-      enunciadoTex: `${nome} ${graus}° = \;?`,
+      enunciadoTex: `${nome} ${graus}° = \\;?`,
       gabarito,
       resolucao: {
         resultado: gabarito,
@@ -158,10 +159,7 @@ export const geradorCirculo: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>

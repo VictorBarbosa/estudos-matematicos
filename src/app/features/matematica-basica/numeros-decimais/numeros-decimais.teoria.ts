@@ -52,7 +52,7 @@ export const TEORIA_DECIMAIS: readonly Teoria[] = [
       'dividem 10 — ou seja, 2 e 5.',
     formulas: [
       {
-        tex: '\\frac{a}{2^{m} \\cdot 5^{n}} \;\\longrightarrow\; \\text{decimal finito}',
+        tex: '\\frac{a}{2^{m} \\cdot 5^{n}} \\;\\longrightarrow\\; \\text{decimal finito}',
       },
     ],
     demonstracao: [
@@ -111,7 +111,7 @@ export const TEORIA_DECIMAIS: readonly Teoria[] = [
       },
       {
         descricao: 'Resolvendo a equação.',
-        tex: '9x = 3 \;\\Rightarrow\; x = \\frac{3}{9} = \\frac{1}{3}',
+        tex: '9x = 3 \\;\\Rightarrow\\; x = \\frac{3}{9} = \\frac{1}{3}',
       },
     ],
     exemplo: {

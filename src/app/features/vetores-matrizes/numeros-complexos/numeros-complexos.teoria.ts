@@ -31,7 +31,7 @@ export const TEORIA_COMPLEXOS: readonly Teoria[] = [
       },
       {
         descricao: 'As potências de i giram de quatro em quatro.',
-        tex: 'i^{1} = i,\; i^{2} = -1,\; i^{3} = -i,\; i^{4} = 1',
+        tex: 'i^{1} = i,\\; i^{2} = -1,\\; i^{3} = -i,\\; i^{4} = 1',
         nota: 'Esse ciclo é a primeira pista de que multiplicar por i é girar 90°.',
       },
     ],
@@ -85,7 +85,7 @@ export const TEORIA_COMPLEXOS: readonly Teoria[] = [
         { real: 1, imaginario: -1 },
       ).passos,
     },
-    vejaTambem: ['complexos.plano', 'complexos.demoivre', 'identidades.soma-arcos'],
+    vejaTambem: ['complexos.plano', 'complexos.demoivre', 'identidades.soma'],
   },
   {
     id: 'complexos.demoivre',
@@ -115,7 +115,7 @@ export const TEORIA_COMPLEXOS: readonly Teoria[] = [
       },
       {
         descricao: 'Com r = 1, o número apenas gira sobre o círculo unitário.',
-        tex: '|z| = 1 \;\\Rightarrow\; |z^{n}| = 1',
+        tex: '|z| = 1 \\;\\Rightarrow\\; |z^{n}| = 1',
         nota: 'É a origem das raízes da unidade, distribuídas igualmente no círculo.',
       },
     ],

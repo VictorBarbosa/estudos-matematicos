@@ -5,6 +5,7 @@ import {
   segundaLeiComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
@@ -30,10 +31,8 @@ export const geradorNewton: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s|°/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  // O grau é ruído de unidade: a resposta em si é um número.
+  analisar: (entrada) => analisarNumero(entrada.replace(/°/g, '')),
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -163,7 +162,16 @@ function exercicioNormalPlano(nivel: Nivel, rng: Rng): Exercicio<number> {
       'normal, em newtons? (use g = 9,81 m/s²; 2 casas decimais)',
     enunciadoTex: `m = ${massa}\\,\\text{kg} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito: resultado.normal,
-    resolucao: { resultado: resultado.normal, passos },
+    resolucao: {
+      resultado: resultado.normal,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A pergunta é pela força normal, a componente perpendicular ao plano.',
+          tex: `N = ${resultado.normal.toFixed(2).replace('.', '{,}')}\\,\\text{N}`,
+        },
+      ],
+    },
     conceitos: ['newton.plano'],
     armadilhas: semColisoes(
       [

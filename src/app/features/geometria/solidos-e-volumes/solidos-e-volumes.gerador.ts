@@ -1,5 +1,6 @@
 import { NOME_SOLIDO, Solido, superficieComPassos, volumeComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
@@ -23,10 +24,7 @@ export const geradorSolidos: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -315,8 +313,8 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
         {
           descricao: 'Partimos da fórmula do volume e isolamos a altura.',
           tex: cone
-            ? 'V = \\frac{\\pi r^{2}h}{3} \;\\Rightarrow\; h = \\frac{3V}{\\pi r^{2}}'
-            : 'V = \\pi r^{2} h \;\\Rightarrow\; h = \\frac{V}{\\pi r^{2}}',
+            ? 'V = \\frac{\\pi r^{2}h}{3} \\;\\Rightarrow\\; h = \\frac{3V}{\\pi r^{2}}'
+            : 'V = \\pi r^{2} h \\;\\Rightarrow\\; h = \\frac{V}{\\pi r^{2}}',
         },
         {
           descricao: 'Calculamos a área da base.',

@@ -1,5 +1,6 @@
 import { paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { anguloAgudo } from '@core/treino/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
@@ -26,7 +27,7 @@ export const geradorRazoes: GeradorExercicio<number> = {
         id: `razoes-complementar-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: `Sabendo que sen ${90 - graus}° vale isso, qual é o valor? (2 casas)`,
-        enunciadoTex: `\\sin(90° - ${graus}°) = \;?`,
+        enunciadoTex: `\\sin(90° - ${graus}°) = \\;?`,
         gabarito,
         resolucao: {
           resultado: gabarito,
@@ -69,7 +70,7 @@ export const geradorRazoes: GeradorExercicio<number> = {
         nivel,
         enunciado:
           `Se sen θ = ${seno.toFixed(2)} e θ está no 1º quadrante, qual é cos θ? (2 casas)`,
-        enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\qquad \\cos\\theta = \;?`,
+        enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\qquad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {
           resultado: gabarito,
@@ -117,7 +118,7 @@ export const geradorRazoes: GeradorExercicio<number> = {
       id: `razoes-tangente-${graus}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: `Qual é o valor de tg ${graus}°? (2 casas decimais)`,
-      enunciadoTex: `\\tan ${graus}° = \;?`,
+      enunciadoTex: `\\tan ${graus}° = \\;?`,
       gabarito,
       resolucao: {
         resultado: gabarito,
@@ -155,10 +156,7 @@ export const geradorRazoes: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) => valor.toFixed(2).replace('.', ','),

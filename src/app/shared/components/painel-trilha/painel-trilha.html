@@ -23,7 +23,7 @@
         <span class="rotulo">Etapa {{ atual.numero }} · {{ atual.areaTitulo }}</span>
         <strong>{{ atual.titulo }}</strong>
         <span class="meta">
-          {{ avancoNaAtual() }} de {{ alvo }} acertos seguidos para liberar a próxima.
+          {{ avancoNaAtual() }} de {{ alvo }} acertos nas últimas {{ janela }} tentativas.
         </span>
       </div>
       <a class="continuar" [routerLink]="atual.rota">

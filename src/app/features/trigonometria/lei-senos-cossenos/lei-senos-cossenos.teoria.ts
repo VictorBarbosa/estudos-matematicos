@@ -12,7 +12,7 @@ export const TEORIA_LEIS: readonly Teoria[] = [
       'some quando A = 90°, e o teorema clássico reaparece.',
     formulas: [
       { tex: 'a^{2} = b^{2} + c^{2} - 2bc\\cos A' },
-      { tex: 'A = 90° \;\\Rightarrow\; \\cos A = 0 \;\\Rightarrow\; a^{2} = b^{2} + c^{2}' },
+      { tex: 'A = 90° \\;\\Rightarrow\\; \\cos A = 0 \\;\\Rightarrow\\; a^{2} = b^{2} + c^{2}' },
     ],
     demonstracao: [
       {
@@ -21,12 +21,12 @@ export const TEORIA_LEIS: readonly Teoria[] = [
       },
       {
         descricao: 'Com ângulo agudo, o cosseno é positivo e o lado oposto fica MENOR.',
-        tex: 'A < 90° \;\\Rightarrow\; a^{2} < b^{2} + c^{2}',
+        tex: 'A < 90° \\;\\Rightarrow\\; a^{2} < b^{2} + c^{2}',
         nota: 'Faz sentido: fechando o ângulo, aproximam-se as pontas.',
       },
       {
         descricao: 'Com ângulo obtuso, o cosseno é negativo e o lado oposto fica MAIOR.',
-        tex: 'A > 90° \;\\Rightarrow\; a^{2} > b^{2} + c^{2}',
+        tex: 'A > 90° \\;\\Rightarrow\\; a^{2} > b^{2} + c^{2}',
       },
     ],
     exemplo: {
@@ -82,7 +82,7 @@ export const TEORIA_LEIS: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Com LAL (lado-ângulo-lado), só a lei dos cossenos fecha.',
-        tex: 'b,\; c,\; A \;\\Rightarrow\; a',
+        tex: 'b,\\; c,\\; A \\;\\Rightarrow\\; a',
         nota: 'Não há par lado-ângulo oposto completo para aplicar a dos senos.',
       },
       {

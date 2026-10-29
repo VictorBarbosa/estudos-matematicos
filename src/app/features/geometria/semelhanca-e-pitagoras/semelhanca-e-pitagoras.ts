@@ -55,7 +55,7 @@ export class SemelhancaEPitagoras {
     const b = this.cateto1();
     const c = this.cateto2();
 
-    return `${b}^{2} + ${c}^{2} = ${b * b + c * c} \;\\Rightarrow\; a = ${this.formatar(this.hipotenusa())}`;
+    return `${b}^{2} + ${c}^{2} = ${b * b + c * c} \\;\\Rightarrow\\; a = ${this.formatar(this.hipotenusa())}`;
   });
 
   /** O triângulo retângulo com a altura relativa à hipotenusa. */

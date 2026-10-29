@@ -1,4 +1,5 @@
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
@@ -44,7 +45,7 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
           passos: [
             {
               descricao: 'Lemos o centro na equação reduzida, trocando o sinal do parêntese.',
-              tex: `C(${a},\; ${b}) \\qquad r = ${raio}`,
+              tex: `C(${a},\\; ${b}) \\qquad r = ${raio}`,
             },
             {
               descricao: 'Calculamos a distância do ponto ao centro.',
@@ -179,10 +180,7 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>

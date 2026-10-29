@@ -2,7 +2,8 @@ import { provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Fracao, resolverComPassos } from '@core/math';
-import { TRILHA } from '@core/progressao/progressao.model';
+import { RESPOSTAS_NA_JANELA, TRILHA } from '@core/progressao/progressao.model';
+import { ProgressoService } from '@core/treino/progresso.service';
 import { Exercicio, GeradorExercicio, Nivel } from '@core/treino/treino.model';
 import { AreaTreino } from './area-treino';
 
@@ -177,7 +178,30 @@ describe('AreaTreino', () => {
   it('anuncia quanto falta para vencer a etapa', async () => {
     await responder('5/12');
 
-    expect(texto()).toContain('acerto(s) seguido(s)');
+    expect(texto()).toContain('acertos nas últimas');
+  });
+
+  it('revelar a resolução conta como desistência e tranca o campo', async () => {
+    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    fixture.componentRef.setInput('gerador', naTrilha);
+    await fixture.whenStable();
+
+    const mostrar = [...fixture.nativeElement.querySelectorAll('button')].find(
+      (b: HTMLButtonElement) => b.textContent?.trim() === 'Não sei, mostrar a resolução',
+    ) as HTMLButtonElement;
+    mostrar.click();
+    await fixture.whenStable();
+
+    // O último passo da resolução traz a resposta: sem travar o campo, dava
+    // para copiá-la e ganhar o acerto.
+    const campo = fixture.nativeElement.querySelector('input') as HTMLInputElement;
+    expect(campo.disabled).toBe(true);
+    expect(texto()).toContain('conta como não resolvido');
+    expect(texto()).toContain('Como se resolve');
+
+    const progresso = TestBed.inject(ProgressoService);
+    expect(progresso.estatisticaDe(TRILHA[0]!.topicoId).erros).toBe(1);
+    expect(progresso.historicoDe(TRILHA[0]!.topicoId).at(-1)?.desistiu).toBe(true);
   });
 
   it('celebra o desbloqueio e aponta a próxima etapa', async () => {
@@ -186,7 +210,15 @@ describe('AreaTreino', () => {
     fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
-    for (let i = 0; i < 3; i++) {
+    // Agora são 8 acertos nas últimas 10 tentativas, com 3 no Médio ou no
+    // Difícil — e o gerador fixo responde igual em qualquer nível.
+    const dificil = [...fixture.nativeElement.querySelectorAll('.nivel')].find(
+      (b: HTMLButtonElement) => b.textContent?.trim() === 'Difícil',
+    ) as HTMLButtonElement;
+    dificil.click();
+    await fixture.whenStable();
+
+    for (let i = 0; i < RESPOSTAS_NA_JANELA; i++) {
       await responder('5/12');
       const proximo = [...fixture.nativeElement.querySelectorAll('button')].find(
         (b: HTMLButtonElement) => b.textContent?.trim() === 'Próximo exercício',

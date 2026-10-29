@@ -10,7 +10,7 @@ export const TEORIA_CIRCULO: readonly Teoria[] = [
       'eixo x, o ponto onde ele toca o círculo tem abscissa cos θ e ordenada sen θ. Essa é ' +
       'a mesma definição do triângulo retângulo — só que agora vale para qualquer ângulo.',
     formulas: [
-      { tex: 'P = (\\cos\\theta,\; \\sin\\theta)' },
+      { tex: 'P = (\\cos\\theta,\\; \\sin\\theta)' },
       { tex: '\\cos^{2}\\theta + \\sin^{2}\\theta = 1', legenda: 'A equação do próprio círculo.' },
     ],
     demonstracao: [
@@ -57,7 +57,7 @@ export const TEORIA_CIRCULO: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'No 2º quadrante o ponto está à esquerda e acima.',
-        tex: 'x < 0 \;\\Rightarrow\; \\cos\\theta < 0 \\qquad y > 0 \;\\Rightarrow\; \\sin\\theta > 0',
+        tex: 'x < 0 \\;\\Rightarrow\\; \\cos\\theta < 0 \\qquad y > 0 \\;\\Rightarrow\\; \\sin\\theta > 0',
       },
       {
         descricao: 'A tangente, sendo um quociente, é positiva quando os dois têm o mesmo sinal.',
@@ -91,7 +91,7 @@ export const TEORIA_CIRCULO: readonly Teoria[] = [
       },
       {
         descricao: 'Medindo o ângulo pelo arco percorrido, a volta inteira vale 2π.',
-        tex: '360° \;\\longleftrightarrow\; 2\\pi',
+        tex: '360° \\;\\longleftrightarrow\\; 2\\pi',
       },
       {
         descricao: 'Daí sai a regra de conversão, por proporção simples.',

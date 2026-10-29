@@ -2,7 +2,7 @@ import { provideZonelessChangeDetection } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, provideRouter } from '@angular/router';
 import { ProgressoService } from '@core/treino/progresso.service';
-import { ACERTOS_PARA_LIBERAR, TRILHA } from './progressao.model';
+import { ACERTOS_EXIGENTES, ACERTOS_NA_JANELA, RESPOSTAS_NA_JANELA, TRILHA } from './progressao.model';
 import { ProgressaoService } from './progressao.service';
 import { topicoLiberadoGuard } from './topico-liberado.guard';
 
@@ -39,12 +39,13 @@ describe('topicoLiberadoGuard', () => {
   });
 
   it('libera o tópico assim que a etapa anterior é vencida', () => {
-    for (let sequencia = 1; sequencia <= ACERTOS_PARA_LIBERAR; sequencia++) {
+    for (let i = 0; i < RESPOSTAS_NA_JANELA; i++) {
       progresso.registrar({
         topicoId: TRILHA[0]!.topicoId,
         conceitos: [],
-        acertou: true,
-        sequencia,
+        acertou: i >= RESPOSTAS_NA_JANELA - ACERTOS_NA_JANELA,
+        sequencia: i + 1,
+        nivel: i >= RESPOSTAS_NA_JANELA - ACERTOS_EXIGENTES ? 'dificil' : 'facil',
       });
     }
 

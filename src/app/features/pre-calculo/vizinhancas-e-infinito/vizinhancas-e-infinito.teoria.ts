@@ -11,7 +11,7 @@ export const TEORIA_VIZINHANCAS: readonly Teoria[] = [
       'respeita essa margem. É um jogo — o desafiante escolhe ε, eu respondo com δ.',
     formulas: [
       {
-        tex: '\\forall \\varepsilon > 0,\; \\exists \\delta > 0 : 0 < |x - a| < \\delta \\Rightarrow |f(x) - L| < \\varepsilon',
+        tex: '\\forall \\varepsilon > 0,\\; \\exists \\delta > 0 : 0 < |x - a| < \\delta \\Rightarrow |f(x) - L| < \\varepsilon',
       },
     ],
     demonstracao: [
@@ -25,7 +25,7 @@ export const TEORIA_VIZINHANCAS: readonly Teoria[] = [
       },
       {
         descricao: 'O limite existe se, por menor que seja ε, há um δ que mantém a curva na faixa.',
-        tex: '\\varepsilon \\to 0 \;\\Rightarrow\; \\delta \\to 0',
+        tex: '\\varepsilon \\to 0 \\;\\Rightarrow\\; \\delta \\to 0',
         nota: 'Quanto mais apertada a exigência, mais estreita a vizinhança — mas sempre existe uma.',
       },
       {
@@ -76,8 +76,8 @@ export const TEORIA_VIZINHANCAS: readonly Teoria[] = [
       'Uma vertical aparece onde a função explode — tipicamente onde um denominador zera sem ' +
       'que o numerador também zere.',
     formulas: [
-      { tex: '\\lim_{x \\to \\pm\\infty} f(x) = L \;\\Rightarrow\; y = L \;\\text{é assíntota horizontal}' },
-      { tex: '\\lim_{x \\to a} f(x) = \\pm\\infty \;\\Rightarrow\; x = a \;\\text{é assíntota vertical}' },
+      { tex: '\\lim_{x \\to \\pm\\infty} f(x) = L \\;\\Rightarrow\\; y = L \\;\\text{é assíntota horizontal}' },
+      { tex: '\\lim_{x \\to a} f(x) = \\pm\\infty \\;\\Rightarrow\\; x = a \\;\\text{é assíntota vertical}' },
     ],
     demonstracao: [
       {
@@ -86,15 +86,15 @@ export const TEORIA_VIZINHANCAS: readonly Teoria[] = [
       },
       {
         descricao: 'A curva se afasta indefinidamente da reta x = 0, sem tocá-la.',
-        tex: 'x = 0 \;\\text{é assíntota vertical}',
+        tex: 'x = 0 \\;\\text{é assíntota vertical}',
       },
       {
         descricao: 'Longe da origem, a mesma função se aproxima do eixo horizontal.',
-        tex: '\\lim_{x \\to \\pm\\infty} \\frac{1}{x} = 0 \;\\Rightarrow\; y = 0 \;\\text{é assíntota horizontal}',
+        tex: '\\lim_{x \\to \\pm\\infty} \\frac{1}{x} = 0 \\;\\Rightarrow\\; y = 0 \\;\\text{é assíntota horizontal}',
       },
       {
         descricao: 'Se numerador e denominador zeram juntos, não há assíntota: há um buraco.',
-        tex: '\\frac{x^{2}-1}{x-1} \;\\text{tem buraco em } x = 1, \\text{não assíntota}',
+        tex: '\\frac{x^{2}-1}{x-1} \\;\\text{tem buraco em } x = 1, \\text{não assíntota}',
       },
     ],
     vejaTambem: ['vizinhancas.infinito', 'limite.lateral'],

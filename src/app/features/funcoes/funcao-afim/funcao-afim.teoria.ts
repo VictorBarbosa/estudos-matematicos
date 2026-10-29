@@ -44,7 +44,7 @@ export const TEORIA_AFIM: readonly Teoria[] = [
       'A raiz é o valor de x para o qual f(x) = 0. Graficamente, é o ponto em que a reta ' +
       'atravessa o eixo x. Toda função afim com a ≠ 0 tem exatamente uma raiz, porque uma ' +
       'reta inclinada cruza o eixo uma única vez.',
-    formulas: [{ tex: 'ax + b = 0 \;\\Rightarrow\; x = -\\frac{b}{a}' }],
+    formulas: [{ tex: 'ax + b = 0 \\;\\Rightarrow\\; x = -\\frac{b}{a}' }],
     demonstracao: [
       {
         descricao: 'Igualamos a função a zero.',
@@ -84,7 +84,7 @@ export const TEORIA_AFIM: readonly Teoria[] = [
       },
       {
         descricao: 'Como x₂ − x₁ é positivo, o sinal da diferença é o sinal de a.',
-        tex: 'x_2 - x_1 > 0 \;\\Rightarrow\; \\operatorname{sinal}[f(x_2) - f(x_1)] = \\operatorname{sinal}(a)',
+        tex: 'x_2 - x_1 > 0 \\;\\Rightarrow\\; \\operatorname{sinal}[f(x_2) - f(x_1)] = \\operatorname{sinal}(a)',
         nota: 'Mudar b soma a mesma constante aos dois lados e se cancela na diferença.',
       },
     ],

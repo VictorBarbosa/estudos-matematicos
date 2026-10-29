@@ -1,4 +1,5 @@
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
@@ -48,7 +49,7 @@ export const geradorContinuidade: GeradorExercicio<number> = {
             },
             {
               descricao: 'Definindo esse valor, a descontinuidade é removida.',
-              tex: `f(${k}) = ${gabarito} \;\\Rightarrow\; f \\text{ contínua}`,
+              tex: `f(${k}) = ${gabarito} \\;\\Rightarrow\\; f \\text{ contínua}`,
             },
           ],
         },
@@ -105,7 +106,7 @@ export const geradorContinuidade: GeradorExercicio<number> = {
             },
             {
               descricao: 'Pelo TVI, existe uma raiz no intervalo.',
-              tex: `\\exists c \\in (${raizInteira},\; ${raizInteira + 1}) : f(c) = 0`,
+              tex: `\\exists c \\in (${raizInteira},\\; ${raizInteira + 1}) : f(c) = 0`,
               nota: 'O teorema garante que a raiz existe, sem precisar calculá-la.',
             },
           ],
@@ -156,7 +157,7 @@ export const geradorContinuidade: GeradorExercicio<number> = {
           },
           {
             descricao: 'Isolando k.',
-            tex: `${a * ponto + b} = ${c * ponto} + k \;\\Rightarrow\; k = ${gabarito}`,
+            tex: `${a * ponto + b} = ${c * ponto} + k \\;\\Rightarrow\\; k = ${gabarito}`,
           },
         ],
       },
@@ -184,10 +185,7 @@ export const geradorContinuidade: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>

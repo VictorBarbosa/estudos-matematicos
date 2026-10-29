@@ -165,4 +165,20 @@ describe('geradorComplexos', () => {
     expect(geradorComplexos.analisar('1/2')).toBe(0.5);
     expect(geradorComplexos.analisar('i')).toBeNull();
   });
+
+  it('aceita o argumento principal negativo no 4º quadrante', () => {
+    const rng = criarRng(53_130);
+    const argumentos = Array.from({ length: 300 }, () => geradorComplexos.gerar('dificil', rng))
+      .filter((e) => e.enunciado.includes('argumento'))
+      .filter((e) => (e.gabarito as number) > 270);
+
+    expect(argumentos.length).toBeGreaterThan(5);
+
+    for (const exercicio of argumentos) {
+      const principal = (exercicio.gabarito as number) - 360;
+      const digitado = principal.toFixed(2).replace('.', ',');
+
+      expect(corrigir(geradorComplexos, exercicio, digitado).veredito).toBe('correto');
+    }
+  });
 });

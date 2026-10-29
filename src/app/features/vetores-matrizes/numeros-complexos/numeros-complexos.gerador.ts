@@ -6,9 +6,22 @@ import {
   potenciaComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
-const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
+/**
+ * Igualdade numérica, com uma concessão: a diferença de 360.
+ *
+ * No 4º quadrante, 306,87° e −53,13° são o MESMO argumento, e o segundo é o
+ * argumento principal — a convenção mais usual em cálculo. Antes, quem
+ * respondia −53,13° era diagnosticado com "arco-tangente sem correção de
+ * quadrante", um erro que não havia cometido.
+ *
+ * As outras perguntas do tópico devolvem módulos e partes reais, onde uma
+ * diferença de exatamente 360 não aparece por acidente.
+ */
+const proximos = (a: number, b: number): boolean =>
+  Math.abs(a - b) < 0.02 || Math.abs(Math.abs(a - b) - 360) < 0.02;
 
 type Pergunta = 'modulo' | 'real-do-produto' | 'imaginario-do-produto' | 'argumento' | 'potencia-i' | 'real-do-quociente';
 
@@ -33,14 +46,8 @@ export const geradorComplexos: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s|°/g, '').replace(',', '.');
-    const fracao = /^([+-]?\d+)\/(\d+)$/.exec(limpo);
-    if (fracao) {
-      return Number(fracao[1]) / Number(fracao[2]);
-    }
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  // O grau é ruído de unidade: a resposta em si é um número.
+  analisar: (entrada) => analisarNumero(entrada.replace(/°/g, '')),
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -151,7 +158,16 @@ function exercicioProduto(
       `${parte === 'real' ? 'REAL' : 'IMAGINÁRIA'} do resultado?`,
     enunciadoTex: `z_1 = ${escrever(a)} \\qquad z_2 = ${escrever(b)}`,
     gabarito,
-    resolucao: { resultado: gabarito, passos },
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...passos,
+        {
+          descricao: `A pergunta é pela parte ${parte === 'real' ? 'real' : 'imaginária'}.`,
+          tex: `\\${parte === 'real' ? 'operatorname{Re}' : 'operatorname{Im}'}(z_1 z_2) = ${gabarito}`,
+        },
+      ],
+    },
     conceitos: ['complexos.multiplicacao'],
     armadilhas: semColisoes(
       [
@@ -268,7 +284,7 @@ function exercicioPotenciaDeI(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           descricao: 'Então basta o resto da divisão do expoente por 4.',
-          tex: `${expoente} \\div 4 \;\\Rightarrow\; \\text{resto } ${resto}`,
+          tex: `${expoente} \\div 4 \\;\\Rightarrow\\; \\text{resto } ${resto}`,
           nota: 'Cada grupo de quatro é uma volta completa: multiplicar por i é girar 90°.',
         },
         {
@@ -322,7 +338,16 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
       '(2 casas decimais)',
     enunciadoTex: `\\frac{${escrever(a)}}{${escrever(b)}}`,
     gabarito,
-    resolucao: { resultado: gabarito, passos },
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...passos,
+        {
+          descricao: 'A pergunta é pela parte real do quociente.',
+          tex: `\\operatorname{Re}\\left(\\frac{z_1}{z_2}\\right) = ${gabarito.toFixed(2).replace('.', '{,}')}`,
+        },
+      ],
+    },
     conceitos: ['complexos.multiplicacao'],
     armadilhas: semColisoes(
       [

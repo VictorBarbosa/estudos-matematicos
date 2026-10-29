@@ -66,8 +66,10 @@ export const TEORIA_MATRIZES: readonly Teoria[] = [
         legenda: 'Áreas se multiplicam quando transformações se compõem.',
       },
       {
-        tex: '\\det A = 0 \\iff \\text{linhas proporcionais}',
-        legenda: 'Sem área, sem inversa, sem solução única.',
+        tex: '\\det A = 0 \\iff \\text{linhas linearmente dependentes}',
+        legenda:
+          'Sem área (ou volume), sem inversa, sem solução única. Em 2×2 isso equivale a ' +
+          'linhas proporcionais; em 3×3 basta que uma linha seja combinação das outras.',
       },
     ],
     demonstracao: [
@@ -81,8 +83,13 @@ export const TEORIA_MATRIZES: readonly Teoria[] = [
         nota: 'O determinante 2×2 é exatamente o produto vetorial no plano.',
       },
       {
-        descricao: 'Se as linhas são proporcionais, elas são paralelas e não há área.',
-        tex: '\\vec{v} = k\\vec{u} \;\\Rightarrow\; \\det = 0',
+        descricao: 'Se uma linha é combinação das outras, elas não geram área (nem volume).',
+        tex: '\\vec{w} = \\alpha\\vec{u} + \\beta\\vec{v} \\;\\Rightarrow\\; \\det = 0',
+        nota:
+          'Em 2×2 a única combinação possível é v = ku, e por isso o critério costuma ser ' +
+          'dito como "linhas proporcionais". Em 3×3 isso não basta: as linhas (1,0,0), ' +
+          '(0,1,0) e (1,1,0) não são proporcionais duas a duas, mas a terceira é a soma ' +
+          'das outras e o determinante é zero.',
       },
       {
         descricao: 'Em ordens maiores, a expansão em cofatores reduz o problema.',
@@ -109,7 +116,7 @@ export const TEORIA_MATRIZES: readonly Teoria[] = [
     formulas: [
       { tex: 'x_j = \\frac{\\det A_j}{\\det A}' },
       {
-        tex: '\\det A = 0 \;\\Rightarrow\; \\text{sem solução única}',
+        tex: '\\det A = 0 \\;\\Rightarrow\\; \\text{sem solução única}',
         legenda: 'Sistema impossível ou indeterminado.',
       },
     ],
@@ -138,6 +145,6 @@ export const TEORIA_MATRIZES: readonly Teoria[] = [
         [5, 1],
       ).passos,
     },
-    vejaTambem: ['matrizes.determinante', 'sistemas.substituicao'],
+    vejaTambem: ['matrizes.determinante', 'sistemas.metodos'],
   },
 ];

@@ -1,5 +1,6 @@
 import { paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { anguloAgudo } from '@core/treino/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
@@ -29,7 +30,7 @@ export const geradorIdentidades: GeradorExercicio<number> = {
         id: `identidades-fundamental-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: `Se sen θ = ${seno.toFixed(2)} com θ no 1º quadrante, quanto vale cos θ?`,
-        enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\quad \\Rightarrow \\quad \\cos\\theta = \;?`,
+        enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\quad \\Rightarrow \\quad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {
           resultado: gabarito,
@@ -79,7 +80,7 @@ export const geradorIdentidades: GeradorExercicio<number> = {
         id: `identidades-duplo-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: `Use a fórmula do arco duplo para calcular sen ${2 * graus}°.`,
-        enunciadoTex: `\\sin ${2 * graus}° = \;?`,
+        enunciadoTex: `\\sin ${2 * graus}° = \\;?`,
         gabarito,
         resolucao: {
           resultado: gabarito,
@@ -127,7 +128,7 @@ export const geradorIdentidades: GeradorExercicio<number> = {
       id: `identidades-soma-${a}-${b}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: `Calcule sen(${a}° + ${b}°) usando a fórmula da soma de arcos.`,
-      enunciadoTex: `\\sin(${a}° + ${b}°) = \;?`,
+      enunciadoTex: `\\sin(${a}° + ${b}°) = \\;?`,
       gabarito,
       resolucao: {
         resultado: gabarito,
@@ -172,10 +173,7 @@ export const geradorIdentidades: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) => valor.toFixed(2).replace('.', ','),

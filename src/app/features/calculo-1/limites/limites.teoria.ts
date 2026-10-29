@@ -18,7 +18,7 @@ export const TEORIA_LIMITES: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Se f se aproxima de L e g de M, a soma se aproxima de L + M.',
-        tex: 'f \\to L,\; g \\to M \;\\Rightarrow\; f + g \\to L + M',
+        tex: 'f \\to L,\\; g \\to M \\;\\Rightarrow\\; f + g \\to L + M',
       },
       {
         descricao: 'Isso permite quebrar limites complicados em partes simples.',
@@ -26,7 +26,7 @@ export const TEORIA_LIMITES: readonly Teoria[] = [
       },
       {
         descricao: 'No quociente, limite nulo no denominador quebra a regra.',
-        tex: '\\lim g = 0 \;\\Rightarrow\; \\text{a propriedade não se aplica}',
+        tex: '\\lim g = 0 \\;\\Rightarrow\\; \\text{a propriedade não se aplica}',
         nota: 'É justamente aí que aparecem as indeterminações interessantes.',
       },
     ],

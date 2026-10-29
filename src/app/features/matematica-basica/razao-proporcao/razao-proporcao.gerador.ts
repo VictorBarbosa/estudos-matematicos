@@ -1,9 +1,10 @@
 import { divisaoProporcionalComPassos, regraDeTresComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const TOLERANCIA = 1e-6;
-const proximos = (a: number, b: number): boolean => Math.abs(a - b) < TOLERANCIA;
+const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
 
 interface Contexto {
   readonly enunciado: (a: number, b: number, c: number) => string;
@@ -61,17 +62,9 @@ export const geradorProporcao: GeradorExercicio<number> = {
     return exercicioRegraDeTres(nivel, rng, inversa);
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada
-      .trim()
-      .replace(/\s|R\$/g, '')
-      .replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: (entrada) => analisarNumero(entrada.replace(/R\$/g, '')),
 
-  saoEquivalentes: proximos,
-  formatar: (valor) =>
-    Number(valor.toFixed(4)).toLocaleString('pt-BR', { maximumFractionDigits: 4 }),
+  ...numeroComCasas(2, 1e-4),
 };
 
 function exercicioRegraDeTres(nivel: Nivel, rng: Rng, inversa: boolean): Exercicio<number> {
@@ -92,8 +85,8 @@ function exercicioRegraDeTres(nivel: Nivel, rng: Rng, inversa: boolean): Exercic
     nivel,
     enunciado: contexto.enunciado(a, b, c),
     enunciadoTex: inversa
-      ? `${a} \\cdot ${b} = ${c} \\cdot x \\qquad x = \;?`
-      : `\\frac{${a}}{${b}} = \\frac{${c}}{x} \\qquad x = \;?`,
+      ? `${a} \\cdot ${b} = ${c} \\cdot x \\qquad x = \\;?`
+      : `\\frac{${a}}{${b}} = \\frac{${c}}{x} \\qquad x = \\;?`,
     gabarito: resolucao.resultado,
     resolucao,
     conceitos: ['proporcao.regra-de-tres', 'proporcao.proporcao'],

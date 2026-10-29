@@ -104,3 +104,30 @@ a {
   color: var(--acerto);
   font-weight: 700;
 }
+
+/* Atalho para a fila de revisão, acima das áreas e só quando há fila. */
+.atalho-revisao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-2);
+  padding: var(--esp-2) var(--esp-3);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  color: var(--texto);
+  font-size: var(--texto-sm);
+  font-weight: 600;
+
+  &.ativo {
+    border-color: var(--acento);
+    color: var(--acento);
+  }
+
+  .quantos {
+    padding: 0 var(--esp-2);
+    border-radius: var(--raio-pill);
+    background: var(--superficie-2);
+    color: var(--texto-suave);
+    font-variant-numeric: tabular-nums;
+  }
+}

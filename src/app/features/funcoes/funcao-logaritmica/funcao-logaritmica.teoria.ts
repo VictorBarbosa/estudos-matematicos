@@ -44,7 +44,7 @@ export const TEORIA_LOGARITMICA: readonly Teoria[] = [
       'direta da definição. Como bʸ é sempre positivo para base positiva, não existe expoente ' +
       'que leve b a zero ou a um número negativo.',
     formulas: [
-      { tex: '\\log_b x \;\\text{existe} \\iff x > 0' },
+      { tex: '\\log_b x \\;\\text{existe} \\iff x > 0' },
       { tex: '\\lim_{x \\to 0^{+}} \\log_b x = -\\infty \\quad (b > 1)' },
     ],
     demonstracao: [
@@ -58,7 +58,7 @@ export const TEORIA_LOGARITMICA: readonly Teoria[] = [
       },
       {
         descricao: 'Logo não existe expoente que resolva essas equações.',
-        tex: '2^{y} = 0 \;\\text{e}\; 2^{y} = -4 \;\\text{não têm solução}',
+        tex: '2^{y} = 0 \\;\\text{e}\\; 2^{y} = -4 \\;\\text{não têm solução}',
         nota: 'É o espelho da assíntota da exponencial: o que lá era horizontal, aqui é vertical.',
       },
     ],

@@ -43,7 +43,7 @@ export const TEORIA_MMC_MDC: readonly Teoria[] = [
     formulas: [
       { tex: '\\operatorname{mdc}(a, b) = \\prod p_i^{\\min(a_i,\\, b_i)}' },
       {
-        tex: '\\operatorname{mdc}(a, b) = \\operatorname{mdc}(b,\; a \\bmod b)',
+        tex: '\\operatorname{mdc}(a, b) = \\operatorname{mdc}(b,\\; a \\bmod b)',
         legenda: 'O algoritmo de Euclides, que chega ao mesmo valor sem fatorar nada.',
       },
     ],

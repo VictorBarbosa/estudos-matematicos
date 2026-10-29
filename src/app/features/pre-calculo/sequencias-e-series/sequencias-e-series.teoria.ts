@@ -77,7 +77,7 @@ export const TEORIA_SEQUENCIAS: readonly Teoria[] = [
       'percorrem uma distância finita.',
     formulas: [
       { tex: 'S_\\infty = \\frac{a_1}{1 - q}, \\quad |q| < 1' },
-      { tex: '|q| \\geq 1 \;\\Rightarrow\; \\text{a série diverge}' },
+      { tex: '|q| \\geq 1 \\;\\Rightarrow\\; \\text{a série diverge}' },
     ],
     demonstracao: [
       {

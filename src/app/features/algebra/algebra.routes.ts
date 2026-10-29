@@ -52,10 +52,5 @@ export const rotas: Routes = [
     title: 'Polinômios · Estudos Matemáticos',
     loadComponent: () => import('./polinomios/polinomios').then((m) => m.Polinomios),
   },
-  {
-    path: 'progressoes',
-    title: 'Progressões · Estudos Matemáticos',
-    loadComponent: () => import('./progressoes/progressoes').then((m) => m.Progressoes),
-  },
   { path: '', pathMatch: 'full', redirectTo: 'expressoes-algebricas' },
 ];

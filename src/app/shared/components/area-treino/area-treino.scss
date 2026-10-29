@@ -208,3 +208,11 @@
   font-size: var(--texto-sm);
   color: var(--texto-suave);
 }
+
+/* Deixa claro, antes do clique, o preço de pedir a resolução. */
+.aviso-desistencia {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--texto-tenue);
+  font-size: var(--texto-sm);
+}

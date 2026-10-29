@@ -5,6 +5,7 @@ import {
   probabilidadeConjuntaComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.005;
@@ -32,19 +33,18 @@ export const geradorProbabilidade: GeradorExercicio<number> = {
 
   /** Aceita decimal, fração e porcentagem — as três formas usuais. */
   analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
+    // A exibição do gabarito é "0,38 (38,00%)": aceitar essa forma de volta
+    // evita que o aluno copie a resposta certa e receba "formato inválido".
+    const limpo = entrada.trim().replace(/\s/g, '').replace(/\([^)]*\)$/, '');
 
-    const porcentagem = /^(\d*\.?\d+)%$/.exec(limpo);
+    const porcentagem = /^(.+)%$/.exec(limpo);
     if (porcentagem) {
-      return Number(porcentagem[1]) / 100;
+      const valor = analisarNumero(porcentagem[1]!);
+      return valor === null ? null : valor / 100;
     }
 
-    const fracao = /^(\d+)\/(\d+)$/.exec(limpo);
-    if (fracao) {
-      return Number(fracao[1]) / Number(fracao[2]);
-    }
-
-    return /^\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
+    const valor = analisarNumero(limpo);
+    return valor === null || valor < 0 ? null : valor;
   },
 
   saoEquivalentes: proximos,

@@ -1,5 +1,6 @@
 import { Polinomio, teoremaFundamentalComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
@@ -15,7 +16,14 @@ export const geradorTfc: GeradorExercicio<number> = {
     const pergunta = sortearPergunta(nivel, rng);
 
     const a = rng.inteiro(1, 4);
-    const b = rng.inteiro(-3, 3);
+    /*
+     * Na pergunta pelo limite superior, o integrando precisa ser positivo em
+     * (0, ∞), senão a área acumulada sobe e desce e existe outro k com o mesmo
+     * valor — o gerador aceitava só o inteiro, e a outra solução, igualmente
+     * correta, era reprovada. Com b ≥ 0, F é estritamente crescente e o k é
+     * único.
+     */
+    const b = pergunta === 'limite-superior' ? rng.inteiro(0, 3) : rng.inteiro(-3, 3);
     const p = Polinomio.de(0, b, a);
     const primitiva = p.integrar(0);
 
@@ -149,10 +157,7 @@ export const geradorTfc: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
   saoEquivalentes: proximos,
   formatar: (valor) =>

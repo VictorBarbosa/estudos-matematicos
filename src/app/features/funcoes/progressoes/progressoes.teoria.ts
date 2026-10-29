@@ -65,7 +65,7 @@ export const TEORIA_PROGRESSOES: readonly Teoria[] = [
       },
       {
         descricao: 'Isolando S, chega-se à fórmula.',
-        tex: 'S(q - 1) = a_1(q^{n} - 1) \;\\Rightarrow\; S_n = a_1\\frac{q^{n}-1}{q-1}',
+        tex: 'S(q - 1) = a_1(q^{n} - 1) \\;\\Rightarrow\\; S_n = a_1\\frac{q^{n}-1}{q-1}',
       },
     ],
     exemplo: {
@@ -85,7 +85,7 @@ export const TEORIA_PROGRESSOES: readonly Teoria[] = [
     formulas: [
       { tex: 'S_\\infty = \\frac{a_1}{1 - q}, \\qquad |q| < 1' },
       {
-        tex: '|q| \\ge 1 \;\\Rightarrow\; \\text{a soma diverge}',
+        tex: '|q| \\ge 1 \\;\\Rightarrow\\; \\text{a soma diverge}',
         legenda: 'Parcelas que não encolhem não deixam a soma parar.',
       },
     ],

@@ -203,7 +203,7 @@ export function simplificarRaizComPassos(
         .map(({ primo, expoente }) => {
           const saem = Math.floor(expoente / indice);
           const ficam = expoente % indice;
-          return `${primo}^{${expoente}} \\to ${saem > 0 ? `${primo}^{${saem}}` : '1'} \\text{ fora}${ficam > 0 ? `,\; ${primo}^{${ficam}} \\text{ dentro}` : ''}`;
+          return `${primo}^{${expoente}} \\to ${saem > 0 ? `${primo}^{${saem}}` : '1'} \\text{ fora}${ficam > 0 ? `,\\; ${primo}^{${ficam}} \\text{ dentro}` : ''}`;
         })
         .join(' \\quad '),
       nota: `A raiz de índice ${indice} desfaz exatamente um expoente ${indice}.`,

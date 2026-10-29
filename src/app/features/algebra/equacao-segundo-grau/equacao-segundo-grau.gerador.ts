@@ -1,9 +1,10 @@
 import { resolverQuadraticaComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const TOLERANCIA = 1e-9;
-const proximos = (a: number, b: number): boolean => Math.abs(a - b) < TOLERANCIA;
+const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
 
 /**
  * Exercícios de equação do 2º grau.
@@ -13,7 +14,7 @@ const proximos = (a: number, b: number): boolean => Math.abs(a - b) < TOLERANCIA
  */
 export const geradorEquacao2: GeradorExercicio<number> = {
   topicoId: 'equacao-segundo-grau',
-  formatoResposta: 'um número, ex.: 3 ou -1,5',
+  formatoResposta: 'um número, fração ou raiz, ex.: 3 · -1,5 · (1+√5)/2',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const { a, b, c } = sortear(nivel, rng);
@@ -84,18 +85,19 @@ export const geradorEquacao2: GeradorExercicio<number> = {
             gabarito,
             proximos,
           ),
-      dica: nivel === 'facil' ? 'Calcule o discriminante antes de aplicar a fórmula.' : undefined,
+      dica:
+        nivel === 'facil'
+          ? 'Calcule o discriminante antes de aplicar a fórmula.'
+          : nivel === 'dificil' && !semRaizes && !Number.isInteger(gabarito)
+            ? 'A raiz é irracional: vale escrever a forma exata, como (-3+√17)/4, ' +
+              'ou o decimal com 2 casas.'
+            : undefined,
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
-  saoEquivalentes: proximos,
-  formatar: (valor) =>
-    Number(valor.toFixed(4)).toLocaleString('pt-BR', { maximumFractionDigits: 4 }),
+  ...numeroComCasas(2, 1e-4),
 };
 
 function montarEquacao(a: number, b: number, c: number): string {

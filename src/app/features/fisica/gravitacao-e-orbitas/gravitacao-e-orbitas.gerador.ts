@@ -8,16 +8,11 @@ import {
   velocidadeEscapeComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 /** Comparação relativa: as grandezas aqui variam muitas ordens de magnitude. */
-const proximos = (a: number, b: number): boolean => {
-  if (a === b) {
-    return true;
-  }
-  const escala = Math.max(Math.abs(a), Math.abs(b));
-  return escala === 0 ? true : Math.abs(a - b) / escala < 0.005;
-};
+const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
 
 type Pergunta = 'gravidade-altitude' | 'velocidade-orbital' | 'periodo' | 'escape' | 'razao-forca';
 
@@ -40,14 +35,9 @@ export const geradorGravitacao: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+(e[+-]?\d+)?$/i.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarNumero,
 
-  saoEquivalentes: proximos,
-  formatar: (valor) =>
-    Number(valor.toPrecision(6)).toLocaleString('pt-BR', { maximumFractionDigits: 4 }),
+  ...numeroComCasas(2, 1e-4),
 };
 
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {

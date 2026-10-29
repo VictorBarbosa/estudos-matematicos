@@ -138,6 +138,8 @@ describe('geradorCirculo', () => {
   it('aceita duas casas decimais com vírgula', () => {
     expect(geradorCirculo.analisar('18,85')).toBeCloseTo(18.85, 9);
     expect(geradorCirculo.analisar('28.27')).toBeCloseTo(28.27, 9);
-    expect(geradorCirculo.analisar('pi')).toBeNull();
+    expect(geradorCirculo.analisar('pi')).toBeCloseTo(Math.PI, 9);
+    expect(geradorCirculo.analisar('2pi')).toBeCloseTo(2 * Math.PI, 9);
+    expect(geradorCirculo.analisar('circunferência')).toBeNull();
   });
 });

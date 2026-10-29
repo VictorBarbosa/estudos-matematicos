@@ -7,6 +7,7 @@ import {
   projecaoComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarNumero } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
@@ -32,10 +33,8 @@ export const geradorProdutos: GeradorExercicio<number> = {
     }
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s|°/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  // O grau é ruído de unidade: a resposta em si é um número.
+  analisar: (entrada) => analisarNumero(entrada.replace(/°/g, '')),
 
   saoEquivalentes: proximos,
   formatar: (valor) =>
@@ -68,7 +67,7 @@ function exercicioEscalar(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prod-esc-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: `Qual é o produto escalar de (${a.x}, ${a.y}) por (${b.x}, ${b.y})?`,
-    enunciadoTex: `\\vec{a} = (${a.x},\; ${a.y}) \\qquad \\vec{b} = (${b.x},\; ${b.y})`,
+    enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: {
       resultado,
@@ -137,7 +136,7 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado:
       `Qual é o ângulo entre (${a.x}, ${a.y}) e (${b.x}, ${b.y})? (em graus, 2 casas)`,
-    enunciadoTex: `\\vec{a} = (${a.x},\; ${a.y}) \\qquad \\vec{b} = (${b.x},\; ${b.y})`,
+    enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
     conceitos: ['produtos.escalar'],
@@ -178,7 +177,7 @@ function exercicioProjecao(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Qual é a projeção de (${a.x}, ${a.y}) sobre a direção de (${b.x}, ${b.y})? ` +
       '(2 casas decimais)',
-    enunciadoTex: `\\vec{a} = (${a.x},\; ${a.y}) \\qquad \\vec{b} = (${b.x},\; ${b.y})`,
+    enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
     conceitos: ['produtos.projecao', 'produtos.escalar'],
@@ -225,7 +224,7 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado:
       `Qual é a área do paralelogramo formado por (${a.x}, ${a.y}) e (${b.x}, ${b.y})?`,
-    enunciadoTex: `\\vec{a} = (${a.x},\; ${a.y}) \\qquad \\vec{b} = (${b.x},\; ${b.y})`,
+    enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
     conceitos: ['produtos.vetorial'],

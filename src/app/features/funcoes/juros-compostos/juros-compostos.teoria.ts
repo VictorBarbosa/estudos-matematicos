@@ -58,7 +58,7 @@ export const TEORIA_JUROS: readonly Teoria[] = [
       },
       {
         descricao: 'É a mesma diferença entre função afim e exponencial.',
-        tex: '\\text{somar sempre o mesmo} \;\\times\; \\text{multiplicar sempre pelo mesmo}',
+        tex: '\\text{somar sempre o mesmo} \\;\\times\\; \\text{multiplicar sempre pelo mesmo}',
         nota: 'A exponencial sempre acaba ultrapassando qualquer reta.',
       },
     ],
@@ -82,7 +82,7 @@ export const TEORIA_JUROS: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Queremos o n que dobra o capital.',
-        tex: 'C(1+i)^{n} = 2C \;\\Rightarrow\; (1+i)^{n} = 2',
+        tex: 'C(1+i)^{n} = 2C \\;\\Rightarrow\\; (1+i)^{n} = 2',
       },
       {
         descricao: 'O capital se cancela: o tempo não depende de quanto foi investido.',

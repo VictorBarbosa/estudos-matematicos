@@ -30,7 +30,7 @@ export const TEORIA_CADEIA: readonly Teoria[] = [
       },
       {
         descricao: 'Conferindo pela expansão: (3x+1)² = 9x² + 6x + 1.',
-        tex: "\\frac{d}{dx}(9x^{2} + 6x + 1) = 18x + 6 = 6(3x+1) \;\\checkmark",
+        tex: "\\frac{d}{dx}(9x^{2} + 6x + 1) = 18x + 6 = 6(3x+1) \\;\\checkmark",
       },
     ],
     vejaTambem: ['cadeia.erro-comum', 'cadeia.camadas'],
@@ -56,11 +56,11 @@ export const TEORIA_CADEIA: readonly Teoria[] = [
       },
       {
         descricao: 'Pela cadeia, com o fator interno.',
-        tex: '2(2x+1) \\cdot 2 = 8x + 4 \;\\checkmark',
+        tex: '2(2x+1) \\cdot 2 = 8x + 4 \\;\\checkmark',
       },
       {
         descricao: 'Sem o fator interno, o resultado seria a metade.',
-        tex: '2(2x+1) = 4x + 2 \;\\times',
+        tex: '2(2x+1) = 4x + 2 \\;\\times',
         nota: 'Exatamente metade — porque faltou multiplicar pelo 2 de dentro.',
       },
     ],
@@ -79,7 +79,7 @@ export const TEORIA_CADEIA: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Identificamos as camadas de fora para dentro.',
-        tex: '\\sin\\left((2x+1)^{3}\\right): \;\\sin \\to (\;)^{3} \\to 2x+1',
+        tex: '\\sin\\left((2x+1)^{3}\\right): \\;\\sin \\to (\\;)^{3} \\to 2x+1',
       },
       {
         descricao: 'Cada uma contribui com sua derivada.',

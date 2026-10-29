@@ -1,5 +1,6 @@
 import { No, avaliar, expressaoParaTex, numero, op, resolverExpressaoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng';
+import { analisarValorSimples } from '@core/treino/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/treino.model';
 
 const saoIguais = (a: number, b: number): boolean => Math.abs(a - b) < 1e-9;
@@ -26,7 +27,7 @@ export const geradorOperacoes: GeradorExercicio<number> = {
       id: `operacoes-${nivel}-${rng.inteiro(0, 99999)}`,
       nivel,
       enunciado: 'Resolva respeitando a ordem das operações.',
-      enunciadoTex: `${expressaoParaTex(arvore)} = \;?`,
+      enunciadoTex: `${expressaoParaTex(arvore)} = \\;?`,
       gabarito,
       resolucao,
       conceitos: ['operacoes.ordem', 'operacoes.sinais'],
@@ -49,10 +50,7 @@ export const geradorOperacoes: GeradorExercicio<number> = {
     };
   },
 
-  analisar: (entrada) => {
-    const limpo = entrada.trim().replace(/\s/g, '').replace(',', '.');
-    return /^[+-]?\d*\.?\d+$/.test(limpo) ? Number(limpo) : null;
-  },
+  analisar: analisarValorSimples,
 
   saoEquivalentes: saoIguais,
   formatar: (valor) =>

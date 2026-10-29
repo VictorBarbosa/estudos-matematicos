@@ -21,14 +21,21 @@ export class SessaoTreino<T> {
   readonly acertos = signal(0);
   readonly erros = signal(0);
   readonly sequencia = signal(0);
+  /** O aluno pediu a resolução do exercício atual em vez de responder? */
+  readonly desistiu = signal(false);
 
   private readonly exercicioAtual: WritableSignal<Exercicio<T>>;
   readonly exercicio: Signal<Exercicio<T>>;
 
-  /** Já houve veredito para o exercício atual? */
+  /**
+   * O exercício atual já está encerrado?
+   *
+   * Vale tanto para quem respondeu e recebeu veredito quanto para quem pediu a
+   * resolução: nos dois casos o campo tranca e o caminho é passar ao próximo.
+   */
   readonly corrigido = computed(() => {
     const veredito = this.validacao()?.veredito;
-    return veredito === 'correto' || veredito === 'incorreto';
+    return veredito === 'correto' || veredito === 'incorreto' || this.desistiu();
   });
 
   readonly acertou = computed(() => this.validacao()?.veredito === 'correto');
@@ -78,6 +85,7 @@ export class SessaoTreino<T> {
       conceitos: validacao.conceitoAssociado ? [validacao.conceitoAssociado] : exercicio.conceitos,
       acertou,
       sequencia: this.sequencia(),
+      nivel: this.nivel(),
     });
   }
 
@@ -96,9 +104,37 @@ export class SessaoTreino<T> {
     this.proximo();
   }
 
-  /** Mostra a resolução sem responder — conta como desistir do exercício. */
+  /**
+   * Mostra a resolução sem responder — e isso conta como desistir.
+   *
+   * Antes, revelar não registrava nada: o último passo da resolução traz o
+   * número, então dava para ler a resposta, digitá-la e ganhar o acerto. O
+   * tópico era liberado sem que nada tivesse sido resolvido.
+   *
+   * Agora a desistência é registrada como tentativa errada, zera a sequência e
+   * tranca o campo. A resolução continua à mão de quem não sabe — ela é o que
+   * ensina —, só não vale mais ponto.
+   */
   revelarResolucao(): void {
+    if (this.corrigido()) {
+      return;
+    }
+
+    const exercicio = this.exercicioAtual();
+
+    this.desistiu.set(true);
     this.resolucaoVisivel.set(true);
+    this.erros.update((n) => n + 1);
+    this.sequencia.set(0);
+
+    this.progresso.registrar({
+      topicoId: this.gerador.topicoId,
+      conceitos: exercicio.conceitos,
+      acertou: false,
+      sequencia: 0,
+      nivel: this.nivel(),
+      desistiu: true,
+    });
   }
 
   /** Zera o placar da rodada, mantendo o progresso histórico. */
@@ -106,6 +142,7 @@ export class SessaoTreino<T> {
     this.acertos.set(0);
     this.erros.set(0);
     this.sequencia.set(0);
+    this.desistiu.set(false);
     this.rng = criarRng(sementeAleatoria());
     this.proximo();
   }
@@ -114,5 +151,6 @@ export class SessaoTreino<T> {
     this.resposta.set('');
     this.validacao.set(null);
     this.resolucaoVisivel.set(false);
+    this.desistiu.set(false);
   }
 }

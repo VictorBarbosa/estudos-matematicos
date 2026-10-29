@@ -55,8 +55,31 @@
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
-      <app-passo-a-passo [passos]="analise().passos" />
+      <h2>O limite das somas</h2>
+      <p class="observacao">
+        A integral é definida como o limite das somas de Riemann. Refinando a partição, o
+        valor se estabiliza — e é esse número que a integral definida nomeia, antes de
+        qualquer regra para calculá-lo.
+      </p>
+      <table class="convergencia">
+        <caption>
+          Somas de Riemann com partições cada vez mais finas
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Subintervalos</th>
+            <th scope="col">Soma</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (linha of convergencia(); track linha.n) {
+            <tr>
+              <td>{{ linha.n }}</td>
+              <td>{{ formatar(linha.valor) }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

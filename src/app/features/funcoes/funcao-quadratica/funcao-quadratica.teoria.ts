@@ -21,7 +21,7 @@ export const TEORIA_QUADRATICA: readonly Teoria[] = [
       },
       {
         descricao: 'O quadrado é sempre ≥ 0, então o menor valor da parcela ocorre quando ele é zero.',
-        tex: '\\left(x + \\frac{b}{2a}\\right)^{2} = 0 \;\\Rightarrow\; x = -\\frac{b}{2a}',
+        tex: '\\left(x + \\frac{b}{2a}\\right)^{2} = 0 \\;\\Rightarrow\\; x = -\\frac{b}{2a}',
         nota: 'É exatamente a abscissa do vértice — e ela sai da álgebra, não de memorização.',
       },
       {
@@ -54,7 +54,7 @@ export const TEORIA_QUADRATICA: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Com Δ > 0, o vértice está de um lado do eixo e a curva o atravessa duas vezes.',
-        tex: '\\Delta > 0 \;\\Rightarrow\; 2 \\text{ raízes}',
+        tex: '\\Delta > 0 \\;\\Rightarrow\\; 2 \\text{ raízes}',
       },
       {
         descricao: 'Com Δ = 0, o vértice ESTÁ sobre o eixo: a parábola apenas encosta.',
@@ -62,7 +62,7 @@ export const TEORIA_QUADRATICA: readonly Teoria[] = [
       },
       {
         descricao: 'Com Δ < 0, o vértice e toda a curva ficam do mesmo lado do eixo.',
-        tex: '\\Delta < 0 \;\\Rightarrow\; \\text{nenhuma raiz real}',
+        tex: '\\Delta < 0 \\;\\Rightarrow\\; \\text{nenhuma raiz real}',
         nota: 'A função nunca muda de sinal — ou é sempre positiva, ou sempre negativa.',
       },
     ],
@@ -86,7 +86,7 @@ export const TEORIA_QUADRATICA: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Exemplo: com 20 m de cerca, qual retângulo tem área máxima?',
-        tex: '2x + 2y = 20 \;\\Rightarrow\; y = 10 - x',
+        tex: '2x + 2y = 20 \\;\\Rightarrow\\; y = 10 - x',
       },
       {
         descricao: 'A área em função de um lado é uma quadrática.',

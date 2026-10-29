@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 :host {
   display: block;
 }
@@ -51,4 +53,98 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   gap: var(--esp-3);
+}
+
+/*
+ * Leitura externa por área.
+ *
+ * Fechada por padrão: a indicação importa quando o estudo chega naquela área,
+ * e não deve competir com os cartões de tópico.
+ */
+.leitura {
+  margin-top: var(--esp-4);
+
+  summary {
+    color: var(--texto-suave);
+    cursor: pointer;
+    font-size: var(--texto-sm);
+  }
+
+  ul {
+    margin: var(--esp-3) 0 0;
+    padding-left: var(--esp-5);
+    display: grid;
+    gap: var(--esp-2);
+  }
+
+  li {
+    font-size: var(--texto-sm);
+  }
+
+  .nota {
+    display: block;
+    color: var(--texto-suave);
+  }
+}
+
+/* Glossário trilíngue da área, fechado por padrão como a leitura externa. */
+.glossario {
+  margin-top: var(--esp-4);
+
+  summary {
+    color: var(--texto-suave);
+    cursor: pointer;
+    font-size: var(--texto-sm);
+  }
+
+  table {
+    width: 100%;
+    margin-top: var(--esp-3);
+    border-collapse: collapse;
+    font-size: var(--texto-sm);
+  }
+
+  th,
+  td {
+    padding: var(--esp-1) var(--esp-2);
+    border-bottom: 1px solid var(--borda);
+    text-align: left;
+  }
+
+  th {
+    color: var(--texto-suave);
+    font-weight: 600;
+  }
+}
+
+/*
+ * Convite à revisão.
+ *
+ * Só aparece quando há matéria antiga na fila — um convite permanente viraria
+ * ruído e perderia o efeito.
+ */
+.revisao {
+  @include cartao;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-4);
+  padding: var(--esp-4) var(--esp-5);
+
+  h2 {
+    font-size: var(--texto-lg);
+  }
+
+  p {
+    margin-top: var(--esp-1);
+    max-width: 52ch;
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
+  }
+
+  .ir-revisar {
+    @include botao-primario;
+  }
 }

@@ -20,7 +20,12 @@ npm start          # http://localhost:4200
 npm test           # suíte com Vitest
 npm run build      # build de produção
 npm run build:pages  # build para o GitHub Pages
+npm run gerar:teorias    # reindexa os conceitos (title/tópico/carregador)
+npm run gerar:geradores  # reindexa os geradores de exercício
 ```
+
+Os dois últimos reescrevem índices gerados em `core/`. Rode-os depois de criar, remover ou
+renomear um conceito ou um tópico — há testes que falham se o índice sair de sincronia.
 
 ## Publicação
 
@@ -95,23 +100,63 @@ progresso consegue dizer _o que_ revisar e levar direto à teoria correspondente
 ## A trilha: um tópico de cada vez
 
 Os tópicos não abrem todos de uma vez. A trilha segue a ordem do currículo, e cada etapa só
-libera a seguinte depois de **três acertos seguidos** na aba Treinar daquele tópico — é
-sequência, e não total de acertos, porque o que deve liberar o próximo assunto é domínio, não
-insistência.
+libera a seguinte quando o tópico é **dominado**:
+
+- **8 acertos nas últimas 10 tentativas** daquele tópico;
+- entre elas, **3 acertos no nível Médio ou Difícil**;
+- terminando com **3 acertos seguidos**, para a etapa não abrir logo depois de um erro.
+
+A janela é deslizante de propósito: o domínio medido é o atual, não o histórico. Errar as
+últimas tentativas tranca a etapa de novo.
+
+O critério anterior era "3 acertos seguidos", sem olhar o nível — e isso abria a etapa para
+quem acerta metade dos exercícios em 79% das rodadas de 20 tentativas. Com o critério atual,
+em 15%. **Pedir a resolução conta como tentativa não resolvida**: o campo tranca, a sequência
+zera, e o atalho de ler a resposta no último passo deixa de valer ponto.
 
 ```
 core/progressao/
-  progressao.model.ts        a trilha derivada do currículo e o alvo de acertos
+  progressao.model.ts        a trilha derivada do currículo e o critério de domínio
   progressao.service.ts      quem está aberto, quem foi vencido, onde o estudo parou
   topico-liberado.guard.ts   nem pela URL se pula a fila
 ```
 
-Nada disso guarda estado novo: a conquista é derivada da **melhor sequência** que o
-`ProgressoService` já registra por tópico no `localStorage`. Um refresh devolve a trilha
-exatamente onde ela estava.
+Nada disso guarda estado novo: a conquista é derivada do **histórico de tentativas** — nível,
+acerto e desistência — que o `ProgressoService` já registra por tópico no `localStorage`. Um
+refresh devolve a trilha exatamente onde ela estava.
 
 O **modo livre**, no painel da página inicial, destranca tudo para consulta sem apagar o
 progresso — ele também é lembrado entre sessões.
+
+## Revisão espaçada
+
+A trilha só anda para a frente. A rota `/revisar` faz o caminho de volta: uma fila diária de
+até oito tópicos já vencidos, ordenada por **conceito frágil** (onde os erros se concentram) e
+por **tempo sem praticar** — a parte espaçada da revisão. A fila é derivada, não guardada:
+responder hoje muda a fila de amanhã.
+
+```
+core/revisao/revisao.service.ts    como a fila de hoje é escolhida
+core/treino/registro-geradores.ts  índice gerado: cada tópico carrega seu gerador sob demanda
+```
+
+## Respostas: número, fração, raiz ou expressão
+
+O campo de resposta não aceita só decimais. `core/treino/resposta-numerica.ts` lê fração
+(`3/4`), raiz (`(1+√5)/2`), π, notação científica e separador de milhar, de modo que a forma
+exata do gabarito seja sempre digitável — antes, metade das raízes do nível Difícil era
+impossível de escrever. E `core/treino/resposta-simbolica.ts` lê **expressões em x**, para
+que um tópico de cálculo possa pedir `f'(x)` e não apenas `f'(2)`; a comparação é por
+avaliação em vários pontos, então `6x + 4`, `4 + 6x` e `2(3x + 2)` contam igual.
+
+Quatro travas globais cuidam dessa parte, para os 75 geradores de uma vez
+(`core/treino/formato-resposta.spec.ts`, `shared/components/formula/formulas-do-site.spec.ts`,
+`core/teoria/teorias.spec.ts`):
+
+- o gabarito é aceito na forma em que é exibido;
+- o arredondamento que o enunciado pede é aceito;
+- a resolução termina mostrando o gabarito;
+- toda fórmula compila no KaTeX e todo id de conceito citado existe.
 
 ## Convenções
 

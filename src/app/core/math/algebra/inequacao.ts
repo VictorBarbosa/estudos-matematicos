@@ -81,8 +81,8 @@ export function resolverInequacaoComPassos(
   const paraDireita = relacaoFinal === '>' || relacaoFinal === '>=';
 
   const intervaloTex = paraDireita
-    ? `\\left${inclusiva ? '[' : '('}${formatar(fronteira)},\; +\\infty\\right)`
-    : `\\left(-\\infty,\; ${formatar(fronteira)}\\right${inclusiva ? ']' : ')'}`;
+    ? `\\left${inclusiva ? '[' : '('}${formatar(fronteira)},\\; +\\infty\\right)`
+    : `\\left(-\\infty,\\; ${formatar(fronteira)}\\right${inclusiva ? ']' : ')'}`;
 
   passos.push({
     descricao: 'O conjunto solução é um intervalo da reta.',

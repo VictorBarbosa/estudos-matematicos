@@ -36,7 +36,7 @@ export const TEORIA_FLUIDOS: readonly Teoria[] = [
       },
       {
         descricao: 'Comparando empuxo e peso, o volume se cancela.',
-        tex: '\\rho_{fluido} V g \;\\text{vs}\; \\rho_{corpo} V g',
+        tex: '\\rho_{fluido} V g \\;\\text{vs}\\; \\rho_{corpo} V g',
         nota: 'Sobra uma comparação de densidades: o tamanho do corpo é irrelevante.',
       },
     ],
@@ -53,18 +53,25 @@ export const TEORIA_FLUIDOS: readonly Teoria[] = [
     definicao:
       'Bernoulli não é uma lei nova: é a conservação de energia escrita para um fluido em ' +
       'escoamento, dividida pelo volume. A consequência que importa: onde o fluido vai mais ' +
-      'rápido, a pressão é menor.',
+      'rápido, a pressão é menor. Mas a igualdade só vale sob hipóteses, e elas não são ' +
+      'detalhe: escoamento incompressível (densidade constante), sem viscosidade, em regime ' +
+      'estacionário, e comparando dois pontos da MESMA linha de corrente.',
     formulas: [
-      { tex: 'p + \\frac{\\rho v^{2}}{2} + \\rho g h = \\text{constante}' },
       {
-        tex: 'v \\uparrow \;\\Rightarrow\; p \\downarrow',
+        tex: 'p + \\frac{\\rho v^{2}}{2} + \\rho g h = \\text{constante}',
+        legenda:
+          'Ao longo de uma linha de corrente, em escoamento incompressível, sem viscosidade ' +
+          'e estacionário.',
+      },
+      {
+        tex: 'v \\uparrow \\;\\Rightarrow\\; p \\downarrow',
         legenda: 'A troca entre pressão e velocidade.',
       },
     ],
     demonstracao: [
       {
         descricao: 'A energia de uma porção de fluido tem três parcelas.',
-        tex: 'W_{pressão} + E_c + E_p',
+        tex: 'W_{\\text{pressão}} + E_c + E_p',
       },
       {
         descricao: 'Dividindo tudo pelo volume, cada termo vira uma "pressão".',
@@ -72,9 +79,27 @@ export const TEORIA_FLUIDOS: readonly Teoria[] = [
         nota: 'Todos os três termos têm dimensão de pressão — conferir isso é um bom exercício.',
       },
       {
-        descricao: 'Como a energia se conserva, a soma é a mesma em qualquer ponto do escoamento.',
+        descricao: 'Sem atrito interno, nada dessa energia se perde em calor.',
+        tex: '\\mu = 0 \\;\\Rightarrow\\; W_{atrito} = 0',
+        nota:
+          'É a hipótese de fluido ideal. Num tubo longo e estreito, ou junto à superfície da ' +
+          'asa, a viscosidade domina e Bernoulli deixa de valer: aí entram a perda de carga ' +
+          'e a camada limite.',
+      },
+      {
+        descricao: 'Com densidade constante, cada termo é mesmo uma pressão.',
+        tex: '\\rho = \\text{constante}',
+        nota:
+          'Vale para líquidos sempre, e para o ar até cerca de Mach 0,3. Acima disso o ar ' +
+          'comprime e é preciso a versão compressível — por isso a aerodinâmica transônica ' +
+          'não se resolve com esta fórmula.',
+      },
+      {
+        descricao: 'Então a soma é a mesma em dois pontos da mesma linha de corrente.',
         tex: 'p_A + \\frac{\\rho v_A^{2}}{2} = p_B + \\frac{\\rho v_B^{2}}{2}',
-        nota: 'Se a velocidade cresce de A para B, a pressão tem de cair.',
+        nota:
+          'Se a velocidade cresce de A para B, a pressão tem de cair. Comparar pontos de ' +
+          'linhas de corrente diferentes exige um argumento extra.',
       },
     ],
     exemplo: {

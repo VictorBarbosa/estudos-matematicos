@@ -74,7 +74,7 @@ describe('geradorVetores', () => {
 
     for (const exercicio of exercicios) {
       const [, ax, ay, bx, by] =
-        /\\vec\{a\} = \((-?\d+),\; (-?\d+)\) \\qquad \\vec\{b\} = \((-?\d+),\; (-?\d+)\)/.exec(
+        /\\vec\{a\} = \((-?\d+),\\; (-?\d+)\) \\qquad \\vec\{b\} = \((-?\d+),\\; (-?\d+)\)/.exec(
           exercicio.enunciadoTex,
         )!;
 
