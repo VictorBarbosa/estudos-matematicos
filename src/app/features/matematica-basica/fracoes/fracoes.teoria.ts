@@ -381,8 +381,9 @@ export const TEORIA_FRACOES: readonly Teoria[] = [
       },
     ],
     exemplo: {
-      enunciado: 'Somando 2 1/3 com 1 1/2, ou seja, 7/3 + 3/2.',
-      passos: resolverComPassos(Fracao.criar(7, 3), 'somar', Fracao.criar(3, 2)).passos,
+      enunciado: 'Somando 2 1/3 com 1 1/2.',
+      // `true`: o exemplo começa e termina na forma mista, como o enunciado.
+      passos: resolverComPassos(Fracao.criar(7, 3), 'somar', Fracao.criar(3, 2), true).passos,
     },
     vejaTambem: ['fracoes.definicao', 'fracoes.soma', 'fracoes.simplificacao'],
   },

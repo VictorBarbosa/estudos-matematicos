@@ -1,4 +1,4 @@
-import { Polinomio, formatar, integralNumerica } from '@core/math';
+import { Polinomio, formatar, formatarEmTexto, integralNumerica } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -140,7 +140,7 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
             {
               resposta: integralNumerica((x) => a * x - b * x * x, 0, a),
               diagnostico:
-                `O limite superior não é ${a}, e sim o cruzamento ${formatar(cruzamento)}: ` +
+                `O limite superior não é ${a}, e sim o cruzamento ${formatarEmTexto(cruzamento)}: ` +
                 `de ${a}x = ${b === 1 ? '' : b}x^2 sai x = ${a}/${b}.`,
               passo: 0,
               conceito: 'aplic-integral.area',

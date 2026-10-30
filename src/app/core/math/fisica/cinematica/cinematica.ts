@@ -1,5 +1,5 @@
 import { ErroMatematico, Resolucao } from '@core/math/tipos/tipos';
-import { formatar } from '@core/math/algebra/polinomio/polinomio';
+import { formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
 import { paraRadianos } from '@core/math/trigonometria/trigonometria/trigonometria';
 
 /**
@@ -200,7 +200,7 @@ export function jurosCompostosComPassos(
       {
         descricao: 'Nos juros simples, os rendimentos não rendem — o crescimento é linear.',
         tex: `M_{\\text{simples}} = ${formatar(capital)}(1 + ${formatar(taxa)} \\cdot ${periodos}) = ${formatar(simples)}`,
-        nota: `A diferença de ${formatar(montante - simples)} é o juro que rendeu sobre juro.`,
+        nota: `A diferença de ${formatarEmTexto(montante - simples)} é o juro que rendeu sobre juro.`,
       },
     ],
   };

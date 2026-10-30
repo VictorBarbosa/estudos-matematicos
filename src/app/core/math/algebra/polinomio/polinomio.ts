@@ -168,6 +168,17 @@ export function formatar(valor: number): string {
     : String(arredondado).replace('.', '{,}');
 }
 
+/**
+ * O mesmo número, escrito para uma frase.
+ *
+ * As notas dos passos são parágrafos e não passam pelo KaTeX: `{,}` é como o
+ * LaTeX escreve o separador decimal, e numa nota ele chegava cru à tela —
+ * "Na superfície seriam 9{,}82 m/s²".
+ */
+export function formatarEmTexto(valor: number): string {
+  return formatar(valor).replace('{,}', ',');
+}
+
 /** Escreve `ax + b` com os sinais corretos, útil nos enunciados. */
 export function binomioParaTex(a: number, b: number, variavel = 'x'): string {
   return Polinomio.de(b, a).paraTex(variavel);

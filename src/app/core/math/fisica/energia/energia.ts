@@ -1,4 +1,4 @@
-import { formatar } from '@core/math/algebra/polinomio/polinomio';
+import { formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
 import { paraRadianos } from '@core/math/trigonometria/trigonometria/trigonometria';
 import { ErroMatematico, Passo, Resolucao } from '@core/math/tipos/tipos';
 import { GRAVIDADE_PADRAO } from '@core/math/fisica/mecanica/mecanica';
@@ -264,7 +264,7 @@ export function colisaoComPassos(
         tex:
           `E_i = ${formatar(Number(energiaAntes.toFixed(3)))}\\,\\text{J} \\;\\to\\; ` +
           `E_f = ${formatar(Number(energiaDepois.toFixed(3)))}\\,\\text{J}`,
-        nota: `Perdeu-se ${formatar(Number((energiaAntes - energiaDepois).toFixed(3)))} J.`,
+        nota: `Perdeu-se ${formatarEmTexto(Number((energiaAntes - energiaDepois).toFixed(3)))} J.`,
       },
     );
   } else {

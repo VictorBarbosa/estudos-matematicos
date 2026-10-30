@@ -38,6 +38,15 @@ const NOME_OPERACAO: Readonly<Record<Operador, string>> = {
   '^': 'a potência',
 };
 
+/** Os mesmos operadores em texto corrido, para as notas. */
+const TEXTO_OPERADOR: Readonly<Record<Operador, string>> = {
+  '+': '+',
+  '-': '-',
+  '*': '×',
+  '/': '÷',
+  '^': '^',
+};
+
 const TEX_OPERADOR: Readonly<Record<Operador, string>> = {
   '+': '+',
   '-': '-',
@@ -184,6 +193,35 @@ export function expressaoParaTex(no: No, precedenciaPai = 0): string {
   }
 }
 
+/**
+ * A mesma árvore em texto corrido: `3 × (4 + 2) ÷ 2`.
+ *
+ * As notas dos passos são parágrafos e não passam pelo KaTeX — escrever
+ * `\\times` nelas faz o código cru aparecer na tela. Aqui os operadores são os
+ * sínais que se escrevem à mão.
+ */
+export function expressaoParaTexto(no: No, precedenciaPai = 0): string {
+  switch (no.tipo) {
+    case 'numero':
+      return Number(no.valor.toFixed(6)).toString().replace('.', ',');
+
+    case 'negativo': {
+      const interno = expressaoParaTexto(no.operando, 4);
+      return precedenciaPai >= 2 ? `(-${interno})` : `-${interno}`;
+    }
+
+    case 'binario': {
+      const precedencia = PRECEDENCIA[no.operador];
+      const corpo =
+        `${expressaoParaTexto(no.esquerda, precedencia)} ` +
+        `${TEXTO_OPERADOR[no.operador]} ` +
+        `${expressaoParaTexto(no.direita, precedencia + 1)}`;
+
+      return precedencia < precedenciaPai ? `(${corpo})` : corpo;
+    }
+  }
+}
+
 export function avaliar(no: No): number {
   switch (no.tipo) {
     case 'numero':
@@ -259,7 +297,8 @@ function reduzirUmPasso(no: No): Reducao | null {
       return {
         arvore: numero(valor),
         descricao: `Resolvemos ${NOME_OPERACAO[no.operador]}.`,
-        nota: `${expressaoParaTex(no)} = ${formatarNumero(valor)}`,
+        // Texto corrido: a nota é parágrafo, não fórmula.
+        nota: `${expressaoParaTexto(no)} = ${expressaoParaTexto(numero(valor))}`,
       };
     }
   }

@@ -1,4 +1,4 @@
-import { formatar } from '@core/math/algebra/polinomio/polinomio';
+import { formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
 import { ErroMatematico, Resolucao } from '@core/math/tipos/tipos';
 
 /**
@@ -88,7 +88,7 @@ export function gravidadeNaAltitudeComPassos(
         tex: `g = ${formatar(Number(resultado.toFixed(4)))}\\,\\text{m/s}^{2}`,
         nota:
           altitude > 0
-            ? `Na superfície seriam ${formatar(Number(superficie.toFixed(3)))} m/s²: a queda é mais lenta do que a intuição sugere.`
+            ? `Na superfície seriam ${formatarEmTexto(Number(superficie.toFixed(3)))} m/s²: a queda é mais lenta do que a intuição sugere.`
             : undefined,
       },
     ],
@@ -282,7 +282,7 @@ export function tsiolkovskyComPassos(
         descricao: 'E o delta-v disponível.',
         tex: `\\Delta v = ${formatar(Number((deltaV / 1000).toFixed(4)))}\\,\\text{km/s}`,
         nota:
-          `Combustível: ${formatar(Number((fracaoCombustivel * 100).toFixed(1)))}% da massa inicial. ` +
+          `Combustível: ${formatarEmTexto(Number((fracaoCombustivel * 100).toFixed(1)))}% da massa inicial. ` +
           'Como o ganho é logarítmico, cada km/s extra custa muito mais que o anterior — e é ' +
           'por isso que foguetes têm estágios.',
       },

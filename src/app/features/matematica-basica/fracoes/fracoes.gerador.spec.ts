@@ -449,3 +449,76 @@ describe('tipos de fração exigidos pela etapa', () => {
     }
   });
 });
+
+/**
+ * A resolução de um exercício em forma mista.
+ *
+ * O enunciado vinha misto e a explicação começava já nas impróprias — completa,
+ * mas sem a conversão, que é exatamente o passo que o aluno precisa ver. E
+ * terminava impróprio, ao lado de um gabarito escrito como misto.
+ */
+describe('resolução dos exercícios com mistos', () => {
+  /** Os exercícios do nível que o enunciado manda converter. */
+  function comMistos(nivel: 'medio' | 'dificil', quantidade = 200) {
+    return amostra(nivel, quantidade).filter((e) => e.enunciado.includes('mistos'));
+  }
+
+  for (const nivel of ['medio', 'dificil'] as const) {
+    it(`no ${nivel}, a resolução converte os mistos antes de calcular`, () => {
+      const exercicios = comMistos(nivel);
+      expect(exercicios.length).toBeGreaterThan(10);
+
+      for (const exercicio of exercicios) {
+        const conversao = exercicio.resolucao.passos[1]!;
+
+        expect(conversao.descricao, exercicio.enunciadoTex).toContain('fração imprópria');
+        // A conta da conversão aparece: inteiro × denominador + numerador.
+        expect(conversao.tex, exercicio.enunciadoTex).toMatch(/\\frac\{\d+ \\times \d+ \+ \d+\}\{\d+\}/);
+      }
+    });
+
+    it(`no ${nivel}, a resolução termina na forma em que o gabarito é exibido`, () => {
+      for (const exercicio of comMistos(nivel)) {
+        if (!exercicio.gabarito.simplificar().ehImpropria) {
+          continue;
+        }
+        if (exercicio.gabarito.ehInteira) {
+          continue;
+        }
+
+        const ultimo = exercicio.resolucao.passos.at(-1)!;
+        const exibido = geradorFracoes.formatar(exercicio.gabarito);
+
+        expect(ultimo.descricao, exercicio.enunciadoTex).toContain('forma mista');
+        expect(ultimo.tex, `gabarito ${exibido}`).toContain(exercicio.gabarito.paraTexMisto());
+      }
+    });
+
+    it(`no ${nivel}, o passo apontado pela armadilha existe e não é o enunciado`, () => {
+      // A conversão empurra os demais passos; sem corrigir o índice, o
+      // diagnóstico destacaria o passo anterior ao que de fato falhou.
+      for (const exercicio of comMistos(nivel)) {
+        for (const armadilha of exercicio.armadilhas) {
+          if (armadilha.passo === undefined) {
+            continue;
+          }
+
+          expect(armadilha.passo, exercicio.enunciadoTex).toBeGreaterThan(1);
+          expect(armadilha.passo).toBeLessThan(exercicio.resolucao.passos.length);
+        }
+      }
+    });
+
+    it(`no ${nivel}, a conta usa os mesmos números que o enunciado mostra`, () => {
+      // O enunciado exibe a forma reduzida (`2\frac{1}{2}`, nunca `\frac{10}{4}`);
+      // a resolução precisa partir dessa mesma fração.
+      for (const exercicio of comMistos(nivel)) {
+        const impróprias = [...exercicio.resolucao.passos[1]!.tex.matchAll(/= -?\\frac\{(\d+)\}\{(\d+)\}/g)];
+
+        for (const [, numerador, denominador] of impróprias) {
+          expect(mdc(Number(numerador), Number(denominador)), exercicio.enunciadoTex).toBe(1);
+        }
+      }
+    });
+  }
+});
