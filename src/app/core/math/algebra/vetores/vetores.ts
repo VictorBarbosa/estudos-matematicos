@@ -1,4 +1,4 @@
-import { formatar } from '@core/math/algebra/polinomio/polinomio';
+import { formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
 import { paraGraus, paraRadianos } from '@core/math/trigonometria/trigonometria/trigonometria';
 import { ErroMatematico, Resolucao } from '@core/math/tipos/tipos';
 
@@ -127,7 +127,7 @@ export function somarComPassos(a: Vetor, b: Vetor): Resolucao<Vetor> {
         nota:
           Math.abs(modulo(resultado) - somaDosModulos) < 1e-9
             ? 'Aqui os vetores têm a mesma direção e sentido, e só por isso os módulos somam.'
-            : `A soma dos módulos daria ${formatar(Number(somaDosModulos.toFixed(4)))} — ` +
+            : `A soma dos módulos daria ${formatarEmTexto(Number(somaDosModulos.toFixed(4)))} — ` +
               'maior, porque parte de cada vetor cancela a do outro.',
       },
     ],

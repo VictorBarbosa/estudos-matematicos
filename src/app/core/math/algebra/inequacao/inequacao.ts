@@ -1,5 +1,5 @@
 import { ErroMatematico, Passo, Resolucao } from '@core/math/tipos/tipos';
-import { formatar } from '@core/math/algebra/polinomio/polinomio';
+import { formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
 
 /**
  * Inequações do 1º grau.
@@ -31,6 +31,8 @@ export interface SolucaoInequacao {
   /** A relação final, já com eventual inversão aplicada. */
   readonly relacao: Relacao;
   readonly intervaloTex: string;
+  /** O mesmo intervalo em texto corrido, para dicas e mensagens. */
+  readonly intervaloTexto: string;
   /** A fronteira entra no conjunto solução? */
   readonly inclusiva: boolean;
 }
@@ -84,6 +86,12 @@ export function resolverInequacaoComPassos(
     ? `\\left${inclusiva ? '[' : '('}${formatar(fronteira)},\\; +\\infty\\right)`
     : `\\left(-\\infty,\\; ${formatar(fronteira)}\\right${inclusiva ? ']' : ')'}`;
 
+  // O mesmo intervalo para uma frase: a dica do exercício é texto corrido e
+  // não passa pelo KaTeX — `\left(-\infty` chegava cru à tela.
+  const intervaloTexto = paraDireita
+    ? `${inclusiva ? '[' : '('}${formatarEmTexto(fronteira)}; +∞)`
+    : `(-∞; ${formatarEmTexto(fronteira)}${inclusiva ? ']' : ')'}`;
+
   passos.push({
     descricao: 'O conjunto solução é um intervalo da reta.',
     tex: `S = \\{x \\in \\mathbb{R} \\mid x ${SIMBOLO_RELACAO[relacaoFinal]} ${formatar(fronteira)}\\} = ${intervaloTex}`,
@@ -93,7 +101,7 @@ export function resolverInequacaoComPassos(
   });
 
   return {
-    resultado: { fronteira, relacao: relacaoFinal, intervaloTex, inclusiva },
+    resultado: { fronteira, relacao: relacaoFinal, intervaloTex, intervaloTexto, inclusiva },
     passos,
   };
 }

@@ -1,5 +1,5 @@
 import { Passo, Resolucao } from '@core/math/tipos/tipos';
-import { Polinomio, formatar } from '@core/math/algebra/polinomio/polinomio';
+import { Polinomio, formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
 
 /**
  * Derivadas.
@@ -60,7 +60,7 @@ export function derivadaPelaDefinicaoComPassos(
       {
         descricao: 'No limite, a secante vira a reta tangente, e sua inclinação é a derivada.',
         tex: `f'(${formatar(x)}) = ${formatar(resultado)}`,
-        nota: `A tangente em x = ${formatar(x)} tem essa inclinação.`,
+        nota: `A tangente em x = ${formatarEmTexto(x)} tem essa inclinação.`,
       },
       {
         descricao: 'Com a inclinação e o ponto, a equação da tangente fica determinada.',

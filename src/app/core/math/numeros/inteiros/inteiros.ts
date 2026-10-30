@@ -134,6 +134,36 @@ export function fatoracaoParaTex(n: number): string {
   return n < 0 ? `-${corpo}` : corpo;
 }
 
+/**
+ * A mesma fatoração em texto corrido: `2² · 3`.
+ *
+ * As notas dos passos são parágrafos, não fórmulas — escrever LaTeX nelas faz
+ * aparecer na tela o código cru (`2^{2} \\cdot 3`). Aqui o expoente usa os
+ * algarismos sobrescritos do próprio Unicode.
+ */
+export function fatoracaoParaTexto(n: number): string {
+  const fatores = fatorar(n);
+
+  if (fatores.length === 0) {
+    return String(Math.abs(n));
+  }
+
+  const corpo = fatores
+    .map(({ primo, expoente }) => (expoente === 1 ? `${primo}` : `${primo}${sobrescrito(expoente)}`))
+    .join(' · ');
+
+  return n < 0 ? `-${corpo}` : corpo;
+}
+
+/** 12 vira `¹²`. */
+function sobrescrito(expoente: number): string {
+  const ALGARISMOS = '⁰¹²³⁴⁵⁶⁷⁸⁹';
+  return String(expoente)
+    .split('')
+    .map((algarismo) => ALGARISMOS[Number(algarismo)] ?? algarismo)
+    .join('');
+}
+
 /** Lista os divisores positivos de um inteiro, em ordem crescente. */
 export function divisores(n: number): readonly number[] {
   exigirInteiro(n, 'n');

@@ -159,3 +159,80 @@ describe('escapes perdidos', () => {
     TEMPO_LIMITE,
   );
 });
+
+/**
+ * O outro lado da mesma moeda: o que NÃO é fórmula não pode trazer LaTeX.
+ *
+ * Nota, dica, enunciado, descrição de passo e diagnóstico de armadilha são
+ * parágrafos — o template os imprime com interpolação, sem passar pelo KaTeX.
+ * Escrever `\\frac{3}{2}` ou `9{,}82` num deles coloca o código cru na tela, e
+ * ninguém percebe pelo teste de compilação, porque esse texto nunca chega ao
+ * KaTeX. Foi assim que a divisão de frações passou meses dizendo "Invertemos a
+ * segunda fração: \\frac{3}{2} vira \\frac{2}{3}".
+ */
+describe('texto corrido não traz LaTeX', () => {
+  /** Um comando (`\\times`) ou a vírgula decimal do LaTeX (`{,}`). */
+  const LATEX_EM_PROSA = /\\[a-zA-Z]|\{,\}/;
+
+  /** Amostra maior que a do KaTeX: aqui o custo é só sortear. */
+  const SORTEIOS = 30;
+
+  function verificar(texto: string | undefined, onde: string, achados: string[]): void {
+    if (texto !== undefined && LATEX_EM_PROSA.test(texto)) {
+      achados.push(`${onde}: ${texto}`);
+    }
+  }
+
+  for (const [topico, teorias] of TODAS_AS_TEORIAS) {
+    it(`${topico}: a prosa da teoria é texto puro`, () => {
+      const achados: string[] = [];
+
+      for (const teoria of teorias) {
+        verificar(teoria.resumo, `${teoria.id}/resumo`, achados);
+        verificar(teoria.definicao, `${teoria.id}/definição`, achados);
+
+        for (const formula of teoria.formulas) {
+          verificar(formula.legenda, `${teoria.id}/legenda`, achados);
+        }
+        for (const passo of [...teoria.demonstracao, ...(teoria.exemplo?.passos ?? [])]) {
+          verificar(passo.descricao, `${teoria.id}/descrição`, achados);
+          verificar(passo.nota, `${teoria.id}/nota`, achados);
+        }
+        verificar(teoria.exemplo?.enunciado, `${teoria.id}/exemplo`, achados);
+      }
+
+      expect(achados).toEqual([]);
+    });
+  }
+
+  for (const [topico, gerador] of TODOS_OS_GERADORES) {
+    it(
+      `${topico}: a prosa dos exercícios é texto puro`,
+      () => {
+        const achados: string[] = [];
+
+        for (const nivel of NIVEIS) {
+          const rng = criarRng(314_159);
+
+          for (let i = 0; i < SORTEIOS; i++) {
+            const exercicio = gerador.gerar(nivel, rng);
+
+            verificar(exercicio.enunciado, `${nivel}/enunciado`, achados);
+            verificar(exercicio.dica, `${nivel}/dica`, achados);
+
+            for (const passo of exercicio.resolucao.passos) {
+              verificar(passo.descricao, `${nivel}/descrição`, achados);
+              verificar(passo.nota, `${nivel}/nota`, achados);
+            }
+            for (const armadilha of exercicio.armadilhas) {
+              verificar(armadilha.diagnostico, `${nivel}/diagnóstico`, achados);
+            }
+          }
+        }
+
+        expect(achados).toEqual([]);
+      },
+      TEMPO_LIMITE,
+    );
+  }
+});

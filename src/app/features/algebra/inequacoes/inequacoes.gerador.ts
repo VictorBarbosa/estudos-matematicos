@@ -58,7 +58,7 @@ export const geradorInequacoes: GeradorExercicio<ConjuntoSolucao> = {
     const { a, b, c, relacao } = sortear(nivel, rng);
 
     const resolucao = resolverInequacaoComPassos(a, b, relacao, c);
-    const { fronteira, relacao: relacaoFinal, intervaloTex } = resolucao.resultado;
+    const { fronteira, relacao: relacaoFinal, intervaloTexto } = resolucao.resultado;
     const gabarito: ConjuntoSolucao = { relacao: relacaoFinal, fronteira };
 
     const coeficiente = a === 1 ? '' : a === -1 ? '-' : String(a);
@@ -126,7 +126,7 @@ export const geradorInequacoes: GeradorExercicio<ConjuntoSolucao> = {
       dica:
         a < 0 && nivel !== 'facil'
           ? `O coeficiente de x é ${a}: ao dividir por ele, o sentido se inverte. ` +
-            `Na reta, a solução é ${intervaloTex}.`
+            `Na reta, a solução é ${intervaloTexto}.`
           : undefined,
     };
   },

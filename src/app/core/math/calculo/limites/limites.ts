@@ -1,5 +1,5 @@
 import { Passo, Resolucao } from '@core/math/tipos/tipos';
-import { formatar } from '@core/math/algebra/polinomio/polinomio';
+import { formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
 
 /**
  * Limites, abordados numericamente.
@@ -113,7 +113,7 @@ export function limiteComPassos(
     passos.push({
       descricao: 'Os lados discordam: o limite NÃO existe.',
       tex: `\\lim_{x \\to ${formatar(ponto)}^{-}} \\neq \\lim_{x \\to ${formatar(ponto)}^{+}}`,
-      nota: `Pela esquerda tende a ${formatar(lateral.esquerda)}; pela direita, a ${formatar(lateral.direita)}.`,
+      nota: `Pela esquerda tende a ${formatarEmTexto(lateral.esquerda)}; pela direita, a ${formatarEmTexto(lateral.direita)}.`,
     });
   }
 

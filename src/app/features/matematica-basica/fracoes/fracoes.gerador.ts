@@ -2,6 +2,7 @@ import {
   Fracao,
   OperacaoFracao,
   decimalParaFracaoComPassos,
+  ehNumeroMisto,
   mmc,
   operacaoParaTex,
   resolverComPassos,
@@ -75,9 +76,20 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
       return exercicioConversao(nivel, rng);
     }
 
-    const { a, b, operacao, comMista } = sortear(nivel, rng);
+    const sorteio = sortear(nivel, rng);
+    const { operacao, comMista } = sorteio;
 
-    const resolucao = resolverComPassos(a, operacao, b);
+    /*
+     * Em forma mista o enunciado mostra a fração já reduzida — `2\frac{1}{2}`,
+     * nunca `\frac{10}{4}`. Reduzir aqui faz a resolução e as armadilhas
+     * partirem dos mesmos números que o aluno está lendo.
+     */
+    const a = comMista ? sorteio.a.simplificar() : sorteio.a;
+    const b = comMista ? sorteio.b.simplificar() : sorteio.b;
+
+    // `misto` acrescenta à resolução a conversão inicial e a volta à forma
+    // mista no fim — as duas passagens que o enunciado em misto exige.
+    const resolucao = resolverComPassos(a, operacao, b, comMista);
 
     /*
      * Quando há fração imprópria em jogo, o enunciado mostra o número misto.
@@ -97,7 +109,7 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
       gabarito: resolucao.resultado,
       resolucao,
       conceitos: conceitosDe(operacao, a, b, comMista),
-      armadilhas: armadilhasDe(a, b, operacao, resolucao.resultado),
+      armadilhas: armadilhasDe(a, b, operacao, resolucao.resultado, deslocamentoMisto(a, b, comMista)),
       dica:
         nivel === 'facil'
           ? comMista
@@ -335,6 +347,7 @@ function armadilhasDe(
   b: Fracao,
   operacao: OperacaoFracao,
   gabarito: Fracao,
+  deslocamento: number,
 ): readonly Armadilha<Fracao>[] {
   const candidatas =
     operacao === 'somar' || operacao === 'subtrair'
@@ -343,7 +356,23 @@ function armadilhasDe(
         ? armadilhasMultiplicacao(a, b)
         : armadilhasDivisao(a, b);
 
-  return semColisoesDeFracao(candidatas, gabarito);
+  const reposicionadas = candidatas.map((armadilha) => ({
+    ...armadilha,
+    passo: armadilha.passo === undefined ? undefined : armadilha.passo + deslocamento,
+  }));
+
+  return semColisoesDeFracao(reposicionadas, gabarito);
+}
+
+/**
+ * Quantos passos a conversão inicial empurra os demais.
+ *
+ * As armadilhas apontam o passo em que o aluno se perdeu. Com o enunciado em
+ * forma mista, a resolução ganha um passo antes de todos os outros — e sem
+ * este deslocamento o dedo passaria a apontar o passo errado.
+ */
+function deslocamentoMisto(a: Fracao, b: Fracao, comMista: boolean): number {
+  return comMista && (ehNumeroMisto(a) || ehNumeroMisto(b)) ? 1 : 0;
 }
 
 /**

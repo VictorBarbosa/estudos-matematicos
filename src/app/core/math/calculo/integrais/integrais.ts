@@ -1,5 +1,5 @@
 import { ErroMatematico, Passo, Resolucao } from '@core/math/tipos/tipos';
-import { Polinomio, formatar } from '@core/math/algebra/polinomio/polinomio';
+import { Polinomio, formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
 
 /**
  * Integrais.
@@ -135,7 +135,7 @@ export function riemannComPassos(
       {
         descricao: 'No limite, a soma converge para a área exata.',
         tex: `\\int_{${formatar(de)}}^{${formatar(ate)}} f(x)\\,dx = ${formatar(exata)}`,
-        nota: `A diferença atual para o valor exato é ${formatar(Math.abs(resultado - exata))}.`,
+        nota: `A diferença atual para o valor exato é ${formatarEmTexto(Math.abs(resultado - exata))}.`,
       },
     ],
   };

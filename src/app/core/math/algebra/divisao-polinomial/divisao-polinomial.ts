@@ -1,4 +1,4 @@
-import { Polinomio, formatar } from '@core/math/algebra/polinomio/polinomio';
+import { Polinomio, formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
 import { divisores } from '@core/math/numeros/inteiros/inteiros';
 import { ErroMatematico, Passo, Resolucao } from '@core/math/tipos/tipos';
 
@@ -103,7 +103,7 @@ export function restoPorBinomioComPassos(p: Polinomio, a: number): Resolucao<num
         tex: `R = P(${formatar(a)}) = ${formatar(resto)}`,
         nota:
           Math.abs(resto) < 1e-12
-            ? `Resto zero: ${binomio} é fator, e ${formatar(a)} é raiz.`
+            ? `Resto zero: ${binomio} é fator, e ${formatarEmTexto(a)} é raiz.`
             : undefined,
       },
     ],
