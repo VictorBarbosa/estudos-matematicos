@@ -1,7 +1,7 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Fracao, resolverComPassos } from '@core/math';
+import { Fracao, observarSimplificacao, resolverComPassos } from '@core/math';
 import {
   ACERTOS_NA_JANELA,
   ACERTOS_PARA_SUBIR,
@@ -47,6 +47,7 @@ const geradorFixo: GeradorExercicio<Fracao> = {
   analisar: (entrada) => Fracao.analisar(entrada),
   saoEquivalentes: (a, b) => a.igualA(b),
   formatar: (valor) => valor.toString(),
+  observarResposta: observarSimplificacao,
 };
 
 describe('AreaTreino', () => {
@@ -94,6 +95,23 @@ describe('AreaTreino', () => {
 
     expect(texto()).toContain('Correto!');
     expect(texto()).toContain('Próximo exercício');
+  });
+
+  it('aceita a fração ampliada e aponta a forma menor', async () => {
+    // 10/24 é o mesmo número que 5/12: conta como acerto, e o site diz que dá
+    // para escrever menor em vez de deixar o aluno achar que errou a forma.
+    await responder('10/24');
+
+    expect(texto()).toContain('Correto!');
+    expect(texto()).toContain('Aceita');
+    expect(texto()).toContain('5/12');
+  });
+
+  it('a resposta já irredutível não ganha recado', async () => {
+    await responder('5/12');
+
+    expect(texto()).toContain('Correto!');
+    expect(texto()).not.toContain('Aceita —');
   });
 
   it('aceita uma forma equivalente da resposta', async () => {

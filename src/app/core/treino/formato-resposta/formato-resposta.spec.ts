@@ -1,3 +1,4 @@
+import { Fracao } from '@core/math';
 import { criarRng } from '@core/treino/rng/rng';
 import {
   Exercicio,
@@ -113,6 +114,31 @@ describe('formato das respostas', () => {
               const veredito = corrigir(gerador, exercicio, forma).veredito;
 
               expect(veredito, `${topico}: "${forma}" foi ${veredito}`).toBe('correto');
+            }
+          }
+        },
+        TEMPO_LIMITE,
+      );
+
+      it(
+        `${topico} / ${nivel}: fração equivalente não simplificada é aceita`,
+        () => {
+          // 10/20 é o mesmo número que 1/2. A correção é por valor, então
+          // ampliar os dois termos não pode transformar um acerto em erro.
+          for (const exercicio of amostra(gerador, nivel)) {
+            const gabarito = exercicio.gabarito;
+            if (!(gabarito instanceof Fracao)) {
+              continue;
+            }
+
+            for (const fator of [2, 3, 5]) {
+              const ampliada = Fracao.criar(
+                gabarito.numerador * fator,
+                gabarito.denominador * fator,
+              ).toString();
+              const veredito = corrigir(gerador, exercicio, ampliada).veredito;
+
+              expect(veredito, `${topico}: "${ampliada}" foi ${veredito}`).toBe('correto');
             }
           }
         },

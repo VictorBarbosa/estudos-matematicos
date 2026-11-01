@@ -4,6 +4,7 @@ import {
   decimalParaFracaoComPassos,
   ehNumeroMisto,
   mmc,
+  observarSimplificacao,
   operacaoParaTex,
   resolverComPassos,
 } from '@core/math';
@@ -136,6 +137,13 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
    * o exercício seguinte, lia "Resposta correta: 1 1/27" e tinha todo motivo
    * para achar que a sua forma é que estava errada.
    */
+  /*
+   * `10/20` conta como acerto — e passa a dizer que dá para escrever `1/2`.
+   * A forma menor é a que o gabarito mostra e a que deixa a conta seguinte
+   * mais leve; recusar a ampliada seria reprovar quem acertou.
+   */
+  observarResposta: observarSimplificacao,
+
   formasEquivalentes: (valor: Fracao): readonly string[] => {
     const simplificada = valor.simplificar();
 

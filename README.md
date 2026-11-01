@@ -259,11 +259,20 @@ impossível de escrever. E `core/treino/resposta-simbolica/` lê **expressões e
 que um tópico de cálculo possa pedir `f'(x)` e não apenas `f'(2)`; a comparação é por
 avaliação em vários pontos, então `6x + 4`, `4 + 6x` e `2(3x + 2)` contam igual.
 
-Quatro travas globais cuidam dessa parte, para os 75 geradores de uma vez
+A correção é **por valor, nunca por forma**: `10/20` vale o mesmo que `1/2` e conta como
+acerto, como contam `6/8` para `3/4` e `0,5` para `1/2`. O que o site acrescenta é um recado —
+*"Aceita — 10/20 é o mesmo número que 1/2, que é a forma mais simples: divida os dois termos
+por 10"* —, porque a forma menor é a que o gabarito mostra e a que deixa a conta seguinte mais
+leve. O recado não muda o veredito nem o conceito contado: é sobre a escrita, não uma ressalva
+sobre a matemática. Quem respondeu `0,5` não o recebe — apontar termos que ele não escreveu
+soaria como erro de leitura.
+
+Cinco travas globais cuidam dessa parte, para os 75 geradores de uma vez
 (`core/treino/formato-resposta/`, `shared/components/formula/formulas-do-site.spec.ts`,
 `core/teoria/teorias/`):
 
-- o gabarito é aceito na forma em que é exibido;
+- o gabarito é aceito na forma em que é exibido, e **toda** escrita que ele exibe é aceita;
+- fração equivalente ampliada — `10/20` para `1/2` — nunca vira erro;
 - o arredondamento que o enunciado pede é aceito;
 - a resolução termina mostrando o gabarito;
 - toda fórmula compila no KaTeX e todo id de conceito citado existe.

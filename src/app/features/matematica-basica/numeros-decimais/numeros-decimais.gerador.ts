@@ -3,6 +3,7 @@ import {
   decimalParaFracaoComPassos,
   dizimaParaFracaoComPassos,
   fracaoParaDecimalComPassos,
+  observarSimplificacao,
 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -36,6 +37,9 @@ export const geradorDecimais: GeradorExercicio<Fracao> = {
   analisar: (entrada) => Fracao.analisar(entrada),
   saoEquivalentes,
   formatar: (valor) => valor.toString(),
+  // Resposta certa em forma ampliada conta como acerto e ganha o recado de
+  // que existe uma menor — a mesma regra de Frações.
+  observarResposta: observarSimplificacao,
 };
 
 function exercicioDecimalFinito(nivel: Nivel, rng: Rng): Exercicio<Fracao> {

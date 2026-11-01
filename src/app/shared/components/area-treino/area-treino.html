@@ -90,6 +90,10 @@
     } @else if (validacao) {
       <div class="veredito" [attr.data-veredito]="validacao.veredito">
         <p class="mensagem">{{ validacao.mensagem }}</p>
+        <!-- Acertou, e ainda assim há o que dizer: a forma pode ser reduzida. -->
+        @if (validacao.observacao; as observacao) {
+          <p class="diagnostico">{{ observacao }}</p>
+        }
         @if (validacao.diagnostico; as diagnostico) {
           <p class="diagnostico">{{ diagnostico }}</p>
         }

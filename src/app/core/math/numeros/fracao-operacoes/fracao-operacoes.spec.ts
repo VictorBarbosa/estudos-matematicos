@@ -1,5 +1,9 @@
 import { Fracao } from '@core/math/numeros/fracao/fracao';
-import { operacaoParaTex, resolverComPassos } from '@core/math/numeros/fracao-operacoes/fracao-operacoes';
+import {
+  observarSimplificacao,
+  operacaoParaTex,
+  resolverComPassos,
+} from '@core/math/numeros/fracao-operacoes/fracao-operacoes';
 
 describe('resolverComPassos', () => {
   it('chega ao mesmo resultado que a operação direta', () => {
@@ -143,5 +147,51 @@ describe('sinais colados', () => {
       expect(passo.tex, passo.descricao).not.toMatch(/[+\-] -/);
       expect(passo.tex, passo.descricao).not.toMatch(/\\times -|\\div -/);
     }
+  });
+});
+
+/**
+ * O recado que acompanha a resposta certa escrita em forma ampliada.
+ *
+ * `10/20` sempre contou como acerto — a correção aqui é por valor. O que
+ * faltava era dizer que existe uma forma menor.
+ */
+describe('observarSimplificacao', () => {
+  it('aponta a forma irredutível de uma fração ampliada', () => {
+    const recado = observarSimplificacao(Fracao.criar(10, 20), '10/20')!;
+
+    expect(recado).toContain('Aceita');
+    expect(recado).toContain('10/20');
+    expect(recado).toContain('1/2');
+    // O divisor comum, que é o caminho de uma forma à outra.
+    expect(recado).toContain('por 10');
+  });
+
+  it('cala quando a fração já está irredutível', () => {
+    expect(observarSimplificacao(Fracao.criar(1, 2), '1/2')).toBeUndefined();
+    expect(observarSimplificacao(Fracao.criar(5, 12), '5/12')).toBeUndefined();
+  });
+
+  it('cala quando a resposta não foi escrita como fração', () => {
+    // Quem digitou 0,5 não escreveu 5/10: apontar termos que ele não escreveu
+    // soaria como erro de leitura.
+    expect(observarSimplificacao(Fracao.criar(5, 10), '0,5')).toBeUndefined();
+    expect(observarSimplificacao(Fracao.criar(4, 2), '2')).toBeUndefined();
+  });
+
+  it('lê de volta o que o aluno escreveu, e não a forma normalizada', () => {
+    const recado = observarSimplificacao(Fracao.criar(-9, 6), ' -9/6 ')!;
+
+    expect(recado).toContain('-9/6');
+    expect(recado).toContain('-3/2');
+  });
+
+  it('o divisor anunciado é o mdc, e não um divisor qualquer', () => {
+    // 24/36 reduz de uma vez por 12; dizer "por 2" deixaria 12/18 pelo caminho.
+    expect(observarSimplificacao(Fracao.criar(24, 36), '24/36')).toContain('por 12');
+  });
+
+  it('o divisor anunciado nunca é negativo', () => {
+    expect(observarSimplificacao(Fracao.criar(-10, 20), '-10/20')).toContain('por 10');
   });
 });

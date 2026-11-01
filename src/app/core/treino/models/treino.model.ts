@@ -61,6 +61,14 @@ export interface Validacao {
   readonly veredito: Veredito;
   /** Mensagem principal mostrada ao aluno. */
   readonly mensagem: string;
+  /**
+   * Recado sobre a FORMA de uma resposta certa.
+   *
+   * `10/20` vale o mesmo que `1/2` e sempre contou como acerto — a correção
+   * aqui é por valor. O que faltava era dizer que existe uma forma menor, que
+   * é a que o gabarito mostra e a que deixa a conta seguinte mais leve.
+   */
+  readonly observacao?: string;
   /** Explicação do erro específico, quando ele foi reconhecido. */
   readonly diagnostico?: string;
   readonly passoDivergente?: number;
@@ -84,6 +92,13 @@ export interface GeradorExercicio<T> {
   saoEquivalentes(a: T, b: T): boolean;
   /** Forma legível do valor, para exibir o gabarito. */
   formatar(valor: T): string;
+  /**
+   * Um recado sobre a forma de uma resposta CERTA, quando há o que dizer.
+   *
+   * Recebe também o texto digitado, porque o recado fala da escrita: quem
+   * respondeu `10/20` precisa ler `10/20` de volta, não a forma normalizada.
+   */
+  observarResposta?(valor: T, entrada: string): string | undefined;
   /**
    * As escritas igualmente corretas do mesmo valor, quando há mais de uma.
    *
@@ -170,7 +185,11 @@ export function corrigir<T>(
   }
 
   if (gerador.saoEquivalentes(valor, exercicio.gabarito)) {
-    return { veredito: 'correto', mensagem: 'Correto!' };
+    return {
+      veredito: 'correto',
+      mensagem: 'Correto!',
+      observacao: gerador.observarResposta?.(valor, entrada),
+    };
   }
 
   const armadilha = exercicio.armadilhas.find((candidata) =>

@@ -1,4 +1,4 @@
-import { Fracao, resolverLinearComPassos } from '@core/math';
+import { Fracao, observarSimplificacao, resolverLinearComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
   Armadilha,
@@ -89,6 +89,9 @@ export const geradorEquacao1: GeradorExercicio<Fracao> = {
   analisar: (entrada) => Fracao.analisar(entrada),
   saoEquivalentes,
   formatar: (valor) => valor.toString(),
+  // Resposta certa em forma ampliada conta como acerto e ganha o recado de
+  // que existe uma menor — a mesma regra de Frações.
+  observarResposta: observarSimplificacao,
 };
 
 function sortear(nivel: Nivel, rng: Rng): { a: number; b: number; c: number } {

@@ -581,3 +581,66 @@ describe('formas equivalentes do gabarito', () => {
     expect(mensagem).toContain(gabarito.toString());
   });
 });
+
+/**
+ * A fração equivalente ampliada.
+ *
+ * 10/20 é o mesmo número que 1/2, e sempre contou como acerto. O que faltava
+ * era o site dizer que existe uma forma menor — a que o gabarito mostra, e a
+ * que deixa a conta seguinte mais leve.
+ */
+describe('resposta certa em forma ampliada', () => {
+  const base = geradorFracoes.gerar('facil', criarRng(11));
+
+  function corrigirCom(gabarito: string, resposta: string) {
+    return corrigir(geradorFracoes, { ...base, gabarito: Fracao.analisar(gabarito)! }, resposta);
+  }
+
+  it('10/20 conta como acerto quando o gabarito é 1/2', () => {
+    expect(corrigirCom('1/2', '10/20').veredito).toBe('correto');
+  });
+
+  it('e avisa qual é a forma menor', () => {
+    const { observacao } = corrigirCom('1/2', '10/20');
+
+    expect(observacao).toContain('Aceita');
+    expect(observacao).toContain('1/2');
+  });
+
+  it('a forma já irredutível não ganha recado nenhum', () => {
+    expect(corrigirCom('1/2', '1/2').observacao).toBeUndefined();
+  });
+
+  it('o recado não aparece em resposta errada', () => {
+    const { veredito, observacao } = corrigirCom('1/2', '10/30');
+
+    expect(veredito).toBe('incorreto');
+    expect(observacao).toBeUndefined();
+  });
+
+  it('qualquer ampliação do gabarito é aceita, em todos os níveis', () => {
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 80)) {
+        const gabarito = exercicio.gabarito;
+
+        for (const fator of [2, 3, 7]) {
+          const ampliada = Fracao.criar(
+            gabarito.numerador * fator,
+            gabarito.denominador * fator,
+          ).toString();
+
+          expect(corrigir(geradorFracoes, exercicio, ampliada).veredito, ampliada).toBe('correto');
+        }
+      }
+    }
+  });
+
+  it('o recado não muda o veredito nem o conceito contado', () => {
+    // O acerto segue valendo para a exigência do tipo: o recado é sobre a
+    // forma, não uma ressalva sobre a matemática.
+    const validacao = corrigirCom('1/2', '10/20');
+
+    expect(validacao.veredito).toBe('correto');
+    expect(validacao.conceitoAssociado).toBeUndefined();
+  });
+});

@@ -55,6 +55,36 @@ function aDireita(tex: string, negativo: boolean): string {
 }
 
 /**
+ * O recado que acompanha uma resposta certa escrita em forma ampliada.
+ *
+ * `10/20` e `1/2` são o mesmo número, e a correção deste site é por valor:
+ * a resposta conta como acerto, e continua contando. O que faltava era dizer
+ * ao aluno que existe uma forma menor — que é a que ele vai precisar na conta
+ * seguinte, e a que o gabarito mostra.
+ *
+ * Devolve `undefined` quando não há o que dizer: a fração já está irredutível,
+ * ou a resposta nem foi escrita como fração — quem digitou `0,5` não escreveu
+ * `5/10`, e apontar termos que ele não escreveu soaria como erro de leitura.
+ */
+export function observarSimplificacao(valor: Fracao, entrada: string): string | undefined {
+  if (!entrada.includes('/')) {
+    return undefined;
+  }
+
+  const simplificada = valor.simplificar();
+  if (simplificada.denominador === valor.denominador) {
+    return undefined;
+  }
+
+  const divisor = Math.abs(mdc(valor.numerador, valor.denominador));
+
+  return (
+    `Aceita — ${entrada.trim()} é o mesmo número que ${simplificada}, ` +
+    `que é a forma mais simples: divida os dois termos por ${divisor}.`
+  );
+}
+
+/**
  * Resolve a operação registrando cada etapa.
  *
  * É esta função que alimenta ao mesmo tempo a explicação interativa e o
