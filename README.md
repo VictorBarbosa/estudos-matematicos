@@ -23,11 +23,16 @@ npm run build      # build de produção
 npm run build:pages  # build para o GitHub Pages
 npm run gerar:teorias    # reindexa os conceitos (title/tópico/carregador)
 npm run gerar:geradores  # reindexa os geradores de exercício
+npm run gerar:icones     # redesenha os ícones do aplicativo
+npm run verificar:pwa    # service worker e manifesto, num Chrome de verdade
 ```
 
 `gerar:teorias` e `gerar:geradores` reescrevem índices gerados em `core/`. Rode-os depois de
 criar, remover ou renomear um conceito ou um tópico — há testes que falham se o índice sair de
 sincronia.
+
+`gerar:icones` exige o `rsvg-convert` (`brew install librsvg`) e `verificar:pwa` exige o Chrome
+instalado; nenhum dos dois roda na integração contínua.
 
 ### Cobertura
 
@@ -44,7 +49,7 @@ Os índices gerados e os catálogos usados só por teste ficam fora da conta (`c
 ## Publicação
 
 O site é publicado no GitHub Pages a cada push na `main`, pelo workflow em
-`.github/workflows/deploy.yml`. A suíte roda antes: se um teste falhar, nada vai ao ar.
+`.github/workflows/static.yml`. A suíte roda antes: se um teste falhar, nada vai ao ar.
 
 Duas particularidades do Pages estão resolvidas em `scripts/preparar-pages.mjs`:
 
@@ -56,7 +61,63 @@ Duas particularidades do Pages estão resolvidas em `scripts/preparar-pages.mjs`
   `_`. O arquivo `.nojekyll` desliga esse processamento.
 
 O `--base-href /estudos-matematicos/` acompanha o nome do repositório; mudar o nome exige
-mudar esse caminho no script `build:pages`.
+mudar esse caminho no script `build:pages`. O `ngsw.json` nasce com esse prefixo embutido, então
+o service worker funciona na subpasta sem ajuste nenhum.
+
+## Versão nova: o aviso
+
+Um service worker guarda a versão em uso e **continua servindo ela** depois de um deploy. A
+troca só acontece quando o aluno aceita — e aceitar é recarregar.
+
+A ordem dos motivos importa. O primeiro não é funcionar sem rede, é não quebrar: o Pages apaga
+os arquivos com hash a cada publicação, e antes disso uma aba aberta durante um deploy quebrava
+ao abrir o próximo tópico — o `chunk-*.js` que ela foi buscar tinha deixado de existir. Com o
+cache, ela termina a sessão na versão com que começou. Funcionar sem rede veio junto.
+
+Quando a versão nova termina de baixar, `AtualizacaoService` anuncia e o
+`app-atualizacao-dialog` abre: **Reiniciar agora**, ou o X para adiar. Adiar não cancela — os
+arquivos novos já estão no disco e entram sozinhos no próximo carregamento.
+
+Há um segundo aviso, de outra natureza. Se o cache ficar inconsistente e a aplicação não
+conseguir mais montar um pedaço de si mesma (`UNRECOVERABLE_STATE`), o modal aparece sem X,
+sem Esc e sem clique fora: ali não existe "mais tarde", porque a tela por trás dele já não
+funciona.
+
+O que ajustar, se precisar:
+
+| Onde | O quê |
+| --- | --- |
+| `ngsw-config.json` | O que entra em cache. `casca` vem junto na instalação (~375 kB); os 402 `chunk-*.js` dos tópicos e as fontes do KaTeX ficam `lazy`, cada um guardado na primeira visita — prefetch de tudo baixaria 4 MB para quem só quer abrir Frações. |
+| `INTERVALO_DE_CHECAGEM` | De quanto em quanto tempo perguntar se saiu versão nova (30 min). Também se pergunta a cada volta para a aba, com piso de 1 min entre checagens. |
+
+Em desenvolvimento o service worker não é registrado — `enabled: !isDevMode()` —, senão o
+cache serviria código velho a cada recarga. Para desligar o service worker de um navegador que
+já o tenha, o build emite `safety-worker.js`, que se registra no lugar dele e se desfaz.
+
+### Instalar como aplicativo
+
+Com o manifesto e os ícones, o site se instala na tela inicial e abre em janela própria, sem
+barra de endereços. `public/manifest.webmanifest` descreve isso; os caminhos dentro dele são
+relativos, que é o que mantém a instalação funcionando na subpasta do Pages.
+
+Os onze ícones saem de um desenho só — o mesmo sinal de integral do cabeçalho, sobre o azul de
+acento — por `npm run gerar:icones`. O símbolo entra como texto, então o desenho é rasterizado
+na geração, com as fontes da máquina: são os PNGs que vão para o repositório, nunca um SVG com
+`<text>`, que cada aparelho renderizaria com a fonte que tivesse. Há duas versões do desenho: a
+comum, de cantos arredondados, e a *maskable*, de canto reto e símbolo menor — ali quem recorta
+é o Android, e um canto já arredondado apareceria cortado duas vezes.
+
+A cor da barra do navegador acompanha o tema, por duas `<meta name="theme-color">` com
+`prefers-color-scheme`.
+
+### Verificando antes de publicar
+
+Nada disso cabe na suíte: o `ngsw.json`, o escopo do worker, o `base-href` da subpasta e o
+manifesto só existem depois do build, e só um navegador com service worker ligado diz se eles
+combinam. `npm run verificar:pwa` constrói para o Pages, serve a saída em
+`localhost:8411/estudos-matematicos/` e dirige um Chrome headless pela sequência de um aluno:
+abre o site, volta, fica sem rede, e recebe o aviso de versão nova — que ele provoca mudando o
+`ngsw.json` da cópia servida, que é o que uma publicação é, do ponto de vista do worker.
 
 ## Arquitetura
 

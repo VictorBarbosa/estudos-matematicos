@@ -1,17 +1,19 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { ROTULO_TEMA, TemaService } from '@core/tema/services/tema.service';
+import { AtualizacaoDialog } from '@shared/components/atualizacao-dialog/atualizacao-dialog';
 import { TeoriaDialog } from '@shared/components/teoria-dialog/teoria-dialog';
 import { Sidebar } from '@layout/sidebar/sidebar';
 
 /**
- * Moldura da aplicação: cabeçalho, navegação lateral, área de conteúdo e a
- * única instância do modal de teoria, disponível a partir de qualquer tela.
+ * Moldura da aplicação: cabeçalho, navegação lateral, área de conteúdo e as
+ * duas instâncias únicas de modal — a teoria de um conceito e o aviso de
+ * versão nova —, disponíveis a partir de qualquer tela.
  */
 @Component({
   selector: 'app-shell',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, RouterOutlet, Sidebar, TeoriaDialog],
+  imports: [AtualizacaoDialog, RouterLink, RouterOutlet, Sidebar, TeoriaDialog],
   templateUrl: './shell.html',
   styleUrl: './shell.scss',
 })

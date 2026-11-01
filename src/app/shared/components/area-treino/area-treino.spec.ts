@@ -247,3 +247,89 @@ describe('AreaTreino', () => {
     expect(texto()).toContain(TRILHA[1]!.titulo);
   });
 });
+
+/**
+ * O gabarito com mais de uma escrita certa.
+ *
+ * Em Frações, 28/27 e 1 1/27 são o mesmo número e sempre contaram como acerto.
+ * Mas o gabarito exibia só a forma que `formatar` escolhe — quem respondeu
+ * 28/27 lia depois "Resposta correta: 1 1/27" e tinha razão em achar que a sua
+ * escrita é que estava errada.
+ */
+describe('AreaTreino com gabarito de duas escritas', () => {
+  const resultado = Fracao.criar(28, 27);
+
+  const exercicio: Exercicio<Fracao> = {
+    ...exercicioFixo,
+    id: 'teste-misto',
+    gabarito: resultado,
+    resolucao: { resultado, passos: resolucao.passos },
+    armadilhas: [],
+  };
+
+  const gerador: GeradorExercicio<Fracao> = {
+    ...geradorFixo,
+    gerar: (_nivel: Nivel) => exercicio,
+    formatar: (valor) => valor.toStringMisto(),
+    formasEquivalentes: (valor) => [valor.toStringMisto(), valor.simplificar().toString()],
+  };
+
+  let fixture: ComponentFixture<AreaTreino>;
+
+  async function responder(texto: string): Promise<void> {
+    const campo = fixture.nativeElement.querySelector('input') as HTMLInputElement;
+    campo.value = texto;
+    campo.dispatchEvent(new Event('input'));
+    await fixture.whenStable();
+
+    const botao = [...fixture.nativeElement.querySelectorAll('button')].find(
+      (b) => (b as HTMLButtonElement).textContent?.trim() === 'Verificar',
+    ) as HTMLButtonElement;
+    botao.click();
+    await fixture.whenStable();
+  }
+
+  beforeEach(async () => {
+    localStorage.clear();
+
+    TestBed.configureTestingModule({
+      providers: [provideZonelessChangeDetection(), provideRouter([])],
+    });
+
+    fixture = TestBed.createComponent(AreaTreino);
+    fixture.componentRef.setInput('gerador', gerador);
+    await fixture.whenStable();
+  });
+
+  function texto(): string {
+    return fixture.nativeElement.textContent as string;
+  }
+
+  it('aceita a imprópria e a mista como acerto', async () => {
+    for (const forma of ['28/27', '1 1/27']) {
+      await responder(forma);
+      expect(texto(), forma).toContain('Correto!');
+
+      fixture.componentInstance['sessao']().proximo();
+      await fixture.whenStable();
+    }
+  });
+
+  it('mostra as duas escritas ao informar a resposta correta', async () => {
+    await responder('5/27');
+
+    expect(texto()).toContain('1 1/27');
+    expect(texto()).toContain('28/27');
+  });
+
+  it('mostra as duas escritas também quando a resolução é revelada', async () => {
+    const botao = [...fixture.nativeElement.querySelectorAll('button')].find((b) =>
+      (b as HTMLButtonElement).textContent?.includes('mostrar a resolução'),
+    ) as HTMLButtonElement;
+    botao.click();
+    await fixture.whenStable();
+
+    expect(texto()).toContain('1 1/27');
+    expect(texto()).toContain('28/27');
+  });
+});

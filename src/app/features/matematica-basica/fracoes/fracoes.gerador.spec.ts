@@ -1,7 +1,7 @@
 import { Fracao, mdc, resolverComPassos } from '@core/math';
 import { criarRng } from '@core/treino/rng/rng';
 import { REQUISITOS_POR_TOPICO } from '@core/progressao/models/progressao.model';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { NIVEIS, Nivel, corrigir, formasDoGabarito } from '@core/treino/models/treino.model';
 import {
   CONCEITO_DA_OPERACAO,
   CONCEITO_DA_OPERACAO_MISTA,
@@ -521,4 +521,63 @@ describe('resolução dos exercícios com mistos', () => {
       }
     });
   }
+});
+
+/**
+ * As duas escritas do mesmo gabarito.
+ *
+ * O campo sempre aceitou 28/27 e 1 1/27 — a correção é por valor. O que faltava
+ * era o gabarito dizer isso: ele mostrava uma forma só.
+ */
+describe('formas equivalentes do gabarito', () => {
+  function formas(exercicio: { readonly gabarito: Fracao }) {
+    return formasDoGabarito(geradorFracoes, exercicio.gabarito);
+  }
+
+  it('o resultado impróprio tem duas escritas, a mista à frente', () => {
+    const exercicio = amostra('dificil', 300).find((e) => {
+      const g = e.gabarito.simplificar();
+      return g.ehImpropria && !g.ehInteira;
+    })!;
+    const gabarito = exercicio.gabarito.simplificar();
+
+    expect(formas(exercicio)).toEqual([gabarito.toStringMisto(), gabarito.toString()]);
+  });
+
+  it('o resultado próprio tem uma escrita só', () => {
+    // 3/4 não tem forma mista: repetir "3/4 ou 3/4" seria ruído.
+    const exercicio = amostra('facil', 300).find((e) => !e.gabarito.simplificar().ehImpropria)!;
+
+    expect(formas(exercicio)).toEqual([exercicio.gabarito.simplificar().toString()]);
+  });
+
+  it('o resultado inteiro tem uma escrita só', () => {
+    const inteiro = { gabarito: Fracao.criar(6, 3) };
+
+    expect(formas(inteiro)).toEqual(['2']);
+  });
+
+  it('toda escrita exibida é aceita de volta', () => {
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 150)) {
+        for (const forma of formas(exercicio)) {
+          expect(corrigir(geradorFracoes, exercicio, forma).veredito, forma).toBe('correto');
+        }
+      }
+    }
+  });
+
+  it('a mensagem de erro traz as duas escritas', () => {
+    const exercicio = amostra('dificil', 300).find((e) => {
+      const g = e.gabarito.simplificar();
+      return g.ehImpropria && !g.ehInteira;
+    })!;
+    const gabarito = exercicio.gabarito.simplificar();
+
+    // Uma resposta improvável, para cair no caso sem armadilha.
+    const { mensagem } = corrigir(geradorFracoes, exercicio, '99999/100000');
+
+    expect(mensagem).toContain(gabarito.toStringMisto());
+    expect(mensagem).toContain(gabarito.toString());
+  });
 });

@@ -1,0 +1,39 @@
+<dialog
+  #dialogo
+  class="dialogo"
+  aria-labelledby="titulo-atualizacao"
+  (cancel)="aoCancelar($event)"
+  (close)="atualizacao.dispensar()"
+  (click)="aoClicar($event)"
+>
+  <article class="conteudo">
+    <header class="cabecalho">
+      <div>
+        <h2 id="titulo-atualizacao">{{ titulo() }}</h2>
+        <p class="resumo">{{ descricao() }}</p>
+      </div>
+
+      @if (podeDispensar()) {
+        <button type="button" class="fechar" (click)="atualizacao.dispensar()" aria-label="Fechar">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.3 19.71 2.88 18.3 9.17 12 2.88 5.71 4.3 4.29l6.29 6.3 6.3-6.3z"
+            />
+          </svg>
+        </button>
+      }
+    </header>
+
+    <div class="acoes">
+      <button
+        type="button"
+        class="principal"
+        [disabled]="atualizacao.aplicando()"
+        (click)="atualizacao.recarregar()"
+      >
+        {{ atualizacao.aplicando() ? 'Reiniciando…' : 'Reiniciar agora' }}
+      </button>
+    </div>
+  </article>
+</dialog>

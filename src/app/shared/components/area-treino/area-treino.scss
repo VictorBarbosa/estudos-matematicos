@@ -51,7 +51,10 @@
   }
 }
 
-.rumo {
+/* O texto de apoio do componente: sempre discreto e um corpo menor. */
+.rumo,
+.aviso-desistencia,
+.requisitos li {
   color: var(--texto-tenue);
   font-size: var(--texto-sm);
 }
@@ -100,11 +103,6 @@
   border-radius: var(--raio-md);
   padding: var(--esp-4);
   text-align: center;
-
-  p {
-    font-size: var(--texto-sm);
-    color: var(--texto-suave);
-  }
 
   .dica {
     font-size: var(--texto-xs);
@@ -167,6 +165,8 @@
   font-weight: 650;
 }
 
+/* O corpo secundário: o enunciado em palavras e o retorno da correção. */
+.enunciado p,
 .diagnostico,
 .gabarito {
   font-size: var(--texto-sm);
@@ -226,8 +226,6 @@
 .aviso-desistencia {
   flex-basis: 100%;
   margin: 0;
-  color: var(--texto-tenue);
-  font-size: var(--texto-sm);
 }
 
 /*
@@ -251,8 +249,6 @@
     display: flex;
     align-items: baseline;
     gap: var(--esp-1);
-    color: var(--texto-tenue);
-    font-size: var(--texto-sm);
 
     &.cumprido {
       color: var(--acerto);

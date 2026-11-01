@@ -81,7 +81,10 @@
       <div class="veredito" data-veredito="incorreto">
         <p class="mensagem">Resolução revelada — este exercício conta como não resolvido.</p>
         <p class="gabarito">
-          Resposta correta: <strong>{{ gerador().formatar(exercicio.gabarito) }}</strong>
+          Resposta correta:
+          @for (forma of gabarito(); track forma; let ultimo = $last) {
+            <strong>{{ forma }}</strong>@if (!ultimo) {<span class="ou"> ou </span>}
+          }
         </p>
       </div>
     } @else if (validacao) {
@@ -92,7 +95,10 @@
         }
         @if (validacao.veredito === 'incorreto') {
           <p class="gabarito">
-            Resposta correta: <strong>{{ gerador().formatar(exercicio.gabarito) }}</strong>
+            Resposta correta:
+            @for (forma of gabarito(); track forma; let ultimo = $last) {
+              <strong>{{ forma }}</strong>@if (!ultimo) {<span class="ou"> ou </span>}
+            }
           </p>
         }
         @if (validacao.conceitoAssociado; as conceito) {

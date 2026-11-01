@@ -10,7 +10,19 @@
       content="Laboratório interativo de matemática: da matemática básica ao Cálculo 2, com gráficos, demonstrações passo a passo e exercícios corrigidos."
     />
     <meta name="color-scheme" content="light dark" />
+
+    <!--
+      A cor da barra do navegador acompanha o tema, como o resto da interface:
+      o branco da superfície no claro, o fundo quase preto no escuro. São os
+      mesmos valores de `--superficie` e `--fundo` em _tokens.scss.
+    -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0f15" />
+
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <!-- Caminhos relativos, para que o site continue instalável na subpasta do Pages. -->
+    <link rel="manifest" href="manifest.webmanifest" />
   </head>
   <body>
     <app-root></app-root>

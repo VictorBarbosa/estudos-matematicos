@@ -1,5 +1,12 @@
 import { criarRng } from '@core/treino/rng/rng';
-import { Exercicio, GeradorExercicio, NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  NIVEIS,
+  Nivel,
+  corrigir,
+  formasDoGabarito,
+} from '@core/treino/models/treino.model';
 import { TODOS_OS_GERADORES } from '@core/treino/geradores.catalogo/geradores.catalogo';
 
 /**
@@ -90,6 +97,23 @@ describe('formato das respostas', () => {
 
             expect(lido, `${topico}: "${exibido}" não foi reconhecido`).not.toBeNull();
             expect(gerador.saoEquivalentes(lido!, exercicio.gabarito), `${topico}: "${exibido}" não equivale ao gabarito`).toBe(true);
+          }
+        },
+        TEMPO_LIMITE,
+      );
+
+      it(
+        `${topico} / ${nivel}: toda escrita exibida do gabarito é aceita`,
+        () => {
+          // Um tópico pode ter mais de uma escrita certa — 28/27 e 1 1/27 são o
+          // mesmo número. Todas aparecem no gabarito, então todas têm de valer:
+          // exibir uma forma e recusá-la seria o pior tipo de reprovação.
+          for (const exercicio of amostra(gerador, nivel)) {
+            for (const forma of formasDoGabarito(gerador, exercicio.gabarito)) {
+              const veredito = corrigir(gerador, exercicio, forma).veredito;
+
+              expect(veredito, `${topico}: "${forma}" foi ${veredito}`).toBe('correto');
+            }
           }
         },
         TEMPO_LIMITE,

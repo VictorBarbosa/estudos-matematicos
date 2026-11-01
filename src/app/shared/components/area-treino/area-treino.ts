@@ -16,7 +16,7 @@ import {
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { SessaoTreino } from '@core/treino/sessao-treino/sessao-treino';
-import { GeradorExercicio, ROTULO_NIVEL } from '@core/treino/models/treino.model';
+import { GeradorExercicio, ROTULO_NIVEL, formasDoGabarito } from '@core/treino/models/treino.model';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
 import { CampoResposta } from '@shared/components/campo-resposta/campo-resposta';
 import { Formula } from '@shared/components/formula/formula';
@@ -93,6 +93,16 @@ export class AreaTreino {
 
   protected readonly proximaEtapa = computed(() =>
     this.progressao.proximaDe(this.gerador().topicoId),
+  );
+
+  /**
+   * As escritas corretas do gabarito — em Frações, a mista e a imprópria.
+   *
+   * O campo sempre aceitou as duas, mas o gabarito mostrava uma só: quem
+   * respondeu 28/27 lia, no exercício seguinte, "Resposta correta: 1 1/27".
+   */
+  protected readonly gabarito = computed(() =>
+    formasDoGabarito(this.gerador(), this.sessao().exercicio().gabarito),
   );
 
   protected readonly estadoCampo = computed<'neutro' | 'correto' | 'incorreto'>(() => {

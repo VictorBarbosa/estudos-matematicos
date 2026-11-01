@@ -128,6 +128,21 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
   // aceita essa mesma forma de volta.
   formatar: (valor: Fracao): string =>
     valor.simplificar().ehImpropria ? valor.toStringMisto() : valor.toString(),
+
+  /*
+   * Vinte e oito vinte e sete avos e um inteiro e um vinte e sete avos são o
+   * mesmo número, e as duas escritas sempre contaram como acerto. Mas o
+   * gabarito mostrava só a mista: quem respondeu 28/27, acertou e depois errou
+   * o exercício seguinte, lia "Resposta correta: 1 1/27" e tinha todo motivo
+   * para achar que a sua forma é que estava errada.
+   */
+  formasEquivalentes: (valor: Fracao): readonly string[] => {
+    const simplificada = valor.simplificar();
+
+    return simplificada.ehImpropria && !simplificada.ehInteira
+      ? [simplificada.toStringMisto(), simplificada.toString()]
+      : [simplificada.toString()];
+  },
 };
 
 

@@ -1,0 +1,60 @@
+@use 'mixins' as *;
+
+.dialogo {
+  width: min(28rem, calc(100vw - 2rem));
+  padding: 0;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-lg);
+  background: var(--superficie);
+  color: var(--texto);
+  box-shadow: var(--sombra-3);
+
+  &::backdrop {
+    background: oklch(20% 0.02 265 / 0.45);
+    backdrop-filter: blur(2px);
+  }
+
+  &[open] {
+    display: block;
+  }
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+  padding: var(--esp-5);
+}
+
+.cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--esp-4);
+
+  h2 {
+    font-size: var(--texto-lg);
+  }
+}
+
+.resumo {
+  margin-top: var(--esp-2);
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.fechar {
+  @include botao-sutil;
+  flex-shrink: 0;
+  padding: var(--esp-2);
+  border-radius: var(--raio-pill);
+}
+
+.acoes {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.principal {
+  @include botao-primario;
+}

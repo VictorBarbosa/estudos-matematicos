@@ -84,6 +84,30 @@ export interface GeradorExercicio<T> {
   saoEquivalentes(a: T, b: T): boolean;
   /** Forma legível do valor, para exibir o gabarito. */
   formatar(valor: T): string;
+  /**
+   * As escritas igualmente corretas do mesmo valor, quando há mais de uma.
+   *
+   * Em Frações, 28/27 e 1 1/27 são o mesmo número e as duas contam como
+   * acerto — mas o gabarito exibia só a que `formatar` escolhe, e quem
+   * escreveu a outra tinha motivo para achar que ela não valia.
+   *
+   * A primeira da lista é a principal. Quem não implementa tem uma forma só.
+   */
+  formasEquivalentes?(valor: T): readonly string[];
+}
+
+/**
+ * Todas as formas corretas de escrever o gabarito, a principal à frente.
+ *
+ * Sempre devolve pelo menos `formatar(valor)`: um gerador que esqueça de
+ * incluir a forma principal na própria lista não some com ela da tela.
+ */
+export function formasDoGabarito<T>(
+  gerador: GeradorExercicio<T>,
+  valor: T,
+): readonly string[] {
+  const principal = gerador.formatar(valor);
+  return [...new Set([principal, ...(gerador.formasEquivalentes?.(valor) ?? [])])];
 }
 
 /** O que foi digitado é um decimal — com vírgula ou ponto — e não uma fração? */
@@ -163,8 +187,11 @@ export function corrigir<T>(
     };
   }
 
+  const formas = formasDoGabarito(gerador, exercicio.gabarito);
+
   return {
     veredito: 'incorreto',
-    mensagem: `Não é isso. A resposta correta é ${gerador.formatar(exercicio.gabarito)}.`,
+    // Quando há duas escritas certas, as duas aparecem: "é -28/27, ou -1 1/27".
+    mensagem: `Não é isso. A resposta correta é ${formas.join(', ou ')}.`,
   };
 }

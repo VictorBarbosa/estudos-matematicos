@@ -8,9 +8,11 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:pages": "ng build --base-href /estudos-matematicos/ && node scripts/preparar-pages.mjs",
+    "gerar:icones": "node scripts/gerar-icones.mjs",
     "gerar:teorias": "node scripts/gerar-registro-teorias.mjs",
     "gerar:geradores": "node scripts/gerar-registro-geradores.mjs",
-    "test:cobertura": "ng test --watch=true --coverage"
+    "test:cobertura": "ng test --watch=true --coverage",
+    "verificar:pwa": "npm run build:pages && node scripts/verificar-pwa.mjs"
   },
   "private": true,
   "packageManager": "npm@12.2.1",
@@ -21,6 +23,7 @@
     "@angular/forms": "^22.2.0",
     "@angular/platform-browser": "^22.2.0",
     "@angular/router": "^22.2.0",
+    "@angular/service-worker": "^22.2.3",
     "katex": "^0.19.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
