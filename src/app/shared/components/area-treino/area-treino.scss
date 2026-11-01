@@ -1,4 +1,4 @@
-@use 'mixins' as *;
+@use "mixins" as *;
 
 :host {
   display: block;
@@ -19,7 +19,6 @@
   justify-content: space-between;
   gap: var(--esp-4);
 }
-
 
 /* Uma única expansão do mixin para os botões do componente. */
 .principal,
@@ -47,7 +46,7 @@
   font-weight: 600;
   box-shadow: var(--sombra-1);
 
-  &[data-nivel='dificil'] {
+  &[data-nivel="dificil"] {
     color: var(--acento);
   }
 }
@@ -61,7 +60,6 @@
   color: var(--acerto);
   font-weight: 600;
 }
-
 
 .placar {
   display: flex;
@@ -149,17 +147,17 @@
   border-left: 4px solid var(--borda-forte);
   background: var(--superficie-2);
 
-  &[data-veredito='correto'] {
+  &[data-veredito="correto"] {
     background: var(--acerto-suave);
     border-left-color: var(--acerto);
   }
 
-  &[data-veredito='incorreto'] {
+  &[data-veredito="incorreto"] {
     background: var(--erro-suave);
     border-left-color: var(--erro);
   }
 
-  &[data-veredito='invalido'] {
+  &[data-veredito="invalido"] {
     background: var(--aviso-suave);
     border-left-color: var(--aviso);
   }
@@ -244,6 +242,10 @@
   flex-wrap: wrap;
   gap: var(--esp-2) var(--esp-4);
   list-style: none;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  flex-direction: column-reverse;
 
   li {
     display: flex;
