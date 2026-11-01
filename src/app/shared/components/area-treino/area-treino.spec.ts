@@ -3,7 +3,9 @@ import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Fracao, resolverComPassos } from '@core/math';
 import {
+  ACERTOS_NA_JANELA,
   ACERTOS_PARA_SUBIR,
+  ACERTOS_SEGUIDOS_FINAIS,
   ERROS_PARA_DESCER,
   RESPOSTAS_NA_JANELA,
   TRILHA,
@@ -143,6 +145,19 @@ describe('AreaTreino', () => {
     return fixture.nativeElement.querySelector('.nivel-atual').textContent.trim() as string;
   }
 
+  /** O `feitos/alvo` da exigência cujo rótulo contém o trecho dado. */
+  function contadorDe(rotulo: string): string | undefined {
+    const item = [...fixture.nativeElement.querySelectorAll('.requisitos li')].find(
+      (linha: HTMLElement) => linha.textContent?.includes(rotulo),
+    ) as HTMLElement | undefined;
+    return item?.querySelector('strong')?.textContent?.trim();
+  }
+
+  /** O contador de acertos seguidos, que é o que um erro zera. */
+  function seguidosMostrados(): string | undefined {
+    return contadorDe('acertos seguidos agora');
+  }
+
   /** Responde certo e passa ao próximo, quantas vezes for pedido. */
   async function acertar(vezes: number): Promise<void> {
     for (let i = 0; i < vezes; i++) {
@@ -203,10 +218,45 @@ describe('AreaTreino', () => {
     expect(texto()).toContain(`${ACERTOS_PARA_SUBIR - 1} acerto(s) seguido(s) para subir`);
   });
 
-  it('anuncia quanto falta para vencer a etapa', async () => {
+  it('lista as quatro condições para a etapa abrir', async () => {
     await responder('5/12');
 
-    expect(texto()).toContain('acertos nas últimas');
+    expect(texto()).toContain('Para abrir a próxima etapa');
+    expect(texto()).toContain('exercícios respondidos');
+    expect(texto()).toContain('acertos entre eles');
+    expect(texto()).toContain('acertos no Médio ou no Difícil');
+    expect(texto()).toContain('acertos seguidos agora');
+  });
+
+  it('avisa qual das condições um erro zera', async () => {
+    await responder('5/12');
+
+    expect(texto()).toContain('zera a cada erro');
+  });
+
+  it('o erro zera a contagem de acertos seguidos na lista', async () => {
+    // O critério sempre foi este; o que faltava era a tela dizer. Quem errava o
+    // último exercício via a etapa continuar fechada sem explicação nenhuma.
+    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    fixture.componentRef.setInput('gerador', naTrilha);
+    await fixture.whenStable();
+
+    await acertar(2);
+    expect(seguidosMostrados()).toBe(`2/${ACERTOS_SEGUIDOS_FINAIS}`);
+
+    await responder('1/2');
+    expect(seguidosMostrados()).toBe(`0/${ACERTOS_SEGUIDOS_FINAIS}`);
+  });
+
+  it('os acertos da janela não são zerados pelo erro', async () => {
+    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    fixture.componentRef.setInput('gerador', naTrilha);
+    await fixture.whenStable();
+
+    await acertar(2);
+    await responder('1/2');
+
+    expect(contadorDe('acertos entre eles')).toBe(`2/${ACERTOS_NA_JANELA}`);
   });
 
   it('revelar a resolução conta como desistência e tranca o campo', async () => {

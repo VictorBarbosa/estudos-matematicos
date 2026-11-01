@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import {
   ACERTOS_EXIGENTES,
   ACERTOS_NA_JANELA,
+  ACERTOS_SEGUIDOS_FINAIS,
   RESPOSTAS_NA_JANELA,
 } from '@core/progressao/models/progressao.model';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
@@ -29,6 +30,7 @@ export class PainelEtapa {
   protected readonly alvo = ACERTOS_NA_JANELA;
   protected readonly janela = RESPOSTAS_NA_JANELA;
   protected readonly alvoExigente = ACERTOS_EXIGENTES;
+  protected readonly alvoSeguidos = ACERTOS_SEGUIDOS_FINAIS;
   protected readonly total = this.progressao.totalDeEtapas;
   protected readonly modoLivre = this.progressao.modoLivre;
 

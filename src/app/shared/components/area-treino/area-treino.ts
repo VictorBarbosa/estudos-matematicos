@@ -11,6 +11,7 @@ import { RouterLink } from '@angular/router';
 import {
   ACERTOS_EXIGENTES,
   ACERTOS_NA_JANELA,
+  ACERTOS_POR_TIPO,
   RESPOSTAS_NA_JANELA,
 } from '@core/progressao/models/progressao.model';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
@@ -62,6 +63,7 @@ export class AreaTreino {
   protected readonly alvo = ACERTOS_NA_JANELA;
   protected readonly janela = RESPOSTAS_NA_JANELA;
   protected readonly alvoExigente = ACERTOS_EXIGENTES;
+  protected readonly acertosPorTipo = ACERTOS_POR_TIPO;
 
   /** Como este tópico está em relação ao critério de domínio. */
   protected readonly dominio = computed(() =>
@@ -76,6 +78,17 @@ export class AreaTreino {
   /** Quantos acertos no Médio ou no Difícil ainda faltam. */
   protected readonly faltamExigentes = computed(() =>
     this.progressao.faltamExigentesPara(this.gerador().topicoId),
+  );
+
+  /**
+   * As quatro condições para a etapa abrir, cumpridas ou não.
+   *
+   * A tela mostrava duas delas. A que faltava é a que mais confunde: a
+   * sequência final de acertos, que um erro zera — sem ela na lista, errar o
+   * último exercício fechava a etapa sem explicação nenhuma.
+   */
+  protected readonly exigencias = computed(() =>
+    this.progressao.exigenciasDe(this.gerador().topicoId),
   );
 
   /**

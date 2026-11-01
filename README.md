@@ -181,6 +181,15 @@ libera a seguinte quando o tópico é **dominado**:
 - entre elas, **3 acertos no nível Médio ou Difícil**;
 - terminando com **3 acertos seguidos**, para a etapa não abrir logo depois de um erro.
 
+As quatro condições — a quarta é a janela precisar estar cheia — aparecem na área de treino
+como lista, com o quanto falta em cada uma. **A sequência final é a única que um erro zera**, e a
+lista diz isso ao lado dela: as outras três não zeram, apenas podem cair quando a janela anda e
+a tentativa mais antiga sai dela.
+
+Mostrar as quatro não é detalhe de interface. Enquanto a tela mostrava duas, quem tinha tudo em
+ordem e errava o último exercício via a etapa continuar fechada sem nada explicando por quê —
+e a condição que faltava era justamente a que o erro tinha acabado de zerar.
+
 ## O nível não se escolhe
 
 A dificuldade é consequência do desempenho, não uma opção: começa no Fácil, sobe um degrau a

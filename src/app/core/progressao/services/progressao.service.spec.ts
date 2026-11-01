@@ -7,9 +7,12 @@ import {
   ACERTOS_EXIGENTES,
   ACERTOS_NA_JANELA,
   ACERTOS_POR_TIPO,
+  ACERTOS_SEGUIDOS_FINAIS,
   REQUISITOS_POR_TOPICO,
   RESPOSTAS_NA_JANELA,
   TRILHA,
+  dominioDe,
+  exigenciasDaEtapa,
 } from '@core/progressao/models/progressao.model';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 
@@ -362,5 +365,100 @@ describe('ProgressaoService', () => {
 
     expect(progressao.dominioEm(semRequisito.topicoId).requisitos).toEqual([]);
     expect(progressao.estaConcluida(semRequisito.topicoId)).toBe(true);
+  });
+});
+
+/**
+ * O que a tela precisa dizer sobre o que falta.
+ *
+ * O critério sempre teve quatro condições, e a tela mostrava duas. A que
+ * faltava é a que mais confunde: a sequência final, que um erro zera. Quem
+ * tinha tudo em ordem e errava o último exercício via a etapa continuar
+ * fechada sem nada explicando por quê.
+ */
+describe('exigenciasDaEtapa', () => {
+  /** Monta um histórico a partir de uma string: `a` acertou, `e` errou. */
+  function historico(marcas: string, nivel: Nivel = 'dificil') {
+    return [...marcas].map((marca) => ({ nivel, acertou: marca === 'a', desistiu: false }));
+  }
+
+  function exigencia(marcas: string, rotulo: string) {
+    const lista = exigenciasDaEtapa(dominioDe(historico(marcas)));
+    return lista.find((item) => item.rotulo.includes(rotulo))!;
+  }
+
+  it('nomeia as quatro condições do critério', () => {
+    const rotulos = exigenciasDaEtapa(dominioDe([])).map((item) => item.rotulo);
+
+    expect(rotulos.length).toBe(4);
+    expect(rotulos.some((rotulo) => rotulo.includes('respondidos'))).toBe(true);
+    expect(rotulos.some((rotulo) => rotulo.includes('acertos entre eles'))).toBe(true);
+    expect(rotulos.some((rotulo) => rotulo.includes('Médio'))).toBe(true);
+    expect(rotulos.some((rotulo) => rotulo.includes('seguidos'))).toBe(true);
+  });
+
+  it('sem nenhuma prática, nada está cumprido', () => {
+    for (const item of exigenciasDaEtapa(dominioDe([]))) {
+      expect(item.cumprida, item.rotulo).toBe(false);
+      expect(item.feitos).toBe(0);
+    }
+  });
+
+  it('um erro zera a sequência final — e só ela', () => {
+    const antes = exigencia('aaa', 'seguidos');
+    const depois = exigencia('aaae', 'seguidos');
+
+    expect(antes.feitos).toBe(ACERTOS_SEGUIDOS_FINAIS);
+    expect(depois.feitos).toBe(0);
+    // Os acertos da janela continuam lá: o erro não apaga o que foi feito.
+    expect(exigencia('aaae', 'acertos entre eles').feitos).toBe(3);
+  });
+
+  it('a sequência final é a única marcada como zerável', () => {
+    const zeram = exigenciasDaEtapa(dominioDe(historico('aaa'))).filter(
+      (item) => item.zeraComErro,
+    );
+
+    expect(zeram.length).toBe(1);
+    expect(zeram[0]!.rotulo).toContain('seguidos');
+  });
+
+  it('o contador exibido não passa do alvo', () => {
+    // Dez acertos seguidos são dez, mas a exigência é de três: mostrar 10/3
+    // faria o aluno procurar um erro que não existe.
+    expect(exigencia('aaaaaaaaaa', 'seguidos').feitos).toBe(ACERTOS_SEGUIDOS_FINAIS);
+    expect(exigencia('aaaaaaaaaa', 'acertos entre eles').feitos).toBe(ACERTOS_NA_JANELA);
+  });
+
+  it('com a janela cheia de acertos, tudo está cumprido', () => {
+    for (const item of exigenciasDaEtapa(dominioDe(historico('aaaaaaaaaa')))) {
+      expect(item.cumprida, item.rotulo).toBe(true);
+    }
+  });
+
+  it('acertar 8 em 8 ainda não cumpre a janela, que precisa de 10 tentativas', () => {
+    // O contador de acertos chega ao alvo antes da janela encher; sem a
+    // condição separada, a lista diria que está tudo certo.
+    const lista = exigenciasDaEtapa(dominioDe(historico('aaaaaaaa')));
+    const respondidos = lista.find((item) => item.rotulo.includes('respondidos'))!;
+
+    expect(respondidos.cumprida).toBe(false);
+    expect(respondidos.feitos).toBe(8);
+    expect(respondidos.alvo).toBe(RESPOSTAS_NA_JANELA);
+  });
+
+  it('acerto no Fácil não conta como acerto exigente', () => {
+    const facil = exigenciasDaEtapa(dominioDe(historico('aaa', 'facil')));
+    const exigentes = facil.find((item) => item.rotulo.includes('Médio'))!;
+
+    expect(exigentes.feitos).toBe(0);
+    expect(exigentes.alvo).toBe(ACERTOS_EXIGENTES);
+  });
+
+  it('as exigências cumpridas batem com a etapa estar vencida', () => {
+    const dominio = dominioDe(historico('eeaaaaaaaa'));
+
+    expect(dominio.vencido).toBe(true);
+    expect(exigenciasDaEtapa(dominio).every((item) => item.cumprida)).toBe(true);
   });
 });

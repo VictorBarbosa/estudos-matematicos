@@ -240,6 +240,58 @@ export function dominioDe(
   };
 }
 
+/**
+ * Uma exigência do critério de domínio, do jeito que ela aparece para o aluno.
+ *
+ * As quatro existiam desde sempre em {@link dominioDe}, mas a tela mostrava
+ * duas. Quem tinha tudo em ordem e errava o último exercício via a etapa
+ * continuar fechada sem nada na tela explicando por quê — era a sequência
+ * final, invisível, que tinha voltado a zero.
+ */
+export interface ExigenciaDaEtapa {
+  /** Como a exigência se lê: "acertos seguidos agora". */
+  readonly rotulo: string;
+  /** Quanto já foi feito, limitado ao alvo para não exibir 9/8. */
+  readonly feitos: number;
+  readonly alvo: number;
+  readonly cumprida: boolean;
+  /**
+   * Um erro zera este contador?
+   *
+   * Só a sequência final zera. Os dois contadores da janela não zeram, mas
+   * podem cair: a janela anda, e a tentativa mais antiga sai dela.
+   */
+  readonly zeraComErro: boolean;
+}
+
+/**
+ * O que ainda falta para a etapa abrir, exigência por exigência.
+ *
+ * Deriva de {@link Dominio}, sem estado novo: é a mesma conta que decide
+ * `vencido`, escrita para ser lida.
+ */
+export function exigenciasDaEtapa(dominio: Dominio): readonly ExigenciaDaEtapa[] {
+  const exigencia = (
+    rotulo: string,
+    feitos: number,
+    alvo: number,
+    zeraComErro = false,
+  ): ExigenciaDaEtapa => ({
+    rotulo,
+    feitos: Math.min(feitos, alvo),
+    alvo,
+    cumprida: feitos >= alvo,
+    zeraComErro,
+  });
+
+  return [
+    exigencia('exercícios respondidos', dominio.respostas, RESPOSTAS_NA_JANELA),
+    exigencia('acertos entre eles', dominio.acertos, ACERTOS_NA_JANELA),
+    exigencia('acertos no Médio ou no Difícil', dominio.acertosExigentes, ACERTOS_EXIGENTES),
+    exigencia('acertos seguidos agora', dominio.seguidosNoFim, ACERTOS_SEGUIDOS_FINAIS, true),
+  ];
+}
+
 /** Um tópico dentro da trilha linear de estudo. */
 export interface Etapa {
   /** Posição na trilha, começando em 1. */

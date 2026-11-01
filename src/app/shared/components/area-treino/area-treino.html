@@ -126,14 +126,25 @@
     </div>
   } @else if (dominio().respostas > 0 || requisitos().length > 0) {
     <div class="rumo-ao-desbloqueio" role="status">
-      <p>
-        {{ dominio().acertos }} de {{ alvo }} acertos nas últimas {{ janela }} tentativas.
-        @if (faltamExigentes() > 0) {
-          Faltam {{ faltamExigentes() }} acerto(s) no Médio ou no Difícil.
+      <p class="rumo">Para abrir a próxima etapa:</p>
+
+      <!-- As quatro condições do critério, inclusive a sequência final, que era
+           a única invisível — e a única que um erro zera. -->
+      <ul class="requisitos">
+        @for (exigencia of exigencias(); track exigencia.rotulo) {
+          <li [class.cumprido]="exigencia.cumprida">
+            <span class="marca" aria-hidden="true">{{ exigencia.cumprida ? '✓' : '·' }}</span>
+            {{ exigencia.rotulo }}
+            <strong>{{ exigencia.feitos }}/{{ exigencia.alvo }}</strong>
+            @if (exigencia.zeraComErro) {
+              <span>(zera a cada erro)</span>
+            }
+          </li>
         }
-      </p>
+      </ul>
 
       @if (requisitos().length > 0) {
+        <p class="rumo">E {{ acertosPorTipo }} acertos em cada tipo de exercício:</p>
         <ul class="requisitos">
           @for (requisito of requisitos(); track requisito.conceito) {
             <li [class.cumprido]="requisito.cumprido">

@@ -243,7 +243,10 @@
   align-items: flex-start;
   justify-content: space-evenly;
   align-content: flex-start;
-  flex-direction: column-reverse;
+  // `column`, e não `column-reverse`: a ordem da lista é a ordem em que as
+  // exigências se cumprem, e invertê-la faz "soma" aparecer depois de
+  // "divisão com mistos" — e a leitura visual discordar do DOM.
+  flex-direction: column;
 
   li {
     display: flex;

@@ -16,7 +16,9 @@
         <p class="meta">
           Para liberar a próxima etapa, acerte
           <strong>{{ alvo }} das últimas {{ janela }} tentativas</strong> na aba Treinar, com
-          <strong>{{ alvoExigente }} acertos no Médio ou no Difícil</strong>.
+          <strong>{{ alvoExigente }} acertos no Médio ou no Difícil</strong>, terminando em
+          <strong>{{ alvoSeguidos }} acertos seguidos</strong> — essa última conta zera a cada
+          erro.
           @if (requisitos().length > 0) {
             <span class="cobertura">
               Além disso, {{ requisitos()[0]!.acertos }} acertos em cada tipo de exercício:
@@ -33,6 +35,7 @@
               @if (faltamExigentes() > 0) {
                 · faltam {{ faltamExigentes() }} no Médio ou Difícil
               }
+              · {{ dominio().seguidosNoFim }}/{{ alvoSeguidos }} seguidos
             </span>
           }
         </p>

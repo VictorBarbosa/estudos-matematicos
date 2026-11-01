@@ -4,11 +4,13 @@ import {
   ACERTOS_EXIGENTES,
   ACERTOS_NA_JANELA,
   Dominio,
+  ExigenciaDaEtapa,
   ProgressoDoRequisito,
   Etapa,
   RESPOSTAS_NA_JANELA,
   TRILHA,
   dominioDe,
+  exigenciasDaEtapa,
   indiceNaTrilha,
 } from '@core/progressao/models/progressao.model';
 
@@ -127,6 +129,11 @@ export class ProgressaoService {
   /** Quantos acertos no Médio ou no Difícil ainda faltam. */
   faltamExigentesPara(topicoId: string): number {
     return Math.max(0, ACERTOS_EXIGENTES - this.dominioEm(topicoId).acertosExigentes);
+  }
+
+  /** As quatro exigências do critério de domínio, cumpridas ou não. */
+  exigenciasDe(topicoId: string): readonly ExigenciaDaEtapa[] {
+    return exigenciasDaEtapa(this.dominioEm(topicoId));
   }
 
   /** As exigências de cobertura do tópico que ainda não foram cumpridas. */
