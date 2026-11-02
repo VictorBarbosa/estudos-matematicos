@@ -182,7 +182,10 @@ libera a seguinte quando o tópico é **dominado**:
 - terminando com **3 acertos seguidos**, para a etapa não abrir logo depois de um erro.
 
 As quatro condições — a quarta é a janela precisar estar cheia — aparecem na área de treino
-como lista, com o quanto falta em cada uma. **A sequência final é a única que um erro zera**, e a
+como lista, com o quanto falta em cada uma. E o placar do topo, que contava só a rodada
+(acertos, erros, sequência), ganhou um quarto número: **Falta**, quantas das treze condições —
+as quatro mais os nove tipos — ainda não foram cumpridas. Zero significa etapa liberada, e o
+`title` lista quais são, para quem não quer rolar até o fim da página. **A sequência final é a única que um erro zera**, e a
 lista diz isso ao lado dela: as outras três não zeram, apenas podem cair quando a janela anda e
 a tentativa mais antiga sai dela.
 

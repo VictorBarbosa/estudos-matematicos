@@ -100,6 +100,34 @@ export class AreaTreino {
    */
   protected readonly requisitos = computed(() => this.dominio().requisitos);
 
+  /**
+   * O que ainda falta para a etapa abrir, item a item.
+   *
+   * As treze condições — as quatro do critério e os nove tipos — já apareciam,
+   * mas no fim da página. O placar fica no topo, onde o olho vai a cada
+   * resposta, e contava só a rodada: acertos, erros, sequência. Nada ali dizia
+   * quanto falta para a próxima fase.
+   */
+  protected readonly oQueFalta = computed(() => [
+    ...this.exigencias()
+      .filter((exigencia) => !exigencia.cumprida)
+      .map((exigencia) => `${exigencia.rotulo} ${exigencia.feitos}/${exigencia.alvo}`),
+    ...this.requisitos()
+      .filter((requisito) => !requisito.cumprido)
+      .map((requisito) => `${requisito.rotulo} ${requisito.feitos}/${requisito.acertos}`),
+  ]);
+
+  /** Quantas condições faltam. Zero significa etapa vencida. */
+  protected readonly quantoFalta = computed(() => this.oQueFalta().length);
+
+  /** A mesma lista em palavras, para o `title` e para o leitor de tela. */
+  protected readonly resumoDoQueFalta = computed(() => {
+    const itens = this.oQueFalta();
+    return itens.length === 0
+      ? 'Nada: a próxima etapa já está liberada.'
+      : `Falta para liberar a próxima etapa: ${itens.join(', ')}.`;
+  });
+
   protected readonly etapaVencida = computed(() =>
     this.progressao.estaConcluida(this.gerador().topicoId),
   );

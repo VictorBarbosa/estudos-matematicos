@@ -29,6 +29,13 @@
         <dt>Sequência</dt>
         <dd>{{ s.sequencia() }}</dd>
       </div>
+      <!-- O placar conta a rodada; esta conta a etapa. Zero = liberada. -->
+      <div [title]="resumoDoQueFalta()">
+        <dt>Falta</dt>
+        <dd [class.certo]="quantoFalta() === 0" [attr.aria-label]="resumoDoQueFalta()">
+          {{ quantoFalta() }}
+        </dd>
+      </div>
     </dl>
   </header>
 

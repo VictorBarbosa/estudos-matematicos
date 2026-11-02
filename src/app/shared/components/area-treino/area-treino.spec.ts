@@ -468,3 +468,107 @@ describe('AreaTreino com gabarito de duas escritas', () => {
     expect(texto()).toContain('28/27');
   });
 });
+
+/**
+ * Quanto falta para a próxima fase, no placar.
+ *
+ * As treze condições já apareciam, mas no fim da página. O placar fica no
+ * topo, onde o olho vai a cada resposta, e contava só a rodada — acertos,
+ * erros, sequência. Nada ali dizia quanto falta para liberar a seguinte.
+ */
+describe('AreaTreino: quanto falta no placar', () => {
+  let fixture: ComponentFixture<AreaTreino>;
+  let progresso: ProgressoService;
+
+  const emFracoes: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: 'fracoes' };
+
+  /** O bloco do placar cujo rótulo é "Falta". */
+  function bloco(): HTMLElement {
+    return [...fixture.nativeElement.querySelectorAll('.placar div')].find((item) =>
+      (item as HTMLElement).querySelector('dt')?.textContent?.trim() === 'Falta',
+    ) as HTMLElement;
+  }
+
+  function quanto(): string {
+    return bloco().querySelector('dd')!.textContent!.trim();
+  }
+
+  /** Registra acertos num conceito, como se o aluno os tivesse feito. */
+  function acertar(conceito: string, vezes: number): void {
+    for (let i = 0; i < vezes; i++) {
+      progresso.registrar({
+        topicoId: 'fracoes',
+        conceitos: [conceito],
+        acertou: true,
+        sequencia: i + 1,
+        nivel: 'dificil',
+      });
+    }
+  }
+
+  beforeEach(async () => {
+    localStorage.clear();
+
+    await TestBed.configureTestingModule({
+      imports: [AreaTreino],
+      providers: [provideZonelessChangeDetection(), provideRouter([])],
+    }).compileComponents();
+
+    progresso = TestBed.inject(ProgressoService);
+    fixture = TestBed.createComponent(AreaTreino);
+  });
+
+  async function montar(): Promise<void> {
+    fixture.componentRef.setInput('gerador', emFracoes);
+    await fixture.whenStable();
+  }
+
+  it('conta as quatro condições e os nove tipos', async () => {
+    await montar();
+
+    const total = 4 + REQUISITOS_POR_TOPICO['fracoes']!.length;
+    expect(quanto()).toBe(String(total));
+  });
+
+  it('acertar faz a conta baixar', async () => {
+    acertar('fracoes.soma', ACERTOS_POR_TIPO);
+    await montar();
+
+    /*
+     * De 13 para 10, e não para 12: os mesmos cinco acertos que cumpriram a
+     * soma também cumpriram duas das quatro condições da janela — os três
+     * acertos no Difícil e os três seguidos. A conta é do que falta, não do
+     * que foi feito.
+     */
+    expect(quanto()).toBe('10');
+    expect(bloco().getAttribute('title')).not.toContain('soma 5/5');
+  });
+
+  it('diz em palavras o que falta', async () => {
+    acertar('fracoes.soma', ACERTOS_POR_TIPO);
+    await montar();
+
+    const resumo = bloco().getAttribute('title')!;
+    expect(resumo).toContain('subtração com mistos 0/5');
+    expect(resumo).not.toContain('soma 5/5');
+  });
+
+  it('zera — e fica verde — quando a etapa é vencida', async () => {
+    for (const requisito of REQUISITOS_POR_TOPICO['fracoes']!) {
+      acertar(requisito.conceito, requisito.acertos);
+    }
+    for (let i = 0; i < RESPOSTAS_NA_JANELA; i++) {
+      progresso.registrar({
+        topicoId: 'fracoes',
+        conceitos: [],
+        acertou: true,
+        sequencia: i + 1,
+        nivel: 'dificil',
+      });
+    }
+    await montar();
+
+    expect(quanto()).toBe('0');
+    expect(bloco().querySelector('dd')!.classList).toContain('certo');
+  });
+});
