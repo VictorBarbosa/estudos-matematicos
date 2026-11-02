@@ -157,6 +157,23 @@ export const REQUISITOS_POR_TOPICO: Readonly<Record<string, readonly RequisitoDe
   ],
 };
 
+/**
+ * Os tipos de exercício que ainda faltam no tópico.
+ *
+ * O sorteio era uniforme, e isso bastava para travar a etapa: dava para chegar
+ * a `soma 9/5` e `decimal em fração 10/5` enquanto `subtração com mistos`
+ * seguia em 3/5, porque o gerador continuava oferecendo o que já estava
+ * cumprido. Com esta lista na mão, ele passa a oferecer só o que falta.
+ */
+export function tiposPendentes(
+  topicoId: string,
+  porConceito: Readonly<Record<string, EstatisticaConceito>>,
+): readonly string[] {
+  return (REQUISITOS_POR_TOPICO[topicoId] ?? [])
+    .filter((requisito) => (porConceito[requisito.conceito]?.acertos ?? 0) < requisito.acertos)
+    .map((requisito) => requisito.conceito);
+}
+
 /** Como está cada exigência extra de um tópico. */
 export interface ProgressoDoRequisito extends RequisitoDeConceito {
   readonly feitos: number;

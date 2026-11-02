@@ -186,6 +186,14 @@ como lista, com o quanto falta em cada uma. **A sequência final é a única que
 lista diz isso ao lado dela: as outras três não zeram, apenas podem cair quando a janela anda e
 a tentativa mais antiga sai dela.
 
+**O treino oferece o que falta.** A cada sorteio, a sessão diz ao gerador quais tipos ainda não
+foram cumpridos, e ele sorteia só entre eles. Sem isso o sorteio é uniforme, e uniforme basta
+para travar a etapa: dá para chegar a `soma 9/5` e `decimal em fração 10/5` com `subtração com
+mistos` parada em 3/5, porque o que já estava cumprido continuava aparecendo. Numa simulação de
+aluno que acerta sempre, Frações caiu de **77 para 45 exercícios** — que é o mínimo possível,
+nove tipos vezes cinco acertos. A exceção é o que o nível não produz: pedir um misto no Fácil
+seria pedir o impossível, então ali o sorteio volta ao normal até o aluno subir.
+
 Mostrar as quatro não é detalhe de interface. Enquanto a tela mostrava duas, quem tinha tudo em
 ordem e errava o último exercício via a etapa continuar fechada sem nada explicando por quê —
 e a condição que faltava era justamente a que o erro tinha acabado de zerar.

@@ -85,7 +85,14 @@ export interface GeradorExercicio<T> {
   readonly topicoId: string;
   /** Texto de apoio do campo de resposta, por exemplo `ex.: 3/4`. */
   readonly formatoResposta: string;
-  gerar(nivel: Nivel, rng: Rng): Exercicio<T>;
+  /**
+   * Sorteia um exercício.
+   *
+   * `pendentes` são os tipos que ainda faltam para a etapa abrir. Quem tem
+   * exigência de cobertura usa a lista para oferecer o que falta em vez de
+   * repetir o que já está cumprido; os demais geradores a ignoram.
+   */
+  gerar(nivel: Nivel, rng: Rng, pendentes?: readonly string[]): Exercicio<T>;
   /** Converte o texto digitado em valor do domínio, ou `null` se não entender. */
   analisar(entrada: string): T | null;
   /** Igualdade por valor: `6/8` deve contar como `3/4`. */

@@ -69,15 +69,25 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
   topicoId: 'fracoes',
   formatoResposta: 'ex.: 3/4, -2/5, 7 ou o misto 2 1/3',
 
-  gerar(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
+  gerar(nivel: Nivel, rng: Rng, pendentes: readonly string[] = []): Exercicio<Fracao> {
+    /*
+     * Enquanto há tipo faltando, o sorteio é só entre eles.
+     *
+     * Com sorteio uniforme dá para chegar a `soma 9/5` e `decimal 10/5` com
+     * `subtração com mistos` parada em 3/5: o gerador seguia oferecendo o que
+     * já estava cumprido, e a etapa não abria nunca.
+     */
+    const possiveis = pendentes.filter((conceito) => produzNoNivel(conceito, nivel));
+    const exigido = possiveis.length === 0 ? null : rng.escolher(possiveis);
+
     // Converter decimal em fração entra no sorteio sem competir com as
     // operações: a etapa exige cinco acertos em cada uma delas, e diluí-las
     // seria tornar a exigência mais lenta sem ensinar mais.
-    if (rng.booleano(0.15)) {
+    if (exigido === CONCEITO_DA_CONVERSAO || (exigido === null && rng.booleano(0.15))) {
       return exercicioConversao(nivel, rng);
     }
 
-    const sorteio = sortear(nivel, rng);
+    const sorteio = sortear(nivel, rng, exigido === null ? null : (CONCEITO_DO_ALVO.get(exigido) ?? null));
     const { operacao, comMista } = sorteio;
 
     /*
@@ -245,14 +255,53 @@ interface Sorteio {
  */
 const OPERACOES: readonly OperacaoFracao[] = ['somar', 'subtrair', 'multiplicar', 'dividir'];
 
-function sortear(nivel: Nivel, rng: Rng): Sorteio {
+/** O tipo de exercício que a etapa ainda está esperando. */
+interface Alvo {
+  readonly operacao: OperacaoFracao;
+  readonly comMista: boolean;
+}
+
+/** O conceito de cada tipo, do jeito que a progressão o conta. */
+const CONCEITO_DO_ALVO = new Map<string, Alvo>([
+  ...OPERACOES.map((operacao): [string, Alvo] => [
+    CONCEITO_DA_OPERACAO[operacao],
+    { operacao, comMista: false },
+  ]),
+  ...OPERACOES.map((operacao): [string, Alvo] => [
+    CONCEITO_DA_OPERACAO_MISTA[operacao],
+    { operacao, comMista: true },
+  ]),
+]);
+
+/** O conceito da conversão de decimal, que não é operação entre frações. */
+const CONCEITO_DA_CONVERSAO = 'fracoes.decimais';
+
+/**
+ * O que este nível é capaz de sortear.
+ *
+ * O Fácil não produz mistos — eles são a recompensa de subir —, então pedir
+ * um deles ali seria pedir o impossível e travar o sorteio.
+ */
+function produzNoNivel(conceito: string, nivel: Nivel): boolean {
+  if (conceito === CONCEITO_DA_CONVERSAO) {
+    return true;
+  }
+
+  const alvo = CONCEITO_DO_ALVO.get(conceito);
+  return alvo !== undefined && (!alvo.comMista || nivel !== 'facil');
+}
+
+
+function sortear(nivel: Nivel, rng: Rng, alvo: Alvo | null): Sorteio {
+  const operacao = alvo?.operacao ?? rng.escolher(OPERACOES);
+
   switch (nivel) {
     case 'facil':
-      return sortearFacil(rng);
+      return sortearFacil(rng, operacao);
     case 'medio':
-      return sortearMedio(rng);
+      return sortearMedio(rng, operacao, alvo?.comMista ?? rng.booleano(0.35));
     case 'dificil':
-      return sortearDificil(rng);
+      return sortearDificil(rng, operacao, alvo?.comMista ?? rng.booleano(0.5));
   }
 }
 
@@ -260,8 +309,7 @@ function sortear(nivel: Nivel, rng: Rng): Sorteio {
  * Fácil: denominadores em que um é múltiplo do outro, de modo que o
  * denominador comum é o próprio maior deles. Tudo positivo, sem mistas.
  */
-function sortearFacil(rng: Rng): Sorteio {
-  const operacao = rng.escolher(OPERACOES);
+function sortearFacil(rng: Rng, operacao: OperacaoFracao): Sorteio {
   const base = rng.escolher([2, 3, 4, 5, 6, 8]);
   const fator = rng.escolher([1, 2, 3]);
   const maior = base * fator;
@@ -282,12 +330,10 @@ function sortearFacil(rng: Rng): Sorteio {
  * Médio: denominadores coprimos — o MMC é o produto, e não há como escapar de
  * converter as duas frações. Entram os negativos e os primeiros mistos.
  */
-function sortearMedio(rng: Rng): Sorteio {
-  const operacao = rng.escolher(OPERACOES);
+function sortearMedio(rng: Rng, operacao: OperacaoFracao, comMista: boolean): Sorteio {
   const [d1, d2] = rng.escolher(PARES_COPRIMOS);
   const ordenados = rng.booleano() ? [d1, d2] : [d2, d1];
 
-  const comMista = rng.booleano(0.35);
   const negativos = rng.booleano(0.3);
 
   const montar = (denominador: number): Fracao => {
@@ -301,9 +347,7 @@ function sortearMedio(rng: Rng): Sorteio {
 }
 
 /** Difícil: as quatro operações, com negativos e mistos em qualquer posição. */
-function sortearDificil(rng: Rng): Sorteio {
-  const operacao = rng.escolher(OPERACOES);
-  const comMista = rng.booleano(0.5);
+function sortearDificil(rng: Rng, operacao: OperacaoFracao, comMista: boolean): Sorteio {
 
   const criar = (permitirZero: boolean): Fracao => {
     const denominador = rng.inteiro(2, 12);

@@ -1,5 +1,5 @@
 import { Signal, WritableSignal, computed, signal } from '@angular/core';
-import { nivelDoTopico } from '@core/progressao/models/progressao.model';
+import { nivelDoTopico, tiposPendentes } from '@core/progressao/models/progressao.model';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { Rng, criarRng, sementeAleatoria } from '@core/treino/rng/rng';
 import { Exercicio, GeradorExercicio, Nivel, Validacao, corrigir } from '@core/treino/models/treino.model';
@@ -57,7 +57,7 @@ export class SessaoTreino<T> {
     private readonly gerador: GeradorExercicio<T>,
     private readonly progresso: ProgressoService,
   ) {
-    this.exercicioAtual = signal(this.gerador.gerar(this.nivel(), this.rng));
+    this.exercicioAtual = signal(this.sortear());
     this.exercicio = this.exercicioAtual.asReadonly();
   }
 
@@ -103,8 +103,20 @@ export class SessaoTreino<T> {
 
   /** Sorteia o próximo exercício e limpa o estado da resposta. */
   proximo(): void {
-    this.exercicioAtual.set(this.gerador.gerar(this.nivel(), this.rng));
+    this.exercicioAtual.set(this.sortear());
     this.limparResposta();
+  }
+
+  /**
+   * Sorteia dizendo ao gerador o que ainda falta.
+   *
+   * Sem essa lista o sorteio é uniforme, e uniforme basta para travar a etapa:
+   * dava para chegar a `soma 9/5` enquanto `subtração com mistos` seguia em
+   * 3/5, porque o que já estava cumprido continuava sendo oferecido.
+   */
+  private sortear(): Exercicio<T> {
+    const pendentes = tiposPendentes(this.gerador.topicoId, this.progresso.porConceito());
+    return this.gerador.gerar(this.nivel(), this.rng, pendentes);
   }
 
   /**

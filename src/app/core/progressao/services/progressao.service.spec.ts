@@ -13,6 +13,7 @@ import {
   TRILHA,
   dominioDe,
   exigenciasDaEtapa,
+  tiposPendentes,
 } from '@core/progressao/models/progressao.model';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 
@@ -460,5 +461,35 @@ describe('exigenciasDaEtapa', () => {
 
     expect(dominio.vencido).toBe(true);
     expect(exigenciasDaEtapa(dominio).every((item) => item.cumprida)).toBe(true);
+  });
+});
+
+/** O que o gerador precisa saber para parar de repetir o que já foi cumprido. */
+describe('tiposPendentes', () => {
+  it('sem prática nenhuma, tudo está pendente', () => {
+    expect(tiposPendentes('fracoes', {}).length).toBe(REQUISITOS_POR_TOPICO['fracoes']!.length);
+  });
+
+  it('o tipo cumprido sai da lista', () => {
+    const conceitos = { 'fracoes.soma': { acertos: ACERTOS_POR_TIPO, erros: 0 } };
+
+    expect(tiposPendentes('fracoes', conceitos)).not.toContain('fracoes.soma');
+  });
+
+  it('passar do exigido também tira da lista', () => {
+    // O caso da tela: `soma 9/5` continuava sendo sorteada.
+    const conceitos = { 'fracoes.soma': { acertos: 9, erros: 2 } };
+
+    expect(tiposPendentes('fracoes', conceitos)).not.toContain('fracoes.soma');
+  });
+
+  it('faltando um acerto, o tipo continua pendente', () => {
+    const conceitos = { 'fracoes.soma': { acertos: ACERTOS_POR_TIPO - 1, erros: 0 } };
+
+    expect(tiposPendentes('fracoes', conceitos)).toContain('fracoes.soma');
+  });
+
+  it('tópico sem exigência de cobertura não tem pendentes', () => {
+    expect(tiposPendentes('mmc-mdc', {})).toEqual([]);
   });
 });

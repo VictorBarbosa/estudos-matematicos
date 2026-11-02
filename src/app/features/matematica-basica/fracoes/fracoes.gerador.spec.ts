@@ -644,3 +644,89 @@ describe('resposta certa em forma ampliada', () => {
     expect(validacao.conceitoAssociado).toBeUndefined();
   });
 });
+
+/**
+ * O sorteio guiado pelo que falta.
+ *
+ * Com sorteio uniforme dá para chegar a `soma 9/5` e `decimal em fração 10/5`
+ * com `subtração com mistos` parada em 3/5: o gerador seguia oferecendo o que
+ * já estava cumprido, e a etapa não abria nunca.
+ */
+describe('sorteio do que falta', () => {
+  /** Os tipos sorteados em `quantidade` exercícios, dada a lista de pendentes. */
+  function tiposSorteados(
+    nivel: Nivel,
+    pendentes: readonly string[],
+    quantidade = 120,
+  ): ReadonlySet<string> {
+    const rng = criarRng(2024);
+    const vistos = new Set<string>();
+
+    for (let i = 0; i < quantidade; i++) {
+      vistos.add(geradorFracoes.gerar(nivel, rng, pendentes).conceitos[0]!);
+    }
+
+    return vistos;
+  }
+
+  it('só sorteia o tipo que ainda falta', () => {
+    const vistos = tiposSorteados('dificil', ['fracoes.mista-subtracao']);
+
+    expect([...vistos]).toEqual(['fracoes.mista-subtracao']);
+  });
+
+  it('reveza entre os tipos que faltam', () => {
+    const faltando = ['fracoes.divisao', 'fracoes.mista-multiplicacao'];
+    const vistos = tiposSorteados('dificil', faltando);
+
+    expect([...vistos].sort()).toEqual([...faltando].sort());
+  });
+
+  it('a conversão de decimal também pode ser o que falta', () => {
+    expect([...tiposSorteados('medio', ['fracoes.decimais'])]).toEqual(['fracoes.decimais']);
+  });
+
+  it('sem nada pendente, volta ao sorteio de sempre', () => {
+    // Quando tudo está cumprido o treino não fica preso num tipo só.
+    expect(tiposSorteados('dificil', []).size).toBeGreaterThan(3);
+  });
+
+  it('no Fácil, um misto pendente não trava o sorteio', () => {
+    // O Fácil não produz mistos — eles são a recompensa de subir. Pedir um
+    // deles ali é pedir o impossível, e o gerador volta ao sorteio normal.
+    const vistos = tiposSorteados('facil', ['fracoes.mista-soma']);
+
+    expect(vistos.size).toBeGreaterThan(1);
+    expect(vistos.has('fracoes.mista-soma')).toBe(false);
+  });
+
+  it('no Médio, o misto pendente é sorteado', () => {
+    expect([...tiposSorteados('medio', ['fracoes.mista-divisao'])]).toEqual([
+      'fracoes.mista-divisao',
+    ]);
+  });
+
+  it('o exercício dirigido continua íntegro', () => {
+    // Guiar o sorteio não pode produzir exercício capenga: gabarito, resolução
+    // e enunciado seguem valendo.
+    const rng = criarRng(7);
+
+    for (let i = 0; i < 60; i++) {
+      const exercicio = geradorFracoes.gerar('dificil', rng, ['fracoes.mista-subtracao']);
+
+      expect(exercicio.enunciado).toContain('mistos');
+      expect(exercicio.gabarito.igualA(exercicio.resolucao.resultado)).toBe(true);
+      expect(corrigir(geradorFracoes, exercicio, geradorFracoes.formatar(exercicio.gabarito)).veredito).toBe('correto');
+    }
+  });
+
+  it('um tipo cumprido para de ser oferecido', () => {
+    // O caso da tela: tudo cumprido menos dois, e só esses dois aparecem.
+    const faltando = ['fracoes.mista-subtracao', 'fracoes.mista-multiplicacao'];
+    const vistos = tiposSorteados('dificil', faltando, 200);
+
+    for (const cumprido of ['fracoes.soma', 'fracoes.decimais', 'fracoes.divisao']) {
+      expect(vistos.has(cumprido), cumprido).toBe(false);
+    }
+  });
+});

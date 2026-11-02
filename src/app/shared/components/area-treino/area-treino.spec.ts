@@ -5,8 +5,10 @@ import { Fracao, observarSimplificacao, resolverComPassos } from '@core/math';
 import {
   ACERTOS_NA_JANELA,
   ACERTOS_PARA_SUBIR,
+  ACERTOS_POR_TIPO,
   ACERTOS_SEGUIDOS_FINAIS,
   ERROS_PARA_DESCER,
+  REQUISITOS_POR_TOPICO,
   RESPOSTAS_NA_JANELA,
   TRILHA,
 } from '@core/progressao/models/progressao.model';
@@ -313,6 +315,71 @@ describe('AreaTreino', () => {
 
     expect(texto()).toContain('Etapa vencida!');
     expect(texto()).toContain(TRILHA[1]!.titulo);
+  });
+});
+
+/**
+ * O treino oferece o que falta.
+ *
+ * Com sorteio uniforme dá para chegar a `soma 9/5` com `subtração com mistos`
+ * parada em 3/5: o gerador seguia oferecendo o que já estava cumprido.
+ */
+describe('AreaTreino e os tipos que faltam', () => {
+  let fixture: ComponentFixture<AreaTreino>;
+  let progresso: ProgressoService;
+
+  /** Os tipos que o gerador recebeu como pendentes, sorteio a sorteio. */
+  const pedidos: (readonly string[])[] = [];
+
+  const geradorEspiao: GeradorExercicio<Fracao> = {
+    ...geradorFixo,
+    topicoId: 'fracoes',
+    gerar: (_nivel: Nivel, _rng, pendentes: readonly string[] = []) => {
+      pedidos.push(pendentes);
+      return exercicioFixo;
+    },
+  };
+
+  beforeEach(async () => {
+    localStorage.clear();
+    pedidos.length = 0;
+
+    await TestBed.configureTestingModule({
+      imports: [AreaTreino],
+      providers: [provideZonelessChangeDetection(), provideRouter([])],
+    }).compileComponents();
+
+    progresso = TestBed.inject(ProgressoService);
+    fixture = TestBed.createComponent(AreaTreino);
+  });
+
+  async function montar(): Promise<void> {
+    fixture.componentRef.setInput('gerador', geradorEspiao);
+    await fixture.whenStable();
+  }
+
+  it('o gerador recebe a lista do que ainda falta', async () => {
+    await montar();
+
+    expect(pedidos[0]).toContain('fracoes.soma');
+    expect(pedidos[0]!.length).toBe(REQUISITOS_POR_TOPICO['fracoes']!.length);
+  });
+
+  it('o tipo cumprido deixa de ser pedido', async () => {
+    for (let i = 0; i < ACERTOS_POR_TIPO; i++) {
+      progresso.registrar({
+        topicoId: 'fracoes',
+        conceitos: ['fracoes.soma'],
+        acertou: true,
+        sequencia: i + 1,
+        nivel: 'medio',
+      });
+    }
+
+    await montar();
+
+    expect(pedidos[0]).not.toContain('fracoes.soma');
+    expect(pedidos[0]).toContain('fracoes.mista-subtracao');
   });
 });
 
