@@ -303,6 +303,12 @@ Três decisões que valem registrar:
 trigonometria** é a poeira de π não caber num `double`. O corte vale só nesse caso — em Física,
 6,6·10⁻³⁴ é a constante de Planck, não ruído.
 
+A terceira aba faz **MMC e MDC** de dois ou mais inteiros escritos separados por vírgula — ali
+a vírgula separa números, e não casas decimais, porque as duas contas só existem entre inteiros.
+Junto do resultado vem a fatoração de cada número: ver que 12 = 2²·3 e 18 = 2·3² é o que explica
+por que o MMC é 2²·3² e o MDC é 2·3. O zero é recusado de propósito — mdc(0, n) = n e
+mmc(n, 0) = 0 são verdades inúteis para quem está aprendendo o que as contas significam.
+
 Ela **some abaixo de 60rem**, a mesma largura em que a navegação lateral vira menu: num celular
 cobriria justamente o exercício que existe para ajudar a resolver. E só é baixada quando alguém
 a abre pela primeira vez (`@defer` no shell), porque traz o analisador junto.

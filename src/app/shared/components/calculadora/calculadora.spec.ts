@@ -222,3 +222,107 @@ describe('Calculadora: teclas repetidas', () => {
     expect(visor()).toBe('1,5');
   });
 });
+
+/** A aba de MMC e MDC, vista da tela. */
+describe('Calculadora: MMC e MDC', () => {
+  let fixture: ComponentFixture<Calculadora>;
+  let servico: CalculadoraService;
+
+  function campo(): HTMLInputElement {
+    return fixture.nativeElement.querySelector('.campo input') as HTMLInputElement;
+  }
+
+  async function escrever(texto: string): Promise<void> {
+    campo().value = texto;
+    campo().dispatchEvent(new Event('input'));
+    await fixture.whenStable();
+  }
+
+  function visor(): string {
+    return (fixture.nativeElement.querySelector('.valor') as HTMLElement).textContent!.trim();
+  }
+
+  function legenda(): string {
+    return (fixture.nativeElement.querySelector('.legenda') as HTMLElement).textContent!.trim();
+  }
+
+  function escolha(rotulo: string): HTMLButtonElement {
+    return [...fixture.nativeElement.querySelectorAll('.escolha button')].find(
+      (botao) => (botao as HTMLButtonElement).textContent?.trim() === rotulo,
+    ) as HTMLButtonElement;
+  }
+
+  beforeEach(async () => {
+    localStorage.clear();
+
+    await TestBed.configureTestingModule({
+      imports: [Calculadora],
+      providers: [provideZonelessChangeDetection()],
+    }).compileComponents();
+
+    servico = TestBed.inject(CalculadoraService);
+    servico.alternar();
+    fixture = TestBed.createComponent(Calculadora);
+    await fixture.whenStable();
+
+    [...fixture.nativeElement.querySelectorAll('.modos button')]
+      .find((b) => (b as HTMLButtonElement).textContent?.includes('MMC'))!
+      .click();
+    await fixture.whenStable();
+  });
+
+  it('a aba troca o teclado pelo campo de números', () => {
+    expect(servico.modo()).toBe('mmc-mdc');
+    expect(campo()).not.toBeNull();
+    expect(fixture.nativeElement.querySelector('.teclado')).toBeNull();
+  });
+
+  it('mostra o MMC dos números escritos', async () => {
+    await escrever('12, 18, 24');
+
+    expect(visor()).toBe('72');
+    expect(legenda()).toBe('MMC de 12, 18, 24');
+  });
+
+  it('trocar para MDC recalcula o mesmo que está escrito', async () => {
+    await escrever('12, 18, 24');
+    escolha('MDC').click();
+    await fixture.whenStable();
+
+    expect(visor()).toBe('6');
+    expect(legenda()).toContain('MDC');
+  });
+
+  it('mostra a fatoração de cada número', async () => {
+    await escrever('12, 18');
+
+    const linhas = [...fixture.nativeElement.querySelectorAll('.fatoracoes li')].map(
+      (item) => (item as HTMLElement).textContent!.trim(),
+    );
+    expect(linhas).toEqual(['12 = 2² · 3', '18 = 2 · 3²']);
+  });
+
+  it('entrada inválida vira recado, não resultado', async () => {
+    await escrever('12, abc');
+
+    expect(visor()).toBe('—');
+    expect(legenda()).toContain('abc');
+  });
+
+  it('digitar no campo não aciona as teclas da calculadora', async () => {
+    // O teclado físico da janela escuta o keydown; dentro do campo quem manda
+    // é o campo, senão digitar 12 acionaria as teclas 1 e 2.
+    await escrever('12');
+    campo().dispatchEvent(new KeyboardEvent('keydown', { key: '8', bubbles: true }));
+    await fixture.whenStable();
+
+    expect(campo().value).toBe('12');
+    expect(legenda()).toContain('pelo menos dois');
+  });
+
+  it('o modo escolhido volta na sessão seguinte', () => {
+    expect(JSON.parse(localStorage.getItem('estudos-matematicos.calculadora.v1')!).modo).toBe(
+      'mmc-mdc',
+    );
+  });
+});

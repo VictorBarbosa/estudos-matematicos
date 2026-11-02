@@ -11,9 +11,11 @@ import {
 import {
   ESTADO_INICIAL,
   EstadoCalculadora,
+  OperacaoInteiros,
   alternarSinal,
   apagar,
   calcular,
+  calcularInteiros,
   digitar,
   inverso,
   limpar,
@@ -145,8 +147,28 @@ export class Calculadora {
 
   private readonly estado = signal<EstadoCalculadora>(ESTADO_INICIAL);
 
+  /** Os números escritos na aba de MMC e MDC. */
+  protected readonly numeros = signal('');
+
+  /** O MMC ou o MDC do que está escrito, com as fatorações. */
+  protected readonly conta = computed(() =>
+    calcularInteiros(this.numeros(), this.calculadora.operacao()),
+  );
+
+  protected readonly emInteiros = computed(() => this.calculadora.modo() === 'mmc-mdc');
+
   /** A linha pequena: a conta que gerou o resultado, ou o aviso de erro. */
   protected readonly legenda = computed(() => {
+    if (this.emInteiros()) {
+      const { numeros, erro } = this.conta();
+      if (erro !== null) {
+        return erro;
+      }
+      return numeros.length >= 2
+        ? `${this.calculadora.operacao().toUpperCase()} de ${numeros.join(', ')}`
+        : 'Dois ou mais inteiros, separados por vírgula.';
+    }
+
     const { expressao, resultado, erro } = this.estado();
     if (erro !== null) {
       return erro;
@@ -156,6 +178,11 @@ export class Calculadora {
 
   /** A linha grande: o resultado, ou a conta sendo escrita. */
   protected readonly visor = computed(() => {
+    if (this.emInteiros()) {
+      const { valor } = this.conta();
+      return valor === null ? '—' : String(valor);
+    }
+
     const { expressao, resultado } = this.estado();
     return resultado ?? (expressao === '' ? '0' : expressao);
   });
@@ -187,7 +214,21 @@ export class Calculadora {
     this.estado.update((atual) => this.aplicar(atual, acao));
   }
 
+  protected definirNumeros(valor: string): void {
+    this.numeros.set(valor);
+  }
+
+  protected escolher(operacao: OperacaoInteiros): void {
+    this.calculadora.definirOperacao(operacao);
+  }
+
   protected aoDigitar(evento: KeyboardEvent): void {
+    // Dentro do campo de números quem manda é o campo: sem isto, digitar 12
+    // na aba de MMC acionaria as teclas 1 e 2 do teclado de trás.
+    if ((evento.target as HTMLElement).tagName === 'INPUT') {
+      return;
+    }
+
     const acao = /^\d$/.test(evento.key) ? inserir(evento.key) : DO_TECLADO[evento.key];
     if (acao === undefined) {
       return;

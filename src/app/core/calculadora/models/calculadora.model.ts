@@ -1,3 +1,4 @@
+import { fatoracaoParaTexto, mdcLista, mmcLista } from '@core/math/numeros/inteiros/inteiros';
 import { avaliarExpressao } from '@core/treino/resposta-simbolica/resposta-simbolica';
 
 /**
@@ -13,7 +14,10 @@ import { avaliarExpressao } from '@core/treino/resposta-simbolica/resposta-simbo
  * conta que o campo de resposta recusa.
  */
 
-export type ModoCalculadora = 'basica' | 'cientifica';
+export type ModoCalculadora = 'basica' | 'cientifica' | 'mmc-mdc';
+
+/** As duas contas da aba de inteiros. */
+export type OperacaoInteiros = 'mmc' | 'mdc';
 
 /** Como os ângulos das funções trigonométricas são lidos. */
 export type Angulo = 'rad' | 'deg';
@@ -334,4 +338,74 @@ export function calcular(estado: EstadoCalculadora, angulo: Angulo): EstadoCalcu
     comTrigonometria && Math.abs(valor) < RUIDO_TRIGONOMETRICO ? 0 : valor;
 
   return { expressao: fechada, resultado: formatarValor(limpo), erro: null };
+}
+
+/** O que a aba de MMC e MDC mostra. */
+export interface ContaDeInteiros {
+  /** Os números lidos da entrada, na ordem em que foram escritos. */
+  readonly numeros: readonly number[];
+  readonly valor: number | null;
+  /** `12 = 2² · 3`, uma linha por número — é de onde a resposta sai. */
+  readonly fatoracoes: readonly string[];
+  readonly erro: string | null;
+}
+
+const CONTA_VAZIA: ContaDeInteiros = { numeros: [], valor: null, fatoracoes: [], erro: null };
+
+/** Vírgula, ponto e vírgula ou espaço separam os números — o que vier à mão. */
+const SEPARADORES = /[,;\s]+/;
+
+/** Acima disto o produto deixa de ser exato em ponto flutuante. */
+const LIMITE_EXATO = Number.MAX_SAFE_INTEGER;
+
+/**
+ * O MMC ou o MDC dos números escritos na aba de inteiros.
+ *
+ * Aqui a vírgula separa números, e não casas decimais: MMC e MDC só existem
+ * entre inteiros, então não há ambiguidade a resolver.
+ *
+ * As fatorações vêm junto de propósito. O resultado sozinho não ensina nada —
+ * é ver que 12 = 2²·3 e 18 = 2·3² que explica por que o MMC é 2²·3² e o MDC é
+ * 2·3.
+ */
+export function calcularInteiros(
+  entrada: string,
+  operacao: OperacaoInteiros,
+): ContaDeInteiros {
+  const partes = entrada.trim().split(SEPARADORES).filter((parte) => parte !== '');
+  if (partes.length === 0) {
+    return CONTA_VAZIA;
+  }
+
+  const numeros: number[] = [];
+  for (const parte of partes) {
+    if (!/^\d+$/.test(parte)) {
+      return { ...CONTA_VAZIA, erro: `"${parte}" não é um número inteiro.` };
+    }
+
+    const numero = Number(parte);
+    if (numero === 0) {
+      return { ...CONTA_VAZIA, erro: 'O zero fica de fora: use inteiros maiores que zero.' };
+    }
+    if (numero > LIMITE_EXATO) {
+      return { ...CONTA_VAZIA, erro: 'Número grande demais para a conta sair exata.' };
+    }
+    numeros.push(numero);
+  }
+
+  if (numeros.length < 2) {
+    return { ...CONTA_VAZIA, numeros, erro: 'Informe pelo menos dois números.' };
+  }
+
+  const valor = operacao === 'mmc' ? mmcLista(numeros) : mdcLista(numeros);
+  if (!Number.isSafeInteger(valor)) {
+    return { ...CONTA_VAZIA, numeros, erro: 'O resultado passa do que dá para calcular exato.' };
+  }
+
+  return {
+    numeros,
+    valor,
+    fatoracoes: numeros.map((numero) => `${numero} = ${fatoracaoParaTexto(numero)}`),
+    erro: null,
+  };
 }

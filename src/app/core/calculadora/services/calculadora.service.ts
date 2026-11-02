@@ -1,7 +1,11 @@
 import { Injectable, computed, effect, signal } from '@angular/core';
 // Só os tipos: importar o módulo inteiro traria o analisador de expressões
 // para o carregamento inicial, desfazendo o `@defer` do shell.
-import type { Angulo, ModoCalculadora } from '@core/calculadora/models/calculadora.model';
+import type {
+  Angulo,
+  ModoCalculadora,
+  OperacaoInteiros,
+} from '@core/calculadora/models/calculadora.model';
 
 const CHAVE = 'estudos-matematicos.calculadora.v1';
 
@@ -15,10 +19,19 @@ interface EstadoSalvo {
   readonly aberta: boolean;
   readonly modo: ModoCalculadora;
   readonly angulo: Angulo;
+  readonly operacao: OperacaoInteiros;
   readonly posicao: Posicao | null;
 }
 
-const PADRAO: EstadoSalvo = { aberta: false, modo: 'basica', angulo: 'rad', posicao: null };
+const PADRAO: EstadoSalvo = {
+  aberta: false,
+  modo: 'basica',
+  angulo: 'rad',
+  operacao: 'mmc',
+  posicao: null,
+};
+
+const MODOS: readonly ModoCalculadora[] = ['basica', 'cientifica', 'mmc-mdc'];
 
 /**
  * A calculadora flutuante: se está aberta, onde, e em que modo.
@@ -34,6 +47,7 @@ export class CalculadoraService {
   readonly aberta = computed(() => this.estado().aberta);
   readonly modo = computed(() => this.estado().modo);
   readonly angulo = computed(() => this.estado().angulo);
+  readonly operacao = computed(() => this.estado().operacao);
   readonly posicao = computed(() => this.estado().posicao);
 
   constructor() {
@@ -59,6 +73,10 @@ export class CalculadoraService {
     }));
   }
 
+  definirOperacao(operacao: OperacaoInteiros): void {
+    this.estado.update((atual) => ({ ...atual, operacao }));
+  }
+
   definirPosicao(posicao: Posicao): void {
     this.estado.update((atual) => ({ ...atual, posicao }));
   }
@@ -78,8 +96,11 @@ function carregar(): EstadoSalvo {
 
     return {
       aberta: salvo.aberta === true,
-      modo: salvo.modo === 'cientifica' ? 'cientifica' : 'basica',
+      modo: MODOS.includes(salvo.modo as ModoCalculadora)
+        ? (salvo.modo as ModoCalculadora)
+        : 'basica',
       angulo: salvo.angulo === 'deg' ? 'deg' : 'rad',
+      operacao: salvo.operacao === 'mdc' ? 'mdc' : 'mmc',
       posicao: posicaoValida(salvo.posicao) ? salvo.posicao : null,
     };
   } catch {

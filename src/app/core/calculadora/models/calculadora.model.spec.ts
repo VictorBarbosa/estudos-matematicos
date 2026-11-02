@@ -1,5 +1,6 @@
 import {
   ESTADO_INICIAL,
+  calcularInteiros,
   EstadoCalculadora,
   alternarSinal,
   apagar,
@@ -271,5 +272,72 @@ describe('teclas impossíveis', () => {
     const depois = digitar(comResultado, ')');
 
     expect(depois).toEqual(comResultado);
+  });
+});
+
+/**
+ * A aba de MMC e MDC.
+ *
+ * Aqui a vírgula separa números, e não casas decimais: as duas contas só
+ * existem entre inteiros, então não há ambiguidade a resolver.
+ */
+describe('MMC e MDC', () => {
+  it('calcula o MMC de dois números', () => {
+    expect(calcularInteiros('12, 18', 'mmc').valor).toBe(36);
+  });
+
+  it('calcula o MDC de dois números', () => {
+    expect(calcularInteiros('12, 18', 'mdc').valor).toBe(6);
+  });
+
+  it('aceita mais de dois números', () => {
+    expect(calcularInteiros('12, 18, 24', 'mmc').valor).toBe(72);
+    expect(calcularInteiros('12, 18, 24', 'mdc').valor).toBe(6);
+  });
+
+  it('separa por vírgula, ponto e vírgula ou espaço', () => {
+    for (const entrada of ['12,18', '12; 18', '12 18', '  12 ,  18  ']) {
+      expect(calcularInteiros(entrada, 'mdc').valor, entrada).toBe(6);
+    }
+  });
+
+  it('mostra a fatoração de cada número', () => {
+    // É de onde a resposta sai: 12 = 2²·3 e 18 = 2·3² explicam o MMC 2²·3².
+    expect(calcularInteiros('12, 18', 'mmc').fatoracoes).toEqual(['12 = 2² · 3', '18 = 2 · 3²']);
+  });
+
+  it('coprimos têm MDC 1 e MMC igual ao produto', () => {
+    expect(calcularInteiros('8, 9', 'mdc').valor).toBe(1);
+    expect(calcularInteiros('8, 9', 'mmc').valor).toBe(72);
+  });
+
+  it('a tela vazia não é erro', () => {
+    const vazia = calcularInteiros('   ', 'mmc');
+
+    expect(vazia.valor).toBeNull();
+    expect(vazia.erro).toBeNull();
+  });
+
+  it('um número só pede o segundo', () => {
+    expect(calcularInteiros('7', 'mmc').erro).toContain('pelo menos dois');
+  });
+
+  it('o que não é inteiro é recusado pelo nome', () => {
+    expect(calcularInteiros('12, abc', 'mmc').erro).toContain('"abc"');
+    expect(calcularInteiros('12, 1.5', 'mmc').erro).toContain('1.5');
+    expect(calcularInteiros('12, -4', 'mdc').erro).toContain('-4');
+  });
+
+  it('o zero fica de fora', () => {
+    // mdc(0, n) = n e mmc(n, 0) = 0: respostas verdadeiras e inúteis para
+    // quem está aprendendo o que as duas contas significam.
+    expect(calcularInteiros('0, 12', 'mmc').erro).toContain('zero');
+  });
+
+  it('não devolve resultado que o ponto flutuante não aguenta', () => {
+    const gigante = calcularInteiros('999999937, 999999893, 999999929', 'mmc');
+
+    expect(gigante.valor).toBeNull();
+    expect(gigante.erro).toContain('exat');
   });
 });

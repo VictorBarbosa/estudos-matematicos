@@ -40,6 +40,15 @@
         >
           Científica
         </button>
+        <button
+          type="button"
+          role="tab"
+          [attr.aria-selected]="emInteiros()"
+          [class.ativo]="emInteiros()"
+          (click)="calculadora.definirModo('mmc-mdc')"
+        >
+          MMC/MDC
+        </button>
       </div>
 
       <button type="button" class="fechar" (click)="calculadora.fechar()" aria-label="Fechar a calculadora">
@@ -60,6 +69,53 @@
       <p class="valor" [class.apertado]="visorApertado()"><span>{{ visor() }}</span></p>
     </div>
 
+    @if (emInteiros()) {
+      <div class="inteiros">
+        <div class="escolha" role="group" aria-label="Qual conta fazer">
+          <button
+            type="button"
+            class="funcao"
+            [class.ativo]="calculadora.operacao() === 'mmc'"
+            [attr.aria-pressed]="calculadora.operacao() === 'mmc'"
+            (click)="escolher('mmc')"
+          >
+            MMC
+          </button>
+          <button
+            type="button"
+            class="funcao"
+            [class.ativo]="calculadora.operacao() === 'mdc'"
+            [attr.aria-pressed]="calculadora.operacao() === 'mdc'"
+            (click)="escolher('mdc')"
+          >
+            MDC
+          </button>
+        </div>
+
+        <label class="campo">
+          <span class="rotulo">Números, separados por vírgula</span>
+          <input
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="12, 18, 24"
+            [value]="numeros()"
+            (input)="definirNumeros($any($event.target).value)"
+          />
+        </label>
+
+        <!-- A fatoração é de onde a resposta sai: 12 = 2²·3 e 18 = 2·3²
+             explicam por que o MMC é 2²·3² e o MDC é 2·3. -->
+        @if (conta().fatoracoes.length > 0) {
+          <ul class="fatoracoes">
+            @for (linha of conta().fatoracoes; track linha) {
+              <li>{{ linha }}</li>
+            }
+          </ul>
+        }
+      </div>
+    } @else {
     <div class="teclado">
       @if (calculadora.modo() === 'cientifica') {
         <div class="teclas cientificas">
@@ -90,5 +146,6 @@
         }
       </div>
     </div>
+    }
   </section>
 }

@@ -19,6 +19,8 @@ $tecla: 3.25rem;
 .janela {
   position: fixed;
   z-index: 60;
+  /* Largura mínima: as três abas precisam caber na barra. */
+  min-width: 18rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -134,7 +136,75 @@ $tecla: 3.25rem;
 
 .teclado {
   display: flex;
+  justify-content: center;
   gap: 0.5rem;
+}
+
+/* A aba de inteiros troca o teclado por um campo: aqui não se digita conta. */
+.inteiros {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 0.5rem 0.25rem;
+}
+
+.escolha {
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    flex: 1;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 999px;
+    background: $digito;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+
+    &.ativo {
+      background: $operador;
+      color: #fff;
+    }
+  }
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  input {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #48484a;
+    border-radius: 0.75rem;
+    background: #000;
+    color: #fff;
+    font: inherit;
+    font-size: 1.1rem;
+
+    &:focus-visible {
+      outline: 2px solid $operador;
+      outline-offset: 1px;
+    }
+  }
+}
+
+.rotulo {
+  color: #a5a5a7;
+  font-size: 0.7rem;
+}
+
+.fatoracoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0;
+  list-style: none;
+  color: #a5a5a7;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .teclas {
