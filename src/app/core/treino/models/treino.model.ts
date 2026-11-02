@@ -34,7 +34,14 @@ export interface Exercicio<T> {
   readonly nivel: Nivel;
   /** Comando em linguagem natural. */
   readonly enunciado: string;
-  /** A expressão a resolver, em LaTeX. */
+  /**
+   * A expressão a resolver, em LaTeX, ou {@link SEM_FORMULA}.
+   *
+   * Nem todo exercício deve entregar a fórmula montada. Em Razão e proporção,
+   * no Difícil, a tarefa é justamente decidir se as grandezas são direta ou
+   * inversamente proporcionais e montar a proporção: exibir `a/b = c/x` ao
+   * lado do texto responderia a pergunta antes dela ser feita.
+   */
   readonly enunciadoTex: string;
   readonly gabarito: T;
   /** A resolução completa, reaproveitada do motor matemático. */
@@ -54,6 +61,14 @@ export interface Exercicio<T> {
    */
   readonly exigeFracao?: boolean;
 }
+
+/**
+ * Enunciado sem fórmula: montar a expressão faz parte da pergunta.
+ *
+ * É string vazia, e não `undefined`, para que o campo continue obrigatório —
+ * esquecer a fórmula tem de ser uma escolha escrita, não um esquecimento.
+ */
+export const SEM_FORMULA = '';
 
 export type Veredito = 'correto' | 'incorreto' | 'invalido';
 

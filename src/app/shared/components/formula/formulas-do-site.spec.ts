@@ -2,7 +2,7 @@ import katex from 'katex';
 import { TODAS_AS_TEORIAS } from '@core/teoria/teorias.catalogo/teorias.catalogo';
 import { TODOS_OS_GERADORES } from '@core/treino/geradores.catalogo/geradores.catalogo';
 import { criarRng } from '@core/treino/rng/rng';
-import { NIVEIS } from '@core/treino/models/treino.model';
+import { NIVEIS, SEM_FORMULA } from '@core/treino/models/treino.model';
 
 /**
  * Renderiza TODA fórmula do site com o KaTeX e exige que ela compile.
@@ -93,7 +93,11 @@ describe('fórmulas dos exercícios', () => {
 
           for (let i = 0; i < AMOSTRAS; i++) {
             const exercicio = gerador.gerar(nivel, rng);
-            compila(exercicio.enunciadoTex, `${topico}/${nivel}: enunciado`);
+            // Nem todo exercício tem fórmula: no Difícil de Razão e proporção,
+            // montá-la a partir do texto é a tarefa.
+            if (exercicio.enunciadoTex !== SEM_FORMULA) {
+              compila(exercicio.enunciadoTex, `${topico}/${nivel}: enunciado`);
+            }
 
             for (const [indice, passo] of exercicio.resolucao.passos.entries()) {
               compila(passo.tex, `${topico}/${nivel}: passo ${indice} da resolução`);
@@ -231,6 +235,46 @@ describe('texto corrido não traz LaTeX', () => {
         }
 
         expect(achados).toEqual([]);
+      },
+      TEMPO_LIMITE,
+    );
+  }
+});
+
+/**
+ * O enunciado que vem sem fórmula precisa se bastar.
+ *
+ * `SEM_FORMULA` é uma escolha pedagógica — em Razão e proporção, montar a
+ * expressão é a tarefa —, mas é também uma string vazia, e string vazia é o
+ * que sobra de um descuido. Sem fórmula, o texto é a pergunta inteira: se ele
+ * não disser os valores, o exercício fica impossível em vez de difícil.
+ */
+describe('enunciado sem fórmula', () => {
+  const SORTEIOS = 30;
+
+  for (const [topico, gerador] of TODOS_OS_GERADORES) {
+    it(
+      `${topico}: sem fórmula, o texto diz tudo`,
+      () => {
+        const incompletos: string[] = [];
+
+        for (const nivel of NIVEIS) {
+          const rng = criarRng(577_215);
+
+          for (let i = 0; i < SORTEIOS; i++) {
+            const exercicio = gerador.gerar(nivel, rng);
+            if (exercicio.enunciadoTex !== SEM_FORMULA) {
+              continue;
+            }
+
+            const numeros = exercicio.enunciado.match(/\d+/g) ?? [];
+            if (numeros.length < 2 || exercicio.enunciado.length < 30) {
+              incompletos.push(`${nivel}: "${exercicio.enunciado}"`);
+            }
+          }
+        }
+
+        expect(incompletos).toEqual([]);
       },
       TEMPO_LIMITE,
     );

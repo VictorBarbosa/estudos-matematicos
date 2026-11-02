@@ -4,6 +4,21 @@ Comparação entre grandezas, regra de três e proporcionalidade inversa.
 
 **Área:** Matemática básica · **Rota:** `/matematica-basica/razao-proporcao`
 
+## No Difícil, só o enunciado
+
+Nos dois primeiros níveis o exercício traz a montagem pronta ao lado do texto —
+`\frac{a}{b} = \frac{c}{x}` na direta, `a \cdot b = c \cdot x` na inversa. No **Difícil ela
+some**: `enunciadoTex` recebe `SEM_FORMULA`, e a tela não desenha fórmula nenhuma.
+
+O motivo é que a fórmula era a resposta. Decidir se as grandezas crescem juntas ou em sentidos
+opostos, e montar a proporção a partir disso, é a única coisa que este tópico ensina — e ver
+`a \cdot b = c \cdot x` escrito já entrega que a relação é inversa. Com o texto sozinho, a
+montagem volta a ser trabalho de quem responde.
+
+A fórmula não sumiu do tópico: ela aparece na resolução, depois da resposta, que é quando
+ela ensina em vez de entregar. A dica do nível também continua — mas é uma pergunta ("as
+grandezas crescem juntas ou em sentidos opostos?"), não uma resposta.
+
 ## O que este módulo precisa ter
 
 - `razao-proporcao.ts` / `.html` / `.scss` — componente dentro de `<app-topico-layout>`,

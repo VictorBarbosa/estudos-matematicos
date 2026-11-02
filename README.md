@@ -286,7 +286,8 @@ Cinco travas globais cuidam dessa parte, para os 74 geradores de uma vez
 - fração equivalente ampliada — `10/20` para `1/2` — nunca vira erro;
 - o arredondamento que o enunciado pede é aceito;
 - a resolução termina mostrando o gabarito;
-- toda fórmula compila no KaTeX e todo id de conceito citado existe.
+- toda fórmula compila no KaTeX e todo id de conceito citado existe;
+- enunciado sem fórmula diz tudo em palavras, com os números da conta.
 
 ## A calculadora flutuante
 
@@ -341,6 +342,19 @@ está aprendendo o que as contas significam.
 Ela **some abaixo de 60rem**, a mesma largura em que a navegação lateral vira menu: num celular
 cobriria justamente o exercício que existe para ajudar a resolver. E só é baixada quando alguém
 a abre pela primeira vez (`@defer` no shell), porque traz o analisador junto.
+
+### Quando a fórmula é a resposta
+
+`enunciadoTex` pode vir como `SEM_FORMULA`, e aí a tela mostra só o texto. Não é exceção
+técnica, é pedagógica: em **Razão e proporção**, no Difícil, decidir se as grandezas são
+direta ou inversamente proporcionais e montar a proporção é a tarefa — exibir
+`a \cdot b = c \cdot x` ao lado do enunciado responderia a pergunta antes dela ser feita. A
+fórmula reaparece na resolução, depois da resposta.
+
+É string vazia, e não `undefined`, para que o campo continue obrigatório: omitir a fórmula tem
+de ser uma escolha escrita, não um esquecimento. E uma trava global cobre o resto — sem
+fórmula, o enunciado precisa trazer os números da conta, ou o exercício fica impossível em vez
+de difícil.
 
 ## Convenções
 

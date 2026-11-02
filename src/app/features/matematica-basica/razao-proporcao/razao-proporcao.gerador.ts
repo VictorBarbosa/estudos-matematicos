@@ -1,7 +1,13 @@
 import { divisaoProporcionalComPassos, regraDeTresComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  SEM_FORMULA,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const TOLERANCIA = 1e-6;
 const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
@@ -84,9 +90,21 @@ function exercicioRegraDeTres(nivel: Nivel, rng: Rng, inversa: boolean): Exercic
     id: `proporcao-${inversa ? 'inversa' : 'direta'}-${a}-${b}-${c}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: contexto.enunciado(a, b, c),
-    enunciadoTex: inversa
-      ? `${a} \\cdot ${b} = ${c} \\cdot x \\qquad x = \\;?`
-      : `\\frac{${a}}{${b}} = \\frac{${c}}{x} \\qquad x = \\;?`,
+    /*
+     * No Difícil, só o enunciado.
+     *
+     * A fórmula ao lado do texto responde a pergunta antes dela ser feita:
+     * `\frac{a}{b} = \frac{c}{x}` já diz que a proporção é direta, e
+     * `a \cdot b = c \cdot x` que é inversa — que é exatamente a decisão que o
+     * exercício existe para treinar. Ela reaparece na resolução, depois da
+     * resposta, que é quando ela ensina.
+     */
+    enunciadoTex:
+      nivel === 'dificil'
+        ? SEM_FORMULA
+        : inversa
+          ? `${a} \\cdot ${b} = ${c} \\cdot x \\qquad x = \\;?`
+          : `\\frac{${a}}{${b}} = \\frac{${c}}{x} \\qquad x = \\;?`,
     gabarito: resolucao.resultado,
     resolucao,
     conceitos: ['proporcao.regra-de-tres', 'proporcao.proporcao'],
@@ -135,7 +153,11 @@ function exercicioDivisao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `proporcao-divisao-${total}-${p1}-${p2}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: `Dividindo R$ ${total},00 em partes proporcionais a ${p1} e ${p2}, qual é a MAIOR das partes?`,
-    enunciadoTex: `${total} = x_1 + x_2 \\quad \\text{com} \\quad \\frac{x_1}{${p1}} = \\frac{x_2}{${p2}}`,
+    // Mesma razão da regra de três: a montagem é a tarefa.
+    enunciadoTex:
+      nivel === 'dificil'
+        ? SEM_FORMULA
+        : `${total} = x_1 + x_2 \\quad \\text{com} \\quad \\frac{x_1}{${p1}} = \\frac{x_2}{${p2}}`,
     gabarito: maior,
     resolucao: { resultado: maior, passos: resolucao.passos },
     conceitos: ['proporcao.divisao', 'proporcao.razao'],
