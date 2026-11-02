@@ -59,7 +59,7 @@ describe('integridade das teorias', () => {
   });
 
   /**
-   * Um caso por tópico, e não um só varrendo os 75.
+   * Um caso por tópico, e não um só varrendo os 74.
    *
    * Varrer todos num único `it` custava ~27 mil sorteios e, no runner de duas
    * CPUs da integração contínua, chegava perto do limite de 5 s. Separado, cada

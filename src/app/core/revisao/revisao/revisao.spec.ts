@@ -121,7 +121,7 @@ describe('registro de geradores', () => {
         expect(gerador.topicoId, `${topico} carregou outro gerador`).toBe(topico);
       }
     },
-    // São 75 imports dinâmicos; o primeiro de cada chunk é lento na integração
+    // São 74 imports dinâmicos; o primeiro de cada chunk é lento na integração
     // contínua.
     30_000,
   );

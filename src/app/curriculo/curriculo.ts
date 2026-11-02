@@ -76,7 +76,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'OpenStax, *Prealgebra 2e*',
         url: 'https://openstax.org/details/books/prealgebra-2e',
         nota:
-          'Frações, decimais, porcentagem e potências com exercícios resolvidos.',
+          'Frações, decimais e potências com exercícios resolvidos.',
       },
     ],
     topicos: [
@@ -105,12 +105,6 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         id: 'numeros-decimais',
         titulo: 'Números decimais',
         descricao: 'Decimais como frações de denominador potência de dez, e dízimas periódicas.',
-        pronto: true,
-      },
-      {
-        id: 'porcentagem',
-        titulo: 'Porcentagem',
-        descricao: 'Porcentagem como fração de denominador cem, acréscimos e descontos sucessivos.',
         pronto: true,
       },
       {

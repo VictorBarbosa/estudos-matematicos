@@ -66,7 +66,6 @@ import { TEORIA_MMC_MDC as t_mmc_mdc } from '@features/matematica-basica/mmc-mdc
 import { TEORIA_NOTACAO as t_notacao_cientifica_unidades } from '@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades.teoria';
 import { TEORIA_DECIMAIS as t_numeros_decimais } from '@features/matematica-basica/numeros-decimais/numeros-decimais.teoria';
 import { TEORIA_OPERACOES as t_operacoes_fundamentais } from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.teoria';
-import { TEORIA_PORCENTAGEM as t_porcentagem } from '@features/matematica-basica/porcentagem/porcentagem.teoria';
 import { TEORIA_POTENCIAS as t_potenciacao_radiciacao } from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.teoria';
 import { TEORIA_PROPORCAO as t_razao_proporcao } from '@features/matematica-basica/razao-proporcao/razao-proporcao.teoria';
 import { TEORIA_LIMITE_INTUITIVO as t_nocao_intuitiva_de_limite } from '@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.teoria';
@@ -143,7 +142,6 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['notacao-cientifica-unidades', t_notacao_cientifica_unidades],
   ['numeros-decimais', t_numeros_decimais],
   ['operacoes-fundamentais', t_operacoes_fundamentais],
-  ['porcentagem', t_porcentagem],
   ['potenciacao-radiciacao', t_potenciacao_radiciacao],
   ['razao-proporcao', t_razao_proporcao],
   ['nocao-intuitiva-de-limite', t_nocao_intuitiva_de_limite],

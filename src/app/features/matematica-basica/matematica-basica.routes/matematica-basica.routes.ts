@@ -18,11 +18,6 @@ export const rotas: Routes = [
     loadComponent: () => import('@features/matematica-basica/mmc-mdc/mmc-mdc').then((m) => m.MmcMdc),
   },
   {
-    path: 'porcentagem',
-    title: 'Porcentagem · Estudos Matemáticos',
-    loadComponent: () => import('@features/matematica-basica/porcentagem/porcentagem').then((m) => m.Porcentagem),
-  },
-  {
     path: 'potenciacao-radiciacao',
     title: 'Potenciação e radiciação · Estudos Matemáticos',
     loadComponent: () =>

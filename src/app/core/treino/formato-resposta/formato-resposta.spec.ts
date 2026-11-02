@@ -11,7 +11,7 @@ import {
 import { TODOS_OS_GERADORES } from '@core/treino/geradores.catalogo/geradores.catalogo';
 
 /**
- * Travas de formato, para os 75 geradores de uma vez.
+ * Travas de formato, para os 74 geradores de uma vez.
  *
  * São elas que pegam a classe de bug mais traiçoeira do site: o aluno resolve
  * certo e é reprovado porque o gabarito não é digitável no formato aceito, ou

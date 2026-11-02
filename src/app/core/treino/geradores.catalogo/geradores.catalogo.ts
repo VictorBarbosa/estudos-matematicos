@@ -2,7 +2,7 @@
  * Catálogo de todos os geradores do currículo.
  *
  * Existe para que as travas globais — variedade, formato de resposta,
- * renderização das fórmulas, ids de conceito — valham para os 75 tópicos sem
+ * renderização das fórmulas, ids de conceito — valham para os 74 tópicos sem
  * que cada teste refaça a lista. Só os testes importam este arquivo; ele não
  * entra no bundle da aplicação.
  */
@@ -66,7 +66,6 @@ import { geradorMmcMdc as g_mmc_mdc } from '@features/matematica-basica/mmc-mdc/
 import { geradorNotacao as g_notacao_cientifica_unidades } from '@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades.gerador';
 import { geradorDecimais as g_numeros_decimais } from '@features/matematica-basica/numeros-decimais/numeros-decimais.gerador';
 import { geradorOperacoes as g_operacoes_fundamentais } from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.gerador';
-import { geradorPorcentagem as g_porcentagem } from '@features/matematica-basica/porcentagem/porcentagem.gerador';
 import { geradorPotencias as g_potenciacao_radiciacao } from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.gerador';
 import { geradorProporcao as g_razao_proporcao } from '@features/matematica-basica/razao-proporcao/razao-proporcao.gerador';
 import { geradorLimiteIntuitivo as g_nocao_intuitiva_de_limite } from '@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.gerador';
@@ -149,7 +148,6 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['notacao-cientifica-unidades', g_notacao_cientifica_unidades],
   ['numeros-decimais', g_numeros_decimais],
   ['operacoes-fundamentais', g_operacoes_fundamentais],
-  ['porcentagem', g_porcentagem],
   ['potenciacao-radiciacao', g_potenciacao_radiciacao],
   ['razao-proporcao', g_razao_proporcao],
   ['nocao-intuitiva-de-limite', g_nocao_intuitiva_de_limite],

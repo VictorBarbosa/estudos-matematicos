@@ -16,7 +16,7 @@ import { NIVEIS } from '@core/treino/models/treino.model';
  * uma barra só: em JavaScript `'\;'` é apenas `;`, e o KaTeX desenhava
  * "x = 0 ;⇒; …" onde devia haver um espaço fino.
  *
- * **Um caso de teste por tópico**, de propósito: compilar os 75 tópicos de uma
+ * **Um caso de teste por tópico**, de propósito: compilar os 74 tópicos de uma
  * vez custava ~45 mil renderizações num único `it`, o que passava longe aqui e
  * estourava o limite de 5 s no runner de duas CPUs da integração contínua. Em
  * casos separados, cada um faz algumas centenas — e, quando falha, o nome do

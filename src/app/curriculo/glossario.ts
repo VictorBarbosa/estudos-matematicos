@@ -24,7 +24,6 @@ export const GLOSSARIO: Readonly<Record<string, readonly TermoGlossario[]>> = {
     { pt: 'mínimo múltiplo comum (MMC)', fr: 'plus petit commun multiple (PPCM)', en: 'least common multiple (LCM)' },
     { pt: 'máximo divisor comum (MDC)', fr: 'plus grand commun diviseur (PGCD)', en: 'greatest common divisor (GCD)' },
     { pt: 'dízima periódica', fr: 'développement décimal périodique', en: 'repeating decimal' },
-    { pt: 'porcentagem', fr: 'pourcentage', en: 'percentage' },
     { pt: 'razão / proporção', fr: 'rapport / proportion', en: 'ratio / proportion' },
     { pt: 'regra de três', fr: 'règle de trois', en: 'cross-multiplication' },
     { pt: 'potenciação', fr: 'exponentiation', en: 'exponentiation' },

@@ -73,7 +73,7 @@ export class PainelProgresso {
    * O dono de cada conceito vem do índice gerado, não do prefixo do id. O
    * filtro antigo usava `startsWith(topicoId + '.')`, e os prefixos raramente
    * coincidem com o nome da pasta — `operacoes-fundamentais` registra
-   * `operacoes.*` —, então a sugestão de revisão só funcionava em 12 dos 75
+   * `operacoes.*` —, então a sugestão de revisão só funcionava em 12 dos 74
    * tópicos. Além disso, o corte nos 8 piores conceitos do site vinha ANTES do
    * filtro: bastava haver oito conceitos frágeis em outros tópicos para o
    * painel ficar vazio aqui.

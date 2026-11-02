@@ -68,7 +68,6 @@ export const CARREGAR_GERADOR: Readonly<
   'notacao-cientifica-unidades': () => import('@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades.gerador').then((m) => m.geradorNotacao),
   'numeros-decimais': () => import('@features/matematica-basica/numeros-decimais/numeros-decimais.gerador').then((m) => m.geradorDecimais),
   'operacoes-fundamentais': () => import('@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.gerador').then((m) => m.geradorOperacoes),
-  'porcentagem': () => import('@features/matematica-basica/porcentagem/porcentagem.gerador').then((m) => m.geradorPorcentagem),
   'potenciacao-radiciacao': () => import('@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.gerador').then((m) => m.geradorPotencias),
   'razao-proporcao': () => import('@features/matematica-basica/razao-proporcao/razao-proporcao.gerador').then((m) => m.geradorProporcao),
   'nocao-intuitiva-de-limite': () => import('@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.gerador').then((m) => m.geradorLimiteIntuitivo),

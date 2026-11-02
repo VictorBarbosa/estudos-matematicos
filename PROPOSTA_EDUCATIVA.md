@@ -19,7 +19,7 @@ A ordem é a ordem de aprendizagem: **nada aparece antes do que ele precisa**. N
 fazer Cálculo 2 sem Cálculo 1, nem física vetorial sem vetores.
 
 ### 1. Matemática básica
-Operações fundamentais, MMC e MDC, frações, decimais, porcentagem, razão e proporção,
+Operações fundamentais, MMC e MDC, frações, decimais, razão e proporção,
 potenciação e radiciação, notação científica e unidades.
 
 ### 2. Álgebra
@@ -63,7 +63,7 @@ derivação, regra da cadeia, aplicações da derivada.
 Soma de Riemann, integral definida, integral indefinida, teorema fundamental, técnicas de
 integração, aplicações da integral.
 
-São **75 tópicos** no total, cada um com explicação teórica, gráfico interativo e exercícios
+São **74 tópicos** no total, cada um com explicação teórica, gráfico interativo e exercícios
 corrigidos.
 
 ## O que você pode aprender (e ensinar)
@@ -107,4 +107,4 @@ O **modo livre**, disponível na página inicial, destranca todos os tópicos pa
 
 ---
 
-*75 tópicos. Da matemática básica à equação do foguete. Tudo interativo, tudo com explicação.*
+*74 tópicos. Da matemática básica à equação do foguete. Tudo interativo, tudo com explicação.*

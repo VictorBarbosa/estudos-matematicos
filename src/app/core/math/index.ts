@@ -14,7 +14,6 @@ export * from '@core/math/numeros/divisibilidade/divisibilidade';
 export * from '@core/math/numeros/fracao/fracao';
 export * from '@core/math/numeros/fracao-operacoes/fracao-operacoes';
 export * from '@core/math/numeros/decimais/decimais';
-export * from '@core/math/numeros/porcentagem/porcentagem';
 export * from '@core/math/numeros/potencias/potencias';
 export * from '@core/math/numeros/notacao-cientifica/notacao-cientifica';
 export * from '@core/math/numeros/proporcao/proporcao';
