@@ -340,23 +340,45 @@ export function calcular(estado: EstadoCalculadora, angulo: Angulo): EstadoCalcu
   return { expressao: fechada, resultado: formatarValor(limpo), erro: null };
 }
 
+/** Uma linha da divisão simultânea: os valores, e por quanto eles foram divididos. */
+export interface LinhaDecomposicao {
+  /** Os números como estavam ANTES de dividir por {@link divisor}. */
+  readonly valores: readonly number[];
+  readonly divisor: number;
+  /** O divisor coube em TODOS os números desta linha? É o que entra no MDC. */
+  readonly comum: boolean;
+}
+
 /** O que a aba de MMC e MDC mostra. */
 export interface ContaDeInteiros {
   /** Os números lidos da entrada, na ordem em que foram escritos. */
   readonly numeros: readonly number[];
   readonly valor: number | null;
-  /** `12 = 2² · 3`, uma linha por número — é de onde a resposta sai. */
-  readonly fatoracoes: readonly string[];
+  /** A decomposição, linha a linha, até todos virarem 1. */
+  readonly decomposicao: readonly LinhaDecomposicao[];
+  /** `2³ · 3² = 72`: de onde o resultado sai. */
+  readonly montagem: string | null;
   readonly erro: string | null;
 }
 
-const CONTA_VAZIA: ContaDeInteiros = { numeros: [], valor: null, fatoracoes: [], erro: null };
+const CONTA_VAZIA: ContaDeInteiros = {
+  numeros: [],
+  valor: null,
+  decomposicao: [],
+  montagem: null,
+  erro: null,
+};
 
 /** Vírgula, ponto e vírgula ou espaço separam os números — o que vier à mão. */
 const SEPARADORES = /[,;\s]+/;
 
-/** Acima disto o produto deixa de ser exato em ponto flutuante. */
-const LIMITE_EXATO = Number.MAX_SAFE_INTEGER;
+/**
+ * O maior número aceito na aba.
+ *
+ * Não é limitação de precisão, é de utilidade: a decomposição de um número
+ * de dez algarismos teria dezenas de linhas e nenhuma serventia escolar.
+ */
+const LIMITE = 1_000_000_000;
 
 /**
  * O MMC ou o MDC dos números escritos na aba de inteiros.
@@ -387,8 +409,8 @@ export function calcularInteiros(
     if (numero === 0) {
       return { ...CONTA_VAZIA, erro: 'O zero fica de fora: use inteiros maiores que zero.' };
     }
-    if (numero > LIMITE_EXATO) {
-      return { ...CONTA_VAZIA, erro: 'Número grande demais para a conta sair exata.' };
+    if (numero > LIMITE) {
+      return { ...CONTA_VAZIA, erro: 'Use números até 1 000 000 000.' };
     }
     numeros.push(numero);
   }
@@ -405,7 +427,62 @@ export function calcularInteiros(
   return {
     numeros,
     valor,
-    fatoracoes: numeros.map((numero) => `${numero} = ${fatoracaoParaTexto(numero)}`),
+    decomposicao: decompor(numeros),
+    // A fatoração do próprio resultado é, por construção, o produto dos
+    // divisores que o formaram — não há como as duas contas discordarem.
+    montagem: valor > 1 ? `${fatoracaoParaTexto(valor)} = ${valor}` : null,
     erro: null,
   };
+}
+
+/**
+ * A divisão simultânea, linha a linha.
+ *
+ * É o método da escola, e o único que mostra as duas respostas de uma vez: o
+ * MMC é o produto de TODOS os divisores da coluna da direita, e o MDC é o
+ * produto só daqueles que couberam em todos os números da linha.
+ *
+ * ```
+ * 12  18  24 │ 2   ← coube em todos
+ *  6   9  12 │ 2
+ *  3   9   6 │ 2
+ *  3   9   3 │ 3   ← coube em todos
+ *  1   3   1 │ 3
+ *  1   1   1
+ * ```
+ */
+export function decompor(numeros: readonly number[]): readonly LinhaDecomposicao[] {
+  const linhas: LinhaDecomposicao[] = [];
+  let valores = [...numeros];
+  let candidato = 2;
+
+  while (valores.some((valor) => valor > 1)) {
+    const maior = Math.max(...valores);
+
+    /*
+     * Passado a raiz do maior valor, o que sobrou maior que 1 já é primo: todos
+     * os fatores menores foram retirados nas linhas anteriores. Sem este
+     * atalho, um número primo grande faria o candidato subir de um em um até
+     * ele próprio.
+     */
+    const divisor =
+      candidato * candidato > maior
+        ? Math.min(...valores.filter((valor) => valor > 1))
+        : candidato;
+
+    if (!valores.some((valor) => valor % divisor === 0)) {
+      candidato++;
+      continue;
+    }
+
+    linhas.push({
+      valores: [...valores],
+      divisor,
+      comum: valores.every((valor) => valor % divisor === 0),
+    });
+
+    valores = valores.map((valor) => (valor % divisor === 0 ? valor / divisor : valor));
+  }
+
+  return linhas;
 }

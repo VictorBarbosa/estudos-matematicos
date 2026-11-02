@@ -196,14 +196,49 @@ $tecla: 3.25rem;
   font-size: 0.7rem;
 }
 
-.fatoracoes {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  padding: 0;
-  list-style: none;
-  color: #a5a5a7;
-  font-size: 0.8rem;
+/*
+ * A divisão simultânea.
+ *
+ * É uma tabela de verdade porque é uma tabela: cada linha são os números antes
+ * de serem divididos, e a última célula é por quanto.
+ */
+.decomposicao {
+  width: 100%;
+  border-collapse: collapse;
+  color: #d1d1d6;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+
+  caption {
+    caption-side: top;
+    text-align: left;
+    padding-bottom: 0.25rem;
+  }
+
+  td {
+    padding: 0.1rem 0.35rem;
+    text-align: right;
+  }
+
+  .divisor {
+    border-left: 1px solid #48484a;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .chegada {
+    color: #8e8e93;
+  }
+}
+
+/* No MDC, só contam as linhas em que o divisor coube em todos. */
+.decomposicao.mdc .comum .divisor {
+  color: $operador;
+}
+
+.montagem {
+  color: #fff;
+  font-size: 0.9rem;
   font-variant-numeric: tabular-nums;
 }
 

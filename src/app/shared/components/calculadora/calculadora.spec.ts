@@ -293,13 +293,36 @@ describe('Calculadora: MMC e MDC', () => {
     expect(legenda()).toContain('MDC');
   });
 
-  it('mostra a fatoração de cada número', async () => {
+  it('mostra a decomposição até todos chegarem a 1', async () => {
     await escrever('12, 18');
 
-    const linhas = [...fixture.nativeElement.querySelectorAll('.fatoracoes li')].map(
-      (item) => (item as HTMLElement).textContent!.trim(),
+    const linhas = [...fixture.nativeElement.querySelectorAll('.decomposicao tr')].map((linha) =>
+      [...(linha as HTMLElement).children].map((celula) => celula.textContent!.trim()).join(' '),
     );
-    expect(linhas).toEqual(['12 = 2² · 3', '18 = 2 · 3²']);
+
+    // A última linha é a chegada: todos em 1, sem divisor.
+    expect(linhas).toEqual(['12 18 2', '6 9 2', '3 9 3', '1 3 3', '1 1 ']);
+  });
+
+  it('mostra de onde o resultado sai', async () => {
+    await escrever('12, 18');
+
+    expect(
+      (fixture.nativeElement.querySelector('.montagem') as HTMLElement).textContent!.trim(),
+    ).toBe('MMC = 2² · 3² = 36');
+  });
+
+  it('no MDC, destaca as linhas que couberam em todos', async () => {
+    await escrever('12, 18');
+    escolha('MDC').click();
+    await fixture.whenStable();
+
+    const comuns = [...fixture.nativeElement.querySelectorAll('.decomposicao tr.comum')].map(
+      (linha) => (linha as HTMLElement).querySelector('.divisor')!.textContent!.trim(),
+    );
+
+    expect(comuns).toEqual(['2', '3']);
+    expect(fixture.nativeElement.querySelector('.decomposicao')!.classList).toContain('mdc');
   });
 
   it('entrada inválida vira recado, não resultado', async () => {

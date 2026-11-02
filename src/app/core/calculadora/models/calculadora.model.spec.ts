@@ -301,9 +301,14 @@ describe('MMC e MDC', () => {
     }
   });
 
-  it('mostra a fatoração de cada número', () => {
-    // É de onde a resposta sai: 12 = 2²·3 e 18 = 2·3² explicam o MMC 2²·3².
-    expect(calcularInteiros('12, 18', 'mmc').fatoracoes).toEqual(['12 = 2² · 3', '18 = 2 · 3²']);
+  it('mostra a montagem do resultado', () => {
+    expect(calcularInteiros('12, 18, 24', 'mmc').montagem).toBe('2³ · 3² = 72');
+    expect(calcularInteiros('12, 18, 24', 'mdc').montagem).toBe('2 · 3 = 6');
+  });
+
+  it('sem divisor comum, não há montagem a mostrar', () => {
+    // MDC 1 não se escreve como produto de primos; a tela diz isso em palavras.
+    expect(calcularInteiros('8, 9', 'mdc').montagem).toBeNull();
   });
 
   it('coprimos têm MDC 1 e MMC igual ao produto', () => {
@@ -339,5 +344,79 @@ describe('MMC e MDC', () => {
 
     expect(gigante.valor).toBeNull();
     expect(gigante.erro).toContain('exat');
+  });
+});
+
+/**
+ * A decomposição, linha a linha.
+ *
+ * O que estava na tela antes — a fatoração de cada número, pronta — mostrava o
+ * fim sem mostrar o caminho. A divisão simultânea é o método da escola, e tem
+ * a propriedade de dar as duas respostas de uma vez.
+ */
+describe('divisão simultânea', () => {
+  /** A tabela como ela se lê: `12 18 24 | 2`. */
+  function tabela(entrada: string): readonly string[] {
+    return calcularInteiros(entrada, 'mmc').decomposicao.map(
+      (linha) => `${linha.valores.join(' ')} | ${linha.divisor}`,
+    );
+  }
+
+  it('desce dividindo até todos chegarem a 1', () => {
+    expect(tabela('12, 18, 24')).toEqual([
+      '12 18 24 | 2',
+      '6 9 12 | 2',
+      '3 9 6 | 2',
+      '3 9 3 | 3',
+      '1 3 1 | 3',
+    ]);
+  });
+
+  it('divide quem dá e deixa quem não dá como está', () => {
+    // Na terceira linha o 9 não é divisível por 2 e desce inteiro.
+    expect(calcularInteiros('12, 18, 24', 'mmc').decomposicao[2]!.valores).toEqual([3, 9, 6]);
+  });
+
+  it('marca as linhas em que o divisor coube em todos', () => {
+    const marcadas = calcularInteiros('12, 18, 24', 'mmc').decomposicao
+      .filter((linha) => linha.comum)
+      .map((linha) => linha.divisor);
+
+    // São exatamente os fatores do MDC: 2 · 3 = 6.
+    expect(marcadas).toEqual([2, 3]);
+  });
+
+  it('coprimos não têm nenhuma linha comum', () => {
+    expect(calcularInteiros('8, 9', 'mmc').decomposicao.every((l) => !l.comum)).toBe(true);
+  });
+
+  it('o produto dos divisores é o MMC', () => {
+    const conta = calcularInteiros('6, 8, 15', 'mmc');
+    const produto = conta.decomposicao.reduce((total, linha) => total * linha.divisor, 1);
+
+    expect(produto).toBe(conta.valor);
+  });
+
+  it('o produto das linhas comuns é o MDC', () => {
+    const conta = calcularInteiros('24, 36, 60', 'mdc');
+    const produto = conta.decomposicao
+      .filter((linha) => linha.comum)
+      .reduce((total, linha) => total * linha.divisor, 1);
+
+    expect(produto).toBe(conta.valor);
+  });
+
+  it('números iguais descem juntos', () => {
+    expect(tabela('6, 6')).toEqual(['6 6 | 2', '3 3 | 3']);
+  });
+
+  it('um primo grande não faz o divisor subir de um em um', () => {
+    // Sem o atalho pela raiz, 999983 levaria um milhão de voltas.
+    const comecou = Date.now();
+    const conta = calcularInteiros('999983, 2', 'mmc');
+
+    expect(conta.valor).toBe(1999966);
+    expect(conta.decomposicao.map((l) => l.divisor)).toEqual([2, 999983]);
+    expect(Date.now() - comecou).toBeLessThan(500);
   });
 });

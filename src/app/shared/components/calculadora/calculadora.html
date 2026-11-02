@@ -105,14 +105,37 @@
           />
         </label>
 
-        <!-- A fatoração é de onde a resposta sai: 12 = 2²·3 e 18 = 2·3²
-             explicam por que o MMC é 2²·3² e o MDC é 2·3. -->
-        @if (conta().fatoracoes.length > 0) {
-          <ul class="fatoracoes">
-            @for (linha of conta().fatoracoes; track linha) {
-              <li>{{ linha }}</li>
-            }
-          </ul>
+        <!-- A divisão simultânea: o caminho até a resposta, e não só ela. O MMC
+             é o produto de toda a coluna da direita; o MDC, só das linhas em
+             que o divisor coube em todos os números. -->
+        @if (conta().decomposicao.length > 0) {
+          <table class="decomposicao" [class.mdc]="calculadora.operacao() === 'mdc'">
+            <caption class="rotulo">Dividindo todos ao mesmo tempo</caption>
+            <tbody>
+              @for (linha of conta().decomposicao; track $index) {
+                <tr [class.comum]="linha.comum">
+                  @for (valor of linha.valores; track $index) {
+                    <td>{{ valor }}</td>
+                  }
+                  <td class="divisor">{{ linha.divisor }}</td>
+                </tr>
+              }
+              <tr class="chegada">
+                @for (numero of conta().numeros; track $index) {
+                  <td>1</td>
+                }
+                <td class="divisor"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          @if (conta().montagem; as montagem) {
+            <p class="montagem">
+              {{ calculadora.operacao() === 'mmc' ? 'MMC' : 'MDC' }} = {{ montagem }}
+            </p>
+          } @else {
+            <p class="montagem">Nenhum divisor comum: MDC = 1.</p>
+          }
         }
       </div>
     } @else {

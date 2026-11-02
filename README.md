@@ -305,9 +305,27 @@ trigonometria** é a poeira de π não caber num `double`. O corte vale só ness
 
 A terceira aba faz **MMC e MDC** de dois ou mais inteiros escritos separados por vírgula — ali
 a vírgula separa números, e não casas decimais, porque as duas contas só existem entre inteiros.
-Junto do resultado vem a fatoração de cada número: ver que 12 = 2²·3 e 18 = 2·3² é o que explica
-por que o MMC é 2²·3² e o MDC é 2·3. O zero é recusado de propósito — mdc(0, n) = n e
-mmc(n, 0) = 0 são verdades inúteis para quem está aprendendo o que as contas significam.
+
+Junto do resultado vem a **divisão simultânea**, linha a linha, que é o método da escola e o
+único que dá as duas respostas de uma vez:
+
+```
+12  18  24 │ 2   ← coube em todos
+ 6   9  12 │ 2
+ 3   9   6 │ 2
+ 3   9   3 │ 3   ← coube em todos
+ 1   3   1 │ 3
+ 1   1   1
+```
+
+O **MMC é o produto de toda a coluna da direita** (2³·3² = 72); o **MDC, só das linhas em que o
+divisor coube em todos os números** (2·3 = 6) — e são essas que a tela destaca quando o MDC está
+escolhido. A linha de montagem sai de `fatoracaoParaTexto` aplicada ao próprio resultado: por
+construção, ela é o produto dos divisores que o formaram, então não há como a tabela e a
+resposta discordarem.
+
+O zero é recusado de propósito — mdc(0, n) = n e mmc(n, 0) = 0 são verdades inúteis para quem
+está aprendendo o que as contas significam.
 
 Ela **some abaixo de 60rem**, a mesma largura em que a navegação lateral vira menu: num celular
 cobriria justamente o exercício que existe para ajudar a resolver. E só é baixada quando alguém
