@@ -1,0 +1,94 @@
+@if (calculadora.aberta()) {
+  <section
+    #painel
+    class="janela"
+    role="dialog"
+    aria-label="Calculadora"
+    tabindex="0"
+    [class.cientifica]="calculadora.modo() === 'cientifica'"
+    [style.left.px]="local()?.x ?? null"
+    [style.top.px]="local()?.y ?? null"
+    [class.sem-posicao]="local() === null"
+    (keydown)="aoDigitar($event)"
+  >
+    <!-- A barra é a alça: é por ela que a janela se arrasta. -->
+    <header
+      class="barra"
+      (pointerdown)="aoPegar($event)"
+      (pointermove)="aoArrastar($event)"
+      (pointerup)="aoSoltar()"
+      (pointercancel)="aoSoltar()"
+    >
+      <span class="alca" aria-hidden="true">⠿</span>
+
+      <div class="modos" role="tablist" aria-label="Modo da calculadora">
+        <button
+          type="button"
+          role="tab"
+          [attr.aria-selected]="calculadora.modo() === 'basica'"
+          [class.ativo]="calculadora.modo() === 'basica'"
+          (click)="calculadora.definirModo('basica')"
+        >
+          Básica
+        </button>
+        <button
+          type="button"
+          role="tab"
+          [attr.aria-selected]="calculadora.modo() === 'cientifica'"
+          [class.ativo]="calculadora.modo() === 'cientifica'"
+          (click)="calculadora.definirModo('cientifica')"
+        >
+          Científica
+        </button>
+      </div>
+
+      <button type="button" class="fechar" (click)="calculadora.fechar()" aria-label="Fechar a calculadora">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.3 19.71 2.88 18.3 9.17 12 2.88 5.71 4.3 4.29l6.29 6.3 6.3-6.3z"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <div class="visor" role="status" aria-live="polite">
+      <!-- O texto vai dentro de um `span`: o bloco é rtl para que uma conta
+           longa seja cortada pela ESQUERDA, onde está o que já passou, e o
+           `span` é ltr para que a conta não seja lida de trás para a frente. -->
+      <p class="legenda"><span>{{ legenda() }}</span></p>
+      <p class="valor" [class.apertado]="visorApertado()"><span>{{ visor() }}</span></p>
+    </div>
+
+    <div class="teclado">
+      @if (calculadora.modo() === 'cientifica') {
+        <div class="teclas cientificas">
+          @for (tecla of cientificas; track tecla.rotulo) {
+            <button
+              type="button"
+              [class]="tecla.estilo"
+              [attr.aria-label]="tecla.nome ?? null"
+              (click)="pressionar(tecla.acao)"
+            >
+              {{ rotuloDe(tecla) }}
+            </button>
+          }
+        </div>
+      }
+
+      <div class="teclas basicas">
+        @for (tecla of basicas; track tecla.rotulo) {
+          <button
+            type="button"
+            [class]="tecla.estilo"
+            [class.largo]="tecla.largo"
+            [attr.aria-label]="tecla.nome ?? null"
+            (click)="pressionar(tecla.acao)"
+          >
+            {{ tecla.rotulo === 'AC' ? rotuloLimpar() : tecla.rotulo }}
+          </button>
+        }
+      </div>
+    </div>
+  </section>
+}

@@ -1,0 +1,208 @@
+/*
+ * A calculadora é sempre escura, nos dois temas do site.
+ *
+ * Não é descuido: ela flutua sobre a página como um objeto à parte, e o preto
+ * com teclas redondas é o que a faz ser lida como "a calculadora" e não como
+ * mais um cartão da interface. Por isso as cores aqui são literais, e não os
+ * tokens do tema.
+ */
+$fundo: #1c1c1e;
+$digito: #333335;
+$funcao: #a5a5a7;
+$operador: #ff9f0a;
+$tecla: 3.25rem;
+
+:host {
+  display: contents;
+}
+
+.janela {
+  position: fixed;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 0.75rem 0.75rem;
+  border-radius: 1.25rem;
+  background: $fundo;
+  box-shadow: 0 1.5rem 3rem oklch(0% 0 0 / 0.45);
+  color: #fff;
+  user-select: none;
+
+  &:focus-visible {
+    outline: 2px solid $operador;
+    outline-offset: 2px;
+  }
+
+  /* Sem posição guardada, nasce no canto de baixo à direita. */
+  &.sem-posicao {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  cursor: grab;
+  touch-action: none;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.alca {
+  color: #636366;
+  font-size: 1rem;
+  letter-spacing: -0.2em;
+}
+
+.modos {
+  display: flex;
+  gap: 0.25rem;
+  margin-inline: auto;
+
+  button {
+    padding: 0.2rem 0.6rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #a5a5a7;
+    font: inherit;
+    font-size: 0.75rem;
+    cursor: pointer;
+
+    &.ativo {
+      background: #48484a;
+      color: #fff;
+    }
+  }
+}
+
+.fechar {
+  display: grid;
+  place-items: center;
+  padding: 0.2rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #a5a5a7;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.visor {
+  padding: 0 0.5rem;
+  text-align: right;
+  overflow: hidden;
+}
+
+.legenda,
+.valor {
+  white-space: nowrap;
+  overflow: hidden;
+  /* Corta pela esquerda: o fim da conta é o que interessa ver. */
+  direction: rtl;
+
+  span {
+    display: inline-block;
+    direction: ltr;
+  }
+}
+
+.legenda {
+  min-height: 1.1rem;
+  color: #a5a5a7;
+  font-size: 0.8rem;
+}
+
+.valor {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+
+  &.apertado {
+    font-size: 1.5rem;
+  }
+}
+
+.teclado {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.teclas {
+  display: grid;
+  gap: 0.5rem;
+
+  button {
+    width: $tecla;
+    height: $tecla;
+    border: 0;
+    border-radius: 999px;
+    background: $digito;
+    color: #fff;
+    font: inherit;
+    font-size: 1.25rem;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.25);
+    }
+
+    &:active {
+      filter: brightness(1.5);
+    }
+  }
+
+  .funcao {
+    background: $funcao;
+    color: #000;
+  }
+
+  .operador {
+    background: $operador;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .largo {
+    width: auto;
+    grid-column: span 2;
+    justify-self: stretch;
+    text-align: left;
+    padding-left: 1.25rem;
+  }
+}
+
+.basicas {
+  grid-template-columns: repeat(4, $tecla);
+}
+
+/* A ala científica tem teclas menores: são rótulos, não algarismos. */
+.cientificas {
+  grid-template-columns: repeat(3, $tecla);
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+/*
+ * Some no celular.
+ *
+ * 60rem é a mesma largura em que a navegação lateral vira menu. Abaixo dela a
+ * janela cobriria justamente o exercício que ela existe para ajudar a
+ * resolver.
+ */
+@media (max-width: 60rem) {
+  .janela {
+    display: none;
+  }
+}

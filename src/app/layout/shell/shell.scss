@@ -52,10 +52,17 @@
   }
 }
 
-.tema {
+.tema,
+.calculadora {
   @include botao-sutil;
   padding: var(--esp-2);
   border-radius: var(--raio-pill);
+}
+
+/* Ligada, a calculadora acende o botão que a abriu. */
+.calculadora[aria-pressed='true'] {
+  background: var(--acento-suave);
+  color: var(--acento);
 }
 
 .corpo {
@@ -88,6 +95,11 @@
 @media (max-width: 60rem) {
   .menu {
     display: inline-flex;
+  }
+
+  /* A calculadora não existe no celular; o botão dela também não. */
+  .calculadora {
+    display: none;
   }
 
   .lateral {

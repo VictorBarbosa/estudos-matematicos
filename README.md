@@ -277,6 +277,36 @@ Cinco travas globais cuidam dessa parte, para os 75 geradores de uma vez
 - a resolução termina mostrando o gabarito;
 - toda fórmula compila no KaTeX e todo id de conceito citado existe.
 
+## A calculadora flutuante
+
+O botão no cabeçalho abre uma calculadora que **não é um modal**: ela flutua, arrasta pela
+barra do topo e fica onde foi deixada — posição, modo e unidade de ângulo voltam na sessão
+seguinte. Dois modos: **básica**, quatro colunas como a do iPhone, e **científica**, que
+acrescenta uma ala de três colunas à esquerda em vez de abrir outra janela.
+
+Três decisões que valem registrar:
+
+- **O visor mostra a conta inteira, não só o número.** É a diferença em relação à do iPhone, e
+  é de propósito: num site que ensina a ordem das operações, esconder que `2 + 3 × 4` dá 14 e
+  não 20 seria trabalhar contra o conteúdo.
+- **O avaliador não é novo.** `avaliarExpressao` é o mesmo analisador que lê as respostas do
+  treino — mesmas funções, mesmas constantes, mesma recusa a usar `eval`. Um segundo motor
+  seria uma segunda gramática para manter e, pior, uma calculadora que concorda com uma conta
+  que o campo de resposta recusa.
+- **RAD e GRAU.** O motor trabalha em radianos, que é o que o Cálculo pede; metade deste site
+  — trajetória, torque, vetores — fala em graus. No modo GRAU, `emGraus` reescreve `sin(A)`
+  como `sin((A)·π/180` antes de avaliar, pelo parêntese correspondente e não por regex: em
+  `sin(30+60)` o ângulo é a soma inteira, e converter só o 30 daria um número errado que
+  continua parecendo plausível.
+
+`cos(90°)` mostra `0`, e não `6,12·10⁻¹⁷`: abaixo de 10⁻¹², o resultado de uma conta **com
+trigonometria** é a poeira de π não caber num `double`. O corte vale só nesse caso — em Física,
+6,6·10⁻³⁴ é a constante de Planck, não ruído.
+
+Ela **some abaixo de 60rem**, a mesma largura em que a navegação lateral vira menu: num celular
+cobriria justamente o exercício que existe para ajudar a resolver. E só é baixada quando alguém
+a abre pela primeira vez (`@defer` no shell), porque traz o analisador junto.
+
 ## Convenções
 
 - Standalone em tudo, `ChangeDetectionStrategy.OnPush`.

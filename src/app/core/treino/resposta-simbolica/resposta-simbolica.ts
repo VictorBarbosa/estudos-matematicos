@@ -64,6 +64,32 @@ export function analisarSimbolica(entrada: string): Simbolica | null {
 }
 
 /**
+ * O valor de uma expressão sem incógnita.
+ *
+ * Mesmo analisador da resposta simbólica — mesmas funções, mesmas constantes,
+ * mesma recusa a usar `eval`. É o motor da calculadora flutuante: escrever um
+ * segundo avaliador significaria duas gramáticas para manter e duas chances de
+ * divergir do que o campo de resposta aceita.
+ *
+ * Devolve `null` quando a expressão não fecha ou não resulta num número
+ * finito — é o caso de `2+`, de `sin(` e de `1/0`.
+ */
+export function avaliarExpressao(entrada: string): number | null {
+  const texto = normalizar(entrada);
+  if (texto === '') {
+    return null;
+  }
+
+  const avaliar = compilar(texto);
+  if (avaliar === null) {
+    return null;
+  }
+
+  const valor = avaliar(0);
+  return Number.isFinite(valor) ? valor : null;
+}
+
+/**
  * As duas expressões são a mesma função?
  *
  * Compara ponto a ponto, com tolerância relativa. Pontos em que qualquer dos
@@ -308,6 +334,7 @@ function normalizar(entrada: string): string {
     .replace(/÷/g, '/')
     .replace(/[−–—]/g, '-')
     .replace(/√/g, 'sqrt')
+    .replace(/π/g, 'pi')
     // Como se escreve em português.
     .replace(/sen/g, 'sin')
     .replace(/arcsin/g, 'asin')
