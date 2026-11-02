@@ -228,6 +228,18 @@ export class Calculadora {
   }
 
   protected aoPegar(evento: PointerEvent): void {
+    /*
+     * Os botões da barra não arrastam a janela.
+     *
+     * Capturar o ponteiro na barra faz o `pointerup` ser entregue a ela, e o
+     * clique passa a ser disparado no ancestral comum — a própria barra — em
+     * vez do botão. Era por isso que a aba Científica e o X não respondiam a
+     * um clique de verdade.
+     */
+    if ((evento.target as HTMLElement).closest('button') !== null) {
+      return;
+    }
+
     const alvo = evento.currentTarget as HTMLElement;
     const caixa = this.painel()!.nativeElement.getBoundingClientRect();
 

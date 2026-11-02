@@ -197,3 +197,79 @@ describe('o número exibido', () => {
     expect(formatarValor(Number.POSITIVE_INFINITY)).toBe('—');
   });
 });
+
+/**
+ * As teclas que não podem acontecer.
+ *
+ * A calculadora aceitava qualquer tecla a qualquer momento: dava para escrever
+ * `5-----333---` e `5××××2`, e o aviso só vinha no igual, quando a conta
+ * inteira já estava perdida.
+ */
+describe('teclas impossíveis', () => {
+  it('operador em cima de operador troca, não acumula', () => {
+    expect(teclar(['5', '-', '-', '-', '-']).expressao).toBe('5-');
+    expect(teclar(['5', '×', '×', '×', '×', '2']).expressao).toBe('5×2');
+  });
+
+  it('a última tecla é a que vale', () => {
+    expect(teclar(['9', '+', '×', '÷', '2']).expressao).toBe('9÷2');
+  });
+
+  it('o menos depois de × nega o próximo número', () => {
+    // `5×-3` é uma conta legítima: é cinco vezes menos três.
+    expect(teclar(['5', '×', '-', '3']).expressao).toBe('5×-3');
+    expect(calcular(teclar(['5', '×', '-', '3']), 'rad').resultado).toBe('-15');
+  });
+
+  it('mas um segundo menos ali também troca', () => {
+    expect(teclar(['5', '×', '-', '-', '-']).expressao).toBe('5-');
+  });
+
+  it('a conta não começa com uma operação', () => {
+    expect(teclar(['+']).expressao).toBe('');
+    expect(teclar(['×']).expressao).toBe('');
+  });
+
+  it('mas começa com um menos, que é sinal', () => {
+    expect(teclar(['-', '7']).expressao).toBe('-7');
+  });
+
+  it('só uma vírgula por número', () => {
+    expect(teclar(['1', ',', '5', ',', ',']).expressao).toBe('1,5');
+  });
+
+  it('cada número ganha a sua vírgula', () => {
+    expect(teclar(['1', ',', '5', '+', '2', ',', '5']).expressao).toBe('1,5+2,5');
+  });
+
+  it('vírgula solta vira zero vírgula', () => {
+    expect(teclar([',', '5']).expressao).toBe('0,5');
+    expect(teclar(['2', '+', ',', '5']).expressao).toBe('2+0,5');
+  });
+
+  it('não fecha parênteses que não foram abertos', () => {
+    expect(teclar([')']).expressao).toBe('');
+    expect(teclar(['2', '+', '3', ')']).expressao).toBe('2+3');
+  });
+
+  it('nem fecha um parênteses vazio', () => {
+    expect(teclar(['(', ')']).expressao).toBe('(');
+  });
+
+  it('fecha o que foi aberto', () => {
+    expect(teclar(['(', '2', '+', '3', ')', '×', '4']).expressao).toBe('(2+3)×4');
+  });
+
+  it('x² precisa de alguma coisa para elevar', () => {
+    expect(teclar(['^2']).expressao).toBe('');
+    expect(teclar(['2', '+', '^2']).expressao).toBe('2+');
+    expect(teclar(['3', '^2']).expressao).toBe('3^2');
+  });
+
+  it('a tecla recusada não apaga o resultado da tela', () => {
+    const comResultado = calcular(teclar(['2', '+', '2']), 'rad');
+    const depois = digitar(comResultado, ')');
+
+    expect(depois).toEqual(comResultado);
+  });
+});

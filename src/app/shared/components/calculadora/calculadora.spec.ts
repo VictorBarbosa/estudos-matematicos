@@ -21,6 +21,13 @@ describe('Calculadora', () => {
     }
   }
 
+  /** Uma das abas de modo, na barra do topo. */
+  function aba(rotulo: string): HTMLButtonElement {
+    return [...fixture.nativeElement.querySelectorAll('.modos button')].find(
+      (botao) => (botao as HTMLButtonElement).textContent?.trim() === rotulo,
+    ) as HTMLButtonElement;
+  }
+
   function visor(): string {
     return (fixture.nativeElement.querySelector('.valor') as HTMLElement).textContent!.trim();
   }
@@ -96,17 +103,38 @@ describe('Calculadora', () => {
       expect(tecla('π')).toBeUndefined();
     });
 
-    it('o modo científico acrescenta a ala de funções', async () => {
-      servico.definirModo('cientifica');
+    it('a aba Científica acrescenta a ala de funções', async () => {
+      // Clicando na aba, e não chamando o serviço: era o clique que estava
+      // quebrado — a barra capturava o ponteiro e engolia o evento.
+      aba('Científica').click();
       await fixture.whenStable();
 
+      expect(servico.modo()).toBe('cientifica');
       expect(tecla('sin')).toBeDefined();
       expect(tecla('√')).toBeDefined();
       expect(tecla('π')).toBeDefined();
     });
 
+    it('apertar um botão da barra não arrasta a janela', async () => {
+      /*
+       * Capturar o ponteiro na barra faz o `pointerup` ser entregue a ela, e o
+       * clique passa a ser disparado no ancestral comum em vez do botão. Era
+       * por isso que a aba Científica e o X não respondiam.
+       */
+      const barra = fixture.nativeElement.querySelector('.barra') as HTMLElement;
+      const alvo = aba('Científica');
+
+      alvo.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, clientX: 50, clientY: 20 }));
+      barra.dispatchEvent(new PointerEvent('pointermove', { bubbles: true, clientX: 300, clientY: 300 }));
+      await fixture.whenStable();
+
+      const janela = fixture.nativeElement.querySelector('.janela') as HTMLElement;
+      expect(janela.getAttribute('style')).toBeNull();
+      expect(janela.classList.contains('sem-posicao')).toBe(true);
+    });
+
     it('calcula um seno em graus', async () => {
-      servico.definirModo('cientifica');
+      aba('Científica').click();
       await fixture.whenStable();
 
       // A tecla de ângulo mostra a unidade em uso e alterna entre as duas.
@@ -134,5 +162,63 @@ describe('Calculadora', () => {
       expect(legenda()).toContain('calcular');
       expect(visor()).toBe('2+');
     });
+  });
+});
+
+/**
+ * As teclas que não podem acontecer, vistas da tela.
+ *
+ * `5-----333---` e `5××××2` eram aceitos e só reclamavam no igual, com a conta
+ * inteira já perdida.
+ */
+describe('Calculadora: teclas repetidas', () => {
+  let fixture: ComponentFixture<Calculadora>;
+
+  function tecla(rotulo: string): HTMLButtonElement | undefined {
+    return [...fixture.nativeElement.querySelectorAll('.teclas button')].find(
+      (botao) => (botao as HTMLButtonElement).textContent?.trim() === rotulo,
+    ) as HTMLButtonElement | undefined;
+  }
+
+  async function apertar(...rotulos: readonly string[]): Promise<void> {
+    for (const rotulo of rotulos) {
+      tecla(rotulo)!.click();
+      await fixture.whenStable();
+    }
+  }
+
+  function visor(): string {
+    return (fixture.nativeElement.querySelector('.valor') as HTMLElement).textContent!.trim();
+  }
+
+  beforeEach(async () => {
+    localStorage.clear();
+
+    await TestBed.configureTestingModule({
+      imports: [Calculadora],
+      providers: [provideZonelessChangeDetection()],
+    }).compileComponents();
+
+    TestBed.inject(CalculadoraService).alternar();
+    fixture = TestBed.createComponent(Calculadora);
+    await fixture.whenStable();
+  });
+
+  it('cinco menos seguidos viram um', async () => {
+    await apertar('5', '−', '−', '−', '−', '−', '3', '3', '3');
+
+    expect(visor()).toBe('5-333');
+  });
+
+  it('quatro vezes seguidos viram um', async () => {
+    await apertar('5', '×', '×', '×', '×', '2', '=');
+
+    expect(visor()).toBe('10');
+  });
+
+  it('vírgula repetida não entra', async () => {
+    await apertar('1', ',', '5', ',', ',');
+
+    expect(visor()).toBe('1,5');
   });
 });

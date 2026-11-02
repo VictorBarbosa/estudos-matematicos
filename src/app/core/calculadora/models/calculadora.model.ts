@@ -82,16 +82,78 @@ export function formatarValor(valor: number): string {
   return texto.replace('.', ',');
 }
 
-/** Acrescenta texto à expressão, decidindo se continua ou recomeça a conta. */
-export function digitar(estado: EstadoCalculadora, texto: string): EstadoCalculadora {
-  if (estado.resultado === null) {
-    return { expressao: estado.expressao + texto, resultado: null, erro: null };
+const OPERADORES = '+-×÷^';
+
+const ehOperador = (caractere: string): boolean =>
+  caractere.length === 1 && OPERADORES.includes(caractere);
+
+/** O menos que nega um número, e não o que subtrai, cabe depois destes. */
+const ACEITA_NEGATIVO = /[×÷^(]$/;
+
+/**
+ * Onde o texto entra na expressão — ou `null`, quando ele não entra.
+ *
+ * Sem isto dá para escrever `5-----333---` e `5××××2`: a calculadora aceitava
+ * qualquer tecla a qualquer momento e só reclamava no igual, quando a conta
+ * inteira já estava perdida. Aqui a tecla impossível simplesmente não acontece,
+ * que é como toda calculadora se comporta.
+ */
+function inserir(base: string, texto: string): string | null {
+  const ultimo = base.slice(-1);
+  const semValorAntes = base === '' || ehOperador(ultimo) || ultimo === '(';
+
+  // `x²` e `x³` elevam alguma coisa: sem um valor antes, não há o que elevar.
+  if (texto.length > 1 && texto.startsWith('^')) {
+    return semValorAntes ? null : base + texto;
   }
 
+  if (ehOperador(texto)) {
+    // Depois de ×, ÷, ^ ou abre-parênteses, o menos nega o próximo número.
+    if (texto === '-' && ACEITA_NEGATIVO.test(base)) {
+      return base + texto;
+    }
+
+    // Operador em cima de operador TROCA o anterior, não se acumula.
+    const semOperadores = base.replace(/[+\-×÷^]+$/, '');
+    if (semOperadores === '' || semOperadores.endsWith('(')) {
+      return texto === '-' ? `${semOperadores}-` : null;
+    }
+    return semOperadores + texto;
+  }
+
+  if (texto === ',') {
+    const numeroAtual = /[\d,]*$/.exec(base)![0];
+    if (numeroAtual.includes(',')) {
+      return null;
+    }
+    // Uma vírgula solta vira `0,`: ninguém escreve `,5` numa conta.
+    return numeroAtual === '' ? `${base}0,` : `${base},`;
+  }
+
+  if (texto === ')') {
+    const abertos = [...base].filter((c) => c === '(').length;
+    const fechados = [...base].filter((c) => c === ')').length;
+    return abertos > fechados && !semValorAntes ? `${base})` : null;
+  }
+
+  return base + texto;
+}
+
+/** Acrescenta texto à expressão, decidindo se continua ou recomeça a conta. */
+export function digitar(estado: EstadoCalculadora, texto: string): EstadoCalculadora {
   // Depois de um resultado, um operador continua de onde parou — `= × 2` é a
   // sequência mais natural da calculadora — e um algarismo começa outra conta.
-  const base = CONTINUA_A_CONTA.test(texto) ? estado.resultado : '';
-  return { expressao: base + texto, resultado: null, erro: null };
+  const base =
+    estado.resultado === null
+      ? estado.expressao
+      : (CONTINUA_A_CONTA.test(texto) ? estado.resultado : '');
+
+  const proxima = inserir(base, texto);
+  if (proxima === null) {
+    return estado;
+  }
+
+  return { expressao: proxima, resultado: null, erro: null };
 }
 
 /** O que a tecla de apagar remove: um token, não um caractere. */
