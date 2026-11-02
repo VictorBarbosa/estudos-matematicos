@@ -80,19 +80,21 @@ describe('a fórmula que o Difícil não entrega', () => {
     }
   });
 
-  it('vale para os dois tipos de exercício do nível', () => {
-    // Regra de três e divisão proporcional — os dois saem no Difícil.
-    const divisoes = amostra('dificil', 200).filter((e) =>
-      e.conceitos.includes('proporcao.divisao'),
-    );
-    const regras = amostra('dificil', 200).filter((e) =>
-      e.conceitos.includes('proporcao.regra-de-tres'),
-    );
-
-    expect(divisoes.length).toBeGreaterThan(5);
-    expect(regras.length).toBeGreaterThan(5);
-    for (const exercicio of [...divisoes, ...regras]) {
-      expect(exercicio.enunciadoTex).toBe(SEM_FORMULA);
+  it('o treino do tópico é só regra de três', () => {
+    /*
+     * A divisão proporcional saiu do treino.
+     *
+     * "Dividindo R$ 230,00 em partes proporcionais a 1 e 4, qual é a MAIOR das
+     * partes?" exercitava uma receita — somar os pesos, achar k, multiplicar —
+     * e não a decisão entre direta e inversa, que é o que este tópico ensina.
+     * Ela continua na teoria e na aba Explorar, onde é consulta e não prova.
+     */
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 200)) {
+        expect(exercicio.conceitos, exercicio.enunciado).not.toContain('proporcao.divisao');
+        expect(exercicio.enunciado).not.toContain('partes proporcionais');
+        expect(exercicio.conceitos).toContain('proporcao.regra-de-tres');
+      }
     }
   });
 

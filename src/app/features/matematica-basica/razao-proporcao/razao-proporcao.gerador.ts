@@ -1,4 +1,4 @@
-import { divisaoProporcionalComPassos, regraDeTresComPassos } from '@core/math';
+import { regraDeTresComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import {
@@ -59,10 +59,6 @@ export const geradorProporcao: GeradorExercicio<number> = {
   formatoResposta: 'um número, ex.: 18 ou 7,5',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
-    if (nivel === 'dificil' && rng.booleano(0.4)) {
-      return exercicioDivisao(nivel, rng);
-    }
-
     // No fácil só direta; depois as duas, para forçar a decisão.
     const inversa = nivel === 'facil' ? false : rng.booleano();
     return exercicioRegraDeTres(nivel, rng, inversa);
@@ -140,48 +136,3 @@ function exercicioRegraDeTres(nivel: Nivel, rng: Rng, inversa: boolean): Exercic
   };
 }
 
-function exercicioDivisao(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const p1 = rng.inteiro(1, 5);
-  const p2 = rng.inteiro(1, 5);
-  const total = (p1 + p2) * rng.inteiro(10, 60);
-
-  const resolucao = divisaoProporcionalComPassos(total, [p1, p2]);
-  const maior = Math.max(...resolucao.resultado);
-  const partes = resolucao.resultado;
-
-  return {
-    id: `proporcao-divisao-${total}-${p1}-${p2}-${rng.inteiro(0, 9999)}`,
-    nivel,
-    enunciado: `Dividindo R$ ${total},00 em partes proporcionais a ${p1} e ${p2}, qual é a MAIOR das partes?`,
-    // Mesma razão da regra de três: a montagem é a tarefa.
-    enunciadoTex:
-      nivel === 'dificil'
-        ? SEM_FORMULA
-        : `${total} = x_1 + x_2 \\quad \\text{com} \\quad \\frac{x_1}{${p1}} = \\frac{x_2}{${p2}}`,
-    gabarito: maior,
-    resolucao: { resultado: maior, passos: resolucao.passos },
-    conceitos: ['proporcao.divisao', 'proporcao.razao'],
-    armadilhas: semColisoes(
-      [
-        {
-          resposta: Math.min(...partes),
-          diagnostico:
-            'Esse é o valor da MENOR parte. A maior corresponde ao maior peso — confira qual ' +
-            'dos dois pesos é o maior antes de responder.',
-          passo: 2,
-          conceito: 'proporcao.divisao',
-        },
-        {
-          resposta: total / 2,
-          diagnostico:
-            'Você dividiu o total em duas partes iguais. A divisão é PROPORCIONAL aos pesos: ' +
-            'só daria metade para cada se os dois pesos fossem iguais.',
-          passo: 0,
-          conceito: 'proporcao.divisao',
-        },
-      ],
-      maior,
-      proximos,
-    ),
-  };
-}

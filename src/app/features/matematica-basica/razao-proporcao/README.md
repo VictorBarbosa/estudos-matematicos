@@ -19,6 +19,17 @@ A fórmula não sumiu do tópico: ela aparece na resolução, depois da resposta
 ela ensina em vez de entregar. A dica do nível também continua — mas é uma pergunta ("as
 grandezas crescem juntas ou em sentidos opostos?"), não uma resposta.
 
+## O treino é só regra de três
+
+A divisão proporcional — *"Dividindo R$ 230,00 em partes proporcionais a 1 e 4, qual é a MAIOR
+das partes?"* — saiu dos exercícios. Ela exercitava uma receita (somar os pesos, achar k,
+multiplicar) e não a decisão entre direta e inversa, que é o que este tópico ensina e o único
+lugar do currículo onde essa decisão aparece.
+
+Ela continua na **teoria** e na aba **Explorar**, onde é consulta e não prova: quem precisar
+dividir em partes proporcionais acha o método, com os passos, sem que ele dispute espaço com o
+treino.
+
 ## O que este módulo precisa ter
 
 - `razao-proporcao.ts` / `.html` / `.scss` — componente dentro de `<app-topico-layout>`,
