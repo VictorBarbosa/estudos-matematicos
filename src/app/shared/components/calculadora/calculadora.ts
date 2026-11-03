@@ -285,7 +285,9 @@ export class Calculadora {
     const caixa = this.painel()!.nativeElement.getBoundingClientRect();
 
     this.arrastando = { dx: evento.clientX - caixa.left, dy: evento.clientY - caixa.top };
-    alvo.setPointerCapture(evento.pointerId);
+    // Como `scrollIntoView`, não existe no jsdom; sem ele o arrasto ainda
+    // funciona, só perde a captura do ponteiro fora da janela.
+    alvo.setPointerCapture?.(evento.pointerId);
   }
 
   protected aoArrastar(evento: PointerEvent): void {

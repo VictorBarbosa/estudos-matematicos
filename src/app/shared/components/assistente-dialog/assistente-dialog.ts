@@ -68,7 +68,12 @@ export class AssistenteDialog {
     effect(() => {
       this.assistente.mensagens();
       this.assistente.resposta();
-      queueMicrotask(() => this.fim()?.nativeElement.scrollIntoView({ block: 'end' }));
+      queueMicrotask(() => {
+        // `scrollIntoView` não existe no jsdom. Sem a guarda, a chamada vira
+        // erro não tratado dentro do microtask — não reprova nenhum teste, mas
+        // derruba o processo, que foi como a publicação quebrou.
+        this.fim()?.nativeElement.scrollIntoView?.({ block: 'end' });
+      });
     });
 
     /*
@@ -159,7 +164,9 @@ export class AssistenteDialog {
     const caixa = this.painel()!.nativeElement.getBoundingClientRect();
 
     this.arrastando = { dx: evento.clientX - caixa.left, dy: evento.clientY - caixa.top };
-    alvo.setPointerCapture(evento.pointerId);
+    // Como `scrollIntoView`, não existe no jsdom; sem ele o arrasto ainda
+    // funciona, só perde a captura do ponteiro fora da janela.
+    alvo.setPointerCapture?.(evento.pointerId);
   }
 
   protected aoArrastar(evento: PointerEvent): void {
