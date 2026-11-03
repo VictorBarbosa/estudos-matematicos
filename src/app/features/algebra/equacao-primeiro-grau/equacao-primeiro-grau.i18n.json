@@ -1,0 +1,30 @@
+{
+  "ladoDireitoC": { "pt": "Lado direito c", "fr": "Membre de droite c", "en": "Right side c" },
+  "equacaoInvalida": {
+    "pt": "Equação inválida.",
+    "fr": "Équation invalide.",
+    "en": "Invalid equation."
+  },
+  "raizOndeCruzam": {
+    "pt": "A raiz é onde as retas se cruzam",
+    "fr": "La racine est là où les droites se croisent",
+    "en": "The root is where the lines cross"
+  },
+  "curvaReta": { "pt": "y = {lado}", "fr": "y = {lado}", "en": "y = {lado}" },
+  "pontoRaiz": { "pt": "x = {raiz}", "fr": "x = {raiz}", "en": "x = {raiz}" },
+  "graficoIndisponivel": {
+    "pt": "Gráfico indisponível: o coeficiente de x é zero.",
+    "fr": "Graphique indisponible : le coefficient de x est nul.",
+    "en": "No graph available: the coefficient of x is zero."
+  },
+  "descricaoGrafico": {
+    "pt": "Reta cruzando a horizontal y igual a {c} no ponto x igual a {raiz}.",
+    "fr": "Droite coupant l’horizontale y égale à {c} au point x égal à {raiz}.",
+    "en": "Line crossing the horizontal y equal to {c} at the point x equal to {raiz}."
+  },
+  "mexaNoA": {
+    "pt": "Mexa no coeficiente a e repare: enquanto ele não for zero, a reta tem inclinação e cruza a horizontal em exatamente um ponto. É por isso que a equação tem solução única.",
+    "fr": "Changez le coefficient a et observez : tant qu’il n’est pas nul, la droite a une pente et coupe l’horizontale en exactement un point. C’est pourquoi l’équation a une solution unique.",
+    "en": "Change the coefficient a and watch: as long as it is not zero, the line has a slope and crosses the horizontal at exactly one point. That is why the equation has a single solution."
+  }
+}

@@ -11,7 +11,10 @@ export const TEORIA_EQUACAO_1: readonly Teoria[] = [
       'quebrar essa igualdade, e isso só é possível aplicando a MESMA operação aos dois ' +
       'lados — como manter uma balança equilibrada.',
     formulas: [
-      { tex: 'a = b \\;\\Longrightarrow\\; a + k = b + k', legenda: 'Somar o mesmo nos dois lados.' },
+      {
+        tex: 'a = b \\;\\Longrightarrow\\; a + k = b + k',
+        legenda: 'Somar o mesmo nos dois lados.',
+      },
       { tex: 'a = b \\;\\Longrightarrow\\; a \\cdot k = b \\cdot k \\quad (k \\neq 0)' },
     ],
     demonstracao: [

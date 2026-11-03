@@ -7,8 +7,15 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import {
+  CurvaPlot,
+  PontoPlot,
+  SegmentoPlot,
+} from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/algebra/inequacoes/inequacoes.i18n.json';
 import { geradorInequacoes } from '@features/algebra/inequacoes/inequacoes.gerador';
 import { TEORIA_INEQUACOES } from '@features/algebra/inequacoes/inequacoes.teoria';
 
@@ -35,6 +42,8 @@ const RELACOES: readonly { readonly valor: Relacao; readonly rotulo: string }[] 
   styleUrl: './inequacoes.scss',
 })
 export class Inequacoes {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorInequacoes;
   protected readonly conceitos = TEORIA_INEQUACOES.map((teoria) => teoria.id);
   protected readonly relacoes = RELACOES;
@@ -71,8 +80,8 @@ export class Inequacoes {
     const c = this.c();
 
     return [
-      { fn: (x) => a * x + b, cor: 'serie-1', rotulo: 'lado esquerdo' },
-      { fn: () => c, cor: 'serie-2', tracejada: true, rotulo: 'lado direito' },
+      { fn: (x) => a * x + b, cor: 'serie-1', rotulo: this.texto('curvaEsquerda') },
+      { fn: () => c, cor: 'serie-2', tracejada: true, rotulo: this.texto('curvaDireita') },
     ];
   });
 
@@ -82,7 +91,7 @@ export class Inequacoes {
       {
         x: fronteira,
         y: this.c(),
-        rotulo: `x = ${this.formatar(fronteira)}`,
+        rotulo: this.texto('pontoFronteira', { valor: this.formatar(fronteira) }),
         cor: 'acento',
         // Bolinha vazada quando a fronteira não pertence à solução.
         vazado: !inclusiva,
@@ -116,8 +125,21 @@ export class Inequacoes {
 
   protected readonly descricaoGrafico = computed(() => {
     const { fronteira, relacao } = this.solucao();
-    const lado = relacao === '>' || relacao === '>=' ? 'à direita' : 'à esquerda';
-    return `Reta cruzando a horizontal em x igual a ${this.formatar(fronteira)}; o conjunto solução fica ${lado}.`;
+    const chave = relacao === '>' || relacao === '>=' ? 'descricaoDireita' : 'descricaoEsquerda';
+    return this.texto(chave, { fronteira: this.formatar(fronteira) });
+  });
+
+  /** Qual das quatro frases explica a seta e a bolinha no desenho. */
+  protected readonly explicacaoDaSeta = computed(() => {
+    const { relacao, inclusiva } = this.solucao();
+    const acima = relacao === '>' || relacao === '>=';
+    return acima
+      ? inclusiva
+        ? 'setaAcimaCheia'
+        : 'setaAcimaVazada'
+      : inclusiva
+        ? 'setaAbaixoCheia'
+        : 'setaAbaixoVazada';
   });
 
   constructor() {

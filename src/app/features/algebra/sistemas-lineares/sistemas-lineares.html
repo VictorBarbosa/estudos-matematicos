@@ -1,19 +1,19 @@
 <app-topico-layout topicoId="sistemas-lineares">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>1ª equação</h2>
+      <h2>{{ texto('primeiraEquacao') }}</h2>
       <div class="grade-controles">
-        <app-controle-parametro [(valor)]="a1" rotulo="a₁ (coef. de x)" [min]="-8" [max]="8" />
-        <app-controle-parametro [(valor)]="b1" rotulo="b₁ (coef. de y)" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="a1" [rotulo]="texto('a1')" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="b1" [rotulo]="texto('b1')" [min]="-8" [max]="8" />
         <app-controle-parametro [(valor)]="c1" rotulo="c₁" [min]="-20" [max]="20" />
       </div>
     </section>
 
     <section class="painel">
-      <h2>2ª equação</h2>
+      <h2>{{ texto('segundaEquacao') }}</h2>
       <div class="grade-controles">
-        <app-controle-parametro [(valor)]="a2" rotulo="a₂ (coef. de x)" [min]="-8" [max]="8" />
-        <app-controle-parametro [(valor)]="b2" rotulo="b₂ (coef. de y)" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="a2" [rotulo]="texto('a2')" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="b2" [rotulo]="texto('b2')" [min]="-8" [max]="8" />
         <app-controle-parametro [(valor)]="c2" rotulo="c₂" [min]="-20" [max]="20" />
       </div>
     </section>
@@ -24,7 +24,7 @@
     </section>
 
     <section>
-      <h2>As duas retas</h2>
+      <h2>{{ texto('asDuasRetas') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -32,14 +32,11 @@
         [descricao]="descricaoGrafico()"
         [altura]="400"
       />
-      <p class="observacao">
-        Mexa nos coeficientes até as retas ficarem paralelas: o determinante zera e o sistema deixa
-        de ter solução única. É a mesma informação, vista de dois jeitos.
-      </p>
+      <p class="observacao">{{ texto('mexaNosCoeficientes') }}</p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="resolucao().passos" />
     </section>
 

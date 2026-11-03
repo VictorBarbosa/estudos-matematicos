@@ -1,0 +1,39 @@
+{
+  "identidade": { "pt": "Identidade", "fr": "Identité", "en": "Identity" },
+  "quadrado-da-soma": {
+    "pt": "Quadrado da soma",
+    "fr": "Carré de la somme",
+    "en": "Square of a sum"
+  },
+  "quadrado-da-diferenca": {
+    "pt": "Quadrado da diferença",
+    "fr": "Carré de la différence",
+    "en": "Square of a difference"
+  },
+  "diferenca-de-quadrados": {
+    "pt": "Diferença de quadrados",
+    "fr": "Différence de carrés",
+    "en": "Difference of squares"
+  },
+  "cubo-da-soma": { "pt": "Cubo da soma", "fr": "Cube de la somme", "en": "Cube of a sum" },
+  "aDiferencaEntre": {
+    "pt": "A diferença entre os dois é exatamente o termo <strong>{termo}x</strong> — que corresponde a uma área real na figura abaixo, e não a um detalhe de notação.",
+    "fr": "La différence entre les deux est exactement le terme <strong>{termo}x</strong> — qui correspond à une aire réelle dans la figure ci-dessous, et non à un détail d’écriture.",
+    "en": "The difference between the two is exactly the term <strong>{termo}x</strong> — which matches a real area in the figure below, not a detail of notation."
+  },
+  "porQueTermoDoMeio": {
+    "pt": "Por que o termo do meio existe",
+    "fr": "Pourquoi le terme du milieu existe",
+    "en": "Why the middle term exists"
+  },
+  "umQuadradoDeLado": {
+    "pt": "Um quadrado de lado (a + b) se divide em quatro pedaços. Os dois retângulos de área a·b são o 2ab que se perde ao escrever apenas a² + b².",
+    "fr": "Un carré de côté (a + b) se divise en quatre morceaux. Les deux rectangles d’aire a·b sont le 2ab que l’on perd en n’écrivant que a² + b².",
+    "en": "A square of side (a + b) splits into four pieces. The two rectangles of area a·b are the 2ab that gets lost when you write only a² + b²."
+  },
+  "descricaoQuadrado": {
+    "pt": "Quadrado de lado {total} dividido em quatro regiões: um quadrado a ao quadrado, dois retângulos a vezes b e um quadrado b ao quadrado.",
+    "fr": "Carré de côté {total} divisé en quatre régions : un carré a au carré, deux rectangles a fois b et un carré b au carré.",
+    "en": "Square of side {total} split into four regions: a square a squared, two rectangles a times b and a square b squared."
+  }
+}

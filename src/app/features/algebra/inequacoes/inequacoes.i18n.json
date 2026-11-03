@@ -1,0 +1,61 @@
+{
+  "dicaCoefA": {
+    "pt": "Experimente valores negativos.",
+    "fr": "Essayez des valeurs négatives.",
+    "en": "Try negative values."
+  },
+  "ladoDireito": { "pt": "Lado direito", "fr": "Membre de droite", "en": "Right side" },
+  "relacaoDesigualdade": {
+    "pt": "Relação de desigualdade",
+    "fr": "Relation d’inégalité",
+    "en": "Inequality relation"
+  },
+  "relacaoRotulo": {
+    "pt": "Relação {simbolo}",
+    "fr": "Relation {simbolo}",
+    "en": "Relation {simbolo}"
+  },
+  "avisoInversao": {
+    "pt": "O coeficiente de x é negativo, então ao dividir por ele o sentido da desigualdade se <strong>inverte</strong>. Repare que o símbolo na solução não é o mesmo do enunciado.",
+    "fr": "Le coefficient de x est négatif : en divisant par lui, le sens de l’inégalité <strong>s’inverse</strong>. Remarquez que le symbole de la solution n’est pas celui de l’énoncé.",
+    "en": "The coefficient of x is negative, so dividing by it <strong>flips</strong> the direction of the inequality. Notice that the symbol in the solution is not the one in the statement."
+  },
+  "conjuntoNaReta": {
+    "pt": "O conjunto solução na reta",
+    "fr": "L’ensemble solution sur la droite",
+    "en": "The solution set on the line"
+  },
+  "curvaEsquerda": { "pt": "lado esquerdo", "fr": "membre de gauche", "en": "left side" },
+  "curvaDireita": { "pt": "lado direito", "fr": "membre de droite", "en": "right side" },
+  "pontoFronteira": { "pt": "x = {valor}", "fr": "x = {valor}", "en": "x = {valor}" },
+  "descricaoDireita": {
+    "pt": "Reta cruzando a horizontal em x igual a {fronteira}; o conjunto solução fica à direita.",
+    "fr": "Droite coupant l’horizontale en x égal à {fronteira} ; l’ensemble solution est à droite.",
+    "en": "Line crossing the horizontal at x equal to {fronteira}; the solution set lies to the right."
+  },
+  "descricaoEsquerda": {
+    "pt": "Reta cruzando a horizontal em x igual a {fronteira}; o conjunto solução fica à esquerda.",
+    "fr": "Droite coupant l’horizontale en x égal à {fronteira} ; l’ensemble solution est à gauche.",
+    "en": "Line crossing the horizontal at x equal to {fronteira}; the solution set lies to the left."
+  },
+  "setaAcimaCheia": {
+    "pt": "A seta marca a região em que a reta cheia fica acima da tracejada. A bolinha é preenchida, porque a fronteira entra na solução.",
+    "fr": "La flèche marque la région où la droite pleine passe au-dessus de la pointillée. Le point est plein, car la frontière fait partie de la solution.",
+    "en": "The arrow marks the region where the solid line sits above the dashed one. The dot is filled, because the boundary belongs to the solution."
+  },
+  "setaAcimaVazada": {
+    "pt": "A seta marca a região em que a reta cheia fica acima da tracejada. A bolinha é vazada, porque a fronteira fica de fora.",
+    "fr": "La flèche marque la région où la droite pleine passe au-dessus de la pointillée. Le point est creux, car la frontière est exclue.",
+    "en": "The arrow marks the region where the solid line sits above the dashed one. The dot is hollow, because the boundary is left out."
+  },
+  "setaAbaixoCheia": {
+    "pt": "A seta marca a região em que a reta cheia fica abaixo da tracejada. A bolinha é preenchida, porque a fronteira entra na solução.",
+    "fr": "La flèche marque la région où la droite pleine passe au-dessous de la pointillée. Le point est plein, car la frontière fait partie de la solution.",
+    "en": "The arrow marks the region where the solid line sits below the dashed one. The dot is filled, because the boundary belongs to the solution."
+  },
+  "setaAbaixoVazada": {
+    "pt": "A seta marca a região em que a reta cheia fica abaixo da tracejada. A bolinha é vazada, porque a fronteira fica de fora.",
+    "fr": "La flèche marque la région où la droite pleine passe au-dessous de la pointillée. Le point est creux, car la frontière est exclue.",
+    "en": "The arrow marks the region where the solid line sits below the dashed one. The dot is hollow, because the boundary is left out."
+  }
+}

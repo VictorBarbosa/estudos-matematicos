@@ -1,0 +1,48 @@
+{
+  "valorDeX": { "pt": "Valor de x", "fr": "Valeur de x", "en": "Value of x" },
+  "dicaValorDeX": {
+    "pt": "O número que substitui a letra.",
+    "fr": "Le nombre qui remplace la lettre.",
+    "en": "The number that replaces the letter."
+  },
+  "substituindo": {
+    "pt": "Substituindo passo a passo",
+    "fr": "La substitution, pas à pas",
+    "en": "Substituting step by step"
+  },
+  "passoSubstituir": {
+    "pt": "Substituímos x por {x} em cada termo.",
+    "fr": "Nous remplaçons x par {x} dans chaque terme.",
+    "en": "We replace x with {x} in every term."
+  },
+  "passoPotencias": {
+    "pt": "Resolvemos as potências primeiro, como manda a ordem das operações.",
+    "fr": "Nous calculons d’abord les puissances, comme l’exige l’ordre des opérations.",
+    "en": "We work out the powers first, as the order of operations requires."
+  },
+  "passoProdutos": {
+    "pt": "Efetuamos os produtos e somamos.",
+    "fr": "Nous effectuons les produits et additionnons.",
+    "en": "We carry out the products and add."
+  },
+  "expressaoComoCurva": {
+    "pt": "A expressão como curva",
+    "fr": "L’expression comme courbe",
+    "en": "The expression as a curve"
+  },
+  "curvaExpressao": {
+    "pt": "y = expressão",
+    "fr": "y = expression",
+    "en": "y = expression"
+  },
+  "descricaoGrafico": {
+    "pt": "Curva da expressão, com o ponto correspondente a x igual a {x} destacado.",
+    "fr": "Courbe de l’expression, avec le point correspondant à x égal à {x} mis en évidence.",
+    "en": "Curve of the expression, with the point for x equal to {x} highlighted."
+  },
+  "mudarX": {
+    "pt": "Mudar o valor de x move o ponto sobre a curva. Avaliar uma expressão é exatamente isto: escolher uma posição horizontal e ler a altura correspondente.",
+    "fr": "Changer la valeur de x déplace le point sur la courbe. Évaluer une expression, c’est exactement cela : choisir une position horizontale et lire la hauteur correspondante.",
+    "en": "Changing the value of x moves the point along the curve. Evaluating an expression is exactly that: choosing a horizontal position and reading the matching height."
+  }
+}

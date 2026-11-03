@@ -12,8 +12,15 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import {
+  CurvaPlot,
+  PontoPlot,
+  SegmentoPlot,
+} from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.i18n.json';
 import { geradorEquacao2 } from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.gerador';
 import { TEORIA_EQUACAO_2 } from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.teoria';
 
@@ -33,6 +40,8 @@ import { TEORIA_EQUACAO_2 } from '@features/algebra/equacao-segundo-grau/equacao
   styleUrl: './equacao-segundo-grau.scss',
 })
 export class EquacaoSegundoGrau {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorEquacao2;
   protected readonly conceitos = TEORIA_EQUACAO_2.map((teoria) => teoria.id);
 
@@ -64,7 +73,9 @@ export class EquacaoSegundoGrau {
     const b = this.b();
     const c = this.c();
 
-    return [{ fn: (x) => a * x * x + b * x + c, cor: 'serie-1', rotulo: 'y = ax² + bx + c' }];
+    return [
+      { fn: (x) => a * x * x + b * x + c, cor: 'serie-1', rotulo: this.texto('curvaParabola') },
+    ];
   });
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() => {
@@ -74,10 +85,10 @@ export class EquacaoSegundoGrau {
       ...raizes.map((raiz, indice) => ({
         x: raiz,
         y: 0,
-        rotulo: `x${indice + 1} = ${formatar(raiz)}`,
+        rotulo: this.texto('pontoRaiz', { indice: indice + 1, valor: formatar(raiz) }),
         cor: 'acento' as const,
       })),
-      { x: vertice.x, y: vertice.y, rotulo: 'vértice', cor: 'serie-2' as const },
+      { x: vertice.x, y: vertice.y, rotulo: this.texto('pontoVertice'), cor: 'serie-2' as const },
     ];
   });
 
@@ -109,26 +120,26 @@ export class EquacaoSegundoGrau {
 
   protected readonly descricaoGrafico = computed(() => {
     const { quantidadeDeRaizes } = this.solucao();
-    const cruzamentos =
-      quantidadeDeRaizes === 0
-        ? 'não cruza o eixo x'
-        : quantidadeDeRaizes === 1
-          ? 'toca o eixo x em um ponto'
-          : 'cruza o eixo x em dois pontos';
 
-    return `Parábola que ${cruzamentos}, com o vértice e o eixo de simetria destacados.`;
+    return this.texto(
+      quantidadeDeRaizes === 0
+        ? 'naoCruza'
+        : quantidadeDeRaizes === 1
+          ? 'tocaUmPonto'
+          : 'cruzaDoisPontos',
+    );
   });
 
   protected readonly resumoDelta = computed(() => {
     const { delta, quantidadeDeRaizes } = this.solucao();
 
     if (quantidadeDeRaizes === 2) {
-      return 'Δ > 0: a parábola cruza o eixo x em dois pontos distintos.';
+      return this.texto('deltaPositivo');
     }
     if (quantidadeDeRaizes === 1) {
-      return 'Δ = 0: a parábola tangencia o eixo x, e a única raiz é o vértice.';
+      return this.texto('deltaZero');
     }
-    return `Δ = ${formatar(delta)} < 0: a parábola não toca o eixo x, então não há raiz real.`;
+    return this.texto('deltaNegativo', { delta: formatar(delta) });
   });
 
   constructor() {

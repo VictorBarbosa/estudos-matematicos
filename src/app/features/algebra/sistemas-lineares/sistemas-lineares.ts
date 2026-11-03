@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/algebra/sistemas-lineares/sistemas-lineares.i18n.json';
 import { geradorSistemas } from '@features/algebra/sistemas-lineares/sistemas-lineares.gerador';
 import { TEORIA_SISTEMAS } from '@features/algebra/sistemas-lineares/sistemas-lineares.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_SISTEMAS } from '@features/algebra/sistemas-lineares/sistemas-li
   styleUrl: './sistemas-lineares.scss',
 })
 export class SistemasLineares {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorSistemas;
   protected readonly conceitos = TEORIA_SISTEMAS.map((teoria) => teoria.id);
 
@@ -56,14 +61,7 @@ export class SistemasLineares {
   });
 
   protected readonly classificacao = computed(() => {
-    switch (this.solucao().tipo) {
-      case 'determinado':
-        return 'Sistema possível e determinado: as retas se cruzam em um único ponto.';
-      case 'impossivel':
-        return 'Sistema impossível: as retas são paralelas distintas e nunca se encontram.';
-      case 'indeterminado':
-        return 'Sistema possível e indeterminado: as duas equações descrevem a MESMA reta.';
-    }
+    return this.texto(this.solucao().tipo);
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
@@ -74,10 +72,10 @@ export class SistemasLineares {
 
     const retas: CurvaPlot[] = [];
     if (primeira) {
-      retas.push({ fn: primeira, cor: 'serie-1', rotulo: '1ª equação' });
+      retas.push({ fn: primeira, cor: 'serie-1', rotulo: this.texto('primeiraEquacao') });
     }
     if (segunda) {
-      retas.push({ fn: segunda, cor: 'serie-2', rotulo: '2ª equação' });
+      retas.push({ fn: segunda, cor: 'serie-2', rotulo: this.texto('segundaEquacao') });
     }
     return retas;
   });
@@ -115,11 +113,13 @@ export class SistemasLineares {
 
   protected readonly descricaoGrafico = computed(() => {
     const { tipo } = this.solucao();
-    return tipo === 'determinado'
-      ? 'Duas retas cruzando-se no ponto solução do sistema.'
-      : tipo === 'impossivel'
-        ? 'Duas retas paralelas que nunca se cruzam.'
-        : 'Duas equações que descrevem a mesma reta, sobrepostas.';
+    return this.texto(
+      tipo === 'determinado'
+        ? 'descricaoDeterminado'
+        : tipo === 'impossivel'
+          ? 'descricaoImpossivel'
+          : 'descricaoIndeterminado',
+    );
   });
 
   constructor() {

@@ -1,0 +1,44 @@
+{
+  "primeiraEquacao": { "pt": "1ª equação", "fr": "1re équation", "en": "1st equation" },
+  "segundaEquacao": { "pt": "2ª equação", "fr": "2e équation", "en": "2nd equation" },
+  "a1": { "pt": "a₁ (coef. de x)", "fr": "a₁ (coef. de x)", "en": "a₁ (coef. of x)" },
+  "b1": { "pt": "b₁ (coef. de y)", "fr": "b₁ (coef. de y)", "en": "b₁ (coef. of y)" },
+  "a2": { "pt": "a₂ (coef. de x)", "fr": "a₂ (coef. de x)", "en": "a₂ (coef. of x)" },
+  "b2": { "pt": "b₂ (coef. de y)", "fr": "b₂ (coef. de y)", "en": "b₂ (coef. of y)" },
+  "determinado": {
+    "pt": "Sistema possível e determinado: as retas se cruzam em um único ponto.",
+    "fr": "Système compatible et déterminé : les droites se coupent en un seul point.",
+    "en": "Consistent system with one solution: the lines cross at a single point."
+  },
+  "impossivel": {
+    "pt": "Sistema impossível: as retas são paralelas distintas e nunca se encontram.",
+    "fr": "Système incompatible : les droites sont parallèles distinctes et ne se rencontrent jamais.",
+    "en": "Inconsistent system: the lines are distinct parallels and never meet."
+  },
+  "indeterminado": {
+    "pt": "Sistema possível e indeterminado: as duas equações descrevem a MESMA reta.",
+    "fr": "Système compatible et indéterminé : les deux équations décrivent la MÊME droite.",
+    "en": "Consistent system with infinitely many solutions: both equations describe the SAME line."
+  },
+  "asDuasRetas": { "pt": "As duas retas", "fr": "Les deux droites", "en": "The two lines" },
+  "descricaoDeterminado": {
+    "pt": "Duas retas cruzando-se no ponto solução do sistema.",
+    "fr": "Deux droites se coupant au point solution du système.",
+    "en": "Two lines crossing at the solution point of the system."
+  },
+  "descricaoImpossivel": {
+    "pt": "Duas retas paralelas que nunca se cruzam.",
+    "fr": "Deux droites parallèles qui ne se croisent jamais.",
+    "en": "Two parallel lines that never cross."
+  },
+  "descricaoIndeterminado": {
+    "pt": "Duas equações que descrevem a mesma reta, sobrepostas.",
+    "fr": "Deux équations qui décrivent la même droite, superposées.",
+    "en": "Two equations describing the same line, lying on top of each other."
+  },
+  "mexaNosCoeficientes": {
+    "pt": "Mexa nos coeficientes até as retas ficarem paralelas: o determinante zera e o sistema deixa de ter solução única. É a mesma informação, vista de dois jeitos.",
+    "fr": "Changez les coefficients jusqu’à ce que les droites deviennent parallèles : le déterminant s’annule et le système perd sa solution unique. C’est la même information, vue de deux façons.",
+    "en": "Change the coefficients until the lines become parallel: the determinant hits zero and the system loses its single solution. It is the same fact, seen two ways."
+  }
+}

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal, } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Polinomio, fatorarComPassos } from '@core/math';
 import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
@@ -9,16 +9,11 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/algebra/fatoracao/fatoracao.i18n.json';
 import { geradorFatoracao } from '@features/algebra/fatoracao/fatoracao.gerador';
 import { TEORIA_FATORACAO } from '@features/algebra/fatoracao/fatoracao.teoria';
-
-const ROTULO_TIPO: Readonly<Record<string, string>> = {
-  'fator-comum': 'Fator comum em evidência',
-  'diferenca-de-quadrados': 'Diferença de quadrados',
-  'trinomio-quadrado-perfeito': 'Trinômio quadrado perfeito',
-  'trinomio-soma-produto': 'Trinômio por soma e produto',
-  'nao-fatoravel': 'Não fatora com coeficientes inteiros',
-};
 
 @Component({
   selector: 'app-fatoracao',
@@ -35,8 +30,9 @@ const ROTULO_TIPO: Readonly<Record<string, string>> = {
   templateUrl: './fatoracao.html',
   styleUrl: './fatoracao.scss',
 })
-
 export class Fatoracao {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorFatoracao;
   protected readonly conceitos = TEORIA_FATORACAO.map((teoria) => teoria.id);
 
@@ -48,9 +44,11 @@ export class Fatoracao {
 
   protected readonly fatoracao = computed(() => fatorarComPassos(this.polinomio()));
 
-  protected readonly tipoLegivel = computed(
-    () => ROTULO_TIPO[this.fatoracao().resultado.tipo] ?? 'Fatoração',
-  );
+  /** O tipo de fatoração encontrado, dito por extenso. */
+  protected readonly tipoLegivel = computed(() => {
+    const tipo = this.fatoracao().resultado.tipo;
+    return tipo in textos ? this.texto(tipo) : this.texto('fatoracao');
+  });
 
   protected readonly fatorou = computed(() => this.fatoracao().resultado.tipo !== 'nao-fatoravel');
 
@@ -79,14 +77,16 @@ export class Fatoracao {
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
     const polinomio = this.polinomio();
-    return [{ fn: (x) => polinomio.avaliar(x), cor: 'serie-1', rotulo: 'y = expressão' }];
+    return [
+      { fn: (x) => polinomio.avaliar(x), cor: 'serie-1', rotulo: this.texto('curvaExpressao') },
+    ];
   });
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() =>
     this.raizes().map((raiz) => ({
       x: raiz,
       y: 0,
-      rotulo: `x = ${Number(raiz.toFixed(2))}`,
+      rotulo: this.texto('pontoRaiz', { raiz: Number(raiz.toFixed(2)) }),
       cor: 'acento' as const,
     })),
   );
@@ -101,11 +101,12 @@ export class Fatoracao {
     return { xMin: centro - alcance, xMax: centro + alcance };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Gráfico da expressão, cruzando o eixo x em ${this.raizes().length} ` +
-      `${this.raizes().length === 1 ? 'ponto' : 'pontos'}.`,
-  );
+  protected readonly descricaoGrafico = computed(() => {
+    const quantas = this.raizes().length;
+    return quantas === 1
+      ? this.texto('descricaoGraficoUm')
+      : this.texto('descricaoGrafico', { quantas });
+  });
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_FATORACAO);

@@ -1,0 +1,74 @@
+{
+  "dicaCoefA": {
+    "pt": "Zero é tratado como 1: sem ele não há 2º grau.",
+    "fr": "Zéro est traité comme 1 : sans lui, il n’y a pas de second degré.",
+    "en": "Zero is treated as 1: without it there is no quadratic."
+  },
+  "raizesReais": { "pt": "Raízes reais", "fr": "Racines réelles", "en": "Real roots" },
+  "deltaPositivo": {
+    "pt": "Δ > 0: a parábola cruza o eixo x em dois pontos distintos.",
+    "fr": "Δ > 0 : la parabole coupe l’axe des x en deux points distincts.",
+    "en": "Δ > 0: the parabola crosses the x axis at two distinct points."
+  },
+  "deltaZero": {
+    "pt": "Δ = 0: a parábola tangencia o eixo x, e a única raiz é o vértice.",
+    "fr": "Δ = 0 : la parabole est tangente à l’axe des x, et l’unique racine est le sommet.",
+    "en": "Δ = 0: the parabola touches the x axis, and the single root is the vertex."
+  },
+  "deltaNegativo": {
+    "pt": "Δ = {delta} < 0: a parábola não toca o eixo x, então não há raiz real.",
+    "fr": "Δ = {delta} < 0 : la parabole ne touche pas l’axe des x, il n’y a donc pas de racine réelle.",
+    "en": "Δ = {delta} < 0: the parabola never meets the x axis, so there is no real root."
+  },
+  "curvaParabola": {
+    "pt": "y = ax² + bx + c",
+    "fr": "y = ax² + bx + c",
+    "en": "y = ax² + bx + c"
+  },
+  "pontoRaiz": {
+    "pt": "x{indice} = {valor}",
+    "fr": "x{indice} = {valor}",
+    "en": "x{indice} = {valor}"
+  },
+  "pontoVertice": { "pt": "vértice", "fr": "sommet", "en": "vertex" },
+  "naoCruza": {
+    "pt": "Parábola que não cruza o eixo x, com o vértice e o eixo de simetria destacados.",
+    "fr": "Parabole qui ne coupe pas l’axe des x, avec le sommet et l’axe de symétrie mis en évidence.",
+    "en": "Parabola that does not cross the x axis, with the vertex and the axis of symmetry highlighted."
+  },
+  "tocaUmPonto": {
+    "pt": "Parábola que toca o eixo x em um ponto, com o vértice e o eixo de simetria destacados.",
+    "fr": "Parabole qui touche l’axe des x en un point, avec le sommet et l’axe de symétrie mis en évidence.",
+    "en": "Parabola that touches the x axis at one point, with the vertex and the axis of symmetry highlighted."
+  },
+  "cruzaDoisPontos": {
+    "pt": "Parábola que cruza o eixo x em dois pontos, com o vértice e o eixo de simetria destacados.",
+    "fr": "Parabole qui coupe l’axe des x en deux points, avec le sommet et l’axe de symétrie mis en évidence.",
+    "en": "Parabola that crosses the x axis at two points, with the vertex and the axis of symmetry highlighted."
+  },
+  "linhaTracejada": {
+    "pt": "A linha tracejada é o eixo de simetria. Quando há duas raízes, elas ficam à mesma distância dele — por isso o vértice está sempre na média das raízes.",
+    "fr": "La ligne pointillée est l’axe de symétrie. Lorsqu’il y a deux racines, elles sont à la même distance de cet axe — c’est pourquoi le sommet est toujours à la moyenne des racines.",
+    "en": "The dashed line is the axis of symmetry. When there are two roots, they sit the same distance from it — which is why the vertex is always at the average of the roots."
+  },
+  "formaFatorada": {
+    "pt": "Forma fatorada",
+    "fr": "Forme factorisée",
+    "en": "Factored form"
+  },
+  "cadaRaizVira": {
+    "pt": "Cada raiz vira um fator (x − raiz). Expandir de volta confirma que é a mesma equação.",
+    "fr": "Chaque racine devient un facteur (x − racine). Redévelopper confirme qu’il s’agit de la même équation.",
+    "en": "Each root becomes a factor (x − root). Expanding back confirms it is the same equation."
+  },
+  "somaEProduto": {
+    "pt": "Soma e produto das raízes",
+    "fr": "Somme et produit des racines",
+    "en": "Sum and product of the roots"
+  },
+  "essasRelacoes": {
+    "pt": "Essas relações saem direto dos coeficientes, sem resolver a equação. Em casos com raízes inteiras pequenas, achar dois números com essa soma e esse produto é mais rápido que aplicar Bhaskara.",
+    "fr": "Ces relations se lisent directement sur les coefficients, sans résoudre l’équation. Avec de petites racines entières, trouver deux nombres de cette somme et de ce produit va plus vite que la formule quadratique.",
+    "en": "These relations come straight from the coefficients, without solving the equation. With small whole roots, finding two numbers with that sum and that product is quicker than the quadratic formula."
+  }
+}

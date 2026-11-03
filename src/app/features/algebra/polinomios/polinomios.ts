@@ -15,6 +15,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/algebra/polinomios/polinomios.i18n.json';
 import { geradorPolinomios } from '@features/algebra/polinomios/polinomios.gerador';
 import { TEORIA_POLINOMIOS } from '@features/algebra/polinomios/polinomios.teoria';
 
@@ -34,6 +37,8 @@ import { TEORIA_POLINOMIOS } from '@features/algebra/polinomios/polinomios.teori
   styleUrl: './polinomios.scss',
 })
 export class Polinomios {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorPolinomios;
   protected readonly conceitos = TEORIA_POLINOMIOS.map((teoria) => teoria.id);
 
@@ -52,9 +57,7 @@ export class Polinomios {
 
   protected readonly divisor = computed(() => Polinomio.de(-this.raizTeste(), 1));
 
-  protected readonly divisao = computed(() =>
-    dividirComPassos(this.polinomio(), this.divisor()),
-  );
+  protected readonly divisao = computed(() => dividirComPassos(this.polinomio(), this.divisor()));
 
   protected readonly resto = computed(() =>
     restoPorBinomioComPassos(this.polinomio(), this.raizTeste()),
@@ -82,9 +85,7 @@ export class Polinomios {
     const { quociente, resto } = this.divisao().resultado;
     const fatorado = `\\left(${this.divisor().paraTex()}\\right)\\left(${quociente.paraTex()}\\right)`;
 
-    return resto.ehNulo
-      ? `P(x) = ${fatorado}`
-      : `P(x) = ${fatorado} + ${resto.paraTex()}`;
+    return resto.ehNulo ? `P(x) = ${fatorado}` : `P(x) = ${fatorado} + ${resto.paraTex()}`;
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
@@ -92,8 +93,13 @@ export class Polinomios {
     const { quociente } = this.divisao().resultado;
 
     return [
-      { fn: (x) => p.avaliar(x), cor: 'serie-1', rotulo: 'P(x)' },
-      { fn: (x) => quociente.avaliar(x), cor: 'serie-3', tracejada: true, rotulo: 'quociente' },
+      { fn: (x) => p.avaliar(x), cor: 'serie-1', rotulo: this.texto('curvaP') },
+      {
+        fn: (x) => quociente.avaliar(x),
+        cor: 'serie-3',
+        tracejada: true,
+        rotulo: this.texto('curvaQuociente'),
+      },
     ];
   });
 
@@ -105,7 +111,7 @@ export class Polinomios {
     const marcas: PontoPlot[] = this.raizes().map((raiz) => ({
       x: raiz,
       y: 0,
-      rotulo: `raiz ${this.formatar(raiz)}`,
+      rotulo: this.texto('pontoRaiz', { valor: this.formatar(raiz) }),
       cor: 'acerto',
     }));
 
@@ -113,7 +119,10 @@ export class Polinomios {
       marcas.push({
         x: testada,
         y: p.avaliar(testada),
-        rotulo: `P(${this.formatar(testada)}) = ${this.formatar(p.avaliar(testada))}`,
+        rotulo: this.texto('pontoTeste', {
+          a: this.formatar(testada),
+          valor: this.formatar(p.avaliar(testada)),
+        }),
         cor: 'aviso',
       });
     }
@@ -123,10 +132,11 @@ export class Polinomios {
 
   protected readonly dominio = computed(() => ({ xMin: -5, xMax: 5 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Polinômio de grau ${this.polinomio().grau} com ${this.raizes().length} raiz(es) ` +
-      'racional(is), ao lado do quociente da divisão.',
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      grau: this.polinomio().grau,
+      raizes: this.raizes().length,
+    }),
   );
 
   constructor() {

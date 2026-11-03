@@ -1,15 +1,30 @@
 <app-topico-layout topicoId="expressoes-algebricas">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="-5" [max]="5" />
-      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x" [min]="-8" [max]="8" />
-      <app-controle-parametro [(valor)]="c" rotulo="Termo constante" [min]="-10" [max]="10" />
       <app-controle-parametro
-        [(valor)]="x"
-        rotulo="Valor de x"
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefX2')"
         [min]="-5"
         [max]="5"
-        dica="O número que substitui a letra."
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.coefX')"
+        [min]="-8"
+        [max]="8"
+      />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="i18n.t('explorar.termoConstante')"
+        [min]="-10"
+        [max]="10"
+      />
+      <app-controle-parametro
+        [(valor)]="x"
+        [rotulo]="texto('valorDeX')"
+        [min]="-5"
+        [max]="5"
+        [dica]="texto('dicaValorDeX')"
       />
     </section>
 
@@ -19,12 +34,12 @@
     </section>
 
     <section>
-      <h2>Substituindo passo a passo</h2>
+      <h2>{{ texto('substituindo') }}</h2>
       <app-passo-a-passo [passos]="passos()" />
     </section>
 
     <section>
-      <h2>A expressão como curva</h2>
+      <h2>{{ texto('expressaoComoCurva') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -32,10 +47,7 @@
         [descricao]="descricaoGrafico()"
         [altura]="340"
       />
-      <p class="observacao">
-        Mudar o valor de x move o ponto sobre a curva. Avaliar uma expressão é exatamente isto:
-        escolher uma posição horizontal e ler a altura correspondente.
-      </p>
+      <p class="observacao">{{ texto('mudarX') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

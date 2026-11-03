@@ -77,7 +77,9 @@ describe('geradorPolinomios', () => {
   });
 
   it('o grau do quociente é a diferença dos graus', () => {
-    const exercicios = amostra('facil', 90).filter((e) => e.enunciado.includes('grau do quociente'));
+    const exercicios = amostra('facil', 90).filter((e) =>
+      e.enunciado.includes('grau do quociente'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 

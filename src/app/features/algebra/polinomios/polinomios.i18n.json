@@ -1,0 +1,87 @@
+{
+  "testarDivisao": {
+    "pt": "Testar divisão por (x − a), com a =",
+    "fr": "Tester la division par (x − a), avec a =",
+    "en": "Test division by (x − a), with a ="
+  },
+  "grauMaximo": {
+    "pt": "Grau {grau} — então há no máximo {grau} raízes.",
+    "fr": "Degré {grau} — il y a donc au plus {grau} racines.",
+    "en": "Degree {grau} — so there are at most {grau} roots."
+  },
+  "restoDaDivisao": {
+    "pt": "Resto da divisão",
+    "fr": "Reste de la division",
+    "en": "Remainder of the division"
+  },
+  "ehFator": {
+    "pt": "zero: é fator exato",
+    "fr": "zéro : c’est un facteur exact",
+    "en": "zero: it is an exact factor"
+  },
+  "naoEhFator": {
+    "pt": "diferente de zero: não é fator",
+    "fr": "non nul : ce n’est pas un facteur",
+    "en": "not zero: not a factor"
+  },
+  "raizesRacionais": {
+    "pt": "Raízes racionais",
+    "fr": "Racines rationnelles",
+    "en": "Rational roots"
+  },
+  "deCandidatas": {
+    "pt": "de {quantas} candidatas testadas",
+    "fr": "sur {quantas} candidates testées",
+    "en": "out of {quantas} candidates tested"
+  },
+  "grauDoQuociente": {
+    "pt": "Grau do quociente",
+    "fr": "Degré du quotient",
+    "en": "Degree of the quotient"
+  },
+  "raizEFator": {
+    "pt": "Raiz e fator são a mesma informação",
+    "fr": "Racine et facteur disent la même chose",
+    "en": "Root and factor are the same information"
+  },
+  "curvaP": { "pt": "P(x)", "fr": "P(x)", "en": "P(x)" },
+  "curvaQuociente": { "pt": "quociente", "fr": "quotient", "en": "quotient" },
+  "pontoRaiz": { "pt": "raiz {valor}", "fr": "racine {valor}", "en": "root {valor}" },
+  "pontoTeste": { "pt": "P({a}) = {valor}", "fr": "P({a}) = {valor}", "en": "P({a}) = {valor}" },
+  "descricaoGrafico": {
+    "pt": "Polinômio de grau {grau} com {raizes} raiz(es) racional(is), ao lado do quociente da divisão.",
+    "fr": "Polynôme de degré {grau} avec {raizes} racine(s) rationnelle(s), à côté du quotient de la division.",
+    "en": "Polynomial of degree {grau} with {raizes} rational root(s), beside the quotient of the division."
+  },
+  "mexaNoValor": {
+    "pt": "Mexa no valor testado: quando ele cai sobre um cruzamento da curva com o eixo x, o resto zera e a divisão fica exata. Não é coincidência — é o teorema do resto: o resto <em>é</em> a altura da curva naquele ponto.",
+    "fr": "Changez la valeur testée : lorsqu’elle tombe sur une intersection de la courbe avec l’axe des x, le reste s’annule et la division devient exacte. Ce n’est pas un hasard — c’est le théorème du reste : le reste <em>est</em> la hauteur de la courbe en ce point.",
+    "en": "Change the tested value: when it lands on a crossing of the curve with the x axis, the remainder hits zero and the division is exact. That is no coincidence — it is the remainder theorem: the remainder <em>is</em> the height of the curve at that point."
+  },
+  "candidatasRacionais": {
+    "pt": "Candidatas racionais",
+    "fr": "Candidates rationnelles",
+    "en": "Rational candidates"
+  },
+  "todaRaizRacional": {
+    "pt": "Toda raiz racional tem numerador dividindo o termo constante e denominador dividindo o coeficiente líder. Em vez de tentar números ao acaso, testa-se esta lista:",
+    "fr": "Toute racine rationnelle a un numérateur qui divise le terme constant et un dénominateur qui divise le coefficient dominant. Plutôt que d’essayer des nombres au hasard, on teste cette liste :",
+    "en": "Every rational root has a numerator dividing the constant term and a denominator dividing the leading coefficient. Instead of trying numbers at random, you test this list:"
+  },
+  "ehRaiz": { "pt": "é raiz", "fr": "est une racine", "en": "is a root" },
+  "cliqueNumaCandidata": {
+    "pt": "Clique numa candidata para dividir por ela. As marcadas com ✓ anulam o polinômio.",
+    "fr": "Cliquez sur une candidate pour diviser par elle. Celles marquées d’un ✓ annulent le polynôme.",
+    "en": "Click a candidate to divide by it. The ones marked with ✓ make the polynomial zero."
+  },
+  "aDivisaoPassoAPasso": {
+    "pt": "A divisão, passo a passo",
+    "fr": "La division, pas à pas",
+    "en": "The division, step by step"
+  },
+  "bhaskara": {
+    "pt": "Bhaskara resolve grau 2, e nada além disso. A saída para graus maiores é derrubar o grau: achar uma raiz, dividir por (x − raiz) e repetir. Um grau 3 vira grau 2, e aí a fórmula que você já sabe termina o serviço.",
+    "fr": "La formule quadratique règle le degré 2, et rien de plus. Pour les degrés supérieurs, il faut faire baisser le degré : trouver une racine, diviser par (x − racine) et recommencer. Un degré 3 devient un degré 2, et la formule que vous connaissez finit le travail.",
+    "en": "The quadratic formula handles degree 2, and nothing beyond. The way out for higher degrees is to bring the degree down: find a root, divide by (x − root) and repeat. A cubic becomes a quadratic, and the formula you already know finishes the job."
+  }
+}

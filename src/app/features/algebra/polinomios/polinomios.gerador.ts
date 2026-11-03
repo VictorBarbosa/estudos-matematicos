@@ -150,8 +150,7 @@ function exercicioGrauQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: grauD - 1,
-          diagnostico:
-            'Grau menor que o divisor é característica do RESTO, não do quociente.',
+          diagnostico: 'Grau menor que o divisor é característica do RESTO, não do quociente.',
           passo: 0,
           conceito: 'polinomios.divisao',
         },
@@ -245,7 +244,12 @@ function exercicioCoeficienteQuociente(nivel: Nivel, rng: Rng): Exercicio<number
   const gabarito = quociente.coeficiente(grau);
 
   const sinal = a >= 0 ? '-' : '+';
-  const termo = grau === 0 ? 'o termo constante' : grau === 1 ? 'o coeficiente de x' : `o coeficiente de x^${grau}`;
+  const termo =
+    grau === 0
+      ? 'o termo constante'
+      : grau === 1
+        ? 'o coeficiente de x'
+        : `o coeficiente de x^${grau}`;
 
   return {
     id: `poli-coef-${p.coeficientes.join('_')}-${a}-${grau}-${rng.inteiro(0, 9999)}`,

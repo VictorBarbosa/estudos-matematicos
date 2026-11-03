@@ -1,4 +1,9 @@
-import { Polinomio, dividirComPassos, fatorarPorRaizesComPassos, restoPorBinomioComPassos } from '@core/math';
+import {
+  Polinomio,
+  dividirComPassos,
+  fatorarPorRaizesComPassos,
+  restoPorBinomioComPassos,
+} from '@core/math';
 import { Teoria } from '@core/teoria/models/teoria.model';
 
 /** x³ − 6x² + 11x − 6 = (x−1)(x−2)(x−3), o exemplo que atravessa os três conceitos. */

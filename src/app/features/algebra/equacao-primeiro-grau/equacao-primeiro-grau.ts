@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.i18n.json';
 import { geradorEquacao1 } from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.gerador';
 import { TEORIA_EQUACAO_1 } from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_EQUACAO_1 } from '@features/algebra/equacao-primeiro-grau/equaca
   styleUrl: './equacao-primeiro-grau.scss',
 })
 export class EquacaoPrimeiroGrau {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorEquacao1;
   protected readonly conceitos = TEORIA_EQUACAO_1.map((teoria) => teoria.id);
 
@@ -45,7 +50,7 @@ export class EquacaoPrimeiroGrau {
     } catch (erro) {
       return {
         ok: false,
-        mensagem: erro instanceof ErroMatematico ? erro.message : 'Equação inválida.',
+        mensagem: erro instanceof ErroMatematico ? erro.message : this.texto('equacaoInvalida'),
       };
     }
   });
@@ -84,9 +89,14 @@ export class EquacaoPrimeiroGrau {
       {
         fn: (x) => a * x + b,
         cor: 'serie-1',
-        rotulo: `y = ${this.equacaoTex().split('=')[0]!.trim()}`,
+        rotulo: this.texto('curvaReta', { lado: this.equacaoTex().split('=')[0]!.trim() }),
       },
-      { fn: () => c, cor: 'serie-2', tracejada: true, rotulo: `y = ${c}` },
+      {
+        fn: () => c,
+        cor: 'serie-2',
+        tracejada: true,
+        rotulo: this.texto('curvaReta', { lado: c }),
+      },
     ];
   });
 
@@ -95,7 +105,14 @@ export class EquacaoPrimeiroGrau {
     if (raiz === null) {
       return [];
     }
-    return [{ x: raiz.valor, y: this.c(), rotulo: `x = ${raiz.raiz}`, cor: 'acento' }];
+    return [
+      {
+        x: raiz.valor,
+        y: this.c(),
+        rotulo: this.texto('pontoRaiz', { raiz: raiz.raiz.toString() }),
+        cor: 'acento',
+      },
+    ];
   });
 
   protected readonly dominio = computed(() => {
@@ -108,8 +125,8 @@ export class EquacaoPrimeiroGrau {
   protected readonly descricaoGrafico = computed(() => {
     const raiz = this.raiz();
     return raiz === null
-      ? 'Gráfico indisponível: o coeficiente de x é zero.'
-      : `Reta cruzando a horizontal y igual a ${this.c()} no ponto x igual a ${raiz.raiz}.`;
+      ? this.texto('graficoIndisponivel')
+      : this.texto('descricaoGrafico', { c: this.c(), raiz: raiz.raiz.toString() });
   });
 
   constructor() {

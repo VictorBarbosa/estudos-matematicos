@@ -1,9 +1,24 @@
 <app-topico-layout topicoId="fatoracao">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="0" [max]="6" />
-      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x" [min]="-12" [max]="12" />
-      <app-controle-parametro [(valor)]="c" rotulo="Termo constante" [min]="-20" [max]="20" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefX2')"
+        [min]="0"
+        [max]="6"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.coefX')"
+        [min]="-12"
+        [max]="12"
+      />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="i18n.t('explorar.termoConstante')"
+        [min]="-20"
+        [max]="20"
+      />
     </section>
 
     <section class="destaque-formula">
@@ -20,7 +35,7 @@
     </section>
 
     <section>
-      <h2>Onde a expressão se anula</h2>
+      <h2>{{ texto('ondeSeAnula') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -28,14 +43,11 @@
         [descricao]="descricaoGrafico()"
         [altura]="340"
       />
-      <p class="observacao">
-        Cada fator (x − r) corresponde a um cruzamento com o eixo x em r. É por isso que fatorar
-        resolve equações: um produto só é zero quando algum fator é zero.
-      </p>
+      <p class="observacao">{{ texto('cadaFator') }}</p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="fatoracao().passos" />
     </section>
 

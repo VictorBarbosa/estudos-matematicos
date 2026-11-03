@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { NOME_PRODUTO, TipoProdutoNotavel, enunciadoParaTex, expandirComPassos } from '@core/math';
+import { TipoProdutoNotavel, enunciadoParaTex, expandirComPassos } from '@core/math';
 import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
@@ -7,7 +7,13 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { TIPOS_DISPONIVEIS, geradorProdutos } from '@features/algebra/produtos-notaveis/produtos-notaveis.gerador';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/algebra/produtos-notaveis/produtos-notaveis.i18n.json';
+import {
+  TIPOS_DISPONIVEIS,
+  geradorProdutos,
+} from '@features/algebra/produtos-notaveis/produtos-notaveis.gerador';
 import { TEORIA_PRODUTOS } from '@features/algebra/produtos-notaveis/produtos-notaveis.teoria';
 
 @Component({
@@ -18,11 +24,11 @@ import { TEORIA_PRODUTOS } from '@features/algebra/produtos-notaveis/produtos-no
   styleUrl: './produtos-notaveis.scss',
 })
 export class ProdutosNotaveis {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorProdutos;
   protected readonly conceitos = TEORIA_PRODUTOS.map((teoria) => teoria.id);
   protected readonly tipos = TIPOS_DISPONIVEIS;
-  protected readonly nomeDoTipo = NOME_PRODUTO;
-
   protected readonly tipo = signal<TipoProdutoNotavel>('quadrado-da-soma');
   protected readonly a = signal(2);
   protected readonly b = signal(3);

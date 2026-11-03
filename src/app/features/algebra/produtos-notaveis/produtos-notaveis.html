@@ -1,6 +1,6 @@
 <app-topico-layout topicoId="produtos-notaveis">
   <div explorar class="explorar">
-    <section class="seletor" role="group" aria-label="Identidade">
+    <section class="seletor" role="group" [attr.aria-label]="texto('identidade')">
       @for (opcao of tipos; track opcao) {
         <button
           type="button"
@@ -8,14 +8,24 @@
           [attr.aria-pressed]="tipo() === opcao"
           (click)="definirTipo(opcao)"
         >
-          {{ nomeDoTipo[opcao] }}
+          {{ texto(opcao) }}
         </button>
       }
     </section>
 
     <section class="controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x" [min]="1" [max]="6" />
-      <app-controle-parametro [(valor)]="b" rotulo="Termo constante" [min]="1" [max]="9" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefX')"
+        [min]="1"
+        [max]="6"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.termoConstante')"
+        [min]="1"
+        [max]="9"
+      />
     </section>
 
     <section class="identidade">
@@ -24,43 +34,33 @@
 
     @if (ingenuo(); as errado) {
       <section class="comparacao">
-        <h2>O erro mais comum</h2>
+        <h2>{{ i18n.t('explorar.erroMaisComum') }}</h2>
         <div class="lado-a-lado">
           <div class="caixa errada">
-            <span class="etiqueta">Errado</span>
+            <span class="etiqueta">{{ i18n.t('explorar.errado') }}</span>
             <app-formula [tex]="enunciado() + ' = ' + errado" [bloco]="true" />
           </div>
           <div class="caixa certa">
-            <span class="etiqueta">Correto</span>
+            <span class="etiqueta">{{ i18n.t('explorar.correto') }}</span>
             <app-formula [tex]="enunciado() + ' = ' + expandido().paraTex()" [bloco]="true" />
           </div>
         </div>
-        <p class="observacao">
-          A diferença entre os dois é exatamente o termo
-          <strong>{{ termoDoMeio() }}x</strong> — que corresponde a uma área real na figura abaixo,
-          e não a um detalhe de notação.
-        </p>
+        <!-- O <strong> cai sobre o termo, que muda de posição em cada língua. -->
+        <p class="observacao" [innerHTML]="texto('aDiferencaEntre', { termo: termoDoMeio() })"></p>
       </section>
     }
 
     @if (mostraGeometria()) {
       <section class="geometria">
-        <h2>Por que o termo do meio existe</h2>
-        <p class="observacao">
-          Um quadrado de lado (a + b) se divide em quatro pedaços. Os dois retângulos de área a·b
-          são o 2ab que se perde ao escrever apenas a² + b².
-        </p>
+        <h2>{{ texto('porQueTermoDoMeio') }}</h2>
+        <p class="observacao">{{ texto('umQuadradoDeLado') }}</p>
 
         <div
           class="quadrado"
           [style.--prop-a.%]="areas().proporcaoA"
           [style.--prop-b.%]="areas().proporcaoB"
           role="img"
-          [attr.aria-label]="
-            'Quadrado de lado ' +
-            areas().total +
-            ' dividido em quatro regiões: um quadrado a ao quadrado, dois retângulos a vezes b e um quadrado b ao quadrado.'
-          "
+          [attr.aria-label]="texto('descricaoQuadrado', { total: areas().total })"
         >
           <div class="celula aa"><span>a²</span></div>
           <div class="celula ab"><span>ab</span></div>
@@ -71,7 +71,7 @@
     }
 
     <section class="passos">
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="resolucao().passos" />
     </section>
 

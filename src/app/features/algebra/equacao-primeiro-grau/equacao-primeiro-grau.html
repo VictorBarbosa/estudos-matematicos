@@ -1,9 +1,24 @@
 <app-topico-layout topicoId="equacao-primeiro-grau">
   <div explorar class="explorar">
     <section class="controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente a" [min]="-10" [max]="10" />
-      <app-controle-parametro [(valor)]="b" rotulo="Termo b" [min]="-20" [max]="20" />
-      <app-controle-parametro [(valor)]="c" rotulo="Lado direito c" [min]="-20" [max]="20" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefA')"
+        [min]="-10"
+        [max]="10"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.termoB')"
+        [min]="-20"
+        [max]="20"
+      />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="texto('ladoDireitoC')"
+        [min]="-20"
+        [max]="20"
+      />
     </section>
 
     <section class="equacao">
@@ -17,7 +32,7 @@
 
     @if (!erro()) {
       <section class="grafico">
-        <h2>A raiz é onde as retas se cruzam</h2>
+        <h2>{{ texto('raizOndeCruzam') }}</h2>
         <app-math-plot
           [dominio]="dominio()"
           [curvas]="curvas()"
@@ -25,14 +40,11 @@
           [descricao]="descricaoGrafico()"
           [altura]="360"
         />
-        <p class="observacao">
-          Mexa no coeficiente a e repare: enquanto ele não for zero, a reta tem inclinação e cruza a
-          horizontal em exatamente um ponto. É por isso que a equação tem solução única.
-        </p>
+        <p class="observacao">{{ texto('mexaNoA') }}</p>
       </section>
 
       <section class="passos">
-        <h2>Passo a passo</h2>
+        <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
         <app-passo-a-passo [passos]="passos()" />
       </section>
     }

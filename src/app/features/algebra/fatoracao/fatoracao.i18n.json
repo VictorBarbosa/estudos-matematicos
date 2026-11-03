@@ -1,0 +1,54 @@
+{
+  "fator-comum": {
+    "pt": "Fator comum em evidência",
+    "fr": "Facteur commun mis en évidence",
+    "en": "Common factor taken out"
+  },
+  "diferenca-de-quadrados": {
+    "pt": "Diferença de quadrados",
+    "fr": "Différence de carrés",
+    "en": "Difference of squares"
+  },
+  "trinomio-quadrado-perfeito": {
+    "pt": "Trinômio quadrado perfeito",
+    "fr": "Trinôme carré parfait",
+    "en": "Perfect square trinomial"
+  },
+  "trinomio-soma-produto": {
+    "pt": "Trinômio por soma e produto",
+    "fr": "Trinôme par somme et produit",
+    "en": "Trinomial by sum and product"
+  },
+  "nao-fatoravel": {
+    "pt": "Não fatora com coeficientes inteiros",
+    "fr": "Ne se factorise pas avec des coefficients entiers",
+    "en": "Does not factor over the integers"
+  },
+  "fatoracao": { "pt": "Fatoração", "fr": "Factorisation", "en": "Factorisation" },
+  "ondeSeAnula": {
+    "pt": "Onde a expressão se anula",
+    "fr": "Où l’expression s’annule",
+    "en": "Where the expression vanishes"
+  },
+  "curvaExpressao": {
+    "pt": "y = expressão",
+    "fr": "y = expression",
+    "en": "y = expression"
+  },
+  "pontoRaiz": { "pt": "x = {raiz}", "fr": "x = {raiz}", "en": "x = {raiz}" },
+  "descricaoGrafico": {
+    "pt": "Gráfico da expressão, cruzando o eixo x em {quantas} pontos.",
+    "fr": "Graphique de l’expression, coupant l’axe des x en {quantas} points.",
+    "en": "Graph of the expression, crossing the x axis at {quantas} points."
+  },
+  "descricaoGraficoUm": {
+    "pt": "Gráfico da expressão, cruzando o eixo x em 1 ponto.",
+    "fr": "Graphique de l’expression, coupant l’axe des x en 1 point.",
+    "en": "Graph of the expression, crossing the x axis at 1 point."
+  },
+  "cadaFator": {
+    "pt": "Cada fator (x − r) corresponde a um cruzamento com o eixo x em r. É por isso que fatorar resolve equações: um produto só é zero quando algum fator é zero.",
+    "fr": "Chaque facteur (x − r) correspond à une intersection avec l’axe des x en r. C’est pourquoi factoriser résout des équations : un produit n’est nul que si l’un des facteurs l’est.",
+    "en": "Each factor (x − r) matches a crossing of the x axis at r. That is why factoring solves equations: a product is zero only when one of its factors is."
+  }
+}

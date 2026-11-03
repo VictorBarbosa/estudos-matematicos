@@ -1,6 +1,10 @@
 import { Relacao, SIMBOLO_RELACAO, resolverInequacaoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
-import { analisarNumero, formatarNumero, proximosEmCasas } from '@core/treino/resposta-numerica/resposta-numerica';
+import {
+  analisarNumero,
+  formatarNumero,
+  proximosEmCasas,
+} from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 /**

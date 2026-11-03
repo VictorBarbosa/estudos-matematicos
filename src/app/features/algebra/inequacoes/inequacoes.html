@@ -3,22 +3,32 @@
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="a"
-        rotulo="Coeficiente a"
+        [rotulo]="i18n.t('explorar.coefA')"
         [min]="-8"
         [max]="8"
-        dica="Experimente valores negativos."
+        [dica]="texto('dicaCoefA')"
       />
-      <app-controle-parametro [(valor)]="b" rotulo="Termo b" [min]="-15" [max]="15" />
-      <app-controle-parametro [(valor)]="c" rotulo="Lado direito" [min]="-15" [max]="15" />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.termoB')"
+        [min]="-15"
+        [max]="15"
+      />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="texto('ladoDireito')"
+        [min]="-15"
+        [max]="15"
+      />
     </section>
 
-    <section class="seletor-pills" role="group" aria-label="Relação de desigualdade">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('relacaoDesigualdade')">
       @for (opcao of relacoes; track opcao.valor) {
         <button
           type="button"
           [class.ativo]="relacao() === opcao.valor"
           [attr.aria-pressed]="relacao() === opcao.valor"
-          [attr.aria-label]="'Relação ' + opcao.rotulo"
+          [attr.aria-label]="texto('relacaoRotulo', { simbolo: opcao.rotulo })"
           (click)="definirRelacao(opcao.valor)"
         >
           {{ opcao.rotulo }}
@@ -32,14 +42,12 @@
     </section>
 
     @if (houveInversao()) {
-      <p class="aviso">
-        O coeficiente de x é negativo, então ao dividir por ele o sentido da desigualdade se
-        <strong>inverte</strong>. Repare que o símbolo na solução não é o mesmo do enunciado.
-      </p>
+      <!-- A ênfase recai sobre o verbo, que muda de lugar em cada língua. -->
+      <p class="aviso" [innerHTML]="texto('avisoInversao')"></p>
     }
 
     <section>
-      <h2>O conjunto solução na reta</h2>
+      <h2>{{ texto('conjuntoNaReta') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -48,19 +56,11 @@
         [descricao]="descricaoGrafico()"
         [altura]="360"
       />
-      <p class="observacao">
-        A seta marca a região em que a reta cheia fica
-        {{ relacao() === '>' || relacao() === '>=' ? 'acima' : 'abaixo' }} da tracejada. A bolinha é
-        {{
-          solucao().inclusiva
-            ? 'preenchida, porque a fronteira entra na solução'
-            : 'vazada, porque a fronteira fica de fora'
-        }}.
-      </p>
+      <p class="observacao">{{ texto(explicacaoDaSeta()) }}</p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="resolucao().passos" />
     </section>
 
