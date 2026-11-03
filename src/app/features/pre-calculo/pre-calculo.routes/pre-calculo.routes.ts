@@ -8,12 +8,6 @@ import { Routes } from '@angular/router';
  */
 export const rotas: Routes = [
   {
-    path: 'sequencias-e-series',
-    title: 'Sequências e séries · Estudos Matemáticos',
-    loadComponent: () =>
-      import('@features/pre-calculo/sequencias-e-series/sequencias-e-series').then((m) => m.SequenciasESeries),
-  },
-  {
     path: 'nocao-intuitiva-de-limite',
     title: 'Noção intuitiva de limite · Estudos Matemáticos',
     loadComponent: () => import('@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite').then((m) => m.NocaoIntuitivaDeLimite),
@@ -23,5 +17,5 @@ export const rotas: Routes = [
     title: 'Vizinhanças e infinito · Estudos Matemáticos',
     loadComponent: () => import('@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito').then((m) => m.VizinhancasEInfinito),
   },
-  { path: '', pathMatch: 'full', redirectTo: 'sequencias-e-series' },
+  { path: '', pathMatch: 'full', redirectTo: 'nocao-intuitiva-de-limite' },
 ];

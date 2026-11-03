@@ -9,8 +9,8 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { geradorSequencias } from '@features/pre-calculo/sequencias-e-series/sequencias-e-series.gerador';
-import { TEORIA_SEQUENCIAS } from '@features/pre-calculo/sequencias-e-series/sequencias-e-series.teoria';
+import { geradorSequencias } from '@features/calculo-2/sequencias-e-series/sequencias-e-series.gerador';
+import { TEORIA_SEQUENCIAS } from '@features/calculo-2/sequencias-e-series/sequencias-e-series.teoria';
 
 @Component({
   selector: 'app-sequencias-e-series',

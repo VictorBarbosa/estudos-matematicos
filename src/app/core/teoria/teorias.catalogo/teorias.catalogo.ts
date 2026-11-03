@@ -70,7 +70,7 @@ import { TEORIA_OPERACOES as t_operacoes_fundamentais } from '@features/matemati
 import { TEORIA_POTENCIAS as t_potenciacao_radiciacao } from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.teoria';
 import { TEORIA_PROPORCAO as t_razao_proporcao } from '@features/matematica-basica/razao-proporcao/razao-proporcao.teoria';
 import { TEORIA_LIMITE_INTUITIVO as t_nocao_intuitiva_de_limite } from '@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.teoria';
-import { TEORIA_SEQUENCIAS as t_sequencias_e_series } from '@features/pre-calculo/sequencias-e-series/sequencias-e-series.teoria';
+import { TEORIA_SEQUENCIAS as t_sequencias_e_series } from '@features/calculo-2/sequencias-e-series/sequencias-e-series.teoria';
 import { TEORIA_VIZINHANCAS as t_vizinhancas_e_infinito } from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.teoria';
 import { TEORIA_CIRCULO as t_circulo_trigonometrico } from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.teoria';
 import { TEORIA_ONDAS as t_funcoes_trigonometricas } from '@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.teoria';

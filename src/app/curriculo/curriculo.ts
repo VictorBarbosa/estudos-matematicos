@@ -292,6 +292,27 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'funcoes-racionais',
+        titulo: 'Funções racionais',
+        descricao:
+          'Quociente de polinômios: domínio, assíntotas e o que acontece perto do que anula o denominador.',
+        pronto: false,
+      },
+      {
+        id: 'funcoes-por-partes',
+        titulo: 'Funções definidas por partes',
+        descricao:
+          'Uma regra diferente em cada intervalo, e o que acontece nas emendas.',
+        pronto: false,
+      },
+      {
+        id: 'transformacoes-de-graficos',
+        titulo: 'Transformações de gráficos',
+        descricao:
+          'Deslocar, esticar e refletir — ler o gráfico de f(x) + k, f(x + k) e a·f(x) sem refazer a tabela.',
+        pronto: false,
+      },
+      {
         id: 'composicao-inversa',
         titulo: 'Composição e inversa',
         descricao: 'Encadear funções e refletir o gráfico na reta y = x.',
@@ -394,6 +415,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'vetores-no-espaco',
+        titulo: 'Vetores no espaço',
+        descricao:
+          'Componentes x, y e z, vetores unitários e os dois produtos em três dimensões.',
+        pronto: false,
+      },
+      {
         id: 'matrizes-determinantes',
         titulo: 'Matrizes e determinantes',
         descricao: 'Operações com matrizes, determinante como área e regra de Cramer.',
@@ -438,6 +466,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'Elipse, parábola e hipérbole como secções de um cone — e como órbitas.',
         pronto: true,
       },
+      {
+        id: 'equacoes-parametricas',
+        titulo: 'Equações paramétricas',
+        descricao:
+          'A curva descrita pelo tempo: x(t) e y(t), e a trajetória que elas desenham.',
+        pronto: false,
+      },
     ],
   },
   {
@@ -472,15 +507,29 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
-        id: 'trajetoria-balistica',
-        titulo: 'Trajetória balística',
-        descricao: 'Lançamento oblíquo: alcance, altura máxima e tempo de voo.',
-        pronto: true,
+        id: 'cinematica-vetorial',
+        titulo: 'Cinemática vetorial',
+        descricao:
+          'Posição, velocidade e aceleração como vetores, em duas e três dimensões.',
+        pronto: false,
+      },
+      {
+        id: 'movimento-circular',
+        titulo: 'Movimento circular',
+        descricao:
+          'Velocidade angular, aceleração centrípeta e a força que mantém a curva.',
+        pronto: false,
       },
       {
         id: 'leis-de-newton',
         titulo: 'Leis de Newton',
         descricao: 'Inércia, F = ma e ação e reação, com diagramas de corpo livre.',
+        pronto: true,
+      },
+      {
+        id: 'trajetoria-balistica',
+        titulo: 'Trajetória balística',
+        descricao: 'Lançamento oblíquo: alcance, altura máxima e tempo de voo.',
         pronto: true,
       },
       {
@@ -496,15 +545,29 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
-        id: 'movimento-harmonico',
-        titulo: 'Movimento harmônico',
-        descricao: 'Oscilação de uma mola descrita por seno e cosseno.',
-        pronto: true,
-      },
-      {
         id: 'estatica-e-torque',
         titulo: 'Estática e torque',
         descricao: 'Equilíbrio de forças e de momentos, centro de massa e estabilidade.',
+        pronto: true,
+      },
+      {
+        id: 'dinamica-rotacional',
+        titulo: 'Dinâmica rotacional',
+        descricao:
+          'Momento de inércia, torque e a segunda lei para a rotação.',
+        pronto: false,
+      },
+      {
+        id: 'momento-angular',
+        titulo: 'Conservação do momento angular',
+        descricao:
+          'Por que a patinadora acelera ao fechar os braços — e o que isso faz num satélite.',
+        pronto: false,
+      },
+      {
+        id: 'movimento-harmonico',
+        titulo: 'Movimento harmônico',
+        descricao: 'Oscilação de uma mola descrita por seno e cosseno.',
         pronto: true,
       },
       {
@@ -524,6 +587,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'Termodinâmica e gases',
         descricao: 'Gases ideais, primeira lei e o trabalho que uma expansão realiza.',
         pronto: true,
+      },
+      {
+        id: 'transferencia-de-calor',
+        titulo: 'Transferência de calor',
+        descricao:
+          'Condução, convecção e radiação, e o reentry de um veículo espacial.',
+        pronto: false,
       },
       {
         id: 'propulsao-de-foguetes',
@@ -557,12 +627,6 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         id: 'vizinhancas-e-infinito',
         titulo: 'Vizinhanças e infinito',
         descricao: 'Épsilon e delta, e o comportamento de funções no infinito.',
-        pronto: true,
-      },
-      {
-        id: 'sequencias-e-series',
-        titulo: 'Sequências e séries',
-        descricao: 'Progressões, somas infinitas e convergência.',
         pronto: true,
       },
     ],
@@ -629,6 +693,27 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'derivadas-trigonometricas',
+        titulo: 'Derivadas trigonométricas',
+        descricao:
+          'Derivar seno, cosseno e tangente — e por que a derivada do seno é o cosseno.',
+        pronto: false,
+      },
+      {
+        id: 'derivadas-exponencial-logaritmo',
+        titulo: 'Derivadas de exponencial e logaritmo',
+        descricao:
+          'A função que é a própria derivada, e a que vira 1/x.',
+        pronto: false,
+      },
+      {
+        id: 'derivacao-implicita',
+        titulo: 'Derivação implícita',
+        descricao:
+          'Derivar sem isolar y, que é o caminho quando a curva não é uma função.',
+        pronto: false,
+      },
+      {
         id: 'aplicacoes-da-derivada',
         titulo: 'Aplicações da derivada',
         descricao: 'Máximos e mínimos, concavidade, otimização e taxas relacionadas.',
@@ -691,6 +776,24 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'Área entre curvas, volume de sólidos de revolução e comprimento de arco.',
         pronto: true,
       },
+      {
+        id: 'integrais-improprias',
+        titulo: 'Integrais impróprias',
+        descricao: 'Integrais com limite infinito ou integrando ilimitado, e quando elas convergem.',
+        pronto: false,
+      },
+      {
+        id: 'sequencias-e-series',
+        titulo: 'Sequências e séries',
+        descricao: 'Progressões, somas infinitas e convergência.',
+        pronto: true,
+      },
+      {
+        id: 'series-de-taylor',
+        titulo: 'Séries de Taylor e Maclaurin',
+        descricao: 'Aproximar uma função por polinômios, e o erro que sobra.',
+        pronto: false,
+      },
     ],
   },
   {
@@ -725,6 +828,20 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'Estatística e incerteza',
         descricao: 'Média, desvio padrão, ajuste de reta e propagação de erro numa medida.',
         pronto: true,
+      },
+      {
+        id: 'distribuicao-normal',
+        titulo: 'Distribuição normal',
+        descricao:
+          'A curva em sino: média, desvio padrão e a regra dos 68-95-99.',
+        pronto: false,
+      },
+      {
+        id: 'regressao-e-correlacao',
+        titulo: 'Regressão e correlação',
+        descricao:
+          'A reta que melhor passa pelos pontos, e o quanto ela explica.',
+        pronto: false,
       },
     ],
   },

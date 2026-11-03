@@ -2,7 +2,7 @@
 
 Progressões, somas infinitas e convergência.
 
-**Área:** Pré-cálculo · **Rota:** `/pre-calculo/sequencias-e-series`
+**Área:** Pré-cálculo · **Rota:** `/calculo-2/sequencias-e-series`
 
 ## O que este módulo precisa ter
 

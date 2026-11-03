@@ -70,7 +70,7 @@ import { geradorOperacoes as g_operacoes_fundamentais } from '@features/matemati
 import { geradorPotencias as g_potenciacao_radiciacao } from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.gerador';
 import { geradorProporcao as g_razao_proporcao } from '@features/matematica-basica/razao-proporcao/razao-proporcao.gerador';
 import { geradorLimiteIntuitivo as g_nocao_intuitiva_de_limite } from '@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.gerador';
-import { geradorSequencias as g_sequencias_e_series } from '@features/pre-calculo/sequencias-e-series/sequencias-e-series.gerador';
+import { geradorSequencias as g_sequencias_e_series } from '@features/calculo-2/sequencias-e-series/sequencias-e-series.gerador';
 import { geradorVizinhancas as g_vizinhancas_e_infinito } from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.gerador';
 import { geradorCirculo as g_circulo_trigonometrico } from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.gerador';
 import { geradorOndas as g_funcoes_trigonometricas } from '@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.gerador';

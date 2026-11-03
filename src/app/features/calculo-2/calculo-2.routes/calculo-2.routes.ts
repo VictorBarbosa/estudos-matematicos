@@ -37,5 +37,13 @@ export const rotas: Routes = [
     title: 'Aplicações da integral · Estudos Matemáticos',
     loadComponent: () => import('@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral').then((m) => m.AplicacoesDaIntegral),
   },
+  {
+    path: 'sequencias-e-series',
+    title: 'Sequências e séries · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/calculo-2/sequencias-e-series/sequencias-e-series').then(
+        (m) => m.SequenciasESeries,
+      ),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'soma-de-riemann' },
 ];

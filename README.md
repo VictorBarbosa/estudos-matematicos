@@ -201,6 +201,19 @@ Mostrar as quatro não é detalhe de interface. Enquanto a tela mostrava duas, q
 ordem e errava o último exercício via a etapa continuar fechada sem nada explicando por quê —
 e a condição que faltava era justamente a que o erro tinha acabado de zerar.
 
+### A ordem vem do plano de estudo
+
+Duas mudanças de sequência vieram de `plano_matematica_engenharia_aeroespacial.md`:
+
+- **Leis de Newton antes de trajetória balística.** Entender as forças antes de descrever o
+  movimento que elas produzem é o que permite identificar o que age sobre o projétil, em vez
+  de decorar a parábola. Pelo mesmo motivo, estática e torque vem antes de movimento
+  harmônico.
+- **Sequências e séries saiu do pré-cálculo para o Cálculo 2.** Convergência é assunto de
+  limite já construído, e no pré-cálculo ela adiava o que realmente prepara para o Cálculo 1 —
+  funções, gráficos e a noção intuitiva de limite. A rota antiga
+  (`/pre-calculo/sequencias-e-series`) cai no curinga e volta para a home, sem erro.
+
 ## O nível não se escolhe
 
 A dificuldade é consequência do desempenho, não uma opção: começa no Fácil, sobe um degrau a
@@ -485,19 +498,25 @@ Todos os tópicos do currículo estão implementados. Para acrescentar um novo, 
 
 ## Estado atual
 
-**Os 75 tópicos estão implementados**, nas doze áreas do currículo, na ordem de aprendizagem:
+**75 dos 92 tópicos do currículo estão implementados**, nas doze áreas, na ordem de
+aprendizagem. Os 17 restantes vieram do plano de estudo e já aparecem na navegação com a
+etiqueta **em breve** — o que falta fica visível em vez de escondido, que é para isso que o
+currículo tem o campo `pronto`.
 
 | # | Área | Tópicos |
 |---|------|---------|
 | 1 | Matemática básica | 8 |
-| 2 | Álgebra | 9 |
+| 2 | Álgebra | 8 |
 | 3 | Geometria plana e espacial | 5 |
-| 4 | Funções | 8 |
+| 4 | Funções | 9 de 12 |
 | 5 | Trigonometria | 6 |
-| 6 | Vetores e matrizes | 4 |
-| 7 | Geometria analítica | 3 |
-| 8 | Combinatória e estatística | 3 |
-| 9 | Física | 12 |
+| 6 | Vetores e matrizes | 4 de 5 |
+| 7 | Geometria analítica | 3 de 4 |
+| 8 | Física | 12 de 17 |
+| 9 | Pré-cálculo | 2 |
+| 10 | Cálculo 1 | 8 de 11 |
+| 11 | Cálculo 2 | 7 de 9 |
+| 12 | Combinatória e estatística | 3 de 5 |
 | 10 | Pré-cálculo | 3 |
 | 11 | Cálculo 1 | 8 |
 | 12 | Cálculo 2 | 6 |
