@@ -1,9 +1,10 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import {
   FAMILIAS,
   FamiliaDeSimbolos,
   SIMBOLOS,
   SimboloMatematico,
+  TresLinguas,
   somatorioComPassos,
 } from '@core/math';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
@@ -12,6 +13,9 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/matematica-basica/notacao-matematica/notacao-matematica.i18n.json';
 import { geradorNotacao } from '@features/matematica-basica/notacao-matematica/notacao-matematica.gerador';
 import { TEORIA_NOTACAO } from '@features/matematica-basica/notacao-matematica/notacao-matematica.teoria';
 
@@ -44,10 +48,15 @@ const TERMOS = [
   styleUrl: './notacao-matematica.scss',
 })
 export class NotacaoMatematica {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorNotacao;
   protected readonly conceitos = TEORIA_NOTACAO.map((teoria) => teoria.id);
 
-  protected readonly familias = Object.entries(FAMILIAS) as readonly [FamiliaDeSimbolos, string][];
+  protected readonly familias = Object.entries(FAMILIAS) as readonly [
+    FamiliaDeSimbolos,
+    TresLinguas,
+  ][];
 
   /** Os símbolos agrupados por família, na ordem em que a tabela os mostra. */
   protected readonly porFamilia = computed(() =>
@@ -57,6 +66,11 @@ export class NotacaoMatematica {
       simbolos: SIMBOLOS.filter((simbolo) => simbolo.familia === id),
     })),
   );
+
+  /** Escolhe, numa frase já escrita nas três línguas, a da tela. */
+  protected naLingua(frase: TresLinguas): string {
+    return frase[this.i18n.idioma()];
+  }
 
   protected readonly termos = TERMOS;
   protected readonly termo = signal<(typeof TERMOS)[number]>(TERMOS[1]);

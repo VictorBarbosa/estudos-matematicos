@@ -1,7 +1,7 @@
 <app-topico-layout topicoId="operacoes-fundamentais">
   <div explorar class="explorar">
     <section class="entrada">
-      <label class="rotulo" for="expressao">Escreva uma expressão</label>
+      <label class="rotulo" for="expressao">{{ texto('escreva') }}</label>
       <input
         id="expressao"
         type="text"
@@ -12,14 +12,12 @@
         [attr.aria-invalid]="erro() !== null"
         aria-describedby="ajuda-expressao"
       />
-      <p class="ajuda" id="ajuda-expressao">
-        Use + − * / ^ e parênteses. Por exemplo: 2 + 3 * (4 − 1)^2
-      </p>
+      <p class="ajuda" id="ajuda-expressao">{{ texto('ajuda') }}</p>
 
       <div class="exemplos">
         @for (exemplo of exemplos; track exemplo.expressao) {
           <button type="button" (click)="usarExemplo(exemplo.expressao)">
-            {{ exemplo.rotulo }}
+            {{ texto(exemplo.rotulo) }}
           </button>
         }
       </div>
@@ -31,17 +29,17 @@
       <section class="resultado">
         <app-formula [tex]="'= ' + resultado()" [bloco]="true" />
         <p class="contagem">
-          Resolvida em {{ quantidadeDeOperacoes() }}
-          {{ quantidadeDeOperacoes() === 1 ? 'operação' : 'operações' }}.
+          {{
+            quantidadeDeOperacoes() === 1
+              ? texto('resolvidaEmUma')
+              : texto('resolvidaEm', { quantas: quantidadeDeOperacoes() })
+          }}
         </p>
       </section>
 
       <section class="passos">
-        <h2>A expressão encolhendo, uma operação por vez</h2>
-        <p class="observacao">
-          Cada etapa resolve apenas a operação que a ordem manda fazer primeiro, e reescreve todo o
-          resto sem alterá-lo.
-        </p>
+        <h2>{{ texto('encolhendo') }}</h2>
+        <p class="observacao">{{ texto('cadaEtapa') }}</p>
         <app-passo-a-passo [passos]="passos()" />
       </section>
     }

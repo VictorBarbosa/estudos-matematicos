@@ -17,6 +17,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.i18n.json';
 import { geradorPotencias } from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.gerador';
 import { TEORIA_POTENCIAS } from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.teoria';
 
@@ -38,6 +41,8 @@ type Propriedade = 'produto' | 'quociente' | 'potencia';
   styleUrl: './potenciacao-radiciacao.scss',
 })
 export class PotenciacaoRadiciacao {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorPotencias;
   protected readonly conceitos = TEORIA_POTENCIAS.map((teoria) => teoria.id);
 
@@ -105,10 +110,11 @@ export class PotenciacaoRadiciacao {
     return { xMin: -limite, xMax: limite };
   });
 
-  protected readonly descricaoCurva = computed(
-    () =>
-      `Curva de ${this.base()} elevado a x, com o ponto do expoente ` +
-      `${this.resolucao().resultado.expoente} destacado.`,
+  protected readonly descricaoCurva = computed(() =>
+    this.texto('descricaoCurva', {
+      base: this.base(),
+      expoente: this.resolucao().resultado.expoente,
+    }),
   );
 
   constructor() {

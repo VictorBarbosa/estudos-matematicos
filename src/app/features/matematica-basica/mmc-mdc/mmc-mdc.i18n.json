@@ -1,0 +1,58 @@
+{
+  "primeiroNumero": {
+    "pt": "Primeiro número",
+    "fr": "Premier nombre",
+    "en": "First number"
+  },
+  "segundoNumero": {
+    "pt": "Segundo número",
+    "fr": "Deuxième nombre",
+    "en": "Second number"
+  },
+  "fatoracoes": { "pt": "Fatorações", "fr": "Factorisations", "en": "Factorisations" },
+  "maiorQueDivide": {
+    "pt": "o maior que divide os dois",
+    "fr": "le plus grand qui divise les deux",
+    "en": "the largest that divides both"
+  },
+  "menorMultiplo": {
+    "pt": "o menor múltiplo dos dois",
+    "fr": "le plus petit multiple des deux",
+    "en": "the smallest multiple of both"
+  },
+  "ondeMultiplos": {
+    "pt": "Onde os múltiplos se encontram",
+    "fr": "Où les multiples se rencontrent",
+    "en": "Where the multiples meet"
+  },
+  "cadaMarca": {
+    "pt": "Cada marca é um múltiplo. O MMC é simplesmente o primeiro ponto em que as duas sequências coincidem — não há nada de misterioso nele.",
+    "fr": "Chaque marque est un multiple. Le PPCM est simplement le premier point où les deux suites coïncident — rien de mystérieux.",
+    "en": "Each mark is a multiple. The LCM is simply the first point where the two sequences coincide — there is nothing mysterious about it."
+  },
+  "descricaoMultiplos": {
+    "pt": "Reta com os múltiplos de {a} e de {b}; o primeiro valor comum é {mmc}.",
+    "fr": "Droite avec les multiples de {a} et de {b} ; la première valeur commune est {mmc}.",
+    "en": "Line with the multiples of {a} and of {b}; the first common value is {mmc}."
+  },
+  "divisoresComuns": {
+    "pt": "Divisores comuns",
+    "fr": "Diviseurs communs",
+    "en": "Common divisors"
+  },
+  "estesSaoTodos": {
+    "pt": "Estes são todos os números que dividem {a} e {b} ao mesmo tempo. O MDC é o último da lista.",
+    "fr": "Voici tous les nombres qui divisent {a} et {b} en même temps. Le PGCD est le dernier de la liste.",
+    "en": "These are all the numbers that divide {a} and {b} at the same time. The GCD is the last one in the list."
+  },
+  "qualDemonstracao": {
+    "pt": "Qual demonstração mostrar",
+    "fr": "Quelle démonstration afficher",
+    "en": "Which derivation to show"
+  },
+  "relacaoEntreOsDois": {
+    "pt": "A relação entre os dois",
+    "fr": "La relation entre les deux",
+    "en": "The relation between the two"
+  }
+}

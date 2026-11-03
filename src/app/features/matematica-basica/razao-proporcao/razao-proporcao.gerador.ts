@@ -135,4 +135,3 @@ function exercicioRegraDeTres(nivel: Nivel, rng: Rng, inversa: boolean): Exercic
         : 'Antes de montar: as grandezas crescem juntas ou em sentidos opostos?',
   };
 }
-

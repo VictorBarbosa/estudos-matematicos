@@ -1,0 +1,74 @@
+{
+  "razaoEntreDois": {
+    "pt": "Razão entre dois números",
+    "fr": "Rapport entre deux nombres",
+    "en": "Ratio between two numbers"
+  },
+  "primeiroTermo": { "pt": "Primeiro termo", "fr": "Premier terme", "en": "First term" },
+  "segundoTermo": { "pt": "Segundo termo", "fr": "Deuxième terme", "en": "Second term" },
+  "terceiroTermo": { "pt": "Terceiro termo", "fr": "Troisième terme", "en": "Third term" },
+  "regraDeTres": {
+    "pt": "Regra de três",
+    "fr": "Règle de trois",
+    "en": "Cross-multiplication"
+  },
+  "tipoProporcionalidade": {
+    "pt": "Tipo de proporcionalidade",
+    "fr": "Type de proportionnalité",
+    "en": "Kind of proportionality"
+  },
+  "diretamente": {
+    "pt": "Diretamente proporcionais",
+    "fr": "Directement proportionnels",
+    "en": "Directly proportional"
+  },
+  "inversamente": {
+    "pt": "Inversamente proporcionais",
+    "fr": "Inversement proportionnels",
+    "en": "Inversely proportional"
+  },
+  "seFosseDireta": {
+    "pt": "Se fosse direta",
+    "fr": "Si c’était direct",
+    "en": "If it were direct"
+  },
+  "seFosseInversa": {
+    "pt": "Se fosse inversa",
+    "fr": "Si c’était inverse",
+    "en": "If it were inverse"
+  },
+  "aContaEaMesma": {
+    "pt": "A conta é a mesma nos dois casos — o que muda é a montagem. Por isso a decisão entre direta e inversa vem antes de qualquer cálculo.",
+    "fr": "Le calcul est le même dans les deux cas — ce qui change, c’est la mise en place. C’est pourquoi le choix entre direct et inverse précède tout calcul.",
+    "en": "The arithmetic is the same either way — what changes is how you set it up. That is why choosing between direct and inverse comes before any calculation."
+  },
+  "retaOuHiperbole": {
+    "pt": "Reta ou hipérbole",
+    "fr": "Droite ou hyperbole",
+    "en": "Line or hyperbola"
+  },
+  "curvaDireta": { "pt": "direta: y = kx", "fr": "directe : y = kx", "en": "direct: y = kx" },
+  "curvaInversa": {
+    "pt": "inversa: y = k/x",
+    "fr": "inverse : y = k/x",
+    "en": "inverse: y = k/x"
+  },
+  "pontoDado": { "pt": "dado", "fr": "donnée", "en": "given" },
+  "descricaoGrafico": {
+    "pt": "Comparação entre proporcionalidade direta, uma reta pela origem, e inversa, uma hipérbole. O ponto de resposta está em x igual a {c}.",
+    "fr": "Comparaison entre la proportionnalité directe, une droite passant par l’origine, et inverse, une hyperbole. Le point réponse est en x égal à {c}.",
+    "en": "Comparison between direct proportionality, a line through the origin, and inverse, a hyperbola. The answer point is at x equal to {c}."
+  },
+  "proporcionalidadeDireta": {
+    "pt": "Proporcionalidade direta é sempre uma reta passando pela origem; inversa é sempre uma hipérbole. A curva tracejada é a que NÃO se aplica ao caso selecionado.",
+    "fr": "La proportionnalité directe est toujours une droite passant par l’origine ; l’inverse est toujours une hyperbole. La courbe pointillée est celle qui NE s’applique PAS au cas choisi.",
+    "en": "Direct proportionality is always a line through the origin; inverse is always a hyperbola. The dashed curve is the one that does NOT apply to the selected case."
+  },
+  "divisaoProporcional": {
+    "pt": "Divisão proporcional",
+    "fr": "Partage proportionnel",
+    "en": "Proportional sharing"
+  },
+  "peso1": { "pt": "Peso 1", "fr": "Poids 1", "en": "Weight 1" },
+  "peso2": { "pt": "Peso 2", "fr": "Poids 2", "en": "Weight 2" }
+}

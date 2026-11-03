@@ -6,16 +6,19 @@ import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.i18n.json';
 import { geradorOperacoes } from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.gerador';
 import { TEORIA_OPERACOES } from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.teoria';
 
 /** Expressões prontas que evidenciam cada regra de precedência. */
+/** `rotulo` é a chave do exemplo no dicionário deste tópico. */
 const EXEMPLOS: readonly { readonly rotulo: string; readonly expressao: string }[] = [
-  { rotulo: 'Multiplicação antes da soma', expressao: '2 + 3 * 4' },
-  { rotulo: 'Parênteses mudam tudo', expressao: '(2 + 3) * 4' },
-  { rotulo: 'Potência antes do produto', expressao: '3 * 2^3' },
-  { rotulo: 'Tudo junto', expressao: '2 + 3 * (4 - 1)^2' },
-  { rotulo: 'Sinais negativos', expressao: '-2 * (3 - 7) + 10 / 5' },
+  { rotulo: 'exemploProduto', expressao: '2 + 3 * 4' },
+  { rotulo: 'exemploParenteses', expressao: '(2 + 3) * 4' },
+  { rotulo: 'exemploPotencia', expressao: '3 * 2^3' },
+  { rotulo: 'exemploTudo', expressao: '2 + 3 * (4 - 1)^2' },
+  { rotulo: 'exemploSinais', expressao: '-2 * (3 - 7) + 10 / 5' },
 ];
 
 @Component({
@@ -26,6 +29,7 @@ const EXEMPLOS: readonly { readonly rotulo: string; readonly expressao: string }
   styleUrl: './operacoes-fundamentais.scss',
 })
 export class OperacoesFundamentais {
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorOperacoes;
   protected readonly conceitos = TEORIA_OPERACOES.map((teoria) => teoria.id);
   protected readonly exemplos = EXEMPLOS;

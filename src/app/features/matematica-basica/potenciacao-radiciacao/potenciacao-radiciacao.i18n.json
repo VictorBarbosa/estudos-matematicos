@@ -1,0 +1,50 @@
+{
+  "propriedadeADemonstrar": {
+    "pt": "Propriedade a demonstrar",
+    "fr": "Propriété à démontrer",
+    "en": "Property to demonstrate"
+  },
+  "baseA": { "pt": "Base (a)", "fr": "Base (a)", "en": "Base (a)" },
+  "expoenteM": { "pt": "Expoente m", "fr": "Exposant m", "en": "Exponent m" },
+  "porQueFunciona": {
+    "pt": "Por que a propriedade funciona",
+    "fr": "Pourquoi la propriété fonctionne",
+    "en": "Why the property works"
+  },
+  "potenciaComoPonto": {
+    "pt": "A potência como ponto de uma curva",
+    "fr": "La puissance comme point d’une courbe",
+    "en": "The power as a point on a curve"
+  },
+  "descricaoCurva": {
+    "pt": "Curva de {base} elevado a x, com o ponto do expoente {expoente} destacado.",
+    "fr": "Courbe de {base} à la puissance x, avec le point de l’exposant {expoente} mis en évidence.",
+    "en": "Curve of {base} to the power x, with the point for exponent {expoente} highlighted."
+  },
+  "expoentesNegativos": {
+    "pt": "Expoentes negativos ficam à esquerda do eixo e dão valores entre 0 e 1 — é o mesmo gráfico que reaparece na função exponencial.",
+    "fr": "Les exposants négatifs sont à gauche de l’axe et donnent des valeurs entre 0 et 1 — c’est le même graphique qui revient dans la fonction exponentielle.",
+    "en": "Negative exponents sit to the left of the axis and give values between 0 and 1 — it is the same graph that comes back in the exponential function."
+  },
+  "simplificandoRaizes": {
+    "pt": "Simplificando raízes",
+    "fr": "Simplifier les racines",
+    "en": "Simplifying roots"
+  },
+  "radicando": { "pt": "Radicando", "fr": "Radicande", "en": "Radicand" },
+  "dicaRadicando": {
+    "pt": "Experimente 72, 50 ou 144.",
+    "fr": "Essayez 72, 50 ou 144.",
+    "en": "Try 72, 50 or 144."
+  },
+  "raizExata": {
+    "pt": "O radicando é um quadrado perfeito, então a raiz é exata e nada permanece sob o radical.",
+    "fr": "Le radicande est un carré parfait : la racine est exacte et rien ne reste sous le radical.",
+    "en": "The radicand is a perfect square, so the root is exact and nothing stays under the radical."
+  },
+  "raizComResto": {
+    "pt": "Os fatores que aparecem em pares saem do radical; os demais permanecem.",
+    "fr": "Les facteurs qui apparaissent par paires sortent du radical ; les autres y restent.",
+    "en": "Factors that appear in pairs come out of the radical; the rest stay in."
+  }
+}

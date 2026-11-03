@@ -1,0 +1,53 @@
+{
+  "escreva": {
+    "pt": "Escreva uma expressão",
+    "fr": "Écrivez une expression",
+    "en": "Write an expression"
+  },
+  "ajuda": {
+    "pt": "Use + − * / ^ e parênteses. Por exemplo: 2 + 3 * (4 − 1)^2",
+    "fr": "Utilisez + − * / ^ et des parenthèses. Par exemple : 2 + 3 * (4 − 1)^2",
+    "en": "Use + − * / ^ and brackets. For example: 2 + 3 * (4 − 1)^2"
+  },
+  "exemploProduto": {
+    "pt": "Multiplicação antes da soma",
+    "fr": "La multiplication avant l’addition",
+    "en": "Multiplication before addition"
+  },
+  "exemploParenteses": {
+    "pt": "Parênteses mudam tudo",
+    "fr": "Les parenthèses changent tout",
+    "en": "Brackets change everything"
+  },
+  "exemploPotencia": {
+    "pt": "Potência antes do produto",
+    "fr": "La puissance avant le produit",
+    "en": "Powers before products"
+  },
+  "exemploTudo": { "pt": "Tudo junto", "fr": "Tout ensemble", "en": "All together" },
+  "exemploSinais": {
+    "pt": "Sinais negativos",
+    "fr": "Signes négatifs",
+    "en": "Negative signs"
+  },
+  "resolvidaEm": {
+    "pt": "Resolvida em {quantas} operações.",
+    "fr": "Résolue en {quantas} opérations.",
+    "en": "Solved in {quantas} operations."
+  },
+  "resolvidaEmUma": {
+    "pt": "Resolvida em 1 operação.",
+    "fr": "Résolue en 1 opération.",
+    "en": "Solved in 1 operation."
+  },
+  "encolhendo": {
+    "pt": "A expressão encolhendo, uma operação por vez",
+    "fr": "L’expression qui rétrécit, une opération à la fois",
+    "en": "The expression shrinking, one operation at a time"
+  },
+  "cadaEtapa": {
+    "pt": "Cada etapa resolve apenas a operação que a ordem manda fazer primeiro, e reescreve todo o resto sem alterá-lo.",
+    "fr": "Chaque étape résout seulement l’opération que l’ordre impose en premier, et réécrit tout le reste sans le modifier.",
+    "en": "Each step resolves only the operation the order calls for first, and rewrites everything else untouched."
+  }
+}

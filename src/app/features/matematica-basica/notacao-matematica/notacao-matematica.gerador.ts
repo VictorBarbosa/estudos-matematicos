@@ -348,7 +348,9 @@ function lerConjuntos(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   const a = sortearConjunto();
   const b = sortearConjunto();
   const operacao = rng.escolher(
-    nivel === 'facil' ? (['uniao', 'intersecao'] as const) : (['uniao', 'intersecao', 'diferenca'] as const),
+    nivel === 'facil'
+      ? (['uniao', 'intersecao'] as const)
+      : (['uniao', 'intersecao', 'diferenca'] as const),
   );
 
   const resolucao = operacaoDeConjuntoComPassos(a, b, operacao);

@@ -10,12 +10,14 @@ export const rotas: Routes = [
   {
     path: 'fracoes',
     title: 'Frações · Estudos Matemáticos',
-    loadComponent: () => import('@features/matematica-basica/fracoes/fracoes').then((m) => m.Fracoes),
+    loadComponent: () =>
+      import('@features/matematica-basica/fracoes/fracoes').then((m) => m.Fracoes),
   },
   {
     path: 'mmc-mdc',
     title: 'MMC e MDC · Estudos Matemáticos',
-    loadComponent: () => import('@features/matematica-basica/mmc-mdc/mmc-mdc').then((m) => m.MmcMdc),
+    loadComponent: () =>
+      import('@features/matematica-basica/mmc-mdc/mmc-mdc').then((m) => m.MmcMdc),
   },
   {
     path: 'notacao-matematica',
@@ -36,7 +38,10 @@ export const rotas: Routes = [
   {
     path: 'razao-proporcao',
     title: 'Razão e proporção · Estudos Matemáticos',
-    loadComponent: () => import('@features/matematica-basica/razao-proporcao/razao-proporcao').then((m) => m.RazaoProporcao),
+    loadComponent: () =>
+      import('@features/matematica-basica/razao-proporcao/razao-proporcao').then(
+        (m) => m.RazaoProporcao,
+      ),
   },
   {
     path: 'operacoes-fundamentais',
@@ -50,7 +55,9 @@ export const rotas: Routes = [
     path: 'numeros-decimais',
     title: 'Números decimais · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/matematica-basica/numeros-decimais/numeros-decimais').then((m) => m.NumerosDecimais),
+      import('@features/matematica-basica/numeros-decimais/numeros-decimais').then(
+        (m) => m.NumerosDecimais,
+      ),
   },
   { path: '', pathMatch: 'full', redirectTo: 'operacoes-fundamentais' },
 ];

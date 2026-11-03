@@ -1,34 +1,41 @@
 <app-topico-layout topicoId="mmc-mdc">
   <div explorar class="explorar">
     <section class="controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Primeiro número" [min]="2" [max]="200" />
-      <app-controle-parametro [(valor)]="b" rotulo="Segundo número" [min]="2" [max]="200" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="texto('primeiroNumero')"
+        [min]="2"
+        [max]="200"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="texto('segundoNumero')"
+        [min]="2"
+        [max]="200"
+      />
     </section>
 
     <section class="resumo">
       <div class="cartao-valor">
-        <span class="rotulo">Fatorações</span>
+        <span class="rotulo">{{ texto('fatoracoes') }}</span>
         <app-formula [tex]="a() + ' = ' + fatoracaoA()" [bloco]="true" />
         <app-formula [tex]="b() + ' = ' + fatoracaoB()" [bloco]="true" />
       </div>
       <div class="cartao-valor destaque">
-        <span class="rotulo">MDC</span>
+        <span class="rotulo">{{ i18n.t('explorar.mdc') }}</span>
         <strong class="numero">{{ mdc() }}</strong>
-        <span class="legenda">o maior que divide os dois</span>
+        <span class="legenda">{{ texto('maiorQueDivide') }}</span>
       </div>
       <div class="cartao-valor destaque">
-        <span class="rotulo">MMC</span>
+        <span class="rotulo">{{ i18n.t('explorar.mmc') }}</span>
         <strong class="numero">{{ mmc() }}</strong>
-        <span class="legenda">o menor múltiplo dos dois</span>
+        <span class="legenda">{{ texto('menorMultiplo') }}</span>
       </div>
     </section>
 
     <section class="multiplos">
-      <h2>Onde os múltiplos se encontram</h2>
-      <p class="observacao">
-        Cada marca é um múltiplo. O MMC é simplesmente o primeiro ponto em que as duas sequências
-        coincidem — não há nada de misterioso nele.
-      </p>
+      <h2>{{ texto('ondeMultiplos') }}</h2>
+      <p class="observacao">{{ texto('cadaMarca') }}</p>
       <app-math-plot
         [dominio]="dominioMultiplos()"
         [marcas]="marcasMultiplos()"
@@ -39,11 +46,8 @@
     </section>
 
     <section class="divisores">
-      <h2>Divisores comuns</h2>
-      <p class="observacao">
-        Estes são todos os números que dividem {{ a() }} e {{ b() }} ao mesmo tempo. O MDC é o
-        último da lista.
-      </p>
+      <h2>{{ texto('divisoresComuns') }}</h2>
+      <p class="observacao">{{ texto('estesSaoTodos', { a: a(), b: b() }) }}</p>
       <ul class="lista-divisores">
         @for (divisor of divisoresComuns(); track divisor) {
           <li [class.maior]="divisor === mdc()">{{ divisor }}</li>
@@ -53,15 +57,15 @@
 
     <section class="passos">
       <h2>
-        Passo a passo
-        <span class="alternador" role="group" aria-label="Qual demonstração mostrar">
+        {{ i18n.t('explorar.passoAPasso') }}
+        <span class="alternador" role="group" [attr.aria-label]="texto('qualDemonstracao')">
           <button
             type="button"
             [class.ativo]="foco() === 'mdc'"
             [attr.aria-pressed]="foco() === 'mdc'"
             (click)="definirFoco('mdc')"
           >
-            MDC
+            {{ i18n.t('explorar.mdc') }}
           </button>
           <button
             type="button"
@@ -69,7 +73,7 @@
             [attr.aria-pressed]="foco() === 'mmc'"
             (click)="definirFoco('mmc')"
           >
-            MMC
+            {{ i18n.t('explorar.mmc') }}
           </button>
         </span>
       </h2>
@@ -77,7 +81,7 @@
     </section>
 
     <section class="relacao">
-      <h2>A relação entre os dois</h2>
+      <h2>{{ texto('relacaoEntreOsDois') }}</h2>
       <app-passo-a-passo [passos]="relacao().passos" />
     </section>
 

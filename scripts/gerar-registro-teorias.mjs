@@ -39,7 +39,9 @@ const topicos = arquivos.map((caminho) => {
   );
   const soltos = [...fonte.matchAll(/\n {4}id: '([^']+)',/g)].length;
   if (conceitos.length !== soltos) {
-    throw new Error(`${caminho}: ${soltos} ids, mas só ${conceitos.length} com título na linha seguinte.`);
+    throw new Error(
+      `${caminho}: ${soltos} ids, mas só ${conceitos.length} com título na linha seguinte.`,
+    );
   }
 
   return {

@@ -15,6 +15,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MarcaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/matematica-basica/mmc-mdc/mmc-mdc.i18n.json';
 import { geradorMmcMdc } from '@features/matematica-basica/mmc-mdc/mmc-mdc.gerador';
 import { TEORIA_MMC_MDC } from '@features/matematica-basica/mmc-mdc/mmc-mdc.teoria';
 
@@ -34,6 +37,8 @@ import { TEORIA_MMC_MDC } from '@features/matematica-basica/mmc-mdc/mmc-mdc.teor
   styleUrl: './mmc-mdc.scss',
 })
 export class MmcMdc {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorMmcMdc;
   protected readonly conceitos = TEORIA_MMC_MDC.map((teoria) => teoria.id);
 
@@ -90,10 +95,8 @@ export class MmcMdc {
     xMax: this.mmc() * 1.12,
   }));
 
-  protected readonly descricaoMultiplos = computed(
-    () =>
-      `Reta com os múltiplos de ${this.a()} e de ${this.b()}; ` +
-      `o primeiro valor comum é ${this.mmc()}.`,
+  protected readonly descricaoMultiplos = computed(() =>
+    this.texto('descricaoMultiplos', { a: this.a(), b: this.b(), mmc: this.mmc() }),
   );
 
   constructor() {

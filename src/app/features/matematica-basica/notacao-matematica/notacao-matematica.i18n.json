@@ -1,0 +1,26 @@
+{
+  "somatorioExpandido": {
+    "pt": "O somatório, expandido",
+    "fr": "La sommation, développée",
+    "en": "The summation, written out"
+  },
+  "mexaNoLimite": {
+    "pt": "Mexa no limite de cima e no termo: a expansão embaixo é o que transforma o símbolo em conta.",
+    "fr": "Changez la borne du haut et le terme : le développement en dessous est ce qui transforme le symbole en calcul.",
+    "en": "Change the upper limit and the term: the expansion below is what turns the symbol into arithmetic."
+  },
+  "termoASomar": { "pt": "Termo a somar", "fr": "Terme à additionner", "en": "Term to add" },
+  "somarAte": { "pt": "Somar até k =", "fr": "Additionner jusqu’à k =", "en": "Add up to k =" },
+  "comoSeLe": {
+    "pt": "Como se lê, em três línguas",
+    "fr": "Comment cela se lit, en trois langues",
+    "en": "How it is read, in three languages"
+  },
+  "oCursoNoQuebec": {
+    "pt": "O curso é no Québec e a bibliografia é em inglês. Um símbolo que não se sabe dizer em voz alta é um símbolo que não se usa para pensar.",
+    "fr": "Le cours est au Québec et la bibliographie est en anglais. Un symbole qu’on ne sait pas dire à voix haute est un symbole dont on ne se sert pas pour penser.",
+    "en": "The course is in Quebec and the reading list is in English. A symbol you cannot say out loud is a symbol you do not think with."
+  },
+  "colunaSimbolo": { "pt": "Símbolo", "fr": "Symbole", "en": "Symbol" },
+  "colunaExemplo": { "pt": "Exemplo", "fr": "Exemple", "en": "Example" }
+}

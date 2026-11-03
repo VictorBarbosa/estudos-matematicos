@@ -1,44 +1,42 @@
 <app-topico-layout topicoId="notacao-matematica">
   <div explorar class="explorar">
     <section class="somatorio">
-      <h2>O somatório, expandido</h2>
-      <p class="apoio">
-        Mexa no limite de cima e no termo: a expansão embaixo é o que transforma o símbolo
-        em conta.
-      </p>
+      <h2>{{ texto('somatorioExpandido') }}</h2>
+      <p class="apoio">{{ texto('mexaNoLimite') }}</p>
 
-      <div class="escolhas" role="group" aria-label="Termo a somar">
+      <div class="escolhas" role="group" [attr.aria-label]="texto('termoASomar')">
         @for (opcao of termos; track opcao.corpo) {
-          <button type="button" [class.ativo]="termo().corpo === opcao.corpo" (click)="escolherTermo(opcao)">
+          <button
+            type="button"
+            [class.ativo]="termo().corpo === opcao.corpo"
+            (click)="escolherTermo(opcao)"
+          >
             {{ opcao.rotulo }}
           </button>
         }
       </div>
 
-      <app-controle-parametro [(valor)]="ate" rotulo="Somar até k =" [min]="2" [max]="12" />
+      <app-controle-parametro [(valor)]="ate" [rotulo]="texto('somarAte')" [min]="2" [max]="12" />
 
       <app-formula [tex]="somatorioTex()" [bloco]="true" />
       <app-passo-a-passo [passos]="somatorio().passos" />
     </section>
 
     <section class="dicionario">
-      <h2>Como se lê, em três línguas</h2>
-      <p class="apoio">
-        O curso é no Québec e a bibliografia é em inglês. Um símbolo que não se sabe dizer
-        em voz alta é um símbolo que não se usa para pensar.
-      </p>
+      <h2>{{ texto('comoSeLe') }}</h2>
+      <p class="apoio">{{ texto('oCursoNoQuebec') }}</p>
 
       @for (grupo of porFamilia(); track grupo.id) {
         <article class="familia">
-          <h3>{{ grupo.titulo }}</h3>
+          <h3>{{ naLingua(grupo.titulo) }}</h3>
           <table>
             <thead>
               <tr>
-                <th scope="col">Símbolo</th>
+                <th scope="col">{{ texto('colunaSimbolo') }}</th>
                 <th scope="col">Português</th>
                 <th scope="col">Français</th>
                 <th scope="col">English</th>
-                <th scope="col">Exemplo</th>
+                <th scope="col">{{ texto('colunaExemplo') }}</th>
               </tr>
             </thead>
             <tbody>
@@ -46,14 +44,14 @@
                 <tr>
                   <th scope="row">
                     <span class="simbolo">{{ simbolo.simbolo }}</span>
-                    <span class="nome">{{ simbolo.nome }}</span>
+                    <span class="nome">{{ naLingua(simbolo.nome) }}</span>
                   </th>
                   <td>{{ simbolo.pt }}</td>
                   <td lang="fr">{{ simbolo.fr }}</td>
                   <td lang="en">{{ simbolo.en }}</td>
                   <td class="exemplo">
                     <app-formula [tex]="simbolo.exemploTex" />
-                    <span class="lido">{{ simbolo.exemploLido }}</span>
+                    <span class="lido">{{ naLingua(simbolo.exemploLido) }}</span>
                   </td>
                 </tr>
               }

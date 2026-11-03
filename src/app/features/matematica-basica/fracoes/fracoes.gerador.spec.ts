@@ -258,9 +258,7 @@ describe('números mistos e negativos', () => {
     for (const exercicio of comNegativo) {
       // `-2\frac{1}{3}` é −7/3, nunca −2 + 1/3: o sinal antecede o inteiro.
       const negativo = operandos(exercicio.enunciadoTex).find((o) => o.startsWith('-'))!;
-      expect(negativo, exercicio.enunciadoTex).toMatch(
-        /^-(\d+)?\\frac\{\d+\}\{\d+\}$|^-\d+$/,
-      );
+      expect(negativo, exercicio.enunciadoTex).toMatch(/^-(\d+)?\\frac\{\d+\}\{\d+\}$|^-\d+$/);
     }
   });
 
@@ -276,9 +274,7 @@ describe('números mistos e negativos', () => {
   });
 
   it('aceita a resposta escrita como misto, como fração ou simplificada', () => {
-    const exercicio = amostra('dificil', 200).find((e) =>
-      e.gabarito.simplificar().ehImpropria,
-    )!;
+    const exercicio = amostra('dificil', 200).find((e) => e.gabarito.simplificar().ehImpropria)!;
     const gabarito = exercicio.gabarito.simplificar();
 
     for (const forma of [gabarito.toString(), gabarito.toStringMisto()]) {
@@ -369,9 +365,7 @@ describe('conversão de decimal em fração', () => {
       e.armadilhas.some((a) => a.diagnostico.includes('número de CASAS')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('número de CASAS'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('número de CASAS'))!;
 
     const resultado = corrigir(geradorFracoes, exercicio, armadilha.resposta.toString());
 
@@ -473,7 +467,9 @@ describe('resolução dos exercícios com mistos', () => {
 
         expect(conversao.descricao, exercicio.enunciadoTex).toContain('fração imprópria');
         // A conta da conversão aparece: inteiro × denominador + numerador.
-        expect(conversao.tex, exercicio.enunciadoTex).toMatch(/\\frac\{\d+ \\times \d+ \+ \d+\}\{\d+\}/);
+        expect(conversao.tex, exercicio.enunciadoTex).toMatch(
+          /\\frac\{\d+ \\times \d+ \+ \d+\}\{\d+\}/,
+        );
       }
     });
 
@@ -513,7 +509,9 @@ describe('resolução dos exercícios com mistos', () => {
       // O enunciado exibe a forma reduzida (`2\frac{1}{2}`, nunca `\frac{10}{4}`);
       // a resolução precisa partir dessa mesma fração.
       for (const exercicio of comMistos(nivel)) {
-        const impróprias = [...exercicio.resolucao.passos[1]!.tex.matchAll(/= -?\\frac\{(\d+)\}\{(\d+)\}/g)];
+        const impróprias = [
+          ...exercicio.resolucao.passos[1]!.tex.matchAll(/= -?\\frac\{(\d+)\}\{(\d+)\}/g),
+        ];
 
         for (const [, numerador, denominador] of impróprias) {
           expect(mdc(Number(numerador), Number(denominador)), exercicio.enunciadoTex).toBe(1);
@@ -716,7 +714,9 @@ describe('sorteio do que falta', () => {
 
       expect(exercicio.enunciado).toContain('mistos');
       expect(exercicio.gabarito.igualA(exercicio.resolucao.resultado)).toBe(true);
-      expect(corrigir(geradorFracoes, exercicio, geradorFracoes.formatar(exercicio.gabarito)).veredito).toBe('correto');
+      expect(
+        corrigir(geradorFracoes, exercicio, geradorFracoes.formatar(exercicio.gabarito)).veredito,
+      ).toBe('correto');
     }
   });
 

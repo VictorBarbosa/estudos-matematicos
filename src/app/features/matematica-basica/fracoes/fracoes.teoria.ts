@@ -214,7 +214,8 @@ export const TEORIA_FRACOES: readonly Teoria[] = [
     ],
     demonstracao: [
       {
-        descricao: 'Com partes iguais, somar é contar: três quintos mais um quinto são quatro quintos.',
+        descricao:
+          'Com partes iguais, somar é contar: três quintos mais um quinto são quatro quintos.',
         tex: '\\frac{3}{5} + \\frac{1}{5} = \\frac{4}{5}',
       },
       {

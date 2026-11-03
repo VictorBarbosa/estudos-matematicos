@@ -89,9 +89,7 @@ export class Fracoes {
   });
 
   protected readonly erro = computed(() =>
-    this.resolucao() === null
-      ? this.texto('divisaoPorZero')
-      : null,
+    this.resolucao() === null ? this.texto('divisaoPorZero') : null,
   );
 
   protected readonly resultado = computed(() => this.resolucao()?.resultado ?? null);

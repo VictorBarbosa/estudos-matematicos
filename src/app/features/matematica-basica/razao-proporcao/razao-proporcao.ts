@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/matematica-basica/razao-proporcao/razao-proporcao.i18n.json';
 import { geradorProporcao } from '@features/matematica-basica/razao-proporcao/razao-proporcao.gerador';
 import { TEORIA_PROPORCAO } from '@features/matematica-basica/razao-proporcao/razao-proporcao.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_PROPORCAO } from '@features/matematica-basica/razao-proporcao/ra
   styleUrl: './razao-proporcao.scss',
 })
 export class RazaoProporcao {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorProporcao;
   protected readonly conceitos = TEORIA_PROPORCAO.map((teoria) => teoria.id);
 
@@ -69,20 +74,20 @@ export class RazaoProporcao {
       {
         fn: (x) => (b / a) * x,
         cor: 'serie-1',
-        rotulo: 'direta: y = kx',
+        rotulo: this.texto('curvaDireta'),
         tracejada: this.inversa(),
       },
       {
         fn: (x) => (x === 0 ? Number.NaN : (a * b) / x),
         cor: 'serie-2',
-        rotulo: 'inversa: y = k/x',
+        rotulo: this.texto('curvaInversa'),
         tracejada: !this.inversa(),
       },
     ];
   });
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() => [
-    { x: this.a(), y: this.b(), rotulo: 'dado', cor: 'texto-suave' },
+    { x: this.a(), y: this.b(), rotulo: this.texto('pontoDado'), cor: 'texto-suave' },
     {
       x: this.c(),
       y: this.resolucao().resultado,
@@ -97,10 +102,8 @@ export class RazaoProporcao {
     return { xMin: 0, xMax: maiorX, yMin: 0, yMax: maiorY };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Comparação entre proporcionalidade direta, uma reta pela origem, e inversa, ` +
-      `uma hipérbole. O ponto de resposta está em x igual a ${this.c()}.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { c: this.c() }),
   );
 
   constructor() {

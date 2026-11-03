@@ -8,7 +8,10 @@ import {
   simplificarRaizComPassos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
-import { analisarValorSimples, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
+import {
+  analisarValorSimples,
+  numeroComCasas,
+} from '@core/treino/resposta-numerica/resposta-numerica';
 import {
   Armadilha,
   Exercicio,

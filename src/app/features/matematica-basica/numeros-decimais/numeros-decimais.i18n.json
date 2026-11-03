@@ -1,0 +1,47 @@
+{
+  "deFracaoParaDecimal": {
+    "pt": "De fração para decimal",
+    "fr": "De la fraction au décimal",
+    "en": "From fraction to decimal"
+  },
+  "periodicoExplicacao": {
+    "pt": "O decimal é <strong>periódico</strong>, com período <strong>{periodo}</strong>. Isso acontece porque o denominador irredutível ({denominador}) tem o fator {fatores}, que não divide 10.",
+    "fr": "Le décimal est <strong>périodique</strong>, de période <strong>{periodo}</strong>. Cela vient de ce que le dénominateur irréductible ({denominador}) a le facteur {fatores}, qui ne divise pas 10.",
+    "en": "The decimal is <strong>repeating</strong>, with period <strong>{periodo}</strong>. That happens because the reduced denominator ({denominador}) has the factor {fatores}, which does not divide 10."
+  },
+  "finitoExplicacao": {
+    "pt": "O decimal é <strong>finito</strong>, porque o denominador irredutível ({denominador}) só tem fatores 2 e 5 — exatamente os primos que formam o número dez.",
+    "fr": "Le décimal est <strong>fini</strong>, parce que le dénominateur irréductible ({denominador}) n’a que les facteurs 2 et 5 — exactement les premiers qui composent le nombre dix.",
+    "en": "The decimal <strong>terminates</strong>, because the reduced denominator ({denominador}) has only the factors 2 and 5 — exactly the primes that make up ten."
+  },
+  "aproximacoesNaReta": {
+    "pt": "Aproximações na reta",
+    "fr": "Approximations sur la droite",
+    "en": "Approximations on the line"
+  },
+  "cadaCasa": {
+    "pt": "Cada casa decimal a mais aproxima o valor exato sem nunca alcançá-lo, quando a dízima é infinita.",
+    "fr": "Chaque décimale supplémentaire approche la valeur exacte sans jamais l’atteindre, lorsque le développement est infini.",
+    "en": "Each extra decimal place comes closer to the exact value without ever reaching it, when the expansion is infinite."
+  },
+  "descricaoReta": {
+    "pt": "Reta numérica em torno de {fracao}, mostrando as aproximações com uma, duas e três casas decimais.",
+    "fr": "Droite numérique autour de {fracao}, montrant les approximations à une, deux et trois décimales.",
+    "en": "Number line around {fracao}, showing the approximations to one, two and three decimal places."
+  },
+  "deDizimaParaFracao": {
+    "pt": "De dízima para fração",
+    "fr": "Du développement périodique à la fraction",
+    "en": "From repeating decimal to fraction"
+  },
+  "periodoUmDigito": {
+    "pt": "Período (um dígito)",
+    "fr": "Période (un chiffre)",
+    "en": "Period (one digit)"
+  },
+  "aSubtracao": {
+    "pt": "A subtração faz as infinitas casas decimais se cancelarem — é esse cancelamento que transforma um número infinito numa equação de uma linha.",
+    "fr": "La soustraction fait s’annuler les décimales infinies — c’est cette annulation qui transforme un nombre infini en une équation d’une ligne.",
+    "en": "The subtraction makes the endless decimal places cancel — that cancellation is what turns an infinite number into a one-line equation."
+  }
+}

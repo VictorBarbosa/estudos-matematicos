@@ -3,7 +3,12 @@
     <section class="controles">
       <div class="fracao-controle">
         <h2>{{ texto('primeiraFracao') }}</h2>
-        <app-controle-parametro [(valor)]="numeradorA" [rotulo]="i18n.t('explorar.numerador')" [min]="-12" [max]="12" />
+        <app-controle-parametro
+          [(valor)]="numeradorA"
+          [rotulo]="i18n.t('explorar.numerador')"
+          [min]="-12"
+          [max]="12"
+        />
         <app-controle-parametro
           [(valor)]="denominadorA"
           [rotulo]="i18n.t('explorar.denominador')"
@@ -30,7 +35,12 @@
 
       <div class="fracao-controle">
         <h2>{{ texto('segundaFracao') }}</h2>
-        <app-controle-parametro [(valor)]="numeradorB" [rotulo]="i18n.t('explorar.numerador')" [min]="-12" [max]="12" />
+        <app-controle-parametro
+          [(valor)]="numeradorB"
+          [rotulo]="i18n.t('explorar.numerador')"
+          [min]="-12"
+          [max]="12"
+        />
         <app-controle-parametro
           [(valor)]="denominadorB"
           [rotulo]="i18n.t('explorar.denominador')"

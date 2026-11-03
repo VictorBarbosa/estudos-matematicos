@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { MarcaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/matematica-basica/numeros-decimais/numeros-decimais.i18n.json';
 import { geradorDecimais } from '@features/matematica-basica/numeros-decimais/numeros-decimais.gerador';
 import { TEORIA_DECIMAIS } from '@features/matematica-basica/numeros-decimais/numeros-decimais.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_DECIMAIS } from '@features/matematica-basica/numeros-decimais/nu
   styleUrl: './numeros-decimais.scss',
 })
 export class NumerosDecimais {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorDecimais;
   protected readonly conceitos = TEORIA_DECIMAIS.map((teoria) => teoria.id);
 
@@ -88,10 +93,8 @@ export class NumerosDecimais {
     return { xMin: valor - folga, xMax: valor + folga };
   });
 
-  protected readonly descricaoReta = computed(
-    () =>
-      `Reta numérica em torno de ${this.fracao()}, mostrando as aproximações com uma, duas e ` +
-      'três casas decimais.',
+  protected readonly descricaoReta = computed(() =>
+    this.texto('descricaoReta', { fracao: this.fracao().toString() }),
   );
 
   constructor() {

@@ -1,12 +1,7 @@
 import { Component, inject, provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { I18nService } from '@core/i18n/services/i18n.service';
-import {
-  IDIOMAS,
-  IDIOMA_PADRAO,
-  Idioma,
-  LOCALE_DO_IDIOMA,
-} from '@core/i18n/models/i18n.model';
+import { IDIOMAS, IDIOMA_PADRAO, Idioma, LOCALE_DO_IDIOMA } from '@core/i18n/models/i18n.model';
 
 /**
  * A tradução chega mesmo à tela?

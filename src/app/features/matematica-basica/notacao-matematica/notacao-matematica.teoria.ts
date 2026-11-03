@@ -82,7 +82,10 @@ export const TEORIA_NOTACAO: readonly Teoria[] = [
       'o tipo do que se está afirmando. As operações entre conjuntos seguem a mesma lógica: ' +
       'união junta tudo, interseção guarda só o comum, e a diferença tira de A o que está em B.',
     formulas: [
-      { tex: '3 \\in \\mathbb{N} \\qquad \\{3\\} \\subset \\mathbb{N}', legenda: 'Elemento e subconjunto.' },
+      {
+        tex: '3 \\in \\mathbb{N} \\qquad \\{3\\} \\subset \\mathbb{N}',
+        legenda: 'Elemento e subconjunto.',
+      },
       {
         tex: '\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}',
         legenda: 'Cada conjunto numérico cabe dentro do seguinte.',
@@ -119,7 +122,10 @@ export const TEORIA_NOTACAO: readonly Teoria[] = [
       '"∃x ∈ ℝ, x² < 0" é falso, porque nenhum serve. Para derrubar um ∀ basta um ' +
       'contraexemplo; para provar um ∃ basta um exemplo.',
     formulas: [
-      { tex: '\\forall x \\in \\mathbb{R},\\ x^2 \\geq 0', legenda: 'Vale para todos, sem exceção.' },
+      {
+        tex: '\\forall x \\in \\mathbb{R},\\ x^2 \\geq 0',
+        legenda: 'Vale para todos, sem exceção.',
+      },
       { tex: '\\exists n \\in \\mathbb{N},\\ n > 10^6', legenda: 'Basta exibir um.' },
     ],
     demonstracao: [
@@ -145,8 +151,14 @@ export const TEORIA_NOTACAO: readonly Teoria[] = [
       'contém o 2 e não contém o 5. O infinito nunca leva colchete, porque não é um número ' +
       'que se possa incluir.',
     formulas: [
-      { tex: '[2,\\, 5] = \\{x \\in \\mathbb{R} : 2 \\leq x \\leq 5\\}', legenda: 'Fechado nos dois lados.' },
-      { tex: '(2,\\, 5] = \\{x \\in \\mathbb{R} : 2 < x \\leq 5\\}', legenda: 'Aberto à esquerda.' },
+      {
+        tex: '[2,\\, 5] = \\{x \\in \\mathbb{R} : 2 \\leq x \\leq 5\\}',
+        legenda: 'Fechado nos dois lados.',
+      },
+      {
+        tex: '(2,\\, 5] = \\{x \\in \\mathbb{R} : 2 < x \\leq 5\\}',
+        legenda: 'Aberto à esquerda.',
+      },
       { tex: '[2,\\, +\\infty)', legenda: 'De 2 em diante; o infinito nunca é incluído.' },
     ],
     demonstracao: [
@@ -202,7 +214,13 @@ export const TEORIA_NOTACAO: readonly Teoria[] = [
     ],
     exemplo: {
       enunciado: 'O somatório dos quadrados de 1 a 5.',
-      passos: somatorioComPassos(1, 5, (k) => k * k, (k) => `${k}^2`, 'k^2').passos,
+      passos: somatorioComPassos(
+        1,
+        5,
+        (k) => k * k,
+        (k) => `${k}^2`,
+        'k^2',
+      ).passos,
     },
     vejaTambem: ['notacao.produtorio', 'notacao.leitura'],
   },
@@ -241,7 +259,9 @@ export const TEORIA_NOTACAO: readonly Teoria[] = [
       'outra coisa — quantos elementos ele tem. A exclamação depois de um natural pede o ' +
       'produto de todos os naturais até ele.',
     formulas: [
-      { tex: '|x| = \\begin{cases} x & \\text{se } x \\geq 0 \\\\ -x & \\text{se } x < 0 \\end{cases}' },
+      {
+        tex: '|x| = \\begin{cases} x & \\text{se } x \\geq 0 \\\\ -x & \\text{se } x < 0 \\end{cases}',
+      },
       { tex: 'n! = n \\cdot (n-1) \\cdots 2 \\cdot 1 \\qquad 0! = 1' },
     ],
     demonstracao: [
@@ -271,7 +291,10 @@ export const TEORIA_NOTACAO: readonly Teoria[] = [
       'que permite falar de uma função antes de saber a fórmula dela, que é como o Cálculo ' +
       'trabalha o tempo todo.',
     formulas: [
-      { tex: 'f: \\mathbb{R} \\to \\mathbb{R}, \\quad f(x) = 2x + 1', legenda: 'Assinatura e regra.' },
+      {
+        tex: 'f: \\mathbb{R} \\to \\mathbb{R}, \\quad f(x) = 2x + 1',
+        legenda: 'Assinatura e regra.',
+      },
       { tex: 'f(3) = 2 \\cdot 3 + 1 = 7', legenda: 'Aplicar é trocar x pelo valor.' },
     ],
     demonstracao: [

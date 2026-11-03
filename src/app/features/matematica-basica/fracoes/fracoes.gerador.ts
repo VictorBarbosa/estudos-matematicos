@@ -8,8 +8,8 @@ import {
   operacaoParaTex,
   resolverComPassos,
 } from '@core/math';
- 
-import { Armadilha, Exercicio, GeradorExercicio, Nivel }  from '@core/treino/models/treino.model';
+
+import { Armadilha, Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
 
 import { Rng } from '@core/treino/rng/rng';
 
@@ -87,7 +87,11 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
       return exercicioConversao(nivel, rng);
     }
 
-    const sorteio = sortear(nivel, rng, exigido === null ? null : (CONCEITO_DO_ALVO.get(exigido) ?? null));
+    const sorteio = sortear(
+      nivel,
+      rng,
+      exigido === null ? null : (CONCEITO_DO_ALVO.get(exigido) ?? null),
+    );
     const { operacao, comMista } = sorteio;
 
     /*
@@ -120,7 +124,13 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
       gabarito: resolucao.resultado,
       resolucao,
       conceitos: conceitosDe(operacao, a, b, comMista),
-      armadilhas: armadilhasDe(a, b, operacao, resolucao.resultado, deslocamentoMisto(a, b, comMista)),
+      armadilhas: armadilhasDe(
+        a,
+        b,
+        operacao,
+        resolucao.resultado,
+        deslocamentoMisto(a, b, comMista),
+      ),
       dica:
         nivel === 'facil'
           ? comMista
@@ -162,7 +172,6 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
       : [simplificada.toString()];
   },
 };
-
 
 /**
  * Decimais usados na conversão, por nível.
@@ -291,7 +300,6 @@ function produzNoNivel(conceito: string, nivel: Nivel): boolean {
   return alvo !== undefined && (!alvo.comMista || nivel !== 'facil');
 }
 
-
 function sortear(nivel: Nivel, rng: Rng, alvo: Alvo | null): Sorteio {
   const operacao = alvo?.operacao ?? rng.escolher(OPERACOES);
 
@@ -348,7 +356,6 @@ function sortearMedio(rng: Rng, operacao: OperacaoFracao, comMista: boolean): So
 
 /** Difícil: as quatro operações, com negativos e mistos em qualquer posição. */
 function sortearDificil(rng: Rng, operacao: OperacaoFracao, comMista: boolean): Sorteio {
-
   const criar = (permitirZero: boolean): Fracao => {
     const denominador = rng.inteiro(2, 12);
     const proprio = rng.inteiro(1, denominador - 1 || 1);
