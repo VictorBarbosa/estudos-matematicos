@@ -14,6 +14,9 @@ import { TEORIA_FATORACAO as t_fatoracao } from '@features/algebra/fatoracao/fat
 import { TEORIA_INEQUACOES as t_inequacoes } from '@features/algebra/inequacoes/inequacoes.teoria';
 import { TEORIA_POLINOMIOS as t_polinomios } from '@features/algebra/polinomios/polinomios.teoria';
 import { TEORIA_PRODUTOS as t_produtos_notaveis } from '@features/algebra/produtos-notaveis/produtos-notaveis.teoria';
+import { TEORIA_RACIONAIS as t_funcoes_racionais } from '@features/funcoes/funcoes-racionais/funcoes-racionais.teoria';
+import { TEORIA_POR_PARTES as t_funcoes_por_partes } from '@features/funcoes/funcoes-por-partes/funcoes-por-partes.teoria';
+import { TEORIA_TRANSFORMACOES as t_transformacoes_de_graficos } from '@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.teoria';
 import { TEORIA_PROGRESSOES as t_progressoes } from '@features/funcoes/progressoes/progressoes.teoria';
 import { TEORIA_SISTEMAS as t_sistemas_lineares } from '@features/algebra/sistemas-lineares/sistemas-lineares.teoria';
 import { TEORIA_APLICACOES_DERIVADA as t_aplicacoes_da_derivada } from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.teoria';
@@ -143,6 +146,9 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['trajetoria-balistica', t_trajetoria_balistica],
   ['composicao-inversa', t_composicao_inversa],
   ['conceito-funcao', t_conceito_funcao],
+  ['funcoes-racionais', t_funcoes_racionais],
+  ['funcoes-por-partes', t_funcoes_por_partes],
+  ['transformacoes-de-graficos', t_transformacoes_de_graficos],
   ['funcao-afim', t_funcao_afim],
   ['funcao-exponencial', t_funcao_exponencial],
   ['funcao-logaritmica', t_funcao_logaritmica],

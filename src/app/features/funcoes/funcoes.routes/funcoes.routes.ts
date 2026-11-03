@@ -52,5 +52,20 @@ export const rotas: Routes = [
     title: 'Juros compostos · Estudos Matemáticos',
     loadComponent: () => import('@features/funcoes/juros-compostos/juros-compostos').then((m) => m.JurosCompostos),
   },
+  {
+    path: 'funcoes-racionais',
+    title: 'Funções racionais · Estudos Matemáticos',
+    loadComponent: () => import('@features/funcoes/funcoes-racionais/funcoes-racionais').then((m) => m.FuncoesRacionais),
+  },
+  {
+    path: 'funcoes-por-partes',
+    title: 'Funções definidas por partes · Estudos Matemáticos',
+    loadComponent: () => import('@features/funcoes/funcoes-por-partes/funcoes-por-partes').then((m) => m.FuncoesPorPartes),
+  },
+  {
+    path: 'transformacoes-de-graficos',
+    title: 'Transformações de gráficos · Estudos Matemáticos',
+    loadComponent: () => import('@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos').then((m) => m.TransformacoesDeGraficos),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'conceito-funcao' },
 ];

@@ -296,21 +296,21 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'Funções racionais',
         descricao:
           'Quociente de polinômios: domínio, assíntotas e o que acontece perto do que anula o denominador.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'funcoes-por-partes',
         titulo: 'Funções definidas por partes',
         descricao:
           'Uma regra diferente em cada intervalo, e o que acontece nas emendas.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'transformacoes-de-graficos',
         titulo: 'Transformações de gráficos',
         descricao:
           'Deslocar, esticar e refletir — ler o gráfico de f(x) + k, f(x + k) e a·f(x) sem refazer a tabela.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'composicao-inversa',

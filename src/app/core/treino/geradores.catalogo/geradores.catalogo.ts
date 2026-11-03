@@ -14,6 +14,9 @@ import { geradorFatoracao as g_fatoracao } from '@features/algebra/fatoracao/fat
 import { geradorInequacoes as g_inequacoes } from '@features/algebra/inequacoes/inequacoes.gerador';
 import { geradorPolinomios as g_polinomios } from '@features/algebra/polinomios/polinomios.gerador';
 import { geradorProdutos as g_produtos_notaveis } from '@features/algebra/produtos-notaveis/produtos-notaveis.gerador';
+import { geradorFuncoesRacionais as g_funcoes_racionais } from '@features/funcoes/funcoes-racionais/funcoes-racionais.gerador';
+import { geradorFuncoesPorPartes as g_funcoes_por_partes } from '@features/funcoes/funcoes-por-partes/funcoes-por-partes.gerador';
+import { geradorTransformacoes as g_transformacoes_de_graficos } from '@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.gerador';
 import { geradorProgressoes as g_progressoes } from '@features/funcoes/progressoes/progressoes.gerador';
 import { geradorSistemas as g_sistemas_lineares } from '@features/algebra/sistemas-lineares/sistemas-lineares.gerador';
 import { geradorAplicacoesDerivada as g_aplicacoes_da_derivada } from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.gerador';
@@ -149,6 +152,9 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['trajetoria-balistica', g_trajetoria_balistica],
   ['composicao-inversa', g_composicao_inversa],
   ['conceito-funcao', g_conceito_funcao],
+  ['funcoes-racionais', g_funcoes_racionais],
+  ['funcoes-por-partes', g_funcoes_por_partes],
+  ['transformacoes-de-graficos', g_transformacoes_de_graficos],
   ['funcao-afim', g_funcao_afim],
   ['funcao-exponencial', g_funcao_exponencial],
   ['funcao-logaritmica', g_funcao_logaritmica],

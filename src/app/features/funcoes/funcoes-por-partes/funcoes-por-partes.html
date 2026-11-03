@@ -1,0 +1,113 @@
+<app-topico-layout
+  titulo="Funções definidas por partes"
+  descricao="Expressões diferentes em faixas diferentes, e tudo que importa acontece nas fronteiras."
+  topicoId="funcoes-por-partes"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>Uma função só, descrita em pedaços</h2>
+      <app-formula
+        [tex]="'f(x) = \\begin{cases} 2x + 1, & x < 3 \\\\ x^{2}, & x \\geq 3 \\end{cases}'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        É a forma natural de descrever qualquer coisa que muda de regime: uma tarifa com faixas,
+        um imposto progressivo, o empuxo de um foguete antes e depois da separação do estágio.
+        Dentro de cada trecho é uma função comum — a matemática nova está toda nas fronteiras.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="fronteira" rotulo="Fronteira" [min]="-4" [max]="4" />
+      <app-controle-parametro
+        [(valor)]="inclinacaoEsquerda"
+        rotulo="Inclinação à esquerda"
+        [min]="-4"
+        [max]="4"
+      />
+      <app-controle-parametro
+        [(valor)]="constanteEsquerda"
+        rotulo="Constante à esquerda"
+        [min]="-6"
+        [max]="6"
+      />
+      <app-controle-parametro
+        [(valor)]="inclinacaoDireita"
+        rotulo="Inclinação à direita"
+        [min]="-4"
+        [max]="4"
+      />
+      <app-controle-parametro
+        [(valor)]="constanteDireita"
+        rotulo="Constante à direita"
+        [min]="-6"
+        [max]="6"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Limite pela esquerda</span>
+        <strong>{{ formatar(esquerda()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Limite pela direita</span>
+        <strong>{{ formatar(direita()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Valor na fronteira</span>
+        <strong>{{ formatar(valor()) }}</strong>
+        <span class="legenda">o trecho com o sinal de igual</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Salto</span>
+        <strong>{{ formatar(salto()) }}</strong>
+        <span class="legenda">{{ continua() ? 'contínua aqui' : 'descontinuidade de salto' }}</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Constante que colaria</span>
+        <strong>{{ formatar(constanteQueCola()) }}</strong>
+        <span class="legenda">no lugar da constante à direita</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>As duas pontas, e o que acontece entre elas</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        Mexa na constante à direita até o salto zerar: nesse valor exato as duas pontas se
+        encontram e o gráfico fica inteiro, sem precisar tirar o lápis do papel. Qualquer outro
+        valor deixa um degrau que nenhum ajuste no ponto consegue remover.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Três números, não um</h2>
+      <app-formula
+        [tex]="'\\lim_{x \\to a^{-}} f(x) \\qquad \\lim_{x \\to a^{+}} f(x) \\qquad f(a)'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Na fronteira há três coisas distintas a calcular, e elas podem discordar. Os limites
+        usam as expressões vizinhas; o valor usa a expressão cuja condição inclui o sinal de
+        igual. A função é contínua ali exatamente quando os três coincidem.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

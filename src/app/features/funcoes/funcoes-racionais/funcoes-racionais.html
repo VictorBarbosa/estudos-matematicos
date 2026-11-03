@@ -1,0 +1,91 @@
+<app-topico-layout
+  titulo="Funções racionais"
+  descricao="Um polinômio dividido por outro: domínio, assíntotas e o buraco que não é assíntota."
+  topicoId="funcoes-racionais"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>Nem todo zero do denominador é assíntota</h2>
+      <app-formula
+        [tex]="'\\frac{(x - 3)(x + 1)}{(x - 3)(x - 5)} = \\frac{x + 1}{x - 5}, \\quad x \\neq 3'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Quando o numerador zera no mesmo ponto, o fator se cancela e o que sobra é um BURACO:
+        um único ponto removido, com o limite existindo normalmente em volta. A assíntota só
+        aparece quando o denominador zera sozinho.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="zero" rotulo="Zero da função" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="polo" rotulo="Zero do denominador" [min]="-6" [max]="6" />
+      <app-controle-parametro
+        [(valor)]="comBuraco"
+        rotulo="Repetir o fator em cima (0 não, 1 sim)"
+        [min]="0"
+        [max]="1"
+        dica="Com 1, o mesmo fator aparece nos dois lados e vira buraco."
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Assíntotas verticais</span>
+        <strong>{{ lista(assintotas()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Buracos</span>
+        <strong>{{ lista(buracos()) }}</strong>
+        <span class="legenda">o limite existe ali</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Zeros</span>
+        <strong>{{ lista(zeros()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">No infinito</span>
+        <strong>{{ horizontalEscrita() }}</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>O gráfico, com as duas coisas à vista</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        Ligue a repetição do fator e compare: o traço que antes disparava passa a atravessar
+        normalmente, com apenas um círculo vazado marcando o ponto que falta. É a diferença
+        entre o gráfico explodir e apenas ter um furo.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Longe da origem, só os graus importam</h2>
+      <app-formula
+        [tex]="'\\frac{3x^{2} + 1}{2x^{2} - x} = \\frac{3 + 1/x^{2}}{2 - 1/x} \\;\\longrightarrow\\; \\frac{3}{2}'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Numerador de grau menor leva a função a zero; graus iguais deixam a razão dos
+        coeficientes líderes; numerador um grau acima produz uma reta inclinada. É a leitura do
+        regime permanente de um sistema, e ela se faz sem calcular limite nenhum.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

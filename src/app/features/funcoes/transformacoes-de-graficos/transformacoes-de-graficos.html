@@ -1,0 +1,93 @@
+<app-topico-layout
+  titulo="Transformações de gráficos"
+  descricao="Deslocar, esticar e refletir — e por que dentro dos parênteses tudo se inverte."
+  topicoId="transformacoes-de-graficos"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>A assimetria que confunde todo mundo</h2>
+      <app-formula [tex]="'g(x) = a\\,f\\!\\left(b(x - h)\\right) + k'" [bloco]="true" />
+      <p class="observacao">
+        Fora do argumento, a intuição acerta: multiplicar por 2 estica na vertical, somar 3
+        sobe três. Dentro, tudo se inverte — somar 3 desloca para a ESQUERDA, e multiplicar por
+        2 COMPRIME pela metade. O motivo é simples: o x precisa compensar a operação para que o
+        argumento chegue ao mesmo valor de antes.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="escolha"
+        rotulo="Função base (0 x² · 1 raiz · 2 módulo · 3 seno)"
+        [min]="0"
+        [max]="3"
+      />
+      <app-controle-parametro [(valor)]="a" rotulo="Fator vertical (a)" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="b" rotulo="Fator horizontal (b)" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="h" rotulo="Deslocamento horizontal (h)" [min]="-5" [max]="5" />
+      <app-controle-parametro [(valor)]="k" rotulo="Deslocamento vertical (k)" [min]="-5" [max]="5" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="formulaTex()" [bloco]="true" />
+      <ol class="passos-da-transformacao">
+        @for (passo of descricoes(); track passo) {
+          <li>{{ passo }}</li>
+        }
+      </ol>
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Ponto original</span>
+        <strong>({{ origem.x }}, {{ formatar(base().fn(origem.x)) }})</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Para onde ele vai</span>
+        <strong>({{ formatar(destino().x) }}, {{ formatar(destino().y) }})</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Conta na horizontal</span>
+        <strong>x ÷ {{ b() }} + {{ h() }}</strong>
+        <span class="legenda">o avesso do que está escrito</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Conta na vertical</span>
+        <strong>{{ a() }}y + {{ k() }}</strong>
+        <span class="legenda">direta, como parece</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A mesma forma, em outro lugar</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        Mexa no fator horizontal e acompanhe o ponto marcado: com b igual a 2 ele vai para
+        metade da distância, porque o gráfico comprimiu. Depois mexa no deslocamento horizontal
+        e confira o sinal — h positivo empurra para a direita, embora apareça como subtração.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Por que isso poupa trabalho</h2>
+      <app-formula [tex]="'y = a(x - h)^{2} + k \\;\\Longrightarrow\\; V = (h,\\; k)'" [bloco]="true" />
+      <p class="observacao">
+        Reconhecer a forma dispensa refazer tabela de valores, completar quadrado ou derivar: o
+        vértice se lê direto dos parâmetros. Em engenharia é como se lê um sinal deslocado no
+        tempo ou uma resposta com ganho, sem recalcular o sistema inteiro.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

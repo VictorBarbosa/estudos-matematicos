@@ -128,7 +128,7 @@ function daParticula(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Uma partícula de ${numero(massa)} kg passa a ${numero(distancia)} metros de um ` +
+      `Uma partícula de ${numero(massa)} kg passa a ${numero(distancia)} m de um ` +
       `ponto, com velocidade de ${velocidade} m/s formando ${angulo} graus com o ` +
       `raio. Qual é o módulo do momento angular em relação a esse ponto? ${PEDIDO}`,
     enunciadoTex: `L = mvr\\operatorname{sen}\\theta`,

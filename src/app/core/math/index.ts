@@ -37,6 +37,9 @@ export * from '@core/math/algebra/complexos/complexos';
 // Funções
 export * from '@core/math/funcoes/elementares/elementares';
 export * from '@core/math/funcoes/composicao/composicao';
+export * from '@core/math/funcoes/racionais/racionais';
+export * from '@core/math/funcoes/por-partes/por-partes';
+export * from '@core/math/funcoes/transformacoes/transformacoes';
 
 // Trigonometria
 export * from '@core/math/trigonometria/trigonometria/trigonometria';
