@@ -419,7 +419,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'Vetores no espaço',
         descricao:
           'Componentes x, y e z, vetores unitários e os dois produtos em três dimensões.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'matrizes-determinantes',

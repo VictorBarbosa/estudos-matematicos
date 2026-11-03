@@ -21,6 +21,14 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'vetores-no-espaco',
+    title: 'Vetores no espaço · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco').then(
+        (m) => m.VetoresNoEspaco,
+      ),
+  },
+  {
     path: 'matrizes-determinantes',
     title: 'Matrizes e determinantes · Estudos Matemáticos',
     loadComponent: () =>

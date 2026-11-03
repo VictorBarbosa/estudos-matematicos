@@ -1,0 +1,78 @@
+@use 'mixins' as *;
+
+.explorar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-6);
+}
+
+.controles {
+  display: grid;
+  gap: var(--esp-4);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.grupo {
+  @include cartao;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-4);
+}
+
+.resumo {
+  display: grid;
+  gap: var(--esp-4);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.cartao-valor {
+  @include cartao;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  padding: var(--esp-4);
+
+  &.destaque {
+    border-color: var(--acento);
+  }
+}
+
+.conferencia,
+.passos {
+  @include cartao;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-5);
+}
+
+h2 {
+  font-size: var(--texto-lg);
+}
+
+h3 {
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.rotulo {
+  font-size: var(--texto-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--texto-tenue);
+}
+
+.numero {
+  font-size: var(--texto-2xl);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.apoio {
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}

@@ -81,6 +81,7 @@ import { geradorTriangulo as g_triangulo_retangulo } from '@features/trigonometr
 import { geradorMatrizes as g_matrizes_determinantes } from '@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.gerador';
 import { geradorComplexos as g_numeros_complexos } from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.gerador';
 import { geradorProdutos as g_produto_escalar_vetorial } from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.gerador';
+import { geradorVetores3 as g_vetores_no_espaco } from '@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.gerador';
 import { geradorVetores as g_vetores_no_plano } from '@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.gerador';
 
 /**
@@ -165,4 +166,5 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['numeros-complexos', g_numeros_complexos],
   ['produto-escalar-vetorial', g_produto_escalar_vetorial],
   ['vetores-no-plano', g_vetores_no_plano],
+  ['vetores-no-espaco', g_vetores_no_espaco],
 ];

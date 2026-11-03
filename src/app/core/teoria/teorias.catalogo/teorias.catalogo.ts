@@ -81,6 +81,7 @@ import { TEORIA_TRIANGULO as t_triangulo_retangulo } from '@features/trigonometr
 import { TEORIA_MATRIZES as t_matrizes_determinantes } from '@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.teoria';
 import { TEORIA_COMPLEXOS as t_numeros_complexos } from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.teoria';
 import { TEORIA_PRODUTOS as t_produto_escalar_vetorial } from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.teoria';
+import { TEORIA_VETORES_ESPACO as t_vetores_no_espaco } from '@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.teoria';
 import { TEORIA_VETORES as t_vetores_no_plano } from '@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.teoria';
 
 export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[] = [
@@ -159,4 +160,5 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['numeros-complexos', t_numeros_complexos],
   ['produto-escalar-vetorial', t_produto_escalar_vetorial],
   ['vetores-no-plano', t_vetores_no_plano],
+  ['vetores-no-espaco', t_vetores_no_espaco],
 ];

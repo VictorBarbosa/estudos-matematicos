@@ -30,6 +30,7 @@ export * from '@core/math/algebra/fatoracao/fatoracao';
 export * from '@core/math/algebra/sistema-linear/sistema-linear';
 export * from '@core/math/algebra/inequacao/inequacao';
 export * from '@core/math/algebra/vetores/vetores';
+export * from '@core/math/algebra/vetores-espaco/vetores-espaco';
 export * from '@core/math/algebra/matrizes/matrizes';
 export * from '@core/math/algebra/complexos/complexos';
 

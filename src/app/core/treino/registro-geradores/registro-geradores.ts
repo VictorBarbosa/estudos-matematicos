@@ -83,5 +83,6 @@ export const CARREGAR_GERADOR: Readonly<
   'matrizes-determinantes': () => import('@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.gerador').then((m) => m.geradorMatrizes),
   'numeros-complexos': () => import('@features/vetores-matrizes/numeros-complexos/numeros-complexos.gerador').then((m) => m.geradorComplexos),
   'produto-escalar-vetorial': () => import('@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.gerador').then((m) => m.geradorProdutos),
+  'vetores-no-espaco': () => import('@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.gerador').then((m) => m.geradorVetores3),
   'vetores-no-plano': () => import('@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.gerador').then((m) => m.geradorVetores),
 };
