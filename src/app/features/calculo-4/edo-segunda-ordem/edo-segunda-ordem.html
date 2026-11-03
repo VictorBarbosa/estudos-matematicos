@@ -1,0 +1,87 @@
+<app-topico-layout
+  titulo="EDO de segunda ordem"
+  descricao="A equação característica e os três regimes: oscilar, não oscilar e o limite."
+  topicoId="edo-segunda-ordem"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>A EDO vira uma quadrática</h2>
+      <app-formula [tex]="'y = e^{rt} \\;\\Longrightarrow\\; r^{2} + br + c = 0'" [bloco]="true" />
+      <p class="observacao">
+        Tentar uma solução exponencial transforma a equação diferencial numa equação do segundo
+        grau — derivadas viram potências, e a álgebra toma conta. É a ponte mais surpreendente
+        do assunto, e ela resolve o problema inteiro com a fórmula que já se conhece.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="decimosDeB"
+        rotulo="Amortecimento b, em décimos"
+        [min]="0"
+        [max]="150"
+        [passo]="5"
+      />
+      <app-controle-parametro [(valor)]="c" rotulo="Rigidez c" [min]="1" [max]="40" />
+      <app-controle-parametro [(valor)]="y0" rotulo="Posição inicial" [min]="-5" [max]="5" />
+      <app-controle-parametro [(valor)]="v0" rotulo="Velocidade inicial" [min]="-8" [max]="8" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="equacaoTex()" [bloco]="true" />
+      <app-formula [tex]="caracteristicaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Regime</span>
+        <strong>{{ regime() }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Discriminante</span>
+        <strong>{{ formatar(discriminante()) }}</strong>
+        <span class="legenda">é o sinal dele que decide</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Período</span>
+        <strong>{{ formatar(periodo()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Decaimento</span>
+        <strong>{{ formatar(raizes().real) }}</strong>
+        <span class="legenda">parte real das raízes</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Os três regimes, num controle só</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        Aumente o amortecimento devagar e acompanhe: com pouco atrito a curva oscila dentro da
+        envoltória; num valor exato ela deixa de cruzar o eixo — é o caso crítico; acima dele
+        ela volta devagar, sem oscilar. Projetar uma suspensão é escolher esse ponto.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Duas constantes, duas condições</h2>
+      <app-formula [tex]="'y(0) = y_{0} \\qquad y\'(0) = v_{0}'" [bloco]="true" />
+      <p class="observacao">
+        A solução geral tem duas constantes livres, e por isso são necessárias duas condições
+        para fixá-las. Fisicamente é evidente: saber onde a massa está não basta, é preciso
+        saber também com que velocidade ela parte.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

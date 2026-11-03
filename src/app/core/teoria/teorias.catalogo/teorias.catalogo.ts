@@ -99,6 +99,16 @@ import { TEORIA_COMPLEXOS as t_numeros_complexos } from '@features/vetores-matri
 import { TEORIA_PRODUTOS as t_produto_escalar_vetorial } from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.teoria';
 import { TEORIA_VETORES_ESPACO as t_vetores_no_espaco } from '@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.teoria';
 import { TEORIA_VETORES as t_vetores_no_plano } from '@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.teoria';
+import { TEORIA_MULTIVAR as t_funcoes_de_varias_variaveis } from '@features/calculo-3/funcoes-de-varias-variaveis/funcoes-de-varias-variaveis.teoria';
+import { TEORIA_PARCIAIS as t_derivadas_parciais } from '@features/calculo-3/derivadas-parciais/derivadas-parciais.teoria';
+import { TEORIA_GRADIENTE as t_gradiente_e_direcional } from '@features/calculo-3/gradiente-e-direcional/gradiente-e-direcional.teoria';
+import { TEORIA_MULTIPLAS as t_integrais_multiplas } from '@features/calculo-3/integrais-multiplas/integrais-multiplas.teoria';
+import { TEORIA_COORDENADAS as t_coordenadas_no_espaco } from '@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.teoria';
+import { TEORIA_LINHA as t_integrais_de_linha } from '@features/calculo-3/integrais-de-linha/integrais-de-linha.teoria';
+import { TEORIA_EDO1 as t_edo_primeira_ordem } from '@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.teoria';
+import { TEORIA_EDO2 as t_edo_segunda_ordem } from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.teoria';
+import { TEORIA_APLICACOES_EDO as t_aplicacoes_de_edo } from '@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.teoria';
+import { TEORIA_NUMERICO as t_metodos_numericos } from '@features/calculo-4/metodos-numericos/metodos-numericos.teoria';
 
 export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[] = [
   ['equacao-primeiro-grau', t_equacao_primeiro_grau],
@@ -193,4 +203,14 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['produto-escalar-vetorial', t_produto_escalar_vetorial],
   ['vetores-no-plano', t_vetores_no_plano],
   ['vetores-no-espaco', t_vetores_no_espaco],
+  ['funcoes-de-varias-variaveis', t_funcoes_de_varias_variaveis],
+  ['derivadas-parciais', t_derivadas_parciais],
+  ['gradiente-e-direcional', t_gradiente_e_direcional],
+  ['integrais-multiplas', t_integrais_multiplas],
+  ['coordenadas-no-espaco', t_coordenadas_no_espaco],
+  ['integrais-de-linha', t_integrais_de_linha],
+  ['edo-primeira-ordem', t_edo_primeira_ordem],
+  ['edo-segunda-ordem', t_edo_segunda_ordem],
+  ['aplicacoes-de-edo', t_aplicacoes_de_edo],
+  ['metodos-numericos', t_metodos_numericos],
 ];

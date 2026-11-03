@@ -1,0 +1,84 @@
+<app-topico-layout
+  titulo="Métodos numéricos"
+  descricao="Integrar uma EDO sem resolvê-la — Euler, Runge-Kutta e o erro de cada um."
+  topicoId="metodos-numericos"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>Seguir a tangente e recomeçar</h2>
+      <app-formula [tex]="'y_{n+1} = y_{n} + h\\,f(t_{n},\\, y_{n})'" [bloco]="true" />
+      <p class="observacao">
+        Quase nenhuma equação diferencial real tem solução fechada — o que se faz na prática é
+        integrá-la numericamente. Euler é o método mais simples possível: a derivada dá a
+        inclinação, segue-se por ela um passo, e recomeça-se do ponto novo.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="decimosDeK" rotulo="Taxa k, em décimos" [min]="-15" [max]="15" />
+      <app-controle-parametro [(valor)]="decimosDoPasso" rotulo="Passo h, em décimos" [min]="1" [max]="10" />
+      <app-controle-parametro [(valor)]="y0" rotulo="Valor inicial" [min]="1" [max]="10" />
+      <app-controle-parametro [(valor)]="tempo" rotulo="Tempo total" [min]="1" [max]="6" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="equacaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Solução exata</span>
+        <strong>{{ formatar(exato()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Euler</span>
+        <strong>{{ formatar(euler()) }}</strong>
+        <span class="legenda">{{ quantos() }} passos</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Erro de Euler</span>
+        <strong>{{ formatar(erroDeEuler()) }}</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Erro de Runge-Kutta</span>
+        <strong>{{ formatar(erroDeRk()) }}</strong>
+        <span class="legenda">mesmo passo, outra ordem de grandeza</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A poligonal que tenta acompanhar a curva</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="400"
+      />
+      <p class="observacao">
+        Cada ponto é um passo, e cada segmento é a tangente seguida por h. Diminua o passo pela
+        metade e compare os erros: o de Euler cai por volta de duas vezes, o de Runge-Kutta por
+        volta de dezesseis. É isso que quer dizer "ordem do método".
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Quatro inclinações por passo</h2>
+      <app-formula
+        [tex]="'y_{n+1} = y_{n} + \\frac{h}{6}\\left(k_{1} + 2k_{2} + 2k_{3} + k_{4}\\right)'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Runge-Kutta avalia a inclinação no início, duas vezes no meio e no fim, e combina as
+        quatro numa média ponderada. O custo por passo quadruplica; o erro cai com a quarta
+        potência do passo. É o método padrão de praticamente toda simulação.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

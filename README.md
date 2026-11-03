@@ -1,6 +1,6 @@
 # Estudos Matemáticos
 
-Preparatório interativo para **engenharia aeroespacial**: da matemática básica ao Cálculo 2,
+Preparatório interativo para **engenharia aeroespacial**: da matemática básica ao Cálculo 4,
 com a física que dá sentido a tudo — gráficos, demonstrações passo a passo e exercícios
 corrigidos.
 
@@ -291,7 +291,7 @@ leve. O recado não muda o veredito nem o conceito contado: é sobre a escrita, 
 sobre a matemática. Quem respondeu `0,5` não o recebe — apontar termos que ele não escreveu
 soaria como erro de leitura.
 
-Cinco travas globais cuidam dessa parte, para os 92 geradores de uma vez
+Cinco travas globais cuidam dessa parte, para os 102 geradores de uma vez
 (`core/treino/formato-resposta/`, `shared/components/formula/formulas-do-site.spec.ts`,
 `core/teoria/teorias/`):
 
@@ -498,9 +498,11 @@ Todos os tópicos do currículo estão implementados. Para acrescentar um novo, 
 
 ## Estado atual
 
-**Os 92 tópicos do currículo estão implementados**, nas doze áreas, na ordem de
-aprendizagem. O campo `pronto` continua no currículo: ele é o que torna visível, na
-navegação, qualquer tópico novo que entre no plano antes de ser escrito.
+**Os 102 tópicos do currículo estão implementados**, nas catorze áreas, na ordem de
+aprendizagem. As duas últimas — Cálculo 3 e Cálculo 4 — são a quarta etapa do plano de
+estudo, aquela que costuma acontecer já dentro da graduação. O campo `pronto` continua no
+currículo: ele é o que torna visível, na navegação, qualquer tópico novo que entre no plano
+antes de ser escrito.
 
 | # | Área | Tópicos |
 |---|------|---------|
@@ -516,6 +518,8 @@ navegação, qualquer tópico novo que entre no plano antes de ser escrito.
 | 10 | Cálculo 1 | 11 |
 | 11 | Cálculo 2 | 9 |
 | 12 | Combinatória e estatística | 5 |
+| 13 | Cálculo 3 | 6 |
+| 14 | Cálculo 4 | 4 |
 
 A área de Física fecha com **propulsão de foguetes**: a equação de Tsiolkovsky, onde logaritmo,
 conservação de momento, gases e gravitação se encontram.

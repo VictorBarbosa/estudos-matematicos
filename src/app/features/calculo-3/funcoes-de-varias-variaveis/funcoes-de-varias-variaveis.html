@@ -1,0 +1,70 @@
+<app-topico-layout
+  titulo="Funções de várias variáveis"
+  descricao="Uma altura para cada ponto do plano: domínio como região e gráfico como superfície."
+  topicoId="funcoes-de-varias-variaveis"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>Sobe uma dimensão em tudo</h2>
+      <app-formula [tex]="'f : \\mathbb{R}^{2} \\to \\mathbb{R}, \\qquad z = f(x,y)'" [bloco]="true" />
+      <p class="observacao">
+        O domínio deixa de ser um intervalo na reta e passa a ser uma região do plano; o gráfico
+        deixa de ser curva e passa a ser superfície. Quase tudo que a engenharia mede é assim —
+        temperatura ao longo de uma placa, pressão sobre uma asa, altitude sobre um terreno.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de y²" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="c" rotulo="Coeficiente de xy" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="yDoCorte" rotulo="Plano de corte (y)" [min]="-3" [max]="3" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Forma da superfície</span>
+        <strong>{{ tipo() }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Altura em (0, {{ yDoCorte() }})</span>
+        <strong>{{ formatar(noCorte()) }}</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>Uma fatia de cada vez</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        Cada curva aqui é a superfície cortada por um plano vertical, com o y fixo. Juntas elas
+        reconstroem o relevo — e é exatamente esse raciocínio que transforma um problema de duas
+        variáveis em vários problemas de uma só.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Troque os sinais e veja a sela aparecer</h2>
+      <app-formula [tex]="'x^{2} - y^{2}'" [bloco]="true" />
+      <p class="observacao">
+        Com os dois coeficientes positivos a superfície é um paraboloide, e todos os cortes
+        abrem para cima. Com sinais opostos, aparece a sela: mínimo numa direção e máximo
+        noutra, um comportamento que simplesmente não existe em uma variável.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

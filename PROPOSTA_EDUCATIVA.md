@@ -63,7 +63,7 @@ derivação, regra da cadeia, aplicações da derivada.
 Soma de Riemann, integral definida, integral indefinida, teorema fundamental, técnicas de
 integração, aplicações da integral.
 
-São **92 tópicos** no currículo, **todos implementados** — cada um com explicação teórica,
+São **102 tópicos** no currículo, **todos implementados** — cada um com explicação teórica,
 gráfico interativo e exercícios corrigidos. Os que faltam aparecem na navegação como "em
 breve".
 
@@ -108,4 +108,4 @@ O **modo livre**, disponível na página inicial, destranca todos os tópicos pa
 
 ---
 
-*92 tópicos, todos no ar. Da matemática básica à equação do foguete. Tudo interativo, tudo com explicação.*
+*102 tópicos, todos no ar. Da matemática básica às equações diferenciais. Tudo interativo, tudo com explicação.*

@@ -88,5 +88,15 @@ export const routes: Routes = [
     loadChildren: () => import('@features/estatistica/estatistica.routes/estatistica.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
+  {
+    path: 'calculo-3',
+    loadChildren: () => import('@features/calculo-3/calculo-3.routes/calculo-3.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
+    path: 'calculo-4',
+    loadChildren: () => import('@features/calculo-4/calculo-4.routes/calculo-4.routes').then((m) => m.rotas),
+    canActivateChild: [topicoLiberadoGuard],
+  },
   { path: '**', redirectTo: '' },
 ];

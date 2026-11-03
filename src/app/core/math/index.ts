@@ -60,6 +60,8 @@ export * from '@core/math/calculo/derivacao-implicita/derivacao-implicita';
 export * from '@core/math/calculo/integrais/integrais';
 export * from '@core/math/calculo/integrais-improprias/integrais-improprias';
 export * from '@core/math/calculo/taylor/taylor';
+export * from '@core/math/calculo/multivariavel/multivariavel';
+export * from '@core/math/calculo/edo/edo';
 
 // Combinatória e estatística
 export * from '@core/math/estatistica/contagem/contagem';

@@ -845,6 +845,108 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       },
     ],
   },
+  {
+    id: 'calculo-3',
+    titulo: 'Cálculo 3',
+    descricao: 'Cálculo multivariável: derivar e integrar em mais de uma direção.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Calculus Volume 3*',
+        url: 'https://openstax.org/details/books/calculus-volume-3',
+        nota:
+          'Cobre funções de várias variáveis, derivadas parciais, integrais múltiplas e cálculo vetorial, com exercícios resolvidos.',
+      },
+      {
+        titulo: 'MIT OpenCourseWare, *Multivariable Calculus* (18.02)',
+        url: 'https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/',
+        nota:
+          'Aulas em vídeo e listas de um curso inteiro, com a ênfase geométrica que o livro sozinho não dá.',
+      },
+    ],
+    topicos: [
+      {
+        id: 'funcoes-de-varias-variaveis',
+        titulo: 'Funções de várias variáveis',
+        descricao: 'Domínio como região, gráfico como superfície e curvas de nível.',
+        pronto: true,
+      },
+      {
+        id: 'derivadas-parciais',
+        titulo: 'Derivadas parciais',
+        descricao: 'Derivar numa direção de cada vez, e o que a segunda ordem revela.',
+        pronto: true,
+      },
+      {
+        id: 'gradiente-e-direcional',
+        titulo: 'Gradiente e derivada direcional',
+        descricao: 'O vetor da subida mais íngreme, e a taxa em qualquer direção.',
+        pronto: true,
+      },
+      {
+        id: 'integrais-multiplas',
+        titulo: 'Integrais múltiplas',
+        descricao: 'Somar sobre uma região: integração iterada, volume e valor médio.',
+        pronto: true,
+      },
+      {
+        id: 'coordenadas-no-espaco',
+        titulo: 'Coordenadas cilíndricas e esféricas',
+        descricao: 'Trocar de sistema para que a simetria some da conta — e o jacobiano.',
+        pronto: true,
+      },
+      {
+        id: 'integrais-de-linha',
+        titulo: 'Integrais de linha',
+        descricao: 'Acumular ao longo de um caminho, e quando o caminho deixa de importar.',
+        pronto: true,
+      },
+    ],
+  },
+  {
+    id: 'calculo-4',
+    titulo: 'Cálculo 4',
+    descricao: 'Equações diferenciais: a regra pela qual as grandezas mudam.',
+    referencias: [
+      {
+        titulo: 'Trench, *Elementary Differential Equations*',
+        url: 'https://digitalcommons.trinity.edu/mono/8/',
+        nota:
+          'Livro aberto que cobre primeira e segunda ordem, com muitas aplicações físicas resolvidas em detalhe.',
+      },
+      {
+        titulo: 'MIT OpenCourseWare, *Differential Equations* (18.03)',
+        url: 'https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/',
+        nota:
+          'Curso completo em vídeo, com a leitura de sistemas físicos que o formalismo sozinho não entrega.',
+      },
+    ],
+    topicos: [
+      {
+        id: 'edo-primeira-ordem',
+        titulo: 'EDO de primeira ordem',
+        descricao: 'Separar variáveis, fator integrante, transiente e regime permanente.',
+        pronto: true,
+      },
+      {
+        id: 'edo-segunda-ordem',
+        titulo: 'EDO de segunda ordem',
+        descricao: 'Equação característica e os três regimes de amortecimento.',
+        pronto: true,
+      },
+      {
+        id: 'aplicacoes-de-edo',
+        titulo: 'Aplicações de EDO',
+        descricao: 'Montar a equação: resfriamento, decaimento, circuito RL e mistura.',
+        pronto: true,
+      },
+      {
+        id: 'metodos-numericos',
+        titulo: 'Métodos numéricos',
+        descricao: 'Euler, Runge-Kutta e a ordem com que o erro responde ao passo.',
+        pronto: true,
+      },
+    ],
+  },
 ];
 
 /** Caminho de navegação de um tópico. */

@@ -1,0 +1,84 @@
+<app-topico-layout
+  titulo="EDO de primeira ordem"
+  descricao="Separar variáveis e fator integrante — e o que a condição inicial escolhe."
+  topicoId="edo-primeira-ordem"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>A equação descreve a REGRA, não a grandeza</h2>
+      <app-formula [tex]="'\\frac{dy}{dt} = ky \\;\\Longrightarrow\\; y(t) = y_{0}e^{kt}'" [bloco]="true" />
+      <p class="observacao">
+        Uma EDO diz como uma grandeza muda, não quanto ela vale. A solução não é um número: é
+        uma família inteira de funções, e a condição inicial é o que escolhe uma delas. É assim
+        que a física é escrita de verdade — a segunda lei de Newton é uma EDO.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="decimosDeP"
+        rotulo="Coeficiente p, em décimos"
+        [min]="1"
+        [max]="20"
+      />
+      <app-controle-parametro [(valor)]="q" rotulo="Termo constante q" [min]="0" [max]="40" />
+      <app-controle-parametro [(valor)]="y0" rotulo="Valor inicial" [min]="0" [max]="60" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="equacaoTex()" [bloco]="true" />
+      <app-formula [tex]="solucaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Regime permanente</span>
+        <strong>{{ formatar(equilibrio()) }}</strong>
+        <span class="legenda">q dividido por p</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Constante de tempo</span>
+        <strong>{{ formatar(constanteDeTempo()) }}</strong>
+        <span class="legenda">63% do caminho percorrido</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Meia-vida do transiente</span>
+        <strong>{{ formatar(meiaVida()) }}</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>Uma família, um destino</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        As três curvas resolvem a mesma equação, partindo de valores iniciais diferentes. Repare
+        que todas convergem para a mesma linha tracejada: a condição inicial muda o caminho, não
+        o destino. O destino depende apenas dos coeficientes.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Transiente e permanente</h2>
+      <app-formula
+        [tex]="'y(t) = \\underbrace{\\frac{q}{p}}_{\\text{permanente}} + \\underbrace{Ce^{-pt}}_{\\text{transiente}}'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Depois de uma constante de tempo resta cerca de 37% do transiente; depois de cinco,
+        menos de 1%. É a regra prática da engenharia: cinco constantes de tempo, e o sistema
+        chegou. Aumente o coeficiente p e veja a convergência acelerar.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

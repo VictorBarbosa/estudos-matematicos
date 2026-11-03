@@ -1,0 +1,97 @@
+<app-topico-layout
+  titulo="Aplicações de EDO"
+  descricao="Montar a equação a partir do enunciado — resfriamento, decaimento, circuito, mistura."
+  topicoId="aplicacoes-de-edo"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>A parte difícil é escrever</h2>
+      <app-formula
+        [tex]="'\\frac{d}{dt}(\\text{acumulado}) = \\text{entra} - \\text{sai}'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Em engenharia a equação não vem pronta: ela sai de um balanço. O que entra menos o que
+        sai é a taxa de variação, e traduzir essa frase em símbolos é o trabalho real. Resolver,
+        depois disso, costuma ser a parte mecânica.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="escolha"
+        rotulo="Situação (0 resfriamento · 1 decaimento · 2 circuito · 3 tanque)"
+        [min]="0"
+        [max]="3"
+      />
+      <app-controle-parametro [(valor)]="inicial" rotulo="Valor inicial" [min]="0" [max]="120" />
+      <app-controle-parametro [(valor)]="alvo" rotulo="Valor final" [min]="0" [max]="80" />
+      <app-controle-parametro
+        [(valor)]="centesimosDeK"
+        rotulo="Constante k, em centésimos"
+        [min]="2"
+        [max]="60"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="equacaoTex()" [bloco]="true" />
+      <app-formula [tex]="solucaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Situação</span>
+        <strong>{{ cenario().nome }}</strong>
+        <span class="legenda">o final é {{ cenario().rotuloFinal }}</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Constante de tempo</span>
+        <strong>{{ formatar(constanteDeTempo()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Depois de uma delas</span>
+        <strong>{{ formatar(emUmaConstante()) }} {{ cenario().unidade }}</strong>
+        <span class="legenda">63% do caminho</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Meia-vida da diferença</span>
+        <strong>{{ formatar(meiaVida()) }}</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>Por que não é uma reta</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        A reta vermelha é a tangente inicial — a aproximação que se faria tratando a taxa como
+        constante. Ela acompanha bem no começo e logo se afasta, porque a taxa diminui conforme
+        a diferença encolhe. É essa realimentação que torna a solução exponencial.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Quatro situações, a mesma equação</h2>
+      <app-formula
+        [tex]="'\\frac{dT}{dt} = -k(T - T_{amb}) \\qquad L\\frac{di}{dt} + Ri = V'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Resfriamento, decaimento, circuito RL e tanque de mistura parecem problemas distintos e
+        levam todos à mesma linear de primeira ordem. É por isso que vale aprender a técnica em
+        vez de decorar fórmulas por situação.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>
