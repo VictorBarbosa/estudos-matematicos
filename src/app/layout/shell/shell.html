@@ -20,6 +20,22 @@
 
     <button
       type="button"
+      class="assistente"
+      (click)="assistente.alternar()"
+      [attr.aria-pressed]="assistente.aberto()"
+      aria-label="Mostrar ou esconder o assistente"
+      title="Assistente"
+    >
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M12 2a8 8 0 0 1 8 8v1a8 8 0 0 1-8 8H9.2L5 22v-3.6A8 8 0 0 1 2 11v-1a8 8 0 0 1 8-8h2Zm0 2h-2a6 6 0 0 0-6 6v1a6 6 0 0 0 2.6 4.95l.4.28V18l1.9-1.9h3.1a6 6 0 0 0 6-6v-1a6 6 0 0 0-6-6Zm-3 5h6v2H9V9Zm0 3.5h4v2H9v-2Z"
+        />
+      </svg>
+    </button>
+
+    <button
+      type="button"
       class="calculadora"
       (click)="calculadora.alternar()"
       [attr.aria-pressed]="calculadora.aberta()"
@@ -95,4 +111,9 @@
 -->
 @defer (when calculadora.aberta()) {
   <app-calculadora />
+}
+
+<!-- Mesmo arranjo da calculadora: só baixa quando alguém abre. -->
+@defer (when assistente.aberto()) {
+  <app-assistente-dialog />
 }

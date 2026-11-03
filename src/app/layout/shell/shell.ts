@@ -1,8 +1,10 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { AssistenteService } from '@core/assistente/services/assistente.service';
 import { CalculadoraService } from '@core/calculadora/services/calculadora.service';
 import { ROTULO_TEMA, TemaService } from '@core/tema/services/tema.service';
 import { AtualizacaoDialog } from '@shared/components/atualizacao-dialog/atualizacao-dialog';
+import { AssistenteDialog } from '@shared/components/assistente-dialog/assistente-dialog';
 import { Calculadora } from '@shared/components/calculadora/calculadora';
 import { TeoriaDialog } from '@shared/components/teoria-dialog/teoria-dialog';
 import { Sidebar } from '@layout/sidebar/sidebar';
@@ -15,13 +17,22 @@ import { Sidebar } from '@layout/sidebar/sidebar';
 @Component({
   selector: 'app-shell',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [AtualizacaoDialog, Calculadora, RouterLink, RouterOutlet, Sidebar, TeoriaDialog],
+  imports: [
+    AssistenteDialog,
+    AtualizacaoDialog,
+    Calculadora,
+    RouterLink,
+    RouterOutlet,
+    Sidebar,
+    TeoriaDialog,
+  ],
   templateUrl: './shell.html',
   styleUrl: './shell.scss',
 })
 export class Shell {
   protected readonly tema = inject(TemaService);
   protected readonly calculadora = inject(CalculadoraService);
+  protected readonly assistente = inject(AssistenteService);
   protected readonly rotuloTema = ROTULO_TEMA;
 
   /** Controla o menu lateral em telas estreitas. */

@@ -53,14 +53,16 @@
 }
 
 .tema,
-.calculadora {
+.calculadora,
+.assistente {
   @include botao-sutil;
   padding: var(--esp-2);
   border-radius: var(--raio-pill);
 }
 
-/* Ligada, a calculadora acende o botão que a abriu. */
-.calculadora[aria-pressed='true'] {
+/* Ligadas, calculadora e assistente acendem o botão que as abriu. */
+.calculadora[aria-pressed='true'],
+.assistente[aria-pressed='true'] {
   background: var(--acento-suave);
   color: var(--acento);
 }
@@ -97,8 +99,9 @@
     display: inline-flex;
   }
 
-  /* A calculadora não existe no celular; o botão dela também não. */
-  .calculadora {
+  /* Calculadora e assistente não existem no celular; os botões também não. */
+  .calculadora,
+  .assistente {
     display: none;
   }
 

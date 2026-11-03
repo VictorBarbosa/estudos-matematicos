@@ -1,0 +1,264 @@
+@use 'mixins' as *;
+
+:host {
+  display: contents;
+}
+
+.janela {
+  position: fixed;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  /* O tamanho é do aluno: a alça do canto manda, e o que ela deixar fica. */
+  resize: both;
+  width: 26rem;
+  height: 32rem;
+  min-width: 20rem;
+  min-height: 15rem;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 2rem);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-lg);
+  background: var(--superficie);
+  color: var(--texto);
+  box-shadow: var(--sombra-3);
+  overflow: hidden;
+
+  &.sem-posicao {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  padding: var(--esp-2) var(--esp-3);
+  border-bottom: 1px solid var(--borda);
+  background: var(--superficie-2);
+  cursor: grab;
+  touch-action: none;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.alca {
+  color: var(--texto-tenue);
+  letter-spacing: -0.2em;
+}
+
+/* Os três campos da janela compartilham a moldura. */
+.modelo select,
+.servidor input,
+.pergunta textarea {
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+}
+
+.modelo {
+  flex: 1;
+  min-width: 0;
+
+  select {
+    width: 100%;
+    padding: var(--esp-1) var(--esp-2);
+    font-size: var(--texto-xs);
+  }
+}
+
+/*
+ * Uma única expansão do mixin para todos os botões da janela.
+ *
+ * Cada `@include botao-primario` traz `botao-base` junto, e quatro inclusões
+ * estouravam o orçamento de 4 kB do componente sozinhas.
+ */
+.icone,
+.erro button,
+.enviar,
+.parar {
+  @include botao-base;
+}
+
+.icone {
+  padding: var(--esp-1);
+  border-radius: var(--raio-pill);
+  background: transparent;
+  color: var(--texto-suave);
+
+  &:hover:not(:disabled) {
+    background: var(--superficie-3);
+    color: var(--texto);
+  }
+}
+
+.conversa {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-4);
+  overflow-y: auto;
+}
+
+.convite,
+.erro {
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.erro {
+  padding: var(--esp-3);
+  border-radius: var(--raio-md);
+  border-left: 4px solid var(--erro);
+  background: var(--erro-suave);
+
+  button {
+    margin-top: var(--esp-2);
+    font-size: var(--texto-xs);
+  }
+}
+
+.servidor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  font-size: var(--texto-xs);
+  color: var(--texto-tenue);
+
+  input {
+    padding: var(--esp-2);
+    font-family: var(--fonte-mono);
+    font-size: var(--texto-xs);
+  }
+}
+
+.mensagem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  max-width: 92%;
+  padding: var(--esp-3);
+  border-radius: var(--raio-md);
+  font-size: var(--texto-sm);
+  line-height: 1.5;
+
+  /* O espaço entre blocos vem do `gap`; margem padrão duplicaria. */
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  ol {
+    margin: 0;
+  }
+
+  h3,
+  h4,
+  h5 {
+    font-size: var(--texto-sm);
+  }
+
+  ul,
+  ol {
+    padding-left: var(--esp-5);
+  }
+
+  code {
+    padding: 0 0.2em;
+    border-radius: var(--raio-sm);
+    background: var(--superficie-3);
+    font-family: var(--fonte-mono);
+    font-size: 0.92em;
+  }
+
+  pre {
+    margin: 0;
+    padding: var(--esp-2) var(--esp-3);
+    border-radius: var(--raio-md);
+    background: var(--superficie-3);
+    overflow-x: auto;
+
+    code {
+      padding: 0;
+      background: none;
+    }
+  }
+
+  &[data-papel='aluno'] {
+    align-self: flex-end;
+    background: var(--acento-suave);
+    color: var(--texto);
+  }
+
+  &[data-papel='assistente'] {
+    align-self: flex-start;
+    background: var(--superficie-2);
+  }
+}
+
+.prosa {
+  white-space: pre-wrap;
+}
+
+.pensando {
+  animation: piscar 1s steps(2) infinite;
+}
+
+@keyframes piscar {
+  50% {
+    opacity: 0;
+  }
+}
+
+.pergunta {
+  display: flex;
+  gap: var(--esp-2);
+  align-items: flex-end;
+  padding: var(--esp-3);
+  border-top: 1px solid var(--borda);
+
+  textarea {
+    flex: 1;
+    resize: none;
+    padding: var(--esp-2) var(--esp-3);
+    border-color: var(--borda-forte);
+    font-size: var(--texto-sm);
+  }
+}
+
+.enviar {
+  background: var(--acento);
+  color: var(--acento-contraste);
+
+  &:hover:not(:disabled) {
+    background: var(--acento-forte);
+  }
+}
+
+.erro button,
+.parar {
+  background: var(--superficie);
+  border-color: var(--borda-forte);
+  color: var(--texto);
+
+  &:hover:not(:disabled) {
+    background: var(--superficie-2);
+  }
+}
+
+/*
+ * Some no celular.
+ *
+ * Não é só espaço: o Ollama roda na máquina do aluno, e localhost:11434 visto
+ * do celular é o próprio celular, onde não há servidor nenhum.
+ */
+@media (max-width: 60rem) {
+  .janela {
+    display: none;
+  }
+}

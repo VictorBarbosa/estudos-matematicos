@@ -289,6 +289,86 @@ Cinco travas globais cuidam dessa parte, para os 75 geradores de uma vez
 - toda fórmula compila no KaTeX e todo id de conceito citado existe;
 - enunciado sem fórmula diz tudo em palavras, com os números da conta.
 
+## O assistente local
+
+O botão ao lado da calculadora abre uma janela de conversa ligada a um **LLM rodando na
+própria máquina**, pelo [Ollama](https://ollama.com). O dropdown no topo lista os modelos
+instalados, com o tamanho de cada um; a escolha e a posição da janela voltam na sessão
+seguinte.
+
+**A pergunta vai com a tela junto.** O que está em `<main>` — tópico aberto, enunciado,
+resposta dada, veredito — acompanha cada pergunta, cortado em 4 000 caracteres. É o que
+torna *"por que isso está errado?"* uma pergunta respondível: sem o contexto, quem responde
+não enxerga o "isso". A navegação lateral fica de fora de propósito — ela tem os 75 tópicos
+e encheria o contexto com uma lista de links.
+
+A tela entra marcada como **dado, não como instrução**. Ela é gerada por este site, mas a
+regra vale de qualquer forma: texto que chega junto do contexto não manda no assistente.
+
+**A conversa fica só em memória.** Ela carrega trechos da tela e dúvidas de estudo; guardar
+isso no `localStorage` seria acumular sem que ninguém tivesse pedido. O que persiste é o que
+poupa cliques: janela aberta, posição, endereço do servidor e modelo escolhido.
+
+### Para funcionar
+
+O Ollama precisa estar no ar — `ollama serve` — e, se o site estiver aberto pela internet
+(GitHub Pages), precisa autorizar a origem:
+
+```bash
+OLLAMA_ORIGINS="*" ollama serve
+```
+
+Sem isso o navegador recusa a requisição por CORS, e o erro chega à aplicação como um
+`TypeError` sem detalhe — indistinguível de "servidor desligado". Por isso o recado na tela
+cobre os dois casos e traz o endereço do servidor editável ali mesmo.
+
+### Sem pensar em voz alta
+
+Modelos de raciocínio deliberam antes de responder, e numa máquina de estudo isso é a
+diferença entre perguntar e desistir de perguntar. O assistente desliga isso em três
+camadas, porque nenhuma delas sozinha cobre todos os modelos:
+
+1. **`think: false` na API.** Modelo que não pensa recusa o campo com 400, e aí a mesma
+   pergunta vai de novo sem ele — tentar e recuar sai mais barato que manter uma lista de
+   quem suporta o quê.
+2. **O rascunho no texto é filtrado.** Há modelo que despeja `<think>...</think>` dentro do
+   próprio conteúdo. `semPensamento` o remove, e um bloco **ainda aberto esconde tudo o que
+   vem depois**: no meio do fluxo o rascunho chega antes do fecho, e mostrá-lo seria mostrar
+   exatamente o que se quer esconder. Enquanto isso, o cursor piscando diz que algo vem.
+3. **As instruções pedem resposta direta** — sem preâmbulo, sem repetir a pergunta, sem
+   narrar o que vai fazer antes de fazer.
+
+### A resposta é lida como Markdown
+
+Um modelo responde com títulos, listas e negrito, e mostrar isso como uma string corrida
+joga fora justamente a estrutura que torna a explicação legível. `interpretar` lê o pouco de
+Markdown que um tutor usa: título, lista (numerada ou não), bloco de código, negrito,
+itálico, código na linha — e as quatro formas de escrever matemática.
+
+**A matemática sai primeiro**, de propósito: dentro de `$a_1 * b_2$` há asteriscos e
+sublinhados que são notação, não negrito. Só o que sobra passa pelo leitor de marcação.
+
+E nada vira HTML: cada bloco é um dado que o template desenha com os elementos dele.
+Resposta de modelo é texto de terceiro, e injetar `innerHTML` com ela seria abrir uma porta
+que não precisa existir — não há biblioteca de Markdown no projeto, nem sanitização a
+manter.
+
+### O tamanho é do aluno
+
+A janela tem alça no canto (`resize: both`) e o tamanho volta na sessão seguinte. Quem manda
+nele é o navegador: o valor guardado é aplicado uma vez, quando a janela nasce, e daí em
+diante um `ResizeObserver` só anota onde a alça parou. Se o template também escrevesse
+largura e altura, os dois brigariam a cada arrasto.
+
+A resposta chega em **fluxo**, pedaço a pedaço: um modelo local leva dezenas de segundos
+para uma resposta inteira, e ver o texto nascer é a diferença entre esperar e achar que
+travou. O botão vira **Parar** enquanto ela chega. Fórmulas entre cifrões são desenhadas
+pelo KaTeX — um tutor de matemática responde com matemática, e `\frac{1}{2}` como texto
+cru não ajuda ninguém.
+
+Some abaixo de 60rem, como a calculadora, e aqui não é só espaço: `localhost:11434` visto do
+celular é o próprio celular, onde não há servidor nenhum.
+
 ## A calculadora flutuante
 
 O botão no cabeçalho abre uma calculadora que **não é um modal**: ela flutua, arrasta pela

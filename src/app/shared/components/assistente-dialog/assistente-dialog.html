@@ -1,0 +1,173 @@
+<!--
+  Como um corpo de resposta é desenhado. O mesmo molde serve para a mensagem
+  pronta e para a que ainda está chegando — o que muda é só o cursor no fim.
+-->
+<ng-template #corpo let-blocos>
+  @for (bloco of blocos; track $index) {
+    @switch (bloco.tipo) {
+      @case ('titulo') {
+        @switch (bloco.nivel) {
+          @case (3) { <h3><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: bloco.trechos }" /></h3> }
+          @case (4) { <h4><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: bloco.trechos }" /></h4> }
+          @default { <h5><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: bloco.trechos }" /></h5> }
+        }
+      }
+      @case ('lista') {
+        @if (bloco.ordenada) {
+          <ol>
+            @for (item of bloco.itens; track $index) {
+              <li><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: item }" /></li>
+            }
+          </ol>
+        } @else {
+          <ul>
+            @for (item of bloco.itens; track $index) {
+              <li><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: item }" /></li>
+            }
+          </ul>
+        }
+      }
+      @case ('codigo') {
+        <pre><code>{{ bloco.conteudo }}</code></pre>
+      }
+      @default {
+        <p><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: bloco.trechos }" /></p>
+      }
+    }
+  }
+</ng-template>
+
+<!-- Os pedaços de uma linha: prosa, marcação e fórmula. -->
+<ng-template #linha let-trechos>
+  @for (trecho of trechos; track $index) {
+    @switch (trecho.tipo) {
+      @case ('formula') { <app-formula [tex]="trecho.conteudo" [bloco]="trecho.bloco" /> }
+      @case ('forte') { <strong>{{ trecho.conteudo }}</strong> }
+      @case ('enfase') { <em>{{ trecho.conteudo }}</em> }
+      @case ('codigo') { <code>{{ trecho.conteudo }}</code> }
+      @default { <span class="prosa">{{ trecho.conteudo }}</span> }
+    }
+  }
+</ng-template>
+
+@if (assistente.aberto()) {
+  <section
+    #painel
+    class="janela"
+    role="dialog"
+    aria-label="Assistente"
+    [style.left.px]="local()?.x ?? null"
+    [style.top.px]="local()?.y ?? null"
+    [class.sem-posicao]="local() === null"
+  >
+    <header
+      class="barra"
+      (pointerdown)="aoPegar($event)"
+      (pointermove)="aoArrastar($event)"
+      (pointerup)="aoSoltar()"
+      (pointercancel)="aoSoltar()"
+    >
+      <span class="alca" aria-hidden="true">⠿</span>
+
+      <div class="modelo">
+        <select
+          aria-label="Modelo"
+          [value]="assistente.modelo()"
+          [disabled]="assistente.modelos().length === 0"
+          (change)="assistente.definirModelo($any($event.target).value)"
+        >
+          @if (assistente.modelos().length === 0) {
+            <option value="">sem modelos</option>
+          }
+          @for (modelo of assistente.modelos(); track modelo.nome) {
+            <option [value]="modelo.nome">{{ modelo.nome }} · {{ tamanho(modelo.bytes) }}</option>
+          }
+        </select>
+      </div>
+
+      <button
+        type="button"
+        class="icone"
+        (click)="assistente.limpar()"
+        [disabled]="assistente.vazia()"
+        aria-label="Começar outra conversa"
+        title="Começar outra conversa"
+      >
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 5V2L8 6l4 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7Z"
+          />
+        </svg>
+      </button>
+
+      <button type="button" class="icone" (click)="assistente.fechar()" aria-label="Fechar o assistente">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.3 19.71 2.88 18.3 9.17 12 2.88 5.71 4.3 4.29l6.29 6.3 6.3-6.3z"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <div class="conversa" role="log" aria-live="polite">
+      @if (assistente.vazia() && !assistente.respondendo()) {
+        <p class="convite">
+          Pergunte o que quiser sobre o que está na tela — o enunciado, a resolução, por que
+          a sua resposta não bateu. O que você está vendo vai junto com a pergunta.
+        </p>
+      }
+
+      @for (mensagem of assistente.mensagens(); track $index) {
+        <article class="mensagem" [attr.data-papel]="mensagem.papel">
+          <ng-container [ngTemplateOutlet]="corpo" [ngTemplateOutletContext]="{ $implicit: blocosDe(mensagem) }" />
+        </article>
+      }
+
+      @if (assistente.respondendo()) {
+        <article class="mensagem" data-papel="assistente">
+          <ng-container [ngTemplateOutlet]="corpo" [ngTemplateOutletContext]="{ $implicit: parcial() }" />
+          <span class="pensando" aria-label="Respondendo">▌</span>
+        </article>
+      }
+
+      @if (assistente.erro(); as erro) {
+        <p class="erro" role="status">
+          {{ erro }}
+          <button type="button" (click)="assistente.carregarModelos()">Tentar de novo</button>
+        </p>
+
+        <label class="servidor">
+          <span>Endereço do Ollama</span>
+          <input
+            type="text"
+            spellcheck="false"
+            [value]="assistente.servidor()"
+            (change)="assistente.definirServidor($any($event.target).value)"
+          />
+        </label>
+      }
+
+      <div #fim aria-hidden="true"></div>
+    </div>
+
+    <form class="pergunta" (submit)="$event.preventDefault(); enviar()">
+      <textarea
+        #campo
+        rows="2"
+        placeholder="Pergunte sobre o que está na tela…"
+        aria-label="Sua pergunta"
+        [value]="pergunta()"
+        (input)="pergunta.set($any($event.target).value)"
+        (keydown)="aoTeclar($event)"
+      ></textarea>
+
+      @if (assistente.respondendo()) {
+        <button type="button" class="parar" (click)="assistente.interromper()">Parar</button>
+      } @else {
+        <button type="submit" class="enviar" [disabled]="!podeEnviar()">Perguntar</button>
+      }
+    </form>
+  </section>
+}
