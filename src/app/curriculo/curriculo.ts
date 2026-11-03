@@ -471,7 +471,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'Equações paramétricas',
         descricao:
           'A curva descrita pelo tempo: x(t) e y(t), e a trajetória que elas desenham.',
-        pronto: false,
+        pronto: true,
       },
     ],
   },
@@ -593,7 +593,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'Transferência de calor',
         descricao:
           'Condução, convecção e radiação, e o reentry de um veículo espacial.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'propulsao-de-foguetes',
@@ -834,14 +834,14 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'Distribuição normal',
         descricao:
           'A curva em sino: média, desvio padrão e a regra dos 68-95-99.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'regressao-e-correlacao',
         titulo: 'Regressão e correlação',
         descricao:
           'A reta que melhor passa pelos pontos, e o quanto ela explica.',
-        pronto: false,
+        pronto: true,
       },
     ],
   },

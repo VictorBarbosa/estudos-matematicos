@@ -38,9 +38,12 @@ import { geradorSeriesDeTaylor as g_series_de_taylor } from '@features/calculo-2
 import { geradorRiemann as g_soma_de_riemann } from '@features/calculo-2/soma-de-riemann/soma-de-riemann.gerador';
 import { geradorTecnicas as g_tecnicas_de_integracao } from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.gerador';
 import { geradorTfc as g_teorema_fundamental } from '@features/calculo-2/teorema-fundamental/teorema-fundamental.gerador';
+import { geradorRegressaoCorrelacao as g_regressao_e_correlacao } from '@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.gerador';
+import { geradorDistribuicaoNormal as g_distribuicao_normal } from '@features/estatistica/distribuicao-normal/distribuicao-normal.gerador';
 import { geradorCombinatoria as g_analise_combinatoria } from '@features/estatistica/analise-combinatoria/analise-combinatoria.gerador';
 import { geradorIncerteza as g_estatistica_e_incerteza } from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.gerador';
 import { geradorProbabilidade as g_probabilidade } from '@features/estatistica/probabilidade/probabilidade.gerador';
+import { geradorTransferenciaDeCalor as g_transferencia_de_calor } from '@features/fisica/transferencia-de-calor/transferencia-de-calor.gerador';
 import { geradorCinematicaVetorial as g_cinematica_vetorial } from '@features/fisica/cinematica-vetorial/cinematica-vetorial.gerador';
 import { geradorMovimentoCircular as g_movimento_circular } from '@features/fisica/movimento-circular/movimento-circular.gerador';
 import { geradorDinamicaRotacional as g_dinamica_rotacional } from '@features/fisica/dinamica-rotacional/dinamica-rotacional.gerador';
@@ -70,6 +73,7 @@ import { geradorAreas as g_areas_de_figuras_planas } from '@features/geometria/a
 import { geradorCirculo as g_circulo_e_poligonos } from '@features/geometria/circulo-e-poligonos/circulo-e-poligonos.gerador';
 import { geradorSemelhanca as g_semelhanca_e_pitagoras } from '@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.gerador';
 import { geradorSolidos as g_solidos_e_volumes } from '@features/geometria/solidos-e-volumes/solidos-e-volumes.gerador';
+import { geradorEquacoesParametricas as g_equacoes_parametricas } from '@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.gerador';
 import { geradorCircunferencia as g_circunferencia } from '@features/geometria-analitica/circunferencia/circunferencia.gerador';
 import { geradorConicas as g_conicas } from '@features/geometria-analitica/conicas/conicas.gerador';
 import { geradorPontoReta as g_ponto_e_reta } from '@features/geometria-analitica/ponto-e-reta/ponto-e-reta.gerador';
@@ -134,8 +138,11 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['analise-combinatoria', g_analise_combinatoria],
   ['estatistica-e-incerteza', g_estatistica_e_incerteza],
   ['probabilidade', g_probabilidade],
+  ['regressao-e-correlacao', g_regressao_e_correlacao],
+  ['distribuicao-normal', g_distribuicao_normal],
   ['analise-dimensional', g_analise_dimensional],
   ['cinematica-escalar', g_cinematica_escalar],
+  ['transferencia-de-calor', g_transferencia_de_calor],
   ['cinematica-vetorial', g_cinematica_vetorial],
   ['movimento-circular', g_movimento_circular],
   ['dinamica-rotacional', g_dinamica_rotacional],
@@ -169,6 +176,7 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['circunferencia', g_circunferencia],
   ['conicas', g_conicas],
   ['ponto-e-reta', g_ponto_e_reta],
+  ['equacoes-parametricas', g_equacoes_parametricas],
   ['fracoes', g_fracoes],
   ['notacao-matematica', g_notacao_matematica],
   ['mmc-mdc', g_mmc_mdc],

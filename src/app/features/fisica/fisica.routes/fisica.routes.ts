@@ -100,5 +100,10 @@ export const rotas: Routes = [
     title: 'Conservação do momento angular · Estudos Matemáticos',
     loadComponent: () => import('@features/fisica/momento-angular/momento-angular').then((m) => m.MomentoAngular),
   },
+  {
+    path: 'transferencia-de-calor',
+    title: 'Transferência de calor · Estudos Matemáticos',
+    loadComponent: () => import('@features/fisica/transferencia-de-calor/transferencia-de-calor').then((m) => m.TransferenciaDeCalor),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'analise-dimensional' },
 ];

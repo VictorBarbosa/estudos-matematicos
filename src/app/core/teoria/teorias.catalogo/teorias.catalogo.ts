@@ -38,9 +38,12 @@ import { TEORIA_TAYLOR as t_series_de_taylor } from '@features/calculo-2/series-
 import { TEORIA_RIEMANN as t_soma_de_riemann } from '@features/calculo-2/soma-de-riemann/soma-de-riemann.teoria';
 import { TEORIA_TECNICAS as t_tecnicas_de_integracao } from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.teoria';
 import { TEORIA_TFC as t_teorema_fundamental } from '@features/calculo-2/teorema-fundamental/teorema-fundamental.teoria';
+import { TEORIA_REGRESSAO as t_regressao_e_correlacao } from '@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.teoria';
+import { TEORIA_NORMAL as t_distribuicao_normal } from '@features/estatistica/distribuicao-normal/distribuicao-normal.teoria';
 import { TEORIA_COMBINATORIA as t_analise_combinatoria } from '@features/estatistica/analise-combinatoria/analise-combinatoria.teoria';
 import { TEORIA_INCERTEZA as t_estatistica_e_incerteza } from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.teoria';
 import { TEORIA_PROBABILIDADE as t_probabilidade } from '@features/estatistica/probabilidade/probabilidade.teoria';
+import { TEORIA_TERMICA as t_transferencia_de_calor } from '@features/fisica/transferencia-de-calor/transferencia-de-calor.teoria';
 import { TEORIA_CINEMATICA_VETORIAL as t_cinematica_vetorial } from '@features/fisica/cinematica-vetorial/cinematica-vetorial.teoria';
 import { TEORIA_MOVIMENTO_CIRCULAR as t_movimento_circular } from '@features/fisica/movimento-circular/movimento-circular.teoria';
 import { TEORIA_DINAMICA_ROTACIONAL as t_dinamica_rotacional } from '@features/fisica/dinamica-rotacional/dinamica-rotacional.teoria';
@@ -65,6 +68,7 @@ import { TEORIA_LOGARITMICA as t_funcao_logaritmica } from '@features/funcoes/fu
 import { TEORIA_MODULAR as t_funcao_modular } from '@features/funcoes/funcao-modular/funcao-modular.teoria';
 import { TEORIA_QUADRATICA as t_funcao_quadratica } from '@features/funcoes/funcao-quadratica/funcao-quadratica.teoria';
 import { TEORIA_JUROS as t_juros_compostos } from '@features/funcoes/juros-compostos/juros-compostos.teoria';
+import { TEORIA_PARAMETRICAS as t_equacoes_parametricas } from '@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.teoria';
 import { TEORIA_CIRCUNFERENCIA as t_circunferencia } from '@features/geometria-analitica/circunferencia/circunferencia.teoria';
 import { TEORIA_CONICAS as t_conicas } from '@features/geometria-analitica/conicas/conicas.teoria';
 import { TEORIA_PONTO_RETA as t_ponto_e_reta } from '@features/geometria-analitica/ponto-e-reta/ponto-e-reta.teoria';
@@ -128,8 +132,11 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['analise-combinatoria', t_analise_combinatoria],
   ['estatistica-e-incerteza', t_estatistica_e_incerteza],
   ['probabilidade', t_probabilidade],
+  ['regressao-e-correlacao', t_regressao_e_correlacao],
+  ['distribuicao-normal', t_distribuicao_normal],
   ['analise-dimensional', t_analise_dimensional],
   ['cinematica-escalar', t_cinematica_escalar],
+  ['transferencia-de-calor', t_transferencia_de_calor],
   ['cinematica-vetorial', t_cinematica_vetorial],
   ['movimento-circular', t_movimento_circular],
   ['dinamica-rotacional', t_dinamica_rotacional],
@@ -158,6 +165,7 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['circunferencia', t_circunferencia],
   ['conicas', t_conicas],
   ['ponto-e-reta', t_ponto_e_reta],
+  ['equacoes-parametricas', t_equacoes_parametricas],
   ['angulos-e-triangulos', t_angulos_e_triangulos],
   ['areas-de-figuras-planas', t_areas_de_figuras_planas],
   ['circulo-e-poligonos', t_circulo_e_poligonos],

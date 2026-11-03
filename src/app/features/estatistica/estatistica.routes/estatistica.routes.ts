@@ -26,5 +26,15 @@ export const rotas: Routes = [
         (m) => m.EstatisticaEIncerteza,
       ),
   },
+  {
+    path: 'distribuicao-normal',
+    title: 'Distribuição normal · Estudos Matemáticos',
+    loadComponent: () => import('@features/estatistica/distribuicao-normal/distribuicao-normal').then((m) => m.DistribuicaoNormal),
+  },
+  {
+    path: 'regressao-e-correlacao',
+    title: 'Regressão e correlação · Estudos Matemáticos',
+    loadComponent: () => import('@features/estatistica/regressao-e-correlacao/regressao-e-correlacao').then((m) => m.RegressaoECorrelacao),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'analise-combinatoria' },
 ];

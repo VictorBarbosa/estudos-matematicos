@@ -22,5 +22,10 @@ export const rotas: Routes = [
     title: 'Cônicas · Estudos Matemáticos',
     loadComponent: () => import('@features/geometria-analitica/conicas/conicas').then((m) => m.Conicas),
   },
+  {
+    path: 'equacoes-parametricas',
+    title: 'Equações paramétricas · Estudos Matemáticos',
+    loadComponent: () => import('@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas').then((m) => m.EquacoesParametricas),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'ponto-e-reta' },
 ];

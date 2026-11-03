@@ -48,6 +48,7 @@ export * from '@core/math/trigonometria/trigonometria/trigonometria';
 export * from '@core/math/geometria/plana/plana';
 export * from '@core/math/geometria/espacial/espacial';
 export * from '@core/math/geometria/analitica/analitica';
+export * from '@core/math/geometria/parametricas/parametricas';
 
 // Cálculo
 export * from '@core/math/calculo/sequencias/sequencias';
@@ -63,6 +64,8 @@ export * from '@core/math/calculo/taylor/taylor';
 // Combinatória e estatística
 export * from '@core/math/estatistica/contagem/contagem';
 export * from '@core/math/estatistica/descritiva/descritiva';
+export * from '@core/math/estatistica/normal/normal';
+export * from '@core/math/estatistica/correlacao/correlacao';
 
 // Física e finanças
 export * from '@core/math/fisica/dimensional/dimensional';
@@ -74,3 +77,4 @@ export * from '@core/math/fisica/energia/energia';
 export * from '@core/math/fisica/gravitacao/gravitacao';
 export * from '@core/math/fisica/fluidos/fluidos';
 export * from '@core/math/fisica/movimento/movimento';
+export * from '@core/math/fisica/termica/termica';

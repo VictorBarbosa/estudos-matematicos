@@ -1,0 +1,118 @@
+<app-topico-layout
+  titulo="Transferência de calor"
+  descricao="Condução, convecção e radiação — e por que no vácuo só a última sobra."
+  topicoId="transferencia-de-calor"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>Três caminhos, uma energia</h2>
+      <app-formula
+        [tex]="'\\frac{Q}{t} = \\frac{kA\\,\\Delta T}{L} \\qquad hA\\,\\Delta T \\qquad \\varepsilon\\sigma A T^{4}'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Condução e convecção são lineares na diferença de temperatura. A radiação vai com a
+        QUARTA potência da temperatura absoluta — e é a única que atravessa o vácuo. Num
+        veículo espacial, as duas primeiras praticamente não existem do lado de fora.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="escolha"
+        rotulo="Material (0 cobre · 2 aço · 6 lã de vidro)"
+        [min]="0"
+        [max]="7"
+      />
+      <app-controle-parametro [(valor)]="centimetros" rotulo="Espessura (cm)" [min]="1" [max]="50" />
+      <app-controle-parametro [(valor)]="area" rotulo="Área (m²)" [min]="1" [max]="10" />
+      <app-controle-parametro [(valor)]="deltaT" rotulo="Diferença de temperatura (K)" [min]="1" [max]="80" />
+      <app-controle-parametro
+        [(valor)]="coeficienteConveccao"
+        rotulo="Coeficiente de convecção"
+        [min]="5"
+        [max]="250"
+        [passo]="5"
+      />
+      <app-controle-parametro [(valor)]="celsius" rotulo="Temperatura (°C)" [min]="0" [max]="400" />
+      <app-controle-parametro
+        [(valor)]="emissividade"
+        rotulo="Emissividade, em décimos"
+        [min]="1"
+        [max]="10"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="conducaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Condução</span>
+        <strong>{{ formatar(conducao()) }} W</strong>
+        <span class="legenda">{{ material().material }}</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Convecção</span>
+        <strong>{{ formatar(conveccao()) }} W</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Radiação</span>
+        <strong>{{ formatar(radiacao()) }} W</strong>
+        <span class="legenda">a {{ formatar(kelvin()) }} K</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Resistência térmica</span>
+        <strong>{{ formatar(resistencia()) }} K/W</strong>
+        <span class="legenda">camadas em série somam</span>
+      </div>
+    </section>
+
+    <section class="painel materiais">
+      <h2>Quatro ordens de grandeza</h2>
+      @for (item of materiais; track item.material) {
+        <span>
+          <span>{{ item.material }}</span>
+          <strong>{{ formatar(item.k) }}</strong>
+        </span>
+      }
+      <p class="observacao">
+        Entre o cobre e o ar parado a condutividade varia por um fator de quinze mil. É essa
+        diferença que faz um metal esfriar a mão depressa e a madeira, na mesma temperatura,
+        parecer morna — a sensação mede fluxo, não temperatura.
+      </p>
+    </section>
+
+    <section>
+      <h2>Onde a radiação ultrapassa tudo</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">
+        A curva da radiação é uma quarta potência; a da convecção é uma reta. Em temperatura
+        ambiente a convecção domina, mas acima de algumas centenas de kelvin a radiação passa
+        por cima — e é por isso que um forno aquece por radiação, não por ar quente.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Kelvin, não Celsius</h2>
+      <app-formula [tex]="'\\frac{300^{4}}{27^{4}} \\approx 1524'" [bloco]="true" />
+      <p class="observacao">
+        Em condução e convecção aparece apenas a DIFERENÇA de temperatura, e aí Celsius serve.
+        Na radiação aparece a temperatura absoluta à quarta potência, e usar a escala errada não
+        desloca o resultado por uma constante: multiplica por mais de mil.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.regra {
+  display: grid;
+  gap: var(--esp-1);
+}
+
+.regra span {
+  display: flex;
+  justify-content: space-between;
+}
