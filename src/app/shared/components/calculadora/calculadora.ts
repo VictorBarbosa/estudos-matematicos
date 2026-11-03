@@ -8,6 +8,7 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
+import { I18nService } from '@core/i18n/services/i18n.service';
 import {
   ESTADO_INICIAL,
   EstadoCalculadora,
@@ -41,7 +42,7 @@ interface Tecla {
   readonly acao: Acao;
   /** O zero ocupa duas colunas, como no iPhone. */
   readonly largo?: boolean;
-  /** Nome para leitor de tela, quando o rótulo é um símbolo. */
+  /** Chave do nome para leitor de tela, quando o rótulo é um símbolo. */
   readonly nome?: string;
 }
 
@@ -49,52 +50,52 @@ const inserir = (texto: string): Acao => ({ tipo: 'inserir', texto });
 
 /** O teclado de sempre: quatro colunas, operações à direita. */
 const BASICAS: readonly Tecla[] = [
-  { rotulo: 'AC', estilo: 'funcao', acao: { tipo: 'limpar' }, nome: 'Limpar' },
-  { rotulo: '±', estilo: 'funcao', acao: { tipo: 'sinal' }, nome: 'Trocar o sinal' },
-  { rotulo: '%', estilo: 'funcao', acao: { tipo: 'porcento' }, nome: 'Porcentagem' },
-  { rotulo: '÷', estilo: 'operador', acao: inserir('÷'), nome: 'Dividir' },
+  { rotulo: 'AC', estilo: 'funcao', acao: { tipo: 'limpar' }, nome: 'tecla.limpar' },
+  { rotulo: '±', estilo: 'funcao', acao: { tipo: 'sinal' }, nome: 'tecla.sinal' },
+  { rotulo: '%', estilo: 'funcao', acao: { tipo: 'porcento' }, nome: 'tecla.porcento' },
+  { rotulo: '÷', estilo: 'operador', acao: inserir('÷'), nome: 'tecla.dividir' },
 
   { rotulo: '7', estilo: 'digito', acao: inserir('7') },
   { rotulo: '8', estilo: 'digito', acao: inserir('8') },
   { rotulo: '9', estilo: 'digito', acao: inserir('9') },
-  { rotulo: '×', estilo: 'operador', acao: inserir('×'), nome: 'Multiplicar' },
+  { rotulo: '×', estilo: 'operador', acao: inserir('×'), nome: 'tecla.multiplicar' },
 
   { rotulo: '4', estilo: 'digito', acao: inserir('4') },
   { rotulo: '5', estilo: 'digito', acao: inserir('5') },
   { rotulo: '6', estilo: 'digito', acao: inserir('6') },
-  { rotulo: '−', estilo: 'operador', acao: inserir('-'), nome: 'Subtrair' },
+  { rotulo: '−', estilo: 'operador', acao: inserir('-'), nome: 'tecla.subtrair' },
 
   { rotulo: '1', estilo: 'digito', acao: inserir('1') },
   { rotulo: '2', estilo: 'digito', acao: inserir('2') },
   { rotulo: '3', estilo: 'digito', acao: inserir('3') },
-  { rotulo: '+', estilo: 'operador', acao: inserir('+'), nome: 'Somar' },
+  { rotulo: '+', estilo: 'operador', acao: inserir('+'), nome: 'tecla.somar' },
 
   { rotulo: '0', estilo: 'digito', acao: inserir('0'), largo: true },
-  { rotulo: ',', estilo: 'digito', acao: inserir(','), nome: 'Vírgula' },
-  { rotulo: '=', estilo: 'operador', acao: { tipo: 'igual' }, nome: 'Calcular' },
+  { rotulo: ',', estilo: 'digito', acao: inserir(','), nome: 'tecla.virgula' },
+  { rotulo: '=', estilo: 'operador', acao: { tipo: 'igual' }, nome: 'tecla.calcular' },
 ];
 
 /** A ala científica: três colunas que aparecem à esquerda das de sempre. */
 const CIENTIFICAS: readonly Tecla[] = [
-  { rotulo: 'sin', estilo: 'funcao', acao: inserir('sin('), nome: 'Seno' },
-  { rotulo: 'ln', estilo: 'funcao', acao: inserir('ln('), nome: 'Logaritmo natural' },
-  { rotulo: 'π', estilo: 'funcao', acao: inserir('π'), nome: 'Pi' },
+  { rotulo: 'sin', estilo: 'funcao', acao: inserir('sin('), nome: 'tecla.seno' },
+  { rotulo: 'ln', estilo: 'funcao', acao: inserir('ln('), nome: 'tecla.lnNatural' },
+  { rotulo: 'π', estilo: 'funcao', acao: inserir('π'), nome: 'tecla.pi' },
 
-  { rotulo: 'cos', estilo: 'funcao', acao: inserir('cos('), nome: 'Cosseno' },
-  { rotulo: 'log', estilo: 'funcao', acao: inserir('log('), nome: 'Logaritmo decimal' },
-  { rotulo: 'e', estilo: 'funcao', acao: inserir('e'), nome: 'Número de Euler' },
+  { rotulo: 'cos', estilo: 'funcao', acao: inserir('cos('), nome: 'tecla.cosseno' },
+  { rotulo: 'log', estilo: 'funcao', acao: inserir('log('), nome: 'tecla.logDecimal' },
+  { rotulo: 'e', estilo: 'funcao', acao: inserir('e'), nome: 'tecla.euler' },
 
-  { rotulo: 'tan', estilo: 'funcao', acao: inserir('tan('), nome: 'Tangente' },
-  { rotulo: '√', estilo: 'funcao', acao: inserir('√('), nome: 'Raiz quadrada' },
-  { rotulo: 'x²', estilo: 'funcao', acao: inserir('^2'), nome: 'Ao quadrado' },
+  { rotulo: 'tan', estilo: 'funcao', acao: inserir('tan('), nome: 'tecla.tangente' },
+  { rotulo: '√', estilo: 'funcao', acao: inserir('√('), nome: 'tecla.raiz' },
+  { rotulo: 'x²', estilo: 'funcao', acao: inserir('^2'), nome: 'tecla.quadrado' },
 
-  { rotulo: '1/x', estilo: 'funcao', acao: { tipo: 'inverso' }, nome: 'Inverso' },
-  { rotulo: 'xʸ', estilo: 'funcao', acao: inserir('^'), nome: 'Elevado a' },
-  { rotulo: 'x³', estilo: 'funcao', acao: inserir('^3'), nome: 'Ao cubo' },
+  { rotulo: '1/x', estilo: 'funcao', acao: { tipo: 'inverso' }, nome: 'tecla.inverso' },
+  { rotulo: 'xʸ', estilo: 'funcao', acao: inserir('^'), nome: 'tecla.elevado' },
+  { rotulo: 'x³', estilo: 'funcao', acao: inserir('^3'), nome: 'tecla.cubo' },
 
-  { rotulo: 'RAD', estilo: 'funcao', acao: { tipo: 'angulo' }, nome: 'Unidade de ângulo' },
-  { rotulo: '(', estilo: 'funcao', acao: inserir('('), nome: 'Abre parêntese' },
-  { rotulo: ')', estilo: 'funcao', acao: inserir(')'), nome: 'Fecha parêntese' },
+  { rotulo: 'RAD', estilo: 'funcao', acao: { tipo: 'angulo' }, nome: 'tecla.angulo' },
+  { rotulo: '(', estilo: 'funcao', acao: inserir('('), nome: 'tecla.abreParentese' },
+  { rotulo: ')', estilo: 'funcao', acao: inserir(')'), nome: 'tecla.fechaParentese' },
 ];
 
 /** O que cada tecla do teclado físico faz. */
@@ -139,6 +140,7 @@ const FOLGA = 8;
 })
 export class Calculadora {
   protected readonly calculadora = inject(CalculadoraService);
+  protected readonly i18n = inject(I18nService);
 
   private readonly painel = viewChild<ElementRef<HTMLElement>>('painel');
 
@@ -157,21 +159,29 @@ export class Calculadora {
 
   protected readonly emInteiros = computed(() => this.calculadora.modo() === 'mmc-mdc');
 
+  /** MMC e MDC viram PPCM/PGCD em francês e LCM/GCD em inglês. */
+  protected readonly nomeDaOperacao = computed(() =>
+    this.i18n.t(this.calculadora.operacao() === 'mmc' ? 'calculadora.mmc' : 'calculadora.mdc'),
+  );
+
   /** A linha pequena: a conta que gerou o resultado, ou o aviso de erro. */
   protected readonly legenda = computed(() => {
     if (this.emInteiros()) {
       const { numeros, erro } = this.conta();
       if (erro !== null) {
-        return erro;
+        return this.i18n.t(erro.chave, erro.valores);
       }
       return numeros.length >= 2
-        ? `${this.calculadora.operacao().toUpperCase()} de ${numeros.join(', ')}`
-        : 'Dois ou mais inteiros, separados por vírgula.';
+        ? this.i18n.t('calculadora.deNumeros', {
+            operacao: this.nomeDaOperacao(),
+            numeros: numeros.join(', '),
+          })
+        : this.i18n.t('calculadora.pedidoInteiros');
     }
 
     const { expressao, resultado, erro } = this.estado();
     if (erro !== null) {
-      return erro;
+      return this.i18n.t(erro.chave, erro.valores);
     }
     return resultado === null ? '' : `${expressao} =`;
   });

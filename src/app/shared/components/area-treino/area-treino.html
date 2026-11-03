@@ -6,32 +6,32 @@
   <header class="barra">
     <!-- O nível não se escolhe: ele acompanha o desempenho. -->
     <div class="escada" role="status">
-      <span class="nivel-atual" [attr.data-nivel]="s.nivel()">{{ rotuloNivel[s.nivel()] }}</span>
+      <span class="nivel-atual" [attr.data-nivel]="s.nivel()">{{ i18n.t(chaveDoNivel[s.nivel()]) }}</span>
       @if (s.escada().faltamParaSubir > 0) {
         <span class="rumo">
-          {{ s.escada().faltamParaSubir }} acerto(s) seguido(s) para subir
+          {{ i18n.t('treino.subir', { quantos: s.escada().faltamParaSubir }) }}
         </span>
       } @else {
-        <span class="rumo">nível máximo</span>
+        <span class="rumo">{{ i18n.t('treino.nivelMaximo') }}</span>
       }
     </div>
 
     <dl class="placar">
       <div>
-        <dt>Acertos</dt>
+        <dt>{{ i18n.t('treino.acertos') }}</dt>
         <dd class="certo">{{ s.acertos() }}</dd>
       </div>
       <div>
-        <dt>Erros</dt>
+        <dt>{{ i18n.t('treino.erros') }}</dt>
         <dd class="errado">{{ s.erros() }}</dd>
       </div>
       <div>
-        <dt>Sequência</dt>
+        <dt>{{ i18n.t('treino.sequencia') }}</dt>
         <dd>{{ s.sequencia() }}</dd>
       </div>
       <!-- O placar conta a rodada; esta conta a etapa. Zero = liberada. -->
       <div [title]="resumoDoQueFalta()">
-        <dt>Falta</dt>
+        <dt>{{ i18n.t('treino.falta') }}</dt>
         <dd [class.certo]="quantoFalta() === 0" [attr.aria-label]="resumoDoQueFalta()">
           {{ quantoFalta() }}
         </dd>
@@ -54,7 +54,7 @@
   <app-campo-resposta
     #campo
     [(valor)]="s.resposta"
-    rotulo="Sua resposta"
+    [rotulo]="i18n.t('treino.suaResposta')"
     [ajuda]="gerador().formatoResposta"
     [simbolos]="gerador().simbolos ?? []"
     [estado]="estadoCampo()"
@@ -64,7 +64,7 @@
 
   <div class="acoes">
     @if (s.corrigido()) {
-      <button type="button" class="principal" (click)="proximo()">Próximo exercício</button>
+      <button type="button" class="principal" (click)="proximo()">{{ i18n.t('treino.proximo') }}</button>
     } @else {
       <button
         type="button"
@@ -72,30 +72,27 @@
         [disabled]="s.resposta().trim() === ''"
         (click)="s.responder()"
       >
-        Verificar
+        {{ i18n.t('treino.verificar') }}
       </button>
       <button type="button" class="secundario" (click)="s.revelarResolucao()">
-        Não sei, mostrar a resolução
+        {{ i18n.t('treino.naoSei') }}
       </button>
-      <p class="aviso-desistencia">
-        Mostrar a resolução conta como tentativa não resolvida: o campo tranca e a sequência
-        volta a zero.
-      </p>
+      <p class="aviso-desistencia">{{ i18n.t('treino.avisoDesistencia') }}</p>
     }
   </div>
 
   <!-- aria-live para que o veredito seja anunciado sem roubar o foco. -->
   <div class="feedback" role="status" aria-live="polite">
     @if (s.escada().acabouDeSubir) {
-      <p class="subiu">Nível {{ rotuloNivel[s.nivel()] }} — os exercícios ficam mais exigentes.</p>
+      <p class="subiu">{{ i18n.t('treino.subiu', { nivel: i18n.t(chaveDoNivel[s.nivel()]) }) }}</p>
     }
     @if (s.desistiu()) {
       <div class="veredito" data-veredito="incorreto">
-        <p class="mensagem">Resolução revelada — este exercício conta como não resolvido.</p>
+        <p class="mensagem">{{ i18n.t('treino.revelada') }}</p>
         <p class="gabarito">
-          Resposta correta:
+          {{ i18n.t('treino.respostaCorreta') }}
           @for (forma of gabarito(); track forma; let ultimo = $last) {
-            <strong>{{ forma }}</strong>@if (!ultimo) {<span class="ou"> ou </span>}
+            <strong>{{ forma }}</strong>@if (!ultimo) {<span class="ou"> {{ i18n.t('treino.ou') }} </span>}
           }
         </p>
       </div>
@@ -111,9 +108,9 @@
         }
         @if (validacao.veredito === 'incorreto') {
           <p class="gabarito">
-            Resposta correta:
+            {{ i18n.t('treino.respostaCorreta') }}
             @for (forma of gabarito(); track forma; let ultimo = $last) {
-              <strong>{{ forma }}</strong>@if (!ultimo) {<span class="ou"> ou </span>}
+              <strong>{{ forma }}</strong>@if (!ultimo) {<span class="ou"> {{ i18n.t('treino.ou') }} </span>}
             }
           </p>
         }
@@ -127,22 +124,27 @@
   @if (etapaVencida()) {
     <div class="desbloqueio" role="status">
       <p>
-        <strong>Etapa vencida!</strong>
-        {{ dominio().acertos }} acertos nas últimas {{ janela }} tentativas,
-        {{ dominio().acertosExigentes }} delas no Médio ou no Difícil@if (
-          requisitos().length > 0
-        ) {, com as {{ requisitos().length }} operações praticadas}.
+        <strong>{{ i18n.t('treino.etapaVencida') }}</strong>
+        {{
+          i18n.t('treino.resumoVitoria', {
+            acertos: dominio().acertos,
+            janela: janela,
+            exigentes: dominio().acertosExigentes
+          })
+        }}@if (requisitos().length > 0) {{{
+          i18n.t('treino.resumoOperacoes', { quantas: requisitos().length })
+        }}}.
       </p>
       @if (proximaEtapa(); as proxima) {
         <a class="principal" [routerLink]="proxima.rota">
-          Ir para {{ proxima.titulo }}
+          {{ i18n.t('treino.irPara', { titulo: i18n.tituloDoTopico(proxima.topicoId) }) }}
           <span aria-hidden="true">→</span>
         </a>
       }
     </div>
   } @else if (dominio().respostas > 0 || requisitos().length > 0) {
     <div class="rumo-ao-desbloqueio" role="status">
-      <p class="rumo">Para abrir a próxima etapa:</p>
+      <p class="rumo">{{ i18n.t('treino.paraAbrir') }}</p>
 
       <!-- As quatro condições do critério, inclusive a sequência final, que era
            a única invisível — e a única que um erro zera. -->
@@ -150,22 +152,22 @@
         @for (exigencia of exigencias(); track exigencia.rotulo) {
           <li [class.cumprido]="exigencia.cumprida">
             <span class="marca" aria-hidden="true">{{ exigencia.cumprida ? '✓' : '·' }}</span>
-            {{ exigencia.rotulo }}
+            {{ i18n.t(exigencia.rotulo) }}
             <strong>{{ exigencia.feitos }}/{{ exigencia.alvo }}</strong>
             @if (exigencia.zeraComErro) {
-              <span>(zera a cada erro)</span>
+              <span>{{ i18n.t('treino.zeraComErro') }}</span>
             }
           </li>
         }
       </ul>
 
       @if (requisitos().length > 0) {
-        <p class="rumo">E {{ acertosPorTipo }} acertos em cada tipo de exercício:</p>
+        <p class="rumo">{{ i18n.t('treino.porTipo', { quantos: acertosPorTipo }) }}</p>
         <ul class="requisitos">
           @for (requisito of requisitos(); track requisito.conceito) {
             <li [class.cumprido]="requisito.cumprido">
               <span class="marca" aria-hidden="true">{{ requisito.cumprido ? '✓' : '·' }}</span>
-              {{ requisito.rotulo }}
+              {{ i18n.t(requisito.rotulo) }}
               <strong>{{ requisito.feitos }}/{{ requisito.acertos }}</strong>
             </li>
           }
@@ -176,7 +178,7 @@
 
   @if (s.resolucaoVisivel()) {
     <section class="resolucao">
-      <h3>Como se resolve</h3>
+      <h3>{{ i18n.t('treino.comoSeResolve') }}</h3>
       <app-passo-a-passo
         [passos]="exercicio.resolucao.passos"
         [passoDestacado]="validacao?.passoDivergente ?? null"
@@ -186,7 +188,7 @@
 
   @if (exercicio.conceitos.length > 0) {
     <footer class="conceitos">
-      <span class="etiqueta">Conceitos deste exercício:</span>
+      <span class="etiqueta">{{ i18n.t('treino.conceitosDoExercicio') }}</span>
       @for (conceito of exercicio.conceitos; track conceito) {
         <app-botao-teoria [conceito]="conceito" [discreto]="true" />
       }

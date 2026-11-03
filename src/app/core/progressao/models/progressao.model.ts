@@ -115,7 +115,12 @@ export function nivelDoTopico(historico: readonly Tentativa[]): NivelDoTopico {
  */
 export interface RequisitoDeConceito {
   readonly conceito: string;
-  /** Como a exigência aparece para o aluno: "soma", "divisão". */
+  /**
+   * A chave de tradução do rótulo, como `tipoFracao.soma`.
+   *
+   * É chave e não texto porque a interface fala três línguas: quem sabe em
+   * qual delas a tela está é o componente, não o modelo de progressão.
+   */
   readonly rotulo: string;
   readonly acertos: number;
 }
@@ -140,27 +145,27 @@ export const ACERTOS_POR_TIPO = 3;
  */
 export const REQUISITOS_POR_TOPICO: Readonly<Record<string, readonly RequisitoDeConceito[]>> = {
   fracoes: [
-    { conceito: 'fracoes.soma', rotulo: 'soma', acertos: ACERTOS_POR_TIPO },
-    { conceito: 'fracoes.subtracao', rotulo: 'subtração', acertos: ACERTOS_POR_TIPO },
-    { conceito: 'fracoes.multiplicacao', rotulo: 'multiplicação', acertos: ACERTOS_POR_TIPO },
-    { conceito: 'fracoes.divisao', rotulo: 'divisão', acertos: ACERTOS_POR_TIPO },
-    { conceito: 'fracoes.mista-soma', rotulo: 'soma com mistos', acertos: ACERTOS_POR_TIPO },
+    { conceito: 'fracoes.soma', rotulo: 'tipoFracao.soma', acertos: ACERTOS_POR_TIPO },
+    { conceito: 'fracoes.subtracao', rotulo: 'tipoFracao.subtracao', acertos: ACERTOS_POR_TIPO },
+    { conceito: 'fracoes.multiplicacao', rotulo: 'tipoFracao.multiplicacao', acertos: ACERTOS_POR_TIPO },
+    { conceito: 'fracoes.divisao', rotulo: 'tipoFracao.divisao', acertos: ACERTOS_POR_TIPO },
+    { conceito: 'fracoes.mista-soma', rotulo: 'tipoFracao.somaMista', acertos: ACERTOS_POR_TIPO },
     {
       conceito: 'fracoes.mista-subtracao',
-      rotulo: 'subtração com mistos',
+      rotulo: 'tipoFracao.subtracaoMista',
       acertos: ACERTOS_POR_TIPO,
     },
     {
       conceito: 'fracoes.mista-multiplicacao',
-      rotulo: 'multiplicação com mistos',
+      rotulo: 'tipoFracao.multiplicacaoMista',
       acertos: ACERTOS_POR_TIPO,
     },
     {
       conceito: 'fracoes.mista-divisao',
-      rotulo: 'divisão com mistos',
+      rotulo: 'tipoFracao.divisaoMista',
       acertos: ACERTOS_POR_TIPO,
     },
-    { conceito: 'fracoes.decimais', rotulo: 'decimal em fração', acertos: ACERTOS_POR_TIPO },
+    { conceito: 'fracoes.decimais', rotulo: 'tipoFracao.decimal', acertos: ACERTOS_POR_TIPO },
   ],
 };
 
@@ -309,10 +314,10 @@ export function exigenciasDaEtapa(dominio: Dominio): readonly ExigenciaDaEtapa[]
   });
 
   return [
-    exigencia('exercícios respondidos', dominio.respostas, RESPOSTAS_NA_JANELA),
-    exigencia('acertos entre eles', dominio.acertos, ACERTOS_NA_JANELA),
-    exigencia('acertos no Médio ou no Difícil', dominio.acertosExigentes, ACERTOS_EXIGENTES),
-    exigencia('acertos seguidos agora', dominio.seguidosNoFim, ACERTOS_SEGUIDOS_FINAIS, true),
+    exigencia('exigencia.respondidos', dominio.respostas, RESPOSTAS_NA_JANELA),
+    exigencia('exigencia.acertosEntreEles', dominio.acertos, ACERTOS_NA_JANELA),
+    exigencia('exigencia.acertosExigentes', dominio.acertosExigentes, ACERTOS_EXIGENTES),
+    exigencia('exigencia.seguidos', dominio.seguidosNoFim, ACERTOS_SEGUIDOS_FINAIS, true),
   ];
 }
 

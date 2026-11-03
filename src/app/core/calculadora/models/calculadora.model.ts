@@ -19,6 +19,17 @@ export type ModoCalculadora = 'basica' | 'cientifica' | 'mmc-mdc';
 /** As duas contas da aba de inteiros. */
 export type OperacaoInteiros = 'mmc' | 'mdc';
 
+/**
+ * Um erro pronto para traduzir.
+ *
+ * O modelo não sabe em que idioma a tela está, então guarda a chave do
+ * dicionário e o que preenche nela; quem desenha é que escolhe a língua.
+ */
+export interface ErroDaConta {
+  readonly chave: string;
+  readonly valores?: Readonly<Record<string, string | number>>;
+}
+
 /** Como os ângulos das funções trigonométricas são lidos. */
 export type Angulo = 'rad' | 'deg';
 
@@ -28,7 +39,7 @@ export interface EstadoCalculadora {
   /** O resultado da última avaliação, já formatado, ou `null`. */
   readonly resultado: string | null;
   /** O que impediu a conta, ou `null`. */
-  readonly erro: string | null;
+  readonly erro: ErroDaConta | null;
 }
 
 export const ESTADO_INICIAL: EstadoCalculadora = {
@@ -330,7 +341,11 @@ export function calcular(estado: EstadoCalculadora, angulo: Angulo): EstadoCalcu
   const valor = avaliarExpressao(angulo === 'deg' ? emGraus(fechada) : fechada);
 
   if (valor === null) {
-    return { expressao: estado.expressao, resultado: null, erro: 'Não dá para calcular isso.' };
+    return {
+      expressao: estado.expressao,
+      resultado: null,
+      erro: { chave: 'calculadora.naoCalcula' },
+    };
   }
 
   const comTrigonometria = TRIGONOMETRICAS.some((nome) => fechada.includes(`${nome}(`));
@@ -358,7 +373,7 @@ export interface ContaDeInteiros {
   readonly decomposicao: readonly LinhaDecomposicao[];
   /** `2³ · 3² = 72`: de onde o resultado sai. */
   readonly montagem: string | null;
-  readonly erro: string | null;
+  readonly erro: ErroDaConta | null;
 }
 
 const CONTA_VAZIA: ContaDeInteiros = {
@@ -402,26 +417,26 @@ export function calcularInteiros(
   const numeros: number[] = [];
   for (const parte of partes) {
     if (!/^\d+$/.test(parte)) {
-      return { ...CONTA_VAZIA, erro: `"${parte}" não é um número inteiro.` };
+      return { ...CONTA_VAZIA, erro: { chave: 'calculadora.naoInteiro', valores: { parte } } };
     }
 
     const numero = Number(parte);
     if (numero === 0) {
-      return { ...CONTA_VAZIA, erro: 'O zero fica de fora: use inteiros maiores que zero.' };
+      return { ...CONTA_VAZIA, erro: { chave: 'calculadora.semZero' } };
     }
     if (numero > LIMITE) {
-      return { ...CONTA_VAZIA, erro: 'Use números até 1 000 000 000.' };
+      return { ...CONTA_VAZIA, erro: { chave: 'calculadora.limite' } };
     }
     numeros.push(numero);
   }
 
   if (numeros.length < 2) {
-    return { ...CONTA_VAZIA, numeros, erro: 'Informe pelo menos dois números.' };
+    return { ...CONTA_VAZIA, numeros, erro: { chave: 'calculadora.aoMenosDois' } };
   }
 
   const valor = operacao === 'mmc' ? mmcLista(numeros) : mdcLista(numeros);
   if (!Number.isSafeInteger(valor)) {
-    return { ...CONTA_VAZIA, numeros, erro: 'O resultado passa do que dá para calcular exato.' };
+    return { ...CONTA_VAZIA, numeros, erro: { chave: 'calculadora.passaDoExato' } };
   }
 
   return {

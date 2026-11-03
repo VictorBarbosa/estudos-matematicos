@@ -3,7 +3,7 @@
     #painel
     class="janela"
     role="dialog"
-    aria-label="Calculadora"
+    [attr.aria-label]="i18n.t('shell.calculadoraTitulo')"
     tabindex="0"
     [class.cientifica]="calculadora.modo() === 'cientifica'"
     [style.left.px]="local()?.x ?? null"
@@ -21,7 +21,7 @@
     >
       <span class="alca" aria-hidden="true">⠿</span>
 
-      <div class="modos" role="tablist" aria-label="Modo da calculadora">
+      <div class="modos" role="tablist" [attr.aria-label]="i18n.t('calculadora.modo')">
         <button
           type="button"
           role="tab"
@@ -29,7 +29,7 @@
           [class.ativo]="calculadora.modo() === 'basica'"
           (click)="calculadora.definirModo('basica')"
         >
-          Básica
+          {{ i18n.t('calculadora.basica') }}
         </button>
         <button
           type="button"
@@ -38,7 +38,7 @@
           [class.ativo]="calculadora.modo() === 'cientifica'"
           (click)="calculadora.definirModo('cientifica')"
         >
-          Científica
+          {{ i18n.t('calculadora.cientifica') }}
         </button>
         <button
           type="button"
@@ -47,11 +47,11 @@
           [class.ativo]="emInteiros()"
           (click)="calculadora.definirModo('mmc-mdc')"
         >
-          MMC/MDC
+          {{ i18n.t('calculadora.mmcMdc') }}
         </button>
       </div>
 
-      <button type="button" class="fechar" (click)="calculadora.fechar()" aria-label="Fechar a calculadora">
+      <button type="button" class="fechar" (click)="calculadora.fechar()" [attr.aria-label]="i18n.t('calculadora.fechar')">
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
           <path
             fill="currentColor"
@@ -71,7 +71,7 @@
 
     @if (emInteiros()) {
       <div class="inteiros">
-        <div class="escolha" role="group" aria-label="Qual conta fazer">
+        <div class="escolha" role="group" [attr.aria-label]="i18n.t('calculadora.qualConta')">
           <button
             type="button"
             class="funcao"
@@ -79,7 +79,7 @@
             [attr.aria-pressed]="calculadora.operacao() === 'mmc'"
             (click)="escolher('mmc')"
           >
-            MMC
+            {{ i18n.t('calculadora.mmc') }}
           </button>
           <button
             type="button"
@@ -88,12 +88,12 @@
             [attr.aria-pressed]="calculadora.operacao() === 'mdc'"
             (click)="escolher('mdc')"
           >
-            MDC
+            {{ i18n.t('calculadora.mdc') }}
           </button>
         </div>
 
         <label class="campo">
-          <span class="rotulo">Números, separados por vírgula</span>
+          <span class="rotulo">{{ i18n.t('calculadora.numeros') }}</span>
           <input
             type="text"
             inputmode="numeric"
@@ -110,7 +110,7 @@
              que o divisor coube em todos os números. -->
         @if (conta().decomposicao.length > 0) {
           <table class="decomposicao" [class.mdc]="calculadora.operacao() === 'mdc'">
-            <caption class="rotulo">Dividindo todos ao mesmo tempo</caption>
+            <caption class="rotulo">{{ i18n.t('calculadora.dividindo') }}</caption>
             <tbody>
               @for (linha of conta().decomposicao; track $index) {
                 <tr [class.comum]="linha.comum">
@@ -131,10 +131,12 @@
 
           @if (conta().montagem; as montagem) {
             <p class="montagem">
-              {{ calculadora.operacao() === 'mmc' ? 'MMC' : 'MDC' }} = {{ montagem }}
+              {{
+                i18n.t('calculadora.montagem', { operacao: nomeDaOperacao(), montagem: montagem })
+              }}
             </p>
           } @else {
-            <p class="montagem">Nenhum divisor comum: MDC = 1.</p>
+            <p class="montagem">{{ i18n.t('calculadora.semComum') }}</p>
           }
         }
       </div>
@@ -146,7 +148,7 @@
             <button
               type="button"
               [class]="tecla.estilo"
-              [attr.aria-label]="tecla.nome ?? null"
+              [attr.aria-label]="tecla.nome ? i18n.t(tecla.nome) : null"
               (click)="pressionar(tecla.acao)"
             >
               {{ rotuloDe(tecla) }}
@@ -161,7 +163,7 @@
             type="button"
             [class]="tecla.estilo"
             [class.largo]="tecla.largo"
-            [attr.aria-label]="tecla.nome ?? null"
+            [attr.aria-label]="tecla.nome ? i18n.t(tecla.nome) : null"
             (click)="pressionar(tecla.acao)"
           >
             {{ tecla.rotulo === 'AC' ? rotuloLimpar() : tecla.rotulo }}

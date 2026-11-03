@@ -55,7 +55,7 @@
     #painel
     class="janela"
     role="dialog"
-    aria-label="Assistente"
+    [attr.aria-label]="i18n.t('shell.assistenteTitulo')"
     [style.left.px]="local()?.x ?? null"
     [style.top.px]="local()?.y ?? null"
     [class.sem-posicao]="local() === null"
@@ -71,13 +71,13 @@
 
       <div class="modelo">
         <select
-          aria-label="Modelo"
+          [attr.aria-label]="i18n.t('assistente.modelo')"
           [value]="assistente.modelo()"
           [disabled]="assistente.modelos().length === 0"
           (change)="assistente.definirModelo($any($event.target).value)"
         >
           @if (assistente.modelos().length === 0) {
-            <option value="">sem modelos</option>
+            <option value="">{{ i18n.t('assistente.semModelos') }}</option>
           }
           @for (modelo of assistente.modelos(); track modelo.nome) {
             <option [value]="modelo.nome">{{ modelo.nome }} · {{ tamanho(modelo.bytes) }}</option>
@@ -90,8 +90,8 @@
         class="icone"
         (click)="assistente.limpar()"
         [disabled]="assistente.vazia()"
-        aria-label="Começar outra conversa"
-        title="Começar outra conversa"
+        [attr.aria-label]="i18n.t('assistente.outraConversa')"
+        [title]="i18n.t('assistente.outraConversa')"
       >
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
           <path
@@ -101,7 +101,7 @@
         </svg>
       </button>
 
-      <button type="button" class="icone" (click)="assistente.fechar()" aria-label="Fechar o assistente">
+      <button type="button" class="icone" (click)="assistente.fechar()" [attr.aria-label]="i18n.t('assistente.fechar')">
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
           <path
             fill="currentColor"
@@ -113,10 +113,7 @@
 
     <div class="conversa" role="log" aria-live="polite">
       @if (assistente.vazia() && !assistente.respondendo()) {
-        <p class="convite">
-          Pergunte o que quiser sobre o que está na tela — o enunciado, a resolução, por que
-          a sua resposta não bateu. O que você está vendo vai junto com a pergunta.
-        </p>
+        <p class="convite">{{ i18n.t('assistente.convite') }}</p>
       }
 
       @for (mensagem of assistente.mensagens(); track $index) {
@@ -128,18 +125,20 @@
       @if (assistente.respondendo()) {
         <article class="mensagem" data-papel="assistente">
           <ng-container [ngTemplateOutlet]="corpo" [ngTemplateOutletContext]="{ $implicit: parcial() }" />
-          <span class="pensando" aria-label="Respondendo">▌</span>
+          <span class="pensando" [attr.aria-label]="i18n.t('assistente.respondendo')">▌</span>
         </article>
       }
 
       @if (assistente.erro(); as erro) {
         <p class="erro" role="status">
           {{ erro }}
-          <button type="button" (click)="assistente.carregarModelos()">Tentar de novo</button>
+          <button type="button" (click)="assistente.carregarModelos()">
+            {{ i18n.t('assistente.tentarDeNovo') }}
+          </button>
         </p>
 
         <label class="servidor">
-          <span>Endereço do Ollama</span>
+          <span>{{ i18n.t('assistente.endereco') }}</span>
           <input
             type="text"
             spellcheck="false"
@@ -156,17 +155,17 @@
       <textarea
         #campo
         rows="2"
-        placeholder="Pergunte sobre o que está na tela…"
-        aria-label="Sua pergunta"
+        [placeholder]="i18n.t('assistente.placeholder')"
+        [attr.aria-label]="i18n.t('assistente.suaPergunta')"
         [value]="pergunta()"
         (input)="pergunta.set($any($event.target).value)"
         (keydown)="aoTeclar($event)"
       ></textarea>
 
       @if (assistente.respondendo()) {
-        <button type="button" class="parar" (click)="assistente.interromper()">Parar</button>
+        <button type="button" class="parar" (click)="assistente.interromper()">{{ i18n.t('assistente.parar') }}</button>
       } @else {
-        <button type="submit" class="enviar" [disabled]="!podeEnviar()">Perguntar</button>
+        <button type="submit" class="enviar" [disabled]="!podeEnviar()">{{ i18n.t('assistente.perguntar') }}</button>
       }
     </form>
   </section>

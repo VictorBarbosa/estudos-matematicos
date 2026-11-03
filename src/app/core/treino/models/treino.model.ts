@@ -5,10 +5,11 @@ export type Nivel = 'facil' | 'medio' | 'dificil';
 
 export const NIVEIS: readonly Nivel[] = ['facil', 'medio', 'dificil'];
 
-export const ROTULO_NIVEL: Readonly<Record<Nivel, string>> = {
-  facil: 'Fácil',
-  medio: 'Médio',
-  dificil: 'Difícil',
+/** A chave de tradução de cada nível, já que a interface fala três línguas. */
+export const CHAVE_DO_NIVEL: Readonly<Record<Nivel, string>> = {
+  facil: 'nivel.facil',
+  medio: 'nivel.medio',
+  dificil: 'nivel.dificil',
 };
 
 /**

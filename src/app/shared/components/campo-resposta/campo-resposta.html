@@ -16,7 +16,7 @@
   />
   @if (simbolos().length > 0) {
     <!-- ∀, ∈ e ∑ não estão no teclado de ninguém. -->
-    <div class="simbolos" role="group" aria-label="Símbolos para a resposta">
+    <div class="simbolos" role="group" [attr.aria-label]="i18n.t('campo.simbolos')">
       @for (tecla of simbolos(); track tecla.rotulo) {
         <button
           type="button"

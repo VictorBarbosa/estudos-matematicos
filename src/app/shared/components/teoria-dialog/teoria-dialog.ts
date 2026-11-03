@@ -9,6 +9,7 @@ import {
 import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 /**
  * Modal com a explicação matemática de um conceito.
@@ -26,6 +27,8 @@ import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
   styleUrl: './teoria-dialog.scss',
 })
 export class TeoriaDialog {
+  protected readonly i18n = inject(I18nService);
+
   protected readonly teoria = inject(TeoriaService);
 
   private readonly dialogo = viewChild.required<ElementRef<HTMLDialogElement>>('dialogo');

@@ -10,6 +10,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { Mensagem, interpretar, tamanhoLegivel } from '@core/assistente/models/assistente.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
 import { AssistenteService } from '@core/assistente/services/assistente.service';
 import { NgTemplateOutlet } from '@angular/common';
 import { Formula } from '@shared/components/formula/formula';
@@ -36,6 +37,7 @@ const FOLGA = 8;
 })
 export class AssistenteDialog {
   protected readonly assistente = inject(AssistenteService);
+  protected readonly i18n = inject(I18nService);
 
   private readonly painel = viewChild<ElementRef<HTMLElement>>('painel');
   private readonly campo = viewChild<ElementRef<HTMLTextAreaElement>>('campo');

@@ -105,7 +105,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao:
           'Partes de um inteiro, equivalência, simplificação e as quatro operações, nas duas ' +
           'formas: fração e número misto. Mais a conversão de decimais — nove tipos ao todo, ' +
-          'cinco acertos em cada um para a etapa abrir.',
+          'três acertos em cada um para a etapa abrir.',
         pronto: true,
       },
       {

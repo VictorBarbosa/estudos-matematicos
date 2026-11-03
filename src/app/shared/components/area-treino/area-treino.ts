@@ -17,7 +17,12 @@ import {
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { SessaoTreino } from '@core/treino/sessao-treino/sessao-treino';
-import { GeradorExercicio, ROTULO_NIVEL, formasDoGabarito } from '@core/treino/models/treino.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import {
+  CHAVE_DO_NIVEL,
+  GeradorExercicio,
+  formasDoGabarito,
+} from '@core/treino/models/treino.model';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
 import { CampoResposta } from '@shared/components/campo-resposta/campo-resposta';
 import { Formula } from '@shared/components/formula/formula';
@@ -44,7 +49,8 @@ export class AreaTreino {
   private readonly progressao = inject(ProgressaoService);
   private readonly campo = viewChild<CampoResposta>('campo');
 
-  protected readonly rotuloNivel = ROTULO_NIVEL;
+  protected readonly chaveDoNivel = CHAVE_DO_NIVEL;
+  protected readonly i18n = inject(I18nService);
 
   /**
    * A rodada em andamento.
@@ -111,10 +117,12 @@ export class AreaTreino {
   protected readonly oQueFalta = computed(() => [
     ...this.exigencias()
       .filter((exigencia) => !exigencia.cumprida)
-      .map((exigencia) => `${exigencia.rotulo} ${exigencia.feitos}/${exigencia.alvo}`),
+      .map((exigencia) => `${this.i18n.t(exigencia.rotulo)} ${exigencia.feitos}/${exigencia.alvo}`),
     ...this.requisitos()
       .filter((requisito) => !requisito.cumprido)
-      .map((requisito) => `${requisito.rotulo} ${requisito.feitos}/${requisito.acertos}`),
+      .map(
+        (requisito) => `${this.i18n.t(requisito.rotulo)} ${requisito.feitos}/${requisito.acertos}`,
+      ),
   ]);
 
   /** Quantas condições faltam. Zero significa etapa vencida. */
@@ -124,8 +132,8 @@ export class AreaTreino {
   protected readonly resumoDoQueFalta = computed(() => {
     const itens = this.oQueFalta();
     return itens.length === 0
-      ? 'Nada: a próxima etapa já está liberada.'
-      : `Falta para liberar a próxima etapa: ${itens.join(', ')}.`;
+      ? this.i18n.t('treino.nadaFalta')
+      : this.i18n.t('treino.faltaPara', { itens: itens.join(', ') });
   });
 
   protected readonly etapaVencida = computed(() =>

@@ -1,14 +1,11 @@
 <div class="home">
   <header class="intro">
-    <h1>Matemática, demonstrada passo a passo</h1>
-    <p class="chamada">
-      Cada tópico tem duas partes: <strong>Explorar</strong>, onde você mexe nos parâmetros e vê a
-      matemática reagir, e <strong>Treinar</strong>, onde você resolve exercícios e recebe uma
-      correção que diz <em>onde</em> o raciocínio saiu do trilho.
-    </p>
+    <h1>{{ i18n.t('home.titulo') }}</h1>
+    <!-- A frase traz <strong> e <em>, e a ênfase muda de palavra em cada língua:
+         por isso ela vai inteira no dicionário, com marcação e tudo. -->
+    <p class="chamada" [innerHTML]="i18n.t('home.chamada')"></p>
     <p class="andamento">
-      {{ prontos }} de {{ total }} tópicos implementados. Eles abrem um a um: vença a etapa da
-      vez no treino para liberar a seguinte.
+      {{ i18n.t('home.andamento', { prontos: prontos, total: total }) }}
     </p>
   </header>
 
@@ -17,15 +14,18 @@
   @if (revisaoDeHoje().length > 0) {
     <section class="revisao">
       <div>
-        <h2>Revisão de hoje</h2>
+        <h2>{{ i18n.t('sidebar.revisao') }}</h2>
         <p>
-          {{ revisaoDeHoje().length }}
-          {{ revisaoDeHoje().length === 1 ? 'tópico já vencido pede' : 'tópicos já vencidos pedem' }}
-          uma passada — a trilha só anda para a frente, e esta fila faz o caminho de volta.
+          {{
+            i18n.t(
+              revisaoDeHoje().length === 1 ? 'home.revisaoUm' : 'home.revisaoVarios',
+              { quantos: revisaoDeHoje().length }
+            )
+          }}
         </p>
       </div>
       <a class="ir-revisar" routerLink="/revisar">
-        Revisar agora
+        {{ i18n.t('home.revisarAgora') }}
         <span aria-hidden="true">→</span>
       </a>
     </section>
@@ -36,8 +36,8 @@
   @for (area of areas; track area.id) {
     <section class="area">
       <header>
-        <h2>{{ area.titulo }}</h2>
-        <p>{{ area.descricao }}</p>
+        <h2>{{ i18n.tituloDaArea(area.id) }}</h2>
+        <p>{{ i18n.descricaoDaArea(area.id) }}</p>
       </header>
 
       <div class="grade">
@@ -48,7 +48,7 @@
 
       @if (glossarioDe(area.id).length > 0) {
         <details class="glossario">
-          <summary>Vocabulário em francês e inglês</summary>
+          <summary>{{ i18n.t('home.vocabulario') }}</summary>
           <table>
             <thead>
               <tr>
@@ -72,7 +72,7 @@
 
       @if (area.referencias?.length) {
         <details class="leitura">
-          <summary>Leitura externa desta área</summary>
+          <summary>{{ i18n.t('home.leitura') }}</summary>
           <ul>
             @for (referencia of area.referencias; track referencia.url) {
               <li>

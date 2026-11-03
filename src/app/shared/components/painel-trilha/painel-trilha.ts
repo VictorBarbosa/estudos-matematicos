@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@a
 import { RouterLink } from '@angular/router';
 import { ACERTOS_NA_JANELA, RESPOSTAS_NA_JANELA } from '@core/progressao/models/progressao.model';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 /**
  * O placar da trilha, na página inicial.
@@ -17,6 +18,8 @@ import { ProgressaoService } from '@core/progressao/services/progressao.service'
   styleUrl: './painel-trilha.scss',
 })
 export class PainelTrilha {
+  protected readonly i18n = inject(I18nService);
+
   private readonly progressao = inject(ProgressaoService);
 
   protected readonly alvo = ACERTOS_NA_JANELA;

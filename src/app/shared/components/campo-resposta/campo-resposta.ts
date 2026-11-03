@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
+  inject,
   input,
   model,
   output,
@@ -12,6 +13,8 @@ import { TeclaDeSimbolo } from '@core/treino/models/treino.model';
 let proximoId = 0;
 
 /** Entrada da resposta do aluno, com estado visual de acerto e erro. */
+import { I18nService } from '@core/i18n/services/i18n.service';
+
 @Component({
   selector: 'app-campo-resposta',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -19,6 +22,8 @@ let proximoId = 0;
   styleUrl: './campo-resposta.scss',
 })
 export class CampoResposta {
+  protected readonly i18n = inject(I18nService);
+
   readonly valor = model.required<string>();
   readonly rotulo = input.required<string>();
   /** Formato esperado, por exemplo `ex.: 3/4`. */

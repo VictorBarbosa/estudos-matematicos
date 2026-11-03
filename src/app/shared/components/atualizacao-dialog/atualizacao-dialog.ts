@@ -8,6 +8,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { AtualizacaoService } from '@core/atualizacao/services/atualizacao.service';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 /**
  * Aviso de que saiu uma versão nova do site.
@@ -28,6 +29,8 @@ import { AtualizacaoService } from '@core/atualizacao/services/atualizacao.servi
   styleUrl: './atualizacao-dialog.scss',
 })
 export class AtualizacaoDialog {
+  protected readonly i18n = inject(I18nService);
+
   protected readonly atualizacao = inject(AtualizacaoService);
 
   private readonly dialogo = viewChild.required<ElementRef<HTMLDialogElement>>('dialogo');
@@ -35,15 +38,15 @@ export class AtualizacaoDialog {
   protected readonly podeDispensar = computed(() => this.atualizacao.motivo() !== 'irrecuperavel');
 
   protected readonly titulo = computed(() =>
-    this.podeDispensar() ? 'Nova versão disponível' : 'Esta aba precisa ser recarregada',
+    this.i18n.t(
+      this.podeDispensar() ? 'atualizacao.disponivel' : 'atualizacao.recarregar',
+    ),
   );
 
   protected readonly descricao = computed(() =>
     this.podeDispensar()
-      ? 'Os arquivos novos já foram baixados e estão prontos. Reiniciar leva alguns segundos, ' +
-        'e o seu progresso fica guardado.'
-      : 'A versão que estava aberta não pode mais ser carregada por inteiro — isso acontece ' +
-        'quando o site é publicado de novo com esta aba aberta. Recarregar resolve.',
+      ? this.i18n.t('atualizacao.descricaoDisponivel')
+      : this.i18n.t('atualizacao.descricaoIrrecuperavel'),
   );
 
   constructor() {

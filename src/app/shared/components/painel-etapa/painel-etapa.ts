@@ -7,6 +7,7 @@ import {
   RESPOSTAS_NA_JANELA,
 } from '@core/progressao/models/progressao.model';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 /**
  * A faixa de jogo no topo de cada tópico.
@@ -23,6 +24,8 @@ import { ProgressaoService } from '@core/progressao/services/progressao.service'
   styleUrl: './painel-etapa.scss',
 })
 export class PainelEtapa {
+  protected readonly i18n = inject(I18nService);
+
   readonly topicoId = input.required<string>();
 
   private readonly progressao = inject(ProgressaoService);

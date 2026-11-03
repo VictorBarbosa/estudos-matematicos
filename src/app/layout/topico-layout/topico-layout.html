@@ -4,9 +4,17 @@
   <header class="cabecalho">
     <h1>{{ titulo() }}</h1>
     <p class="descricao">{{ descricao() }}</p>
+
+    <!-- Só a interface foi traduzida: quem lê em francês ou inglês fica
+         sabendo disso antes de abrir o primeiro exercício, não depois. -->
+    @if (i18n.idioma() !== 'pt') {
+      <p class="aviso-idioma">
+        {{ i18n.t('idioma.conteudoEmPortugues', { idioma: nomeDoIdioma[i18n.idioma()] }) }}
+      </p>
+    }
   </header>
 
-  <div class="abas" role="tablist" aria-label="Seções do tópico" (keydown)="aoTeclar($event)">
+  <div class="abas" role="tablist" [attr.aria-label]="i18n.t('topico.secoes')" (keydown)="aoTeclar($event)">
     @for (nome of abas; track nome) {
       <button
         #botaoAba
@@ -20,7 +28,7 @@
         [class.ativa]="aba() === nome"
         (click)="selecionar(nome)"
       >
-        {{ rotulos[nome] }}
+        {{ i18n.t(rotulos[nome]) }}
       </button>
     }
   </div>

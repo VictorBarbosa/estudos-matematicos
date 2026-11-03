@@ -1,7 +1,9 @@
 <section class="trilha" aria-labelledby="titulo-trilha">
   <header>
-    <h2 id="titulo-trilha">Sua trilha</h2>
-    <p class="contagem">{{ vencidas() }} de {{ total }} etapas vencidas</p>
+    <h2 id="titulo-trilha">{{ i18n.t('trilha.titulo') }}</h2>
+    <p class="contagem">
+      {{ i18n.t('trilha.contagem', { vencidas: vencidas(), total: total }) }}
+    </p>
   </header>
 
   <div
@@ -10,24 +12,31 @@
     [attr.aria-valuenow]="vencidas()"
     [attr.aria-valuemin]="0"
     [attr.aria-valuemax]="total"
-    [attr.aria-label]="'Progresso na trilha: ' + percentual() + ' por cento'"
+    [attr.aria-label]="i18n.t('trilha.barra', { percentual: percentual() })"
   >
     <div class="preenchida" [style.width.%]="percentual()"></div>
   </div>
 
   @if (completa()) {
-    <p class="celebracao">Trilha completa — todas as {{ total }} etapas vencidas. 🎉</p>
+    <p class="celebracao">{{ i18n.t('trilha.completa', { total: total }) }}</p>
   } @else if (atual(); as atual) {
     <div class="atual">
       <div class="texto">
-        <span class="rotulo">Etapa {{ atual.numero }} · {{ atual.areaTitulo }}</span>
-        <strong>{{ atual.titulo }}</strong>
+        <span class="rotulo">
+          {{
+            i18n.t('trilha.etapaArea', {
+              numero: atual.numero,
+              area: i18n.tituloDaArea(atual.areaId)
+            })
+          }}
+        </span>
+        <strong>{{ i18n.tituloDoTopico(atual.topicoId) }}</strong>
         <span class="meta">
-          {{ avancoNaAtual() }} de {{ alvo }} acertos nas últimas {{ janela }} tentativas.
+          {{ i18n.t('trilha.meta', { avanco: avancoNaAtual(), alvo: alvo, janela: janela }) }}
         </span>
       </div>
       <a class="continuar" [routerLink]="atual.rota">
-        {{ avancoNaAtual() > 0 ? 'Continuar' : 'Começar' }}
+        {{ i18n.t(avancoNaAtual() > 0 ? 'trilha.continuar' : 'trilha.comecar') }}
         <span aria-hidden="true">→</span>
       </a>
     </div>
@@ -37,24 +46,24 @@
     <label class="modo-livre">
       <input type="checkbox" [checked]="modoLivre()" (change)="alternarModoLivre($event)" />
       <span>
-        Modo livre
-        <small>abre todos os tópicos para consulta, sem apagar o progresso da trilha.</small>
+        {{ i18n.t('trilha.modoLivre') }}
+        <small>{{ i18n.t('trilha.modoLivreAjuda') }}</small>
       </span>
     </label>
 
     @if (confirmandoReinicio()) {
-      <div class="reinicio confirmando" role="alertdialog" aria-label="Confirmar reinício">
-        <p>Apagar todo o progresso e voltar à etapa 1?</p>
+      <div class="reinicio confirmando" role="alertdialog" [attr.aria-label]="i18n.t('trilha.confirmarReinicio')">
+        <p>{{ i18n.t('trilha.perguntaReinicio') }}</p>
         <div class="botoes">
           <button type="button" class="perigo" (click)="confirmarReinicio()">
-            Sim, zerar tudo
+            {{ i18n.t('trilha.zerarTudo') }}
           </button>
-          <button type="button" class="discreto" (click)="cancelarReinicio()">Cancelar</button>
+          <button type="button" class="discreto" (click)="cancelarReinicio()">{{ i18n.t('trilha.cancelar') }}</button>
         </div>
       </div>
     } @else {
       <button type="button" class="reiniciar" (click)="pedirReinicio()">
-        Recomeçar do zero
+        {{ i18n.t('trilha.recomecar') }}
       </button>
     }
   </footer>

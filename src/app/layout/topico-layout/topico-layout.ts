@@ -2,10 +2,14 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
+  computed,
+  inject,
   input,
   signal,
   viewChildren,
 } from '@angular/core';
+import { NOME_DO_IDIOMA } from '@core/i18n/models/i18n.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
 import { PainelEtapa } from '@shared/components/painel-etapa/painel-etapa';
 import { PainelProgresso } from '@shared/components/painel-progresso/painel-progresso';
 
@@ -29,19 +33,32 @@ const ABAS: readonly AbaTopico[] = ['explorar', 'treinar'];
   styleUrl: './topico-layout.scss',
 })
 export class TopicoLayout {
-  readonly titulo = input.required<string>();
-  readonly descricao = input.required<string>();
-  /** Id do tópico no currículo, usado pelo painel de progresso. */
+  /** Id do tópico no currículo: daqui saem o painel de progresso e o cabeçalho. */
   readonly topicoId = input.required<string>();
+
+  protected readonly i18n = inject(I18nService);
+
+  /**
+   * Título e descrição vêm do currículo, não da página.
+   *
+   * Antes cada tópico repetia os dois no seu próprio template, o que já era
+   * uma duplicação do `curriculo.ts` — e, com três idiomas, seria a mesma
+   * frase escrita em 102 lugares vezes três.
+   */
+  protected readonly titulo = computed(() => this.i18n.tituloDoTopico(this.topicoId()));
+  protected readonly descricao = computed(() => this.i18n.descricaoDoTopico(this.topicoId()));
 
   protected readonly abas = ABAS;
   protected readonly aba = signal<AbaTopico>('explorar');
 
   private readonly botoes = viewChildren<ElementRef<HTMLButtonElement>>('botaoAba');
 
+  /** Os nomes dos idiomas, para o aviso de que o conteúdo segue em português. */
+  protected readonly nomeDoIdioma = NOME_DO_IDIOMA;
+
   protected readonly rotulos: Readonly<Record<AbaTopico, string>> = {
-    explorar: 'Explorar',
-    treinar: 'Treinar',
+    explorar: 'topico.explorar',
+    treinar: 'topico.treinar',
   };
 
   protected selecionar(aba: AbaTopico): void {

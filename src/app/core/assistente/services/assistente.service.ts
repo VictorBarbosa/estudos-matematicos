@@ -9,6 +9,7 @@ import {
   semPensamento,
 } from '@core/assistente/models/assistente.model';
 import { FalhaDoOllama, OllamaService } from '@core/assistente/services/ollama.service';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 const CHAVE = 'estudos-matematicos.assistente.v1';
 
@@ -53,6 +54,7 @@ const PADRAO: EstadoSalvo = {
 export class AssistenteService {
   private readonly ollama = inject(OllamaService);
   private readonly documento = inject(DOCUMENT);
+  private readonly i18n = inject(I18nService);
 
   private readonly estado = signal<EstadoSalvo>(carregar());
 
@@ -126,7 +128,7 @@ export class AssistenteService {
       }
     } catch (erro) {
       this.listaDeModelos.set([]);
-      this.problema.set(mensagemDe(erro));
+      this.problema.set(mensagemDe(erro, this.i18n));
     }
   }
 
@@ -144,7 +146,7 @@ export class AssistenteService {
     }
 
     if (this.modelo() === '') {
-      this.problema.set('Escolha um modelo antes de perguntar.');
+      this.problema.set(this.i18n.t('assistente.escolhaModelo'));
       return;
     }
 
@@ -178,7 +180,7 @@ export class AssistenteService {
       }
     } catch (erro) {
       if (!(erro instanceof DOMException && erro.name === 'AbortError')) {
-        this.problema.set(mensagemDe(erro));
+        this.problema.set(mensagemDe(erro, this.i18n));
       }
     } finally {
       this.parcial.set('');
@@ -201,10 +203,10 @@ export class AssistenteService {
   }
 }
 
-function mensagemDe(erro: unknown): string {
+function mensagemDe(erro: unknown, i18n: I18nService): string {
   return erro instanceof FalhaDoOllama || erro instanceof Error
     ? erro.message
-    : 'Algo deu errado ao falar com o Ollama.';
+    : i18n.t('assistente.algoDeuErrado');
 }
 
 function carregar(): EstadoSalvo {

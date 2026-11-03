@@ -1,13 +1,14 @@
 <section class="painel">
-  <h3>{{ topicoId() ? 'Seu desempenho neste tópico' : 'Seu progresso' }}</h3>
+  <h3>{{ i18n.t(topicoId() ? 'progresso.tituloTopico' : 'progresso.tituloGeral') }}</h3>
 
   @if (respondidos() === 0) {
-    <p class="vazio">
-      Nenhum exercício respondido ainda. O desempenho aparece aqui assim que você treinar.
-    </p>
+    <p class="vazio">{{ i18n.t('progresso.vazio') }}</p>
   } @else {
     <div class="resumo">
-      <div class="dominio" [attr.aria-label]="'Aproveitamento de ' + percentual() + ' por cento'">
+      <div
+        class="dominio"
+        [attr.aria-label]="i18n.t('progresso.aproveitamento', { percentual: percentual() ?? 0 })"
+      >
         @for (cheio of pontos(); track $index) {
           <span class="ponto" [class.cheio]="cheio"></span>
         }
@@ -16,12 +17,12 @@
 
       <dl class="numeros">
         <div>
-          <dt>Acertos</dt>
-          <dd>{{ acertos() }} de {{ respondidos() }}</dd>
+          <dt>{{ i18n.t('progresso.acertos') }}</dt>
+          <dd>{{ i18n.t('progresso.acertosDe', { acertos: acertos(), total: respondidos() }) }}</dd>
         </div>
         @if (melhorSequencia(); as sequencia) {
           <div>
-            <dt>Melhor sequência</dt>
+            <dt>{{ i18n.t('progresso.melhorSequencia') }}</dt>
             <dd>{{ sequencia }}</dd>
           </div>
         }
@@ -31,14 +32,15 @@
 
   @if (paraRevisar().length > 0) {
     <div class="revisar">
-      <p class="aviso">Vale revisar:</p>
+      <p class="aviso">{{ i18n.t('progresso.valeRevisar') }}</p>
       <ul>
         @for (conceito of paraRevisar(); track conceito.id) {
           <li>
             <app-botao-teoria [conceito]="conceito.id" [discreto]="true" />
             <span class="contagem">
-              {{ conceito.erros }} {{ conceito.erros === 1 ? 'erro' : 'erros' }} em
-              {{ conceito.total }}
+              {{ conceito.erros }}
+              {{ i18n.t(conceito.erros === 1 ? 'progresso.erro' : 'progresso.erros') }}
+              {{ i18n.t('progresso.emTotal', { total: conceito.total }) }}
             </span>
           </li>
         }

@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+import { I18nService } from '@core/i18n/services/i18n.service';
 import { Mensagem, ModeloOllama, Papel } from '@core/assistente/models/assistente.model';
 
 /** O que a API do Ollama devolve em `/api/tags`. */
@@ -41,6 +42,8 @@ const PAPEL_NA_API: Readonly<Record<Papel, string>> = {
  */
 @Injectable({ providedIn: 'root' })
 export class OllamaService {
+  private readonly i18n = inject(I18nService);
+
   /** Os modelos instalados, do maior para o menor. */
   async modelos(servidor: string): Promise<readonly ModeloOllama[]> {
     const resposta = await this.buscar(`${semBarra(servidor)}/api/tags`);
@@ -95,7 +98,7 @@ export class OllamaService {
       (await this.pedirChat(url, corpo, sinal, true))!;
 
     if (resposta.body === null) {
-      throw new FalhaDoOllama('O servidor respondeu sem conteúdo.');
+      throw new FalhaDoOllama(this.i18n.t('assistente.semConteudo'));
     }
 
     const leitor = resposta.body.pipeThrough(new TextDecoderStream()).getReader();
@@ -185,11 +188,7 @@ export class OllamaService {
       if (erro instanceof DOMException && erro.name === 'AbortError') {
         throw erro;
       }
-      throw new FalhaDoOllama(
-        `Não consegui falar com o Ollama em ${url}. Ele está rodando? ` +
-          'E, se este site está aberto pela internet, o Ollama precisa autorizar a origem: ' +
-          'inicie com OLLAMA_ORIGINS="*" ollama serve.',
-      );
+      throw new FalhaDoOllama(this.i18n.t('assistente.semContato', { url }));
     }
 
     if (!resposta.ok) {
@@ -198,9 +197,12 @@ export class OllamaService {
       const detalhe = await resposta.text().catch(() => '');
 
       throw new FalhaDoOllama(
-        `O Ollama respondeu ${resposta.status}. ` +
-          (resposta.status === 404 ? 'Esse modelo está instalado? ' : '') +
-          (detalhe.trim() === '' ? 'Veja o terminal dele.' : detalhe.slice(0, 300)),
+        this.i18n.t('assistente.respostaRuim', {
+          status: resposta.status,
+          detalhe:
+            (resposta.status === 404 ? `${this.i18n.t('assistente.modeloInstalado')} ` : '') +
+            (detalhe.trim() === '' ? this.i18n.t('assistente.vejaTerminal') : detalhe.slice(0, 300)),
+        }),
       );
     }
 

@@ -6,6 +6,7 @@ import { GLOSSARIO } from '@curriculo/glossario';
 import { CartaoTopico } from '@shared/components/cartao-topico/cartao-topico';
 import { PainelProgresso } from '@shared/components/painel-progresso/painel-progresso';
 import { PainelTrilha } from '@shared/components/painel-trilha/painel-trilha';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 /** Página inicial: o roteiro inteiro de estudo e o progresso acumulado. */
 @Component({
@@ -16,6 +17,8 @@ import { PainelTrilha } from '@shared/components/painel-trilha/painel-trilha';
   styleUrl: './home.scss',
 })
 export class Home {
+  protected readonly i18n = inject(I18nService);
+
   private readonly revisao = inject(RevisaoService);
 
   /** A fila de revisão de hoje, para o convite aparecer só quando há o que revisar. */

@@ -6,7 +6,7 @@
       (click)="alternarMenu()"
       [attr.aria-expanded]="menuAberto()"
       aria-controls="navegacao"
-      aria-label="Abrir ou fechar o menu de tópicos"
+      [attr.aria-label]="i18n.t('shell.menu')"
     >
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
         <path fill="currentColor" d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z" />
@@ -15,7 +15,7 @@
 
     <a class="marca" routerLink="/" (click)="fecharMenu()">
       <span class="simbolo" aria-hidden="true">∫</span>
-      <span class="nome">Estudos Matemáticos</span>
+      <span class="nome">{{ i18n.t('shell.marca') }}</span>
     </a>
 
     <button
@@ -23,8 +23,8 @@
       class="assistente"
       (click)="assistente.alternar()"
       [attr.aria-pressed]="assistente.aberto()"
-      aria-label="Mostrar ou esconder o assistente"
-      title="Assistente"
+      [attr.aria-label]="i18n.t('shell.assistente')"
+      [title]="i18n.t('shell.assistenteTitulo')"
     >
       <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
         <path
@@ -39,8 +39,8 @@
       class="calculadora"
       (click)="calculadora.alternar()"
       [attr.aria-pressed]="calculadora.aberta()"
-      aria-label="Mostrar ou esconder a calculadora"
-      title="Calculadora"
+      [attr.aria-label]="i18n.t('shell.calculadora')"
+      [title]="i18n.t('shell.calculadoraTitulo')"
     >
       <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
         <path
@@ -54,8 +54,8 @@
       type="button"
       class="tema"
       (click)="tema.alternar()"
-      [attr.aria-label]="'Alternar tema. Atual: ' + rotuloTema[tema.tema()]"
-      [title]="rotuloTema[tema.tema()]"
+      [attr.aria-label]="i18n.t('shell.tema', { atual: i18n.t(chaveDoTema[tema.tema()]) })"
+      [title]="i18n.t(chaveDoTema[tema.tema()])"
     >
       @switch (tema.tema()) {
         @case ('claro') {
@@ -83,6 +83,16 @@
           </svg>
         }
       }
+    </button>
+
+    <button
+      type="button"
+      class="idioma"
+      (click)="alternarIdioma()"
+      [attr.aria-label]="i18n.t('shell.idioma', { atual: nomeDoIdioma[i18n.idioma()] })"
+      [title]="nomeDoIdioma[i18n.idioma()]"
+    >
+      <span aria-hidden="true">{{ sigla[i18n.idioma()] }}</span>
     </button>
   </header>
 

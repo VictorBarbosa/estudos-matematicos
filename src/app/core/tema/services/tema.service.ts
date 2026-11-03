@@ -5,10 +5,16 @@ export type Tema = 'sistema' | 'claro' | 'escuro';
 const CHAVE = 'estudos-matematicos.tema';
 const CICLO: readonly Tema[] = ['sistema', 'claro', 'escuro'];
 
-export const ROTULO_TEMA: Readonly<Record<Tema, string>> = {
-  sistema: 'Tema do sistema',
-  claro: 'Tema claro',
-  escuro: 'Tema escuro',
+/**
+ * A chave de tradução de cada tema.
+ *
+ * O rótulo em si vive no dicionário: o botão de tema precisa falar a língua
+ * escolhida como o resto da interface.
+ */
+export const CHAVE_DO_TEMA: Readonly<Record<Tema, string>> = {
+  sistema: 'tema.sistema',
+  claro: 'tema.claro',
+  escuro: 'tema.escuro',
 };
 
 /**

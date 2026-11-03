@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { TopicoCurriculo, rotaDoTopico } from '@curriculo/curriculo';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 /** Cartão de um tópico na página inicial. */
 @Component({
@@ -13,6 +14,8 @@ import { ProgressoService } from '@core/treino/services/progresso.service';
   styleUrl: './cartao-topico.scss',
 })
 export class CartaoTopico {
+  protected readonly i18n = inject(I18nService);
+
   readonly areaId = input.required<string>();
   readonly topico = input.required<TopicoCurriculo>();
 

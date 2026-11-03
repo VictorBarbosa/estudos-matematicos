@@ -1,41 +1,63 @@
 @if (etapa(); as etapa) {
   <aside class="etapa" [attr.data-concluida]="concluida()">
     <div class="identificacao">
-      <span class="numero">Etapa {{ etapa.numero }}<span class="de">/{{ total }}</span></span>
-      <span class="area">{{ etapa.areaTitulo }}</span>
+      <span class="numero"
+        >{{ i18n.t('etapa.numero', { numero: etapa.numero })
+        }}<span class="de">/{{ total }}</span></span
+      >
+      <span class="area">{{ i18n.tituloDaArea(etapa.areaId) }}</span>
     </div>
 
     <div class="estado">
       @if (concluida()) {
         <p class="vencida">
           <span class="selo" aria-hidden="true">✓</span>
-          Etapa vencida — {{ dominio().acertos }} acertos nas últimas {{ janela }} tentativas,
-          {{ dominio().acertosExigentes }} delas no Médio ou no Difícil.
+          {{
+            i18n.t('etapa.vencida', {
+              acertos: dominio().acertos,
+              janela: janela,
+              exigentes: dominio().acertosExigentes
+            })
+          }}
         </p>
       } @else {
         <p class="meta">
-          Para liberar a próxima etapa, acerte
-          <strong>{{ alvo }} das últimas {{ janela }} tentativas</strong> na aba Treinar, com
-          <strong>{{ alvoExigente }} acertos no Médio ou no Difícil</strong>, terminando em
-          <strong>{{ alvoSeguidos }} acertos seguidos</strong> — essa última conta zera a cada
-          erro.
+          <!-- A frase traz <strong> nos números: o destaque faz parte do texto e muda
+               de lugar conforme a língua, então viaja junto no dicionário. -->
+          <span
+            [innerHTML]="
+              i18n.t('etapa.meta', {
+                alvo: alvo,
+                janela: janela,
+                exigente: alvoExigente,
+                seguidos: alvoSeguidos
+              })
+            "
+          ></span>
           @if (requisitos().length > 0) {
             <span class="cobertura">
-              Além disso, {{ requisitos()[0]!.acertos }} acertos em cada tipo de exercício:
+              {{ i18n.t('etapa.cobertura', { acertos: requisitos()[0]!.acertos }) }}
               @for (requisito of requisitos(); track requisito.conceito; let ultimo = $last) {
                 <span [class.cumprido]="requisito.cumprido"
-                  >{{ requisito.rotulo }} {{ requisito.feitos }}/{{ requisito.acertos }}</span
+                  >{{ i18n.t(requisito.rotulo) }}
+                  {{ requisito.feitos }}/{{ requisito.acertos }}</span
                 >{{ ultimo ? '.' : ' · ' }}
               }
             </span>
           }
           @if (dominio().respostas > 0) {
             <span class="restante">
-              Agora: {{ dominio().acertos }}/{{ alvo }} acertos
+              {{ i18n.t('etapa.agora', { acertos: dominio().acertos, alvo: alvo }) }}
               @if (faltamExigentes() > 0) {
-                · faltam {{ faltamExigentes() }} no Médio ou Difícil
+                · {{ i18n.t('etapa.faltamExigentes', { quantos: faltamExigentes() }) }}
               }
-              · {{ dominio().seguidosNoFim }}/{{ alvoSeguidos }} seguidos
+              ·
+              {{
+                i18n.t('etapa.seguidos', {
+                  quantos: dominio().seguidosNoFim,
+                  alvo: alvoSeguidos
+                })
+              }}
             </span>
           }
         </p>
@@ -43,7 +65,9 @@
 
       <ol
         class="marcadores"
-        [attr.aria-label]="avanco() + ' de ' + alvo + ' acertos nas últimas ' + janela + ' tentativas'"
+        [attr.aria-label]="
+          i18n.t('etapa.marcadores', { avanco: avanco(), alvo: alvo, janela: janela })
+        "
       >
         @for (cheio of marcadores(); track $index) {
           <li [class.cheio]="cheio"></li>
@@ -54,22 +78,21 @@
     @if (proxima(); as proxima) {
       @if (proximaLiberada()) {
         <a class="avancar" [routerLink]="proxima.rota">
-          Próxima etapa: {{ proxima.titulo }}
+          {{ i18n.t('etapa.proxima', { titulo: i18n.tituloDoTopico(proxima.topicoId) }) }}
           <span aria-hidden="true">→</span>
         </a>
       } @else {
         <p class="trancada">
           <span aria-hidden="true">🔒</span>
-          A seguir: {{ proxima.titulo }}
+          {{ i18n.t('etapa.aSeguir', { titulo: i18n.tituloDoTopico(proxima.topicoId) }) }}
         </p>
       }
     } @else {
-      <p class="trancada">Última etapa da trilha.</p>
+      <p class="trancada">{{ i18n.t('etapa.ultima') }}</p>
     }
 
     @if (modoLivre()) {
-      <p class="aviso-livre">Modo livre ligado: tudo está acessível, mas as etapas continuam
-        contando.</p>
+      <p class="aviso-livre">{{ i18n.t('etapa.modoLivre') }}</p>
     }
   </aside>
 }

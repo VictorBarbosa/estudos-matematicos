@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, input, model } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, model, inject } from '@angular/core';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 let proximoId = 0;
 
@@ -13,6 +14,8 @@ let proximoId = 0;
   styleUrl: './controle-parametro.scss',
 })
 export class ControleParametro {
+  protected readonly i18n = inject(I18nService);
+
   readonly valor = model.required<number>();
   readonly rotulo = input.required<string>();
   readonly min = input(0);

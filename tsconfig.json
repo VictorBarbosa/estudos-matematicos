@@ -9,6 +9,9 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+    // Os dicionários de tradução são JSON: um formato que se edita sem compilar
+    // e que um tradutor consegue abrir sem saber TypeScript.
+    "resolveJsonModule": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",

@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CURRICULO, rotaDoTopico } from '@curriculo/curriculo';
+import { I18nService } from '@core/i18n/services/i18n.service';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { RevisaoService } from '@core/revisao/services/revisao.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
@@ -30,17 +31,22 @@ export class Sidebar {
   private readonly progressao = inject(ProgressaoService);
   private readonly revisao = inject(RevisaoService);
 
+  protected readonly i18n = inject(I18nService);
+
   /** Quantos tópicos a fila de revisão de hoje tem, para o atalho aparecer. */
   protected readonly naFilaDeRevisao = computed(() => this.revisao.fila().length);
 
   protected readonly areas = computed(() =>
     CURRICULO.map((area) => ({
       ...area,
+      titulo: this.i18n.tituloDaArea(area.id),
       prontos: area.topicos.filter((topico) => topico.pronto).length,
       topicos: area.topicos.map((topico) => {
         const aproveitamento = this.progresso.aproveitamentoDe(topico.id);
         return {
           ...topico,
+          titulo: this.i18n.tituloDoTopico(topico.id),
+          descricao: this.i18n.descricaoDoTopico(topico.id),
           rota: rotaDoTopico(area.id, topico.id),
           percentual: aproveitamento === null ? null : Math.round(aproveitamento * 100),
           liberado: this.progressao.estaLiberada(topico.id),

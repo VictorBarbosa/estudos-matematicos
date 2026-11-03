@@ -11,6 +11,7 @@ import { CARREGAR_GERADOR } from '@core/treino/registro-geradores/registro-gerad
 import { GeradorExercicio } from '@core/treino/models/treino.model';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 /**
  * A fila de revisão do dia.
@@ -31,6 +32,8 @@ import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
   styleUrl: './revisar.scss',
 })
 export class Revisar {
+  protected readonly i18n = inject(I18nService);
+
   private readonly revisao = inject(RevisaoService);
 
   /**

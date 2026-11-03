@@ -14,7 +14,7 @@
       </div>
 
       @if (podeDispensar()) {
-        <button type="button" class="fechar" (click)="atualizacao.dispensar()" aria-label="Fechar">
+        <button type="button" class="fechar" (click)="atualizacao.dispensar()" [attr.aria-label]="i18n.t('teoria.fechar')">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
             <path
               fill="currentColor"
@@ -32,7 +32,7 @@
         [disabled]="atualizacao.aplicando()"
         (click)="atualizacao.recarregar()"
       >
-        {{ atualizacao.aplicando() ? 'Reiniciando…' : 'Reiniciar agora' }}
+        {{ i18n.t(atualizacao.aplicando() ? 'atualizacao.reiniciando' : 'atualizacao.reiniciar') }}
       </button>
     </div>
   </article>

@@ -53,6 +53,7 @@
 }
 
 .tema,
+.idioma,
 .calculadora,
 .assistente {
   @include botao-sutil;
@@ -137,4 +138,10 @@
   .marca .nome {
     font-size: var(--texto-sm);
   }
+}
+
+.idioma span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }

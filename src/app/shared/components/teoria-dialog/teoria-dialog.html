@@ -7,10 +7,10 @@
         <div>
           <h2>{{ teoria.tituloAberto() }}</h2>
           <p class="resumo">
-            {{ teoria.carregando() ? 'Carregando a explicação…' : 'Não foi possível carregar a explicação agora.' }}
+            {{ teoria.carregando() ? i18n.t('teoria.carregando') : i18n.t('teoria.erro') }}
           </p>
         </div>
-        <button type="button" class="fechar" (click)="teoria.fechar()" aria-label="Fechar">
+        <button type="button" class="fechar" (click)="teoria.fechar()" [attr.aria-label]="i18n.t('teoria.fechar')">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
             <path
               fill="currentColor"
@@ -29,7 +29,7 @@
           <h2>{{ conteudo.titulo }}</h2>
           <p class="resumo">{{ conteudo.resumo }}</p>
         </div>
-        <button type="button" class="fechar" (click)="teoria.fechar()" aria-label="Fechar">
+        <button type="button" class="fechar" (click)="teoria.fechar()" [attr.aria-label]="i18n.t('teoria.fechar')">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
             <path
               fill="currentColor"
@@ -40,13 +40,13 @@
       </header>
 
       <section class="secao">
-        <h3>Definição</h3>
+        <h3>{{ i18n.t('teoria.definicao') }}</h3>
         <p>{{ conteudo.definicao }}</p>
       </section>
 
       @if (conteudo.formulas.length > 0) {
         <section class="secao">
-          <h3>Fórmula</h3>
+          <h3>{{ i18n.t('teoria.formula') }}</h3>
           @for (formula of conteudo.formulas; track $index) {
             <div class="formula">
               <app-formula [tex]="formula.tex" [bloco]="true" />
@@ -60,14 +60,14 @@
 
       @if (conteudo.demonstracao.length > 0) {
         <section class="secao">
-          <h3>Por que funciona</h3>
+          <h3>{{ i18n.t('teoria.porQueFunciona') }}</h3>
           <app-passo-a-passo [passos]="conteudo.demonstracao" />
         </section>
       }
 
       @if (conteudo.exemplo; as exemplo) {
         <section class="secao">
-          <h3>Exemplo</h3>
+          <h3>{{ i18n.t('teoria.exemplo') }}</h3>
           <p class="enunciado">{{ exemplo.enunciado }}</p>
           <app-passo-a-passo [passos]="exemplo.passos" />
         </section>
@@ -75,7 +75,7 @@
 
       @if (conteudo.vejaTambem?.length) {
         <footer class="relacionados">
-          <h3>Veja também</h3>
+          <h3>{{ i18n.t('teoria.vejaTambem') }}</h3>
           <div class="lista">
             @for (id of conteudo.vejaTambem; track id) {
               <button type="button" class="relacionado" (click)="teoria.abrir(id)">

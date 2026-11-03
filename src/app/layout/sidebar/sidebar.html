@@ -1,7 +1,7 @@
-<nav class="sidebar" aria-label="Tópicos de estudo">
+<nav class="sidebar" [attr.aria-label]="i18n.t('sidebar.titulo')">
   @if (naFilaDeRevisao() > 0) {
     <a class="atalho-revisao" routerLink="/revisar" routerLinkActive="ativo" (click)="navegou.emit()">
-      Revisão de hoje
+      {{ i18n.t('sidebar.revisao') }}
       <span class="quantos">{{ naFilaDeRevisao() }}</span>
     </a>
   }
@@ -12,7 +12,9 @@
         {{ area.titulo }}
         <span
           class="contagem"
-          [attr.aria-label]="area.prontos + ' de ' + area.topicos.length + ' prontos'"
+          [attr.aria-label]="
+            i18n.t('sidebar.prontos', { prontos: area.prontos, total: area.topicos.length })
+          "
         >
           {{ area.prontos }}/{{ area.topicos.length }}
         </span>
@@ -30,20 +32,23 @@
               >
                 {{ topico.titulo }}
                 @if (topico.concluido) {
-                  <span class="vencido" aria-label="etapa vencida">✓</span>
+                  <span class="vencido" [attr.aria-label]="i18n.t('sidebar.vencida')">✓</span>
                 } @else if (topico.percentual !== null) {
                   <span class="aproveitamento">{{ topico.percentual }}%</span>
                 }
               </a>
             } @else if (topico.pronto) {
-              <span class="trancado" [title]="'Vença as etapas anteriores para liberar: ' + topico.titulo">
+              <span
+                class="trancado"
+                [title]="i18n.t('sidebar.trancadoTitulo', { titulo: topico.titulo })"
+              >
                 {{ topico.titulo }}
-                <span class="cadeado" aria-label="trancado">🔒</span>
+                <span class="cadeado" [attr.aria-label]="i18n.t('sidebar.trancado')">🔒</span>
               </span>
             } @else {
               <span class="pendente" [title]="topico.descricao">
                 {{ topico.titulo }}
-                <span class="etiqueta">em breve</span>
+                <span class="etiqueta">{{ i18n.t('sidebar.emBreve') }}</span>
               </span>
             }
           </li>

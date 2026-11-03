@@ -3,6 +3,7 @@ import { ProgressoService } from '@core/treino/services/progresso.service';
 import { TOPICO_DO_CONCEITO } from '@core/teoria/registro-teorias/registro-teorias';
 import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 /** Quantos pontos de domínio a barra exibe. */
 const PONTOS = 5;
@@ -22,6 +23,8 @@ const PONTOS = 5;
   styleUrl: './painel-progresso.scss',
 })
 export class PainelProgresso {
+  protected readonly i18n = inject(I18nService);
+
   /** Quando omitido, o painel resume todos os tópicos. */
   readonly topicoId = input<string>();
 

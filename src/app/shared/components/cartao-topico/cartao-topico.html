@@ -4,18 +4,18 @@
       @if (etapa(); as etapa) {
         <span class="numero">{{ etapa.numero }}.</span>
       }
-      {{ topico().titulo }}
+      {{ i18n.tituloDoTopico(topico().id) }}
     </h3>
-    <p>{{ topico().descricao }}</p>
+    <p>{{ i18n.descricaoDoTopico(topico().id) }}</p>
     <footer>
       @if (concluido()) {
-        <span class="selo vencido">Etapa vencida ✓</span>
+        <span class="selo vencido">{{ i18n.t('cartao.vencida') }}</span>
       } @else if (eAtual()) {
-        <span class="selo atual">Sua vez</span>
+        <span class="selo atual">{{ i18n.t('cartao.suaVez') }}</span>
       } @else if (percentual() !== null) {
-        <span class="selo progresso">{{ percentual() }}% de acerto</span>
+        <span class="selo progresso">{{ i18n.t('cartao.acerto', { percentual: percentual()! }) }}</span>
       } @else {
-        <span class="selo">Disponível</span>
+        <span class="selo">{{ i18n.t('cartao.disponivel') }}</span>
       }
     </footer>
   </a>
@@ -25,19 +25,19 @@
       @if (etapa(); as etapa) {
         <span class="numero">{{ etapa.numero }}.</span>
       }
-      {{ topico().titulo }}
+      {{ i18n.tituloDoTopico(topico().id) }}
     </h3>
-    <p>{{ topico().descricao }}</p>
+    <p>{{ i18n.descricaoDoTopico(topico().id) }}</p>
     <footer>
-      <span class="selo">🔒 Vença as etapas anteriores</span>
+      <span class="selo">{{ i18n.t('cartao.trancado') }}</span>
     </footer>
   </div>
 } @else {
   <div class="cartao pendente">
-    <h3>{{ topico().titulo }}</h3>
-    <p>{{ topico().descricao }}</p>
+    <h3>{{ i18n.tituloDoTopico(topico().id) }}</h3>
+    <p>{{ i18n.descricaoDoTopico(topico().id) }}</p>
     <footer>
-      <span class="selo">Em breve</span>
+      <span class="selo">{{ i18n.t('cartao.emBreve') }}</span>
     </footer>
   </div>
 }

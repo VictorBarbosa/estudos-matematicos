@@ -272,15 +272,15 @@ describe('ProgressaoService', () => {
     // Quatro operações com frações simples, as mesmas quatro com números
     // mistos — que têm armadilhas próprias — e a conversão de decimal.
     expect(operacoes.map((requisito) => requisito.rotulo)).toEqual([
-      'soma',
-      'subtração',
-      'multiplicação',
-      'divisão',
-      'soma com mistos',
-      'subtração com mistos',
-      'multiplicação com mistos',
-      'divisão com mistos',
-      'decimal em fração',
+      'tipoFracao.soma',
+      'tipoFracao.subtracao',
+      'tipoFracao.multiplicacao',
+      'tipoFracao.divisao',
+      'tipoFracao.somaMista',
+      'tipoFracao.subtracaoMista',
+      'tipoFracao.multiplicacaoMista',
+      'tipoFracao.divisaoMista',
+      'tipoFracao.decimal',
     ]);
 
     // Constância perfeita, mas só em soma: a etapa continua fechada.
@@ -316,12 +316,12 @@ describe('ProgressaoService', () => {
     expect(progressao.dominioEm(fracoes).vencido).toBe(true);
   });
 
-  it('quatro acertos num tipo não bastam: são cinco', () => {
+  it('um acerto a menos num tipo já segura a etapa', () => {
     const fracoes = 'fracoes';
 
     for (const requisito of REQUISITOS_POR_TOPICO[fracoes]!) {
       const quantos =
-        requisito.rotulo === 'divisão com mistos' ? ACERTOS_POR_TIPO - 1 : requisito.acertos;
+        requisito.rotulo === 'tipoFracao.divisaoMista' ? ACERTOS_POR_TIPO - 1 : requisito.acertos;
 
       for (let i = 0; i < quantos; i++) {
         progresso.registrar({
@@ -335,7 +335,7 @@ describe('ProgressaoService', () => {
     }
 
     const pendentes = progressao.requisitosPendentes(fracoes);
-    expect(pendentes.map((r) => r.rotulo)).toEqual(['divisão com mistos']);
+    expect(pendentes.map((r) => r.rotulo)).toEqual(['tipoFracao.divisaoMista']);
     expect(pendentes[0]!.feitos).toBe(ACERTOS_POR_TIPO - 1);
     expect(progressao.dominioEm(fracoes).vencido).toBe(false);
   });
@@ -353,7 +353,7 @@ describe('ProgressaoService', () => {
 
     const divisao = progressao
       .dominioEm('fracoes')
-      .requisitos.find((requisito) => requisito.rotulo === 'divisão')!;
+      .requisitos.find((requisito) => requisito.rotulo === 'tipoFracao.divisao')!;
 
     expect(divisao.feitos).toBe(0);
     expect(divisao.cumprido).toBe(false);
@@ -393,8 +393,8 @@ describe('exigenciasDaEtapa', () => {
 
     expect(rotulos.length).toBe(4);
     expect(rotulos.some((rotulo) => rotulo.includes('respondidos'))).toBe(true);
-    expect(rotulos.some((rotulo) => rotulo.includes('acertos entre eles'))).toBe(true);
-    expect(rotulos.some((rotulo) => rotulo.includes('Médio'))).toBe(true);
+    expect(rotulos.some((rotulo) => rotulo.includes('exigencia.acertosEntreEles'))).toBe(true);
+    expect(rotulos.some((rotulo) => rotulo.includes('acertosExigentes'))).toBe(true);
     expect(rotulos.some((rotulo) => rotulo.includes('seguidos'))).toBe(true);
   });
 
@@ -412,7 +412,7 @@ describe('exigenciasDaEtapa', () => {
     expect(antes.feitos).toBe(ACERTOS_SEGUIDOS_FINAIS);
     expect(depois.feitos).toBe(0);
     // Os acertos da janela continuam lá: o erro não apaga o que foi feito.
-    expect(exigencia('aaae', 'acertos entre eles').feitos).toBe(3);
+    expect(exigencia('aaae', 'exigencia.acertosEntreEles').feitos).toBe(3);
   });
 
   it('a sequência final é a única marcada como zerável', () => {
@@ -428,7 +428,7 @@ describe('exigenciasDaEtapa', () => {
     // Dez acertos seguidos são dez, mas a exigência é de três: mostrar 10/3
     // faria o aluno procurar um erro que não existe.
     expect(exigencia('aaaaaaaaaa', 'seguidos').feitos).toBe(ACERTOS_SEGUIDOS_FINAIS);
-    expect(exigencia('aaaaaaaaaa', 'acertos entre eles').feitos).toBe(ACERTOS_NA_JANELA);
+    expect(exigencia('aaaaaaaaaa', 'exigencia.acertosEntreEles').feitos).toBe(ACERTOS_NA_JANELA);
   });
 
   it('com a janela cheia de acertos, tudo está cumprido', () => {
@@ -450,7 +450,7 @@ describe('exigenciasDaEtapa', () => {
 
   it('acerto no Fácil não conta como acerto exigente', () => {
     const facil = exigenciasDaEtapa(dominioDe(historico('aaa', 'facil')));
-    const exigentes = facil.find((item) => item.rotulo.includes('Médio'))!;
+    const exigentes = facil.find((item) => item.rotulo.includes('acertosExigentes'))!;
 
     expect(exigentes.feitos).toBe(0);
     expect(exigentes.alvo).toBe(ACERTOS_EXIGENTES);

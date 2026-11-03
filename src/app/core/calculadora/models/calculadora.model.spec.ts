@@ -62,7 +62,7 @@ describe('a conta', () => {
     const estado = calcular({ ...ESTADO_INICIAL, expressao: '2+' }, 'rad');
 
     expect(estado.resultado).toBeNull();
-    expect(estado.erro).toContain('calcular');
+    expect(estado.erro?.chave).toBe('calculadora.naoCalcula');
   });
 
   it('divisão por zero não vira resultado', () => {
@@ -324,26 +324,27 @@ describe('MMC e MDC', () => {
   });
 
   it('um número só pede o segundo', () => {
-    expect(calcularInteiros('7', 'mmc').erro).toContain('pelo menos dois');
+    expect(calcularInteiros('7', 'mmc').erro?.chave).toBe('calculadora.aoMenosDois');
   });
 
   it('o que não é inteiro é recusado pelo nome', () => {
-    expect(calcularInteiros('12, abc', 'mmc').erro).toContain('"abc"');
-    expect(calcularInteiros('12, 1.5', 'mmc').erro).toContain('1.5');
-    expect(calcularInteiros('12, -4', 'mdc').erro).toContain('-4');
+    // A parte recusada viaja no erro para aparecer na frase, em qualquer idioma.
+    expect(calcularInteiros('12, abc', 'mmc').erro?.valores).toEqual({ parte: 'abc' });
+    expect(calcularInteiros('12, 1.5', 'mmc').erro?.valores).toEqual({ parte: '1.5' });
+    expect(calcularInteiros('12, -4', 'mdc').erro?.valores).toEqual({ parte: '-4' });
   });
 
   it('o zero fica de fora', () => {
     // mdc(0, n) = n e mmc(n, 0) = 0: respostas verdadeiras e inúteis para
     // quem está aprendendo o que as duas contas significam.
-    expect(calcularInteiros('0, 12', 'mmc').erro).toContain('zero');
+    expect(calcularInteiros('0, 12', 'mmc').erro?.chave).toBe('calculadora.semZero');
   });
 
   it('não devolve resultado que o ponto flutuante não aguenta', () => {
     const gigante = calcularInteiros('999999937, 999999893, 999999929', 'mmc');
 
     expect(gigante.valor).toBeNull();
-    expect(gigante.erro).toContain('exat');
+    expect(gigante.erro?.chave).toBe('calculadora.passaDoExato');
   });
 });
 

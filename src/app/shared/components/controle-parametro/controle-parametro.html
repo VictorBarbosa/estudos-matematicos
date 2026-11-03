@@ -24,7 +24,7 @@
       [step]="passo()"
       [value]="valor()"
       (input)="aoDigitar($event)"
-      [attr.aria-label]="rotulo() + ' (valor exato)'"
+      [attr.aria-label]="i18n.t('controle.valorExato', { rotulo: rotulo() })"
     />
   </div>
 
