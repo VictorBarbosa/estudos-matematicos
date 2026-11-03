@@ -291,7 +291,7 @@ leve. O recado não muda o veredito nem o conceito contado: é sobre a escrita, 
 sobre a matemática. Quem respondeu `0,5` não o recebe — apontar termos que ele não escreveu
 soaria como erro de leitura.
 
-Cinco travas globais cuidam dessa parte, para os 76 geradores de uma vez
+Cinco travas globais cuidam dessa parte, para os 79 geradores de uma vez
 (`core/treino/formato-resposta/`, `shared/components/formula/formulas-do-site.spec.ts`,
 `core/teoria/teorias/`):
 
@@ -498,8 +498,8 @@ Todos os tópicos do currículo estão implementados. Para acrescentar um novo, 
 
 ## Estado atual
 
-**76 dos 92 tópicos do currículo estão implementados**, nas doze áreas, na ordem de
-aprendizagem. Os 16 restantes vieram do plano de estudo e já aparecem na navegação com a
+**79 dos 92 tópicos do currículo estão implementados**, nas doze áreas, na ordem de
+aprendizagem. Os 13 restantes vieram do plano de estudo e já aparecem na navegação com a
 etiqueta **em breve** — o que falta fica visível em vez de escondido, que é para isso que o
 currículo tem o campo `pronto`.
 
@@ -514,7 +514,7 @@ currículo tem o campo `pronto`.
 | 7 | Geometria analítica | 3 de 4 |
 | 8 | Física | 12 de 17 |
 | 9 | Pré-cálculo | 2 |
-| 10 | Cálculo 1 | 8 de 11 |
+| 10 | Cálculo 1 | 11 |
 | 11 | Cálculo 2 | 7 de 9 |
 | 12 | Combinatória e estatística | 3 de 5 |
 | 10 | Pré-cálculo | 3 |

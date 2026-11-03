@@ -21,6 +21,9 @@ import { TEORIA_CONTINUIDADE as t_continuidade } from '@features/calculo-1/conti
 import { TEORIA_DEFINICAO_DERIVADA as t_definicao_de_derivada } from '@features/calculo-1/definicao-de-derivada/definicao-de-derivada.teoria';
 import { TEORIA_LATERAIS as t_limites_laterais } from '@features/calculo-1/limites-laterais/limites-laterais.teoria';
 import { TEORIA_LIMITES as t_limites } from '@features/calculo-1/limites/limites.teoria';
+import { TEORIA_DERIVACAO_IMPLICITA as t_derivacao_implicita } from '@features/calculo-1/derivacao-implicita/derivacao-implicita.teoria';
+import { TEORIA_DERIVADAS_EXP_LOG as t_derivadas_exponencial_logaritmo } from '@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.teoria';
+import { TEORIA_DERIVADAS_TRIG as t_derivadas_trigonometricas } from '@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.teoria';
 import { TEORIA_CADEIA as t_regra_da_cadeia } from '@features/calculo-1/regra-da-cadeia/regra-da-cadeia.teoria';
 import { TEORIA_REGRAS as t_regras_de_derivacao } from '@features/calculo-1/regras-de-derivacao/regras-de-derivacao.teoria';
 import { TEORIA_TAXA as t_taxa_de_variacao } from '@features/calculo-1/taxa-de-variacao/taxa-de-variacao.teoria';
@@ -100,6 +103,9 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['limites-laterais', t_limites_laterais],
   ['limites', t_limites],
   ['regra-da-cadeia', t_regra_da_cadeia],
+  ['derivadas-trigonometricas', t_derivadas_trigonometricas],
+  ['derivadas-exponencial-logaritmo', t_derivadas_exponencial_logaritmo],
+  ['derivacao-implicita', t_derivacao_implicita],
   ['regras-de-derivacao', t_regras_de_derivacao],
   ['taxa-de-variacao', t_taxa_de_variacao],
   ['aplicacoes-da-integral', t_aplicacoes_da_integral],

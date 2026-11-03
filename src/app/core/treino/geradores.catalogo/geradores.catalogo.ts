@@ -21,6 +21,9 @@ import { geradorContinuidade as g_continuidade } from '@features/calculo-1/conti
 import { geradorDefinicaoDerivada as g_definicao_de_derivada } from '@features/calculo-1/definicao-de-derivada/definicao-de-derivada.gerador';
 import { geradorLimites as g_limites } from '@features/calculo-1/limites/limites.gerador';
 import { geradorLaterais as g_limites_laterais } from '@features/calculo-1/limites-laterais/limites-laterais.gerador';
+import { geradorDerivacaoImplicita as g_derivacao_implicita } from '@features/calculo-1/derivacao-implicita/derivacao-implicita.gerador';
+import { geradorDerivadasExpLog as g_derivadas_exponencial_logaritmo } from '@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.gerador';
+import { geradorDerivadasTrig as g_derivadas_trigonometricas } from '@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.gerador';
 import { geradorCadeia as g_regra_da_cadeia } from '@features/calculo-1/regra-da-cadeia/regra-da-cadeia.gerador';
 import { geradorRegras as g_regras_de_derivacao } from '@features/calculo-1/regras-de-derivacao/regras-de-derivacao.gerador';
 import { geradorTaxa as g_taxa_de_variacao } from '@features/calculo-1/taxa-de-variacao/taxa-de-variacao.gerador';
@@ -106,6 +109,9 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['limites', g_limites],
   ['limites-laterais', g_limites_laterais],
   ['regra-da-cadeia', g_regra_da_cadeia],
+  ['derivadas-trigonometricas', g_derivadas_trigonometricas],
+  ['derivadas-exponencial-logaritmo', g_derivadas_exponencial_logaritmo],
+  ['derivacao-implicita', g_derivacao_implicita],
   ['regras-de-derivacao', g_regras_de_derivacao],
   ['taxa-de-variacao', g_taxa_de_variacao],
   ['aplicacoes-da-integral', g_aplicacoes_da_integral],

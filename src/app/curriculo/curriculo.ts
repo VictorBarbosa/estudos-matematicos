@@ -697,21 +697,21 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'Derivadas trigonométricas',
         descricao:
           'Derivar seno, cosseno e tangente — e por que a derivada do seno é o cosseno.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'derivadas-exponencial-logaritmo',
         titulo: 'Derivadas de exponencial e logaritmo',
         descricao:
           'A função que é a própria derivada, e a que vira 1/x.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'derivacao-implicita',
         titulo: 'Derivação implícita',
         descricao:
           'Derivar sem isolar y, que é o caminho quando a curva não é uma função.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'aplicacoes-da-derivada',

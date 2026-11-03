@@ -1,0 +1,97 @@
+<app-topico-layout
+  titulo="Derivadas trigonométricas"
+  descricao="Derivar seno, cosseno e tangente — e por que a derivada do seno é o cosseno."
+  topicoId="derivadas-trigonometricas"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>A tabela inteira, em três linhas</h2>
+      <div class="tabela-derivadas">
+        @for (linha of tabela; track linha.funcaoTex) {
+          <div class="painel">
+            <div class="linha">
+              <app-formula [tex]="linha.funcaoTex" />
+              <span aria-hidden="true">→</span>
+              <app-formula [tex]="linha.derivadaTex" />
+            </div>
+            <p class="observacao">{{ linha.observacao }}</p>
+          </div>
+        }
+      </div>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="escolha"
+        rotulo="Função (0 = seno, 1 = cosseno)"
+        [min]="0"
+        [max]="1"
+      />
+      <app-controle-parametro [(valor)]="a" rotulo="Amplitude (a)" [min]="1" [max]="6" />
+      <app-controle-parametro [(valor)]="b" rotulo="Frequência (b)" [min]="1" [max]="4" />
+      <app-controle-parametro
+        [(valor)]="indiceDoArco"
+        rotulo="Arco notável"
+        [min]="0"
+        [max]="8"
+        dica="Percorre os arcos de 0 até π."
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+      <app-formula [tex]="derivadaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Valor exato em {{ arcoEscrito() }}</span>
+        <strong>{{ formatar(valorExato()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Conferência numérica</span>
+        <strong>{{ formatar(valorNumerico()) }}</strong>
+        <span class="legenda">derivada por diferença</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Fator interno</span>
+        <strong>{{ b() }}</strong>
+        <span class="legenda">multiplica a derivada inteira</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A função e sua derivada, lado a lado</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        Repare na defasagem: onde a função passa por um máximo, a derivada cruza o zero.
+        Aumente a frequência e veja a derivada crescer na mesma proporção — é o fator interno
+        da regra da cadeia aparecendo como amplitude.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Por que o radiano</h2>
+      <app-formula
+        [tex]="'\\lim_{h \\to 0}\\frac{\\operatorname{sen} h}{h} = 1'"
+        [bloco]="true"
+      />
+      <p class="observacao">
+        Esse limite só vale 1 em radianos. Em graus ele daria π/180, e toda a tabela ganharia
+        esse fator — é por isso que, em cálculo, ângulo se mede em radianos e ponto final.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

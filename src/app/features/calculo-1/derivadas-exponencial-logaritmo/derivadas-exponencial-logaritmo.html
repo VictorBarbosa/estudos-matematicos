@@ -1,0 +1,103 @@
+<app-topico-layout
+  titulo="Derivadas de exponencial e logaritmo"
+  descricao="A função que é a própria derivada, e a que vira 1/x."
+  topicoId="derivadas-exponencial-logaritmo"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>A tabela que fecha o Cálculo 1</h2>
+      <div class="tabela-derivadas">
+        @for (linha of tabela; track linha.funcaoTex) {
+          <div class="painel">
+            <div class="linha">
+              <app-formula [tex]="linha.funcaoTex" />
+              <span aria-hidden="true">→</span>
+              <app-formula [tex]="linha.derivadaTex" />
+            </div>
+            <p class="observacao">{{ linha.observacao }}</p>
+          </div>
+        }
+      </div>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente (a)" [min]="1" [max]="6" />
+      <app-controle-parametro [(valor)]="k" rotulo="Fator do expoente (k)" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="ponto" rotulo="Ponto" [min]="1" [max]="6" />
+      <app-controle-parametro
+        [(valor)]="multiplo"
+        rotulo="Múltiplo dentro do logaritmo"
+        [min]="1"
+        [max]="9"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="expTex()" [bloco]="true" />
+      <app-formula [tex]="expDerivadaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">f no ponto</span>
+        <strong>{{ formatar(valorDaExponencial()) }}</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">f' no ponto</span>
+        <strong>{{ formatar(derivadaDaExponencial()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Razão entre as duas</span>
+        <strong>{{ formatar(razao()) }}</strong>
+        <span class="legenda">é sempre o fator do expoente</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Derivar não muda a forma</h2>
+      <app-math-plot
+        [dominio]="dominioExponencial()"
+        [curvas]="curvasExponencial()"
+        [descricao]="descricaoExponencial()"
+        [altura]="340"
+      />
+      <p class="observacao">
+        As duas curvas são a mesma, em escalas diferentes: a razão entre elas vale exatamente o
+        fator do expoente, em qualquer ponto. Com k igual a 1 elas coincidem — e é só nesse
+        caso que a exponencial é literalmente a própria derivada.
+      </p>
+    </section>
+
+    <section>
+      <h2>O múltiplo que não sobrevive</h2>
+      <app-math-plot
+        [dominio]="dominioLogaritmo()"
+        [curvas]="curvasLogaritmo()"
+        [descricao]="descricaoLogaritmo()"
+        [altura]="340"
+      />
+      <div class="indicadores">
+        <div class="indicador">
+          <span class="rotulo">Derivada pela regra</span>
+          <strong>{{ formatar(derivadaDoLogaritmo()) }}</strong>
+        </div>
+        <div class="indicador">
+          <span class="rotulo">Conferência numérica</span>
+          <strong>{{ formatar(conferenciaDoLogaritmo()) }}</strong>
+        </div>
+      </div>
+      <app-formula [tex]="logTex()" [bloco]="true" />
+      <p class="observacao">
+        Mexa no múltiplo: a curva sobe ou desce inteira, mas a inclinação em cada x não muda.
+        Duas curvas que diferem por uma constante têm exatamente a mesma derivada — e é por
+        isso que o múltiplo de dentro do logaritmo desaparece.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

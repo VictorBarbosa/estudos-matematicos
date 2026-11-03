@@ -50,6 +50,9 @@ export * from '@core/math/geometria/analitica/analitica';
 export * from '@core/math/calculo/sequencias/sequencias';
 export * from '@core/math/calculo/limites/limites';
 export * from '@core/math/calculo/derivadas/derivadas';
+export * from '@core/math/calculo/derivadas-trig/derivadas-trig';
+export * from '@core/math/calculo/derivadas-exp-log/derivadas-exp-log';
+export * from '@core/math/calculo/derivacao-implicita/derivacao-implicita';
 export * from '@core/math/calculo/integrais/integrais';
 
 // Combinatória e estatística

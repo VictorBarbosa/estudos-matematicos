@@ -1,0 +1,24 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.tabela-derivadas {
+  display: grid;
+  gap: var(--esp-2);
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.tabela-derivadas .linha {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-1);
+}
+
+.tabela-derivadas p {
+  margin: var(--esp-1) 0 0;
+}
