@@ -80,5 +80,25 @@ export const rotas: Routes = [
     loadComponent: () =>
       import('@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes').then((m) => m.PropulsaoDeFoguetes),
   },
+  {
+    path: 'cinematica-vetorial',
+    title: 'Cinemática vetorial · Estudos Matemáticos',
+    loadComponent: () => import('@features/fisica/cinematica-vetorial/cinematica-vetorial').then((m) => m.CinematicaVetorial),
+  },
+  {
+    path: 'movimento-circular',
+    title: 'Movimento circular · Estudos Matemáticos',
+    loadComponent: () => import('@features/fisica/movimento-circular/movimento-circular').then((m) => m.MovimentoCircular),
+  },
+  {
+    path: 'dinamica-rotacional',
+    title: 'Dinâmica rotacional · Estudos Matemáticos',
+    loadComponent: () => import('@features/fisica/dinamica-rotacional/dinamica-rotacional').then((m) => m.DinamicaRotacional),
+  },
+  {
+    path: 'momento-angular',
+    title: 'Conservação do momento angular · Estudos Matemáticos',
+    loadComponent: () => import('@features/fisica/momento-angular/momento-angular').then((m) => m.MomentoAngular),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'analise-dimensional' },
 ];

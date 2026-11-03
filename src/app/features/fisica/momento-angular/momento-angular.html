@@ -1,0 +1,103 @@
+<app-topico-layout
+  titulo="Conservação do momento angular"
+  descricao="Sem torque externo, recolher a massa acelera o giro — e a energia não se conserva."
+  topicoId="momento-angular"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>A patinadora</h2>
+      <app-formula [tex]="'I_{1}\\omega_{1} = I_{2}\\omega_{2}'" [bloco]="true" />
+      <p class="observacao">
+        Sem torque externo, o produto da inércia pela velocidade angular não muda. Diminuir a
+        inércia obriga a velocidade angular a crescer na mesma proporção — é a patinadora que
+        recolhe os braços, o satélite que se estabiliza girando e a estrela em colapso que vira
+        um pulsar com rotações de milissegundos.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="decimosDaInercia"
+        rotulo="Inércia inicial, em décimos de kg·m²"
+        [min]="5"
+        [max]="100"
+      />
+      <app-controle-parametro
+        [(valor)]="decimosDeOmega"
+        rotulo="Rotação inicial, em décimos de rad/s"
+        [min]="5"
+        [max]="100"
+      />
+      <app-controle-parametro
+        [(valor)]="percentualRestante"
+        rotulo="Inércia restante (%)"
+        [min]="10"
+        [max]="200"
+        [passo]="5"
+        dica="Abaixo de 100 é recolher a massa; acima, afastá-la."
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="conservacaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Momento angular</span>
+        <strong>{{ formatar(momentoAngular()) }}</strong>
+        <span class="legenda">o mesmo antes e depois</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Nova rotação</span>
+        <strong>{{ formatar(omegaFinal()) }} rad/s</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Energia antes</span>
+        <strong>{{ formatar(energiaInicial()) }} J</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Energia depois</span>
+        <strong>{{ formatar(energiaFinal()) }} J</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Trabalho realizado</span>
+        <strong>{{ formatar(trabalho()) }} J</strong>
+        <span class="legenda">quem puxou a massa gastou isto</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Um se conserva, o outro não</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">
+        A reta horizontal é o momento angular: ele não se mexe. A outra curva é a energia, que
+        dispara quando a inércia encolhe. Não há violação de nada — puxar a massa para perto do
+        eixo exige trabalho contra a força centrífuga, e esse trabalho entra no sistema.
+      </p>
+      <app-formula [tex]="'K = \\frac{L^{2}}{2I}'" [bloco]="true" />
+    </section>
+
+    <section class="painel">
+      <h2>Onde isso aparece</h2>
+      <p class="observacao">
+        Num satélite, acelerar uma roda de reação interna faz o corpo girar para o outro lado,
+        porque o momento angular total precisa ficar o mesmo: é assim que se aponta um telescópio
+        sem gastar propelente. E na órbita de um planeta, conservar o momento angular é
+        exatamente a segunda lei de Kepler — áreas iguais em tempos iguais.
+      </p>
+      <app-formula [tex]="'\\vec{\\tau} = \\frac{d\\vec{L}}{dt} = \\vec{0} \\;\\Longrightarrow\\; \\vec{L} = \\text{const.}'" [bloco]="true" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+section > .observacao {
+  margin-top: var(--esp-2);
+}
+
+.corrida {
+  display: grid;
+  gap: var(--esp-1);
+}
+
+.corrida li {
+  align-items: baseline;
+  display: flex;
+  gap: var(--esp-1);
+  justify-content: space-between;
+}
+
+.corrida ol {
+  list-style: decimal inside;
+  margin: 0;
+  padding: 0;
+}

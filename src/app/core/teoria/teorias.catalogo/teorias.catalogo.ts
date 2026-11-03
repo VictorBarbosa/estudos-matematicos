@@ -38,6 +38,10 @@ import { TEORIA_TFC as t_teorema_fundamental } from '@features/calculo-2/teorema
 import { TEORIA_COMBINATORIA as t_analise_combinatoria } from '@features/estatistica/analise-combinatoria/analise-combinatoria.teoria';
 import { TEORIA_INCERTEZA as t_estatistica_e_incerteza } from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.teoria';
 import { TEORIA_PROBABILIDADE as t_probabilidade } from '@features/estatistica/probabilidade/probabilidade.teoria';
+import { TEORIA_CINEMATICA_VETORIAL as t_cinematica_vetorial } from '@features/fisica/cinematica-vetorial/cinematica-vetorial.teoria';
+import { TEORIA_MOVIMENTO_CIRCULAR as t_movimento_circular } from '@features/fisica/movimento-circular/movimento-circular.teoria';
+import { TEORIA_DINAMICA_ROTACIONAL as t_dinamica_rotacional } from '@features/fisica/dinamica-rotacional/dinamica-rotacional.teoria';
+import { TEORIA_MOMENTO_ANGULAR as t_momento_angular } from '@features/fisica/momento-angular/momento-angular.teoria';
 import { TEORIA_DIMENSIONAL as t_analise_dimensional } from '@features/fisica/analise-dimensional/analise-dimensional.teoria';
 import { TEORIA_CINEMATICA as t_cinematica_escalar } from '@features/fisica/cinematica-escalar/cinematica-escalar.teoria';
 import { TEORIA_TORQUE as t_estatica_e_torque } from '@features/fisica/estatica-e-torque/estatica-e-torque.teoria';
@@ -123,6 +127,10 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['probabilidade', t_probabilidade],
   ['analise-dimensional', t_analise_dimensional],
   ['cinematica-escalar', t_cinematica_escalar],
+  ['cinematica-vetorial', t_cinematica_vetorial],
+  ['movimento-circular', t_movimento_circular],
+  ['dinamica-rotacional', t_dinamica_rotacional],
+  ['momento-angular', t_momento_angular],
   ['estatica-e-torque', t_estatica_e_torque],
   ['fluidos-e-aerodinamica', t_fluidos_e_aerodinamica],
   ['gravitacao-e-orbitas', t_gravitacao_e_orbitas],

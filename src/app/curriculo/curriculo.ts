@@ -511,14 +511,14 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'Cinemática vetorial',
         descricao:
           'Posição, velocidade e aceleração como vetores, em duas e três dimensões.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'movimento-circular',
         titulo: 'Movimento circular',
         descricao:
           'Velocidade angular, aceleração centrípeta e a força que mantém a curva.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'leis-de-newton',
@@ -555,14 +555,14 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         titulo: 'Dinâmica rotacional',
         descricao:
           'Momento de inércia, torque e a segunda lei para a rotação.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'momento-angular',
         titulo: 'Conservação do momento angular',
         descricao:
           'Por que a patinadora acelera ao fechar os braços — e o que isso faz num satélite.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'movimento-harmonico',

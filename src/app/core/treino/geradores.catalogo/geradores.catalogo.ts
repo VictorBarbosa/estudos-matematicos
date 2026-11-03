@@ -38,6 +38,10 @@ import { geradorTfc as g_teorema_fundamental } from '@features/calculo-2/teorema
 import { geradorCombinatoria as g_analise_combinatoria } from '@features/estatistica/analise-combinatoria/analise-combinatoria.gerador';
 import { geradorIncerteza as g_estatistica_e_incerteza } from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.gerador';
 import { geradorProbabilidade as g_probabilidade } from '@features/estatistica/probabilidade/probabilidade.gerador';
+import { geradorCinematicaVetorial as g_cinematica_vetorial } from '@features/fisica/cinematica-vetorial/cinematica-vetorial.gerador';
+import { geradorMovimentoCircular as g_movimento_circular } from '@features/fisica/movimento-circular/movimento-circular.gerador';
+import { geradorDinamicaRotacional as g_dinamica_rotacional } from '@features/fisica/dinamica-rotacional/dinamica-rotacional.gerador';
+import { geradorMomentoAngular as g_momento_angular } from '@features/fisica/momento-angular/momento-angular.gerador';
 import { geradorDimensional as g_analise_dimensional } from '@features/fisica/analise-dimensional/analise-dimensional.gerador';
 import { geradorCinematica as g_cinematica_escalar } from '@features/fisica/cinematica-escalar/cinematica-escalar.gerador';
 import { geradorTorque as g_estatica_e_torque } from '@features/fisica/estatica-e-torque/estatica-e-torque.gerador';
@@ -129,6 +133,10 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['probabilidade', g_probabilidade],
   ['analise-dimensional', g_analise_dimensional],
   ['cinematica-escalar', g_cinematica_escalar],
+  ['cinematica-vetorial', g_cinematica_vetorial],
+  ['movimento-circular', g_movimento_circular],
+  ['dinamica-rotacional', g_dinamica_rotacional],
+  ['momento-angular', g_momento_angular],
   ['estatica-e-torque', g_estatica_e_torque],
   ['fluidos-e-aerodinamica', g_fluidos_e_aerodinamica],
   ['gravitacao-e-orbitas', g_gravitacao_e_orbitas],

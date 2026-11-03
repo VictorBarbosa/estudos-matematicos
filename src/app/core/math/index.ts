@@ -64,6 +64,8 @@ export * from '@core/math/estatistica/descritiva/descritiva';
 // Física e finanças
 export * from '@core/math/fisica/dimensional/dimensional';
 export * from '@core/math/fisica/cinematica/cinematica';
+export * from '@core/math/fisica/cinematica-vetorial/cinematica-vetorial';
+export * from '@core/math/fisica/rotacao/rotacao';
 export * from '@core/math/fisica/mecanica/mecanica';
 export * from '@core/math/fisica/energia/energia';
 export * from '@core/math/fisica/gravitacao/gravitacao';
