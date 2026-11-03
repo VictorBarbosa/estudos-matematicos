@@ -191,10 +191,10 @@ a tentativa mais antiga sai dela.
 
 **O treino oferece o que falta.** A cada sorteio, a sessão diz ao gerador quais tipos ainda não
 foram cumpridos, e ele sorteia só entre eles. Sem isso o sorteio é uniforme, e uniforme basta
-para travar a etapa: dá para chegar a `soma 9/5` e `decimal em fração 10/5` com `subtração com
-mistos` parada em 3/5, porque o que já estava cumprido continuava aparecendo. Numa simulação de
-aluno que acerta sempre, Frações caiu de **77 para 45 exercícios** — que é o mínimo possível,
-nove tipos vezes cinco acertos. A exceção é o que o nível não produz: pedir um misto no Fácil
+para travar a etapa: dá para passar do exigido em `soma` e em `decimal em fração` com
+`subtração com mistos` parada, porque o que já estava cumprido continuava aparecendo. Numa
+simulação de aluno que acerta sempre, Frações passou a fechar no mínimo possível — nove tipos
+vezes os acertos exigidos em cada. A exceção é o que o nível não produz: pedir um misto no Fácil
 seria pedir o impossível, então ali o sorteio volta ao normal até o aluno subir.
 
 Mostrar as quatro não é detalhe de interface. Enquanto a tela mostrava duas, quem tinha tudo em
@@ -236,11 +236,12 @@ exigência de **cobertura** por cima dela, contada por conceito (`REQUISITOS_POR
 `models/progressao.model.ts`). A área de treino mostra a lista inteira, com o que falta em cada
 tipo.
 
-Em Frações são **nove tipos, cinco acertos em cada** — 45 no mínimo. As quatro operações com
+Em Frações são **nove tipos, três acertos em cada** — 27 no mínimo. As quatro operações com
 frações, as mesmas quatro com números mistos e a conversão de decimal. Mistos são tipos à parte
 porque o erro é outro: o transporte na soma, o empréstimo na subtração, os termos cruzados na
 multiplicação (2½ × 1½ tem quatro parcelas, não duas), a ordem de converter e inverter na
-divisão. É muito de propósito: frações é o tópico cuja falha mais atrapalha adiante.
+divisão. Eram cinco acertos por tipo, o que dava 45 exercícios só de cobertura: garantia a
+mesma coisa e cansava mais, então o número desceu para três.
 
 O critério anterior era "3 acertos seguidos", sem olhar o nível — e isso abria a etapa para
 quem acerta metade dos exercícios em 79% das rodadas de 20 tentativas. Com o critério atual,

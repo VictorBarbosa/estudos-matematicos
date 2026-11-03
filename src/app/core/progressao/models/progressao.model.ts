@@ -120,8 +120,15 @@ export interface RequisitoDeConceito {
   readonly acertos: number;
 }
 
-/** Quantos acertos cada tipo de exercício exige para a etapa abrir. */
-export const ACERTOS_POR_TIPO = 5;
+/**
+ * Quantos acertos cada tipo de exercício exige para a etapa abrir.
+ *
+ * Frações tem nove tipos, então o número multiplica: com cinco, eram 45
+ * acertos só de cobertura, antes mesmo das exigências de janela. Três mantém o
+ * que a regra existe para garantir — que nenhuma operação passe sem ser
+ * praticada — sem transformar a etapa numa maratona.
+ */
+export const ACERTOS_POR_TIPO = 3;
 
 /**
  * Exigências extras por tópico.
@@ -160,10 +167,10 @@ export const REQUISITOS_POR_TOPICO: Readonly<Record<string, readonly RequisitoDe
 /**
  * Os tipos de exercício que ainda faltam no tópico.
  *
- * O sorteio era uniforme, e isso bastava para travar a etapa: dava para chegar
- * a `soma 9/5` e `decimal em fração 10/5` enquanto `subtração com mistos`
- * seguia em 3/5, porque o gerador continuava oferecendo o que já estava
- * cumprido. Com esta lista na mão, ele passa a oferecer só o que falta.
+ * O sorteio era uniforme, e isso bastava para travar a etapa: dava para passar
+ * do exigido em `soma` e em `decimal em fração` enquanto `subtração com
+ * mistos` seguia parada, porque o gerador continuava oferecendo o que já
+ * estava cumprido. Com esta lista na mão, ele passa a oferecer só o que falta.
  */
 export function tiposPendentes(
   topicoId: string,

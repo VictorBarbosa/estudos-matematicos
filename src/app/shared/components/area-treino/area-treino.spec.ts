@@ -541,7 +541,9 @@ describe('AreaTreino: quanto falta no placar', () => {
      * que foi feito.
      */
     expect(quanto()).toBe('10');
-    expect(bloco().getAttribute('title')).not.toContain('soma 5/5');
+    expect(bloco().getAttribute('title')).not.toContain(
+      `soma ${ACERTOS_POR_TIPO}/${ACERTOS_POR_TIPO}`,
+    );
   });
 
   it('diz em palavras o que falta', async () => {
@@ -549,8 +551,8 @@ describe('AreaTreino: quanto falta no placar', () => {
     await montar();
 
     const resumo = bloco().getAttribute('title')!;
-    expect(resumo).toContain('subtração com mistos 0/5');
-    expect(resumo).not.toContain('soma 5/5');
+    expect(resumo).toContain(`subtração com mistos 0/${ACERTOS_POR_TIPO}`);
+    expect(resumo).not.toContain(`soma ${ACERTOS_POR_TIPO}/${ACERTOS_POR_TIPO}`);
   });
 
   it('zera — e fica verde — quando a etapa é vencida', async () => {
