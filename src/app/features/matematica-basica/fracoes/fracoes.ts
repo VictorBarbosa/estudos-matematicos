@@ -18,12 +18,16 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { MarcaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/matematica-basica/fracoes/fracoes.i18n.json';
 import { geradorFracoes } from '@features/matematica-basica/fracoes/fracoes.gerador';
 import { TEORIA_FRACOES } from '@features/matematica-basica/fracoes/fracoes.teoria';
 
 interface OpcaoOperacao {
   readonly valor: OperacaoFracao;
   readonly simbolo: string;
+  /** Chave do nome no dicionário deste tópico. */
   readonly nome: string;
 }
 
@@ -46,12 +50,14 @@ interface OpcaoOperacao {
 })
 export class Fracoes {
   protected readonly gerador = geradorFracoes;
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
 
   protected readonly operacoes: readonly OpcaoOperacao[] = [
-    { valor: 'somar', simbolo: '+', nome: 'Somar' },
-    { valor: 'subtrair', simbolo: '−', nome: 'Subtrair' },
-    { valor: 'multiplicar', simbolo: '×', nome: 'Multiplicar' },
-    { valor: 'dividir', simbolo: '÷', nome: 'Dividir' },
+    { valor: 'somar', simbolo: '+', nome: 'somar' },
+    { valor: 'subtrair', simbolo: '−', nome: 'subtrair' },
+    { valor: 'multiplicar', simbolo: '×', nome: 'multiplicar' },
+    { valor: 'dividir', simbolo: '÷', nome: 'dividir' },
   ];
 
   protected readonly numeradorA = signal(1);
@@ -84,7 +90,7 @@ export class Fracoes {
 
   protected readonly erro = computed(() =>
     this.resolucao() === null
-      ? 'Não é possível dividir por zero. Ajuste o numerador da segunda fração.'
+      ? this.texto('divisaoPorZero')
       : null,
   );
 
@@ -116,10 +122,14 @@ export class Fracoes {
 
   protected readonly descricaoReta = computed(() => {
     const resultado = this.resultado();
-    return (
-      `Reta numérica com ${this.fracaoA()} e ${this.fracaoB()} marcadas` +
-      (resultado ? `, e o resultado ${resultado}.` : '.')
-    );
+    const valores = { a: this.fracaoA().toString(), b: this.fracaoB().toString() };
+
+    return resultado === null
+      ? this.texto('descricaoReta', valores)
+      : this.texto('descricaoRetaComResultado', {
+          ...valores,
+          resultado: resultado.toString(),
+        });
   });
 
   /** Verdadeiro quando a conta exige igualar denominadores. */

@@ -28,8 +28,6 @@ export const GLOSSARIO: Readonly<Record<string, readonly TermoGlossario[]>> = {
     { pt: 'regra de três', fr: 'règle de trois', en: 'cross-multiplication' },
     { pt: 'potenciação', fr: 'exponentiation', en: 'exponentiation' },
     { pt: 'raiz quadrada', fr: 'racine carrée', en: 'square root' },
-    { pt: 'notação científica', fr: 'notation scientifique', en: 'scientific notation' },
-    { pt: 'algarismos significativos', fr: 'chiffres significatifs', en: 'significant figures' },
     { pt: 'arredondamento', fr: 'arrondissement', en: 'rounding' },
   ],
   algebra: [

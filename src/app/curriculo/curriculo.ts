@@ -126,12 +126,6 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'Propriedades das potências, expoentes negativos e raízes como potências.',
         pronto: true,
       },
-      {
-        id: 'notacao-cientifica-unidades',
-        titulo: 'Notação científica e unidades',
-        descricao: 'Ordens de grandeza, prefixos do SI, conversões e algarismos significativos.',
-        pronto: true,
-      },
     ],
   },
   {

@@ -80,7 +80,6 @@ import { TEORIA_SOLIDOS as t_solidos_e_volumes } from '@features/geometria/solid
 import { TEORIA_FRACOES as t_fracoes } from '@features/matematica-basica/fracoes/fracoes.teoria';
 import { TEORIA_NOTACAO as t_notacao_matematica } from '@features/matematica-basica/notacao-matematica/notacao-matematica.teoria';
 import { TEORIA_MMC_MDC as t_mmc_mdc } from '@features/matematica-basica/mmc-mdc/mmc-mdc.teoria';
-import { TEORIA_NOTACAO as t_notacao_cientifica_unidades } from '@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades.teoria';
 import { TEORIA_DECIMAIS as t_numeros_decimais } from '@features/matematica-basica/numeros-decimais/numeros-decimais.teoria';
 import { TEORIA_OPERACOES as t_operacoes_fundamentais } from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.teoria';
 import { TEORIA_POTENCIAS as t_potenciacao_radiciacao } from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.teoria';
@@ -184,7 +183,6 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['fracoes', t_fracoes],
   ['notacao-matematica', t_notacao_matematica],
   ['mmc-mdc', t_mmc_mdc],
-  ['notacao-cientifica-unidades', t_notacao_cientifica_unidades],
   ['numeros-decimais', t_numeros_decimais],
   ['operacoes-fundamentais', t_operacoes_fundamentais],
   ['potenciacao-radiciacao', t_potenciacao_radiciacao],

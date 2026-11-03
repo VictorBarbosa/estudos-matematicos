@@ -52,13 +52,5 @@ export const rotas: Routes = [
     loadComponent: () =>
       import('@features/matematica-basica/numeros-decimais/numeros-decimais').then((m) => m.NumerosDecimais),
   },
-  {
-    path: 'notacao-cientifica-unidades',
-    title: 'Notação científica e unidades · Estudos Matemáticos',
-    loadComponent: () =>
-      import('@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades').then(
-        (m) => m.NotacaoCientificaUnidades,
-      ),
-  },
   { path: '', pathMatch: 'full', redirectTo: 'operacoes-fundamentais' },
 ];

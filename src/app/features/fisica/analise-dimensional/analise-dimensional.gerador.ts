@@ -288,7 +288,7 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
       ],
     },
-    conceitos: ['dimensional.grandezas', 'notacao.unidades'],
+    conceitos: ['dimensional.grandezas', 'dimensional.verificacao'],
     armadilhas: semColisoes(
       [
         {
@@ -305,7 +305,7 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<number> {
             'O sentido da conversão está invertido: trocar por uma unidade menor aumenta o ' +
             'número.',
           passo: 1,
-          conceito: 'notacao.unidades',
+          conceito: 'dimensional.grandezas',
         },
       ],
       caso.fator,

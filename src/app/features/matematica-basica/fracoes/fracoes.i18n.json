@@ -1,0 +1,61 @@
+{
+  "primeiraFracao": {
+    "pt": "Primeira fração",
+    "fr": "Première fraction",
+    "en": "First fraction"
+  },
+  "segundaFracao": {
+    "pt": "Segunda fração",
+    "fr": "Deuxième fraction",
+    "en": "Second fraction"
+  },
+  "somar": { "pt": "Somar", "fr": "Additionner", "en": "Add" },
+  "subtrair": { "pt": "Subtrair", "fr": "Soustraire", "en": "Subtract" },
+  "multiplicar": { "pt": "Multiplicar", "fr": "Multiplier", "en": "Multiply" },
+  "dividir": { "pt": "Dividir", "fr": "Diviser", "en": "Divide" },
+  "divisaoPorZero": {
+    "pt": "Não é possível dividir por zero. Ajuste o numerador da segunda fração.",
+    "fr": "Impossible de diviser par zéro. Ajustez le numérateur de la deuxième fraction.",
+    "en": "Cannot divide by zero. Adjust the numerator of the second fraction."
+  },
+  "comoMisto": {
+    "pt": "Como número misto:",
+    "fr": "En nombre fractionnaire :",
+    "en": "As a mixed number:"
+  },
+  "emDecimal": {
+    "pt": "Em decimal: {valor}",
+    "fr": "En décimal : {valor}",
+    "en": "As a decimal: {valor}"
+  },
+  "visualizando": {
+    "pt": "Visualizando as partes",
+    "fr": "Voir les parts",
+    "en": "Seeing the parts"
+  },
+  "partesDiferentes": {
+    "pt": "As duas barras estão divididas em quantidades diferentes de partes. É por isso que não dá para somar os numeradores diretamente: as fatias não têm o mesmo tamanho.",
+    "fr": "Les deux barres sont divisées en nombres de parts différents. C’est pourquoi on ne peut pas additionner les numérateurs directement : les tranches n’ont pas la même taille.",
+    "en": "The two bars are divided into different numbers of parts. That is why the numerators cannot simply be added: the slices are not the same size."
+  },
+  "resultadoBarra": {
+    "pt": "Resultado: {valor}",
+    "fr": "Résultat : {valor}",
+    "en": "Result: {valor}"
+  },
+  "naRetaNumerica": {
+    "pt": "Na reta numérica",
+    "fr": "Sur la droite numérique",
+    "en": "On the number line"
+  },
+  "descricaoReta": {
+    "pt": "Reta numérica com {a} e {b} marcadas.",
+    "fr": "Droite numérique avec {a} et {b} marquées.",
+    "en": "Number line with {a} and {b} marked."
+  },
+  "descricaoRetaComResultado": {
+    "pt": "Reta numérica com {a} e {b} marcadas, e o resultado {resultado}.",
+    "fr": "Droite numérique avec {a} et {b} marquées, et le résultat {resultado}.",
+    "en": "Number line with {a} and {b} marked, and the result {resultado}."
+  }
+}

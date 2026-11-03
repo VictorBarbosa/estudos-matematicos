@@ -88,7 +88,7 @@ export const TEORIA_INCERTEZA: readonly Teoria[] = [
       enunciado: 'Combinando incertezas de 3 e 4 numa soma.',
       passos: propagarSomaComPassos([3, 4]).passos,
     },
-    vejaTambem: ['incerteza.dispersao', 'notacao.significativos'],
+    vejaTambem: ['incerteza.dispersao', 'incerteza.ajuste'],
   },
   {
     id: 'incerteza.ajuste',

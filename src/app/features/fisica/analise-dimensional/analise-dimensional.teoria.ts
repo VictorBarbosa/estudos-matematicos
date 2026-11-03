@@ -34,7 +34,7 @@ export const TEORIA_DIMENSIONAL: readonly Teoria[] = [
       enunciado: 'Deduzindo a dimensão de força a partir de F = ma.',
       passos: deduzirDimensaoComPassos('forca').passos,
     },
-    vejaTambem: ['dimensional.verificacao', 'notacao.unidades'],
+    vejaTambem: ['dimensional.verificacao'],
   },
   {
     id: 'dimensional.verificacao',
@@ -77,6 +77,6 @@ export const TEORIA_DIMENSIONAL: readonly Teoria[] = [
         'F',
       ).passos,
     },
-    vejaTambem: ['dimensional.grandezas', 'notacao.significativos'],
+    vejaTambem: ['dimensional.grandezas'],
   },
 ];

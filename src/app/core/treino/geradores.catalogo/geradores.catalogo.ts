@@ -80,7 +80,6 @@ import { geradorPontoReta as g_ponto_e_reta } from '@features/geometria-analitic
 import { geradorFracoes as g_fracoes } from '@features/matematica-basica/fracoes/fracoes.gerador';
 import { geradorNotacao as g_notacao_matematica } from '@features/matematica-basica/notacao-matematica/notacao-matematica.gerador';
 import { geradorMmcMdc as g_mmc_mdc } from '@features/matematica-basica/mmc-mdc/mmc-mdc.gerador';
-import { geradorNotacao as g_notacao_cientifica_unidades } from '@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades.gerador';
 import { geradorDecimais as g_numeros_decimais } from '@features/matematica-basica/numeros-decimais/numeros-decimais.gerador';
 import { geradorOperacoes as g_operacoes_fundamentais } from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.gerador';
 import { geradorPotencias as g_potenciacao_radiciacao } from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.gerador';
@@ -190,7 +189,6 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['fracoes', g_fracoes],
   ['notacao-matematica', g_notacao_matematica],
   ['mmc-mdc', g_mmc_mdc],
-  ['notacao-cientifica-unidades', g_notacao_cientifica_unidades],
   ['numeros-decimais', g_numeros_decimais],
   ['operacoes-fundamentais', g_operacoes_fundamentais],
   ['potenciacao-radiciacao', g_potenciacao_radiciacao],
