@@ -30,6 +30,8 @@ import { geradorTaxa as g_taxa_de_variacao } from '@features/calculo-1/taxa-de-v
 import { geradorAplicacoesIntegral as g_aplicacoes_da_integral } from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.gerador';
 import { geradorDefinida as g_integral_definida } from '@features/calculo-2/integral-definida/integral-definida.gerador';
 import { geradorIndefinida as g_integral_indefinida } from '@features/calculo-2/integral-indefinida/integral-indefinida.gerador';
+import { geradorIntegraisImproprias as g_integrais_improprias } from '@features/calculo-2/integrais-improprias/integrais-improprias.gerador';
+import { geradorSeriesDeTaylor as g_series_de_taylor } from '@features/calculo-2/series-de-taylor/series-de-taylor.gerador';
 import { geradorRiemann as g_soma_de_riemann } from '@features/calculo-2/soma-de-riemann/soma-de-riemann.gerador';
 import { geradorTecnicas as g_tecnicas_de_integracao } from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.gerador';
 import { geradorTfc as g_teorema_fundamental } from '@features/calculo-2/teorema-fundamental/teorema-fundamental.gerador';
@@ -112,6 +114,8 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['derivadas-trigonometricas', g_derivadas_trigonometricas],
   ['derivadas-exponencial-logaritmo', g_derivadas_exponencial_logaritmo],
   ['derivacao-implicita', g_derivacao_implicita],
+  ['integrais-improprias', g_integrais_improprias],
+  ['series-de-taylor', g_series_de_taylor],
   ['regras-de-derivacao', g_regras_de_derivacao],
   ['taxa-de-variacao', g_taxa_de_variacao],
   ['aplicacoes-da-integral', g_aplicacoes_da_integral],

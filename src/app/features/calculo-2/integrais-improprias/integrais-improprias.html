@@ -1,0 +1,87 @@
+<app-topico-layout
+  titulo="Integrais impróprias"
+  descricao="Integrais com limite infinito ou integrando ilimitado, e quando elas convergem."
+  topicoId="integrais-improprias"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>Uma região infinita pode ter área finita</h2>
+      <app-formula [tex]="'\\int_{1}^{\\infty} \\frac{dx}{x^{2}} = 1'" [bloco]="true" />
+      <p class="observacao">
+        A região sob essa curva nunca termina, e mesmo assim cabe num quadrado de lado 1. Trocar
+        a borda infinita por um limite é o que torna essa frase precisa — e o expoente é o que
+        decide se o limite existe.
+      </p>
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="decimosDoExpoente"
+        rotulo="Expoente p, em décimos"
+        [min]="3"
+        [max]="30"
+        dica="20 quer dizer p igual a 2."
+      />
+      <app-controle-parametro [(valor)]="borda" rotulo="Borda de baixo" [min]="1" [max]="6" />
+      <app-controle-parametro [(valor)]="ate" rotulo="Borda móvel" [min]="2" [max]="12" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="integralTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Área acumulada até a borda móvel</span>
+        <strong>{{ formatar(acumulada()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Para onde ela caminha</span>
+        <strong>{{ formatar(limite()) }}</strong>
+        <span class="legenda">p = {{ expoenteEscrito() }}</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">No infinito</span>
+        <strong>{{ noInfinito().converge ? 'converge' : 'diverge' }}</strong>
+        <span class="legenda">precisa de p acima de 1</span>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Na origem</span>
+        <strong>{{ naOrigem().converge ? 'converge' : 'diverge' }}</strong>
+        <span class="legenda">precisa de p abaixo de 1</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>A área que se acumula</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [areas]="areas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">
+        Empurre a borda móvel para a direita e veja a área acumulada. Com p acima de 1 ela se
+        aproxima de um número e para; com p igual a 1 ela continua subindo, devagar, para sempre.
+        A curva tracejada é exatamente essa fronteira.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>O mesmo expoente, o critério oposto</h2>
+      <app-formula [tex]="naOrigemTex()" [bloco]="true" />
+      <p class="observacao">
+        Na origem o problema não é a cauda, é a explosão. Ali a função precisa subir devagar o
+        bastante — e isso quer dizer expoente pequeno. Por isso o mesmo p que faz a integral
+        convergir no infinito a faz divergir na origem, e o expoente 1 perde dos dois lados.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

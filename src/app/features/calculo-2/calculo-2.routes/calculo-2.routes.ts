@@ -45,5 +45,15 @@ export const rotas: Routes = [
         (m) => m.SequenciasESeries,
       ),
   },
+  {
+    path: 'integrais-improprias',
+    title: 'Integrais impróprias · Estudos Matemáticos',
+    loadComponent: () => import('@features/calculo-2/integrais-improprias/integrais-improprias').then((m) => m.IntegraisImproprias),
+  },
+  {
+    path: 'series-de-taylor',
+    title: 'Séries de Taylor e Maclaurin · Estudos Matemáticos',
+    loadComponent: () => import('@features/calculo-2/series-de-taylor/series-de-taylor').then((m) => m.SeriesDeTaylor),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'soma-de-riemann' },
 ];

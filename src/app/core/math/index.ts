@@ -54,6 +54,8 @@ export * from '@core/math/calculo/derivadas-trig/derivadas-trig';
 export * from '@core/math/calculo/derivadas-exp-log/derivadas-exp-log';
 export * from '@core/math/calculo/derivacao-implicita/derivacao-implicita';
 export * from '@core/math/calculo/integrais/integrais';
+export * from '@core/math/calculo/integrais-improprias/integrais-improprias';
+export * from '@core/math/calculo/taylor/taylor';
 
 // Combinatória e estatística
 export * from '@core/math/estatistica/contagem/contagem';

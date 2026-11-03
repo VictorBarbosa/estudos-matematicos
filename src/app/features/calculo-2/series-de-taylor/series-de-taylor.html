@@ -1,0 +1,93 @@
+<app-topico-layout
+  titulo="Séries de Taylor e Maclaurin"
+  descricao="Aproximar uma função por polinômios, e o erro que sobra."
+  topicoId="series-de-taylor"
+>
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>As cinco que se sabe de cor</h2>
+      @for (item of series; track item.funcao) {
+        <div class="serie">
+          <app-formula [tex]="item.serieTex" [bloco]="true" />
+          <p class="observacao">{{ item.observacao }}</p>
+        </div>
+      }
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="escolha"
+        rotulo="Função (0 exp · 1 sen · 2 cos · 3 ln · 4 geométrica)"
+        [min]="0"
+        [max]="4"
+      />
+      <app-controle-parametro [(valor)]="grau" rotulo="Grau do polinômio" [min]="0" [max]="9" />
+      <app-controle-parametro
+        [(valor)]="decimosDoPonto"
+        rotulo="Ponto, em décimos"
+        [min]="-25"
+        [max]="25"
+        dica="10 quer dizer x igual a 1."
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="funcaoTex()" [bloco]="true" />
+      <app-formula [tex]="polinomioTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">Polinômio em {{ pontoEscrito() }}</span>
+        <strong>{{ formatar(aproximado()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">Valor verdadeiro</span>
+        <strong>{{ formatar(exato()) }}</strong>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">Erro</span>
+        <strong>{{ formatar(erro()) }}</strong>
+        <span class="legenda">cai rápido perto do centro</span>
+      </div>
+      @if (foraDoRaio()) {
+        <div class="indicador">
+          <span class="rotulo">Atenção</span>
+          <strong>fora do raio</strong>
+          <span class="legenda">a série não representa a função aqui</span>
+        </div>
+      }
+    </section>
+
+    <section>
+      <h2>Onde o polinômio ainda serve</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">
+        Aumente o grau e veja a curva tracejada abraçar um trecho cada vez maior da função — mas
+        sempre a partir do centro. É isso que quer dizer aproximação local: o polinômio só
+        conhece o que acontece na origem, e extrapola a partir dali.
+      </p>
+    </section>
+
+    <section class="painel">
+      <h2>Por que o fatorial</h2>
+      <app-formula [tex]="'a_{k} = \\frac{f^{(k)}(0)}{k!}'" [bloco]="true" />
+      <p class="observacao">
+        Derivar x elevado a k exatamente k vezes produz k fatorial. O denominador da fórmula
+        existe para desfazer isso — sem ele, cada coeficiente sairia inflado pelo fatorial da
+        própria ordem, e o polinômio não encostaria na função.
+      </p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

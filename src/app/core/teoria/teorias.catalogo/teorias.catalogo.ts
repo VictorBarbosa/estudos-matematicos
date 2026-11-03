@@ -30,6 +30,8 @@ import { TEORIA_TAXA as t_taxa_de_variacao } from '@features/calculo-1/taxa-de-v
 import { TEORIA_APLICACOES_INTEGRAL as t_aplicacoes_da_integral } from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.teoria';
 import { TEORIA_DEFINIDA as t_integral_definida } from '@features/calculo-2/integral-definida/integral-definida.teoria';
 import { TEORIA_INDEFINIDA as t_integral_indefinida } from '@features/calculo-2/integral-indefinida/integral-indefinida.teoria';
+import { TEORIA_IMPROPRIAS as t_integrais_improprias } from '@features/calculo-2/integrais-improprias/integrais-improprias.teoria';
+import { TEORIA_TAYLOR as t_series_de_taylor } from '@features/calculo-2/series-de-taylor/series-de-taylor.teoria';
 import { TEORIA_RIEMANN as t_soma_de_riemann } from '@features/calculo-2/soma-de-riemann/soma-de-riemann.teoria';
 import { TEORIA_TECNICAS as t_tecnicas_de_integracao } from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.teoria';
 import { TEORIA_TFC as t_teorema_fundamental } from '@features/calculo-2/teorema-fundamental/teorema-fundamental.teoria';
@@ -106,6 +108,8 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['derivadas-trigonometricas', t_derivadas_trigonometricas],
   ['derivadas-exponencial-logaritmo', t_derivadas_exponencial_logaritmo],
   ['derivacao-implicita', t_derivacao_implicita],
+  ['integrais-improprias', t_integrais_improprias],
+  ['series-de-taylor', t_series_de_taylor],
   ['regras-de-derivacao', t_regras_de_derivacao],
   ['taxa-de-variacao', t_taxa_de_variacao],
   ['aplicacoes-da-integral', t_aplicacoes_da_integral],

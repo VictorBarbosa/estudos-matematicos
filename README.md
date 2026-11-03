@@ -291,7 +291,7 @@ leve. O recado não muda o veredito nem o conceito contado: é sobre a escrita, 
 sobre a matemática. Quem respondeu `0,5` não o recebe — apontar termos que ele não escreveu
 soaria como erro de leitura.
 
-Cinco travas globais cuidam dessa parte, para os 79 geradores de uma vez
+Cinco travas globais cuidam dessa parte, para os 81 geradores de uma vez
 (`core/treino/formato-resposta/`, `shared/components/formula/formulas-do-site.spec.ts`,
 `core/teoria/teorias/`):
 
@@ -498,8 +498,8 @@ Todos os tópicos do currículo estão implementados. Para acrescentar um novo, 
 
 ## Estado atual
 
-**79 dos 92 tópicos do currículo estão implementados**, nas doze áreas, na ordem de
-aprendizagem. Os 13 restantes vieram do plano de estudo e já aparecem na navegação com a
+**81 dos 92 tópicos do currículo estão implementados**, nas doze áreas, na ordem de
+aprendizagem. Os 11 restantes vieram do plano de estudo e já aparecem na navegação com a
 etiqueta **em breve** — o que falta fica visível em vez de escondido, que é para isso que o
 currículo tem o campo `pronto`.
 
@@ -515,11 +515,8 @@ currículo tem o campo `pronto`.
 | 8 | Física | 12 de 17 |
 | 9 | Pré-cálculo | 2 |
 | 10 | Cálculo 1 | 11 |
-| 11 | Cálculo 2 | 7 de 9 |
+| 11 | Cálculo 2 | 9 |
 | 12 | Combinatória e estatística | 3 de 5 |
-| 10 | Pré-cálculo | 3 |
-| 11 | Cálculo 1 | 8 |
-| 12 | Cálculo 2 | 6 |
 
 A área de Física fecha com **propulsão de foguetes**: a equação de Tsiolkovsky, onde logaritmo,
 conservação de momento, gases e gravitação se encontram.

@@ -780,7 +780,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         id: 'integrais-improprias',
         titulo: 'Integrais impróprias',
         descricao: 'Integrais com limite infinito ou integrando ilimitado, e quando elas convergem.',
-        pronto: false,
+        pronto: true,
       },
       {
         id: 'sequencias-e-series',
@@ -792,7 +792,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         id: 'series-de-taylor',
         titulo: 'Séries de Taylor e Maclaurin',
         descricao: 'Aproximar uma função por polinômios, e o erro que sobra.',
-        pronto: false,
+        pronto: true,
       },
     ],
   },
