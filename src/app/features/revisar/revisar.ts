@@ -21,7 +21,7 @@ import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
  * frágil e por tempo sem praticar.
  *
  * Os geradores vêm por import dinâmico, um por item da fila: revisar não
- * carrega os 74 tópicos, só aquele que está na vez.
+ * carrega os 75 tópicos, só aquele que está na vez.
  */
 @Component({
   selector: 'app-revisar',

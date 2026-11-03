@@ -14,6 +14,23 @@
     (input)="valor.set($any($event.target).value)"
     (keydown.enter)="enviar.emit()"
   />
+  @if (simbolos().length > 0) {
+    <!-- ∀, ∈ e ∑ não estão no teclado de ninguém. -->
+    <div class="simbolos" role="group" aria-label="Símbolos para a resposta">
+      @for (tecla of simbolos(); track tecla.rotulo) {
+        <button
+          type="button"
+          [disabled]="bloqueado()"
+          [attr.aria-label]="tecla.nome"
+          [title]="tecla.nome"
+          (click)="inserir(tecla)"
+        >
+          {{ tecla.rotulo }}
+        </button>
+      }
+    </div>
+  }
+
   @if (ajuda(); as texto) {
     <p class="ajuda" [attr.id]="id + '-ajuda'">{{ texto }}</p>
   }

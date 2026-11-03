@@ -7,6 +7,7 @@
  * MMC/MDC usam os mesmos inteiros.
  */
 export * from '@core/math/tipos/tipos';
+export * from '@core/math/notacao/notacao';
 
 // Números
 export * from '@core/math/numeros/inteiros/inteiros';

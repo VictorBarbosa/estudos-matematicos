@@ -16,7 +16,7 @@ import { NIVEIS, SEM_FORMULA } from '@core/treino/models/treino.model';
  * uma barra só: em JavaScript `'\;'` é apenas `;`, e o KaTeX desenhava
  * "x = 0 ;⇒; …" onde devia haver um espaço fino.
  *
- * **Um caso de teste por tópico**, de propósito: compilar os 74 tópicos de uma
+ * **Um caso de teste por tópico**, de propósito: compilar os 75 tópicos de uma
  * vez custava ~45 mil renderizações num único `it`, o que passava longe aqui e
  * estourava o limite de 5 s no runner de duas CPUs da integração contínua. Em
  * casos separados, cada um faz algumas centenas — e, quando falha, o nome do
@@ -244,17 +244,22 @@ describe('texto corrido não traz LaTeX', () => {
 /**
  * O enunciado que vem sem fórmula precisa se bastar.
  *
- * `SEM_FORMULA` é uma escolha pedagógica — em Razão e proporção, montar a
- * expressão é a tarefa —, mas é também uma string vazia, e string vazia é o
- * que sobra de um descuido. Sem fórmula, o texto é a pergunta inteira: se ele
- * não disser os valores, o exercício fica impossível em vez de difícil.
+ * `SEM_FORMULA` é uma escolha pedagógica — em Razão e proporção montar a
+ * expressão é a tarefa, em Notação matemática a notação é a resposta —, mas é
+ * também uma string vazia, e string vazia é o que sobra de um descuido. Sem
+ * fórmula, o texto é a pergunta inteira, e um enunciado curto demais deixa o
+ * exercício impossível em vez de difícil.
+ *
+ * O piso aqui é de corpo, não de conteúdo: "Escreva em símbolos: A está contido
+ * em B" não tem número nenhum e está completo. Cobrar os valores é trabalho do
+ * teste do tópico, que sabe o que aquele enunciado precisa dizer.
  */
 describe('enunciado sem fórmula', () => {
   const SORTEIOS = 30;
 
   for (const [topico, gerador] of TODOS_OS_GERADORES) {
     it(
-      `${topico}: sem fórmula, o texto diz tudo`,
+      `${topico}: enunciado sem fórmula tem corpo`,
       () => {
         const incompletos: string[] = [];
 
@@ -267,8 +272,8 @@ describe('enunciado sem fórmula', () => {
               continue;
             }
 
-            const numeros = exercicio.enunciado.match(/\d+/g) ?? [];
-            if (numeros.length < 2 || exercicio.enunciado.length < 30) {
+            const palavras = exercicio.enunciado.trim().split(/\s+/);
+            if (palavras.length < 6 || exercicio.enunciado.length < 30) {
               incompletos.push(`${nivel}: "${exercicio.enunciado}"`);
             }
           }

@@ -18,6 +18,14 @@ export const rotas: Routes = [
     loadComponent: () => import('@features/matematica-basica/mmc-mdc/mmc-mdc').then((m) => m.MmcMdc),
   },
   {
+    path: 'notacao-matematica',
+    title: 'Notação matemática · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/matematica-basica/notacao-matematica/notacao-matematica').then(
+        (m) => m.NotacaoMatematica,
+      ),
+  },
+  {
     path: 'potenciacao-radiciacao',
     title: 'Potenciação e radiciação · Estudos Matemáticos',
     loadComponent: () =>

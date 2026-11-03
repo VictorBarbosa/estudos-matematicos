@@ -278,7 +278,7 @@ leve. O recado não muda o veredito nem o conceito contado: é sobre a escrita, 
 sobre a matemática. Quem respondeu `0,5` não o recebe — apontar termos que ele não escreveu
 soaria como erro de leitura.
 
-Cinco travas globais cuidam dessa parte, para os 74 geradores de uma vez
+Cinco travas globais cuidam dessa parte, para os 75 geradores de uma vez
 (`core/treino/formato-resposta/`, `shared/components/formula/formulas-do-site.spec.ts`,
 `core/teoria/teorias/`):
 
@@ -343,6 +343,25 @@ Ela **some abaixo de 60rem**, a mesma largura em que a navegação lateral vira 
 cobriria justamente o exercício que existe para ajudar a resolver. E só é baixada quando alguém
 a abre pela primeira vez (`@defer` no shell), porque traz o analisador junto.
 
+### Ler e escrever notação
+
+**Notação matemática** é um tópico de duas mãos, e nenhuma delas é múltipla escolha.
+
+**Ler vira conta**: quem entende `\sum_{k=1}^{4} k^2` chega a 30, e quem não entende não chega.
+Pedir o valor em vez da tradução em palavras tem uma vantagem que múltipla escolha não tem —
+não há como acertar por eliminação. **Escrever revela se a leitura é real**: reconhecer `∀`
+numa página é fácil, decidir que a frase pede `∀`, `∈` e `≥` nessa ordem exige saber o que
+cada símbolo faz.
+
+A correção cobra conteúdo, não digitação: `canonizarNotacao` reduz `\forall x \in \mathbb{R},
+x^{2} \geq 0`, `∀x∈R, x^2 >= 0` e `∀x ∈ ℝ: x² ≥ 0` à mesma forma. O `R` solto só vira `ℝ`
+depois de `∈`, `⊂` ou `→` — numa fórmula de física, `R` é resistência.
+
+E o campo de resposta ganhou uma **paleta de símbolos**, porque `∀`, `∈` e `∑` não estão no
+teclado de ninguém: sem ela o tópico pediria o impossível. Algumas teclas inserem um símbolo
+solto, outras um esqueleto com o cursor onde falta preencher — `f()`, `| |`, `∑_{k=1}^{n}`. É um
+campo opcional do `GeradorExercicio`: quem não declara nada segue com o campo de sempre.
+
 ### Quando a fórmula é a resposta
 
 `enunciadoTex` pode vir como `SEM_FORMULA`, e aí a tela mostra só o texto. Não é exceção
@@ -386,11 +405,11 @@ Todos os tópicos do currículo estão implementados. Para acrescentar um novo, 
 
 ## Estado atual
 
-**Os 74 tópicos estão implementados**, nas doze áreas do currículo, na ordem de aprendizagem:
+**Os 75 tópicos estão implementados**, nas doze áreas do currículo, na ordem de aprendizagem:
 
 | # | Área | Tópicos |
 |---|------|---------|
-| 1 | Matemática básica | 7 |
+| 1 | Matemática básica | 8 |
 | 2 | Álgebra | 9 |
 | 3 | Geometria plana e espacial | 5 |
 | 4 | Funções | 8 |

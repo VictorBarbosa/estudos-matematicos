@@ -57,3 +57,32 @@ input {
   font-size: var(--texto-xs);
   color: var(--texto-tenue);
 }
+
+/* A paleta de símbolos: só aparece nos tópicos que pedem notação. */
+.simbolos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+
+  button {
+    min-width: 2.25rem;
+    padding: var(--esp-1) var(--esp-2);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-md);
+    background: var(--superficie-2);
+    color: var(--texto);
+    font-family: var(--fonte-mono);
+    font-size: var(--texto-md);
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      background: var(--superficie-3);
+      border-color: var(--borda-forte);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}

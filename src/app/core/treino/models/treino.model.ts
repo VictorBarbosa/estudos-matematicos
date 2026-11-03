@@ -63,6 +63,24 @@ export interface Exercicio<T> {
 }
 
 /**
+ * Uma tecla de símbolo do campo de resposta.
+ *
+ * Algumas inserem um símbolo solto (`∈`); outras, um esqueleto com o cursor no
+ * lugar de preencher — `f()` com o cursor entre os parênteses, `\sum_{k=1}^{}`
+ * com ele no limite de cima.
+ */
+export interface TeclaDeSimbolo {
+  /** O que aparece no botão. */
+  readonly rotulo: string;
+  /** O texto inserido no campo. */
+  readonly insere: string;
+  /** Quantos caracteres recuar o cursor depois de inserir. */
+  readonly recuo?: number;
+  /** Nome para leitor de tela, já que o rótulo é um símbolo. */
+  readonly nome: string;
+}
+
+/**
  * Enunciado sem fórmula: montar a expressão faz parte da pergunta.
  *
  * É string vazia, e não `undefined`, para que o campo continue obrigatório —
@@ -114,6 +132,14 @@ export interface GeradorExercicio<T> {
   saoEquivalentes(a: T, b: T): boolean;
   /** Forma legível do valor, para exibir o gabarito. */
   formatar(valor: T): string;
+  /**
+   * Teclas de símbolo oferecidas ao lado do campo de resposta.
+   *
+   * Existe porque `∀`, `∈` e `∑` não estão no teclado de ninguém: sem
+   * paleta, um tópico que pede notação pede o impossível. Quem não precisa
+   * dela não declara nada e o campo fica como sempre foi.
+   */
+  readonly simbolos?: readonly TeclaDeSimbolo[];
   /**
    * Um recado sobre a forma de uma resposta CERTA, quando há o que dizer.
    *

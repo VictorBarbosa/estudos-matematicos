@@ -2,7 +2,7 @@
  * Catálogo de todos os geradores do currículo.
  *
  * Existe para que as travas globais — variedade, formato de resposta,
- * renderização das fórmulas, ids de conceito — valham para os 74 tópicos sem
+ * renderização das fórmulas, ids de conceito — valham para os 75 tópicos sem
  * que cada teste refaça a lista. Só os testes importam este arquivo; ele não
  * entra no bundle da aplicação.
  */
@@ -62,6 +62,7 @@ import { geradorCircunferencia as g_circunferencia } from '@features/geometria-a
 import { geradorConicas as g_conicas } from '@features/geometria-analitica/conicas/conicas.gerador';
 import { geradorPontoReta as g_ponto_e_reta } from '@features/geometria-analitica/ponto-e-reta/ponto-e-reta.gerador';
 import { geradorFracoes as g_fracoes } from '@features/matematica-basica/fracoes/fracoes.gerador';
+import { geradorNotacao as g_notacao_matematica } from '@features/matematica-basica/notacao-matematica/notacao-matematica.gerador';
 import { geradorMmcMdc as g_mmc_mdc } from '@features/matematica-basica/mmc-mdc/mmc-mdc.gerador';
 import { geradorNotacao as g_notacao_cientifica_unidades } from '@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades.gerador';
 import { geradorDecimais as g_numeros_decimais } from '@features/matematica-basica/numeros-decimais/numeros-decimais.gerador';
@@ -144,6 +145,7 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['conicas', g_conicas],
   ['ponto-e-reta', g_ponto_e_reta],
   ['fracoes', g_fracoes],
+  ['notacao-matematica', g_notacao_matematica],
   ['mmc-mdc', g_mmc_mdc],
   ['notacao-cientifica-unidades', g_notacao_cientifica_unidades],
   ['numeros-decimais', g_numeros_decimais],

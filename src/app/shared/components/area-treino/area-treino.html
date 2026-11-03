@@ -56,6 +56,7 @@
     [(valor)]="s.resposta"
     rotulo="Sua resposta"
     [ajuda]="gerador().formatoResposta"
+    [simbolos]="gerador().simbolos ?? []"
     [estado]="estadoCampo()"
     [bloqueado]="s.corrigido()"
     (enviar)="aoEnviar()"

@@ -62,6 +62,7 @@ import { TEORIA_CIRCULO as t_circulo_e_poligonos } from '@features/geometria/cir
 import { TEORIA_SEMELHANCA as t_semelhanca_e_pitagoras } from '@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.teoria';
 import { TEORIA_SOLIDOS as t_solidos_e_volumes } from '@features/geometria/solidos-e-volumes/solidos-e-volumes.teoria';
 import { TEORIA_FRACOES as t_fracoes } from '@features/matematica-basica/fracoes/fracoes.teoria';
+import { TEORIA_NOTACAO as t_notacao_matematica } from '@features/matematica-basica/notacao-matematica/notacao-matematica.teoria';
 import { TEORIA_MMC_MDC as t_mmc_mdc } from '@features/matematica-basica/mmc-mdc/mmc-mdc.teoria';
 import { TEORIA_NOTACAO as t_notacao_cientifica_unidades } from '@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades.teoria';
 import { TEORIA_DECIMAIS as t_numeros_decimais } from '@features/matematica-basica/numeros-decimais/numeros-decimais.teoria';
@@ -138,6 +139,7 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['semelhanca-e-pitagoras', t_semelhanca_e_pitagoras],
   ['solidos-e-volumes', t_solidos_e_volumes],
   ['fracoes', t_fracoes],
+  ['notacao-matematica', t_notacao_matematica],
   ['mmc-mdc', t_mmc_mdc],
   ['notacao-cientifica-unidades', t_notacao_cientifica_unidades],
   ['numeros-decimais', t_numeros_decimais],

@@ -87,6 +87,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'notacao-matematica',
+        titulo: 'Notação matemática',
+        descricao:
+          'Ler o que os símbolos dizem e escrever em símbolos o que se quer dizer.',
+        pronto: true,
+      },
+      {
         id: 'mmc-mdc',
         titulo: 'MMC e MDC',
         descricao: 'Fatoração em primos, algoritmo de Euclides e onde cada um é usado.',

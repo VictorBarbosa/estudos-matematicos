@@ -66,6 +66,7 @@ export const CARREGAR_GERADOR: Readonly<
   'fracoes': () => import('@features/matematica-basica/fracoes/fracoes.gerador').then((m) => m.geradorFracoes),
   'mmc-mdc': () => import('@features/matematica-basica/mmc-mdc/mmc-mdc.gerador').then((m) => m.geradorMmcMdc),
   'notacao-cientifica-unidades': () => import('@features/matematica-basica/notacao-cientifica-unidades/notacao-cientifica-unidades.gerador').then((m) => m.geradorNotacao),
+  'notacao-matematica': () => import('@features/matematica-basica/notacao-matematica/notacao-matematica.gerador').then((m) => m.geradorNotacao),
   'numeros-decimais': () => import('@features/matematica-basica/numeros-decimais/numeros-decimais.gerador').then((m) => m.geradorDecimais),
   'operacoes-fundamentais': () => import('@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.gerador').then((m) => m.geradorOperacoes),
   'potenciacao-radiciacao': () => import('@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.gerador').then((m) => m.geradorPotencias),
