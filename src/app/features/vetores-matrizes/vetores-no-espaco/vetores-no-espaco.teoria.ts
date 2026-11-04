@@ -50,7 +50,10 @@ export const TEORIA_VETORES_ESPACO: readonly Teoria[] = [
       'nunca é negativo.',
     formulas: [
       { tex: '\\left|\\vec{v}\\right| = \\sqrt{v_x^2 + v_y^2 + v_z^2}' },
-      { tex: '\\left|(1,\\,2,\\,2)\\right| = \\sqrt{1 + 4 + 4} = 3', legenda: 'Um terno que dá inteiro.' },
+      {
+        tex: '\\left|(1,\\,2,\\,2)\\right| = \\sqrt{1 + 4 + 4} = 3',
+        legenda: 'Um terno que dá inteiro.',
+      },
     ],
     demonstracao: [
       {
@@ -180,7 +183,9 @@ export const TEORIA_VETORES_ESPACO: readonly Teoria[] = [
       'aponta e quão intensa ela é. Uma força de 50 N numa direção se escreve como 50 vezes o ' +
       'unitário daquela direção.',
     formulas: [
-      { tex: '\\hat{v} = \\frac{\\vec{v}}{\\left|\\vec{v}\\right|} \\qquad \\left|\\hat{v}\\right| = 1' },
+      {
+        tex: '\\hat{v} = \\frac{\\vec{v}}{\\left|\\vec{v}\\right|} \\qquad \\left|\\hat{v}\\right| = 1',
+      },
       {
         tex: '\\vec{F} = \\left|\\vec{F}\\right| \\cdot \\hat{u}',
         legenda: 'Intensidade vezes direção — o jeito de escrever uma força.',
@@ -229,7 +234,11 @@ export const TEORIA_VETORES_ESPACO: readonly Teoria[] = [
     ],
     exemplo: {
       enunciado: 'O volume formado por (1,0,0), (0,2,0) e (0,0,3).',
-      passos: volumeDoParalelepipedoComPassos({ x: 1, y: 0, z: 0 }, { x: 0, y: 2, z: 0 }, { x: 0, y: 0, z: 3 }).passos,
+      passos: volumeDoParalelepipedoComPassos(
+        { x: 1, y: 0, z: 0 },
+        { x: 0, y: 2, z: 0 },
+        { x: 0, y: 0, z: 3 },
+      ).passos,
     },
     vejaTambem: ['vetores3.vetorial', 'matrizes.determinante'],
   },

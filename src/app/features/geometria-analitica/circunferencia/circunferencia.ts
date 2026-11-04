@@ -13,6 +13,9 @@ import {
   SegmentoPlot,
 } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/geometria-analitica/circunferencia/circunferencia.i18n.json';
 import { geradorCircunferencia } from '@features/geometria-analitica/circunferencia/circunferencia.gerador';
 import { TEORIA_CIRCUNFERENCIA } from '@features/geometria-analitica/circunferencia/circunferencia.teoria';
 import { circunferenciaComPassos } from '@core/math';
@@ -33,6 +36,8 @@ import { circunferenciaComPassos } from '@core/math';
   styleUrl: './circunferencia.scss',
 })
 export class Circunferencia {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorCircunferencia;
   protected readonly conceitos = TEORIA_CIRCUNFERENCIA.map((teoria) => teoria.id);
 
@@ -88,11 +93,11 @@ export class Circunferencia {
 
     switch (this.posicao()) {
       case 'dentro':
-        return `O ponto está DENTRO: a distância ao centro (${d}) é menor que o raio (${this.raio()}).`;
+        return this.texto('dentro', { d, raio: this.raio() });
       case 'sobre':
-        return `O ponto está SOBRE a circunferência: a distância ao centro é exatamente o raio.`;
+        return this.texto('sobre');
       case 'fora':
-        return `O ponto está FORA: a distância ao centro (${d}) é maior que o raio (${this.raio()}).`;
+        return this.texto('fora', { d, raio: this.raio() });
     }
   });
 
@@ -155,11 +160,17 @@ export class Circunferencia {
     };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Circunferência de centro (${this.centroX()}, ${this.centroY()}) e raio ${this.raio()}, ` +
-      `com um ponto de teste ${this.posicao()} dela.`,
-  );
+  protected readonly descricaoGrafico = computed(() => {
+    const posicao = this.posicao();
+    const chave =
+      posicao === 'dentro'
+        ? 'descricaoDentro'
+        : posicao === 'sobre'
+          ? 'descricaoSobre'
+          : 'descricaoFora';
+
+    return this.texto(chave, { x: this.centroX(), y: this.centroY(), raio: this.raio() });
+  });
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_CIRCUNFERENCIA);

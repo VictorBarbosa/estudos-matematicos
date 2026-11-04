@@ -155,12 +155,7 @@ function exercicioComponente(eixo: 'x' | 'y', nivel: Nivel, rng: Rng): Exercicio
       gabarito,
       proximos,
     ),
-    dica:
-      nivel === 'facil'
-        ? eixo === 'x'
-          ? 'vₓ = |v|·cos θ'
-          : 'v_y = |v|·sen θ'
-        : undefined,
+    dica: nivel === 'facil' ? (eixo === 'x' ? 'vₓ = |v|·cos θ' : 'v_y = |v|·sen θ') : undefined,
   };
 }
 

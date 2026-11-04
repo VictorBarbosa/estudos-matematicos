@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/geometria-analitica/conicas/conicas.i18n.json';
 import { geradorConicas } from '@features/geometria-analitica/conicas/conicas.gerador';
 import { TEORIA_CONICAS } from '@features/geometria-analitica/conicas/conicas.teoria';
 
@@ -30,6 +33,8 @@ type Tipo = 'elipse' | 'hiperbole' | 'parabola';
   styleUrl: './conicas.scss',
 })
 export class Conicas {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorConicas;
   protected readonly conceitos = TEORIA_CONICAS.map((teoria) => teoria.id);
 
@@ -37,10 +42,10 @@ export class Conicas {
   protected readonly a = signal(5);
   protected readonly b = signal(3);
 
-  protected readonly tipos: readonly { valor: Tipo; rotulo: string }[] = [
-    { valor: 'elipse', rotulo: 'Elipse' },
-    { valor: 'parabola', rotulo: 'Parábola' },
-    { valor: 'hiperbole', rotulo: 'Hipérbole' },
+  protected readonly tipos: readonly { valor: Tipo }[] = [
+    { valor: 'elipse' },
+    { valor: 'parabola' },
+    { valor: 'hiperbole' },
   ];
 
   protected readonly analise = computed(() =>
@@ -72,15 +77,15 @@ export class Conicas {
     const e = this.excentricidade();
 
     if (this.tipo() === 'parabola') {
-      return 'A parábola é o caso de fronteira: e = 1, exatamente entre elipse e hipérbole.';
+      return this.texto('excParabola');
     }
     if (e < 0.001) {
-      return 'Com e = 0 os focos coincidem: a elipse é uma circunferência.';
+      return this.texto('excZero');
     }
     if (e < 1) {
-      return `e = ${this.formatar(e)}: quanto mais perto de 1, mais achatada a elipse.`;
+      return this.texto('excElipse', { e: this.formatar(e) });
     }
-    return `e = ${this.formatar(e)}: acima de 1, a curva se abre em dois ramos.`;
+    return this.texto('excHiperbole', { e: this.formatar(e) });
   });
 
   /** Cada cônica precisa de dois ramos, porque não são funções de x. */
@@ -89,7 +94,7 @@ export class Conicas {
     const b = this.b();
 
     if (this.tipo() === 'parabola') {
-      return [{ fn: (x) => (x * x) / a, cor: 'serie-1', rotulo: 'parábola' }];
+      return [{ fn: (x) => (x * x) / a, cor: 'serie-1', rotulo: this.texto('curvaParabola') }];
     }
 
     if (this.tipo() === 'elipse') {
@@ -111,7 +116,12 @@ export class Conicas {
     return [
       { fn: ramo(1), cor: 'serie-1' },
       { fn: ramo(-1), cor: 'serie-1' },
-      { fn: (x) => (b / a) * x, cor: 'texto-suave', tracejada: true, rotulo: 'assíntotas' },
+      {
+        fn: (x) => (b / a) * x,
+        cor: 'texto-suave',
+        tracejada: true,
+        rotulo: this.texto('curvaAssintotas'),
+      },
       { fn: (x) => -(b / a) * x, cor: 'texto-suave', tracejada: true },
     ];
   });
@@ -119,7 +129,7 @@ export class Conicas {
   protected readonly pontos = computed<readonly PontoPlot[]>(() => {
     const analise = this.analise();
     if (analise === null) {
-      return [{ x: 0, y: 0, rotulo: 'vértice', cor: 'acento' }];
+      return [{ x: 0, y: 0, rotulo: this.texto('pontoVertice'), cor: 'acento' }];
     }
 
     return analise.resultado.focos.map((foco, indice) => ({
@@ -135,9 +145,16 @@ export class Conicas {
     return { xMin: -limite, xMax: limite, yMin: -limite * 0.7, yMax: limite * 0.7 };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () => `Gráfico de uma ${this.tipo()} com os focos destacados.`,
-  );
+  protected readonly descricaoGrafico = computed(() => {
+    const tipo = this.tipo();
+    return this.texto(
+      tipo === 'elipse'
+        ? 'descricaoElipse'
+        : tipo === 'parabola'
+          ? 'descricaoParabola'
+          : 'descricaoHiperbole',
+    );
+  });
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_CONICAS);

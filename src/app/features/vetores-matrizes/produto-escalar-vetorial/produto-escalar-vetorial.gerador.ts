@@ -134,8 +134,7 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prod-ang-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Qual é o ângulo entre (${a.x}, ${a.y}) e (${b.x}, ${b.y})? (em graus, 2 casas)`,
+    enunciado: `Qual é o ângulo entre (${a.x}, ${a.y}) e (${b.x}, ${b.y})? (em graus, 2 casas)`,
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -222,8 +221,7 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prod-area-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Qual é a área do paralelogramo formado por (${a.x}, ${a.y}) e (${b.x}, ${b.y})?`,
+    enunciado: `Qual é a área do paralelogramo formado por (${a.x}, ${a.y}) e (${b.x}, ${b.y})?`,
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },

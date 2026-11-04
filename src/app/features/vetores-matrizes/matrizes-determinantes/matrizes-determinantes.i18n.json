@@ -1,0 +1,80 @@
+{
+  "determinanteEArea": {
+    "pt": "O determinante é uma área",
+    "fr": "Le déterminant est une aire",
+    "en": "The determinant is an area"
+  },
+  "descricaoGrafico": {
+    "pt": "As duas linhas da matriz como vetores, e o paralelogramo que elas formam.",
+    "fr": "Les deux lignes de la matrice comme vecteurs, et le parallélogramme qu’elles forment.",
+    "en": "The two rows of the matrix as vectors, and the parallelogram they form."
+  },
+  "segmentoLinha1": { "pt": "linha 1", "fr": "ligne 1", "en": "row 1" },
+  "segmentoLinha2": { "pt": "linha 2", "fr": "ligne 2", "en": "row 2" },
+  "asLinhasDaMatriz": {
+    "pt": "As linhas da matriz, vistas como vetores, formam um paralelogramo. Sua área é exatamente <strong>|det A| = {area}</strong>. O sinal do determinante indica apenas a orientação: se a segunda linha está no sentido anti-horário em relação à primeira.",
+    "fr": "Les lignes de la matrice, vues comme des vecteurs, forment un parallélogramme. Son aire vaut exactement <strong>|det A| = {area}</strong>. Le signe du déterminant indique seulement l’orientation : si la deuxième ligne est dans le sens antihoraire par rapport à la première.",
+    "en": "The rows of the matrix, seen as vectors, form a parallelogram. Its area is exactly <strong>|det A| = {area}</strong>. The sign of the determinant only tells the orientation: whether the second row is counter-clockwise from the first."
+  },
+  "avisoSingular": {
+    "pt": "Determinante zero: as duas linhas ficaram alinhadas. Não há paralelogramo, a transformação achata o plano numa reta, e o sistema associado perde a solução única.",
+    "fr": "Déterminant nul : les deux lignes se sont alignées. Il n’y a pas de parallélogramme, la transformation aplatit le plan en une droite, et le système associé perd sa solution unique.",
+    "en": "Determinant zero: the two rows have lined up. There is no parallelogram, the transformation flattens the plane onto a line, and the associated system loses its single solution."
+  },
+  "detDoQuadrado": { "pt": "det(A·A)", "fr": "det(A·A)", "en": "det(A·A)" },
+  "igualDetAoQuadrado": {
+    "pt": "= (det A)²",
+    "fr": "= (det A)²",
+    "en": "= (det A)²"
+  },
+  "sistemaAssociado": {
+    "pt": "Sistema associado",
+    "fr": "Système associé",
+    "en": "Associated system"
+  },
+  "semSolucaoUnica": {
+    "pt": "sem solução única",
+    "fr": "pas de solution unique",
+    "en": "no single solution"
+  },
+  "solucaoUnica": {
+    "pt": "solução única",
+    "fr": "solution unique",
+    "en": "a single solution"
+  },
+  "produtoDeMatrizes": {
+    "pt": "Produto de matrizes",
+    "fr": "Produit de matrices",
+    "en": "Product of matrices"
+  },
+  "compareODeterminante": {
+    "pt": "Compare o determinante de A·A com o quadrado do determinante de A, nos indicadores acima: eles coincidem sempre. Faz sentido — aplicar a mesma transformação duas vezes multiplica a área duas vezes pelo mesmo fator.",
+    "fr": "Comparez le déterminant de A·A au carré du déterminant de A, dans les indicateurs ci-dessus : ils coïncident toujours. C’est logique — appliquer deux fois la même transformation multiplie l’aire deux fois par le même facteur.",
+    "en": "Compare the determinant of A·A with the square of the determinant of A, in the readouts above: they always agree. It makes sense — applying the same transformation twice multiplies the area twice by the same factor."
+  },
+  "regraDeCramer": {
+    "pt": "Regra de Cramer",
+    "fr": "Règle de Cramer",
+    "en": "Cramer's rule"
+  },
+  "constante1": {
+    "pt": "Constante da 1ª equação",
+    "fr": "Constante de la 1re équation",
+    "en": "Constant of the 1st equation"
+  },
+  "constante2": {
+    "pt": "Constante da 2ª equação",
+    "fr": "Constante de la 2e équation",
+    "en": "Constant of the 2nd equation"
+  },
+  "solucaoCramer": {
+    "pt": "Solução: x = {x}, y = {y}. O determinante principal aparece no denominador de todas as incógnitas — e é por isso que ele não pode ser zero.",
+    "fr": "Solution : x = {x}, y = {y}. Le déterminant principal apparaît au dénominateur de toutes les inconnues — et c’est pourquoi il ne peut pas être nul.",
+    "en": "Solution: x = {x}, y = {y}. The main determinant appears in the denominator of every unknown — and that is why it cannot be zero."
+  },
+  "avisoCramer": {
+    "pt": "Com determinante principal nulo, Cramer não se aplica: o sistema é impossível ou tem infinitas soluções. Geometricamente, as duas retas são paralelas ou coincidentes.",
+    "fr": "Avec un déterminant principal nul, Cramer ne s’applique pas : le système est incompatible ou admet une infinité de solutions. Géométriquement, les deux droites sont parallèles ou confondues.",
+    "en": "With the main determinant zero, Cramer does not apply: the system is inconsistent or has infinitely many solutions. Geometrically, the two lines are parallel or coincident."
+  }
+}

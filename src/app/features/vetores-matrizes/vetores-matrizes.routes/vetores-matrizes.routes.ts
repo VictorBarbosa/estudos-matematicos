@@ -10,7 +10,10 @@ export const rotas: Routes = [
   {
     path: 'vetores-no-plano',
     title: 'Vetores no plano · Estudos Matemáticos',
-    loadComponent: () => import('@features/vetores-matrizes/vetores-no-plano/vetores-no-plano').then((m) => m.VetoresNoPlano),
+    loadComponent: () =>
+      import('@features/vetores-matrizes/vetores-no-plano/vetores-no-plano').then(
+        (m) => m.VetoresNoPlano,
+      ),
   },
   {
     path: 'produto-escalar-vetorial',
@@ -40,7 +43,9 @@ export const rotas: Routes = [
     path: 'numeros-complexos',
     title: 'Números complexos · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/vetores-matrizes/numeros-complexos/numeros-complexos').then((m) => m.NumerosComplexos),
+      import('@features/vetores-matrizes/numeros-complexos/numeros-complexos').then(
+        (m) => m.NumerosComplexos,
+      ),
   },
   { path: '', pathMatch: 'full', redirectTo: 'vetores-no-plano' },
 ];

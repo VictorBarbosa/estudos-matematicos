@@ -82,25 +82,22 @@ describe('geradorMatrizes', () => {
 
     for (const exercicio of exercicios) {
       // O enunciado traz o sistema completo; extraímos coeficientes e constantes.
-      const linhas = [
-        ...exercicio.enunciadoTex.matchAll(/(-?\d+)x ([+-]) (\d+)y = (-?\d+)/g),
-      ].map((m) => ({
-        a: Number(m[1]),
-        b: (m[2] === '-' ? -1 : 1) * Number(m[3]),
-        c: Number(m[4]),
-      }));
+      const linhas = [...exercicio.enunciadoTex.matchAll(/(-?\d+)x ([+-]) (\d+)y = (-?\d+)/g)].map(
+        (m) => ({
+          a: Number(m[1]),
+          b: (m[2] === '-' ? -1 : 1) * Number(m[3]),
+          c: Number(m[4]),
+        }),
+      );
 
       expect(linhas.length).toBe(2);
 
-      const determinantePrincipal =
-        linhas[0]!.a * linhas[1]!.b - linhas[0]!.b * linhas[1]!.a;
+      const determinantePrincipal = linhas[0]!.a * linhas[1]!.b - linhas[0]!.b * linhas[1]!.a;
       expect(Math.abs(determinantePrincipal)).toBeGreaterThan(1e-9);
 
       // Resolve de forma independente e compara com o gabarito.
-      const x =
-        (linhas[0]!.c * linhas[1]!.b - linhas[0]!.b * linhas[1]!.c) / determinantePrincipal;
-      const y =
-        (linhas[0]!.a * linhas[1]!.c - linhas[0]!.c * linhas[1]!.a) / determinantePrincipal;
+      const x = (linhas[0]!.c * linhas[1]!.b - linhas[0]!.b * linhas[1]!.c) / determinantePrincipal;
+      const y = (linhas[0]!.a * linhas[1]!.c - linhas[0]!.c * linhas[1]!.a) / determinantePrincipal;
 
       const esperado = exercicio.enunciado.includes('vale x') ? x : y;
       expect(exercicio.gabarito).toBeCloseTo(esperado, 6);

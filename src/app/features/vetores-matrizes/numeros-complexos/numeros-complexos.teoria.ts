@@ -1,8 +1,4 @@
-import {
-  multiplicarComplexosComPassos,
-  paraPolarComPassos,
-  potenciaComPassos,
-} from '@core/math';
+import { multiplicarComplexosComPassos, paraPolarComPassos, potenciaComPassos } from '@core/math';
 import { Teoria } from '@core/teoria/models/teoria.model';
 
 export const TEORIA_COMPLEXOS: readonly Teoria[] = [
@@ -80,10 +76,8 @@ export const TEORIA_COMPLEXOS: readonly Teoria[] = [
     ],
     exemplo: {
       enunciado: 'Multiplicando (2 + 3i) por (1 − i).',
-      passos: multiplicarComplexosComPassos(
-        { real: 2, imaginario: 3 },
-        { real: 1, imaginario: -1 },
-      ).passos,
+      passos: multiplicarComplexosComPassos({ real: 2, imaginario: 3 }, { real: 1, imaginario: -1 })
+        .passos,
     },
     vejaTambem: ['complexos.plano', 'complexos.demoivre', 'identidades.soma'],
   },

@@ -1,0 +1,74 @@
+{
+  "centroX": { "pt": "Centro: x", "fr": "Centre : x", "en": "Centre: x" },
+  "centroY": { "pt": "Centro: y", "fr": "Centre : y", "en": "Centre: y" },
+  "formaReduzida": {
+    "pt": "Forma reduzida: centro e raio ficam à vista.",
+    "fr": "Forme réduite : le centre et le rayon sont en évidence.",
+    "en": "Standard form: centre and radius are in plain view."
+  },
+  "formaGeral": {
+    "pt": "Forma geral: a mesma circunferência, com tudo expandido.",
+    "fr": "Forme générale : le même cercle, tout développé.",
+    "en": "General form: the same circle, fully expanded."
+  },
+  "ondeEstaOPonto": {
+    "pt": "Onde está o ponto?",
+    "fr": "Où est le point ?",
+    "en": "Where is the point?"
+  },
+  "testeX": {
+    "pt": "Ponto de teste: x",
+    "fr": "Point de test : x",
+    "en": "Test point: x"
+  },
+  "testeY": {
+    "pt": "Ponto de teste: y",
+    "fr": "Point de test : y",
+    "en": "Test point: y"
+  },
+  "dentro": {
+    "pt": "O ponto está DENTRO: a distância ao centro ({d}) é menor que o raio ({raio}).",
+    "fr": "Le point est À L’INTÉRIEUR : la distance au centre ({d}) est plus petite que le rayon ({raio}).",
+    "en": "The point is INSIDE: the distance to the centre ({d}) is less than the radius ({raio})."
+  },
+  "sobre": {
+    "pt": "O ponto está SOBRE a circunferência: a distância ao centro é exatamente o raio.",
+    "fr": "Le point est SUR le cercle : la distance au centre est exactement le rayon.",
+    "en": "The point is ON the circle: the distance to the centre is exactly the radius."
+  },
+  "fora": {
+    "pt": "O ponto está FORA: a distância ao centro ({d}) é maior que o raio ({raio}).",
+    "fr": "Le point est À L’EXTÉRIEUR : la distance au centre ({d}) est plus grande que le rayon ({raio}).",
+    "en": "The point is OUTSIDE: the distance to the centre ({d}) is greater than the radius ({raio})."
+  },
+  "circunferenciaNoPlano": {
+    "pt": "A circunferência no plano",
+    "fr": "Le cercle dans le plan",
+    "en": "The circle in the plane"
+  },
+  "descricaoDentro": {
+    "pt": "Circunferência de centro ({x}, {y}) e raio {raio}, com um ponto de teste dentro dela.",
+    "fr": "Cercle de centre ({x}, {y}) et de rayon {raio}, avec un point de test à l’intérieur.",
+    "en": "Circle with centre ({x}, {y}) and radius {raio}, with a test point inside it."
+  },
+  "descricaoSobre": {
+    "pt": "Circunferência de centro ({x}, {y}) e raio {raio}, com um ponto de teste sobre ela.",
+    "fr": "Cercle de centre ({x}, {y}) et de rayon {raio}, avec un point de test dessus.",
+    "en": "Circle with centre ({x}, {y}) and radius {raio}, with a test point on it."
+  },
+  "descricaoFora": {
+    "pt": "Circunferência de centro ({x}, {y}) e raio {raio}, com um ponto de teste fora dela.",
+    "fr": "Cercle de centre ({x}, {y}) et de rayon {raio}, avec un point de test à l’extérieur.",
+    "en": "Circle with centre ({x}, {y}) and radius {raio}, with a test point outside it."
+  },
+  "aLinhaCheia": {
+    "pt": "A linha cheia do centro é o raio; a tracejada é a distância até o ponto de teste. Comparar essas duas medidas é tudo o que decide a posição relativa.",
+    "fr": "Le trait plein depuis le centre est le rayon ; le pointillé est la distance jusqu’au point de test. Comparer ces deux mesures suffit à décider de la position relative.",
+    "en": "The solid line from the centre is the radius; the dashed one is the distance to the test point. Comparing those two measurements is all that decides the relative position."
+  },
+  "daGeralAReduzida": {
+    "pt": "Da geral à reduzida, passo a passo",
+    "fr": "De la forme générale à la forme réduite, pas à pas",
+    "en": "From general to standard form, step by step"
+  }
+}

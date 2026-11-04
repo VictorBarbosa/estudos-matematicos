@@ -26,9 +26,7 @@ export const geradorConicas: GeradorExercicio<number> = {
     // cônicas distintas.
     const ternos = ternosPitagoricos(90);
     const terno = ternos[rng.inteiro(0, ternos.length - 1)]!;
-    const [menor, maior] = rng.booleano()
-      ? [terno[0], terno[2]]
-      : [terno[1], terno[2]];
+    const [menor, maior] = rng.booleano() ? [terno[0], terno[2]] : [terno[1], terno[2]];
 
     // Elipse: a = maior, b = menor, c² = a² − b².
     // Hipérbole: a e b são os catetos, c = hipotenusa.
@@ -55,9 +53,7 @@ export const geradorConicas: GeradorExercicio<number> = {
           resultado: gabarito,
           passos: [
             {
-              descricao: hiperbole
-                ? 'Na hipérbole, c² = a² + b².'
-                : 'Na elipse, c² = a² − b².',
+              descricao: hiperbole ? 'Na hipérbole, c² = a² + b².' : 'Na elipse, c² = a² − b².',
               tex: `c = ${c}`,
             },
             {
@@ -84,9 +80,7 @@ export const geradorConicas: GeradorExercicio<number> = {
               conceito: 'conicas.familia',
             },
             {
-              resposta: hiperbole
-                ? Math.sqrt(Math.abs(a * a - b * b)) / a
-                : Math.hypot(a, b) / a,
+              resposta: hiperbole ? Math.sqrt(Math.abs(a * a - b * b)) / a : Math.hypot(a, b) / a,
               diagnostico: hiperbole
                 ? 'Você usou c² = a² − b², que é a relação da ELIPSE. Na hipérbole os termos ' +
                   'se somam: c² = a² + b².'

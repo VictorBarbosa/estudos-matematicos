@@ -16,6 +16,8 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.i18n.json';
 import { geradorVetores } from '@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.gerador';
 import { TEORIA_VETORES } from '@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.teoria';
 
@@ -35,6 +37,7 @@ import { TEORIA_VETORES } from '@features/vetores-matrizes/vetores-no-plano/veto
   styleUrl: './vetores-no-plano.scss',
 })
 export class VetoresNoPlano {
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorVetores;
   protected readonly conceitos = TEORIA_VETORES.map((teoria) => teoria.id);
 

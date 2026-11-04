@@ -184,11 +184,7 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
   }
 }
 
-function sortearPontos(
-  nivel: Nivel,
-  rng: Rng,
-  pergunta: Pergunta,
-): { a: Ponto; b: Ponto } {
+function sortearPontos(nivel: Nivel, rng: Rng, pergunta: Pergunta): { a: Ponto; b: Ponto } {
   if (pergunta === 'distancia' && nivel !== 'dificil') {
     // Ternos pitagóricos dão distância inteira.
     const [dx, dy] = rng.escolher([

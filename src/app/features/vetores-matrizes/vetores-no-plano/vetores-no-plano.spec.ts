@@ -13,7 +13,9 @@ describe('geradorVetores', () => {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {
         for (const armadilha of exercicio.armadilhas) {
-          expect(geradorVetores.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(false);
+          expect(geradorVetores.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(
+            false,
+          );
         }
       }
     });
@@ -55,8 +57,9 @@ describe('geradorVetores', () => {
     for (const exercicio of amostra('medio', 150).filter((e) =>
       e.enunciado.includes('componente'),
     )) {
-      const [, comprimento, angulo] =
-        /\|\\vec\{v\}\| = (\d+) \\qquad \\theta = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, comprimento, angulo] = /\|\\vec\{v\}\| = (\d+) \\qquad \\theta = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       const radianos = (Number(angulo) * Math.PI) / 180;
       const esperado = exercicio.enunciado.includes('horizontal')
@@ -87,7 +90,9 @@ describe('geradorVetores', () => {
   });
 
   it('a direção fica entre 0 e 360 graus e respeita o quadrante', () => {
-    const exercicios = amostra('dificil', 150).filter((e) => e.enunciado.includes('ângulo que o vetor'));
+    const exercicios = amostra('dificil', 150).filter((e) =>
+      e.enunciado.includes('ângulo que o vetor'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -117,9 +122,7 @@ describe('geradorVetores', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('cateto adjacente')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('cateto adjacente'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('cateto adjacente'))!;
 
     const resultado = corrigir(geradorVetores, exercicio, String(armadilha.resposta));
 

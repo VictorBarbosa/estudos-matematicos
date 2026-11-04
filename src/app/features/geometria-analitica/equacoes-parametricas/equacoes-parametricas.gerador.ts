@@ -14,7 +14,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de equação paramétrica.
@@ -109,7 +115,8 @@ function daReta(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'parametricas.parametro',
       },
     ],
-    dica: nivel === 'facil' ? 'Substitua o valor de t nas duas equações, uma de cada vez.' : undefined,
+    dica:
+      nivel === 'facil' ? 'Substitua o valor de t nas duas equações, uma de cada vez.' : undefined,
   });
 }
 
@@ -138,8 +145,7 @@ function daCircunferencia(nivel: Nivel, rng: Rng): Exercicio<number> {
     armadilhas: [
       {
         resposta: curva.x(t),
-        diagnostico:
-          'Essa é a coordenada x, que usa o cosseno. A coordenada y é a do seno.',
+        diagnostico: 'Essa é a coordenada x, que usa o cosseno. A coordenada y é a do seno.',
         passo: 1,
         conceito: 'parametricas.circunferencia',
       },
@@ -177,8 +183,7 @@ function daElipse(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `eli-${a}${b}-${doze}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é a coordenada x quando o parâmetro vale ${doze} doze avos de uma volta? ${PEDIDO}`,
+    enunciado: `Qual é a coordenada x quando o parâmetro vale ${doze} doze avos de uma volta? ${PEDIDO}`,
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: posicaoNoInstanteComPassos(curva, t),
@@ -254,9 +259,7 @@ function daVelocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
   const doze = rng.inteiro(0, 11);
   const t = (doze / 12) * 2 * Math.PI;
 
-  const curva = rng.booleano()
-    ? circunferenciaParametrica(0, 0, raio)
-    : cicloideParametrica(raio);
+  const curva = rng.booleano() ? circunferenciaParametrica(0, 0, raio) : cicloideParametrica(raio);
 
   const resolucao = velocidadeParametricaComPassos(curva, t);
 
@@ -265,8 +268,7 @@ function daVelocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Qual é a rapidez do móvel quando o parâmetro vale ${doze} doze avos de uma volta? ` +
-      PEDIDO,
+      `Qual é a rapidez do móvel quando o parâmetro vale ${doze} doze avos de uma volta? ` + PEDIDO,
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito: resolucao.resultado,
     resolucao,
@@ -280,8 +282,7 @@ function daVelocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: resolucao.resultado * resolucao.resultado,
-        diagnostico:
-          'Faltou extrair a raiz quadrada: a soma dos quadrados ainda não é o módulo.',
+        diagnostico: 'Faltou extrair a raiz quadrada: a soma dos quadrados ainda não é o módulo.',
         passo: 2,
         conceito: 'parametricas.velocidade',
       },

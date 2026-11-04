@@ -1,17 +1,14 @@
 <app-topico-layout topicoId="ponto-e-reta">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="ax" rotulo="A: x" [min]="-10" [max]="10" />
-      <app-controle-parametro [(valor)]="ay" rotulo="A: y" [min]="-10" [max]="10" />
-      <app-controle-parametro [(valor)]="bx" rotulo="B: x" [min]="-10" [max]="10" />
-      <app-controle-parametro [(valor)]="by" rotulo="B: y" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="ax" [rotulo]="texto('aX')" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="ay" [rotulo]="texto('aY')" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="bx" [rotulo]="texto('bX')" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="by" [rotulo]="texto('bY')" [min]="-10" [max]="10" />
     </section>
 
     @if (coincidentes()) {
-      <p class="aviso">
-        Os dois pontos estão no mesmo lugar. Mova um deles: dois pontos coincidentes não
-        determinam uma reta.
-      </p>
+      <p class="aviso">{{ texto('coincidentes') }}</p>
     } @else {
       <section class="destaque-formula">
         <app-formula [tex]="equacaoTex()" [bloco]="true" />
@@ -19,28 +16,28 @@
 
       <section class="indicadores">
         <div class="indicador" data-destaque="true">
-          <span class="rotulo">Distância AB</span>
+          <span class="rotulo">{{ texto('distanciaAB') }}</span>
           <strong>{{ formatar(distancia().resultado) }}</strong>
         </div>
         <div class="indicador">
-          <span class="rotulo">Ponto médio</span>
+          <span class="rotulo">{{ texto('pontoMedio') }}</span>
           <strong>({{ formatar(medio().x) }}, {{ formatar(medio().y) }})</strong>
         </div>
         <div class="indicador">
-          <span class="rotulo">Coeficiente angular</span>
+          <span class="rotulo">{{ texto('coeficienteAngular') }}</span>
           <strong>
             {{
               reta()!.resultado.vertical
-                ? 'não existe'
+                ? texto('naoExiste')
                 : formatar(reta()!.resultado.coeficienteAngular!)
             }}
           </strong>
-          <span class="legenda">Δy ÷ Δx</span>
+          <span class="legenda">{{ texto('deltaYSobreDeltaX') }}</span>
         </div>
       </section>
 
       <section>
-        <h2>O triângulo por trás da fórmula</h2>
+        <h2>{{ texto('trianguloPorTras') }}</h2>
         <app-math-plot
           [dominio]="dominio()"
           [curvas]="curvas()"
@@ -49,17 +46,14 @@
           [descricao]="descricaoGrafico()"
           [altura]="400"
         />
-        <p class="observacao">
-          Os segmentos tracejados são Δx e Δy. A distância AB é a hipotenusa desse triângulo —
-          por isso a fórmula é apenas Pitágoras com coordenadas.
-        </p>
+        <p class="observacao">{{ texto('osSegmentosTracejados') }}</p>
       </section>
 
       <section class="painel">
-        <h2>Posição em relação a outra reta</h2>
+        <h2>{{ texto('posicaoEmRelacao') }}</h2>
         <app-controle-parametro
           [(valor)]="mComparacao"
-          rotulo="Inclinação da reta de comparação"
+          [rotulo]="texto('inclinacaoComparacao')"
           [min]="-5"
           [max]="5"
         />
@@ -67,12 +61,12 @@
       </section>
 
       <section>
-        <h2>Passo a passo da distância</h2>
+        <h2>{{ texto('passoDistancia') }}</h2>
         <app-passo-a-passo [passos]="distancia().passos" />
       </section>
 
       <section>
-        <h2>Passo a passo da equação</h2>
+        <h2>{{ texto('passoEquacao') }}</h2>
         <app-passo-a-passo [passos]="reta()!.passos" />
       </section>
     }

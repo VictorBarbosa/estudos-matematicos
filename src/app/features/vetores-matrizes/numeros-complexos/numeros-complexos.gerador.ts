@@ -23,7 +23,13 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 const proximos = (a: number, b: number): boolean =>
   Math.abs(a - b) < 0.02 || Math.abs(Math.abs(a - b) - 360) < 0.02;
 
-type Pergunta = 'modulo' | 'real-do-produto' | 'imaginario-do-produto' | 'argumento' | 'potencia-i' | 'real-do-quociente';
+type Pergunta =
+  | 'modulo'
+  | 'real-do-produto'
+  | 'imaginario-do-produto'
+  | 'argumento'
+  | 'potencia-i'
+  | 'real-do-quociente';
 
 export const geradorComplexos: GeradorExercicio<number> = {
   topicoId: 'numeros-complexos',
@@ -136,11 +142,7 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   };
 }
 
-function exercicioProduto(
-  parte: 'real' | 'imaginario',
-  nivel: Nivel,
-  rng: Rng,
-): Exercicio<number> {
+function exercicioProduto(parte: 'real' | 'imaginario', nivel: Nivel, rng: Rng): Exercicio<number> {
   const a = sortearComplexo(rng);
   const b = sortearComplexo(rng);
 
@@ -183,8 +185,7 @@ function exercicioProduto(
           conceito: 'complexos.multiplicacao',
         },
         {
-          resposta:
-            parte === 'real' ? a.real * b.real : a.imaginario * b.imaginario,
+          resposta: parte === 'real' ? a.real * b.real : a.imaginario * b.imaginario,
           diagnostico:
             'Multiplicar parte por parte não funciona: a distributiva produz quatro termos, e ' +
             'eles se misturam entre real e imaginário.',

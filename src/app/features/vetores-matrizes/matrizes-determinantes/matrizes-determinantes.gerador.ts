@@ -292,8 +292,7 @@ function exercicioCramer(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: principal / determinante(substituida),
-          diagnostico:
-            'A divisão está invertida: o principal vai no DENOMINADOR, sempre.',
+          diagnostico: 'A divisão está invertida: o principal vai no DENOMINADOR, sempre.',
           passo: 2,
           conceito: 'matrizes.cramer',
         },

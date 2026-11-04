@@ -1,0 +1,58 @@
+{
+  "oTempoEntra": {
+    "pt": "O tempo entra na descrição",
+    "fr": "Le temps entre dans la description",
+    "en": "Time enters the description"
+  },
+  "aEquacaoCartesiana": {
+    "pt": "A equação cartesiana diz o CAMINHO; as paramétricas dizem também quando o móvel passa por cada ponto, em que sentido e com que velocidade. É por isso que toda trajetória de voo, toda órbita e toda simulação de mecânica são escritas assim.",
+    "fr": "L’équation cartésienne donne le CHEMIN ; les équations paramétriques disent aussi quand le mobile passe par chaque point, dans quel sens et à quelle vitesse. C’est pourquoi toute trajectoire de vol, toute orbite et toute simulation de mécanique s’écrivent ainsi.",
+    "en": "The Cartesian equation gives the PATH; the parametric equations also say when the moving point passes each place, in which direction and at what speed. That is why every flight path, every orbit and every mechanics simulation is written this way."
+  },
+  "curvaEscolha": {
+    "pt": "Curva (0 reta · 1 círculo · 2 elipse · 3 lançamento · 4 ciclóide)",
+    "fr": "Courbe (0 droite · 1 cercle · 2 ellipse · 3 tir · 4 cycloïde)",
+    "en": "Curve (0 line · 1 circle · 2 ellipse · 3 projectile · 4 cycloid)"
+  },
+  "parametroA": { "pt": "Parâmetro a", "fr": "Paramètre a", "en": "Parameter a" },
+  "parametroB": { "pt": "Parâmetro b", "fr": "Paramètre b", "en": "Parameter b" },
+  "instante": {
+    "pt": "Instante, em centésimos",
+    "fr": "Instant, en centièmes",
+    "en": "Time, in hundredths"
+  },
+  "posicaoAgora": { "pt": "Posição agora", "fr": "Position maintenant", "en": "Position now" },
+  "rapidez": { "pt": "Rapidez", "fr": "Vitesse", "en": "Speed" },
+  "moduloDaDerivada": {
+    "pt": "módulo da derivada das duas coordenadas",
+    "fr": "module de la dérivée des deux coordonnées",
+    "en": "magnitude of the derivative of both coordinates"
+  },
+  "parametro": { "pt": "Parâmetro", "fr": "Paramètre", "en": "Parameter" },
+  "curvaSendoTracada": {
+    "pt": "A curva sendo traçada",
+    "fr": "La courbe en train d’être tracée",
+    "en": "The curve being drawn"
+  },
+  "pontoAgora": { "pt": "agora", "fr": "maintenant", "en": "now" },
+  "descricaoGrafico": {
+    "pt": "A curva vai sendo traçada conforme o parâmetro avança, e o ponto em destaque marca onde o móvel está no instante escolhido.",
+    "fr": "La courbe se trace à mesure que le paramètre avance, et le point mis en évidence marque où se trouve le mobile à l’instant choisi.",
+    "en": "The curve is drawn as the parameter advances, and the highlighted point marks where the moving object is at the chosen time."
+  },
+  "avanceOInstante": {
+    "pt": "Avance o instante e veja o traço crescer. Na circunferência o ponto dá voltas; no lançamento ele sobe e desce; na ciclóide ele desenha o rastro de um ponto da borda de uma roda que rola — uma curva que nem sequer tem forma cartesiana elementar.",
+    "fr": "Avancez l’instant et voyez le tracé grandir. Sur le cercle le point tourne ; dans le tir il monte et redescend ; sur la cycloïde il dessine la trace d’un point du bord d’une roue qui roule — une courbe qui n’a même pas de forme cartésienne élémentaire.",
+    "en": "Advance the time and watch the trace grow. On the circle the point goes round; in the projectile it rises and falls; on the cycloid it traces the path of a point on the rim of a rolling wheel — a curve that has no elementary Cartesian form at all."
+  },
+  "velocidadeDeGraca": {
+    "pt": "A velocidade sai de graça",
+    "fr": "La vitesse vient gratuitement",
+    "en": "The velocity comes for free"
+  },
+  "derivarCadaCoordenada": {
+    "pt": "Derivar cada coordenada em relação ao parâmetro dá o vetor velocidade inteiro, com módulo e direção, sem eliminar nada e sem regra da cadeia. É a vantagem prática que justifica a notação — e o motivo de a mecânica inteira ser escrita nela.",
+    "fr": "Dériver chaque coordonnée par rapport au paramètre donne tout le vecteur vitesse, module et direction, sans rien éliminer et sans règle de dérivation en chaîne. C’est l’avantage pratique qui justifie la notation — et la raison pour laquelle toute la mécanique s’écrit dedans.",
+    "en": "Differentiating each coordinate with respect to the parameter gives the whole velocity vector, magnitude and direction, with nothing to eliminate and no chain rule. That is the practical advantage that justifies the notation — and why all of mechanics is written in it."
+  }
+}

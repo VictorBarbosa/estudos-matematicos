@@ -16,6 +16,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.i18n.json';
 import { geradorComplexos } from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.gerador';
 import { TEORIA_COMPLEXOS } from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.teoria';
 
@@ -35,6 +38,8 @@ import { TEORIA_COMPLEXOS } from '@features/vetores-matrizes/numeros-complexos/n
   styleUrl: './numeros-complexos.scss',
 })
 export class NumerosComplexos {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorComplexos;
   protected readonly conceitos = TEORIA_COMPLEXOS.map((teoria) => teoria.id);
 
@@ -49,9 +54,7 @@ export class NumerosComplexos {
   protected readonly z1 = computed(() => ({ real: this.a1(), imaginario: this.b1() }));
   protected readonly z2 = computed(() => ({ real: this.a2(), imaginario: this.b2() }));
 
-  protected readonly produto = computed(() =>
-    multiplicarComplexosComPassos(this.z1(), this.z2()),
-  );
+  protected readonly produto = computed(() => multiplicarComplexosComPassos(this.z1(), this.z2()));
 
   protected readonly polar = computed(() => {
     try {

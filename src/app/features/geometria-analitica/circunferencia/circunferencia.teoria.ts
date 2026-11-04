@@ -75,7 +75,9 @@ export const TEORIA_CIRCUNFERENCIA: readonly Teoria[] = [
       'com o raio. Para uma reta, compara-se a distância do centro à reta com o raio: maior, ' +
       'não há interseção; igual, é tangente; menor, corta em dois pontos.',
     formulas: [
-      { tex: 'd < r \\to \\text{dentro} \\qquad d = r \\to \\text{sobre} \\qquad d > r \\to \\text{fora}' },
+      {
+        tex: 'd < r \\to \\text{dentro} \\qquad d = r \\to \\text{sobre} \\qquad d > r \\to \\text{fora}',
+      },
       { tex: 'd_{\\text{centro, reta}} = \\frac{|ax_0 + by_0 + c|}{\\sqrt{a^{2} + b^{2}}}' },
     ],
     demonstracao: [

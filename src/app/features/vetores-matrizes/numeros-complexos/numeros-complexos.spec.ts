@@ -69,8 +69,7 @@ describe('geradorComplexos', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, primeiro, segundo] =
-        /z_1 = (.*?) \\qquad z_2 = (.*)/.exec(exercicio.enunciadoTex)!;
+      const [, primeiro, segundo] = /z_1 = (.*?) \\qquad z_2 = (.*)/.exec(exercicio.enunciadoTex)!;
 
       const a = lerComplexo(primeiro!);
       const b = lerComplexo(segundo!);
@@ -96,7 +95,9 @@ describe('geradorComplexos', () => {
   });
 
   it('as potências de i só assumem parte real 1, 0 ou −1', () => {
-    const exercicios = amostra('facil', 120).filter((e) => e.enunciado.includes('parte real de i^'));
+    const exercicios = amostra('facil', 120).filter((e) =>
+      e.enunciado.includes('parte real de i^'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -117,9 +118,7 @@ describe('geradorComplexos', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, numerador, denominador] = /\\frac\{(.*?)\}\{(.*?)\}/.exec(
-        exercicio.enunciadoTex,
-      )!;
+      const [, numerador, denominador] = /\\frac\{(.*?)\}\{(.*?)\}/.exec(exercicio.enunciadoTex)!;
 
       const a = lerComplexo(numerador!);
       const b = lerComplexo(denominador!);

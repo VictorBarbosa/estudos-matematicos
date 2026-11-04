@@ -12,7 +12,10 @@ export const TEORIA_PARAMETRICAS: readonly Teoria[] = [
       'descrevem sem nenhum esforço.',
     formulas: [
       { tex: '\\begin{cases} x = x(t) \\\\ y = y(t) \\end{cases}' },
-      { tex: '\\begin{cases} x = x_{0} + v_{x}t \\\\ y = y_{0} + v_{y}t \\end{cases}', legenda: 'A reta, na forma mais usada em cinemática.' },
+      {
+        tex: '\\begin{cases} x = x_{0} + v_{x}t \\\\ y = y_{0} + v_{y}t \\end{cases}',
+        legenda: 'A reta, na forma mais usada em cinemática.',
+      },
     ],
     demonstracao: [
       {
@@ -40,8 +43,13 @@ export const TEORIA_PARAMETRICAS: readonly Teoria[] = [
       'Na forma paramétrica o problema desaparece: o parâmetro é o ângulo, e ele percorre a ' +
       'curva inteira sem ambiguidade. A elipse é a mesma ideia com dois raios diferentes.',
     formulas: [
-      { tex: '\\begin{cases} x = x_{c} + r\\cos t \\\\ y = y_{c} + r\\operatorname{sen} t \\end{cases}' },
-      { tex: '\\begin{cases} x = a\\cos t \\\\ y = b\\operatorname{sen} t \\end{cases}', legenda: 'A elipse de semieixos a e b.' },
+      {
+        tex: '\\begin{cases} x = x_{c} + r\\cos t \\\\ y = y_{c} + r\\operatorname{sen} t \\end{cases}',
+      },
+      {
+        tex: '\\begin{cases} x = a\\cos t \\\\ y = b\\operatorname{sen} t \\end{cases}',
+        legenda: 'A elipse de semieixos a e b.',
+      },
     ],
     demonstracao: [
       {
@@ -70,7 +78,9 @@ export const TEORIA_PARAMETRICAS: readonly Teoria[] = [
       'que toda simulação de voo, órbita e mecânica é escrita assim: o tempo é a variável que ' +
       'de fato comanda o problema.',
     formulas: [
-      { tex: '\\begin{cases} x = v_{0}\\cos\\theta\\,t \\\\ y = v_{0}\\operatorname{sen}\\theta\\,t - \\frac{g}{2}t^{2} \\end{cases}' },
+      {
+        tex: '\\begin{cases} x = v_{0}\\cos\\theta\\,t \\\\ y = v_{0}\\operatorname{sen}\\theta\\,t - \\frac{g}{2}t^{2} \\end{cases}',
+      },
       { tex: 't_{voo} = \\frac{2v_{0}\\operatorname{sen}\\theta}{g}' },
     ],
     demonstracao: [
@@ -104,7 +114,9 @@ export const TEORIA_PARAMETRICAS: readonly Teoria[] = [
       'resultado já vem com módulo e direção. É a vantagem prática que justifica a notação.',
     formulas: [
       { tex: '\\vec{v}(t) = \\left(\\frac{dx}{dt},\\; \\frac{dy}{dt}\\right)' },
-      { tex: '\\left|\\vec{v}\\right| = \\sqrt{\\left(\\frac{dx}{dt}\\right)^{2} + \\left(\\frac{dy}{dt}\\right)^{2}}' },
+      {
+        tex: '\\left|\\vec{v}\\right| = \\sqrt{\\left(\\frac{dx}{dt}\\right)^{2} + \\left(\\frac{dy}{dt}\\right)^{2}}',
+      },
     ],
     demonstracao: [
       {
@@ -137,8 +149,13 @@ export const TEORIA_PARAMETRICAS: readonly Teoria[] = [
       'paramétrica tinha a mais: quando o móvel passa por cada ponto, em que sentido, e ' +
       'quantas vezes.',
     formulas: [
-      { tex: 't = \\frac{x - x_{0}}{v_{x}} \\;\\Longrightarrow\\; y = y_{0} + \\frac{v_{y}}{v_{x}}(x - x_{0})' },
-      { tex: '\\cos^{2} t + \\operatorname{sen}^{2} t = 1', legenda: 'O caminho para as curvas circulares.' },
+      {
+        tex: 't = \\frac{x - x_{0}}{v_{x}} \\;\\Longrightarrow\\; y = y_{0} + \\frac{v_{y}}{v_{x}}(x - x_{0})',
+      },
+      {
+        tex: '\\cos^{2} t + \\operatorname{sen}^{2} t = 1',
+        legenda: 'O caminho para as curvas circulares.',
+      },
     ],
     demonstracao: [
       {

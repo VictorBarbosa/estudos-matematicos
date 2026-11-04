@@ -20,6 +20,8 @@ import {
   SegmentoPlot,
 } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/geometria-analitica/ponto-e-reta/ponto-e-reta.i18n.json';
 import { geradorPontoReta } from '@features/geometria-analitica/ponto-e-reta/ponto-e-reta.gerador';
 import { TEORIA_PONTO_RETA } from '@features/geometria-analitica/ponto-e-reta/ponto-e-reta.teoria';
 
@@ -39,6 +41,7 @@ import { TEORIA_PONTO_RETA } from '@features/geometria-analitica/ponto-e-reta/po
   styleUrl: './ponto-e-reta.scss',
 })
 export class PontoEReta {
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorPontoReta;
   protected readonly conceitos = TEORIA_PONTO_RETA.map((teoria) => teoria.id);
 
@@ -81,19 +84,19 @@ export class PontoEReta {
   protected readonly relacao = computed(() => {
     const reta = this.reta();
     if (reta === null || reta.resultado.vertical) {
-      return 'A reta é vertical: não tem coeficiente angular para comparar.';
+      return this.texto('retaVertical');
     }
 
     const m = reta.resultado.coeficienteAngular!;
     const outra = this.mComparacao();
 
     if (saoParalelas(m, outra)) {
-      return `Mesma inclinação de y = ${outra}x: as retas são PARALELAS.`;
+      return this.texto('paralelas', { outra });
     }
     if (saoPerpendiculares(m, outra)) {
-      return `O produto das inclinações é −1: as retas são PERPENDICULARES.`;
+      return this.texto('perpendiculares');
     }
-    return `Inclinações diferentes (${formatar(m)} e ${outra}): as retas são concorrentes.`;
+    return this.texto('concorrentes', { m: formatar(m), outra });
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
@@ -103,7 +106,7 @@ export class PontoEReta {
     if (reta !== null && !reta.resultado.vertical) {
       const m = reta.resultado.coeficienteAngular!;
       const n = reta.resultado.coeficienteLinear;
-      curvas.push({ fn: (x) => m * x + n, cor: 'serie-1', rotulo: 'reta AB' });
+      curvas.push({ fn: (x) => m * x + n, cor: 'serie-1', rotulo: this.texto('curvaRetaAB') });
     }
 
     const outra = this.mComparacao();
@@ -111,7 +114,7 @@ export class PontoEReta {
       fn: (x) => outra * x,
       cor: 'serie-3',
       tracejada: true,
-      rotulo: `y = ${outra}x (comparação)`,
+      rotulo: this.texto('curvaComparacao', { m: outra }),
     });
 
     return curvas;
@@ -148,11 +151,7 @@ export class PontoEReta {
     };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Pontos A e B ligados por um segmento, com o triângulo retângulo das diferenças de ` +
-      `coordenadas e o ponto médio M destacados.`,
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_PONTO_RETA);

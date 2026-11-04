@@ -1,0 +1,81 @@
+{
+  "aX": { "pt": "A: x", "fr": "A : x", "en": "A: x" },
+  "aY": { "pt": "A: y", "fr": "A : y", "en": "A: y" },
+  "bX": { "pt": "B: x", "fr": "B : x", "en": "B: x" },
+  "bY": { "pt": "B: y", "fr": "B : y", "en": "B: y" },
+  "coincidentes": {
+    "pt": "Os dois pontos estão no mesmo lugar. Mova um deles: dois pontos coincidentes não determinam uma reta.",
+    "fr": "Les deux points sont au même endroit. Déplacez-en un : deux points confondus ne déterminent pas une droite.",
+    "en": "The two points are in the same place. Move one of them: two coincident points do not determine a line."
+  },
+  "distanciaAB": { "pt": "Distância AB", "fr": "Distance AB", "en": "Distance AB" },
+  "pontoMedio": { "pt": "Ponto médio", "fr": "Milieu", "en": "Midpoint" },
+  "coeficienteAngular": {
+    "pt": "Coeficiente angular",
+    "fr": "Pente",
+    "en": "Slope"
+  },
+  "naoExiste": { "pt": "não existe", "fr": "n’existe pas", "en": "does not exist" },
+  "deltaYSobreDeltaX": { "pt": "Δy ÷ Δx", "fr": "Δy ÷ Δx", "en": "Δy ÷ Δx" },
+  "trianguloPorTras": {
+    "pt": "O triângulo por trás da fórmula",
+    "fr": "Le triangle derrière la formule",
+    "en": "The triangle behind the formula"
+  },
+  "curvaRetaAB": { "pt": "reta AB", "fr": "droite AB", "en": "line AB" },
+  "curvaComparacao": {
+    "pt": "y = {m}x (comparação)",
+    "fr": "y = {m}x (comparaison)",
+    "en": "y = {m}x (comparison)"
+  },
+  "descricaoGrafico": {
+    "pt": "Pontos A e B ligados por um segmento, com o triângulo retângulo das diferenças de coordenadas e o ponto médio M destacados.",
+    "fr": "Points A et B reliés par un segment, avec le triangle rectangle des différences de coordonnées et le milieu M mis en évidence.",
+    "en": "Points A and B joined by a segment, with the right triangle of coordinate differences and the midpoint M highlighted."
+  },
+  "osSegmentosTracejados": {
+    "pt": "Os segmentos tracejados são Δx e Δy. A distância AB é a hipotenusa desse triângulo — por isso a fórmula é apenas Pitágoras com coordenadas.",
+    "fr": "Les segments en pointillé sont Δx et Δy. La distance AB est l’hypoténuse de ce triangle — c’est pourquoi la formule n’est que Pythagore en coordonnées.",
+    "en": "The dashed segments are Δx and Δy. The distance AB is the hypotenuse of that triangle — which is why the formula is just Pythagoras in coordinates."
+  },
+  "posicaoEmRelacao": {
+    "pt": "Posição em relação a outra reta",
+    "fr": "Position par rapport à une autre droite",
+    "en": "Position relative to another line"
+  },
+  "inclinacaoComparacao": {
+    "pt": "Inclinação da reta de comparação",
+    "fr": "Pente de la droite de comparaison",
+    "en": "Slope of the comparison line"
+  },
+  "retaVertical": {
+    "pt": "A reta é vertical: não tem coeficiente angular para comparar.",
+    "fr": "La droite est verticale : elle n’a pas de pente à comparer.",
+    "en": "The line is vertical: it has no slope to compare."
+  },
+  "paralelas": {
+    "pt": "Mesma inclinação de y = {outra}x: as retas são PARALELAS.",
+    "fr": "Même pente que y = {outra}x : les droites sont PARALLÈLES.",
+    "en": "Same slope as y = {outra}x: the lines are PARALLEL."
+  },
+  "perpendiculares": {
+    "pt": "O produto das inclinações é −1: as retas são PERPENDICULARES.",
+    "fr": "Le produit des pentes vaut −1 : les droites sont PERPENDICULAIRES.",
+    "en": "The product of the slopes is −1: the lines are PERPENDICULAR."
+  },
+  "concorrentes": {
+    "pt": "Inclinações diferentes ({m} e {outra}): as retas são concorrentes.",
+    "fr": "Pentes différentes ({m} et {outra}) : les droites sont sécantes.",
+    "en": "Different slopes ({m} and {outra}): the lines are intersecting."
+  },
+  "passoDistancia": {
+    "pt": "Passo a passo da distância",
+    "fr": "Pas à pas de la distance",
+    "en": "Step by step for the distance"
+  },
+  "passoEquacao": {
+    "pt": "Passo a passo da equação",
+    "fr": "Pas à pas de l’équation",
+    "en": "Step by step for the equation"
+  }
+}

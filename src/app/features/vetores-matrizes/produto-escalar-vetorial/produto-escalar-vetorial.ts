@@ -18,6 +18,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.i18n.json';
 import { geradorProdutos } from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.gerador';
 import { TEORIA_PRODUTOS } from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.teoria';
 
@@ -37,6 +40,8 @@ import { TEORIA_PRODUTOS } from '@features/vetores-matrizes/produto-escalar-veto
   styleUrl: './produto-escalar-vetorial.scss',
 })
 export class ProdutoEscalarVetorial {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorProdutos;
   protected readonly conceitos = TEORIA_PRODUTOS.map((teoria) => teoria.id);
 
@@ -55,9 +60,7 @@ export class ProdutoEscalarVetorial {
   protected readonly analiseProjecao = computed(() => projecaoComPassos(this.a(), this.b()));
   protected readonly analiseArea = computed(() => areaParalelogramoComPassos(this.a(), this.b()));
 
-  protected readonly perpendiculares = computed(() =>
-    vetoresPerpendiculares(this.a(), this.b()),
-  );
+  protected readonly perpendiculares = computed(() => vetoresPerpendiculares(this.a(), this.b()));
 
   protected readonly paralelos = computed(() => vetoresParalelos(this.a(), this.b()));
 
@@ -98,7 +101,7 @@ export class ProdutoEscalarVetorial {
       const pe = { x: b.x * fator, y: b.y * fator };
 
       base.push(
-        { x1: 0, y1: 0, x2: pe.x, y2: pe.y, cor: 'acento', rotulo: 'projeção' },
+        { x1: 0, y1: 0, x2: pe.x, y2: pe.y, cor: 'acento', rotulo: this.texto('segmentoProjecao') },
         { x1: a.x, y1: a.y, x2: pe.x, y2: pe.y, cor: 'acento', tracejado: true },
       );
     }

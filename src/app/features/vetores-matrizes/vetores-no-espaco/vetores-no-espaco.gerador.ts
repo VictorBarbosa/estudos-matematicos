@@ -28,7 +28,7 @@ const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
  * em que se pede uma componente. É o que permite corrigir com a tolerância do
  * campo numérico em vez de inventar um formato de resposta para vetor.
  */
-export const geradorVetores3 : GeradorExercicio<number> = {
+export const geradorVetores3: GeradorExercicio<number> = {
   topicoId: 'vetores-no-espaco',
   formatoResposta: 'um número, ex.: 7 ou -2,5',
 

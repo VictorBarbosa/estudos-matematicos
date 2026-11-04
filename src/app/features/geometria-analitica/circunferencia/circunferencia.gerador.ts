@@ -36,8 +36,7 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
       return {
         id: `circunf-posicao-${a}${b}${raio}-${deslocamento}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado:
-          `Qual é a distância do ponto (${ponto.x}, ${ponto.y}) ao centro desta circunferência?`,
+        enunciado: `Qual é a distância do ponto (${ponto.x}, ${ponto.y}) ao centro desta circunferência?`,
         enunciadoTex: `(x ${a >= 0 ? '-' : '+'} ${Math.abs(a)})^{2} + (y ${b >= 0 ? '-' : '+'} ${Math.abs(b)})^{2} = ${raio * raio}`,
         gabarito,
         resolucao: {
@@ -93,11 +92,13 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
           resultado: gabarito,
           passos: [
             {
-              descricao: 'Na forma geral, a abscissa do centro é menos a metade do coeficiente de x.',
+              descricao:
+                'Na forma geral, a abscissa do centro é menos a metade do coeficiente de x.',
               tex: `a = -\\frac{D}{2} = -\\frac{${d}}{2} = ${a}`,
             },
             {
-              descricao: 'Completando o quadrado, o mesmo valor aparece no parêntese com sinal trocado.',
+              descricao:
+                'Completando o quadrado, o mesmo valor aparece no parêntese com sinal trocado.',
               tex: `\\left(x ${a >= 0 ? '-' : '+'} ${Math.abs(a)}\\right)^{2}`,
             },
           ],
@@ -135,9 +136,10 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
       id: `circunf-raio-${a}${b}${raio}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: 'Qual é o raio desta circunferência?',
-      enunciadoTex: nivel === 'facil'
-        ? `(x ${a >= 0 ? '-' : '+'} ${Math.abs(a)})^{2} + (y ${b >= 0 ? '-' : '+'} ${Math.abs(b)})^{2} = ${raio * raio}`
-        : geralTex,
+      enunciadoTex:
+        nivel === 'facil'
+          ? `(x ${a >= 0 ? '-' : '+'} ${Math.abs(a)})^{2} + (y ${b >= 0 ? '-' : '+'} ${Math.abs(b)})^{2} = ${raio * raio}`
+          : geralTex,
       gabarito,
       resolucao: {
         resultado: gabarito,

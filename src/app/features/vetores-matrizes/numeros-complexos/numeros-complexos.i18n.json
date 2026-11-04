@@ -1,0 +1,62 @@
+{
+  "realZ1": {
+    "pt": "Parte real de z₁",
+    "fr": "Partie réelle de z₁",
+    "en": "Real part of z₁"
+  },
+  "imagZ1": {
+    "pt": "Parte imaginária de z₁",
+    "fr": "Partie imaginaire de z₁",
+    "en": "Imaginary part of z₁"
+  },
+  "realZ2": {
+    "pt": "Parte real de z₂",
+    "fr": "Partie réelle de z₂",
+    "en": "Real part of z₂"
+  },
+  "imagZ2": {
+    "pt": "Parte imaginária de z₂",
+    "fr": "Partie imaginaire de z₂",
+    "en": "Imaginary part of z₂"
+  },
+  "multiplicarEGirar": {
+    "pt": "Multiplicar é girar e esticar",
+    "fr": "Multiplier, c’est tourner et étirer",
+    "en": "Multiplying is rotating and stretching"
+  },
+  "descricaoGrafico": {
+    "pt": "Plano complexo com z₁, z₂, o produto e as potências sucessivas de z₁.",
+    "fr": "Plan complexe avec z₁, z₂, le produit et les puissances successives de z₁.",
+    "en": "Complex plane with z₁, z₂, the product and the successive powers of z₁."
+  },
+  "compareOsIndicadores": {
+    "pt": "Compare os indicadores abaixo: o módulo do produto é o produto dos módulos, e o argumento é a soma dos argumentos. Não é coincidência de alguns casos — é o que multiplicação faz no plano complexo, sempre.",
+    "fr": "Comparez les indicateurs ci-dessous : le module du produit est le produit des modules, et l’argument est la somme des arguments. Ce n’est pas une coïncidence de quelques cas — c’est ce que fait la multiplication dans le plan complexe, toujours.",
+    "en": "Compare the readouts below: the modulus of the product is the product of the moduli, and the argument is the sum of the arguments. It is no coincidence in a few cases — it is what multiplication does in the complex plane, always."
+  },
+  "passoDoProduto": {
+    "pt": "Passo a passo do produto",
+    "fr": "Pas à pas du produit",
+    "en": "Step by step for the product"
+  },
+  "formaPolar": {
+    "pt": "Forma polar de z₁",
+    "fr": "Forme polaire de z₁",
+    "en": "Polar form of z₁"
+  },
+  "deMoivre": {
+    "pt": "De Moivre: potências como giros",
+    "fr": "De Moivre : les puissances comme rotations",
+    "en": "De Moivre: powers as rotations"
+  },
+  "dicaExpoente": {
+    "pt": "Os pontos no gráfico são z¹, z², …, zⁿ.",
+    "fr": "Les points du graphique sont z¹, z², …, zⁿ.",
+    "en": "The points on the graph are z¹, z², …, zⁿ."
+  },
+  "osPontosFormam": {
+    "pt": "Os pontos no gráfico formam uma espiral: cada potência gira o mesmo ângulo e multiplica o módulo pelo mesmo fator. Quando |z₁| = 1, a espiral vira um círculo — e os pontos se distribuem igualmente, como as raízes da unidade.",
+    "fr": "Les points du graphique forment une spirale : chaque puissance tourne du même angle et multiplie le module par le même facteur. Quand |z₁| = 1, la spirale devient un cercle — et les points se répartissent régulièrement, comme les racines de l’unité.",
+    "en": "The points on the graph form a spiral: each power turns by the same angle and multiplies the modulus by the same factor. When |z₁| = 1, the spiral becomes a circle — and the points spread out evenly, like the roots of unity."
+  }
+}

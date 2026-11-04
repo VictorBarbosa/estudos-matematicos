@@ -10,22 +10,30 @@ export const rotas: Routes = [
   {
     path: 'ponto-e-reta',
     title: 'Ponto e reta · Estudos Matemáticos',
-    loadComponent: () => import('@features/geometria-analitica/ponto-e-reta/ponto-e-reta').then((m) => m.PontoEReta),
+    loadComponent: () =>
+      import('@features/geometria-analitica/ponto-e-reta/ponto-e-reta').then((m) => m.PontoEReta),
   },
   {
     path: 'circunferencia',
     title: 'Circunferência · Estudos Matemáticos',
-    loadComponent: () => import('@features/geometria-analitica/circunferencia/circunferencia').then((m) => m.Circunferencia),
+    loadComponent: () =>
+      import('@features/geometria-analitica/circunferencia/circunferencia').then(
+        (m) => m.Circunferencia,
+      ),
   },
   {
     path: 'conicas',
     title: 'Cônicas · Estudos Matemáticos',
-    loadComponent: () => import('@features/geometria-analitica/conicas/conicas').then((m) => m.Conicas),
+    loadComponent: () =>
+      import('@features/geometria-analitica/conicas/conicas').then((m) => m.Conicas),
   },
   {
     path: 'equacoes-parametricas',
     title: 'Equações paramétricas · Estudos Matemáticos',
-    loadComponent: () => import('@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas').then((m) => m.EquacoesParametricas),
+    loadComponent: () =>
+      import('@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas').then(
+        (m) => m.EquacoesParametricas,
+      ),
   },
   { path: '', pathMatch: 'full', redirectTo: 'ponto-e-reta' },
 ];

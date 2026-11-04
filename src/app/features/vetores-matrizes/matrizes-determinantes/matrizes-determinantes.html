@@ -13,25 +13,25 @@
     </section>
 
     <section>
-      <h2>O determinante é uma área</h2>
+      <h2>{{ texto('determinanteEArea') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [segmentos]="segmentos()"
-        descricao="As duas linhas da matriz como vetores, e o paralelogramo que elas formam."
+        [descricao]="texto('descricaoGrafico')"
         [altura]="400"
       />
-      <p class="observacao">
-        As linhas da matriz, vistas como vetores, formam um paralelogramo. Sua área é
-        exatamente <strong>|det A| = {{ formatar(determinante() < 0 ? -determinante() : determinante()) }}</strong>.
-        O sinal do determinante indica apenas a orientação: se a segunda linha está no sentido
-        anti-horário em relação à primeira.
-      </p>
+      <!-- A área vem em <strong> dentro da frase, que muda de ordem por língua. -->
+      <p
+        class="observacao"
+        [innerHTML]="
+          texto('asLinhasDaMatriz', {
+            area: formatar(determinante() < 0 ? -determinante() : determinante()),
+          })
+        "
+      ></p>
 
       @if (singular()) {
-        <p class="aviso">
-          Determinante zero: as duas linhas ficaram alinhadas. Não há paralelogramo, a
-          transformação achata o plano numa reta, e o sistema associado perde a solução única.
-        </p>
+        <p class="aviso">{{ texto('avisoSingular') }}</p>
       }
     </section>
 
@@ -41,36 +41,42 @@
         <strong>{{ formatar(determinante()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">det(A·A)</span>
+        <span class="rotulo">{{ texto('detDoQuadrado') }}</span>
         <strong>{{ formatar(determinanteDoQuadrado()) }}</strong>
-        <span class="legenda">= (det A)²</span>
+        <span class="legenda">{{ texto('igualDetAoQuadrado') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Sistema associado</span>
-        <strong>{{ singular() ? 'sem solução única' : 'solução única' }}</strong>
+        <span class="rotulo">{{ texto('sistemaAssociado') }}</span>
+        <strong>{{ singular() ? texto('semSolucaoUnica') : texto('solucaoUnica') }}</strong>
       </div>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="analiseDeterminante().passos" />
     </section>
 
     <section class="painel">
-      <h2>Produto de matrizes</h2>
+      <h2>{{ texto('produtoDeMatrizes') }}</h2>
       <app-passo-a-passo [passos]="quadrado().passos" />
-      <p class="observacao">
-        Compare o determinante de A·A com o quadrado do determinante de A, nos indicadores
-        acima: eles coincidem sempre. Faz sentido — aplicar a mesma transformação duas vezes
-        multiplica a área duas vezes pelo mesmo fator.
-      </p>
+      <p class="observacao">{{ texto('compareODeterminante') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Regra de Cramer</h2>
+      <h2>{{ texto('regraDeCramer') }}</h2>
       <div class="grade-controles">
-        <app-controle-parametro [(valor)]="b1" rotulo="Constante da 1ª equação" [min]="-20" [max]="20" />
-        <app-controle-parametro [(valor)]="b2" rotulo="Constante da 2ª equação" [min]="-20" [max]="20" />
+        <app-controle-parametro
+          [(valor)]="b1"
+          [rotulo]="texto('constante1')"
+          [min]="-20"
+          [max]="20"
+        />
+        <app-controle-parametro
+          [(valor)]="b2"
+          [rotulo]="texto('constante2')"
+          [min]="-20"
+          [max]="20"
+        />
       </div>
 
       <app-formula [tex]="sistemaTex()" [bloco]="true" />
@@ -78,15 +84,15 @@
       @if (cramer(); as cramer) {
         <app-passo-a-passo [passos]="cramer.passos" />
         <p class="observacao">
-          Solução: x = {{ formatar(cramer.resultado.valores[0]!) }}, y =
-          {{ formatar(cramer.resultado.valores[1]!) }}. O determinante principal aparece no
-          denominador de todas as incógnitas — e é por isso que ele não pode ser zero.
+          {{
+            texto('solucaoCramer', {
+              x: formatar(cramer.resultado.valores[0]!),
+              y: formatar(cramer.resultado.valores[1]!),
+            })
+          }}
         </p>
       } @else {
-        <p class="aviso">
-          Com determinante principal nulo, Cramer não se aplica: o sistema é impossível ou tem
-          infinitas soluções. Geometricamente, as duas retas são paralelas ou coincidentes.
-        </p>
+        <p class="aviso">{{ texto('avisoCramer') }}</p>
       }
     </section>
 

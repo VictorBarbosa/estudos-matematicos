@@ -16,6 +16,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.i18n.json';
 import { geradorMatrizes } from '@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.gerador';
 import { TEORIA_MATRIZES } from '@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.teoria';
 
@@ -35,6 +38,8 @@ import { TEORIA_MATRIZES } from '@features/vetores-matrizes/matrizes-determinant
   styleUrl: './matrizes-determinantes.scss',
 })
 export class MatrizesDeterminantes {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorMatrizes;
   protected readonly conceitos = TEORIA_MATRIZES.map((teoria) => teoria.id);
 
@@ -100,8 +105,24 @@ export class MatrizesDeterminantes {
     const v = { x: this.a21(), y: this.a22() };
 
     return [
-      { x1: 0, y1: 0, x2: u.x, y2: u.y, cor: 'serie-1', seta: true, rotulo: 'linha 1' },
-      { x1: 0, y1: 0, x2: v.x, y2: v.y, cor: 'serie-2', seta: true, rotulo: 'linha 2' },
+      {
+        x1: 0,
+        y1: 0,
+        x2: u.x,
+        y2: u.y,
+        cor: 'serie-1',
+        seta: true,
+        rotulo: this.texto('segmentoLinha1'),
+      },
+      {
+        x1: 0,
+        y1: 0,
+        x2: v.x,
+        y2: v.y,
+        cor: 'serie-2',
+        seta: true,
+        rotulo: this.texto('segmentoLinha2'),
+      },
       { x1: u.x, y1: u.y, x2: u.x + v.x, y2: u.y + v.y, cor: 'texto-suave', tracejado: true },
       { x1: v.x, y1: v.y, x2: u.x + v.x, y2: u.y + v.y, cor: 'texto-suave', tracejado: true },
     ];

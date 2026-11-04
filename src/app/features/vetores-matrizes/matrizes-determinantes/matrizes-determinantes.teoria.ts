@@ -23,7 +23,8 @@ export const TEORIA_MATRIZES: readonly Teoria[] = [
     ],
     demonstracao: [
       {
-        descricao: 'A matriz representa uma transformação; o produto representa aplicá-las em sequência.',
+        descricao:
+          'A matriz representa uma transformação; o produto representa aplicá-las em sequência.',
         tex: '(AB)\\vec{v} = A(B\\vec{v})',
         nota: 'B age primeiro — daí a ordem importar.',
       },
@@ -130,7 +131,8 @@ export const TEORIA_MATRIZES: readonly Teoria[] = [
         tex: 'x_j = \\frac{\\det A_j}{\\det A}',
       },
       {
-        descricao: 'Com determinante nulo, a divisão é impossível — e geometricamente as retas são paralelas.',
+        descricao:
+          'Com determinante nulo, a divisão é impossível — e geometricamente as retas são paralelas.',
         tex: '\\det A = 0',
         nota: 'Retas paralelas nunca se cruzam; coincidentes se cruzam em infinitos pontos.',
       },

@@ -1,6 +1,6 @@
 <app-topico-layout topicoId="conicas">
   <div explorar class="explorar">
-    <section class="seletor-pills" role="group" aria-label="Tipo de cônica">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('tipoDeConica')">
       @for (opcao of tipos; track opcao.valor) {
         <button
           type="button"
@@ -8,15 +8,15 @@
           [attr.aria-pressed]="tipo() === opcao.valor"
           (click)="definirTipo(opcao.valor)"
         >
-          {{ opcao.rotulo }}
+          {{ texto(opcao.valor) }}
         </button>
       }
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Semieixo a" [min]="1" [max]="10" />
+      <app-controle-parametro [(valor)]="a" [rotulo]="texto('semieixoA')" [min]="1" [max]="10" />
       @if (tipo() !== 'parabola') {
-        <app-controle-parametro [(valor)]="b" rotulo="Semieixo b" [min]="1" [max]="10" />
+        <app-controle-parametro [(valor)]="b" [rotulo]="texto('semieixoB')" [min]="1" [max]="10" />
       }
     </section>
 
@@ -26,7 +26,7 @@
     </section>
 
     <section>
-      <h2>A curva e seus focos</h2>
+      <h2>{{ texto('curvaESeusFocos') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -35,26 +35,19 @@
         [altura]="400"
       />
       <p class="observacao">
-        @switch (tipo()) {
-          @case ('elipse') {
-            Iguale os dois semieixos: os focos se juntam no centro e a elipse vira uma
-            circunferência. É o mesmo plano cortando o cone, só que perpendicular ao eixo.
-          }
-          @case ('hiperbole') {
-            As retas tracejadas são as assíntotas. Os ramos se aproximam delas
-            indefinidamente, sem nunca tocá-las.
-          }
-          @case ('parabola') {
-            A parábola é o caso limite entre as duas: o plano corta paralelo a uma geratriz
-            do cone, e a curva não chega a se fechar.
-          }
-        }
+        {{
+          tipo() === 'elipse'
+            ? texto('notaElipse')
+            : tipo() === 'hiperbole'
+              ? texto('notaHiperbole')
+              : texto('notaParabola')
+        }}
       </p>
     </section>
 
     @if (analise(); as resolvido) {
       <section>
-        <h2>Passo a passo</h2>
+        <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
         <app-passo-a-passo [passos]="resolvido.passos" />
       </section>
     }

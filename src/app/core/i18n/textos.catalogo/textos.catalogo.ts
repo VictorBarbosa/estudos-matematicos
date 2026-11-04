@@ -24,6 +24,10 @@ import t_funcoes_racionais from '@features/funcoes/funcoes-racionais/funcoes-rac
 import t_juros_compostos from '@features/funcoes/juros-compostos/juros-compostos.i18n.json';
 import t_progressoes from '@features/funcoes/progressoes/progressoes.i18n.json';
 import t_transformacoes_de_graficos from '@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.i18n.json';
+import t_circunferencia from '@features/geometria-analitica/circunferencia/circunferencia.i18n.json';
+import t_conicas from '@features/geometria-analitica/conicas/conicas.i18n.json';
+import t_equacoes_parametricas from '@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.i18n.json';
+import t_ponto_e_reta from '@features/geometria-analitica/ponto-e-reta/ponto-e-reta.i18n.json';
 import t_angulos_e_triangulos from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.i18n.json';
 import t_areas_de_figuras_planas from '@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.i18n.json';
 import t_circulo_e_poligonos from '@features/geometria/circulo-e-poligonos/circulo-e-poligonos.i18n.json';
@@ -44,6 +48,11 @@ import t_identidades_trigonometricas from '@features/trigonometria/identidades-t
 import t_lei_senos_cossenos from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.i18n.json';
 import t_seno_cosseno_tangente from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.i18n.json';
 import t_triangulo_retangulo from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.i18n.json';
+import t_matrizes_determinantes from '@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.i18n.json';
+import t_numeros_complexos from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.i18n.json';
+import t_produto_escalar_vetorial from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.i18n.json';
+import t_vetores_no_espaco from '@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.i18n.json';
+import t_vetores_no_plano from '@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.i18n.json';
 
 /** Cada tópico e o dicionário que viaja com ele. */
 export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
@@ -67,6 +76,10 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['juros-compostos', t_juros_compostos as TabelaDeTextos],
   ['progressoes', t_progressoes as TabelaDeTextos],
   ['transformacoes-de-graficos', t_transformacoes_de_graficos as TabelaDeTextos],
+  ['circunferencia', t_circunferencia as TabelaDeTextos],
+  ['conicas', t_conicas as TabelaDeTextos],
+  ['equacoes-parametricas', t_equacoes_parametricas as TabelaDeTextos],
+  ['ponto-e-reta', t_ponto_e_reta as TabelaDeTextos],
   ['angulos-e-triangulos', t_angulos_e_triangulos as TabelaDeTextos],
   ['areas-de-figuras-planas', t_areas_de_figuras_planas as TabelaDeTextos],
   ['circulo-e-poligonos', t_circulo_e_poligonos as TabelaDeTextos],
@@ -87,4 +100,9 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['lei-senos-cossenos', t_lei_senos_cossenos as TabelaDeTextos],
   ['seno-cosseno-tangente', t_seno_cosseno_tangente as TabelaDeTextos],
   ['triangulo-retangulo', t_triangulo_retangulo as TabelaDeTextos],
+  ['matrizes-determinantes', t_matrizes_determinantes as TabelaDeTextos],
+  ['numeros-complexos', t_numeros_complexos as TabelaDeTextos],
+  ['produto-escalar-vetorial', t_produto_escalar_vetorial as TabelaDeTextos],
+  ['vetores-no-espaco', t_vetores_no_espaco as TabelaDeTextos],
+  ['vetores-no-plano', t_vetores_no_plano as TabelaDeTextos],
 ]);

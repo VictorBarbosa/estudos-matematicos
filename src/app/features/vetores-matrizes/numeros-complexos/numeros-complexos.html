@@ -1,10 +1,10 @@
 <app-topico-layout topicoId="numeros-complexos">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a1" rotulo="Parte real de z₁" [min]="-6" [max]="6" />
-      <app-controle-parametro [(valor)]="b1" rotulo="Parte imaginária de z₁" [min]="-6" [max]="6" />
-      <app-controle-parametro [(valor)]="a2" rotulo="Parte real de z₂" [min]="-6" [max]="6" />
-      <app-controle-parametro [(valor)]="b2" rotulo="Parte imaginária de z₂" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="a1" [rotulo]="texto('realZ1')" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="b1" [rotulo]="texto('imagZ1')" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="a2" [rotulo]="texto('realZ2')" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="b2" [rotulo]="texto('imagZ2')" [min]="-6" [max]="6" />
     </section>
 
     <section class="destaque-formula">
@@ -14,19 +14,15 @@
     </section>
 
     <section>
-      <h2>Multiplicar é girar e esticar</h2>
+      <h2>{{ texto('multiplicarEGirar') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [segmentos]="segmentos()"
         [pontos]="potencias()"
-        descricao="Plano complexo com z₁, z₂, o produto e as potências sucessivas de z₁."
+        [descricao]="texto('descricaoGrafico')"
         [altura]="440"
       />
-      <p class="observacao">
-        Compare os indicadores abaixo: o módulo do produto é o produto dos módulos, e o
-        argumento é a soma dos argumentos. Não é coincidência de alguns casos — é o que
-        multiplicação faz no plano complexo, sempre.
-      </p>
+      <p class="observacao">{{ texto('compareOsIndicadores') }}</p>
     </section>
 
     <section class="indicadores">
@@ -37,7 +33,7 @@
       <div class="indicador" data-destaque="true">
         <span class="rotulo">|z₁z₂|</span>
         <strong>{{ formatar(moduloProduto()) }}</strong>
-        <span class="legenda">iguais, sempre</span>
+        <span class="legenda">{{ i18n.t('explorar.iguaisSempre') }}</span>
       </div>
       <div class="indicador">
         <span class="rotulo">arg z₁ + arg z₂</span>
@@ -46,37 +42,33 @@
       <div class="indicador" data-destaque="true">
         <span class="rotulo">arg(z₁z₂)</span>
         <strong>{{ formatar(argumentoProduto()) }}°</strong>
-        <span class="legenda">iguais, sempre</span>
+        <span class="legenda">{{ i18n.t('explorar.iguaisSempre') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>Passo a passo do produto</h2>
+      <h2>{{ texto('passoDoProduto') }}</h2>
       <app-passo-a-passo [passos]="produto().passos" />
     </section>
 
     @if (polar(); as polar) {
       <section class="painel">
-        <h2>Forma polar de z₁</h2>
+        <h2>{{ texto('formaPolar') }}</h2>
         <app-passo-a-passo [passos]="polar.passos" />
       </section>
     }
 
     <section class="painel">
-      <h2>De Moivre: potências como giros</h2>
+      <h2>{{ texto('deMoivre') }}</h2>
       <app-controle-parametro
         [(valor)]="expoente"
-        rotulo="Expoente n"
+        [rotulo]="i18n.t('explorar.expoenteN')"
         [min]="1"
         [max]="12"
-        dica="Os pontos no gráfico são z¹, z², …, zⁿ."
+        [dica]="texto('dicaExpoente')"
       />
       <app-passo-a-passo [passos]="potencia().passos" />
-      <p class="observacao">
-        Os pontos no gráfico formam uma espiral: cada potência gira o mesmo ângulo e multiplica
-        o módulo pelo mesmo fator. Quando |z₁| = 1, a espiral vira um círculo — e os pontos se
-        distribuem igualmente, como as raízes da unidade.
-      </p>
+      <p class="observacao">{{ texto('osPontosFormam') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

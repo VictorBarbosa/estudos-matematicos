@@ -16,6 +16,8 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.i18n.json';
 import { geradorEquacoesParametricas } from '@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.gerador';
 import { TEORIA_PARAMETRICAS } from '@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.teoria';
 
@@ -27,6 +29,7 @@ import { TEORIA_PARAMETRICAS } from '@features/geometria-analitica/equacoes-para
   styleUrl: './equacoes-parametricas.scss',
 })
 export class EquacoesParametricas {
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorEquacoesParametricas;
   protected readonly conceitos = TEORIA_PARAMETRICAS.map((teoria) => teoria.id);
 
@@ -93,7 +96,7 @@ export class EquacoesParametricas {
   });
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() => [
-    { x: this.posicao().x, y: this.posicao().y, cor: 'acento', rotulo: 'agora' },
+    { x: this.posicao().x, y: this.posicao().y, cor: 'acento', rotulo: this.texto('pontoAgora') },
   ]);
 
   protected readonly dominio = computed(() => {
@@ -101,11 +104,7 @@ export class EquacoesParametricas {
     return { xMin: -alcance, xMax: alcance * 2, yMin: -alcance, yMax: alcance };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'A curva vai sendo traçada conforme o parâmetro avança, e o ponto em destaque marca onde ' +
-      'o móvel está no instante escolhido.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_PARAMETRICAS);

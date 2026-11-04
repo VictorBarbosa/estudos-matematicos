@@ -132,9 +132,7 @@ describe('geradorProdutos (produto escalar e vetorial)', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('produto VETORIAL')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('produto VETORIAL'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('produto VETORIAL'))!;
 
     const resultado = corrigir(geradorProdutos, exercicio, String(armadilha.resposta));
 

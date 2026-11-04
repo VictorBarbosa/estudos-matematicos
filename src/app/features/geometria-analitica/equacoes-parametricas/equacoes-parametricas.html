@@ -1,27 +1,33 @@
 <app-topico-layout topicoId="equacoes-parametricas">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>O tempo entra na descrição</h2>
+      <h2>{{ texto('oTempoEntra') }}</h2>
       <app-formula [tex]="'\\begin{cases} x = x(t) \\\\ y = y(t) \\end{cases}'" [bloco]="true" />
-      <p class="observacao">
-        A equação cartesiana diz o CAMINHO; as paramétricas dizem também quando o móvel passa
-        por cada ponto, em que sentido e com que velocidade. É por isso que toda trajetória de
-        voo, toda órbita e toda simulação de mecânica são escritas assim.
-      </p>
+      <p class="observacao">{{ texto('aEquacaoCartesiana') }}</p>
     </section>
 
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="escolha"
-        rotulo="Curva (0 reta · 1 círculo · 2 elipse · 3 lançamento · 4 ciclóide)"
+        [rotulo]="texto('curvaEscolha')"
         [min]="0"
         [max]="4"
       />
-      <app-controle-parametro [(valor)]="parametroA" rotulo="Parâmetro a" [min]="1" [max]="8" />
-      <app-controle-parametro [(valor)]="parametroB" rotulo="Parâmetro b" [min]="1" [max]="8" />
+      <app-controle-parametro
+        [(valor)]="parametroA"
+        [rotulo]="texto('parametroA')"
+        [min]="1"
+        [max]="8"
+      />
+      <app-controle-parametro
+        [(valor)]="parametroB"
+        [rotulo]="texto('parametroB')"
+        [min]="1"
+        [max]="8"
+      />
       <app-controle-parametro
         [(valor)]="centesimosDoTempo"
-        rotulo="Instante, em centésimos"
+        [rotulo]="texto('instante')"
         [min]="0"
         [max]="800"
         [passo]="10"
@@ -35,22 +41,22 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Posição agora</span>
+        <span class="rotulo">{{ texto('posicaoAgora') }}</span>
         <strong>({{ formatar(posicao().x) }}, {{ formatar(posicao().y) }})</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Rapidez</span>
+        <span class="rotulo">{{ texto('rapidez') }}</span>
         <strong>{{ formatar(rapidez()) }}</strong>
-        <span class="legenda">módulo da derivada das duas coordenadas</span>
+        <span class="legenda">{{ texto('moduloDaDerivada') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Parâmetro</span>
+        <span class="rotulo">{{ texto('parametro') }}</span>
         <strong>{{ formatar(tempo()) }}</strong>
       </div>
     </section>
 
     <section>
-      <h2>A curva sendo traçada</h2>
+      <h2>{{ texto('curvaSendoTracada') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [segmentos]="segmentos()"
@@ -58,24 +64,16 @@
         [descricao]="descricaoGrafico()"
         [altura]="420"
       />
-      <p class="observacao">
-        Avance o instante e veja o traço crescer. Na circunferência o ponto dá voltas; no
-        lançamento ele sobe e desce; na ciclóide ele desenha o rastro de um ponto da borda de
-        uma roda que rola — uma curva que nem sequer tem forma cartesiana elementar.
-      </p>
+      <p class="observacao">{{ texto('avanceOInstante') }}</p>
     </section>
 
     <section class="painel">
-      <h2>A velocidade sai de graça</h2>
+      <h2>{{ texto('velocidadeDeGraca') }}</h2>
       <app-formula
         [tex]="'\\vec{v}(t) = \\left(\\frac{dx}{dt},\\; \\frac{dy}{dt}\\right)'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Derivar cada coordenada em relação ao parâmetro dá o vetor velocidade inteiro, com
-        módulo e direção, sem eliminar nada e sem regra da cadeia. É a vantagem prática que
-        justifica a notação — e o motivo de a mecânica inteira ser escrita nela.
-      </p>
+      <p class="observacao">{{ texto('derivarCadaCoordenada') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

@@ -1,0 +1,70 @@
+{
+  "tipoDeConica": {
+    "pt": "Tipo de cônica",
+    "fr": "Type de conique",
+    "en": "Kind of conic"
+  },
+  "elipse": { "pt": "Elipse", "fr": "Ellipse", "en": "Ellipse" },
+  "parabola": { "pt": "Parábola", "fr": "Parabole", "en": "Parabola" },
+  "hiperbole": { "pt": "Hipérbole", "fr": "Hyperbole", "en": "Hyperbola" },
+  "semieixoA": { "pt": "Semieixo a", "fr": "Demi-axe a", "en": "Semi-axis a" },
+  "semieixoB": { "pt": "Semieixo b", "fr": "Demi-axe b", "en": "Semi-axis b" },
+  "excParabola": {
+    "pt": "A parábola é o caso de fronteira: e = 1, exatamente entre elipse e hipérbole.",
+    "fr": "La parabole est le cas frontière : e = 1, exactement entre l’ellipse et l’hyperbole.",
+    "en": "The parabola is the borderline case: e = 1, exactly between ellipse and hyperbola."
+  },
+  "excZero": {
+    "pt": "Com e = 0 os focos coincidem: a elipse é uma circunferência.",
+    "fr": "Avec e = 0 les foyers se confondent : l’ellipse est un cercle.",
+    "en": "With e = 0 the foci coincide: the ellipse is a circle."
+  },
+  "excElipse": {
+    "pt": "e = {e}: quanto mais perto de 1, mais achatada a elipse.",
+    "fr": "e = {e} : plus on approche de 1, plus l’ellipse est aplatie.",
+    "en": "e = {e}: the closer to 1, the flatter the ellipse."
+  },
+  "excHiperbole": {
+    "pt": "e = {e}: acima de 1, a curva se abre em dois ramos.",
+    "fr": "e = {e} : au-dessus de 1, la courbe s’ouvre en deux branches.",
+    "en": "e = {e}: above 1, the curve opens into two branches."
+  },
+  "curvaESeusFocos": {
+    "pt": "A curva e seus focos",
+    "fr": "La courbe et ses foyers",
+    "en": "The curve and its foci"
+  },
+  "curvaParabola": { "pt": "parábola", "fr": "parabole", "en": "parabola" },
+  "curvaAssintotas": { "pt": "assíntotas", "fr": "asymptotes", "en": "asymptotes" },
+  "pontoVertice": { "pt": "vértice", "fr": "sommet", "en": "vertex" },
+  "descricaoElipse": {
+    "pt": "Gráfico de uma elipse com os focos destacados.",
+    "fr": "Graphique d’une ellipse avec les foyers mis en évidence.",
+    "en": "Graph of an ellipse with the foci highlighted."
+  },
+  "descricaoParabola": {
+    "pt": "Gráfico de uma parábola com o foco destacado.",
+    "fr": "Graphique d’une parabole avec le foyer mis en évidence.",
+    "en": "Graph of a parabola with the focus highlighted."
+  },
+  "descricaoHiperbole": {
+    "pt": "Gráfico de uma hipérbole com os focos destacados.",
+    "fr": "Graphique d’une hyperbole avec les foyers mis en évidence.",
+    "en": "Graph of a hyperbola with the foci highlighted."
+  },
+  "notaElipse": {
+    "pt": "Iguale os dois semieixos: os focos se juntam no centro e a elipse vira uma circunferência. É o mesmo plano cortando o cone, só que perpendicular ao eixo.",
+    "fr": "Égalisez les deux demi-axes : les foyers se rejoignent au centre et l’ellipse devient un cercle. C’est le même plan coupant le cône, mais perpendiculaire à l’axe.",
+    "en": "Make the two semi-axes equal: the foci meet at the centre and the ellipse becomes a circle. It is the same plane cutting the cone, only perpendicular to the axis."
+  },
+  "notaHiperbole": {
+    "pt": "As retas tracejadas são as assíntotas. Os ramos se aproximam delas indefinidamente, sem nunca tocá-las.",
+    "fr": "Les droites en pointillé sont les asymptotes. Les branches s’en approchent indéfiniment, sans jamais les toucher.",
+    "en": "The dashed lines are the asymptotes. The branches approach them without end, never touching."
+  },
+  "notaParabola": {
+    "pt": "A parábola é o caso limite entre as duas: o plano corta paralelo a uma geratriz do cone, e a curva não chega a se fechar.",
+    "fr": "La parabole est le cas limite entre les deux : le plan coupe parallèlement à une génératrice du cône, et la courbe ne se referme pas.",
+    "en": "The parabola is the limiting case between the two: the plane cuts parallel to a generator of the cone, and the curve never closes."
+  }
+}

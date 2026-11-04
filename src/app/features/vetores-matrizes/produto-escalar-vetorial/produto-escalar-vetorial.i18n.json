@@ -1,0 +1,75 @@
+{
+  "anguloAgudo": { "pt": "ângulo agudo", "fr": "angle aigu", "en": "acute angle" },
+  "anguloObtuso": { "pt": "ângulo obtuso", "fr": "angle obtus", "en": "obtuse angle" },
+  "perpendiculares": {
+    "pt": "perpendiculares",
+    "fr": "perpendiculaires",
+    "en": "perpendicular"
+  },
+  "anguloEntreEles": {
+    "pt": "Ângulo entre eles",
+    "fr": "Angle entre eux",
+    "en": "Angle between them"
+  },
+  "projecaoDeASobreB": {
+    "pt": "Projeção de a sobre b",
+    "fr": "Projection de a sur b",
+    "en": "Projection of a onto b"
+  },
+  "areaDoParalelogramo": {
+    "pt": "Área do paralelogramo",
+    "fr": "Aire du parallélogramme",
+    "en": "Area of the parallelogram"
+  },
+  "osDoisProdutos": {
+    "pt": "Os dois produtos, no mesmo desenho",
+    "fr": "Les deux produits, sur le même dessin",
+    "en": "Both products, in one drawing"
+  },
+  "descricaoGrafico": {
+    "pt": "Vetores a e b, o paralelogramo que formam e a projeção de a sobre b.",
+    "fr": "Vecteurs a et b, le parallélogramme qu’ils forment et la projection de a sur b.",
+    "en": "Vectors a and b, the parallelogram they form and the projection of a onto b."
+  },
+  "segmentoProjecao": { "pt": "projeção", "fr": "projection", "en": "projection" },
+  "oSegmentoRoxo": {
+    "pt": "O segmento roxo é a projeção de <strong>a</strong> na direção de <strong>b</strong> — é ela que o produto escalar mede. O paralelogramo tracejado é o que o produto vetorial mede. Gire os vetores e repare: quando um dos produtos é máximo, o outro é zero.",
+    "fr": "Le segment violet est la projection de <strong>a</strong> dans la direction de <strong>b</strong> — c’est elle que mesure le produit scalaire. Le parallélogramme en pointillé est ce que mesure le produit vectoriel. Faites tourner les vecteurs et remarquez : quand l’un des produits est maximal, l’autre est nul.",
+    "en": "The purple segment is the projection of <strong>a</strong> along <strong>b</strong> — that is what the dot product measures. The dashed parallelogram is what the cross product measures. Rotate the vectors and notice: when one product is largest, the other is zero."
+  },
+  "avisoPerpendiculares": {
+    "pt": "Produto escalar nulo: os vetores são perpendiculares, e a área do paralelogramo está no máximo para estes módulos.",
+    "fr": "Produit scalaire nul : les vecteurs sont perpendiculaires, et l’aire du parallélogramme est maximale pour ces modules.",
+    "en": "Dot product zero: the vectors are perpendicular, and the area of the parallelogram is at its largest for these magnitudes."
+  },
+  "avisoParalelos": {
+    "pt": "Produto vetorial nulo: os vetores são paralelos, não formam paralelogramo, e o produto escalar está no máximo.",
+    "fr": "Produit vectoriel nul : les vecteurs sont parallèles, ne forment pas de parallélogramme, et le produit scalaire est maximal.",
+    "en": "Cross product zero: the vectors are parallel, form no parallelogram, and the dot product is at its largest."
+  },
+  "oAnguloPassoAPasso": {
+    "pt": "O ângulo, passo a passo",
+    "fr": "L’angle, pas à pas",
+    "en": "The angle, step by step"
+  },
+  "projecaoTrabalho": {
+    "pt": "Projeção: o que o trabalho mede",
+    "fr": "Projection : ce que mesure le travail",
+    "en": "Projection: what work measures"
+  },
+  "empurrarUmaCaixa": {
+    "pt": "Empurrar uma caixa obliquamente realiza menos trabalho do que empurrá-la na horizontal — a componente vertical da força não acompanha o deslocamento. Com força perpendicular ao movimento, o trabalho é exatamente zero.",
+    "fr": "Pousser une caisse obliquement effectue moins de travail que la pousser à l’horizontale — la composante verticale de la force n’accompagne pas le déplacement. Avec une force perpendiculaire au mouvement, le travail est exactement nul.",
+    "en": "Pushing a box at an angle does less work than pushing it horizontally — the vertical component of the force does not follow the displacement. With a force perpendicular to the motion, the work is exactly zero."
+  },
+  "produtoVetorialTorque": {
+    "pt": "Produto vetorial: o que o torque mede",
+    "fr": "Produit vectoriel : ce que mesure le couple",
+    "en": "Cross product: what torque measures"
+  },
+  "aquiEOSeno": {
+    "pt": "Aqui é o seno que aparece, e isso muda tudo: a força que aponta para o eixo de rotação não gira nada. É por isso que ninguém abre uma porta empurrando pela dobradiça, por mais força que faça.",
+    "fr": "Ici c’est le sinus qui apparaît, et cela change tout : une force dirigée vers l’axe de rotation ne fait rien tourner. C’est pourquoi personne n’ouvre une porte en poussant sur la charnière, quelle que soit la force.",
+    "en": "Here it is the sine that appears, and that changes everything: a force pointing at the axis of rotation turns nothing. That is why nobody opens a door by pushing on the hinge, however hard they push."
+  }
+}

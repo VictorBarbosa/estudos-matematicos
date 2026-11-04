@@ -2,65 +2,62 @@
   <div explorar class="explorar">
     <section class="controles">
       <div class="grupo">
-        <h3>Vetor a</h3>
-        <app-controle-parametro [(valor)]="ax" rotulo="x de a" [min]="-8" [max]="8" />
-        <app-controle-parametro [(valor)]="ay" rotulo="y de a" [min]="-8" [max]="8" />
-        <app-controle-parametro [(valor)]="az" rotulo="z de a" [min]="-8" [max]="8" />
+        <h3>{{ texto('vetorA') }}</h3>
+        <app-controle-parametro [(valor)]="ax" [rotulo]="texto('xDeA')" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="ay" [rotulo]="texto('yDeA')" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="az" [rotulo]="texto('zDeA')" [min]="-8" [max]="8" />
       </div>
       <div class="grupo">
-        <h3>Vetor b</h3>
-        <app-controle-parametro [(valor)]="bx" rotulo="x de b" [min]="-8" [max]="8" />
-        <app-controle-parametro [(valor)]="by" rotulo="y de b" [min]="-8" [max]="8" />
-        <app-controle-parametro [(valor)]="bz" rotulo="z de b" [min]="-8" [max]="8" />
+        <h3>{{ texto('vetorB') }}</h3>
+        <app-controle-parametro [(valor)]="bx" [rotulo]="texto('xDeB')" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="by" [rotulo]="texto('yDeB')" [min]="-8" [max]="8" />
+        <app-controle-parametro [(valor)]="bz" [rotulo]="texto('zDeB')" [min]="-8" [max]="8" />
       </div>
     </section>
 
     <section class="resumo">
       <div class="cartao-valor">
-        <span class="rotulo">Os dois vetores</span>
+        <span class="rotulo">{{ texto('osDoisVetores') }}</span>
         <app-formula [tex]="'\\vec{a} = ' + aTex()" [bloco]="true" />
         <app-formula [tex]="'\\vec{b} = ' + bTex()" [bloco]="true" />
-        <p class="apoio">Com os unitários dos eixos: <app-formula [tex]="aUnitarios()" /></p>
+        <p class="apoio">{{ texto('comOsUnitarios') }} <app-formula [tex]="aUnitarios()" /></p>
       </div>
 
       <div class="cartao-valor">
-        <span class="rotulo">Módulos</span>
+        <span class="rotulo">{{ texto('modulos') }}</span>
         <app-formula [tex]="'|\\vec{a}| = ' + moduloA()" [bloco]="true" />
         <app-formula [tex]="'|\\vec{b}| = ' + moduloB()" [bloco]="true" />
       </div>
 
       <div class="cartao-valor destaque">
-        <span class="rotulo">Produto escalar</span>
+        <span class="rotulo">{{ i18n.t('explorar.produtoEscalar') }}</span>
         <strong class="numero">{{ escalar() }}</strong>
         <p class="apoio">
-          Um número. Ângulo entre eles: {{ angulo() }}°.
+          {{ texto('umNumeroAngulo', { angulo: angulo() }) }}
           @if (perpendiculares()) {
-            <strong> São perpendiculares.</strong>
+            <strong> {{ texto('saoPerpendiculares') }}</strong>
           }
         </p>
       </div>
 
       <div class="cartao-valor destaque">
-        <span class="rotulo">Produto vetorial</span>
+        <span class="rotulo">{{ texto('produtoVetorial') }}</span>
         <app-formula [tex]="vetorialTex()" [bloco]="true" />
         <p class="apoio">
-          Um vetor, perpendicular aos dois. Trocando a ordem:
-          <app-formula [tex]="trocadoTex()" /> — mesmo tamanho, sentido oposto.
+          {{ texto('umVetorPerpendicular') }}
+          <app-formula [tex]="trocadoTex()" /> {{ texto('mesmoTamanho') }}
         </p>
       </div>
     </section>
 
     <section class="conferencia">
-      <h2>A conferência que vale ver mudando</h2>
-      <p class="apoio">
-        O produto vetorial é perpendicular aos dois originais. Então o escalar dele com
-        qualquer um dos dois tem de dar zero — mexa nos controles e veja que não sai de zero.
-      </p>
+      <h2>{{ texto('aConferencia') }}</h2>
+      <p class="apoio">{{ texto('oProdutoVetorialE') }}</p>
       <app-formula [tex]="conferencia()" [bloco]="true" />
     </section>
 
     <section class="passos">
-      <h2>Como o produto vetorial sai</h2>
+      <h2>{{ texto('comoSai') }}</h2>
       <app-passo-a-passo [passos]="passos()" />
     </section>
 

@@ -28,8 +28,9 @@ describe('geradorPontoReta', () => {
     const exercicios = amostra('medio', 90).filter((e) => e.enunciado.includes('distância'));
 
     for (const exercicio of exercicios) {
-      const [, ax, ay, bx, by] =
-        /A\((-?\d+),\\; (-?\d+)\) \\qquad B\((-?\d+),\\; (-?\d+)\)/.exec(exercicio.enunciadoTex)!;
+      const [, ax, ay, bx, by] = /A\((-?\d+),\\; (-?\d+)\) \\qquad B\((-?\d+),\\; (-?\d+)\)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       const esperado = Math.hypot(Number(bx) - Number(ax), Number(by) - Number(ay));
       expect(exercicio.gabarito).toBeCloseTo(esperado, 9);

@@ -12,7 +12,10 @@ export const TEORIA_PONTO_RETA: readonly Teoria[] = [
       'coordenadas.',
     formulas: [
       { tex: 'd = \\sqrt{(x_2 - x_1)^{2} + (y_2 - y_1)^{2}}' },
-      { tex: 'M = \\left(\\frac{x_1 + x_2}{2},\\; \\frac{y_1 + y_2}{2}\\right)', legenda: 'Ponto médio: a média das coordenadas.' },
+      {
+        tex: 'M = \\left(\\frac{x_1 + x_2}{2},\\; \\frac{y_1 + y_2}{2}\\right)',
+        legenda: 'Ponto médio: a média das coordenadas.',
+      },
     ],
     demonstracao: [
       {
@@ -91,7 +94,7 @@ export const TEORIA_PONTO_RETA: readonly Teoria[] = [
       },
       {
         descricao: 'Girar uma reta em 90° troca Δx por Δy e inverte um dos sinais.',
-        tex: 'm = \\frac{\\Delta y}{\\Delta x} \\;\\longrightarrow\\; m\' = \\frac{-\\Delta x}{\\Delta y} = -\\frac{1}{m}',
+        tex: "m = \\frac{\\Delta y}{\\Delta x} \\;\\longrightarrow\\; m' = \\frac{-\\Delta x}{\\Delta y} = -\\frac{1}{m}",
       },
       {
         descricao: 'Multiplicando as duas inclinações.',
@@ -103,7 +106,10 @@ export const TEORIA_PONTO_RETA: readonly Teoria[] = [
       enunciado: 'A reta y = 2x + 1 é perpendicular a y = −x/2 + 3.',
       passos: [
         { descricao: 'As inclinações são 2 e −1/2.', tex: 'm_1 = 2 \\qquad m_2 = -\\frac{1}{2}' },
-        { descricao: 'O produto delas.', tex: '2 \\cdot \\left(-\\frac{1}{2}\\right) = -1 \\;\\checkmark' },
+        {
+          descricao: 'O produto delas.',
+          tex: '2 \\cdot \\left(-\\frac{1}{2}\\right) = -1 \\;\\checkmark',
+        },
       ],
     },
     vejaTambem: ['ponto-reta.equacao'],

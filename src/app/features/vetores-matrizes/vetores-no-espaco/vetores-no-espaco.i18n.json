@@ -1,0 +1,61 @@
+{
+  "vetorA": { "pt": "Vetor a", "fr": "Vecteur a", "en": "Vector a" },
+  "vetorB": { "pt": "Vetor b", "fr": "Vecteur b", "en": "Vector b" },
+  "xDeA": { "pt": "x de a", "fr": "x de a", "en": "x of a" },
+  "yDeA": { "pt": "y de a", "fr": "y de a", "en": "y of a" },
+  "zDeA": { "pt": "z de a", "fr": "z de a", "en": "z of a" },
+  "xDeB": { "pt": "x de b", "fr": "x de b", "en": "x of b" },
+  "yDeB": { "pt": "y de b", "fr": "y de b", "en": "y of b" },
+  "zDeB": { "pt": "z de b", "fr": "z de b", "en": "z of b" },
+  "osDoisVetores": {
+    "pt": "Os dois vetores",
+    "fr": "Les deux vecteurs",
+    "en": "The two vectors"
+  },
+  "comOsUnitarios": {
+    "pt": "Com os unitários dos eixos:",
+    "fr": "Avec les vecteurs unitaires des axes :",
+    "en": "With the unit vectors of the axes:"
+  },
+  "modulos": { "pt": "Módulos", "fr": "Modules", "en": "Magnitudes" },
+  "umNumeroAngulo": {
+    "pt": "Um número. Ângulo entre eles: {angulo}°.",
+    "fr": "Un nombre. Angle entre eux : {angulo}°.",
+    "en": "A number. Angle between them: {angulo}°."
+  },
+  "saoPerpendiculares": {
+    "pt": "São perpendiculares.",
+    "fr": "Ils sont perpendiculaires.",
+    "en": "They are perpendicular."
+  },
+  "produtoVetorial": {
+    "pt": "Produto vetorial",
+    "fr": "Produit vectoriel",
+    "en": "Cross product"
+  },
+  "umVetorPerpendicular": {
+    "pt": "Um vetor, perpendicular aos dois. Trocando a ordem:",
+    "fr": "Un vecteur, perpendiculaire aux deux. En échangeant l’ordre :",
+    "en": "A vector, perpendicular to both. Swapping the order:"
+  },
+  "mesmoTamanho": {
+    "pt": "— mesmo tamanho, sentido oposto.",
+    "fr": "— même longueur, sens opposé.",
+    "en": "— same length, opposite direction."
+  },
+  "aConferencia": {
+    "pt": "A conferência que vale ver mudando",
+    "fr": "La vérification qui vaut la peine d’être regardée en mouvement",
+    "en": "The check worth watching change"
+  },
+  "oProdutoVetorialE": {
+    "pt": "O produto vetorial é perpendicular aos dois originais. Então o escalar dele com qualquer um dos dois tem de dar zero — mexa nos controles e veja que não sai de zero.",
+    "fr": "Le produit vectoriel est perpendiculaire aux deux vecteurs d’origine. Son produit scalaire avec l’un ou l’autre doit donc être nul — bougez les curseurs et voyez qu’il ne quitte pas zéro.",
+    "en": "The cross product is perpendicular to both originals. So its dot product with either one has to be zero — move the controls and watch it stay at zero."
+  },
+  "comoSai": {
+    "pt": "Como o produto vetorial sai",
+    "fr": "Comment le produit vectoriel s’obtient",
+    "en": "How the cross product comes out"
+  }
+}

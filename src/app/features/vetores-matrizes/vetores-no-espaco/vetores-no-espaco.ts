@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import {
   Vetor3,
   anguloEntreVetores3ComPassos,
@@ -15,6 +15,9 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.i18n.json';
 import { geradorVetores3 } from '@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.gerador';
 import { TEORIA_VETORES_ESPACO } from '@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.teoria';
 
@@ -34,6 +37,8 @@ import { TEORIA_VETORES_ESPACO } from '@features/vetores-matrizes/vetores-no-esp
   styleUrl: './vetores-no-espaco.scss',
 })
 export class VetoresNoEspaco {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorVetores3;
   protected readonly conceitos = TEORIA_VETORES_ESPACO.map((teoria) => teoria.id);
 
@@ -63,9 +68,7 @@ export class VetoresNoEspaco {
   protected readonly trocadoTex = computed(() =>
     vetor3ParaTex(produtoVetorial(this.b(), this.a())),
   );
-  protected readonly passos = computed(
-    () => produtoVetorial3ComPassos(this.a(), this.b()).passos,
-  );
+  protected readonly passos = computed(() => produtoVetorial3ComPassos(this.a(), this.b()).passos);
 
   /** Conferência que vale a pena ver mudando: o resultado é perpendicular aos dois. */
   protected readonly conferencia = computed(
