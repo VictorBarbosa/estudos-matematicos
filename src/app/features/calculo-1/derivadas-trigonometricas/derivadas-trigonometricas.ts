@@ -41,20 +41,16 @@ export class DerivadasTrigonometricas {
   /** Índice dentro dos arcos notáveis. */
   protected readonly indiceDoArco = signal(3);
 
-  protected readonly funcao = computed<'sen' | 'cos'>(() =>
-    this.escolha() === 0 ? 'sen' : 'cos',
-  );
+  protected readonly funcao = computed<'sen' | 'cos'>(() => (this.escolha() === 0 ? 'sen' : 'cos'));
 
   protected readonly arco = computed(() => ARCOS_DA_DERIVADA[this.indiceDoArco()]!);
 
-  protected readonly nomeDaFuncao = computed(() =>
-    this.funcao() === 'sen' ? 'seno' : 'cosseno',
-  );
+  protected readonly nomeDaFuncao = computed(() => (this.funcao() === 'sen' ? 'seno' : 'cosseno'));
 
   protected readonly arcoEscrito = computed(() => arcoTexto(this.arco()));
 
-  protected readonly funcaoTex = computed(() =>
-    `f(x) = ${trigParaTex(this.funcao(), this.a(), this.b())}`,
+  protected readonly funcaoTex = computed(
+    () => `f(x) = ${trigParaTex(this.funcao(), this.a(), this.b())}`,
   );
 
   protected readonly derivadaTex = computed(() => {

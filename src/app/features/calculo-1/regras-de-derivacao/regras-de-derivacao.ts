@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/regras-de-derivacao/regras-de-derivacao.i18n.json';
 import { geradorRegras } from '@features/calculo-1/regras-de-derivacao/regras-de-derivacao.gerador';
 import { TEORIA_REGRAS } from '@features/calculo-1/regras-de-derivacao/regras-de-derivacao.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_REGRAS } from '@features/calculo-1/regras-de-derivacao/regras-de
   styleUrl: './regras-de-derivacao.scss',
 })
 export class RegrasDeDerivacao {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorRegras;
   protected readonly conceitos = TEORIA_REGRAS.map((teoria) => teoria.id);
 
@@ -38,9 +43,7 @@ export class RegrasDeDerivacao {
 
   protected readonly ponto = signal(1);
 
-  protected readonly funcao = computed(() =>
-    Polinomio.de(this.d(), this.c(), this.b(), this.a()),
-  );
+  protected readonly funcao = computed(() => Polinomio.de(this.d(), this.c(), this.b(), this.a()));
 
   protected readonly derivada = computed(() => this.funcao().derivar());
   protected readonly segunda = computed(() => this.derivada().derivar());
@@ -67,13 +70,13 @@ export class RegrasDeDerivacao {
     const m = this.inclinacao();
 
     return [
-      { fn: (x) => f.avaliar(x), cor: 'serie-1', rotulo: 'f(x)' },
-      { fn: (x) => df.avaliar(x), cor: 'serie-2', rotulo: "f'(x)" },
+      { fn: (x) => f.avaliar(x), cor: 'serie-1', rotulo: this.texto('curvaF') },
+      { fn: (x) => df.avaliar(x), cor: 'serie-2', rotulo: this.texto('curvaDf') },
       {
         fn: (x) => y0 + m * (x - x0),
         cor: 'acento',
         tracejada: true,
-        rotulo: 'tangente',
+        rotulo: this.texto('curvaTangente'),
       },
     ];
   });
@@ -82,23 +85,27 @@ export class RegrasDeDerivacao {
     {
       x: this.ponto(),
       y: this.funcao().avaliar(this.ponto()),
-      rotulo: `f(${this.ponto()})`,
+      rotulo: this.texto('pontoF', { x: this.ponto() }),
       cor: 'serie-1',
     },
     {
       x: this.ponto(),
       y: this.inclinacao(),
-      rotulo: `f'(${this.ponto()}) = ${this.formatar(this.inclinacao())}`,
+      rotulo: this.texto('pontoDf', {
+        x: this.ponto(),
+        valor: this.formatar(this.inclinacao()),
+      }),
       cor: 'serie-2',
     },
   ]);
 
   protected readonly dominio = computed(() => ({ xMin: -4, xMax: 4 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Função, sua derivada e a reta tangente em x igual a ${this.ponto()}, cuja inclinação ` +
-      `é ${this.formatar(this.inclinacao())}.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      x: this.ponto(),
+      inclinacao: this.formatar(this.inclinacao()),
+    }),
   );
 
   constructor() {

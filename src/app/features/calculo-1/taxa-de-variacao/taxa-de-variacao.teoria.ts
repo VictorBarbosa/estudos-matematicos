@@ -95,7 +95,9 @@ export const TEORIA_TAXA: readonly Teoria[] = [
       'movimento acelera; quando têm sinais opostos, freia. E onde a velocidade zera, a ' +
       'posição atinge um extremo.',
     formulas: [
-      { tex: "v(t) > 0 \\;\\Rightarrow\\; s \\text{ cresce} \\qquad v(t) < 0 \\;\\Rightarrow\\; s \\text{ decresce}" },
+      {
+        tex: 'v(t) > 0 \\;\\Rightarrow\\; s \\text{ cresce} \\qquad v(t) < 0 \\;\\Rightarrow\\; s \\text{ decresce}',
+      },
       {
         tex: 'v(t)\\,a(t) > 0 \\;\\Rightarrow\\; \\text{acelera}',
         legenda: 'Mesmo sinal: o módulo da velocidade aumenta.',

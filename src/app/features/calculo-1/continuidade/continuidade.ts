@@ -7,61 +7,44 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/continuidade/continuidade.i18n.json';
 import { geradorContinuidade } from '@features/calculo-1/continuidade/continuidade.gerador';
 import { TEORIA_CONTINUIDADE } from '@features/calculo-1/continuidade/continuidade.teoria';
 
 interface Caso {
+  /** Também é a chave do rótulo, do tipo e da explicação no dicionário. */
   readonly id: string;
-  readonly rotulo: string;
   readonly tex: string;
   readonly fn: (x: number) => number;
   readonly ponto: number;
-  readonly tipo: string;
-  readonly explicacao: string;
 }
 
 const CASOS: readonly Caso[] = [
   {
     id: 'continua',
-    rotulo: 'Contínua',
     tex: 'x^{2} + 1',
     fn: (x) => x * x + 1,
     ponto: 2,
-    tipo: 'Nenhuma descontinuidade',
-    explicacao: 'As três condições valem: existe f(2), existe o limite, e os dois coincidem.',
   },
   {
     id: 'removivel',
-    rotulo: 'Buraco (removível)',
     tex: '\\frac{x^{2}-4}{x-2}',
     fn: (x) => (x * x - 4) / (x - 2),
     ponto: 2,
-    tipo: 'Descontinuidade removível',
-    explicacao:
-      'O limite existe e vale 4, mas a função não está definida no ponto. Bastaria definir ' +
-      'f(2) = 4 para consertar — por isso "removível".',
   },
   {
     id: 'salto',
-    rotulo: 'Salto',
     tex: '\\frac{|x-2|}{x-2}',
     fn: (x) => Math.abs(x - 2) / (x - 2),
     ponto: 2,
-    tipo: 'Descontinuidade de salto',
-    explicacao:
-      'Os laterais discordam: −1 de um lado, +1 do outro. Nenhum valor atribuído ao ponto ' +
-      'resolve, porque sempre discordaria de um dos lados.',
   },
   {
     id: 'infinita',
-    rotulo: 'Explosão',
     tex: '\\frac{1}{(x-2)^{2}}',
     fn: (x) => 1 / ((x - 2) * (x - 2)),
     ponto: 2,
-    tipo: 'Descontinuidade infinita',
-    explicacao:
-      'A função dispara para o infinito. Não há valor finito a atribuir, e a assíntota ' +
-      'vertical torna a descontinuidade irremovível.',
   },
 ];
 
@@ -73,6 +56,8 @@ const CASOS: readonly Caso[] = [
   styleUrl: './continuidade.scss',
 })
 export class Continuidade {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorContinuidade;
   protected readonly conceitos = TEORIA_CONTINUIDADE.map((teoria) => teoria.id);
   protected readonly casos = CASOS;
@@ -81,18 +66,14 @@ export class Continuidade {
 
   protected readonly caso = computed(() => CASOS[this.indice()] ?? CASOS[0]!);
 
-  protected readonly lateral = computed(() =>
-    limitesLaterais(this.caso().fn, this.caso().ponto),
-  );
+  protected readonly lateral = computed(() => limitesLaterais(this.caso().fn, this.caso().ponto));
 
   protected readonly valorNoPonto = computed(() => {
     const valor = this.caso().fn(this.caso().ponto);
     return Number.isFinite(valor) ? valor : null;
   });
 
-  protected readonly continua = computed(() =>
-    ehContinua(this.caso().fn, this.caso().ponto),
-  );
+  protected readonly continua = computed(() => ehContinua(this.caso().fn, this.caso().ponto));
 
   /** As três condições da definição, avaliadas uma a uma. */
   protected readonly condicoes = computed(() => {
@@ -101,22 +82,25 @@ export class Continuidade {
 
     return [
       {
-        texto: `f(${this.caso().ponto}) está definido`,
+        chave: 'condicaoDefinido',
+        valores: { ponto: this.caso().ponto },
         cumprida: valor !== null,
       },
       {
-        texto: 'o limite existe',
+        chave: 'condicaoLimite',
+        valores: undefined,
         cumprida: lateral.existe,
       },
       {
-        texto: 'limite e valor coincidem',
+        chave: 'condicaoCoincidem',
+        valores: undefined,
         cumprida: valor !== null && lateral.existe && Math.abs(valor - lateral.valor!) < 1e-6,
       },
     ];
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => [
-    { fn: this.caso().fn, cor: 'serie-1', rotulo: 'f(x)' },
+    { fn: this.caso().fn, cor: 'serie-1', rotulo: this.texto('curvaF') },
   ]);
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() => {
@@ -141,8 +125,11 @@ export class Continuidade {
     return { xMin: ponto - 4, xMax: ponto + 4 };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () => `Gráfico mostrando ${this.caso().tipo.toLowerCase()} em x igual a ${this.caso().ponto}.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      tipo: this.texto(`${this.caso().id}.tipo`).toLowerCase(),
+      ponto: this.caso().ponto,
+    }),
   );
 
   constructor() {

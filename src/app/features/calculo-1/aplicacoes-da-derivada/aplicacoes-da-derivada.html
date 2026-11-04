@@ -1,10 +1,30 @@
 <app-topico-layout topicoId="aplicacoes-da-derivada">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x³" [min]="-2" [max]="2" />
-      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x²" [min]="-4" [max]="4" />
-      <app-controle-parametro [(valor)]="c" rotulo="Coeficiente de x" [min]="-6" [max]="6" />
-      <app-controle-parametro [(valor)]="d" rotulo="Termo constante" [min]="-5" [max]="5" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefX3')"
+        [min]="-2"
+        [max]="2"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.coefX2')"
+        [min]="-4"
+        [max]="4"
+      />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="i18n.t('explorar.coefX')"
+        [min]="-6"
+        [max]="6"
+      />
+      <app-controle-parametro
+        [(valor)]="d"
+        [rotulo]="i18n.t('explorar.termoConstante')"
+        [min]="-5"
+        [max]="5"
+      />
     </section>
 
     <section class="destaque-formula">
@@ -13,7 +33,7 @@
     </section>
 
     <section>
-      <h2>Onde a tangente fica horizontal</h2>
+      <h2>{{ texto('ondeATangente') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -21,23 +41,20 @@
         [descricao]="descricaoGrafico()"
         [altura]="400"
       />
-      <p class="observacao">
-        Repare na curva tracejada da derivada: ela cruza o eixo exatamente onde a função tem
-        um extremo. E o sinal da segunda derivada ali decide se é máximo ou mínimo.
-      </p>
+      <p class="observacao">{{ texto('repareNaCurva') }}</p>
     </section>
 
     @if (criticos().length > 0) {
       <section class="painel">
-        <h2>Pontos críticos encontrados</h2>
+        <h2>{{ texto('pontosCriticos') }}</h2>
         <ul class="criticos">
           @for (critico of criticos(); track critico.x) {
             <li>
               <strong>x = {{ formatar(critico.x) }}</strong>
               <span class="tipo" [attr.data-tipo]="critico.tipo">
-                {{ rotuloTipo[critico.tipo] }}
+                {{ texto(critico.tipo) }}
               </span>
-              <span class="valor">f = {{ formatar(critico.y) }}</span>
+              <span class="valor">{{ texto('valorF', { valor: formatar(critico.y) }) }}</span>
             </li>
           }
         </ul>
@@ -45,10 +62,10 @@
     }
 
     <section class="painel">
-      <h2>Otimização: o problema da cerca</h2>
+      <h2>{{ texto('otimizacao') }}</h2>
       <app-controle-parametro
         [(valor)]="perimetro"
-        rotulo="Metros de cerca disponíveis"
+        [rotulo]="texto('metrosDeCerca')"
         [min]="20"
         [max]="400"
         [passo]="4"
@@ -56,21 +73,22 @@
 
       <div class="indicadores">
         <div class="indicador" data-destaque="true">
-          <span class="rotulo">Área máxima</span>
+          <span class="rotulo">{{ texto('areaMaxima') }}</span>
           <strong>{{ formatar(cerca().area) }} m²</strong>
-          <span class="legenda">quadrado de lado {{ formatar(cerca().lado) }} m</span>
+          <span class="legenda">
+            {{ texto('quadradoDeLado', { lado: formatar(cerca().lado) }) }}
+          </span>
         </div>
         <div class="indicador">
-          <span class="rotulo">Se fosse mais estreito</span>
+          <span class="rotulo">{{ texto('seFosseMaisEstreito') }}</span>
           <strong>{{ formatar(cerca().alternativa.area) }} m²</strong>
-          <span class="legenda">largura {{ formatar(cerca().alternativa.largura) }} m</span>
+          <span class="legenda">
+            {{ texto('larguraM', { valor: formatar(cerca().alternativa.largura) }) }}
+          </span>
         </div>
       </div>
 
-      <p class="observacao">
-        Com perímetro fixo, a área máxima é sempre a do quadrado — e a derivada prova isso em
-        três linhas. Qualquer retângulo mais alongado cerca menos terreno com a mesma cerca.
-      </p>
+      <p class="observacao">{{ texto('comPerimetroFixo') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

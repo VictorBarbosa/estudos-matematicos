@@ -15,52 +15,76 @@ export const rotas: Routes = [
   {
     path: 'limites-laterais',
     title: 'Limites laterais · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-1/limites-laterais/limites-laterais').then((m) => m.LimitesLaterais),
+    loadComponent: () =>
+      import('@features/calculo-1/limites-laterais/limites-laterais').then(
+        (m) => m.LimitesLaterais,
+      ),
   },
   {
     path: 'continuidade',
     title: 'Continuidade · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-1/continuidade/continuidade').then((m) => m.Continuidade),
+    loadComponent: () =>
+      import('@features/calculo-1/continuidade/continuidade').then((m) => m.Continuidade),
   },
   {
     path: 'definicao-de-derivada',
     title: 'Definição de derivada · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-1/definicao-de-derivada/definicao-de-derivada').then((m) => m.DefinicaoDeDerivada),
+    loadComponent: () =>
+      import('@features/calculo-1/definicao-de-derivada/definicao-de-derivada').then(
+        (m) => m.DefinicaoDeDerivada,
+      ),
   },
   {
     path: 'regras-de-derivacao',
     title: 'Regras de derivação · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-1/regras-de-derivacao/regras-de-derivacao').then((m) => m.RegrasDeDerivacao),
+    loadComponent: () =>
+      import('@features/calculo-1/regras-de-derivacao/regras-de-derivacao').then(
+        (m) => m.RegrasDeDerivacao,
+      ),
   },
   {
     path: 'regra-da-cadeia',
     title: 'Regra da cadeia · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-1/regra-da-cadeia/regra-da-cadeia').then((m) => m.RegraDaCadeia),
+    loadComponent: () =>
+      import('@features/calculo-1/regra-da-cadeia/regra-da-cadeia').then((m) => m.RegraDaCadeia),
   },
   {
     path: 'derivadas-trigonometricas',
     title: 'Derivadas trigonométricas · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas').then((m) => m.DerivadasTrigonometricas),
+    loadComponent: () =>
+      import('@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas').then(
+        (m) => m.DerivadasTrigonometricas,
+      ),
   },
   {
     path: 'derivadas-exponencial-logaritmo',
     title: 'Derivadas de exponencial e logaritmo · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo').then((m) => m.DerivadasExponencialLogaritmo),
+    loadComponent: () =>
+      import('@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo').then(
+        (m) => m.DerivadasExponencialLogaritmo,
+      ),
   },
   {
     path: 'derivacao-implicita',
     title: 'Derivação implícita · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-1/derivacao-implicita/derivacao-implicita').then((m) => m.DerivacaoImplicita),
+    loadComponent: () =>
+      import('@features/calculo-1/derivacao-implicita/derivacao-implicita').then(
+        (m) => m.DerivacaoImplicita,
+      ),
   },
   {
     path: 'aplicacoes-da-derivada',
     title: 'Aplicações da derivada · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada').then((m) => m.AplicacoesDaDerivada),
+    loadComponent: () =>
+      import('@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada').then(
+        (m) => m.AplicacoesDaDerivada,
+      ),
   },
   {
     path: 'taxa-de-variacao',
     title: 'Taxa de variação · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-1/taxa-de-variacao/taxa-de-variacao').then((m) => m.TaxaDeVariacao),
+    loadComponent: () =>
+      import('@features/calculo-1/taxa-de-variacao/taxa-de-variacao').then((m) => m.TaxaDeVariacao),
   },
   { path: '', pathMatch: 'full', redirectTo: 'limites' },
 ];

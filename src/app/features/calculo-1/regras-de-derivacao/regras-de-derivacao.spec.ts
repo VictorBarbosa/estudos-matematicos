@@ -27,9 +27,7 @@ describe('geradorRegras', () => {
   }
 
   it('a regra do produto aparece nos níveis mais altos', () => {
-    const comProduto = amostra('dificil', 90).filter((e) =>
-      e.conceitos.includes('regras.produto'),
-    );
+    const comProduto = amostra('dificil', 90).filter((e) => e.conceitos.includes('regras.produto'));
 
     expect(comProduto.length).toBeGreaterThan(0);
   });

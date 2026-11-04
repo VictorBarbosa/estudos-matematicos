@@ -46,7 +46,10 @@ export const TEORIA_LIMITES: readonly Teoria[] = [
       'e dividir tudo pela maior potência.',
     formulas: [
       { tex: '\\frac{x^{2}-a^{2}}{x-a} = x + a', legenda: 'Fatoração.' },
-      { tex: '\\frac{\\sqrt{x}-\\sqrt{a}}{x-a} \\cdot \\frac{\\sqrt{x}+\\sqrt{a}}{\\sqrt{x}+\\sqrt{a}}', legenda: 'Conjugado.' },
+      {
+        tex: '\\frac{\\sqrt{x}-\\sqrt{a}}{x-a} \\cdot \\frac{\\sqrt{x}+\\sqrt{a}}{\\sqrt{x}+\\sqrt{a}}',
+        legenda: 'Conjugado.',
+      },
     ],
     demonstracao: [
       {
@@ -95,7 +98,8 @@ export const TEORIA_LIMITES: readonly Teoria[] = [
         tex: '\\cos x < \\frac{\\sin x}{x} < 1',
       },
       {
-        descricao: 'Como cos x tende a 1, a expressão fica espremida entre dois valores que convergem.',
+        descricao:
+          'Como cos x tende a 1, a expressão fica espremida entre dois valores que convergem.',
         tex: '\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1',
         nota: 'É o teorema do confronto: se os vizinhos convergem para 1, ela também converge.',
       },

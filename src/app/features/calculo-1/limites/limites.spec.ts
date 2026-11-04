@@ -34,9 +34,7 @@ describe('geradorLimites', () => {
   });
 
   it('o nível difícil inclui racionalização por conjugado', () => {
-    const comConjugado = amostra('dificil', 120).filter((e) =>
-      e.enunciadoTex.includes('\\sqrt'),
-    );
+    const comConjugado = amostra('dificil', 120).filter((e) => e.enunciadoTex.includes('\\sqrt'));
 
     expect(comConjugado.length).toBeGreaterThan(0);
   });

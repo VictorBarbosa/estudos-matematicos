@@ -8,24 +8,22 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/regra-da-cadeia/regra-da-cadeia.i18n.json';
 import { geradorCadeia } from '@features/calculo-1/regra-da-cadeia/regra-da-cadeia.gerador';
 import { TEORIA_CADEIA } from '@features/calculo-1/regra-da-cadeia/regra-da-cadeia.teoria';
 
 @Component({
   selector: 'app-regra-da-cadeia',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    MathPlot,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, MathPlot, TopicoLayout],
   templateUrl: './regra-da-cadeia.html',
   styleUrl: './regra-da-cadeia.scss',
 })
 export class RegraDaCadeia {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorCadeia;
   protected readonly conceitos = TEORIA_CADEIA.map((teoria) => teoria.id);
 
@@ -69,27 +67,25 @@ export class RegraDaCadeia {
     const [a, b, n] = [this.a(), this.b(), this.n()];
 
     return [
-      { fn: this.fn(), cor: 'serie-1', rotulo: 'f(x)' },
+      { fn: this.fn(), cor: 'serie-1', rotulo: this.texto('curvaF') },
       {
         fn: (x) => n * (a * x + b) ** (n - 1) * a,
         cor: 'acento',
-        rotulo: "f'(x) correta",
+        rotulo: this.texto('curvaCorreta'),
       },
       {
         fn: (x) => n * (a * x + b) ** (n - 1),
         cor: 'erro',
         tracejada: true,
-        rotulo: 'sem o fator interno (errada)',
+        rotulo: this.texto('curvaErrada'),
       },
     ];
   });
 
   protected readonly dominio = computed(() => ({ xMin: -3, xMax: 3 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Função composta, sua derivada correta e a versão errada que esquece o fator interno; ' +
-      `as duas diferem por um fator ${this.a()}.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { a: this.a() }),
   );
 
   constructor() {

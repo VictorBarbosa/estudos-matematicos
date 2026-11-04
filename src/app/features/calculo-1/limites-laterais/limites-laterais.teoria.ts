@@ -12,7 +12,9 @@ export const TEORIA_LATERAIS: readonly Teoria[] = [
       'duas têm a mesma resposta.',
     formulas: [
       { tex: '\\lim_{x \\to a^{-}} f(x) \\qquad \\lim_{x \\to a^{+}} f(x)' },
-      { tex: '\\lim_{x \\to a} f(x) = L \\iff \\lim_{x \\to a^{-}} f(x) = \\lim_{x \\to a^{+}} f(x) = L' },
+      {
+        tex: '\\lim_{x \\to a} f(x) = L \\iff \\lim_{x \\to a^{-}} f(x) = \\lim_{x \\to a^{+}} f(x) = L',
+      },
     ],
     demonstracao: [
       {
@@ -46,7 +48,9 @@ export const TEORIA_LATERAIS: readonly Teoria[] = [
       {
         tex: 'f(x) = \\begin{cases} g(x) & x < a \\\\ h(x) & x \\geq a \\end{cases}',
       },
-      { tex: '\\lim_{x \\to a^{-}} f = \\lim_{x \\to a} g \\qquad \\lim_{x \\to a^{+}} f = \\lim_{x \\to a} h' },
+      {
+        tex: '\\lim_{x \\to a^{-}} f = \\lim_{x \\to a} g \\qquad \\lim_{x \\to a^{+}} f = \\lim_{x \\to a} h',
+      },
     ],
     demonstracao: [
       {
@@ -78,8 +82,13 @@ export const TEORIA_LATERAIS: readonly Teoria[] = [
       'sinais opostos. Em 1/x, a função despenca para −∞ pela esquerda e dispara para +∞ ' +
       'pela direita.',
     formulas: [
-      { tex: '\\lim_{x \\to 0^{-}} \\frac{1}{x} = -\\infty \\qquad \\lim_{x \\to 0^{+}} \\frac{1}{x} = +\\infty' },
-      { tex: '\\lim_{x \\to 0} \\frac{1}{x^{2}} = +\\infty', legenda: 'Aqui os dois lados concordam.' },
+      {
+        tex: '\\lim_{x \\to 0^{-}} \\frac{1}{x} = -\\infty \\qquad \\lim_{x \\to 0^{+}} \\frac{1}{x} = +\\infty',
+      },
+      {
+        tex: '\\lim_{x \\to 0} \\frac{1}{x^{2}} = +\\infty',
+        legenda: 'Aqui os dois lados concordam.',
+      },
     ],
     demonstracao: [
       {

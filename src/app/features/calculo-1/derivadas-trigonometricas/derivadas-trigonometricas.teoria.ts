@@ -110,7 +110,10 @@ export const TEORIA_DERIVADAS_TRIG: readonly Teoria[] = [
       'que explica por que a tangente é crescente em todo intervalo em que existe.',
     formulas: [
       { tex: "\\left[\\tan(x)\\right]' = \\sec^{2}(x) = \\frac{1}{\\cos^{2}(x)}" },
-      { tex: "\\left[\\tan(x)\\right]' = 1 + \\tan^{2}(x)", legenda: 'A mesma derivada, por outra identidade.' },
+      {
+        tex: "\\left[\\tan(x)\\right]' = 1 + \\tan^{2}(x)",
+        legenda: 'A mesma derivada, por outra identidade.',
+      },
     ],
     demonstracao: [
       {
@@ -143,7 +146,9 @@ export const TEORIA_DERIVADAS_TRIG: readonly Teoria[] = [
       'pelo segundo, mais o primeiro multiplicado pela derivada do segundo.',
     formulas: [
       { tex: "(uv)' = u'v + uv'" },
-      { tex: "\\left[x^{n}\\operatorname{sen}(x)\\right]' = nx^{n-1}\\operatorname{sen}(x) + x^{n}\\cos(x)" },
+      {
+        tex: "\\left[x^{n}\\operatorname{sen}(x)\\right]' = nx^{n-1}\\operatorname{sen}(x) + x^{n}\\cos(x)",
+      },
     ],
     demonstracao: [
       {

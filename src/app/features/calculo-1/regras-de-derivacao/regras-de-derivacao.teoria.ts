@@ -11,8 +11,8 @@ export const TEORIA_REGRAS: readonly Teoria[] = [
       'aplicado a xⁿ. Expandindo (x+h)ⁿ, todos os termos com h² ou mais somem no limite, e ' +
       'sobra exatamente n·xⁿ⁻¹.',
     formulas: [
-      { tex: "\\frac{d}{dx}\\left(x^{n}\\right) = n\\,x^{n-1}" },
-      { tex: "\\frac{d}{dx}(c) = 0", legenda: 'Uma constante não varia.' },
+      { tex: '\\frac{d}{dx}\\left(x^{n}\\right) = n\\,x^{n-1}' },
+      { tex: '\\frac{d}{dx}(c) = 0', legenda: 'Uma constante não varia.' },
       { tex: "\\frac{d}{dx}(cf) = c\\,f'", legenda: 'Constantes saem da derivada.' },
     ],
     demonstracao: [
@@ -26,7 +26,7 @@ export const TEORIA_REGRAS: readonly Teoria[] = [
       },
       {
         descricao: 'Com h tendendo a zero, sobra o resultado da regra.',
-        tex: "\\frac{d}{dx}(x^{2}) = 2x",
+        tex: '\\frac{d}{dx}(x^{2}) = 2x',
         nota: 'O mesmo raciocínio, com o binômio de Newton, vale para qualquer expoente.',
       },
       {
@@ -47,21 +47,19 @@ export const TEORIA_REGRAS: readonly Teoria[] = [
     definicao:
       'Derivar f·g exige dois termos: deriva-se o primeiro mantendo o segundo, e vice-versa. ' +
       'Supor que (fg)′ = f′g′ é um erro grave — basta testar com x·x para ver que falha.',
-    formulas: [
-      { tex: "(f \\cdot g)' = f'g + fg'" },
-      { tex: "(f \\cdot g)' \\neq f' \\cdot g'" },
-    ],
+    formulas: [{ tex: "(f \\cdot g)' = f'g + fg'" }, { tex: "(f \\cdot g)' \\neq f' \\cdot g'" }],
     demonstracao: [
       {
         descricao: 'Um contraexemplo derruba a versão ingênua.',
-        tex: '(x \\cdot x)\' = (x^{2})\' = 2x',
+        tex: "(x \\cdot x)' = (x^{2})' = 2x",
       },
       {
         descricao: 'Enquanto o produto das derivadas daria outro resultado.',
         tex: "x' \\cdot x' = 1 \\cdot 1 = 1 \\neq 2x",
       },
       {
-        descricao: 'Geometricamente: a área de um retângulo cresce pelos dois lados ao mesmo tempo.',
+        descricao:
+          'Geometricamente: a área de um retângulo cresce pelos dois lados ao mesmo tempo.',
         tex: '\\Delta(fg) \\approx f\\,\\Delta g + g\\,\\Delta f',
         nota: 'Cada lado contribui com sua própria variação — daí as duas parcelas.',
       },
@@ -79,9 +77,7 @@ export const TEORIA_REGRAS: readonly Teoria[] = [
     definicao:
       'A regra do quociente tem dois detalhes que costumam escapar: o sinal é de subtração, ' +
       'e a ordem dos termos importa. O denominador original aparece elevado ao quadrado.',
-    formulas: [
-      { tex: "\\left(\\frac{f}{g}\\right)' = \\frac{f'g - fg'}{g^{2}}" },
-    ],
+    formulas: [{ tex: "\\left(\\frac{f}{g}\\right)' = \\frac{f'g - fg'}{g^{2}}" }],
     demonstracao: [
       {
         descricao: 'Escrevendo o quociente como produto por uma potência negativa.',

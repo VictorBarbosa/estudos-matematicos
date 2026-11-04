@@ -8,30 +8,22 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.i18n.json';
 import { geradorAplicacoesDerivada } from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.gerador';
 import { TEORIA_APLICACOES_DERIVADA } from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.teoria';
-
-const ROTULO_TIPO: Readonly<Record<string, string>> = {
-  maximo: 'máximo local',
-  minimo: 'mínimo local',
-  inflexao: 'inflexão',
-};
 
 @Component({
   selector: 'app-aplicacoes-da-derivada',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    MathPlot,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, MathPlot, TopicoLayout],
   templateUrl: './aplicacoes-da-derivada.html',
   styleUrl: './aplicacoes-da-derivada.scss',
 })
 export class AplicacoesDaDerivada {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorAplicacoesDerivada;
   protected readonly conceitos = TEORIA_APLICACOES_DERIVADA.map((teoria) => teoria.id);
 
@@ -43,9 +35,7 @@ export class AplicacoesDaDerivada {
   /** Perímetro do problema da cerca. */
   protected readonly perimetro = signal(100);
 
-  protected readonly funcao = computed(() =>
-    Polinomio.de(this.d(), this.c(), this.b(), this.a()),
-  );
+  protected readonly funcao = computed(() => Polinomio.de(this.d(), this.c(), this.b(), this.a()));
 
   protected readonly derivada = computed(() => this.funcao().derivar());
   protected readonly segunda = computed(() => this.derivada().derivar());
@@ -61,8 +51,6 @@ export class AplicacoesDaDerivada {
     const f = this.funcao();
     return pontosCriticos((x) => f.avaliar(x), -5, 5);
   });
-
-  protected readonly rotuloTipo = ROTULO_TIPO;
 
   /** O problema clássico da cerca, resolvido em tempo real. */
   protected readonly cerca = computed(() => {
@@ -83,9 +71,14 @@ export class AplicacoesDaDerivada {
     const d2f = this.segunda();
 
     return [
-      { fn: (x) => f.avaliar(x), cor: 'serie-1', rotulo: 'f(x)' },
-      { fn: (x) => df.avaliar(x), cor: 'serie-2', tracejada: true, rotulo: "f'(x)" },
-      { fn: (x) => d2f.avaliar(x), cor: 'serie-3', tracejada: true, rotulo: "f''(x)" },
+      { fn: (x) => f.avaliar(x), cor: 'serie-1', rotulo: this.texto('curvaF') },
+      { fn: (x) => df.avaliar(x), cor: 'serie-2', tracejada: true, rotulo: this.texto('curvaDf') },
+      {
+        fn: (x) => d2f.avaliar(x),
+        cor: 'serie-3',
+        tracejada: true,
+        rotulo: this.texto('curvaD2f'),
+      },
     ];
   });
 
@@ -93,17 +86,15 @@ export class AplicacoesDaDerivada {
     this.criticos().map((critico) => ({
       x: critico.x,
       y: critico.y,
-      rotulo: ROTULO_TIPO[critico.tipo],
+      rotulo: this.texto(critico.tipo),
       cor: critico.tipo === 'maximo' ? 'erro' : critico.tipo === 'minimo' ? 'acerto' : 'aviso',
     })),
   );
 
   protected readonly dominio = computed(() => ({ xMin: -4, xMax: 4 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Função com ${this.criticos().length} ponto(s) crítico(s), junto da primeira e da ` +
-      'segunda derivada.',
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { quantos: this.criticos().length }),
   );
 
   constructor() {

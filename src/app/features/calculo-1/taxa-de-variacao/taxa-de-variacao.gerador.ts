@@ -80,7 +80,9 @@ function exercicioDeMovimento(
       passos: pergunta === 'media' ? media.passos : passos,
     },
     conceitos:
-      pergunta === 'media' ? ['taxa.media', 'taxa.instantanea'] : ['taxa.instantanea', 'taxa.sinais'],
+      pergunta === 'media'
+        ? ['taxa.media', 'taxa.instantanea']
+        : ['taxa.instantanea', 'taxa.sinais'],
     armadilhas: semColisoes(
       armadilhasDe(pergunta, resultado, media.resultado, t0, t1),
       gabarito,
@@ -153,8 +155,7 @@ function armadilhasDe(
         },
         {
           resposta: movimento.posicao,
-          diagnostico:
-            'Esse é o valor da POSIÇÃO. Entre ela e a aceleração há duas derivadas.',
+          diagnostico: 'Esse é o valor da POSIÇÃO. Entre ela e a aceleração há duas derivadas.',
           passo: 0,
           conceito: 'taxa.instantanea',
         },

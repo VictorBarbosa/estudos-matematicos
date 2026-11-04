@@ -1,0 +1,36 @@
+{
+  "pontoDaTangente": {
+    "pt": "Ponto da tangente",
+    "fr": "Point de tangence",
+    "en": "Point of tangency"
+  },
+  "derivadaComoInclinacao": {
+    "pt": "A derivada como inclinação",
+    "fr": "La dérivée comme pente",
+    "en": "The derivative as a slope"
+  },
+  "curvaF": { "pt": "f(x)", "fr": "f(x)", "en": "f(x)" },
+  "curvaDf": { "pt": "f'(x)", "fr": "f'(x)", "en": "f'(x)" },
+  "curvaTangente": { "pt": "tangente", "fr": "tangente", "en": "tangent" },
+  "pontoF": { "pt": "f({x})", "fr": "f({x})", "en": "f({x})" },
+  "pontoDf": {
+    "pt": "f'({x}) = {valor}",
+    "fr": "f'({x}) = {valor}",
+    "en": "f'({x}) = {valor}"
+  },
+  "descricaoGrafico": {
+    "pt": "Função, sua derivada e a reta tangente em x igual a {x}, cuja inclinação é {inclinacao}.",
+    "fr": "Fonction, sa dérivée et la tangente en x égal à {x}, dont la pente vaut {inclinacao}.",
+    "en": "Function, its derivative and the tangent line at x equal to {x}, whose slope is {inclinacao}."
+  },
+  "movaOPonto": {
+    "pt": "Mova o ponto da tangente e acompanhe: a altura da curva da derivada em cada x é exatamente a inclinação da tangente ali. Onde a derivada cruza o eixo, a tangente fica horizontal.",
+    "fr": "Déplacez le point de tangence et suivez : la hauteur de la courbe dérivée en chaque x est exactement la pente de la tangente à cet endroit. Là où la dérivée coupe l’axe, la tangente devient horizontale.",
+    "en": "Move the point of tangency and follow along: the height of the derivative curve at each x is exactly the slope of the tangent there. Where the derivative crosses the axis, the tangent goes flat."
+  },
+  "aDerivadaDeUmProduto": {
+    "pt": "A derivada de um produto <strong>não</strong> é o produto das derivadas. Confira com x · x: derivando o produto expandido, x², obtemos 2x. Já o produto das derivadas daria 1 · 1 = 1. A regra correta soma dois termos, porque os dois fatores variam ao mesmo tempo.",
+    "fr": "La dérivée d’un produit <strong>n’est pas</strong> le produit des dérivées. Vérifiez avec x · x : en dérivant le produit développé, x², on obtient 2x. Le produit des dérivées donnerait 1 · 1 = 1. La règle correcte additionne deux termes, parce que les deux facteurs varient en même temps.",
+    "en": "The derivative of a product is <strong>not</strong> the product of the derivatives. Check with x · x: differentiating the expanded product, x², gives 2x. The product of the derivatives would give 1 · 1 = 1. The correct rule adds two terms, because both factors vary at once."
+  }
+}

@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/definicao-de-derivada/definicao-de-derivada.i18n.json';
 import { geradorDefinicaoDerivada } from '@features/calculo-1/definicao-de-derivada/definicao-de-derivada.gerador';
 import { TEORIA_DEFINICAO_DERIVADA } from '@features/calculo-1/definicao-de-derivada/definicao-de-derivada.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_DEFINICAO_DERIVADA } from '@features/calculo-1/definicao-de-deri
   styleUrl: './definicao-de-derivada.scss',
 })
 export class DefinicaoDeDerivada {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorDefinicaoDerivada;
   protected readonly conceitos = TEORIA_DEFINICAO_DERIVADA.map((teoria) => teoria.id);
 
@@ -45,9 +50,7 @@ export class DefinicaoDeDerivada {
     quocienteDeNewton(this.fn, this.ponto(), this.h()),
   );
 
-  protected readonly derivadaExata = computed(() =>
-    this.funcao.derivar().avaliar(this.ponto()),
-  );
+  protected readonly derivadaExata = computed(() => this.funcao.derivar().avaliar(this.ponto()));
 
   protected readonly erro = computed(() =>
     Math.abs(this.inclinacaoSecante() - this.derivadaExata()),
@@ -65,17 +68,17 @@ export class DefinicaoDeDerivada {
     const mTangente = this.derivadaExata();
 
     return [
-      { fn: this.fn, cor: 'serie-1', rotulo: 'f(x) = x²' },
+      { fn: this.fn, cor: 'serie-1', rotulo: this.texto('curvaF') },
       {
         fn: (x) => y0 + mSecante * (x - x0),
         cor: 'serie-2',
-        rotulo: 'secante',
+        rotulo: this.texto('curvaSecante'),
       },
       {
         fn: (x) => y0 + mTangente * (x - x0),
         cor: 'acento',
         tracejada: true,
-        rotulo: 'tangente',
+        rotulo: this.texto('curvaTangente'),
       },
     ];
   });
@@ -86,7 +89,7 @@ export class DefinicaoDeDerivada {
 
     return [
       { x: x0, y: this.fn(x0), rotulo: 'x', cor: 'acento' },
-      { x: x1, y: this.fn(x1), rotulo: 'x + h', cor: 'serie-2' },
+      { x: x1, y: this.fn(x1), rotulo: this.texto('pontoXMaisH'), cor: 'serie-2' },
     ];
   });
 
@@ -95,11 +98,11 @@ export class DefinicaoDeDerivada {
     return { xMin: centro - 4, xMax: centro + 4 };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Parábola com a reta secante entre x e x mais h, e a tangente exata tracejada. ` +
-      `Com h igual a ${this.formatar(this.h())}, as duas inclinações diferem em ` +
-      `${this.formatar(this.erro())}.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      h: this.formatar(this.h()),
+      erro: this.formatar(this.erro()),
+    }),
   );
 
   constructor() {

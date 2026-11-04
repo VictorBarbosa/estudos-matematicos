@@ -57,9 +57,7 @@ describe('geradorDefinicaoDerivada', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('valor da FUNÇÃO')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('valor da FUNÇÃO'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('valor da FUNÇÃO'))!;
 
     const resultado = corrigir(geradorDefinicaoDerivada, exercicio, String(armadilha.resposta));
     expect(resultado.veredito).toBe('incorreto');

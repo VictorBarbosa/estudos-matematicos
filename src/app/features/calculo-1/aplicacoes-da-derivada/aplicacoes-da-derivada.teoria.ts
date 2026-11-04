@@ -80,9 +80,7 @@ export const TEORIA_APLICACOES_DERIVADA: readonly Teoria[] = [
       'Problemas de máximo e mínimo seguem sempre o mesmo roteiro: escrever a grandeza a ' +
       'otimizar como função de uma variável, derivar, igualar a zero e verificar se o ponto ' +
       'crítico encontrado é realmente o extremo procurado.',
-    formulas: [
-      { tex: "\\text{modelar} \\to \\text{derivar} \\to f' = 0 \\to \\text{verificar}" },
-    ],
+    formulas: [{ tex: "\\text{modelar} \\to \\text{derivar} \\to f' = 0 \\to \\text{verificar}" }],
     demonstracao: [
       {
         descricao: 'Com 100 m de cerca, qual retângulo tem área máxima?',

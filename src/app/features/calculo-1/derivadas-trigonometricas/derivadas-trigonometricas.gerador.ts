@@ -20,7 +20,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de derivada de seno, cosseno e tangente.
@@ -79,8 +85,10 @@ function daTabela(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = exatoValor(derivadaTrigExata(funcao, a, 1, arco));
   // Quem troca o sinal do cosseno — ou inventa um para o seno — cai aqui.
   const trocouSinal = -gabarito;
-  const valorDaFuncao = a * (funcao === 'sen' ? exatoValor(senoExato(arco)) : exatoValor(cossenoExato(arco)));
-  const derivouComoOutra = a * (funcao === 'sen' ? -exatoValor(senoExato(arco)) : exatoValor(cossenoExato(arco)));
+  const valorDaFuncao =
+    a * (funcao === 'sen' ? exatoValor(senoExato(arco)) : exatoValor(cossenoExato(arco)));
+  const derivouComoOutra =
+    a * (funcao === 'sen' ? -exatoValor(senoExato(arco)) : exatoValor(cossenoExato(arco)));
 
   return montar({
     chave: `tabela-${funcao}-${a}-${arco.k}-${arco.m}`,
@@ -174,7 +182,8 @@ function comCadeia(nivel: Nivel, rng: Rng): Exercicio<number> {
     resolucao: derivadaTrigNoPontoComPassos(funcao, a, b, arco),
     conceitos: ['trig-derivada.cadeia', 'trig-derivada.tabela'],
     armadilhas,
-    dica: nivel === 'medio' ? 'O argumento não é x: ele traz um fator que precisa sair.' : undefined,
+    dica:
+      nivel === 'medio' ? 'O argumento não é x: ele traz um fator que precisa sair.' : undefined,
   });
 }
 
@@ -210,20 +219,21 @@ function daTangente(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: gabarito / b,
-        diagnostico:
-          `Faltou o fator interno ${b}, que a cadeia traz para fora junto com a secante.`,
+        diagnostico: `Faltou o fator interno ${b}, que a cadeia traz para fora junto com a secante.`,
         passo: 1,
         conceito: 'trig-derivada.cadeia',
       },
       {
         resposta: a * Math.tan(arcoValor(interno)),
-        diagnostico:
-          `Esse é o valor da tangente em ${arcoTexto(arco)}, não o da sua derivada.`,
+        diagnostico: `Esse é o valor da tangente em ${arcoTexto(arco)}, não o da sua derivada.`,
         passo: 2,
         conceito: 'trig-derivada.tangente',
       },
     ],
-    dica: nivel === 'medio' ? 'A secante é o inverso do cosseno — e o quadrado é dela toda.' : undefined,
+    dica:
+      nivel === 'medio'
+        ? 'A secante é o inverso do cosseno — e o quadrado é dela toda.'
+        : undefined,
   });
 }
 
@@ -288,7 +298,8 @@ function daPotencia(nivel: Nivel, rng: Rng): Exercicio<number> {
   const arco = rng.escolher(ARCOS_DA_DERIVADA);
 
   const base = funcao === 'sen' ? exatoValor(senoExato(arco)) : exatoValor(cossenoExato(arco));
-  const derivadaBase = funcao === 'sen' ? exatoValor(cossenoExato(arco)) : -exatoValor(senoExato(arco));
+  const derivadaBase =
+    funcao === 'sen' ? exatoValor(cossenoExato(arco)) : -exatoValor(senoExato(arco));
 
   const gabarito = n * base ** (n - 1) * derivadaBase;
   const semDerivadaInterna = n * base ** (n - 1);

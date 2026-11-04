@@ -1,0 +1,47 @@
+{
+  "pontoX": { "pt": "Ponto x", "fr": "Point x", "en": "Point x" },
+  "distanciaH": {
+    "pt": "Distância h (em centésimos)",
+    "fr": "Distance h (en centièmes)",
+    "en": "Distance h (in hundredths)"
+  },
+  "dicaH": {
+    "pt": "h = {valor} — diminua e veja a secante virar tangente",
+    "fr": "h = {valor} — réduisez-le et voyez la sécante devenir tangente",
+    "en": "h = {valor} — shrink it and watch the secant become the tangent"
+  },
+  "inclinacaoDaSecante": {
+    "pt": "Inclinação da secante",
+    "fr": "Pente de la sécante",
+    "en": "Slope of the secant"
+  },
+  "derivadaTangente": {
+    "pt": "Derivada (tangente)",
+    "fr": "Dérivée (tangente)",
+    "en": "Derivative (tangent)"
+  },
+  "limiteComH": {
+    "pt": "limite com h → 0",
+    "fr": "limite quand h → 0",
+    "en": "limit as h → 0"
+  },
+  "someConforme": {
+    "pt": "some conforme h diminui",
+    "fr": "disparaît à mesure que h diminue",
+    "en": "vanishes as h shrinks"
+  },
+  "curvaF": { "pt": "f(x) = x²", "fr": "f(x) = x²", "en": "f(x) = x²" },
+  "curvaSecante": { "pt": "secante", "fr": "sécante", "en": "secant" },
+  "curvaTangente": { "pt": "tangente", "fr": "tangente", "en": "tangent" },
+  "pontoXMaisH": { "pt": "x + h", "fr": "x + h", "en": "x + h" },
+  "descricaoGrafico": {
+    "pt": "Parábola com a reta secante entre x e x mais h, e a tangente exata tracejada. Com h igual a {h}, as duas inclinações diferem em {erro}.",
+    "fr": "Parabole avec la sécante entre x et x plus h, et la tangente exacte en pointillé. Avec h égal à {h}, les deux pentes diffèrent de {erro}.",
+    "en": "Parabola with the secant line between x and x plus h, and the exact tangent dashed. With h equal to {h}, the two slopes differ by {erro}."
+  },
+  "reduzaOH": {
+    "pt": "Reduza o h e observe: os dois pontos se juntam, e a secante gira até coincidir com a tangente tracejada. A derivada é exatamente o valor para o qual essa inclinação converge — nunca o valor em h = 0, que daria 0/0.",
+    "fr": "Réduisez h et observez : les deux points se rejoignent, et la sécante pivote jusqu’à coïncider avec la tangente en pointillé. La dérivée est exactement la valeur vers laquelle cette pente converge — jamais la valeur en h = 0, qui donnerait 0/0.",
+    "en": "Shrink h and watch: the two points come together, and the secant turns until it coincides with the dashed tangent. The derivative is exactly the value that slope converges to — never the value at h = 0, which would give 0/0."
+  }
+}

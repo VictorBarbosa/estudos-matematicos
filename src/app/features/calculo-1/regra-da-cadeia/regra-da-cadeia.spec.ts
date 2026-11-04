@@ -45,9 +45,7 @@ describe('geradorCadeia', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('derivada interna')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('derivada interna'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('derivada interna'))!;
 
     const resultado = corrigir(geradorCadeia, exercicio, String(armadilha.resposta));
     expect(resultado.veredito).toBe('incorreto');

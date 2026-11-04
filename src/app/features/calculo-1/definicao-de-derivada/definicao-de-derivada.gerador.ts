@@ -81,7 +81,8 @@ export const geradorDefinicaoDerivada: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
-        dica: nivel === 'facil' ? 'Calcule f nos dois pontos e divida pela diferença de x.' : undefined,
+        dica:
+          nivel === 'facil' ? 'Calcule f nos dois pontos e divida pela diferença de x.' : undefined,
       };
     }
 

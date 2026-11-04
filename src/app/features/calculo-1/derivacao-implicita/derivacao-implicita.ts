@@ -59,7 +59,9 @@ export class DerivacaoImplicita {
       )}}`,
   );
 
-  protected readonly vertical = computed(() => tangenteEhVertical(this.curva(), this.x(), this.y()));
+  protected readonly vertical = computed(() =>
+    tangenteEhVertical(this.curva(), this.x(), this.y()),
+  );
 
   protected readonly inclinacao = computed(() =>
     derivadaImplicitaNoPonto(this.curva(), this.x(), this.y()),

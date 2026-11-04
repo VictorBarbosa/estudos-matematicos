@@ -7,24 +7,22 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/limites-laterais/limites-laterais.i18n.json';
 import { geradorLaterais } from '@features/calculo-1/limites-laterais/limites-laterais.gerador';
 import { TEORIA_LATERAIS } from '@features/calculo-1/limites-laterais/limites-laterais.teoria';
 
 @Component({
   selector: 'app-limites-laterais',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    MathPlot,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, MathPlot, TopicoLayout],
   templateUrl: './limites-laterais.html',
   styleUrl: './limites-laterais.scss',
 })
 export class LimitesLaterais {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorLaterais;
   protected readonly conceitos = TEORIA_LATERAIS.map((teoria) => teoria.id);
 
@@ -58,12 +56,12 @@ export class LimitesLaterais {
       {
         fn: (x) => (x < p ? a * x + b : Number.NaN),
         cor: 'serie-1',
-        rotulo: 'sentença da esquerda',
+        rotulo: this.texto('curvaEsquerda'),
       },
       {
         fn: (x) => (x >= p ? c * x + d : Number.NaN),
         cor: 'serie-2',
-        rotulo: 'sentença da direita',
+        rotulo: this.texto('curvaDireita'),
       },
     ];
   });
@@ -99,8 +97,8 @@ export class LimitesLaterais {
 
   protected readonly descricaoGrafico = computed(() =>
     this.limiteExiste()
-      ? 'As duas sentenças se encontram no ponto: o gráfico emenda sem salto.'
-      : `As duas sentenças chegam a alturas diferentes: há um salto de ${Math.abs(this.salto())}.`,
+      ? this.texto('descricaoEmenda')
+      : this.texto('descricaoSalto', { valor: Math.abs(this.salto()) }),
   );
 
   constructor() {

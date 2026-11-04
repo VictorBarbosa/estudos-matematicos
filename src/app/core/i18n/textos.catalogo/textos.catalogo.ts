@@ -12,6 +12,14 @@ import t_inequacoes from '@features/algebra/inequacoes/inequacoes.i18n.json';
 import t_polinomios from '@features/algebra/polinomios/polinomios.i18n.json';
 import t_produtos_notaveis from '@features/algebra/produtos-notaveis/produtos-notaveis.i18n.json';
 import t_sistemas_lineares from '@features/algebra/sistemas-lineares/sistemas-lineares.i18n.json';
+import t_aplicacoes_da_derivada from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.i18n.json';
+import t_continuidade from '@features/calculo-1/continuidade/continuidade.i18n.json';
+import t_definicao_de_derivada from '@features/calculo-1/definicao-de-derivada/definicao-de-derivada.i18n.json';
+import t_limites_laterais from '@features/calculo-1/limites-laterais/limites-laterais.i18n.json';
+import t_limites from '@features/calculo-1/limites/limites.i18n.json';
+import t_regra_da_cadeia from '@features/calculo-1/regra-da-cadeia/regra-da-cadeia.i18n.json';
+import t_regras_de_derivacao from '@features/calculo-1/regras-de-derivacao/regras-de-derivacao.i18n.json';
+import t_taxa_de_variacao from '@features/calculo-1/taxa-de-variacao/taxa-de-variacao.i18n.json';
 import t_analise_combinatoria from '@features/estatistica/analise-combinatoria/analise-combinatoria.i18n.json';
 import t_distribuicao_normal from '@features/estatistica/distribuicao-normal/distribuicao-normal.i18n.json';
 import t_estatistica_e_incerteza from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.i18n.json';
@@ -86,6 +94,14 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['polinomios', t_polinomios as TabelaDeTextos],
   ['produtos-notaveis', t_produtos_notaveis as TabelaDeTextos],
   ['sistemas-lineares', t_sistemas_lineares as TabelaDeTextos],
+  ['aplicacoes-da-derivada', t_aplicacoes_da_derivada as TabelaDeTextos],
+  ['continuidade', t_continuidade as TabelaDeTextos],
+  ['definicao-de-derivada', t_definicao_de_derivada as TabelaDeTextos],
+  ['limites-laterais', t_limites_laterais as TabelaDeTextos],
+  ['limites', t_limites as TabelaDeTextos],
+  ['regra-da-cadeia', t_regra_da_cadeia as TabelaDeTextos],
+  ['regras-de-derivacao', t_regras_de_derivacao as TabelaDeTextos],
+  ['taxa-de-variacao', t_taxa_de_variacao as TabelaDeTextos],
   ['analise-combinatoria', t_analise_combinatoria as TabelaDeTextos],
   ['distribuicao-normal', t_distribuicao_normal as TabelaDeTextos],
   ['estatistica-e-incerteza', t_estatistica_e_incerteza as TabelaDeTextos],

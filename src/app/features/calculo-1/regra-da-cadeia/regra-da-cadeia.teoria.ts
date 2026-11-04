@@ -11,7 +11,10 @@ export const TEORIA_CADEIA: readonly Teoria[] = [
       'frequente de todo o cálculo diferencial.',
     formulas: [
       { tex: "\\left[f(g(x))\\right]' = f'(g(x)) \\cdot g'(x)" },
-      { tex: '\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}', legenda: 'Notação de Leibniz.' },
+      {
+        tex: '\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}',
+        legenda: 'Notação de Leibniz.',
+      },
     ],
     demonstracao: [
       {
@@ -26,11 +29,11 @@ export const TEORIA_CADEIA: readonly Teoria[] = [
       },
       {
         descricao: 'Em (3x+1)², a função de fora é o quadrado e a de dentro é 3x+1.',
-        tex: "2(3x+1) \\cdot 3 = 6(3x+1)",
+        tex: '2(3x+1) \\cdot 3 = 6(3x+1)',
       },
       {
         descricao: 'Conferindo pela expansão: (3x+1)² = 9x² + 6x + 1.',
-        tex: "\\frac{d}{dx}(9x^{2} + 6x + 1) = 18x + 6 = 6(3x+1) \\;\\checkmark",
+        tex: '\\frac{d}{dx}(9x^{2} + 6x + 1) = 18x + 6 = 6(3x+1) \\;\\checkmark',
       },
     ],
     vejaTambem: ['cadeia.erro-comum', 'cadeia.camadas'],
@@ -42,9 +45,7 @@ export const TEORIA_CADEIA: readonly Teoria[] = [
     definicao:
       'Derivar (3x+1)² como 2(3x+1) esquece o fator 3. O resultado fica proporcional ao ' +
       'correto, mas errado — e o erro cresce com o coeficiente interno.',
-    formulas: [
-      { tex: "\\left[(ax+b)^{n}\\right]' = n(ax+b)^{n-1} \\cdot a" },
-    ],
+    formulas: [{ tex: "\\left[(ax+b)^{n}\\right]' = n(ax+b)^{n-1} \\cdot a" }],
     demonstracao: [
       {
         descricao: 'Expandindo (2x+1)² para conferir sem a cadeia.',
@@ -73,9 +74,7 @@ export const TEORIA_CADEIA: readonly Teoria[] = [
     definicao:
       'Com três funções encadeadas, multiplicam-se três derivadas. O procedimento é sempre o ' +
       'mesmo: desmonta-se a composição de fora para dentro, e cada nível acrescenta um fator.',
-    formulas: [
-      { tex: "\\left[f(g(h(x)))\\right]' = f'(g(h(x))) \\cdot g'(h(x)) \\cdot h'(x)" },
-    ],
+    formulas: [{ tex: "\\left[f(g(h(x)))\\right]' = f'(g(h(x))) \\cdot g'(h(x)) \\cdot h'(x)" }],
     demonstracao: [
       {
         descricao: 'Identificamos as camadas de fora para dentro.',

@@ -37,9 +37,7 @@ describe('geradorAplicacoesDerivada', () => {
   });
 
   it('os pontos críticos informados anulam mesmo a derivada', () => {
-    const exercicios = amostra('facil', 90).filter((e) =>
-      e.enunciado.includes('pontos críticos'),
-    );
+    const exercicios = amostra('facil', 90).filter((e) => e.enunciado.includes('pontos críticos'));
 
     for (const exercicio of exercicios) {
       const k = exercicio.gabarito;

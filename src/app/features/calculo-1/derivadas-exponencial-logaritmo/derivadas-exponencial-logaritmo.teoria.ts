@@ -96,10 +96,7 @@ export const TEORIA_DERIVADAS_EXP_LOG: readonly Teoria[] = [
       'Toda exponencial se reescreve na base e, e daí sai o fator que aparece na derivada. É ' +
       'exatamente esse fator que justifica chamar e de base natural: só com ela ele vale um e ' +
       'desaparece da conta.',
-    formulas: [
-      { tex: 'a^{x} = e^{x\\ln a}' },
-      { tex: "\\left[a^{x}\\right]' = a^{x}\\ln a" },
-    ],
+    formulas: [{ tex: 'a^{x} = e^{x\\ln a}' }, { tex: "\\left[a^{x}\\right]' = a^{x}\\ln a" }],
     demonstracao: [
       {
         descricao: 'Reescrevemos na base natural.',

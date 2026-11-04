@@ -12,7 +12,9 @@ export const TEORIA_CONTINUIDADE: readonly Teoria[] = [
       'quebra a continuidade — e cada falha produz um tipo diferente de descontinuidade.',
     formulas: [
       { tex: 'f \\text{ contínua em } a \\iff \\lim_{x \\to a} f(x) = f(a)' },
-      { tex: '1)\\; \\exists f(a) \\qquad 2)\\; \\exists \\lim_{x \\to a} f(x) \\qquad 3)\\; \\text{são iguais}' },
+      {
+        tex: '1)\\; \\exists f(a) \\qquad 2)\\; \\exists \\lim_{x \\to a} f(x) \\qquad 3)\\; \\text{são iguais}',
+      },
     ],
     demonstracao: [
       {
@@ -48,7 +50,9 @@ export const TEORIA_CONTINUIDADE: readonly Teoria[] = [
       'ponto para consertar. A de salto não tem conserto: os laterais discordam. A infinita ' +
       'ocorre junto de uma assíntota vertical.',
     formulas: [
-      { tex: '\\text{removível: } \\exists \\lim, \\;\\text{mas} \\neq f(a) \\;\\text{ou}\\; \\nexists f(a)' },
+      {
+        tex: '\\text{removível: } \\exists \\lim, \\;\\text{mas} \\neq f(a) \\;\\text{ou}\\; \\nexists f(a)',
+      },
       { tex: '\\text{salto: } \\lim^{-} \\neq \\lim^{+}' },
       { tex: '\\text{infinita: } \\lim = \\pm\\infty' },
     ],

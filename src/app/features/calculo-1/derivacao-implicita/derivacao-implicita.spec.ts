@@ -67,7 +67,10 @@ describe('geradorDerivacaoImplicita', () => {
     for (const exercicio of amostra('dificil', 120)) {
       const formas = formasDoGabarito(geradorDerivacaoImplicita, exercicio.gabarito);
       expect(formas.length, exercicio.enunciadoTex).toBeGreaterThan(0);
-      expect(formas.some((forma) => /^-?\d+(\/\d+)?$/.test(forma)), formas.join(' · ')).toBe(true);
+      expect(
+        formas.some((forma) => /^-?\d+(\/\d+)?$/.test(forma)),
+        formas.join(' · '),
+      ).toBe(true);
     }
   });
 

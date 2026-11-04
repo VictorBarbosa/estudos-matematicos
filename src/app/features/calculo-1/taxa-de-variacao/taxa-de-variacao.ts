@@ -12,8 +12,15 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import {
+  CurvaPlot,
+  PontoPlot,
+  SegmentoPlot,
+} from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/taxa-de-variacao/taxa-de-variacao.i18n.json';
 import { geradorTaxa } from '@features/calculo-1/taxa-de-variacao/taxa-de-variacao.gerador';
 import { TEORIA_TAXA } from '@features/calculo-1/taxa-de-variacao/taxa-de-variacao.teoria';
 
@@ -33,6 +40,8 @@ import { TEORIA_TAXA } from '@features/calculo-1/taxa-de-variacao/taxa-de-variac
   styleUrl: './taxa-de-variacao.scss',
 })
 export class TaxaDeVariacao {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorTaxa;
   protected readonly conceitos = TEORIA_TAXA.map((teoria) => teoria.id);
 
@@ -46,9 +55,7 @@ export class TaxaDeVariacao {
   /** Largura do intervalo da secante — é o Δt que vai encolhendo. */
   protected readonly delta = signal(1);
 
-  protected readonly posicao = computed(() =>
-    Polinomio.de(this.d(), this.c(), this.b(), this.a()),
-  );
+  protected readonly posicao = computed(() => Polinomio.de(this.d(), this.c(), this.b(), this.a()));
 
   protected readonly analise = computed(() =>
     analisarMovimentoComPassos(this.posicao(), this.instante()),
@@ -81,27 +88,27 @@ export class TaxaDeVariacao {
     const { velocidade, aceleracao } = this.movimento();
 
     if (Math.abs(velocidade) < 1e-9) {
-      return 'Velocidade nula: o corpo está parado e a posição atinge um extremo aqui.';
+      return this.texto('velocidadeNula');
     }
 
-    const sentido = velocidade > 0 ? 'avançando' : 'recuando';
+    const sentido = this.texto(velocidade > 0 ? 'avancando' : 'recuando');
 
     if (Math.abs(aceleracao) < 1e-9) {
-      return `O corpo está ${sentido} a velocidade constante — aceleração nula.`;
+      return this.texto('velocidadeConstante', { sentido });
     }
 
-    return velocidade * aceleracao > 0
-      ? `O corpo está ${sentido} e ganhando velocidade: velocidade e aceleração têm o mesmo sinal.`
-      : `O corpo está ${sentido} e freando: a aceleração aponta contra o movimento.`;
+    return this.texto(velocidade * aceleracao > 0 ? 'ganhandoVelocidade' : 'freando', {
+      sentido,
+    });
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
     const { s, v, a } = this.movimento();
 
     return [
-      { fn: (t) => s.avaliar(t), cor: 'serie-1', rotulo: 's(t) posição' },
-      { fn: (t) => v.avaliar(t), cor: 'serie-2', rotulo: "v(t) = s'(t)" },
-      { fn: (t) => a.avaliar(t), cor: 'serie-3', tracejada: true, rotulo: "a(t) = s''(t)" },
+      { fn: (t) => s.avaliar(t), cor: 'serie-1', rotulo: this.texto('curvaS') },
+      { fn: (t) => v.avaliar(t), cor: 'serie-2', rotulo: this.texto('curvaV') },
+      { fn: (t) => a.avaliar(t), cor: 'serie-3', tracejada: true, rotulo: this.texto('curvaA') },
     ];
   });
 
@@ -116,7 +123,7 @@ export class TaxaDeVariacao {
     // A tangente é desenhada com a mesma largura da secante, para comparar as
     // duas inclinações lado a lado.
     return [
-      { x1: t0, y1: y0, x2: t1, y2: s.avaliar(t1), cor: 'aviso', rotulo: 'secante' },
+      { x1: t0, y1: y0, x2: t1, y2: s.avaliar(t1), cor: 'aviso', rotulo: this.texto('segSecante') },
       {
         x1: t0 - this.delta(),
         y1: y0 - m * this.delta(),
@@ -124,7 +131,7 @@ export class TaxaDeVariacao {
         y2: y0 + m * this.delta(),
         cor: 'acento',
         tracejado: true,
-        rotulo: 'tangente',
+        rotulo: this.texto('segTangente'),
       },
     ];
   });
@@ -135,17 +142,28 @@ export class TaxaDeVariacao {
     const t1 = t0 + this.delta();
 
     return [
-      { x: t0, y: s.avaliar(t0), rotulo: `s(${this.formatar(t0)})`, cor: 'serie-1' },
-      { x: t1, y: s.avaliar(t1), rotulo: `s(${this.formatar(t1)})`, cor: 'aviso' },
+      {
+        x: t0,
+        y: s.avaliar(t0),
+        rotulo: this.texto('pontoS', { t: this.formatar(t0) }),
+        cor: 'serie-1',
+      },
+      {
+        x: t1,
+        y: s.avaliar(t1),
+        rotulo: this.texto('pontoS', { t: this.formatar(t1) }),
+        cor: 'aviso',
+      },
     ];
   });
 
   protected readonly dominio = computed(() => ({ xMin: -1, xMax: 6 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Posição, velocidade e aceleração em função do tempo, com a secante do intervalo de ` +
-      `largura ${this.formatar(this.delta())} e a tangente em t igual a ${this.formatar(this.instante())}.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      delta: this.formatar(this.delta()),
+      t: this.formatar(this.instante()),
+    }),
   );
 
   constructor() {

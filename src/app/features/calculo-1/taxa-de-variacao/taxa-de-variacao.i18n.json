@@ -1,0 +1,110 @@
+{
+  "coefT3": { "pt": "Coeficiente de t³", "fr": "Coefficient de t³", "en": "Coefficient of t³" },
+  "coefT2": { "pt": "Coeficiente de t²", "fr": "Coefficient de t²", "en": "Coefficient of t²" },
+  "coefT": { "pt": "Coeficiente de t", "fr": "Coefficient de t", "en": "Coefficient of t" },
+  "intervaloSecante": {
+    "pt": "Intervalo Δt da secante",
+    "fr": "Intervalle Δt de la sécante",
+    "en": "Interval Δt of the secant"
+  },
+  "posicaoEmT": { "pt": "Posição em t", "fr": "Position en t", "en": "Position at t" },
+  "velocidadeInstantanea": {
+    "pt": "Velocidade instantânea",
+    "fr": "Vitesse instantanée",
+    "en": "Instantaneous velocity"
+  },
+  "aDerivadaDaPosicao": {
+    "pt": "a derivada da posição",
+    "fr": "la dérivée de la position",
+    "en": "the derivative of the position"
+  },
+  "aDerivadaDaVelocidade": {
+    "pt": "a derivada da velocidade",
+    "fr": "la dérivée de la vitesse",
+    "en": "the derivative of the velocity"
+  },
+  "velocidadeMedia": {
+    "pt": "Velocidade média no Δt",
+    "fr": "Vitesse moyenne sur Δt",
+    "en": "Average velocity over Δt"
+  },
+  "inclinacaoDaSecante": {
+    "pt": "inclinação da secante",
+    "fr": "pente de la sécante",
+    "en": "slope of the secant"
+  },
+  "curvaS": { "pt": "s(t) posição", "fr": "s(t) position", "en": "s(t) position" },
+  "curvaV": { "pt": "v(t) = s'(t)", "fr": "v(t) = s'(t)", "en": "v(t) = s'(t)" },
+  "curvaA": { "pt": "a(t) = s''(t)", "fr": "a(t) = s''(t)", "en": "a(t) = s''(t)" },
+  "segSecante": { "pt": "secante", "fr": "sécante", "en": "secant" },
+  "segTangente": { "pt": "tangente", "fr": "tangente", "en": "tangent" },
+  "pontoS": { "pt": "s({t})", "fr": "s({t})", "en": "s({t})" },
+  "descricaoGrafico": {
+    "pt": "Posição, velocidade e aceleração em função do tempo, com a secante do intervalo de largura {delta} e a tangente em t igual a {t}.",
+    "fr": "Position, vitesse et accélération en fonction du temps, avec la sécante de l’intervalle de largeur {delta} et la tangente en t égal à {t}.",
+    "en": "Position, velocity and acceleration against time, with the secant of the interval of width {delta} and the tangent at t equal to {t}."
+  },
+  "diminuaODelta": {
+    "pt": "Diminua o Δt e observe a reta laranja se deitar sobre a tracejada: a velocidade média do intervalo se aproxima da instantânea. Esse encontro é a derivada — e é por isso que a velocidade de um instante faz sentido, mesmo sem intervalo nenhum.",
+    "fr": "Réduisez Δt et observez la droite orange se coucher sur la pointillée : la vitesse moyenne de l’intervalle s’approche de l’instantanée. Cette rencontre est la dérivée — et c’est pourquoi la vitesse à un instant a du sens, même sans aucun intervalle.",
+    "en": "Shrink Δt and watch the orange line settle onto the dashed one: the average velocity over the interval approaches the instantaneous one. That meeting is the derivative — and it is why the velocity at an instant makes sense, with no interval at all."
+  },
+  "oLimiteEmNumeros": {
+    "pt": "O limite, em números",
+    "fr": "La limite, en nombres",
+    "en": "The limit, in numbers"
+  },
+  "legendaTabela": {
+    "pt": "Velocidade média em intervalos cada vez menores a partir de t = {t} s.",
+    "fr": "Vitesse moyenne sur des intervalles de plus en plus petits à partir de t = {t} s.",
+    "en": "Average velocity over ever smaller intervals starting at t = {t} s."
+  },
+  "colunaDelta": { "pt": "Δt (s)", "fr": "Δt (s)", "en": "Δt (s)" },
+  "colunaMedia": {
+    "pt": "Velocidade média (m/s)",
+    "fr": "Vitesse moyenne (m/s)",
+    "en": "Average velocity (m/s)"
+  },
+  "colunaDistancia": {
+    "pt": "Distância até v(t)",
+    "fr": "Écart jusqu’à v(t)",
+    "en": "Gap to v(t)"
+  },
+  "aUltimaColuna": {
+    "pt": "A última coluna encolhe junto com o Δt. Ela nunca chega a zero na tabela — o valor exato só aparece no limite, e é esse valor que chamamos de derivada.",
+    "fr": "La dernière colonne diminue avec Δt. Elle n’atteint jamais zéro dans le tableau — la valeur exacte n’apparaît qu’à la limite, et c’est cette valeur qu’on appelle la dérivée.",
+    "en": "The last column shrinks along with Δt. It never reaches zero in the table — the exact value only appears in the limit, and that value is what we call the derivative."
+  },
+  "lendoOsSinais": {
+    "pt": "Lendo os sinais",
+    "fr": "Lire les signes",
+    "en": "Reading the signs"
+  },
+  "velocidadeNula": {
+    "pt": "Velocidade nula: o corpo está parado e a posição atinge um extremo aqui.",
+    "fr": "Vitesse nulle : le corps est arrêté et la position atteint un extremum ici.",
+    "en": "Zero velocity: the body is at rest and the position reaches an extreme here."
+  },
+  "avancando": { "pt": "avançando", "fr": "en avançant", "en": "moving forward" },
+  "recuando": { "pt": "recuando", "fr": "en reculant", "en": "moving backward" },
+  "velocidadeConstante": {
+    "pt": "O corpo está {sentido} a velocidade constante — aceleração nula.",
+    "fr": "Le corps est {sentido} à vitesse constante — accélération nulle.",
+    "en": "The body is {sentido} at constant speed — zero acceleration."
+  },
+  "ganhandoVelocidade": {
+    "pt": "O corpo está {sentido} e ganhando velocidade: velocidade e aceleração têm o mesmo sinal.",
+    "fr": "Le corps est {sentido} et gagne de la vitesse : vitesse et accélération ont le même signe.",
+    "en": "The body is {sentido} and gaining speed: velocity and acceleration have the same sign."
+  },
+  "freando": {
+    "pt": "O corpo está {sentido} e freando: a aceleração aponta contra o movimento.",
+    "fr": "Le corps est {sentido} et ralentit : l’accélération s’oppose au mouvement.",
+    "en": "The body is {sentido} and slowing: the acceleration points against the motion."
+  },
+  "velocidadeNegativa": {
+    "pt": "Velocidade negativa não quer dizer \"devagar\", e aceleração negativa não quer dizer \"freando\": quem decide se o corpo acelera ou freia é o sinal do produto das duas.",
+    "fr": "Une vitesse négative ne veut pas dire « lent », et une accélération négative ne veut pas dire « freine » : c’est le signe du produit des deux qui décide si le corps accélère ou ralentit.",
+    "en": "A negative velocity does not mean \"slow\", and a negative acceleration does not mean \"braking\": what decides whether the body speeds up or slows down is the sign of their product."
+  }
+}

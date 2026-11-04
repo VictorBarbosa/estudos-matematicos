@@ -40,7 +40,8 @@ export const geradorCadeia: GeradorExercicio<number> = {
             tex: `u = ${internoTex} \\qquad f = u^{${n}}`,
           },
           {
-            descricao: 'Derivamos a de fora mantendo o miolo, e multiplicamos pela derivada do miolo.',
+            descricao:
+              'Derivamos a de fora mantendo o miolo, e multiplicamos pela derivada do miolo.',
             tex: `f'(x) = ${n}\\left(${internoTex}\\right)^{${n - 1}} \\cdot ${a}`,
           },
           {
@@ -70,8 +71,7 @@ export const geradorCadeia: GeradorExercicio<number> = {
           },
           {
             resposta: interno ** n,
-            diagnostico:
-              'Esse é o valor da própria função no ponto, não da derivada.',
+            diagnostico: 'Esse é o valor da própria função no ponto, não da derivada.',
             passo: 0,
             conceito: 'cadeia.regra',
           },

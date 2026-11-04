@@ -121,7 +121,10 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
         resolucao: {
           resultado: gabarito,
           passos: [
-            { descricao: 'Aplicamos a regra da potência a cada termo.', tex: "\\frac{d}{dx}(x^{n}) = nx^{n-1}" },
+            {
+              descricao: 'Aplicamos a regra da potência a cada termo.',
+              tex: '\\frac{d}{dx}(x^{n}) = nx^{n-1}',
+            },
             { descricao: 'A derivada completa.', tex: `f'(x) = ${derivada.paraTex()}` },
             { descricao: 'O coeficiente de x é o pedido.', tex: `${coeficiente}` },
           ],
@@ -187,8 +190,7 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
                 );
                 return simbolica(semBaixar.paraTex(), (x) => semBaixar.avaliar(x));
               })(),
-              diagnostico:
-                'O expoente desce como fator E diminui em um: de x³ sai 3x², não 3x³.',
+              diagnostico: 'O expoente desce como fator E diminui em um: de x³ sai 3x², não 3x³.',
               passo: 0,
               conceito: 'regras.potencia',
             },

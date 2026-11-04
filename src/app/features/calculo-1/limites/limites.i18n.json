@@ -1,0 +1,63 @@
+{
+  "fatoracao.rotulo": { "pt": "Fatoração", "fr": "Factorisation", "en": "Factoring" },
+  "fatoracao.tecnica": {
+    "pt": "Fatorar o numerador revela o fator (x − 3), que cancela com o denominador.",
+    "fr": "Factoriser le numérateur fait apparaître le facteur (x − 3), qui se simplifie avec le dénominateur.",
+    "en": "Factoring the numerator reveals the factor (x − 3), which cancels with the denominator."
+  },
+  "conjugado.rotulo": { "pt": "Conjugado", "fr": "Conjugué", "en": "Conjugate" },
+  "conjugado.tecnica": {
+    "pt": "Multiplicar pelo conjugado transforma a diferença de raízes numa diferença de quadrados, liberando o fator que cancela.",
+    "fr": "Multiplier par le conjugué transforme la différence de racines en différence de carrés, libérant le facteur qui se simplifie.",
+    "en": "Multiplying by the conjugate turns the difference of roots into a difference of squares, freeing the factor that cancels."
+  },
+  "trigonometrico.rotulo": { "pt": "sen(x)/x", "fr": "sin(x)/x", "en": "sin(x)/x" },
+  "trigonometrico.tecnica": {
+    "pt": "O limite trigonométrico fundamental. Para ângulos pequenos em radianos, o seno praticamente coincide com o ângulo.",
+    "fr": "La limite trigonométrique fondamentale. Pour de petits angles en radians, le sinus coïncide pratiquement avec l’angle.",
+    "en": "The fundamental trigonometric limit. For small angles in radians, the sine practically equals the angle."
+  },
+  "cosseno.rotulo": { "pt": "(1−cos x)/x", "fr": "(1−cos x)/x", "en": "(1−cos x)/x" },
+  "cosseno.tecnica": {
+    "pt": "O cosseno se aproxima de 1 bem mais rápido que x se aproxima de zero, e o quociente tende a zero.",
+    "fr": "Le cosinus s’approche de 1 bien plus vite que x ne s’approche de zéro, et le quotient tend vers zéro.",
+    "en": "The cosine approaches 1 far faster than x approaches zero, and the quotient tends to zero."
+  },
+  "convergenciaEmNumeros": {
+    "pt": "A convergência, em números",
+    "fr": "La convergence, en nombres",
+    "en": "The convergence, in numbers"
+  },
+  "colunaDistancia": {
+    "pt": "distância do ponto",
+    "fr": "distance au point",
+    "en": "distance from the point"
+  },
+  "colunaEsquerda": {
+    "pt": "pela esquerda",
+    "fr": "par la gauche",
+    "en": "from the left"
+  },
+  "colunaDireita": {
+    "pt": "pela direita",
+    "fr": "par la droite",
+    "en": "from the right"
+  },
+  "asDuasColunas": {
+    "pt": "As duas colunas convergem para o mesmo valor conforme a distância diminui. É essa concordância que garante a existência do limite.",
+    "fr": "Les deux colonnes convergent vers la même valeur à mesure que la distance diminue. C’est cet accord qui garantit l’existence de la limite.",
+    "en": "The two columns converge to the same value as the distance shrinks. It is that agreement that guarantees the limit exists."
+  },
+  "curvaF": { "pt": "f(x)", "fr": "f(x)", "en": "f(x)" },
+  "pontoL": { "pt": "L = {valor}", "fr": "L = {valor}", "en": "L = {valor}" },
+  "descricaoGrafico": {
+    "pt": "Gráfico de {caso} em torno do ponto de interesse.",
+    "fr": "Graphique de {caso} autour du point d’intérêt.",
+    "en": "Graph of {caso} around the point of interest."
+  },
+  "oCirculoVazado": {
+    "pt": "O círculo vazado marca o ponto em que a função não está definida. A curva passa por toda a vizinhança dele, e é só disso que o limite trata.",
+    "fr": "Le cercle creux marque le point où la fonction n’est pas définie. La courbe passe partout dans son voisinage, et c’est de cela seulement que traite la limite.",
+    "en": "The hollow circle marks the point where the function is undefined. The curve passes through its whole neighbourhood, and that is all the limit is about."
+  }
+}

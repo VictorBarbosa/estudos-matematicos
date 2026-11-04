@@ -1,0 +1,79 @@
+{
+  "funcaoPorPartes": {
+    "pt": "Função definida por partes",
+    "fr": "Fonction définie par morceaux",
+    "en": "Function defined piecewise"
+  },
+  "pontoDeTransicao": {
+    "pt": "Ponto de transição",
+    "fr": "Point de transition",
+    "en": "Transition point"
+  },
+  "esquerdaCoef": {
+    "pt": "Esquerda: coef. de x",
+    "fr": "Gauche : coef. de x",
+    "en": "Left: coef. of x"
+  },
+  "esquerdaConstante": {
+    "pt": "Esquerda: constante",
+    "fr": "Gauche : constante",
+    "en": "Left: constant"
+  },
+  "direitaCoef": {
+    "pt": "Direita: coef. de x",
+    "fr": "Droite : coef. de x",
+    "en": "Right: coef. of x"
+  },
+  "direitaConstante": {
+    "pt": "Direita: constante",
+    "fr": "Droite : constante",
+    "en": "Right: constant"
+  },
+  "ajustarParaEncontrar": {
+    "pt": "Ajustar para as sentenças se encontrarem",
+    "fr": "Ajuster pour que les morceaux se rejoignent",
+    "en": "Adjust so the pieces meet"
+  },
+  "naoExiste": { "pt": "não existe", "fr": "n’existe pas", "en": "does not exist" },
+  "ladosConcordam": {
+    "pt": "os lados concordam",
+    "fr": "les deux côtés s’accordent",
+    "en": "the sides agree"
+  },
+  "saltoDe": {
+    "pt": "salto de {valor}",
+    "fr": "saut de {valor}",
+    "en": "jump of {valor}"
+  },
+  "osDoisRamos": { "pt": "Os dois ramos", "fr": "Les deux branches", "en": "The two branches" },
+  "curvaEsquerda": {
+    "pt": "sentença da esquerda",
+    "fr": "morceau de gauche",
+    "en": "left piece"
+  },
+  "curvaDireita": {
+    "pt": "sentença da direita",
+    "fr": "morceau de droite",
+    "en": "right piece"
+  },
+  "descricaoEmenda": {
+    "pt": "As duas sentenças se encontram no ponto: o gráfico emenda sem salto.",
+    "fr": "Les deux morceaux se rejoignent au point : le graphique se raccorde sans saut.",
+    "en": "The two pieces meet at the point: the graph joins with no jump."
+  },
+  "descricaoSalto": {
+    "pt": "As duas sentenças chegam a alturas diferentes: há um salto de {valor}.",
+    "fr": "Les deux morceaux arrivent à des hauteurs différentes : il y a un saut de {valor}.",
+    "en": "The two pieces arrive at different heights: there is a jump of {valor}."
+  },
+  "aBolinhaVazada": {
+    "pt": "A bolinha vazada marca o valor que a sentença da esquerda persegue sem assumir — o ponto pertence à segunda sentença.",
+    "fr": "Le point creux marque la valeur que le morceau de gauche poursuit sans l’atteindre — le point appartient au second morceau.",
+    "en": "The hollow dot marks the value the left piece chases without taking — the point belongs to the second piece."
+  },
+  "oLimiteComum": {
+    "pt": "O limite comum só existe quando os dois lados chegam ao mesmo lugar. Use o botão acima para emendar as sentenças: o salto desaparece, os laterais passam a coincidir e o limite existe. É exatamente essa condição que, somada ao valor no ponto, define a continuidade.",
+    "fr": "La limite commune n’existe que si les deux côtés arrivent au même endroit. Utilisez le bouton ci-dessus pour raccorder les morceaux : le saut disparaît, les limites latérales coïncident et la limite existe. C’est exactement cette condition qui, ajoutée à la valeur au point, définit la continuité.",
+    "en": "The common limit exists only when both sides arrive at the same place. Use the button above to join the pieces: the jump disappears, the one-sided limits agree and the limit exists. It is exactly that condition which, together with the value at the point, defines continuity."
+  }
+}

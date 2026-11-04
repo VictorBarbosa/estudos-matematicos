@@ -26,7 +26,7 @@ export const TEORIA_DERIVACAO_IMPLICITA: readonly Teoria[] = [
       },
       {
         descricao: 'A derivação implícita chega direto a essa forma, e vale nos dois ramos.',
-        tex: '2x + 2yy\' = 0 \\quad\\Longrightarrow\\quad y\' = -\\frac{x}{y}',
+        tex: "2x + 2yy' = 0 \\quad\\Longrightarrow\\quad y' = -\\frac{x}{y}",
         nota: 'Uma conta só, e nenhuma escolha de ramo.',
       },
     ],
@@ -43,7 +43,10 @@ export const TEORIA_DERIVACAO_IMPLICITA: readonly Teoria[] = [
       'inteiro, porque sem ele não há o que isolar.',
     formulas: [
       { tex: '\\frac{d}{dx}\\left[y^{n}\\right] = ny^{n-1}\\frac{dy}{dx}' },
-      { tex: '\\frac{d}{dx}\\left[xy\\right] = y + x\\frac{dy}{dx}', legenda: 'Produto e cadeia na mesma linha.' },
+      {
+        tex: '\\frac{d}{dx}\\left[xy\\right] = y + x\\frac{dy}{dx}',
+        legenda: 'Produto e cadeia na mesma linha.',
+      },
     ],
     demonstracao: [
       {

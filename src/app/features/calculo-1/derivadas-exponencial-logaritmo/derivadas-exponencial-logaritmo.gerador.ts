@@ -14,7 +14,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de derivada de exponencial e logaritmo.
@@ -147,8 +153,7 @@ function doLogaritmo(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: a * Math.log(k * x0),
-        diagnostico:
-          'Esse é o valor da própria função no ponto, não o da derivada.',
+        diagnostico: 'Esse é o valor da própria função no ponto, não o da derivada.',
         passo: 2,
         conceito: 'exp-log.logaritmo',
       },

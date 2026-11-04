@@ -1,13 +1,13 @@
 <app-topico-layout topicoId="definicao-de-derivada">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="ponto" rotulo="Ponto x" [min]="-4" [max]="4" />
+      <app-controle-parametro [(valor)]="ponto" [rotulo]="texto('pontoX')" [min]="-4" [max]="4" />
       <app-controle-parametro
         [(valor)]="hEmCentesimos"
-        rotulo="Distância h (em centésimos)"
+        [rotulo]="texto('distanciaH')"
         [min]="1"
         [max]="300"
-        [dica]="'h = ' + formatar(h()) + ' — diminua e veja a secante virar tangente'"
+        [dica]="texto('dicaH', { valor: formatar(h()) })"
       />
     </section>
 
@@ -20,23 +20,23 @@
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">Inclinação da secante</span>
+        <span class="rotulo">{{ texto('inclinacaoDaSecante') }}</span>
         <strong>{{ formatar(inclinacaoSecante()) }}</strong>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Derivada (tangente)</span>
+        <span class="rotulo">{{ texto('derivadaTangente') }}</span>
         <strong>{{ formatar(derivadaExata()) }}</strong>
-        <span class="legenda">limite com h → 0</span>
+        <span class="legenda">{{ texto('limiteComH') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Diferença</span>
+        <span class="rotulo">{{ i18n.t('explorar.diferenca') }}</span>
         <strong>{{ formatar(erro()) }}</strong>
-        <span class="legenda">some conforme h diminui</span>
+        <span class="legenda">{{ texto('someConforme') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>A secante girando até virar tangente</h2>
+      <h2>{{ i18n.t('explorar.secanteGirando') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -44,15 +44,11 @@
         [descricao]="descricaoGrafico()"
         [altura]="400"
       />
-      <p class="observacao">
-        Reduza o h e observe: os dois pontos se juntam, e a secante gira até coincidir com a
-        tangente tracejada. A derivada é exatamente o valor para o qual essa inclinação
-        converge — nunca o valor em h = 0, que daria 0/0.
-      </p>
+      <p class="observacao">{{ texto('reduzaOH') }}</p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="analise().passos" />
     </section>
 

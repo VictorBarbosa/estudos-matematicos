@@ -8,56 +8,44 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/limites/limites.i18n.json';
 import { geradorLimites } from '@features/calculo-1/limites/limites.gerador';
 import { TEORIA_LIMITES } from '@features/calculo-1/limites/limites.teoria';
 
 interface Caso {
+  /** Também é a chave do rótulo e da técnica no dicionário do tópico. */
   readonly id: string;
-  readonly rotulo: string;
   readonly tex: string;
   readonly fn: (x: number) => number;
   readonly ponto: number;
-  readonly tecnica: string;
 }
 
 const CASOS: readonly Caso[] = [
   {
     id: 'fatoracao',
-    rotulo: 'Fatoração',
     tex: '\\frac{x^{2}-9}{x-3}',
     fn: (x) => (x * x - 9) / (x - 3),
     ponto: 3,
-    tecnica: 'Fatorar o numerador revela o fator (x − 3), que cancela com o denominador.',
   },
   {
     id: 'conjugado',
-    rotulo: 'Conjugado',
     tex: '\\frac{\\sqrt{x+4}-2}{x}',
     fn: (x) => (Math.sqrt(x + 4) - 2) / x,
     ponto: 0,
-    tecnica:
-      'Multiplicar pelo conjugado transforma a diferença de raízes numa diferença de ' +
-      'quadrados, liberando o fator que cancela.',
   },
   {
     id: 'trigonometrico',
-    rotulo: 'sen(x)/x',
     tex: '\\frac{\\sin x}{x}',
     fn: (x) => Math.sin(x) / x,
     ponto: 0,
-    tecnica:
-      'O limite trigonométrico fundamental. Para ângulos pequenos em radianos, o seno ' +
-      'praticamente coincide com o ângulo.',
   },
   {
     id: 'cosseno',
-    rotulo: '(1−cos x)/x',
     tex: '\\frac{1-\\cos x}{x}',
     fn: (x) => (1 - Math.cos(x)) / x,
     ponto: 0,
-    tecnica:
-      'O cosseno se aproxima de 1 bem mais rápido que x se aproxima de zero, e o quociente ' +
-      'tende a zero.',
   },
 ];
 
@@ -69,6 +57,8 @@ const CASOS: readonly Caso[] = [
   styleUrl: './limites.scss',
 })
 export class Limites {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorLimites;
   protected readonly conceitos = TEORIA_LIMITES.map((teoria) => teoria.id);
   protected readonly casos = CASOS;
@@ -77,9 +67,7 @@ export class Limites {
 
   protected readonly caso = computed(() => CASOS[this.indice()] ?? CASOS[0]!);
 
-  protected readonly lateral = computed(() =>
-    limitesLaterais(this.caso().fn, this.caso().ponto),
-  );
+  protected readonly lateral = computed(() => limitesLaterais(this.caso().fn, this.caso().ponto));
 
   protected readonly analise = computed(() =>
     limiteComPassos(this.caso().fn, this.caso().ponto, this.caso().tex),
@@ -98,7 +86,7 @@ export class Limites {
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => [
-    { fn: this.caso().fn, cor: 'serie-1', rotulo: 'f(x)' },
+    { fn: this.caso().fn, cor: 'serie-1', rotulo: this.texto('curvaF') },
   ]);
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() => {
@@ -111,7 +99,7 @@ export class Limites {
       {
         x: this.caso().ponto,
         y: lateral.valor!,
-        rotulo: `L = ${this.formatar(lateral.valor!)}`,
+        rotulo: this.texto('pontoL', { valor: this.formatar(lateral.valor!) }),
         cor: 'acento',
         // Nesses casos a função nunca está definida no ponto.
         vazado: true,
@@ -124,8 +112,8 @@ export class Limites {
     return { xMin: ponto - 5, xMax: ponto + 5 };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () => `Gráfico de ${this.caso().rotulo} em torno do ponto de interesse.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { caso: this.texto(`${this.caso().id}.rotulo`) }),
   );
 
   constructor() {

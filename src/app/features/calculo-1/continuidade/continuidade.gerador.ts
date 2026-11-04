@@ -66,8 +66,7 @@ export const geradorContinuidade: GeradorExercicio<number> = {
             },
             {
               resposta: k,
-              diagnostico:
-                'Depois de cancelar sobra x + k. Substituindo x por k o resultado é 2k.',
+              diagnostico: 'Depois de cancelar sobra x + k. Substituindo x por k o resultado é 2k.',
               passo: 2,
               conceito: 'continuidade.tipos',
             },
@@ -174,7 +173,8 @@ export const geradorContinuidade: GeradorExercicio<number> = {
           },
           {
             resposta: -gabarito,
-            diagnostico: 'Sinal trocado ao isolar k. Confira a passagem do termo para o outro lado.',
+            diagnostico:
+              'Sinal trocado ao isolar k. Confira a passagem do termo para o outro lado.',
             passo: 2,
             conceito: 'continuidade.definicao',
           },

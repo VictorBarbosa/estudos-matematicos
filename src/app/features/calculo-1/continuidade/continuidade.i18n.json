@@ -1,0 +1,90 @@
+{
+  "caso": { "pt": "Caso", "fr": "Cas", "en": "Case" },
+  "continua.rotulo": { "pt": "Contínua", "fr": "Continue", "en": "Continuous" },
+  "continua.tipo": {
+    "pt": "Nenhuma descontinuidade",
+    "fr": "Aucune discontinuité",
+    "en": "No discontinuity"
+  },
+  "continua.explicacao": {
+    "pt": "As três condições valem: existe f(2), existe o limite, e os dois coincidem.",
+    "fr": "Les trois conditions sont remplies : f(2) existe, la limite existe, et les deux coïncident.",
+    "en": "All three conditions hold: f(2) exists, the limit exists, and the two agree."
+  },
+  "removivel.rotulo": {
+    "pt": "Buraco (removível)",
+    "fr": "Trou (éliminable)",
+    "en": "Hole (removable)"
+  },
+  "removivel.tipo": {
+    "pt": "Descontinuidade removível",
+    "fr": "Discontinuité éliminable",
+    "en": "Removable discontinuity"
+  },
+  "removivel.explicacao": {
+    "pt": "O limite existe e vale 4, mas a função não está definida no ponto. Bastaria definir f(2) = 4 para consertar — por isso \"removível\".",
+    "fr": "La limite existe et vaut 4, mais la fonction n’est pas définie au point. Il suffirait de poser f(2) = 4 pour réparer — d’où « éliminable ».",
+    "en": "The limit exists and equals 4, but the function is undefined at the point. Defining f(2) = 4 would fix it — hence \"removable\"."
+  },
+  "salto.rotulo": { "pt": "Salto", "fr": "Saut", "en": "Jump" },
+  "salto.tipo": {
+    "pt": "Descontinuidade de salto",
+    "fr": "Discontinuité de saut",
+    "en": "Jump discontinuity"
+  },
+  "salto.explicacao": {
+    "pt": "Os laterais discordam: −1 de um lado, +1 do outro. Nenhum valor atribuído ao ponto resolve, porque sempre discordaria de um dos lados.",
+    "fr": "Les limites latérales ne s’accordent pas : −1 d’un côté, +1 de l’autre. Aucune valeur attribuée au point ne règle le problème, car elle serait toujours en désaccord avec un côté.",
+    "en": "The one-sided limits disagree: −1 on one side, +1 on the other. No value assigned to the point fixes it, because it would always clash with one side."
+  },
+  "infinita.rotulo": { "pt": "Explosão", "fr": "Explosion", "en": "Blow-up" },
+  "infinita.tipo": {
+    "pt": "Descontinuidade infinita",
+    "fr": "Discontinuité infinie",
+    "en": "Infinite discontinuity"
+  },
+  "infinita.explicacao": {
+    "pt": "A função dispara para o infinito. Não há valor finito a atribuir, e a assíntota vertical torna a descontinuidade irremovível.",
+    "fr": "La fonction part vers l’infini. Il n’y a aucune valeur finie à attribuer, et l’asymptote verticale rend la discontinuité non éliminable.",
+    "en": "The function shoots off to infinity. There is no finite value to assign, and the vertical asymptote makes the discontinuity irremovable."
+  },
+  "continuaNoPonto": {
+    "pt": "Contínua no ponto",
+    "fr": "Continue au point",
+    "en": "Continuous at the point"
+  },
+  "asTresCondicoes": {
+    "pt": "As três condições, uma a uma",
+    "fr": "Les trois conditions, une à une",
+    "en": "The three conditions, one by one"
+  },
+  "condicaoDefinido": {
+    "pt": "f({ponto}) está definido",
+    "fr": "f({ponto}) est défini",
+    "en": "f({ponto}) is defined"
+  },
+  "condicaoLimite": {
+    "pt": "o limite existe",
+    "fr": "la limite existe",
+    "en": "the limit exists"
+  },
+  "condicaoCoincidem": {
+    "pt": "limite e valor coincidem",
+    "fr": "la limite et la valeur coïncident",
+    "en": "limit and value agree"
+  },
+  "cumprida": { "pt": "(cumprida)", "fr": "(remplie)", "en": "(met)" },
+  "naoCumprida": { "pt": "(não cumprida)", "fr": "(non remplie)", "en": "(not met)" },
+  "naoExiste": { "pt": "não existe", "fr": "n’existe pas", "en": "does not exist" },
+  "curvaF": { "pt": "f(x)", "fr": "f(x)", "en": "f(x)" },
+  "descricaoGrafico": {
+    "pt": "Gráfico mostrando {tipo} em x igual a {ponto}.",
+    "fr": "Graphique montrant {tipo} en x égal à {ponto}.",
+    "en": "Graph showing {tipo} at x equal to {ponto}."
+  },
+  "aIdeiaIntuitiva": {
+    "pt": "A ideia intuitiva vale: uma função é contínua quando o gráfico pode ser traçado sem tirar o lápis do papel. Cada tipo de descontinuidade é uma forma diferente de ser obrigado a levantá-lo.",
+    "fr": "L’idée intuitive est juste : une fonction est continue quand on peut tracer son graphique sans lever le crayon. Chaque type de discontinuité est une façon différente d’être obligé de le lever.",
+    "en": "The intuitive idea holds: a function is continuous when the graph can be drawn without lifting the pencil. Each kind of discontinuity is a different way of being forced to lift it."
+  }
+}

@@ -120,9 +120,7 @@ describe('geradorTaxa', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('valor da POSIÇÃO')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('valor da POSIÇÃO'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('valor da POSIÇÃO'))!;
 
     const resultado = corrigir(geradorTaxa, exercicio, String(armadilha.resposta));
 

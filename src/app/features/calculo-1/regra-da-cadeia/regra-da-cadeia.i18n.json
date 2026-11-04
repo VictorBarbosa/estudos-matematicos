@@ -1,0 +1,64 @@
+{
+  "coefInterno": {
+    "pt": "Coeficiente interno (a)",
+    "fr": "Coefficient intérieur (a)",
+    "en": "Inner coefficient (a)"
+  },
+  "constanteInterna": {
+    "pt": "Constante interna (b)",
+    "fr": "Constante intérieure (b)",
+    "en": "Inner constant (b)"
+  },
+  "expoente": { "pt": "Expoente (n)", "fr": "Exposant (n)", "en": "Exponent (n)" },
+  "comACadeia": {
+    "pt": "Com a cadeia (correto)",
+    "fr": "Avec la chaîne (correct)",
+    "en": "With the chain rule (correct)"
+  },
+  "semFatorInterno": {
+    "pt": "Sem o fator interno",
+    "fr": "Sans le facteur intérieur",
+    "en": "Without the inner factor"
+  },
+  "vezesMenor": {
+    "pt": "{a}× menor",
+    "fr": "{a}× plus petit",
+    "en": "{a}× smaller"
+  },
+  "curvaF": { "pt": "f(x)", "fr": "f(x)", "en": "f(x)" },
+  "curvaCorreta": {
+    "pt": "f'(x) correta",
+    "fr": "f'(x) correcte",
+    "en": "correct f'(x)"
+  },
+  "curvaErrada": {
+    "pt": "sem o fator interno (errada)",
+    "fr": "sans le facteur intérieur (fausse)",
+    "en": "without the inner factor (wrong)"
+  },
+  "descricaoGrafico": {
+    "pt": "Função composta, sua derivada correta e a versão errada que esquece o fator interno; as duas diferem por um fator {a}.",
+    "fr": "Fonction composée, sa dérivée correcte et la version fausse qui oublie le facteur intérieur ; les deux diffèrent d’un facteur {a}.",
+    "en": "Composite function, its correct derivative and the wrong version that forgets the inner factor; the two differ by a factor of {a}."
+  },
+  "oCustoDeEsquecer": {
+    "pt": "O custo de esquecer o fator interno",
+    "fr": "Le coût d’oublier le facteur intérieur",
+    "en": "The cost of forgetting the inner factor"
+  },
+  "aCurvaTracejada": {
+    "pt": "A curva tracejada é o que sai ao esquecer a derivada de dentro. Aumente o coeficiente interno e veja o erro crescer proporcionalmente — com a = 1 as duas coincidem, e é por isso que o engano passa despercebido nos primeiros exercícios.",
+    "fr": "La courbe en pointillé est ce qu’on obtient en oubliant la dérivée intérieure. Augmentez le coefficient intérieur et voyez l’erreur croître proportionnellement — avec a = 1 les deux coïncident, et c’est pourquoi la méprise passe inaperçue dans les premiers exercices.",
+    "en": "The dashed curve is what comes out when you forget the inner derivative. Raise the inner coefficient and watch the error grow in proportion — with a = 1 the two coincide, which is why the slip goes unnoticed in the first exercises."
+  },
+  "porQueAsTaxas": {
+    "pt": "Por que as taxas se multiplicam",
+    "fr": "Pourquoi les taux se multiplient",
+    "en": "Why the rates multiply"
+  },
+  "seYMuda": {
+    "pt": "Se y muda três vezes mais rápido que u, e u muda duas vezes mais rápido que x, então y muda seis vezes mais rápido que x. A regra da cadeia é essa composição de taxas, e a notação de Leibniz a torna quase óbvia.",
+    "fr": "Si y varie trois fois plus vite que u, et u deux fois plus vite que x, alors y varie six fois plus vite que x. La règle de dérivation en chaîne est cette composition de taux, et la notation de Leibniz la rend presque évidente.",
+    "en": "If y changes three times as fast as u, and u changes twice as fast as x, then y changes six times as fast as x. The chain rule is that composition of rates, and Leibniz's notation makes it almost obvious."
+  }
+}

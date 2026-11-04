@@ -86,10 +86,7 @@ export const geradorLaterais: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
-      dica:
-        nivel === 'facil'
-          ? 'Veja qual das duas sentenças vale do lado pedido.'
-          : undefined,
+      dica: nivel === 'facil' ? 'Veja qual das duas sentenças vale do lado pedido.' : undefined,
     };
   },
 

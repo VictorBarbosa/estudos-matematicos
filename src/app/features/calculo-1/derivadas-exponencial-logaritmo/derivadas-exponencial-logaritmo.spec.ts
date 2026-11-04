@@ -118,7 +118,10 @@ describe('derivadas de exponencial e logaritmo', () => {
     const { resultado } = derivadaExponencialComPassos(2, 3, 1);
 
     expect(resultado).toBeCloseTo(6 * Math.exp(3), 10);
-    expect(resultado).toBeCloseTo(derivadaNumerica((x) => 2 * Math.exp(3 * x), 1), 3);
+    expect(resultado).toBeCloseTo(
+      derivadaNumerica((x) => 2 * Math.exp(3 * x), 1),
+      3,
+    );
   });
 
   it('o múltiplo dentro do logaritmo não sobrevive à derivada', () => {
@@ -126,7 +129,10 @@ describe('derivadas de exponencial e logaritmo', () => {
     const comMultiplo = derivadaLogaritmoComPassos(1, 7, 4).resultado;
 
     expect(comMultiplo).toBe(semMultiplo);
-    expect(comMultiplo).toBeCloseTo(derivadaNumerica((x) => Math.log(7 * x), 4), 6);
+    expect(comMultiplo).toBeCloseTo(
+      derivadaNumerica((x) => Math.log(7 * x), 4),
+      6,
+    );
   });
 
   it('a nota explica por que a constante desaparece', () => {
@@ -140,14 +146,20 @@ describe('derivadas de exponencial e logaritmo', () => {
     const { resultado } = derivadaExponencialDeBaseComPassos(1, 2, 3);
 
     expect(resultado).toBeCloseTo(8 * Math.LN2, 10);
-    expect(resultado).toBeCloseTo(derivadaNumerica((x) => 2 ** x, 3), 4);
+    expect(resultado).toBeCloseTo(
+      derivadaNumerica((x) => 2 ** x, 3),
+      4,
+    );
   });
 
   it('no logaritmo de base, o fator divide em vez de multiplicar', () => {
     const { resultado } = derivadaLogaritmoDeBaseComPassos(1, 2, 4);
 
     expect(resultado).toBeCloseTo(1 / (4 * Math.LN2), 10);
-    expect(resultado).toBeCloseTo(derivadaNumerica((x) => Math.log2(x), 4), 6);
+    expect(resultado).toBeCloseTo(
+      derivadaNumerica((x) => Math.log2(x), 4),
+      6,
+    );
   });
 
   it('o produto com exponencial põe a exponencial em evidência', () => {
@@ -155,16 +167,17 @@ describe('derivadas de exponencial e logaritmo', () => {
 
     // [x·e^{-x}]' = e^{-x}(1 − x), que zera exatamente em x = 1.
     expect(resultado).toBeCloseTo(0, 10);
-    expect(passos[1]!.tex).toBe(
-      "f'(x) = e^{-x} - xe^{-x} = e^{-x}\\left(1 - x\\right)",
-    );
+    expect(passos[1]!.tex).toBe("f'(x) = e^{-x} - xe^{-x} = e^{-x}\\left(1 - x\\right)");
   });
 
   it('o expoente dentro do logaritmo desce como fator', () => {
     const { resultado } = derivadaLogaritmoDePotenciaComPassos(1, 4, 2);
 
     expect(resultado).toBe(2);
-    expect(resultado).toBeCloseTo(derivadaNumerica((x) => Math.log(x ** 4), 2), 6);
+    expect(resultado).toBeCloseTo(
+      derivadaNumerica((x) => Math.log(x ** 4), 2),
+      6,
+    );
   });
 
   it('a escrita omite o coeficiente quando ele vale um', () => {

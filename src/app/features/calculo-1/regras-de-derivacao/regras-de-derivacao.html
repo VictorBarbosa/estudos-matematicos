@@ -1,11 +1,36 @@
 <app-topico-layout topicoId="regras-de-derivacao">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x³" [min]="-3" [max]="3" />
-      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x²" [min]="-5" [max]="5" />
-      <app-controle-parametro [(valor)]="c" rotulo="Coeficiente de x" [min]="-6" [max]="6" />
-      <app-controle-parametro [(valor)]="d" rotulo="Termo constante" [min]="-6" [max]="6" />
-      <app-controle-parametro [(valor)]="ponto" rotulo="Ponto da tangente" [min]="-3" [max]="3" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefX3')"
+        [min]="-3"
+        [max]="3"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.coefX2')"
+        [min]="-5"
+        [max]="5"
+      />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="i18n.t('explorar.coefX')"
+        [min]="-6"
+        [max]="6"
+      />
+      <app-controle-parametro
+        [(valor)]="d"
+        [rotulo]="i18n.t('explorar.termoConstante')"
+        [min]="-6"
+        [max]="6"
+      />
+      <app-controle-parametro
+        [(valor)]="ponto"
+        [rotulo]="texto('pontoDaTangente')"
+        [min]="-3"
+        [max]="3"
+      />
     </section>
 
     <section class="destaque-formula">
@@ -15,7 +40,7 @@
     </section>
 
     <section>
-      <h2>A derivada como inclinação</h2>
+      <h2>{{ texto('derivadaComoInclinacao') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -23,26 +48,17 @@
         [descricao]="descricaoGrafico()"
         [altura]="400"
       />
-      <p class="observacao">
-        Mova o ponto da tangente e acompanhe: a altura da curva da derivada em cada x é
-        exatamente a inclinação da tangente ali. Onde a derivada cruza o eixo, a tangente
-        fica horizontal.
-      </p>
+      <p class="observacao">{{ texto('movaOPonto') }}</p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="analise().passos" />
     </section>
 
     <section class="painel">
-      <h2>O erro mais comum</h2>
-      <p class="observacao">
-        A derivada de um produto <strong>não</strong> é o produto das derivadas. Confira com
-        x · x: derivando o produto expandido, x², obtemos 2x. Já o produto das derivadas
-        daria 1 · 1 = 1. A regra correta soma dois termos, porque os dois fatores variam ao
-        mesmo tempo.
-      </p>
+      <h2>{{ i18n.t('explorar.erroMaisComum') }}</h2>
+      <p class="observacao" [innerHTML]="texto('aDerivadaDeUmProduto')"></p>
       <app-formula [tex]="regraProdutoTex" [bloco]="true" />
     </section>
 

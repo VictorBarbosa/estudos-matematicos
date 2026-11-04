@@ -70,7 +70,11 @@ describe('geradorDerivadasTrig', () => {
   it('todo gabarito confere com a derivada numérica da própria resolução', () => {
     // A conferência é indireta de propósito: comparamos o valor exato guardado
     // pelo motor com a derivada por diferença finita da função do enunciado.
-    for (const arco of [{ k: 1, m: 6 }, { k: 1, m: 4 }, { k: 2, m: 3 }]) {
+    for (const arco of [
+      { k: 1, m: 6 },
+      { k: 1, m: 4 },
+      { k: 2, m: 3 },
+    ]) {
       for (const [funcao, fn] of [
         ['sen', (x: number) => 3 * Math.sin(2 * x)],
         ['cos', (x: number) => 3 * Math.cos(2 * x)],
@@ -156,7 +160,12 @@ describe('derivadas trigonométricas', () => {
   });
 
   it('a secante ao quadrado é racional e nunca menor que um', () => {
-    for (const arco of [{ k: 0, m: 1 }, { k: 1, m: 6 }, { k: 1, m: 4 }, { k: 1, m: 3 }]) {
+    for (const arco of [
+      { k: 0, m: 1 },
+      { k: 1, m: 6 },
+      { k: 1, m: 4 },
+      { k: 1, m: 3 },
+    ]) {
       const sec = secanteAoQuadradoExato(arco);
       expect(sec.raiz).toBe(1);
       expect(exatoValor(sec)).toBeGreaterThanOrEqual(1);

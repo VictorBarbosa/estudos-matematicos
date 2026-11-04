@@ -1,6 +1,6 @@
 <app-topico-layout topicoId="continuidade">
   <div explorar class="explorar">
-    <section class="seletor-pills" role="group" aria-label="Caso">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('caso')">
       @for (opcao of casos; track opcao.id) {
         <button
           type="button"
@@ -8,7 +8,7 @@
           [attr.aria-pressed]="caso().id === opcao.id"
           (click)="selecionar($index)"
         >
-          {{ opcao.rotulo }}
+          {{ texto(opcao.id + '.rotulo') }}
         </button>
       }
     </section>
@@ -16,20 +16,20 @@
     <section class="destaque-formula">
       <app-formula [tex]="'f(x) = ' + caso().tex" [bloco]="true" />
       <p class="veredito" [attr.data-continua]="continua()">
-        {{ continua() ? 'Contínua no ponto' : caso().tipo }}
+        {{ continua() ? texto('continuaNoPonto') : texto(caso().id + '.tipo') }}
       </p>
-      <p class="observacao">{{ caso().explicacao }}</p>
+      <p class="observacao">{{ texto(caso().id + '.explicacao') }}</p>
     </section>
 
     <section class="painel">
-      <h2>As três condições, uma a uma</h2>
+      <h2>{{ texto('asTresCondicoes') }}</h2>
       <ul class="condicoes">
-        @for (condicao of condicoes(); track condicao.texto) {
+        @for (condicao of condicoes(); track condicao.chave) {
           <li [attr.data-cumprida]="condicao.cumprida">
             <span class="marca" aria-hidden="true">{{ condicao.cumprida ? '✓' : '✗' }}</span>
-            {{ condicao.texto }}
+            {{ texto(condicao.chave, condicao.valores) }}
             <span class="apenas-leitor">
-              {{ condicao.cumprida ? '(cumprida)' : '(não cumprida)' }}
+              {{ condicao.cumprida ? texto('cumprida') : texto('naoCumprida') }}
             </span>
           </li>
         }
@@ -41,14 +41,14 @@
           <strong>{{ formatar(valorNoPonto()) }}</strong>
         </div>
         <div class="indicador">
-          <span class="rotulo">Limite</span>
-          <strong>{{ lateral().existe ? formatar(lateral().valor) : 'não existe' }}</strong>
+          <span class="rotulo">{{ i18n.t('explorar.limite') }}</span>
+          <strong>{{ lateral().existe ? formatar(lateral().valor) : texto('naoExiste') }}</strong>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>O gráfico</h2>
+      <h2>{{ i18n.t('explorar.oGrafico') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -56,11 +56,7 @@
         [descricao]="descricaoGrafico()"
         [altura]="360"
       />
-      <p class="observacao">
-        A ideia intuitiva vale: uma função é contínua quando o gráfico pode ser traçado sem
-        tirar o lápis do papel. Cada tipo de descontinuidade é uma forma diferente de ser
-        obrigado a levantá-lo.
-      </p>
+      <p class="observacao">{{ texto('aIdeiaIntuitiva') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

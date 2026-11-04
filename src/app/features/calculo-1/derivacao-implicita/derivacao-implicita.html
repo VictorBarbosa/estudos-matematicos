@@ -4,10 +4,10 @@
       <h2>Por que não dá para isolar</h2>
       <app-formula [tex]="'x^{2} + y^{2} = 25'" [bloco]="true" />
       <p class="observacao">
-        Para x igual a 3 há dois valores de y, 4 e −4. Nenhuma função devolve dois valores, e
-        por isso a circunferência não é gráfico de função. Isolar obriga a escolher um ramo e a
-        carregar uma raiz pelo resto da conta; derivar a equação como ela está resolve os dois
-        ramos de uma vez.
+        Para x igual a 3 há dois valores de y, 4 e −4. Nenhuma função devolve dois valores, e por
+        isso a circunferência não é gráfico de função. Isolar obriga a escolher um ramo e a carregar
+        uma raiz pelo resto da conta; derivar a equação como ela está resolve os dois ramos de uma
+        vez.
       </p>
     </section>
 
@@ -53,22 +53,19 @@
         [altura]="400"
       />
       <p class="observacao">
-        Leve o ponto até o topo da curva e a tangente fica horizontal; leve-o até a lateral, onde
-        y vale zero, e ela fica vertical — ali o denominador zera e a derivada não existe. É a
-        leitura geométrica de uma fração que depende das duas coordenadas.
+        Leve o ponto até o topo da curva e a tangente fica horizontal; leve-o até a lateral, onde y
+        vale zero, e ela fica vertical — ali o denominador zera e a derivada não existe. É a leitura
+        geométrica de uma fração que depende das duas coordenadas.
       </p>
     </section>
 
     <section class="painel">
       <h2>A receita, em três movimentos</h2>
-      <app-formula
-        [tex]="'\\frac{d}{dx}\\left[y^{2}\\right] = 2y\\frac{dy}{dx}'"
-        [bloco]="true"
-      />
+      <app-formula [tex]="'\\frac{d}{dx}\\left[y^{2}\\right] = 2y\\frac{dy}{dx}'" [bloco]="true" />
       <p class="observacao">
-        Derive os dois lados tratando y como função de x; junte os termos com dy/dx de um lado;
-        só então isole. A ordem é o que faz o método funcionar — tentar isolar antes devolve
-        exatamente o problema que se queria evitar.
+        Derive os dois lados tratando y como função de x; junte os termos com dy/dx de um lado; só
+        então isole. A ordem é o que faz o método funcionar — tentar isolar antes devolve exatamente
+        o problema que se queria evitar.
       </p>
     </section>
 

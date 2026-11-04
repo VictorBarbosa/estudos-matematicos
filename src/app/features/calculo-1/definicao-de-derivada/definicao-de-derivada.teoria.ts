@@ -44,7 +44,9 @@ export const TEORIA_DEFINICAO_DERIVADA: readonly Teoria[] = [
       'f é a posição em função do tempo, f′ é a velocidade naquele instante — não a média ' +
       'num intervalo, mas o valor exato num ponto.',
     formulas: [
-      { tex: 'v_{\\text{média}} = \\frac{\\Delta s}{\\Delta t} \\qquad v_{\\text{instantânea}} = \\lim_{\\Delta t \\to 0} \\frac{\\Delta s}{\\Delta t}' },
+      {
+        tex: 'v_{\\text{média}} = \\frac{\\Delta s}{\\Delta t} \\qquad v_{\\text{instantânea}} = \\lim_{\\Delta t \\to 0} \\frac{\\Delta s}{\\Delta t}',
+      },
     ],
     demonstracao: [
       {

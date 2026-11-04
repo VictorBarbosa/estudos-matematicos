@@ -1,0 +1,60 @@
+{
+  "maximo": { "pt": "máximo local", "fr": "maximum local", "en": "local maximum" },
+  "minimo": { "pt": "mínimo local", "fr": "minimum local", "en": "local minimum" },
+  "inflexao": { "pt": "inflexão", "fr": "inflexion", "en": "inflection" },
+  "ondeATangente": {
+    "pt": "Onde a tangente fica horizontal",
+    "fr": "Où la tangente devient horizontale",
+    "en": "Where the tangent goes flat"
+  },
+  "curvaF": { "pt": "f(x)", "fr": "f(x)", "en": "f(x)" },
+  "curvaDf": { "pt": "f'(x)", "fr": "f'(x)", "en": "f'(x)" },
+  "curvaD2f": { "pt": "f''(x)", "fr": "f''(x)", "en": "f''(x)" },
+  "descricaoGrafico": {
+    "pt": "Função com {quantos} ponto(s) crítico(s), junto da primeira e da segunda derivada.",
+    "fr": "Fonction avec {quantos} point(s) critique(s), accompagnée de la première et de la deuxième dérivée.",
+    "en": "Function with {quantos} critical point(s), alongside the first and second derivative."
+  },
+  "repareNaCurva": {
+    "pt": "Repare na curva tracejada da derivada: ela cruza o eixo exatamente onde a função tem um extremo. E o sinal da segunda derivada ali decide se é máximo ou mínimo.",
+    "fr": "Observez la courbe en pointillé de la dérivée : elle coupe l’axe exactement là où la fonction a un extremum. Et le signe de la deuxième dérivée y décide s’il s’agit d’un maximum ou d’un minimum.",
+    "en": "Look at the dashed derivative curve: it crosses the axis exactly where the function has an extreme. And the sign of the second derivative there decides whether it is a maximum or a minimum."
+  },
+  "pontosCriticos": {
+    "pt": "Pontos críticos encontrados",
+    "fr": "Points critiques trouvés",
+    "en": "Critical points found"
+  },
+  "valorF": { "pt": "f = {valor}", "fr": "f = {valor}", "en": "f = {valor}" },
+  "otimizacao": {
+    "pt": "Otimização: o problema da cerca",
+    "fr": "Optimisation : le problème de la clôture",
+    "en": "Optimisation: the fence problem"
+  },
+  "metrosDeCerca": {
+    "pt": "Metros de cerca disponíveis",
+    "fr": "Mètres de clôture disponibles",
+    "en": "Metres of fence available"
+  },
+  "areaMaxima": { "pt": "Área máxima", "fr": "Aire maximale", "en": "Largest area" },
+  "quadradoDeLado": {
+    "pt": "quadrado de lado {lado} m",
+    "fr": "carré de côté {lado} m",
+    "en": "square of side {lado} m"
+  },
+  "seFosseMaisEstreito": {
+    "pt": "Se fosse mais estreito",
+    "fr": "S’il était plus étroit",
+    "en": "If it were narrower"
+  },
+  "larguraM": {
+    "pt": "largura {valor} m",
+    "fr": "largeur {valor} m",
+    "en": "width {valor} m"
+  },
+  "comPerimetroFixo": {
+    "pt": "Com perímetro fixo, a área máxima é sempre a do quadrado — e a derivada prova isso em três linhas. Qualquer retângulo mais alongado cerca menos terreno com a mesma cerca.",
+    "fr": "À périmètre fixé, l’aire maximale est toujours celle du carré — et la dérivée le démontre en trois lignes. Tout rectangle plus allongé enclôt moins de terrain avec la même clôture.",
+    "en": "With a fixed perimeter, the largest area is always the square's — and the derivative proves it in three lines. Any longer rectangle encloses less ground with the same fence."
+  }
+}

@@ -1,6 +1,6 @@
 <app-topico-layout topicoId="limites">
   <div explorar class="explorar">
-    <section class="seletor-pills" role="group" aria-label="Técnica">
+    <section class="seletor-pills" role="group" [attr.aria-label]="i18n.t('explorar.tecnica')">
       @for (opcao of casos; track opcao.id) {
         <button
           type="button"
@@ -8,27 +8,34 @@
           [attr.aria-pressed]="caso().id === opcao.id"
           (click)="selecionar($index)"
         >
-          {{ opcao.rotulo }}
+          {{ texto(opcao.id + '.rotulo') }}
         </button>
       }
     </section>
 
     <section class="destaque-formula">
       <app-formula
-        [tex]="'\\lim_{x \\to ' + caso().ponto + '} ' + caso().tex + ' = ' + (lateral().existe ? formatar(lateral().valor!) : '?')"
+        [tex]="
+          '\\lim_{x \\to ' +
+          caso().ponto +
+          '} ' +
+          caso().tex +
+          ' = ' +
+          (lateral().existe ? formatar(lateral().valor!) : '?')
+        "
         [bloco]="true"
       />
-      <p class="observacao">{{ caso().tecnica }}</p>
+      <p class="observacao">{{ texto(caso().id + '.tecnica') }}</p>
     </section>
 
     <section>
-      <h2>A convergência, em números</h2>
+      <h2>{{ texto('convergenciaEmNumeros') }}</h2>
       <table class="tabela">
         <thead>
           <tr>
-            <th scope="col">distância do ponto</th>
-            <th scope="col">pela esquerda</th>
-            <th scope="col">pela direita</th>
+            <th scope="col">{{ texto('colunaDistancia') }}</th>
+            <th scope="col">{{ texto('colunaEsquerda') }}</th>
+            <th scope="col">{{ texto('colunaDireita') }}</th>
           </tr>
         </thead>
         <tbody>
@@ -41,14 +48,11 @@
           }
         </tbody>
       </table>
-      <p class="observacao">
-        As duas colunas convergem para o mesmo valor conforme a distância diminui. É essa
-        concordância que garante a existência do limite.
-      </p>
+      <p class="observacao">{{ texto('asDuasColunas') }}</p>
     </section>
 
     <section>
-      <h2>O gráfico</h2>
+      <h2>{{ i18n.t('explorar.oGrafico') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -56,14 +60,11 @@
         [descricao]="descricaoGrafico()"
         [altura]="360"
       />
-      <p class="observacao">
-        O círculo vazado marca o ponto em que a função não está definida. A curva passa por
-        toda a vizinhança dele, e é só disso que o limite trata.
-      </p>
+      <p class="observacao">{{ texto('oCirculoVazado') }}</p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="analise().passos" />
     </section>
 

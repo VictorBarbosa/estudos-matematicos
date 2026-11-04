@@ -28,8 +28,7 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
       return {
         id: `aplic-otim-${perimetro}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado:
-          `Com ${perimetro} m de cerca, qual é a MAIOR área retangular que se pode cercar?`,
+        enunciado: `Com ${perimetro} m de cerca, qual é a MAIOR área retangular que se pode cercar?`,
         enunciadoTex: `2x + 2y = ${perimetro} \\qquad A = xy`,
         gabarito,
         resolucao: {
@@ -102,7 +101,10 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
         resolucao: {
           resultado: gabarito,
           passos: [
-            { descricao: 'Derivamos e igualamos a zero.', tex: `f'(x) = ${derivada.paraTex()} = 0` },
+            {
+              descricao: 'Derivamos e igualamos a zero.',
+              tex: `f'(x) = ${derivada.paraTex()} = 0`,
+            },
             {
               descricao: 'Os pontos críticos são as raízes da derivada.',
               tex: `x = \\pm${k}`,
@@ -238,8 +240,7 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
         `Um balão esférico é inflado e seu raio cresce ${taxaRaio} cm/s. A que taxa o VOLUME ` +
         `cresce no instante em que o raio vale ${raio} cm? (em cm³/s, 2 casas decimais)`,
       enunciadoTex:
-        `V = \\frac{4}{3}\\pi r^{3} \\qquad \\frac{dr}{dt} = ${taxaRaio} ` +
-        `\\qquad r = ${raio}`,
+        `V = \\frac{4}{3}\\pi r^{3} \\qquad \\frac{dr}{dt} = ${taxaRaio} ` + `\\qquad r = ${raio}`,
       gabarito,
       resolucao: {
         resultado: gabarito,
@@ -257,7 +258,7 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
             descricao: 'Só agora substituímos os valores do instante pedido.',
             tex:
               `\\frac{dV}{dt} = 4\\pi \\cdot ${raio}^{2} \\cdot ${taxaRaio} = ` +
-              `${(4 * raio * raio * taxaRaio)}\\pi \\approx ${gabarito.toFixed(2)}`,
+              `${4 * raio * raio * taxaRaio}\\pi \\approx ${gabarito.toFixed(2)}`,
           },
         ],
       },
@@ -282,8 +283,7 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
           },
           {
             resposta: 4 * Math.PI * taxaRaio * taxaRaio * raio,
-            diagnostico:
-              'O que vai ao quadrado é o RAIO, não a taxa: dV/dt = 4πr²·(dr/dt).',
+            diagnostico: 'O que vai ao quadrado é o RAIO, não a taxa: dV/dt = 4πr²·(dr/dt).',
             passo: 1,
             conceito: 'aplic-derivada.taxas-relacionadas',
           },
@@ -307,8 +307,7 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
       enunciado:
         `O lado de um quadrado cresce ${taxaLado} cm/s. A que taxa cresce a ÁREA no instante ` +
         `em que o lado mede ${lado} cm? (em cm²/s)`,
-      enunciadoTex:
-        `A = L^{2} \\qquad \\frac{dL}{dt} = ${taxaLado} \\qquad L = ${lado}`,
+      enunciadoTex: `A = L^{2} \\qquad \\frac{dL}{dt} = ${taxaLado} \\qquad L = ${lado}`,
       gabarito,
       resolucao: {
         resultado: gabarito,
@@ -376,8 +375,7 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
       `A que taxa o topo desce quando o pé está a ${x} m da parede? ` +
       '(em m/s, com sinal, 3 casas decimais)',
     enunciadoTex:
-      `x^{2} + y^{2} = ${comprimento}^{2} \\qquad \\frac{dx}{dt} = ${taxaX} ` +
-      `\\qquad x = ${x}`,
+      `x^{2} + y^{2} = ${comprimento}^{2} \\qquad \\frac{dx}{dt} = ${taxaX} ` + `\\qquad x = ${x}`,
     gabarito,
     resolucao: {
       resultado: gabarito,
@@ -396,9 +394,7 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           descricao: `Com x = ${x}, Pitágoras dá y = ${y}.`,
-          tex:
-            `\\frac{dy}{dt} = -\\frac{${x}}{${y}} \\cdot ${taxaX} = ` +
-            `${gabarito.toFixed(3)}`,
+          tex: `\\frac{dy}{dt} = -\\frac{${x}}{${y}} \\cdot ${taxaX} = ` + `${gabarito.toFixed(3)}`,
           nota: 'O sinal negativo é a informação física: o topo DESCE enquanto o pé se afasta.',
         },
       ],
