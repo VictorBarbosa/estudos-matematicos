@@ -1,0 +1,71 @@
+{
+  "primeiroTermoA1": {
+    "pt": "Primeiro termo a₁",
+    "fr": "Premier terme a₁",
+    "en": "First term a₁"
+  },
+  "razaoQ": { "pt": "Razão q", "fr": "Raison q", "en": "Ratio q" },
+  "razaoR": { "pt": "Razão r", "fr": "Raison r", "en": "Common difference r" },
+  "somaDosTermos": {
+    "pt": "Soma dos termos",
+    "fr": "Somme des termes",
+    "en": "Sum of the terms"
+  },
+  "diverge": { "pt": "diverge", "fr": "diverge", "en": "diverges" },
+  "convergeLegenda": {
+    "pt": "|q| < 1: converge",
+    "fr": "|q| < 1 : converge",
+    "en": "|q| < 1: converges"
+  },
+  "divergeLegenda": {
+    "pt": "|q| ≥ 1: cresce sem limite",
+    "fr": "|q| ≥ 1 : croît sans borne",
+    "en": "|q| ≥ 1: grows without bound"
+  },
+  "termosEAcumulado": {
+    "pt": "Os termos e o acumulado",
+    "fr": "Les termes et le cumul",
+    "en": "The terms and the running total"
+  },
+  "legendaTermos": { "pt": "termos aₙ", "fr": "termes aₙ", "en": "terms aₙ" },
+  "legendaSoma": {
+    "pt": "soma acumulada Sₙ",
+    "fr": "somme cumulée Sₙ",
+    "en": "running sum Sₙ"
+  },
+  "descricaoGeometrica": {
+    "pt": "Os {quantos} primeiros termos da progressão geométrica e suas somas parciais.",
+    "fr": "Les {quantos} premiers termes de la suite géométrique et ses sommes partielles.",
+    "en": "The first {quantos} terms of the geometric sequence and its partial sums."
+  },
+  "descricaoAritmetica": {
+    "pt": "Os {quantos} primeiros termos da progressão aritmética e suas somas parciais.",
+    "fr": "Les {quantos} premiers termes de la suite arithmétique et ses sommes partielles.",
+    "en": "The first {quantos} terms of the arithmetic sequence and its partial sums."
+  },
+  "naPaOsTermos": {
+    "pt": "Na PA os termos ficam <strong>alinhados</strong> — a razão é a inclinação de uma reta. Na PG eles se curvam, porque o termo geral é uma exponencial. Troque o tipo acima e compare: por lenta que uma PG pareça no início, ela ultrapassa qualquer PA.",
+    "fr": "Dans une suite arithmétique les termes sont <strong>alignés</strong> — la raison est la pente d’une droite. Dans une suite géométrique ils se courbent, parce que le terme général est une exponentielle. Changez de type ci-dessus et comparez : aussi lente qu’une suite géométrique paraisse au début, elle dépasse n’importe quelle suite arithmétique.",
+    "en": "In an arithmetic sequence the terms are <strong>in line</strong> — the common difference is the slope of a line. In a geometric sequence they curve, because the general term is an exponential. Switch the type above and compare: however slow a geometric sequence looks at first, it overtakes any arithmetic one."
+  },
+  "termosUmAUm": {
+    "pt": "Termos, um a um",
+    "fr": "Les termes, un à un",
+    "en": "The terms, one by one"
+  },
+  "deOndeVemAFormula": {
+    "pt": "De onde vem a fórmula da soma",
+    "fr": "D’où vient la formule de la somme",
+    "en": "Where the sum formula comes from"
+  },
+  "somarInfinitos": {
+    "pt": "Somar infinitos termos",
+    "fr": "Additionner une infinité de termes",
+    "en": "Adding infinitely many terms"
+  },
+  "comQMenorQueUm": {
+    "pt": "Com |q| < 1, cada parcela é uma fração da anterior, e o total nunca passa de a₁/(1 − q). Esse é o primeiro encontro honesto com convergência — a mesma ideia que sustenta todo o cálculo mais adiante.",
+    "fr": "Avec |q| < 1, chaque terme est une fraction du précédent, et le total ne dépasse jamais a₁/(1 − q). C’est la première vraie rencontre avec la convergence — l’idée même qui porte tout le calcul plus loin.",
+    "en": "With |q| < 1, each term is a fraction of the one before, and the total never passes a₁/(1 − q). This is the first honest meeting with convergence — the very idea that holds up all the calculus to come."
+  }
+}

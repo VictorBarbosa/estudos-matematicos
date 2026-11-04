@@ -1,18 +1,8 @@
 <app-topico-layout topicoId="funcao-afim">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro
-        [(valor)]="a"
-        rotulo="Coeficiente a (inclinação)"
-        [min]="-6"
-        [max]="6"
-      />
-      <app-controle-parametro
-        [(valor)]="b"
-        rotulo="Coeficiente b (valor inicial)"
-        [min]="-12"
-        [max]="12"
-      />
+      <app-controle-parametro [(valor)]="a" [rotulo]="texto('coefA')" [min]="-6" [max]="6" />
+      <app-controle-parametro [(valor)]="b" [rotulo]="texto('coefB')" [min]="-12" [max]="12" />
     </section>
 
     <section class="destaque-formula">
@@ -22,24 +12,24 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Raiz</span>
+        <span class="rotulo">{{ texto('raiz') }}</span>
         <strong>{{ resultado().raiz === null ? '—' : formatar(resultado().raiz!) }}</strong>
-        <span class="legenda">cruza o eixo x</span>
+        <span class="legenda">{{ texto('cruzaEixoX') }}</span>
       </div>
       <div class="indicador">
         <span class="rotulo">f(0)</span>
         <strong>{{ resultado().interceptoY }}</strong>
-        <span class="legenda">cruza o eixo y</span>
+        <span class="legenda">{{ texto('cruzaEixoY') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Taxa de variação</span>
+        <span class="rotulo">{{ texto('taxaDeVariacao') }}</span>
         <strong>{{ a() }}</strong>
-        <span class="legenda">por unidade de x</span>
+        <span class="legenda">{{ texto('porUnidadeDeX') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>A reta e sua inclinação</h2>
+      <h2>{{ texto('retaESuaInclinacao') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -48,14 +38,11 @@
         [descricao]="descricaoGrafico()"
         [altura]="380"
       />
-      <p class="observacao">
-        O triângulo marca um passo de 1 na horizontal e o salto correspondente na vertical. Esse
-        salto é sempre igual ao coeficiente a — e é por ser sempre igual que o gráfico sai reto.
-      </p>
+      <p class="observacao">{{ texto('oTrianguloMarca') }}</p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="analise().passos" />
     </section>
 

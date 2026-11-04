@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/juros-compostos/juros-compostos.i18n.json';
 import { geradorJuros } from '@features/funcoes/juros-compostos/juros-compostos.gerador';
 import { TEORIA_JUROS } from '@features/funcoes/juros-compostos/juros-compostos.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_JUROS } from '@features/funcoes/juros-compostos/juros-compostos.
   styleUrl: './juros-compostos.scss',
 })
 export class JurosCompostos {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorJuros;
   protected readonly conceitos = TEORIA_JUROS.map((teoria) => teoria.id);
 
@@ -59,8 +64,13 @@ export class JurosCompostos {
     const i = this.taxa() / 100;
 
     return [
-      { fn: (n) => c * (1 + i) ** n, cor: 'serie-1', rotulo: 'compostos' },
-      { fn: (n) => c * (1 + i * n), cor: 'serie-2', tracejada: true, rotulo: 'simples' },
+      { fn: (n) => c * (1 + i) ** n, cor: 'serie-1', rotulo: this.texto('curvaCompostos') },
+      {
+        fn: (n) => c * (1 + i * n),
+        cor: 'serie-2',
+        tracejada: true,
+        rotulo: this.texto('curvaSimples'),
+      },
     ];
   });
 
@@ -86,10 +96,8 @@ export class JurosCompostos {
     yMax: this.montante() * 1.15,
   }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Crescimento do capital a juros compostos comparado aos simples, ao longo de ` +
-      `${this.periodos()} períodos.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { periodos: this.periodos() }),
   );
 
   constructor() {

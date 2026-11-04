@@ -1,0 +1,109 @@
+{
+  "umaFuncaoSo": {
+    "pt": "Uma função só, descrita em pedaços",
+    "fr": "Une seule fonction, décrite par morceaux",
+    "en": "One function, described in pieces"
+  },
+  "eAFormaNatural": {
+    "pt": "É a forma natural de descrever qualquer coisa que muda de regime: uma tarifa com faixas, um imposto progressivo, o empuxo de um foguete antes e depois da separação do estágio. Dentro de cada trecho é uma função comum — a matemática nova está toda nas fronteiras.",
+    "fr": "C’est la façon naturelle de décrire tout ce qui change de régime : un tarif par tranches, un impôt progressif, la poussée d’une fusée avant et après la séparation de l’étage. À l’intérieur de chaque morceau c’est une fonction ordinaire — toute la nouveauté est aux frontières.",
+    "en": "It is the natural way to describe anything that changes regime: a tiered tariff, a progressive tax, a rocket's thrust before and after stage separation. Inside each piece it is an ordinary function — all the new mathematics is at the boundaries."
+  },
+  "fronteira": { "pt": "Fronteira", "fr": "Frontière", "en": "Boundary" },
+  "inclinacaoEsquerda": {
+    "pt": "Inclinação à esquerda",
+    "fr": "Pente à gauche",
+    "en": "Slope on the left"
+  },
+  "constanteEsquerda": {
+    "pt": "Constante à esquerda",
+    "fr": "Constante à gauche",
+    "en": "Constant on the left"
+  },
+  "inclinacaoDireita": {
+    "pt": "Inclinação à direita",
+    "fr": "Pente à droite",
+    "en": "Slope on the right"
+  },
+  "constanteDireita": {
+    "pt": "Constante à direita",
+    "fr": "Constante à droite",
+    "en": "Constant on the right"
+  },
+  "limitePelaEsquerda": {
+    "pt": "Limite pela esquerda",
+    "fr": "Limite à gauche",
+    "en": "Limit from the left"
+  },
+  "limitePelaDireita": {
+    "pt": "Limite pela direita",
+    "fr": "Limite à droite",
+    "en": "Limit from the right"
+  },
+  "valorNaFronteira": {
+    "pt": "Valor na fronteira",
+    "fr": "Valeur à la frontière",
+    "en": "Value at the boundary"
+  },
+  "trechoComIgual": {
+    "pt": "o trecho com o sinal de igual",
+    "fr": "le morceau portant le signe égal",
+    "en": "the piece carrying the equals sign"
+  },
+  "salto": { "pt": "Salto", "fr": "Saut", "en": "Jump" },
+  "continuaAqui": {
+    "pt": "contínua aqui",
+    "fr": "continue ici",
+    "en": "continuous here"
+  },
+  "descontinuidade": {
+    "pt": "descontinuidade de salto",
+    "fr": "discontinuité de saut",
+    "en": "jump discontinuity"
+  },
+  "constanteQueColaria": {
+    "pt": "Constante que colaria",
+    "fr": "Constante qui recollerait",
+    "en": "Constant that would join them"
+  },
+  "noLugarDaConstante": {
+    "pt": "no lugar da constante à direita",
+    "fr": "à la place de la constante à droite",
+    "en": "in place of the constant on the right"
+  },
+  "asDuasPontas": {
+    "pt": "As duas pontas, e o que acontece entre elas",
+    "fr": "Les deux bouts, et ce qui se passe entre eux",
+    "en": "The two ends, and what happens between them"
+  },
+  "curvaEsquerda": {
+    "pt": "trecho da esquerda",
+    "fr": "morceau de gauche",
+    "en": "left piece"
+  },
+  "curvaDireita": {
+    "pt": "trecho da direita",
+    "fr": "morceau de droite",
+    "en": "right piece"
+  },
+  "descricaoGrafico": {
+    "pt": "Os dois trechos encontrando-se em x igual a {x}: o círculo cheio é o valor que a função assume, e o vazado é a ponta que não pertence ao gráfico.",
+    "fr": "Les deux morceaux se rejoignant en x égal à {x} : le cercle plein est la valeur prise par la fonction, et le creux est le bout qui n’appartient pas au graphique.",
+    "en": "The two pieces meeting at x equal to {x}: the filled circle is the value the function takes, and the hollow one is the end that does not belong to the graph."
+  },
+  "mexaNaConstante": {
+    "pt": "Mexa na constante à direita até o salto zerar: nesse valor exato as duas pontas se encontram e o gráfico fica inteiro, sem precisar tirar o lápis do papel. Qualquer outro valor deixa um degrau que nenhum ajuste no ponto consegue remover.",
+    "fr": "Changez la constante à droite jusqu’à annuler le saut : à cette valeur exacte les deux bouts se rejoignent et le graphique est d’un seul trait, sans lever le crayon. Toute autre valeur laisse une marche qu’aucun ajustement au point ne peut effacer.",
+    "en": "Adjust the constant on the right until the jump hits zero: at that exact value the two ends meet and the graph becomes one piece, without lifting the pencil. Any other value leaves a step that no tweak at the point can remove."
+  },
+  "tresNumeros": {
+    "pt": "Três números, não um",
+    "fr": "Trois nombres, pas un",
+    "en": "Three numbers, not one"
+  },
+  "naFronteiraHaTres": {
+    "pt": "Na fronteira há três coisas distintas a calcular, e elas podem discordar. Os limites usam as expressões vizinhas; o valor usa a expressão cuja condição inclui o sinal de igual. A função é contínua ali exatamente quando os três coincidem.",
+    "fr": "À la frontière il y a trois choses distinctes à calculer, et elles peuvent différer. Les limites utilisent les expressions voisines ; la valeur utilise l’expression dont la condition porte le signe égal. La fonction y est continue exactement quand les trois coïncident.",
+    "en": "At the boundary there are three distinct things to compute, and they may disagree. The limits use the neighbouring expressions; the value uses the expression whose condition carries the equals sign. The function is continuous there exactly when all three agree."
+  }
+}

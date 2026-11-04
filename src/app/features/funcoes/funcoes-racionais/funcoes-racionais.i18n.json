@@ -1,0 +1,79 @@
+{
+  "nemTodoZero": {
+    "pt": "Nem todo zero do denominador é assíntota",
+    "fr": "Tout zéro du dénominateur n’est pas une asymptote",
+    "en": "Not every zero of the denominator is an asymptote"
+  },
+  "quandoNumeradorZera": {
+    "pt": "Quando o numerador zera no mesmo ponto, o fator se cancela e o que sobra é um BURACO: um único ponto removido, com o limite existindo normalmente em volta. A assíntota só aparece quando o denominador zera sozinho.",
+    "fr": "Quand le numérateur s’annule au même point, le facteur se simplifie et il reste un TROU : un seul point retiré, la limite existant normalement autour. L’asymptote n’apparaît que si le dénominateur s’annule seul.",
+    "en": "When the numerator vanishes at the same point, the factor cancels and what is left is a HOLE: a single point removed, with the limit existing normally around it. The asymptote only shows up when the denominator vanishes on its own."
+  },
+  "zeroDaFuncao": {
+    "pt": "Zero da função",
+    "fr": "Zéro de la fonction",
+    "en": "Zero of the function"
+  },
+  "zeroDoDenominador": {
+    "pt": "Zero do denominador",
+    "fr": "Zéro du dénominateur",
+    "en": "Zero of the denominator"
+  },
+  "repetirFator": {
+    "pt": "Repetir o fator em cima (0 não, 1 sim)",
+    "fr": "Répéter le facteur en haut (0 non, 1 oui)",
+    "en": "Repeat the factor on top (0 no, 1 yes)"
+  },
+  "dicaRepetir": {
+    "pt": "Com 1, o mesmo fator aparece nos dois lados e vira buraco.",
+    "fr": "Avec 1, le même facteur apparaît des deux côtés et devient un trou.",
+    "en": "With 1, the same factor appears on both sides and becomes a hole."
+  },
+  "assintotasVerticais": {
+    "pt": "Assíntotas verticais",
+    "fr": "Asymptotes verticales",
+    "en": "Vertical asymptotes"
+  },
+  "buracos": { "pt": "Buracos", "fr": "Trous", "en": "Holes" },
+  "limiteExisteAli": {
+    "pt": "o limite existe ali",
+    "fr": "la limite existe là",
+    "en": "the limit exists there"
+  },
+  "zeros": { "pt": "Zeros", "fr": "Zéros", "en": "Zeros" },
+  "nenhuma": { "pt": "nenhuma", "fr": "aucune", "en": "none" },
+  "naoHa": { "pt": "não há", "fr": "il n’y en a pas", "en": "none" },
+  "obliqua": {
+    "pt": "oblíqua: y = {reta}",
+    "fr": "oblique : y = {reta}",
+    "en": "slant: y = {reta}"
+  },
+  "horizontalY": { "pt": "y = {valor}", "fr": "y = {valor}", "en": "y = {valor}" },
+  "curvaF": { "pt": "f(x)", "fr": "f(x)", "en": "f(x)" },
+  "pontoBuraco": { "pt": "buraco", "fr": "trou", "en": "hole" },
+  "graficoComAsDuas": {
+    "pt": "O gráfico, com as duas coisas à vista",
+    "fr": "Le graphique, les deux choses en vue",
+    "en": "The graph, with both things in view"
+  },
+  "descricaoGrafico": {
+    "pt": "Gráfico da função racional: o traço se interrompe nas assíntotas verticais e o círculo vazado marca o buraco, onde o ponto falta sem que nada dispare.",
+    "fr": "Graphique de la fonction rationnelle : le tracé s’interrompt aux asymptotes verticales et le cercle creux marque le trou, où le point manque sans que rien n’explose.",
+    "en": "Graph of the rational function: the trace breaks at the vertical asymptotes and the hollow circle marks the hole, where the point is missing without anything blowing up."
+  },
+  "ligueARepeticao": {
+    "pt": "Ligue a repetição do fator e compare: o traço que antes disparava passa a atravessar normalmente, com apenas um círculo vazado marcando o ponto que falta. É a diferença entre o gráfico explodir e apenas ter um furo.",
+    "fr": "Activez la répétition du facteur et comparez : le tracé qui explosait auparavant traverse maintenant normalement, avec seulement un cercle creux marquant le point manquant. C’est la différence entre un graphique qui explose et un graphique simplement percé.",
+    "en": "Turn on the repeated factor and compare: the trace that used to blow up now passes through normally, with only a hollow circle marking the missing point. That is the difference between the graph exploding and merely having a puncture."
+  },
+  "longeDaOrigem": {
+    "pt": "Longe da origem, só os graus importam",
+    "fr": "Loin de l’origine, seuls les degrés comptent",
+    "en": "Far from the origin, only the degrees matter"
+  },
+  "numeradorDeGrauMenor": {
+    "pt": "Numerador de grau menor leva a função a zero; graus iguais deixam a razão dos coeficientes líderes; numerador um grau acima produz uma reta inclinada. É a leitura do regime permanente de um sistema, e ela se faz sem calcular limite nenhum.",
+    "fr": "Un numérateur de degré plus faible amène la fonction à zéro ; des degrés égaux laissent le rapport des coefficients dominants ; un numérateur d’un degré de plus produit une droite inclinée. C’est la lecture du régime permanent d’un système, et elle se fait sans calculer aucune limite.",
+    "en": "A numerator of lower degree sends the function to zero; equal degrees leave the ratio of the leading coefficients; a numerator one degree higher produces a slanted line. It is how you read the steady state of a system, and it takes no limit calculation at all."
+  }
+}

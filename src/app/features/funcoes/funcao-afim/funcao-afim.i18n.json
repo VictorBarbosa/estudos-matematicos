@@ -1,0 +1,72 @@
+{
+  "coefA": {
+    "pt": "Coeficiente a (inclinação)",
+    "fr": "Coefficient a (pente)",
+    "en": "Coefficient a (slope)"
+  },
+  "coefB": {
+    "pt": "Coeficiente b (valor inicial)",
+    "fr": "Coefficient b (valeur initiale)",
+    "en": "Coefficient b (initial value)"
+  },
+  "constante": {
+    "pt": "Constante: a reta é horizontal e o valor nunca muda.",
+    "fr": "Constante : la droite est horizontale et la valeur ne change jamais.",
+    "en": "Constant: the line is horizontal and the value never changes."
+  },
+  "crescente": {
+    "pt": "Crescente: cada passo à direita aumenta o valor.",
+    "fr": "Croissante : chaque pas vers la droite augmente la valeur.",
+    "en": "Increasing: each step to the right raises the value."
+  },
+  "decrescente": {
+    "pt": "Decrescente: cada passo à direita diminui o valor.",
+    "fr": "Décroissante : chaque pas vers la droite diminue la valeur.",
+    "en": "Decreasing: each step to the right lowers the value."
+  },
+  "raiz": { "pt": "Raiz", "fr": "Racine", "en": "Root" },
+  "cruzaEixoX": {
+    "pt": "cruza o eixo x",
+    "fr": "coupe l’axe des x",
+    "en": "crosses the x axis"
+  },
+  "cruzaEixoY": {
+    "pt": "cruza o eixo y",
+    "fr": "coupe l’axe des y",
+    "en": "crosses the y axis"
+  },
+  "taxaDeVariacao": {
+    "pt": "Taxa de variação",
+    "fr": "Taux de variation",
+    "en": "Rate of change"
+  },
+  "porUnidadeDeX": {
+    "pt": "por unidade de x",
+    "fr": "par unité de x",
+    "en": "per unit of x"
+  },
+  "retaESuaInclinacao": {
+    "pt": "A reta e sua inclinação",
+    "fr": "La droite et sa pente",
+    "en": "The line and its slope"
+  },
+  "curvaFx": { "pt": "f(x) = ax + b", "fr": "f(x) = ax + b", "en": "f(x) = ax + b" },
+  "pontoB": { "pt": "b = {valor}", "fr": "b = {valor}", "en": "b = {valor}" },
+  "pontoRaiz": { "pt": "raiz = {valor}", "fr": "racine = {valor}", "en": "root = {valor}" },
+  "deltaX": { "pt": "Δx = 1", "fr": "Δx = 1", "en": "Δx = 1" },
+  "semRaiz": {
+    "pt": "Reta horizontal, sem raiz.",
+    "fr": "Droite horizontale, sans racine.",
+    "en": "Horizontal line, no root."
+  },
+  "descricaoGrafico": {
+    "pt": "Reta cruzando o eixo x em {raiz} e o eixo y em {b}.",
+    "fr": "Droite coupant l’axe des x en {raiz} et l’axe des y en {b}.",
+    "en": "Line crossing the x axis at {raiz} and the y axis at {b}."
+  },
+  "oTrianguloMarca": {
+    "pt": "O triângulo marca um passo de 1 na horizontal e o salto correspondente na vertical. Esse salto é sempre igual ao coeficiente a — e é por ser sempre igual que o gráfico sai reto.",
+    "fr": "Le triangle marque un pas de 1 à l’horizontale et le saut correspondant à la verticale. Ce saut est toujours égal au coefficient a — et c’est parce qu’il est toujours le même que le graphique est droit.",
+    "en": "The triangle marks a step of 1 across and the matching jump up. That jump always equals the coefficient a — and it is because it is always the same that the graph comes out straight."
+  }
+}

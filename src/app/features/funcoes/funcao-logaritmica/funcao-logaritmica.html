@@ -3,10 +3,10 @@
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="indiceBase"
-        rotulo="Base"
+        [rotulo]="i18n.t('explorar.base')"
         [min]="0"
         [max]="4"
-        [dica]="'Base atual: ' + formatar(base())"
+        [dica]="texto('dicaBase', { base: formatar(base()) })"
       />
     </section>
 
@@ -20,9 +20,9 @@
 
     <section>
       <h2>
-        O espelho da exponencial
+        {{ texto('espelhoDaExponencial') }}
         <button type="button" class="alternar" (click)="alternarExponencial()">
-          {{ mostrarExponencial() ? 'Mostrar só o logaritmo' : 'Comparar com a exponencial' }}
+          {{ mostrarExponencial() ? texto('mostrarSoLogaritmo') : texto('compararComExponencial') }}
         </button>
       </h2>
 
@@ -34,20 +34,19 @@
         [altura]="420"
       />
 
-      <p class="observacao">
-        As duas curvas são reflexos uma da outra na reta tracejada y = x. Onde a exponencial
-        tem assíntota horizontal, o logaritmo tem assíntota vertical — é a mesma restrição,
-        espelhada.
-      </p>
+      <p class="observacao">{{ texto('asDuasCurvas') }}</p>
     </section>
 
     <section>
-      <h2>O logaritmo conta expoentes</h2>
+      <h2>{{ texto('contaExpoentes') }}</h2>
       <table class="tabela">
         <thead>
           <tr>
             <th scope="col">x</th>
-            <th scope="col">log<sub>{{ formatar(base()) }}</sub>(x)</th>
+            <th scope="col">
+              log<sub>{{ formatar(base()) }}</sub
+              >(x)
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -59,14 +58,11 @@
           }
         </tbody>
       </table>
-      <p class="observacao">
-        Repare: o argumento é multiplicado pela base a cada linha, enquanto o logaritmo soma 1.
-        É exatamente isso que significa "transformar produto em soma".
-      </p>
+      <p class="observacao">{{ texto('repareOArgumento') }}</p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="analise().passos" />
     </section>
 

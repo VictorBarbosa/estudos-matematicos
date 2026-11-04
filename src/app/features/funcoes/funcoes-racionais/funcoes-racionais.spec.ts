@@ -67,9 +67,7 @@ describe('geradorFuncoesRacionais', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('ZERO da função')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('ZERO da função'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('ZERO da função'))!;
     const resultado = corrigir(
       geradorFuncoesRacionais,
       exercicio,

@@ -19,9 +19,9 @@ describe('geradorExponencial', () => {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {
         for (const armadilha of exercicio.armadilhas) {
-          expect(
-            geradorExponencial.saoEquivalentes(armadilha.resposta, exercicio.gabarito),
-          ).toBe(false);
+          expect(geradorExponencial.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(
+            false,
+          );
         }
       }
     });
@@ -51,9 +51,7 @@ describe('geradorExponencial', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('multiplicação')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('multiplicação'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('multiplicação'))!;
 
     const resultado = corrigir(geradorExponencial, exercicio, String(armadilha.resposta));
     expect(resultado.veredito).toBe('incorreto');

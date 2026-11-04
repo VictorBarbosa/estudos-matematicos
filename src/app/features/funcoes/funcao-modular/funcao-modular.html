@@ -1,14 +1,24 @@
 <app-topico-layout topicoId="funcao-modular">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente a" [min]="-4" [max]="4" />
-      <app-controle-parametro [(valor)]="b" rotulo="Termo b" [min]="-10" [max]="10" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefA')"
+        [min]="-4"
+        [max]="4"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.termoB')"
+        [min]="-10"
+        [max]="10"
+      />
       <app-controle-parametro
         [(valor)]="k"
-        rotulo="Reta horizontal y = k"
+        [rotulo]="texto('retaHorizontal')"
         [min]="-2"
         [max]="10"
-        dica="Experimente k negativo."
+        [dica]="texto('dicaK')"
       />
     </section>
 
@@ -18,30 +28,30 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Bico do V</span>
+        <span class="rotulo">{{ texto('bicoDoV') }}</span>
         <strong>x = {{ formatar(bico().x) }}</strong>
-        <span class="legenda">onde o interior zera</span>
+        <span class="legenda">{{ texto('ondeInteriorZera') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Soluções de |…| = {{ k() }}</span>
+        <span class="rotulo">{{ texto('solucoesDe', { k: k() }) }}</span>
         <strong>{{ solucoes().length }}</strong>
         <span class="legenda">
-          @if (solucoes().length === 0) {
-            módulo nunca é negativo
-          } @else if (solucoes().length === 1) {
-            a reta passa pelo bico
-          } @else {
-            um de cada lado
-          }
+          {{
+            solucoes().length === 0
+              ? texto('nuncaNegativo')
+              : solucoes().length === 1
+                ? texto('passaPeloBico')
+                : texto('umDeCadaLado')
+          }}
         </span>
       </div>
     </section>
 
     <section>
       <h2>
-        O V e a reta original
+        {{ texto('oVEaReta') }}
         <button type="button" class="alternar" (click)="alternarSemModulo()">
-          {{ mostrarSemModulo() ? 'Esconder a reta sem módulo' : 'Mostrar a reta sem módulo' }}
+          {{ mostrarSemModulo() ? texto('esconderReta') : texto('mostrarReta') }}
         </button>
       </h2>
 
@@ -53,14 +63,11 @@
         [altura]="400"
       />
 
-      <p class="observacao">
-        A reta tracejada é ax + b sem o módulo. Onde ela desce abaixo do eixo, o módulo a
-        espelha para cima — e é desse espelhamento que nasce o V.
-      </p>
+      <p class="observacao">{{ texto('aRetaTracejada') }}</p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="analise().passos" />
     </section>
 

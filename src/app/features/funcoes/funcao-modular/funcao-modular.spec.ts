@@ -31,9 +31,7 @@ describe('geradorModular', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('nunca devolve')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('nunca devolve'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('nunca devolve'))!;
 
     const resultado = corrigir(geradorModular, exercicio, armadilha.resposta.toString());
     expect(resultado.veredito).toBe('incorreto');

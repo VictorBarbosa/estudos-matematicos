@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@a
 import {
   Transformacao,
   aplicar,
-  descreverTransformacao,
+  passosDaTransformacao,
   transformacaoParaTex,
   transformarPonto,
 } from '@core/math';
@@ -14,15 +14,19 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.i18n.json';
 import { geradorTransformacoes } from '@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.gerador';
 import { TEORIA_TRANSFORMACOES } from '@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.teoria';
 
 /** As funções-base disponíveis, nomeadas pelo índice do controle. */
+/** `nome` é a chave do nome da função base no dicionário deste tópico. */
 const BASES: readonly { readonly nome: string; readonly fn: (x: number) => number }[] = [
-  { nome: 'x²', fn: (x) => x * x },
-  { nome: 'raiz de x', fn: (x) => (x >= 0 ? Math.sqrt(x) : Number.NaN) },
-  { nome: 'módulo de x', fn: (x) => Math.abs(x) },
-  { nome: 'seno', fn: Math.sin },
+  { nome: 'base0', fn: (x) => x * x },
+  { nome: 'base1', fn: (x) => (x >= 0 ? Math.sqrt(x) : Number.NaN) },
+  { nome: 'base2', fn: (x) => Math.abs(x) },
+  { nome: 'base3', fn: Math.sin },
 ];
 
 @Component({
@@ -33,6 +37,8 @@ const BASES: readonly { readonly nome: string; readonly fn: (x: number) => numbe
   styleUrl: './transformacoes-de-graficos.scss',
 })
 export class TransformacoesDeGraficos {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorTransformacoes;
   protected readonly conceitos = TEORIA_TRANSFORMACOES.map((teoria) => teoria.id);
 
@@ -55,24 +61,25 @@ export class TransformacoesDeGraficos {
     () => `g(x) = ${transformacaoParaTex(this.transformacao())}`,
   );
 
-  protected readonly descricoes = computed(() => descreverTransformacao(this.transformacao()));
+  protected readonly descricoes = computed(() => passosDaTransformacao(this.transformacao()));
 
   /** Um ponto de referência do gráfico original, e para onde ele vai. */
   protected readonly origem = { x: 1, y: 1 };
 
   protected readonly destino = computed(() =>
-    transformarPonto(
-      { x: this.origem.x, y: this.base().fn(this.origem.x) },
-      this.transformacao(),
-    ),
+    transformarPonto({ x: this.origem.x, y: this.base().fn(this.origem.x) }, this.transformacao()),
   );
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
     const { fn } = this.base();
 
     return [
-      { fn, cor: 'texto-suave', tracejada: true, rotulo: 'f(x) original' },
-      { fn: aplicar(fn, this.transformacao()), cor: 'acento', rotulo: 'g(x) transformada' },
+      { fn, cor: 'texto-suave', tracejada: true, rotulo: this.texto('curvaOriginal') },
+      {
+        fn: aplicar(fn, this.transformacao()),
+        cor: 'acento',
+        rotulo: this.texto('curvaTransformada'),
+      },
     ];
   });
 
@@ -81,17 +88,15 @@ export class TransformacoesDeGraficos {
       x: this.origem.x,
       y: this.base().fn(this.origem.x),
       cor: 'texto-suave',
-      rotulo: 'ponto original',
+      rotulo: this.texto('pontoBase'),
     },
-    { x: this.destino().x, y: this.destino().y, cor: 'acento', rotulo: 'para onde ele foi' },
+    { x: this.destino().x, y: this.destino().y, cor: 'acento', rotulo: this.texto('pontoDestino') },
   ]);
 
   protected readonly dominio = computed(() => ({ xMin: -8, xMax: 8, yMin: -6, yMax: 8 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Gráfico de ${this.base().nome} tracejado e sua versão transformada em destaque, com um ` +
-      'ponto de referência marcado nos dois.',
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { base: this.texto(this.base().nome) }),
   );
 
   constructor() {

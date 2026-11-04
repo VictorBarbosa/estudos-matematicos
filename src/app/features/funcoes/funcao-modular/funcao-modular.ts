@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/funcao-modular/funcao-modular.i18n.json';
 import { geradorModular } from '@features/funcoes/funcao-modular/funcao-modular.gerador';
 import { TEORIA_MODULAR } from '@features/funcoes/funcao-modular/funcao-modular.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_MODULAR } from '@features/funcoes/funcao-modular/funcao-modular.
   styleUrl: './funcao-modular.scss',
 })
 export class FuncaoModular {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorModular;
   protected readonly conceitos = TEORIA_MODULAR.map((teoria) => teoria.id);
 
@@ -38,9 +43,7 @@ export class FuncaoModular {
 
   protected readonly aEfetivo = computed(() => (this.a() === 0 ? 1 : this.a()));
 
-  protected readonly analise = computed(() =>
-    analisarModularComPassos(this.aEfetivo(), this.b()),
-  );
+  protected readonly analise = computed(() => analisarModularComPassos(this.aEfetivo(), this.b()));
 
   protected readonly bico = computed(() => this.analise().resultado.vertice);
 
@@ -73,14 +76,14 @@ export class FuncaoModular {
     const modular: CurvaPlot = {
       fn: (x) => Math.abs(a * x + b),
       cor: 'serie-1',
-      rotulo: '|ax + b|',
+      rotulo: this.texto('curvaModulo'),
     };
 
     const horizontal: CurvaPlot = {
       fn: () => this.k(),
       cor: 'serie-3',
       tracejada: true,
-      rotulo: `y = ${this.k()}`,
+      rotulo: this.texto('curvaK', { k: this.k() }),
     };
 
     if (!this.mostrarSemModulo()) {
@@ -93,7 +96,7 @@ export class FuncaoModular {
         fn: (x) => a * x + b,
         cor: 'serie-2',
         tracejada: true,
-        rotulo: 'ax + b (sem módulo)',
+        rotulo: this.texto('curvaSemModulo'),
       },
       horizontal,
     ];
@@ -103,7 +106,7 @@ export class FuncaoModular {
     {
       x: this.bico().x,
       y: 0,
-      rotulo: `bico em ${formatar(this.bico().x)}`,
+      rotulo: this.texto('pontoBico', { x: formatar(this.bico().x) }),
       cor: 'acento',
     },
     ...this.solucoes().map((x) => ({
@@ -120,10 +123,12 @@ export class FuncaoModular {
     return { xMin: centro - alcance, xMax: centro + alcance };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Gráfico em V com bico em x igual a ${formatar(this.bico().x)}, cortado pela reta ` +
-      `horizontal y igual a ${this.k()} em ${this.solucoes().length} ponto(s).`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      x: formatar(this.bico().x),
+      k: this.k(),
+      quantos: this.solucoes().length,
+    }),
   );
 
   constructor() {

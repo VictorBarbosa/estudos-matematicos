@@ -104,9 +104,7 @@ export const geradorComposicao: GeradorExercicio<Fracao> = {
         passos: [
           {
             descricao: 'Aplicamos primeiro a função de DENTRO.',
-            tex: direta
-              ? `g(${x}) = ${g.a * x + g.b}`
-              : `f(${x}) = ${f.a * x + f.b}`,
+            tex: direta ? `g(${x}) = ${g.a * x + g.b}` : `f(${x}) = ${f.a * x + f.b}`,
           },
           {
             descricao: 'O resultado vira a entrada da função de fora.',

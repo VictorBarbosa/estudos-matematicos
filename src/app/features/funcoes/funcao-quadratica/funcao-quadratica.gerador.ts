@@ -39,8 +39,14 @@ export const geradorQuadratica: GeradorExercicio<number> = {
         resolucao: {
           resultado: gabarito,
           passos: [
-            { descricao: `Substituímos x por ${x}.`, tex: `f(${x}) = ${a}(${x})^{2} ${b >= 0 ? '+' : '-'} ${Math.abs(b)}(${x}) ${c >= 0 ? '+' : '-'} ${Math.abs(c)}` },
-            { descricao: 'Resolvemos a potência primeiro.', tex: `= ${a} \\cdot ${x * x} ${b >= 0 ? '+' : '-'} ${Math.abs(b * x)} ${c >= 0 ? '+' : '-'} ${Math.abs(c)}` },
+            {
+              descricao: `Substituímos x por ${x}.`,
+              tex: `f(${x}) = ${a}(${x})^{2} ${b >= 0 ? '+' : '-'} ${Math.abs(b)}(${x}) ${c >= 0 ? '+' : '-'} ${Math.abs(c)}`,
+            },
+            {
+              descricao: 'Resolvemos a potência primeiro.',
+              tex: `= ${a} \\cdot ${x * x} ${b >= 0 ? '+' : '-'} ${Math.abs(b * x)} ${c >= 0 ? '+' : '-'} ${Math.abs(c)}`,
+            },
             { descricao: 'Somamos.', tex: `= ${gabarito}` },
           ],
         },
@@ -49,7 +55,8 @@ export const geradorQuadratica: GeradorExercicio<number> = {
           [
             {
               resposta: a * 2 * x + b * x + c,
-              diagnostico: 'x² foi tratado como 2x. Elevar ao quadrado é multiplicar x por ele mesmo.',
+              diagnostico:
+                'x² foi tratado como 2x. Elevar ao quadrado é multiplicar x por ele mesmo.',
               passo: 1,
               conceito: 'quadratica.parabola',
             },

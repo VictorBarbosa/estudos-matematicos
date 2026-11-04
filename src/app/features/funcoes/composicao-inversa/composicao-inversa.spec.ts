@@ -30,9 +30,7 @@ describe('geradorComposicao', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('ordem contrária')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('ordem contrária'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('ordem contrária'))!;
 
     const resultado = corrigir(geradorComposicao, exercicio, armadilha.resposta.toString());
     expect(resultado.veredito).toBe('incorreto');

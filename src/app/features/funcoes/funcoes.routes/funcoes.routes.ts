@@ -10,62 +10,88 @@ export const rotas: Routes = [
   {
     path: 'funcao-afim',
     title: 'Função afim · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/funcao-afim/funcao-afim').then((m) => m.FuncaoAfim),
+    loadComponent: () =>
+      import('@features/funcoes/funcao-afim/funcao-afim').then((m) => m.FuncaoAfim),
   },
   {
     path: 'funcao-quadratica',
     title: 'Função quadrática · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/funcao-quadratica/funcao-quadratica').then((m) => m.FuncaoQuadratica),
+    loadComponent: () =>
+      import('@features/funcoes/funcao-quadratica/funcao-quadratica').then(
+        (m) => m.FuncaoQuadratica,
+      ),
   },
   {
     path: 'funcao-exponencial',
     title: 'Função exponencial · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/funcao-exponencial/funcao-exponencial').then((m) => m.FuncaoExponencial),
+    loadComponent: () =>
+      import('@features/funcoes/funcao-exponencial/funcao-exponencial').then(
+        (m) => m.FuncaoExponencial,
+      ),
   },
   {
     path: 'funcao-logaritmica',
     title: 'Função logarítmica · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/funcao-logaritmica/funcao-logaritmica').then((m) => m.FuncaoLogaritmica),
+    loadComponent: () =>
+      import('@features/funcoes/funcao-logaritmica/funcao-logaritmica').then(
+        (m) => m.FuncaoLogaritmica,
+      ),
   },
   {
     path: 'funcao-modular',
     title: 'Função modular · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/funcao-modular/funcao-modular').then((m) => m.FuncaoModular),
+    loadComponent: () =>
+      import('@features/funcoes/funcao-modular/funcao-modular').then((m) => m.FuncaoModular),
   },
   {
     path: 'conceito-funcao',
     title: 'Conceito de função · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/conceito-funcao/conceito-funcao').then((m) => m.ConceitoFuncao),
+    loadComponent: () =>
+      import('@features/funcoes/conceito-funcao/conceito-funcao').then((m) => m.ConceitoFuncao),
   },
   {
     path: 'composicao-inversa',
     title: 'Composição e inversa · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/composicao-inversa/composicao-inversa').then((m) => m.ComposicaoInversa),
+    loadComponent: () =>
+      import('@features/funcoes/composicao-inversa/composicao-inversa').then(
+        (m) => m.ComposicaoInversa,
+      ),
   },
   {
     path: 'progressoes',
     title: 'Progressões · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/progressoes/progressoes').then((m) => m.Progressoes),
+    loadComponent: () =>
+      import('@features/funcoes/progressoes/progressoes').then((m) => m.Progressoes),
   },
   {
     path: 'juros-compostos',
     title: 'Juros compostos · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/juros-compostos/juros-compostos').then((m) => m.JurosCompostos),
+    loadComponent: () =>
+      import('@features/funcoes/juros-compostos/juros-compostos').then((m) => m.JurosCompostos),
   },
   {
     path: 'funcoes-racionais',
     title: 'Funções racionais · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/funcoes-racionais/funcoes-racionais').then((m) => m.FuncoesRacionais),
+    loadComponent: () =>
+      import('@features/funcoes/funcoes-racionais/funcoes-racionais').then(
+        (m) => m.FuncoesRacionais,
+      ),
   },
   {
     path: 'funcoes-por-partes',
     title: 'Funções definidas por partes · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/funcoes-por-partes/funcoes-por-partes').then((m) => m.FuncoesPorPartes),
+    loadComponent: () =>
+      import('@features/funcoes/funcoes-por-partes/funcoes-por-partes').then(
+        (m) => m.FuncoesPorPartes,
+      ),
   },
   {
     path: 'transformacoes-de-graficos',
     title: 'Transformações de gráficos · Estudos Matemáticos',
-    loadComponent: () => import('@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos').then((m) => m.TransformacoesDeGraficos),
+    loadComponent: () =>
+      import('@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos').then(
+        (m) => m.TransformacoesDeGraficos,
+      ),
   },
   { path: '', pathMatch: 'full', redirectTo: 'conceito-funcao' },
 ];

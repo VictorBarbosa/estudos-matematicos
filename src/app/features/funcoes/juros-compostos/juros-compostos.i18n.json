@@ -1,0 +1,61 @@
+{
+  "capitalInicial": {
+    "pt": "Capital inicial (R$)",
+    "fr": "Capital initial ($)",
+    "en": "Initial capital ($)"
+  },
+  "taxaPorPeriodo": {
+    "pt": "Taxa por período (%)",
+    "fr": "Taux par période (%)",
+    "en": "Rate per period (%)"
+  },
+  "periodos": { "pt": "Períodos", "fr": "Périodes", "en": "Periods" },
+  "montanteCompostos": {
+    "pt": "Montante (compostos)",
+    "fr": "Montant (composés)",
+    "en": "Amount (compound)"
+  },
+  "seFosseSimples": {
+    "pt": "Se fosse simples",
+    "fr": "Si c’étaient des intérêts simples",
+    "en": "If it were simple interest"
+  },
+  "juroSobreJuro": {
+    "pt": "juro que rendeu sobre juro",
+    "fr": "intérêt produit par l’intérêt",
+    "en": "interest earned on interest"
+  },
+  "dobraEm": { "pt": "Dobra em", "fr": "Double en", "en": "Doubles in" },
+  "regraDe72Legenda": {
+    "pt": "regra de 72: {valor}",
+    "fr": "règle de 72 : {valor}",
+    "en": "rule of 72: {valor}"
+  },
+  "exponencialContraLinear": {
+    "pt": "Exponencial contra linear",
+    "fr": "Exponentiel contre linéaire",
+    "en": "Exponential versus linear"
+  },
+  "curvaCompostos": { "pt": "compostos", "fr": "composés", "en": "compound" },
+  "curvaSimples": { "pt": "simples", "fr": "simples", "en": "simple" },
+  "descricaoGrafico": {
+    "pt": "Crescimento do capital a juros compostos comparado aos simples, ao longo de {periodos} períodos.",
+    "fr": "Croissance du capital à intérêts composés comparée aux intérêts simples, sur {periodos} périodes.",
+    "en": "Growth of the capital at compound interest compared with simple interest, over {periodos} periods."
+  },
+  "nosPrimeirosPeriodos": {
+    "pt": "Nos primeiros períodos as duas curvas quase se confundem — é por isso que a diferença parece desprezível no começo. Aumente o número de períodos e veja a exponencial se descolar: é o mesmo fenômeno da função exponencial, agora com dinheiro.",
+    "fr": "Aux premières périodes les deux courbes se confondent presque — c’est pourquoi l’écart paraît négligeable au début. Augmentez le nombre de périodes et voyez l’exponentielle se détacher : c’est le même phénomène que la fonction exponentielle, mais avec de l’argent.",
+    "en": "Over the first few periods the two curves almost coincide — which is why the gap looks negligible at the start. Raise the number of periods and watch the exponential pull away: it is the same phenomenon as the exponential function, now with money."
+  },
+  "aRegraDe72": {
+    "pt": "A regra de 72",
+    "fr": "La règle de 72",
+    "en": "The rule of 72"
+  },
+  "dividir72": {
+    "pt": "Dividir 72 pela taxa em porcentagem estima quantos períodos o capital leva para dobrar. Compare acima com o valor exato: para taxas pequenas a aproximação é boa, e ela se afasta conforme a taxa cresce.",
+    "fr": "Diviser 72 par le taux en pourcentage estime en combien de périodes le capital double. Comparez ci-dessus avec la valeur exacte : pour de petits taux l’approximation est bonne, et elle s’écarte à mesure que le taux monte.",
+    "en": "Dividing 72 by the rate as a percentage estimates how many periods the capital takes to double. Compare above with the exact value: for small rates the approximation is good, and it drifts as the rate rises."
+  }
+}

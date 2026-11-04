@@ -37,7 +37,10 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
           resolucao: {
             resultado: gabarito,
             passos: [
-              { descricao: 'A raiz é o x que faz f(x) valer zero.', tex: `${a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)} = 0` },
+              {
+                descricao: 'A raiz é o x que faz f(x) valer zero.',
+                tex: `${a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)} = 0`,
+              },
               { descricao: 'Isolamos o termo com x.', tex: `${a}x = ${-b}` },
               { descricao: 'Dividimos pelo coeficiente de x.', tex: `x = ${gabarito.paraTex()}` },
               {
@@ -79,7 +82,8 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
         return {
           id: `afim-taxa-${a}-${b}-${rng.inteiro(0, 9999)}`,
           nivel,
-          enunciado: 'Qual é a taxa de variação da função, ou seja, quanto y muda quando x avança 1?',
+          enunciado:
+            'Qual é a taxa de variação da função, ou seja, quanto y muda quando x avança 1?',
           enunciadoTex: funcaoTex,
           gabarito,
           resolucao: {
@@ -139,8 +143,14 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
           resolucao: {
             resultado: gabarito,
             passos: [
-              { descricao: `Substituímos x por ${x}.`, tex: `f(${x}) = ${a}(${x}) ${b >= 0 ? '+' : '-'} ${Math.abs(b)}` },
-              { descricao: 'Efetuamos o produto.', tex: `= ${a * x} ${b >= 0 ? '+' : '-'} ${Math.abs(b)}` },
+              {
+                descricao: `Substituímos x por ${x}.`,
+                tex: `f(${x}) = ${a}(${x}) ${b >= 0 ? '+' : '-'} ${Math.abs(b)}`,
+              },
+              {
+                descricao: 'Efetuamos o produto.',
+                tex: `= ${a * x} ${b >= 0 ? '+' : '-'} ${Math.abs(b)}`,
+              },
               { descricao: 'E a soma.', tex: `= ${a * x + b}` },
             ],
           },

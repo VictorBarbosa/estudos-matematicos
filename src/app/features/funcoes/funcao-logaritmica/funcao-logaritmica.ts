@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/funcao-logaritmica/funcao-logaritmica.i18n.json';
 import { geradorLogaritmica } from '@features/funcoes/funcao-logaritmica/funcao-logaritmica.gerador';
 import { TEORIA_LOGARITMICA } from '@features/funcoes/funcao-logaritmica/funcao-logaritmica.teoria';
 
@@ -30,6 +33,8 @@ const BASES = [2, 2.718, 3, 5, 10] as const;
   styleUrl: './funcao-logaritmica.scss',
 })
 export class FuncaoLogaritmica {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorLogaritmica;
   protected readonly conceitos = TEORIA_LOGARITMICA.map((teoria) => teoria.id);
 
@@ -40,9 +45,7 @@ export class FuncaoLogaritmica {
 
   protected readonly analise = computed(() => analisarLogaritmicaComPassos(this.base()));
 
-  protected readonly funcaoTex = computed(
-    () => `f(x) = \\log_{${formatar(this.base())}} x`,
-  );
+  protected readonly funcaoTex = computed(() => `f(x) = \\log_{${formatar(this.base())}} x`);
 
   /**
    * O logaritmo ao lado da exponencial de mesma base e da reta y = x.
@@ -55,7 +58,7 @@ export class FuncaoLogaritmica {
     const logaritmo: CurvaPlot = {
       fn: (x) => (x <= 0 ? Number.NaN : Math.log(x) / Math.log(base)),
       cor: 'serie-1',
-      rotulo: 'logaritmo',
+      rotulo: this.texto('curvaLogaritmo'),
     };
 
     if (!this.mostrarExponencial()) {
@@ -64,8 +67,8 @@ export class FuncaoLogaritmica {
 
     return [
       logaritmo,
-      { fn: (x) => base ** x, cor: 'serie-2', rotulo: 'exponencial' },
-      { fn: (x) => x, cor: 'texto-suave', tracejada: true, rotulo: 'y = x (eixo do espelho)' },
+      { fn: (x) => base ** x, cor: 'serie-2', rotulo: this.texto('curvaExponencial') },
+      { fn: (x) => x, cor: 'texto-suave', tracejada: true, rotulo: this.texto('curvaEspelho') },
     ];
   });
 
@@ -73,19 +76,22 @@ export class FuncaoLogaritmica {
     const base = this.base();
 
     return [
-      { x: 1, y: 0, rotulo: 'log(1) = 0', cor: 'acento' },
-      { x: base, y: 1, rotulo: `log(${formatar(base)}) = 1`, cor: 'acento' },
+      { x: 1, y: 0, rotulo: this.texto('pontoLogUm'), cor: 'acento' },
+      {
+        x: base,
+        y: 1,
+        rotulo: this.texto('pontoLogBase', { base: formatar(base) }),
+        cor: 'acento',
+      },
     ];
   });
 
   protected readonly dominio = computed(() => ({ xMin: -4, xMax: 8, yMin: -4, yMax: 8 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Curva logarítmica de base ${formatar(this.base())}` +
-      (this.mostrarExponencial()
-        ? ', espelhada com a exponencial pela reta y igual a x.'
-        : ', com assíntota vertical no eixo y.'),
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto(this.mostrarExponencial() ? 'descricaoComExponencial' : 'descricaoSoLogaritmo', {
+      base: formatar(this.base()),
+    }),
   );
 
   /** Alguns valores exatos, para ver o logaritmo como contagem de fatores. */

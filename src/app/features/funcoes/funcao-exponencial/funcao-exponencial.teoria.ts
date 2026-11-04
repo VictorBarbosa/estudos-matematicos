@@ -12,7 +12,10 @@ export const TEORIA_EXPONENCIAL: readonly Teoria[] = [
       'exponencial multiplica sempre pelo mesmo fator.',
     formulas: [
       { tex: 'f(x) = a \\cdot b^{x} \\quad (a \\neq 0,\\; b > 0,\\; b \\neq 1)' },
-      { tex: '\\frac{f(x+1)}{f(x)} = b', legenda: 'A razão entre valores consecutivos é constante.' },
+      {
+        tex: '\\frac{f(x+1)}{f(x)} = b',
+        legenda: 'A razão entre valores consecutivos é constante.',
+      },
     ],
     demonstracao: [
       {
@@ -22,8 +25,7 @@ export const TEORIA_EXPONENCIAL: readonly Teoria[] = [
       {
         descricao: 'Ou seja, o novo valor é o anterior multiplicado pela base.',
         tex: 'f(x+1) = f(x) \\cdot b',
-        nota:
-          'Compare com a função afim, em que f(x+1) = f(x) + a. Lá se soma; aqui se multiplica.',
+        nota: 'Compare com a função afim, em que f(x+1) = f(x) + a. Lá se soma; aqui se multiplica.',
       },
       {
         descricao: 'Em x = 0, qualquer base elevada a zero vale 1.',
@@ -47,7 +49,10 @@ export const TEORIA_EXPONENCIAL: readonly Teoria[] = [
       'metade — é sempre o mesmo, não importa de onde se parta.',
     formulas: [
       { tex: 'b > 1 \\to \\text{crescimento} \\qquad 0 < b < 1 \\to \\text{decaimento}' },
-      { tex: 'b^{t} = 2 \\;\\Rightarrow\\; t = \\frac{\\ln 2}{\\ln b}', legenda: 'Tempo de duplicação.' },
+      {
+        tex: 'b^{t} = 2 \\;\\Rightarrow\\; t = \\frac{\\ln 2}{\\ln b}',
+        legenda: 'Tempo de duplicação.',
+      },
     ],
     demonstracao: [
       {

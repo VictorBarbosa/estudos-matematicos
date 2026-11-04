@@ -1,0 +1,112 @@
+{
+  "assimetria": {
+    "pt": "A assimetria que confunde todo mundo",
+    "fr": "L’asymétrie qui embrouille tout le monde",
+    "en": "The asymmetry that confuses everyone"
+  },
+  "foraDoArgumento": {
+    "pt": "Fora do argumento, a intuição acerta: multiplicar por 2 estica na vertical, somar 3 sobe três. Dentro, tudo se inverte — somar 3 desloca para a ESQUERDA, e multiplicar por 2 COMPRIME pela metade. O motivo é simples: o x precisa compensar a operação para que o argumento chegue ao mesmo valor de antes.",
+    "fr": "En dehors de l’argument, l’intuition a raison : multiplier par 2 étire verticalement, ajouter 3 monte de trois. À l’intérieur, tout s’inverse — ajouter 3 décale vers la GAUCHE, et multiplier par 2 COMPRIME de moitié. La raison est simple : le x doit compenser l’opération pour que l’argument atteigne la même valeur qu’avant.",
+    "en": "Outside the argument, intuition is right: multiplying by 2 stretches vertically, adding 3 moves up three. Inside, everything flips — adding 3 shifts LEFT, and multiplying by 2 SQUEEZES by half. The reason is simple: the x has to make up for the operation so that the argument reaches the same value as before."
+  },
+  "funcaoBase": {
+    "pt": "Função base (0 x² · 1 raiz · 2 módulo · 3 seno)",
+    "fr": "Fonction de base (0 x² · 1 racine · 2 valeur absolue · 3 sinus)",
+    "en": "Base function (0 x² · 1 root · 2 absolute value · 3 sine)"
+  },
+  "fatorVertical": {
+    "pt": "Fator vertical (a)",
+    "fr": "Facteur vertical (a)",
+    "en": "Vertical factor (a)"
+  },
+  "fatorHorizontal": {
+    "pt": "Fator horizontal (b)",
+    "fr": "Facteur horizontal (b)",
+    "en": "Horizontal factor (b)"
+  },
+  "deslocHorizontal": {
+    "pt": "Deslocamento horizontal (h)",
+    "fr": "Décalage horizontal (h)",
+    "en": "Horizontal shift (h)"
+  },
+  "deslocVertical": {
+    "pt": "Deslocamento vertical (k)",
+    "fr": "Décalage vertical (k)",
+    "en": "Vertical shift (k)"
+  },
+  "base0": { "pt": "x²", "fr": "x²", "en": "x²" },
+  "base1": { "pt": "raiz de x", "fr": "racine de x", "en": "square root of x" },
+  "base2": { "pt": "módulo de x", "fr": "valeur absolue de x", "en": "absolute value of x" },
+  "base3": { "pt": "seno", "fr": "sinus", "en": "sine" },
+  "pontoOriginal": { "pt": "Ponto original", "fr": "Point d’origine", "en": "Original point" },
+  "paraOndeVai": {
+    "pt": "Para onde ele vai",
+    "fr": "Où il va",
+    "en": "Where it goes"
+  },
+  "contaNaHorizontal": {
+    "pt": "Conta na horizontal",
+    "fr": "Calcul à l’horizontale",
+    "en": "The horizontal arithmetic"
+  },
+  "oAvesso": {
+    "pt": "o avesso do que está escrito",
+    "fr": "l’inverse de ce qui est écrit",
+    "en": "the reverse of what is written"
+  },
+  "contaNaVertical": {
+    "pt": "Conta na vertical",
+    "fr": "Calcul à la verticale",
+    "en": "The vertical arithmetic"
+  },
+  "diretaComoParece": {
+    "pt": "direta, como parece",
+    "fr": "directe, comme elle en a l’air",
+    "en": "direct, just as it looks"
+  },
+  "mesmaForma": {
+    "pt": "A mesma forma, em outro lugar",
+    "fr": "La même forme, ailleurs",
+    "en": "The same shape, somewhere else"
+  },
+  "curvaOriginal": {
+    "pt": "f(x) original",
+    "fr": "f(x) d’origine",
+    "en": "original f(x)"
+  },
+  "curvaTransformada": {
+    "pt": "g(x) transformada",
+    "fr": "g(x) transformée",
+    "en": "transformed g(x)"
+  },
+  "pontoBase": {
+    "pt": "ponto original",
+    "fr": "point d’origine",
+    "en": "original point"
+  },
+  "pontoDestino": {
+    "pt": "para onde ele foi",
+    "fr": "où il est allé",
+    "en": "where it went"
+  },
+  "descricaoGrafico": {
+    "pt": "Gráfico de {base} tracejado e sua versão transformada em destaque, com um ponto de referência marcado nos dois.",
+    "fr": "Graphique de {base} en pointillé et sa version transformée mise en évidence, avec un point de référence marqué sur les deux.",
+    "en": "Graph of {base} dashed and its transformed version highlighted, with one reference point marked on both."
+  },
+  "mexaNoFator": {
+    "pt": "Mexa no fator horizontal e acompanhe o ponto marcado: com b igual a 2 ele vai para metade da distância, porque o gráfico comprimiu. Depois mexa no deslocamento horizontal e confira o sinal — h positivo empurra para a direita, embora apareça como subtração.",
+    "fr": "Changez le facteur horizontal et suivez le point marqué : avec b égal à 2 il va à la moitié de la distance, parce que le graphique s’est comprimé. Changez ensuite le décalage horizontal et vérifiez le signe — un h positif pousse vers la droite, bien qu’il apparaisse comme une soustraction.",
+    "en": "Change the horizontal factor and follow the marked point: with b equal to 2 it goes half the distance, because the graph squeezed. Then change the horizontal shift and check the sign — a positive h pushes to the right, even though it appears as a subtraction."
+  },
+  "porQuePoupa": {
+    "pt": "Por que isso poupa trabalho",
+    "fr": "Pourquoi cela épargne du travail",
+    "en": "Why this saves work"
+  },
+  "reconhecerAForma": {
+    "pt": "Reconhecer a forma dispensa refazer tabela de valores, completar quadrado ou derivar: o vértice se lê direto dos parâmetros. Em engenharia é como se lê um sinal deslocado no tempo ou uma resposta com ganho, sem recalcular o sistema inteiro.",
+    "fr": "Reconnaître la forme dispense de refaire un tableau de valeurs, de compléter le carré ou de dériver : le sommet se lit directement sur les paramètres. En ingénierie, c’est ainsi qu’on lit un signal décalé dans le temps ou une réponse avec gain, sans recalculer tout le système.",
+    "en": "Recognising the form spares you redoing a table of values, completing the square or differentiating: the vertex reads straight off the parameters. In engineering it is how you read a signal shifted in time or a response with gain, without recomputing the whole system."
+  }
+}

@@ -49,17 +49,12 @@ describe('geradorProgressoes', () => {
       const { primeiro, razao, n } = dados(exercicio.enunciadoTex);
       const geometrica = exercicio.enunciado.includes('PG');
 
-      expect(exercicio.gabarito).toBeCloseTo(
-        termoGeral({ primeiro, razao, geometrica }, n),
-        6,
-      );
+      expect(exercicio.gabarito).toBeCloseTo(termoGeral({ primeiro, razao, geometrica }, n), 6);
     }
   });
 
   it('a soma pedida confere com a fórmula da soma', () => {
-    const exercicios = amostra('medio', 120).filter((e) =>
-      e.enunciado.includes('soma dos'),
-    );
+    const exercicios = amostra('medio', 120).filter((e) => e.enunciado.includes('soma dos'));
 
     expect(exercicios.length).toBeGreaterThan(0);
 

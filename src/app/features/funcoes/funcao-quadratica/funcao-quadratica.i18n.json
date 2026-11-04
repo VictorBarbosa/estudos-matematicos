@@ -1,0 +1,61 @@
+{
+  "dicaCoefA": {
+    "pt": "Decide a concavidade. Zero vira 1.",
+    "fr": "Décide de la concavité. Zéro devient 1.",
+    "en": "Decides which way it opens. Zero becomes 1."
+  },
+  "abreParaCima": {
+    "pt": "Abre para cima: o vértice é o ponto de MÍNIMO.",
+    "fr": "Ouverte vers le haut : le sommet est le point de MINIMUM.",
+    "en": "Opens upward: the vertex is the MINIMUM point."
+  },
+  "abreParaBaixo": {
+    "pt": "Abre para baixo: o vértice é o ponto de MÁXIMO.",
+    "fr": "Ouverte vers le bas : le sommet est le point de MAXIMUM.",
+    "en": "Opens downward: the vertex is the MAXIMUM point."
+  },
+  "minimo": { "pt": "mínimo", "fr": "minimum", "en": "minimum" },
+  "maximo": { "pt": "máximo", "fr": "maximum", "en": "maximum" },
+  "raizes": {
+    "pt": "{quantas} raiz(es)",
+    "fr": "{quantas} racine(s)",
+    "en": "{quantas} root(s)"
+  },
+  "cortaEixoY": {
+    "pt": "corta o eixo y",
+    "fr": "coupe l’axe des y",
+    "en": "cuts the y axis"
+  },
+  "curvaF": { "pt": "f(x)", "fr": "f(x)", "en": "f(x)" },
+  "pontoRaiz": { "pt": "raiz {valor}", "fr": "racine {valor}", "en": "root {valor}" },
+  "pontoVertice": {
+    "pt": "vértice ({x}, {y})",
+    "fr": "sommet ({x}, {y})",
+    "en": "vertex ({x}, {y})"
+  },
+  "descricaoCima": {
+    "pt": "Parábola abrindo para cima, com {quantas} raízes e o eixo de simetria tracejado.",
+    "fr": "Parabole ouverte vers le haut, avec {quantas} racines et l’axe de symétrie en pointillé.",
+    "en": "Parabola opening upward, with {quantas} roots and the axis of symmetry dashed."
+  },
+  "descricaoBaixo": {
+    "pt": "Parábola abrindo para baixo, com {quantas} raízes e o eixo de simetria tracejado.",
+    "fr": "Parabole ouverte vers le bas, avec {quantas} racines et l’axe de symétrie en pointillé.",
+    "en": "Parabola opening downward, with {quantas} roots and the axis of symmetry dashed."
+  },
+  "mexaNoC": {
+    "pt": "Mexa apenas no coeficiente c: a parábola sobe e desce inteira, sem mudar de forma. Já o a muda a abertura, e o b desloca o vértice na horizontal.",
+    "fr": "Ne touchez qu’au coefficient c : la parabole monte et descend en entier, sans changer de forme. Le a change l’ouverture, et le b déplace le sommet horizontalement.",
+    "en": "Move only the coefficient c: the whole parabola rises and falls without changing shape. The a changes how wide it opens, and the b slides the vertex sideways."
+  },
+  "formaCanonica": {
+    "pt": "Forma canônica",
+    "fr": "Forme canonique",
+    "en": "Vertex form"
+  },
+  "escritaAssim": {
+    "pt": "Escrita assim, a função mostra o vértice diretamente: o número dentro do parêntese é a abscissa (com sinal trocado) e o de fora é a altura.",
+    "fr": "Écrite ainsi, la fonction montre le sommet directement : le nombre dans la parenthèse est l’abscisse (avec le signe inversé) et celui à l’extérieur est la hauteur.",
+    "en": "Written this way, the function shows the vertex directly: the number inside the bracket is the x coordinate (with the sign flipped) and the one outside is the height."
+  }
+}

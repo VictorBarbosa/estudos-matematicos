@@ -41,7 +41,9 @@ export const TEORIA_RACIONAIS: readonly Teoria[] = [
       'tocá-la, e os sinais dos dois lados costumam ser opostos — vale conferir cada lado ' +
       'separadamente.',
     formulas: [
-      { tex: 'q(a) = 0 \\;\\text{e}\\; p(a) \\neq 0 \\;\\Longrightarrow\\; x = a \\;\\text{é assíntota}' },
+      {
+        tex: 'q(a) = 0 \\;\\text{e}\\; p(a) \\neq 0 \\;\\Longrightarrow\\; x = a \\;\\text{é assíntota}',
+      },
       { tex: '\\lim_{x \\to a} \\left|f(x)\\right| = \\infty' },
     ],
     demonstracao: [

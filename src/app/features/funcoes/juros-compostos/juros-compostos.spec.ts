@@ -67,9 +67,7 @@ describe('geradorJuros', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('juros SIMPLES')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('juros SIMPLES'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('juros SIMPLES'))!;
 
     const resultado = corrigir(geradorJuros, exercicio, String(armadilha.resposta));
     expect(resultado.veredito).toBe('incorreto');

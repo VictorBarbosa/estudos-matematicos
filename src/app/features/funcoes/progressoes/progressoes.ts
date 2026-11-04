@@ -15,6 +15,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/progressoes/progressoes.i18n.json';
 import { geradorProgressoes } from '@features/funcoes/progressoes/progressoes.gerador';
 import { TEORIA_PROGRESSOES } from '@features/funcoes/progressoes/progressoes.teoria';
 
@@ -34,6 +37,8 @@ import { TEORIA_PROGRESSOES } from '@features/funcoes/progressoes/progressoes.te
   styleUrl: './progressoes.scss',
 })
 export class Progressoes {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorProgressoes;
   protected readonly conceitos = TEORIA_PROGRESSOES.map((teoria) => teoria.id);
 
@@ -48,17 +53,11 @@ export class Progressoes {
     geometrica: this.geometrica(),
   }));
 
-  protected readonly termos = computed(() =>
-    termosIniciais(this.progressao(), this.quantidade()),
-  );
+  protected readonly termos = computed(() => termosIniciais(this.progressao(), this.quantidade()));
 
-  protected readonly parciais = computed(() =>
-    somasParciais(this.progressao(), this.quantidade()),
-  );
+  protected readonly parciais = computed(() => somasParciais(this.progressao(), this.quantidade()));
 
-  protected readonly analise = computed(() =>
-    somaComPassos(this.progressao(), this.quantidade()),
-  );
+  protected readonly analise = computed(() => somaComPassos(this.progressao(), this.quantidade()));
 
   protected readonly ultimo = computed(() => termoGeral(this.progressao(), this.quantidade()));
 
@@ -109,10 +108,10 @@ export class Progressoes {
     xMax: this.quantidade() + 1,
   }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Os ${this.quantidade()} primeiros termos da progressão ` +
-      `${this.geometrica() ? 'geométrica' : 'aritmética'} e suas somas parciais.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto(this.geometrica() ? 'descricaoGeometrica' : 'descricaoAritmetica', {
+      quantos: this.quantidade(),
+    }),
   );
 
   constructor() {

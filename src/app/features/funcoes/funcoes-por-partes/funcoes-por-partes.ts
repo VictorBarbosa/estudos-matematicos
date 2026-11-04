@@ -17,6 +17,8 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/funcoes-por-partes/funcoes-por-partes.i18n.json';
 import { geradorFuncoesPorPartes } from '@features/funcoes/funcoes-por-partes/funcoes-por-partes.gerador';
 import { TEORIA_POR_PARTES } from '@features/funcoes/funcoes-por-partes/funcoes-por-partes.teoria';
 
@@ -28,6 +30,7 @@ import { TEORIA_POR_PARTES } from '@features/funcoes/funcoes-por-partes/funcoes-
   styleUrl: './funcoes-por-partes.scss',
 })
 export class FuncoesPorPartes {
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorFuncoesPorPartes;
   protected readonly conceitos = TEORIA_POR_PARTES.map((teoria) => teoria.id);
 
@@ -75,12 +78,12 @@ export class FuncoesPorPartes {
       {
         fn: (x) => (x < corte ? avaliarPorPartes(f, x) : Number.NaN),
         cor: 'serie-1',
-        rotulo: 'trecho da esquerda',
+        rotulo: this.texto('curvaEsquerda'),
       },
       {
         fn: (x) => (x >= corte ? avaliarPorPartes(f, x) : Number.NaN),
         cor: 'serie-3',
-        rotulo: 'trecho da direita',
+        rotulo: this.texto('curvaDireita'),
       },
     ];
   });
@@ -96,10 +99,8 @@ export class FuncoesPorPartes {
     xMax: this.fronteira() + 6,
   }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Os dois trechos encontrando-se em x igual a ${this.fronteira()}: o círculo cheio é o ` +
-      'valor que a função assume, e o vazado é a ponta que não pertence ao gráfico.',
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { x: this.fronteira() }),
   );
 
   constructor() {

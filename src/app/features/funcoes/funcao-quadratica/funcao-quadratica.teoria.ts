@@ -20,7 +20,8 @@ export const TEORIA_QUADRATICA: readonly Teoria[] = [
         tex: 'f(x) = a\\left(x + \\frac{b}{2a}\\right)^{2} - \\frac{\\Delta}{4a}',
       },
       {
-        descricao: 'O quadrado é sempre ≥ 0, então o menor valor da parcela ocorre quando ele é zero.',
+        descricao:
+          'O quadrado é sempre ≥ 0, então o menor valor da parcela ocorre quando ele é zero.',
         tex: '\\left(x + \\frac{b}{2a}\\right)^{2} = 0 \\;\\Rightarrow\\; x = -\\frac{b}{2a}',
         nota: 'É exatamente a abscissa do vértice — e ela sai da álgebra, não de memorização.',
       },
@@ -80,9 +81,7 @@ export const TEORIA_QUADRATICA: readonly Teoria[] = [
       'Muitos problemas práticos — área máxima, custo mínimo, altura máxima de um lançamento — ' +
       'levam a uma função quadrática. Como o vértice é o ponto extremo da parábola, basta ' +
       'calculá-lo para resolver.',
-    formulas: [
-      { tex: '\\text{valor ótimo em } x_v = -\\frac{b}{2a}' },
-    ],
+    formulas: [{ tex: '\\text{valor ótimo em } x_v = -\\frac{b}{2a}' }],
     demonstracao: [
       {
         descricao: 'Exemplo: com 20 m de cerca, qual retângulo tem área máxima?',

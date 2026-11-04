@@ -12,7 +12,10 @@ export const TEORIA_AFIM: readonly Teoria[] = [
       'Juntos, eles determinam a reta inteira.',
     formulas: [
       { tex: 'f(x) = ax + b' },
-      { tex: 'a = \\frac{\\Delta y}{\\Delta x} = \\frac{f(x_2) - f(x_1)}{x_2 - x_1}', legenda: 'A taxa de variação.' },
+      {
+        tex: 'a = \\frac{\\Delta y}{\\Delta x} = \\frac{f(x_2) - f(x_1)}{x_2 - x_1}',
+        legenda: 'A taxa de variação.',
+      },
     ],
     demonstracao: [
       {
@@ -75,7 +78,9 @@ export const TEORIA_AFIM: readonly Teoria[] = [
       'é decrescente. Se a = 0, nada muda: é constante. O coeficiente b não tem influência ' +
       'nenhuma sobre isso — ele apenas desloca a reta para cima ou para baixo.',
     formulas: [
-      { tex: 'a > 0 \\to \\text{crescente} \\qquad a < 0 \\to \\text{decrescente} \\qquad a = 0 \\to \\text{constante}' },
+      {
+        tex: 'a > 0 \\to \\text{crescente} \\qquad a < 0 \\to \\text{decrescente} \\qquad a = 0 \\to \\text{constante}',
+      },
     ],
     demonstracao: [
       {

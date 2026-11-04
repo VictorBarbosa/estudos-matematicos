@@ -46,9 +46,7 @@ export const TEORIA_MODULAR: readonly Teoria[] = [
       'O módulo espelha para cima tudo que estaria abaixo do eixo x. Por isso o gráfico de ' +
       'uma função modular de primeiro grau tem a forma de V — e o bico fica exatamente no ' +
       'ponto em que a expressão dentro do módulo se anula.',
-    formulas: [
-      { tex: 'f(x) = |ax + b| \\;\\Rightarrow\\; \\text{bico em } x = -\\frac{b}{a}' },
-    ],
+    formulas: [{ tex: 'f(x) = |ax + b| \\;\\Rightarrow\\; \\text{bico em } x = -\\frac{b}{a}' }],
     demonstracao: [
       {
         descricao: 'À direita do ponto crítico, a expressão interna é positiva.',

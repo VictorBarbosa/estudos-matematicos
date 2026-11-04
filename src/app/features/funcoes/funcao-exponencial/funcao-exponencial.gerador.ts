@@ -204,7 +204,10 @@ export const geradorExponencial: GeradorExercicio<number> = {
       resolucao: {
         resultado: gabarito,
         passos: [
-          { descricao: `Substituímos x por ${x}.`, tex: `f(${x}) = ${inicial} \\cdot ${base}^{${x}}` },
+          {
+            descricao: `Substituímos x por ${x}.`,
+            tex: `f(${x}) = ${inicial} \\cdot ${base}^{${x}}`,
+          },
           {
             descricao:
               x >= 0
@@ -276,7 +279,5 @@ function sortearBase(nivel: Nivel, rng: Rng): number {
   }
   // A base natural entra a partir do Médio: é a base do cálculo, e o currículo
   // promete o número e neste tópico.
-  return rng.escolher(
-    nivel === 'medio' ? [2, 3, 4, 5, 10, Math.E] : [2, 3, 5, 0.5, 0.2, Math.E],
-  );
+  return rng.escolher(nivel === 'medio' ? [2, 3, 4, 5, 10, Math.E] : [2, 3, 5, 0.5, 0.2, Math.E]);
 }

@@ -13,6 +13,9 @@ import {
   SegmentoPlot,
 } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/funcao-quadratica/funcao-quadratica.i18n.json';
 import { geradorQuadratica } from '@features/funcoes/funcao-quadratica/funcao-quadratica.gerador';
 import { TEORIA_QUADRATICA } from '@features/funcoes/funcao-quadratica/funcao-quadratica.teoria';
 
@@ -32,6 +35,8 @@ import { TEORIA_QUADRATICA } from '@features/funcoes/funcao-quadratica/funcao-qu
   styleUrl: './funcao-quadratica.scss',
 })
 export class FuncaoQuadratica {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorQuadratica;
   protected readonly conceitos = TEORIA_QUADRATICA.map((teoria) => teoria.id);
 
@@ -56,23 +61,25 @@ export class FuncaoQuadratica {
     const a = this.aEfetivo();
     const { vertice } = this.solucao();
     const coeficiente = a === 1 ? '' : a === -1 ? '-' : String(a);
-    const deslocamento = vertice.x === 0 ? 'x' : `\\left(x ${vertice.x > 0 ? '-' : '+'} ${formatar(Math.abs(vertice.x))}\\right)`;
-    const altura = vertice.y === 0 ? '' : ` ${vertice.y > 0 ? '+' : '-'} ${formatar(Math.abs(vertice.y))}`;
+    const deslocamento =
+      vertice.x === 0
+        ? 'x'
+        : `\\left(x ${vertice.x > 0 ? '-' : '+'} ${formatar(Math.abs(vertice.x))}\\right)`;
+    const altura =
+      vertice.y === 0 ? '' : ` ${vertice.y > 0 ? '+' : '-'} ${formatar(Math.abs(vertice.y))}`;
 
     return `f(x) = ${coeficiente}${deslocamento}^{2}${altura}`;
   });
 
   protected readonly concavidade = computed(() =>
-    this.aEfetivo() > 0
-      ? 'Abre para cima: o vértice é o ponto de MÍNIMO.'
-      : 'Abre para baixo: o vértice é o ponto de MÁXIMO.',
+    this.texto(this.aEfetivo() > 0 ? 'abreParaCima' : 'abreParaBaixo'),
   );
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
     const a = this.aEfetivo();
     const b = this.b();
     const c = this.c();
-    return [{ fn: (x) => a * x * x + b * x + c, cor: 'serie-1', rotulo: 'f(x)' }];
+    return [{ fn: (x) => a * x * x + b * x + c, cor: 'serie-1', rotulo: this.texto('curvaF') }];
   });
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() => {
@@ -82,13 +89,16 @@ export class FuncaoQuadratica {
       ...raizes.map((raiz) => ({
         x: raiz,
         y: 0,
-        rotulo: `raiz ${formatar(raiz)}`,
+        rotulo: this.texto('pontoRaiz', { valor: formatar(raiz) }),
         cor: 'acento' as const,
       })),
       {
         x: vertice.x,
         y: vertice.y,
-        rotulo: `vértice (${formatar(vertice.x)}, ${formatar(vertice.y)})`,
+        rotulo: this.texto('pontoVertice', {
+          x: formatar(vertice.x),
+          y: formatar(vertice.y),
+        }),
         cor: 'serie-2' as const,
       },
     ];
@@ -119,10 +129,9 @@ export class FuncaoQuadratica {
 
   protected readonly descricaoGrafico = computed(() => {
     const { quantidadeDeRaizes } = this.solucao();
-    return (
-      `Parábola abrindo para ${this.aEfetivo() > 0 ? 'cima' : 'baixo'}, com ` +
-      `${quantidadeDeRaizes} ${quantidadeDeRaizes === 1 ? 'raiz' : 'raízes'} e o eixo de simetria tracejado.`
-    );
+    return this.texto(this.aEfetivo() > 0 ? 'descricaoCima' : 'descricaoBaixo', {
+      quantas: quantidadeDeRaizes,
+    });
   });
 
   constructor() {

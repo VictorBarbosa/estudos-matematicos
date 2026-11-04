@@ -1,0 +1,80 @@
+{
+  "fCoefX": {
+    "pt": "f: coeficiente de x",
+    "fr": "f : coefficient de x",
+    "en": "f: coefficient of x"
+  },
+  "fTermo": {
+    "pt": "f: termo constante",
+    "fr": "f : terme constant",
+    "en": "f: constant term"
+  },
+  "gCoefX": {
+    "pt": "g: coeficiente de x",
+    "fr": "g : coefficient de x",
+    "en": "g: coefficient of x"
+  },
+  "gTermo": {
+    "pt": "g: termo constante",
+    "fr": "g : terme constant",
+    "en": "g: constant term"
+  },
+  "oQueVisualizar": {
+    "pt": "O que visualizar",
+    "fr": "Quoi afficher",
+    "en": "What to show"
+  },
+  "composicao": { "pt": "Composição", "fr": "Composition", "en": "Composition" },
+  "inversaDeF": { "pt": "Inversa de f", "fr": "Réciproque de f", "en": "Inverse of f" },
+  "asDuasOrdens": { "pt": "As duas ordens", "fr": "Les deux ordres", "en": "The two orders" },
+  "ordemImporta": {
+    "pt": "As duas composições são <strong>diferentes</strong> — a ordem importa. Primeiro somar e depois multiplicar não dá o mesmo que multiplicar e depois somar.",
+    "fr": "Les deux compositions sont <strong>différentes</strong> — l’ordre compte. Additionner puis multiplier ne donne pas la même chose que multiplier puis additionner.",
+    "en": "The two compositions are <strong>different</strong> — order matters. Adding then multiplying is not the same as multiplying then adding."
+  },
+  "ordemCoincide": {
+    "pt": "Neste caso particular as duas ordens coincidem, mas isso é exceção, não regra.",
+    "fr": "Dans ce cas particulier les deux ordres coïncident, mais c’est l’exception, pas la règle.",
+    "en": "In this particular case the two orders agree, but that is the exception, not the rule."
+  },
+  "visualizandoEncadeamento": {
+    "pt": "Visualizando o encadeamento",
+    "fr": "Voir l’enchaînement",
+    "en": "Seeing the chaining"
+  },
+  "passoAPassoFg": {
+    "pt": "Passo a passo de f ∘ g",
+    "fr": "Pas à pas de f ∘ g",
+    "en": "Step by step for f ∘ g"
+  },
+  "reflexoNaReta": {
+    "pt": "O reflexo na reta y = x",
+    "fr": "Le reflet par la droite y = x",
+    "en": "The reflection in the line y = x"
+  },
+  "osDoisPontos": {
+    "pt": "Os dois pontos destacados têm as coordenadas trocadas. Fazer isso com todos os pontos de uma curva é exatamente refleti-la na reta tracejada — e é isso que a inversa faz.",
+    "fr": "Les deux points mis en évidence ont leurs coordonnées échangées. Faire cela pour tous les points d’une courbe, c’est exactement la refléter par la droite en pointillé — et c’est ce que fait la réciproque.",
+    "en": "The two highlighted points have their coordinates swapped. Doing that to every point of a curve is exactly reflecting it in the dashed line — and that is what the inverse does."
+  },
+  "passoAPassoInversa": {
+    "pt": "Passo a passo da inversa",
+    "fr": "Pas à pas de la réciproque",
+    "en": "Step by step for the inverse"
+  },
+  "curvaEspelho": {
+    "pt": "y = x (espelho)",
+    "fr": "y = x (miroir)",
+    "en": "y = x (mirror)"
+  },
+  "descricaoInversa": {
+    "pt": "Função e sua inversa, espelhadas pela reta y igual a x.",
+    "fr": "Fonction et sa réciproque, reflétées par la droite y égale à x.",
+    "en": "Function and its inverse, mirrored across the line y equal to x."
+  },
+  "descricaoComposicao": {
+    "pt": "As duas composições possíveis, f composta com g e g composta com f, em geral distintas.",
+    "fr": "Les deux compositions possibles, f composée avec g et g composée avec f, en général distinctes.",
+    "en": "The two possible compositions, f with g and g with f, generally different."
+  }
+}

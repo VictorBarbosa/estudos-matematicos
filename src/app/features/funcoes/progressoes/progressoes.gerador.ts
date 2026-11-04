@@ -62,8 +62,7 @@ function exercicioTermo(geometrica: boolean, nivel: Nivel, rng: Rng): Exercicio<
   return {
     id: `prog-termo-${nome}-${primeiro}-${razao}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Numa ${nome} de primeiro termo ${primeiro} e razão ${razao}, qual é o ${n}º termo?`,
+    enunciado: `Numa ${nome} de primeiro termo ${primeiro} e razão ${razao}, qual é o ${n}º termo?`,
     enunciadoTex: `a_1 = ${primeiro} \\qquad ${letraRazao} = ${razao} \\qquad n = ${n}`,
     gabarito,
     resolucao: {
@@ -100,9 +99,7 @@ function exercicioTermo(geometrica: boolean, nivel: Nivel, rng: Rng): Exercicio<
           conceito: geometrica ? 'progressoes.geometrica' : 'progressoes.aritmetica',
         },
         {
-          resposta: geometrica
-            ? primeiro + (n - 1) * razao
-            : primeiro * razao ** (n - 1),
+          resposta: geometrica ? primeiro + (n - 1) * razao : primeiro * razao ** (n - 1),
           diagnostico: geometrica
             ? 'Essa é a fórmula da PA. Na PG a razão MULTIPLICA, ela não soma.'
             : 'Essa é a fórmula da PG. Na PA a razão SOMA, ela não multiplica.',

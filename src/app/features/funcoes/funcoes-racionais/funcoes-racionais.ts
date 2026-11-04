@@ -14,6 +14,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/funcoes-racionais/funcoes-racionais.i18n.json';
 import { geradorFuncoesRacionais } from '@features/funcoes/funcoes-racionais/funcoes-racionais.gerador';
 import { TEORIA_RACIONAIS } from '@features/funcoes/funcoes-racionais/funcoes-racionais.teoria';
 
@@ -25,6 +28,8 @@ import { TEORIA_RACIONAIS } from '@features/funcoes/funcoes-racionais/funcoes-ra
   styleUrl: './funcoes-racionais.scss',
 })
 export class FuncoesRacionais {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorFuncoesRacionais;
   protected readonly conceitos = TEORIA_RACIONAIS.map((teoria) => teoria.id);
 
@@ -56,14 +61,16 @@ export class FuncoesRacionais {
   protected readonly horizontalEscrita = computed(() => {
     const { tipoFinal, horizontal, obliqua } = this.analise();
     if (tipoFinal === 'obliqua') {
-      return `oblíqua: y = ${(obliqua ?? Polinomio.ZERO).toString()}`;
+      return this.texto('obliqua', { reta: (obliqua ?? Polinomio.ZERO).toString() });
     }
-    return horizontal === null ? 'não há' : `y = ${this.formatar(horizontal)}`;
+    return horizontal === null
+      ? this.texto('naoHa')
+      : this.texto('horizontalY', { valor: this.formatar(horizontal) });
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
     const f = this.funcao();
-    return [{ fn: (x) => avaliarRacional(f, x), cor: 'serie-1', rotulo: 'f(x)' }];
+    return [{ fn: (x) => avaliarRacional(f, x), cor: 'serie-1', rotulo: this.texto('curvaF') }];
   });
 
   /** Os buracos aparecem como círculos vazados — é o que eles são. */
@@ -77,7 +84,7 @@ export class FuncoesRacionais {
         y: avaliarRacional(f, vizinho),
         cor: 'acento' as const,
         vazado: true,
-        rotulo: 'buraco',
+        rotulo: this.texto('pontoBuraco'),
       };
     });
   });
@@ -89,11 +96,7 @@ export class FuncoesRacionais {
     yMax: 8,
   }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Gráfico da função racional: o traço se interrompe nas assíntotas verticais e o círculo ' +
-      'vazado marca o buraco, onde o ponto falta sem que nada dispare.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_RACIONAIS);
@@ -104,6 +107,8 @@ export class FuncoesRacionais {
   }
 
   protected lista(valores: readonly number[]): string {
-    return valores.length === 0 ? 'nenhuma' : valores.map((x) => this.formatar(x)).join(', ');
+    return valores.length === 0
+      ? this.texto('nenhuma')
+      : valores.map((x) => this.formatar(x)).join(', ');
   }
 }

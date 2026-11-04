@@ -43,7 +43,9 @@ export const TEORIA_POR_PARTES: readonly Teoria[] = [
       'três coincidem, a função é contínua.',
     formulas: [
       { tex: '\\lim_{x \\to a^{-}} f(x) \\quad \\lim_{x \\to a^{+}} f(x) \\quad f(a)' },
-      { tex: '\\text{contínua em } a \\iff \\lim_{x \\to a^{-}} f = \\lim_{x \\to a^{+}} f = f(a)' },
+      {
+        tex: '\\text{contínua em } a \\iff \\lim_{x \\to a^{-}} f = \\lim_{x \\to a^{+}} f = f(a)',
+      },
     ],
     demonstracao: [
       {

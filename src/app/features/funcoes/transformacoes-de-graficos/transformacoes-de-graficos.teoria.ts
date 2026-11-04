@@ -47,7 +47,9 @@ export const TEORIA_TRANSFORMACOES: readonly Teoria[] = [
       'parábola na forma canônica se lê direto, sem completar quadrado.',
     formulas: [
       { tex: 'y = a(x - h)^{2} + k \\;\\Longrightarrow\\; V = (h,\\; k)' },
-      { tex: 'f(x) + k \\;\\text{sobe } k \\qquad f(x - h) \\;\\text{anda } h \\text{ para a direita}' },
+      {
+        tex: 'f(x) + k \\;\\text{sobe } k \\qquad f(x - h) \\;\\text{anda } h \\text{ para a direita}',
+      },
     ],
     demonstracao: [
       {
@@ -65,7 +67,7 @@ export const TEORIA_TRANSFORMACOES: readonly Teoria[] = [
       },
       {
         descricao: 'A abertura da parábola continua exatamente a mesma.',
-        tex: 'y\'\' = 2 \\;\\text{em todos os casos}',
+        tex: "y'' = 2 \\;\\text{em todos os casos}",
       },
     ],
     vejaTambem: ['transformacoes.dentro-e-fora', 'transformacoes.escala'],

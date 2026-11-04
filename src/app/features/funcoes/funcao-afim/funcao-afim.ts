@@ -13,6 +13,9 @@ import {
   SegmentoPlot,
 } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/funcao-afim/funcao-afim.i18n.json';
 import { geradorAfim } from '@features/funcoes/funcao-afim/funcao-afim.gerador';
 import { TEORIA_AFIM } from '@features/funcoes/funcao-afim/funcao-afim.teoria';
 
@@ -32,6 +35,8 @@ import { TEORIA_AFIM } from '@features/funcoes/funcao-afim/funcao-afim.teoria';
   styleUrl: './funcao-afim.scss',
 })
 export class FuncaoAfim {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorAfim;
   protected readonly conceitos = TEORIA_AFIM.map((teoria) => teoria.id);
 
@@ -50,27 +55,35 @@ export class FuncaoAfim {
   protected readonly comportamento = computed(() => {
     const { constante, crescente } = this.resultado();
     if (constante) {
-      return 'Constante: a reta é horizontal e o valor nunca muda.';
+      return this.texto('constante');
     }
-    return crescente
-      ? 'Crescente: cada passo à direita aumenta o valor.'
-      : 'Decrescente: cada passo à direita diminui o valor.';
+    return this.texto(crescente ? 'crescente' : 'decrescente');
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
     const a = this.a();
     const b = this.b();
-    return [{ fn: (x) => a * x + b, cor: 'serie-1', rotulo: 'f(x) = ax + b' }];
+    return [{ fn: (x) => a * x + b, cor: 'serie-1', rotulo: this.texto('curvaFx') }];
   });
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() => {
     const { raiz, interceptoY } = this.resultado();
     const marcados: PontoPlot[] = [
-      { x: 0, y: interceptoY, rotulo: `b = ${interceptoY}`, cor: 'serie-2' },
+      {
+        x: 0,
+        y: interceptoY,
+        rotulo: this.texto('pontoB', { valor: interceptoY }),
+        cor: 'serie-2',
+      },
     ];
 
     if (raiz !== null) {
-      marcados.push({ x: raiz, y: 0, rotulo: `raiz = ${formatar(raiz)}`, cor: 'acento' });
+      marcados.push({
+        x: raiz,
+        y: 0,
+        rotulo: this.texto('pontoRaiz', { valor: formatar(raiz) }),
+        cor: 'acento',
+      });
     }
 
     return marcados;
@@ -92,7 +105,7 @@ export class FuncaoAfim {
     const y0 = a * x0 + b;
 
     return [
-      { x1: x0, y1: y0, x2: x0 + 1, y2: y0, cor: 'serie-3', rotulo: 'Δx = 1' },
+      { x1: x0, y1: y0, x2: x0 + 1, y2: y0, cor: 'serie-3', rotulo: this.texto('deltaX') },
       { x1: x0 + 1, y1: y0, x2: x0 + 1, y2: a * (x0 + 1) + b, cor: 'serie-3', seta: true },
     ];
   });
@@ -106,8 +119,8 @@ export class FuncaoAfim {
   protected readonly descricaoGrafico = computed(() => {
     const { raiz } = this.resultado();
     return raiz === null
-      ? 'Reta horizontal, sem raiz.'
-      : `Reta cruzando o eixo x em ${formatar(raiz)} e o eixo y em ${this.b()}.`;
+      ? this.texto('semRaiz')
+      : this.texto('descricaoGrafico', { raiz: formatar(raiz), b: this.b() });
   });
 
   constructor() {

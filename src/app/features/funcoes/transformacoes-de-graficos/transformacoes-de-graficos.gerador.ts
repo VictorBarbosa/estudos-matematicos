@@ -11,7 +11,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de transformação de gráficos.
@@ -108,7 +114,8 @@ function doVertice(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'transformacoes.deslocamento',
       },
     ],
-    dica: nivel === 'facil' ? 'O vértice está onde o que está dentro dos parênteses zera.' : undefined,
+    dica:
+      nivel === 'facil' ? 'O vértice está onde o que está dentro dos parênteses zera.' : undefined,
   });
 }
 

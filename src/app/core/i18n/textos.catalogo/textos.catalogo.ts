@@ -12,6 +12,18 @@ import t_inequacoes from '@features/algebra/inequacoes/inequacoes.i18n.json';
 import t_polinomios from '@features/algebra/polinomios/polinomios.i18n.json';
 import t_produtos_notaveis from '@features/algebra/produtos-notaveis/produtos-notaveis.i18n.json';
 import t_sistemas_lineares from '@features/algebra/sistemas-lineares/sistemas-lineares.i18n.json';
+import t_composicao_inversa from '@features/funcoes/composicao-inversa/composicao-inversa.i18n.json';
+import t_conceito_funcao from '@features/funcoes/conceito-funcao/conceito-funcao.i18n.json';
+import t_funcao_afim from '@features/funcoes/funcao-afim/funcao-afim.i18n.json';
+import t_funcao_exponencial from '@features/funcoes/funcao-exponencial/funcao-exponencial.i18n.json';
+import t_funcao_logaritmica from '@features/funcoes/funcao-logaritmica/funcao-logaritmica.i18n.json';
+import t_funcao_modular from '@features/funcoes/funcao-modular/funcao-modular.i18n.json';
+import t_funcao_quadratica from '@features/funcoes/funcao-quadratica/funcao-quadratica.i18n.json';
+import t_funcoes_por_partes from '@features/funcoes/funcoes-por-partes/funcoes-por-partes.i18n.json';
+import t_funcoes_racionais from '@features/funcoes/funcoes-racionais/funcoes-racionais.i18n.json';
+import t_juros_compostos from '@features/funcoes/juros-compostos/juros-compostos.i18n.json';
+import t_progressoes from '@features/funcoes/progressoes/progressoes.i18n.json';
+import t_transformacoes_de_graficos from '@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.i18n.json';
 import t_angulos_e_triangulos from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.i18n.json';
 import t_areas_de_figuras_planas from '@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.i18n.json';
 import t_circulo_e_poligonos from '@features/geometria/circulo-e-poligonos/circulo-e-poligonos.i18n.json';
@@ -43,6 +55,18 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['polinomios', t_polinomios as TabelaDeTextos],
   ['produtos-notaveis', t_produtos_notaveis as TabelaDeTextos],
   ['sistemas-lineares', t_sistemas_lineares as TabelaDeTextos],
+  ['composicao-inversa', t_composicao_inversa as TabelaDeTextos],
+  ['conceito-funcao', t_conceito_funcao as TabelaDeTextos],
+  ['funcao-afim', t_funcao_afim as TabelaDeTextos],
+  ['funcao-exponencial', t_funcao_exponencial as TabelaDeTextos],
+  ['funcao-logaritmica', t_funcao_logaritmica as TabelaDeTextos],
+  ['funcao-modular', t_funcao_modular as TabelaDeTextos],
+  ['funcao-quadratica', t_funcao_quadratica as TabelaDeTextos],
+  ['funcoes-por-partes', t_funcoes_por_partes as TabelaDeTextos],
+  ['funcoes-racionais', t_funcoes_racionais as TabelaDeTextos],
+  ['juros-compostos', t_juros_compostos as TabelaDeTextos],
+  ['progressoes', t_progressoes as TabelaDeTextos],
+  ['transformacoes-de-graficos', t_transformacoes_de_graficos as TabelaDeTextos],
   ['angulos-e-triangulos', t_angulos_e_triangulos as TabelaDeTextos],
   ['areas-de-figuras-planas', t_areas_de_figuras_planas as TabelaDeTextos],
   ['circulo-e-poligonos', t_circulo_e_poligonos as TabelaDeTextos],

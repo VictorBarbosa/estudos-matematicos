@@ -1,0 +1,60 @@
+{
+  "dicaBase": {
+    "pt": "Base atual: {base}",
+    "fr": "Base actuelle : {base}",
+    "en": "Current base: {base}"
+  },
+  "espelhoDaExponencial": {
+    "pt": "O espelho da exponencial",
+    "fr": "Le miroir de l’exponentielle",
+    "en": "The mirror of the exponential"
+  },
+  "mostrarSoLogaritmo": {
+    "pt": "Mostrar só o logaritmo",
+    "fr": "Afficher seulement le logarithme",
+    "en": "Show the logarithm only"
+  },
+  "compararComExponencial": {
+    "pt": "Comparar com a exponencial",
+    "fr": "Comparer avec l’exponentielle",
+    "en": "Compare with the exponential"
+  },
+  "curvaLogaritmo": { "pt": "logaritmo", "fr": "logarithme", "en": "logarithm" },
+  "curvaExponencial": { "pt": "exponencial", "fr": "exponentielle", "en": "exponential" },
+  "curvaEspelho": {
+    "pt": "y = x (eixo do espelho)",
+    "fr": "y = x (axe du miroir)",
+    "en": "y = x (mirror axis)"
+  },
+  "pontoLogUm": { "pt": "log(1) = 0", "fr": "log(1) = 0", "en": "log(1) = 0" },
+  "pontoLogBase": {
+    "pt": "log({base}) = 1",
+    "fr": "log({base}) = 1",
+    "en": "log({base}) = 1"
+  },
+  "descricaoComExponencial": {
+    "pt": "Curva logarítmica de base {base}, espelhada com a exponencial pela reta y igual a x.",
+    "fr": "Courbe logarithmique de base {base}, reflétée avec l’exponentielle par la droite y égale à x.",
+    "en": "Logarithmic curve of base {base}, mirrored with the exponential across the line y equal to x."
+  },
+  "descricaoSoLogaritmo": {
+    "pt": "Curva logarítmica de base {base}, com assíntota vertical no eixo y.",
+    "fr": "Courbe logarithmique de base {base}, avec une asymptote verticale sur l’axe des y.",
+    "en": "Logarithmic curve of base {base}, with a vertical asymptote on the y axis."
+  },
+  "asDuasCurvas": {
+    "pt": "As duas curvas são reflexos uma da outra na reta tracejada y = x. Onde a exponencial tem assíntota horizontal, o logaritmo tem assíntota vertical — é a mesma restrição, espelhada.",
+    "fr": "Les deux courbes sont le reflet l’une de l’autre par la droite en pointillé y = x. Là où l’exponentielle a une asymptote horizontale, le logarithme en a une verticale — c’est la même contrainte, reflétée.",
+    "en": "The two curves are reflections of each other across the dashed line y = x. Where the exponential has a horizontal asymptote, the logarithm has a vertical one — the same restriction, mirrored."
+  },
+  "contaExpoentes": {
+    "pt": "O logaritmo conta expoentes",
+    "fr": "Le logarithme compte les exposants",
+    "en": "The logarithm counts exponents"
+  },
+  "repareOArgumento": {
+    "pt": "Repare: o argumento é multiplicado pela base a cada linha, enquanto o logaritmo soma 1. É exatamente isso que significa \"transformar produto em soma\".",
+    "fr": "Remarquez : l’argument est multiplié par la base à chaque ligne, tandis que le logarithme ajoute 1. C’est exactement ce que veut dire « transformer un produit en somme ».",
+    "en": "Notice: the argument is multiplied by the base on each row, while the logarithm adds 1. That is exactly what \"turning a product into a sum\" means."
+  }
+}

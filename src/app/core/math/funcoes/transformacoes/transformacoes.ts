@@ -59,45 +59,90 @@ export function transformacaoParaTex(t: Transformacao, nome = 'f'): string {
   return `${corpo} ${t.k > 0 ? '+' : '-'} ${formatar(Math.abs(t.k))}`;
 }
 
-/** A descrição em palavras, na ordem em que as transformações se aplicam. */
-export function descreverTransformacao(t: Transformacao): readonly string[] {
-  const passos: string[] = [];
+/** Um passo da transformação, pronto para traduzir. */
+export interface PassoDaTransformacao {
+  readonly chave: string;
+  readonly valores?: Readonly<Record<string, string | number>>;
+}
+
+/**
+ * Os passos da transformação, na ordem em que se aplicam.
+ *
+ * Devolve chaves em vez de frases: o motor sabe o que acontece, e quem
+ * desenha escolhe a língua. {@link descreverTransformacao} é a mesma lista
+ * dita em português, para quem ainda não traduz.
+ */
+export function passosDaTransformacao(t: Transformacao): readonly PassoDaTransformacao[] {
+  const passos: PassoDaTransformacao[] = [];
 
   if (t.b !== 1) {
     const fator = Math.abs(t.b);
     if (fator > 1) {
-      passos.push(`comprime na horizontal por um fator ${formatarEmTexto(fator)}`);
+      passos.push({
+        chave: 'transf.comprimeHorizontal',
+        valores: { fator: formatarEmTexto(fator) },
+      });
     } else if (fator < 1) {
-      passos.push(`estica na horizontal por um fator ${formatarEmTexto(1 / fator)}`);
+      passos.push({
+        chave: 'transf.esticaHorizontal',
+        valores: { fator: formatarEmTexto(1 / fator) },
+      });
     }
     if (t.b < 0) {
-      passos.push('reflete no eixo vertical');
+      passos.push({ chave: 'transf.refleteVertical' });
     }
   }
 
   if (t.h !== 0) {
-    passos.push(
-      `desloca ${formatarEmTexto(Math.abs(t.h))} para a ${t.h > 0 ? 'direita' : 'esquerda'}`,
-    );
+    passos.push({
+      chave: t.h > 0 ? 'transf.deslocaDireita' : 'transf.deslocaEsquerda',
+      valores: { quanto: formatarEmTexto(Math.abs(t.h)) },
+    });
   }
 
   if (t.a !== 1) {
     const fator = Math.abs(t.a);
     if (fator > 1) {
-      passos.push(`estica na vertical por um fator ${formatarEmTexto(fator)}`);
+      passos.push({ chave: 'transf.esticaVertical', valores: { fator: formatarEmTexto(fator) } });
     } else if (fator < 1) {
-      passos.push(`comprime na vertical por um fator ${formatarEmTexto(1 / fator)}`);
+      passos.push({
+        chave: 'transf.comprimeVertical',
+        valores: { fator: formatarEmTexto(1 / fator) },
+      });
     }
     if (t.a < 0) {
-      passos.push('reflete no eixo horizontal');
+      passos.push({ chave: 'transf.refleteHorizontal' });
     }
   }
 
   if (t.k !== 0) {
-    passos.push(`desloca ${formatarEmTexto(Math.abs(t.k))} para ${t.k > 0 ? 'cima' : 'baixo'}`);
+    passos.push({
+      chave: t.k > 0 ? 'transf.deslocaCima' : 'transf.deslocaBaixo',
+      valores: { quanto: formatarEmTexto(Math.abs(t.k)) },
+    });
   }
 
-  return passos.length === 0 ? ['não muda nada'] : passos;
+  return passos.length === 0 ? [{ chave: 'transf.nadaMuda' }] : passos;
+}
+
+/** As mesmas frases em português, para o gerador de exercícios. */
+const EM_PORTUGUES: Readonly<Record<string, (v: Record<string, string | number>) => string>> = {
+  'transf.comprimeHorizontal': (v) => `comprime na horizontal por um fator ${v['fator']}`,
+  'transf.esticaHorizontal': (v) => `estica na horizontal por um fator ${v['fator']}`,
+  'transf.refleteVertical': () => 'reflete no eixo vertical',
+  'transf.deslocaDireita': (v) => `desloca ${v['quanto']} para a direita`,
+  'transf.deslocaEsquerda': (v) => `desloca ${v['quanto']} para a esquerda`,
+  'transf.esticaVertical': (v) => `estica na vertical por um fator ${v['fator']}`,
+  'transf.comprimeVertical': (v) => `comprime na vertical por um fator ${v['fator']}`,
+  'transf.refleteHorizontal': () => 'reflete no eixo horizontal',
+  'transf.deslocaCima': (v) => `desloca ${v['quanto']} para cima`,
+  'transf.deslocaBaixo': (v) => `desloca ${v['quanto']} para baixo`,
+  'transf.nadaMuda': () => 'não muda nada',
+};
+
+/** A descrição em palavras, na ordem em que as transformações se aplicam. */
+export function descreverTransformacao(t: Transformacao): readonly string[] {
+  return passosDaTransformacao(t).map((passo) => EM_PORTUGUES[passo.chave]!(passo.valores ?? {}));
 }
 
 /**

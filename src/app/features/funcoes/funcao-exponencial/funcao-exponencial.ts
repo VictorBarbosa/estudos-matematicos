@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/funcao-exponencial/funcao-exponencial.i18n.json';
 import { geradorExponencial } from '@features/funcoes/funcao-exponencial/funcao-exponencial.gerador';
 import { TEORIA_EXPONENCIAL } from '@features/funcoes/funcao-exponencial/funcao-exponencial.teoria';
 
@@ -31,6 +34,8 @@ const BASES = [0.2, 0.5, 1.5, 2, 2.718, 3, 5, 10] as const;
   styleUrl: './funcao-exponencial.scss',
 })
 export class FuncaoExponencial {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorExponencial;
   protected readonly conceitos = TEORIA_EXPONENCIAL.map((teoria) => teoria.id);
   protected readonly bases = BASES;
@@ -51,9 +56,9 @@ export class FuncaoExponencial {
   );
 
   protected readonly comportamento = computed(() =>
-    this.resultado().crescente
-      ? `Crescimento: a cada passo o valor é multiplicado por ${formatar(this.base())}.`
-      : `Decaimento: a cada passo o valor é multiplicado por ${formatar(this.base())}, ou seja, diminui.`,
+    this.texto(this.resultado().crescente ? 'crescimento' : 'decaimento', {
+      base: formatar(this.base()),
+    }),
   );
 
   /**
@@ -68,12 +73,12 @@ export class FuncaoExponencial {
     const taxaLinear = inicial * (base - 1);
 
     return [
-      { fn: (x) => inicial * base ** x, cor: 'serie-1', rotulo: 'exponencial' },
+      { fn: (x) => inicial * base ** x, cor: 'serie-1', rotulo: this.texto('curvaExponencial') },
       {
         fn: (x) => inicial + taxaLinear * x,
         cor: 'serie-2',
         tracejada: true,
-        rotulo: 'reta de mesma taxa inicial',
+        rotulo: this.texto('curvaReta'),
       },
     ];
   });
@@ -102,10 +107,8 @@ export class FuncaoExponencial {
 
   protected readonly dominio = computed(() => ({ xMin: -3, xMax: 4 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Curva exponencial de base ${formatar(this.base())} comparada a uma reta de mesma taxa ` +
-      'inicial; a exponencial se afasta rapidamente.',
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { base: formatar(this.base()) }),
   );
 
   constructor() {

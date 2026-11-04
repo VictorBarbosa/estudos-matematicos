@@ -51,9 +51,7 @@ describe('geradorAfim', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('eixo VERTICAL')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('eixo VERTICAL'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('eixo VERTICAL'))!;
 
     const resultado = corrigir(geradorAfim, exercicio, armadilha.resposta.toString());
     expect(resultado.veredito).toBe('incorreto');

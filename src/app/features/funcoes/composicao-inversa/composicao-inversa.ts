@@ -9,6 +9,8 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/composicao-inversa/composicao-inversa.i18n.json';
 import { geradorComposicao } from '@features/funcoes/composicao-inversa/composicao-inversa.gerador';
 import { TEORIA_COMPOSICAO } from '@features/funcoes/composicao-inversa/composicao-inversa.teoria';
 
@@ -30,6 +32,7 @@ type Aba = 'composicao' | 'inversa';
   styleUrl: './composicao-inversa.scss',
 })
 export class ComposicaoInversa {
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorComposicao;
   protected readonly conceitos = TEORIA_COMPOSICAO.map((teoria) => teoria.id);
 
@@ -40,8 +43,14 @@ export class ComposicaoInversa {
 
   protected readonly foco = signal<Aba>('composicao');
 
-  protected readonly f = computed<Afim>(() => ({ a: this.fa() === 0 ? 1 : this.fa(), b: this.fb() }));
-  protected readonly g = computed<Afim>(() => ({ a: this.ga() === 0 ? 1 : this.ga(), b: this.gb() }));
+  protected readonly f = computed<Afim>(() => ({
+    a: this.fa() === 0 ? 1 : this.fa(),
+    b: this.fb(),
+  }));
+  protected readonly g = computed<Afim>(() => ({
+    a: this.ga() === 0 ? 1 : this.ga(),
+    b: this.gb(),
+  }));
 
   protected readonly fTex = computed(() => afimParaTex(this.f(), 'f'));
   protected readonly gTex = computed(() => afimParaTex(this.g(), 'g'));
@@ -66,7 +75,7 @@ export class ComposicaoInversa {
       return [
         { fn: (x) => f.a * x + f.b, cor: 'serie-1', rotulo: 'f' },
         { fn: (x) => inversa.a * x + inversa.b, cor: 'serie-2', rotulo: 'f⁻¹' },
-        { fn: (x) => x, cor: 'texto-suave', tracejada: true, rotulo: 'y = x (espelho)' },
+        { fn: (x) => x, cor: 'texto-suave', tracejada: true, rotulo: this.texto('curvaEspelho') },
       ];
     }
 
@@ -101,9 +110,7 @@ export class ComposicaoInversa {
   protected readonly dominio = computed(() => ({ xMin: -8, xMax: 8, yMin: -8, yMax: 8 }));
 
   protected readonly descricaoGrafico = computed(() =>
-    this.foco() === 'inversa'
-      ? 'Função e sua inversa, espelhadas pela reta y igual a x.'
-      : 'As duas composições possíveis, f composta com g e g composta com f, em geral distintas.',
+    this.texto(this.foco() === 'inversa' ? 'descricaoInversa' : 'descricaoComposicao'),
   );
 
   constructor() {

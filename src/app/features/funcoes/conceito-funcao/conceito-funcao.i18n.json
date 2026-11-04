@@ -1,0 +1,73 @@
+{
+  "relacaoATestar": {
+    "pt": "Relação a testar",
+    "fr": "Relation à tester",
+    "en": "Relation to test"
+  },
+  "ehFuncao": { "pt": "É função", "fr": "C’est une fonction", "en": "It is a function" },
+  "naoEhFuncao": {
+    "pt": "Não é função",
+    "fr": "Ce n’est pas une fonction",
+    "en": "Not a function"
+  },
+  "reta.explicacao": {
+    "pt": "Qualquer vertical cruza a reta exatamente uma vez. É função.",
+    "fr": "Toute verticale croise la droite exactement une fois. C’est une fonction.",
+    "en": "Any vertical line crosses the line exactly once. It is a function."
+  },
+  "parabola.explicacao": {
+    "pt": "Duas entradas diferentes podem dar a mesma saída — e isso é permitido. O que não pode é uma entrada com duas saídas.",
+    "fr": "Deux entrées différentes peuvent donner la même sortie — et c’est permis. Ce qui est interdit, c’est une entrée avec deux sorties.",
+    "en": "Two different inputs may give the same output — and that is allowed. What is not allowed is one input with two outputs."
+  },
+  "raiz.explicacao": {
+    "pt": "Para cada x positivo há dois valores de y, um positivo e outro negativo. A vertical corta o gráfico duas vezes: NÃO é função de x.",
+    "fr": "Pour chaque x positif il y a deux valeurs de y, l’une positive et l’autre négative. La verticale coupe le graphique deux fois : ce N’EST PAS une fonction de x.",
+    "en": "For each positive x there are two values of y, one positive and one negative. The vertical line cuts the graph twice: it is NOT a function of x."
+  },
+  "circulo.explicacao": {
+    "pt": "A circunferência falha no teste da reta vertical em quase todo ponto: NÃO é função.",
+    "fr": "Le cercle échoue au test de la droite verticale presque partout : ce N’EST PAS une fonction.",
+    "en": "The circle fails the vertical line test almost everywhere: it is NOT a function."
+  },
+  "posicaoDaReta": {
+    "pt": "Posição da reta vertical",
+    "fr": "Position de la droite verticale",
+    "en": "Position of the vertical line"
+  },
+  "dicaPosicao": {
+    "pt": "Arraste e conte quantas vezes ela corta o gráfico.",
+    "fr": "Faites-la glisser et comptez combien de fois elle coupe le graphique.",
+    "en": "Drag it and count how many times it cuts the graph."
+  },
+  "testeDaReta": {
+    "pt": "O teste da reta vertical",
+    "fr": "Le test de la droite verticale",
+    "en": "The vertical line test"
+  },
+  "vereditoVarios": {
+    "pt": "A vertical corta {cortes} vezes: aqui a relação NÃO é função.",
+    "fr": "La verticale coupe {cortes} fois : ici la relation N’EST PAS une fonction.",
+    "en": "The vertical line cuts {cortes} times: here the relation is NOT a function."
+  },
+  "vereditoUm": {
+    "pt": "A vertical corta uma única vez neste ponto.",
+    "fr": "La verticale ne coupe qu’une seule fois en ce point.",
+    "en": "The vertical line cuts just once at this point."
+  },
+  "vereditoNenhum": {
+    "pt": "A vertical não encontra o gráfico: este x está fora do domínio.",
+    "fr": "La verticale ne rencontre pas le graphique : ce x est hors du domaine.",
+    "en": "The vertical line misses the graph: this x is outside the domain."
+  },
+  "descricaoGrafico": {
+    "pt": "Gráfico de {relacao} com uma reta vertical de teste em x igual a {x}, que o encontra {cortes} vez(es).",
+    "fr": "Graphique de {relacao} avec une droite verticale de test en x égal à {x}, qui le rencontre {cortes} fois.",
+    "en": "Graph of {relacao} with a test vertical line at x equal to {x}, meeting it {cortes} time(s)."
+  },
+  "aRegraESimples": {
+    "pt": "A regra é simples: se existe alguma posição em que a vertical corta o gráfico mais de uma vez, aquela entrada teria duas saídas — e a relação deixa de ser função.",
+    "fr": "La règle est simple : s’il existe une position où la verticale coupe le graphique plus d’une fois, cette entrée aurait deux sorties — et la relation cesse d’être une fonction.",
+    "en": "The rule is simple: if there is any position where the vertical line cuts the graph more than once, that input would have two outputs — and the relation stops being a function."
+  }
+}

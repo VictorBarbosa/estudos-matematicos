@@ -84,9 +84,7 @@ describe('geradorFuncoesPorPartes', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('elas se revezam')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('elas se revezam'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('elas se revezam'))!;
     const resultado = corrigir(
       geradorFuncoesPorPartes,
       exercicio,
@@ -152,11 +150,7 @@ describe('funções por partes', () => {
   });
 
   it('a constante que cola sai de uma equação só', () => {
-    const { resultado } = parametroQueColaComPassos(
-      Polinomio.de(1, 2),
-      Polinomio.de(0, 1),
-      3,
-    );
+    const { resultado } = parametroQueColaComPassos(Polinomio.de(1, 2), Polinomio.de(0, 1), 3);
 
     // Esquerda vale 7, direita sem constante vale 3: falta 4.
     expect(resultado).toBe(4);

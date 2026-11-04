@@ -1,0 +1,78 @@
+{
+  "valorInicialA": {
+    "pt": "Valor inicial (a)",
+    "fr": "Valeur initiale (a)",
+    "en": "Initial value (a)"
+  },
+  "baseB": { "pt": "Base (b)", "fr": "Base (b)", "en": "Base (b)" },
+  "dicaBaseDecaimento": {
+    "pt": "Base atual: {base} (decaimento)",
+    "fr": "Base actuelle : {base} (décroissance)",
+    "en": "Current base: {base} (decay)"
+  },
+  "dicaBaseCrescimento": {
+    "pt": "Base atual: {base} (crescimento)",
+    "fr": "Base actuelle : {base} (croissance)",
+    "en": "Current base: {base} (growth)"
+  },
+  "crescimento": {
+    "pt": "Crescimento: a cada passo o valor é multiplicado por {base}.",
+    "fr": "Croissance : à chaque pas la valeur est multipliée par {base}.",
+    "en": "Growth: at each step the value is multiplied by {base}."
+  },
+  "decaimento": {
+    "pt": "Decaimento: a cada passo o valor é multiplicado por {base}, ou seja, diminui.",
+    "fr": "Décroissance : à chaque pas la valeur est multipliée par {base}, donc elle diminue.",
+    "en": "Decay: at each step the value is multiplied by {base}, so it shrinks."
+  },
+  "valorInicial": { "pt": "valor inicial", "fr": "valeur initiale", "en": "initial value" },
+  "dobraEm": { "pt": "Dobra em", "fr": "Double en", "en": "Doubles in" },
+  "caiAMetadeEm": {
+    "pt": "Cai à metade em",
+    "fr": "Diminue de moitié en",
+    "en": "Halves in"
+  },
+  "unidadesDeX": { "pt": "unidades de x", "fr": "unités de x", "en": "units of x" },
+  "raizes": { "pt": "Raízes", "fr": "Racines", "en": "Roots" },
+  "nuncaTocaEixoX": {
+    "pt": "nunca toca o eixo x",
+    "fr": "ne touche jamais l’axe des x",
+    "en": "never touches the x axis"
+  },
+  "exponencialContraReta": {
+    "pt": "Exponencial contra reta",
+    "fr": "Exponentielle contre droite",
+    "en": "Exponential versus line"
+  },
+  "curvaExponencial": { "pt": "exponencial", "fr": "exponentielle", "en": "exponential" },
+  "curvaReta": {
+    "pt": "reta de mesma taxa inicial",
+    "fr": "droite de même taux initial",
+    "en": "line with the same initial rate"
+  },
+  "descricaoGrafico": {
+    "pt": "Curva exponencial de base {base} comparada a uma reta de mesma taxa inicial; a exponencial se afasta rapidamente.",
+    "fr": "Courbe exponentielle de base {base} comparée à une droite de même taux initial ; l’exponentielle s’en écarte rapidement.",
+    "en": "Exponential curve of base {base} compared with a line of the same initial rate; the exponential pulls away quickly."
+  },
+  "aRetaTracejada": {
+    "pt": "A reta tracejada tem a mesma taxa de crescimento da exponencial no primeiro passo. Logo depois elas se separam — e é essa separação que a intuição costuma subestimar.",
+    "fr": "La droite en pointillé a le même taux de croissance que l’exponentielle au premier pas. Juste après, elles se séparent — et c’est cet écart que l’intuition sous-estime d’ordinaire.",
+    "en": "The dashed line has the same growth rate as the exponential at the first step. Right after, they part ways — and it is that gap that intuition usually underrates."
+  },
+  "primeirosValores": {
+    "pt": "Os primeiros valores",
+    "fr": "Les premières valeurs",
+    "en": "The first few values"
+  },
+  "colunaRazao": {
+    "pt": "razão com o anterior",
+    "fr": "rapport avec la précédente",
+    "en": "ratio to the previous"
+  },
+  "aUltimaColuna": {
+    "pt": "A última coluna é sempre a mesma: é isso que define a exponencial. Numa função afim, a coluna constante seria a da DIFERENÇA, não da razão.",
+    "fr": "La dernière colonne est toujours la même : c’est ce qui définit l’exponentielle. Dans une fonction affine, la colonne constante serait celle de la DIFFÉRENCE, pas du rapport.",
+    "en": "The last column is always the same: that is what defines the exponential. In a linear function, the constant column would be the DIFFERENCE, not the ratio."
+  }
+}

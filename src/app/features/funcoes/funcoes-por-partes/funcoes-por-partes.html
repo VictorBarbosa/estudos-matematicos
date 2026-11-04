@@ -1,41 +1,42 @@
 <app-topico-layout topicoId="funcoes-por-partes">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Uma função só, descrita em pedaços</h2>
+      <h2>{{ texto('umaFuncaoSo') }}</h2>
       <app-formula
         [tex]="'f(x) = \\begin{cases} 2x + 1, & x < 3 \\\\ x^{2}, & x \\geq 3 \\end{cases}'"
         [bloco]="true"
       />
-      <p class="observacao">
-        É a forma natural de descrever qualquer coisa que muda de regime: uma tarifa com faixas,
-        um imposto progressivo, o empuxo de um foguete antes e depois da separação do estágio.
-        Dentro de cada trecho é uma função comum — a matemática nova está toda nas fronteiras.
-      </p>
+      <p class="observacao">{{ texto('eAFormaNatural') }}</p>
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="fronteira" rotulo="Fronteira" [min]="-4" [max]="4" />
+      <app-controle-parametro
+        [(valor)]="fronteira"
+        [rotulo]="texto('fronteira')"
+        [min]="-4"
+        [max]="4"
+      />
       <app-controle-parametro
         [(valor)]="inclinacaoEsquerda"
-        rotulo="Inclinação à esquerda"
+        [rotulo]="texto('inclinacaoEsquerda')"
         [min]="-4"
         [max]="4"
       />
       <app-controle-parametro
         [(valor)]="constanteEsquerda"
-        rotulo="Constante à esquerda"
+        [rotulo]="texto('constanteEsquerda')"
         [min]="-6"
         [max]="6"
       />
       <app-controle-parametro
         [(valor)]="inclinacaoDireita"
-        rotulo="Inclinação à direita"
+        [rotulo]="texto('inclinacaoDireita')"
         [min]="-4"
         [max]="4"
       />
       <app-controle-parametro
         [(valor)]="constanteDireita"
-        rotulo="Constante à direita"
+        [rotulo]="texto('constanteDireita')"
         [min]="-6"
         [max]="6"
       />
@@ -47,32 +48,34 @@
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">Limite pela esquerda</span>
+        <span class="rotulo">{{ texto('limitePelaEsquerda') }}</span>
         <strong>{{ formatar(esquerda()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Limite pela direita</span>
+        <span class="rotulo">{{ texto('limitePelaDireita') }}</span>
         <strong>{{ formatar(direita()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Valor na fronteira</span>
+        <span class="rotulo">{{ texto('valorNaFronteira') }}</span>
         <strong>{{ formatar(valor()) }}</strong>
-        <span class="legenda">o trecho com o sinal de igual</span>
+        <span class="legenda">{{ texto('trechoComIgual') }}</span>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Salto</span>
+        <span class="rotulo">{{ texto('salto') }}</span>
         <strong>{{ formatar(salto()) }}</strong>
-        <span class="legenda">{{ continua() ? 'contínua aqui' : 'descontinuidade de salto' }}</span>
+        <span class="legenda">
+          {{ continua() ? texto('continuaAqui') : texto('descontinuidade') }}
+        </span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Constante que colaria</span>
+        <span class="rotulo">{{ texto('constanteQueColaria') }}</span>
         <strong>{{ formatar(constanteQueCola()) }}</strong>
-        <span class="legenda">no lugar da constante à direita</span>
+        <span class="legenda">{{ texto('noLugarDaConstante') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>As duas pontas, e o que acontece entre elas</h2>
+      <h2>{{ texto('asDuasPontas') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -80,24 +83,16 @@
         [descricao]="descricaoGrafico()"
         [altura]="380"
       />
-      <p class="observacao">
-        Mexa na constante à direita até o salto zerar: nesse valor exato as duas pontas se
-        encontram e o gráfico fica inteiro, sem precisar tirar o lápis do papel. Qualquer outro
-        valor deixa um degrau que nenhum ajuste no ponto consegue remover.
-      </p>
+      <p class="observacao">{{ texto('mexaNaConstante') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Três números, não um</h2>
+      <h2>{{ texto('tresNumeros') }}</h2>
       <app-formula
         [tex]="'\\lim_{x \\to a^{-}} f(x) \\qquad \\lim_{x \\to a^{+}} f(x) \\qquad f(a)'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Na fronteira há três coisas distintas a calcular, e elas podem discordar. Os limites
-        usam as expressões vizinhas; o valor usa a expressão cuja condição inclui o sinal de
-        igual. A função é contínua ali exatamente quando os três coincidem.
-      </p>
+      <p class="observacao">{{ texto('naFronteiraHaTres') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

@@ -11,7 +11,10 @@ export const TEORIA_CONCEITO: readonly Teoria[] = [
       'duas saídas. O contrário é permitido — duas entradas podem levar à mesma saída.',
     formulas: [
       { tex: 'f: A \\to B', legenda: 'A é o domínio, B é o contradomínio.' },
-      { tex: 'x_1 = x_2 \\;\\Rightarrow\\; f(x_1) = f(x_2)', legenda: 'Mesma entrada, mesma saída.' },
+      {
+        tex: 'x_1 = x_2 \\;\\Rightarrow\\; f(x_1) = f(x_2)',
+        legenda: 'Mesma entrada, mesma saída.',
+      },
     ],
     demonstracao: [
       {
@@ -48,8 +51,14 @@ export const TEORIA_CONCEITO: readonly Teoria[] = [
       'subconjunto do contradomínio, podendo ser menor que ele.',
     formulas: [
       { tex: '\\operatorname{Im}(f) = \\{f(x) \\mid x \\in D\\} \\subseteq B' },
-      { tex: 'f(x) = \\frac{1}{x} \\;\\Rightarrow\\; D = \\mathbb{R} - \\{0\\}', legenda: 'Divisão por zero exclui o zero.' },
-      { tex: 'f(x) = \\sqrt{x} \\;\\Rightarrow\\; D = [0, +\\infty)', legenda: 'Raiz par exige radicando não negativo.' },
+      {
+        tex: 'f(x) = \\frac{1}{x} \\;\\Rightarrow\\; D = \\mathbb{R} - \\{0\\}',
+        legenda: 'Divisão por zero exclui o zero.',
+      },
+      {
+        tex: 'f(x) = \\sqrt{x} \\;\\Rightarrow\\; D = [0, +\\infty)',
+        legenda: 'Raiz par exige radicando não negativo.',
+      },
     ],
     demonstracao: [
       {
@@ -84,7 +93,9 @@ export const TEORIA_CONCEITO: readonly Teoria[] = [
       'no máximo uma vez. Dois encontros significariam duas saídas para a mesma entrada — e ' +
       'isso violaria a definição.',
     formulas: [
-      { tex: '\\text{reta } x = a \\text{ corta o gráfico} \\leq 1 \\text{ vez} \\iff \\text{é função}' },
+      {
+        tex: '\\text{reta } x = a \\text{ corta o gráfico} \\leq 1 \\text{ vez} \\iff \\text{é função}',
+      },
     ],
     demonstracao: [
       {
@@ -106,7 +117,10 @@ export const TEORIA_CONCEITO: readonly Teoria[] = [
       passos: [
         { descricao: 'Isolando y aparecem dois valores.', tex: 'y = \\pm\\sqrt{x}' },
         { descricao: 'Para x = 9, por exemplo.', tex: 'y = 3 \\;\\text{e}\\; y = -3' },
-        { descricao: 'Uma entrada com duas saídas quebra a definição.', tex: '\\text{não é função}' },
+        {
+          descricao: 'Uma entrada com duas saídas quebra a definição.',
+          tex: '\\text{não é função}',
+        },
       ],
     },
     vejaTambem: ['conceito.definicao', 'conceito.dominio'],

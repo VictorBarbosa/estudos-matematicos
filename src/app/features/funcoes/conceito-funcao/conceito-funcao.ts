@@ -11,17 +11,19 @@ import {
   PontoPlot,
   SegmentoPlot,
 } from '@shared/components/math-plot/models/math-plot.model';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/funcoes/conceito-funcao/conceito-funcao.i18n.json';
 import { geradorConceito } from '@features/funcoes/conceito-funcao/conceito-funcao.gerador';
 import { TEORIA_CONCEITO } from '@features/funcoes/conceito-funcao/conceito-funcao.teoria';
 
 interface Relacao {
+  /** Também é a chave da explicação no dicionário do tópico. */
   readonly id: string;
   readonly rotulo: string;
   readonly tex: string;
   readonly ehFuncao: boolean;
   /** Relações que não são função precisam de dois ramos para serem desenhadas. */
   readonly ramos: readonly ((x: number) => number)[];
-  readonly explicacao: string;
 }
 
 const RELACOES: readonly Relacao[] = [
@@ -31,7 +33,6 @@ const RELACOES: readonly Relacao[] = [
     tex: 'y = 2x + 1',
     ehFuncao: true,
     ramos: [(x) => 2 * x + 1],
-    explicacao: 'Qualquer vertical cruza a reta exatamente uma vez. É função.',
   },
   {
     id: 'parabola',
@@ -39,19 +40,16 @@ const RELACOES: readonly Relacao[] = [
     tex: 'y = x^{2}',
     ehFuncao: true,
     ramos: [(x) => x * x],
-    explicacao:
-      'Duas entradas diferentes podem dar a mesma saída — e isso é permitido. O que não pode ' +
-      'é uma entrada com duas saídas.',
   },
   {
     id: 'raiz',
     rotulo: 'y² = x',
     tex: 'y^{2} = x',
     ehFuncao: false,
-    ramos: [(x) => (x < 0 ? Number.NaN : Math.sqrt(x)), (x) => (x < 0 ? Number.NaN : -Math.sqrt(x))],
-    explicacao:
-      'Para cada x positivo há dois valores de y, um positivo e outro negativo. A vertical ' +
-      'corta o gráfico duas vezes: NÃO é função de x.',
+    ramos: [
+      (x) => (x < 0 ? Number.NaN : Math.sqrt(x)),
+      (x) => (x < 0 ? Number.NaN : -Math.sqrt(x)),
+    ],
   },
   {
     id: 'circulo',
@@ -62,26 +60,18 @@ const RELACOES: readonly Relacao[] = [
       (x) => (Math.abs(x) > 5 ? Number.NaN : Math.sqrt(25 - x * x)),
       (x) => (Math.abs(x) > 5 ? Number.NaN : -Math.sqrt(25 - x * x)),
     ],
-    explicacao:
-      'A circunferência falha no teste da reta vertical em quase todo ponto: NÃO é função.',
   },
 ];
 
 @Component({
   selector: 'app-conceito-funcao',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    MathPlot,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, MathPlot, TopicoLayout],
   templateUrl: './conceito-funcao.html',
   styleUrl: './conceito-funcao.scss',
 })
 export class ConceitoFuncao {
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorConceito;
   protected readonly conceitos = TEORIA_CONCEITO.map((teoria) => teoria.id);
   protected readonly relacoes = RELACOES;
@@ -127,20 +117,19 @@ export class ConceitoFuncao {
     const cortes = this.quantidadeDeCortes();
 
     if (cortes > 1) {
-      return `A vertical corta ${cortes} vezes: aqui a relação NÃO é função.`;
+      return this.texto('vereditoVarios', { cortes });
     }
-    if (cortes === 1) {
-      return 'A vertical corta uma única vez neste ponto.';
-    }
-    return 'A vertical não encontra o gráfico: este x está fora do domínio.';
+    return this.texto(cortes === 1 ? 'vereditoUm' : 'vereditoNenhum');
   });
 
   protected readonly dominio = computed(() => ({ xMin: -8, xMax: 8, yMin: -8, yMax: 8 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Gráfico de ${this.relacao().rotulo} com uma reta vertical de teste em x igual a ` +
-      `${this.posicaoTeste()}, que o encontra ${this.quantidadeDeCortes()} vez(es).`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      relacao: this.relacao().rotulo,
+      x: this.posicaoTeste(),
+      cortes: this.quantidadeDeCortes(),
+    }),
   );
 
   constructor() {

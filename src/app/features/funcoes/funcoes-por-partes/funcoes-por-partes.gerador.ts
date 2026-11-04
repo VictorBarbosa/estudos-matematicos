@@ -15,7 +15,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de função definida por partes.
@@ -64,11 +70,7 @@ export const geradorFuncoesPorPartes: GeradorExercicio<number> = {
 };
 
 /** Monta uma função de dois trechos com fronteira e coeficientes dados. */
-function montarFuncao(
-  esquerda: Polinomio,
-  direita: Polinomio,
-  fronteira: number,
-): FuncaoPorPartes {
+function montarFuncao(esquerda: Polinomio, direita: Polinomio, fronteira: number): FuncaoPorPartes {
   return {
     trechos: [
       {
@@ -190,9 +192,7 @@ function doLateral(nivel: Nivel, rng: Rng): Exercicio<number> {
   const pelaEsquerda = rng.booleano();
 
   const f = montarFuncao(esquerda, direita, fronteira);
-  const gabarito = pelaEsquerda
-    ? limiteEsquerda(f, fronteira)
-    : limiteDireita(f, fronteira);
+  const gabarito = pelaEsquerda ? limiteEsquerda(f, fronteira) : limiteDireita(f, fronteira);
 
   return montar({
     chave: `lat-${fronteira}-${pelaEsquerda}-${esquerda.toString()}-${direita.toString()}`,
@@ -235,8 +235,7 @@ function daColagem(nivel: Nivel, rng: Rng): Exercicio<number> {
   const esquerda = Polinomio.de(rng.inteiro(-6, 6), rng.inteiro(-4, 4) || 2);
   const direitaSemConstante = Polinomio.de(0, rng.inteiro(-4, 4) || -3);
 
-  const gabarito =
-    esquerda.avaliar(fronteira) - direitaSemConstante.avaliar(fronteira);
+  const gabarito = esquerda.avaliar(fronteira) - direitaSemConstante.avaliar(fronteira);
 
   const comConstante = direitaSemConstante.somar(Polinomio.de(gabarito));
   const f = montarFuncao(esquerda, comConstante, fronteira);
@@ -245,8 +244,7 @@ function daColagem(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `col-${fronteira}-${esquerda.toString()}-${direitaSemConstante.toString()}`,
     nivel,
     rng,
-    enunciado:
-      `Qual valor da constante c torna esta função contínua em x = ${fronteira}? ${PEDIDO}`,
+    enunciado: `Qual valor da constante c torna esta função contínua em x = ${fronteira}? ${PEDIDO}`,
     enunciadoTex:
       `f(x) = \\begin{cases} ${esquerda.paraTex()}, & x < ${fronteira} \\\\ ` +
       `${direitaSemConstante.paraTex()} + c, & x \\geq ${fronteira} \\end{cases}`,

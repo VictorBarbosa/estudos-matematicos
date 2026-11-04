@@ -1,0 +1,75 @@
+{
+  "retaHorizontal": {
+    "pt": "Reta horizontal y = k",
+    "fr": "Droite horizontale y = k",
+    "en": "Horizontal line y = k"
+  },
+  "dicaK": {
+    "pt": "Experimente k negativo.",
+    "fr": "Essayez un k négatif.",
+    "en": "Try a negative k."
+  },
+  "bicoDoV": { "pt": "Bico do V", "fr": "Pointe du V", "en": "Corner of the V" },
+  "ondeInteriorZera": {
+    "pt": "onde o interior zera",
+    "fr": "là où l’intérieur s’annule",
+    "en": "where the inside vanishes"
+  },
+  "solucoesDe": {
+    "pt": "Soluções de |…| = {k}",
+    "fr": "Solutions de |…| = {k}",
+    "en": "Solutions of |…| = {k}"
+  },
+  "nuncaNegativo": {
+    "pt": "módulo nunca é negativo",
+    "fr": "la valeur absolue n’est jamais négative",
+    "en": "absolute value is never negative"
+  },
+  "passaPeloBico": {
+    "pt": "a reta passa pelo bico",
+    "fr": "la droite passe par la pointe",
+    "en": "the line goes through the corner"
+  },
+  "umDeCadaLado": {
+    "pt": "um de cada lado",
+    "fr": "un de chaque côté",
+    "en": "one on each side"
+  },
+  "oVEaReta": {
+    "pt": "O V e a reta original",
+    "fr": "Le V et la droite d’origine",
+    "en": "The V and the original line"
+  },
+  "esconderReta": {
+    "pt": "Esconder a reta sem módulo",
+    "fr": "Masquer la droite sans valeur absolue",
+    "en": "Hide the line without the absolute value"
+  },
+  "mostrarReta": {
+    "pt": "Mostrar a reta sem módulo",
+    "fr": "Afficher la droite sans valeur absolue",
+    "en": "Show the line without the absolute value"
+  },
+  "curvaModulo": { "pt": "|ax + b|", "fr": "|ax + b|", "en": "|ax + b|" },
+  "curvaK": { "pt": "y = {k}", "fr": "y = {k}", "en": "y = {k}" },
+  "curvaSemModulo": {
+    "pt": "ax + b (sem módulo)",
+    "fr": "ax + b (sans valeur absolue)",
+    "en": "ax + b (no absolute value)"
+  },
+  "pontoBico": {
+    "pt": "bico em {x}",
+    "fr": "pointe en {x}",
+    "en": "corner at {x}"
+  },
+  "descricaoGrafico": {
+    "pt": "Gráfico em V com bico em x igual a {x}, cortado pela reta horizontal y igual a {k} em {quantos} ponto(s).",
+    "fr": "Graphique en V avec une pointe en x égal à {x}, coupé par la droite horizontale y égale à {k} en {quantos} point(s).",
+    "en": "V-shaped graph with its corner at x equal to {x}, cut by the horizontal line y equal to {k} at {quantos} point(s)."
+  },
+  "aRetaTracejada": {
+    "pt": "A reta tracejada é ax + b sem o módulo. Onde ela desce abaixo do eixo, o módulo a espelha para cima — e é desse espelhamento que nasce o V.",
+    "fr": "La droite en pointillé est ax + b sans la valeur absolue. Là où elle descend sous l’axe, la valeur absolue la rabat vers le haut — et c’est de ce rabattement que naît le V.",
+    "en": "The dashed line is ax + b without the absolute value. Where it drops below the axis, the absolute value flips it up — and that flip is what makes the V."
+  }
+}

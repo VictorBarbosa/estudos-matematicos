@@ -12,7 +12,10 @@ export const TEORIA_LOGARITMICA: readonly Teoria[] = [
       'leva b até x?". As duas dizem a mesma coisa de trás para frente.',
     formulas: [
       { tex: '\\log_b x = y \\iff b^{y} = x' },
-      { tex: '\\log_b 1 = 0 \\qquad \\log_b b = 1', legenda: 'Dois valores que saem direto da definição.' },
+      {
+        tex: '\\log_b 1 = 0 \\qquad \\log_b b = 1',
+        legenda: 'Dois valores que saem direto da definição.',
+      },
     ],
     demonstracao: [
       {

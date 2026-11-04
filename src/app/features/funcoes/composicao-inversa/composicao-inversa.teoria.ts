@@ -45,7 +45,10 @@ export const TEORIA_COMPOSICAO: readonly Teoria[] = [
       'os nomes das variáveis.',
     formulas: [
       { tex: 'f^{-1}(f(x)) = x \\qquad f(f^{-1}(x)) = x' },
-      { tex: 'f^{-1} \\neq \\frac{1}{f}', legenda: 'O expoente −1 aqui NÃO significa inverso multiplicativo.' },
+      {
+        tex: 'f^{-1} \\neq \\frac{1}{f}',
+        legenda: 'O expoente −1 aqui NÃO significa inverso multiplicativo.',
+      },
     ],
     demonstracao: [
       {
