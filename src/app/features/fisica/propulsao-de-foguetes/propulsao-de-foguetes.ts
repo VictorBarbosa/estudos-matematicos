@@ -13,6 +13,9 @@ import {
   PontoPlot,
 } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.i18n.json';
 import { geradorPropulsao } from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.gerador';
 import { TEORIA_PROPULSAO } from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.teoria';
 
@@ -40,6 +43,8 @@ const MISSOES: readonly { readonly nome: string; readonly deltaV: number }[] = [
   styleUrl: './propulsao-de-foguetes.scss',
 })
 export class PropulsaoDeFoguetes {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorPropulsao;
   protected readonly conceitos = TEORIA_PROPULSAO.map((teoria) => teoria.id);
   protected readonly missoes = MISSOES;
@@ -93,9 +98,9 @@ export class PropulsaoDeFoguetes {
         fn: (fracao) =>
           fracao <= 0 || fracao >= 0.999 ? Number.NaN : (ve * Math.log(1 / (1 - fracao))) / 1000,
         cor: 'serie-1',
-        rotulo: 'Δv disponível',
+        rotulo: this.texto('curvaDeltaV'),
       },
-      { fn: () => 9.4, cor: 'erro', tracejada: true, rotulo: 'órbita baixa (9,4 km/s)' },
+      { fn: () => 9.4, cor: 'erro', tracejada: true, rotulo: this.texto('curvaOrbitaBaixa') },
     ];
   });
 

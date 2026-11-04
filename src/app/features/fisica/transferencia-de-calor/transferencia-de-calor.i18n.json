@@ -1,0 +1,93 @@
+{
+  "tresCaminhos": {
+    "pt": "Três caminhos, uma energia",
+    "fr": "Trois chemins, une énergie",
+    "en": "Three paths, one energy"
+  },
+  "conducaoEConveccao": {
+    "pt": "Condução e convecção são lineares na diferença de temperatura. A radiação vai com a QUARTA potência da temperatura absoluta — e é a única que atravessa o vácuo. Num veículo espacial, as duas primeiras praticamente não existem do lado de fora.",
+    "fr": "Conduction et convection sont linéaires en différence de température. Le rayonnement varie comme la QUATRIÈME puissance de la température absolue — et c’est le seul à traverser le vide. Sur un véhicule spatial, les deux premiers n’existent pratiquement pas à l’extérieur.",
+    "en": "Conduction and convection are linear in the temperature difference. Radiation goes with the FOURTH power of the absolute temperature — and it is the only one that crosses vacuum. On a spacecraft, the first two barely exist on the outside."
+  },
+  "materialEscolha": {
+    "pt": "Material (0 cobre · 2 aço · 6 lã de vidro)",
+    "fr": "Matériau (0 cuivre · 2 acier · 6 laine de verre)",
+    "en": "Material (0 copper · 2 steel · 6 glass wool)"
+  },
+  "espessuraCm": {
+    "pt": "Espessura (cm)",
+    "fr": "Épaisseur (cm)",
+    "en": "Thickness (cm)"
+  },
+  "areaM2": { "pt": "Área (m²)", "fr": "Surface (m²)", "en": "Area (m²)" },
+  "diferencaDeTemperatura": {
+    "pt": "Diferença de temperatura (K)",
+    "fr": "Différence de température (K)",
+    "en": "Temperature difference (K)"
+  },
+  "coeficienteConveccao": {
+    "pt": "Coeficiente de convecção",
+    "fr": "Coefficient de convection",
+    "en": "Convection coefficient"
+  },
+  "emissividade": {
+    "pt": "Emissividade, em décimos",
+    "fr": "Émissivité, en dixièmes",
+    "en": "Emissivity, in tenths"
+  },
+  "conducao": { "pt": "Condução", "fr": "Conduction", "en": "Conduction" },
+  "conveccao": { "pt": "Convecção", "fr": "Convection", "en": "Convection" },
+  "radiacao": { "pt": "Radiação", "fr": "Rayonnement", "en": "Radiation" },
+  "aKelvin": { "pt": "a {valor} K", "fr": "à {valor} K", "en": "at {valor} K" },
+  "resistenciaTermica": {
+    "pt": "Resistência térmica",
+    "fr": "Résistance thermique",
+    "en": "Thermal resistance"
+  },
+  "camadasEmSerie": {
+    "pt": "camadas em série somam",
+    "fr": "les couches en série s’additionnent",
+    "en": "layers in series add up"
+  },
+  "quatroOrdens": {
+    "pt": "Quatro ordens de grandeza",
+    "fr": "Quatre ordres de grandeur",
+    "en": "Four orders of magnitude"
+  },
+  "entreOCobre": {
+    "pt": "Entre o cobre e o ar parado a condutividade varia por um fator de quinze mil. É essa diferença que faz um metal esfriar a mão depressa e a madeira, na mesma temperatura, parecer morna — a sensação mede fluxo, não temperatura.",
+    "fr": "Entre le cuivre et l’air immobile, la conductivité varie d’un facteur quinze mille. C’est cette différence qui fait qu’un métal refroidit vite la main et que le bois, à la même température, semble tiède — la sensation mesure un flux, pas une température.",
+    "en": "Between copper and still air the conductivity varies by a factor of fifteen thousand. It is that difference that makes metal chill the hand quickly while wood, at the same temperature, feels warm — the sensation measures flux, not temperature."
+  },
+  "ondeARadiacao": {
+    "pt": "Onde a radiação ultrapassa tudo",
+    "fr": "Là où le rayonnement dépasse tout",
+    "en": "Where radiation overtakes everything"
+  },
+  "curvaRadiacao": { "pt": "radiação", "fr": "rayonnement", "en": "radiation" },
+  "curvaConveccao": {
+    "pt": "convecção (linear)",
+    "fr": "convection (linéaire)",
+    "en": "convection (linear)"
+  },
+  "descricaoGrafico": {
+    "pt": "Potência emitida em função da temperatura absoluta: a radiação sobe com a quarta potência e, acima de certa temperatura, domina qualquer troca linear.",
+    "fr": "Puissance émise en fonction de la température absolue : le rayonnement croît comme la quatrième puissance et, au-delà d’une certaine température, domine tout échange linéaire.",
+    "en": "Power emitted against absolute temperature: radiation rises with the fourth power and, above a certain temperature, dominates any linear exchange."
+  },
+  "aCurvaDaRadiacao": {
+    "pt": "A curva da radiação é uma quarta potência; a da convecção é uma reta. Em temperatura ambiente a convecção domina, mas acima de algumas centenas de kelvin a radiação passa por cima — e é por isso que um forno aquece por radiação, não por ar quente.",
+    "fr": "La courbe du rayonnement est une puissance quatre ; celle de la convection est une droite. À température ambiante la convection domine, mais au-delà de quelques centaines de kelvins le rayonnement la dépasse — et c’est pourquoi un four chauffe par rayonnement, non par air chaud.",
+    "en": "The radiation curve is a fourth power; the convection one is a straight line. At room temperature convection dominates, but above a few hundred kelvin radiation takes over — which is why an oven heats by radiation, not by hot air."
+  },
+  "kelvinNaoCelsius": {
+    "pt": "Kelvin, não Celsius",
+    "fr": "Kelvin, pas Celsius",
+    "en": "Kelvin, not Celsius"
+  },
+  "emConducaoEConveccao": {
+    "pt": "Em condução e convecção aparece apenas a DIFERENÇA de temperatura, e aí Celsius serve. Na radiação aparece a temperatura absoluta à quarta potência, e usar a escala errada não desloca o resultado por uma constante: multiplica por mais de mil.",
+    "fr": "En conduction et en convection n’intervient que la DIFFÉRENCE de température, et là Celsius suffit. Dans le rayonnement intervient la température absolue à la puissance quatre, et utiliser la mauvaise échelle ne décale pas le résultat d’une constante : elle le multiplie par plus de mille.",
+    "en": "In conduction and convection only the DIFFERENCE in temperature appears, and there Celsius will do. In radiation the absolute temperature appears to the fourth power, and using the wrong scale does not shift the result by a constant: it multiplies it by more than a thousand."
+  }
+}

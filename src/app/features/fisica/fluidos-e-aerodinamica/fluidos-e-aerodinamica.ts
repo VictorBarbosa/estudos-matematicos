@@ -15,6 +15,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.i18n.json';
 import { geradorFluidos } from '@features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.gerador';
 import { TEORIA_FLUIDOS } from '@features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.teoria';
 
@@ -44,6 +47,8 @@ const MATERIAIS: readonly { readonly nome: string; readonly densidade: number }[
   styleUrl: './fluidos-e-aerodinamica.scss',
 })
 export class FluidosEAerodinamica {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorFluidos;
   protected readonly conceitos = TEORIA_FLUIDOS.map((teoria) => teoria.id);
   protected readonly materiais = MATERIAIS;
@@ -89,7 +94,7 @@ export class FluidosEAerodinamica {
     {
       fn: (h) => (h < 0 ? Number.NaN : (101325 + 1000 * 9.81 * h) / 1000),
       cor: 'serie-1',
-      rotulo: 'pressão (kPa)',
+      rotulo: this.texto('curvaPressao'),
     },
   ]);
 
@@ -114,9 +119,9 @@ export class FluidosEAerodinamica {
       {
         fn: (v) => (v < 0 ? Number.NaN : (DENSIDADE_AR * ((v * razao) ** 2 - v ** 2) * area) / 2),
         cor: 'serie-1',
-        rotulo: 'sustentação',
+        rotulo: this.texto('curvaSustentacao'),
       },
-      { fn: () => peso, cor: 'erro', tracejada: true, rotulo: 'peso do avião' },
+      { fn: () => peso, cor: 'erro', tracejada: true, rotulo: this.texto('curvaPeso') },
     ];
   });
 

@@ -22,14 +22,18 @@ import t_cinematica_escalar from '@features/fisica/cinematica-escalar/cinematica
 import t_cinematica_vetorial from '@features/fisica/cinematica-vetorial/cinematica-vetorial.i18n.json';
 import t_dinamica_rotacional from '@features/fisica/dinamica-rotacional/dinamica-rotacional.i18n.json';
 import t_estatica_e_torque from '@features/fisica/estatica-e-torque/estatica-e-torque.i18n.json';
+import t_fluidos_e_aerodinamica from '@features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.i18n.json';
 import t_gravitacao_e_orbitas from '@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.i18n.json';
 import t_impulso_e_momento from '@features/fisica/impulso-e-momento/impulso-e-momento.i18n.json';
 import t_leis_de_newton from '@features/fisica/leis-de-newton/leis-de-newton.i18n.json';
 import t_momento_angular from '@features/fisica/momento-angular/momento-angular.i18n.json';
 import t_movimento_circular from '@features/fisica/movimento-circular/movimento-circular.i18n.json';
 import t_movimento_harmonico from '@features/fisica/movimento-harmonico/movimento-harmonico.i18n.json';
+import t_propulsao_de_foguetes from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.i18n.json';
+import t_termodinamica_e_gases from '@features/fisica/termodinamica-e-gases/termodinamica-e-gases.i18n.json';
 import t_trabalho_e_energia from '@features/fisica/trabalho-e-energia/trabalho-e-energia.i18n.json';
 import t_trajetoria_balistica from '@features/fisica/trajetoria-balistica/trajetoria-balistica.i18n.json';
+import t_transferencia_de_calor from '@features/fisica/transferencia-de-calor/transferencia-de-calor.i18n.json';
 import t_composicao_inversa from '@features/funcoes/composicao-inversa/composicao-inversa.i18n.json';
 import t_conceito_funcao from '@features/funcoes/conceito-funcao/conceito-funcao.i18n.json';
 import t_funcao_afim from '@features/funcoes/funcao-afim/funcao-afim.i18n.json';
@@ -92,14 +96,18 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['cinematica-vetorial', t_cinematica_vetorial as TabelaDeTextos],
   ['dinamica-rotacional', t_dinamica_rotacional as TabelaDeTextos],
   ['estatica-e-torque', t_estatica_e_torque as TabelaDeTextos],
+  ['fluidos-e-aerodinamica', t_fluidos_e_aerodinamica as TabelaDeTextos],
   ['gravitacao-e-orbitas', t_gravitacao_e_orbitas as TabelaDeTextos],
   ['impulso-e-momento', t_impulso_e_momento as TabelaDeTextos],
   ['leis-de-newton', t_leis_de_newton as TabelaDeTextos],
   ['momento-angular', t_momento_angular as TabelaDeTextos],
   ['movimento-circular', t_movimento_circular as TabelaDeTextos],
   ['movimento-harmonico', t_movimento_harmonico as TabelaDeTextos],
+  ['propulsao-de-foguetes', t_propulsao_de_foguetes as TabelaDeTextos],
+  ['termodinamica-e-gases', t_termodinamica_e_gases as TabelaDeTextos],
   ['trabalho-e-energia', t_trabalho_e_energia as TabelaDeTextos],
   ['trajetoria-balistica', t_trajetoria_balistica as TabelaDeTextos],
+  ['transferencia-de-calor', t_transferencia_de_calor as TabelaDeTextos],
   ['composicao-inversa', t_composicao_inversa as TabelaDeTextos],
   ['conceito-funcao', t_conceito_funcao as TabelaDeTextos],
   ['funcao-afim', t_funcao_afim as TabelaDeTextos],

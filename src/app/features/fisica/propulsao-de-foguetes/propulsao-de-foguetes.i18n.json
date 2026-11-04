@@ -1,0 +1,134 @@
+{
+  "massaSeca": { "pt": "Massa seca (t)", "fr": "Masse sèche (t)", "en": "Dry mass (t)" },
+  "dicaMassaSeca": {
+    "pt": "Estrutura, motores e carga útil.",
+    "fr": "Structure, moteurs et charge utile.",
+    "en": "Structure, engines and payload."
+  },
+  "propelenteT": { "pt": "Propelente (t)", "fr": "Ergol (t)", "en": "Propellant (t)" },
+  "velocidadeExaustao": {
+    "pt": "Velocidade de exaustão (m/s)",
+    "fr": "Vitesse d’éjection (m/s)",
+    "en": "Exhaust speed (m/s)"
+  },
+  "vazaoPropelente": {
+    "pt": "Vazão de propelente (kg/s)",
+    "fr": "Débit d’ergol (kg/s)",
+    "en": "Propellant flow rate (kg/s)"
+  },
+  "missao.órbita baixa": {
+    "pt": "órbita baixa",
+    "fr": "orbite basse",
+    "en": "low orbit"
+  },
+  "missao.órbita geoestacionária": {
+    "pt": "órbita geoestacionária",
+    "fr": "orbite géostationnaire",
+    "en": "geostationary orbit"
+  },
+  "missao.pousar na Lua": {
+    "pt": "pousar na Lua",
+    "fr": "atterrir sur la Lune",
+    "en": "landing on the Moon"
+  },
+  "missao.escapar da Terra": {
+    "pt": "escapar da Terra",
+    "fr": "quitter la Terre",
+    "en": "escaping Earth"
+  },
+  "comEsseDeltaV": {
+    "pt": "Com esse delta-v, a missão mais ambiciosa alcançada é: <strong>{missao}</strong>.",
+    "fr": "Avec ce delta-v, la mission la plus ambitieuse atteinte est : <strong>{missao}</strong>.",
+    "en": "With that delta-v, the most ambitious mission reached is: <strong>{missao}</strong>."
+  },
+  "avisoDeltaV": {
+    "pt": "Esse delta-v ainda não chega aos 9,4 km/s necessários para a órbita baixa.",
+    "fr": "Ce delta-v n’atteint pas encore les 9,4 km/s nécessaires pour l’orbite basse.",
+    "en": "That delta-v does not yet reach the 9.4 km/s needed for low orbit."
+  },
+  "deltaV": { "pt": "Delta-v", "fr": "Delta-v", "en": "Delta-v" },
+  "razaoDeMassas": {
+    "pt": "Razão de massas",
+    "fr": "Rapport de masses",
+    "en": "Mass ratio"
+  },
+  "m0mf": { "pt": "m₀/m_f", "fr": "m₀/m_f", "en": "m₀/m_f" },
+  "propelente": { "pt": "Propelente", "fr": "Ergol", "en": "Propellant" },
+  "daMassaInicial": {
+    "pt": "da massa inicial",
+    "fr": "de la masse initiale",
+    "en": "of the initial mass"
+  },
+  "empuxoPeso": {
+    "pt": "Empuxo / peso",
+    "fr": "Poussée / poids",
+    "en": "Thrust / weight"
+  },
+  "decola": { "pt": "decola", "fr": "il décolle", "en": "it lifts off" },
+  "naoSaiDoChao": {
+    "pt": "não sai do chão",
+    "fr": "il ne quitte pas le sol",
+    "en": "it never leaves the ground"
+  },
+  "tempoDeQueima": {
+    "pt": "Tempo de queima",
+    "fr": "Temps de combustion",
+    "en": "Burn time"
+  },
+  "aTirania": {
+    "pt": "A tirania da equação do foguete",
+    "fr": "La tyrannie de l’équation de la fusée",
+    "en": "The tyranny of the rocket equation"
+  },
+  "descricaoGrafico": {
+    "pt": "Delta-v disponível em função da fração de propelente na massa inicial.",
+    "fr": "Delta-v disponible en fonction de la fraction d’ergol dans la masse initiale.",
+    "en": "Available delta-v against the propellant fraction of the initial mass."
+  },
+  "curvaDeltaV": {
+    "pt": "Δv disponível",
+    "fr": "Δv disponible",
+    "en": "available Δv"
+  },
+  "curvaOrbitaBaixa": {
+    "pt": "órbita baixa (9,4 km/s)",
+    "fr": "orbite basse (9,4 km/s)",
+    "en": "low orbit (9.4 km/s)"
+  },
+  "essaCurva": {
+    "pt": "Essa curva é o problema central da engenharia aeroespacial. Ela sobe devagar e só dispara perto de 100% de propelente — porque o delta-v cresce com o <strong>logaritmo</strong> da razão de massas. Para cruzar a linha dos 9,4 km/s com exaustão de 3 km/s, é preciso que mais de 95% da massa inicial seja combustível.",
+    "fr": "Cette courbe est le problème central de l’ingénierie aérospatiale. Elle monte lentement et ne s’envole qu’à l’approche de 100 % d’ergol — parce que le delta-v croît comme le <strong>logarithme</strong> du rapport de masses. Pour franchir la barre des 9,4 km/s avec une éjection à 3 km/s, il faut que plus de 95 % de la masse initiale soit du carburant.",
+    "en": "This curve is the central problem of aerospace engineering. It climbs slowly and only shoots up near 100% propellant — because the delta-v grows with the <strong>logarithm</strong> of the mass ratio. To cross the 9.4 km/s line with a 3 km/s exhaust, more than 95% of the initial mass has to be fuel."
+  },
+  "daiAFrase": {
+    "pt": "Daí a frase que resume o ofício: um foguete é um tanque de combustível com um motor embaixo e uma carga minúscula no topo.",
+    "fr": "D’où la phrase qui résume le métier : une fusée est un réservoir de carburant avec un moteur en dessous et une charge minuscule au sommet.",
+    "en": "Hence the line that sums up the trade: a rocket is a fuel tank with an engine underneath and a tiny payload on top."
+  },
+  "empuxoEIsp": {
+    "pt": "Empuxo e impulso específico",
+    "fr": "Poussée et impulsion spécifique",
+    "en": "Thrust and specific impulse"
+  },
+  "impulsoEspecifico": {
+    "pt": "Impulso específico",
+    "fr": "Impulsion spécifique",
+    "en": "Specific impulse"
+  },
+  "veSobreG0": { "pt": "vₑ / g₀", "fr": "vₑ / g₀", "en": "vₑ / g₀" },
+  "oEmpuxoTira": {
+    "pt": "O empuxo tira o foguete do chão; o impulso específico decide até onde ele vai. São exigências em tensão: motores químicos têm empuxo alto e Isp modesto (até ~450 s), enquanto propulsão iônica tem Isp altíssimo e empuxo que não levantaria uma folha de papel — ótima para o espaço, inútil para decolar.",
+    "fr": "La poussée arrache la fusée du sol ; l’impulsion spécifique décide jusqu’où elle va. Ce sont des exigences en tension : les moteurs chimiques ont une poussée élevée et une Isp modeste (jusqu’à ~450 s), alors que la propulsion ionique a une Isp très élevée et une poussée qui ne soulèverait pas une feuille de papier — excellente dans l’espace, inutile au décollage.",
+    "en": "Thrust gets the rocket off the ground; specific impulse decides how far it goes. The two demands pull against each other: chemical engines have high thrust and modest Isp (up to ~450 s), while ion propulsion has very high Isp and thrust that would not lift a sheet of paper — excellent in space, useless for lift-off."
+  },
+  "porQueEstagios": {
+    "pt": "Por que estágios",
+    "fr": "Pourquoi des étages",
+    "en": "Why stages"
+  },
+  "tanquesVazios": {
+    "pt": "Tanques vazios continuam pesando, e cada quilo carregado desnecessariamente custa delta-v. Separar o estágio gasto reinicia a conta com uma razão de massas melhor — e como os delta-v se somam enquanto as razões de massa se multiplicam, o estagiamento é a forma de vencer o logaritmo. Não é economia: é a única maneira conhecida de chegar à órbita com química.",
+    "fr": "Les réservoirs vides pèsent encore, et chaque kilo transporté inutilement coûte du delta-v. Larguer l’étage épuisé remet le calcul à zéro avec un meilleur rapport de masses — et comme les delta-v s’additionnent tandis que les rapports de masses se multiplient, l’étagement est la façon de battre le logarithme. Ce n’est pas une économie : c’est la seule manière connue d’atteindre l’orbite avec de la chimie.",
+    "en": "Empty tanks still weigh something, and every kilogram carried needlessly costs delta-v. Dropping the spent stage restarts the sum with a better mass ratio — and since delta-v adds while mass ratios multiply, staging is how you beat the logarithm. It is not a saving: it is the only known way to reach orbit on chemistry."
+  }
+}

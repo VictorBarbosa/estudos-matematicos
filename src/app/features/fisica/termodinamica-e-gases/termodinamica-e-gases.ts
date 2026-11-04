@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/termodinamica-e-gases/termodinamica-e-gases.i18n.json';
 import { geradorTermo } from '@features/fisica/termodinamica-e-gases/termodinamica-e-gases.gerador';
 import { TEORIA_TERMO } from '@features/fisica/termodinamica-e-gases/termodinamica-e-gases.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_TERMO } from '@features/fisica/termodinamica-e-gases/termodinami
   styleUrl: './termodinamica-e-gases.scss',
 })
 export class TermodinamicaEGases {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorTermo;
   protected readonly conceitos = TEORIA_TERMO.map((teoria) => teoria.id);
 
@@ -79,14 +84,14 @@ export class TermodinamicaEGases {
       {
         fn: (litros) => (litros <= 0 ? Number.NaN : (n * 8.314 * t) / (litros / 1000) / 1000),
         cor: 'serie-1',
-        rotulo: `isoterma a ${this.temperaturaCelsius()} °C`,
+        rotulo: this.texto('curvaIsoterma', { graus: this.temperaturaCelsius() }),
       },
       {
         fn: (litros) =>
           litros <= 0 ? Number.NaN : (n * 8.314 * (t + 100)) / (litros / 1000) / 1000,
         cor: 'serie-2',
         tracejada: true,
-        rotulo: `+100 K`,
+        rotulo: this.texto('curvaMais100K'),
       },
     ];
   });
@@ -101,7 +106,7 @@ export class TermodinamicaEGases {
   /** O retângulo de trabalho no diagrama p × V. */
   protected readonly curvasTrabalho = computed<readonly CurvaPlot[]>(() => {
     const pressao = this.pressaoAtm() * 101325;
-    return [{ fn: () => pressao / 1000, cor: 'serie-1', rotulo: 'isobárica' }];
+    return [{ fn: () => pressao / 1000, cor: 'serie-1', rotulo: this.texto('curvaIsobarica') }];
   });
 
   protected readonly areaTrabalho = computed<readonly AreaPlot[]>(() => {

@@ -8,6 +8,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/transferencia-de-calor/transferencia-de-calor.i18n.json';
 import { geradorTransferenciaDeCalor } from '@features/fisica/transferencia-de-calor/transferencia-de-calor.gerador';
 import { TEORIA_TERMICA } from '@features/fisica/transferencia-de-calor/transferencia-de-calor.teoria';
 
@@ -19,6 +22,8 @@ import { TEORIA_TERMICA } from '@features/fisica/transferencia-de-calor/transfer
   styleUrl: './transferencia-de-calor.scss',
 })
 export class TransferenciaDeCalor {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorTransferenciaDeCalor;
   protected readonly conceitos = TEORIA_TERMICA.map((teoria) => teoria.id);
   protected readonly materiais = CONDUTIVIDADES;
@@ -67,24 +72,20 @@ export class TransferenciaDeCalor {
       {
         fn: (t) => (t > 0 ? emissividade * STEFAN_BOLTZMANN * area * t ** 4 : Number.NaN),
         cor: 'acento',
-        rotulo: 'radiação',
+        rotulo: this.texto('curvaRadiacao'),
       },
       {
         fn: (t) => this.coeficienteConveccao() * area * Math.max(0, t - 300),
         cor: 'serie-2',
         tracejada: true,
-        rotulo: 'convecção (linear)',
+        rotulo: this.texto('curvaConveccao'),
       },
     ];
   });
 
   protected readonly dominio = computed(() => ({ xMin: 250, xMax: 700 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Potência emitida em função da temperatura absoluta: a radiação sobe com a quarta ' +
-      'potência e, acima de certa temperatura, domina qualquer troca linear.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_TERMICA);

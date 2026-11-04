@@ -1,0 +1,99 @@
+{
+  "quantidadeMol": {
+    "pt": "Quantidade (mol)",
+    "fr": "Quantité (mol)",
+    "en": "Amount (mol)"
+  },
+  "volumeL": { "pt": "Volume (L)", "fr": "Volume (L)", "en": "Volume (L)" },
+  "aIsoterma": { "pt": "A isoterma", "fr": "L’isotherme", "en": "The isotherm" },
+  "descricaoIsoterma": {
+    "pt": "Pressão em função do volume, a temperatura constante.",
+    "fr": "Pression en fonction du volume, à température constante.",
+    "en": "Pressure against volume, at constant temperature."
+  },
+  "curvaIsoterma": {
+    "pt": "isoterma a {graus} °C",
+    "fr": "isotherme à {graus} °C",
+    "en": "isotherm at {graus} °C"
+  },
+  "curvaMais100K": { "pt": "+100 K", "fr": "+100 K", "en": "+100 K" },
+  "curvaIsobarica": { "pt": "isobárica", "fr": "isobare", "en": "isobaric" },
+  "aTemperaturaFixa": {
+    "pt": "A temperatura fixa, pressão e volume são inversamente proporcionais — a curva é uma hipérbole. Aquecer o gás empurra a curva para cima e para a direita: mais pressão para o mesmo volume, ou mais volume para a mesma pressão.",
+    "fr": "À température fixe, pression et volume sont inversement proportionnels — la courbe est une hyperbole. Chauffer le gaz pousse la courbe vers le haut et la droite : plus de pression pour le même volume, ou plus de volume pour la même pression.",
+    "en": "At fixed temperature, pressure and volume are inversely proportional — the curve is a hyperbola. Heating the gas pushes the curve up and to the right: more pressure for the same volume, or more volume for the same pressure."
+  },
+  "leveATemperatura": {
+    "pt": "Leve a temperatura a −273 °C e repare que a pressão vai a zero. Esse é o zero absoluto, e é por isso que a equação exige kelvin: em celsius, dobrar a temperatura de 10° para 20° não dobra nada.",
+    "fr": "Amenez la température à −273 °C et remarquez que la pression s’annule. C’est le zéro absolu, et c’est pourquoi l’équation exige des kelvins : en celsius, doubler la température de 10° à 20° ne double rien.",
+    "en": "Take the temperature to −273 °C and notice that the pressure goes to zero. That is absolute zero, and it is why the equation demands kelvin: in celsius, doubling the temperature from 10° to 20° doubles nothing."
+  },
+  "primeiraLei": {
+    "pt": "Primeira lei: o balanço",
+    "fr": "Première loi : le bilan",
+    "en": "First law: the balance"
+  },
+  "calorRecebido": {
+    "pt": "Calor recebido Q (J)",
+    "fr": "Chaleur reçue Q (J)",
+    "en": "Heat taken in Q (J)"
+  },
+  "trabalhoRealizado": {
+    "pt": "Trabalho realizado W (J)",
+    "fr": "Travail effectué W (J)",
+    "en": "Work done W (J)"
+  },
+  "deltaU": { "pt": "ΔU = Q − W", "fr": "ΔU = Q − W", "en": "ΔU = Q − W" },
+  "esquentou": {
+    "pt": "o gás esquentou",
+    "fr": "le gaz s’est réchauffé",
+    "en": "the gas warmed up"
+  },
+  "esfriou": { "pt": "o gás esfriou", "fr": "le gaz s’est refroidi", "en": "the gas cooled down" },
+  "temperaturaConstante": {
+    "pt": "temperatura constante",
+    "fr": "température constante",
+    "en": "constant temperature"
+  },
+  "igualeQEW": {
+    "pt": "Iguale Q e W: a energia interna não muda, e todo o calor recebido saiu como trabalho. É o processo isotérmico, e é o princípio de funcionamento de qualquer máquina térmica.",
+    "fr": "Égalisez Q et W : l’énergie interne ne change pas, et toute la chaleur reçue est sortie en travail. C’est le processus isotherme, et c’est le principe de fonctionnement de toute machine thermique.",
+    "en": "Set Q equal to W: the internal energy does not change, and all the heat taken in came out as work. That is the isothermal process, and it is how any heat engine works."
+  },
+  "trabalhoEArea": {
+    "pt": "Trabalho é área no diagrama p × V",
+    "fr": "Le travail est une aire dans le diagramme p × V",
+    "en": "Work is area on the p × V diagram"
+  },
+  "pressaoAtm": { "pt": "Pressão (atm)", "fr": "Pression (atm)", "en": "Pressure (atm)" },
+  "volumeInicial": {
+    "pt": "Volume inicial (L)",
+    "fr": "Volume initial (L)",
+    "en": "Initial volume (L)"
+  },
+  "volumeFinal": {
+    "pt": "Volume final (L)",
+    "fr": "Volume final (L)",
+    "en": "Final volume (L)"
+  },
+  "descricaoTrabalho": {
+    "pt": "Processo isobárico no diagrama p × V, com a área do trabalho sombreada.",
+    "fr": "Processus isobare dans le diagramme p × V, avec l’aire du travail ombrée.",
+    "en": "Isobaric process on the p × V diagram, with the area of the work shaded."
+  },
+  "aAreaSombreada": {
+    "pt": "A área sombreada <em>é</em> o trabalho. A pressão constante ela é um retângulo, mas em qualquer processo continua sendo a área sob a curva — ou seja, uma integral. É o mesmo raciocínio que apareceu na cinemática, com a área sob a velocidade.",
+    "fr": "L’aire ombrée <em>est</em> le travail. À pression constante c’est un rectangle, mais dans n’importe quel processus cela reste l’aire sous la courbe — autrement dit, une intégrale. C’est le même raisonnement qu’en cinématique, avec l’aire sous la vitesse.",
+    "en": "The shaded area <em>is</em> the work. At constant pressure it is a rectangle, but in any process it remains the area under the curve — that is, an integral. It is the same reasoning that appeared in kinematics, with the area under the velocity."
+  },
+  "porQueNumFoguete": {
+    "pt": "Por que isso importa num foguete",
+    "fr": "Pourquoi cela compte dans une fusée",
+    "en": "Why this matters in a rocket"
+  },
+  "naCamaraDeCombustao": {
+    "pt": "Na câmara de combustão, a reação eleva a temperatura a milhares de kelvin; a equação de estado transforma isso em pressão, e a expansão pela tubeira converte pressão em velocidade de exaustão. Quanto maior essa velocidade, mais eficiente o motor — e é exatamente o vₑ que aparece na equação de Tsiolkovsky.",
+    "fr": "Dans la chambre de combustion, la réaction porte la température à des milliers de kelvins ; l’équation d’état traduit cela en pression, et la détente dans la tuyère convertit la pression en vitesse d’éjection. Plus cette vitesse est grande, plus le moteur est efficace — et c’est exactement le vₑ de l’équation de Tsiolkovski.",
+    "en": "In the combustion chamber, the reaction raises the temperature to thousands of kelvin; the equation of state turns that into pressure, and expansion through the nozzle converts pressure into exhaust speed. The higher that speed, the more efficient the engine — and it is exactly the vₑ that appears in Tsiolkovsky's equation."
+  }
+}

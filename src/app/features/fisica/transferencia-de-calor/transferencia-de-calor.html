@@ -1,49 +1,50 @@
 <app-topico-layout topicoId="transferencia-de-calor">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Três caminhos, uma energia</h2>
+      <h2>{{ texto('tresCaminhos') }}</h2>
       <app-formula
         [tex]="'\\frac{Q}{t} = \\frac{kA\\,\\Delta T}{L} \\qquad hA\\,\\Delta T \\qquad \\varepsilon\\sigma A T^{4}'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Condução e convecção são lineares na diferença de temperatura. A radiação vai com a QUARTA
-        potência da temperatura absoluta — e é a única que atravessa o vácuo. Num veículo espacial,
-        as duas primeiras praticamente não existem do lado de fora.
-      </p>
+      <p class="observacao">{{ texto('conducaoEConveccao') }}</p>
     </section>
 
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="escolha"
-        rotulo="Material (0 cobre · 2 aço · 6 lã de vidro)"
+        [rotulo]="texto('materialEscolha')"
         [min]="0"
         [max]="7"
       />
       <app-controle-parametro
         [(valor)]="centimetros"
-        rotulo="Espessura (cm)"
+        [rotulo]="texto('espessuraCm')"
         [min]="1"
         [max]="50"
       />
-      <app-controle-parametro [(valor)]="area" rotulo="Área (m²)" [min]="1" [max]="10" />
+      <app-controle-parametro [(valor)]="area" [rotulo]="texto('areaM2')" [min]="1" [max]="10" />
       <app-controle-parametro
         [(valor)]="deltaT"
-        rotulo="Diferença de temperatura (K)"
+        [rotulo]="texto('diferencaDeTemperatura')"
         [min]="1"
         [max]="80"
       />
       <app-controle-parametro
         [(valor)]="coeficienteConveccao"
-        rotulo="Coeficiente de convecção"
+        [rotulo]="texto('coeficienteConveccao')"
         [min]="5"
         [max]="250"
         [passo]="5"
       />
-      <app-controle-parametro [(valor)]="celsius" rotulo="Temperatura (°C)" [min]="0" [max]="400" />
+      <app-controle-parametro
+        [(valor)]="celsius"
+        [rotulo]="i18n.t('explorar.temperatura')"
+        [min]="0"
+        [max]="400"
+      />
       <app-controle-parametro
         [(valor)]="emissividade"
-        rotulo="Emissividade, em décimos"
+        [rotulo]="texto('emissividade')"
         [min]="1"
         [max]="10"
       />
@@ -55,64 +56,52 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Condução</span>
+        <span class="rotulo">{{ texto('conducao') }}</span>
         <strong>{{ formatar(conducao()) }} W</strong>
-        <span class="legenda">{{ material().material }}</span>
+        <span class="legenda">{{ i18n.t('material.' + material().material) }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Convecção</span>
+        <span class="rotulo">{{ texto('conveccao') }}</span>
         <strong>{{ formatar(conveccao()) }} W</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Radiação</span>
+        <span class="rotulo">{{ texto('radiacao') }}</span>
         <strong>{{ formatar(radiacao()) }} W</strong>
-        <span class="legenda">a {{ formatar(kelvin()) }} K</span>
+        <span class="legenda">{{ texto('aKelvin', { valor: formatar(kelvin()) }) }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Resistência térmica</span>
+        <span class="rotulo">{{ texto('resistenciaTermica') }}</span>
         <strong>{{ formatar(resistencia()) }} K/W</strong>
-        <span class="legenda">camadas em série somam</span>
+        <span class="legenda">{{ texto('camadasEmSerie') }}</span>
       </div>
     </section>
 
     <section class="painel materiais">
-      <h2>Quatro ordens de grandeza</h2>
+      <h2>{{ texto('quatroOrdens') }}</h2>
       @for (item of materiais; track item.material) {
         <span>
-          <span>{{ item.material }}</span>
+          <span>{{ i18n.t('material.' + item.material) }}</span>
           <strong>{{ formatar(item.k) }}</strong>
         </span>
       }
-      <p class="observacao">
-        Entre o cobre e o ar parado a condutividade varia por um fator de quinze mil. É essa
-        diferença que faz um metal esfriar a mão depressa e a madeira, na mesma temperatura, parecer
-        morna — a sensação mede fluxo, não temperatura.
-      </p>
+      <p class="observacao">{{ texto('entreOCobre') }}</p>
     </section>
 
     <section>
-      <h2>Onde a radiação ultrapassa tudo</h2>
+      <h2>{{ texto('ondeARadiacao') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
         [descricao]="descricaoGrafico()"
         [altura]="360"
       />
-      <p class="observacao">
-        A curva da radiação é uma quarta potência; a da convecção é uma reta. Em temperatura
-        ambiente a convecção domina, mas acima de algumas centenas de kelvin a radiação passa por
-        cima — e é por isso que um forno aquece por radiação, não por ar quente.
-      </p>
+      <p class="observacao">{{ texto('aCurvaDaRadiacao') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Kelvin, não Celsius</h2>
+      <h2>{{ texto('kelvinNaoCelsius') }}</h2>
       <app-formula [tex]="'\\frac{300^{4}}{27^{4}} \\approx 1524'" [bloco]="true" />
-      <p class="observacao">
-        Em condução e convecção aparece apenas a DIFERENÇA de temperatura, e aí Celsius serve. Na
-        radiação aparece a temperatura absoluta à quarta potência, e usar a escala errada não
-        desloca o resultado por uma constante: multiplica por mais de mil.
-      </p>
+      <p class="observacao">{{ texto('emConducaoEConveccao') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

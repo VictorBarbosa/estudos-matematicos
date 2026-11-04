@@ -1,0 +1,137 @@
+{
+  "pressaoComProfundidade": {
+    "pt": "Pressão com a profundidade",
+    "fr": "La pression avec la profondeur",
+    "en": "Pressure with depth"
+  },
+  "profundidadeM": {
+    "pt": "Profundidade (m)",
+    "fr": "Profondeur (m)",
+    "en": "Depth (m)"
+  },
+  "descricaoPressao": {
+    "pt": "Pressão total em função da profundidade na água.",
+    "fr": "Pression totale en fonction de la profondeur dans l’eau.",
+    "en": "Total pressure against depth in water."
+  },
+  "curvaPressao": {
+    "pt": "pressão (kPa)",
+    "fr": "pression (kPa)",
+    "en": "pressure (kPa)"
+  },
+  "aCada10m": {
+    "pt": "A cada 10 m de água, a pressão aumenta cerca de 1 atmosfera. E note o que a fórmula <em>não</em> contém: a forma do recipiente. Um tubo fino e um lago com a mesma profundidade exercem a mesma pressão no fundo.",
+    "fr": "Tous les 10 m d’eau, la pression augmente d’environ 1 atmosphère. Et remarquez ce que la formule <em>ne</em> contient <em>pas</em> : la forme du récipient. Un tube fin et un lac de même profondeur exercent la même pression au fond.",
+    "en": "Every 10 m of water, the pressure rises by about 1 atmosphere. And notice what the formula <em>does not</em> contain: the shape of the container. A thin tube and a lake of the same depth press just as hard on the bottom."
+  },
+  "flutuaOuAfunda": {
+    "pt": "Flutua ou afunda?",
+    "fr": "Flotte ou coule ?",
+    "en": "Does it float or sink?"
+  },
+  "volumeLitros": {
+    "pt": "Volume (litros)",
+    "fr": "Volume (litres)",
+    "en": "Volume (litres)"
+  },
+  "materialDoCorpo": {
+    "pt": "Material do corpo",
+    "fr": "Matériau du corps",
+    "en": "Material of the body"
+  },
+  "material.isopor": { "pt": "isopor", "fr": "polystyrène", "en": "styrofoam" },
+  "material.madeira": { "pt": "madeira", "fr": "bois", "en": "wood" },
+  "material.gelo": { "pt": "gelo", "fr": "glace", "en": "ice" },
+  "material.água": { "pt": "água", "fr": "eau", "en": "water" },
+  "material.alumínio": { "pt": "alumínio", "fr": "aluminium", "en": "aluminium" },
+  "material.aço": { "pt": "aço", "fr": "acier", "en": "steel" },
+  "pesoDaAguaDeslocada": {
+    "pt": "peso da água deslocada",
+    "fr": "poids de l’eau déplacée",
+    "en": "weight of the displaced water"
+  },
+  "pesoDoCorpo": {
+    "pt": "Peso do corpo",
+    "fr": "Poids du corps",
+    "en": "Weight of the body"
+  },
+  "resultado": { "pt": "Resultado", "fr": "Résultat", "en": "Result" },
+  "flutua": { "pt": "flutua", "fr": "il flotte", "en": "it floats" },
+  "afunda": { "pt": "afunda", "fr": "il coule", "en": "it sinks" },
+  "submerso": {
+    "pt": "{valor} submerso",
+    "fr": "{valor} immergé",
+    "en": "{valor} submerged"
+  },
+  "maisDensoQueAgua": {
+    "pt": "mais denso que a água",
+    "fr": "plus dense que l’eau",
+    "en": "denser than water"
+  },
+  "mudeOVolume": {
+    "pt": "Mude o volume e repare: o veredito não muda. O volume aparece tanto no empuxo quanto no peso e se cancela — só as <strong>densidades</strong> decidem. É por isso que um navio de aço flutua: sua densidade média, contando o ar interno, é menor que a da água.",
+    "fr": "Changez le volume et observez : le verdict ne change pas. Le volume apparaît dans la poussée comme dans le poids et se simplifie — seules les <strong>densités</strong> décident. C’est pourquoi un navire d’acier flotte : sa densité moyenne, en comptant l’air intérieur, est inférieure à celle de l’eau.",
+    "en": "Change the volume and watch: the verdict does not change. The volume appears in both the buoyant force and the weight, and cancels — only the <strong>densities</strong> decide. That is why a steel ship floats: its average density, counting the air inside, is lower than water's."
+  },
+  "sustentacaoDeUmaAsa": {
+    "pt": "Sustentação de uma asa",
+    "fr": "Portance d’une aile",
+    "en": "Lift of a wing"
+  },
+  "areaDaAsa": {
+    "pt": "Área da asa (m²)",
+    "fr": "Surface de l’aile (m²)",
+    "en": "Wing area (m²)"
+  },
+  "velocidadeInferior": {
+    "pt": "Velocidade sob a asa (m/s)",
+    "fr": "Vitesse sous l’aile (m/s)",
+    "en": "Speed under the wing (m/s)"
+  },
+  "velocidadeSuperior": {
+    "pt": "Velocidade sobre a asa (m/s)",
+    "fr": "Vitesse au-dessus de l’aile (m/s)",
+    "en": "Speed over the wing (m/s)"
+  },
+  "massaDoAviao": {
+    "pt": "Massa do avião (kg)",
+    "fr": "Masse de l’avion (kg)",
+    "en": "Mass of the aeroplane (kg)"
+  },
+  "descricaoSustentacao": {
+    "pt": "Sustentação em função da velocidade de voo, comparada ao peso do avião.",
+    "fr": "Portance en fonction de la vitesse de vol, comparée au poids de l’avion.",
+    "en": "Lift against flight speed, compared with the weight of the aeroplane."
+  },
+  "curvaSustentacao": { "pt": "sustentação", "fr": "portance", "en": "lift" },
+  "curvaPeso": {
+    "pt": "peso do avião",
+    "fr": "poids de l’avion",
+    "en": "weight of the aeroplane"
+  },
+  "sustentacao": { "pt": "Sustentação", "fr": "Portance", "en": "Lift" },
+  "peso": { "pt": "Peso", "fr": "Poids", "en": "Weight" },
+  "voa": { "pt": "Voa?", "fr": "Vole-t-il ?", "en": "Does it fly?" },
+  "sim": { "pt": "sim", "fr": "oui", "en": "yes" },
+  "aindaNao": { "pt": "ainda não", "fr": "pas encore", "en": "not yet" },
+  "precisaLMaior": {
+    "pt": "precisa L ≥ peso",
+    "fr": "il faut L ≥ poids",
+    "en": "needs L ≥ weight"
+  },
+  "aCurvaEUmaParabola": {
+    "pt": "A curva é uma parábola, não uma reta: a sustentação cresce com o <strong>quadrado</strong> da velocidade. Onde ela cruza a linha tracejada do peso está a velocidade mínima de decolagem — abaixo dela, nenhuma asa levanta aquele avião.",
+    "fr": "La courbe est une parabole, pas une droite : la portance croît avec le <strong>carré</strong> de la vitesse. Là où elle coupe la ligne pointillée du poids se trouve la vitesse minimale de décollage — en dessous, aucune aile ne soulève cet avion.",
+    "en": "The curve is a parabola, not a line: the lift grows with the <strong>square</strong> of the speed. Where it crosses the dashed weight line is the minimum take-off speed — below that, no wing lifts that aeroplane."
+  },
+  "bernoulliPorTras": {
+    "pt": "Bernoulli por trás disso",
+    "fr": "Bernoulli derrière tout cela",
+    "en": "Bernoulli behind it all"
+  },
+  "todaASustentacao": {
+    "pt": "Toda a sustentação se resume a isto: o ar mais rápido sobre a asa está a uma pressão menor que o ar mais lento sob ela. A diferença, multiplicada pela área, levanta o avião — e a física por baixo é apenas conservação de energia.",
+    "fr": "Toute la portance se résume à ceci : l’air plus rapide au-dessus de l’aile est à une pression plus faible que l’air plus lent en dessous. La différence, multipliée par la surface, soulève l’avion — et la physique derrière n’est que la conservation de l’énergie.",
+    "en": "All of the lift comes down to this: the faster air over the wing is at lower pressure than the slower air under it. The difference, times the area, lifts the aeroplane — and the physics underneath is just conservation of energy."
+  }
+}

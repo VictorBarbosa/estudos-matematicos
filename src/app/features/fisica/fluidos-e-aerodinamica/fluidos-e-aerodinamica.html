@@ -1,10 +1,10 @@
 <app-topico-layout topicoId="fluidos-e-aerodinamica">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Pressão com a profundidade</h2>
+      <h2>{{ texto('pressaoComProfundidade') }}</h2>
       <app-controle-parametro
         [(valor)]="profundidade"
-        rotulo="Profundidade (m)"
+        [rotulo]="texto('profundidadeM')"
         [min]="0"
         [max]="100"
       />
@@ -15,96 +15,88 @@
         [dominio]="dominioPressao()"
         [curvas]="curvasPressao()"
         [pontos]="pontosPressao()"
-        descricao="Pressão total em função da profundidade na água."
+        [descricao]="texto('descricaoPressao')"
         [altura]="320"
       />
 
       <app-passo-a-passo [passos]="pressao().passos" />
-      <p class="observacao">
-        A cada 10 m de água, a pressão aumenta cerca de 1 atmosfera. E note o que a fórmula
-        <em>não</em> contém: a forma do recipiente. Um tubo fino e um lago com a mesma profundidade
-        exercem a mesma pressão no fundo.
-      </p>
+      <p class="observacao" [innerHTML]="texto('aCada10m')"></p>
     </section>
 
     <section class="painel">
-      <h2>Flutua ou afunda?</h2>
+      <h2>{{ texto('flutuaOuAfunda') }}</h2>
       <div class="grade-controles">
         <app-controle-parametro
           [(valor)]="volumeLitros"
-          rotulo="Volume (litros)"
+          [rotulo]="texto('volumeLitros')"
           [min]="1"
           [max]="100"
         />
       </div>
 
-      <div class="seletor-pills" role="group" aria-label="Material do corpo">
+      <div class="seletor-pills" role="group" [attr.aria-label]="texto('materialDoCorpo')">
         @for (material of materiais; track material.nome) {
           <button
             type="button"
             [class.ativo]="densidadeCorpo() === material.densidade"
             (click)="escolherMaterial(material.densidade)"
           >
-            {{ material.nome }}
+            {{ texto('material.' + material.nome) }}
           </button>
         }
       </div>
 
       <div class="indicadores">
         <div class="indicador">
-          <span class="rotulo">Empuxo</span>
+          <span class="rotulo">{{ i18n.t('explorar.empuxo') }}</span>
           <strong>{{ formatar(empuxo().resultado.empuxo) }} N</strong>
-          <span class="legenda">peso da água deslocada</span>
+          <span class="legenda">{{ texto('pesoDaAguaDeslocada') }}</span>
         </div>
         <div class="indicador">
-          <span class="rotulo">Peso do corpo</span>
+          <span class="rotulo">{{ texto('pesoDoCorpo') }}</span>
           <strong>{{ formatar(empuxo().resultado.peso) }} N</strong>
         </div>
         <div class="indicador" data-destaque="true">
-          <span class="rotulo">Resultado</span>
-          <strong>{{ empuxo().resultado.flutua ? 'flutua' : 'afunda' }}</strong>
+          <span class="rotulo">{{ texto('resultado') }}</span>
+          <strong>{{ empuxo().resultado.flutua ? texto('flutua') : texto('afunda') }}</strong>
           <span class="legenda">
-            @if (empuxo().resultado.flutua) {
-              {{ percentual(empuxo().resultado.fracaoSubmersa) }} submerso
-            } @else {
-              mais denso que a água
-            }
+            {{
+              empuxo().resultado.flutua
+                ? texto('submerso', { valor: percentual(empuxo().resultado.fracaoSubmersa) })
+                : texto('maisDensoQueAgua')
+            }}
           </span>
         </div>
       </div>
 
       <app-passo-a-passo [passos]="empuxo().passos" />
-      <p class="observacao">
-        Mude o volume e repare: o veredito não muda. O volume aparece tanto no empuxo quanto no peso
-        e se cancela — só as <strong>densidades</strong> decidem. É por isso que um navio de aço
-        flutua: sua densidade média, contando o ar interno, é menor que a da água.
-      </p>
+      <p class="observacao" [innerHTML]="texto('mudeOVolume')"></p>
     </section>
 
     <section class="painel">
-      <h2>Sustentação de uma asa</h2>
+      <h2>{{ texto('sustentacaoDeUmaAsa') }}</h2>
       <div class="grade-controles">
         <app-controle-parametro
           [(valor)]="areaAsa"
-          rotulo="Área da asa (m²)"
+          [rotulo]="texto('areaDaAsa')"
           [min]="5"
           [max]="120"
         />
         <app-controle-parametro
           [(valor)]="velocidadeInferior"
-          rotulo="Velocidade sob a asa (m/s)"
+          [rotulo]="texto('velocidadeInferior')"
           [min]="20"
           [max]="100"
         />
         <app-controle-parametro
           [(valor)]="velocidadeSuperior"
-          rotulo="Velocidade sobre a asa (m/s)"
+          [rotulo]="texto('velocidadeSuperior')"
           [min]="20"
           [max]="140"
         />
         <app-controle-parametro
           [(valor)]="massaAviao"
-          rotulo="Massa do avião (kg)"
+          [rotulo]="texto('massaDoAviao')"
           [min]="100"
           [max]="3000"
           [passo]="50"
@@ -117,42 +109,34 @@
         [dominio]="dominioSustentacao()"
         [curvas]="curvasSustentacao()"
         [pontos]="pontosSustentacao()"
-        descricao="Sustentação em função da velocidade de voo, comparada ao peso do avião."
+        [descricao]="texto('descricaoSustentacao')"
         [altura]="360"
       />
 
       <div class="indicadores">
         <div class="indicador">
-          <span class="rotulo">Sustentação</span>
+          <span class="rotulo">{{ texto('sustentacao') }}</span>
           <strong>{{ formatar(sustentacao().resultado) }} N</strong>
         </div>
         <div class="indicador">
-          <span class="rotulo">Peso</span>
+          <span class="rotulo">{{ texto('peso') }}</span>
           <strong>{{ formatar(pesoAviao()) }} N</strong>
         </div>
         <div class="indicador" [attr.data-destaque]="voa()">
-          <span class="rotulo">Voa?</span>
-          <strong>{{ voa() ? 'sim' : 'ainda não' }}</strong>
-          <span class="legenda">precisa L ≥ peso</span>
+          <span class="rotulo">{{ texto('voa') }}</span>
+          <strong>{{ voa() ? texto('sim') : texto('aindaNao') }}</strong>
+          <span class="legenda">{{ texto('precisaLMaior') }}</span>
         </div>
       </div>
 
       <app-passo-a-passo [passos]="sustentacao().passos" />
-      <p class="observacao">
-        A curva é uma parábola, não uma reta: a sustentação cresce com o <strong>quadrado</strong>
-        da velocidade. Onde ela cruza a linha tracejada do peso está a velocidade mínima de
-        decolagem — abaixo dela, nenhuma asa levanta aquele avião.
-      </p>
+      <p class="observacao" [innerHTML]="texto('aCurvaEUmaParabola')"></p>
     </section>
 
     <section class="painel">
-      <h2>Bernoulli por trás disso</h2>
+      <h2>{{ texto('bernoulliPorTras') }}</h2>
       <app-passo-a-passo [passos]="bernoulli().passos" />
-      <p class="observacao">
-        Toda a sustentação se resume a isto: o ar mais rápido sobre a asa está a uma pressão menor
-        que o ar mais lento sob ela. A diferença, multiplicada pela área, levanta o avião — e a
-        física por baixo é apenas conservação de energia.
-      </p>
+      <p class="observacao">{{ texto('todaASustentacao') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />
