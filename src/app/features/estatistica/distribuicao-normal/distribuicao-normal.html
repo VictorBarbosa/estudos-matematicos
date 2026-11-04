@@ -1,26 +1,42 @@
 <app-topico-layout topicoId="distribuicao-normal">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Ela não é escolhida, ela aparece</h2>
+      <h2>{{ texto('elaNaoEEscolhida') }}</h2>
       <app-formula
         [tex]="'f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x - \\mu)^{2}}{2\\sigma^{2}}}'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Sempre que muitos efeitos pequenos e independentes se somam, o resultado tende a esta
-        curva — é o teorema central do limite. Por isso erro de medida, tolerância de fabricação
-        e ruído de sensor são normais mesmo quando nada na origem deles é.
-      </p>
+      <p class="observacao">{{ texto('sempreQueMuitos') }}</p>
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="media" rotulo="Média" [min]="10" [max]="100" />
-      <app-controle-parametro [(valor)]="desvio" rotulo="Desvio padrão" [min]="1" [max]="20" />
-      <app-controle-parametro [(valor)]="de" rotulo="Limite inferior" [min]="0" [max]="150" />
-      <app-controle-parametro [(valor)]="ate" rotulo="Limite superior" [min]="0" [max]="150" />
+      <app-controle-parametro
+        [(valor)]="media"
+        [rotulo]="i18n.t('explorar.media')"
+        [min]="10"
+        [max]="100"
+      />
+      <app-controle-parametro
+        [(valor)]="desvio"
+        [rotulo]="i18n.t('explorar.desvioPadrao')"
+        [min]="1"
+        [max]="20"
+      />
+      <app-controle-parametro
+        [(valor)]="de"
+        [rotulo]="i18n.t('explorar.limiteInferior')"
+        [min]="0"
+        [max]="150"
+      />
+      <app-controle-parametro
+        [(valor)]="ate"
+        [rotulo]="i18n.t('explorar.limiteSuperior')"
+        [min]="0"
+        [max]="150"
+      />
       <app-controle-parametro
         [(valor)]="percentil"
-        rotulo="Percentil procurado (%)"
+        [rotulo]="texto('percentilProcurado')"
         [min]="1"
         [max]="99"
       />
@@ -32,34 +48,34 @@
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">Escore do limite inferior</span>
+        <span class="rotulo">{{ texto('escoreInferior') }}</span>
         <strong>{{ formatar(zDe()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Escore do limite superior</span>
+        <span class="rotulo">{{ texto('escoreSuperior') }}</span>
         <strong>{{ formatar(zAte()) }}</strong>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Dentro do intervalo</span>
+        <span class="rotulo">{{ texto('dentroDoIntervalo') }}</span>
         <strong>{{ porcento(dentro()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Abaixo</span>
+        <span class="rotulo">{{ texto('abaixo') }}</span>
         <strong>{{ porcento(abaixo()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Acima</span>
+        <span class="rotulo">{{ texto('acima') }}</span>
         <strong>{{ porcento(acima()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Valor do percentil {{ percentil() }}</span>
+        <span class="rotulo">{{ texto('valorDoPercentil', { p: percentil() }) }}</span>
         <strong>{{ formatar(valorDoPercentil()) }}</strong>
-        <span class="legenda">da área para o valor</span>
+        <span class="legenda">{{ texto('daAreaParaOValor') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>Probabilidade é área</h2>
+      <h2>{{ texto('probabilidadeEArea') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -67,26 +83,18 @@
         [descricao]="descricaoGrafico()"
         [altura]="360"
       />
-      <p class="observacao">
-        Mexa no desvio padrão: a curva estreita e sobe, ou alarga e achata, mas a área total
-        continua valendo 1. Num contínuo, a probabilidade de um valor exato é zero — o que tem
-        sentido é a área de um intervalo.
-      </p>
+      <p class="observacao">{{ texto('mexaNoDesvio') }}</p>
     </section>
 
     <section class="painel regra">
-      <h2>A regra empírica</h2>
+      <h2>{{ texto('regraEmpirica') }}</h2>
       @for (item of regra; track item.desvios) {
         <span>
-          <span>{{ item.desvios }} desvio(s)</span>
+          <span>{{ texto('desvios', { quantos: item.desvios }) }}</span>
           <strong>{{ porcento(item.dentro) }}</strong>
         </span>
       }
-      <p class="observacao">
-        Três números que resolvem a maioria dos casos sem tabela nenhuma. Fora de três desvios
-        sobra menos de 3 em mil — e é por isso que esse é o critério usual para descartar uma
-        peça no controle de qualidade.
-      </p>
+      <p class="observacao">{{ texto('tresNumeros') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

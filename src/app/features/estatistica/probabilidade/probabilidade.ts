@@ -13,6 +13,8 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/estatistica/probabilidade/probabilidade.i18n.json';
 import { geradorProbabilidade } from '@features/estatistica/probabilidade/probabilidade.gerador';
 import { TEORIA_PROBABILIDADE } from '@features/estatistica/probabilidade/probabilidade.teoria';
 
@@ -32,6 +34,7 @@ import { TEORIA_PROBABILIDADE } from '@features/estatistica/probabilidade/probab
   styleUrl: './probabilidade.scss',
 })
 export class Probabilidade {
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorProbabilidade;
   protected readonly conceitos = TEORIA_PROBABILIDADE.map((teoria) => teoria.id);
 
@@ -59,7 +62,12 @@ export class Probabilidade {
   protected readonly semReposicao = computed(() => {
     const primeira = this.vermelhas() / this.total();
     const segunda = (this.vermelhas() - 1) / (this.total() - 1);
-    return probabilidadeConjuntaComPassos(primeira, Math.max(0, segunda), false, Math.max(0, segunda));
+    return probabilidadeConjuntaComPassos(
+      primeira,
+      Math.max(0, segunda),
+      false,
+      Math.max(0, segunda),
+    );
   });
 
   protected readonly aoMenosUm = computed(() =>
@@ -77,8 +85,17 @@ export class Probabilidade {
     const p = this.analise().resultado;
 
     return [
-      { fn: (n) => (n < 0 ? Number.NaN : 1 - (1 - p) ** n), cor: 'serie-1', rotulo: 'ao menos um' },
-      { fn: (n) => (n < 0 ? Number.NaN : (1 - p) ** n), cor: 'serie-2', tracejada: true, rotulo: 'nenhum' },
+      {
+        fn: (n) => (n < 0 ? Number.NaN : 1 - (1 - p) ** n),
+        cor: 'serie-1',
+        rotulo: this.texto('curvaAoMenosUm'),
+      },
+      {
+        fn: (n) => (n < 0 ? Number.NaN : (1 - p) ** n),
+        cor: 'serie-2',
+        tracejada: true,
+        rotulo: this.texto('curvaNenhum'),
+      },
     ];
   });
 

@@ -11,12 +11,15 @@ export const rotas: Routes = [
     path: 'analise-combinatoria',
     title: 'Análise combinatória · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/estatistica/analise-combinatoria/analise-combinatoria').then((m) => m.AnaliseCombinatoria),
+      import('@features/estatistica/analise-combinatoria/analise-combinatoria').then(
+        (m) => m.AnaliseCombinatoria,
+      ),
   },
   {
     path: 'probabilidade',
     title: 'Probabilidade · Estudos Matemáticos',
-    loadComponent: () => import('@features/estatistica/probabilidade/probabilidade').then((m) => m.Probabilidade),
+    loadComponent: () =>
+      import('@features/estatistica/probabilidade/probabilidade').then((m) => m.Probabilidade),
   },
   {
     path: 'estatistica-e-incerteza',
@@ -29,12 +32,18 @@ export const rotas: Routes = [
   {
     path: 'distribuicao-normal',
     title: 'Distribuição normal · Estudos Matemáticos',
-    loadComponent: () => import('@features/estatistica/distribuicao-normal/distribuicao-normal').then((m) => m.DistribuicaoNormal),
+    loadComponent: () =>
+      import('@features/estatistica/distribuicao-normal/distribuicao-normal').then(
+        (m) => m.DistribuicaoNormal,
+      ),
   },
   {
     path: 'regressao-e-correlacao',
     title: 'Regressão e correlação · Estudos Matemáticos',
-    loadComponent: () => import('@features/estatistica/regressao-e-correlacao/regressao-e-correlacao').then((m) => m.RegressaoECorrelacao),
+    loadComponent: () =>
+      import('@features/estatistica/regressao-e-correlacao/regressao-e-correlacao').then(
+        (m) => m.RegressaoECorrelacao,
+      ),
   },
   { path: '', pathMatch: 'full', redirectTo: 'analise-combinatoria' },
 ];

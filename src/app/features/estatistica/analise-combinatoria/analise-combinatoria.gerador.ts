@@ -1,4 +1,10 @@
-import { arranjosComPassos, combinacoes, combinacoesComPassos, fatorial, permutacoesComPassos } from '@core/math';
+import {
+  arranjosComPassos,
+  combinacoes,
+  combinacoesComPassos,
+  fatorial,
+  permutacoesComPassos,
+} from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 

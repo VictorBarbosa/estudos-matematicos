@@ -3,13 +3,13 @@
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="favoraveis"
-        rotulo="Casos favoráveis"
+        [rotulo]="texto('casosFavoraveis')"
         [min]="0"
         [max]="20"
       />
       <app-controle-parametro
         [(valor)]="possiveis"
-        rotulo="Casos possíveis"
+        [rotulo]="texto('casosPossiveis')"
         [min]="1"
         [max]="20"
       />
@@ -20,47 +20,50 @@
     </section>
 
     <section>
-      <h2>Probabilidade é contagem</h2>
+      <h2>{{ texto('probabilidadeEContagem') }}</h2>
       <app-passo-a-passo [passos]="analise().passos" />
-      <p class="observacao">
-        Não há nada de misterioso na divisão: o difícil é contar certo os dois lados. Se o
-        resultado passar de 1 ou ficar negativo, o erro está na contagem, nunca na fórmula.
-      </p>
+      <p class="observacao">{{ texto('naoHaNadaDeMisterioso') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Com reposição e sem reposição</h2>
+      <h2>{{ texto('comESemReposicao') }}</h2>
       <div class="grade-controles">
-        <app-controle-parametro [(valor)]="vermelhas" rotulo="Bolas vermelhas" [min]="2" [max]="12" />
-        <app-controle-parametro [(valor)]="azuis" rotulo="Bolas azuis" [min]="1" [max]="12" />
+        <app-controle-parametro
+          [(valor)]="vermelhas"
+          [rotulo]="texto('bolasVermelhas')"
+          [min]="2"
+          [max]="12"
+        />
+        <app-controle-parametro
+          [(valor)]="azuis"
+          [rotulo]="texto('bolasAzuis')"
+          [min]="1"
+          [max]="12"
+        />
       </div>
 
       <div class="indicadores">
         <div class="indicador">
-          <span class="rotulo">Duas vermelhas, com reposição</span>
+          <span class="rotulo">{{ texto('comReposicao') }}</span>
           <strong>{{ formatar(comReposicao().resultado) }}</strong>
-          <span class="legenda">eventos independentes</span>
+          <span class="legenda">{{ texto('eventosIndependentes') }}</span>
         </div>
         <div class="indicador" data-destaque="true">
-          <span class="rotulo">Duas vermelhas, sem reposição</span>
+          <span class="rotulo">{{ texto('semReposicao') }}</span>
           <strong>{{ formatar(semReposicao().resultado) }}</strong>
-          <span class="legenda">a segunda depende da primeira</span>
+          <span class="legenda">{{ texto('segundaDepende') }}</span>
         </div>
       </div>
 
       <app-passo-a-passo [passos]="semReposicao().passos" />
-      <p class="observacao">
-        Sem reposição, a segunda retirada acontece numa urna diferente: uma vermelha menos e
-        uma bola menos no total. É por isso que a probabilidade cai — e é exatamente o que
-        significa probabilidade condicional.
-      </p>
+      <p class="observacao">{{ texto('semReposicaoNota') }}</p>
     </section>
 
     <section>
-      <h2>Ao menos um: use o complementar</h2>
+      <h2>{{ texto('aoMenosUm') }}</h2>
       <app-controle-parametro
         [(valor)]="tentativas"
-        rotulo="Tentativas independentes"
+        [rotulo]="texto('tentativas')"
         [min]="1"
         [max]="30"
       />
@@ -69,17 +72,13 @@
         [dominio]="dominio()"
         [curvas]="curvas()"
         [pontos]="pontos()"
-        descricao="Probabilidade de ao menos um sucesso e de nenhum, em função do número de tentativas."
+        [descricao]="texto('descricaoGrafico')"
         [altura]="380"
       />
 
       <app-formula [tex]="'P(\\text{ao menos um}) = 1 - (1-p)^{n}'" [bloco]="true" />
       <app-passo-a-passo [passos]="aoMenosUm().passos" />
-      <p class="observacao">
-        As duas curvas somam 1 em todo ponto — são complementares. Aumente as tentativas e
-        veja um evento improvável virar quase certo: é o raciocínio por trás de redundância em
-        projeto, e também do porquê de falhas raras acontecerem em sistemas grandes.
-      </p>
+      <p class="observacao">{{ texto('asDuasCurvas') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

@@ -14,7 +14,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de distribuição normal.
@@ -168,8 +174,7 @@ function daAreaAbaixo(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: gabarito * 100,
-        diagnostico:
-          'O resultado está em porcentagem. O enunciado pede a proporção, entre 0 e 1.',
+        diagnostico: 'O resultado está em porcentagem. O enunciado pede a proporção, entre 0 e 1.',
         passo: 2,
         conceito: 'normal.area',
       },
@@ -238,8 +243,8 @@ function daAreaEntre(nivel: Nivel, rng: Rng): Exercicio<number> {
   const de = media - rng.inteiro(1, 25);
   const ate = media + rng.inteiro(1, 25);
 
-  const gabarito = acumuladaPadrao(escoreZ(ate, media, desvio)) -
-    acumuladaPadrao(escoreZ(de, media, desvio));
+  const gabarito =
+    acumuladaPadrao(escoreZ(ate, media, desvio)) - acumuladaPadrao(escoreZ(de, media, desvio));
 
   return montar({
     chave: `en-${media}-${desvio}-${de}-${ate}`,

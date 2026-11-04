@@ -7,24 +7,22 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/estatistica/analise-combinatoria/analise-combinatoria.i18n.json';
 import { geradorCombinatoria } from '@features/estatistica/analise-combinatoria/analise-combinatoria.gerador';
 import { TEORIA_COMBINATORIA } from '@features/estatistica/analise-combinatoria/analise-combinatoria.teoria';
 
 @Component({
   selector: 'app-analise-combinatoria',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    PassoAPasso,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, PassoAPasso, TopicoLayout],
   templateUrl: './analise-combinatoria.html',
   styleUrl: './analise-combinatoria.scss',
 })
 export class AnaliseCombinatoria {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorCombinatoria;
   protected readonly conceitos = TEORIA_COMBINATORIA.map((teoria) => teoria.id);
 

@@ -1,8 +1,18 @@
 <app-topico-layout topicoId="analise-combinatoria">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="n" rotulo="Total de elementos (n)" [min]="1" [max]="20" />
-      <app-controle-parametro [(valor)]="p" rotulo="Quantos escolher (p)" [min]="0" [max]="20" />
+      <app-controle-parametro
+        [(valor)]="n"
+        [rotulo]="texto('totalElementos')"
+        [min]="1"
+        [max]="20"
+      />
+      <app-controle-parametro
+        [(valor)]="p"
+        [rotulo]="texto('quantosEscolher')"
+        [min]="0"
+        [max]="20"
+      />
     </section>
 
     <section class="destaque-formula">
@@ -12,46 +22,42 @@
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">Com ordem (arranjo)</span>
+        <span class="rotulo">{{ i18n.t('explorar.comOrdem') }}</span>
         <strong>{{ formatar(arranjo().resultado) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Ordens repetidas</span>
+        <span class="rotulo">{{ i18n.t('explorar.ordensRepetidas') }}</span>
         <strong>{{ formatar(ordensRepetidas()) }}</strong>
-        <span class="legenda">p!</span>
+        <span class="legenda">{{ texto('pFatorial') }}</span>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Sem ordem (combinação)</span>
+        <span class="rotulo">{{ i18n.t('explorar.semOrdem') }}</span>
         <strong>{{ formatar(combinacao().resultado) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Escolher n − p</span>
+        <span class="rotulo">{{ texto('escolherNMenosP') }}</span>
         <strong>{{ formatar(simetrica()) }}</strong>
-        <span class="legenda">mesmo valor, sempre</span>
+        <span class="legenda">{{ texto('mesmoValorSempre') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>A pergunta que decide tudo</h2>
-      <p class="observacao">
-        <strong>A ordem importa?</strong> Se importa, pare no arranjo. Se não importa, cada
-        grupo foi contado p! vezes — uma para cada ordem possível — e é preciso dividir. Não há
-        terceira fórmula a decorar: os indicadores acima mostram que a combinação é só o
-        arranjo dividido por p!.
-      </p>
+      <h2>{{ texto('aPerguntaQueDecide') }}</h2>
+      <!-- A pergunta em <strong> abre a frase em qualquer das três línguas. -->
+      <p class="observacao" [innerHTML]="texto('aOrdemImporta')"></p>
       <app-passo-a-passo [passos]="combinacao().passos" />
     </section>
 
     <section class="painel">
-      <h2>Triângulo de Pascal</h2>
+      <h2>{{ i18n.t('explorar.trianguloPascal') }}</h2>
       <app-controle-parametro
         [(valor)]="linhasPascal"
-        rotulo="Linhas exibidas"
+        [rotulo]="texto('linhasExibidas')"
         [min]="3"
         [max]="12"
       />
 
-      <div class="pascal" role="table" aria-label="Triângulo de Pascal">
+      <div class="pascal" role="table" [attr.aria-label]="i18n.t('explorar.trianguloPascal')">
         @for (linha of pascal(); track $index) {
           <div class="linha" role="row">
             @for (celula of linha; track $index) {
@@ -64,15 +70,11 @@
         }
       </div>
 
-      <p class="observacao">
-        Cada número do triângulo é uma combinação C(n, p), e cada um é a soma dos dois acima —
-        porque escolher p elementos é escolher ou não escolher o último, e somar os dois casos.
-        À direita, a soma de cada linha: sempre 2ⁿ, o total de subconjuntos possíveis.
-      </p>
+      <p class="observacao">{{ texto('cadaNumeroDoTriangulo') }}</p>
     </section>
 
     <section>
-      <h2>Arranjo, passo a passo</h2>
+      <h2>{{ texto('arranjoPassoAPasso') }}</h2>
       <app-passo-a-passo [passos]="arranjo().passos" />
     </section>
 

@@ -83,10 +83,7 @@ export const TEORIA_COMBINATORIA: readonly Teoria[] = [
       'Permutar n elementos distintos dá n! ordens. Quando alguns são iguais, trocá-los de ' +
       'lugar não produz nada novo, e é preciso dividir pelo fatorial de cada grupo repetido. ' +
       'É o mesmo raciocínio das combinações: contar e depois descontar as repetições.',
-    formulas: [
-      { tex: 'P_n = n!' },
-      { tex: 'P = \\frac{n!}{n_1!\\,n_2!\\cdots}' },
-    ],
+    formulas: [{ tex: 'P_n = n!' }, { tex: 'P = \\frac{n!}{n_1!\\,n_2!\\cdots}' }],
     demonstracao: [
       {
         descricao: 'Com elementos distintos, cada posição esgota uma opção.',

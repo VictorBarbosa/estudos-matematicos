@@ -15,6 +15,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/estatistica/distribuicao-normal/distribuicao-normal.i18n.json';
 import { geradorDistribuicaoNormal } from '@features/estatistica/distribuicao-normal/distribuicao-normal.gerador';
 import { TEORIA_NORMAL } from '@features/estatistica/distribuicao-normal/distribuicao-normal.teoria';
 
@@ -26,6 +29,8 @@ import { TEORIA_NORMAL } from '@features/estatistica/distribuicao-normal/distrib
   styleUrl: './distribuicao-normal.scss',
 })
 export class DistribuicaoNormal {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorDistribuicaoNormal;
   protected readonly conceitos = TEORIA_NORMAL.map((teoria) => teoria.id);
   protected readonly regra = REGRA_EMPIRICA;
@@ -44,13 +49,9 @@ export class DistribuicaoNormal {
     probabilidadeEntre(this.de(), this.ate(), this.media(), this.desvio()),
   );
 
-  protected readonly abaixo = computed(() =>
-    acumulada(this.de(), this.media(), this.desvio()),
-  );
+  protected readonly abaixo = computed(() => acumulada(this.de(), this.media(), this.desvio()));
 
-  protected readonly acima = computed(
-    () => 1 - acumulada(this.ate(), this.media(), this.desvio()),
-  );
+  protected readonly acima = computed(() => 1 - acumulada(this.ate(), this.media(), this.desvio()));
 
   protected readonly valorDoPercentil = computed(
     () => this.media() + quantilPadrao(this.percentil() / 100) * this.desvio(),
@@ -64,7 +65,13 @@ export class DistribuicaoNormal {
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
     const [media, desvio] = [this.media(), this.desvio()];
-    return [{ fn: (x) => densidade(x, media, desvio), cor: 'serie-1', rotulo: 'densidade' }];
+    return [
+      {
+        fn: (x) => densidade(x, media, desvio),
+        cor: 'serie-1',
+        rotulo: this.texto('curvaDensidade'),
+      },
+    ];
   });
 
   protected readonly areas = computed<readonly AreaPlot[]>(() => {
@@ -85,11 +92,7 @@ export class DistribuicaoNormal {
     yMin: 0,
   }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Curva normal com a área entre os dois limites destacada: é essa área que vale a ' +
-      'probabilidade de cair no intervalo.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_NORMAL);

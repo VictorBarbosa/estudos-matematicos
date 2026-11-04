@@ -35,7 +35,10 @@ export const geradorProbabilidade: GeradorExercicio<number> = {
   analisar: (entrada) => {
     // A exibição do gabarito é "0,38 (38,00%)": aceitar essa forma de volta
     // evita que o aluno copie a resposta certa e receba "formato inválido".
-    const limpo = entrada.trim().replace(/\s/g, '').replace(/\([^)]*\)$/, '');
+    const limpo = entrada
+      .trim()
+      .replace(/\s/g, '')
+      .replace(/\([^)]*\)$/, '');
 
     const porcentagem = /^(.+)%$/.exec(limpo);
     if (porcentagem) {
@@ -87,8 +90,7 @@ function exercicioDado(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prob-dado-${faces}-${caso.texto}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Num dado honesto de ${faces} faces, qual é a probabilidade de sair ${caso.texto}?`,
+    enunciado: `Num dado honesto de ${faces} faces, qual é a probabilidade de sair ${caso.texto}?`,
     enunciadoTex: `n(\\Omega) = ${faces} \\qquad n(A) = ${favoraveis}`,
     gabarito: resultado,
     resolucao: { resultado, passos },

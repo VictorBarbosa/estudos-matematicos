@@ -1,0 +1,84 @@
+{
+  "casosFavoraveis": {
+    "pt": "Casos favoráveis",
+    "fr": "Cas favorables",
+    "en": "Favourable cases"
+  },
+  "casosPossiveis": {
+    "pt": "Casos possíveis",
+    "fr": "Cas possibles",
+    "en": "Possible cases"
+  },
+  "probabilidadeEContagem": {
+    "pt": "Probabilidade é contagem",
+    "fr": "La probabilité est un comptage",
+    "en": "Probability is counting"
+  },
+  "naoHaNadaDeMisterioso": {
+    "pt": "Não há nada de misterioso na divisão: o difícil é contar certo os dois lados. Se o resultado passar de 1 ou ficar negativo, o erro está na contagem, nunca na fórmula.",
+    "fr": "Il n’y a rien de mystérieux dans la division : le difficile est de bien compter les deux côtés. Si le résultat dépasse 1 ou devient négatif, l’erreur est dans le comptage, jamais dans la formule.",
+    "en": "There is nothing mysterious about the division: the hard part is counting both sides correctly. If the result exceeds 1 or goes negative, the mistake is in the counting, never in the formula."
+  },
+  "comESemReposicao": {
+    "pt": "Com reposição e sem reposição",
+    "fr": "Avec remise et sans remise",
+    "en": "With replacement and without"
+  },
+  "bolasVermelhas": {
+    "pt": "Bolas vermelhas",
+    "fr": "Boules rouges",
+    "en": "Red balls"
+  },
+  "bolasAzuis": { "pt": "Bolas azuis", "fr": "Boules bleues", "en": "Blue balls" },
+  "comReposicao": {
+    "pt": "Duas vermelhas, com reposição",
+    "fr": "Deux rouges, avec remise",
+    "en": "Two reds, with replacement"
+  },
+  "eventosIndependentes": {
+    "pt": "eventos independentes",
+    "fr": "événements indépendants",
+    "en": "independent events"
+  },
+  "semReposicao": {
+    "pt": "Duas vermelhas, sem reposição",
+    "fr": "Deux rouges, sans remise",
+    "en": "Two reds, without replacement"
+  },
+  "segundaDepende": {
+    "pt": "a segunda depende da primeira",
+    "fr": "la seconde dépend de la première",
+    "en": "the second depends on the first"
+  },
+  "semReposicaoNota": {
+    "pt": "Sem reposição, a segunda retirada acontece numa urna diferente: uma vermelha menos e uma bola menos no total. É por isso que a probabilidade cai — e é exatamente o que significa probabilidade condicional.",
+    "fr": "Sans remise, le second tirage se fait dans une urne différente : une rouge en moins et une boule en moins au total. C’est pourquoi la probabilité baisse — et c’est exactement ce que signifie une probabilité conditionnelle.",
+    "en": "Without replacement, the second draw happens from a different urn: one red fewer and one ball fewer in total. That is why the probability drops — and it is exactly what conditional probability means."
+  },
+  "aoMenosUm": {
+    "pt": "Ao menos um: use o complementar",
+    "fr": "Au moins un : passez par le complémentaire",
+    "en": "At least one: use the complement"
+  },
+  "tentativas": {
+    "pt": "Tentativas independentes",
+    "fr": "Essais indépendants",
+    "en": "Independent trials"
+  },
+  "descricaoGrafico": {
+    "pt": "Probabilidade de ao menos um sucesso e de nenhum, em função do número de tentativas.",
+    "fr": "Probabilité d’au moins un succès et d’aucun, en fonction du nombre d’essais.",
+    "en": "Probability of at least one success and of none, as a function of the number of trials."
+  },
+  "curvaAoMenosUm": {
+    "pt": "ao menos um",
+    "fr": "au moins un",
+    "en": "at least one"
+  },
+  "curvaNenhum": { "pt": "nenhum", "fr": "aucun", "en": "none" },
+  "asDuasCurvas": {
+    "pt": "As duas curvas somam 1 em todo ponto — são complementares. Aumente as tentativas e veja um evento improvável virar quase certo: é o raciocínio por trás de redundância em projeto, e também do porquê de falhas raras acontecerem em sistemas grandes.",
+    "fr": "Les deux courbes font 1 en tout point — elles sont complémentaires. Augmentez les essais et voyez un événement improbable devenir presque certain : c’est le raisonnement derrière la redondance en conception, et aussi la raison pour laquelle des pannes rares arrivent dans les grands systèmes.",
+    "en": "The two curves add to 1 at every point — they are complementary. Raise the number of trials and watch an unlikely event become nearly certain: that is the reasoning behind redundancy in design, and also why rare failures happen in large systems."
+  }
+}

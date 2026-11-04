@@ -1,0 +1,48 @@
+{
+  "totalElementos": {
+    "pt": "Total de elementos (n)",
+    "fr": "Nombre total d’éléments (n)",
+    "en": "Total number of items (n)"
+  },
+  "quantosEscolher": {
+    "pt": "Quantos escolher (p)",
+    "fr": "Combien en choisir (p)",
+    "en": "How many to choose (p)"
+  },
+  "pFatorial": { "pt": "p!", "fr": "p!", "en": "p!" },
+  "escolherNMenosP": {
+    "pt": "Escolher n − p",
+    "fr": "Choisir n − p",
+    "en": "Choosing n − p"
+  },
+  "mesmoValorSempre": {
+    "pt": "mesmo valor, sempre",
+    "fr": "même valeur, toujours",
+    "en": "the same value, always"
+  },
+  "aPerguntaQueDecide": {
+    "pt": "A pergunta que decide tudo",
+    "fr": "La question qui décide de tout",
+    "en": "The question that decides everything"
+  },
+  "aOrdemImporta": {
+    "pt": "<strong>A ordem importa?</strong> Se importa, pare no arranjo. Se não importa, cada grupo foi contado p! vezes — uma para cada ordem possível — e é preciso dividir. Não há terceira fórmula a decorar: os indicadores acima mostram que a combinação é só o arranjo dividido por p!.",
+    "fr": "<strong>L’ordre compte-t-il ?</strong> S’il compte, arrêtez-vous à l’arrangement. S’il ne compte pas, chaque groupe a été compté p! fois — une pour chaque ordre possible — et il faut diviser. Il n’y a pas de troisième formule à retenir : les indicateurs ci-dessus montrent que la combinaison n’est que l’arrangement divisé par p!.",
+    "en": "<strong>Does order matter?</strong> If it does, stop at the permutation. If it does not, each group was counted p! times — once for every possible order — and you have to divide. There is no third formula to memorise: the readouts above show that the combination is just the permutation divided by p!."
+  },
+  "linhasExibidas": {
+    "pt": "Linhas exibidas",
+    "fr": "Lignes affichées",
+    "en": "Rows shown"
+  },
+  "cadaNumeroDoTriangulo": {
+    "pt": "Cada número do triângulo é uma combinação C(n, p), e cada um é a soma dos dois acima — porque escolher p elementos é escolher ou não escolher o último, e somar os dois casos. À direita, a soma de cada linha: sempre 2ⁿ, o total de subconjuntos possíveis.",
+    "fr": "Chaque nombre du triangle est une combinaison C(n, p), et chacun est la somme des deux au-dessus — parce que choisir p éléments revient à prendre ou non le dernier, puis à additionner les deux cas. À droite, la somme de chaque ligne : toujours 2ⁿ, le nombre total de sous-ensembles possibles.",
+    "en": "Every number in the triangle is a combination C(n, p), and each is the sum of the two above — because choosing p items means taking or not taking the last one, then adding the two cases. On the right, the sum of each row: always 2ⁿ, the total number of possible subsets."
+  },
+  "arranjoPassoAPasso": {
+    "pt": "Arranjo, passo a passo",
+    "fr": "Arrangement, pas à pas",
+    "en": "Permutation, step by step"
+  }
+}

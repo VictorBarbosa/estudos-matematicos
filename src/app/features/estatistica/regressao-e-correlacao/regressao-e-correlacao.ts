@@ -1,12 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import {
-  Par,
-  ajustarRetaComPassos,
-  covariancia,
-  forcaDaCorrelacao,
-  media,
-  pearson,
-} from '@core/math';
+import { Par, ajustarRetaComPassos, covariancia, chaveDaForca, media, pearson } from '@core/math';
 import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
@@ -14,7 +7,14 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import {
+  CurvaPlot,
+  PontoPlot,
+  SegmentoPlot,
+} from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.i18n.json';
 import { geradorRegressaoCorrelacao } from '@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.gerador';
 import { TEORIA_REGRESSAO } from '@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.teoria';
 
@@ -25,7 +25,11 @@ import { TEORIA_REGRESSAO } from '@features/estatistica/regressao-e-correlacao/r
  * tornaria impossível comparar dois ajustes.
  */
 function ruidoFixo(indice: number): number {
-  return Math.sin(indice * 12.9898) * 43758.5453 - Math.floor(Math.sin(indice * 12.9898) * 43758.5453) - 0.5;
+  return (
+    Math.sin(indice * 12.9898) * 43758.5453 -
+    Math.floor(Math.sin(indice * 12.9898) * 43758.5453) -
+    0.5
+  );
 }
 
 @Component({
@@ -36,6 +40,8 @@ function ruidoFixo(indice: number): number {
   styleUrl: './regressao-e-correlacao.scss',
 })
 export class RegressaoECorrelacao {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorRegressaoCorrelacao;
   protected readonly conceitos = TEORIA_REGRESSAO.map((teoria) => teoria.id);
 
@@ -63,7 +69,7 @@ export class RegressaoECorrelacao {
 
   protected readonly r = computed(() => pearson(this.pontos()));
   protected readonly cov = computed(() => covariancia(this.pontos()));
-  protected readonly forca = computed(() => forcaDaCorrelacao(this.r()));
+  protected readonly forca = computed(() => chaveDaForca(this.r()));
 
   protected readonly mediaDeY = computed(() => media(this.pontos().map((par) => par.y)));
 
@@ -78,8 +84,17 @@ export class RegressaoECorrelacao {
     const mediaY = this.mediaDeY();
 
     return [
-      { fn: (x) => inclinacao * x + intercepto, cor: 'acento', rotulo: 'reta ajustada' },
-      { fn: () => mediaY, cor: 'texto-suave', tracejada: true, rotulo: 'média de y' },
+      {
+        fn: (x) => inclinacao * x + intercepto,
+        cor: 'acento',
+        rotulo: this.texto('curvaAjustada'),
+      },
+      {
+        fn: () => mediaY,
+        cor: 'texto-suave',
+        tracejada: true,
+        rotulo: this.texto('curvaMediaDeY'),
+      },
     ];
   });
 
@@ -103,11 +118,7 @@ export class RegressaoECorrelacao {
 
   protected readonly dominio = computed(() => ({ xMin: 0, xMax: this.quantidade() + 1 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Nuvem de pontos com a reta de mínimos quadrados, a média de y tracejada e os resíduos ' +
-      'desenhados como segmentos verticais.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_REGRESSAO);

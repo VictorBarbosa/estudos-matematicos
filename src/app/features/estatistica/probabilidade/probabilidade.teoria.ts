@@ -41,7 +41,11 @@ export const TEORIA_PROBABILIDADE: readonly Teoria[] = [
       enunciado: 'A probabilidade de tirar um número par num dado de seis faces.',
       passos: probabilidadeComPassos(3, 6).passos,
     },
-    vejaTambem: ['probabilidade.independencia', 'probabilidade.complementar', 'combinatoria.combinacao'],
+    vejaTambem: [
+      'probabilidade.independencia',
+      'probabilidade.complementar',
+      'combinatoria.combinacao',
+    ],
   },
   {
     id: 'probabilidade.independencia',

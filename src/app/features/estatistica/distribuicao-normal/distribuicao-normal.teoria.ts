@@ -12,7 +12,10 @@ export const TEORIA_NORMAL: readonly Teoria[] = [
       'nada na origem deles é.',
     formulas: [
       { tex: 'f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x - \\mu)^{2}}{2\\sigma^{2}}}' },
-      { tex: '\\int_{-\\infty}^{\\infty} f(x)\\,dx = 1', legenda: 'A área total vale 1: por isso ela é probabilidade.' },
+      {
+        tex: '\\int_{-\\infty}^{\\infty} f(x)\\,dx = 1',
+        legenda: 'A área total vale 1: por isso ela é probabilidade.',
+      },
     ],
     demonstracao: [
       {

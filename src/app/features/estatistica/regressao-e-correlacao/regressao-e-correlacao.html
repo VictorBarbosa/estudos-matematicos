@@ -1,38 +1,39 @@
 <app-topico-layout topicoId="regressao-e-correlacao">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Duas perguntas diferentes</h2>
+      <h2>{{ texto('duasPerguntas') }}</h2>
       <app-formula
         [tex]="'\\hat{y} = ax + b \\qquad r = \\frac{\\text{cov}(x,y)}{s_x s_y}'"
         [bloco]="true"
       />
-      <p class="observacao">
-        A regressão responde QUAL reta descreve melhor os dados; a correlação responde SE eles
-        realmente seguem uma reta. A reta sempre existe, mesmo sobre uma nuvem sem relação
-        nenhuma — a correlação é que diz se ela significa alguma coisa.
-      </p>
+      <p class="observacao">{{ texto('aRegressaoResponde') }}</p>
     </section>
 
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="inclinacaoReal"
-        rotulo="Inclinação verdadeira"
+        [rotulo]="texto('inclinacaoVerdadeira')"
         [min]="-5"
         [max]="5"
       />
       <app-controle-parametro
         [(valor)]="interceptoReal"
-        rotulo="Intercepto verdadeiro"
+        [rotulo]="texto('interceptoVerdadeiro')"
         [min]="-10"
         [max]="10"
       />
       <app-controle-parametro
         [(valor)]="decimosDeRuido"
-        rotulo="Dispersão, em décimos"
+        [rotulo]="texto('dispersao')"
         [min]="0"
         [max]="60"
       />
-      <app-controle-parametro [(valor)]="quantidade" rotulo="Número de pontos" [min]="4" [max]="20" />
+      <app-controle-parametro
+        [(valor)]="quantidade"
+        [rotulo]="texto('numeroDePontos')"
+        [min]="4"
+        [max]="20"
+      />
     </section>
 
     <section class="destaque-formula">
@@ -41,34 +42,34 @@
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">Inclinação ajustada</span>
+        <span class="rotulo">{{ texto('inclinacaoAjustada') }}</span>
         <strong>{{ formatar(ajuste().inclinacao) }}</strong>
-        <span class="legenda">verdadeira: {{ inclinacaoReal() }}</span>
+        <span class="legenda">{{ texto('verdadeiraF', { valor: inclinacaoReal() }) }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Intercepto ajustado</span>
+        <span class="rotulo">{{ texto('interceptoAjustado') }}</span>
         <strong>{{ formatar(ajuste().intercepto) }}</strong>
-        <span class="legenda">verdadeiro: {{ interceptoReal() }}</span>
+        <span class="legenda">{{ texto('verdadeiroM', { valor: interceptoReal() }) }}</span>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Correlação (r)</span>
+        <span class="rotulo">{{ texto('correlacaoR') }}</span>
         <strong>{{ formatar(r()) }}</strong>
-        <span class="legenda">{{ forca() }}</span>
+        <span class="legenda">{{ i18n.t(forca()) }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Determinação (R²)</span>
+        <span class="rotulo">{{ texto('determinacao') }}</span>
         <strong>{{ porcento(ajuste().r2) }}</strong>
-        <span class="legenda">da variação explicada</span>
+        <span class="legenda">{{ texto('daVariacaoExplicada') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Covariância</span>
+        <span class="rotulo">{{ texto('covariancia') }}</span>
         <strong>{{ formatar(cov()) }}</strong>
-        <span class="legenda">ainda com unidades</span>
+        <span class="legenda">{{ texto('aindaComUnidades') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>A reta, a média e os resíduos</h2>
+      <h2>{{ texto('aRetaAMedia') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -77,31 +78,19 @@
         [descricao]="descricaoGrafico()"
         [altura]="400"
       />
-      <p class="observacao">
-        Os segmentos vermelhos são os resíduos — é a soma dos quadrados deles que o ajuste
-        minimiza. A linha tracejada é a média de y, que seria a melhor previsão se não houvesse
-        relação alguma com x: o R² mede exatamente o quanto a reta melhora sobre ela.
-      </p>
+      <p class="observacao">{{ texto('osSegmentosVermelhos') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Aumente a dispersão e observe</h2>
+      <h2>{{ texto('aumenteADispersao') }}</h2>
       <app-formula [tex]="'R^{2} = r^{2}'" [bloco]="true" />
-      <p class="observacao">
-        A inclinação ajustada continua perto da verdadeira mesmo com muito ruído — a reta
-        aguenta. O que desaba é o R², e é ele que diz se vale confiar no modelo. Repare também
-        que uma correlação de 0,7 corresponde a menos de metade da variação explicada.
-      </p>
+      <p class="observacao">{{ texto('aInclinacaoAjustada') }}</p>
     </section>
 
     <section class="painel">
-      <h2>E o aviso que vale por tudo</h2>
+      <h2>{{ texto('oAviso') }}</h2>
       <app-formula [tex]="'x \\leftarrow z \\rightarrow y'" [bloco]="true" />
-      <p class="observacao">
-        Correlação não é causalidade. Duas grandezas podem andar juntas porque uma causa a
-        outra, porque uma terceira causa as duas, ou por acaso amostral. O coeficiente não
-        distingue os casos — só o desenho do experimento decide.
-      </p>
+      <p class="observacao">{{ texto('correlacaoNaoECausalidade') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

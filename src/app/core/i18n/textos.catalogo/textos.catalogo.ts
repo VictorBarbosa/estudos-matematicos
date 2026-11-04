@@ -12,6 +12,11 @@ import t_inequacoes from '@features/algebra/inequacoes/inequacoes.i18n.json';
 import t_polinomios from '@features/algebra/polinomios/polinomios.i18n.json';
 import t_produtos_notaveis from '@features/algebra/produtos-notaveis/produtos-notaveis.i18n.json';
 import t_sistemas_lineares from '@features/algebra/sistemas-lineares/sistemas-lineares.i18n.json';
+import t_analise_combinatoria from '@features/estatistica/analise-combinatoria/analise-combinatoria.i18n.json';
+import t_distribuicao_normal from '@features/estatistica/distribuicao-normal/distribuicao-normal.i18n.json';
+import t_estatistica_e_incerteza from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.i18n.json';
+import t_probabilidade from '@features/estatistica/probabilidade/probabilidade.i18n.json';
+import t_regressao_e_correlacao from '@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.i18n.json';
 import t_composicao_inversa from '@features/funcoes/composicao-inversa/composicao-inversa.i18n.json';
 import t_conceito_funcao from '@features/funcoes/conceito-funcao/conceito-funcao.i18n.json';
 import t_funcao_afim from '@features/funcoes/funcao-afim/funcao-afim.i18n.json';
@@ -64,6 +69,11 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['polinomios', t_polinomios as TabelaDeTextos],
   ['produtos-notaveis', t_produtos_notaveis as TabelaDeTextos],
   ['sistemas-lineares', t_sistemas_lineares as TabelaDeTextos],
+  ['analise-combinatoria', t_analise_combinatoria as TabelaDeTextos],
+  ['distribuicao-normal', t_distribuicao_normal as TabelaDeTextos],
+  ['estatistica-e-incerteza', t_estatistica_e_incerteza as TabelaDeTextos],
+  ['probabilidade', t_probabilidade as TabelaDeTextos],
+  ['regressao-e-correlacao', t_regressao_e_correlacao as TabelaDeTextos],
   ['composicao-inversa', t_composicao_inversa as TabelaDeTextos],
   ['conceito-funcao', t_conceito_funcao as TabelaDeTextos],
   ['funcao-afim', t_funcao_afim as TabelaDeTextos],

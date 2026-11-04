@@ -36,8 +36,9 @@ describe('geradorProbabilidade', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, total, favoraveis] =
-        /n\(\\Omega\) = (\d+) \\qquad n\(A\) = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, total, favoraveis] = /n\(\\Omega\) = (\d+) \\qquad n\(A\) = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBeCloseTo(Number(favoraveis) / Number(total), 9);
     }
@@ -49,13 +50,13 @@ describe('geradorProbabilidade', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, vermelhas, azuis] =
-        /(\d+)\\text\{ vermelhas\} \\qquad (\d+)\\text\{ azuis\}/.exec(exercicio.enunciadoTex)!;
+      const [, vermelhas, azuis] = /(\d+)\\text\{ vermelhas\} \\qquad (\d+)\\text\{ azuis\}/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       const total = Number(vermelhas) + Number(azuis);
       const comReposicao = (Number(vermelhas) / total) ** 2;
-      const esperado =
-        (Number(vermelhas) / total) * ((Number(vermelhas) - 1) / (total - 1));
+      const esperado = (Number(vermelhas) / total) * ((Number(vermelhas) - 1) / (total - 1));
 
       expect(exercicio.gabarito).toBeCloseTo(esperado, 9);
       expect(exercicio.gabarito).toBeLessThan(comReposicao);
@@ -63,13 +64,16 @@ describe('geradorProbabilidade', () => {
   });
 
   it('ao menos um cresce com as tentativas e nunca chega a 1', () => {
-    const exercicios = amostra('medio', 150).filter((e) => e.enunciado.includes('ao menos uma vez'));
+    const exercicios = amostra('medio', 150).filter((e) =>
+      e.enunciado.includes('ao menos uma vez'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, faces, tentativas] =
-        /p = \\frac\{1\}\{(\d+)\} \\qquad n = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, faces, tentativas] = /p = \\frac\{1\}\{(\d+)\} \\qquad n = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       const p = 1 / Number(faces);
       expect(exercicio.gabarito).toBeCloseTo(1 - (1 - p) ** Number(tentativas), 9);
@@ -84,8 +88,9 @@ describe('geradorProbabilidade', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, boas, retiradas, total] =
-        /C_\{(\d+),(\d+)\} \/ C_\{(\d+),\d+\}/.exec(exercicio.enunciadoTex)!;
+      const [, boas, retiradas, total] = /C_\{(\d+),(\d+)\} \/ C_\{(\d+),\d+\}/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBeCloseTo(
         combinacoes(Number(boas), Number(retiradas)) /
@@ -127,9 +132,7 @@ describe('geradorProbabilidade', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('NENHUM sucesso')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('NENHUM sucesso'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('NENHUM sucesso'))!;
 
     const resultado = corrigir(geradorProbabilidade, exercicio, String(armadilha.resposta));
 

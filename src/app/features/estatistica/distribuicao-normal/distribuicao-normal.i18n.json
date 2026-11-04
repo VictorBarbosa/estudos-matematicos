@@ -1,0 +1,75 @@
+{
+  "elaNaoEEscolhida": {
+    "pt": "Ela não é escolhida, ela aparece",
+    "fr": "Elle n’est pas choisie, elle apparaît",
+    "en": "It is not chosen, it shows up"
+  },
+  "sempreQueMuitos": {
+    "pt": "Sempre que muitos efeitos pequenos e independentes se somam, o resultado tende a esta curva — é o teorema central do limite. Por isso erro de medida, tolerância de fabricação e ruído de sensor são normais mesmo quando nada na origem deles é.",
+    "fr": "Chaque fois que de nombreux effets petits et indépendants s’additionnent, le résultat tend vers cette courbe — c’est le théorème central limite. Voilà pourquoi erreur de mesure, tolérance de fabrication et bruit de capteur sont normaux même quand rien à leur origine ne l’est.",
+    "en": "Whenever many small, independent effects add up, the result tends to this curve — that is the central limit theorem. Which is why measurement error, manufacturing tolerance and sensor noise are normal even when nothing at their source is."
+  },
+  "percentilProcurado": {
+    "pt": "Percentil procurado (%)",
+    "fr": "Centile recherché (%)",
+    "en": "Percentile sought (%)"
+  },
+  "escoreInferior": {
+    "pt": "Escore do limite inferior",
+    "fr": "Cote du seuil inférieur",
+    "en": "Score of the lower bound"
+  },
+  "escoreSuperior": {
+    "pt": "Escore do limite superior",
+    "fr": "Cote du seuil supérieur",
+    "en": "Score of the upper bound"
+  },
+  "dentroDoIntervalo": {
+    "pt": "Dentro do intervalo",
+    "fr": "Dans l’intervalle",
+    "en": "Inside the interval"
+  },
+  "abaixo": { "pt": "Abaixo", "fr": "En dessous", "en": "Below" },
+  "acima": { "pt": "Acima", "fr": "Au-dessus", "en": "Above" },
+  "valorDoPercentil": {
+    "pt": "Valor do percentil {p}",
+    "fr": "Valeur du centile {p}",
+    "en": "Value of percentile {p}"
+  },
+  "daAreaParaOValor": {
+    "pt": "da área para o valor",
+    "fr": "de l’aire vers la valeur",
+    "en": "from the area to the value"
+  },
+  "probabilidadeEArea": {
+    "pt": "Probabilidade é área",
+    "fr": "La probabilité est une aire",
+    "en": "Probability is area"
+  },
+  "curvaDensidade": { "pt": "densidade", "fr": "densité", "en": "density" },
+  "descricaoGrafico": {
+    "pt": "Curva normal com a área entre os dois limites destacada: é essa área que vale a probabilidade de cair no intervalo.",
+    "fr": "Courbe normale avec l’aire entre les deux seuils mise en évidence : c’est cette aire qui vaut la probabilité de tomber dans l’intervalle.",
+    "en": "Normal curve with the area between the two bounds highlighted: that area is the probability of landing in the interval."
+  },
+  "mexaNoDesvio": {
+    "pt": "Mexa no desvio padrão: a curva estreita e sobe, ou alarga e achata, mas a área total continua valendo 1. Num contínuo, a probabilidade de um valor exato é zero — o que tem sentido é a área de um intervalo.",
+    "fr": "Changez l’écart type : la courbe se resserre et monte, ou s’élargit et s’aplatit, mais l’aire totale reste égale à 1. Dans un continu, la probabilité d’une valeur exacte est nulle — ce qui a du sens, c’est l’aire d’un intervalle.",
+    "en": "Change the standard deviation: the curve narrows and rises, or widens and flattens, but the total area stays 1. In a continuum, the probability of an exact value is zero — what makes sense is the area of an interval."
+  },
+  "regraEmpirica": {
+    "pt": "A regra empírica",
+    "fr": "La règle empirique",
+    "en": "The empirical rule"
+  },
+  "desvios": {
+    "pt": "{quantos} desvio(s)",
+    "fr": "{quantos} écart(s)",
+    "en": "{quantos} deviation(s)"
+  },
+  "tresNumeros": {
+    "pt": "Três números que resolvem a maioria dos casos sem tabela nenhuma. Fora de três desvios sobra menos de 3 em mil — e é por isso que esse é o critério usual para descartar uma peça no controle de qualidade.",
+    "fr": "Trois nombres qui règlent la plupart des cas sans aucune table. Au-delà de trois écarts il reste moins de 3 sur mille — et c’est pourquoi c’est le critère usuel pour rejeter une pièce au contrôle de la qualité.",
+    "en": "Three numbers that settle most cases with no table at all. Beyond three deviations less than 3 in a thousand remain — and that is why it is the usual criterion for rejecting a part in quality control."
+  }
+}

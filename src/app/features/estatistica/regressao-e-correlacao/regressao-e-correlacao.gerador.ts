@@ -16,7 +16,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de regressão e correlação.
@@ -241,8 +247,7 @@ function daDeterminacao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercici
       },
       {
         resposta: 1 - gabarito,
-        diagnostico:
-          'Essa é a fração NÃO explicada, que é o que sobra para os resíduos.',
+        diagnostico: 'Essa é a fração NÃO explicada, que é o que sobra para os resíduos.',
         passo: 2,
         conceito: 'correlacao.determinacao',
       },
@@ -263,7 +268,8 @@ function daPrevisao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<nu
   const { inclinacao, intercepto } = ajustarRetaComPassos(pares).resultado;
   const xs = pares.map((par) => par.x);
   const faixa = { min: Math.min(...xs), max: Math.max(...xs) };
-  const x = nivel === 'dificil' ? faixa.max + rng.inteiro(3, 10) : rng.inteiro(faixa.min, faixa.max);
+  const x =
+    nivel === 'dificil' ? faixa.max + rng.inteiro(3, 10) : rng.inteiro(faixa.min, faixa.max);
 
   const gabarito = inclinacao * x + intercepto;
 
@@ -271,8 +277,7 @@ function daPrevisao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<nu
     chave: `pr-${chaveDa(pares)}-${x}`,
     nivel,
     rng,
-    enunciado:
-      `Use a reta de mínimos quadrados destes dados para prever y quando x vale ${x}. ${PEDIDO}`,
+    enunciado: `Use a reta de mínimos quadrados destes dados para prever y quando x vale ${x}. ${PEDIDO}`,
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: preverComPassos(inclinacao, intercepto, x, faixa),

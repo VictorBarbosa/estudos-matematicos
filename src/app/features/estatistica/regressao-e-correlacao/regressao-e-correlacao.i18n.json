@@ -1,0 +1,106 @@
+{
+  "duasPerguntas": {
+    "pt": "Duas perguntas diferentes",
+    "fr": "Deux questions différentes",
+    "en": "Two different questions"
+  },
+  "aRegressaoResponde": {
+    "pt": "A regressão responde QUAL reta descreve melhor os dados; a correlação responde SE eles realmente seguem uma reta. A reta sempre existe, mesmo sobre uma nuvem sem relação nenhuma — a correlação é que diz se ela significa alguma coisa.",
+    "fr": "La régression répond à QUELLE droite décrit le mieux les données ; la corrélation répond à SI elles suivent vraiment une droite. La droite existe toujours, même sur un nuage sans aucune relation — c’est la corrélation qui dit si elle signifie quelque chose.",
+    "en": "Regression answers WHICH line best describes the data; correlation answers WHETHER the data really follow a line. The line always exists, even over a cloud with no relation at all — it is the correlation that says whether it means anything."
+  },
+  "inclinacaoVerdadeira": {
+    "pt": "Inclinação verdadeira",
+    "fr": "Pente véritable",
+    "en": "True slope"
+  },
+  "interceptoVerdadeiro": {
+    "pt": "Intercepto verdadeiro",
+    "fr": "Ordonnée à l’origine véritable",
+    "en": "True intercept"
+  },
+  "dispersao": {
+    "pt": "Dispersão, em décimos",
+    "fr": "Dispersion, en dixièmes",
+    "en": "Spread, in tenths"
+  },
+  "numeroDePontos": {
+    "pt": "Número de pontos",
+    "fr": "Nombre de points",
+    "en": "Number of points"
+  },
+  "inclinacaoAjustada": {
+    "pt": "Inclinação ajustada",
+    "fr": "Pente ajustée",
+    "en": "Fitted slope"
+  },
+  "verdadeiraF": {
+    "pt": "verdadeira: {valor}",
+    "fr": "véritable : {valor}",
+    "en": "true: {valor}"
+  },
+  "interceptoAjustado": {
+    "pt": "Intercepto ajustado",
+    "fr": "Ordonnée à l’origine ajustée",
+    "en": "Fitted intercept"
+  },
+  "verdadeiroM": {
+    "pt": "verdadeiro: {valor}",
+    "fr": "véritable : {valor}",
+    "en": "true: {valor}"
+  },
+  "correlacaoR": { "pt": "Correlação (r)", "fr": "Corrélation (r)", "en": "Correlation (r)" },
+  "determinacao": {
+    "pt": "Determinação (R²)",
+    "fr": "Détermination (R²)",
+    "en": "Determination (R²)"
+  },
+  "daVariacaoExplicada": {
+    "pt": "da variação explicada",
+    "fr": "de la variation expliquée",
+    "en": "of the variation explained"
+  },
+  "covariancia": { "pt": "Covariância", "fr": "Covariance", "en": "Covariance" },
+  "aindaComUnidades": {
+    "pt": "ainda com unidades",
+    "fr": "encore avec des unités",
+    "en": "still carrying units"
+  },
+  "aRetaAMedia": {
+    "pt": "A reta, a média e os resíduos",
+    "fr": "La droite, la moyenne et les résidus",
+    "en": "The line, the mean and the residuals"
+  },
+  "curvaAjustada": { "pt": "reta ajustada", "fr": "droite ajustée", "en": "fitted line" },
+  "curvaMediaDeY": { "pt": "média de y", "fr": "moyenne de y", "en": "mean of y" },
+  "descricaoGrafico": {
+    "pt": "Nuvem de pontos com a reta de mínimos quadrados, a média de y tracejada e os resíduos desenhados como segmentos verticais.",
+    "fr": "Nuage de points avec la droite des moindres carrés, la moyenne de y en pointillé et les résidus dessinés en segments verticaux.",
+    "en": "Scatter of points with the least-squares line, the mean of y dashed and the residuals drawn as vertical segments."
+  },
+  "osSegmentosVermelhos": {
+    "pt": "Os segmentos vermelhos são os resíduos — é a soma dos quadrados deles que o ajuste minimiza. A linha tracejada é a média de y, que seria a melhor previsão se não houvesse relação alguma com x: o R² mede exatamente o quanto a reta melhora sobre ela.",
+    "fr": "Les segments rouges sont les résidus — c’est la somme de leurs carrés que l’ajustement minimise. La ligne en pointillé est la moyenne de y, qui serait la meilleure prévision s’il n’y avait aucune relation avec x : le R² mesure exactement ce que la droite apporte de plus.",
+    "en": "The red segments are the residuals — it is the sum of their squares that the fit minimises. The dashed line is the mean of y, which would be the best prediction if there were no relation with x at all: the R² measures exactly how much the line improves on it."
+  },
+  "aumenteADispersao": {
+    "pt": "Aumente a dispersão e observe",
+    "fr": "Augmentez la dispersion et observez",
+    "en": "Raise the spread and watch"
+  },
+  "aInclinacaoAjustada": {
+    "pt": "A inclinação ajustada continua perto da verdadeira mesmo com muito ruído — a reta aguenta. O que desaba é o R², e é ele que diz se vale confiar no modelo. Repare também que uma correlação de 0,7 corresponde a menos de metade da variação explicada.",
+    "fr": "La pente ajustée reste proche de la véritable même avec beaucoup de bruit — la droite tient. Ce qui s’effondre, c’est le R², et c’est lui qui dit s’il faut faire confiance au modèle. Remarquez aussi qu’une corrélation de 0,7 correspond à moins de la moitié de la variation expliquée.",
+    "en": "The fitted slope stays close to the true one even with a lot of noise — the line holds up. What collapses is the R², and it is the R² that says whether the model is worth trusting. Notice too that a correlation of 0.7 accounts for less than half the variation."
+  },
+  "oAviso": {
+    "pt": "E o aviso que vale por tudo",
+    "fr": "Et l’avertissement qui vaut pour tout",
+    "en": "And the warning that outweighs all"
+  },
+  "correlacaoNaoECausalidade": {
+    "pt": "Correlação não é causalidade. Duas grandezas podem andar juntas porque uma causa a outra, porque uma terceira causa as duas, ou por acaso amostral. O coeficiente não distingue os casos — só o desenho do experimento decide.",
+    "fr": "Corrélation n’est pas causalité. Deux grandeurs peuvent évoluer ensemble parce que l’une cause l’autre, parce qu’une troisième cause les deux, ou par hasard d’échantillonnage. Le coefficient ne distingue pas ces cas — seul le plan de l’expérience décide.",
+    "en": "Correlation is not causation. Two quantities can move together because one causes the other, because a third causes both, or by sampling accident. The coefficient does not tell these apart — only the design of the experiment decides."
+  }
+}

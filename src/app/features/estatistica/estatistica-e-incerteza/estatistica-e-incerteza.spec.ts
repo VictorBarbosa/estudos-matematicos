@@ -10,10 +10,7 @@ function amostra(nivel: Nivel, quantidade = 60) {
 
 /** Lê a lista de medidas do enunciado. */
 function medidasDe(enunciado: string): number[] {
-  return /medidas (.*?), qual/
-    .exec(enunciado)![1]!
-    .split('; ')
-    .map(Number);
+  return /medidas (.*?), qual/.exec(enunciado)![1]!.split('; ').map(Number);
 }
 
 describe('geradorIncerteza', () => {
@@ -120,15 +117,15 @@ describe('geradorIncerteza', () => {
   });
 
   it('a incerteza da área combina as relativas', () => {
-    const exercicios = amostra('dificil', 180).filter((e) => e.enunciado.includes('incerteza da área'));
+    const exercicios = amostra('dificil', 180).filter((e) =>
+      e.enunciado.includes('incerteza da área'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
       const [, base, sb, altura, sh] =
-        /b = (\d+) \\pm ([\d{},]+) \\qquad h = (\d+) \\pm ([\d{},]+)/.exec(
-          exercicio.enunciadoTex,
-        )!;
+        /b = (\d+) \\pm ([\d{},]+) \\qquad h = (\d+) \\pm ([\d{},]+)/.exec(exercicio.enunciadoTex)!;
 
       const b = Number(base);
       const h = Number(altura);
@@ -154,8 +151,7 @@ describe('geradorIncerteza', () => {
       expect(pontos.length).toBeGreaterThan(1);
 
       // Pontos colineares: a inclinação é Δy/Δx entre quaisquer dois.
-      const esperado =
-        (pontos[1]!.y - pontos[0]!.y) / (pontos[1]!.x - pontos[0]!.x);
+      const esperado = (pontos[1]!.y - pontos[0]!.y) / (pontos[1]!.x - pontos[0]!.x);
 
       expect(exercicio.gabarito).toBeCloseTo(esperado, 6);
     }

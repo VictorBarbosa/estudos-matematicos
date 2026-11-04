@@ -1,0 +1,144 @@
+{
+  "oitoMedidas": {
+    "pt": "Oito medidas do mesmo pêndulo",
+    "fr": "Huit mesures du même pendule",
+    "en": "Eight measurements of the same pendulum"
+  },
+  "quantasMedidas": {
+    "pt": "Quantas medidas usar",
+    "fr": "Combien de mesures utiliser",
+    "en": "How many measurements to use"
+  },
+  "removerDiscrepante": {
+    "pt": "Remover uma medida discrepante (3,5 s)",
+    "fr": "Retirer une mesure aberrante (3,5 s)",
+    "en": "Remove an outlying measurement (3.5 s)"
+  },
+  "acrescentarDiscrepante": {
+    "pt": "Acrescentar uma medida discrepante (3,5 s)",
+    "fr": "Ajouter une mesure aberrante (3,5 s)",
+    "en": "Add an outlying measurement (3.5 s)"
+  },
+  "descricaoMedidas": {
+    "pt": "As medidas dispostas na reta real, com a média destacada.",
+    "fr": "Les mesures placées sur la droite réelle, avec la moyenne mise en évidence.",
+    "en": "The measurements laid out on the real line, with the mean highlighted."
+  },
+  "marcaMedia": { "pt": "média", "fr": "moyenne", "en": "mean" },
+  "umResultadoExperimental": {
+    "pt": "Um resultado experimental não é um número: é um valor acompanhado de sua incerteza.",
+    "fr": "Un résultat expérimental n’est pas un nombre : c’est une valeur accompagnée de son incertitude.",
+    "en": "An experimental result is not a number: it is a value together with its uncertainty."
+  },
+  "mediana": { "pt": "Mediana", "fr": "Médiane", "en": "Median" },
+  "resisteAExtremos": {
+    "pt": "resiste a valores extremos",
+    "fr": "résiste aux valeurs extrêmes",
+    "en": "resists extreme values"
+  },
+  "dispersaoDasMedidas": {
+    "pt": "dispersão das medidas",
+    "fr": "dispersion des mesures",
+    "en": "spread of the measurements"
+  },
+  "incertezaDaMedia": {
+    "pt": "Incerteza da média",
+    "fr": "Incertitude de la moyenne",
+    "en": "Uncertainty of the mean"
+  },
+  "sSobreRaizN": { "pt": "s / √n", "fr": "s / √n", "en": "s / √n" },
+  "avisoOutlier": {
+    "pt": "Com a medida discrepante, a média se deslocou bem mais que a mediana. É por isso que a mediana costuma ser reportada quando se suspeita de erro grosseiro em alguma leitura.",
+    "fr": "Avec la mesure aberrante, la moyenne s’est déplacée bien plus que la médiane. C’est pourquoi on rapporte souvent la médiane lorsqu’on soupçonne une erreur grossière dans une lecture.",
+    "en": "With the outlying measurement, the mean moved far more than the median. That is why the median is often reported when a gross error in some reading is suspected."
+  },
+  "deOndeVemODesvio": {
+    "pt": "De onde vem o desvio padrão",
+    "fr": "D’où vient l’écart type",
+    "en": "Where the standard deviation comes from"
+  },
+  "reduzaONumero": {
+    "pt": "Reduza o número de medidas e acompanhe os indicadores: o desvio padrão muda pouco, porque descreve o instrumento e o procedimento. Já a incerteza da média cai com √n — medir mais vezes não torna o experimento mais preciso, mas torna a média mais confiável.",
+    "fr": "Réduisez le nombre de mesures et suivez les indicateurs : l’écart type change peu, parce qu’il décrit l’instrument et la procédure. L’incertitude de la moyenne, elle, décroît en √n — mesurer plus souvent ne rend pas l’expérience plus précise, mais rend la moyenne plus fiable.",
+    "en": "Reduce the number of measurements and follow the readouts: the standard deviation barely changes, because it describes the instrument and the procedure. The uncertainty of the mean, though, falls as √n — measuring more often does not make the experiment more precise, but it makes the mean more trustworthy."
+  },
+  "propagacao": {
+    "pt": "Propagação de incerteza",
+    "fr": "Propagation de l’incertitude",
+    "en": "Propagation of uncertainty"
+  },
+  "baseCm": { "pt": "Base (cm)", "fr": "Base (cm)", "en": "Base (cm)" },
+  "alturaCm": { "pt": "Altura (cm)", "fr": "Hauteur (cm)", "en": "Height (cm)" },
+  "incertezaBase": {
+    "pt": "Incerteza da base",
+    "fr": "Incertitude de la base",
+    "en": "Uncertainty of the base"
+  },
+  "incertezaAltura": {
+    "pt": "Incerteza da altura",
+    "fr": "Incertitude de la hauteur",
+    "en": "Uncertainty of the height"
+  },
+  "incertezaDaSoma": {
+    "pt": "Incerteza da soma (quadratura)",
+    "fr": "Incertitude de la somme (quadrature)",
+    "en": "Uncertainty of the sum (in quadrature)"
+  },
+  "seSomassemos": {
+    "pt": "Se somássemos direto",
+    "fr": "Si on les additionnait directement",
+    "en": "If we added them directly"
+  },
+  "superestima": {
+    "pt": "superestima o erro",
+    "fr": "surestime l’erreur",
+    "en": "overestimates the error"
+  },
+  "incertezaDaArea": {
+    "pt": "Incerteza da área",
+    "fr": "Incertitude de l’aire",
+    "en": "Uncertainty of the area"
+  },
+  "areaCm2": { "pt": "área = {valor} cm²", "fr": "aire = {valor} cm²", "en": "area = {valor} cm²" },
+  "emSomas": {
+    "pt": "Em somas, combinam-se as incertezas <strong>absolutas</strong>; em produtos, as <strong>relativas</strong>. Nos dois casos em quadratura, porque é improvável que todos os erros apontem para o mesmo lado. E quando uma grandeza entra ao quadrado, sua incerteza relativa pesa o dobro — vale medi-la melhor primeiro.",
+    "fr": "Dans les sommes, on combine les incertitudes <strong>absolues</strong> ; dans les produits, les <strong>relatives</strong>. Dans les deux cas en quadrature, car il est peu probable que toutes les erreurs aillent dans le même sens. Et quand une grandeur intervient au carré, son incertitude relative pèse le double — mieux vaut la mesurer plus soigneusement d’abord.",
+    "en": "In sums, the <strong>absolute</strong> uncertainties combine; in products, the <strong>relative</strong> ones. In both cases in quadrature, because it is unlikely that every error points the same way. And when a quantity enters squared, its relative uncertainty counts double — worth measuring that one better first."
+  },
+  "ajusteDeReta": {
+    "pt": "Ajuste de reta: extrair a grandeza dos dados",
+    "fr": "Ajustement de droite : extraire la grandeur des données",
+    "en": "Line fitting: pulling the quantity out of the data"
+  },
+  "descricaoAjuste": {
+    "pt": "Pontos experimentais com ruído e a reta ajustada por mínimos quadrados.",
+    "fr": "Points expérimentaux bruités et la droite ajustée par les moindres carrés.",
+    "en": "Noisy experimental points and the least-squares fitted line."
+  },
+  "curvaAjustada": {
+    "pt": "reta ajustada",
+    "fr": "droite ajustée",
+    "en": "fitted line"
+  },
+  "inclinacaoMedida": {
+    "pt": "Inclinação medida",
+    "fr": "Pente mesurée",
+    "en": "Measured slope"
+  },
+  "valorRealUsado": {
+    "pt": "valor real usado: 2,5",
+    "fr": "valeur réelle utilisée : 2,5",
+    "en": "true value used: 2.5"
+  },
+  "intercepto": { "pt": "Intercepto", "fr": "Ordonnée à l’origine", "en": "Intercept" },
+  "quantoDaVariacao": {
+    "pt": "quanto da variação a reta explica",
+    "fr": "part de la variation expliquée par la droite",
+    "en": "how much of the variation the line explains"
+  },
+  "osPontosForamGerados": {
+    "pt": "Os pontos foram gerados com inclinação 2,5 e depois perturbados com ruído. O ajuste recupera um valor próximo disso — é assim que uma constante física se extrai de um experimento: não de uma medida, mas da inclinação de muitas.",
+    "fr": "Les points ont été générés avec une pente de 2,5 puis perturbés par du bruit. L’ajustement retrouve une valeur proche — c’est ainsi qu’une constante physique s’extrait d’une expérience : non pas d’une mesure, mais de la pente de plusieurs.",
+    "en": "The points were generated with a slope of 2.5 and then disturbed with noise. The fit recovers a value close to it — that is how a physical constant is extracted from an experiment: not from one measurement, but from the slope of many."
+  }
+}

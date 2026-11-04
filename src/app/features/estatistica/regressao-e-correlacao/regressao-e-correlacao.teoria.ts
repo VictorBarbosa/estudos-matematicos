@@ -78,7 +78,10 @@ export const TEORIA_REGRESSAO: readonly Teoria[] = [
       'linear era o errado, por melhor que o ajuste pareça.',
     formulas: [
       { tex: 'e_i = y_i - \\hat{y}_i' },
-      { tex: '\\sum e_i = 0', legenda: 'Os resíduos sempre somam zero na reta de mínimos quadrados.' },
+      {
+        tex: '\\sum e_i = 0',
+        legenda: 'Os resíduos sempre somam zero na reta de mínimos quadrados.',
+      },
     ],
     demonstracao: [
       {
@@ -139,10 +142,7 @@ export const TEORIA_REGRESSAO: readonly Teoria[] = [
       'O coeficiente de Pearson é a covariância normalizada pelos dois desvios padrão. Ele ' +
       'mede o alinhamento, não a taxa: trocar metros por centímetros não o altera. Fica sempre ' +
       'entre menos um e um, e o sinal diz o sentido — mas ele só enxerga relações LINEARES.',
-    formulas: [
-      { tex: 'r = \\frac{\\text{cov}(x,y)}{s_x s_y}' },
-      { tex: '-1 \\leq r \\leq 1' },
-    ],
+    formulas: [{ tex: 'r = \\frac{\\text{cov}(x,y)}{s_x s_y}' }, { tex: '-1 \\leq r \\leq 1' }],
     demonstracao: [
       {
         descricao: 'A covariância já diz o sentido, mas depende das unidades.',
@@ -162,7 +162,11 @@ export const TEORIA_REGRESSAO: readonly Teoria[] = [
         nota: 'A relação é perfeita e determinística, e mesmo assim o Pearson não a vê.',
       },
     ],
-    vejaTambem: ['correlacao.determinacao', 'correlacao.nao-e-causa', 'regressao.minimos-quadrados'],
+    vejaTambem: [
+      'correlacao.determinacao',
+      'correlacao.nao-e-causa',
+      'regressao.minimos-quadrados',
+    ],
   },
   {
     id: 'correlacao.determinacao',

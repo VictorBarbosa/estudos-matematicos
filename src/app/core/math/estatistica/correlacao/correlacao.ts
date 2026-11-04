@@ -51,24 +51,41 @@ export function pearson(pares: readonly Par[]): number {
   return sx === 0 || sy === 0 ? 0 : covariancia(pares) / (sx * sy);
 }
 
+/**
+ * A força de uma correlação, como chave de dicionário.
+ *
+ * O motor classifica; quem desenha escolhe a língua.
+ * {@link forcaDaCorrelacao} é a mesma classificação dita em português.
+ */
+export function chaveDaForca(r: number): string {
+  const modulo = Math.abs(r);
+  const sentido = r > 0 ? 'Positiva' : 'Negativa';
+
+  if (modulo < 0.2) {
+    return 'correlacao.desprezivel';
+  }
+  const intensidade =
+    modulo >= 0.9 ? 'muitoForte' : modulo >= 0.7 ? 'forte' : modulo >= 0.4 ? 'moderada' : 'fraca';
+
+  return `correlacao.${intensidade}${sentido}`;
+}
+
+/** As mesmas classificações em português, para o gerador de exercícios. */
+const FORCA_EM_PORTUGUES: Readonly<Record<string, string>> = {
+  'correlacao.muitoFortePositiva': 'muito forte e positiva',
+  'correlacao.muitoForteNegativa': 'muito forte e negativa',
+  'correlacao.fortePositiva': 'forte e positiva',
+  'correlacao.forteNegativa': 'forte e negativa',
+  'correlacao.moderadaPositiva': 'moderada e positiva',
+  'correlacao.moderadaNegativa': 'moderada e negativa',
+  'correlacao.fracaPositiva': 'fraca e positiva',
+  'correlacao.fracaNegativa': 'fraca e negativa',
+  'correlacao.desprezivel': 'desprezível',
+};
+
 /** Como se lê a força de uma correlação, em palavras. */
 export function forcaDaCorrelacao(r: number): string {
-  const modulo = Math.abs(r);
-  const sentido = r > 0 ? 'positiva' : 'negativa';
-
-  if (modulo >= 0.9) {
-    return `muito forte e ${sentido}`;
-  }
-  if (modulo >= 0.7) {
-    return `forte e ${sentido}`;
-  }
-  if (modulo >= 0.4) {
-    return `moderada e ${sentido}`;
-  }
-  if (modulo >= 0.2) {
-    return `fraca e ${sentido}`;
-  }
-  return 'desprezível';
+  return FORCA_EM_PORTUGUES[chaveDaForca(r)]!;
 }
 
 /** O coeficiente de Pearson, passo a passo. */

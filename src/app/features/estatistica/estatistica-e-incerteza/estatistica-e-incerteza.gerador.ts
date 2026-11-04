@@ -12,7 +12,14 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
 
-type Pergunta = 'media' | 'mediana' | 'desvio' | 'incerteza-media' | 'propagar-soma' | 'propagar-produto' | 'inclinacao';
+type Pergunta =
+  | 'media'
+  | 'mediana'
+  | 'desvio'
+  | 'incerteza-media'
+  | 'propagar-soma'
+  | 'propagar-produto'
+  | 'inclinacao';
 
 export const geradorIncerteza: GeradorExercicio<number> = {
   topicoId: 'estatistica-e-incerteza',
@@ -309,6 +316,7 @@ function exercicioInclinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado.inclinacao,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'A inclinação é Δy/Δx entre dois pontos quaisquer da reta.' : undefined,
+    dica:
+      nivel === 'facil' ? 'A inclinação é Δy/Δx entre dois pontos quaisquer da reta.' : undefined,
   };
 }

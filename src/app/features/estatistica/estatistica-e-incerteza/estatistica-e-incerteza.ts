@@ -13,8 +13,15 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, MarcaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import {
+  CurvaPlot,
+  MarcaPlot,
+  PontoPlot,
+} from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.i18n.json';
 import { geradorIncerteza } from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.gerador';
 import { TEORIA_INCERTEZA } from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.teoria';
 
@@ -37,6 +44,8 @@ const MEDIDAS = [2.01, 1.98, 2.04, 1.99, 2.02, 2.05, 1.97, 2.0];
   styleUrl: './estatistica-e-incerteza.scss',
 })
 export class EstatisticaEIncerteza {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorIncerteza;
   protected readonly conceitos = TEORIA_INCERTEZA.map((teoria) => teoria.id);
 
@@ -69,7 +78,7 @@ export class EstatisticaEIncerteza {
 
   /** As medidas na reta real, com a média marcada. */
   protected readonly marcas = computed<readonly MarcaPlot[]>(() => [
-    { x: this.resumo().media, rotulo: 'média', cor: 'acento' },
+    { x: this.resumo().media, rotulo: this.texto('marcaMedia'), cor: 'acento' },
   ]);
 
   protected readonly pontosMedidas = computed<readonly PontoPlot[]>(() =>
@@ -114,7 +123,13 @@ export class EstatisticaEIncerteza {
 
   protected readonly curvasAjuste = computed<readonly CurvaPlot[]>(() => {
     const { inclinacao, intercepto } = this.ajuste().resultado;
-    return [{ fn: (x) => inclinacao * x + intercepto, cor: 'acento', rotulo: 'reta ajustada' }];
+    return [
+      {
+        fn: (x) => inclinacao * x + intercepto,
+        cor: 'acento',
+        rotulo: this.texto('curvaAjustada'),
+      },
+    ];
   });
 
   protected readonly pontosAjuste = computed<readonly PontoPlot[]>(() =>

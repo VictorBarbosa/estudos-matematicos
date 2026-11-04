@@ -127,9 +127,7 @@ describe('geradorCombinatoria', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('Esse é o ARRANJO')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('Esse é o ARRANJO'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('Esse é o ARRANJO'))!;
 
     const resultado = corrigir(geradorCombinatoria, exercicio, String(armadilha.resposta));
 
