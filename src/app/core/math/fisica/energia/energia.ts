@@ -117,8 +117,7 @@ export function conservacaoEnergiaComPassos(
       },
       {
         descricao: 'Escrevemos o balanço entre os dois instantes.',
-        tex:
-          `\\frac{mv_0^{2}}{2} + mgh_0 = \\frac{mv^{2}}{2} + mgh`,
+        tex: `\\frac{mv_0^{2}}{2} + mgh_0 = \\frac{mv^{2}}{2} + mgh`,
       },
       {
         descricao: 'A massa aparece em todos os termos e se cancela.',

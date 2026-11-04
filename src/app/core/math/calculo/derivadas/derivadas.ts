@@ -170,15 +170,17 @@ export function pontosCriticos(
     anterior = atual;
   }
 
-  return raizes
-    // Descarta raízes praticamente coincidentes, que a varredura pode duplicar.
-    .filter((raiz, indice, todas) => indice === 0 || Math.abs(raiz - todas[indice - 1]!) > passo)
-    .map((x) => {
-      const segunda = segundaDerivadaNumerica(f, x);
-      return {
-        x,
-        y: f(x),
-        tipo: segunda > 1e-6 ? 'minimo' : segunda < -1e-6 ? 'maximo' : 'inflexao',
-      } as PontoCritico;
-    });
+  return (
+    raizes
+      // Descarta raízes praticamente coincidentes, que a varredura pode duplicar.
+      .filter((raiz, indice, todas) => indice === 0 || Math.abs(raiz - todas[indice - 1]!) > passo)
+      .map((x) => {
+        const segunda = segundaDerivadaNumerica(f, x);
+        return {
+          x,
+          y: f(x),
+          tipo: segunda > 1e-6 ? 'minimo' : segunda < -1e-6 ? 'maximo' : 'inflexao',
+        } as PontoCritico;
+      })
+  );
 }

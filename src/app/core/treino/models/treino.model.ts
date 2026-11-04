@@ -166,10 +166,7 @@ export interface GeradorExercicio<T> {
  * Sempre devolve pelo menos `formatar(valor)`: um gerador que esqueça de
  * incluir a forma principal na própria lista não some com ela da tela.
  */
-export function formasDoGabarito<T>(
-  gerador: GeradorExercicio<T>,
-  valor: T,
-): readonly string[] {
+export function formasDoGabarito<T>(gerador: GeradorExercicio<T>, valor: T): readonly string[] {
   const principal = gerador.formatar(valor);
   return [...new Set([principal, ...(gerador.formasEquivalentes?.(valor) ?? [])])];
 }

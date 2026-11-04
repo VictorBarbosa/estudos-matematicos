@@ -99,14 +99,20 @@ describe('simbolicasEquivalentes', () => {
     // 1/x explode em zero, mas nenhum ponto de teste é zero: a comparação
     // continua valendo nos demais.
     expect(
-      simbolicasEquivalentes(ler('1/x'), simbolica('x^-1', (x) => x ** -1)),
+      simbolicasEquivalentes(
+        ler('1/x'),
+        simbolica('x^-1', (x) => x ** -1),
+      ),
     ).toBe(true);
   });
 
   it('não dá veredito quando sobram poucos pontos comparáveis', () => {
     // ln(x) só é finita nos pontos positivos da lista, mas eles bastam.
     expect(
-      simbolicasEquivalentes(ler('ln(x)'), simbolica('ln x', (x) => Math.log(x))),
+      simbolicasEquivalentes(
+        ler('ln(x)'),
+        simbolica('ln x', (x) => Math.log(x)),
+      ),
     ).toBe(true);
   });
 });

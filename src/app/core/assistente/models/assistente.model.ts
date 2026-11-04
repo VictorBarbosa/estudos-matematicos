@@ -143,8 +143,7 @@ export type Bloco =
     }
   | { readonly tipo: 'codigo'; readonly conteudo: string };
 
-const DELIMITADORES =
-  /\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)/g;
+const DELIMITADORES = /\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)/g;
 
 /** Negrito, itálico e código, depois que a matemática já saiu do caminho. */
 const MARCACOES = /\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\n]+)\*|_([^_\n]+)_|`([^`\n]+)`/g;

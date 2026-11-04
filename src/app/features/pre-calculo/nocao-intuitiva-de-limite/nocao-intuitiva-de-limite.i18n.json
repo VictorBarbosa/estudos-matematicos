@@ -1,0 +1,73 @@
+{
+  "casoAInvestigar": {
+    "pt": "Caso a investigar",
+    "fr": "Cas à étudier",
+    "en": "Case to investigate"
+  },
+  "buraco.rotulo": { "pt": "Buraco em x = 1", "fr": "Trou en x = 1", "en": "Hole at x = 1" },
+  "buraco.explicacao": {
+    "pt": "A função não existe em x = 1, mas se aproxima de 2 pelos dois lados. O limite existe mesmo assim — ele descreve o destino, não o ponto.",
+    "fr": "La fonction n’existe pas en x = 1, mais elle s’approche de 2 des deux côtés. La limite existe quand même — elle décrit la destination, pas le point.",
+    "en": "The function does not exist at x = 1, yet it approaches 2 from both sides. The limit exists all the same — it describes the destination, not the point."
+  },
+  "continua.rotulo": {
+    "pt": "Função contínua",
+    "fr": "Fonction continue",
+    "en": "Continuous function"
+  },
+  "continua.explicacao": {
+    "pt": "Aqui o limite coincide com o valor no ponto. É exatamente isso que significa ser contínua.",
+    "fr": "Ici la limite coïncide avec la valeur au point. C’est exactement ce que veut dire être continue.",
+    "en": "Here the limit matches the value at the point. That is exactly what being continuous means."
+  },
+  "salto.rotulo": { "pt": "Salto em x = 0", "fr": "Saut en x = 0", "en": "Jump at x = 0" },
+  "salto.explicacao": {
+    "pt": "Pela esquerda tende a −1, pela direita a +1. Os lados discordam, então o limite NÃO existe — e isso é diferente de ser infinito.",
+    "fr": "Par la gauche elle tend vers −1, par la droite vers +1. Les deux côtés ne s’accordent pas, donc la limite N’EXISTE PAS — ce qui est différent d’être infinie.",
+    "en": "From the left it tends to −1, from the right to +1. The sides disagree, so the limit does NOT exist — which is different from being infinite."
+  },
+  "assintota.rotulo": {
+    "pt": "Explode em x = 0",
+    "fr": "Explose en x = 0",
+    "en": "Blows up at x = 0"
+  },
+  "assintota.explicacao": {
+    "pt": "Os dois lados crescem sem limite. Dizemos que o limite é infinito, o que é outra forma de dizer que ele não existe como número.",
+    "fr": "Les deux côtés croissent sans borne. On dit que la limite est infinie, ce qui est une autre façon de dire qu’elle n’existe pas comme nombre.",
+    "en": "Both sides grow without bound. We say the limit is infinite, which is another way of saying it does not exist as a number."
+  },
+  "naoExiste": { "pt": "não existe", "fr": "n’existe pas", "en": "does not exist" },
+  "indefinido": { "pt": "indefinido", "fr": "non défini", "en": "undefined" },
+  "aproximandoDosLados": {
+    "pt": "Aproximando-se dos dois lados",
+    "fr": "En s’approchant des deux côtés",
+    "en": "Approaching from both sides"
+  },
+  "colunaXEsquerda": {
+    "pt": "x (pela esquerda)",
+    "fr": "x (par la gauche)",
+    "en": "x (from the left)"
+  },
+  "colunaXDireita": {
+    "pt": "x (pela direita)",
+    "fr": "x (par la droite)",
+    "en": "x (from the right)"
+  },
+  "notaTabela": {
+    "pt": "Note que o ponto exato nunca aparece na tabela — e não precisa. O limite se decide apenas pelo que acontece ao redor dele.",
+    "fr": "Remarquez que le point exact n’apparaît jamais dans le tableau — et ce n’est pas nécessaire. La limite se décide uniquement par ce qui se passe autour de lui.",
+    "en": "Notice that the exact point never shows up in the table — and it does not need to. The limit is decided only by what happens around it."
+  },
+  "curvaF": { "pt": "f(x)", "fr": "f(x)", "en": "f(x)" },
+  "tendeA": { "pt": "tende a {valor}", "fr": "tend vers {valor}", "en": "tends to {valor}" },
+  "descricaoGrafico": {
+    "pt": "Gráfico de {caso}, com o comportamento em torno de x igual a {ponto} em destaque.",
+    "fr": "Graphique de {caso}, avec le comportement autour de x égal à {ponto} mis en évidence.",
+    "en": "Graph of {caso}, with the behaviour around x equal to {ponto} highlighted."
+  },
+  "circuloVazado": {
+    "pt": "O círculo vazado marca o ponto que falta: a curva chega até ali vinda dos dois lados, mas o valor em si não está definido.",
+    "fr": "Le cercle creux marque le point manquant : la courbe y arrive des deux côtés, mais la valeur elle-même n’est pas définie.",
+    "en": "The hollow circle marks the missing point: the curve reaches it from both sides, but the value itself is undefined."
+  }
+}

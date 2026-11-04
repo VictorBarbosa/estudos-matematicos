@@ -86,9 +86,9 @@ export const TEORIA_AREAS: readonly Teoria[] = [
       'razão é que área é produto de duas medidas, e cada uma foi dobrada. Esse é o erro de ' +
       'estimativa mais comum em problemas de escala.',
     formulas: [
-      { tex: '\\frac{A\'}{A} = k^{2}' },
+      { tex: "\\frac{A'}{A} = k^{2}" },
       {
-        tex: 'k = 2 \\;\\Rightarrow\\; A\' = 4A',
+        tex: "k = 2 \\;\\Rightarrow\\; A' = 4A",
         legenda: 'Dobrar o lado quadruplica a área.',
       },
     ],

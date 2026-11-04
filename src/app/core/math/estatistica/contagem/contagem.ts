@@ -40,7 +40,8 @@ export function arranjosComPassos(n: number, p: number): Resolucao<number> {
     resultado,
     passos: [
       {
-        descricao: 'Pelo princípio multiplicativo, cada posição tem uma opção menos que a anterior.',
+        descricao:
+          'Pelo princípio multiplicativo, cada posição tem uma opção menos que a anterior.',
         tex: `${fatores.join(' \\times ')} = ${formatar(resultado)}`,
       },
       {
@@ -94,7 +95,10 @@ export function combinacoes(n: number, p: number): number {
 }
 
 /** Permutações de n elementos, com repetições opcionais. */
-export function permutacoesComPassos(n: number, repeticoes: readonly number[] = []): Resolucao<number> {
+export function permutacoesComPassos(
+  n: number,
+  repeticoes: readonly number[] = [],
+): Resolucao<number> {
   const total = fatorial(n);
   const divisor = repeticoes.reduce((produto, quantidade) => produto * fatorial(quantidade), 1);
   const resultado = total / divisor;
@@ -110,7 +114,9 @@ export function permutacoesComPassos(n: number, repeticoes: readonly number[] = 
     passos.push(
       {
         descricao: 'Elementos repetidos produzem ordens indistinguíveis.',
-        tex: repeticoes.map((quantidade) => `${quantidade}!`).join(' \\cdot ') + ` = ${formatar(divisor)}`,
+        tex:
+          repeticoes.map((quantidade) => `${quantidade}!`).join(' \\cdot ') +
+          ` = ${formatar(divisor)}`,
         nota: 'Trocar duas letras iguais de lugar não gera uma palavra nova.',
       },
       {
@@ -175,7 +181,8 @@ export function probabilidadeConjuntaComPassos(
     resultado,
     passos: [
       {
-        descricao: 'A probabilidade de dois eventos ocorrerem é a do primeiro vezes a do segundo dado o primeiro.',
+        descricao:
+          'A probabilidade de dois eventos ocorrerem é a do primeiro vezes a do segundo dado o primeiro.',
         tex: 'P(A \\cap B) = P(A) \\cdot P(B\\mid A)',
       },
       {

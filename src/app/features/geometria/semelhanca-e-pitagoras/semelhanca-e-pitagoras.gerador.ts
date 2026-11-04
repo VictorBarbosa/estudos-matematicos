@@ -1,4 +1,10 @@
-import { catetoComPassos, escalaComPassos, pitagorasComPassos, talesComPassos, ternosPitagoricos } from '@core/math';
+import {
+  catetoComPassos,
+  escalaComPassos,
+  pitagorasComPassos,
+  talesComPassos,
+  ternosPitagoricos,
+} from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -226,9 +232,6 @@ function exercicioEscala(dimensao: 2 | 3, nivel: Nivel, rng: Rng): Exercicio<num
       resultado,
       proximos,
     ),
-    dica:
-      nivel === 'facil'
-        ? `A ${grandeza} escala com k^${dimensao}.`
-        : undefined,
+    dica: nivel === 'facil' ? `A ${grandeza} escala com k^${dimensao}.` : undefined,
   };
 }

@@ -1,6 +1,9 @@
 import { ErroMatematico } from '@core/math/tipos/tipos';
 import { resolverInequacaoComPassos } from '@core/math/algebra/inequacao/inequacao';
-import { comoFuncao, resolverSistemaComPassos } from '@core/math/algebra/sistema-linear/sistema-linear';
+import {
+  comoFuncao,
+  resolverSistemaComPassos,
+} from '@core/math/algebra/sistema-linear/sistema-linear';
 
 describe('resolverSistemaComPassos', () => {
   it('resolve um sistema determinado', () => {

@@ -223,7 +223,10 @@ function carregar(): EstadoSalvo {
 
     return {
       aberto: salvo.aberto === true,
-      servidor: typeof salvo.servidor === 'string' && salvo.servidor !== '' ? salvo.servidor : SERVIDOR_PADRAO,
+      servidor:
+        typeof salvo.servidor === 'string' && salvo.servidor !== ''
+          ? salvo.servidor
+          : SERVIDOR_PADRAO,
       modelo: typeof salvo.modelo === 'string' ? salvo.modelo : '',
       posicao:
         salvo.posicao != null &&

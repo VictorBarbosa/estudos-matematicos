@@ -50,7 +50,9 @@ export class OllamaService {
     const dados = (await resposta.json()) as RespostaDeModelos;
 
     return (dados.models ?? [])
-      .filter((modelo): modelo is { name: string; size?: number } => typeof modelo.name === 'string')
+      .filter(
+        (modelo): modelo is { name: string; size?: number } => typeof modelo.name === 'string',
+      )
       .map((modelo) => ({ nome: modelo.name, bytes: modelo.size ?? 0 }))
       .sort((a, b) => b.bytes - a.bytes);
   }
@@ -201,7 +203,9 @@ export class OllamaService {
           status: resposta.status,
           detalhe:
             (resposta.status === 404 ? `${this.i18n.t('assistente.modeloInstalado')} ` : '') +
-            (detalhe.trim() === '' ? this.i18n.t('assistente.vejaTerminal') : detalhe.slice(0, 300)),
+            (detalhe.trim() === ''
+              ? this.i18n.t('assistente.vejaTerminal')
+              : detalhe.slice(0, 300)),
         }),
       );
     }

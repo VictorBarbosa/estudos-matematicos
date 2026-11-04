@@ -13,7 +13,9 @@ describe('geradorCirculo (círculo e polígonos)', () => {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {
         for (const armadilha of exercicio.armadilhas) {
-          expect(geradorCirculo.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(false);
+          expect(geradorCirculo.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(
+            false,
+          );
         }
       }
     });
@@ -39,7 +41,9 @@ describe('geradorCirculo (círculo e polígonos)', () => {
   });
 
   it('a área do círculo é πr²', () => {
-    const exercicios = amostra('facil', 90).filter((e) => e.enunciado.includes('área de um círculo'));
+    const exercicios = amostra('facil', 90).filter((e) =>
+      e.enunciado.includes('área de um círculo'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -50,7 +54,9 @@ describe('geradorCirculo (círculo e polígonos)', () => {
   });
 
   it('o raio pedido reconstrói a área dada', () => {
-    const exercicios = amostra('dificil', 150).filter((e) => e.enunciado.includes('Qual é o seu raio'));
+    const exercicios = amostra('dificil', 150).filter((e) =>
+      e.enunciado.includes('Qual é o seu raio'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -67,8 +73,7 @@ describe('geradorCirculo (círculo e polígonos)', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, raio, angulo] =
-        /r = (\d+) \\qquad \\theta = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, raio, angulo] = /r = (\d+) \\qquad \\theta = (\d+)/.exec(exercicio.enunciadoTex)!;
 
       const total = Math.PI * Number(raio) ** 2;
       expect(exercicio.gabarito).toBeCloseTo((total * Number(angulo)) / 360, 9);
@@ -77,13 +82,16 @@ describe('geradorCirculo (círculo e polígonos)', () => {
   });
 
   it('a área do polígono regular bate com perímetro × apótema / 2', () => {
-    const exercicios = amostra('dificil', 150).filter((e) => e.enunciado.includes('polígono regular'));
+    const exercicios = amostra('dificil', 150).filter((e) =>
+      e.enunciado.includes('polígono regular'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, lados, lado, apotema] =
-        /n = (\d+) \\qquad \\ell = (\d+) \\qquad a = ([\d.]+)/.exec(exercicio.enunciadoTex)!;
+      const [, lados, lado, apotema] = /n = (\d+) \\qquad \\ell = (\d+) \\qquad a = ([\d.]+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBeCloseTo(
         areaComPassos('poligono-regular', {

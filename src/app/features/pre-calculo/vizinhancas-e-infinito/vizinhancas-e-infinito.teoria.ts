@@ -76,8 +76,12 @@ export const TEORIA_VIZINHANCAS: readonly Teoria[] = [
       'Uma vertical aparece onde a função explode — tipicamente onde um denominador zera sem ' +
       'que o numerador também zere.',
     formulas: [
-      { tex: '\\lim_{x \\to \\pm\\infty} f(x) = L \\;\\Rightarrow\\; y = L \\;\\text{é assíntota horizontal}' },
-      { tex: '\\lim_{x \\to a} f(x) = \\pm\\infty \\;\\Rightarrow\\; x = a \\;\\text{é assíntota vertical}' },
+      {
+        tex: '\\lim_{x \\to \\pm\\infty} f(x) = L \\;\\Rightarrow\\; y = L \\;\\text{é assíntota horizontal}',
+      },
+      {
+        tex: '\\lim_{x \\to a} f(x) = \\pm\\infty \\;\\Rightarrow\\; x = a \\;\\text{é assíntota vertical}',
+      },
     ],
     demonstracao: [
       {

@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.i18n.json';
 import { geradorAreas } from '@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.gerador';
 import { TEORIA_AREAS } from '@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.teoria';
 
@@ -31,10 +34,11 @@ const FIGURAS: readonly Figura[] = ['retangulo', 'paralelogramo', 'triangulo', '
   styleUrl: './areas-de-figuras-planas.scss',
 })
 export class AreasDeFigurasPlanas {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorAreas;
   protected readonly conceitos = TEORIA_AREAS.map((teoria) => teoria.id);
   protected readonly figuras = FIGURAS;
-  protected readonly nomeFigura = NOME_FIGURA;
 
   protected readonly figura = signal<Figura>('triangulo');
   protected readonly base = signal(8);

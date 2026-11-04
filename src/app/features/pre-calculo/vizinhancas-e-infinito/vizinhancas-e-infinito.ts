@@ -8,24 +8,20 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.i18n.json';
 import { geradorVizinhancas } from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.gerador';
 import { TEORIA_VIZINHANCAS } from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.teoria';
 
 @Component({
   selector: 'app-vizinhancas-e-infinito',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    MathPlot,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, MathPlot, TopicoLayout],
   templateUrl: './vizinhancas-e-infinito.html',
   styleUrl: './vizinhancas-e-infinito.scss',
 })
 export class VizinhancasEInfinito {
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorVizinhancas;
   protected readonly conceitos = TEORIA_VIZINHANCAS.map((teoria) => teoria.id);
 
@@ -71,7 +67,7 @@ export class VizinhancasEInfinito {
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => [
-    { fn: this.funcao(), cor: 'serie-1', rotulo: 'f(x)' },
+    { fn: this.funcao(), cor: 'serie-1', rotulo: this.texto('curvaF') },
   ]);
 
   /** A faixa de tolerância e as duas assíntotas. */
@@ -114,11 +110,8 @@ export class VizinhancasEInfinito {
     return { xMin: -20, xMax: 40, yMin: limite - 4, yMax: limite + 4 };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Curva aproximando-se da assíntota horizontal y igual a ` +
-      `${this.formatar(this.assintotaHorizontal())}, com a faixa de tolerância épsilon e a ` +
-      `assíntota vertical destacadas.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { limite: this.formatar(this.assintotaHorizontal()) }),
   );
 
   constructor() {

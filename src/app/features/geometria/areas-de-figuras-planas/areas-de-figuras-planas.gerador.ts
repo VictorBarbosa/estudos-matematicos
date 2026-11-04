@@ -71,7 +71,8 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciadoTex,
     gabarito: resultado,
     resolucao: { resultado, passos },
-    conceitos: figura === 'triangulo' || figura === 'trapezio' ? ['areas.deducao'] : ['areas.origem'],
+    conceitos:
+      figura === 'triangulo' || figura === 'trapezio' ? ['areas.deducao'] : ['areas.origem'],
     armadilhas: semColisoes(
       [
         {
@@ -108,12 +109,7 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica:
-      nivel === 'facil'
-        ? figura === 'triangulo'
-          ? 'A = b·h / 2'
-          : 'A = b·h'
-        : undefined,
+    dica: nivel === 'facil' ? (figura === 'triangulo' ? 'A = b·h / 2' : 'A = b·h') : undefined,
   };
 }
 
@@ -138,7 +134,9 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
       passos: [
         {
           descricao: 'Partimos da fórmula da área e isolamos a altura.',
-          tex: triangulo ? 'A = \\frac{bh}{2} \\;\\Rightarrow\\; h = \\frac{2A}{b}' : 'h = \\frac{A}{b}',
+          tex: triangulo
+            ? 'A = \\frac{bh}{2} \\;\\Rightarrow\\; h = \\frac{2A}{b}'
+            : 'h = \\frac{A}{b}',
         },
         {
           descricao: 'Substituímos os valores.',

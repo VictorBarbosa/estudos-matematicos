@@ -12,6 +12,11 @@ import t_inequacoes from '@features/algebra/inequacoes/inequacoes.i18n.json';
 import t_polinomios from '@features/algebra/polinomios/polinomios.i18n.json';
 import t_produtos_notaveis from '@features/algebra/produtos-notaveis/produtos-notaveis.i18n.json';
 import t_sistemas_lineares from '@features/algebra/sistemas-lineares/sistemas-lineares.i18n.json';
+import t_angulos_e_triangulos from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.i18n.json';
+import t_areas_de_figuras_planas from '@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.i18n.json';
+import t_circulo_e_poligonos from '@features/geometria/circulo-e-poligonos/circulo-e-poligonos.i18n.json';
+import t_semelhanca_e_pitagoras from '@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.i18n.json';
+import t_solidos_e_volumes from '@features/geometria/solidos-e-volumes/solidos-e-volumes.i18n.json';
 import t_fracoes from '@features/matematica-basica/fracoes/fracoes.i18n.json';
 import t_mmc_mdc from '@features/matematica-basica/mmc-mdc/mmc-mdc.i18n.json';
 import t_notacao_matematica from '@features/matematica-basica/notacao-matematica/notacao-matematica.i18n.json';
@@ -19,6 +24,8 @@ import t_numeros_decimais from '@features/matematica-basica/numeros-decimais/num
 import t_operacoes_fundamentais from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.i18n.json';
 import t_potenciacao_radiciacao from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.i18n.json';
 import t_razao_proporcao from '@features/matematica-basica/razao-proporcao/razao-proporcao.i18n.json';
+import t_nocao_intuitiva_de_limite from '@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.i18n.json';
+import t_vizinhancas_e_infinito from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.i18n.json';
 
 /** Cada tópico e o dicionário que viaja com ele. */
 export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
@@ -30,6 +37,11 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['polinomios', t_polinomios as TabelaDeTextos],
   ['produtos-notaveis', t_produtos_notaveis as TabelaDeTextos],
   ['sistemas-lineares', t_sistemas_lineares as TabelaDeTextos],
+  ['angulos-e-triangulos', t_angulos_e_triangulos as TabelaDeTextos],
+  ['areas-de-figuras-planas', t_areas_de_figuras_planas as TabelaDeTextos],
+  ['circulo-e-poligonos', t_circulo_e_poligonos as TabelaDeTextos],
+  ['semelhanca-e-pitagoras', t_semelhanca_e_pitagoras as TabelaDeTextos],
+  ['solidos-e-volumes', t_solidos_e_volumes as TabelaDeTextos],
   ['fracoes', t_fracoes as TabelaDeTextos],
   ['mmc-mdc', t_mmc_mdc as TabelaDeTextos],
   ['notacao-matematica', t_notacao_matematica as TabelaDeTextos],
@@ -37,4 +49,6 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['operacoes-fundamentais', t_operacoes_fundamentais as TabelaDeTextos],
   ['potenciacao-radiciacao', t_potenciacao_radiciacao as TabelaDeTextos],
   ['razao-proporcao', t_razao_proporcao as TabelaDeTextos],
+  ['nocao-intuitiva-de-limite', t_nocao_intuitiva_de_limite as TabelaDeTextos],
+  ['vizinhancas-e-infinito', t_vizinhancas_e_infinito as TabelaDeTextos],
 ]);

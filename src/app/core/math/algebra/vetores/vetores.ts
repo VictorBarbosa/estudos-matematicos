@@ -65,10 +65,7 @@ export function deModuloEAngulo(comprimento: number, anguloGraus: number): Vetor
  * É o passo que transforma um problema com ângulo em dois problemas sem
  * ângulo — e é a razão pela qual trigonometria vem antes de física.
  */
-export function decomporComPassos(
-  comprimento: number,
-  anguloGraus: number,
-): Resolucao<Vetor> {
+export function decomporComPassos(comprimento: number, anguloGraus: number): Resolucao<Vetor> {
   if (comprimento < 0) {
     throw new ErroMatematico('O módulo de um vetor não é negativo.');
   }
@@ -218,7 +215,8 @@ export function projecaoComPassos(a: Vetor, b: Vetor): Resolucao<number> {
         tex: 'a_b = |\\vec{a}|\\cos\\theta',
       },
       {
-        descricao: 'Usando a definição do produto escalar, isso é o escalar dividido pelo módulo de b.',
+        descricao:
+          'Usando a definição do produto escalar, isso é o escalar dividido pelo módulo de b.',
         tex: `a_b = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|} = \\frac{${formatar(escalarAB)}}{${formatar(Number(modB.toFixed(4)))}}`,
       },
       {

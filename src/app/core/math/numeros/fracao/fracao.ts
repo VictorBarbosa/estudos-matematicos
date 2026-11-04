@@ -239,7 +239,11 @@ export class Fracao {
    *
    * O sinal acompanha a parte inteira: −7/3 é −(2 + 1/3).
    */
-  paraMista(): { readonly inteiro: number; readonly numerador: number; readonly denominador: number } {
+  paraMista(): {
+    readonly inteiro: number;
+    readonly numerador: number;
+    readonly denominador: number;
+  } {
     const simplificada = this.simplificar();
     const absoluto = Math.abs(simplificada.numerador);
     const sinal = simplificada.numerador < 0 ? -1 : 1;

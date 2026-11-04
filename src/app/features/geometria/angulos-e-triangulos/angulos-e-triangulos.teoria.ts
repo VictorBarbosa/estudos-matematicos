@@ -23,7 +23,8 @@ export const TEORIA_ANGULOS: readonly Teoria[] = [
     ],
     demonstracao: [
       {
-        descricao: 'No triângulo, a soma é 180°: uma paralela a um lado mostra os três ângulos juntos.',
+        descricao:
+          'No triângulo, a soma é 180°: uma paralela a um lado mostra os três ângulos juntos.',
         tex: '\\alpha + \\beta + \\gamma = 180^\\circ',
         nota: 'Os ângulos alternos internos reposicionam os três num mesmo lado da reta.',
       },

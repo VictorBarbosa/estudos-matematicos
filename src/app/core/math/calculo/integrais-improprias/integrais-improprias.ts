@@ -103,9 +103,7 @@ export function potenciaNoInfinitoComPassos(
 ): Resolucao<ValorImproprio> {
   const expoente = expoenteValor(p);
   const criterio = criterioDaPotencia(p, false);
-  const resultado = criterio.converge
-    ? converge(a ** (1 - expoente) / (expoente - 1))
-    : DIVERGE;
+  const resultado = criterio.converge ? converge(a ** (1 - expoente) / (expoente - 1)) : DIVERGE;
 
   const integral = `\\int_{${formatar(a)}}^{\\infty} ${integrandoPotenciaTex(p)}\\,dx`;
 
@@ -150,9 +148,7 @@ export function potenciaNaOrigemComPassos(
 ): Resolucao<ValorImproprio> {
   const expoente = expoenteValor(p);
   const criterio = criterioDaPotencia(p, true);
-  const resultado = criterio.converge
-    ? converge(b ** (1 - expoente) / (1 - expoente))
-    : DIVERGE;
+  const resultado = criterio.converge ? converge(b ** (1 - expoente) / (1 - expoente)) : DIVERGE;
 
   const integral = `\\int_{0}^{${formatar(b)}} ${integrandoPotenciaTex(p)}\\,dx`;
 

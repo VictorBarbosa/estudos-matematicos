@@ -34,8 +34,7 @@ export function vetor3ParaTexUnitarios({ x, y, z }: Vetor3): string {
     return `${sinal} ${magnitude}\\vec{${letra}} `;
   };
 
-  const corpo =
-    termo(x, 'i', true) + termo(y, 'j', x === 0) + termo(z, 'k', x === 0 && y === 0);
+  const corpo = termo(x, 'i', true) + termo(y, 'j', x === 0) + termo(z, 'k', x === 0 && y === 0);
   return corpo.trim() === '' ? '\\vec{0}' : corpo.trim();
 }
 
@@ -188,8 +187,7 @@ export function anguloEntreVetores3ComPassos(a: Vetor3, b: Vetor3): Resolucao<nu
 /** O vetor unitário na mesma direção. */
 export function unitario3ComPassos(v: Vetor3): Resolucao<Vetor3> {
   const comprimento = modulo3(v);
-  const resultado =
-    comprimento === 0 ? { x: 0, y: 0, z: 0 } : escalar3(v, 1 / comprimento);
+  const resultado = comprimento === 0 ? { x: 0, y: 0, z: 0 } : escalar3(v, 1 / comprimento);
 
   const passos: Passo[] = [
     {
@@ -222,7 +220,11 @@ export function unitario3ComPassos(v: Vetor3): Resolucao<Vetor3> {
  * É o produto misto, e ele responde uma pergunta geométrica de uma vez: se der
  * zero, os três vetores estão no mesmo plano.
  */
-export function volumeDoParalelepipedoComPassos(a: Vetor3, b: Vetor3, c: Vetor3): Resolucao<number> {
+export function volumeDoParalelepipedoComPassos(
+  a: Vetor3,
+  b: Vetor3,
+  c: Vetor3,
+): Resolucao<number> {
   const cruzado = produtoVetorial(b, c);
   const misto = produtoEscalar3(a, cruzado);
   const resultado = Math.abs(misto);

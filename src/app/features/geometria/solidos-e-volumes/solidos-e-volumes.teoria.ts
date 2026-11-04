@@ -10,10 +10,7 @@ export const TEORIA_SOLIDOS: readonly Teoria[] = [
       'Num prisma ou cilindro, qualquer corte horizontal dá a mesma figura. Empilhar essas ' +
       'fatias é o que produz o volume, e por isso ele é simplesmente área da base vezes ' +
       'altura — não importa se a base é um quadrado, um círculo ou uma forma irregular.',
-    formulas: [
-      { tex: 'V = A_b \\cdot h' },
-      { tex: 'V_{\\text{cilindro}} = \\pi r^{2} h' },
-    ],
+    formulas: [{ tex: 'V = A_b \\cdot h' }, { tex: 'V_{\\text{cilindro}} = \\pi r^{2} h' }],
     demonstracao: [
       {
         descricao: 'Fatiamos o sólido em camadas finas de espessura Δh.',
@@ -77,10 +74,7 @@ export const TEORIA_SOLIDOS: readonly Teoria[] = [
       'A esfera ocupa exatamente dois terços do cilindro de mesmo raio e altura igual ao ' +
       'diâmetro — e sua superfície é igual à lateral desse cilindro. Arquimedes considerou ' +
       'este o seu melhor resultado, e pediu que fosse gravado em seu túmulo.',
-    formulas: [
-      { tex: 'V = \\frac{4}{3}\\pi r^{3}' },
-      { tex: 'A = 4\\pi r^{2}' },
-    ],
+    formulas: [{ tex: 'V = \\frac{4}{3}\\pi r^{3}' }, { tex: 'A = 4\\pi r^{2}' }],
     demonstracao: [
       {
         descricao: 'O cilindro que envolve a esfera tem altura 2r.',
@@ -113,9 +107,9 @@ export const TEORIA_SOLIDOS: readonly Teoria[] = [
       'corpo, menos superfície ele tem por unidade de massa. Isso governa resfriamento, ' +
       'resistência estrutural e o projeto de qualquer veículo.',
     formulas: [
-      { tex: '\\frac{V\'}{V} = k^{3} \\qquad \\frac{A\'}{A} = k^{2}' },
+      { tex: "\\frac{V'}{V} = k^{3} \\qquad \\frac{A'}{A} = k^{2}" },
       {
-        tex: '\\frac{A\'/V\'}{A/V} = \\frac{1}{k}',
+        tex: "\\frac{A'/V'}{A/V} = \\frac{1}{k}",
         legenda: 'A razão superfície/volume diminui com o tamanho.',
       },
     ],

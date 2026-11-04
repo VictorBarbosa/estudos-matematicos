@@ -188,7 +188,14 @@ describe('números mistos', () => {
   });
 
   it('a forma mista é lida de volta no mesmo valor', () => {
-    for (const [n, d] of [[7, 3], [-7, 3], [43, 4], [-11, 4], [3, 4], [5, 1]]) {
+    for (const [n, d] of [
+      [7, 3],
+      [-7, 3],
+      [43, 4],
+      [-11, 4],
+      [3, 4],
+      [5, 1],
+    ]) {
       const original = Fracao.criar(n!, d!);
       const relido = Fracao.analisar(original.toStringMisto());
 

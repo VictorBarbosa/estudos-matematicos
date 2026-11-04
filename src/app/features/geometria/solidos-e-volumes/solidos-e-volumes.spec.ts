@@ -13,7 +13,9 @@ describe('geradorSolidos', () => {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {
         for (const armadilha of exercicio.armadilhas) {
-          expect(geradorSolidos.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(false);
+          expect(geradorSolidos.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(
+            false,
+          );
         }
       }
     });
@@ -28,7 +30,9 @@ describe('geradorSolidos', () => {
   }
 
   it('o volume do cilindro é πr²h', () => {
-    const exercicios = amostra('facil', 120).filter((e) => e.enunciado.includes('cilindro de raio'));
+    const exercicios = amostra('facil', 120).filter((e) =>
+      e.enunciado.includes('cilindro de raio'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -92,7 +96,9 @@ describe('geradorSolidos', () => {
   });
 
   it('a altura pedida reconstrói o volume informado', () => {
-    const exercicios = amostra('dificil', 150).filter((e) => e.enunciado.includes('Qual é sua altura'));
+    const exercicios = amostra('dificil', 150).filter((e) =>
+      e.enunciado.includes('Qual é sua altura'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 

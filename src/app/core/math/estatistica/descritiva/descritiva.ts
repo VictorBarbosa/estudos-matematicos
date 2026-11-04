@@ -91,9 +91,7 @@ export function resumirAmostra(valores: readonly number[]): ResumoAmostra {
   const meio = Math.floor(ordenados.length / 2);
 
   const mediana =
-    ordenados.length % 2 === 0
-      ? (ordenados[meio - 1]! + ordenados[meio]!) / 2
-      : ordenados[meio]!;
+    ordenados.length % 2 === 0 ? (ordenados[meio - 1]! + ordenados[meio]!) / 2 : ordenados[meio]!;
 
   const media = mediaComPassos(valores).resultado;
   const desvioPadrao = valores.length < 2 ? 0 : desvioPadraoComPassos(valores).resultado;
@@ -186,9 +184,7 @@ export function ajustarRetaComPassos(
  * As incertezas absolutas se somam em quadratura — erros independentes não se
  * acumulam linearmente, porque é improvável que todos errem para o mesmo lado.
  */
-export function propagarSomaComPassos(
-  incertezas: readonly number[],
-): Resolucao<number> {
+export function propagarSomaComPassos(incertezas: readonly number[]): Resolucao<number> {
   if (incertezas.some((valor) => valor < 0)) {
     throw new ErroMatematico('Incertezas não são negativas.');
   }
@@ -205,7 +201,9 @@ export function propagarSomaComPassos(
       },
       {
         descricao: 'Somamos os quadrados.',
-        tex: incertezas.map((valor) => `${formatar(valor)}^{2}`).join(' + ') + ` = ${formatar(Number(soma.toFixed(8)))}`,
+        tex:
+          incertezas.map((valor) => `${formatar(valor)}^{2}`).join(' + ') +
+          ` = ${formatar(Number(soma.toFixed(8)))}`,
         nota: 'Somar diretamente superestimaria o erro: seria supor que todos erram junto.',
       },
       {
@@ -223,15 +221,19 @@ export function propagarSomaComPassos(
  * que medir bem a grandeza que entra ao quadrado importa mais.
  */
 export function propagarProdutoComPassos(
-  medidas: readonly { readonly valor: number; readonly incerteza: number; readonly expoente?: number }[],
+  medidas: readonly {
+    readonly valor: number;
+    readonly incerteza: number;
+    readonly expoente?: number;
+  }[],
   resultadoNominal: number,
 ): Resolucao<number> {
   if (medidas.some(({ valor }) => valor === 0)) {
     throw new ErroMatematico('Não há incerteza relativa de uma medida nula.');
   }
 
-  const relativas = medidas.map(({ valor, incerteza, expoente = 1 }) =>
-    Math.abs(expoente) * (incerteza / Math.abs(valor)),
+  const relativas = medidas.map(
+    ({ valor, incerteza, expoente = 1 }) => Math.abs(expoente) * (incerteza / Math.abs(valor)),
   );
 
   const somaQuadrados = relativas.reduce((total, relativa) => total + relativa * relativa, 0);

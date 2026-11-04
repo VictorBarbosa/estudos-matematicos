@@ -11,13 +11,17 @@ export const rotas: Routes = [
     path: 'angulos-e-triangulos',
     title: 'Ângulos e triângulos · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/geometria/angulos-e-triangulos/angulos-e-triangulos').then((m) => m.AngulosETriangulos),
+      import('@features/geometria/angulos-e-triangulos/angulos-e-triangulos').then(
+        (m) => m.AngulosETriangulos,
+      ),
   },
   {
     path: 'semelhanca-e-pitagoras',
     title: 'Semelhança e Pitágoras · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras').then((m) => m.SemelhancaEPitagoras),
+      import('@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras').then(
+        (m) => m.SemelhancaEPitagoras,
+      ),
   },
   {
     path: 'areas-de-figuras-planas',
@@ -31,13 +35,17 @@ export const rotas: Routes = [
     path: 'circulo-e-poligonos',
     title: 'Círculo e polígonos · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/geometria/circulo-e-poligonos/circulo-e-poligonos').then((m) => m.CirculoEPoligonos),
+      import('@features/geometria/circulo-e-poligonos/circulo-e-poligonos').then(
+        (m) => m.CirculoEPoligonos,
+      ),
   },
   {
     path: 'solidos-e-volumes',
     title: 'Sólidos e volumes · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/geometria/solidos-e-volumes/solidos-e-volumes').then((m) => m.SolidosEVolumes),
+      import('@features/geometria/solidos-e-volumes/solidos-e-volumes').then(
+        (m) => m.SolidosEVolumes,
+      ),
   },
   { path: '', pathMatch: 'full', redirectTo: 'angulos-e-triangulos' },
 ];

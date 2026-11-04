@@ -48,10 +48,8 @@ export function erf(x: number): number {
   const t = 1 / (1 + 0.3275911 * Math.abs(x));
 
   const serie =
-    t * (0.254829592 +
-    t * (-0.284496736 +
-    t * (1.421413741 +
-    t * (-1.453152027 + t * 1.061405429))));
+    t *
+    (0.254829592 + t * (-0.284496736 + t * (1.421413741 + t * (-1.453152027 + t * 1.061405429))));
 
   return sinal * (1 - serie * Math.exp(-x * x));
 }
@@ -67,12 +65,7 @@ export function acumulada(x: number, media: number, desvio: number): number {
 }
 
 /** A probabilidade entre dois valores. */
-export function probabilidadeEntre(
-  de: number,
-  ate: number,
-  media: number,
-  desvio: number,
-): number {
+export function probabilidadeEntre(de: number, ate: number, media: number, desvio: number): number {
   return acumulada(ate, media, desvio) - acumulada(de, media, desvio);
 }
 
@@ -103,11 +96,7 @@ export function quantilPadrao(probabilidade: number): number {
 }
 
 /** A padronização passo a passo: o movimento central do tópico. */
-export function escoreZComPassos(
-  valor: number,
-  media: number,
-  desvio: number,
-): Resolucao<number> {
+export function escoreZComPassos(valor: number, media: number, desvio: number): Resolucao<number> {
   const resultado = escoreZ(valor, media, desvio);
 
   const passos: Passo[] = [
@@ -179,8 +168,7 @@ export function probabilidadeEntreComPassos(
   const passos: Passo[] = [
     {
       descricao: 'Padronizamos as duas bordas.',
-      tex:
-        `z_{1} = ${formatar(Number(zDe.toFixed(4)))} \\qquad z_{2} = ${formatar(Number(zAte.toFixed(4)))}`,
+      tex: `z_{1} = ${formatar(Number(zDe.toFixed(4)))} \\qquad z_{2} = ${formatar(Number(zAte.toFixed(4)))}`,
     },
     {
       descricao: 'A área entre elas é a diferença das acumuladas.',

@@ -144,7 +144,8 @@ export function anguloDeCompensacaoComPassos(
 
   const passos: Passo[] = [
     {
-      descricao: 'Para a resultante ficar perpendicular, a componente rio acima deve anular a correnteza.',
+      descricao:
+        'Para a resultante ficar perpendicular, a componente rio acima deve anular a correnteza.',
       tex: `v_{barco}\\operatorname{sen}\\theta = v_{rio}`,
     },
     {
@@ -205,8 +206,7 @@ export function componentesDaAceleracaoComPassos(
     },
     {
       descricao: 'O que sobra do módulo total é a componente normal, que curva a trajetória.',
-      tex:
-        `a_{n} = \\sqrt{\\left|\\vec{a}\\right|^{2} - a_{t}^{2}} = ${formatar(Number(normal.toFixed(4)))}\\ \\text{m/s}^{2}`,
+      tex: `a_{n} = \\sqrt{\\left|\\vec{a}\\right|^{2} - a_{t}^{2}} = ${formatar(Number(normal.toFixed(4)))}\\ \\text{m/s}^{2}`,
     },
   ];
 
@@ -214,10 +214,7 @@ export function componentesDaAceleracaoComPassos(
 }
 
 /** O raio de curvatura da trajetória, a partir da componente normal. */
-export function raioDeCurvaturaComPassos(
-  velocidade: Vetor,
-  aceleracao: Vetor,
-): Resolucao<number> {
+export function raioDeCurvaturaComPassos(velocidade: Vetor, aceleracao: Vetor): Resolucao<number> {
   const rapidez = modulo(velocidade);
   const tangencial = produtoEscalar(velocidade, aceleracao) / rapidez;
   const normal = Math.sqrt(Math.max(0, modulo(aceleracao) ** 2 - tangencial ** 2));

@@ -149,7 +149,9 @@ export function fatoracaoParaTexto(n: number): string {
   }
 
   const corpo = fatores
-    .map(({ primo, expoente }) => (expoente === 1 ? `${primo}` : `${primo}${sobrescrito(expoente)}`))
+    .map(({ primo, expoente }) =>
+      expoente === 1 ? `${primo}` : `${primo}${sobrescrito(expoente)}`,
+    )
     .join(' · ');
 
   return n < 0 ? `-${corpo}` : corpo;

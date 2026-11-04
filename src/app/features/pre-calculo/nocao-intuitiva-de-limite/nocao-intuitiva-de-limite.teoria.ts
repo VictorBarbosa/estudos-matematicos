@@ -81,7 +81,9 @@ export const TEORIA_LIMITE_INTUITIVO: readonly Teoria[] = [
       'maiores, pela direita. O limite só existe quando os dois coincidem — se a função ' +
       'salta, cada lado tende a um valor diferente e o limite não existe.',
     formulas: [
-      { tex: '\\lim_{x \\to a} f(x) = L \\iff \\lim_{x \\to a^{-}} f(x) = \\lim_{x \\to a^{+}} f(x) = L' },
+      {
+        tex: '\\lim_{x \\to a} f(x) = L \\iff \\lim_{x \\to a^{-}} f(x) = \\lim_{x \\to a^{+}} f(x) = L',
+      },
     ],
     demonstracao: [
       {

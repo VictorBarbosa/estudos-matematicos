@@ -47,7 +47,12 @@ export const GRANDEZAS: readonly Grandeza[] = [
   { nome: 'vazão mássica', simbolo: 'ṁ', unidade: 'kg/s', dimensao: { M: 1, L: 0, T: -1 } },
   { nome: 'tensão superficial', simbolo: 'γ', unidade: 'N/m', dimensao: { M: 1, L: 0, T: -2 } },
   { nome: 'constante elástica', simbolo: 'k', unidade: 'N/m', dimensao: { M: 1, L: 0, T: -2 } },
-  { nome: 'densidade superficial', simbolo: 'σ', unidade: 'kg/m²', dimensao: { M: 1, L: -2, T: 0 } },
+  {
+    nome: 'densidade superficial',
+    simbolo: 'σ',
+    unidade: 'kg/m²',
+    dimensao: { M: 1, L: -2, T: 0 },
+  },
   { nome: 'aceleração angular', simbolo: 'α', unidade: 'rad/s²', dimensao: { M: 0, L: 0, T: -2 } },
   { nome: 'momento de inércia', simbolo: 'I', unidade: 'kg·m²', dimensao: { M: 1, L: 2, T: 0 } },
 ];
@@ -108,7 +113,10 @@ export function deduzirDimensaoComPassos(
       return {
         resultado,
         passos: [
-          { descricao: 'Velocidade é deslocamento por tempo.', tex: 'v = \\frac{\\Delta s}{\\Delta t}' },
+          {
+            descricao: 'Velocidade é deslocamento por tempo.',
+            tex: 'v = \\frac{\\Delta s}{\\Delta t}',
+          },
           {
             descricao: 'Em dimensões, a divisão subtrai os expoentes.',
             tex: `[v] = \\frac{L}{T} = ${dimensaoParaTex(resultado)}`,
@@ -123,7 +131,10 @@ export function deduzirDimensaoComPassos(
       return {
         resultado,
         passos: [
-          { descricao: 'Aceleração é variação de velocidade por tempo.', tex: 'a = \\frac{\\Delta v}{\\Delta t}' },
+          {
+            descricao: 'Aceleração é variação de velocidade por tempo.',
+            tex: 'a = \\frac{\\Delta v}{\\Delta t}',
+          },
           {
             descricao: 'Substituímos a dimensão de velocidade.',
             tex: `[a] = \\frac{LT^{-1}}{T} = ${dimensaoParaTex(resultado)}`,
@@ -139,7 +150,10 @@ export function deduzirDimensaoComPassos(
       return {
         resultado,
         passos: [
-          { descricao: 'Pela segunda lei de Newton, força é massa vezes aceleração.', tex: 'F = ma' },
+          {
+            descricao: 'Pela segunda lei de Newton, força é massa vezes aceleração.',
+            tex: 'F = ma',
+          },
           {
             descricao: 'Multiplicar dimensões soma os expoentes.',
             tex: `[F] = M \\cdot LT^{-2} = ${dimensaoParaTex(resultado)}`,
@@ -248,7 +262,11 @@ export function verificarEquacaoComPassos(
 /** Converte uma unidade composta pela potência dos fatores de conversão. */
 export function converterUnidadeComPassos(
   valor: number,
-  fatores: readonly { readonly fator: number; readonly expoente: number; readonly descricao: string }[],
+  fatores: readonly {
+    readonly fator: number;
+    readonly expoente: number;
+    readonly descricao: string;
+  }[],
 ): Resolucao<number> {
   if (fatores.length === 0) {
     throw new ErroMatematico('Informe ao menos um fator de conversão.');

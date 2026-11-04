@@ -155,7 +155,8 @@ export function resolverOscilacaoComPassos(
         tex: `a = -\\frac{k}{m}x = -\\frac{${formatar(constanteElastica)}}{${formatar(massa)}}x`,
       },
       {
-        descricao: 'A função cujo "derivar duas vezes" devolve ela mesma com sinal trocado é o cosseno.',
+        descricao:
+          'A função cujo "derivar duas vezes" devolve ela mesma com sinal trocado é o cosseno.',
         tex: `x(t) = ${formatar(amplitude)}\\cos(\\omega t)`,
         nota: 'Derivando duas vezes o cosseno, voltamos ao cosseno com sinal negativo.',
       },

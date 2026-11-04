@@ -147,7 +147,11 @@ export const REQUISITOS_POR_TOPICO: Readonly<Record<string, readonly RequisitoDe
   fracoes: [
     { conceito: 'fracoes.soma', rotulo: 'tipoFracao.soma', acertos: ACERTOS_POR_TIPO },
     { conceito: 'fracoes.subtracao', rotulo: 'tipoFracao.subtracao', acertos: ACERTOS_POR_TIPO },
-    { conceito: 'fracoes.multiplicacao', rotulo: 'tipoFracao.multiplicacao', acertos: ACERTOS_POR_TIPO },
+    {
+      conceito: 'fracoes.multiplicacao',
+      rotulo: 'tipoFracao.multiplicacao',
+      acertos: ACERTOS_POR_TIPO,
+    },
     { conceito: 'fracoes.divisao', rotulo: 'tipoFracao.divisao', acertos: ACERTOS_POR_TIPO },
     { conceito: 'fracoes.mista-soma', rotulo: 'tipoFracao.somaMista', acertos: ACERTOS_POR_TIPO },
     {

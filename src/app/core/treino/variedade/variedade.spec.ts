@@ -2,7 +2,6 @@ import { criarRng } from '@core/treino/rng/rng';
 import { NIVEIS } from '@core/treino/models/treino.model';
 import { TODOS_OS_GERADORES } from '@core/treino/geradores.catalogo/geradores.catalogo';
 
-
 /**
  * Quantos exercícios distintos cada gerador precisa produzir.
  *

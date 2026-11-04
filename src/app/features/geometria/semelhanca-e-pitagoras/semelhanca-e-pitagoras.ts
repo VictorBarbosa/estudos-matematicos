@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.i18n.json';
 import { geradorSemelhanca } from '@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.gerador';
 import { TEORIA_SEMELHANCA } from '@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_SEMELHANCA } from '@features/geometria/semelhanca-e-pitagoras/se
   styleUrl: './semelhanca-e-pitagoras.scss',
 })
 export class SemelhancaEPitagoras {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorSemelhanca;
   protected readonly conceitos = TEORIA_SEMELHANCA.map((teoria) => teoria.id);
 
@@ -36,9 +41,7 @@ export class SemelhancaEPitagoras {
 
   protected readonly k = signal(2);
 
-  protected readonly analise = computed(() =>
-    pitagorasComPassos(this.cateto1(), this.cateto2()),
-  );
+  protected readonly analise = computed(() => pitagorasComPassos(this.cateto1(), this.cateto2()));
 
   protected readonly hipotenusa = computed(() => this.analise().resultado);
 

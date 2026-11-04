@@ -2,7 +2,13 @@ import { Signal, WritableSignal, computed, signal } from '@angular/core';
 import { nivelDoTopico, tiposPendentes } from '@core/progressao/models/progressao.model';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { Rng, criarRng, sementeAleatoria } from '@core/treino/rng/rng';
-import { Exercicio, GeradorExercicio, Nivel, Validacao, corrigir } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  Validacao,
+  corrigir,
+} from '@core/treino/models/treino.model';
 
 /**
  * Estado de uma rodada de treino.
@@ -22,7 +28,9 @@ export class SessaoTreino<T> {
    * guarda, ele se recalcula sozinho a cada resposta — e o próximo exercício
    * já sai na dificuldade nova.
    */
-  readonly escada = computed(() => nivelDoTopico(this.progresso.historicoDe(this.gerador.topicoId)));
+  readonly escada = computed(() =>
+    nivelDoTopico(this.progresso.historicoDe(this.gerador.topicoId)),
+  );
 
   readonly nivel = computed<Nivel>(() => this.escada().nivel);
 

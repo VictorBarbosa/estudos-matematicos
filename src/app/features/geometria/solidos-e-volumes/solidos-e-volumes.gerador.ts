@@ -75,15 +75,13 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
       ? [
           {
             resposta: 4 * Math.PI * raio * raio,
-            diagnostico:
-              'Essa é a SUPERFÍCIE da esfera, 4πr². O volume usa r³ e tem o fator 4/3.',
+            diagnostico: 'Essa é a SUPERFÍCIE da esfera, 4πr². O volume usa r³ e tem o fator 4/3.',
             passo: 2,
             conceito: 'solidos.esfera',
           },
           {
             resposta: (4 / 3) * Math.PI * raio * raio,
-            diagnostico:
-              'O expoente é 3, não 2: volume é uma grandeza de três dimensões.',
+            diagnostico: 'O expoente é 3, não 2: volume é uma grandeza de três dimensões.',
             passo: 2,
             conceito: 'solidos.esfera',
           },
@@ -91,8 +89,7 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
       : solido === 'cone' || solido === 'piramide'
         ? [
             {
-              resposta:
-                solido === 'cone' ? Math.PI * raio * raio * altura : areaBase * altura,
+              resposta: solido === 'cone' ? Math.PI * raio * raio * altura : areaBase * altura,
               diagnostico:
                 'Faltou o terço: um sólido que afina até um vértice tem 1/3 do volume do ' +
                 'prisma ou cilindro de mesma base e altura.',
@@ -120,8 +117,7 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
             },
             {
               resposta: 2 * Math.PI * raio * altura,
-              diagnostico:
-                'Essa é a área LATERAL do cilindro. O volume usa a área da base, πr².',
+              diagnostico: 'Essa é a área LATERAL do cilindro. O volume usa a área da base, πr².',
               passo: 1,
               conceito: 'solidos.base-altura',
             },
@@ -331,7 +327,9 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
     armadilhas: semColisoes(
       [
         {
-          resposta: cone ? volume / (Math.PI * raio * raio) : (3 * volume) / (Math.PI * raio * raio),
+          resposta: cone
+            ? volume / (Math.PI * raio * raio)
+            : (3 * volume) / (Math.PI * raio * raio),
           diagnostico: cone
             ? 'Faltou o 3: como o volume do cone já tinha sido dividido por 3, o fator volta ' +
               'multiplicando quando isolamos h.'

@@ -160,7 +160,8 @@ export function talesComPassos(a: number, b: number, c: number): Resolucao<numbe
     resultado,
     passos: [
       {
-        descricao: 'As paralelas garantem que as razões entre segmentos correspondentes sejam iguais.',
+        descricao:
+          'As paralelas garantem que as razões entre segmentos correspondentes sejam iguais.',
         tex: `\\frac{${formatar(a)}}{${formatar(b)}} = \\frac{${formatar(c)}}{x}`,
       },
       {
@@ -414,7 +415,8 @@ export function areaComPassos(figura: Figura, dimensoes: DimensoesFigura): Resol
             tex: `A_{\\triangle} = \\frac{${formatar(base)} \\cdot ${formatar(apotema)}}{2}`,
           },
           {
-            descricao: 'Somando os n triângulos, o total é o perímetro vezes o apótema, pela metade.',
+            descricao:
+              'Somando os n triângulos, o total é o perímetro vezes o apótema, pela metade.',
             tex: `A = \\frac{p \\cdot a}{2} = \\frac{${formatar(perimetro)} \\cdot ${formatar(apotema)}}{2} = ${formatar(resultado)}`,
             nota: 'Com muitos lados, isso se aproxima de πr² — o círculo é o limite.',
           },
@@ -436,7 +438,8 @@ export function perimetroCirculoComPassos(raio: number): Resolucao<number> {
     resultado,
     passos: [
       {
-        descricao: 'π é definido como a razão entre o comprimento e o diâmetro — em qualquer círculo.',
+        descricao:
+          'π é definido como a razão entre o comprimento e o diâmetro — em qualquer círculo.',
         tex: '\\pi = \\frac{C}{d}',
         nota: 'Essa razão não depende do tamanho do círculo; é isso que faz dela uma constante.',
       },
@@ -460,11 +463,9 @@ export function perimetroCirculoComPassos(raio: number): Resolucao<number> {
  * de ternos conhecidos, dá centenas de exercícios com hipotenusa inteira — e
  * era a lista curta que fazia os tópicos de Pitágoras se repetirem.
  */
-export function ternosPitagoricos(limiteHipotenusa = 120): readonly (readonly [
-  number,
-  number,
-  number,
-])[] {
+export function ternosPitagoricos(
+  limiteHipotenusa = 120,
+): readonly (readonly [number, number, number])[] {
   const ternos: [number, number, number][] = [];
 
   for (let m = 2; m * m <= limiteHipotenusa; m++) {

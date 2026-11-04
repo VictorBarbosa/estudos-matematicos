@@ -97,7 +97,9 @@ describe('resolverComPassos com números mistos', () => {
   it('converte cada misto em fração imprópria, mostrando a conta', () => {
     const conversao = resolucao.passos[1]!;
 
-    expect(conversao.tex).toContain('-1\\frac{5}{9} = -\\frac{1 \\times 9 + 5}{9} = -\\frac{14}{9}');
+    expect(conversao.tex).toContain(
+      '-1\\frac{5}{9} = -\\frac{1 \\times 9 + 5}{9} = -\\frac{14}{9}',
+    );
     expect(conversao.tex).toContain('1\\frac{1}{2} = \\frac{1 \\times 2 + 1}{2} = \\frac{3}{2}');
   });
 

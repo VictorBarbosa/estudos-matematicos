@@ -1,10 +1,25 @@
 <app-topico-layout topicoId="vizinhancas-e-infinito">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="a (coef. do numerador)" [min]="1" [max]="9" />
-      <app-controle-parametro [(valor)]="b" rotulo="b (constante acima)" [min]="-9" [max]="9" />
-      <app-controle-parametro [(valor)]="c" rotulo="c (coef. do denominador)" [min]="1" [max]="9" />
-      <app-controle-parametro [(valor)]="d" rotulo="d (constante abaixo)" [min]="-9" [max]="9" />
+      <app-controle-parametro [(valor)]="a" [rotulo]="texto('coefNumerador')" [min]="1" [max]="9" />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="texto('constanteAcima')"
+        [min]="-9"
+        [max]="9"
+      />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="texto('coefDenominador')"
+        [min]="1"
+        [max]="9"
+      />
+      <app-controle-parametro
+        [(valor)]="d"
+        [rotulo]="texto('constanteAbaixo')"
+        [min]="-9"
+        [max]="9"
+      />
     </section>
 
     <section class="destaque-formula">
@@ -13,45 +28,51 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Limite no infinito</span>
+        <span class="rotulo">{{ texto('limiteNoInfinito') }}</span>
         <strong>{{ formatar(assintotaHorizontal()) }}</strong>
-        <span class="legenda">razão a ÷ c</span>
+        <span class="legenda">{{ texto('razaoAC') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Verificação numérica</span>
+        <span class="rotulo">{{ texto('verificacaoNumerica') }}</span>
         <strong>{{ formatar(limiteInfinito()) }}</strong>
         <span class="legenda">f(10⁶)</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Assíntota vertical</span>
+        <span class="rotulo">{{ texto('assintotaVertical') }}</span>
         <strong>x = {{ formatar(assintotaVertical()) }}</strong>
-        <span class="legenda">onde o denominador zera</span>
+        <span class="legenda">{{ texto('ondeDenominadorZera') }}</span>
       </div>
     </section>
 
     <section class="painel">
-      <h2>O jogo do épsilon</h2>
+      <h2>{{ texto('jogoDoEpsilon') }}</h2>
       <app-controle-parametro
         [(valor)]="epsilonEmCentesimos"
-        rotulo="Margem ε (em centésimos)"
+        [rotulo]="texto('margemEpsilon')"
         [min]="1"
         [max]="100"
-        [dica]="'ε = ' + formatar(epsilon())"
+        [dica]="texto('dicaEpsilon', { valor: formatar(epsilon()) })"
       />
 
-      <p class="observacao">
-        @if (xSuficiente(); as limiar) {
-          Exigindo que f fique a menos de <strong>{{ formatar(epsilon()) }}</strong> do limite,
-          basta tomar x maior que <strong>{{ formatar(limiar) }}</strong>. Aperte o ε: o limiar
-          aumenta, mas sempre existe um — e é exatamente isso que a definição formal afirma.
-        } @else {
-          Com essa margem, a função não chega a entrar na faixa no intervalo testado.
-        }
-      </p>
+      <!-- Os dois números vêm em <strong> dentro da frase, que os põe em ordens
+           diferentes conforme a língua. -->
+      @if (xSuficiente(); as limiar) {
+        <p
+          class="observacao"
+          [innerHTML]="
+            texto('exigindoQue', {
+              epsilon: formatar(epsilon()),
+              limiar: formatar(limiar),
+            })
+          "
+        ></p>
+      } @else {
+        <p class="observacao">{{ texto('semFaixa') }}</p>
+      }
     </section>
 
     <section>
-      <h2>A curva e suas assíntotas</h2>
+      <h2>{{ texto('curvaEAssintotas') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -59,11 +80,7 @@
         [descricao]="descricaoGrafico()"
         [altura]="400"
       />
-      <p class="observacao">
-        A linha cheia é o limite; as tracejadas horizontais delimitam a faixa de tolerância ε.
-        A tracejada vertical marca onde a função explode. Repare que a curva entra na faixa e
-        não sai mais — ela persegue a assíntota sem jamais tocá-la.
-      </p>
+      <p class="observacao">{{ texto('aLinhaCheia') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

@@ -1,5 +1,9 @@
 import { Polinomio } from '@core/math/algebra/polinomio/polinomio';
-import { derivadaNumerica, derivarPolinomioComPassos, pontosCriticos } from '@core/math/calculo/derivadas/derivadas';
+import {
+  derivadaNumerica,
+  derivarPolinomioComPassos,
+  pontosCriticos,
+} from '@core/math/calculo/derivadas/derivadas';
 import {
   integralNumerica,
   integrarPolinomioComPassos,
@@ -7,7 +11,11 @@ import {
   teoremaFundamentalComPassos,
 } from '@core/math/calculo/integrais/integrais';
 import { ehContinua, limitesLaterais, limiteNoInfinito } from '@core/math/calculo/limites/limites';
-import { somaComPassos, somaInfinitaComPassos, termoGeral } from '@core/math/calculo/sequencias/sequencias';
+import {
+  somaComPassos,
+  somaInfinitaComPassos,
+  termoGeral,
+} from '@core/math/calculo/sequencias/sequencias';
 
 describe('sequências', () => {
   it('calcula o termo geral da PA e da PG', () => {
@@ -133,6 +141,9 @@ describe('integrais', () => {
     const { resultado } = teoremaFundamentalComPassos(p, 0, 3);
 
     expect(resultado).toBeCloseTo(9, 9);
-    expect(resultado).toBeCloseTo(integralNumerica((x) => x * x, 0, 3), 6);
+    expect(resultado).toBeCloseTo(
+      integralNumerica((x) => x * x, 0, 3),
+      6,
+    );
   });
 });

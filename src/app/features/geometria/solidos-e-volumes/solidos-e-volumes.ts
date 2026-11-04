@@ -1,11 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import {
-  NOME_SOLIDO,
-  Solido,
-  razaoDeVolumesComPassos,
-  superficieComPassos,
-  volumeComPassos,
-} from '@core/math';
+import { Solido, razaoDeVolumesComPassos, superficieComPassos, volumeComPassos } from '@core/math';
 import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
@@ -13,6 +7,9 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/geometria/solidos-e-volumes/solidos-e-volumes.i18n.json';
 import { geradorSolidos } from '@features/geometria/solidos-e-volumes/solidos-e-volumes.gerador';
 import { TEORIA_SOLIDOS } from '@features/geometria/solidos-e-volumes/solidos-e-volumes.teoria';
 
@@ -21,22 +18,16 @@ const SOLIDOS: readonly Solido[] = ['cilindro', 'cone', 'esfera'];
 @Component({
   selector: 'app-solidos-e-volumes',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    PassoAPasso,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, PassoAPasso, TopicoLayout],
   templateUrl: './solidos-e-volumes.html',
   styleUrl: './solidos-e-volumes.scss',
 })
 export class SolidosEVolumes {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorSolidos;
   protected readonly conceitos = TEORIA_SOLIDOS.map((teoria) => teoria.id);
   protected readonly solidos = SOLIDOS;
-  protected readonly nomeSolido = NOME_SOLIDO;
 
   protected readonly solido = signal<Solido>('cone');
   protected readonly raio = signal(3);

@@ -215,8 +215,7 @@ function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ang-lados-${lados}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um polígono regular tem ângulo interno de ${Number(angulo.toFixed(2))}°. Quantos lados ele tem?`,
+    enunciado: `Um polígono regular tem ângulo interno de ${Number(angulo.toFixed(2))}°. Quantos lados ele tem?`,
     enunciadoTex: `a_i = ${Number(angulo.toFixed(2))}^\\circ`,
     gabarito: lados,
     resolucao: {
@@ -250,8 +249,7 @@ function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: Math.round(angulo / 180 + 2),
-          diagnostico:
-            'A relação não é direta assim. Passe pelo ângulo externo: n = 360° / aₑ.',
+          diagnostico: 'A relação não é direta assim. Passe pelo ângulo externo: n = 360° / aₑ.',
           passo: 1,
           conceito: 'angulos.soma',
         },

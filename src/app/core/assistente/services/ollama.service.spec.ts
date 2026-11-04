@@ -109,7 +109,13 @@ describe('OllamaService', () => {
       );
 
       const texto = await juntar(
-        ollama.conversar(SERVIDOR, 'llama3.2', 'instruções', [{ papel: 'aluno', texto: 'oi' }], sinal),
+        ollama.conversar(
+          SERVIDOR,
+          'llama3.2',
+          'instruções',
+          [{ papel: 'aluno', texto: 'oi' }],
+          sinal,
+        ),
       );
 
       expect(texto).toBe('Dois mais dois.');
@@ -118,9 +124,7 @@ describe('OllamaService', () => {
     it('remonta a linha que chegou partida', async () => {
       // O fluxo é NDJSON e o pedaço pode cortar no meio do JSON.
       const inteira = JSON.stringify({ message: { content: 'resposta' } });
-      responderCom(async () =>
-        resposta([inteira.slice(0, 10), `${inteira.slice(10)}\n`]),
-      );
+      responderCom(async () => resposta([inteira.slice(0, 10), `${inteira.slice(10)}\n`]));
 
       expect(await juntar(ollama.conversar(SERVIDOR, 'm', 's', [], sinal))).toBe('resposta');
     });
@@ -129,11 +133,17 @@ describe('OllamaService', () => {
       responderCom(async () => resposta([`${JSON.stringify({ message: { content: '' } })}\n`]));
 
       await juntar(
-        ollama.conversar(SERVIDOR, 'llama3.2', 'as instruções', [
-          { papel: 'aluno', texto: 'primeira' },
-          { papel: 'assistente', texto: 'resposta' },
-          { papel: 'aluno', texto: 'segunda' },
-        ], sinal),
+        ollama.conversar(
+          SERVIDOR,
+          'llama3.2',
+          'as instruções',
+          [
+            { papel: 'aluno', texto: 'primeira' },
+            { papel: 'assistente', texto: 'resposta' },
+            { papel: 'aluno', texto: 'segunda' },
+          ],
+          sinal,
+        ),
       );
 
       const enviado = JSON.parse(String(chamadas[0]!.opcoes!.body));
@@ -192,9 +202,9 @@ describe('OllamaService', () => {
         resposta([`${JSON.stringify({ error: 'model "xyz" not found' })}\n`]),
       );
 
-      await expect(
-        juntar(ollama.conversar(SERVIDOR, 'xyz', 's', [], sinal)),
-      ).rejects.toThrow('not found');
+      await expect(juntar(ollama.conversar(SERVIDOR, 'xyz', 's', [], sinal))).rejects.toThrow(
+        'not found',
+      );
     });
 
     it('404 avisa que o modelo pode não estar instalado', async () => {

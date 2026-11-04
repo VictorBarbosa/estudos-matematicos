@@ -1,4 +1,8 @@
-import { mdcComPassos, mmcComPassos, relacaoMdcMmcComPassos } from '@core/math/numeros/divisibilidade/divisibilidade';
+import {
+  mdcComPassos,
+  mmcComPassos,
+  relacaoMdcMmcComPassos,
+} from '@core/math/numeros/divisibilidade/divisibilidade';
 
 describe('mdcComPassos', () => {
   it('encontra o máximo divisor comum pela fatoração', () => {

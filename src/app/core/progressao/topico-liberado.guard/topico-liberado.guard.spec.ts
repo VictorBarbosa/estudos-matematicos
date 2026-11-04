@@ -1,8 +1,18 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, provideRouter } from '@angular/router';
+import {
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+  UrlTree,
+  provideRouter,
+} from '@angular/router';
 import { ProgressoService } from '@core/treino/services/progresso.service';
-import { ACERTOS_EXIGENTES, ACERTOS_NA_JANELA, RESPOSTAS_NA_JANELA, TRILHA } from '@core/progressao/models/progressao.model';
+import {
+  ACERTOS_EXIGENTES,
+  ACERTOS_NA_JANELA,
+  RESPOSTAS_NA_JANELA,
+  TRILHA,
+} from '@core/progressao/models/progressao.model';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { topicoLiberadoGuard } from '@core/progressao/topico-liberado.guard/topico-liberado.guard';
 
@@ -12,8 +22,7 @@ function ativar(topicoId: string): boolean | UrlTree {
   const estado = {} as RouterStateSnapshot;
 
   return TestBed.runInInjectionContext(() => topicoLiberadoGuard(rota, estado)) as
-    | boolean
-    | UrlTree;
+    boolean | UrlTree;
 }
 
 describe('topicoLiberadoGuard', () => {

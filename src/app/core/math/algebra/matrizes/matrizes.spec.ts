@@ -76,9 +76,7 @@ describe('operações com matrizes', () => {
       [1, 0],
     ];
 
-    expect(multiplicarComPassos(a, b).resultado).not.toEqual(
-      multiplicarComPassos(b, a).resultado,
-    );
+    expect(multiplicarComPassos(a, b).resultado).not.toEqual(multiplicarComPassos(b, a).resultado);
   });
 
   it('a identidade não altera a matriz', () => {

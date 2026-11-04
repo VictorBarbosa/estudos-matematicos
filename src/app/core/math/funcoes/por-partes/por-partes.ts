@@ -66,16 +66,13 @@ export function saltoEm(f: FuncaoPorPartes, fronteira: number): number {
 export function ehContinuaEm(f: FuncaoPorPartes, fronteira: number): boolean {
   const valor = avaliarPorPartes(f, fronteira);
   return (
-    Math.abs(saltoEm(f, fronteira)) < 1e-9 &&
-    Math.abs(valor - limiteEsquerda(f, fronteira)) < 1e-9
+    Math.abs(saltoEm(f, fronteira)) < 1e-9 && Math.abs(valor - limiteEsquerda(f, fronteira)) < 1e-9
   );
 }
 
 /** As fronteiras internas, que é onde o tópico mora. */
 export function fronteirasDe(f: FuncaoPorPartes): readonly number[] {
-  return f.trechos
-    .map((trecho) => trecho.ate)
-    .filter((valor) => Number.isFinite(valor));
+  return f.trechos.map((trecho) => trecho.ate).filter((valor) => Number.isFinite(valor));
 }
 
 /** `\begin{cases} … \end{cases}`, como se escreve no papel. */
@@ -121,10 +118,7 @@ export function avaliarPorPartesComPassos(f: FuncaoPorPartes, x: number): Resolu
  * É a mesma definição de continuidade do Cálculo, só que aqui ela tem um lugar
  * concreto para ser testada.
  */
-export function continuidadeComPassos(
-  f: FuncaoPorPartes,
-  fronteira: number,
-): Resolucao<number> {
+export function continuidadeComPassos(f: FuncaoPorPartes, fronteira: number): Resolucao<number> {
   const esquerda = limiteEsquerda(f, fronteira);
   const direita = limiteDireita(f, fronteira);
   const valor = avaliarPorPartes(f, fronteira);

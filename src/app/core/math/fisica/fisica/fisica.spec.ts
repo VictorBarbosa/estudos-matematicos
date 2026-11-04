@@ -75,7 +75,10 @@ describe('análise dimensional', () => {
     const comprimento = grandezaPorNome('comprimento')!.dimensao;
 
     expect(
-      dimensoesIguais(multiplicarDimensoes(forca, comprimento), grandezaPorNome('energia')!.dimensao),
+      dimensoesIguais(
+        multiplicarDimensoes(forca, comprimento),
+        grandezaPorNome('energia')!.dimensao,
+      ),
     ).toBe(true);
   });
 
@@ -102,7 +105,9 @@ describe('análise dimensional', () => {
     const energia = grandezaPorNome('energia')!.dimensao;
     const forca = grandezaPorNome('força')!.dimensao;
 
-    expect(verificarEquacaoComPassos(energia, energia, 'E', 'mv²').resultado.consistente).toBe(true);
+    expect(verificarEquacaoComPassos(energia, energia, 'E', 'mv²').resultado.consistente).toBe(
+      true,
+    );
     expect(verificarEquacaoComPassos(energia, forca, 'E', 'ma').resultado.consistente).toBe(false);
   });
 });
@@ -153,7 +158,9 @@ describe('cinemática e dinâmica', () => {
   });
 
   it('recusa massa não positiva', () => {
-    expect(() => segundaLeiComPassos(0, [{ valor: 1, descricao: 'f' }])).toThrowError(ErroMatematico);
+    expect(() => segundaLeiComPassos(0, [{ valor: 1, descricao: 'f' }])).toThrowError(
+      ErroMatematico,
+    );
   });
 
   it('no plano inclinado, a normal cai e a componente do peso cresce com o ângulo', () => {
@@ -436,10 +443,7 @@ describe('fluidos e termodinâmica', () => {
   });
 
   it('a expansão isobárica realiza trabalho positivo', () => {
-    expect(trabalhoIsobaricoComPassos(101325, 0.01, 0.03).resultado).toBeCloseTo(
-      101325 * 0.02,
-      6,
-    );
+    expect(trabalhoIsobaricoComPassos(101325, 0.01, 0.03).resultado).toBeCloseTo(101325 * 0.02, 6);
     expect(trabalhoIsobaricoComPassos(101325, 0.03, 0.01).resultado).toBeLessThan(0);
   });
 });

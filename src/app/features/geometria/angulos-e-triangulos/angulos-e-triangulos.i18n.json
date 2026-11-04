@@ -1,0 +1,94 @@
+{
+  "ladosDoPoligono": {
+    "pt": "Lados do polígono",
+    "fr": "Côtés du polygone",
+    "en": "Sides of the polygon"
+  },
+  "dicaLados": {
+    "pt": "As diagonais tracejadas mostram em quantos triângulos ele se reparte.",
+    "fr": "Les diagonales en pointillé montrent en combien de triangles il se découpe.",
+    "en": "The dashed diagonals show how many triangles it splits into."
+  },
+  "triangulosFormados": {
+    "pt": "Triângulos formados",
+    "fr": "Triangles formés",
+    "en": "Triangles formed"
+  },
+  "somaDosInternos": {
+    "pt": "Soma dos internos",
+    "fr": "Somme des angles intérieurs",
+    "en": "Sum of the interior angles"
+  },
+  "cadaInterno": {
+    "pt": "Cada interno (regular)",
+    "fr": "Chaque angle intérieur (régulier)",
+    "en": "Each interior angle (regular)"
+  },
+  "cadaExterno": {
+    "pt": "Cada externo",
+    "fr": "Chaque angle extérieur",
+    "en": "Each exterior angle"
+  },
+  "somam360": {
+    "pt": "somam 360°, sempre",
+    "fr": "leur somme fait 360°, toujours",
+    "en": "they add to 360°, always"
+  },
+  "decomposicao": {
+    "pt": "A decomposição em triângulos",
+    "fr": "La décomposition en triangles",
+    "en": "The decomposition into triangles"
+  },
+  "descricaoPoligono": {
+    "pt": "Polígono regular com as diagonais traçadas de um único vértice.",
+    "fr": "Polygone régulier avec les diagonales tracées depuis un seul sommet.",
+    "en": "Regular polygon with the diagonals drawn from a single vertex."
+  },
+  "asDiagonais": {
+    "pt": "As diagonais partem todas de um mesmo vértice e sempre produzem <strong>{quantos}</strong> triângulos — dois menos que o número de lados. Nenhum ângulo do polígono é cortado em dois nem contado duas vezes, e é por isso que a soma é exatamente (n − 2) · 180°.",
+    "fr": "Les diagonales partent toutes d’un même sommet et donnent toujours <strong>{quantos}</strong> triangles — deux de moins que le nombre de côtés. Aucun angle du polygone n’est coupé en deux ni compté deux fois, et c’est pourquoi la somme vaut exactement (n − 2) · 180°.",
+    "en": "The diagonals all start from one vertex and always give <strong>{quantos}</strong> triangles — two fewer than the number of sides. No angle of the polygon is cut in two or counted twice, which is why the sum is exactly (n − 2) · 180°."
+  },
+  "tresMedidas": {
+    "pt": "Três medidas fecham um triângulo?",
+    "fr": "Trois mesures forment-elles un triangle ?",
+    "en": "Do three measurements close a triangle?"
+  },
+  "ladoA": { "pt": "Lado a", "fr": "Côté a", "en": "Side a" },
+  "classificacao": {
+    "pt": "Classificação: <strong>{tipo}</strong>",
+    "fr": "Classification : <strong>{tipo}</strong>",
+    "en": "Classification: <strong>{tipo}</strong>"
+  },
+  "naoETriangulo": {
+    "pt": "não é triângulo",
+    "fr": "ce n’est pas un triangle",
+    "en": "not a triangle"
+  },
+  "formaEAngulo": {
+    "pt": "{forma} e {angulo}",
+    "fr": "{forma} et {angulo}",
+    "en": "{forma} and {angulo}"
+  },
+  "equilatero": { "pt": "equilátero", "fr": "équilatéral", "en": "equilateral" },
+  "isosceles": { "pt": "isósceles", "fr": "isocèle", "en": "isosceles" },
+  "escaleno": { "pt": "escaleno", "fr": "scalène", "en": "scalene" },
+  "retangulo": { "pt": "retângulo", "fr": "rectangle", "en": "right-angled" },
+  "acutangulo": { "pt": "acutângulo", "fr": "acutangle", "en": "acute" },
+  "obtusangulo": { "pt": "obtusângulo", "fr": "obtusangle", "en": "obtuse" },
+  "descricaoTriangulo": {
+    "pt": "Triângulo construído a partir dos três lados escolhidos.",
+    "fr": "Triangle construit à partir des trois côtés choisis.",
+    "en": "Triangle built from the three chosen sides."
+  },
+  "compararOQuadrado": {
+    "pt": "Comparar o quadrado do maior lado com a soma dos outros dois basta para saber o tipo de ângulo — nenhum transferidor necessário. É a lei dos cossenos escondida: quando a igualdade vale, o cosseno zerou, e o ângulo é reto.",
+    "fr": "Comparer le carré du plus grand côté à la somme des deux autres suffit pour connaître le type d’angle — aucun rapporteur nécessaire. C’est la loi des cosinus cachée : quand l’égalité est vraie, le cosinus s’annule et l’angle est droit.",
+    "en": "Comparing the square of the longest side with the sum of the other two is enough to tell the kind of angle — no protractor needed. It is the law of cosines in disguise: when equality holds, the cosine is zero and the angle is right."
+  },
+  "naoFecham": {
+    "pt": "Esses três lados não fecham um triângulo: o maior alcança ou passa a soma dos outros dois, então os vértices ficam alinhados ou nem se encontram.",
+    "fr": "Ces trois côtés ne forment pas de triangle : le plus grand atteint ou dépasse la somme des deux autres, les sommets sont donc alignés ou ne se rejoignent même pas.",
+    "en": "Those three sides do not close a triangle: the longest reaches or passes the sum of the other two, so the vertices end up in a line or never meet at all."
+  }
+}

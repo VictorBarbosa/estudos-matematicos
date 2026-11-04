@@ -27,12 +27,7 @@ export interface CurvaParametrica {
 }
 
 /** Reta por um ponto, com vetor diretor: a forma mais usada em cinemática. */
-export function retaParametrica(
-  x0: number,
-  y0: number,
-  vx: number,
-  vy: number,
-): CurvaParametrica {
+export function retaParametrica(x0: number, y0: number, vx: number, vy: number): CurvaParametrica {
   return {
     tipo: 'reta',
     x: (t) => x0 + vx * t,
@@ -47,11 +42,7 @@ export function retaParametrica(
 }
 
 /** Circunferência de raio r centrada em (cx, cy). */
-export function circunferenciaParametrica(
-  cx: number,
-  cy: number,
-  raio: number,
-): CurvaParametrica {
+export function circunferenciaParametrica(cx: number, cy: number, raio: number): CurvaParametrica {
   return {
     tipo: 'circunferencia',
     x: (t) => cx + raio * Math.cos(t),
@@ -109,10 +100,7 @@ export function cicloideParametrica(raio: number): CurvaParametrica {
 }
 
 /** A posição no instante t — a leitura mais direta da forma paramétrica. */
-export function posicaoNoInstanteComPassos(
-  curva: CurvaParametrica,
-  t: number,
-): Resolucao<number> {
+export function posicaoNoInstanteComPassos(curva: CurvaParametrica, t: number): Resolucao<number> {
   const x = curva.x(t);
   const y = curva.y(t);
 
@@ -124,8 +112,7 @@ export function posicaoNoInstanteComPassos(
     },
     {
       descricao: `Substituímos t igual a ${formatarEmTexto(t)} nas duas.`,
-      tex:
-        `x = ${formatar(Number(x.toFixed(6)))} \\qquad y = ${formatar(Number(y.toFixed(6)))}`,
+      tex: `x = ${formatar(Number(x.toFixed(6)))} \\qquad y = ${formatar(Number(y.toFixed(6)))}`,
     },
     {
       descricao: 'O ponto correspondente.',

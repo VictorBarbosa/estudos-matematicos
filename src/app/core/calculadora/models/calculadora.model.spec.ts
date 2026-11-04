@@ -379,8 +379,8 @@ describe('divisão simultânea', () => {
   });
 
   it('marca as linhas em que o divisor coube em todos', () => {
-    const marcadas = calcularInteiros('12, 18, 24', 'mmc').decomposicao
-      .filter((linha) => linha.comum)
+    const marcadas = calcularInteiros('12, 18, 24', 'mmc')
+      .decomposicao.filter((linha) => linha.comum)
       .map((linha) => linha.divisor);
 
     // São exatamente os fatores do MDC: 2 · 3 = 6.

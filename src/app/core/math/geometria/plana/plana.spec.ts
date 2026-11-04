@@ -166,7 +166,10 @@ describe('áreas', () => {
 
   it('o trapézio de bases iguais vira paralelogramo', () => {
     const trapezio = areaComPassos('trapezio', { base: 5, baseMenor: 5, altura: 3 }).resultado;
-    expect(trapezio).toBeCloseTo(areaComPassos('paralelogramo', { base: 5, altura: 3 }).resultado, 9);
+    expect(trapezio).toBeCloseTo(
+      areaComPassos('paralelogramo', { base: 5, altura: 3 }).resultado,
+      9,
+    );
   });
 
   it('círculo e setor', () => {

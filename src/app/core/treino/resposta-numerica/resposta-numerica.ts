@@ -189,10 +189,7 @@ export function analisarValorSimples(entrada: string): number | null {
  * A parcela `relativa` cobre o outro lado: gabaritos da ordem de 10⁸ exigem
  * mais algarismos do que uma calculadora mostra.
  */
-export function proximosEmCasas(
-  casas: number,
-  relativa = 1e-6,
-): (a: number, b: number) => boolean {
+export function proximosEmCasas(casas: number, relativa = 1e-6): (a: number, b: number) => boolean {
   // Meia unidade na última casa, com uma folga mínima para o ponto flutuante:
   // sem ela, 0,88 contra 0,875 dá 0,005000000000000004 e seria recusado — o
   // arredondamento de "meio" é justamente o caso mais comum.

@@ -43,8 +43,10 @@ describe('integridade das teorias', () => {
     for (const [topico, teorias] of TODAS_AS_TEORIAS) {
       for (const teoria of teorias) {
         for (const id of teoria.vejaTambem ?? []) {
-          expect(CONCEITOS.has(id), `${topico}/${teoria.id} aponta para "${id}", que não existe`)
-            .toBe(true);
+          expect(
+            CONCEITOS.has(id),
+            `${topico}/${teoria.id} aponta para "${id}", que não existe`,
+          ).toBe(true);
         }
       }
     }

@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/geometria/circulo-e-poligonos/circulo-e-poligonos.i18n.json';
 import { geradorCirculo } from '@features/geometria/circulo-e-poligonos/circulo-e-poligonos.gerador';
 import { TEORIA_CIRCULO } from '@features/geometria/circulo-e-poligonos/circulo-e-poligonos.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_CIRCULO } from '@features/geometria/circulo-e-poligonos/circulo-
   styleUrl: './circulo-e-poligonos.scss',
 })
 export class CirculoEPoligonos {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorCirculo;
   protected readonly conceitos = TEORIA_CIRCULO.map((teoria) => teoria.id);
 
@@ -65,9 +70,7 @@ export class CirculoEPoligonos {
     () => this.inscrito().area / this.areaCirculo().resultado,
   );
 
-  protected readonly piEstimado = computed(
-    () => this.inscrito().perimetro / (2 * this.raio()),
-  );
+  protected readonly piEstimado = computed(() => this.inscrito().perimetro / (2 * this.raio()));
 
   protected readonly comprimentoTex = computed(
     () => `C = 2\\pi \\cdot ${this.raio()} = ${this.formatar(this.comprimento().resultado)}`,

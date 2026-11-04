@@ -16,9 +16,27 @@ describe('ProgressoService', () => {
   it('acumula acertos e erros por tópico', () => {
     const progresso = new ProgressoService();
 
-    progresso.registrar({ topicoId: 'fracoes', conceitos: [], acertou: true, sequencia: 1, nivel: 'facil' });
-    progresso.registrar({ topicoId: 'fracoes', conceitos: [], acertou: true, sequencia: 2, nivel: 'facil' });
-    progresso.registrar({ topicoId: 'fracoes', conceitos: [], acertou: false, sequencia: 0, nivel: 'facil' });
+    progresso.registrar({
+      topicoId: 'fracoes',
+      conceitos: [],
+      acertou: true,
+      sequencia: 1,
+      nivel: 'facil',
+    });
+    progresso.registrar({
+      topicoId: 'fracoes',
+      conceitos: [],
+      acertou: true,
+      sequencia: 2,
+      nivel: 'facil',
+    });
+    progresso.registrar({
+      topicoId: 'fracoes',
+      conceitos: [],
+      acertou: false,
+      sequencia: 0,
+      nivel: 'facil',
+    });
 
     const estatistica = progresso.estatisticaDe('fracoes');
     expect(estatistica.acertos).toBe(2);
@@ -30,8 +48,20 @@ describe('ProgressoService', () => {
   it('mantém tópicos separados', () => {
     const progresso = new ProgressoService();
 
-    progresso.registrar({ topicoId: 'fracoes', conceitos: [], acertou: true, sequencia: 1, nivel: 'facil' });
-    progresso.registrar({ topicoId: 'mmc-mdc', conceitos: [], acertou: false, sequencia: 0, nivel: 'facil' });
+    progresso.registrar({
+      topicoId: 'fracoes',
+      conceitos: [],
+      acertou: true,
+      sequencia: 1,
+      nivel: 'facil',
+    });
+    progresso.registrar({
+      topicoId: 'mmc-mdc',
+      conceitos: [],
+      acertou: false,
+      sequencia: 0,
+      nivel: 'facil',
+    });
 
     expect(progresso.estatisticaDe('fracoes').acertos).toBe(1);
     expect(progresso.estatisticaDe('mmc-mdc').erros).toBe(1);
@@ -131,7 +161,13 @@ describe('ProgressoService', () => {
 
   it('limpa o progresso quando pedido', () => {
     const progresso = new ProgressoService();
-    progresso.registrar({ topicoId: 'fracoes', conceitos: [], acertou: true, sequencia: 1, nivel: 'facil' });
+    progresso.registrar({
+      topicoId: 'fracoes',
+      conceitos: [],
+      acertou: true,
+      sequencia: 1,
+      nivel: 'facil',
+    });
 
     progresso.limpar();
 

@@ -12,8 +12,8 @@ export const TEORIA_SEMELHANCA: readonly Teoria[] = [
       'k³. Essa diferença de expoentes é um dos fatos mais úteis da engenharia: nada pode ser ' +
       'simplesmente ampliado.',
     formulas: [
-      { tex: '\\frac{a\'}{a} = \\frac{b\'}{b} = k' },
-      { tex: '\\frac{A\'}{A} = k^{2} \\qquad \\frac{V\'}{V} = k^{3}' },
+      { tex: "\\frac{a'}{a} = \\frac{b'}{b} = k" },
+      { tex: "\\frac{A'}{A} = k^{2} \\qquad \\frac{V'}{V} = k^{3}" },
     ],
     demonstracao: [
       {
@@ -27,7 +27,7 @@ export const TEORIA_SEMELHANCA: readonly Teoria[] = [
       },
       {
         descricao: 'Logo a razão superfície/volume cai quando a figura cresce.',
-        tex: '\\frac{A\'}{V\'} = \\frac{k^{2}A}{k^{3}V} = \\frac{1}{k}\\cdot\\frac{A}{V}',
+        tex: "\\frac{A'}{V'} = \\frac{k^{2}A}{k^{3}V} = \\frac{1}{k}\\cdot\\frac{A}{V}",
         nota: 'É por isso que animais grandes dissipam calor com mais dificuldade.',
       },
     ],
@@ -46,7 +46,7 @@ export const TEORIA_SEMELHANCA: readonly Teoria[] = [
       'proporcionais. É a ferramenta que resolve "quanto mede o lado que não dá para medir" — ' +
       'e foi assim que Tales calculou a altura da pirâmide pela sombra.',
     formulas: [
-      { tex: '\\frac{AB}{BC} = \\frac{A\'B\'}{B\'C\'}' },
+      { tex: "\\frac{AB}{BC} = \\frac{A'B'}{B'C'}" },
       {
         tex: '\\frac{a}{b} = \\frac{c}{x} \\;\\Rightarrow\\; x = \\frac{bc}{a}',
         legenda: 'A quarta proporcional, por multiplicação em cruz.',
@@ -55,16 +55,16 @@ export const TEORIA_SEMELHANCA: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'As paralelas garantem ângulos correspondentes iguais.',
-        tex: '\\alpha = \\alpha\' \\quad \\beta = \\beta\'',
+        tex: "\\alpha = \\alpha' \\quad \\beta = \\beta'",
       },
       {
         descricao: 'Com dois ângulos iguais, os triângulos são semelhantes.',
-        tex: '\\triangle ABC \\sim \\triangle A\'B\'C\'',
+        tex: "\\triangle ABC \\sim \\triangle A'B'C'",
         nota: 'O terceiro ângulo vem de graça: a soma é sempre 180°.',
       },
       {
         descricao: 'Em figuras semelhantes, os lados correspondentes são proporcionais.',
-        tex: '\\frac{AB}{A\'B\'} = \\frac{BC}{B\'C\'}',
+        tex: "\\frac{AB}{A'B'} = \\frac{BC}{B'C'}",
       },
     ],
     exemplo: {

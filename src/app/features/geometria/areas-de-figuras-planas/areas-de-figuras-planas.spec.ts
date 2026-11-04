@@ -28,7 +28,9 @@ describe('geradorAreas', () => {
   }
 
   it('a área do triângulo é metade de base × altura', () => {
-    const exercicios = amostra('facil', 120).filter((e) => e.enunciado.includes('triângulo tem base'));
+    const exercicios = amostra('facil', 120).filter((e) =>
+      e.enunciado.includes('triângulo tem base'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -45,8 +47,9 @@ describe('geradorAreas', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, maior, menor, altura] =
-        /B = (\d+) \\qquad b = (\d+) \\qquad h = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, maior, menor, altura] = /B = (\d+) \\qquad b = (\d+) \\qquad h = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBeCloseTo(
         areaComPassos('trapezio', {
@@ -60,7 +63,9 @@ describe('geradorAreas', () => {
   });
 
   it('a altura pedida reconstrói a área informada', () => {
-    const exercicios = amostra('medio', 150).filter((e) => e.enunciado.includes('Qual é sua altura'));
+    const exercicios = amostra('medio', 150).filter((e) =>
+      e.enunciado.includes('Qual é sua altura'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 

@@ -37,11 +37,7 @@ export interface RaizesCaracteristicas {
  * grandeza cuja taxa de variação é proporcional ao que já há — juros, meia
  * vida, população sem limite, corrente num indutor.
  */
-export function separavelExponencialComPassos(
-  k: number,
-  y0: number,
-  t: number,
-): Resolucao<number> {
+export function separavelExponencialComPassos(k: number, y0: number, t: number): Resolucao<number> {
   const resultado = y0 * Math.exp(k * t);
 
   const passos: Passo[] = [

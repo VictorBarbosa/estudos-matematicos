@@ -251,7 +251,11 @@ describe('interpretar a resposta', () => {
   });
 
   it('negrito, itálico e código na linha', () => {
-    const trechos = (interpretar('Use **isto**, *aquilo* e `codigo`.')[0] as { trechos: readonly { tipo: string }[] }).trechos;
+    const trechos = (
+      interpretar('Use **isto**, *aquilo* e `codigo`.')[0] as {
+        trechos: readonly { tipo: string }[];
+      }
+    ).trechos;
 
     expect(trechos.map((t) => t.tipo)).toContain('forte');
     expect(trechos.map((t) => t.tipo)).toContain('enfase');
@@ -263,7 +267,11 @@ describe('interpretar a resposta', () => {
      * Dentro de uma fórmula há asteriscos e sublinhados que são notação, não
      * negrito: `$a_1 * b_2$` sairia estropiado se a marcação viesse primeiro.
      */
-    const trechos = (interpretar('Vale $a_1 * b_2$ aqui.')[0] as { trechos: readonly { tipo: string; conteudo: string }[] }).trechos;
+    const trechos = (
+      interpretar('Vale $a_1 * b_2$ aqui.')[0] as {
+        trechos: readonly { tipo: string; conteudo: string }[];
+      }
+    ).trechos;
     const formula = trechos.find((t) => t.tipo === 'formula')!;
 
     expect(formula.conteudo).toBe('a_1 * b_2');
@@ -271,7 +279,9 @@ describe('interpretar a resposta', () => {
   });
 
   it('fórmula em bloco continua em bloco', () => {
-    const trechos = (interpretar('$$\\frac{1}{2}$$')[0] as { trechos: readonly { bloco: boolean }[] }).trechos;
+    const trechos = (
+      interpretar('$$\\frac{1}{2}$$')[0] as { trechos: readonly { bloco: boolean }[] }
+    ).trechos;
 
     expect(trechos[0]!.bloco).toBe(true);
   });
@@ -283,7 +293,14 @@ describe('interpretar a resposta', () => {
 
   it('uma resposta de verdade vira a estrutura inteira', () => {
     const blocos = interpretar(
-      ['## Por que', '', 'Porque **os denominadores** diferem.', '', '1. Ache o MMC', '2. Converta'].join('\n'),
+      [
+        '## Por que',
+        '',
+        'Porque **os denominadores** diferem.',
+        '',
+        '1. Ache o MMC',
+        '2. Converta',
+      ].join('\n'),
     );
 
     expect(blocos.map((b) => b.tipo)).toEqual(['titulo', 'paragrafo', 'lista']);

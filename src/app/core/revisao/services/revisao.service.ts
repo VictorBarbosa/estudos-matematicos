@@ -62,8 +62,7 @@ export class RevisaoService {
     return this.candidatos()
       .map((etapa) => {
         const ultima = this.progresso.ultimaPraticaDe(etapa.topicoId);
-        const diasSemPraticar =
-          ultima === null ? null : Math.floor((agora - ultima) / UM_DIA);
+        const diasSemPraticar = ultima === null ? null : Math.floor((agora - ultima) / UM_DIA);
         const conceitosFrageis = frageisPorTopico.get(etapa.topicoId) ?? [];
 
         const motivo: MotivoRevisao =

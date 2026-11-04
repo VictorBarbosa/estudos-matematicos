@@ -1,0 +1,74 @@
+{
+  "anguloDoSetor": {
+    "pt": "Ângulo do setor (°)",
+    "fr": "Angle du secteur (°)",
+    "en": "Sector angle (°)"
+  },
+  "ladosInscrito": {
+    "pt": "Lados do polígono inscrito",
+    "fr": "Côtés du polygone inscrit",
+    "en": "Sides of the inscribed polygon"
+  },
+  "comprimento": { "pt": "Comprimento", "fr": "Circonférence", "en": "Circumference" },
+  "areaDoCirculo": {
+    "pt": "Área do círculo",
+    "fr": "Aire du cercle",
+    "en": "Area of the circle"
+  },
+  "areaDoSetor": { "pt": "Área do setor", "fr": "Aire du secteur", "en": "Area of the sector" },
+  "doTotal": {
+    "pt": "{angulo}°/360° do total",
+    "fr": "{angulo}°/360° du total",
+    "en": "{angulo}°/360° of the whole"
+  },
+  "circuloComoLimite": {
+    "pt": "O círculo como limite dos polígonos",
+    "fr": "Le cercle comme limite des polygones",
+    "en": "The circle as the limit of polygons"
+  },
+  "descricaoGrafico": {
+    "pt": "Círculo com um polígono regular inscrito.",
+    "fr": "Cercle avec un polygone régulier inscrit.",
+    "en": "Circle with a regular polygon inscribed."
+  },
+  "aumenteOsLados": {
+    "pt": "Aumente o número de lados e veja o polígono encostar na curva. Ele nunca é o círculo, mas a diferença vai a zero — o mesmo raciocínio de limite que, formalizado, se torna a integral.",
+    "fr": "Augmentez le nombre de côtés et voyez le polygone épouser la courbe. Il n’est jamais le cercle, mais l’écart tend vers zéro — le même raisonnement de limite qui, formalisé, devient l’intégrale.",
+    "en": "Raise the number of sides and watch the polygon press against the curve. It is never the circle, but the gap goes to zero — the same limit argument that, once formalised, becomes the integral."
+  },
+  "areaDoPoligono": {
+    "pt": "Área do polígono",
+    "fr": "Aire du polygone",
+    "en": "Area of the polygon"
+  },
+  "coberturaDoCirculo": {
+    "pt": "Cobertura do círculo",
+    "fr": "Couverture du cercle",
+    "en": "Share of the circle covered"
+  },
+  "piEstimado": {
+    "pt": "π estimado pelo polígono",
+    "fr": "π estimé par le polygone",
+    "en": "π estimated by the polygon"
+  },
+  "perimetroDiametro": {
+    "pt": "perímetro / diâmetro",
+    "fr": "périmètre / diamètre",
+    "en": "perimeter / diameter"
+  },
+  "porQueAreaPiR2": {
+    "pt": "Por que a área é πr²",
+    "fr": "Pourquoi l’aire vaut πr²",
+    "en": "Why the area is πr²"
+  },
+  "setorPassoAPasso": {
+    "pt": "O setor, passo a passo",
+    "fr": "Le secteur, pas à pas",
+    "en": "The sector, step by step"
+  },
+  "oSetorNaoPede": {
+    "pt": "O setor não pede fórmula nova: ele é uma fração do círculo, e a fração é a do ângulo sobre 360°. Vale igualmente para o comprimento do arco, trocando πr² por 2πr.",
+    "fr": "Le secteur ne demande pas de formule nouvelle : c’est une fraction du cercle, et cette fraction est celle de l’angle sur 360°. Cela vaut aussi pour la longueur de l’arc, en remplaçant πr² par 2πr.",
+    "en": "The sector needs no new formula: it is a fraction of the circle, and that fraction is the angle over 360°. The same holds for the arc length, swapping πr² for 2πr."
+  }
+}

@@ -50,9 +50,7 @@ export function transformarPonto(
 /** `2f\left(3(x - 1)\right) + 4`, escrito como se lê. */
 export function transformacaoParaTex(t: Transformacao, nome = 'f'): string {
   const dentro =
-    t.b === 1
-      ? deslocamentoTex(t.h)
-      : `${formatar(t.b)}\\left(${deslocamentoTex(t.h)}\\right)`;
+    t.b === 1 ? deslocamentoTex(t.h) : `${formatar(t.b)}\\left(${deslocamentoTex(t.h)}\\right)`;
 
   const corpo = `${coeficienteTex(t.a)}${nome}\\left(${dentro}\\right)`;
   if (t.k === 0) {

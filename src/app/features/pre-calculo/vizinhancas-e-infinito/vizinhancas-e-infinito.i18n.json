@@ -1,0 +1,80 @@
+{
+  "coefNumerador": {
+    "pt": "a (coef. do numerador)",
+    "fr": "a (coef. du numérateur)",
+    "en": "a (coef. of the numerator)"
+  },
+  "constanteAcima": {
+    "pt": "b (constante acima)",
+    "fr": "b (constante au-dessus)",
+    "en": "b (constant above)"
+  },
+  "coefDenominador": {
+    "pt": "c (coef. do denominador)",
+    "fr": "c (coef. du dénominateur)",
+    "en": "c (coef. of the denominator)"
+  },
+  "constanteAbaixo": {
+    "pt": "d (constante abaixo)",
+    "fr": "d (constante en dessous)",
+    "en": "d (constant below)"
+  },
+  "limiteNoInfinito": {
+    "pt": "Limite no infinito",
+    "fr": "Limite à l’infini",
+    "en": "Limit at infinity"
+  },
+  "razaoAC": { "pt": "razão a ÷ c", "fr": "rapport a ÷ c", "en": "ratio a ÷ c" },
+  "verificacaoNumerica": {
+    "pt": "Verificação numérica",
+    "fr": "Vérification numérique",
+    "en": "Numerical check"
+  },
+  "assintotaVertical": {
+    "pt": "Assíntota vertical",
+    "fr": "Asymptote verticale",
+    "en": "Vertical asymptote"
+  },
+  "ondeDenominadorZera": {
+    "pt": "onde o denominador zera",
+    "fr": "là où le dénominateur s’annule",
+    "en": "where the denominator vanishes"
+  },
+  "jogoDoEpsilon": {
+    "pt": "O jogo do épsilon",
+    "fr": "Le jeu de l’epsilon",
+    "en": "The epsilon game"
+  },
+  "margemEpsilon": {
+    "pt": "Margem ε (em centésimos)",
+    "fr": "Marge ε (en centièmes)",
+    "en": "Margin ε (in hundredths)"
+  },
+  "dicaEpsilon": { "pt": "ε = {valor}", "fr": "ε = {valor}", "en": "ε = {valor}" },
+  "exigindoQue": {
+    "pt": "Exigindo que f fique a menos de <strong>{epsilon}</strong> do limite, basta tomar x maior que <strong>{limiar}</strong>. Aperte o ε: o limiar aumenta, mas sempre existe um — e é exatamente isso que a definição formal afirma.",
+    "fr": "En exigeant que f reste à moins de <strong>{epsilon}</strong> de la limite, il suffit de prendre x plus grand que <strong>{limiar}</strong>. Serrez le ε : le seuil augmente, mais il en existe toujours un — et c’est exactement ce qu’affirme la définition formelle.",
+    "en": "Requiring f to stay within <strong>{epsilon}</strong> of the limit, it is enough to take x greater than <strong>{limiar}</strong>. Tighten ε: the threshold grows, but one always exists — and that is exactly what the formal definition says."
+  },
+  "semFaixa": {
+    "pt": "Com essa margem, a função não chega a entrar na faixa no intervalo testado.",
+    "fr": "Avec cette marge, la fonction n’entre pas dans la bande sur l’intervalle testé.",
+    "en": "With that margin, the function never enters the band over the interval tested."
+  },
+  "curvaEAssintotas": {
+    "pt": "A curva e suas assíntotas",
+    "fr": "La courbe et ses asymptotes",
+    "en": "The curve and its asymptotes"
+  },
+  "curvaF": { "pt": "f(x)", "fr": "f(x)", "en": "f(x)" },
+  "descricaoGrafico": {
+    "pt": "Curva aproximando-se da assíntota horizontal y igual a {limite}, com a faixa de tolerância épsilon e a assíntota vertical destacadas.",
+    "fr": "Courbe s’approchant de l’asymptote horizontale y égale à {limite}, avec la bande de tolérance epsilon et l’asymptote verticale mises en évidence.",
+    "en": "Curve approaching the horizontal asymptote y equal to {limite}, with the epsilon tolerance band and the vertical asymptote highlighted."
+  },
+  "aLinhaCheia": {
+    "pt": "A linha cheia é o limite; as tracejadas horizontais delimitam a faixa de tolerância ε. A tracejada vertical marca onde a função explode. Repare que a curva entra na faixa e não sai mais — ela persegue a assíntota sem jamais tocá-la.",
+    "fr": "La ligne pleine est la limite ; les pointillés horizontaux délimitent la bande de tolérance ε. Le pointillé vertical marque là où la fonction explose. Remarquez que la courbe entre dans la bande et n’en sort plus — elle poursuit l’asymptote sans jamais la toucher.",
+    "en": "The solid line is the limit; the horizontal dashes bound the ε tolerance band. The vertical dash marks where the function blows up. Notice that the curve enters the band and never leaves — it chases the asymptote without ever touching it."
+  }
+}

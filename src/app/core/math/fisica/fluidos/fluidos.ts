@@ -175,7 +175,8 @@ export function sustentacaoComPassos(
   }
 
   const diferencaPressao =
-    (densidade * (velocidadeSuperior * velocidadeSuperior - velocidadeInferior * velocidadeInferior)) /
+    (densidade *
+      (velocidadeSuperior * velocidadeSuperior - velocidadeInferior * velocidadeInferior)) /
     2;
 
   const resultado = diferencaPressao * area;
@@ -195,8 +196,7 @@ export function sustentacaoComPassos(
       {
         descricao: 'A sustentação é a diferença de pressão aplicada sobre a área.',
         tex: `L = \\Delta p \\cdot A = ${formatar(Number(resultado.toFixed(1)))}\\,\\text{N}`,
-        nota:
-          'A sustentação cresce com o QUADRADO da velocidade: dobrar a velocidade a quadruplica.',
+        nota: 'A sustentação cresce com o QUADRADO da velocidade: dobrar a velocidade a quadruplica.',
       },
     ],
   };
@@ -210,9 +210,12 @@ export interface EstadoGas {
 }
 
 /** Lei dos gases ideais: resolve a variável que falta. */
-export function gasIdealComPassos(
-  conhecidos: { readonly pressao?: number; readonly volume?: number; readonly temperatura?: number; readonly mols?: number },
-): Resolucao<EstadoGas> {
+export function gasIdealComPassos(conhecidos: {
+  readonly pressao?: number;
+  readonly volume?: number;
+  readonly temperatura?: number;
+  readonly mols?: number;
+}): Resolucao<EstadoGas> {
   const { pressao, volume, temperatura, mols } = conhecidos;
   const informados = [pressao, volume, temperatura, mols].filter((v) => v !== undefined).length;
 
@@ -320,7 +323,8 @@ export function trabalhoIsobaricoComPassos(
     resultado,
     passos: [
       {
-        descricao: 'A pressão constante faz o trabalho ser simplesmente a área do retângulo p × ΔV.',
+        descricao:
+          'A pressão constante faz o trabalho ser simplesmente a área do retângulo p × ΔV.',
         tex: 'W = p\\,\\Delta V',
       },
       {

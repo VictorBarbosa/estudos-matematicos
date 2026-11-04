@@ -213,8 +213,7 @@ function carregar(): EstadoProgresso {
     }
 
     const dados = JSON.parse(bruto) as
-      | (Omit<Partial<EstadoProgresso>, 'versao'> & { versao?: number })
-      | null;
+      (Omit<Partial<EstadoProgresso>, 'versao'> & { versao?: number }) | null;
 
     // A versão 1 não guardava o histórico por nível. Em vez de descartar o
     // progresso de quem já estudou, ela é lida sem histórico: os totais e os

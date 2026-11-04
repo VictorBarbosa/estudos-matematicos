@@ -142,7 +142,8 @@ export function volumeComPassos(solido: Solido, dimensoes: DimensoesSolido): Res
         resultado,
         passos: [
           {
-            descricao: 'A esfera cabe num cilindro de mesma altura e raio, ocupando dois terços dele.',
+            descricao:
+              'A esfera cabe num cilindro de mesma altura e raio, ocupando dois terços dele.',
             tex: 'V_{\\text{cil}} = \\pi r^{2} \\cdot 2r = 2\\pi r^{3}',
             nota: 'Resultado de Arquimedes, que pediu para gravá-lo em seu túmulo.',
           },

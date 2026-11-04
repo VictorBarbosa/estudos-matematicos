@@ -39,16 +39,19 @@ export interface SimboloMatematico {
 }
 
 export type FamiliaDeSimbolos =
-  | 'conjuntos'
-  | 'logica'
-  | 'intervalos'
-  | 'somas'
-  | 'funcoes'
-  | 'operadores';
+  'conjuntos' | 'logica' | 'intervalos' | 'somas' | 'funcoes' | 'operadores';
 
 export const FAMILIAS: Readonly<Record<FamiliaDeSimbolos, TresLinguas>> = {
-  conjuntos: { pt: 'Conjuntos e pertinência', fr: 'Ensembles et appartenance', en: 'Sets and membership' },
-  logica: { pt: 'Lógica e quantificadores', fr: 'Logique et quantificateurs', en: 'Logic and quantifiers' },
+  conjuntos: {
+    pt: 'Conjuntos e pertinência',
+    fr: 'Ensembles et appartenance',
+    en: 'Sets and membership',
+  },
+  logica: {
+    pt: 'Lógica e quantificadores',
+    fr: 'Logique et quantificateurs',
+    en: 'Logic and quantifiers',
+  },
   intervalos: { pt: 'Intervalos', fr: 'Intervalles', en: 'Intervals' },
   somas: { pt: 'Somatório e produtório', fr: 'Sommation et produit', en: 'Summation and product' },
   funcoes: { pt: 'Funções', fr: 'Fonctions', en: 'Functions' },
@@ -70,7 +73,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'appartient à',
     en: 'belongs to / is in',
     exemploTex: '3 \\in \\mathbb{N}',
-    exemploLido: { pt: 'três pertence aos naturais', fr: 'trois appartient aux entiers naturels', en: 'three belongs to the naturals' },
+    exemploLido: {
+      pt: 'três pertence aos naturais',
+      fr: 'trois appartient aux entiers naturels',
+      en: 'three belongs to the naturals',
+    },
     familia: 'conjuntos',
   },
   {
@@ -80,7 +87,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: "n'appartient pas à",
     en: 'does not belong to',
     exemploTex: '\\tfrac{1}{2} \\notin \\mathbb{Z}',
-    exemploLido: { pt: 'um meio não pertence aos inteiros', fr: "un demi n'appartient pas aux entiers", en: 'one half does not belong to the integers' },
+    exemploLido: {
+      pt: 'um meio não pertence aos inteiros',
+      fr: "un demi n'appartient pas aux entiers",
+      en: 'one half does not belong to the integers',
+    },
     familia: 'conjuntos',
   },
   {
@@ -90,7 +101,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'est inclus dans',
     en: 'is a subset of',
     exemploTex: '\\mathbb{N} \\subset \\mathbb{Z}',
-    exemploLido: { pt: 'os naturais estão contidos nos inteiros', fr: 'les entiers naturels sont inclus dans les entiers', en: 'the naturals are contained in the integers' },
+    exemploLido: {
+      pt: 'os naturais estão contidos nos inteiros',
+      fr: 'les entiers naturels sont inclus dans les entiers',
+      en: 'the naturals are contained in the integers',
+    },
     familia: 'conjuntos',
   },
   {
@@ -100,7 +115,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'union',
     en: 'union',
     exemploTex: '\\{1,2\\} \\cup \\{2,3\\} = \\{1,2,3\\}',
-    exemploLido: { pt: 'tudo o que está em um ou no outro', fr: "tout ce qui est dans l'un ou dans l'autre", en: 'everything that is in one or in the other' },
+    exemploLido: {
+      pt: 'tudo o que está em um ou no outro',
+      fr: "tout ce qui est dans l'un ou dans l'autre",
+      en: 'everything that is in one or in the other',
+    },
     familia: 'conjuntos',
   },
   {
@@ -110,7 +129,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'intersection',
     en: 'intersection',
     exemploTex: '\\{1,2\\} \\cap \\{2,3\\} = \\{2\\}',
-    exemploLido: { pt: 'só o que está nos dois', fr: 'seulement ce qui est dans les deux', en: 'only what is in both' },
+    exemploLido: {
+      pt: 'só o que está nos dois',
+      fr: 'seulement ce qui est dans les deux',
+      en: 'only what is in both',
+    },
     familia: 'conjuntos',
   },
   {
@@ -120,27 +143,47 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'R, ensemble des réels',
     en: 'R, the real numbers',
     exemploTex: '\\pi \\in \\mathbb{R}',
-    exemploLido: { pt: 'pi é um número real', fr: 'pi est un nombre réel', en: 'pi is a real number' },
+    exemploLido: {
+      pt: 'pi é um número real',
+      fr: 'pi est un nombre réel',
+      en: 'pi is a real number',
+    },
     familia: 'conjuntos',
   },
   {
     simbolo: '∀',
-    nome: { pt: 'quantificador universal', fr: 'quantificateur universel', en: 'universal quantifier' },
+    nome: {
+      pt: 'quantificador universal',
+      fr: 'quantificateur universel',
+      en: 'universal quantifier',
+    },
     pt: 'para todo',
     fr: 'pour tout',
     en: 'for all / for every',
     exemploTex: '\\forall x \\in \\mathbb{R},\\ x^2 \\geq 0',
-    exemploLido: { pt: 'para todo x real, x ao quadrado é maior ou igual a zero', fr: 'pour tout x réel, x au carré est supérieur ou égal à zéro', en: 'for every real x, x squared is greater than or equal to zero' },
+    exemploLido: {
+      pt: 'para todo x real, x ao quadrado é maior ou igual a zero',
+      fr: 'pour tout x réel, x au carré est supérieur ou égal à zéro',
+      en: 'for every real x, x squared is greater than or equal to zero',
+    },
     familia: 'logica',
   },
   {
     simbolo: '∃',
-    nome: { pt: 'quantificador existencial', fr: 'quantificateur existentiel', en: 'existential quantifier' },
+    nome: {
+      pt: 'quantificador existencial',
+      fr: 'quantificateur existentiel',
+      en: 'existential quantifier',
+    },
     pt: 'existe',
     fr: 'il existe',
     en: 'there exists',
     exemploTex: '\\exists n \\in \\mathbb{N},\\ n > 5',
-    exemploLido: { pt: 'existe um natural maior que cinco', fr: 'il existe un entier naturel plus grand que cinq', en: 'there is a natural number greater than five' },
+    exemploLido: {
+      pt: 'existe um natural maior que cinco',
+      fr: 'il existe un entier naturel plus grand que cinq',
+      en: 'there is a natural number greater than five',
+    },
     familia: 'logica',
   },
   {
@@ -150,7 +193,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'implique / donc',
     en: 'implies',
     exemploTex: 'x > 2 \\Rightarrow x > 1',
-    exemploLido: { pt: 'se x é maior que dois, então x é maior que um', fr: 'si x est plus grand que deux, alors x est plus grand que un', en: 'if x is greater than two, then x is greater than one' },
+    exemploLido: {
+      pt: 'se x é maior que dois, então x é maior que um',
+      fr: 'si x est plus grand que deux, alors x est plus grand que un',
+      en: 'if x is greater than two, then x is greater than one',
+    },
     familia: 'logica',
   },
   {
@@ -160,7 +207,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'si et seulement si',
     en: 'if and only if',
     exemploTex: 'x^2 = 4 \\Leftrightarrow x = \\pm 2',
-    exemploLido: { pt: 'uma coisa vale exatamente quando a outra vale', fr: "une chose est vraie exactement quand l'autre l'est", en: 'one holds exactly when the other holds' },
+    exemploLido: {
+      pt: 'uma coisa vale exatamente quando a outra vale',
+      fr: "une chose est vraie exactement quand l'autre l'est",
+      en: 'one holds exactly when the other holds',
+    },
     familia: 'logica',
   },
   {
@@ -170,7 +221,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'intervalle fermé de a à b',
     en: 'closed interval from a to b',
     exemploTex: 'x \\in [2, 5]',
-    exemploLido: { pt: 'x vale de dois a cinco, com os extremos', fr: 'x va de deux à cinq, bornes comprises', en: 'x runs from two to five, endpoints included' },
+    exemploLido: {
+      pt: 'x vale de dois a cinco, com os extremos',
+      fr: 'x va de deux à cinq, bornes comprises',
+      en: 'x runs from two to five, endpoints included',
+    },
     familia: 'intervalos',
   },
   {
@@ -180,7 +235,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'intervalle ouvert de a à b',
     en: 'open interval from a to b',
     exemploTex: 'x \\in (2, 5)',
-    exemploLido: { pt: 'x fica entre dois e cinco, sem valer dois nem cinco', fr: 'x est strictement entre deux et cinq', en: 'x lies strictly between two and five' },
+    exemploLido: {
+      pt: 'x fica entre dois e cinco, sem valer dois nem cinco',
+      fr: 'x est strictement entre deux et cinq',
+      en: 'x lies strictly between two and five',
+    },
     familia: 'intervalos',
   },
   {
@@ -190,7 +249,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'somme de k égale 1 à n',
     en: 'sum from k equals 1 to n',
     exemploTex: '\\sum_{k=1}^{4} k^2 = 1 + 4 + 9 + 16 = 30',
-    exemploLido: { pt: 'some os quadrados de 1 a 4', fr: 'additionnez les carrés de 1 à 4', en: 'add the squares from 1 to 4' },
+    exemploLido: {
+      pt: 'some os quadrados de 1 a 4',
+      fr: 'additionnez les carrés de 1 à 4',
+      en: 'add the squares from 1 to 4',
+    },
     familia: 'somas',
   },
   {
@@ -200,7 +263,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'produit de k égale 1 à n',
     en: 'product from k equals 1 to n',
     exemploTex: '\\prod_{k=1}^{4} k = 1 \\cdot 2 \\cdot 3 \\cdot 4 = 24',
-    exemploLido: { pt: 'multiplique os naturais de 1 a 4', fr: 'multipliez les entiers de 1 à 4', en: 'multiply the whole numbers from 1 to 4' },
+    exemploLido: {
+      pt: 'multiplique os naturais de 1 a 4',
+      fr: 'multipliez les entiers de 1 à 4',
+      en: 'multiply the whole numbers from 1 to 4',
+    },
     familia: 'somas',
   },
   {
@@ -210,7 +277,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'f de A dans B',
     en: 'f from A to B',
     exemploTex: 'f: \\mathbb{R} \\to \\mathbb{R}',
-    exemploLido: { pt: 'f recebe um real e devolve um real', fr: 'f prend un réel et rend un réel', en: 'f takes a real and returns a real' },
+    exemploLido: {
+      pt: 'f recebe um real e devolve um real',
+      fr: 'f prend un réel et rend un réel',
+      en: 'f takes a real and returns a real',
+    },
     familia: 'funcoes',
   },
   {
@@ -220,7 +291,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'valeur absolue de x',
     en: 'absolute value of x',
     exemploTex: '|-7| = 7',
-    exemploLido: { pt: 'a distância de x até zero', fr: 'la distance de x à zéro', en: 'the distance from x to zero' },
+    exemploLido: {
+      pt: 'a distância de x até zero',
+      fr: 'la distance de x à zéro',
+      en: 'the distance from x to zero',
+    },
     familia: 'operadores',
   },
   {
@@ -230,7 +305,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'factorielle n',
     en: 'n factorial',
     exemploTex: '4! = 4 \\cdot 3 \\cdot 2 \\cdot 1 = 24',
-    exemploLido: { pt: 'o produto de todos os naturais de 1 a n', fr: 'le produit de tous les entiers de 1 à n', en: 'the product of all whole numbers from 1 to n' },
+    exemploLido: {
+      pt: 'o produto de todos os naturais de 1 a n',
+      fr: 'le produit de tous les entiers de 1 à n',
+      en: 'the product of all whole numbers from 1 to n',
+    },
     familia: 'operadores',
   },
   {
@@ -240,7 +319,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'intégrale de a à b de f de x, dx',
     en: 'integral from a to b of f of x, d x',
     exemploTex: '\\int_{0}^{1} x \\,dx = \\tfrac{1}{2}',
-    exemploLido: { pt: 'a área sob a curva entre 0 e 1', fr: 'l’aire sous la courbe entre 0 et 1', en: 'the area under the curve between 0 and 1' },
+    exemploLido: {
+      pt: 'a área sob a curva entre 0 e 1',
+      fr: 'l’aire sous la courbe entre 0 et 1',
+      en: 'the area under the curve between 0 and 1',
+    },
     familia: 'somas',
   },
   {
@@ -250,7 +333,11 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
     fr: 'inférieur ou égal à',
     en: 'less than or equal to',
     exemploTex: 'x \\leq 3',
-    exemploLido: { pt: 'x vale no máximo três', fr: 'x vaut au plus trois', en: 'x is at most three' },
+    exemploLido: {
+      pt: 'x vale no máximo três',
+      fr: 'x vaut au plus trois',
+      en: 'x is at most three',
+    },
     familia: 'operadores',
   },
 ];

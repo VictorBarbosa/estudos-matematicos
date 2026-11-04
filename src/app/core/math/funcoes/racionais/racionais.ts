@@ -126,10 +126,7 @@ export function analisarRacional(f: FuncaoRacional): AnaliseRacional {
  * É a distinção que o tópico existe para instalar, e ela se decide olhando o
  * numerador no mesmo ponto.
  */
-export function assintotaOuBuracoComPassos(
-  f: FuncaoRacional,
-  ponto: number,
-): Resolucao<boolean> {
+export function assintotaOuBuracoComPassos(f: FuncaoRacional, ponto: number): Resolucao<boolean> {
   const cima = f.numerador.avaliar(ponto);
   const ehBuraco = Math.abs(cima) < 1e-9;
 
@@ -197,7 +194,10 @@ export function analisarRacionalComPassos(f: FuncaoRacional): Resolucao<AnaliseR
   const passos: Passo[] = [
     {
       descricao: 'O domínio exclui onde o denominador zera.',
-      tex: `${f.denominador.paraTex()} = 0 \\;\\Longrightarrow\\; x \\in \\{${[...analise.assintotasVerticais, ...analise.buracos]
+      tex: `${f.denominador.paraTex()} = 0 \\;\\Longrightarrow\\; x \\in \\{${[
+        ...analise.assintotasVerticais,
+        ...analise.buracos,
+      ]
         .map((x) => formatar(x))
         .join(',\\; ')}\\}`,
     },

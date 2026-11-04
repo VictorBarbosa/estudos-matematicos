@@ -91,7 +91,10 @@ export function formatarValor(valor: number): string {
   // Fora desta faixa o número decimal vira uma fileira de zeros ilegível.
   const texto =
     magnitude !== 0 && (magnitude >= 1e12 || magnitude < 1e-6)
-      ? arredondado.toExponential(6).replace(/(\.\d*?)0+e/, '$1e').replace(/\.e/, 'e')
+      ? arredondado
+          .toExponential(6)
+          .replace(/(\.\d*?)0+e/, '$1e')
+          .replace(/\.e/, 'e')
       : String(arredondado);
 
   return texto.replace('.', ',');
@@ -161,7 +164,9 @@ export function digitar(estado: EstadoCalculadora, texto: string): EstadoCalcula
   const base =
     estado.resultado === null
       ? estado.expressao
-      : (CONTINUA_A_CONTA.test(texto) ? estado.resultado : '');
+      : CONTINUA_A_CONTA.test(texto)
+        ? estado.resultado
+        : '';
 
   const proxima = inserir(base, texto);
   if (proxima === null) {
@@ -219,9 +224,7 @@ export function alternarSinal(estado: EstadoCalculadora): EstadoCalculadora {
   // O menos só é "sinal do número" quando o que vem antes dele não é um valor:
   // em `8-3`, aquele menos é a subtração, e removê-lo apagaria a operação.
   const ehSinal = antes.endsWith('-') && /(^|[+\-×÷^(])$/.test(antes.slice(0, -1));
-  const expressao = ehSinal
-    ? antes.slice(0, -1) + encontrado[1]
-    : `${antes}-${encontrado[1]}`;
+  const expressao = ehSinal ? antes.slice(0, -1) + encontrado[1] : `${antes}-${encontrado[1]}`;
 
   return { expressao, resultado: null, erro: null };
 }
@@ -349,8 +352,7 @@ export function calcular(estado: EstadoCalculadora, angulo: Angulo): EstadoCalcu
   }
 
   const comTrigonometria = TRIGONOMETRICAS.some((nome) => fechada.includes(`${nome}(`));
-  const limpo =
-    comTrigonometria && Math.abs(valor) < RUIDO_TRIGONOMETRICO ? 0 : valor;
+  const limpo = comTrigonometria && Math.abs(valor) < RUIDO_TRIGONOMETRICO ? 0 : valor;
 
   return { expressao: fechada, resultado: formatarValor(limpo), erro: null };
 }
@@ -405,11 +407,11 @@ const LIMITE = 1_000_000_000;
  * é ver que 12 = 2²·3 e 18 = 2·3² que explica por que o MMC é 2²·3² e o MDC é
  * 2·3.
  */
-export function calcularInteiros(
-  entrada: string,
-  operacao: OperacaoInteiros,
-): ContaDeInteiros {
-  const partes = entrada.trim().split(SEPARADORES).filter((parte) => parte !== '');
+export function calcularInteiros(entrada: string, operacao: OperacaoInteiros): ContaDeInteiros {
+  const partes = entrada
+    .trim()
+    .split(SEPARADORES)
+    .filter((parte) => parte !== '');
   if (partes.length === 0) {
     return CONTA_VAZIA;
   }
@@ -481,9 +483,7 @@ export function decompor(numeros: readonly number[]): readonly LinhaDecomposicao
      * ele próprio.
      */
     const divisor =
-      candidato * candidato > maior
-        ? Math.min(...valores.filter((valor) => valor > 1))
-        : candidato;
+      candidato * candidato > maior ? Math.min(...valores.filter((valor) => valor > 1)) : candidato;
 
     if (!valores.some((valor) => valor % divisor === 0)) {
       candidato++;

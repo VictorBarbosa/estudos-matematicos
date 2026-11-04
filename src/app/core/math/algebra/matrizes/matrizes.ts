@@ -131,7 +131,10 @@ export function determinanteComPassos(m: Matriz): Resolucao<number> {
     return {
       resultado: m[0]![0]!,
       passos: [
-        { descricao: 'Numa matriz 1×1, o determinante é o próprio número.', tex: formatar(m[0]![0]!) },
+        {
+          descricao: 'Numa matriz 1×1, o determinante é o próprio número.',
+          tex: formatar(m[0]![0]!),
+        },
       ],
     };
   }
@@ -165,9 +168,7 @@ export function determinanteComPassos(m: Matriz): Resolucao<number> {
 
   for (let j = 0; j < colunas; j++) {
     const sinal = j % 2 === 0 ? 1 : -1;
-    const menor = m
-      .slice(1)
-      .map((linha) => linha.filter((_, coluna) => coluna !== j));
+    const menor = m.slice(1).map((linha) => linha.filter((_, coluna) => coluna !== j));
 
     const cofator = sinal * determinanteComPassos(menor).resultado;
     resultado += m[0]![j]! * cofator;

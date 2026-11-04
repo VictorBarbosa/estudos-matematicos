@@ -105,7 +105,8 @@ export const TEORIA_CIRCULO: readonly Teoria[] = [
     ],
     exemplo: {
       enunciado: 'A área de um hexágono regular de lado 2.',
-      passos: areaComPassos('poligono-regular', { lados: 6, base: 2, apotema: Math.sqrt(3) }).passos,
+      passos: areaComPassos('poligono-regular', { lados: 6, base: 2, apotema: Math.sqrt(3) })
+        .passos,
     },
     vejaTambem: ['circulo.area', 'angulos.soma'],
   },

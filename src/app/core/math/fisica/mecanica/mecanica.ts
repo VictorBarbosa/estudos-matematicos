@@ -144,7 +144,10 @@ export function segundaLeiComPassos(
     passos: [
       {
         descricao: 'Somamos as forças com seus sinais, conforme o sentido.',
-        tex: forcas.map(({ valor }) => formatar(valor)).join(' + ').replace(/\+ -/g, '- '),
+        tex: forcas
+          .map(({ valor }) => formatar(valor))
+          .join(' + ')
+          .replace(/\+ -/g, '- '),
       },
       {
         descricao: 'A resultante é essa soma.',

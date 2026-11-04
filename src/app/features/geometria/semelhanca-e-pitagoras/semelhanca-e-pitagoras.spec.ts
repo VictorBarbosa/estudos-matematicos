@@ -70,7 +70,9 @@ describe('geradorSemelhanca', () => {
   });
 
   it('Tales mantém a proporção', () => {
-    const exercicios = amostra('medio', 120).filter((e) => e.enunciado.includes('feixe de paralelas'));
+    const exercicios = amostra('medio', 120).filter((e) =>
+      e.enunciado.includes('feixe de paralelas'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 

@@ -149,8 +149,7 @@ export function gradienteComPassos(q: Quadrica, x: number, y: number): Resolucao
     },
     {
       descricao: 'Cada componente é uma parcial avaliada no ponto.',
-      tex:
-        `\\nabla f(${formatar(x)},\\; ${formatar(y)}) = \\left(${formatar(g.x)},\\; ${formatar(g.y)}\\right)`,
+      tex: `\\nabla f(${formatar(x)},\\; ${formatar(y)}) = \\left(${formatar(g.x)},\\; ${formatar(g.y)}\\right)`,
       nota: 'Ele aponta para a direção de subida mais íngreme a partir daquele ponto.',
     },
     {
@@ -233,8 +232,7 @@ export function pontoCriticoComPassos(q: Quadrica): Resolucao<number> {
     },
     {
       descricao: 'Resolvendo.',
-      tex:
-        `x = ${formatar(Number(x.toFixed(6)))} \\qquad y = ${formatar(Number(y.toFixed(6)))}`,
+      tex: `x = ${formatar(Number(x.toFixed(6)))} \\qquad y = ${formatar(Number(y.toFixed(6)))}`,
     },
     {
       descricao: `O teste da segunda derivada classifica o ponto.`,
@@ -302,8 +300,7 @@ export function integralDuplaComPassos(
     },
     {
       descricao: 'Depois integramos o que sobrou em y.',
-      tex:
-        `\\Delta x = ${formatar(dx)} \\qquad \\Delta y = ${formatar(dy)}`,
+      tex: `\\Delta x = ${formatar(dx)} \\qquad \\Delta y = ${formatar(dy)}`,
     },
     {
       descricao: 'Somando as contribuições de cada termo.',
@@ -359,11 +356,7 @@ export function integralPolarComPassos(
 }
 
 /** Cilíndricas para cartesianas. */
-export function cilindricasComPassos(
-  r: number,
-  thetaGraus: number,
-  z: number,
-): Resolucao<number> {
+export function cilindricasComPassos(r: number, thetaGraus: number, z: number): Resolucao<number> {
   const radianos = (thetaGraus * Math.PI) / 180;
   const x = r * Math.cos(radianos);
   const y = r * Math.sin(radianos);
@@ -531,7 +524,10 @@ export function corteVerticalComPassos(q: Quadrica, y0: number): Resolucao<numbe
     {
       descricao: 'E daí sai o x do ponto mais baixo (ou mais alto) do corte.',
       tex: `x_{v} = ${formatar(Number(resultado.toFixed(6)))}`,
-      nota: q.a > 0 ? 'Com o coeficiente positivo, é um mínimo do corte.' : 'Com o coeficiente negativo, é um máximo.',
+      nota:
+        q.a > 0
+          ? 'Com o coeficiente positivo, é um mínimo do corte.'
+          : 'Com o coeficiente negativo, é um máximo.',
     },
   ];
 

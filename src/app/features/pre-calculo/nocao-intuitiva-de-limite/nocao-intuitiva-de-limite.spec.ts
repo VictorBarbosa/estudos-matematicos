@@ -27,9 +27,7 @@ describe('geradorLimiteIntuitivo', () => {
   it('o limite da diferença de quadrados é o dobro do ponto', () => {
     // Só a diferença de quadrados tem a fração com x² no numerador; a função
     // contínua também contém "x^{2} -" quando o termo constante é negativo.
-    const exercicios = amostra('facil', 90).filter((e) =>
-      e.enunciadoTex.includes('\\frac{x^{2}'),
-    );
+    const exercicios = amostra('facil', 90).filter((e) => e.enunciadoTex.includes('\\frac{x^{2}'));
 
     for (const exercicio of exercicios) {
       const [, k] = /x \\to (\d+)/.exec(exercicio.enunciadoTex)!;

@@ -60,17 +60,12 @@ export function valorDaFuncaoDeSerie(funcao: FuncaoDeSerie, x: number): number {
 }
 
 /** O coeficiente exato de `xⁿ` na série de Maclaurin. */
-export function coeficienteExatoDeMaclaurin(
-  funcao: FuncaoDeSerie,
-  n: number,
-): CoeficienteExato {
+export function coeficienteExatoDeMaclaurin(funcao: FuncaoDeSerie, n: number): CoeficienteExato {
   switch (funcao) {
     case 'exp':
       return { num: 1, den: fatorial(n) };
     case 'sen':
-      return n % 2 === 0
-        ? { num: 0, den: 1 }
-        : { num: (-1) ** ((n - 1) / 2), den: fatorial(n) };
+      return n % 2 === 0 ? { num: 0, den: 1 } : { num: (-1) ** ((n - 1) / 2), den: fatorial(n) };
     case 'cos':
       return n % 2 === 1 ? { num: 0, den: 1 } : { num: (-1) ** (n / 2), den: fatorial(n) };
     case 'ln1x':
@@ -251,7 +246,8 @@ export function cotaDeLagrangeComPassos(
 
   const passos: Passo[] = [
     {
-      descricao: 'O resto de Lagrange tem a forma do termo seguinte, com a derivada num ponto intermediário.',
+      descricao:
+        'O resto de Lagrange tem a forma do termo seguinte, com a derivada num ponto intermediário.',
       tex: `\\left|R_{${grau}}(x)\\right| \\leq \\frac{M\\left|x\\right|^{${grau + 1}}}{(${grau + 1})!}`,
       nota: 'M é uma cota para a derivada de ordem seguinte no intervalo.',
     },
@@ -291,8 +287,7 @@ export function taylorDaRaizComPassos(a: number, x: number, grau: number): Resol
     },
     {
       descricao: 'As duas primeiras derivadas dão os coeficientes.',
-      tex:
-        `f'(x) = \\frac{1}{2\\sqrt{x}} \\qquad f''(x) = -\\frac{1}{4x^{3/2}}`,
+      tex: `f'(x) = \\frac{1}{2\\sqrt{x}} \\qquad f''(x) = -\\frac{1}{4x^{3/2}}`,
     },
     {
       descricao: `O polinômio de Taylor de grau ${grau} em torno de ${formatarEmTexto(a)}.`,
@@ -325,8 +320,7 @@ export const SERIES_CONHECIDAS: readonly {
   },
   {
     funcao: 'sen',
-    serieTex:
-      '\\operatorname{sen} x = \\sum_{k=0}^{\\infty} \\frac{(-1)^{k}x^{2k+1}}{(2k+1)!}',
+    serieTex: '\\operatorname{sen} x = \\sum_{k=0}^{\\infty} \\frac{(-1)^{k}x^{2k+1}}{(2k+1)!}',
     observacao: 'Só potências ímpares, porque o seno é uma função ímpar.',
   },
   {

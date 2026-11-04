@@ -39,7 +39,9 @@ describe('geradorAngulos', () => {
   });
 
   it('o ângulo interno regular confere com a soma dividida por n', () => {
-    const exercicios = amostra('medio', 120).filter((e) => e.enunciado.includes('cada ângulo interno'));
+    const exercicios = amostra('medio', 120).filter((e) =>
+      e.enunciado.includes('cada ângulo interno'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -69,9 +71,7 @@ describe('geradorAngulos', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const angulo = Number(
-        /de ([\d,.]+)°/.exec(exercicio.enunciado)![1].replace(',', '.'),
-      );
+      const angulo = Number(/de ([\d,.]+)°/.exec(exercicio.enunciado)![1].replace(',', '.'));
 
       expect(Number.isInteger(exercicio.gabarito)).toBe(true);
       expect(exercicio.gabarito).toBeGreaterThanOrEqual(3);
@@ -84,9 +84,7 @@ describe('geradorAngulos', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('n − 2 triângulos')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('n − 2 triângulos'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('n − 2 triângulos'))!;
 
     const resultado = corrigir(geradorAngulos, exercicio, String(armadilha.resposta));
 

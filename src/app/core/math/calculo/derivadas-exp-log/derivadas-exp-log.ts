@@ -37,11 +37,7 @@ export function logaritmoParaTex(a: number, k: number): string {
  * O resultado é a própria função vezes `k` — a exponencial é o único caso em
  * que derivar não muda a forma, só a escala.
  */
-export function derivadaExponencialComPassos(
-  a: number,
-  k: number,
-  x0: number,
-): Resolucao<number> {
+export function derivadaExponencialComPassos(a: number, k: number, x0: number): Resolucao<number> {
   const resultado = a * k * Math.exp(k * x0);
 
   const passos: Passo[] = [

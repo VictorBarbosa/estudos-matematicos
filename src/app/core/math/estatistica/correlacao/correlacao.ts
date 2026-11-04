@@ -29,9 +29,7 @@ export function covariancia(pares: readonly Par[]): number {
   const mx = media(pares.map((par) => par.x));
   const my = media(pares.map((par) => par.y));
 
-  return (
-    pares.reduce((soma, par) => soma + (par.x - mx) * (par.y - my), 0) / (pares.length - 1)
-  );
+  return pares.reduce((soma, par) => soma + (par.x - mx) * (par.y - my), 0) / (pares.length - 1);
 }
 
 export function desvioAmostral(valores: readonly number[]): number {

@@ -62,10 +62,7 @@ describe('volumes', () => {
   });
 
   it('a esfera vale 4πr³/3', () => {
-    expect(volumeComPassos('esfera', { raio: 3 }).resultado).toBeCloseTo(
-      (4 / 3) * Math.PI * 27,
-      8,
-    );
+    expect(volumeComPassos('esfera', { raio: 3 }).resultado).toBeCloseTo((4 / 3) * Math.PI * 27, 8);
   });
 
   it('recusa medidas faltantes', () => {
@@ -104,7 +101,9 @@ describe('superfícies', () => {
   });
 
   it('recusa geratriz menor que o raio', () => {
-    expect(() => superficieComPassos('cone', { raio: 5, geratriz: 3 })).toThrowError(ErroMatematico);
+    expect(() => superficieComPassos('cone', { raio: 5, geratriz: 3 })).toThrowError(
+      ErroMatematico,
+    );
   });
 
   it('o prisma soma lateral desenrolada e duas bases', () => {

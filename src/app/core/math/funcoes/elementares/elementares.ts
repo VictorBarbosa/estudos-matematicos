@@ -42,10 +42,7 @@ export function analisarAfimComPassos(a: number, b: number): Resolucao<AnaliseAf
     passos.push({
       descricao: 'O coeficiente a é a taxa de variação: quanto y muda quando x avança 1.',
       tex: `f(x+1) - f(x) = ${formatar(a)}`,
-      nota:
-        a > 0
-          ? 'Positivo: a função é crescente.'
-          : 'Negativo: a função é decrescente.',
+      nota: a > 0 ? 'Positivo: a função é crescente.' : 'Negativo: a função é decrescente.',
     });
     passos.push({
       descricao: 'A raiz é o x em que a função se anula.',

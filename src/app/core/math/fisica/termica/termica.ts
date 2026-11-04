@@ -113,11 +113,7 @@ export function resistenciaTermicaComPassos(
 }
 
 /** Convecção pela lei de resfriamento de Newton: `Q/t = hA ΔT`. */
-export function conveccaoComPassos(
-  h: number,
-  area: number,
-  deltaT: number,
-): Resolucao<number> {
+export function conveccaoComPassos(h: number, area: number, deltaT: number): Resolucao<number> {
   const resultado = h * area * deltaT;
 
   const passos: Passo[] = [
@@ -196,8 +192,7 @@ export function equilibrioRadiativoComPassos(
     },
     {
       descricao: 'Isolamos a quarta potência da temperatura.',
-      tex:
-        `T^{4} = \\frac{${formatar(potenciaAbsorvida)}}{${formatar(emissividade)} \\cdot \\sigma \\cdot ${formatar(area)}}`,
+      tex: `T^{4} = \\frac{${formatar(potenciaAbsorvida)}}{${formatar(emissividade)} \\cdot \\sigma \\cdot ${formatar(area)}}`,
     },
     {
       descricao: 'E extraímos a raiz quarta.',

@@ -14,20 +14,11 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.i18n.json';
 import { geradorAngulos } from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.gerador';
 import { TEORIA_ANGULOS } from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.teoria';
-
-const ROTULO_FORMA = {
-  equilatero: 'equilátero',
-  isosceles: 'isósceles',
-  escaleno: 'escaleno',
-} as const;
-
-const ROTULO_ANGULO = {
-  retangulo: 'retângulo',
-  acutangulo: 'acutângulo',
-  obtusangulo: 'obtusângulo',
-} as const;
 
 @Component({
   selector: 'app-angulos-e-triangulos',
@@ -45,6 +36,8 @@ const ROTULO_ANGULO = {
   styleUrl: './angulos-e-triangulos.scss',
 })
 export class AngulosETriangulos {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorAngulos;
   protected readonly conceitos = TEORIA_ANGULOS.map((teoria) => teoria.id);
 
@@ -89,16 +82,14 @@ export class AngulosETriangulos {
 
     // As diagonais saem todas do primeiro vértice: é a decomposição da prova.
     const origem = vertices[0]!;
-    const diagonais: SegmentoPlot[] = vertices
-      .slice(2, n - 1)
-      .map((vertice) => ({
-        x1: origem.x,
-        y1: origem.y,
-        x2: vertice.x,
-        y2: vertice.y,
-        cor: 'acento',
-        tracejado: true,
-      }));
+    const diagonais: SegmentoPlot[] = vertices.slice(2, n - 1).map((vertice) => ({
+      x1: origem.x,
+      y1: origem.y,
+      x2: vertice.x,
+      y2: vertice.y,
+      cor: 'acento',
+      tracejado: true,
+    }));
 
     return [...contorno, ...diagonais];
   });
@@ -123,8 +114,11 @@ export class AngulosETriangulos {
   protected readonly rotuloClassificacao = computed(() => {
     const classificacao = this.classificacao();
     return classificacao === null
-      ? 'não é triângulo'
-      : `${ROTULO_FORMA[classificacao.forma]} e ${ROTULO_ANGULO[classificacao.angulo]}`;
+      ? this.texto('naoETriangulo')
+      : this.texto('formaEAngulo', {
+          forma: this.texto(classificacao.forma),
+          angulo: this.texto(classificacao.angulo),
+        });
   });
 
   /** A comparação de Pitágoras que decide o tipo de ângulo. */

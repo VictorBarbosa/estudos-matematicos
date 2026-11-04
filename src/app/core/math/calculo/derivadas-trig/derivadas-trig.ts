@@ -50,7 +50,7 @@ export function arcoValor({ k, m }: ArcoRacional): number {
 
 /** O arco em graus, já reduzido a uma volta. */
 export function arcoEmGraus({ k, m }: ArcoRacional): number {
-  return (((k * 180) / m) % 360 + 360) % 360;
+  return ((((k * 180) / m) % 360) + 360) % 360;
 }
 
 /** Multiplica o arco por um inteiro — é o que a cadeia faz com `f(bx)`. */
@@ -267,8 +267,7 @@ export function derivadaProdutoComTrigComPassos(
     },
     {
       descricao: 'Cada fator entra com sua própria derivada.',
-      tex:
-        `f'(x) = ${derivadaPotencia}\\,${nomeTex}(x) + ${potencia}\\,${derivadaTex}(x)`,
+      tex: `f'(x) = ${derivadaPotencia}\\,${nomeTex}(x) + ${potencia}\\,${derivadaTex}(x)`,
     },
     {
       descricao: `Substituímos x = ${arcoTexto(arco)}.`,
@@ -416,12 +415,7 @@ function coeficienteTex(valor: number): string {
   return valor === -1 ? '-' : formatar(valor);
 }
 
-function substituicaoTex(
-  funcao: FuncaoTrig,
-  a: number,
-  b: number,
-  interno: ArcoRacional,
-): string {
+function substituicaoTex(funcao: FuncaoTrig, a: number, b: number, interno: ArcoRacional): string {
   const fator = funcao === 'cos' ? -a * b : a * b;
   const valor =
     funcao === 'sen'

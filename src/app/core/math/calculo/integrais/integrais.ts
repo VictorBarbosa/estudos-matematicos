@@ -37,11 +37,7 @@ export function retangulosDeRiemann(
   return Array.from({ length: n }, (_, indice) => {
     const inicio = de + indice * largura;
     const amostra =
-      tipo === 'esquerda'
-        ? inicio
-        : tipo === 'direita'
-          ? inicio + largura
-          : inicio + largura / 2;
+      tipo === 'esquerda' ? inicio : tipo === 'direita' ? inicio + largura : inicio + largura / 2;
 
     return { x: inicio, largura, altura: f(amostra) };
   });

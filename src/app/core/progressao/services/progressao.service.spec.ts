@@ -360,7 +360,9 @@ describe('ProgressaoService', () => {
   });
 
   it('tópicos sem exigência de cobertura seguem só pela janela', () => {
-    const semRequisito = TRILHA.find((etapa) => REQUISITOS_POR_TOPICO[etapa.topicoId] === undefined)!;
+    const semRequisito = TRILHA.find(
+      (etapa) => REQUISITOS_POR_TOPICO[etapa.topicoId] === undefined,
+    )!;
 
     vencer(progresso, semRequisito.topicoId);
 
@@ -416,9 +418,7 @@ describe('exigenciasDaEtapa', () => {
   });
 
   it('a sequência final é a única marcada como zerável', () => {
-    const zeram = exigenciasDaEtapa(dominioDe(historico('aaa'))).filter(
-      (item) => item.zeraComErro,
-    );
+    const zeram = exigenciasDaEtapa(dominioDe(historico('aaa'))).filter((item) => item.zeraComErro);
 
     expect(zeram.length).toBe(1);
     expect(zeram[0]!.rotulo).toContain('seguidos');

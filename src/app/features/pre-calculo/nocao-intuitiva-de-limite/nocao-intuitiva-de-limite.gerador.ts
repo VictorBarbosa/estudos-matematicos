@@ -86,7 +86,8 @@ export const geradorLimiteIntuitivo: GeradorExercicio<number> = {
               tex: `\\frac{(x + ${k})(x - ${k})}{x - ${k}}`,
             },
             {
-              descricao: 'Cancelamos o fator comum — legítimo, porque x nunca é exatamente o ponto.',
+              descricao:
+                'Cancelamos o fator comum — legítimo, porque x nunca é exatamente o ponto.',
               tex: `= x + ${k}`,
             },
             {

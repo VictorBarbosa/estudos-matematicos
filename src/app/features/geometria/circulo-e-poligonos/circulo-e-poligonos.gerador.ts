@@ -68,8 +68,7 @@ function exercicioComprimento(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: Math.PI * raio,
-          diagnostico:
-            'Faltou o 2: π multiplica o DIÂMETRO, que é o dobro do raio. C = πd = 2πr.',
+          diagnostico: 'Faltou o 2: π multiplica o DIÂMETRO, que é o dobro do raio. C = πd = 2πr.',
           passo: 1,
           conceito: 'circulo.pi',
         },
@@ -97,8 +96,7 @@ function exercicioAreaCirculo(nivel: Nivel, rng: Rng): Exercicio<number> {
       [
         {
           resposta: 2 * Math.PI * raio,
-          diagnostico:
-            'Esse é o COMPRIMENTO da circunferência. A área depende de r², não de r.',
+          diagnostico: 'Esse é o COMPRIMENTO da circunferência. A área depende de r², não de r.',
           passo: 2,
           conceito: 'circulo.pi',
         },
@@ -124,8 +122,7 @@ function exercicioRaioPelaArea(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-raio-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um círculo tem área ${Number(area.toFixed(2))}. Qual é o seu raio? (2 casas decimais)`,
+    enunciado: `Um círculo tem área ${Number(area.toFixed(2))}. Qual é o seu raio? (2 casas decimais)`,
     enunciadoTex: `A = ${Number(area.toFixed(2))}`,
     gabarito: raio,
     resolucao: {
@@ -147,8 +144,7 @@ function exercicioRaioPelaArea(nivel: Nivel, rng: Rng): Exercicio<number> {
       [
         {
           resposta: area / Math.PI,
-          diagnostico:
-            'Você parou em r². Falta extrair a raiz quadrada para chegar ao raio.',
+          diagnostico: 'Você parou em r². Falta extrair a raiz quadrada para chegar ao raio.',
           passo: 1,
           conceito: 'circulo.area',
         },
@@ -240,8 +236,7 @@ function exercicioPoligono(nivel: Nivel, rng: Rng): Exercicio<number> {
       [
         {
           resposta: lados * base * apotema,
-          diagnostico:
-            'Faltou dividir por 2: cada um dos n triângulos tem área ℓ·a/2, não ℓ·a.',
+          diagnostico: 'Faltou dividir por 2: cada um dos n triângulos tem área ℓ·a/2, não ℓ·a.',
           passo: 2,
           conceito: 'circulo.poligonos',
         },

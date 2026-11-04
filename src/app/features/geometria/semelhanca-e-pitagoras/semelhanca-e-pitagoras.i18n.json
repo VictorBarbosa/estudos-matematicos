@@ -1,0 +1,54 @@
+{
+  "cateto1": { "pt": "Cateto b", "fr": "Côté b de l’angle droit", "en": "Leg b" },
+  "cateto2": { "pt": "Cateto c", "fr": "Côté c de l’angle droit", "en": "Leg c" },
+  "provaPorSemelhanca": {
+    "pt": "A prova por semelhança",
+    "fr": "La preuve par similitude",
+    "en": "The proof by similarity"
+  },
+  "descricaoTriangulo": {
+    "pt": "Triângulo retângulo com a altura traçada sobre a hipotenusa.",
+    "fr": "Triangle rectangle avec la hauteur tracée sur l’hypoténuse.",
+    "en": "Right triangle with the altitude drawn to the hypotenuse."
+  },
+  "aAlturaTracejada": {
+    "pt": "A altura tracejada divide o triângulo em dois menores, ambos com os mesmos ângulos do original — e portanto semelhantes a ele. Daí saem as duas relações métricas:",
+    "fr": "La hauteur en pointillé découpe le triangle en deux plus petits, qui ont les mêmes angles que l’original — et lui sont donc semblables. D’où les deux relations métriques :",
+    "en": "The dashed altitude splits the triangle into two smaller ones, both with the same angles as the original — and so similar to it. From that come the two metric relations:"
+  },
+  "somandoAsDuas": {
+    "pt": "Somando as duas, e lembrando que m + n = a, sobra a² = b² + c². Pitágoras é uma consequência da semelhança, não um fato isolado.",
+    "fr": "En les additionnant, et en se rappelant que m + n = a, il reste a² = b² + c². Pythagore est une conséquence de la similitude, pas un fait isolé.",
+    "en": "Adding the two, and remembering that m + n = a, leaves a² = b² + c². Pythagoras is a consequence of similarity, not an isolated fact."
+  },
+  "projecaoM": { "pt": "Projeção m", "fr": "Projection m", "en": "Projection m" },
+  "projecaoN": { "pt": "Projeção n", "fr": "Projection n", "en": "Projection n" },
+  "ampliarNaoEDeGraca": {
+    "pt": "Ampliar não é de graça",
+    "fr": "Agrandir n’est pas gratuit",
+    "en": "Scaling up is not free"
+  },
+  "razaoDeSemelhanca": {
+    "pt": "Razão de semelhança k",
+    "fr": "Rapport de similitude k",
+    "en": "Similarity ratio k"
+  },
+  "comprimentos": { "pt": "Comprimentos", "fr": "Longueurs", "en": "Lengths" },
+  "areas": { "pt": "Áreas", "fr": "Aires", "en": "Areas" },
+  "volumes": { "pt": "Volumes", "fr": "Volumes", "en": "Volumes" },
+  "essaUltimaColuna": {
+    "pt": "Essa última coluna é a razão pela qual um foguete grande não é um foguete pequeno ampliado: a massa cresce com k³, mas a área que sustenta e dissipa calor cresce só com k². Ampliar um projeto muda a física do problema.",
+    "fr": "Cette dernière colonne explique pourquoi une grande fusée n’est pas une petite fusée agrandie : la masse croît en k³, mais l’aire qui porte et dissipe la chaleur ne croît qu’en k². Agrandir un projet change la physique du problème.",
+    "en": "That last column is why a big rocket is not a small rocket scaled up: the mass grows as k³, but the area that carries the load and sheds heat grows only as k². Scaling a design changes the physics of the problem."
+  },
+  "tales": {
+    "pt": "Tales: medir o que não se alcança",
+    "fr": "Thalès : mesurer ce qu’on ne peut atteindre",
+    "en": "Thales: measuring what you cannot reach"
+  },
+  "foiAssimQueTales": {
+    "pt": "Foi assim que Tales obteve a altura da pirâmide: comparando sua sombra com a sombra de um bastão. Os raios do Sol funcionam como as paralelas, e a proporção faz o resto.",
+    "fr": "C’est ainsi que Thalès a obtenu la hauteur de la pyramide : en comparant son ombre à celle d’un bâton. Les rayons du Soleil jouent le rôle des parallèles, et la proportion fait le reste.",
+    "en": "That is how Thales got the height of the pyramid: by comparing its shadow with the shadow of a stick. The Sun's rays play the role of the parallels, and proportion does the rest."
+  }
+}

@@ -40,7 +40,8 @@ export function somaComPassos(progressao: Progressao, n: number): Resolucao<numb
       resultado,
       passos: [
         {
-          descricao: 'Somando a sequência com ela mesma de trás para frente, cada par dá o mesmo total.',
+          descricao:
+            'Somando a sequência com ela mesma de trás para frente, cada par dá o mesmo total.',
           tex: `(a_1 + a_n) = ${formatar(primeiro)} + ${formatar(ultimo)} = ${formatar(primeiro + ultimo)}`,
           nota: 'É o truque atribuído a Gauss: o primeiro com o último, o segundo com o penúltimo.',
         },
