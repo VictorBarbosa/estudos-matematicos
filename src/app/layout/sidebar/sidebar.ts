@@ -3,6 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CURRICULO, rotaDoTopico } from '@curriculo/curriculo';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
+import { ProvaService } from '@core/prova/services/prova.service';
 import { RevisaoService } from '@core/revisao/services/revisao.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 
@@ -29,6 +30,7 @@ export class Sidebar {
 
   private readonly progresso = inject(ProgressoService);
   private readonly progressao = inject(ProgressaoService);
+  private readonly provas = inject(ProvaService);
   private readonly revisao = inject(RevisaoService);
 
   protected readonly i18n = inject(I18nService);
@@ -41,6 +43,11 @@ export class Sidebar {
       ...area,
       titulo: this.i18n.tituloDaArea(area.id),
       prontos: area.topicos.filter((topico) => topico.pronto).length,
+      // A prova fecha a área: aparece depois dos tópicos, com o seu estado.
+      prova: {
+        estado: this.provas.estadoDe(area.id),
+        rota: `/prova/${area.id}`,
+      },
       topicos: area.topicos.map((topico) => {
         const aproveitamento = this.progresso.aproveitamentoDe(topico.id);
         return {

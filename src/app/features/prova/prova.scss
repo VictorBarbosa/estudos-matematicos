@@ -1,0 +1,173 @@
+:host {
+  display: block;
+}
+
+.prova {
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+.cabecalho h1 {
+  font-size: var(--texto-3xl);
+}
+
+.descricao {
+  margin-top: var(--esp-2);
+  max-width: 58ch;
+  font-size: var(--texto-lg);
+  color: var(--texto-suave);
+}
+
+.painel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-5);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-lg);
+  background: var(--superficie);
+  box-shadow: var(--sombra-1);
+}
+
+/* Questão à esquerda, erros à direita, barra atravessando as duas. */
+.andamento {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--esp-2) var(--esp-4);
+  align-items: baseline;
+}
+
+.contador {
+  font-size: var(--texto-lg);
+  font-weight: 600;
+}
+
+.erros {
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+  font-variant-numeric: tabular-nums;
+}
+
+/* No limite, a contagem de erros deixa de ser informação e passa a ser alerta. */
+.erros[data-limite='true'] {
+  color: var(--erro);
+  font-weight: 600;
+}
+
+.barra {
+  grid-column: 1 / -1;
+  height: 8px;
+  border-radius: var(--raio-pill);
+  background: var(--superficie-2);
+  overflow: hidden;
+}
+
+.feita {
+  height: 100%;
+  background: var(--acento);
+  border-radius: inherit;
+  transition: width 160ms ease-out;
+}
+
+.ultimo-aviso {
+  padding: var(--esp-3) var(--esp-4);
+  border-left: 4px solid var(--erro);
+  border-radius: 0 var(--raio-md) var(--raio-md) 0;
+  background: var(--erro-suave);
+  color: var(--texto);
+  font-weight: 600;
+}
+
+.enunciado {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  font-size: var(--texto-lg);
+}
+
+.veredito {
+  padding: var(--esp-3) var(--esp-4);
+  border-left: 4px solid var(--borda);
+  border-radius: 0 var(--raio-md) var(--raio-md) 0;
+  background: var(--superficie-2);
+}
+
+.veredito[data-veredito='correto'] {
+  border-left-color: var(--acerto);
+  background: var(--acerto-suave);
+}
+
+.veredito[data-veredito='incorreto'] {
+  border-left-color: var(--erro);
+  background: var(--erro-suave);
+}
+
+.gabarito {
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.acoes {
+  display: flex;
+  gap: var(--esp-3);
+}
+
+.principal {
+  padding: var(--esp-3) var(--esp-5);
+  border: 0;
+  border-radius: var(--raio-pill);
+  background: var(--acento);
+  color: var(--superficie);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.principal:hover {
+  filter: brightness(1.06);
+}
+
+.resultado h2 {
+  font-size: var(--texto-2xl);
+}
+
+.resultado.aprovado {
+  border-left: 4px solid var(--acerto);
+}
+
+.resultado.reprovado {
+  border-left: 4px solid var(--erro);
+}
+
+.observacao,
+.ultima-sessao {
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+  max-width: 62ch;
+}
+
+.avancar,
+.voltar {
+  align-self: flex-start;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--acento);
+}
+
+.voltar {
+  font-weight: 400;
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.avancar:hover,
+.voltar:hover {
+  text-decoration: underline;
+}
+
+.aviso {
+  color: var(--texto-suave);
+}

@@ -17,7 +17,19 @@
     <div class="preenchida" [style.width.%]="percentual()"></div>
   </div>
 
-  @if (completa()) {
+  @if (prova(); as prova) {
+    <div class="atual prova">
+      <div class="texto">
+        <span class="rotulo">{{ i18n.t('trilha.provaRotulo') }}</span>
+        <strong>{{ i18n.t('trilha.provaTitulo', { sessao: prova.titulo }) }}</strong>
+        <span class="meta">{{ i18n.t('trilha.provaMeta') }}</span>
+      </div>
+      <a class="continuar" [routerLink]="prova.rota">
+        {{ i18n.t('trilha.fazerProva') }}
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  } @else if (completa()) {
     <p class="celebracao">{{ i18n.t('trilha.completa', { total: total }) }}</p>
   } @else if (atual(); as atual) {
     <div class="atual">

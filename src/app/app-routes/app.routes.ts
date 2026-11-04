@@ -25,42 +25,65 @@ export const routes: Routes = [
     loadComponent: () => import('@features/revisar/revisar').then((m) => m.Revisar),
   },
   {
+    /*
+     * A prova de fim de sessão fica fora da trilha, e sem guard.
+     *
+     * Quem chega aqui sem direito vê a própria página dizer que a prova abre
+     * quando as etapas da sessão estiverem vencidas — explicar é melhor que
+     * redirecionar em silêncio, e a página não deixa responder nada.
+     */
+    path: 'prova/:sessaoId',
+    title: 'Prova final · Estudos Matemáticos',
+    loadComponent: () => import('@features/prova/prova').then((m) => m.Prova),
+  },
+  {
     path: 'matematica-basica',
     loadChildren: () =>
-      import('@features/matematica-basica/matematica-basica.routes/matematica-basica.routes').then((m) => m.rotas),
+      import('@features/matematica-basica/matematica-basica.routes/matematica-basica.routes').then(
+        (m) => m.rotas,
+      ),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'algebra',
-    loadChildren: () => import('@features/algebra/algebra.routes/algebra.routes').then((m) => m.rotas),
+    loadChildren: () =>
+      import('@features/algebra/algebra.routes/algebra.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'geometria',
-    loadChildren: () => import('@features/geometria/geometria.routes/geometria.routes').then((m) => m.rotas),
+    loadChildren: () =>
+      import('@features/geometria/geometria.routes/geometria.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'funcoes',
-    loadChildren: () => import('@features/funcoes/funcoes.routes/funcoes.routes').then((m) => m.rotas),
+    loadChildren: () =>
+      import('@features/funcoes/funcoes.routes/funcoes.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'trigonometria',
     loadChildren: () =>
-      import('@features/trigonometria/trigonometria.routes/trigonometria.routes').then((m) => m.rotas),
+      import('@features/trigonometria/trigonometria.routes/trigonometria.routes').then(
+        (m) => m.rotas,
+      ),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'vetores-matrizes',
     loadChildren: () =>
-      import('@features/vetores-matrizes/vetores-matrizes.routes/vetores-matrizes.routes').then((m) => m.rotas),
+      import('@features/vetores-matrizes/vetores-matrizes.routes/vetores-matrizes.routes').then(
+        (m) => m.rotas,
+      ),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'geometria-analitica',
     loadChildren: () =>
-      import('@features/geometria-analitica/geometria-analitica.routes/geometria-analitica.routes').then((m) => m.rotas),
+      import('@features/geometria-analitica/geometria-analitica.routes/geometria-analitica.routes').then(
+        (m) => m.rotas,
+      ),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
@@ -70,32 +93,38 @@ export const routes: Routes = [
   },
   {
     path: 'pre-calculo',
-    loadChildren: () => import('@features/pre-calculo/pre-calculo.routes/pre-calculo.routes').then((m) => m.rotas),
+    loadChildren: () =>
+      import('@features/pre-calculo/pre-calculo.routes/pre-calculo.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'calculo-1',
-    loadChildren: () => import('@features/calculo-1/calculo-1.routes/calculo-1.routes').then((m) => m.rotas),
+    loadChildren: () =>
+      import('@features/calculo-1/calculo-1.routes/calculo-1.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'calculo-2',
-    loadChildren: () => import('@features/calculo-2/calculo-2.routes/calculo-2.routes').then((m) => m.rotas),
+    loadChildren: () =>
+      import('@features/calculo-2/calculo-2.routes/calculo-2.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'estatistica',
-    loadChildren: () => import('@features/estatistica/estatistica.routes/estatistica.routes').then((m) => m.rotas),
+    loadChildren: () =>
+      import('@features/estatistica/estatistica.routes/estatistica.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'calculo-3',
-    loadChildren: () => import('@features/calculo-3/calculo-3.routes/calculo-3.routes').then((m) => m.rotas),
+    loadChildren: () =>
+      import('@features/calculo-3/calculo-3.routes/calculo-3.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
   {
     path: 'calculo-4',
-    loadChildren: () => import('@features/calculo-4/calculo-4.routes/calculo-4.routes').then((m) => m.rotas),
+    loadChildren: () =>
+      import('@features/calculo-4/calculo-4.routes/calculo-4.routes').then((m) => m.rotas),
     canActivateChild: [topicoLiberadoGuard],
   },
   { path: '**', redirectTo: '' },

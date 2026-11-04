@@ -32,6 +32,16 @@ import t_series_de_taylor from '@features/calculo-2/series-de-taylor/series-de-t
 import t_soma_de_riemann from '@features/calculo-2/soma-de-riemann/soma-de-riemann.i18n.json';
 import t_tecnicas_de_integracao from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.i18n.json';
 import t_teorema_fundamental from '@features/calculo-2/teorema-fundamental/teorema-fundamental.i18n.json';
+import t_coordenadas_no_espaco from '@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.i18n.json';
+import t_derivadas_parciais from '@features/calculo-3/derivadas-parciais/derivadas-parciais.i18n.json';
+import t_funcoes_de_varias_variaveis from '@features/calculo-3/funcoes-de-varias-variaveis/funcoes-de-varias-variaveis.i18n.json';
+import t_gradiente_e_direcional from '@features/calculo-3/gradiente-e-direcional/gradiente-e-direcional.i18n.json';
+import t_integrais_de_linha from '@features/calculo-3/integrais-de-linha/integrais-de-linha.i18n.json';
+import t_integrais_multiplas from '@features/calculo-3/integrais-multiplas/integrais-multiplas.i18n.json';
+import t_aplicacoes_de_edo from '@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.i18n.json';
+import t_edo_primeira_ordem from '@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.i18n.json';
+import t_edo_segunda_ordem from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.i18n.json';
+import t_metodos_numericos from '@features/calculo-4/metodos-numericos/metodos-numericos.i18n.json';
 import t_analise_combinatoria from '@features/estatistica/analise-combinatoria/analise-combinatoria.i18n.json';
 import t_distribuicao_normal from '@features/estatistica/distribuicao-normal/distribuicao-normal.i18n.json';
 import t_estatistica_e_incerteza from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.i18n.json';
@@ -84,6 +94,7 @@ import t_potenciacao_radiciacao from '@features/matematica-basica/potenciacao-ra
 import t_razao_proporcao from '@features/matematica-basica/razao-proporcao/razao-proporcao.i18n.json';
 import t_nocao_intuitiva_de_limite from '@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.i18n.json';
 import t_vizinhancas_e_infinito from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.i18n.json';
+import t_prova from '@features/prova/prova.i18n.json';
 import t_circulo_trigonometrico from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.i18n.json';
 import t_funcoes_trigonometricas from '@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.i18n.json';
 import t_identidades_trigonometricas from '@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.i18n.json';
@@ -126,6 +137,16 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['soma-de-riemann', t_soma_de_riemann as TabelaDeTextos],
   ['tecnicas-de-integracao', t_tecnicas_de_integracao as TabelaDeTextos],
   ['teorema-fundamental', t_teorema_fundamental as TabelaDeTextos],
+  ['coordenadas-no-espaco', t_coordenadas_no_espaco as TabelaDeTextos],
+  ['derivadas-parciais', t_derivadas_parciais as TabelaDeTextos],
+  ['funcoes-de-varias-variaveis', t_funcoes_de_varias_variaveis as TabelaDeTextos],
+  ['gradiente-e-direcional', t_gradiente_e_direcional as TabelaDeTextos],
+  ['integrais-de-linha', t_integrais_de_linha as TabelaDeTextos],
+  ['integrais-multiplas', t_integrais_multiplas as TabelaDeTextos],
+  ['aplicacoes-de-edo', t_aplicacoes_de_edo as TabelaDeTextos],
+  ['edo-primeira-ordem', t_edo_primeira_ordem as TabelaDeTextos],
+  ['edo-segunda-ordem', t_edo_segunda_ordem as TabelaDeTextos],
+  ['metodos-numericos', t_metodos_numericos as TabelaDeTextos],
   ['analise-combinatoria', t_analise_combinatoria as TabelaDeTextos],
   ['distribuicao-normal', t_distribuicao_normal as TabelaDeTextos],
   ['estatistica-e-incerteza', t_estatistica_e_incerteza as TabelaDeTextos],
@@ -178,6 +199,7 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['razao-proporcao', t_razao_proporcao as TabelaDeTextos],
   ['nocao-intuitiva-de-limite', t_nocao_intuitiva_de_limite as TabelaDeTextos],
   ['vizinhancas-e-infinito', t_vizinhancas_e_infinito as TabelaDeTextos],
+  ['prova', t_prova as TabelaDeTextos],
   ['circulo-trigonometrico', t_circulo_trigonometrico as TabelaDeTextos],
   ['funcoes-trigonometricas', t_funcoes_trigonometricas as TabelaDeTextos],
   ['identidades-trigonometricas', t_identidades_trigonometricas as TabelaDeTextos],

@@ -105,6 +105,23 @@ a {
   font-weight: 700;
 }
 
+/* A prova fecha a área: a linha divisória diz que ela não é mais um tópico. */
+li.prova {
+  margin-top: var(--esp-1);
+  padding-top: var(--esp-1);
+  border-top: 1px solid var(--borda);
+}
+
+.etiqueta-prova {
+  flex-shrink: 0;
+  padding: 1px var(--esp-2);
+  border-radius: var(--raio-pill);
+  background: var(--acento);
+  color: var(--superficie);
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
 /* Atalho para a fila de revisão, acima das áreas e só quando há fila. */
 .atalho-revisao {
   display: flex;

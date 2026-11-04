@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@a
 import { RouterLink } from '@angular/router';
 import { ACERTOS_NA_JANELA, RESPOSTAS_NA_JANELA } from '@core/progressao/models/progressao.model';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
+import { ProvaService } from '@core/prova/services/prova.service';
 import { I18nService } from '@core/i18n/services/i18n.service';
 
 /**
@@ -21,6 +22,7 @@ export class PainelTrilha {
   protected readonly i18n = inject(I18nService);
 
   private readonly progressao = inject(ProgressaoService);
+  private readonly provas = inject(ProvaService);
 
   protected readonly alvo = ACERTOS_NA_JANELA;
   protected readonly janela = RESPOSTAS_NA_JANELA;
@@ -30,6 +32,21 @@ export class PainelTrilha {
   protected readonly atual = this.progressao.etapaAtual;
   protected readonly completa = this.progressao.trilhaCompleta;
   protected readonly modoLivre = this.progressao.modoLivre;
+
+  /**
+   * A prova pendente, quando é ela o próximo passo.
+   *
+   * Tem prioridade sobre a etapa da vez: com a prova aberta, a etapa seguinte
+   * está trancada, e apontar para ela seria mandar o aluno a uma porta fechada.
+   */
+  protected readonly prova = computed(() => {
+    const sessao = this.provas.pendente();
+    if (sessao === null) {
+      return null;
+    }
+
+    return { titulo: this.i18n.tituloDaArea(sessao.id), rota: `/prova/${sessao.id}` };
+  });
 
   /** Quantos acertos a janela recente já acumulou na etapa da vez. */
   protected readonly avancoNaAtual = computed(() => {

@@ -1,0 +1,127 @@
+{
+  "titulo": {
+    "pt": "Prova final — {sessao}",
+    "fr": "Examen final — {sessao}",
+    "en": "Final exam — {sessao}"
+  },
+  "subtitulo": {
+    "pt": "Uma questão de cada assunto da sessão. A prova tolera {tolerados} erros; o próximo zera a sessão inteira.",
+    "fr": "Une question par sujet de la session. L’examen tolère {tolerados} erreurs ; la suivante remet toute la session à zéro.",
+    "en": "One question from each subject of the session. The exam allows {tolerados} mistakes; the next one wipes the whole session."
+  },
+  "carregando": {
+    "pt": "Montando a prova…",
+    "fr": "Préparation de l’examen…",
+    "en": "Setting up the exam…"
+  },
+  "trancada": {
+    "pt": "Esta prova abre quando todas as etapas da sessão estiverem vencidas.",
+    "fr": "Cet examen s’ouvre lorsque toutes les étapes de la session sont réussies.",
+    "en": "This exam opens once every stage of the session has been cleared."
+  },
+  "questaoDeTotal": {
+    "pt": "Questão {numero} de {total}",
+    "fr": "Question {numero} sur {total}",
+    "en": "Question {numero} of {total}"
+  },
+  "errosDe": {
+    "pt": "Erros: {erros} de {tolerados}",
+    "fr": "Erreurs : {erros} sur {tolerados}",
+    "en": "Mistakes: {erros} of {tolerados}"
+  },
+  "ultimoAviso": {
+    "pt": "Atenção: você já usou todos os erros tolerados. O próximo erro zera a sessão e você recomeça do primeiro tópico.",
+    "fr": "Attention : vous avez utilisé toutes les erreurs tolérées. La prochaine erreur remet la session à zéro et vous repartez du premier sujet.",
+    "en": "Careful: you have used up every mistake you are allowed. The next one wipes the session and you start again from the first topic."
+  },
+  "suaResposta": {
+    "pt": "Sua resposta",
+    "fr": "Votre réponse",
+    "en": "Your answer"
+  },
+  "responder": {
+    "pt": "Responder",
+    "fr": "Répondre",
+    "en": "Answer"
+  },
+  "proxima": {
+    "pt": "Próxima questão",
+    "fr": "Question suivante",
+    "en": "Next question"
+  },
+  "terminar": {
+    "pt": "Terminar a prova",
+    "fr": "Terminer l’examen",
+    "en": "Finish the exam"
+  },
+  "correto": {
+    "pt": "Correto.",
+    "fr": "Correct.",
+    "en": "Correct."
+  },
+  "gabarito": {
+    "pt": "A resposta era {valor}.",
+    "fr": "La réponse était {valor}.",
+    "en": "The answer was {valor}."
+  },
+  "aprovadoTitulo": {
+    "pt": "Sessão aprovada",
+    "fr": "Session réussie",
+    "en": "Session passed"
+  },
+  "aprovadoResumo": {
+    "pt": "{acertos} acertos em {total} questões, com {erros} erro(s). A sessão seguinte está aberta.",
+    "fr": "{acertos} bonnes réponses sur {total} questions, avec {erros} erreur(s). La session suivante est ouverte.",
+    "en": "{acertos} correct out of {total} questions, with {erros} mistake(s). The next session is open."
+  },
+  "abrirProxima": {
+    "pt": "Começar {sessao}",
+    "fr": "Commencer {sessao}",
+    "en": "Start {sessao}"
+  },
+  "ultimaSessao": {
+    "pt": "Esta era a última sessão do currículo. Não há mais nada trancado.",
+    "fr": "C’était la dernière session du programme. Il ne reste rien de verrouillé.",
+    "en": "That was the last session of the curriculum. Nothing is locked any more."
+  },
+  "reprovadoTitulo": {
+    "pt": "Sessão zerada",
+    "fr": "Session remise à zéro",
+    "en": "Session wiped"
+  },
+  "reprovadoResumo": {
+    "pt": "Foram três erros. Todo o progresso de {sessao} foi apagado, e a sessão recomeça do primeiro tópico.",
+    "fr": "Trois erreurs. Toute la progression de {sessao} a été effacée, et la session reprend au premier sujet.",
+    "en": "That was three mistakes. All progress in {sessao} has been erased, and the session starts again from the first topic."
+  },
+  "reprovadoPorque": {
+    "pt": "O preço é alto de propósito: uma prova que se refaz sem custo não mede nada. O que ela cobra é o que ficou — e o que ficou se constrói praticando, não repetindo a prova.",
+    "fr": "Le prix est élevé à dessein : un examen qu’on repasse sans coût ne mesure rien. Ce qu’il évalue, c’est ce qui est resté — et ce qui reste se construit en pratiquant, pas en repassant l’examen.",
+    "en": "The cost is high on purpose: an exam you can retake for free measures nothing. What it asks for is what stuck — and what sticks is built by practising, not by retaking the exam."
+  },
+  "recomecar": {
+    "pt": "Recomeçar a sessão",
+    "fr": "Reprendre la session",
+    "en": "Start the session again"
+  },
+  "voltarAoInicio": {
+    "pt": "Voltar ao início",
+    "fr": "Revenir à l’accueil",
+    "en": "Back to the start"
+  },
+  "verResultado": {
+    "pt": "Ver o resultado",
+    "fr": "Voir le résultat",
+    "en": "See the result"
+  },
+  "jaVencidaTitulo": {
+    "pt": "Prova já passada",
+    "fr": "Examen déjà réussi",
+    "en": "Exam already passed"
+  },
+  "jaVencidaResumo": {
+    "pt": "Você já passou na prova final de {sessao}. Ela não se refaz: refazer só poderia tirar o que já foi ganho.",
+    "fr": "Vous avez déjà réussi l’examen final de {sessao}. On ne le repasse pas : le repasser ne pourrait que retirer ce qui est acquis.",
+    "en": "You have already passed the final exam for {sessao}. It is not retaken: retaking could only take away what you have earned."
+  }
+}

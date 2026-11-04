@@ -7,6 +7,8 @@ import {
   RESPOSTAS_NA_JANELA,
 } from '@core/progressao/models/progressao.model';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
+import { sessaoDoTopico } from '@core/prova/models/prova.model';
+import { ProvaService } from '@core/prova/services/prova.service';
 import { I18nService } from '@core/i18n/services/i18n.service';
 
 /**
@@ -29,6 +31,7 @@ export class PainelEtapa {
   readonly topicoId = input.required<string>();
 
   private readonly progressao = inject(ProgressaoService);
+  private readonly provas = inject(ProvaService);
 
   protected readonly alvo = ACERTOS_NA_JANELA;
   protected readonly janela = RESPOSTAS_NA_JANELA;
@@ -55,6 +58,21 @@ export class PainelEtapa {
   protected readonly marcadores = computed(() =>
     Array.from({ length: ACERTOS_NA_JANELA }, (_, indice) => indice < this.avanco()),
   );
+
+  /**
+   * A prova de fim de sessão, quando é ela que trava a trilha agora.
+   *
+   * Só aparece com todas as etapas da sessão vencidas — e nesse caso ela, e
+   * não o tópico seguinte, é o que vem depois.
+   */
+  protected readonly prova = computed(() => {
+    const sessao = sessaoDoTopico(this.topicoId());
+    if (sessao === null || !this.provas.estaDisponivel(sessao.id)) {
+      return null;
+    }
+
+    return { titulo: this.i18n.tituloDaArea(sessao.id), rota: `/prova/${sessao.id}` };
+  });
 
   /** A próxima etapa já está aberta por conta desta ter sido vencida? */
   protected readonly proximaLiberada = computed(() => {

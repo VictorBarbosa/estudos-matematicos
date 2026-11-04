@@ -76,7 +76,13 @@
       </ol>
     </div>
 
-    @if (proxima(); as proxima) {
+    @if (prova(); as prova) {
+      <!-- Vencer as etapas da sessão não abre a seguinte: abre a prova. -->
+      <a class="avancar prova" [routerLink]="prova.rota">
+        {{ i18n.t('etapa.prova', { sessao: prova.titulo }) }}
+        <span aria-hidden="true">→</span>
+      </a>
+    } @else if (proxima(); as proxima) {
       @if (proximaLiberada()) {
         <a class="avancar" [routerLink]="proxima.rota">
           {{ i18n.t('etapa.proxima', { titulo: i18n.tituloDoTopico(proxima.topicoId) }) }}

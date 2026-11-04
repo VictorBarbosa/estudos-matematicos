@@ -1,6 +1,11 @@
 <nav class="sidebar" [attr.aria-label]="i18n.t('sidebar.titulo')">
   @if (naFilaDeRevisao() > 0) {
-    <a class="atalho-revisao" routerLink="/revisar" routerLinkActive="ativo" (click)="navegou.emit()">
+    <a
+      class="atalho-revisao"
+      routerLink="/revisar"
+      routerLinkActive="ativo"
+      (click)="navegou.emit()"
+    >
       {{ i18n.t('sidebar.revisao') }}
       <span class="quantos">{{ naFilaDeRevisao() }}</span>
     </a>
@@ -53,6 +58,33 @@
             }
           </li>
         }
+        <li class="prova">
+          @switch (area.prova.estado) {
+            @case ('disponivel') {
+              <a
+                [routerLink]="area.prova.rota"
+                routerLinkActive="ativo"
+                (click)="navegou.emit()"
+                [title]="i18n.t('sidebar.provaDisponivelTitulo')"
+              >
+                {{ i18n.t('sidebar.prova') }}
+                <span class="etiqueta-prova">{{ i18n.t('sidebar.provaAberta') }}</span>
+              </a>
+            }
+            @case ('vencida') {
+              <a [routerLink]="area.prova.rota" routerLinkActive="ativo" (click)="navegou.emit()">
+                {{ i18n.t('sidebar.prova') }}
+                <span class="vencido" [attr.aria-label]="i18n.t('sidebar.provaVencida')">✓</span>
+              </a>
+            }
+            @default {
+              <span class="trancado" [title]="i18n.t('sidebar.provaTrancadaTitulo')">
+                {{ i18n.t('sidebar.prova') }}
+                <span class="cadeado" [attr.aria-label]="i18n.t('sidebar.trancado')">🔒</span>
+              </span>
+            }
+          }
+        </li>
       </ul>
     </section>
   }

@@ -1,4 +1,5 @@
 import { Injectable, computed, signal } from '@angular/core';
+import { TOPICO_DO_CONCEITO } from '@core/teoria/registro-teorias/registro-teorias';
 import { Nivel } from '@core/treino/models/treino.model';
 
 const CHAVE_ARMAZENAMENTO = 'estudos-matematicos.progresso.v1';
@@ -193,6 +194,40 @@ export class ProgressoService {
       .map(([id, { acertos, erros }]) => ({ id, erros, total: acertos + erros }))
       .filter((conceito) => conceito.erros > 0)
       .sort((a, b) => b.erros - a.erros || b.erros / b.total - a.erros / a.total);
+  }
+
+  /**
+   * Apaga o desempenho de alguns tópicos, deixando o resto intacto.
+   *
+   * É o que a prova de fim de sessão usa ao reprovar: a sessão volta ao zero e
+   * as outras continuam onde estavam. Vão embora os totais, o histórico e a
+   * data de última prática dos tópicos pedidos, mais as estatísticas dos
+   * conceitos que pertencem a eles — do contrário a cobertura por tipo
+   * continuaria cumprida com acertos de uma sessão que não existe mais.
+   */
+  limparTopicos(topicoIds: readonly string[]): void {
+    const alvos = new Set(topicoIds);
+    const atual = this.estado();
+
+    const sobreviveu = <T>(registro: Record<string, T>): Record<string, T> =>
+      Object.fromEntries(Object.entries(registro).filter(([id]) => !alvos.has(id)));
+
+    const conceitos = Object.fromEntries(
+      Object.entries(atual.conceitos).filter(
+        ([conceito]) => !alvos.has(TOPICO_DO_CONCEITO[conceito] ?? ''),
+      ),
+    );
+
+    const novoEstado: EstadoProgresso = {
+      versao: 2,
+      topicos: sobreviveu(atual.topicos),
+      conceitos,
+      historico: sobreviveu(atual.historico),
+      vistoEm: sobreviveu(atual.vistoEm),
+    };
+
+    this.estado.set(novoEstado);
+    salvar(novoEstado);
   }
 
   limpar(): void {

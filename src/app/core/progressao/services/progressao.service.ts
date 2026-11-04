@@ -1,4 +1,5 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
+import { ProvaService } from '@core/prova/services/prova.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import {
   ACERTOS_EXIGENTES,
@@ -31,12 +32,18 @@ const CHAVE_MODO_LIVRE = 'estudos-matematicos.modo-livre.v1';
  * `localStorage`. Um refresh, portanto, devolve a trilha exatamente onde ela
  * estava.
  *
+ * No fim de cada sessão — cada área do currículo — há ainda a prova final, que
+ * cobra o assunto inteiro de uma vez. Enquanto ela não passa, a sessão seguinte
+ * continua trancada mesmo com todas as etapas vencidas; quem cuida disso é a
+ * {@link ProvaService}, consultada em {@link etapasAbertas}.
+ *
  * O modo livre é a válvula de escape, para quando o objetivo é consultar e não
  * jogar. Ele também é lembrado entre sessões.
  */
 @Injectable({ providedIn: 'root' })
 export class ProgressaoService {
   private readonly progresso = inject(ProgressoService);
+  private readonly prova = inject(ProvaService);
   private readonly livre = signal(carregarModoLivre());
 
   readonly trilha = TRILHA;
@@ -70,6 +77,41 @@ export class ProgressaoService {
     }
 
     return vencidas;
+  });
+
+  /**
+   * Quantas etapas estão abertas, contando do começo.
+   *
+   * Difere de {@link etapasVencidas} num ponto só: a fronteira para ao chegar
+   * à borda de uma sessão cuja prova final ainda não passou. Vencer todos os
+   * tópicos de Álgebra, portanto, não abre Geometria — abre a prova.
+   *
+   * São contas separadas de propósito. O contador da trilha mostra etapas
+   * vencidas, e uma prova pendente não desfaz nenhuma vitória; o que ela faz é
+   * segurar a porta.
+   */
+  readonly etapasAbertas = computed(() => {
+    const concluidas = this.concluidas();
+    const provasVencidas = this.prova.vencidas();
+
+    let abertas = 0;
+    while (abertas < TRILHA.length) {
+      const etapa = TRILHA[abertas]!;
+      const anterior = TRILHA[abertas - 1];
+
+      const trocouDeSessao = anterior !== undefined && anterior.areaId !== etapa.areaId;
+      if (trocouDeSessao && !provasVencidas.has(anterior.areaId)) {
+        break;
+      }
+
+      abertas++;
+
+      if (!concluidas.has(etapa.topicoId)) {
+        break;
+      }
+    }
+
+    return abertas;
   });
 
   /** A etapa em que o jogador está agora, ou `null` se a trilha acabou. */
@@ -108,7 +150,7 @@ export class ProgressaoService {
     }
 
     const indice = indiceNaTrilha(topicoId);
-    return indice === -1 || indice <= this.etapasVencidas();
+    return indice === -1 || indice < this.etapasAbertas();
   }
 
   /** Como o tópico está em relação ao critério de domínio. */
@@ -150,6 +192,7 @@ export class ProgressaoService {
    */
   reiniciar(): void {
     this.progresso.limpar();
+    this.prova.limpar();
     this.definirModoLivre(false);
   }
 

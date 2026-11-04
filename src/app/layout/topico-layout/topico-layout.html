@@ -14,7 +14,12 @@
     }
   </header>
 
-  <div class="abas" role="tablist" [attr.aria-label]="i18n.t('topico.secoes')" (keydown)="aoTeclar($event)">
+  <div
+    class="abas"
+    role="tablist"
+    [attr.aria-label]="i18n.t('topico.secoes')"
+    (keydown)="aoTeclar($event)"
+  >
     @for (nome of abas; track nome) {
       <button
         #botaoAba

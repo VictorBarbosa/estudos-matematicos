@@ -1,0 +1,138 @@
+<article class="prova">
+  <header class="cabecalho">
+    <h1>{{ texto('titulo', { sessao: titulo() }) }}</h1>
+    <p class="descricao">{{ texto('subtitulo', { tolerados: errosTolerados }) }}</p>
+  </header>
+
+  @switch (fase()) {
+    @case ('carregando') {
+      <p class="aviso" role="status">{{ texto('carregando') }}</p>
+    }
+
+    @case ('trancada') {
+      <section class="painel trancada">
+        <p>{{ texto('trancada') }}</p>
+        <a class="voltar" routerLink="/">{{ texto('voltarAoInicio') }}</a>
+      </section>
+    }
+
+    @case ('vencida') {
+      <section class="painel resultado aprovado" role="status">
+        <h2>{{ texto('jaVencidaTitulo') }}</h2>
+        <p>{{ texto('jaVencidaResumo', { sessao: titulo() }) }}</p>
+        @if (proximaSessao(); as proxima) {
+          <a class="avancar" [routerLink]="proxima.rota">
+            {{ texto('abrirProxima', { sessao: proxima.titulo }) }}
+            <span aria-hidden="true">→</span>
+          </a>
+        }
+        <a class="voltar" routerLink="/">{{ texto('voltarAoInicio') }}</a>
+      </section>
+    }
+
+    @case ('respondendo') {
+      @if (questao(); as q) {
+        <section class="painel andamento">
+          <!-- Questão e erros juntos, porque é a leitura que importa durante a
+               prova: onde estou e quanto ainda posso errar. -->
+          <p class="contador" role="status">
+            {{ texto('questaoDeTotal', { numero: numero(), total: total() }) }}
+          </p>
+          <p class="erros" [attr.data-limite]="noLimite()">
+            {{ texto('errosDe', { erros: erros(), tolerados: errosTolerados }) }}
+          </p>
+          <div
+            class="barra"
+            role="progressbar"
+            [attr.aria-valuenow]="numero()"
+            [attr.aria-valuemin]="1"
+            [attr.aria-valuemax]="total()"
+            [attr.aria-label]="texto('questaoDeTotal', { numero: numero(), total: total() })"
+          >
+            <div class="feita" [style.width.%]="(numero() / total()) * 100"></div>
+          </div>
+        </section>
+
+        @if (noLimite() && !perdida()) {
+          <!-- O aviso vem ANTES de responder: chegar ao limite sem saber
+               seria injusto. -->
+          <p class="ultimo-aviso" role="alert">{{ texto('ultimoAviso') }}</p>
+        }
+
+        <section class="enunciado">
+          <p>{{ q.exercicio.enunciado }}</p>
+          @if (q.exercicio.enunciadoTex !== '') {
+            <app-formula [tex]="q.exercicio.enunciadoTex" [bloco]="true" />
+          }
+        </section>
+
+        <!-- Sem dica e sem resolução: numa prova, consultar é a própria
+             pergunta que se está respondendo. -->
+        <app-campo-resposta
+          #campo
+          [(valor)]="resposta"
+          [rotulo]="texto('suaResposta')"
+          [ajuda]="q.gerador.formatoResposta"
+          [simbolos]="q.gerador.simbolos ?? []"
+          [estado]="estadoCampo()"
+          [bloqueado]="corrigida()"
+          (enviar)="responder()"
+        />
+
+        @if (validacao(); as v) {
+          <p class="veredito" [attr.data-veredito]="v.veredito">
+            {{ v.veredito === 'correto' ? texto('correto') : v.mensagem }}
+          </p>
+          @if (v.veredito === 'incorreto') {
+            <p class="gabarito">{{ texto('gabarito', { valor: gabarito() }) }}</p>
+          }
+        }
+
+        <div class="acoes">
+          @if (corrigida()) {
+            <button type="button" class="principal" (click)="proxima()">
+              {{ texto(rotuloDoAvanco()) }}
+            </button>
+          } @else {
+            <button type="button" class="principal" (click)="responder()">
+              {{ texto('responder') }}
+            </button>
+          }
+        </div>
+      }
+    }
+
+    @case ('aprovado') {
+      <section class="painel resultado aprovado" role="status">
+        <h2>{{ texto('aprovadoTitulo') }}</h2>
+        <p>
+          {{ texto('aprovadoResumo', { acertos: acertos(), total: total(), erros: erros() }) }}
+        </p>
+        @if (proximaSessao(); as proxima) {
+          <a class="avancar" [routerLink]="proxima.rota">
+            {{ texto('abrirProxima', { sessao: proxima.titulo }) }}
+            <span aria-hidden="true">→</span>
+          </a>
+        } @else {
+          <p class="ultima-sessao">{{ texto('ultimaSessao') }}</p>
+        }
+        <a class="voltar" routerLink="/">{{ texto('voltarAoInicio') }}</a>
+      </section>
+    }
+
+    @case ('reprovado') {
+      <section class="painel resultado reprovado" role="alert">
+        <h2>{{ texto('reprovadoTitulo') }}</h2>
+        <p>{{ texto('reprovadoResumo', { sessao: titulo() }) }}</p>
+        <p class="observacao">{{ texto('reprovadoPorque') }}</p>
+        @if (recomeco(); as rota) {
+          <a class="avancar" [routerLink]="rota">
+            {{ texto('recomecar') }}
+            <span aria-hidden="true">→</span>
+          </a>
+        }
+        <a class="voltar" routerLink="/">{{ texto('voltarAoInicio') }}</a>
+      </section>
+    }
+  }
+</article>
