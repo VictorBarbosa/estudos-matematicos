@@ -1,0 +1,104 @@
+{
+  "velocidadesNaoSeSomam": {
+    "pt": "Velocidades não se somam como números",
+    "fr": "Les vitesses ne s’additionnent pas comme des nombres",
+    "en": "Velocities do not add like numbers"
+  },
+  "umAviaoNaoVoa": {
+    "pt": "Um avião não voa em relação ao solo: voa em relação ao ar, e o ar inteiro se move. O que o solo vê é a soma vetorial das duas velocidades — e é por isso que o instrumento de bordo e o GPS discordam quando há vento.",
+    "fr": "Un avion ne vole pas par rapport au sol : il vole par rapport à l’air, et l’air tout entier se déplace. Ce que le sol voit est la somme vectorielle des deux vitesses — et c’est pourquoi l’instrument de bord et le GPS ne s’accordent pas quand il y a du vent.",
+    "en": "An aeroplane does not fly relative to the ground: it flies relative to the air, and the whole body of air is moving. What the ground sees is the vector sum of the two velocities — and that is why the cockpit instrument and the GPS disagree when there is wind."
+  },
+  "aeronaveLeste": {
+    "pt": "Aeronave, componente leste",
+    "fr": "Aéronef, composante est",
+    "en": "Aircraft, east component"
+  },
+  "aeronaveNorte": {
+    "pt": "Aeronave, componente norte",
+    "fr": "Aéronef, composante nord",
+    "en": "Aircraft, north component"
+  },
+  "ventoLeste": {
+    "pt": "Vento, componente leste",
+    "fr": "Vent, composante est",
+    "en": "Wind, east component"
+  },
+  "ventoNorte": {
+    "pt": "Vento, componente norte",
+    "fr": "Vent, composante nord",
+    "en": "Wind, north component"
+  },
+  "rapidezNoAr": {
+    "pt": "Rapidez no ar",
+    "fr": "Vitesse dans l’air",
+    "en": "Airspeed"
+  },
+  "oQueOInstrumento": {
+    "pt": "o que o instrumento mostra",
+    "fr": "ce que l’instrument indique",
+    "en": "what the instrument shows"
+  },
+  "rapidezNoSolo": {
+    "pt": "Rapidez no solo",
+    "fr": "Vitesse au sol",
+    "en": "Ground speed"
+  },
+  "oQueOGps": {
+    "pt": "o que o GPS mostra",
+    "fr": "ce que le GPS indique",
+    "en": "what the GPS shows"
+  },
+  "somaDosModulos": {
+    "pt": "Soma dos módulos",
+    "fr": "Somme des modules",
+    "en": "Sum of the magnitudes"
+  },
+  "aContaErrada": {
+    "pt": "a conta errada",
+    "fr": "le mauvais calcul",
+    "en": "the wrong sum"
+  },
+  "deriva": { "pt": "Deriva", "fr": "Dérive", "en": "Drift" },
+  "entreONariz": {
+    "pt": "entre o nariz e o rumo real",
+    "fr": "entre le nez et la route réelle",
+    "en": "between the nose and the actual track"
+  },
+  "trianguloDeVelocidades": {
+    "pt": "O triângulo de velocidades",
+    "fr": "Le triangle des vitesses",
+    "en": "The velocity triangle"
+  },
+  "segmentoAr": {
+    "pt": "em relação ao ar",
+    "fr": "par rapport à l’air",
+    "en": "relative to the air"
+  },
+  "segmentoVento": { "pt": "vento", "fr": "vent", "en": "wind" },
+  "segmentoSolo": {
+    "pt": "em relação ao solo",
+    "fr": "par rapport au sol",
+    "en": "relative to the ground"
+  },
+  "descricaoGrafico": {
+    "pt": "Triângulo de velocidades: a seta da aeronave em relação ao ar, o vento somado na ponta, e a resultante que o solo enxerga.",
+    "fr": "Triangle des vitesses : la flèche de l’aéronef par rapport à l’air, le vent ajouté au bout, et la résultante que voit le sol.",
+    "en": "Velocity triangle: the aircraft's arrow relative to the air, the wind added at its tip, and the resultant the ground sees."
+  },
+  "compareOsDois": {
+    "pt": "Compare os dois números do meio: a soma dos módulos só coincide com a rapidez no solo quando vento e rumo estão perfeitamente alinhados. Em qualquer outro caso ela superestima — às vezes muito.",
+    "fr": "Comparez les deux nombres du milieu : la somme des modules ne coïncide avec la vitesse au sol que si le vent et la route sont parfaitement alignés. Dans tout autre cas elle surestime — parfois beaucoup.",
+    "en": "Compare the two middle numbers: the sum of the magnitudes only matches the ground speed when wind and track are perfectly aligned. In any other case it overestimates — sometimes greatly."
+  },
+  "acelerarSemMudar": {
+    "pt": "Acelerar sem mudar de rapidez",
+    "fr": "Accélérer sans changer de vitesse",
+    "en": "Accelerating without changing speed"
+  },
+  "aAceleracaoTem": {
+    "pt": "A aceleração tem duas caras: a tangencial muda a rapidez, a normal muda a direção. Numa curva a velocidade constante, a tangencial é zero e a aceleração é toda normal — há aceleração sem que o velocímetro mexa.",
+    "fr": "L’accélération a deux visages : la tangentielle change la vitesse, la normale change la direction. Dans un virage à vitesse constante, la tangentielle est nulle et l’accélération est entièrement normale — il y a accélération sans que le compteur bouge.",
+    "en": "Acceleration has two faces: the tangential one changes the speed, the normal one changes the direction. In a curve at constant speed, the tangential part is zero and the acceleration is entirely normal — there is acceleration with the speedometer never moving."
+  }
+}

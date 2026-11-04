@@ -126,9 +126,8 @@ function exercicioVelocidadeOrbital(nivel: Nivel, rng: Rng): Exercicio<number> {
     armadilhas: semColisoes(
       [
         {
-          resposta: (velocidadeEscapeComPassos(MASSA_TERRA, RAIO_TERRA + altitudeKm * 1000)
-            .resultado /
-            1000),
+          resposta:
+            velocidadeEscapeComPassos(MASSA_TERRA, RAIO_TERRA + altitudeKm * 1000).resultado / 1000,
           diagnostico:
             'Essa é a velocidade de ESCAPE nesse raio, √2 vezes maior. Para orbitar, basta a ' +
             'velocidade em que a gravidade iguala a força centrípeta.',
@@ -137,8 +136,7 @@ function exercicioVelocidadeOrbital(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: Math.sqrt((G * MASSA_TERRA) / (altitudeKm * 1000)) / 1000,
-          diagnostico:
-            'O raio é medido do CENTRO: some os 6 371 km do raio terrestre à altitude.',
+          diagnostico: 'O raio é medido do CENTRO: some os 6 371 km do raio terrestre à altitude.',
           passo: 2,
           conceito: 'gravitacao.orbita',
         },
@@ -191,13 +189,16 @@ function exercicioPeriodo(nivel: Nivel, rng: Rng): Exercicio<number> {
 
 function exercicioEscape(nivel: Nivel, rng: Rng): Exercicio<number> {
   /** Corpos do sistema solar, com massa em kg e raio em m. */
-  const corpos: readonly { readonly nome: string; readonly massa: number; readonly raio: number }[] =
-    [
-      { nome: 'a Terra', massa: 5.972e24, raio: 6.371e6 },
-      { nome: 'a Lua', massa: 7.342e22, raio: 1.737e6 },
-      { nome: 'Marte', massa: 6.417e23, raio: 3.39e6 },
-      { nome: 'Júpiter', massa: 1.898e27, raio: 6.9911e7 },
-    ];
+  const corpos: readonly {
+    readonly nome: string;
+    readonly massa: number;
+    readonly raio: number;
+  }[] = [
+    { nome: 'a Terra', massa: 5.972e24, raio: 6.371e6 },
+    { nome: 'a Lua', massa: 7.342e22, raio: 1.737e6 },
+    { nome: 'Marte', massa: 6.417e23, raio: 3.39e6 },
+    { nome: 'Júpiter', massa: 1.898e27, raio: 6.9911e7 },
+  ];
 
   const corpo = rng.escolher(corpos);
   const { resultado, passos } = velocidadeEscapeComPassos(corpo.massa, corpo.raio);
@@ -209,8 +210,7 @@ function exercicioEscape(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Qual é a velocidade de escape da superfície de ${corpo.nome}? (em km/s, 2 casas ` +
       'decimais)',
-    enunciadoTex:
-      `M = ${corpo.massa.toExponential(3)}\\,\\text{kg} \\qquad R = ${corpo.raio.toExponential(3)}\\,\\text{m}`,
+    enunciadoTex: `M = ${corpo.massa.toExponential(3)}\\,\\text{kg} \\qquad R = ${corpo.raio.toExponential(3)}\\,\\text{m}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
     conceitos: ['gravitacao.escape'],

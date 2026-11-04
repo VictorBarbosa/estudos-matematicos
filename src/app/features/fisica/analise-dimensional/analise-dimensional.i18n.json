@@ -1,0 +1,67 @@
+{
+  "combineDuas": {
+    "pt": "Combine duas grandezas",
+    "fr": "Combinez deux grandeurs",
+    "en": "Combine two quantities"
+  },
+  "grandezaA": { "pt": "Grandeza A", "fr": "Grandeur A", "en": "Quantity A" },
+  "grandezaB": { "pt": "Grandeza B", "fr": "Grandeur B", "en": "Quantity B" },
+  "opcaoNaUnidade": {
+    "pt": "{nome} ({unidade})",
+    "fr": "{nome} ({unidade})",
+    "en": "{nome} ({unidade})"
+  },
+  "reconhecida": {
+    "pt": "Essa dimensão é de <strong>{nome}</strong>, cuja unidade no SI é {unidade}.",
+    "fr": "Cette dimension est celle de la <strong>{nome}</strong>, dont l’unité SI est {unidade}.",
+    "en": "That dimension belongs to <strong>{nome}</strong>, whose SI unit is {unidade}."
+  },
+  "naoReconhecida": {
+    "pt": "Nenhuma das grandezas da tabela tem essa dimensão — o que não significa que ela não exista, só que não está entre as usadas aqui.",
+    "fr": "Aucune grandeur du tableau n’a cette dimension — ce qui ne veut pas dire qu’elle n’existe pas, seulement qu’elle n’est pas parmi celles utilisées ici.",
+    "en": "None of the quantities in the table has that dimension — which does not mean it does not exist, only that it is not among those used here."
+  },
+  "tabelaDeDimensoes": {
+    "pt": "Tabela de dimensões",
+    "fr": "Tableau des dimensions",
+    "en": "Table of dimensions"
+  },
+  "colunaGrandeza": { "pt": "Grandeza", "fr": "Grandeur", "en": "Quantity" },
+  "colunaUnidade": { "pt": "Unidade (SI)", "fr": "Unité (SI)", "en": "Unit (SI)" },
+  "colunaDimensao": { "pt": "Dimensão", "fr": "Dimension", "en": "Dimension" },
+  "nenhumaLinha": {
+    "pt": "Nenhuma linha dessa tabela precisa ser decorada: todas saem da definição da grandeza. Força é massa vezes aceleração, energia é força vezes distância, potência é energia por tempo.",
+    "fr": "Aucune ligne de ce tableau n’a besoin d’être mémorisée : toutes découlent de la définition de la grandeur. La force est masse fois accélération, l’énergie est force fois distance, la puissance est énergie par temps.",
+    "en": "No row of this table needs memorising: every one follows from the definition of the quantity. Force is mass times acceleration, energy is force times distance, power is energy per time."
+  },
+  "qualDelasPeriodo": {
+    "pt": "Qual delas pode ser o período do pêndulo?",
+    "fr": "Laquelle peut être la période du pendule ?",
+    "en": "Which of these can be the pendulum's period?"
+  },
+  "temDimensaoDeTempo": {
+    "pt": "✓ tem dimensão de tempo",
+    "fr": "✓ a la dimension d’un temps",
+    "en": "✓ has the dimension of time"
+  },
+  "dimensaoErrada": {
+    "pt": "✗ dimensão errada",
+    "fr": "✗ mauvaise dimension",
+    "en": "✗ wrong dimension"
+  },
+  "umaUnicaCandidata": {
+    "pt": "Uma única candidata sobrevive ao teste dimensional — e, de passagem, ele revela que o período não depende da massa do pêndulo, já que massa não aparece em lugar nenhum. O que o teste <em>não</em> dá é o 2π: fatores numéricos são adimensionais e passam livremente.",
+    "fr": "Une seule candidate survit au test dimensionnel — et, au passage, il révèle que la période ne dépend pas de la masse du pendule, puisque la masse n’apparaît nulle part. Ce que le test <em>ne</em> donne <em>pas</em>, c’est le 2π : les facteurs numériques sont sans dimension et passent librement.",
+    "en": "Only one candidate survives the dimensional test — and along the way it reveals that the period does not depend on the pendulum's mass, since mass appears nowhere. What the test <em>does not</em> give is the 2π: numerical factors are dimensionless and pass through freely."
+  },
+  "comparandoComEnergia": {
+    "pt": "Comparando com a dimensão de energia",
+    "fr": "En comparant avec la dimension de l’énergie",
+    "en": "Comparing with the dimension of energy"
+  },
+  "monteCombinacoes": {
+    "pt": "Monte combinações acima e veja quando elas batem com energia. Dimensão igual não prova que a fórmula está certa; dimensão diferente prova que está errada. Em prova, é a checagem mais rápida que existe.",
+    "fr": "Formez des combinaisons ci-dessus et voyez quand elles correspondent à l’énergie. Une dimension identique ne prouve pas que la formule est juste ; une dimension différente prouve qu’elle est fausse. En examen, c’est la vérification la plus rapide qui existe.",
+    "en": "Build combinations above and see when they match energy. The same dimension does not prove the formula is right; a different dimension proves it is wrong. In an exam, it is the fastest check there is."
+  }
+}

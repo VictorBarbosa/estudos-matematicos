@@ -67,8 +67,7 @@ export class TermodinamicaEGases {
   protected readonly pressaoKPa = computed(() => this.estado().resultado.pressao / 1000);
 
   protected readonly estadoTex = computed(
-    () =>
-      `pV = nRT \\;\\Rightarrow\\; p = ${this.formatar(this.pressaoKPa())}\\,\\text{kPa}`,
+    () => `pV = nRT \\;\\Rightarrow\\; p = ${this.formatar(this.pressaoKPa())}\\,\\text{kPa}`,
   );
 
   /** A isoterma: pressão em função do volume, à temperatura fixa. */

@@ -16,7 +16,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de transferência de calor.
@@ -40,7 +46,14 @@ const CALORES: readonly { readonly nome: string; readonly c: number }[] = [
   { nome: 'vidro', c: 840 },
 ];
 
-type Tipo = 'conducao' | 'resistencia' | 'conveccao' | 'radiacao' | 'equilibrio-radiativo' | 'calorimetria' | 'mistura';
+type Tipo =
+  | 'conducao'
+  | 'resistencia'
+  | 'conveccao'
+  | 'radiacao'
+  | 'equilibrio-radiativo'
+  | 'calorimetria'
+  | 'mistura';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['conducao', 'calorimetria'],
@@ -121,7 +134,10 @@ function daConducao(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'termica.conducao',
       },
     ],
-    dica: nivel === 'facil' ? 'Multiplique condutividade, área e diferença; divida pela espessura.' : undefined,
+    dica:
+      nivel === 'facil'
+        ? 'Multiplique condutividade, área e diferença; divida pela espessura.'
+        : undefined,
   });
 }
 

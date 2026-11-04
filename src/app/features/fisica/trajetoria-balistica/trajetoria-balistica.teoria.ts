@@ -14,7 +14,10 @@ export const TEORIA_BALISTICA: readonly Teoria[] = [
       'gravidade age sozinha, exatamente como numa queda livre.',
     formulas: [
       { tex: 'x(t) = v_x t', legenda: 'Horizontal: movimento uniforme.' },
-      { tex: 'y(t) = h_0 + v_y t - \\frac{g t^{2}}{2}', legenda: 'Vertical: uniformemente acelerado.' },
+      {
+        tex: 'y(t) = h_0 + v_y t - \\frac{g t^{2}}{2}',
+        legenda: 'Vertical: uniformemente acelerado.',
+      },
       { tex: 'v_x = v_0\\cos\\theta \\qquad v_y = v_0\\sin\\theta' },
     ],
     demonstracao: [
@@ -46,9 +49,7 @@ export const TEORIA_BALISTICA: readonly Teoria[] = [
       'As duas equações dependem do tempo. Isolando t na horizontal e substituindo na ' +
       'vertical, o tempo some e sobra y em função de x — uma quadrática. É daí que vem a ' +
       'parábola.',
-    formulas: [
-      { tex: 'y = h_0 + x\\tan\\theta - \\frac{g}{2v_0^{2}\\cos^{2}\\theta}x^{2}' },
-    ],
+    formulas: [{ tex: 'y = h_0 + x\\tan\\theta - \\frac{g}{2v_0^{2}\\cos^{2}\\theta}x^{2}' }],
     demonstracao: [
       {
         descricao: 'Isolamos o tempo na equação horizontal.',

@@ -11,7 +11,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de movimento circular uniforme.
@@ -101,8 +107,7 @@ function daAngular(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: Math.PI / periodo,
-        diagnostico:
-          'Uma volta completa são 2 pi radianos, não pi. Meia volta é que vale pi.',
+        diagnostico: 'Uma volta completa são 2 pi radianos, não pi. Meia volta é que vale pi.',
         passo: 0,
         conceito: 'circular.velocidade-angular',
       },

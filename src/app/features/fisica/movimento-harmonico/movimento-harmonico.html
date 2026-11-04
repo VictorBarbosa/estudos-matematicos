@@ -19,7 +19,13 @@
 
     <section class="destaque-formula">
       <app-formula
-        [tex]="'x(t) = ' + formatar(amplitude()) + '\\cos\\left(' + formatar(oscilacao().frequenciaAngular) + '\\,t\\right)'"
+        [tex]="
+          'x(t) = ' +
+          formatar(amplitude()) +
+          '\\cos\\left(' +
+          formatar(oscilacao().frequenciaAngular) +
+          '\\,t\\right)'
+        "
         [bloco]="true"
       />
     </section>
@@ -57,18 +63,18 @@
         [altura]="400"
       />
       <p class="observacao">
-        Repare nas defasagens: onde a posição é máxima, a velocidade é zero — o corpo parou
-        para voltar. E a aceleração está sempre em oposição à posição, apontando de volta ao
-        centro. Cada derivada adianta a onda em um quarto de período.
+        Repare nas defasagens: onde a posição é máxima, a velocidade é zero — o corpo parou para
+        voltar. E a aceleração está sempre em oposição à posição, apontando de volta ao centro. Cada
+        derivada adianta a onda em um quarto de período.
       </p>
     </section>
 
     <section class="painel">
       <h2>Mexa só na amplitude</h2>
       <p class="observacao">
-        Altere a amplitude e observe o período: ele não muda. Esse é o fato que torna o
-        oscilador harmônico útil como relógio — a marcação do tempo independe de quão forte
-        foi o impulso inicial. Já alterar a massa ou a rigidez da mola muda tudo.
+        Altere a amplitude e observe o período: ele não muda. Esse é o fato que torna o oscilador
+        harmônico útil como relógio — a marcação do tempo independe de quão forte foi o impulso
+        inicial. Já alterar a massa ou a rigidez da mola muda tudo.
       </p>
       <app-formula [tex]="'T = 2\\pi\\sqrt{\\frac{m}{k}}'" [bloco]="true" />
     </section>

@@ -1,0 +1,91 @@
+{
+  "velocidadeConstante": {
+    "pt": "Velocidade constante, aceleração não nula",
+    "fr": "Vitesse constante, accélération non nulle",
+    "en": "Constant speed, non-zero acceleration"
+  },
+  "noMovimentoCircular": {
+    "pt": "No movimento circular uniforme o módulo da velocidade nunca muda — mas a direção muda a cada instante, e isso é acelerar. A aceleração resultante aponta sempre para o centro, é perpendicular à velocidade e por isso não altera a rapidez: ela só curva a trajetória.",
+    "fr": "Dans le mouvement circulaire uniforme, le module de la vitesse ne change jamais — mais la direction change à chaque instant, et c’est cela, accélérer. L’accélération résultante pointe toujours vers le centre, est perpendiculaire à la vitesse et ne modifie donc pas la rapidité : elle ne fait que courber la trajectoire.",
+    "en": "In uniform circular motion the magnitude of the velocity never changes — but its direction changes at every instant, and that is acceleration. The resulting acceleration always points at the centre, is perpendicular to the velocity and therefore does not change the speed: it only bends the path."
+  },
+  "periodoEmDecimos": {
+    "pt": "Período, em décimos de segundo",
+    "fr": "Période, en dixièmes de seconde",
+    "en": "Period, in tenths of a second"
+  },
+  "posicaoNaVolta": {
+    "pt": "Posição na volta",
+    "fr": "Position sur le tour",
+    "en": "Position around the turn"
+  },
+  "dicaPosicao": {
+    "pt": "Doze posições ao longo da circunferência.",
+    "fr": "Douze positions le long du cercle.",
+    "en": "Twelve positions around the circle."
+  },
+  "frequencia": { "pt": "Frequência", "fr": "Fréquence", "en": "Frequency" },
+  "velocidadeAngular": {
+    "pt": "Velocidade angular",
+    "fr": "Vitesse angulaire",
+    "en": "Angular velocity"
+  },
+  "igualParaTodoCorpo": {
+    "pt": "igual para todo o corpo",
+    "fr": "la même pour tout le corps",
+    "en": "the same for the whole body"
+  },
+  "velocidadeTangencial": {
+    "pt": "Velocidade tangencial",
+    "fr": "Vitesse tangentielle",
+    "en": "Tangential speed"
+  },
+  "cresceComORaio": {
+    "pt": "cresce com o raio",
+    "fr": "croît avec le rayon",
+    "en": "grows with the radius"
+  },
+  "aceleracaoCentripeta": {
+    "pt": "Aceleração centrípeta",
+    "fr": "Accélération centripète",
+    "en": "Centripetal acceleration"
+  },
+  "forcaCentripeta": {
+    "pt": "Força centrípeta",
+    "fr": "Force centripète",
+    "en": "Centripetal force"
+  },
+  "oPapelNaoUmaForca": {
+    "pt": "o papel, não uma força nova",
+    "fr": "un rôle, pas une force nouvelle",
+    "en": "a role, not a new force"
+  },
+  "paraOndeAponta": {
+    "pt": "Para onde aponta cada vetor",
+    "fr": "Où pointe chaque vecteur",
+    "en": "Where each vector points"
+  },
+  "segmentoVelocidade": { "pt": "velocidade", "fr": "vitesse", "en": "velocity" },
+  "segmentoAceleracao": { "pt": "aceleração", "fr": "accélération", "en": "acceleration" },
+  "pontoCentro": { "pt": "centro", "fr": "centre", "en": "centre" },
+  "descricaoGrafico": {
+    "pt": "Circunferência com o ponto em movimento: a velocidade é sempre tangente, e a aceleração aponta sempre para o centro — por isso ela curva sem acelerar nem frear.",
+    "fr": "Cercle avec le point en mouvement : la vitesse est toujours tangente, et l’accélération pointe toujours vers le centre — c’est pourquoi elle courbe sans accélérer ni freiner.",
+    "en": "Circle with the moving point: the velocity is always tangent, and the acceleration always points at the centre — which is why it bends without speeding up or slowing down."
+  },
+  "andeComOPonto": {
+    "pt": "Ande com o ponto pela volta: a velocidade gira junto, sempre tangente, e a aceleração aponta sempre para o centro. Como as duas são perpendiculares, a aceleração não tem componente que acelere ou freie — ela só vira o vetor velocidade.",
+    "fr": "Faites avancer le point sur le tour : la vitesse tourne avec lui, toujours tangente, et l’accélération pointe toujours vers le centre. Comme les deux sont perpendiculaires, l’accélération n’a pas de composante qui accélère ou freine — elle ne fait que faire tourner le vecteur vitesse.",
+    "en": "Walk the point around the turn: the velocity turns with it, always tangent, and the acceleration always points at the centre. Since the two are perpendicular, the acceleration has no component that speeds up or slows down — it only turns the velocity vector."
+  },
+  "porQueAoQuadrado": {
+    "pt": "Por que a velocidade entra ao quadrado",
+    "fr": "Pourquoi la vitesse intervient au carré",
+    "en": "Why the speed enters squared"
+  },
+  "dobreOPeriodo": {
+    "pt": "Dobre o período e veja: a velocidade cai pela metade, mas a aceleração cai a um quarto. É essa dependência quadrática que torna curvas rápidas tão exigentes — e é a mesma relação que fixa a velocidade de uma órbita, onde quem faz o papel centrípeto é a gravidade.",
+    "fr": "Doublez la période et voyez : la vitesse est divisée par deux, mais l’accélération par quatre. C’est cette dépendance quadratique qui rend les virages rapides si exigeants — et c’est la même relation qui fixe la vitesse d’une orbite, où c’est la gravité qui joue le rôle centripète.",
+    "en": "Double the period and watch: the speed halves, but the acceleration drops to a quarter. It is that quadratic dependence that makes fast curves so demanding — and it is the same relation that fixes the speed of an orbit, where gravity plays the centripetal role."
+  }
+}

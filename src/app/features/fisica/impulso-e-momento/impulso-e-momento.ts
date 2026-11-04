@@ -116,8 +116,24 @@ export class ImpulsoEMomento {
     const { velocidadeFinalA, velocidadeFinalB } = this.colisao().resultado;
 
     return [
-      { x1: 0, y1: 1, x2: this.velocidadeA(), y2: 1, cor: 'serie-1', seta: true, rotulo: 'A antes' },
-      { x1: 0, y1: 0.5, x2: this.velocidadeB(), y2: 0.5, cor: 'serie-2', seta: true, rotulo: 'B antes' },
+      {
+        x1: 0,
+        y1: 1,
+        x2: this.velocidadeA(),
+        y2: 1,
+        cor: 'serie-1',
+        seta: true,
+        rotulo: 'A antes',
+      },
+      {
+        x1: 0,
+        y1: 0.5,
+        x2: this.velocidadeB(),
+        y2: 0.5,
+        cor: 'serie-2',
+        seta: true,
+        rotulo: 'B antes',
+      },
       {
         x1: 0,
         y1: -0.5,

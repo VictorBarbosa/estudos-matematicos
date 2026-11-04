@@ -14,6 +14,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/leis-de-newton/leis-de-newton.i18n.json';
 import { geradorNewton } from '@features/fisica/leis-de-newton/leis-de-newton.gerador';
 import { TEORIA_NEWTON } from '@features/fisica/leis-de-newton/leis-de-newton.teoria';
 
@@ -33,6 +36,8 @@ import { TEORIA_NEWTON } from '@features/fisica/leis-de-newton/leis-de-newton.te
   styleUrl: './leis-de-newton.scss',
 })
 export class LeisDeNewton {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorNewton;
   protected readonly conceitos = TEORIA_NEWTON.map((teoria) => teoria.id);
 
@@ -50,8 +55,8 @@ export class LeisDeNewton {
 
   protected readonly horizontal = computed(() =>
     segundaLeiComPassos(this.massa(), [
-      { valor: this.forcaAplicada(), descricao: 'força aplicada' },
-      { valor: -this.forcaAtrito(), descricao: 'atrito' },
+      { valor: this.forcaAplicada(), descricao: this.texto('segmentoForcaAplicada') },
+      { valor: -this.forcaAtrito(), descricao: this.texto('segmentoAtrito') },
     ]),
   );
 

@@ -2,12 +2,15 @@
   <div explorar class="explorar">
     <section class="painel">
       <h2>O dicionário</h2>
-      <app-formula [tex]="'F = ma \\quad\\longleftrightarrow\\quad \\tau = I\\alpha'" [bloco]="true" />
+      <app-formula
+        [tex]="'F = ma \\quad\\longleftrightarrow\\quad \\tau = I\\alpha'"
+        [bloco]="true"
+      />
       <p class="observacao">
         Nada aqui é teoria nova: é a mecânica de sempre escrita em outras variáveis. Massa vira
         momento de inércia, força vira torque, aceleração vira aceleração angular. O que não se
-        traduz é o detalhe decisivo — a inércia depende de ONDE a massa está, não só de quanto
-        ela é.
+        traduz é o detalhe decisivo — a inércia depende de ONDE a massa está, não só de quanto ela
+        é.
       </p>
     </section>
 
@@ -64,9 +67,9 @@
         [altura]="340"
       />
       <p class="observacao">
-        Todas as curvas são parábolas, porque o raio entra ao quadrado. O que separa uma da
-        outra é apenas o fator de forma — e é por isso que afastar massa do eixo é a maneira
-        mais barata de aumentar a resistência ao giro.
+        Todas as curvas são parábolas, porque o raio entra ao quadrado. O que separa uma da outra é
+        apenas o fator de forma — e é por isso que afastar massa do eixo é a maneira mais barata de
+        aumentar a resistência ao giro.
       </p>
     </section>
 
@@ -77,14 +80,16 @@
           <li>
             <span>{{ item.nome }}</span>
             <strong>{{ formatar(item.velocidade) }} m/s</strong>
-            <span class="legenda">{{ formatar(item.fracaoRotacional) }}% da energia na rotação</span>
+            <span class="legenda"
+              >{{ formatar(item.fracaoRotacional) }}% da energia na rotação</span
+            >
           </li>
         }
       </ol>
       <p class="observacao">
         Quem apenas deslizasse, sem girar, chegaria a {{ formatar(deslizando()) }} metros por
-        segundo. Todos os que rolam chegam mais devagar, porque parte da energia foi para a
-        rotação — e a ordem de chegada não muda com a massa nem com o raio, só com o formato.
+        segundo. Todos os que rolam chegam mais devagar, porque parte da energia foi para a rotação
+        — e a ordem de chegada não muda com a massa nem com o raio, só com o formato.
       </p>
     </section>
 

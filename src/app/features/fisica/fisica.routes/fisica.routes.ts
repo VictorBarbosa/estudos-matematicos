@@ -11,30 +11,39 @@ export const rotas: Routes = [
     path: 'analise-dimensional',
     title: 'Grandezas e análise dimensional · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/fisica/analise-dimensional/analise-dimensional').then((m) => m.AnaliseDimensional),
+      import('@features/fisica/analise-dimensional/analise-dimensional').then(
+        (m) => m.AnaliseDimensional,
+      ),
   },
   {
     path: 'cinematica-escalar',
     title: 'Cinemática escalar · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/fisica/cinematica-escalar/cinematica-escalar').then((m) => m.CinematicaEscalar),
+      import('@features/fisica/cinematica-escalar/cinematica-escalar').then(
+        (m) => m.CinematicaEscalar,
+      ),
   },
   {
     path: 'trajetoria-balistica',
     title: 'Trajetória balística · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/fisica/trajetoria-balistica/trajetoria-balistica').then((m) => m.TrajetoriaBalistica),
+      import('@features/fisica/trajetoria-balistica/trajetoria-balistica').then(
+        (m) => m.TrajetoriaBalistica,
+      ),
   },
   {
     path: 'leis-de-newton',
     title: 'Leis de Newton · Estudos Matemáticos',
-    loadComponent: () => import('@features/fisica/leis-de-newton/leis-de-newton').then((m) => m.LeisDeNewton),
+    loadComponent: () =>
+      import('@features/fisica/leis-de-newton/leis-de-newton').then((m) => m.LeisDeNewton),
   },
   {
     path: 'trabalho-e-energia',
     title: 'Trabalho e energia · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/fisica/trabalho-e-energia/trabalho-e-energia').then((m) => m.TrabalhoEEnergia),
+      import('@features/fisica/trabalho-e-energia/trabalho-e-energia').then(
+        (m) => m.TrabalhoEEnergia,
+      ),
   },
   {
     path: 'impulso-e-momento',
@@ -46,7 +55,9 @@ export const rotas: Routes = [
     path: 'movimento-harmonico',
     title: 'Movimento harmônico · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/fisica/movimento-harmonico/movimento-harmonico').then((m) => m.MovimentoHarmonico),
+      import('@features/fisica/movimento-harmonico/movimento-harmonico').then(
+        (m) => m.MovimentoHarmonico,
+      ),
   },
   {
     path: 'estatica-e-torque',
@@ -58,7 +69,9 @@ export const rotas: Routes = [
     path: 'gravitacao-e-orbitas',
     title: 'Gravitação e órbitas · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas').then((m) => m.GravitacaoEOrbitas),
+      import('@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas').then(
+        (m) => m.GravitacaoEOrbitas,
+      ),
   },
   {
     path: 'fluidos-e-aerodinamica',
@@ -72,38 +85,55 @@ export const rotas: Routes = [
     path: 'termodinamica-e-gases',
     title: 'Termodinâmica e gases · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/fisica/termodinamica-e-gases/termodinamica-e-gases').then((m) => m.TermodinamicaEGases),
+      import('@features/fisica/termodinamica-e-gases/termodinamica-e-gases').then(
+        (m) => m.TermodinamicaEGases,
+      ),
   },
   {
     path: 'propulsao-de-foguetes',
     title: 'Propulsão de foguetes · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes').then((m) => m.PropulsaoDeFoguetes),
+      import('@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes').then(
+        (m) => m.PropulsaoDeFoguetes,
+      ),
   },
   {
     path: 'cinematica-vetorial',
     title: 'Cinemática vetorial · Estudos Matemáticos',
-    loadComponent: () => import('@features/fisica/cinematica-vetorial/cinematica-vetorial').then((m) => m.CinematicaVetorial),
+    loadComponent: () =>
+      import('@features/fisica/cinematica-vetorial/cinematica-vetorial').then(
+        (m) => m.CinematicaVetorial,
+      ),
   },
   {
     path: 'movimento-circular',
     title: 'Movimento circular · Estudos Matemáticos',
-    loadComponent: () => import('@features/fisica/movimento-circular/movimento-circular').then((m) => m.MovimentoCircular),
+    loadComponent: () =>
+      import('@features/fisica/movimento-circular/movimento-circular').then(
+        (m) => m.MovimentoCircular,
+      ),
   },
   {
     path: 'dinamica-rotacional',
     title: 'Dinâmica rotacional · Estudos Matemáticos',
-    loadComponent: () => import('@features/fisica/dinamica-rotacional/dinamica-rotacional').then((m) => m.DinamicaRotacional),
+    loadComponent: () =>
+      import('@features/fisica/dinamica-rotacional/dinamica-rotacional').then(
+        (m) => m.DinamicaRotacional,
+      ),
   },
   {
     path: 'momento-angular',
     title: 'Conservação do momento angular · Estudos Matemáticos',
-    loadComponent: () => import('@features/fisica/momento-angular/momento-angular').then((m) => m.MomentoAngular),
+    loadComponent: () =>
+      import('@features/fisica/momento-angular/momento-angular').then((m) => m.MomentoAngular),
   },
   {
     path: 'transferencia-de-calor',
     title: 'Transferência de calor · Estudos Matemáticos',
-    loadComponent: () => import('@features/fisica/transferencia-de-calor/transferencia-de-calor').then((m) => m.TransferenciaDeCalor),
+    loadComponent: () =>
+      import('@features/fisica/transferencia-de-calor/transferencia-de-calor').then(
+        (m) => m.TransferenciaDeCalor,
+      ),
   },
   { path: '', pathMatch: 'full', redirectTo: 'analise-dimensional' },
 ];

@@ -12,7 +12,9 @@ export const TEORIA_TERMICA: readonly Teoria[] = [
       'condutividade, e entre o cobre e a lã de vidro ela varia quatro ordens de grandeza.',
     formulas: [
       { tex: '\\frac{Q}{t} = \\frac{kA\\,\\Delta T}{L}' },
-      { tex: 'k_{cobre} \\approx 401 \\qquad k_{l\\tilde{a}} \\approx 0{,}04 \\;\\text{W/(m}\\cdot\\text{K)}' },
+      {
+        tex: 'k_{cobre} \\approx 401 \\qquad k_{l\\tilde{a}} \\approx 0{,}04 \\;\\text{W/(m}\\cdot\\text{K)}',
+      },
     ],
     demonstracao: [
       {
@@ -72,7 +74,9 @@ export const TEORIA_TERMICA: readonly Teoria[] = [
       'esse coeficiente, e é por isso que assoprar a comida funciona.',
     formulas: [
       { tex: '\\frac{Q}{t} = hA\\,\\Delta T' },
-      { tex: 'h_{natural} \\approx 5\\text{–}25 \\qquad h_{for\\c{c}ada} \\approx 25\\text{–}250 \\;\\text{W/(m}^{2}\\cdot\\text{K)}' },
+      {
+        tex: 'h_{natural} \\approx 5\\text{–}25 \\qquad h_{for\\c{c}ada} \\approx 25\\text{–}250 \\;\\text{W/(m}^{2}\\cdot\\text{K)}',
+      },
     ],
     demonstracao: [
       {
@@ -132,7 +136,10 @@ export const TEORIA_TERMICA: readonly Teoria[] = [
       'constante, muda por um fator que pode passar de mil.',
     formulas: [
       { tex: 'T\\,[\\text{K}] = T\\,[^\\circ\\text{C}] + 273{,}15' },
-      { tex: '\\Delta T\\,[\\text{K}] = \\Delta T\\,[^\\circ\\text{C}]', legenda: 'As diferenças coincidem.' },
+      {
+        tex: '\\Delta T\\,[\\text{K}] = \\Delta T\\,[^\\circ\\text{C}]',
+        legenda: 'As diferenças coincidem.',
+      },
     ],
     demonstracao: [
       {

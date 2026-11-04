@@ -7,7 +7,14 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import {
+  CurvaPlot,
+  PontoPlot,
+  SegmentoPlot,
+} from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/movimento-circular/movimento-circular.i18n.json';
 import { geradorMovimentoCircular } from '@features/fisica/movimento-circular/movimento-circular.gerador';
 import { TEORIA_MOVIMENTO_CIRCULAR } from '@features/fisica/movimento-circular/movimento-circular.teoria';
 
@@ -19,6 +26,8 @@ import { TEORIA_MOVIMENTO_CIRCULAR } from '@features/fisica/movimento-circular/m
   styleUrl: './movimento-circular.scss',
 })
 export class MovimentoCircular {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorMovimentoCircular;
   protected readonly conceitos = TEORIA_MOVIMENTO_CIRCULAR.map((teoria) => teoria.id);
 
@@ -52,7 +61,10 @@ export class MovimentoCircular {
     const r = this.raio();
     return [
       { fn: (x) => (Math.abs(x) <= r ? Math.sqrt(r * r - x * x) : Number.NaN), cor: 'texto-suave' },
-      { fn: (x) => (Math.abs(x) <= r ? -Math.sqrt(r * r - x * x) : Number.NaN), cor: 'texto-suave' },
+      {
+        fn: (x) => (Math.abs(x) <= r ? -Math.sqrt(r * r - x * x) : Number.NaN),
+        cor: 'texto-suave',
+      },
     ];
   });
 
@@ -70,7 +82,7 @@ export class MovimentoCircular {
         y2: y + x * this.omega() * escala,
         cor: 'serie-1',
         seta: true,
-        rotulo: 'velocidade',
+        rotulo: this.texto('segmentoVelocidade'),
       },
       {
         x1: x,
@@ -79,14 +91,14 @@ export class MovimentoCircular {
         y2: y - y * this.centripeta() * escalaA,
         cor: 'acento',
         seta: true,
-        rotulo: 'aceleração',
+        rotulo: this.texto('segmentoAceleracao'),
       },
     ];
   });
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() => [
     { x: this.ponto().x, y: this.ponto().y, cor: 'serie-1' },
-    { x: 0, y: 0, cor: 'texto-suave', rotulo: 'centro' },
+    { x: 0, y: 0, cor: 'texto-suave', rotulo: this.texto('pontoCentro') },
   ]);
 
   protected readonly dominio = computed(() => {
@@ -94,11 +106,7 @@ export class MovimentoCircular {
     return { xMin: -alcance, xMax: alcance, yMin: -alcance, yMax: alcance };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Circunferência com o ponto em movimento: a velocidade é sempre tangente, e a aceleração ' +
-      'aponta sempre para o centro — por isso ela curva sem acelerar nem frear.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_MOVIMENTO_CIRCULAR);

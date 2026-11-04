@@ -113,8 +113,9 @@ describe('geradorGravitacao', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, massa, raio] =
-        /M = ([\d.e+]+)\\,\\text\{kg\} \\qquad R = ([\d.e+]+)/.exec(exercicio.enunciadoTex)!;
+      const [, massa, raio] = /M = ([\d.e+]+)\\,\\text\{kg\} \\qquad R = ([\d.e+]+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       // Massa e raio vêm do enunciado com 4 dígitos significativos, então a
       // razão fecha com essa precisão, não mais.
@@ -139,9 +140,7 @@ describe('geradorGravitacao', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('medida do CENTRO')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('medida do CENTRO'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('medida do CENTRO'))!;
 
     const resultado = corrigir(geradorGravitacao, exercicio, String(armadilha.resposta));
 

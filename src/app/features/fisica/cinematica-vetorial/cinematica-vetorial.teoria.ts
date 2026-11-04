@@ -42,7 +42,10 @@ export const TEORIA_CINEMATICA_VETORIAL: readonly Teoria[] = [
       'que tenha corrido.',
     formulas: [
       { tex: '\\vec{v}_{m} = \\frac{\\Delta\\vec{r}}{\\Delta t}' },
-      { tex: 'v_{m}^{escalar} = \\frac{\\text{distância percorrida}}{\\Delta t}', legenda: 'A outra média, que usa o caminho.' },
+      {
+        tex: 'v_{m}^{escalar} = \\frac{\\text{distância percorrida}}{\\Delta t}',
+        legenda: 'A outra média, que usa o caminho.',
+      },
     ],
     demonstracao: [
       {
@@ -107,7 +110,10 @@ export const TEORIA_CINEMATICA_VETORIAL: readonly Teoria[] = [
     formulas: [
       { tex: 't = \\frac{d}{v_{barco}}', legenda: 'A correnteza não entra aqui.' },
       { tex: '\\Delta x = v_{rio}\\,t', legenda: 'O arrasto rio abaixo.' },
-      { tex: '\\operatorname{sen}\\theta = \\frac{v_{rio}}{v_{barco}}', legenda: 'O ângulo que compensa.' },
+      {
+        tex: '\\operatorname{sen}\\theta = \\frac{v_{rio}}{v_{barco}}',
+        legenda: 'O ângulo que compensa.',
+      },
     ],
     demonstracao: [
       {
@@ -173,10 +179,7 @@ export const TEORIA_CINEMATICA_VETORIAL: readonly Teoria[] = [
       'movimento circular. Isso permite medir o quanto a trajetória está curvando num ponto: ' +
       'raio pequeno é curva fechada, raio grande é curva suave, raio infinito é reta. É a ' +
       'grandeza que limita o quanto uma aeronave pode manobrar sem exceder a carga estrutural.',
-    formulas: [
-      { tex: 'a_{n} = \\frac{v^{2}}{R}' },
-      { tex: 'R = \\frac{v^{2}}{a_{n}}' },
-    ],
+    formulas: [{ tex: 'a_{n} = \\frac{v^{2}}{R}' }, { tex: 'R = \\frac{v^{2}}{a_{n}}' }],
     demonstracao: [
       {
         descricao: 'A 100 metros por segundo com aceleração normal de 20.',

@@ -13,7 +13,9 @@ describe('geradorEnergia', () => {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {
         for (const armadilha of exercicio.armadilhas) {
-          expect(geradorEnergia.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(false);
+          expect(geradorEnergia.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(
+            false,
+          );
         }
       }
     });
@@ -28,7 +30,9 @@ describe('geradorEnergia', () => {
   }
 
   it('o trabalho usa cosseno e zera a 90 graus', () => {
-    const exercicios = amostra('facil', 90).filter((e) => e.enunciado.includes('trabalho realizado'));
+    const exercicios = amostra('facil', 90).filter((e) =>
+      e.enunciado.includes('trabalho realizado'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -53,23 +57,25 @@ describe('geradorEnergia', () => {
   });
 
   it('a energia cinética é mv²/2', () => {
-    const exercicios = amostra('facil', 120).filter((e) => e.enunciado.includes('energia cinética'));
+    const exercicios = amostra('facil', 120).filter((e) =>
+      e.enunciado.includes('energia cinética'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, massa, velocidade] =
-        /m = (\d+)\\,\\text\{kg\} \\qquad v = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, massa, velocidade] = /m = (\d+)\\,\\text\{kg\} \\qquad v = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
-      expect(exercicio.gabarito).toBeCloseTo(
-        energiaCinetica(Number(massa), Number(velocidade)),
-        9,
-      );
+      expect(exercicio.gabarito).toBeCloseTo(energiaCinetica(Number(massa), Number(velocidade)), 9);
     }
   });
 
   it('a velocidade de queda é √(2gh) e ignora a massa', () => {
-    const exercicios = amostra('medio', 150).filter((e) => e.enunciado.includes('velocidade chega'));
+    const exercicios = amostra('medio', 150).filter((e) =>
+      e.enunciado.includes('velocidade chega'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -98,8 +104,9 @@ describe('geradorEnergia', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, trabalho, tempo] =
-        /W = (\d+)\\,\\text\{J\} \\qquad \\Delta t = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, trabalho, tempo] = /W = (\d+)\\,\\text\{J\} \\qquad \\Delta t = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBeCloseTo(Number(trabalho) / Number(tempo), 9);
     }
@@ -122,9 +129,7 @@ describe('geradorEnergia', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('massa se CANCELA')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('massa se CANCELA'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('massa se CANCELA'))!;
 
     const resultado = corrigir(geradorEnergia, exercicio, String(armadilha.resposta));
 

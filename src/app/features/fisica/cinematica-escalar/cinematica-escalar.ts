@@ -11,8 +11,15 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { AreaPlot, CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import {
+  AreaPlot,
+  CurvaPlot,
+  PontoPlot,
+} from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/cinematica-escalar/cinematica-escalar.i18n.json';
 import { geradorCinematica } from '@features/fisica/cinematica-escalar/cinematica-escalar.gerador';
 import { TEORIA_CINEMATICA } from '@features/fisica/cinematica-escalar/cinematica-escalar.teoria';
 
@@ -32,6 +39,8 @@ import { TEORIA_CINEMATICA } from '@features/fisica/cinematica-escalar/cinematic
   styleUrl: './cinematica-escalar.scss',
 })
 export class CinematicaEscalar {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorCinematica;
   protected readonly conceitos = TEORIA_CINEMATICA.map((teoria) => teoria.id);
 
@@ -76,7 +85,7 @@ export class CinematicaEscalar {
     const v0 = this.velocidadeInicial();
     const a = this.aceleracao();
 
-    return [{ fn: (t) => v0 + a * t, cor: 'serie-1', rotulo: 'v(t)' }];
+    return [{ fn: (t) => v0 + a * t, cor: 'serie-1', rotulo: this.texto('curvaV') }];
   });
 
   protected readonly areaDeslocamento = computed<readonly AreaPlot[]>(() => {
@@ -95,12 +104,12 @@ export class CinematicaEscalar {
     const inclinacao = v0 + a * t0;
 
     return [
-      { fn: (t) => v0 * t + (a * t * t) / 2, cor: 'serie-2', rotulo: 's(t)' },
+      { fn: (t) => v0 * t + (a * t * t) / 2, cor: 'serie-2', rotulo: this.texto('curvaS') },
       {
         fn: (t) => s0 + inclinacao * (t - t0),
         cor: 'acento',
         tracejada: true,
-        rotulo: 'tangente = velocidade',
+        rotulo: this.texto('curvaTangente'),
       },
     ];
   });

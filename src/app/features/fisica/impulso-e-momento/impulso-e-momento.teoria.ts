@@ -50,7 +50,7 @@ export const TEORIA_MOMENTO: readonly Teoria[] = [
       'no vácuo — ele não empurra nada externo, apenas joga massa para trás.',
     formulas: [
       { tex: '\\sum \\vec{p}_i = \\sum \\vec{p}_f' },
-      { tex: 'm_1 v_1 + m_2 v_2 = m_1 v_1\' + m_2 v_2\'' },
+      { tex: "m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2'" },
     ],
     demonstracao: [
       {
@@ -90,7 +90,7 @@ export const TEORIA_MOMENTO: readonly Teoria[] = [
     formulas: [
       { tex: 'v_f = \\frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}', legenda: 'Perfeitamente inelástica.' },
       {
-        tex: 'v_1\' = \\frac{(m_1-m_2)v_1 + 2m_2 v_2}{m_1+m_2}',
+        tex: "v_1' = \\frac{(m_1-m_2)v_1 + 2m_2 v_2}{m_1+m_2}",
         legenda: 'Elástica: resolve momento e energia juntos.',
       },
     ],
@@ -110,7 +110,7 @@ export const TEORIA_MOMENTO: readonly Teoria[] = [
       },
       {
         descricao: 'Com massas iguais, a solução é a troca de velocidades.',
-        tex: 'm_1 = m_2 \\;\\Rightarrow\\; v_1\' = v_2,\\; v_2\' = v_1',
+        tex: "m_1 = m_2 \\;\\Rightarrow\\; v_1' = v_2,\\; v_2' = v_1",
         nota: 'É o que se vê no berço de Newton.',
       },
     ],

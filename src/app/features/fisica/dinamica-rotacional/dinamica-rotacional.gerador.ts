@@ -12,7 +12,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de dinâmica rotacional.
@@ -109,7 +115,10 @@ function daInercia(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'rotacional.dicionario',
       },
     ],
-    dica: nivel === 'facil' ? 'O fator de forma vai multiplicando a massa e o raio ao quadrado.' : undefined,
+    dica:
+      nivel === 'facil'
+        ? 'O fator de forma vai multiplicando a massa e o raio ao quadrado.'
+        : undefined,
   });
 }
 
@@ -154,8 +163,7 @@ function doTorque(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: torque / (massa * raio * raio),
-        diagnostico:
-          'O fator de forma do corpo ficou de fora do momento de inércia.',
+        diagnostico: 'O fator de forma do corpo ficou de fora do momento de inércia.',
         passo: 0,
         conceito: 'rotacional.inercia',
       },
@@ -214,9 +222,7 @@ function daEnergia(nivel: Nivel, rng: Rng): Exercicio<number> {
 
 /** Rolamento sem deslizar: quem chega antes na rampa. */
 function doRolamento(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const corpo = rng.escolher(
-    CORPOS_POR_RAIO.filter((candidato) => candidato.nome !== 'partícula'),
-  );
+  const corpo = rng.escolher(CORPOS_POR_RAIO.filter((candidato) => candidato.nome !== 'partícula'));
   const altura = rng.inteiro(2, 60) / 10;
 
   const gabarito = Math.sqrt((2 * 9.81 * altura) / (1 + corpo.fator));

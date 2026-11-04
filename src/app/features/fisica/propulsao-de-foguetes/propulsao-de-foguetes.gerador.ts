@@ -80,8 +80,7 @@ function exercicioEmpuxo(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: exaustao / vazao / 1000,
-          diagnostico:
-            'O empuxo é um PRODUTO: vazão multiplicada pela velocidade de exaustão.',
+          diagnostico: 'O empuxo é um PRODUTO: vazão multiplicada pela velocidade de exaustão.',
           passo: 0,
           conceito: 'propulsao.empuxo',
         },
@@ -161,8 +160,7 @@ function exercicioDeltaV(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Um foguete tem razão de massas ${razao} e velocidade de exaustão de ${exaustao} m/s. ` +
       'Qual é o delta-v disponível, em km/s? (2 casas decimais)',
-    enunciadoTex:
-      `\\frac{m_0}{m_f} = ${razao} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
+    enunciadoTex: `\\frac{m_0}{m_f} = ${razao} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
     conceitos: ['propulsao.tsiolkovsky'],
@@ -178,8 +176,7 @@ function exercicioDeltaV(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: (exaustao * Math.log10(razao)) / 1000,
-          diagnostico:
-            'O logaritmo é NATURAL (base e), não decimal. Ele vem da integral de 1/m.',
+          diagnostico: 'O logaritmo é NATURAL (base e), não decimal. Ele vem da integral de 1/m.',
           passo: 1,
           conceito: 'propulsao.tsiolkovsky',
         },
@@ -211,8 +208,7 @@ function exercicioRazaoMassas(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Para obter ${deltaVKm.toLocaleString('pt-BR')} km/s de delta-v com exaustão a ` +
       `${exaustao} m/s, qual razão de massas é necessária? (2 casas decimais)`,
-    enunciadoTex:
-      `\\Delta v = ${String(deltaVKm).replace('.', '{,}')}\\,\\text{km/s} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
+    enunciadoTex: `\\Delta v = ${String(deltaVKm).replace('.', '{,}')}\\,\\text{km/s} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
     gabarito: resultado,
     resolucao: {
       resultado,
@@ -275,8 +271,7 @@ function exercicioFracaoCombustivel(nivel: Nivel, rng: Rng): Exercicio<number> {
       `Um foguete parte com ${(massaInicial / 1000).toLocaleString('pt-BR')} t e termina a ` +
       `queima com ${(massaFinal / 1000).toLocaleString('pt-BR')} t. Que fração da massa ` +
       'inicial era propelente? (responda entre 0 e 1, com 2 casas decimais)',
-    enunciadoTex:
-      `m_0 = ${massaInicial}\\,\\text{kg} \\qquad m_f = ${Number(massaFinal.toFixed(0))}\\,\\text{kg}`,
+    enunciadoTex: `m_0 = ${massaInicial}\\,\\text{kg} \\qquad m_f = ${Number(massaFinal.toFixed(0))}\\,\\text{kg}`,
     gabarito,
     resolucao: {
       resultado: gabarito,

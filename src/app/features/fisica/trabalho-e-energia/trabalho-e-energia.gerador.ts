@@ -287,8 +287,7 @@ function exercicioAlturaMaxima(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: velocidade / GRAVIDADE_PADRAO,
-          diagnostico:
-            'Esse é o TEMPO de subida, em segundos. A pergunta pede altura, em metros.',
+          diagnostico: 'Esse é o TEMPO de subida, em segundos. A pergunta pede altura, em metros.',
           passo: 0,
           conceito: 'energia.conservacao',
         },

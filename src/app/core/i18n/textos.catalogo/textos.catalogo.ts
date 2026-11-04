@@ -17,6 +17,12 @@ import t_distribuicao_normal from '@features/estatistica/distribuicao-normal/dis
 import t_estatistica_e_incerteza from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.i18n.json';
 import t_probabilidade from '@features/estatistica/probabilidade/probabilidade.i18n.json';
 import t_regressao_e_correlacao from '@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.i18n.json';
+import t_analise_dimensional from '@features/fisica/analise-dimensional/analise-dimensional.i18n.json';
+import t_cinematica_escalar from '@features/fisica/cinematica-escalar/cinematica-escalar.i18n.json';
+import t_cinematica_vetorial from '@features/fisica/cinematica-vetorial/cinematica-vetorial.i18n.json';
+import t_leis_de_newton from '@features/fisica/leis-de-newton/leis-de-newton.i18n.json';
+import t_movimento_circular from '@features/fisica/movimento-circular/movimento-circular.i18n.json';
+import t_trabalho_e_energia from '@features/fisica/trabalho-e-energia/trabalho-e-energia.i18n.json';
 import t_composicao_inversa from '@features/funcoes/composicao-inversa/composicao-inversa.i18n.json';
 import t_conceito_funcao from '@features/funcoes/conceito-funcao/conceito-funcao.i18n.json';
 import t_funcao_afim from '@features/funcoes/funcao-afim/funcao-afim.i18n.json';
@@ -74,6 +80,12 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['estatistica-e-incerteza', t_estatistica_e_incerteza as TabelaDeTextos],
   ['probabilidade', t_probabilidade as TabelaDeTextos],
   ['regressao-e-correlacao', t_regressao_e_correlacao as TabelaDeTextos],
+  ['analise-dimensional', t_analise_dimensional as TabelaDeTextos],
+  ['cinematica-escalar', t_cinematica_escalar as TabelaDeTextos],
+  ['cinematica-vetorial', t_cinematica_vetorial as TabelaDeTextos],
+  ['leis-de-newton', t_leis_de_newton as TabelaDeTextos],
+  ['movimento-circular', t_movimento_circular as TabelaDeTextos],
+  ['trabalho-e-energia', t_trabalho_e_energia as TabelaDeTextos],
   ['composicao-inversa', t_composicao_inversa as TabelaDeTextos],
   ['conceito-funcao', t_conceito_funcao as TabelaDeTextos],
   ['funcao-afim', t_funcao_afim as TabelaDeTextos],

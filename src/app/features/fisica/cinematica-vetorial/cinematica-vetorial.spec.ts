@@ -164,10 +164,7 @@ describe('cinemática vetorial', () => {
   });
 
   it('aceleração perpendicular à velocidade não muda a rapidez', () => {
-    const { resultado, passos } = componentesDaAceleracaoComPassos(
-      { x: 3, y: 0 },
-      { x: 0, y: 5 },
-    );
+    const { resultado, passos } = componentesDaAceleracaoComPassos({ x: 3, y: 0 }, { x: 0, y: 5 });
 
     expect(resultado).toBeCloseTo(0, 12);
     expect(passos[2]!.nota).toContain('rapidez não muda');

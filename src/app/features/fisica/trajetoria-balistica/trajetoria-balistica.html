@@ -48,9 +48,9 @@
         [altura]="380"
       />
       <p class="observacao">
-        A curva é uma parábola — a mesma função quadrática do ensino médio, agora saindo da
-        física. Compare dois ângulos complementares, como 30° e 60°: com altura inicial zero,
-        eles alcançam exatamente a mesma distância, por caminhos bem diferentes.
+        A curva é uma parábola — a mesma função quadrática do ensino médio, agora saindo da física.
+        Compare dois ângulos complementares, como 30° e 60°: com altura inicial zero, eles alcançam
+        exatamente a mesma distância, por caminhos bem diferentes.
       </p>
     </section>
 
@@ -63,16 +63,14 @@
           <span class="legenda">alcance de {{ formatar(anguloOtimo().alcance) }} m</span>
         </div>
       </div>
-      <button type="button" class="usar-otimo" (click)="usarOtimo()">
-        Usar o ângulo ótimo
-      </button>
+      <button type="button" class="usar-otimo" (click)="usarOtimo()">Usar o ângulo ótimo</button>
       <p class="observacao">
         @if (altura() === 0) {
-          Com lançamento do chão, o ótimo é exatamente 45°: aumentar o ângulo ganha tempo de
-          voo mas perde velocidade horizontal, e 45° equilibra os dois efeitos.
+          Com lançamento do chão, o ótimo é exatamente 45°: aumentar o ângulo ganha tempo de voo mas
+          perde velocidade horizontal, e 45° equilibra os dois efeitos.
         } @else {
-          Lançando de {{ altura() }} m de altura, o ângulo ótimo cai abaixo de 45° — o tempo
-          extra de queda já vem de graça, então compensa privilegiar a velocidade horizontal.
+          Lançando de {{ altura() }} m de altura, o ângulo ótimo cai abaixo de 45° — o tempo extra
+          de queda já vem de graça, então compensa privilegiar a velocidade horizontal.
         }
       </p>
     </section>
@@ -89,9 +87,9 @@
         [bloco]="true"
       />
       <p class="observacao">
-        Esta única equação usa trigonometria para decompor a velocidade, função quadrática
-        para descrever a curva e derivada para encontrar o ponto mais alto. É o tópico em que
-        quase tudo o que veio antes se junta.
+        Esta única equação usa trigonometria para decompor a velocidade, função quadrática para
+        descrever a curva e derivada para encontrar o ponto mais alto. É o tópico em que quase tudo
+        o que veio antes se junta.
       </p>
     </section>
 

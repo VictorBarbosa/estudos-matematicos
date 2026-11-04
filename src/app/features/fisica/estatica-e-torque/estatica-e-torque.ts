@@ -49,11 +49,7 @@ export class EstaticaETorque {
   );
 
   protected readonly alavanca = computed(() =>
-    equilibrioAlavancaComPassos(
-      this.pesoEsquerda(),
-      this.distanciaEsquerda(),
-      this.forcaDireita(),
-    ),
+    equilibrioAlavancaComPassos(this.pesoEsquerda(), this.distanciaEsquerda(), this.forcaDireita()),
   );
 
   protected readonly centroMassa = computed(() =>

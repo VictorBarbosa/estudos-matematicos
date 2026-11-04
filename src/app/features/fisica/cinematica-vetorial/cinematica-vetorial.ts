@@ -8,6 +8,8 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/cinematica-vetorial/cinematica-vetorial.i18n.json';
 import { geradorCinematicaVetorial } from '@features/fisica/cinematica-vetorial/cinematica-vetorial.gerador';
 import { TEORIA_CINEMATICA_VETORIAL } from '@features/fisica/cinematica-vetorial/cinematica-vetorial.teoria';
 
@@ -19,6 +21,7 @@ import { TEORIA_CINEMATICA_VETORIAL } from '@features/fisica/cinematica-vetorial
   styleUrl: './cinematica-vetorial.scss',
 })
 export class CinematicaVetorial {
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorCinematicaVetorial;
   protected readonly conceitos = TEORIA_CINEMATICA_VETORIAL.map((teoria) => teoria.id);
 
@@ -38,9 +41,7 @@ export class CinematicaVetorial {
 
   protected readonly rapidezNoAr = computed(() => modulo(this.aeronave()));
   protected readonly rapidezNoSolo = computed(() => modulo(this.solo()));
-  protected readonly somaDosModulos = computed(
-    () => this.rapidezNoAr() + modulo(this.vento()),
-  );
+  protected readonly somaDosModulos = computed(() => this.rapidezNoAr() + modulo(this.vento()));
 
   protected readonly rumoDoNariz = computed(() => direcaoGraus(this.aeronave()));
   protected readonly rumoEfetivo = computed(() => direcaoGraus(this.solo()));
@@ -56,7 +57,15 @@ export class CinematicaVetorial {
     const solo = this.solo();
 
     return [
-      { x1: 0, y1: 0, x2: ar.x, y2: ar.y, cor: 'serie-1', seta: true, rotulo: 'em relação ao ar' },
+      {
+        x1: 0,
+        y1: 0,
+        x2: ar.x,
+        y2: ar.y,
+        cor: 'serie-1',
+        seta: true,
+        rotulo: this.texto('segmentoAr'),
+      },
       {
         x1: ar.x,
         y1: ar.y,
@@ -64,19 +73,23 @@ export class CinematicaVetorial {
         y2: solo.y,
         cor: 'serie-3',
         seta: true,
-        rotulo: 'vento',
+        rotulo: this.texto('segmentoVento'),
       },
-      { x1: 0, y1: 0, x2: solo.x, y2: solo.y, cor: 'acento', seta: true, rotulo: 'em relação ao solo' },
+      {
+        x1: 0,
+        y1: 0,
+        x2: solo.x,
+        y2: solo.y,
+        cor: 'acento',
+        seta: true,
+        rotulo: this.texto('segmentoSolo'),
+      },
     ];
   });
 
   protected readonly dominio = computed(() => ({ xMin: -60, xMax: 280, yMin: -120, yMax: 120 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Triângulo de velocidades: a seta da aeronave em relação ao ar, o vento somado na ponta, ' +
-      'e a resultante que o solo enxerga.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_CINEMATICA_VETORIAL);

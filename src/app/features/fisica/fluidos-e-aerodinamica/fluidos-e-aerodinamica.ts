@@ -57,9 +57,7 @@ export class FluidosEAerodinamica {
   protected readonly velocidadeSuperior = signal(60);
   protected readonly massaAviao = signal(600);
 
-  protected readonly pressao = computed(() =>
-    pressaoHidrostaticaComPassos(this.profundidade()),
-  );
+  protected readonly pressao = computed(() => pressaoHidrostaticaComPassos(this.profundidade()));
 
   protected readonly empuxo = computed(() =>
     empuxoArquimedesComPassos(this.volumeLitros() / 1000, this.densidadeCorpo()),
@@ -114,8 +112,7 @@ export class FluidosEAerodinamica {
 
     return [
       {
-        fn: (v) =>
-          v < 0 ? Number.NaN : (DENSIDADE_AR * ((v * razao) ** 2 - v ** 2) * area) / 2,
+        fn: (v) => (v < 0 ? Number.NaN : (DENSIDADE_AR * ((v * razao) ** 2 - v ** 2) * area) / 2),
         cor: 'serie-1',
         rotulo: 'sustentação',
       },

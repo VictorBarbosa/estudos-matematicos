@@ -1,40 +1,36 @@
 <app-topico-layout topicoId="cinematica-vetorial">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Velocidades não se somam como números</h2>
+      <h2>{{ texto('velocidadesNaoSeSomam') }}</h2>
       <app-formula [tex]="'\\vec{v}_{solo} = \\vec{v}_{ar} + \\vec{v}_{vento}'" [bloco]="true" />
-      <p class="observacao">
-        Um avião não voa em relação ao solo: voa em relação ao ar, e o ar inteiro se move. O que
-        o solo vê é a soma vetorial das duas velocidades — e é por isso que o instrumento de
-        bordo e o GPS discordam quando há vento.
-      </p>
+      <p class="observacao">{{ texto('umAviaoNaoVoa') }}</p>
     </section>
 
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="aeronaveX"
-        rotulo="Aeronave, componente leste"
+        [rotulo]="texto('aeronaveLeste')"
         [min]="0"
         [max]="250"
         [passo]="10"
       />
       <app-controle-parametro
         [(valor)]="aeronaveY"
-        rotulo="Aeronave, componente norte"
+        [rotulo]="texto('aeronaveNorte')"
         [min]="-100"
         [max]="100"
         [passo]="10"
       />
       <app-controle-parametro
         [(valor)]="ventoX"
-        rotulo="Vento, componente leste"
+        [rotulo]="texto('ventoLeste')"
         [min]="-60"
         [max]="60"
         [passo]="5"
       />
       <app-controle-parametro
         [(valor)]="ventoY"
-        rotulo="Vento, componente norte"
+        [rotulo]="texto('ventoNorte')"
         [min]="-60"
         [max]="60"
         [passo]="5"
@@ -47,53 +43,45 @@
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">Rapidez no ar</span>
+        <span class="rotulo">{{ texto('rapidezNoAr') }}</span>
         <strong>{{ formatar(rapidezNoAr()) }}</strong>
-        <span class="legenda">o que o instrumento mostra</span>
+        <span class="legenda">{{ texto('oQueOInstrumento') }}</span>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Rapidez no solo</span>
+        <span class="rotulo">{{ texto('rapidezNoSolo') }}</span>
         <strong>{{ formatar(rapidezNoSolo()) }}</strong>
-        <span class="legenda">o que o GPS mostra</span>
+        <span class="legenda">{{ texto('oQueOGps') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Soma dos módulos</span>
+        <span class="rotulo">{{ texto('somaDosModulos') }}</span>
         <strong>{{ formatar(somaDosModulos()) }}</strong>
-        <span class="legenda">a conta errada</span>
+        <span class="legenda">{{ texto('aContaErrada') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Deriva</span>
+        <span class="rotulo">{{ texto('deriva') }}</span>
         <strong>{{ formatar(deriva()) }}°</strong>
-        <span class="legenda">entre o nariz e o rumo real</span>
+        <span class="legenda">{{ texto('entreONariz') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>O triângulo de velocidades</h2>
+      <h2>{{ texto('trianguloDeVelocidades') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [segmentos]="segmentos()"
         [descricao]="descricaoGrafico()"
         [altura]="360"
       />
-      <p class="observacao">
-        Compare os dois números do meio: a soma dos módulos só coincide com a rapidez no solo
-        quando vento e rumo estão perfeitamente alinhados. Em qualquer outro caso ela
-        superestima — às vezes muito.
-      </p>
+      <p class="observacao">{{ texto('compareOsDois') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Acelerar sem mudar de rapidez</h2>
+      <h2>{{ texto('acelerarSemMudar') }}</h2>
       <app-formula
         [tex]="'a_{t} = \\frac{\\vec{a} \\cdot \\vec{v}}{\\left|\\vec{v}\\right|} \\qquad a_{n} = \\sqrt{\\left|\\vec{a}\\right|^{2} - a_{t}^{2}}'"
         [bloco]="true"
       />
-      <p class="observacao">
-        A aceleração tem duas caras: a tangencial muda a rapidez, a normal muda a direção. Numa
-        curva a velocidade constante, a tangencial é zero e a aceleração é toda normal — há
-        aceleração sem que o velocímetro mexa.
-      </p>
+      <p class="observacao">{{ texto('aAceleracaoTem') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

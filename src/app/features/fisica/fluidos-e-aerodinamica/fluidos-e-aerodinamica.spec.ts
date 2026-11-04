@@ -13,7 +13,9 @@ describe('geradorFluidos', () => {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {
         for (const armadilha of exercicio.armadilhas) {
-          expect(geradorFluidos.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(false);
+          expect(geradorFluidos.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(
+            false,
+          );
         }
       }
     });
@@ -55,7 +57,9 @@ describe('geradorFluidos', () => {
   });
 
   it('a fração submersa é a razão das densidades e fica entre 0 e 1', () => {
-    const exercicios = amostra('medio', 150).filter((e) => e.enunciado.includes('fração do seu volume'));
+    const exercicios = amostra('medio', 150).filter((e) =>
+      e.enunciado.includes('fração do seu volume'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 

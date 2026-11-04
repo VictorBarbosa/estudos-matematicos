@@ -1,7 +1,10 @@
 import { GRAVIDADE, resolverLancamentoComPassos } from '@core/math';
 import { criarRng } from '@core/treino/rng/rng';
 import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
-import { alcanceDe, geradorBalistica } from '@features/fisica/trajetoria-balistica/trajetoria-balistica.gerador';
+import {
+  alcanceDe,
+  geradorBalistica,
+} from '@features/fisica/trajetoria-balistica/trajetoria-balistica.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
   const rng = criarRng(1123);
@@ -65,9 +68,7 @@ describe('geradorBalistica', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('velocidade TOTAL')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('velocidade TOTAL'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('velocidade TOTAL'))!;
 
     const resultado = corrigir(geradorBalistica, exercicio, String(armadilha.resposta));
     expect(resultado.veredito).toBe('incorreto');

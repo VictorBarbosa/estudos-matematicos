@@ -1,32 +1,42 @@
 <app-topico-layout topicoId="analise-dimensional">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Combine duas grandezas</h2>
+      <h2>{{ texto('combineDuas') }}</h2>
       <div class="selecoes">
         <label>
-          Grandeza A
+          {{ texto('grandezaA') }}
           <select (change)="selecionarPrimeira($event)">
             @for (grandeza of grandezas; track grandeza.nome) {
               <option [value]="grandeza.nome" [selected]="primeira() === grandeza">
-                {{ grandeza.nome }} ({{ grandeza.unidade }})
+                {{
+                  texto('opcaoNaUnidade', {
+                    nome: i18n.t('grandeza.' + grandeza.nome),
+                    unidade: grandeza.unidade,
+                  })
+                }}
               </option>
             }
           </select>
         </label>
 
         <label>
-          Grandeza B
+          {{ texto('grandezaB') }}
           <select (change)="selecionarSegunda($event)">
             @for (grandeza of grandezas; track grandeza.nome) {
               <option [value]="grandeza.nome" [selected]="segunda() === grandeza">
-                {{ grandeza.nome }} ({{ grandeza.unidade }})
+                {{
+                  texto('opcaoNaUnidade', {
+                    nome: i18n.t('grandeza.' + grandeza.nome),
+                    unidade: grandeza.unidade,
+                  })
+                }}
               </option>
             }
           </select>
         </label>
       </div>
 
-      <div class="seletor-pills" role="group" aria-label="Operação">
+      <div class="seletor-pills" role="group" [attr.aria-label]="i18n.t('explorar.operacao')">
         @for (opcao of operacoes; track opcao.id) {
           <button
             type="button"
@@ -42,32 +52,35 @@
       <app-formula [tex]="resultadoTex()" [bloco]="true" />
 
       @if (reconhecida(); as reconhecida) {
-        <p class="observacao">
-          Essa dimensão é de <strong>{{ reconhecida.nome }}</strong>, cuja unidade no SI é
-          {{ reconhecida.unidade }}.
-        </p>
+        <!-- O nome vem em <strong> no meio da frase traduzida. -->
+        <p
+          class="observacao"
+          [innerHTML]="
+            texto('reconhecida', {
+              nome: i18n.t('grandeza.' + reconhecida.nome),
+              unidade: reconhecida.unidade,
+            })
+          "
+        ></p>
       } @else {
-        <p class="observacao">
-          Nenhuma das grandezas da tabela tem essa dimensão — o que não significa que ela não
-          exista, só que não está entre as usadas aqui.
-        </p>
+        <p class="observacao">{{ texto('naoReconhecida') }}</p>
       }
     </section>
 
     <section>
-      <h2>Tabela de dimensões</h2>
+      <h2>{{ texto('tabelaDeDimensoes') }}</h2>
       <table class="dimensoes">
         <thead>
           <tr>
-            <th scope="col">Grandeza</th>
-            <th scope="col">Unidade (SI)</th>
-            <th scope="col">Dimensão</th>
+            <th scope="col">{{ texto('colunaGrandeza') }}</th>
+            <th scope="col">{{ texto('colunaUnidade') }}</th>
+            <th scope="col">{{ texto('colunaDimensao') }}</th>
           </tr>
         </thead>
         <tbody>
           @for (grandeza of grandezas; track grandeza.nome) {
             <tr [class.destacada]="grandeza === primeira() || grandeza === segunda()">
-              <td>{{ grandeza.nome }}</td>
+              <td>{{ i18n.t('grandeza.' + grandeza.nome) }}</td>
               <td>{{ grandeza.unidade }}</td>
               <td>
                 <app-formula [tex]="dimensaoTex(grandeza.dimensao)" />
@@ -76,42 +89,32 @@
           }
         </tbody>
       </table>
-      <p class="observacao">
-        Nenhuma linha dessa tabela precisa ser decorada: todas saem da definição da grandeza.
-        Força é massa vezes aceleração, energia é força vezes distância, potência é energia
-        por tempo.
-      </p>
+      <p class="observacao">{{ texto('nenhumaLinha') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Qual delas pode ser o período do pêndulo?</h2>
+      <h2>{{ texto('qualDelasPeriodo') }}</h2>
       <table class="candidatas">
         <tbody>
           @for (candidata of candidatasPendulo(); track candidata.tex) {
             <tr [class.correta]="candidata.correta">
               <td><app-formula [tex]="candidata.tex" /></td>
               <td><app-formula [tex]="dimensaoTex(candidata.dimensao)" /></td>
-              <td>{{ candidata.correta ? '✓ tem dimensão de tempo' : '✗ dimensão errada' }}</td>
+              <td>
+                {{ candidata.correta ? texto('temDimensaoDeTempo') : texto('dimensaoErrada') }}
+              </td>
             </tr>
           }
         </tbody>
       </table>
-      <p class="observacao">
-        Uma única candidata sobrevive ao teste dimensional — e, de passagem, ele revela que o
-        período não depende da massa do pêndulo, já que massa não aparece em lugar nenhum. O
-        que o teste <em>não</em> dá é o 2π: fatores numéricos são adimensionais e passam
-        livremente.
-      </p>
+      <!-- A negação em <em> cai sobre palavras diferentes em cada língua. -->
+      <p class="observacao" [innerHTML]="texto('umaUnicaCandidata')"></p>
     </section>
 
     <section>
-      <h2>Comparando com a dimensão de energia</h2>
+      <h2>{{ texto('comparandoComEnergia') }}</h2>
       <app-passo-a-passo [passos]="verificacao().passos" />
-      <p class="observacao">
-        Monte combinações acima e veja quando elas batem com energia. Dimensão igual não prova
-        que a fórmula está certa; dimensão diferente prova que está errada. Em prova, é a
-        checagem mais rápida que existe.
-      </p>
+      <p class="observacao">{{ texto('monteCombinacoes') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

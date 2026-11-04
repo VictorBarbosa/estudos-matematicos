@@ -56,8 +56,8 @@ describe('geradorTransferenciaDeCalor', () => {
   it('todo exercício de radiação oferece a armadilha do Celsius', () => {
     // É o erro fatal do tópico: com a quarta potência, a escala errada não
     // desloca o resultado, ela o destrói.
-    const radiativos = amostra('dificil', 250).filter(
-      (exercicio) => exercicio.enunciado.includes('potência irradiada'),
+    const radiativos = amostra('dificil', 250).filter((exercicio) =>
+      exercicio.enunciado.includes('potência irradiada'),
     );
 
     expect(radiativos.length).toBeGreaterThan(0);
@@ -74,9 +74,7 @@ describe('geradorTransferenciaDeCalor', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('espessura DIVIDE')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('espessura DIVIDE'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('espessura DIVIDE'))!;
     const resultado = corrigir(
       geradorTransferenciaDeCalor,
       exercicio,
@@ -135,10 +133,7 @@ describe('transferência de calor', () => {
   });
 
   it('um corpo negro a 300 K emite cerca de 459 W por metro quadrado', () => {
-    expect(radiacaoComPassos(1, 1, 300).resultado).toBeCloseTo(
-      STEFAN_BOLTZMANN * 300 ** 4,
-      10,
-    );
+    expect(radiacaoComPassos(1, 1, 300).resultado).toBeCloseTo(STEFAN_BOLTZMANN * 300 ** 4, 10);
     expect(radiacaoComPassos(1, 1, 300).resultado).toBeGreaterThan(450);
   });
 

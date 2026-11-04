@@ -18,7 +18,10 @@ export const TEORIA_GRAVITACAO: readonly Teoria[] = [
       'física moderna.',
     formulas: [
       { tex: 'F = G\\frac{m_1 m_2}{d^{2}}' },
-      { tex: 'g = \\frac{GM}{r^{2}}', legenda: 'A gravidade local é a força por unidade de massa.' },
+      {
+        tex: 'g = \\frac{GM}{r^{2}}',
+        legenda: 'A gravidade local é a força por unidade de massa.',
+      },
     ],
     demonstracao: [
       {

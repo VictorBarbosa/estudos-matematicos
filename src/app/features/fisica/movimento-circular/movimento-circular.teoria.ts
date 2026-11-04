@@ -40,10 +40,7 @@ export const TEORIA_MOVIMENTO_CIRCULAR: readonly Teoria[] = [
       'para todos os pontos de um corpo rígido. A tangencial mede metros por segundo e cresce ' +
       'com a distância ao eixo: a ponta de uma pá de turbina anda muito mais rápido que a raiz ' +
       'dela, embora as duas deem o mesmo número de voltas.',
-    formulas: [
-      { tex: '\\omega = \\frac{2\\pi}{T} = 2\\pi f' },
-      { tex: 'v = \\omega r' },
-    ],
+    formulas: [{ tex: '\\omega = \\frac{2\\pi}{T} = 2\\pi f' }, { tex: 'v = \\omega r' }],
     demonstracao: [
       {
         descricao: 'Uma volta inteira são 2 pi radianos.',
@@ -72,7 +69,10 @@ export const TEORIA_MOVIMENTO_CIRCULAR: readonly Teoria[] = [
       'trajetória. Dobrar a velocidade quadruplica essa aceleração.',
     formulas: [
       { tex: 'a_{c} = \\frac{v^{2}}{r} = \\omega^{2}r' },
-      { tex: '\\vec{a}_{c} \\perp \\vec{v}', legenda: 'Perpendicular, e por isso não acelera nem freia.' },
+      {
+        tex: '\\vec{a}_{c} \\perp \\vec{v}',
+        legenda: 'Perpendicular, e por isso não acelera nem freia.',
+      },
     ],
     demonstracao: [
       {
@@ -105,10 +105,7 @@ export const TEORIA_MOVIMENTO_CIRCULAR: readonly Teoria[] = [
       'que aponta para o centro. Num carro em curva ela é o atrito; num satélite, a gravidade; ' +
       'numa pedra girando na corda, a tensão. Listá-la junto das outras forças num diagrama é ' +
       'contá-la duas vezes.',
-    formulas: [
-      { tex: 'F_{c} = ma_{c} = m\\frac{v^{2}}{r}' },
-      { tex: 'F_{c} = m\\omega^{2}r' },
-    ],
+    formulas: [{ tex: 'F_{c} = ma_{c} = m\\frac{v^{2}}{r}' }, { tex: 'F_{c} = m\\omega^{2}r' }],
     demonstracao: [
       {
         descricao: 'Num satélite em órbita circular, quem faz o papel é a gravidade.',

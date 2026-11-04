@@ -16,7 +16,8 @@ const proximos = (a: number, b: number): boolean => {
   return escala === 0 ? true : Math.abs(a - b) / escala < 0.005;
 };
 
-type Pergunta = 'volume-gas' | 'pressao-gas' | 'transformacao' | 'energia-interna' | 'trabalho-isobarico';
+type Pergunta =
+  'volume-gas' | 'pressao-gas' | 'transformacao' | 'energia-interna' | 'trabalho-isobarico';
 
 export const geradorTermo: GeradorExercicio<number> = {
   topicoId: 'termodinamica-e-gases',
@@ -71,8 +72,7 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Que volume ocupam ${mols} mol de gás ideal a ${temperaturaCelsius} °C e 1 atm? (em ` +
       'litros, 2 casas decimais)',
-    enunciadoTex:
-      `n = ${mols}\\,\\text{mol} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C} \\qquad p = 1\\,\\text{atm}`,
+    enunciadoTex: `n = ${mols}\\,\\text{mol} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C} \\qquad p = 1\\,\\text{atm}`,
     gabarito,
     resolucao: {
       resultado: gabarito,
@@ -89,7 +89,9 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
       [
         {
           resposta:
-            temperaturaCelsius === 0 ? gabarito / 2 : (mols * R_GASES * temperaturaCelsius * 1000) / pressao,
+            temperaturaCelsius === 0
+              ? gabarito / 2
+              : (mols * R_GASES * temperaturaCelsius * 1000) / pressao,
           diagnostico:
             'A temperatura precisa estar em KELVIN. Em celsius, o zero da escala é arbitrário e ' +
             'a proporcionalidade se quebra — a 0 °C o resultado seria zero.',
@@ -130,8 +132,7 @@ function exercicioPressao(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Qual é a pressão de ${mols} mol de gás ideal em ${volumeLitros} L a ` +
       `${temperaturaCelsius} °C? (em kPa, 2 casas decimais)`,
-    enunciadoTex:
-      `n = ${mols} \\qquad V = ${volumeLitros}\\,\\text{L} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C}`,
+    enunciadoTex: `n = ${mols} \\qquad V = ${volumeLitros}\\,\\text{L} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C}`,
     gabarito,
     resolucao: {
       resultado: gabarito,

@@ -1,0 +1,64 @@
+{
+  "aceleracaoMs2": {
+    "pt": "Aceleração (m/s²)",
+    "fr": "Accélération (m/s²)",
+    "en": "Acceleration (m/s²)"
+  },
+  "areaSobVelocidade": {
+    "pt": "Área sob a velocidade é deslocamento",
+    "fr": "L’aire sous la vitesse est le déplacement",
+    "en": "Area under the velocity is displacement"
+  },
+  "descricaoVelocidade": {
+    "pt": "Gráfico de velocidade por tempo, com a área sombreada até o instante escolhido.",
+    "fr": "Graphique de la vitesse en fonction du temps, avec l’aire ombrée jusqu’à l’instant choisi.",
+    "en": "Graph of velocity against time, with the area shaded up to the chosen moment."
+  },
+  "curvaV": { "pt": "v(t)", "fr": "v(t)", "en": "v(t)" },
+  "curvaS": { "pt": "s(t)", "fr": "s(t)", "en": "s(t)" },
+  "curvaTangente": {
+    "pt": "tangente = velocidade",
+    "fr": "tangente = vitesse",
+    "en": "tangent = velocity"
+  },
+  "aRegiaoSombreada": {
+    "pt": "A região sombreada é um retângulo (da velocidade inicial) mais um triângulo (da aceleração) — exatamente os dois termos da equação da posição. Isso não é analogia: área sob a velocidade <em>é</em> deslocamento, e é a integral aparecendo antes do tempo.",
+    "fr": "La région ombrée est un rectangle (de la vitesse initiale) plus un triangle (de l’accélération) — exactement les deux termes de l’équation de la position. Ce n’est pas une analogie : l’aire sous la vitesse <em>est</em> le déplacement, et c’est l’intégrale qui apparaît avant l’heure.",
+    "en": "The shaded region is a rectangle (from the initial velocity) plus a triangle (from the acceleration) — exactly the two terms of the position equation. This is not an analogy: the area under the velocity <em>is</em> the displacement, and it is the integral showing up ahead of time."
+  },
+  "inclinacaoDaPosicao": {
+    "pt": "Inclinação da posição é velocidade",
+    "fr": "La pente de la position est la vitesse",
+    "en": "The slope of the position is the velocity"
+  },
+  "descricaoPosicao": {
+    "pt": "Gráfico de posição por tempo, com a tangente no instante escolhido.",
+    "fr": "Graphique de la position en fonction du temps, avec la tangente à l’instant choisi.",
+    "en": "Graph of position against time, with the tangent at the chosen moment."
+  },
+  "aRetaTracejada": {
+    "pt": "A reta tracejada é a tangente no instante escolhido, e sua inclinação é <strong>{v} m/s</strong> — a velocidade naquele momento. Posição curva, velocidade reta, aceleração constante: cada gráfico é a inclinação do anterior.",
+    "fr": "La droite en pointillé est la tangente à l’instant choisi, et sa pente vaut <strong>{v} m/s</strong> — la vitesse à cet instant. Position courbe, vitesse droite, accélération constante : chaque graphique est la pente du précédent.",
+    "en": "The dashed line is the tangent at the chosen moment, and its slope is <strong>{v} m/s</strong> — the velocity at that instant. Position curved, velocity straight, acceleration constant: each graph is the slope of the one before."
+  },
+  "quandoOTempo": {
+    "pt": "Quando o tempo não interessa",
+    "fr": "Quand le temps n’importe pas",
+    "en": "When time does not matter"
+  },
+  "torricelliNota": {
+    "pt": "Torricelli não é uma lei nova: é o que resta quando se elimina o tempo entre as duas equações. Útil justamente nos problemas em que a pergunta é \"com que velocidade chega?\" e ninguém se importa com quando.",
+    "fr": "Torricelli n’est pas une loi nouvelle : c’est ce qui reste quand on élimine le temps entre les deux équations. Utile justement dans les problèmes où la question est « à quelle vitesse arrive-t-il ? » et où le quand n’intéresse personne.",
+    "en": "Torricelli is not a new law: it is what is left when time is eliminated between the two equations. Useful precisely in problems where the question is \"how fast does it arrive?\" and nobody cares when."
+  },
+  "porQueOLimite": {
+    "pt": "Por que o limite de velocidade existe",
+    "fr": "Pourquoi la limite de vitesse existe",
+    "en": "Why the speed limit exists"
+  },
+  "aDistanciaDeFrenagem": {
+    "pt": "A distância de frenagem depende do <strong>quadrado</strong> da velocidade. A 60 km/h um carro para em certo espaço; a 120 km/h precisa de quatro vezes esse espaço, não o dobro. É o mesmo fator quadrático da energia cinética — e nenhum reflexo humano compensa isso.",
+    "fr": "La distance de freinage dépend du <strong>carré</strong> de la vitesse. À 60 km/h une voiture s’arrête sur une certaine distance ; à 120 km/h il lui en faut quatre fois plus, pas le double. C’est le même facteur quadratique que l’énergie cinétique — et aucun réflexe humain ne compense cela.",
+    "en": "Braking distance depends on the <strong>square</strong> of the speed. At 60 km/h a car stops within a certain distance; at 120 km/h it needs four times that distance, not twice. It is the same quadratic factor as the kinetic energy — and no human reflex makes up for it."
+  }
+}

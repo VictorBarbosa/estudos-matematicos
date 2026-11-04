@@ -20,7 +20,8 @@ export const TEORIA_CINEMATICA: readonly Teoria[] = [
     ],
     demonstracao: [
       {
-        descricao: 'Aceleração constante significa que a velocidade varia por igual a cada segundo.',
+        descricao:
+          'Aceleração constante significa que a velocidade varia por igual a cada segundo.',
         tex: 'v = v_0 + at',
       },
       {

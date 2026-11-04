@@ -6,7 +6,7 @@ import {
   elevarDimensao,
   multiplicarDimensoes,
 } from '@core/math';
- 
+
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -15,12 +15,7 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 const proximos = (a: number, b: number): boolean => a === b;
 
 type Pergunta =
-  | 'expoente-M'
-  | 'expoente-L'
-  | 'expoente-T'
-  | 'combinacao'
-  | 'consistencia'
-  | 'conversao';
+  'expoente-M' | 'expoente-L' | 'expoente-T' | 'combinacao' | 'consistencia' | 'conversao';
 
 export const geradorDimensional: GeradorExercicio<number> = {
   topicoId: 'analise-dimensional',
@@ -61,11 +56,7 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
   }
 }
 
-function exercicioExpoente(
-  base: keyof Dimensao,
-  nivel: Nivel,
-  rng: Rng,
-): Exercicio<number> {
+function exercicioExpoente(base: keyof Dimensao, nivel: Nivel, rng: Rng): Exercicio<number> {
   // Grandezas derivadas são as interessantes; as de base são triviais.
   const derivadas = GRANDEZAS.filter(
     (grandeza) => !['comprimento', 'massa', 'tempo'].includes(grandeza.nome),
@@ -342,8 +333,7 @@ function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       `Considere o produto de ${primeira.nome} por ${segunda.nome}` +
       `${expoente === 1 ? '' : ` elevado${expoente === 2 ? ' ao quadrado' : ' ao cubo'}`}. ` +
       `Na dimensão do resultado, qual é o expoente de ${base}? (responda 0 se não aparece)`,
-    enunciadoTex:
-      `\\left[\\text{${primeira.simbolo}} \\cdot \\text{${segunda.simbolo}}${potencia}\\right] = ?`,
+    enunciadoTex: `\\left[\\text{${primeira.simbolo}} \\cdot \\text{${segunda.simbolo}}${potencia}\\right] = ?`,
     gabarito,
     resolucao: {
       resultado: gabarito,
@@ -394,6 +384,7 @@ function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Multiplicar grandezas soma os expoentes de cada dimensão.' : undefined,
+    dica:
+      nivel === 'facil' ? 'Multiplicar grandezas soma os expoentes de cada dimensão.' : undefined,
   };
 }

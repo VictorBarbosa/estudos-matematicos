@@ -53,8 +53,9 @@ describe('geradorTorque', () => {
     for (const exercicio of amostra('medio', 150).filter((e) =>
       e.enunciado.includes('Qual é o torque'),
     )) {
-      const [, forca, braco] =
-        /F = (\d+)\\,\\text\{N\} \\qquad r = ([\d{},]+)/.exec(exercicio.enunciadoTex)!;
+      const [, forca, braco] = /F = (\d+)\\,\\text\{N\} \\qquad r = ([\d{},]+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       const maximo = Number(forca) * Number(braco.replace('{,}', '.'));
       expect(Math.abs(exercicio.gabarito)).toBeLessThanOrEqual(maximo + 1e-9);
@@ -105,7 +106,9 @@ describe('geradorTorque', () => {
   });
 
   it('a força de equilíbrio da barra inclui o peso dela', () => {
-    const exercicios = amostra('dificil', 200).filter((e) => e.enunciado.includes('barra homogênea'));
+    const exercicios = amostra('dificil', 200).filter((e) =>
+      e.enunciado.includes('barra homogênea'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 

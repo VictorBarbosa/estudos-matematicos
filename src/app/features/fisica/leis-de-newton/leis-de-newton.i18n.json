@@ -1,0 +1,90 @@
+{
+  "inclinacaoDoPlano": {
+    "pt": "Inclinação do plano (°)",
+    "fr": "Inclinaison du plan (°)",
+    "en": "Slope of the incline (°)"
+  },
+  "coeficienteAtrito": {
+    "pt": "Coeficiente de atrito μ",
+    "fr": "Coefficient de frottement μ",
+    "en": "Coefficient of friction μ"
+  },
+  "diagramaCorpoLivre": {
+    "pt": "Diagrama de corpo livre",
+    "fr": "Diagramme des forces",
+    "en": "Free-body diagram"
+  },
+  "descricaoGrafico": {
+    "pt": "Bloco num plano inclinado, com peso, normal, componente do peso e atrito.",
+    "fr": "Bloc sur un plan incliné, avec le poids, la normale, la composante du poids et le frottement.",
+    "en": "Block on an incline, with weight, normal force, component of the weight and friction."
+  },
+  "oPesoAzul": {
+    "pt": "O peso (azul) aponta sempre para baixo; a normal (verde-água) é perpendicular à rampa; a componente Pₓ (laranja) é o que de fato puxa o bloco para baixo do plano, e o atrito (verde) se opõe a ela. Aumente a inclinação e veja a normal encurtar enquanto Pₓ cresce.",
+    "fr": "Le poids (bleu) pointe toujours vers le bas ; la normale (turquoise) est perpendiculaire à la rampe ; la composante Pₓ (orange) est ce qui tire réellement le bloc vers le bas du plan, et le frottement (vert) s’y oppose. Augmentez l’inclinaison et voyez la normale raccourcir pendant que Pₓ grandit.",
+    "en": "The weight (blue) always points down; the normal force (teal) is perpendicular to the ramp; the component Pₓ (orange) is what actually pulls the block down the slope, and friction (green) opposes it. Increase the slope and watch the normal shorten while Pₓ grows."
+  },
+  "pesoTotal": { "pt": "Peso total", "fr": "Poids total", "en": "Total weight" },
+  "normal": { "pt": "Normal", "fr": "Normale", "en": "Normal force" },
+  "mgCos": { "pt": "mg·cos θ", "fr": "mg·cos θ", "en": "mg·cos θ" },
+  "componenteDoPeso": {
+    "pt": "Componente do peso",
+    "fr": "Composante du poids",
+    "en": "Component of the weight"
+  },
+  "mgSen": { "pt": "mg·sen θ", "fr": "mg·sin θ", "en": "mg·sin θ" },
+  "desliza": { "pt": "desliza", "fr": "il glisse", "en": "it slides" },
+  "emRepouso": {
+    "pt": "em repouso: o atrito segura",
+    "fr": "au repos : le frottement le retient",
+    "en": "at rest: friction holds it"
+  },
+  "anguloCritico": {
+    "pt": "Ângulo crítico",
+    "fr": "Angle critique",
+    "en": "Critical angle"
+  },
+  "tanTheta": { "pt": "tan θ = μ", "fr": "tan θ = μ", "en": "tan θ = μ" },
+  "passoNoPlano": {
+    "pt": "Passo a passo no plano",
+    "fr": "Pas à pas sur le plan",
+    "en": "Step by step on the incline"
+  },
+  "aMassaDesaparece": {
+    "pt": "A massa desaparece no último passo: a aceleração no plano é <strong>g(sen θ − μ·cos θ)</strong>, sem nenhum m. Um bloco de 1 kg e outro de 100 kg, do mesmo material, descem juntos — exatamente como na queda livre.",
+    "fr": "La masse disparaît à la dernière étape : l’accélération sur le plan vaut <strong>g(sin θ − μ·cos θ)</strong>, sans aucun m. Un bloc de 1 kg et un autre de 100 kg, du même matériau, descendent ensemble — exactement comme en chute libre.",
+    "en": "The mass vanishes at the last step: the acceleration on the incline is <strong>g(sin θ − μ·cos θ)</strong>, with no m at all. A 1 kg block and a 100 kg one, of the same material, slide down together — exactly as in free fall."
+  },
+  "resultanteHorizontal": {
+    "pt": "Resultante no plano horizontal",
+    "fr": "Résultante sur le plan horizontal",
+    "en": "Resultant on the flat"
+  },
+  "forcaAplicada": {
+    "pt": "Força aplicada (N)",
+    "fr": "Force appliquée (N)",
+    "en": "Applied force (N)"
+  },
+  "atritoN": { "pt": "Atrito (N)", "fr": "Frottement (N)", "en": "Friction (N)" },
+  "segmentoForcaAplicada": {
+    "pt": "força aplicada",
+    "fr": "force appliquée",
+    "en": "applied force"
+  },
+  "segmentoAtrito": { "pt": "atrito", "fr": "frottement", "en": "friction" },
+  "igualeAsDuas": {
+    "pt": "Iguale as duas forças e repare: a aceleração vai a zero, mas isso não significa que o corpo pare. Pela primeira lei, ele mantém a velocidade que tiver — força não é necessária para manter movimento, apenas para mudá-lo.",
+    "fr": "Égalisez les deux forces et observez : l’accélération s’annule, mais cela ne veut pas dire que le corps s’arrête. D’après la première loi, il garde la vitesse qu’il a — une force n’est pas nécessaire pour maintenir le mouvement, seulement pour le changer.",
+    "en": "Make the two forces equal and notice: the acceleration goes to zero, but that does not mean the body stops. By the first law, it keeps whatever velocity it has — force is not needed to maintain motion, only to change it."
+  },
+  "acaoEReacao": {
+    "pt": "Ação e reação não se cancelam",
+    "fr": "Action et réaction ne s’annulent pas",
+    "en": "Action and reaction do not cancel"
+  },
+  "aTerraTeAtrai": {
+    "pt": "A Terra te atrai com a mesma força com que você atrai a Terra. Essas forças são iguais e opostas, mas atuam em <strong>corpos diferentes</strong> — e por isso jamais se cancelam no diagrama de um único corpo. Se cancelassem, nada no universo aceleraria.",
+    "fr": "La Terre vous attire avec la même force que celle avec laquelle vous attirez la Terre. Ces forces sont égales et opposées, mais elles agissent sur <strong>des corps différents</strong> — c’est pourquoi elles ne s’annulent jamais dans le diagramme d’un seul corps. Si elles s’annulaient, rien dans l’univers n’accélérerait.",
+    "en": "The Earth pulls on you with the same force with which you pull on the Earth. Those forces are equal and opposite, but they act on <strong>different bodies</strong> — which is why they never cancel in the diagram of a single body. If they did, nothing in the universe would accelerate."
+  }
+}

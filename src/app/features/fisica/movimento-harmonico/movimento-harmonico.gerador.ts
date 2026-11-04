@@ -68,7 +68,8 @@ export const geradorMhs: GeradorExercicio<number> = {
         [
           {
             // Esqueceu a raiz quadrada.
-            resposta: pergunta === 'periodo' ? (2 * Math.PI * massa) / constante : constante / massa,
+            resposta:
+              pergunta === 'periodo' ? (2 * Math.PI * massa) / constante : constante / massa,
             diagnostico:
               'Faltou a raiz quadrada. A frequência angular é √(k/m), não k/m — e é ela que ' +
               'entra no período.',

@@ -10,7 +10,8 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
 
-type Pergunta = 'resultante' | 'aceleracao' | 'normal-plano' | 'aceleracao-plano' | 'angulo-critico';
+type Pergunta =
+  'resultante' | 'aceleracao' | 'normal-plano' | 'aceleracao-plano' | 'angulo-critico';
 
 export const geradorNewton: GeradorExercicio<number> = {
   topicoId: 'leis-de-newton',
@@ -236,8 +237,7 @@ function exercicioAceleracaoPlano(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: resultado.componentePeso,
-          diagnostico:
-            'Essa é a FORÇA em newtons, não a aceleração. Falta dividir pela massa.',
+          diagnostico: 'Essa é a FORÇA em newtons, não a aceleração. Falta dividir pela massa.',
           passo: 4,
           conceito: 'newton.leis',
         },
@@ -274,8 +274,7 @@ function exercicioAnguloCritico(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: mu * 90,
-          diagnostico:
-            'A relação entre μ e o ângulo não é linear: é a tangente que faz a ponte.',
+          diagnostico: 'A relação entre μ e o ângulo não é linear: é a tangente que faz a ponte.',
           passo: 1,
           conceito: 'newton.atrito',
         },

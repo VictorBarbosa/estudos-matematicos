@@ -107,10 +107,7 @@ export const geradorBalistica: GeradorExercicio<number> = {
       },
       conceitos: ['balistica.independencia', 'balistica.alcance'],
       armadilhas: semColisoes(armadilhas, gabarito, proximos),
-      dica:
-        nivel === 'facil'
-          ? 'Decomponha a velocidade antes de qualquer conta.'
-          : undefined,
+      dica: nivel === 'facil' ? 'Decomponha a velocidade antes de qualquer conta.' : undefined,
     };
   },
 

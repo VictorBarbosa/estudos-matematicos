@@ -45,8 +45,7 @@ export class TransferenciaDeCalor {
   );
 
   protected readonly radiacao = computed(
-    () =>
-      (this.emissividade() / 10) * STEFAN_BOLTZMANN * this.area() * this.kelvin() ** 4,
+    () => (this.emissividade() / 10) * STEFAN_BOLTZMANN * this.area() * this.kelvin() ** 4,
   );
 
   protected readonly resistencia = computed(

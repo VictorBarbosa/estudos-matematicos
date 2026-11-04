@@ -83,8 +83,9 @@ describe('geradorCinematica', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, v0, a] =
-        /v_0 = (\d+)\\,\\text\{m\/s\} \\qquad a = -(\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, v0, a] = /v_0 = (\d+)\\,\\text\{m\/s\} \\qquad a = -(\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBeCloseTo(Number(v0) / Number(a), 9);
       expect(exercicio.gabarito).toBeGreaterThan(0);
@@ -99,8 +100,9 @@ describe('geradorCinematica', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, v0, a] =
-        /v_0 = (\d+)\\,\\text\{m\/s\} \\qquad a = -(\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, v0, a] = /v_0 = (\d+)\\,\\text\{m\/s\} \\qquad a = -(\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       const esperado = Number(v0) ** 2 / (2 * Number(a));
       expect(exercicio.gabarito).toBeCloseTo(esperado, 9);
@@ -116,9 +118,7 @@ describe('geradorCinematica', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('Essa é a POSIÇÃO')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('Essa é a POSIÇÃO'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('Essa é a POSIÇÃO'))!;
 
     const resultado = corrigir(geradorCinematica, exercicio, String(armadilha.resposta));
 
@@ -128,7 +128,9 @@ describe('geradorCinematica', () => {
 
   it('diagnostica quem ignora a aceleração no deslocamento', () => {
     const exercicio = amostra('facil', 180).find((candidato) =>
-      candidato.armadilhas.some((a) => a.diagnostico.includes('como se o movimento fosse uniforme')),
+      candidato.armadilhas.some((a) =>
+        a.diagnostico.includes('como se o movimento fosse uniforme'),
+      ),
     )!;
 
     const armadilha = exercicio.armadilhas.find((a) =>

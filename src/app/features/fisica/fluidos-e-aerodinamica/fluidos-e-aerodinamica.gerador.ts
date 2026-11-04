@@ -169,8 +169,7 @@ function exercicioFracaoSubmersa(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Um corpo de densidade ${densidadeCorpo} kg/m³ flutua em água. Que fração do seu volume ` +
       'fica submersa? (responda entre 0 e 1, com 2 casas decimais)',
-    enunciadoTex:
-      `\\rho_{corpo} = ${densidadeCorpo} \\qquad \\rho_{água} = 1000\\,\\text{kg/m}^{3}`,
+    enunciadoTex: `\\rho_{corpo} = ${densidadeCorpo} \\qquad \\rho_{água} = 1000\\,\\text{kg/m}^{3}`,
     gabarito: resultado.fracaoSubmersa,
     resolucao: { resultado: resultado.fracaoSubmersa, passos },
     conceitos: ['fluidos.pressao'],
@@ -212,8 +211,7 @@ function exercicioSustentacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Uma asa de ${area} m² tem ar a ${superior} m/s na face superior e ${inferior} m/s na ` +
       'inferior. Qual é a sustentação, em newtons? (2 casas decimais)',
-    enunciadoTex:
-      `A = ${area}\\,\\text{m}^{2} \\qquad v_{sup} = ${superior} \\qquad v_{inf} = ${inferior}`,
+    enunciadoTex: `A = ${area}\\,\\text{m}^{2} \\qquad v_{sup} = ${superior} \\qquad v_{inf} = ${inferior}`,
     gabarito: resultado,
     resolucao: {
       resultado,

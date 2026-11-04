@@ -13,7 +13,10 @@ import {
   SegmentoPlot,
 } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
-import { alcanceDe, geradorBalistica } from '@features/fisica/trajetoria-balistica/trajetoria-balistica.gerador';
+import {
+  alcanceDe,
+  geradorBalistica,
+} from '@features/fisica/trajetoria-balistica/trajetoria-balistica.gerador';
 import { TEORIA_BALISTICA } from '@features/fisica/trajetoria-balistica/trajetoria-balistica.teoria';
 
 @Component({
@@ -77,11 +80,7 @@ export class TrajetoriaBalistica {
     const principal = this.trajetoria();
     const comparacao = this.trajetoriaComparacao();
     const alcance = this.dados().alcance;
-    const alcanceComparacao = alcanceDe(
-      this.velocidade(),
-      this.anguloComparacao(),
-      this.altura(),
-    );
+    const alcanceComparacao = alcanceDe(this.velocidade(), this.anguloComparacao(), this.altura());
 
     return [
       {

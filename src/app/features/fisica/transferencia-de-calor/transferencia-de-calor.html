@@ -7,9 +7,9 @@
         [bloco]="true"
       />
       <p class="observacao">
-        Condução e convecção são lineares na diferença de temperatura. A radiação vai com a
-        QUARTA potência da temperatura absoluta — e é a única que atravessa o vácuo. Num
-        veículo espacial, as duas primeiras praticamente não existem do lado de fora.
+        Condução e convecção são lineares na diferença de temperatura. A radiação vai com a QUARTA
+        potência da temperatura absoluta — e é a única que atravessa o vácuo. Num veículo espacial,
+        as duas primeiras praticamente não existem do lado de fora.
       </p>
     </section>
 
@@ -20,9 +20,19 @@
         [min]="0"
         [max]="7"
       />
-      <app-controle-parametro [(valor)]="centimetros" rotulo="Espessura (cm)" [min]="1" [max]="50" />
+      <app-controle-parametro
+        [(valor)]="centimetros"
+        rotulo="Espessura (cm)"
+        [min]="1"
+        [max]="50"
+      />
       <app-controle-parametro [(valor)]="area" rotulo="Área (m²)" [min]="1" [max]="10" />
-      <app-controle-parametro [(valor)]="deltaT" rotulo="Diferença de temperatura (K)" [min]="1" [max]="80" />
+      <app-controle-parametro
+        [(valor)]="deltaT"
+        rotulo="Diferença de temperatura (K)"
+        [min]="1"
+        [max]="80"
+      />
       <app-controle-parametro
         [(valor)]="coeficienteConveccao"
         rotulo="Coeficiente de convecção"
@@ -75,8 +85,8 @@
       }
       <p class="observacao">
         Entre o cobre e o ar parado a condutividade varia por um fator de quinze mil. É essa
-        diferença que faz um metal esfriar a mão depressa e a madeira, na mesma temperatura,
-        parecer morna — a sensação mede fluxo, não temperatura.
+        diferença que faz um metal esfriar a mão depressa e a madeira, na mesma temperatura, parecer
+        morna — a sensação mede fluxo, não temperatura.
       </p>
     </section>
 
@@ -90,8 +100,8 @@
       />
       <p class="observacao">
         A curva da radiação é uma quarta potência; a da convecção é uma reta. Em temperatura
-        ambiente a convecção domina, mas acima de algumas centenas de kelvin a radiação passa
-        por cima — e é por isso que um forno aquece por radiação, não por ar quente.
+        ambiente a convecção domina, mas acima de algumas centenas de kelvin a radiação passa por
+        cima — e é por isso que um forno aquece por radiação, não por ar quente.
       </p>
     </section>
 
@@ -99,8 +109,8 @@
       <h2>Kelvin, não Celsius</h2>
       <app-formula [tex]="'\\frac{300^{4}}{27^{4}} \\approx 1524'" [bloco]="true" />
       <p class="observacao">
-        Em condução e convecção aparece apenas a DIFERENÇA de temperatura, e aí Celsius serve.
-        Na radiação aparece a temperatura absoluta à quarta potência, e usar a escala errada não
+        Em condução e convecção aparece apenas a DIFERENÇA de temperatura, e aí Celsius serve. Na
+        radiação aparece a temperatura absoluta à quarta potência, e usar a escala errada não
         desloca o resultado por uma constante: multiplica por mais de mil.
       </p>
     </section>

@@ -97,8 +97,7 @@ export class GravitacaoEOrbitas {
   /** A gravidade caindo com a distância ao centro, em raios terrestres. */
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => [
     {
-      fn: (raios) =>
-        raios < 1 ? Number.NaN : (G * MASSA_TERRA) / (raios * RAIO_TERRA) ** 2,
+      fn: (raios) => (raios < 1 ? Number.NaN : (G * MASSA_TERRA) / (raios * RAIO_TERRA) ** 2),
       cor: 'serie-1',
       rotulo: 'g(r)',
     },
@@ -129,9 +128,7 @@ export class GravitacaoEOrbitas {
 
   protected formatarPeriodo(segundos: number): string {
     const horas = segundos / 3600;
-    return horas >= 2
-      ? `${this.formatar(horas)} h`
-      : `${this.formatar(segundos / 60)} min`;
+    return horas >= 2 ? `${this.formatar(horas)} h` : `${this.formatar(segundos / 60)} min`;
   }
 
   protected percentual(valor: number): string {

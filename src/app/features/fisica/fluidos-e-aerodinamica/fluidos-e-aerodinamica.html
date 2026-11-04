@@ -22,8 +22,8 @@
       <app-passo-a-passo [passos]="pressao().passos" />
       <p class="observacao">
         A cada 10 m de água, a pressão aumenta cerca de 1 atmosfera. E note o que a fórmula
-        <em>não</em> contém: a forma do recipiente. Um tubo fino e um lago com a mesma
-        profundidade exercem a mesma pressão no fundo.
+        <em>não</em> contém: a forma do recipiente. Um tubo fino e um lago com a mesma profundidade
+        exercem a mesma pressão no fundo.
       </p>
     </section>
 
@@ -75,16 +75,21 @@
 
       <app-passo-a-passo [passos]="empuxo().passos" />
       <p class="observacao">
-        Mude o volume e repare: o veredito não muda. O volume aparece tanto no empuxo quanto no
-        peso e se cancela — só as <strong>densidades</strong> decidem. É por isso que um navio
-        de aço flutua: sua densidade média, contando o ar interno, é menor que a da água.
+        Mude o volume e repare: o veredito não muda. O volume aparece tanto no empuxo quanto no peso
+        e se cancela — só as <strong>densidades</strong> decidem. É por isso que um navio de aço
+        flutua: sua densidade média, contando o ar interno, é menor que a da água.
       </p>
     </section>
 
     <section class="painel">
       <h2>Sustentação de uma asa</h2>
       <div class="grade-controles">
-        <app-controle-parametro [(valor)]="areaAsa" rotulo="Área da asa (m²)" [min]="5" [max]="120" />
+        <app-controle-parametro
+          [(valor)]="areaAsa"
+          rotulo="Área da asa (m²)"
+          [min]="5"
+          [max]="120"
+        />
         <app-controle-parametro
           [(valor)]="velocidadeInferior"
           rotulo="Velocidade sob a asa (m/s)"
@@ -144,9 +149,9 @@
       <h2>Bernoulli por trás disso</h2>
       <app-passo-a-passo [passos]="bernoulli().passos" />
       <p class="observacao">
-        Toda a sustentação se resume a isto: o ar mais rápido sobre a asa está a uma pressão
-        menor que o ar mais lento sob ela. A diferença, multiplicada pela área, levanta o
-        avião — e a física por baixo é apenas conservação de energia.
+        Toda a sustentação se resume a isto: o ar mais rápido sobre a asa está a uma pressão menor
+        que o ar mais lento sob ela. A diferença, multiplicada pela área, levanta o avião — e a
+        física por baixo é apenas conservação de energia.
       </p>
     </section>
 

@@ -18,7 +18,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de cinemática vetorial.
@@ -115,7 +121,8 @@ function doDeslocamento(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'cin-vetorial.deslocamento',
       },
     ],
-    dica: nivel === 'facil' ? 'Subtraia as posições e aplique Pitágoras nas componentes.' : undefined,
+    dica:
+      nivel === 'facil' ? 'Subtraia as posições e aplique Pitágoras nas componentes.' : undefined,
   });
 }
 
@@ -191,7 +198,7 @@ function daTravessia(nivel: Nivel, rng: Rng): Exercicio<number> {
     conceitos: ['cin-vetorial.travessia', 'cin-vetorial.velocidade-relativa'],
     armadilhas: [
       {
-        resposta: largura / Math.hypot(barco, rio) * rio,
+        resposta: (largura / Math.hypot(barco, rio)) * rio,
         diagnostico:
           'O tempo foi calculado com a velocidade resultante. Mas só a componente perpendicular ' +
           'atravessa o rio — a correnteza não aproxima nem afasta da outra margem.',
@@ -255,7 +262,8 @@ function daCompensacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: 90 - gabarito,
-        diagnostico: 'Esse é o complemento do ângulo pedido — o mesmo triângulo, lido do outro lado.',
+        diagnostico:
+          'Esse é o complemento do ângulo pedido — o mesmo triângulo, lido do outro lado.',
         passo: 2,
         conceito: 'cin-vetorial.travessia',
       },
@@ -301,7 +309,10 @@ function dasComponentes(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: Math.sqrt(
-          Math.max(0, modulo(aceleracao) ** 2 - (produtoEscalar(velocidade, aceleracao) / rapidez) ** 2),
+          Math.max(
+            0,
+            modulo(aceleracao) ** 2 - (produtoEscalar(velocidade, aceleracao) / rapidez) ** 2,
+          ),
         ),
         diagnostico:
           'Essa é a componente NORMAL, que curva a trajetória. A tangencial é a que acelera ou ' +

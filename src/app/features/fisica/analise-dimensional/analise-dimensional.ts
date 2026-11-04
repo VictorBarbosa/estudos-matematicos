@@ -16,6 +16,9 @@ import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/analise-dimensional/analise-dimensional.i18n.json';
 import { geradorDimensional } from '@features/fisica/analise-dimensional/analise-dimensional.gerador';
 import { TEORIA_DIMENSIONAL } from '@features/fisica/analise-dimensional/analise-dimensional.teoria';
 
@@ -29,14 +32,14 @@ type Operacao = 'multiplicar' | 'dividir' | 'quadrado';
   styleUrl: './analise-dimensional.scss',
 })
 export class AnaliseDimensional {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorDimensional;
   protected readonly conceitos = TEORIA_DIMENSIONAL.map((teoria) => teoria.id);
   protected readonly grandezas = GRANDEZAS;
 
   protected readonly primeira = signal<Grandeza>(GRANDEZAS.find((g) => g.nome === 'massa')!);
-  protected readonly segunda = signal<Grandeza>(
-    GRANDEZAS.find((g) => g.nome === 'aceleração')!,
-  );
+  protected readonly segunda = signal<Grandeza>(GRANDEZAS.find((g) => g.nome === 'aceleração')!);
 
   protected readonly operacao = signal<Operacao>('multiplicar');
 
@@ -67,11 +70,7 @@ export class AnaliseDimensional {
 
   protected readonly resultadoTex = computed(() => {
     const simbolo =
-      this.operacao() === 'multiplicar'
-        ? '\\cdot'
-        : this.operacao() === 'dividir'
-          ? '/'
-          : '\\cdot';
+      this.operacao() === 'multiplicar' ? '\\cdot' : this.operacao() === 'dividir' ? '/' : '\\cdot';
 
     const segunda =
       this.operacao() === 'quadrado'
@@ -91,9 +90,18 @@ export class AnaliseDimensional {
     const tempo = GRANDEZAS.find((g) => g.nome === 'tempo')!.dimensao;
 
     const candidatas = [
-      { tex: '2\\pi\\sqrt{L/g}', dimensao: elevarDimensao(dividirDimensoes(comprimento, gravidade), 0.5) },
-      { tex: '2\\pi\\sqrt{g/L}', dimensao: elevarDimensao(dividirDimensoes(gravidade, comprimento), 0.5) },
-      { tex: '2\\pi\\sqrt{Lg}', dimensao: elevarDimensao(multiplicarDimensoes(comprimento, gravidade), 0.5) },
+      {
+        tex: '2\\pi\\sqrt{L/g}',
+        dimensao: elevarDimensao(dividirDimensoes(comprimento, gravidade), 0.5),
+      },
+      {
+        tex: '2\\pi\\sqrt{g/L}',
+        dimensao: elevarDimensao(dividirDimensoes(gravidade, comprimento), 0.5),
+      },
+      {
+        tex: '2\\pi\\sqrt{Lg}',
+        dimensao: elevarDimensao(multiplicarDimensoes(comprimento, gravidade), 0.5),
+      },
       { tex: '2\\pi L/g', dimensao: dividirDimensoes(comprimento, gravidade) },
     ];
 

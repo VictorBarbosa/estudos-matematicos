@@ -33,9 +33,7 @@ export class MomentoAngular {
     () => (this.inerciaInicial() * this.percentualRestante()) / 100,
   );
 
-  protected readonly momentoAngular = computed(
-    () => this.inerciaInicial() * this.omegaInicial(),
-  );
+  protected readonly momentoAngular = computed(() => this.inerciaInicial() * this.omegaInicial());
 
   protected readonly omegaFinal = computed(() => this.momentoAngular() / this.inerciaFinal());
 

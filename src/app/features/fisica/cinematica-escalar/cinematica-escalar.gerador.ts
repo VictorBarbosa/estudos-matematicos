@@ -54,8 +54,7 @@ function exercicioVelocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cin-vel-${v0}-${a}-${t}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um corpo parte com ${v0} m/s e acelera a ${a} m/s². Qual é sua velocidade após ${t} s?`,
+    enunciado: `Um corpo parte com ${v0} m/s e acelera a ${a} m/s². Qual é sua velocidade após ${t} s?`,
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = ${a}\\,\\text{m/s}^{2} \\qquad t = ${t}\\,\\text{s}`,
     gabarito: velocidade,
     resolucao: {

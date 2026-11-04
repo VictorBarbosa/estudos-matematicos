@@ -29,8 +29,7 @@ describe('geradorTermo', () => {
 
   it('o volume molar a 0 °C e 1 atm fica perto de 22,4 L', () => {
     const exercicio = amostra('facil', 200).find(
-      (e) =>
-        e.enunciado.includes('Que volume ocupam 1 mol') && e.enunciado.includes('a 0 °C'),
+      (e) => e.enunciado.includes('Que volume ocupam 1 mol') && e.enunciado.includes('a 0 °C'),
     );
 
     expect(exercicio).toBeDefined();
@@ -38,13 +37,16 @@ describe('geradorTermo', () => {
   });
 
   it('o volume do gás confere com pV = nRT', () => {
-    const exercicios = amostra('facil', 120).filter((e) => e.enunciado.includes('Que volume ocupam'));
+    const exercicios = amostra('facil', 120).filter((e) =>
+      e.enunciado.includes('Que volume ocupam'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, mols, celsius] =
-        /n = (\d+)\\,\\text\{mol\} \\qquad T = (-?\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, mols, celsius] = /n = (\d+)\\,\\text\{mol\} \\qquad T = (-?\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       const esperado = ((Number(mols) * R_GASES * (Number(celsius) + 273.15)) / 101325) * 1000;
       expect(exercicio.gabarito).toBeCloseTo(esperado, 4);
@@ -52,15 +54,15 @@ describe('geradorTermo', () => {
   });
 
   it('a pressão do gás usa volume em m³ e temperatura em kelvin', () => {
-    const exercicios = amostra('medio', 150).filter((e) => e.enunciado.includes('Qual é a pressão'));
+    const exercicios = amostra('medio', 150).filter((e) =>
+      e.enunciado.includes('Qual é a pressão'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
       const [, mols, litros, celsius] =
-        /n = (\d+) \\qquad V = (\d+)\\,\\text\{L\} \\qquad T = (\d+)/.exec(
-          exercicio.enunciadoTex,
-        )!;
+        /n = (\d+) \\qquad V = (\d+)\\,\\text\{L\} \\qquad T = (\d+)/.exec(exercicio.enunciadoTex)!;
 
       const esperado =
         (Number(mols) * R_GASES * (Number(celsius) + 273.15)) / (Number(litros) / 1000) / 1000;
@@ -70,7 +72,9 @@ describe('geradorTermo', () => {
   });
 
   it('a transformação conserva pV/T', () => {
-    const exercicios = amostra('dificil', 180).filter((e) => e.enunciado.includes('que volume passa'));
+    const exercicios = amostra('dificil', 180).filter((e) =>
+      e.enunciado.includes('que volume passa'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -95,15 +99,18 @@ describe('geradorTermo', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, calor, trabalho] =
-        /Q = (-?\d+)\\,\\text\{J\} \\qquad W = (-?\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, calor, trabalho] = /Q = (-?\d+)\\,\\text\{J\} \\qquad W = (-?\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBe(Number(calor) - Number(trabalho));
     }
   });
 
   it('o trabalho isobárico é p·ΔV em unidades do SI', () => {
-    const exercicios = amostra('medio', 180).filter((e) => e.enunciado.includes('trabalho realizado pelo gás'));
+    const exercicios = amostra('medio', 180).filter((e) =>
+      e.enunciado.includes('trabalho realizado pelo gás'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -138,9 +145,7 @@ describe('geradorTermo', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('entra subtraindo')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('entra subtraindo'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('entra subtraindo'))!;
 
     const resultado = corrigir(geradorTermo, exercicio, String(armadilha.resposta));
 

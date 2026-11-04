@@ -69,8 +69,8 @@
       <h2>Órbita é cair para sempre</h2>
       <app-passo-a-passo [passos]="orbita().passos" />
       <p class="observacao">
-        A massa do satélite se cancela na dedução: um parafuso solto e a Estação Espacial
-        orbitam à mesma velocidade na mesma altitude. E note que órbitas mais altas são mais
+        A massa do satélite se cancela na dedução: um parafuso solto e a Estação Espacial orbitam à
+        mesma velocidade na mesma altitude. E note que órbitas mais altas são mais
         <em>lentas</em> — subir custa energia e ainda reduz a velocidade.
       </p>
     </section>
@@ -79,11 +79,11 @@
       <h2>Kepler confere com Newton</h2>
       <app-passo-a-passo [passos]="kepler().passos" />
       <p class="observacao">
-        Partindo da órbita de 400 km, a terceira lei de Kepler prevê o período nesta altitude
-        como <strong>{{ formatarPeriodo(kepler().resultado) }}</strong>; o cálculo direto deu
-        <strong>{{ formatarPeriodo(orbita().resultado.periodo) }}</strong>. Kepler obteve essa
-        relação de dados observacionais décadas antes de Newton deduzi-la — e foi essa
-        coincidência que fundou a confiança na gravitação.
+        Partindo da órbita de 400 km, a terceira lei de Kepler prevê o período nesta altitude como
+        <strong>{{ formatarPeriodo(kepler().resultado) }}</strong
+        >; o cálculo direto deu <strong>{{ formatarPeriodo(orbita().resultado.periodo) }}</strong
+        >. Kepler obteve essa relação de dados observacionais décadas antes de Newton deduzi-la — e
+        foi essa coincidência que fundou a confiança na gravitação.
       </p>
     </section>
 
@@ -91,9 +91,9 @@
       <h2>Escapar custa pouco mais que orbitar</h2>
       <app-passo-a-passo [passos]="escape().passos" />
       <p class="observacao">
-        Apenas 41% mais velocidade separa orbitar de escapar da Terra para sempre. Parece
-        pouco — mas, pela equação de Tsiolkovsky, esse acréscimo de velocidade exige
-        muito mais combustível do que a proporção sugere.
+        Apenas 41% mais velocidade separa orbitar de escapar da Terra para sempre. Parece pouco —
+        mas, pela equação de Tsiolkovsky, esse acréscimo de velocidade exige muito mais combustível
+        do que a proporção sugere.
       </p>
     </section>
 

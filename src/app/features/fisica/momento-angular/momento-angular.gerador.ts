@@ -12,7 +12,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de momento angular.
@@ -109,7 +115,10 @@ function doCorpoRigido(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'angular.momento',
       },
     ],
-    dica: nivel === 'facil' ? 'Calcule a inércia primeiro, depois multiplique pela velocidade angular.' : undefined,
+    dica:
+      nivel === 'facil'
+        ? 'Calcule a inércia primeiro, depois multiplique pela velocidade angular.'
+        : undefined,
   });
 }
 
@@ -211,7 +220,10 @@ function daConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'angular.conservacao',
       },
     ],
-    dica: nivel === 'medio' ? 'Calcule o momento angular inicial e divida pela nova inércia.' : undefined,
+    dica:
+      nivel === 'medio'
+        ? 'Calcule o momento angular inicial e divida pela nova inércia.'
+        : undefined,
   });
 }
 
@@ -263,7 +275,8 @@ function daEnergiaNaConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: energiaDepois,
-        diagnostico: 'Essa é a energia final. O enunciado pede a VARIAÇÃO, que é a diferença entre as duas.',
+        diagnostico:
+          'Essa é a energia final. O enunciado pede a VARIAÇÃO, que é a diferença entre as duas.',
         passo: 3,
         conceito: 'angular.energia-nao-se-conserva',
       },

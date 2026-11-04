@@ -2,12 +2,7 @@
   <div explorar class="explorar">
     <section class="painel grade-controles">
       <app-controle-parametro [(valor)]="mols" rotulo="Quantidade (mol)" [min]="1" [max]="10" />
-      <app-controle-parametro
-        [(valor)]="volumeLitros"
-        rotulo="Volume (L)"
-        [min]="1"
-        [max]="80"
-      />
+      <app-controle-parametro [(valor)]="volumeLitros" rotulo="Volume (L)" [min]="1" [max]="80" />
       <app-controle-parametro
         [(valor)]="temperaturaCelsius"
         rotulo="Temperatura (°C)"
@@ -31,14 +26,14 @@
       />
       <p class="observacao">
         A temperatura fixa, pressão e volume são inversamente proporcionais — a curva é uma
-        hipérbole. Aquecer o gás empurra a curva para cima e para a direita: mais pressão para
-        o mesmo volume, ou mais volume para a mesma pressão.
+        hipérbole. Aquecer o gás empurra a curva para cima e para a direita: mais pressão para o
+        mesmo volume, ou mais volume para a mesma pressão.
       </p>
       <app-passo-a-passo [passos]="estado().passos" />
       <p class="observacao">
-        Leve a temperatura a −273 °C e repare que a pressão vai a zero. Esse é o zero absoluto,
-        e é por isso que a equação exige kelvin: em celsius, dobrar a temperatura de 10° para
-        20° não dobra nada.
+        Leve a temperatura a −273 °C e repare que a pressão vai a zero. Esse é o zero absoluto, e é
+        por isso que a equação exige kelvin: em celsius, dobrar a temperatura de 10° para 20° não
+        dobra nada.
       </p>
     </section>
 
@@ -79,20 +74,15 @@
 
       <app-passo-a-passo [passos]="primeiraLei().passos" />
       <p class="observacao">
-        Iguale Q e W: a energia interna não muda, e todo o calor recebido saiu como trabalho.
-        É o processo isotérmico, e é o princípio de funcionamento de qualquer máquina térmica.
+        Iguale Q e W: a energia interna não muda, e todo o calor recebido saiu como trabalho. É o
+        processo isotérmico, e é o princípio de funcionamento de qualquer máquina térmica.
       </p>
     </section>
 
     <section class="painel">
       <h2>Trabalho é área no diagrama p × V</h2>
       <div class="grade-controles">
-        <app-controle-parametro
-          [(valor)]="pressaoAtm"
-          rotulo="Pressão (atm)"
-          [min]="1"
-          [max]="5"
-        />
+        <app-controle-parametro [(valor)]="pressaoAtm" rotulo="Pressão (atm)" [min]="1" [max]="5" />
         <app-controle-parametro
           [(valor)]="volumeInicial"
           rotulo="Volume inicial (L)"
@@ -128,9 +118,9 @@
       <app-formula [tex]="'pV = nRT \\qquad \\Delta U = Q - W'" [bloco]="true" />
       <p class="observacao">
         Na câmara de combustão, a reação eleva a temperatura a milhares de kelvin; a equação de
-        estado transforma isso em pressão, e a expansão pela tubeira converte pressão em
-        velocidade de exaustão. Quanto maior essa velocidade, mais eficiente o motor — e é
-        exatamente o vₑ que aparece na equação de Tsiolkovsky.
+        estado transforma isso em pressão, e a expansão pela tubeira converte pressão em velocidade
+        de exaustão. Quanto maior essa velocidade, mais eficiente o motor — e é exatamente o vₑ que
+        aparece na equação de Tsiolkovsky.
       </p>
     </section>
 

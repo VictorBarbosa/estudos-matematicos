@@ -1,0 +1,99 @@
+{
+  "alturaDePartida": {
+    "pt": "Altura de partida (m)",
+    "fr": "Hauteur de départ (m)",
+    "en": "Starting height (m)"
+  },
+  "alturaAtual": {
+    "pt": "Altura atual (m)",
+    "fr": "Hauteur actuelle (m)",
+    "en": "Current height (m)"
+  },
+  "aEnergiaTroca": {
+    "pt": "A energia troca de forma, não de total",
+    "fr": "L’énergie change de forme, pas de total",
+    "en": "Energy changes form, not total"
+  },
+  "descricaoGrafico": {
+    "pt": "Energias potencial, cinética e total em função da altura, numa queda sem atrito.",
+    "fr": "Énergies potentielle, cinétique et totale en fonction de la hauteur, dans une chute sans frottement.",
+    "en": "Potential, kinetic and total energy against height, in a fall without friction."
+  },
+  "curvaPotencial": { "pt": "potencial", "fr": "potentielle", "en": "potential" },
+  "curvaCinetica": { "pt": "cinética", "fr": "cinétique", "en": "kinetic" },
+  "curvaTotal": {
+    "pt": "total (constante)",
+    "fr": "totale (constante)",
+    "en": "total (constant)"
+  },
+  "descaAAltura": {
+    "pt": "Desça a altura atual e acompanhe: a potencial cai exatamente na mesma medida em que a cinética sobe, e a linha tracejada do total não se move. Energia não é consumida na queda — ela muda de forma.",
+    "fr": "Baissez la hauteur actuelle et suivez : la potentielle diminue exactement d’autant que la cinétique augmente, et la ligne pointillée du total ne bouge pas. L’énergie n’est pas consommée dans la chute — elle change de forme.",
+    "en": "Lower the current height and follow along: the potential falls by exactly as much as the kinetic rises, and the dashed total line does not move. Energy is not used up in the fall — it changes form."
+  },
+  "energiaPotencial": {
+    "pt": "Energia potencial",
+    "fr": "Énergie potentielle",
+    "en": "Potential energy"
+  },
+  "mgh": { "pt": "mgh", "fr": "mgh", "en": "mgh" },
+  "energiaCinetica": {
+    "pt": "Energia cinética",
+    "fr": "Énergie cinétique",
+    "en": "Kinetic energy"
+  },
+  "mv2": { "pt": "mv²/2", "fr": "mv²/2", "en": "mv²/2" },
+  "constante": { "pt": "constante", "fr": "constante", "en": "constant" },
+  "velocidadeAtual": {
+    "pt": "Velocidade atual",
+    "fr": "Vitesse actuelle",
+    "en": "Current speed"
+  },
+  "naoDependeDaMassa": {
+    "pt": "não depende da massa",
+    "fr": "ne dépend pas de la masse",
+    "en": "does not depend on the mass"
+  },
+  "passoDaConservacao": {
+    "pt": "Passo a passo da conservação",
+    "fr": "Pas à pas de la conservation",
+    "en": "Step by step through the conservation"
+  },
+  "mudeAMassa": {
+    "pt": "Mude a massa e observe a velocidade atual: ela não se altera. A massa aparece em todos os termos do balanço energético e se cancela — foi o que Galileu afirmou antes de haver fórmula para isso.",
+    "fr": "Changez la masse et observez la vitesse actuelle : elle ne change pas. La masse apparaît dans tous les termes du bilan énergétique et se simplifie — c’est ce que Galilée a affirmé avant qu’il y ait une formule pour le dire.",
+    "en": "Change the mass and watch the current speed: it does not budge. The mass appears in every term of the energy balance and cancels out — which is what Galileo claimed before there was a formula for it."
+  },
+  "trabalhoDeUmaForca": {
+    "pt": "Trabalho de uma força inclinada",
+    "fr": "Travail d’une force inclinée",
+    "en": "Work done by a slanted force"
+  },
+  "deslocamentoM": {
+    "pt": "Deslocamento (m)",
+    "fr": "Déplacement (m)",
+    "en": "Displacement (m)"
+  },
+  "anguloComDeslocamento": {
+    "pt": "Ângulo com o deslocamento (°)",
+    "fr": "Angle avec le déplacement (°)",
+    "en": "Angle with the displacement (°)"
+  },
+  "tempoS": { "pt": "Tempo (s)", "fr": "Temps (s)", "en": "Time (s)" },
+  "trabalho": { "pt": "Trabalho", "fr": "Travail", "en": "Work" },
+  "potenciaMedia": {
+    "pt": "Potência média",
+    "fr": "Puissance moyenne",
+    "en": "Average power"
+  },
+  "mesmaEnergiaEm": {
+    "pt": "mesma energia, em {tempo} s",
+    "fr": "même énergie, en {tempo} s",
+    "en": "the same energy, in {tempo} s"
+  },
+  "leveOAngulo": {
+    "pt": "Leve o ângulo a 90°: o trabalho zera, por mais forte que seja a força. Passe de 90° e ele fica negativo — é o que o atrito faz, retirando energia do movimento. E compare a potência ao mudar só o tempo: a energia é a mesma, a exigência do motor não.",
+    "fr": "Amenez l’angle à 90° : le travail s’annule, quelle que soit la force. Dépassez 90° et il devient négatif — c’est ce que fait le frottement, en retirant de l’énergie au mouvement. Et comparez la puissance en ne changeant que le temps : l’énergie est la même, la demande sur le moteur non.",
+    "en": "Take the angle to 90°: the work goes to zero, however strong the force. Go past 90° and it turns negative — which is what friction does, taking energy out of the motion. And compare the power while changing only the time: the energy is the same, the demand on the motor is not."
+  }
+}

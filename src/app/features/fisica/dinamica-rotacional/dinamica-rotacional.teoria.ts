@@ -13,7 +13,9 @@ export const TEORIA_DINAMICA_ROTACIONAL: readonly Teoria[] = [
     formulas: [
       { tex: 'F = ma \\quad\\longleftrightarrow\\quad \\tau = I\\alpha' },
       { tex: 'p = mv \\quad\\longleftrightarrow\\quad L = I\\omega' },
-      { tex: 'K = \\tfrac{1}{2}mv^{2} \\quad\\longleftrightarrow\\quad K = \\tfrac{1}{2}I\\omega^{2}' },
+      {
+        tex: 'K = \\tfrac{1}{2}mv^{2} \\quad\\longleftrightarrow\\quad K = \\tfrac{1}{2}I\\omega^{2}',
+      },
     ],
     demonstracao: [
       {
@@ -48,8 +50,12 @@ export const TEORIA_DINAMICA_ROTACIONAL: readonly Teoria[] = [
       'barra resiste quatro vezes mais girando pela ponta do que pelo centro.',
     formulas: [
       { tex: 'I = \\sum m_{i}r_{i}^{2}' },
-      { tex: 'I_{aro} = mr^{2} \\qquad I_{disco} = \\tfrac{1}{2}mr^{2} \\qquad I_{esfera} = \\tfrac{2}{5}mr^{2}' },
-      { tex: 'I_{barra}^{centro} = \\tfrac{1}{12}mL^{2} \\qquad I_{barra}^{ponta} = \\tfrac{1}{3}mL^{2}' },
+      {
+        tex: 'I_{aro} = mr^{2} \\qquad I_{disco} = \\tfrac{1}{2}mr^{2} \\qquad I_{esfera} = \\tfrac{2}{5}mr^{2}',
+      },
+      {
+        tex: 'I_{barra}^{centro} = \\tfrac{1}{12}mL^{2} \\qquad I_{barra}^{ponta} = \\tfrac{1}{3}mL^{2}',
+      },
     ],
     demonstracao: [
       {

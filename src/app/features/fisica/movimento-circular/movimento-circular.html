@@ -1,66 +1,67 @@
 <app-topico-layout topicoId="movimento-circular">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Velocidade constante, aceleração não nula</h2>
+      <h2>{{ texto('velocidadeConstante') }}</h2>
       <app-formula [tex]="'a_{c} = \\frac{v^{2}}{r} = \\omega^{2}r'" [bloco]="true" />
-      <p class="observacao">
-        No movimento circular uniforme o módulo da velocidade nunca muda — mas a direção muda a
-        cada instante, e isso é acelerar. A aceleração resultante aponta sempre para o centro, é
-        perpendicular à velocidade e por isso não altera a rapidez: ela só curva a trajetória.
-      </p>
+      <p class="observacao">{{ texto('noMovimentoCircular') }}</p>
     </section>
 
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="decimosDoPeriodo"
-        rotulo="Período, em décimos de segundo"
+        [rotulo]="texto('periodoEmDecimos')"
         [min]="5"
         [max]="100"
       />
       <app-controle-parametro
         [(valor)]="decimosDoRaio"
-        rotulo="Raio, em décimos de metro"
+        [rotulo]="i18n.t('explorar.raioDecimos')"
         [min]="5"
         [max]="50"
       />
-      <app-controle-parametro [(valor)]="massa" rotulo="Massa (kg)" [min]="1" [max]="20" />
+      <app-controle-parametro
+        [(valor)]="massa"
+        [rotulo]="i18n.t('explorar.massaKg')"
+        [min]="1"
+        [max]="20"
+      />
       <app-controle-parametro
         [(valor)]="posicao"
-        rotulo="Posição na volta"
+        [rotulo]="texto('posicaoNaVolta')"
         [min]="0"
         [max]="11"
-        dica="Doze posições ao longo da circunferência."
+        [dica]="texto('dicaPosicao')"
       />
     </section>
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">Frequência</span>
+        <span class="rotulo">{{ texto('frequencia') }}</span>
         <strong>{{ formatar(frequencia()) }} Hz</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Velocidade angular</span>
+        <span class="rotulo">{{ texto('velocidadeAngular') }}</span>
         <strong>{{ formatar(omega()) }} rad/s</strong>
-        <span class="legenda">igual para todo o corpo</span>
+        <span class="legenda">{{ texto('igualParaTodoCorpo') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Velocidade tangencial</span>
+        <span class="rotulo">{{ texto('velocidadeTangencial') }}</span>
         <strong>{{ formatar(tangencial()) }} m/s</strong>
-        <span class="legenda">cresce com o raio</span>
+        <span class="legenda">{{ texto('cresceComORaio') }}</span>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Aceleração centrípeta</span>
+        <span class="rotulo">{{ texto('aceleracaoCentripeta') }}</span>
         <strong>{{ formatar(centripeta()) }} m/s²</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Força centrípeta</span>
+        <span class="rotulo">{{ texto('forcaCentripeta') }}</span>
         <strong>{{ formatar(forca()) }} N</strong>
-        <span class="legenda">o papel, não uma força nova</span>
+        <span class="legenda">{{ texto('oPapelNaoUmaForca') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>Para onde aponta cada vetor</h2>
+      <h2>{{ texto('paraOndeAponta') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -70,22 +71,16 @@
         [altura]="420"
         [mostrarGrade]="false"
       />
-      <p class="observacao">
-        Ande com o ponto pela volta: a velocidade gira junto, sempre tangente, e a aceleração
-        aponta sempre para o centro. Como as duas são perpendiculares, a aceleração não tem
-        componente que acelere ou freie — ela só vira o vetor velocidade.
-      </p>
+      <p class="observacao">{{ texto('andeComOPonto') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Por que a velocidade entra ao quadrado</h2>
-      <p class="observacao">
-        Dobre o período e veja: a velocidade cai pela metade, mas a aceleração cai a um quarto.
-        É essa dependência quadrática que torna curvas rápidas tão exigentes — e é a mesma
-        relação que fixa a velocidade de uma órbita, onde quem faz o papel centrípeto é a
-        gravidade.
-      </p>
-      <app-formula [tex]="'\\frac{GMm}{r^{2}} = m\\frac{v^{2}}{r} \\;\\Longrightarrow\\; v = \\sqrt{\\frac{GM}{r}}'" [bloco]="true" />
+      <h2>{{ texto('porQueAoQuadrado') }}</h2>
+      <p class="observacao">{{ texto('dobreOPeriodo') }}</p>
+      <app-formula
+        [tex]="'\\frac{GMm}{r^{2}} = m\\frac{v^{2}}{r} \\;\\Longrightarrow\\; v = \\sqrt{\\frac{GM}{r}}'"
+        [bloco]="true"
+      />
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

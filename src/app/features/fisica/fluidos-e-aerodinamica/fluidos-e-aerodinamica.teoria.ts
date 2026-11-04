@@ -26,12 +26,14 @@ export const TEORIA_FLUIDOS: readonly Teoria[] = [
     ],
     demonstracao: [
       {
-        descricao: 'A pressão numa profundidade é o peso da coluna de fluido acima, por unidade de área.',
+        descricao:
+          'A pressão numa profundidade é o peso da coluna de fluido acima, por unidade de área.',
         tex: 'p = \\frac{mg}{A} = \\frac{\\rho V g}{A} = \\rho g h',
         nota: 'A área se cancela — e é por isso que a forma do recipiente não importa.',
       },
       {
-        descricao: 'A diferença de pressão entre topo e base de um corpo gera força resultante para cima.',
+        descricao:
+          'A diferença de pressão entre topo e base de um corpo gera força resultante para cima.',
         tex: 'E = (p_{base} - p_{topo})A = \\rho g h A = \\rho V g',
       },
       {

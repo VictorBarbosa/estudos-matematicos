@@ -35,8 +35,9 @@ describe('geradorPropulsao', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, vazao, exaustao] =
-        /\\dot\{m\} = (\d+)\\,\\text\{kg\/s\} \\qquad v_e = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, vazao, exaustao] = /\\dot\{m\} = (\d+)\\,\\text\{kg\/s\} \\qquad v_e = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBeCloseTo((Number(vazao) * Number(exaustao)) / 1000, 6);
     }
@@ -60,13 +61,16 @@ describe('geradorPropulsao', () => {
   });
 
   it('o delta-v cresce com o logaritmo da razão de massas', () => {
-    const exercicios = amostra('medio', 150).filter((e) => e.enunciado.includes('delta-v disponível'));
+    const exercicios = amostra('medio', 150).filter((e) =>
+      e.enunciado.includes('delta-v disponível'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, razao, exaustao] =
-        /\\frac\{m_0\}\{m_f\} = (\d+) \\qquad v_e = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, razao, exaustao] = /\\frac\{m_0\}\{m_f\} = (\d+) \\qquad v_e = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       const esperado = (Number(exaustao) * Math.log(Number(razao))) / 1000;
       expect(exercicio.gabarito).toBeCloseTo(esperado, 6);
@@ -112,8 +116,9 @@ describe('geradorPropulsao', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, inicial, final] =
-        /m_0 = (\d+)\\,\\text\{kg\} \\qquad m_f = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, inicial, final] = /m_0 = (\d+)\\,\\text\{kg\} \\qquad m_f = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBeCloseTo(1 - Number(final) / Number(inicial), 4);
       expect(exercicio.gabarito).toBeGreaterThan(0);

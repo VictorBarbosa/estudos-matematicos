@@ -36,8 +36,9 @@ describe('geradorNewton', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, forca, atrito] =
-        /F = (\d+)\\,\\text\{N\} \\qquad f = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, forca, atrito] = /F = (\d+)\\,\\text\{N\} \\qquad f = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBe(Number(forca) - Number(atrito));
       expect(exercicio.gabarito).toBeGreaterThan(0);
@@ -45,13 +46,16 @@ describe('geradorNewton', () => {
   });
 
   it('a aceleração é a resultante dividida pela massa', () => {
-    const exercicios = amostra('facil', 120).filter((e) => e.enunciado.includes('age sobre um corpo'));
+    const exercicios = amostra('facil', 120).filter((e) =>
+      e.enunciado.includes('age sobre um corpo'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, forca, massa] =
-        /F_R = (\d+)\\,\\text\{N\} \\qquad m = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, forca, massa] = /F_R = (\d+)\\,\\text\{N\} \\qquad m = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBeCloseTo(Number(forca) / Number(massa), 9);
     }
@@ -63,8 +67,9 @@ describe('geradorNewton', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, massa, angulo] =
-        /m = (\d+)\\,\\text\{kg\} \\qquad \\theta = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, massa, angulo] = /m = (\d+)\\,\\text\{kg\} \\qquad \\theta = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       const peso = Number(massa) * GRAVIDADE_PADRAO;
       const esperado = peso * Math.cos((Number(angulo) * Math.PI) / 180);
@@ -75,7 +80,9 @@ describe('geradorNewton', () => {
   });
 
   it('a aceleração no plano não depende da massa', () => {
-    const exercicios = amostra('dificil', 180).filter((e) => e.enunciado.includes('desliza num plano'));
+    const exercicios = amostra('dificil', 180).filter((e) =>
+      e.enunciado.includes('desliza num plano'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -88,11 +95,8 @@ describe('geradorNewton', () => {
       const coeficiente = Number(mu.replace('{,}', '.'));
 
       // Mesma configuração com massa diferente: aceleração idêntica.
-      const comOutraMassa = planoInclinadoComPassos(
-        Number(massa) * 7,
-        Number(angulo),
-        coeficiente,
-      ).resultado.aceleracao;
+      const comOutraMassa = planoInclinadoComPassos(Number(massa) * 7, Number(angulo), coeficiente)
+        .resultado.aceleracao;
 
       expect(exercicio.gabarito).toBeCloseTo(comOutraMassa, 8);
       expect(exercicio.gabarito).toBeLessThanOrEqual(GRAVIDADE_PADRAO + 1e-9);
@@ -133,9 +137,7 @@ describe('geradorNewton', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('plano HORIZONTAL')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('plano HORIZONTAL'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('plano HORIZONTAL'))!;
 
     const resultado = corrigir(geradorNewton, exercicio, String(armadilha.resposta));
 

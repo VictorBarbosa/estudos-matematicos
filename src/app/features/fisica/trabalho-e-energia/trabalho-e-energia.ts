@@ -16,6 +16,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/trabalho-e-energia/trabalho-e-energia.i18n.json';
 import { geradorEnergia } from '@features/fisica/trabalho-e-energia/trabalho-e-energia.gerador';
 import { TEORIA_ENERGIA } from '@features/fisica/trabalho-e-energia/trabalho-e-energia.teoria';
 
@@ -35,6 +38,8 @@ import { TEORIA_ENERGIA } from '@features/fisica/trabalho-e-energia/trabalho-e-e
   styleUrl: './trabalho-e-energia.scss',
 })
 export class TrabalhoEEnergia {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorEnergia;
   protected readonly conceitos = TEORIA_ENERGIA.map((teoria) => teoria.id);
 
@@ -91,18 +96,18 @@ export class TrabalhoEEnergia {
       {
         fn: (h) => (h < 0 || h > h0 ? Number.NaN : m * GRAVIDADE_PADRAO * h),
         cor: 'serie-1',
-        rotulo: 'potencial',
+        rotulo: this.texto('curvaPotencial'),
       },
       {
         fn: (h) => (h < 0 || h > h0 ? Number.NaN : total - m * GRAVIDADE_PADRAO * h),
         cor: 'serie-2',
-        rotulo: 'cinética',
+        rotulo: this.texto('curvaCinetica'),
       },
       {
         fn: (h) => (h < 0 || h > h0 ? Number.NaN : total),
         cor: 'acento',
         tracejada: true,
-        rotulo: 'total (constante)',
+        rotulo: this.texto('curvaTotal'),
       },
     ];
   });

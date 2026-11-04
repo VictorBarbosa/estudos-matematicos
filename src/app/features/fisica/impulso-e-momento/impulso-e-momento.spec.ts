@@ -13,7 +13,9 @@ describe('geradorMomento', () => {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {
         for (const armadilha of exercicio.armadilhas) {
-          expect(geradorMomento.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(false);
+          expect(geradorMomento.saoEquivalentes(armadilha.resposta, exercicio.gabarito)).toBe(
+            false,
+          );
         }
       }
     });
@@ -33,21 +35,25 @@ describe('geradorMomento', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, massa, velocidade] =
-        /m = (\d+)\\,\\text\{kg\} \\qquad v = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, massa, velocidade] = /m = (\d+)\\,\\text\{kg\} \\qquad v = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBe(momentoLinear(Number(massa), Number(velocidade)));
     }
   });
 
   it('o impulso é força vezes tempo', () => {
-    const exercicios = amostra('facil', 120).filter((e) => e.enunciado.includes('Qual é o impulso'));
+    const exercicios = amostra('facil', 120).filter((e) =>
+      e.enunciado.includes('Qual é o impulso'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, forca, tempo] =
-        /F = (\d+)\\,\\text\{N\} \\qquad \\Delta t = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, forca, tempo] = /F = (\d+)\\,\\text\{N\} \\qquad \\Delta t = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       expect(exercicio.gabarito).toBe(Number(forca) * Number(tempo));
     }
@@ -96,13 +102,16 @@ describe('geradorMomento', () => {
   });
 
   it('a energia perdida na inelástica é positiva e menor que a inicial', () => {
-    const exercicios = amostra('dificil', 180).filter((e) => e.enunciado.includes('Quanta energia'));
+    const exercicios = amostra('dificil', 180).filter((e) =>
+      e.enunciado.includes('Quanta energia'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const [, mA, vA, mB] =
-        /m_A = (\d+) \\quad v_A = (\d+) \\quad m_B = (\d+)/.exec(exercicio.enunciadoTex)!;
+      const [, mA, vA, mB] = /m_A = (\d+) \\quad v_A = (\d+) \\quad m_B = (\d+)/.exec(
+        exercicio.enunciadoTex,
+      )!;
 
       const inicial = energiaCinetica(Number(mA), Number(vA));
       const { resultado } = colisaoComPassos(
@@ -124,9 +133,7 @@ describe('geradorMomento', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('ENERGIA CINÉTICA')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('ENERGIA CINÉTICA'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('ENERGIA CINÉTICA'))!;
 
     const resultado = corrigir(geradorMomento, exercicio, String(armadilha.resposta));
 

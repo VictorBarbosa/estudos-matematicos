@@ -173,8 +173,7 @@ function exercicioForcaMedia(nivel: Nivel, rng: Rng): Exercicio<number> {
         {
           descricao: 'Isolando a força.',
           tex: `F = \\frac{${massa * velocidade}}{${tempo}} = ${Number(resultado.toFixed(2))}\\,\\text{N}`,
-          nota:
-            'Dobrar o tempo de parada reduz a força à metade — é exatamente o que um airbag faz.',
+          nota: 'Dobrar o tempo de parada reduz a força à metade — é exatamente o que um airbag faz.',
         },
       ],
     },
@@ -191,8 +190,7 @@ function exercicioForcaMedia(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: massa * velocidade * tempo,
-          diagnostico:
-            'O tempo vai no DENOMINADOR: quanto mais rápida a parada, maior a força.',
+          diagnostico: 'O tempo vai no DENOMINADOR: quanto mais rápida a parada, maior a força.',
           passo: 2,
           conceito: 'momento.impulso',
         },
@@ -232,8 +230,7 @@ function exercicioColisao(nivel: Nivel, rng: Rng): Exercicio<number> {
       `Um corpo de ${massaA} kg a ${velocidadeA} m/s colide com outro de ${massaB} kg a ` +
       `${velocidadeB} m/s e os dois seguem juntos. Qual é a velocidade final, em m/s? ` +
       '(2 casas decimais)',
-    enunciadoTex:
-      `m_A = ${massaA} \\quad v_A = ${velocidadeA} \\quad m_B = ${massaB} \\quad v_B = ${velocidadeB}`,
+    enunciadoTex: `m_A = ${massaA} \\quad v_A = ${velocidadeA} \\quad m_B = ${massaB} \\quad v_B = ${velocidadeB}`,
     gabarito: resultado.velocidadeFinalA,
     resolucao: { resultado: resultado.velocidadeFinalA, passos },
     conceitos: ['momento.conservacao', 'momento.colisoes'],
@@ -274,7 +271,13 @@ function exercicioEnergiaPerdida(nivel: Nivel, rng: Rng): Exercicio<number> {
   const massaB = rng.inteiro(1, 8);
   const velocidadeA = rng.inteiro(4, 20);
 
-  const { resultado } = colisaoComPassos(massaA, velocidadeA, massaB, 0, 'perfeitamente-inelastica');
+  const { resultado } = colisaoComPassos(
+    massaA,
+    velocidadeA,
+    massaB,
+    0,
+    'perfeitamente-inelastica',
+  );
   const perdida = resultado.energiaAntes - resultado.energiaDepois;
 
   return {

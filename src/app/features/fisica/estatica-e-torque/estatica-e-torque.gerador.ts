@@ -5,7 +5,8 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 
-type Pergunta = 'torque' | 'alavanca' | 'centro-massa' | 'forca-para-equilibrar' | 'torque-inclinado';
+type Pergunta =
+  'torque' | 'alavanca' | 'centro-massa' | 'forca-para-equilibrar' | 'torque-inclinado';
 
 export const geradorTorque: GeradorExercicio<number> = {
   topicoId: 'estatica-e-torque',
@@ -153,9 +154,7 @@ function exercicioCentroMassa(nivel: Nivel, rng: Rng): Exercicio<number> {
       'Três corpos sobre uma barra: ' +
       corpos.map((c) => `${c.massa} kg em x = ${c.posicao} m`).join(', ') +
       '. Onde fica o centro de massa, em metros? (2 casas decimais)',
-    enunciadoTex: corpos
-      .map((c) => `m = ${c.massa},\\; x = ${c.posicao}`)
-      .join(' \\quad '),
+    enunciadoTex: corpos.map((c) => `m = ${c.massa},\\; x = ${c.posicao}`).join(' \\quad '),
     gabarito: resultado,
     resolucao: { resultado, passos },
     conceitos: ['torque.centro-massa'],
@@ -171,8 +170,7 @@ function exercicioCentroMassa(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: corpos.reduce((total, c) => total + c.massa * c.posicao, 0),
-          diagnostico:
-            'Você somou os produtos massa × posição mas não dividiu pela massa total.',
+          diagnostico: 'Você somou os produtos massa × posição mas não dividiu pela massa total.',
           passo: 2,
           conceito: 'torque.centro-massa',
         },
@@ -209,7 +207,8 @@ function exercicioForcaEquilibrio(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       passos: [
         {
-          descricao: 'Somamos os torques em relação ao apoio. A carga produz torque pelo seu braço.',
+          descricao:
+            'Somamos os torques em relação ao apoio. A carga produz torque pelo seu braço.',
           tex: `\\tau_Q = ${carga} \\cdot ${cargaDistancia} = ${torqueCarga}\\,\\text{N·m}`,
         },
         {

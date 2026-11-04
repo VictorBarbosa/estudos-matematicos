@@ -41,7 +41,9 @@ export const TEORIA_MOMENTO_ANGULAR: readonly Teoria[] = [
       'imediato, a conservação — sem torque externo, o momento angular é constante.',
     formulas: [
       { tex: '\\vec{\\tau} = \\frac{d\\vec{L}}{dt}' },
-      { tex: '\\vec{F} = \\frac{d\\vec{p}}{dt} \\quad\\longleftrightarrow\\quad \\vec{\\tau} = \\frac{d\\vec{L}}{dt}' },
+      {
+        tex: '\\vec{F} = \\frac{d\\vec{p}}{dt} \\quad\\longleftrightarrow\\quad \\vec{\\tau} = \\frac{d\\vec{L}}{dt}',
+      },
     ],
     demonstracao: [
       {

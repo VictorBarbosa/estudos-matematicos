@@ -7,7 +7,11 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, MarcaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import {
+  CurvaPlot,
+  MarcaPlot,
+  PontoPlot,
+} from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
 import { geradorPropulsao } from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.gerador';
 import { TEORIA_PROPULSAO } from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.teoria';
@@ -53,9 +57,7 @@ export class PropulsaoDeFoguetes {
     tsiolkovskyComPassos(this.massaInicial() * 1000, this.massaSeca() * 1000, this.exaustao()),
   );
 
-  protected readonly empuxo = computed(() =>
-    empuxoDeMotorComPassos(this.vazao(), this.exaustao()),
-  );
+  protected readonly empuxo = computed(() => empuxoDeMotorComPassos(this.vazao(), this.exaustao()));
 
   protected readonly impulsoEspecifico = computed(() => this.exaustao() / 9.81);
 
@@ -66,9 +68,7 @@ export class PropulsaoDeFoguetes {
     () => this.empuxo().resultado / (this.massaInicial() * 1000 * 9.81),
   );
 
-  protected readonly tempoDeQueima = computed(
-    () => (this.massaPropelente() * 1000) / this.vazao(),
-  );
+  protected readonly tempoDeQueima = computed(() => (this.massaPropelente() * 1000) / this.vazao());
 
   /** A missão mais ambiciosa que esse delta-v alcança. */
   protected readonly missaoAlcancada = computed(() => {
