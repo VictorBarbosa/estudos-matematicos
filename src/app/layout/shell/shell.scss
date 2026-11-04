@@ -55,6 +55,7 @@
 .tema,
 .idioma,
 .calculadora,
+.folha,
 .assistente {
   @include botao-sutil;
   padding: var(--esp-2);
@@ -63,6 +64,7 @@
 
 /* Ligadas, calculadora e assistente acendem o botão que as abriu. */
 .calculadora[aria-pressed='true'],
+.folha[aria-pressed='true'],
 .assistente[aria-pressed='true'] {
   background: var(--acento-suave);
   color: var(--acento);
@@ -98,12 +100,6 @@
 @media (max-width: 60rem) {
   .menu {
     display: inline-flex;
-  }
-
-  /* Calculadora e assistente não existem no celular; os botões também não. */
-  .calculadora,
-  .assistente {
-    display: none;
   }
 
   .lateral {

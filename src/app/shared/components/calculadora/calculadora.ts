@@ -129,8 +129,9 @@ const FOLGA = 8;
  * a expressão inteira. Num site que ensina a ordem das operações, esconder que
  * `2 + 3 × 4` é 14 e não 20 seria contraproducente.
  *
- * Some abaixo de 60rem — a mesma largura em que a navegação lateral vira menu.
- * Num celular ela cobriria o exercício que deveria ajudar a resolver.
+ * Quem decide se ela aparece é o `DispositivoService`, no cabeçalho: sempre no
+ * tablet, onde não há papel na mesa; no computador, só com janela larga; nunca
+ * no celular, onde a janela cobriria o exercício que deveria ajudar a resolver.
  */
 @Component({
   selector: 'app-calculadora',
@@ -214,10 +215,35 @@ export class Calculadora {
   constructor() {
     // Abrir leva o foco para a janela, que é o que faz o teclado físico valer.
     effect(() => {
-      if (this.calculadora.aberta()) {
-        queueMicrotask(() => this.painel()?.nativeElement.focus());
+      if (!this.calculadora.aberta()) {
+        return;
       }
+
+      queueMicrotask(() => {
+        this.painel()?.nativeElement.focus();
+        this.recolocarSePrecisar();
+      });
     });
+  }
+
+  /**
+   * Traz a janela de volta para dentro da tela, se ela ficou fora.
+   *
+   * A posição é lembrada entre sessões, e a mesma conta aberta num monitor
+   * largo e depois num iPad deixaria a calculadora num canto que não existe
+   * mais. Acontece ao abrir, quando a janela já tem tamanho medido.
+   */
+  private recolocarSePrecisar(): void {
+    const guardada = this.calculadora.posicao();
+    const painel = this.painel();
+    if (guardada === null || painel === undefined) {
+      return;
+    }
+
+    const dentro = this.dentroDaTela(guardada.x, guardada.y);
+    if (dentro.x !== guardada.x || dentro.y !== guardada.y) {
+      this.calculadora.definirPosicao(dentro);
+    }
   }
 
   protected pressionar(acao: Acao): void {

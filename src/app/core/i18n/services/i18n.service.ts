@@ -1,9 +1,11 @@
 import { Injectable, computed, effect, signal } from '@angular/core';
 import {
   Dicionario,
+  DicionarioBruto,
   IDIOMA_PADRAO,
   Idioma,
   LOCALE_DO_IDIOMA,
+  achatar,
   ehIdioma,
   traduzir,
 } from '@core/i18n/models/i18n.model';
@@ -12,12 +14,14 @@ import pt from '@core/i18n/dicionarios/pt.json';
 const CHAVE = 'estudos-matematicos.idioma';
 
 /** O português vem junto do pacote; os outros dois chegam sob demanda. */
-const PORTUGUES = pt as Dicionario;
+const PORTUGUES = achatar(pt as DicionarioBruto);
 
 const CARREGADORES: Readonly<Record<Idioma, () => Promise<Dicionario>>> = {
   pt: async () => PORTUGUES,
-  fr: async () => (await import('@core/i18n/dicionarios/fr.json')).default as Dicionario,
-  en: async () => (await import('@core/i18n/dicionarios/en.json')).default as Dicionario,
+  fr: async () =>
+    achatar((await import('@core/i18n/dicionarios/fr.json')).default as DicionarioBruto),
+  en: async () =>
+    achatar((await import('@core/i18n/dicionarios/en.json')).default as DicionarioBruto),
 };
 
 /**

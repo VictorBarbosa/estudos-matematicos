@@ -4,10 +4,13 @@ import { AssistenteService } from '@core/assistente/services/assistente.service'
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { IDIOMAS, NOME_DO_IDIOMA, SIGLA_DO_IDIOMA } from '@core/i18n/models/i18n.model';
 import { CalculadoraService } from '@core/calculadora/services/calculadora.service';
+import { DispositivoService } from '@core/dispositivo/services/dispositivo.service';
+import { FolhaService } from '@core/folha/services/folha.service';
 import { CHAVE_DO_TEMA, TemaService } from '@core/tema/services/tema.service';
 import { AtualizacaoDialog } from '@shared/components/atualizacao-dialog/atualizacao-dialog';
 import { AssistenteDialog } from '@shared/components/assistente-dialog/assistente-dialog';
 import { Calculadora } from '@shared/components/calculadora/calculadora';
+import { Folha } from '@shared/components/folha/folha';
 import { TeoriaDialog } from '@shared/components/teoria-dialog/teoria-dialog';
 import { Sidebar } from '@layout/sidebar/sidebar';
 
@@ -15,6 +18,12 @@ import { Sidebar } from '@layout/sidebar/sidebar';
  * Moldura da aplicação: cabeçalho, navegação lateral, área de conteúdo e as
  * duas instâncias únicas de modal — a teoria de um conceito e o aviso de
  * versão nova —, disponíveis a partir de qualquer tela.
+ *
+ * Três ferramentas do cabeçalho aparecem ou não conforme o aparelho e o que
+ * está ao alcance: a calculadora não cabe no celular, a folha de rascunho só
+ * serve onde há caneta ou dedo, e o assistente depende de um Ollama que
+ * responda. Em todos os casos a decisão é de fora — `DispositivoService` e
+ * `AssistenteService` —, e aqui só se obedece.
  */
 @Component({
   selector: 'app-shell',
@@ -23,6 +32,7 @@ import { Sidebar } from '@layout/sidebar/sidebar';
     AssistenteDialog,
     AtualizacaoDialog,
     Calculadora,
+    Folha,
     RouterLink,
     RouterOutlet,
     Sidebar,
@@ -34,7 +44,9 @@ import { Sidebar } from '@layout/sidebar/sidebar';
 export class Shell {
   protected readonly tema = inject(TemaService);
   protected readonly calculadora = inject(CalculadoraService);
+  protected readonly folha = inject(FolhaService);
   protected readonly assistente = inject(AssistenteService);
+  protected readonly dispositivo = inject(DispositivoService);
   protected readonly i18n = inject(I18nService);
 
   protected readonly sigla = SIGLA_DO_IDIOMA;

@@ -1,0 +1,100 @@
+@if (folha.aberta()) {
+  <section
+    #painel
+    class="janela"
+    role="dialog"
+    [attr.aria-label]="i18n.t('folha.titulo')"
+    [style.left.px]="local()?.x ?? null"
+    [style.top.px]="local()?.y ?? null"
+    [class.sem-posicao]="local() === null"
+  >
+    <!-- A barra é a alça: é por ela que a janela se arrasta. -->
+    <header
+      class="barra"
+      (pointerdown)="aoPegar($event)"
+      (pointermove)="aoArrastar($event)"
+      (pointerup)="aoSoltar()"
+      (pointercancel)="aoSoltar()"
+    >
+      <span class="alca" aria-hidden="true">⠿</span>
+
+      <div class="ferramentas" role="group" [attr.aria-label]="i18n.t('folha.ferramentas')">
+        <button
+          type="button"
+          [class.ativo]="folha.ferramenta() === 'lapis'"
+          [attr.aria-pressed]="folha.ferramenta() === 'lapis'"
+          [title]="i18n.t('folha.lapis')"
+          (click)="folha.definirFerramenta('lapis')"
+        >
+          <span aria-hidden="true">✏️</span>
+          <span class="apenas-leitor">{{ i18n.t('folha.lapis') }}</span>
+        </button>
+        <button
+          type="button"
+          [class.ativo]="folha.ferramenta() === 'borracha'"
+          [attr.aria-pressed]="folha.ferramenta() === 'borracha'"
+          [title]="i18n.t('folha.borracha')"
+          (click)="folha.definirFerramenta('borracha')"
+        >
+          <span aria-hidden="true">🩹</span>
+          <span class="apenas-leitor">{{ i18n.t('folha.borracha') }}</span>
+        </button>
+      </div>
+
+      <div class="acoes">
+        <button
+          type="button"
+          [disabled]="folha.vazia()"
+          [title]="i18n.t('folha.desfazer')"
+          (click)="folha.desfazer()"
+        >
+          <span aria-hidden="true">↶</span>
+          <span class="apenas-leitor">{{ i18n.t('folha.desfazer') }}</span>
+        </button>
+        <button
+          type="button"
+          [disabled]="folha.vazia()"
+          [title]="i18n.t('folha.limpar')"
+          (click)="folha.limpar()"
+        >
+          <span aria-hidden="true">🗑</span>
+          <span class="apenas-leitor">{{ i18n.t('folha.limpar') }}</span>
+        </button>
+      </div>
+
+      <button
+        type="button"
+        class="fechar"
+        [attr.aria-label]="i18n.t('folha.fechar')"
+        (click)="folha.fechar()"
+      >
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.3 19.71 2.88 18.3 9.17 12 2.88 5.71 4.3 4.29l6.29 6.3 6.3-6.3z"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <!--
+      `touch-action: none` no CSS é o que impede o iPad de entender o traço como
+      rolagem da página. Sem isso, escrever move o site em vez de desenhar.
+    -->
+    <canvas
+      #tela
+      class="tela"
+      [attr.data-ferramenta]="folha.ferramenta()"
+      [attr.aria-label]="i18n.t('folha.area')"
+      role="img"
+      (pointerdown)="aoApoiar($event)"
+      (pointermove)="aoMover($event)"
+      (pointerup)="aoLevantar($event)"
+      (pointercancel)="aoLevantar($event)"
+    ></canvas>
+
+    @if (folha.vazia()) {
+      <p class="convite" aria-hidden="true">{{ i18n.t('folha.convite') }}</p>
+    }
+  </section>
+}

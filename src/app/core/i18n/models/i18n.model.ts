@@ -41,6 +41,40 @@ export const LOCALE_DO_IDIOMA: Readonly<Record<Idioma, string>> = {
 
 export type Dicionario = Readonly<Record<string, string>>;
 
+/**
+ * Um dicionário como ele vem do JSON: agrupado por prefixo.
+ *
+ * `{ "shell": { "marca": "…" } }` é mais fácil de ler e de editar do que
+ * seiscentas linhas de `"shell.marca"` em ordem alfabética — e é o formato que
+ * um tradutor espera encontrar.
+ */
+export type DicionarioBruto = { readonly [chave: string]: string | DicionarioBruto };
+
+/**
+ * Achata o dicionário em chaves pontuadas.
+ *
+ * O arquivo é agrupado para quem edita; o código procura por `shell.marca`. A
+ * conversão acontece uma vez, ao carregar, e aceita também um arquivo já
+ * plano — os dois formatos funcionam, o que permite converter um idioma de
+ * cada vez sem quebrar os outros.
+ */
+export function achatar(bruto: DicionarioBruto, prefixo = ''): Dicionario {
+  const plano: Record<string, string> = {};
+
+  for (const [chave, valor] of Object.entries(bruto)) {
+    const caminho = prefixo === '' ? chave : `${prefixo}.${chave}`;
+
+    if (typeof valor === 'string') {
+      plano[caminho] = valor;
+      continue;
+    }
+
+    Object.assign(plano, achatar(valor, caminho));
+  }
+
+  return plano;
+}
+
 export function ehIdioma(valor: unknown): valor is Idioma {
   return typeof valor === 'string' && (IDIOMAS as readonly string[]).includes(valor);
 }

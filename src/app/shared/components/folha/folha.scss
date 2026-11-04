@@ -1,0 +1,142 @@
+@use 'mixins' as *;
+
+/*
+ * A folha é sempre clara, nos dois temas do site.
+ *
+ * É papel: um retângulo branco com pauta leve é o que a faz ser lida como
+ * folha de rascunho e não como mais um painel da interface. Por isso as cores
+ * aqui são literais, como na calculadora, e não os tokens do tema.
+ */
+$papel: #fdfdf7;
+$pauta: #dfe3ea;
+$barra: #2c2c2e;
+
+:host {
+  display: contents;
+}
+
+.janela {
+  position: fixed;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  width: min(34rem, calc(100vw - 2rem));
+  height: min(26rem, calc(100vh - 8rem));
+  border-radius: 1rem;
+  background: $papel;
+  box-shadow: 0 1.5rem 3rem oklch(0% 0 0 / 0.35);
+  overflow: hidden;
+  user-select: none;
+
+  /* Sem posição guardada, nasce no canto de baixo à esquerda — o lado oposto
+     ao da calculadora, para as duas poderem ficar abertas ao mesmo tempo. */
+  &.sem-posicao {
+    left: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: $barra;
+  color: #fff;
+  cursor: grab;
+  touch-action: none;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.alca {
+  color: #8e8e93;
+  font-size: 0.9rem;
+}
+
+.ferramentas,
+.acoes {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.acoes {
+  margin-left: auto;
+}
+
+.barra button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0 0.4rem;
+  border: 0;
+  border-radius: 0.6rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: #48484a;
+  }
+
+  &.ativo {
+    background: #0a84ff;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #0a84ff;
+    outline-offset: 2px;
+  }
+}
+
+.fechar {
+  min-width: 2rem;
+}
+
+.tela {
+  flex: 1;
+  width: 100%;
+  /* A pauta é desenhada no fundo, não no canvas: assim ela não é apagada pela
+     borracha nem entra no desfazer. */
+  background-image:
+    linear-gradient($pauta 1px, transparent 1px),
+    linear-gradient(90deg, $pauta 1px, transparent 1px);
+  background-size: 1.5rem 1.5rem;
+  /* Sem isto, o traço no iPad é entendido como rolagem da página. */
+  touch-action: none;
+  cursor: crosshair;
+
+  /* A cor da tinta, lida pelo componente na hora de pintar. */
+  --tinta: #1c1c1e;
+
+  &[data-ferramenta='borracha'] {
+    cursor: cell;
+  }
+}
+
+.convite {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #9aa0a6;
+  font-size: 0.9rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.apenas-leitor {
+  @include apenas-leitor-de-tela;
+}

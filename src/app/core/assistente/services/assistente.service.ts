@@ -34,6 +34,12 @@ interface EstadoSalvo {
   readonly tamanho: Tamanho | null;
 }
 
+/** Teto de espera da sondagem, em milissegundos. */
+const ESPERA_DA_SONDAGEM = 2500;
+
+/** O parâmetro de URL que aponta o assistente para outra máquina. */
+const PARAMETRO_DO_SERVIDOR = 'ollama';
+
 const PADRAO: EstadoSalvo = {
   aberto: false,
   servidor: SERVIDOR_PADRAO,
@@ -49,6 +55,17 @@ const PADRAO: EstadoSalvo = {
  * dúvidas de estudo, e guardá-la no `localStorage` seria acumular isso sem que
  * ninguém tivesse pedido. O que persiste é o que poupa cliques: se a janela
  * estava aberta, onde ela estava e qual modelo foi escolhido.
+ *
+ * **O assistente só existe se o Ollama responder.** Ele roda na máquina do
+ * aluno, e num iPad ou num celular quase nunca há um. Em vez de oferecer um
+ * botão que abre uma janela com uma mensagem de erro, o serviço sonda o
+ * servidor ao iniciar e o cabeçalho só mostra o botão quando a sondagem volta.
+ *
+ * O endereço pode vir da URL, em `?ollama=…`, e fica guardado. É o único jeito
+ * de apontar para outra máquina sem abrir a janela — que, sem servidor, não
+ * tem botão para abrir. Vale o aviso: de uma página HTTPS o navegador bloqueia
+ * pedidos a `http://` que não sejam para `localhost`, então acessar o Ollama de
+ * outro aparelho pela internet exige expô-lo também por HTTPS.
  */
 @Injectable({ providedIn: 'root' })
 export class AssistenteService {
@@ -68,6 +85,8 @@ export class AssistenteService {
   private readonly listaDeModelos = signal<readonly ModeloOllama[]>([]);
   private readonly emCurso = signal(false);
   private readonly problema = signal<string | null>(null);
+  /** `null` enquanto a sondagem não voltou; depois, se o Ollama respondeu. */
+  private readonly alcancavel = signal<boolean | null>(null);
   /** O texto que está chegando agora, antes de virar mensagem. */
   private readonly parcial = signal('');
 
@@ -79,15 +98,68 @@ export class AssistenteService {
 
   readonly vazia = computed(() => this.conversa().length === 0);
 
+  /**
+   * O assistente pode ser oferecido?
+   *
+   * Falso enquanto a sondagem não voltou: é melhor o botão aparecer um instante
+   * depois do que aparecer e não funcionar.
+   */
+  readonly disponivel = computed(() => this.alcancavel() === true);
+
   private cancelador: AbortController | null = null;
 
   constructor() {
     effect(() => salvar(this.estado()));
+
+    const daUrl = enderecoNaUrl(this.documento);
+    if (daUrl !== null && daUrl !== this.servidor()) {
+      this.estado.update((atual) => ({ ...atual, servidor: daUrl }));
+    }
+
+    void this.sondar();
+  }
+
+  /**
+   * Pergunta ao servidor se ele está aí.
+   *
+   * Com teto de tempo curto: um endereço errado numa rede que simplesmente
+   * engole o pacote demora mais de meio minuto para falhar sozinho, e o botão
+   * ficaria esse tempo todo por decidir.
+   */
+  async sondar(): Promise<void> {
+    const cancelador = new AbortController();
+    const relogio = setTimeout(() => cancelador.abort(), ESPERA_DA_SONDAGEM);
+
+    try {
+      const modelos = await this.ollama.modelos(this.servidor(), cancelador.signal);
+      this.listaDeModelos.set(modelos);
+      this.alcancavel.set(true);
+
+      const atual = this.modelo();
+      if (modelos.length > 0 && !modelos.some((modelo) => modelo.nome === atual)) {
+        this.definirModelo(modelos[0]!.nome);
+      }
+    } catch {
+      // Sem servidor não há assistente, e isso não é erro: é o caso comum.
+      this.alcancavel.set(false);
+      this.listaDeModelos.set([]);
+    } finally {
+      clearTimeout(relogio);
+    }
   }
 
   alternar(): void {
     this.estado.update((atual) => ({ ...atual, aberto: !atual.aberto }));
-    if (this.aberto() && this.listaDeModelos().length === 0) {
+
+    /*
+     * Abrir relê a lista de modelos, sempre.
+     *
+     * Antes relia só quando a lista estava vazia, e isso bastava porque a
+     * primeira leitura acontecia ao abrir. Agora ela acontece na sondagem do
+     * cabeçalho, minutos antes — e um servidor que caiu nesse meio-tempo
+     * deixaria a janela abrir com a lista velha e sem recado nenhum.
+     */
+    if (this.aberto()) {
       void this.carregarModelos();
     }
   }
@@ -102,6 +174,8 @@ export class AssistenteService {
 
   definirServidor(servidor: string): void {
     this.estado.update((atual) => ({ ...atual, servidor }));
+    this.alcancavel.set(null);
+    void this.sondar();
   }
 
   definirPosicao(posicao: Posicao): void {
@@ -119,6 +193,7 @@ export class AssistenteService {
     try {
       const modelos = await this.ollama.modelos(this.servidor());
       this.listaDeModelos.set(modelos);
+      this.alcancavel.set(true);
 
       // Sem escolha guardada — ou com uma que não existe mais — assume o
       // primeiro, que é o maior: quem instalou um modelo grande quer usá-lo.
@@ -128,6 +203,7 @@ export class AssistenteService {
       }
     } catch (erro) {
       this.listaDeModelos.set([]);
+      this.alcancavel.set(false);
       this.problema.set(mensagemDe(erro, this.i18n));
     }
   }
@@ -251,5 +327,26 @@ function salvar(estado: EstadoSalvo): void {
     localStorage.setItem(CHAVE, JSON.stringify(estado));
   } catch {
     // Janela privada: a escolha vale só para esta sessão.
+  }
+}
+
+/**
+ * O endereço do Ollama passado na URL, se houver.
+ *
+ * Aceita `?ollama=http://192.168.0.10:11434` e também a forma curta
+ * `?ollama=192.168.0.10:11434`, completando o esquema — quem digita o endereço
+ * no iPad não deveria precisar lembrar do `http://`.
+ */
+function enderecoNaUrl(documento: Document): string | null {
+  try {
+    const bruto = new URL(documento.location.href).searchParams.get(PARAMETRO_DO_SERVIDOR);
+    if (bruto === null || bruto.trim() === '') {
+      return null;
+    }
+
+    const limpo = bruto.trim();
+    return /^https?:\/\//i.test(limpo) ? limpo : `http://${limpo}`;
+  } catch {
+    return null;
   }
 }

@@ -300,14 +300,10 @@ $tecla: 3.25rem;
 }
 
 /*
- * Some no celular.
+ * Quem esconde a janela é o cabeçalho, não o CSS.
  *
- * 60rem é a mesma largura em que a navegação lateral vira menu. Abaixo dela a
- * janela cobriria justamente o exercício que ela existe para ajudar a
- * resolver.
+ * A regra antiga era `max-width: 60rem`, e com ela o iPad em retrato — 820 px,
+ * justamente onde não há papel na mesa — ficava sem calculadora. A decisão
+ * passou para o `DispositivoService`, que olha o tipo de apontador além da
+ * largura; aqui não sobra nada a fazer.
  */
-@media (max-width: 60rem) {
-  .janela {
-    display: none;
-  }
-}

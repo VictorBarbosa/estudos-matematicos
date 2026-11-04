@@ -12,6 +12,7 @@
     "gerar:teorias": "node scripts/gerar-registro-teorias.mjs",
     "gerar:geradores": "node scripts/gerar-registro-geradores.mjs",
     "gerar:textos": "node scripts/gerar-catalogo-textos.mjs",
+    "gerar:chaves": "node scripts/gerar-chaves-usadas.mjs",
     "test:cobertura": "ng test --watch=true --coverage",
     "verificar:pwa": "npm run build:pages && node scripts/verificar-pwa.mjs"
   },

@@ -18,37 +18,59 @@
       <span class="nome">{{ i18n.t('shell.marca') }}</span>
     </a>
 
-    <button
-      type="button"
-      class="assistente"
-      (click)="assistente.alternar()"
-      [attr.aria-pressed]="assistente.aberto()"
-      [attr.aria-label]="i18n.t('shell.assistente')"
-      [title]="i18n.t('shell.assistenteTitulo')"
-    >
-      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M12 2a8 8 0 0 1 8 8v1a8 8 0 0 1-8 8H9.2L5 22v-3.6A8 8 0 0 1 2 11v-1a8 8 0 0 1 8-8h2Zm0 2h-2a6 6 0 0 0-6 6v1a6 6 0 0 0 2.6 4.95l.4.28V18l1.9-1.9h3.1a6 6 0 0 0 6-6v-1a6 6 0 0 0-6-6Zm-3 5h6v2H9V9Zm0 3.5h4v2H9v-2Z"
-        />
-      </svg>
-    </button>
+    @if (assistente.disponivel() && !dispositivo.ehCelular()) {
+      <button
+        type="button"
+        class="assistente"
+        (click)="assistente.alternar()"
+        [attr.aria-pressed]="assistente.aberto()"
+        [attr.aria-label]="i18n.t('shell.assistente')"
+        [title]="i18n.t('shell.assistenteTitulo')"
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a8 8 0 0 1 8 8v1a8 8 0 0 1-8 8H9.2L5 22v-3.6A8 8 0 0 1 2 11v-1a8 8 0 0 1 8-8h2Zm0 2h-2a6 6 0 0 0-6 6v1a6 6 0 0 0 2.6 4.95l.4.28V18l1.9-1.9h3.1a6 6 0 0 0 6-6v-1a6 6 0 0 0-6-6Zm-3 5h6v2H9V9Zm0 3.5h4v2H9v-2Z"
+          />
+        </svg>
+      </button>
+    }
 
-    <button
-      type="button"
-      class="calculadora"
-      (click)="calculadora.alternar()"
-      [attr.aria-pressed]="calculadora.aberta()"
-      [attr.aria-label]="i18n.t('shell.calculadora')"
-      [title]="i18n.t('shell.calculadoraTitulo')"
-    >
-      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M7 2h10a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3Zm0 2a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H7Zm1 2h8v3H8V6Zm0 5h2v2H8v-2Zm3 0h2v2h-2v-2Zm3 0h2v2h-2v-2Zm-6 3h2v2H8v-2Zm3 0h2v2h-2v-2Zm3 0h2v5h-2v-5Zm-6 3h2v2H8v-2Zm3 0h2v2h-2v-2Z"
-        />
-      </svg>
-    </button>
+    @if (dispositivo.folhaPermitida()) {
+      <button
+        type="button"
+        class="folha"
+        (click)="folha.alternar()"
+        [attr.aria-pressed]="folha.aberta()"
+        [attr.aria-label]="i18n.t('shell.folha')"
+        [title]="i18n.t('folha.titulo')"
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M5 3h9l5 5v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm1 2v14h11V9h-4V5H6Zm9.9 4.7 1.4 1.4-5.6 5.6-2.1.7.7-2.1 5.6-5.6Z"
+          />
+        </svg>
+      </button>
+    }
+
+    @if (dispositivo.calculadoraPermitida()) {
+      <button
+        type="button"
+        class="calculadora"
+        (click)="calculadora.alternar()"
+        [attr.aria-pressed]="calculadora.aberta()"
+        [attr.aria-label]="i18n.t('shell.calculadora')"
+        [title]="i18n.t('shell.calculadoraTitulo')"
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M7 2h10a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3Zm0 2a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H7Zm1 2h8v3H8V6Zm0 5h2v2H8v-2Zm3 0h2v2h-2v-2Zm3 0h2v2h-2v-2Zm-6 3h2v2H8v-2Zm3 0h2v2h-2v-2Zm3 0h2v5h-2v-5Zm-6 3h2v2H8v-2Zm3 0h2v2h-2v-2Z"
+          />
+        </svg>
+      </button>
+    }
 
     <button
       type="button"
@@ -119,8 +141,13 @@
   junto o analisador de expressões, e 22 kB no carregamento inicial é caro
   demais para uma ferramenta que nem toda sessão usa.
 -->
-@defer (when calculadora.aberta()) {
+@defer (when calculadora.aberta() && dispositivo.calculadoraPermitida()) {
   <app-calculadora />
+}
+
+<!-- A folha carrega junto com a decisão de abri-la, como as outras janelas. -->
+@defer (when folha.aberta() && dispositivo.folhaPermitida()) {
+  <app-folha />
 }
 
 <!-- Mesmo arranjo da calculadora: só baixa quando alguém abre. -->

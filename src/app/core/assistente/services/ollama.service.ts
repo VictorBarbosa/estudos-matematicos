@@ -44,9 +44,15 @@ const PAPEL_NA_API: Readonly<Record<Papel, string>> = {
 export class OllamaService {
   private readonly i18n = inject(I18nService);
 
-  /** Os modelos instalados, do maior para o menor. */
-  async modelos(servidor: string): Promise<readonly ModeloOllama[]> {
-    const resposta = await this.buscar(`${semBarra(servidor)}/api/tags`);
+  /**
+   * Os modelos instalados, do maior para o menor.
+   *
+   * O `sinal` existe para a sondagem do cabeçalho, que precisa desistir
+   * depressa: um servidor que não responde deixaria o botão do assistente em
+   * suspenso por meio minuto.
+   */
+  async modelos(servidor: string, sinal?: AbortSignal): Promise<readonly ModeloOllama[]> {
+    const resposta = await this.buscar(`${semBarra(servidor)}/api/tags`, { signal: sinal });
     const dados = (await resposta.json()) as RespostaDeModelos;
 
     return (dados.models ?? [])

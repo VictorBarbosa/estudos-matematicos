@@ -1,9 +1,11 @@
 import { CURRICULO } from '@curriculo/curriculo';
 import {
   Dicionario,
+  DicionarioBruto,
   IDIOMAS,
   Idioma,
   NOME_DO_IDIOMA,
+  achatar,
   ehIdioma,
   preencher,
   traduzir,
@@ -11,6 +13,7 @@ import {
 import en from '@core/i18n/dicionarios/en.json';
 import fr from '@core/i18n/dicionarios/fr.json';
 import pt from '@core/i18n/dicionarios/pt.json';
+import { CHAVES_USADAS } from '@core/i18n/textos.catalogo/chaves-usadas';
 
 /**
  * Travas dos dicionários de tradução.
@@ -22,9 +25,9 @@ import pt from '@core/i18n/dicionarios/pt.json';
  */
 
 const DICIONARIOS: Readonly<Record<Idioma, Dicionario>> = {
-  pt: pt as Dicionario,
-  fr: fr as Dicionario,
-  en: en as Dicionario,
+  pt: achatar(pt as DicionarioBruto),
+  fr: achatar(fr as DicionarioBruto),
+  en: achatar(en as DicionarioBruto),
 };
 
 /** Os marcadores `{nome}` que uma frase usa. */
@@ -154,6 +157,18 @@ describe('dicionários de tradução', () => {
       .filter((chave) => !existentes.has(chave.replace(/\.(titulo|descricao)$/, '')));
 
     expect(orfas).toEqual([]);
+  });
+
+  it('toda chave pedida pelo código existe no dicionário', () => {
+    // Chave que falta não quebra nada: `t()` devolve a própria chave e a tela
+    // mostra `folha.desfazer` onde devia estar «Desfazer». Aconteceu com a
+    // folha de rascunho inteira. A lista vem de
+    // `scripts/gerar-chaves-usadas.mjs`, que varre o código.
+    const faltando = CHAVES_USADAS.filter(([chave]) => DICIONARIOS.pt[chave] === undefined).map(
+      ([chave, onde]) => `${chave} (${onde})`,
+    );
+
+    expect(faltando).toEqual([]);
   });
 });
 
