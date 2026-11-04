@@ -1,0 +1,117 @@
+{
+  "asCinco": {
+    "pt": "As cinco que se sabe de cor",
+    "fr": "Les cinq que l'on connaît par cœur",
+    "en": "The five known by heart"
+  },
+  "obsExp": {
+    "pt": "Vale para todo x: o fatorial cresce mais rápido que qualquer potência.",
+    "fr": "Vaut pour tout x : la factorielle croît plus vite que toute puissance.",
+    "en": "Holds for every x: the factorial grows faster than any power."
+  },
+  "obsSen": {
+    "pt": "Só potências ímpares, porque o seno é uma função ímpar.",
+    "fr": "Seulement des puissances impaires, parce que le sinus est une fonction impaire.",
+    "en": "Only odd powers, because sine is an odd function."
+  },
+  "obsCos": {
+    "pt": "Só potências pares, porque o cosseno é par.",
+    "fr": "Seulement des puissances paires, parce que le cosinus est pair.",
+    "en": "Only even powers, because cosine is even."
+  },
+  "obsLn": {
+    "pt": "Raio 1: fora desse intervalo a série não representa a função.",
+    "fr": "Rayon 1 : hors de cet intervalle, la série ne représente pas la fonction.",
+    "en": "Radius 1: outside that interval the series does not represent the function."
+  },
+  "obsGeo": {
+    "pt": "A mais simples de todas, e a que dá origem a muitas outras.",
+    "fr": "La plus simple de toutes, et celle qui en engendre bien d'autres.",
+    "en": "The simplest of all, and the one that gives rise to many others."
+  },
+  "funcaoRotulo": {
+    "pt": "Função (0 exp · 1 sen · 2 cos · 3 ln · 4 geométrica)",
+    "fr": "Fonction (0 exp · 1 sin · 2 cos · 3 ln · 4 géométrique)",
+    "en": "Function (0 exp · 1 sin · 2 cos · 3 ln · 4 geometric)"
+  },
+  "grauDoPolinomio": {
+    "pt": "Grau do polinômio",
+    "fr": "Degré du polynôme",
+    "en": "Degree of the polynomial"
+  },
+  "pontoEmDecimos": {
+    "pt": "Ponto, em décimos",
+    "fr": "Point, en dixièmes",
+    "en": "Point, in tenths"
+  },
+  "dicaPonto": {
+    "pt": "10 quer dizer x igual a 1.",
+    "fr": "10 signifie x égal à 1.",
+    "en": "10 means x equal to 1."
+  },
+  "polinomioEm": {
+    "pt": "Polinômio em {ponto}",
+    "fr": "Polynôme en {ponto}",
+    "en": "Polynomial at {ponto}"
+  },
+  "valorVerdadeiro": {
+    "pt": "Valor verdadeiro",
+    "fr": "Valeur exacte",
+    "en": "True value"
+  },
+  "erro": {
+    "pt": "Erro",
+    "fr": "Erreur",
+    "en": "Error"
+  },
+  "caiRapidoPertoDoCentro": {
+    "pt": "cai rápido perto do centro",
+    "fr": "diminue vite près du centre",
+    "en": "drops fast near the centre"
+  },
+  "foraDoRaio": {
+    "pt": "fora do raio",
+    "fr": "hors du rayon",
+    "en": "outside the radius"
+  },
+  "serieNaoRepresenta": {
+    "pt": "a série não representa a função aqui",
+    "fr": "la série ne représente pas la fonction ici",
+    "en": "the series does not represent the function here"
+  },
+  "ondeOPolinomioServe": {
+    "pt": "Onde o polinômio ainda serve",
+    "fr": "Où le polynôme sert encore",
+    "en": "Where the polynomial still works"
+  },
+  "aumenteOGrau": {
+    "pt": "Aumente o grau e veja a curva tracejada abraçar um trecho cada vez maior da função — mas sempre a partir do centro. É isso que quer dizer aproximação local: o polinômio só conhece o que acontece na origem, e extrapola a partir dali.",
+    "fr": "Augmentez le degré et voyez la courbe en pointillés épouser un morceau de plus en plus grand de la fonction — mais toujours à partir du centre. C'est ce que veut dire approximation locale : le polynôme ne connaît que ce qui se passe à l'origine, et extrapole à partir de là.",
+    "en": "Raise the degree and watch the dashed curve hug a longer and longer stretch of the function — but always starting from the centre. That is what local approximation means: the polynomial only knows what happens at the origin, and extrapolates from there."
+  },
+  "porQueOFatorial": {
+    "pt": "Por que o fatorial",
+    "fr": "Pourquoi la factorielle",
+    "en": "Why the factorial"
+  },
+  "derivarXElevadoAK": {
+    "pt": "Derivar x elevado a k exatamente k vezes produz k fatorial. O denominador da fórmula existe para desfazer isso — sem ele, cada coeficiente sairia inflado pelo fatorial da própria ordem, e o polinômio não encostaria na função.",
+    "fr": "Dériver x élevé à la puissance k exactement k fois produit k factorielle. Le dénominateur de la formule existe pour défaire cela — sans lui, chaque coefficient ressortirait gonflé par la factorielle de son propre ordre, et le polynôme ne toucherait jamais la fonction.",
+    "en": "Differentiating x raised to k exactly k times produces k factorial. The denominator of the formula exists to undo that — without it, every coefficient would come out inflated by the factorial of its own order, and the polynomial would never touch the function."
+  },
+  "funcao": {
+    "pt": "função",
+    "fr": "fonction",
+    "en": "function"
+  },
+  "polinomioDeGrau": {
+    "pt": "polinômio de grau {grau}",
+    "fr": "polynôme de degré {grau}",
+    "en": "polynomial of degree {grau}"
+  },
+  "descricaoGrafico": {
+    "pt": "A função e seu polinômio de Maclaurin de grau {grau}: as duas curvas se colam perto da origem e se separam à medida que o ponto se afasta.",
+    "fr": "La fonction et son polynôme de Maclaurin de degré {grau} : les deux courbes se collent près de l'origine et se séparent à mesure que le point s'éloigne.",
+    "en": "The function and its Maclaurin polynomial of degree {grau}: the two curves stick together near the origin and separate as the point moves away."
+  }
+}

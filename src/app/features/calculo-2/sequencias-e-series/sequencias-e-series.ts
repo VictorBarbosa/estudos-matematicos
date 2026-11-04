@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-2/sequencias-e-series/sequencias-e-series.i18n.json';
 import { geradorSequencias } from '@features/calculo-2/sequencias-e-series/sequencias-e-series.gerador';
 import { TEORIA_SEQUENCIAS } from '@features/calculo-2/sequencias-e-series/sequencias-e-series.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_SEQUENCIAS } from '@features/calculo-2/sequencias-e-series/seque
   styleUrl: './sequencias-e-series.scss',
 })
 export class SequenciasESeries {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorSequencias;
   protected readonly conceitos = TEORIA_SEQUENCIAS.map((teoria) => teoria.id);
 
@@ -120,10 +125,8 @@ export class SequenciasESeries {
     };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Termos da progressão e somas parciais acumuladas` +
-      (this.converge() ? ', com a reta do limite da série infinita.' : '.'),
+  protected readonly descricaoGrafico = computed(() =>
+    this.converge() ? this.texto('descricaoConverge') : this.texto('descricaoDiverge'),
   );
 
   constructor() {

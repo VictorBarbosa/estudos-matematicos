@@ -1,0 +1,97 @@
+{
+  "aTabelaInteira": {
+    "pt": "A tabela inteira, em três linhas",
+    "fr": "La table entière, en trois lignes",
+    "en": "The whole table, in three lines"
+  },
+  "obsSen": {
+    "pt": "A única das três que não troca de sinal.",
+    "fr": "La seule des trois qui ne change pas de signe.",
+    "en": "The only one of the three that does not change sign."
+  },
+  "obsCos": {
+    "pt": "O menos vem de o cosseno começar descendo em x = 0.",
+    "fr": "Le moins vient de ce que le cosinus part en descendant en x = 0.",
+    "en": "The minus comes from the cosine starting downward at x = 0."
+  },
+  "obsTan": {
+    "pt": "Sai do quociente seno sobre cosseno, e nunca é negativa.",
+    "fr": "Vient du quotient sinus sur cosinus, et n'est jamais négative.",
+    "en": "Comes from the quotient sine over cosine, and is never negative."
+  },
+  "funcaoRotulo": {
+    "pt": "Função (0 = seno, 1 = cosseno)",
+    "fr": "Fonction (0 = sinus, 1 = cosinus)",
+    "en": "Function (0 = sine, 1 = cosine)"
+  },
+  "amplitudeA": {
+    "pt": "Amplitude (a)",
+    "fr": "Amplitude (a)",
+    "en": "Amplitude (a)"
+  },
+  "frequenciaB": {
+    "pt": "Frequência (b)",
+    "fr": "Fréquence (b)",
+    "en": "Frequency (b)"
+  },
+  "arcoNotavel": {
+    "pt": "Arco notável",
+    "fr": "Arc remarquable",
+    "en": "Notable arc"
+  },
+  "percorreOsArcos": {
+    "pt": "Percorre os arcos de 0 até π.",
+    "fr": "Parcourt les arcs de 0 jusqu'à π.",
+    "en": "Runs through the arcs from 0 to π."
+  },
+  "valorExatoEm": {
+    "pt": "Valor exato em {arco}",
+    "fr": "Valeur exacte en {arco}",
+    "en": "Exact value at {arco}"
+  },
+  "fatorInterno": {
+    "pt": "Fator interno",
+    "fr": "Facteur interne",
+    "en": "Inner factor"
+  },
+  "multiplicaADerivadaInteira": {
+    "pt": "multiplica a derivada inteira",
+    "fr": "multiplie toute la dérivée",
+    "en": "multiplies the whole derivative"
+  },
+  "aFuncaoESuaDerivada": {
+    "pt": "A função e sua derivada, lado a lado",
+    "fr": "La fonction et sa dérivée, côte à côte",
+    "en": "The function and its derivative, side by side"
+  },
+  "repareNaDefasagem": {
+    "pt": "Repare na defasagem: onde a função passa por um máximo, a derivada cruza o zero. Aumente a frequência e veja a derivada crescer na mesma proporção — é o fator interno da regra da cadeia aparecendo como amplitude.",
+    "fr": "Remarquez le déphasage : là où la fonction passe par un maximum, la dérivée croise le zéro. Augmentez la fréquence et voyez la dérivée croître dans la même proportion — c'est le facteur interne de la règle de la chaîne qui apparaît comme amplitude.",
+    "en": "Notice the phase shift: where the function passes through a maximum, the derivative crosses zero. Raise the frequency and watch the derivative grow in the same proportion — it is the inner factor of the chain rule showing up as amplitude."
+  },
+  "porQueORadiano": {
+    "pt": "Por que o radiano",
+    "fr": "Pourquoi le radian",
+    "en": "Why the radian"
+  },
+  "esseLimiteSoVale": {
+    "pt": "Esse limite só vale 1 em radianos. Em graus ele daria π/180, e toda a tabela ganharia esse fator — é por isso que, em cálculo, ângulo se mede em radianos e ponto final.",
+    "fr": "Cette limite ne vaut 1 qu'en radians. En degrés elle donnerait π/180, et toute la table hériterait de ce facteur — c'est pourquoi, en analyse, l'angle se mesure en radians, un point c'est tout.",
+    "en": "That limit equals 1 only in radians. In degrees it would give π/180, and the whole table would pick up that factor — which is why, in calculus, angles are measured in radians, full stop."
+  },
+  "seno": {
+    "pt": "seno",
+    "fr": "sinus",
+    "en": "sine"
+  },
+  "cosseno": {
+    "pt": "cosseno",
+    "fr": "cosinus",
+    "en": "cosine"
+  },
+  "descricaoGrafico": {
+    "pt": "Gráfico de {a} vezes o {funcao} e de sua derivada; onde uma cruza o eixo, a outra atinge um extremo.",
+    "fr": "Graphe de {a} fois le {funcao} et de sa dérivée ; là où l'une croise l'axe, l'autre atteint un extremum.",
+    "en": "Graph of {a} times the {funcao} and its derivative; where one crosses the axis, the other reaches an extremum."
+  }
+}

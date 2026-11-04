@@ -1,0 +1,57 @@
+{
+  "constanteC": {
+    "pt": "Constante C",
+    "fr": "Constante C",
+    "en": "Constant C"
+  },
+  "deslocaAPrimitiva": {
+    "pt": "Desloca a primitiva na vertical.",
+    "fr": "Décale la primitive à la verticale.",
+    "en": "Shifts the antiderivative vertically."
+  },
+  "conferindoPelaDerivada": {
+    "pt": "Conferindo pela derivada",
+    "fr": "Vérification par la dérivée",
+    "en": "Checking via the derivative"
+  },
+  "confereSim": {
+    "pt": "A derivada da primitiva devolve exatamente o integrando — a integral está correta.",
+    "fr": "La dérivée de la primitive redonne exactement l'intégrande — l'intégrale est correcte.",
+    "en": "The derivative of the antiderivative returns exactly the integrand — the integral is correct."
+  },
+  "confereNao": {
+    "pt": "Derivando de volta não chegamos ao integrando.",
+    "fr": "En redérivant, on ne retombe pas sur l'intégrande.",
+    "en": "Differentiating back does not land on the integrand."
+  },
+  "sempreConfira": {
+    "pt": "Derivar a resposta é sempre a forma mais rápida de conferir uma integral.",
+    "fr": "Dériver la réponse est toujours la façon la plus rapide de vérifier une intégrale.",
+    "en": "Differentiating the answer is always the fastest way to check an integral."
+  },
+  "aFamiliaDePrimitivas": {
+    "pt": "A família de primitivas",
+    "fr": "La famille de primitives",
+    "en": "The family of antiderivatives"
+  },
+  "curvasTracejadas": {
+    "pt": "As curvas tracejadas são outras primitivas da mesma função, com constantes diferentes. Repare que são todas paralelas: em cada x elas têm a mesma inclinação, que é justamente o valor do integrando ali. É por isso que a constante é indeterminável sem uma condição inicial.",
+    "fr": "Les courbes en pointillés sont d'autres primitives de la même fonction, avec des constantes différentes. Remarquez qu'elles sont toutes parallèles : en chaque x elles ont la même pente, qui est justement la valeur de l'intégrande à cet endroit. C'est pourquoi la constante est indéterminable sans condition initiale.",
+    "en": "The dashed curves are other antiderivatives of the same function, with different constants. Notice they are all parallel: at each x they share the same slope, which is exactly the value of the integrand there. That is why the constant cannot be pinned down without an initial condition."
+  },
+  "fxComC": {
+    "pt": "F(x) com C = {c}",
+    "fr": "F(x) avec C = {c}",
+    "en": "F(x) with C = {c}"
+  },
+  "integrandoFx": {
+    "pt": "integrando f(x)",
+    "fr": "intégrande f(x)",
+    "en": "integrand f(x)"
+  },
+  "descricaoGrafico": {
+    "pt": "Família de primitivas, todas paralelas entre si, junto do integrando. Mudar a constante desloca a curva verticalmente sem alterar sua inclinação.",
+    "fr": "Famille de primitives, toutes parallèles entre elles, avec l'intégrande. Changer la constante décale la courbe à la verticale sans modifier sa pente.",
+    "en": "Family of antiderivatives, all parallel to each other, alongside the integrand. Changing the constant shifts the curve vertically without altering its slope."
+  }
+}

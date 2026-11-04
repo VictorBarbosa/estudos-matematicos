@@ -13,12 +13,12 @@
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="decimosDeP"
-        rotulo="Coeficiente p, em décimos"
+        [rotulo]="texto('rotuloP')"
         [min]="1"
         [max]="20"
       />
-      <app-controle-parametro [(valor)]="q" rotulo="Termo constante q" [min]="0" [max]="40" />
-      <app-controle-parametro [(valor)]="y0" rotulo="Valor inicial" [min]="0" [max]="60" />
+      <app-controle-parametro [(valor)]="q" [rotulo]="texto('rotuloQ')" [min]="0" [max]="40" />
+      <app-controle-parametro [(valor)]="y0" [rotulo]="texto('rotuloY0')" [min]="0" [max]="60" />
     </section>
 
     <section class="destaque-formula">

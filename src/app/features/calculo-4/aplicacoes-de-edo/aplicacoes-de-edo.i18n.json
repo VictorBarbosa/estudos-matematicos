@@ -1,0 +1,77 @@
+{
+  "tituloSecao1": {
+    "pt": "A parte difícil é escrever",
+    "fr": "La partie difficile est d'écrire",
+    "en": "The hard part is writing"
+  },
+  "observacao1": {
+    "pt": "Em engenharia a equação não vem pronta: ela sai de um balanço. O que entra menos o que sai é a taxa de variação, e traduzir essa frase em símbolos é o trabalho real. Resolver, depois disso, costuma ser a parte mecânica.",
+    "fr": "En ingénierie, l'équation n'est pas prête : elle sort d'un bilan. Ce qui entre moins ce qui sort est le taux de variation, et traduire cette phrase en symboles est le vrai travail. Résoudre, ensuite, c'est souvent la partie mécanique.",
+    "en": "In engineering, the equation doesn't come ready: it comes from a balance sheet. What goes in minus what goes out is the rate of change, and translating that phrase into symbols is the real work. Solving it, after that, is usually the mechanical part."
+  },
+  "rotuloSituacao": {
+    "pt": "Situação (0 resfriamento · 1 decaimento · 2 circuito · 3 tanque)",
+    "fr": "Situation (0 refroidissement · 1 décroissance · 2 circuit · 3 réservoir)",
+    "en": "Situation (0 cooling · 1 decay · 2 circuit · 3 tank)"
+  },
+  "rotuloInicial": {
+    "pt": "Valor inicial",
+    "fr": "Valeur initiale",
+    "en": "Initial value"
+  },
+  "rotuloAlvo": {
+    "pt": "Valor final",
+    "fr": "Valeur finale",
+    "en": "Final value"
+  },
+  "rotuloK": {
+    "pt": "Constante k, em centésimos",
+    "fr": "Constante k, en centièmes",
+    "en": "Constant k, in hundredths"
+  },
+  "rotuloConstTempo": {
+    "pt": "Constante de tempo",
+    "fr": "Constante de temps",
+    "en": "Time constant"
+  },
+  "rotuloDepoisUma": {
+    "pt": "Depois de uma delas",
+    "fr": "Après l'une d'elles",
+    "en": "After one of them"
+  },
+  "legenda63pct": {
+    "pt": "63% do caminho",
+    "fr": "63% du chemin",
+    "en": "63% of the way"
+  },
+  "rotuloMeiaVida": {
+    "pt": "Meia-vida da diferença",
+    "fr": "Demi-vie de la différence",
+    "en": "Half-life of the difference"
+  },
+  "tituloNaoReta": {
+    "pt": "Por que não é uma reta",
+    "fr": "Pourquoi ce n'est pas une droite",
+    "en": "Why it is not a line"
+  },
+  "observacaoNaoReta": {
+    "pt": "A reta vermelha é a tangente inicial — a aproximação que se faria tratando a taxa como constante. Ela acompanha bem no começo e logo se afasta, porque a taxa diminui conforme a diferença encolhe. É essa realimentação que torna a solução exponencial.",
+    "fr": "La droite rouge est la tangente initiale — l'approximation que l'on ferait en traitant le taux comme constant. Elle suit bien au début puis s'écarte rapidement, car le taux diminue à mesure que la différence se réduit. C'est cette rétroaction qui rend la solution exponentielle.",
+    "en": "The red line is the initial tangent — the approximation you would make treating the rate as constant. It tracks well at first then quickly diverges, because the rate decreases as the difference shrinks. It is this feedback that makes the solution exponential."
+  },
+  "tituloQuatroSituacoes": {
+    "pt": "Quatro situações, a mesma equação",
+    "fr": "Quatre situations, la même équation",
+    "en": "Four situations, the same equation"
+  },
+  "observacaoQuatroSituacoes": {
+    "pt": "Resfriamento, decaimento, circuito RL e tanque de mistura parecem problemas distintos e levam todos à mesma linear de primeira ordem. É por isso que vale aprender a técnica em vez de decorar fórmulas por situação.",
+    "fr": "Refroidissement, décroissance, circuit RL et réservoir de mélange semblent des problèmes distincts et mènent tous à la même équation linéaire du premier ordre. C'est pourquoi il vaut la peine d'apprendre la technique au lieu de mémoriser des formules par situation.",
+    "en": "Cooling, decay, RL circuit and mixing tank seem like distinct problems and all lead to the same first-order linear equation. This is why it is worth learning the technique instead of memorizing formulas by situation."
+  },
+  "descricaoGrafico": {
+    "pt": "Solução exponencial e a reta tangente inicial: a aproximação linear só vale para tempos curtos, e logo se afasta.",
+    "fr": "Solution exponentielle et droite tangente initiale : l'approximation linéaire n'est valable que pour les courts instants, et s'écarte vite.",
+    "en": "Exponential solution and the initial tangent line: the linear approximation is only valid for short times, and quickly diverges."
+  }
+}

@@ -1,13 +1,13 @@
 <app-topico-layout topicoId="sequencias-e-series">
   <div explorar class="explorar">
-    <section class="seletor-pills" role="group" aria-label="Tipo de progressão">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('tipoDeProgressao')">
       <button
         type="button"
         [class.ativo]="!geometrica()"
         [attr.aria-pressed]="!geometrica()"
         (click)="alternarTipo(false)"
       >
-        Aritmética (soma)
+        {{ texto('aritmetica') }}
       </button>
       <button
         type="button"
@@ -15,20 +15,30 @@
         [attr.aria-pressed]="geometrica()"
         (click)="alternarTipo(true)"
       >
-        Geométrica (multiplica)
+        {{ texto('geometrica') }}
       </button>
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="primeiro" rotulo="Primeiro termo" [min]="1" [max]="20" />
+      <app-controle-parametro
+        [(valor)]="primeiro"
+        [rotulo]="i18n.t('explorar.primeiroTermo')"
+        [min]="1"
+        [max]="20"
+      />
       <app-controle-parametro
         [(valor)]="razaoEmDecimos"
-        [rotulo]="geometrica() ? 'Razão (em décimos)' : 'Razão'"
+        [rotulo]="geometrica() ? texto('razaoDecimos') : texto('razao')"
         [min]="geometrica() ? 1 : -9"
         [max]="geometrica() ? 25 : 9"
-        [dica]="geometrica() ? 'Razão atual: ' + formatar(razao()) : undefined"
+        [dica]="geometrica() ? texto('razaoAtual', { valor: formatar(razao()) }) : undefined"
       />
-      <app-controle-parametro [(valor)]="quantidade" rotulo="Quantos termos" [min]="3" [max]="15" />
+      <app-controle-parametro
+        [(valor)]="quantidade"
+        [rotulo]="i18n.t('explorar.quantosTermos')"
+        [min]="3"
+        [max]="15"
+      />
     </section>
 
     <section class="destaque-formula">
@@ -37,18 +47,18 @@
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">Último termo</span>
+        <span class="rotulo">{{ i18n.t('explorar.ultimoTermo') }}</span>
         <strong>{{ formatar(termos()[termos().length - 1]!) }}</strong>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Soma dos {{ quantidade() }}</span>
+        <span class="rotulo">{{ texto('somaDos', { quantidade: quantidade() }) }}</span>
         <strong>{{ formatar(soma().resultado) }}</strong>
       </div>
       @if (infinita(); as serie) {
         <div class="indicador">
-          <span class="rotulo">Soma infinita</span>
+          <span class="rotulo">{{ i18n.t('explorar.somaInfinita') }}</span>
           <strong>
-            {{ serie.resultado === null ? 'diverge' : formatar(serie.resultado) }}
+            {{ serie.resultado === null ? texto('diverge') : formatar(serie.resultado) }}
           </strong>
           <span class="legenda">{{ converge() ? '|q| < 1' : '|q| ≥ 1' }}</span>
         </div>
@@ -56,7 +66,7 @@
     </section>
 
     <section>
-      <h2>Termos e somas acumuladas</h2>
+      <h2>{{ texto('termosESomasAcumuladas') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [pontos]="pontos()"
@@ -65,24 +75,23 @@
         [altura]="360"
       />
       <p class="observacao">
-        Os pontos claros são os termos; os destacados são as somas parciais.
+        {{ texto('pontosClaros') }}
         @if (converge()) {
-          A linha tracejada é o limite: repare que as somas se aproximam dela sem nunca
-          ultrapassá-la, mesmo somando infinitas parcelas.
+          {{ texto('linhaTracejadaELimite') }}
         } @else {
-          Sem convergência, as somas parciais crescem indefinidamente.
+          {{ texto('semConvergencia') }}
         }
       </p>
     </section>
 
     <section>
-      <h2>Passo a passo da soma</h2>
+      <h2>{{ texto('passoAPassoDaSoma') }}</h2>
       <app-passo-a-passo [passos]="soma().passos" />
     </section>
 
     @if (infinita(); as serie) {
       <section>
-        <h2>A soma infinita</h2>
+        <h2>{{ texto('aSomaInfinita') }}</h2>
         <app-passo-a-passo [passos]="serie.passos" />
       </section>
     }

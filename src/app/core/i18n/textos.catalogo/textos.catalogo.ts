@@ -15,11 +15,23 @@ import t_sistemas_lineares from '@features/algebra/sistemas-lineares/sistemas-li
 import t_aplicacoes_da_derivada from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.i18n.json';
 import t_continuidade from '@features/calculo-1/continuidade/continuidade.i18n.json';
 import t_definicao_de_derivada from '@features/calculo-1/definicao-de-derivada/definicao-de-derivada.i18n.json';
+import t_derivacao_implicita from '@features/calculo-1/derivacao-implicita/derivacao-implicita.i18n.json';
+import t_derivadas_exponencial_logaritmo from '@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.i18n.json';
+import t_derivadas_trigonometricas from '@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.i18n.json';
 import t_limites_laterais from '@features/calculo-1/limites-laterais/limites-laterais.i18n.json';
 import t_limites from '@features/calculo-1/limites/limites.i18n.json';
 import t_regra_da_cadeia from '@features/calculo-1/regra-da-cadeia/regra-da-cadeia.i18n.json';
 import t_regras_de_derivacao from '@features/calculo-1/regras-de-derivacao/regras-de-derivacao.i18n.json';
 import t_taxa_de_variacao from '@features/calculo-1/taxa-de-variacao/taxa-de-variacao.i18n.json';
+import t_aplicacoes_da_integral from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.i18n.json';
+import t_integrais_improprias from '@features/calculo-2/integrais-improprias/integrais-improprias.i18n.json';
+import t_integral_definida from '@features/calculo-2/integral-definida/integral-definida.i18n.json';
+import t_integral_indefinida from '@features/calculo-2/integral-indefinida/integral-indefinida.i18n.json';
+import t_sequencias_e_series from '@features/calculo-2/sequencias-e-series/sequencias-e-series.i18n.json';
+import t_series_de_taylor from '@features/calculo-2/series-de-taylor/series-de-taylor.i18n.json';
+import t_soma_de_riemann from '@features/calculo-2/soma-de-riemann/soma-de-riemann.i18n.json';
+import t_tecnicas_de_integracao from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.i18n.json';
+import t_teorema_fundamental from '@features/calculo-2/teorema-fundamental/teorema-fundamental.i18n.json';
 import t_analise_combinatoria from '@features/estatistica/analise-combinatoria/analise-combinatoria.i18n.json';
 import t_distribuicao_normal from '@features/estatistica/distribuicao-normal/distribuicao-normal.i18n.json';
 import t_estatistica_e_incerteza from '@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.i18n.json';
@@ -97,11 +109,23 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['aplicacoes-da-derivada', t_aplicacoes_da_derivada as TabelaDeTextos],
   ['continuidade', t_continuidade as TabelaDeTextos],
   ['definicao-de-derivada', t_definicao_de_derivada as TabelaDeTextos],
+  ['derivacao-implicita', t_derivacao_implicita as TabelaDeTextos],
+  ['derivadas-exponencial-logaritmo', t_derivadas_exponencial_logaritmo as TabelaDeTextos],
+  ['derivadas-trigonometricas', t_derivadas_trigonometricas as TabelaDeTextos],
   ['limites-laterais', t_limites_laterais as TabelaDeTextos],
   ['limites', t_limites as TabelaDeTextos],
   ['regra-da-cadeia', t_regra_da_cadeia as TabelaDeTextos],
   ['regras-de-derivacao', t_regras_de_derivacao as TabelaDeTextos],
   ['taxa-de-variacao', t_taxa_de_variacao as TabelaDeTextos],
+  ['aplicacoes-da-integral', t_aplicacoes_da_integral as TabelaDeTextos],
+  ['integrais-improprias', t_integrais_improprias as TabelaDeTextos],
+  ['integral-definida', t_integral_definida as TabelaDeTextos],
+  ['integral-indefinida', t_integral_indefinida as TabelaDeTextos],
+  ['sequencias-e-series', t_sequencias_e_series as TabelaDeTextos],
+  ['series-de-taylor', t_series_de_taylor as TabelaDeTextos],
+  ['soma-de-riemann', t_soma_de_riemann as TabelaDeTextos],
+  ['tecnicas-de-integracao', t_tecnicas_de_integracao as TabelaDeTextos],
+  ['teorema-fundamental', t_teorema_fundamental as TabelaDeTextos],
   ['analise-combinatoria', t_analise_combinatoria as TabelaDeTextos],
   ['distribuicao-normal', t_distribuicao_normal as TabelaDeTextos],
   ['estatistica-e-incerteza', t_estatistica_e_incerteza as TabelaDeTextos],

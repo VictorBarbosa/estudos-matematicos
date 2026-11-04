@@ -1,7 +1,7 @@
 <app-topico-layout topicoId="derivadas-trigonometricas">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>A tabela inteira, em três linhas</h2>
+      <h2>{{ texto('aTabelaInteira') }}</h2>
       <div class="tabela-derivadas">
         @for (linha of tabela; track linha.funcaoTex) {
           <div class="painel">
@@ -10,7 +10,7 @@
               <span aria-hidden="true">→</span>
               <app-formula [tex]="linha.derivadaTex" />
             </div>
-            <p class="observacao">{{ linha.observacao }}</p>
+            <p class="observacao">{{ texto(linha.observacao) }}</p>
           </div>
         }
       </div>
@@ -19,18 +19,28 @@
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="escolha"
-        rotulo="Função (0 = seno, 1 = cosseno)"
+        [rotulo]="texto('funcaoRotulo')"
         [min]="0"
         [max]="1"
       />
-      <app-controle-parametro [(valor)]="a" rotulo="Amplitude (a)" [min]="1" [max]="6" />
-      <app-controle-parametro [(valor)]="b" rotulo="Frequência (b)" [min]="1" [max]="4" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="texto('amplitudeA')"
+        [min]="1"
+        [max]="6"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="texto('frequenciaB')"
+        [min]="1"
+        [max]="4"
+      />
       <app-controle-parametro
         [(valor)]="indiceDoArco"
-        rotulo="Arco notável"
+        [rotulo]="texto('arcoNotavel')"
         [min]="0"
         [max]="8"
-        dica="Percorre os arcos de 0 até π."
+        [dica]="texto('percorreOsArcos')"
       />
     </section>
 
@@ -41,23 +51,23 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Valor exato em {{ arcoEscrito() }}</span>
+        <span class="rotulo">{{ texto('valorExatoEm', { arco: arcoEscrito() }) }}</span>
         <strong>{{ formatar(valorExato()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Conferência numérica</span>
+        <span class="rotulo">{{ i18n.t('explorar.conferenciaNumerica') }}</span>
         <strong>{{ formatar(valorNumerico()) }}</strong>
-        <span class="legenda">derivada por diferença</span>
+        <span class="legenda">{{ i18n.t('explorar.derivadaPorDiferenca') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Fator interno</span>
+        <span class="rotulo">{{ texto('fatorInterno') }}</span>
         <strong>{{ b() }}</strong>
-        <span class="legenda">multiplica a derivada inteira</span>
+        <span class="legenda">{{ texto('multiplicaADerivadaInteira') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>A função e sua derivada, lado a lado</h2>
+      <h2>{{ texto('aFuncaoESuaDerivada') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -65,20 +75,13 @@
         [descricao]="descricaoGrafico()"
         [altura]="380"
       />
-      <p class="observacao">
-        Repare na defasagem: onde a função passa por um máximo, a derivada cruza o zero. Aumente a
-        frequência e veja a derivada crescer na mesma proporção — é o fator interno da regra da
-        cadeia aparecendo como amplitude.
-      </p>
+      <p class="observacao">{{ texto('repareNaDefasagem') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Por que o radiano</h2>
+      <h2>{{ texto('porQueORadiano') }}</h2>
       <app-formula [tex]="'\\lim_{h \\to 0}\\frac{\\operatorname{sen} h}{h} = 1'" [bloco]="true" />
-      <p class="observacao">
-        Esse limite só vale 1 em radianos. Em graus ele daria π/180, e toda a tabela ganharia esse
-        fator — é por isso que, em cálculo, ângulo se mede em radianos e ponto final.
-      </p>
+      <p class="observacao">{{ texto('esseLimiteSoVale') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

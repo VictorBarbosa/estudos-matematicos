@@ -9,6 +9,8 @@ import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { geradorEdoPrimeiraOrdem } from '@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.gerador';
 import { TEORIA_EDO1 } from '@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.teoria';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.i18n.json';
 
 @Component({
   selector: 'app-edo-primeira-ordem',
@@ -20,6 +22,7 @@ import { TEORIA_EDO1 } from '@features/calculo-4/edo-primeira-ordem/edo-primeira
 export class EdoPrimeiraOrdem {
   protected readonly gerador = geradorEdoPrimeiraOrdem;
   protected readonly conceitos = TEORIA_EDO1.map((teoria) => teoria.id);
+  protected readonly texto = textoLocal(textos);
 
   /** O coeficiente em décimos, para variar suavemente. */
   protected readonly decimosDeP = signal(5);
@@ -61,8 +64,7 @@ export class EdoPrimeiraOrdem {
 
   protected readonly descricaoGrafico = computed(
     () =>
-      'Três soluções da mesma equação, partindo de valores iniciais diferentes: todas caminham ' +
-      'para o mesmo regime permanente.',
+      this.texto('descricaoGrafico'),
   );
 
   constructor() {

@@ -14,6 +14,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-2/integrais-improprias/integrais-improprias.i18n.json';
 import { geradorIntegraisImproprias } from '@features/calculo-2/integrais-improprias/integrais-improprias.gerador';
 import { TEORIA_IMPROPRIAS } from '@features/calculo-2/integrais-improprias/integrais-improprias.teoria';
 
@@ -25,6 +28,8 @@ import { TEORIA_IMPROPRIAS } from '@features/calculo-2/integrais-improprias/inte
   styleUrl: './integrais-improprias.scss',
 })
 export class IntegraisImproprias {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorIntegraisImproprias;
   protected readonly conceitos = TEORIA_IMPROPRIAS.map((teoria) => teoria.id);
 
@@ -100,10 +105,8 @@ export class IntegraisImproprias {
 
   protected readonly dominio = computed(() => ({ xMin: 0, xMax: 12, yMin: 0, yMax: 2 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Área sob 1 sobre x elevado a ${this.expoenteEscrito()}, acumulada da borda até a borda ` +
-      'móvel; a curva tracejada é 1 sobre x, que é a fronteira entre convergir e divergir.',
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { expoente: this.expoenteEscrito() }),
   );
 
   constructor() {
@@ -113,7 +116,7 @@ export class IntegraisImproprias {
   protected formatar(valor: number): string {
     return Number.isFinite(valor)
       ? Number(valor.toFixed(4)).toLocaleString('pt-BR', { maximumFractionDigits: 4 })
-      : 'diverge';
+      : this.texto('diverge');
   }
 
   protected get expoenteTexto(): string {

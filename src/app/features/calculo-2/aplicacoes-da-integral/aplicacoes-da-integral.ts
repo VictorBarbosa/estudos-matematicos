@@ -8,6 +8,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { AreaPlot, CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.i18n.json';
 import { geradorAplicacoesIntegral } from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.gerador';
 import { TEORIA_APLICACOES_INTEGRAL } from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.teoria';
 
@@ -28,6 +31,8 @@ type Aplicacao = 'area' | 'volume' | 'comprimento';
   styleUrl: './aplicacoes-da-integral.scss',
 })
 export class AplicacoesDaIntegral {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorAplicacoesIntegral;
   protected readonly conceitos = TEORIA_APLICACOES_INTEGRAL.map((teoria) => teoria.id);
 
@@ -37,9 +42,9 @@ export class AplicacoesDaIntegral {
   protected readonly ate = signal(3);
 
   protected readonly aplicacoes: readonly { valor: Aplicacao; rotulo: string }[] = [
-    { valor: 'area', rotulo: 'Área entre curvas' },
-    { valor: 'volume', rotulo: 'Volume de revolução' },
-    { valor: 'comprimento', rotulo: 'Comprimento de arco' },
+    { valor: 'area', rotulo: 'rotuloArea' },
+    { valor: 'volume', rotulo: 'rotuloVolume' },
+    { valor: 'comprimento', rotulo: 'rotuloComprimento' },
   ];
 
   /** As duas curvas da região: a reta y = ax e a parábola y = x². */
@@ -78,20 +83,11 @@ export class AplicacoesDaIntegral {
   protected readonly explicacao = computed(() => {
     switch (this.aplicacao()) {
       case 'area':
-        return (
-          'A região fica entre a reta e a parábola, dos dois pontos onde elas se cruzam. ' +
-          'Integra-se a diferença, sempre a de cima menos a de baixo.'
-        );
+        return this.texto('explArea');
       case 'volume':
-        return (
-          'Girando a reta em torno do eixo x, cada fatia vira um disco de raio igual ao ' +
-          'valor da função. O sólido resultante é um cone.'
-        );
+        return this.texto('explVolume');
       case 'comprimento':
-        return (
-          'Cada pedacinho da curva é a hipotenusa de um triângulo de catetos dx e dy. ' +
-          'Numa reta, a conta confirma o teorema de Pitágoras.'
-        );
+        return this.texto('explComprimento');
     }
   });
 
@@ -128,9 +124,10 @@ export class AplicacoesDaIntegral {
     }
 
     const k = this.intersecao();
+    const rotulo = this.texto('cruzam');
     return [
-      { x: 0, y: 0, rotulo: 'cruzam', cor: 'acento' },
-      { x: k, y: this.a() * k, rotulo: 'cruzam', cor: 'acento' },
+      { x: 0, y: 0, rotulo, cor: 'acento' },
+      { x: k, y: this.a() * k, rotulo, cor: 'acento' },
     ];
   });
 
@@ -139,9 +136,10 @@ export class AplicacoesDaIntegral {
     return { xMin: -0.5, xMax: limite };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () => `Gráfico da aplicação selecionada: ${this.aplicacoes.find((a) => a.valor === this.aplicacao())!.rotulo}.`,
-  );
+  protected readonly descricaoGrafico = computed(() => {
+    const chave = this.aplicacoes.find((a) => a.valor === this.aplicacao())!.rotulo;
+    return this.texto('descricaoGrafico', { aplicacao: this.texto(chave) });
+  });
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_APLICACOES_INTEGRAL);

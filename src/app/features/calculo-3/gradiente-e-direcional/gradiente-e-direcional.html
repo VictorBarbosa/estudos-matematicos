@@ -1,26 +1,42 @@
 <app-topico-layout topicoId="gradiente-e-direcional">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>O vetor que aponta para cima</h2>
+      <h2>{{ texto('oVetorQueAponta') }}</h2>
       <app-formula
         [tex]="'\\nabla f = \\left(\\frac{\\partial f}{\\partial x},\\; \\frac{\\partial f}{\\partial y}\\right)'"
         [bloco]="true"
       />
-      <p class="observacao">
-        O gradiente junta as parciais num vetor só, e ele tem duas propriedades que valem por
-        todo o tópico: aponta para a direção de subida mais íngreme, e seu módulo é a inclinação
-        nessa direção. Todo método de otimização é alguma variação de andar contra ele.
-      </p>
+      <p class="observacao">{{ texto('oGradienteJunta') }}</p>
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="1" [max]="4" />
-      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de y²" [min]="1" [max]="4" />
-      <app-controle-parametro [(valor)]="x" rotulo="x do ponto" [min]="-4" [max]="4" />
-      <app-controle-parametro [(valor)]="y" rotulo="y do ponto" [min]="-4" [max]="4" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefX2')"
+        [min]="1"
+        [max]="4"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.coefY2')"
+        [min]="1"
+        [max]="4"
+      />
+      <app-controle-parametro
+        [(valor)]="x"
+        [rotulo]="i18n.t('explorar.xDoPonto')"
+        [min]="-4"
+        [max]="4"
+      />
+      <app-controle-parametro
+        [(valor)]="y"
+        [rotulo]="i18n.t('explorar.yDoPonto')"
+        [min]="-4"
+        [max]="4"
+      />
       <app-controle-parametro
         [(valor)]="anguloDaDirecao"
-        rotulo="Direção (graus)"
+        [rotulo]="texto('direcaoGraus')"
         [min]="0"
         [max]="350"
         [passo]="10"
@@ -34,23 +50,23 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Taxa máxima</span>
+        <span class="rotulo">{{ texto('taxaMaxima') }}</span>
         <strong>{{ formatar(modulo()) }}</strong>
-        <span class="legenda">o módulo do gradiente</span>
+        <span class="legenda">{{ texto('oModuloDoGradiente') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Taxa na direção escolhida</span>
+        <span class="rotulo">{{ texto('taxaNaDirecaoEscolhida') }}</span>
         <strong>{{ formatar(direcional()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Ponto crítico</span>
+        <span class="rotulo">{{ texto('pontoCritico') }}</span>
         <strong>{{ natureza() }}</strong>
-        <span class="legenda">pelo teste da hessiana</span>
+        <span class="legenda">{{ texto('peloTesteDaHessiana') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>Perpendicular à curva de nível</h2>
+      <h2>{{ texto('perpendicularACurva') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -60,24 +76,16 @@
         [altura]="420"
         [mostrarGrade]="false"
       />
-      <p class="observacao">
-        Gire a direção escolhida e acompanhe a taxa: ela é máxima quando a seta aponta junto com
-        o gradiente, zero quando é perpendicular a ele — e é exatamente aí que a direção fica
-        tangente à curva de nível, porque andar sobre ela mantém a altura.
-      </p>
+      <p class="observacao">{{ texto('gireADirecao') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Normalizar não é detalhe</h2>
+      <h2>{{ texto('normalizarNaoEDetalhe') }}</h2>
       <app-formula
         [tex]="'D_{\\hat{u}}f = \\nabla f \\cdot \\hat{u}, \\qquad \\hat{u} = \\frac{\\vec{v}}{\\left|\\vec{v}\\right|}'"
         [bloco]="true"
       />
-      <p class="observacao">
-        A direção precisa ser unitária. Sem normalizar, um vetor duas vezes maior devolveria uma
-        taxa duas vezes maior — e a inclinação de uma encosta não pode depender do comprimento
-        da seta que se desenha sobre ela.
-      </p>
+      <p class="observacao">{{ texto('aDirecaoPrecisaSerUnitaria') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

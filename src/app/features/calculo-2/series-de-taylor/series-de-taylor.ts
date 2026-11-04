@@ -16,11 +16,23 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-2/series-de-taylor/series-de-taylor.i18n.json';
 import { geradorSeriesDeTaylor } from '@features/calculo-2/series-de-taylor/series-de-taylor.gerador';
 import { TEORIA_TAYLOR } from '@features/calculo-2/series-de-taylor/series-de-taylor.teoria';
 
 /** A ordem do dropdown numérico, já que o controle só move inteiros. */
 const FUNCOES: readonly FuncaoDeSerie[] = ['exp', 'sen', 'cos', 'ln1x', 'geometrica'];
+
+/** A observação de cada série vira uma chave do dicionário deste tópico. */
+const OBSERVACOES: Readonly<Record<FuncaoDeSerie, string>> = {
+  exp: 'obsExp',
+  sen: 'obsSen',
+  cos: 'obsCos',
+  ln1x: 'obsLn',
+  geometrica: 'obsGeo',
+};
 
 @Component({
   selector: 'app-series-de-taylor',
@@ -30,9 +42,14 @@ const FUNCOES: readonly FuncaoDeSerie[] = ['exp', 'sen', 'cos', 'ln1x', 'geometr
   styleUrl: './series-de-taylor.scss',
 })
 export class SeriesDeTaylor {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorSeriesDeTaylor;
   protected readonly conceitos = TEORIA_TAYLOR.map((teoria) => teoria.id);
-  protected readonly series = SERIES_CONHECIDAS;
+  protected readonly series = SERIES_CONHECIDAS.map((serie) => ({
+    ...serie,
+    observacao: OBSERVACOES[serie.funcao],
+  }));
 
   protected readonly escolha = signal(1);
   protected readonly grau = signal(3);
@@ -73,13 +90,13 @@ export class SeriesDeTaylor {
       {
         fn: (x) => (Math.abs(x) < raio ? valorDaFuncaoDeSerie(funcao, x) : Number.NaN),
         cor: 'serie-1',
-        rotulo: 'função',
+        rotulo: this.texto('funcao'),
       },
       {
         fn: (x) => avaliarMaclaurin(funcao, grau, x),
         cor: 'acento',
         tracejada: true,
-        rotulo: `polinômio de grau ${grau}`,
+        rotulo: this.texto('polinomioDeGrau', { grau }),
       },
     ];
   });
@@ -89,10 +106,8 @@ export class SeriesDeTaylor {
     return { xMin: -alcance, xMax: alcance, yMin: -3, yMax: 4 };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `A função e seu polinômio de Maclaurin de grau ${this.grau()}: as duas curvas se colam ` +
-      'perto da origem e se separam à medida que o ponto se afasta.',
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { grau: this.grau() }),
   );
 
   constructor() {
@@ -101,7 +116,7 @@ export class SeriesDeTaylor {
 
   protected formatar(valor: number): string {
     if (!Number.isFinite(valor)) {
-      return 'fora do raio';
+      return this.texto('foraDoRaio');
     }
     return Number(valor.toFixed(6)).toLocaleString('pt-BR', { maximumFractionDigits: 6 });
   }

@@ -1,0 +1,92 @@
+{
+  "tituloSecao1": {
+    "pt": "Integrar sobre uma curva",
+    "fr": "Intégrer le long d'une courbe",
+    "en": "Integrating along a curve"
+  },
+  "observacao1": {
+    "pt": "Uma integral de linha acumula valores ao longo de uma curva, e não sobre um intervalo. A técnica é sempre a mesma: parametrizar o caminho, substituir, e o que sobra é uma integral comum no parâmetro. O produto escalar é o que descarta a parte do campo que não empurra na direção do movimento.",
+    "fr": "Une intégrale de ligne accumule des valeurs le long d'une courbe, et non sur un intervalle. La technique est toujours la même : paramétrer le chemin, substituer, et ce qui reste est une intégrale ordinaire dans le paramètre. Le produit scalaire est ce qui élimine la composante du champ qui ne pousse pas dans la direction du mouvement.",
+    "en": "A line integral accumulates values along a curve, not over an interval. The technique is always the same: parametrize the path, substitute, and what remains is an ordinary integral in the parameter. The dot product is what discards the part of the field that does not push in the direction of motion."
+  },
+  "rotuloComponenteX": {
+    "pt": "Componente x: coef. de {v}",
+    "fr": "Composante x : coef. de {v}",
+    "en": "x-component: coeff. of {v}"
+  },
+  "rotuloComponenteY": {
+    "pt": "Componente y: coef. de {v}",
+    "fr": "Composante y : coef. de {v}",
+    "en": "y-component: coeff. of {v}"
+  },
+  "rotuloA": {
+    "pt": "A: {v}",
+    "fr": "A : {v}",
+    "en": "A: {v}"
+  },
+  "rotuloB": {
+    "pt": "B: {v}",
+    "fr": "B : {v}",
+    "en": "B: {v}"
+  },
+  "tituloIndicadores": {
+    "pt": "Trabalho de A a B",
+    "fr": "Travail de A à B",
+    "en": "Work from A to B"
+  },
+  "rotuloVolta": {
+    "pt": "Trabalho de volta",
+    "fr": "Travail du retour",
+    "en": "Return work"
+  },
+  "legendaVolta": {
+    "pt": "sempre o oposto, pelo mesmo caminho",
+    "fr": "toujours l'opposé, par le même chemin",
+    "en": "always the opposite, along the same path"
+  },
+  "tituloConservativo": {
+    "pt": "Campo conservativo ?",
+    "fr": "Champ conservatif ?",
+    "en": "Conservative field ?"
+  },
+  "legendaConservativo": {
+    "pt": "teste des parciales cruzadas",
+    "fr": "test des dérivées croisées",
+    "en": "mixed partials test"
+  },
+  "sim": {
+    "pt": "sim",
+    "fr": "oui",
+    "en": "yes"
+  },
+  "nao": {
+    "pt": "não",
+    "fr": "non",
+    "en": "no"
+  },
+  "tituloCampo": {
+    "pt": "O campo e o caminho",
+    "fr": "Le champ et le chemin",
+    "en": "The field and the path"
+  },
+  "observacaoCampo": {
+    "pt": "As setas finas mostram o campo; a seta em destaque é o caminho. Gire o caminho e acompanhe o trabalho: ele é máximo quando o percurso segue o campo, nulo quando é perpendicular a ele, e negativo quando vai contra.",
+    "fr": "Les flèches fines montrent le champ; la flèche en évidence est le chemin. Tournez le chemin et suivez le travail: il est maximal lorsque le parcours suit le champ, nul lorsqu'il est perpendiculaire, et négatif lorsqu'il va à contre-sens.",
+    "en": "The thin arrows show the field; the highlighted arrow is the path. Rotate the path and watch the work: it is maximum when the path follows the field, zero when it is perpendicular to it, and negative when it goes against it."
+  },
+  "tituloQuandoImporta": {
+    "pt": "Quando o caminho deixa de importar",
+    "fr": "Quand le chemin cesse d'importe",
+    "en": "When the path ceases to matter"
+  },
+  "observacaoQuandoImporta": {
+    "pt": "Quando as parciais cruzadas coincidem, o campo é o gradiente de alguma função — e aí o trabalho entre dois pontos é só a diferença dessa função nas pontas. É o que acontece com a gravidade, e é a razão de existir energia potencial.",
+    "fr": "Quand les dérivées croisées coïncident, le champ est le gradient d'une certaine fonction — et alors le travail entre deux points n'est que la différence de cette fonction aux extrémités. C'est ce qui se passe avec la gravité, et c'est la raison d'exister de l'énergie potentielle.",
+    "en": "When the mixed partials coincide, the field is the gradient of some function — and then the work between two points is just the difference of that function at the endpoints. This is what happens with gravity, and it is the reason potential energy exists."
+  },
+  "descricaoGrafico": {
+    "pt": "Campo vetorial amostrado numa grade, com o caminho de A a B em destaque: o trabalho é a soma da componente do campo ao longo dele.",
+    "fr": "Champ vectoriel échantillonné sur une grille, avec le chemin de A à B en évidence: le travail est la somme de la composante du champ le long de celui-ci.",
+    "en": "Vector field sampled on a grid, with the path from A to B highlighted: the work is the sum of the field's component along it."
+  }
+}

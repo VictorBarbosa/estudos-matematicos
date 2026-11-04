@@ -1,0 +1,87 @@
+{
+  "coordenadasSaoEscolha": {
+    "pt": "Coordenadas são escolha, não verdade",
+    "fr": "Les coordonnées sont un choix, pas une vérité",
+    "en": "Coordinates are a choice, not a truth"
+  },
+  "umTanqueCilindrico": {
+    "pt": "Um tanque cilíndrico descrito em cartesianas exige raízes nos limites de integração; em cilíndricas, vira um bloco de limites constantes. Escolher o sistema que respeita a simetria é, muitas vezes, a diferença entre uma integral impossível e uma imediata.",
+    "fr": "Un réservoir cylindrique décrit en cartésiennes exige des racines dans les bornes d'intégration ; en cylindriques, il devient un bloc de bornes constantes. Choisir le système qui respecte la symétrie est souvent la différence entre une intégrale impossible et une intégrale immédiate.",
+    "en": "A cylindrical tank described in Cartesian coordinates demands square roots in the limits of integration; in cylindrical coordinates, it becomes a block of constant limits. Choosing the system that respects the symmetry is often the difference between an impossible integral and an immediate one."
+  },
+  "raioRho": {
+    "pt": "Raio ρ (até a origem)",
+    "fr": "Rayon ρ (jusqu'à l'origine)",
+    "en": "Radius ρ (to the origin)"
+  },
+  "anguloPolarPhi": {
+    "pt": "Ângulo polar φ (do eixo z)",
+    "fr": "Angle polaire φ (depuis l'axe z)",
+    "en": "Polar angle φ (from the z-axis)"
+  },
+  "azimuteTheta": {
+    "pt": "Azimute θ (no plano)",
+    "fr": "Azimut θ (dans le plan)",
+    "en": "Azimuth θ (in the plane)"
+  },
+  "rhoVezesCosseno": {
+    "pt": "ρ vezes o cosseno de φ",
+    "fr": "ρ fois le cosinus de φ",
+    "en": "ρ times the cosine of φ"
+  },
+  "rCilindrico": {
+    "pt": "r cilíndrico",
+    "fr": "r cylindrique",
+    "en": "cylindrical r"
+  },
+  "distanciaAoEixo": {
+    "pt": "distância ao EIXO, não à origem",
+    "fr": "distance à l'AXE, pas à l'origine",
+    "en": "distance to the AXIS, not to the origin"
+  },
+  "vistaDeCima": {
+    "pt": "Vista de cima",
+    "fr": "Vue de dessus",
+    "en": "Top view"
+  },
+  "leveOAnguloPolar": {
+    "pt": "Leve o ângulo polar a zero: o ponto sobe direto pelo eixo z, e a projeção colapsa na origem. Leve-o a 90 graus: o ponto cai no equador, e o raio cilíndrico iguala o esférico. É essa a diferença entre os dois sistemas.",
+    "fr": "Amenez l'angle polaire à zéro : le point monte droit le long de l'axe z, et la projection s'effondre à l'origine. Amenez-le à 90 degrés : le point tombe sur l'équateur, et le rayon cylindrique égale le rayon sphérique. C'est là toute la différence entre les deux systèmes.",
+    "en": "Bring the polar angle to zero: the point climbs straight up the z-axis, and the projection collapses to the origin. Bring it to 90 degrees: the point lands on the equator, and the cylindrical radius equals the spherical one. That is the difference between the two systems."
+  },
+  "oJacobianoMuda": {
+    "pt": "O jacobiano muda em cada sistema",
+    "fr": "Le jacobien change à chaque système",
+    "en": "The Jacobian changes in each system"
+  },
+  "emCilindricasApareceUmR": {
+    "pt": "Em cilíndricas aparece um r; em esféricas, rho ao quadrado vezes o seno do ângulo polar. São eles que corrigem o tamanho de cada pedacinho de volume — e esquecer qualquer um estraga o resultado por completo.",
+    "fr": "En cylindriques apparaît un r ; en sphériques, rho au carré fois le sinus de l'angle polaire. Ce sont eux qui corrigent la taille de chaque petit bout de volume — et en oublier un seul ruine entièrement le résultat.",
+    "en": "In cylindrical coordinates an r appears; in spherical coordinates, rho squared times the sine of the polar angle. They are what correct the size of each little piece of volume — and forgetting any one of them ruins the result completely."
+  },
+  "circuloDeRaioR": {
+    "pt": "círculo de raio r",
+    "fr": "cercle de rayon r",
+    "en": "circle of radius r"
+  },
+  "projecaoNoPlano": {
+    "pt": "projeção no plano",
+    "fr": "projection dans le plan",
+    "en": "projection on the plane"
+  },
+  "projecao": {
+    "pt": "projeção",
+    "fr": "projection",
+    "en": "projection"
+  },
+  "eixoZ": {
+    "pt": "eixo z",
+    "fr": "axe z",
+    "en": "z-axis"
+  },
+  "descricaoGrafico": {
+    "pt": "Vista de cima: o círculo de raio igual à distância ao eixo, e a projeção do ponto sobre o plano xy.",
+    "fr": "Vue de dessus : le cercle de rayon égal à la distance à l'axe, et la projection du point sur le plan xy.",
+    "en": "Top view: the circle with radius equal to the distance to the axis, and the projection of the point onto the xy-plane."
+  }
+}

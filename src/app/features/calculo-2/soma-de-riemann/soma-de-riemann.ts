@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import {
-  NOME_SOMA,
   Polinomio,
   TipoSoma,
   integralNumerica,
@@ -17,10 +16,21 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, RetanguloPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-2/soma-de-riemann/soma-de-riemann.i18n.json';
 import { geradorRiemann } from '@features/calculo-2/soma-de-riemann/soma-de-riemann.gerador';
 import { TEORIA_RIEMANN } from '@features/calculo-2/soma-de-riemann/soma-de-riemann.teoria';
 
 const TIPOS: readonly TipoSoma[] = ['esquerda', 'direita', 'ponto-medio', 'trapezio'];
+
+/** O nome de cada tipo de soma vira uma chave do dicionário deste tópico. */
+const NOME_SOMA_CHAVE: Readonly<Record<TipoSoma, string>> = {
+  esquerda: 'nomeEsquerda',
+  direita: 'nomeDireita',
+  'ponto-medio': 'nomePontoMedio',
+  trapezio: 'nomeTrapezio',
+};
 
 @Component({
   selector: 'app-soma-de-riemann',
@@ -38,10 +48,12 @@ const TIPOS: readonly TipoSoma[] = ['esquerda', 'direita', 'ponto-medio', 'trape
   styleUrl: './soma-de-riemann.scss',
 })
 export class SomaDeRiemann {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorRiemann;
   protected readonly conceitos = TEORIA_RIEMANN.map((teoria) => teoria.id);
   protected readonly tipos = TIPOS;
-  protected readonly nomeTipo = NOME_SOMA;
+  protected readonly nomeTipo = NOME_SOMA_CHAVE;
 
   protected readonly n = signal(8);
   protected readonly tipo = signal<TipoSoma>('esquerda');
@@ -92,10 +104,12 @@ export class SomaDeRiemann {
     return { xMin: this.de() - folga, xMax: this.ate() + folga };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Curva x ao quadrado com ${this.n()} retângulos de aproximação, somando ` +
-      `${this.formatar(this.soma())} contra a área exata de ${this.formatar(this.exata())}.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      n: this.n(),
+      soma: this.formatar(this.soma()),
+      exata: this.formatar(this.exata()),
+    }),
   );
 
   constructor() {

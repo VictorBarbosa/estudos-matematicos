@@ -1,0 +1,82 @@
+{
+  "umaTaxaParaCadaDirecao": {
+    "pt": "Uma taxa para cada direção",
+    "fr": "Un taux pour chaque direction",
+    "en": "One rate for each direction"
+  },
+  "comDuasVariaveis": {
+    "pt": "Com duas variáveis, perguntar \"qual é a derivada\" não basta: há uma taxa para cada direção em que se pode andar. A parcial em x responde pela direção do eixo x, tratando y como se fosse um número fixo — a técnica é a do Cálculo 1, aplicada a um corte.",
+    "fr": "Avec deux variables, demander « quelle est la dérivée » ne suffit pas : il y a un taux pour chaque direction dans laquelle on peut se déplacer. La partielle en x répond pour la direction de l'axe x, en traitant y comme un nombre fixe — la technique est celle du calcul différentiel, appliquée à une coupe.",
+    "en": "With two variables, asking \"what is the derivative\" is not enough: there is a rate for each direction in which you can move. The partial with respect to x answers for the direction of the x-axis, treating y as a fixed number — the technique is Calculus 1 applied to a slice."
+  },
+  "parcialXNoPonto": {
+    "pt": "∂f/∂x no ponto",
+    "fr": "∂f/∂x au point",
+    "en": "∂f/∂x at the point"
+  },
+  "parcialYNoPonto": {
+    "pt": "∂f/∂y no ponto",
+    "fr": "∂f/∂y au point",
+    "en": "∂f/∂y at the point"
+  },
+  "segundaEmX": {
+    "pt": "Segunda em x",
+    "fr": "Seconde en x",
+    "en": "Second in x"
+  },
+  "concavidadeNaquelaDirecao": {
+    "pt": "concavidade naquela direção",
+    "fr": "concavité dans cette direction",
+    "en": "concavity in that direction"
+  },
+  "segundaEmY": {
+    "pt": "Segunda em y",
+    "fr": "Seconde en y",
+    "en": "Second in y"
+  },
+  "mista": {
+    "pt": "Mista",
+    "fr": "Mixte",
+    "en": "Mixed"
+  },
+  "aMesmaNasDuasOrdens": {
+    "pt": "a mesma nas duas ordens",
+    "fr": "la même dans les deux ordres",
+    "en": "the same in both orders"
+  },
+  "aParcialEInclinacaoDeUmCorte": {
+    "pt": "A parcial é a inclinação de um corte",
+    "fr": "La partielle est la pente d'une coupe",
+    "en": "The partial is the slope of a slice"
+  },
+  "fixarYCorresponde": {
+    "pt": "Fixar y corresponde a cortar a superfície com um plano vertical, e o que sobra é uma curva de uma variável só. A derivada parcial é a inclinação da reta tangente a essa curva — nada além do que o Cálculo 1 já fazia.",
+    "fr": "Fixer y revient à couper la surface par un plan vertical, et ce qui reste est une courbe à une seule variable. La dérivée partielle est la pente de la tangente à cette courbe — rien de plus que ce que faisait déjà le calcul différentiel.",
+    "en": "Fixing y amounts to cutting the surface with a vertical plane, and what remains is a curve of a single variable. The partial derivative is the slope of the tangent line to that curve — nothing beyond what Calculus 1 already did."
+  },
+  "oTermoMistoNaoSome": {
+    "pt": "O termo misto não some",
+    "fr": "Le terme mixte ne disparaît pas",
+    "en": "The mixed term does not vanish"
+  },
+  "aoDerivarEmX": {
+    "pt": "Ao derivar em x, o y do termo misto fica como coeficiente; ao derivar em y, é o x que fica. Ele só desapareceria se não tivesse aquela variável — e, como tem as duas, isso nunca acontece. É o descuido mais frequente do tópico.",
+    "fr": "En dérivant en x, le y du terme mixte reste comme coefficient ; en dérivant en y, c'est le x qui reste. Il ne disparaîtrait que s'il n'avait pas cette variable — et, comme il a les deux, cela n'arrive jamais. C'est l'étourderie la plus fréquente du sujet.",
+    "en": "Differentiating with respect to x, the y of the mixed term stays as a coefficient; differentiating with respect to y, it is the x that stays. It would only vanish if it lacked that variable — and, having both, that never happens. It is the most common slip in this topic."
+  },
+  "corteEmY": {
+    "pt": "corte em y = {y}",
+    "fr": "coupe en y = {y}",
+    "en": "slice at y = {y}"
+  },
+  "tangenteDeInclinacao": {
+    "pt": "tangente, de inclinação ∂f/∂x",
+    "fr": "tangente, de pente ∂f/∂x",
+    "en": "tangent, with slope ∂f/∂x"
+  },
+  "descricaoGrafico": {
+    "pt": "O corte da superfície com y fixo e a reta tangente a ele: a inclinação dessa reta é exatamente a derivada parcial em x.",
+    "fr": "La coupe de la surface à y fixe et sa droite tangente : la pente de cette droite est exactement la dérivée partielle en x.",
+    "en": "The slice of the surface at fixed y and its tangent line: the slope of that line is exactly the partial derivative with respect to x."
+  }
+}

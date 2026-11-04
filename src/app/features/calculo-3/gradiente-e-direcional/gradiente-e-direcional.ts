@@ -14,8 +14,19 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-3/gradiente-e-direcional/gradiente-e-direcional.i18n.json';
 import { geradorGradiente } from '@features/calculo-3/gradiente-e-direcional/gradiente-e-direcional.gerador';
 import { TEORIA_GRADIENTE } from '@features/calculo-3/gradiente-e-direcional/gradiente-e-direcional.teoria';
+
+/** A natureza do ponto crítico, como o núcleo a nomeia, vira uma chave do dicionário. */
+const NATUREZA_CHAVE: Readonly<Record<string, string>> = {
+  mínimo: 'naturezaMinimo',
+  máximo: 'naturezaMaximo',
+  sela: 'naturezaSela',
+  indeterminado: 'naturezaIndeterminado',
+};
 
 @Component({
   selector: 'app-gradiente-e-direcional',
@@ -25,6 +36,8 @@ import { TEORIA_GRADIENTE } from '@features/calculo-3/gradiente-e-direcional/gra
   styleUrl: './gradiente-e-direcional.scss',
 })
 export class GradienteEDirecional {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorGradiente;
   protected readonly conceitos = TEORIA_GRADIENTE.map((teoria) => teoria.id);
 
@@ -64,7 +77,9 @@ export class GradienteEDirecional {
       `\\nabla f = \\left(${this.tex(this.gradiente().x)},\\; ${this.tex(this.gradiente().y)}\\right)`,
   );
 
-  protected readonly natureza = computed(() => classificarCritico(this.funcao()));
+  protected readonly natureza = computed(() =>
+    this.texto(NATUREZA_CHAVE[classificarCritico(this.funcao())] ?? 'naturezaIndeterminado'),
+  );
 
   /** As curvas de nível, desenhadas como ramos explícitos. */
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
@@ -77,7 +92,7 @@ export class GradienteEDirecional {
     };
 
     return [
-      { fn: ramo(1), cor: 'texto-suave', rotulo: 'curva de nível' },
+      { fn: ramo(1), cor: 'texto-suave', rotulo: this.texto('curvaDeNivel') },
       { fn: ramo(-1), cor: 'texto-suave' },
     ];
   });
@@ -95,7 +110,7 @@ export class GradienteEDirecional {
         y2: this.y() + g.y * escala,
         cor: 'acento',
         seta: true,
-        rotulo: 'gradiente',
+        rotulo: this.texto('gradiente'),
       },
       {
         x1: this.x(),
@@ -104,7 +119,7 @@ export class GradienteEDirecional {
         y2: this.y() + this.direcao().y * 2,
         cor: 'serie-3',
         seta: true,
-        rotulo: 'direção escolhida',
+        rotulo: this.texto('direcaoEscolhida'),
       },
     ];
   });
@@ -115,11 +130,7 @@ export class GradienteEDirecional {
 
   protected readonly dominio = computed(() => ({ xMin: -6, xMax: 6, yMin: -6, yMax: 6 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Curva de nível que passa pelo ponto, o gradiente saindo dele e a direção escolhida: o ' +
-      'gradiente é sempre perpendicular à curva de nível.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_GRADIENTE);

@@ -1,0 +1,87 @@
+{
+  "porQueNaoIsolar": {
+    "pt": "Por que não dá para isolar",
+    "fr": "Pourquoi on ne peut pas isoler",
+    "en": "Why you can't isolate"
+  },
+  "doisValoresDeY": {
+    "pt": "Para x igual a 3 há dois valores de y, 4 e −4. Nenhuma função devolve dois valores, e por isso a circunferência não é gráfico de função. Isolar obriga a escolher um ramo e a carregar uma raiz pelo resto da conta; derivar a equação como ela está resolve os dois ramos de uma vez.",
+    "fr": "Pour x égal à 3, il y a deux valeurs de y, 4 et −4. Aucune fonction ne renvoie deux valeurs, et c'est pourquoi le cercle n'est pas le graphe d'une fonction. Isoler force à choisir une branche et à traîner une racine dans tout le calcul ; dériver l'équation telle quelle traite les deux branches d'un coup.",
+    "en": "For x equal to 3 there are two values of y, 4 and −4. No function returns two values, which is why the circle is not the graph of a function. Isolating forces you to pick one branch and carry a square root through the rest of the work; differentiating the equation as it stands handles both branches at once."
+  },
+  "coefXP": {
+    "pt": "Coeficiente de x² (p)",
+    "fr": "Coefficient de x² (p)",
+    "en": "Coefficient of x² (p)"
+  },
+  "coefYQ": {
+    "pt": "Coeficiente de y² (q)",
+    "fr": "Coefficient de y² (q)",
+    "en": "Coefficient of y² (q)"
+  },
+  "inclinacaoNoPonto": {
+    "pt": "Inclinação no ponto",
+    "fr": "Pente au point",
+    "en": "Slope at the point"
+  },
+  "curvaMontada": {
+    "pt": "a curva é montada para passar por ele",
+    "fr": "la courbe est construite pour passer par lui",
+    "en": "the curve is built to pass through it"
+  },
+  "tangenteVertical": {
+    "pt": "tangente vertical",
+    "fr": "tangente verticale",
+    "en": "vertical tangent"
+  },
+  "denominadorZerou": {
+    "pt": "o denominador zerou",
+    "fr": "le dénominateur s'est annulé",
+    "en": "the denominator hit zero"
+  },
+  "aCurvaESuaTangente": {
+    "pt": "A curva e sua tangente",
+    "fr": "La courbe et sa tangente",
+    "en": "The curve and its tangent"
+  },
+  "leveOPonto": {
+    "pt": "Leve o ponto até o topo da curva e a tangente fica horizontal; leve-o até a lateral, onde y vale zero, e ela fica vertical — ali o denominador zera e a derivada não existe. É a leitura geométrica de uma fração que depende das duas coordenadas.",
+    "fr": "Amenez le point au sommet de la courbe et la tangente devient horizontale ; amenez-le sur le côté, où y vaut zéro, et elle devient verticale — là, le dénominateur s'annule et la dérivée n'existe pas. C'est la lecture géométrique d'une fraction qui dépend des deux coordonnées.",
+    "en": "Move the point to the top of the curve and the tangent becomes horizontal; move it to the side, where y is zero, and it becomes vertical — there the denominator vanishes and the derivative does not exist. This is the geometric reading of a fraction that depends on both coordinates."
+  },
+  "aReceita": {
+    "pt": "A receita, em três movimentos",
+    "fr": "La recette, en trois mouvements",
+    "en": "The recipe, in three moves"
+  },
+  "deriveDoisLados": {
+    "pt": "Derive os dois lados tratando y como função de x; junte os termos com dy/dx de um lado; só então isole. A ordem é o que faz o método funcionar — tentar isolar antes devolve exatamente o problema que se queria evitar.",
+    "fr": "Dérivez les deux côtés en traitant y comme une fonction de x ; regroupez les termes en dy/dx d'un côté ; isolez seulement ensuite. C'est l'ordre qui fait fonctionner la méthode — essayer d'isoler d'abord ramène exactement le problème qu'on voulait éviter.",
+    "en": "Differentiate both sides treating y as a function of x; gather the dy/dx terms on one side; only then isolate. The order is what makes the method work — trying to isolate first lands you right back on the problem you set out to avoid."
+  },
+  "ramoDeCima": {
+    "pt": "ramo de cima",
+    "fr": "branche supérieure",
+    "en": "upper branch"
+  },
+  "ramoDeBaixo": {
+    "pt": "ramo de baixo",
+    "fr": "branche inférieure",
+    "en": "lower branch"
+  },
+  "tangente": {
+    "pt": "tangente",
+    "fr": "tangente",
+    "en": "tangent"
+  },
+  "descricaoGrafico": {
+    "pt": "Curva de dois ramos e a reta tangente no ponto escolhido; a inclinação depende de x e de y ao mesmo tempo.",
+    "fr": "Courbe à deux branches et la droite tangente au point choisi ; la pente dépend à la fois de x et de y.",
+    "en": "Two-branch curve and the tangent line at the chosen point; the slope depends on x and y at the same time."
+  },
+  "naoExiste": {
+    "pt": "não existe",
+    "fr": "n'existe pas",
+    "en": "does not exist"
+  }
+}

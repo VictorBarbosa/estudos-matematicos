@@ -1,6 +1,6 @@
 <app-topico-layout topicoId="aplicacoes-da-integral">
   <div explorar class="explorar">
-    <section class="seletor-pills" role="group" aria-label="Aplicação">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('aplicacao')">
       @for (opcao of aplicacoes; track opcao.valor) {
         <button
           type="button"
@@ -8,15 +8,20 @@
           [attr.aria-pressed]="aplicacao() === opcao.valor"
           (click)="definirAplicacao(opcao.valor)"
         >
-          {{ opcao.rotulo }}
+          {{ texto(opcao.rotulo) }}
         </button>
       }
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Inclinação da reta" [min]="1" [max]="5" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="texto('inclinacaoDaReta')"
+        [min]="1"
+        [max]="5"
+      />
       @if (aplicacao() !== 'area') {
-        <app-controle-parametro [(valor)]="ate" rotulo="Até x =" [min]="1" [max]="5" />
+        <app-controle-parametro [(valor)]="ate" [rotulo]="texto('ateX')" [min]="1" [max]="5" />
       }
     </section>
 
@@ -27,21 +32,21 @@
 
     <section class="indicadores">
       <div class="indicador" [attr.data-destaque]="aplicacao() === 'area'">
-        <span class="rotulo">Área entre as curvas</span>
+        <span class="rotulo">{{ texto('areaEntreAsCurvas') }}</span>
         <strong>{{ formatar(area()) }}</strong>
       </div>
       <div class="indicador" [attr.data-destaque]="aplicacao() === 'volume'">
-        <span class="rotulo">Volume do cone</span>
+        <span class="rotulo">{{ texto('volumeDoCone') }}</span>
         <strong>{{ formatar(volume()) }}</strong>
       </div>
       <div class="indicador" [attr.data-destaque]="aplicacao() === 'comprimento'">
-        <span class="rotulo">Comprimento do arco</span>
+        <span class="rotulo">{{ texto('comprimentoDoArco') }}</span>
         <strong>{{ formatar(comprimento()) }}</strong>
       </div>
     </section>
 
     <section>
-      <h2>A região em questão</h2>
+      <h2>{{ texto('aRegiaoEmQuestao') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -50,11 +55,7 @@
         [descricao]="descricaoGrafico()"
         [altura]="380"
       />
-      <p class="observacao">
-        Todas as três aplicações partem da mesma ideia: fatiar a figura em pedaços
-        infinitesimais cuja medida sabemos calcular, e somar tudo com uma integral. Muda
-        apenas o que cada fatia é — uma tira, um disco ou um segmento.
-      </p>
+      <p class="observacao">{{ texto('mesmaIdeia') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

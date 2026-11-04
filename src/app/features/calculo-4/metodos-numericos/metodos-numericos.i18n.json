@@ -1,0 +1,87 @@
+{
+  "tituloSecao1": {
+    "pt": "Seguir a tangente e recomeçar",
+    "fr": "Suivre la tangente et recommencer",
+    "en": "Follow the tangent and start over"
+  },
+  "observacao1": {
+    "pt": "Quase nenhuma equação diferencial real tem solução fechada — o que se faz na prática é integrá-la numericamente. Euler é o método mais simples possível: a derivada dá a inclinação, segue-se por ela um passo, e recomeça-se do ponto novo.",
+    "fr": "Presque aucune équation différentielle réelle n'a de solution fermée — ce que l'on fait en pratique est de l'intégrer numériquement. Euler est la méthode la plus simple possible : la dérivée donne la pente, on la suit sur un pas, et on recommence au nouveau point.",
+    "en": "Almost no real differential equation has a closed-form solution — what you do in practice is integrate it numerically. Euler is the simplest possible method: the derivative gives the slope, you follow it for one step, and start over from the new point."
+  },
+  "rotuloK": {
+    "pt": "Taxa k, em décimos",
+    "fr": "Taux k, en dixièmes",
+    "en": "Rate k, in tenths"
+  },
+  "rotuloPasso": {
+    "pt": "Passo h, em décimos",
+    "fr": "Pas h, en dixièmes",
+    "en": "Step h, in tenths"
+  },
+  "rotuloY0": {
+    "pt": "Valor inicial",
+    "fr": "Valeur initiale",
+    "en": "Initial value"
+  },
+  "rotuloTempo": {
+    "pt": "Tempo total",
+    "fr": "Temps total",
+    "en": "Total time"
+  },
+  "rotuloExato": {
+    "pt": "Solução exata",
+    "fr": "Solution exacte",
+    "en": "Exact solution"
+  },
+  "rotuloEuler": {
+    "pt": "Euler",
+    "fr": "Euler",
+    "en": "Euler"
+  },
+  "legendaPassos": {
+    "pt": "{quantos} passos",
+    "fr": "{quantos} pas",
+    "en": "{quantos} steps"
+  },
+  "rotuloErroEuler": {
+    "pt": "Erro de Euler",
+    "fr": "Erreur d'Euler",
+    "en": "Euler error"
+  },
+  "rotuloErroRK": {
+    "pt": "Erro de Runge-Kutta",
+    "fr": "Erreur de Runge-Kutta",
+    "en": "Runge-Kutta error"
+  },
+  "legendaErroRK": {
+    "pt": "mesmo passo, outra ordem de grandeza",
+    "fr": "même pas, un autre ordre de grandeur",
+    "en": "same step, another order of magnitude"
+  },
+  "tituloPoligonal": {
+    "pt": "A poligonal que tenta acompanhar a curva",
+    "fr": "Le polygone qui tente de suivre la courbe",
+    "en": "The polygonal chain trying to follow the curve"
+  },
+  "observacaoPoligonal": {
+    "pt": "Cada ponto é um passo, e cada segmento é a tangente seguida por h. Diminua o passo pela metade e compare os erros: o de Euler cai por volta de duas vezes, o de Runge-Kutta por volta de dezesseis. É isso que quer dizer \"ordem do método\".",
+    "fr": "Chaque point est un pas, et chaque segment est la tangente suivie par h. Diminuez le pas de moitié et comparez les erreurs : celui d'Euler diminue d'un facteur deux environ, celui de Runge-Kutta d'un facteur seize environ. C'est ce que signifie \"l'ordre de la méthode\".",
+    "en": "Each point is one step, and each segment is the tangent followed for h. Halve the step and compare the errors: Euler's drops about two-fold, Runge-Kutta about sixteen-fold. That is what \"order of the method\" means."
+  },
+  "tituloQuatroInclinacoes": {
+    "pt": "Quatro inclinações por passo",
+    "fr": "Quatre pentes par pas",
+    "en": "Four slopes per step"
+  },
+  "observacaoRK": {
+    "pt": "Runge-Kutta avalia a inclinação no início, duas vezes no meio e no fim, e combina as quatro numa média ponderada. O custo por passo quadruplica; o erro cai com a quarta potência do passo. É o método padrão de praticamente toda simulação.",
+    "fr": "Runge-Kutta évalue la pente au début, deux fois au milieu et à la fin, et combine les quatre en une moyenne pondérée. Le coût par pas quadruple ; l'erreur diminue avec la quatrième puissance du pas. C'est la méthode standard de pratiquement toutes les simulations.",
+    "en": "Runge-Kutta evaluates the slope at the beginning, twice in the middle and at the end, and combines the four into a weighted average. The cost per step quadruples; the error drops with the fourth power of the step. It is the standard method of practically all simulation."
+  },
+  "descricaoGrafico": {
+    "pt": "A solução exata e a poligonal de Euler, com um ponto par passo: a cada segmento o método segue a tangente e se afasta um pouco mais.",
+    "fr": "La solution exacte et le polygone d'Euler, avec un point par pas : à chaque segment, la méthode suit la tangente et s'écarte un peu plus.",
+    "en": "The exact solution and the Euler polygonal chain, with one point per step: each segment the method follows the tangent and drifts a little further away."
+  }
+}

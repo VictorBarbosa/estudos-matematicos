@@ -10,6 +10,8 @@ import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { geradorIntegraisMultiplas } from '@features/calculo-3/integrais-multiplas/integrais-multiplas.gerador';
 import { TEORIA_MULTIPLAS } from '@features/calculo-3/integrais-multiplas/integrais-multiplas.teoria';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-3/integrais-multiplas/integrais-multiplas.i18n.json';
 
 @Component({
   selector: 'app-integrais-multiplas',
@@ -21,6 +23,7 @@ import { TEORIA_MULTIPLAS } from '@features/calculo-3/integrais-multiplas/integr
 export class IntegraisMultiplas {
   protected readonly gerador = geradorIntegraisMultiplas;
   protected readonly conceitos = TEORIA_MULTIPLAS.map((teoria) => teoria.id);
+  protected readonly texto = textoLocal(textos);
 
   protected readonly a = signal(1);
   protected readonly b = signal(1);
@@ -98,8 +101,7 @@ export class IntegraisMultiplas {
 
   protected readonly descricaoGrafico = computed(
     () =>
-      `A fatia da superfície em y igual a ${this.yDaFatia()}, com a área sob ela destacada: é ` +
-      'a integral interna, que depois será somada ao longo de y.',
+      this.texto('descricaoGrafico', { y: this.yDaFatia() }),
   );
 
   constructor() {

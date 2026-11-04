@@ -1,11 +1,11 @@
 <app-topico-layout topicoId="series-de-taylor">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>As cinco que se sabe de cor</h2>
+      <h2>{{ texto('asCinco') }}</h2>
       @for (item of series; track item.funcao) {
         <div class="serie">
           <app-formula [tex]="item.serieTex" [bloco]="true" />
-          <p class="observacao">{{ item.observacao }}</p>
+          <p class="observacao">{{ texto(item.observacao) }}</p>
         </div>
       }
     </section>
@@ -13,17 +13,22 @@
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="escolha"
-        rotulo="Função (0 exp · 1 sen · 2 cos · 3 ln · 4 geométrica)"
+        [rotulo]="texto('funcaoRotulo')"
         [min]="0"
         [max]="4"
       />
-      <app-controle-parametro [(valor)]="grau" rotulo="Grau do polinômio" [min]="0" [max]="9" />
+      <app-controle-parametro
+        [(valor)]="grau"
+        [rotulo]="texto('grauDoPolinomio')"
+        [min]="0"
+        [max]="9"
+      />
       <app-controle-parametro
         [(valor)]="decimosDoPonto"
-        rotulo="Ponto, em décimos"
+        [rotulo]="texto('pontoEmDecimos')"
         [min]="-25"
         [max]="25"
-        dica="10 quer dizer x igual a 1."
+        [dica]="texto('dicaPonto')"
       />
     </section>
 
@@ -34,50 +39,42 @@
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">Polinômio em {{ pontoEscrito() }}</span>
+        <span class="rotulo">{{ texto('polinomioEm', { ponto: pontoEscrito() }) }}</span>
         <strong>{{ formatar(aproximado()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Valor verdadeiro</span>
+        <span class="rotulo">{{ texto('valorVerdadeiro') }}</span>
         <strong>{{ formatar(exato()) }}</strong>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Erro</span>
+        <span class="rotulo">{{ texto('erro') }}</span>
         <strong>{{ formatar(erro()) }}</strong>
-        <span class="legenda">cai rápido perto do centro</span>
+        <span class="legenda">{{ texto('caiRapidoPertoDoCentro') }}</span>
       </div>
       @if (foraDoRaio()) {
         <div class="indicador">
-          <span class="rotulo">Atenção</span>
-          <strong>fora do raio</strong>
-          <span class="legenda">a série não representa a função aqui</span>
+          <span class="rotulo">{{ i18n.t('explorar.atencao') }}</span>
+          <strong>{{ texto('foraDoRaio') }}</strong>
+          <span class="legenda">{{ texto('serieNaoRepresenta') }}</span>
         </div>
       }
     </section>
 
     <section>
-      <h2>Onde o polinômio ainda serve</h2>
+      <h2>{{ texto('ondeOPolinomioServe') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
         [descricao]="descricaoGrafico()"
         [altura]="380"
       />
-      <p class="observacao">
-        Aumente o grau e veja a curva tracejada abraçar um trecho cada vez maior da função — mas
-        sempre a partir do centro. É isso que quer dizer aproximação local: o polinômio só
-        conhece o que acontece na origem, e extrapola a partir dali.
-      </p>
+      <p class="observacao">{{ texto('aumenteOGrau') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Por que o fatorial</h2>
+      <h2>{{ texto('porQueOFatorial') }}</h2>
       <app-formula [tex]="'a_{k} = \\frac{f^{(k)}(0)}{k!}'" [bloco]="true" />
-      <p class="observacao">
-        Derivar x elevado a k exatamente k vezes produz k fatorial. O denominador da fórmula
-        existe para desfazer isso — sem ele, cada coeficiente sairia inflado pelo fatorial da
-        própria ordem, e o polinômio não encostaria na função.
-      </p>
+      <p class="observacao">{{ texto('derivarXElevadoAK') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

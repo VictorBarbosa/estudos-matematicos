@@ -1,0 +1,82 @@
+{
+  "aplicacao": {
+    "pt": "Aplicação",
+    "fr": "Application",
+    "en": "Application"
+  },
+  "rotuloArea": {
+    "pt": "Área entre curvas",
+    "fr": "Aire entre courbes",
+    "en": "Area between curves"
+  },
+  "rotuloVolume": {
+    "pt": "Volume de revolução",
+    "fr": "Volume de révolution",
+    "en": "Volume of revolution"
+  },
+  "rotuloComprimento": {
+    "pt": "Comprimento de arco",
+    "fr": "Longueur d'arc",
+    "en": "Arc length"
+  },
+  "inclinacaoDaReta": {
+    "pt": "Inclinação da reta",
+    "fr": "Pente de la droite",
+    "en": "Slope of the line"
+  },
+  "ateX": {
+    "pt": "Até x =",
+    "fr": "Jusqu'à x =",
+    "en": "Up to x ="
+  },
+  "explArea": {
+    "pt": "A região fica entre a reta e a parábola, dos dois pontos onde elas se cruzam. Integra-se a diferença, sempre a de cima menos a de baixo.",
+    "fr": "La région se trouve entre la droite et la parabole, entre les deux points où elles se croisent. On intègre la différence, toujours celle du haut moins celle du bas.",
+    "en": "The region lies between the line and the parabola, between the two points where they cross. You integrate the difference, always the upper one minus the lower one."
+  },
+  "explVolume": {
+    "pt": "Girando a reta em torno do eixo x, cada fatia vira um disco de raio igual ao valor da função. O sólido resultante é um cone.",
+    "fr": "En faisant tourner la droite autour de l'axe x, chaque tranche devient un disque de rayon égal à la valeur de la fonction. Le solide obtenu est un cône.",
+    "en": "Rotating the line around the x-axis, each slice becomes a disk whose radius equals the value of the function. The resulting solid is a cone."
+  },
+  "explComprimento": {
+    "pt": "Cada pedacinho da curva é a hipotenusa de um triângulo de catetos dx e dy. Numa reta, a conta confirma o teorema de Pitágoras.",
+    "fr": "Chaque petit bout de courbe est l'hypoténuse d'un triangle de côtés dx et dy. Sur une droite, le calcul confirme le théorème de Pythagore.",
+    "en": "Each little piece of the curve is the hypotenuse of a triangle with legs dx and dy. On a line, the computation confirms the Pythagorean theorem."
+  },
+  "areaEntreAsCurvas": {
+    "pt": "Área entre as curvas",
+    "fr": "Aire entre les courbes",
+    "en": "Area between the curves"
+  },
+  "volumeDoCone": {
+    "pt": "Volume do cone",
+    "fr": "Volume du cône",
+    "en": "Volume of the cone"
+  },
+  "comprimentoDoArco": {
+    "pt": "Comprimento do arco",
+    "fr": "Longueur de l'arc",
+    "en": "Length of the arc"
+  },
+  "aRegiaoEmQuestao": {
+    "pt": "A região em questão",
+    "fr": "La région en question",
+    "en": "The region in question"
+  },
+  "mesmaIdeia": {
+    "pt": "Todas as três aplicações partem da mesma ideia: fatiar a figura em pedaços infinitesimais cuja medida sabemos calcular, e somar tudo com uma integral. Muda apenas o que cada fatia é — uma tira, um disco ou um segmento.",
+    "fr": "Les trois applications partent de la même idée : découper la figure en morceaux infinitésimaux dont on sait calculer la mesure, puis tout additionner avec une intégrale. Seul change ce qu'est chaque tranche — une bande, un disque ou un segment.",
+    "en": "All three applications start from the same idea: slice the figure into infinitesimal pieces whose measure we know how to compute, and add them all up with an integral. Only what each slice is changes — a strip, a disk, or a segment."
+  },
+  "cruzam": {
+    "pt": "cruzam",
+    "fr": "se croisent",
+    "en": "they cross"
+  },
+  "descricaoGrafico": {
+    "pt": "Gráfico da aplicação selecionada: {aplicacao}.",
+    "fr": "Graphe de l'application choisie : {aplicacao}.",
+    "en": "Graph of the selected application: {aplicacao}."
+  }
+}

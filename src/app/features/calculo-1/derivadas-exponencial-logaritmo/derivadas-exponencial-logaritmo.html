@@ -1,7 +1,7 @@
 <app-topico-layout topicoId="derivadas-exponencial-logaritmo">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>A tabela que fecha o Cálculo 1</h2>
+      <h2>{{ texto('aTabelaQueFecha') }}</h2>
       <div class="tabela-derivadas">
         @for (linha of tabela; track linha.funcaoTex) {
           <div class="painel">
@@ -10,19 +10,29 @@
               <span aria-hidden="true">→</span>
               <app-formula [tex]="linha.derivadaTex" />
             </div>
-            <p class="observacao">{{ linha.observacao }}</p>
+            <p class="observacao">{{ texto(linha.observacao) }}</p>
           </div>
         }
       </div>
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente (a)" [min]="1" [max]="6" />
-      <app-controle-parametro [(valor)]="k" rotulo="Fator do expoente (k)" [min]="-3" [max]="3" />
-      <app-controle-parametro [(valor)]="ponto" rotulo="Ponto" [min]="1" [max]="6" />
+      <app-controle-parametro [(valor)]="a" [rotulo]="texto('coefA')" [min]="1" [max]="6" />
+      <app-controle-parametro
+        [(valor)]="k"
+        [rotulo]="texto('fatorDoExpoente')"
+        [min]="-3"
+        [max]="3"
+      />
+      <app-controle-parametro
+        [(valor)]="ponto"
+        [rotulo]="i18n.t('explorar.ponto')"
+        [min]="1"
+        [max]="6"
+      />
       <app-controle-parametro
         [(valor)]="multiplo"
-        rotulo="Múltiplo dentro do logaritmo"
+        [rotulo]="texto('multiploDentroDoLogaritmo')"
         [min]="1"
         [max]="9"
       />
@@ -35,37 +45,33 @@
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">f no ponto</span>
+        <span class="rotulo">{{ texto('fNoPonto') }}</span>
         <strong>{{ formatar(valorDaExponencial()) }}</strong>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">f' no ponto</span>
+        <span class="rotulo">{{ texto('fLinhaNoPonto') }}</span>
         <strong>{{ formatar(derivadaDaExponencial()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Razão entre as duas</span>
+        <span class="rotulo">{{ texto('razaoEntreAsDuas') }}</span>
         <strong>{{ formatar(razao()) }}</strong>
-        <span class="legenda">é sempre o fator do expoente</span>
+        <span class="legenda">{{ texto('sempreOFatorDoExpoente') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>Derivar não muda a forma</h2>
+      <h2>{{ texto('derivarNaoMudaAForma') }}</h2>
       <app-math-plot
         [dominio]="dominioExponencial()"
         [curvas]="curvasExponencial()"
         [descricao]="descricaoExponencial()"
         [altura]="340"
       />
-      <p class="observacao">
-        As duas curvas são a mesma, em escalas diferentes: a razão entre elas vale exatamente o
-        fator do expoente, em qualquer ponto. Com k igual a 1 elas coincidem — e é só nesse caso que
-        a exponencial é literalmente a própria derivada.
-      </p>
+      <p class="observacao">{{ texto('asDuasCurvasSaoAMesma') }}</p>
     </section>
 
     <section>
-      <h2>O múltiplo que não sobrevive</h2>
+      <h2>{{ texto('oMultiploQueNaoSobrevive') }}</h2>
       <app-math-plot
         [dominio]="dominioLogaritmo()"
         [curvas]="curvasLogaritmo()"
@@ -74,20 +80,16 @@
       />
       <div class="indicadores">
         <div class="indicador">
-          <span class="rotulo">Derivada pela regra</span>
+          <span class="rotulo">{{ texto('derivadaPelaRegra') }}</span>
           <strong>{{ formatar(derivadaDoLogaritmo()) }}</strong>
         </div>
         <div class="indicador">
-          <span class="rotulo">Conferência numérica</span>
+          <span class="rotulo">{{ i18n.t('explorar.conferenciaNumerica') }}</span>
           <strong>{{ formatar(conferenciaDoLogaritmo()) }}</strong>
         </div>
       </div>
       <app-formula [tex]="logTex()" [bloco]="true" />
-      <p class="observacao">
-        Mexa no múltiplo: a curva sobe ou desce inteira, mas a inclinação em cada x não muda. Duas
-        curvas que diferem por uma constante têm exatamente a mesma derivada — e é por isso que o
-        múltiplo de dentro do logaritmo desaparece.
-      </p>
+      <p class="observacao">{{ texto('mexaNoMultiplo') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

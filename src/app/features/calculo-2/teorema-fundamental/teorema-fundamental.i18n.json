@@ -1,0 +1,57 @@
+{
+  "limiteSuperiorX": {
+    "pt": "Limite superior x",
+    "fr": "Borne supérieure x",
+    "en": "Upper limit x"
+  },
+  "deslizeEVeja": {
+    "pt": "Deslize e veja a área acumular.",
+    "fr": "Faites glisser et voyez l'aire s'accumuler.",
+    "en": "Slide and watch the area accumulate."
+  },
+  "areaAcumuladaAX": {
+    "pt": "Área acumulada A(x)",
+    "fr": "Aire accumulée A(x)",
+    "en": "Accumulated area A(x)"
+  },
+  "alturaFx": {
+    "pt": "Altura f(x)",
+    "fr": "Hauteur f(x)",
+    "en": "Height f(x)"
+  },
+  "eAInclinacaoDeA": {
+    "pt": "é a inclinação de A ali",
+    "fr": "c'est la pente de A à cet endroit",
+    "en": "is the slope of A there"
+  },
+  "acumularEVariar": {
+    "pt": "Acumular e variar são operações opostas",
+    "fr": "Accumuler et varier sont des opérations opposées",
+    "en": "Accumulating and varying are opposite operations"
+  },
+  "aRegiaoSombreada": {
+    "pt": "A região sombreada é a área acumulada até x, e a curva de acento mostra como ela cresce. Repare: onde a função é alta, a curva da área sobe depressa; onde ela cruza o eixo, a curva da área fica horizontal. A altura de uma é a inclinação da outra — esse é o teorema.",
+    "fr": "La région hachurée est l'aire accumulée jusqu'à x, et la courbe d'accent montre comment elle croît. Remarquez : là où la fonction est haute, la courbe de l'aire monte vite ; là où elle croise l'axe, la courbe de l'aire devient horizontale. La hauteur de l'une est la pente de l'autre — c'est le théorème.",
+    "en": "The shaded region is the area accumulated up to x, and the accent curve shows how it grows. Notice: where the function is tall, the area curve climbs fast; where it crosses the axis, the area curve flattens out. The height of one is the slope of the other — that is the theorem."
+  },
+  "oQueOTeoremaEconomiza": {
+    "pt": "O que o teorema economiza",
+    "fr": "Ce que le théorème épargne",
+    "en": "What the theorem saves"
+  },
+  "semEleCadaArea": {
+    "pt": "Sem ele, cada área exigiria um limite de somas infinitas. Com ele, basta encontrar uma antiderivada e subtrair dois valores. É a razão de o cálculo integral ser praticável à mão.",
+    "fr": "Sans lui, chaque aire exigerait une limite de sommes infinies. Avec lui, il suffit de trouver une primitive et de soustraire deux valeurs. C'est la raison pour laquelle le calcul intégral est faisable à la main.",
+    "en": "Without it, every area would demand a limit of infinite sums. With it, you just find an antiderivative and subtract two values. That is why integral calculus is workable by hand."
+  },
+  "areaAcumuladaCurva": {
+    "pt": "A(x) — área acumulada",
+    "fr": "A(x) — aire accumulée",
+    "en": "A(x) — accumulated area"
+  },
+  "descricaoGrafico": {
+    "pt": "Curva e sua área acumulada. Em x igual a {x}, a área vale {area} e a inclinação dessa curva de área é {altura}, que é a altura da função.",
+    "fr": "Courbe et son aire accumulée. En x égal à {x}, l'aire vaut {area} et la pente de cette courbe d'aire est {altura}, qui est la hauteur de la fonction.",
+    "en": "Curve and its accumulated area. At x equal to {x}, the area equals {area} and the slope of that area curve is {altura}, which is the height of the function."
+  }
+}

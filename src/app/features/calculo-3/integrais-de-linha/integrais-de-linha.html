@@ -1,28 +1,23 @@
 <app-topico-layout topicoId="integrais-de-linha">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Integrar sobre uma curva</h2>
+      <h2>{{ texto('tituloSecao1') }}</h2>
       <app-formula
         [tex]="'\\int_{C} \\vec{F} \\cdot d\\vec{r} = \\int_{a}^{b} \\vec{F}(\\vec{r}(t)) \\cdot \\vec{r}\\,^{\\prime}(t)\\,dt'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Uma integral de linha acumula valores ao longo de uma curva, e não sobre um intervalo. A
-        técnica é sempre a mesma: parametrizar o caminho, substituir, e o que sobra é uma
-        integral comum no parâmetro. O produto escalar é o que descarta a parte do campo que não
-        empurra na direção do movimento.
-      </p>
+      <p class="observacao">{{ texto('observacao1') }}</p>
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="campoXx" rotulo="Componente x: coef. de x" [min]="-3" [max]="3" />
-      <app-controle-parametro [(valor)]="campoXy" rotulo="Componente x: coef. de y" [min]="-3" [max]="3" />
-      <app-controle-parametro [(valor)]="campoYx" rotulo="Componente y: coef. de x" [min]="-3" [max]="3" />
-      <app-controle-parametro [(valor)]="campoYy" rotulo="Componente y: coef. de y" [min]="-3" [max]="3" />
-      <app-controle-parametro [(valor)]="ax" rotulo="A: x" [min]="-5" [max]="5" />
-      <app-controle-parametro [(valor)]="ay" rotulo="A: y" [min]="-5" [max]="5" />
-      <app-controle-parametro [(valor)]="bx" rotulo="B: x" [min]="-5" [max]="5" />
-      <app-controle-parametro [(valor)]="by" rotulo="B: y" [min]="-5" [max]="5" />
+      <app-controle-parametro [(valor)]="campoXx" [rotulo]="texto('rotuloComponenteX', { v: 'x' })" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="campoXy" [rotulo]="texto('rotuloComponenteX', { v: 'y' })" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="campoYx" [rotulo]="texto('rotuloComponenteY', { v: 'x' })" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="campoYy" [rotulo]="texto('rotuloComponenteY', { v: 'y' })" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="ax" [rotulo]="texto('rotuloA', { v: 'x' })" [min]="-5" [max]="5" />
+      <app-controle-parametro [(valor)]="ay" [rotulo]="texto('rotuloA', { v: 'y' })" [min]="-5" [max]="5" />
+      <app-controle-parametro [(valor)]="bx" [rotulo]="texto('rotuloB', { v: 'x' })" [min]="-5" [max]="5" />
+      <app-controle-parametro [(valor)]="by" [rotulo]="texto('rotuloB', { v: 'y' })" [min]="-5" [max]="5" />
     </section>
 
     <section class="destaque-formula">
@@ -31,23 +26,23 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Trabalho de A a B</span>
+        <span class="rotulo">{{ texto('tituloIndicadores') }}</span>
         <strong>{{ formatar(trabalho()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Trabalho de volta</span>
+        <span class="rotulo">{{ texto('rotuloVolta') }}</span>
         <strong>{{ formatar(trabalhoDaVolta()) }}</strong>
-        <span class="legenda">sempre o oposto, pelo mesmo caminho</span>
+        <span class="legenda">{{ texto('legendaVolta') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Campo conservativo?</span>
-        <strong>{{ conservativo() ? 'sim' : 'não' }}</strong>
-        <span class="legenda">teste das parciais cruzadas</span>
+        <span class="rotulo">{{ texto('tituloConservativo') }}</span>
+        <strong>{{ conservativo() ? texto('sim') : texto('nao') }}</strong>
+        <span class="legenda">{{ texto('legendaConservativo') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>O campo e o caminho</h2>
+      <h2>{{ texto('tituloCampo') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [segmentos]="segmentos()"
@@ -56,24 +51,16 @@
         [altura]="420"
         [mostrarGrade]="false"
       />
-      <p class="observacao">
-        As setas finas mostram o campo; a seta em destaque é o caminho. Gire o caminho e
-        acompanhe o trabalho: ele é máximo quando o percurso segue o campo, nulo quando é
-        perpendicular a ele, e negativo quando vai contra.
-      </p>
+      <p class="observacao">{{ texto('observacaoCampo') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Quando o caminho deixa de importar</h2>
+      <h2>{{ texto('tituloQuandoImporta') }}</h2>
       <app-formula
         [tex]="'\\frac{\\partial P}{\\partial y} = \\frac{\\partial Q}{\\partial x} \\;\\Longrightarrow\\; \\vec{F} = \\nabla\\varphi'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Quando as parciais cruzadas coincidem, o campo é o gradiente de alguma função — e aí o
-        trabalho entre dois pontos é só a diferença dessa função nas pontas. É o que acontece
-        com a gravidade, e é a razão de existir energia potencial.
-      </p>
+      <p class="observacao">{{ texto('observacaoQuandoImporta') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

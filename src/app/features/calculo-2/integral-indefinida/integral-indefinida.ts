@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-2/integral-indefinida/integral-indefinida.i18n.json';
 import { geradorIndefinida } from '@features/calculo-2/integral-indefinida/integral-indefinida.gerador';
 import { TEORIA_INDEFINIDA } from '@features/calculo-2/integral-indefinida/integral-indefinida.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_INDEFINIDA } from '@features/calculo-2/integral-indefinida/integ
   styleUrl: './integral-indefinida.scss',
 })
 export class IntegralIndefinida {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorIndefinida;
   protected readonly conceitos = TEORIA_INDEFINIDA.map((teoria) => teoria.id);
 
@@ -89,19 +94,19 @@ export class IntegralIndefinida {
       {
         fn: (x) => base.avaliar(x) + escolhida,
         cor: 'acento',
-        rotulo: `F(x) com C = ${escolhida}`,
+        rotulo: this.texto('fxComC', { c: escolhida }),
       },
-      { fn: (x) => this.integrando().avaliar(x), cor: 'serie-1', rotulo: 'integrando f(x)' },
+      {
+        fn: (x) => this.integrando().avaliar(x),
+        cor: 'serie-1',
+        rotulo: this.texto('integrandoFx'),
+      },
     ];
   });
 
   protected readonly dominio = computed(() => ({ xMin: -3, xMax: 3 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Família de primitivas, todas paralelas entre si, junto do integrando. Mudar a ' +
-      'constante desloca a curva verticalmente sem alterar sua inclinação.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_INDEFINIDA);

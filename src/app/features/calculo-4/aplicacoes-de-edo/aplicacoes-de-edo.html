@@ -1,30 +1,26 @@
 <app-topico-layout topicoId="aplicacoes-de-edo">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>A parte difícil é escrever</h2>
+      <h2>{{ texto('tituloSecao1') }}</h2>
       <app-formula
         [tex]="'\\frac{d}{dt}(\\text{acumulado}) = \\text{entra} - \\text{sai}'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Em engenharia a equação não vem pronta: ela sai de um balanço. O que entra menos o que
-        sai é a taxa de variação, e traduzir essa frase em símbolos é o trabalho real. Resolver,
-        depois disso, costuma ser a parte mecânica.
-      </p>
+      <p class="observacao">{{ texto('observacao1') }}</p>
     </section>
 
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="escolha"
-        rotulo="Situação (0 resfriamento · 1 decaimento · 2 circuito · 3 tanque)"
+        [rotulo]="texto('rotuloSituacao')"
         [min]="0"
         [max]="3"
       />
-      <app-controle-parametro [(valor)]="inicial" rotulo="Valor inicial" [min]="0" [max]="120" />
-      <app-controle-parametro [(valor)]="alvo" rotulo="Valor final" [min]="0" [max]="80" />
+      <app-controle-parametro [(valor)]="inicial" [rotulo]="texto('rotuloInicial')" [min]="0" [max]="120" />
+      <app-controle-parametro [(valor)]="alvo" [rotulo]="texto('rotuloAlvo')" [min]="0" [max]="80" />
       <app-controle-parametro
         [(valor)]="centesimosDeK"
-        rotulo="Constante k, em centésimos"
+        [rotulo]="texto('rotuloK')"
         [min]="2"
         [max]="60"
       />
@@ -37,51 +33,43 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Situação</span>
+        <span class="rotulo">{{ texto('rotuloSituacao') }}</span>
         <strong>{{ cenario().nome }}</strong>
         <span class="legenda">o final é {{ cenario().rotuloFinal }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Constante de tempo</span>
+        <span class="rotulo">{{ texto('rotuloConstTempo') }}</span>
         <strong>{{ formatar(constanteDeTempo()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Depois de uma delas</span>
+        <span class="rotulo">{{ texto('rotuloDepoisUma') }}</span>
         <strong>{{ formatar(emUmaConstante()) }} {{ cenario().unidade }}</strong>
-        <span class="legenda">63% do caminho</span>
+        <span class="legenda">{{ texto('legenda63pct') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Meia-vida da diferença</span>
+        <span class="rotulo">{{ texto('rotuloMeiaVida') }}</span>
         <strong>{{ formatar(meiaVida()) }}</strong>
       </div>
     </section>
 
     <section>
-      <h2>Por que não é uma reta</h2>
+      <h2>{{ texto('tituloNaoReta') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
         [descricao]="descricaoGrafico()"
         [altura]="380"
       />
-      <p class="observacao">
-        A reta vermelha é a tangente inicial — a aproximação que se faria tratando a taxa como
-        constante. Ela acompanha bem no começo e logo se afasta, porque a taxa diminui conforme
-        a diferença encolhe. É essa realimentação que torna a solução exponencial.
-      </p>
+      <p class="observacao">{{ texto('observacaoNaoReta') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Quatro situações, a mesma equação</h2>
+      <h2>{{ texto('tituloQuatroSituacoes') }}</h2>
       <app-formula
         [tex]="'\\frac{dT}{dt} = -k(T - T_{amb}) \\qquad L\\frac{di}{dt} + Ri = V'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Resfriamento, decaimento, circuito RL e tanque de mistura parecem problemas distintos e
-        levam todos à mesma linear de primeira ordem. É por isso que vale aprender a técnica em
-        vez de decorar fórmulas por situação.
-      </p>
+      <p class="observacao">{{ texto('observacaoQuatroSituacoes') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

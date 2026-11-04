@@ -1,0 +1,107 @@
+{
+  "aTabelaQueFecha": {
+    "pt": "A tabela que fecha o Cálculo 1",
+    "fr": "La table qui clôt le calcul différentiel",
+    "en": "The table that closes Calculus 1"
+  },
+  "obsEx": {
+    "pt": "A única função não nula que é a própria derivada.",
+    "fr": "La seule fonction non nulle qui est sa propre dérivée.",
+    "en": "The only nonzero function that is its own derivative."
+  },
+  "obsExK": {
+    "pt": "A cadeia traz o expoente para fora como fator.",
+    "fr": "La chaîne fait sortir l'exposant comme facteur.",
+    "en": "The chain rule brings the exponent out as a factor."
+  },
+  "obsBx": {
+    "pt": "Com b igual a e o fator vale 1, e é só por isso que ele some.",
+    "fr": "Avec b égal à e, le facteur vaut 1, et c'est la seule raison pour laquelle il disparaît.",
+    "en": "With b equal to e the factor is 1, and that is the only reason it disappears."
+  },
+  "obsLn": {
+    "pt": "Vale para x positivo; a derivada cai quando x cresce.",
+    "fr": "Vaut pour x positif ; la dérivée décroît quand x augmente.",
+    "en": "Holds for positive x; the derivative falls as x grows."
+  },
+  "obsLnK": {
+    "pt": "O k vira parcela constante e desaparece ao derivar.",
+    "fr": "Le k devient un terme constant et disparaît à la dérivation.",
+    "en": "The k becomes a constant term and disappears when differentiating."
+  },
+  "obsLogBase": {
+    "pt": "Mudança de base: o natural dividido por uma constante.",
+    "fr": "Changement de base : le logarithme naturel divisé par une constante.",
+    "en": "Change of base: the natural log divided by a constant."
+  },
+  "coefA": {
+    "pt": "Coeficiente (a)",
+    "fr": "Coefficient (a)",
+    "en": "Coefficient (a)"
+  },
+  "fatorDoExpoente": {
+    "pt": "Fator do expoente (k)",
+    "fr": "Facteur de l'exposant (k)",
+    "en": "Exponent factor (k)"
+  },
+  "multiploDentroDoLogaritmo": {
+    "pt": "Múltiplo dentro do logaritmo",
+    "fr": "Multiple à l'intérieur du logarithme",
+    "en": "Multiple inside the logarithm"
+  },
+  "fNoPonto": {
+    "pt": "f no ponto",
+    "fr": "f au point",
+    "en": "f at the point"
+  },
+  "fLinhaNoPonto": {
+    "pt": "f' no ponto",
+    "fr": "f' au point",
+    "en": "f' at the point"
+  },
+  "razaoEntreAsDuas": {
+    "pt": "Razão entre as duas",
+    "fr": "Rapport entre les deux",
+    "en": "Ratio between the two"
+  },
+  "sempreOFatorDoExpoente": {
+    "pt": "é sempre o fator do expoente",
+    "fr": "c'est toujours le facteur de l'exposant",
+    "en": "is always the exponent factor"
+  },
+  "derivarNaoMudaAForma": {
+    "pt": "Derivar não muda a forma",
+    "fr": "Dériver ne change pas la forme",
+    "en": "Differentiating does not change the shape"
+  },
+  "asDuasCurvasSaoAMesma": {
+    "pt": "As duas curvas são a mesma, em escalas diferentes: a razão entre elas vale exatamente o fator do expoente, em qualquer ponto. Com k igual a 1 elas coincidem — e é só nesse caso que a exponencial é literalmente a própria derivada.",
+    "fr": "Les deux courbes sont la même, à des échelles différentes : leur rapport vaut exactement le facteur de l'exposant, en tout point. Avec k égal à 1, elles coïncident — et c'est le seul cas où l'exponentielle est littéralement sa propre dérivée.",
+    "en": "The two curves are the same, at different scales: their ratio equals exactly the exponent factor, at every point. With k equal to 1 they coincide — and only then is the exponential literally its own derivative."
+  },
+  "oMultiploQueNaoSobrevive": {
+    "pt": "O múltiplo que não sobrevive",
+    "fr": "Le multiple qui ne survit pas",
+    "en": "The multiple that does not survive"
+  },
+  "derivadaPelaRegra": {
+    "pt": "Derivada pela regra",
+    "fr": "Dérivée par la règle",
+    "en": "Derivative by the rule"
+  },
+  "mexaNoMultiplo": {
+    "pt": "Mexa no múltiplo: a curva sobe ou desce inteira, mas a inclinação em cada x não muda. Duas curvas que diferem por uma constante têm exatamente a mesma derivada — e é por isso que o múltiplo de dentro do logaritmo desaparece.",
+    "fr": "Jouez avec le multiple : la courbe monte ou descend tout entière, mais la pente en chaque x ne change pas. Deux courbes qui diffèrent d'une constante ont exactement la même dérivée — et c'est pourquoi le multiple à l'intérieur du logarithme disparaît.",
+    "en": "Play with the multiple: the curve shifts up or down as a whole, but the slope at each x does not change. Two curves that differ by a constant have exactly the same derivative — which is why the multiple inside the logarithm disappears."
+  },
+  "descricaoExponencial": {
+    "pt": "Exponencial e sua derivada: as duas têm a mesma forma, e a derivada é {k} vezes a função.",
+    "fr": "L'exponentielle et sa dérivée : les deux ont la même forme, et la dérivée est {k} fois la fonction.",
+    "en": "The exponential and its derivative: both have the same shape, and the derivative is {k} times the function."
+  },
+  "descricaoLogaritmo": {
+    "pt": "Dois logaritmos deslocados um do outro por uma constante, e a mesma derivada para os dois: as curvas são paralelas na vertical.",
+    "fr": "Deux logarithmes décalés l'un de l'autre par une constante, et la même dérivée pour les deux : les courbes sont verticalement parallèles.",
+    "en": "Two logarithms shifted from each other by a constant, and the same derivative for both: the curves are vertically parallel."
+  }
+}

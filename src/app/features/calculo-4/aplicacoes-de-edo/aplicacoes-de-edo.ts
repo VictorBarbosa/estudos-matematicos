@@ -9,6 +9,8 @@ import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { geradorAplicacoesDeEdo } from '@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.gerador';
 import { TEORIA_APLICACOES_EDO } from '@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.teoria';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.i18n.json';
 
 /** As quatro situações que o tópico percorre, todas com a mesma equação por trás. */
 const CENARIOS = [
@@ -28,6 +30,7 @@ const CENARIOS = [
 export class AplicacoesDeEdo {
   protected readonly gerador = geradorAplicacoesDeEdo;
   protected readonly conceitos = TEORIA_APLICACOES_EDO.map((teoria) => teoria.id);
+  protected readonly texto = textoLocal(textos);
   protected readonly cenarios = CENARIOS;
 
   protected readonly escolha = signal(0);
@@ -79,8 +82,7 @@ export class AplicacoesDeEdo {
 
   protected readonly descricaoGrafico = computed(
     () =>
-      'Solução exponencial e a reta tangente inicial: a aproximação linear só vale para tempos ' +
-      'curtos, e logo se afasta.',
+      this.texto('descricaoGrafico'),
   );
 
   constructor() {

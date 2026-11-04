@@ -1,15 +1,30 @@
 <app-topico-layout topicoId="integral-indefinida">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="-6" [max]="6" />
-      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x" [min]="-6" [max]="6" />
-      <app-controle-parametro [(valor)]="c" rotulo="Termo constante" [min]="-5" [max]="5" />
       <app-controle-parametro
-        [(valor)]="constante"
-        rotulo="Constante C"
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefX2')"
         [min]="-6"
         [max]="6"
-        dica="Desloca a primitiva na vertical."
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.coefX')"
+        [min]="-6"
+        [max]="6"
+      />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="i18n.t('explorar.termoConstante')"
+        [min]="-5"
+        [max]="5"
+      />
+      <app-controle-parametro
+        [(valor)]="constante"
+        [rotulo]="texto('constanteC')"
+        [min]="-6"
+        [max]="6"
+        [dica]="texto('deslocaAPrimitiva')"
       />
     </section>
 
@@ -18,36 +33,27 @@
     </section>
 
     <section class="painel">
-      <h2>Conferindo pela derivada</h2>
+      <h2>{{ texto('conferindoPelaDerivada') }}</h2>
       <app-formula [tex]="conferenciaTex()" [bloco]="true" />
       <p class="observacao" [attr.data-confere]="confere()">
-        {{
-          confere()
-            ? 'A derivada da primitiva devolve exatamente o integrando — a integral está correta.'
-            : 'Derivando de volta não chegamos ao integrando.'
-        }}
-        Derivar a resposta é sempre a forma mais rápida de conferir uma integral.
+        {{ confere() ? texto('confereSim') : texto('confereNao') }}
+        {{ texto('sempreConfira') }}
       </p>
     </section>
 
     <section>
-      <h2>A família de primitivas</h2>
+      <h2>{{ texto('aFamiliaDePrimitivas') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
         [descricao]="descricaoGrafico()"
         [altura]="400"
       />
-      <p class="observacao">
-        As curvas tracejadas são outras primitivas da mesma função, com constantes
-        diferentes. Repare que são todas paralelas: em cada x elas têm a mesma inclinação,
-        que é justamente o valor do integrando ali. É por isso que a constante é
-        indeterminável sem uma condição inicial.
-      </p>
+      <p class="observacao">{{ texto('curvasTracejadas') }}</p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="analise().passos" />
     </section>
 

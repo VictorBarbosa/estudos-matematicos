@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { AreaPlot, CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-2/teorema-fundamental/teorema-fundamental.i18n.json';
 import { geradorTfc } from '@features/calculo-2/teorema-fundamental/teorema-fundamental.gerador';
 import { TEORIA_TFC } from '@features/calculo-2/teorema-fundamental/teorema-fundamental.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_TFC } from '@features/calculo-2/teorema-fundamental/teorema-fund
   styleUrl: './teorema-fundamental.scss',
 })
 export class TeoremaFundamental {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorTfc;
   protected readonly conceitos = TEORIA_TFC.map((teoria) => teoria.id);
 
@@ -54,7 +59,7 @@ export class TeoremaFundamental {
 
     return [
       { fn: (t) => f.avaliar(t), cor: 'serie-1', rotulo: 'f(x)' },
-      { fn: (t) => area.avaliar(t), cor: 'acento', rotulo: 'A(x) — área acumulada' },
+      { fn: (t) => area.avaliar(t), cor: 'acento', rotulo: this.texto('areaAcumuladaCurva') },
     ];
   });
 
@@ -79,11 +84,12 @@ export class TeoremaFundamental {
 
   protected readonly dominio = computed(() => ({ xMin: -1, xMax: 5 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Curva e sua área acumulada. Em x igual a ${this.x()}, a área vale ` +
-      `${this.formatar(this.areaAteX())} e a inclinação dessa curva de área é ` +
-      `${this.formatar(this.alturaNoPonto())}, que é a altura da função.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      x: this.x(),
+      area: this.formatar(this.areaAteX()),
+      altura: this.formatar(this.alturaNoPonto()),
+    }),
   );
 
   constructor() {

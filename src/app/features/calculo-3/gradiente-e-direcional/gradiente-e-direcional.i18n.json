@@ -1,0 +1,102 @@
+{
+  "oVetorQueAponta": {
+    "pt": "O vetor que aponta para cima",
+    "fr": "Le vecteur qui pointe vers le haut",
+    "en": "The vector that points uphill"
+  },
+  "oGradienteJunta": {
+    "pt": "O gradiente junta as parciais num vetor só, e ele tem duas propriedades que valem por todo o tópico: aponta para a direção de subida mais íngreme, e seu módulo é a inclinação nessa direção. Todo método de otimização é alguma variação de andar contra ele.",
+    "fr": "Le gradient rassemble les partielles en un seul vecteur, et il possède deux propriétés qui valent pour tout le sujet : il pointe vers la direction de montée la plus raide, et son module est la pente dans cette direction. Toute méthode d'optimisation est une variante de marcher contre lui.",
+    "en": "The gradient gathers the partials into a single vector, and it has two properties that hold throughout the topic: it points toward the steepest ascent, and its magnitude is the slope in that direction. Every optimization method is some variation of walking against it."
+  },
+  "direcaoGraus": {
+    "pt": "Direção (graus)",
+    "fr": "Direction (degrés)",
+    "en": "Direction (degrees)"
+  },
+  "taxaMaxima": {
+    "pt": "Taxa máxima",
+    "fr": "Taux maximal",
+    "en": "Maximum rate"
+  },
+  "oModuloDoGradiente": {
+    "pt": "o módulo do gradiente",
+    "fr": "le module du gradient",
+    "en": "the magnitude of the gradient"
+  },
+  "taxaNaDirecaoEscolhida": {
+    "pt": "Taxa na direção escolhida",
+    "fr": "Taux dans la direction choisie",
+    "en": "Rate in the chosen direction"
+  },
+  "pontoCritico": {
+    "pt": "Ponto crítico",
+    "fr": "Point critique",
+    "en": "Critical point"
+  },
+  "naturezaMinimo": {
+    "pt": "mínimo",
+    "fr": "minimum",
+    "en": "minimum"
+  },
+  "naturezaMaximo": {
+    "pt": "máximo",
+    "fr": "maximum",
+    "en": "maximum"
+  },
+  "naturezaSela": {
+    "pt": "sela",
+    "fr": "selle",
+    "en": "saddle"
+  },
+  "naturezaIndeterminado": {
+    "pt": "indeterminado",
+    "fr": "indéterminé",
+    "en": "indeterminate"
+  },
+  "peloTesteDaHessiana": {
+    "pt": "pelo teste da hessiana",
+    "fr": "par le test de la hessienne",
+    "en": "by the Hessian test"
+  },
+  "perpendicularACurva": {
+    "pt": "Perpendicular à curva de nível",
+    "fr": "Perpendiculaire à la courbe de niveau",
+    "en": "Perpendicular to the level curve"
+  },
+  "gireADirecao": {
+    "pt": "Gire a direção escolhida e acompanhe a taxa: ela é máxima quando a seta aponta junto com o gradiente, zero quando é perpendicular a ele — e é exatamente aí que a direção fica tangente à curva de nível, porque andar sobre ela mantém a altura.",
+    "fr": "Faites tourner la direction choisie et suivez le taux : il est maximal quand la flèche pointe dans le sens du gradient, nul quand elle lui est perpendiculaire — et c'est exactement là que la direction devient tangente à la courbe de niveau, parce que marcher dessus conserve la hauteur.",
+    "en": "Rotate the chosen direction and follow the rate: it is maximal when the arrow points along the gradient, zero when it is perpendicular to it — and that is exactly where the direction becomes tangent to the level curve, because walking along it keeps the height constant."
+  },
+  "normalizarNaoEDetalhe": {
+    "pt": "Normalizar não é detalhe",
+    "fr": "Normaliser n'est pas un détail",
+    "en": "Normalizing is not a detail"
+  },
+  "aDirecaoPrecisaSerUnitaria": {
+    "pt": "A direção precisa ser unitária. Sem normalizar, um vetor duas vezes maior devolveria uma taxa duas vezes maior — e a inclinação de uma encosta não pode depender do comprimento da seta que se desenha sobre ela.",
+    "fr": "La direction doit être unitaire. Sans normaliser, un vecteur deux fois plus long renverrait un taux deux fois plus grand — et la pente d'une côte ne peut pas dépendre de la longueur de la flèche qu'on dessine dessus.",
+    "en": "The direction must be a unit vector. Without normalizing, a vector twice as long would return a rate twice as large — and the slope of a hillside cannot depend on the length of the arrow you draw over it."
+  },
+  "curvaDeNivel": {
+    "pt": "curva de nível",
+    "fr": "courbe de niveau",
+    "en": "level curve"
+  },
+  "gradiente": {
+    "pt": "gradiente",
+    "fr": "gradient",
+    "en": "gradient"
+  },
+  "direcaoEscolhida": {
+    "pt": "direção escolhida",
+    "fr": "direction choisie",
+    "en": "chosen direction"
+  },
+  "descricaoGrafico": {
+    "pt": "Curva de nível que passa pelo ponto, o gradiente saindo dele e a direção escolhida: o gradiente é sempre perpendicular à curva de nível.",
+    "fr": "Courbe de niveau passant par le point, le gradient qui en sort et la direction choisie : le gradient est toujours perpendiculaire à la courbe de niveau.",
+    "en": "Level curve through the point, the gradient leaving it, and the chosen direction: the gradient is always perpendicular to the level curve."
+  }
+}

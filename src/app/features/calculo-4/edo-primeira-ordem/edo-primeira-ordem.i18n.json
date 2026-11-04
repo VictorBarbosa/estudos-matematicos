@@ -1,0 +1,77 @@
+{
+  "tituloSecao1": {
+    "pt": "A equação descreve a REGRA, não a grandeza",
+    "fr": "L'équation décrit la REGLE, pas la grandeur",
+    "en": "The equation describes the RULE, not the quantity"
+  },
+  "observacao1": {
+    "pt": "Uma EDO diz como uma grandeza muda, não quanto ela vale. A solução não é um número: é uma família inteira de funções, e a condição inicial é o que escolhe uma delas. É assim que a física é escrita de verdade — a segunda lei de Newton é uma EDO.",
+    "fr": "Une EDO dit comment une grandeur change, pas combien elle vaut. La solution n'est pas un nombre : c'est toute une famille de fonctions, et la condition initiale est ce qui en choisit une. C'est ainsi que la physique est vraiment écrite — la deuxième loi de Newton est une EDO.",
+    "en": "An ODE says how a quantity changes, not how much it is. The solution is not a number: it is an entire family of functions, and the initial condition is what picks one of them. This is how physics is truly written — Newton's second law is an ODE."
+  },
+  "rotuloP": {
+    "pt": "Coeficiente p, em décimos",
+    "fr": "Coefficient p, en dixièmes",
+    "en": "Coefficient p, in tenths"
+  },
+  "rotuloQ": {
+    "pt": "Termo constante q",
+    "fr": "Terme constant q",
+    "en": "Constant term q"
+  },
+  "rotuloY0": {
+    "pt": "Valor inicial",
+    "fr": "Valeur initiale",
+    "en": "Initial value"
+  },
+  "rotuloRegime": {
+    "pt": "Regime permanente",
+    "fr": "Régime permanent",
+    "en": "Steady state"
+  },
+  "legendaRegime": {
+    "pt": "q dividido por p",
+    "fr": "q divisé par p",
+    "en": "q divided by p"
+  },
+  "rotuloConstTempo": {
+    "pt": "Constante de tempo",
+    "fr": "Constante de temps",
+    "en": "Time constant"
+  },
+  "legendaConstTempo": {
+    "pt": "63% do caminho percorrido",
+    "fr": "63% du chemin parcouru",
+    "en": "63% of the way traveled"
+  },
+  "rotuloMeiaVida": {
+    "pt": "Meia-vida do transiente",
+    "fr": "Demi-vie du transitoire",
+    "en": "Transient half-life"
+  },
+  "tituloFamilia": {
+    "pt": "Uma família, um destino",
+    "fr": "Une famille, un destin",
+    "en": "One family, one destination"
+  },
+  "observacaoFamilia": {
+    "pt": "As três curvas resolvem a mesma equação, partindo de valores iniciais diferentes. Repare que todas convergem para a mesma linha tracejada: a condição inicial muda o caminho, não o destino. O destino depende apenas dos coeficientes.",
+    "fr": "Les trois courbes résolvent la même équation, à partir de conditions initiales différentes. Remarquez qu'elles convergent toutes vers la même ligne pointillée : la condition initiale change le chemin, pas la destination. La destination dépend uniquement des coefficients.",
+    "en": "All three curves solve the same equation, starting from different initial conditions. Note that they all converge to the same dashed line: the initial condition changes the path, not the destination. The destination depends only on the coefficients."
+  },
+  "tituloTransiente": {
+    "pt": "Transiente e permanente",
+    "fr": "Transitoire et permanent",
+    "en": "Transient and steady state"
+  },
+  "observacaoTransiente": {
+    "pt": "Depois de uma constante de tempo resta cerca de 37% do transiente; depois de cinco, menos de 1%. É a regra prática da engenharia: cinco constantes de tempo, e o sistema chegou. Aumente o coeficiente p e veja a convergência acelerar.",
+    "fr": "Après une constante de temps, il reste environ 37% du transitoire ; après cinq, moins de 1%. C'est la règle pratique de l'ingénierie : cinq constantes de temps, et le système a atteint son état d'équilibre. Augmentez le coefficient p et voyez la convergence accélérer.",
+    "en": "After one time constant, about 37% of the transient remains; after five, less than 1%. This is the engineering rule of thumb: five time constants, and the system has settled. Increase coefficient p and watch convergence accelerate."
+  },
+  "descricaoGrafico": {
+    "pt": "Três soluções da mesma equação, partindo de valores iniciais diferentes: todas caminham para o mesmo regime permanente.",
+    "fr": "Trois solutions de la même équation, à partir de conditions initiales différentes : toutes convergent vers le même régime permanent.",
+    "en": "Three solutions of the same equation, starting from different initial conditions: they all head toward the same steady state."
+  }
+}

@@ -8,6 +8,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.i18n.json';
 import { geradorTecnicas } from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.gerador';
 import { TEORIA_TECNICAS } from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.teoria';
 
@@ -28,6 +31,8 @@ type Tecnica = 'substituicao' | 'por-partes';
   styleUrl: './tecnicas-de-integracao.scss',
 })
 export class TecnicasDeIntegracao {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorTecnicas;
   protected readonly conceitos = TEORIA_TECNICAS.map((teoria) => teoria.id);
 
@@ -68,19 +73,19 @@ export class TecnicasDeIntegracao {
     if (this.tecnica() === 'substituicao') {
       return [
         {
-          descricao: 'Chamamos o miolo de u.',
+          descricao: 'p1',
           tex: `u = ${interno} \\qquad du = ${a}\\,dx`,
         },
         {
-          descricao: 'Isolamos dx e substituímos.',
+          descricao: 'p2',
           tex: `dx = \\frac{du}{${a}} \\;\\Rightarrow\\; \\frac{1}{${a}}\\int u^{${n}}\\,du`,
         },
         {
-          descricao: 'Aplicamos a regra da potência.',
+          descricao: 'p3',
           tex: `= \\frac{u^{${n + 1}}}{${a * (n + 1)}}`,
         },
         {
-          descricao: 'Voltamos à variável original.',
+          descricao: 'p4',
           tex: `= \\frac{\\left(${interno}\\right)^{${n + 1}}}{${a * (n + 1)}} + C`,
         },
       ];
@@ -88,27 +93,27 @@ export class TecnicasDeIntegracao {
 
     return [
       {
-        descricao: 'Escolhemos u como a parte que simplifica ao derivar.',
+        descricao: 'p5',
         tex: 'u = x \\qquad dv = e^{x/2}\\,dx',
       },
       {
-        descricao: 'Calculamos du e v.',
+        descricao: 'p6',
         tex: 'du = dx \\qquad v = 2e^{x/2}',
       },
       {
-        descricao: 'Aplicamos a fórmula.',
+        descricao: 'p7',
         tex: '\\int u\\,dv = uv - \\int v\\,du = 2xe^{x/2} - \\int 2e^{x/2}\\,dx',
       },
       {
-        descricao: 'A integral restante é imediata.',
+        descricao: 'p8',
         tex: '= 2xe^{x/2} - 4e^{x/2} + C',
-        nota: 'A escolha certa de u fez o polinômio sumir na segunda integral.',
+        nota: 'p8nota',
       },
     ];
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => [
-    { fn: this.integrando(), cor: 'serie-1', rotulo: 'integrando' },
+    { fn: this.integrando(), cor: 'serie-1', rotulo: this.texto('integrando') },
   ]);
 
   protected readonly areas = computed<readonly AreaPlot[]>(() => [
@@ -117,8 +122,8 @@ export class TecnicasDeIntegracao {
 
   protected readonly dominio = computed(() => ({ xMin: -0.5, xMax: this.ate() + 1 }));
 
-  protected readonly descricaoGrafico = computed(
-    () => `Região sob o integrando de 0 a ${this.ate()}, de área ${this.formatar(this.valor())}.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { ate: this.ate(), valor: this.formatar(this.valor()) }),
   );
 
   constructor() {

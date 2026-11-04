@@ -17,6 +17,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/derivacao-implicita/derivacao-implicita.i18n.json';
 import { geradorDerivacaoImplicita } from '@features/calculo-1/derivacao-implicita/derivacao-implicita.gerador';
 import { TEORIA_DERIVACAO_IMPLICITA } from '@features/calculo-1/derivacao-implicita/derivacao-implicita.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_DERIVACAO_IMPLICITA } from '@features/calculo-1/derivacao-implic
   styleUrl: './derivacao-implicita.scss',
 })
 export class DerivacaoImplicita {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorDerivacaoImplicita;
   protected readonly conceitos = TEORIA_DERIVACAO_IMPLICITA.map((teoria) => teoria.id);
 
@@ -84,10 +89,17 @@ export class DerivacaoImplicita {
     const tangente = (valor: number) => this.y() + m * (valor - this.x());
 
     return [
-      { fn: ramo(1), cor: 'serie-1', rotulo: 'ramo de cima' },
-      { fn: ramo(-1), cor: 'serie-2', rotulo: 'ramo de baixo' },
+      { fn: ramo(1), cor: 'serie-1', rotulo: this.texto('ramoDeCima') },
+      { fn: ramo(-1), cor: 'serie-2', rotulo: this.texto('ramoDeBaixo') },
       ...(Number.isFinite(m)
-        ? [{ fn: tangente, cor: 'acento' as const, tracejada: true, rotulo: 'tangente' }]
+        ? [
+            {
+              fn: tangente,
+              cor: 'acento' as const,
+              tracejada: true,
+              rotulo: this.texto('tangente'),
+            },
+          ]
         : []),
     ];
   });
@@ -101,11 +113,7 @@ export class DerivacaoImplicita {
     return { xMin: -alcance, xMax: alcance };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Curva de dois ramos e a reta tangente no ponto escolhido; a inclinação depende de x e ` +
-      'de y ao mesmo tempo.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_DERIVACAO_IMPLICITA);
@@ -114,6 +122,6 @@ export class DerivacaoImplicita {
   protected formatar(valor: number): string {
     return Number.isFinite(valor)
       ? Number(valor.toFixed(4)).toLocaleString('pt-BR', { maximumFractionDigits: 4 })
-      : 'não existe';
+      : this.texto('naoExiste');
   }
 }

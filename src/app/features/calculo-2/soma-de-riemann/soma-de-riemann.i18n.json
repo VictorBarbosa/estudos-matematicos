@@ -1,0 +1,92 @@
+{
+  "ondeTomarAAltura": {
+    "pt": "Onde tomar a altura",
+    "fr": "Où prendre la hauteur",
+    "en": "Where to take the height"
+  },
+  "nomeEsquerda": {
+    "pt": "Pela esquerda",
+    "fr": "Par la gauche",
+    "en": "From the left"
+  },
+  "nomeDireita": {
+    "pt": "Pela direita",
+    "fr": "Par la droite",
+    "en": "From the right"
+  },
+  "nomePontoMedio": {
+    "pt": "Ponto médio",
+    "fr": "Point milieu",
+    "en": "Midpoint"
+  },
+  "nomeTrapezio": {
+    "pt": "Trapézios",
+    "fr": "Trapèzes",
+    "en": "Trapezoids"
+  },
+  "numeroDeRetangulos": {
+    "pt": "Número de retângulos",
+    "fr": "Nombre de rectangles",
+    "en": "Number of rectangles"
+  },
+  "aumenteEVejaOErro": {
+    "pt": "Aumente e veja o erro despencar.",
+    "fr": "Augmentez et voyez l'erreur chuter.",
+    "en": "Increase it and watch the error plummet."
+  },
+  "inicioDoIntervalo": {
+    "pt": "Início do intervalo",
+    "fr": "Début de l'intervalle",
+    "en": "Start of the interval"
+  },
+  "fimDoIntervalo": {
+    "pt": "Fim do intervalo",
+    "fr": "Fin de l'intervalle",
+    "en": "End of the interval"
+  },
+  "somaAproximada": {
+    "pt": "Soma aproximada",
+    "fr": "Somme approchée",
+    "en": "Approximate sum"
+  },
+  "areaExata": {
+    "pt": "Área exata",
+    "fr": "Aire exacte",
+    "en": "Exact area"
+  },
+  "aIntegral": {
+    "pt": "a integral",
+    "fr": "l'intégrale",
+    "en": "the integral"
+  },
+  "erro": {
+    "pt": "Erro",
+    "fr": "Erreur",
+    "en": "Error"
+  },
+  "osRetangulosCobrindo": {
+    "pt": "Os retângulos cobrindo a área",
+    "fr": "Les rectangles recouvrant l'aire",
+    "en": "The rectangles covering the area"
+  },
+  "aumenteONumero": {
+    "pt": "Aumente o número de retângulos e observe os pedacinhos que sobram no topo de cada um encolherem. É essa sobra que o limite elimina — e o resultado é a integral.",
+    "fr": "Augmentez le nombre de rectangles et observez les petits bouts qui dépassent au sommet de chacun rétrécir. C'est ce surplus que la limite élimine — et le résultat est l'intégrale.",
+    "en": "Increase the number of rectangles and watch the little bits left over at the top of each one shrink. That leftover is what the limit eliminates — and the result is the integral."
+  },
+  "porQueAEscolhaImportaMenos": {
+    "pt": "Por que a escolha da altura importa menos do que parece",
+    "fr": "Pourquoi le choix de la hauteur importe moins qu'il n'y paraît",
+    "en": "Why the choice of height matters less than it seems"
+  },
+  "compareAsQuatroOpcoes": {
+    "pt": "Compare as quatro opções acima com poucos retângulos: os valores diferem bastante. Agora aumente n e repita — todas convergem para o mesmo número. No limite, a escolha do ponto deixa de fazer diferença.",
+    "fr": "Comparez les quatre options ci-dessus avec peu de rectangles : les valeurs diffèrent beaucoup. Augmentez maintenant n et répétez — toutes convergent vers le même nombre. À la limite, le choix du point cesse de faire une différence.",
+    "en": "Compare the four options above with few rectangles: the values differ a lot. Now increase n and repeat — they all converge to the same number. In the limit, the choice of point stops making a difference."
+  },
+  "descricaoGrafico": {
+    "pt": "Curva x ao quadrado com {n} retângulos de aproximação, somando {soma} contra a área exata de {exata}.",
+    "fr": "Courbe x au carré avec {n} rectangles d'approximation, totalisant {soma} contre l'aire exacte de {exata}.",
+    "en": "Curve x squared with {n} approximating rectangles, summing to {soma} against the exact area of {exata}."
+  }
+}

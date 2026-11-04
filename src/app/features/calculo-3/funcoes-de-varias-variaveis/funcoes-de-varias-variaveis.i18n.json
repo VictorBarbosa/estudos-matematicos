@@ -1,0 +1,72 @@
+{
+  "sobeUmaDimensao": {
+    "pt": "Sobe uma dimensão em tudo",
+    "fr": "Tout monte d'une dimension",
+    "en": "Everything goes up one dimension"
+  },
+  "oDominioDeixaDeSer": {
+    "pt": "O domínio deixa de ser um intervalo na reta e passa a ser uma região do plano; o gráfico deixa de ser curva e passa a ser superfície. Quase tudo que a engenharia mede é assim — temperatura ao longo de uma placa, pressão sobre uma asa, altitude sobre um terreno.",
+    "fr": "Le domaine cesse d'être un intervalle sur la droite et devient une région du plan ; le graphe cesse d'être une courbe et devient une surface. Presque tout ce que l'ingénierie mesure est ainsi — température le long d'une plaque, pression sur une aile, altitude au-dessus d'un terrain.",
+    "en": "The domain stops being an interval on the line and becomes a region of the plane; the graph stops being a curve and becomes a surface. Almost everything engineering measures is like this — temperature across a plate, pressure over a wing, altitude over a terrain."
+  },
+  "planoDeCorte": {
+    "pt": "Plano de corte (y)",
+    "fr": "Plan de coupe (y)",
+    "en": "Cutting plane (y)"
+  },
+  "formaDaSuperficie": {
+    "pt": "Forma da superfície",
+    "fr": "Forme de la surface",
+    "en": "Shape of the surface"
+  },
+  "sela": {
+    "pt": "sela",
+    "fr": "selle",
+    "en": "saddle"
+  },
+  "calha": {
+    "pt": "calha",
+    "fr": "gouttière",
+    "en": "trough"
+  },
+  "paraboloideCima": {
+    "pt": "paraboloide para cima",
+    "fr": "paraboloïde vers le haut",
+    "en": "paraboloid opening upward"
+  },
+  "paraboloideBaixo": {
+    "pt": "paraboloide para baixo",
+    "fr": "paraboloïde vers le bas",
+    "en": "paraboloid opening downward"
+  },
+  "alturaEm": {
+    "pt": "Altura em (0, {y})",
+    "fr": "Hauteur en (0, {y})",
+    "en": "Height at (0, {y})"
+  },
+  "umaFatiaDeCadaVez": {
+    "pt": "Uma fatia de cada vez",
+    "fr": "Une tranche à la fois",
+    "en": "One slice at a time"
+  },
+  "cadaCurvaAqui": {
+    "pt": "Cada curva aqui é a superfície cortada por um plano vertical, com o y fixo. Juntas elas reconstroem o relevo — e é exatamente esse raciocínio que transforma um problema de duas variáveis em vários problemas de uma só.",
+    "fr": "Chaque courbe ici est la surface coupée par un plan vertical, avec y fixe. Ensemble elles reconstruisent le relief — et c'est exactement ce raisonnement qui transforme un problème à deux variables en plusieurs problèmes à une seule.",
+    "en": "Each curve here is the surface cut by a vertical plane, with y fixed. Together they rebuild the terrain — and it is exactly this reasoning that turns a two-variable problem into several one-variable problems."
+  },
+  "troqueOsSinais": {
+    "pt": "Troque os sinais e veja a sela aparecer",
+    "fr": "Changez les signes et voyez la selle apparaître",
+    "en": "Swap the signs and watch the saddle appear"
+  },
+  "comOsDoisCoeficientes": {
+    "pt": "Com os dois coeficientes positivos a superfície é um paraboloide, e todos os cortes abrem para cima. Com sinais opostos, aparece a sela: mínimo numa direção e máximo noutra, um comportamento que simplesmente não existe em uma variável.",
+    "fr": "Avec les deux coefficients positifs, la surface est un paraboloïde, et toutes les coupes s'ouvrent vers le haut. Avec des signes opposés, la selle apparaît : minimum dans une direction et maximum dans l'autre, un comportement qui n'existe tout simplement pas à une variable.",
+    "en": "With both coefficients positive the surface is a paraboloid, and all the slices open upward. With opposite signs, the saddle appears: a minimum in one direction and a maximum in the other, a behavior that simply does not exist in one variable."
+  },
+  "descricaoGrafico": {
+    "pt": "Cortes verticais da superfície: cada curva é a função com um y fixo, e juntas elas descrevem o relevo inteiro.",
+    "fr": "Coupes verticales de la surface : chaque courbe est la fonction à y fixe, et ensemble elles décrivent tout le relief.",
+    "en": "Vertical slices of the surface: each curve is the function at a fixed y, and together they describe the whole terrain."
+  }
+}

@@ -19,8 +19,14 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.i18n.json';
 import { geradorDerivadasTrig } from '@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.gerador';
 import { TEORIA_DERIVADAS_TRIG } from '@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.teoria';
+
+/** A observação de cada linha da tabela vira uma chave do dicionário deste tópico. */
+const OBSERVACOES_DA_TABELA = ['obsSen', 'obsCos', 'obsTan'] as const;
 
 @Component({
   selector: 'app-derivadas-trigonometricas',
@@ -30,9 +36,14 @@ import { TEORIA_DERIVADAS_TRIG } from '@features/calculo-1/derivadas-trigonometr
   styleUrl: './derivadas-trigonometricas.scss',
 })
 export class DerivadasTrigonometricas {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorDerivadasTrig;
   protected readonly conceitos = TEORIA_DERIVADAS_TRIG.map((teoria) => teoria.id);
-  protected readonly tabela = TABELA_DAS_DERIVADAS_TRIG;
+  protected readonly tabela = TABELA_DAS_DERIVADAS_TRIG.map((linha, indice) => ({
+    ...linha,
+    observacao: OBSERVACOES_DA_TABELA[indice] ?? '',
+  }));
 
   /** 0 é o seno, 1 é o cosseno — o controle só sabe mexer em números. */
   protected readonly escolha = signal(0);
@@ -45,7 +56,9 @@ export class DerivadasTrigonometricas {
 
   protected readonly arco = computed(() => ARCOS_DA_DERIVADA[this.indiceDoArco()]!);
 
-  protected readonly nomeDaFuncao = computed(() => (this.funcao() === 'sen' ? 'seno' : 'cosseno'));
+  protected readonly nomeDaFuncao = computed(() =>
+    this.funcao() === 'sen' ? this.texto('seno') : this.texto('cosseno'),
+  );
 
   protected readonly arcoEscrito = computed(() => arcoTexto(this.arco()));
 
@@ -97,10 +110,8 @@ export class DerivadasTrigonometricas {
 
   protected readonly dominio = computed(() => ({ xMin: -Math.PI, xMax: 2 * Math.PI }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Gráfico de ${this.a()} vezes o ${this.nomeDaFuncao()} e de sua derivada; ` +
-      'onde uma cruza o eixo, a outra atinge um extremo.',
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { a: this.a(), funcao: this.nomeDaFuncao() }),
   );
 
   constructor() {

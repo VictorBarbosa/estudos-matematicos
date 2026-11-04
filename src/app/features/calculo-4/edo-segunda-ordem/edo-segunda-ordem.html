@@ -67,11 +67,7 @@
     <section class="painel">
       <h2>Duas constantes, duas condições</h2>
       <app-formula [tex]="'y(0) = y_{0} \\qquad y\'(0) = v_{0}'" [bloco]="true" />
-      <p class="observacao">
-        A solução geral tem duas constantes livres, e por isso são necessárias duas condições
-        para fixá-las. Fisicamente é evidente: saber onde a massa está não basta, é preciso
-        saber também com que velocidade ela parte.
-      </p>
+      <p class="observacao">{{ texto('observacaoDuasCond') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

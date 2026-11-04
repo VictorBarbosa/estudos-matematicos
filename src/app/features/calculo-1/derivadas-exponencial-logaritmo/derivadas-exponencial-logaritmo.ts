@@ -13,8 +13,14 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.i18n.json';
 import { geradorDerivadasExpLog } from '@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.gerador';
 import { TEORIA_DERIVADAS_EXP_LOG } from '@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.teoria';
+
+/** A observação de cada linha da tabela vira uma chave do dicionário deste tópico. */
+const OBSERVACOES_DA_TABELA = ['obsEx', 'obsExK', 'obsBx', 'obsLn', 'obsLnK', 'obsLogBase'] as const;
 
 @Component({
   selector: 'app-derivadas-exponencial-logaritmo',
@@ -24,9 +30,14 @@ import { TEORIA_DERIVADAS_EXP_LOG } from '@features/calculo-1/derivadas-exponenc
   styleUrl: './derivadas-exponencial-logaritmo.scss',
 })
 export class DerivadasExponencialLogaritmo {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorDerivadasExpLog;
   protected readonly conceitos = TEORIA_DERIVADAS_EXP_LOG.map((teoria) => teoria.id);
-  protected readonly tabela = TABELA_DAS_DERIVADAS_EXP_LOG;
+  protected readonly tabela = TABELA_DAS_DERIVADAS_EXP_LOG.map((linha, indice) => ({
+    ...linha,
+    observacao: OBSERVACOES_DA_TABELA[indice] ?? '',
+  }));
 
   protected readonly a = signal(1);
   protected readonly k = signal(1);
@@ -89,16 +100,11 @@ export class DerivadasExponencialLogaritmo {
   protected readonly dominioExponencial = computed(() => ({ xMin: -2, xMax: 2 }));
   protected readonly dominioLogaritmo = computed(() => ({ xMin: 0.1, xMax: 8, yMin: -2, yMax: 4 }));
 
-  protected readonly descricaoExponencial = computed(
-    () =>
-      `Exponencial e sua derivada: as duas têm a mesma forma, e a derivada é ${this.k()} vez(es) a função.`,
+  protected readonly descricaoExponencial = computed(() =>
+    this.texto('descricaoExponencial', { k: this.k() }),
   );
 
-  protected readonly descricaoLogaritmo = computed(
-    () =>
-      'Dois logaritmos deslocados um do outro por uma constante, e a mesma derivada para os ' +
-      'dois: as curvas são paralelas na vertical.',
-  );
+  protected readonly descricaoLogaritmo = computed(() => this.texto('descricaoLogaritmo'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_DERIVADAS_EXP_LOG);

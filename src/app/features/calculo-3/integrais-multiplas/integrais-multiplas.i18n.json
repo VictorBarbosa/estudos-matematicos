@@ -1,0 +1,112 @@
+{
+  "tituloSecao1": {
+    "pt": "Duas integrais encadeadas",
+    "fr": "Deux intégrales échelonnées",
+    "en": "Two chained integrals"
+  },
+  "observacao1": {
+    "pt": "A integral dupla soma os valores da função sobre uma região do plano. Num retângulo ela se calcula como duas integrais simples encadeadas: primeiro em x, com y parado; depois em y, sobre o que sobrou. É a ideia das derivadas parciais, na direção contrária.",
+    "fr": "L'intégrale double somme les valeurs de la fonction sur une région du plan. Dans un rectangle, elle se calcule comme deux intégrales simples échelonnées : d'abord en x, avec y fixe ; puis en y, sur ce qui reste. C'est l'idée des dérivées partielles, dans le sens inverse.",
+    "en": "The double integral sums the function's values over a region of the plane. On a rectangle, it is computed as two simple chained integrals: first in x, with y fixed; then in y, over what remains. It is the idea of partial derivatives, in the reverse direction."
+  },
+  "rotuloCoefX2": {
+    "pt": "Coeficiente de x²",
+    "fr": "Coefficient de x²",
+    "en": "Coefficient of x²"
+  },
+  "rotuloCoefY2": {
+    "pt": "Coeficiente de y²",
+    "fr": "Coefficient de y²",
+    "en": "Coefficient of y²"
+  },
+  "rotuloTermoConst": {
+    "pt": "Termo constante",
+    "fr": "Terme constant",
+    "en": "Constant term"
+  },
+  "rotuloX0": {
+    "pt": "x inicial",
+    "fr": "x initial",
+    "en": "Initial x"
+  },
+  "rotuloX1": {
+    "pt": "x final",
+    "fr": "x final",
+    "en": "Final x"
+  },
+  "rotuloY0": {
+    "pt": "y inicial",
+    "fr": "y initial",
+    "en": "Initial y"
+  },
+  "rotuloY1": {
+    "pt": "y final",
+    "fr": "y final",
+    "en": "Final y"
+  },
+  "rotuloFatia": {
+    "pt": "Fatia mostrada (y)",
+    "fr": "Tranche affichée (y)",
+    "en": "Slice shown (y)"
+  },
+  "rotuloIntegral": {
+    "pt": "Integral dupla",
+    "fr": "Intégrale double",
+    "en": "Double integral"
+  },
+  "legendaVolume": {
+    "pt": "volume, com f positiva",
+    "fr": "volume, avec f positive",
+    "en": "volume, with f positive"
+  },
+  "rotuloArea": {
+    "pt": "Área da região",
+    "fr": "Aire de la région",
+    "en": "Area of the region"
+  },
+  "rotuloMedia": {
+    "pt": "Valor médio",
+    "fr": "Valeur moyenne",
+    "en": "Average value"
+  },
+  "legendaMedia": {
+    "pt": "integral dividida pela área",
+    "fr": "intégrale divisée par l'aire",
+    "en": "integral divided by the area"
+  },
+  "rotuloFatiaInd": {
+    "pt": "Integral da fatia",
+    "fr": "Intégrale de la tranche",
+    "en": "Slice integral"
+  },
+  "legendaFatia": {
+    "pt": "a integral interna, sozinha",
+    "fr": "l'intégrale interne, seule",
+    "en": "the inner integral, by itself"
+  },
+  "tituloFatia": {
+    "pt": "Uma fatia de cada vez",
+    "fr": "Une tranche à la fois",
+    "en": "One slice at a time"
+  },
+  "observacaoFatia": {
+    "pt": "A área destacada é o resultado da integral interna para aquele y. Mova a fatia e veja o valor mudar: somar todas essas áreas ao longo de y é exatamente o que a integral externa faz, e o total é o volume sob a superfície.",
+    "fr": "La zone mise en évidence est le résultat de l'intégrale interne pour ce y. Déplacez la tranche et voyez la valeur changer : additionner toutes ces aires le long de y est exactement ce que fait l'intégrale externe, et le total est le volume sous la surface.",
+    "en": "The highlighted area is the result of the inner integral for that y. Move the slice and watch the value change: summing all those areas along y is exactly what the outer integral does, and the total is the volume under the surface."
+  },
+  "tituloPolares": {
+    "pt": "Polares e o jacobiano",
+    "fr": "Polar et le jacobien",
+    "en": "Polar and the Jacobian"
+  },
+  "observacaoJacobiano": {
+    "pt": "Em regiões circulares, polares transformam limites com raiz em números fixos. Mas o elemento de área ganha um fator r — pedaços mais afastados da origem são maiores, e o jacobiano corrige isso. Sem ele, a área do círculo sairia 2πR em vez de πR².",
+    "fr": "Dans les régions circulaires, les coordonnées polaires transforment les limites avec des racines en nombres fixes. Mais l'élément d'aire gagne un facteur r — les morceaux plus éloignés de l'origine sont plus grands, et le jacobien corrige cela. Sans lui, l'aire du cercle donnerait 2πR au lieu de πR².",
+    "en": "In circular regions, polar coordinates transform limits with square roots into fixed numbers. But the area element gains an r factor — pieces farther from the origin are larger, and the Jacobian corrects for this. Without it, the area of the circle would be 2πR instead of πR²."
+  },
+  "descricaoGrafico": {
+    "pt": "A fatia da superfície em y igual a {y}, com a área sob ela destacada: é a integral interna, que depois será somada ao longo de y.",
+    "fr": "La tranche de la surface en y égal à {y}, avec l'aire sous elle mise en évidence : c'est l'intégrale interne, qui sera ensuite sommée le long de y.",
+    "en": "The slice of the surface at y equal to {y}, with the area under it highlighted: it is the inner integral, which will then be summed along y."
+  }
+}

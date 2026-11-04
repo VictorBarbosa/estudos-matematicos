@@ -1,0 +1,112 @@
+{
+  "tecnica": {
+    "pt": "Técnica",
+    "fr": "Technique",
+    "en": "Technique"
+  },
+  "substituicao": {
+    "pt": "Substituição",
+    "fr": "Substitution",
+    "en": "Substitution"
+  },
+  "porPartes": {
+    "pt": "Por partes",
+    "fr": "Par parties",
+    "en": "By parts"
+  },
+  "coeficienteInterno": {
+    "pt": "Coeficiente interno",
+    "fr": "Coefficient interne",
+    "en": "Inner coefficient"
+  },
+  "constanteInterna": {
+    "pt": "Constante interna",
+    "fr": "Constante interne",
+    "en": "Inner constant"
+  },
+  "expoente": {
+    "pt": "Expoente",
+    "fr": "Exposant",
+    "en": "Exponent"
+  },
+  "comoATecnicaDesmonta": {
+    "pt": "Como a técnica desmonta a integral",
+    "fr": "Comment la technique démonte l'intégrale",
+    "en": "How the technique takes the integral apart"
+  },
+  "p1": {
+    "pt": "Chamamos o miolo de u.",
+    "fr": "On appelle l'intérieur u.",
+    "en": "We name the inner part u."
+  },
+  "p2": {
+    "pt": "Isolamos dx e substituímos.",
+    "fr": "On isole dx et on substitue.",
+    "en": "We isolate dx and substitute."
+  },
+  "p3": {
+    "pt": "Aplicamos a regra da potência.",
+    "fr": "On applique la règle de la puissance.",
+    "en": "We apply the power rule."
+  },
+  "p4": {
+    "pt": "Voltamos à variável original.",
+    "fr": "On revient à la variable d'origine.",
+    "en": "We return to the original variable."
+  },
+  "p5": {
+    "pt": "Escolhemos u como a parte que simplifica ao derivar.",
+    "fr": "On choisit u comme la partie qui se simplifie en dérivant.",
+    "en": "We choose u as the part that simplifies when differentiated."
+  },
+  "p6": {
+    "pt": "Calculamos du e v.",
+    "fr": "On calcule du et v.",
+    "en": "We compute du and v."
+  },
+  "p7": {
+    "pt": "Aplicamos a fórmula.",
+    "fr": "On applique la formule.",
+    "en": "We apply the formula."
+  },
+  "p8": {
+    "pt": "A integral restante é imediata.",
+    "fr": "L'intégrale restante est immédiate.",
+    "en": "The remaining integral is immediate."
+  },
+  "p8nota": {
+    "pt": "A escolha certa de u fez o polinômio sumir na segunda integral.",
+    "fr": "Le bon choix de u a fait disparaître le polynôme dans la seconde intégrale.",
+    "en": "The right choice of u made the polynomial disappear in the second integral."
+  },
+  "aRegiaoCorrespondente": {
+    "pt": "A região correspondente",
+    "fr": "La région correspondante",
+    "en": "The corresponding region"
+  },
+  "aTecnicaNaoMudaAArea": {
+    "pt": "A técnica não muda a área — ela só torna possível calculá-la exatamente, em vez de aproximá-la por retângulos.",
+    "fr": "La technique ne change pas l'aire — elle permet seulement de la calculer exactement, au lieu de l'approcher par des rectangles.",
+    "en": "The technique does not change the area — it only makes it possible to compute it exactly, instead of approximating it with rectangles."
+  },
+  "comoEscolher": {
+    "pt": "Como escolher",
+    "fr": "Comment choisir",
+    "en": "How to choose"
+  },
+  "procureDentroDoIntegrando": {
+    "pt": "Procure dentro do integrando uma função composta acompanhada da derivada do seu miolo: é o sinal da substituição. Se em vez disso houver um produto de naturezas diferentes — polinômio com exponencial, por exemplo —, o caminho é por partes, escolhendo como u a parte que simplifica ao ser derivada.",
+    "fr": "Cherchez dans l'intégrande une fonction composée accompagnée de la dérivée de son intérieur : c'est le signe de la substitution. Si à la place il y a un produit de natures différentes — polynôme et exponentielle, par exemple —, le chemin est par parties, en choisissant comme u la partie qui se simplifie en dérivant.",
+    "en": "Look inside the integrand for a composite function accompanied by the derivative of its inner part: that is the sign of substitution. If instead there is a product of different natures — a polynomial with an exponential, for example —, the way is by parts, choosing as u the part that simplifies when differentiated."
+  },
+  "integrando": {
+    "pt": "integrando",
+    "fr": "intégrande",
+    "en": "integrand"
+  },
+  "descricaoGrafico": {
+    "pt": "Região sob o integrando de 0 a {ate}, de área {valor}.",
+    "fr": "Région sous l'intégrande de 0 à {ate}, d'aire {valor}.",
+    "en": "Region under the integrand from 0 to {ate}, with area {valor}."
+  }
+}

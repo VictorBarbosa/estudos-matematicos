@@ -1,0 +1,82 @@
+{
+  "tipoDeProgressao": {
+    "pt": "Tipo de progressão",
+    "fr": "Type de progression",
+    "en": "Type of progression"
+  },
+  "aritmetica": {
+    "pt": "Aritmética (soma)",
+    "fr": "Arithmétique (somme)",
+    "en": "Arithmetic (sum)"
+  },
+  "geometrica": {
+    "pt": "Geométrica (multiplica)",
+    "fr": "Géométrique (multiplication)",
+    "en": "Geometric (multiply)"
+  },
+  "razaoDecimos": {
+    "pt": "Razão (em décimos)",
+    "fr": "Raison (en dixièmes)",
+    "en": "Ratio (in tenths)"
+  },
+  "razao": {
+    "pt": "Razão",
+    "fr": "Raison",
+    "en": "Ratio"
+  },
+  "razaoAtual": {
+    "pt": "Razão atual: {valor}",
+    "fr": "Raison actuelle : {valor}",
+    "en": "Current ratio: {valor}"
+  },
+  "somaDos": {
+    "pt": "Soma dos {quantidade}",
+    "fr": "Somme des {quantidade}",
+    "en": "Sum of the {quantidade}"
+  },
+  "diverge": {
+    "pt": "diverge",
+    "fr": "diverge",
+    "en": "diverges"
+  },
+  "termosESomasAcumuladas": {
+    "pt": "Termos e somas acumuladas",
+    "fr": "Termes et sommes accumulées",
+    "en": "Terms and accumulated sums"
+  },
+  "pontosClaros": {
+    "pt": "Os pontos claros são os termos; os destacados são as somas parciais.",
+    "fr": "Les points clairs sont les termes ; les points en évidence sont les sommes partielles.",
+    "en": "The light points are the terms; the highlighted ones are the partial sums."
+  },
+  "linhaTracejadaELimite": {
+    "pt": "A linha tracejada é o limite: repare que as somas se aproximam dela sem nunca ultrapassá-la, mesmo somando infinitas parcelas.",
+    "fr": "La ligne en pointillés est la limite : remarquez que les sommes s'en approchent sans jamais la dépasser, même en additionnant une infinité de termes.",
+    "en": "The dashed line is the limit: notice that the sums approach it without ever crossing it, even when adding infinitely many terms."
+  },
+  "semConvergencia": {
+    "pt": "Sem convergência, as somas parciais crescem indefinidamente.",
+    "fr": "Sans convergence, les sommes partielles croissent indéfiniment.",
+    "en": "Without convergence, the partial sums grow without bound."
+  },
+  "passoAPassoDaSoma": {
+    "pt": "Passo a passo da soma",
+    "fr": "Étapes de la somme",
+    "en": "Step by step of the sum"
+  },
+  "aSomaInfinita": {
+    "pt": "A soma infinita",
+    "fr": "La somme infinie",
+    "en": "The infinite sum"
+  },
+  "descricaoConverge": {
+    "pt": "Termos da progressão e somas parciais acumuladas, com a reta do limite da série infinita.",
+    "fr": "Termes de la progression et sommes partielles accumulées, avec la droite limite de la série infinie.",
+    "en": "Terms of the progression and accumulated partial sums, with the limit line of the infinite series."
+  },
+  "descricaoDiverge": {
+    "pt": "Termos da progressão e somas parciais acumuladas.",
+    "fr": "Termes de la progression et sommes partielles accumulées.",
+    "en": "Terms of the progression and accumulated partial sums."
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "regiaoInfinita": {
+    "pt": "Uma região infinita pode ter área finita",
+    "fr": "Une région infinie peut avoir une aire finie",
+    "en": "An infinite region can have finite area"
+  },
+  "cabeNumQuadrado": {
+    "pt": "A região sob essa curva nunca termina, e mesmo assim cabe num quadrado de lado 1. Trocar a borda infinita por um limite é o que torna essa frase precisa — e o expoente é o que decide se o limite existe.",
+    "fr": "La région sous cette courbe ne finit jamais, et pourtant elle tient dans un carré de côté 1. Remplacer le bord infini par une limite est ce qui rend cette phrase précise — et l'exposant est ce qui décide si la limite existe.",
+    "en": "The region under this curve never ends, yet it still fits inside a square of side 1. Replacing the infinite edge by a limit is what makes that sentence precise — and the exponent is what decides whether the limit exists."
+  },
+  "expoenteP": {
+    "pt": "Expoente p, em décimos",
+    "fr": "Exposant p, en dixièmes",
+    "en": "Exponent p, in tenths"
+  },
+  "dicaExpoente": {
+    "pt": "20 quer dizer p igual a 2.",
+    "fr": "20 signifie p égal à 2.",
+    "en": "20 means p equal to 2."
+  },
+  "bordaDeBaixo": {
+    "pt": "Borda de baixo",
+    "fr": "Bord inférieur",
+    "en": "Lower edge"
+  },
+  "bordaMovel": {
+    "pt": "Borda móvel",
+    "fr": "Bord mobile",
+    "en": "Moving edge"
+  },
+  "areaAcumulada": {
+    "pt": "Área acumulada até a borda móvel",
+    "fr": "Aire accumulée jusqu'au bord mobile",
+    "en": "Area accumulated up to the moving edge"
+  },
+  "paraOndeElaCaminha": {
+    "pt": "Para onde ela caminha",
+    "fr": "Vers quoi elle tend",
+    "en": "Where it is heading"
+  },
+  "legendaP": {
+    "pt": "p = {expoente}",
+    "fr": "p = {expoente}",
+    "en": "p = {expoente}"
+  },
+  "noInfinito": {
+    "pt": "No infinito",
+    "fr": "À l'infini",
+    "en": "At infinity"
+  },
+  "naOrigem": {
+    "pt": "Na origem",
+    "fr": "À l'origine",
+    "en": "At the origin"
+  },
+  "converge": {
+    "pt": "converge",
+    "fr": "converge",
+    "en": "converges"
+  },
+  "diverge": {
+    "pt": "diverge",
+    "fr": "diverge",
+    "en": "diverges"
+  },
+  "precisaAcima": {
+    "pt": "precisa de p acima de 1",
+    "fr": "exige p supérieur à 1",
+    "en": "needs p above 1"
+  },
+  "precisaAbaixo": {
+    "pt": "precisa de p abaixo de 1",
+    "fr": "exige p inférieur à 1",
+    "en": "needs p below 1"
+  },
+  "aAreaQueSeAcumula": {
+    "pt": "A área que se acumula",
+    "fr": "L'aire qui s'accumule",
+    "en": "The area that accumulates"
+  },
+  "empurreABorda": {
+    "pt": "Empurre a borda móvel para a direita e veja a área acumulada. Com p acima de 1 ela se aproxima de um número e para; com p igual a 1 ela continua subindo, devagar, para sempre. A curva tracejada é exatamente essa fronteira.",
+    "fr": "Poussez le bord mobile vers la droite et regardez l'aire accumulée. Avec p supérieur à 1, elle s'approche d'un nombre puis s'arrête ; avec p égal à 1, elle continue de monter, lentement, pour toujours. La courbe en pointillés est exactement cette frontière.",
+    "en": "Push the moving edge to the right and watch the accumulated area. With p above 1 it approaches a number and stops; with p equal to 1 it keeps climbing, slowly, forever. The dashed curve is exactly that boundary."
+  },
+  "oMesmoExpoente": {
+    "pt": "O mesmo expoente, o critério oposto",
+    "fr": "Le même exposant, le critère opposé",
+    "en": "The same exponent, the opposite criterion"
+  },
+  "naOrigemExplosao": {
+    "pt": "Na origem o problema não é a cauda, é a explosão. Ali a função precisa subir devagar o bastante — e isso quer dizer expoente pequeno. Por isso o mesmo p que faz a integral convergir no infinito a faz divergir na origem, e o expoente 1 perde dos dois lados.",
+    "fr": "À l'origine le problème n'est pas la queue, c'est l'explosion. Là, la fonction doit monter assez lentement — ce qui veut dire exposant petit. C'est pourquoi le même p qui fait converger l'intégrale à l'infini la fait diverger à l'origine, et l'exposant 1 perd des deux côtés.",
+    "en": "At the origin the problem is not the tail, it is the blow-up. There the function must climb slowly enough — which means a small exponent. That is why the same p that makes the integral converge at infinity makes it diverge at the origin, and the exponent 1 loses on both sides."
+  },
+  "descricaoGrafico": {
+    "pt": "Área sob 1 sobre x elevado a {expoente}, acumulada da borda até a borda móvel; a curva tracejada é 1 sobre x, que é a fronteira entre convergir e divergir.",
+    "fr": "Aire sous 1 sur x élevé à la puissance {expoente}, accumulée du bord jusqu'au bord mobile ; la courbe en pointillés est 1 sur x, la frontière entre convergence et divergence.",
+    "en": "Area under 1 over x raised to the power {expoente}, accumulated from the edge to the moving edge; the dashed curve is 1 over x, the boundary between converging and diverging."
+  }
+}

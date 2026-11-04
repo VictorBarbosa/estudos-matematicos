@@ -1,0 +1,87 @@
+{
+  "tituloSecao1": {
+    "pt": "A EDO vira uma quadrática",
+    "fr": "L'EDO devient une équation du second degré",
+    "en": "The ODE becomes a quadratic"
+  },
+  "observacao1": {
+    "pt": "Tentar uma solução exponencial transforma a equação diferencial numa equação do segundo grau — derivadas viram potências, e a álgebra toma conta. É a ponte mais surpreendente do assunto, e ela resolve o problema inteiro com a fórmula que já se conhece.",
+    "fr": "Tenter une solution exponentielle transforme l'équation différentielle en une équation du second degré — les dérivées deviennent des puissances, et l'algèbre prend le relais. C'est le pont le plus surprenant du sujet, et il résout tout le problème avec la formule que l'on connaît déjà.",
+    "en": "Trying an exponential solution transforms the differential equation into a quadratic equation — derivatives become powers, and algebra takes over. It is the most surprising bridge of the subject, and it solves the entire problem with the formula you already know."
+  },
+  "rotuloB": {
+    "pt": "Amortecimento b, em décimos",
+    "fr": "Amortissement b, en dixièmes",
+    "en": "Damping b, in tenths"
+  },
+  "rotuloC": {
+    "pt": "Rigidez c",
+    "fr": "Rigidité c",
+    "en": "Stiffness c"
+  },
+  "rotuloY0": {
+    "pt": "Posição inicial",
+    "fr": "Position initiale",
+    "en": "Initial position"
+  },
+  "rotuloV0": {
+    "pt": "Velocidade inicial",
+    "fr": "Vitesse initiale",
+    "en": "Initial velocity"
+  },
+  "rotuloRegime": {
+    "pt": "Regime",
+    "fr": "Régime",
+    "en": "Regime"
+  },
+  "rotuloDiscriminante": {
+    "pt": "Discriminante",
+    "fr": "Discriminant",
+    "en": "Discriminant"
+  },
+  "legendaDiscriminante": {
+    "pt": "é o sinal dele que decide",
+    "fr": "c'est son signe qui décide",
+    "en": "its sign is what decides"
+  },
+  "rotuloPeriodo": {
+    "pt": "Período",
+    "fr": "Période",
+    "en": "Period"
+  },
+  "rotuloDecaimento": {
+    "pt": "Decaimento",
+    "fr": "Décroissance",
+    "en": "Decay"
+  },
+  "legendaDecaimento": {
+    "pt": "parte real das raízes",
+    "fr": "partie réelle des racines",
+    "en": "real part of the roots"
+  },
+  "tituloControles": {
+    "pt": "Os três regimes, num controle só",
+    "fr": "Les trois régimes, dans un seul contrôle",
+    "en": "Three regimes, one control"
+  },
+  "observacaoControles": {
+    "pt": "Aumente o amortecimento devagar e acompanhe: com pouco atrito a curva oscila dentro da envoltória; num valor exato ela deixa de cruzar o eixo — é o caso crítico; acima dele ela volta devagar, sem oscilar. Projetar uma suspensão é escolher esse ponto.",
+    "fr": "Augmentez lentement l'amortissement et suivez : avec peu de friction, la courbe oscille à l'intérieur de l'enveloppe ; à une valeur exacte, elle cesse de traverser l'axe — c'est le cas critique ; au-delà, elle revient lentement, sans osciller. Concevoir une suspension consiste à choisir ce point.",
+    "en": "Slowly increase the damping and watch: with little friction, the curve oscillates within the envelope; at an exact value it stops crossing the axis — this is the critical case; beyond it, it returns slowly, without oscillating. Designing a suspension means choosing that point."
+  },
+  "tituloDuasCond": {
+    "pt": "Duas constantes, duas condições",
+    "fr": "Deux constantes, deux conditions",
+    "en": "Two constants, two conditions"
+  },
+  "observacaoDuasCond": {
+    "pt": "A solução geral tem duas constantes livres, e por isso são necessárias duas condições para fixá-las. Fisicamente é evidente: saber onde a massa está não basta, é preciso saber também com que velocidade ela parte.",
+    "fr": "La solution générale a deux constantes libres, et donc deux conditions sont nécessaires pour les fixer. Physiquement, c'est évident : savoir où est la masse ne suffit pas, il faut aussi savoir avec quelle vitesse elle part.",
+    "en": "The general solution has two free constants, and so two conditions are needed to fix them. Physically, this is obvious: knowing where the mass is is not enough, you also need to know with what velocity it starts."
+  },
+  "descricaoGrafico": {
+    "pt": "Solução no regime {regime}: a curva parte do valor inicial e, conforme o amortecimento, oscila ou volta direto ao repouso.",
+    "fr": "Solution dans le régime {regime} : la courbe part de la condition initiale et, selon l'amortissement, oscille ou revient directement au repos.",
+    "en": "Solution in the {regime} regime: the curve starts from the initial value and, depending on damping, oscillates or returns directly to rest."
+  }
+}

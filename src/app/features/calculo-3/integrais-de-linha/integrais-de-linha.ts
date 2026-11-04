@@ -10,6 +10,8 @@ import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { geradorIntegraisDeLinha } from '@features/calculo-3/integrais-de-linha/integrais-de-linha.gerador';
 import { TEORIA_LINHA } from '@features/calculo-3/integrais-de-linha/integrais-de-linha.teoria';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-3/integrais-de-linha/integrais-de-linha.i18n.json';
 
 @Component({
   selector: 'app-integrais-de-linha',
@@ -21,6 +23,7 @@ import { TEORIA_LINHA } from '@features/calculo-3/integrais-de-linha/integrais-d
 export class IntegraisDeLinha {
   protected readonly gerador = geradorIntegraisDeLinha;
   protected readonly conceitos = TEORIA_LINHA.map((teoria) => teoria.id);
+  protected readonly texto = textoLocal(textos);
 
   protected readonly campoXx = signal(1);
   protected readonly campoXy = signal(0);
@@ -96,7 +99,7 @@ export class IntegraisDeLinha {
       y2: this.ate().y,
       cor: 'acento',
       seta: true,
-      rotulo: 'caminho',
+      rotulo: this.texto('etiquetaCaminho'),
     });
 
     return setas;
@@ -111,8 +114,7 @@ export class IntegraisDeLinha {
 
   protected readonly descricaoGrafico = computed(
     () =>
-      'Campo vetorial amostrado numa grade, com o caminho de A a B em destaque: o trabalho é a ' +
-      'soma da componente do campo ao longo dele.',
+      this.texto('descricaoGrafico'),
   );
 
   constructor() {

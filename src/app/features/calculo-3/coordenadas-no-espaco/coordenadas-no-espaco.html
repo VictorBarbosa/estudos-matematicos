@@ -1,30 +1,31 @@
 <app-topico-layout topicoId="coordenadas-no-espaco">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Coordenadas são escolha, não verdade</h2>
+      <h2>{{ texto('coordenadasSaoEscolha') }}</h2>
       <app-formula
         [tex]="'x = \\rho\\operatorname{sen}\\varphi\\cos\\theta \\qquad y = \\rho\\operatorname{sen}\\varphi\\operatorname{sen}\\theta \\qquad z = \\rho\\cos\\varphi'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Um tanque cilíndrico descrito em cartesianas exige raízes nos limites de integração; em
-        cilíndricas, vira um bloco de limites constantes. Escolher o sistema que respeita a
-        simetria é, muitas vezes, a diferença entre uma integral impossível e uma imediata.
-      </p>
+      <p class="observacao">{{ texto('umTanqueCilindrico') }}</p>
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="rho" rotulo="Raio ρ (até a origem)" [min]="1" [max]="12" />
+      <app-controle-parametro
+        [(valor)]="rho"
+        [rotulo]="texto('raioRho')"
+        [min]="1"
+        [max]="12"
+      />
       <app-controle-parametro
         [(valor)]="phi"
-        rotulo="Ângulo polar φ (do eixo z)"
+        [rotulo]="texto('anguloPolarPhi')"
         [min]="0"
         [max]="180"
         [passo]="5"
       />
       <app-controle-parametro
         [(valor)]="theta"
-        rotulo="Azimute θ (no plano)"
+        [rotulo]="texto('azimuteTheta')"
         [min]="0"
         [max]="355"
         [passo]="5"
@@ -48,17 +49,17 @@
       <div class="indicador">
         <span class="rotulo">z</span>
         <strong>{{ formatar(z()) }}</strong>
-        <span class="legenda">ρ vezes o cosseno de φ</span>
+        <span class="legenda">{{ texto('rhoVezesCosseno') }}</span>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">r cilíndrico</span>
+        <span class="rotulo">{{ texto('rCilindrico') }}</span>
         <strong>{{ formatar(rCilindrico()) }}</strong>
-        <span class="legenda">distância ao EIXO, não à origem</span>
+        <span class="legenda">{{ texto('distanciaAoEixo') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>Vista de cima</h2>
+      <h2>{{ texto('vistaDeCima') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -68,24 +69,16 @@
         [altura]="400"
         [mostrarGrade]="false"
       />
-      <p class="observacao">
-        Leve o ângulo polar a zero: o ponto sobe direto pelo eixo z, e a projeção colapsa na
-        origem. Leve-o a 90 graus: o ponto cai no equador, e o raio cilíndrico iguala o
-        esférico. É essa a diferença entre os dois sistemas.
-      </p>
+      <p class="observacao">{{ texto('leveOAnguloPolar') }}</p>
     </section>
 
     <section class="painel">
-      <h2>O jacobiano muda em cada sistema</h2>
+      <h2>{{ texto('oJacobianoMuda') }}</h2>
       <app-formula
         [tex]="'dV = r\\,dr\\,d\\theta\\,dz \\qquad dV = \\rho^{2}\\operatorname{sen}\\varphi\\,d\\rho\\,d\\varphi\\,d\\theta'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Em cilíndricas aparece um r; em esféricas, rho ao quadrado vezes o seno do ângulo polar.
-        São eles que corrigem o tamanho de cada pedacinho de volume — e esquecer qualquer um
-        estraga o resultado por completo.
-      </p>
+      <p class="observacao">{{ texto('emCilindricasApareceUmR') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

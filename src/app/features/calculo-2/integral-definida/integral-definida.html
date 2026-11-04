@@ -1,11 +1,36 @@
 <app-topico-layout topicoId="integral-definida">
   <div explorar class="explorar">
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="-3" [max]="3" />
-      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de x" [min]="-4" [max]="4" />
-      <app-controle-parametro [(valor)]="c" rotulo="Termo constante" [min]="-4" [max]="4" />
-      <app-controle-parametro [(valor)]="de" rotulo="Limite inferior" [min]="-4" [max]="2" />
-      <app-controle-parametro [(valor)]="ate" rotulo="Limite superior" [min]="-1" [max]="5" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefX2')"
+        [min]="-3"
+        [max]="3"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.coefX')"
+        [min]="-4"
+        [max]="4"
+      />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="i18n.t('explorar.termoConstante')"
+        [min]="-4"
+        [max]="4"
+      />
+      <app-controle-parametro
+        [(valor)]="de"
+        [rotulo]="i18n.t('explorar.limiteInferior')"
+        [min]="-4"
+        [max]="2"
+      />
+      <app-controle-parametro
+        [(valor)]="ate"
+        [rotulo]="i18n.t('explorar.limiteSuperior')"
+        [min]="-1"
+        [max]="5"
+      />
     </section>
 
     <section class="destaque-formula">
@@ -17,25 +42,22 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Integral (área com sinal)</span>
+        <span class="rotulo">{{ texto('integralAreaComSinal') }}</span>
         <strong>{{ formatar(comSinal()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Área geométrica</span>
+        <span class="rotulo">{{ texto('areaGeometrica') }}</span>
         <strong>{{ formatar(areaGeometrica()) }}</strong>
-        <span class="legenda">somando os módulos</span>
+        <span class="legenda">{{ texto('somandoOsModulos') }}</span>
       </div>
     </section>
 
     @if (difereDaArea()) {
-      <p class="aviso">
-        As duas medidas diferem: parte da região está abaixo do eixo e entra na integral com
-        sinal negativo. Para a área geométrica é preciso integrar o módulo da função.
-      </p>
+      <p class="aviso">{{ texto('asDuasMedidasDiferem') }}</p>
     }
 
     <section>
-      <h2>A região sombreada</h2>
+      <h2>{{ texto('aRegiaoSombreada') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -43,28 +65,20 @@
         [descricao]="descricaoGrafico()"
         [altura]="380"
       />
-      <p class="observacao">
-        Mova os limites para que parte da curva fique abaixo do eixo e compare os dois
-        números acima. Uma integral pode dar zero com uma região bem visível — basta que as
-        partes acima e abaixo se cancelem.
-      </p>
+      <p class="observacao">{{ texto('movaOsLimites') }}</p>
     </section>
 
     <section>
-      <h2>O limite das somas</h2>
-      <p class="observacao">
-        A integral é definida como o limite das somas de Riemann. Refinando a partição, o
-        valor se estabiliza — e é esse número que a integral definida nomeia, antes de
-        qualquer regra para calculá-lo.
-      </p>
+      <h2>{{ texto('oLimiteDasSomas') }}</h2>
+      <p class="observacao">{{ texto('aIntegralEDefinidaComo') }}</p>
       <table class="convergencia">
         <caption>
-          Somas de Riemann com partições cada vez mais finas
+          {{ texto('captionConvergencia') }}
         </caption>
         <thead>
           <tr>
-            <th scope="col">Subintervalos</th>
-            <th scope="col">Soma</th>
+            <th scope="col">{{ texto('subintervalos') }}</th>
+            <th scope="col">{{ texto('soma') }}</th>
           </tr>
         </thead>
         <tbody>

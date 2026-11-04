@@ -8,6 +8,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-3/funcoes-de-varias-variaveis/funcoes-de-varias-variaveis.i18n.json';
 import { geradorFuncoesVariasVariaveis } from '@features/calculo-3/funcoes-de-varias-variaveis/funcoes-de-varias-variaveis.gerador';
 import { TEORIA_MULTIVAR } from '@features/calculo-3/funcoes-de-varias-variaveis/funcoes-de-varias-variaveis.teoria';
 
@@ -19,6 +22,8 @@ import { TEORIA_MULTIVAR } from '@features/calculo-3/funcoes-de-varias-variaveis
   styleUrl: './funcoes-de-varias-variaveis.scss',
 })
 export class FuncoesDeVariasVariaveis {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorFuncoesVariasVariaveis;
   protected readonly conceitos = TEORIA_MULTIVAR.map((teoria) => teoria.id);
 
@@ -42,12 +47,12 @@ export class FuncoesDeVariasVariaveis {
   protected readonly tipo = computed(() => {
     const determinante = 4 * this.a() * this.b() - this.c() * this.c();
     if (determinante < 0) {
-      return 'sela';
+      return this.texto('sela');
     }
     if (determinante === 0) {
-      return 'calha';
+      return this.texto('calha');
     }
-    return this.a() > 0 ? 'paraboloide para cima' : 'paraboloide para baixo';
+    return this.a() > 0 ? this.texto('paraboloideCima') : this.texto('paraboloideBaixo');
   });
 
   protected readonly noCorte = computed(() =>
@@ -68,11 +73,7 @@ export class FuncoesDeVariasVariaveis {
 
   protected readonly dominio = computed(() => ({ xMin: -4, xMax: 4 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Cortes verticais da superfície: cada curva é a função com um y fixo, e juntas elas ' +
-      'descrevem o relevo inteiro.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_MULTIVAR);

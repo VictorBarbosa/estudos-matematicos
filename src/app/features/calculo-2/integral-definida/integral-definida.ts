@@ -8,6 +8,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { AreaPlot, CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-2/integral-definida/integral-definida.i18n.json';
 import { geradorDefinida } from '@features/calculo-2/integral-definida/integral-definida.gerador';
 import { TEORIA_DEFINIDA } from '@features/calculo-2/integral-definida/integral-definida.teoria';
 
@@ -26,6 +29,8 @@ import { TEORIA_DEFINIDA } from '@features/calculo-2/integral-definida/integral-
   styleUrl: './integral-definida.scss',
 })
 export class IntegralDefinida {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorDefinida;
   protected readonly conceitos = TEORIA_DEFINIDA.map((teoria) => teoria.id);
 
@@ -88,10 +93,12 @@ export class IntegralDefinida {
     return { xMin: this.de() - folga, xMax: this.ate() + folga };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Região entre a curva e o eixo de ${this.de()} a ${this.ate()}, cuja área com sinal ` +
-      `vale ${this.formatar(this.comSinal())}.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      de: this.de(),
+      ate: this.ate(),
+      valor: this.formatar(this.comSinal()),
+    }),
   );
 
   constructor() {

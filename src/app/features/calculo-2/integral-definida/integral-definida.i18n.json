@@ -1,0 +1,62 @@
+{
+  "integralAreaComSinal": {
+    "pt": "Integral (área com sinal)",
+    "fr": "Intégrale (aire signée)",
+    "en": "Integral (signed area)"
+  },
+  "areaGeometrica": {
+    "pt": "Área geométrica",
+    "fr": "Aire géométrique",
+    "en": "Geometric area"
+  },
+  "somandoOsModulos": {
+    "pt": "somando os módulos",
+    "fr": "en sommant les valeurs absolues",
+    "en": "adding the absolute values"
+  },
+  "asDuasMedidasDiferem": {
+    "pt": "As duas medidas diferem: parte da região está abaixo do eixo e entra na integral com sinal negativo. Para a área geométrica é preciso integrar o módulo da função.",
+    "fr": "Les deux mesures diffèrent : une partie de la région est sous l'axe et entre dans l'intégrale avec un signe négatif. Pour l'aire géométrique, il faut intégrer la valeur absolue de la fonction.",
+    "en": "The two measures differ: part of the region lies below the axis and enters the integral with a negative sign. For the geometric area you must integrate the absolute value of the function."
+  },
+  "aRegiaoSombreada": {
+    "pt": "A região sombreada",
+    "fr": "La région hachurée",
+    "en": "The shaded region"
+  },
+  "movaOsLimites": {
+    "pt": "Mova os limites para que parte da curva fique abaixo do eixo e compare os dois números acima. Uma integral pode dar zero com uma região bem visível — basta que as partes acima e abaixo se cancelem.",
+    "fr": "Déplacez les bornes pour qu'une partie de la courbe passe sous l'axe et comparez les deux nombres ci-dessus. Une intégrale peut valoir zéro avec une région bien visible — il suffit que les parties au-dessus et au-dessous s'annulent.",
+    "en": "Move the limits so that part of the curve lies below the axis and compare the two numbers above. An integral can come out to zero with a clearly visible region — the parts above and below just need to cancel."
+  },
+  "oLimiteDasSomas": {
+    "pt": "O limite das somas",
+    "fr": "La limite des sommes",
+    "en": "The limit of the sums"
+  },
+  "aIntegralEDefinidaComo": {
+    "pt": "A integral é definida como o limite das somas de Riemann. Refinando a partição, o valor se estabiliza — e é esse número que a integral definida nomeia, antes de qualquer regra para calculá-lo.",
+    "fr": "L'intégrale est définie comme la limite des sommes de Riemann. En affinant la partition, la valeur se stabilise — et c'est ce nombre que l'intégrale définie désigne, avant toute règle pour le calculer.",
+    "en": "The integral is defined as the limit of Riemann sums. Refining the partition makes the value settle — and that number is what the definite integral names, before any rule for computing it."
+  },
+  "captionConvergencia": {
+    "pt": "Somas de Riemann com partições cada vez mais finas",
+    "fr": "Sommes de Riemann avec des partitions de plus en plus fines",
+    "en": "Riemann sums with ever finer partitions"
+  },
+  "subintervalos": {
+    "pt": "Subintervalos",
+    "fr": "Sous-intervalles",
+    "en": "Subintervals"
+  },
+  "soma": {
+    "pt": "Soma",
+    "fr": "Somme",
+    "en": "Sum"
+  },
+  "descricaoGrafico": {
+    "pt": "Região entre a curva e o eixo de {de} a {ate}, cuja área com sinal vale {valor}.",
+    "fr": "Région entre la courbe et l'axe de {de} à {ate}, dont l'aire signée vaut {valor}.",
+    "en": "Region between the curve and the axis from {de} to {ate}, whose signed area equals {valor}."
+  }
+}

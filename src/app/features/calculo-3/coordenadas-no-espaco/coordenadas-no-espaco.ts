@@ -8,6 +8,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.i18n.json';
 import { geradorCoordenadasNoEspaco } from '@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.gerador';
 import { TEORIA_COORDENADAS } from '@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.teoria';
 
@@ -19,6 +22,8 @@ import { TEORIA_COORDENADAS } from '@features/calculo-3/coordenadas-no-espaco/co
   styleUrl: './coordenadas-no-espaco.scss',
 })
 export class CoordenadasNoEspaco {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorCoordenadasNoEspaco;
   protected readonly conceitos = TEORIA_COORDENADAS.map((teoria) => teoria.id);
 
@@ -55,7 +60,7 @@ export class CoordenadasNoEspaco {
       {
         fn: (x) => (Math.abs(x) <= r ? Math.sqrt(r * r - x * x) : Number.NaN),
         cor: 'texto-suave',
-        rotulo: 'círculo de raio r',
+        rotulo: this.texto('circuloDeRaioR'),
       },
       { fn: (x) => (Math.abs(x) <= r ? -Math.sqrt(r * r - x * x) : Number.NaN), cor: 'texto-suave' },
     ];
@@ -69,13 +74,13 @@ export class CoordenadasNoEspaco {
       y2: this.y(),
       cor: 'acento',
       seta: true,
-      rotulo: 'projeção no plano',
+      rotulo: this.texto('projecaoNoPlano'),
     },
   ]);
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() => [
-    { x: this.x(), y: this.y(), cor: 'acento', rotulo: 'projeção' },
-    { x: 0, y: 0, cor: 'texto-suave', rotulo: 'eixo z' },
+    { x: this.x(), y: this.y(), cor: 'acento', rotulo: this.texto('projecao') },
+    { x: 0, y: 0, cor: 'texto-suave', rotulo: this.texto('eixoZ') },
   ]);
 
   protected readonly dominio = computed(() => {
@@ -83,11 +88,7 @@ export class CoordenadasNoEspaco {
     return { xMin: -alcance, xMax: alcance, yMin: -alcance, yMax: alcance };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Vista de cima: o círculo de raio igual à distância ao eixo, e a projeção do ponto sobre ' +
-      'o plano xy.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_COORDENADAS);

@@ -10,6 +10,8 @@ import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { geradorEdoSegundaOrdem } from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.gerador';
 import { TEORIA_EDO2 } from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.teoria';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.i18n.json';
 
 @Component({
   selector: 'app-edo-segunda-ordem',
@@ -21,6 +23,7 @@ import { TEORIA_EDO2 } from '@features/calculo-4/edo-segunda-ordem/edo-segunda-o
 export class EdoSegundaOrdem {
   protected readonly gerador = geradorEdoSegundaOrdem;
   protected readonly conceitos = TEORIA_EDO2.map((teoria) => teoria.id);
+  protected readonly texto = textoLocal(textos);
 
   /** O amortecimento em décimos, para atravessar o caso crítico sem saltos. */
   protected readonly decimosDeB = signal(20);
@@ -76,8 +79,7 @@ export class EdoSegundaOrdem {
 
   protected readonly descricaoGrafico = computed(
     () =>
-      `Solução no regime ${this.regime()}: a curva parte do valor inicial e, conforme o ` +
-      'amortecimento, oscila ou volta direto ao repouso.',
+      this.texto('descricaoGrafico', { regime: this.regime() }),
   );
 
   constructor() {

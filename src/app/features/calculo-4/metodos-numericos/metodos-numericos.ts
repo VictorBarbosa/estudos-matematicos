@@ -10,6 +10,8 @@ import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { geradorMetodosNumericos } from '@features/calculo-4/metodos-numericos/metodos-numericos.gerador';
 import { TEORIA_NUMERICO } from '@features/calculo-4/metodos-numericos/metodos-numericos.teoria';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-4/metodos-numericos/metodos-numericos.i18n.json';
 
 @Component({
   selector: 'app-metodos-numericos',
@@ -21,6 +23,7 @@ import { TEORIA_NUMERICO } from '@features/calculo-4/metodos-numericos/metodos-n
 export class MetodosNumericos {
   protected readonly gerador = geradorMetodosNumericos;
   protected readonly conceitos = TEORIA_NUMERICO.map((teoria) => teoria.id);
+  protected readonly texto = textoLocal(textos);
 
   /** A taxa e o passo em décimos, que é a granularidade que interessa aqui. */
   protected readonly decimosDeK = signal(8);
@@ -95,8 +98,7 @@ export class MetodosNumericos {
 
   protected readonly descricaoGrafico = computed(
     () =>
-      'A solução exata e a poligonal de Euler, com um ponto por passo: a cada segmento o método ' +
-      'segue a tangente e se afasta um pouco mais.',
+      this.texto('descricaoGrafico'),
   );
 
   constructor() {

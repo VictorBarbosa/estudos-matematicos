@@ -1,27 +1,23 @@
 <app-topico-layout topicoId="integrais-multiplas">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>Duas integrais encadeadas</h2>
+      <h2>{{ texto('tituloSecao1') }}</h2>
       <app-formula
         [tex]="'\\iint_{R} f\\,dA = \\int_{c}^{d}\\left(\\int_{a}^{b} f(x,y)\\,dx\\right)dy'"
         [bloco]="true"
       />
-      <p class="observacao">
-        A integral dupla soma os valores da função sobre uma região do plano. Num retângulo ela
-        se calcula como duas integrais simples encadeadas: primeiro em x, com y parado; depois
-        em y, sobre o que sobrou. É a ideia das derivadas parciais, na direção contrária.
-      </p>
+      <p class="observacao">{{ texto('observacao1') }}</p>
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Coeficiente de x²" [min]="0" [max]="3" />
-      <app-controle-parametro [(valor)]="b" rotulo="Coeficiente de y²" [min]="0" [max]="3" />
-      <app-controle-parametro [(valor)]="constante" rotulo="Termo constante" [min]="0" [max]="12" />
-      <app-controle-parametro [(valor)]="x0" rotulo="x inicial" [min]="-3" [max]="2" />
-      <app-controle-parametro [(valor)]="x1" rotulo="x final" [min]="-1" [max]="5" />
-      <app-controle-parametro [(valor)]="y0" rotulo="y inicial" [min]="-3" [max]="2" />
-      <app-controle-parametro [(valor)]="y1" rotulo="y final" [min]="-1" [max]="5" />
-      <app-controle-parametro [(valor)]="yDaFatia" rotulo="Fatia mostrada (y)" [min]="-3" [max]="5" />
+      <app-controle-parametro [(valor)]="a" [rotulo]="texto('rotuloCoefX2')" [min]="0" [max]="3" />
+      <app-controle-parametro [(valor)]="b" [rotulo]="texto('rotuloCoefY2')" [min]="0" [max]="3" />
+      <app-controle-parametro [(valor)]="constante" [rotulo]="texto('rotuloTermoConst')" [min]="0" [max]="12" />
+      <app-controle-parametro [(valor)]="x0" [rotulo]="texto('rotuloX0')" [min]="-3" [max]="2" />
+      <app-controle-parametro [(valor)]="x1" [rotulo]="texto('rotuloX1')" [min]="-1" [max]="5" />
+      <app-controle-parametro [(valor)]="y0" [rotulo]="texto('rotuloY0')" [min]="-3" [max]="2" />
+      <app-controle-parametro [(valor)]="y1" [rotulo]="texto('rotuloY1')" [min]="-1" [max]="5" />
+      <app-controle-parametro [(valor)]="yDaFatia" [rotulo]="texto('rotuloFatia')" [min]="-3" [max]="5" />
     </section>
 
     <section class="destaque-formula">
@@ -30,28 +26,28 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Integral dupla</span>
+        <span class="rotulo">{{ texto('rotuloIntegral') }}</span>
         <strong>{{ formatar(integral()) }}</strong>
-        <span class="legenda">volume, com f positiva</span>
+        <span class="legenda">{{ texto('legendaVolume') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Área da região</span>
+        <span class="rotulo">{{ texto('rotuloArea') }}</span>
         <strong>{{ formatar(area()) }}</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Valor médio</span>
+        <span class="rotulo">{{ texto('rotuloMedia') }}</span>
         <strong>{{ formatar(media()) }}</strong>
-        <span class="legenda">integral dividida pela área</span>
+        <span class="legenda">{{ texto('legendaMedia') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Integral da fatia</span>
+        <span class="rotulo">{{ texto('rotuloFatiaInd') }}</span>
         <strong>{{ formatar(fatia()) }}</strong>
-        <span class="legenda">a integral interna, sozinha</span>
+        <span class="legenda">{{ texto('legendaFatia') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>Uma fatia de cada vez</h2>
+      <h2>{{ texto('tituloFatia') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -59,21 +55,13 @@
         [descricao]="descricaoGrafico()"
         [altura]="360"
       />
-      <p class="observacao">
-        A área destacada é o resultado da integral interna para aquele y. Mova a fatia e veja o
-        valor mudar: somar todas essas áreas ao longo de y é exatamente o que a integral externa
-        faz, e o total é o volume sob a superfície.
-      </p>
+      <p class="observacao">{{ texto('observacaoFatia') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Polares e o jacobiano</h2>
+      <h2>{{ texto('tituloPolares') }}</h2>
       <app-formula [tex]="'dA = r\\,dr\\,d\\theta'" [bloco]="true" />
-      <p class="observacao">
-        Em regiões circulares, polares transformam limites com raiz em números fixos. Mas o
-        elemento de área ganha um fator r — pedaços mais afastados da origem são maiores, e o
-        jacobiano corrige isso. Sem ele, a área do círculo sairia 2πR em vez de πR².
-      </p>
+      <p class="observacao">{{ texto('observacaoJacobiano') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

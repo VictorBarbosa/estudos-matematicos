@@ -16,6 +16,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/calculo-3/derivadas-parciais/derivadas-parciais.i18n.json';
 import { geradorDerivadasParciais } from '@features/calculo-3/derivadas-parciais/derivadas-parciais.gerador';
 import { TEORIA_PARCIAIS } from '@features/calculo-3/derivadas-parciais/derivadas-parciais.teoria';
 
@@ -27,6 +30,8 @@ import { TEORIA_PARCIAIS } from '@features/calculo-3/derivadas-parciais/derivada
   styleUrl: './derivadas-parciais.scss',
 })
 export class DerivadasParciais {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorDerivadasParciais;
   protected readonly conceitos = TEORIA_PARCIAIS.map((teoria) => teoria.id);
 
@@ -76,12 +81,16 @@ export class DerivadasParciais {
     const inclinacao = this.fx();
 
     return [
-      { fn: (x) => avaliarQuadrica(q, x, y), cor: 'serie-1', rotulo: `corte em y = ${y}` },
+      {
+        fn: (x) => avaliarQuadrica(q, x, y),
+        cor: 'serie-1',
+        rotulo: this.texto('corteEmY', { y }),
+      },
       {
         fn: (x) => altura + inclinacao * (x - x0),
         cor: 'acento',
         tracejada: true,
-        rotulo: 'tangente, de inclinação ∂f/∂x',
+        rotulo: this.texto('tangenteDeInclinacao'),
       },
     ];
   });
@@ -92,11 +101,7 @@ export class DerivadasParciais {
 
   protected readonly dominio = computed(() => ({ xMin: -4, xMax: 4 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'O corte da superfície com y fixo e a reta tangente a ele: a inclinação dessa reta é ' +
-      'exatamente a derivada parcial em x.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_PARCIAIS);
