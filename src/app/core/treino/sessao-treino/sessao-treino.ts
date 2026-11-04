@@ -93,10 +93,12 @@ export class SessaoTreino<T> {
     } else {
       this.erros.update((n) => n + 1);
       this.sequencia.set(0);
-      // Errou: a resolução comentada aparece imediatamente, que é o momento
-      // em que ela ensina alguma coisa.
-      this.resolucaoVisivel.set(true);
     }
+
+    // A resolução comentada aparece nos dois casos. No erro ela mostra onde o
+    // raciocínio saiu do trilho; no acerto ela confirma o caminho — e quem
+    // chegou ao número por volta, ou por sorte, vê o caminho curto.
+    this.resolucaoVisivel.set(true);
 
     this.progresso.registrar({
       topicoId: this.gerador.topicoId,

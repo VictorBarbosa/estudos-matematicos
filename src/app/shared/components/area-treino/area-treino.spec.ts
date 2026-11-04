@@ -99,6 +99,32 @@ describe('AreaTreino', () => {
     expect(texto()).toContain('Próximo exercício');
   });
 
+  it('o acerto também mostra como o cálculo foi feito', async () => {
+    // A resolução não é só consolo de quem errou: quem acertou confere o
+    // caminho, e quem chegou ao número por volta vê o curto.
+    await responder('5/12');
+
+    expect(texto()).toContain('Como se resolve');
+  });
+
+  it('a resolução só aparece depois de verificar', async () => {
+    expect(texto()).not.toContain('Como se resolve');
+  });
+
+  it('o próximo exercício volta a esconder a resolução', async () => {
+    await responder('5/12');
+    expect(texto()).toContain('Como se resolve');
+
+    const proximo = [...fixture.nativeElement.querySelectorAll('button')].find(
+      (b: HTMLButtonElement) => b.textContent?.trim().startsWith('Próximo'),
+    ) as HTMLButtonElement;
+    proximo.click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(texto()).not.toContain('Como se resolve');
+  });
+
   it('aceita a fração ampliada e aponta a forma menor', async () => {
     // 10/24 é o mesmo número que 5/12: conta como acerto, e o site diz que dá
     // para escrever menor em vez de deixar o aluno achar que errou a forma.
