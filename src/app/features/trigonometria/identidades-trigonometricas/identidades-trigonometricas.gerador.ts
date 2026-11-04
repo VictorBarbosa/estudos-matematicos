@@ -35,7 +35,10 @@ export const geradorIdentidades: GeradorExercicio<number> = {
         resolucao: {
           resultado: gabarito,
           passos: [
-            { descricao: 'Partimos da identidade fundamental.', tex: '\\sin^{2}\\theta + \\cos^{2}\\theta = 1' },
+            {
+              descricao: 'Partimos da identidade fundamental.',
+              tex: '\\sin^{2}\\theta + \\cos^{2}\\theta = 1',
+            },
             {
               descricao: 'Isolamos o cosseno ao quadrado.',
               tex: `\\cos^{2}\\theta = 1 - (${seno.toFixed(2)})^{2} = ${(1 - seno * seno).toFixed(4)}`,
@@ -85,7 +88,10 @@ export const geradorIdentidades: GeradorExercicio<number> = {
         resolucao: {
           resultado: gabarito,
           passos: [
-            { descricao: 'A fórmula do arco duplo para o seno.', tex: '\\sin 2a = 2\\sin a\\cos a' },
+            {
+              descricao: 'A fórmula do arco duplo para o seno.',
+              tex: '\\sin 2a = 2\\sin a\\cos a',
+            },
             {
               descricao: `Com a = ${graus}°.`,
               tex: `2 \\cdot ${Math.sin(radianos).toFixed(4)} \\cdot ${Math.cos(radianos).toFixed(4)}`,

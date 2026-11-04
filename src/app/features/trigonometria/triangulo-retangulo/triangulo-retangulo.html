@@ -3,19 +3,23 @@
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="angulo"
-        rotulo="Ângulo θ (graus)"
+        [rotulo]="i18n.t('explorar.anguloGraus')"
         [min]="5"
         [max]="85"
       />
       <app-controle-parametro
         [(valor)]="hipotenusa"
-        rotulo="Hipotenusa"
+        [rotulo]="i18n.t('explorar.hipotenusa')"
         [min]="1"
         [max]="20"
       />
     </section>
 
-    <section class="seletor-pills" role="group" aria-label="Ângulos notáveis">
+    <section
+      class="seletor-pills"
+      role="group"
+      [attr.aria-label]="i18n.t('explorar.angulosNotaveis')"
+    >
       @for (notavel of notaveis; track notavel.graus) {
         @if (notavel.graus > 0 && notavel.graus < 90) {
           <button
@@ -41,9 +45,17 @@
           <polygon
             class="corpo"
             [attr.points]="
-              vertices().a.x + ',' + vertices().a.y + ' ' +
-              vertices().b.x + ',' + vertices().b.y + ' ' +
-              vertices().c.x + ',' + vertices().c.y
+              vertices().a.x +
+              ',' +
+              vertices().a.y +
+              ' ' +
+              vertices().b.x +
+              ',' +
+              vertices().b.y +
+              ' ' +
+              vertices().c.x +
+              ',' +
+              vertices().c.y
             "
           />
 
@@ -51,9 +63,18 @@
           <polyline
             class="angulo-reto"
             [attr.points]="
-              (vertices().b.x - 14) + ',' + vertices().b.y + ' ' +
-              (vertices().b.x - 14) + ',' + (vertices().b.y - 14) + ' ' +
-              vertices().b.x + ',' + (vertices().b.y - 14)
+              vertices().b.x -
+              14 +
+              ',' +
+              vertices().b.y +
+              ' ' +
+              (vertices().b.x - 14) +
+              ',' +
+              (vertices().b.y - 14) +
+              ' ' +
+              vertices().b.x +
+              ',' +
+              (vertices().b.y - 14)
             "
           />
 
@@ -86,48 +107,53 @@
         </svg>
 
         <figcaption class="legenda">
-          <span class="item"><span class="amostra hip"></span>hipotenusa {{ hipotenusa() }}</span>
-          <span class="item"><span class="amostra opo"></span>oposto {{ formatar(catetos().oposto) }}</span>
-          <span class="item"><span class="amostra adj"></span>adjacente {{ formatar(catetos().adjacente) }}</span>
+          <span class="item">
+            <span class="amostra hip"></span>
+            {{ texto('legendaHipotenusa', { valor: hipotenusa() }) }}
+          </span>
+          <span class="item">
+            <span class="amostra opo"></span>
+            {{ texto('legendaOposto', { valor: formatar(catetos().oposto) }) }}
+          </span>
+          <span class="item">
+            <span class="amostra adj"></span>
+            {{ texto('legendaAdjacente', { valor: formatar(catetos().adjacente) }) }}
+          </span>
         </figcaption>
       </figure>
 
       <div class="valores">
         <div class="indicador">
-          <span class="rotulo">sen θ</span>
+          <span class="rotulo">{{ i18n.t('explorar.senTheta') }}</span>
           <strong>{{ formatar(razoes().seno) }}</strong>
-          <span class="legenda">oposto ÷ hipotenusa</span>
+          <span class="legenda">{{ texto('opostoSobreHip') }}</span>
         </div>
         <div class="indicador">
-          <span class="rotulo">cos θ</span>
+          <span class="rotulo">{{ i18n.t('explorar.cosTheta') }}</span>
           <strong>{{ formatar(razoes().cosseno) }}</strong>
-          <span class="legenda">adjacente ÷ hipotenusa</span>
+          <span class="legenda">{{ texto('adjacenteSobreHip') }}</span>
         </div>
         <div class="indicador">
-          <span class="rotulo">tg θ</span>
+          <span class="rotulo">{{ texto('tgTheta') }}</span>
           <strong>{{ formatar(razoes().tangente) }}</strong>
-          <span class="legenda">oposto ÷ adjacente</span>
+          <span class="legenda">{{ texto('opostoSobreAdj') }}</span>
         </div>
         <div class="indicador" data-destaque="true">
-          <span class="rotulo">sen² + cos²</span>
+          <span class="rotulo">{{ texto('sen2Cos2') }}</span>
           <strong>{{ formatar(identidade()) }}</strong>
-          <span class="legenda">sempre 1</span>
+          <span class="legenda">{{ i18n.t('explorar.sempreUm') }}</span>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="analise().passos" />
     </section>
 
     <section>
-      <h2>Por que as razões não dependem do tamanho</h2>
-      <p class="observacao">
-        Aumente a hipotenusa e observe: os catetos crescem, mas sen θ, cos θ e tg θ não mudam.
-        Triângulos com o mesmo ângulo são semelhantes, e semelhança preserva as razões entre
-        os lados. É isso que permite que essas razões sejam funções do ângulo apenas.
-      </p>
+      <h2>{{ texto('porQueNaoDependem') }}</h2>
+      <p class="observacao">{{ texto('aumenteAHipotenusa') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

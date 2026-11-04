@@ -1,0 +1,102 @@
+{
+  "dicaAngulo": {
+    "pt": "Passe de 360° e veja os valores se repetirem.",
+    "fr": "Dépassez 360° et voyez les valeurs se répéter.",
+    "en": "Go past 360° and watch the values repeat."
+  },
+  "emRadianos": {
+    "pt": "Em radianos",
+    "fr": "En radians",
+    "en": "In radians"
+  },
+  "rad": {
+    "pt": "{valor} rad",
+    "fr": "{valor} rad",
+    "en": "{valor} rad"
+  },
+  "anguloReduzido": {
+    "pt": "Ângulo reduzido",
+    "fr": "Angle réduit",
+    "en": "Reduced angle"
+  },
+  "naPrimeiraVolta": {
+    "pt": "na primeira volta",
+    "fr": "dans le premier tour",
+    "en": "in the first turn"
+  },
+  "esconderTangente": {
+    "pt": "Esconder a tangente",
+    "fr": "Masquer la tangente",
+    "en": "Hide the tangent"
+  },
+  "mostrarTangente": {
+    "pt": "Mostrar a tangente",
+    "fr": "Afficher la tangente",
+    "en": "Show the tangent"
+  },
+  "sinaisVemDaPosicao": {
+    "pt": "Os sinais vêm da posição",
+    "fr": "Les signes viennent de la position",
+    "en": "The signs come from the position"
+  },
+  "descricaoSinais": {
+    "pt": "No {quadrante}º quadrante o cosseno é {sinalCos} (ponto à {ladoCos}) e o seno é {sinalSen} (ponto {ladoSen} do eixo).",
+    "fr": "Dans le {quadrante}e quadrant le cosinus est {sinalCos} (point à {ladoCos}) et le sinus est {sinalSen} (point {ladoSen} de l’axe).",
+    "en": "In quadrant {quadrante} the cosine is {sinalCos} (point to the {ladoCos}) and the sine is {sinalSen} (point {ladoSen} the axis)."
+  },
+  "positivo": {
+    "pt": "positivo",
+    "fr": "positif",
+    "en": "positive"
+  },
+  "negativo": {
+    "pt": "negativo",
+    "fr": "négatif",
+    "en": "negative"
+  },
+  "nulo": {
+    "pt": "nulo",
+    "fr": "nul",
+    "en": "zero"
+  },
+  "direita": {
+    "pt": "direita",
+    "fr": "droite",
+    "en": "right"
+  },
+  "esquerda": {
+    "pt": "esquerda",
+    "fr": "gauche",
+    "en": "left"
+  },
+  "acima": {
+    "pt": "acima",
+    "fr": "au-dessus",
+    "en": "above"
+  },
+  "abaixo": {
+    "pt": "abaixo",
+    "fr": "au-dessous",
+    "en": "below"
+  },
+  "naoHaRegra": {
+    "pt": "Não há regra a decorar: o seno é a altura do ponto e o cosseno é o seu deslocamento horizontal. Se o ponto está à esquerda, o cosseno é negativo — e pronto.",
+    "fr": "Il n’y a pas de règle à mémoriser : le sinus est la hauteur du point et le cosinus son déplacement horizontal. Si le point est à gauche, le cosinus est négatif — et c’est tout.",
+    "en": "There is no rule to memorise: the sine is the height of the point and the cosine is its horizontal shift. If the point is on the left, the cosine is negative — that is all."
+  },
+  "porQueSeRepetem": {
+    "pt": "Por que os valores se repetem",
+    "fr": "Pourquoi les valeurs se répètent",
+    "en": "Why the values repeat"
+  },
+  "aumenteOAngulo": {
+    "pt": "Aumente o ângulo além de 360°: o ponto dá a volta e retorna exatamente ao mesmo lugar. Como seno e cosseno são as coordenadas desse ponto, eles também se repetem. É daí que nasce a periodicidade das funções trigonométricas.",
+    "fr": "Augmentez l’angle au-delà de 360° : le point fait le tour et revient exactement au même endroit. Comme le sinus et le cosinus sont les coordonnées de ce point, ils se répètent aussi. C’est de là que naît la périodicité des fonctions trigonométriques.",
+    "en": "Push the angle past 360°: the point goes around and comes back to exactly the same place. Since sine and cosine are that point's coordinates, they repeat too. That is where the periodicity of the trigonometric functions comes from."
+  },
+  "cos2Sen2": {
+    "pt": "cos² + sen²",
+    "fr": "cos² + sin²",
+    "en": "cos² + sin²"
+  }
+}

@@ -273,9 +273,7 @@ export class Calculadora {
 
   /** O rótulo da tecla de ângulo mostra a unidade em uso. */
   protected rotuloDe(tecla: Tecla): string {
-    return tecla.acao.tipo === 'angulo'
-      ? this.calculadora.angulo().toUpperCase()
-      : tecla.rotulo;
+    return tecla.acao.tipo === 'angulo' ? this.calculadora.angulo().toUpperCase() : tecla.rotulo;
   }
 
   protected aoPegar(evento: PointerEvent): void {
@@ -304,7 +302,9 @@ export class Calculadora {
     if (this.arrastando === null) {
       return;
     }
-    this.canto.set(this.dentroDaTela(evento.clientX - this.arrastando.dx, evento.clientY - this.arrastando.dy));
+    this.canto.set(
+      this.dentroDaTela(evento.clientX - this.arrastando.dx, evento.clientY - this.arrastando.dy),
+    );
   }
 
   protected aoSoltar(): void {

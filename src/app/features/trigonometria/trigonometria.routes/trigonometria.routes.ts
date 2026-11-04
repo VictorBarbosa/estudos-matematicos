@@ -11,32 +11,49 @@ export const rotas: Routes = [
     path: 'triangulo-retangulo',
     title: 'Triângulo retângulo · Estudos Matemáticos',
     loadComponent: () =>
-      import('@features/trigonometria/triangulo-retangulo/triangulo-retangulo').then((m) => m.TrianguloRetangulo),
+      import('@features/trigonometria/triangulo-retangulo/triangulo-retangulo').then(
+        (m) => m.TrianguloRetangulo,
+      ),
   },
   {
     path: 'circulo-trigonometrico',
     title: 'Círculo trigonométrico · Estudos Matemáticos',
-    loadComponent: () => import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico').then((m) => m.CirculoTrigonometricoTopico),
+    loadComponent: () =>
+      import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico').then(
+        (m) => m.CirculoTrigonometricoTopico,
+      ),
   },
   {
     path: 'seno-cosseno-tangente',
     title: 'Seno, cosseno e tangente · Estudos Matemáticos',
-    loadComponent: () => import('@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente').then((m) => m.SenoCossenoTangente),
+    loadComponent: () =>
+      import('@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente').then(
+        (m) => m.SenoCossenoTangente,
+      ),
   },
   {
     path: 'identidades-trigonometricas',
     title: 'Identidades trigonométricas · Estudos Matemáticos',
-    loadComponent: () => import('@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas').then((m) => m.IdentidadesTrigonometricas),
+    loadComponent: () =>
+      import('@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas').then(
+        (m) => m.IdentidadesTrigonometricas,
+      ),
   },
   {
     path: 'lei-senos-cossenos',
     title: 'Leis dos senos e dos cossenos · Estudos Matemáticos',
-    loadComponent: () => import('@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos').then((m) => m.LeiSenosCossenos),
+    loadComponent: () =>
+      import('@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos').then(
+        (m) => m.LeiSenosCossenos,
+      ),
   },
   {
     path: 'funcoes-trigonometricas',
     title: 'Funções trigonométricas · Estudos Matemáticos',
-    loadComponent: () => import('@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas').then((m) => m.FuncoesTrigonometricas),
+    loadComponent: () =>
+      import('@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas').then(
+        (m) => m.FuncoesTrigonometricas,
+      ),
   },
   { path: '', pathMatch: 'full', redirectTo: 'triangulo-retangulo' },
 ];

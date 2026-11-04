@@ -26,6 +26,12 @@ import t_potenciacao_radiciacao from '@features/matematica-basica/potenciacao-ra
 import t_razao_proporcao from '@features/matematica-basica/razao-proporcao/razao-proporcao.i18n.json';
 import t_nocao_intuitiva_de_limite from '@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.i18n.json';
 import t_vizinhancas_e_infinito from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.i18n.json';
+import t_circulo_trigonometrico from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.i18n.json';
+import t_funcoes_trigonometricas from '@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.i18n.json';
+import t_identidades_trigonometricas from '@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.i18n.json';
+import t_lei_senos_cossenos from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.i18n.json';
+import t_seno_cosseno_tangente from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.i18n.json';
+import t_triangulo_retangulo from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.i18n.json';
 
 /** Cada tópico e o dicionário que viaja com ele. */
 export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
@@ -51,4 +57,10 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['razao-proporcao', t_razao_proporcao as TabelaDeTextos],
   ['nocao-intuitiva-de-limite', t_nocao_intuitiva_de_limite as TabelaDeTextos],
   ['vizinhancas-e-infinito', t_vizinhancas_e_infinito as TabelaDeTextos],
+  ['circulo-trigonometrico', t_circulo_trigonometrico as TabelaDeTextos],
+  ['funcoes-trigonometricas', t_funcoes_trigonometricas as TabelaDeTextos],
+  ['identidades-trigonometricas', t_identidades_trigonometricas as TabelaDeTextos],
+  ['lei-senos-cossenos', t_lei_senos_cossenos as TabelaDeTextos],
+  ['seno-cosseno-tangente', t_seno_cosseno_tangente as TabelaDeTextos],
+  ['triangulo-retangulo', t_triangulo_retangulo as TabelaDeTextos],
 ]);

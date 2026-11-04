@@ -1,0 +1,49 @@
+{
+  "dicaAngulo": {
+    "pt": "Aproxime-se de 90° e veja a tangente disparar.",
+    "fr": "Approchez-vous de 90° et voyez la tangente s’envoler.",
+    "en": "Get close to 90° and watch the tangent shoot up."
+  },
+  "tgTheta": { "pt": "tg θ", "fr": "tan θ", "en": "tan θ" },
+  "naoExiste": { "pt": "não existe", "fr": "n’existe pas", "en": "does not exist" },
+  "senSobreCos": { "pt": "sen ÷ cos", "fr": "sin ÷ cos", "en": "sin ÷ cos" },
+  "complementar": { "pt": "Complementar", "fr": "Complémentaire", "en": "Complement" },
+  "senIgualCos": {
+    "pt": "sen θ = cos({graus}°)",
+    "fr": "sin θ = cos({graus}°)",
+    "en": "sin θ = cos({graus}°)"
+  },
+  "avisoPerto90": {
+    "pt": "O cosseno está muito perto de zero, e por isso a tangente dispara. Exatamente onde o cosseno zera, a divisão é impossível — é ali que o gráfico tem uma assíntota.",
+    "fr": "Le cosinus est très proche de zéro, et c’est pourquoi la tangente s’envole. Là où le cosinus s’annule exactement, la division est impossible — c’est là que le graphique a une asymptote.",
+    "en": "The cosine is very close to zero, which is why the tangent shoots up. Exactly where the cosine vanishes, the division is impossible — that is where the graph has an asymptote."
+  },
+  "asTresAoLongo": {
+    "pt": "As três ao longo de uma volta",
+    "fr": "Les trois au fil d’un tour",
+    "en": "The three across one turn"
+  },
+  "curvaSeno": { "pt": "seno", "fr": "sinus", "en": "sine" },
+  "curvaCosseno": { "pt": "cosseno", "fr": "cosinus", "en": "cosine" },
+  "curvaTangente": { "pt": "tangente", "fr": "tangente", "en": "tangent" },
+  "descricaoGrafico": {
+    "pt": "Seno, cosseno e tangente ao longo de uma volta completa. A tangente tem assíntotas verticais em 90 e 270 graus, onde o cosseno se anula.",
+    "fr": "Sinus, cosinus et tangente au fil d’un tour complet. La tangente a des asymptotes verticales à 90 et 270 degrés, là où le cosinus s’annule.",
+    "en": "Sine, cosine and tangent across one full turn. The tangent has vertical asymptotes at 90 and 270 degrees, where the cosine vanishes."
+  },
+  "senoECosseno": {
+    "pt": "Seno e cosseno oscilam entre −1 e 1 e nunca saem desse intervalo, porque são coordenadas de um ponto num círculo de raio 1. A tangente, por ser um quociente, não tem limite — e se parte em ramos onde o cosseno zera.",
+    "fr": "Sinus et cosinus oscillent entre −1 et 1 et ne sortent jamais de cet intervalle, parce qu’ils sont les coordonnées d’un point sur un cercle de rayon 1. La tangente, étant un quotient, n’est pas bornée — et se brise en branches là où le cosinus s’annule.",
+    "en": "Sine and cosine swing between −1 and 1 and never leave that range, because they are the coordinates of a point on a circle of radius 1. The tangent, being a quotient, is unbounded — and breaks into branches where the cosine vanishes."
+  },
+  "relacaoFundamental": {
+    "pt": "A relação fundamental entre elas",
+    "fr": "La relation fondamentale entre elles",
+    "en": "The fundamental relation between them"
+  },
+  "conhecendoUma": {
+    "pt": "Conhecendo uma das razões e o quadrante, as outras duas saem destas duas igualdades — não é preciso tabela nem calculadora para relacioná-las.",
+    "fr": "Connaissant l’un des rapports et le quadrant, les deux autres se déduisent de ces deux égalités — ni table ni calculatrice ne sont nécessaires pour les relier.",
+    "en": "Knowing one of the ratios and the quadrant, the other two follow from these two identities — no table or calculator is needed to relate them."
+  }
+}

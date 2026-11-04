@@ -39,7 +39,10 @@ export const geradorOndas: GeradorExercicio<number> = {
         gabarito: periodo,
         enunciado: 'Qual é o período desta função? (2 casas decimais)',
         passos: [
-          { descricao: 'O período é 2π dividido pelo coeficiente de x.', tex: 'T = \\frac{2\\pi}{|B|}' },
+          {
+            descricao: 'O período é 2π dividido pelo coeficiente de x.',
+            tex: 'T = \\frac{2\\pi}{|B|}',
+          },
           {
             descricao: `Com B = ${frequencia}.`,
             tex: `T = \\frac{2\\pi}{${frequencia}} = ${periodo.toFixed(4)}`,

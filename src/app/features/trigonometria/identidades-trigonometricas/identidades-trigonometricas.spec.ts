@@ -51,9 +51,7 @@ describe('geradorIdentidades', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('NÃO se distribui')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('NÃO se distribui'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('NÃO se distribui'))!;
 
     const resultado = corrigir(geradorIdentidades, exercicio, String(armadilha.resposta));
     expect(resultado.veredito).toBe('incorreto');

@@ -484,8 +484,8 @@ describe('AreaTreino: quanto falta no placar', () => {
 
   /** O bloco do placar cujo rótulo é "Falta". */
   function bloco(): HTMLElement {
-    return [...fixture.nativeElement.querySelectorAll('.placar div')].find((item) =>
-      (item as HTMLElement).querySelector('dt')?.textContent?.trim() === 'Falta',
+    return [...fixture.nativeElement.querySelectorAll('.placar div')].find(
+      (item) => (item as HTMLElement).querySelector('dt')?.textContent?.trim() === 'Falta',
     ) as HTMLElement;
   }
 

@@ -68,12 +68,17 @@ describe('dicionários de tradução', () => {
     // Palavras que coincidem entre as línguas existem — "Assistant" é a mesma
     // em francês e em inglês. O que não pode é uma frase longa idêntica, que
     // quase sempre significa tradução não feita.
+    //
+    // Contam-se só as palavras de três letras ou mais: assim `cos θ = {valor}`
+    // e `2π ÷ B`, que são fórmulas e são iguais nas três línguas de direito,
+    // não entram na conta.
     const suspeitas: string[] = [];
 
     for (const idioma of ['fr', 'en'] as const) {
       for (const [chave, valor] of Object.entries(DICIONARIOS[idioma])) {
         const original = DICIONARIOS.pt[chave] ?? '';
-        if (valor === original && original.split(/\s+/).length > 3) {
+        const palavras = original.match(/[A-Za-zÀ-ÿ]{3,}/g) ?? [];
+        if (valor === original && palavras.length > 3) {
           suspeitas.push(`${idioma}/${chave}`);
         }
       }

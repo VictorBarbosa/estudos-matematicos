@@ -13,7 +13,9 @@
       } @else if (eAtual()) {
         <span class="selo atual">{{ i18n.t('cartao.suaVez') }}</span>
       } @else if (percentual() !== null) {
-        <span class="selo progresso">{{ i18n.t('cartao.acerto', { percentual: percentual()! }) }}</span>
+        <span class="selo progresso">{{
+          i18n.t('cartao.acerto', { percentual: percentual()! })
+        }}</span>
       } @else {
         <span class="selo">{{ i18n.t('cartao.disponivel') }}</span>
       }

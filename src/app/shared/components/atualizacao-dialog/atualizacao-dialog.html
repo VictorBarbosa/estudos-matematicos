@@ -14,7 +14,12 @@
       </div>
 
       @if (podeDispensar()) {
-        <button type="button" class="fechar" (click)="atualizacao.dispensar()" [attr.aria-label]="i18n.t('teoria.fechar')">
+        <button
+          type="button"
+          class="fechar"
+          (click)="atualizacao.dispensar()"
+          [attr.aria-label]="i18n.t('teoria.fechar')"
+        >
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
             <path
               fill="currentColor"

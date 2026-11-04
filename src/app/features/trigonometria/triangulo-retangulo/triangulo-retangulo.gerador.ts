@@ -74,8 +74,7 @@ export const geradorTriangulo: GeradorExercicio<number> = {
             conceito: 'triangulo.razoes',
           },
           {
-            resposta:
-              hipotenusa / (procurado === 'seno' ? Math.sin(radianos) : Math.cos(radianos)),
+            resposta: hipotenusa / (procurado === 'seno' ? Math.sin(radianos) : Math.cos(radianos)),
             diagnostico:
               'A operação ficou invertida: para achar o cateto, MULTIPLICAMOS a hipotenusa ' +
               'pela razão. Dividir seria o caminho para encontrar a hipotenusa a partir do cateto.',
@@ -94,10 +93,7 @@ export const geradorTriangulo: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
-      dica:
-        nivel === 'facil'
-          ? 'O cateto está à frente do ângulo ou encostado nele?'
-          : undefined,
+      dica: nivel === 'facil' ? 'O cateto está à frente do ângulo ou encostado nele?' : undefined,
     };
   },
 

@@ -7,22 +7,53 @@
     @switch (bloco.tipo) {
       @case ('titulo') {
         @switch (bloco.nivel) {
-          @case (3) { <h3><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: bloco.trechos }" /></h3> }
-          @case (4) { <h4><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: bloco.trechos }" /></h4> }
-          @default { <h5><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: bloco.trechos }" /></h5> }
+          @case (3) {
+            <h3>
+              <ng-container
+                [ngTemplateOutlet]="linha"
+                [ngTemplateOutletContext]="{ $implicit: bloco.trechos }"
+              />
+            </h3>
+          }
+          @case (4) {
+            <h4>
+              <ng-container
+                [ngTemplateOutlet]="linha"
+                [ngTemplateOutletContext]="{ $implicit: bloco.trechos }"
+              />
+            </h4>
+          }
+          @default {
+            <h5>
+              <ng-container
+                [ngTemplateOutlet]="linha"
+                [ngTemplateOutletContext]="{ $implicit: bloco.trechos }"
+              />
+            </h5>
+          }
         }
       }
       @case ('lista') {
         @if (bloco.ordenada) {
           <ol>
             @for (item of bloco.itens; track $index) {
-              <li><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: item }" /></li>
+              <li>
+                <ng-container
+                  [ngTemplateOutlet]="linha"
+                  [ngTemplateOutletContext]="{ $implicit: item }"
+                />
+              </li>
             }
           </ol>
         } @else {
           <ul>
             @for (item of bloco.itens; track $index) {
-              <li><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: item }" /></li>
+              <li>
+                <ng-container
+                  [ngTemplateOutlet]="linha"
+                  [ngTemplateOutletContext]="{ $implicit: item }"
+                />
+              </li>
             }
           </ul>
         }
@@ -31,7 +62,12 @@
         <pre><code>{{ bloco.conteudo }}</code></pre>
       }
       @default {
-        <p><ng-container [ngTemplateOutlet]="linha" [ngTemplateOutletContext]="{ $implicit: bloco.trechos }" /></p>
+        <p>
+          <ng-container
+            [ngTemplateOutlet]="linha"
+            [ngTemplateOutletContext]="{ $implicit: bloco.trechos }"
+          />
+        </p>
       }
     }
   }
@@ -41,11 +77,21 @@
 <ng-template #linha let-trechos>
   @for (trecho of trechos; track $index) {
     @switch (trecho.tipo) {
-      @case ('formula') { <app-formula [tex]="trecho.conteudo" [bloco]="trecho.bloco" /> }
-      @case ('forte') { <strong>{{ trecho.conteudo }}</strong> }
-      @case ('enfase') { <em>{{ trecho.conteudo }}</em> }
-      @case ('codigo') { <code>{{ trecho.conteudo }}</code> }
-      @default { <span class="prosa">{{ trecho.conteudo }}</span> }
+      @case ('formula') {
+        <app-formula [tex]="trecho.conteudo" [bloco]="trecho.bloco" />
+      }
+      @case ('forte') {
+        <strong>{{ trecho.conteudo }}</strong>
+      }
+      @case ('enfase') {
+        <em>{{ trecho.conteudo }}</em>
+      }
+      @case ('codigo') {
+        <code>{{ trecho.conteudo }}</code>
+      }
+      @default {
+        <span class="prosa">{{ trecho.conteudo }}</span>
+      }
     }
   }
 </ng-template>
@@ -94,14 +140,16 @@
         [title]="i18n.t('assistente.outraConversa')"
       >
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-          <path
-            fill="currentColor"
-            d="M12 5V2L8 6l4 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7Z"
-          />
+          <path fill="currentColor" d="M12 5V2L8 6l4 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7Z" />
         </svg>
       </button>
 
-      <button type="button" class="icone" (click)="assistente.fechar()" [attr.aria-label]="i18n.t('assistente.fechar')">
+      <button
+        type="button"
+        class="icone"
+        (click)="assistente.fechar()"
+        [attr.aria-label]="i18n.t('assistente.fechar')"
+      >
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
           <path
             fill="currentColor"
@@ -118,13 +166,19 @@
 
       @for (mensagem of assistente.mensagens(); track $index) {
         <article class="mensagem" [attr.data-papel]="mensagem.papel">
-          <ng-container [ngTemplateOutlet]="corpo" [ngTemplateOutletContext]="{ $implicit: blocosDe(mensagem) }" />
+          <ng-container
+            [ngTemplateOutlet]="corpo"
+            [ngTemplateOutletContext]="{ $implicit: blocosDe(mensagem) }"
+          />
         </article>
       }
 
       @if (assistente.respondendo()) {
         <article class="mensagem" data-papel="assistente">
-          <ng-container [ngTemplateOutlet]="corpo" [ngTemplateOutletContext]="{ $implicit: parcial() }" />
+          <ng-container
+            [ngTemplateOutlet]="corpo"
+            [ngTemplateOutletContext]="{ $implicit: parcial() }"
+          />
           <span class="pensando" [attr.aria-label]="i18n.t('assistente.respondendo')">▌</span>
         </article>
       }
@@ -163,9 +217,13 @@
       ></textarea>
 
       @if (assistente.respondendo()) {
-        <button type="button" class="parar" (click)="assistente.interromper()">{{ i18n.t('assistente.parar') }}</button>
+        <button type="button" class="parar" (click)="assistente.interromper()">
+          {{ i18n.t('assistente.parar') }}
+        </button>
       } @else {
-        <button type="submit" class="enviar" [disabled]="!podeEnviar()">{{ i18n.t('assistente.perguntar') }}</button>
+        <button type="submit" class="enviar" [disabled]="!podeEnviar()">
+          {{ i18n.t('assistente.perguntar') }}
+        </button>
       }
     </form>
   </section>

@@ -6,6 +6,9 @@ import { AreaTreino } from '@shared/components/area-treino/area-treino';
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.i18n.json';
 import { geradorTriangulo } from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.gerador';
 import { TEORIA_TRIANGULO } from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.teoria';
 
@@ -17,17 +20,13 @@ const MARGEM = 30;
 @Component({
   selector: 'app-triangulo-retangulo',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    PassoAPasso,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, PassoAPasso, TopicoLayout],
   templateUrl: './triangulo-retangulo.html',
   styleUrl: './triangulo-retangulo.scss',
 })
 export class TrianguloRetangulo {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorTriangulo;
   protected readonly conceitos = TEORIA_TRIANGULO.map((teoria) => teoria.id);
   protected readonly notaveis = ANGULOS_NOTAVEIS;
@@ -35,9 +34,7 @@ export class TrianguloRetangulo {
   protected readonly angulo = signal(30);
   protected readonly hipotenusa = signal(10);
 
-  protected readonly anguloValido = computed(() =>
-    Math.min(85, Math.max(5, this.angulo())),
-  );
+  protected readonly anguloValido = computed(() => Math.min(85, Math.max(5, this.angulo())));
 
   protected readonly analise = computed(() =>
     resolverTrianguloComPassos(this.anguloValido(), this.hipotenusa()),
@@ -86,11 +83,13 @@ export class TrianguloRetangulo {
   protected readonly LARGURA = LARGURA;
   protected readonly ALTURA = ALTURA;
 
-  protected readonly descricaoTriangulo = computed(
-    () =>
-      `Triângulo retângulo com ângulo de ${this.anguloValido()} graus, hipotenusa ` +
-      `${this.hipotenusa()}, cateto oposto ${this.formatar(this.catetos().oposto)} e ` +
-      `cateto adjacente ${this.formatar(this.catetos().adjacente)}.`,
+  protected readonly descricaoTriangulo = computed(() =>
+    this.texto('descricaoTriangulo', {
+      graus: this.anguloValido(),
+      hipotenusa: this.hipotenusa(),
+      oposto: this.formatar(this.catetos().oposto),
+      adjacente: this.formatar(this.catetos().adjacente),
+    }),
   );
 
   constructor() {

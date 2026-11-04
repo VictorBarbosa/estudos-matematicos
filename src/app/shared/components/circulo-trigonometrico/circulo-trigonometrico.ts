@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { paraRadianos, quadrante } from '@core/math';
+import { I18nService } from '@core/i18n/services/i18n.service';
 
 /** Raio do círculo no sistema de coordenadas interno do SVG. */
 const RAIO = 120;
@@ -20,6 +21,8 @@ const CENTRO = 170;
   styleUrl: './circulo-trigonometrico.scss',
 })
 export class CirculoTrigonometrico {
+  protected readonly i18n = inject(I18nService);
+
   readonly anguloGraus = input.required<number>();
   readonly mostrarTangente = input(false);
   readonly mostrarProjecoes = input(true);
@@ -69,11 +72,13 @@ export class CirculoTrigonometrico {
     return `M${CENTRO + raioArco},${CENTRO} A${raioArco},${raioArco} 0 ${arcoGrande} 0 ${fim.x.toFixed(2)},${fim.y.toFixed(2)}`;
   });
 
-  protected readonly descricao = computed(
-    () =>
-      `Círculo trigonométrico com ângulo de ${this.anguloGraus()} graus no ` +
-      `${this.quadranteAtual()}º quadrante. Cosseno ${this.formatar(this.cosseno())}, ` +
-      `seno ${this.formatar(this.seno())}.`,
+  protected readonly descricao = computed(() =>
+    this.i18n.t('circuloTrig.descricao', {
+      graus: this.anguloGraus(),
+      quadrante: this.quadranteAtual(),
+      cosseno: this.formatar(this.cosseno()),
+      seno: this.formatar(this.seno()),
+    }),
   );
 
   protected formatar(valor: number): string {

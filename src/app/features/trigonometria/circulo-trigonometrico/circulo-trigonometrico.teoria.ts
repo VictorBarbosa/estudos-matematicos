@@ -51,8 +51,14 @@ export const TEORIA_CIRCULO: readonly Teoria[] = [
       'quadrante. Não há nada a memorizar: basta perguntar se o ponto está à direita ou à ' +
       'esquerda, acima ou abaixo.',
     formulas: [
-      { tex: '1º: (+,+) \\qquad 2º: (-,+) \\qquad 3º: (-,-) \\qquad 4º: (+,-)', legenda: '(cos, sen).' },
-      { tex: '\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}', legenda: 'Positiva no 1º e 3º quadrantes.' },
+      {
+        tex: '1º: (+,+) \\qquad 2º: (-,+) \\qquad 3º: (-,-) \\qquad 4º: (+,-)',
+        legenda: '(cos, sen).',
+      },
+      {
+        tex: '\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}',
+        legenda: 'Positiva no 1º e 3º quadrantes.',
+      },
     ],
     demonstracao: [
       {

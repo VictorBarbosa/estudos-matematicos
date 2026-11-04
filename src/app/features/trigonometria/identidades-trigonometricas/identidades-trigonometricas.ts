@@ -8,24 +8,22 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.i18n.json';
 import { geradorIdentidades } from '@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.gerador';
 import { TEORIA_IDENTIDADES } from '@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.teoria';
 
 @Component({
   selector: 'app-identidades-trigonometricas',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    MathPlot,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, MathPlot, TopicoLayout],
   templateUrl: './identidades-trigonometricas.html',
   styleUrl: './identidades-trigonometricas.scss',
 })
 export class IdentidadesTrigonometricas {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorIdentidades;
   protected readonly conceitos = TEORIA_IDENTIDADES.map((teoria) => teoria.id);
 
@@ -39,20 +37,16 @@ export class IdentidadesTrigonometricas {
   protected readonly senoDaSoma = computed(() => Math.sin(this.radA() + this.radB()));
   protected readonly formulaSoma = computed(
     () =>
-      Math.sin(this.radA()) * Math.cos(this.radB()) +
-      Math.cos(this.radA()) * Math.sin(this.radB()),
+      Math.sin(this.radA()) * Math.cos(this.radB()) + Math.cos(this.radA()) * Math.sin(this.radB()),
   );
 
   /** O erro clássico, calculado ao lado para comparação direta. */
-  protected readonly somaIngenua = computed(
-    () => Math.sin(this.radA()) + Math.sin(this.radB()),
-  );
+  protected readonly somaIngenua = computed(() => Math.sin(this.radA()) + Math.sin(this.radB()));
 
   protected readonly cossenoDaSoma = computed(() => Math.cos(this.radA() + this.radB()));
   protected readonly formulaCosseno = computed(
     () =>
-      Math.cos(this.radA()) * Math.cos(this.radB()) -
-      Math.sin(this.radA()) * Math.sin(this.radB()),
+      Math.cos(this.radA()) * Math.cos(this.radB()) - Math.sin(this.radA()) * Math.sin(this.radB()),
   );
 
   protected readonly arcoDuplo = computed(() => ({
@@ -66,18 +60,17 @@ export class IdentidadesTrigonometricas {
     {
       fn: (graus) => Math.sin(paraRadianos(graus)) ** 2,
       cor: 'serie-2',
-      rotulo: 'sen²θ',
+      rotulo: this.texto('curvaSen2'),
     },
     {
       fn: (graus) => Math.cos(paraRadianos(graus)) ** 2,
       cor: 'serie-1',
-      rotulo: 'cos²θ',
+      rotulo: this.texto('curvaCos2'),
     },
     {
-      fn: (graus) =>
-        Math.sin(paraRadianos(graus)) ** 2 + Math.cos(paraRadianos(graus)) ** 2,
+      fn: (graus) => Math.sin(paraRadianos(graus)) ** 2 + Math.cos(paraRadianos(graus)) ** 2,
       cor: 'acento',
-      rotulo: 'soma = 1',
+      rotulo: this.texto('curvaSoma'),
     },
   ]);
 
@@ -88,10 +81,7 @@ export class IdentidadesTrigonometricas {
     yMax: 1.4,
   }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Quadrados do seno e do cosseno oscilando em oposição, e sua soma constante igual a 1.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_IDENTIDADES);

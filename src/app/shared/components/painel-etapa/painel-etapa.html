@@ -16,7 +16,7 @@
             i18n.t('etapa.vencida', {
               acertos: dominio().acertos,
               janela: janela,
-              exigentes: dominio().acertosExigentes
+              exigentes: dominio().acertosExigentes,
             })
           }}
         </p>
@@ -30,7 +30,7 @@
                 alvo: alvo,
                 janela: janela,
                 exigente: alvoExigente,
-                seguidos: alvoSeguidos
+                seguidos: alvoSeguidos,
               })
             "
           ></span>
@@ -39,8 +39,9 @@
               {{ i18n.t('etapa.cobertura', { acertos: requisitos()[0]!.acertos }) }}
               @for (requisito of requisitos(); track requisito.conceito; let ultimo = $last) {
                 <span [class.cumprido]="requisito.cumprido"
-                  >{{ i18n.t(requisito.rotulo) }}
-                  {{ requisito.feitos }}/{{ requisito.acertos }}</span
+                  >{{ i18n.t(requisito.rotulo) }} {{ requisito.feitos }}/{{
+                    requisito.acertos
+                  }}</span
                 >{{ ultimo ? '.' : ' · ' }}
               }
             </span>
@@ -55,7 +56,7 @@
               {{
                 i18n.t('etapa.seguidos', {
                   quantos: dominio().seguidosNoFim,
-                  alvo: alvoSeguidos
+                  alvo: alvoSeguidos,
                 })
               }}
             </span>

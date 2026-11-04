@@ -9,6 +9,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.i18n.json';
 import { geradorRazoes } from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.gerador';
 import { TEORIA_RAZOES } from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_RAZOES } from '@features/trigonometria/seno-cosseno-tangente/sen
   styleUrl: './seno-cosseno-tangente.scss',
 })
 export class SenoCossenoTangente {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorRazoes;
   protected readonly conceitos = TEORIA_RAZOES.map((teoria) => teoria.id);
 
@@ -47,9 +52,21 @@ export class SenoCossenoTangente {
 
   /** As três curvas no mesmo eixo, em graus para facilitar a leitura. */
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => [
-    { fn: (graus) => Math.sin(paraRadianos(graus)), cor: 'serie-2', rotulo: 'seno' },
-    { fn: (graus) => Math.cos(paraRadianos(graus)), cor: 'serie-1', rotulo: 'cosseno' },
-    { fn: (graus) => Math.tan(paraRadianos(graus)), cor: 'serie-3', rotulo: 'tangente' },
+    {
+      fn: (graus) => Math.sin(paraRadianos(graus)),
+      cor: 'serie-2',
+      rotulo: this.texto('curvaSeno'),
+    },
+    {
+      fn: (graus) => Math.cos(paraRadianos(graus)),
+      cor: 'serie-1',
+      rotulo: this.texto('curvaCosseno'),
+    },
+    {
+      fn: (graus) => Math.tan(paraRadianos(graus)),
+      cor: 'serie-3',
+      rotulo: this.texto('curvaTangente'),
+    },
   ]);
 
   protected readonly pontos = computed<readonly PontoPlot[]>(() => {
@@ -73,11 +90,7 @@ export class SenoCossenoTangente {
     yMax: 4,
   }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Seno, cosseno e tangente ao longo de uma volta completa. A tangente tem assíntotas ' +
-      'verticais em 90 e 270 graus, onde o cosseno se anula.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   protected readonly perto90 = computed(() => Math.abs(this.cosseno()) < 0.1);
 

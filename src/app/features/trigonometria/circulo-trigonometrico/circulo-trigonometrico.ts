@@ -7,24 +7,22 @@ import { CirculoTrigonometrico as CirculoSvg } from '@shared/components/circulo-
 import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-topico';
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.i18n.json';
 import { geradorCirculo } from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.gerador';
 import { TEORIA_CIRCULO } from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.teoria';
 
 @Component({
   selector: 'app-circulo-trigonometrico-topico',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    CirculoSvg,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, CirculoSvg, ConceitosTopico, ControleParametro, Formula, TopicoLayout],
   templateUrl: './circulo-trigonometrico.html',
   styleUrl: './circulo-trigonometrico.scss',
 })
 export class CirculoTrigonometricoTopico {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorCirculo;
   protected readonly conceitos = TEORIA_CIRCULO.map((teoria) => teoria.id);
   protected readonly notaveis = ANGULOS_NOTAVEIS;
@@ -68,13 +66,16 @@ export class CirculoTrigonometricoTopico {
 
   protected readonly descricaoSinais = computed(() => {
     const { seno, cosseno } = this.sinais();
-    const sinalTexto = (valor: number): string => (valor > 0 ? 'positivo' : valor < 0 ? 'negativo' : 'nulo');
+    const sinal = (valor: number): string =>
+      this.texto(valor > 0 ? 'positivo' : valor < 0 ? 'negativo' : 'nulo');
 
-    return (
-      `No ${this.quadranteAtual()}º quadrante o cosseno é ${sinalTexto(cosseno)} ` +
-      `(ponto à ${cosseno >= 0 ? 'direita' : 'esquerda'}) e o seno é ${sinalTexto(seno)} ` +
-      `(ponto ${seno >= 0 ? 'acima' : 'abaixo'} do eixo).`
-    );
+    return this.texto('descricaoSinais', {
+      quadrante: this.quadranteAtual(),
+      sinalCos: sinal(cosseno),
+      ladoCos: this.texto(cosseno >= 0 ? 'direita' : 'esquerda'),
+      sinalSen: sinal(seno),
+      ladoSen: this.texto(seno >= 0 ? 'acima' : 'abaixo'),
+    });
   });
 
   constructor() {

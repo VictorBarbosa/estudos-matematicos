@@ -48,9 +48,7 @@ describe('geradorLeis', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('Pitágoras direto')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('Pitágoras direto'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('Pitágoras direto'))!;
 
     const resultado = corrigir(geradorLeis, exercicio, String(armadilha.resposta));
     expect(resultado.veredito).toBe('incorreto');

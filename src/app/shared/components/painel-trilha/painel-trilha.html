@@ -26,7 +26,7 @@
           {{
             i18n.t('trilha.etapaArea', {
               numero: atual.numero,
-              area: i18n.tituloDaArea(atual.areaId)
+              area: i18n.tituloDaArea(atual.areaId),
             })
           }}
         </span>
@@ -52,13 +52,19 @@
     </label>
 
     @if (confirmandoReinicio()) {
-      <div class="reinicio confirmando" role="alertdialog" [attr.aria-label]="i18n.t('trilha.confirmarReinicio')">
+      <div
+        class="reinicio confirmando"
+        role="alertdialog"
+        [attr.aria-label]="i18n.t('trilha.confirmarReinicio')"
+      >
         <p>{{ i18n.t('trilha.perguntaReinicio') }}</p>
         <div class="botoes">
           <button type="button" class="perigo" (click)="confirmarReinicio()">
             {{ i18n.t('trilha.zerarTudo') }}
           </button>
-          <button type="button" class="discreto" (click)="cancelarReinicio()">{{ i18n.t('trilha.cancelar') }}</button>
+          <button type="button" class="discreto" (click)="cancelarReinicio()">
+            {{ i18n.t('trilha.cancelar') }}
+          </button>
         </div>
       </div>
     } @else {

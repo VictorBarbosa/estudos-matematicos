@@ -1,0 +1,50 @@
+{
+  "anguloEntreEles": {
+    "pt": "Ângulo A entre eles (graus)",
+    "fr": "Angle A entre eux (degrés)",
+    "en": "Angle A between them (degrees)"
+  },
+  "dicaAngulo": {
+    "pt": "Passe por 90° e veja a correção zerar.",
+    "fr": "Passez par 90° et voyez la correction s’annuler.",
+    "en": "Pass through 90° and watch the correction vanish."
+  },
+  "descricao": {
+    "pt": "Triângulo com lados {b} e {c} formando ângulo de {graus} graus; o terceiro lado mede {a}.",
+    "fr": "Triangle de côtés {b} et {c} formant un angle de {graus} degrés ; le troisième côté mesure {a}.",
+    "en": "Triangle with sides {b} and {c} forming an angle of {graus} degrees; the third side measures {a}."
+  },
+  "terceiroLado": { "pt": "Terceiro lado", "fr": "Troisième côté", "en": "Third side" },
+  "leiDosCossenos": {
+    "pt": "lei dos cossenos",
+    "fr": "loi des cosinus",
+    "en": "law of cosines"
+  },
+  "soPitagoras": {
+    "pt": "Só Pitágoras daria",
+    "fr": "Pythagore seul donnerait",
+    "en": "Pythagoras alone would give"
+  },
+  "erroDe": { "pt": "erro de {valor}", "fr": "erreur de {valor}", "en": "off by {valor}" },
+  "termoDeCorrecao": {
+    "pt": "Termo de correção",
+    "fr": "Terme de correction",
+    "en": "Correction term"
+  },
+  "anguloTipo": { "pt": "ângulo {tipo}", "fr": "angle {tipo}", "en": "{tipo} angle" },
+  "agudo": { "pt": "agudo", "fr": "aigu", "en": "acute" },
+  "reto": { "pt": "reto", "fr": "droit", "en": "right" },
+  "obtuso": { "pt": "obtuso", "fr": "obtus", "en": "obtuse" },
+  "outrosAngulos": { "pt": "Outros ângulos", "fr": "Autres angles", "en": "Other angles" },
+  "leiDosSenos": { "pt": "lei dos senos", "fr": "loi des sinus", "en": "law of sines" },
+  "pitagorasCasoParticular": {
+    "pt": "Pitágoras como caso particular",
+    "fr": "Pythagore comme cas particulier",
+    "en": "Pythagoras as a special case"
+  },
+  "leveOAngulo": {
+    "pt": "Leve o ângulo a exatamente 90°: o cosseno zera, o termo de correção some e a fórmula vira o teorema de Pitágoras. Abaixo de 90° a correção encurta o lado oposto; acima, alonga.",
+    "fr": "Amenez l’angle à exactement 90° : le cosinus s’annule, le terme de correction disparaît et la formule devient le théorème de Pythagore. En dessous de 90° la correction raccourcit le côté opposé ; au-dessus, elle l’allonge.",
+    "en": "Take the angle to exactly 90°: the cosine vanishes, the correction term disappears and the formula becomes the Pythagorean theorem. Below 90° the correction shortens the opposite side; above, it lengthens it."
+  }
+}

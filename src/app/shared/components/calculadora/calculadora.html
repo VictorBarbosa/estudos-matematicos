@@ -51,7 +51,12 @@
         </button>
       </div>
 
-      <button type="button" class="fechar" (click)="calculadora.fechar()" [attr.aria-label]="i18n.t('calculadora.fechar')">
+      <button
+        type="button"
+        class="fechar"
+        (click)="calculadora.fechar()"
+        [attr.aria-label]="i18n.t('calculadora.fechar')"
+      >
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
           <path
             fill="currentColor"
@@ -65,8 +70,12 @@
       <!-- O texto vai dentro de um `span`: o bloco é rtl para que uma conta
            longa seja cortada pela ESQUERDA, onde está o que já passou, e o
            `span` é ltr para que a conta não seja lida de trás para a frente. -->
-      <p class="legenda"><span>{{ legenda() }}</span></p>
-      <p class="valor" [class.apertado]="visorApertado()"><span>{{ visor() }}</span></p>
+      <p class="legenda">
+        <span>{{ legenda() }}</span>
+      </p>
+      <p class="valor" [class.apertado]="visorApertado()">
+        <span>{{ visor() }}</span>
+      </p>
     </div>
 
     @if (emInteiros()) {
@@ -110,7 +119,11 @@
              que o divisor coube em todos os números. -->
         @if (conta().decomposicao.length > 0) {
           <table class="decomposicao" [class.mdc]="calculadora.operacao() === 'mdc'">
-            <caption class="rotulo">{{ i18n.t('calculadora.dividindo') }}</caption>
+            <caption class="rotulo">
+              {{
+                i18n.t('calculadora.dividindo')
+              }}
+            </caption>
             <tbody>
               @for (linha of conta().decomposicao; track $index) {
                 <tr [class.comum]="linha.comum">
@@ -141,36 +154,36 @@
         }
       </div>
     } @else {
-    <div class="teclado">
-      @if (calculadora.modo() === 'cientifica') {
-        <div class="teclas cientificas">
-          @for (tecla of cientificas; track tecla.rotulo) {
+      <div class="teclado">
+        @if (calculadora.modo() === 'cientifica') {
+          <div class="teclas cientificas">
+            @for (tecla of cientificas; track tecla.rotulo) {
+              <button
+                type="button"
+                [class]="tecla.estilo"
+                [attr.aria-label]="tecla.nome ? i18n.t(tecla.nome) : null"
+                (click)="pressionar(tecla.acao)"
+              >
+                {{ rotuloDe(tecla) }}
+              </button>
+            }
+          </div>
+        }
+
+        <div class="teclas basicas">
+          @for (tecla of basicas; track tecla.rotulo) {
             <button
               type="button"
               [class]="tecla.estilo"
+              [class.largo]="tecla.largo"
               [attr.aria-label]="tecla.nome ? i18n.t(tecla.nome) : null"
               (click)="pressionar(tecla.acao)"
             >
-              {{ rotuloDe(tecla) }}
+              {{ tecla.rotulo === 'AC' ? rotuloLimpar() : tecla.rotulo }}
             </button>
           }
         </div>
-      }
-
-      <div class="teclas basicas">
-        @for (tecla of basicas; track tecla.rotulo) {
-          <button
-            type="button"
-            [class]="tecla.estilo"
-            [class.largo]="tecla.largo"
-            [attr.aria-label]="tecla.nome ? i18n.t(tecla.nome) : null"
-            (click)="pressionar(tecla.acao)"
-          >
-            {{ tecla.rotulo === 'AC' ? rotuloLimpar() : tecla.rotulo }}
-          </button>
-        }
       </div>
-    </div>
     }
   </section>
 }

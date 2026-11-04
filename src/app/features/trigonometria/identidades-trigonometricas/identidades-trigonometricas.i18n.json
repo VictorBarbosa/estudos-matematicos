@@ -1,0 +1,72 @@
+{
+  "identidadeDesenhada": {
+    "pt": "A identidade fundamental, desenhada",
+    "fr": "L’identité fondamentale, dessinée",
+    "en": "The fundamental identity, drawn"
+  },
+  "curvaSen2": {
+    "pt": "sen²θ",
+    "fr": "sin²θ",
+    "en": "sin²θ"
+  },
+  "curvaCos2": {
+    "pt": "cos²θ",
+    "fr": "cos²θ",
+    "en": "cos²θ"
+  },
+  "curvaSoma": {
+    "pt": "soma = 1",
+    "fr": "somme = 1",
+    "en": "sum = 1"
+  },
+  "osQuadrados": {
+    "pt": "Os quadrados do seno e do cosseno oscilam em oposição: quando um sobe, o outro desce exatamente na mesma medida. Por isso a soma é a reta constante em 1 — e é isso que a identidade afirma.",
+    "fr": "Les carrés du sinus et du cosinus oscillent en opposition : quand l’un monte, l’autre descend exactement d’autant. C’est pourquoi la somme est la droite constante égale à 1 — et c’est ce qu’affirme l’identité.",
+    "en": "The squares of the sine and the cosine swing in opposition: when one rises, the other falls by exactly as much. That is why the sum is the line constant at 1 — and that is what the identity says."
+  },
+  "anguloA": {
+    "pt": "Ângulo a (graus)",
+    "fr": "Angle a (degrés)",
+    "en": "Angle a (degrees)"
+  },
+  "anguloB": {
+    "pt": "Ângulo b (graus)",
+    "fr": "Angle b (degrés)",
+    "en": "Angle b (degrees)"
+  },
+  "somaDeArcos": {
+    "pt": "Soma de arcos: o erro mais caro",
+    "fr": "Somme d’arcs : l’erreur la plus coûteuse",
+    "en": "Sum of angles: the costliest mistake"
+  },
+  "aFormulaCorreta": {
+    "pt": "A fórmula correta bate com o valor real em qualquer combinação de ângulos. A versão ingênua só coincide por acaso, em casos isolados — e falha em todos os outros.",
+    "fr": "La formule correcte coïncide avec la valeur réelle pour toute combinaison d’angles. La version naïve ne tombe juste que par hasard, dans des cas isolés — et se trompe partout ailleurs.",
+    "en": "The correct formula matches the true value for any combination of angles. The naive version only agrees by accident, in isolated cases — and fails everywhere else."
+  },
+  "cossenoDaSoma": {
+    "pt": "Cosseno da soma",
+    "fr": "Cosinus de la somme",
+    "en": "Cosine of a sum"
+  },
+  "repareNoSinal": {
+    "pt": "Repare no sinal: na soma de arcos o cosseno leva MENOS no meio, ao contrário do seno. Trocar esse sinal é o segundo erro mais comum do tema.",
+    "fr": "Attention au signe : dans la somme d’arcs, le cosinus porte un MOINS au milieu, contrairement au sinus. Inverser ce signe est la deuxième erreur la plus fréquente du sujet.",
+    "en": "Watch the sign: in the sum formula the cosine carries a MINUS in the middle, unlike the sine. Flipping that sign is the second most common mistake here."
+  },
+  "arcoDuplo": {
+    "pt": "Arco duplo",
+    "fr": "Arc double",
+    "en": "Double angle"
+  },
+  "oDoisMultiplica": {
+    "pt": "O 2 multiplica o ângulo, não o resultado. Dobrar o ângulo não dobra o seno — ele pode até diminuir, como acontece a partir de 45°.",
+    "fr": "Le 2 multiplie l’angle, pas le résultat. Doubler l’angle ne double pas le sinus — il peut même diminuer, comme à partir de 45°.",
+    "en": "The 2 multiplies the angle, not the result. Doubling the angle does not double the sine — it can even shrink, as it does past 45°."
+  },
+  "descricaoGrafico": {
+    "pt": "Quadrados do seno e do cosseno oscilando em oposição, e sua soma constante igual a 1.",
+    "fr": "Carrés du sinus et du cosinus oscillant en opposition, et leur somme constante égale à 1.",
+    "en": "Squares of the sine and the cosine swinging in opposition, and their constant sum equal to 1."
+  }
+}

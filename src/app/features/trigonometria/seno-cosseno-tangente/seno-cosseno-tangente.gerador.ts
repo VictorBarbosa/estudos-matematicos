@@ -68,14 +68,16 @@ export const geradorRazoes: GeradorExercicio<number> = {
       return {
         id: `razoes-identidade-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado:
-          `Se sen θ = ${seno.toFixed(2)} e θ está no 1º quadrante, qual é cos θ? (2 casas)`,
+        enunciado: `Se sen θ = ${seno.toFixed(2)} e θ está no 1º quadrante, qual é cos θ? (2 casas)`,
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\qquad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {
           resultado: gabarito,
           passos: [
-            { descricao: 'Usamos a identidade fundamental.', tex: '\\sin^{2}\\theta + \\cos^{2}\\theta = 1' },
+            {
+              descricao: 'Usamos a identidade fundamental.',
+              tex: '\\sin^{2}\\theta + \\cos^{2}\\theta = 1',
+            },
             {
               descricao: 'Isolamos o cosseno.',
               tex: `\\cos^{2}\\theta = 1 - ${seno.toFixed(2)}^{2} = ${(1 - seno * seno).toFixed(4)}`,
@@ -123,7 +125,10 @@ export const geradorRazoes: GeradorExercicio<number> = {
       resolucao: {
         resultado: gabarito,
         passos: [
-          { descricao: 'A tangente é o quociente entre seno e cosseno.', tex: '\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}' },
+          {
+            descricao: 'A tangente é o quociente entre seno e cosseno.',
+            tex: '\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}',
+          },
           {
             descricao: 'Substituindo os valores.',
             tex: `\\frac{${Math.sin(radianos).toFixed(4)}}{${Math.cos(radianos).toFixed(4)}} = ${gabarito.toFixed(4)}`,
@@ -143,8 +148,7 @@ export const geradorRazoes: GeradorExercicio<number> = {
           },
           {
             resposta: Math.sin(radianos) * Math.cos(radianos),
-            diagnostico:
-              'A tangente é uma DIVISÃO entre seno e cosseno, não um produto.',
+            diagnostico: 'A tangente é uma DIVISÃO entre seno e cosseno, não um produto.',
             passo: 0,
             conceito: 'razoes.relacao',
           },

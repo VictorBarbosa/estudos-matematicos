@@ -1,0 +1,45 @@
+{
+  "descricaoTriangulo": {
+    "pt": "Triângulo retângulo com ângulo de {graus} graus, hipotenusa {hipotenusa}, cateto oposto {oposto} e cateto adjacente {adjacente}.",
+    "fr": "Triangle rectangle avec un angle de {graus} degrés, hypoténuse {hipotenusa}, côté opposé {oposto} et côté adjacent {adjacente}.",
+    "en": "Right triangle with an angle of {graus} degrees, hypotenuse {hipotenusa}, opposite leg {oposto} and adjacent leg {adjacente}."
+  },
+  "legendaHipotenusa": {
+    "pt": "hipotenusa {valor}",
+    "fr": "hypoténuse {valor}",
+    "en": "hypotenuse {valor}"
+  },
+  "legendaOposto": { "pt": "oposto {valor}", "fr": "opposé {valor}", "en": "opposite {valor}" },
+  "legendaAdjacente": {
+    "pt": "adjacente {valor}",
+    "fr": "adjacent {valor}",
+    "en": "adjacent {valor}"
+  },
+  "tgTheta": { "pt": "tg θ", "fr": "tan θ", "en": "tan θ" },
+  "opostoSobreHip": {
+    "pt": "oposto ÷ hipotenusa",
+    "fr": "opposé ÷ hypoténuse",
+    "en": "opposite ÷ hypotenuse"
+  },
+  "adjacenteSobreHip": {
+    "pt": "adjacente ÷ hipotenusa",
+    "fr": "adjacent ÷ hypoténuse",
+    "en": "adjacent ÷ hypotenuse"
+  },
+  "opostoSobreAdj": {
+    "pt": "oposto ÷ adjacente",
+    "fr": "opposé ÷ adjacent",
+    "en": "opposite ÷ adjacent"
+  },
+  "sen2Cos2": { "pt": "sen² + cos²", "fr": "sin² + cos²", "en": "sin² + cos²" },
+  "porQueNaoDependem": {
+    "pt": "Por que as razões não dependem do tamanho",
+    "fr": "Pourquoi les rapports ne dépendent pas de la taille",
+    "en": "Why the ratios do not depend on size"
+  },
+  "aumenteAHipotenusa": {
+    "pt": "Aumente a hipotenusa e observe: os catetos crescem, mas sen θ, cos θ e tg θ não mudam. Triângulos com o mesmo ângulo são semelhantes, e semelhança preserva as razões entre os lados. É isso que permite que essas razões sejam funções do ângulo apenas.",
+    "fr": "Augmentez l’hypoténuse et observez : les côtés de l’angle droit grandissent, mais sin θ, cos θ et tan θ ne changent pas. Les triangles de même angle sont semblables, et la similitude conserve les rapports entre les côtés. C’est ce qui permet à ces rapports d’être des fonctions de l’angle seul.",
+    "en": "Increase the hypotenuse and watch: the legs grow, but sin θ, cos θ and tan θ do not change. Triangles with the same angle are similar, and similarity preserves the ratios between sides. That is what lets these ratios be functions of the angle alone."
+  }
+}

@@ -43,12 +43,11 @@ export const TEORIA_LEIS: readonly Teoria[] = [
       'Em qualquer triângulo, a razão entre um lado e o seno do ângulo oposto a ele é a ' +
       'mesma para os três pares. Essa razão constante vale, inclusive, o diâmetro da ' +
       'circunferência que circunscreve o triângulo.',
-    formulas: [
-      { tex: '\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R' },
-    ],
+    formulas: [{ tex: '\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R' }],
     demonstracao: [
       {
-        descricao: 'Traçando a altura h a partir de um vértice, ela aparece em dois triângulos retângulos.',
+        descricao:
+          'Traçando a altura h a partir de um vértice, ela aparece em dois triângulos retângulos.',
         tex: 'h = b\\sin C \\qquad h = c\\sin B',
       },
       {

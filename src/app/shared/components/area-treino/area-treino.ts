@@ -72,9 +72,7 @@ export class AreaTreino {
   protected readonly acertosPorTipo = ACERTOS_POR_TIPO;
 
   /** Como este tópico está em relação ao critério de domínio. */
-  protected readonly dominio = computed(() =>
-    this.progressao.dominioEm(this.gerador().topicoId),
-  );
+  protected readonly dominio = computed(() => this.progressao.dominioEm(this.gerador().topicoId));
 
   /** Quantos acertos faltam na janela recente para vencer a etapa. */
   protected readonly faltamParaVencer = computed(() =>

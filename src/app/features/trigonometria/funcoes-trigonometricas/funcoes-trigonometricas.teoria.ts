@@ -73,7 +73,10 @@ export const TEORIA_ONDAS: readonly Teoria[] = [
       'eixo horizontal.',
     formulas: [
       { tex: 'y = \\sin(Bx + C) \\;\\Rightarrow\\; \\text{deslocamento} = -\\frac{C}{B}' },
-      { tex: '\\cos x = \\sin\\left(x + \\frac{\\pi}{2}\\right)', legenda: 'Cosseno é o seno adiantado em 90°.' },
+      {
+        tex: '\\cos x = \\sin\\left(x + \\frac{\\pi}{2}\\right)',
+        legenda: 'Cosseno é o seno adiantado em 90°.',
+      },
     ],
     demonstracao: [
       {

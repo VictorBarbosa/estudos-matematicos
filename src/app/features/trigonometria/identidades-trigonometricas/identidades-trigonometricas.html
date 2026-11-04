@@ -1,54 +1,59 @@
 <app-topico-layout topicoId="identidades-trigonometricas">
   <div explorar class="explorar">
     <section>
-      <h2>A identidade fundamental, desenhada</h2>
+      <h2>{{ texto('identidadeDesenhada') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
         [descricao]="descricaoGrafico()"
         [altura]="340"
       />
-      <p class="observacao">
-        Os quadrados do seno e do cosseno oscilam em oposição: quando um sobe, o outro desce
-        exatamente na mesma medida. Por isso a soma é a reta constante em 1 — e é isso que a
-        identidade afirma.
-      </p>
+      <p class="observacao">{{ texto('osQuadrados') }}</p>
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="a" rotulo="Ângulo a (graus)" [min]="0" [max]="180" [passo]="5" />
-      <app-controle-parametro [(valor)]="b" rotulo="Ângulo b (graus)" [min]="0" [max]="180" [passo]="5" />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="texto('anguloA')"
+        [min]="0"
+        [max]="180"
+        [passo]="5"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="texto('anguloB')"
+        [min]="0"
+        [max]="180"
+        [passo]="5"
+      />
     </section>
 
     <section class="painel">
-      <h2>Soma de arcos: o erro mais caro</h2>
+      <h2>{{ texto('somaDeArcos') }}</h2>
 
       <div class="comparacao">
         <div class="caixa errada">
-          <span class="etiqueta">Errado</span>
+          <span class="etiqueta">{{ i18n.t('explorar.errado') }}</span>
           <app-formula [tex]="'\\sin(a + b) = \\sin a + \\sin b'" [bloco]="true" />
           <strong>{{ formatar(somaIngenua()) }}</strong>
         </div>
         <div class="caixa certa">
-          <span class="etiqueta">Correto</span>
+          <span class="etiqueta">{{ i18n.t('explorar.correto') }}</span>
           <app-formula [tex]="'\\sin a \\cos b + \\cos a \\sin b'" [bloco]="true" />
           <strong>{{ formatar(formulaSoma()) }}</strong>
         </div>
         <div class="caixa referencia">
-          <span class="etiqueta">Valor real</span>
+          <span class="etiqueta">{{ i18n.t('explorar.valorReal') }}</span>
           <app-formula [tex]="'\\sin(a + b)'" [bloco]="true" />
           <strong>{{ formatar(senoDaSoma()) }}</strong>
         </div>
       </div>
 
-      <p class="observacao">
-        A fórmula correta bate com o valor real em qualquer combinação de ângulos. A versão
-        ingênua só coincide por acaso, em casos isolados — e falha em todos os outros.
-      </p>
+      <p class="observacao">{{ texto('aFormulaCorreta') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Cosseno da soma</h2>
+      <h2>{{ texto('cossenoDaSoma') }}</h2>
       <app-formula
         [tex]="'\\cos(' + a() + '° + ' + b() + '°) = ' + formatar(cossenoDaSoma())"
         [bloco]="true"
@@ -57,35 +62,29 @@
         [tex]="'\\cos a\\cos b - \\sin a\\sin b = ' + formatar(formulaCosseno())"
         [bloco]="true"
       />
-      <p class="observacao">
-        Repare no sinal: na soma de arcos o cosseno leva MENOS no meio, ao contrário do seno.
-        Trocar esse sinal é o segundo erro mais comum do tema.
-      </p>
+      <p class="observacao">{{ texto('repareNoSinal') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Arco duplo</h2>
+      <h2>{{ texto('arcoDuplo') }}</h2>
       <div class="comparacao">
         <div class="caixa errada">
-          <span class="etiqueta">Errado</span>
+          <span class="etiqueta">{{ i18n.t('explorar.errado') }}</span>
           <app-formula [tex]="'\\sin 2a = 2\\sin a'" [bloco]="true" />
           <strong>{{ formatar(arcoDuplo().ingenuo) }}</strong>
         </div>
         <div class="caixa certa">
-          <span class="etiqueta">Correto</span>
+          <span class="etiqueta">{{ i18n.t('explorar.correto') }}</span>
           <app-formula [tex]="'\\sin 2a = 2\\sin a\\cos a'" [bloco]="true" />
           <strong>{{ formatar(arcoDuplo().formula) }}</strong>
         </div>
         <div class="caixa referencia">
-          <span class="etiqueta">Valor real</span>
+          <span class="etiqueta">{{ i18n.t('explorar.valorReal') }}</span>
           <app-formula [tex]="'\\sin(2 \\cdot ' + a() + '°)'" [bloco]="true" />
           <strong>{{ formatar(arcoDuplo().direto) }}</strong>
         </div>
       </div>
-      <p class="observacao">
-        O 2 multiplica o ângulo, não o resultado. Dobrar o ângulo não dobra o seno — ele pode
-        até diminuir, como acontece a partir de 45°.
-      </p>
+      <p class="observacao">{{ texto('oDoisMultiplica') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

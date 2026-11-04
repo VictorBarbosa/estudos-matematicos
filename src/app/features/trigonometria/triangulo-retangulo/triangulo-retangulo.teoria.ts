@@ -13,7 +13,9 @@ export const TEORIA_TRIANGULO: readonly Teoria[] = [
     formulas: [
       { tex: '\\sin \\theta = \\frac{\\text{cateto oposto}}{\\text{hipotenusa}}' },
       { tex: '\\cos \\theta = \\frac{\\text{cateto adjacente}}{\\text{hipotenusa}}' },
-      { tex: '\\tan \\theta = \\frac{\\text{cateto oposto}}{\\text{cateto adjacente}} = \\frac{\\sin \\theta}{\\cos \\theta}' },
+      {
+        tex: '\\tan \\theta = \\frac{\\text{cateto oposto}}{\\text{cateto adjacente}} = \\frac{\\sin \\theta}{\\cos \\theta}',
+      },
     ],
     demonstracao: [
       {

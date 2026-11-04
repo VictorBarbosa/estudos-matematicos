@@ -61,7 +61,10 @@ export const geradorLeis: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
-        dica: nivel === 'facil' ? 'Dois lados e o ângulo entre eles pedem a lei dos cossenos.' : undefined,
+        dica:
+          nivel === 'facil'
+            ? 'Dois lados e o ângulo entre eles pedem a lei dos cossenos.'
+            : undefined,
       };
     }
 

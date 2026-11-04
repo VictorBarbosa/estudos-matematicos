@@ -38,9 +38,7 @@ export class AtualizacaoDialog {
   protected readonly podeDispensar = computed(() => this.atualizacao.motivo() !== 'irrecuperavel');
 
   protected readonly titulo = computed(() =>
-    this.i18n.t(
-      this.podeDispensar() ? 'atualizacao.disponivel' : 'atualizacao.recarregar',
-    ),
+    this.i18n.t(this.podeDispensar() ? 'atualizacao.disponivel' : 'atualizacao.recarregar'),
   );
 
   protected readonly descricao = computed(() =>

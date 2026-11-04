@@ -76,7 +76,10 @@ export const geradorCirculo: GeradorExercicio<number> = {
         resolucao: {
           resultado: gabarito,
           passos: [
-            { descricao: 'Usamos a proporção com a volta completa.', tex: '180° = \\pi \\text{ rad}' },
+            {
+              descricao: 'Usamos a proporção com a volta completa.',
+              tex: '180° = \\pi \\text{ rad}',
+            },
             {
               descricao: 'Multiplicamos os graus por π/180.',
               tex: `${graus} \\cdot \\frac{\\pi}{180} = ${gabarito.toFixed(4)}`,
@@ -188,7 +191,5 @@ function sortearAngulo(nivel: Nivel, rng: Rng): number {
   // Difícil: ângulos além da volta e negativos, que é onde a redução ao
   // primeiro giro importa. Sorteados num intervalo, e não de uma lista de
   // nove: o aluno percebia a repetição em poucos cliques.
-  return rng.booleano()
-    ? -rng.inteiro(5, 355)
-    : rng.inteiro(365, 1080);
+  return rng.booleano() ? -rng.inteiro(5, 355) : rng.inteiro(365, 1080);
 }

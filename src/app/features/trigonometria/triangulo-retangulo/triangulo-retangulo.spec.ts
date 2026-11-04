@@ -72,7 +72,10 @@ describe('geradorTriangulo', () => {
 
   it('diagnostica a troca entre seno e cosseno', () => {
     const exercicio = amostra('medio', 40).find((candidato) =>
-      candidato.armadilhas.some((a) => a.diagnostico.includes('cateto OPOSTO') || a.diagnostico.includes('cateto ADJACENTE')),
+      candidato.armadilhas.some(
+        (a) =>
+          a.diagnostico.includes('cateto OPOSTO') || a.diagnostico.includes('cateto ADJACENTE'),
+      ),
     )!;
 
     const armadilha = exercicio.armadilhas[0]!;

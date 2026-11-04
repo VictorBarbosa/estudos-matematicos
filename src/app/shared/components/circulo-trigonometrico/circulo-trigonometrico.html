@@ -69,14 +69,25 @@
   </svg>
 
   <figcaption class="legenda">
-    <span class="item"><span class="amostra cos"></span>cos θ = {{ formatar(cosseno()) }}</span>
-    <span class="item"><span class="amostra sen"></span>sen θ = {{ formatar(seno()) }}</span>
+    <span class="item">
+      <span class="amostra cos"></span
+      >{{ i18n.t('circuloTrig.cos', { valor: formatar(cosseno()) }) }}
+    </span>
+    <span class="item">
+      <span class="amostra sen"></span>{{ i18n.t('circuloTrig.sen', { valor: formatar(seno()) }) }}
+    </span>
     @if (mostrarTangente()) {
       <span class="item">
         <span class="amostra tan"></span>
-        tg θ = {{ tangente() === null ? 'não existe' : formatar(tangente()!) }}
+        {{
+          i18n.t('circuloTrig.tan', {
+            valor: tangente() === null ? i18n.t('circuloTrig.naoExiste') : formatar(tangente()!),
+          })
+        }}
       </span>
     }
-    <span class="item quadrante">{{ quadranteAtual() }}º quadrante</span>
+    <span class="item quadrante">
+      {{ i18n.t('circuloTrig.quadrante', { numero: quadranteAtual() }) }}
+    </span>
   </figcaption>
 </figure>

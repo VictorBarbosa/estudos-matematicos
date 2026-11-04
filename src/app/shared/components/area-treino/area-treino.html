@@ -6,7 +6,9 @@
   <header class="barra">
     <!-- O nível não se escolhe: ele acompanha o desempenho. -->
     <div class="escada" role="status">
-      <span class="nivel-atual" [attr.data-nivel]="s.nivel()">{{ i18n.t(chaveDoNivel[s.nivel()]) }}</span>
+      <span class="nivel-atual" [attr.data-nivel]="s.nivel()">{{
+        i18n.t(chaveDoNivel[s.nivel()])
+      }}</span>
       @if (s.escada().faltamParaSubir > 0) {
         <span class="rumo">
           {{ i18n.t('treino.subir', { quantos: s.escada().faltamParaSubir }) }}
@@ -64,7 +66,9 @@
 
   <div class="acoes">
     @if (s.corrigido()) {
-      <button type="button" class="principal" (click)="proximo()">{{ i18n.t('treino.proximo') }}</button>
+      <button type="button" class="principal" (click)="proximo()">
+        {{ i18n.t('treino.proximo') }}
+      </button>
     } @else {
       <button
         type="button"
@@ -92,7 +96,10 @@
         <p class="gabarito">
           {{ i18n.t('treino.respostaCorreta') }}
           @for (forma of gabarito(); track forma; let ultimo = $last) {
-            <strong>{{ forma }}</strong>@if (!ultimo) {<span class="ou"> {{ i18n.t('treino.ou') }} </span>}
+            <strong>{{ forma }}</strong>
+            @if (!ultimo) {
+              <span class="ou"> {{ i18n.t('treino.ou') }} </span>
+            }
           }
         </p>
       </div>
@@ -110,7 +117,10 @@
           <p class="gabarito">
             {{ i18n.t('treino.respostaCorreta') }}
             @for (forma of gabarito(); track forma; let ultimo = $last) {
-              <strong>{{ forma }}</strong>@if (!ultimo) {<span class="ou"> {{ i18n.t('treino.ou') }} </span>}
+              <strong>{{ forma }}</strong>
+              @if (!ultimo) {
+                <span class="ou"> {{ i18n.t('treino.ou') }} </span>
+              }
             }
           </p>
         }
@@ -129,11 +139,13 @@
           i18n.t('treino.resumoVitoria', {
             acertos: dominio().acertos,
             janela: janela,
-            exigentes: dominio().acertosExigentes
+            exigentes: dominio().acertosExigentes,
           })
-        }}@if (requisitos().length > 0) {{{
-          i18n.t('treino.resumoOperacoes', { quantas: requisitos().length })
-        }}}.
+        }}
+        @if (requisitos().length > 0) {
+          {{ i18n.t('treino.resumoOperacoes', { quantas: requisitos().length }) }}
+        }
+        .
       </p>
       @if (proximaEtapa(); as proxima) {
         <a class="principal" [routerLink]="proxima.rota">

@@ -15,7 +15,8 @@ export const TEORIA_IDENTIDADES: readonly Teoria[] = [
     ],
     demonstracao: [
       {
-        descricao: 'O ponto do círculo tem coordenadas (cos θ, sen θ) e está a distância 1 da origem.',
+        descricao:
+          'O ponto do círculo tem coordenadas (cos θ, sen θ) e está a distância 1 da origem.',
         tex: 'x^{2} + y^{2} = 1',
       },
       {
@@ -40,7 +41,10 @@ export const TEORIA_IDENTIDADES: readonly Teoria[] = [
       'derivam quase todas as outras identidades.',
     formulas: [
       { tex: '\\sin(a + b) = \\sin a \\cos b + \\cos a \\sin b' },
-      { tex: '\\cos(a + b) = \\cos a \\cos b - \\sin a \\sin b', legenda: 'Atenção ao sinal invertido.' },
+      {
+        tex: '\\cos(a + b) = \\cos a \\cos b - \\sin a \\sin b',
+        legenda: 'Atenção ao sinal invertido.',
+      },
       { tex: '\\sin(a + b) \\neq \\sin a + \\sin b' },
     ],
     demonstracao: [

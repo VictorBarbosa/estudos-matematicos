@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.i18n.json';
 import { geradorOndas } from '@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.gerador';
 import { TEORIA_ONDAS } from '@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_ONDAS } from '@features/trigonometria/funcoes-trigonometricas/fu
   styleUrl: './funcoes-trigonometricas.scss',
 })
 export class FuncoesTrigonometricas {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorOndas;
   protected readonly conceitos = TEORIA_ONDAS.map((teoria) => teoria.id);
 
@@ -50,12 +55,8 @@ export class FuncoesTrigonometricas {
 
   protected readonly onda = computed(() => this.analise().resultado);
 
-  protected readonly maximo = computed(
-    () => this.deslocamento() + Math.abs(this.amplitude()),
-  );
-  protected readonly minimo = computed(
-    () => this.deslocamento() - Math.abs(this.amplitude()),
-  );
+  protected readonly maximo = computed(() => this.deslocamento() + Math.abs(this.amplitude()));
+  protected readonly minimo = computed(() => this.deslocamento() - Math.abs(this.amplitude()));
 
   protected readonly funcaoTex = computed(() => {
     const a = this.amplitude();
@@ -79,8 +80,17 @@ export class FuncoesTrigonometricas {
     const d = this.deslocamento();
 
     return [
-      { fn: (x) => a * Math.sin(b * x + c) + d, cor: 'serie-1', rotulo: 'onda ajustada' },
-      { fn: (x) => Math.sin(x), cor: 'texto-suave', tracejada: true, rotulo: 'sen x (referência)' },
+      {
+        fn: (x) => a * Math.sin(b * x + c) + d,
+        cor: 'serie-1',
+        rotulo: this.texto('curvaAjustada'),
+      },
+      {
+        fn: (x) => Math.sin(x),
+        cor: 'texto-suave',
+        tracejada: true,
+        rotulo: this.texto('curvaReferencia'),
+      },
     ];
   });
 
@@ -96,11 +106,12 @@ export class FuncoesTrigonometricas {
     return { xMin: -2 * Math.PI, xMax: 2 * Math.PI, yMin: -limite, yMax: limite };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Onda de amplitude ${Math.abs(this.amplitude())} e período ` +
-      `${this.formatar(this.onda().periodo)}, oscilando em torno de y igual a ` +
-      `${this.deslocamento()}.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      amplitude: Math.abs(this.amplitude()),
+      periodo: this.formatar(this.onda().periodo),
+      deslocamento: this.deslocamento(),
+    }),
   );
 
   constructor() {

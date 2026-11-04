@@ -10,7 +10,12 @@
             {{ teoria.carregando() ? i18n.t('teoria.carregando') : i18n.t('teoria.erro') }}
           </p>
         </div>
-        <button type="button" class="fechar" (click)="teoria.fechar()" [attr.aria-label]="i18n.t('teoria.fechar')">
+        <button
+          type="button"
+          class="fechar"
+          (click)="teoria.fechar()"
+          [attr.aria-label]="i18n.t('teoria.fechar')"
+        >
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
             <path
               fill="currentColor"
@@ -29,7 +34,12 @@
           <h2>{{ conteudo.titulo }}</h2>
           <p class="resumo">{{ conteudo.resumo }}</p>
         </div>
-        <button type="button" class="fechar" (click)="teoria.fechar()" [attr.aria-label]="i18n.t('teoria.fechar')">
+        <button
+          type="button"
+          class="fechar"
+          (click)="teoria.fechar()"
+          [attr.aria-label]="i18n.t('teoria.fechar')"
+        >
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
             <path
               fill="currentColor"

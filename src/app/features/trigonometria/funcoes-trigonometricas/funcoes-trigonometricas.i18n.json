@@ -1,0 +1,60 @@
+{
+  "amplitudeA": { "pt": "Amplitude A", "fr": "Amplitude A", "en": "Amplitude A" },
+  "dicaAmplitude": {
+    "pt": "Negativa espelha a onda.",
+    "fr": "Négative, elle retourne l’onde.",
+    "en": "Negative flips the wave."
+  },
+  "coeficienteB": { "pt": "Coeficiente B", "fr": "Coefficient B", "en": "Coefficient B" },
+  "dicaFrequencia": {
+    "pt": "Comprime a onda na horizontal.",
+    "fr": "Comprime l’onde horizontalement.",
+    "en": "Squeezes the wave horizontally."
+  },
+  "faseC": { "pt": "Fase C (em π/10)", "fr": "Phase C (en π/10)", "en": "Phase C (in π/10)" },
+  "deslocamentoD": {
+    "pt": "Deslocamento D",
+    "fr": "Décalage D",
+    "en": "Shift D"
+  },
+  "amplitude": { "pt": "Amplitude", "fr": "Amplitude", "en": "Amplitude" },
+  "doEixoAoPico": {
+    "pt": "do eixo até o pico",
+    "fr": "de l’axe jusqu’au sommet",
+    "en": "from the axis to the peak"
+  },
+  "doisPiSobreB": { "pt": "2π ÷ B", "fr": "2π ÷ B", "en": "2π ÷ B" },
+  "imagem": { "pt": "Imagem", "fr": "Image", "en": "Range" },
+  "minimoEMaximo": {
+    "pt": "mínimo e máximo",
+    "fr": "minimum et maximum",
+    "en": "minimum and maximum"
+  },
+  "deslocamentoHorizontal": {
+    "pt": "Deslocamento horizontal",
+    "fr": "Décalage horizontal",
+    "en": "Horizontal shift"
+  },
+  "menosCSobreB": { "pt": "−C ÷ B", "fr": "−C ÷ B", "en": "−C ÷ B" },
+  "ondaESeusLimites": {
+    "pt": "A onda e seus limites",
+    "fr": "L’onde et ses bornes",
+    "en": "The wave and its bounds"
+  },
+  "curvaAjustada": { "pt": "onda ajustada", "fr": "onde ajustée", "en": "adjusted wave" },
+  "curvaReferencia": {
+    "pt": "sen x (referência)",
+    "fr": "sin x (référence)",
+    "en": "sin x (reference)"
+  },
+  "descricaoGrafico": {
+    "pt": "Onda de amplitude {amplitude} e período {periodo}, oscilando em torno de y igual a {deslocamento}.",
+    "fr": "Onde d’amplitude {amplitude} et de période {periodo}, oscillant autour de y égal à {deslocamento}.",
+    "en": "Wave of amplitude {amplitude} and period {periodo}, oscillating about y equal to {deslocamento}."
+  },
+  "aLinhaCheia": {
+    "pt": "A linha cheia horizontal é o eixo da oscilação (y = D); as tracejadas marcam o máximo e o mínimo. A curva cinza é o seno puro, para comparação.",
+    "fr": "La ligne horizontale pleine est l’axe de l’oscillation (y = D) ; les pointillés marquent le maximum et le minimum. La courbe grise est le sinus pur, pour comparaison.",
+    "en": "The solid horizontal line is the axis of the oscillation (y = D); the dashes mark the maximum and the minimum. The grey curve is the plain sine, for comparison."
+  }
+}

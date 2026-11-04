@@ -7,6 +7,9 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.i18n.json';
 import { geradorLeis } from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.gerador';
 import { TEORIA_LEIS } from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.teoria';
 
@@ -16,18 +19,13 @@ const ALTURA = 260;
 @Component({
   selector: 'app-lei-senos-cossenos',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    PassoAPasso,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, PassoAPasso, TopicoLayout],
   templateUrl: './lei-senos-cossenos.html',
   styleUrl: './lei-senos-cossenos.scss',
 })
 export class LeiSenosCossenos {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorLeis;
   protected readonly conceitos = TEORIA_LEIS.map((teoria) => teoria.id);
 
@@ -45,9 +43,7 @@ export class LeiSenosCossenos {
   protected readonly ladoA = computed(() => this.analise().resultado);
 
   /** Quanto Pitágoras erraria se fosse aplicado sem o termo de correção. */
-  protected readonly pitagorasIngenuo = computed(() =>
-    Math.sqrt(this.b() ** 2 + this.c() ** 2),
-  );
+  protected readonly pitagorasIngenuo = computed(() => Math.sqrt(this.b() ** 2 + this.c() ** 2));
 
   protected readonly correcao = computed(
     () => -2 * this.b() * this.c() * Math.cos(paraRadianos(this.anguloA())),
@@ -99,10 +95,13 @@ export class LeiSenosCossenos {
     return { a: paraTela(bruto.a), b: paraTela(bruto.b), c: paraTela(bruto.c) };
   });
 
-  protected readonly descricao = computed(
-    () =>
-      `Triângulo com lados ${this.b()} e ${this.c()} formando ângulo de ${this.anguloA()} ` +
-      `graus; o terceiro lado mede ${this.formatar(this.ladoA())}.`,
+  protected readonly descricao = computed(() =>
+    this.texto('descricao', {
+      b: this.b(),
+      c: this.c(),
+      graus: this.anguloA(),
+      a: this.formatar(this.ladoA()),
+    }),
   );
 
   constructor() {

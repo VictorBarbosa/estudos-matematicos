@@ -97,10 +97,7 @@ describe('AssistenteDialog', () => {
     await abrir();
 
     expect(fixture.nativeElement.querySelector('.janela')).not.toBeNull();
-    expect([...seletor().options].map((o) => o.value)).toEqual([
-      'qwen2.5:14b',
-      'llama3.2:3b',
-    ]);
+    expect([...seletor().options].map((o) => o.value)).toEqual(['qwen2.5:14b', 'llama3.2:3b']);
   });
 
   it('escolhe o maior modelo quando não há escolha guardada', async () => {
@@ -139,11 +136,7 @@ describe('AssistenteDialog', () => {
     await perguntar('primeira');
     await perguntar('segunda');
 
-    expect(ollama.recebeu!.historico.map((m) => m.papel)).toEqual([
-      'aluno',
-      'assistente',
-      'aluno',
-    ]);
+    expect(ollama.recebeu!.historico.map((m) => m.papel)).toEqual(['aluno', 'assistente', 'aluno']);
     expect(ollama.recebeu!.historico[0]!.texto).toBe('primeira');
   });
 
@@ -207,7 +200,9 @@ describe('AssistenteDialog', () => {
   it('fechar some com a janela', async () => {
     await abrir();
 
-    const fechar = [...fixture.nativeElement.querySelectorAll('.icone')].at(-1) as HTMLButtonElement;
+    const fechar = [...fixture.nativeElement.querySelectorAll('.icone')].at(
+      -1,
+    ) as HTMLButtonElement;
     fechar.click();
     await fixture.whenStable();
 
@@ -221,8 +216,12 @@ describe('AssistenteDialog', () => {
     const barra = fixture.nativeElement.querySelector('.barra') as HTMLElement;
     const botao = fixture.nativeElement.querySelector('.icone') as HTMLElement;
 
-    botao.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, clientX: 10, clientY: 10 }));
-    barra.dispatchEvent(new PointerEvent('pointermove', { bubbles: true, clientX: 400, clientY: 400 }));
+    botao.dispatchEvent(
+      new PointerEvent('pointerdown', { bubbles: true, clientX: 10, clientY: 10 }),
+    );
+    barra.dispatchEvent(
+      new PointerEvent('pointermove', { bubbles: true, clientX: 400, clientY: 400 }),
+    );
     await fixture.whenStable();
 
     const janela = fixture.nativeElement.querySelector('.janela') as HTMLElement;

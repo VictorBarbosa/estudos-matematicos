@@ -124,8 +124,12 @@ describe('Calculadora', () => {
       const barra = fixture.nativeElement.querySelector('.barra') as HTMLElement;
       const alvo = aba('Científica');
 
-      alvo.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, clientX: 50, clientY: 20 }));
-      barra.dispatchEvent(new PointerEvent('pointermove', { bubbles: true, clientX: 300, clientY: 300 }));
+      alvo.dispatchEvent(
+        new PointerEvent('pointerdown', { bubbles: true, clientX: 50, clientY: 20 }),
+      );
+      barra.dispatchEvent(
+        new PointerEvent('pointermove', { bubbles: true, clientX: 300, clientY: 300 }),
+      );
       await fixture.whenStable();
 
       const janela = fixture.nativeElement.querySelector('.janela') as HTMLElement;

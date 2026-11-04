@@ -1,4 +1,12 @@
-import { ChangeDetectionStrategy, Component, effect, inject, input, signal, ViewEncapsulation } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  effect,
+  inject,
+  input,
+  signal,
+  ViewEncapsulation,
+} from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { KatexService } from '@shared/components/formula/services/katex.service';
 
@@ -36,8 +44,11 @@ export class Formula {
         if (geracaoAtual !== this.geracao) {
           return;
         }
-        if (bruto.includes("<span class=\"mord\">−</span>")) {
-          bruto = bruto.replaceAll("<span class=\"mord\">−</span>", "<span class=\"mord sinal-negativo\">−</span>")
+        if (bruto.includes('<span class="mord">−</span>')) {
+          bruto = bruto.replaceAll(
+            '<span class="mord">−</span>',
+            '<span class="mord sinal-negativo">−</span>',
+          );
         }
         // O HTML do KaTeX depende de `style` inline, que o sanitizador padrão
         // removeria. É seguro confiar nele: o LaTeX vem do código do projeto,
