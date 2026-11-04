@@ -1,0 +1,102 @@
+{
+  "altitudeKm": { "pt": "Altitude (km)", "fr": "Altitude (km)", "en": "Altitude (km)" },
+  "orbitasDeReferencia": {
+    "pt": "Órbitas de referência",
+    "fr": "Orbites de référence",
+    "en": "Reference orbits"
+  },
+  "ref400": {
+    "pt": "Estação Espacial Internacional",
+    "fr": "Station spatiale internationale",
+    "en": "International Space Station"
+  },
+  "ref550": {
+    "pt": "constelação Starlink",
+    "fr": "constellation Starlink",
+    "en": "Starlink constellation"
+  },
+  "ref20200": {
+    "pt": "satélites de GPS",
+    "fr": "satellites GPS",
+    "en": "GPS satellites"
+  },
+  "ref35786": {
+    "pt": "órbita geoestacionária",
+    "fr": "orbite géostationnaire",
+    "en": "geostationary orbit"
+  },
+  "gravidadeLocal": {
+    "pt": "Gravidade local",
+    "fr": "Gravité locale",
+    "en": "Local gravity"
+  },
+  "daSuperficie": {
+    "pt": "{valor} da superfície",
+    "fr": "{valor} de celle en surface",
+    "en": "{valor} of the surface value"
+  },
+  "velocidadeOrbital": {
+    "pt": "Velocidade orbital",
+    "fr": "Vitesse orbitale",
+    "en": "Orbital speed"
+  },
+  "velocidadeDeEscape": {
+    "pt": "Velocidade de escape daqui",
+    "fr": "Vitesse de libération d’ici",
+    "en": "Escape speed from here"
+  },
+  "raiz2VezesOrbital": {
+    "pt": "√2 × a orbital",
+    "fr": "√2 × l’orbitale",
+    "en": "√2 × the orbital one"
+  },
+  "gravidadeNaoAcaba": {
+    "pt": "A gravidade não \"acaba\" no espaço",
+    "fr": "La gravité ne « s’arrête » pas dans l’espace",
+    "en": "Gravity does not \"run out\" in space"
+  },
+  "descricaoGrafico": {
+    "pt": "Aceleração da gravidade em função da distância, em raios terrestres.",
+    "fr": "Accélération de la gravité en fonction de la distance, en rayons terrestres.",
+    "en": "Acceleration of gravity against distance, in Earth radii."
+  },
+  "curvaG": { "pt": "g(r)", "fr": "g(r)", "en": "g(r)" },
+  "pontoG": { "pt": "{valor} m/s²", "fr": "{valor} m/s²", "en": "{valor} m/s²" },
+  "naAltitudeDaEstacao": {
+    "pt": "Na altitude da Estação Espacial, a gravidade ainda vale <strong>{fracao}</strong> da que se sente no chão. Os astronautas não flutuam por falta de gravidade — eles flutuam porque estão em <strong>queda livre permanente</strong>, caindo junto com a estação.",
+    "fr": "À l’altitude de la Station spatiale, la gravité vaut encore <strong>{fracao}</strong> de celle ressentie au sol. Les astronautes ne flottent pas par manque de gravité — ils flottent parce qu’ils sont en <strong>chute libre permanente</strong>, tombant avec la station.",
+    "en": "At the altitude of the Space Station, gravity is still <strong>{fracao}</strong> of what you feel on the ground. Astronauts do not float for lack of gravity — they float because they are in <strong>permanent free fall</strong>, falling along with the station."
+  },
+  "orbitaECair": {
+    "pt": "Órbita é cair para sempre",
+    "fr": "Une orbite, c’est tomber sans fin",
+    "en": "An orbit is falling forever"
+  },
+  "aMassaDoSatelite": {
+    "pt": "A massa do satélite se cancela na dedução: um parafuso solto e a Estação Espacial orbitam à mesma velocidade na mesma altitude. E note que órbitas mais altas são mais <em>lentas</em> — subir custa energia e ainda reduz a velocidade.",
+    "fr": "La masse du satellite se simplifie dans la démonstration : un boulon détaché et la Station spatiale orbitent à la même vitesse à la même altitude. Et notez que les orbites plus hautes sont plus <em>lentes</em> — monter coûte de l’énergie et réduit encore la vitesse.",
+    "en": "The satellite's mass cancels out in the derivation: a loose bolt and the Space Station orbit at the same speed at the same altitude. And note that higher orbits are <em>slower</em> — climbing costs energy and lowers the speed as well."
+  },
+  "keplerConfere": {
+    "pt": "Kepler confere com Newton",
+    "fr": "Kepler s’accorde avec Newton",
+    "en": "Kepler agrees with Newton"
+  },
+  "partindoDaOrbita": {
+    "pt": "Partindo da órbita de 400 km, a terceira lei de Kepler prevê o período nesta altitude como <strong>{kepler}</strong>; o cálculo direto deu <strong>{direto}</strong>. Kepler obteve essa relação de dados observacionais décadas antes de Newton deduzi-la — e foi essa coincidência que fundou a confiança na gravitação.",
+    "fr": "En partant de l’orbite de 400 km, la troisième loi de Kepler prévoit à cette altitude une période de <strong>{kepler}</strong> ; le calcul direct donne <strong>{direto}</strong>. Kepler a tiré cette relation de données d’observation des décennies avant que Newton ne la déduise — et c’est cette coïncidence qui a fondé la confiance en la gravitation.",
+    "en": "Starting from the 400 km orbit, Kepler's third law predicts a period at this altitude of <strong>{kepler}</strong>; the direct calculation gives <strong>{direto}</strong>. Kepler drew that relation from observational data decades before Newton derived it — and it was that agreement that founded trust in gravitation."
+  },
+  "escaparCustaPouco": {
+    "pt": "Escapar custa pouco mais que orbitar",
+    "fr": "S’échapper coûte à peine plus que d’orbiter",
+    "en": "Escaping costs little more than orbiting"
+  },
+  "apenas41": {
+    "pt": "Apenas 41% mais velocidade separa orbitar de escapar da Terra para sempre. Parece pouco — mas, pela equação de Tsiolkovsky, esse acréscimo de velocidade exige muito mais combustível do que a proporção sugere.",
+    "fr": "Seulement 41 % de vitesse en plus séparent orbiter de quitter la Terre pour toujours. Cela paraît peu — mais, d’après l’équation de Tsiolkovski, ce supplément de vitesse exige bien plus de carburant que la proportion ne le suggère.",
+    "en": "Only 41% more speed separates orbiting from leaving Earth forever. It sounds small — but by Tsiolkovsky's equation that extra speed demands far more fuel than the proportion suggests."
+  },
+  "horas": { "pt": "{valor} h", "fr": "{valor} h", "en": "{valor} h" },
+  "minutos": { "pt": "{valor} min", "fr": "{valor} min", "en": "{valor} min" }
+}

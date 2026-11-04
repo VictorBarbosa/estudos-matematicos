@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/estatica-e-torque/estatica-e-torque.i18n.json';
 import { geradorTorque } from '@features/fisica/estatica-e-torque/estatica-e-torque.gerador';
 import { TEORIA_TORQUE } from '@features/fisica/estatica-e-torque/estatica-e-torque.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_TORQUE } from '@features/fisica/estatica-e-torque/estatica-e-tor
   styleUrl: './estatica-e-torque.scss',
 })
 export class EstaticaETorque {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorTorque;
   protected readonly conceitos = TEORIA_TORQUE.map((teoria) => teoria.id);
 
@@ -84,7 +89,14 @@ export class EstaticaETorque {
 
     return [
       // O braço, do eixo até o ponto de aplicação.
-      { x1: 0, y1: 0, x2: ponta.x, y2: ponta.y, cor: 'texto-suave', rotulo: 'braço r' },
+      {
+        x1: 0,
+        y1: 0,
+        x2: ponta.x,
+        y2: ponta.y,
+        cor: 'texto-suave',
+        rotulo: this.texto('segBraco'),
+      },
       // A força aplicada, no ângulo escolhido.
       {
         x1: ponta.x,
@@ -117,12 +129,12 @@ export class EstaticaETorque {
 
   /** A barra com os dois corpos e o centro de massa marcado. */
   protected readonly pontosCentro = computed<readonly PontoPlot[]>(() => [
-    { x: 0, y: 0, rotulo: `${this.massa1()} kg`, cor: 'serie-1' },
-    { x: 10, y: 0, rotulo: `${this.massa2()} kg`, cor: 'serie-2' },
+    { x: 0, y: 0, rotulo: this.texto('pontoKg', { massa: this.massa1() }), cor: 'serie-1' },
+    { x: 10, y: 0, rotulo: this.texto('pontoKg', { massa: this.massa2() }), cor: 'serie-2' },
     {
       x: this.centroMassa().resultado,
       y: 0,
-      rotulo: `centro de massa`,
+      rotulo: this.texto('pontoCentroDeMassa'),
       cor: 'acento',
     },
   ]);

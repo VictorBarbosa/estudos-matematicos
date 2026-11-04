@@ -17,15 +17,19 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.i18n.json';
 import { geradorGravitacao } from '@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.gerador';
 import { TEORIA_GRAVITACAO } from '@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.teoria';
 
 /** Órbitas de referência, para situar a altitude escolhida. */
-const REFERENCIAS: readonly { readonly altitudeKm: number; readonly nome: string }[] = [
-  { altitudeKm: 400, nome: 'Estação Espacial Internacional' },
-  { altitudeKm: 550, nome: 'constelação Starlink' },
-  { altitudeKm: 20_200, nome: 'satélites de GPS' },
-  { altitudeKm: 35_786, nome: 'órbita geoestacionária' },
+/** As altitudes notáveis; o nome de cada uma vive no dicionário do tópico. */
+const REFERENCIAS: readonly { readonly altitudeKm: number }[] = [
+  { altitudeKm: 400 },
+  { altitudeKm: 550 },
+  { altitudeKm: 20_200 },
+  { altitudeKm: 35_786 },
 ];
 
 @Component({
@@ -44,6 +48,8 @@ const REFERENCIAS: readonly { readonly altitudeKm: number; readonly nome: string
   styleUrl: './gravitacao-e-orbitas.scss',
 })
 export class GravitacaoEOrbitas {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorGravitacao;
   protected readonly conceitos = TEORIA_GRAVITACAO.map((teoria) => teoria.id);
   protected readonly referencias = REFERENCIAS;
@@ -99,7 +105,7 @@ export class GravitacaoEOrbitas {
     {
       fn: (raios) => (raios < 1 ? Number.NaN : (G * MASSA_TERRA) / (raios * RAIO_TERRA) ** 2),
       cor: 'serie-1',
-      rotulo: 'g(r)',
+      rotulo: this.texto('curvaG'),
     },
   ]);
 
@@ -107,7 +113,7 @@ export class GravitacaoEOrbitas {
     {
       x: (RAIO_TERRA + this.altitude()) / RAIO_TERRA,
       y: this.gravidade().resultado,
-      rotulo: `${this.formatar(this.gravidade().resultado)} m/s²`,
+      rotulo: this.texto('pontoG', { valor: this.formatar(this.gravidade().resultado) }),
       cor: 'acento',
     },
   ]);
@@ -128,7 +134,9 @@ export class GravitacaoEOrbitas {
 
   protected formatarPeriodo(segundos: number): string {
     const horas = segundos / 3600;
-    return horas >= 2 ? `${this.formatar(horas)} h` : `${this.formatar(segundos / 60)} min`;
+    return horas >= 2
+      ? this.texto('horas', { valor: this.formatar(horas) })
+      : this.texto('minutos', { valor: this.formatar(segundos / 60) });
   }
 
   protected percentual(valor: number): string {

@@ -1,0 +1,72 @@
+{
+  "amplitudeEmDecimos": {
+    "pt": "Amplitude (em décimos de m)",
+    "fr": "Amplitude (en dixièmes de m)",
+    "en": "Amplitude (in tenths of a metre)"
+  },
+  "dicaAmplitude": { "pt": "A = {valor} m", "fr": "A = {valor} m", "en": "A = {valor} m" },
+  "constanteDaMola": {
+    "pt": "Constante da mola k (N/m)",
+    "fr": "Constante du ressort k (N/m)",
+    "en": "Spring constant k (N/m)"
+  },
+  "naoDependeDaAmplitude": {
+    "pt": "não depende da amplitude",
+    "fr": "ne dépend pas de l’amplitude",
+    "en": "does not depend on the amplitude"
+  },
+  "frequenciaAngular": {
+    "pt": "Frequência angular",
+    "fr": "Pulsation",
+    "en": "Angular frequency"
+  },
+  "radS": { "pt": "rad/s", "fr": "rad/s", "en": "rad/s" },
+  "velocidadeMaxima": {
+    "pt": "Velocidade máxima",
+    "fr": "Vitesse maximale",
+    "en": "Maximum speed"
+  },
+  "msNoCentro": {
+    "pt": "m/s, no centro",
+    "fr": "m/s, au centre",
+    "en": "m/s, at the centre"
+  },
+  "aceleracaoMaxima": {
+    "pt": "Aceleração máxima",
+    "fr": "Accélération maximale",
+    "en": "Maximum acceleration"
+  },
+  "ms2NosExtremos": {
+    "pt": "m/s², nos extremos",
+    "fr": "m/s², aux extrémités",
+    "en": "m/s², at the ends"
+  },
+  "asTresGrandezas": {
+    "pt": "As três grandezas ao longo do tempo",
+    "fr": "Les trois grandeurs au fil du temps",
+    "en": "The three quantities over time"
+  },
+  "curvaPosicao": { "pt": "posição", "fr": "position", "en": "position" },
+  "curvaVelocidade": { "pt": "velocidade", "fr": "vitesse", "en": "velocity" },
+  "curvaAceleracao": { "pt": "aceleração", "fr": "accélération", "en": "acceleration" },
+  "descricaoGrafico": {
+    "pt": "Posição, velocidade e aceleração ao longo de dois períodos de {periodo} segundos cada.",
+    "fr": "Position, vitesse et accélération sur deux périodes de {periodo} secondes chacune.",
+    "en": "Position, velocity and acceleration over two periods of {periodo} seconds each."
+  },
+  "repareNasDefasagens": {
+    "pt": "Repare nas defasagens: onde a posição é máxima, a velocidade é zero — o corpo parou para voltar. E a aceleração está sempre em oposição à posição, apontando de volta ao centro. Cada derivada adianta a onda em um quarto de período.",
+    "fr": "Remarquez les déphasages : là où la position est maximale, la vitesse est nulle — le corps s’est arrêté pour repartir. Et l’accélération est toujours opposée à la position, pointant vers le centre. Chaque dérivée avance l’onde d’un quart de période.",
+    "en": "Notice the phase shifts: where the position is largest, the velocity is zero — the body has stopped to come back. And the acceleration always opposes the position, pointing back to the centre. Each derivative advances the wave by a quarter period."
+  },
+  "mexaSoNaAmplitude": {
+    "pt": "Mexa só na amplitude",
+    "fr": "Ne changez que l’amplitude",
+    "en": "Change only the amplitude"
+  },
+  "altereAAmplitude": {
+    "pt": "Altere a amplitude e observe o período: ele não muda. Esse é o fato que torna o oscilador harmônico útil como relógio — a marcação do tempo independe de quão forte foi o impulso inicial. Já alterar a massa ou a rigidez da mola muda tudo.",
+    "fr": "Modifiez l’amplitude et observez la période : elle ne change pas. C’est ce fait qui rend l’oscillateur harmonique utile comme horloge — la mesure du temps ne dépend pas de la force de l’impulsion initiale. Changer la masse ou la raideur du ressort, en revanche, change tout.",
+    "en": "Change the amplitude and watch the period: it does not move. That fact is what makes the harmonic oscillator useful as a clock — the timekeeping does not depend on how hard the initial push was. Changing the mass or the stiffness of the spring, on the other hand, changes everything."
+  }
+}

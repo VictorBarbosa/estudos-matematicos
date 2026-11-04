@@ -1,37 +1,42 @@
 <app-topico-layout topicoId="dinamica-rotacional">
   <div explorar class="explorar">
     <section class="painel">
-      <h2>O dicionário</h2>
+      <h2>{{ texto('oDicionario') }}</h2>
       <app-formula
         [tex]="'F = ma \\quad\\longleftrightarrow\\quad \\tau = I\\alpha'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Nada aqui é teoria nova: é a mecânica de sempre escrita em outras variáveis. Massa vira
-        momento de inércia, força vira torque, aceleração vira aceleração angular. O que não se
-        traduz é o detalhe decisivo — a inércia depende de ONDE a massa está, não só de quanto ela
-        é.
-      </p>
+      <p class="observacao">{{ texto('nadaAquiETeoria') }}</p>
     </section>
 
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="escolha"
-        rotulo="Corpo (0 partícula · 2 disco · 3 esfera · 5 barra)"
+        [rotulo]="texto('corpoEscolha')"
         [min]="0"
         [max]="6"
       />
-      <app-controle-parametro [(valor)]="massa" rotulo="Massa (kg)" [min]="1" [max]="20" />
+      <app-controle-parametro
+        [(valor)]="massa"
+        [rotulo]="i18n.t('explorar.massaKg')"
+        [min]="1"
+        [max]="20"
+      />
       <app-controle-parametro
         [(valor)]="decimosDoRaio"
-        rotulo="Raio, em décimos de metro"
+        [rotulo]="i18n.t('explorar.raioDecimos')"
         [min]="1"
         [max]="30"
       />
-      <app-controle-parametro [(valor)]="torque" rotulo="Torque (N·m)" [min]="1" [max]="40" />
+      <app-controle-parametro
+        [(valor)]="torque"
+        [rotulo]="texto('torqueNm')"
+        [min]="1"
+        [max]="40"
+      />
       <app-controle-parametro
         [(valor)]="decimosDaAltura"
-        rotulo="Desnível da rampa, em décimos de metro"
+        [rotulo]="texto('desnivelDaRampa')"
         [min]="5"
         [max]="60"
       />
@@ -43,53 +48,47 @@
 
     <section class="indicadores">
       <div class="indicador">
-        <span class="rotulo">Corpo</span>
-        <strong>{{ corpo().nome }}</strong>
-        <span class="legenda">{{ corpo().observacao }}</span>
+        <span class="rotulo">{{ texto('corpo') }}</span>
+        <strong>{{ i18n.t('corpo.' + corpo().nome) }}</strong>
+        <span class="legenda">{{ i18n.t('corpoObs.' + corpo().nome) }}</span>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Momento de inércia</span>
+        <span class="rotulo">{{ texto('momentoDeInercia') }}</span>
         <strong>{{ formatar(inercia()) }} kg·m²</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Aceleração angular</span>
+        <span class="rotulo">{{ texto('aceleracaoAngular') }}</span>
         <strong>{{ formatar(aceleracaoAngular()) }} rad/s²</strong>
-        <span class="legenda">torque dividido pela inércia</span>
+        <span class="legenda">{{ texto('torqueDivididoPela') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>Como a inércia cresce com o raio</h2>
+      <h2>{{ texto('comoAInerciaCresce') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
         [descricao]="descricaoGrafico()"
         [altura]="340"
       />
-      <p class="observacao">
-        Todas as curvas são parábolas, porque o raio entra ao quadrado. O que separa uma da outra é
-        apenas o fator de forma — e é por isso que afastar massa do eixo é a maneira mais barata de
-        aumentar a resistência ao giro.
-      </p>
+      <p class="observacao">{{ texto('todasAsCurvas') }}</p>
     </section>
 
     <section class="painel corrida">
-      <h2>A corrida da rampa</h2>
+      <h2>{{ texto('aCorridaDaRampa') }}</h2>
       <ol>
         @for (item of corrida(); track item.nome) {
           <li>
-            <span>{{ item.nome }}</span>
+            <span>{{ i18n.t('corpo.' + item.nome) }}</span>
             <strong>{{ formatar(item.velocidade) }} m/s</strong>
-            <span class="legenda"
-              >{{ formatar(item.fracaoRotacional) }}% da energia na rotação</span
-            >
+            <span class="legenda">
+              {{ texto('daEnergiaNaRotacao', { valor: formatar(item.fracaoRotacional) }) }}
+            </span>
           </li>
         }
       </ol>
       <p class="observacao">
-        Quem apenas deslizasse, sem girar, chegaria a {{ formatar(deslizando()) }} metros por
-        segundo. Todos os que rolam chegam mais devagar, porque parte da energia foi para a rotação
-        — e a ordem de chegada não muda com a massa nem com o raio, só com o formato.
+        {{ texto('quemApenasDeslizasse', { valor: formatar(deslizando()) }) }}
       </p>
     </section>
 

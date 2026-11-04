@@ -1,6 +1,6 @@
 <app-topico-layout topicoId="impulso-e-momento">
   <div explorar class="explorar">
-    <section class="seletor-pills" role="group" aria-label="Tipo de colisão">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('tipoDeColisao')">
       @for (opcao of tipos; track opcao.id) {
         <button
           type="button"
@@ -8,23 +8,23 @@
           [attr.aria-pressed]="tipo() === opcao.id"
           (click)="selecionarTipo(opcao.id)"
         >
-          {{ opcao.rotulo }}
+          {{ texto(opcao.id) }}
         </button>
       }
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="massaA" rotulo="Massa A (kg)" [min]="1" [max]="12" />
+      <app-controle-parametro [(valor)]="massaA" [rotulo]="texto('massaA')" [min]="1" [max]="12" />
       <app-controle-parametro
         [(valor)]="velocidadeA"
-        rotulo="Velocidade A (m/s)"
+        [rotulo]="texto('velocidadeA')"
         [min]="-20"
         [max]="20"
       />
-      <app-controle-parametro [(valor)]="massaB" rotulo="Massa B (kg)" [min]="1" [max]="12" />
+      <app-controle-parametro [(valor)]="massaB" [rotulo]="texto('massaB')" [min]="1" [max]="12" />
       <app-controle-parametro
         [(valor)]="velocidadeB"
-        rotulo="Velocidade B (m/s)"
+        [rotulo]="texto('velocidadeB')"
         [min]="-20"
         [max]="20"
       />
@@ -32,73 +32,71 @@
 
     <section class="destaque-formula">
       <app-formula [tex]="momentoTex()" [bloco]="true" />
-      <p class="observacao">
-        O momento total é o mesmo antes e depois — em qualquer tipo de colisão.
-      </p>
+      <p class="observacao">{{ texto('oMomentoTotal') }}</p>
     </section>
 
     <section>
-      <h2>Velocidades antes e depois</h2>
+      <h2>{{ texto('velocidadesAntesDepois') }}</h2>
       <app-math-plot
         [dominio]="dominioColisao()"
         [segmentos]="segmentos()"
         [mostrarEixoY]="false"
-        descricao="Vetores de velocidade dos dois corpos, antes e depois da colisão."
+        [descricao]="texto('descricaoColisao')"
         [altura]="300"
       />
     </section>
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Momento antes</span>
+        <span class="rotulo">{{ texto('momentoAntes') }}</span>
         <strong>{{ formatar(momentoAntes()) }}</strong>
       </div>
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Momento depois</span>
+        <span class="rotulo">{{ texto('momentoDepois') }}</span>
         <strong>{{ formatar(momentoDepois()) }}</strong>
-        <span class="legenda">sempre igual</span>
+        <span class="legenda">{{ texto('sempreIgual') }}</span>
       </div>
       <div class="indicador">
-        <span class="rotulo">Energia antes</span>
+        <span class="rotulo">{{ i18n.t('explorar.energiaAntes') }}</span>
         <strong>{{ formatar(colisao().resultado.energiaAntes) }} J</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Energia depois</span>
+        <span class="rotulo">{{ i18n.t('explorar.energiaDepois') }}</span>
         <strong>{{ formatar(colisao().resultado.energiaDepois) }} J</strong>
         <span class="legenda">
-          {{ energiaPerdida() > 0.01 ? formatar(energiaPerdida()) + ' J perdidos' : 'conservada' }}
+          {{
+            energiaPerdida() > 0.01
+              ? texto('jPerdidos', { valor: formatar(energiaPerdida()) })
+              : texto('conservada')
+          }}
         </span>
       </div>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="colisao().passos" />
-      <p class="observacao">
-        Troque entre os dois tipos de colisão acima e compare os indicadores: o momento nunca muda,
-        a energia só se conserva na elástica. São dois princípios independentes, e confundi-los é o
-        erro mais comum do assunto.
-      </p>
+      <p class="observacao">{{ texto('troqueEntreOsTipos') }}</p>
     </section>
 
     <section class="painel">
-      <h2>Por que o airbag funciona</h2>
+      <h2>{{ texto('porQueOAirbag') }}</h2>
       <div class="grade-controles">
         <app-controle-parametro
           [(valor)]="massaOcupante"
-          rotulo="Massa do ocupante (kg)"
+          [rotulo]="texto('massaOcupante')"
           [min]="40"
           [max]="120"
         />
         <app-controle-parametro
           [(valor)]="velocidadeImpacto"
-          rotulo="Velocidade no impacto (m/s)"
+          [rotulo]="texto('velocidadeImpacto')"
           [min]="5"
           [max]="30"
         />
         <app-controle-parametro
           [(valor)]="tempoParada"
-          rotulo="Tempo de parada (s)"
+          [rotulo]="texto('tempoParada')"
           [min]="0.05"
           [max]="1"
           [passo]="0.05"
@@ -108,39 +106,30 @@
       <app-math-plot
         [dominio]="dominioForca()"
         [curvas]="curvaForca()"
-        descricao="Força média necessária em função do tempo de parada."
+        [descricao]="texto('descricaoForca')"
         [altura]="340"
       />
 
       <div class="indicadores">
         <div class="indicador" data-destaque="true">
-          <span class="rotulo">Força média</span>
+          <span class="rotulo">{{ texto('forcaMedia') }}</span>
           <strong>{{ formatar(forcaMedia()) }} N</strong>
         </div>
         <div class="indicador">
-          <span class="rotulo">Variação de momento</span>
+          <span class="rotulo">{{ texto('variacaoDeMomento') }}</span>
           <strong>{{ formatar(massaOcupante() * velocidadeImpacto()) }} kg·m/s</strong>
-          <span class="legenda">fixa — não depende do airbag</span>
+          <span class="legenda">{{ texto('fixaNaoDepende') }}</span>
         </div>
       </div>
 
       <app-passo-a-passo [passos]="impulso().passos" />
-      <p class="observacao">
-        A variação de momento é a mesma com ou sem airbag: o corpo tem de parar. O que o airbag muda
-        é o <strong>tempo</strong>, e a curva acima mostra o resultado — a força despenca. Dobrar o
-        tempo de parada corta a força pela metade. É a mesma matemática do capacete, da zona de
-        deformação e do colchão sob o saltador.
-      </p>
+      <p class="observacao" [innerHTML]="texto('aVariacaoDeMomento')"></p>
     </section>
 
     <section class="painel">
-      <h2>E é assim que um foguete anda no vácuo</h2>
+      <h2>{{ texto('eAssimQueUmFoguete') }}</h2>
       <app-formula [tex]="'m\\,\\Delta v = -\\dot{m}\\,v_e\\,\\Delta t'" [bloco]="true" />
-      <p class="observacao">
-        Não há ar para empurrar no espaço — e não é preciso. O foguete joga massa para trás com alta
-        velocidade e, pela conservação do momento, ganha momento no sentido oposto. O gás é o "outro
-        corpo" da colisão.
-      </p>
+      <p class="observacao">{{ texto('naoHaArParaEmpurrar') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

@@ -8,6 +8,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/dinamica-rotacional/dinamica-rotacional.i18n.json';
 import { geradorDinamicaRotacional } from '@features/fisica/dinamica-rotacional/dinamica-rotacional.gerador';
 import { TEORIA_DINAMICA_ROTACIONAL } from '@features/fisica/dinamica-rotacional/dinamica-rotacional.teoria';
 
@@ -22,6 +25,8 @@ const QUE_ROLAM = CORPOS_RIGIDOS.filter((corpo) => corpo.nome !== 'partícula');
   styleUrl: './dinamica-rotacional.scss',
 })
 export class DinamicaRotacional {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorDinamicaRotacional;
   protected readonly conceitos = TEORIA_DINAMICA_ROTACIONAL.map((teoria) => teoria.id);
   protected readonly corpos = CORPOS_RIGIDOS;
@@ -65,16 +70,14 @@ export class DinamicaRotacional {
     return QUE_ROLAM.slice(0, 4).map((corpo, indice) => ({
       fn: (r: number) => corpo.fator * massa * r * r,
       cor: cores[indice],
-      rotulo: corpo.nome,
+      rotulo: this.i18n.t(`corpo.${corpo.nome}`),
     }));
   });
 
   protected readonly dominio = computed(() => ({ xMin: 0, xMax: 3 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Momento de inércia em função do raio, para ${this.massa()} quilogramas: todas crescem ` +
-      'com o quadrado do raio, e o que as separa é só o fator de forma.',
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { massa: this.massa() }),
   );
 
   constructor() {

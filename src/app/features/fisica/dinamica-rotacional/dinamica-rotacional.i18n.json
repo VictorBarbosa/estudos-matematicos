@@ -1,0 +1,65 @@
+{
+  "oDicionario": { "pt": "O dicionário", "fr": "Le dictionnaire", "en": "The dictionary" },
+  "nadaAquiETeoria": {
+    "pt": "Nada aqui é teoria nova: é a mecânica de sempre escrita em outras variáveis. Massa vira momento de inércia, força vira torque, aceleração vira aceleração angular. O que não se traduz é o detalhe decisivo — a inércia depende de ONDE a massa está, não só de quanto ela é.",
+    "fr": "Rien ici n’est une théorie nouvelle : c’est la mécanique habituelle écrite avec d’autres variables. La masse devient moment d’inertie, la force devient couple, l’accélération devient accélération angulaire. Ce qui ne se traduit pas est le détail décisif — l’inertie dépend d’OÙ se trouve la masse, pas seulement de sa valeur.",
+    "en": "Nothing here is new theory: it is the usual mechanics written in other variables. Mass becomes moment of inertia, force becomes torque, acceleration becomes angular acceleration. What does not translate is the decisive detail — the inertia depends on WHERE the mass is, not only on how much there is."
+  },
+  "corpoEscolha": {
+    "pt": "Corpo (0 partícula · 2 disco · 3 esfera · 5 barra)",
+    "fr": "Corps (0 particule · 2 disque · 3 sphère · 5 barre)",
+    "en": "Body (0 particle · 2 disc · 3 sphere · 5 rod)"
+  },
+  "torqueNm": { "pt": "Torque (N·m)", "fr": "Couple (N·m)", "en": "Torque (N·m)" },
+  "desnivelDaRampa": {
+    "pt": "Desnível da rampa, em décimos de metro",
+    "fr": "Dénivelé de la rampe, en dixièmes de mètre",
+    "en": "Drop of the ramp, in tenths of a metre"
+  },
+  "corpo": { "pt": "Corpo", "fr": "Corps", "en": "Body" },
+  "momentoDeInercia": {
+    "pt": "Momento de inércia",
+    "fr": "Moment d’inertie",
+    "en": "Moment of inertia"
+  },
+  "aceleracaoAngular": {
+    "pt": "Aceleração angular",
+    "fr": "Accélération angulaire",
+    "en": "Angular acceleration"
+  },
+  "torqueDivididoPela": {
+    "pt": "torque dividido pela inércia",
+    "fr": "couple divisé par l’inertie",
+    "en": "torque divided by the inertia"
+  },
+  "comoAInerciaCresce": {
+    "pt": "Como a inércia cresce com o raio",
+    "fr": "Comment l’inertie croît avec le rayon",
+    "en": "How the inertia grows with the radius"
+  },
+  "descricaoGrafico": {
+    "pt": "Momento de inércia em função do raio, para {massa} quilogramas: todas crescem com o quadrado do raio, e o que as separa é só o fator de forma.",
+    "fr": "Moment d’inertie en fonction du rayon, pour {massa} kilogrammes : toutes croissent avec le carré du rayon, et seul le facteur de forme les distingue.",
+    "en": "Moment of inertia against radius, for {massa} kilograms: all grow with the square of the radius, and only the shape factor separates them."
+  },
+  "todasAsCurvas": {
+    "pt": "Todas as curvas são parábolas, porque o raio entra ao quadrado. O que separa uma da outra é apenas o fator de forma — e é por isso que afastar massa do eixo é a maneira mais barata de aumentar a resistência ao giro.",
+    "fr": "Toutes les courbes sont des paraboles, parce que le rayon intervient au carré. Seul le facteur de forme les distingue — et c’est pourquoi éloigner la masse de l’axe est le moyen le moins coûteux d’augmenter la résistance à la rotation.",
+    "en": "Every curve is a parabola, because the radius enters squared. Only the shape factor separates them — and that is why moving mass away from the axis is the cheapest way to raise the resistance to turning."
+  },
+  "aCorridaDaRampa": {
+    "pt": "A corrida da rampa",
+    "fr": "La course de la rampe",
+    "en": "The ramp race"
+  },
+  "daEnergiaNaRotacao": {
+    "pt": "{valor}% da energia na rotação",
+    "fr": "{valor} % de l’énergie dans la rotation",
+    "en": "{valor}% of the energy in the rotation"
+  },
+  "quemApenasDeslizasse": {
+    "pt": "Quem apenas deslizasse, sem girar, chegaria a {valor} metros por segundo. Todos os que rolam chegam mais devagar, porque parte da energia foi para a rotação — e a ordem de chegada não muda com a massa nem com o raio, só com o formato.",
+    "fr": "Un corps qui glisserait seulement, sans tourner, arriverait à {valor} mètres par seconde. Tous ceux qui roulent arrivent plus lentement, parce qu’une part de l’énergie est passée dans la rotation — et l’ordre d’arrivée ne change ni avec la masse ni avec le rayon, seulement avec la forme.",
+    "en": "A body that merely slid, without turning, would arrive at {valor} metres per second. Everything that rolls arrives slower, because part of the energy went into the rotation — and the finishing order changes with neither the mass nor the radius, only the shape."
+  }
+}

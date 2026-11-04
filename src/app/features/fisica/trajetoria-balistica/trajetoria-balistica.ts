@@ -17,6 +17,9 @@ import {
   alcanceDe,
   geradorBalistica,
 } from '@features/fisica/trajetoria-balistica/trajetoria-balistica.gerador';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/trajetoria-balistica/trajetoria-balistica.i18n.json';
 import { TEORIA_BALISTICA } from '@features/fisica/trajetoria-balistica/trajetoria-balistica.teoria';
 
 @Component({
@@ -35,6 +38,8 @@ import { TEORIA_BALISTICA } from '@features/fisica/trajetoria-balistica/trajetor
   styleUrl: './trajetoria-balistica.scss',
 })
 export class TrajetoriaBalistica {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorBalistica;
   protected readonly conceitos = TEORIA_BALISTICA.map((teoria) => teoria.id);
 
@@ -87,13 +92,13 @@ export class TrajetoriaBalistica {
         // Corta a curva no ponto em que o projétil toca o chão.
         fn: (x) => (x < 0 || x > alcance ? Number.NaN : principal(x)),
         cor: 'serie-1',
-        rotulo: `${this.angulo()}°`,
+        rotulo: this.texto('curvaAngulo', { graus: this.angulo() }),
       },
       {
         fn: (x) => (x < 0 || x > alcanceComparacao ? Number.NaN : comparacao(x)),
         cor: 'serie-2',
         tracejada: true,
-        rotulo: `${this.anguloComparacao()}° (comparação)`,
+        rotulo: this.texto('curvaComparacao', { graus: this.anguloComparacao() }),
       },
     ];
   });
@@ -103,14 +108,19 @@ export class TrajetoriaBalistica {
     const xApice = alcance / 2;
 
     return [
-      { x: 0, y: this.altura(), rotulo: 'lançamento', cor: 'texto-suave' },
+      { x: 0, y: this.altura(), rotulo: this.texto('pontoLancamento'), cor: 'texto-suave' },
       {
         x: this.altura() === 0 ? xApice : this.dados().vx * this.dados().tempoNoApice,
         y: alturaMaxima,
-        rotulo: `h máx ${this.formatar(alturaMaxima)} m`,
+        rotulo: this.texto('pontoApice', { valor: this.formatar(alturaMaxima) }),
         cor: 'acento',
       },
-      { x: alcance, y: 0, rotulo: `${this.formatar(alcance)} m`, cor: 'acento' },
+      {
+        x: alcance,
+        y: 0,
+        rotulo: this.texto('pontoAlcance', { valor: this.formatar(alcance) }),
+        cor: 'acento',
+      },
     ];
   });
 
@@ -129,10 +139,11 @@ export class TrajetoriaBalistica {
     };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Trajetória parabólica atingindo ${this.formatar(this.dados().alturaMaxima)} metros de ` +
-      `altura e ${this.formatar(this.dados().alcance)} metros de alcance.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', {
+      altura: this.formatar(this.dados().alturaMaxima),
+      alcance: this.formatar(this.dados().alcance),
+    }),
   );
 
   constructor() {

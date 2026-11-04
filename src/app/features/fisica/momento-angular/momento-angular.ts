@@ -7,6 +7,9 @@ import { ControleParametro } from '@shared/components/controle-parametro/control
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot } from '@shared/components/math-plot/models/math-plot.model';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/momento-angular/momento-angular.i18n.json';
 import { geradorMomentoAngular } from '@features/fisica/momento-angular/momento-angular.gerador';
 import { TEORIA_MOMENTO_ANGULAR } from '@features/fisica/momento-angular/momento-angular.teoria';
 
@@ -18,6 +21,8 @@ import { TEORIA_MOMENTO_ANGULAR } from '@features/fisica/momento-angular/momento
   styleUrl: './momento-angular.scss',
 })
 export class MomentoAngular {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorMomentoAngular;
   protected readonly conceitos = TEORIA_MOMENTO_ANGULAR.map((teoria) => teoria.id);
 
@@ -63,11 +68,11 @@ export class MomentoAngular {
     const L = this.momentoAngular();
 
     return [
-      { fn: () => L, cor: 'serie-1', rotulo: 'momento angular (constante)' },
+      { fn: () => L, cor: 'serie-1', rotulo: this.texto('curvaMomento') },
       {
         fn: (inercia) => (inercia > 0.05 ? (L * L) / (2 * inercia) : Number.NaN),
         cor: 'acento',
-        rotulo: 'energia de rotação',
+        rotulo: this.texto('curvaEnergia'),
       },
     ];
   });
@@ -77,11 +82,7 @@ export class MomentoAngular {
     xMax: Math.max(this.inerciaInicial() * 1.3, 1),
   }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      'Em função do momento de inércia: o momento angular não muda, e a energia de rotação ' +
-      'cresce sem limite à medida que a massa se aproxima do eixo.',
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_MOMENTO_ANGULAR);

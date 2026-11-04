@@ -1,0 +1,99 @@
+{
+  "bracoR": { "pt": "Braço r (m)", "fr": "Bras r (m)", "en": "Lever arm r (m)" },
+  "anguloComBraco": {
+    "pt": "Ângulo com o braço (°)",
+    "fr": "Angle avec le bras (°)",
+    "en": "Angle with the arm (°)"
+  },
+  "soAComponente": {
+    "pt": "Só a componente perpendicular gira",
+    "fr": "Seule la composante perpendiculaire fait tourner",
+    "en": "Only the perpendicular component turns"
+  },
+  "descricaoTorque": {
+    "pt": "Braço, força aplicada e sua componente perpendicular.",
+    "fr": "Bras, force appliquée et sa composante perpendiculaire.",
+    "en": "Arm, applied force and its perpendicular component."
+  },
+  "segBraco": { "pt": "braço r", "fr": "bras r", "en": "arm r" },
+  "aSetaVerde": {
+    "pt": "A seta verde é a parte da força que realmente produz rotação. Leve o ângulo a 0° ou 180° e ela desaparece: a força passa a apontar ao longo do braço, comprimindo-o sem girar nada.",
+    "fr": "La flèche verte est la part de la force qui produit réellement la rotation. Amenez l’angle à 0° ou 180° et elle disparaît : la force pointe alors le long du bras, le comprimant sans rien faire tourner.",
+    "en": "The green arrow is the part of the force that actually produces rotation. Take the angle to 0° or 180° and it vanishes: the force then points along the arm, squeezing it without turning anything."
+  },
+  "torque": { "pt": "Torque", "fr": "Couple", "en": "Torque" },
+  "torqueMaximo": {
+    "pt": "Torque máximo possível",
+    "fr": "Couple maximal possible",
+    "en": "Largest possible torque"
+  },
+  "a90": { "pt": "a 90°", "fr": "à 90°", "en": "at 90°" },
+  "aproveitamento": {
+    "pt": "Aproveitamento",
+    "fr": "Rendement",
+    "en": "Effectiveness"
+  },
+  "senTheta": { "pt": "sen θ", "fr": "sin θ", "en": "sin θ" },
+  "aAlavanca": { "pt": "A alavanca", "fr": "Le levier", "en": "The lever" },
+  "forcaEsquerda": {
+    "pt": "Força à esquerda (N)",
+    "fr": "Force à gauche (N)",
+    "en": "Force on the left (N)"
+  },
+  "distanciaEsquerda": {
+    "pt": "Distância à esquerda (m)",
+    "fr": "Distance à gauche (m)",
+    "en": "Distance on the left (m)"
+  },
+  "forcaDireita": {
+    "pt": "Força à direita (N)",
+    "fr": "Force à droite (N)",
+    "en": "Force on the right (N)"
+  },
+  "reduzaAForca": {
+    "pt": "Reduza a força da direita e veja a distância necessária crescer na mesma proporção. Nada de energia é criado: o que se ganha em força se perde em deslocamento. Essa é a troca que toda máquina simples oferece.",
+    "fr": "Réduisez la force de droite et voyez la distance nécessaire croître dans la même proportion. Aucune énergie n’est créée : ce qu’on gagne en force, on le perd en déplacement. C’est le marché que propose toute machine simple.",
+    "en": "Reduce the force on the right and watch the required distance grow in the same proportion. No energy is created: what you gain in force you lose in displacement. That is the trade every simple machine offers."
+  },
+  "centroDeMassa": {
+    "pt": "Centro de massa",
+    "fr": "Centre de masse",
+    "en": "Centre of mass"
+  },
+  "massaEmZero": {
+    "pt": "Massa em x = 0 (kg)",
+    "fr": "Masse en x = 0 (kg)",
+    "en": "Mass at x = 0 (kg)"
+  },
+  "massaEmDez": {
+    "pt": "Massa em x = 10 (kg)",
+    "fr": "Masse en x = 10 (kg)",
+    "en": "Mass at x = 10 (kg)"
+  },
+  "descricaoBarra": {
+    "pt": "Barra com dois corpos e o centro de massa marcado.",
+    "fr": "Barre avec deux corps et le centre de masse marqué.",
+    "en": "Bar with two bodies and the centre of mass marked."
+  },
+  "pontoKg": { "pt": "{massa} kg", "fr": "{massa} kg", "en": "{massa} kg" },
+  "pontoCentroDeMassa": {
+    "pt": "centro de massa",
+    "fr": "centre de masse",
+    "en": "centre of mass"
+  },
+  "oCentroDeMassaFica": {
+    "pt": "O centro de massa fica em <strong>x = {x} m</strong>, sempre mais perto do corpo mais pesado. Um corpo tomba quando a vertical por esse ponto sai da base de apoio — é por isso que veículos largos e baixos são estáveis, e que um foguete alto e fino não se equilibra sem controle ativo.",
+    "fr": "Le centre de masse se trouve en <strong>x = {x} m</strong>, toujours plus près du corps le plus lourd. Un corps basculé quand la verticale passant par ce point sort de la base d’appui — c’est pourquoi les véhicules larges et bas sont stables, et qu’une fusée haute et fine ne tient pas en équilibre sans commande active.",
+    "en": "The centre of mass sits at <strong>x = {x} m</strong>, always closer to the heavier body. A body tips over when the vertical through that point leaves the base of support — which is why wide, low vehicles are stable, and a tall, slender rocket cannot balance without active control."
+  },
+  "forcaNulaNaoGarante": {
+    "pt": "Força resultante nula não garante equilíbrio",
+    "fr": "Une résultante nulle ne garantit pas l’équilibre",
+    "en": "Zero net force does not guarantee equilibrium"
+  },
+  "duasForcasIguais": {
+    "pt": "Duas forças iguais e opostas, aplicadas em pontos diferentes, têm resultante zero e ainda assim giram o corpo. É o binário. Por isso o equilíbrio estático exige <strong>duas</strong> condições, e esquecer a segunda é o erro mais frequente aqui.",
+    "fr": "Deux forces égales et opposées, appliquées en des points différents, ont une résultante nulle et font pourtant tourner le corps. C’est le couple de forces. Voilà pourquoi l’équilibre statique exige <strong>deux</strong> conditions, et oublier la seconde est l’erreur la plus fréquente ici.",
+    "en": "Two equal and opposite forces, applied at different points, have zero resultant and still turn the body. That is a couple. Which is why static equilibrium demands <strong>two</strong> conditions, and forgetting the second is the most frequent mistake here."
+  }
+}

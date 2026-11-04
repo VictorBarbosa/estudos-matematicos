@@ -1,0 +1,126 @@
+{
+  "tipoDeColisao": {
+    "pt": "Tipo de colisão",
+    "fr": "Type de collision",
+    "en": "Kind of collision"
+  },
+  "perfeitamente-inelastica": {
+    "pt": "Inelástica (seguem juntos)",
+    "fr": "Inélastique (ils repartent ensemble)",
+    "en": "Inelastic (they move off together)"
+  },
+  "elastica": {
+    "pt": "Elástica (sem perda)",
+    "fr": "Élastique (sans perte)",
+    "en": "Elastic (no loss)"
+  },
+  "massaA": { "pt": "Massa A (kg)", "fr": "Masse A (kg)", "en": "Mass A (kg)" },
+  "velocidadeA": {
+    "pt": "Velocidade A (m/s)",
+    "fr": "Vitesse A (m/s)",
+    "en": "Velocity A (m/s)"
+  },
+  "massaB": { "pt": "Massa B (kg)", "fr": "Masse B (kg)", "en": "Mass B (kg)" },
+  "velocidadeB": {
+    "pt": "Velocidade B (m/s)",
+    "fr": "Vitesse B (m/s)",
+    "en": "Velocity B (m/s)"
+  },
+  "oMomentoTotal": {
+    "pt": "O momento total é o mesmo antes e depois — em qualquer tipo de colisão.",
+    "fr": "La quantité de mouvement totale est la même avant et après — quel que soit le type de collision.",
+    "en": "The total momentum is the same before and after — in any kind of collision."
+  },
+  "velocidadesAntesDepois": {
+    "pt": "Velocidades antes e depois",
+    "fr": "Vitesses avant et après",
+    "en": "Velocities before and after"
+  },
+  "descricaoColisao": {
+    "pt": "Vetores de velocidade dos dois corpos, antes e depois da colisão.",
+    "fr": "Vecteurs vitesse des deux corps, avant et après la collision.",
+    "en": "Velocity vectors of the two bodies, before and after the collision."
+  },
+  "segAAntes": { "pt": "A antes", "fr": "A avant", "en": "A before" },
+  "segBAntes": { "pt": "B antes", "fr": "B avant", "en": "B before" },
+  "segADepois": { "pt": "A depois", "fr": "A après", "en": "A after" },
+  "segBDepois": { "pt": "B depois", "fr": "B après", "en": "B after" },
+  "momentoAntes": {
+    "pt": "Momento antes",
+    "fr": "Quantité de mouvement avant",
+    "en": "Momentum before"
+  },
+  "momentoDepois": {
+    "pt": "Momento depois",
+    "fr": "Quantité de mouvement après",
+    "en": "Momentum after"
+  },
+  "sempreIgual": { "pt": "sempre igual", "fr": "toujours égale", "en": "always equal" },
+  "jPerdidos": {
+    "pt": "{valor} J perdidos",
+    "fr": "{valor} J perdus",
+    "en": "{valor} J lost"
+  },
+  "conservada": { "pt": "conservada", "fr": "conservée", "en": "conserved" },
+  "troqueEntreOsTipos": {
+    "pt": "Troque entre os dois tipos de colisão acima e compare os indicadores: o momento nunca muda, a energia só se conserva na elástica. São dois princípios independentes, e confundi-los é o erro mais comum do assunto.",
+    "fr": "Passez d’un type de collision à l’autre ci-dessus et comparez les indicateurs : la quantité de mouvement ne change jamais, l’énergie ne se conserve que dans l’élastique. Ce sont deux principes indépendants, et les confondre est l’erreur la plus fréquente du sujet.",
+    "en": "Switch between the two kinds of collision above and compare the readouts: the momentum never changes, the energy is conserved only in the elastic one. They are two independent principles, and mixing them up is the most common mistake here."
+  },
+  "porQueOAirbag": {
+    "pt": "Por que o airbag funciona",
+    "fr": "Pourquoi le coussin gonflable fonctionne",
+    "en": "Why the airbag works"
+  },
+  "massaOcupante": {
+    "pt": "Massa do ocupante (kg)",
+    "fr": "Masse de l’occupant (kg)",
+    "en": "Mass of the occupant (kg)"
+  },
+  "velocidadeImpacto": {
+    "pt": "Velocidade no impacto (m/s)",
+    "fr": "Vitesse à l’impact (m/s)",
+    "en": "Speed at impact (m/s)"
+  },
+  "tempoParada": {
+    "pt": "Tempo de parada (s)",
+    "fr": "Temps d’arrêt (s)",
+    "en": "Stopping time (s)"
+  },
+  "descricaoForca": {
+    "pt": "Força média necessária em função do tempo de parada.",
+    "fr": "Force moyenne nécessaire en fonction du temps d’arrêt.",
+    "en": "Average force needed as a function of the stopping time."
+  },
+  "curvaForcaMedia": {
+    "pt": "força média",
+    "fr": "force moyenne",
+    "en": "average force"
+  },
+  "forcaMedia": { "pt": "Força média", "fr": "Force moyenne", "en": "Average force" },
+  "variacaoDeMomento": {
+    "pt": "Variação de momento",
+    "fr": "Variation de quantité de mouvement",
+    "en": "Change in momentum"
+  },
+  "fixaNaoDepende": {
+    "pt": "fixa — não depende do airbag",
+    "fr": "fixe — ne dépend pas du coussin",
+    "en": "fixed — does not depend on the airbag"
+  },
+  "aVariacaoDeMomento": {
+    "pt": "A variação de momento é a mesma com ou sem airbag: o corpo tem de parar. O que o airbag muda é o <strong>tempo</strong>, e a curva acima mostra o resultado — a força despenca. Dobrar o tempo de parada corta a força pela metade. É a mesma matemática do capacete, da zona de deformação e do colchão sob o saltador.",
+    "fr": "La variation de quantité de mouvement est la même avec ou sans coussin : le corps doit s’arrêter. Ce que le coussin change, c’est le <strong>temps</strong>, et la courbe ci-dessus en montre le résultat — la force s’effondre. Doubler le temps d’arrêt divise la force par deux. C’est la même mathématique que le casque, la zone de déformation et le matelas sous le sauteur.",
+    "en": "The change in momentum is the same with or without an airbag: the body has to stop. What the airbag changes is the <strong>time</strong>, and the curve above shows the result — the force collapses. Doubling the stopping time halves the force. It is the same mathematics as the helmet, the crumple zone and the mat under the jumper."
+  },
+  "eAssimQueUmFoguete": {
+    "pt": "E é assim que um foguete anda no vácuo",
+    "fr": "Et c’est ainsi qu’une fusée avance dans le vide",
+    "en": "And this is how a rocket moves in vacuum"
+  },
+  "naoHaArParaEmpurrar": {
+    "pt": "Não há ar para empurrar no espaço — e não é preciso. O foguete joga massa para trás com alta velocidade e, pela conservação do momento, ganha momento no sentido oposto. O gás é o \"outro corpo\" da colisão.",
+    "fr": "Il n’y a pas d’air à pousser dans l’espace — et ce n’est pas nécessaire. La fusée éjecte de la masse vers l’arrière à grande vitesse et, par conservation de la quantité de mouvement, en gagne dans le sens opposé. Le gaz est « l’autre corps » de la collision.",
+    "en": "There is no air to push against in space — and none is needed. The rocket throws mass backwards at high speed and, by conservation of momentum, gains momentum the other way. The gas is the \"other body\" of the collision."
+  }
+}

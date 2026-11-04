@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/movimento-harmonico/movimento-harmonico.i18n.json';
 import { geradorMhs } from '@features/fisica/movimento-harmonico/movimento-harmonico.gerador';
 import { TEORIA_MHS } from '@features/fisica/movimento-harmonico/movimento-harmonico.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_MHS } from '@features/fisica/movimento-harmonico/movimento-harmo
   styleUrl: './movimento-harmonico.scss',
 })
 export class MovimentoHarmonico {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorMhs;
   protected readonly conceitos = TEORIA_MHS.map((teoria) => teoria.id);
 
@@ -58,13 +63,17 @@ export class MovimentoHarmonico {
     const w = this.oscilacao().frequenciaAngular;
 
     return [
-      { fn: (t) => A * Math.cos(w * t), cor: 'serie-1', rotulo: 'posição' },
-      { fn: (t) => -A * w * Math.sin(w * t), cor: 'serie-2', rotulo: 'velocidade' },
+      { fn: (t) => A * Math.cos(w * t), cor: 'serie-1', rotulo: this.texto('curvaPosicao') },
+      {
+        fn: (t) => -A * w * Math.sin(w * t),
+        cor: 'serie-2',
+        rotulo: this.texto('curvaVelocidade'),
+      },
       {
         fn: (t) => -A * w * w * Math.cos(w * t),
         cor: 'serie-3',
         tracejada: true,
-        rotulo: 'aceleração',
+        rotulo: this.texto('curvaAceleracao'),
       },
     ];
   });
@@ -90,10 +99,8 @@ export class MovimentoHarmonico {
     };
   });
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      `Posição, velocidade e aceleração ao longo de dois períodos de ` +
-      `${this.formatar(this.oscilacao().periodo)} segundos cada.`,
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { periodo: this.formatar(this.oscilacao().periodo) }),
   );
 
   constructor() {

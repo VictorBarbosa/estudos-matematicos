@@ -1,0 +1,82 @@
+{
+  "anguloGraus": { "pt": "Ângulo (graus)", "fr": "Angle (degrés)", "en": "Angle (degrees)" },
+  "alturaInicial": {
+    "pt": "Altura inicial (m)",
+    "fr": "Hauteur initiale (m)",
+    "en": "Initial height (m)"
+  },
+  "anguloComparacao": {
+    "pt": "Ângulo de comparação",
+    "fr": "Angle de comparaison",
+    "en": "Comparison angle"
+  },
+  "alcance": { "pt": "Alcance", "fr": "Portée", "en": "Range" },
+  "alturaMaxima": {
+    "pt": "Altura máxima",
+    "fr": "Hauteur maximale",
+    "en": "Maximum height"
+  },
+  "tempoDeVoo": { "pt": "Tempo de voo", "fr": "Temps de vol", "en": "Time of flight" },
+  "componentes": { "pt": "Componentes", "fr": "Composantes", "en": "Components" },
+  "horizontalVertical": {
+    "pt": "horizontal / vertical",
+    "fr": "horizontale / verticale",
+    "en": "horizontal / vertical"
+  },
+  "aTrajetoria": { "pt": "A trajetória", "fr": "La trajectoire", "en": "The trajectory" },
+  "curvaAngulo": { "pt": "{graus}°", "fr": "{graus}°", "en": "{graus}°" },
+  "curvaComparacao": {
+    "pt": "{graus}° (comparação)",
+    "fr": "{graus}° (comparaison)",
+    "en": "{graus}° (comparison)"
+  },
+  "pontoLancamento": { "pt": "lançamento", "fr": "lancement", "en": "launch" },
+  "pontoApice": { "pt": "h máx {valor} m", "fr": "h max {valor} m", "en": "max h {valor} m" },
+  "pontoAlcance": { "pt": "{valor} m", "fr": "{valor} m", "en": "{valor} m" },
+  "descricaoGrafico": {
+    "pt": "Trajetória parabólica atingindo {altura} metros de altura e {alcance} metros de alcance.",
+    "fr": "Trajectoire parabolique atteignant {altura} mètres de hauteur et {alcance} mètres de portée.",
+    "en": "Parabolic trajectory reaching {altura} metres high and {alcance} metres in range."
+  },
+  "aCurvaEUmaParabola": {
+    "pt": "A curva é uma parábola — a mesma função quadrática do ensino médio, agora saindo da física. Compare dois ângulos complementares, como 30° e 60°: com altura inicial zero, eles alcançam exatamente a mesma distância, por caminhos bem diferentes.",
+    "fr": "La courbe est une parabole — la même fonction quadratique qu’au secondaire, mais issue de la physique. Comparez deux angles complémentaires, comme 30° et 60° : avec une hauteur initiale nulle, ils atteignent exactement la même distance, par des chemins bien différents.",
+    "en": "The curve is a parabola — the same quadratic function from school, now coming out of physics. Compare two complementary angles, such as 30° and 60°: with zero initial height, they reach exactly the same distance, by very different paths."
+  },
+  "anguloAlcanceMaximo": {
+    "pt": "O ângulo de alcance máximo",
+    "fr": "L’angle de portée maximale",
+    "en": "The angle of maximum range"
+  },
+  "anguloOtimo": { "pt": "Ângulo ótimo", "fr": "Angle optimal", "en": "Optimal angle" },
+  "alcanceDe": {
+    "pt": "alcance de {valor} m",
+    "fr": "portée de {valor} m",
+    "en": "range of {valor} m"
+  },
+  "usarOtimo": {
+    "pt": "Usar o ângulo ótimo",
+    "fr": "Utiliser l’angle optimal",
+    "en": "Use the optimal angle"
+  },
+  "doChao": {
+    "pt": "Com lançamento do chão, o ótimo é exatamente 45°: aumentar o ângulo ganha tempo de voo mas perde velocidade horizontal, e 45° equilibra os dois efeitos.",
+    "fr": "Avec un lancement depuis le sol, l’optimum est exactement 45° : augmenter l’angle gagne du temps de vol mais perd de la vitesse horizontale, et 45° équilibre les deux effets.",
+    "en": "Launching from the ground, the optimum is exactly 45°: raising the angle buys flight time but loses horizontal speed, and 45° balances the two effects."
+  },
+  "deAltura": {
+    "pt": "Lançando de {altura} m de altura, o ângulo ótimo cai abaixo de 45° — o tempo extra de queda já vem de graça, então compensa privilegiar a velocidade horizontal.",
+    "fr": "En lançant depuis {altura} m de hauteur, l’angle optimal descend sous 45° — le temps de chute supplémentaire est déjà acquis, il vaut donc mieux privilégier la vitesse horizontale.",
+    "en": "Launching from {altura} m up, the optimal angle drops below 45° — the extra falling time comes for free, so it pays to favour horizontal speed."
+  },
+  "ondeOCurriculo": {
+    "pt": "Onde o currículo se encontra",
+    "fr": "Là où le programme se rejoint",
+    "en": "Where the curriculum comes together"
+  },
+  "estaUnicaEquacao": {
+    "pt": "Esta única equação usa trigonometria para decompor a velocidade, função quadrática para descrever a curva e derivada para encontrar o ponto mais alto. É o tópico em que quase tudo o que veio antes se junta.",
+    "fr": "Cette seule équation utilise la trigonométrie pour décomposer la vitesse, la fonction quadratique pour décrire la courbe et la dérivée pour trouver le point le plus haut. C’est le sujet où presque tout ce qui précède se rejoint.",
+    "en": "This single equation uses trigonometry to split the velocity, a quadratic function to describe the curve and a derivative to find the highest point. It is the topic where nearly everything that came before comes together."
+  }
+}

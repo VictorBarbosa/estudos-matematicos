@@ -1,0 +1,87 @@
+{
+  "semTorqueExterno": {
+    "pt": "Sem torque externo, o produto da inércia pela velocidade angular não muda. Diminuir a inércia obriga a velocidade angular a crescer na mesma proporção — é a patinadora que recolhe os braços, o satélite que se estabiliza girando e a estrela em colapso que vira um pulsar com rotações de milissegundos.",
+    "fr": "Sans couple extérieur, le produit de l’inertie par la vitesse angulaire ne change pas. Diminuer l’inertie oblige la vitesse angulaire à croître dans la même proportion — c’est la patineuse qui ramène les bras, le satellite qui se stabilise en tournant et l’étoile en effondrement qui devient un pulsar tournant en quelques millisecondes.",
+    "en": "With no external torque, the product of inertia and angular velocity does not change. Lowering the inertia forces the angular velocity up in the same proportion — it is the skater pulling in her arms, the satellite stabilising by spinning and the collapsing star becoming a pulsar turning in milliseconds."
+  },
+  "inerciaInicial": {
+    "pt": "Inércia inicial, em décimos de kg·m²",
+    "fr": "Inertie initiale, en dixièmes de kg·m²",
+    "en": "Initial inertia, in tenths of kg·m²"
+  },
+  "rotacaoInicial": {
+    "pt": "Rotação inicial, em décimos de rad/s",
+    "fr": "Rotation initiale, en dixièmes de rad/s",
+    "en": "Initial spin, in tenths of rad/s"
+  },
+  "inerciaRestante": {
+    "pt": "Inércia restante (%)",
+    "fr": "Inertie restante (%)",
+    "en": "Remaining inertia (%)"
+  },
+  "dicaRestante": {
+    "pt": "Abaixo de 100 é recolher a massa; acima, afastá-la.",
+    "fr": "En dessous de 100, on rapproche la masse ; au-dessus, on l’éloigne.",
+    "en": "Below 100 you pull the mass in; above, you push it out."
+  },
+  "momentoAngular": {
+    "pt": "Momento angular",
+    "fr": "Moment cinétique",
+    "en": "Angular momentum"
+  },
+  "oMesmoAntesEDepois": {
+    "pt": "o mesmo antes e depois",
+    "fr": "le même avant et après",
+    "en": "the same before and after"
+  },
+  "novaRotacao": {
+    "pt": "Nova rotação",
+    "fr": "Nouvelle rotation",
+    "en": "New spin"
+  },
+  "trabalhoRealizado": {
+    "pt": "Trabalho realizado",
+    "fr": "Travail effectué",
+    "en": "Work done"
+  },
+  "quemPuxou": {
+    "pt": "quem puxou a massa gastou isto",
+    "fr": "celui qui a tiré la masse a dépensé ceci",
+    "en": "whoever pulled the mass spent this"
+  },
+  "umSeConserva": {
+    "pt": "Um se conserva, o outro não",
+    "fr": "L’un se conserve, l’autre non",
+    "en": "One is conserved, the other is not"
+  },
+  "curvaMomento": {
+    "pt": "momento angular (constante)",
+    "fr": "moment cinétique (constant)",
+    "en": "angular momentum (constant)"
+  },
+  "curvaEnergia": {
+    "pt": "energia de rotação",
+    "fr": "énergie de rotation",
+    "en": "rotational energy"
+  },
+  "descricaoGrafico": {
+    "pt": "Em função do momento de inércia: o momento angular não muda, e a energia de rotação cresce sem limite à medida que a massa se aproxima do eixo.",
+    "fr": "En fonction du moment d’inertie : le moment cinétique ne change pas, et l’énergie de rotation croît sans borne à mesure que la masse se rapproche de l’axe.",
+    "en": "As a function of the moment of inertia: the angular momentum does not change, and the rotational energy grows without bound as the mass moves towards the axis."
+  },
+  "aRetaHorizontal": {
+    "pt": "A reta horizontal é o momento angular: ele não se mexe. A outra curva é a energia, que dispara quando a inércia encolhe. Não há violação de nada — puxar a massa para perto do eixo exige trabalho contra a força centrífuga, e esse trabalho entra no sistema.",
+    "fr": "La droite horizontale est le moment cinétique : il ne bouge pas. L’autre courbe est l’énergie, qui s’envole quand l’inertie diminue. Rien n’est violé — rapprocher la masse de l’axe demande du travail contre la force centrifuge, et ce travail entre dans le système.",
+    "en": "The horizontal line is the angular momentum: it does not move. The other curve is the energy, which shoots up as the inertia shrinks. Nothing is violated — pulling the mass towards the axis takes work against the centrifugal force, and that work goes into the system."
+  },
+  "ondeIssoAparece": {
+    "pt": "Onde isso aparece",
+    "fr": "Où cela se rencontre",
+    "en": "Where this shows up"
+  },
+  "numSatelite": {
+    "pt": "Num satélite, acelerar uma roda de reação interna faz o corpo girar para o outro lado, porque o momento angular total precisa ficar o mesmo: é assim que se aponta um telescópio sem gastar propelente. E na órbita de um planeta, conservar o momento angular é exatamente a segunda lei de Kepler — áreas iguais em tempos iguais.",
+    "fr": "Dans un satellite, accélérer une roue de réaction interne fait tourner le corps dans l’autre sens, parce que le moment cinétique total doit rester le même : c’est ainsi qu’on pointe un télescope sans dépenser d’ergol. Et sur l’orbite d’une planète, conserver le moment cinétique est exactement la deuxième loi de Kepler — des aires égales en des temps égaux.",
+    "en": "On a satellite, spinning up an internal reaction wheel turns the body the other way, because the total angular momentum has to stay the same: that is how a telescope is pointed without spending propellant. And on a planet's orbit, conserving angular momentum is exactly Kepler's second law — equal areas in equal times."
+  }
+}

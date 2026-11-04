@@ -3,15 +3,25 @@
     <section class="painel grade-controles">
       <app-controle-parametro
         [(valor)]="velocidade"
-        rotulo="Velocidade inicial (m/s)"
+        [rotulo]="i18n.t('explorar.velocidadeInicial')"
         [min]="5"
         [max]="60"
       />
-      <app-controle-parametro [(valor)]="angulo" rotulo="Ângulo (graus)" [min]="5" [max]="85" />
-      <app-controle-parametro [(valor)]="altura" rotulo="Altura inicial (m)" [min]="0" [max]="50" />
+      <app-controle-parametro
+        [(valor)]="angulo"
+        [rotulo]="texto('anguloGraus')"
+        [min]="5"
+        [max]="85"
+      />
+      <app-controle-parametro
+        [(valor)]="altura"
+        [rotulo]="texto('alturaInicial')"
+        [min]="0"
+        [max]="50"
+      />
       <app-controle-parametro
         [(valor)]="anguloComparacao"
-        rotulo="Ângulo de comparação"
+        [rotulo]="texto('anguloComparacao')"
         [min]="5"
         [max]="85"
       />
@@ -19,26 +29,26 @@
 
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
-        <span class="rotulo">Alcance</span>
+        <span class="rotulo">{{ texto('alcance') }}</span>
         <strong>{{ formatar(dados().alcance) }} m</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Altura máxima</span>
+        <span class="rotulo">{{ texto('alturaMaxima') }}</span>
         <strong>{{ formatar(dados().alturaMaxima) }} m</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Tempo de voo</span>
+        <span class="rotulo">{{ texto('tempoDeVoo') }}</span>
         <strong>{{ formatar(dados().tempoDeVoo) }} s</strong>
       </div>
       <div class="indicador">
-        <span class="rotulo">Componentes</span>
+        <span class="rotulo">{{ texto('componentes') }}</span>
         <strong>{{ formatar(dados().vx) }} / {{ formatar(dados().vy) }}</strong>
-        <span class="legenda">horizontal / vertical</span>
+        <span class="legenda">{{ texto('horizontalVertical') }}</span>
       </div>
     </section>
 
     <section>
-      <h2>A trajetória</h2>
+      <h2>{{ texto('aTrajetoria') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
         [curvas]="curvas()"
@@ -47,50 +57,40 @@
         [descricao]="descricaoGrafico()"
         [altura]="380"
       />
-      <p class="observacao">
-        A curva é uma parábola — a mesma função quadrática do ensino médio, agora saindo da física.
-        Compare dois ângulos complementares, como 30° e 60°: com altura inicial zero, eles alcançam
-        exatamente a mesma distância, por caminhos bem diferentes.
-      </p>
+      <p class="observacao">{{ texto('aCurvaEUmaParabola') }}</p>
     </section>
 
     <section class="painel">
-      <h2>O ângulo de alcance máximo</h2>
+      <h2>{{ texto('anguloAlcanceMaximo') }}</h2>
       <div class="indicadores">
         <div class="indicador" data-destaque="true">
-          <span class="rotulo">Ângulo ótimo</span>
+          <span class="rotulo">{{ texto('anguloOtimo') }}</span>
           <strong>{{ anguloOtimo().graus }}°</strong>
-          <span class="legenda">alcance de {{ formatar(anguloOtimo().alcance) }} m</span>
+          <span class="legenda">
+            {{ texto('alcanceDe', { valor: formatar(anguloOtimo().alcance) }) }}
+          </span>
         </div>
       </div>
-      <button type="button" class="usar-otimo" (click)="usarOtimo()">Usar o ângulo ótimo</button>
+      <button type="button" class="usar-otimo" (click)="usarOtimo()">
+        {{ texto('usarOtimo') }}
+      </button>
       <p class="observacao">
-        @if (altura() === 0) {
-          Com lançamento do chão, o ótimo é exatamente 45°: aumentar o ângulo ganha tempo de voo mas
-          perde velocidade horizontal, e 45° equilibra os dois efeitos.
-        } @else {
-          Lançando de {{ altura() }} m de altura, o ângulo ótimo cai abaixo de 45° — o tempo extra
-          de queda já vem de graça, então compensa privilegiar a velocidade horizontal.
-        }
+        {{ altura() === 0 ? texto('doChao') : texto('deAltura', { altura: altura() }) }}
       </p>
     </section>
 
     <section>
-      <h2>Passo a passo</h2>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
       <app-passo-a-passo [passos]="analise().passos" />
     </section>
 
     <section class="painel">
-      <h2>Onde o currículo se encontra</h2>
+      <h2>{{ texto('ondeOCurriculo') }}</h2>
       <app-formula
         [tex]="'y = h_0 + x\\tan\\theta - \\frac{g}{2v_0^{2}\\cos^{2}\\theta}x^{2}'"
         [bloco]="true"
       />
-      <p class="observacao">
-        Esta única equação usa trigonometria para decompor a velocidade, função quadrática para
-        descrever a curva e derivada para encontrar o ponto mais alto. É o tópico em que quase tudo
-        o que veio antes se junta.
-      </p>
+      <p class="observacao">{{ texto('estaUnicaEquacao') }}</p>
     </section>
 
     <app-conceitos-topico [conceitos]="conceitos" />

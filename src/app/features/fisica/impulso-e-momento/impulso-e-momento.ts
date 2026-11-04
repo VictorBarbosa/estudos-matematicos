@@ -9,6 +9,9 @@ import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
 import { CurvaPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { I18nService } from '@core/i18n/services/i18n.service';
+import { textoLocal } from '@core/i18n/textos-locais';
+import textos from '@features/fisica/impulso-e-momento/impulso-e-momento.i18n.json';
 import { geradorMomento } from '@features/fisica/impulso-e-momento/impulso-e-momento.gerador';
 import { TEORIA_MOMENTO } from '@features/fisica/impulso-e-momento/impulso-e-momento.teoria';
 
@@ -28,6 +31,8 @@ import { TEORIA_MOMENTO } from '@features/fisica/impulso-e-momento/impulso-e-mom
   styleUrl: './impulso-e-momento.scss',
 })
 export class ImpulsoEMomento {
+  protected readonly i18n = inject(I18nService);
+  protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorMomento;
   protected readonly conceitos = TEORIA_MOMENTO.map((teoria) => teoria.id);
 
@@ -43,9 +48,9 @@ export class ImpulsoEMomento {
   protected readonly velocidadeImpacto = signal(15);
   protected readonly tempoParada = signal(0.2);
 
-  protected readonly tipos: readonly { readonly id: TipoColisao; readonly rotulo: string }[] = [
-    { id: 'perfeitamente-inelastica', rotulo: 'Inelástica (seguem juntos)' },
-    { id: 'elastica', rotulo: 'Elástica (sem perda)' },
+  protected readonly tipos: readonly { readonly id: TipoColisao }[] = [
+    { id: 'perfeitamente-inelastica' },
+    { id: 'elastica' },
   ];
 
   protected readonly colisao = computed(() =>
@@ -99,7 +104,7 @@ export class ImpulsoEMomento {
       {
         fn: (t) => (t <= 0.001 ? Number.NaN : variacaoMomento / t),
         cor: 'serie-1',
-        rotulo: 'força média',
+        rotulo: this.texto('curvaForcaMedia'),
       },
     ];
   });
@@ -123,7 +128,7 @@ export class ImpulsoEMomento {
         y2: 1,
         cor: 'serie-1',
         seta: true,
-        rotulo: 'A antes',
+        rotulo: this.texto('segAAntes'),
       },
       {
         x1: 0,
@@ -132,7 +137,7 @@ export class ImpulsoEMomento {
         y2: 0.5,
         cor: 'serie-2',
         seta: true,
-        rotulo: 'B antes',
+        rotulo: this.texto('segBAntes'),
       },
       {
         x1: 0,
@@ -141,7 +146,7 @@ export class ImpulsoEMomento {
         y2: -0.5,
         cor: 'serie-3',
         seta: true,
-        rotulo: 'A depois',
+        rotulo: this.texto('segADepois'),
       },
       {
         x1: 0,
@@ -150,7 +155,7 @@ export class ImpulsoEMomento {
         y2: -1,
         cor: 'acento',
         seta: true,
-        rotulo: 'B depois',
+        rotulo: this.texto('segBDepois'),
       },
     ];
   });
