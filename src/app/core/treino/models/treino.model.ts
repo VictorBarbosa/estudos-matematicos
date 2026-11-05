@@ -206,6 +206,24 @@ export function semColisoes<T>(
  * Genérico de propósito: serve igualmente para frações, raízes de equações e
  * derivadas, bastando que o gerador saiba analisar e comparar seu próprio tipo.
  */
+/**
+ * Um ponto sozinho entre dígitos: decimal ou separador de milhar?
+ *
+ * Em português `1.375` é mil trezentos e setenta e cinco, e é assim que o site
+ * escreve um gabarito grande. Só que `0.833` e `1.000` saem do mesmo teclado
+ * querendo dizer 0,833 e 1 — e lidos como milhar faziam o site responder «não
+ * é isso, a resposta correta é 0,83» a quem tinha acertado.
+ *
+ * Como não há regra que decida, tentam-se as duas leituras. Isto nunca reprova
+ * o que antes passava: só entra quando a primeira leitura já não bateu.
+ */
+const PONTO_AMBIGUO = /^[+-]?\d{1,3}\.\d{3}$/;
+
+function outrasLeituras(entrada: string): readonly string[] {
+  const texto = entrada.trim();
+  return PONTO_AMBIGUO.test(texto) ? [texto.replace('.', ',')] : [];
+}
+
 export function corrigir<T>(
   gerador: GeradorExercicio<T>,
   exercicio: Exercicio<T>,
@@ -236,6 +254,18 @@ export function corrigir<T>(
       mensagem: 'Correto!',
       observacao: gerador.observarResposta?.(valor, entrada),
     };
+  }
+
+  // A outra leitura do ponto ambíguo, antes de dizer que está errado.
+  for (const outra of outrasLeituras(entrada)) {
+    const relido = gerador.analisar(outra);
+    if (relido !== null && gerador.saoEquivalentes(relido, exercicio.gabarito)) {
+      return {
+        veredito: 'correto',
+        mensagem: 'Correto!',
+        observacao: gerador.observarResposta?.(relido, outra),
+      };
+    }
   }
 
   const armadilha = exercicio.armadilhas.find((candidata) =>

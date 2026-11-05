@@ -102,12 +102,20 @@ function sortear(nivel: Nivel, rng: Rng): Sorteio {
     }
     case 'medio': {
       if (rng.booleano()) {
-        // Diferença de quadrados.
-        const k = rng.inteiro(1, 12);
-        const a = rng.inteiro(1, 9);
+        /*
+         * Diferença de quadrados, com raiz inteira.
+         *
+         * `a²x² - k²` tem raízes `±k/a`, e com `k` e `a` sorteados à solta elas
+         * saem dízimas: o tópico pedia «um número inteiro» e esperava 0,8333.
+         * Pior, quem escrevia `0.833` era reprovado — o ponto era lido como
+         * separador de milhar. Tomando `k = a·r`, a conta é a mesma e a
+         * resposta é `±r`.
+         */
+        const a = rng.inteiro(1, 6);
+        const r = rng.inteiro(1, 10);
         return {
-          polinomio: Polinomio.de(-(k * k), 0, a * a),
-          raizes: [k / a, -k / a],
+          polinomio: Polinomio.de(-(a * r * (a * r)), 0, a * a),
+          raizes: [r, -r],
           tipo: 'fatoracao.diferenca',
         };
       }

@@ -62,3 +62,33 @@ describe('geradorFatoracao', () => {
     );
   });
 });
+
+describe('geradorFatoracao: o que o aluno consegue escrever', () => {
+  for (const nivel of NIVEIS) {
+    it(`no nível ${nivel}, todo gabarito é inteiro`, () => {
+      // O campo anuncia «um número inteiro». A diferença de quadrados com `k`
+      // e `a` à solta pedia 0,8333 — e, escrito `0.833`, era reprovado.
+      for (const exercicio of amostra(nivel, 200)) {
+        expect(Number.isInteger(exercicio.gabarito), `${exercicio.enunciadoTex}`).toBe(true);
+      }
+    });
+
+    it(`no nível ${nivel}, o gabarito é aceito escrito de todo jeito`, () => {
+      for (const exercicio of amostra(nivel, 60)) {
+        const g = exercicio.gabarito;
+        for (const escrita of [
+          String(g),
+          String(g).replace('.', ','),
+          g.toFixed(2),
+          g.toFixed(2).replace('.', ','),
+          g.toFixed(3),
+        ]) {
+          expect(
+            corrigir(geradorFatoracao, exercicio, escrita).veredito,
+            `${exercicio.enunciadoTex} escrito "${escrita}"`,
+          ).toBe('correto');
+        }
+      }
+    });
+  }
+});

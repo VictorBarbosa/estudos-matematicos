@@ -253,8 +253,14 @@ class FormatoInvalido extends Error {}
  * O site exibe o gabarito com `toLocaleString('pt-BR')`, então essa é
  * exatamente a forma que o aluno vê escrita como resposta correta — e, antes
  * disto, era a forma que o campo recusava.
+ *
+ * O primeiro grupo começa em 1 de propósito. Ninguém escreve zero milhares,
+ * então `0.833` só pode ser decimal — e lido como milhar virava 833, o que
+ * fazia o site responder «não é isso, a resposta correta é 0,83» a quem tinha
+ * escrito 0,833. Um ponto sozinho entre dígitos continua ambíguo em português
+ * (`1.375` é mil trezentos e setenta e cinco), e esse caso segue como milhar.
  */
-const COM_MILHAR = /^[+-]?\d{1,3}(?:\.\d{3})+(?:,\d+)?$/;
+const COM_MILHAR = /^[+-]?[1-9]\d{0,2}(?:\.\d{3})+(?:,\d+)?$/;
 
 function semSeparadorDeMilhar(texto: string): string {
   return COM_MILHAR.test(texto) ? texto.replace(/\./g, '') : texto;

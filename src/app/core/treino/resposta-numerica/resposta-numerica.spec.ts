@@ -82,3 +82,25 @@ describe('proximosEmCasas', () => {
     expect(comRelativa(2.7e11, 2.7e11 * 1.01)).toBe(false);
   });
 });
+
+describe('ponto: decimal ou milhar', () => {
+  it('zero milhares não existe, então 0.833 é decimal', () => {
+    // Lido como milhar virava 833, e o site respondia «a resposta correta é
+    // 0,83» a quem tinha escrito 0,833.
+    expect(analisarNumero('0.833')).toBeCloseTo(0.833, 10);
+    expect(analisarNumero('0.125')).toBeCloseTo(0.125, 10);
+    expect(analisarNumero('-0.714')).toBeCloseTo(-0.714, 10);
+  });
+
+  it('o separador de milhar de verdade continua valendo', () => {
+    // É a forma que o próprio site escreve o gabarito.
+    expect(analisarNumero('50.000.000')).toBe(50_000_000);
+    expect(analisarNumero('1.072,5')).toBeCloseTo(1072.5, 10);
+    expect(analisarNumero('1.375')).toBe(1375);
+  });
+
+  it('o ponto decimal fora do formato de milhar nunca foi ambíguo', () => {
+    expect(analisarNumero('1.5')).toBeCloseTo(1.5, 10);
+    expect(analisarNumero('2.6667')).toBeCloseTo(2.6667, 10);
+  });
+});
