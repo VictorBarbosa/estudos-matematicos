@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { Passo } from '@core/math';
 import { Formula } from '@shared/components/formula/formula';
+import { MathTranslationsService } from '@core/math/translations/math-translations.service';
 
 /**
  * Exibe a trilha de resolução devolvida pelo motor matemático.
@@ -20,4 +21,11 @@ export class PassoAPasso {
   readonly passos = input.required<readonly Passo[]>();
   /** Índice da etapa a destacar, ou `null` para nenhuma. */
   readonly passoDestacado = input<number | null>(null);
+
+  private readonly tradutor = inject(MathTranslationsService);
+
+  /** Traduz a descrição de um passo para o idioma da interface. */
+  traduzirDescricao(descricao: string): string {
+    return this.tradutor.traduzir(descricao);
+  }
 }
