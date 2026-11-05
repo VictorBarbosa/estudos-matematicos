@@ -593,7 +593,16 @@ function escreverFuncao(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
     rng,
     `a função f recebe um ${entrada.nome} e devolve um ${saida.nome}`,
     'notacao.funcoes',
-    notacao(`f: ${entrada.simbolo} → ${saida.simbolo}`),
+    /*
+     * `f(x)` também vale aqui, e não por generosidade: a tecla que este campo
+     * oferece para função é `f(x)`, então é isso que sai do teclado do site.
+     * Recusar a forma que nós mesmos damos ao aluno é defeito nosso. Numa
+     * assinatura, `f` e `f(x)` apontam para a mesma função.
+     */
+    notacao(
+      `f: ${entrada.simbolo} → ${saida.simbolo}`,
+      `f(x): ${entrada.simbolo} → ${saida.simbolo}`,
+    ),
   );
 }
 

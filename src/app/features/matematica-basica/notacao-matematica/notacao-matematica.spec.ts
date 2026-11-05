@@ -227,6 +227,52 @@ describe('geradorNotacao: a caixa da letra', () => {
   });
 });
 
+describe('geradorNotacao: o que o teclado do campo produz', () => {
+  /** Um exercício de assinatura de função. */
+  function daFuncao() {
+    for (let s = 0; s < 400; s++) {
+      for (const nivel of NIVEIS) {
+        const exercicio = geradorNotacao.gerar(nivel, criarRng(s));
+        if (geradorNotacao.formatar(exercicio.gabarito).startsWith('f:')) {
+          return exercicio;
+        }
+      }
+    }
+    throw new Error('nenhuma assinatura de função foi sorteada');
+  }
+
+  it('a tecla f(x) escreve uma assinatura que vale', () => {
+    // Relato do aluno: respondeu a assinatura e levou «não é isso». A tecla
+    // que o campo oferece para função é `f(x)`, e era ela que não passava.
+    const exercicio = daFuncao();
+    const certo = geradorNotacao.formatar(exercicio.gabarito);
+
+    for (const escrita of [
+      certo,
+      certo.replace('f:', 'f(x):'),
+      certo.replace('f:', 'f(x) :').replace(/\s+/g, ''),
+      certo.replace(/→/, '->'),
+      certo.replace('ℕ', 'N').replace('ℤ', 'Z').replace('ℝ', 'R'),
+    ]) {
+      expect(corrigir(geradorNotacao, exercicio, escrita).veredito, escrita).toBe('correto');
+    }
+  });
+
+  it('e a assinatura ao contrário continua errada', () => {
+    const exercicio = daFuncao();
+    const certo = geradorNotacao.formatar(exercicio.gabarito);
+    const [, entrada, saida] = /f:\s*(\S+)\s*→\s*(\S+)/.exec(certo)!;
+
+    if (entrada === saida) {
+      return; // ℕ → ℕ é simétrico: não há «ao contrário».
+    }
+
+    expect(corrigir(geradorNotacao, exercicio, `f: ${saida} → ${entrada}`).veredito).toBe(
+      'incorreto',
+    );
+  });
+});
+
 /** O normalizador é quem decide se a correção cobra conteúdo ou digitação. */
 describe('canonizarNotacao', () => {
   it('reduz LaTeX e símbolo à mesma forma', () => {
