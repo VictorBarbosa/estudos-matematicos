@@ -242,6 +242,75 @@ $tecla: 3.25rem;
   font-variant-numeric: tabular-nums;
 }
 
+/*
+ * A aba de soma e produto.
+ *
+ * Mesma arrumação da de inteiros — campos em cima, caminho no meio, resultado
+ * embaixo —, porque são a mesma ideia: a conta que importa é o percurso.
+ */
+.fatores {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 0.5rem 0.25rem;
+}
+
+.explicacao {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.pares {
+  width: 100%;
+  border-collapse: collapse;
+  color: #d1d1d6;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+
+  caption {
+    caption-side: top;
+    text-align: left;
+    padding-bottom: 0.25rem;
+  }
+
+  th {
+    padding: 0.1rem 0.35rem;
+    color: #8e8e93;
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-align: right;
+  }
+
+  td {
+    padding: 0.1rem 0.35rem;
+    text-align: right;
+  }
+
+  .soma {
+    border-left: 1px solid #48484a;
+  }
+
+  /* O par que serviu: é a resposta, e tem de saltar da lista das tentativas. */
+  .escolhido {
+    color: $operador;
+    font-weight: 600;
+  }
+
+  .corte {
+    color: #8e8e93;
+
+    td {
+      text-align: left;
+    }
+  }
+}
+
 .teclas {
   display: grid;
   gap: 0.5rem;

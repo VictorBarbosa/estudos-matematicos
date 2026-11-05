@@ -353,3 +353,109 @@ describe('Calculadora: MMC e MDC', () => {
     );
   });
 });
+
+describe('Calculadora: soma e produto', () => {
+  let fixture: ComponentFixture<Calculadora>;
+  let servico: CalculadoraService;
+
+  const campo = (rotulo: string): HTMLInputElement =>
+    [...fixture.nativeElement.querySelectorAll('.fatores .campo')]
+      .filter((e) => (e as HTMLElement).textContent?.includes(rotulo))
+      .map((e) => (e as HTMLElement).querySelector('input'))[0] as HTMLInputElement;
+
+  async function escrever(produto: string, soma: string): Promise<void> {
+    for (const [rotulo, texto] of [
+      ['Produto', produto],
+      ['Soma', soma],
+    ]) {
+      const entrada = campo(rotulo!);
+      entrada.value = texto!;
+      entrada.dispatchEvent(new Event('input'));
+      await fixture.whenStable();
+    }
+  }
+
+  const visor = (): string =>
+    (fixture.nativeElement.querySelector('.valor') as HTMLElement).textContent!.trim();
+  const legenda = (): string =>
+    (fixture.nativeElement.querySelector('.legenda') as HTMLElement).textContent!.trim();
+  const montagem = (): string | null =>
+    (
+      fixture.nativeElement.querySelector('.fatores .montagem') as HTMLElement | null
+    )?.textContent?.trim() ?? null;
+
+  beforeEach(async () => {
+    localStorage.clear();
+
+    await TestBed.configureTestingModule({
+      imports: [Calculadora],
+      providers: [provideZonelessChangeDetection()],
+    }).compileComponents();
+
+    servico = TestBed.inject(CalculadoraService);
+    servico.alternar();
+    fixture = TestBed.createComponent(Calculadora);
+    await fixture.whenStable();
+
+    [...fixture.nativeElement.querySelectorAll('.modos button')]
+      .find((b) => (b as HTMLButtonElement).textContent?.trim() === 'Fatorar')!
+      .click();
+    await fixture.whenStable();
+  });
+
+  it('a aba troca o teclado por dois campos', () => {
+    expect(servico.modo()).toBe('soma-produto');
+    expect(campo('Produto')).not.toBeNull();
+    expect(campo('Soma')).not.toBeNull();
+    expect(fixture.nativeElement.querySelector('.teclado')).toBeNull();
+  });
+
+  it('acha o par e escreve a fatoração', async () => {
+    await escrever('24', '11');
+
+    expect(visor()).toBe('3 e 8');
+    expect(legenda()).toBe('Produto 24, soma 11');
+    expect(montagem()).toBe('x² + 11x + 24 = (x + 3)(x + 8)');
+  });
+
+  it('mostra os pares tentados, com o que serviu destacado', async () => {
+    await escrever('24', '11');
+
+    const linhas = [...fixture.nativeElement.querySelectorAll('.pares tbody tr')];
+    expect(linhas.length).toBe(3);
+    expect((linhas.at(-1) as HTMLElement).classList).toContain('escolhido');
+    expect((linhas.at(-1) as HTMLElement).textContent).toContain('11');
+  });
+
+  it('sem par inteiro, mostra as raízes e diz por quê', async () => {
+    await escrever('11', '11');
+
+    expect(visor()).toContain('1,11');
+    expect(legenda()).toBe('Nenhum par de inteiros serve');
+    expect(montagem()).toContain('raízes exatas');
+  });
+
+  it('produto grande demais para a soma não tem resposta real', async () => {
+    await escrever('10', '4');
+
+    expect(legenda()).toBe('Não existem dois números reais com esse produto e essa soma.');
+    expect(visor()).toBe('—');
+  });
+
+  it('campo pela metade pede o que falta, sem acusar erro', async () => {
+    await escrever('24', '');
+
+    expect(legenda()).toBe('Escreva o produto e a soma.');
+    expect(visor()).toBe('—');
+  });
+
+  it('a aba escolhida sobrevive a uma aba nova do navegador', async () => {
+    await escrever('24', '11');
+    expect(servico.modo()).toBe('soma-produto');
+
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({ providers: [provideZonelessChangeDetection()] });
+
+    expect(TestBed.inject(CalculadoraService).modo()).toBe('soma-produto');
+  });
+});

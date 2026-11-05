@@ -14,7 +14,7 @@ import { avaliarExpressao } from '@core/treino/resposta-simbolica/resposta-simbo
  * conta que o campo de resposta recusa.
  */
 
-export type ModoCalculadora = 'basica' | 'cientifica' | 'mmc-mdc';
+export type ModoCalculadora = 'basica' | 'cientifica' | 'mmc-mdc' | 'soma-produto';
 
 /** As duas contas da aba de inteiros. */
 export type OperacaoInteiros = 'mmc' | 'mdc';
@@ -500,4 +500,201 @@ export function decompor(numeros: readonly number[]): readonly LinhaDecomposicao
   }
 
   return linhas;
+}
+
+/** Um par de inteiros que resolve «produto P, soma S». */
+export interface ParDeFatores {
+  readonly a: number;
+  readonly b: number;
+}
+
+/** Uma linha da busca: o par de divisores tentado e a soma que ele dá. */
+export interface TentativaDeFator {
+  readonly a: number;
+  readonly b: number;
+  readonly soma: number;
+  /** É este o par procurado? */
+  readonly escolhido: boolean;
+}
+
+/** O que a aba de soma e produto mostra. */
+export interface ContaDeFatores {
+  readonly produto: number | null;
+  readonly soma: number | null;
+  /** O par inteiro, quando existe. */
+  readonly par: ParDeFatores | null;
+  /** Os pares tentados, até o que serviu — o caminho, e não só a resposta. */
+  readonly tentativas: readonly TentativaDeFator[];
+  /** Sobraram pares além dos que a tabela mostra? */
+  readonly truncada: boolean;
+  /** `x² - 11x + 24 = (x - 3)(x - 8)`, pronto para ler. */
+  readonly fatoracao: string | null;
+  /**
+   * As duas raízes reais, quando elas não são inteiras.
+   *
+   * Sem par inteiro o trinômio ainda se fatora — só não com números redondos.
+   * Dizer «não existe» seria mentira; mostrar as raízes é o que responde.
+   */
+  readonly raizes: readonly string[];
+  readonly erro: ErroDaConta | null;
+}
+
+const FATORES_VAZIO: ContaDeFatores = {
+  produto: null,
+  soma: null,
+  par: null,
+  tentativas: [],
+  truncada: false,
+  fatoracao: null,
+  raizes: [],
+  erro: null,
+};
+
+/**
+ * O maior valor aceito na aba de soma e produto.
+ *
+ * Um milhão mantém `soma² - 4·produto` longe do limite do inteiro exato do
+ * JavaScript, e a varredura de divisores em mil passos. Acima disso a conta
+ * deixa de ser de escola.
+ */
+const LIMITE_FATORES = 1_000_000;
+
+/** Quantos pares a tabela mostra antes de cortar. */
+const TENTATIVAS_VISIVEIS = 20;
+
+/**
+ * Dois números cujo produto e cuja soma são os pedidos.
+ *
+ * É o passo que fatora `x² + Sx + P`: achar `a` e `b` com `a·b = P` e
+ * `a + b = S` é o mesmo que escrever `(x + a)(x + b)`.
+ *
+ * A resposta não vem da varredura, e sim do discriminante `S² - 4P`: se ele é
+ * quadrado perfeito, o par é inteiro e sai de `(S ± √Δ)/2`. A varredura existe
+ * para a tabela — ela mostra o caminho que se faz à mão, parando no par que
+ * serviu.
+ */
+export function calcularFatores(produtoBruto: string, somaBruta: string): ContaDeFatores {
+  const produto = lerInteiro(produtoBruto);
+  const soma = lerInteiro(somaBruta);
+
+  if (produto === null || soma === null) {
+    // Faltou preencher: ainda não é erro, é pergunta incompleta.
+    if (produto === null && produtoBruto.trim() !== '') {
+      return { ...FATORES_VAZIO, erro: erroDoInteiro(produtoBruto) };
+    }
+    if (soma === null && somaBruta.trim() !== '') {
+      return { ...FATORES_VAZIO, erro: erroDoInteiro(somaBruta) };
+    }
+    return FATORES_VAZIO;
+  }
+
+  if (Math.abs(produto) > LIMITE_FATORES || Math.abs(soma) > LIMITE_FATORES) {
+    return { ...FATORES_VAZIO, erro: { chave: 'calculadora.limiteFatores' } };
+  }
+
+  const delta = soma * soma - 4 * produto;
+  if (delta < 0) {
+    // Soma e produto fixam a média e a área; abaixo de zero não há retângulo.
+    return { ...FATORES_VAZIO, produto, soma, erro: { chave: 'calculadora.semParReal' } };
+  }
+
+  // A arredondada só serve para perguntar «é quadrado perfeito?»; as raízes
+  // irracionais têm de sair da raiz de verdade, ou 11 e 24 devolveriam o par
+  // errado em vez de dizer que não há par inteiro.
+  const arredondada = Math.round(Math.sqrt(delta));
+  const exata = arredondada * arredondada === delta;
+  const par: ParDeFatores | null = exata
+    ? { a: (soma - arredondada) / 2, b: (soma + arredondada) / 2 }
+    : null;
+
+  const { tentativas, truncada } = varrerPares(produto, soma, par);
+
+  return {
+    produto,
+    soma,
+    par,
+    tentativas,
+    truncada,
+    fatoracao: par === null ? null : escreverFatoracao(soma, produto, par),
+    raizes:
+      par === null
+        ? [(soma - Math.sqrt(delta)) / 2, (soma + Math.sqrt(delta)) / 2].map(formatarValor)
+        : [],
+    erro: null,
+  };
+}
+
+/** `-24` e `  7 ` viram números; `2,5` e `x` viram `null`. */
+function lerInteiro(bruto: string): number | null {
+  const texto = bruto.trim();
+  if (!/^[+-]?\d+$/.test(texto)) {
+    return null;
+  }
+  return Number(texto);
+}
+
+function erroDoInteiro(bruto: string): ErroDaConta {
+  return { chave: 'calculadora.naoInteiro', valores: { parte: bruto.trim() } };
+}
+
+/**
+ * Os pares de divisores, na ordem em que a mão os tentaria.
+ *
+ * Para produto positivo os dois fatores têm o sinal da soma; para produto
+ * negativo um deles é negativo, e qual é o maior se decide pelo sinal da soma.
+ * É a regra que se ensina, escrita como código.
+ */
+function varrerPares(
+  produto: number,
+  soma: number,
+  escolhido: ParDeFatores | null,
+): { tentativas: readonly TentativaDeFator[]; truncada: boolean } {
+  if (produto === 0) {
+    // Zero não tem divisores a varrer: um dos fatores é ele próprio.
+    return {
+      tentativas: [{ a: 0, b: soma, soma, escolhido: escolhido !== null }],
+      truncada: false,
+    };
+  }
+
+  const magnitude = Math.abs(produto);
+  const tentativas: TentativaDeFator[] = [];
+  let truncada = false;
+
+  for (let d = 1; d * d <= magnitude; d++) {
+    if (magnitude % d !== 0) {
+      continue;
+    }
+
+    const outro = magnitude / d;
+    const [a, b] =
+      produto > 0 ? (soma >= 0 ? [d, outro] : [-d, -outro]) : soma >= 0 ? [-d, outro] : [d, -outro];
+
+    const acerto =
+      escolhido !== null &&
+      Math.min(a, b) === Math.min(escolhido.a, escolhido.b) &&
+      Math.max(a, b) === Math.max(escolhido.a, escolhido.b);
+    tentativas.push({ a, b, soma: a + b, escolhido: acerto });
+
+    if (acerto) {
+      break;
+    }
+    if (tentativas.length >= TENTATIVAS_VISIVEIS) {
+      truncada = true;
+      break;
+    }
+  }
+
+  return { tentativas, truncada };
+}
+
+/** `x² - 11x + 24 = (x - 3)(x - 8)`. */
+function escreverFatoracao(soma: number, produto: number, par: ParDeFatores): string {
+  const termo = (valor: number, sufixo: string): string =>
+    valor === 0 ? '' : ` ${valor < 0 ? '−' : '+'} ${Math.abs(valor)}${sufixo}`;
+  const fator = (valor: number): string =>
+    valor === 0 ? '(x)' : `(x ${valor < 0 ? '−' : '+'} ${Math.abs(valor)})`;
+
+  const esquerda = `x²${termo(soma, 'x')}${termo(produto, '')}`;
+  return `${esquerda} = ${fator(par.a)}${fator(par.b)}`;
 }

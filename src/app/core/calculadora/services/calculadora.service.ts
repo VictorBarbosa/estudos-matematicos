@@ -31,7 +31,7 @@ const PADRAO: EstadoSalvo = {
   posicao: null,
 };
 
-const MODOS: readonly ModoCalculadora[] = ['basica', 'cientifica', 'mmc-mdc'];
+const MODOS: readonly ModoCalculadora[] = ['basica', 'cientifica', 'mmc-mdc', 'soma-produto'];
 
 /**
  * A calculadora flutuante: se está aberta, onde, e em que modo.

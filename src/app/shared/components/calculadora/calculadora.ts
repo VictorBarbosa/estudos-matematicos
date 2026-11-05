@@ -16,6 +16,7 @@ import {
   alternarSinal,
   apagar,
   calcular,
+  calcularFatores,
   calcularInteiros,
   digitar,
   inverso,
@@ -160,6 +161,18 @@ export class Calculadora {
 
   protected readonly emInteiros = computed(() => this.calculadora.modo() === 'mmc-mdc');
 
+  /** O produto e a soma procurados, como o aluno os escreveu. */
+  protected readonly produto = signal('');
+  protected readonly soma = signal('');
+
+  /** O par de números com aquele produto e aquela soma. */
+  protected readonly fatores = computed(() => calcularFatores(this.produto(), this.soma()));
+
+  protected readonly emFatores = computed(() => this.calculadora.modo() === 'soma-produto');
+
+  /** As abas de entrada por campo, onde o teclado da calculadora não aparece. */
+  protected readonly emCampos = computed(() => this.emInteiros() || this.emFatores());
+
   /** MMC e MDC viram PPCM/PGCD em francês e LCM/GCD em inglês. */
   protected readonly nomeDaOperacao = computed(() =>
     this.i18n.t(this.calculadora.operacao() === 'mmc' ? 'calculadora.mmc' : 'calculadora.mdc'),
@@ -167,6 +180,19 @@ export class Calculadora {
 
   /** A linha pequena: a conta que gerou o resultado, ou o aviso de erro. */
   protected readonly legenda = computed(() => {
+    if (this.emFatores()) {
+      const { produto, soma, par, erro } = this.fatores();
+      if (erro !== null) {
+        return this.i18n.t(erro.chave, erro.valores);
+      }
+      if (produto === null || soma === null) {
+        return this.i18n.t('calculadora.pedidoFatores');
+      }
+      return par === null
+        ? this.i18n.t('calculadora.semParInteiro')
+        : this.i18n.t('calculadora.deFatores', { produto, soma });
+    }
+
     if (this.emInteiros()) {
       const { numeros, erro } = this.conta();
       if (erro !== null) {
@@ -189,6 +215,16 @@ export class Calculadora {
 
   /** A linha grande: o resultado, ou a conta sendo escrita. */
   protected readonly visor = computed(() => {
+    if (this.emFatores()) {
+      const { par, raizes } = this.fatores();
+      if (par !== null) {
+        return this.i18n.t('calculadora.parEncontrado', { a: par.a, b: par.b });
+      }
+      return raizes.length === 2
+        ? this.i18n.t('calculadora.parEncontrado', { a: raizes[0]!, b: raizes[1]! })
+        : '—';
+    }
+
     if (this.emInteiros()) {
       const { valor } = this.conta();
       return valor === null ? '—' : String(valor);
@@ -252,6 +288,14 @@ export class Calculadora {
 
   protected definirNumeros(valor: string): void {
     this.numeros.set(valor);
+  }
+
+  protected definirProduto(valor: string): void {
+    this.produto.set(valor);
+  }
+
+  protected definirSoma(valor: string): void {
+    this.soma.set(valor);
   }
 
   protected escolher(operacao: OperacaoInteiros): void {

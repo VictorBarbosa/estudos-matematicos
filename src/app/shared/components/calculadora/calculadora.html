@@ -49,6 +49,15 @@
         >
           {{ i18n.t('calculadora.mmcMdc') }}
         </button>
+        <button
+          type="button"
+          role="tab"
+          [attr.aria-selected]="emFatores()"
+          [class.ativo]="emFatores()"
+          (click)="calculadora.definirModo('soma-produto')"
+        >
+          {{ i18n.t('calculadora.fatorar') }}
+        </button>
       </div>
 
       <button
@@ -151,6 +160,75 @@
           } @else {
             <p class="montagem">{{ i18n.t('calculadora.semComum') }}</p>
           }
+        }
+      </div>
+    } @else if (emFatores()) {
+      <div class="fatores">
+        <p class="rotulo explicacao">{{ i18n.t('calculadora.explicacaoFatores') }}</p>
+
+        <div class="dupla">
+          <label class="campo">
+            <span class="rotulo">{{ i18n.t('calculadora.produto') }}</span>
+            <input
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="24"
+              [value]="produto()"
+              (input)="definirProduto($any($event.target).value)"
+            />
+          </label>
+          <label class="campo">
+            <span class="rotulo">{{ i18n.t('calculadora.soma') }}</span>
+            <input
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="11"
+              [value]="soma()"
+              (input)="definirSoma($any($event.target).value)"
+            />
+          </label>
+        </div>
+
+        <!-- Os pares de divisores na ordem em que a mão os tentaria, parando
+             no que serviu: é o caminho, como a divisão simultânea é na aba de
+             MMC. -->
+        @if (fatores().tentativas.length > 0) {
+          <table class="pares">
+            <caption class="rotulo">
+              {{
+                i18n.t('calculadora.paresTentados')
+              }}
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">{{ i18n.t('calculadora.par') }}</th>
+                <th scope="col">{{ i18n.t('calculadora.soma') }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (tentativa of fatores().tentativas; track $index) {
+                <tr [class.escolhido]="tentativa.escolhido">
+                  <td>{{ tentativa.a }} · {{ tentativa.b }}</td>
+                  <td class="soma">{{ tentativa.soma }}</td>
+                </tr>
+              }
+              @if (fatores().truncada) {
+                <tr class="corte">
+                  <td colspan="2">{{ i18n.t('calculadora.maisPares') }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        }
+
+        @if (fatores().fatoracao; as fatoracao) {
+          <p class="montagem">{{ fatoracao }}</p>
+        } @else if (fatores().raizes.length === 2) {
+          <p class="montagem">{{ i18n.t('calculadora.semParInteiroLongo') }}</p>
         }
       </div>
     } @else {

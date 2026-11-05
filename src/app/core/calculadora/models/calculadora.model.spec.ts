@@ -1,5 +1,6 @@
 import {
   ESTADO_INICIAL,
+  calcularFatores,
   calcularInteiros,
   EstadoCalculadora,
   alternarSinal,
@@ -419,5 +420,116 @@ describe('divisão simultânea', () => {
     expect(conta.valor).toBe(1999966);
     expect(conta.decomposicao.map((l) => l.divisor)).toEqual([2, 999983]);
     expect(Date.now() - comecou).toBeLessThan(500);
+  });
+});
+
+describe('soma e produto', () => {
+  /** O par, em ordem crescente, para a asserção não depender da ordem. */
+  const par = (produto: string, soma: string): readonly number[] | null => {
+    const encontrado = calcularFatores(produto, soma).par;
+    return encontrado === null ? null : [encontrado.a, encontrado.b].sort((x, y) => x - y);
+  };
+
+  it('acha o par que multiplica e soma', () => {
+    expect(par('24', '11')).toEqual([3, 8]);
+    expect(par('42', '13')).toEqual([6, 7]);
+    expect(par('12', '7')).toEqual([3, 4]);
+  });
+
+  it('soma negativa dá os dois fatores negativos', () => {
+    expect(par('24', '-11')).toEqual([-8, -3]);
+  });
+
+  it('produto negativo dá um de cada sinal', () => {
+    expect(par('-24', '5')).toEqual([-3, 8]);
+    expect(par('-24', '-5')).toEqual([-8, 3]);
+  });
+
+  it('produto zero: o outro fator é a própria soma', () => {
+    expect(par('0', '7')).toEqual([0, 7]);
+  });
+
+  it('o quadrado perfeito dá os dois fatores iguais', () => {
+    expect(par('36', '12')).toEqual([6, 6]);
+  });
+
+  it('escreve o trinômio e a fatoração', () => {
+    expect(calcularFatores('24', '11').fatoracao).toBe('x² + 11x + 24 = (x + 3)(x + 8)');
+    expect(calcularFatores('24', '-11').fatoracao).toBe('x² − 11x + 24 = (x − 8)(x − 3)');
+    expect(calcularFatores('-9', '0').fatoracao).toBe('x² − 9 = (x − 3)(x + 3)');
+  });
+
+  it('a tabela para no par que serviu', () => {
+    const conta = calcularFatores('24', '11');
+    const ultima = conta.tentativas.at(-1)!;
+
+    expect(ultima.escolhido).toBe(true);
+    expect([ultima.a, ultima.b].sort((x, y) => x - y)).toEqual([3, 8]);
+    // 1·24 e 2·12 foram tentados antes, e as somas deles aparecem.
+    expect(conta.tentativas.map((t) => t.soma)).toEqual([25, 14, 11]);
+  });
+
+  it('sem par inteiro, mostra as raízes em vez de inventar um', () => {
+    // 11² - 4·24 = 25 é quadrado; 11² - 4·28 = 9 também. 11 e 11 não é.
+    const conta = calcularFatores('11', '11');
+
+    expect(conta.par).toBeNull();
+    expect(conta.fatoracao).toBeNull();
+    expect(conta.raizes.length).toBe(2);
+    // (11 ± √77)/2 ≈ 1,1125 e 9,8875.
+    expect(conta.raizes[0]).toBe('1,1125178063');
+    expect(conta.raizes[1]).toBe('9,8874821937');
+  });
+
+  it('as raízes somam e multiplicam o que foi pedido', () => {
+    const conta = calcularFatores('11', '11');
+    const numeros = conta.raizes.map((r) => Number(r.replace(',', '.')));
+
+    expect(numeros[0]! + numeros[1]!).toBeCloseTo(11, 6);
+    expect(numeros[0]! * numeros[1]!).toBeCloseTo(11, 5);
+  });
+
+  it('soma pequena demais para o produto não tem par real', () => {
+    // Dois números que somam 4 têm produto no máximo 4: 10 é impossível.
+    const conta = calcularFatores('10', '4');
+
+    expect(conta.erro?.chave).toBe('calculadora.semParReal');
+    expect(conta.par).toBeNull();
+  });
+
+  it('campo vazio não é erro, é pergunta pela metade', () => {
+    expect(calcularFatores('', '').erro).toBeNull();
+    expect(calcularFatores('24', '').erro).toBeNull();
+    expect(calcularFatores('24', '').par).toBeNull();
+  });
+
+  it('o que não é inteiro é recusado com o que foi escrito', () => {
+    expect(calcularFatores('2,5', '11').erro).toEqual({
+      chave: 'calculadora.naoInteiro',
+      valores: { parte: '2,5' },
+    });
+    expect(calcularFatores('24', 'x').erro?.chave).toBe('calculadora.naoInteiro');
+  });
+
+  it('acima do limite a conta deixa de ser de escola', () => {
+    expect(calcularFatores('10000000', '11').erro?.chave).toBe('calculadora.limiteFatores');
+  });
+
+  it('o par sai depressa mesmo com muitos divisores', () => {
+    // 720720 tem 240 divisores; a resposta vem do discriminante, não da varredura.
+    const comecou = Date.now();
+    const conta = calcularFatores('720720', '1698');
+
+    expect([conta.par!.a, conta.par!.b].sort((x, y) => x - y)).toEqual([840, 858]);
+    expect(Date.now() - comecou).toBeLessThan(200);
+  });
+
+  it('a tabela corta quando os pares não acabam', () => {
+    // Sem par inteiro, a varredura percorre tudo e tem de parar sozinha.
+    const conta = calcularFatores('-720720', '1');
+
+    expect(conta.par).toBeNull();
+    expect(conta.tentativas.length).toBeLessThanOrEqual(20);
+    expect(conta.truncada).toBe(true);
   });
 });
