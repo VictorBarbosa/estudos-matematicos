@@ -1,3 +1,8 @@
+import {
+  CONFIGURACAO_PADRAO,
+  CriterioDaEtapa,
+  EscadaDeNivel,
+} from '@core/configuracao/models/configuracao.model';
 import { EstatisticaConceito, Tentativa } from '@core/treino/services/progresso.service';
 import { Nivel } from '@core/treino/models/treino.model';
 import { CURRICULO, rotaDoTopico } from '@curriculo/curriculo';
@@ -25,19 +30,19 @@ import { CURRICULO, rotaDoTopico } from '@curriculo/curriculo';
  * necessárias pelo menos dez tentativas, não há mais como liberar um tópico
  * com três cliques.
  */
-export const RESPOSTAS_NA_JANELA = 10;
-export const ACERTOS_NA_JANELA = 8;
-export const ACERTOS_EXIGENTES = 3;
-export const ACERTOS_SEGUIDOS_FINAIS = 3;
+export const RESPOSTAS_NA_JANELA = CONFIGURACAO_PADRAO.etapa.respostasNaJanela;
+export const ACERTOS_NA_JANELA = CONFIGURACAO_PADRAO.etapa.acertosNaJanela;
+export const ACERTOS_EXIGENTES = CONFIGURACAO_PADRAO.etapa.acertosExigentes;
+export const ACERTOS_SEGUIDOS_FINAIS = CONFIGURACAO_PADRAO.etapa.acertosSeguidosFinais;
 
 /** Níveis que contam como prova de domínio. */
 export const NIVEIS_EXIGENTES: readonly Nivel[] = ['medio', 'dificil'];
 
 /** Acertos seguidos que promovem ao nível seguinte. */
-export const ACERTOS_PARA_SUBIR = 3;
+export const ACERTOS_PARA_SUBIR = CONFIGURACAO_PADRAO.escada.acertosParaSubir;
 
 /** Erros seguidos que devolvem ao nível anterior. */
-export const ERROS_PARA_DESCER = 2;
+export const ERROS_PARA_DESCER = CONFIGURACAO_PADRAO.escada.errosParaDescer;
 
 /** A escada de dificuldade, do mais simples ao mais exigente. */
 const ESCADA: readonly Nivel[] = ['facil', 'medio', 'dificil'];
@@ -66,7 +71,10 @@ export interface NivelDoTopico {
  * Nada disso é estado novo: o nível é relido do mesmo histórico de tentativas
  * que a progressão já guarda, então um refresh devolve o aluno onde ele estava.
  */
-export function nivelDoTopico(historico: readonly Tentativa[]): NivelDoTopico {
+export function nivelDoTopico(
+  historico: readonly Tentativa[],
+  escada: EscadaDeNivel = CONFIGURACAO_PADRAO.escada,
+): NivelDoTopico {
   let degrau = 0;
   let seguidosCertos = 0;
   let seguidosErrados = 0;
@@ -79,7 +87,7 @@ export function nivelDoTopico(historico: readonly Tentativa[]): NivelDoTopico {
       seguidosCertos++;
       seguidosErrados = 0;
 
-      if (seguidosCertos >= ACERTOS_PARA_SUBIR && degrau < ESCADA.length - 1) {
+      if (seguidosCertos >= escada.acertosParaSubir && degrau < ESCADA.length - 1) {
         degrau++;
         seguidosCertos = 0;
         acabouDeSubir = true;
@@ -88,7 +96,7 @@ export function nivelDoTopico(historico: readonly Tentativa[]): NivelDoTopico {
       seguidosErrados++;
       seguidosCertos = 0;
 
-      if (seguidosErrados >= ERROS_PARA_DESCER && degrau > 0) {
+      if (seguidosErrados >= escada.errosParaDescer && degrau > 0) {
         degrau--;
         seguidosErrados = 0;
       }
@@ -100,7 +108,7 @@ export function nivelDoTopico(historico: readonly Tentativa[]): NivelDoTopico {
   return {
     nivel: ESCADA[degrau]!,
     seguidos: seguidosCertos,
-    faltamParaSubir: noTopo ? 0 : ACERTOS_PARA_SUBIR - seguidosCertos,
+    faltamParaSubir: noTopo ? 0 : escada.acertosParaSubir - seguidosCertos,
     acabouDeSubir,
   };
 }
@@ -133,7 +141,7 @@ export interface RequisitoDeConceito {
  * que a regra existe para garantir — que nenhuma operação passe sem ser
  * praticada — sem transformar a etapa numa maratona.
  */
-export const ACERTOS_POR_TIPO = 3;
+export const ACERTOS_POR_TIPO = CONFIGURACAO_PADRAO.etapa.acertosPorTipo;
 
 /**
  * Exigências extras por tópico.
@@ -143,35 +151,42 @@ export const ACERTOS_POR_TIPO = 3;
  * passar da etapa sem ter praticado cada uma delas deixaria um buraco que
  * aparece inteiro no Cálculo.
  */
-export const REQUISITOS_POR_TOPICO: Readonly<Record<string, readonly RequisitoDeConceito[]>> = {
-  fracoes: [
-    { conceito: 'fracoes.soma', rotulo: 'tipoFracao.soma', acertos: ACERTOS_POR_TIPO },
-    { conceito: 'fracoes.subtracao', rotulo: 'tipoFracao.subtracao', acertos: ACERTOS_POR_TIPO },
-    {
-      conceito: 'fracoes.multiplicacao',
-      rotulo: 'tipoFracao.multiplicacao',
-      acertos: ACERTOS_POR_TIPO,
-    },
-    { conceito: 'fracoes.divisao', rotulo: 'tipoFracao.divisao', acertos: ACERTOS_POR_TIPO },
-    { conceito: 'fracoes.mista-soma', rotulo: 'tipoFracao.somaMista', acertos: ACERTOS_POR_TIPO },
-    {
-      conceito: 'fracoes.mista-subtracao',
-      rotulo: 'tipoFracao.subtracaoMista',
-      acertos: ACERTOS_POR_TIPO,
-    },
-    {
-      conceito: 'fracoes.mista-multiplicacao',
-      rotulo: 'tipoFracao.multiplicacaoMista',
-      acertos: ACERTOS_POR_TIPO,
-    },
-    {
-      conceito: 'fracoes.mista-divisao',
-      rotulo: 'tipoFracao.divisaoMista',
-      acertos: ACERTOS_POR_TIPO,
-    },
-    { conceito: 'fracoes.decimais', rotulo: 'tipoFracao.decimal', acertos: ACERTOS_POR_TIPO },
-  ],
-};
+/** Os tipos declarados por tópico; quantos acertos cada um pede é configurável. */
+const TIPOS_POR_TOPICO: Readonly<Record<string, readonly { conceito: string; rotulo: string }[]>> =
+  {
+    fracoes: [
+      { conceito: 'fracoes.soma', rotulo: 'tipoFracao.soma' },
+      { conceito: 'fracoes.subtracao', rotulo: 'tipoFracao.subtracao' },
+      { conceito: 'fracoes.multiplicacao', rotulo: 'tipoFracao.multiplicacao' },
+      { conceito: 'fracoes.divisao', rotulo: 'tipoFracao.divisao' },
+      { conceito: 'fracoes.mista-soma', rotulo: 'tipoFracao.somaMista' },
+      { conceito: 'fracoes.mista-subtracao', rotulo: 'tipoFracao.subtracaoMista' },
+      { conceito: 'fracoes.mista-multiplicacao', rotulo: 'tipoFracao.multiplicacaoMista' },
+      { conceito: 'fracoes.mista-divisao', rotulo: 'tipoFracao.divisaoMista' },
+      { conceito: 'fracoes.decimais', rotulo: 'tipoFracao.decimal' },
+    ],
+  };
+
+/** As exigências de um tópico, com a quantidade que a configuração manda. */
+export function requisitosDoTopico(
+  topicoId: string,
+  acertosPorTipo: number = ACERTOS_POR_TIPO,
+): readonly RequisitoDeConceito[] {
+  return (TIPOS_POR_TOPICO[topicoId] ?? []).map((tipo) => ({ ...tipo, acertos: acertosPorTipo }));
+}
+
+/**
+ * Exigências extras por tópico, com os valores de fábrica.
+ *
+ * Só Frações tem uma por enquanto: as quatro operações têm regras diferentes —
+ * somar pede denominador comum, multiplicar não, dividir inverte o divisor —, e
+ * passar da etapa sem ter praticado cada uma delas deixaria um buraco que
+ * aparece inteiro no Cálculo.
+ */
+export const REQUISITOS_POR_TOPICO: Readonly<Record<string, readonly RequisitoDeConceito[]>> =
+  Object.fromEntries(
+    Object.keys(TIPOS_POR_TOPICO).map((topicoId) => [topicoId, requisitosDoTopico(topicoId)]),
+  );
 
 /**
  * Os tipos de exercício que ainda faltam no tópico.
@@ -184,8 +199,9 @@ export const REQUISITOS_POR_TOPICO: Readonly<Record<string, readonly RequisitoDe
 export function tiposPendentes(
   topicoId: string,
   porConceito: Readonly<Record<string, EstatisticaConceito>>,
+  acertosPorTipo: number = ACERTOS_POR_TIPO,
 ): readonly string[] {
-  return (REQUISITOS_POR_TOPICO[topicoId] ?? [])
+  return requisitosDoTopico(topicoId, acertosPorTipo)
     .filter((requisito) => (porConceito[requisito.conceito]?.acertos ?? 0) < requisito.acertos)
     .map((requisito) => requisito.conceito);
 }
@@ -207,6 +223,13 @@ export interface Dominio {
   readonly seguidosNoFim: number;
   /** As exigências de cobertura do tópico, vazia quando não há nenhuma. */
   readonly requisitos: readonly ProgressoDoRequisito[];
+  /**
+   * O critério que julgou este domínio.
+   *
+   * Vai junto para que a lista de exigências mostre os alvos que valeram de
+   * fato, e não os de fábrica, depois que o aluno mexe na configuração.
+   */
+  readonly criterio: CriterioDaEtapa;
   readonly vencido: boolean;
 }
 
@@ -216,6 +239,7 @@ const DOMINIO_VAZIO: Dominio = {
   acertosExigentes: 0,
   seguidosNoFim: 0,
   requisitos: [],
+  criterio: CONFIGURACAO_PADRAO.etapa,
   vencido: false,
 };
 
@@ -223,8 +247,9 @@ const DOMINIO_VAZIO: Dominio = {
 function requisitosDe(
   topicoId: string,
   porConceito: Readonly<Record<string, EstatisticaConceito>>,
+  acertosPorTipo: number,
 ): readonly ProgressoDoRequisito[] {
-  return (REQUISITOS_POR_TOPICO[topicoId] ?? []).map((requisito) => {
+  return requisitosDoTopico(topicoId, acertosPorTipo).map((requisito) => {
     const feitos = porConceito[requisito.conceito]?.acertos ?? 0;
     return { ...requisito, feitos, cumprido: feitos >= requisito.acertos };
   });
@@ -240,14 +265,16 @@ export function dominioDe(
   historico: readonly Tentativa[],
   topicoId = '',
   porConceito: Readonly<Record<string, EstatisticaConceito>> = {},
+  criterio: CriterioDaEtapa = CONFIGURACAO_PADRAO.etapa,
 ): Dominio {
-  const requisitos = requisitosDe(topicoId, porConceito);
+  const requisitos = requisitosDe(topicoId, porConceito, criterio.acertosPorTipo);
+  const vazio: Dominio = { ...DOMINIO_VAZIO, criterio };
 
   if (historico.length === 0) {
-    return requisitos.length === 0 ? DOMINIO_VAZIO : { ...DOMINIO_VAZIO, requisitos };
+    return requisitos.length === 0 ? vazio : { ...vazio, requisitos };
   }
 
-  const janela = historico.slice(-RESPOSTAS_NA_JANELA);
+  const janela = historico.slice(-criterio.respostasNaJanela);
   const acertos = janela.filter((tentativa) => tentativa.acertou).length;
   const acertosExigentes = janela.filter(
     (tentativa) => tentativa.acertou && NIVEIS_EXIGENTES.includes(tentativa.nivel),
@@ -264,11 +291,12 @@ export function dominioDe(
     acertosExigentes,
     seguidosNoFim,
     requisitos,
+    criterio,
     vencido:
-      janela.length >= RESPOSTAS_NA_JANELA &&
-      acertos >= ACERTOS_NA_JANELA &&
-      acertosExigentes >= ACERTOS_EXIGENTES &&
-      seguidosNoFim >= ACERTOS_SEGUIDOS_FINAIS &&
+      janela.length >= criterio.respostasNaJanela &&
+      acertos >= criterio.acertosNaJanela &&
+      acertosExigentes >= criterio.acertosExigentes &&
+      seguidosNoFim >= criterio.acertosSeguidosFinais &&
       requisitos.every((requisito) => requisito.cumprido),
   };
 }
@@ -317,11 +345,13 @@ export function exigenciasDaEtapa(dominio: Dominio): readonly ExigenciaDaEtapa[]
     zeraComErro,
   });
 
+  const { criterio } = dominio;
+
   return [
-    exigencia('exigencia.respondidos', dominio.respostas, RESPOSTAS_NA_JANELA),
-    exigencia('exigencia.acertosEntreEles', dominio.acertos, ACERTOS_NA_JANELA),
-    exigencia('exigencia.acertosExigentes', dominio.acertosExigentes, ACERTOS_EXIGENTES),
-    exigencia('exigencia.seguidos', dominio.seguidosNoFim, ACERTOS_SEGUIDOS_FINAIS, true),
+    exigencia('exigencia.respondidos', dominio.respostas, criterio.respostasNaJanela),
+    exigencia('exigencia.acertosEntreEles', dominio.acertos, criterio.acertosNaJanela),
+    exigencia('exigencia.acertosExigentes', dominio.acertosExigentes, criterio.acertosExigentes),
+    exigencia('exigencia.seguidos', dominio.seguidosNoFim, criterio.acertosSeguidosFinais, true),
   ];
 }
 

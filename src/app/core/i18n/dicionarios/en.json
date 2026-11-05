@@ -87,6 +87,40 @@
   "conceitos": {
     "etiqueta": "Understand the mathematics:"
   },
+  "config": {
+    "acertosExigentes": "Correct at Medium or Hard",
+    "acertosExigentesAjuda": "Stops a stage from being won on easy exercises alone.",
+    "acertosNaJanela": "Correct among them",
+    "acertosNaJanelaAjuda": "How many of those exercises must be right.",
+    "acertosParaSubir": "Correct in a row to level up",
+    "acertosParaSubirAjuda": "Easy → Medium → Hard.",
+    "acertosPorTipo": "Correct in each type",
+    "acertosPorTipoAjuda": "Where a topic has distinct types — nine in Fractions — how many each one asks for.",
+    "acertosSeguidosFinais": "Correct in a row at the end",
+    "acertosSeguidosFinaisAjuda": "So a stage does not open right after a mistake. One mistake resets this count.",
+    "aviso": "Nothing here erases your progress. Lowering a requirement may open a stage at once; raising it may close one.",
+    "bloco.escada": "Difficulty ladder",
+    "bloco.etapa": "To open the next stage",
+    "bloco.prova": "Session final exam",
+    "errosParaDescer": "Wrong in a row to level down",
+    "errosParaDescerAjuda": "Pushing on at a level that does not hold yet teaches nothing.",
+    "errosTolerados": "Mistakes tolerated",
+    "errosToleradosAjuda": "The mistake after this number resets the whole session.",
+    "explicacao.escada": "The level is not chosen: it rises with answers right in a row and falls with wrong ones in a row.",
+    "explicacao.etapa": "The criterion looks only at recent attempts, to measure what you know now.",
+    "explicacao.prova": "At the end of each area there is an exam on everything it covered. Failing resets the whole area.",
+    "introducao": "These are the numbers that decide when a stage opens and what the final exam tolerates. Any change applies at once, to the progress you already have.",
+    "minimoDeQuestoes": "Minimum questions",
+    "minimoDeQuestoesAjuda": "The exam asks one question per type of each topic, and fills up to this minimum.",
+    "padrao": "default: {valor}",
+    "redefinir": "Restore defaults",
+    "respostasNaJanela": "Exercises answered",
+    "respostasNaJanelaAjuda": "How many recent attempts are counted.",
+    "resumoEtapa": "Today: get {acertos} of the last {respostas} exercises right, {exigentes} of them at Medium or Hard, ending with {seguidos} right in a row.",
+    "resumoProva": "Today: the exam has at least {minimo} questions and tolerates {tolerados} mistakes — number {zera} resets the whole area.",
+    "titulo": "Settings",
+    "voltar": "Back to start"
+  },
   "controle": {
     "valorExato": "{rotulo} (exact value)"
   },
@@ -818,6 +852,7 @@
     "tema": "Switch theme. Current: {atual}"
   },
   "sidebar": {
+    "configuracoes": "Settings",
     "emBreve": "coming soon",
     "prontos": "{prontos} of {total} done",
     "prova": "Final exam",

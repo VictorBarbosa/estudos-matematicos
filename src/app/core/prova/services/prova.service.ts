@@ -6,6 +6,7 @@ import {
   sessaoDoTopico,
   sessaoPorId,
 } from '@core/prova/models/prova.model';
+import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
 import { dominioDe } from '@core/progressao/models/progressao.model';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 
@@ -31,6 +32,7 @@ interface EstadoDasProvas {
 @Injectable({ providedIn: 'root' })
 export class ProvaService {
   private readonly progresso = inject(ProgressoService);
+  private readonly configuracao = inject(ConfiguracaoService);
   private readonly estado = signal<EstadoDasProvas>(carregar());
 
   readonly sessoes = SESSOES;
@@ -51,7 +53,9 @@ export class ProvaService {
     return new Set(
       SESSOES.filter((sessao) =>
         sessao.topicoIds.every(
-          (topicoId) => dominioDe(historicos[topicoId] ?? [], topicoId, conceitos).vencido,
+          (topicoId) =>
+            dominioDe(historicos[topicoId] ?? [], topicoId, conceitos, this.configuracao.etapa())
+              .vencido,
         ),
       ).map((sessao) => sessao.id),
     );

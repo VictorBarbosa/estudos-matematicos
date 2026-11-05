@@ -87,6 +87,40 @@
   "conceitos": {
     "etiqueta": "Entenda a matemática:"
   },
+  "config": {
+    "acertosExigentes": "Acertos no Médio ou no Difícil",
+    "acertosExigentesAjuda": "Impede vencer a etapa só com exercícios fáceis.",
+    "acertosNaJanela": "Acertos entre eles",
+    "acertosNaJanelaAjuda": "Quantos desses exercícios precisam estar certos. É o «total de perguntas para avançar».",
+    "acertosParaSubir": "Acertos seguidos para subir",
+    "acertosParaSubirAjuda": "Fácil → Médio → Difícil.",
+    "acertosPorTipo": "Acertos em cada tipo",
+    "acertosPorTipoAjuda": "Onde o tópico tem tipos distintos — em Frações são nove —, quantos acertos cada um pede.",
+    "acertosSeguidosFinais": "Acertos seguidos no fim",
+    "acertosSeguidosFinaisAjuda": "Para a etapa não abrir logo depois de um erro. Um erro zera esta contagem.",
+    "aviso": "Nada aqui apaga o seu progresso. Baixar uma exigência pode abrir uma etapa na hora; subi-la pode fechar uma que estava aberta, porque o critério vale para agora.",
+    "bloco.escada": "Escada de dificuldade",
+    "bloco.etapa": "Para abrir a próxima etapa",
+    "bloco.prova": "Prova final da sessão",
+    "errosParaDescer": "Erros seguidos para descer",
+    "errosParaDescerAjuda": "Insistir num nível que ainda não se sustenta não ensina.",
+    "errosTolerados": "Erros tolerados",
+    "errosToleradosAjuda": "O erro seguinte a este número zera a sessão inteira. É o «total de falhas».",
+    "explicacao.escada": "O nível não se escolhe: ele sobe com acertos seguidos e desce com erros seguidos.",
+    "explicacao.etapa": "O critério olha só as tentativas recentes, para medir o que você sabe agora e não o que já soube.",
+    "explicacao.prova": "Ao fim de cada área há uma prova sobre tudo o que ela cobriu. Falhar zera a área inteira.",
+    "introducao": "Estes são os números que decidem quando uma etapa abre e quanto a prova final tolera. Mudar qualquer um vale na hora, sobre o progresso que você já tem.",
+    "minimoDeQuestoes": "Mínimo de questões",
+    "minimoDeQuestoesAjuda": "A prova tem uma questão por tipo de cada tópico da área, e completa até este mínimo.",
+    "padrao": "de fábrica: {valor}",
+    "redefinir": "Voltar ao de fábrica",
+    "respostasNaJanela": "Exercícios respondidos",
+    "respostasNaJanelaAjuda": "Quantas tentativas recentes entram na conta.",
+    "resumoEtapa": "Hoje: acertar {acertos} dos últimos {respostas} exercícios, com {exigentes} deles no Médio ou no Difícil, terminando com {seguidos} acertos seguidos.",
+    "resumoProva": "Hoje: a prova tem pelo menos {minimo} questões e tolera {tolerados} erros — o {zera}º zera a área inteira.",
+    "titulo": "Configurações",
+    "voltar": "Voltar ao início"
+  },
   "controle": {
     "valorExato": "{rotulo} (valor exato)"
   },
@@ -818,6 +852,7 @@
     "tema": "Alternar tema. Atual: {atual}"
   },
   "sidebar": {
+    "configuracoes": "Configurações",
     "emBreve": "em breve",
     "prontos": "{prontos} de {total} prontos",
     "prova": "Prova final",

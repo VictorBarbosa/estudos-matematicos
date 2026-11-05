@@ -11,6 +11,15 @@
     </a>
   }
 
+  <a
+    class="atalho-configuracoes"
+    routerLink="/configuracoes"
+    routerLinkActive="ativo"
+    (click)="navegou.emit()"
+  >
+    {{ i18n.t('sidebar.configuracoes') }}
+  </a>
+
   @for (area of areas(); track area.id) {
     <section class="area">
       <h2>

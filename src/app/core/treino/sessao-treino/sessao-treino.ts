@@ -1,4 +1,5 @@
 import { Signal, WritableSignal, computed, signal } from '@angular/core';
+import { CONFIGURACAO_PADRAO, Configuracao } from '@core/configuracao/models/configuracao.model';
 import { nivelDoTopico, tiposPendentes } from '@core/progressao/models/progressao.model';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { Rng, criarRng, sementeAleatoria } from '@core/treino/rng/rng';
@@ -29,7 +30,7 @@ export class SessaoTreino<T> {
    * já sai na dificuldade nova.
    */
   readonly escada = computed(() =>
-    nivelDoTopico(this.progresso.historicoDe(this.gerador.topicoId)),
+    nivelDoTopico(this.progresso.historicoDe(this.gerador.topicoId), this.configuracao().escada),
   );
 
   readonly nivel = computed<Nivel>(() => this.escada().nivel);
@@ -64,6 +65,8 @@ export class SessaoTreino<T> {
   constructor(
     private readonly gerador: GeradorExercicio<T>,
     private readonly progresso: ProgressoService,
+    /** Lida a cada uso: mudar a configuração vale já no próximo sorteio. */
+    private readonly configuracao: () => Configuracao = () => CONFIGURACAO_PADRAO,
   ) {
     this.exercicioAtual = signal(this.sortear());
     this.exercicio = this.exercicioAtual.asReadonly();
@@ -125,7 +128,11 @@ export class SessaoTreino<T> {
    * 3/5, porque o que já estava cumprido continuava sendo oferecido.
    */
   private sortear(): Exercicio<T> {
-    const pendentes = tiposPendentes(this.gerador.topicoId, this.progresso.porConceito());
+    const pendentes = tiposPendentes(
+      this.gerador.topicoId,
+      this.progresso.porConceito(),
+      this.configuracao().etapa.acertosPorTipo,
+    );
     return this.gerador.gerar(this.nivel(), this.rng, pendentes);
   }
 

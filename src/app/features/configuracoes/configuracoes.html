@@ -1,0 +1,56 @@
+<section class="configuracoes">
+  <header class="cabecalho">
+    <h1>{{ i18n.t('config.titulo') }}</h1>
+    <p class="introducao">{{ i18n.t('config.introducao') }}</p>
+  </header>
+
+  @for (bloco of blocos(); track bloco.id) {
+    <section class="bloco">
+      <h2>{{ i18n.t('config.bloco.' + bloco.id) }}</h2>
+      <p class="explicacao">{{ i18n.t('config.explicacao.' + bloco.id) }}</p>
+
+      <ul class="ajustes">
+        @for (campo of bloco.campos; track campo.chave) {
+          <li [class.mudado]="campo.mudado">
+            <label [for]="campo.chave">
+              <span class="rotulo">{{ i18n.t(campo.chave) }}</span>
+              <span class="ajuda">{{ i18n.t(campo.chave + 'Ajuda') }}</span>
+            </label>
+
+            <div class="controle">
+              <input
+                type="number"
+                [id]="campo.chave"
+                [value]="campo.valor"
+                [min]="campo.minimo"
+                [max]="campo.maximo"
+                step="1"
+                inputmode="numeric"
+                (change)="definir(campo.ajuste, $any($event.target).value)"
+              />
+              @if (campo.mudado) {
+                <span class="padrao">{{ i18n.t('config.padrao', { valor: campo.padrao }) }}</span>
+              }
+            </div>
+          </li>
+        }
+      </ul>
+
+      <!-- O critério escrito como frase: é assim que ele aparece no treino. -->
+      @if (bloco.id === 'etapa') {
+        <p class="resumo">{{ resumoDaEtapa() }}</p>
+      } @else if (bloco.id === 'prova') {
+        <p class="resumo">{{ resumoDaProva() }}</p>
+      }
+    </section>
+  }
+
+  <footer class="rodape">
+    <button type="button" class="secundario" [disabled]="intocada()" (click)="redefinir()">
+      {{ i18n.t('config.redefinir') }}
+    </button>
+    <a class="principal" routerLink="/">{{ i18n.t('config.voltar') }}</a>
+  </footer>
+
+  <p class="aviso">{{ i18n.t('config.aviso') }}</p>
+</section>

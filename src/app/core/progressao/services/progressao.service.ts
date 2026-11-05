@@ -1,4 +1,5 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
+import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
 import { ProvaService } from '@core/prova/services/prova.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import {
@@ -44,6 +45,7 @@ const CHAVE_MODO_LIVRE = 'estudos-matematicos.modo-livre.v1';
 export class ProgressaoService {
   private readonly progresso = inject(ProgressoService);
   private readonly prova = inject(ProvaService);
+  private readonly configuracao = inject(ConfiguracaoService);
   private readonly livre = signal(carregarModoLivre());
 
   readonly trilha = TRILHA;
@@ -57,7 +59,13 @@ export class ProgressaoService {
 
     return new Set(
       TRILHA.filter(
-        (etapa) => dominioDe(historicos[etapa.topicoId] ?? [], etapa.topicoId, conceitos).vencido,
+        (etapa) =>
+          dominioDe(
+            historicos[etapa.topicoId] ?? [],
+            etapa.topicoId,
+            conceitos,
+            this.configuracao.etapa(),
+          ).vencido,
       ).map((etapa) => etapa.topicoId),
     );
   });
@@ -155,7 +163,12 @@ export class ProgressaoService {
 
   /** Como o tópico está em relação ao critério de domínio. */
   dominioEm(topicoId: string): Dominio {
-    return dominioDe(this.progresso.historicoDe(topicoId), topicoId, this.progresso.porConceito());
+    return dominioDe(
+      this.progresso.historicoDe(topicoId),
+      topicoId,
+      this.progresso.porConceito(),
+      this.configuracao.etapa(),
+    );
   }
 
   /** Acertos já contabilizados na janela recente, limitados ao alvo. */

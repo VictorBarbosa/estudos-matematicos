@@ -122,6 +122,22 @@ li.prova {
   font-weight: 600;
 }
 
+/* Atalho para os ajustes da progressão, no mesmo formato do de revisão. */
+.atalho-configuracoes {
+  display: block;
+  padding: var(--esp-2) var(--esp-3);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  color: var(--texto-suave);
+  font-size: var(--texto-sm);
+  font-weight: 600;
+
+  &.ativo {
+    border-color: var(--acento);
+    color: var(--acento);
+  }
+}
+
 /* Atalho para a fila de revisão, acima das áreas e só quando há fila. */
 .atalho-revisao {
   display: flex;

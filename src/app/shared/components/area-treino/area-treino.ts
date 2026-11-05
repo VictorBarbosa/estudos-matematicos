@@ -17,6 +17,7 @@ import {
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { SessaoTreino } from '@core/treino/sessao-treino/sessao-treino';
+import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import {
   CHAVE_DO_NIVEL,
@@ -46,6 +47,7 @@ export class AreaTreino {
   readonly gerador = input.required<GeradorExercicio<unknown>>();
 
   private readonly progresso = inject(ProgressoService);
+  private readonly configuracao = inject(ConfiguracaoService);
   private readonly progressao = inject(ProgressaoService);
   private readonly campo = viewChild<CampoResposta>('campo');
 
@@ -63,7 +65,9 @@ export class AreaTreino {
    */
   protected readonly sessao = computed(() => {
     const gerador = this.gerador();
-    return untracked(() => new SessaoTreino<unknown>(gerador, this.progresso));
+    return untracked(
+      () => new SessaoTreino<unknown>(gerador, this.progresso, this.configuracao.configuracao),
+    );
   });
 
   protected readonly alvo = ACERTOS_NA_JANELA;

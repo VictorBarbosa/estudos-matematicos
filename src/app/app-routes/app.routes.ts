@@ -25,6 +25,14 @@ export const routes: Routes = [
     loadComponent: () => import('@features/revisar/revisar').then((m) => m.Revisar),
   },
   {
+    // Os números da progressão. Fora da trilha e sem guard: é tela de ajuste,
+    // não de estudo.
+    path: 'configuracoes',
+    title: 'Configurações · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/configuracoes/configuracoes').then((m) => m.Configuracoes),
+  },
+  {
     /*
      * A prova de fim de sessão fica fora da trilha, e sem guard.
      *

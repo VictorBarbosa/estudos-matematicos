@@ -7,6 +7,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { textoLocal } from '@core/i18n/textos-locais';
 import {
@@ -68,6 +69,7 @@ type Fase = 'carregando' | 'trancada' | 'vencida' | 'respondendo' | 'aprovado' |
 })
 export class Prova {
   private readonly rota = inject(ActivatedRoute);
+  private readonly configuracao = inject(ConfiguracaoService);
   private readonly provas = inject(ProvaService);
   private readonly campo = viewChild<CampoResposta>('campo');
 
@@ -117,8 +119,12 @@ export class Prova {
   protected readonly acertou = computed(() => this.validacao()?.veredito === 'correto');
 
   /** O próximo erro zera a sessão. */
-  protected readonly noLimite = computed(() => noLimite(this.erros()));
-  protected readonly restantes = computed(() => errosRestantes(this.erros()));
+  protected readonly noLimite = computed(() =>
+    noLimite(this.erros(), this.configuracao.prova().errosTolerados),
+  );
+  protected readonly restantes = computed(() =>
+    errosRestantes(this.erros(), this.configuracao.prova().errosTolerados),
+  );
 
   protected readonly ultima = computed(() => this.numero() === this.total());
 
@@ -200,7 +206,7 @@ export class Prova {
     const erros = this.erros() + 1;
     this.erros.set(erros);
 
-    if (reprovou(erros)) {
+    if (reprovou(erros, this.configuracao.prova().errosTolerados)) {
       // Grava na hora: recarregar a página não escapa daqui.
       this.provas.reprovar(this.sessaoId);
       this.perdida.set(true);
@@ -252,7 +258,7 @@ export class Prova {
       return;
     }
 
-    const plano = planoDaProva(this.sessao);
+    const plano = planoDaProva(this.sessao, this.configuracao.prova());
     const rng = criarRng(sementeAleatoria());
 
     const geradores = new Map<string, GeradorExercicio<unknown>>();

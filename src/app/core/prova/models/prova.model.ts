@@ -1,3 +1,4 @@
+import { CONFIGURACAO_PADRAO, RegraDaProva } from '@core/configuracao/models/configuracao.model';
 import { REQUISITOS_POR_TOPICO } from '@core/progressao/models/progressao.model';
 import { Nivel } from '@core/treino/models/treino.model';
 import { CURRICULO } from '@curriculo/curriculo';
@@ -29,7 +30,7 @@ import { CURRICULO } from '@curriculo/curriculo';
  * ter sido avisado seria injusto: o aluno precisa saber que o próximo erro
  * custa a sessão antes de responder a próxima questão.
  */
-export const ERROS_TOLERADOS = 2;
+export const ERROS_TOLERADOS = CONFIGURACAO_PADRAO.prova.errosTolerados;
 
 /**
  * Quantas questões a prova tem, no mínimo.
@@ -38,7 +39,7 @@ export const ERROS_TOLERADOS = 2;
  * seria uma prova de duas perguntas, e duas perguntas com dois erros tolerados
  * não separam quem sabe de quem adivinhou.
  */
-export const MINIMO_DE_QUESTOES = 8;
+export const MINIMO_DE_QUESTOES = CONFIGURACAO_PADRAO.prova.minimoDeQuestoes;
 
 /** Uma sessão de estudo: a área do currículo e as etapas que ela reúne. */
 export interface Sessao {
@@ -97,7 +98,10 @@ export interface ItemDaProva {
  * todos os tipos de questão de um tópico, e numa prova final isso seria uma
  * amostra enviesada do que o aluno deveria saber.
  */
-export function planoDaProva(sessao: Sessao): readonly ItemDaProva[] {
+export function planoDaProva(
+  sessao: Sessao,
+  regra: RegraDaProva = CONFIGURACAO_PADRAO.prova,
+): readonly ItemDaProva[] {
   const base: { readonly topicoId: string; readonly conceito?: string }[] = [];
 
   for (const topicoId of sessao.topicoIds) {
@@ -114,7 +118,7 @@ export function planoDaProva(sessao: Sessao): readonly ItemDaProva[] {
   }
 
   const completo = [...base];
-  while (completo.length < MINIMO_DE_QUESTOES) {
+  while (completo.length < regra.minimoDeQuestoes) {
     completo.push(base[completo.length % base.length]!);
   }
 
@@ -125,18 +129,18 @@ export function planoDaProva(sessao: Sessao): readonly ItemDaProva[] {
 }
 
 /** Quantos erros ainda cabem antes de a sessão zerar. */
-export function errosRestantes(erros: number): number {
-  return Math.max(0, ERROS_TOLERADOS - erros);
+export function errosRestantes(erros: number, tolerados: number = ERROS_TOLERADOS): number {
+  return Math.max(0, tolerados - erros);
 }
 
 /** O próximo erro zera a sessão? É o gatilho do aviso. */
-export function noLimite(erros: number): boolean {
-  return errosRestantes(erros) === 0;
+export function noLimite(erros: number, tolerados: number = ERROS_TOLERADOS): boolean {
+  return errosRestantes(erros, tolerados) === 0;
 }
 
 /** A sessão foi perdida? */
-export function reprovou(erros: number): boolean {
-  return erros > ERROS_TOLERADOS;
+export function reprovou(erros: number, tolerados: number = ERROS_TOLERADOS): boolean {
+  return erros > tolerados;
 }
 
 /** Como a prova de uma sessão está. */
