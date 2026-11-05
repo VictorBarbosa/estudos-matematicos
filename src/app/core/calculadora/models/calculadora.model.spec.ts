@@ -469,24 +469,55 @@ describe('soma e produto', () => {
     expect(conta.tentativas.map((t) => t.soma)).toEqual([25, 14, 11]);
   });
 
-  it('sem par inteiro, mostra as raízes em vez de inventar um', () => {
+  it('sem par inteiro, mostra o par exato em vez de inventar um', () => {
     // 11² - 4·24 = 25 é quadrado; 11² - 4·28 = 9 também. 11 e 11 não é.
     const conta = calcularFatores('11', '11');
 
     expect(conta.par).toBeNull();
     expect(conta.fatoracao).toBeNull();
-    expect(conta.raizes.length).toBe(2);
-    // (11 ± √77)/2 ≈ 1,1125 e 9,8875.
-    expect(conta.raizes[0]).toBe('1,1125178063');
-    expect(conta.raizes[1]).toBe('9,8874821937');
+    expect(conta.parExato).toEqual(['1,1125178063', '9,8874821937']);
   });
 
-  it('as raízes somam e multiplicam o que foi pedido', () => {
+  it('o par exato soma e multiplica o que foi pedido', () => {
     const conta = calcularFatores('11', '11');
-    const numeros = conta.raizes.map((r) => Number(r.replace(',', '.')));
+    const numeros = conta.parExato.map((r) => Number(r.replace(',', '.')));
 
     expect(numeros[0]! + numeros[1]!).toBeCloseTo(11, 6);
     expect(numeros[0]! * numeros[1]!).toBeCloseTo(11, 5);
+  });
+
+  it('as raízes são os opostos do par, e não o par', () => {
+    // x² + 2x - 8 = (x - 2)(x + 4): o par é -2 e 4, as raízes são -4 e 2.
+    // Confundir os dois é responder a raiz com o sinal trocado.
+    const conta = calcularFatores('-8', '2');
+
+    expect([conta.par!.a, conta.par!.b].sort((x, y) => x - y)).toEqual([-2, 4]);
+    expect(conta.fatoracao).toBe('x² + 2x − 8 = (x − 2)(x + 4)');
+    expect(conta.raizes).toEqual(['-4', '2']);
+  });
+
+  it('cada raiz anula o trinômio', () => {
+    for (const [produto, soma] of [
+      ['-8', '2'],
+      ['24', '11'],
+      ['24', '-11'],
+      ['-24', '-5'],
+      ['11', '11'],
+    ]) {
+      const conta = calcularFatores(produto!, soma!);
+      const p = Number(produto);
+      const s = Number(soma);
+
+      for (const raiz of conta.raizes) {
+        const x = Number(raiz.replace(',', '.'));
+        expect(x * x + s * x + p, `${produto}/${soma} em x=${raiz}`).toBeCloseTo(0, 6);
+      }
+    }
+  });
+
+  it('as raízes saem em ordem crescente', () => {
+    expect(calcularFatores('-8', '2').raizes).toEqual(['-4', '2']);
+    expect(calcularFatores('24', '11').raizes).toEqual(['-8', '-3']);
   });
 
   it('soma pequena demais para o produto não tem par real', () => {

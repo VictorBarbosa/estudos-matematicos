@@ -227,8 +227,16 @@
 
         @if (fatores().fatoracao; as fatoracao) {
           <p class="montagem">{{ fatoracao }}</p>
-        } @else if (fatores().raizes.length === 2) {
+        } @else if (fatores().parExato.length === 2) {
           <p class="montagem">{{ i18n.t('calculadora.semParInteiroLongo') }}</p>
+        }
+
+        <!-- As raízes são os OPOSTOS do par: `(x - 2)(x + 4)` zera em 2 e -4.
+             Sem esta linha, quem procura a raiz copia o par e erra o sinal. -->
+        @if (fatores().raizes.length === 2) {
+          <p class="raizes">
+            {{ i18n.t('calculadora.raizes', { a: fatores().raizes[0], b: fatores().raizes[1] }) }}
+          </p>
         }
       </div>
     } @else {

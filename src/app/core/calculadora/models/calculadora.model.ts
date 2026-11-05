@@ -530,10 +530,19 @@ export interface ContaDeFatores {
   /** `x² - 11x + 24 = (x - 3)(x - 8)`, pronto para ler. */
   readonly fatoracao: string | null;
   /**
-   * As duas raízes reais, quando elas não são inteiras.
+   * O par, já escrito, mesmo quando ele não é inteiro.
    *
    * Sem par inteiro o trinômio ainda se fatora — só não com números redondos.
-   * Dizer «não existe» seria mentira; mostrar as raízes é o que responde.
+   * Dizer «não existe» seria mentira.
+   */
+  readonly parExato: readonly string[];
+  /**
+   * As raízes de `x² + Sx + P`, em ordem crescente.
+   *
+   * Elas são os OPOSTOS do par, e é aqui que mora a confusão que isto resolve:
+   * o par de `x² + 2x - 8` é `-2 e 4`, porque a fatoração é `(x - 2)(x + 4)`,
+   * mas quem zera cada fator é `2` e `-4`. Mostrar só o par faz quem procura a
+   * raiz copiar o número trocado de sinal.
    */
   readonly raizes: readonly string[];
   readonly erro: ErroDaConta | null;
@@ -546,6 +555,7 @@ const FATORES_VAZIO: ContaDeFatores = {
   tentativas: [],
   truncada: false,
   fatoracao: null,
+  parExato: [],
   raizes: [],
   erro: null,
 };
@@ -609,6 +619,10 @@ export function calcularFatores(produtoBruto: string, somaBruta: string): ContaD
 
   const { tentativas, truncada } = varrerPares(produto, soma, par);
 
+  // Com par inteiro os dois valores são exatos; sem ele, saem da raiz real.
+  const exatos =
+    par === null ? [(soma - Math.sqrt(delta)) / 2, (soma + Math.sqrt(delta)) / 2] : [par.a, par.b];
+
   return {
     produto,
     soma,
@@ -616,10 +630,12 @@ export function calcularFatores(produtoBruto: string, somaBruta: string): ContaD
     tentativas,
     truncada,
     fatoracao: par === null ? null : escreverFatoracao(soma, produto, par),
-    raizes:
-      par === null
-        ? [(soma - Math.sqrt(delta)) / 2, (soma + Math.sqrt(delta)) / 2].map(formatarValor)
-        : [],
+    parExato: exatos.map(formatarValor),
+    // `(x + a)(x + b)` zera em `-a` e `-b`: as raízes são os opostos do par.
+    raizes: exatos
+      .map((valor) => -valor)
+      .sort((x, y) => x - y)
+      .map(formatarValor),
     erro: null,
   };
 }

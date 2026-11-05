@@ -311,6 +311,13 @@ $tecla: 3.25rem;
   }
 }
 
+/* As raízes andam junto da fatoração, mas são outra resposta: outra cor. */
+.raizes {
+  color: $operador;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
 .teclas {
   display: grid;
   gap: 0.5rem;

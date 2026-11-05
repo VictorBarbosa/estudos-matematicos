@@ -51,6 +51,7 @@ export const CHAVES_USADAS: readonly (readonly [string, string])[] = [
   ['calculadora.pedidoInteiros', 'shared/components/calculadora/calculadora.ts'],
   ['calculadora.produto', 'shared/components/calculadora/calculadora.html'],
   ['calculadora.qualConta', 'shared/components/calculadora/calculadora.html'],
+  ['calculadora.raizes', 'shared/components/calculadora/calculadora.html'],
   ['calculadora.semComum', 'shared/components/calculadora/calculadora.html'],
   ['calculadora.semParInteiro', 'shared/components/calculadora/calculadora.ts'],
   ['calculadora.semParInteiroLongo', 'shared/components/calculadora/calculadora.html'],

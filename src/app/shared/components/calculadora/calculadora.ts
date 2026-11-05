@@ -216,12 +216,9 @@ export class Calculadora {
   /** A linha grande: o resultado, ou a conta sendo escrita. */
   protected readonly visor = computed(() => {
     if (this.emFatores()) {
-      const { par, raizes } = this.fatores();
-      if (par !== null) {
-        return this.i18n.t('calculadora.parEncontrado', { a: par.a, b: par.b });
-      }
-      return raizes.length === 2
-        ? this.i18n.t('calculadora.parEncontrado', { a: raizes[0]!, b: raizes[1]! })
+      const { parExato } = this.fatores();
+      return parExato.length === 2
+        ? this.i18n.t('calculadora.parEncontrado', { a: parExato[0]!, b: parExato[1]! })
         : '—';
     }
 

@@ -383,6 +383,10 @@ describe('Calculadora: soma e produto', () => {
     (
       fixture.nativeElement.querySelector('.fatores .montagem') as HTMLElement | null
     )?.textContent?.trim() ?? null;
+  const raizes = (): string | null =>
+    (
+      fixture.nativeElement.querySelector('.fatores .raizes') as HTMLElement | null
+    )?.textContent?.trim() ?? null;
 
   beforeEach(async () => {
     localStorage.clear();
@@ -427,12 +431,27 @@ describe('Calculadora: soma e produto', () => {
     expect((linhas.at(-1) as HTMLElement).textContent).toContain('11');
   });
 
-  it('sem par inteiro, mostra as raízes e diz por quê', async () => {
+  it('sem par inteiro, mostra o par exato e diz por quê', async () => {
     await escrever('11', '11');
 
     expect(visor()).toContain('1,11');
     expect(legenda()).toBe('Nenhum par de inteiros serve');
-    expect(montagem()).toContain('raízes exatas');
+    expect(montagem()).toContain('par exato');
+  });
+
+  it('separa o par das raízes, que são os opostos dele', async () => {
+    // x² + 2x - 8: o par é -2 e 4, mas quem anula a expressão é -4 e 2.
+    await escrever('-8', '2');
+
+    expect(visor()).toBe('-2 e 4');
+    expect(montagem()).toBe('x² + 2x − 8 = (x − 2)(x + 4)');
+    expect(raizes()).toBe('Raízes: x = -4 ou x = 2');
+  });
+
+  it('as raízes aparecem mesmo quando não há par inteiro', async () => {
+    await escrever('11', '11');
+
+    expect(raizes()).toBe('Raízes: x = -9,8874821937 ou x = -1,1125178063');
   });
 
   it('produto grande demais para a soma não tem resposta real', async () => {
