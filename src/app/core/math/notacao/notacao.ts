@@ -350,10 +350,10 @@ export const SIMBOLOS: readonly SimboloMatematico[] = [
  */
 const EQUIVALENCIAS: readonly (readonly [RegExp, string])[] = [
   // LaTeX dos conjuntos numéricos.
-  [/\\mathbb\s*\{\s*R\s*\}/g, 'ℝ'],
-  [/\\mathbb\s*\{\s*N\s*\}/g, 'ℕ'],
-  [/\\mathbb\s*\{\s*Z\s*\}/g, 'ℤ'],
-  [/\\mathbb\s*\{\s*Q\s*\}/g, 'ℚ'],
+  [/\\mathbb\s*\{\s*R\s*\}/gi, 'ℝ'],
+  [/\\mathbb\s*\{\s*N\s*\}/gi, 'ℕ'],
+  [/\\mathbb\s*\{\s*Z\s*\}/gi, 'ℤ'],
+  [/\\mathbb\s*\{\s*Q\s*\}/gi, 'ℚ'],
 
   // Setas e conectivos, do mais longo para o mais curto.
   [/\\Leftrightarrow|\\iff|<=>/g, '⇔'],
@@ -401,6 +401,11 @@ const SEPARADOR_DE_QUANTIFICADOR = /(∀[^,:.]*|∃[^,:.]*)[:.]/g;
  * chaves de um expoente ou índice de um caractere só. O que sobra é o
  * conteúdo: `\forall x \in \mathbb{R}, x^{2} \geq 0` e `∀x∈ℝ, x²≥0` chegam à
  * mesma string.
+ *
+ * A caixa das letras cai por último, depois de todo o LaTeX ter sido traduzido
+ * — `\Rightarrow` e `\rightarrow` são comandos diferentes e precisam ser lidos
+ * antes. Quem escreve `X ∈ [-3, 2]` acertou a notação, que é o que o tópico
+ * ensina; reprovar por causa do xis maiúsculo é corrigir datilografia.
  */
 export function canonizarNotacao(entrada: string): string {
   let texto = entrada.trim();
@@ -413,14 +418,15 @@ export function canonizarNotacao(entrada: string): string {
     // Dois-pontos separando o corpo do quantificador vale como vírgula.
     .replace(SEPARADOR_DE_QUANTIFICADOR, '$1,')
     // `R`, `N`, `Z` e `Q` soltos depois de ∈, ⊂ ou : são os conjuntos.
-    .replace(/([∈⊂:→])\s*R\b/g, '$1ℝ')
-    .replace(/([∈⊂:→])\s*N\b/g, '$1ℕ')
-    .replace(/([∈⊂:→])\s*Z\b/g, '$1ℤ')
-    .replace(/([∈⊂:→])\s*Q\b/g, '$1ℚ')
+    .replace(/([∈⊂:→])\s*R\b/gi, '$1ℝ')
+    .replace(/([∈⊂:→])\s*N\b/gi, '$1ℕ')
+    .replace(/([∈⊂:→])\s*Z\b/gi, '$1ℤ')
+    .replace(/([∈⊂:→])\s*Q\b/gi, '$1ℚ')
     // `x^{2}` e `_{k}` com um token dentro não precisam das chaves.
     .replace(/([_^])\{([^{}]{1,12})\}/g, '$1$2')
     .replace(/\s+/g, '')
-    .replace(/\.$/, '');
+    .replace(/\.$/, '')
+    .toLowerCase();
 
   return texto;
 }

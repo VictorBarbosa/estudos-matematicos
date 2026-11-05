@@ -189,6 +189,44 @@ describe('escrever notação', () => {
   });
 });
 
+describe('geradorNotacao: a caixa da letra', () => {
+  /** Um exercício de escrever em símbolos, com intervalo fechado. */
+  function doIntervalo() {
+    for (let s = 0; s < 300; s++) {
+      for (const nivel of NIVEIS) {
+        const exercicio = geradorNotacao.gerar(nivel, criarRng(s));
+        if (geradorNotacao.formatar(exercicio.gabarito).includes('∈ [')) {
+          return exercicio;
+        }
+      }
+    }
+    throw new Error('nenhum exercício de intervalo fechado foi sorteado');
+  }
+
+  it('o xis maiúsculo é aceito, como o minúsculo', () => {
+    // Relato do aluno: escreveu `X∈[-3,2]` e foi reprovado com o recado
+    // «a resposta correta é x ∈ [-3, 2]» — a mesma notação.
+    const exercicio = doIntervalo();
+    const certo = geradorNotacao.formatar(exercicio.gabarito);
+
+    for (const escrita of [
+      certo,
+      certo.replace(/\s+/g, ''),
+      certo.toUpperCase(),
+      certo.replace(/\s+/g, '').replace('x', 'X'),
+    ]) {
+      expect(corrigir(geradorNotacao, exercicio, escrita).veredito, escrita).toBe('correto');
+    }
+  });
+
+  it('e a resposta continua aparecendo como o aluno a escreveu', () => {
+    const exercicio = doIntervalo();
+    const validacao = corrigir(geradorNotacao, exercicio, 'X ∈ [-3, 2]');
+
+    expect(validacao.veredito === 'correto' || validacao.veredito === 'incorreto').toBe(true);
+  });
+});
+
 /** O normalizador é quem decide se a correção cobra conteúdo ou digitação. */
 describe('canonizarNotacao', () => {
   it('reduz LaTeX e símbolo à mesma forma', () => {
@@ -211,7 +249,8 @@ describe('canonizarNotacao', () => {
 
   it('mas R em outro lugar continua sendo uma letra', () => {
     // Não dá para trocar todo R: numa fórmula de física, R é resistência.
-    expect(canonizarNotacao('R = 10')).toBe('R=10');
+    expect(canonizarNotacao('R = 10')).toBe('r=10');
+    expect(canonizarNotacao('R = 10')).not.toContain('ℝ');
   });
 
   it('não confunde símbolos que começam igual', () => {
@@ -225,6 +264,25 @@ describe('canonizarNotacao', () => {
   });
 
   it('ponto final não conta', () => {
-    expect(canonizarNotacao('A ⊂ B.')).toBe('A⊂B');
+    expect(canonizarNotacao('A ⊂ B.')).toBe('a⊂b');
+  });
+
+  it('a caixa da letra não reprova quem acertou a notação', () => {
+    // Quem escreve `X ∈ [-3, 2]` acertou o símbolo, que é o que se cobra aqui.
+    expect(canonizarNotacao('X ∈ [-3, 2]')).toBe(canonizarNotacao('x ∈ [-3, 2]'));
+    expect(canonizarNotacao('A ⊂ B')).toBe(canonizarNotacao('a ⊂ b'));
+    expect(canonizarNotacao('∀X ∈ ℝ, X² ≥ 0')).toBe(canonizarNotacao('∀x ∈ ℝ, x² ≥ 0'));
+  });
+
+  it('o LaTeX é lido antes de a caixa cair', () => {
+    // `\\Rightarrow` e `\\rightarrow` são comandos diferentes: baixar a caixa
+    // antes de traduzi-los juntaria os dois no mesmo símbolo.
+    expect(canonizarNotacao('p \\Rightarrow q')).not.toBe(canonizarNotacao('p \\rightarrow q'));
+    expect(canonizarNotacao('x \\in \\mathbb{R}')).toBe(canonizarNotacao('x ∈ ℝ'));
+  });
+
+  it('o conjunto escrito em minúscula depois de ∈ também vale', () => {
+    expect(canonizarNotacao('x ∈ r')).toBe(canonizarNotacao('x ∈ ℝ'));
+    expect(canonizarNotacao('n ∈ n')).toBe(canonizarNotacao('n ∈ ℕ'));
   });
 });
