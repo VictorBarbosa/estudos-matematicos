@@ -2,7 +2,7 @@
   <header>
     <h2 id="titulo-trilha">{{ i18n.t('trilha.titulo') }}</h2>
     <p class="contagem">
-      {{ i18n.t('trilha.contagem', { vencidas: vencidas(), total: total }) }}
+      {{ i18n.t('trilha.contagem', { vencidas: vencidas(), total: total() }) }}
     </p>
   </header>
 
@@ -11,7 +11,7 @@
     role="progressbar"
     [attr.aria-valuenow]="vencidas()"
     [attr.aria-valuemin]="0"
-    [attr.aria-valuemax]="total"
+    [attr.aria-valuemax]="total()"
     [attr.aria-label]="i18n.t('trilha.barra', { percentual: percentual() })"
   >
     <div class="preenchida" [style.width.%]="percentual()"></div>
@@ -30,7 +30,7 @@
       </a>
     </div>
   } @else if (completa()) {
-    <p class="celebracao">{{ i18n.t('trilha.completa', { total: total }) }}</p>
+    <p class="celebracao">{{ i18n.t('trilha.completa', { total: total() }) }}</p>
   } @else if (atual(); as atual) {
     <div class="atual">
       <div class="texto">

@@ -51,25 +51,39 @@ export interface Sessao {
  * As sessões, na ordem do currículo.
  *
  * Só entram os tópicos prontos, porque são eles que formam a trilha — e uma
- * prova não pode cobrar o que ainda não existe para treinar.
+ * prova não pode cobrar o que ainda não existe para treinar. Um tópico tirado
+ * do plano some da prova pela mesma razão: ela cobra o que foi estudado.
+ *
+ * Uma área sem nenhum tópico no plano não vira sessão, e portanto não tem
+ * prova.
  */
-export const SESSOES: readonly Sessao[] = CURRICULO.map((area) => ({
-  id: area.id,
-  topicoIds: area.topicos.filter((topico) => topico.pronto).map((topico) => topico.id),
-})).filter((sessao) => sessao.topicoIds.length > 0);
-
-export function sessaoPorId(id: string): Sessao | null {
-  return SESSOES.find((sessao) => sessao.id === id) ?? null;
+export function montarSessoes(removidos: ReadonlySet<string> = new Set()): readonly Sessao[] {
+  return CURRICULO.map((area) => ({
+    id: area.id,
+    topicoIds: area.topicos
+      .filter((topico) => topico.pronto && !removidos.has(topico.id))
+      .map((topico) => topico.id),
+  })).filter((sessao) => sessao.topicoIds.length > 0);
 }
 
-export function sessaoDoTopico(topicoId: string): Sessao | null {
-  return SESSOES.find((sessao) => sessao.topicoIds.includes(topicoId)) ?? null;
+/** As sessões inteiras, como o currículo as define. */
+export const SESSOES: readonly Sessao[] = montarSessoes();
+
+export function sessaoPorId(id: string, sessoes: readonly Sessao[] = SESSOES): Sessao | null {
+  return sessoes.find((sessao) => sessao.id === id) ?? null;
+}
+
+export function sessaoDoTopico(
+  topicoId: string,
+  sessoes: readonly Sessao[] = SESSOES,
+): Sessao | null {
+  return sessoes.find((sessao) => sessao.topicoIds.includes(topicoId)) ?? null;
 }
 
 /** A sessão seguinte a esta, ou `null` quando é a última. */
-export function sessaoSeguinte(id: string): Sessao | null {
-  const indice = SESSOES.findIndex((sessao) => sessao.id === id);
-  return indice === -1 ? null : (SESSOES[indice + 1] ?? null);
+export function sessaoSeguinte(id: string, sessoes: readonly Sessao[] = SESSOES): Sessao | null {
+  const indice = sessoes.findIndex((sessao) => sessao.id === id);
+  return indice === -1 ? null : (sessoes[indice + 1] ?? null);
 }
 
 /** Uma questão da prova, antes de o exercício ser sorteado. */

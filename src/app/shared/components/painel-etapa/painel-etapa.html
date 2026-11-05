@@ -3,7 +3,7 @@
     <div class="identificacao">
       <span class="numero"
         >{{ i18n.t('etapa.numero', { numero: etapa.numero })
-        }}<span class="de">/{{ total }}</span></span
+        }}<span class="de">/{{ total() }}</span></span
       >
       <span class="area">{{ i18n.tituloDaArea(etapa.areaId) }}</span>
     </div>

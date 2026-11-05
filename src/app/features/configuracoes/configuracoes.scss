@@ -115,6 +115,87 @@
   line-height: 1.5;
 }
 
+.topicos .area {
+  border-top: 1px solid var(--borda);
+  padding-top: var(--esp-2);
+
+  summary {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-3);
+    padding: var(--esp-2) 0;
+    font-weight: 600;
+    cursor: pointer;
+
+    /* `display: flex` come o triângulo padrão; sem ele nada diz que abre. */
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: '›';
+      display: inline-block;
+      width: 0.75rem;
+      color: var(--texto-suave);
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: transform 0.15s ease;
+    }
+
+    .nome {
+      flex: 1;
+    }
+  }
+
+  &[open] > summary::before {
+    transform: rotate(90deg);
+  }
+
+  .quantos {
+    color: var(--texto-suave);
+    font-variant-numeric: tabular-nums;
+    font-weight: 400;
+  }
+}
+
+.topicos .lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: var(--esp-1) var(--esp-4);
+  margin: var(--esp-2) 0 var(--esp-3);
+  padding: 0;
+  list-style: none;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-2);
+    padding: 0.15rem 0;
+    cursor: pointer;
+  }
+
+  /* O que saiu do plano continua visível, e riscado: dá para devolver. */
+  .fora {
+    color: var(--texto-tenue);
+    text-decoration: line-through;
+  }
+}
+
+/* Botão que parece link, para ações secundárias dentro do bloco. */
+.texto {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--acento);
+  font: inherit;
+  font-size: var(--texto-sm);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .rodape {
   display: flex;
   flex-wrap: wrap;

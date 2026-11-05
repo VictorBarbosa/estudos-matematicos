@@ -66,7 +66,7 @@ export class PainelEtapa {
    * não o tópico seguinte, é o que vem depois.
    */
   protected readonly prova = computed(() => {
-    const sessao = sessaoDoTopico(this.topicoId());
+    const sessao = sessaoDoTopico(this.topicoId(), this.provas.sessoes());
     if (sessao === null || !this.provas.estaDisponivel(sessao.id)) {
       return null;
     }

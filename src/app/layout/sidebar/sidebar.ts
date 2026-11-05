@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CURRICULO, rotaDoTopico } from '@curriculo/curriculo';
+import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProvaService } from '@core/prova/services/prova.service';
@@ -29,6 +30,7 @@ export class Sidebar {
   readonly navegou = output<void>();
 
   private readonly progresso = inject(ProgressoService);
+  private readonly configuracao = inject(ConfiguracaoService);
   private readonly progressao = inject(ProgressaoService);
   private readonly provas = inject(ProvaService);
   private readonly revisao = inject(RevisaoService);
@@ -38,28 +40,38 @@ export class Sidebar {
   /** Quantos tópicos a fila de revisão de hoje tem, para o atalho aparecer. */
   protected readonly naFilaDeRevisao = computed(() => this.revisao.fila().length);
 
-  protected readonly areas = computed(() =>
-    CURRICULO.map((area) => ({
+  /**
+   * As áreas como o aluno as vê: sem o que ele tirou do plano.
+   *
+   * Uma área que ficou sem nenhum tópico some inteira — com a prova junto,
+   * porque não há mais o que ela cobrar.
+   */
+  protected readonly areas = computed(() => {
+    const fora = this.configuracao.topicosRemovidos();
+
+    return CURRICULO.map((area) => ({
       ...area,
       titulo: this.i18n.tituloDaArea(area.id),
-      prontos: area.topicos.filter((topico) => topico.pronto).length,
+      prontos: area.topicos.filter((topico) => topico.pronto && !fora.has(topico.id)).length,
       // A prova fecha a área: aparece depois dos tópicos, com o seu estado.
       prova: {
         estado: this.provas.estadoDe(area.id),
         rota: `/prova/${area.id}`,
       },
-      topicos: area.topicos.map((topico) => {
-        const aproveitamento = this.progresso.aproveitamentoDe(topico.id);
-        return {
-          ...topico,
-          titulo: this.i18n.tituloDoTopico(topico.id),
-          descricao: this.i18n.descricaoDoTopico(topico.id),
-          rota: rotaDoTopico(area.id, topico.id),
-          percentual: aproveitamento === null ? null : Math.round(aproveitamento * 100),
-          liberado: this.progressao.estaLiberada(topico.id),
-          concluido: this.progressao.estaConcluida(topico.id),
-        };
-      }),
-    })),
-  );
+      topicos: area.topicos
+        .filter((topico) => !fora.has(topico.id))
+        .map((topico) => {
+          const aproveitamento = this.progresso.aproveitamentoDe(topico.id);
+          return {
+            ...topico,
+            titulo: this.i18n.tituloDoTopico(topico.id),
+            descricao: this.i18n.descricaoDoTopico(topico.id),
+            rota: rotaDoTopico(area.id, topico.id),
+            percentual: aproveitamento === null ? null : Math.round(aproveitamento * 100),
+            liberado: this.progressao.estaLiberada(topico.id),
+            concluido: this.progressao.estaConcluida(topico.id),
+          };
+        }),
+    })).filter((area) => area.topicos.length > 0);
+  });
 }

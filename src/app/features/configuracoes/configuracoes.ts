@@ -7,6 +7,7 @@ import {
   LIMITES,
 } from '@core/configuracao/models/configuracao.model';
 import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
+import { CURRICULO } from '@curriculo/curriculo';
 import { I18nService } from '@core/i18n/services/i18n.service';
 
 /** Um ajuste do jeito que ele aparece na tela. */
@@ -26,6 +27,21 @@ interface Campo {
 interface Bloco {
   readonly id: string;
   readonly campos: readonly Campo[];
+}
+
+/** Um tópico do currículo, com a marca de estar ou não no plano. */
+interface TopicoEscolhivel {
+  readonly id: string;
+  readonly titulo: string;
+  readonly dentro: boolean;
+}
+
+/** Uma área do currículo na lista de escolha. */
+interface AreaEscolhivel {
+  readonly id: string;
+  readonly titulo: string;
+  readonly topicos: readonly TopicoEscolhivel[];
+  readonly dentro: number;
 }
 
 const ORDEM: readonly Ajuste[] = [
@@ -88,6 +104,56 @@ export class Configuracoes {
       minimo: prova.minimoDeQuestoes,
     });
   });
+
+  /** O currículo inteiro, marcando o que está dentro do plano. */
+  protected readonly areas = computed<readonly AreaEscolhivel[]>(() => {
+    const fora = this.servico.topicosRemovidos();
+
+    return CURRICULO.map((area) => {
+      const topicos = area.topicos
+        .filter((topico) => topico.pronto)
+        .map((topico) => ({
+          id: topico.id,
+          titulo: this.i18n.tituloDoTopico(topico.id),
+          dentro: !fora.has(topico.id),
+        }));
+
+      return {
+        id: area.id,
+        titulo: this.i18n.tituloDaArea(area.id),
+        topicos,
+        dentro: topicos.filter((topico) => topico.dentro).length,
+      };
+    }).filter((area) => area.topicos.length > 0);
+  });
+
+  /** Quantos tópicos o plano tem agora, e quantos existem ao todo. */
+  protected readonly noPlano = computed(() =>
+    this.areas().reduce((total, area) => total + area.dentro, 0),
+  );
+  protected readonly aoTodo = computed(() =>
+    this.areas().reduce((total, area) => total + area.topicos.length, 0),
+  );
+
+  protected readonly algumFora = computed(() => this.noPlano() < this.aoTodo());
+
+  protected alternarTopico(topicoId: string): void {
+    this.servico.alternarTopico(topicoId);
+  }
+
+  /** Tira a área inteira do plano, ou devolve-a inteira. */
+  protected alternarArea(area: AreaEscolhivel): void {
+    const tirarTodos = area.dentro > 0;
+    for (const topico of area.topicos) {
+      if (topico.dentro === tirarTodos) {
+        this.servico.alternarTopico(topico.id);
+      }
+    }
+  }
+
+  protected incluirTodos(): void {
+    this.servico.incluirTodos();
+  }
 
   protected definir(ajuste: Ajuste, valor: string): void {
     const numero = Number(valor);

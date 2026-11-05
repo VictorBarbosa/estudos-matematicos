@@ -22,7 +22,7 @@ import {
   sessaoSeguinte,
 } from '@core/prova/models/prova.model';
 import { ProvaService } from '@core/prova/services/prova.service';
-import { TRILHA } from '@core/progressao/models/progressao.model';
+import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { CARREGAR_GERADOR } from '@core/treino/registro-geradores/registro-geradores';
 import { Exercicio, GeradorExercicio, Validacao, corrigir } from '@core/treino/models/treino.model';
 import { Rng, criarRng, sementeAleatoria } from '@core/treino/rng/rng';
@@ -71,6 +71,7 @@ export class Prova {
   private readonly rota = inject(ActivatedRoute);
   private readonly configuracao = inject(ConfiguracaoService);
   private readonly provas = inject(ProvaService);
+  private readonly progressao = inject(ProgressaoService);
   private readonly campo = viewChild<CampoResposta>('campo');
 
   protected readonly i18n = inject(I18nService);
@@ -85,7 +86,7 @@ export class Prova {
    */
   private readonly sessaoId = this.rota.snapshot.paramMap.get('sessaoId') ?? '';
 
-  protected readonly sessao: Sessao | null = sessaoPorId(this.sessaoId);
+  protected readonly sessao: Sessao | null = sessaoPorId(this.sessaoId, this.provas.sessoes());
 
   protected readonly fase = signal<Fase>('carregando');
   protected readonly questoes = signal<readonly Questao[]>([]);
@@ -144,12 +145,14 @@ export class Prova {
 
   /** Para onde ir depois de passar: a primeira etapa da sessão seguinte. */
   protected readonly proximaSessao = computed(() => {
-    const seguinte = this.sessao === null ? null : sessaoSeguinte(this.sessao.id);
+    const seguinte =
+      this.sessao === null ? null : sessaoSeguinte(this.sessao.id, this.provas.sessoes());
     if (seguinte === null) {
       return null;
     }
 
-    const etapa = TRILHA.find((candidata) => candidata.areaId === seguinte.id) ?? null;
+    const etapa =
+      this.progressao.trilha().find((candidata) => candidata.areaId === seguinte.id) ?? null;
     return etapa === null
       ? null
       : { titulo: this.i18n.tituloDaArea(seguinte.id), rota: etapa.rota };
@@ -161,7 +164,9 @@ export class Prova {
       return null;
     }
 
-    const etapa = TRILHA.find((candidata) => candidata.areaId === this.sessao!.id);
+    const etapa = this.progressao
+      .trilha()
+      .find((candidata) => candidata.areaId === this.sessao!.id);
     return etapa?.rota ?? null;
   });
 

@@ -368,25 +368,34 @@ export interface Etapa {
 }
 
 /**
- * A trilha: todos os tópicos prontos, na ordem do currículo.
+ * A trilha: os tópicos prontos, na ordem do currículo.
  *
  * A ordem do currículo já é pedagógica — frações antes de álgebra, limites
  * antes de derivadas —, então ela própria serve de roteiro do jogo.
+ *
+ * `removidos` são os tópicos que o aluno tirou do plano nas configurações.
+ * Eles saem da trilha, e a numeração das etapas se refaz sem eles: quem tira
+ * Física não fica com buracos na contagem.
  */
-export const TRILHA: readonly Etapa[] = CURRICULO.flatMap((area) =>
-  area.topicos
-    .filter((topico) => topico.pronto)
-    .map((topico) => ({
-      areaId: area.id,
-      areaTitulo: area.titulo,
-      topicoId: topico.id,
-      titulo: topico.titulo,
-      descricao: topico.descricao,
-      rota: rotaDoTopico(area.id, topico.id),
-    })),
-).map((etapa, indice) => ({ ...etapa, numero: indice + 1 }));
+export function montarTrilha(removidos: ReadonlySet<string> = new Set()): readonly Etapa[] {
+  return CURRICULO.flatMap((area) =>
+    area.topicos
+      .filter((topico) => topico.pronto && !removidos.has(topico.id))
+      .map((topico) => ({
+        areaId: area.id,
+        areaTitulo: area.titulo,
+        topicoId: topico.id,
+        titulo: topico.titulo,
+        descricao: topico.descricao,
+        rota: rotaDoTopico(area.id, topico.id),
+      })),
+  ).map((etapa, indice) => ({ ...etapa, numero: indice + 1 }));
+}
+
+/** A trilha inteira, como o currículo a define. */
+export const TRILHA: readonly Etapa[] = montarTrilha();
 
 /** Posição de um tópico na trilha, ou −1 se ele não faz parte dela. */
-export function indiceNaTrilha(topicoId: string): number {
-  return TRILHA.findIndex((etapa) => etapa.topicoId === topicoId);
+export function indiceNaTrilha(topicoId: string, trilha: readonly Etapa[] = TRILHA): number {
+  return trilha.findIndex((etapa) => etapa.topicoId === topicoId);
 }

@@ -45,6 +45,49 @@
     </section>
   }
 
+  <!-- O plano de estudo: quais tópicos entram na trilha. -->
+  <section class="bloco topicos">
+    <h2>{{ i18n.t('config.bloco.topicos') }}</h2>
+    <p class="explicacao">{{ i18n.t('config.explicacao.topicos') }}</p>
+
+    <p class="resumo">
+      {{ i18n.t('config.noPlano', { dentro: noPlano(), total: aoTodo() }) }}
+      @if (algumFora()) {
+        <button type="button" class="texto" (click)="incluirTodos()">
+          {{ i18n.t('config.devolverTodos') }}
+        </button>
+      }
+    </p>
+
+    @for (area of areas(); track area.id) {
+      <details class="area" [open]="area.dentro < area.topicos.length">
+        <summary>
+          <span class="nome">{{ area.titulo }}</span>
+          <span class="quantos">{{ area.dentro }}/{{ area.topicos.length }}</span>
+        </summary>
+
+        <button type="button" class="texto" (click)="alternarArea(area)">
+          {{ area.dentro > 0 ? i18n.t('config.tirarArea') : i18n.t('config.devolverArea') }}
+        </button>
+
+        <ul class="lista">
+          @for (topico of area.topicos; track topico.id) {
+            <li>
+              <label>
+                <input
+                  type="checkbox"
+                  [checked]="topico.dentro"
+                  (change)="alternarTopico(topico.id)"
+                />
+                <span [class.fora]="!topico.dentro">{{ topico.titulo }}</span>
+              </label>
+            </li>
+          }
+        </ul>
+      </details>
+    }
+  </section>
+
   <footer class="rodape">
     <button type="button" class="secundario" [disabled]="intocada()" (click)="redefinir()">
       {{ i18n.t('config.redefinir') }}

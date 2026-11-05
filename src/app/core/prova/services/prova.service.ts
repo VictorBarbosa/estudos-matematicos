@@ -2,6 +2,7 @@ import { Injectable, computed, inject, signal } from '@angular/core';
 import {
   EstadoDaProva,
   SESSOES,
+  montarSessoes,
   Sessao,
   sessaoDoTopico,
   sessaoPorId,
@@ -35,7 +36,8 @@ export class ProvaService {
   private readonly configuracao = inject(ConfiguracaoService);
   private readonly estado = signal<EstadoDasProvas>(carregar());
 
-  readonly sessoes = SESSOES;
+  /** As sessões do aluno: as do currículo, menos o que ele tirou do plano. */
+  readonly sessoes = computed(() => montarSessoes(this.configuracao.topicosRemovidos()));
 
   /** Sessões cuja prova já foi passada. */
   readonly vencidas = computed(() => new Set(this.estado().vencidas));
@@ -51,13 +53,15 @@ export class ProvaService {
     const conceitos = this.progresso.porConceito();
 
     return new Set(
-      SESSOES.filter((sessao) =>
-        sessao.topicoIds.every(
-          (topicoId) =>
-            dominioDe(historicos[topicoId] ?? [], topicoId, conceitos, this.configuracao.etapa())
-              .vencido,
-        ),
-      ).map((sessao) => sessao.id),
+      this.sessoes()
+        .filter((sessao) =>
+          sessao.topicoIds.every(
+            (topicoId) =>
+              dominioDe(historicos[topicoId] ?? [], topicoId, conceitos, this.configuracao.etapa())
+                .vencido,
+          ),
+        )
+        .map((sessao) => sessao.id),
     );
   });
 
@@ -73,7 +77,9 @@ export class ProvaService {
     const cumpridas = this.cumpridas();
     const vencidas = this.vencidas();
 
-    return SESSOES.find((sessao) => cumpridas.has(sessao.id) && !vencidas.has(sessao.id)) ?? null;
+    return (
+      this.sessoes().find((sessao) => cumpridas.has(sessao.id) && !vencidas.has(sessao.id)) ?? null
+    );
   });
 
   estadoDe(sessaoId: string): EstadoDaProva {
@@ -95,7 +101,7 @@ export class ProvaService {
 
   /** A prova da sessão a que o tópico pertence já foi passada? */
   venceuASessaoDo(topicoId: string): boolean {
-    const sessao = sessaoDoTopico(topicoId);
+    const sessao = sessaoDoTopico(topicoId, this.sessoes());
     return sessao !== null && this.venceu(sessao.id);
   }
 
@@ -116,7 +122,7 @@ export class ProvaService {
    * antes do primeiro exercício.
    */
   reprovar(sessaoId: string): void {
-    const sessao = sessaoPorId(sessaoId);
+    const sessao = sessaoPorId(sessaoId, this.sessoes());
     if (sessao === null) {
       return;
     }

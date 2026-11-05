@@ -51,7 +51,7 @@ export class RevisaoService {
   /** Tópicos candidatos: os que a trilha já liberou, menos a etapa da vez. */
   private readonly candidatos = computed<readonly Etapa[]>(() => {
     const concluidas = this.progressao.concluidas();
-    return TRILHA.filter((etapa) => concluidas.has(etapa.topicoId));
+    return this.progressao.trilha().filter((etapa) => concluidas.has(etapa.topicoId));
   });
 
   /** A fila de hoje, da revisão mais urgente para a menos. */

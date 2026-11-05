@@ -12,6 +12,7 @@ import {
   RESPOSTAS_NA_JANELA,
   TRILHA,
   dominioDe,
+  montarTrilha,
   exigenciasDaEtapa,
   indiceNaTrilha,
 } from '@core/progressao/models/progressao.model';
@@ -48,8 +49,14 @@ export class ProgressaoService {
   private readonly configuracao = inject(ConfiguracaoService);
   private readonly livre = signal(carregarModoLivre());
 
-  readonly trilha = TRILHA;
-  readonly totalDeEtapas = TRILHA.length;
+  /**
+   * A trilha do aluno: o currículo menos o que ele tirou nas configurações.
+   *
+   * Tudo aqui deriva dela, e não mais da constante — tirar um tópico tem de
+   * reorganizar a contagem, a fronteira e a próxima etapa de uma vez só.
+   */
+  readonly trilha = computed(() => montarTrilha(this.configuracao.topicosRemovidos()));
+  readonly totalDeEtapas = computed(() => this.trilha().length);
   readonly modoLivre = this.livre.asReadonly();
 
   /** Tópicos já vencidos, em qualquer ordem. */
@@ -58,15 +65,17 @@ export class ProgressaoService {
     const conceitos = this.progresso.porConceito();
 
     return new Set(
-      TRILHA.filter(
-        (etapa) =>
-          dominioDe(
-            historicos[etapa.topicoId] ?? [],
-            etapa.topicoId,
-            conceitos,
-            this.configuracao.etapa(),
-          ).vencido,
-      ).map((etapa) => etapa.topicoId),
+      this.trilha()
+        .filter(
+          (etapa) =>
+            dominioDe(
+              historicos[etapa.topicoId] ?? [],
+              etapa.topicoId,
+              conceitos,
+              this.configuracao.etapa(),
+            ).vencido,
+        )
+        .map((etapa) => etapa.topicoId),
     );
   });
 
@@ -78,9 +87,10 @@ export class ProgressaoService {
    */
   readonly etapasVencidas = computed(() => {
     const concluidas = this.concluidas();
+    const trilha = this.trilha();
 
     let vencidas = 0;
-    while (vencidas < TRILHA.length && concluidas.has(TRILHA[vencidas]!.topicoId)) {
+    while (vencidas < trilha.length && concluidas.has(trilha[vencidas]!.topicoId)) {
       vencidas++;
     }
 
@@ -101,11 +111,12 @@ export class ProgressaoService {
   readonly etapasAbertas = computed(() => {
     const concluidas = this.concluidas();
     const provasVencidas = this.prova.vencidas();
+    const trilha = this.trilha();
 
     let abertas = 0;
-    while (abertas < TRILHA.length) {
-      const etapa = TRILHA[abertas]!;
-      const anterior = TRILHA[abertas - 1];
+    while (abertas < trilha.length) {
+      const etapa = trilha[abertas]!;
+      const anterior = trilha[abertas - 1];
 
       const trocouDeSessao = anterior !== undefined && anterior.areaId !== etapa.areaId;
       if (trocouDeSessao && !provasVencidas.has(anterior.areaId)) {
@@ -123,23 +134,26 @@ export class ProgressaoService {
   });
 
   /** A etapa em que o jogador está agora, ou `null` se a trilha acabou. */
-  readonly etapaAtual = computed<Etapa | null>(() => TRILHA[this.etapasVencidas()] ?? null);
+  readonly etapaAtual = computed<Etapa | null>(() => this.trilha()[this.etapasVencidas()] ?? null);
 
-  readonly trilhaCompleta = computed(() => this.etapasVencidas() === TRILHA.length);
+  readonly trilhaCompleta = computed(() => this.etapasVencidas() === this.trilha().length);
 
   /** Percentual da trilha concluído, para a barra geral. */
-  readonly percentual = computed(() =>
-    TRILHA.length === 0 ? 0 : Math.round((this.etapasVencidas() / TRILHA.length) * 100),
-  );
+  readonly percentual = computed(() => {
+    const total = this.trilha().length;
+    return total === 0 ? 0 : Math.round((this.etapasVencidas() / total) * 100);
+  });
 
   etapaDe(topicoId: string): Etapa | null {
-    return TRILHA[indiceNaTrilha(topicoId)] ?? null;
+    const trilha = this.trilha();
+    return trilha[indiceNaTrilha(topicoId, trilha)] ?? null;
   }
 
   /** A etapa seguinte a esta na trilha. */
   proximaDe(topicoId: string): Etapa | null {
-    const indice = indiceNaTrilha(topicoId);
-    return indice === -1 ? null : (TRILHA[indice + 1] ?? null);
+    const trilha = this.trilha();
+    const indice = indiceNaTrilha(topicoId, trilha);
+    return indice === -1 ? null : (trilha[indice + 1] ?? null);
   }
 
   estaConcluida(topicoId: string): boolean {
@@ -151,13 +165,16 @@ export class ProgressaoService {
    *
    * Vale para o que já foi vencido, para a etapa da vez e para qualquer coisa
    * fora da trilha (uma página que não seja um tópico). No modo livre, tudo.
+   *
+   * Um tópico tirado do plano também sai da trilha, e por isso fica aberto:
+   * tirar é dizer «não preciso disto», não «não quero mais poder ver isto».
    */
   estaLiberada(topicoId: string): boolean {
     if (this.livre()) {
       return true;
     }
 
-    const indice = indiceNaTrilha(topicoId);
+    const indice = indiceNaTrilha(topicoId, this.trilha());
     return indice === -1 || indice < this.etapasAbertas();
   }
 
