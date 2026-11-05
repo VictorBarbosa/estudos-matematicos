@@ -23,7 +23,7 @@ export const TEORIA_SISTEMAS: readonly Teoria[] = [
       {
         descricao: 'Resolver o sistema é igualar as duas e achar o x comum.',
         tex: '\\frac{c_1 - a_1x}{b_1} = \\frac{c_2 - a_2x}{b_2}',
-        nota: 'Esse é o método da substituição, visto geometricamente.',
+        nota: 'É a substituição vista de lado: isolar a mesma letra nas duas e igualar.',
       },
       {
         descricao: 'Duas retas no plano só podem se cruzar em um ponto, em nenhum ou em todos.',
@@ -38,36 +38,49 @@ export const TEORIA_SISTEMAS: readonly Teoria[] = [
   },
   {
     id: 'sistemas.metodos',
-    titulo: 'Substituição e adição',
-    resumo: 'Dois caminhos para a mesma ideia: eliminar uma das incógnitas.',
+    titulo: 'O método da substituição',
+    resumo: 'Isolar x numa equação e trocá-lo na outra deixa uma incógnita só.',
     definicao:
-      'Ambos os métodos buscam reduzir o sistema a uma única equação com uma única incógnita. ' +
-      'Na substituição, isola-se uma variável e troca-se na outra equação. Na adição, somam-se ' +
-      'múltiplos das equações para que uma variável desapareça.',
+      'A dificuldade de um sistema é ter duas incógnitas de uma vez. A substituição desfaz ' +
+      'isso em dois movimentos: numa das equações, o termo em y passa para o outro lado e o ' +
+      'coeficiente de x passa dividindo, deixando x escrito em função de y; essa expressão ' +
+      'entra no lugar do x da outra equação, que passa a ter só y. Achado o y, volta-se à ' +
+      'expressão de x. É o mesmo que se faz numa equação do 1º grau, duas vezes.',
     formulas: [
       {
-        tex: 'b_2 \\cdot E_1 - b_1 \\cdot E_2 \\;\\Rightarrow\\; (a_1b_2 - a_2b_1)x = c_1b_2 - c_2b_1',
-        legenda: 'O método da adição, escrito no caso geral.',
+        tex: 'a_1x + b_1y = c_1 \\;\\Longrightarrow\\; x = \\frac{c_1 - b_1y}{a_1}',
+        legenda: 'O que está somando passa subtraindo; o que multiplica passa dividindo.',
       },
     ],
     demonstracao: [
       {
-        descricao: 'Multiplicamos cada equação de modo que os coeficientes de y fiquem iguais.',
-        tex: 'b_2(a_1x + b_1y) = b_2c_1 \\qquad b_1(a_2x + b_2y) = b_1c_2',
+        descricao: 'Numa das equações, o termo em y vai para o outro lado.',
+        tex: 'a_1x + b_1y = c_1 \\;\\Rightarrow\\; a_1x = c_1 - b_1y',
+        nota: 'Exemplo: de 5x + 10y = 20 resta 5x = 20 − 10y.',
       },
       {
-        descricao: 'Nos dois casos o termo em y virou b₁b₂y — subtraindo, ele some.',
-        tex: '(a_1b_2 - a_2b_1)x = c_1b_2 - c_2b_1',
-        nota: 'O coeficiente que sobrou é o determinante do sistema.',
+        descricao: 'O coeficiente de x passa dividindo, e x fica isolado.',
+        tex: 'x = \\frac{c_1 - b_1y}{a_1}',
+        nota: 'No exemplo: x = (20 − 10y)/5, isto é, x = 4 − 2y.',
       },
       {
-        descricao: 'Resta uma equação do 1º grau, que já sabemos resolver.',
-        tex: 'x = \\frac{c_1b_2 - c_2b_1}{a_1b_2 - a_2b_1}',
+        descricao: 'Essa expressão entra no lugar do x da outra equação.',
+        tex: 'a_2\\left(\\frac{c_1 - b_1y}{a_1}\\right) + b_2y = c_2',
+        nota: 'Agora há uma incógnita só — é este o ganho do método.',
+      },
+      {
+        descricao: 'Multiplicando por a₁ e juntando os termos em y, sobra uma equação do 1º grau.',
+        tex: '(a_1b_2 - a_2b_1)\\,y = a_1c_2 - a_2c_1',
+        nota: 'O coeficiente que sobrou é o determinante do sistema. Zero ali significa que o y sumiu junto com o x, e aí não há solução única.',
+      },
+      {
+        descricao: 'Com y na mão, volta-se à expressão de x.',
+        tex: 'y = \\frac{a_1c_2 - a_2c_1}{a_1b_2 - a_2b_1} \\qquad x = \\frac{c_1 - b_1y}{a_1}',
       },
     ],
     exemplo: {
-      enunciado: 'Um sistema resolvido por adição.',
-      passos: resolverSistemaComPassos({ a1: 2, b1: 3, c1: 12, a2: 1, b2: -1, c2: 1 }).passos,
+      enunciado: 'Um sistema resolvido por substituição.',
+      passos: resolverSistemaComPassos({ a1: 5, b1: 10, c1: 20, a2: 1, b2: -1, c2: -2 }).passos,
     },
     vejaTambem: ['sistemas.classificacao', 'sistemas.intersecao'],
   },

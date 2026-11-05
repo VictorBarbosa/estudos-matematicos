@@ -9,7 +9,7 @@ const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-9;
  * Exercícios de sistemas lineares 2×2.
  *
  * Pedimos o valor de x, que é um número só. As armadilhas cobrem responder o
- * y por engano e os erros de sinal na eliminação.
+ * y por engano e o erro de sinal ao passar o termo para o outro lado.
  */
 export const geradorSistemas: GeradorExercicio<number> = {
   topicoId: 'sistemas-lineares',
@@ -34,15 +34,15 @@ export const geradorSistemas: GeradorExercicio<number> = {
             resposta: y,
             diagnostico:
               'Esse é o valor de y. Os dois fazem parte da solução, mas o enunciado pede x — ' +
-              'confira qual variável foi isolada no fim da eliminação.',
+              'depois de achar y, volte à expressão de x e substitua.',
             passo: 3,
             conceito: 'sistemas.metodos',
           },
           {
             resposta: -x,
             diagnostico:
-              'Houve uma troca de sinal na eliminação. Ao subtrair as equações, lembre de ' +
-              'inverter o sinal de TODOS os termos da segunda, inclusive o termo independente.',
+              'Houve uma troca de sinal ao isolar x. O termo que estava somando de um lado ' +
+              'passa subtraindo do outro, e só ele muda de sinal.',
             passo: 2,
             conceito: 'sistemas.metodos',
           },
@@ -52,7 +52,7 @@ export const geradorSistemas: GeradorExercicio<number> = {
       ),
       dica:
         nivel === 'facil'
-          ? 'Multiplique as equações para que os coeficientes de y fiquem iguais.'
+          ? 'Isole x numa das equações e troque essa expressão na outra.'
           : undefined,
     };
   },

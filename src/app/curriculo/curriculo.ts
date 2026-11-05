@@ -75,8 +75,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Prealgebra 2e*',
         url: 'https://openstax.org/details/books/prealgebra-2e',
-        nota:
-          'Frações, decimais e potências com exercícios resolvidos.',
+        nota: 'Frações, decimais e potências com exercícios resolvidos.',
       },
     ],
     topicos: [
@@ -89,8 +88,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'notacao-matematica',
         titulo: 'Notação matemática',
-        descricao:
-          'Ler o que os símbolos dizem e escrever em símbolos o que se quer dizer.',
+        descricao: 'Ler o que os símbolos dizem e escrever em símbolos o que se quer dizer.',
         pronto: true,
       },
       {
@@ -136,8 +134,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Intermediate Algebra 2e*',
         url: 'https://openstax.org/details/books/intermediate-algebra-2e',
-        nota:
-          'Fatoração, equações e inequações, com o estudo de sinal que o site ainda não cobre.',
+        nota: 'Fatoração, equações e inequações, com o estudo de sinal que o site ainda não cobre.',
       },
     ],
     topicos: [
@@ -180,7 +177,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'sistemas-lineares',
         titulo: 'Sistemas lineares',
-        descricao: 'Substituição e adição, com a solução vista como intersecção de retas.',
+        descricao: 'O método da substituição, com a solução vista como intersecção de retas.',
         pronto: true,
       },
       {
@@ -199,8 +196,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Prealgebra 2e* (cap. 9)',
         url: 'https://openstax.org/details/books/prealgebra-2e',
-        nota:
-          'Áreas, volumes e Pitágoras.',
+        nota: 'Áreas, volumes e Pitágoras.',
       },
     ],
     topicos: [
@@ -244,8 +240,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *College Algebra 2e*',
         url: 'https://openstax.org/details/books/college-algebra-2e',
-        nota:
-          'Funções, transformações de gráficos, exponenciais e logaritmos — inclusive as equações exponenciais que faltam aqui.',
+        nota: 'Funções, transformações de gráficos, exponenciais e logaritmos — inclusive as equações exponenciais que faltam aqui.',
       },
     ],
     topicos: [
@@ -295,8 +290,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'funcoes-por-partes',
         titulo: 'Funções definidas por partes',
-        descricao:
-          'Uma regra diferente em cada intervalo, e o que acontece nas emendas.',
+        descricao: 'Uma regra diferente em cada intervalo, e o que acontece nas emendas.',
         pronto: true,
       },
       {
@@ -334,8 +328,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Algebra and Trigonometry 2e*',
         url: 'https://openstax.org/details/books/algebra-and-trigonometry-2e',
-        nota:
-          'Identidades, equações trigonométricas e funções inversas.',
+        nota: 'Identidades, equações trigonométricas e funções inversas.',
       },
     ],
     topicos: [
@@ -385,14 +378,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Calculus Volume 3* (cap. 2)',
         url: 'https://openstax.org/details/books/calculus-volume-3',
-        nota:
-          'Vetores em R³, retas e planos no espaço — o que falta para o 0M04.',
+        nota: 'Vetores em R³, retas e planos no espaço — o que falta para o 0M04.',
       },
       {
         titulo: 'Jim Hefferon, *Linear Algebra*',
         url: 'https://hefferon.net/linearalgebra/',
-        nota:
-          'Gauss-Jordan, matriz inversa, independência linear e bases, com demonstrações completas.',
+        nota: 'Gauss-Jordan, matriz inversa, independência linear e bases, com demonstrações completas.',
       },
     ],
     topicos: [
@@ -411,8 +402,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'vetores-no-espaco',
         titulo: 'Vetores no espaço',
-        descricao:
-          'Componentes x, y e z, vetores unitários e os dois produtos em três dimensões.',
+        descricao: 'Componentes x, y e z, vetores unitários e os dois produtos em três dimensões.',
         pronto: true,
       },
       {
@@ -437,8 +427,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Algebra and Trigonometry 2e* (cap. 12)',
         url: 'https://openstax.org/details/books/algebra-and-trigonometry-2e',
-        nota:
-          'Cônicas em detalhe, inclusive a forma polar usada em órbitas.',
+        nota: 'Cônicas em detalhe, inclusive a forma polar usada em órbitas.',
       },
     ],
     topicos: [
@@ -463,8 +452,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'equacoes-parametricas',
         titulo: 'Equações paramétricas',
-        descricao:
-          'A curva descrita pelo tempo: x(t) e y(t), e a trajetória que elas desenham.',
+        descricao: 'A curva descrita pelo tempo: x(t) e y(t), e a trajetória que elas desenham.',
         pronto: true,
       },
     ],
@@ -477,14 +465,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *University Physics Volume 1*',
         url: 'https://openstax.org/details/books/university-physics-volume-1',
-        nota:
-          'Mecânica no nível do 203-NYA, com cálculo: força variável, trabalho como integral e dinâmica de rotação.',
+        nota: 'Mecânica no nível do 203-NYA, com cálculo: força variável, trabalho como integral e dinâmica de rotação.',
       },
       {
         titulo: 'MIT OCW 8.01 — *Classical Mechanics*',
         url: 'https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/',
-        nota:
-          'Aulas e problemas com laboratório — o que um site não entrega.',
+        nota: 'Aulas e problemas com laboratório — o que um site não entrega.',
       },
     ],
     topicos: [
@@ -503,15 +489,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'cinematica-vetorial',
         titulo: 'Cinemática vetorial',
-        descricao:
-          'Posição, velocidade e aceleração como vetores, em duas e três dimensões.',
+        descricao: 'Posição, velocidade e aceleração como vetores, em duas e três dimensões.',
         pronto: true,
       },
       {
         id: 'movimento-circular',
         titulo: 'Movimento circular',
-        descricao:
-          'Velocidade angular, aceleração centrípeta e a força que mantém a curva.',
+        descricao: 'Velocidade angular, aceleração centrípeta e a força que mantém a curva.',
         pronto: true,
       },
       {
@@ -547,8 +531,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'dinamica-rotacional',
         titulo: 'Dinâmica rotacional',
-        descricao:
-          'Momento de inércia, torque e a segunda lei para a rotação.',
+        descricao: 'Momento de inércia, torque e a segunda lei para a rotação.',
         pronto: true,
       },
       {
@@ -585,8 +568,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'transferencia-de-calor',
         titulo: 'Transferência de calor',
-        descricao:
-          'Condução, convecção e radiação, e o reentry de um veículo espacial.',
+        descricao: 'Condução, convecção e radiação, e o reentry de um veículo espacial.',
         pronto: true,
       },
       {
@@ -606,8 +588,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Calculus Volume 1* (cap. 2)',
         url: 'https://openstax.org/details/books/calculus-volume-1',
-        nota:
-          'Limites, do intuitivo ao ε-δ, com os teoremas enunciados e provados.',
+        nota: 'Limites, do intuitivo ao ε-δ, com os teoremas enunciados e provados.',
       },
     ],
     topicos: [
@@ -633,14 +614,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Calculus Volume 1* (cap. 3 a 4)',
         url: 'https://openstax.org/details/books/calculus-volume-1',
-        nota:
-          'Derivadas de funções transcendentes, derivação implícita, taxas relacionadas, TVM e L’Hôpital.',
+        nota: 'Derivadas de funções transcendentes, derivação implícita, taxas relacionadas, TVM e L’Hôpital.',
       },
       {
         titulo: 'Vanier College — plano de curso 201-NYA',
         url: 'https://euclid.vaniercollege.qc.ca/~iti/2021/cal1A21/outline_A21.pdf',
-        nota:
-          'A lista oficial do que o Calcul différentiel cobra no cégep.',
+        nota: 'A lista oficial do que o Calcul différentiel cobra no cégep.',
       },
     ],
     topicos: [
@@ -689,22 +668,19 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'derivadas-trigonometricas',
         titulo: 'Derivadas trigonométricas',
-        descricao:
-          'Derivar seno, cosseno e tangente — e por que a derivada do seno é o cosseno.',
+        descricao: 'Derivar seno, cosseno e tangente — e por que a derivada do seno é o cosseno.',
         pronto: true,
       },
       {
         id: 'derivadas-exponencial-logaritmo',
         titulo: 'Derivadas de exponencial e logaritmo',
-        descricao:
-          'A função que é a própria derivada, e a que vira 1/x.',
+        descricao: 'A função que é a própria derivada, e a que vira 1/x.',
         pronto: true,
       },
       {
         id: 'derivacao-implicita',
         titulo: 'Derivação implícita',
-        descricao:
-          'Derivar sem isolar y, que é o caminho quando a curva não é uma função.',
+        descricao: 'Derivar sem isolar y, que é o caminho quando a curva não é uma função.',
         pronto: true,
       },
       {
@@ -723,14 +699,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Calculus Volume 2*',
         url: 'https://openstax.org/details/books/calculus-volume-2',
-        nota:
-          'Técnicas de integração, integrais impróprias, séries, Taylor e EDOs separáveis.',
+        nota: 'Técnicas de integração, integrais impróprias, séries, Taylor e EDOs separáveis.',
       },
       {
         titulo: 'John Abbott College — plano de curso 201-NYB',
         url: 'https://www.math.mcgill.ca/rags/JAC/CalIIOutline.html',
-        nota:
-          'A lista oficial do Calcul intégral.',
+        nota: 'A lista oficial do Calcul intégral.',
       },
     ],
     topicos: [
@@ -773,7 +747,8 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'integrais-improprias',
         titulo: 'Integrais impróprias',
-        descricao: 'Integrais com limite infinito ou integrando ilimitado, e quando elas convergem.',
+        descricao:
+          'Integrais com limite infinito ou integrando ilimitado, e quando elas convergem.',
         pronto: true,
       },
       {
@@ -800,8 +775,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Introductory Statistics 2e*',
         url: 'https://openstax.org/details/books/introductory-statistics-2e',
-        nota:
-          'Distribuições, intervalos de confiança e testes de hipótese.',
+        nota: 'Distribuições, intervalos de confiança e testes de hipótese.',
       },
     ],
     topicos: [
@@ -826,15 +800,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'distribuicao-normal',
         titulo: 'Distribuição normal',
-        descricao:
-          'A curva em sino: média, desvio padrão e a regra dos 68-95-99.',
+        descricao: 'A curva em sino: média, desvio padrão e a regra dos 68-95-99.',
         pronto: true,
       },
       {
         id: 'regressao-e-correlacao',
         titulo: 'Regressão e correlação',
-        descricao:
-          'A reta que melhor passa pelos pontos, e o quanto ela explica.',
+        descricao: 'A reta que melhor passa pelos pontos, e o quanto ela explica.',
         pronto: true,
       },
     ],
@@ -847,14 +819,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Calculus Volume 3*',
         url: 'https://openstax.org/details/books/calculus-volume-3',
-        nota:
-          'Cobre funções de várias variáveis, derivadas parciais, integrais múltiplas e cálculo vetorial, com exercícios resolvidos.',
+        nota: 'Cobre funções de várias variáveis, derivadas parciais, integrais múltiplas e cálculo vetorial, com exercícios resolvidos.',
       },
       {
         titulo: 'MIT OpenCourseWare, *Multivariable Calculus* (18.02)',
         url: 'https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/',
-        nota:
-          'Aulas em vídeo e listas de um curso inteiro, com a ênfase geométrica que o livro sozinho não dá.',
+        nota: 'Aulas em vídeo e listas de um curso inteiro, com a ênfase geométrica que o livro sozinho não dá.',
       },
     ],
     topicos: [
@@ -904,14 +874,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'Trench, *Elementary Differential Equations*',
         url: 'https://digitalcommons.trinity.edu/mono/8/',
-        nota:
-          'Livro aberto que cobre primeira e segunda ordem, com muitas aplicações físicas resolvidas em detalhe.',
+        nota: 'Livro aberto que cobre primeira e segunda ordem, com muitas aplicações físicas resolvidas em detalhe.',
       },
       {
         titulo: 'MIT OpenCourseWare, *Differential Equations* (18.03)',
         url: 'https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/',
-        nota:
-          'Curso completo em vídeo, com a leitura de sistemas físicos que o formalismo sozinho não entrega.',
+        nota: 'Curso completo em vídeo, com a leitura de sistemas físicos que o formalismo sozinho não entrega.',
       },
     ],
     topicos: [

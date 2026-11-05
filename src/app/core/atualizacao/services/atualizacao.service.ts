@@ -29,16 +29,25 @@ export const RECARREGAR_PAGINA = new InjectionToken<() => void>('recarregar a p�
   },
 });
 
-/** De quanto em quanto tempo perguntar ao servidor se saiu versão nova. */
-export const INTERVALO_DE_CHECAGEM = 30 * 60 * 1000;
+/**
+ * De quanto em quanto tempo perguntar ao servidor se saiu versão nova.
+ *
+ * Eram trinta minutos, e o aviso só aparecia quando a aba era recarregada ou
+ * voltava do segundo plano: quem publicava e ficava olhando a mesma tela
+ * esperava até meia hora por uma notícia que já estava no servidor. A checagem
+ * pede o `ngsw.json`, que tem alguns kilobytes — uma vez por minuto não pesa.
+ */
+export const INTERVALO_DE_CHECAGEM = 60 * 1000;
 
 /**
- * Intervalo mínimo entre duas checagens disparadas pela volta ao primeiro plano.
+ * Intervalo mínimo entre duas checagens seguidas.
  *
  * Alternar de aba é algo que se faz dezenas de vezes por hora; sem este piso,
- * cada ida e volta renderia uma requisição ao `ngsw.json`.
+ * cada ida e volta renderia uma requisição ao `ngsw.json`. Fica bem abaixo de
+ * {@link INTERVALO_DE_CHECAGEM} de propósito: igual aos dois, qualquer atraso
+ * de alguns milissegundos no temporizador engoliria a checagem seguinte.
  */
-const ESPERA_ENTRE_CHECAGENS = 60 * 1000;
+const ESPERA_ENTRE_CHECAGENS = 15 * 1000;
 
 /**
  * Avisa quando uma versão nova do site está pronta.
@@ -72,12 +81,26 @@ export class AtualizacaoService {
   readonly aplicando = this.emAndamento.asReadonly();
 
   private ultimaChecagem = 0;
+  private relogio: ReturnType<typeof setInterval> | null = null;
 
-  /** Checa ao voltar para a aba: é quando o aluno repara que algo mudou. */
-  private readonly aoVoltarAoPrimeiroPlano = (): void => {
+  /**
+   * Checa ao voltar para a aba, e só mantém o relógio enquanto ela está à vista.
+   *
+   * Uma aba escondida não precisa saber de nada: ninguém está lendo o aviso.
+   * Ela pergunta ao voltar, que é quando a resposta passa a importar.
+   */
+  private readonly aoMudarVisibilidade = (): void => {
     if (this.documento.visibilityState === 'visible') {
       void this.verificar();
+      this.ligarRelogio();
+      return;
     }
+    this.desligarRelogio();
+  };
+
+  /** Voltou a rede: pode ter saído versão nova enquanto estávamos fora. */
+  private readonly aoVoltarARede = (): void => {
+    void this.verificar();
   };
 
   constructor() {
@@ -97,15 +120,35 @@ export class AtualizacaoService {
     // O cache quebrou: a versão em uso não pode mais ser montada por inteiro.
     sw.unrecoverable.subscribe(() => this.aviso.set('irrecuperavel'));
 
-    const timer = setInterval(() => void this.verificar(), INTERVALO_DE_CHECAGEM);
-    this.documento.addEventListener('visibilitychange', this.aoVoltarAoPrimeiroPlano);
+    this.documento.addEventListener('visibilitychange', this.aoMudarVisibilidade);
+    this.documento.defaultView?.addEventListener('online', this.aoVoltarARede);
 
     destruicao.onDestroy(() => {
-      clearInterval(timer);
-      this.documento.removeEventListener('visibilitychange', this.aoVoltarAoPrimeiroPlano);
+      this.desligarRelogio();
+      this.documento.removeEventListener('visibilitychange', this.aoMudarVisibilidade);
+      this.documento.defaultView?.removeEventListener('online', this.aoVoltarARede);
     });
 
+    if (this.documento.visibilityState === 'visible') {
+      this.ligarRelogio();
+    }
+
     void this.verificar();
+  }
+
+  private ligarRelogio(): void {
+    if (this.relogio !== null) {
+      return;
+    }
+    this.relogio = setInterval(() => void this.verificar(), INTERVALO_DE_CHECAGEM);
+  }
+
+  private desligarRelogio(): void {
+    if (this.relogio === null) {
+      return;
+    }
+    clearInterval(this.relogio);
+    this.relogio = null;
   }
 
   /**

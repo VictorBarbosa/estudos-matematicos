@@ -1,6 +1,6 @@
 # Sistemas lineares
 
-Substituição e adição, com a solução vista como intersecção de retas.
+O método da substituição, com a solução vista como intersecção de retas.
 
 **Área:** Álgebra · **Rota:** `/algebra/sistemas-lineares`
 

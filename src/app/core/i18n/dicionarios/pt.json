@@ -524,7 +524,7 @@
         "titulo": "Séries de Taylor e Maclaurin"
       },
       "sistemas-lineares": {
-        "descricao": "Substituição e adição, com a solução vista como intersecção de retas.",
+        "descricao": "O método da substituição, com a solução vista como intersecção de retas.",
         "titulo": "Sistemas lineares"
       },
       "solidos-e-volumes": {

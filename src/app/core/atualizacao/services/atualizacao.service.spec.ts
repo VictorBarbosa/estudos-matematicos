@@ -4,6 +4,7 @@ import { SwUpdate, UnrecoverableStateEvent, VersionEvent } from '@angular/servic
 import { Subject } from 'rxjs';
 import {
   AtualizacaoService,
+  INTERVALO_DE_CHECAGEM,
   RECARREGAR_PAGINA,
 } from '@core/atualizacao/services/atualizacao.service';
 
@@ -41,6 +42,18 @@ function versaoPronta(): VersionEvent {
     latestVersion: { hash: 'nova' },
   };
 }
+
+/** Finge a aba escondida ou à vista, que é o que o serviço consulta. */
+function visibilidade(estado: DocumentVisibilityState): void {
+  Object.defineProperty(document, 'visibilityState', {
+    configurable: true,
+    get: () => estado,
+  });
+  document.dispatchEvent(new Event('visibilitychange'));
+}
+
+const esconder = () => visibilidade('hidden');
+const mostrar = () => visibilidade('visible');
 
 describe('AtualizacaoService', () => {
   let sw: SwFalso;
@@ -166,6 +179,70 @@ describe('AtualizacaoService', () => {
     await servico.verificar();
 
     expect(sw.checagens).toBe(1);
+  });
+
+  it('pergunta de novo sozinho, sem esperar recarregamento', async () => {
+    // Era de meia em meia hora, e o aviso só chegava quando a aba era
+    // recarregada ou voltava do segundo plano.
+    vi.useFakeTimers();
+    try {
+      const servico = criar();
+      expect(servico).toBeDefined();
+      expect(sw.checagens).toBe(1);
+
+      await vi.advanceTimersByTimeAsync(INTERVALO_DE_CHECAGEM + 100);
+      expect(sw.checagens).toBe(2);
+
+      await vi.advanceTimersByTimeAsync(INTERVALO_DE_CHECAGEM + 100);
+      expect(sw.checagens).toBe(3);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('a espera entre checagens não engole a batida do relógio', () => {
+    // Piso igual ao intervalo faria cada segunda checagem cair no `return`.
+    expect(INTERVALO_DE_CHECAGEM).toBeGreaterThan(20 * 1000);
+  });
+
+  it('a aba escondida não fica perguntando, e pergunta ao voltar', async () => {
+    vi.useFakeTimers();
+    try {
+      const servico = criar();
+      expect(servico).toBeDefined();
+      const comecou = sw.checagens;
+
+      esconder();
+      await vi.advanceTimersByTimeAsync(INTERVALO_DE_CHECAGEM * 3);
+      expect(sw.checagens, 'ninguém está lendo o aviso').toBe(comecou);
+
+      mostrar();
+      await vi.advanceTimersByTimeAsync(10);
+      expect(sw.checagens, 'ao voltar, pergunta na hora').toBe(comecou + 1);
+
+      await vi.advanceTimersByTimeAsync(INTERVALO_DE_CHECAGEM + 100);
+      expect(sw.checagens, 'e o relógio volta a andar').toBe(comecou + 2);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('a volta da rede dispara uma checagem', async () => {
+    vi.useFakeTimers();
+    try {
+      const servico = criar();
+      expect(servico).toBeDefined();
+      const comecou = sw.checagens;
+
+      // O piso entre checagens não pode esconder o evento.
+      await vi.advanceTimersByTimeAsync(20 * 1000);
+      window.dispatchEvent(new Event('online'));
+      await vi.advanceTimersByTimeAsync(10);
+
+      expect(sw.checagens).toBe(comecou + 1);
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it('uma falha de rede na checagem não derruba nada', async () => {
