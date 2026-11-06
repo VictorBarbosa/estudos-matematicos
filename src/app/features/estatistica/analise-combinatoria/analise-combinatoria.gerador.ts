@@ -48,6 +48,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['arranjo', 'combinacao', 'anagrama']);
     case 'dificil':
       return rng.escolher<Pergunta>(['anagrama', 'comite-misto', 'arranjo']);
+    // O comitê misto combina duas combinações e multiplica; o anagrama com
+    // letras repetidas exige dividir pelos fatoriais das repetições.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['comite-misto', 'anagrama']);
   }
 }
 

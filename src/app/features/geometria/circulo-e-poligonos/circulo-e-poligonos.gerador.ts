@@ -41,6 +41,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['area-circulo', 'setor', 'raio-pela-area']);
     case 'dificil':
       return rng.escolher<Pergunta>(['raio-pela-area', 'setor', 'poligono']);
+    // Raio pela área exige raiz quadrada; o polígono, a fórmula do apótema.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['raio-pela-area', 'poligono']);
   }
 }
 
@@ -116,7 +119,8 @@ function exercicioAreaCirculo(nivel: Nivel, rng: Rng): Exercicio<number> {
 }
 
 function exercicioRaioPelaArea(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const raio = rng.inteiro(2, 12);
+  // No extremo o raio vai mais longe: a raiz quadrada deixa de ser de cabeça.
+  const raio = nivel === 'extremo' ? rng.inteiro(13, 90) : rng.inteiro(2, 12);
   const area = Math.PI * raio * raio;
 
   return {

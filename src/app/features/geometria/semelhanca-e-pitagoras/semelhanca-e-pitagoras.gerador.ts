@@ -55,6 +55,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['cateto', 'tales', 'area-escalada']);
     case 'dificil':
       return rng.escolher<Pergunta>(['tales', 'area-escalada', 'volume-escalado']);
+    // O volume escalado é o que mais engana: a razão vai ao cubo, não ao
+    // quadrado, e é o erro clássico do tópico.
+    case 'extremo':
+      return 'volume-escalado';
   }
 }
 

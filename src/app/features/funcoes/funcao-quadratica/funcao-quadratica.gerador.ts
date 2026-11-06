@@ -1,7 +1,13 @@
 import { resolverQuadraticaComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
 
@@ -139,6 +145,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['vertice-x', 'vertice-y', 'valor']);
     case 'dificil':
       return rng.escolher<Pergunta>(['vertice-x', 'vertice-y']);
+    // O y do vértice encadeia as duas contas: achar o x e substituir.
+    case 'extremo':
+      return 'vertice-y';
   }
 }
 
@@ -148,6 +157,18 @@ function sortear(nivel: Nivel, rng: Rng): { a: number; b: number; c: number } {
     return { a: rng.booleano() ? 1 : -1, b: rng.inteiro(-5, 5) * 2, c: rng.inteiro(-8, 8) };
   }
 
-  const a = rng.inteiro(1, nivel === 'dificil' ? 4 : 2) * rng.sinal();
+  if (nivel === 'extremo') {
+    /*
+     * Coeficiente líder grande e `b` nunca nulo.
+     *
+     * Com b = 0 o vértice está na origem e a resposta é o próprio c — a
+     * pergunta perde a graça justamente no nível que devia ser o mais duro.
+     */
+    const a = rng.inteiro(3, 9) * rng.sinal();
+    const b = rng.inteiro(1, 20) * rng.sinal();
+    return { a, b, c: rng.inteiro(-25, 25) };
+  }
+
+  const a = rng.inteiro(1, nivelAoMenos(nivel, 'dificil') ? 4 : 2) * rng.sinal();
   return { a, b: rng.inteiro(-10, 10), c: rng.inteiro(-10, 10) };
 }

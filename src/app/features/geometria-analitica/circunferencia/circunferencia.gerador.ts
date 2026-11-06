@@ -197,5 +197,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['raio', 'centro-x', 'posicao']);
     case 'dificil':
       return rng.escolher<Pergunta>(['raio', 'posicao']);
+    // Posicionar um ponto exige comparar distância com raio, depois de
+    // completar quadrados para achar o centro.
+    case 'extremo':
+      return 'posicao';
   }
 }

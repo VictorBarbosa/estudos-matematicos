@@ -810,6 +810,7 @@
   },
   "nivel": {
     "dificil": "Hard",
+    "extremo": "Extreme",
     "facil": "Easy",
     "medio": "Medium"
   },

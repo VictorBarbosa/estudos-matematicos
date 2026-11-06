@@ -17,8 +17,16 @@ export const geradorProdutos: GeradorExercicio<number> = {
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const tipo = sortearTipo(nivel, rng);
     // Fixar a = 1 no fácil deixava o tópico com pouquíssimos produtos.
-    const a = nivel === 'facil' ? rng.inteiro(1, 4) : rng.inteiro(1, 9);
-    const b = rng.inteiro(1, 14) * (tipo === 'quadrado-da-diferenca' ? -1 : 1);
+    // No extremo os dois coeficientes crescem, e `a` passa a poder ser
+    // negativo: no cubo isso troca o sinal de dois dos quatro termos.
+    const a =
+      nivel === 'facil'
+        ? rng.inteiro(1, 4)
+        : nivel === 'extremo'
+          ? rng.inteiro(2, 15) * rng.sinal()
+          : rng.inteiro(1, 9);
+    const b =
+      rng.inteiro(1, nivel === 'extremo' ? 20 : 14) * (tipo === 'quadrado-da-diferenca' ? -1 : 1);
 
     const resolucao = expandirComPassos(tipo, a, b);
     const expandido = resolucao.resultado;
@@ -106,6 +114,12 @@ function sortearTipo(nivel: Nivel, rng: Rng): TipoProdutoNotavel {
         'diferenca-de-quadrados',
         'cubo-da-soma',
       ]);
+    /*
+     * No extremo fica só o cubo, que é o produto notável com mais termos para
+     * errar — e com coeficientes maiores, sorteados mais abaixo pelo nível.
+     */
+    case 'extremo':
+      return 'cubo-da-soma';
   }
 }
 

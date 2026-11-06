@@ -56,15 +56,25 @@ export const geradorLimites: GeradorExercicio<number> = {
     }
 
     if (tipo === 'conjugado') {
-      // (√(x+k) − √k)/x -> 1/(2√k) quando x → 0
-      const k = rng.escolher([1, 4, 9, 16, 25]);
-      const gabarito = 1 / (2 * Math.sqrt(k));
+      /*
+       * (√(ax + k) − √k)/x -> a/(2√k) quando x → 0.
+       *
+       * O coeficiente `a` dentro da raiz existe por dois motivos: ele dá ao
+       * conjugado espaço para variar — era o único exercício do nível
+       * extremo, e com `k` sozinho havia cinco —, e sobretudo impede que a
+       * resposta seja decorada como «um sobre dois raiz de k».
+       */
+      const k = rng.escolher([1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225]);
+      const a = nivel === 'extremo' ? rng.inteiro(2, 9) : 1;
+      const raizDeK = Math.sqrt(k);
+      const gabarito = a / (2 * raizDeK);
+      const dentro = a === 1 ? `x + ${k}` : `${a}x + ${k}`;
 
       return {
-        id: `lim-conj-${k}-${rng.inteiro(0, 9999)}`,
+        id: `lim-conj-${a}-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: 'Calcule o limite, racionalizando o numerador. (3 casas decimais)',
-        enunciadoTex: `\\lim_{x \\to 0} \\frac{\\sqrt{x + ${k}} - ${Math.sqrt(k)}}{x}`,
+        enunciadoTex: `\\lim_{x \\to 0} \\frac{\\sqrt{${dentro}} - ${raizDeK}}{x}`,
         gabarito,
         resolucao: {
           resultado: gabarito,
@@ -72,15 +82,15 @@ export const geradorLimites: GeradorExercicio<number> = {
             { descricao: 'A substituição direta dá 0/0.', tex: '\\frac{0}{0}' },
             {
               descricao: 'Multiplicamos numerador e denominador pelo conjugado.',
-              tex: `\\frac{\\sqrt{x+${k}} - ${Math.sqrt(k)}}{x} \\cdot \\frac{\\sqrt{x+${k}} + ${Math.sqrt(k)}}{\\sqrt{x+${k}} + ${Math.sqrt(k)}}`,
+              tex: `\\frac{\\sqrt{${dentro}} - ${raizDeK}}{x} \\cdot \\frac{\\sqrt{${dentro}} + ${raizDeK}}{\\sqrt{${dentro}} + ${raizDeK}}`,
             },
             {
               descricao: 'No numerador aparece uma diferença de quadrados, que simplifica.',
-              tex: `\\frac{(x + ${k}) - ${k}}{x\\left(\\sqrt{x+${k}} + ${Math.sqrt(k)}\\right)} = \\frac{x}{x(\\ldots)}`,
+              tex: `\\frac{(${dentro}) - ${k}}{x\\left(\\sqrt{${dentro}} + ${raizDeK}\\right)} = \\frac{${a === 1 ? 'x' : `${a}x`}}{x(\\ldots)}`,
             },
             {
               descricao: 'Cancelando o x e substituindo zero.',
-              tex: `\\frac{1}{2\\sqrt{${k}}} = ${gabarito.toFixed(4)}`,
+              tex: `\\frac{${a}}{2\\sqrt{${k}}} = ${gabarito.toFixed(4)}`,
             },
           ],
         },
@@ -225,5 +235,9 @@ function sortearTipo(nivel: Nivel, rng: Rng): Tipo {
       return rng.escolher<Tipo>(['fatoracao', 'infinito', 'substituicao']);
     case 'dificil':
       return rng.escolher<Tipo>(['conjugado', 'infinito', 'fatoracao']);
+    // O conjugado é a técnica que não se adivinha: multiplicar em cima e
+    // embaixo para desfazer a indeterminação da raiz.
+    case 'extremo':
+      return 'conjugado';
   }
 }

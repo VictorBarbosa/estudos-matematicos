@@ -49,6 +49,8 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['conica'],
   medio: ['conica', 'produto', 'cubica'],
   dificil: ['cubica', 'mista', 'produto'],
+  // A mista tem x e y no mesmo termo: exige produto e cadeia na mesma conta.
+  extremo: ['mista', 'produto'],
 };
 
 export const geradorDerivacaoImplicita: GeradorExercicio<number> = {

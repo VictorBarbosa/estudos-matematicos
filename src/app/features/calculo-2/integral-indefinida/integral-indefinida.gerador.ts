@@ -123,7 +123,8 @@ export const geradorIndefinida: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
-        dica: nivel === 'facil' ? 'Aumente cada expoente em 1 e divida pelo novo expoente.' : undefined,
+        dica:
+          nivel === 'facil' ? 'Aumente cada expoente em 1 e divida pelo novo expoente.' : undefined,
       };
     }
 
@@ -190,5 +191,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['valor-primitiva', 'constante', 'coeficiente']);
     case 'dificil':
       return rng.escolher<Pergunta>(['constante', 'valor-primitiva']);
+    // Achar a constante exige integrar e depois usar a condição inicial.
+    case 'extremo':
+      return 'constante';
   }
 }

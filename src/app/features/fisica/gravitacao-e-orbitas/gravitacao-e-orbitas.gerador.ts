@@ -48,6 +48,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['velocidade-orbital', 'gravidade-altitude', 'escape']);
     case 'dificil':
       return rng.escolher<Pergunta>(['periodo', 'escape', 'velocidade-orbital']);
+    // Período pela 3ª de Kepler e velocidade de escape: as duas que partem
+    // da energia, e não da força.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['periodo', 'escape']);
   }
 }
 

@@ -1,6 +1,12 @@
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 
@@ -19,7 +25,8 @@ export const geradorOndas: GeradorExercicio<number> = {
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
 
-    const amplitude = rng.inteiro(1, 12) * (nivel === 'dificil' && rng.booleano(0.3) ? -1 : 1);
+    const amplitude =
+      rng.inteiro(1, 12) * (nivelAoMenos(nivel, 'dificil') && rng.booleano(0.3) ? -1 : 1);
     const frequencia = rng.inteiro(1, nivel === 'facil' ? 4 : 8);
     // No fácil o deslocamento é pequeno em vez de nulo: zerá-lo colapsava o
     // número de ondas distintas que o aluno chega a ver.
@@ -183,5 +190,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['periodo', 'amplitude', 'maximo']);
     case 'dificil':
       return rng.escolher<Pergunta>(['maximo', 'minimo', 'periodo']);
+    // Máximo e mínimo juntam amplitude, deslocamento vertical e sinal.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['maximo', 'minimo']);
   }
 }

@@ -9,7 +9,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de EDO de primeira ordem.
@@ -31,6 +37,8 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['separavel'],
   medio: ['separavel', 'meia-vida', 'linear'],
   dificil: ['linear', 'equilibrio', 'meia-vida'],
+  // A linear pede fator integrante; o equilíbrio, analisar a estabilidade.
+  extremo: ['linear', 'equilibrio'],
 };
 
 export const geradorEdoPrimeiraOrdem: GeradorExercicio<number> = {
@@ -85,8 +93,7 @@ function daSeparavel(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: Math.exp(k * t),
-        diagnostico:
-          `Faltou a condição inicial. Ela multiplica a exponencial, e aqui vale ${y0}.`,
+        diagnostico: `Faltou a condição inicial. Ela multiplica a exponencial, e aqui vale ${y0}.`,
         passo: 3,
         conceito: 'edo1.condicao-inicial',
       },
@@ -99,7 +106,8 @@ function daSeparavel(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'edo1.separavel',
       },
     ],
-    dica: nivel === 'facil' ? 'Separe as variáveis, integre os dois lados e exponencie.' : undefined,
+    dica:
+      nivel === 'facil' ? 'Separe as variáveis, integre os dois lados e exponencie.' : undefined,
   });
 }
 
@@ -161,8 +169,7 @@ function daLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `lin-${p}-${q}-${y0}-${t}`,
     nivel,
     rng,
-    enunciado:
-      `Resolva esta equação com y(0) igual a ${y0} e calcule y(${t}). ${PEDIDO}`,
+    enunciado: `Resolva esta equação com y(0) igual a ${y0} e calcule y(${t}). ${PEDIDO}`,
     enunciadoTex: `y' + ${formatar(p)}y = ${formatar(q)}, \\qquad y(0) = ${y0}`,
     gabarito,
     resolucao: linearPrimeiraOrdemComPassos(p, q, y0, t),
@@ -244,7 +251,8 @@ function doEquilibrio(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: p / q,
-        diagnostico: 'A razão está invertida: no equilíbrio, y é o termo constante dividido pelo coeficiente.',
+        diagnostico:
+          'A razão está invertida: no equilíbrio, y é o termo constante dividido pelo coeficiente.',
         passo: 1,
         conceito: 'edo1.regime-permanente',
       },

@@ -1,7 +1,13 @@
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const saoIguais = (a: number, b: number): boolean => Math.abs(a - b) < 1e-9;
 
@@ -93,10 +99,10 @@ function exercicioReduzir(nivel: Nivel, rng: Rng): Exercicio<number> {
   const segunda = Polinomio.de(
     rng.inteiro(-8, 8),
     rng.inteiro(-6, 6),
-    rng.inteiro(nivel === 'dificil' ? -4 : 1, 4),
+    rng.inteiro(nivelAoMenos(nivel, 'dificil') ? -4 : 1, 4),
   );
 
-  const subtrai = nivel === 'dificil' ? rng.booleano() : false;
+  const subtrai = nivelAoMenos(nivel, 'dificil') ? rng.booleano() : false;
   const resultado = subtrai ? primeira.subtrair(segunda) : primeira.somar(segunda);
 
   // Pedimos o coeficiente de x, o termo em que os erros de sinal aparecem.

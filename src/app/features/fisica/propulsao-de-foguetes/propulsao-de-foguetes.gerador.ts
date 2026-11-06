@@ -40,6 +40,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['delta-v', 'empuxo', 'fracao-combustivel']);
     case 'dificil':
       return rng.escolher<Pergunta>(['razao-massas', 'delta-v', 'fracao-combustivel']);
+    // A razão de massas inverte a equação de Tsiolkovsky, com exponencial.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['razao-massas', 'fracao-combustivel']);
   }
 }
 

@@ -49,6 +49,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['area-trapezio', 'propriedades', 'valor-medio']);
     case 'dificil':
       return rng.escolher<Pergunta>(['propriedades', 'valor-medio', 'area-trapezio']);
+    // O valor médio divide a integral pelo comprimento do intervalo — dois
+    // passos, e o segundo costuma ser esquecido.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['valor-medio', 'propriedades']);
   }
 }
 
@@ -81,8 +85,7 @@ function exercicioAreaTrapezio(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `def-trap-${m}_${k}-${de}${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      'Calcule a integral pela GEOMETRIA da região: ela é um trapézio. ' +
-      '(sem usar primitivas)',
+      'Calcule a integral pela GEOMETRIA da região: ela é um trapézio. ' + '(sem usar primitivas)',
     enunciadoTex: `\\int_{${de}}^{${ate}} \\left(${retaTex(m, k)}\\right) dx`,
     gabarito,
     resolucao: {
@@ -138,7 +141,8 @@ function exercicioAreaTrapezio(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Desenhe a região: ela é um trapézio de bases f(a) e f(b).' : undefined,
+    dica:
+      nivel === 'facil' ? 'Desenhe a região: ela é um trapézio de bases f(a) e f(b).' : undefined,
   };
 }
 
@@ -280,8 +284,7 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
       enunciado:
         `Sabendo que a integral de f de ${a} a ${b} vale ${primeira}, quanto vale a integral ` +
         `de ${b} a ${a}?`,
-      enunciadoTex:
-        `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${b}}^{${a}} f = \\;?`,
+      enunciadoTex: `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${b}}^{${a}} f = \\;?`,
       gabarito,
       resolucao: {
         resultado: gabarito,
@@ -330,8 +333,7 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
       enunciado:
         `Sabendo que a integral de f de ${a} a ${b} vale ${primeira}, quanto vale a integral ` +
         `de ${fator}·f no mesmo intervalo?`,
-      enunciadoTex:
-        `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${a}}^{${b}} ${fator}f = \\;?`,
+      enunciadoTex: `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${a}}^{${b}} ${fator}f = \\;?`,
       gabarito,
       resolucao: {
         resultado: gabarito,
@@ -349,8 +351,7 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
         [
           {
             resposta: primeira + fator,
-            diagnostico:
-              'A constante MULTIPLICA a integral; ela não é somada ao resultado.',
+            diagnostico: 'A constante MULTIPLICA a integral; ela não é somada ao resultado.',
             passo: 0,
             conceito: 'integral-def.propriedades',
           },
@@ -430,8 +431,7 @@ function exercicioValorMedio(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `def-media-${m}_${k}-${de}${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'Qual é o valor MÉDIO da função no intervalo? (use a área, 2 casas decimais)',
+    enunciado: 'Qual é o valor MÉDIO da função no intervalo? (use a área, 2 casas decimais)',
     enunciadoTex:
       `f(x) = ${retaTex(m, k)} \\qquad [${de},\\, ${ate}] \\qquad ` +
       `\\bar{f} = \\frac{1}{b-a}\\int_{a}^{b} f`,
@@ -475,8 +475,7 @@ function exercicioValorMedio(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           resposta: alturaDireita,
-          diagnostico:
-            'Esse é o valor no extremo direito. O valor médio pondera todo o intervalo.',
+          diagnostico: 'Esse é o valor no extremo direito. O valor médio pondera todo o intervalo.',
           passo: 0,
           conceito: 'integral-def.propriedades',
         },

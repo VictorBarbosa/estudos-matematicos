@@ -190,6 +190,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['raiz', 'taxa', 'valor']);
     case 'dificil':
       return rng.escolher<Pergunta>(['raiz', 'taxa']);
+    // A taxa pede ler dois pontos e dividir: é a leitura inversa do gráfico.
+    case 'extremo':
+      return 'taxa';
   }
 }
 

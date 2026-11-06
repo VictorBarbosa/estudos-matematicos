@@ -195,5 +195,8 @@ function sortearTipo(nivel: Nivel, rng: Rng): Tipo {
       return rng.escolher<Tipo>(['diferenca-de-quadrados', 'fatoravel', 'continua']);
     case 'dificil':
       return rng.escolher<Tipo>(['fatoravel', 'diferenca-de-quadrados']);
+    // Só o fatorável: é o que exige fatorar antes de substituir.
+    case 'extremo':
+      return 'fatoravel';
   }
 }

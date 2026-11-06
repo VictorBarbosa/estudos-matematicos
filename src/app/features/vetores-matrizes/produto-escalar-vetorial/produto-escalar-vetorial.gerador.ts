@@ -49,6 +49,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['angulo', 'projecao', 'escalar']);
     case 'dificil':
       return rng.escolher<Pergunta>(['angulo', 'trabalho', 'projecao']);
+    // Ângulo e projeção precisam do escalar e dos dois módulos juntos.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['angulo', 'projecao']);
   }
 }
 

@@ -41,6 +41,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['velocidade', 'aceleracao', 'media']);
     case 'dificil':
       return rng.escolher<Pergunta>(['aceleracao', 'media', 'parada']);
+    // A parada exige resolver v(t) = 0 antes de responder; a aceleração,
+    // derivar duas vezes.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['parada', 'aceleracao']);
   }
 }
 

@@ -188,5 +188,21 @@ function sortear(nivel: Nivel, rng: Rng): { a: number; b: number; c: number; rel
         relacao,
       };
     }
+    case 'extremo': {
+      /*
+       * Coeficiente negativo quase sempre, e de dois algarismos.
+       *
+       * A inversão do sentido deixa de ser exceção e passa a ser a regra, com
+       * a fronteira caindo numa fração que não simplifica. É o erro mais
+       * comum do tópico cobrado em quase toda questão.
+       */
+      const PRIMOS = [11, 13, 17, 19, 23, 29];
+      return {
+        a: rng.escolher(PRIMOS) * (rng.booleano(0.85) ? -1 : 1),
+        b: rng.inteiro(-60, 60),
+        c: rng.inteiro(-60, 60),
+        relacao,
+      };
+    }
   }
 }

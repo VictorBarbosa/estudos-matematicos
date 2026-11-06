@@ -10,7 +10,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de EDO linear de segunda ordem.
@@ -32,6 +38,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['discriminante', 'raiz'],
   medio: ['raiz', 'valor', 'discriminante'],
   dificil: ['valor', 'periodo', 'raiz'],
+  // As raízes da característica decidem a forma da solução — e com
+  // complexas a resposta muda de natureza.
+  extremo: ['raiz', 'valor'],
 };
 
 export const geradorEdoSegundaOrdem: GeradorExercicio<number> = {
@@ -112,7 +121,10 @@ function daRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'edo2.caracteristica',
       },
     ],
-    dica: nivel === 'facil' ? 'Substitua y igual a e elevado a rt e resolva a quadrática que aparece.' : undefined,
+    dica:
+      nivel === 'facil'
+        ? 'Substitua y igual a e elevado a rt e resolva a quadrática que aparece.'
+        : undefined,
   });
 }
 
@@ -220,8 +232,7 @@ function doDiscriminante(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ds-${b}-${c}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é o discriminante da equação característica desta EDO? ${PEDIDO}`,
+    enunciado: `Qual é o discriminante da equação característica desta EDO? ${PEDIDO}`,
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: {

@@ -17,6 +17,7 @@ import {
   Exercicio,
   GeradorExercicio,
   Nivel,
+  nivelAoMenos,
   semColisoes,
 } from '@core/treino/models/treino.model';
 
@@ -64,6 +65,13 @@ function sortearModalidade(nivel: Nivel, rng: Rng): Modalidade {
       return rng.escolher<Modalidade>(['produto', 'quociente', 'potenciaDePotencia', 'raiz']);
     case 'dificil':
       return rng.escolher<Modalidade>(['quociente', 'potenciaDePotencia', 'raiz']);
+    /*
+     * No extremo sobram as duas modalidades que encadeiam propriedades —
+     * quociente e potência de potência —, que é onde o expoente negativo e o
+     * fracionário aparecem juntos.
+     */
+    case 'extremo':
+      return rng.escolher<Modalidade>(['quociente', 'potenciaDePotencia']);
   }
 }
 
@@ -134,9 +142,22 @@ function exercicioProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
 
 function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
   const base = rng.inteiro(2, 10);
-  const m = rng.inteiro(1, 10);
+  const m = rng.inteiro(1, nivel === 'extremo' ? 18 : 10);
   // No difícil permitimos m < n, que leva a expoente zero ou negativo.
-  const n = nivel === 'dificil' ? rng.inteiro(1, 6) : rng.inteiro(1, m);
+  /*
+   * No extremo o expoente de baixo passa o de cima com frequência, e os dois
+   * nunca coincidem: `5⁶/5⁶ = 1` não exercita propriedade nenhuma, e era o
+   * que saía quando o sorteio ignorava o nível.
+   */
+  const n =
+    nivel === 'extremo'
+      ? (() => {
+          const candidato = rng.inteiro(1, 18);
+          return candidato === m ? candidato + 1 : candidato;
+        })()
+      : nivelAoMenos(nivel, 'dificil')
+        ? rng.inteiro(1, 6)
+        : rng.inteiro(1, m);
 
   const resolucao = quocienteDePotenciasComPassos(base, m, n);
   const gabarito = avaliarPotencia(resolucao.resultado);
@@ -187,8 +208,8 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
 
 function exercicioPotenciaDePotencia(nivel: Nivel, rng: Rng): Exercicio<number> {
   const base = rng.inteiro(2, 10);
-  const m = rng.inteiro(2, 3);
-  const n = rng.inteiro(2, nivel === 'dificil' ? 4 : 3);
+  const m = rng.inteiro(2, nivel === 'extremo' ? 5 : 3);
+  const n = rng.inteiro(2, nivel === 'extremo' ? 6 : nivelAoMenos(nivel, 'dificil') ? 4 : 3);
 
   const resolucao = potenciaDePotenciaComPassos(base, m, n);
   const gabarito = avaliarPotencia(resolucao.resultado);
@@ -261,7 +282,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
   }
 
   // Médio e difícil: radicando com parte que sai e parte que fica.
-  const fora = rng.inteiro(2, nivel === 'dificil' ? 6 : 4);
+  const fora = rng.inteiro(2, nivelAoMenos(nivel, 'dificil') ? 6 : 4);
   const dentro = rng.escolher([2, 3, 5, 6, 7, 10]);
   const radicando = fora * fora * dentro;
 

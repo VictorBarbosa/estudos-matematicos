@@ -49,10 +49,11 @@ export const geradorRiemann: GeradorExercicio<number> = {
           },
           {
             descricao: `As alturas são tomadas na borda ${tipo} de cada subintervalo.`,
-            tex: Array.from({ length: Math.min(n, 4) }, (_, i) => {
-              const x = de + (tipo === 'esquerda' ? i : i + 1) * largura;
-              return `f(${Number(x.toFixed(3))})`;
-            }).join(' + ') + (n > 4 ? ' + \\cdots' : ''),
+            tex:
+              Array.from({ length: Math.min(n, 4) }, (_, i) => {
+                const x = de + (tipo === 'esquerda' ? i : i + 1) * largura;
+                return `f(${Number(x.toFixed(3))})`;
+              }).join(' + ') + (n > 4 ? ' + \\cdots' : ''),
           },
           {
             descricao: 'Somamos as áreas dos retângulos.',

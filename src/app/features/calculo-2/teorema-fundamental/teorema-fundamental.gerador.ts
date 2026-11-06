@@ -1,7 +1,13 @@
 import { Polinomio, teoremaFundamentalComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
 
@@ -119,7 +125,7 @@ export const geradorTfc: GeradorExercicio<number> = {
       };
     }
 
-    const de = nivel === 'dificil' ? rng.inteiro(-3, 0) : 0;
+    const de = nivelAoMenos(nivel, 'dificil') ? rng.inteiro(-3, 0) : 0;
     const ate = rng.inteiro(de + 1, de + 4);
     const resolucao = teoremaFundamentalComPassos(p, de, ate);
     const gabarito = resolucao.resultado;
@@ -172,5 +178,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['integral', 'derivada-da-area', 'limite-superior']);
     case 'dificil':
       return rng.escolher<Pergunta>(['integral', 'limite-superior']);
+    // Com o limite superior sendo uma função, entra a regra da cadeia junto
+    // com o teorema: duas ideias na mesma questão.
+    case 'extremo':
+      return 'limite-superior';
   }
 }

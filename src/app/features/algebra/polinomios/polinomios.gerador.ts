@@ -45,11 +45,31 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['resto', 'raiz', 'coeficiente-quociente']);
     case 'dificil':
       return rng.escolher<Pergunta>(['raiz', 'coeficiente-quociente']);
+    // No extremo só ficam as duas que exigem percorrer a divisão inteira; o
+    // grau sobe para 4 em `sortearCubico`, que passa a olhar o nível.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['raiz', 'coeficiente-quociente']);
   }
 }
 
 /** Um polinômio de grau 3 com coeficientes pequenos. */
-function sortearCubico(rng: Rng): Polinomio {
+function sortearCubico(rng: Rng, nivel: Nivel = 'medio'): Polinomio {
+  if (nivel === 'extremo') {
+    /*
+     * Grau 4, com coeficiente líder diferente de 1.
+     *
+     * Briot-Ruffini ganha uma linha, e o coeficiente líder faz o quociente
+     * deixar de ser mônico — os dois pontos em que a conta costuma escapar.
+     */
+    return Polinomio.de(
+      rng.inteiro(-12, 12),
+      rng.inteiro(-12, 12),
+      rng.inteiro(-9, 9),
+      rng.inteiro(-6, 6),
+      rng.escolher([2, 3, -2, -3]),
+    );
+  }
+
   return Polinomio.de(
     rng.inteiro(-6, 6),
     rng.inteiro(-6, 6),
@@ -60,7 +80,7 @@ function sortearCubico(rng: Rng): Polinomio {
 
 /** Qual é o resto da divisão por (x − a)? */
 function exercicioResto(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const p = sortearCubico(rng);
+  const p = sortearCubico(rng, nivel);
   const a = rng.escolher([-3, -2, -1, 1, 2, 3]);
 
   const { resultado, passos } = restoPorBinomioComPassos(p, a);
@@ -234,7 +254,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
 
 /** Qual é um determinado coeficiente do quociente? */
 function exercicioCoeficienteQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const p = sortearCubico(rng);
+  const p = sortearCubico(rng, nivel);
   const a = rng.escolher([-2, -1, 1, 2]);
   const divisor = Polinomio.de(-a, 1);
 

@@ -191,5 +191,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['assintota-vertical', 'grau-menor', 'razao-mesmo-grau']);
     case 'dificil':
       return rng.escolher<Pergunta>(['razao-mesmo-grau', 'grau-menor']);
+    // A razão de mesmo grau é a que não se resolve olhando: o limite é a
+    // razão dos coeficientes líderes, e não 1 nem infinito.
+    case 'extremo':
+      return 'razao-mesmo-grau';
   }
 }

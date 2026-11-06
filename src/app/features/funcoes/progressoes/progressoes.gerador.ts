@@ -41,6 +41,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['soma-pa', 'termo-pg', 'soma-pg']);
     case 'dificil':
       return rng.escolher<Pergunta>(['soma-pg', 'soma-infinita', 'soma-pa']);
+    // A soma infinita só existe com |q| < 1, e é onde o conceito aparece.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['soma-infinita', 'soma-pg']);
   }
 }
 

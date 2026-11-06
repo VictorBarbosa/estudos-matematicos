@@ -41,6 +41,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['colisao-inelastica', 'forca-media', 'impulso']);
     case 'dificil':
       return rng.escolher<Pergunta>(['energia-perdida', 'colisao-inelastica', 'forca-media']);
+    // A energia perdida numa colisão inelástica junta os dois princípios:
+    // momento se conserva, energia não.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['energia-perdida', 'forca-media']);
   }
 }
 

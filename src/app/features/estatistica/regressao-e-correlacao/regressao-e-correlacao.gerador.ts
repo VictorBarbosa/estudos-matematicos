@@ -21,6 +21,7 @@ import {
   Exercicio,
   GeradorExercicio,
   Nivel,
+  nivelAoMenos,
   semColisoes,
 } from '@core/treino/models/treino.model';
 
@@ -44,6 +45,8 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['inclinacao', 'intercepto'],
   medio: ['inclinacao', 'intercepto', 'pearson', 'prever'],
   dificil: ['pearson', 'determinacao', 'residuo', 'prever'],
+  // Pearson percorre as cinco somas; o resíduo exige prever antes de subtrair.
+  extremo: ['pearson', 'residuo'],
 };
 
 export const geradorRegressaoCorrelacao: GeradorExercicio<number> = {
@@ -268,8 +271,9 @@ function daPrevisao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<nu
   const { inclinacao, intercepto } = ajustarRetaComPassos(pares).resultado;
   const xs = pares.map((par) => par.x);
   const faixa = { min: Math.min(...xs), max: Math.max(...xs) };
-  const x =
-    nivel === 'dificil' ? faixa.max + rng.inteiro(3, 10) : rng.inteiro(faixa.min, faixa.max);
+  const x = nivelAoMenos(nivel, 'dificil')
+    ? faixa.max + rng.inteiro(3, 10)
+    : rng.inteiro(faixa.min, faixa.max);
 
   const gabarito = inclinacao * x + intercepto;
 
@@ -298,10 +302,9 @@ function daPrevisao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<nu
         conceito: 'regressao.reta',
       },
     ],
-    dica:
-      nivel === 'dificil'
-        ? 'Repare em que faixa de x os dados foram medidos antes de confiar na previsão.'
-        : undefined,
+    dica: nivelAoMenos(nivel, 'dificil')
+      ? 'Repare em que faixa de x os dados foram medidos antes de confiar na previsão.'
+      : undefined,
   });
 }
 

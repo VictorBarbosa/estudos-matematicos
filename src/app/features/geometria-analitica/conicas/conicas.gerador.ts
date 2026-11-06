@@ -188,5 +188,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['distancia-focal', 'excentricidade', 'semieixo']);
     case 'dificil':
       return rng.escolher<Pergunta>(['excentricidade', 'distancia-focal']);
+    // A excentricidade depende de a e c, que vêm de b: três passos.
+    case 'extremo':
+      return 'excentricidade';
   }
 }

@@ -5,7 +5,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de solução numérica de EDO.
@@ -28,6 +34,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['euler'],
   medio: ['euler', 'erro-euler'],
   dificil: ['rk4', 'ordem', 'erro-euler'],
+  // RK4 são quatro inclinações numa média ponderada: a conta mais longa do
+  // tópico, e a que não perdoa um coeficiente trocado.
+  extremo: ['rk4', 'ordem'],
 };
 
 export const geradorMetodosNumericos: GeradorExercicio<number> = {
@@ -107,7 +116,10 @@ function doEuler(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'numerico.passo',
       },
     ],
-    dica: nivel === 'facil' ? 'Repita a conta passo a passo, sempre usando o y mais recente.' : undefined,
+    dica:
+      nivel === 'facil'
+        ? 'Repita a conta passo a passo, sempre usando o y mais recente.'
+        : undefined,
   });
 }
 
@@ -173,8 +185,7 @@ function doRungeKutta(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Aplique Runge-Kutta de quarta ordem com passo h = ${String(passo).replace('.', ',')} e ` +
       `${quantos} passos, partindo de y(0) = ${y0}. Qual é o valor obtido? ${PEDIDO}`,
-    enunciadoTex:
-      `y' = ${formatar(k)}y, \\qquad y_{n+1} = y_{n} + \\frac{h}{6}\\left(k_{1} + 2k_{2} + 2k_{3} + k_{4}\\right)`,
+    enunciadoTex: `y' = ${formatar(k)}y, \\qquad y_{n+1} = y_{n} + \\frac{h}{6}\\left(k_{1} + 2k_{2} + 2k_{3} + k_{4}\\right)`,
     gabarito,
     resolucao: {
       resultado: gabarito,

@@ -75,7 +75,13 @@ export const geradorIdentidades: GeradorExercicio<number> = {
 
     if (pergunta === 'arco-duplo') {
       // Arco duplo: o ângulo vai até 44° para que 2θ fique agudo.
-      const graus = rng.inteiro(5, 44);
+      /*
+       * O dobro passa de 90° e o seno começa a descer — o que o nível extremo
+       * cobra. A faixa de 43° a 47° fica de fora: ali 2θ encosta em 90° e a
+       * resposta arredonda para 1,00, que não exercita nada.
+       */
+      const bruto = rng.inteiro(5, 84);
+      const graus = bruto >= 43 ? bruto + 5 : bruto;
       const radianos = paraRadianos(graus);
       const gabarito = Math.sin(2 * radianos);
 
@@ -193,5 +199,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['fundamental', 'soma', 'arco-duplo']);
     case 'dificil':
       return rng.escolher<Pergunta>(['soma', 'arco-duplo']);
+    // O arco duplo é a identidade que se deduz da soma: duas em uma.
+    case 'extremo':
+      return 'arco-duplo';
   }
 }

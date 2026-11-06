@@ -45,6 +45,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['corpo-rigido', 'particula'],
   medio: ['corpo-rigido', 'particula', 'conservacao'],
   dificil: ['conservacao', 'energia-na-conservacao', 'particula'],
+  // A energia na conservação do momento angular AUMENTA quando o raio
+  // diminui — contraintuitivo, e o ponto do tópico.
+  extremo: ['energia-na-conservacao', 'conservacao'],
 };
 
 export const geradorMomentoAngular: GeradorExercicio<number> = {

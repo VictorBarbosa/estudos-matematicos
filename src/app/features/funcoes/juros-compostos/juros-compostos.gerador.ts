@@ -15,34 +15,45 @@ export const geradorJuros: GeradorExercicio<number> = {
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
     const capital = rng.inteiro(1, 20) * 500;
-    const taxa = rng.escolher([1, 2, 3, 5, 8, 10, 12]);
+    // No extremo a taxa deixa de ser redonda: 7%, 13%, 17% não têm atalho
+    // mental, e o tempo para dobrar tem de sair do logaritmo mesmo.
+    const taxa = nivel === 'extremo' ? rng.inteiro(2, 30) : rng.escolher([1, 2, 3, 5, 8, 10, 12]);
     const periodos = rng.inteiro(2, nivel === 'facil' ? 5 : 12);
 
     if (pergunta === 'tempo-para-dobrar') {
-      const gabarito = Math.log(2) / Math.log(1 + taxa / 100);
+      /*
+       * «Dobrar» é o caso que se decora. No extremo o alvo varia — triplicar,
+       * crescer 50%, quintuplicar —, e aí não há número de cor: é preciso
+       * montar o logaritmo da razão pedida.
+       */
+      const multiplo = nivel === 'extremo' ? rng.escolher([1.5, 2.5, 3, 4, 5, 10]) : 2;
+      const comoTexto = Number.isInteger(multiplo)
+        ? String(multiplo)
+        : String(multiplo).replace('.', ',');
+      const gabarito = Math.log(multiplo) / Math.log(1 + taxa / 100);
 
       return {
-        id: `juros-dobrar-${taxa}-${rng.inteiro(0, 9999)}`,
+        id: `juros-dobrar-${taxa}-${multiplo}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado:
-          `A uma taxa de ${taxa}% por período, em quantos períodos um capital dobra? ` +
-          '(2 casas decimais)',
-        enunciadoTex: `i = ${taxa}\\% \\qquad M = 2C`,
+          `A uma taxa de ${taxa}% por período, em quantos períodos um capital se ` +
+          `multiplica por ${comoTexto}? (2 casas decimais)`,
+        enunciadoTex: `i = ${taxa}\\% \\qquad M = ${comoTexto.replace(',', '{,}')}C`,
         gabarito,
         resolucao: {
           resultado: gabarito,
           passos: [
             {
-              descricao: 'Escrevemos a condição de dobrar.',
-              tex: `C\\left(1 + ${taxa / 100}\\right)^{n} = 2C`,
+              descricao: 'Escrevemos a condição pedida.',
+              tex: `C\\left(1 + ${taxa / 100}\\right)^{n} = ${comoTexto.replace(',', '{,}')}C`,
             },
             {
               descricao: 'O capital se cancela — o tempo independe do valor investido.',
-              tex: `${(1 + taxa / 100).toFixed(4)}^{n} = 2`,
+              tex: `${(1 + taxa / 100).toFixed(4)}^{n} = ${comoTexto.replace(',', '{,}')}`,
             },
             {
               descricao: 'Aplicamos logaritmo para tirar n do expoente.',
-              tex: `n = \\frac{\\ln 2}{\\ln ${(1 + taxa / 100).toFixed(4)}} = ${gabarito.toFixed(4)}`,
+              tex: `n = \\frac{\\ln ${comoTexto.replace(',', '{,}')}}{\\ln ${(1 + taxa / 100).toFixed(4)}} = ${gabarito.toFixed(4)}`,
             },
             {
               descricao: 'Conferindo com a regra de 72.',
@@ -174,5 +185,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['montante', 'juro', 'tempo-para-dobrar']);
     case 'dificil':
       return rng.escolher<Pergunta>(['tempo-para-dobrar', 'juro']);
+    // O tempo para dobrar é o que exige logaritmo, e não só a fórmula.
+    case 'extremo':
+      return 'tempo-para-dobrar';
   }
 }

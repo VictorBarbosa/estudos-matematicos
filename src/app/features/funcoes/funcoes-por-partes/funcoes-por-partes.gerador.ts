@@ -43,6 +43,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['avaliar'],
   medio: ['avaliar', 'na-fronteira', 'lateral'],
   dificil: ['na-fronteira', 'salto', 'colar', 'lateral'],
+  // Colar os ramos é o único que pede resolver uma equação para que os
+  // limites laterais coincidam — a pergunta inversa do tópico.
+  extremo: ['colar', 'salto'],
 };
 
 export const geradorFuncoesPorPartes: GeradorExercicio<number> = {

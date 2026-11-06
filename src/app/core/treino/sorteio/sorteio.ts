@@ -35,7 +35,8 @@ export function anguloRedondo(rng: Rng, nivel: Nivel): number {
  *
  * No nível fácil fica no primeiro quadrante, onde todos os sinais são
  * positivos; nos demais percorre a volta inteira, que é onde o sinal passa a
- * importar.
+ * importar. No extremo o ângulo passa de uma volta, ou fica negativo: é aí
+ * que o aluno precisa reduzir ao intervalo principal antes de responder.
  */
 export function anguloNaVolta(rng: Rng, nivel: Nivel): number {
   switch (nivel) {
@@ -45,6 +46,10 @@ export function anguloNaVolta(rng: Rng, nivel: Nivel): number {
       return rng.inteiro(5, 175);
     case 'dificil':
       return rng.inteiro(5, 355);
+    case 'extremo': {
+      const bruto = rng.inteiro(365, 1075);
+      return rng.booleano() ? bruto : -bruto;
+    }
   }
 }
 

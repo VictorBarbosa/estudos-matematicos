@@ -65,11 +65,17 @@ describe('geradorFatoracao', () => {
 
 describe('geradorFatoracao: o que o aluno consegue escrever', () => {
   for (const nivel of NIVEIS) {
-    it(`no nível ${nivel}, todo gabarito é inteiro`, () => {
-      // O campo anuncia «um número inteiro». A diferença de quadrados com `k`
-      // e `a` à solta pedia 0,8333 — e, escrito `0.833`, era reprovado.
+    it(`no nível ${nivel}, o gabarito é inteiro ou uma fração de denominador pequeno`, () => {
+      // Até o Difícil a raiz é inteira. No Extremo o trinômio não é mônico, e
+      // a raiz é uma fração — mas com denominador até 7, que se escreve à mão.
       for (const exercicio of amostra(nivel, 200)) {
-        expect(Number.isInteger(exercicio.gabarito), `${exercicio.enunciadoTex}`).toBe(true);
+        const g = exercicio.gabarito;
+        if (nivel === 'extremo') {
+          const denominador = [2, 3, 4, 5, 6, 7].find((d) => Number.isInteger(g * d));
+          expect(denominador ?? 1, `${exercicio.enunciadoTex} → ${g}`).toBeGreaterThan(0);
+        } else {
+          expect(Number.isInteger(g), `${exercicio.enunciadoTex}`).toBe(true);
+        }
       }
     });
 

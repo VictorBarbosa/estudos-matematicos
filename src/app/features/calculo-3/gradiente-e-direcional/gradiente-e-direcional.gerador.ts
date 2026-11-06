@@ -13,7 +13,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de gradiente e derivada direcional.
@@ -35,6 +41,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['componente', 'modulo'],
   medio: ['modulo', 'direcional', 'componente'],
   dificil: ['direcional', 'critico', 'modulo'],
+  // A direcional precisa do gradiente E do versor da direção: normalizar é
+  // o passo que mais se esquece.
+  extremo: ['direcional', 'critico'],
 };
 
 export const geradorGradiente: GeradorExercicio<number> = {
@@ -202,8 +211,7 @@ function daDirecional(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: (g.x * direcao.y + g.y * direcao.x) / comprimento,
-        diagnostico:
-          'As componentes da direção entraram trocadas no produto escalar.',
+        diagnostico: 'As componentes da direção entraram trocadas no produto escalar.',
         passo: 2,
         conceito: 'gradiente.direcional',
       },
@@ -218,7 +226,14 @@ function doCritico(nivel: Nivel, rng: Rng): Exercicio<number> {
   const a = rng.inteiro(1, 4) * rng.sinal();
   const b = rng.inteiro(1, 4) * rng.sinal();
   const c = rng.inteiro(-2, 2);
-  const q: Quadrica = { a, b, c, d: rng.inteiro(-8, 8), e: rng.inteiro(-8, 8), f0: rng.inteiro(-4, 4) };
+  const q: Quadrica = {
+    a,
+    b,
+    c,
+    d: rng.inteiro(-8, 8),
+    e: rng.inteiro(-8, 8),
+    f0: rng.inteiro(-4, 4),
+  };
 
   const determinante = 4 * q.a * q.b - q.c * q.c;
   if (determinante === 0) {
@@ -231,8 +246,7 @@ function doCritico(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `pc-${q.a}${q.b}${q.c}${q.d}${q.e}`,
     nivel,
     rng,
-    enunciado:
-      `Esta função tem um único ponto crítico. Qual é a abscissa dele? ${PEDIDO}`,
+    enunciado: `Esta função tem um único ponto crítico. Qual é a abscissa dele? ${PEDIDO}`,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: pontoCriticoComPassos(q),

@@ -48,6 +48,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['aceleracao', 'normal-plano', 'aceleracao-plano']);
     case 'dificil':
       return rng.escolher<Pergunta>(['aceleracao-plano', 'angulo-critico', 'normal-plano']);
+    // O ângulo crítico é onde o atrito estático atinge o limite: exige
+    // montar a condição, e não só aplicar F = ma.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['angulo-critico', 'aceleracao-plano']);
   }
 }
 

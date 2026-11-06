@@ -72,15 +72,25 @@ export const geradorConceito: GeradorExercicio<number> = {
     }
 
     if (pergunta === 'imagem') {
-      // f(x) = x² + k: a imagem começa em k.
+      /*
+       * f(x) = x² + k tem mínimo k. No extremo a parábola vem deslocada e
+       * escalada — a(x − h)² + k —, e o mínimo continua sendo k: só que agora
+       * é preciso LER a forma canônica em vez de olhar o termo solto.
+       */
       const k = rng.inteiro(-20, 20);
       const gabarito = k;
+      const a = nivel === 'extremo' ? rng.inteiro(2, 9) : 1;
+      const h = nivel === 'extremo' ? rng.inteiro(-9, 9) : 0;
+      const corpo =
+        h === 0
+          ? `${a === 1 ? '' : a}x^{2}`
+          : `${a === 1 ? '' : a}(x ${h > 0 ? '-' : '+'} ${Math.abs(h)})^{2}`;
 
       return {
-        id: `conceito-imagem-${k}-${rng.inteiro(0, 9999)}`,
+        id: `conceito-imagem-${a}-${h}-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: 'Qual é o MENOR valor que esta função pode assumir?',
-        enunciadoTex: `f(x) = x^{2} ${k >= 0 ? '+' : '-'} ${Math.abs(k)}`,
+        enunciadoTex: `f(x) = ${corpo} ${k >= 0 ? '+' : '-'} ${Math.abs(k)}`,
         gabarito,
         resolucao: {
           resultado: gabarito,
@@ -191,5 +201,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['avaliar', 'dominio-excluido', 'imagem']);
     case 'dificil':
       return rng.escolher<Pergunta>(['dominio-excluido', 'imagem']);
+    // A imagem exige percorrer o domínio inteiro, não só excluir pontos.
+    case 'extremo':
+      return 'imagem';
   }
 }

@@ -156,5 +156,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['derivada-no-ponto', 'inclinacao-secante']);
     case 'dificil':
       return 'derivada-no-ponto';
+    // A derivada pelo limite continua sendo a pergunta; o que muda é a função
+    // sorteada, que no extremo tem grau maior (ver o sorteio abaixo).
+    case 'extremo':
+      return 'derivada-no-ponto';
   }
 }

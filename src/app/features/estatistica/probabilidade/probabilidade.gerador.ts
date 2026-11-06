@@ -63,6 +63,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['sem-reposicao', 'ao-menos-um', 'dado']);
     case 'dificil':
       return rng.escolher<Pergunta>(['com-combinacao', 'ao-menos-um', 'sem-reposicao']);
+    // «Ao menos um» se resolve pelo complementar; a combinação exige contar
+    // os casos antes de dividir. As duas que não saem por contagem direta.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['com-combinacao', 'ao-menos-um']);
   }
 }
 

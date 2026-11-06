@@ -41,6 +41,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['det-3x3', 'entrada-produto', 'cramer']);
     case 'dificil':
       return rng.escolher<Pergunta>(['det-3x3', 'cramer', 'det-produto']);
+    // Cramer encadeia três determinantes; o do produto exige saber que
+    // det(AB) = det(A)·det(B) em vez de multiplicar as matrizes.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['cramer', 'det-produto']);
   }
 }
 

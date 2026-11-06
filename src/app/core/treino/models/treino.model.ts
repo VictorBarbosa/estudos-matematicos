@@ -1,15 +1,44 @@
 import { Resolucao } from '@core/math/tipos/tipos';
 import { Rng } from '@core/treino/rng/rng';
 
-export type Nivel = 'facil' | 'medio' | 'dificil';
+/**
+ * Os degraus de dificuldade.
+ *
+ * `extremo` é o quarto, e não é só «difícil com números maiores»: onde
+ * encadear técnicas faz sentido — cálculo, álgebra, física — ele pede duas
+ * numa questão só; onde o que endurece é o número — frações, decimais, MMC —
+ * ele pede valores que não saem redondos.
+ */
+export type Nivel = 'facil' | 'medio' | 'dificil' | 'extremo';
 
-export const NIVEIS: readonly Nivel[] = ['facil', 'medio', 'dificil'];
+export const NIVEIS: readonly Nivel[] = ['facil', 'medio', 'dificil', 'extremo'];
+
+/** A posição de cada nível na escada, para comparar sem depender da ordem do array. */
+const DEGRAU: Readonly<Record<Nivel, number>> = {
+  facil: 0,
+  medio: 1,
+  dificil: 2,
+  extremo: 3,
+};
+
+/**
+ * O nível está neste degrau ou acima dele?
+ *
+ * Existe por causa de um erro fácil de cometer: `nivel === 'dificil' ? muito :
+ * pouco` manda o Extremo para o ramo FÁCIL, em silêncio. Escrito como
+ * `nivelAoMenos(nivel, 'dificil')`, o degrau novo herda o comportamento do
+ * anterior, que é o padrão certo.
+ */
+export function nivelAoMenos(nivel: Nivel, minimo: Nivel): boolean {
+  return DEGRAU[nivel] >= DEGRAU[minimo];
+}
 
 /** A chave de tradução de cada nível, já que a interface fala três línguas. */
 export const CHAVE_DO_NIVEL: Readonly<Record<Nivel, string>> = {
   facil: 'nivel.facil',
   medio: 'nivel.medio',
   dificil: 'nivel.dificil',
+  extremo: 'nivel.extremo',
 };
 
 /**

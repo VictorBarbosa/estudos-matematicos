@@ -1,7 +1,13 @@
 import { Ponto } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 
@@ -181,11 +187,14 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['distancia', 'inclinacao', 'ponto-medio-x']);
     case 'dificil':
       return rng.escolher<Pergunta>(['distancia', 'inclinacao']);
+    // A inclinação entre dois pontos sorteados longe um do outro.
+    case 'extremo':
+      return 'inclinacao';
   }
 }
 
 function sortearPontos(nivel: Nivel, rng: Rng, pergunta: Pergunta): { a: Ponto; b: Ponto } {
-  if (pergunta === 'distancia' && nivel !== 'dificil') {
+  if (pergunta === 'distancia' && !nivelAoMenos(nivel, 'dificil')) {
     // Ternos pitagóricos dão distância inteira.
     const [dx, dy] = rng.escolher([
       [3, 4],

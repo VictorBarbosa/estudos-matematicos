@@ -11,7 +11,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de aplicação de EDO.
@@ -33,6 +39,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['decaimento', 'resfriamento'],
   medio: ['resfriamento', 'circuito-rl', 'tanque'],
   dificil: ['circuito-rl', 'mola', 'tanque'],
+  // Tanque e mola exigem montar a equação a partir do enunciado antes de
+  // resolvê-la: a modelagem é a dificuldade.
+  extremo: ['tanque', 'mola'],
 };
 
 export const geradorAplicacoesDeEdo: GeradorExercicio<number> = {
@@ -192,12 +201,7 @@ function doCircuito(nivel: Nivel, rng: Rng): Exercicio<number> {
       `t = ${String(t).replace('.', ',')} s, em A? ${PEDIDO}`,
     enunciadoTex: `L\\frac{di}{dt} + Ri = V`,
     gabarito,
-    resolucao: linearPrimeiraOrdemComPassos(
-      resistencia / indutancia,
-      tensao / indutancia,
-      0,
-      t,
-    ),
+    resolucao: linearPrimeiraOrdemComPassos(resistencia / indutancia, tensao / indutancia, 0, t),
     conceitos: ['aplicacoes.circuito', 'aplicacoes.montar'],
     armadilhas: [
       {

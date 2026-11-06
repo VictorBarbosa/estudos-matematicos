@@ -1,6 +1,12 @@
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
 
@@ -16,7 +22,7 @@ export const geradorCadeia: GeradorExercicio<number> = {
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const a = rng.inteiro(2, nivel === 'facil' ? 3 : 5);
     const b = rng.inteiro(-4, 4);
-    const n = rng.inteiro(2, nivel === 'dificil' ? 4 : 3);
+    const n = rng.inteiro(2, nivelAoMenos(nivel, 'dificil') ? 4 : 3);
     const ponto = rng.inteiro(-2, 3);
 
     const interno = a * ponto + b;

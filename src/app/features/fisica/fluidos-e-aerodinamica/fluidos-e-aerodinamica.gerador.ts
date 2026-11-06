@@ -54,6 +54,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['fracao-submersa', 'pressao', 'sustentacao']);
     case 'dificil':
       return rng.escolher<Pergunta>(['bernoulli', 'sustentacao', 'fracao-submersa']);
+    // Bernoulli e sustentação ligam pressão e velocidade na mesma conta.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['bernoulli', 'sustentacao']);
   }
 }
 

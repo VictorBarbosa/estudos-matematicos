@@ -46,6 +46,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['inercia'],
   medio: ['inercia', 'torque', 'energia'],
   dificil: ['torque', 'energia', 'rolamento'],
+  // No rolamento a energia se divide entre translação e rotação: é o caso
+  // em que esquecer um dos dois termos dá resposta plausível e errada.
+  extremo: ['rolamento', 'energia'],
 };
 
 export const geradorDinamicaRotacional: GeradorExercicio<number> = {

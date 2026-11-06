@@ -18,6 +18,7 @@ import {
   Nivel,
   SEM_FORMULA,
   TeclaDeSimbolo,
+  nivelAoMenos,
   semColisoes,
 } from '@core/treino/models/treino.model';
 
@@ -164,7 +165,7 @@ const TERMOS: readonly {
 function lerSomatorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   const termo = rng.escolher(nivel === 'facil' ? TERMOS.slice(0, 2) : TERMOS);
   const de = nivel === 'facil' ? 1 : rng.inteiro(1, 3);
-  const ate = de + rng.inteiro(2, nivel === 'dificil' ? 5 : 3);
+  const ate = de + rng.inteiro(2, nivel === 'extremo' ? 7 : nivelAoMenos(nivel, 'dificil') ? 5 : 3);
 
   const resolucao = somatorioComPassos(de, ate, termo.valor, termo.tex, termo.corpo);
 
@@ -204,7 +205,7 @@ function lerSomatorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
 
 function lerProdutorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   const de = 1;
-  const ate = rng.inteiro(3, nivel === 'dificil' ? 6 : 4);
+  const ate = rng.inteiro(3, nivelAoMenos(nivel, 'dificil') ? 6 : 4);
   const termo = rng.escolher(TERMOS.slice(0, 3));
 
   const resolucao = produtorioComPassos(de, ate, termo.valor, termo.tex, termo.corpo);
@@ -672,6 +673,18 @@ const LEITURAS: Readonly<Record<Nivel, readonly Sorteador[]>> = {
     (rng) => lerIntervalo(rng, 'dificil'),
     (rng) => lerModuloFatorial(rng, 'dificil'),
   ],
+  /*
+   * No extremo só ficam as leituras que compõem símbolos: somatório e
+   * produtório com mais parcelas, operação entre conjuntos, fatorial. O
+   * intervalo sai — contar inteiros num intervalo não fica mais difícil, só
+   * mais longo.
+   */
+  extremo: [
+    (rng) => lerSomatorio(rng, 'extremo'),
+    (rng) => lerProdutorio(rng, 'extremo'),
+    (rng) => lerConjuntos(rng, 'extremo'),
+    (rng) => lerModuloFatorial(rng, 'extremo'),
+  ],
 };
 
 const ESCRITAS: Readonly<Record<Nivel, readonly Sorteador[]>> = {
@@ -691,5 +704,11 @@ const ESCRITAS: Readonly<Record<Nivel, readonly Sorteador[]>> = {
     (rng) => escreverSomatorio(rng, 'dificil'),
     (rng) => escreverFuncao(rng, 'dificil'),
     (rng) => escreverModulo(rng, 'dificil'),
+  ],
+  // Escrever é o que fica difícil de verdade: só quantificador e somatório.
+  extremo: [
+    (rng) => escreverQuantificador(rng, 'extremo'),
+    (rng) => escreverSomatorio(rng, 'extremo'),
+    (rng) => escreverFuncao(rng, 'extremo'),
   ],
 };

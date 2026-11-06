@@ -42,6 +42,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['torque-inclinado', 'centro-massa', 'alavanca']);
     case 'dificil':
       return rng.escolher<Pergunta>(['forca-para-equilibrar', 'torque-inclinado', 'centro-massa']);
+    // O torque inclinado exige decompor a força antes de multiplicar pelo
+    // braço — o seno que falta é o erro clássico.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['torque-inclinado', 'centro-massa']);
   }
 }
 

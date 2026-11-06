@@ -1,6 +1,12 @@
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-6;
 
@@ -120,7 +126,7 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
     }
 
     // Valor direto, inclusive com expoente negativo nos níveis mais altos.
-    const expoente = nivel === 'dificil' ? rng.inteiro(-5, 6) : rng.inteiro(0, 7);
+    const expoente = nivelAoMenos(nivel, 'dificil') ? rng.inteiro(-5, 6) : rng.inteiro(0, 7);
     const argumento = base ** expoente;
 
     return {
@@ -190,5 +196,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['valor', 'equacao', 'propriedade']);
     case 'dificil':
       return rng.escolher<Pergunta>(['valor', 'propriedade']);
+    // As propriedades encadeadas: produto, quociente e mudança de base.
+    case 'extremo':
+      return 'propriedade';
   }
 }

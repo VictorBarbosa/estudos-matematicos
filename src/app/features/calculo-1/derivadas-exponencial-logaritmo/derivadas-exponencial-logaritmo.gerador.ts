@@ -42,6 +42,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['exponencial', 'logaritmo'],
   medio: ['exponencial', 'logaritmo', 'base', 'potencia-no-log'],
   dificil: ['base', 'log-base', 'produto', 'potencia-no-log'],
+  // Potência dentro do log e produto: as duas que encadeiam propriedade do
+  // logaritmo com regra de derivação.
+  extremo: ['potencia-no-log', 'produto'],
 };
 
 export const geradorDerivadasExpLog: GeradorExercicio<number> = {

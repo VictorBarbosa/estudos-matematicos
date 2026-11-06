@@ -16,6 +16,7 @@ import {
   Exercicio,
   GeradorExercicio,
   Nivel,
+  nivelAoMenos,
   semColisoes,
 } from '@core/treino/models/treino.model';
 
@@ -40,6 +41,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['vertice', 'ponto-y'],
   medio: ['vertice', 'ponto-y', 'ponto-x', 'zero-deslocado'],
   dificil: ['ponto-x', 'horizontal', 'zero-deslocado'],
+  // A transformação horizontal é a que anda ao contrário do que parece:
+  // f(x + 3) desloca para a ESQUERDA. É o erro que o nível cobra.
+  extremo: ['horizontal', 'zero-deslocado'],
 };
 
 export const geradorTransformacoes: GeradorExercicio<number> = {
@@ -69,7 +73,7 @@ export const geradorTransformacoes: GeradorExercicio<number> = {
 /** Sorteia uma transformação, mais ou menos agressiva conforme o nível. */
 function sortear(nivel: Nivel, rng: Rng): Transformacao {
   const a = nivel === 'facil' ? rng.inteiro(1, 3) : rng.inteiro(-4, 4) || 2;
-  const b = nivel === 'dificil' ? rng.escolher([-3, -2, 2, 3]) : 1;
+  const b = nivelAoMenos(nivel, 'dificil') ? rng.escolher([-3, -2, 2, 3]) : 1;
   const h = rng.inteiro(-5, 5);
   const k = rng.inteiro(-5, 5);
 

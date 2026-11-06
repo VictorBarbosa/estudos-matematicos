@@ -11,7 +11,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de função de duas variáveis.
@@ -33,6 +39,8 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['avaliar', 'nivel'],
   medio: ['avaliar', 'nivel', 'dominio'],
   dificil: ['corte', 'dominio', 'nivel'],
+  // A curva de nível exige isolar uma variável na equação implícita.
+  extremo: ['nivel', 'dominio'],
 };
 
 export const geradorFuncoesVariasVariaveis: GeradorExercicio<number> = {
@@ -122,7 +130,10 @@ function daAvaliacao(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'multivar.superficie',
       },
     ],
-    dica: nivel === 'facil' ? 'Substitua as duas coordenadas e some com cuidado nos sinais.' : undefined,
+    dica:
+      nivel === 'facil'
+        ? 'Substitua as duas coordenadas e some com cuidado nos sinais.'
+        : undefined,
   });
 }
 
@@ -138,8 +149,7 @@ function daCurvaDeNivel(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `nv-${q.a}${q.b}${q.c}${q.d}${q.e}${q.f0}-${x}-${y}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é o valor de k da curva de nível que passa pelo ponto (${x}, ${y})? ${PEDIDO}`,
+    enunciado: `Qual é o valor de k da curva de nível que passa pelo ponto (${x}, ${y})? ${PEDIDO}`,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {
@@ -210,8 +220,7 @@ function doCorte(nivel: Nivel, rng: Rng): Exercicio<number> {
     armadilhas: [
       {
         resposta: (q.c * y0 + q.d) / (2 * q.a),
-        diagnostico:
-          'Faltou o sinal negativo da fórmula do vértice. Ela é menos b sobre dois a.',
+        diagnostico: 'Faltou o sinal negativo da fórmula do vértice. Ela é menos b sobre dois a.',
         passo: 1,
         conceito: 'multivar.superficie',
       },
@@ -263,8 +272,7 @@ function doDominio(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: raio * raio - y0 * y0,
-        diagnostico:
-          'Faltou extrair a raiz quadrada: esse é o valor de x ao quadrado, não de x.',
+        diagnostico: 'Faltou extrair a raiz quadrada: esse é o valor de x ao quadrado, não de x.',
         passo: 2,
         conceito: 'multivar.dominio',
       },

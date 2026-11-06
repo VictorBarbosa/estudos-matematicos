@@ -13,7 +13,11 @@ import {
   ValorImproprio,
 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
-import { analisarNumero, proximosEmCasas, formatarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
+import {
+  analisarNumero,
+  proximosEmCasas,
+  formatarNumero,
+} from '@core/treino/resposta-numerica/resposta-numerica';
 import {
   Armadilha,
   Exercicio,
@@ -58,6 +62,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['potencia-infinito', 'exponencial'],
   medio: ['potencia-infinito', 'potencia-origem', 'exponencial', 'arcotangente'],
   dificil: ['potencia-infinito', 'potencia-origem', 'arcotangente', 'comparacao'],
+  // Comparação e singularidade na origem: as duas que exigem decidir a
+  // convergência antes de calcular qualquer coisa.
+  extremo: ['comparacao', 'potencia-origem'],
 };
 
 export const geradorIntegraisImproprias: GeradorExercicio<RespostaImpropria> = {
@@ -121,7 +128,11 @@ function noInfinito(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
   const a = rng.inteiro(1, 10);
   const p = rng.escolher(
     nivel === 'facil'
-      ? ([{ num: 2, den: 1 }, { num: 3, den: 1 }, { num: 1, den: 1 }] as const)
+      ? ([
+          { num: 2, den: 1 },
+          { num: 3, den: 1 },
+          { num: 1, den: 1 },
+        ] as const)
       : ([
           { num: 2, den: 1 },
           { num: 3, den: 1 },
@@ -217,8 +228,7 @@ function daExponencial(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
       },
       {
         resposta: valorDe(valor * k),
-        diagnostico:
-          `Faltou dividir pelo fator ${k} do expoente, que a primitiva da exponencial traz.`,
+        diagnostico: `Faltou dividir pelo fator ${k} do expoente, que a primitiva da exponencial traz.`,
         passo: 1,
         conceito: 'improprias.exponencial',
       },
@@ -330,8 +340,7 @@ function daComparacao(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
         conceito: 'improprias.comparacao',
       },
     ],
-    dica:
-      'A comparação dá o veredito, nunca o valor: a resposta aqui é uma palavra, não um número.',
+    dica: 'A comparação dá o veredito, nunca o valor: a resposta aqui é uma palavra, não um número.',
   });
 }
 

@@ -311,4 +311,10 @@ const SORTEADORES: Readonly<Record<Nivel, readonly Sorteador[]>> = {
     exercicioUnitario,
     exercicioVolume,
   ],
+  /*
+   * O volume do paralelepípedo é o produto misto: um vetorial, um escalar e
+   * um módulo em sequência. O ângulo pede os dois módulos além do escalar.
+   * São os dois exercícios do tópico que encadeiam operações.
+   */
+  extremo: [exercicioVolume, exercicioAngulo],
 };

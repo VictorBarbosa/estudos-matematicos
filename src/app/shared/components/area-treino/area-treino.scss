@@ -42,19 +42,25 @@
   padding: var(--esp-1) var(--esp-3);
   border-radius: var(--raio-pill);
   background: var(--superficie);
-  color: var(--texto);
   font-weight: 600;
   box-shadow: var(--sombra-1);
 
+  /* Difícil destaca a letra; o extremo, por ser o topo, inverte o selo. */
   &[data-nivel="dificil"] {
     color: var(--acento);
   }
+
+  &[data-nivel="extremo"] {
+    background: var(--acento);
+    color: var(--acento-contraste);
+  }
 }
 
-/* O texto de apoio do componente: sempre discreto e um corpo menor. */
+/* Texto de apoio: sempre discreto e num corpo menor. */
 .rumo,
 .aviso-desistencia,
-.requisitos li {
+.requisitos li,
+.enunciado .dica {
   color: var(--texto-tenue);
   font-size: var(--texto-sm);
 }
@@ -106,7 +112,6 @@
 
   .dica {
     font-size: var(--texto-xs);
-    color: var(--texto-tenue);
   }
 }
 
@@ -219,7 +224,6 @@
 .rumo-ao-desbloqueio {
   margin: 0;
   font-size: var(--texto-sm);
-  color: var(--texto-suave);
 }
 
 /* Deixa claro, antes do clique, o preço de pedir a resolução. */

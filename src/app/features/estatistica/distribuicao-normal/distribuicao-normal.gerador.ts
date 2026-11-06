@@ -55,6 +55,8 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['escore', 'empirica'],
   medio: ['escore', 'abaixo', 'acima', 'empirica'],
   dificil: ['entre', 'quantil', 'acima'],
+  // O quantil lê a tabela de trás para frente; «entre» pede duas leituras.
+  extremo: ['quantil', 'entre'],
 };
 
 export const geradorDistribuicaoNormal: GeradorExercicio<number> = {

@@ -25,6 +25,7 @@ import {
   Exercicio,
   GeradorExercicio,
   Nivel,
+  nivelAoMenos,
   semColisoes,
 } from '@core/treino/models/treino.model';
 
@@ -48,6 +49,8 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['tabela'],
   medio: ['cadeia', 'tangente', 'produto'],
   dificil: ['cadeia', 'tangente', 'produto', 'potencia'],
+  // Potência de trigonométrica com argumento composto: cadeia duas vezes.
+  extremo: ['potencia', 'cadeia'],
 };
 
 export const geradorDerivadasTrig: GeradorExercicio<number> = {
@@ -136,7 +139,7 @@ function daTabela(nivel: Nivel, rng: Rng): Exercicio<number> {
 function comCadeia(nivel: Nivel, rng: Rng): Exercicio<number> {
   const funcao: FuncaoTrig = rng.booleano() ? 'sen' : 'cos';
   const a = rng.inteiro(1, 5);
-  const b = rng.inteiro(2, nivel === 'dificil' ? 4 : 3);
+  const b = rng.inteiro(2, nivelAoMenos(nivel, 'dificil') ? 4 : 3);
   const arco = rng.escolher(ARCOS_DA_DERIVADA);
 
   const gabarito = exatoValor(derivadaTrigExata(funcao, a, b, arco));
@@ -190,7 +193,7 @@ function comCadeia(nivel: Nivel, rng: Rng): Exercicio<number> {
 /** `a·tan(bx)`: a secante ao quadrado, que nunca é negativa. */
 function daTangente(nivel: Nivel, rng: Rng): Exercicio<number> {
   const a = rng.inteiro(1, 5);
-  const b = nivel === 'dificil' ? rng.inteiro(1, 3) : 1;
+  const b = nivelAoMenos(nivel, 'dificil') ? rng.inteiro(1, 3) : 1;
   const arco = rng.escolher(
     ARCOS_DA_DERIVADA.filter((candidato) => temTangente(arcoVezes(candidato, b))),
   );
@@ -240,7 +243,7 @@ function daTangente(nivel: Nivel, rng: Rng): Exercicio<number> {
 /** `xⁿ·f(x)`: a regra do produto encontrando a tabela. */
 function doProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
   const funcao: 'sen' | 'cos' = rng.booleano() ? 'sen' : 'cos';
-  const n = rng.inteiro(1, nivel === 'dificil' ? 3 : 2);
+  const n = rng.inteiro(1, nivelAoMenos(nivel, 'dificil') ? 3 : 2);
   const arco = rng.escolher(ARCOS_DA_DERIVADA);
 
   const x = arcoValor(arco);

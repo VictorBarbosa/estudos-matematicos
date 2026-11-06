@@ -174,5 +174,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['tangente', 'complementar', 'identidade']);
     case 'dificil':
       return rng.escolher<Pergunta>(['identidade', 'tangente']);
+    // A identidade fundamental exige isolar e extrair raiz, com sinal.
+    case 'extremo':
+      return 'identidade';
   }
 }

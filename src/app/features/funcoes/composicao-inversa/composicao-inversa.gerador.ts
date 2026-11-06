@@ -170,5 +170,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['composta', 'ordem', 'inversa']);
     case 'dificil':
       return rng.escolher<Pergunta>(['ordem', 'inversa']);
+    // A inversa de uma composta é onde a ordem importa duas vezes.
+    case 'extremo':
+      return 'inversa';
   }
 }

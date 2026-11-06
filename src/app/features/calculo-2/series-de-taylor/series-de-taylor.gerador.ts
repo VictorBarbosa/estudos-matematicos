@@ -18,7 +18,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de série de Taylor e de Maclaurin.
@@ -48,6 +54,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['coeficiente', 'aproximar'],
   medio: ['coeficiente', 'aproximar', 'erro'],
   dificil: ['aproximar', 'erro', 'lagrange', 'raiz'],
+  // O resto de Lagrange limita o erro sem conhecê-lo: é o passo abstrato do
+  // tópico, e o que separa aproximar de estimar.
+  extremo: ['lagrange', 'erro'],
 };
 
 export const geradorSeriesDeTaylor: GeradorExercicio<number> = {
@@ -124,7 +133,10 @@ function doCoeficiente(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'taylor.series-conhecidas',
       },
     ],
-    dica: nivel === 'facil' ? 'Escreva os primeiros termos da série e localize o termo pedido.' : undefined,
+    dica:
+      nivel === 'facil'
+        ? 'Escreva os primeiros termos da série e localize o termo pedido.'
+        : undefined,
   });
 }
 

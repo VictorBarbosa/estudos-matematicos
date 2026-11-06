@@ -1,7 +1,13 @@
 import { GRAVIDADE, paraRadianos, resolverLancamentoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
 
@@ -19,7 +25,7 @@ export const geradorBalistica: GeradorExercicio<number> = {
     const anguloGraus = rng.escolher(
       nivel === 'facil' ? [30, 45, 60] : [15, 25, 30, 40, 45, 55, 60, 70, 75],
     );
-    const alturaInicial = nivel === 'dificil' ? rng.inteiro(0, 30) : 0;
+    const alturaInicial = nivelAoMenos(nivel, 'dificil') ? rng.inteiro(0, 30) : 0;
 
     const lancamento = {
       velocidadeInicial,
@@ -127,6 +133,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['alcance', 'altura-maxima', 'tempo-de-voo']);
     case 'dificil':
       return rng.escolher<Pergunta>(['alcance', 'altura-maxima']);
+    // O alcance junta as duas componentes e o tempo de voo inteiro.
+    case 'extremo':
+      return 'alcance';
   }
 }
 

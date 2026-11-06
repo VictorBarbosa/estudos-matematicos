@@ -39,6 +39,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['volume', 'superficie', 'escala']);
     case 'dificil':
       return rng.escolher<Pergunta>(['superficie', 'escala', 'altura-faltante']);
+    // Altura faltante e escala: as duas que partem do resultado de volta.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['altura-faltante', 'escala']);
   }
 }
 

@@ -37,6 +37,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['area', 'altura-faltante']);
     case 'dificil':
       return rng.escolher<Pergunta>(['altura-faltante', 'escala', 'area']);
+    // As duas que desfazem a fórmula: achar a medida que falta e a razão de
+    // áreas numa escala. Aplicar a fórmula direto sai de cena.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['altura-faltante', 'escala']);
   }
 }
 

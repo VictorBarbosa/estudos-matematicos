@@ -215,5 +215,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['area-entre', 'volume', 'area-simples']);
     case 'dificil':
       return rng.escolher<Pergunta>(['volume', 'area-entre']);
+    // O volume de revolução eleva ao quadrado antes de integrar: é a conta
+    // com mais passos do tópico.
+    case 'extremo':
+      return 'volume';
   }
 }

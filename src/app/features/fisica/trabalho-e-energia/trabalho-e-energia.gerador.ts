@@ -48,6 +48,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['velocidade-queda', 'potencia', 'trabalho']);
     case 'dificil':
       return rng.escolher<Pergunta>(['altura-maxima', 'velocidade-queda', 'potencia']);
+    // Altura máxima e potência partem da conservação de energia montada
+    // pelo aluno, e não de uma fórmula pronta.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['altura-maxima', 'potencia']);
   }
 }
 

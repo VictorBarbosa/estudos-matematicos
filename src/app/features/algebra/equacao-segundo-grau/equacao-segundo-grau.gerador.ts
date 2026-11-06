@@ -1,7 +1,13 @@
 import { resolverQuadraticaComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const TOLERANCIA = 1e-9;
 const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
@@ -88,7 +94,7 @@ export const geradorEquacao2: GeradorExercicio<number> = {
       dica:
         nivel === 'facil'
           ? 'Calcule o discriminante antes de aplicar a fórmula.'
-          : nivel === 'dificil' && !semRaizes && !Number.isInteger(gabarito)
+          : nivelAoMenos(nivel, 'dificil') && !semRaizes && !Number.isInteger(gabarito)
             ? 'A raiz é irracional: vale escrever a forma exata, como (-3+√17)/4, ' +
               'ou o decimal com 2 casas.'
             : undefined,
@@ -129,6 +135,20 @@ function sortear(nivel: Nivel, rng: Rng): { a: number; b: number; c: number } {
         a: rng.inteiro(1, 4) * rng.sinal(),
         b: rng.inteiro(-10, 10),
         c: rng.inteiro(-12, 12),
+      };
+    }
+    case 'extremo': {
+      /*
+       * Coeficiente líder grande e termos de dois algarismos.
+       *
+       * Com `a` passando de 4, dividir por `2a` deixa de ser conta de cabeça,
+       * e o discriminante vai à casa das centenas — a fórmula tem de ser
+       * aplicada com cuidado, e não de memória.
+       */
+      return {
+        a: rng.inteiro(5, 12) * rng.sinal(),
+        b: rng.inteiro(-40, 40),
+        c: rng.inteiro(-60, 60),
       };
     }
   }

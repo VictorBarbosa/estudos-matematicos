@@ -36,14 +36,21 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
     const pergunta = sortearPergunta(nivel, rng);
 
     if (pergunta === 'produto') {
-      // f = (ax + b)(cx + d). A derivada no ponto sai da regra do produto.
+      /*
+       * f = (ax + b)(cx + d). A derivada no ponto sai da regra do produto.
+       *
+       * No extremo os coeficientes passam de um algarismo e o ponto se afasta
+       * da origem: a conta deixa de fechar de cabeça, que é o que separa
+       * aplicar a regra de lembrar dela.
+       */
+      const extremo = nivel === 'extremo';
       const [a, b, c, d] = [
-        rng.inteiro(1, 4),
-        rng.inteiro(-5, 5),
-        rng.inteiro(1, 4),
-        rng.inteiro(-5, 5),
+        rng.inteiro(1, extremo ? 12 : 4) * (extremo ? rng.sinal() : 1),
+        rng.inteiro(extremo ? -15 : -5, extremo ? 15 : 5),
+        rng.inteiro(1, extremo ? 12 : 4) * (extremo ? rng.sinal() : 1),
+        rng.inteiro(extremo ? -15 : -5, extremo ? 15 : 5),
       ];
-      const ponto = rng.inteiro(-3, 4);
+      const ponto = extremo ? rng.inteiro(-9, 9) : rng.inteiro(-3, 4);
 
       // (fg)' = f'g + fg' = a(cx+d) + (ax+b)c
       const valor = a * (c * ponto + d) + (a * ponto + b) * c;
@@ -279,5 +286,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['polinomio', 'produto', 'coeficiente', 'expressao']);
     case 'dificil':
       return rng.escolher<Pergunta>(['produto', 'polinomio', 'expressao', 'expressao']);
+    // Só o produto, que é a regra com dois termos para somar e errar.
+    case 'extremo':
+      return 'produto';
   }
 }

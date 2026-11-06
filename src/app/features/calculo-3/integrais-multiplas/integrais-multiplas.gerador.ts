@@ -11,7 +11,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de integral múltipla.
@@ -33,6 +39,8 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['retangulo'],
   medio: ['retangulo', 'volume', 'media'],
   dificil: ['volume', 'media', 'polar'],
+  // Em polares entra o jacobiano r, que some com frequência.
+  extremo: ['polar', 'media'],
 };
 
 export const geradorIntegraisMultiplas: GeradorExercicio<number> = {
@@ -238,8 +246,7 @@ function daPolar(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       {
         resposta: constante * Math.PI * raio * raio,
-        diagnostico:
-          `Essa é a integral sobre o círculo INTEIRO. O setor cobre só ${doze} doze avos dele.`,
+        diagnostico: `Essa é a integral sobre o círculo INTEIRO. O setor cobre só ${doze} doze avos dele.`,
         passo: 3,
         conceito: 'multiplas.polares',
       },

@@ -123,5 +123,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['periodo', 'frequencia-angular', 'velocidade-maxima']);
     case 'dificil':
       return rng.escolher<Pergunta>(['velocidade-maxima', 'periodo']);
+    // A velocidade máxima combina amplitude e frequência angular, que por
+    // sua vez vem de k e m.
+    case 'extremo':
+      return 'velocidade-maxima';
   }
 }

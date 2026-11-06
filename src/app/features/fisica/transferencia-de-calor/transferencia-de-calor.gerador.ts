@@ -59,6 +59,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['conducao', 'calorimetria'],
   medio: ['conducao', 'conveccao', 'calorimetria', 'resistencia'],
   dificil: ['radiacao', 'equilibrio-radiativo', 'mistura', 'resistencia'],
+  // Equilíbrio radiativo e resistência térmica em série: os dois que pedem
+  // montar um balanço antes de usar qualquer fórmula.
+  extremo: ['equilibrio-radiativo', 'resistencia'],
 };
 
 export const geradorTransferenciaDeCalor: GeradorExercicio<number> = {

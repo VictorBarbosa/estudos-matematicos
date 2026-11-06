@@ -200,5 +200,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['buraco', 'valor-que-torna-continua', 'tvi']);
     case 'dificil':
       return rng.escolher<Pergunta>(['valor-que-torna-continua', 'buraco']);
+    // Achar o valor que cola os ramos é a pergunta inversa do tópico.
+    case 'extremo':
+      return 'valor-que-torna-continua';
   }
 }

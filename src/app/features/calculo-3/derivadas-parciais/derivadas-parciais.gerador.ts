@@ -12,7 +12,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de derivada parcial.
@@ -34,6 +40,8 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['parcial-x', 'parcial-y'],
   medio: ['parcial-x', 'parcial-y', 'segunda'],
   dificil: ['parcial-x', 'segunda', 'mista'],
+  // A mista deriva em x e depois em y: duas passagens, e o produto no meio.
+  extremo: ['mista', 'segunda'],
 };
 
 export const geradorDerivadasParciais: GeradorExercicio<number> = {
@@ -100,11 +108,7 @@ function daParcial(nivel: Nivel, rng: Rng, emX: boolean): Exercicio<number> {
         conceito: 'parciais.uma-de-cada-vez',
       },
       {
-        resposta: avaliarLinear2(
-          emX ? { ...parcialX(q), ky: 0 } : { ...parcialY(q), kx: 0 },
-          x,
-          y,
-        ),
+        resposta: avaliarLinear2(emX ? { ...parcialX(q), ky: 0 } : { ...parcialY(q), kx: 0 }, x, y),
         diagnostico:
           'O termo misto foi esquecido. Ao derivar em uma variável, o produto xy deixa a OUTRA ' +
           'variável como coeficiente — ele não desaparece.',
@@ -113,8 +117,7 @@ function daParcial(nivel: Nivel, rng: Rng, emX: boolean): Exercicio<number> {
       },
       {
         resposta: q.f0,
-        diagnostico:
-          'O termo constante é o único que some ao derivar. Todos os outros contribuem.',
+        diagnostico: 'O termo constante é o único que some ao derivar. Todos os outros contribuem.',
         passo: 1,
         conceito: 'parciais.uma-de-cada-vez',
       },
@@ -138,8 +141,7 @@ function daSegunda(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `s${variavel}-${q.a}${q.b}${q.c}${q.d}${q.e}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é a segunda derivada parcial em relação a ${variavel}, duas vezes? ${PEDIDO}`,
+    enunciado: `Qual é a segunda derivada parcial em relação a ${variavel}, duas vezes? ${PEDIDO}`,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {
@@ -168,8 +170,7 @@ function daSegunda(nivel: Nivel, rng: Rng): Exercicio<number> {
     armadilhas: [
       {
         resposta: emX ? q.a : q.b,
-        diagnostico:
-          'Faltou o fator 2 que a regra da potência traz ao derivar o termo quadrático.',
+        diagnostico: 'Faltou o fator 2 que a regra da potência traz ao derivar o termo quadrático.',
         passo: 0,
         conceito: 'parciais.segunda-ordem',
       },
@@ -259,7 +260,10 @@ function daMista(nivel: Nivel, rng: Rng): Exercicio<number> {
 function linearTex(l: { readonly kx: number; readonly ky: number; readonly k0: number }): string {
   const partes: string[] = [];
   if (l.kx !== 0) partes.push(`${l.kx === 1 ? '' : l.kx === -1 ? '-' : formatar(l.kx)}x`);
-  if (l.ky !== 0) partes.push(`${l.ky > 0 && partes.length > 0 ? '+ ' : ''}${l.ky === 1 ? '' : l.ky === -1 ? '-' : formatar(l.ky)}y`);
+  if (l.ky !== 0)
+    partes.push(
+      `${l.ky > 0 && partes.length > 0 ? '+ ' : ''}${l.ky === 1 ? '' : l.ky === -1 ? '-' : formatar(l.ky)}y`,
+    );
   if (l.k0 !== 0) partes.push(`${l.k0 > 0 && partes.length > 0 ? '+ ' : ''}${formatar(l.k0)}`);
   return partes.length === 0 ? '0' : partes.join(' ');
 }

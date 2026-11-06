@@ -36,7 +36,7 @@ export const ACERTOS_EXIGENTES = CONFIGURACAO_PADRAO.etapa.acertosExigentes;
 export const ACERTOS_SEGUIDOS_FINAIS = CONFIGURACAO_PADRAO.etapa.acertosSeguidosFinais;
 
 /** Níveis que contam como prova de domínio. */
-export const NIVEIS_EXIGENTES: readonly Nivel[] = ['medio', 'dificil'];
+export const NIVEIS_EXIGENTES: readonly Nivel[] = ['medio', 'dificil', 'extremo'];
 
 /** Acertos seguidos que promovem ao nível seguinte. */
 export const ACERTOS_PARA_SUBIR = CONFIGURACAO_PADRAO.escada.acertosParaSubir;
@@ -45,7 +45,7 @@ export const ACERTOS_PARA_SUBIR = CONFIGURACAO_PADRAO.escada.acertosParaSubir;
 export const ERROS_PARA_DESCER = CONFIGURACAO_PADRAO.escada.errosParaDescer;
 
 /** A escada de dificuldade, do mais simples ao mais exigente. */
-const ESCADA: readonly Nivel[] = ['facil', 'medio', 'dificil'];
+const ESCADA: readonly Nivel[] = ['facil', 'medio', 'dificil', 'extremo'];
 
 /** Onde o estudo está na escada, e o que falta para o próximo degrau. */
 export interface NivelDoTopico {

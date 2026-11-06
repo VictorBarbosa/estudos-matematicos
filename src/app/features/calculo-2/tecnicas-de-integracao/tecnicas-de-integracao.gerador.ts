@@ -1,6 +1,12 @@
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-6);
 
@@ -41,7 +47,7 @@ export const geradorTecnicas: GeradorExercicio<number> = {
 
     const a = rng.inteiro(2, nivel === 'facil' ? 6 : 9);
     const b = rng.inteiro(-9, 9);
-    const n = rng.inteiro(2, nivel === 'dificil' ? 5 : 4);
+    const n = rng.inteiro(2, nivelAoMenos(nivel, 'dificil') ? 5 : 4);
 
     const de = 0;
     // |ax+b| no topo do intervalo não pode estourar o teto do gabarito.
@@ -54,8 +60,7 @@ export const geradorTecnicas: GeradorExercicio<number> = {
     const gabarito = primitiva(ate) - primitiva(de);
 
     // Erro clássico: esquecer de dividir pelo coeficiente interno.
-    const semDividir =
-      ((a * ate + b) ** (n + 1) - (a * de + b) ** (n + 1)) / (n + 1);
+    const semDividir = ((a * ate + b) ** (n + 1) - (a * de + b) ** (n + 1)) / (n + 1);
 
     const internoTex = `${a === 1 ? '' : a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)}`;
 
@@ -138,6 +143,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['substituicao', 'por-partes', 'fracoes-parciais']);
     case 'dificil':
       return rng.escolher<Pergunta>(['por-partes', 'fracoes-parciais', 'substituicao']);
+    // As duas técnicas que exigem montar antes de integrar: escolher u e dv,
+    // ou decompor a fração. Substituição direta sai de cena.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['por-partes', 'fracoes-parciais']);
   }
 }
 
@@ -201,8 +210,7 @@ function exercicioPorPartes(nivel: Nivel, rng: Rng): Exercicio<number> {
         {
           resposta: coeficiente * ((ate * ate) / 2) * Math.log(ate),
           diagnostico:
-            'Você parou no uv e não subtraiu ∫v du. A fórmula tem os dois termos: ' +
-            'uv − ∫v du.',
+            'Você parou no uv e não subtraiu ∫v du. A fórmula tem os dois termos: ' + 'uv − ∫v du.',
           passo: 2,
           conceito: 'tecnicas.por-partes',
         },
@@ -223,10 +231,9 @@ function exercicioPorPartes(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica:
-      nivel !== 'dificil'
-        ? 'Tome u = ln x. A escolha certa é a que simplifica ao derivar.'
-        : undefined,
+    dica: !nivelAoMenos(nivel, 'dificil')
+      ? 'Tome u = ln x. A escolha certa é a que simplifica ao derivar.'
+      : undefined,
   };
 }
 
@@ -318,9 +325,8 @@ function exercicioFracoesParciais(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica:
-      nivel !== 'dificil'
-        ? `Fatore em A/(x+${m}) + B/(x+${n}) e avalie em x = -${m} e x = -${n}.`
-        : undefined,
+    dica: !nivelAoMenos(nivel, 'dificil')
+      ? `Fatore em A/(x+${m}) + B/(x+${n}) e avalie em x = -${m} e x = -${n}.`
+      : undefined,
   };
 }

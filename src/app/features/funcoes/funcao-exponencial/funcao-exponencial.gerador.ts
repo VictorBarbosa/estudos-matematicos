@@ -1,6 +1,12 @@
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Tolerância de correção: as duas casas decimais que o enunciado pede, ou
@@ -192,7 +198,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
       };
     }
 
-    const x = rng.inteiro(nivel === 'dificil' ? -5 : 1, 7);
+    const x = rng.inteiro(nivelAoMenos(nivel, 'dificil') ? -5 : 1, 7);
     const gabarito = inicial * base ** x;
 
     return {
@@ -270,6 +276,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['valor', 'inicial', 'duplicacao', 'meia-vida']);
     case 'dificil':
       return rng.escolher<Pergunta>(['valor', 'duplicacao', 'meia-vida']);
+    // As duas que exigem logaritmo para desfazer a exponencial.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['duplicacao', 'meia-vida']);
   }
 }
 

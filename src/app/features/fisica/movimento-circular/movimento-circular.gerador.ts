@@ -52,6 +52,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['angular', 'frequencia', 'tangencial'],
   medio: ['tangencial', 'centripeta', 'frequencia'],
   dificil: ['centripeta', 'forca', 'tangencial'],
+  // A aceleração tangencial coexiste com a centrípeta: são perpendiculares,
+  // e a resultante é a composição das duas.
+  extremo: ['tangencial', 'forca'],
 };
 
 export const geradorMovimentoCircular: GeradorExercicio<number> = {

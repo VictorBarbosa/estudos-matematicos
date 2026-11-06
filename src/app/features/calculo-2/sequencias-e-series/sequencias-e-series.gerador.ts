@@ -1,7 +1,13 @@
 import { somaComPassos, somaInfinitaComPassos, termoGeral } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
 
@@ -58,13 +64,15 @@ export const geradorSequencias: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
-        dica: nivel === 'dificil' ? undefined : 'Use S = a₁ / (1 − q).',
+        dica: nivelAoMenos(nivel, 'dificil') ? undefined : 'Use S = a₁ / (1 − q).',
       };
     }
 
     const geometrica = nivel === 'facil' ? false : rng.booleano();
     const primeiro = rng.inteiro(1, 10);
-    const razao = geometrica ? rng.inteiro(2, 4) : rng.inteiro(2, 9) * (nivel === 'dificil' ? rng.sinal() : 1);
+    const razao = geometrica
+      ? rng.inteiro(2, 4)
+      : rng.inteiro(2, 9) * (nivelAoMenos(nivel, 'dificil') ? rng.sinal() : 1);
     const n = rng.inteiro(4, geometrica ? 7 : 12);
 
     const progressao = { primeiro, razao, geometrica };
@@ -86,9 +94,7 @@ export const geradorSequencias: GeradorExercicio<number> = {
               descricao: geometrica
                 ? 'Na PG, a razão é multiplicada n−1 vezes.'
                 : 'Na PA, a razão é somada n−1 vezes.',
-              tex: geometrica
-                ? `a_n = a_1 \\cdot q^{n-1}`
-                : `a_n = a_1 + (n-1)r`,
+              tex: geometrica ? `a_n = a_1 \\cdot q^{n-1}` : `a_n = a_1 + (n-1)r`,
             },
             {
               descricao: `Com n = ${n}, são ${n - 1} passos a partir do primeiro termo.`,
@@ -177,5 +183,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['termo', 'soma', 'infinita']);
     case 'dificil':
       return rng.escolher<Pergunta>(['soma', 'infinita']);
+    // A soma infinita só converge com |q| < 1, e é onde o conceito mora.
+    case 'extremo':
+      return 'infinita';
   }
 }

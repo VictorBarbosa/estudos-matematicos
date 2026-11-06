@@ -46,6 +46,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['deslocamento', 'relativa'],
   medio: ['deslocamento', 'relativa', 'travessia', 'componentes'],
   dificil: ['relativa', 'compensacao', 'componentes', 'curvatura'],
+  // Compensação (apontar contra a correnteza) e curvatura são as que exigem
+  // montar o triângulo de velocidades antes de qualquer conta.
+  extremo: ['compensacao', 'curvatura'],
 };
 
 export const geradorCinematicaVetorial: GeradorExercicio<number> = {

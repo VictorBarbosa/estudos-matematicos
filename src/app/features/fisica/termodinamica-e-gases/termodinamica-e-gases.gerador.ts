@@ -53,6 +53,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['transformacao', 'trabalho-isobarico', 'pressao-gas']);
     case 'dificil':
       return rng.escolher<Pergunta>(['transformacao', 'pressao-gas', 'trabalho-isobarico']);
+    // A transformação encadeia duas leis; o trabalho isobárico exige ver
+    // que p é constante antes de integrar.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['transformacao', 'trabalho-isobarico']);
   }
 }
 

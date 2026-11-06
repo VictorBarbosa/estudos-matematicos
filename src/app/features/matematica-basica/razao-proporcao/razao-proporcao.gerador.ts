@@ -6,6 +6,7 @@ import {
   GeradorExercicio,
   Nivel,
   SEM_FORMULA,
+  nivelAoMenos,
   semColisoes,
 } from '@core/treino/models/treino.model';
 
@@ -95,12 +96,11 @@ function exercicioRegraDeTres(nivel: Nivel, rng: Rng, inversa: boolean): Exercic
      * exercício existe para treinar. Ela reaparece na resolução, depois da
      * resposta, que é quando ela ensina.
      */
-    enunciadoTex:
-      nivel === 'dificil'
-        ? SEM_FORMULA
-        : inversa
-          ? `${a} \\cdot ${b} = ${c} \\cdot x \\qquad x = \\;?`
-          : `\\frac{${a}}{${b}} = \\frac{${c}}{x} \\qquad x = \\;?`,
+    enunciadoTex: nivelAoMenos(nivel, 'dificil')
+      ? SEM_FORMULA
+      : inversa
+        ? `${a} \\cdot ${b} = ${c} \\cdot x \\qquad x = \\;?`
+        : `\\frac{${a}}{${b}} = \\frac{${c}}{x} \\qquad x = \\;?`,
     gabarito: resolucao.resultado,
     resolucao,
     conceitos: ['proporcao.regra-de-tres', 'proporcao.proporcao'],

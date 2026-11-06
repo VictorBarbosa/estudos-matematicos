@@ -14,7 +14,9 @@ const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
  */
 export const geradorFatoracao: GeradorExercicio<number> = {
   topicoId: 'fatoracao',
-  formatoResposta: 'um número inteiro, ex.: 3',
+  // Até o Difícil a raiz é inteira; no Extremo o trinômio não é mônico e ela
+  // sai fracionária, então o campo precisa anunciar as duas formas.
+  formatoResposta: 'um número ou fração, ex.: 3 · 5/2',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const { polinomio, raizes, tipo } = sortear(nivel, rng);
@@ -70,7 +72,9 @@ export const geradorFatoracao: GeradorExercicio<number> = {
       dica:
         nivel === 'facil'
           ? 'Procure dois números cuja soma e produto batam com a expressão.'
-          : undefined,
+          : nivel === 'extremo'
+            ? 'O coeficiente de x² não é 1: procure dois números que somem b e multipliquem a·c, e agrupe.'
+            : undefined,
     };
   },
 
@@ -139,6 +143,29 @@ function sortear(nivel: Nivel, rng: Rng): Sorteio {
 
       const base = Polinomio.de(r1 * r2, -(r1 + r2), 1).escalar(comum);
       return { polinomio: base, raizes: [r1, r2], tipo: 'fatoracao.trinomio' };
+    }
+    case 'extremo': {
+      /*
+       * Trinômio não mônico: `ax² + bx + c` com `a` diferente de 1 e SEM
+       * fator comum para tirar antes.
+       *
+       * É outra técnica, não o mesmo exercício com números maiores: não dá
+       * para procurar dois números que somam `b` e multiplicam `c`; é preciso
+       * trabalhar com `a·c` e agrupar. As raízes saem fracionárias, e o
+       * enunciado pede a maior delas.
+       */
+      const p = rng.inteiro(2, 7);
+      const q = rng.inteiro(2, 7);
+      const r = rng.inteiro(-9, 9) || 1;
+      let t = rng.inteiro(-9, 9) || 2;
+      // Raízes distintas: `r/p` e `t/q` são iguais quando `r·q = t·p`.
+      if (r * q === t * p) {
+        t = t + 1;
+      }
+
+      // (px - r)(qx - t) = pq x² - (pt + qr) x + rt
+      const polinomio = Polinomio.de(r * t, -(p * t + q * r), p * q);
+      return { polinomio, raizes: [r / p, t / q], tipo: 'fatoracao.trinomio' };
     }
   }
 }

@@ -184,6 +184,9 @@ const DECIMAIS_POR_NIVEL: Readonly<Record<Nivel, readonly number[]>> = {
   facil: [0.5, 0.25, 0.75, 0.2, 0.4, 0.6, 0.8, 0.1],
   medio: [0.35, 0.125, 0.375, 0.625, 0.875, 0.05, 0.45, 1.5, 1.25, 2.4],
   dificil: [0.025, 0.0625, 0.104, 1.375, 2.75, 3.08, 0.015, 1.04],
+  // No extremo são cinco casas, e denominadores que não simplificam para
+  // nada redondo: 0,03125 é 1/32, e 0,0144 é 9/625.
+  extremo: [0.03125, 0.0144, 0.00625, 2.1875, 0.4375, 12.08, 0.00390625, 7.3125],
 };
 
 /**
@@ -310,6 +313,8 @@ function sortear(nivel: Nivel, rng: Rng, alvo: Alvo | null): Sorteio {
       return sortearMedio(rng, operacao, alvo?.comMista ?? rng.booleano(0.35));
     case 'dificil':
       return sortearDificil(rng, operacao, alvo?.comMista ?? rng.booleano(0.5));
+    case 'extremo':
+      return sortearExtremo(rng, operacao, alvo?.comMista ?? rng.booleano(0.6));
   }
 }
 
@@ -373,6 +378,49 @@ function sortearDificil(rng: Rng, operacao: OperacaoFracao, comMista: boolean): 
   const b = criar(false);
 
   return { a, b, operacao, comMista };
+}
+
+/**
+ * Extremo: denominadores grandes e primos entre si.
+ *
+ * Em frações o que endurece é o número, não a técnica. Com denominadores
+ * primos entre si — 13 e 18, não 4 e 8 — o denominador comum é o produto dos
+ * dois, e a conta deixa de caber de cabeça. Os mistos ficam maiores, e o sinal
+ * negativo passa a ser frequente nos dois operandos.
+ */
+function sortearExtremo(rng: Rng, operacao: OperacaoFracao, comMista: boolean): Sorteio {
+  // Primos entre si: o MMC é o produto, e não um dos dois.
+  const PARES: readonly (readonly [number, number])[] = [
+    [7, 9],
+    [8, 11],
+    [9, 13],
+    [11, 14],
+    [12, 17],
+    [13, 18],
+    [15, 16],
+    [16, 21],
+  ];
+  const [um, outro] = rng.escolher(PARES);
+  const denominadores = rng.booleano() ? [um, outro] : [outro, um];
+
+  const criar = (denominador: number, permitirZero: boolean): Fracao => {
+    const proprio = rng.inteiro(1, denominador - 1);
+    const magnitude = comMista ? rng.inteiro(2, 6) * denominador + proprio : rng.inteiro(1, 40);
+
+    let numerador = magnitude * rng.sinal();
+    if (!permitirZero && numerador === 0) {
+      numerador = magnitude || 1;
+    }
+    return Fracao.criar(numerador, denominador);
+  };
+
+  return {
+    a: criar(denominadores[0]!, true),
+    // O divisor nunca pode ser zero.
+    b: criar(denominadores[1]!, false),
+    operacao,
+    comMista,
+  };
 }
 
 /**

@@ -41,6 +41,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['posicao', 'torricelli', 'tempo-de-parada']);
     case 'dificil':
       return rng.escolher<Pergunta>(['distancia-frenagem', 'torricelli', 'tempo-de-parada']);
+    // Torricelli e a distância de frenagem dispensam o tempo: é preciso
+    // escolher a equação certa antes de calcular.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['torricelli', 'distancia-frenagem']);
   }
 }
 

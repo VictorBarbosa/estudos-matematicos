@@ -42,6 +42,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['assintota', 'valor'],
   medio: ['assintota', 'horizontal', 'valor', 'buraco'],
   dificil: ['horizontal', 'buraco', 'obliqua', 'valor'],
+  // A assíntota oblíqua exige dividir os polinômios; o buraco exige fatorar
+  // antes de simplificar. São as duas que não saem por inspeção.
+  extremo: ['obliqua', 'buraco'],
 };
 
 export const geradorFuncoesRacionais: GeradorExercicio<number> = {

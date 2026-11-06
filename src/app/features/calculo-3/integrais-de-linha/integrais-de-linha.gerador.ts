@@ -5,7 +5,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de integral de linha.
@@ -27,6 +33,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['constante'],
   medio: ['constante', 'linear'],
   dificil: ['linear', 'fechado', 'conservativo'],
+  // O campo conservativo é onde a integral não depende do caminho — e isso
+  // precisa ser verificado, não suposto.
+  extremo: ['conservativo', 'fechado'],
 };
 
 export const geradorIntegraisDeLinha: GeradorExercicio<number> = {
@@ -96,14 +105,25 @@ function doCampoConstante(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'linha.parametrizar',
       },
     ],
-    dica: nivel === 'facil' ? 'Com campo constante, o trabalho é o produto escalar com o deslocamento.' : undefined,
+    dica:
+      nivel === 'facil'
+        ? 'Com campo constante, o trabalho é o produto escalar com o deslocamento.'
+        : undefined,
   });
 }
 
 /** Campo que varia com a posição: aí a parametrização é necessária mesmo. */
 function doCampoLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const campoX: Linear2 = { kx: rng.inteiro(-3, 3), ky: rng.inteiro(-3, 3), k0: rng.inteiro(-4, 4) };
-  const campoY: Linear2 = { kx: rng.inteiro(-3, 3), ky: rng.inteiro(-3, 3), k0: rng.inteiro(-4, 4) };
+  const campoX: Linear2 = {
+    kx: rng.inteiro(-3, 3),
+    ky: rng.inteiro(-3, 3),
+    k0: rng.inteiro(-4, 4),
+  };
+  const campoY: Linear2 = {
+    kx: rng.inteiro(-3, 3),
+    ky: rng.inteiro(-3, 3),
+    k0: rng.inteiro(-4, 4),
+  };
   const de = { x: rng.inteiro(-4, 4), y: rng.inteiro(-4, 4) };
   const ate = { x: rng.inteiro(-4, 4), y: rng.inteiro(-4, 4) };
 
@@ -120,8 +140,7 @@ function doCampoLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Qual é o trabalho deste campo ao longo do segmento que vai de (${de.x}, ${de.y}) a ` +
       `(${ate.x}, ${ate.y})? ${PEDIDO}`,
-    enunciadoTex:
-      `\\vec{F} = \\left(${linear2ParaTex(campoX)},\\; ${linear2ParaTex(campoY)}\\right)`,
+    enunciadoTex: `\\vec{F} = \\left(${linear2ParaTex(campoX)},\\; ${linear2ParaTex(campoY)}\\right)`,
     gabarito,
     resolucao,
     conceitos: ['linha.parametrizar', 'linha.trabalho'],
@@ -135,7 +154,8 @@ function doCampoLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'linha.parametrizar',
       },
       {
-        resposta: avaliarLinear2(campoX, ate.x, ate.y) * dx + avaliarLinear2(campoY, ate.x, ate.y) * dy,
+        resposta:
+          avaliarLinear2(campoX, ate.x, ate.y) * dx + avaliarLinear2(campoY, ate.x, ate.y) * dy,
         diagnostico:
           'O campo foi avaliado só no ponto final. O valor correto é a média integrada ao longo ' +
           'de todo o trajeto.',
@@ -155,8 +175,16 @@ function doCampoLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
 
 /** Caminho fechado: ida e volta pelo mesmo segmento. */
 function doCaminhoFechado(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const campoX: Linear2 = { kx: rng.inteiro(-3, 3), ky: rng.inteiro(-3, 3), k0: rng.inteiro(-4, 4) };
-  const campoY: Linear2 = { kx: rng.inteiro(-3, 3), ky: rng.inteiro(-3, 3), k0: rng.inteiro(-4, 4) };
+  const campoX: Linear2 = {
+    kx: rng.inteiro(-3, 3),
+    ky: rng.inteiro(-3, 3),
+    k0: rng.inteiro(-4, 4),
+  };
+  const campoY: Linear2 = {
+    kx: rng.inteiro(-3, 3),
+    ky: rng.inteiro(-3, 3),
+    k0: rng.inteiro(-4, 4),
+  };
   const de = { x: rng.inteiro(-4, 4), y: rng.inteiro(-4, 4) };
   const ate = { x: rng.inteiro(-4, 4), y: rng.inteiro(-4, 4) };
 
@@ -171,8 +199,7 @@ function doCaminhoFechado(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Qual é o trabalho deste campo ao percorrer o segmento de (${de.x}, ${de.y}) a ` +
       `(${ate.x}, ${ate.y}) e voltar pelo mesmo caminho? ${PEDIDO}`,
-    enunciadoTex:
-      `\\vec{F} = \\left(${linear2ParaTex(campoX)},\\; ${linear2ParaTex(campoY)}\\right)`,
+    enunciadoTex: `\\vec{F} = \\left(${linear2ParaTex(campoX)},\\; ${linear2ParaTex(campoY)}\\right)`,
     gabarito,
     resolucao: {
       resultado: gabarito,
@@ -198,8 +225,7 @@ function doCaminhoFechado(nivel: Nivel, rng: Rng): Exercicio<number> {
     armadilhas: [
       {
         resposta: ida.resultado,
-        diagnostico:
-          'Essa é só a ida. O enunciado pede o percurso completo, que inclui a volta.',
+        diagnostico: 'Essa é só a ida. O enunciado pede o percurso completo, que inclui a volta.',
         passo: 3,
         conceito: 'linha.caminho-fechado',
       },

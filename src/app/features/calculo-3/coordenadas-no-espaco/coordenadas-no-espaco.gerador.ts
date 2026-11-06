@@ -5,7 +5,13 @@ import {
   analisarNumero,
   numeroComCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Armadilha, Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Armadilha,
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 /**
  * Exercícios de coordenadas cilíndricas e esféricas.
@@ -30,6 +36,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['cilindrica-x', 'cilindrica-r'],
   medio: ['cilindrica-x', 'cilindrica-r', 'esferica-z'],
   dificil: ['esferica-z', 'esferica-x', 'esferica-raio'],
+  // As esféricas com os dois ângulos na mesma conta: x pede seno de φ e
+  // cosseno de θ juntos.
+  extremo: ['esferica-x', 'esferica-z'],
 };
 
 export const geradorCoordenadasNoEspaco: GeradorExercicio<number> = {
@@ -131,8 +140,7 @@ function daEsferica(nivel: Nivel, rng: Rng, pedir: 'x' | 'z'): Exercicio<number>
       `Um ponto tem coordenadas esféricas ρ = ${rho}, φ = ${phi}° (medido do eixo z) e ` +
       `θ = ${theta}°. Qual é a coordenada cartesiana ${pedir}? ${PEDIDO}`,
     enunciadoTex:
-      'x = \\rho\\operatorname{sen}\\varphi\\cos\\theta \\qquad ' +
-      'z = \\rho\\cos\\varphi',
+      'x = \\rho\\operatorname{sen}\\varphi\\cos\\theta \\qquad ' + 'z = \\rho\\cos\\varphi',
     gabarito,
     resolucao: {
       resultado: gabarito,
@@ -157,8 +165,7 @@ function daEsferica(nivel: Nivel, rng: Rng, pedir: 'x' | 'z'): Exercicio<number>
         conceito: 'coordenadas.esfericas',
       },
       {
-        resposta:
-          pedir === 'x' ? rho * Math.cos(radianosPhi) * Math.cos(radianosTheta) : rho,
+        resposta: pedir === 'x' ? rho * Math.cos(radianosPhi) * Math.cos(radianosTheta) : rho,
         diagnostico:
           'A projeção no plano usa o SENO do ângulo polar: quanto mais perto do eixo z, menor ' +
           'o raio do círculo de latitude.',

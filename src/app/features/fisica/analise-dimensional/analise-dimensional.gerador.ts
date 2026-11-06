@@ -53,6 +53,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['combinacao', 'expoente-M', 'expoente-T', 'conversao']);
     case 'dificil':
       return rng.escolher<Pergunta>(['combinacao', 'consistencia', 'conversao', 'expoente-M']);
+    // Combinar grandezas até achar a fórmula é o raciocínio inverso do
+    // tópico: não conferir uma equação dada, e sim construí-la.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['combinacao', 'expoente-M']);
   }
 }
 

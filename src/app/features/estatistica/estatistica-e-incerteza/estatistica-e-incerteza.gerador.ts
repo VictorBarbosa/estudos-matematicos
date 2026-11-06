@@ -59,6 +59,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['desvio', 'incerteza-media', 'propagar-soma']);
     case 'dificil':
       return rng.escolher<Pergunta>(['propagar-produto', 'inclinacao', 'desvio']);
+    // Propagar num produto é relativo, não absoluto — o erro clássico —, e
+    // a inclinação exige a regressão inteira.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['propagar-produto', 'inclinacao']);
   }
 }
 

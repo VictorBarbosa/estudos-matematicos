@@ -64,6 +64,20 @@ function sortearPar(nivel: Nivel, rng: Rng): readonly [number, number] {
       const b = rng.inteiro(20, 150);
       return [a, b];
     }
+    case 'extremo': {
+      /*
+       * Três algarismos, com um primo grande em um dos dois.
+       *
+       * É onde a divisão simultânea deixa de ser contável de cabeça: o
+       * candidato precisa subir até o primo, e a tabuada não ajuda mais.
+       * O fator comum garantido evita o caso degenerado de MDC 1, que seria
+       * fácil justamente por não ter conta nenhuma.
+       */
+      const comum = rng.escolher([6, 8, 9, 12, 14, 15, 18]);
+      const primo = rng.escolher([17, 19, 23, 29, 31, 37, 41, 43]);
+      const outro = rng.inteiro(11, 60);
+      return rng.booleano() ? [comum * primo, comum * outro] : [comum * outro, comum * primo];
+    }
   }
 }
 

@@ -177,6 +177,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['quadrante', 'radianos', 'valor']);
     case 'dificil':
       return rng.escolher<Pergunta>(['valor', 'quadrante']);
+    // Com o ângulo passando de uma volta (ver `anguloNaVolta`), o valor exige
+    // reduzir ao intervalo principal antes de ler o seno ou o cosseno.
+    case 'extremo':
+      return 'valor';
   }
 }
 

@@ -41,6 +41,9 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['reta', 'circunferencia'],
   medio: ['reta', 'circunferencia', 'elipse', 'lancamento'],
   dificil: ['lancamento', 'velocidade', 'alcance', 'elipse'],
+  // Alcance e velocidade partem da trajetória de volta aos parâmetros: é a
+  // leitura inversa, e a que exige eliminar o tempo.
+  extremo: ['alcance', 'velocidade'],
 };
 
 export const geradorEquacoesParametricas: GeradorExercicio<number> = {

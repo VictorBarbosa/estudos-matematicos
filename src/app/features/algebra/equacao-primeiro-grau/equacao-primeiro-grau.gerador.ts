@@ -117,5 +117,18 @@ function sortear(nivel: Nivel, rng: Rng): { a: number; b: number; c: number } {
       const c = rng.inteiro(-20, 20);
       return { a, b, c };
     }
+    case 'extremo': {
+      /*
+       * Coeficientes de dois algarismos e primos entre si.
+       *
+       * A raiz sai uma fração que não simplifica — 47/23, não 3/2 —, e é aí
+       * que a resposta exata deixa de poder ser adivinhada por tentativa.
+       */
+      const PRIMOS = [13, 17, 19, 23, 29, 31, 37, 41, 43, 47];
+      const a = rng.escolher(PRIMOS) * rng.sinal();
+      const b = rng.inteiro(-99, 99);
+      const c = rng.inteiro(-99, 99);
+      return { a, b, c };
+    }
   }
 }

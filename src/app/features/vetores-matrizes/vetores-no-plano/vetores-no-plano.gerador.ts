@@ -42,6 +42,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['componente-x', 'componente-y', 'modulo-da-soma']);
     case 'dificil':
       return rng.escolher<Pergunta>(['modulo-da-soma', 'direcao', 'componente-y']);
+    // O módulo da soma não é a soma dos módulos, e a direção pede arco
+    // tangente com quadrante: as duas armadilhas do tópico.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['modulo-da-soma', 'direcao']);
   }
 }
 

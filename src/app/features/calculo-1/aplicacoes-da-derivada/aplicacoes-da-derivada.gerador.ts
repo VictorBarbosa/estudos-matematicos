@@ -1,7 +1,13 @@
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  nivelAoMenos,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const { saoEquivalentes: proximos } = numeroComCasas(3, 1e-4);
 
@@ -209,6 +215,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       ]);
     case 'dificil':
       return rng.escolher<Pergunta>(['valor-maximo', 'otimizacao', 'taxas-relacionadas']);
+    // Taxas relacionadas é o único que exige montar a relação antes de
+    // derivar: a modelagem é a dificuldade, não a conta.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['taxas-relacionadas', 'otimizacao']);
   }
 }
 
@@ -224,7 +234,7 @@ type Cenario = 'esfera' | 'escada' | 'quadrado';
  */
 function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
   const cenario = rng.escolher<Cenario>(
-    nivel === 'dificil' ? ['escada', 'esfera', 'quadrado'] : ['esfera', 'quadrado'],
+    nivelAoMenos(nivel, 'dificil') ? ['escada', 'esfera', 'quadrado'] : ['esfera', 'quadrado'],
   );
 
   if (cenario === 'esfera') {

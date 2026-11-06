@@ -199,5 +199,8 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['valor', 'bico', 'equacao']);
     case 'dificil':
       return rng.escolher<Pergunta>(['bico', 'equacao']);
+    // A equação modular tem dois casos a resolver e a verificação no fim.
+    case 'extremo':
+      return 'equacao';
   }
 }

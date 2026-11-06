@@ -68,6 +68,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['real-do-produto', 'imaginario-do-produto', 'modulo']);
     case 'dificil':
       return rng.escolher<Pergunta>(['argumento', 'real-do-quociente', 'real-do-produto']);
+    // O quociente exige multiplicar pelo conjugado; o argumento, cuidar do
+    // quadrante. São os dois pontos em que o tópico escapa.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['real-do-quociente', 'argumento']);
   }
 }
 
