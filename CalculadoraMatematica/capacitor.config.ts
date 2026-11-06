@@ -1,8 +1,9 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  // O identificador do aplicativo no iPhone. Trocar depois obriga a
-  // reinstalar, então ele já nasce com o nome definitivo.
+  // O identificador do aplicativo no iPhone. Não leva nome de pessoa: ele
+  // fica registrado na conta Apple e o repositório é público. Trocar obriga
+  // a reinstalar, e o aplicativo antigo fica no aparelho até ser apagado.
   appId: 'com.estudosmatematicos.calculadora',
   appName: 'Calculadora',
   webDir: 'www',
