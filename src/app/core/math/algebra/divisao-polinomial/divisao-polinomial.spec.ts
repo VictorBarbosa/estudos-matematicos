@@ -68,31 +68,66 @@ describe('teorema do resto', () => {
     }
   });
 
-  it('a conta de P(a) aparece com os números, não só o resultado', () => {
-    // 2x³ - x² + 3x - 2 em x = 3. «R = P(3) = 52» é verdade e não ensina
-    // nada: quem lê a resolução precisa ver a substituição e a aritmética.
-    const { passos } = restoPorBinomioComPassos(Polinomio.de(-2, 3, -1, 2), 3);
+  it('a resolução passa por cada fase, uma mudança de cada vez', () => {
+    // x³ + 4x² - 3x - 2 dividido por (x + 1). Sete passos: dizer quem é quem,
+    // achar o -1, apagar o quociente, substituir, elevar, multiplicar, somar.
+    const { passos } = restoPorBinomioComPassos(Polinomio.de(-2, -3, 4, 1), -1);
 
     expect(passos.map((passo) => passo.tex)).toEqual([
-      'P(x) = Q(x)\\left(x - 3\\right) + R',
-      'P(3) = Q(3) \\cdot 0 + R = R',
-      'P(3) = 2(3)^{3} - (3)^{2} + 3(3) - 2',
-      'R = 54 - 9 + 9 - 2 = 52',
+      '\\underbrace{x^{3} + 4x^{2} - 3x - 2}_{P(x)} = ' +
+        'Q(x)\\underbrace{\\left(x + 1\\right)}_{\\text{divisor}} + R',
+      'x + 1 = 0 \\;\\Longrightarrow\\; x = -1',
+      'P(-1) = Q(-1) \\cdot 0 + R = R',
+      'P(-1) = (-1)^{3} + 4(-1)^{2} - 3(-1) - 2',
+      'P(-1) = -1 + 4 \\cdot 1 - 3(-1) - 2',
+      'P(-1) = -1 + 4 + 3 - 2',
+      'R = -1 + 4 + 3 - 2 = 3 + 3 - 2 = 6 - 2 = 4',
     ]);
+  });
+
+  it('diz de onde vem o número que zera o divisor', () => {
+    // O -1 aparecia do nada numa divisão por (x + 1).
+    const { passos } = restoPorBinomioComPassos(Polinomio.de(-2, -3, 4, 1), -1);
+
+    expect(passos[1]?.descricao).toContain('zera o divisor');
+    expect(passos[1]?.nota).toContain('pede -1, e não 1');
+  });
+
+  it('explica o sinal da potência e o do produto', () => {
+    const { passos } = restoPorBinomioComPassos(Polinomio.de(-2, -3, 4, 1), -1);
+
+    expect(passos[4]?.nota).toBe(
+      'Base negativa: expoente par dá positivo, ímpar dá negativo — (-1)² = 1, (-1)³ = -1.',
+    );
+    expect(passos[5]?.nota).toBe('Menos vezes menos dá mais: -3 · (-1) = 3, que entra somando.');
   });
 
   it('o número vai entre parênteses, senão a potência de negativo troca de sinal', () => {
     // Sem parênteses, `-2^{3}` seria -(2³); o certo é (-2)³.
     const { passos } = restoPorBinomioComPassos(Polinomio.de(1, 0, 0, 1), -2);
 
-    expect(passos.at(-2)?.tex).toBe('P(-2) = (-2)^{3} + 1');
-    expect(passos.at(-1)?.tex).toBe('R = -8 + 1 = -7');
+    expect(passos.map((passo) => passo.tex).slice(3)).toEqual([
+      'P(-2) = (-2)^{3} + 1',
+      'P(-2) = -8 + 1',
+      'R = -8 + 1 = -7',
+    ]);
   });
 
-  it('com um termo só não há conta a mostrar, e a linha única volta', () => {
+  it('a fase que não mudaria nada é descartada', () => {
+    // 2x + 1 em x = 3: não há potência para resolver, só o produto.
+    const { passos } = restoPorBinomioComPassos(Polinomio.de(1, 2), 3);
+
+    expect(passos.map((passo) => passo.tex).slice(3)).toEqual([
+      'P(3) = 2(3) + 1',
+      'P(3) = 6 + 1',
+      'R = 6 + 1 = 7',
+    ]);
+  });
+
+  it('com um termo só a conta é imediata e não vira quatro linhas', () => {
     const { passos } = restoPorBinomioComPassos(Polinomio.de(7), 4);
 
-    expect(passos).toHaveLength(3);
+    expect(passos).toHaveLength(4);
     expect(passos.at(-1)?.tex).toBe('R = P(4) = 7');
   });
 

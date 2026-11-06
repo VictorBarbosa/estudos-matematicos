@@ -109,7 +109,8 @@ function exercicioResto(nivel: Nivel, rng: Rng): Exercicio<number> {
           diagnostico:
             'Esse é o termo constante, que seria o resto da divisão por x. Para (x − a) é ' +
             'preciso avaliar o polinômio inteiro em a.',
-          passo: 2,
+          // O passo da substituição, que é onde o polinômio inteiro entra.
+          passo: 3,
           conceito: 'polinomios.raizes',
         },
       ],

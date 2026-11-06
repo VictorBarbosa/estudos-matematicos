@@ -83,20 +83,29 @@ export function dividirComPassos(
  */
 export function restoPorBinomioComPassos(p: Polinomio, a: number): Resolucao<number> {
   const resto = p.avaliar(a);
-  const sinal = a >= 0 ? '-' : '+';
-  const binomio = `x ${sinal} ${formatar(Math.abs(a))}`;
+  const numero = formatar(a);
+  const oposto = formatar(-a);
+  const binomio = `x ${a >= 0 ? '-' : '+'} ${formatar(Math.abs(a))}`;
 
   return {
     resultado: resto,
     passos: [
       {
-        descricao: 'Pela divisão euclidiana, o resto da divisão por um binômio é constante.',
-        tex: `P(x) = Q(x)\\left(${binomio}\\right) + R`,
+        descricao:
+          `Na divisão, P(x) é o dividendo e (${binomio}) é o divisor. ` +
+          'Chamamos o quociente de Q(x) e o resto de R.',
+        tex: `\\underbrace{${p.paraTex()}}_{P(x)} = Q(x)\\underbrace{\\left(${binomio}\\right)}_{\\text{divisor}} + R`,
+        nota: 'O divisor tem grau 1, então o resto é um número — não sobra nenhum x nele.',
       },
       {
-        descricao: `Avaliamos os dois lados em x = ${formatar(a)}, onde o binômio zera.`,
-        tex: `P(${formatar(a)}) = Q(${formatar(a)}) \\cdot 0 + R = R`,
-        nota: 'O quociente desaparece, não importa qual seja.',
+        descricao: 'Procuramos o valor de x que zera o divisor: é ele que vai apagar o quociente.',
+        tex: `${binomio} = 0 \\;\\Longrightarrow\\; x = ${numero}`,
+        nota: `Dividir por (${binomio}) pede ${numero}, e não ${oposto}: é o número que anula o parêntese.`,
+      },
+      {
+        descricao: `Pondo x = ${numero} nos dois lados, o divisor vira 0 e leva o quociente junto.`,
+        tex: `P(${numero}) = Q(${numero}) \\cdot 0 + R = R`,
+        nota: 'Seja qual for Q, multiplicado por zero some. Sobra só o resto.',
       },
       ...contaDoValorNumerico(p, a, resto, binomio),
     ],
@@ -104,12 +113,13 @@ export function restoPorBinomioComPassos(p: Polinomio, a: number): Resolucao<num
 }
 
 /**
- * Os passos que mostram a conta de `P(a)`, e não só o resultado dela.
+ * Os passos que mostram a conta de `P(a)`, uma mudança de cada vez.
  *
- * «R = P(3) = 52» é verdade e não ensina nada: entre a fórmula e o número
- * faltava a substituição e a aritmética, que é justamente o que o aluno tem de
- * fazer com a caneta. Com um termo só não há conta a mostrar, e aí a linha
- * única volta a ser a melhor.
+ * «R = P(3) = 52» é verdade e não ensina nada. Mesmo «= 54 - 9 + 9 - 2 = 52»
+ * esconde duas coisas numa linha só: a potência e o produto. Aqui cada fase é
+ * uma reescrita da anterior — substituir, elevar, multiplicar, somar —, que é
+ * a ordem em que a mão faz. As fases que não mudariam nada são descartadas: um
+ * polinômio sem potências não precisa da linha das potências.
  */
 function contaDoValorNumerico(
   p: Polinomio,
@@ -117,7 +127,8 @@ function contaDoValorNumerico(
   resto: number,
   binomio: string,
 ): readonly Passo[] {
-  const nota =
+  const numero = formatar(a);
+  const notaFinal =
     Math.abs(resto) < 1e-12
       ? `Resto zero: ${binomio} é fator, e ${formatarEmTexto(a)} é raiz.`
       : undefined;
@@ -126,24 +137,50 @@ function contaDoValorNumerico(
   if (termos < 2) {
     return [
       {
-        descricao: 'Logo, basta calcular o valor numérico do polinômio nesse ponto.',
-        tex: `R = P(${formatar(a)}) = ${formatar(resto)}`,
-        nota,
+        descricao: 'Só falta o valor numérico, e com um termo só ele é imediato.',
+        tex: `R = P(${numero}) = ${formatar(resto)}`,
+        nota: notaFinal,
       },
     ];
   }
 
-  return [
+  const fases = [
     {
-      descricao: `Então o resto é o valor de P em ${formatar(a)}: trocamos x pelo número em cada termo.`,
-      tex: `P(${formatar(a)}) = ${comXTrocado(p, a)}`,
+      descricao: `Trocamos x por ${numero} em cada termo de P.`,
+      tex: comXTrocado(p, a),
+      nota: 'O número vai entre parênteses: é ele inteiro que é elevado, sinal incluído.',
     },
     {
-      descricao: 'Resolvemos as potências e os produtos, e somamos.',
-      tex: `R = ${parcelas(p, a)} = ${formatar(resto)}`,
-      nota,
+      descricao: 'Resolvemos as potências.',
+      tex: comPotenciasResolvidas(p, a),
+      nota: notaDasPotencias(p, a),
+    },
+    {
+      descricao: 'Fazemos os produtos de cada coeficiente pela sua potência.',
+      tex: parcelas(p, a),
+      nota: notaDosProdutos(p, a),
     },
   ];
+
+  const passos: Passo[] = [];
+  let anterior = '';
+
+  for (const fase of fases) {
+    if (fase.tex === anterior) {
+      continue;
+    }
+
+    passos.push({ descricao: fase.descricao, tex: `P(${numero}) = ${fase.tex}`, nota: fase.nota });
+    anterior = fase.tex;
+  }
+
+  passos.push({
+    descricao: 'Somamos as parcelas, duas de cada vez. O que sobra é o resto.',
+    tex: `R = ${somaParcela(p, a)}`,
+    nota: notaFinal,
+  });
+
+  return passos;
 }
 
 /**
@@ -155,21 +192,124 @@ function contaDoValorNumerico(
  * diferentes.
  */
 function comXTrocado(p: Polinomio, a: number): string {
+  return escreverTermos(p, (coeficiente, grau) => ({
+    sinal: coeficiente,
+    corpo: termoSubstituido(coeficiente, grau, a),
+  }));
+}
+
+/** Um termo com o número no lugar de x: `2(3)^{3}`, `3(3)`, `2`. */
+function termoSubstituido(coeficiente: number, grau: number, a: number): string {
+  const absoluto = Math.abs(coeficiente);
+  const numerica = absoluto === 1 && grau > 0 ? '' : formatar(absoluto);
+  const potencia = grau === 0 ? '' : grau === 1 ? `(${formatar(a)})` : `(${formatar(a)})^{${grau}}`;
+  return `${numerica}${potencia}`;
+}
+
+/** `-1 + 4 \cdot 1 - 3 \cdot (-1) - 2`: as potências já valem um número. */
+function comPotenciasResolvidas(p: Polinomio, a: number): string {
   return escreverTermos(p, (coeficiente, grau) => {
-    const absoluto = Math.abs(coeficiente);
-    const numerica = absoluto === 1 && grau > 0 ? '' : formatar(absoluto);
-    const potencia =
-      grau === 0 ? '' : grau === 1 ? `(${formatar(a)})` : `(${formatar(a)})^{${grau}}`;
-    return { sinal: coeficiente, corpo: `${numerica}${potencia}` };
+    const potencia = a ** grau;
+
+    // Grau 0 e grau 1 não têm potência a resolver: ficam como estavam, ou a
+    // linha repetiria a anterior com outra notação e sem nenhuma conta feita.
+    if (grau <= 1) {
+      return { sinal: coeficiente, corpo: termoSubstituido(coeficiente, grau, a) };
+    }
+
+    // Com coeficiente 1 não há produto a fazer: o termo JÁ é a potência.
+    if (Math.abs(coeficiente) === 1) {
+      return { sinal: coeficiente * potencia, corpo: formatar(Math.abs(potencia)) };
+    }
+
+    const escrita = potencia < 0 ? `(${formatar(potencia)})` : formatar(potencia);
+    return { sinal: coeficiente, corpo: `${formatar(Math.abs(coeficiente))} \\cdot ${escrita}` };
   });
 }
 
-/** `54 - 9 + 9 - 2`: cada termo já calculado, antes da soma final. */
+/** `54 - 9 + 9 - 2`: cada termo já calculado, antes da soma. */
 function parcelas(p: Polinomio, a: number): string {
   return escreverTermos(p, (coeficiente, grau) => {
     const valor = coeficiente * a ** grau;
     return { sinal: valor, corpo: formatar(Math.abs(valor)) };
   });
+}
+
+/**
+ * `-1 + 4 + 3 - 2 = 3 + 3 - 2 = 6 - 2 = 4`: a soma feita aos pares.
+ *
+ * Mostrar só «= 4» obriga quem lê a refazer a conta de cabeça para conferir.
+ */
+function somaParcela(p: Polinomio, a: number): string {
+  let valores = [...p.coeficientes.keys()]
+    .reverse()
+    .filter((grau) => p.coeficiente(grau) !== 0)
+    .map((grau) => p.coeficiente(grau) * a ** grau);
+
+  const linhas = [escreverValores(valores)];
+  while (valores.length > 1) {
+    valores = [valores[0]! + valores[1]!, ...valores.slice(2)];
+    linhas.push(escreverValores(valores));
+  }
+
+  return linhas.join(' = ');
+}
+
+/** As notas são texto corrido: o expoente precisa ser um caractere, não `^2`. */
+const EXPOENTES: Readonly<Record<number, string>> = { 2: '²', 3: '³', 4: '⁴', 5: '⁵' };
+
+/** Quando a base é negativa, o expoente decide o sinal — e isso se diz. */
+function notaDasPotencias(p: Polinomio, a: number): string | undefined {
+  if (a >= 0) {
+    return undefined;
+  }
+
+  const graus = [...p.coeficientes.keys()].filter((grau) => grau >= 2 && p.coeficiente(grau) !== 0);
+  if (graus.length === 0) {
+    return undefined;
+  }
+
+  const base = formatarEmTexto(a);
+  const exemplo = graus
+    .slice(0, 2)
+    .map((grau) => `(${base})${EXPOENTES[grau] ?? `^${grau}`} = ${formatarEmTexto(a ** grau)}`)
+    .join(', ');
+
+  return `Base negativa: expoente par dá positivo, ímpar dá negativo — ${exemplo}.`;
+}
+
+/** Menos vezes menos dá mais: o sinal que mais se perde na conta. */
+function notaDosProdutos(p: Polinomio, a: number): string | undefined {
+  const grau = [...p.coeficientes.keys()].find((candidato) => {
+    const coeficiente = p.coeficiente(candidato);
+    return candidato > 0 && coeficiente < 0 && a ** candidato < 0;
+  });
+
+  if (grau === undefined) {
+    return undefined;
+  }
+
+  const coeficiente = p.coeficiente(grau);
+  const potencia = a ** grau;
+
+  return (
+    `Menos vezes menos dá mais: ${formatarEmTexto(coeficiente)} · ` +
+    `(${formatarEmTexto(potencia)}) = ${formatarEmTexto(coeficiente * potencia)}, ` +
+    'que entra somando.'
+  );
+}
+
+/** Uma lista de números com os sinais entre eles: `-1 + 4 + 3 - 2`. */
+function escreverValores(valores: readonly number[]): string {
+  return valores
+    .map((valor, indice) => {
+      const corpo = formatar(Math.abs(valor));
+      if (indice === 0) {
+        return valor < 0 ? `-${corpo}` : corpo;
+      }
+      return `${valor < 0 ? ' - ' : ' + '}${corpo}`;
+    })
+    .join('');
 }
 
 /** Percorre os termos do maior grau ao menor, juntando-os com os sinais. */
