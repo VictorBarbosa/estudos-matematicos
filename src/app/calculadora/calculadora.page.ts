@@ -203,19 +203,38 @@ export class CalculadoraPage {
    */
 
   /** Acrescenta o separador ao fim da lista de inteiros. */
-  protected acrescentarSeparador(): void {
+  protected acrescentarSeparador(entrada: HTMLInputElement): void {
     this.numeros.update((atual) => {
       const limpo = atual.trimEnd();
       return limpo === '' || limpo.endsWith(',') ? atual : `${limpo}, `;
     });
+    this.devolverOCursor(entrada);
   }
 
   /** Troca o sinal de um dos campos de fatorar. */
-  protected alternarSinalDoCampo(qual: 'produto' | 'soma'): void {
+  protected alternarSinalDoCampo(qual: 'produto' | 'soma', entrada: HTMLInputElement): void {
     const campo = qual === 'produto' ? this.produto : this.soma;
     campo.update((atual) => {
       const limpo = atual.trim();
       return limpo.startsWith('-') ? limpo.slice(1) : `-${limpo}`;
+    });
+    this.devolverOCursor(entrada);
+  }
+
+  /**
+   * Deixa o campo com o foco e o cursor no fim, depois de usar a tecla.
+   *
+   * Quem impede o teclado de fechar é o `preventDefault` no `pointerdown` do
+   * botão, no template: sem ele o toque tira o foco do campo e o iPhone
+   * recolhe o teclado a cada vírgula. Isto aqui é a rede de segurança — se
+   * algum aparelho ainda assim tirar o foco, ele volta — e é o que põe o
+   * cursor depois do que acabou de ser inserido.
+   */
+  private devolverOCursor(entrada: HTMLInputElement): void {
+    queueMicrotask(() => {
+      entrada.focus();
+      const fim = entrada.value.length;
+      entrada.setSelectionRange(fim, fim);
     });
   }
 

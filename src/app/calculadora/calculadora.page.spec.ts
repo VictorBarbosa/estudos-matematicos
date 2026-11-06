@@ -194,6 +194,34 @@ describe('CalculadoraPage', () => {
     expect(campos[1]!.value).toBe('11');
   });
 
+  it('a tecla devolve o cursor ao campo, para o teclado não fechar', async () => {
+    /*
+     * No iPhone, quem tira o foco do campo faz o teclado recolher. O
+     * `preventDefault` no `pointerdown` do botão é o que impede o desfoque —
+     * verificado no navegador, com toque de verdade, contando zero eventos
+     * de `blur`. Aqui fica a rede de segurança: depois da tecla, o campo tem
+     * o foco e o cursor no fim.
+     */
+    modos.definir('mmc-mdc');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(0, '80');
+    await tocar('separar números');
+    await new Promise<void>((pronto) => queueMicrotask(() => pronto()));
+
+    const campo = fixture.nativeElement.querySelector('.campo input') as HTMLInputElement;
+    expect(document.activeElement).toBe(campo);
+    expect(campo.selectionStart).toBe(campo.value.length);
+  });
+
+  it('a tecla não entra na ordem de tabulação', () => {
+    // Ela é auxiliar do campo ao lado; parar nela ao tabular só atrapalha.
+    for (const tecla of fixture.nativeElement.querySelectorAll('.tecla-do-campo')) {
+      expect((tecla as HTMLElement).getAttribute('tabindex')).toBe('-1');
+    }
+  });
+
   it('os recados de erro saem em português', async () => {
     modos.definir('mmc-mdc');
     await fixture.whenStable();
