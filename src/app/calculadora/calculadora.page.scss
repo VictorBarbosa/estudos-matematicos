@@ -45,19 +45,19 @@ $operador: #ff9f0a;
 }
 
 /*
- * O visor ocupa o que sobra acima do teclado.
+ * O visor tem altura própria; quem se ajusta é o teclado.
  *
- * `min-height: 0` é o que permite ele ENCOLHER: sem isso, um item de flex
- * nunca fica menor que o próprio conteúdo, e no modo científico — oito linhas
- * de teclas — o teclado era empurrado para fora da tela.
+ * Era o contrário — o visor crescia e o teclado tomava o que precisasse —, e
+ * no modo científico, com dez linhas de teclas, o teclado comia o visor
+ * inteiro e ainda transbordava: o resultado sumia da tela.
  */
 .visor {
   display: flex;
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   flex-direction: column;
   justify-content: flex-end;
   gap: 0.25rem;
-  min-height: 3.5rem;
+  min-height: 5.5rem;
   padding: 0.5rem 0.25rem;
   text-align: right;
 }
@@ -96,27 +96,35 @@ $operador: #ff9f0a;
 /*
  * O teclado fica com a altura que sobrar, e as linhas a dividem igualmente.
  *
- * Preferi isto a fixar a altura da tecla: no modo científico são oito linhas,
- * e qualquer altura fixa que coubesse no iPhone 15 deixaria o teclado cortado
- * num iPhone SE — ou sobrando num iPad.
+ * `min-height: 0` é o que permite ele ENCOLHER: sem isso um item de flex
+ * nunca fica menor que o próprio conteúdo, e as últimas linhas saíam pela
+ * borda de baixo. Preferi isto a fixar a altura da tecla: qualquer altura que
+ * coubesse no iPhone 16 deixaria o científico cortado num iPhone SE.
  */
 .teclado {
   display: flex;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   flex-direction: column;
   gap: 0.6rem;
+  min-height: 0;
 }
 
 .teclas {
   display: grid;
   gap: 0.6rem;
   grid-auto-rows: minmax(0, 1fr);
+  min-height: 0;
 
   button {
-    /* Redondas enquanto houver espaço; achatam quando a tela é curta. */
+    /*
+     * Redondas enquanto a linha for alta o bastante, e achatadas quando não
+     * for: `max-height: 100%` é o que faz a tecla ceder à linha em vez de
+     * estourá-la.
+     */
+    width: 100%;
     aspect-ratio: 1;
-    max-height: 4.6rem;
-    height: auto;
+    max-height: 100%;
+    align-self: center;
     border: 0;
     border-radius: 999px;
     background: $digito;
@@ -149,17 +157,23 @@ $operador: #ff9f0a;
 }
 
 .basicas {
+  flex: 5 1 0;
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* A ala científica é mais apertada: cinco linhas de três teclas menores. */
+/*
+ * A ala científica: cinco linhas de três teclas, mais baixas que as de baixo.
+ *
+ * O `flex: 3` contra o `flex: 5` das básicas é o que dá a elas pouco mais da
+ * metade da altura por linha — as funções são secundárias, e os dígitos é que
+ * precisam do alvo grande.
+ */
 .cientificas {
+  flex: 3 1 0;
   grid-template-columns: repeat(3, 1fr);
 
   button {
-    /* A ala científica é mais baixa: cinco linhas precisam caber. */
     aspect-ratio: 2.4;
-    max-height: 3rem;
     font-size: 1.05rem;
   }
 }
@@ -212,8 +226,17 @@ $operador: #ff9f0a;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  /*
+   * Um campo de texto tem largura natural de vinte caracteres, e um item de
+   * grade não encolhe abaixo do próprio conteúdo sem isto: o segundo campo
+   * saía pela direita da tela.
+   */
+  min-width: 0;
 
   input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     padding: 0.8rem 0.9rem;
     border: 1px solid #48484a;
     border-radius: 0.8rem;
