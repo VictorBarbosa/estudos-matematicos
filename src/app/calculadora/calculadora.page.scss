@@ -5,6 +5,11 @@
  * sistema não muda de cor com o tema, e é dela que o aluno tem a memória —
  * dígito cinza-escuro, função cinza-claro, operação laranja.
  */
+/* O vão entre teclas, usado também na conta que limita a altura do teclado. */
+$vao: 0.6rem;
+/* A margem lateral da página, somada dos dois lados. */
+$margem: 2rem;
+
 $fundo: #1c1c1e;
 $digito: #333335;
 $funcao: #a5a5a7;
@@ -117,17 +122,24 @@ $operador: #ff9f0a;
  * borda de baixo. Preferi isto a fixar a altura da tecla: qualquer altura que
  * coubesse no iPhone 16 deixaria o científico cortado num iPhone SE.
  */
+/*
+ * O teclado encosta embaixo, com a altura que as teclas pedem.
+ *
+ * `justify-content: flex-end` junta os blocos no pé da tela, onde o polegar
+ * alcança; o espaço que sobrar fica acima, com o visor.
+ */
 .teclado {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  gap: 0.6rem;
+  justify-content: flex-end;
+  gap: $vao;
   min-height: 0;
 }
 
 .teclas {
   display: grid;
-  gap: 0.6rem;
+  gap: $vao;
   grid-auto-rows: minmax(0, 1fr);
   min-height: 0;
 
@@ -188,8 +200,16 @@ $operador: #ff9f0a;
  * direita. O zero explícito deixa a coluna encolher.
  */
 .basicas {
-  flex: 5 1 0;
+  flex: 5 1 auto;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  /*
+   * O teto é o tamanho natural do teclado: cinco teclas redondas mais os
+   * quatro vãos. Sem ele, as linhas dividiam TODA a altura livre e cada
+   * tecla — que é redonda, e portanto menor que a linha — ficava boiando no
+   * meio de um vão enorme.
+   */
+  --lado: calc((100vw - #{$margem} - 3 * #{$vao}) / 4);
+  max-height: calc(5 * var(--lado) + 4 * #{$vao});
 }
 
 /*
@@ -200,8 +220,11 @@ $operador: #ff9f0a;
  * precisam do alvo grande.
  */
 .cientificas {
-  flex: 3 1 0;
+  flex: 3 1 auto;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* Mesmo teto, para teclas de três colunas e proporção 2,4. */
+  --lado: calc((100vw - #{$margem} - 2 * #{$vao}) / 3 / 2.4);
+  max-height: calc(5 * var(--lado) + 4 * #{$vao});
 
   button {
     aspect-ratio: 2.4;
