@@ -478,6 +478,47 @@ describe('soma e produto', () => {
     expect(conta.parExato).toEqual(['1,1125178063', '9,8874821937']);
   });
 
+  it('percebe os campos trocados, que é o erro de digitação natural', () => {
+    // x² - 25x + 136 tem produto 136 e soma 25, mas na expressão o 25 vem
+    // primeiro — e é nessa ordem que a mão digita.
+    const conta = calcularFatores('25', '136');
+
+    expect(conta.par).toBeNull();
+    expect(conta.trocados).toEqual({ a: 8, b: 17, produto: 136, soma: 25 });
+  });
+
+  it('e com os campos na ordem certa resolve sem sugestão nenhuma', () => {
+    const conta = calcularFatores('136', '25');
+
+    expect([conta.par!.a, conta.par!.b]).toEqual([8, 17]);
+    expect(conta.trocados).toBeNull();
+  });
+
+  it('não sugere a troca quando trocar também não resolve', () => {
+    // 11² - 4·11 = 77 não é quadrado nos dois sentidos.
+    expect(calcularFatores('11', '11').trocados).toBeNull();
+    // 7² - 4·50 é negativo: trocar levaria a par complexo.
+    expect(calcularFatores('50', '7').trocados).toBeNull();
+  });
+
+  it('o par sugerido realmente tem o produto e a soma trocados', () => {
+    for (const [produto, soma] of [
+      ['25', '136'],
+      ['3', '-7'],
+      ['-30', '13'],
+    ] as const) {
+      const trocados = calcularFatores(produto, soma).trocados;
+      if (trocados === null) {
+        continue;
+      }
+
+      expect(trocados.a * trocados.b).toBe(Number(soma));
+      expect(trocados.a + trocados.b).toBe(Number(produto));
+      expect(trocados.produto).toBe(Number(soma));
+      expect(trocados.soma).toBe(Number(produto));
+    }
+  });
+
   it('o par exato soma e multiplica o que foi pedido', () => {
     const conta = calcularFatores('11', '11');
     const numeros = conta.parExato.map((r) => Number(r.replace(',', '.')));

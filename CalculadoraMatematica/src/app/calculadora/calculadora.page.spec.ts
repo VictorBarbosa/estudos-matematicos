@@ -14,10 +14,8 @@ describe('CalculadoraPage', () => {
   let modos: ModoService;
 
   const texto = (): string => fixture.nativeElement.textContent.replace(/\s+/g, ' ');
-  const visor = (): string =>
-    (fixture.nativeElement.querySelector('.valor') as HTMLElement).textContent!.trim();
-  const legenda = (): string =>
-    (fixture.nativeElement.querySelector('.legenda') as HTMLElement).textContent!.trim();
+  const visor = (): string => (fixture.nativeElement.querySelector('.valor') as HTMLElement).textContent!.trim();
+  const legenda = (): string => (fixture.nativeElement.querySelector('.legenda') as HTMLElement).textContent!.trim();
 
   async function apertar(...rotulos: readonly string[]): Promise<void> {
     for (const rotulo of rotulos) {
@@ -31,9 +29,7 @@ describe('CalculadoraPage', () => {
   }
 
   async function escrever(indice: number, valor: string): Promise<void> {
-    const campo = [...fixture.nativeElement.querySelectorAll('.campo input')][
-      indice
-    ] as HTMLInputElement;
+    const campo = [...fixture.nativeElement.querySelectorAll('.campo input')][indice] as HTMLInputElement;
     campo.value = valor;
     campo.dispatchEvent(new Event('input'));
     await fixture.whenStable();
@@ -122,6 +118,32 @@ describe('CalculadoraPage', () => {
     expect(texto()).toContain('Raízes: x = -4 ou x = 2');
   });
 
+  it('avisa quando produto e soma estão trocados', async () => {
+    // x² - 25x + 136: na expressão o 25 vem primeiro, mas é a soma. Sem este
+    // aviso a tela mostrava só dois decimais longos e parecia estar errada.
+    modos.definir('soma-produto');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(0, '25');
+    await escrever(1, '136');
+
+    expect(texto()).toContain('Com os campos trocados há par inteiro: 8 e 17');
+    expect(texto()).toContain('produto 136 e soma 25');
+  });
+
+  it('e não avisa nada quando a ordem está certa', async () => {
+    modos.definir('soma-produto');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(0, '136');
+    await escrever(1, '25');
+
+    expect(visor()).toBe('8 e 17');
+    expect(texto()).not.toContain('campos trocados');
+  });
+
   /** A tecla ao lado de um campo, pelo rótulo acessível. */
   function teclaDoCampo(rotulo: string): HTMLButtonElement {
     return [...fixture.nativeElement.querySelectorAll('.tecla-do-campo')].find(
@@ -163,9 +185,7 @@ describe('CalculadoraPage', () => {
     await escrever(0, '12');
     await tocar('separar números');
     await tocar('separar números');
-    expect((fixture.nativeElement.querySelector('.campo input') as HTMLInputElement).value).toBe(
-      '12, ',
-    );
+    expect((fixture.nativeElement.querySelector('.campo input') as HTMLInputElement).value).toBe('12, ');
   });
 
   it('o sinal de menos do Fatorar vem de uma tecla por campo', async () => {

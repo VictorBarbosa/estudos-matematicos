@@ -231,6 +231,21 @@
           <p class="montagem">{{ i18n.t('calculadora.semParInteiroLongo') }}</p>
         }
 
+        <!-- Produto e soma trocados é o erro de digitação natural: em
+             `x² - 25x + 136` o 25 vem primeiro na expressão, mas é a soma. -->
+        @if (fatores().trocados; as trocados) {
+          <p class="montagem trocados">
+            {{
+              i18n.t('calculadora.camposTrocados', {
+                a: trocados.a,
+                b: trocados.b,
+                produto: trocados.produto,
+                soma: trocados.soma,
+              })
+            }}
+          </p>
+        }
+
         <!-- As raízes são os OPOSTOS do par: `(x - 2)(x + 4)` zera em 2 e -4.
              Sem esta linha, quem procura a raiz copia o par e erra o sinal. -->
         @if (fatores().raizes.length === 2) {

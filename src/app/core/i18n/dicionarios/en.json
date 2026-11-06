@@ -31,6 +31,7 @@
   "calculadora": {
     "aoMenosDois": "Enter at least two numbers.",
     "basica": "Basic",
+    "camposTrocados": "Swapping the fields gives a whole-number pair: {a} and {b} have product {produto} and sum {soma}. In x² + bx + c, the product is c — the term without x.",
     "cientifica": "Scientific",
     "deFatores": "Product {produto}, sum {soma}",
     "deNumeros": "{operacao} of {numeros}",

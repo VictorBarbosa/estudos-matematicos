@@ -31,6 +31,7 @@
   "calculadora": {
     "aoMenosDois": "Informe pelo menos dois números.",
     "basica": "Básica",
+    "camposTrocados": "Com os campos trocados há par inteiro: {a} e {b} dão produto {produto} e soma {soma}. Em x² + bx + c, o produto é c — o termo sem x.",
     "cientifica": "Científica",
     "deFatores": "Produto {produto}, soma {soma}",
     "deNumeros": "{operacao} de {numeros}",

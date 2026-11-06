@@ -18,300 +18,302 @@
     </div>
 
     @if (emInteiros()) {
-      <div class="campos">
-        <div class="escolha" role="group" aria-label="Qual conta fazer">
-          <button
-            type="button"
-            class="funcao"
-            [class.ativo]="operacao() === 'mmc'"
-            [attr.aria-pressed]="operacao() === 'mmc'"
-            (click)="escolher('mmc')"
-          >
-            MMC
-          </button>
-          <button
-            type="button"
-            class="funcao"
-            [class.ativo]="operacao() === 'mdc'"
-            [attr.aria-pressed]="operacao() === 'mdc'"
-            (click)="escolher('mdc')"
-          >
-            MDC
-          </button>
-        </div>
+    <div class="campos">
+      <div class="escolha" role="group" aria-label="Qual conta fazer">
+        <button
+          type="button"
+          class="funcao"
+          [class.ativo]="operacao() === 'mmc'"
+          [attr.aria-pressed]="operacao() === 'mmc'"
+          (click)="escolher('mmc')"
+        >
+          MMC
+        </button>
+        <button
+          type="button"
+          class="funcao"
+          [class.ativo]="operacao() === 'mdc'"
+          [attr.aria-pressed]="operacao() === 'mdc'"
+          (click)="escolher('mdc')"
+        >
+          MDC
+        </button>
+      </div>
 
-        <label class="campo">
-          <span class="rotulo">Números, separados por vírgula</span>
-          <!-- O teclado numérico do iPhone não traz vírgula: ela vem ao lado. -->
-          <div class="com-tecla">
-            <input
-              #entradaNumeros
-              type="text"
-              inputmode="numeric"
-              autocomplete="off"
-              spellcheck="false"
-              placeholder="12, 18, 24"
-              [value]="numeros()"
-              (input)="definirNumeros($any($event.target).value)"
-            />
-            <!-- `pointerdown` barrado: sem isso o toque tira o foco do campo
+      <label class="campo">
+        <span class="rotulo">Números, separados por vírgula</span>
+        <!-- O teclado numérico do iPhone não traz vírgula: ela vem ao lado. -->
+        <div class="com-tecla">
+          <input
+            #entradaNumeros
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="12, 18, 24"
+            [value]="numeros()"
+            (input)="definirNumeros($any($event.target).value)"
+          />
+          <!-- `pointerdown` barrado: sem isso o toque tira o foco do campo
                  e o iPhone fecha o teclado a cada vírgula. -->
-            <button
-              type="button"
-              class="tecla-do-campo"
-              tabindex="-1"
-              aria-label="separar números"
-              (pointerdown)="$event.preventDefault()"
-              (click)="acrescentarSeparador(entradaNumeros)"
-            >
-              ,
-            </button>
-          </div>
-        </label>
-
-        <!-- A divisão simultânea: o caminho até a resposta, e não só ela. -->
-        @if (conta().decomposicao.length > 0) {
-          <table class="decomposicao" [class.mdc]="operacao() === 'mdc'">
-            <caption class="rotulo">
-              Dividindo todos ao mesmo tempo
-            </caption>
-            <tbody>
-              @for (linha of conta().decomposicao; track $index) {
-                <tr [class.comum]="linha.comum">
-                  @for (valor of linha.valores; track $index) {
-                    <td>{{ valor }}</td>
-                  }
-                  <td class="divisor">{{ linha.divisor }}</td>
-                </tr>
-              }
-              <tr class="chegada">
-                @for (numero of conta().numeros; track $index) {
-                  <td>1</td>
-                }
-                <td class="divisor"></td>
-              </tr>
-            </tbody>
-          </table>
-
-          @if (conta().montagem; as montagem) {
-            <p class="montagem">{{ nomeDaOperacao() }} = {{ montagem }}</p>
-          } @else {
-            <p class="montagem">Nenhum divisor comum: MDC = 1.</p>
-          }
-        }
-      </div>
-    } @else if (emFatores()) {
-      <div class="campos">
-        <p class="rotulo explicacao">
-          Dois números cujo produto e cuja soma são estes — o passo que fatora x² + bx + c. As
-          raízes são os opostos deles.
-        </p>
-
-        <div class="dupla">
-          <label class="campo">
-            <span class="rotulo">Produto</span>
-            <!-- Nem sinal de menos: um produto negativo é metade dos casos. -->
-            <div class="com-tecla">
-              <input
-                #entradaProduto
-                type="text"
-                inputmode="numeric"
-                autocomplete="off"
-                spellcheck="false"
-                placeholder="24"
-                [value]="produto()"
-                (input)="definirProduto($any($event.target).value)"
-              />
-              <button
-                type="button"
-                class="tecla-do-campo"
-                tabindex="-1"
-                aria-label="trocar o sinal do produto"
-                (pointerdown)="$event.preventDefault()"
-                (click)="alternarSinalDoCampo('produto', entradaProduto)"
-              >
-                ±
-              </button>
-            </div>
-          </label>
-          <label class="campo">
-            <span class="rotulo">Soma</span>
-            <div class="com-tecla">
-              <input
-                #entradaSoma
-                type="text"
-                inputmode="numeric"
-                autocomplete="off"
-                spellcheck="false"
-                placeholder="11"
-                [value]="soma()"
-                (input)="definirSoma($any($event.target).value)"
-              />
-              <button
-                type="button"
-                class="tecla-do-campo"
-                tabindex="-1"
-                aria-label="trocar o sinal da soma"
-                (pointerdown)="$event.preventDefault()"
-                (click)="alternarSinalDoCampo('soma', entradaSoma)"
-              >
-                ±
-              </button>
-            </div>
-          </label>
+          <button
+            type="button"
+            class="tecla-do-campo"
+            tabindex="-1"
+            aria-label="separar números"
+            (pointerdown)="$event.preventDefault()"
+            (click)="acrescentarSeparador(entradaNumeros)"
+          >
+            ,
+          </button>
         </div>
+      </label>
 
-        @if (fatores().tentativas.length > 0) {
-          <table class="pares">
-            <caption class="rotulo">
-              Pares com esse produto, e o que cada um soma
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Par</th>
-                <th scope="col">Soma</th>
-              </tr>
-            </thead>
-            <tbody>
-              @for (tentativa of fatores().tentativas; track $index) {
-                <tr [class.escolhido]="tentativa.escolhido">
-                  <td>{{ tentativa.a }} · {{ tentativa.b }}</td>
-                  <td class="soma">{{ tentativa.soma }}</td>
-                </tr>
-              }
-              @if (fatores().truncada) {
-                <tr class="corte">
-                  <td colspan="2">… e outros pares</td>
-                </tr>
-              }
-            </tbody>
-          </table>
-        }
+      <!-- A divisão simultânea: o caminho até a resposta, e não só ela. -->
+      @if (conta().decomposicao.length > 0) {
+      <table class="decomposicao" [class.mdc]="operacao() === 'mdc'">
+        <caption class="rotulo">
+          Dividindo todos ao mesmo tempo
+        </caption>
+        <tbody>
+          @for (linha of conta().decomposicao; track $index) {
+          <tr [class.comum]="linha.comum">
+            @for (valor of linha.valores; track $index) {
+            <td>{{ valor }}</td>
+            }
+            <td class="divisor">{{ linha.divisor }}</td>
+          </tr>
+          }
+          <tr class="chegada">
+            @for (numero of conta().numeros; track $index) {
+            <td>1</td>
+            }
+            <td class="divisor"></td>
+          </tr>
+        </tbody>
+      </table>
 
-        @if (fatores().fatoracao; as fatoracao) {
-          <p class="montagem">{{ fatoracao }}</p>
-        } @else if (fatores().parExato.length === 2) {
-          <p class="montagem">
-            Nenhum par de inteiros tem esse produto e essa soma; os dois números acima são o par
-            exato.
-          </p>
-        }
+      @if (conta().montagem; as montagem) {
+      <p class="montagem">{{ nomeDaOperacao() }} = {{ montagem }}</p>
+      } @else {
+      <p class="montagem">Nenhum divisor comum: MDC = 1.</p>
+      } }
+    </div>
+    } @else if (emFatores()) {
+    <div class="campos">
+      <p class="rotulo explicacao">
+        Dois números cujo produto e cuja soma são estes — o passo que fatora x² + bx + c. As raízes são os opostos
+        deles.
+      </p>
 
-        <!-- As raízes são os OPOSTOS do par: `(x - 2)(x + 4)` zera em 2 e -4. -->
-        @if (fatores().raizes.length === 2) {
-          <p class="raizes">
-            Raízes: x = {{ fatores().raizes[0] }} ou x = {{ fatores().raizes[1] }}
-          </p>
-        }
-      </div>
-    } @else if (emDecimal()) {
-      <div class="campos">
-        <p class="rotulo explicacao">
-          Escreva o decimal e veja a fração exata. Para dízima periódica, ponha o período entre
-          parênteses: <strong>0,(3)</strong> é 0,333… e <strong>0,1(6)</strong> é 0,1666…
-        </p>
-
+      <div class="dupla">
         <label class="campo">
-          <span class="rotulo">Decimal</span>
+          <span class="rotulo">Produto</span>
+          <!-- Nem sinal de menos: um produto negativo é metade dos casos. -->
           <div class="com-tecla">
             <input
-              #entradaDecimal
+              #entradaProduto
               type="text"
               inputmode="numeric"
               autocomplete="off"
               spellcheck="false"
-              placeholder="0,1(6)"
-              [value]="decimal()"
-              (input)="definirDecimal($any($event.target).value)"
+              placeholder="24"
+              [value]="produto()"
+              (input)="definirProduto($any($event.target).value)"
             />
             <button
               type="button"
               class="tecla-do-campo"
               tabindex="-1"
-              aria-label="vírgula"
+              aria-label="trocar o sinal do produto"
               (pointerdown)="$event.preventDefault()"
-              (click)="acrescentarAoDecimal(',', entradaDecimal)"
-            >
-              ,
-            </button>
-            <button
-              type="button"
-              class="tecla-do-campo"
-              tabindex="-1"
-              aria-label="abrir o período"
-              (pointerdown)="$event.preventDefault()"
-              (click)="acrescentarAoDecimal('(', entradaDecimal)"
-            >
-              (
-            </button>
-            <button
-              type="button"
-              class="tecla-do-campo"
-              tabindex="-1"
-              aria-label="fechar o período"
-              (pointerdown)="$event.preventDefault()"
-              (click)="acrescentarAoDecimal(')', entradaDecimal)"
-            >
-              )
-            </button>
-            <button
-              type="button"
-              class="tecla-do-campo"
-              tabindex="-1"
-              aria-label="trocar o sinal"
-              (pointerdown)="$event.preventDefault()"
-              (click)="alternarSinalDoDecimal(entradaDecimal)"
+              (click)="alternarSinalDoCampo('produto', entradaProduto)"
             >
               ±
             </button>
           </div>
         </label>
-
-        <!-- O caminho, e não só a resposta: na dízima é a subtração que
-             mata a cauda infinita, e é isso que se aprende. -->
-        @if (conversao().passos.length > 0) {
-          <ol class="passos">
-            @for (passo of conversao().passos; track $index) {
-              <li>
-                <span class="descricao">{{ passo.descricao }}</span>
-                <span class="conta">{{ passo.conta }}</span>
-              </li>
-            }
-          </ol>
-        }
-      </div>
-    } @else {
-      <div class="teclado">
-        @if (modo() === 'cientifica') {
-          <div class="teclas cientificas">
-            @for (tecla of cientificas; track tecla.rotulo) {
-              <button
-                type="button"
-                [class]="tecla.estilo"
-                [attr.aria-label]="tecla.nome ?? null"
-                (click)="pressionar(tecla.acao)"
-              >
-                {{ rotuloDe(tecla) }}
-              </button>
-            }
-          </div>
-        }
-
-        <div class="teclas basicas">
-          @for (tecla of basicas; track tecla.rotulo) {
+        <label class="campo">
+          <span class="rotulo">Soma</span>
+          <div class="com-tecla">
+            <input
+              #entradaSoma
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="11"
+              [value]="soma()"
+              (input)="definirSoma($any($event.target).value)"
+            />
             <button
               type="button"
-              [class]="tecla.estilo"
-              [class.largo]="tecla.largo"
-              [class.sozinha]="tecla.sozinha"
-              [attr.aria-label]="tecla.nome ?? null"
-              (click)="pressionar(tecla.acao)"
+              class="tecla-do-campo"
+              tabindex="-1"
+              aria-label="trocar o sinal da soma"
+              (pointerdown)="$event.preventDefault()"
+              (click)="alternarSinalDoCampo('soma', entradaSoma)"
             >
-              {{ tecla.rotulo === 'AC' ? rotuloLimpar() : tecla.rotulo }}
+              ±
             </button>
-          }
-        </div>
+          </div>
+        </label>
       </div>
+
+      @if (fatores().tentativas.length > 0) {
+      <table class="pares">
+        <caption class="rotulo">
+          Pares com esse produto, e o que cada um soma
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Par</th>
+            <th scope="col">Soma</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (tentativa of fatores().tentativas; track $index) {
+          <tr [class.escolhido]="tentativa.escolhido">
+            <td>{{ tentativa.a }} · {{ tentativa.b }}</td>
+            <td class="soma">{{ tentativa.soma }}</td>
+          </tr>
+          } @if (fatores().truncada) {
+          <tr class="corte">
+            <td colspan="2">… e outros pares</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+      } @if (fatores().fatoracao; as fatoracao) {
+      <p class="montagem">{{ fatoracao }}</p>
+      } @else if (fatores().parExato.length === 2) {
+      <p class="montagem">
+        Nenhum par de inteiros tem esse produto e essa soma; os dois números acima são o par exato.
+      </p>
+      }
+
+      <!-- Produto e soma trocados é o erro de digitação natural: em
+             `x² - 25x + 136` o 25 vem primeiro na expressão, mas é a soma. -->
+      @if (fatores().trocados; as trocados) {
+      <p class="montagem trocados">
+        Com os campos trocados há par inteiro: {{ trocados.a }} e {{ trocados.b }} dão produto {{ trocados.produto }} e
+        soma {{ trocados.soma }}. Em x² + bx + c, o produto é c — o termo sem x.
+      </p>
+      }
+
+      <!-- As raízes são os OPOSTOS do par: `(x - 2)(x + 4)` zera em 2 e -4. -->
+      @if (fatores().raizes.length === 2) {
+      <p class="raizes">Raízes: x = {{ fatores().raizes[0] }} ou x = {{ fatores().raizes[1] }}</p>
+      }
+    </div>
+    } @else if (emDecimal()) {
+    <div class="campos">
+      <p class="rotulo explicacao">
+        Escreva o decimal e veja a fração exata. Para dízima periódica, ponha o período entre parênteses:
+        <strong>0,(3)</strong> é 0,333… e <strong>0,1(6)</strong> é 0,1666…
+      </p>
+
+      <label class="campo">
+        <span class="rotulo">Decimal</span>
+        <div class="com-tecla">
+          <input
+            #entradaDecimal
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="0,1(6)"
+            [value]="decimal()"
+            (input)="definirDecimal($any($event.target).value)"
+          />
+          <button
+            type="button"
+            class="tecla-do-campo"
+            tabindex="-1"
+            aria-label="vírgula"
+            (pointerdown)="$event.preventDefault()"
+            (click)="acrescentarAoDecimal(',', entradaDecimal)"
+          >
+            ,
+          </button>
+          <button
+            type="button"
+            class="tecla-do-campo"
+            tabindex="-1"
+            aria-label="abrir o período"
+            (pointerdown)="$event.preventDefault()"
+            (click)="acrescentarAoDecimal('(', entradaDecimal)"
+          >
+            (
+          </button>
+          <button
+            type="button"
+            class="tecla-do-campo"
+            tabindex="-1"
+            aria-label="fechar o período"
+            (pointerdown)="$event.preventDefault()"
+            (click)="acrescentarAoDecimal(')', entradaDecimal)"
+          >
+            )
+          </button>
+          <button
+            type="button"
+            class="tecla-do-campo"
+            tabindex="-1"
+            aria-label="trocar o sinal"
+            (pointerdown)="$event.preventDefault()"
+            (click)="alternarSinalDoDecimal(entradaDecimal)"
+          >
+            ±
+          </button>
+        </div>
+      </label>
+
+      <!-- O caminho, e não só a resposta: na dízima é a subtração que
+             mata a cauda infinita, e é isso que se aprende. -->
+      @if (conversao().passos.length > 0) {
+      <ol class="passos">
+        @for (passo of conversao().passos; track $index) {
+        <li>
+          <span class="descricao">{{ passo.descricao }}</span>
+          <span class="conta">{{ passo.conta }}</span>
+        </li>
+        }
+      </ol>
+      }
+    </div>
+    } @else {
+    <div class="teclado">
+      @if (modo() === 'cientifica') {
+      <div class="teclas cientificas">
+        @for (tecla of cientificas; track tecla.rotulo) {
+        <button
+          type="button"
+          [class]="tecla.estilo"
+          [attr.aria-label]="tecla.nome ?? null"
+          (click)="pressionar(tecla.acao)"
+        >
+          {{ rotuloDe(tecla) }}
+        </button>
+        }
+      </div>
+      }
+
+      <div class="teclas basicas">
+        @for (tecla of basicas; track tecla.rotulo) {
+        <button
+          type="button"
+          [class]="tecla.estilo"
+          [class.largo]="tecla.largo"
+          [class.sozinha]="tecla.sozinha"
+          [attr.aria-label]="tecla.nome ?? null"
+          (click)="pressionar(tecla.acao)"
+        >
+          {{ tecla.rotulo === 'AC' ? rotuloLimpar() : tecla.rotulo }}
+        </button>
+        }
+      </div>
+    </div>
     }
   </section>
 </ion-content>

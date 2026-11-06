@@ -30,6 +30,7 @@ export const CHAVES_USADAS: readonly (readonly [string, string])[] = [
     'shared/components/atualizacao-dialog/atualizacao-dialog.ts',
   ],
   ['calculadora.basica', 'shared/components/calculadora/calculadora.html'],
+  ['calculadora.camposTrocados', 'shared/components/calculadora/calculadora.html'],
   ['calculadora.cientifica', 'shared/components/calculadora/calculadora.html'],
   ['calculadora.deFatores', 'shared/components/calculadora/calculadora.ts'],
   ['calculadora.deNumeros', 'shared/components/calculadora/calculadora.ts'],

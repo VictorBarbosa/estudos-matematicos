@@ -31,6 +31,7 @@
   "calculadora": {
     "aoMenosDois": "Entrez au moins deux nombres.",
     "basica": "Simple",
+    "camposTrocados": "En échangeant les champs, il y a une paire entière : {a} et {b} donnent le produit {produto} et la somme {soma}. Dans x² + bx + c, le produit est c — le terme sans x.",
     "cientifica": "Scientifique",
     "deFatores": "Produit {produto}, somme {soma}",
     "deNumeros": "{operacao} de {numeros}",

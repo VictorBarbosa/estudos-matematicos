@@ -509,6 +509,11 @@ export interface ParDeFatores {
 }
 
 /** Uma linha da busca: o par de divisores tentado e a soma que ele dá. */
+/** O par que serve com os campos trocados, com o produto e a soma dele. */
+export interface TrocaDeFatores extends ParDeFatores {
+  readonly produto: number;
+  readonly soma: number;
+}
 export interface TentativaDeFator {
   readonly a: number;
   readonly b: number;
@@ -537,6 +542,16 @@ export interface ContaDeFatores {
    */
   readonly parExato: readonly string[];
   /**
+   * O par inteiro que existiria se produto e soma estivessem trocados.
+   *
+   * Quem escreve `x² - 25x + 136` tem 25 na frente e 136 atrás, e digita nessa
+   * ordem — mas o produto é 136 e a soma é 25. Sem par inteiro, a tela dizia
+   * só «nenhum par serve» e dois decimais de doze casas, deixando a pessoa
+   * convencida de que a conta estava errada. É `null` quando o par existe, ou
+   * quando trocar também não resolve.
+   */
+  readonly trocados: TrocaDeFatores | null;
+  /**
    * As raízes de `x² + Sx + P`, em ordem crescente.
    *
    * Elas são os OPOSTOS do par, e é aqui que mora a confusão que isto resolve:
@@ -555,6 +570,7 @@ const FATORES_VAZIO: ContaDeFatores = {
   tentativas: [],
   truncada: false,
   fatoracao: null,
+  trocados: null,
   parExato: [],
   raizes: [],
   erro: null,
@@ -630,6 +646,7 @@ export function calcularFatores(produtoBruto: string, somaBruta: string): ContaD
     tentativas,
     truncada,
     fatoracao: par === null ? null : escreverFatoracao(soma, produto, par),
+    trocados: par === null ? parSeTrocados(produto, soma) : null,
     parExato: exatos.map(formatarValor),
     // `(x + a)(x + b)` zera em `-a` e `-b`: as raízes são os opostos do par.
     raizes: exatos
@@ -705,6 +722,38 @@ function varrerPares(
 }
 
 /** `x² - 11x + 24 = (x - 3)(x - 8)`. */
+/**
+ * O par inteiro de `x² + Px + S`, isto é, do trinômio com os campos trocados.
+ *
+ * Mesma conta de `calcularFatores`, com os papéis invertidos: o delta passa a
+ * ser `produto² - 4·soma`. A divisão por 2 cai sempre em inteiro, porque a raiz
+ * exata de `P² - 4S` tem a paridade de `P`.
+ */
+function parSeTrocados(produto: number, soma: number): TrocaDeFatores | null {
+  // Trocar campos iguais não troca nada: não há sugestão a fazer.
+  if (produto === soma) {
+    return null;
+  }
+
+  const delta = produto * produto - 4 * soma;
+  if (delta < 0) {
+    return null;
+  }
+
+  const arredondada = Math.round(Math.sqrt(delta));
+  if (arredondada * arredondada !== delta) {
+    return null;
+  }
+
+  // Trocados, o produto passa a ser o que está no campo da soma, e vice-versa.
+  return {
+    a: (produto - arredondada) / 2,
+    b: (produto + arredondada) / 2,
+    produto: soma,
+    soma: produto,
+  };
+}
+
 function escreverFatoracao(soma: number, produto: number, par: ParDeFatores): string {
   const termo = (valor: number, sufixo: string): string =>
     valor === 0 ? '' : ` ${valor < 0 ? '−' : '+'} ${Math.abs(valor)}${sufixo}`;
