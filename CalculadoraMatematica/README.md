@@ -80,7 +80,7 @@ Para escolher direto, ou para ver o que está conectado:
 ```sh
 npm run cap:run -- --list              # os aparelhos e simuladores disponíveis
 npm run cap:run -- --target <id>       # roda num deles, sem perguntar
-npm run cap:run -- --target-name "iPhone de Victor"
+npm run cap:run -- --target-name "meu iPhone"
 ```
 
 Os outros dois atalhos, para quando o Xcode é necessário — assinatura,
@@ -93,6 +93,35 @@ npm run cap:open          # compila, sincroniza e abre o Xcode
 
 No Xcode: escolher o aparelho, ajustar o *Team* em **Signing & Capabilities** e
 apertar ▶. O identificador do aplicativo está em `capacitor.config.ts`.
+
+### A assinatura não entra no repositório
+
+Ao assinar para um aparelho de verdade, o Xcode grava o **Team ID** da conta
+Apple dentro do `project.pbxproj` — sem avisar, num arquivo que ninguém abre
+antes de comitar. O repositório é público e o Team ID identifica a conta, então
+ele mora fora do Git:
+
+```
+ios/local.xcconfig     DEVELOPMENT_TEAM = …   (ignorado pelo Git)
+ios/debug.xcconfig     #include? "local.xcconfig"
+ios/release.xcconfig   #include? "local.xcconfig"
+```
+
+O `?` do `#include?` é o detalhe que faz isso funcionar para outra pessoa: a
+inclusão é opcional, e quem clonar compila para o simulador sem criar arquivo
+nenhum. Para instalar no próprio aparelho, basta escrever o seu Team ID em
+`ios/local.xcconfig`.
+
+E, porque o Xcode pode reescrever o `pbxproj` a qualquer momento, há uma trava:
+
+```sh
+npm run verificar:privacidade   # já embutido no `npm run lint`
+```
+
+Ela varre **o que está versionado** — `git ls-files`, não a pasta — procurando
+Team ID, perfil de provisionamento, caminho absoluto deste Mac, e-mail, chave
+privada, token de serviço e os arquivos que o Xcode gera por usuário. Falha com
+o arquivo e a linha.
 
 > Toda mudança no código web exige um desses comandos antes de rodar no
 > aparelho: o `www/` é copiado para dentro do projeto nativo, e sem a cópia o

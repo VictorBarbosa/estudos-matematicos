@@ -1,6 +1,7 @@
 node_modules
 dist
 www
+/ios/local.xcconfig
 /ios/App/App/public
 /ios/App/Pods
 /ios/App/output

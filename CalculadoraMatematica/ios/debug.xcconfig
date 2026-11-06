@@ -1,1 +1,7 @@
 CAPACITOR_DEBUG = true
+
+// O Team ID da conta Apple não entra no repositório: ele é dado pessoal, e o
+// projeto é público. Fica em `local.xcconfig`, que o .gitignore cobre.
+// O `?` torna a inclusão opcional — quem clonar o projeto compila para o
+// simulador sem ter arquivo nenhum para criar.
+#include? "local.xcconfig"

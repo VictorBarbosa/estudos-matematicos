@@ -11,7 +11,7 @@
     "cap:sync": "ng build && cap sync ios",
     "cap:open": "ng build && cap sync ios && cap open ios",
     "watch": "ng build --watch --configuration development",
-    "lint": "npm run eslint && npm run typecheck:e2e && npm run prettier -- --check",
+    "lint": "npm run verificar:privacidade && npm run eslint && npm run typecheck:e2e && npm run prettier -- --check",
     "lint:fix": "npm run eslint -- --fix && npm run prettier -- --write",
     "eslint": "ng lint --max-warnings 0",
     "prettier": "prettier \"**/*.{ts,html}\"",
@@ -21,7 +21,8 @@
     "test:unit:watch": "ng test --watch",
     "test:e2e": "playwright test",
     "gerar:icones": "node scripts/gerar-icones.mjs",
-    "icones:ios": "npm run gerar:icones && npx @capacitor/assets generate --ios"
+    "icones:ios": "npm run gerar:icones && npx @capacitor/assets generate --ios",
+    "verificar:privacidade": "node scripts/verificar-privacidade.mjs"
   },
   "private": true,
   "dependencies": {

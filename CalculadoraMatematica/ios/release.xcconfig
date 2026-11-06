@@ -1,0 +1,3 @@
+// Existe só para o Release ter onde buscar o Team ID local, pelo mesmo motivo
+// explicado em `debug.xcconfig`. Note que ele NÃO define CAPACITOR_DEBUG.
+#include? "local.xcconfig"
