@@ -1,0 +1,458 @@
+/*
+ * A calculadora é sempre escura, como a do iPhone.
+ *
+ * As cores aqui são literais, e não as variáveis do Ionic: a calculadora do
+ * sistema não muda de cor com o tema, e é dela que o aluno tem a memória —
+ * dígito cinza-escuro, função cinza-claro, operação laranja.
+ */
+/* O vão entre teclas, usado também na conta que limita a altura do teclado. */
+$vao: 0.6rem;
+/* A margem lateral da página, somada dos dois lados. */
+$margem: 2rem;
+
+$fundo: #1c1c1e;
+$digito: #333335;
+$funcao: #a5a5a7;
+$operador: #ff9f0a;
+
+:host {
+  --ion-background-color: #{$fundo};
+
+  /*
+   * A barra do topo acompanha a calculadora.
+   *
+   * O padrão do Ionic é claro, e no meio de uma tela preta ela aparecia como
+   * uma faixa cinza no alto — inclusive sobre a área do entalhe.
+   */
+  ion-toolbar {
+    --background: #{$fundo};
+    --color: #fff;
+    --border-color: transparent;
+  }
+}
+
+/*
+ * A calculadora ocupa a tela, e nada mais.
+ *
+ * `height: 100%` em vez de `min-height`: com o mínimo, o teclado científico
+ * empurrava a última linha para fora e obrigava a rolar — numa calculadora,
+ * rolar para alcançar o «=» é defeito.
+ */
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 0.5rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+  background: $fundo;
+  color: #fff;
+  overflow: hidden;
+}
+
+/*
+ * O visor tem altura própria; quem se ajusta é o teclado.
+ *
+ * Era o contrário — o visor crescia e o teclado tomava o que precisasse —, e
+ * no modo científico, com dez linhas de teclas, o teclado comia o visor
+ * inteiro e ainda transbordava: o resultado sumia da tela.
+ */
+.visor {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  min-height: 5.5rem;
+  padding: 0.5rem 0.25rem;
+  text-align: right;
+}
+
+.legenda,
+.valor {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  /* Corta pela ESQUERDA: o que importa é o fim da conta. */
+  direction: rtl;
+
+  span {
+    direction: ltr;
+    unicode-bidi: embed;
+  }
+}
+
+/*
+ * O corpo da fonte sai do número de caracteres.
+ *
+ * `--digitos` chega do componente, e a conta é a largura disponível dividida
+ * pelo que cada algarismo ocupa — 0,62 em, com folga para a vírgula e o
+ * sinal. O `clamp` põe os dois limites: nunca maior que o tamanho de
+ * descanso, nunca menor que o legível.
+ *
+ * Isto existe porque uma dízima — `0,333333333333`, catorze caracteres —
+ * passava da largura e era cortada pela esquerda: o aluno via o fim do
+ * número e não o começo.
+ */
+@mixin corpo-que-cabe($descanso, $minimo) {
+  font-size: clamp(
+    #{$minimo},
+    calc((100vw - 2.5rem) / (var(--digitos, 1) * 0.62)),
+    #{$descanso}
+  );
+}
+
+.legenda {
+  min-height: 1.2em;
+  color: $funcao;
+  @include corpo-que-cabe(0.95rem, 0.68rem);
+}
+
+.valor {
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  @include corpo-que-cabe(3.25rem, 1.25rem);
+}
+
+/*
+ * O teclado fica com a altura que sobrar, e as linhas a dividem igualmente.
+ *
+ * `min-height: 0` é o que permite ele ENCOLHER: sem isso um item de flex
+ * nunca fica menor que o próprio conteúdo, e as últimas linhas saíam pela
+ * borda de baixo. Preferi isto a fixar a altura da tecla: qualquer altura que
+ * coubesse no iPhone 16 deixaria o científico cortado num iPhone SE.
+ */
+/*
+ * O teclado encosta embaixo, com a altura que as teclas pedem.
+ *
+ * `justify-content: flex-end` junta os blocos no pé da tela, onde o polegar
+ * alcança; o espaço que sobrar fica acima, com o visor.
+ */
+.teclado {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: $vao;
+  min-height: 0;
+}
+
+.teclas {
+  display: grid;
+  gap: $vao;
+  grid-auto-rows: minmax(0, 1fr);
+  min-height: 0;
+
+  button {
+    /*
+     * Redondas enquanto a linha for alta o bastante, e achatadas quando não
+     * for: `max-height: 100%` é o que faz a tecla ceder à linha em vez de
+     * estourá-la.
+     */
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 1;
+    max-height: 100%;
+    align-self: center;
+    border: 0;
+    border-radius: 999px;
+    background: $digito;
+    color: #fff;
+    font: inherit;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &:active {
+      filter: brightness(1.4);
+    }
+
+    &.funcao {
+      background: $funcao;
+      color: #000;
+    }
+
+    &.operador {
+      background: $operador;
+    }
+
+    /* Sozinha na linha, encostada à direita: a linha do apagar. */
+    &.sozinha {
+      grid-column: 4;
+    }
+
+    &.largo {
+      /*
+       * Duas colunas de largura, mas a MESMA altura das outras: a proporção
+       * é (2 colunas + o vão) por uma coluna. Com `aspect-ratio: auto` a
+       * tecla do zero ficava achatada ao lado das redondas.
+       */
+      aspect-ratio: 2.1;
+      grid-column: span 2;
+      justify-content: flex-start;
+      padding-left: 1.9rem;
+      text-align: left;
+    }
+  }
+}
+
+/*
+ * `minmax(0, 1fr)`, e não `1fr`.
+ *
+ * `1fr` é atalho de `minmax(auto, 1fr)`, e esse `auto` impede a coluna de
+ * encolher abaixo do conteúdo. Com `aspect-ratio: 1` na tecla, o conteúdo
+ * passa a ter a largura da ALTURA da linha — numa tela alta, as quatro
+ * colunas pediam mais que a largura do telefone e a dos operadores saía pela
+ * direita. O zero explícito deixa a coluna encolher.
+ */
+.basicas {
+  flex: 5 1 auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  /*
+   * O teto é o tamanho natural do teclado: cinco teclas redondas mais os
+   * quatro vãos. Sem ele, as linhas dividiam TODA a altura livre e cada
+   * tecla — que é redonda, e portanto menor que a linha — ficava boiando no
+   * meio de um vão enorme.
+   */
+  --lado: calc((100vw - #{$margem} - 3 * #{$vao}) / 4);
+  /* Seis linhas: a do apagar mais as cinco de sempre. */
+  max-height: calc(6 * var(--lado) + 5 * #{$vao});
+}
+
+/*
+ * A ala científica: cinco linhas de três teclas, mais baixas que as de baixo.
+ *
+ * O `flex: 3` contra o `flex: 5` das básicas é o que dá a elas pouco mais da
+ * metade da altura por linha — as funções são secundárias, e os dígitos é que
+ * precisam do alvo grande.
+ */
+.cientificas {
+  flex: 3 1 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* Mesmo teto, para teclas de três colunas e proporção 2,4. */
+  --lado: calc((100vw - #{$margem} - 2 * #{$vao}) / 3 / 2.4);
+  max-height: calc(5 * var(--lado) + 4 * #{$vao});
+
+  button {
+    aspect-ratio: 2.4;
+    font-size: 1.05rem;
+  }
+}
+
+/*
+ * ---- As duas abas de campo: MMC/MDC e fatorar ----
+ *
+ * Aqui o visor não cresce: o resultado fica logo abaixo do cabeçalho, junto
+ * dos campos que o produziram. Empurrá-lo para o meio da tela, como no
+ * teclado, o deixaria solto no vazio.
+ */
+.com-campos .visor {
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  min-height: auto;
+}
+
+.campos {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-bottom: 1rem;
+  /* Aqui rolar faz sentido: a divisão simultânea pode ter muitas linhas. */
+  overflow-y: auto;
+}
+
+.escolha {
+  display: flex;
+  gap: 0.6rem;
+
+  button {
+    flex: 1;
+    padding: 0.7rem;
+    border: 0;
+    border-radius: 999px;
+    background: $digito;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+
+    &.ativo {
+      background: $operador;
+      color: #000;
+    }
+  }
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  /*
+   * Um campo de texto tem largura natural de vinte caracteres, e um item de
+   * grade não encolhe abaixo do próprio conteúdo sem isto: o segundo campo
+   * saía pela direita da tela.
+   */
+  min-width: 0;
+
+  /* O campo e a tecla que lhe falta, lado a lado. */
+  .com-tecla {
+    display: flex;
+    gap: 0.4rem;
+    min-width: 0;
+  }
+
+  .tecla-do-campo {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    /* A vírgula assenta na linha de base; sem isto ela fica caída no canto. */
+    line-height: 0;
+    border: 0;
+    border-radius: 0.8rem;
+    background: $funcao;
+    color: #000;
+    font: inherit;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    &:active {
+      filter: brightness(1.2);
+    }
+  }
+
+  input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid #48484a;
+    border-radius: 0.8rem;
+    background: #000;
+    color: #fff;
+    font: inherit;
+    font-size: 1.2rem;
+  }
+}
+
+.dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.rotulo {
+  color: $funcao;
+  font-size: 0.8rem;
+}
+
+.explicacao {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.decomposicao,
+.pares {
+  width: 100%;
+  border-collapse: collapse;
+  color: #d1d1d6;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+
+  caption {
+    caption-side: top;
+    padding-bottom: 0.3rem;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 0.15rem 0.4rem;
+    text-align: right;
+  }
+
+  th {
+    color: #8e8e93;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  .divisor,
+  .soma {
+    border-left: 1px solid #48484a;
+  }
+
+  .divisor {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .chegada,
+  .corte {
+    color: #8e8e93;
+  }
+
+  .corte td {
+    text-align: left;
+  }
+
+  /* O par que serviu é a resposta, e salta da lista das tentativas. */
+  .escolhido {
+    color: $operador;
+    font-weight: 600;
+  }
+}
+
+/* No MDC, só contam as linhas em que o divisor coube em todos. */
+.decomposicao.mdc .comum .divisor {
+  color: $operador;
+}
+
+/* O caminho da conversão, passo a passo. */
+.passos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .descricao {
+    color: $funcao;
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .conta {
+    font-size: 1.05rem;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Com quatro teclas ao lado, o campo fica estreito: elas encolhem. */
+.campo .com-tecla .tecla-do-campo {
+  width: auto;
+  min-width: 2.4rem;
+  flex: 1 1 0;
+  max-width: 3rem;
+}
+
+.montagem {
+  margin: 0;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* As raízes andam junto da fatoração, mas são outra resposta: outra cor. */
+.raizes {
+  margin: 0;
+  color: $operador;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}

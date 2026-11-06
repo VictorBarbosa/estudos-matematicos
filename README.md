@@ -469,6 +469,19 @@ de ser uma escolha escrita, não um esquecimento. E uma trava global cobre o res
 fórmula, o enunciado precisa trazer os números da conta, ou o exercício fica impossível em vez
 de difícil.
 
+### A mesma calculadora no iPhone
+
+`CalculadoraMatematica/` é um segundo projeto Angular, dentro deste repositório, que empacota
+a calculadora com Capacitor e Ionic para rodar como aplicativo nativo no iPhone. Ele não entra
+no build do site: a compilação e os testes daqui olham só para `src/`, e o Pages publica
+apenas `dist/`.
+
+O núcleo da conta — `avaliarExpressao`, MMC e MDC, a fatoração por produto e soma — é **cópia
+literal** dos arquivos de `src/app/core/`, não um segundo motor. A cópia é o preço de não
+publicar um pacote npm para dois projetos de um autor só; o README de lá lista arquivo por
+arquivo o que veio daqui, para que a recópia continue sendo um `cp`. O que é só do telefone —
+o menu lateral, o teclado que não fecha, o modo **Decimal em fração** — vive lá e nunca aqui.
+
 ## Convenções
 
 - Standalone em tudo, `ChangeDetectionStrategy.OnPush`.

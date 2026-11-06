@@ -1,0 +1,32 @@
+<ion-app>
+  <ion-split-pane contentId="conteudo" when="md">
+    <ion-menu contentId="conteudo" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Calculadora</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list lines="none">
+          @for (item of itens; track item.modo) {
+            <ion-menu-toggle [autoHide]="false">
+              <ion-item
+                button
+                [class.selecionado]="modos.modo() === item.modo"
+                (click)="modos.definir(item.modo)"
+              >
+                <ion-label>
+                  <h2>{{ item.titulo }}</h2>
+                  <p>{{ item.descricao }}</p>
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          }
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="conteudo"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

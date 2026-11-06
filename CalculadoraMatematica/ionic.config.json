@@ -1,0 +1,7 @@
+{
+  "name": "CalculadoraMatematica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

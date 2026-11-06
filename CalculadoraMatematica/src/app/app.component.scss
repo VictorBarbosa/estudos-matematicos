@@ -1,0 +1,16 @@
+/* O modo em uso fica marcado, que é o único estado que o menu tem. */
+ion-item.selecionado {
+  --color: var(--ion-color-primary);
+
+  h2 {
+    font-weight: 600;
+  }
+}
+
+ion-item h2 {
+  font-size: 1rem;
+}
+
+ion-item p {
+  font-size: 0.8rem;
+}
