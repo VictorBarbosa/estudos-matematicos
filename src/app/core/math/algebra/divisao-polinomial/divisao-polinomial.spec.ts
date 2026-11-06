@@ -68,6 +68,34 @@ describe('teorema do resto', () => {
     }
   });
 
+  it('a conta de P(a) aparece com os números, não só o resultado', () => {
+    // 2x³ - x² + 3x - 2 em x = 3. «R = P(3) = 52» é verdade e não ensina
+    // nada: quem lê a resolução precisa ver a substituição e a aritmética.
+    const { passos } = restoPorBinomioComPassos(Polinomio.de(-2, 3, -1, 2), 3);
+
+    expect(passos.map((passo) => passo.tex)).toEqual([
+      'P(x) = Q(x)\\left(x - 3\\right) + R',
+      'P(3) = Q(3) \\cdot 0 + R = R',
+      'P(3) = 2(3)^{3} - (3)^{2} + 3(3) - 2',
+      'R = 54 - 9 + 9 - 2 = 52',
+    ]);
+  });
+
+  it('o número vai entre parênteses, senão a potência de negativo troca de sinal', () => {
+    // Sem parênteses, `-2^{3}` seria -(2³); o certo é (-2)³.
+    const { passos } = restoPorBinomioComPassos(Polinomio.de(1, 0, 0, 1), -2);
+
+    expect(passos.at(-2)?.tex).toBe('P(-2) = (-2)^{3} + 1');
+    expect(passos.at(-1)?.tex).toBe('R = -8 + 1 = -7');
+  });
+
+  it('com um termo só não há conta a mostrar, e a linha única volta', () => {
+    const { passos } = restoPorBinomioComPassos(Polinomio.de(7), 4);
+
+    expect(passos).toHaveLength(3);
+    expect(passos.at(-1)?.tex).toBe('R = P(4) = 7');
+  });
+
   it('resto zero é anunciado como raiz', () => {
     const { passos } = restoPorBinomioComPassos(Polinomio.de(-6, 11, -6, 1), 1);
     expect(passos.at(-1)?.nota).toContain('raiz');

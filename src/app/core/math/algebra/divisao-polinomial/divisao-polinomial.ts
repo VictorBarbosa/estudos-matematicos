@@ -98,16 +98,101 @@ export function restoPorBinomioComPassos(p: Polinomio, a: number): Resolucao<num
         tex: `P(${formatar(a)}) = Q(${formatar(a)}) \\cdot 0 + R = R`,
         nota: 'O quociente desaparece, não importa qual seja.',
       },
+      ...contaDoValorNumerico(p, a, resto, binomio),
+    ],
+  };
+}
+
+/**
+ * Os passos que mostram a conta de `P(a)`, e não só o resultado dela.
+ *
+ * «R = P(3) = 52» é verdade e não ensina nada: entre a fórmula e o número
+ * faltava a substituição e a aritmética, que é justamente o que o aluno tem de
+ * fazer com a caneta. Com um termo só não há conta a mostrar, e aí a linha
+ * única volta a ser a melhor.
+ */
+function contaDoValorNumerico(
+  p: Polinomio,
+  a: number,
+  resto: number,
+  binomio: string,
+): readonly Passo[] {
+  const nota =
+    Math.abs(resto) < 1e-12
+      ? `Resto zero: ${binomio} é fator, e ${formatarEmTexto(a)} é raiz.`
+      : undefined;
+
+  const termos = p.coeficientes.filter((coeficiente) => coeficiente !== 0).length;
+  if (termos < 2) {
+    return [
       {
         descricao: 'Logo, basta calcular o valor numérico do polinômio nesse ponto.',
         tex: `R = P(${formatar(a)}) = ${formatar(resto)}`,
-        nota:
-          Math.abs(resto) < 1e-12
-            ? `Resto zero: ${binomio} é fator, e ${formatarEmTexto(a)} é raiz.`
-            : undefined,
+        nota,
       },
-    ],
-  };
+    ];
+  }
+
+  return [
+    {
+      descricao: `Então o resto é o valor de P em ${formatar(a)}: trocamos x pelo número em cada termo.`,
+      tex: `P(${formatar(a)}) = ${comXTrocado(p, a)}`,
+    },
+    {
+      descricao: 'Resolvemos as potências e os produtos, e somamos.',
+      tex: `R = ${parcelas(p, a)} = ${formatar(resto)}`,
+      nota,
+    },
+  ];
+}
+
+/**
+ * `2(3)^{3} - (3)^{2} + 3(3) - 2`: o polinômio com x já trocado pelo número.
+ *
+ * Segue as convenções de `paraTex` — coeficiente 1 some diante da variável, o
+ * sinal do primeiro termo cola no corpo —, e o número vai sempre entre
+ * parênteses, porque com `a` negativo `(-2)^{2}` e `-2^{2}` são coisas
+ * diferentes.
+ */
+function comXTrocado(p: Polinomio, a: number): string {
+  return escreverTermos(p, (coeficiente, grau) => {
+    const absoluto = Math.abs(coeficiente);
+    const numerica = absoluto === 1 && grau > 0 ? '' : formatar(absoluto);
+    const potencia =
+      grau === 0 ? '' : grau === 1 ? `(${formatar(a)})` : `(${formatar(a)})^{${grau}}`;
+    return { sinal: coeficiente, corpo: `${numerica}${potencia}` };
+  });
+}
+
+/** `54 - 9 + 9 - 2`: cada termo já calculado, antes da soma final. */
+function parcelas(p: Polinomio, a: number): string {
+  return escreverTermos(p, (coeficiente, grau) => {
+    const valor = coeficiente * a ** grau;
+    return { sinal: valor, corpo: formatar(Math.abs(valor)) };
+  });
+}
+
+/** Percorre os termos do maior grau ao menor, juntando-os com os sinais. */
+function escreverTermos(
+  p: Polinomio,
+  termo: (coeficiente: number, grau: number) => { sinal: number; corpo: string },
+): string {
+  let escrita = '';
+
+  for (let grau = p.grau; grau >= 0; grau--) {
+    const coeficiente = p.coeficiente(grau);
+    if (coeficiente === 0) {
+      continue;
+    }
+
+    const { sinal, corpo } = termo(coeficiente, grau);
+    escrita =
+      escrita === ''
+        ? `${sinal < 0 ? '-' : ''}${corpo}`
+        : `${escrita}${sinal < 0 ? ' - ' : ' + '}${corpo}`;
+  }
+
+  return escrita === '' ? '0' : escrita;
 }
 
 /**
