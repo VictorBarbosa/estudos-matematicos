@@ -1,8 +1,23 @@
 import { Injectable, computed, effect, signal } from '@angular/core';
 import { ModoCalculadora } from '@core/calculadora/models/calculadora.model';
 
+/**
+ * Os modos do aplicativo.
+ *
+ * `decimal-fracao` é só daqui, e por isso o tipo mora neste arquivo e não no
+ * modelo: aquele é cópia literal do site, e recopiá-lo não pode apagar o que
+ * é nosso.
+ */
+export type Modo = ModoCalculadora | 'decimal-fracao';
+
 const CHAVE = 'calculadora-matematica.modo.v1';
-const MODOS: readonly ModoCalculadora[] = ['basica', 'cientifica', 'mmc-mdc', 'soma-produto'];
+const MODOS: readonly Modo[] = [
+  'basica',
+  'cientifica',
+  'mmc-mdc',
+  'soma-produto',
+  'decimal-fracao',
+];
 
 /**
  * O modo escolhido no menu.
@@ -13,7 +28,7 @@ const MODOS: readonly ModoCalculadora[] = ['basica', 'cientifica', 'mmc-mdc', 's
  */
 @Injectable({ providedIn: 'root' })
 export class ModoService {
-  private readonly escolhido = signal<ModoCalculadora>(carregar());
+  private readonly escolhido = signal<Modo>(carregar());
 
   readonly modo = computed(() => this.escolhido());
 
@@ -21,21 +36,21 @@ export class ModoService {
     effect(() => salvar(this.escolhido()));
   }
 
-  definir(modo: ModoCalculadora): void {
+  definir(modo: Modo): void {
     this.escolhido.set(modo);
   }
 }
 
-function carregar(): ModoCalculadora {
+function carregar(): Modo {
   try {
-    const bruto = localStorage.getItem(CHAVE) as ModoCalculadora | null;
+    const bruto = localStorage.getItem(CHAVE) as Modo | null;
     return bruto !== null && MODOS.includes(bruto) ? bruto : 'basica';
   } catch {
     return 'basica';
   }
 }
 
-function salvar(modo: ModoCalculadora): void {
+function salvar(modo: Modo): void {
   try {
     localStorage.setItem(CHAVE, modo);
   } catch {

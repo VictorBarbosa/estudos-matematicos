@@ -26,12 +26,22 @@ export interface Tecla {
   readonly largo?: boolean;
   /** Nome falado pelo leitor de tela, quando o rótulo é um símbolo. */
   readonly nome?: string;
+  /** Ocupa a última coluna de uma linha só dela. */
+  readonly sozinha?: boolean;
 }
 
 const inserir = (texto: string): Acao => ({ tipo: 'inserir', texto });
 
-/** O teclado de sempre: quatro colunas, operações à direita. */
+/**
+ * O teclado de sempre: quatro colunas, operações à direita.
+ *
+ * O apagar abre a lista, sozinho na primeira linha e na coluna da direita —
+ * acima do `÷`, onde o polegar já está. A calculadora da Apple não tem essa
+ * tecla (ela apaga arrastando o dedo sobre o visor, o que ninguém descobre),
+ * e sem ela um dígito errado obriga a recomeçar a conta.
+ */
 export const BASICAS: readonly Tecla[] = [
+  { rotulo: '⌫', estilo: 'funcao', acao: { tipo: 'apagar' }, nome: 'apagar um dígito', sozinha: true },
   { rotulo: 'AC', estilo: 'funcao', acao: { tipo: 'limpar' }, nome: 'limpar' },
   { rotulo: '±', estilo: 'funcao', acao: { tipo: 'sinal' }, nome: 'trocar o sinal' },
   { rotulo: '%', estilo: 'funcao', acao: { tipo: 'porcento' }, nome: 'por cento' },

@@ -204,6 +204,82 @@
           </p>
         }
       </div>
+    } @else if (emDecimal()) {
+      <div class="campos">
+        <p class="rotulo explicacao">
+          Escreva o decimal e veja a fração exata. Para dízima periódica, ponha o período entre
+          parênteses: <strong>0,(3)</strong> é 0,333… e <strong>0,1(6)</strong> é 0,1666…
+        </p>
+
+        <label class="campo">
+          <span class="rotulo">Decimal</span>
+          <div class="com-tecla">
+            <input
+              #entradaDecimal
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="0,1(6)"
+              [value]="decimal()"
+              (input)="definirDecimal($any($event.target).value)"
+            />
+            <button
+              type="button"
+              class="tecla-do-campo"
+              tabindex="-1"
+              aria-label="vírgula"
+              (pointerdown)="$event.preventDefault()"
+              (click)="acrescentarAoDecimal(',', entradaDecimal)"
+            >
+              ,
+            </button>
+            <button
+              type="button"
+              class="tecla-do-campo"
+              tabindex="-1"
+              aria-label="abrir o período"
+              (pointerdown)="$event.preventDefault()"
+              (click)="acrescentarAoDecimal('(', entradaDecimal)"
+            >
+              (
+            </button>
+            <button
+              type="button"
+              class="tecla-do-campo"
+              tabindex="-1"
+              aria-label="fechar o período"
+              (pointerdown)="$event.preventDefault()"
+              (click)="acrescentarAoDecimal(')', entradaDecimal)"
+            >
+              )
+            </button>
+            <button
+              type="button"
+              class="tecla-do-campo"
+              tabindex="-1"
+              aria-label="trocar o sinal"
+              (pointerdown)="$event.preventDefault()"
+              (click)="alternarSinalDoDecimal(entradaDecimal)"
+            >
+              ±
+            </button>
+          </div>
+        </label>
+
+        <!-- O caminho, e não só a resposta: na dízima é a subtração que
+             mata a cauda infinita, e é isso que se aprende. -->
+        @if (conversao().passos.length > 0) {
+          <ol class="passos">
+            @for (passo of conversao().passos; track $index) {
+              <li>
+                <span class="descricao">{{ passo.descricao }}</span>
+                <span class="conta">{{ passo.conta }}</span>
+              </li>
+            }
+          </ol>
+        }
+      </div>
     } @else {
       <div class="teclado">
         @if (modo() === 'cientifica') {
@@ -227,6 +303,7 @@
               type="button"
               [class]="tecla.estilo"
               [class.largo]="tecla.largo"
+              [class.sozinha]="tecla.sozinha"
               [attr.aria-label]="tecla.nome ?? null"
               (click)="pressionar(tecla.acao)"
             >

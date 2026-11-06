@@ -30,7 +30,8 @@ import {
   limpar,
   porcentagem,
 } from '@core/calculadora/models/calculadora.model';
-import { ModoService } from './modo.service';
+import { ContaDeDecimal, decimalEmFracao } from './decimal-em-fracao';
+import { Modo, ModoService } from './modo.service';
 import { Acao, BASICAS, CIENTIFICAS, Tecla, rotuloLimpar } from './teclas';
 
 const CHAVE = 'calculadora-matematica.estado.v1';
@@ -48,11 +49,12 @@ interface Preferencias {
 const PADRAO: Preferencias = { angulo: 'rad', operacao: 'mmc' };
 
 /** Como cada modo se chama no menu e no título. */
-export const NOME_DO_MODO: Readonly<Record<ModoCalculadora, string>> = {
+export const NOME_DO_MODO: Readonly<Record<Modo, string>> = {
   basica: 'Básica',
   cientifica: 'Científica',
   'mmc-mdc': 'MMC e MDC',
   'soma-produto': 'Fatorar',
+  'decimal-fracao': 'Decimal em fração',
 };
 
 /**
@@ -87,16 +89,22 @@ export class CalculadoraPage {
   /** O produto e a soma procurados na aba de fatorar. */
   protected readonly produto = signal('');
   protected readonly soma = signal('');
+  /** O decimal a converter em fração. */
+  protected readonly decimal = signal('');
 
   protected readonly basicas = BASICAS;
   protected readonly cientificas = CIENTIFICAS;
 
   protected readonly emInteiros = computed(() => this.modo() === 'mmc-mdc');
   protected readonly emFatores = computed(() => this.modo() === 'soma-produto');
-  protected readonly emTeclado = computed(() => !this.emInteiros() && !this.emFatores());
+  protected readonly emDecimal = computed(() => this.modo() === 'decimal-fracao');
+  protected readonly emTeclado = computed(
+    () => !this.emInteiros() && !this.emFatores() && !this.emDecimal(),
+  );
 
   protected readonly conta = computed(() => calcularInteiros(this.numeros(), this.operacao()));
   protected readonly fatores = computed(() => calcularFatores(this.produto(), this.soma()));
+  protected readonly conversao = computed<ContaDeDecimal>(() => decimalEmFracao(this.decimal()));
 
   protected readonly nomeDaOperacao = computed(() =>
     this.operacao() === 'mmc' ? 'MMC' : 'MDC',
@@ -104,6 +112,14 @@ export class CalculadoraPage {
 
   /** A linha pequena: a conta que gerou o resultado, ou o aviso de erro. */
   protected readonly legenda = computed(() => {
+    if (this.emDecimal()) {
+      const { decimal, erro } = this.conversao();
+      if (erro !== null) {
+        return traduzirErro(erro.chave, erro.valores);
+      }
+      return decimal === null ? 'Escreva um decimal, como 0,375 ou 0,1(6).' : `${decimal} =`;
+    }
+
     if (this.emFatores()) {
       const { produto, soma, par, erro } = this.fatores();
       if (erro !== null) {
@@ -136,6 +152,11 @@ export class CalculadoraPage {
 
   /** A linha grande: o resultado, ou a conta sendo escrita. */
   protected readonly visor = computed(() => {
+    if (this.emDecimal()) {
+      const { fracao } = this.conversao();
+      return fracao === null ? '—' : `${fracao.numerador}/${fracao.denominador}`;
+    }
+
     if (this.emFatores()) {
       const { parExato } = this.fatores();
       return parExato.length === 2 ? `${parExato[0]} e ${parExato[1]}` : '—';
@@ -190,6 +211,25 @@ export class CalculadoraPage {
 
   protected definirSoma(valor: string): void {
     this.soma.set(valor);
+  }
+
+  protected definirDecimal(valor: string): void {
+    this.decimal.set(valor);
+  }
+
+  /** Acrescenta ao decimal o caractere que o teclado numérico não tem. */
+  protected acrescentarAoDecimal(texto: string, entrada: HTMLInputElement): void {
+    this.decimal.update((atual) => atual + texto);
+    this.devolverOCursor(entrada);
+  }
+
+  /** Troca o sinal do decimal. */
+  protected alternarSinalDoDecimal(entrada: HTMLInputElement): void {
+    this.decimal.update((atual) => {
+      const limpo = atual.trim();
+      return limpo.startsWith('-') ? limpo.slice(1) : `-${limpo}`;
+    });
+    this.devolverOCursor(entrada);
   }
 
   /*
@@ -276,6 +316,9 @@ const ERROS: Readonly<Record<string, string>> = {
   'calculadora.passaDoExato': 'O resultado passa do que dá para calcular exato.',
   'calculadora.limiteFatores': 'Use números até 1 000 000.',
   'calculadora.semParReal': 'Não existem dois números reais com esse produto e essa soma.',
+  'decimal.naoEntendi': 'Não consegui ler esse decimal.',
+  'decimal.useParenteses': 'Escreva o período entre parênteses: 0,(3) em vez de 0,333…',
+  'decimal.algarismosDemais': 'Algarismos demais para a conta sair exata.',
 };
 
 function traduzirErro(chave: string, valores?: Readonly<Record<string, string | number>>): string {

@@ -13,12 +13,11 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/angular';
-import { ModoCalculadora } from '@core/calculadora/models/calculadora.model';
-import { ModoService } from './calculadora/modo.service';
+import { Modo, ModoService } from './calculadora/modo.service';
 
 /** Os quatro modos, na ordem em que o menu os mostra. */
 interface ItemDoMenu {
-  readonly modo: ModoCalculadora;
+  readonly modo: Modo;
   readonly titulo: string;
   readonly descricao: string;
 }
@@ -28,6 +27,11 @@ const ITENS: readonly ItemDoMenu[] = [
   { modo: 'cientifica', titulo: 'Científica', descricao: 'Seno, logaritmo, potência e raiz' },
   { modo: 'mmc-mdc', titulo: 'MMC e MDC', descricao: 'Com a divisão simultânea, passo a passo' },
   { modo: 'soma-produto', titulo: 'Fatorar', descricao: 'Dois números por produto e soma' },
+  {
+    modo: 'decimal-fracao',
+    titulo: 'Decimal em fração',
+    descricao: 'Inclusive dízima periódica, como 0,1(6)',
+  },
 ];
 
 /**

@@ -55,8 +55,9 @@ describe('CalculadoraPage', () => {
 
   beforeEach(montar);
 
-  it('abre na básica, com as dezenove teclas', () => {
-    expect(fixture.nativeElement.querySelectorAll('.basicas button').length).toBe(19);
+  it('abre na básica, com as vinte teclas', () => {
+    // Dezenove da calculadora da Apple, mais o apagar que ela não tem.
+    expect(fixture.nativeElement.querySelectorAll('.basicas button').length).toBe(20);
     expect(fixture.nativeElement.querySelector('.cientificas')).toBeNull();
     expect(visor()).toBe('0');
   });
@@ -83,7 +84,7 @@ describe('CalculadoraPage', () => {
     fixture.detectChanges();
 
     expect(fixture.nativeElement.querySelectorAll('.cientificas button').length).toBe(15);
-    expect(fixture.nativeElement.querySelectorAll('.basicas button').length).toBe(19);
+    expect(fixture.nativeElement.querySelectorAll('.basicas button').length).toBe(20);
   });
 
   it('a tecla de ângulo alterna entre RAD e DEG', async () => {
@@ -220,6 +221,73 @@ describe('CalculadoraPage', () => {
     for (const tecla of fixture.nativeElement.querySelectorAll('.tecla-do-campo')) {
       expect((tecla as HTMLElement).getAttribute('tabindex')).toBe('-1');
     }
+  });
+
+  it('o apagar tira um dígito de cada vez', async () => {
+    await apertar('1', '2', '3');
+    expect(visor()).toBe('123');
+
+    await apertar('⌫');
+    expect(visor()).toBe('12');
+
+    await apertar('⌫', '⌫');
+    expect(visor()).toBe('0');
+  });
+
+  it('o apagar não quebra com o visor vazio', async () => {
+    await apertar('⌫', '⌫');
+    expect(visor()).toBe('0');
+  });
+
+  it('o decimal em fração converte o que termina e a dízima', async () => {
+    modos.definir('decimal-fracao');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(0, '0,375');
+    expect(visor()).toBe('3/8');
+    expect(legenda()).toBe('0,375 =');
+
+    await escrever(0, '0,1(6)');
+    expect(visor()).toBe('1/6');
+    expect(texto()).toContain('90x = 15');
+  });
+
+  it('as teclas do decimal escrevem o que o teclado numérico não tem', async () => {
+    modos.definir('decimal-fracao');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(0, '0');
+    await tocar('vírgula');
+    await tocar('abrir o período');
+    await escrever(0, '0,(3');
+    await tocar('fechar o período');
+
+    const campo = fixture.nativeElement.querySelector('.campo input') as HTMLInputElement;
+    expect(campo.value).toBe('0,(3)');
+    expect(visor()).toBe('1/3');
+  });
+
+  it('o sinal do decimal também tem tecla', async () => {
+    modos.definir('decimal-fracao');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(0, '0,375');
+    await tocar('trocar o sinal');
+
+    expect(visor()).toBe('-3/8');
+  });
+
+  it('o recado das reticências ensina a notação', async () => {
+    modos.definir('decimal-fracao');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(0, '0,333...');
+
+    expect(legenda()).toContain('entre parênteses');
   });
 
   it('os recados de erro saem em português', async () => {

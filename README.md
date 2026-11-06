@@ -12,11 +12,23 @@ com abas, uma página inteira com os modos num menu lateral.
 | **Científica** | Seno, cosseno, tangente, logaritmos, potências, raiz, π e *e* |
 | **MMC e MDC** | Dois ou mais inteiros, com a divisão simultânea passo a passo |
 | **Fatorar** | Dois números por produto e soma, com a fatoração e as raízes |
+| **Decimal em fração** | `0,375` vira `3/8`; `0,1(6)` vira `1/6`, com a conta à vista |
 
-Os dois últimos usam campo de texto com o teclado numérico do iPhone, que não
-traz vírgula nem sinal de menos. Cada campo ganha ao lado a tecla que lhe
-falta: `,` para separar os inteiros do MMC, `±` para o produto ou a soma
-negativos do Fatorar.
+Os três últimos usam campo de texto com o teclado numérico do iPhone, que não
+traz vírgula, parênteses nem sinal de menos. Cada campo ganha ao lado a tecla
+que lhe falta: `,` para separar os inteiros do MMC, `±` para o produto ou a
+soma negativos do Fatorar, e `,` `(` `)` `±` para escrever a dízima. Tocar
+nessas teclas não fecha o teclado do sistema — o `pointerdown` é barrado, para
+o campo não perder o foco.
+
+O teclado tem um **apagar** (⌫) que a calculadora da Apple não tem: lá se
+apaga arrastando o dedo sobre o visor, gesto que ninguém descobre, e sem ele
+um dígito errado obriga a refazer a conta.
+
+A dízima periódica se escreve com o período entre parênteses — `0,(3)`,
+`1,2(45)` —, que é a notação da escola e a única sem ambiguidade: em `0,1212…`
+não dá para saber se repete `12` ou `2`. A conversão mostra a conta inteira,
+inclusive a subtração que elimina a cauda infinita.
 
 O visor mostra a **expressão inteira**, e não um número solto: num aplicativo
 que nasceu de um site que ensina a ordem das operações, esconder que
