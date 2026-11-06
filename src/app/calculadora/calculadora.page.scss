@@ -76,21 +76,37 @@ $operador: #ff9f0a;
   }
 }
 
+/*
+ * O corpo da fonte sai do número de caracteres.
+ *
+ * `--digitos` chega do componente, e a conta é a largura disponível dividida
+ * pelo que cada algarismo ocupa — 0,62 em, com folga para a vírgula e o
+ * sinal. O `clamp` põe os dois limites: nunca maior que o tamanho de
+ * descanso, nunca menor que o legível.
+ *
+ * Isto existe porque uma dízima — `0,333333333333`, catorze caracteres —
+ * passava da largura e era cortada pela esquerda: o aluno via o fim do
+ * número e não o começo.
+ */
+@mixin corpo-que-cabe($descanso, $minimo) {
+  font-size: clamp(
+    #{$minimo},
+    calc((100vw - 2.5rem) / (var(--digitos, 1) * 0.62)),
+    #{$descanso}
+  );
+}
+
 .legenda {
   min-height: 1.2em;
   color: $funcao;
-  font-size: 0.95rem;
+  @include corpo-que-cabe(0.95rem, 0.68rem);
 }
 
 .valor {
-  font-size: 3.25rem;
   font-weight: 300;
   font-variant-numeric: tabular-nums;
   line-height: 1.1;
-
-  &.apertado {
-    font-size: 2.25rem;
-  }
+  @include corpo-que-cabe(3.25rem, 1.25rem);
 }
 
 /*
@@ -122,6 +138,7 @@ $operador: #ff9f0a;
      * estourá-la.
      */
     width: 100%;
+    min-width: 0;
     aspect-ratio: 1;
     max-height: 100%;
     align-self: center;
@@ -147,7 +164,12 @@ $operador: #ff9f0a;
     }
 
     &.largo {
-      aspect-ratio: auto;
+      /*
+       * Duas colunas de largura, mas a MESMA altura das outras: a proporção
+       * é (2 colunas + o vão) por uma coluna. Com `aspect-ratio: auto` a
+       * tecla do zero ficava achatada ao lado das redondas.
+       */
+      aspect-ratio: 2.1;
       grid-column: span 2;
       justify-content: flex-start;
       padding-left: 1.9rem;
@@ -156,9 +178,18 @@ $operador: #ff9f0a;
   }
 }
 
+/*
+ * `minmax(0, 1fr)`, e não `1fr`.
+ *
+ * `1fr` é atalho de `minmax(auto, 1fr)`, e esse `auto` impede a coluna de
+ * encolher abaixo do conteúdo. Com `aspect-ratio: 1` na tecla, o conteúdo
+ * passa a ter a largura da ALTURA da linha — numa tela alta, as quatro
+ * colunas pediam mais que a largura do telefone e a dos operadores saía pela
+ * direita. O zero explícito deixa a coluna encolher.
+ */
 .basicas {
   flex: 5 1 0;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 /*
@@ -170,7 +201,7 @@ $operador: #ff9f0a;
  */
 .cientificas {
   flex: 3 1 0;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   button {
     aspect-ratio: 2.4;

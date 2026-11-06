@@ -152,8 +152,17 @@ export class CalculadoraPage {
 
   protected readonly rotuloLimpar = computed(() => rotuloLimpar(this.estado()));
 
-  /** O visor encolhe quando a conta cresce, para não transbordar. */
-  protected readonly visorApertado = computed(() => this.visor().length > 14);
+  /**
+   * Quantos caracteres o visor mostra.
+   *
+   * Vai para o CSS como `--digitos`, e é de lá que sai o tamanho da fonte: um
+   * degrau só — «apertado» acima de catorze — resolvia `0,3` e falhava numa
+   * dízima como `0,333333333333`, que sumia pela esquerda da tela.
+   */
+  protected readonly digitosDoVisor = computed(() => Math.max(1, this.visor().length));
+
+  /** A legenda tem o mesmo problema, com a conta inteira escrita nela. */
+  protected readonly digitosDaLegenda = computed(() => Math.max(1, this.legenda().length));
 
   constructor() {
     effect(() => salvar(this.preferencias()));

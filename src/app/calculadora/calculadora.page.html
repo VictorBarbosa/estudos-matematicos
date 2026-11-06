@@ -13,8 +13,8 @@
       <!-- O texto vai dentro de um `span`: o bloco é rtl para que uma conta
            longa seja cortada pela ESQUERDA, onde está o que já passou, e o
            `span` é ltr para que a conta não seja lida de trás para a frente. -->
-      <p class="legenda"><span>{{ legenda() }}</span></p>
-      <p class="valor" [class.apertado]="visorApertado()"><span>{{ visor() }}</span></p>
+      <p class="legenda" [style.--digitos]="digitosDaLegenda()"><span>{{ legenda() }}</span></p>
+      <p class="valor" [style.--digitos]="digitosDoVisor()"><span>{{ visor() }}</span></p>
     </div>
 
     @if (emInteiros()) {
