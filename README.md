@@ -46,13 +46,33 @@ npm run test:unit         # os 94 testes
 ## Levar para o iPhone
 
 ```sh
-npm run build             # gera www/
-npx cap sync ios          # leva o www/ para o projeto nativo
-npx cap open ios          # abre o Xcode
+npm run cap:run           # compila, sincroniza e roda no aparelho
+```
+
+É o atalho do dia a dia: ele compila a web, leva o `www/` para o projeto
+nativo e abre o aplicativo. Sem argumento, pergunta em qual aparelho rodar.
+Para escolher direto, ou para ver o que está conectado:
+
+```sh
+npm run cap:run -- --list              # os aparelhos e simuladores disponíveis
+npm run cap:run -- --target <id>       # roda num deles, sem perguntar
+npm run cap:run -- --target-name "iPhone de Victor"
+```
+
+Os outros dois atalhos, para quando o Xcode é necessário — assinatura,
+perfil de provisionamento, publicação:
+
+```sh
+npm run cap:sync          # só compila e sincroniza
+npm run cap:open          # compila, sincroniza e abre o Xcode
 ```
 
 No Xcode: escolher o aparelho, ajustar o *Team* em **Signing & Capabilities** e
 apertar ▶. O identificador do aplicativo está em `capacitor.config.ts`.
+
+> Toda mudança no código web exige um desses comandos antes de rodar no
+> aparelho: o `www/` é copiado para dentro do projeto nativo, e sem a cópia o
+> Xcode compila feliz com a versão anterior.
 
 ## O ícone
 
