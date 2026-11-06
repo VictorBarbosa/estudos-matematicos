@@ -13,6 +13,11 @@ com abas, uma página inteira com os modos num menu lateral.
 | **MMC e MDC** | Dois ou mais inteiros, com a divisão simultânea passo a passo |
 | **Fatorar** | Dois números por produto e soma, com a fatoração e as raízes |
 
+Os dois últimos usam campo de texto com o teclado numérico do iPhone, que não
+traz vírgula nem sinal de menos. Cada campo ganha ao lado a tecla que lhe
+falta: `,` para separar os inteiros do MMC, `±` para o produto ou a soma
+negativos do Fatorar.
+
 O visor mostra a **expressão inteira**, e não um número solto: num aplicativo
 que nasceu de um site que ensina a ordem das operações, esconder que
 `2 + 3 × 4` é 14 e não 20 seria contraproducente.

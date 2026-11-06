@@ -42,15 +42,20 @@
 
         <label class="campo">
           <span class="rotulo">Números, separados por vírgula</span>
-          <input
-            type="text"
-            inputmode="numeric"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder="12, 18, 24"
-            [value]="numeros()"
-            (input)="definirNumeros($any($event.target).value)"
-          />
+          <!-- O teclado numérico do iPhone não traz vírgula: ela vem ao lado. -->
+          <div class="com-tecla">
+            <input
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="12, 18, 24"
+              [value]="numeros()"
+              (input)="definirNumeros($any($event.target).value)"
+            />
+            <button type="button" class="tecla-do-campo" aria-label="separar números"
+              (click)="acrescentarSeparador()">,</button>
+          </div>
         </label>
 
         <!-- A divisão simultânea: o caminho até a resposta, e não só ela. -->
@@ -94,27 +99,36 @@
         <div class="dupla">
           <label class="campo">
             <span class="rotulo">Produto</span>
-            <input
-              type="text"
-              inputmode="numeric"
-              autocomplete="off"
-              spellcheck="false"
-              placeholder="24"
-              [value]="produto()"
-              (input)="definirProduto($any($event.target).value)"
-            />
+            <!-- Nem sinal de menos: um produto negativo é metade dos casos. -->
+            <div class="com-tecla">
+              <input
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="24"
+                [value]="produto()"
+                (input)="definirProduto($any($event.target).value)"
+              />
+              <button type="button" class="tecla-do-campo" aria-label="trocar o sinal do produto"
+                (click)="alternarSinalDoCampo('produto')">±</button>
+            </div>
           </label>
           <label class="campo">
             <span class="rotulo">Soma</span>
-            <input
-              type="text"
-              inputmode="numeric"
-              autocomplete="off"
-              spellcheck="false"
-              placeholder="11"
-              [value]="soma()"
-              (input)="definirSoma($any($event.target).value)"
-            />
+            <div class="com-tecla">
+              <input
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="11"
+                [value]="soma()"
+                (input)="definirSoma($any($event.target).value)"
+              />
+              <button type="button" class="tecla-do-campo" aria-label="trocar o sinal da soma"
+                (click)="alternarSinalDoCampo('soma')">±</button>
+            </div>
           </label>
         </div>
 

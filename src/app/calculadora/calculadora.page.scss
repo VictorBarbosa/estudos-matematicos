@@ -287,6 +287,34 @@ $operador: #ff9f0a;
    */
   min-width: 0;
 
+  /* O campo e a tecla que lhe falta, lado a lado. */
+  .com-tecla {
+    display: flex;
+    gap: 0.4rem;
+    min-width: 0;
+  }
+
+  .tecla-do-campo {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    /* A vírgula assenta na linha de base; sem isto ela fica caída no canto. */
+    line-height: 0;
+    border: 0;
+    border-radius: 0.8rem;
+    background: $funcao;
+    color: #000;
+    font: inherit;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    &:active {
+      filter: brightness(1.2);
+    }
+  }
+
   input {
     width: 100%;
     min-width: 0;

@@ -121,6 +121,79 @@ describe('CalculadoraPage', () => {
     expect(texto()).toContain('Raízes: x = -4 ou x = 2');
   });
 
+  /** A tecla ao lado de um campo, pelo rótulo acessível. */
+  function teclaDoCampo(rotulo: string): HTMLButtonElement {
+    return [...fixture.nativeElement.querySelectorAll('.tecla-do-campo')].find(
+      (b) => (b as HTMLButtonElement).getAttribute('aria-label') === rotulo,
+    ) as HTMLButtonElement;
+  }
+
+  async function tocar(rotulo: string): Promise<void> {
+    teclaDoCampo(rotulo).click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+  }
+
+  it('a vírgula do MMC vem de uma tecla, que o teclado do iPhone não tem', async () => {
+    modos.definir('mmc-mdc');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    // Sem a tecla não há como separar: o `inputmode` numérico só dá dígitos.
+    await escrever(0, '80');
+    await tocar('separar números');
+    const campo = fixture.nativeElement.querySelector('.campo input') as HTMLInputElement;
+    expect(campo.value).toBe('80, ');
+
+    await escrever(0, '80, 90');
+    expect(visor()).toBe('720');
+    expect(legenda()).toBe('MMC de 80, 90');
+  });
+
+  it('a vírgula não se repete nem abre a lista', async () => {
+    modos.definir('mmc-mdc');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    // Campo vazio: nada a separar.
+    await tocar('separar números');
+    expect((fixture.nativeElement.querySelector('.campo input') as HTMLInputElement).value).toBe('');
+
+    await escrever(0, '12');
+    await tocar('separar números');
+    await tocar('separar números');
+    expect((fixture.nativeElement.querySelector('.campo input') as HTMLInputElement).value).toBe(
+      '12, ',
+    );
+  });
+
+  it('o sinal de menos do Fatorar vem de uma tecla por campo', async () => {
+    modos.definir('soma-produto');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(0, '8');
+    await escrever(1, '2');
+    await tocar('trocar o sinal do produto');
+
+    const campos = [...fixture.nativeElement.querySelectorAll('.campo input')] as HTMLInputElement[];
+    expect(campos[0]!.value).toBe('-8');
+    expect(visor()).toBe('-2 e 4');
+  });
+
+  it('a tecla de sinal também desfaz', async () => {
+    modos.definir('soma-produto');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(1, '11');
+    await tocar('trocar o sinal da soma');
+    await tocar('trocar o sinal da soma');
+
+    const campos = [...fixture.nativeElement.querySelectorAll('.campo input')] as HTMLInputElement[];
+    expect(campos[1]!.value).toBe('11');
+  });
+
   it('os recados de erro saem em português', async () => {
     modos.definir('mmc-mdc');
     await fixture.whenStable();

@@ -192,6 +192,33 @@ export class CalculadoraPage {
     this.soma.set(valor);
   }
 
+  /*
+   * As duas teclas que o teclado numérico do iPhone não tem.
+   *
+   * Com `inputmode="numeric"` o aparelho mostra só algarismos: não há vírgula
+   * para separar os números do MMC, nem sinal de menos para um produto
+   * negativo em Fatorar. Em vez de trocar o teclado por um completo — que
+   * traria letras no caminho —, cada campo ganha ao lado a tecla que lhe
+   * falta.
+   */
+
+  /** Acrescenta o separador ao fim da lista de inteiros. */
+  protected acrescentarSeparador(): void {
+    this.numeros.update((atual) => {
+      const limpo = atual.trimEnd();
+      return limpo === '' || limpo.endsWith(',') ? atual : `${limpo}, `;
+    });
+  }
+
+  /** Troca o sinal de um dos campos de fatorar. */
+  protected alternarSinalDoCampo(qual: 'produto' | 'soma'): void {
+    const campo = qual === 'produto' ? this.produto : this.soma;
+    campo.update((atual) => {
+      const limpo = atual.trim();
+      return limpo.startsWith('-') ? limpo.slice(1) : `-${limpo}`;
+    });
+  }
+
   private aplicar(atual: EstadoCalculadora, acao: Acao): EstadoCalculadora {
     switch (acao.tipo) {
       case 'inserir':
