@@ -102,11 +102,39 @@
     } @else if (emFatores()) {
     <div class="campos">
       <p class="rotulo explicacao">
-        Dois números cujo produto e cuja soma são estes — o passo que fatora x² + bx + c. As raízes são os opostos
-        deles.
+        Dois números cuja soma e cujo produto são estes — o passo que fatora x² + bx + c, na ordem em que a expressão se
+        lê. As raízes são os opostos deles.
       </p>
 
       <div class="dupla">
+        <!-- A soma vem primeiro porque é a ordem da leitura: em
+             `x² - 25x + 136`, o 25 aparece antes do 136. Pedir o produto
+             primeiro convidava a digitar os dois trocados. -->
+        <label class="campo">
+          <span class="rotulo">Soma</span>
+          <div class="com-tecla">
+            <input
+              #entradaSoma
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="11"
+              [value]="soma()"
+              (input)="definirSoma($any($event.target).value)"
+            />
+            <button
+              type="button"
+              class="tecla-do-campo"
+              tabindex="-1"
+              aria-label="trocar o sinal da soma"
+              (pointerdown)="$event.preventDefault()"
+              (click)="alternarSinalDoCampo('soma', entradaSoma)"
+            >
+              ±
+            </button>
+          </div>
+        </label>
         <label class="campo">
           <span class="rotulo">Produto</span>
           <!-- Nem sinal de menos: um produto negativo é metade dos casos. -->
@@ -128,31 +156,6 @@
               aria-label="trocar o sinal do produto"
               (pointerdown)="$event.preventDefault()"
               (click)="alternarSinalDoCampo('produto', entradaProduto)"
-            >
-              ±
-            </button>
-          </div>
-        </label>
-        <label class="campo">
-          <span class="rotulo">Soma</span>
-          <div class="com-tecla">
-            <input
-              #entradaSoma
-              type="text"
-              inputmode="numeric"
-              autocomplete="off"
-              spellcheck="false"
-              placeholder="11"
-              [value]="soma()"
-              (input)="definirSoma($any($event.target).value)"
-            />
-            <button
-              type="button"
-              class="tecla-do-campo"
-              tabindex="-1"
-              aria-label="trocar o sinal da soma"
-              (pointerdown)="$event.preventDefault()"
-              (click)="alternarSinalDoCampo('soma', entradaSoma)"
             >
               ±
             </button>
@@ -192,12 +195,12 @@
       </p>
       }
 
-      <!-- Produto e soma trocados é o erro de digitação natural: em
-             `x² - 25x + 136` o 25 vem primeiro na expressão, mas é a soma. -->
+      <!-- Produto e soma trocados ainda acontece, e o aviso diz qual par
+           serviria com os campos na outra ordem. -->
       @if (fatores().trocados; as trocados) {
       <p class="montagem trocados">
-        Com os campos trocados há par inteiro: {{ trocados.a }} e {{ trocados.b }} dão produto {{ trocados.produto }} e
-        soma {{ trocados.soma }}. Em x² + bx + c, o produto é c — o termo sem x.
+        Com os campos trocados há par inteiro: {{ trocados.a }} e {{ trocados.b }} dão soma {{ trocados.soma }} e
+        produto {{ trocados.produto }}. Em x² + bx + c, a soma é b, o número que acompanha o x.
       </p>
       }
 

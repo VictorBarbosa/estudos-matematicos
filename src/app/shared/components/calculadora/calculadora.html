@@ -167,18 +167,9 @@
         <p class="rotulo explicacao">{{ i18n.t('calculadora.explicacaoFatores') }}</p>
 
         <div class="dupla">
-          <label class="campo">
-            <span class="rotulo">{{ i18n.t('calculadora.produto') }}</span>
-            <input
-              type="text"
-              inputmode="numeric"
-              autocomplete="off"
-              spellcheck="false"
-              placeholder="24"
-              [value]="produto()"
-              (input)="definirProduto($any($event.target).value)"
-            />
-          </label>
+          <!-- A soma vem primeiro porque é a ordem da leitura: em
+               `x² - 25x + 136`, o 25 aparece antes do 136. Pedir o produto
+               primeiro convidava a digitar os dois trocados. -->
           <label class="campo">
             <span class="rotulo">{{ i18n.t('calculadora.soma') }}</span>
             <input
@@ -189,6 +180,18 @@
               placeholder="11"
               [value]="soma()"
               (input)="definirSoma($any($event.target).value)"
+            />
+          </label>
+          <label class="campo">
+            <span class="rotulo">{{ i18n.t('calculadora.produto') }}</span>
+            <input
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="24"
+              [value]="produto()"
+              (input)="definirProduto($any($event.target).value)"
             />
           </label>
         </div>

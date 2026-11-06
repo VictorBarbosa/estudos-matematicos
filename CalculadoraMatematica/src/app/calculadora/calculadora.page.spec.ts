@@ -36,6 +36,32 @@ describe('CalculadoraPage', () => {
     fixture.detectChanges();
   }
 
+  /** O que está escrito no campo de um rótulo. */
+  function valorDoCampo(rotulo: string): string {
+    const dono = [...fixture.nativeElement.querySelectorAll('.campo')].find((c) =>
+      (c as HTMLElement).textContent!.includes(rotulo),
+    ) as HTMLElement;
+    return (dono.querySelector('input') as HTMLInputElement).value;
+  }
+
+  /** O campo pelo rótulo, que não depende da ordem em que a tela os põe. */
+  async function escreverNoCampo(rotulo: string, valor: string): Promise<void> {
+    const dono = [...fixture.nativeElement.querySelectorAll('.campo')].find((c) =>
+      (c as HTMLElement).textContent!.includes(rotulo),
+    ) as HTMLElement;
+    const campo = dono.querySelector('input') as HTMLInputElement;
+    campo.value = valor;
+    campo.dispatchEvent(new Event('input'));
+    await fixture.whenStable();
+    fixture.detectChanges();
+  }
+
+  /** O par de fatores, dito como se diz: produto e soma. */
+  async function escreverFatores(produto: string, soma: string): Promise<void> {
+    await escreverNoCampo('Soma', soma);
+    await escreverNoCampo('Produto', produto);
+  }
+
   /** Monta a página do zero, mantendo (ou não) o que ficou guardado. */
   async function montar(limpar = true): Promise<void> {
     if (limpar) {
@@ -105,13 +131,25 @@ describe('CalculadoraPage', () => {
     expect(fixture.nativeElement.querySelectorAll('.decomposicao tr').length).toBeGreaterThan(3);
   });
 
+  it('pede a soma antes do produto, na ordem em que a expressão se lê', async () => {
+    // Em `x² - 25x + 136` o 25 vem primeiro e é a SOMA.
+    modos.definir('soma-produto');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    const rotulos = [...fixture.nativeElement.querySelectorAll('.campo .rotulo')].map((e) =>
+      (e as HTMLElement).textContent!.trim(),
+    );
+
+    expect(rotulos).toEqual(['Soma', 'Produto']);
+  });
+
   it('o modo de fatorar acha o par e mostra as raízes', async () => {
     modos.definir('soma-produto');
     await fixture.whenStable();
     fixture.detectChanges();
 
-    await escrever(0, '-8');
-    await escrever(1, '2');
+    await escreverFatores('-8', '2');
 
     expect(visor()).toBe('-2 e 4');
     expect(texto()).toContain('x² + 2x − 8 = (x − 2)(x + 4)');
@@ -125,11 +163,10 @@ describe('CalculadoraPage', () => {
     await fixture.whenStable();
     fixture.detectChanges();
 
-    await escrever(0, '25');
-    await escrever(1, '136');
+    await escreverFatores('25', '136');
 
     expect(texto()).toContain('Com os campos trocados há par inteiro: 8 e 17');
-    expect(texto()).toContain('produto 136 e soma 25');
+    expect(texto()).toContain('soma 25 e produto 136');
   });
 
   it('e não avisa nada quando a ordem está certa', async () => {
@@ -137,8 +174,7 @@ describe('CalculadoraPage', () => {
     await fixture.whenStable();
     fixture.detectChanges();
 
-    await escrever(0, '136');
-    await escrever(1, '25');
+    await escreverFatores('136', '25');
 
     expect(visor()).toBe('8 e 17');
     expect(texto()).not.toContain('campos trocados');
@@ -193,12 +229,10 @@ describe('CalculadoraPage', () => {
     await fixture.whenStable();
     fixture.detectChanges();
 
-    await escrever(0, '8');
-    await escrever(1, '2');
+    await escreverFatores('8', '2');
     await tocar('trocar o sinal do produto');
 
-    const campos = [...fixture.nativeElement.querySelectorAll('.campo input')] as HTMLInputElement[];
-    expect(campos[0]!.value).toBe('-8');
+    expect(valorDoCampo('Produto')).toBe('-8');
     expect(visor()).toBe('-2 e 4');
   });
 
@@ -207,12 +241,11 @@ describe('CalculadoraPage', () => {
     await fixture.whenStable();
     fixture.detectChanges();
 
-    await escrever(1, '11');
+    await escreverNoCampo('Soma', '11');
     await tocar('trocar o sinal da soma');
     await tocar('trocar o sinal da soma');
 
-    const campos = [...fixture.nativeElement.querySelectorAll('.campo input')] as HTMLInputElement[];
-    expect(campos[1]!.value).toBe('11');
+    expect(valorDoCampo('Soma')).toBe('11');
   });
 
   it('a tecla devolve o cursor ao campo, para o teclado não fechar', async () => {

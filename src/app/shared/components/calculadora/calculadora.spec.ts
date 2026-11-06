@@ -414,6 +414,16 @@ describe('Calculadora: soma e produto', () => {
     expect(fixture.nativeElement.querySelector('.teclado')).toBeNull();
   });
 
+  it('pede a soma antes do produto, na ordem em que a expressão se lê', async () => {
+    // Em `x² - 25x + 136` o 25 vem primeiro e é a SOMA. Com o produto no
+    // primeiro campo, digitar na ordem da leitura invertia os dois.
+    const rotulos = [...fixture.nativeElement.querySelectorAll('.fatores .campo .rotulo')].map(
+      (e) => (e as HTMLElement).textContent!.trim(),
+    );
+
+    expect(rotulos).toEqual(['Soma', 'Produto']);
+  });
+
   it('acha o par e escreve a fatoração', async () => {
     await escrever('24', '11');
 
