@@ -1,0 +1,11 @@
+node_modules
+dist
+www
+/ios/App/App/public
+/ios/App/Pods
+/ios/App/output
+/ios/App/build
+.DS_Store
+.angular
+test-results
+playwright-report

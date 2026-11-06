@@ -1,0 +1,312 @@
+/*
+ * A calculadora é sempre escura, como a do iPhone.
+ *
+ * As cores aqui são literais, e não as variáveis do Ionic: a calculadora do
+ * sistema não muda de cor com o tema, e é dela que o aluno tem a memória —
+ * dígito cinza-escuro, função cinza-claro, operação laranja.
+ */
+$fundo: #1c1c1e;
+$digito: #333335;
+$funcao: #a5a5a7;
+$operador: #ff9f0a;
+
+:host {
+  --ion-background-color: #{$fundo};
+
+  /*
+   * A barra do topo acompanha a calculadora.
+   *
+   * O padrão do Ionic é claro, e no meio de uma tela preta ela aparecia como
+   * uma faixa cinza no alto — inclusive sobre a área do entalhe.
+   */
+  ion-toolbar {
+    --background: #{$fundo};
+    --color: #fff;
+    --border-color: transparent;
+  }
+}
+
+/*
+ * A calculadora ocupa a tela, e nada mais.
+ *
+ * `height: 100%` em vez de `min-height`: com o mínimo, o teclado científico
+ * empurrava a última linha para fora e obrigava a rolar — numa calculadora,
+ * rolar para alcançar o «=» é defeito.
+ */
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 0.5rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+  background: $fundo;
+  color: #fff;
+  overflow: hidden;
+}
+
+/*
+ * O visor ocupa o que sobra acima do teclado.
+ *
+ * `min-height: 0` é o que permite ele ENCOLHER: sem isso, um item de flex
+ * nunca fica menor que o próprio conteúdo, e no modo científico — oito linhas
+ * de teclas — o teclado era empurrado para fora da tela.
+ */
+.visor {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  min-height: 3.5rem;
+  padding: 0.5rem 0.25rem;
+  text-align: right;
+}
+
+.legenda,
+.valor {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  /* Corta pela ESQUERDA: o que importa é o fim da conta. */
+  direction: rtl;
+
+  span {
+    direction: ltr;
+    unicode-bidi: embed;
+  }
+}
+
+.legenda {
+  min-height: 1.2em;
+  color: $funcao;
+  font-size: 0.95rem;
+}
+
+.valor {
+  font-size: 3.25rem;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+
+  &.apertado {
+    font-size: 2.25rem;
+  }
+}
+
+/*
+ * O teclado fica com a altura que sobrar, e as linhas a dividem igualmente.
+ *
+ * Preferi isto a fixar a altura da tecla: no modo científico são oito linhas,
+ * e qualquer altura fixa que coubesse no iPhone 15 deixaria o teclado cortado
+ * num iPhone SE — ou sobrando num iPad.
+ */
+.teclado {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.teclas {
+  display: grid;
+  gap: 0.6rem;
+  grid-auto-rows: minmax(0, 1fr);
+
+  button {
+    /* Redondas enquanto houver espaço; achatam quando a tela é curta. */
+    aspect-ratio: 1;
+    max-height: 4.6rem;
+    height: auto;
+    border: 0;
+    border-radius: 999px;
+    background: $digito;
+    color: #fff;
+    font: inherit;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &:active {
+      filter: brightness(1.4);
+    }
+
+    &.funcao {
+      background: $funcao;
+      color: #000;
+    }
+
+    &.operador {
+      background: $operador;
+    }
+
+    &.largo {
+      aspect-ratio: auto;
+      grid-column: span 2;
+      justify-content: flex-start;
+      padding-left: 1.9rem;
+      text-align: left;
+    }
+  }
+}
+
+.basicas {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* A ala científica é mais apertada: cinco linhas de três teclas menores. */
+.cientificas {
+  grid-template-columns: repeat(3, 1fr);
+
+  button {
+    /* A ala científica é mais baixa: cinco linhas precisam caber. */
+    aspect-ratio: 2.4;
+    max-height: 3rem;
+    font-size: 1.05rem;
+  }
+}
+
+/*
+ * ---- As duas abas de campo: MMC/MDC e fatorar ----
+ *
+ * Aqui o visor não cresce: o resultado fica logo abaixo do cabeçalho, junto
+ * dos campos que o produziram. Empurrá-lo para o meio da tela, como no
+ * teclado, o deixaria solto no vazio.
+ */
+.com-campos .visor {
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  min-height: auto;
+}
+
+.campos {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-bottom: 1rem;
+  /* Aqui rolar faz sentido: a divisão simultânea pode ter muitas linhas. */
+  overflow-y: auto;
+}
+
+.escolha {
+  display: flex;
+  gap: 0.6rem;
+
+  button {
+    flex: 1;
+    padding: 0.7rem;
+    border: 0;
+    border-radius: 999px;
+    background: $digito;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+
+    &.ativo {
+      background: $operador;
+      color: #000;
+    }
+  }
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  input {
+    padding: 0.8rem 0.9rem;
+    border: 1px solid #48484a;
+    border-radius: 0.8rem;
+    background: #000;
+    color: #fff;
+    font: inherit;
+    font-size: 1.2rem;
+  }
+}
+
+.dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.rotulo {
+  color: $funcao;
+  font-size: 0.8rem;
+}
+
+.explicacao {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.decomposicao,
+.pares {
+  width: 100%;
+  border-collapse: collapse;
+  color: #d1d1d6;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+
+  caption {
+    caption-side: top;
+    padding-bottom: 0.3rem;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 0.15rem 0.4rem;
+    text-align: right;
+  }
+
+  th {
+    color: #8e8e93;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  .divisor,
+  .soma {
+    border-left: 1px solid #48484a;
+  }
+
+  .divisor {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .chegada,
+  .corte {
+    color: #8e8e93;
+  }
+
+  .corte td {
+    text-align: left;
+  }
+
+  /* O par que serviu é a resposta, e salta da lista das tentativas. */
+  .escolhido {
+    color: $operador;
+    font-weight: 600;
+  }
+}
+
+/* No MDC, só contam as linhas em que o divisor coube em todos. */
+.decomposicao.mdc .comum .divisor {
+  color: $operador;
+}
+
+.montagem {
+  margin: 0;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* As raízes andam junto da fatoração, mas são outra resposta: outra cor. */
+.raizes {
+  margin: 0;
+  color: $operador;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
