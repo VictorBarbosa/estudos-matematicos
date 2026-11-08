@@ -14,7 +14,7 @@ type Pergunta = 'composta' | 'inversa' | 'ordem';
  */
 export const geradorComposicao: GeradorExercicio<Fracao> = {
   topicoId: 'composicao-inversa',
-  formatoResposta: 'um número ou fração, ex.: 7 ou -1/2',
+  formatoResposta: 'inteiro ou fração, ex.: 7 ou -1/2 — decimal só se for exato',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     const pergunta = sortearPergunta(nivel, rng);

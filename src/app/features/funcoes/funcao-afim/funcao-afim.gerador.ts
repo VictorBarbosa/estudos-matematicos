@@ -15,7 +15,7 @@ type Pergunta = 'raiz' | 'taxa' | 'valor';
  */
 export const geradorAfim: GeradorExercicio<Fracao> = {
   topicoId: 'funcao-afim',
-  formatoResposta: 'um número ou fração, ex.: 3 ou -1/2',
+  formatoResposta: 'inteiro ou fração, ex.: 3 ou -1/2 — decimal só se for exato',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     const pergunta = sortearPergunta(nivel, rng);

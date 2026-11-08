@@ -16,7 +16,7 @@ export const geradorFatoracao: GeradorExercicio<number> = {
   topicoId: 'fatoracao',
   // Até o Difícil a raiz é inteira; no Extremo o trinômio não é mônico e ela
   // sai fracionária, então o campo precisa anunciar as duas formas.
-  formatoResposta: 'um número ou fração, ex.: 3 · 5/2',
+  formatoResposta: 'inteiro ou fração, ex.: 3 ou 5/2 — decimal só se for exato',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const { polinomio, raizes, tipo } = sortear(nivel, rng);

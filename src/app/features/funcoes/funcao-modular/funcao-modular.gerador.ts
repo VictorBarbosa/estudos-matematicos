@@ -14,7 +14,7 @@ type Pergunta = 'valor' | 'bico' | 'equacao';
  */
 export const geradorModular: GeradorExercicio<Fracao> = {
   topicoId: 'funcao-modular',
-  formatoResposta: 'um número ou fração, ex.: 4 ou -1/2',
+  formatoResposta: 'inteiro ou fração, ex.: 4 ou -1/2 — decimal só se for exato',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     const pergunta = sortearPergunta(nivel, rng);

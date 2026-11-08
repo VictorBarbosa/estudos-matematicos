@@ -9,6 +9,38 @@ function amostra(nivel: Nivel, quantidade = 60) {
 }
 
 describe('geradorEquacao1', () => {
+  it('diz no campo que decimal só vale quando é exato', () => {
+    // «um número ou fração» convidava a responder 0,83 para 5/6 — e aí a
+    // resposta certa era recusada sem que nada tivesse avisado.
+    expect(geradorEquacao1.formatoResposta).toContain('inteiro ou fração');
+    expect(geradorEquacao1.formatoResposta).toContain('decimal só se for exato');
+  });
+
+  it('pede o valor exato no enunciado', () => {
+    const [exercicio] = amostra('facil', 1);
+    expect(exercicio!.enunciado).toBe('Resolva a equação e informe o valor exato de x.');
+  });
+
+  it('aceita o decimal quando ele é exato, e recusa o arredondado', () => {
+    const exercicio = {
+      ...amostra('facil', 1)[0]!,
+      gabarito: Fracao.criar(3, 4),
+      armadilhas: [],
+    };
+
+    for (const certa of ['3/4', '0,75', '0.75', '6/8']) {
+      expect(corrigir(geradorEquacao1, exercicio, certa).veredito).toBe('correto');
+    }
+
+    // 5/6 não tem decimal exato: nenhum arredondamento passa, e é por isso
+    // que o campo precisa dizer que a fração é o caminho.
+    const dizima = { ...exercicio, gabarito: Fracao.criar(5, 6) };
+    expect(corrigir(geradorEquacao1, dizima, '5/6').veredito).toBe('correto');
+    for (const errada of ['0,83', '0,8333', '0,833333333']) {
+      expect(corrigir(geradorEquacao1, dizima, errada).veredito).toBe('incorreto');
+    }
+  });
+
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, a raiz satisfaz a equação gerada`, () => {
       for (const exercicio of amostra(nivel)) {

@@ -38,7 +38,9 @@ function armadilha(
  */
 export const geradorEquacao1: GeradorExercicio<Fracao> = {
   topicoId: 'equacao-primeiro-grau',
-  formatoResposta: 'um número ou fração, ex.: 4 ou -3/2',
+  // «um número» convidava a responder 0,83 para 5/6 — e 5/6 não tem
+  // decimal exato, então a resposta certa era recusada sem explicação.
+  formatoResposta: 'inteiro ou fração, ex.: 4 ou -3/2 — decimal só se for exato',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     const { a, b, c } = sortear(nivel, rng);
@@ -49,7 +51,7 @@ export const geradorEquacao1: GeradorExercicio<Fracao> = {
     return {
       id: `equacao1-${nivel}-${a}-${b}-${c}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Resolva a equação e informe o valor de x.',
+      enunciado: 'Resolva a equação e informe o valor exato de x.',
       enunciadoTex: `${a === 1 ? '' : a === -1 ? '-' : a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)} = ${c}`,
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },
