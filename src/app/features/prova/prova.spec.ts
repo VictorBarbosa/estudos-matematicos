@@ -209,6 +209,34 @@ describe('Prova', () => {
     expect(interno()['acertos']!()).toBe(TOTAL_DE_QUESTOES);
   });
 
+  it('errar mostra a resolução; acertar não mostra nada', async () => {
+    // Na prova a resolução só aparece depois do erro, e com a questão já
+    // contada: cada questão é de um tópico diferente, então ver esta conta
+    // não ajuda na seguinte.
+    await montar(sessao.id);
+
+    await responder(false);
+    fixture.detectChanges();
+
+    const resolucao = fixture.nativeElement.querySelector('.resolucao') as HTMLElement | null;
+    expect(resolucao).not.toBeNull();
+    expect(resolucao!.querySelectorAll('.passo').length).toBeGreaterThan(0);
+
+    await avancar();
+    await responder(true);
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('.resolucao')).toBeNull();
+  });
+
+  it('antes de responder, nada de resolução', async () => {
+    await montar(sessao.id);
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('.resolucao')).toBeNull();
+    expect(fixture.nativeElement.querySelector('.gabarito')).toBeNull();
+  });
+
   it('o primeiro erro não avisa nada; o segundo avisa que o próximo zera', async () => {
     await montar(sessao.id);
 

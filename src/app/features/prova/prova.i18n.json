@@ -1,4 +1,9 @@
 {
+  "comoSeResolve": {
+    "pt": "Onde a conta saiu do trilho",
+    "fr": "Où le calcul a déraillé",
+    "en": "Where the work went off track"
+  },
   "titulo": {
     "pt": "Prova final — {sessao}",
     "fr": "Examen final — {sessao}",

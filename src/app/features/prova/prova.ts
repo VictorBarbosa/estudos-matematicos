@@ -28,6 +28,7 @@ import { Exercicio, GeradorExercicio, Validacao, corrigir } from '@core/treino/m
 import { Rng, criarRng, sementeAleatoria } from '@core/treino/rng/rng';
 import { CampoResposta } from '@shared/components/campo-resposta/campo-resposta';
 import { Formula } from '@shared/components/formula/formula';
+import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
 import textos from '@features/prova/prova.i18n.json';
 
 /** Uma questão já sorteada: o item do plano com o exercício e seu gerador. */
@@ -63,7 +64,7 @@ type Fase = 'carregando' | 'trancada' | 'vencida' | 'respondendo' | 'aprovado' |
 @Component({
   selector: 'app-prova',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CampoResposta, Formula, RouterLink],
+  imports: [CampoResposta, Formula, PassoAPasso, RouterLink],
   templateUrl: './prova.html',
   styleUrl: './prova.scss',
 })

@@ -105,9 +105,24 @@
   background: var(--erro-suave);
 }
 
-.gabarito {
+.gabarito,
+.diagnostico {
   font-size: var(--texto-sm);
   color: var(--texto-suave);
+}
+
+/* A resolução só aparece no erro, e usa o mesmo tom do treino. */
+.resolucao {
+  margin-top: var(--esp-4);
+}
+
+.resolucao h3 {
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
 }
 
 .acoes {

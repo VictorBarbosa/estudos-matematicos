@@ -85,6 +85,20 @@
           </p>
           @if (v.veredito === 'incorreto') {
             <p class="gabarito">{{ texto('gabarito', { valor: gabarito() }) }}</p>
+            @if (v.diagnostico; as diagnostico) {
+              <p class="diagnostico">{{ diagnostico }}</p>
+            }
+
+            <!-- A resolução aparece só no erro, e só depois de a questão estar
+                 contada. Não é consulta: cada questão da prova é de um tópico
+                 diferente, então ver esta conta não ajuda na seguinte. -->
+            <section class="resolucao">
+              <h3>{{ texto('comoSeResolve') }}</h3>
+              <app-passo-a-passo
+                [passos]="q.exercicio.resolucao.passos"
+                [passoDestacado]="v.passoDivergente ?? null"
+              />
+            </section>
           }
         }
 
