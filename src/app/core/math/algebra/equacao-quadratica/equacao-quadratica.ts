@@ -21,6 +21,9 @@ export function resolverQuadraticaComPassos(
   a: number,
   b: number,
   c: number,
+  // A fatoração de polinômios chama esta função para resolver o fator de grau
+  // 2, e ali a parábola não vem ao caso: só as raízes.
+  opcoes: { readonly comVertice?: boolean } = {},
 ): Resolucao<SolucaoQuadratica> {
   if (a === 0) {
     throw new ErroMatematico('Com a = 0 a equação não é do 2º grau; é do 1º.');
@@ -80,16 +83,18 @@ export function resolverQuadraticaComPassos(
     }
   }
 
-  passos.push({
-    descricao: 'O vértice fica na média das raízes, no eixo de simetria da parábola.',
-    tex:
-      `x_v = \\frac{-b}{2a} = ${formatar(xVertice)} \\qquad ` +
-      `y_v = \\frac{-\\Delta}{4a} = ${formatar(yVertice)}`,
-    nota:
-      a > 0
-        ? 'Com a > 0 a parábola abre para cima, e o vértice é o ponto de mínimo.'
-        : 'Com a < 0 a parábola abre para baixo, e o vértice é o ponto de máximo.',
-  });
+  if (opcoes.comVertice !== false) {
+    passos.push({
+      descricao: 'O vértice fica na média das raízes, no eixo de simetria da parábola.',
+      tex:
+        `x_v = \\frac{-b}{2a} = ${formatar(xVertice)} \\qquad ` +
+        `y_v = \\frac{-\\Delta}{4a} = ${formatar(yVertice)}`,
+      nota:
+        a > 0
+          ? 'Com a > 0 a parábola abre para cima, e o vértice é o ponto de mínimo.'
+          : 'Com a < 0 a parábola abre para baixo, e o vértice é o ponto de máximo.',
+    });
+  }
 
   return {
     resultado: {

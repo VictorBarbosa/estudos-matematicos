@@ -91,7 +91,7 @@ describe('geradorPolinomios', () => {
 
   it('a raiz pedida anula o polinômio e é a menor', () => {
     const exercicios = amostra('dificil', 120).filter((e) =>
-      e.enunciado.includes('Qual é a menor delas'),
+      e.enunciado.includes('qual é a menor?'),
     );
 
     expect(exercicios.length).toBeGreaterThan(0);

@@ -197,33 +197,37 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
   const encontradas = raizesRacionais(p);
   const gabarito = Math.min(...encontradas);
 
+  const daFatoracao = fatorarPorRaizesComPassos(p).passos;
+  const passos = [
+    ...daFatoracao,
+    {
+      // A resolução acaba em Bhaskara, e ela dá só DUAS das raízes. Sem este
+      // passo juntando tudo, a pergunta parecia ser sobre as duas últimas.
+      descricao:
+        'Reunimos TODAS as raízes — a que passou no teste e as que vieram da fórmula. ' +
+        'A pergunta pede a menor entre elas.',
+      tex:
+        `x \\in \\{${[...encontradas].sort((um, outro) => um - outro).join(',\\; ')}\\}` +
+        ` \\Rightarrow \\min = ${gabarito}`,
+    },
+  ];
+
   return {
     id: `poli-raiz-${raizes.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Este polinômio tem raízes racionais. Qual é a menor delas?',
+    enunciado:
+      'Todas as raízes deste polinômio são racionais. Considerando TODAS elas, qual é a menor?',
     enunciadoTex: `P(x) = ${p.paraTex()}`,
     gabarito,
-    resolucao: {
-      resultado: gabarito,
-      // Sem o passo final, a resolução parava na forma fatorada e não dizia
-      // qual das raízes o enunciado pede.
-      passos: [
-        ...fatorarPorRaizesComPassos(p).passos,
-        {
-          descricao: 'As raízes são os valores que anulam cada fator; a pergunta pede a menor.',
-          tex:
-            `x \\in \\{${[...encontradas].sort((um, outro) => um - outro).join(',\\; ')}\\}` +
-            ` \\Rightarrow \\min = ${gabarito}`,
-        },
-      ],
-    },
+    resolucao: { resultado: gabarito, passos },
     conceitos: ['polinomios.raizes'],
     armadilhas: semColisoes(
       [
         {
           resposta: Math.max(...encontradas),
           diagnostico: 'Essa é a MAIOR raiz. A pergunta pede a menor.',
-          passo: 1,
+          // O passo que reúne todas as raízes, qualquer que seja o caminho.
+          passo: passos.length - 1,
           conceito: 'polinomios.raizes',
         },
         {

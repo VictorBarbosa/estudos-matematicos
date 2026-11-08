@@ -1,4 +1,8 @@
 import { Polinomio, formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
+import {
+  formaFatoradaParaTex,
+  resolverQuadraticaComPassos,
+} from '@core/math/algebra/equacao-quadratica/equacao-quadratica';
 import { divisores } from '@core/math/numeros/inteiros/inteiros';
 import { ErroMatematico, Passo, Resolucao } from '@core/math/tipos/tipos';
 
@@ -410,9 +414,17 @@ export function fatorarPorRaizesComPassos(p: Polinomio): Resolucao<readonly numb
   }
 
   const encontradas: number[] = [];
+  const fatores: string[] = [];
   let atual = p;
 
-  while (atual.grau > 0) {
+  /*
+   * A caça a raízes só vale enquanto o grau passa de 2.
+   *
+   * Chegando ao grau 2, Bhaskara resolve de uma vez e com a conta à vista —
+   * extrair raiz por raiz ali produzia um passo absurdo no fim, do tipo
+   * `x - 4 = (x - 4)(1)`, e escondia a fórmula que o aluno acabou de aprender.
+   */
+  while (atual.grau > 2) {
     const raiz = candidatasRacionais(atual).find(
       (candidata) => Math.abs(atual.avaliar(candidata)) < 1e-9,
     );
@@ -422,29 +434,127 @@ export function fatorarPorRaizesComPassos(p: Polinomio): Resolucao<readonly numb
     }
 
     const { quociente } = dividirComPassos(atual, Polinomio.de(-raiz, 1)).resultado;
-    const sinal = raiz >= 0 ? '-' : '+';
 
     passos.push({
-      descricao: `P(${formatar(raiz)}) = 0, então (x ${sinal} ${formatar(Math.abs(raiz))}) é fator.`,
-      tex: `${atual.paraTex()} = \\left(x ${sinal} ${formatar(Math.abs(raiz))}\\right)\\left(${quociente.paraTex()}\\right)`,
+      descricao: `Testamos a candidata x = ${formatar(raiz)}.`,
+      tex: contaDeAvaliacao(atual, raiz),
+      nota: `Deu zero, então (${binomioDe(raiz)}) é fator — é o teorema do resto.`,
+    });
+    passos.push({
+      descricao: `Dividindo por (${binomioDe(raiz)}), sobra um fator de grau ${quociente.grau}.`,
+      tex: `${atual.paraTex()} = \\left(${binomioDe(raiz)}\\right)\\left(${quociente.paraTex()}\\right)`,
     });
 
     encontradas.push(raiz);
+    fatores.push(`\\left(${binomioDe(raiz)}\\right)`);
     atual = quociente;
   }
 
+  const final = fecharFatoracao(atual, passos, encontradas, fatores);
+
   passos.push({
-    descricao:
-      atual.grau === 0
-        ? 'Sobrou apenas a constante: a fatoração está completa.'
-        : 'O fator restante não tem raiz racional — daqui em diante, Bhaskara ou aproximação.',
-    tex:
-      encontradas.length === 0
-        ? 'nenhuma raiz racional'
-        : encontradas
-            .map((raiz) => `\\left(x ${raiz >= 0 ? '-' : '+'} ${formatar(Math.abs(raiz))}\\right)`)
-            .join('') + (atual.grau > 0 ? `\\left(${atual.paraTex()}\\right)` : ''),
+    descricao: final.descricao,
+    tex: fatores.length === 0 ? 'nenhuma raiz racional' : fatores.join(''),
   });
 
   return { resultado: encontradas, passos };
+}
+
+/**
+ * O último fator: grau 2 vai para Bhaskara, grau 1 dá a raiz direto.
+ *
+ * Devolve a frase que fecha a fatoração, e empurra para `passos` e `fatores` o
+ * que esse último pedaço acrescenta.
+ */
+function fecharFatoracao(
+  atual: Polinomio,
+  passos: Passo[],
+  encontradas: number[],
+  fatores: string[],
+): { descricao: string } {
+  if (atual.grau === 0) {
+    return { descricao: 'Sobrou apenas a constante: a fatoração está completa.' };
+  }
+
+  if (atual.grau === 1) {
+    // `2x - 4 = 0` dá x = 2, sem fórmula nenhuma.
+    const raiz = -atual.coeficiente(0) / atual.coeficiente(1);
+    passos.push({
+      descricao: 'O último fator é do 1º grau: a raiz sai de uma equação simples.',
+      tex: `${atual.paraTex()} = 0 \\;\\Longrightarrow\\; x = ${formatar(raiz)}`,
+    });
+
+    encontradas.push(raiz);
+    const lider = atual.coeficiente(1);
+    fatores.push(
+      lider === 1
+        ? `\\left(${binomioDe(raiz)}\\right)`
+        : `${formatar(lider)}\\left(${binomioDe(raiz)}\\right)`,
+    );
+    return { descricao: 'A fatoração está completa.' };
+  }
+
+  if (atual.grau > 2) {
+    fatores.push(`\\left(${atual.paraTex()}\\right)`);
+    return {
+      descricao:
+        'O fator restante não tem raiz racional, e o grau passa de 2 — daqui em diante, ' +
+        'método numérico.',
+    };
+  }
+
+  // Grau 2: a fórmula que o aluno já conhece, com os números deste fator.
+  const a = atual.coeficiente(2);
+  const b = atual.coeficiente(1);
+  const c = atual.coeficiente(0);
+
+  passos.push({
+    descricao: 'O que sobrou é do 2º grau: aqui Bhaskara resolve de uma vez.',
+    tex: `${atual.paraTex()} = 0`,
+    nota: 'Não é preciso continuar testando candidatas — a fórmula dá as duas raízes.',
+  });
+  passos.push(...resolverQuadraticaComPassos(a, b, c, { comVertice: false }).passos);
+
+  const { raizes } = resolverQuadraticaComPassos(a, b, c, { comVertice: false }).resultado;
+  const fatorada = formaFatoradaParaTex(a, raizes);
+
+  if (fatorada === null) {
+    fatores.push(`\\left(${atual.paraTex()}\\right)`);
+    return {
+      descricao: 'Sem raiz real, esse fator do 2º grau não se quebra mais nos reais.',
+    };
+  }
+
+  passos.push({
+    descricao: 'Com as raízes em mãos, o fator do 2º grau se escreve fatorado.',
+    tex: `${atual.paraTex()} = ${fatorada}`,
+  });
+  fatores.push(fatorada);
+
+  // Só raiz racional entra no resultado: é o que a função promete devolver.
+  const racionais = raizesRacionais(atual);
+  encontradas.push(...racionais);
+
+  return {
+    descricao:
+      racionais.length === raizes.length
+        ? 'A fatoração está completa.'
+        : 'As raízes desse fator são reais, mas o fator não tem raiz racional.',
+  };
+}
+
+/** `P(1) = (1)^{3} - 7(1)^{2} + 14(1) - 8 = 1 - 7 + 14 - 8 = 0`, numa linha. */
+function contaDeAvaliacao(p: Polinomio, a: number): string {
+  const numero = formatar(a);
+  const valor = formatar(p.avaliar(a));
+  const etapas = [comXTrocado(p, a), parcelas(p, a), valor].filter(
+    (etapa, indice, todas) => indice === 0 || etapa !== todas[indice - 1],
+  );
+
+  return `P(${numero}) = ${etapas.join(' = ')}`;
+}
+
+/** `x - 4` ou `x + 3`, o binômio que a raiz gera. */
+function binomioDe(raiz: number): string {
+  return `x ${raiz >= 0 ? '-' : '+'} ${formatar(Math.abs(raiz))}`;
 }

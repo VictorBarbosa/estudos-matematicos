@@ -205,6 +205,56 @@ describe('fatoração por raízes', () => {
     expect([...resultado].sort((a, b) => a - b)).toEqual([1, 2, 3]);
   });
 
+  it('no grau 2 chama Bhaskara em vez de continuar testando candidatas', () => {
+    // x³ - 7x² + 14x - 8 = (x - 1)(x - 2)(x - 4). Extrair raiz por raiz até o
+    // fim produzia o passo absurdo `x - 4 = (x - 4)(1)`.
+    const { passos, resultado } = fatorarPorRaizesComPassos(Polinomio.de(-8, 14, -7, 1));
+
+    expect([...resultado].sort((a, b) => a - b)).toEqual([1, 2, 4]);
+    expect(passos.map((passo) => passo.descricao)).toEqual([
+      'Partimos do polinômio a fatorar.',
+      'As raízes racionais possíveis vêm dos divisores do termo constante e do líder.',
+      'Testamos a candidata x = 1.',
+      'Dividindo por (x - 1), sobra um fator de grau 2.',
+      'O que sobrou é do 2º grau: aqui Bhaskara resolve de uma vez.',
+      'Identificamos os coeficientes.',
+      'Calculamos o discriminante, que decide quantas raízes existem.',
+      'Aplicamos a fórmula de Bhaskara.',
+      'O ± gera as duas raízes.',
+      'Com as raízes em mãos, o fator do 2º grau se escreve fatorado.',
+      'A fatoração está completa.',
+    ]);
+    expect(passos.at(-1)?.tex).toBe('\\left(x - 1\\right)\\left(x - 2\\right)\\left(x - 4\\right)');
+  });
+
+  it('o teste da candidata mostra a conta, e não só o zero', () => {
+    const { passos } = fatorarPorRaizesComPassos(Polinomio.de(-8, 14, -7, 1));
+
+    expect(passos[2]?.tex).toBe('P(1) = (1)^{3} - 7(1)^{2} + 14(1) - 8 = 1 - 7 + 14 - 8 = 0');
+  });
+
+  it('nenhum passo multiplica por 1 à toa', () => {
+    // `x - 4 = (x - 4)(1)` era o último passo de toda fatoração completa.
+    for (const coeficientes of [
+      [-8, 14, -7, 1],
+      [-6, 11, -6, 1],
+      [0, 0, -2, 1],
+      [24, -50, 35, -10, 1],
+    ]) {
+      const { passos } = fatorarPorRaizesComPassos(Polinomio.de(...coeficientes));
+      expect(passos.some((passo) => passo.tex.includes('\\left(1\\right)'))).toBe(false);
+    }
+  });
+
+  it('o fator do 2º grau sem raiz real é mantido inteiro', () => {
+    // (x - 1)(x² + 1): o discriminante é negativo.
+    const { resultado, passos } = fatorarPorRaizesComPassos(Polinomio.de(-1, 1, -1, 1));
+
+    expect(resultado).toEqual([1]);
+    expect(passos.at(-1)?.descricao).toContain('não se quebra mais nos reais');
+    expect(passos.at(-1)?.tex).toBe('\\left(x - 1\\right)\\left(x^{2} + 1\\right)');
+  });
+
   it('para no fator sem raiz racional e avisa', () => {
     // (x - 1)(x² - 2) = x³ - x² - 2x + 2
     const { resultado, passos } = fatorarPorRaizesComPassos(Polinomio.de(2, -2, -1, 1));
