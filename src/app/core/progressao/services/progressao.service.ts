@@ -133,8 +133,33 @@ export class ProgressaoService {
     return abertas;
   });
 
-  /** A etapa em que o jogador está agora, ou `null` se a trilha acabou. */
+  /**
+   * A etapa em que o jogador está agora, ou `null` se a trilha acabou.
+   *
+   * Atenção: vencer a última etapa de uma sessão faz isto apontar para a
+   * PRIMEIRA da sessão seguinte, que estará trancada enquanto a prova final
+   * não passar. Quem precisa de um lugar para onde mandar alguém use
+   * {@link destinoDaVez}, que nunca devolve porta fechada.
+   */
   readonly etapaAtual = computed<Etapa | null>(() => this.trilha()[this.etapasVencidas()] ?? null);
+
+  /**
+   * Para onde mandar quem está sem rumo — ou tentou abrir o que está trancado.
+   *
+   * A prova pendente vem primeiro: com ela aberta, a etapa seguinte está
+   * trancada, e mandar para lá é mandar para uma porta fechada. Pior: era um
+   * laço, porque o guard redirecionava para a própria rota que acabara de
+   * barrar, e a página travava.
+   */
+  readonly destinoDaVez = computed<readonly string[]>(() => {
+    const prova = this.prova.pendente();
+    if (prova !== null) {
+      return ['/prova', prova.id];
+    }
+
+    const atual = this.etapaAtual();
+    return atual !== null && this.estaLiberada(atual.topicoId) ? [atual.rota] : ['/'];
+  });
 
   readonly trilhaCompleta = computed(() => this.etapasVencidas() === this.trilha().length);
 

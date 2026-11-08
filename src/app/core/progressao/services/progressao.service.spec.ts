@@ -71,6 +71,50 @@ describe('ProgressaoService', () => {
     expect(progressao.etapaAtual()?.topicoId).toBe(TRILHA[0]!.topicoId);
   });
 
+  it('na borda da sessão, o destino é a prova — e não a etapa trancada', () => {
+    /*
+     * Este é o bug do botão «Ir para Ângulos e triângulos» ao terminar
+     * Polinômios: a etapa seguinte existe, mas está trancada pela prova final.
+     * O guard mandava para ela, e ela mandava de volta — a página travava.
+     */
+    const area = TRILHA[0]!.areaId;
+    const daArea = TRILHA.filter((etapa) => etapa.areaId === area);
+    for (const etapa of daArea) {
+      vencer(progresso, etapa.topicoId);
+    }
+
+    const seguinte = TRILHA[daArea.length]!;
+
+    expect(progressao.etapaAtual()?.topicoId).toBe(seguinte.topicoId);
+    expect(progressao.estaLiberada(seguinte.topicoId)).toBe(false);
+    expect(progressao.destinoDaVez()).toEqual(['/prova', area]);
+  });
+
+  it('sem prova pendente, o destino é a etapa da vez', () => {
+    vencer(progresso, TRILHA[0]!.topicoId);
+
+    expect(progressao.destinoDaVez()).toEqual([TRILHA[1]!.rota]);
+  });
+
+  it('o destino nunca é uma rota trancada', () => {
+    // Vencer sessão por sessão, conferindo a cada passo.
+    const porArea = [...new Set(TRILHA.map((etapa) => etapa.areaId))].slice(0, 3);
+
+    for (const area of porArea) {
+      for (const etapa of TRILHA.filter((candidata) => candidata.areaId === area)) {
+        vencer(progresso, etapa.topicoId);
+
+        const destino = progressao.destinoDaVez();
+        if (destino[0] === '/prova') {
+          continue;
+        }
+
+        const alvo = TRILHA.find((candidata) => candidata.rota === destino[0]);
+        expect(alvo === undefined || progressao.estaLiberada(alvo.topicoId)).toBe(true);
+      }
+    }
+  });
+
   it('libera a próxima etapa ao vencer a atual', () => {
     vencer(progresso, TRILHA[0]!.topicoId);
 

@@ -15,6 +15,7 @@ import {
   RESPOSTAS_NA_JANELA,
 } from '@core/progressao/models/progressao.model';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
+import { ProvaService } from '@core/prova/services/prova.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { SessaoTreino } from '@core/treino/sessao-treino/sessao-treino';
 import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
@@ -49,6 +50,7 @@ export class AreaTreino {
   private readonly progresso = inject(ProgressoService);
   private readonly configuracao = inject(ConfiguracaoService);
   private readonly progressao = inject(ProgressaoService);
+  private readonly provas = inject(ProvaService);
   private readonly campo = viewChild<CampoResposta>('campo');
 
   protected readonly chaveDoNivel = CHAVE_DO_NIVEL;
@@ -145,6 +147,32 @@ export class AreaTreino {
   protected readonly proximaEtapa = computed(() =>
     this.progressao.proximaDe(this.gerador().topicoId),
   );
+
+  /**
+   * A prova de fim de sessão, quando é ela que vem antes da próxima etapa.
+   *
+   * Vencer o último tópico de uma área não abre a área seguinte: abre a prova.
+   * Oferecer «Ir para Ângulos e triângulos» ali mandava o aluno a uma porta
+   * trancada — e o guard, redirecionando de volta para a mesma rota, travava
+   * a página.
+   */
+  protected readonly provaPendente = computed(() => {
+    const proxima = this.proximaEtapa();
+    if (proxima !== null && this.progressao.estaLiberada(proxima.topicoId)) {
+      return null;
+    }
+
+    const sessao = this.provas.pendente();
+    return sessao === null
+      ? null
+      : { titulo: this.i18n.tituloDaArea(sessao.id), rota: `/prova/${sessao.id}` };
+  });
+
+  /** A próxima etapa, só quando ela estiver mesmo aberta. */
+  protected readonly proximaLiberada = computed(() => {
+    const proxima = this.proximaEtapa();
+    return proxima !== null && this.progressao.estaLiberada(proxima.topicoId) ? proxima : null;
+  });
 
   /**
    * As escritas corretas do gabarito — em Frações, a mista e a imprópria.

@@ -147,7 +147,14 @@
         }
         .
       </p>
-      @if (proximaEtapa(); as proxima) {
+      <!-- A prova vem antes: ela é que destranca a sessão seguinte. Apontar
+           para a próxima etapa aqui levava a uma rota barrada pelo guard. -->
+      @if (provaPendente(); as prova) {
+        <a class="principal" [routerLink]="prova.rota">
+          {{ i18n.t('treino.irParaProva', { sessao: prova.titulo }) }}
+          <span aria-hidden="true">→</span>
+        </a>
+      } @else if (proximaLiberada(); as proxima) {
         <a class="principal" [routerLink]="proxima.rota">
           {{ i18n.t('treino.irPara', { titulo: i18n.tituloDoTopico(proxima.topicoId) }) }}
           <span aria-hidden="true">→</span>

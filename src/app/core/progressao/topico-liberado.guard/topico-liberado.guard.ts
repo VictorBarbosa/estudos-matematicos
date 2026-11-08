@@ -18,6 +18,7 @@ export const topicoLiberadoGuard: CanActivateChildFn = (rota) => {
     return true;
   }
 
-  const atual = progressao.etapaAtual();
-  return router.createUrlTree([atual?.rota ?? '/']);
+  // Nunca `etapaAtual` direto: na borda de uma sessão ela aponta para a etapa
+  // trancada pela prova, e o guard cairia num laço consigo mesmo.
+  return router.createUrlTree([...progressao.destinoDaVez()]);
 };

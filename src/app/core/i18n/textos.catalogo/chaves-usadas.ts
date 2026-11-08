@@ -302,6 +302,7 @@ export const CHAVES_USADAS: readonly (readonly [string, string])[] = [
   ['treino.falta', 'shared/components/area-treino/area-treino.html'],
   ['treino.faltaPara', 'shared/components/area-treino/area-treino.ts'],
   ['treino.irPara', 'shared/components/area-treino/area-treino.html'],
+  ['treino.irParaProva', 'shared/components/area-treino/area-treino.html'],
   ['treino.nadaFalta', 'shared/components/area-treino/area-treino.ts'],
   ['treino.naoSei', 'shared/components/area-treino/area-treino.html'],
   ['treino.nivelMaximo', 'shared/components/area-treino/area-treino.html'],
