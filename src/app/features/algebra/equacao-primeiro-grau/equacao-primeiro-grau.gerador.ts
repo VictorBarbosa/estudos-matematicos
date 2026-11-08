@@ -5,6 +5,7 @@ import {
   Exercicio,
   GeradorExercicio,
   Nivel,
+  pedindoFracao,
   semColisoes,
 } from '@core/treino/models/treino.model';
 
@@ -51,7 +52,7 @@ export const geradorEquacao1: GeradorExercicio<Fracao> = {
     return {
       id: `equacao1-${nivel}-${a}-${b}-${c}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Resolva a equação e informe o valor exato de x.',
+      enunciado: pedindoFracao('Resolva a equação e informe o valor exato de x.', gabarito),
       enunciadoTex: `${a === 1 ? '' : a === -1 ? '-' : a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)} = ${c}`,
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },

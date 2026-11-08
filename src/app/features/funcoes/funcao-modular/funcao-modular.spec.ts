@@ -8,6 +8,30 @@ function amostra(nivel: Nivel, quantidade = 60) {
 }
 
 describe('geradorModular', () => {
+  it('avisa «Responda como fração» exatamente quando a resposta não é inteira', () => {
+    // Com 29/6 de resposta, «informe o valor de x» não dizia se era para
+    // arredondar — e 29/6 não tem decimal exato, então arredondar era errar.
+    let fracionarias = 0;
+    let inteiras = 0;
+
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel)) {
+        const avisa = exercicio.enunciado.endsWith(' Responda como fração.');
+        expect(avisa).toBe(!exercicio.gabarito.ehInteira);
+
+        if (exercicio.gabarito.ehInteira) {
+          inteiras++;
+        } else {
+          fracionarias++;
+        }
+      }
+    }
+
+    // Uma amostra que só tivesse um dos casos não provaria nada.
+    expect(fracionarias).toBeGreaterThan(0);
+    expect(inteiras).toBeGreaterThan(0);
+  });
+
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {

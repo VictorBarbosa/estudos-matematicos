@@ -1,6 +1,12 @@
 import { Fracao, comporComPassos, inverterComPassos, observarSimplificacao } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  pedindoFracao,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const saoEquivalentes = (a: Fracao, b: Fracao): boolean => a.igualA(b);
 
@@ -34,7 +40,7 @@ export const geradorComposicao: GeradorExercicio<Fracao> = {
       return {
         id: `composicao-inversa-${f.a}-${f.b}-${x}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Encontre a inversa de f e calcule f⁻¹(${x}).`,
+        enunciado: pedindoFracao(`Encontre a inversa de f e calcule f⁻¹(${x}).`, gabarito),
         enunciadoTex: fTex,
         gabarito,
         resolucao: {

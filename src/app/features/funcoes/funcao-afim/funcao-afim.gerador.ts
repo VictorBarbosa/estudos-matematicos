@@ -1,6 +1,12 @@
 import { Fracao, observarSimplificacao } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  pedindoFracao,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const saoEquivalentes = (a: Fracao, b: Fracao): boolean => a.igualA(b);
 
@@ -31,7 +37,10 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
         return {
           id: `afim-raiz-${a}-${b}-${rng.inteiro(0, 9999)}`,
           nivel,
-          enunciado: 'Qual é a raiz da função, isto é, o valor de x em que ela se anula?',
+          enunciado: pedindoFracao(
+            'Qual é a raiz da função, isto é, o valor de x em que ela se anula?',
+            gabarito,
+          ),
           enunciadoTex: funcaoTex,
           gabarito,
           resolucao: {

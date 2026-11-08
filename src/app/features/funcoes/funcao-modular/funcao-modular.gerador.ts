@@ -1,6 +1,12 @@
 import { Fracao, observarSimplificacao } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  pedindoFracao,
+  semColisoes,
+} from '@core/treino/models/treino.model';
 
 const saoEquivalentes = (a: Fracao, b: Fracao): boolean => a.igualA(b);
 
@@ -30,7 +36,7 @@ export const geradorModular: GeradorExercicio<Fracao> = {
       return {
         id: `modular-bico-${a}-${b}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Em que valor de x fica o "bico" do gráfico?',
+        enunciado: pedindoFracao('Em que valor de x fica o "bico" do gráfico?', gabarito),
         enunciadoTex: funcaoTex,
         gabarito,
         resolucao: {
@@ -91,7 +97,10 @@ export const geradorModular: GeradorExercicio<Fracao> = {
       return {
         id: `modular-equacao-${a}-${b}-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Resolva a equação modular e informe a MAIOR das soluções.',
+        enunciado: pedindoFracao(
+          'Resolva a equação modular e informe a MAIOR das soluções.',
+          gabarito,
+        ),
         enunciadoTex: `\\left|${interna}\\right| = ${k}`,
         gabarito,
         resolucao: {

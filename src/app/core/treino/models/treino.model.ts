@@ -93,6 +93,22 @@ export interface Exercicio<T> {
 }
 
 /**
+ * Acrescenta ao enunciado a forma esperada, quando a resposta é fracionária.
+ *
+ * «Informe o valor de x», com raiz 29/6, deixava o aluno sem saber se devia
+ * arredondar — e 29/6 não tem decimal exato, então arredondar era errar sem
+ * aviso. O preço é que a presença (ou a falta) da frase entrega se a resposta
+ * é inteira; vale a pena, porque adivinhar o formato não é o que o exercício
+ * quer ensinar.
+ */
+export function pedindoFracao(
+  enunciado: string,
+  gabarito: { readonly ehInteira: boolean },
+): string {
+  return gabarito.ehInteira ? enunciado : `${enunciado} Responda como fração.`;
+}
+
+/**
  * Uma tecla de símbolo do campo de resposta.
  *
  * Algumas inserem um símbolo solto (`∈`); outras, um esqueleto com o cursor no
