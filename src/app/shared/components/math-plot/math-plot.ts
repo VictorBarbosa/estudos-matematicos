@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import {
+  ArcoPlot,
   AreaPlot,
   CurvaPlot,
   DominioPlot,
@@ -13,6 +14,7 @@ import {
   construirPathCurva,
   corCss,
   deduzirLimitesVerticais,
+  desenharArco,
   formatarNumero,
   gerarMarcacoes,
   passoBonito,
@@ -47,6 +49,8 @@ export class MathPlot {
   readonly segmentos = input<readonly SegmentoPlot[]>([]);
   readonly areas = input<readonly AreaPlot[]>([]);
   readonly marcas = input<readonly MarcaPlot[]>([]);
+  /** Ângulos marcados com arco e medida, nos vértices de uma figura. */
+  readonly arcos = input<readonly ArcoPlot[]>([]);
   /** Retângulos com base no eixo x, para somas de Riemann. */
   readonly retangulos = input<readonly RetanguloPlot[]>([]);
 
@@ -168,6 +172,12 @@ export class MathPlot {
       rotulo: ponto.rotulo,
       vazado: ponto.vazado ?? false,
     }));
+  });
+
+  /** Os arcos de ângulo, já em coordenadas de tela. */
+  protected readonly arcosDesenhados = computed(() => {
+    const projecao = this.projecao();
+    return this.arcos().map((arco) => desenharArco(arco, projecao));
   });
 
   protected readonly marcasDesenhadas = computed(() => {

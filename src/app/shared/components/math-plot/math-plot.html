@@ -145,6 +145,23 @@
       }
     </g>
 
+    <!-- Os ângulos ficam acima dos lados, mas abaixo dos vértices. -->
+    <g class="arcos">
+      @for (arco of arcosDesenhados(); track $index) {
+        <path class="arco" [attr.d]="arco.d" [attr.stroke]="arco.cor" fill="none" />
+        @if (arco.rotulo) {
+          <text
+            [attr.x]="arco.rotuloX"
+            [attr.y]="arco.rotuloY"
+            [attr.fill]="arco.cor"
+            text-anchor="middle"
+          >
+            {{ arco.rotulo }}
+          </text>
+        }
+      }
+    </g>
+
     <g class="pontos">
       @for (ponto of pontosDesenhados(); track $index) {
         <circle

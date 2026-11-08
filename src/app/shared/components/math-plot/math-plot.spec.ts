@@ -1,5 +1,6 @@
 import {
   Projecao,
+  desenharArco,
   construirPathCurva,
   corCss,
   deduzirLimitesVerticais,
@@ -123,5 +124,73 @@ describe('construirPathCurva', () => {
 
   it('devolve string vazia quando a função nunca é finita', () => {
     expect(construirPathCurva(() => Number.NaN, projecao, 10)).toBe('');
+  });
+});
+
+describe('desenharArco', () => {
+  // Um quadro do tamanho dos de verdade: num pequeno demais todo rótulo
+  // encosta na borda, e o teste mediria o limite em vez da regra.
+  const projecao = new Projecao({ xMin: 0, xMax: 10, yMin: 0, yMax: 10 }, 800, 400, {
+    topo: 10,
+    direita: 10,
+    baixo: 10,
+    esquerda: 10,
+  });
+
+  const reto = {
+    x: 0,
+    y: 0,
+    de: { x: 1, y: 0 },
+    ate: { x: 0, y: 1 },
+    rotulo: '90°',
+  } as const;
+
+  it('desenha um arco de raio dado a partir do vértice', () => {
+    const arco = desenharArco({ ...reto, raio: 20 }, projecao);
+
+    expect(arco.d).toMatch(/^M [\d.-]+ [\d.-]+ A 20 20 0 0 [01] [\d.-]+ [\d.-]+$/);
+    expect(arco.rotulo).toBe('90°');
+  });
+
+  it('escolhe a abertura menor, venha a ordem que vier', () => {
+    // Trocar `de` por `ate` inverte o sentido, mas não o ângulo coberto.
+    const direto = desenharArco(reto, projecao);
+    const invertido = desenharArco({ ...reto, de: reto.ate, ate: reto.de }, projecao);
+
+    const sentidoDe = (d: string): string => /A \d+ \d+ 0 0 ([01])/.exec(d)![1]!;
+    expect(sentidoDe(direto.d)).not.toBe(sentidoDe(invertido.d));
+
+    // E o rótulo cai na bissetriz nos dois casos, à mesma distância do vértice.
+    const distancia = (a: { rotuloX: number; rotuloY: number }): number =>
+      Math.hypot(a.rotuloX - projecao.px(0), a.rotuloY - 4 - projecao.py(0));
+    expect(distancia(direto)).toBeCloseTo(distancia(invertido), 6);
+  });
+
+  it('afasta mais o rótulo quando o ângulo é fino', () => {
+    const fino = desenharArco(
+      { x: 5, y: 5, de: { x: 10, y: 5 }, ate: { x: 10, y: 5.2 } },
+      projecao,
+    );
+    const aberto = desenharArco(
+      { x: 5, y: 5, de: { x: 10, y: 5 }, ate: { x: 0, y: 5.2 } },
+      projecao,
+    );
+
+    const afastamento = (a: { rotuloX: number; rotuloY: number }): number =>
+      Math.hypot(a.rotuloX - projecao.px(5), a.rotuloY - 4 - projecao.py(5));
+    expect(afastamento(fino)).toBeGreaterThan(afastamento(aberto));
+  });
+
+  it('prende o rótulo dentro da área de desenho', () => {
+    // Um ângulo no canto superior direito escrevia a medida fora do quadro.
+    const canto = desenharArco(
+      { x: 10, y: 10, de: { x: 10.5, y: 10 }, ate: { x: 10, y: 10.5 } },
+      projecao,
+    );
+
+    expect(canto.rotuloX).toBeLessThanOrEqual(10 + projecao.larguraUtil - 22);
+    expect(canto.rotuloX).toBeGreaterThanOrEqual(10 + 22);
+    expect(canto.rotuloY).toBeGreaterThanOrEqual(10 + 14);
+    expect(canto.rotuloY).toBeLessThanOrEqual(10 + projecao.alturaUtil - 6);
   });
 });

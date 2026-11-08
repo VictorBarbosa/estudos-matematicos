@@ -75,6 +75,20 @@ svg {
   stroke-linecap: round;
 }
 
+.arcos {
+  .arco {
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+  }
+
+  text {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--fonte-base);
+  }
+}
+
 .pontos {
   circle {
     stroke-width: 2;

@@ -77,6 +77,26 @@ export interface RetanguloPlot {
 }
 
 /** Marcação sobre o eixo x, usada em retas numéricas. */
+/**
+ * Um ângulo marcado no desenho: o arco entre dois lados, com a medida escrita.
+ *
+ * Existe porque num polígono os graus só apareciam em cartões ao lado do
+ * desenho — e ninguém liga «60°» ao canto certo da figura sem ver o arco ali.
+ * O raio é em pixels do viewBox, e não em unidades do gráfico: um ângulo não
+ * deve encolher quando a escala muda.
+ */
+export interface ArcoPlot {
+  /** O vértice do ângulo. */
+  readonly x: number;
+  readonly y: number;
+  /** Um ponto sobre cada lado; o arco cobre a abertura entre eles. */
+  readonly de: { readonly x: number; readonly y: number };
+  readonly ate: { readonly x: number; readonly y: number };
+  readonly rotulo?: string;
+  readonly cor?: CorPlot;
+  readonly raio?: number;
+}
+
 export interface MarcaPlot {
   readonly x: number;
   readonly rotulo: string;
@@ -326,4 +346,67 @@ export function construirPathArea(area: AreaPlot, projecao: Projecao, amostras =
 
   pontos.push(`L${projecao.px(ate).toFixed(2)},${projecao.py(grampear(0)).toFixed(2)}`, 'Z');
   return pontos.join(' ');
+}
+
+/** Um arco já em coordenadas de tela, pronto para o SVG. */
+export interface ArcoDesenhado {
+  readonly d: string;
+  readonly cor: string;
+  readonly rotulo?: string;
+  readonly rotuloX: number;
+  readonly rotuloY: number;
+}
+
+/**
+ * Converte um ângulo da figura no arco que o SVG desenha.
+ *
+ * O ângulo é medido no espaço da TELA, não no do gráfico: com escalas
+ * diferentes em x e y, o ângulo matemático e o ângulo visto não coincidem, e o
+ * arco tem de concordar com o que o olho vê. Das duas aberturas possíveis vale
+ * sempre a menor — é ela o ângulo interno da figura.
+ */
+export function desenharArco(arco: ArcoPlot, projecao: Projecao): ArcoDesenhado {
+  const vx = projecao.px(arco.x);
+  const vy = projecao.py(arco.y);
+  const raio = arco.raio ?? 26;
+
+  const inicio = Math.atan2(projecao.py(arco.de.y) - vy, projecao.px(arco.de.x) - vx);
+  const fim = Math.atan2(projecao.py(arco.ate.y) - vy, projecao.px(arco.ate.x) - vx);
+
+  let abertura = fim - inicio;
+  while (abertura <= -Math.PI) abertura += 2 * Math.PI;
+  while (abertura > Math.PI) abertura -= 2 * Math.PI;
+
+  const x1 = vx + raio * Math.cos(inicio);
+  const y1 = vy + raio * Math.sin(inicio);
+  const x2 = vx + raio * Math.cos(inicio + abertura);
+  const y2 = vy + raio * Math.sin(inicio + abertura);
+
+  /*
+   * O rótulo sai pela bissetriz — e num ângulo fino a bissetriz quase encosta
+   * nos dois lados, então ele é empurrado para longe na mesma medida em que o
+   * ângulo fecha. Depois fica preso dentro da área de desenho: um ângulo no
+   * canto escrevia a medida fora do quadro.
+   */
+  const meio = inicio + abertura / 2;
+  const distancia = raio + 18 + (1 - Math.abs(abertura) / Math.PI) * 18;
+  const { margens } = projecao;
+  const preso = (valor: number, minimo: number, maximo: number): number =>
+    Math.min(maximo, Math.max(minimo, valor));
+
+  return {
+    d: `M ${x1.toFixed(2)} ${y1.toFixed(2)} A ${raio} ${raio} 0 0 ${abertura > 0 ? 1 : 0} ${x2.toFixed(2)} ${y2.toFixed(2)}`,
+    cor: corCss(arco.cor, 'acento'),
+    rotulo: arco.rotulo,
+    rotuloX: preso(
+      vx + distancia * Math.cos(meio),
+      margens.esquerda + 22,
+      margens.esquerda + projecao.larguraUtil - 22,
+    ),
+    rotuloY: preso(
+      vy + distancia * Math.sin(meio) + 4,
+      margens.topo + 14,
+      margens.topo + projecao.alturaUtil - 6,
+    ),
+  };
 }
