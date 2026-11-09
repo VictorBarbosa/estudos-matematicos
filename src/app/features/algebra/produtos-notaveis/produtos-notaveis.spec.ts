@@ -63,3 +63,47 @@ describe('geradorProdutos (produtos notáveis)', () => {
     expect(resultado.conceitoAssociado).toBe('produtos.quadrado');
   });
 });
+
+describe('geradorProdutos — direção inversa', () => {
+  /** Coeficientes de um polinômio em LaTeX, como Polinomio.paraTex escreve. */
+  function coeficientes(tex: string): number[] {
+    const coef: number[] = [];
+    const limpo = tex.replace(/\s+/g, '');
+    for (const [, sinal, numero, x, expoente] of limpo.matchAll(
+      /([+-]?)(\d*)(x(?:\^\{(\d+)\})?)?/g,
+    )) {
+      if (numero === '' && x === undefined) continue;
+      const grau = x === undefined ? 0 : expoente === undefined ? 1 : Number(expoente);
+      const valor = (numero === '' ? 1 : Number(numero)) * (sinal === '-' ? -1 : 1);
+      coef[grau] = (coef[grau] ?? 0) + valor;
+    }
+    return Array.from({ length: coef.length }, (_, i) => coef[i] ?? 0);
+  }
+
+  it('o q informado reconstrói o polinômio do enunciado', () => {
+    let conferidos = 0;
+    for (const nivel of ['medio', 'dificil', 'extremo'] as const) {
+      for (const exercicio of amostra(nivel, 200).filter((e) => e.id.startsWith('produtos-inv'))) {
+        const q = exercicio.gabarito;
+        const c = coeficientes(exercicio.enunciadoTex.split('=')[0]!);
+        if (exercicio.id.startsWith('produtos-inv-quad')) {
+          const p = Math.sqrt(c[2]!);
+          expect([c[0], c[1]]).toEqual([q * q, 2 * p * q]);
+        } else if (exercicio.id.startsWith('produtos-inv-dif')) {
+          expect(c[0]).toBe(-q * q);
+          expect(q).toBeGreaterThan(0);
+        } else {
+          const p = Math.round(Math.cbrt(c[3]!));
+          expect([c[0], c[1], c[2]]).toEqual([q ** 3, 3 * p * q * q, 3 * p * p * q]);
+        }
+        conferidos++;
+      }
+    }
+    expect(conferidos).toBeGreaterThan(30);
+  });
+
+  it('o Extremo deixou de ser só o cubo: tem o cubo na direção inversa, que o Difícil não tem', () => {
+    expect(amostra('extremo', 200).some((e) => e.id.startsWith('produtos-inv-cubo'))).toBe(true);
+    expect(amostra('dificil', 200).some((e) => e.id.startsWith('produtos-inv-cubo'))).toBe(false);
+  });
+});

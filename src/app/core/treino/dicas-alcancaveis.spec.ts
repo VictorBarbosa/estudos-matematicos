@@ -46,6 +46,19 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['inequacoes-segundo-grau', 'dificil', 'as raízes são frações'],
   ['inequacoes-segundo-grau', 'dificil', '«todos» ou «vazio»'],
   ['inequacoes-segundo-grau', 'extremo', 'O zero do denominador nunca entra'],
+  // Álgebra ampliada (09/11): fatoração, produtos notáveis, equação do 1º grau.
+  ['fatoracao', 'facil', 'Dois quadrados subtraídos'],
+  ['fatoracao', 'medio', 'é um cubo perfeito'],
+  ['fatoracao', 'dificil', 'Separe os quatro termos'],
+  ['produtos-notaveis', 'medio', 'O último termo é q²'],
+  ['produtos-notaveis', 'dificil', 'Dois quadrados subtraídos'],
+  ['produtos-notaveis', 'extremo', 'Tire a raiz cúbica'],
+  ['equacao-primeiro-grau', 'facil', 'Chame de x os quilômetros'],
+  ['equacao-primeiro-grau', 'facil', 'Chame de x a idade de Bia'],
+  ['equacao-primeiro-grau', 'medio', 'as frações viram números inteiros'],
+  ['equacao-primeiro-grau', 'medio', 'O perímetro soma os quatro lados'],
+  ['equacao-primeiro-grau', 'dificil', 'o numerador INTEIRO'],
+  ['equacao-primeiro-grau', 'dificil', 'Consecutivos são x'],
 ];
 
 describe('dicas alcançáveis', () => {

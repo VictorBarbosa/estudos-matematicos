@@ -41,7 +41,7 @@ describe('geradorEquacao1', () => {
   });
 
   it('pede o valor exato no enunciado', () => {
-    for (const exercicio of amostra('facil')) {
+    for (const exercicio of amostra('facil').filter((e) => !e.id.includes('problema'))) {
       expect(exercicio.enunciado).toContain('Resolva a equação e informe o valor exato de x.');
     }
   });
@@ -68,7 +68,11 @@ describe('geradorEquacao1', () => {
 
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, a raiz satisfaz a equação gerada`, () => {
-      for (const exercicio of amostra(nivel)) {
+      const lineares = amostra(nivel).filter((e) =>
+        /^equacao1-(facil|medio|dificil|extremo)-/.test(e.id),
+      );
+      expect(lineares.length).toBeGreaterThan(0);
+      for (const exercicio of lineares) {
         const [, aTexto, sinal, bTexto, cTexto] = /^(-?\d*)x ([+-]) (\d+) = (-?\d+)$/.exec(
           exercicio.enunciadoTex,
         )!;
@@ -118,8 +122,11 @@ describe('geradorEquacao1', () => {
   });
 
   it('diagnostica o erro de somar em vez de subtrair', () => {
-    const exercicio = amostra('medio', 40).find((candidato) =>
-      candidato.armadilhas.some((a) => a.diagnostico.includes('somou')),
+    // Só a equação linear tem essa armadilha; os problemas têm as deles.
+    const exercicio = amostra('medio', 60).find(
+      (candidato) =>
+        candidato.id.startsWith('equacao1-medio-') &&
+        candidato.armadilhas.some((a) => a.diagnostico.includes('somou')),
     )!;
 
     const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('somou'))!;
@@ -127,5 +134,74 @@ describe('geradorEquacao1', () => {
 
     expect(resultado.veredito).toBe('incorreto');
     expect(resultado.conceitoAssociado).toBe('equacao1.igualdade');
+  });
+});
+
+describe('geradorEquacao1 — frações e problemas', () => {
+  /** Avalia um lado da equação em LaTeX: só \frac, x, inteiros, + e −. */
+  function avaliar(tex: string, x: number): number {
+    const js = tex
+      .replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}/g, '(($1)/($2))')
+      .replace(/(\d)x/g, '$1*x');
+    return new Function('x', `return ${js};`)(x) as number;
+  }
+
+  it('a raiz da equação com frações satisfaz a equação, em todos os níveis em que aparece', () => {
+    for (const nivel of ['medio', 'dificil', 'extremo'] as const) {
+      const casos = amostra(nivel, 200).filter((e) => e.id.startsWith('equacao1-fracoes'));
+      expect(casos.length, nivel).toBeGreaterThan(0);
+      for (const exercicio of casos) {
+        const [esquerda, direita] = exercicio.enunciadoTex.split('=');
+        const x = exercicio.gabarito.numerador / exercicio.gabarito.denominador;
+        expect(avaliar(esquerda!, x), exercicio.enunciadoTex).toBeCloseTo(avaliar(direita!, x), 9);
+      }
+    }
+  });
+
+  it('só o Extremo tem três denominadores', () => {
+    const tres = (e: { enunciadoTex: string }) =>
+      (e.enunciadoTex.match(/\\frac/g) ?? []).length === 3;
+    expect(amostra('extremo', 200).some(tres)).toBe(true);
+    expect(amostra('dificil', 200).some(tres)).toBe(false);
+  });
+
+  it('a resposta do problema confere com os dados do enunciado', () => {
+    let conferidos = 0;
+    for (const nivel of ['facil', 'medio', 'dificil'] as const) {
+      const problemas = amostra(nivel, 200).filter((e) => e.id.startsWith('equacao1-problema'));
+      for (const exercicio of problemas) {
+        expect(exercicio.gabarito.ehInteira).toBe(true);
+        const y = exercicio.gabarito.numerador;
+        const t = exercicio.enunciado;
+        const taxi = /R\$ (\d+),00 de bandeirada mais R\$ (\d+),00.* custou R\$ (\d+),00/.exec(t);
+        const idades = /tem o (dobro|triplo|quádruplo) .*Daqui a (\d+) anos.* será (\d+) anos/.exec(
+          t,
+        );
+        const perimetro = /comprimento (\d+) cm maior .* mede (\d+) cm/.exec(t);
+        const livros = /guardam (\d+) livros/.exec(t);
+        if (taxi) {
+          expect(Number(taxi[1]) + Number(taxi[2]) * y).toBe(Number(taxi[3]));
+        } else if (idades) {
+          const m = { dobro: 2, triplo: 3, quádruplo: 4 }[idades[1] as 'dobro'];
+          const k = Number(idades[2]);
+          expect(y + k + m * y + k).toBe(Number(idades[3]));
+        } else if (perimetro) {
+          expect(2 * y + 2 * (y + Number(perimetro[1]))).toBe(Number(perimetro[2]));
+        } else if (livros) {
+          expect(y - 2 + (y - 1) + y).toBe(Number(livros[1]));
+        } else {
+          throw new Error(`cenário não reconhecido: ${t}`);
+        }
+        conferidos++;
+      }
+    }
+    expect(conferidos).toBeGreaterThan(20);
+  });
+
+  it('o enunciado do problema traz a unidade da resposta', () => {
+    const problemas = amostra('dificil', 200).filter((e) => e.id.startsWith('equacao1-problema'));
+    for (const exercicio of problemas) {
+      expect(exercicio.enunciado).toMatch(/quilômetros|anos|cm|livros/);
+    }
   });
 });
