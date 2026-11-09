@@ -69,7 +69,8 @@ function exercicioHipotenusa(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `sem-hip-${b}-${c}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um triângulo retângulo tem catetos ${b} e ${c}. Quanto mede a hipotenusa?`,
+    enunciado:
+      `Um triângulo retângulo tem catetos ${b} cm e ${c} cm. ` + 'Quanto mede a hipotenusa, em cm?',
     enunciadoTex: `b = ${b} \\qquad c = ${c}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -109,8 +110,8 @@ function exercicioCateto(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `sem-cat-${a}-${conhecido}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um triângulo retângulo tem hipotenusa ${a} e um cateto ${conhecido}. Quanto mede o ` +
-      'outro cateto?',
+      `Um triângulo retângulo tem hipotenusa ${a} cm e um cateto ${conhecido} cm. ` +
+      'Quanto mede o outro cateto, em cm?',
     enunciadoTex: `a = ${a} \\qquad b = ${conhecido}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -152,9 +153,9 @@ function exercicioTales(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `sem-tales-${a}-${b}-${c}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um feixe de paralelas corta duas transversais. Numa delas os segmentos medem ${a} e ` +
-      `${b}; na outra, o segmento correspondente ao primeiro mede ${c}. Quanto mede x, ` +
-      'correspondente ao segundo?',
+      `Um feixe de paralelas corta duas transversais. Numa delas os segmentos medem ${a} cm ` +
+      `e ${b} cm; na outra, o segmento correspondente ao primeiro mede ${c} cm. ` +
+      'Quanto mede x, correspondente ao segundo, em cm?',
     enunciadoTex: `\\frac{${a}}{${b}} = \\frac{${c}}{x}`,
     gabarito: resultado,
     resolucao: { resultado, passos },

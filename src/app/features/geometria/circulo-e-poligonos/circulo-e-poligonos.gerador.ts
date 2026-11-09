@@ -54,7 +54,9 @@ function exercicioComprimento(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-comp-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o comprimento de uma circunferência de raio ${raio}? (2 casas decimais)`,
+    enunciado:
+      `Qual é o comprimento de uma circunferência de raio ${raio} cm? ` +
+      '(em cm, 2 casas decimais)',
     enunciadoTex: `r = ${raio}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -90,7 +92,7 @@ function exercicioAreaCirculo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-area-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é a área de um círculo de raio ${raio}? (2 casas decimais)`,
+    enunciado: `Qual é a área de um círculo de raio ${raio} cm? (em cm², 2 casas decimais)`,
     enunciadoTex: `r = ${raio}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -126,7 +128,9 @@ function exercicioRaioPelaArea(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-raio-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um círculo tem área ${Number(area.toFixed(2))}. Qual é o seu raio? (2 casas decimais)`,
+    enunciado:
+      `Um círculo tem área ${Number(area.toFixed(2))} cm². Qual é o seu raio? ` +
+      '(em cm, 2 casas decimais)',
     enunciadoTex: `A = ${Number(area.toFixed(2))}`,
     gabarito: raio,
     resolucao: {
@@ -179,8 +183,8 @@ function exercicioSetor(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-setor-${raio}-${anguloGraus}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é a área de um setor circular de raio ${raio} e ângulo ${anguloGraus}°? ` +
-      '(2 casas decimais)',
+      `Qual é a área de um setor circular de raio ${raio} cm e ângulo ${anguloGraus}°? ` +
+      '(em cm², 2 casas decimais)',
     enunciadoTex: `r = ${raio} \\qquad \\theta = ${anguloGraus}^\\circ`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -230,8 +234,8 @@ function exercicioPoligono(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-poli-${lados}-${base}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um polígono regular de ${lados} lados tem lado ${base} e apótema ` +
-      `${Number(apotema.toFixed(3))}. Qual é sua área? (2 casas decimais)`,
+      `Um polígono regular de ${lados} lados tem lado ${base} cm e apótema ` +
+      `${Number(apotema.toFixed(3))} cm. Qual é sua área? (em cm², 2 casas decimais)`,
     enunciadoTex: `n = ${lados} \\qquad \\ell = ${base} \\qquad a = ${Number(apotema.toFixed(3))}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -256,6 +260,7 @@ function exercicioPoligono(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'A = p·a/2, com p = n·ℓ.' : undefined,
+    // O polígono estreia no Difícil; no Fácil esta dica nunca aparecia.
+    dica: nivel === 'dificil' ? 'A = p·a/2, com p = n·ℓ.' : undefined,
   };
 }

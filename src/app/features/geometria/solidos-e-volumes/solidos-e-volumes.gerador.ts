@@ -59,11 +59,12 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const enunciado =
     solido === 'esfera'
-      ? `Qual é o volume de uma esfera de raio ${raio}? (2 casas decimais)`
+      ? `Qual é o volume de uma esfera de raio ${raio} cm? (em cm³, 2 casas decimais)`
       : solido === 'piramide'
-        ? `Uma pirâmide tem área da base ${areaBase} e altura ${altura}. Qual é seu volume?`
-        : `Qual é o volume de um ${NOME_SOLIDO[solido]} de raio ${raio} e altura ${altura}? ` +
-          '(2 casas decimais)';
+        ? `Uma pirâmide tem área da base ${areaBase} cm² e altura ${altura} cm. ` +
+          'Qual é seu volume, em cm³?'
+        : `Qual é o volume de um ${NOME_SOLIDO[solido]} de raio ${raio} cm e altura ` +
+          `${altura} cm? (em cm³, 2 casas decimais)`;
 
   const enunciadoTex =
     solido === 'esfera'
@@ -162,10 +163,13 @@ function exercicioSuperficie(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const enunciado =
     solido === 'esfera'
-      ? `Qual é a área da superfície de uma esfera de raio ${raio}? (2 casas decimais)`
+      ? `Qual é a área da superfície de uma esfera de raio ${raio} cm? ` +
+        '(em cm², 2 casas decimais)'
       : solido === 'cone'
-        ? `Um cone tem raio ${raio} e geratriz ${geratriz}. Qual é sua área total? (2 casas)`
-        : `Um cilindro tem raio ${raio} e altura ${altura}. Qual é sua área total? (2 casas)`;
+        ? `Um cone tem raio ${raio} cm e geratriz ${geratriz} cm. ` +
+          'Qual é sua área total, em cm²? (2 casas)'
+        : `Um cilindro tem raio ${raio} cm e altura ${altura} cm. ` +
+          'Qual é sua área total, em cm²? (2 casas)';
 
   const enunciadoTex =
     solido === 'esfera'
@@ -302,8 +306,8 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `sol-alt-${cone ? 'cone' : 'cil'}-${raio}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um ${cone ? 'cone' : 'cilindro'} de raio ${raio} tem volume ` +
-      `${Number(volume.toFixed(2))}. Qual é sua altura?`,
+      `Um ${cone ? 'cone' : 'cilindro'} de raio ${raio} cm tem volume ` +
+      `${Number(volume.toFixed(2))} cm³. Qual é sua altura, em cm?`,
     enunciadoTex: `r = ${raio} \\qquad V = ${Number(volume.toFixed(2))}`,
     gabarito: altura,
     resolucao: {

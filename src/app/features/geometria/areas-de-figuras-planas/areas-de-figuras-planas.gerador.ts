@@ -60,8 +60,10 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const enunciado =
     figura === 'trapezio'
-      ? `Um trapézio tem bases ${base} e ${baseMenor} e altura ${altura}. Qual é sua área?`
-      : `Um ${NOME_FIGURA[figura]} tem base ${base} e altura ${altura}. Qual é sua área?`;
+      ? `Um trapézio tem bases ${base} cm e ${baseMenor} cm e altura ${altura} cm. ` +
+        'Qual é sua área, em cm²?'
+      : `Um ${NOME_FIGURA[figura]} tem base ${base} cm e altura ${altura} cm. ` +
+        'Qual é sua área, em cm²?';
 
   const enunciadoTex =
     figura === 'trapezio'
@@ -129,8 +131,8 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `area-alt-${triangulo ? 'tri' : 'ret'}-${base}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um ${triangulo ? 'triângulo' : 'retângulo'} tem área ${area} e base ${base}. Qual é ` +
-      'sua altura?',
+      `Um ${triangulo ? 'triângulo' : 'retângulo'} tem área ${area} cm² e base ${base} cm. ` +
+      'Qual é sua altura, em cm?',
     enunciadoTex: `A = ${area} \\qquad b = ${base}`,
     gabarito,
     resolucao: {
