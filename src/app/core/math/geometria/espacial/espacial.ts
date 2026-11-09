@@ -75,14 +75,21 @@ export function volumeComPassos(solido: Solido, dimensoes: DimensoesSolido): Res
           {
             descricao: 'O cilindro é um prisma de base circular: área da base vezes altura.',
             tex: 'V = \\pi r^{2} h',
+            nota: 'O raio entra ao QUADRADO, porque ele mede a base, que é uma área. A altura entra uma vez só.',
           },
           {
-            descricao: 'Calculamos a área da base.',
-            tex: `A_b = \\pi \\cdot ${formatar(raio)}^{2} = ${formatar(Number(areaBase.toFixed(4)))}`,
+            descricao: 'Primeiro o raio ao quadrado.',
+            tex: `r^{2} = ${formatar(raio)}^{2} = ${formatar(raio * raio)}`,
           },
           {
-            descricao: 'Multiplicamos pela altura.',
-            tex: `V = ${formatar(Number(resultado.toFixed(4)))}`,
+            descricao: 'A base é π vezes esse valor.',
+            tex: `A_b = \\pi \\cdot ${formatar(raio * raio)} = ${formatar(Number(areaBase.toFixed(4)))}`,
+          },
+          {
+            descricao: 'E o volume é a base vezes a altura.',
+            tex:
+              `V = ${formatar(Number(areaBase.toFixed(4)))} \\cdot ${formatar(altura)} = ` +
+              `${formatar(Number(resultado.toFixed(4)))}`,
           },
         ],
       };
@@ -121,14 +128,22 @@ export function volumeComPassos(solido: Solido, dimensoes: DimensoesSolido): Res
           {
             descricao: 'O cone é uma pirâmide de base circular, e vale o mesmo um terço.',
             tex: 'V = \\frac{\\pi r^{2} h}{3}',
+            nota: 'O raio entra ao QUADRADO, porque ele mede a base, que é uma área. A altura entra uma vez só.',
           },
           {
-            descricao: 'Calculamos a área da base.',
-            tex: `A_b = \\pi \\cdot ${formatar(raio)}^{2} = ${formatar(Number(areaBase.toFixed(4)))}`,
+            descricao: 'Primeiro o raio ao quadrado.',
+            tex: `r^{2} = ${formatar(raio)}^{2} = ${formatar(raio * raio)}`,
           },
           {
-            descricao: 'Um terço do produto pela altura.',
-            tex: `V = ${formatar(Number(resultado.toFixed(4)))}`,
+            descricao: 'A base é π vezes esse valor.',
+            tex: `A_b = \\pi \\cdot ${formatar(raio * raio)} = ${formatar(Number(areaBase.toFixed(4)))}`,
+          },
+          {
+            descricao: 'Multiplicamos pela altura e tomamos um terço.',
+            tex:
+              `V = \\frac{${formatar(Number(areaBase.toFixed(4)))} \\cdot ${formatar(altura)}}{3} = ` +
+              `\\frac{${formatar(Number((areaBase * altura).toFixed(4)))}}{3} = ` +
+              `${formatar(Number(resultado.toFixed(4)))}`,
           },
         ],
       };
@@ -152,8 +167,15 @@ export function volumeComPassos(solido: Solido, dimensoes: DimensoesSolido): Res
             tex: 'V = \\frac{2}{3} \\cdot 2\\pi r^{3} = \\frac{4}{3}\\pi r^{3}',
           },
           {
-            descricao: 'Substituímos o raio.',
-            tex: `V = \\frac{4}{3}\\pi \\cdot ${formatar(raio)}^{3} = ${formatar(Number(resultado.toFixed(4)))}`,
+            descricao: 'Primeiro o raio ao cubo.',
+            tex: `r^{3} = ${formatar(raio)}^{3} = ${formatar(raio ** 3)}`,
+            nota: 'Na esfera o raio entra TRÊS vezes: ela não tem altura separada.',
+          },
+          {
+            descricao: 'E multiplicamos por 4π/3.',
+            tex:
+              `V = \\frac{4}{3}\\pi \\cdot ${formatar(raio ** 3)} = ` +
+              `${formatar(Number(resultado.toFixed(4)))}`,
           },
         ],
       };
@@ -204,11 +226,22 @@ export function superficieComPassos(solido: Solido, dimensoes: DimensoesSolido):
         passos: [
           {
             descricao: 'A lateral desenrolada é um retângulo: 2πr de base por h de altura.',
-            tex: `A_\\ell = 2\\pi r h = ${formatar(Number(lateral.toFixed(4)))}`,
+            tex:
+              `A_\\ell = 2\\pi r h = 2\\pi \\cdot ${formatar(raio)} \\cdot ${formatar(altura)} = ` +
+              `${formatar(Number(lateral.toFixed(4)))}`,
+            nota: 'Aqui o raio entra UMA vez: a lateral é um retângulo, não um círculo.',
           },
           {
-            descricao: 'Acrescentamos as duas tampas circulares.',
-            tex: `A = 2\\pi r^{2} + 2\\pi r h = ${formatar(Number(resultado.toFixed(4)))}`,
+            descricao: 'Cada tampa é um círculo, e aí o raio vai ao quadrado.',
+            tex:
+              `2\\pi r^{2} = 2\\pi \\cdot ${formatar(raio)}^{2} = 2\\pi \\cdot ` +
+              `${formatar(raio * raio)} = ${formatar(Number((2 * Math.PI * raio * raio).toFixed(4)))}`,
+          },
+          {
+            descricao: 'A superfície é a soma das duas partes.',
+            tex:
+              `A = ${formatar(Number((2 * Math.PI * raio * raio).toFixed(4)))} + ` +
+              `${formatar(Number(lateral.toFixed(4)))} = ${formatar(Number(resultado.toFixed(4)))}`,
           },
         ],
       };
@@ -230,7 +263,16 @@ export function superficieComPassos(solido: Solido, dimensoes: DimensoesSolido):
         passos: [
           {
             descricao: 'A lateral aberta é um setor de raio g e arco 2πr.',
-            tex: `A_\\ell = \\pi r g = ${formatar(Number(lateral.toFixed(4)))}`,
+            tex:
+              `A_\\ell = \\pi r g = \\pi \\cdot ${formatar(raio)} \\cdot ${formatar(geratriz)} = ` +
+              `${formatar(Number(lateral.toFixed(4)))}`,
+            nota: 'Na lateral o raio entra uma vez só, multiplicado pela geratriz.',
+          },
+          {
+            descricao: 'A base é um círculo, e nela o raio vai ao quadrado.',
+            tex:
+              `\\pi r^{2} = \\pi \\cdot ${formatar(raio)}^{2} = \\pi \\cdot ${formatar(raio * raio)} = ` +
+              `${formatar(Number((Math.PI * raio * raio).toFixed(4)))}`,
           },
           {
             descricao: 'Mais a base circular.',
@@ -253,8 +295,14 @@ export function superficieComPassos(solido: Solido, dimensoes: DimensoesSolido):
             nota: 'Também é exatamente a lateral do cilindro que a envolve.',
           },
           {
-            descricao: 'Substituímos o raio.',
-            tex: `A = 4\\pi \\cdot ${formatar(raio)}^{2} = ${formatar(Number(resultado.toFixed(4)))}`,
+            descricao: 'Primeiro o raio ao quadrado.',
+            tex: `r^{2} = ${formatar(raio)}^{2} = ${formatar(raio * raio)}`,
+          },
+          {
+            descricao: 'E multiplicamos por 4π.',
+            tex:
+              `A = 4\\pi \\cdot ${formatar(raio * raio)} = ` +
+              `${formatar(Number(resultado.toFixed(4)))}`,
           },
         ],
       };

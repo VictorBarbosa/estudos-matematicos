@@ -141,13 +141,20 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
           ? ['solidos.terco']
           : ['solidos.base-altura'],
     armadilhas: semColisoes(armadilhas, resultado, proximos),
+    /*
+     * A dica diz o expoente em palavras, e não só na fórmula.
+     * «V = πr²h/3» é correto e passa batido: lendo «raio 7 cm e altura 9 cm»,
+     * quem não percebe o pequeno 2 multiplica os dois e erra sem saber onde.
+     */
     dica:
       nivel === 'facil'
         ? solido === 'esfera'
-          ? 'V = 4πr³/3'
+          ? 'V = 4πr³/3 — o raio entra ao CUBO; a esfera não tem altura à parte.'
           : solido === 'cone'
-            ? 'V = πr²h/3'
-            : 'V = πr²h'
+            ? 'V = πr²h/3 — o raio entra ao QUADRADO (ele mede a base); a altura, uma vez só.'
+            : solido === 'cilindro'
+              ? 'V = πr²h — o raio entra ao QUADRADO (ele mede a base); a altura, uma vez só.'
+              : 'V = A_b·h/3 — a área da base já vem pronta no enunciado.'
         : undefined,
   };
 }
@@ -237,6 +244,16 @@ function exercicioSuperficie(nivel: Nivel, rng: Rng): Exercicio<number> {
     resolucao: { resultado, passos },
     conceitos: solido === 'esfera' ? ['solidos.esfera'] : ['solidos.base-altura'],
     armadilhas: semColisoes(armadilhas, resultado, proximos),
+    // No Médio, que é onde a superfície estreia. O aviso do expoente é o
+    // mesmo do volume: na base o raio vai ao quadrado, na lateral não.
+    dica:
+      nivel === 'medio'
+        ? solido === 'esfera'
+          ? 'A = 4πr² — quatro círculos máximos.'
+          : solido === 'cone'
+            ? 'A = πr² + πrg — a base tem r²; a lateral, r vezes a geratriz.'
+            : 'A = 2πr² + 2πrh — as duas tampas têm r²; a lateral, r vezes h.'
+        : undefined,
   };
 }
 
@@ -291,7 +308,11 @@ function exercicioEscala(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' ? "V' = k³·V" : undefined,
+    // Estreia no Médio; presa no Fácil, esta dica nunca chegava à tela.
+    dica:
+      nivel === 'medio'
+        ? `V' = k³·V — o volume escala com o CUBO da razão, e aqui k = ${k}: o fator é ${k}³.`
+        : undefined,
   };
 }
 

@@ -9,6 +9,43 @@ function amostra(nivel: Nivel, quantidade = 60) {
 }
 
 describe('geradorSolidos', () => {
+  it('a dica diz, em palavras, que o raio entra ao quadrado', () => {
+    // «V = πr²h/3» é correto e passa batido: lendo «raio 7 cm e altura 9 cm»,
+    // quem não vê o pequeno 2 multiplica os dois e erra sem saber onde.
+    const comDica = amostra('facil', 120).filter((e) => e.dica !== undefined);
+
+    expect(comDica.length).toBeGreaterThan(0);
+
+    for (const exercicio of comDica) {
+      expect(exercicio.dica).toMatch(/QUADRADO|CUBO|área da base/);
+    }
+  });
+
+  it('a resolução mostra a potência do raio sendo feita', () => {
+    const volumes = amostra('facil', 120).filter((e) => e.enunciado.includes('volume'));
+    expect(volumes.length).toBeGreaterThan(0);
+
+    for (const exercicio of volumes) {
+      const raio = Number(/raio (\d+) cm/.exec(exercicio.enunciado)?.[1] ?? NaN);
+      if (!Number.isFinite(raio)) continue;
+
+      const textos = exercicio.resolucao.passos.map((passo) => passo.tex);
+      const potencia = exercicio.enunciado.includes('esfera')
+        ? `${raio}^{3} = ${raio ** 3}`
+        : `${raio}^{2} = ${raio * raio}`;
+
+      expect(textos.some((tex) => tex.includes(potencia))).toBe(true);
+    }
+  });
+
+  it('as dicas da superfície e da escala chegam à tela', () => {
+    // As duas estreiam no Médio; a da escala estava presa no Fácil.
+    const comDica = amostra('medio', 200).filter((e) => e.dica !== undefined);
+
+    expect(comDica.some((e) => e.dica!.includes('A = '))).toBe(true);
+    expect(comDica.some((e) => e.dica!.includes('CUBO da razão'))).toBe(true);
+  });
+
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {
