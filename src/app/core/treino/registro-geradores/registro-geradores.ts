@@ -376,6 +376,10 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       import('@features/trigonometria/triangulo-retangulo/triangulo-retangulo.gerador').then(
         (m) => m.geradorTriangulo,
       ),
+    'escalonamento-e-inversa': () =>
+      import('@features/vetores-matrizes/escalonamento-e-inversa/escalonamento-e-inversa.gerador').then(
+        (m) => m.geradorEscalonamento,
+      ),
     'matrizes-determinantes': () =>
       import('@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.gerador').then(
         (m) => m.geradorMatrizes,

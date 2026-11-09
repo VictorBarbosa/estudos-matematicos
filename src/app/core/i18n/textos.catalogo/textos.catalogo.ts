@@ -102,6 +102,7 @@ import t_identidades_trigonometricas from '@features/trigonometria/identidades-t
 import t_lei_senos_cossenos from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.i18n.json';
 import t_seno_cosseno_tangente from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.i18n.json';
 import t_triangulo_retangulo from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.i18n.json';
+import t_escalonamento_e_inversa from '@features/vetores-matrizes/escalonamento-e-inversa/escalonamento-e-inversa.i18n.json';
 import t_matrizes_determinantes from '@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.i18n.json';
 import t_numeros_complexos from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.i18n.json';
 import t_produto_escalar_vetorial from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.i18n.json';
@@ -208,6 +209,7 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['lei-senos-cossenos', t_lei_senos_cossenos as TabelaDeTextos],
   ['seno-cosseno-tangente', t_seno_cosseno_tangente as TabelaDeTextos],
   ['triangulo-retangulo', t_triangulo_retangulo as TabelaDeTextos],
+  ['escalonamento-e-inversa', t_escalonamento_e_inversa as TabelaDeTextos],
   ['matrizes-determinantes', t_matrizes_determinantes as TabelaDeTextos],
   ['numeros-complexos', t_numeros_complexos as TabelaDeTextos],
   ['produto-escalar-vetorial', t_produto_escalar_vetorial as TabelaDeTextos],

@@ -418,6 +418,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'escalonamento-e-inversa',
+        titulo: 'Escalonamento e matriz inversa',
+        descricao:
+          'Gauss-Jordan em sistemas 3×3, classificação pelo escalonamento e a inversa por (A | I).',
+        pronto: true,
+      },
+      {
         id: 'numeros-complexos',
         titulo: 'Números complexos',
         descricao: 'O plano de Argand-Gauss, forma polar e multiplicação como rotação.',

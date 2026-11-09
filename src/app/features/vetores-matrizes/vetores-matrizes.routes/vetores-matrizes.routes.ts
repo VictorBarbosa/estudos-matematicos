@@ -40,6 +40,14 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'escalonamento-e-inversa',
+    title: 'Escalonamento e matriz inversa · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/vetores-matrizes/escalonamento-e-inversa/escalonamento-e-inversa').then(
+        (m) => m.EscalonamentoEInversa,
+      ),
+  },
+  {
     path: 'numeros-complexos',
     title: 'Números complexos · Estudos Matemáticos',
     loadComponent: () =>

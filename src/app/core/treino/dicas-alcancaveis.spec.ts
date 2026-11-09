@@ -51,6 +51,17 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['equacao-segundo-grau', 'dificil', 'Chame x² de t'],
   ['equacao-segundo-grau', 'extremo', 'Cada t positivo dá duas raízes'],
   ['equacao-segundo-grau', 'extremo', '(x₁ + x₂)² − 2·x₁·x₂'],
+  // Escalonamento e inversa: cada pergunta tem dica no nível em que estreia.
+  ['escalonamento-e-inversa', 'facil', 'cada entrada da L₁'],
+  ['escalonamento-e-inversa', 'facil', 'Comece por baixo'],
+  ['escalonamento-e-inversa', 'facil', 'Olhe a última linha'],
+  ['escalonamento-e-inversa', 'medio', 'dividida pelo pivô'],
+  ['escalonamento-e-inversa', 'medio', 'Monte a matriz aumentada'],
+  ['escalonamento-e-inversa', 'medio', 'Na adjunta'],
+  ['escalonamento-e-inversa', 'medio', 'é o valor de c que decide'],
+  ['escalonamento-e-inversa', 'dificil', 'o pivô que contém k'],
+  ['escalonamento-e-inversa', 'extremo', 'Escreva (A | I)'],
+  ['escalonamento-e-inversa', 'extremo', 'O primeiro pivô é zero'],
 ];
 
 describe('dicas alcançáveis', () => {

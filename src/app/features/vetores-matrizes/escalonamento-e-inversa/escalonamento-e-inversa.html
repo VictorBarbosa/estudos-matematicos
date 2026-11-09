@@ -1,0 +1,60 @@
+<app-topico-layout topicoId="escalonamento-e-inversa">
+  <div explorar class="explorar">
+    <section class="painel">
+      <h2>{{ texto('matrizAumentada') }}</h2>
+      @for (linha of entradas; track $index; let i = $index) {
+        <div class="grade-controles linha">
+          @for (entrada of linha; track $index; let j = $index) {
+            <app-controle-parametro
+              [(valor)]="entrada"
+              [rotulo]="rotulos[i]![j]!"
+              [min]="-9"
+              [max]="12"
+            />
+          }
+        </div>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="sistemaTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">{{ texto('tipoDoSistema') }}</span>
+        <strong>{{ texto(tipo()) }}</strong>
+        @if (tipo() === 'determinado') {
+          <span class="legenda">(x; y; z) = ({{ solucaoTexto() }})</span>
+        }
+      </div>
+      <div class="indicador">
+        <span class="rotulo">det A</span>
+        <strong>{{ formatar(det()) }}</strong>
+        <span class="legenda">{{ inversa() ? texto('comInversa') : texto('semInversa') }}</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>{{ texto('gaussJordan') }}</h2>
+      <p class="observacao">{{ texto('comoLer') }}</p>
+      <app-passo-a-passo [passos]="gauss().passos" />
+    </section>
+
+    <section class="painel">
+      <h2>{{ texto('inversa') }}</h2>
+      @if (inversa(); as inversa) {
+        <p class="observacao">{{ texto('inversaPorEscalonamento') }}</p>
+        <app-passo-a-passo [passos]="inversa.passos" />
+      } @else {
+        <p class="aviso">{{ texto('avisoSemInversa') }}</p>
+      }
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

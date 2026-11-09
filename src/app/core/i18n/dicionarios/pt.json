@@ -336,6 +336,10 @@
         "descricao": "A curva descrita pelo tempo: x(t) e y(t), e a trajetória que elas desenham.",
         "titulo": "Equações paramétricas"
       },
+      "escalonamento-e-inversa": {
+        "descricao": "Gauss-Jordan em sistemas 3×3, classificação pelo escalonamento e a inversa por (A | I).",
+        "titulo": "Escalonamento e matriz inversa"
+      },
       "estatica-e-torque": {
         "descricao": "Equilíbrio de forças e de momentos, centro de massa e estabilidade.",
         "titulo": "Estática e torque"

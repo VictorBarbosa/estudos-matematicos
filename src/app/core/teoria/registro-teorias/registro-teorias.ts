@@ -117,6 +117,10 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'equacao2.discriminante': 'O discriminante',
   'equacao2.girard': 'Soma e produto das raízes',
   'equacao2.vertice': 'Vértice e concavidade',
+  'escalonamento.classificacao': 'Classificar o sistema pela forma escalonada',
+  'escalonamento.gauss': 'Escalonamento e Gauss-Jordan',
+  'escalonamento.inversa': 'Matriz inversa',
+  'escalonamento.operacoes': 'Operações elementares de linha',
   'exp-log.base-ou-expoente': 'Base ou expoente: regras diferentes',
   'exp-log.base-qualquer': 'Exponencial de base qualquer',
   'exp-log.cadeia-no-expoente': 'O fator que desce do expoente',
@@ -517,6 +521,10 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'equacao2.discriminante': 'equacao-segundo-grau',
   'equacao2.girard': 'equacao-segundo-grau',
   'equacao2.vertice': 'equacao-segundo-grau',
+  'escalonamento.classificacao': 'escalonamento-e-inversa',
+  'escalonamento.gauss': 'escalonamento-e-inversa',
+  'escalonamento.inversa': 'escalonamento-e-inversa',
+  'escalonamento.operacoes': 'escalonamento-e-inversa',
   'exp-log.base-ou-expoente': 'derivadas-exponencial-logaritmo',
   'exp-log.base-qualquer': 'derivadas-exponencial-logaritmo',
   'exp-log.cadeia-no-expoente': 'derivadas-exponencial-logaritmo',
@@ -1175,6 +1183,10 @@ export const CARREGAR_TEORIA_DO_TOPICO: Readonly<Record<string, () => Promise<re
     'triangulo-retangulo': () =>
       import('@features/trigonometria/triangulo-retangulo/triangulo-retangulo.teoria').then(
         (m) => m.TEORIA_TRIANGULO,
+      ),
+    'escalonamento-e-inversa': () =>
+      import('@features/vetores-matrizes/escalonamento-e-inversa/escalonamento-e-inversa.teoria').then(
+        (m) => m.TEORIA_ESCALONAMENTO,
       ),
     'matrizes-determinantes': () =>
       import('@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.teoria').then(
