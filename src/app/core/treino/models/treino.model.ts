@@ -269,6 +269,50 @@ function outrasLeituras(entrada: string): readonly string[] {
   return PONTO_AMBIGUO.test(texto) ? [texto.replace('.', ',')] : [];
 }
 
+/** Quantas casas decimais o enunciado pede, quando ele diz. */
+const CASAS_PEDIDAS = /(\d+)\s+casas?\b/;
+
+/** Quantas casas o aluno escreveu — só conta quando a resposta é um decimal. */
+const CASAS_ESCRITAS = /^[+-]?\d+[.,](\d+)$/;
+
+/**
+ * A resposta certa, arredondada uma casa antes do pedido.
+ *
+ * «A área é 615,75 cm²» e o aluno escreve 615,8: a conta está certa, só foi
+ * arredondada mais cedo. Recusar isso com «não é isso» faz refazer uma conta
+ * que já estava boa — e esconde que o problema era de precisão, não de
+ * matemática. Uma casa é o limite: duas já seriam outra resposta.
+ *
+ * Devolve a frase de aviso, ou `null` quando não é esse o caso.
+ */
+function arredondamentoCurto<T>(
+  exercicio: Exercicio<T>,
+  valor: unknown,
+  entrada: string,
+): string | null {
+  if (typeof valor !== 'number' || typeof exercicio.gabarito !== 'number') {
+    return null;
+  }
+
+  const pedidas = Number(CASAS_PEDIDAS.exec(exercicio.enunciado)?.[1] ?? NaN);
+  const escritas = CASAS_ESCRITAS.exec(entrada.trim().replace(/\s|\./g, ''))?.[1]?.length ?? 0;
+
+  if (!Number.isFinite(pedidas) || pedidas < 1 || escritas !== pedidas - 1) {
+    return null;
+  }
+
+  // Tem de ser o arredondamento CERTO nessa casa, não qualquer valor próximo.
+  const certo = Number(exercicio.gabarito.toFixed(escritas));
+  if (Math.abs(valor - certo) > 1e-9) {
+    return null;
+  }
+
+  return (
+    `O enunciado pede ${pedidas} casas decimais, e você arredondou para ` +
+    `${escritas}. O valor está certo; só confira a precisão pedida.`
+  );
+}
+
 export function corrigir<T>(
   gerador: GeradorExercicio<T>,
   exercicio: Exercicio<T>,
@@ -311,6 +355,14 @@ export function corrigir<T>(
         observacao: gerador.observarResposta?.(relido, outra),
       };
     }
+  }
+
+  // Arredondou uma casa a menos do que o enunciado pediu: é o valor certo,
+  // e chamar isso de «não é isso» manda a pessoa refazer uma conta que estava
+  // boa. Vale, com o aviso da precisão.
+  const curta = arredondamentoCurto(exercicio, valor, entrada);
+  if (curta !== null) {
+    return { veredito: 'correto', mensagem: 'Correto!', observacao: curta };
   }
 
   const armadilha = exercicio.armadilhas.find((candidata) =>
