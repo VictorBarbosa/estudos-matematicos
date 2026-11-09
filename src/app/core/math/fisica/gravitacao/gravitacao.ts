@@ -10,6 +10,12 @@ import { ErroMatematico, Resolucao } from '@core/math/tipos/tipos';
  * precisa — e por que a resposta é sempre "muito".
  */
 
+/** Um número grande ou pequeno em notação científica, com vírgula decimal. */
+function cientifico(valor: number, casas = 3): string {
+  const [mantissa, expoente] = valor.toExponential(casas).split('e');
+  return `${mantissa!.replace('.', '{,}')} \\times 10^{${Number(expoente)}}`;
+}
+
 /** Constante gravitacional, em N·m²/kg². */
 export const G = 6.674e-11;
 
@@ -84,8 +90,10 @@ export function gravidadeNaAltitudeComPassos(
         tex: `r = ${raioCentral.toExponential(3)} + ${altitude.toExponential(3)} = ${distancia.toExponential(4)}\\,\\text{m}`,
       },
       {
-        descricao: 'Calculando.',
-        tex: `g = ${formatar(Number(resultado.toFixed(4)))}\\,\\text{m/s}^{2}`,
+        descricao: 'Substituímos G, a massa do planeta e a distância ao centro.',
+        tex:
+          `g = \\frac{${cientifico(G)} \\cdot ${cientifico(massaCentral)}}{(${cientifico(distancia)})^{2}}` +
+          ` = ${formatar(Number(resultado.toFixed(4)))}\\,\\text{m/s}^{2}`,
         nota:
           altitude > 0
             ? `Na superfície seriam ${formatarEmTexto(Number(superficie.toFixed(3)))} m/s²: a queda é mais lenta do que a intuição sugere.`
@@ -133,12 +141,16 @@ export function orbitaCircularComPassos(
         nota: 'A órbita não depende da massa do satélite: um parafuso e a ISS orbitam igual.',
       },
       {
-        descricao: 'Extraindo a raiz, com r medido do centro.',
-        tex: `v = \\sqrt{\\frac{GM}{r}} = ${formatar(Number((velocidade / 1000).toFixed(3)))}\\,\\text{km/s}`,
+        descricao: 'Extraindo a raiz, com r medido do centro (raio do planeta mais altitude).',
+        tex:
+          `v = \\sqrt{\\frac{${cientifico(G)} \\cdot ${cientifico(massaCentral)}}{${cientifico(raio)}}}` +
+          ` = ${formatar(Math.round(velocidade))}\\,\\text{m/s} = ${formatar(Number((velocidade / 1000).toFixed(3)))}\\,\\text{km/s}`,
       },
       {
         descricao: 'O período é o perímetro da órbita dividido pela velocidade.',
-        tex: `T = \\frac{2\\pi r}{v} = ${formatar(Number((periodo / 60).toFixed(2)))}\\,\\text{min}`,
+        tex:
+          `T = \\frac{2\\pi \\cdot ${cientifico(raio)}}{${formatar(Math.round(velocidade))}}` +
+          ` = ${formatar(Math.round(periodo))}\\,\\text{s} = ${formatar(Number((periodo / 60).toFixed(2)))}\\,\\text{min}`,
         nota: 'Órbitas mais altas são mais lentas, e com período maior.',
       },
     ],
@@ -175,7 +187,9 @@ export function velocidadeEscapeComPassos(
       },
       {
         descricao: 'Isolando a velocidade.',
-        tex: `v_e = \\sqrt{\\frac{2GM}{r}} = ${formatar(Number((resultado / 1000).toFixed(3)))}\\,\\text{km/s}`,
+        tex:
+          `v_e = \\sqrt{\\frac{2GM}{r}} = \\sqrt{\\frac{2 \\cdot ${cientifico(G)} \\cdot ${cientifico(massaCentral)}}{${cientifico(raio)}}}` +
+          ` = ${formatar(Number((resultado / 1000).toFixed(3)))}\\,\\text{km/s}`,
       },
       {
         descricao: 'Compare com a velocidade orbital no mesmo raio.',
@@ -221,7 +235,11 @@ export function terceiraLeiKeplerComPassos(
       },
       {
         descricao: 'Isolando o período procurado.',
-        tex: `T_B = T_A\\sqrt{\\left(\\frac{r_B}{r_A}\\right)^{3}} = ${formatar(Number(resultado.toFixed(4)))}`,
+        tex: `T_B = T_A\\sqrt{\\left(\\frac{r_B}{r_A}\\right)^{3}} = ${formatar(periodoA)}\\sqrt{\\left(\\frac{${formatar(raioB)}}{${formatar(raioA)}}\\right)^{3}}`,
+      },
+      {
+        descricao: `A razão dos raios é ${formatarEmTexto(Number((raioB / raioA).toFixed(4)))}; ao cubo, ${formatarEmTexto(Number(((raioB / raioA) ** 3).toFixed(4)))}.`,
+        tex: `T_B = ${formatar(periodoA)} \\cdot \\sqrt{${formatar(Number(((raioB / raioA) ** 3).toFixed(4)))}} = ${formatar(Number(resultado.toFixed(4)))}`,
       },
     ],
   };
@@ -276,11 +294,14 @@ export function tsiolkovskyComPassos(
       },
       {
         descricao: 'Calculamos a razão de massas.',
-        tex: `\\frac{m_0}{m_f} = ${formatar(Number(razaoMassas.toFixed(4)))}`,
+        tex: `\\frac{m_0}{m_f} = \\frac{${formatar(massaInicial)}}{${formatar(massaFinal)}} = ${formatar(Number(razaoMassas.toFixed(4)))}`,
       },
       {
         descricao: 'E o delta-v disponível.',
-        tex: `\\Delta v = ${formatar(Number((deltaV / 1000).toFixed(4)))}\\,\\text{km/s}`,
+        tex:
+          `\\Delta v = ${formatar(velocidadeExaustao)} \\cdot \\ln ${formatar(Number(razaoMassas.toFixed(4)))}` +
+          ` = ${formatar(velocidadeExaustao)} \\cdot ${formatar(Number(Math.log(razaoMassas).toFixed(4)))}` +
+          ` = ${formatar(Math.round(deltaV))}\\,\\text{m/s} = ${formatar(Number((deltaV / 1000).toFixed(4)))}\\,\\text{km/s}`,
         nota:
           `Combustível: ${formatarEmTexto(Number((fracaoCombustivel * 100).toFixed(1)))}% da massa inicial. ` +
           'Como o ganho é logarítmico, cada km/s extra custa muito mais que o anterior — e é ' +
@@ -315,7 +336,7 @@ export function empuxoDeMotorComPassos(
       },
       {
         descricao: 'O impulso específico expressa a mesma eficiência em segundos.',
-        tex: `I_{sp} = \\frac{v_e}{g_0} = ${formatar(Number(impulsoEspecifico.toFixed(1)))}\\,\\text{s}`,
+        tex: `I_{sp} = \\frac{v_e}{g_0} = \\frac{${formatar(velocidadeExaustao)}}{9{,}81} = ${formatar(Number(impulsoEspecifico.toFixed(1)))}\\,\\text{s}`,
         nota: 'Isp alto significa mais empuxo por quilo de propelente queimado.',
       },
     ],

@@ -217,20 +217,20 @@ export function planoInclinadoComPassos(
   const passos: Passo[] = [
     {
       descricao: 'Decompomos o peso em componentes paralela e perpendicular ao plano.',
-      tex: `P = mg = ${formatar(Number(pesoTotal.toFixed(3)))}\\,\\text{N}`,
+      tex: `P = mg = ${formatar(massa)} \\cdot ${formatar(gravidade)} = ${formatar(Number(pesoTotal.toFixed(3)))}\\,\\text{N}`,
     },
     {
       descricao: 'A componente paralela é a que tende a fazer o bloco descer.',
-      tex: `P_x = mg\\sin\\theta = ${formatar(Number(componentePeso.toFixed(3)))}\\,\\text{N}`,
+      tex: `P_x = mg\\sin\\theta = ${formatar(Number(pesoTotal.toFixed(3)))} \\cdot \\sin ${formatar(anguloGraus)}^{\\circ} = ${formatar(Number(componentePeso.toFixed(3)))}\\,\\text{N}`,
       nota: 'Seno, porque é o cateto oposto ao ângulo do plano.',
     },
     {
       descricao: 'A perpendicular aperta o bloco contra a superfície e define a normal.',
-      tex: `N = mg\\cos\\theta = ${formatar(Number(normal.toFixed(3)))}\\,\\text{N}`,
+      tex: `N = mg\\cos\\theta = ${formatar(Number(pesoTotal.toFixed(3)))} \\cdot \\cos ${formatar(anguloGraus)}^{\\circ} = ${formatar(Number(normal.toFixed(3)))}\\,\\text{N}`,
     },
     {
       descricao: 'O atrito máximo é proporcional à normal.',
-      tex: `f_{max} = \\mu N = ${formatar(Number(atritoMaximo.toFixed(3)))}\\,\\text{N}`,
+      tex: `f_{max} = \\mu N = ${formatar(coeficienteAtrito)} \\cdot ${formatar(Number(normal.toFixed(3)))} = ${formatar(Number(atritoMaximo.toFixed(3)))}\\,\\text{N}`,
       nota: 'O atrito não depende da área de contato, mas de quanto o corpo é comprimido.',
     },
   ];
@@ -239,11 +239,11 @@ export function planoInclinadoComPassos(
     desliza
       ? {
           descricao: 'A componente do peso vence o atrito: o bloco desliza.',
-          tex: `a = \\frac{P_x - f_{max}}{m} = ${formatar(Number(aceleracao.toFixed(4)))}\\,\\text{m/s}^{2}`,
+          tex: `a = \\frac{P_x - f_{max}}{m} = \\frac{${formatar(Number(componentePeso.toFixed(3)))} - ${formatar(Number(atritoMaximo.toFixed(3)))}}{${formatar(massa)}} = ${formatar(Number(aceleracao.toFixed(4)))}\\,\\text{m/s}^{2}`,
         }
       : {
           descricao: 'O atrito dá conta da componente do peso: o bloco fica parado.',
-          tex: `P_x \\le f_{max} \\;\\Rightarrow\\; a = 0`,
+          tex: `P_x = ${formatar(Number(componentePeso.toFixed(3)))} \\le ${formatar(Number(atritoMaximo.toFixed(3)))} = f_{max} \\;\\Rightarrow\\; a = 0`,
           nota: 'Nesse caso o atrito vale exatamente Pₓ, não o máximo.',
         },
   );

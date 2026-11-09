@@ -1,4 +1,4 @@
-import { formatar } from '@core/math/algebra/polinomio/polinomio';
+import { formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomio';
 import { ErroMatematico, Resolucao } from '@core/math/tipos/tipos';
 import { GRAVIDADE_PADRAO } from '@core/math/fisica/mecanica/mecanica';
 
@@ -88,17 +88,17 @@ export function empuxoArquimedesComPassos(
     passos: [
       {
         descricao: 'O empuxo é o peso do fluido deslocado pelo corpo.',
-        tex: `E = \\rho_{fluido}\\,V g = ${formatar(Number(empuxo.toFixed(3)))}\\,\\text{N}`,
+        tex: `E = \\rho_{fluido}\\,V g = ${formatar(densidadeFluido)} \\cdot ${formatar(volume)} \\cdot ${formatar(gravidade)} = ${formatar(Number(empuxo.toFixed(3)))}\\,\\text{N}`,
       },
       {
         descricao: 'O peso do corpo usa a densidade DELE.',
-        tex: `P = \\rho_{corpo}\\,V g = ${formatar(Number(peso.toFixed(3)))}\\,\\text{N}`,
+        tex: `P = \\rho_{corpo}\\,V g = ${formatar(densidadeCorpo)} \\cdot ${formatar(volume)} \\cdot ${formatar(gravidade)} = ${formatar(Number(peso.toFixed(3)))}\\,\\text{N}`,
       },
       {
         descricao: flutua
           ? 'O empuxo supera o peso: o corpo flutua.'
           : 'O peso supera o empuxo: o corpo afunda.',
-        tex: flutua ? 'E > P' : 'E \\le P',
+        tex: `${formatar(Number(empuxo.toFixed(3)))} ${flutua ? '>' : '\\le'} ${formatar(Number(peso.toFixed(3)))}`,
         nota: 'Como o volume aparece nos dois, a comparação se reduz às densidades.',
       },
       {
@@ -106,8 +106,8 @@ export function empuxoArquimedesComPassos(
           ? 'Em equilíbrio flutuando, a fração submersa é a razão das densidades.'
           : 'Totalmente submerso, o corpo desce com a resultante.',
         tex: flutua
-          ? `\\frac{V_{sub}}{V} = \\frac{\\rho_{corpo}}{\\rho_{fluido}} = ${formatar(Number((fracaoSubmersa * 100).toFixed(1)))}\\%`
-          : `F_R = ${formatar(Number((peso - empuxo).toFixed(3)))}\\,\\text{N}`,
+          ? `\\frac{V_{sub}}{V} = \\frac{\\rho_{corpo}}{\\rho_{fluido}} = \\frac{${formatar(densidadeCorpo)}}{${formatar(densidadeFluido)}} = ${formatar(Number((fracaoSubmersa * 100).toFixed(1)))}\\%`
+          : `F_R = P - E = ${formatar(Number(peso.toFixed(3)))} - ${formatar(Number(empuxo.toFixed(3)))} = ${formatar(Number((peso - empuxo).toFixed(3)))}\\,\\text{N}`,
         nota: flutua
           ? 'Gelo em água: densidade 0,92, logo 92% submerso — a ponta do iceberg é mesmo pequena.'
           : undefined,
@@ -140,6 +140,10 @@ export function bernoulliComPassos(
     (densidade * (velocidadeA * velocidadeA - velocidadeB * velocidadeB)) / 2 +
     densidade * gravidade * (alturaA - alturaB);
 
+  const cinetica = (densidade * (velocidadeA * velocidadeA - velocidadeB * velocidadeB)) / 2;
+  const potencial = densidade * gravidade * (alturaA - alturaB);
+  const r = (v: number, casas = 2): string => formatar(Number(v.toFixed(casas)));
+
   return {
     resultado,
     passos: [
@@ -153,7 +157,17 @@ export function bernoulliComPassos(
       },
       {
         descricao: 'Isolando a pressão no segundo ponto.',
-        tex: `p_B = ${resultado.toExponential(5)}\\,\\text{Pa}`,
+        tex: 'p_B = p_A + \\frac{\\rho}{2}\\left(v_A^{2} - v_B^{2}\\right) + \\rho g\\,(h_A - h_B)',
+      },
+      {
+        descricao: `O termo das velocidades vale ${formatarEmTexto(Number(cinetica.toFixed(2)))} Pa e o das alturas, ${formatarEmTexto(Number(potencial.toFixed(2)))} Pa.`,
+        tex:
+          `\\frac{${r(densidade, 4)}}{2}\\left(${r(velocidadeA)}^{2} - ${r(velocidadeB)}^{2}\\right) = ${r(cinetica)}` +
+          ` \\qquad ${r(densidade, 4)} \\cdot ${r(gravidade)} \\cdot (${r(alturaA)} - ${r(alturaB)}) = ${r(potencial)}`,
+      },
+      {
+        descricao: 'Somando à pressão do primeiro ponto.',
+        tex: `p_B = ${r(pressaoA)} ${cinetica < 0 ? '-' : '+'} ${r(Math.abs(cinetica))} ${potencial < 0 ? '-' : '+'} ${r(Math.abs(potencial))} = ${r(resultado)}\\,\\text{Pa}`,
         nota:
           velocidadeB > velocidadeA
             ? 'O fluido acelerou, então a pressão caiu — é o princípio da sustentação.'
@@ -190,12 +204,14 @@ export function sustentacaoComPassos(
       },
       {
         descricao: 'Calculamos essa diferença.',
-        tex: `\\Delta p = ${formatar(Number(diferencaPressao.toFixed(2)))}\\,\\text{Pa}`,
+        tex:
+          `\\Delta p = \\frac{${formatar(densidade)}}{2}\\left(${formatar(velocidadeSuperior)}^{2} - ${formatar(velocidadeInferior)}^{2}\\right)` +
+          ` = ${formatar(Number(diferencaPressao.toFixed(2)))}\\,\\text{Pa}`,
         nota: 'O ar passa mais rápido por cima da asa, e a pressão ali é menor.',
       },
       {
         descricao: 'A sustentação é a diferença de pressão aplicada sobre a área.',
-        tex: `L = \\Delta p \\cdot A = ${formatar(Number(resultado.toFixed(1)))}\\,\\text{N}`,
+        tex: `L = \\Delta p \\cdot A = ${formatar(Number(diferencaPressao.toFixed(2)))} \\cdot ${formatar(area)} = ${formatar(Number(resultado.toFixed(1)))}\\,\\text{N}`,
         nota: 'A sustentação cresce com o QUADRADO da velocidade: dobrar a velocidade a quadruplica.',
       },
     ],

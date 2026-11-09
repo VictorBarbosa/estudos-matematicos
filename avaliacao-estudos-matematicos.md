@@ -103,10 +103,10 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 - [x] Os seis tópicos, na ordem certa (funções antes de identidades, como a avaliação anterior pediu)
 - [ ] **Equações trigonométricas e funções inversas** (arcsen, arccos, arctg) — não há tópico; as inversas aparecem só em menções. É **pré-requisito da substituição trigonométrica** em `calculo-2/tecnicas-de-integracao`. **Prioridade alta.**
-- [ ] Tipo de pergunta `'sinal'` declarado e nunca sorteado em `circulo-trigonometrico.gerador.ts:9`
-- [ ] `triangulo-retangulo` faz uma pergunta só; falta achar o **ângulo** dadas duas medidas, 30-60-90 e 45-45-90, altura por tangente
-- [ ] `lei-senos-cossenos`: falta achar o ângulo pela lei dos cossenos e a área ½·a·b·sen C
-- [ ] Extremo igual ao Difícil em `triangulo-retangulo` e `lei-senos-cossenos` (mesmos parâmetros)
+- [x] Tipo de pergunta `'sinal'` ligado em `circulo-trigonometrico` (Médio em diante; resposta 1 ou −1) — 09/11
+- [ ] **◐** `triangulo-retangulo`: o **ângulo** dados os dois catetos (arctg, em graus) entrou no Extremo em 09/11; faltam 30-60-90 e 45-45-90, altura por tangente
+- [ ] **◐** `lei-senos-cossenos`: o **maior ângulo** pelos três lados (arccos) entrou no Extremo em 09/11; falta a área ½·a·b·sen C
+- [x] Extremo igual ao Difícil em `triangulo-retangulo` e `lei-senos-cossenos` — cada um ganhou pergunta própria no Extremo (09/11)
 
 ### 3.6 Vetores e matrizes — frágil (conteúdo)
 
@@ -115,7 +115,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] Números complexos, mantidos como complementar
 - [ ] **Escalonamento (Gauss-Jordan) e matriz inversa** — `curriculo.ts:386` lista como o que falta; `sistemas-lineares` só ensina substituição 2×2. É o que fecha o 0M04. **Prioridade alta.**
 - [ ] Retas e planos no espaço; combinação linear, independência e bases
-- [ ] **◐** Teoria de `matrizes-determinantes` ainda diz «det = 0 ⟺ linhas proporcionais» (4 ocorrências); vale para 2×2, não para 3×3. Trocar por «linearmente dependentes» onde o 3×3 é tratado
+- [x] «det = 0 ⟺ linhas proporcionais»: reconferido em 09/11 — a teoria já explica que no 3×3 a condição é dependência linear, e «proporcionais» só aparece onde vale (2×2 ou como caso particular)
 - [ ] Explorar de `vetores-no-espaco` não tem desenho: o produto vetorial é explicado em texto, sem a regra da mão direita
 - [ ] Teoria de `vetores-no-plano`: a pergunta `direcao` existe sem verbete próprio
 - [ ] Álgebra linear avançada (espaços vetoriais, autovalores) — etapa futura do plano anterior; não iniciada e **não é pré-requisito de admissão**
@@ -138,7 +138,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [ ] **Eletricidade e magnetismo (0P02)** — zero ocorrências de carga, campo, circuito ou indução. **Exigido por todos os programas.**
 - [ ] **Ondas e física moderna (0P03)** — só o movimento harmônico; faltam ondas, som, óptica, relatividade, fotoelétrico
 - [ ] Física com cálculo (força variável, trabalho como integral, MHS como EDO) — a trilha linear põe toda a Física antes do Cálculo, então isso não cabe onde a área está. Decisão registrada: **manter a ordem** e, se vier, criar um bloco «Física com cálculo» depois do Cálculo 2
-- [ ] **Resoluções que saltam da fórmula para o número** nos módulos do núcleo: `core/math/fisica/mecanica/mecanica.ts:219-242` (plano inclinado, cinco resultados e nenhuma conta), `gravitacao/gravitacao.ts` (oito saltos), `fluidos/fluidos.ts:91,95,193,198`, `termica/termica.ts:269` («Substituindo.» sem substituir), `energia/energia.ts:189,259,323`. O padrão certo já existe no mesmo repositório (`espacial.ts`, `termica.ts:67`)
+- [x] ~~**Resoluções que saltam da fórmula para o número**~~ — feito em 09/11: todos os passos citados agora mostram a substituição (plano inclinado, gravidade na altitude, órbita, escape, Kepler, Tsiolkovsky, Isp, empuxo, Bernoulli, sustentação, mistura térmica, impulso, colisões, centro de massa). Antes: nos módulos do núcleo: `core/math/fisica/mecanica/mecanica.ts:219-242` (plano inclinado, cinco resultados e nenhuma conta), `gravitacao/gravitacao.ts` (oito saltos), `fluidos/fluidos.ts:91,95,193,198`, `termica/termica.ts:269` («Substituindo.» sem substituir), `energia/energia.ts:189,259,323`. O padrão certo já existe no mesmo repositório (`espacial.ts`, `termica.ts:67`)
 - [ ] Teoria curta demais: `cinematica-escalar` (2 verbetes para 5 perguntas; falta Torricelli e referencial), `analise-dimensional` (2 para 6; falta o teorema Π)
 - [ ] Química (0C01–0C02) — fora do escopo do site; fazer pelo curso formal
 
@@ -155,10 +155,10 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [ ] **Regra de L'Hôpital** — zero ocorrências; `limites` resolve indeterminação só por fatoração e conjugado
 - [ ] **Teorema do valor médio e Rolle** — zero ocorrências
 - [ ] **Regra do quociente** — não existe nenhuma pergunta, embora a descrição do tópico a prometa
-- [ ] Tipo `'taxa-media'` declarado e nunca sorteado em `definicao-de-derivada.gerador.ts:8`
-- [ ] Dica da regra do produto presa no Fácil, nível que não a gera (`regras-de-derivacao.gerador.ts:107`); e a pergunta que estreia no Fácil (`coeficiente`) não tem dica
-- [ ] 6 dos 11 tópicos fazem uma pergunta só (`derivacao-implicita`, `derivadas-exponencial-logaritmo`, `derivadas-trigonometricas`, `limites`, `limites-laterais`, `regra-da-cadeia`). Faltam: reta tangente; derivada segunda; sen x/x; limite que não existe; classificação de descontinuidade; crescimento, concavidade e inflexão; cadeia com √, e^u, ln u
-- [ ] Extremo igual ao Difícil em `limites-laterais`, `regra-da-cadeia`, `derivacao-implicita`
+- [x] Tipo `'taxa-media'` ligado em `definicao-de-derivada`: velocidade média de um carro em m/s, do Médio ao Extremo (09/11)
+- [x] Dica da regra do produto movida para o Médio, onde a pergunta estreia (09/11)
+- [ ] 6 dos 11 tópicos fazem uma pergunta só (`derivacao-implicita`, `derivadas-exponencial-logaritmo`, `derivadas-trigonometricas`, `limites`, `limites-laterais`, `regra-da-cadeia`). Faltam: reta tangente; derivada segunda; sen x/x; limite que não existe; classificação de descontinuidade; crescimento, concavidade e inflexão; cadeia com √, e^u, ln u (**feito no Extremo em 09/11**: √, eᵘ, ln u e sen u por fora)
+- [x] Extremo igual ao Difícil em `limites-laterais` (agora pede o salto: lateral direita menos esquerda, com parábola), `regra-da-cadeia` (outra função por fora) e `derivacao-implicita` (reta tangente e onde corta o eixo y) — 09/11
 - [ ] Nenhum exemplo numérico resolvido na teoria de `derivacao-implicita`, `derivadas-exponencial-logaritmo` (9 verbetes, zero exemplos), `derivadas-trigonometricas`, `regra-da-cadeia`
 
 ### 3.11 Cálculo 2 — frágil (um tópico duplicado)
@@ -180,7 +180,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [ ] Binômio de Newton — nenhum tópico o cobre
 - [ ] Intervalos de confiança e testes de hipótese
 - [ ] «Ajuste de reta» duplicado: uma seção em `estatistica-e-incerteza.teoria.ts:95` e sete em `regressao-e-correlacao` — mover para o tópico dedicado
-- [ ] Dica de `ao-menos-um` presa no Fácil (`probabilidade.gerador.ts:226`); `uniao` estreia no Fácil sem dica
+- [x] Dica de `ao-menos-um` movida para o Médio; `uniao` ganhou dica no Fácil (09/11)
 
 ### 3.13 Cálculo 3 — aceitável
 
@@ -208,10 +208,10 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] 5. Links «Veja também»: há teste garantindo que todo id citado existe (`core/teoria/teorias/teorias.spec.ts`)
 - [x] 6–13. Tolerâncias e formatos: fração aceita em todo gerador numérico; √ e π aceitos; tolerância coerente com as casas pedidas (ver 4.2)
 - [x] 16–17. Erros de conteúdo da área entre curvas e dos anagramas
-- [ ] **◐** 18. Determinante: «linhas proporcionais» ainda aparece 4 vezes na teoria 3×3
+- [x] 18. Determinante: reconferido em 09/11 — a teoria já distingue 2×2 (proporcionais) de 3×3 (dependência linear)
 - [x] 19. Bernoulli com hipóteses
 - [ ] **◐** 20. Descrições que prometem o que não existe: taxas relacionadas e frações parciais foram feitas; **congruência** (`curriculo.ts:206`) e **convergência** (`:757`) continuam prometidas e ausentes
-- [ ] **◐** 21. `\;` com barra única: de 310 linhas para **5** — terminar
+- [x] 21. `\;` com barra única: das 5 linhas restantes, só 1 era erro real (`sistema-linear.ts:239`), corrigida em 09/11; as outras 4 eram comentário ou teste
 
 ### 4.2 O que este comitê encontrou e já está feito (sessões de 06 a 09/11)
 
@@ -226,12 +226,15 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 ### 4.3 O que falta na mecânica
 
-- [ ] **Cobertura da prova.** `planoDaProva` só exige um item por tipo onde há `TIPOS_POR_TOPICO`, e **só `fracoes` declara** (`core/progressao/models/progressao.model.ts:155-168`). Declarar tipos nos tópicos com mais de uma pergunta — ao menos `aplicacoes-da-derivada` (6), `equacoes-parametricas` (6), `progressoes` (5), `funcoes-por-partes` (5), `funcoes-racionais` (5), `transformacoes-de-graficos` (5). **Prioridade alta, esforço baixo.**
+- [ ] **◐ Cobertura da prova.** `planoDaProva` só exige um item por tipo onde há `TIPOS_POR_TOPICO`, e **só `fracoes` declara** (`core/progressao/models/progressao.model.ts:155-168`).
+  - **Feito em 09/11 (a parte barata):** quando um tópico repete na prova, a segunda questão sai com **forma de enunciado diferente** da primeira (`sortearInedita`, até 30 tentativas, em `core/prova/models/prova.model.ts`), e o **nível alterna** Médio/Difícil por tópico — antes, com número par de tópicos, cada tópico caía sempre no mesmo nível. Testado em `prova.model.spec.ts`.
+  - **Falta (não é barato):** `TIPOS_POR_TOPICO` também alimenta os requisitos das ETAPAS (`REQUISITOS_POR_TOPICO`) e exige geradores que aceitem `pendentes`. Declará-lo em outros tópicos muda a progressão do treino, não só a prova — ao menos `aplicacoes-da-derivada` (6), `equacoes-parametricas` (6), `progressoes` (5), `funcoes-por-partes` (5), `funcoes-racionais` (5), `transformacoes-de-graficos` (5). Esforço médio; decidir junto com a exigência da prova (item abaixo).
 - [ ] **Exigência da prova varia com o tamanho da área**: 2 erros tolerados valem 75% de acerto em 8 questões e 88% em 16 (Física). Decidir: tolerância proporcional, ou prova de tamanho fixo
-- [ ] **Dois tipos de pergunta mortos**: `'sinal'` (`circulo-trigonometrico.gerador.ts:9`) e `'taxa-media'` (`definicao-de-derivada.gerador.ts:8`) — declarados, nunca sorteados
-- [ ] **Extremo igual ao Difícil** em `limites-laterais`, `triangulo-retangulo`, `regra-da-cadeia`, `expressoes-algebricas`, `derivacao-implicita`, `lei-senos-cossenos` — mesmos parâmetros, mesma pergunta. Onde não dá para inventar pergunta mais funda, o Extremo deve ao menos variar
-- [ ] **9 dicas ainda presas em nível que a pergunta não alcança**: `regras-de-derivacao:107`, `probabilidade:226`, `estatistica-e-incerteza:218`, `gravitacao-e-orbitas:151`, `propulsao-de-foguetes:198`, `cinematica-escalar:314`, `trabalho-e-energia:209`, `leis-de-newton:289`, `progressoes:243`. Vale um guarda: para cada ramo com `dica`, o nível da condição tem de estar entre os que `sortearPergunta` gera para ele
-- [ ] **11 perguntas que estreiam no Fácil sem dica**: `integral-definida:149`, `probabilidade:230`, `cinematica-escalar:102`, `propulsao-de-foguetes:98`, `matrizes-determinantes:186`, `conicas:102`, `ponto-e-reta:78,197`, `continuidade:81`, `sequencias-e-series:81`, `vizinhancas-e-infinito:73`
+- [x] **Dois tipos de pergunta mortos** ligados: `'sinal'` em `circulo-trigonometrico` e `'taxa-media'` em `definicao-de-derivada` (09/11)
+- [x] **Extremo igual ao Difícil** nos 6 tópicos — cada um ganhou uma pergunta própria do Extremo, sorteada em metade das vezes (09/11): `limites-laterais` (salto com parábola), `triangulo-retangulo` (ângulo por arctg), `regra-da-cadeia` (√, eᵘ, ln, sen por fora), `expressoes-algebricas` (distribuir k(p) − (dx+e)(fx+g) e achar o coeficiente de x), `derivacao-implicita` (reta tangente, corte no eixo y), `lei-senos-cossenos` (maior ângulo pelos três lados)
+- [x] **Dicas presas em nível que a pergunta não alcança**: as 9 listadas e mais uma achada no caminho (`estatistica-e-incerteza`, inclinação) — 10 ao todo, movidas para o nível em que a pergunta estreia, com o expoente em palavras (09/11)
+- [x] **Perguntas que estreiam no Fácil sem dica**: as 10 listadas ganharam dica (`ponto-e-reta:197` era uma função auxiliar, não pergunta) — 09/11. O guarda `core/treino/dicas-alcancaveis.spec.ts` amostra 300 exercícios por caso e falha se alguma dessas 20 dicas deixar de aparecer
+- [ ] **Medição nova (09/11): 577 das 924 formas de pergunta estreiam sem dica, em 87 tópicos.** Um guarda geral («toda pergunta tem dica no nível em que estreia») ficou fora da Fase 0 por ser trabalho de semanas; vai para a Fase 2
 - [ ] **Dicas com fórmula crua** (`'v = √(2gh)'`, `'σ = √(σ₁² + σ₂²)'`): o padrão é dizer o expoente em palavras e usar o número do enunciado — `gravitacao-e-orbitas:109,299`, `fluidos-e-aerodinamica:161`, `trabalho-e-energia:161`, `vetores-no-plano:106`, `numeros-complexos:145`, `circulo-e-poligonos:140,422`, `semelhanca-e-pitagoras:120,161`, `juros-compostos:155`, `probabilidade:123`
 - [ ] **Respostas simbólicas** (derivadas e primitivas como expressão, comparadas por avaliação em pontos): o analisador existe (`core/treino/resposta-simbolica`) mas só **um** gerador o usa
 - [ ] Teste diagnóstico de nivelamento por bloco — proposto na avaliação anterior, não iniciado
@@ -256,15 +259,18 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 ### Fase 0 — Quebrado e barato (dias)
 
-- [ ] Declarar `TIPOS_POR_TOPICO` nos tópicos com várias perguntas, para a prova cobrir a área
-- [ ] Ligar os dois tipos mortos (`'sinal'`, `'taxa-media'`)
-- [ ] Corrigir as 9 dicas presas e dar dica às 11 perguntas de estreia; escrever o guarda que impede a recaída
-- [ ] Terminar as 5 linhas de `\;` e corrigir «proporcionais» no 3×3
-- [ ] Diferenciar o Extremo nos 6 tópicos em que ele é igual ao Difícil
-- [ ] Resoluções de Física com os números à vista (`mecanica.ts`, `gravitacao.ts`, `fluidos.ts`, `termica.ts:269`, `energia.ts`)
+**Concluída em 09/11/2026**, exceto a parte cara da cobertura da prova (detalhe em 4.3).
+
+- [ ] **◐** Cobertura da prova — feito: forma de enunciado inédita quando o tópico repete e alternância Médio/Difícil por tópico. Falta: `TIPOS_POR_TOPICO` nos demais tópicos, que mexe na progressão das etapas (passou para a Fase 1)
+- [x] Ligar os dois tipos mortos (`'sinal'`, `'taxa-media'`)
+- [x] Corrigir as dicas presas (10) e dar dica às perguntas de estreia (10); guarda `dicas-alcancaveis.spec.ts`
+- [x] `\;` (1 linha real) e «proporcionais» (já estava certo)
+- [x] Diferenciar o Extremo nos 6 tópicos em que ele é igual ao Difícil
+- [x] Resoluções de Física com os números à vista (`mecanica.ts`, `gravitacao.ts`, `fluidos.ts`, `termica.ts`, `energia.ts`)
 
 ### Fase 1 — Álgebra e os pré-requisitos ausentes (semanas)
 
+- [ ] `TIPOS_POR_TOPICO` nos tópicos com várias perguntas (vindo da Fase 0), decidido junto com a exigência da prova por tamanho de área
 - [ ] Novo tópico **Estudo de sinal e inequações de 2º grau** (destrava `aplicacoes-da-derivada`)
 - [ ] Novo tópico **Equações trigonométricas e funções inversas** (destrava substituição trigonométrica)
 - [ ] Novo tópico **Escalonamento e matriz inversa** (fecha o 0M04)
@@ -273,7 +279,8 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 ### Fase 2 — Treino nas demais áreas magras (semanas)
 
-- [ ] Trigonometria, Cálculo 1, Geometria analítica (parábola, distância ponto-reta), Funções, Cálculo 4 — as 20 perguntas priorizadas pelo relator de treino, por ordem: soma e produto das raízes; inequação de 2º grau; equação trigonométrica; regra do quociente; distância de ponto a reta; perpendicular; foco da parábola; intervalo de crescimento; L'Hôpital; tipo de descontinuidade; sistema 3×3; fatoração por agrupamento; inequação modular; razão da PA; taxa equivalente; EDO exata; regime de amortecimento; Newton-Raphson; ângulo no triângulo retângulo; maior ângulo pela lei dos cossenos
+- [ ] Trigonometria, Cálculo 1, Geometria analítica (parábola, distância ponto-reta), Funções, Cálculo 4 — as 20 perguntas priorizadas pelo relator de treino, por ordem: soma e produto das raízes; inequação de 2º grau; equação trigonométrica; regra do quociente; distância de ponto a reta; perpendicular; foco da parábola; intervalo de crescimento; L'Hôpital; tipo de descontinuidade; sistema 3×3; fatoração por agrupamento; inequação modular; razão da PA; taxa equivalente; EDO exata; regime de amortecimento; Newton-Raphson; ~~ângulo no triângulo retângulo; maior ângulo pela lei dos cossenos~~ (feitos em 09/11, no Extremo)
+- [ ] Dica no nível de estreia para as 577 formas que não têm (guarda geral em `dicas-alcancaveis.spec.ts`)
 - [ ] Exemplo numérico resolvido nos 32 tópicos de teoria que não têm nenhum
 - [ ] Desenho nos Explorar de `solidos-e-volumes` e `vetores-no-espaco`
 
@@ -305,7 +312,7 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 | Ação | Conteúdos |
 |---|---|
 | **Manter** | Todos os 101 tópicos; a ordem atual da trilha (Física antes do Cálculo); juros e complexos como complementares |
-| **Consertar já** | Cobertura da prova; tipos mortos; dicas presas; Extremo repetido; `\;`; resoluções de Física |
+| **Consertar já** | ~~Tipos mortos; dicas presas; Extremo repetido; `\;`; resoluções de Física~~ (feitos em 09/11); cobertura da prova (◐) |
 | **Refundar** | `sequencias-e-series` → testes de convergência |
 | **Remover / mover** | Seção duplicada de limites laterais no Pré-cálculo; «Ajuste de reta» para regressão |
 | **Acrescentar (pré-requisitos)** | Estudo de sinal; equações trigonométricas e inversas; escalonamento e inversa; L'Hôpital e TVM; regra do quociente |

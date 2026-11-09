@@ -247,6 +247,9 @@ export function equilibrioTermicoComPassos(
   c2: number,
   t2: number,
 ): Resolucao<number> {
+  const cap1 = Number((m1 * c1).toFixed(4));
+  const cap2 = Number((m2 * c2).toFixed(4));
+  const comParenteses = (v: number): string => (v < 0 ? `(${formatar(v)})` : formatar(v));
   const resultado = (m1 * c1 * t1 + m2 * c2 * t2) / (m1 * c1 + m2 * c2);
 
   const passos: Passo[] = [
@@ -265,8 +268,16 @@ export function equilibrioTermicoComPassos(
       nota: 'O peso de cada corpo é a sua capacidade térmica, não a sua massa sozinha.',
     },
     {
-      descricao: 'Substituindo.',
-      tex: `T_{f} = ${formatar(Number(resultado.toFixed(4)))}`,
+      descricao: `Cada capacidade térmica: m₁c₁ = ${formatarEmTexto(cap1)} J/K e m₂c₂ = ${formatarEmTexto(cap2)} J/K.`,
+      tex:
+        `m_{1}c_{1} = ${formatar(m1)} \\cdot ${formatar(c1)} = ${formatar(cap1)}` +
+        ` \\qquad m_{2}c_{2} = ${formatar(m2)} \\cdot ${formatar(c2)} = ${formatar(cap2)}`,
+    },
+    {
+      descricao: 'Substituindo na média ponderada.',
+      tex:
+        `T_{f} = \\frac{${formatar(cap1)} \\cdot ${comParenteses(t1)} + ${formatar(cap2)} \\cdot ${comParenteses(t2)}}` +
+        `{${formatar(cap1)} + ${formatar(cap2)}} = ${formatar(Number(resultado.toFixed(4)))}`,
     },
   ];
 

@@ -186,7 +186,7 @@ export function impulsoComPassos(forca: number, tempo: number, massa: number): R
       },
       {
         descricao: 'Daí a variação de velocidade produzida.',
-        tex: `\\Delta v = \\frac{J}{m} = ${formatar(Number(variacaoVelocidade.toFixed(4)))}\\,\\text{m/s}`,
+        tex: `\\Delta v = \\frac{J}{m} = \\frac{${formatar(Number(impulso.toFixed(4)))}}{${formatar(massa)}} = ${formatar(Number(variacaoVelocidade.toFixed(4)))}\\,\\text{m/s}`,
         nota: 'Mesma variação de momento com mais tempo significa menos força — a lógica do airbag.',
       },
     ],
@@ -256,7 +256,7 @@ export function colisaoComPassos(
     passos.push(
       {
         descricao: 'Numa colisão perfeitamente inelástica, os corpos seguem juntos.',
-        tex: `v_f = \\frac{p}{m_A + m_B} = ${formatar(Number(velocidadeFinalA.toFixed(4)))}\\,\\text{m/s}`,
+        tex: `v_f = \\frac{p}{m_A + m_B} = \\frac{${formatar(Number(momentoTotal.toFixed(4)))}}{${formatar(massaA)} + ${formatar(massaB)}} = ${formatar(Number(velocidadeFinalA.toFixed(4)))}\\,\\text{m/s}`,
       },
       {
         descricao: 'A energia cinética não se conserva: parte virou deformação e calor.',
@@ -273,10 +273,19 @@ export function colisaoComPassos(
         tex: 'p_i = p_f \\qquad E_i = E_f',
       },
       {
-        descricao: 'Resolvendo o sistema das duas conservações.',
+        descricao:
+          'Resolvendo o sistema das duas conservações, saem as fórmulas da colisão elástica.',
         tex:
-          `v_A' = ${formatar(Number(velocidadeFinalA.toFixed(4)))} \\qquad ` +
-          `v_B' = ${formatar(Number(velocidadeFinalB.toFixed(4)))}`,
+          "v_A' = \\frac{(m_A - m_B)v_A + 2m_B v_B}{m_A + m_B} \\qquad " +
+          "v_B' = \\frac{(m_B - m_A)v_B + 2m_A v_A}{m_A + m_B}",
+      },
+      {
+        descricao: 'Substituindo as massas e as velocidades iniciais.',
+        tex:
+          `v_A' = \\frac{(${formatar(massaA)} - ${formatar(massaB)})(${formatar(velocidadeA)}) + 2 \\cdot ${formatar(massaB)}(${formatar(velocidadeB)})}{${formatar(massaA)} + ${formatar(massaB)}}` +
+          ` = ${formatar(Number(velocidadeFinalA.toFixed(4)))} \\qquad ` +
+          `v_B' = \\frac{(${formatar(massaB)} - ${formatar(massaA)})(${formatar(velocidadeB)}) + 2 \\cdot ${formatar(massaA)}(${formatar(velocidadeA)})}{${formatar(massaA)} + ${formatar(massaB)}}` +
+          ` = ${formatar(Number(velocidadeFinalB.toFixed(4)))}`,
         nota: 'Com massas iguais, os corpos simplesmente trocam de velocidade.',
       },
     );
@@ -320,7 +329,9 @@ export function centroDeMassaComPassos(
       },
       {
         descricao: 'Somamos os produtos massa × posição.',
-        tex: `\\sum m_i x_i = ${formatar(Number(momento.toFixed(4)))}`,
+        tex:
+          `\\sum m_i x_i = ${corpos.map(({ massa, posicao }) => `${formatar(massa)}(${formatar(posicao)})`).join(' + ')}` +
+          ` = ${formatar(Number(momento.toFixed(4)))} \\qquad \\sum m_i = ${corpos.map(({ massa }) => formatar(massa)).join(' + ')} = ${formatar(massaTotal)}`,
       },
       {
         descricao: 'Dividimos pela massa total.',
