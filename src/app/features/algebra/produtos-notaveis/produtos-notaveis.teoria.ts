@@ -104,6 +104,51 @@ export const TEORIA_PRODUTOS: readonly Teoria[] = [
       enunciado: 'Expandindo (x + 1)³.',
       passos: expandirComPassos('cubo-da-soma', 1, 1).passos,
     },
-    vejaTambem: ['produtos.quadrado'],
+    vejaTambem: ['produtos.quadrado', 'produtos.inverso'],
+  },
+  {
+    id: 'produtos.inverso',
+    titulo: 'De trás para frente',
+    resumo: 'Reconhecer o resultado expandido e voltar à forma compacta.',
+    definicao:
+      'Toda identidade se lê nos dois sentidos. Da esquerda para a direita, expande; da ' +
+      'direita para a esquerda, fatora. Para reconhecer um quadrado perfeito, olhe as pontas: ' +
+      'o primeiro e o último termo precisam ser quadrados, e o do meio precisa ser o dobro do ' +
+      'produto das raízes deles. O sinal do termo do meio diz se o binômio é soma ou diferença. ' +
+      'No cubo, as pontas são cubos — e a raiz cúbica conserva o sinal.',
+    formulas: [
+      { tex: 'a^{2}x^{2} + 2abx + b^{2} = (ax + b)^{2}' },
+      { tex: 'a^{2}x^{2} - b^{2} = (ax + b)(ax - b)' },
+      { tex: 'a^{3}x^{3} + 3a^{2}bx^{2} + 3ab^{2}x + b^{3} = (ax + b)^{3}' },
+    ],
+    demonstracao: [
+      {
+        descricao: 'As pontas dão os dois termos do binômio.',
+        tex: '9x^{2} = (3x)^{2} \\qquad 25 = 5^{2}',
+      },
+      {
+        descricao: 'O termo do meio confirma, e o sinal dele escolhe entre soma e diferença.',
+        tex: '2 \\cdot 3x \\cdot 5 = 30x \\;\\Rightarrow\\; 9x^{2} - 30x + 25 = (3x - 5)^{2}',
+        nota: 'Se o meio não bater com o dobro do produto, o trinômio não é quadrado perfeito.',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Reconhecendo x³ − 6x² + 12x − 8 como cubo.',
+      passos: [
+        {
+          descricao: 'As pontas: x³ = (x)³ e −8 = (−2)³ — a raiz cúbica conserva o sinal.',
+          tex: 'x^{3} = (x)^{3} \\qquad -8 = (-2)^{3}',
+        },
+        {
+          descricao: 'Os termos do meio conferem com 3u²v e 3uv².',
+          tex: '3 \\cdot x^{2} \\cdot (-2) = -6x^{2} \\qquad 3 \\cdot x \\cdot (-2)^{2} = 12x',
+        },
+        {
+          descricao: 'Batem os quatro termos.',
+          tex: 'x^{3} - 6x^{2} + 12x - 8 = (x - 2)^{3}',
+        },
+      ],
+    },
+    vejaTambem: ['produtos.quadrado', 'produtos.cubo', 'fatoracao.diferenca'],
   },
 ];

@@ -97,6 +97,100 @@ export const TEORIA_FATORACAO: readonly Teoria[] = [
       enunciado: 'Fatorando x² − 5x + 6.',
       passos: fatorarComPassos(Polinomio.de(6, -5, 1)).passos,
     },
-    vejaTambem: ['fatoracao.ideia', 'fatoracao.diferenca'],
+    vejaTambem: ['fatoracao.ideia', 'fatoracao.diferenca', 'fatoracao.agrupamento'],
+  },
+  {
+    id: 'fatoracao.agrupamento',
+    titulo: 'Fatoração por agrupamento',
+    resumo: 'Quatro termos: fator comum em cada par, e o parêntese repetido vira fator.',
+    definicao:
+      'Quando a expressão tem quatro termos e nenhum fator comum a todos, separa-se em dois ' +
+      'pares e tira-se o fator comum de cada par. Se a escolha foi boa, o mesmo parêntese ' +
+      'aparece nos dois pares — e ele passa a ser fator comum da expressão inteira. É a ' +
+      'técnica de ax + ay + bx + by = (a + b)(x + y), e também a de polinômios de grau 3 ' +
+      'como x³ + 2x² − 9x − 18.',
+    formulas: [
+      { tex: 'ax + ay + bx + by = a(x + y) + b(x + y) = (a + b)(x + y)' },
+      {
+        tex: 'x^{3} + px^{2} + qx + pq = x^{2}(x + p) + q(x + p) = (x + p)(x^{2} + q)',
+        legenda: 'O padrão do grau 3: o termo solto é o produto dos outros dois coeficientes.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Tiramos o fator comum de cada par.',
+        tex: 'ax + ay = a(x + y) \\qquad bx + by = b(x + y)',
+      },
+      {
+        descricao: 'O parêntese (x + y) se repete: colocamos ele em evidência.',
+        tex: 'a(x + y) + b(x + y) = (x + y)(a + b)',
+        nota: 'Se os parênteses saírem diferentes, troque o agrupamento ou o sinal do fator tirado.',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Fatorando x³ + 2x² − 9x − 18 e achando as raízes.',
+      passos: [
+        {
+          descricao: 'Dois pares.',
+          tex: '\\left(x^{3} + 2x^{2}\\right) + \\left(-9x - 18\\right)',
+        },
+        {
+          descricao: 'Fator comum de cada par: x² no primeiro, −9 no segundo.',
+          tex: 'x^{2}(x + 2) - 9(x + 2)',
+        },
+        {
+          descricao: 'O parêntese repetido em evidência, e o que sobra é diferença de quadrados.',
+          tex: '(x + 2)(x^{2} - 9) = (x + 2)(x - 3)(x + 3)',
+        },
+        {
+          descricao: 'Cada fator nulo dá uma raiz.',
+          tex: 'x = -2,\\; x = 3,\\; x = -3',
+        },
+      ],
+    },
+    vejaTambem: ['fatoracao.ideia', 'fatoracao.diferenca', 'fatoracao.cubos'],
+  },
+  {
+    id: 'fatoracao.cubos',
+    titulo: 'Soma e diferença de cubos',
+    resumo: 'u³ ± v³ = (u ± v)(u² ∓ uv + v²): o segundo fator nunca zera.',
+    definicao:
+      'A diferença de cubos fatora em (u − v)(u² + uv + v²) e a soma em (u + v)(u² − uv + v²). ' +
+      'O fator do 1º grau carrega o mesmo sinal da expressão; o do 2º grau tem o sinal do meio ' +
+      'trocado. Esse segundo fator tem discriminante negativo, então, nos reais, a única raiz ' +
+      'vem do primeiro: u³ − v³ = 0 só quando u = v.',
+    formulas: [
+      { tex: 'u^{3} - v^{3} = (u - v)(u^{2} + uv + v^{2})' },
+      { tex: 'u^{3} + v^{3} = (u + v)(u^{2} - uv + v^{2})' },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Multiplicando o lado direito da diferença, os termos do meio se cancelam.',
+        tex: '(u - v)(u^{2} + uv + v^{2}) = u^{3} + u^{2}v + uv^{2} - u^{2}v - uv^{2} - v^{3} = u^{3} - v^{3}',
+      },
+      {
+        descricao: 'O fator do 2º grau não tem raiz real.',
+        tex: '\\Delta = v^{2} - 4v^{2} = -3v^{2} < 0 \\quad (v \\neq 0)',
+        nota: 'Por isso x³ − 8 = 0 tem só a raiz real x = 2.',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Resolvendo 8x³ + 27 = 0.',
+      passos: [
+        {
+          descricao: 'Os dois termos são cubos: 8x³ = (2x)³ e 27 = 3³.',
+          tex: '8x^{3} + 27 = (2x)^{3} + 3^{3}',
+        },
+        {
+          descricao: 'Soma de cubos, com u = 2x e v = 3.',
+          tex: '(2x + 3)(4x^{2} - 6x + 9)',
+        },
+        {
+          descricao: 'O segundo fator tem Δ = 36 − 144 < 0; a raiz real vem do primeiro.',
+          tex: '2x + 3 = 0 \\;\\Rightarrow\\; x = \\frac{-3}{2}',
+        },
+      ],
+    },
+    vejaTambem: ['fatoracao.agrupamento', 'produtos.cubo'],
   },
 ];

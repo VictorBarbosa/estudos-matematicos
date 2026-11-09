@@ -116,6 +116,103 @@ export const TEORIA_EQUACAO_1: readonly Teoria[] = [
         nota: 'Usar uma linha intermediária esconderia um erro cometido antes dela.',
       },
     ],
-    vejaTambem: ['equacao1.igualdade'],
+    vejaTambem: ['equacao1.igualdade', 'equacao1.problemas'],
+  },
+  {
+    id: 'equacao1.fracoes',
+    titulo: 'Equações com frações',
+    resumo: 'Multiplique tudo pelo mmc dos denominadores, e as frações somem.',
+    definicao:
+      'Multiplicar os dois lados de uma equação pelo mesmo número não muda a solução. ' +
+      'Escolhendo o mmc dos denominadores, cada fração vira um inteiro e a equação volta a ' +
+      'ser a de sempre. Dois cuidados: TODOS os termos são multiplicados, inclusive os ' +
+      'números soltos; e o menos antes de uma fração vale para o numerador inteiro, que por ' +
+      'isso vai entre parênteses.',
+    formulas: [
+      {
+        tex: '\\frac{x + m}{p} = k \\;\\Rightarrow\\; x + m = kp',
+        legenda: 'Com um denominador só, multiplica-se por ele.',
+      },
+      {
+        tex: '-\\frac{x - 2}{3} \\;\\to\\; -(x - 2) = -x + 2',
+        legenda: 'O sinal troca nos dois termos do numerador.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Partimos de x/2 + x/3 = 10. O mmc de 2 e 3 é 6.',
+        tex: '\\text{mmc}(2, 3) = 6',
+      },
+      {
+        descricao: 'Multiplicamos cada termo por 6.',
+        tex: '6 \\cdot \\frac{x}{2} + 6 \\cdot \\frac{x}{3} = 6 \\cdot 10 \\;\\Rightarrow\\; 3x + 2x = 60',
+        nota: 'Esquecer de multiplicar o 10 é o erro mais comum.',
+      },
+      {
+        descricao: 'Agora é uma equação sem frações.',
+        tex: '5x = 60 \\;\\Rightarrow\\; x = 12',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Resolvendo (x + 1)/2 − (x − 3)/4 = 2.',
+      passos: [
+        { descricao: 'O mmc de 2 e 4 é 4.', tex: '\\text{mmc}(2, 4) = 4' },
+        {
+          descricao: 'Multiplicando tudo por 4, com o segundo numerador entre parênteses.',
+          tex: '2(x + 1) - (x - 3) = 8',
+        },
+        {
+          descricao: 'Distribuindo: o menos troca o sinal dos dois termos.',
+          tex: '2x + 2 - x + 3 = 8',
+        },
+        { descricao: 'Isolando x.', tex: 'x + 5 = 8 \\;\\Rightarrow\\; x = 3' },
+      ],
+    },
+    vejaTambem: ['equacao1.igualdade', 'equacao1.verificacao'],
+  },
+  {
+    id: 'equacao1.problemas',
+    titulo: 'Do enunciado à equação',
+    resumo: 'Escolha o que é x, traduza cada frase, e só então resolva.',
+    definicao:
+      'Num problema, a equação não vem pronta: é preciso escrevê-la. A receita é sempre a ' +
+      'mesma. Primeiro, decidir o que é x — de preferência, o que a pergunta pede. Depois, ' +
+      'escrever cada grandeza do texto em função de x. Por fim, achar a frase que diz que ' +
+      'duas coisas são iguais: essa é a equação. A unidade acompanha a resposta, e vale ' +
+      'conferir se ela responde à pergunta feita — a menor idade, a largura, o maior número.',
+    formulas: [
+      {
+        tex: '\\text{«o triplo de x»} \\to 3x \\qquad \\text{«5 a mais que x»} \\to x + 5',
+        legenda: 'Cada expressão do texto tem uma tradução.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Exemplo: um táxi cobra R$ 5 de bandeirada e R$ 3 por km; a corrida deu R$ 41.',
+        tex: 'x = \\text{km rodados}',
+      },
+      {
+        descricao: 'O preço é a bandeirada mais 3 por km — e ele é igual a 41.',
+        tex: '5 + 3x = 41',
+      },
+      {
+        descricao: 'Resolvendo.',
+        tex: '3x = 36 \\;\\Rightarrow\\; x = 12 \\text{ km}',
+        nota: 'Conferindo: 5 + 3 · 12 = 41.',
+      },
+    ],
+    exemplo: {
+      enunciado:
+        'Um retângulo tem comprimento 4 cm maior que a largura e perímetro 28 cm. Qual a largura?',
+      passos: [
+        {
+          descricao: 'Largura x, comprimento x + 4.',
+          tex: '\\text{largura} = x \\qquad \\text{comprimento} = x + 4',
+        },
+        { descricao: 'O perímetro soma os quatro lados.', tex: '2x + 2(x + 4) = 28' },
+        { descricao: 'Resolvendo.', tex: '4x + 8 = 28 \\;\\Rightarrow\\; x = 5 \\text{ cm}' },
+      ],
+    },
+    vejaTambem: ['equacao1.igualdade', 'equacao1.verificacao'],
   },
 ];
