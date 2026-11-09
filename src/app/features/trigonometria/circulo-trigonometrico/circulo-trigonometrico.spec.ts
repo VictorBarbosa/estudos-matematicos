@@ -60,3 +60,24 @@ describe('geradorCirculo (círculo trigonométrico)', () => {
     expect(resultado.conceitoAssociado).toBe('circulo.quadrantes');
   });
 });
+
+describe('o sinal no círculo', () => {
+  it('a pergunta de sinal, que estava declarada e nunca era sorteada, aparece e confere', async () => {
+    const { geradorCirculo } =
+      await import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.gerador');
+    const { criarRng } = await import('@core/treino/rng/rng');
+    const rng = criarRng(31);
+    const sinais = Array.from({ length: 200 }, () => geradorCirculo.gerar('medio', rng)).filter(
+      (e) => e.enunciado.includes('sinal'),
+    );
+
+    expect(sinais.length).toBeGreaterThan(0);
+
+    for (const exercicio of sinais) {
+      const [, funcao, graus] = /sinal de (sen|cos|tg) (-?\d+)°/.exec(exercicio.enunciado)!;
+      const r = (Number(graus) * Math.PI) / 180;
+      const valor = funcao === 'sen' ? Math.sin(r) : funcao === 'cos' ? Math.cos(r) : Math.tan(r);
+      expect(exercicio.gabarito).toBe(Math.sign(valor));
+    }
+  });
+});

@@ -236,7 +236,7 @@ export function resolverSistemaComPassos(sistema: Sistema): Resolucao<SolucaoSis
 
   passos.push({
     descricao: 'A solução é o ponto onde as duas retas se cruzam.',
-    tex: `(x, y) = (${formatar(x)},\; ${formatar(y)})`,
+    tex: `(x, y) = (${formatar(x)},\\; ${formatar(y)})`,
   });
 
   return { resultado: { tipo: 'determinado', x, y, determinante }, passos };

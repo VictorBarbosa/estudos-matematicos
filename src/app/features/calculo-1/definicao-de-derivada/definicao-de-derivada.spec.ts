@@ -25,9 +25,24 @@ describe('geradorDefinicaoDerivada', () => {
     });
   }
 
-  it('no nível difícil só aparece a derivada no ponto', () => {
+  it('no nível difícil não aparece a secante, que é a pergunta de entrada', () => {
     for (const exercicio of amostra('dificil')) {
-      expect(exercicio.enunciado).toContain("f'");
+      expect(exercicio.enunciado).not.toContain('secante');
+    }
+  });
+
+  it('a taxa média, que estava declarada e nunca era sorteada, aparece e confere', () => {
+    const taxas = amostra('medio', 120).filter((e) => e.enunciado.includes('velocidade média'));
+    expect(taxas.length).toBeGreaterThan(0);
+
+    for (const exercicio of taxas) {
+      const [, ini, fim] = /t = ([\d,]+) s e t = ([\d,]+) s/.exec(exercicio.enunciado)!;
+      const t0 = Number(ini!.replace(',', '.'));
+      const t1 = Number(fim!.replace(',', '.'));
+      // Que o último passo mostra o gabarito, o guarda de formato-resposta já confere.
+      expect(exercicio.resolucao.passos.at(-1)!.tex).toContain('v_m');
+      expect(t1).toBeGreaterThan(t0);
+      expect(Number.isFinite(exercicio.gabarito)).toBe(true);
     }
   });
 

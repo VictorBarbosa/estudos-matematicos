@@ -104,6 +104,10 @@ export const geradorCirculo: GeradorExercicio<number> = {
       };
     }
 
+    if (pergunta === 'sinal') {
+      return exercicioSinal(nivel, rng, graus);
+    }
+
     // Valor de seno ou cosseno, incluindo quadrantes com sinal negativo.
     const ehSeno = rng.booleano();
     const radianos = paraRadianos(graus);
@@ -174,13 +178,13 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'facil':
       return rng.escolher<Pergunta>(['quadrante', 'radianos']);
     case 'medio':
-      return rng.escolher<Pergunta>(['quadrante', 'radianos', 'valor']);
+      return rng.escolher<Pergunta>(['quadrante', 'radianos', 'valor', 'sinal']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['valor', 'quadrante']);
-    // Com o ângulo passando de uma volta (ver `anguloNaVolta`), o valor exige
-    // reduzir ao intervalo principal antes de ler o seno ou o cosseno.
+      return rng.escolher<Pergunta>(['valor', 'quadrante', 'sinal']);
+    // Com o ângulo passando de uma volta (ver `anguloNaVolta`), o valor e o
+    // sinal exigem reduzir ao intervalo principal antes de ler o círculo.
     case 'extremo':
-      return 'valor';
+      return rng.escolher<Pergunta>(['valor', 'sinal']);
   }
 }
 
@@ -196,4 +200,82 @@ function sortearAngulo(nivel: Nivel, rng: Rng): number {
   // primeiro giro importa. Sorteados num intervalo, e não de uma lista de
   // nove: o aluno percebia a repetição em poucos cliques.
   return rng.booleano() ? -rng.inteiro(5, 355) : rng.inteiro(365, 1080);
+}
+
+/**
+ * O sinal de sen, cos ou tg no quadrante do ângulo.
+ *
+ * Estava declarado no tipo desde o começo e nunca era sorteado. É a pergunta
+ * que separa quem decorou a tabela de quem sabe ler o círculo: o sinal sai da
+ * posição do ponto, sem calcular valor nenhum.
+ */
+function exercicioSinal(nivel: Nivel, rng: Rng, sorteado: number): Exercicio<number> {
+  // Sobre os eixos o seno, o cosseno ou a tangente zeram ou somem: sem sinal.
+  const graus = sorteado % 90 === 0 ? sorteado + rng.inteiro(10, 80) : sorteado;
+  const funcao = rng.escolher(['sen', 'cos', 'tg'] as const);
+  const reduzido = ((graus % 360) + 360) % 360;
+  const q = quadrante(graus);
+
+  const x = Math.cos(paraRadianos(graus));
+  const y = Math.sin(paraRadianos(graus));
+  const valor = funcao === 'sen' ? y : funcao === 'cos' ? x : y / x;
+  const gabarito = valor > 0 ? 1 : -1;
+
+  const leitura =
+    funcao === 'sen'
+      ? `O seno é a ordenada (y) do ponto: no ${q}º quadrante ela é ${y > 0 ? 'positiva' : 'negativa'}.`
+      : funcao === 'cos'
+        ? `O cosseno é a abscissa (x) do ponto: no ${q}º quadrante ela é ${x > 0 ? 'positiva' : 'negativa'}.`
+        : `A tangente é y/x: no ${q}º quadrante, y é ${y > 0 ? 'positivo' : 'negativo'} e x é ` +
+          `${x > 0 ? 'positivo' : 'negativo'}, então o quociente é ${gabarito > 0 ? 'positivo' : 'negativo'}.`;
+
+  return {
+    id: `circulo-sinal-${funcao}-${graus}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado: `Qual é o sinal de ${funcao} ${graus}°? Responda 1 se for positivo e -1 se for negativo.`,
+    enunciadoTex: `\\operatorname{${funcao}} ${graus}° \\gtrless 0 \;?`,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: 'Reduzimos o ângulo à primeira volta.',
+          tex: `${graus}° \\equiv ${reduzido}°`,
+        },
+        {
+          descricao: `${reduzido}° fica no ${q}º quadrante.`,
+          tex: `\\text{${q}º quadrante}`,
+        },
+        {
+          descricao: leitura,
+          tex:
+            `\\operatorname{${funcao}} ${graus}° ${gabarito > 0 ? '> 0' : '< 0'} ` +
+            `\\;\\Rightarrow\\; ${gabarito}`,
+          nota: 'O mnemônico: no 1º tudo é positivo; no 2º só o seno; no 3º só a tangente; no 4º só o cosseno.',
+        },
+      ],
+    },
+    conceitos: ['circulo.quadrantes'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: -gabarito,
+          diagnostico:
+            funcao === 'tg'
+              ? 'A tangente é y/x: o sinal sai dos DOIS sinais juntos. No 3º quadrante, por ' +
+                'exemplo, os dois são negativos e a tangente é positiva.'
+              : `Confira qual coordenada é ${funcao === 'sen' ? 'o seno (a vertical, y)' : 'o cosseno (a horizontal, x)'} ` +
+                'e de que lado do eixo o ponto está nesse quadrante.',
+          passo: 2,
+          conceito: 'circulo.quadrantes',
+        },
+      ],
+      gabarito,
+      proximos,
+    ),
+    dica:
+      nivel === 'medio'
+        ? 'Seno é o y do ponto, cosseno é o x, tangente é y/x. Veja o quadrante.'
+        : undefined,
+  };
 }
