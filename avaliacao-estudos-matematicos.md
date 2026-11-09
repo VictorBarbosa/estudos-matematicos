@@ -4,7 +4,7 @@
 básica ao cálculo, com a física que dá sentido a tudo.
 
 - **Site:** https://victorbarbosa.github.io/estudos-matematicos/
-- **Versão avaliada:** commit `afe6b98`, de 09/11/2026 — **101 tópicos em 14 áreas**
+- **Versão avaliada:** commit `afe6b98`, de 09/11/2026 — **101 tópicos em 14 áreas** (104 depois da Fase 1, em 09/11)
 - **Documentos consolidados aqui (e removidos):** `plano_matematica_engenharia_aeroespacial.md`,
   `PROPOSTA_EDUCATIVA.md` e a avaliação anterior (commit `808dbc7`, 28/10/2026, 75 tópicos)
 - **Como foi feita:** um comitê de três relatores leu o código-fonte — currículo e cobertura;
@@ -74,9 +74,9 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] Os oito tópicos do plano: expressões, 1º grau, produtos notáveis, fatoração, 2º grau, inequações, sistemas, polinômios
 - [x] Equação do 2º grau e fatoração aceitam fração e raiz na resposta (bugs 7 e 8 da avaliação anterior)
 - [x] Inequações passaram a avaliar o sentido, não só a fronteira (bug 13)
-- [ ] **Estudo de sinal e inequações de 2º grau, produto e quociente** — não existe (`features/algebra/inequacoes/inequacoes.teoria.ts` só trata 1º grau; `curriculo.ts:137` admite). É pré-requisito do quadro de sinais em `calculo-1/aplicacoes-da-derivada`. **Prioridade alta.**
+- [x] **Estudo de sinal e inequações de 2º grau, produto e quociente** — tópico novo `inequacoes-segundo-grau` (09/11), depois de Inequações: quadro de sinais, sinal do trinômio, Δ ≤ 0 e inequação-quociente; a resposta é o conjunto escrito como no caderno (`-2 < x < 3`, `x <= 1 ou x >= 4`, `x ≠ 2`, `vazio`, `todos`). Antes: não existia (`features/algebra/inequacoes/inequacoes.teoria.ts` só trata 1º grau; `curriculo.ts:137` admite). É pré-requisito do quadro de sinais em `calculo-1/aplicacoes-da-derivada`. **Prioridade alta.**
 - [ ] Frações algébricas (expressões racionais) — pedidas na avaliação anterior, ausentes
-- [ ] **Treino:** 6 dos 8 tópicos fazem uma pergunta só (`equacao-primeiro-grau`, `equacao-segundo-grau`, `fatoracao`, `inequacoes`, `produtos-notaveis`, `sistemas-lineares`). Faltam as clássicas: soma e produto das raízes; condição sobre Δ; equação biquadrada; sistema 3×3 e classificação (possível/impossível/indeterminado); fatoração por agrupamento e soma/diferença de cubos; produto notável na direção inversa.
+- [x] **Treino (09/11):** os 6 tópicos de uma pergunta só passaram a ter 3 ou mais, nenhum nível com uma só e o Extremo diferente do Difícil — 2º grau: soma e produto (Girard), k da raiz dupla, biquadrada, x₁² + x₂² = S² − 2P; sistemas: problema de enunciado, k do sistema impossível, k e m do indeterminado (o 3×3 ficou no tópico de escalonamento); fatoração: agrupamento, soma/diferença de cubos; produtos notáveis: direção inversa, inclusive do cubo; 1º grau: equação com frações (mmc) e problema de enunciado com unidade. `inequacoes` (1º grau) segue com uma forma, agora complementada por Estudo de sinal. Antes: 6 dos 8 tópicos faziam uma pergunta só (`equacao-primeiro-grau`, `equacao-segundo-grau`, `fatoracao`, `inequacoes`, `produtos-notaveis`, `sistemas-lineares`). Faltam as clássicas: soma e produto das raízes; condição sobre Δ; equação biquadrada; sistema 3×3 e classificação (possível/impossível/indeterminado); fatoração por agrupamento e soma/diferença de cubos; produto notável na direção inversa.
 
 ### 3.3 Geometria plana e espacial — aceitável (melhorou em 09/11)
 
@@ -102,7 +102,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 ### 3.5 Trigonometria — aceitável
 
 - [x] Os seis tópicos, na ordem certa (funções antes de identidades, como a avaliação anterior pediu)
-- [ ] **Equações trigonométricas e funções inversas** (arcsen, arccos, arctg) — não há tópico; as inversas aparecem só em menções. É **pré-requisito da substituição trigonométrica** em `calculo-2/tecnicas-de-integracao`. **Prioridade alta.**
+- [x] **Equações trigonométricas e funções inversas** — tópico novo `equacoes-trigonometricas` (09/11), depois de identidades: inversas e suas imagens, sen/cos/tg x = k na volta, a·f(x) + b = c, arco múltiplo e, no Extremo, equação do 2º grau em sen x com raiz a descartar. Antes: não havia tópico; as inversas aparecem só em menções. É **pré-requisito da substituição trigonométrica** em `calculo-2/tecnicas-de-integracao`. **Prioridade alta.**
 - [x] Tipo de pergunta `'sinal'` ligado em `circulo-trigonometrico` (Médio em diante; resposta 1 ou −1) — 09/11
 - [ ] **◐** `triangulo-retangulo`: o **ângulo** dados os dois catetos (arctg, em graus) entrou no Extremo em 09/11; faltam 30-60-90 e 45-45-90, altura por tangente
 - [ ] **◐** `lei-senos-cossenos`: o **maior ângulo** pelos três lados (arccos) entrou no Extremo em 09/11; falta a área ½·a·b·sen C
@@ -113,7 +113,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] Vetores no plano, produto escalar e vetorial, **vetores no espaço (R³)** — o pedido central do plano anterior
 - [x] Matrizes: determinantes 2×2 e 3×3, Cramer, produto
 - [x] Números complexos, mantidos como complementar
-- [ ] **Escalonamento (Gauss-Jordan) e matriz inversa** — `curriculo.ts:386` lista como o que falta; `sistemas-lineares` só ensina substituição 2×2. É o que fecha o 0M04. **Prioridade alta.**
+- [x] **Escalonamento (Gauss-Jordan) e matriz inversa** — tópico novo `escalonamento-e-inversa` (09/11), depois de matrizes: operações de linha, Gauss-Jordan 3×3 (com troca de linhas no Extremo), classificação pelo escalonamento, inversa 2×2 e 3×3 por (A | I). Antes: `curriculo.ts:386` listava como o que falta; `sistemas-lineares` só ensina substituição 2×2. É o que fecha o 0M04. **Prioridade alta.**
 - [ ] Retas e planos no espaço; combinação linear, independência e bases
 - [x] «det = 0 ⟺ linhas proporcionais»: reconferido em 09/11 — a teoria já explica que no 3×3 a condição é dependência linear, e «proporcionais» só aparece onde vale (2×2 ou como caso particular)
 - [ ] Explorar de `vetores-no-espaco` não tem desenho: o produto vetorial é explicado em texto, sem a regra da mão direita
@@ -152,9 +152,9 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 ### 3.10 Cálculo 1 — frágil (treino)
 
 - [x] Os oito tópicos originais mais os acréscimos pedidos: **derivadas trigonométricas, exponencial e logaritmo, derivação implícita, taxas relacionadas, otimização** (em `aplicacoes-da-derivada`)
-- [ ] **Regra de L'Hôpital** — zero ocorrências; `limites` resolve indeterminação só por fatoração e conjugado
-- [ ] **Teorema do valor médio e Rolle** — zero ocorrências
-- [ ] **Regra do quociente** — não existe nenhuma pergunta, embora a descrição do tópico a prometa
+- [x] **Regra de L'Hôpital** — em `aplicacoes-da-derivada` (09/11): transcendente sobre mx (Médio), dois polinômios em a ≠ 0 (Difícil), aplicada duas vezes (Extremo), com verbete de teoria. Antes: zero ocorrências; `limites` resolve indeterminação só por fatoração e conjugado
+- [x] **Teorema do valor médio e Rolle** — em `aplicacoes-da-derivada` (09/11): o c da parábola (Médio), da cúbica em [0, b] (Difícil) e em [a, b] (Extremo); verbete com a demonstração por Rolle
+- [x] **Regra do quociente** — pergunta no Difícil e no Extremo de `regras-de-derivacao`, com resposta em fração e as armadilhas da ordem e do quadrado; o exemplo da teoria agora é um quociente de verdade (09/11)
 - [x] Tipo `'taxa-media'` ligado em `definicao-de-derivada`: velocidade média de um carro em m/s, do Médio ao Extremo (09/11)
 - [x] Dica da regra do produto movida para o Médio, onde a pergunta estreia (09/11)
 - [ ] 6 dos 11 tópicos fazem uma pergunta só (`derivacao-implicita`, `derivadas-exponencial-logaritmo`, `derivadas-trigonometricas`, `limites`, `limites-laterais`, `regra-da-cadeia`). Faltam: reta tangente; derivada segunda; sen x/x; limite que não existe; classificação de descontinuidade; crescimento, concavidade e inflexão; cadeia com √, e^u, ln u (**feito no Extremo em 09/11**: √, eᵘ, ln u e sen u por fora)
@@ -270,16 +270,18 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 ### Fase 1 — Álgebra e os pré-requisitos ausentes (semanas)
 
+**Feita em 09/11/2026**, exceto `TIPOS_POR_TOPICO`, que depende de uma decisão sobre a exigência da prova (4.3). Efeito colateral dos tópicos novos: a trilha só fica aberta até a primeira etapa não vencida, então quem já tinha passado de Álgebra, Trigonometria ou Vetores e matrizes encontra a etapa nova a vencer.
+
 - [ ] `TIPOS_POR_TOPICO` nos tópicos com várias perguntas (vindo da Fase 0), decidido junto com a exigência da prova por tamanho de área
-- [ ] Novo tópico **Estudo de sinal e inequações de 2º grau** (destrava `aplicacoes-da-derivada`)
-- [ ] Novo tópico **Equações trigonométricas e funções inversas** (destrava substituição trigonométrica)
-- [ ] Novo tópico **Escalonamento e matriz inversa** (fecha o 0M04)
-- [ ] Álgebra: as perguntas clássicas da seção 3.2, levando cada tópico a ao menos 3 tipos e nenhum nível a uma pergunta só
-- [ ] L'Hôpital e TVM em Cálculo 1; regra do quociente em `regras-de-derivacao`
+- [x] Novo tópico **Estudo de sinal e inequações de 2º grau** (destrava `aplicacoes-da-derivada`) — 09/11
+- [x] Novo tópico **Equações trigonométricas e funções inversas** (destrava substituição trigonométrica) — 09/11
+- [x] Novo tópico **Escalonamento e matriz inversa** (fecha o 0M04) — 09/11
+- [x] Álgebra: as perguntas clássicas da seção 3.2, levando cada tópico a ao menos 3 tipos e nenhum nível a uma pergunta só — 09/11 (exceto `inequacoes`, ver 3.2)
+- [x] L'Hôpital e TVM em Cálculo 1; regra do quociente em `regras-de-derivacao` — 09/11
 
 ### Fase 2 — Treino nas demais áreas magras (semanas)
 
-- [ ] Trigonometria, Cálculo 1, Geometria analítica (parábola, distância ponto-reta), Funções, Cálculo 4 — as 20 perguntas priorizadas pelo relator de treino, por ordem: soma e produto das raízes; inequação de 2º grau; equação trigonométrica; regra do quociente; distância de ponto a reta; perpendicular; foco da parábola; intervalo de crescimento; L'Hôpital; tipo de descontinuidade; sistema 3×3; fatoração por agrupamento; inequação modular; razão da PA; taxa equivalente; EDO exata; regime de amortecimento; Newton-Raphson; ~~ângulo no triângulo retângulo; maior ângulo pela lei dos cossenos~~ (feitos em 09/11, no Extremo)
+- [ ] Trigonometria, Cálculo 1, Geometria analítica (parábola, distância ponto-reta), Funções, Cálculo 4 — as 20 perguntas priorizadas pelo relator de treino, por ordem: ~~soma e produto das raízes; inequação de 2º grau; equação trigonométrica; regra do quociente~~; distância de ponto a reta; perpendicular; foco da parábola; intervalo de crescimento; ~~L'Hôpital~~; tipo de descontinuidade; ~~sistema 3×3~~; ~~fatoração por agrupamento~~; inequação modular; razão da PA; taxa equivalente; EDO exata; regime de amortecimento; Newton-Raphson; ~~ângulo no triângulo retângulo; maior ângulo pela lei dos cossenos~~ (feitos em 09/11, no Extremo)
 - [ ] Dica no nível de estreia para as 577 formas que não têm (guarda geral em `dicas-alcancaveis.spec.ts`)
 - [ ] Exemplo numérico resolvido nos 32 tópicos de teoria que não têm nenhum
 - [ ] Desenho nos Explorar de `solidos-e-volumes` e `vetores-no-espaco`
@@ -315,7 +317,7 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 | **Consertar já** | ~~Tipos mortos; dicas presas; Extremo repetido; `\;`; resoluções de Física~~ (feitos em 09/11); cobertura da prova (◐) |
 | **Refundar** | `sequencias-e-series` → testes de convergência |
 | **Remover / mover** | Seção duplicada de limites laterais no Pré-cálculo; «Ajuste de reta» para regressão |
-| **Acrescentar (pré-requisitos)** | Estudo de sinal; equações trigonométricas e inversas; escalonamento e inversa; L'Hôpital e TVM; regra do quociente |
+| **Acrescentar (pré-requisitos)** | ~~Estudo de sinal; equações trigonométricas e inversas; escalonamento e inversa; L'Hôpital e TVM; regra do quociente~~ (feitos em 09/11) |
 | **Acrescentar (cobertura)** | Congruência, quadriláteros, poliedros; polares; binômio de Newton; superfície e teoremas; exponenciais/logarítmicas; séries de potências |
 | **Acrescentar (admissão)** | Eletromagnetismo; ondas e física moderna |
 | **Ampliar treino** | Álgebra primeiro; depois Trigonometria, Cálculo 1, Geometria analítica, Funções, Cálculo 4 |
