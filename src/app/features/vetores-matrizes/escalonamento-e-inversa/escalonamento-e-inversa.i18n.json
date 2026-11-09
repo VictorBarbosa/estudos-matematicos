@@ -1,0 +1,58 @@
+{
+  "matrizAumentada": {
+    "pt": "A matriz aumentada (A | b)",
+    "fr": "La matrice augmentée (A | b)",
+    "en": "The augmented matrix (A | b)"
+  },
+  "tipoDoSistema": { "pt": "Tipo do sistema", "fr": "Type du système", "en": "Type of system" },
+  "determinado": {
+    "pt": "Uma solução",
+    "fr": "Une solution",
+    "en": "One solution"
+  },
+  "indeterminado": {
+    "pt": "Infinitas soluções",
+    "fr": "Une infinité de solutions",
+    "en": "Infinitely many solutions"
+  },
+  "impossivel": {
+    "pt": "Nenhuma solução",
+    "fr": "Aucune solution",
+    "en": "No solution"
+  },
+  "comInversa": {
+    "pt": "≠ 0: A tem inversa",
+    "fr": "≠ 0 : A est inversible",
+    "en": "≠ 0: A is invertible"
+  },
+  "semInversa": {
+    "pt": "= 0: A não tem inversa",
+    "fr": "= 0 : A n’est pas inversible",
+    "en": "= 0: A is not invertible"
+  },
+  "gaussJordan": {
+    "pt": "Gauss-Jordan, coluna por coluna",
+    "fr": "Gauss-Jordan, colonne par colonne",
+    "en": "Gauss-Jordan, column by column"
+  },
+  "comoLer": {
+    "pt": "Em cada coluna: troca de linha se o pivô for zero, divisão para o pivô virar 1, e eliminação do resto da coluna. Mexa num coeficiente e veja o caminho mudar — ou uma linha virar 0 0 0.",
+    "fr": "Dans chaque colonne : échange de lignes si le pivot est nul, division pour que le pivot vaille 1, puis élimination du reste de la colonne. Modifiez un coefficient et regardez le chemin changer — ou une ligne devenir 0 0 0.",
+    "en": "In each column: swap rows if the pivot is zero, divide so the pivot becomes 1, then clear the rest of the column. Change a coefficient and watch the path change — or a row turn into 0 0 0."
+  },
+  "inversa": {
+    "pt": "A inversa de A por (A | I)",
+    "fr": "L’inverse de A par (A | I)",
+    "en": "The inverse of A via (A | I)"
+  },
+  "inversaPorEscalonamento": {
+    "pt": "As mesmas operações que levam A à identidade levam a identidade à inversa.",
+    "fr": "Les mêmes opérations qui mènent A à l’identité mènent l’identité à l’inverse.",
+    "en": "The same operations that turn A into the identity turn the identity into the inverse."
+  },
+  "avisoSemInversa": {
+    "pt": "Determinante zero: o escalonamento de A deixa uma linha de zeros, nunca chega à identidade, e a inversa não existe. É o mesmo motivo pelo qual o sistema perde a solução única.",
+    "fr": "Déterminant nul : l’échelonnement de A laisse une ligne de zéros, n’atteint jamais l’identité, et l’inverse n’existe pas. C’est la même raison pour laquelle le système perd sa solution unique.",
+    "en": "Determinant zero: row-reducing A leaves a row of zeros, never reaches the identity, and the inverse does not exist. It is the same reason the system loses its single solution."
+  }
+}
