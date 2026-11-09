@@ -230,6 +230,12 @@ function exercicioEscala(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' ? "A' = k² · A" : undefined,
+    /*
+     * A dica vem no Difícil, que é onde esta pergunta estreia — no Fácil, onde
+     * ela estava, `sortearPergunta` só gera o cálculo direto de área, e a dica
+     * nunca chegava à tela. E traz o número: «A' = k² · A» não diz o que fazer
+     * com o k do enunciado.
+     */
+    dica: nivel === 'dificil' ? `A' = k² · A, e aqui k = ${k}: o fator é ${k}².` : undefined,
   };
 }

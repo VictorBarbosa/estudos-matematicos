@@ -198,10 +198,14 @@ export function escalaComPassos(k: number, dimensao: 1 | 2 | 3): Resolucao<numbe
     },
   ];
 
+  // Com o número no lugar de k, «k² = 16» deixa de ser um salto: fica à vista
+  // que o 16 veio de 4 · 4, e não de 4 + 4 nem de 4 · 2.
+  const numero = formatar(k);
+
   if (dimensao >= 2) {
     passos.push({
-      descricao: 'A área é um produto de dois comprimentos, então k entra duas vezes.',
-      tex: `A' = (k \\cdot b)(k \\cdot h) = k^{2} \\cdot A`,
+      descricao: `A área é um produto de dois comprimentos, então k entra duas vezes.`,
+      tex: `A' = (${numero}b)(${numero}h) = ${numero}^{2} \\cdot A`,
       nota: 'Dobrar o lado não dobra a área: quadruplica.',
     });
   }
@@ -209,14 +213,14 @@ export function escalaComPassos(k: number, dimensao: 1 | 2 | 3): Resolucao<numbe
   if (dimensao === 3) {
     passos.push({
       descricao: 'O volume é um produto de três comprimentos, e k entra três vezes.',
-      tex: `V' = k^{3} \\cdot V`,
+      tex: `V' = (${numero}a)(${numero}b)(${numero}c) = ${numero}^{3} \\cdot V`,
       nota: 'É por isso que massa e peso crescem muito mais rápido que a altura.',
     });
   }
 
   passos.push({
     descricao: `O fator que multiplica o ${nome} é portanto k elevado a ${dimensao}.`,
-    tex: `k^{${dimensao}} = ${formatar(Number(resultado.toFixed(6)))}`,
+    tex: `k^{${dimensao}} = ${numero}^{${dimensao}} = ${formatar(Number(resultado.toFixed(6)))}`,
   });
 
   return { resultado, passos };

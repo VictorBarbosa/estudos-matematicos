@@ -184,6 +184,9 @@ function exercicioTales(nivel: Nivel, rng: Rng): Exercicio<number> {
   };
 }
 
+/** Dicas e diagnósticos são texto corrido: `k^2` chegaria cru à tela. */
+const EXPOENTE: Readonly<Record<number, string>> = { 1: '', 2: '²', 3: '³' };
+
 function exercicioEscala(dimensao: 2 | 3, nivel: Nivel, rng: Rng): Exercicio<number> {
   const k = rng.escolher([2, 3, 4, 5, 0.5]);
   const original = rng.inteiro(2, 30) * (dimensao === 3 ? 2 : 1);
@@ -192,6 +195,7 @@ function exercicioEscala(dimensao: 2 | 3, nivel: Nivel, rng: Rng): Exercicio<num
   const resultado = original * fator;
 
   const grandeza = dimensao === 2 ? 'área' : 'volume';
+  const comoTexto = String(k).replace('.', ',');
   const unidade = dimensao === 2 ? 'cm²' : 'cm³';
 
   return {
@@ -219,7 +223,7 @@ function exercicioEscala(dimensao: 2 | 3, nivel: Nivel, rng: Rng): Exercicio<num
           resposta: original * k,
           diagnostico:
             `A razão k multiplica COMPRIMENTOS. A ${grandeza} depende de ` +
-            `${dimensao} dimensões, então o fator é k^${dimensao}.`,
+            `${dimensao} dimensões, então o fator é k${EXPOENTE[dimensao]}.`,
           passo: 1,
           conceito: 'semelhanca.razao',
         },
@@ -236,6 +240,15 @@ function exercicioEscala(dimensao: 2 | 3, nivel: Nivel, rng: Rng): Exercicio<num
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? `A ${grandeza} escala com k^${dimensao}.` : undefined,
+    // A dica traz o número do enunciado: «escala com k²» não diz o que fazer
+    // com o 4 que está escrito ali. O fator fica dito; o resultado, não.
+    // A dica vem no PRIMEIRO nível em que a pergunta aparece: a área escalada
+    // estreia no Médio e o volume no Difícil. Presa no Fácil, como estava, ela
+    // nunca chegava à tela — `sortearPergunta` não gera escala no Fácil.
+    dica:
+      nivel === (dimensao === 2 ? 'medio' : 'dificil')
+        ? `A ${grandeza} escala com k${EXPOENTE[dimensao]}, não com k. Aqui k = ${comoTexto}, ` +
+          `então o fator é ${comoTexto}${EXPOENTE[dimensao]}.`
+        : undefined,
   };
 }

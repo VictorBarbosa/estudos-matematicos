@@ -9,6 +9,34 @@ function amostra(nivel: Nivel, quantidade = 60) {
 }
 
 describe('geradorSemelhanca', () => {
+  it('a dica da escala chega à tela, com o número do enunciado', () => {
+    // Estava presa no Fácil, nível em que a escala não é sorteada: escrita no
+    // código, nunca vista. E dizia «k^2», cru, em texto corrido.
+    const comDica = amostra('medio', 200).filter((e) => e.dica !== undefined);
+
+    expect(comDica.length).toBeGreaterThan(0);
+
+    for (const exercicio of comDica) {
+      const k = /k = (\d+(?:,\d+)?)/.exec(exercicio.dica!)![1]!;
+      expect(exercicio.enunciado).toContain(`por ${k}`);
+      expect(exercicio.dica).toContain(`o fator é ${k}²`);
+      expect(exercicio.dica).not.toContain('^');
+    }
+  });
+
+  it('a resolução da escala substitui o k pelo número', () => {
+    // «k² = 16» não mostra de onde veio o 16.
+    const escala = amostra('medio', 200).filter((e) => e.enunciado.includes('Ampliando'));
+    expect(escala.length).toBeGreaterThan(0);
+
+    for (const exercicio of escala) {
+      const k = /por (\d+(?:,\d+)?)/.exec(exercicio.enunciado)![1]!.replace(',', '{,}');
+      const textos = exercicio.resolucao.passos.map((passo) => passo.tex);
+
+      expect(textos.some((tex) => tex.includes(`${k}^{2}`))).toBe(true);
+    }
+  });
+
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {

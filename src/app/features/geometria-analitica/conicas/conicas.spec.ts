@@ -8,6 +8,15 @@ function amostra(nivel: Nivel, quantidade = 60) {
 }
 
 describe('geradorConicas', () => {
+  it('a dica da excentricidade chega à tela', () => {
+    // Presa no Fácil, onde só caem semieixo e distância focal, ela nunca
+    // aparecia — o tópico inteiro passava sem dica nenhuma.
+    const comDica = amostra('medio', 200).filter((e) => e.dica !== undefined);
+
+    expect(comDica.length).toBeGreaterThan(0);
+    expect(comDica[0]!.dica).toContain('encontre c');
+  });
+
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, o gabarito é positivo e finito`, () => {
       for (const exercicio of amostra(nivel)) {

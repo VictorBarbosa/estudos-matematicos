@@ -9,6 +9,21 @@ function amostra(nivel: Nivel, quantidade = 60) {
 }
 
 describe('geradorAreas', () => {
+  it('a dica da escala chega à tela, com o número do enunciado', () => {
+    // A escala estreia no Difícil; a dica estava presa no Fácil.
+    const comDica = amostra('dificil', 200).filter(
+      (e) => e.dica !== undefined && e.dica.includes('k²'),
+    );
+
+    expect(comDica.length).toBeGreaterThan(0);
+
+    for (const exercicio of comDica) {
+      const k = /k = (\d+)/.exec(exercicio.dica!)![1]!;
+      expect(exercicio.enunciado).toContain(`${k} vezes maiores`);
+      expect(exercicio.dica).toContain(`o fator é ${k}²`);
+    }
+  });
+
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, nenhuma armadilha coincide com o gabarito`, () => {
       for (const exercicio of amostra(nivel)) {

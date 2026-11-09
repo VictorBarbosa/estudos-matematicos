@@ -93,7 +93,9 @@ export const geradorConicas: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
-        dica: nivel === 'facil' ? 'Primeiro encontre c, depois divida por a.' : undefined,
+        // No Médio, que é onde a excentricidade estreia: presa no Fácil, esta
+        // dica nunca aparecia, porque lá só caem semieixo e distância focal.
+        dica: nivel === 'medio' ? 'Primeiro encontre c, depois divida por a.' : undefined,
       };
     }
 
