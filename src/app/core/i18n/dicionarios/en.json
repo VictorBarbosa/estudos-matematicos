@@ -233,7 +233,7 @@
         "titulo": "Angles and triangles"
       },
       "aplicacoes-da-derivada": {
-        "descricao": "Maxima and minima, concavity, optimization and related rates.",
+        "descricao": "Maxima and minima, optimization, related rates, L’Hôpital and the mean value theorem.",
         "titulo": "Applications of the derivative"
       },
       "aplicacoes-da-integral": {

@@ -34,6 +34,12 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['continuidade', 'facil', 'onde o sinal troca'],
   ['sequencias-e-series', 'facil', 'PA: aₙ = a₁ + (n − 1)·r'],
   ['vizinhancas-e-infinito', 'facil', 'o denominador cresce mais rápido'],
+  // Perguntas novas (09/11): a dica nasce no nível de estreia.
+  ['regras-de-derivacao', 'dificil', 'Regra do quociente'],
+  ['aplicacoes-da-derivada', 'medio', 'Derive só o de cima'],
+  ['aplicacoes-da-derivada', 'medio', 'Inclinação da secante'],
+  ['aplicacoes-da-derivada', 'dificil', 'derive em cima e embaixo'],
+  ['aplicacoes-da-derivada', 'dificil', 'iguale a f′(c)'],
 ];
 
 describe('dicas alcançáveis', () => {

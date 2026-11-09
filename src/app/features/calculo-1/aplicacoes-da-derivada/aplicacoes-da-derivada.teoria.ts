@@ -152,4 +152,105 @@ export const TEORIA_APLICACOES_DERIVADA: readonly Teoria[] = [
     ],
     vejaTambem: ['aplic-derivada.extremos', 'cadeia.regra', 'taxa.instantanea'],
   },
+  {
+    id: 'aplic-derivada.lhopital',
+    titulo: 'Regra de L’Hôpital',
+    resumo: 'Quando dá 0/0, derive em cima e embaixo — separadamente — e tente de novo.',
+    definicao:
+      'Se f(a) = g(a) = 0, o quociente f/g em x → a é a forma indeterminada 0/0: pode tender a ' +
+      'qualquer valor. Perto de a, cada função se parece com a sua reta tangente, f(x) ≈ ' +
+      "f'(a)(x − a) e g(x) ≈ g'(a)(x − a); o fator (x − a) se cancela e sobra f'(a)/g'(a). " +
+      'Vale também para ∞/∞. Não é a regra do quociente: cada função é derivada sozinha. Se ' +
+      'depois de derivar ainda der 0/0, aplica-se de novo.',
+    formulas: [
+      {
+        tex: "\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\lim_{x \\to a} \\frac{f'(x)}{g'(x)}",
+        legenda: 'Só quando o limite original é 0/0 ou ∞/∞.',
+      },
+      {
+        tex: '\\lim_{x \\to 0} \\frac{\\sin x}{x} = \\lim_{x \\to 0} \\frac{\\cos x}{1} = 1',
+        legenda: 'O limite fundamental, em uma linha.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Perto de a, cada função é aproximada pela tangente, já que f(a) = g(a) = 0.',
+        tex: "f(x) \\approx f'(a)(x - a) \\qquad g(x) \\approx g'(a)(x - a)",
+      },
+      {
+        descricao: 'No quociente, o fator (x − a) aparece em cima e embaixo.',
+        tex: "\\frac{f(x)}{g(x)} \\approx \\frac{f'(a)(x - a)}{g'(a)(x - a)} = \\frac{f'(a)}{g'(a)}",
+        nota: "Precisa de g'(a) ≠ 0; se também for zero, a forma continua 0/0 e deriva-se de novo.",
+      },
+    ],
+    exemplo: {
+      enunciado: 'lim (e^{3x} − 1)/(2x) quando x → 0.',
+      passos: [
+        {
+          descricao: 'Em x = 0: (1 − 1)/0, a forma 0/0.',
+          tex: '\\frac{e^{0} - 1}{2 \\cdot 0} = \\frac{0}{0}',
+        },
+        {
+          descricao: 'Derivamos em cima e embaixo, separadamente.',
+          tex: '\\lim_{x \\to 0} \\frac{3e^{3x}}{2}',
+        },
+        {
+          descricao: 'Substituindo x = 0.',
+          tex: '\\frac{3 \\cdot 1}{2} = 1{,}5',
+        },
+      ],
+    },
+    vejaTambem: ['aplic-derivada.tvm', 'cadeia.regra'],
+  },
+  {
+    id: 'aplic-derivada.tvm',
+    titulo: 'Teorema do valor médio',
+    resumo: 'Em algum instante, a velocidade instantânea iguala a média.',
+    definicao:
+      'Se f é contínua em [a, b] e derivável em (a, b), existe ao menos um c entre a e b em ' +
+      'que a tangente é paralela à secante que liga as pontas: f′(c) = (f(b) − f(a))/(b − a). ' +
+      'Na linguagem do movimento: quem fez 120 km em 1 h esteve, em algum instante, ' +
+      'exatamente a 120 km/h. O caso f(a) = f(b) é o teorema de Rolle: a tangente fica ' +
+      'horizontal em algum ponto do caminho.',
+    formulas: [
+      {
+        tex: "f'(c) = \\frac{f(b) - f(a)}{b - a} \\qquad c \\in (a, b)",
+        legenda: 'Tangente em c paralela à secante.',
+      },
+      {
+        tex: "f(a) = f(b) \\;\\Rightarrow\\; f'(c) = 0",
+        legenda: 'Rolle, o caso particular de partida.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Subtraímos de f a reta secante; a diferença vale zero nas duas pontas.',
+        tex: 'h(x) = f(x) - \\left[f(a) + \\frac{f(b) - f(a)}{b - a}(x - a)\\right], \\quad h(a) = h(b) = 0',
+      },
+      {
+        descricao: 'Por Rolle, h tem tangente horizontal em algum c.',
+        tex: "h'(c) = f'(c) - \\frac{f(b) - f(a)}{b - a} = 0",
+        nota: 'Rolle por sua vez vem do teorema de Weierstrass: h tem máximo ou mínimo no interior.',
+      },
+    ],
+    exemplo: {
+      enunciado: 'f(x) = x³ em [0, 3]: onde a tangente é paralela à secante?',
+      passos: [
+        {
+          descricao: 'A inclinação da secante.',
+          tex: '\\frac{27 - 0}{3 - 0} = 9',
+        },
+        {
+          descricao: 'Igualamos a derivada.',
+          tex: "f'(c) = 3c^{2} = 9 \\;\\Rightarrow\\; c^{2} = 3",
+        },
+        {
+          descricao: 'A raiz dentro do intervalo.',
+          tex: 'c = \\sqrt{3} \\approx 1{,}732',
+          nota: 'Não é o ponto médio 1,5: isso só acontece com parábolas.',
+        },
+      ],
+    },
+    vejaTambem: ['aplic-derivada.extremos', 'aplic-derivada.lhopital'],
+  },
 ];

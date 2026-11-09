@@ -11,9 +11,20 @@ import {
 
 const { saoEquivalentes: proximos } = numeroComCasas(3, 1e-4);
 
-type Pergunta = 'ponto-critico' | 'valor-maximo' | 'otimizacao' | 'taxas-relacionadas';
+import {
+  exercicioLHopital,
+  exercicioValorMedio,
+} from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.teoremas';
 
-/** Exercícios de aplicação da derivada: extremos e otimização. */
+type Pergunta =
+  | 'ponto-critico'
+  | 'valor-maximo'
+  | 'otimizacao'
+  | 'taxas-relacionadas'
+  | 'lhopital'
+  | 'valor-medio';
+
+/** Exercícios de aplicação da derivada: extremos, otimização, taxas, L'Hôpital e valor médio. */
 export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
   topicoId: 'aplicacoes-da-derivada',
   formatoResposta: 'um número, ex.: 25',
@@ -23,6 +34,14 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
 
     if (pergunta === 'taxas-relacionadas') {
       return exercicioTaxasRelacionadas(nivel, rng);
+    }
+
+    if (pergunta === 'lhopital') {
+      return exercicioLHopital(nivel, rng);
+    }
+
+    if (pergunta === 'valor-medio') {
+      return exercicioValorMedio(nivel, rng);
     }
 
     if (pergunta === 'otimizacao') {
@@ -212,13 +231,26 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
         'valor-maximo',
         'otimizacao',
         'taxas-relacionadas',
+        'lhopital',
+        'valor-medio',
       ]);
     case 'dificil':
-      return rng.escolher<Pergunta>(['valor-maximo', 'otimizacao', 'taxas-relacionadas']);
-    // Taxas relacionadas é o único que exige montar a relação antes de
-    // derivar: a modelagem é a dificuldade, não a conta.
+      return rng.escolher<Pergunta>([
+        'valor-maximo',
+        'otimizacao',
+        'taxas-relacionadas',
+        'lhopital',
+        'valor-medio',
+      ]);
+    // Taxas relacionadas exige montar a relação antes de derivar; L'Hôpital
+    // duas vezes e o valor médio numa cúbica fora da origem pedem a conta longa.
     case 'extremo':
-      return rng.escolher<Pergunta>(['taxas-relacionadas', 'otimizacao']);
+      return rng.escolher<Pergunta>([
+        'taxas-relacionadas',
+        'otimizacao',
+        'lhopital',
+        'valor-medio',
+      ]);
   }
 }
 

@@ -116,3 +116,34 @@ describe('geradorRegras', () => {
     expect(expandido.derivar().avaliar(2)).toBe(19);
   });
 });
+
+describe('geradorRegras — regra do quociente', () => {
+  const rng = criarRng(4242);
+
+  it('a pergunta do quociente aparece no Difícil e no Extremo, e o gabarito confere', () => {
+    for (const nivel of ['dificil', 'extremo'] as const) {
+      const quocientes = Array.from({ length: 200 }, () => geradorRegras.gerar(nivel, rng)).filter(
+        (e) => e.enunciado.includes('quociente'),
+      );
+      expect(quocientes.length).toBeGreaterThan(0);
+
+      for (const exercicio of quocientes) {
+        // f = (ax+b)/(cx+d): confere f'(ponto) por diferença central.
+        const [, a, b, c, d] = /\\frac\{(-?\d*)x ([+-] \d+)\}\{(\d*)x ([+-] \d+)\}/.exec(
+          exercicio.enunciadoTex!,
+        )!;
+        const coef = (t: string) => (t === '' ? 1 : t === '-' ? -1 : Number(t));
+        const num = (t: string) => Number(t.replace(' ', ''));
+        const ponto = Number(/f'\((-?\d+)\)/.exec(exercicio.enunciado)![1]);
+        const f = (x: number) => (coef(a!) * x + num(b!)) / (coef(c!) * x + num(d!));
+        const h = 1e-5;
+        const numerica = (f(ponto + h) - f(ponto - h)) / (2 * h);
+        expect(exercicio.gabarito.avaliar(0)).toBeCloseTo(numerica, 4);
+
+        // A resposta digitada como fração é aceita.
+        const resultado = corrigir(geradorRegras, exercicio, exercicio.gabarito.tex);
+        expect(resultado.veredito).toBe('correto');
+      }
+    }
+  });
+});

@@ -686,7 +686,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'aplicacoes-da-derivada',
         titulo: 'Aplicações da derivada',
-        descricao: 'Máximos e mínimos, concavidade, otimização e taxas relacionadas.',
+        descricao: 'Máximos e mínimos, otimização, taxas relacionadas, L’Hôpital e valor médio.',
         pronto: true,
       },
     ],

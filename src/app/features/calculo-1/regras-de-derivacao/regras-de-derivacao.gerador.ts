@@ -1,4 +1,4 @@
-import { Polinomio } from '@core/math';
+import { Polinomio, mdc } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
   Simbolica,
@@ -9,7 +9,7 @@ import {
 } from '@core/treino/resposta-simbolica/resposta-simbolica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
-type Pergunta = 'polinomio' | 'produto' | 'coeficiente' | 'expressao';
+type Pergunta = 'polinomio' | 'produto' | 'quociente' | 'coeficiente' | 'expressao';
 
 /**
  * Um número como resposta simbólica: a função constante.
@@ -34,6 +34,10 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<Simbolica> {
     const pergunta = sortearPergunta(nivel, rng);
+
+    if (pergunta === 'quociente') {
+      return exercicioQuociente(nivel, rng);
+    }
 
     if (pergunta === 'produto') {
       /*
@@ -288,9 +292,121 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'medio':
       return rng.escolher<Pergunta>(['polinomio', 'produto', 'coeficiente', 'expressao']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['produto', 'polinomio', 'expressao', 'expressao']);
-    // Só o produto, que é a regra com dois termos para somar e errar.
+      return rng.escolher<Pergunta>(['produto', 'quociente', 'polinomio', 'expressao']);
+    // As duas regras com dois termos para combinar e errar: produto e quociente.
     case 'extremo':
-      return 'produto';
+      return rng.escolher<Pergunta>(['produto', 'quociente']);
   }
+}
+
+/** Uma fração reduzida, como texto que o aluno digitaria: `-7/16`, ou `3`. */
+function fracaoTexto(numerador: number, denominador: number): string {
+  const divisor = mdc(numerador, denominador) || 1;
+  const sinal = numerador * denominador < 0 ? '-' : '';
+  const n = Math.abs(numerador / divisor);
+  const d = Math.abs(denominador / divisor);
+  return d === 1 ? `${sinal}${n}` : `${sinal}${n}/${d}`;
+}
+
+const binomio = (a: number, b: number): string =>
+  `${a === 1 ? '' : a === -1 ? '-' : a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)}`;
+
+/**
+ * Regra do quociente com dois binômios: f = (ax + b)/(cx + d).
+ *
+ * A teoria do tópico já ensinava a regra, mas nenhuma pergunta a cobrava. Os
+ * dois erros clássicos viram armadilhas: inverter a ordem do numerador (o
+ * sinal troca) e esquecer de elevar o denominador ao quadrado.
+ */
+function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<Simbolica> {
+  const extremo = nivel === 'extremo';
+  let a: number, b: number, c: number, d: number, ponto: number, g: number;
+
+  // O denominador não pode se anular no ponto, e ad − bc ≠ 0 (senão f é constante).
+  do {
+    a = rng.inteiro(1, extremo ? 7 : 4) * rng.sinal();
+    b = rng.inteiro(-6, 6);
+    c = rng.inteiro(1, extremo ? 5 : 3);
+    d = rng.inteiro(-6, 6);
+    ponto = extremo ? rng.inteiro(-5, 5) : rng.inteiro(-2, 3);
+    g = c * ponto + d;
+  } while (g === 0 || a * d - b * c === 0);
+
+  const f = a * ponto + b;
+  // (f/g)' = (f'g − fg')/g² = (a·g − f·c)/g²
+  const numerador = a * g - f * c;
+  const quadrado = g * g;
+  const valor = numerador / quadrado;
+  const texto = fracaoTexto(numerador, quadrado);
+  const gabarito = simbolica(texto, () => valor);
+  const fracao = (n: number, q: number): Simbolica => simbolica(fracaoTexto(n, q), () => n / q);
+
+  return {
+    id: `regras-quociente-${a}${b}${c}${d}-${ponto}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado:
+      `Use a regra do quociente e calcule f'(${ponto}).` +
+      (Number.isInteger(valor) ? '' : ' Responda como fração, ex.: -7/16.'),
+    enunciadoTex: `f(x) = \\frac{${binomio(a, b)}}{${binomio(c, d)}}`,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: 'A regra do quociente: menos no meio, denominador ao quadrado.',
+          tex: "\\left(\\frac{f}{g}\\right)' = \\frac{f'g - fg'}{g^{2}}",
+          nota: 'A ordem importa: começa pela derivada de CIMA.',
+        },
+        {
+          descricao: 'De cima e de baixo, cada função e sua derivada.',
+          tex: `f = ${binomio(a, b)},\\; f' = ${a} \\qquad g = ${binomio(c, d)},\\; g' = ${c}`,
+        },
+        {
+          descricao: `Os valores em x = ${ponto}.`,
+          tex: `f(${ponto}) = ${f} \\qquad g(${ponto}) = ${g}`,
+        },
+        {
+          descricao: 'Substituímos na regra.',
+          tex: `\\frac{${a} \\cdot (${g}) - (${f}) \\cdot ${c}}{(${g})^{2}} = \\frac{${numerador}}{${quadrado}}`,
+        },
+        {
+          descricao: 'Simplificando a fração.',
+          tex: `f'(${ponto}) = ${texto}`,
+        },
+      ],
+    },
+    conceitos: ['regras.quociente'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: fracao(-numerador, quadrado),
+          diagnostico:
+            'O sinal saiu trocado: o numerador é f′g − fg′, nessa ordem. Começa pela derivada ' +
+            'de CIMA vezes o de baixo.',
+          passo: 0,
+          conceito: 'regras.quociente',
+        },
+        {
+          resposta: fracao(numerador, g),
+          diagnostico: `Faltou elevar o denominador ao quadrado: divide-se por (${g})² = ${quadrado}, não por ${g}.`,
+          passo: 3,
+          conceito: 'regras.quociente',
+        },
+        {
+          resposta: fracao(a, c),
+          diagnostico:
+            'A derivada de um quociente NÃO é o quociente das derivadas — o mesmo engano do ' +
+            'produto. Use a regra completa.',
+          passo: 0,
+          conceito: 'regras.quociente',
+        },
+      ],
+      gabarito,
+      proximos,
+    ),
+    dica:
+      nivel === 'dificil'
+        ? 'Regra do quociente: (f′·g − f·g′) dividido por g ao quadrado. Calcule f, g, f′ e g′ no ponto antes.'
+        : undefined,
+  };
 }

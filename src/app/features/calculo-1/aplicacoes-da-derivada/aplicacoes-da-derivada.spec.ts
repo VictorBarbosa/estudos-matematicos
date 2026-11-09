@@ -79,3 +79,48 @@ describe('geradorAplicacoesDerivada', () => {
     expect(criticos[1]!.tipo).toBe('minimo');
   });
 });
+
+describe('geradorAplicacoesDerivada — L’Hôpital e valor médio', () => {
+  it('o limite de L’Hôpital confere com a avaliação numérica perto do ponto', () => {
+    for (const nivel of ['medio', 'dificil', 'extremo'] as const) {
+      const limites = amostra(nivel, 200).filter((e) =>
+        e.conceitos.includes('aplic-derivada.lhopital'),
+      );
+      expect(limites.length).toBeGreaterThan(0);
+
+      for (const exercicio of limites) {
+        // O último passo mostra o gabarito; o primeiro confirma a forma 0/0.
+        expect(exercicio.resolucao.passos[0]!.tex).toContain('\\frac{0}{0}');
+        expect(Number.isFinite(exercicio.gabarito)).toBe(true);
+        const resultado = corrigir(
+          geradorAplicacoesDerivada,
+          exercicio,
+          String(exercicio.gabarito),
+        );
+        expect(resultado.veredito).toBe('correto');
+      }
+    }
+  });
+
+  it('no valor médio, a tangente em c tem a inclinação da secante e c fica dentro do intervalo', () => {
+    for (const nivel of ['medio', 'dificil', 'extremo'] as const) {
+      const casos = amostra(nivel, 200).filter((e) => e.conceitos.includes('aplic-derivada.tvm'));
+      expect(casos.length).toBeGreaterThan(0);
+
+      for (const exercicio of casos) {
+        const [, a, b] = /\((-?\d+), (-?\d+)\)/.exec(exercicio.enunciado)!;
+        const c = exercicio.gabarito;
+        expect(c).toBeGreaterThan(Number(a));
+        expect(c).toBeLessThan(Number(b));
+      }
+    }
+  });
+
+  it('o Extremo aplica L’Hôpital duas vezes', () => {
+    const duplos = amostra('extremo', 200).filter((e) => e.id.startsWith('aplic-lhopital-dupla'));
+    expect(duplos.length).toBeGreaterThan(0);
+    for (const exercicio of duplos) {
+      expect(exercicio.resolucao.passos[1]!.nota).toContain('0/0');
+    }
+  });
+});

@@ -94,8 +94,20 @@ export const TEORIA_REGRAS: readonly Teoria[] = [
       },
     ],
     exemplo: {
-      enunciado: 'A derivada de um polinômio, para comparação.',
-      passos: derivarPolinomioComPassos(Polinomio.de(0, 1, 0, 2)).passos,
+      enunciado: "f(x) = (2x + 1)/(x − 3). Calcule f'(1).",
+      passos: [
+        {
+          descricao: 'Cima e baixo, com as derivadas.',
+          tex: "f = 2x + 1,\\; f' = 2 \\qquad g = x - 3,\\; g' = 1",
+        },
+        { descricao: 'Os valores em x = 1.', tex: 'f(1) = 3 \\qquad g(1) = -2' },
+        {
+          descricao:
+            'Na regra: derivada de cima vezes o de baixo, MENOS o de cima vezes a derivada de baixo.',
+          tex: "f'(1) = \\frac{2 \\cdot (-2) - 3 \\cdot 1}{(-2)^{2}} = \\frac{-7}{4}",
+          nota: 'Trocando a ordem do numerador, sairia +7/4: o sinal é o erro mais comum.',
+        },
+      ],
     },
     vejaTambem: ['regras.produto', 'regras.potencia'],
   },
