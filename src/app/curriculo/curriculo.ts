@@ -363,6 +363,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'equacoes-trigonometricas',
+        titulo: 'Equações trigonométricas',
+        descricao: 'Arcsen, arccos e arctg, e as equações que têm mais de uma solução na volta.',
+        pronto: true,
+      },
+      {
         id: 'lei-senos-cossenos',
         titulo: 'Leis dos senos e dos cossenos',
         descricao: 'Resolver triângulos que não têm ângulo reto.',

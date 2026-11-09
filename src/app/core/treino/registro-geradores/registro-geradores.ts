@@ -352,6 +352,10 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.gerador').then(
         (m) => m.geradorCirculo,
       ),
+    'equacoes-trigonometricas': () =>
+      import('@features/trigonometria/equacoes-trigonometricas/equacoes-trigonometricas.gerador').then(
+        (m) => m.geradorEquacoesTrig,
+      ),
     'funcoes-trigonometricas': () =>
       import('@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.gerador').then(
         (m) => m.geradorOndas,

@@ -34,6 +34,14 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['continuidade', 'facil', 'onde o sinal troca'],
   ['sequencias-e-series', 'facil', 'PA: aₙ = a₁ + (n − 1)·r'],
   ['vizinhancas-e-infinito', 'facil', 'o denominador cresce mais rápido'],
+  // Equações trigonométricas: cada pergunta tem dica no nível em que estreia.
+  ['equacoes-trigonometricas', 'facil', 'A imagem do arcsen e do arctg'],
+  ['equacoes-trigonometricas', 'facil', 'em x e em 180° − x'],
+  ['equacoes-trigonometricas', 'medio', 'Primeiro isole'],
+  ['equacoes-trigonometricas', 'medio', 'modo graus (DEG)'],
+  ['equacoes-trigonometricas', 'dificil', 'A calculadora dá só uma solução'],
+  ['equacoes-trigonometricas', 'dificil', 'são duas voltas'],
+  ['equacoes-trigonometricas', 'extremo', 'resolva a equação do 2º grau'],
 ];
 
 describe('dicas alcançáveis', () => {

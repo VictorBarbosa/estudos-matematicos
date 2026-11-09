@@ -336,6 +336,10 @@
         "descricao": "The curve described by time: x(t) and y(t), and the path they trace.",
         "titulo": "Parametric equations"
       },
+      "equacoes-trigonometricas": {
+        "descricao": "Arcsin, arccos and arctan, and the equations with more than one solution per turn.",
+        "titulo": "Trigonometric equations"
+      },
       "estatica-e-torque": {
         "descricao": "Balance of forces and moments, centre of mass and stability.",
         "titulo": "Statics and torque"

@@ -89,6 +89,7 @@ import { geradorSequencias as g_sequencias_e_series } from '@features/calculo-2/
 import { geradorVizinhancas as g_vizinhancas_e_infinito } from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.gerador';
 import { geradorCirculo as g_circulo_trigonometrico } from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.gerador';
 import { geradorOndas as g_funcoes_trigonometricas } from '@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.gerador';
+import { geradorEquacoesTrig as g_equacoes_trigonometricas } from '@features/trigonometria/equacoes-trigonometricas/equacoes-trigonometricas.gerador';
 import { geradorIdentidades as g_identidades_trigonometricas } from '@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.gerador';
 import { geradorLeis as g_lei_senos_cossenos } from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.gerador';
 import { geradorRazoes as g_seno_cosseno_tangente } from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.gerador';
@@ -199,6 +200,7 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['circulo-trigonometrico', g_circulo_trigonometrico],
   ['funcoes-trigonometricas', g_funcoes_trigonometricas],
   ['identidades-trigonometricas', g_identidades_trigonometricas],
+  ['equacoes-trigonometricas', g_equacoes_trigonometricas],
   ['lei-senos-cossenos', g_lei_senos_cossenos],
   ['seno-cosseno-tangente', g_seno_cosseno_tangente],
   ['triangulo-retangulo', g_triangulo_retangulo],

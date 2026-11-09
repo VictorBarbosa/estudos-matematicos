@@ -40,6 +40,14 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'equacoes-trigonometricas',
+    title: 'Equações trigonométricas · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/trigonometria/equacoes-trigonometricas/equacoes-trigonometricas').then(
+        (m) => m.EquacoesTrigonometricas,
+      ),
+  },
+  {
     path: 'lei-senos-cossenos',
     title: 'Leis dos senos e dos cossenos · Estudos Matemáticos',
     loadComponent: () =>

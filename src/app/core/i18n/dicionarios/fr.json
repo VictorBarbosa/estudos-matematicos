@@ -336,6 +336,10 @@
         "descricao": "La courbe décrite par le temps : x(t) et y(t), et la trajectoire qu’elles dessinent.",
         "titulo": "Équations paramétriques"
       },
+      "equacoes-trigonometricas": {
+        "descricao": "Arcsin, arccos et arctan, et les équations qui ont plus d’une solution sur un tour.",
+        "titulo": "Équations trigonométriques"
+      },
       "estatica-e-torque": {
         "descricao": "Équilibre des forces et des moments, centre de masse et stabilité.",
         "titulo": "Statique et moment de force"
