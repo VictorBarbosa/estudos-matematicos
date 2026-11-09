@@ -11,7 +11,7 @@
     [attr.aria-describedby]="ajuda() ? id + '-ajuda' : null"
     [value]="valor()"
     [disabled]="bloqueado()"
-    (input)="valor.set($any($event.target).value)"
+    (input)="aoDigitar($any($event.target))"
     (keydown.enter)="enviar.emit()"
   />
   @if (simbolos().length > 0) {

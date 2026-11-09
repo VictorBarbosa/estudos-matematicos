@@ -9,6 +9,11 @@ import {
   viewChild,
 } from '@angular/core';
 import { TeclaDeSimbolo } from '@core/treino/models/treino.model';
+import {
+  cursorNaMascara,
+  digitosAte,
+  mascararNumero,
+} from '@core/treino/mascara-numero/mascara-numero';
 
 let proximoId = 0;
 
@@ -41,6 +46,39 @@ export class CampoResposta {
 
   protected readonly id = `resposta-${proximoId++}`;
   private readonly entrada = viewChild<ElementRef<HTMLInputElement>>('entrada');
+
+  /**
+   * Arruma o número enquanto ele é digitado.
+   *
+   * `6.082.12` e `6.082,12` eram a mesma intenção escrita de dois jeitos, e só
+   * um deles era lido certo. Agora o campo reescreve o que foi digitado com a
+   * regra do próprio corretor, então o que está na tela é o que vai ser
+   * corrigido — não há mais erro que venha só do separador.
+   *
+   * Fração, raiz, intervalo e qualquer resposta com letra passam intactas: a
+   * máscara só age quando o texto é número puro.
+   */
+  protected aoDigitar(alvo: HTMLInputElement): void {
+    const digitado = alvo.value;
+    const mascarado = mascararNumero(digitado);
+
+    if (mascarado === digitado) {
+      this.valor.set(digitado);
+      return;
+    }
+
+    // O cursor é reposicionado por contagem de dígitos: os pontos de milhar
+    // nascem e morrem à esquerda dele, e contar caracteres o faria saltar.
+    const posicao = cursorNaMascara(
+      mascarado,
+      digitosAte(digitado, alvo.selectionStart ?? digitado.length),
+    );
+
+    this.valor.set(mascarado);
+    queueMicrotask(() => {
+      alvo.setSelectionRange(posicao, posicao);
+    });
+  }
 
   /** Devolve o foco ao campo — usado ao avançar para o próximo exercício. */
   focar(): void {
