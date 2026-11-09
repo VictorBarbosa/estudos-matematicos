@@ -22,7 +22,14 @@ export const geradorExpressoes: GeradorExercicio<number> = {
   formatoResposta: 'um número, ex.: 10 ou -3',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
-    return nivel === 'facil' ? exercicioAvaliar(nivel, rng) : exercicioReduzir(nivel, rng);
+    if (nivel === 'facil') {
+      return exercicioAvaliar(nivel, rng);
+    }
+    // No Extremo entra um produto de binômios a distribuir antes de reduzir.
+    if (nivel === 'extremo' && rng.booleano()) {
+      return exercicioDistribuir(nivel, rng);
+    }
+    return exercicioReduzir(nivel, rng);
   },
 
   analisar: analisarNumero,
@@ -162,6 +169,91 @@ function exercicioReduzir(nivel: Nivel, rng: Rng): Exercicio<number> {
             'Some apenas os coeficientes dos termos com a mesma potência.',
           passo: 2,
           conceito: 'expressoes.semelhantes',
+        },
+      ],
+      gabarito,
+      saoIguais,
+    ),
+  };
+}
+
+/**
+ * Distribuir um escalar e um produto de binômios, e só então reduzir.
+ *
+ * O Extremo era a soma e a subtração do Difícil com os mesmos números. Aqui é
+ * preciso multiplicar antes de juntar: k(ax² + bx + c) − (dx + e)(fx + g). O
+ * termo em x recebe contribuição de dois lugares, e esquecer um deles é o erro.
+ */
+function exercicioDistribuir(nivel: Nivel, rng: Rng): Exercicio<number> {
+  const k = rng.escolher([2, 3, 4, 5, -2, -3]);
+  const p = Polinomio.de(rng.inteiro(-6, 6), rng.inteiro(-6, 6), rng.inteiro(1, 4));
+  const d = rng.inteiro(1, 4);
+  const e = rng.inteiro(-5, 5) || 1;
+  const fCoef = rng.inteiro(1, 4);
+  const g = rng.inteiro(-5, 5) || -1;
+
+  const binomio1 = Polinomio.de(e, d);
+  const binomio2 = Polinomio.de(g, fCoef);
+  const escalado = p.escalar(k);
+  const produto = binomio1.multiplicar(binomio2);
+  const resultado = escalado.subtrair(produto);
+  const gabarito = resultado.coeficiente(1);
+
+  const pTex = p.paraTex();
+  const enunciadoTex = `${k}\\left(${pTex}\\right) - \\left(${binomio1.paraTex()}\\right)\\left(${binomio2.paraTex()}\\right)`;
+
+  return {
+    id: `expressoes-distribuir-${k}-${pTex}-${d}${e}${fCoef}${g}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado: 'Distribua, reduza os termos semelhantes e informe o coeficiente de x.',
+    enunciadoTex,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: `Distribuímos o ${k} por todos os termos do primeiro parêntese.`,
+          tex: `${k}\\left(${pTex}\\right) = ${escalado.paraTex()}`,
+        },
+        {
+          descricao: 'Multiplicamos os binômios, cada termo do primeiro por cada termo do segundo.',
+          tex:
+            `\\left(${binomio1.paraTex()}\\right)\\left(${binomio2.paraTex()}\\right) = ` +
+            `${produto.paraTex()}`,
+          nota: `O termo em x vem de dois produtos cruzados: ${d}·${g} e ${e}·${fCoef}.`,
+        },
+        {
+          descricao: 'O sinal de menos troca o sinal de TODO o produto.',
+          tex: `${escalado.paraTex()} - \\left(${produto.paraTex()}\\right) = ${resultado.paraTex()}`,
+        },
+        {
+          descricao: 'O coeficiente de x é o que o enunciado pede.',
+          tex: `${k} \\cdot ${p.coeficiente(1)} - (${d * g} + ${e * fCoef}) = ${gabarito}`,
+        },
+      ],
+    },
+    conceitos: ['expressoes.distributiva', 'expressoes.semelhantes'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: escalado.somar(produto).coeficiente(1),
+          diagnostico:
+            'O menos antes do produto vale para o produto INTEIRO: cada termo dele troca de sinal.',
+          passo: 2,
+          conceito: 'expressoes.distributiva',
+        },
+        {
+          resposta: k * p.coeficiente(1) - d * g,
+          diagnostico:
+            'No produto dos binômios, o termo em x tem DUAS contribuições cruzadas. Faltou uma.',
+          passo: 1,
+          conceito: 'expressoes.distributiva',
+        },
+        {
+          resposta: p.coeficiente(1) - produto.coeficiente(1),
+          diagnostico: `O ${k} multiplica todos os termos do primeiro parêntese, inclusive o de x.`,
+          passo: 0,
+          conceito: 'expressoes.distributiva',
         },
       ],
       gabarito,

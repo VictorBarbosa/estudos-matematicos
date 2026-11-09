@@ -62,14 +62,19 @@ export const geradorDerivacaoImplicita: GeradorExercicio<number> = {
 
     // Nem todo sorteio serve: há pontos de tangente vertical, em que dy/dx não
     // existe. Tentamos de novo em vez de entregar um exercício sem resposta.
+    // No Extremo, metade das vezes a derivada é só o meio do caminho: pede-se
+    // a reta tangente, que é para que a derivada serve.
+    const pedeTangente = nivel === 'extremo' && rng.booleano();
+
     for (let tentativa = 0; tentativa < 40; tentativa++) {
       const candidato = sortear(tipo, nivel, rng);
       if (candidato !== null) {
-        return candidato;
+        return pedeTangente ? comoTangente(candidato, rng) : candidato;
       }
     }
 
-    return sortearSeguro(nivel, rng);
+    const seguro = sortearSeguro(nivel, rng);
+    return pedeTangente ? comoTangente(seguro, rng) : seguro;
   },
 
   analisar: analisarNumero,
@@ -242,4 +247,71 @@ function fracaoDoValor(valor: number): string {
   }
 
   return formatar(valor);
+}
+
+/**
+ * A mesma conta, levada até a reta tangente: pede-se onde ela corta o eixo y.
+ *
+ * O Extremo usava as mesmas famílias e os mesmos números do Difícil. Aqui a
+ * derivada é só o passo do meio — a inclinação — e a resposta exige montar a
+ * reta pelo ponto e achar o coeficiente linear, que é para que a derivada
+ * implícita serve: a tangente a uma curva que não é gráfico de função.
+ */
+function comoTangente(base: Exercicio<number>, rng: Rng): Exercicio<number> {
+  const [, xTexto, yTexto] = /ponto \((-?\d+), (-?\d+)\)/.exec(base.enunciado)!;
+  const x = Number(xTexto);
+  const y = Number(yTexto);
+  const m = base.gabarito;
+  const gabarito = y - m * x;
+  const n = (v: number): string => fracaoDoValor(v).replace('.', '{,}');
+  // Negativos entre parênteses, para não sair «- -2/11 · -6».
+  const p = (v: number): string => (v < 0 ? `\\left(${n(v)}\\right)` : n(v));
+  const decimal = formatar(gabarito).replace(',', '{,}');
+
+  return {
+    ...base,
+    id: base.id.replace('implicita-', 'implicita-tangente-') + `-${rng.inteiro(0, 99)}`,
+    enunciado:
+      `A curva passa pelo ponto (${x}, ${y}). Encontre a reta tangente nesse ponto e informe ` +
+      'onde ela corta o eixo y. Responda como fração ou com 4 casas decimais.',
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        ...base.resolucao.passos,
+        {
+          descricao: 'A derivada é a inclinação da tangente. A reta passa pelo ponto com ela.',
+          tex: `y - ${p(y)} = ${n(m)}\\,(x - ${p(x)})`,
+        },
+        {
+          descricao: 'Em x = 0 a reta corta o eixo y.',
+          tex:
+            `y = ${y} - ${p(m)} \\cdot ${p(x)} = ${n(gabarito)}` +
+            (Number.isInteger(gabarito) ? '' : ` \\approx ${decimal}`),
+        },
+      ],
+    },
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: m,
+          diagnostico:
+            'Essa é a INCLINAÇÃO da tangente, a derivada. Falta usar o ponto para achar onde a ' +
+            'reta corta o eixo y.',
+          passo: base.resolucao.passos.length,
+          conceito: 'implicita.isolamento',
+        },
+        {
+          resposta: y + m * x,
+          diagnostico:
+            'O sinal ficou trocado: na reta y − y₀ = m(x − x₀), em x = 0 sobra y₀ − m·x₀.',
+          passo: base.resolucao.passos.length + 1,
+          conceito: 'implicita.isolamento',
+        },
+      ],
+      gabarito,
+      saoEquivalentes,
+    ),
+    dica: undefined,
+  };
 }

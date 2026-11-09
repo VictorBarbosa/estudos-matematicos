@@ -11,6 +11,12 @@ export const geradorLeis: GeradorExercicio<number> = {
   formatoResposta: 'um número com até 2 casas, ex.: 6,24',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
+    // No Extremo entra a lei dos cossenos de trás para a frente: os três lados
+    // dados, o maior ângulo pedido.
+    if (nivel === 'extremo' && rng.booleano()) {
+      return exercicioMaiorAngulo(nivel, rng);
+    }
+
     const usaCossenos = nivel === 'facil' ? true : rng.booleano();
 
     if (usaCossenos) {
@@ -116,3 +122,83 @@ export const geradorLeis: GeradorExercicio<number> = {
   saoEquivalentes: proximos,
   formatar: (valor) => valor.toFixed(2).replace('.', ','),
 };
+
+/**
+ * O maior ângulo a partir dos três lados.
+ *
+ * Antes, o Extremo usava os mesmos ângulos e lados do Médio. Esta é a lei dos
+ * cossenos isolando o cosseno — e decide, pelo sinal dele, se o triângulo é
+ * obtusângulo, que é a leitura que a fórmula de ida não ensina.
+ */
+function exercicioMaiorAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
+  // Três lados que fecham um triângulo: o maior menor que a soma dos outros.
+  let lados: number[];
+  do {
+    lados = [rng.inteiro(3, 15), rng.inteiro(3, 15), rng.inteiro(3, 15)].sort((x, y) => x - y);
+  } while (lados[2]! >= lados[0]! + lados[1]! || lados[0] === lados[2]);
+
+  const [b, c, a] = lados as [number, number, number];
+  const numerador = b * b + c * c - a * a;
+  const denominador = 2 * b * c;
+  const cosseno = numerador / denominador;
+  const gabarito = (Math.acos(cosseno) * 180) / Math.PI;
+
+  return {
+    id: `leis-maior-angulo-${b}-${c}-${a}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado:
+      `Um triângulo tem lados ${b}, ${c} e ${a}. Quanto mede o MAIOR ângulo, em graus? ` +
+      '(2 casas)',
+    enunciadoTex: `a = ${a} \\qquad b = ${b} \\qquad c = ${c} \\qquad \\hat{A} = \;?`,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: 'O maior ângulo fica oposto ao maior lado, que aqui é a.',
+          tex: `a = ${a}`,
+        },
+        {
+          descricao: 'Isolamos o cosseno na lei dos cossenos.',
+          tex: '\\cos\\hat{A} = \\frac{b^{2} + c^{2} - a^{2}}{2bc}',
+        },
+        {
+          descricao: 'Substituímos os três lados, cada um ao quadrado.',
+          tex:
+            `\\cos\\hat{A} = \\frac{${b * b} + ${c * c} - ${a * a}}{2 \\cdot ${b} \\cdot ${c}} = ` +
+            `\\frac{${numerador}}{${denominador}} = ${cosseno.toFixed(4)}`,
+          nota:
+            cosseno < 0
+              ? 'Cosseno negativo: o ângulo passa de 90°, e o triângulo é obtusângulo.'
+              : 'Cosseno positivo: o ângulo é agudo, e o triângulo é acutângulo.',
+        },
+        {
+          descricao: 'O arco-cosseno devolve o ângulo.',
+          tex: `\\hat{A} = \\arccos(${cosseno.toFixed(4)}) = ${gabarito.toFixed(2)}°`,
+        },
+      ],
+    },
+    conceitos: ['leis.cossenos', 'leis.quando-usar'],
+    armadilhas: semColisoes(
+      [
+        {
+          // Oposto ao menor lado (b): cos = (a² + c² − b²) / (2ac).
+          resposta: (Math.acos((a * a + c * c - b * b) / (2 * a * c)) * 180) / Math.PI,
+          diagnostico:
+            'Esse é o ângulo oposto ao MENOR lado. O maior ângulo fica sempre em frente ao ' +
+            'maior lado — é ele que entra com sinal de menos no numerador.',
+          passo: 0,
+          conceito: 'leis.cossenos',
+        },
+        {
+          resposta: Math.acos(cosseno),
+          diagnostico: 'Esse é o ângulo em RADIANOS. A pergunta pede graus.',
+          passo: 3,
+          conceito: 'leis.cossenos',
+        },
+      ],
+      gabarito,
+      proximos,
+    ),
+  };
+}

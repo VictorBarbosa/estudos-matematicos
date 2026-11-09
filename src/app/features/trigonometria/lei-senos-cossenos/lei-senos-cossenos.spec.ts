@@ -63,3 +63,29 @@ describe('geradorLeis', () => {
     expect(exercicio).toBeDefined();
   });
 });
+
+describe('o maior ângulo (Extremo)', () => {
+  it('confere com a lei dos cossenos e é o maior dos três', async () => {
+    const { geradorLeis } =
+      await import('@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.gerador');
+    const { criarRng } = await import('@core/treino/rng/rng');
+    const rng = criarRng(44);
+    const exercicios = Array.from({ length: 160 }, () => geradorLeis.gerar('extremo', rng)).filter(
+      (e) => e.enunciado.includes('MAIOR ângulo'),
+    );
+    expect(exercicios.length).toBeGreaterThan(0);
+
+    for (const exercicio of exercicios) {
+      const [b, c, a] = /lados (\d+), (\d+) e (\d+)/
+        .exec(exercicio.enunciado)!
+        .slice(1)
+        .map(Number) as [number, number, number];
+      const angulo = (x: number, y: number, oposto: number): number =>
+        (Math.acos((x * x + y * y - oposto * oposto) / (2 * x * y)) * 180) / Math.PI;
+      const angulos = [angulo(b, c, a), angulo(a, c, b), angulo(a, b, c)];
+
+      expect(exercicio.gabarito).toBeCloseTo(Math.max(...angulos), 6);
+      expect(angulos.reduce((s, x) => s + x, 0)).toBeCloseTo(180, 6);
+    }
+  });
+});
