@@ -44,6 +44,7 @@ export * from '@core/math/funcoes/transformacoes/transformacoes';
 
 // Trigonometria
 export * from '@core/math/trigonometria/trigonometria/trigonometria';
+export * from '@core/math/trigonometria/equacoes-trig/equacoes-trig';
 
 // Geometria analítica
 export * from '@core/math/geometria/plana/plana';

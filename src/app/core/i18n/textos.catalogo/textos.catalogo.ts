@@ -97,6 +97,7 @@ import t_nocao_intuitiva_de_limite from '@features/pre-calculo/nocao-intuitiva-d
 import t_vizinhancas_e_infinito from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.i18n.json';
 import t_prova from '@features/prova/prova.i18n.json';
 import t_circulo_trigonometrico from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.i18n.json';
+import t_equacoes_trigonometricas from '@features/trigonometria/equacoes-trigonometricas/equacoes-trigonometricas.i18n.json';
 import t_funcoes_trigonometricas from '@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.i18n.json';
 import t_identidades_trigonometricas from '@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.i18n.json';
 import t_lei_senos_cossenos from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.i18n.json';
@@ -204,6 +205,7 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['vizinhancas-e-infinito', t_vizinhancas_e_infinito as TabelaDeTextos],
   ['prova', t_prova as TabelaDeTextos],
   ['circulo-trigonometrico', t_circulo_trigonometrico as TabelaDeTextos],
+  ['equacoes-trigonometricas', t_equacoes_trigonometricas as TabelaDeTextos],
   ['funcoes-trigonometricas', t_funcoes_trigonometricas as TabelaDeTextos],
   ['identidades-trigonometricas', t_identidades_trigonometricas as TabelaDeTextos],
   ['lei-senos-cossenos', t_lei_senos_cossenos as TabelaDeTextos],

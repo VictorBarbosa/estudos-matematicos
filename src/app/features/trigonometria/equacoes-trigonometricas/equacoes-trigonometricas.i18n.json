@@ -1,0 +1,54 @@
+{
+  "escolhaAFuncao": {
+    "pt": "Escolha a função",
+    "fr": "Choisissez la fonction",
+    "en": "Choose the function"
+  },
+  "valorK": {
+    "pt": "Valor de k (em centésimos)",
+    "fr": "Valeur de k (en centièmes)",
+    "en": "Value of k (in hundredths)"
+  },
+  "dicaK": {
+    "pt": "Passe de 100 com seno ou cosseno para ver a equação ficar sem solução.",
+    "fr": "Dépassez 100 avec le sinus ou le cosinus pour voir l’équation perdre ses solutions.",
+    "en": "Go past 100 with sine or cosine to watch the equation lose its solutions."
+  },
+  "valoresNotaveis": {
+    "pt": "Valores notáveis",
+    "fr": "Valeurs remarquables",
+    "en": "Special values"
+  },
+  "aCalculadoraDa": {
+    "pt": "A calculadora dá {inversa}(k)",
+    "fr": "La calculatrice donne {inversa}(k)",
+    "en": "The calculator gives {inversa}(k)"
+  },
+  "foraDoDominio": { "pt": "fora do domínio", "fr": "hors du domaine", "en": "outside the domain" },
+  "imagem": {
+    "pt": "sempre dentro de {imagem}",
+    "fr": "toujours dans {imagem}",
+    "en": "always within {imagem}"
+  },
+  "solucoesNaVolta": {
+    "pt": "Soluções em [0°, 360°)",
+    "fr": "Solutions dans [0°, 360°)",
+    "en": "Solutions in [0°, 360°)"
+  },
+  "nenhuma": { "pt": "nenhuma", "fr": "aucune", "en": "none" },
+  "ondeARetaCorta": {
+    "pt": "Onde a reta y = k corta a curva",
+    "fr": "Où la droite y = k coupe la courbe",
+    "en": "Where the line y = k meets the curve"
+  },
+  "descricaoGrafico": {
+    "pt": "Gráfico de {funcao} x de 0° a 360° e a reta y = {k}, com {quantas} ponto(s) de cruzamento.",
+    "fr": "Graphique de {funcao} x de 0° à 360° et la droite y = {k}, avec {quantas} point(s) d’intersection.",
+    "en": "Graph of {funcao} x from 0° to 360° and the line y = {k}, with {quantas} crossing point(s)."
+  },
+  "cadaCruzamento": {
+    "pt": "Cada cruzamento é uma solução. A calculadora mostra só um deles — o que cai na imagem da inversa; os outros vêm da simetria da curva.",
+    "fr": "Chaque intersection est une solution. La calculatrice n’en montre qu’une — celle qui tombe dans l’image de la réciproque ; les autres viennent de la symétrie de la courbe.",
+    "en": "Each crossing is a solution. The calculator shows only one of them — the one inside the inverse’s range; the others come from the curve’s symmetry."
+  }
+}

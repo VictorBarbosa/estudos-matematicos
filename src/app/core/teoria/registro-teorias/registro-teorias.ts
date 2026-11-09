@@ -108,6 +108,10 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'energia.conservacao': 'Conservação de energia mecânica',
   'energia.potencia': 'Potência',
   'energia.trabalho': 'Trabalho',
+  'eqtrig.inversas': 'Funções inversas: arcsen, arccos e arctg',
+  'eqtrig.redutiveis': 'Equações que se reduzem às básicas',
+  'eqtrig.seno-cosseno': 'Resolver sen x = k e cos x = k',
+  'eqtrig.tangente': 'Resolver tg x = k',
   'equacao1.casos-especiais': 'Quando não há uma única solução',
   'equacao1.igualdade': 'A equação como balança',
   'equacao1.raiz': 'A raiz e o gráfico',
@@ -512,6 +516,10 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'energia.conservacao': 'trabalho-e-energia',
   'energia.potencia': 'trabalho-e-energia',
   'energia.trabalho': 'trabalho-e-energia',
+  'eqtrig.inversas': 'equacoes-trigonometricas',
+  'eqtrig.redutiveis': 'equacoes-trigonometricas',
+  'eqtrig.seno-cosseno': 'equacoes-trigonometricas',
+  'eqtrig.tangente': 'equacoes-trigonometricas',
   'equacao1.casos-especiais': 'equacao-primeiro-grau',
   'equacao1.igualdade': 'equacao-primeiro-grau',
   'equacao1.raiz': 'equacao-primeiro-grau',
@@ -1163,6 +1171,10 @@ export const CARREGAR_TEORIA_DO_TOPICO: Readonly<Record<string, () => Promise<re
     'circulo-trigonometrico': () =>
       import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.teoria').then(
         (m) => m.TEORIA_CIRCULO,
+      ),
+    'equacoes-trigonometricas': () =>
+      import('@features/trigonometria/equacoes-trigonometricas/equacoes-trigonometricas.teoria').then(
+        (m) => m.TEORIA_EQUACOES_TRIG,
       ),
     'funcoes-trigonometricas': () =>
       import('@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.teoria').then(

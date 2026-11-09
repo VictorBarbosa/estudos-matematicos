@@ -336,6 +336,10 @@
         "descricao": "La courbe décrite par le temps : x(t) et y(t), et la trajectoire qu’elles dessinent.",
         "titulo": "Équations paramétriques"
       },
+      "equacoes-trigonometricas": {
+        "descricao": "Arcsin, arccos et arctan, et les équations qui ont plus d’une solution sur un tour.",
+        "titulo": "Équations trigonométriques"
+      },
       "escalonamento-e-inversa": {
         "descricao": "Gauss-Jordan pour les systèmes 3×3, classification par l’échelonnement et l’inverse par (A | I).",
         "titulo": "Échelonnement et matrice inverse"

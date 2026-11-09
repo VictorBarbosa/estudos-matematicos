@@ -336,6 +336,10 @@
         "descricao": "The curve described by time: x(t) and y(t), and the path they trace.",
         "titulo": "Parametric equations"
       },
+      "equacoes-trigonometricas": {
+        "descricao": "Arcsin, arccos and arctan, and the equations with more than one solution per turn.",
+        "titulo": "Trigonometric equations"
+      },
       "escalonamento-e-inversa": {
         "descricao": "Gauss-Jordan on 3×3 systems, classification by row reduction and the inverse via (A | I).",
         "titulo": "Row reduction and the inverse matrix"

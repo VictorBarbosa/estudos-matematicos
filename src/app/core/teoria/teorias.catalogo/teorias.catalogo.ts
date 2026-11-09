@@ -90,6 +90,7 @@ import { TEORIA_SEQUENCIAS as t_sequencias_e_series } from '@features/calculo-2/
 import { TEORIA_VIZINHANCAS as t_vizinhancas_e_infinito } from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.teoria';
 import { TEORIA_CIRCULO as t_circulo_trigonometrico } from '@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.teoria';
 import { TEORIA_ONDAS as t_funcoes_trigonometricas } from '@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.teoria';
+import { TEORIA_EQUACOES_TRIG as t_equacoes_trigonometricas } from '@features/trigonometria/equacoes-trigonometricas/equacoes-trigonometricas.teoria';
 import { TEORIA_IDENTIDADES as t_identidades_trigonometricas } from '@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.teoria';
 import { TEORIA_LEIS as t_lei_senos_cossenos } from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.teoria';
 import { TEORIA_RAZOES as t_seno_cosseno_tangente } from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.teoria';
@@ -196,6 +197,7 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['circulo-trigonometrico', t_circulo_trigonometrico],
   ['funcoes-trigonometricas', t_funcoes_trigonometricas],
   ['identidades-trigonometricas', t_identidades_trigonometricas],
+  ['equacoes-trigonometricas', t_equacoes_trigonometricas],
   ['lei-senos-cossenos', t_lei_senos_cossenos],
   ['seno-cosseno-tangente', t_seno_cosseno_tangente],
   ['triangulo-retangulo', t_triangulo_retangulo],

@@ -1,0 +1,96 @@
+<app-topico-layout topicoId="equacoes-trigonometricas">
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('escolhaAFuncao')">
+      @for (opcao of razoes; track opcao) {
+        <button
+          type="button"
+          [class.ativo]="razao() === opcao"
+          [attr.aria-pressed]="razao() === opcao"
+          (click)="escolherRazao(opcao)"
+        >
+          {{ opcao }} x = k
+        </button>
+      }
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [valor]="centesimos()"
+        (valorChange)="moverK($event)"
+        [rotulo]="texto('valorK')"
+        [min]="-limite()"
+        [max]="limite()"
+        [passo]="5"
+        [dica]="texto('dicaK')"
+      />
+    </section>
+
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('valoresNotaveis')">
+      @for (notavel of notaveis(); track notavel.texto) {
+        <button
+          type="button"
+          [class.ativo]="notavelEscolhido()?.texto === notavel.texto"
+          [attr.aria-pressed]="notavelEscolhido()?.texto === notavel.texto"
+          (click)="escolherNotavel(notavel)"
+        >
+          {{ notavel.texto }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="equacaoTex()" [bloco]="true" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">{{ texto('aCalculadoraDa', { inversa: nomeInversa() }) }}</span>
+        <strong>
+          @if (principal() !== null) {
+            {{ formatar(principal()!) }}°
+          } @else {
+            {{ texto('foraDoDominio') }}
+          }
+        </strong>
+        <span class="legenda">{{ texto('imagem', { imagem: imagemInversa() }) }}</span>
+      </div>
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">{{ texto('solucoesNaVolta') }}</span>
+        <strong>{{ solucoes().length }}</strong>
+        <span class="legenda">
+          @if (solucoes().length > 0) {
+            @for (s of solucoes(); track s; let ultimo = $last) {
+              {{ formatar(s) }}°{{ ultimo ? '' : ' · ' }}
+            }
+          } @else {
+            {{ texto('nenhuma') }}
+          }
+        </span>
+      </div>
+    </section>
+
+    <section>
+      <h2>{{ texto('ondeARetaCorta') }}</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [segmentos]="segmentos()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">{{ texto('cadaCruzamento') }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -336,6 +336,10 @@
         "descricao": "A curva descrita pelo tempo: x(t) e y(t), e a trajetória que elas desenham.",
         "titulo": "Equações paramétricas"
       },
+      "equacoes-trigonometricas": {
+        "descricao": "Arcsen, arccos e arctg, e as equações que têm mais de uma solução na volta.",
+        "titulo": "Equações trigonométricas"
+      },
       "escalonamento-e-inversa": {
         "descricao": "Gauss-Jordan em sistemas 3×3, classificação pelo escalonamento e a inversa por (A | I).",
         "titulo": "Escalonamento e matriz inversa"
