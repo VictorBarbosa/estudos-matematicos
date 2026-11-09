@@ -46,6 +46,11 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['inequacoes-segundo-grau', 'dificil', 'as raízes são frações'],
   ['inequacoes-segundo-grau', 'dificil', '«todos» ou «vazio»'],
   ['inequacoes-segundo-grau', 'extremo', 'O zero do denominador nunca entra'],
+  ['equacao-segundo-grau', 'facil', 'soma = −b/a'],
+  ['equacao-segundo-grau', 'medio', 'Escreva b² − 4·a·k = 0'],
+  ['equacao-segundo-grau', 'dificil', 'Chame x² de t'],
+  ['equacao-segundo-grau', 'extremo', 'Cada t positivo dá duas raízes'],
+  ['equacao-segundo-grau', 'extremo', '(x₁ + x₂)² − 2·x₁·x₂'],
 ];
 
 describe('dicas alcançáveis', () => {

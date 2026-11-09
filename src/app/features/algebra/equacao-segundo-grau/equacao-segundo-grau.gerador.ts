@@ -9,6 +9,34 @@ import {
   semColisoes,
 } from '@core/treino/models/treino.model';
 
+import {
+  exercicioBiquadrada,
+  exercicioRaizDupla,
+  exercicioSomaDosQuadrados,
+  exercicioSomaProduto,
+} from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.classicas';
+
+type Pergunta = 'raiz' | 'soma-produto' | 'raiz-dupla' | 'biquadrada' | 'soma-quadrados';
+
+/**
+ * A maior raiz é a pergunta de entrada; as outras são as clássicas que não se
+ * resolvem com Bhaskara no automático.
+ */
+function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
+  switch (nivel) {
+    case 'facil':
+      return rng.escolher<Pergunta>(['raiz', 'soma-produto']);
+    case 'medio':
+      return rng.escolher<Pergunta>(['raiz', 'soma-produto', 'raiz-dupla']);
+    case 'dificil':
+      return rng.escolher<Pergunta>(['raiz', 'raiz-dupla', 'biquadrada']);
+    // Contar raízes da biquadrada (um t negativo) e S² − 2P: pedem entender,
+    // não só aplicar a fórmula.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['raiz', 'biquadrada', 'soma-quadrados']);
+  }
+}
+
 const TOLERANCIA = 1e-9;
 const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
 
@@ -23,6 +51,12 @@ export const geradorEquacao2: GeradorExercicio<number> = {
   formatoResposta: 'um número, fração ou raiz, ex.: 3 · -1,5 · (1+√5)/2',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
+    const pergunta = sortearPergunta(nivel, rng);
+    if (pergunta === 'soma-produto') return exercicioSomaProduto(nivel, rng);
+    if (pergunta === 'raiz-dupla') return exercicioRaizDupla(nivel, rng);
+    if (pergunta === 'biquadrada') return exercicioBiquadrada(nivel, rng);
+    if (pergunta === 'soma-quadrados') return exercicioSomaDosQuadrados(nivel, rng);
+
     const { a, b, c } = sortear(nivel, rng);
     const resolucao = resolverQuadraticaComPassos(a, b, c);
     const { delta, raizes } = resolucao.resultado;

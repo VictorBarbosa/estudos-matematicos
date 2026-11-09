@@ -144,4 +144,46 @@ export const TEORIA_EQUACAO_2: readonly Teoria[] = [
     },
     vejaTambem: ['equacao2.bhaskara', 'equacao2.vertice'],
   },
+  {
+    id: 'equacao2.biquadrada',
+    titulo: 'Equação biquadrada',
+    resumo: 'Troque x² por t: vira uma equação do 2º grau, e cada t positivo dá duas raízes.',
+    definicao:
+      'Uma equação ax⁴ + bx² + c = 0 só tem potências pares de x. Chamando x² de t, ela vira ' +
+      'at² + bt + c = 0, que se resolve como qualquer equação do 2º grau. Depois volta-se a x: ' +
+      'x² = t dá x = ±√t quando t > 0, x = 0 quando t = 0, e nenhuma raiz real quando t < 0. ' +
+      'Por isso uma biquadrada pode ter 4, 3, 2, 1 ou nenhuma raiz real.',
+    formulas: [
+      { tex: 'ax^{4} + bx^{2} + c = 0 \\;\\xrightarrow{\\; t = x^{2} \\;}\\; at^{2} + bt + c = 0' },
+      {
+        tex: 'x^{2} = t \\;\\Rightarrow\\; x = \\pm\\sqrt{t} \\quad (t \\geq 0)',
+        legenda: 'Um t negativo não gera raiz real.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Como x⁴ = (x²)², a troca t = x² transforma o grau 4 em grau 2.',
+        tex: 'x^{4} = \\left(x^{2}\\right)^{2} = t^{2}',
+      },
+      {
+        descricao: 'Cada solução t gera as soluções de x² = t.',
+        tex: 'x^{2} = 9 \\Rightarrow x = \\pm 3 \\qquad x^{2} = -4 \\Rightarrow \\text{nenhuma}',
+      },
+    ],
+    exemplo: {
+      enunciado: 'x⁴ − 13x² + 36 = 0',
+      passos: [
+        { descricao: 'Com t = x².', tex: 't^{2} - 13t + 36 = 0' },
+        {
+          descricao: 'Soma 13 e produto 36: t = 4 ou t = 9.',
+          tex: 't_1 = 4 \\qquad t_2 = 9',
+        },
+        {
+          descricao: 'Voltando a x, quatro raízes.',
+          tex: 'x = \\pm 2 \\quad \\text{e} \\quad x = \\pm 3',
+        },
+      ],
+    },
+    vejaTambem: ['equacao2.bhaskara', 'equacao2.girard'],
+  },
 ];
