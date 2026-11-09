@@ -203,7 +203,8 @@ e a condição que faltava era justamente a que o erro tinha acabado de zerar.
 
 ### A ordem vem do plano de estudo
 
-Duas mudanças de sequência vieram de `plano_matematica_engenharia_aeroespacial.md`:
+Duas mudanças de sequência vieram do plano de estudo, hoje consolidado em
+`avaliacao-estudos-matematicos.md`:
 
 - **Leis de Newton antes de trajetória balística.** Entender as forças antes de descrever o
   movimento que elas produzem é o que permite identificar o que age sobre o projétil, em vez

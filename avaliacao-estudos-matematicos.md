@@ -1,368 +1,350 @@
-# Avaliação do site "Estudos Matemáticos"
+# Estudos Matemáticos — avaliação e plano, num arquivo só
 
-**Objetivo avaliado:** chegar preparado à graduação em engenharia aeroespacial no Québec.
+**Meta:** chegar preparado à graduação em engenharia aeroespacial (Québec), da matemática
+básica ao cálculo, com a física que dá sentido a tudo.
 
 - **Site:** https://victorbarbosa.github.io/estudos-matematicos/
-- **Versão avaliada:** commit `808dbc7` de 28/10/2026, com 75 tópicos em 12 áreas
-- **Data da avaliação:** 28 de outubro de 2026
-- **Como foi feita:** um comitê de cinco frentes (matemática do secundário; cálculo e álgebra linear; física; admissão no Québec; pedagogia e ordem) revisou o site. Depois, cada achado foi reconferido no código-fonte, e os detalhes estão na seção 1.
+- **Versão avaliada:** commit `afe6b98`, de 09/11/2026 — **101 tópicos em 14 áreas**
+- **Documentos consolidados aqui (e removidos):** `plano_matematica_engenharia_aeroespacial.md`,
+  `PROPOSTA_EDUCATIVA.md` e a avaliação anterior (commit `808dbc7`, 28/10/2026, 75 tópicos)
+- **Como foi feita:** um comitê de três relatores leu o código-fonte — currículo e cobertura;
+  didática; treino e avaliação. Cada achado deles foi reconferido no repositório antes de
+  entrar aqui. As medições são reproduzíveis (seção 9).
+
+Legenda: `[x]` feito · `[ ]` pendente · **◐** feito em parte (o que falta vem em seguida).
+
+> Caminhos citados são relativos a `src/app/`.
 
 ---
 
-## Resposta curta
+## 1. Propósito
 
-**Não. O site ainda não cobre toda a matéria-base para entrar em engenharia aeroespacial.**
+Cada tópico ensina de duas formas: **Explorar** (mexer nos valores e ver a matemática reagir)
+e **Treinar** (exercícios gerados com semente e corrigidos com diagnóstico — não «errado»,
+mas «você somou numeradores com denominadores no passo 3»). A ordem da trilha é a ordem de
+aprendizagem: nada aparece antes do que precisa. Um tópico só é vencido com domínio medido
+(8 acertos nas últimas 10 tentativas, 3 deles no Médio ou no Difícil, terminando com 3
+seguidos), e cada área termina numa prova final.
 
-Ele cobre muito bem a matemática do ensino médio, equivalente ao 4e–5e secondaire na séquence SN. Também faz uma boa introdução ao cálculo com polinômios e à mecânica em nível algébrico. Só que as engenharias do Québec exigem um bloco fixo de disciplinas do cégep (programa *Sciences de la nature*), e a maior parte dele ainda falta no site:
-
-| Disciplina exigida (código novo / antigo) | Cobertura no site | O que mais falta |
-|---|---|---|
-| Calcul différentiel (0M02 / 201-NYA) | ◐ ~50% | Derivadas de sen, cos, eˣ, ln e das inversas; derivação implícita; taxas relacionadas; L'Hôpital; TVM |
-| Calcul intégral (0M03 / 201-NYB) | ◐ ~30% | Frações parciais, substituição trigonométrica, integrais impróprias, séries e Taylor, EDOs |
-| Algèbre linéaire et géométrie vectorielle (0M04 / 201-NYC) | ◐ ~30% | Vetores em R³, retas e planos no espaço, Gauss-Jordan, matriz inversa, independência linear |
-| Mécanique (0P01 / 203-NYA) | ◐ ~60% | Dinâmica de rotação e momento angular; a versão com derivadas e integrais |
-| Électricité et magnétisme (0P02 / 203-NYB) | ✗ 0% | Tudo |
-| Ondes et physique moderne (0P03 / 203-NYC) | ✗ ~10% | Tudo, exceto o movimento harmônico |
-| Chimie générale + Chimie des solutions (0C01–0C02 / 202-NYA–NYB) | ✗ 0% | Tudo (fora do escopo atual do site) |
-
-*Os percentuais são estimativas qualitativas do comitê. Eles vêm da comparação, item a item, entre o site e os planos de curso oficiais (seção 3).*
-
-**Três outras conclusões mudam a prioridade do trabalho:**
-
-1. **A trilha libera tópicos sem garantir domínio.** Dá para revelar a resolução, copiar a resposta e ganhar o acerto. Três acertos seguidos no nível Fácil já bastam para avançar.
-2. **Alguns exercícios reprovam respostas certas ou aprovam respostas erradas.** Há também erros de conteúdo: um gabarito errado, uma resolução errada e uma afirmação falsa na teoria. Além disso, 310 linhas de fórmulas aparecem com ";" no lugar de espaços.
-3. **A admissão exige créditos formais, não só conhecimento.** O site é a ferramenta de estudo, mas você ainda terá de cursar e ter nota nas disciplinas acima por uma rota oficial. Atenção: na Polytechnique, a rota para adultos (*année propédeutique*) **não dá acesso ao génie aérospatial** (seção 3.1).
+A meta não é formar um engenheiro: é chegar ao primeiro ano sem buracos.
 
 ---
 
-## 1. Como a avaliação foi feita
+## 2. Resposta curta
 
-- O código-fonte completo foi lido. É exatamente o que o GitHub Pages publica, e inclui:
-  - o currículo (`src/app/curriculo/curriculo.ts`);
-  - a teoria (`*.teoria.ts`) e os geradores de exercícios (`*.gerador.ts`) dos 75 tópicos;
-  - a aba Explorar;
-  - a mecânica de treino e de progressão.
-- O comitê teve cinco frentes:
-  - (A) matemática do secundário;
-  - (B) cálculo e álgebra linear;
-  - (C) física;
-  - (D) admissão no Québec;
-  - (E) pedagogia e ordem dos tópicos.
-- Os revisores foram interrompidos pelo limite de uso antes de redigir os pareceres. Por isso, o material que eles já tinham produzido foi consolidado aqui: scripts de conferência, buscas em fontes oficiais e contagens no código. **Cada achado foi reconferido no código antes de entrar neste documento.**
-- Contas e percentuais de exercícios vêm de scripts independentes. Esses scripts reproduzem os sorteios de cada gerador e comparam com a tolerância de correção usada no site.
-- As informações de admissão vêm de páginas oficiais das universidades e do ministério, consultadas em 28/10/2026 (lista no fim).
+**O site está bom onde cresceu com cuidado e frágil onde cresceu por acréscimo.**
 
-> Caminhos de arquivo citados abaixo são relativos a `src/app/`.
-
----
-
-## 2. O que o site faz bem
-
-- **A arquitetura é a certa para ensinar.** Toda rotina do motor devolve a resolução passo a passo (`Resolucao`). Assim, a explicação e o gabarito saem do mesmo código e não divergem.
-- **A correção diagnostica o erro.** As "armadilhas" dão nome ao erro clássico e apontam o passo em que ele ocorre. Isso é raro até em plataformas comerciais.
-- **A física não tem erros numéricos.** O comitê recalculou de forma independente:
-  - g a 400 km: 88,5% de g₀, então o "89%" do site está certo;
-  - velocidade orbital: 7,67 km/s;
-  - período orbital: 92 min;
-  - velocidade de escape: 11,19 km/s;
-  - a órbita geoestacionária;
-  - as frações de propelente na equação de Tsiolkovsky.
-- **O estudo é completo em cada tópico.** Os 75 tópicos têm Explorar e Treinar, os exercícios são gerados com semente e o desempenho é medido por conceito, não só por tópico.
-- **Os testes protegem a publicação.** A suíte de testes roda antes de cada publicação.
-- **O fio condutor motiva.** A trilha termina na equação do foguete.
+- **O que está bom:** a arquitetura (resolução e gabarito saem do mesmo código), a correção que
+  diagnostica o erro (101 de 101 tópicos têm armadilhas com diagnóstico), a trilha com domínio
+  medido, a revisão espaçada, a prova final por área, a interface em três idiomas, e a física
+  numericamente correta. Da avaliação anterior, **quase todo o plano de ação foi executado**:
+  passamos de 75 para 101 tópicos, com derivadas transcendentes, implícita, técnicas de
+  integração completas, impróprias, séries, Taylor, EDOs, vetores em R³, Cálculo 3 e métodos
+  numéricos.
+- **O que está frágil, em três frentes:**
+  1. **Treino raso em metade das áreas.** 22 dos 45 tópicos das áreas magras fazem **uma única
+     pergunta**; 19 tópicos têm o nível Extremo com uma pergunta só. Álgebra tem 2,8 formas de
+     pergunta por tópico contra 55,8 em Vetores.
+  2. **A prova final não cobre a área.** Ela só exige cobertura por tipo onde o tópico declara
+     tipos — e só Frações declara. Nos outros ~100 tópicos a prova sorteia **uma** pergunta ao
+     acaso: dá para passar na prova de Funções sem nunca ver uma PG.
+  3. **Lacunas de conteúdo que travam tópicos de cima:** estudo de sinal (usado em aplicações da
+     derivada), trigonometria inversa (usada em integração), escalonamento e matriz inversa,
+     L'Hôpital, testes de convergência. E, para a admissão, **eletromagnetismo, ondas e química
+     continuam fora**.
+- **A teoria não é o problema.** São de 3,0 a 5,8 verbetes por tópico em todas as áreas, sem
+  área destoante. O que falta nela é pontual: 32 tópicos sem um único exemplo numérico
+  resolvido, e resoluções de Física que saltam da fórmula para o resultado.
 
 ---
 
-## 3. Cobertura comparada ao que é exigido
+## 3. Cobertura por área — o que foi pedido, o que existe, o que falta
 
-### 3.1 O que as universidades pedem e as rotas de entrada
+Veredito do comitê por área: **sólida** = cobre o esperado e treina bem; **aceitável** = cobre,
+treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
-O programa *Sciences de la nature* (200.B1), obrigatório desde o outono de 2024, usa novos códigos de competência:
+### 3.1 Matemática básica — sólida
 
-- Matemática: 0M02, 0M03 e 0M04.
-- Física: 0P01, 0P02 e 0P03.
-- Química: 0C01 e 0C02.
-- Biologia: 0B01.
+- [x] Operações, notação, MMC/MDC, frações, decimais, razão e proporção, potências e raízes
+- [x] Frações com cobertura por tipo (nove operações, cinco acertos em cada)
+- [ ] Nada a acrescentar. Simplificação pedida no plano anterior (MMC/MDC sem aprofundamento) — **◐** o tópico continua do mesmo tamanho; decisão: manter.
 
-As universidades aceitam esses códigos e também os antigos (00UN, 00UP, 00UQ, 00UR, 00US, 00UT, 00UL, 00UM).
+### 3.2 Álgebra — frágil (treino)
 
-| Universidade | Programa | Língua | Pré-requisitos (via cégep) | Rota para adulto sem DEC |
-|---|---|---|---|---|
-| **Polytechnique Montréal** | Baccalauréat en génie aérospatial: 120 créditos, ~4 anos, **contingentado** | Francês (teste B2 para quem não estudou em sistema francófono) | DEC Sciences de la nature com cote R ≥ 27; por ser contingentado, os melhores dossiês entram | *Candidat adulte* (21+, 2+ anos fora da escola, DES do Québec há 4+ anos, Math/Física/Química de 5e secondaire) → *année propédeutique* de 24 créditos, que **não dá acesso ao génie aérospatial**. Diplomas de fora do Québec: análise caso a caso. Alternativa: cursar o *année préparatoire* da Université de Montréal (MAT1903/1905/1923, PHY1901/1902 e CHM1963 com nota ≥ C; média ≥ 2,5/4,3; 24 créditos em duas sessões em tempo integral) e então concorrer ao programa contingentado |
-| **Concordia** | BEng Aerospace Engineering: opções *Aerodynamics and Propulsion*, *Aerospace Structures and Materials* e *Avionics and Aerospace Systems* | Inglês | Química geral; Cálculo I e II; Álgebra linear; Mecânica; E&M. CRC mínima de 30 (27 em matemática e em física) | **Mature entry**: 21+, cidadão ou residente permanente, 24 meses fora da escola, sem DEC → entra no BEng e cursa os pré-requisitos como créditos adicionais ao programa (MATH 203, 204 e 205; PHYS 204 e 205; CHEM 205, mais 12 créditos). Alternativa: *Certificate in Science and Technology* (30 créditos) |
-| **ÉTS** | Baccalauréat en génie aérospatial: 118–120 créditos; áreas de aerodinâmica e propulsão, estabilidade e controle, aeroestruturas, fabricação, sistemas e **tecnologias espaciais** | Francês | Sobretudo DEC técnico (ex.: 280.B0, 241.A0), com testes diagnósticos. Com DEC Sciences de la nature, a entrada é via *cheminement universitaire en technologie* (CUT) | Não encontramos rota adulta explícita; o CUT pressupõe um DEC |
-| **McGill** | B.Eng. Mechanical + *Aerospace Engineering Minor* (21 créditos; trilhas *Aerodynamics and Propulsion*, *Spacecraft and Systems* e *Aircraft Structures*) | Inglês | Química NYA e NYB, Matemática NYA, NYB e NYC, Física NYA, NYB e NYC (ou os códigos novos). R-score mínimo de 34,4 (set/2026), muito competitivo | *Mature*: 23+, cidadão ou residente permanente; cálculo diferencial, mecânica com laboratório e química geral com laboratório, cada um com nota ≥ 75% nos 3 anos anteriores |
-| **Sherbrooke** | Baccalauréat en génie mécanique, **concentration en génie aéronautique** | Francês | DEC 200.B1, ou os cursos 0B01, 0C01, 0C02, 0M02–0M04 e 0P01–0P03 | *Certificat préparatoire* (30 créditos): mecânica, ondas e física moderna, E&M, química geral e das soluções, álgebra linear, cálculo diferencial e integral, programação. Aceita quem retorna aos estudos ou vem de fora do sistema do Québec |
-| **Laval** | Baccalauréat en génie mécanique: sem concentração aeroespacial, mas com optativas "Aéronautique et aérospatiale" (ex.: GMC-4151 *Propulsion aéronautique et spatiale*) | Francês | 0M02–0M04, 0P01–0P03, 0C01 e 0B01 (ou os códigos antigos) | *Candidat adulte*: 21+, 2 anos fora da escola, sem DEC, cidadão ou residente permanente; pode haver escolaridade preparatória, mas não em programas contingentados |
+- [x] Os oito tópicos do plano: expressões, 1º grau, produtos notáveis, fatoração, 2º grau, inequações, sistemas, polinômios
+- [x] Equação do 2º grau e fatoração aceitam fração e raiz na resposta (bugs 7 e 8 da avaliação anterior)
+- [x] Inequações passaram a avaliar o sentido, não só a fronteira (bug 13)
+- [ ] **Estudo de sinal e inequações de 2º grau, produto e quociente** — não existe (`features/algebra/inequacoes/inequacoes.teoria.ts` só trata 1º grau; `curriculo.ts:137` admite). É pré-requisito do quadro de sinais em `calculo-1/aplicacoes-da-derivada`. **Prioridade alta.**
+- [ ] Frações algébricas (expressões racionais) — pedidas na avaliação anterior, ausentes
+- [ ] **Treino:** 6 dos 8 tópicos fazem uma pergunta só (`equacao-primeiro-grau`, `equacao-segundo-grau`, `fatoracao`, `inequacoes`, `produtos-notaveis`, `sistemas-lineares`). Faltam as clássicas: soma e produto das raízes; condição sobre Δ; equação biquadrada; sistema 3×3 e classificação (possível/impossível/indeterminado); fatoração por agrupamento e soma/diferença de cubos; produto notável na direção inversa.
 
-**O que isso significa para você:**
+### 3.3 Geometria plana e espacial — aceitável (melhorou em 09/11)
 
-- O site prepara o **conhecimento**. A **admissão** pede créditos: as disciplinas acima cursadas e aprovadas por uma via reconhecida. Há duas formas de obtê-los:
-  - **cursos de cégep:** o programa *Préalables universitaires* (080.04), oferecido por cégeps como o de Trois-Rivières, inclui 201-SN2/SN3/SN4, 203-SN1/2/3 e 202-SN1/2. No Cégep à distance, o guia 2026–2027 lista 201-NYA, 201-NYB e 201-NYC nesse mesmo programa;
-  - **preparatórios universitários:** a mature entry da Concordia e o certificat préparatoire de Sherbrooke.
-- Se o alvo é **aeroespacial especificamente**, as rotas mais diretas para um adulto sem DEC parecem ser a mature entry da Concordia (se você cumprir as condições) ou montar os pré-requisitos do cégep para concorrer à Polytechnique ou à ÉTS.
-- Algumas disciplinas pedem **laboratório**: a McGill exige mecânica e química com laboratório. Laboratório não se faz num site.
-- **Confirme com cada escritório de admissão.** A rota aplicável depende do seu histórico escolar, do seu status e da língua.
+- [x] Os cinco tópicos do plano
+- [x] Unidades em todos os enunciados; ângulos desenhados com arco e medida; resoluções com a potência do raio à vista (`core/math/geometria/espacial/espacial.ts`)
+- [x] Variedade: semelhança e círculo subiram de 5 para 9 formas; nenhum nível com uma pergunta só (guarda em `features/geometria/geometria-variedade.spec.ts`)
+- [ ] **Congruência de triângulos** — prometida em `curriculo.ts:206`, inexistente no código
+- [ ] Quadriláteros e polígonos (classificação e propriedades) — antes de áreas
+- [ ] Poliedros e relação de Euler — antes de sólidos
+- [ ] Teoria de `angulos-e-triangulos` tem só 2 verbetes para 4 tipos de pergunta: faltam ângulo interno/externo do polígono regular e classificação de triângulos
+- [ ] Explorar de `solidos-e-volumes` não desenha o sólido — único painel da área sem figura
 
-### 3.2 Matéria-base × site, item a item
+### 3.4 Funções — sólida (conteúdo) · aceitável (treino)
 
-Legenda: ✅ coberto · ◐ parcial · ✗ ausente
+- [x] Os nove tópicos do plano, mais os quatro que ele pedia: **racionais, por partes, transformações de gráficos**, e progressões movidas da Álgebra para cá
+- [x] O número **e** é apresentado na exponencial (`funcao-exponencial.teoria.ts`)
+- [ ] **Equações exponenciais e logarítmicas** — `curriculo.ts:243` admite a falta; pré-requisito de `calculo-4/aplicacoes-de-edo`
+- [ ] **◐** Domínio e imagem «com maior profundidade»: o treino ainda pede só «o único valor excluído», nunca o domínio como intervalo
+- [ ] **◐** Logaritmo natural: mencionado, sem verbete próprio
+- [ ] Treino: 8 dos 12 tópicos têm Extremo com uma pergunta só. Faltam: inequação modular; injetora/sobrejetora; razão ou primeiro termo da PA dados dois termos; taxa equivalente em juros; a^x = b por igualdade de bases
+- [ ] `juros-compostos` — plano anterior pedia «simplificar»; decisão: manter como aplicação do crescimento exponencial, opcional na trilha
 
-**Base do secundário (5e secondaire SN / ensino médio): cobertura alta, com estas lacunas**
+### 3.5 Trigonometria — aceitável
 
-- ✗ **O número e e o logaritmo natural nunca são apresentados.** O ln aparece em resoluções e em ∫1/x dx, mas não é definido. A descrição do tópico promete "o número e e meia-vida" (`curriculo/curriculo.ts:224`), e o e só aparece como a base 2,718 num controle da aba Explorar.
-- ✗ Equações exponenciais e logarítmicas em geral (só existe o "tempo de duplicação").
-- ✗ Inequações do 2º grau, de produto e de quociente (estudo de sinal) e notação de intervalos.
-- ◐ **As inequações só pedem o valor da fronteira** (`features/algebra/inequacoes/inequacoes.gerador.ts:25,39`). O sentido da desigualdade, que é o ponto central do tópico, nunca é avaliado. Isso contradiz a descrição, que promete "o conjunto solução na reta" (`curriculo/curriculo.ts:132`).
-- ✗ Frações algébricas (expressões racionais), funções racionais e definidas por partes como tópico próprio, e transformações de gráficos.
-- ✗ Equações trigonométricas e funções trigonométricas inversas (arcsen, arccos, arctg).
+- [x] Os seis tópicos, na ordem certa (funções antes de identidades, como a avaliação anterior pediu)
+- [ ] **Equações trigonométricas e funções inversas** (arcsen, arccos, arctg) — não há tópico; as inversas aparecem só em menções. É **pré-requisito da substituição trigonométrica** em `calculo-2/tecnicas-de-integracao`. **Prioridade alta.**
+- [ ] Tipo de pergunta `'sinal'` declarado e nunca sorteado em `circulo-trigonometrico.gerador.ts:9`
+- [ ] `triangulo-retangulo` faz uma pergunta só; falta achar o **ângulo** dadas duas medidas, 30-60-90 e 45-45-90, altura por tangente
+- [ ] `lei-senos-cossenos`: falta achar o ângulo pela lei dos cossenos e a área ½·a·b·sen C
+- [ ] Extremo igual ao Difícil em `triangulo-retangulo` e `lei-senos-cossenos` (mesmos parâmetros)
 
-**Calcul différentiel (0M02 / NYA)**
+### 3.6 Vetores e matrizes — frágil (conteúdo)
 
-- ✅ Limites (intuitivo, laterais e no infinito), assíntotas, continuidade e TVI, definição de derivada, taxa de variação, otimização, máximos e mínimos, concavidade.
-- ◐ Regras de derivação e regra da cadeia. Os exercícios usam **só polinômios** e não há exercício de quociente, embora a descrição prometa "potência, produto e quociente" (`features/calculo-1/regras-de-derivacao/regras-de-derivacao.gerador.ts:7`).
-- ✗ Derivadas de sen, cos, tg, eˣ, ln e das funções inversas (nenhum exercício; só citações em texto).
-- ✗ Derivação implícita e logarítmica.
-- ✗ **Taxas relacionadas**, prometidas na descrição (`curriculo/curriculo.ts:525`).
-- ✗ TVM e Rolle, diferenciais e aproximação linear, regra de L'Hôpital.
+- [x] Vetores no plano, produto escalar e vetorial, **vetores no espaço (R³)** — o pedido central do plano anterior
+- [x] Matrizes: determinantes 2×2 e 3×3, Cramer, produto
+- [x] Números complexos, mantidos como complementar
+- [ ] **Escalonamento (Gauss-Jordan) e matriz inversa** — `curriculo.ts:386` lista como o que falta; `sistemas-lineares` só ensina substituição 2×2. É o que fecha o 0M04. **Prioridade alta.**
+- [ ] Retas e planos no espaço; combinação linear, independência e bases
+- [ ] **◐** Teoria de `matrizes-determinantes` ainda diz «det = 0 ⟺ linhas proporcionais» (4 ocorrências); vale para 2×2, não para 3×3. Trocar por «linearmente dependentes» onde o 3×3 é tratado
+- [ ] Explorar de `vetores-no-espaco` não tem desenho: o produto vetorial é explicado em texto, sem a regra da mão direita
+- [ ] Teoria de `vetores-no-plano`: a pergunta `direcao` existe sem verbete próprio
+- [ ] Álgebra linear avançada (espaços vetoriais, autovalores) — etapa futura do plano anterior; não iniciada e **não é pré-requisito de admissão**
 
-**Calcul intégral (0M03 / NYB)**
+### 3.7 Geometria analítica — aceitável
 
-- ✅ Soma de Riemann, integral definida, primitivas, TFC, área entre curvas, volume por discos.
-- ◐ Técnicas de integração: os exercícios cobrem **só substituição** (`features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.gerador.ts:37`); a integração por partes aparece só na teoria.
-- ◐ Comprimento de arco: aparece na teoria, mas não tem exercícios.
-- ✗ **Frações parciais**, prometidas na descrição (`curriculo/curriculo.ts:562`).
-- ✗ Substituição trigonométrica.
-- ✗ Integrais impróprias.
-- ✗ Volumes por cascas cilíndricas.
-- ✗ Séries com testes de convergência (só há a série geométrica no Pré-cálculo).
-- ✗ Séries de potências e Taylor.
-- ✗ EDOs separáveis.
+- [x] Ponto e reta, circunferência, cônicas e **equações paramétricas** (pedidas no plano anterior)
+- [x] Distância entre dois pontos (`ponto-e-reta`)
+- [ ] **Distância de ponto a reta**, paralelismo/perpendicularidade pelos coeficientes, reta por dois pontos, interseção de retas
+- [ ] **Parábola** — não há nenhuma pergunta de parábola em `conicas` (foco, diretriz, parâmetro)
+- [ ] Circunferência: completar quadrados para achar centro e raio; reta tangente
+- [ ] Coordenadas polares — `curriculo.ts:430` cita a forma polar das órbitas; degrau natural antes de `calculo-3/coordenadas-no-espaco`
+- [ ] Extremo com uma pergunta só em `ponto-e-reta`, `circunferencia` e `conicas`
 
-**Algèbre linéaire et géométrie vectorielle (0M04 / NYC)**
+### 3.8 Física — sólida (mecânica) · ausente (E&M, ondas)
 
-- ✅ Vetores no plano, produto escalar, determinantes 2×2 e 3×3, regra de Cramer, operações com matrizes.
-- ◐ Produto vetorial: só na versão plana. **A estrutura `Vetor` tem apenas x e y** (`core/math/algebra/vetores.ts:13-16`).
-- ✗ Vetores em R³, retas e planos no espaço.
-- ✗ Eliminação de Gauss-Jordan e sistemas m×n.
-- ✗ Matriz inversa.
-- ✗ Combinação linear, independência, bases.
+- [x] A reordenação pedida: Leis de Newton antes de balística; estática antes de harmônico
+- [x] Os sete acréscimos do plano anterior: cinemática vetorial, movimento circular, dinâmica rotacional, momento angular, continuidade e Bernoulli (com as hipóteses, bug 19), transferência de calor
+- [x] Bernoulli corrigido pela variação de pressão (bug 9); gravitação com tolerância coerente (bug 12)
+- [ ] **Eletricidade e magnetismo (0P02)** — zero ocorrências de carga, campo, circuito ou indução. **Exigido por todos os programas.**
+- [ ] **Ondas e física moderna (0P03)** — só o movimento harmônico; faltam ondas, som, óptica, relatividade, fotoelétrico
+- [ ] Física com cálculo (força variável, trabalho como integral, MHS como EDO) — a trilha linear põe toda a Física antes do Cálculo, então isso não cabe onde a área está. Decisão registrada: **manter a ordem** e, se vier, criar um bloco «Física com cálculo» depois do Cálculo 2
+- [ ] **Resoluções que saltam da fórmula para o número** nos módulos do núcleo: `core/math/fisica/mecanica/mecanica.ts:219-242` (plano inclinado, cinco resultados e nenhuma conta), `gravitacao/gravitacao.ts` (oito saltos), `fluidos/fluidos.ts:91,95,193,198`, `termica/termica.ts:269` («Substituindo.» sem substituir), `energia/energia.ts:189,259,323`. O padrão certo já existe no mesmo repositório (`espacial.ts`, `termica.ts:67`)
+- [ ] Teoria curta demais: `cinematica-escalar` (2 verbetes para 5 perguntas; falta Torricelli e referencial), `analise-dimensional` (2 para 6; falta o teorema Π)
+- [ ] Química (0C01–0C02) — fora do escopo do site; fazer pelo curso formal
 
-**Mécanique (0P01 / NYA de física)**
+### 3.9 Pré-cálculo — aceitável
 
-- ✅ Análise dimensional, cinemática 1D, lançamento oblíquo, leis de Newton, trabalho e energia, impulso, momento linear e colisões, estática, torque e centro de massa.
-- ✅ Gravitação e órbitas, fluidos e gases. Esses três vão além do NYA, e isso é bom para aeroespacial.
-- ◐ Tudo é tratado em nível algébrico: não há força variável, nem trabalho como integral.
-- ✗ **Dinâmica de rotação.** O momento de inércia só aparece numa tabela de dimensões (`core/math/fisica/dimensional.ts:52`). Também faltam momento angular, rolamento e movimento circular uniforme como tópico. Isso é a base do controle de atitude e da vetoração de empuxo.
+- [x] Ordem corrigida: noção intuitiva antes de vizinhanças e infinito (a inversão da avaliação anterior)
+- [x] Sequências e séries transferidas para o Cálculo 2
+- [ ] A reformulação ampla do plano anterior (revisão de funções, gráficos, exponenciais) **não foi feita** — decisão: não refazer; essas revisões já vivem nos tópicos de Funções, e o Pré-cálculo fica como ponte de dois tópicos
+- [ ] Seção «Limites laterais» de `nocao-intuitiva-de-limite.teoria.ts:77` repete `calculo-1/limites-laterais` inteiro — remover a seção
 
-**Électricité et magnétisme (0P02 / NYB de física):** ✗ Nenhuma ocorrência de carga, Coulomb, campo elétrico, circuito ou indução no site.
+### 3.10 Cálculo 1 — frágil (treino)
 
-**Ondes et physique moderne (0P03 / NYC de física):** ◐ só o MHS massa-mola. ✗ Faltam ondas mecânicas, som, óptica geométrica e física, relatividade restrita, efeito fotoelétrico e física nuclear.
+- [x] Os oito tópicos originais mais os acréscimos pedidos: **derivadas trigonométricas, exponencial e logaritmo, derivação implícita, taxas relacionadas, otimização** (em `aplicacoes-da-derivada`)
+- [ ] **Regra de L'Hôpital** — zero ocorrências; `limites` resolve indeterminação só por fatoração e conjugado
+- [ ] **Teorema do valor médio e Rolle** — zero ocorrências
+- [ ] **Regra do quociente** — não existe nenhuma pergunta, embora a descrição do tópico a prometa
+- [ ] Tipo `'taxa-media'` declarado e nunca sorteado em `definicao-de-derivada.gerador.ts:8`
+- [ ] Dica da regra do produto presa no Fácil, nível que não a gera (`regras-de-derivacao.gerador.ts:107`); e a pergunta que estreia no Fácil (`coeficiente`) não tem dica
+- [ ] 6 dos 11 tópicos fazem uma pergunta só (`derivacao-implicita`, `derivadas-exponencial-logaritmo`, `derivadas-trigonometricas`, `limites`, `limites-laterais`, `regra-da-cadeia`). Faltam: reta tangente; derivada segunda; sen x/x; limite que não existe; classificação de descontinuidade; crescimento, concavidade e inflexão; cadeia com √, e^u, ln u
+- [ ] Extremo igual ao Difícil em `limites-laterais`, `regra-da-cadeia`, `derivacao-implicita`
+- [ ] Nenhum exemplo numérico resolvido na teoria de `derivacao-implicita`, `derivadas-exponencial-logaritmo` (9 verbetes, zero exemplos), `derivadas-trigonometricas`, `regra-da-cadeia`
 
-**Chimie (0C01–0C02):** ✗ nada no site. É exigida por todos os programas.
+### 3.11 Cálculo 2 — frágil (um tópico duplicado)
 
-**Probabilités et statistique (0M01, nova no 200.B1):** em geral não é pré-requisito das engenharias.
+- [x] Técnicas de integração com **substituição, por partes e frações parciais** no gerador; integrais impróprias; áreas, volumes, comprimento de arco; séries de Taylor
+- [x] Resolução da área entre curvas corrigida (bug 16: o `b` entrou no integrando)
+- [ ] **`sequencias-e-series` é duplicata de `funcoes/progressoes`**: mesmos três imports de `@core/math` (`somaComPassos`, `somaInfinitaComPassos`, `termoGeral`), mesmos tipos de questão. A descrição promete «convergência» e o gerador só pergunta soma de PG infinita. **Decisão: refundar o tópico como «Testes de convergência»** (razão, integral, comparação, alternada, p-série), em vez de removê-lo
+- [ ] Séries de potências e raio de convergência — zero ocorrências; pré-requisito honesto de Taylor
+- [ ] Substituição trigonométrica — ausente (depende da trigonometria inversa, 3.5)
+- [ ] Volumes por cascas cilíndricas
+- [ ] **◐** `integral-definida` continua exigindo primitiva antes de `teorema-fundamental` (ordem mantida). Decisão: aceitar, com o enunciado dizendo «use a primitiva» — ou reordenar
+- [ ] Nenhum exemplo resolvido na teoria de `aplicacoes-da-integral`, `integrais-improprias`, `series-de-taylor`, `tecnicas-de-integracao`
 
-- ◐ O site tem combinatória, probabilidade básica e estatística descritiva com incerteza.
-- ✗ Faltam distribuições, intervalos de confiança e testes de hipótese.
+### 3.12 Combinatória e estatística — aceitável
 
----
+- [x] Os três tópicos originais mais os acréscimos pedidos: **distribuição normal, regressão e correlação**, incerteza e propagação
+- [x] Teoria de incerteza não usa mais derivadas parciais (bug da avaliação anterior)
+- [x] Anagramas: a lista fixa de repetições (`['CARRO', [2, 2]]`, bug 17) não existe mais
+- [ ] Binômio de Newton — nenhum tópico o cobre
+- [ ] Intervalos de confiança e testes de hipótese
+- [ ] «Ajuste de reta» duplicado: uma seção em `estatistica-e-incerteza.teoria.ts:95` e sete em `regressao-e-correlacao` — mover para o tópico dedicado
+- [ ] Dica de `ao-menos-um` presa no Fácil (`probabilidade.gerador.ts:226`); `uniao` estreia no Fácil sem dica
 
-## 4. Erros e bugs encontrados
+### 3.13 Cálculo 3 — aceitável
 
-Gravidade:
+- [x] Funções de várias variáveis, parciais, gradiente e direcional, integrais múltiplas, coordenadas no espaço, integrais de linha — toda a etapa futura do plano anterior
+- [ ] Integrais de superfície e os teoremas de Green, Stokes e da divergência — fecham o que `integrais-de-linha` abre
+- [ ] Nenhum dos 6 tópicos tem exemplo numérico resolvido na teoria
+- [ ] ~24 diagnósticos de armadilha só corretivos («Faltou extrair a raiz quadrada.»), concentrados aqui e no Cálculo 4
 
-- **Alta:** impede avançar com domínio ou ensina errado.
-- **Média:** atrapalha bastante.
-- **Baixa:** refinamento.
+### 3.14 Cálculo 4 — sólida
 
-### 4.1 Mecânica de treino e progressão
-
-| # | Grav. | Onde | Problema | Correção sugerida |
-|---|---|---|---|---|
-| 1 | Alta | `core/treino/sessao-treino.ts:46-82, 99-102`; `shared/components/area-treino/area-treino.html:51,63,67` | **Revelar a resolução e depois responder conta como acerto.** O botão "Não sei, mostrar a resolução" não trava o campo nem zera a sequência, e o último passo da resolução mostra o número. O comentário da linha 99 diz "conta como desistir do exercício", mas isso não está implementado | Ao revelar: registrar desistência, zerar a sequência e travar o campo |
-| 2 | Alta | `core/treino/progresso.service.ts:22-27`; `core/progressao/progressao.service.ts:37`; `core/treino/sessao-treino.ts:16` | **A liberação ignora o nível.** O nível não é registrado, e 3 seguidas no Fácil (o nível padrão) liberam o próximo tópico. O Fácil nem sorteia todos os tipos de questão: em Porcentagem, "percentual" e "sucessivas" nunca aparecem (`features/matematica-basica/porcentagem/porcentagem.gerador.ts:69-70`) | Registrar o nível e exigir a sequência no Médio ou no Difícil |
-| 3 | Alta | `core/progressao/progressao.model.ts:9` | **"3 seguidos" é um critério fraco.** Simulação: quem acerta só 50% libera o tópico em até 20 tentativas 79% das vezes; quem acerta 60%, 93% das vezes | Ex.: 8 dos últimos 10, com pelo menos 3 no Difícil; ou domínio por conceito |
-| 4 | Média | `shared/components/painel-progresso/painel-progresso.ts:75-76` | **O "Vale revisar" de cada tópico só funciona em 12 dos 75 tópicos.** O filtro usa `startsWith(topicoId + '.')`, mas os conceitos usam outros prefixos (ex.: `operacoes.` em `operacoes-fundamentais`). Além disso, o filtro corta os 8 piores conceitos do site inteiro antes de filtrar | Mapear conceito→tópico pelo registro de teoria e filtrar antes de cortar |
-| 5 | Média | `core/teoria/teoria.service.ts:21,37`; `shared/components/teoria-dialog/teoria-dialog.html:2` | **Links "Veja também" quebrados.** De 483 links, 80 apontam para conceitos de outro tópico, que só são registrados quando esse tópico é aberto na sessão. Antes disso, o botão mostra o id cru (ex.: `limite.intuicao`) e abre um modal vazio. Outros 10 apontam para ids inexistentes (ex.: `quadratica.bhaskara`, `riemann.particao`, `derivada.definicao`) | Registrar todas as teorias de uma vez (são dados pequenos) e corrigir os 10 ids. Um teste pode garantir que todo id citado exista |
-
-### 4.2 Exercícios que reprovam respostas certas ou aprovam erradas
-
-| # | Grav. | Onde | Problema | Correção sugerida |
-|---|---|---|---|---|
-| 6 | Alta | `features/funcoes/funcao-exponencial/funcao-exponencial.gerador.ts:32` × `:186` | O enunciado diz **"arredonde para 2 casas"**, mas a tolerância é relativa de 0,01%. Ex.: base 3 → 0,63 é reprovado (exato 0,6309); o mesmo acontece com as bases 5, 10 e 0,2 | Tolerância compatível com 2 casas (±0,005) |
-| 7 | Alta | `features/algebra/equacao-segundo-grau/equacao-segundo-grau.gerador.ts:5, 91-93, 124-129` | No Difícil, os coeficientes são aleatórios: **em ~53% dos sorteios a maior raiz é irracional ou dízima**. A tolerância é de 1e-9 e o campo só aceita decimal, então a resposta é impossível de digitar | Aceitar √ e frações, ou gerar a partir de raízes "bonitas", ou pedir 2 casas com tolerância coerente |
-| 8 | Alta | `features/algebra/fatoracao/fatoracao.gerador.ts:13, 63, 92-95` | Na diferença de quadrados (Médio), a raiz é k/a e a comparação é exata (`a === b`). **Em 35% desses sorteios, a raiz é uma dízima impossível de digitar.** Em 70% ela não é inteira, embora o formato peça "um número inteiro" | Aceitar frações (a classe `Fracao` já existe) e corrigir o texto do formato |
-| 9 | Alta | `features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.gerador.ts:17, 245-246` | **Bernoulli:** a tolerância relativa de 0,5% sobre ~101 kPa equivale a ±0,5 kPa, mais que a queda de pressão de muitos sorteios. **Responder "a pressão não muda" é aceito em 34% dos sorteios**, e o sinal invertido em 15%: dá para passar sem entender o conceito | Corrigir pela variação Δp (ou em Pa), não pela pressão total |
-| 10 | Média | `features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.gerador.ts:4, 37` | Tolerância absoluta de 0,01 com gabaritos de até ~2,7×10¹¹ no Difícil (12% ≥ 10⁸): exige mais algarismos do que uma calculadora mostra | Tolerância relativa e números menores |
-| 11 | Média | `features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.gerador.ts:5, 18-27` | Volume do cone com tolerância absoluta de 0,02: usando π = 3,14, a resposta é reprovada em ~93% dos sorteios; com 3,1416, em ~46% | Tolerância relativa, ou dizer "use o π da calculadora" |
-| 12 | Média | `features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.gerador.ts:14-19, 78` | Pede "2 casas decimais", mas a tolerância é relativa de 0,5%. Em grandes altitudes g é pequeno, e **a resposta com 2 casas é reprovada em ~38% dos sorteios** | Pedir 3 algarismos significativos, ou aceitar ±0,005 |
-| 13 | Média | `features/algebra/inequacoes/inequacoes.gerador.ts:5`; `features/funcoes/funcao-quadratica/funcao-quadratica.gerador.ts:5` | Tolerância de 1e-9 e campo só decimal: a fronteira é dízima em ~38% dos sorteios das inequações (Difícil), e o vértice em ~17% dos da quadrática (Difícil) | Aceitar frações em todos os geradores numéricos |
-| 14 | Baixa | `features/calculo-2/teorema-fundamental/teorema-fundamental.gerador.ts:73-84` | "Para qual k a integral vale X?": em ~6% dos sorteios há outro k positivo que também resolve, e só o inteiro é aceito | Aceitar qualquer raiz válida, ou usar integrandos monótonos |
-| 15 | Baixa | `features/vetores-matrizes/numeros-complexos/numeros-complexos.gerador.ts:200-201, 227-230` | No 4º quadrante, −53,13° (o argumento principal, convenção usual) é diagnosticado como erro | Aceitar ângulos equivalentes módulo 360° |
-
-### 4.3 Erros de conteúdo
-
-| # | Grav. | Onde | Problema | Correção sugerida |
-|---|---|---|---|---|
-| 16 | Alta | `features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.gerador.ts:99, 103` | Área entre y = ax e y = bx²: **a resolução mostrada ignora o b** e calcula ∫₀ᵃ(ax − x²)dx. Fica errada sempre que b ≥ 2, ou seja, em 5 de cada 6 sorteios. Ex.: a = 6, b = 2 mostra 36, mas o certo é 9 (o gabarito está certo) | Limite superior a/b e integrando ax − bx² |
-| 17 | Alta | `features/estatistica/analise-combinatoria/analise-combinatoria.gerador.ts:192` | **Anagramas de CARRO** declarados com repetições [2, 2]. Só o R repete, então o gabarito dá 30 e o certo é 5!/2! = 60 | `['CARRO', [2]]`, ou calcular as repetições a partir da palavra |
-| 18 | Média | `features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.teoria.ts:69` | "det A = 0 ⟺ linhas proporcionais" é falso para 3×3, e o tópico treina 3×3. Contraexemplo: linhas (1,0,0), (0,1,0) e (1,1,0) | "⟺ linhas linearmente dependentes" (para 2×2, equivale a proporcionais) |
-| 19 | Média | `features/fisica/fluidos-e-aerodinamica/*.teoria.ts` | A equação de Bernoulli é apresentada sem as hipóteses: escoamento incompressível, sem viscosidade, ao longo de uma linha de corrente | Explicitar as hipóteses e quando falham |
-| 20 | Média | `curriculo/curriculo.ts:132, 224, 341, 525, 562` | Descrições prometem conteúdo que não existe: conjunto solução das inequações, o número e e meia-vida, cônicas "como órbitas", taxas relacionadas, frações parciais | Implementar ou ajustar o texto |
-
-### 4.4 Renderização
-
-| # | Grav. | Onde | Problema | Correção sugerida |
-|---|---|---|---|---|
-| 21 | Média | 118 arquivos `.ts` (ex.: `core/math/funcoes/elementares.ts:52`; `features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.teoria.ts:21`) | **`\;` com uma barra só vira `;` no JavaScript.** São 614 ocorrências em 310 linhas, e o KaTeX desenha "x = 0 ;⇒; …" em vez de um espaço | Trocar `\;` por `\\;` e criar um teste que renderize todas as fórmulas, ou ativar a regra `no-useless-escape` |
+- [x] EDO de 1ª e 2ª ordem, aplicações, métodos numéricos — o núcleo de um primeiro curso
+- [ ] Sistemas de EDOs; EDO exata e fator integrante; não homogênea; logístico; Newton-Raphson
+- [ ] Nenhum dos 4 tópicos tem exemplo numérico resolvido na teoria
+- [ ] Fácil com uma pergunta só em `edo-primeira-ordem` (só separável) e `metodos-numericos` (só Euler)
 
 ---
 
-## 5. Ordem dos tópicos
+## 4. Mecânica de treino, correção e prova
 
-### 5.1 Problemas na ordem atual
+### 4.1 O que a avaliação anterior apontou (itens 1–21) — estado
 
-A ordem atual é Matemática básica → Álgebra → Geometria → Funções → Trigonometria → Vetores e matrizes → Geometria analítica → Combinatória e estatística → **Física → Pré-cálculo → Cálculo 1 → Cálculo 2**.
+- [x] 1. Revelar a resolução conta como desistência, trava o campo e zera a sequência
+- [x] 2–3. O domínio exige nível: 8 de 10, 3 no Médio ou Difícil, 3 seguidos ao final; o Fácil não libera etapa
+- [ ] **◐** 4. «Vale revisar» por tópico: o filtro `startsWith(topicoId)` ainda existe em `shared/components/painel-progresso` (2 ocorrências) — não confirmado se o mapeamento conceito→tópico foi corrigido
+- [x] 5. Links «Veja também»: há teste garantindo que todo id citado existe (`core/teoria/teorias/teorias.spec.ts`)
+- [x] 6–13. Tolerâncias e formatos: fração aceita em todo gerador numérico; √ e π aceitos; tolerância coerente com as casas pedidas (ver 4.2)
+- [x] 16–17. Erros de conteúdo da área entre curvas e dos anagramas
+- [ ] **◐** 18. Determinante: «linhas proporcionais» ainda aparece 4 vezes na teoria 3×3
+- [x] 19. Bernoulli com hipóteses
+- [ ] **◐** 20. Descrições que prometem o que não existe: taxas relacionadas e frações parciais foram feitas; **congruência** (`curriculo.ts:206`) e **convergência** (`:757`) continuam prometidas e ausentes
+- [ ] **◐** 21. `\;` com barra única: de 310 linhas para **5** — terminar
 
-Uma varredura das referências cruzadas achou **29 citações de conceitos que só são ensinados depois na trilha**. Os casos que importam são estes:
+### 4.2 O que este comitê encontrou e já está feito (sessões de 06 a 09/11)
 
-1. **A física vem antes do cálculo, mas já usa cálculo.**
-   - A Cinemática (etapa 48) remete à "taxa instantânea" e à "taxa média", que só aparecem na etapa 66.
-   - A física do cégep é toda baseada em derivadas e integrais.
-   - Resultado: a física do site fica algébrica e não volta depois que o cálculo é aprendido.
-2. **O Pré-cálculo está invertido.**
-   - A definição formal ε-δ ("Vizinhanças e infinito", etapa 60) vem **antes** da "Noção intuitiva de limite" (etapa 61).
-   - "Sequências e séries" (etapa 59) usa limite antes de ele existir.
-   - "Limites" (etapa 62) repete a definição formal.
-3. **No Cálculo 2, a integral definida é cobrada antes do TFC.** Os exercícios de "Integral definida" (etapa 71) exigem primitiva e F(b) − F(a) (`features/calculo-2/integral-definida/integral-definida.gerador.ts:21,36,42`). A integral indefinida e o TFC só aparecem nas etapas 72 e 73.
-4. **"Estatística e incerteza" (etapa 46) usa derivadas parciais** (`features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.teoria.ts:111`), que nem estão no site.
-5. **Combinatória e estatística ficam no meio da trilha**, adiando o cálculo, e não são pré-requisito de engenharia. O mesmo vale para **Juros compostos**: pouco valor para aeroespacial na trilha obrigatória.
-6. **Progressões (etapa 17) vem antes de Funções**, mas a teoria a apresenta como função afim (24) e exponencial (27).
-7. **A trilha é estritamente linear, com 75 etapas obrigatórias.** Um adulto que já domina o básico precisa passar por "Operações fundamentais" antes de chegar ao cálculo.
+- [x] A prova final aparece como destino ao fim da última etapa da área, e o guard nunca redireciona para rota trancada (era um laço que travava a página)
+- [x] Na prova, errar mostra o diagnóstico e a resolução, com o passo divergente destacado; acertar não mostra nada
+- [x] Enunciado diz a forma da resposta: «valor exato», «responda como fração» quando a raiz é fracionária, e o campo avisa «decimal só se for exato»
+- [x] Máscara do campo numérico: milhar e vírgula decimal se arrumam enquanto se digita, com a mesma regra de leitura do corretor; `6.082.12` deixou de ser lido como 6,082 × 0,12
+- [x] Resposta certa arredondada uma casa antes do pedido é aceita, com aviso de precisão (44 tópicos recusavam)
+- [x] Resoluções passo a passo com os números do enunciado no teorema do resto, na fatoração (que agora para no grau 2 e chama Bhaskara), na escala de semelhança e nos sólidos
+- [x] Cinco dicas presas em nível que a pergunta nunca alcançava, corrigidas (escala, cônicas, polígono regular, superfície de sólidos)
+- [x] Guardas automáticos: unidade em todo enunciado de Geometria; piso de variedade por tópico; nenhum nível com uma pergunta só; gabarito aceito como resposta; contrato de casas decimais em todos os geradores
 
-### 5.2 Ordem proposta
+### 4.3 O que falta na mecânica
 
-Marcações: **(novo)** é tópico a criar; *movido* vem de outro bloco; *(opc)* é opcional na trilha obrigatória.
-
-**Etapa 0 – Nivelamento (novo).** Um teste diagnóstico por bloco, com 10 a 15 questões médias ou difíceis. Quem passa libera o bloco inteiro.
-
-**Bloco 1 – Matemática básica (sem mudança).** Operações fundamentais · MMC e MDC · Frações · Decimais · Porcentagem · Razão e proporção · Potenciação e radiciação · Notação científica e unidades.
-
-**Bloco 2 – Álgebra.** Expressões algébricas · Equação do 1º grau · Produtos notáveis · Fatoração · **Frações algébricas (novo)** · Equação do 2º grau · Inequações do 1º e 2º grau com estudo de sinal e intervalos (ampliado) · Sistemas lineares · Polinômios.
-
-**Bloco 3 – Geometria plana e espacial (sem mudança).**
-
-**Bloco 4 – Funções.** Conceito de função · Afim · Quadrática · Modular · **Transformações de gráficos (novo)** · **Funções racionais e definidas por partes (novo)** · Exponencial, com o número e · Logarítmica, com ln e mudança de base · **Equações exponenciais e logarítmicas (novo)** · Composição e inversa · Progressões (*movido* da Álgebra) · Juros compostos *(opc)*.
-
-**Bloco 5 – Trigonometria.** Triângulo retângulo · Seno, cosseno e tangente · Círculo trigonométrico e radianos · Funções trigonométricas (*movido* para antes das identidades) · Identidades · Leis dos senos e dos cossenos · **Equações trigonométricas (novo)** · **Funções trigonométricas inversas (novo)** · Números complexos *(opc, movido)*.
-
-**Bloco 6 – Geometria analítica.** Ponto e reta · Circunferência · Cônicas, ligadas às órbitas como a descrição promete.
-
-**Bloco 7 – Vetores e mecânica sem cálculo.** Vetores no plano **e no espaço (R³)** · Produto escalar e vetorial em 3D · Análise dimensional · Cinemática escalar (sem "taxa instantânea") · Balística · Leis de Newton · Trabalho e energia · Impulso e momento · Estática e torque · Gravitação e órbitas · Fluidos (com as hipóteses de Bernoulli) · Termodinâmica e gases.
-
-**Bloco 8 – Limites e continuidade (era o Pré-cálculo).** Noção intuitiva de limite · Limites laterais · Limites no infinito e assíntotas · Propriedades e indeterminações · Definição formal ε-δ (fundindo "Vizinhanças" com "Limites") · Continuidade e TVI.
-
-**Bloco 9 – Cálculo diferencial (0M02).** Definição de derivada · Regras de derivação, incluindo quociente · Regra da cadeia · **Derivadas de sen, cos, tg, eˣ e ln (novo)** · **Derivadas das inversas e derivação implícita (novo)** · Taxa de variação · **Taxas relacionadas (novo)** · Esboço de gráficos e otimização · **TVM, diferenciais e aproximação linear (novo)** · **Regra de L'Hôpital (novo)**.
-
-**Bloco 10 – Cálculo integral (0M03).** Soma de Riemann · Integral definida (como limite de somas e área, sem exigir primitiva) · Integral indefinida · TFC (é aqui que entram os exercícios com F(b) − F(a)) · Substituição e por partes, com exercícios de ambas · **Frações parciais (novo)** · **Substituição trigonométrica (novo)** · Aplicações: áreas, volumes por discos e **cascas**, comprimento de arco, trabalho · **Integrais impróprias (novo)** · Sequências e séries (*movido* do Pré-cálculo) com **testes de convergência (novo)** · **Séries de potências e Taylor (novo)** · **EDOs separáveis (novo)**.
-
-**Bloco 11 – Física com cálculo (completa o 0P01).** Cinemática com derivadas e integrais · Força variável e trabalho como integral · **Movimento circular e dinâmica de rotação: momento de inércia, torque, momento angular (novo)** · Movimento harmônico como EDO (*movido*) · **Propulsão de foguetes como fecho da física**: Tsiolkovsky deduzida pela integral, com perdas por gravidade e arrasto (*movido*) · **Atmosfera padrão, arrasto e estabilidade CG/CP (novo, opc)**.
-
-**Bloco 12 – Álgebra linear e geometria vetorial (0M04).** **Retas e planos no espaço (novo)** · Matrizes e determinantes (corrigido) · **Gauss-Jordan (novo)** · **Matriz inversa (novo)** · **Combinação linear, independência e bases (novo)**.
-
-**Bloco 13 – Eletricidade e magnetismo (0P02) e Ondas e física moderna (0P03) (novo).**
-
-- E&M: carga e Coulomb, campo e potencial, capacitores, circuitos CC e RC, campo magnético, indução.
-- Ondas e física moderna: oscilações e ondas, som, óptica geométrica e física, relatividade restrita, efeito fotoelétrico.
-
-**Bloco 14 – Combinatória, probabilidade e estatística** (*movido* para depois do cálculo; *opc* para a admissão).
-
-**Química (0C01–0C02):** fora do escopo do site. Faça-a pelo curso formal. No site, no máximo um glossário e um resumo.
+- [ ] **Cobertura da prova.** `planoDaProva` só exige um item por tipo onde há `TIPOS_POR_TOPICO`, e **só `fracoes` declara** (`core/progressao/models/progressao.model.ts:155-168`). Declarar tipos nos tópicos com mais de uma pergunta — ao menos `aplicacoes-da-derivada` (6), `equacoes-parametricas` (6), `progressoes` (5), `funcoes-por-partes` (5), `funcoes-racionais` (5), `transformacoes-de-graficos` (5). **Prioridade alta, esforço baixo.**
+- [ ] **Exigência da prova varia com o tamanho da área**: 2 erros tolerados valem 75% de acerto em 8 questões e 88% em 16 (Física). Decidir: tolerância proporcional, ou prova de tamanho fixo
+- [ ] **Dois tipos de pergunta mortos**: `'sinal'` (`circulo-trigonometrico.gerador.ts:9`) e `'taxa-media'` (`definicao-de-derivada.gerador.ts:8`) — declarados, nunca sorteados
+- [ ] **Extremo igual ao Difícil** em `limites-laterais`, `triangulo-retangulo`, `regra-da-cadeia`, `expressoes-algebricas`, `derivacao-implicita`, `lei-senos-cossenos` — mesmos parâmetros, mesma pergunta. Onde não dá para inventar pergunta mais funda, o Extremo deve ao menos variar
+- [ ] **9 dicas ainda presas em nível que a pergunta não alcança**: `regras-de-derivacao:107`, `probabilidade:226`, `estatistica-e-incerteza:218`, `gravitacao-e-orbitas:151`, `propulsao-de-foguetes:198`, `cinematica-escalar:314`, `trabalho-e-energia:209`, `leis-de-newton:289`, `progressoes:243`. Vale um guarda: para cada ramo com `dica`, o nível da condição tem de estar entre os que `sortearPergunta` gera para ele
+- [ ] **11 perguntas que estreiam no Fácil sem dica**: `integral-definida:149`, `probabilidade:230`, `cinematica-escalar:102`, `propulsao-de-foguetes:98`, `matrizes-determinantes:186`, `conicas:102`, `ponto-e-reta:78,197`, `continuidade:81`, `sequencias-e-series:81`, `vizinhancas-e-infinito:73`
+- [ ] **Dicas com fórmula crua** (`'v = √(2gh)'`, `'σ = √(σ₁² + σ₂²)'`): o padrão é dizer o expoente em palavras e usar o número do enunciado — `gravitacao-e-orbitas:109,299`, `fluidos-e-aerodinamica:161`, `trabalho-e-energia:161`, `vetores-no-plano:106`, `numeros-complexos:145`, `circulo-e-poligonos:140,422`, `semelhanca-e-pitagoras:120,161`, `juros-compostos:155`, `probabilidade:123`
+- [ ] **Respostas simbólicas** (derivadas e primitivas como expressão, comparadas por avaliação em pontos): o analisador existe (`core/treino/resposta-simbolica`) mas só **um** gerador o usa
+- [ ] Teste diagnóstico de nivelamento por bloco — proposto na avaliação anterior, não iniciado
+- [ ] Textos dos geradores (enunciados, dicas, diagnósticos) só em português; a interface tem pt/fr/en. Um glossário FR/EN por tópico continua pendente
 
 ---
 
-## 6. Melhorias na mecânica de estudo
+## 5. Decisões: remover ou fundir
 
-1. **Domínio de verdade:**
-   - corrigir os itens 1 a 3 da seção 4.1;
-   - um tópico só é "vencido" com sequência no Médio ou no Difícil;
-   - revelar a resolução conta como desistência.
-2. **Revisão espaçada por conceito.** Os dados já existem em `ProgressoService.porConceito`. Falta uma fila diária de 5 a 10 exercícios de conceitos antigos, priorizando os frágeis.
-3. **Provas de bloco.** Cumulativas, intercaladas, com tempo e sem dicas, no estilo de prova de cégep, com problemas de várias etapas e de modelagem (incluindo os de foguete).
-4. **Formatos de resposta:**
-   - aceitar fração em todo gerador numérico;
-   - aceitar expressões com √ e π;
-   - usar tolerância coerente com as casas pedidas;
-   - para derivadas e primitivas, aceitar **respostas simbólicas** (ex.: `3x^2 - 2x + 1`), comparando por avaliação em pontos aleatórios. Hoje os 75 geradores só aceitam um valor numérico (69 do tipo número e 6 do tipo fração); nenhum aceita uma expressão.
-5. **Testes automáticos que pegariam os bugs da seção 4,** em todo gerador e milhares de sementes. O projeto já usa Vitest, então dá para checar:
-   - "o gabarito é representável no formato aceito";
-   - "a resposta digitada como o enunciado pede é aceita";
-   - "o último passo da resolução bate com o gabarito";
-   - "todo id de conceito citado existe".
-6. **Francês e inglês.** A graduação será em francês (Polytechnique, ÉTS, Sherbrooke, Laval) ou em inglês (Concordia, McGill), e hoje o site é só em português. Sugestões:
-   - um glossário FR/EN por tópico (ex.: *dérivée / derivative*, *primitive / antiderivative*, *limite à gauche / left-hand limit*);
-   - um modo com enunciados em francês.
-7. **Material externo por bloco.** Indicar o capítulo correspondente de um livro-texto aberto, como OpenStax *Calculus* (vol. 1–3), *University Physics* (vol. 1–3) e *Chemistry 2e*, além de listas e provas antigas de cégep. O site é ótimo para praticar, mas não substitui um livro para a teoria longa nem o laboratório.
+- [ ] **Refundar** `calculo-2/sequencias-e-series` como testes de convergência (3.11) — não remover a vaga
+- [ ] **Remover** a seção «Limites laterais» de `pre-calculo/nocao-intuitiva-de-limite.teoria.ts:77`
+- [ ] **Mover** «Ajuste de reta» de `estatistica-e-incerteza` para `regressao-e-correlacao`
+- [x] **Não fundir** `triangulo-retangulo` com `seno-cosseno-tangente`: o comitê conferiu as seções e o conteúdo é complementar
+- [x] **Não remover** `juros-compostos` nem `numeros-complexos`: ficam como complementares
+- [x] **Não mover** Combinatória e estatística para o fim da trilha (proposta anterior): com a trilha configurável por tópico, quem não precisa tira do plano em Configurações
 
 ---
 
-## 7. Plano de ação priorizado
+## 6. Plano de ação priorizado
 
-| Fase | O quê | Por quê |
-|---|---|---|
-| **0 – Correções rápidas** | Itens 1–3, 6–9, 16–17 e 21 da seção 4; ids quebrados (item 5) | Alto impacto e baixo esforço: param de ensinar errado e de liberar sem domínio |
-| **1 – Reordenar e fechar o 0M02** | Reordenar Pré-cálculo e Cálculo 2 e dividir a Física (seção 5.2); derivadas transcendentes, implícita, taxas relacionadas, L'Hôpital | O cálculo diferencial é o primeiro pré-requisito em toda universidade |
-| **2 – 0M03 e 0M04** | Técnicas de integração completas, impróprias, séries e Taylor, EDOs; R³, retas e planos, Gauss-Jordan, inversa | Fecha a matemática exigida |
-| **3 – Física** | Rotação e física com cálculo; E&M; ondas e física moderna | Completa o 0P01 e cobre o 0P02 e o 0P03 |
-| **Em paralelo (o mais importante)** | Escolher a rota de admissão (seção 3.1), confirmar com a universidade e se inscrever nos cursos de pré-requisito, incluindo química e laboratórios | Sem os créditos formais não há admissão. O site passa a ser o reforço desses cursos |
+Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destrava o resto».
+
+### Fase 0 — Quebrado e barato (dias)
+
+- [ ] Declarar `TIPOS_POR_TOPICO` nos tópicos com várias perguntas, para a prova cobrir a área
+- [ ] Ligar os dois tipos mortos (`'sinal'`, `'taxa-media'`)
+- [ ] Corrigir as 9 dicas presas e dar dica às 11 perguntas de estreia; escrever o guarda que impede a recaída
+- [ ] Terminar as 5 linhas de `\;` e corrigir «proporcionais» no 3×3
+- [ ] Diferenciar o Extremo nos 6 tópicos em que ele é igual ao Difícil
+- [ ] Resoluções de Física com os números à vista (`mecanica.ts`, `gravitacao.ts`, `fluidos.ts`, `termica.ts:269`, `energia.ts`)
+
+### Fase 1 — Álgebra e os pré-requisitos ausentes (semanas)
+
+- [ ] Novo tópico **Estudo de sinal e inequações de 2º grau** (destrava `aplicacoes-da-derivada`)
+- [ ] Novo tópico **Equações trigonométricas e funções inversas** (destrava substituição trigonométrica)
+- [ ] Novo tópico **Escalonamento e matriz inversa** (fecha o 0M04)
+- [ ] Álgebra: as perguntas clássicas da seção 3.2, levando cada tópico a ao menos 3 tipos e nenhum nível a uma pergunta só
+- [ ] L'Hôpital e TVM em Cálculo 1; regra do quociente em `regras-de-derivacao`
+
+### Fase 2 — Treino nas demais áreas magras (semanas)
+
+- [ ] Trigonometria, Cálculo 1, Geometria analítica (parábola, distância ponto-reta), Funções, Cálculo 4 — as 20 perguntas priorizadas pelo relator de treino, por ordem: soma e produto das raízes; inequação de 2º grau; equação trigonométrica; regra do quociente; distância de ponto a reta; perpendicular; foco da parábola; intervalo de crescimento; L'Hôpital; tipo de descontinuidade; sistema 3×3; fatoração por agrupamento; inequação modular; razão da PA; taxa equivalente; EDO exata; regime de amortecimento; Newton-Raphson; ângulo no triângulo retângulo; maior ângulo pela lei dos cossenos
+- [ ] Exemplo numérico resolvido nos 32 tópicos de teoria que não têm nenhum
+- [ ] Desenho nos Explorar de `solidos-e-volumes` e `vetores-no-espaco`
+
+### Fase 3 — Conteúdo novo de cobertura (meses)
+
+- [ ] Refundar `sequencias-e-series` como testes de convergência; séries de potências
+- [ ] Geometria: congruência, quadriláteros, poliedros e Euler
+- [ ] Geometria analítica: coordenadas polares
+- [ ] Combinatória: binômio de Newton
+- [ ] Cálculo 3: integrais de superfície e teoremas
+- [ ] Equações exponenciais e logarítmicas
+
+### Fase 4 — Física para a admissão (meses)
+
+- [ ] **Eletricidade e magnetismo (0P02)**: carga e Coulomb, campo e potencial, capacitores, circuitos CC e RC, campo magnético, indução
+- [ ] **Ondas e física moderna (0P03)**: ondas e som, óptica geométrica e física, relatividade restrita, fotoelétrico
+- [ ] Bloco opcional «Física com cálculo» depois do Cálculo 2
+
+### Em paralelo — o que o site não resolve
+
+- [ ] **Escolher a rota de admissão e confirmar com cada universidade.** O site prepara o conhecimento; a admissão pede **créditos** das disciplinas do cégep (0M02–0M04, 0P01–0P03, 0C01–0C02) ou de um preparatório universitário. Rotas para adulto sem DEC identificadas na avaliação anterior (confirmar: as regras mudam a cada ciclo): *mature entry* da Concordia (21+, 24 meses fora da escola); *certificat préparatoire* de Sherbrooke; *année préparatoire* da UdeM para concorrer à Polytechnique — cuja *année propédeutique* **não dá acesso ao génie aérospatial*. McGill e algumas outras exigem **laboratório** em mecânica e química, que não se faz num site.
+- [ ] Química: fora do site; fazer pelo curso formal.
+- [ ] Material externo por área: já há referências em `curriculo.ts` para as 14 áreas; indicar o capítulo correspondente (OpenStax *Calculus* 1–3, *University Physics* 1–3, *Chemistry 2e*).
 
 ---
 
-## 8. Limites desta avaliação
+## 7. Síntese das decisões
 
-- **O que foi avaliado foi o código-fonte publicado,** não a interface no navegador: o site não pôde ser aberto a partir do ambiente de análise.
-- **As regras de admissão mudam a cada ciclo.** Algumas páginas oficiais não abriram por completo, e não conhecemos seu histórico escolar nem seu status. Confirme tudo com os escritórios de admissão antes de decidir.
-- **Os percentuais de cobertura são estimativas qualitativas.** Os percentuais de exercícios (34%, 53% etc.) vêm de simulações exatas dos sorteios de cada gerador.
-- **Os pareceres individuais não foram redigidos,** porque os revisores foram interrompidos pelo limite de uso. O conteúdo aqui é a consolidação do que eles produziram, com cada achado reconferido no código.
+| Ação | Conteúdos |
+|---|---|
+| **Manter** | Todos os 101 tópicos; a ordem atual da trilha (Física antes do Cálculo); juros e complexos como complementares |
+| **Consertar já** | Cobertura da prova; tipos mortos; dicas presas; Extremo repetido; `\;`; resoluções de Física |
+| **Refundar** | `sequencias-e-series` → testes de convergência |
+| **Remover / mover** | Seção duplicada de limites laterais no Pré-cálculo; «Ajuste de reta» para regressão |
+| **Acrescentar (pré-requisitos)** | Estudo de sinal; equações trigonométricas e inversas; escalonamento e inversa; L'Hôpital e TVM; regra do quociente |
+| **Acrescentar (cobertura)** | Congruência, quadriláteros, poliedros; polares; binômio de Newton; superfície e teoremas; exponenciais/logarítmicas; séries de potências |
+| **Acrescentar (admissão)** | Eletromagnetismo; ondas e física moderna |
+| **Ampliar treino** | Álgebra primeiro; depois Trigonometria, Cálculo 1, Geometria analítica, Funções, Cálculo 4 |
+| **Fora do site** | Química; laboratórios; créditos formais |
 
 ---
 
-## Fontes
+## 8. Como medir o domínio (do plano anterior, mantido)
 
-**Programas e admissão**
+Não dar um tópico por concluído por ter lido a explicação. Quatro níveis:
 
-- [Polytechnique — Baccalauréat en génie aérospatial](https://www.polymtl.ca/futur/bac/programmes/aerospatial)
-- [Polytechnique — Plan du programme génie aérospatial](https://www.polymtl.ca/programmes/programmes/bc-aerospatial)
-- [Polytechnique — DEC préuniversitaires](https://www.polymtl.ca/admission/baccalaureat/conditions-dadmission-au-baccalaureat/exigences-academiques/1-etudes-au-quebec/11-dec-preuniversitaires)
-- [Polytechnique — Candidats adultes](https://www.polymtl.ca/admission/baccalaureat/conditions-dadmission-au-baccalaureat/exigences-academiques/1-etudes-au-quebec/14-candidats-adultes)
-- [Polytechnique — Études universitaires au Québec](https://www.polymtl.ca/admission/baccalaureat/conditions-dadmission-au-baccalaureat/exigences-academiques/1-etudes-au-quebec/13-etudes-universitaires)
-- [Polytechnique — Autres diplômes (hors Québec)](https://www.polymtl.ca/admission/baccalaureat/conditions-dadmission-au-baccalaureat/exigences-academiques/2-etudes-hors-quebec/214-autres-diplomes)
-- [Polytechnique — Exigences linguistiques](https://www.polymtl.ca/admission/baccalaureat/conditions-dadmission-au-baccalaureat/exigences-linguistiques)
-- [Concordia — Aerospace Engineering (BEng)](https://www.concordia.ca/academics/undergraduate/aerospace-engineering.html)
-- [Concordia — Mature Entry](https://www.concordia.ca/academics/undergraduate/calendar/current/section-14-alternative-entry/mature-entry.html)
-- [Concordia — Alternative entry programs (BEng)](https://www.concordia.ca/academics/undergraduate/calendar/current/section-71-gina-cody-school-of-engineering-and-computer-science/section-71-20-beng/section-71-20-2-alternative-entry-programs.html)
-- [Concordia — Certificate in Science and Technology](https://www.concordia.ca/academics/undergraduate/calendar/current/section-71-gina-cody-school-of-engineering-and-computer-science/section-71-20-beng/section-71-20-9-certificate-in-science-and-technology.html)
-- [Concordia — English language proficiency](https://www.concordia.ca/admissions/undergraduate/requirements/english-language-proficiency.html)
-- [ÉTS — Baccalauréat en génie aérospatial](https://www.etsmtl.ca/programmes-formations/baccalaureat-genie-aerospatial)
-- [ÉTS — Cheminement universitaire en technologie](https://www.etsmtl.ca/programmes-formations/cheminement-universitaire-technologie)
-- [McGill — Requisitos para candidatos do Québec](https://mcgill.ca/applying/requirements/qc)
-- [McGill — Mature students](https://mcgill.ca/applying/requirements/mature)
-- [McGill — Aerospace Engineering Minor](https://coursecatalogue.mcgill.ca/en/undergraduate/engineering/programs/minor-programs/aerospace-engineering-minor-beng/)
-- [Sherbrooke — Baccalauréat en génie mécanique](https://www.usherbrooke.ca/admission/programme-pdf/215/baccalaureat-en-genie-mecanique/)
-- [Sherbrooke — Certificat préparatoire](https://www.usherbrooke.ca/admission/programme/1CR/certificat-preparatoire-aux-programmes-de-1er-cycle/)
-- [Laval — Baccalauréat en génie mécanique](https://www.ulaval.ca/etudes/programmes/baccalaureat-en-genie-mecanique)
-- [Laval — Statut de candidat adulte](https://www.ulaval.ca/experience-ulaval/retour-aux-etudes/statut-de-candidat-ou-candidate-adulte)
+| Nível | Critério |
+|---|---|
+| 1 — Reconhecer | Explico o conceito e seus símbolos |
+| 2 — Aplicar | Resolvo exercícios básicos |
+| 3 — Dominar | Resolvo problemas sem consultar exemplos |
+| 4 — Modelar | Aplico a um problema real ou físico |
 
-**Programa do cégep e conteúdo das disciplinas**
+O critério de domínio da trilha (8 de 10, 3 no Médio ou Difícil, 3 seguidos) mede até o nível 3. O nível 4 é o que a prova final e os problemas de modelagem (foguete, órbita, aerodinâmica) deveriam cobrar — hoje a prova ainda sorteia a mesma pergunta do treino (4.3).
 
-- [MES — Science (200.B1), versão em inglês do programa ministerial](https://www.dawsoncollege.qc.ca/oad/wp-content/uploads/sites/146/200-B1-2021-Science-English.pdf)
-- [Québec.ca — Anúncio do novo programa Sciences de la nature](https://www.quebec.ca/nouvelles/actualites/details/la-ministre-mccann-devoile-deux-nouveaux-programmes-detudes-au-collegial-38781)
-- [Cégep régional de Lanaudière — Descriptions des cours 200.B1](https://cegep-lanaudiere.qc.ca/wp-content/uploads/2026/07/descriptions-des-cours-200-b1.pdf)
-- [Cégep de Trois-Rivières — Préalables universitaires 080.04](https://www.cegeptr.qc.ca/wp-content/uploads/2026/02/Tableau_preal_univ_2026_fevrier-002.pdf)
-- [Cégep à distance — Guide de choix de cours 2026–2027](https://ftp.cegepadistance.ca/wp-content/uploads/2026/08/Guide-de-choix-de-cours-2026-2027.pdf)
-- [Vanier College — Calculus I (201-NYA)](https://euclid.vaniercollege.qc.ca/~iti/2021/cal1A21/outline_A21.pdf)
-- [John Abbott College — Calculus II (201-NYB)](https://www.math.mcgill.ca/rags/JAC/CalIIOutline.html)
-- [Collège de Maisonneuve — Mécanique (203-NYA)](https://physique.cmaisonneuve.qc.ca/plans-cours/Pcours-203-NYAS.pdf)
-- [Cégep de Trois-Rivières — Électricité et magnétisme (203-NYB)](https://physique.cegeptr.qc.ca/webnyb/pl_nyb_a25.pdf)
-- [Collège de Maisonneuve — Ondes et physique moderne (203-NYC)](https://physique.cmaisonneuve.qc.ca/plans-cours/Pcours-203-NYCS.pdf)
+---
+
+## 9. Como as medições foram feitas (reproduzível)
+
+- **Tópicos por área:** leitura de `curriculo/curriculo.ts` (101 tópicos, todos com `pronto: true`; 101 `.gerador.ts` e 101 `.teoria.ts` em `features/`).
+- **Variedade de perguntas:** para cada tópico e cada um dos 4 níveis, 150 a 200 exercícios gerados com semente fixa; enunciados com os números mascarados contados como formas distintas. Guarda permanente para Geometria em `features/geometria/geometria-variedade.spec.ts`; o mesmo roteiro, estendido a todas as áreas, produziu a tabela da seção 2.
+- **Verbetes de teoria:** contagem de `id:` em cada `.teoria.ts`.
+- **Exemplos resolvidos:** `.teoria.ts` sem nenhum `exemplo:` — 32 de 101.
+- **Dicas presas:** para cada `dica: nivel === 'X'`, comparação de `X` com os níveis em que `sortearPergunta` gera o ramo — feita à mão pelo relator; o guarda automático está na Fase 0.
+- **Cobertura da prova:** leitura de `planoDaProva` e `TIPOS_POR_TOPICO` em `core/progressao/models/progressao.model.ts`.
+- **Ausências de conteúdo** («L'Hôpital não existe»): busca textual no repositório antes de afirmar.
+
+## 10. Limites desta avaliação
+
+- Leitura estática do código; o site não foi percorrido tela a tela pelos relatores (as sessões de 06–09/11 verificaram no navegador apenas o que corrigiram).
+- As regras de admissão vêm da avaliação de 28/10/2026 e **não foram reconferidas** agora; mudam a cada ciclo — confirmar com os escritórios de admissão.
+- Nas áreas não magras (Física, Vetores, Estatística, Cálculo 2 e 3, Matemática básica) a contagem de tipos de pergunta não foi feita tópico a tópico; os problemas estruturais da prova valem para elas por construção.
+- A qualidade do intervalo da revisão espaçada (`core/revisao/`) não foi avaliada.
+- Os pareceres dos relatores estão consolidados aqui; cada achado foi reconferido no código antes de entrar.
