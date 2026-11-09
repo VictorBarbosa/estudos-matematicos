@@ -20,6 +20,7 @@ import {
   reprovou,
   sessaoPorId,
   sessaoSeguinte,
+  sortearInedita,
 } from '@core/prova/models/prova.model';
 import { ProvaService } from '@core/prova/services/prova.service';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
@@ -275,7 +276,8 @@ export class Prova {
       }
     }
 
-    this.questoes.set(plano.flatMap((item) => sortear(item, geradores, rng)));
+    const formasPorTopico = new Map<string, Set<string>>();
+    this.questoes.set(plano.flatMap((item) => sortear(item, geradores, rng, formasPorTopico)));
     this.fase.set(this.questoes().length === 0 ? 'trancada' : 'respondendo');
   }
 }
@@ -285,6 +287,7 @@ function sortear(
   item: ItemDaProva,
   geradores: ReadonlyMap<string, GeradorExercicio<unknown>>,
   rng: Rng,
+  formasPorTopico: Map<string, Set<string>>,
 ): readonly Questao[] {
   const gerador = geradores.get(item.topicoId);
   if (gerador === undefined) {
@@ -295,5 +298,9 @@ function sortear(
   // sortear; quem não tem tipos ignora a lista.
   const pendentes = item.conceito === undefined ? undefined : [item.conceito];
 
-  return [{ item, gerador, exercicio: gerador.gerar(item.nivel, rng, pendentes) }];
+  const usadas = formasPorTopico.get(item.topicoId) ?? new Set<string>();
+  formasPorTopico.set(item.topicoId, usadas);
+
+  const exercicio = sortearInedita(() => gerador.gerar(item.nivel, rng, pendentes), usadas);
+  return [{ item, gerador, exercicio }];
 }

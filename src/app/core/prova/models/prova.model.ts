@@ -136,10 +136,19 @@ export function planoDaProva(
     completo.push(base[completo.length % base.length]!);
   }
 
-  return completo.map((item, indice) => ({
-    ...item,
-    nivel: indice % 2 === 0 ? 'medio' : 'dificil',
-  }));
+  /*
+   * O nível alterna para CADA tópico, não pela posição na prova. Alternando
+   * pela posição, com um número par de tópicos o mesmo tópico caía sempre no
+   * mesmo nível: no Pré-cálculo, o primeiro só via Médio e o segundo só
+   * Difícil. Somar a volta (quantas vezes a lista já se repetiu) desfaz isso.
+   */
+  const par = base.length % 2 === 0;
+
+  return completo.map((item, indice) => {
+    const volta = Math.floor(indice / base.length);
+    const posicao = indice + (par ? volta : 0);
+    return { ...item, nivel: posicao % 2 === 0 ? 'medio' : 'dificil' };
+  });
 }
 
 /** Quantos erros ainda cabem antes de a sessão zerar. */
@@ -165,3 +174,45 @@ export type EstadoDaProva =
   | 'disponivel'
   /** Prova já passada. */
   | 'vencida';
+
+/**
+ * A forma de uma pergunta: o enunciado com os números apagados.
+ *
+ * Duas perguntas da mesma forma pedem a mesma coisa com outros números — para
+ * a prova, que quer saber se o assunto ficou, contam como a mesma pergunta.
+ */
+export function formaDaPergunta(enunciado: string): string {
+  return enunciado.replace(/-?[\d.,]+/g, 'N');
+}
+
+/** Quantas tentativas a prova faz para achar uma forma ainda não usada. */
+export const TENTATIVAS_POR_FORMA_NOVA = 30;
+
+/**
+ * Sorteia até achar uma pergunta de forma inédita, ou devolve a primeira.
+ *
+ * Nas áreas com menos tópicos que o mínimo de questões, o mesmo tópico entra
+ * na prova mais de uma vez — Pré-cálculo, quatro vezes cada. Sorteando às
+ * cegas, as quatro podiam ser a mesma pergunta, e a prova media um quarto do
+ * assunto. Com isto, cada repetição traz uma pergunta diferente enquanto o
+ * tópico tiver formas novas para dar.
+ */
+export function sortearInedita<T extends { readonly enunciado: string }>(
+  sortear: () => T,
+  usadas: Set<string>,
+  tentativas: number = TENTATIVAS_POR_FORMA_NOVA,
+): T {
+  const primeira = sortear();
+  let escolhida = primeira;
+
+  for (let i = 0; i < tentativas && usadas.has(formaDaPergunta(escolhida.enunciado)); i++) {
+    escolhida = sortear();
+  }
+
+  if (usadas.has(formaDaPergunta(escolhida.enunciado))) {
+    escolhida = primeira;
+  }
+
+  usadas.add(formaDaPergunta(escolhida.enunciado));
+  return escolhida;
+}
