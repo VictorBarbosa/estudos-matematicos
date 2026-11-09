@@ -17,6 +17,11 @@ export const geradorTriangulo: GeradorExercicio<number> = {
   formatoResposta: 'um número com até 2 casas, ex.: 8,66',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
+    // No Extremo entra a pergunta inversa: dos lados para o ângulo.
+    if (nivel === 'extremo' && rng.booleano()) {
+      return exercicioAngulo(nivel, rng);
+    }
+
     // Múltiplos de 5°: no fácil, entre 15° e 75°. Os notáveis continuam
     // aparecendo, mas não são os únicos — era isso que limitava o tópico a
     // três exercícios por nível.
@@ -102,3 +107,73 @@ export const geradorTriangulo: GeradorExercicio<number> = {
   saoEquivalentes: proximos,
   formatar: (valor) => valor.toFixed(2).replace('.', ','),
 };
+
+/**
+ * O ângulo a partir dos dois catetos — a pergunta inversa.
+ *
+ * Antes o Extremo era a pergunta do Difícil com os mesmos números. Esta pede o
+ * caminho de volta: a razão sai dos lados, e o ângulo sai da razão pela função
+ * inversa, que é a ferramenta que o resto do tópico só usava de ida.
+ */
+function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
+  const oposto = rng.inteiro(3, 40);
+  const adjacente = rng.inteiro(3, 40);
+  const razao = oposto / adjacente;
+  const gabarito = (Math.atan(razao) * 180) / Math.PI;
+
+  return {
+    id: `triangulo-angulo-${oposto}-${adjacente}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado:
+      `Num triângulo retângulo, o cateto oposto a um ângulo mede ${oposto} e o adjacente ` +
+      `mede ${adjacente}. Quanto mede esse ângulo, em graus? (2 casas decimais)`,
+    enunciadoTex: `\\text{oposto} = ${oposto} \\qquad \\text{adjacente} = ${adjacente} \\qquad \\theta = \;?`,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: 'Oposto e adjacente juntos dão a tangente do ângulo.',
+          tex: `\\tan\\theta = \\frac{\\text{oposto}}{\\text{adjacente}} = \\frac{${oposto}}{${adjacente}} = ${razao.toFixed(4)}`,
+        },
+        {
+          descricao: 'Para voltar da razão ao ângulo, usamos a função inversa, o arco-tangente.',
+          tex: `\\theta = \\arctan(${razao.toFixed(4)})`,
+          nota: 'Na calculadora: tan⁻¹, com o modo em GRAUS.',
+        },
+        {
+          descricao: 'Calculando.',
+          tex: `\\theta = ${gabarito.toFixed(2)}°`,
+        },
+      ],
+    },
+    conceitos: ['triangulo.razoes'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: 90 - gabarito,
+          diagnostico:
+            'Esse é o OUTRO ângulo agudo: a razão ficou invertida. A tangente é oposto sobre ' +
+            'adjacente, vistos a partir do ângulo pedido.',
+          passo: 0,
+          conceito: 'triangulo.razoes',
+        },
+        {
+          resposta: Math.atan(razao),
+          diagnostico:
+            'Esse é o ângulo em RADIANOS. A calculadora estava no modo errado: passe para graus.',
+          passo: 1,
+          conceito: 'triangulo.razoes',
+        },
+        {
+          resposta: razao,
+          diagnostico: 'Essa é a tangente, não o ângulo. Falta aplicar o arco-tangente.',
+          passo: 1,
+          conceito: 'triangulo.razoes',
+        },
+      ],
+      gabarito,
+      proximos,
+    ),
+  };
+}

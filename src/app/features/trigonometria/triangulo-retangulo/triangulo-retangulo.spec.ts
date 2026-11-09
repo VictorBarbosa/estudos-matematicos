@@ -11,7 +11,8 @@ function amostra(nivel: Nivel, quantidade = 60) {
 describe('geradorTriangulo', () => {
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, o cateto é menor que a hipotenusa`, () => {
-      for (const exercicio of amostra(nivel)) {
+      // A pergunta do ângulo (só no Extremo) não tem hipotenusa no enunciado.
+      for (const exercicio of amostra(nivel).filter((e) => e.enunciadoTex.includes('h = '))) {
         const [, hipotenusa] = /h = (\d+)/.exec(exercicio.enunciadoTex)!;
         expect(exercicio.gabarito).toBeLessThan(Number(hipotenusa));
         expect(exercicio.gabarito).toBeGreaterThan(0);
@@ -83,5 +84,24 @@ describe('geradorTriangulo', () => {
 
     expect(resultado.veredito).toBe('incorreto');
     expect(resultado.conceitoAssociado).toBe('triangulo.razoes');
+  });
+});
+
+describe('o ângulo pelos catetos (Extremo)', () => {
+  it('sai do arco-tangente de oposto sobre adjacente', () => {
+    const angulos = amostra('extremo', 120).filter((e) =>
+      e.enunciado.includes('Quanto mede esse ângulo'),
+    );
+    expect(angulos.length).toBeGreaterThan(0);
+
+    for (const exercicio of angulos) {
+      const [, op, adj] = /oposto a um ângulo mede (\d+) e o adjacente mede (\d+)/.exec(
+        exercicio.enunciado,
+      )!;
+      expect(exercicio.gabarito).toBeCloseTo(
+        (Math.atan(Number(op) / Number(adj)) * 180) / Math.PI,
+        9,
+      );
+    }
   });
 });

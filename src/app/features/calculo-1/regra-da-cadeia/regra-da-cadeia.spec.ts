@@ -10,8 +10,9 @@ function amostra(nivel: Nivel, quantidade = 60) {
 
 describe('geradorCadeia', () => {
   for (const nivel of NIVEIS) {
-    it(`no nível ${nivel}, o gabarito é inteiro`, () => {
-      for (const exercicio of amostra(nivel)) {
+    it(`no nível ${nivel}, o gabarito da potência de binômio é inteiro`, () => {
+      // As cascas de raiz, exponencial, ln e seno (só no Extremo) dão decimais.
+      for (const exercicio of amostra(nivel).filter((e) => e.enunciadoTex.includes('\\right)^{'))) {
         expect(Number.isInteger(exercicio.gabarito)).toBe(true);
       }
     });
@@ -59,5 +60,31 @@ describe('geradorCadeia', () => {
 
     expect(exercicio).toBeDefined();
     expect(exercicio.conceitos).toContain('cadeia.regra');
+  });
+});
+
+describe('outras cascas (Extremo)', () => {
+  it('a derivada confere com a derivada numérica', () => {
+    const outras = amostra('extremo', 160).filter((e) => !e.enunciadoTex.includes('\\right)^{'));
+    expect(outras.length).toBeGreaterThan(0);
+
+    for (const exercicio of outras) {
+      const [, a, sinal, b] = /(\d+)x ([+-]) (\d+)/.exec(exercicio.enunciadoTex)!;
+      const miolo = (x: number): number => Number(a) * x + (sinal === '-' ? -1 : 1) * Number(b);
+      const tex = exercicio.enunciadoTex;
+      const f = (x: number): number =>
+        tex.includes('\\sqrt')
+          ? Math.sqrt(miolo(x))
+          : tex.includes('\\ln')
+            ? Math.log(miolo(x))
+            : tex.includes('\\sin')
+              ? Math.sin(miolo(x))
+              : Math.exp(miolo(x));
+      const ponto = Number(/f'\((-?\d+)\)/.exec(exercicio.enunciado)![1]);
+      const h = 1e-6;
+      const numerica = (f(ponto + h) - f(ponto - h)) / (2 * h);
+
+      expect(exercicio.gabarito).toBeCloseTo(numerica, 4);
+    }
   });
 });

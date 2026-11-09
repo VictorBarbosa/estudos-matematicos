@@ -17,6 +17,11 @@ export const geradorLaterais: GeradorExercicio<number> = {
   formatoResposta: 'um número, ex.: 5',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
+    // No Extremo entra uma pergunta que exige os DOIS laterais: o salto.
+    if (nivel === 'extremo' && rng.booleano()) {
+      return exercicioSalto(nivel, rng);
+    }
+
     const ponto = rng.inteiro(-3, 4);
     const lado: Lado = rng.booleano() ? 'esquerda' : 'direita';
 
@@ -96,3 +101,83 @@ export const geradorLaterais: GeradorExercicio<number> = {
   formatar: (valor) =>
     Number(valor.toFixed(3)).toLocaleString('pt-BR', { maximumFractionDigits: 3 }),
 };
+
+/**
+ * O salto no ponto: lateral pela direita menos lateral pela esquerda.
+ *
+ * Antes, o Extremo era a mesma pergunta do Difícil com os mesmos números. Esta
+ * exige os dois laterais — e, do lado direito, uma parábola em vez de reta,
+ * para que substituir o ponto exija elevar ao quadrado.
+ */
+function exercicioSalto(nivel: Nivel, rng: Rng): Exercicio<number> {
+  const ponto = rng.inteiro(-3, 4);
+  const a = rng.inteiro(1, 5);
+  const b = rng.inteiro(-8, 8);
+  const c = rng.inteiro(1, 3);
+  const d = rng.inteiro(-9, 9);
+
+  const esquerda = a * ponto + b;
+  const quadrado = ponto * ponto;
+  const direita = c * quadrado + d;
+  const gabarito = direita - esquerda;
+
+  const esquerdaTex = `${a === 1 ? '' : a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)}`;
+  const direitaTex = `${c === 1 ? '' : c}x^{2} ${d >= 0 ? '+' : '-'} ${Math.abs(d)}`;
+  const comSinal = (v: number): string => (v >= 0 ? `+ ${v}` : `- ${Math.abs(v)}`);
+
+  return {
+    id: `laterais-salto-${ponto}-${a}${b}${c}${d}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado:
+      `Qual é o salto do gráfico em x = ${ponto}, isto é, o limite pela direita menos o ` +
+      'limite pela esquerda? (0 se o limite existir)',
+    enunciadoTex: `f(x) = \\begin{cases} ${esquerdaTex} & x < ${ponto} \\\\ ${direitaTex} & x \\geq ${ponto} \\end{cases}`,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: 'Pela esquerda vale a reta: substituímos o ponto.',
+          tex: `\\lim_{x \\to ${ponto}^{-}} f(x) = ${a}(${ponto}) ${comSinal(b)} = ${esquerda}`,
+        },
+        {
+          descricao: 'Pela direita vale a parábola: primeiro o ponto ao quadrado.',
+          tex: `(${ponto})^{2} = ${quadrado}`,
+        },
+        {
+          descricao: 'E então o valor da sentença da direita.',
+          tex: `\\lim_{x \\to ${ponto}^{+}} f(x) = ${c} \\cdot ${quadrado} ${comSinal(d)} = ${direita}`,
+        },
+        {
+          descricao: 'O salto é a diferença, direita menos esquerda.',
+          tex: `${direita} - (${esquerda}) = ${gabarito}`,
+          nota:
+            gabarito === 0
+              ? 'Os laterais coincidem: o limite existe e o gráfico emenda.'
+              : 'Laterais diferentes: o limite no ponto não existe.',
+        },
+      ],
+    },
+    conceitos: ['laterais.definicao', 'laterais.por-partes'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: esquerda - direita,
+          diagnostico: 'A ordem é direita MENOS esquerda; você fez o contrário e o sinal inverteu.',
+          passo: 3,
+          conceito: 'laterais.definicao',
+        },
+        {
+          resposta: c * ponto + d - esquerda,
+          diagnostico:
+            'Na sentença da direita, x está AO QUADRADO: substitua o ponto e eleve antes de ' +
+            'multiplicar pelo coeficiente.',
+          passo: 1,
+          conceito: 'laterais.por-partes',
+        },
+      ],
+      gabarito,
+      proximos,
+    ),
+  };
+}
