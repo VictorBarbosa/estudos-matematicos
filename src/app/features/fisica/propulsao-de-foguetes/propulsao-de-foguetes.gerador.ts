@@ -146,6 +146,8 @@ function exercicioImpulsoEspecifico(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'facil' ? 'Iₛₚ = vₑ / g: a velocidade de exaustão dividida por 9,81.' : undefined,
   };
 }
 
@@ -195,7 +197,10 @@ function exercicioDeltaV(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Δv = vₑ · ln(m₀/m_f)' : undefined,
+    dica:
+      nivel === 'medio'
+        ? 'Δv = vₑ · ln(m₀/m_f): a velocidade de exaustão vezes o LOGARITMO NATURAL da razão entre a massa cheia e a vazia.'
+        : undefined,
   };
 }
 

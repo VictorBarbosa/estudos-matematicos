@@ -286,6 +286,9 @@ function exercicioAnguloCritico(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'tan θ = μ' : undefined,
+    dica:
+      nivel === 'dificil'
+        ? 'No ângulo crítico o atrito máximo iguala a componente do peso: tan θ = μ, e θ = arctan μ.'
+        : undefined,
   };
 }

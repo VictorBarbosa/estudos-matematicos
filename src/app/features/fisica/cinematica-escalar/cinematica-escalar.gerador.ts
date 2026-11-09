@@ -156,6 +156,10 @@ function exercicioPosicao(nivel: Nivel, rng: Rng): Exercicio<number> {
       posicao,
       proximos,
     ),
+    dica:
+      nivel === 'facil'
+        ? 's = s₀ + v₀t + at²/2 — o tempo entra AO QUADRADO no termo da aceleração.'
+        : undefined,
   };
 }
 
@@ -311,6 +315,9 @@ function exercicioDistanciaFrenagem(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Δs = v₀² / (2a)' : undefined,
+    dica:
+      nivel === 'dificil'
+        ? 'Δs = v₀² / (2a): a velocidade inicial AO QUADRADO, dividida pelo dobro da desaceleração.'
+        : undefined,
   };
 }

@@ -240,6 +240,6 @@ function exercicioSomaInfinita(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'S = a₁ / (1 − q), válida porque |q| < 1.' : undefined,
+    dica: nivel === 'dificil' ? 'S = a₁ / (1 − q), válida porque |q| < 1.' : undefined,
   };
 }

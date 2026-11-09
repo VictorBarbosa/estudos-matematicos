@@ -205,6 +205,10 @@ function exercicioConstante(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica:
+      nivel === 'facil'
+        ? 'A integral de uma constante c de a até b é a área de um retângulo: c vezes (b − a).'
+        : undefined,
   };
 }
 

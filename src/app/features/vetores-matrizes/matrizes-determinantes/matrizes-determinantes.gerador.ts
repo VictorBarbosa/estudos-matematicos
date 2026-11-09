@@ -234,6 +234,10 @@ function exercicioEntradaProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica:
+      nivel === 'facil'
+        ? 'Linha de A vezes coluna de B: multiplique termo a termo e some.'
+        : undefined,
   };
 }
 

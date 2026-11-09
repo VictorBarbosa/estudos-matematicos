@@ -132,6 +132,10 @@ export const geradorConicas: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? 'Na equação reduzida, o semieixo é a RAIZ QUADRADA do denominador, não o denominador.'
+            : undefined,
       };
     }
 

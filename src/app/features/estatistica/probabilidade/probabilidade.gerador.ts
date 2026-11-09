@@ -223,7 +223,10 @@ function exercicioAoMenosUm(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'P = 1 − (1 − p)ⁿ' : undefined,
+    dica:
+      nivel === 'medio'
+        ? 'Pense no contrário: a chance de NUNCA acontecer é (1 − p) elevado a n. «Ao menos um» é 1 menos isso.'
+        : undefined,
   };
 }
 
@@ -278,6 +281,10 @@ function exercicioUniao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'facil'
+        ? 'Conte as faces que servem, sem contar a mesma face duas vezes, e divida por 6.'
+        : undefined,
   };
 }
 

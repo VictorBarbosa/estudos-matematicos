@@ -118,6 +118,10 @@ export const geradorPontoReta: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? 'A abscissa do ponto médio é a média das abscissas: (x_A + x_B) / 2.'
+            : undefined,
       };
     }
 

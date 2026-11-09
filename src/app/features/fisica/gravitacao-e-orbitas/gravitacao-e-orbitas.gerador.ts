@@ -148,7 +148,10 @@ function exercicioVelocidadeOrbital(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'v = √(GM/r), com r do centro da Terra.' : undefined,
+    dica:
+      nivel === 'medio'
+        ? 'v = √(GM/r): a raiz QUADRADA de GM dividido por r, com r medido do centro da Terra (raio + altitude).'
+        : undefined,
   };
 }
 

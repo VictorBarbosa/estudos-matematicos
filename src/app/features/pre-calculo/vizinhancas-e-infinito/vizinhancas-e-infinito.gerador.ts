@@ -114,6 +114,10 @@ export const geradorVizinhancas: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? 'Com o grau de cima MENOR que o de baixo, o denominador cresce mais rápido e a fração vai a zero.'
+            : undefined,
       };
     }
 

@@ -129,6 +129,10 @@ export const geradorSequencias: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? 'PA: aₙ = a₁ + (n − 1)·r. PG: aₙ = a₁ · q elevado a (n − 1).'
+            : undefined,
       };
     }
 

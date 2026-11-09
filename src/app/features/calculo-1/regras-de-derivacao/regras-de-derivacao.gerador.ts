@@ -104,7 +104,10 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
           gabarito,
           proximos,
         ),
-        dica: nivel === 'facil' ? 'Derive um fator por vez, mantendo o outro.' : undefined,
+        dica:
+          nivel === 'medio'
+            ? 'Regra do produto: derive o primeiro fator e mantenha o segundo, depois o contrário, e some.'
+            : undefined,
       };
     }
 

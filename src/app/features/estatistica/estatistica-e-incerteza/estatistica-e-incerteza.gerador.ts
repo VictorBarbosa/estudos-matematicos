@@ -215,7 +215,10 @@ function exercicioPropagarSoma(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'σ = √(σ₁² + σ₂²)' : undefined,
+    dica:
+      nivel === 'medio'
+        ? 'Incertezas independentes não se somam direto: some os QUADRADOS e tire a raiz — σ = √(σ₁² + σ₂²).'
+        : undefined,
   };
 }
 
@@ -321,6 +324,6 @@ function exercicioInclinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       proximos,
     ),
     dica:
-      nivel === 'facil' ? 'A inclinação é Δy/Δx entre dois pontos quaisquer da reta.' : undefined,
+      nivel === 'dificil' ? 'A inclinação é Δy/Δx entre dois pontos quaisquer da reta.' : undefined,
   };
 }

@@ -206,7 +206,10 @@ function exercicioVelocidadeQueda(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado.velocidadeFinal,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'v = √(2gh)' : undefined,
+    dica:
+      nivel === 'medio'
+        ? 'A energia potencial vira cinética: mgh = mv²/2, então v = √(2gh) — a massa se cancela.'
+        : undefined,
   };
 }
 

@@ -125,6 +125,10 @@ export const geradorContinuidade: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? 'Calcule f nos inteiros perto da raiz cúbica de k: onde o sinal troca, a raiz está no meio.'
+            : undefined,
       };
     }
 
