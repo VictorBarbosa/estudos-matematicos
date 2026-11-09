@@ -30,7 +30,9 @@ describe('geradorCirculo (círculo e polígonos)', () => {
   }
 
   it('o comprimento é 2πr', () => {
-    const exercicios = amostra('facil', 90).filter((e) => e.enunciado.includes('comprimento'));
+    const exercicios = amostra('facil', 90).filter((e) =>
+      e.enunciado.includes('comprimento de uma circunferência'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 

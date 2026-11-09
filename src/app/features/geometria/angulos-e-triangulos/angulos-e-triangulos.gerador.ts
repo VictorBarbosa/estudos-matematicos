@@ -38,9 +38,13 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
       return rng.escolher<Pergunta>(['angulo-regular', 'soma-internos', 'terceiro-angulo']);
     case 'dificil':
       return rng.escolher<Pergunta>(['lados-pelo-angulo', 'angulo-regular']);
-    // Só a pergunta inversa: dado o ângulo, quantos lados tem o polígono.
+    /*
+     * As duas perguntas inversas: do ângulo para o número de lados, e do
+     * ângulo de um polígono regular para a sua identidade. Com uma só, o
+     * nível virava a mesma pergunta repetida.
+     */
     case 'extremo':
-      return 'lados-pelo-angulo';
+      return rng.escolher<Pergunta>(['lados-pelo-angulo', 'angulo-regular']);
   }
 }
 

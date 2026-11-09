@@ -30,8 +30,9 @@ describe('enunciados de geometria', () => {
         for (let i = 0; i < 120; i++) {
           const { enunciado } = gerador.gerar(nivel, rng);
           // Grau serve às perguntas de ângulo, que não medem comprimento —
-          // escrito como símbolo ou por extenso, «(em graus)».
-          if (/\bcm²|\bcm³|\bcm\b|°|\bgraus?\b/.test(enunciado)) {
+          // escrito como símbolo ou por extenso, «(em graus)». O metro serve
+          // ao que não cabe em centímetros, como a sombra de um prédio.
+          if (/\bcm²|\bcm³|\bcm\b|\bm²|\bm³|\bm\b|°|\bgraus?\b/.test(enunciado)) {
             continue;
           }
 

@@ -74,6 +74,48 @@ export const TEORIA_CIRCULO: readonly Teoria[] = [
     vejaTambem: ['circulo.pi', 'circulo.poligonos', 'riemann.ideia'],
   },
   {
+    id: 'circulo.angulos',
+    titulo: 'Ângulo central e ângulo inscrito',
+    resumo: 'Dois ângulos veem o mesmo arco, e um vale metade do outro.',
+    definicao:
+      'Um ângulo CENTRAL tem o vértice no centro do círculo; um ângulo INSCRITO tem o ' +
+      'vértice sobre a própria circunferência. Quando os dois enxergam o mesmo arco, o ' +
+      'inscrito mede sempre metade do central — e isso não depende de onde, na ' +
+      'circunferência, o vértice do inscrito esteja.',
+    formulas: [{ tex: '\\hat{I} = \\frac{\\hat{C}}{2}' }],
+    demonstracao: [
+      {
+        descricao:
+          'No caso em que um lado do inscrito passa pelo centro, há um triângulo isósceles.',
+        tex: 'OA = OB = r \\;\\Rightarrow\\; \\hat{A} = \\hat{B}',
+        nota: 'Dois lados são raios, e por isso têm a mesma medida.',
+      },
+      {
+        descricao: 'O ângulo central é externo a esse triângulo, e vale a soma dos dois internos.',
+        tex: '\\hat{C} = \\hat{A} + \\hat{B} = 2\\hat{A}',
+      },
+      {
+        descricao: 'Logo o inscrito é metade do central.',
+        tex: '\\hat{A} = \\frac{\\hat{C}}{2}',
+        nota: 'Os outros casos saem deste somando ou subtraindo um segundo triângulo.',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Um ângulo central de 80° e o inscrito que enxerga o mesmo arco.',
+      passos: [
+        {
+          descricao: 'Os dois enxergam o mesmo arco.',
+          tex: '\\hat{C} = 80^\\circ',
+        },
+        {
+          descricao: 'O inscrito vale metade.',
+          tex: '\\hat{I} = \\frac{80^\\circ}{2} = 40^\\circ',
+        },
+      ],
+    },
+    vejaTambem: ['circulo.pi', 'circulo.area'],
+  },
+  {
     id: 'circulo.poligonos',
     titulo: 'Polígonos regulares e o círculo',
     resumo: 'O círculo é o polígono de infinitos lados.',

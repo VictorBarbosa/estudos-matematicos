@@ -5,7 +5,7 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
 
-type Pergunta = 'area' | 'altura-faltante' | 'escala';
+type Pergunta = 'area' | 'altura-faltante' | 'escala' | 'losango' | 'composta';
 
 export const geradorAreas: GeradorExercicio<number> = {
   topicoId: 'areas-de-figuras-planas',
@@ -19,6 +19,10 @@ export const geradorAreas: GeradorExercicio<number> = {
         return exercicioAlturaFaltante(nivel, rng);
       case 'escala':
         return exercicioEscala(nivel, rng);
+      case 'losango':
+        return exercicioLosango(nivel, rng);
+      case 'composta':
+        return exercicioComposta(nivel, rng);
     }
   },
 
@@ -32,15 +36,15 @@ export const geradorAreas: GeradorExercicio<number> = {
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
   switch (nivel) {
     case 'facil':
-      return 'area';
+      return rng.escolher<Pergunta>(['area', 'losango']);
     case 'medio':
-      return rng.escolher<Pergunta>(['area', 'altura-faltante']);
+      return rng.escolher<Pergunta>(['area', 'altura-faltante', 'losango', 'composta']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['altura-faltante', 'escala', 'area']);
+      return rng.escolher<Pergunta>(['altura-faltante', 'escala', 'area', 'composta']);
     // As duas que desfazem a fórmula: achar a medida que falta e a razão de
     // áreas numa escala. Aplicar a fórmula direto sai de cena.
     case 'extremo':
-      return rng.escolher<Pergunta>(['altura-faltante', 'escala']);
+      return rng.escolher<Pergunta>(['altura-faltante', 'escala', 'composta']);
   }
 }
 
@@ -239,5 +243,145 @@ function exercicioEscala(nivel: Nivel, rng: Rng): Exercicio<number> {
      * com o k do enunciado.
      */
     dica: nivel === 'dificil' ? `A' = k² · A, e aqui k = ${k}: o fator é ${k}².` : undefined,
+  };
+}
+
+/**
+ * Losango pelas diagonais: a fórmula que não é base vezes altura.
+ *
+ * `D·d/2` costuma ser decorada sem motivo. O motivo é que o losango cabe
+ * exatamente na metade do retângulo que tem as diagonais por lados.
+ */
+function exercicioLosango(nivel: Nivel, rng: Rng): Exercicio<number> {
+  const maior = rng.inteiro(4, 20);
+  const menor = rng.inteiro(2, maior - 1);
+  const gabarito = (maior * menor) / 2;
+
+  return {
+    id: `area-losango-${maior}-${menor}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado:
+      `Um losango tem diagonais de ${maior} cm e ${menor} cm. ` + 'Qual é sua área, em cm²?',
+    enunciadoTex: `D = ${maior} \\qquad d = ${menor}`,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: 'As diagonais do losango são perpendiculares e se cortam ao meio.',
+          tex: `D = ${maior} \\qquad d = ${menor}`,
+          nota: 'Elas dividem o losango em quatro triângulos retângulos iguais.',
+        },
+        {
+          descricao: 'O losango ocupa metade do retângulo que tem as diagonais por lados.',
+          tex: `A = \\frac{D \\cdot d}{2} = \\frac{${maior} \\cdot ${menor}}{2}`,
+        },
+        {
+          descricao: 'Fazendo a conta.',
+          tex: `A = \\frac{${maior * menor}}{2} = ${gabarito}`,
+        },
+      ],
+    },
+    conceitos: ['areas.deducao'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: maior * menor,
+          diagnostico:
+            'Esse é o retângulo que contém o losango. O losango é exatamente metade dele — ' +
+            'falta dividir por 2.',
+          passo: 1,
+          conceito: 'areas.deducao',
+        },
+        {
+          resposta: 2 * (maior + menor),
+          diagnostico: 'Isso é uma soma de comprimentos, em cm. A área se mede em cm².',
+          passo: 1,
+          conceito: 'areas.origem',
+        },
+      ],
+      gabarito,
+      proximos,
+    ),
+    dica: nivel === 'facil' ? 'A = D·d/2, com D e d as diagonais.' : undefined,
+  };
+}
+
+/**
+ * Figura composta: um retângulo com um triângulo em cima.
+ *
+ * Nenhuma fórmula nova — a ideia é que área se soma, e que uma figura
+ * esquisita se resolve cortando-a em figuras conhecidas.
+ */
+function exercicioComposta(nivel: Nivel, rng: Rng): Exercicio<number> {
+  const base = rng.inteiro(4, 16);
+  const alturaRetangulo = rng.inteiro(2, 12);
+  const alturaTriangulo = rng.inteiro(2, 10);
+
+  const doRetangulo = base * alturaRetangulo;
+  const doTriangulo = (base * alturaTriangulo) / 2;
+  const gabarito = doRetangulo + doTriangulo;
+
+  return {
+    id: `area-composta-${base}-${alturaRetangulo}-${alturaTriangulo}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado:
+      `Uma figura é formada por um retângulo de ${base} cm por ${alturaRetangulo} cm com um ` +
+      `triângulo de mesma base e altura ${alturaTriangulo} cm apoiado em cima. ` +
+      'Qual é a área total, em cm²?',
+    enunciadoTex: `b = ${base} \\qquad h_r = ${alturaRetangulo} \\qquad h_t = ${alturaTriangulo}`,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: [
+        {
+          descricao: 'A figura se reparte em duas conhecidas, sem sobreposição.',
+          tex: 'A = A_{\\text{retângulo}} + A_{\\text{triângulo}}',
+          nota: 'Área é aditiva: partes que não se sobrepõem somam.',
+        },
+        {
+          descricao: 'A do retângulo é base vezes altura.',
+          tex: `A_r = ${base} \\cdot ${alturaRetangulo} = ${doRetangulo}`,
+        },
+        {
+          descricao: 'A do triângulo é metade da base vezes a altura.',
+          tex: `A_t = \\frac{${base} \\cdot ${alturaTriangulo}}{2} = ${doTriangulo}`,
+        },
+        {
+          descricao: 'Somando as duas.',
+          tex: `A = ${doRetangulo} + ${doTriangulo} = ${gabarito}`,
+        },
+      ],
+    },
+    conceitos: ['areas.origem', 'areas.deducao'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: doRetangulo + base * alturaTriangulo,
+          diagnostico:
+            'O triângulo entrou inteiro, como se fosse retângulo. Ele é metade da base ' +
+            'vezes a altura.',
+          passo: 2,
+          conceito: 'areas.deducao',
+        },
+        {
+          resposta: doRetangulo,
+          diagnostico: 'Essa é só a parte de baixo. O triângulo de cima também tem área.',
+          passo: 0,
+          conceito: 'areas.origem',
+        },
+        {
+          resposta: base * (alturaRetangulo + alturaTriangulo),
+          diagnostico:
+            'Somar as alturas e multiplicar pela base trata a figura inteira como um ' +
+            'retângulo — e ela não é: o topo é um triângulo.',
+          passo: 0,
+          conceito: 'areas.origem',
+        },
+      ],
+      gabarito,
+      proximos,
+    ),
+    dica: nivel === 'medio' ? 'Corte a figura em um retângulo e um triângulo.' : undefined,
   };
 }

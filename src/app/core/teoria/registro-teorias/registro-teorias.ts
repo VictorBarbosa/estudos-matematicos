@@ -51,6 +51,7 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'circular.forca-centripeta': 'A força que não existe sozinha',
   'circular.periodo-frequencia': 'Período e frequência',
   'circular.velocidade-angular': 'Angular e tangencial',
+  'circulo.angulos': 'Ângulo central e ângulo inscrito',
   'circulo.area': 'A área do círculo, por fatias',
   'circulo.coordenadas': 'Seno e cosseno são coordenadas',
   'circulo.pi': 'O que π realmente é',
@@ -443,6 +444,7 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'circular.forca-centripeta': 'movimento-circular',
   'circular.periodo-frequencia': 'movimento-circular',
   'circular.velocidade-angular': 'movimento-circular',
+  'circulo.angulos': 'circulo-e-poligonos',
   'circulo.area': 'circulo-e-poligonos',
   'circulo.coordenadas': 'circulo-trigonometrico',
   'circulo.pi': 'circulo-e-poligonos',
@@ -790,108 +792,390 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
 };
 
 /** Carrega sob demanda toda a teoria de um tópico. */
-export const CARREGAR_TEORIA_DO_TOPICO: Readonly<
-  Record<string, () => Promise<readonly Teoria[]>>
-> = {
-  'equacao-primeiro-grau': () => import('@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.teoria').then((m) => m.TEORIA_EQUACAO_1),
-  'equacao-segundo-grau': () => import('@features/algebra/equacao-segundo-grau/equacao-segundo-grau.teoria').then((m) => m.TEORIA_EQUACAO_2),
-  'expressoes-algebricas': () => import('@features/algebra/expressoes-algebricas/expressoes-algebricas.teoria').then((m) => m.TEORIA_EXPRESSOES),
-  'fatoracao': () => import('@features/algebra/fatoracao/fatoracao.teoria').then((m) => m.TEORIA_FATORACAO),
-  'inequacoes': () => import('@features/algebra/inequacoes/inequacoes.teoria').then((m) => m.TEORIA_INEQUACOES),
-  'polinomios': () => import('@features/algebra/polinomios/polinomios.teoria').then((m) => m.TEORIA_POLINOMIOS),
-  'produtos-notaveis': () => import('@features/algebra/produtos-notaveis/produtos-notaveis.teoria').then((m) => m.TEORIA_PRODUTOS),
-  'sistemas-lineares': () => import('@features/algebra/sistemas-lineares/sistemas-lineares.teoria').then((m) => m.TEORIA_SISTEMAS),
-  'aplicacoes-da-derivada': () => import('@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.teoria').then((m) => m.TEORIA_APLICACOES_DERIVADA),
-  'continuidade': () => import('@features/calculo-1/continuidade/continuidade.teoria').then((m) => m.TEORIA_CONTINUIDADE),
-  'definicao-de-derivada': () => import('@features/calculo-1/definicao-de-derivada/definicao-de-derivada.teoria').then((m) => m.TEORIA_DEFINICAO_DERIVADA),
-  'derivacao-implicita': () => import('@features/calculo-1/derivacao-implicita/derivacao-implicita.teoria').then((m) => m.TEORIA_DERIVACAO_IMPLICITA),
-  'derivadas-exponencial-logaritmo': () => import('@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.teoria').then((m) => m.TEORIA_DERIVADAS_EXP_LOG),
-  'derivadas-trigonometricas': () => import('@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.teoria').then((m) => m.TEORIA_DERIVADAS_TRIG),
-  'limites-laterais': () => import('@features/calculo-1/limites-laterais/limites-laterais.teoria').then((m) => m.TEORIA_LATERAIS),
-  'limites': () => import('@features/calculo-1/limites/limites.teoria').then((m) => m.TEORIA_LIMITES),
-  'regra-da-cadeia': () => import('@features/calculo-1/regra-da-cadeia/regra-da-cadeia.teoria').then((m) => m.TEORIA_CADEIA),
-  'regras-de-derivacao': () => import('@features/calculo-1/regras-de-derivacao/regras-de-derivacao.teoria').then((m) => m.TEORIA_REGRAS),
-  'taxa-de-variacao': () => import('@features/calculo-1/taxa-de-variacao/taxa-de-variacao.teoria').then((m) => m.TEORIA_TAXA),
-  'aplicacoes-da-integral': () => import('@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.teoria').then((m) => m.TEORIA_APLICACOES_INTEGRAL),
-  'integrais-improprias': () => import('@features/calculo-2/integrais-improprias/integrais-improprias.teoria').then((m) => m.TEORIA_IMPROPRIAS),
-  'integral-definida': () => import('@features/calculo-2/integral-definida/integral-definida.teoria').then((m) => m.TEORIA_DEFINIDA),
-  'integral-indefinida': () => import('@features/calculo-2/integral-indefinida/integral-indefinida.teoria').then((m) => m.TEORIA_INDEFINIDA),
-  'sequencias-e-series': () => import('@features/calculo-2/sequencias-e-series/sequencias-e-series.teoria').then((m) => m.TEORIA_SEQUENCIAS),
-  'series-de-taylor': () => import('@features/calculo-2/series-de-taylor/series-de-taylor.teoria').then((m) => m.TEORIA_TAYLOR),
-  'soma-de-riemann': () => import('@features/calculo-2/soma-de-riemann/soma-de-riemann.teoria').then((m) => m.TEORIA_RIEMANN),
-  'tecnicas-de-integracao': () => import('@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.teoria').then((m) => m.TEORIA_TECNICAS),
-  'teorema-fundamental': () => import('@features/calculo-2/teorema-fundamental/teorema-fundamental.teoria').then((m) => m.TEORIA_TFC),
-  'coordenadas-no-espaco': () => import('@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.teoria').then((m) => m.TEORIA_COORDENADAS),
-  'derivadas-parciais': () => import('@features/calculo-3/derivadas-parciais/derivadas-parciais.teoria').then((m) => m.TEORIA_PARCIAIS),
-  'funcoes-de-varias-variaveis': () => import('@features/calculo-3/funcoes-de-varias-variaveis/funcoes-de-varias-variaveis.teoria').then((m) => m.TEORIA_MULTIVAR),
-  'gradiente-e-direcional': () => import('@features/calculo-3/gradiente-e-direcional/gradiente-e-direcional.teoria').then((m) => m.TEORIA_GRADIENTE),
-  'integrais-de-linha': () => import('@features/calculo-3/integrais-de-linha/integrais-de-linha.teoria').then((m) => m.TEORIA_LINHA),
-  'integrais-multiplas': () => import('@features/calculo-3/integrais-multiplas/integrais-multiplas.teoria').then((m) => m.TEORIA_MULTIPLAS),
-  'aplicacoes-de-edo': () => import('@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.teoria').then((m) => m.TEORIA_APLICACOES_EDO),
-  'edo-primeira-ordem': () => import('@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.teoria').then((m) => m.TEORIA_EDO1),
-  'edo-segunda-ordem': () => import('@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.teoria').then((m) => m.TEORIA_EDO2),
-  'metodos-numericos': () => import('@features/calculo-4/metodos-numericos/metodos-numericos.teoria').then((m) => m.TEORIA_NUMERICO),
-  'analise-combinatoria': () => import('@features/estatistica/analise-combinatoria/analise-combinatoria.teoria').then((m) => m.TEORIA_COMBINATORIA),
-  'distribuicao-normal': () => import('@features/estatistica/distribuicao-normal/distribuicao-normal.teoria').then((m) => m.TEORIA_NORMAL),
-  'estatistica-e-incerteza': () => import('@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.teoria').then((m) => m.TEORIA_INCERTEZA),
-  'probabilidade': () => import('@features/estatistica/probabilidade/probabilidade.teoria').then((m) => m.TEORIA_PROBABILIDADE),
-  'regressao-e-correlacao': () => import('@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.teoria').then((m) => m.TEORIA_REGRESSAO),
-  'analise-dimensional': () => import('@features/fisica/analise-dimensional/analise-dimensional.teoria').then((m) => m.TEORIA_DIMENSIONAL),
-  'cinematica-escalar': () => import('@features/fisica/cinematica-escalar/cinematica-escalar.teoria').then((m) => m.TEORIA_CINEMATICA),
-  'cinematica-vetorial': () => import('@features/fisica/cinematica-vetorial/cinematica-vetorial.teoria').then((m) => m.TEORIA_CINEMATICA_VETORIAL),
-  'dinamica-rotacional': () => import('@features/fisica/dinamica-rotacional/dinamica-rotacional.teoria').then((m) => m.TEORIA_DINAMICA_ROTACIONAL),
-  'estatica-e-torque': () => import('@features/fisica/estatica-e-torque/estatica-e-torque.teoria').then((m) => m.TEORIA_TORQUE),
-  'fluidos-e-aerodinamica': () => import('@features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.teoria').then((m) => m.TEORIA_FLUIDOS),
-  'gravitacao-e-orbitas': () => import('@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.teoria').then((m) => m.TEORIA_GRAVITACAO),
-  'impulso-e-momento': () => import('@features/fisica/impulso-e-momento/impulso-e-momento.teoria').then((m) => m.TEORIA_MOMENTO),
-  'leis-de-newton': () => import('@features/fisica/leis-de-newton/leis-de-newton.teoria').then((m) => m.TEORIA_NEWTON),
-  'momento-angular': () => import('@features/fisica/momento-angular/momento-angular.teoria').then((m) => m.TEORIA_MOMENTO_ANGULAR),
-  'movimento-circular': () => import('@features/fisica/movimento-circular/movimento-circular.teoria').then((m) => m.TEORIA_MOVIMENTO_CIRCULAR),
-  'movimento-harmonico': () => import('@features/fisica/movimento-harmonico/movimento-harmonico.teoria').then((m) => m.TEORIA_MHS),
-  'propulsao-de-foguetes': () => import('@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.teoria').then((m) => m.TEORIA_PROPULSAO),
-  'termodinamica-e-gases': () => import('@features/fisica/termodinamica-e-gases/termodinamica-e-gases.teoria').then((m) => m.TEORIA_TERMO),
-  'trabalho-e-energia': () => import('@features/fisica/trabalho-e-energia/trabalho-e-energia.teoria').then((m) => m.TEORIA_ENERGIA),
-  'trajetoria-balistica': () => import('@features/fisica/trajetoria-balistica/trajetoria-balistica.teoria').then((m) => m.TEORIA_BALISTICA),
-  'transferencia-de-calor': () => import('@features/fisica/transferencia-de-calor/transferencia-de-calor.teoria').then((m) => m.TEORIA_TERMICA),
-  'composicao-inversa': () => import('@features/funcoes/composicao-inversa/composicao-inversa.teoria').then((m) => m.TEORIA_COMPOSICAO),
-  'conceito-funcao': () => import('@features/funcoes/conceito-funcao/conceito-funcao.teoria').then((m) => m.TEORIA_CONCEITO),
-  'funcao-afim': () => import('@features/funcoes/funcao-afim/funcao-afim.teoria').then((m) => m.TEORIA_AFIM),
-  'funcao-exponencial': () => import('@features/funcoes/funcao-exponencial/funcao-exponencial.teoria').then((m) => m.TEORIA_EXPONENCIAL),
-  'funcao-logaritmica': () => import('@features/funcoes/funcao-logaritmica/funcao-logaritmica.teoria').then((m) => m.TEORIA_LOGARITMICA),
-  'funcao-modular': () => import('@features/funcoes/funcao-modular/funcao-modular.teoria').then((m) => m.TEORIA_MODULAR),
-  'funcao-quadratica': () => import('@features/funcoes/funcao-quadratica/funcao-quadratica.teoria').then((m) => m.TEORIA_QUADRATICA),
-  'funcoes-por-partes': () => import('@features/funcoes/funcoes-por-partes/funcoes-por-partes.teoria').then((m) => m.TEORIA_POR_PARTES),
-  'funcoes-racionais': () => import('@features/funcoes/funcoes-racionais/funcoes-racionais.teoria').then((m) => m.TEORIA_RACIONAIS),
-  'juros-compostos': () => import('@features/funcoes/juros-compostos/juros-compostos.teoria').then((m) => m.TEORIA_JUROS),
-  'progressoes': () => import('@features/funcoes/progressoes/progressoes.teoria').then((m) => m.TEORIA_PROGRESSOES),
-  'transformacoes-de-graficos': () => import('@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.teoria').then((m) => m.TEORIA_TRANSFORMACOES),
-  'circunferencia': () => import('@features/geometria-analitica/circunferencia/circunferencia.teoria').then((m) => m.TEORIA_CIRCUNFERENCIA),
-  'conicas': () => import('@features/geometria-analitica/conicas/conicas.teoria').then((m) => m.TEORIA_CONICAS),
-  'equacoes-parametricas': () => import('@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.teoria').then((m) => m.TEORIA_PARAMETRICAS),
-  'ponto-e-reta': () => import('@features/geometria-analitica/ponto-e-reta/ponto-e-reta.teoria').then((m) => m.TEORIA_PONTO_RETA),
-  'angulos-e-triangulos': () => import('@features/geometria/angulos-e-triangulos/angulos-e-triangulos.teoria').then((m) => m.TEORIA_ANGULOS),
-  'areas-de-figuras-planas': () => import('@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.teoria').then((m) => m.TEORIA_AREAS),
-  'circulo-e-poligonos': () => import('@features/geometria/circulo-e-poligonos/circulo-e-poligonos.teoria').then((m) => m.TEORIA_CIRCULO),
-  'semelhanca-e-pitagoras': () => import('@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.teoria').then((m) => m.TEORIA_SEMELHANCA),
-  'solidos-e-volumes': () => import('@features/geometria/solidos-e-volumes/solidos-e-volumes.teoria').then((m) => m.TEORIA_SOLIDOS),
-  'fracoes': () => import('@features/matematica-basica/fracoes/fracoes.teoria').then((m) => m.TEORIA_FRACOES),
-  'mmc-mdc': () => import('@features/matematica-basica/mmc-mdc/mmc-mdc.teoria').then((m) => m.TEORIA_MMC_MDC),
-  'notacao-matematica': () => import('@features/matematica-basica/notacao-matematica/notacao-matematica.teoria').then((m) => m.TEORIA_NOTACAO),
-  'numeros-decimais': () => import('@features/matematica-basica/numeros-decimais/numeros-decimais.teoria').then((m) => m.TEORIA_DECIMAIS),
-  'operacoes-fundamentais': () => import('@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.teoria').then((m) => m.TEORIA_OPERACOES),
-  'potenciacao-radiciacao': () => import('@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.teoria').then((m) => m.TEORIA_POTENCIAS),
-  'razao-proporcao': () => import('@features/matematica-basica/razao-proporcao/razao-proporcao.teoria').then((m) => m.TEORIA_PROPORCAO),
-  'nocao-intuitiva-de-limite': () => import('@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.teoria').then((m) => m.TEORIA_LIMITE_INTUITIVO),
-  'vizinhancas-e-infinito': () => import('@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.teoria').then((m) => m.TEORIA_VIZINHANCAS),
-  'circulo-trigonometrico': () => import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.teoria').then((m) => m.TEORIA_CIRCULO),
-  'funcoes-trigonometricas': () => import('@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.teoria').then((m) => m.TEORIA_ONDAS),
-  'identidades-trigonometricas': () => import('@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.teoria').then((m) => m.TEORIA_IDENTIDADES),
-  'lei-senos-cossenos': () => import('@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.teoria').then((m) => m.TEORIA_LEIS),
-  'seno-cosseno-tangente': () => import('@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.teoria').then((m) => m.TEORIA_RAZOES),
-  'triangulo-retangulo': () => import('@features/trigonometria/triangulo-retangulo/triangulo-retangulo.teoria').then((m) => m.TEORIA_TRIANGULO),
-  'matrizes-determinantes': () => import('@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.teoria').then((m) => m.TEORIA_MATRIZES),
-  'numeros-complexos': () => import('@features/vetores-matrizes/numeros-complexos/numeros-complexos.teoria').then((m) => m.TEORIA_COMPLEXOS),
-  'produto-escalar-vetorial': () => import('@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.teoria').then((m) => m.TEORIA_PRODUTOS),
-  'vetores-no-espaco': () => import('@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.teoria').then((m) => m.TEORIA_VETORES_ESPACO),
-  'vetores-no-plano': () => import('@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.teoria').then((m) => m.TEORIA_VETORES),
-};
+export const CARREGAR_TEORIA_DO_TOPICO: Readonly<Record<string, () => Promise<readonly Teoria[]>>> =
+  {
+    'equacao-primeiro-grau': () =>
+      import('@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.teoria').then(
+        (m) => m.TEORIA_EQUACAO_1,
+      ),
+    'equacao-segundo-grau': () =>
+      import('@features/algebra/equacao-segundo-grau/equacao-segundo-grau.teoria').then(
+        (m) => m.TEORIA_EQUACAO_2,
+      ),
+    'expressoes-algebricas': () =>
+      import('@features/algebra/expressoes-algebricas/expressoes-algebricas.teoria').then(
+        (m) => m.TEORIA_EXPRESSOES,
+      ),
+    fatoracao: () =>
+      import('@features/algebra/fatoracao/fatoracao.teoria').then((m) => m.TEORIA_FATORACAO),
+    inequacoes: () =>
+      import('@features/algebra/inequacoes/inequacoes.teoria').then((m) => m.TEORIA_INEQUACOES),
+    polinomios: () =>
+      import('@features/algebra/polinomios/polinomios.teoria').then((m) => m.TEORIA_POLINOMIOS),
+    'produtos-notaveis': () =>
+      import('@features/algebra/produtos-notaveis/produtos-notaveis.teoria').then(
+        (m) => m.TEORIA_PRODUTOS,
+      ),
+    'sistemas-lineares': () =>
+      import('@features/algebra/sistemas-lineares/sistemas-lineares.teoria').then(
+        (m) => m.TEORIA_SISTEMAS,
+      ),
+    'aplicacoes-da-derivada': () =>
+      import('@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.teoria').then(
+        (m) => m.TEORIA_APLICACOES_DERIVADA,
+      ),
+    continuidade: () =>
+      import('@features/calculo-1/continuidade/continuidade.teoria').then(
+        (m) => m.TEORIA_CONTINUIDADE,
+      ),
+    'definicao-de-derivada': () =>
+      import('@features/calculo-1/definicao-de-derivada/definicao-de-derivada.teoria').then(
+        (m) => m.TEORIA_DEFINICAO_DERIVADA,
+      ),
+    'derivacao-implicita': () =>
+      import('@features/calculo-1/derivacao-implicita/derivacao-implicita.teoria').then(
+        (m) => m.TEORIA_DERIVACAO_IMPLICITA,
+      ),
+    'derivadas-exponencial-logaritmo': () =>
+      import('@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.teoria').then(
+        (m) => m.TEORIA_DERIVADAS_EXP_LOG,
+      ),
+    'derivadas-trigonometricas': () =>
+      import('@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.teoria').then(
+        (m) => m.TEORIA_DERIVADAS_TRIG,
+      ),
+    'limites-laterais': () =>
+      import('@features/calculo-1/limites-laterais/limites-laterais.teoria').then(
+        (m) => m.TEORIA_LATERAIS,
+      ),
+    limites: () =>
+      import('@features/calculo-1/limites/limites.teoria').then((m) => m.TEORIA_LIMITES),
+    'regra-da-cadeia': () =>
+      import('@features/calculo-1/regra-da-cadeia/regra-da-cadeia.teoria').then(
+        (m) => m.TEORIA_CADEIA,
+      ),
+    'regras-de-derivacao': () =>
+      import('@features/calculo-1/regras-de-derivacao/regras-de-derivacao.teoria').then(
+        (m) => m.TEORIA_REGRAS,
+      ),
+    'taxa-de-variacao': () =>
+      import('@features/calculo-1/taxa-de-variacao/taxa-de-variacao.teoria').then(
+        (m) => m.TEORIA_TAXA,
+      ),
+    'aplicacoes-da-integral': () =>
+      import('@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.teoria').then(
+        (m) => m.TEORIA_APLICACOES_INTEGRAL,
+      ),
+    'integrais-improprias': () =>
+      import('@features/calculo-2/integrais-improprias/integrais-improprias.teoria').then(
+        (m) => m.TEORIA_IMPROPRIAS,
+      ),
+    'integral-definida': () =>
+      import('@features/calculo-2/integral-definida/integral-definida.teoria').then(
+        (m) => m.TEORIA_DEFINIDA,
+      ),
+    'integral-indefinida': () =>
+      import('@features/calculo-2/integral-indefinida/integral-indefinida.teoria').then(
+        (m) => m.TEORIA_INDEFINIDA,
+      ),
+    'sequencias-e-series': () =>
+      import('@features/calculo-2/sequencias-e-series/sequencias-e-series.teoria').then(
+        (m) => m.TEORIA_SEQUENCIAS,
+      ),
+    'series-de-taylor': () =>
+      import('@features/calculo-2/series-de-taylor/series-de-taylor.teoria').then(
+        (m) => m.TEORIA_TAYLOR,
+      ),
+    'soma-de-riemann': () =>
+      import('@features/calculo-2/soma-de-riemann/soma-de-riemann.teoria').then(
+        (m) => m.TEORIA_RIEMANN,
+      ),
+    'tecnicas-de-integracao': () =>
+      import('@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.teoria').then(
+        (m) => m.TEORIA_TECNICAS,
+      ),
+    'teorema-fundamental': () =>
+      import('@features/calculo-2/teorema-fundamental/teorema-fundamental.teoria').then(
+        (m) => m.TEORIA_TFC,
+      ),
+    'coordenadas-no-espaco': () =>
+      import('@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.teoria').then(
+        (m) => m.TEORIA_COORDENADAS,
+      ),
+    'derivadas-parciais': () =>
+      import('@features/calculo-3/derivadas-parciais/derivadas-parciais.teoria').then(
+        (m) => m.TEORIA_PARCIAIS,
+      ),
+    'funcoes-de-varias-variaveis': () =>
+      import('@features/calculo-3/funcoes-de-varias-variaveis/funcoes-de-varias-variaveis.teoria').then(
+        (m) => m.TEORIA_MULTIVAR,
+      ),
+    'gradiente-e-direcional': () =>
+      import('@features/calculo-3/gradiente-e-direcional/gradiente-e-direcional.teoria').then(
+        (m) => m.TEORIA_GRADIENTE,
+      ),
+    'integrais-de-linha': () =>
+      import('@features/calculo-3/integrais-de-linha/integrais-de-linha.teoria').then(
+        (m) => m.TEORIA_LINHA,
+      ),
+    'integrais-multiplas': () =>
+      import('@features/calculo-3/integrais-multiplas/integrais-multiplas.teoria').then(
+        (m) => m.TEORIA_MULTIPLAS,
+      ),
+    'aplicacoes-de-edo': () =>
+      import('@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.teoria').then(
+        (m) => m.TEORIA_APLICACOES_EDO,
+      ),
+    'edo-primeira-ordem': () =>
+      import('@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.teoria').then(
+        (m) => m.TEORIA_EDO1,
+      ),
+    'edo-segunda-ordem': () =>
+      import('@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.teoria').then(
+        (m) => m.TEORIA_EDO2,
+      ),
+    'metodos-numericos': () =>
+      import('@features/calculo-4/metodos-numericos/metodos-numericos.teoria').then(
+        (m) => m.TEORIA_NUMERICO,
+      ),
+    'analise-combinatoria': () =>
+      import('@features/estatistica/analise-combinatoria/analise-combinatoria.teoria').then(
+        (m) => m.TEORIA_COMBINATORIA,
+      ),
+    'distribuicao-normal': () =>
+      import('@features/estatistica/distribuicao-normal/distribuicao-normal.teoria').then(
+        (m) => m.TEORIA_NORMAL,
+      ),
+    'estatistica-e-incerteza': () =>
+      import('@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.teoria').then(
+        (m) => m.TEORIA_INCERTEZA,
+      ),
+    probabilidade: () =>
+      import('@features/estatistica/probabilidade/probabilidade.teoria').then(
+        (m) => m.TEORIA_PROBABILIDADE,
+      ),
+    'regressao-e-correlacao': () =>
+      import('@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.teoria').then(
+        (m) => m.TEORIA_REGRESSAO,
+      ),
+    'analise-dimensional': () =>
+      import('@features/fisica/analise-dimensional/analise-dimensional.teoria').then(
+        (m) => m.TEORIA_DIMENSIONAL,
+      ),
+    'cinematica-escalar': () =>
+      import('@features/fisica/cinematica-escalar/cinematica-escalar.teoria').then(
+        (m) => m.TEORIA_CINEMATICA,
+      ),
+    'cinematica-vetorial': () =>
+      import('@features/fisica/cinematica-vetorial/cinematica-vetorial.teoria').then(
+        (m) => m.TEORIA_CINEMATICA_VETORIAL,
+      ),
+    'dinamica-rotacional': () =>
+      import('@features/fisica/dinamica-rotacional/dinamica-rotacional.teoria').then(
+        (m) => m.TEORIA_DINAMICA_ROTACIONAL,
+      ),
+    'estatica-e-torque': () =>
+      import('@features/fisica/estatica-e-torque/estatica-e-torque.teoria').then(
+        (m) => m.TEORIA_TORQUE,
+      ),
+    'fluidos-e-aerodinamica': () =>
+      import('@features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.teoria').then(
+        (m) => m.TEORIA_FLUIDOS,
+      ),
+    'gravitacao-e-orbitas': () =>
+      import('@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.teoria').then(
+        (m) => m.TEORIA_GRAVITACAO,
+      ),
+    'impulso-e-momento': () =>
+      import('@features/fisica/impulso-e-momento/impulso-e-momento.teoria').then(
+        (m) => m.TEORIA_MOMENTO,
+      ),
+    'leis-de-newton': () =>
+      import('@features/fisica/leis-de-newton/leis-de-newton.teoria').then((m) => m.TEORIA_NEWTON),
+    'momento-angular': () =>
+      import('@features/fisica/momento-angular/momento-angular.teoria').then(
+        (m) => m.TEORIA_MOMENTO_ANGULAR,
+      ),
+    'movimento-circular': () =>
+      import('@features/fisica/movimento-circular/movimento-circular.teoria').then(
+        (m) => m.TEORIA_MOVIMENTO_CIRCULAR,
+      ),
+    'movimento-harmonico': () =>
+      import('@features/fisica/movimento-harmonico/movimento-harmonico.teoria').then(
+        (m) => m.TEORIA_MHS,
+      ),
+    'propulsao-de-foguetes': () =>
+      import('@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.teoria').then(
+        (m) => m.TEORIA_PROPULSAO,
+      ),
+    'termodinamica-e-gases': () =>
+      import('@features/fisica/termodinamica-e-gases/termodinamica-e-gases.teoria').then(
+        (m) => m.TEORIA_TERMO,
+      ),
+    'trabalho-e-energia': () =>
+      import('@features/fisica/trabalho-e-energia/trabalho-e-energia.teoria').then(
+        (m) => m.TEORIA_ENERGIA,
+      ),
+    'trajetoria-balistica': () =>
+      import('@features/fisica/trajetoria-balistica/trajetoria-balistica.teoria').then(
+        (m) => m.TEORIA_BALISTICA,
+      ),
+    'transferencia-de-calor': () =>
+      import('@features/fisica/transferencia-de-calor/transferencia-de-calor.teoria').then(
+        (m) => m.TEORIA_TERMICA,
+      ),
+    'composicao-inversa': () =>
+      import('@features/funcoes/composicao-inversa/composicao-inversa.teoria').then(
+        (m) => m.TEORIA_COMPOSICAO,
+      ),
+    'conceito-funcao': () =>
+      import('@features/funcoes/conceito-funcao/conceito-funcao.teoria').then(
+        (m) => m.TEORIA_CONCEITO,
+      ),
+    'funcao-afim': () =>
+      import('@features/funcoes/funcao-afim/funcao-afim.teoria').then((m) => m.TEORIA_AFIM),
+    'funcao-exponencial': () =>
+      import('@features/funcoes/funcao-exponencial/funcao-exponencial.teoria').then(
+        (m) => m.TEORIA_EXPONENCIAL,
+      ),
+    'funcao-logaritmica': () =>
+      import('@features/funcoes/funcao-logaritmica/funcao-logaritmica.teoria').then(
+        (m) => m.TEORIA_LOGARITMICA,
+      ),
+    'funcao-modular': () =>
+      import('@features/funcoes/funcao-modular/funcao-modular.teoria').then(
+        (m) => m.TEORIA_MODULAR,
+      ),
+    'funcao-quadratica': () =>
+      import('@features/funcoes/funcao-quadratica/funcao-quadratica.teoria').then(
+        (m) => m.TEORIA_QUADRATICA,
+      ),
+    'funcoes-por-partes': () =>
+      import('@features/funcoes/funcoes-por-partes/funcoes-por-partes.teoria').then(
+        (m) => m.TEORIA_POR_PARTES,
+      ),
+    'funcoes-racionais': () =>
+      import('@features/funcoes/funcoes-racionais/funcoes-racionais.teoria').then(
+        (m) => m.TEORIA_RACIONAIS,
+      ),
+    'juros-compostos': () =>
+      import('@features/funcoes/juros-compostos/juros-compostos.teoria').then(
+        (m) => m.TEORIA_JUROS,
+      ),
+    progressoes: () =>
+      import('@features/funcoes/progressoes/progressoes.teoria').then((m) => m.TEORIA_PROGRESSOES),
+    'transformacoes-de-graficos': () =>
+      import('@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.teoria').then(
+        (m) => m.TEORIA_TRANSFORMACOES,
+      ),
+    circunferencia: () =>
+      import('@features/geometria-analitica/circunferencia/circunferencia.teoria').then(
+        (m) => m.TEORIA_CIRCUNFERENCIA,
+      ),
+    conicas: () =>
+      import('@features/geometria-analitica/conicas/conicas.teoria').then((m) => m.TEORIA_CONICAS),
+    'equacoes-parametricas': () =>
+      import('@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.teoria').then(
+        (m) => m.TEORIA_PARAMETRICAS,
+      ),
+    'ponto-e-reta': () =>
+      import('@features/geometria-analitica/ponto-e-reta/ponto-e-reta.teoria').then(
+        (m) => m.TEORIA_PONTO_RETA,
+      ),
+    'angulos-e-triangulos': () =>
+      import('@features/geometria/angulos-e-triangulos/angulos-e-triangulos.teoria').then(
+        (m) => m.TEORIA_ANGULOS,
+      ),
+    'areas-de-figuras-planas': () =>
+      import('@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.teoria').then(
+        (m) => m.TEORIA_AREAS,
+      ),
+    'circulo-e-poligonos': () =>
+      import('@features/geometria/circulo-e-poligonos/circulo-e-poligonos.teoria').then(
+        (m) => m.TEORIA_CIRCULO,
+      ),
+    'semelhanca-e-pitagoras': () =>
+      import('@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.teoria').then(
+        (m) => m.TEORIA_SEMELHANCA,
+      ),
+    'solidos-e-volumes': () =>
+      import('@features/geometria/solidos-e-volumes/solidos-e-volumes.teoria').then(
+        (m) => m.TEORIA_SOLIDOS,
+      ),
+    fracoes: () =>
+      import('@features/matematica-basica/fracoes/fracoes.teoria').then((m) => m.TEORIA_FRACOES),
+    'mmc-mdc': () =>
+      import('@features/matematica-basica/mmc-mdc/mmc-mdc.teoria').then((m) => m.TEORIA_MMC_MDC),
+    'notacao-matematica': () =>
+      import('@features/matematica-basica/notacao-matematica/notacao-matematica.teoria').then(
+        (m) => m.TEORIA_NOTACAO,
+      ),
+    'numeros-decimais': () =>
+      import('@features/matematica-basica/numeros-decimais/numeros-decimais.teoria').then(
+        (m) => m.TEORIA_DECIMAIS,
+      ),
+    'operacoes-fundamentais': () =>
+      import('@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.teoria').then(
+        (m) => m.TEORIA_OPERACOES,
+      ),
+    'potenciacao-radiciacao': () =>
+      import('@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.teoria').then(
+        (m) => m.TEORIA_POTENCIAS,
+      ),
+    'razao-proporcao': () =>
+      import('@features/matematica-basica/razao-proporcao/razao-proporcao.teoria').then(
+        (m) => m.TEORIA_PROPORCAO,
+      ),
+    'nocao-intuitiva-de-limite': () =>
+      import('@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.teoria').then(
+        (m) => m.TEORIA_LIMITE_INTUITIVO,
+      ),
+    'vizinhancas-e-infinito': () =>
+      import('@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.teoria').then(
+        (m) => m.TEORIA_VIZINHANCAS,
+      ),
+    'circulo-trigonometrico': () =>
+      import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.teoria').then(
+        (m) => m.TEORIA_CIRCULO,
+      ),
+    'funcoes-trigonometricas': () =>
+      import('@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.teoria').then(
+        (m) => m.TEORIA_ONDAS,
+      ),
+    'identidades-trigonometricas': () =>
+      import('@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.teoria').then(
+        (m) => m.TEORIA_IDENTIDADES,
+      ),
+    'lei-senos-cossenos': () =>
+      import('@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.teoria').then(
+        (m) => m.TEORIA_LEIS,
+      ),
+    'seno-cosseno-tangente': () =>
+      import('@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.teoria').then(
+        (m) => m.TEORIA_RAZOES,
+      ),
+    'triangulo-retangulo': () =>
+      import('@features/trigonometria/triangulo-retangulo/triangulo-retangulo.teoria').then(
+        (m) => m.TEORIA_TRIANGULO,
+      ),
+    'matrizes-determinantes': () =>
+      import('@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.teoria').then(
+        (m) => m.TEORIA_MATRIZES,
+      ),
+    'numeros-complexos': () =>
+      import('@features/vetores-matrizes/numeros-complexos/numeros-complexos.teoria').then(
+        (m) => m.TEORIA_COMPLEXOS,
+      ),
+    'produto-escalar-vetorial': () =>
+      import('@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.teoria').then(
+        (m) => m.TEORIA_PRODUTOS,
+      ),
+    'vetores-no-espaco': () =>
+      import('@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.teoria').then(
+        (m) => m.TEORIA_VETORES_ESPACO,
+      ),
+    'vetores-no-plano': () =>
+      import('@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.teoria').then(
+        (m) => m.TEORIA_VETORES,
+      ),
+  };
