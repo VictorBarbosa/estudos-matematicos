@@ -149,7 +149,7 @@ function exercicioMaiorAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Um triângulo tem lados ${b}, ${c} e ${a}. Quanto mede o MAIOR ângulo, em graus? ` +
       '(2 casas)',
-    enunciadoTex: `a = ${a} \\qquad b = ${b} \\qquad c = ${c} \\qquad \\hat{A} = \;?`,
+    enunciadoTex: `a = ${a} \\qquad b = ${b} \\qquad c = ${c} \\qquad \\hat{A} = \\;?`,
     gabarito,
     resolucao: {
       resultado: gabarito,

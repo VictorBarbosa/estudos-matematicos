@@ -3,7 +3,27 @@ import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
+import {
+  exercicioClassificacao,
+  exercicioProblema,
+} from '@features/algebra/sistemas-lineares/sistemas-lineares.classicas';
+
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-9;
+
+type Pergunta = 'valor-de-x' | 'problema' | 'classificacao';
+
+function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
+  switch (nivel) {
+    case 'facil':
+    case 'medio':
+      return rng.escolher<Pergunta>(['valor-de-x', 'problema']);
+    case 'dificil':
+      return rng.escolher<Pergunta>(['valor-de-x', 'problema', 'classificacao']);
+    // No Extremo a classificação pede o caso indeterminado (k e m), não o impossível.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['valor-de-x', 'classificacao']);
+  }
+}
 
 /**
  * Exercícios de sistemas lineares 2×2.
@@ -13,9 +33,13 @@ const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-9;
  */
 export const geradorSistemas: GeradorExercicio<number> = {
   topicoId: 'sistemas-lineares',
-  formatoResposta: 'o valor de x, ex.: 3',
+  formatoResposta: 'um número, ex.: 3',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
+    const pergunta = sortearPergunta(nivel, rng);
+    if (pergunta === 'problema') return exercicioProblema(nivel, rng);
+    if (pergunta === 'classificacao') return exercicioClassificacao(nivel, rng);
+
     const { a1, b1, c1, a2, b2, c2, x, y } = sortear(nivel, rng);
 
     const resolucao = resolverSistemaComPassos({ a1, b1, c1, a2, b2, c2 });

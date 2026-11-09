@@ -51,6 +51,9 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['equacao-segundo-grau', 'dificil', 'Chame x² de t'],
   ['equacao-segundo-grau', 'extremo', 'Cada t positivo dá duas raízes'],
   ['equacao-segundo-grau', 'extremo', '(x₁ + x₂)² − 2·x₁·x₂'],
+  ['sistemas-lineares', 'facil', 'uma soma as quantidades'],
+  ['sistemas-lineares', 'dificil', 'determinante zero'],
+  ['sistemas-lineares', 'extremo', 'Infinitas soluções: a segunda equação'],
   // Escalonamento e inversa: cada pergunta tem dica no nível em que estreia.
   ['escalonamento-e-inversa', 'facil', 'cada entrada da L₁'],
   ['escalonamento-e-inversa', 'facil', 'Comece por baixo'],
