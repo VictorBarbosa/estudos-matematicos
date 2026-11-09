@@ -416,6 +416,10 @@
         "descricao": "Desigualdades, a inversão do sinal e o conjunto solução na reta.",
         "titulo": "Inequações"
       },
+      "inequacoes-segundo-grau": {
+        "descricao": "Quadro de sinais, o sinal do trinômio e as inequações-produto e quociente.",
+        "titulo": "Estudo de sinal"
+      },
       "integrais-de-linha": {
         "descricao": "Acumular ao longo de um caminho, e quando o caminho deixa de importar.",
         "titulo": "Integrais de linha"

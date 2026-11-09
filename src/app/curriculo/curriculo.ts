@@ -134,7 +134,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *Intermediate Algebra 2e*',
         url: 'https://openstax.org/details/books/intermediate-algebra-2e',
-        nota: 'Fatoração, equações e inequações, com o estudo de sinal que o site ainda não cobre.',
+        nota: 'Fatoração, equações e inequações, com o estudo de sinal.',
       },
     ],
     topicos: [
@@ -172,6 +172,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         id: 'inequacoes',
         titulo: 'Inequações',
         descricao: 'Desigualdades, a inversão do sinal e o conjunto solução na reta.',
+        pronto: true,
+      },
+      {
+        id: 'inequacoes-segundo-grau',
+        titulo: 'Estudo de sinal',
+        descricao: 'Quadro de sinais, o sinal do trinômio e as inequações-produto e quociente.',
         pronto: true,
       },
       {

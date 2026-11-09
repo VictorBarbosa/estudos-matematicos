@@ -40,6 +40,12 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['aplicacoes-da-derivada', 'medio', 'Inclinação da secante'],
   ['aplicacoes-da-derivada', 'dificil', 'derive em cima e embaixo'],
   ['aplicacoes-da-derivada', 'dificil', 'iguale a f′(c)'],
+  ['inequacoes-segundo-grau', 'facil', 'Cada fator troca de sinal'],
+  ['inequacoes-segundo-grau', 'facil', 'NEGATIVO entre elas'],
+  ['inequacoes-segundo-grau', 'medio', 'POSITIVO entre as raízes'],
+  ['inequacoes-segundo-grau', 'dificil', 'as raízes são frações'],
+  ['inequacoes-segundo-grau', 'dificil', '«todos» ou «vazio»'],
+  ['inequacoes-segundo-grau', 'extremo', 'O zero do denominador nunca entra'],
 ];
 
 describe('dicas alcançáveis', () => {

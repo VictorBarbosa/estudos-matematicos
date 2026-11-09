@@ -28,6 +28,7 @@ export * from '@core/math/algebra/produtos-notaveis/produtos-notaveis';
 export * from '@core/math/algebra/fatoracao/fatoracao';
 export * from '@core/math/algebra/sistema-linear/sistema-linear';
 export * from '@core/math/algebra/inequacao/inequacao';
+export * from '@core/math/algebra/inequacao-quadratica/inequacao-quadratica';
 export * from '@core/math/algebra/vetores/vetores';
 export * from '@core/math/algebra/vetores-espaco/vetores-espaco';
 export * from '@core/math/algebra/matrizes/matrizes';

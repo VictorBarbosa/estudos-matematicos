@@ -416,6 +416,10 @@
         "descricao": "Inequalities, flipping the sign and the solution set on the line.",
         "titulo": "Inequalities"
       },
+      "inequacoes-segundo-grau": {
+        "descricao": "Sign charts, the sign of a quadratic, and product and quotient inequalities.",
+        "titulo": "Sign analysis"
+      },
       "integrais-de-linha": {
         "descricao": "Accumulating along a path, and when the path stops mattering.",
         "titulo": "Line integrals"

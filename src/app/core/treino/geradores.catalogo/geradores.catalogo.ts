@@ -12,6 +12,7 @@ import { geradorEquacao2 as g_equacao_segundo_grau } from '@features/algebra/equ
 import { geradorExpressoes as g_expressoes_algebricas } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.gerador';
 import { geradorFatoracao as g_fatoracao } from '@features/algebra/fatoracao/fatoracao.gerador';
 import { geradorInequacoes as g_inequacoes } from '@features/algebra/inequacoes/inequacoes.gerador';
+import { geradorInequacoesSegundoGrau as g_inequacoes_segundo_grau } from '@features/algebra/inequacoes-segundo-grau/inequacoes-segundo-grau.gerador';
 import { geradorPolinomios as g_polinomios } from '@features/algebra/polinomios/polinomios.gerador';
 import { geradorProdutos as g_produtos_notaveis } from '@features/algebra/produtos-notaveis/produtos-notaveis.gerador';
 import { geradorFuncoesRacionais as g_funcoes_racionais } from '@features/funcoes/funcoes-racionais/funcoes-racionais.gerador';
@@ -121,6 +122,7 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['expressoes-algebricas', g_expressoes_algebricas],
   ['fatoracao', g_fatoracao],
   ['inequacoes', g_inequacoes],
+  ['inequacoes-segundo-grau', g_inequacoes_segundo_grau],
   ['polinomios', g_polinomios],
   ['produtos-notaveis', g_produtos_notaveis],
   ['progressoes', g_progressoes],

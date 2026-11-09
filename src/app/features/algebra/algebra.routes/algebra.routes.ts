@@ -51,6 +51,14 @@ export const rotas: Routes = [
       import('@features/algebra/inequacoes/inequacoes').then((m) => m.Inequacoes),
   },
   {
+    path: 'inequacoes-segundo-grau',
+    title: 'Estudo de sinal · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/algebra/inequacoes-segundo-grau/inequacoes-segundo-grau').then(
+        (m) => m.InequacoesSegundoGrau,
+      ),
+  },
+  {
     path: 'expressoes-algebricas',
     title: 'Expressões algébricas · Estudos Matemáticos',
     loadComponent: () =>

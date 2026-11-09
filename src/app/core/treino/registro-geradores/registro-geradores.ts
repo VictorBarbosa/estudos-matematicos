@@ -22,6 +22,10 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       ),
     fatoracao: () =>
       import('@features/algebra/fatoracao/fatoracao.gerador').then((m) => m.geradorFatoracao),
+    'inequacoes-segundo-grau': () =>
+      import('@features/algebra/inequacoes-segundo-grau/inequacoes-segundo-grau.gerador').then(
+        (m) => m.geradorInequacoesSegundoGrau,
+      ),
     inequacoes: () =>
       import('@features/algebra/inequacoes/inequacoes.gerador').then((m) => m.geradorInequacoes),
     polinomios: () =>

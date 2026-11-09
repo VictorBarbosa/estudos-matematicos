@@ -1,0 +1,39 @@
+{
+  "relacaoDesigualdade": {
+    "pt": "Relação de desigualdade",
+    "fr": "Relation d’inégalité",
+    "en": "Inequality relation"
+  },
+  "relacaoRotulo": {
+    "pt": "Relação {simbolo}",
+    "fr": "Relation {simbolo}",
+    "en": "Relation {simbolo}"
+  },
+  "dicaCoefA": {
+    "pt": "Troque o sinal de a e veja a parábola virar.",
+    "fr": "Changez le signe de a et regardez la parabole se retourner.",
+    "en": "Flip the sign of a and watch the parabola turn over."
+  },
+  "curvaTrinomio": { "pt": "o trinômio", "fr": "le trinôme", "en": "the trinomial" },
+  "pontoRaiz": { "pt": "x = {valor}", "fr": "x = {valor}", "en": "x = {valor}" },
+  "conjuntoNaReta": {
+    "pt": "O conjunto solução sobre o eixo x",
+    "fr": "L’ensemble solution sur l’axe des x",
+    "en": "The solution set on the x-axis"
+  },
+  "descricaoGrafico": {
+    "pt": "Parábola com o trecho do eixo x que satisfaz a inequação destacado: {conjunto}.",
+    "fr": "Parabole avec la partie de l’axe des x qui satisfait l’inéquation mise en évidence : {conjunto}.",
+    "en": "Parabola with the part of the x-axis that satisfies the inequality highlighted: {conjunto}."
+  },
+  "leituraGrafico": {
+    "pt": "A faixa verde no eixo é a resposta: onde a parábola está do lado pedido do eixo. Bolinha cheia, a raiz entra; vazada, fica de fora.",
+    "fr": "La bande verte sur l’axe est la réponse : là où la parabole est du côté demandé de l’axe. Point plein, la racine est incluse ; point vide, elle est exclue.",
+    "en": "The green band on the axis is the answer: where the parabola is on the requested side of the axis. Filled dot, the root is included; open dot, it is left out."
+  },
+  "semSolucao": {
+    "pt": "Nenhum x serve: o conjunto solução é vazio.",
+    "fr": "Aucun x ne convient : l’ensemble solution est vide.",
+    "en": "No x works: the solution set is empty."
+  }
+}

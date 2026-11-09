@@ -416,6 +416,10 @@
         "descricao": "Inégalités, l’inversion du sens et l’ensemble solution sur la droite.",
         "titulo": "Inéquations"
       },
+      "inequacoes-segundo-grau": {
+        "descricao": "Tableau de signes, signe du trinôme et inéquations produit et quotient.",
+        "titulo": "Étude de signe"
+      },
       "integrais-de-linha": {
         "descricao": "Accumuler le long d’un chemin, et quand le chemin cesse d’importer.",
         "titulo": "Intégrales curvilignes"

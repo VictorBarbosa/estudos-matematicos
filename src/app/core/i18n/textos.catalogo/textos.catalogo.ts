@@ -8,6 +8,7 @@ import t_equacao_primeiro_grau from '@features/algebra/equacao-primeiro-grau/equ
 import t_equacao_segundo_grau from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.i18n.json';
 import t_expressoes_algebricas from '@features/algebra/expressoes-algebricas/expressoes-algebricas.i18n.json';
 import t_fatoracao from '@features/algebra/fatoracao/fatoracao.i18n.json';
+import t_inequacoes_segundo_grau from '@features/algebra/inequacoes-segundo-grau/inequacoes-segundo-grau.i18n.json';
 import t_inequacoes from '@features/algebra/inequacoes/inequacoes.i18n.json';
 import t_polinomios from '@features/algebra/polinomios/polinomios.i18n.json';
 import t_produtos_notaveis from '@features/algebra/produtos-notaveis/produtos-notaveis.i18n.json';
@@ -113,6 +114,7 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['equacao-segundo-grau', t_equacao_segundo_grau as TabelaDeTextos],
   ['expressoes-algebricas', t_expressoes_algebricas as TabelaDeTextos],
   ['fatoracao', t_fatoracao as TabelaDeTextos],
+  ['inequacoes-segundo-grau', t_inequacoes_segundo_grau as TabelaDeTextos],
   ['inequacoes', t_inequacoes as TabelaDeTextos],
   ['polinomios', t_polinomios as TabelaDeTextos],
   ['produtos-notaveis', t_produtos_notaveis as TabelaDeTextos],

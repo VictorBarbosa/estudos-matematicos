@@ -1,0 +1,68 @@
+<app-topico-layout topicoId="inequacoes-segundo-grau">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="i18n.t('explorar.coefA')"
+        [min]="-4"
+        [max]="4"
+        [dica]="texto('dicaCoefA')"
+      />
+      <app-controle-parametro
+        [(valor)]="b"
+        [rotulo]="i18n.t('explorar.coefB')"
+        [min]="-10"
+        [max]="10"
+      />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="i18n.t('explorar.coefC')"
+        [min]="-12"
+        [max]="12"
+      />
+    </section>
+
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('relacaoDesigualdade')">
+      @for (opcao of relacoes; track opcao.valor) {
+        <button
+          type="button"
+          [class.ativo]="relacao() === opcao.valor"
+          [attr.aria-pressed]="relacao() === opcao.valor"
+          [attr.aria-label]="texto('relacaoRotulo', { simbolo: opcao.rotulo })"
+          (click)="definirRelacao(opcao.valor)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="enunciadoTex()" [bloco]="true" />
+      <app-formula [tex]="conjuntoTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>{{ texto('conjuntoNaReta') }}</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">{{ vazio() ? texto('semSolucao') : texto('leituraGrafico') }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

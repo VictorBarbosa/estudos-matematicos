@@ -336,6 +336,10 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'sequencias.convergencia': 'Somas infinitas que dão um número finito',
   'sequencias.progressoes': 'Aritmética ou geométrica',
   'sequencias.soma': 'Somar os termos',
+  'sinal.delta': 'Quando Δ ≤ 0',
+  'sinal.produto': 'Estudo de sinal de um produto',
+  'sinal.quociente': 'Inequação-quociente',
+  'sinal.trinomio': 'O sinal do trinômio',
   'sistemas.classificacao': 'Os três tipos de sistema',
   'sistemas.intersecao': 'Um sistema é um cruzamento de retas',
   'sistemas.metodos': 'O método da substituição',
@@ -731,6 +735,10 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'sequencias.convergencia': 'sequencias-e-series',
   'sequencias.progressoes': 'sequencias-e-series',
   'sequencias.soma': 'sequencias-e-series',
+  'sinal.delta': 'inequacoes-segundo-grau',
+  'sinal.produto': 'inequacoes-segundo-grau',
+  'sinal.quociente': 'inequacoes-segundo-grau',
+  'sinal.trinomio': 'inequacoes-segundo-grau',
   'sistemas.classificacao': 'sistemas-lineares',
   'sistemas.intersecao': 'sistemas-lineares',
   'sistemas.metodos': 'sistemas-lineares',
@@ -812,6 +820,10 @@ export const CARREGAR_TEORIA_DO_TOPICO: Readonly<Record<string, () => Promise<re
       ),
     fatoracao: () =>
       import('@features/algebra/fatoracao/fatoracao.teoria').then((m) => m.TEORIA_FATORACAO),
+    'inequacoes-segundo-grau': () =>
+      import('@features/algebra/inequacoes-segundo-grau/inequacoes-segundo-grau.teoria').then(
+        (m) => m.TEORIA_INEQUACOES_SEGUNDO_GRAU,
+      ),
     inequacoes: () =>
       import('@features/algebra/inequacoes/inequacoes.teoria').then((m) => m.TEORIA_INEQUACOES),
     polinomios: () =>
