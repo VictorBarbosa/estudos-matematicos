@@ -50,7 +50,8 @@ describe('geradorDerivacaoImplicita', () => {
     // É a propriedade que o tópico inteiro depende: a curva é montada A PARTIR
     // do ponto, e não o contrário, justamente para que isso nunca falhe.
     for (const nivel of NIVEIS) {
-      for (const exercicio of amostra(nivel, 60)) {
+      // A tangente horizontal não dá ponto: pede justamente achá-lo.
+      for (const exercicio of amostra(nivel, 60).filter((e) => e.enunciado.includes('ponto ('))) {
         const [, x, y] = /\((-?\d+), (-?\d+)\)/.exec(exercicio.enunciado)!;
         const constante = Number(
           /= (-?\d+)$/.exec(exercicio.enunciadoTex.replace(/\{,\}/g, '.'))![1],
@@ -81,7 +82,7 @@ describe('geradorDerivacaoImplicita', () => {
   });
 
   it('diagnostica quem inverte o sinal ao isolar', () => {
-    const exercicio = amostra('facil', 120)[0]!;
+    const exercicio = amostra('facil', 120).find((e) => e.enunciado.includes('Encontre dy/dx'))!;
     const resultado = corrigir(
       geradorDerivacaoImplicita,
       exercicio,
@@ -182,5 +183,41 @@ describe('derivação implícita', () => {
 
   it('a equação sai pronta para o enunciado', () => {
     expect(curvaImplicitaParaTex(circunferencia)).toBe('x^{2} + y^{2} = 25');
+  });
+});
+
+describe('geradorDerivacaoImplicita — derivada segunda e tangente horizontal', () => {
+  const rng = criarRng(31_415);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorDerivacaoImplicita.gerar(nivel, rng));
+
+  it('a derivada segunda confere com a diferença finita sobre o ramo da elipse', () => {
+    const casos = [...lote('medio'), ...lote('dificil')].filter((e) =>
+      e.id.startsWith('implicita-segunda'),
+    );
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, x0, y0] = /ponto \((-?\d+), (-?\d+)\)/.exec(e.enunciado)!.map(Number);
+      const [, a, b, c] = /^(\d*)x\^\{2\} \+ (\d*)y\^\{2\} = (\d+)$/.exec(e.enunciadoTex)!;
+      const [A, B, C] = [Number(a || 1), Number(b || 1), Number(c)];
+      const y = (x: number) => Math.sign(y0!) * Math.sqrt((C - A * x * x) / B);
+      const h = 1e-4;
+      const numerica = (y(x0! + h) - 2 * y(x0!) + y(x0! - h)) / (h * h);
+      expect(Math.abs(e.gabarito - numerica)).toBeLessThan(1e-3 * Math.max(1, Math.abs(e.gabarito)));
+    }
+  });
+
+  it('na tangente horizontal, o ponto está na curva e zera o numerador de dy/dx', () => {
+    const casos = lote('extremo').filter((e) => e.id.startsWith('implicita-horizontal'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, sinal, c] = /^x\^\{2\} ([+-]) xy \+ y\^\{2\} = (\d+)$/.exec(e.enunciadoTex)!;
+      const s = sinal === '+' ? 1 : -1;
+      const y = e.gabarito;
+      // 2x + s·y = 0 ⟹ x = −s·y/2; e o ponto precisa estar na curva.
+      const x = (-s * y) / 2;
+      expect(x * x + s * x * y + y * y).toBeCloseTo(Number(c), 9);
+      expect(2 * x + s * y).toBeCloseTo(0, 9);
+    }
   });
 });

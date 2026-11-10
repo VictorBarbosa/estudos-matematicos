@@ -114,4 +114,45 @@ export const TEORIA_LIMITES: readonly Teoria[] = [
     },
     vejaTambem: ['limites.tecnicas', 'limite.intuicao'],
   },
+  {
+    id: 'limites.existencia',
+    titulo: 'Quando o limite não existe',
+    resumo: '0/0 pede simplificar; número/0 é infinito; laterais diferentes, não existe.',
+    definicao:
+      'A substituição direta diz qual caminho seguir. Se dá um número, é o limite. Se dá 0/0, ' +
+      'nada está decidido: fatora-se ou racionaliza-se, e o limite pode existir. Se dá um número ' +
+      'diferente de zero sobre zero, a função explode: o limite é infinito (assíntota vertical). E ' +
+      'há o caso em que os dois laterais são números diferentes, como em |x|/x: o limite não ' +
+      'existe, mesmo sem nada ir ao infinito.',
+    formulas: [
+      {
+        tex: '\\lim_{x \\to a} f(x) = L \\iff \\lim_{x \\to a^{-}} f(x) = \\lim_{x \\to a^{+}} f(x) = L',
+      },
+      {
+        tex: '\\lim_{x \\to 0} \\frac{|x|}{x}: \\; -1 \\text{ pela esquerda}, \\; +1 \\text{ pela direita} \\;\\Rightarrow\\; \\nexists',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Pela direita, |x| = x; pela esquerda, |x| = −x.',
+        tex: '\\frac{|x|}{x} = \\begin{cases} 1 & x > 0 \\\\ -1 & x < 0 \\end{cases}',
+      },
+      {
+        descricao: 'Os laterais discordam: não há um número único do qual f se aproxime.',
+        tex: '1 \\neq -1',
+      },
+    ],
+    exemplo: {
+      enunciado: 'lim 3/(x − 2)² quando x → 2.',
+      passos: [
+        { descricao: 'Substituindo: 3 sobre 0.', tex: '\\frac{3}{0}' },
+        {
+          descricao:
+            'O denominador é um quadrado, positivo dos dois lados: a fração cresce sem limite.',
+          tex: '\\lim_{x \\to 2} \\frac{3}{(x - 2)^{2}} = +\\infty',
+        },
+      ],
+    },
+    vejaTambem: ['limites.tecnicas', 'laterais.definicao'],
+  },
 ];

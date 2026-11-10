@@ -12,6 +12,10 @@ import {
 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
+  exercicioSegundaImplicita,
+  exercicioTangenteHorizontal,
+} from '@features/calculo-1/derivacao-implicita/derivacao-implicita.segunda';
+import {
   FORMATO_NUMERICO_AMPLO,
   analisarNumero,
   numeroComCasas,
@@ -53,18 +57,37 @@ const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   extremo: ['mista', 'produto'],
 };
 
+type Pergunta = 'derivada' | 'tangente' | 'segunda' | 'horizontal';
+
+/**
+ * A derivada no ponto é a pergunta de entrada; a tangente (para que ela serve),
+ * a derivada segunda e o ponto de tangente horizontal vêm depois.
+ */
+const PERGUNTAS_POR_NIVEL: Readonly<Record<Nivel, readonly Pergunta[]>> = {
+  facil: ['derivada', 'tangente'],
+  medio: ['derivada', 'tangente', 'segunda'],
+  dificil: ['derivada', 'segunda', 'tangente'],
+  // O ponto de tangente horizontal pede resolver dy/dx = 0 junto com a curva:
+  // duas equações, a única pergunta que o Difícil não tem.
+  extremo: ['horizontal', 'tangente', 'derivada'],
+};
+
 export const geradorDerivacaoImplicita: GeradorExercicio<number> = {
   topicoId: 'derivacao-implicita',
   formatoResposta: FORMATO_NUMERICO_AMPLO,
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
+    const pergunta = rng.escolher(PERGUNTAS_POR_NIVEL[nivel]);
+    if (pergunta === 'segunda') return exercicioSegundaImplicita(nivel, rng);
+    if (pergunta === 'horizontal') return exercicioTangenteHorizontal(nivel, rng);
+
     const tipo = rng.escolher(TIPOS_POR_NIVEL[nivel]);
 
     // Nem todo sorteio serve: há pontos de tangente vertical, em que dy/dx não
     // existe. Tentamos de novo em vez de entregar um exercício sem resposta.
-    // No Extremo, metade das vezes a derivada é só o meio do caminho: pede-se
-    // a reta tangente, que é para que a derivada serve.
-    const pedeTangente = nivel === 'extremo' && rng.booleano();
+    // Na pergunta da tangente, a derivada é só o meio do caminho: pede-se a
+    // reta, que é para que a derivada serve.
+    const pedeTangente = pergunta === 'tangente';
 
     for (let tentativa = 0; tentativa < 40; tentativa++) {
       const candidato = sortear(tipo, nivel, rng);

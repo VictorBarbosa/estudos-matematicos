@@ -16,6 +16,10 @@ import {
 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
+  exercicioRetaTangenteTrig,
+  exercicioSegundaTrig,
+} from '@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.segunda';
+import {
   FORMATO_NUMERICO_AMPLO,
   analisarNumero,
   numeroComCasas,
@@ -43,14 +47,15 @@ const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 /** O enunciado avisa as duas formas aceitas, porque as duas são digitáveis. */
 const PEDIDO = 'Responda na forma exata ou com 3 casas decimais.';
 
-type Tipo = 'tabela' | 'cadeia' | 'tangente' | 'produto' | 'potencia';
+type Tipo = 'tabela' | 'cadeia' | 'tangente' | 'produto' | 'potencia' | 'segunda' | 'reta';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
-  facil: ['tabela'],
-  medio: ['cadeia', 'tangente', 'produto'],
-  dificil: ['cadeia', 'tangente', 'produto', 'potencia'],
-  // Potência de trigonométrica com argumento composto: cadeia duas vezes.
-  extremo: ['potencia', 'cadeia'],
+  facil: ['tabela', 'segunda'],
+  medio: ['cadeia', 'tangente', 'produto', 'segunda'],
+  dificil: ['cadeia', 'tangente', 'produto', 'potencia', 'segunda'],
+  // Potência com argumento composto (cadeia duas vezes) e a reta tangente,
+  // que só aparece aqui: a derivada usada para o que ela serve.
+  extremo: ['potencia', 'reta', 'cadeia'],
 };
 
 export const geradorDerivadasTrig: GeradorExercicio<number> = {
@@ -69,6 +74,10 @@ export const geradorDerivadasTrig: GeradorExercicio<number> = {
         return daTangente(nivel, rng);
       case 'produto':
         return doProduto(nivel, rng);
+      case 'segunda':
+        return exercicioSegundaTrig(nivel, rng);
+      case 'reta':
+        return exercicioRetaTangenteTrig(nivel, rng);
       default:
         return daPotencia(nivel, rng);
     }

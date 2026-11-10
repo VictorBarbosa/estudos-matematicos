@@ -65,8 +65,9 @@ describe('geradorDerivadasExpLog', () => {
         continue;
       }
 
-      const [, ponto] = /f'\((-?\d+)\)/.exec(exercicio.enunciado)!;
-      expect(Number(ponto), exercicio.enunciado).toBeGreaterThan(0);
+      // f'(x₀), f''(x₀) ou «em x = x₀» (a reta tangente).
+      const [, a, b] = /f'+\((-?\d+)\)|em x = (-?\d+)/.exec(exercicio.enunciado)!;
+      expect(Number(a ?? b), exercicio.enunciado).toBeGreaterThan(0);
     }
   });
 
@@ -185,5 +186,50 @@ describe('derivadas de exponencial e logaritmo', () => {
     expect(exponencialParaTex(3, -2)).toBe('3e^{-2x}');
     expect(logaritmoParaTex(1, 1)).toBe('\\ln\\left(x\\right)');
     expect(logaritmoParaTex(2, 5)).toBe('2\\ln\\left(5x\\right)');
+  });
+});
+
+describe('geradorDerivadasExpLog — derivada segunda e reta tangente', () => {
+  const rng = criarRng(16_180);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorDerivadasExpLog.gerar(nivel, rng));
+
+  it('a derivada segunda confere com a diferença finita', () => {
+    const casos = [...lote('facil'), ...lote('dificil')].filter((e) =>
+      e.id.startsWith('explog-segunda'),
+    );
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      let fn: (x: number) => number;
+      let x0: number;
+      const exp = /^explog-segunda-exp-(\d)(-?\d)-(-?\d)-/.exec(e.id);
+      if (exp) {
+        const [a, k] = [Number(exp[1]), Number(exp[2])];
+        fn = (x) => a * Math.exp(k * x);
+        x0 = Number(exp[3]);
+      } else {
+        const [, a, p] = /^explog-segunda-ln-(\d)-(\d)-/.exec(e.id)!;
+        fn = (x) => Number(a) * Math.log(x);
+        x0 = Number(p);
+      }
+      const h = 1e-3;
+      expect(e.gabarito).toBeCloseTo((fn(x0 + h) - 2 * fn(x0) + fn(x0 - h)) / (h * h), 2);
+    }
+  });
+
+  it('o coeficiente linear da tangente confere', () => {
+    const casos = lote('extremo').filter((e) => e.id.startsWith('explog-reta'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, tipo, a, k, x] = /^explog-reta-(e|l)-(\d)(-?\d)-(-?\d)-/.exec(e.id)!;
+      const fn =
+        tipo === 'e'
+          ? (t: number) => Number(a) * Math.exp(Number(k) * t)
+          : (t: number) => Number(a) * Math.log(t);
+      const x0 = Number(x);
+      const h = 1e-6;
+      const m = (fn(x0 + h) - fn(x0 - h)) / (2 * h);
+      expect(e.gabarito).toBeCloseTo(fn(x0) - m * x0, 3);
+    }
   });
 });

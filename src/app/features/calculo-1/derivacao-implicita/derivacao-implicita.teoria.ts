@@ -147,4 +147,41 @@ export const TEORIA_DERIVACAO_IMPLICITA: readonly Teoria[] = [
     ],
     vejaTambem: ['implicita.isolamento', 'implicita.quando-usar'],
   },
+  {
+    id: 'implicita.segunda',
+    titulo: 'A derivada segunda implícita',
+    resumo: 'Derive y′ de novo lembrando que y depende de x — e troque o y′ que reaparecer.',
+    definicao:
+      'Depois de achar y′ como uma fração em x e y, deriva-se essa fração pela regra do quociente. ' +
+      'Como y é função de x, toda derivada de y traz um y′, que se substitui pela expressão já ' +
+      'conhecida. Na elipse ax² + by² = c, a conta fecha em y″ = −ac/(b²y³): o sinal de y″ diz se a ' +
+      'curva é côncava para cima ou para baixo naquele ponto.',
+    formulas: [
+      {
+        tex: "ax^{2} + by^{2} = c \\;\\Rightarrow\\; y' = -\\frac{ax}{by} \\;\\Rightarrow\\; y'' = -\\frac{ac}{b^{2}y^{3}}",
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Regra do quociente em −ax/(by), com y dependendo de x.',
+        tex: "y'' = -\\frac{a \\cdot by - ax \\cdot by'}{(by)^{2}} = -\\frac{a(y - xy')}{by^{2}}",
+      },
+      {
+        descricao: 'Trocando y′ por −ax/(by) e usando ax² + by² = c.',
+        tex: "y - xy' = \\frac{by^{2} + ax^{2}}{by} = \\frac{c}{by} \\;\\Rightarrow\\; y'' = -\\frac{ac}{b^{2}y^{3}}",
+      },
+    ],
+    exemplo: {
+      enunciado: 'x² + y² = 25 no ponto (3, 4).',
+      passos: [
+        { descricao: 'A primeira derivada.', tex: "y' = -\\frac{x}{y} = -\\frac{3}{4}" },
+        {
+          descricao: 'A segunda, pelo atalho (a = b = 1, c = 25).',
+          tex: "y'' = -\\frac{25}{4^{3}} = -\\frac{25}{64} \\approx -0{,}3906",
+          nota: 'Negativa: no alto da circunferência a curva é côncava para baixo, como se espera.',
+        },
+      ],
+    },
+    vejaTambem: ['implicita.isolamento', 'implicita.tangente'],
+  },
 ];
