@@ -1,7 +1,9 @@
 <article class="prova">
   <header class="cabecalho">
     <h1>{{ texto('titulo', { sessao: titulo() }) }}</h1>
-    <p class="descricao">{{ texto('subtitulo', { tolerados: errosTolerados }) }}</p>
+    <p class="descricao">
+      {{ texto('subtitulo', { tolerados: errosTolerados(), total: questoes().length }) }}
+    </p>
   </header>
 
   @switch (fase()) {
@@ -39,7 +41,7 @@
             {{ texto('questaoDeTotal', { numero: numero(), total: total() }) }}
           </p>
           <p class="erros" [attr.data-limite]="noLimite()">
-            {{ texto('errosDe', { erros: erros(), tolerados: errosTolerados }) }}
+            {{ texto('errosDe', { erros: erros(), tolerados: errosTolerados() }) }}
           </p>
           <div
             class="barra"

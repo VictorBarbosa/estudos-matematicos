@@ -68,10 +68,13 @@ describe('plano da prova', () => {
       tipos.map((requisito) => requisito.conceito),
     );
 
+    // Sem tipos declarados, o tópico entra «questões por tópico» vezes (2),
+    // uma no Médio e outra no Difícil.
     for (const topicoId of basica.topicoIds.filter((id) => id !== 'fracoes')) {
       const items = plano.filter((item) => item.topicoId === topicoId);
-      expect(items.length, topicoId).toBe(1);
+      expect(items.length, topicoId).toBeGreaterThanOrEqual(2);
       expect(items[0]!.conceito, topicoId).toBeUndefined();
+      expect(new Set(items.slice(0, 2).map((item) => item.nivel)).size, topicoId).toBe(2);
     }
   });
 

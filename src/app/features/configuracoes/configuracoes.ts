@@ -1,3 +1,4 @@
+import { toleranciaDaProva } from '@core/prova/models/prova.model';
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
@@ -52,8 +53,9 @@ const ORDEM: readonly Ajuste[] = [
   ['etapa', 'acertosPorTipo'],
   ['escada', 'acertosParaSubir'],
   ['escada', 'errosParaDescer'],
-  ['prova', 'errosTolerados'],
+  ['prova', 'percentualDeAcerto'],
   ['prova', 'minimoDeQuestoes'],
+  ['prova', 'questoesPorTopico'],
 ];
 
 /**
@@ -99,9 +101,10 @@ export class Configuracoes {
   protected readonly resumoDaProva = computed(() => {
     const { prova } = this.servico.configuracao();
     return this.i18n.t('config.resumoProva', {
-      tolerados: prova.errosTolerados,
-      zera: prova.errosTolerados + 1,
+      percentual: prova.percentualDeAcerto,
+      porTopico: prova.questoesPorTopico,
       minimo: prova.minimoDeQuestoes,
+      tolerados: toleranciaDaProva(prova.minimoDeQuestoes, prova),
     });
   });
 

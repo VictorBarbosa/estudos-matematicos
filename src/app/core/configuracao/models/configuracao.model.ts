@@ -29,10 +29,22 @@ export interface EscadaDeNivel {
 
 /** A prova final de cada sessão. */
 export interface RegraDaProva {
-  /** Erros que a prova tolera; o seguinte zera a sessão. */
-  readonly errosTolerados: number;
+  /**
+   * Acerto mínimo, em %. Os erros tolerados saem dele e do tamanho da prova.
+   *
+   * Antes era um número fixo de erros (2), e a mesma régua valia 75% numa área
+   * de 8 questões e 88% numa de 16: quanto maior a área, mais severa a prova,
+   * sem ninguém ter decidido isso. Agora a exigência é a mesma em toda área.
+   */
+  readonly percentualDeAcerto: number;
   /** Quantas questões a prova tem, no mínimo. */
   readonly minimoDeQuestoes: number;
+  /**
+   * Quantas vezes cada tópico entra na prova, cada vez com forma de pergunta
+   * diferente e alternando Médio e Difícil. Com uma só, um tópico de seis
+   * tipos de pergunta era medido por um deles, sorteado.
+   */
+  readonly questoesPorTopico: number;
 }
 
 export interface Configuracao {
@@ -55,8 +67,9 @@ export const CONFIGURACAO_PADRAO: Configuracao = {
     errosParaDescer: 2,
   },
   prova: {
-    errosTolerados: 2,
+    percentualDeAcerto: 75,
     minimoDeQuestoes: 8,
+    questoesPorTopico: 2,
   },
 };
 
@@ -89,8 +102,9 @@ export const LIMITES: readonly LimiteDoAjuste[] = [
   { ajuste: ['etapa', 'acertosPorTipo'], minimo: 1, maximo: 20 },
   { ajuste: ['escada', 'acertosParaSubir'], minimo: 1, maximo: 20 },
   { ajuste: ['escada', 'errosParaDescer'], minimo: 1, maximo: 20 },
-  { ajuste: ['prova', 'errosTolerados'], minimo: 0, maximo: 20 },
+  { ajuste: ['prova', 'percentualDeAcerto'], minimo: 50, maximo: 100 },
   { ajuste: ['prova', 'minimoDeQuestoes'], minimo: 1, maximo: 60 },
+  { ajuste: ['prova', 'questoesPorTopico'], minimo: 1, maximo: 3 },
 ];
 
 function limiteDe(ajuste: Ajuste): LimiteDoAjuste {

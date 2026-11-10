@@ -40,18 +40,18 @@ describe('Configuracoes', () => {
     fixture.detectChanges();
   });
 
-  it('mostra os quatro blocos e os nove ajustes numéricos', () => {
+  it('mostra os quatro blocos e os dez ajustes numéricos', () => {
     expect(fixture.nativeElement.querySelectorAll('.bloco').length).toBe(4);
-    expect(fixture.nativeElement.querySelectorAll('.ajustes input').length).toBe(9);
+    expect(fixture.nativeElement.querySelectorAll('.ajustes input').length).toBe(10);
     expect(texto()).toContain('Para abrir a próxima etapa');
     expect(texto()).toContain('Prova final da sessão');
     expect(texto()).toContain('O seu plano de estudo');
   });
 
   it('escrever um número guarda o ajuste', async () => {
-    await escrever('Erros tolerados', '4');
+    await escrever('Acerto mínimo (%)', '80');
 
-    expect(config.prova().errosTolerados).toBe(4);
+    expect(config.prova().percentualDeAcerto).toBe(80);
   });
 
   it('o resumo em palavras acompanha o que foi ajustado', async () => {
@@ -62,12 +62,12 @@ describe('Configuracoes', () => {
     expect(texto()).toContain('acertar 6 dos últimos 6 exercícios');
   });
 
-  it('o resumo da prova conta qual erro zera a sessão', async () => {
-    expect(texto()).toContain('tolera 2 erros — o 3º zera');
+  it('o resumo da prova conta a régua de acerto e quantos erros ela tolera', async () => {
+    expect(texto()).toContain('exige 75% de acerto — numa prova de 8 questões, 2 erros');
 
-    await escrever('Erros tolerados', '5');
+    await escrever('Acerto mínimo (%)', '50');
 
-    expect(texto()).toContain('tolera 5 erros — o 6º zera');
+    expect(texto()).toContain('exige 50% de acerto — numa prova de 8 questões, 4 erros');
   });
 
   it('o valor fora do limite é preso, e a tela mostra o que valeu', async () => {
@@ -80,10 +80,10 @@ describe('Configuracoes', () => {
   it('o que saiu de fábrica fica marcado, com o valor original à vista', async () => {
     expect(fixture.nativeElement.querySelectorAll('.ajustes li.mudado').length).toBe(0);
 
-    await escrever('Erros tolerados', '4');
+    await escrever('Acerto mínimo (%)', '80');
 
     expect(fixture.nativeElement.querySelectorAll('.ajustes li.mudado').length).toBe(1);
-    expect(texto()).toContain('de fábrica: 2');
+    expect(texto()).toContain('de fábrica: 75');
   });
 
   /** A caixa de um tópico, pelo título visível. */
@@ -177,7 +177,7 @@ describe('Configuracoes', () => {
 
     expect(botao.disabled).toBe(true);
 
-    await escrever('Erros tolerados', '4');
+    await escrever('Acerto mínimo (%)', '80');
     expect(botao.disabled).toBe(false);
 
     botao.click();
@@ -185,6 +185,6 @@ describe('Configuracoes', () => {
     fixture.detectChanges();
 
     expect(config.intocada()).toBe(true);
-    expect(campo('Erros tolerados').value).toBe('2');
+    expect(campo('Acerto mínimo (%)').value).toBe('75');
   });
 });

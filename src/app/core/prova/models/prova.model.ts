@@ -23,14 +23,22 @@ import { CURRICULO } from '@curriculo/curriculo';
  */
 
 /**
- * Erros que a prova tolera.
+ * Quantos erros uma prova de `total` questões tolera, pela régua de acerto.
  *
- * Com {@link ERROS_TOLERADOS} igual a 2, o terceiro erro zera a sessão. O
- * aviso aparece quando o segundo erro é cometido, porque chegar ao limite sem
- * ter sido avisado seria injusto: o aluno precisa saber que o próximo erro
- * custa a sessão antes de responder a próxima questão.
+ * Com 75%, uma prova de 8 questões tolera 2 erros e uma de 34, 8: a mesma
+ * exigência em toda área. O aviso aparece quando o último erro tolerado é
+ * cometido, porque chegar ao limite sem ter sido avisado seria injusto.
  */
-export const ERROS_TOLERADOS = CONFIGURACAO_PADRAO.prova.errosTolerados;
+export function toleranciaDaProva(
+  total: number,
+  regra: RegraDaProva = CONFIGURACAO_PADRAO.prova,
+): number {
+  // O arredondamento corrige a imprecisão de 8 × 0,25 = 1,9999….
+  return Math.floor(Number((total * (100 - regra.percentualDeAcerto)) / 100 + 1e-9));
+}
+
+/** Os erros tolerados na prova de tamanho mínimo, com a régua de fábrica. */
+export const ERROS_TOLERADOS = toleranciaDaProva(CONFIGURACAO_PADRAO.prova.minimoDeQuestoes);
 
 /**
  * Quantas questões a prova tem, no mínimo.
@@ -116,38 +124,42 @@ export function planoDaProva(
   sessao: Sessao,
   regra: RegraDaProva = CONFIGURACAO_PADRAO.prova,
 ): readonly ItemDaProva[] {
-  const base: { readonly topicoId: string; readonly conceito?: string }[] = [];
+  // A primeira volta: um item por tipo declarado, ou um por tópico sem tipos.
+  const primeira: { readonly topicoId: string; readonly conceito?: string }[] = [];
+  // As voltas seguintes repetem só os tópicos sem tipos — os com tipos já
+  // estão cobertos tipo a tipo, e repeti-los inflaria a prova.
+  const repetiveis: { readonly topicoId: string }[] = [];
 
   for (const topicoId of sessao.topicoIds) {
     const requisitos = REQUISITOS_POR_TOPICO[topicoId] ?? [];
-
     if (requisitos.length === 0) {
-      base.push({ topicoId });
-      continue;
-    }
-
-    for (const requisito of requisitos) {
-      base.push({ topicoId, conceito: requisito.conceito });
+      primeira.push({ topicoId });
+      repetiveis.push({ topicoId });
+    } else {
+      for (const requisito of requisitos) primeira.push({ topicoId, conceito: requisito.conceito });
     }
   }
 
-  const completo = [...base];
-  while (completo.length < regra.minimoDeQuestoes) {
-    completo.push(base[completo.length % base.length]!);
+  const completo: { readonly topicoId: string; readonly conceito?: string }[] = [...primeira];
+  for (let volta = 1; volta < regra.questoesPorTopico; volta++) completo.push(...repetiveis);
+
+  const fonte = repetiveis.length > 0 ? repetiveis : primeira;
+  for (let i = 0; completo.length < regra.minimoDeQuestoes; i++) {
+    completo.push(fonte[i % fonte.length]!);
   }
 
   /*
-   * O nível alterna para CADA tópico, não pela posição na prova. Alternando
-   * pela posição, com um número par de tópicos o mesmo tópico caía sempre no
-   * mesmo nível: no Pré-cálculo, o primeiro só via Médio e o segundo só
-   * Difícil. Somar a volta (quantas vezes a lista já se repetiu) desfaz isso.
+   * O nível alterna para CADA tópico: a primeira aparição dele sai num nível,
+   * a segunda no outro. O ponto de partida alterna entre os tópicos, para a
+   * prova não começar toda no Médio.
    */
-  const par = base.length % 2 === 0;
-
-  return completo.map((item, indice) => {
-    const volta = Math.floor(indice / base.length);
-    const posicao = indice + (par ? volta : 0);
-    return { ...item, nivel: posicao % 2 === 0 ? 'medio' : 'dificil' };
+  const ordem = new Map(sessao.topicoIds.map((id, indice) => [id, indice]));
+  const vistas = new Map<string, number>();
+  return completo.map((item) => {
+    const vez = vistas.get(item.topicoId) ?? 0;
+    vistas.set(item.topicoId, vez + 1);
+    const paridade = (vez + (ordem.get(item.topicoId) ?? 0)) % 2;
+    return { ...item, nivel: paridade === 0 ? 'medio' : 'dificil' };
   });
 }
 

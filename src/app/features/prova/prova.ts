@@ -12,6 +12,7 @@ import { I18nService } from '@core/i18n/services/i18n.service';
 import { textoLocal } from '@core/i18n/textos-locais';
 import {
   ERROS_TOLERADOS,
+  toleranciaDaProva,
   ItemDaProva,
   Sessao,
   errosRestantes,
@@ -78,7 +79,10 @@ export class Prova {
 
   protected readonly i18n = inject(I18nService);
   protected readonly texto = textoLocal(textos);
-  protected readonly errosTolerados = ERROS_TOLERADOS;
+  /** Os erros que ESTA prova tolera: a régua de acerto aplicada ao tamanho dela. */
+  protected readonly errosTolerados = computed(() =>
+    toleranciaDaProva(this.questoes().length, this.configuracao.prova()),
+  );
 
   /**
    * A sessão vem da URL e não muda enquanto a página vive.
@@ -122,11 +126,9 @@ export class Prova {
   protected readonly acertou = computed(() => this.validacao()?.veredito === 'correto');
 
   /** O próximo erro zera a sessão. */
-  protected readonly noLimite = computed(() =>
-    noLimite(this.erros(), this.configuracao.prova().errosTolerados),
-  );
+  protected readonly noLimite = computed(() => noLimite(this.erros(), this.errosTolerados()));
   protected readonly restantes = computed(() =>
-    errosRestantes(this.erros(), this.configuracao.prova().errosTolerados),
+    errosRestantes(this.erros(), this.errosTolerados()),
   );
 
   protected readonly ultima = computed(() => this.numero() === this.total());
@@ -213,7 +215,7 @@ export class Prova {
     const erros = this.erros() + 1;
     this.erros.set(erros);
 
-    if (reprovou(erros, this.configuracao.prova().errosTolerados)) {
+    if (reprovou(erros, this.errosTolerados())) {
       // Grava na hora: recarregar a página não escapa daqui.
       this.provas.reprovar(this.sessaoId);
       this.perdida.set(true);

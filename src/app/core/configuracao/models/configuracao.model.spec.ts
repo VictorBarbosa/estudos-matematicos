@@ -18,7 +18,7 @@ describe('configuração', () => {
         acertosPorTipo: 3,
       },
       escada: { acertosParaSubir: 3, errosParaDescer: 2 },
-      prova: { errosTolerados: 2, minimoDeQuestoes: 8 },
+      prova: { percentualDeAcerto: 75, minimoDeQuestoes: 8, questoesPorTopico: 2 },
     });
   });
 
@@ -32,9 +32,9 @@ describe('configuração', () => {
   });
 
   it('muda um número e deixa o resto onde estava', () => {
-    const novo = definir(CONFIGURACAO_PADRAO, ['prova', 'errosTolerados'], 5);
+    const novo = definir(CONFIGURACAO_PADRAO, ['prova', 'percentualDeAcerto'], 80);
 
-    expect(novo.prova.errosTolerados).toBe(5);
+    expect(novo.prova.percentualDeAcerto).toBe(80);
     expect(novo.prova.minimoDeQuestoes).toBe(8);
     expect(novo.etapa).toEqual(CONFIGURACAO_PADRAO.etapa);
   });
@@ -50,7 +50,7 @@ describe('configuração', () => {
 
   it('arredonda o que vier quebrado', () => {
     expect(
-      definir(CONFIGURACAO_PADRAO, ['prova', 'errosTolerados'], 2.7).prova.errosTolerados,
+      definir(CONFIGURACAO_PADRAO, ['prova', 'questoesPorTopico'], 2.7).prova.questoesPorTopico,
     ).toBe(3);
   });
 
@@ -88,16 +88,17 @@ describe('configuração', () => {
   it('armazenamento corrompido volta ao de fábrica, campo a campo', () => {
     expect(validar(null)).toEqual(CONFIGURACAO_PADRAO);
     expect(validar('lixo')).toEqual(CONFIGURACAO_PADRAO);
-    expect(validar({ prova: { errosTolerados: 'muitos' } })).toEqual(CONFIGURACAO_PADRAO);
+    expect(validar({ prova: { percentualDeAcerto: 'muitos' } })).toEqual(CONFIGURACAO_PADRAO);
     // Um campo bom entre campos ruins é aproveitado.
-    expect(validar({ prova: { errosTolerados: 5, minimoDeQuestoes: null } }).prova).toEqual({
-      errosTolerados: 5,
+    expect(validar({ prova: { percentualDeAcerto: 80, minimoDeQuestoes: null } }).prova).toEqual({
+      percentualDeAcerto: 80,
       minimoDeQuestoes: 8,
+      questoesPorTopico: 2,
     });
   });
 
   it('reconhece a configuração intocada', () => {
     expect(ehPadrao(CONFIGURACAO_PADRAO)).toBe(true);
-    expect(ehPadrao(definir(CONFIGURACAO_PADRAO, ['prova', 'errosTolerados'], 1))).toBe(false);
+    expect(ehPadrao(definir(CONFIGURACAO_PADRAO, ['prova', 'percentualDeAcerto'], 90))).toBe(false);
   });
 });

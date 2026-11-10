@@ -26,13 +26,13 @@ describe('ConfiguracaoService', () => {
 
   it('o que foi ajustado sobrevive a uma aba nova', () => {
     const config = criar();
-    config.definir(['prova', 'errosTolerados'], 4);
+    config.definir(['prova', 'percentualDeAcerto'], 80);
     TestBed.tick();
 
     TestBed.resetTestingModule();
     const outra = criar();
 
-    expect(outra.prova().errosTolerados).toBe(4);
+    expect(outra.prova().percentualDeAcerto).toBe(80);
     expect(outra.intocada()).toBe(false);
   });
 

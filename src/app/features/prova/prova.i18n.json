@@ -10,9 +10,9 @@
     "en": "Final exam — {sessao}"
   },
   "subtitulo": {
-    "pt": "Uma questão de cada assunto da sessão. A prova tolera {tolerados} erros; o próximo zera a sessão inteira.",
-    "fr": "Une question par sujet de la session. L’examen tolère {tolerados} erreurs ; la suivante remet toute la session à zéro.",
-    "en": "One question from each subject of the session. The exam allows {tolerados} mistakes; the next one wipes the whole session."
+    "pt": "Cada assunto da sessão aparece em duas formas, no Médio e no Difícil. São {total} questões, e a prova tolera {tolerados} erros (75% de acerto); o próximo zera a sessão inteira.",
+    "fr": "Chaque sujet de la session apparaît sous deux formes, au niveau Moyen et Difficile. {total} questions ; l’examen tolère {tolerados} erreurs (75 % de réussite) ; la suivante remet toute la session à zéro.",
+    "en": "Each subject of the session appears in two forms, at Medium and Hard. {total} questions; the exam allows {tolerados} mistakes (75% correct); the next one wipes the whole session."
   },
   "carregando": {
     "pt": "Montando a prova…",
