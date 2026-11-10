@@ -105,7 +105,7 @@ function exercicioMultiplicativo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Escolhas independentes multiplicam.' : undefined,
+    dica: 'Escolhas independentes multiplicam: opções da primeira × opções da segunda × …',
   };
 }
 
@@ -147,6 +147,7 @@ function exercicioArranjo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `Com ordem: ${n} opções para a 1ª posição, ${n - 1} para a 2ª, e assim por ${p} posições.`,
   };
 }
 
@@ -188,7 +189,7 @@ function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Sem ordem: divida o arranjo por p!.' : undefined,
+    dica: `Sem ordem: faça o arranjo de ${n} tomados ${p} a ${p} e divida por ${p}!, as ordens que contam igual.`,
   };
 }
 
@@ -254,6 +255,7 @@ function exercicioAnagrama(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `São ${palavra.length} letras: ${palavra.length}!, dividido pelo fatorial de quantas vezes cada letra se repete.`,
   };
 }
 
@@ -311,5 +313,6 @@ function exercicioComiteMisto(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `Escolha cada grupo à parte — C(${homens}, ${escolhidosH}) e C(${mulheres}, ${escolhidasM}) — e multiplique.`,
   };
 }

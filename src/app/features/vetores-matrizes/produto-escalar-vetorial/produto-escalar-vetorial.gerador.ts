@@ -124,7 +124,7 @@ function exercicioEscalar(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'a·b = aₓbₓ + a_yb_y' : undefined,
+    dica: 'a·b = aₓbₓ + a_yb_y: multiplique x com x, y com y, e some.',
   };
 }
 
@@ -164,6 +164,7 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `cos θ = a·b / (|a| |b|): calcule o escalar (${a.x})(${b.x}) + (${a.y})(${b.y}), os dois módulos, e depois o arco-cosseno.`,
   };
 }
 
@@ -212,6 +213,7 @@ function exercicioProjecao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: 'A projeção escalar de a sobre b é a·b dividido por |b|: o escalar e só o módulo de quem recebe a sombra.',
   };
 }
 
@@ -259,7 +261,7 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'A = |aₓb_y − a_ybₓ|' : undefined,
+    dica: 'A = |aₓb_y − a_ybₓ|: o determinante das componentes, em módulo.',
   };
 }
 
@@ -324,5 +326,6 @@ function exercicioTrabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `W = F · d · cos θ = ${forca} × ${deslocamento} × cos ${angulo}°: só a parte da força ao longo do deslocamento trabalha.`,
   };
 }

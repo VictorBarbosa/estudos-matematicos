@@ -199,7 +199,7 @@ function lerSomatorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
       numero(resolucao.resultado),
       geradorNotacao.saoEquivalentes,
     ),
-    dica: nivel === 'facil' ? 'Escreva as parcelas uma a uma antes de somar.' : undefined,
+    dica: 'Escreva as parcelas uma a uma, trocando k por cada valor do índice, e só depois some.',
   };
 }
 
@@ -237,6 +237,7 @@ function lerProdutorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
       numero(resolucao.resultado),
       geradorNotacao.saoEquivalentes,
     ),
+    dica: `O Π multiplica: troque k por 1, 2, …, ${ate} e multiplique os termos um a um.`,
   };
 }
 
@@ -291,6 +292,7 @@ function lerModuloFatorial(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
       numero(resultado),
       geradorNotacao.saoEquivalentes,
     ),
+    dica: `|${dentro}| tira o sinal; ${n}! é ${Array.from({ length: n }, (_, i) => n - i).join(' × ')}.`,
   };
 }
 
@@ -336,7 +338,7 @@ function lerIntervalo(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
       numero(resolucao.resultado),
       geradorNotacao.saoEquivalentes,
     ),
-    dica: nivel === 'facil' ? 'Colchete inclui a ponta; parêntese não.' : undefined,
+    dica: 'Colchete inclui a ponta; parêntese não.',
   };
 }
 
@@ -389,6 +391,11 @@ function lerConjuntos(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
       numero(resolucao.resultado.length),
       geradorNotacao.saoEquivalentes,
     ),
+    dica: {
+      uniao: 'União (∪): junte os elementos dos dois conjuntos, sem repetir.',
+      intersecao: 'Interseção (∩): fique só com os elementos que estão nos DOIS.',
+      diferenca: 'Diferença (A − B): os elementos de A que NÃO estão em B.',
+    }[operacao],
   };
 }
 
@@ -438,7 +445,7 @@ function lerFuncao(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
       numero(resultado),
       geradorNotacao.saoEquivalentes,
     ),
-    dica: nivel === 'facil' ? 'f(3) quer dizer: troque todo x por 3.' : undefined,
+    dica: 'f(número) quer dizer: troque todo x por esse número e calcule.',
   };
 }
 
@@ -482,8 +489,22 @@ function escrever(
       gabarito,
       geradorNotacao.saoEquivalentes,
     ),
-    dica: nivel === 'facil' ? 'Os botões abaixo do campo escrevem os símbolos.' : undefined,
+    dica: dicaDaEscrita(texto),
   };
+}
+
+/** A dica de cada frase a escrever: qual símbolo procurar nos botões. */
+function dicaDaEscrita(texto: string): string {
+  if (texto.startsWith('para todo')) {
+    return '«Para todo» é ∀; depois vem o conjunto e a condição: ∀x ∈ conjunto, condição.';
+  }
+  if (texto.startsWith('existe')) return '«Existe» é ∃: ∃x ∈ conjunto tal que a condição vale.';
+  if (texto.includes('soma de')) {
+    return 'A soma é Σ, com o índice e o início embaixo (k = início) e o fim em cima.';
+  }
+  if (texto.includes('função')) return 'Uma função de A em B se escreve f: A → B.';
+  if (texto.includes('pertence')) return '«Pertence» é ∈, e o conjunto vem depois: número ∈ ℕ.';
+  return 'Os botões abaixo do campo escrevem os símbolos.';
 }
 
 const CONJUNTOS: readonly { readonly nome: string; readonly simbolo: string }[] = [

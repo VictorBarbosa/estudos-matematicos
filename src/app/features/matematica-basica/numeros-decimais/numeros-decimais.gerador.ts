@@ -120,6 +120,7 @@ function exercicioDizimaSimples(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       gabarito,
       saoEquivalentes,
     ),
+    dica: `O período «${periodo}» tem ${periodo.length} algarismo(s): ele vai no numerador, e no denominador vai um 9 para cada algarismo.`,
   };
 }
 
@@ -160,6 +161,7 @@ function exercicioDizimaComposta(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       gabarito,
       saoEquivalentes,
     ),
+    dica: `Numerador: o número até o fim do primeiro período (${naoPeriodica}${periodo}) menos a parte que não repete (${naoPeriodica}). Denominador: um 9 por algarismo do período e um 0 por algarismo que não repete.`,
   };
 }
 

@@ -131,7 +131,7 @@ function doEscore(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'normal.padronizacao',
       },
     ],
-    dica: nivel === 'facil' ? 'Subtraia a média e divida pelo desvio padrão.' : undefined,
+    dica: `Subtraia a média e divida pelo desvio: z = (${valor} − ${media}) / ${desvio}.`,
   });
 }
 
@@ -181,6 +181,7 @@ function daAreaAbaixo(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'normal.area',
       },
     ],
+    dica: `Padronize: z = (${valor} − ${media}) / ${desvio}. A proporção ABAIXO é a área à esquerda de z na tabela.`,
   });
 }
 
@@ -234,6 +235,7 @@ function daAreaAcima(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'normal.simetria',
       },
     ],
+    dica: `Padronize: z = (${valor} − ${media}) / ${desvio}. Acima é 1 menos a área à esquerda de z.`,
   });
 }
 
@@ -288,6 +290,7 @@ function daAreaEntre(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'normal.area',
       },
     ],
+    dica: `Padronize as duas pontas, (${de} − ${media}) / ${desvio} e (${ate} − ${media}) / ${desvio}, e subtraia as áreas à esquerda.`,
   });
 }
 
@@ -391,6 +394,7 @@ function daRegraEmpirica(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'normal.curva',
       },
     ],
+    dica: 'Regra 68–95–99,7: a até 1, 2 e 3 desvios da média ficam cerca de 68%, 95% e 99,7%.',
   });
 }
 

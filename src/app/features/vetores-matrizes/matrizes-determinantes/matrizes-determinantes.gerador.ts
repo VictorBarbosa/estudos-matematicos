@@ -124,7 +124,7 @@ function exercicioDet2(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'det = ad − bc' : undefined,
+    dica: 'det = ad − bc: produto da diagonal principal menos o da secundária.',
   };
 }
 
@@ -180,6 +180,7 @@ function exercicioDet3(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `Regra de Sarrus: repita as duas primeiras colunas à direita; some os produtos das três diagonais que descem e subtraia os das três que sobem. A 1ª linha é ${m[0]!.join(', ')}.`,
   };
 }
 
@@ -234,10 +235,7 @@ function exercicioEntradaProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica:
-      nivel === 'facil'
-        ? 'Linha de A vezes coluna de B: multiplique termo a termo e some.'
-        : undefined,
+    dica: `Linha de A vezes coluna de B: para a entrada (${i + 1},${j + 1}), a linha ${i + 1} de A vezes a coluna ${j + 1} de B, termo a termo, e some.`,
   };
 }
 
@@ -308,6 +306,7 @@ function exercicioCramer(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: 'Cramer: x = Dₓ / D. D é o determinante dos coeficientes; Dₓ troca a coluna de x pelos termos independentes.',
   };
 }
 
@@ -364,5 +363,6 @@ function exercicioDetProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: 'Não precisa multiplicar as matrizes: det(A·B) = det A × det B. Calcule cada um (ad − bc) e multiplique.',
   };
 }

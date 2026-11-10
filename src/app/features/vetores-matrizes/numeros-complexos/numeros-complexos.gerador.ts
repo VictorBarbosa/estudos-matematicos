@@ -142,7 +142,7 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? '|z| = √(a² + b²)' : undefined,
+    dica: `|z| é a distância à origem: some os QUADRADOS das partes, (${z.real})² + (${z.imaginario})², e tire a raiz.`,
   };
 }
 
@@ -200,6 +200,10 @@ function exercicioProduto(parte: 'real' | 'imaginario', nivel: Nivel, rng: Rng):
       gabarito,
       proximos,
     ),
+    dica:
+      parte === 'real'
+        ? `Distribua os quatro produtos. Lembre que i·i = i² = −1: o termo (${a.imaginario}i)(${b.imaginario}i) vai para a parte REAL com o sinal trocado.`
+        : `Distribua os quatro produtos; a parte imaginária junta os dois termos cruzados: (${a.real})(${b.imaginario}) + (${a.imaginario})(${b.real}).`,
   };
 }
 
@@ -262,6 +266,7 @@ function exercicioArgumento(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `Calcule arctg(${z.imaginario}/${z.real}) e corrija pelo quadrante: o ponto (${z.real}, ${z.imaginario}) está no ${z.real > 0 ? (z.imaginario > 0 ? '1º' : '4º') : z.imaginario > 0 ? '2º' : '3º'} quadrante.`,
   };
 }
 
@@ -324,7 +329,7 @@ function exercicioPotenciaDeI(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Divida o expoente por 4 e olhe o resto.' : undefined,
+    dica: `As potências de i repetem de 4 em 4: divida ${expoente} por 4 e olhe o resto.`,
   };
 }
 
@@ -378,5 +383,6 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: `Multiplique em cima e embaixo pelo conjugado do denominador, ${escrever({ real: b.real, imaginario: -b.imaginario })}: embaixo fica (${b.real})² + (${b.imaginario})², um número real.`,
   };
 }

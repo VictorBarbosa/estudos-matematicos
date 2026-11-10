@@ -120,7 +120,7 @@ function exercicioDado(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'P = favoráveis / possíveis' : undefined,
+    dica: 'P = favoráveis / possíveis',
   };
 }
 
@@ -173,6 +173,7 @@ function exercicioSemReposicao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `Sem reposição a urna muda: a 1ª vermelha tem ${vermelhas}/${total}; a 2ª, ${vermelhas - 1}/${total - 1}. Multiplique.`,
   };
 }
 
@@ -223,10 +224,7 @@ function exercicioAoMenosUm(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica:
-      nivel === 'medio'
-        ? 'Pense no contrário: a chance de NUNCA acontecer é (1 − p) elevado a n. «Ao menos um» é 1 menos isso.'
-        : undefined,
+    dica: 'Pense no contrário: a chance de NUNCA acontecer é (1 − p) elevado a n. «Ao menos um» é 1 menos isso.',
   };
 }
 
@@ -281,10 +279,7 @@ function exercicioUniao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica:
-      nivel === 'facil'
-        ? 'Conte as faces que servem, sem contar a mesma face duas vezes, e divida por 6.'
-        : undefined,
+    dica: 'Conte as faces que servem, sem contar a mesma face duas vezes, e divida por 6.',
   };
 }
 
@@ -344,5 +339,6 @@ function exercicioComCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `Favoráveis: escolher ${retiradas} entre as ${boas} boas, C(${boas}, ${retiradas}). Possíveis: C(${total}, ${retiradas}).`,
   };
 }
