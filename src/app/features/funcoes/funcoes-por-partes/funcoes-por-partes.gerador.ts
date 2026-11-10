@@ -184,6 +184,10 @@ function doSalto(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'por-partes.salto',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? `Substitua x = ${fronteira} em cada trecho: o de baixo dá o limite pela esquerda, o de cima pela direita. Depois faça direita menos esquerda.`
+        : undefined,
   });
 }
 
@@ -229,6 +233,10 @@ function doLateral(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'por-partes.salto',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `Pela ${pelaEsquerda ? 'esquerda, x fica um pouco abaixo' : 'direita, x fica um pouco acima'} de ${fronteira}: use o trecho que vale ali e substitua x = ${fronteira}.`
+        : undefined,
   });
 }
 

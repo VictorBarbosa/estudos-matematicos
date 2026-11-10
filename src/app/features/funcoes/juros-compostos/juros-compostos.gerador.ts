@@ -88,6 +88,10 @@ export const geradorJuros: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? `Escreva (1 + ${String(taxa / 100).replace('.', ',')})ⁿ = ${comoTexto}: o capital se cancela. Como n está no expoente, use logaritmo.`
+            : undefined,
       };
     }
 

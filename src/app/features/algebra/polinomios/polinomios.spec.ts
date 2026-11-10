@@ -119,11 +119,15 @@ describe('geradorPolinomios', () => {
       const a = sinal === '-' ? Number(modulo) : -Number(modulo);
 
       const { quociente } = dividirComPassos(p, Polinomio.de(-a, 1)).resultado;
+      // O expoente vem como ² ou ³ no texto (antes era «x^2», cru).
+      const expoente = /coeficiente de x([²³])/.exec(exercicio.enunciado)?.[1];
       const grau = /termo constante/.test(exercicio.enunciado)
         ? 0
-        : /coeficiente de x\^(\d+)/.exec(exercicio.enunciado)
-          ? Number(/coeficiente de x\^(\d+)/.exec(exercicio.enunciado)![1])
-          : 1;
+        : expoente === '²'
+          ? 2
+          : expoente === '³'
+            ? 3
+            : 1;
 
       expect(exercicio.gabarito).toBeCloseTo(quociente.coeficiente(grau), 9);
     }

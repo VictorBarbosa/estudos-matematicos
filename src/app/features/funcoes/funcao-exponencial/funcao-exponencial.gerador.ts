@@ -149,6 +149,10 @@ export const geradorExponencial: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? `Dobrar é chegar a ${base}^t = 2. O t está no expoente: aplique logaritmo dos dois lados.`
+            : undefined,
       };
     }
 
@@ -258,6 +262,10 @@ export const geradorExponencial: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil'
+          ? `Primeiro a potência ${base} elevado a ${x}, depois multiplique por ${inicial}.`
+          : undefined,
     };
   },
 

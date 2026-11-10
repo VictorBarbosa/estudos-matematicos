@@ -166,6 +166,10 @@ function doPontoX(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'transformacoes.dentro-e-fora',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `Dentro dos parênteses a conta é ao avesso: ache o x que faz o argumento valer ${ponto.x}.`
+        : undefined,
   });
 }
 
@@ -213,6 +217,10 @@ function doPontoY(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'transformacoes.dentro-e-fora',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `Fora dos parênteses a conta é direta: multiplique a ordenada ${ponto.y} por ${formatar(t.a)} e depois some o deslocamento ${formatar(t.k)}.`
+        : undefined,
   });
 }
 
@@ -299,6 +307,10 @@ function doZeroDeslocado(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'transformacoes.dentro-e-fora',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `O zero anda junto com o gráfico: ache o x que faz o argumento de f valer ${zero}.`
+        : undefined,
   });
 }
 

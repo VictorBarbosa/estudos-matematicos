@@ -171,7 +171,17 @@ export const geradorOndas: GeradorExercicio<number> = {
       resolucao: { resultado: config.gabarito, passos: [...config.passos] },
       conceitos: [config.conceito, 'funcoes-trig.periodo'],
       armadilhas: semColisoes([...config.armadilhas], config.gabarito, proximos),
-      dica: nivel === 'facil' && pergunta === 'periodo' ? 'O período é 2π sobre B.' : undefined,
+      // Cada pergunta ganha dica no nível em que estreia.
+      dica:
+        nivel === 'facil' && pergunta === 'periodo'
+          ? 'O período é 2π sobre B.'
+          : nivel === 'facil' && pergunta === 'amplitude'
+            ? `A amplitude é o tamanho do número que multiplica o seno, sem o sinal: |${amplitude}|.`
+            : nivel === 'medio' && pergunta === 'maximo'
+              ? `O seno chega no máximo a 1. Multiplique pela amplitude ${Math.abs(amplitude)} e some o deslocamento ${deslocamento}.`
+              : nivel === 'dificil' && pergunta === 'minimo'
+                ? `O seno desce no mínimo a −1: o menor valor é −${Math.abs(amplitude)} mais o deslocamento ${deslocamento}.`
+                : undefined,
     };
   },
 

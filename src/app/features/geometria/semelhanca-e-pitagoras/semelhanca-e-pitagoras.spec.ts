@@ -12,7 +12,10 @@ describe('geradorSemelhanca', () => {
   it('a dica da escala chega à tela, com o número do enunciado', () => {
     // Estava presa no Fácil, nível em que a escala não é sorteada: escrita no
     // código, nunca vista. E dizia «k^2», cru, em texto corrido.
-    const comDica = amostra('medio', 200).filter((e) => e.dica !== undefined);
+    // Outras perguntas do Médio também têm dica agora; esta trava é a da escala.
+    const comDica = amostra('medio', 200).filter(
+      (e) => e.dica !== undefined && e.enunciado.includes('Ampliando'),
+    );
 
     expect(comDica.length).toBeGreaterThan(0);
 

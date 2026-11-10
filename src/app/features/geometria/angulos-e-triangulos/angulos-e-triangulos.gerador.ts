@@ -106,7 +106,11 @@ function exercicioSomaInternos(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Sᵢ = (n − 2) · 180°' : undefined,
+    // O nome do polígono muda a forma do enunciado; os novos aparecem no Médio.
+    dica:
+      nivel === 'facil' || nivel === 'medio'
+        ? `Sᵢ = (n − 2) · 180°, com n = ${lados} lados.`
+        : undefined,
   };
 }
 
@@ -151,6 +155,7 @@ function exercicioAnguloRegular(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `Some os internos com (${lados} − 2) · 180° e divida pelos ${lados} ângulos, que são iguais.`,
   };
 }
 
@@ -264,5 +269,6 @@ function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       lados,
       proximos,
     ),
+    dica: `Passe pelo ângulo externo: 180° − ${Number(angulo.toFixed(2))}°. Os externos de qualquer polígono somam 360°.`,
   };
 }

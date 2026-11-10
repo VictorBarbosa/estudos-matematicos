@@ -136,6 +136,10 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
             gabarito,
             saoEquivalentes,
           ),
+          dica:
+            nivel === 'medio'
+              ? `Calcule f(1) e f(0) e subtraia: quanto y mudou quando x passou de 0 para 1?`
+              : undefined,
         };
       }
 
@@ -178,6 +182,10 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
             gabarito,
             saoEquivalentes,
           ),
+          dica:
+            nivel === 'facil'
+              ? `Troque x por ${x}: primeiro ${a} vezes ${x < 0 ? `(${x})` : x}, depois some ${b < 0 ? `(${b})` : b}.`
+              : undefined,
         };
       }
     }

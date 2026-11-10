@@ -119,7 +119,15 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? (figura === 'triangulo' ? 'A = b·h / 2' : 'A = b·h') : undefined,
+    // O trapézio só entra do Médio em diante: ele estreia ali, com a sua dica.
+    dica:
+      nivel === 'facil'
+        ? figura === 'triangulo'
+          ? 'A = b·h / 2'
+          : 'A = b·h'
+        : nivel === 'medio' && figura === 'trapezio'
+          ? `Trapézio: some as bases (${base} + ${baseMenor}), multiplique pela altura ${altura} e divida por 2.`
+          : undefined,
   };
 }
 
@@ -181,6 +189,12 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? triangulo
+          ? `A = b·h / 2, então h = 2·A / b = 2 · ${area} / ${base}.`
+          : `A = b·h, então h = A / b = ${area} / ${base}.`
+        : undefined,
   };
 }
 

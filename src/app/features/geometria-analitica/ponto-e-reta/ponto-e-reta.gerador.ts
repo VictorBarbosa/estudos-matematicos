@@ -176,6 +176,10 @@ export const geradorPontoReta: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'medio'
+          ? `m = Δy / Δx: (${b.y} − ${a.y}) dividido por (${b.x} − ${a.x}), sempre na mesma ordem dos pontos.`
+          : undefined,
     };
   },
 

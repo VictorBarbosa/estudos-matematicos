@@ -101,6 +101,10 @@ export const geradorCirculo: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? `180° é π radianos: multiplique ${graus} por π e divida por 180.`
+            : undefined,
       };
     }
 
@@ -163,6 +167,10 @@ export const geradorCirculo: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'medio'
+          ? `${graus}° está no ${quadrante(graus)}º quadrante. ${ehSeno ? 'O seno é a altura (y)' : 'O cosseno é a abscissa (x)'} do ponto no círculo: veja o sinal ali e use o ângulo de referência.`
+          : undefined,
     };
   },
 

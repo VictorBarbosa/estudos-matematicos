@@ -168,6 +168,10 @@ function daHorizontal(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'racionais.comportamento-no-infinito',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `Graus iguais em cima e embaixo: a assíntota é o coeficiente de x de cima (${a}) dividido pelo de baixo (${c}).`
+        : undefined,
   });
 }
 
@@ -268,6 +272,10 @@ function daObliqua(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'racionais.comportamento-no-infinito',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? `Longe da origem, ${a}x² sobre ${d}x se comporta como (${a}/${d})·x: a inclinação é a razão dos termos de maior grau.`
+        : undefined,
   });
 }
 
@@ -325,6 +333,10 @@ function doValor(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'racionais.dominio',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `Substitua x = ${ponto} em cima e embaixo, separadamente, e depois divida.`
+        : undefined,
   });
 }
 

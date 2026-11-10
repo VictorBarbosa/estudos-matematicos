@@ -128,10 +128,12 @@ export const geradorEquacao2: GeradorExercicio<number> = {
       dica:
         nivel === 'facil'
           ? 'Calcule o discriminante antes de aplicar a fórmula.'
-          : nivelAoMenos(nivel, 'dificil') && !semRaizes && !Number.isInteger(gabarito)
-            ? 'A raiz é irracional: vale escrever a forma exata, como (-3+√17)/4, ' +
-              'ou o decimal com 2 casas.'
-            : undefined,
+          : semRaizes && nivel === 'dificil'
+            ? `Δ = b² − 4ac com a = ${a}, b = ${b}, c = ${c}. Se der negativo, é ele mesmo a resposta.`
+            : nivelAoMenos(nivel, 'dificil') && !semRaizes && !Number.isInteger(gabarito)
+              ? 'A raiz é irracional: vale escrever a forma exata, como (-3+√17)/4, ' +
+                'ou o decimal com 2 casas.'
+              : undefined,
     };
   },
 

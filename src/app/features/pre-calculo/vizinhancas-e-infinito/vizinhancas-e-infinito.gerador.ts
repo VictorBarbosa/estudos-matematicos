@@ -177,6 +177,10 @@ export const geradorVizinhancas: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'medio'
+          ? `Mesmo grau em cima e embaixo: no infinito só os termos de maior grau importam. Divida o coeficiente de cima (${a}) pelo de baixo (${b}).`
+          : undefined,
     };
   },
 

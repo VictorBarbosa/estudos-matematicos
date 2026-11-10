@@ -175,5 +175,6 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: `Oposto sobre adjacente é a tangente: tg θ = ${oposto}/${adjacente}. O ângulo é o arco tangente disso, em graus.`,
   };
 }

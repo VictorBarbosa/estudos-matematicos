@@ -155,7 +155,9 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
             : solido === 'cilindro'
               ? 'V = πr²h — o raio entra ao QUADRADO (ele mede a base); a altura, uma vez só.'
               : 'V = A_b·h/3 — a área da base já vem pronta no enunciado.'
-        : undefined,
+        : nivel === 'medio' && solido === 'piramide'
+          ? `A pirâmide vale um terço do prisma de mesma base: multiplique a área da base ${areaBase} pela altura ${altura} e divida por 3.`
+          : undefined,
   };
 }
 
@@ -377,5 +379,11 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
       altura,
       proximos,
     ),
+    dica:
+      nivel === 'dificil'
+        ? cone
+          ? `V = πr²h/3, então h = 3V / (π · ${raio}²). O raio vai ao quadrado: ${raio}² = ${raio * raio}.`
+          : `V = πr²h, então h = V / (π · ${raio}²). O raio vai ao quadrado: ${raio}² = ${raio * raio}.`
+        : undefined,
   };
 }
