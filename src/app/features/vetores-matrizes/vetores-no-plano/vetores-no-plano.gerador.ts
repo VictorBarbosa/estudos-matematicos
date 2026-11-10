@@ -103,7 +103,7 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: '|v| = √(vₓ² + v_y²): eleve cada componente ao quadrado, some e tire a raiz.',
+    dica: `O módulo é a hipotenusa das componentes: (${x}) ao quadrado mais (${y}) ao quadrado, e a raiz da soma.`,
   };
 }
 
