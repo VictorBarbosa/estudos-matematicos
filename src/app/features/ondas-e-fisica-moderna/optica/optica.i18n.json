@@ -1,0 +1,48 @@
+{
+  "n1": {
+    "pt": "Índice do meio de cima, n₁ (×100)",
+    "fr": "Indice du milieu du haut, n₁ (×100)",
+    "en": "Upper medium index, n₁ (×100)"
+  },
+  "n2": {
+    "pt": "Índice do meio de baixo, n₂ (×100)",
+    "fr": "Indice du milieu du bas, n₂ (×100)",
+    "en": "Lower medium index, n₂ (×100)"
+  },
+  "theta1": {
+    "pt": "Ângulo com a normal (graus)",
+    "fr": "Angle avec la normale (degrés)",
+    "en": "Angle to the normal (degrees)"
+  },
+  "dicaIndice": {
+    "pt": "Ar 100, água 133, vidro 150, diamante 242.",
+    "fr": "Air 100, eau 133, verre 150, diamant 242.",
+    "en": "Air 100, water 133, glass 150, diamond 242."
+  },
+  "anguloRefratado": {
+    "pt": "Ângulo do raio refratado",
+    "fr": "Angle du rayon réfracté",
+    "en": "Refracted ray angle"
+  },
+  "total": { "pt": "reflexão total", "fr": "réflexion totale", "en": "total reflection" },
+  "oRaio": {
+    "pt": "O raio na fronteira entre os meios",
+    "fr": "Le rayon à la frontière entre les milieux",
+    "en": "The ray at the boundary"
+  },
+  "descricaoRefracao": {
+    "pt": "Raio incidente a {theta1}° da normal, refratado a {theta2}° no meio de baixo.",
+    "fr": "Rayon incident à {theta1}° de la normale, réfracté à {theta2}° dans le milieu du bas.",
+    "en": "Incident ray at {theta1}° from the normal, refracted at {theta2}° in the lower medium."
+  },
+  "descricaoTotal": {
+    "pt": "Raio incidente a {theta}° da normal, totalmente refletido de volta ao meio de cima.",
+    "fr": "Rayon incident à {theta}° de la normale, totalement réfléchi vers le milieu du haut.",
+    "en": "Incident ray at {theta}° from the normal, totally reflected back into the upper medium."
+  },
+  "leitura": {
+    "pt": "A linha tracejada é a normal; os ângulos se medem a partir dela. Ponha n₁ = 150 (vidro), n₂ = 100 (ar) e aumente o ângulo: perto de 42° o raio refratado fica rasante e, depois disso, a luz volta toda — é a reflexão total.",
+    "fr": "La ligne pointillée est la normale ; les angles se mesurent à partir d’elle. Mettez n₁ = 150 (verre), n₂ = 100 (air) et augmentez l’angle : vers 42° le rayon réfracté devient rasant et, au-delà, toute la lumière revient — c’est la réflexion totale.",
+    "en": "The dashed line is the normal; angles are measured from it. Set n₁ = 150 (glass), n₂ = 100 (air) and raise the angle: near 42° the refracted ray grazes the surface and beyond that all the light comes back — total internal reflection."
+  }
+}

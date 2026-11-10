@@ -83,3 +83,5 @@ export * from '@core/math/fisica/gravitacao/gravitacao';
 export * from '@core/math/fisica/fluidos/fluidos';
 export * from '@core/math/fisica/movimento/movimento';
 export * from '@core/math/fisica/termica/termica';
+export * from '@core/math/fisica/ondas/ondas';
+export * from '@core/math/fisica/moderna/moderna';

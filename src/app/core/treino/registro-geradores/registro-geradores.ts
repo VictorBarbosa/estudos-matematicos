@@ -362,6 +362,16 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       import('@features/matematica-basica/razao-proporcao/razao-proporcao.gerador').then(
         (m) => m.geradorProporcao,
       ),
+    'fisica-moderna': () =>
+      import('@features/ondas-e-fisica-moderna/fisica-moderna/fisica-moderna.gerador').then(
+        (m) => m.geradorFisicaModerna,
+      ),
+    'ondas-e-som': () =>
+      import('@features/ondas-e-fisica-moderna/ondas-e-som/ondas-e-som.gerador').then(
+        (m) => m.geradorOndasESom,
+      ),
+    optica: () =>
+      import('@features/ondas-e-fisica-moderna/optica/optica.gerador').then((m) => m.geradorOptica),
     'nocao-intuitiva-de-limite': () =>
       import('@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.gerador').then(
         (m) => m.geradorLimiteIntuitivo,

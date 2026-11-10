@@ -11,6 +11,9 @@ import { TEORIA_EQUACAO_1 as t_equacao_primeiro_grau } from '@features/algebra/e
 import { TEORIA_EQUACAO_2 as t_equacao_segundo_grau } from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.teoria';
 import { TEORIA_EXPRESSOES as t_expressoes_algebricas } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.teoria';
 import { TEORIA_FATORACAO as t_fatoracao } from '@features/algebra/fatoracao/fatoracao.teoria';
+import { TEORIA_ONDAS_E_SOM as t_ondas_e_som } from '@features/ondas-e-fisica-moderna/ondas-e-som/ondas-e-som.teoria';
+import { TEORIA_OPTICA as t_optica } from '@features/ondas-e-fisica-moderna/optica/optica.teoria';
+import { TEORIA_FISICA_MODERNA as t_fisica_moderna } from '@features/ondas-e-fisica-moderna/fisica-moderna/fisica-moderna.teoria';
 import { TEORIA_INEQUACOES as t_inequacoes } from '@features/algebra/inequacoes/inequacoes.teoria';
 import { TEORIA_POLIEDROS as t_poliedros } from '@features/geometria/poliedros/poliedros.teoria';
 import { TEORIA_POLARES as t_coordenadas_polares } from '@features/geometria-analitica/coordenadas-polares/coordenadas-polares.teoria';
@@ -123,6 +126,9 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['expressoes-algebricas', t_expressoes_algebricas],
   ['fatoracao', t_fatoracao],
   ['inequacoes', t_inequacoes],
+  ['ondas-e-som', t_ondas_e_som],
+  ['optica', t_optica],
+  ['fisica-moderna', t_fisica_moderna],
   ['inequacoes-segundo-grau', t_inequacoes_segundo_grau],
   ['equacoes-exponenciais', t_equacoes_exponenciais],
   ['binomio-de-newton', t_binomio_de_newton],

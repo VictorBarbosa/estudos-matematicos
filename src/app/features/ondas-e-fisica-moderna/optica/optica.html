@@ -1,0 +1,51 @@
+<app-topico-layout topicoId="optica">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="n1Centesimos"
+        [rotulo]="texto('n1')"
+        [min]="100"
+        [max]="250"
+        [dica]="texto('dicaIndice')"
+      />
+      <app-controle-parametro
+        [(valor)]="n2Centesimos"
+        [rotulo]="texto('n2')"
+        [min]="100"
+        [max]="250"
+      />
+      <app-controle-parametro [(valor)]="theta1" [rotulo]="texto('theta1')" [min]="0" [max]="89" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">{{ texto('anguloRefratado') }}</span>
+        <strong>{{
+          reflexaoTotal() ? texto('total') : formatar(resolucao().resultado) + '°'
+        }}</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>{{ texto('oRaio') }}</h2>
+      <app-math-plot
+        [dominio]="dominio"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="340"
+      />
+      <p class="observacao">{{ texto('leitura') }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

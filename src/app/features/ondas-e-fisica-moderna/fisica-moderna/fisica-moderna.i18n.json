@@ -1,0 +1,43 @@
+{
+  "velocidade": {
+    "pt": "Velocidade (% de c)",
+    "fr": "Vitesse (% de c)",
+    "en": "Speed (% of c)"
+  },
+  "dicaVelocidade": {
+    "pt": "Um avião anda a 0,0001% de c.",
+    "fr": "Un avion va à 0,0001 % de c.",
+    "en": "An airliner moves at 0.0001% of c."
+  },
+  "fatorLorentz": {
+    "pt": "Fator de Lorentz",
+    "fr": "Facteur de Lorentz",
+    "en": "Lorentz factor"
+  },
+  "umSegundo": {
+    "pt": "1 s a bordo dura, na Terra",
+    "fr": "1 s à bord dure, sur Terre",
+    "en": "1 s on board lasts, on Earth"
+  },
+  "umMetro": {
+    "pt": "1 m a bordo mede, da Terra",
+    "fr": "1 m à bord mesure, depuis la Terre",
+    "en": "1 m on board measures, from Earth"
+  },
+  "oFator": {
+    "pt": "O fator de Lorentz conforme a velocidade",
+    "fr": "Le facteur de Lorentz selon la vitesse",
+    "en": "The Lorentz factor versus speed"
+  },
+  "curvaGama": { "pt": "γ(v/c)", "fr": "γ(v/c)", "en": "γ(v/c)" },
+  "descricaoGrafico": {
+    "pt": "Curva de γ em função de v/c; em v/c = {beta}, γ = {gama}.",
+    "fr": "Courbe de γ en fonction de v/c ; pour v/c = {beta}, γ = {gama}.",
+    "en": "Curve of γ against v/c; at v/c = {beta}, γ = {gama}."
+  },
+  "leitura": {
+    "pt": "Até metade de c, γ mal sai de 1: a relatividade some no dia a dia. Perto de c a curva dispara — a 99% de c, um segundo a bordo vale sete na Terra, e o metro encolhe para 14 cm.",
+    "fr": "Jusqu’à la moitié de c, γ reste proche de 1 : la relativité disparaît au quotidien. Près de c la courbe s’envole — à 99 % de c, une seconde à bord en vaut sept sur Terre, et le mètre rétrécit à 14 cm.",
+    "en": "Up to half of c, γ barely leaves 1: relativity vanishes in daily life. Near c the curve shoots up — at 99% of c, one second on board is seven on Earth, and a meter shrinks to 14 cm."
+  }
+}
