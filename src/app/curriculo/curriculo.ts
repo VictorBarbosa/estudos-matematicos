@@ -73,7 +73,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     descricao: 'O alicerce: como os números se combinam, se comparam e se medem.',
     referencias: [
       {
-        titulo: 'OpenStax, *Prealgebra 2e*',
+        titulo: 'OpenStax, *Prealgebra 2e* (caps. 1, 4, 5 e 7)',
         url: 'https://openstax.org/details/books/prealgebra-2e',
         nota: 'Frações, decimais e potências com exercícios resolvidos.',
       },
@@ -132,7 +132,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     descricao: 'Trocar números por letras para resolver o caso geral de uma vez.',
     referencias: [
       {
-        titulo: 'OpenStax, *Intermediate Algebra 2e*',
+        titulo: 'OpenStax, *Intermediate Algebra 2e* (caps. 2, 4 a 7 e 9)',
         url: 'https://openstax.org/details/books/intermediate-algebra-2e',
         nota: 'Fatoração, equações e inequações, com o estudo de sinal.',
       },
@@ -250,7 +250,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     descricao: 'A linguagem com que a engenharia descreve uma grandeza dependendo de outra.',
     referencias: [
       {
-        titulo: 'OpenStax, *College Algebra 2e*',
+        titulo: 'OpenStax, *College Algebra 2e* (caps. 3 a 6 e 9)',
         url: 'https://openstax.org/details/books/college-algebra-2e',
         nota: 'Funções, transformações de gráficos, exponenciais e logaritmos, com as equações exponenciais.',
       },
@@ -345,7 +345,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     descricao: 'Ângulos viram números — e é assim que se calcula uma trajetória.',
     referencias: [
       {
-        titulo: 'OpenStax, *Algebra and Trigonometry 2e*',
+        titulo: 'OpenStax, *Algebra and Trigonometry 2e* (caps. 7 a 10)',
         url: 'https://openstax.org/details/books/algebra-and-trigonometry-2e',
         nota: 'Identidades, equações trigonométricas e funções inversas.',
       },
@@ -502,7 +502,8 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     descricao: 'A matemática aplicada ao mundo: do plano inclinado ao foguete em órbita.',
     referencias: [
       {
-        titulo: 'OpenStax, *University Physics Volume 1*',
+        titulo:
+          'OpenStax, *University Physics Volume 1* (caps. 2 a 15; termodinâmica nos caps. 1 a 4 do Volume 2)',
         url: 'https://openstax.org/details/books/university-physics-volume-1',
         nota: 'Mecânica no nível do 203-NYA, com cálculo: força variável, trabalho como integral e dinâmica de rotação.',
       },
@@ -625,7 +626,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       'Cargas, campos, circuitos e indução: a física do 0P02, da lei de Coulomb a Faraday.',
     referencias: [
       {
-        titulo: 'OpenStax, *University Physics Volume 2*',
+        titulo: 'OpenStax, *University Physics Volume 2* (caps. 5 a 14)',
         url: 'https://openstax.org/details/books/university-physics-volume-2',
         nota: 'Capítulos 5 a 13: eletrostática, potencial, capacitância, circuitos CC e RC, magnetismo e indução.',
       },
@@ -673,7 +674,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         nota: 'Ondas mecânicas e som: harmônicos, decibéis e Doppler.',
       },
       {
-        titulo: 'OpenStax, *University Physics Volume 3*',
+        titulo: 'OpenStax, *University Physics Volume 3* (caps. 1 a 6)',
         url: 'https://openstax.org/details/books/university-physics-volume-3',
         nota: 'Óptica geométrica e física, relatividade e física quântica — o 0P03.',
       },
@@ -827,7 +828,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     descricao: 'Integrais: somar infinitas parcelas infinitamente pequenas.',
     referencias: [
       {
-        titulo: 'OpenStax, *Calculus Volume 2*',
+        titulo: 'OpenStax, *Calculus Volume 2* (caps. 2, 3, 5 e 6)',
         url: 'https://openstax.org/details/books/calculus-volume-2',
         nota: 'Técnicas de integração, integrais impróprias, séries, Taylor e EDOs separáveis.',
       },
@@ -910,7 +911,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       'Não é pré-requisito das engenharias, e por isso fecha a trilha.',
     referencias: [
       {
-        titulo: 'OpenStax, *Introductory Statistics 2e*',
+        titulo: 'OpenStax, *Introductory Statistics 2e* (caps. 3, 6, 8, 9 e 12)',
         url: 'https://openstax.org/details/books/introductory-statistics-2e',
         nota: 'Distribuições, intervalos de confiança e testes de hipótese.',
       },
@@ -960,7 +961,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     descricao: 'Cálculo multivariável: derivar e integrar em mais de uma direção.',
     referencias: [
       {
-        titulo: 'OpenStax, *Calculus Volume 3*',
+        titulo: 'OpenStax, *Calculus Volume 3* (caps. 4 a 6)',
         url: 'https://openstax.org/details/books/calculus-volume-3',
         nota: 'Cobre funções de várias variáveis, derivadas parciais, integrais múltiplas e cálculo vetorial, com exercícios resolvidos.',
       },
@@ -1021,7 +1022,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     descricao: 'Equações diferenciais: a regra pela qual as grandezas mudam.',
     referencias: [
       {
-        titulo: 'Trench, *Elementary Differential Equations*',
+        titulo: 'Trench, *Elementary Differential Equations* (caps. 2, 5 e 10)',
         url: 'https://digitalcommons.trinity.edu/mono/8/',
         nota: 'Livro aberto que cobre primeira e segunda ordem, com muitas aplicações físicas resolvidas em detalhe.',
       },

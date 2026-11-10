@@ -311,7 +311,7 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 - [ ] **Escolher a rota de admissão e confirmar com cada universidade.** O site prepara o conhecimento; a admissão pede **créditos** das disciplinas do cégep (0M02–0M04, 0P01–0P03, 0C01–0C02) ou de um preparatório universitário. Rotas para adulto sem DEC identificadas na avaliação anterior (confirmar: as regras mudam a cada ciclo): *mature entry* da Concordia (21+, 24 meses fora da escola); *certificat préparatoire* de Sherbrooke; *année préparatoire* da UdeM para concorrer à Polytechnique — cuja *année propédeutique* **não dá acesso ao génie aérospatial*. McGill e algumas outras exigem **laboratório** em mecânica e química, que não se faz num site.
 - [ ] Química: fora do site; fazer pelo curso formal.
-- [ ] Material externo por área: já há referências em `curriculo.ts` para as 14 áreas; indicar o capítulo correspondente (OpenStax *Calculus* 1–3, *University Physics* 1–3, *Chemistry 2e*).
+- [x] Material externo por área: as referências de `curriculo.ts` indicam os capítulos de cada livro (10/11). *Chemistry 2e* fica para a química, que é feita fora do site.
 
 ---
 

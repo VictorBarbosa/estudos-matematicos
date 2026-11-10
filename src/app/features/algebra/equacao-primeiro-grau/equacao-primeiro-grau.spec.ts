@@ -173,7 +173,7 @@ describe('geradorEquacao1 — frações e problemas', () => {
         expect(exercicio.gabarito.ehInteira).toBe(true);
         const y = exercicio.gabarito.numerador;
         const t = exercicio.enunciado;
-        const taxi = /R\$ (\d+),00 de bandeirada mais R\$ (\d+),00.* custou R\$ (\d+),00/.exec(t);
+        const taxi = /\$ (\d+),00 de bandeirada mais \$ (\d+),00.* custou \$ (\d+),00/.exec(t);
         const idades = /tem o (dobro|triplo|quádruplo) .*Daqui a (\d+) anos.* será (\d+) anos/.exec(
           t,
         );

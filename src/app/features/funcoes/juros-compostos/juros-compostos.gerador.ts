@@ -171,7 +171,7 @@ export const geradorJuros: GeradorExercicio<number> = {
    * próprio separador decimal — é assim que se digita direto do teclado.
    */
   analisar: (entrada) => {
-    const semRuido = entrada.trim().replace(/\s|R\$/g, '');
+    const semRuido = entrada.trim().replace(/\s|(?:R|C|US)?\$/g, '');
     // "1.200" é mil e duzentos, não 1,2: separador de milhar só quando não há
     // vírgula decimal e os grupos têm três dígitos.
     const milhar = semRuido.includes(',') || /^[+-]?\d{1,3}(\.\d{3})+$/.test(semRuido);
