@@ -394,6 +394,10 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'tecnicas.fracoes-parciais': 'Frações parciais',
   'tecnicas.por-partes': 'Integração por partes',
   'tecnicas.substituicao': 'Substituição',
+  'teoremas.divergencia': 'Teorema da divergência',
+  'teoremas.green': 'Teorema de Green',
+  'teoremas.stokes': 'Teorema de Stokes',
+  'teoremas.superficie': 'Integral de superfície',
   'termica.calor-sensivel': 'Calor sensível',
   'termica.conducao': 'Condução: calor por contato',
   'termica.conveccao': 'Convecção: calor carregado pelo fluido',
@@ -827,6 +831,10 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'tecnicas.fracoes-parciais': 'tecnicas-de-integracao',
   'tecnicas.por-partes': 'tecnicas-de-integracao',
   'tecnicas.substituicao': 'tecnicas-de-integracao',
+  'teoremas.divergencia': 'teoremas-integrais',
+  'teoremas.green': 'teoremas-integrais',
+  'teoremas.stokes': 'teoremas-integrais',
+  'teoremas.superficie': 'teoremas-integrais',
   'termica.calor-sensivel': 'transferencia-de-calor',
   'termica.conducao': 'transferencia-de-calor',
   'termica.conveccao': 'transferencia-de-calor',
@@ -1005,6 +1013,10 @@ export const CARREGAR_TEORIA_DO_TOPICO: Readonly<Record<string, () => Promise<re
     'integrais-multiplas': () =>
       import('@features/calculo-3/integrais-multiplas/integrais-multiplas.teoria').then(
         (m) => m.TEORIA_MULTIPLAS,
+      ),
+    'teoremas-integrais': () =>
+      import('@features/calculo-3/teoremas-integrais/teoremas-integrais.teoria').then(
+        (m) => m.TEORIA_TEOREMAS_INTEGRAIS,
       ),
     'aplicacoes-de-edo': () =>
       import('@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.teoria').then(

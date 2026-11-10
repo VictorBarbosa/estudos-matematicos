@@ -140,6 +140,10 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       import('@features/calculo-3/integrais-multiplas/integrais-multiplas.gerador').then(
         (m) => m.geradorIntegraisMultiplas,
       ),
+    'teoremas-integrais': () =>
+      import('@features/calculo-3/teoremas-integrais/teoremas-integrais.gerador').then(
+        (m) => m.geradorTeoremasIntegrais,
+      ),
     'aplicacoes-de-edo': () =>
       import('@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.gerador').then(
         (m) => m.geradorAplicacoesDeEdo,

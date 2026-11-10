@@ -612,6 +612,10 @@
         "descricao": "A ponte que mostra que derivar e integrar são operações inversas.",
         "titulo": "Teorema fundamental do cálculo"
       },
+      "teoremas-integrais": {
+        "descricao": "Integral de superfície e os teoremas de Green, Stokes e da divergência.",
+        "titulo": "Superfície e teoremas"
+      },
       "termodinamica-e-gases": {
         "descricao": "Gases ideais, primeira lei e o trabalho que uma expansão realiza.",
         "titulo": "Termodinâmica e gases"

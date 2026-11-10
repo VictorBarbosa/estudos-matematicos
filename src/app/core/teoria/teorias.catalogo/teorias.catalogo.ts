@@ -110,6 +110,7 @@ import { TEORIA_GRADIENTE as t_gradiente_e_direcional } from '@features/calculo-
 import { TEORIA_MULTIPLAS as t_integrais_multiplas } from '@features/calculo-3/integrais-multiplas/integrais-multiplas.teoria';
 import { TEORIA_COORDENADAS as t_coordenadas_no_espaco } from '@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.teoria';
 import { TEORIA_LINHA as t_integrais_de_linha } from '@features/calculo-3/integrais-de-linha/integrais-de-linha.teoria';
+import { TEORIA_TEOREMAS_INTEGRAIS as t_teoremas_integrais } from '@features/calculo-3/teoremas-integrais/teoremas-integrais.teoria';
 import { TEORIA_EDO1 as t_edo_primeira_ordem } from '@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.teoria';
 import { TEORIA_EDO2 as t_edo_segunda_ordem } from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.teoria';
 import { TEORIA_APLICACOES_EDO as t_aplicacoes_de_edo } from '@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.teoria';
@@ -219,6 +220,7 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['integrais-multiplas', t_integrais_multiplas],
   ['coordenadas-no-espaco', t_coordenadas_no_espaco],
   ['integrais-de-linha', t_integrais_de_linha],
+  ['teoremas-integrais', t_teoremas_integrais],
   ['edo-primeira-ordem', t_edo_primeira_ordem],
   ['edo-segunda-ordem', t_edo_segunda_ordem],
   ['aplicacoes-de-edo', t_aplicacoes_de_edo],

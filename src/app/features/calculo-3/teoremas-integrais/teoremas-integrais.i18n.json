@@ -1,0 +1,25 @@
+{
+  "alfa": { "pt": "α (em P = αy²)", "fr": "α (dans P = αy²)", "en": "α (in P = αy²)" },
+  "beta": { "pt": "β (em Q = βx²)", "fr": "β (dans Q = βx²)", "en": "β (in Q = βx²)" },
+  "largura": {
+    "pt": "Largura do retângulo",
+    "fr": "Largeur du rectangle",
+    "en": "Rectangle width"
+  },
+  "altura": { "pt": "Altura do retângulo", "fr": "Hauteur du rectangle", "en": "Rectangle height" },
+  "campoNoRetangulo": {
+    "pt": "O campo e a borda orientada",
+    "fr": "Le champ et le bord orienté",
+    "en": "The field and the oriented boundary"
+  },
+  "descricaoGrafico": {
+    "pt": "Setas do campo sobre o retângulo {largura} por {altura}, com a borda percorrida no sentido anti-horário; a circulação vale {circulacao}.",
+    "fr": "Flèches du champ sur le rectangle {largura} sur {altura}, avec le bord parcouru dans le sens antihoraire ; la circulation vaut {circulacao}.",
+    "en": "Field arrows over the {largura} by {altura} rectangle, with the boundary traversed counterclockwise; the circulation is {circulacao}."
+  },
+  "leitura": {
+    "pt": "A circulação foi somada de verdade, lado a lado da borda verde. A integral dupla de ∂Q/∂x − ∂P/∂y dá o mesmo número para qualquer escolha: o giro de todos os pedacinhos internos se cancela e só a borda sobra.",
+    "fr": "La circulation a été réellement sommée, côté par côté, le long du bord vert. L’intégrale double de ∂Q/∂x − ∂P/∂y donne le même nombre pour tout choix : la rotation des petits morceaux intérieurs s’annule et seul le bord reste.",
+    "en": "The circulation was actually summed, side by side, along the green boundary. The double integral of ∂Q/∂x − ∂P/∂y gives the same number for any choice: the spin of the inner pieces cancels and only the boundary remains."
+  }
+}

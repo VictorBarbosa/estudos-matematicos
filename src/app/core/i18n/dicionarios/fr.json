@@ -612,6 +612,10 @@
         "descricao": "Le pont qui montre que dériver et intégrer sont des opérations inverses.",
         "titulo": "Théorème fondamental du calcul"
       },
+      "teoremas-integrais": {
+        "descricao": "Intégrale de surface et les théorèmes de Green, de Stokes et de la divergence.",
+        "titulo": "Surfaces et théorèmes"
+      },
       "termodinamica-e-gases": {
         "descricao": "Gaz parfaits, première loi et le travail qu’une détente réalise.",
         "titulo": "Thermodynamique et gaz"

@@ -39,6 +39,7 @@ import t_funcoes_de_varias_variaveis from '@features/calculo-3/funcoes-de-varias
 import t_gradiente_e_direcional from '@features/calculo-3/gradiente-e-direcional/gradiente-e-direcional.i18n.json';
 import t_integrais_de_linha from '@features/calculo-3/integrais-de-linha/integrais-de-linha.i18n.json';
 import t_integrais_multiplas from '@features/calculo-3/integrais-multiplas/integrais-multiplas.i18n.json';
+import t_teoremas_integrais from '@features/calculo-3/teoremas-integrais/teoremas-integrais.i18n.json';
 import t_aplicacoes_de_edo from '@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.i18n.json';
 import t_edo_primeira_ordem from '@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.i18n.json';
 import t_edo_segunda_ordem from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.i18n.json';
@@ -150,6 +151,7 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['gradiente-e-direcional', t_gradiente_e_direcional as TabelaDeTextos],
   ['integrais-de-linha', t_integrais_de_linha as TabelaDeTextos],
   ['integrais-multiplas', t_integrais_multiplas as TabelaDeTextos],
+  ['teoremas-integrais', t_teoremas_integrais as TabelaDeTextos],
   ['aplicacoes-de-edo', t_aplicacoes_de_edo as TabelaDeTextos],
   ['edo-primeira-ordem', t_edo_primeira_ordem as TabelaDeTextos],
   ['edo-segunda-ordem', t_edo_segunda_ordem as TabelaDeTextos],

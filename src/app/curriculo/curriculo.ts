@@ -903,6 +903,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'Acumular ao longo de um caminho, e quando o caminho deixa de importar.',
         pronto: true,
       },
+      {
+        id: 'teoremas-integrais',
+        titulo: 'Superfície e teoremas',
+        descricao: 'Integral de superfície e os teoremas de Green, Stokes e da divergência.',
+        pronto: true,
+      },
     ],
   },
   {

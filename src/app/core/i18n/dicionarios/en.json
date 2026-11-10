@@ -612,6 +612,10 @@
         "descricao": "The bridge showing that differentiating and integrating are inverse operations.",
         "titulo": "Fundamental theorem of calculus"
       },
+      "teoremas-integrais": {
+        "descricao": "Surface integrals and the theorems of Green, Stokes and the divergence.",
+        "titulo": "Surfaces and theorems"
+      },
       "termodinamica-e-gases": {
         "descricao": "Ideal gases, the first law and the work an expansion performs.",
         "titulo": "Thermodynamics and gases"
