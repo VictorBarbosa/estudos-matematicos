@@ -26,7 +26,15 @@ import {
 import { ProvaService } from '@core/prova/services/prova.service';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { CARREGAR_GERADOR } from '@core/treino/registro-geradores/registro-geradores';
-import { Exercicio, GeradorExercicio, Validacao, corrigir } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Validacao,
+  corrigir,
+  diagnosticoEm,
+  enunciadoEm,
+  formatoRespostaEm,
+} from '@core/treino/models/treino.model';
 import { Rng, criarRng, sementeAleatoria } from '@core/treino/rng/rng';
 import { CampoResposta } from '@shared/components/campo-resposta/campo-resposta';
 import { Formula } from '@shared/components/formula/formula';
@@ -175,6 +183,21 @@ export class Prova {
       .find((candidata) => candidata.areaId === this.sessao!.id);
     return etapa?.rota ?? null;
   });
+
+  /** O enunciado da questão na língua da interface, com o português como reserva. */
+  protected enunciadoDe(questao: Questao): string {
+    return enunciadoEm(questao.exercicio, this.i18n.idioma());
+  }
+
+  /** O texto de apoio do campo, na língua da interface. */
+  protected ajudaDoFormato(gerador: GeradorExercicio<unknown>): string {
+    return formatoRespostaEm(gerador, this.i18n.idioma());
+  }
+
+  /** O diagnóstico do erro na língua da interface. */
+  protected diagnosticoDa(validacao: Validacao): string | undefined {
+    return diagnosticoEm(validacao, this.i18n.idioma());
+  }
 
   protected readonly estadoCampo = computed<'neutro' | 'correto' | 'incorreto'>(() => {
     const veredito = this.validacao()?.veredito;

@@ -23,6 +23,10 @@ import { I18nService } from '@core/i18n/services/i18n.service';
 import {
   CHAVE_DO_NIVEL,
   GeradorExercicio,
+  dicaEm,
+  formatoRespostaEm,
+  diagnosticoEm,
+  enunciadoEm,
   formasDoGabarito,
 } from '@core/treino/models/treino.model';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
@@ -183,6 +187,30 @@ export class AreaTreino {
   protected readonly gabarito = computed(() =>
     formasDoGabarito(this.gerador(), this.sessao().exercicio().gabarito),
   );
+
+  /**
+   * O enunciado e a dica na língua da interface.
+   *
+   * O exercício guarda as três versões e a tela escolhe uma a cada render: é
+   * o que faz a troca de idioma no cabeçalho valer também para a pergunta que
+   * já está na tela, sem sorteá-la de novo.
+   */
+  protected readonly enunciado = computed(() =>
+    enunciadoEm(this.sessao().exercicio(), this.i18n.idioma()),
+  );
+
+  protected readonly dica = computed(() => dicaEm(this.sessao().exercicio(), this.i18n.idioma()));
+
+  /** O texto de apoio do campo de resposta, na língua da interface. */
+  protected readonly ajudaDoFormato = computed(() =>
+    formatoRespostaEm(this.gerador(), this.i18n.idioma()),
+  );
+
+  /** O diagnóstico do erro na língua da interface. */
+  protected readonly diagnostico = computed(() => {
+    const validacao = this.sessao().validacao();
+    return validacao === null ? undefined : diagnosticoEm(validacao, this.i18n.idioma());
+  });
 
   protected readonly estadoCampo = computed<'neutro' | 'correto' | 'incorreto'>(() => {
     const veredito = this.sessao().validacao()?.veredito;

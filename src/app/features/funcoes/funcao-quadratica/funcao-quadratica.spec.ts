@@ -1,5 +1,5 @@
 import { criarRng } from '@core/treino/rng/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { NIVEIS, Nivel, SEM_FORMULA, corrigir } from '@core/treino/models/treino.model';
 import { geradorQuadratica } from '@features/funcoes/funcao-quadratica/funcao-quadratica.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
@@ -55,5 +55,59 @@ describe('geradorQuadratica', () => {
     )!;
 
     expect(exercicio).toBeDefined();
+  });
+});
+
+/**
+ * A parábola que vem de uma história.
+ *
+ * Lucro, projétil, cerca e custo: as quatro situações em que «qual é o maior»
+ * ou «qual é o menor» tem resposta. O que a história acrescenta é o
+ * SIGNIFICADO do vértice — a conta é a mesma da versão simbólica.
+ */
+describe('as histórias de função quadrática', () => {
+  it('metade dos exercícios vem de uma situação, sem mostrar f(x)', () => {
+    for (const nivel of NIVEIS) {
+      const exercicios = amostra(nivel, 120);
+      const comHistoria = exercicios.filter((e) => e.id.includes('historia'));
+
+      expect(comHistoria.length, nivel).toBeGreaterThan(30);
+      expect(comHistoria.length, nivel).toBeLessThan(90);
+
+      for (const exercicio of comHistoria) {
+        expect(exercicio.enunciadoTex, exercicio.enunciado).toBe(SEM_FORMULA);
+        expect(exercicio.traducoes?.fr?.enunciado.length ?? 0).toBeGreaterThan(30);
+        expect(exercicio.traducoes?.en?.enunciado.length ?? 0).toBeGreaterThan(30);
+      }
+    }
+  });
+
+  it('a resolução diz o que o vértice significa na história', () => {
+    const notaIngles = ['preço', 'lucro', 'instante', 'largura', 'quantidade'];
+
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 60).filter((e) => e.id.includes('historia'))) {
+        if (exercicio.id.includes('-valor-')) {
+          continue;
+        }
+
+        const nota = exercicio.resolucao.passos.map((passo) => passo.nota ?? '').join(' ');
+
+        expect(
+          notaIngles.some((termo) => nota.includes(termo)),
+          `${exercicio.enunciado}\nnota: ${nota}`,
+        ).toBe(true);
+      }
+    }
+  });
+
+  it('nenhuma história produz custo negativo', () => {
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 120).filter((e) => e.id.includes('historia'))) {
+        if (exercicio.enunciado.includes('custo')) {
+          expect(exercicio.gabarito, exercicio.enunciado).toBeGreaterThan(0);
+        }
+      }
+    }
   });
 });

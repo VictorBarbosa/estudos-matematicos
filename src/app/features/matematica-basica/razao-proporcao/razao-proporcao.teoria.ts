@@ -102,7 +102,69 @@ export const TEORIA_PROPORCAO: readonly Teoria[] = [
       enunciado: 'Se 4 operários levam 12 dias, quantos dias levam 6 operários?',
       passos: regraDeTresComPassos(4, 12, 6, true).passos,
     },
-    vejaTambem: ['proporcao.divisao', 'proporcao.proporcao'],
+    vejaTambem: ['proporcao.regra-de-tres-composta', 'proporcao.divisao'],
+  },
+  {
+    id: 'proporcao.regra-de-tres-composta',
+    titulo: 'Regra de três composta',
+    resumo: 'Quando duas grandezas mudam ao mesmo tempo, resolva uma de cada vez.',
+    definicao:
+      'Na regra de três composta há mais de duas grandezas ligadas ao mesmo resultado. Não ' +
+      'existe uma fórmula única: o que existe é uma ordem. Segure todas as grandezas menos uma ' +
+      'e aplique a regra de três simples a essa; repita para a seguinte, usando o resultado ' +
+      'anterior no lugar do valor conhecido. Ao fim, cada grandeza entrou como um fator — ' +
+      'direto ou inverso — e o produto deles dá a resposta.',
+    formulas: [
+      {
+        tex: 'x = y_0 \\cdot \\prod_i \\left(\\frac{v_i}{v_{i,0}}\\right)^{\\pm 1}',
+        legenda: 'Cada grandeza entra como fator: direto no numerador, inverso no denominador.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao:
+          'Numa proporcionalidade direta, dobrar a grandeza dobra o resultado: o fator é a razão ' +
+          'entre o valor novo e o antigo.',
+        tex: 'v \\to 2v \\;\\Rightarrow\\; x \\to 2x',
+      },
+      {
+        descricao:
+          'Numa inversa, dobrar a grandeza corta o resultado pela metade: o fator é a razão ' +
+          'invertida.',
+        tex: 'v \\to 2v \\;\\Rightarrow\\; x \\to \\frac{x}{2}',
+      },
+      {
+        descricao:
+          'Como os fatores se multiplicam e a ordem não altera o produto, cada grandeza pode ' +
+          'ser tratada isoladamente.',
+        tex: 'x = y_0 \\cdot \\frac{v_1}{v_{1,0}} \\cdot \\frac{v_{2,0}}{v_2}',
+        nota: 'Se errar a direção de uma delas, o erro aparece como um fator trocado — nunca some.',
+      },
+    ],
+    exemplo: {
+      enunciado:
+        '4 operários, trabalhando 6 horas por dia, terminam a obra em 12 dias. Em quantos dias ' +
+        '8 operários, trabalhando 8 horas por dia, terminam a mesma obra?',
+      passos: [
+        {
+          descricao:
+            'Primeiro só os operários: o dobro de operários leva metade do tempo, então a ' +
+            'proporção é inversa.',
+          tex: '4 \\cdot 12 = 8 \\cdot x_1 \\;\\Rightarrow\\; x_1 = 6\\ \\text{dias}',
+        },
+        {
+          descricao:
+            'Agora só as horas por dia, partindo dos 6 dias: mais horas por dia, menos dias.',
+          tex: '6 \\cdot 6 = 8 \\cdot x \\;\\Rightarrow\\; x = 4{,}5\\ \\text{dias}',
+        },
+        {
+          descricao:
+            'Nos dois sentidos os fatores eram inversos, então os dois dividem o tempo inicial.',
+          tex: 'x = 12 \\cdot \\frac{4}{8} \\cdot \\frac{6}{8} = 4{,}5',
+        },
+      ],
+    },
+    vejaTambem: ['proporcao.regra-de-tres', 'proporcao.divisao'],
   },
   {
     id: 'proporcao.divisao',

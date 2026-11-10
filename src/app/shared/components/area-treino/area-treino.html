@@ -42,13 +42,13 @@
   </header>
 
   <div class="enunciado">
-    <p>{{ exercicio.enunciado }}</p>
+    <p>{{ enunciado() }}</p>
     <!-- Sem fórmula quando o exercício é só o enunciado: montar a expressão
          a partir do texto é parte da pergunta. -->
     @if (exercicio.enunciadoTex !== '') {
       <app-formula [tex]="exercicio.enunciadoTex" [bloco]="true" />
     }
-    @if (exercicio.dica; as dica) {
+    @if (dica(); as dica) {
       <p class="dica">{{ dica }}</p>
     }
   </div>
@@ -57,7 +57,7 @@
     #campo
     [(valor)]="s.resposta"
     [rotulo]="i18n.t('treino.suaResposta')"
-    [ajuda]="gerador().formatoResposta"
+    [ajuda]="ajudaDoFormato()"
     [simbolos]="gerador().simbolos ?? []"
     [estado]="estadoCampo()"
     [bloqueado]="s.corrigido()"
@@ -110,7 +110,7 @@
         @if (validacao.observacao; as observacao) {
           <p class="diagnostico">{{ observacao }}</p>
         }
-        @if (validacao.diagnostico; as diagnostico) {
+        @if (diagnostico(); as diagnostico) {
           <p class="diagnostico">{{ diagnostico }}</p>
         }
         @if (validacao.veredito === 'incorreto') {

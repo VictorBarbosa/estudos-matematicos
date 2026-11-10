@@ -6,454 +6,125 @@
 import { GeradorExercicio } from '@core/treino/models/treino.model';
 
 /** Carrega sob demanda o gerador de exercícios de um tópico. */
-export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExercicio<unknown>>>> =
-  {
-    'equacao-primeiro-grau': () =>
-      import('@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.gerador').then(
-        (m) => m.geradorEquacao1,
-      ),
-    'equacao-segundo-grau': () =>
-      import('@features/algebra/equacao-segundo-grau/equacao-segundo-grau.gerador').then(
-        (m) => m.geradorEquacao2,
-      ),
-    'expressoes-algebricas': () =>
-      import('@features/algebra/expressoes-algebricas/expressoes-algebricas.gerador').then(
-        (m) => m.geradorExpressoes,
-      ),
-    fatoracao: () =>
-      import('@features/algebra/fatoracao/fatoracao.gerador').then((m) => m.geradorFatoracao),
-    'inequacoes-segundo-grau': () =>
-      import('@features/algebra/inequacoes-segundo-grau/inequacoes-segundo-grau.gerador').then(
-        (m) => m.geradorInequacoesSegundoGrau,
-      ),
-    inequacoes: () =>
-      import('@features/algebra/inequacoes/inequacoes.gerador').then((m) => m.geradorInequacoes),
-    polinomios: () =>
-      import('@features/algebra/polinomios/polinomios.gerador').then((m) => m.geradorPolinomios),
-    'produtos-notaveis': () =>
-      import('@features/algebra/produtos-notaveis/produtos-notaveis.gerador').then(
-        (m) => m.geradorProdutos,
-      ),
-    'sistemas-lineares': () =>
-      import('@features/algebra/sistemas-lineares/sistemas-lineares.gerador').then(
-        (m) => m.geradorSistemas,
-      ),
-    'aplicacoes-da-derivada': () =>
-      import('@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.gerador').then(
-        (m) => m.geradorAplicacoesDerivada,
-      ),
-    continuidade: () =>
-      import('@features/calculo-1/continuidade/continuidade.gerador').then(
-        (m) => m.geradorContinuidade,
-      ),
-    'definicao-de-derivada': () =>
-      import('@features/calculo-1/definicao-de-derivada/definicao-de-derivada.gerador').then(
-        (m) => m.geradorDefinicaoDerivada,
-      ),
-    'derivacao-implicita': () =>
-      import('@features/calculo-1/derivacao-implicita/derivacao-implicita.gerador').then(
-        (m) => m.geradorDerivacaoImplicita,
-      ),
-    'derivadas-exponencial-logaritmo': () =>
-      import('@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.gerador').then(
-        (m) => m.geradorDerivadasExpLog,
-      ),
-    'derivadas-trigonometricas': () =>
-      import('@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.gerador').then(
-        (m) => m.geradorDerivadasTrig,
-      ),
-    'limites-laterais': () =>
-      import('@features/calculo-1/limites-laterais/limites-laterais.gerador').then(
-        (m) => m.geradorLaterais,
-      ),
-    limites: () =>
-      import('@features/calculo-1/limites/limites.gerador').then((m) => m.geradorLimites),
-    'regra-da-cadeia': () =>
-      import('@features/calculo-1/regra-da-cadeia/regra-da-cadeia.gerador').then(
-        (m) => m.geradorCadeia,
-      ),
-    'regras-de-derivacao': () =>
-      import('@features/calculo-1/regras-de-derivacao/regras-de-derivacao.gerador').then(
-        (m) => m.geradorRegras,
-      ),
-    'taxa-de-variacao': () =>
-      import('@features/calculo-1/taxa-de-variacao/taxa-de-variacao.gerador').then(
-        (m) => m.geradorTaxa,
-      ),
-    'aplicacoes-da-integral': () =>
-      import('@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.gerador').then(
-        (m) => m.geradorAplicacoesIntegral,
-      ),
-    'fisica-com-calculo': () =>
-      import('@features/calculo-2/fisica-com-calculo/fisica-com-calculo.gerador').then(
-        (m) => m.geradorFisicaComCalculo,
-      ),
-    'integrais-improprias': () =>
-      import('@features/calculo-2/integrais-improprias/integrais-improprias.gerador').then(
-        (m) => m.geradorIntegraisImproprias,
-      ),
-    'integral-definida': () =>
-      import('@features/calculo-2/integral-definida/integral-definida.gerador').then(
-        (m) => m.geradorDefinida,
-      ),
-    'integral-indefinida': () =>
-      import('@features/calculo-2/integral-indefinida/integral-indefinida.gerador').then(
-        (m) => m.geradorIndefinida,
-      ),
-    'sequencias-e-series': () =>
-      import('@features/calculo-2/sequencias-e-series/sequencias-e-series.gerador').then(
-        (m) => m.geradorSequencias,
-      ),
-    'series-de-taylor': () =>
-      import('@features/calculo-2/series-de-taylor/series-de-taylor.gerador').then(
-        (m) => m.geradorSeriesDeTaylor,
-      ),
-    'soma-de-riemann': () =>
-      import('@features/calculo-2/soma-de-riemann/soma-de-riemann.gerador').then(
-        (m) => m.geradorRiemann,
-      ),
-    'tecnicas-de-integracao': () =>
-      import('@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.gerador').then(
-        (m) => m.geradorTecnicas,
-      ),
-    'teorema-fundamental': () =>
-      import('@features/calculo-2/teorema-fundamental/teorema-fundamental.gerador').then(
-        (m) => m.geradorTfc,
-      ),
-    'coordenadas-no-espaco': () =>
-      import('@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.gerador').then(
-        (m) => m.geradorCoordenadasNoEspaco,
-      ),
-    'derivadas-parciais': () =>
-      import('@features/calculo-3/derivadas-parciais/derivadas-parciais.gerador').then(
-        (m) => m.geradorDerivadasParciais,
-      ),
-    'funcoes-de-varias-variaveis': () =>
-      import('@features/calculo-3/funcoes-de-varias-variaveis/funcoes-de-varias-variaveis.gerador').then(
-        (m) => m.geradorFuncoesVariasVariaveis,
-      ),
-    'gradiente-e-direcional': () =>
-      import('@features/calculo-3/gradiente-e-direcional/gradiente-e-direcional.gerador').then(
-        (m) => m.geradorGradiente,
-      ),
-    'integrais-de-linha': () =>
-      import('@features/calculo-3/integrais-de-linha/integrais-de-linha.gerador').then(
-        (m) => m.geradorIntegraisDeLinha,
-      ),
-    'integrais-multiplas': () =>
-      import('@features/calculo-3/integrais-multiplas/integrais-multiplas.gerador').then(
-        (m) => m.geradorIntegraisMultiplas,
-      ),
-    'teoremas-integrais': () =>
-      import('@features/calculo-3/teoremas-integrais/teoremas-integrais.gerador').then(
-        (m) => m.geradorTeoremasIntegrais,
-      ),
-    'aplicacoes-de-edo': () =>
-      import('@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.gerador').then(
-        (m) => m.geradorAplicacoesDeEdo,
-      ),
-    'edo-primeira-ordem': () =>
-      import('@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.gerador').then(
-        (m) => m.geradorEdoPrimeiraOrdem,
-      ),
-    'edo-segunda-ordem': () =>
-      import('@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.gerador').then(
-        (m) => m.geradorEdoSegundaOrdem,
-      ),
-    'metodos-numericos': () =>
-      import('@features/calculo-4/metodos-numericos/metodos-numericos.gerador').then(
-        (m) => m.geradorMetodosNumericos,
-      ),
-    circuitos: () =>
-      import('@features/eletromagnetismo/circuitos/circuitos.gerador').then(
-        (m) => m.geradorCircuitos,
-      ),
-    eletrostatica: () =>
-      import('@features/eletromagnetismo/eletrostatica/eletrostatica.gerador').then(
-        (m) => m.geradorEletrostatica,
-      ),
-    'magnetismo-e-inducao': () =>
-      import('@features/eletromagnetismo/magnetismo-e-inducao/magnetismo-e-inducao.gerador').then(
-        (m) => m.geradorMagnetismo,
-      ),
-    'potencial-e-capacitores': () =>
-      import('@features/eletromagnetismo/potencial-e-capacitores/potencial-e-capacitores.gerador').then(
-        (m) => m.geradorPotencialCapacitores,
-      ),
-    'analise-combinatoria': () =>
-      import('@features/estatistica/analise-combinatoria/analise-combinatoria.gerador').then(
-        (m) => m.geradorCombinatoria,
-      ),
-    'binomio-de-newton': () =>
-      import('@features/estatistica/binomio-de-newton/binomio-de-newton.gerador').then(
-        (m) => m.geradorBinomio,
-      ),
-    'distribuicao-normal': () =>
-      import('@features/estatistica/distribuicao-normal/distribuicao-normal.gerador').then(
-        (m) => m.geradorDistribuicaoNormal,
-      ),
-    'estatistica-e-incerteza': () =>
-      import('@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.gerador').then(
-        (m) => m.geradorIncerteza,
-      ),
-    probabilidade: () =>
-      import('@features/estatistica/probabilidade/probabilidade.gerador').then(
-        (m) => m.geradorProbabilidade,
-      ),
-    'regressao-e-correlacao': () =>
-      import('@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.gerador').then(
-        (m) => m.geradorRegressaoCorrelacao,
-      ),
-    'analise-dimensional': () =>
-      import('@features/fisica/analise-dimensional/analise-dimensional.gerador').then(
-        (m) => m.geradorDimensional,
-      ),
-    'cinematica-escalar': () =>
-      import('@features/fisica/cinematica-escalar/cinematica-escalar.gerador').then(
-        (m) => m.geradorCinematica,
-      ),
-    'cinematica-vetorial': () =>
-      import('@features/fisica/cinematica-vetorial/cinematica-vetorial.gerador').then(
-        (m) => m.geradorCinematicaVetorial,
-      ),
-    'dinamica-rotacional': () =>
-      import('@features/fisica/dinamica-rotacional/dinamica-rotacional.gerador').then(
-        (m) => m.geradorDinamicaRotacional,
-      ),
-    'estatica-e-torque': () =>
-      import('@features/fisica/estatica-e-torque/estatica-e-torque.gerador').then(
-        (m) => m.geradorTorque,
-      ),
-    'fluidos-e-aerodinamica': () =>
-      import('@features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.gerador').then(
-        (m) => m.geradorFluidos,
-      ),
-    'gravitacao-e-orbitas': () =>
-      import('@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.gerador').then(
-        (m) => m.geradorGravitacao,
-      ),
-    'impulso-e-momento': () =>
-      import('@features/fisica/impulso-e-momento/impulso-e-momento.gerador').then(
-        (m) => m.geradorMomento,
-      ),
-    'leis-de-newton': () =>
-      import('@features/fisica/leis-de-newton/leis-de-newton.gerador').then((m) => m.geradorNewton),
-    'momento-angular': () =>
-      import('@features/fisica/momento-angular/momento-angular.gerador').then(
-        (m) => m.geradorMomentoAngular,
-      ),
-    'movimento-circular': () =>
-      import('@features/fisica/movimento-circular/movimento-circular.gerador').then(
-        (m) => m.geradorMovimentoCircular,
-      ),
-    'movimento-harmonico': () =>
-      import('@features/fisica/movimento-harmonico/movimento-harmonico.gerador').then(
-        (m) => m.geradorMhs,
-      ),
-    'propulsao-de-foguetes': () =>
-      import('@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.gerador').then(
-        (m) => m.geradorPropulsao,
-      ),
-    'termodinamica-e-gases': () =>
-      import('@features/fisica/termodinamica-e-gases/termodinamica-e-gases.gerador').then(
-        (m) => m.geradorTermo,
-      ),
-    'trabalho-e-energia': () =>
-      import('@features/fisica/trabalho-e-energia/trabalho-e-energia.gerador').then(
-        (m) => m.geradorEnergia,
-      ),
-    'trajetoria-balistica': () =>
-      import('@features/fisica/trajetoria-balistica/trajetoria-balistica.gerador').then(
-        (m) => m.geradorBalistica,
-      ),
-    'transferencia-de-calor': () =>
-      import('@features/fisica/transferencia-de-calor/transferencia-de-calor.gerador').then(
-        (m) => m.geradorTransferenciaDeCalor,
-      ),
-    'composicao-inversa': () =>
-      import('@features/funcoes/composicao-inversa/composicao-inversa.gerador').then(
-        (m) => m.geradorComposicao,
-      ),
-    'conceito-funcao': () =>
-      import('@features/funcoes/conceito-funcao/conceito-funcao.gerador').then(
-        (m) => m.geradorConceito,
-      ),
-    'equacoes-exponenciais': () =>
-      import('@features/funcoes/equacoes-exponenciais/equacoes-exponenciais.gerador').then(
-        (m) => m.geradorEquacoesExponenciais,
-      ),
-    'funcao-afim': () =>
-      import('@features/funcoes/funcao-afim/funcao-afim.gerador').then((m) => m.geradorAfim),
-    'funcao-exponencial': () =>
-      import('@features/funcoes/funcao-exponencial/funcao-exponencial.gerador').then(
-        (m) => m.geradorExponencial,
-      ),
-    'funcao-logaritmica': () =>
-      import('@features/funcoes/funcao-logaritmica/funcao-logaritmica.gerador').then(
-        (m) => m.geradorLogaritmica,
-      ),
-    'funcao-modular': () =>
-      import('@features/funcoes/funcao-modular/funcao-modular.gerador').then(
-        (m) => m.geradorModular,
-      ),
-    'funcao-quadratica': () =>
-      import('@features/funcoes/funcao-quadratica/funcao-quadratica.gerador').then(
-        (m) => m.geradorQuadratica,
-      ),
-    'funcoes-por-partes': () =>
-      import('@features/funcoes/funcoes-por-partes/funcoes-por-partes.gerador').then(
-        (m) => m.geradorFuncoesPorPartes,
-      ),
-    'funcoes-racionais': () =>
-      import('@features/funcoes/funcoes-racionais/funcoes-racionais.gerador').then(
-        (m) => m.geradorFuncoesRacionais,
-      ),
-    'juros-compostos': () =>
-      import('@features/funcoes/juros-compostos/juros-compostos.gerador').then(
-        (m) => m.geradorJuros,
-      ),
-    progressoes: () =>
-      import('@features/funcoes/progressoes/progressoes.gerador').then((m) => m.geradorProgressoes),
-    'transformacoes-de-graficos': () =>
-      import('@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.gerador').then(
-        (m) => m.geradorTransformacoes,
-      ),
-    circunferencia: () =>
-      import('@features/geometria-analitica/circunferencia/circunferencia.gerador').then(
-        (m) => m.geradorCircunferencia,
-      ),
-    conicas: () =>
-      import('@features/geometria-analitica/conicas/conicas.gerador').then((m) => m.geradorConicas),
-    'coordenadas-polares': () =>
-      import('@features/geometria-analitica/coordenadas-polares/coordenadas-polares.gerador').then(
-        (m) => m.geradorPolares,
-      ),
-    'equacoes-parametricas': () =>
-      import('@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.gerador').then(
-        (m) => m.geradorEquacoesParametricas,
-      ),
-    'ponto-e-reta': () =>
-      import('@features/geometria-analitica/ponto-e-reta/ponto-e-reta.gerador').then(
-        (m) => m.geradorPontoReta,
-      ),
-    'angulos-e-triangulos': () =>
-      import('@features/geometria/angulos-e-triangulos/angulos-e-triangulos.gerador').then(
-        (m) => m.geradorAngulos,
-      ),
-    'areas-de-figuras-planas': () =>
-      import('@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.gerador').then(
-        (m) => m.geradorAreas,
-      ),
-    'circulo-e-poligonos': () =>
-      import('@features/geometria/circulo-e-poligonos/circulo-e-poligonos.gerador').then(
-        (m) => m.geradorCirculo,
-      ),
-    poliedros: () =>
-      import('@features/geometria/poliedros/poliedros.gerador').then((m) => m.geradorPoliedros),
-    'semelhanca-e-pitagoras': () =>
-      import('@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.gerador').then(
-        (m) => m.geradorSemelhanca,
-      ),
-    'solidos-e-volumes': () =>
-      import('@features/geometria/solidos-e-volumes/solidos-e-volumes.gerador').then(
-        (m) => m.geradorSolidos,
-      ),
-    fracoes: () =>
-      import('@features/matematica-basica/fracoes/fracoes.gerador').then((m) => m.geradorFracoes),
-    'mmc-mdc': () =>
-      import('@features/matematica-basica/mmc-mdc/mmc-mdc.gerador').then((m) => m.geradorMmcMdc),
-    'notacao-matematica': () =>
-      import('@features/matematica-basica/notacao-matematica/notacao-matematica.gerador').then(
-        (m) => m.geradorNotacao,
-      ),
-    'numeros-decimais': () =>
-      import('@features/matematica-basica/numeros-decimais/numeros-decimais.gerador').then(
-        (m) => m.geradorDecimais,
-      ),
-    'operacoes-fundamentais': () =>
-      import('@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.gerador').then(
-        (m) => m.geradorOperacoes,
-      ),
-    'potenciacao-radiciacao': () =>
-      import('@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.gerador').then(
-        (m) => m.geradorPotencias,
-      ),
-    'razao-proporcao': () =>
-      import('@features/matematica-basica/razao-proporcao/razao-proporcao.gerador').then(
-        (m) => m.geradorProporcao,
-      ),
-    'fisica-moderna': () =>
-      import('@features/ondas-e-fisica-moderna/fisica-moderna/fisica-moderna.gerador').then(
-        (m) => m.geradorFisicaModerna,
-      ),
-    'ondas-e-som': () =>
-      import('@features/ondas-e-fisica-moderna/ondas-e-som/ondas-e-som.gerador').then(
-        (m) => m.geradorOndasESom,
-      ),
-    optica: () =>
-      import('@features/ondas-e-fisica-moderna/optica/optica.gerador').then((m) => m.geradorOptica),
-    'nocao-intuitiva-de-limite': () =>
-      import('@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.gerador').then(
-        (m) => m.geradorLimiteIntuitivo,
-      ),
-    'vizinhancas-e-infinito': () =>
-      import('@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.gerador').then(
-        (m) => m.geradorVizinhancas,
-      ),
-    'circulo-trigonometrico': () =>
-      import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.gerador').then(
-        (m) => m.geradorCirculo,
-      ),
-    'equacoes-trigonometricas': () =>
-      import('@features/trigonometria/equacoes-trigonometricas/equacoes-trigonometricas.gerador').then(
-        (m) => m.geradorEquacoesTrig,
-      ),
-    'funcoes-trigonometricas': () =>
-      import('@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.gerador').then(
-        (m) => m.geradorOndas,
-      ),
-    'identidades-trigonometricas': () =>
-      import('@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.gerador').then(
-        (m) => m.geradorIdentidades,
-      ),
-    'lei-senos-cossenos': () =>
-      import('@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.gerador').then(
-        (m) => m.geradorLeis,
-      ),
-    'seno-cosseno-tangente': () =>
-      import('@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.gerador').then(
-        (m) => m.geradorRazoes,
-      ),
-    'triangulo-retangulo': () =>
-      import('@features/trigonometria/triangulo-retangulo/triangulo-retangulo.gerador').then(
-        (m) => m.geradorTriangulo,
-      ),
-    'escalonamento-e-inversa': () =>
-      import('@features/vetores-matrizes/escalonamento-e-inversa/escalonamento-e-inversa.gerador').then(
-        (m) => m.geradorEscalonamento,
-      ),
-    'matrizes-determinantes': () =>
-      import('@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.gerador').then(
-        (m) => m.geradorMatrizes,
-      ),
-    'numeros-complexos': () =>
-      import('@features/vetores-matrizes/numeros-complexos/numeros-complexos.gerador').then(
-        (m) => m.geradorComplexos,
-      ),
-    'produto-escalar-vetorial': () =>
-      import('@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.gerador').then(
-        (m) => m.geradorProdutos,
-      ),
-    'retas-e-planos': () =>
-      import('@features/vetores-matrizes/retas-e-planos/retas-e-planos.gerador').then(
-        (m) => m.geradorRetasPlanos,
-      ),
-    'vetores-no-espaco': () =>
-      import('@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.gerador').then(
-        (m) => m.geradorVetores3,
-      ),
-    'vetores-no-plano': () =>
-      import('@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.gerador').then(
-        (m) => m.geradorVetores,
-      ),
-  };
+export const CARREGAR_GERADOR: Readonly<
+  Record<string, () => Promise<GeradorExercicio<unknown>>>
+> = {
+  'equacao-primeiro-grau': () => import('@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.gerador').then((m) => m.geradorEquacao1),
+  'equacao-segundo-grau': () => import('@features/algebra/equacao-segundo-grau/equacao-segundo-grau.gerador').then((m) => m.geradorEquacao2),
+  'expressoes-algebricas': () => import('@features/algebra/expressoes-algebricas/expressoes-algebricas.gerador').then((m) => m.geradorExpressoes),
+  'fatoracao': () => import('@features/algebra/fatoracao/fatoracao.gerador').then((m) => m.geradorFatoracao),
+  'inequacoes-segundo-grau': () => import('@features/algebra/inequacoes-segundo-grau/inequacoes-segundo-grau.gerador').then((m) => m.geradorInequacoesSegundoGrau),
+  'inequacoes': () => import('@features/algebra/inequacoes/inequacoes.gerador').then((m) => m.geradorInequacoes),
+  'polinomios': () => import('@features/algebra/polinomios/polinomios.gerador').then((m) => m.geradorPolinomios),
+  'produtos-notaveis': () => import('@features/algebra/produtos-notaveis/produtos-notaveis.gerador').then((m) => m.geradorProdutos),
+  'sistemas-lineares': () => import('@features/algebra/sistemas-lineares/sistemas-lineares.gerador').then((m) => m.geradorSistemas),
+  'aplicacoes-da-derivada': () => import('@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.gerador').then((m) => m.geradorAplicacoesDerivada),
+  'continuidade': () => import('@features/calculo-1/continuidade/continuidade.gerador').then((m) => m.geradorContinuidade),
+  'definicao-de-derivada': () => import('@features/calculo-1/definicao-de-derivada/definicao-de-derivada.gerador').then((m) => m.geradorDefinicaoDerivada),
+  'derivacao-implicita': () => import('@features/calculo-1/derivacao-implicita/derivacao-implicita.gerador').then((m) => m.geradorDerivacaoImplicita),
+  'derivadas-exponencial-logaritmo': () => import('@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.gerador').then((m) => m.geradorDerivadasExpLog),
+  'derivadas-trigonometricas': () => import('@features/calculo-1/derivadas-trigonometricas/derivadas-trigonometricas.gerador').then((m) => m.geradorDerivadasTrig),
+  'limites-laterais': () => import('@features/calculo-1/limites-laterais/limites-laterais.gerador').then((m) => m.geradorLaterais),
+  'limites': () => import('@features/calculo-1/limites/limites.gerador').then((m) => m.geradorLimites),
+  'regra-da-cadeia': () => import('@features/calculo-1/regra-da-cadeia/regra-da-cadeia.gerador').then((m) => m.geradorCadeia),
+  'regras-de-derivacao': () => import('@features/calculo-1/regras-de-derivacao/regras-de-derivacao.gerador').then((m) => m.geradorRegras),
+  'taxa-de-variacao': () => import('@features/calculo-1/taxa-de-variacao/taxa-de-variacao.gerador').then((m) => m.geradorTaxa),
+  'aplicacoes-da-integral': () => import('@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.gerador').then((m) => m.geradorAplicacoesIntegral),
+  'fisica-com-calculo': () => import('@features/calculo-2/fisica-com-calculo/fisica-com-calculo.gerador').then((m) => m.geradorFisicaComCalculo),
+  'integrais-improprias': () => import('@features/calculo-2/integrais-improprias/integrais-improprias.gerador').then((m) => m.geradorIntegraisImproprias),
+  'integral-definida': () => import('@features/calculo-2/integral-definida/integral-definida.gerador').then((m) => m.geradorDefinida),
+  'integral-indefinida': () => import('@features/calculo-2/integral-indefinida/integral-indefinida.gerador').then((m) => m.geradorIndefinida),
+  'sequencias-e-series': () => import('@features/calculo-2/sequencias-e-series/sequencias-e-series.gerador').then((m) => m.geradorSequencias),
+  'series-de-taylor': () => import('@features/calculo-2/series-de-taylor/series-de-taylor.gerador').then((m) => m.geradorSeriesDeTaylor),
+  'soma-de-riemann': () => import('@features/calculo-2/soma-de-riemann/soma-de-riemann.gerador').then((m) => m.geradorRiemann),
+  'tecnicas-de-integracao': () => import('@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.gerador').then((m) => m.geradorTecnicas),
+  'teorema-fundamental': () => import('@features/calculo-2/teorema-fundamental/teorema-fundamental.gerador').then((m) => m.geradorTfc),
+  'coordenadas-no-espaco': () => import('@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.gerador').then((m) => m.geradorCoordenadasNoEspaco),
+  'derivadas-parciais': () => import('@features/calculo-3/derivadas-parciais/derivadas-parciais.gerador').then((m) => m.geradorDerivadasParciais),
+  'funcoes-de-varias-variaveis': () => import('@features/calculo-3/funcoes-de-varias-variaveis/funcoes-de-varias-variaveis.gerador').then((m) => m.geradorFuncoesVariasVariaveis),
+  'gradiente-e-direcional': () => import('@features/calculo-3/gradiente-e-direcional/gradiente-e-direcional.gerador').then((m) => m.geradorGradiente),
+  'integrais-de-linha': () => import('@features/calculo-3/integrais-de-linha/integrais-de-linha.gerador').then((m) => m.geradorIntegraisDeLinha),
+  'integrais-multiplas': () => import('@features/calculo-3/integrais-multiplas/integrais-multiplas.gerador').then((m) => m.geradorIntegraisMultiplas),
+  'teoremas-integrais': () => import('@features/calculo-3/teoremas-integrais/teoremas-integrais.gerador').then((m) => m.geradorTeoremasIntegrais),
+  'aplicacoes-de-edo': () => import('@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.gerador').then((m) => m.geradorAplicacoesDeEdo),
+  'edo-primeira-ordem': () => import('@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.gerador').then((m) => m.geradorEdoPrimeiraOrdem),
+  'edo-segunda-ordem': () => import('@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.gerador').then((m) => m.geradorEdoSegundaOrdem),
+  'metodos-numericos': () => import('@features/calculo-4/metodos-numericos/metodos-numericos.gerador').then((m) => m.geradorMetodosNumericos),
+  'circuitos': () => import('@features/eletromagnetismo/circuitos/circuitos.gerador').then((m) => m.geradorCircuitos),
+  'eletrostatica': () => import('@features/eletromagnetismo/eletrostatica/eletrostatica.gerador').then((m) => m.geradorEletrostatica),
+  'magnetismo-e-inducao': () => import('@features/eletromagnetismo/magnetismo-e-inducao/magnetismo-e-inducao.gerador').then((m) => m.geradorMagnetismo),
+  'potencial-e-capacitores': () => import('@features/eletromagnetismo/potencial-e-capacitores/potencial-e-capacitores.gerador').then((m) => m.geradorPotencialCapacitores),
+  'analise-combinatoria': () => import('@features/estatistica/analise-combinatoria/analise-combinatoria.gerador').then((m) => m.geradorCombinatoria),
+  'binomio-de-newton': () => import('@features/estatistica/binomio-de-newton/binomio-de-newton.gerador').then((m) => m.geradorBinomio),
+  'distribuicao-normal': () => import('@features/estatistica/distribuicao-normal/distribuicao-normal.gerador').then((m) => m.geradorDistribuicaoNormal),
+  'estatistica-e-incerteza': () => import('@features/estatistica/estatistica-e-incerteza/estatistica-e-incerteza.gerador').then((m) => m.geradorIncerteza),
+  'probabilidade': () => import('@features/estatistica/probabilidade/probabilidade.gerador').then((m) => m.geradorProbabilidade),
+  'regressao-e-correlacao': () => import('@features/estatistica/regressao-e-correlacao/regressao-e-correlacao.gerador').then((m) => m.geradorRegressaoCorrelacao),
+  'analise-dimensional': () => import('@features/fisica/analise-dimensional/analise-dimensional.gerador').then((m) => m.geradorDimensional),
+  'cinematica-escalar': () => import('@features/fisica/cinematica-escalar/cinematica-escalar.gerador').then((m) => m.geradorCinematica),
+  'cinematica-vetorial': () => import('@features/fisica/cinematica-vetorial/cinematica-vetorial.gerador').then((m) => m.geradorCinematicaVetorial),
+  'dinamica-rotacional': () => import('@features/fisica/dinamica-rotacional/dinamica-rotacional.gerador').then((m) => m.geradorDinamicaRotacional),
+  'estatica-e-torque': () => import('@features/fisica/estatica-e-torque/estatica-e-torque.gerador').then((m) => m.geradorTorque),
+  'fluidos-e-aerodinamica': () => import('@features/fisica/fluidos-e-aerodinamica/fluidos-e-aerodinamica.gerador').then((m) => m.geradorFluidos),
+  'gravitacao-e-orbitas': () => import('@features/fisica/gravitacao-e-orbitas/gravitacao-e-orbitas.gerador').then((m) => m.geradorGravitacao),
+  'impulso-e-momento': () => import('@features/fisica/impulso-e-momento/impulso-e-momento.gerador').then((m) => m.geradorMomento),
+  'leis-de-newton': () => import('@features/fisica/leis-de-newton/leis-de-newton.gerador').then((m) => m.geradorNewton),
+  'momento-angular': () => import('@features/fisica/momento-angular/momento-angular.gerador').then((m) => m.geradorMomentoAngular),
+  'movimento-circular': () => import('@features/fisica/movimento-circular/movimento-circular.gerador').then((m) => m.geradorMovimentoCircular),
+  'movimento-harmonico': () => import('@features/fisica/movimento-harmonico/movimento-harmonico.gerador').then((m) => m.geradorMhs),
+  'propulsao-de-foguetes': () => import('@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.gerador').then((m) => m.geradorPropulsao),
+  'termodinamica-e-gases': () => import('@features/fisica/termodinamica-e-gases/termodinamica-e-gases.gerador').then((m) => m.geradorTermo),
+  'trabalho-e-energia': () => import('@features/fisica/trabalho-e-energia/trabalho-e-energia.gerador').then((m) => m.geradorEnergia),
+  'trajetoria-balistica': () => import('@features/fisica/trajetoria-balistica/trajetoria-balistica.gerador').then((m) => m.geradorBalistica),
+  'transferencia-de-calor': () => import('@features/fisica/transferencia-de-calor/transferencia-de-calor.gerador').then((m) => m.geradorTransferenciaDeCalor),
+  'composicao-inversa': () => import('@features/funcoes/composicao-inversa/composicao-inversa.gerador').then((m) => m.geradorComposicao),
+  'conceito-funcao': () => import('@features/funcoes/conceito-funcao/conceito-funcao.gerador').then((m) => m.geradorConceito),
+  'equacoes-exponenciais': () => import('@features/funcoes/equacoes-exponenciais/equacoes-exponenciais.gerador').then((m) => m.geradorEquacoesExponenciais),
+  'funcao-afim': () => import('@features/funcoes/funcao-afim/funcao-afim.gerador').then((m) => m.geradorAfim),
+  'funcao-exponencial': () => import('@features/funcoes/funcao-exponencial/funcao-exponencial.gerador').then((m) => m.geradorExponencial),
+  'funcao-logaritmica': () => import('@features/funcoes/funcao-logaritmica/funcao-logaritmica.gerador').then((m) => m.geradorLogaritmica),
+  'funcao-modular': () => import('@features/funcoes/funcao-modular/funcao-modular.gerador').then((m) => m.geradorModular),
+  'funcao-quadratica': () => import('@features/funcoes/funcao-quadratica/funcao-quadratica.gerador').then((m) => m.geradorQuadratica),
+  'funcoes-por-partes': () => import('@features/funcoes/funcoes-por-partes/funcoes-por-partes.gerador').then((m) => m.geradorFuncoesPorPartes),
+  'funcoes-racionais': () => import('@features/funcoes/funcoes-racionais/funcoes-racionais.gerador').then((m) => m.geradorFuncoesRacionais),
+  'juros-compostos': () => import('@features/funcoes/juros-compostos/juros-compostos.gerador').then((m) => m.geradorJuros),
+  'progressoes': () => import('@features/funcoes/progressoes/progressoes.gerador').then((m) => m.geradorProgressoes),
+  'transformacoes-de-graficos': () => import('@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.gerador').then((m) => m.geradorTransformacoes),
+  'circunferencia': () => import('@features/geometria-analitica/circunferencia/circunferencia.gerador').then((m) => m.geradorCircunferencia),
+  'conicas': () => import('@features/geometria-analitica/conicas/conicas.gerador').then((m) => m.geradorConicas),
+  'coordenadas-polares': () => import('@features/geometria-analitica/coordenadas-polares/coordenadas-polares.gerador').then((m) => m.geradorPolares),
+  'equacoes-parametricas': () => import('@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.gerador').then((m) => m.geradorEquacoesParametricas),
+  'ponto-e-reta': () => import('@features/geometria-analitica/ponto-e-reta/ponto-e-reta.gerador').then((m) => m.geradorPontoReta),
+  'angulos-e-triangulos': () => import('@features/geometria/angulos-e-triangulos/angulos-e-triangulos.gerador').then((m) => m.geradorAngulos),
+  'areas-de-figuras-planas': () => import('@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.gerador').then((m) => m.geradorAreas),
+  'circulo-e-poligonos': () => import('@features/geometria/circulo-e-poligonos/circulo-e-poligonos.gerador').then((m) => m.geradorCirculo),
+  'poliedros': () => import('@features/geometria/poliedros/poliedros.gerador').then((m) => m.geradorPoliedros),
+  'semelhanca-e-pitagoras': () => import('@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.gerador').then((m) => m.geradorSemelhanca),
+  'solidos-e-volumes': () => import('@features/geometria/solidos-e-volumes/solidos-e-volumes.gerador').then((m) => m.geradorSolidos),
+  'fracoes': () => import('@features/matematica-basica/fracoes/fracoes.gerador').then((m) => m.geradorFracoes),
+  'mmc-mdc': () => import('@features/matematica-basica/mmc-mdc/mmc-mdc.gerador').then((m) => m.geradorMmcMdc),
+  'notacao-matematica': () => import('@features/matematica-basica/notacao-matematica/notacao-matematica.gerador').then((m) => m.geradorNotacao),
+  'numeros-decimais': () => import('@features/matematica-basica/numeros-decimais/numeros-decimais.gerador').then((m) => m.geradorDecimais),
+  'operacoes-fundamentais': () => import('@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.gerador').then((m) => m.geradorOperacoes),
+  'potenciacao-radiciacao': () => import('@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.gerador').then((m) => m.geradorPotencias),
+  'razao-proporcao': () => import('@features/matematica-basica/razao-proporcao/razao-proporcao.gerador').then((m) => m.geradorProporcao),
+  'fisica-moderna': () => import('@features/ondas-e-fisica-moderna/fisica-moderna/fisica-moderna.gerador').then((m) => m.geradorFisicaModerna),
+  'ondas-e-som': () => import('@features/ondas-e-fisica-moderna/ondas-e-som/ondas-e-som.gerador').then((m) => m.geradorOndasESom),
+  'optica': () => import('@features/ondas-e-fisica-moderna/optica/optica.gerador').then((m) => m.geradorOptica),
+  'nocao-intuitiva-de-limite': () => import('@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.gerador').then((m) => m.geradorLimiteIntuitivo),
+  'vizinhancas-e-infinito': () => import('@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.gerador').then((m) => m.geradorVizinhancas),
+  'circulo-trigonometrico': () => import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.gerador').then((m) => m.geradorCirculo),
+  'equacoes-trigonometricas': () => import('@features/trigonometria/equacoes-trigonometricas/equacoes-trigonometricas.gerador').then((m) => m.geradorEquacoesTrig),
+  'funcoes-trigonometricas': () => import('@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.gerador').then((m) => m.geradorOndas),
+  'identidades-trigonometricas': () => import('@features/trigonometria/identidades-trigonometricas/identidades-trigonometricas.gerador').then((m) => m.geradorIdentidades),
+  'lei-senos-cossenos': () => import('@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.gerador').then((m) => m.geradorLeis),
+  'seno-cosseno-tangente': () => import('@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.gerador').then((m) => m.geradorRazoes),
+  'triangulo-retangulo': () => import('@features/trigonometria/triangulo-retangulo/triangulo-retangulo.gerador').then((m) => m.geradorTriangulo),
+  'escalonamento-e-inversa': () => import('@features/vetores-matrizes/escalonamento-e-inversa/escalonamento-e-inversa.gerador').then((m) => m.geradorEscalonamento),
+  'matrizes-determinantes': () => import('@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.gerador').then((m) => m.geradorMatrizes),
+  'numeros-complexos': () => import('@features/vetores-matrizes/numeros-complexos/numeros-complexos.gerador').then((m) => m.geradorComplexos),
+  'produto-escalar-vetorial': () => import('@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.gerador').then((m) => m.geradorProdutos),
+  'retas-e-planos': () => import('@features/vetores-matrizes/retas-e-planos/retas-e-planos.gerador').then((m) => m.geradorRetasPlanos),
+  'vetores-no-espaco': () => import('@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.gerador').then((m) => m.geradorVetores3),
+  'vetores-no-plano': () => import('@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.gerador').then((m) => m.geradorVetores),
+};

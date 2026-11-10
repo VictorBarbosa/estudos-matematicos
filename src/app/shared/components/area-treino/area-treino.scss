@@ -1,4 +1,4 @@
-@use "mixins" as *;
+@use 'mixins' as *;
 
 :host {
   display: block;
@@ -46,11 +46,11 @@
   box-shadow: var(--sombra-1);
 
   /* Difícil destaca a letra; o extremo, por ser o topo, inverte o selo. */
-  &[data-nivel="dificil"] {
+  &[data-nivel='dificil'] {
     color: var(--acento);
   }
 
-  &[data-nivel="extremo"] {
+  &[data-nivel='extremo'] {
     background: var(--acento);
     color: var(--acento-contraste);
   }
@@ -150,17 +150,17 @@
   border-left: 4px solid var(--borda-forte);
   background: var(--superficie-2);
 
-  &[data-veredito="correto"] {
+  &[data-veredito='correto'] {
     background: var(--acerto-suave);
     border-left-color: var(--acerto);
   }
 
-  &[data-veredito="incorreto"] {
+  &[data-veredito='incorreto'] {
     background: var(--erro-suave);
     border-left-color: var(--erro);
   }
 
-  &[data-veredito="invalido"] {
+  &[data-veredito='invalido'] {
     background: var(--aviso-suave);
     border-left-color: var(--aviso);
   }

@@ -1,5 +1,5 @@
 import { criarRng } from '@core/treino/rng/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { NIVEIS, Nivel, SEM_FORMULA, corrigir } from '@core/treino/models/treino.model';
 import { geradorOperacoes } from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
@@ -44,6 +44,39 @@ describe('geradorOperacoes', () => {
     expect(resultado.veredito).toBe('incorreto');
     expect(resultado.diagnostico).toContain('esquerda para a direita');
     expect(resultado.conceitoAssociado).toBe('operacoes.ordem');
+  });
+
+  it('a história não entrega a conta: o enunciado é só texto', () => {
+    // Montar a expressão é metade do exercício; exibi-la responderia a parte
+    // que a situação existe para treinar.
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 120)) {
+        if (exercicio.id.includes('historia')) {
+          expect(exercicio.enunciadoTex, exercicio.enunciado).toBe(SEM_FORMULA);
+          expect(exercicio.enunciado.length).toBeGreaterThan(40);
+          expect(exercicio.enunciado.trim().endsWith('?')).toBe(true);
+        }
+      }
+    }
+  });
+
+  it('todo nível mistura a conta escrita com a conta contada', () => {
+    for (const nivel of NIVEIS) {
+      const exercicios = amostra(nivel, 200);
+      const comHistoria = exercicios.filter((e) => e.id.includes('historia'));
+
+      expect(comHistoria.length, nivel).toBeGreaterThan(40);
+      expect(comHistoria.length, nivel).toBeLessThan(160);
+    }
+  });
+
+  it('as histórias existem em francês e inglês', () => {
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 80).filter((e) => e.id.includes('historia'))) {
+        expect(exercicio.traducoes?.fr?.enunciado.length ?? 0).toBeGreaterThan(40);
+        expect(exercicio.traducoes?.en?.enunciado.length ?? 0).toBeGreaterThan(40);
+      }
+    }
   });
 
   it('aceita negativos e decimais', () => {

@@ -4050,5 +4050,117 @@
   "π é definido como a razão entre o comprimento e o diâmetro — em qualquer círculo.": {
     "fr": "π est défini comme le rapport entre la longueur et le diamètre — dans n'importe quel cercle.",
     "en": "π is defined as the ratio between the circumference and the diameter — in any circle."
+  },
+  "Duas grandezas mudam ao mesmo tempo. Resolvemos uma de cada vez, mantendo a outra fixa.": {
+    "fr": "Deux grandeurs changent en même temps. On en traite une à la fois, en gardant l'autre fixe.",
+    "en": "Two quantities change at once. We handle them one at a time, holding the other fixed."
+  },
+  "Numa proporcionalidade direta, dobrar a grandeza dobra o resultado: o fator é a razão entre o valor novo e o antigo.": {
+    "fr": "Dans une proportionnalité directe, doubler la grandeur double le résultat : le facteur est le rapport entre la nouvelle valeur et l'ancienne.",
+    "en": "In a direct proportion, doubling the quantity doubles the result: the factor is the ratio of the new value to the old one."
+  },
+  "Numa inversa, dobrar a grandeza corta o resultado pela metade: o fator é a razão invertida.": {
+    "fr": "Dans une proportion inverse, doubler la grandeur divise le résultat par deux : le facteur est le rapport inversé.",
+    "en": "In an inverse proportion, doubling the quantity halves the result: the factor is the inverted ratio."
+  },
+  "Como os fatores se multiplicam e a ordem não altera o produto, cada grandeza pode ser tratada isoladamente.": {
+    "fr": "Comme les facteurs se multiplient et que l’ordre ne change pas le produit, chaque grandeur peut être traitée séparément.",
+    "en": "Since the factors multiply and the order does not change the product, each quantity can be handled on its own."
+  },
+  "Se errar a direção de uma delas, o erro aparece como um fator trocado — nunca some.": {
+    "fr": "Une erreur sur le sens de l’une d’elles apparaît comme un facteur inversé — elle ne disparaît jamais.",
+    "en": "Getting the direction of one of them wrong shows up as an inverted factor — it never vanishes."
+  },
+  "Primeiro só os operários: o dobro de operários leva metade do tempo, então a proporção é inversa.": {
+    "fr": "D’abord les ouvriers seuls : deux fois plus d’ouvriers prennent deux fois moins de temps, la proportion est donc inverse.",
+    "en": "First the workers alone: twice the workers take half the time, so the proportion is inverse."
+  },
+  "Agora só as horas por dia, partindo dos 6 dias: mais horas por dia, menos dias.": {
+    "fr": "Maintenant les heures par jour seules, en partant des 6 jours : plus d’heures par jour, moins de jours.",
+    "en": "Now the hours a day alone, starting from the 6 days: more hours a day, fewer days."
+  },
+  "Nos dois sentidos os fatores eram inversos, então os dois dividem o tempo inicial.": {
+    "fr": "Dans les deux cas les facteurs étaient inverses, donc les deux divisent le temps initial.",
+    "en": "In both cases the factors were inverse, so both divide the initial time."
+  },
+  "A raiz é o x que faz f(x) valer zero.": {
+    "fr": "La racine est le x qui fait valoir zéro à f(x).",
+    "en": "The root is the x that makes f(x) equal zero."
+  },
+  "Isolamos o termo com x.": {
+    "fr": "On isole le terme en x.",
+    "en": "We isolate the term with x."
+  },
+  "Dividimos pelo coeficiente de x.": {
+    "fr": "On divise par le coefficient de x.",
+    "en": "We divide by the coefficient of x."
+  },
+  "É o ponto em que a reta cruza o eixo horizontal.": {
+    "fr": "C’est le point où la droite coupe l’axe horizontal.",
+    "en": "It is where the line crosses the horizontal axis."
+  },
+  "A taxa de variação de uma função afim é o próprio coeficiente a.": {
+    "fr": "Le taux de variation d’une fonction affine est le coefficient a lui-même.",
+    "en": "The rate of change of an affine function is the coefficient a itself."
+  },
+  "A situação já descreve uma função afim: um valor inicial fixo e uma taxa que se repete a cada unidade.": {
+    "fr": "La situation décrit déjà une fonction affine : une valeur initiale fixe et un taux qui se répète à chaque unité.",
+    "en": "The situation already describes an affine function: a fixed starting value and a rate that repeats every unit."
+  },
+  "Escrevemos a função que traduz a situação: taxa vezes x, mais o valor inicial.": {
+    "fr": "On écrit la fonction qui traduit la situation : le taux fois x, plus la valeur initiale.",
+    "en": "We write the function that expresses the situation: rate times x, plus the starting value."
+  },
+  "O valor inicial é o que existe antes de qualquer unidade: é o coeficiente b.": {
+    "fr": "La valeur initiale est ce qui existe avant toute unité : c’est le coefficient b.",
+    "en": "The starting value is what exists before any unit: it is the coefficient b."
+  },
+  "A taxa é quanto o total muda a cada unidade a mais: é o coeficiente a.": {
+    "fr": "Le taux est de combien le total change par unité supplémentaire : c’est le coefficient a.",
+    "en": "The rate is how much the total changes per extra unit: it is the coefficient a."
+  },
+  "A pergunta é o valor em um ponto: substituímos x pelo número dado.": {
+    "fr": "La question porte sur la valeur en un point : on remplace x par le nombre donné.",
+    "en": "The question asks for the value at a point: we replace x by the given number."
+  },
+  "A fórmula já está dada: é uma parábola, e o sinal do coeficiente de x² decide se ela abre para cima ou para baixo.": {
+    "fr": "La formule est donnée : c’est une parabole, et le signe du coefficient de x² décide si elle s’ouvre vers le haut ou vers le bas.",
+    "en": "The formula is given: it is a parabola, and the sign of the x² coefficient decides which way it opens."
+  },
+  "O vértice é o ponto extremo da parábola: é ele que responde «qual é o maior» ou «qual é o menor».": {
+    "fr": "Le sommet est le point extrême de la parabole : c’est lui qui répond à « quel est le plus grand » ou « quel est le plus petit ».",
+    "en": "The vertex is the extreme point of the parabola: it is what answers “which is the largest” or “which is the smallest”."
+  },
+  "A abscissa do vértice é −b dividido por 2a.": {
+    "fr": "L’abscisse du sommet est −b divisé par 2a.",
+    "en": "The vertex’s x-coordinate is −b divided by 2a."
+  },
+  "Substituímos essa abscissa na função para obter a ordenada do vértice.": {
+    "fr": "On remplace cette abscisse dans la fonction pour obtenir l’ordonnée du sommet.",
+    "en": "We substitute that x back into the function to get the vertex’s y-coordinate."
+  },
+  "Como a parábola abre para baixo, o vértice é um MÁXIMO: é o maior valor que a função assume.": {
+    "fr": "Comme la parabole s’ouvre vers le bas, le sommet est un MAXIMUM : c’est la plus grande valeur prise par la fonction.",
+    "en": "Since the parabola opens downwards, the vertex is a MAXIMUM: the largest value the function takes."
+  },
+  "Como a parábola abre para cima, o vértice é um MÍNIMO: é o menor valor que a função assume.": {
+    "fr": "Comme la parabole s’ouvre vers le haut, le sommet est un MINIMUM : c’est la plus petite valeur prise par la fonction.",
+    "en": "Since the parabola opens upwards, the vertex is a MINIMUM: the smallest value the function takes."
+  },
+  "É o preço que maximiza o lucro.": {
+    "fr": "C’est le prix qui maximise le bénéfice.",
+    "en": "It is the price that maximises profit."
+  },
+  "É o instante em que a altura é máxima.": {
+    "fr": "C’est l’instant où la hauteur est maximale.",
+    "en": "It is the instant when the height is greatest."
+  },
+  "É a largura que aproveita melhor a cerca disponível.": {
+    "fr": "C’est la largeur qui exploite le mieux la clôture disponible.",
+    "en": "It is the width that makes the best use of the available fence."
+  },
+  "É a quantidade que minimiza o custo de produção.": {
+    "fr": "C’est la quantité qui minimise le coût de production.",
+    "en": "It is the quantity that minimises production cost."
   }
 }

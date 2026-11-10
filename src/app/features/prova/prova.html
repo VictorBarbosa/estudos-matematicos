@@ -65,7 +65,7 @@
         }
 
         <section class="enunciado">
-          <p>{{ q.exercicio.enunciado }}</p>
+          <p>{{ enunciadoDe(q) }}</p>
           @if (q.exercicio.enunciadoTex !== '') {
             <app-formula [tex]="q.exercicio.enunciadoTex" [bloco]="true" />
           }
@@ -77,7 +77,7 @@
           #campo
           [(valor)]="resposta"
           [rotulo]="texto('suaResposta')"
-          [ajuda]="q.gerador.formatoResposta"
+          [ajuda]="ajudaDoFormato(q.gerador)"
           [simbolos]="q.gerador.simbolos ?? []"
           [estado]="estadoCampo()"
           [bloqueado]="corrigida()"
@@ -90,7 +90,7 @@
           </p>
           @if (v.veredito === 'incorreto') {
             <p class="gabarito">{{ texto('gabarito', { valor: gabarito() }) }}</p>
-            @if (v.diagnostico; as diagnostico) {
+            @if (diagnosticoDa(v); as diagnostico) {
               <p class="diagnostico">{{ diagnostico }}</p>
             }
 

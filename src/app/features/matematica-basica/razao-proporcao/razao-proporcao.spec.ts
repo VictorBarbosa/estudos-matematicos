@@ -101,11 +101,16 @@ describe('a fórmula que o Difícil não entrega', () => {
   it('o enunciado sozinho traz todos os números da conta', () => {
     // Sem fórmula, o texto é a pergunta inteira: se ele não disser os valores,
     // o exercício fica impossível em vez de difícil.
+    //
+    // Duas grandezas pedem dois números no enunciado; as perguntas de valor
+    // unitário («quanto custa 1 kg?») têm exatamente os dois, porque o terceiro
+    // valor da conta é o 1 que a própria pergunta enuncia. Exigir três ali
+    // reprovaria uma pergunta completa por ser curta.
     for (const exercicio of amostra('dificil', 120)) {
       const numeros = exercicio.enunciado.match(/\d+/g) ?? [];
 
-      expect(numeros.length, exercicio.enunciado).toBeGreaterThanOrEqual(3);
-      expect(exercicio.enunciado.length).toBeGreaterThan(40);
+      expect(numeros.length, exercicio.enunciado).toBeGreaterThanOrEqual(2);
+      expect(exercicio.enunciado.length).toBeGreaterThan(30);
       expect(exercicio.enunciado.trim().endsWith('?')).toBe(true);
     }
   });
@@ -118,6 +123,74 @@ describe('a fórmula que o Difícil não entrega', () => {
 
       expect(passos.length).toBeGreaterThan(1);
       expect(passos.some((passo) => passo.tex.includes('='))).toBe(true);
+    }
+  });
+});
+
+/**
+ * As três línguas.
+ *
+ * A interface fala português, francês e inglês, e a pergunta do exercício é o
+ * texto que o aluno mais lê. Sem estas versões no próprio exercício, trocar de
+ * idioma no cabeçalho deixaria a pergunta na língua anterior até o próximo
+ * sorteio.
+ */
+describe('as três línguas', () => {
+  for (const nivel of NIVEIS) {
+    it(`no nível ${nivel}, o enunciado existe em francês e inglês`, () => {
+      for (const exercicio of amostra(nivel)) {
+        const fr = exercicio.traducoes?.fr?.enunciado ?? '';
+        const en = exercicio.traducoes?.en?.enunciado ?? '';
+
+        expect(fr.length, exercicio.enunciado).toBeGreaterThan(20);
+        expect(en.length, exercicio.enunciado).toBeGreaterThan(20);
+        expect(fr, exercicio.enunciado).not.toBe(exercicio.enunciado);
+        expect(en, exercicio.enunciado).not.toBe(exercicio.enunciado);
+      }
+    });
+
+    it(`no nível ${nivel}, a dica e o diagnóstico acompanham a língua`, () => {
+      for (const exercicio of amostra(nivel)) {
+        expect(exercicio.traducoes?.fr?.dica?.length ?? 0).toBeGreaterThan(10);
+        expect(exercicio.traducoes?.en?.dica?.length ?? 0).toBeGreaterThan(10);
+
+        for (const armadilha of exercicio.armadilhas) {
+          expect(armadilha.diagnosticoTraducoes?.fr?.length ?? 0).toBeGreaterThan(20);
+          expect(armadilha.diagnosticoTraducoes?.en?.length ?? 0).toBeGreaterThan(20);
+        }
+      }
+    });
+  }
+});
+
+/**
+ * A regra de três composta.
+ *
+ * Duas grandezas mudam ao mesmo tempo — é o degrau que separa «aplicar a
+ * fórmula» de «decidir o que multiplica o quê». O enunciado dá cinco números e
+ * a resolução mostra as duas proporções encadeadas.
+ */
+describe('o Extremo composto', () => {
+  it('só o Extremo sorteia a composta, e ela tem cinco números', () => {
+    for (const nivel of ['facil', 'medio', 'dificil'] as const) {
+      for (const exercicio of amostra(nivel, 120)) {
+        expect(exercicio.id, nivel).not.toContain('composta');
+      }
+    }
+
+    for (const exercicio of amostra('extremo', 120)) {
+      expect(exercicio.id).toContain('composta');
+      expect(exercicio.enunciado.match(/\d+/g)?.length ?? 0).toBeGreaterThanOrEqual(5);
+      expect(exercicio.resolucao.passos.length).toBeGreaterThan(4);
+      expect(exercicio.enunciadoTex).toBe(SEM_FORMULA);
+    }
+  });
+
+  it('as duas proporções encadeadas chegam ao gabarito', () => {
+    for (const exercicio of amostra('extremo', 60)) {
+      const ultimo = exercicio.resolucao.passos.at(-1)!;
+      expect(ultimo.tex).toContain('x');
+      expect(Number.isInteger(exercicio.gabarito)).toBe(true);
     }
   });
 });

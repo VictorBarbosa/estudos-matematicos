@@ -99,4 +99,45 @@ export const TEORIA_AFIM: readonly Teoria[] = [
     },
     vejaTambem: ['afim.coeficientes'],
   },
+  {
+    id: 'afim.modelagem',
+    titulo: 'Ler a taxa e o valor inicial num texto',
+    resumo: 'O mesmo par (a, b), escondido numa situação do dia a dia.',
+    definicao:
+      'Toda situação que começa num valor fixo e cresce sempre do mesmo tanto por unidade é uma ' +
+      'função afim. O valor fixo — a bandeirada, a mensalidade, o salário-base, a quantidade ' +
+      'inicial no tanque — é b, porque é o que já existe quando nenhuma unidade foi contada: ' +
+      'f(0). O quanto muda a cada unidade é a, porque é a diferença entre dois totais ' +
+      'consecutivos. Reconhecer esse par no texto é o que substitui a fórmula decorada.',
+    formulas: [
+      {
+        tex: '\\text{total}(x) = \\text{valor por unidade} \\cdot x + \\text{valor fixo}',
+        legenda: 'a é o valor por unidade; b é o valor fixo.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'A pergunta «quanto antes de qualquer unidade?» isola o valor fixo.',
+        tex: 'f(0) = a \\cdot 0 + b = b',
+      },
+      {
+        descricao: 'A pergunta «quanto muda por unidade a mais?» isola a taxa.',
+        tex: 'f(x+1) - f(x) = a',
+      },
+      {
+        descricao:
+          'As três perguntas do tópico saem da mesma função: o valor num ponto, o ponto em que ' +
+          'o total chega a um alvo, e a própria taxa.',
+        tex: 'x = \\frac{\\text{alvo} - b}{a}',
+        nota: 'Quando o alvo é zero — o tanque esvaziar, o gasto acabar —, resta x = −b/a, a raiz.',
+      },
+    ],
+    exemplo: {
+      enunciado:
+        'Um táxi cobra R$ 6 de bandeirada mais R$ 3 por quilômetro. Quanto custa uma corrida de ' +
+        '8 km? Com R$ 30, quantos quilômetros?',
+      passos: analisarAfimComPassos(3, 6).passos,
+    },
+    vejaTambem: ['afim.coeficientes', 'afim.raiz'],
+  },
 ];

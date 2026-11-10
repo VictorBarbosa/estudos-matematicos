@@ -21,8 +21,8 @@ grandezas crescem juntas ou em sentidos opostos?"), não uma resposta.
 
 ## O treino é só regra de três
 
-A divisão proporcional — *"Dividindo $ 230,00 em partes proporcionais a 1 e 4, qual é a MAIOR
-das partes?"* — saiu dos exercícios. Ela exercitava uma receita (somar os pesos, achar k,
+A divisão proporcional — _"Dividindo $ 230,00 em partes proporcionais a 1 e 4, qual é a MAIOR
+das partes?"_ — saiu dos exercícios. Ela exercitava uma receita (somar os pesos, achar k,
 multiplicar) e não a decisão entre direta e inversa, que é o que este tópico ensina e o único
 lugar do currículo onde essa decisão aparece.
 

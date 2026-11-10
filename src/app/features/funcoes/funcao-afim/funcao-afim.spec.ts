@@ -1,6 +1,6 @@
 import { Fracao } from '@core/math';
 import { criarRng } from '@core/treino/rng/rng';
-import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
+import { NIVEIS, Nivel, SEM_FORMULA, corrigir } from '@core/treino/models/treino.model';
 import { geradorAfim } from '@features/funcoes/funcao-afim/funcao-afim.gerador';
 
 function amostra(nivel: Nivel, quantidade = 60) {
@@ -80,5 +80,52 @@ describe('geradorAfim', () => {
     const resultado = corrigir(geradorAfim, exercicio, armadilha.resposta.toString());
     expect(resultado.veredito).toBe('incorreto');
     expect(resultado.conceitoAssociado).toBe('afim.raiz');
+  });
+});
+
+/**
+ * A função que vem de uma história.
+ *
+ * A mesma reta, descrita por uma situação: táxi, reservatório, salário,
+ * plano de dados. O que o exercício cobra a mais é decidir, no texto, quem é a
+ * taxa e quem é o valor inicial — e o enunciado não mostra f(x) justamente
+ * para não entregar essa decisão.
+ */
+describe('as histórias de função afim', () => {
+  it('metade dos exercícios vem de uma situação, e ela não mostra a fórmula', () => {
+    for (const nivel of NIVEIS) {
+      const exercicios = amostra(nivel, 120);
+      const comHistoria = exercicios.filter((e) => e.id.includes('historia'));
+
+      expect(comHistoria.length, nivel).toBeGreaterThan(30);
+      expect(comHistoria.length, nivel).toBeLessThan(90);
+
+      for (const exercicio of comHistoria) {
+        expect(exercicio.enunciadoTex, exercicio.enunciado).toBe(SEM_FORMULA);
+        expect(exercicio.traducoes?.fr?.enunciado.length ?? 0).toBeGreaterThan(30);
+        expect(exercicio.traducoes?.en?.enunciado.length ?? 0).toBeGreaterThan(30);
+      }
+    }
+  });
+
+  it('a resposta é sempre positiva ou nula, porque nenhuma história tem grandeza negativa', () => {
+    // Um táxi de −3 km ou um tanque com −9 litros seriam enunciado errado, não
+    // dificuldade: a pergunta deixaria de ter sentido no mundo.
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 120).filter((e) => e.id.includes('historia'))) {
+        expect(exercicio.gabarito.paraDecimal(), exercicio.enunciado).toBeGreaterThanOrEqual(0);
+      }
+    }
+  });
+
+  it('a resolução nomeia o valor inicial e a taxa antes de calcular', () => {
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 60).filter((e) => e.id.includes('historia'))) {
+        const texto = exercicio.resolucao.passos.map((passo) => passo.descricao).join(' ');
+
+        expect(texto).toContain('valor inicial');
+        expect(texto).toContain('taxa');
+      }
+    }
   });
 });

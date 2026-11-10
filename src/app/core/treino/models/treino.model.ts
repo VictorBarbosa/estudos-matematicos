@@ -1,3 +1,4 @@
+import { Idioma } from '@core/i18n/models/i18n.model';
 import { Resolucao } from '@core/math/tipos/tipos';
 import { Rng } from '@core/treino/rng/rng';
 
@@ -53,17 +54,51 @@ export interface Armadilha<T> {
   readonly resposta: T;
   /** O que o aluno provavelmente fez, dito sem julgamento. */
   readonly diagnostico: string;
+  /**
+   * O mesmo diagnóstico em francês e inglês.
+   *
+   * Opcional porque a tradução dos geradores é gradual: quem ainda não tem a
+   * versão traduzida continua mostrando o português, em vez de uma tela vazia.
+   * O guarda `textos-traduzidos.spec.ts` cobra as duas línguas de quem declara
+   * o campo — meia tradução é pior que nenhuma.
+   */
+  readonly diagnosticoTraducoes?: TraducaoDeTexto;
   /** Índice do passo da resolução em que a divergência aparece. */
   readonly passo?: number;
   /** Conceito a revisar por causa desse erro. */
   readonly conceito?: string;
 }
 
+/** Um texto livre nas línguas em que ele já foi escrito. */
+export type TraducaoDeTexto = Readonly<Partial<Record<Idioma, string>>>;
+
+/**
+ * O enunciado e a dica de um exercício, numa língua.
+ *
+ * O português NÃO entra aqui: ele vive nos campos `enunciado` e `dica`, que já
+ * existiam. Duplicá-lo criaria duas fontes para a mesma frase, e a que o aluno
+ * lê em português é a que a prova usa para medir a forma da pergunta — elas
+ * precisam ser a mesma string.
+ */
+export interface TextoDoExercicio {
+  readonly enunciado: string;
+  readonly dica?: string;
+}
+
 export interface Exercicio<T> {
   readonly id: string;
   readonly nivel: Nivel;
-  /** Comando em linguagem natural. */
+  /** Comando em linguagem natural, em português. */
   readonly enunciado: string;
+  /**
+   * As frases do exercício em francês e inglês.
+   *
+   * O enunciado é sorteado uma vez e guardado na sessão; sem isto, trocar de
+   * idioma no cabeçalho deixaria a pergunta na língua anterior até o próximo
+   * exercício. Com as três versões já no objeto, a troca é imediata e o
+   * exercício em andamento não se perde.
+   */
+  readonly traducoes?: Readonly<Partial<Record<Idioma, TextoDoExercicio>>>;
   /**
    * A expressão a resolver, em LaTeX, ou {@link SEM_FORMULA}.
    *
@@ -150,6 +185,8 @@ export interface Validacao {
   readonly observacao?: string;
   /** Explicação do erro específico, quando ele foi reconhecido. */
   readonly diagnostico?: string;
+  /** O diagnóstico na língua da interface, quando o gerador o traduziu. */
+  readonly diagnosticoTraducoes?: TraducaoDeTexto;
   readonly passoDivergente?: number;
   readonly conceitoAssociado?: string;
 }
@@ -164,6 +201,8 @@ export interface GeradorExercicio<T> {
   readonly topicoId: string;
   /** Texto de apoio do campo de resposta, por exemplo `ex.: 3/4`. */
   readonly formatoResposta: string;
+  /** O mesmo texto de apoio em francês e inglês, quando traduzido. */
+  readonly formatoRespostaTraducoes?: TraducaoDeTexto;
   /**
    * Sorteia um exercício.
    *
@@ -211,6 +250,31 @@ export interface GeradorExercicio<T> {
  * Sempre devolve pelo menos `formatar(valor)`: um gerador que esqueça de
  * incluir a forma principal na própria lista não some com ela da tela.
  */
+/** O texto de apoio do campo na língua pedida, com reserva em português. */
+export function formatoRespostaEm(gerador: GeradorExercicio<unknown>, idioma: Idioma): string {
+  return gerador.formatoRespostaTraducoes?.[idioma] ?? gerador.formatoResposta;
+}
+
+/**
+ * O enunciado do exercício na língua pedida, com o português como reserva.
+ *
+ * A reserva não é preguiça: um gerador traduzido pela metade não pode deixar a
+ * pergunta em branco, e uma frase na língua errada atrapalha menos que nada.
+ */
+export function enunciadoEm(exercicio: Exercicio<unknown>, idioma: Idioma): string {
+  return exercicio.traducoes?.[idioma]?.enunciado || exercicio.enunciado;
+}
+
+/** A dica na língua pedida, ou a portuguesa quando não houver tradução. */
+export function dicaEm(exercicio: Exercicio<unknown>, idioma: Idioma): string | undefined {
+  return exercicio.traducoes?.[idioma]?.dica || exercicio.dica;
+}
+
+/** O diagnóstico de uma validação na língua pedida, com reserva em português. */
+export function diagnosticoEm(validacao: Validacao, idioma: Idioma): string | undefined {
+  return validacao.diagnosticoTraducoes?.[idioma] || validacao.diagnostico;
+}
+
 export function formasDoGabarito<T>(gerador: GeradorExercicio<T>, valor: T): readonly string[] {
   const principal = gerador.formatar(valor);
   return [...new Set([principal, ...(gerador.formasEquivalentes?.(valor) ?? [])])];
@@ -374,6 +438,7 @@ export function corrigir<T>(
       veredito: 'incorreto',
       mensagem: 'Quase — o caminho tem um desvio conhecido.',
       diagnostico: armadilha.diagnostico,
+      diagnosticoTraducoes: armadilha.diagnosticoTraducoes,
       passoDivergente: armadilha.passo,
       conceitoAssociado: armadilha.conceito,
     };
