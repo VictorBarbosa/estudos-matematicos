@@ -135,3 +135,31 @@ describe('métodos numéricos', () => {
     expect(passos[3]!.nota).toContain('quarta');
   });
 });
+
+describe('geradorMetodosNumericos — Newton-Raphson', () => {
+  const rng = criarRng(8282);
+
+  it('o gabarito é a iteração de Newton recalculada por fora, e no Extremo são duas', () => {
+    for (const nivel of NIVEIS) {
+      const casos = Array.from({ length: 200 }, () =>
+        geradorMetodosNumericos.gerar(nivel, rng),
+      ).filter((e) => e.conceitos.includes('numerico.newton'));
+      expect(casos.length).toBeGreaterThan(0);
+      for (const e of casos) {
+        const fTex = /f\(x\) = (.*?) \\qquad/.exec(e.enunciadoTex)![1]!;
+        const js = fTex
+          .replace(/\s/g, '')
+          .replace(/e\^\{x\}/g, 'Math.exp(x)')
+          .replace(/x\^\{(\d+)\}/g, 'x**$1')
+          .replace(/(\d)x/g, '$1*x');
+        const f = new Function('x', `return ${js};`) as (x: number) => number;
+        const df = (x: number) => (f(x + 1e-6) - f(x - 1e-6)) / 2e-6;
+        let x = Number(/x₀ = (-?\d+)/.exec(e.enunciado)![1]);
+        const vezes = e.enunciado.includes('x₂') ? 2 : 1;
+        expect(vezes).toBe(nivel === 'extremo' ? 2 : 1);
+        for (let i = 0; i < vezes; i++) x -= f(x) / df(x);
+        expect(e.gabarito).toBeCloseTo(x, 5);
+      }
+    }
+  });
+});

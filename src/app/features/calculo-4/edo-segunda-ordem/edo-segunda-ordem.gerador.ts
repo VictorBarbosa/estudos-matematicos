@@ -6,6 +6,11 @@ import {
 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
+  exercicioAmortecimentoCritico,
+  exercicioMeiaAmplitude,
+  exercicioRigidezLimite,
+} from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.amortecimento';
+import {
   FORMATO_NUMERICO_AMPLO,
   analisarNumero,
   numeroComCasas,
@@ -32,15 +37,17 @@ const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
 const PEDIDO = 'Responda com 4 casas decimais.';
 
-type Tipo = 'raiz' | 'valor' | 'periodo' | 'discriminante';
+type Tipo =
+  'raiz' | 'valor' | 'periodo' | 'discriminante' | 'critico' | 'rigidez-limite' | 'meia-amplitude';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
   facil: ['discriminante', 'raiz'],
-  medio: ['raiz', 'valor', 'discriminante'],
-  dificil: ['valor', 'periodo', 'raiz'],
+  medio: ['raiz', 'valor', 'discriminante', 'critico'],
+  dificil: ['valor', 'periodo', 'raiz', 'rigidez-limite'],
   // As raízes da característica decidem a forma da solução — e com
-  // complexas a resposta muda de natureza.
-  extremo: ['raiz', 'valor'],
+  // complexas a resposta muda de natureza. A meia-amplitude pede ler a
+  // envoltória da oscilação amortecida.
+  extremo: ['raiz', 'valor', 'meia-amplitude'],
 };
 
 export const geradorEdoSegundaOrdem: GeradorExercicio<number> = {
@@ -55,6 +62,12 @@ export const geradorEdoSegundaOrdem: GeradorExercicio<number> = {
         return doValor(nivel, rng);
       case 'periodo':
         return doPeriodo(nivel, rng);
+      case 'critico':
+        return exercicioAmortecimentoCritico(nivel, rng);
+      case 'rigidez-limite':
+        return exercicioRigidezLimite(nivel, rng);
+      case 'meia-amplitude':
+        return exercicioMeiaAmplitude(nivel, rng);
       default:
         return doDiscriminante(nivel, rng);
     }

@@ -1,5 +1,6 @@
 import { comparacaoNumericaComPassos, eulerComPassos, rungeKutta4 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
+import { exercicioNewton } from '@features/calculo-4/metodos-numericos/metodos-numericos.newton';
 import {
   FORMATO_NUMERICO_AMPLO,
   analisarNumero,
@@ -28,15 +29,16 @@ const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
 const PEDIDO = 'Responda com 5 casas decimais.';
 
-type Tipo = 'euler' | 'erro-euler' | 'rk4' | 'ordem';
+type Tipo = 'euler' | 'erro-euler' | 'rk4' | 'ordem' | 'newton';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
-  facil: ['euler'],
-  medio: ['euler', 'erro-euler'],
-  dificil: ['rk4', 'ordem', 'erro-euler'],
+  facil: ['euler', 'newton'],
+  medio: ['euler', 'erro-euler', 'newton'],
+  dificil: ['rk4', 'ordem', 'erro-euler', 'newton'],
   // RK4 são quatro inclinações numa média ponderada: a conta mais longa do
-  // tópico, e a que não perdoa um coeficiente trocado.
-  extremo: ['rk4', 'ordem'],
+  // tópico, e a que não perdoa um coeficiente trocado. Newton, aqui, pede
+  // duas iterações.
+  extremo: ['rk4', 'ordem', 'newton'],
 };
 
 export const geradorMetodosNumericos: GeradorExercicio<number> = {
@@ -51,6 +53,8 @@ export const geradorMetodosNumericos: GeradorExercicio<number> = {
         return doErroDeEuler(nivel, rng);
       case 'rk4':
         return doRungeKutta(nivel, rng);
+      case 'newton':
+        return exercicioNewton(nivel, rng);
       default:
         return daOrdemDoMetodo(nivel, rng);
     }

@@ -5,6 +5,10 @@ import {
 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
+  exercicioExataConstante,
+  exercicioExataK,
+} from '@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.exata';
+import {
   FORMATO_NUMERICO_AMPLO,
   analisarNumero,
   numeroComCasas,
@@ -31,14 +35,15 @@ const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
 const PEDIDO = 'Responda com 4 casas decimais.';
 
-type Tipo = 'separavel' | 'meia-vida' | 'linear' | 'equilibrio';
+type Tipo = 'separavel' | 'meia-vida' | 'linear' | 'equilibrio' | 'exata-k' | 'exata';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
-  facil: ['separavel'],
-  medio: ['separavel', 'meia-vida', 'linear'],
-  dificil: ['linear', 'equilibrio', 'meia-vida'],
-  // A linear pede fator integrante; o equilíbrio, analisar a estabilidade.
-  extremo: ['linear', 'equilibrio'],
+  facil: ['separavel', 'exata-k'],
+  medio: ['separavel', 'meia-vida', 'linear', 'exata'],
+  dificil: ['linear', 'equilibrio', 'meia-vida', 'exata'],
+  // A linear pede fator integrante; o equilíbrio, analisar a estabilidade; a
+  // exata, aqui, traz um eˣ em F e a constante deixa de ser inteira.
+  extremo: ['linear', 'equilibrio', 'exata'],
 };
 
 export const geradorEdoPrimeiraOrdem: GeradorExercicio<number> = {
@@ -53,6 +58,10 @@ export const geradorEdoPrimeiraOrdem: GeradorExercicio<number> = {
         return daMeiaVida(nivel, rng);
       case 'linear':
         return daLinear(nivel, rng);
+      case 'exata-k':
+        return exercicioExataK(nivel, rng);
+      case 'exata':
+        return exercicioExataConstante(nivel, rng);
       default:
         return doEquilibrio(nivel, rng);
     }

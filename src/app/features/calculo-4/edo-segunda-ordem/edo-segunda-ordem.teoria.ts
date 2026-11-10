@@ -46,7 +46,9 @@ export const TEORIA_EDO2: readonly Teoria[] = [
     formulas: [
       { tex: '\\Delta > 0 \\;\\Longrightarrow\\; y = C_{1}e^{r_{1}t} + C_{2}e^{r_{2}t}' },
       { tex: '\\Delta = 0 \\;\\Longrightarrow\\; y = \\left(C_{1} + C_{2}t\\right)e^{rt}' },
-      { tex: '\\Delta < 0 \\;\\Longrightarrow\\; y = e^{\\alpha t}\\left(C_{1}\\cos\\beta t + C_{2}\\operatorname{sen}\\beta t\\right)' },
+      {
+        tex: '\\Delta < 0 \\;\\Longrightarrow\\; y = e^{\\alpha t}\\left(C_{1}\\cos\\beta t + C_{2}\\operatorname{sen}\\beta t\\right)',
+      },
     ],
     demonstracao: [
       {
@@ -80,7 +82,7 @@ export const TEORIA_EDO2: readonly Teoria[] = [
       'necessárias duas condições para fixá-las. Fisicamente isso é óbvio: saber onde a massa ' +
       'está não basta, é preciso saber também com que velocidade ela parte.',
     formulas: [
-      { tex: 'y(0) = y_{0} \\qquad y\'(0) = v_{0}' },
+      { tex: "y(0) = y_{0} \\qquad y'(0) = v_{0}" },
       { tex: 'C_{1} = y_{0} \\qquad C_{2} \\;\\text{sai da derivada}' },
     ],
     demonstracao: [
@@ -114,9 +116,14 @@ export const TEORIA_EDO2: readonly Teoria[] = [
       'período em relação ao sistema ideal — e quanto mais atrito, mais lenta e mais curta a ' +
       'oscilação, até que ela desapareça por completo.',
     formulas: [
-      { tex: 'r = \\alpha \\pm i\\beta, \\qquad \\alpha = -\\frac{b}{2}, \\quad \\beta = \\frac{\\sqrt{4c - b^{2}}}{2}' },
+      {
+        tex: 'r = \\alpha \\pm i\\beta, \\qquad \\alpha = -\\frac{b}{2}, \\quad \\beta = \\frac{\\sqrt{4c - b^{2}}}{2}',
+      },
       { tex: 'T = \\frac{2\\pi}{\\beta}' },
-      { tex: '\\omega_{0} = \\sqrt{c} \\;>\\; \\beta', legenda: 'A frequência natural é sempre maior que a amortecida.' },
+      {
+        tex: '\\omega_{0} = \\sqrt{c} \\;>\\; \\beta',
+        legenda: 'A frequência natural é sempre maior que a amortecida.',
+      },
     ],
     demonstracao: [
       {
@@ -138,5 +145,54 @@ export const TEORIA_EDO2: readonly Teoria[] = [
       },
     ],
     vejaTambem: ['edo2.regimes', 'edo2.duas-condicoes'],
+  },
+  {
+    id: 'edo2.amortecimento',
+    titulo: 'Massa, mola e amortecedor',
+    resumo: 'A fronteira entre oscilar e não oscilar é c² = 4mk.',
+    definicao:
+      'Uma massa m numa mola de rigidez k, com amortecedor de coeficiente c, obedece a ' +
+      'm·y″ + c·y′ + k·y = 0. O discriminante da característica, c² − 4mk, decide o regime: ' +
+      'negativo, o sistema oscila com amplitude decrescente (subamortecido); zero, volta ao ' +
+      'repouso o mais rápido possível sem passar do ponto (crítico); positivo, volta devagar ' +
+      'sem oscilar (superamortecido). No subamortecido, a amplitude encolhe como e^(−ct/2m).',
+    formulas: [
+      {
+        tex: 'c_{\\text{crítico}} = 2\\sqrt{mk}',
+        legenda: 'O amortecimento que zera o discriminante.',
+      },
+      {
+        tex: 'r = -\\frac{c}{2m} \\pm i\\,\\frac{\\sqrt{4mk - c^{2}}}{2m}',
+        legenda: 'Parte real: decaimento. Parte imaginária: frequência da oscilação.',
+      },
+      {
+        tex: 't_{1/2} = \\frac{2m\\ln 2}{c}',
+        legenda: 'Tempo para a amplitude cair à metade.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Trocando y por eʳᵗ, a EDO vira uma equação do 2º grau em r.',
+        tex: 'mr^{2} + cr + k = 0 \\;\\Rightarrow\\; \\Delta = c^{2} - 4mk',
+      },
+      {
+        descricao:
+          'Com Δ < 0, as raízes são complexas e a solução é um cosseno dentro de uma exponencial.',
+        tex: 'y = A\\,e^{-\\frac{c}{2m}t}\\cos(\\omega t + \\varphi)',
+        nota: 'A exponencial é a envoltória: ela, e não o cosseno, decide quanto a amplitude encolhe.',
+      },
+    ],
+    exemplo: {
+      enunciado: 'm = 2 kg, k = 8 N/m: que c dá amortecimento crítico?',
+      passos: [
+        { descricao: 'Discriminante zero.', tex: 'c^{2} - 4 \\cdot 2 \\cdot 8 = 0' },
+        {
+          descricao: 'Isolando c.',
+          tex: 'c = 2\\sqrt{2 \\cdot 8} = 2\\sqrt{16} = 8\\ \\text{N·s/m}',
+          nota: 'Com c = 4, o sistema oscilaria; com c = 12, voltaria devagar.',
+        },
+      ],
+    },
+    vejaTambem: ['edo2.regimes', 'edo2.oscilacao'],
   },
 ];

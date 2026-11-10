@@ -109,6 +109,16 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['conicas', 'medio', 'A diretriz é a reta y = −p'],
   ['conicas', 'dificil', 'lido com os sinais trocados'],
   ['conicas', 'extremo', 'Complete o quadrado'],
+  // Cálculo 4, Fase 2 (09/11).
+  ['edo-primeira-ordem', 'facil', 'iguale os coeficientes'],
+  ['edo-primeira-ordem', 'medio', 'some uma g(y)'],
+  ['edo-primeira-ordem', 'extremo', 'O termo com eˣ vem de M'],
+  ['edo-segunda-ordem', 'medio', 'c = 2√(mk)'],
+  ['edo-segunda-ordem', 'dificil', 'A fronteira é c² − 4mk = 0'],
+  ['edo-segunda-ordem', 'extremo', 'Iguale a 1/2 e isole t'],
+  ['metodos-numericos', 'facil', 'x₁ = x₀ − f(x₀)/f′(x₀)'],
+  ['metodos-numericos', 'dificil', 'A derivada de eˣ − a é eˣ'],
+  ['metodos-numericos', 'extremo', 'guarde x₁ com todas as casas'],
 ];
 
 describe('dicas alcançáveis', () => {

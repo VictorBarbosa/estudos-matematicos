@@ -10,10 +10,7 @@ export const TEORIA_NUMERICO: readonly Teoria[] = [
       'integrá-la numericamente. O método de Euler é o mais simples possível: a derivada dá a ' +
       'inclinação, segue-se por ela um passo, e recomeça-se do ponto novo. É a definição de ' +
       'derivada lida ao contrário, com h finito.',
-    formulas: [
-      { tex: 'y_{n+1} = y_{n} + h\\,f(t_{n},\\, y_{n})' },
-      { tex: 't_{n+1} = t_{n} + h' },
-    ],
+    formulas: [{ tex: 'y_{n+1} = y_{n} + h\\,f(t_{n},\\, y_{n})' }, { tex: 't_{n+1} = t_{n} + h' }],
     demonstracao: [
       {
         descricao: 'Partimos do valor inicial e da inclinação ali.',
@@ -43,10 +40,7 @@ export const TEORIA_NUMERICO: readonly Teoria[] = [
       'Diminuir o passo reduz o erro e aumenta o número de iterações — é o compromisso central ' +
       'de toda integração numérica. E ele tem um limite: passos pequenos demais fazem o erro ' +
       'de arredondamento da máquina dominar, e aí reduzir mais piora o resultado.',
-    formulas: [
-      { tex: 'n = \\frac{T}{h}' },
-      { tex: 'e_{total} \\approx Ch \\;\\text{(Euler)}' },
-    ],
+    formulas: [{ tex: 'n = \\frac{T}{h}' }, { tex: 'e_{total} \\approx Ch \\;\\text{(Euler)}' }],
     demonstracao: [
       {
         descricao: 'Metade do passo dobra o número de iterações.',
@@ -111,7 +105,9 @@ export const TEORIA_NUMERICO: readonly Teoria[] = [
       'praticamente toda simulação.',
     formulas: [
       { tex: 'y_{n+1} = y_{n} + \\frac{h}{6}\\left(k_{1} + 2k_{2} + 2k_{3} + k_{4}\\right)' },
-      { tex: 'k_{1} = f(t_{n},\\, y_{n}) \\qquad k_{2} = f\\left(t_{n} + \\tfrac{h}{2},\\; y_{n} + \\tfrac{h}{2}k_{1}\\right)' },
+      {
+        tex: 'k_{1} = f(t_{n},\\, y_{n}) \\qquad k_{2} = f\\left(t_{n} + \\tfrac{h}{2},\\; y_{n} + \\tfrac{h}{2}k_{1}\\right)',
+      },
     ],
     demonstracao: [
       {
@@ -144,10 +140,7 @@ export const TEORIA_NUMERICO: readonly Teoria[] = [
       'passo: metade do passo divide o erro por dois elevado a p. Euler é de ordem 1, ' +
       'Runge-Kutta clássico é de ordem 4 — e essa diferença de expoente é o que torna um ' +
       'inviável e o outro padrão.',
-    formulas: [
-      { tex: 'e \\propto h^{p}' },
-      { tex: '\\frac{e(h)}{e(h/2)} \\approx 2^{p}' },
-    ],
+    formulas: [{ tex: 'e \\propto h^{p}' }, { tex: '\\frac{e(h)}{e(h/2)} \\approx 2^{p}' }],
     demonstracao: [
       {
         descricao: 'Com Euler, metade do passo dá metade do erro.',
@@ -168,5 +161,49 @@ export const TEORIA_NUMERICO: readonly Teoria[] = [
       },
     ],
     vejaTambem: ['numerico.erro', 'numerico.runge-kutta'],
+  },
+  {
+    id: 'numerico.newton',
+    titulo: 'Método de Newton-Raphson',
+    resumo: 'Siga a tangente até o eixo x: ali está um palpite melhor para a raiz.',
+    definicao:
+      'Para achar uma raiz de f(x) = 0, parte-se de um palpite x₀ e troca-se a curva pela sua ' +
+      'tangente. O ponto onde a tangente corta o eixo x é o próximo palpite. Repetindo, perto ' +
+      'de uma raiz simples o número de casas corretas praticamente dobra a cada iteração. O ' +
+      'método falha quando f′(xₙ) é zero ou muito pequena: a tangente quase horizontal manda o ' +
+      'palpite para longe.',
+    formulas: [
+      {
+        tex: "x_{n+1} = x_{n} - \\frac{f(x_{n})}{f'(x_{n})}",
+        legenda: 'Uma iteração de Newton.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao:
+          'A tangente em xₙ é a reta com a inclinação f′(xₙ) que passa pelo ponto da curva.',
+        tex: "y = f(x_{n}) + f'(x_{n})(x - x_{n})",
+      },
+      {
+        descricao: 'Ela corta o eixo x onde y = 0; isolando x sai a fórmula.',
+        tex: "0 = f(x_{n}) + f'(x_{n})(x - x_{n}) \\;\\Rightarrow\\; x = x_{n} - \\frac{f(x_{n})}{f'(x_{n})}",
+      },
+    ],
+    exemplo: {
+      enunciado: 'Uma aproximação de √2: raiz de f(x) = x² − 2, partindo de x₀ = 1.',
+      passos: [
+        { descricao: 'A derivada.', tex: "f'(x) = 2x" },
+        {
+          descricao: 'Primeira iteração.',
+          tex: 'x_{1} = 1 - \\frac{1 - 2}{2} = 1{,}5',
+        },
+        {
+          descricao: 'Segunda iteração.',
+          tex: 'x_{2} = 1{,}5 - \\frac{2{,}25 - 2}{3} = 1{,}41667',
+          nota: '√2 = 1,41421…: duas iterações já acertam duas casas.',
+        },
+      ],
+    },
+    vejaTambem: ['numerico.erro', 'numerico.ordem'],
   },
 ];
