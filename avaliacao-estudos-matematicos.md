@@ -165,8 +165,8 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 - [x] Técnicas de integração com **substituição, por partes e frações parciais** no gerador; integrais impróprias; áreas, volumes, comprimento de arco; séries de Taylor
 - [x] Resolução da área entre curvas corrigida (bug 16: o `b` entrou no integrando)
-- [ ] **`sequencias-e-series` é duplicata de `funcoes/progressoes`**: mesmos três imports de `@core/math` (`somaComPassos`, `somaInfinitaComPassos`, `termoGeral`), mesmos tipos de questão. A descrição promete «convergência» e o gerador só pergunta soma de PG infinita. **Decisão: refundar o tópico como «Testes de convergência»** (razão, integral, comparação, alternada, p-série), em vez de removê-lo
-- [ ] Séries de potências e raio de convergência — zero ocorrências; pré-requisito honesto de Taylor
+- [x] **Refundado em 10/11 como «Séries e convergência»** (mesmo id e rota): termo geral, p-série, razão, comparação, telescópica, alternada com cota do erro, raio e extremos do intervalo de convergência; 7 verbetes; Explorar com as somas parciais. Antes: **`sequencias-e-series` era duplicata de `funcoes/progressoes`**: mesmos três imports de `@core/math` (`somaComPassos`, `somaInfinitaComPassos`, `termoGeral`), mesmos tipos de questão. A descrição promete «convergência» e o gerador só pergunta soma de PG infinita. **Decisão: refundar o tópico como «Testes de convergência»** (razão, integral, comparação, alternada, p-série), em vez de removê-lo
+- [x] Séries de potências e raio de convergência — no tópico refundado (10/11)
 - [ ] Substituição trigonométrica — ausente (depende da trigonometria inversa, 3.5)
 - [ ] Volumes por cascas cilíndricas
 - [ ] **◐** `integral-definida` continua exigindo primitiva antes de `teorema-fundamental` (ordem mantida). Decisão: aceitar, com o enunciado dizendo «use a primitiva» — ou reordenar
@@ -244,7 +244,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 ## 5. Decisões: remover ou fundir
 
-- [ ] **Refundar** `calculo-2/sequencias-e-series` como testes de convergência (3.11) — não remover a vaga
+- [x] **Refundar** `calculo-2/sequencias-e-series` como testes de convergência (3.11) — feito em 10/11
 - [ ] **Remover** a seção «Limites laterais» de `pre-calculo/nocao-intuitiva-de-limite.teoria.ts:77`
 - [ ] **Mover** «Ajuste de reta» de `estatistica-e-incerteza` para `regressao-e-correlacao`
 - [x] **Não fundir** `triangulo-retangulo` com `seno-cosseno-tangente`: o comitê conferiu as seções e o conteúdo é complementar
@@ -290,7 +290,7 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 ### Fase 3 — Conteúdo novo de cobertura (meses)
 
-- [ ] Refundar `sequencias-e-series` como testes de convergência; séries de potências
+- [x] Refundar `sequencias-e-series` como testes de convergência; séries de potências (10/11)
 - [ ] Geometria: congruência, quadriláteros, poliedros e Euler
 - [x] Geometria analítica: coordenadas polares (10/11)
 - [x] Combinatória: binômio de Newton (10/11)
