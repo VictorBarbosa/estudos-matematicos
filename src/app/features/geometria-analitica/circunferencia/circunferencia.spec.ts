@@ -9,8 +9,10 @@ function amostra(nivel: Nivel, quantidade = 60) {
 
 describe('geradorCircunferencia', () => {
   for (const nivel of NIVEIS) {
-    it(`no nível ${nivel}, o gabarito é inteiro`, () => {
-      for (const exercicio of amostra(nivel)) {
+    it(`no nível ${nivel}, o gabarito é inteiro (fora a tangente, que pode ser fração)`, () => {
+      for (const exercicio of amostra(nivel).filter(
+        (e) => !e.conceitos.includes('circunferencia.tangente'),
+      )) {
         expect(Number.isInteger(exercicio.gabarito)).toBe(true);
       }
     });
@@ -59,5 +61,40 @@ describe('geradorCircunferencia', () => {
 
     expect(exercicio).toBeDefined();
     expect(exercicio.conceitos).toContain('circunferencia.geral');
+  });
+});
+
+describe('geradorCircunferencia — tangente e coeficiente', () => {
+  const rng = criarRng(9393);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorCircunferencia.gerar(nivel, rng));
+
+  it('a tangente é perpendicular ao raio e passa por P', () => {
+    const casos = [...lote('dificil'), ...lote('extremo')].filter((e) =>
+      e.conceitos.includes('circunferencia.tangente'),
+    );
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, sa, a, sb, b, r2] =
+        /\(x ([+-]) (\d+)\)\^\{2\} \+ \(y ([+-]) (\d+)\)\^\{2\} = (\d+)/.exec(e.enunciadoTex)!;
+      const cx = (sa === '-' ? 1 : -1) * Number(a);
+      const cy = (sb === '-' ? 1 : -1) * Number(b);
+      const [, px, py] = /P\((-?\d+), (-?\d+)\)/.exec(e.enunciado)!.map(Number);
+      expect((px! - cx) ** 2 + (py! - cy) ** 2).toBe(Number(r2));
+      const m = -(px! - cx) / (py! - cy);
+      if (e.enunciado.includes('valor q')) expect(e.gabarito).toBeCloseTo(py! - m * px!, 9);
+      else expect(e.gabarito).toBeCloseTo(m, 9);
+    }
+  });
+
+  it('com coeficiente em x² e y², o raio confere depois de dividir', () => {
+    const casos = lote('extremo').filter((e) => e.id.startsWith('circunf-raio-k'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, k, a, b, r] = /raio-k-(\d+)-(-?\d)(-?\d)(\d)-/.exec(e.id)!.map(Number);
+      expect(e.enunciadoTex.startsWith(`${k}x^{2}`)).toBe(true);
+      expect(e.gabarito).toBe(r);
+      expect(Number.isInteger(a) && Number.isInteger(b)).toBe(true);
+    }
   });
 });

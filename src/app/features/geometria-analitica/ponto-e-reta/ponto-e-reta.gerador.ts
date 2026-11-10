@@ -15,7 +15,19 @@ import {
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 
-type Pergunta = 'distancia' | 'inclinacao' | 'ponto-medio-x' | 'distancia-reta' | 'perpendicular';
+import {
+  exercicioIntersecao,
+  exercicioRetaPorDoisPontos,
+} from '@features/geometria-analitica/ponto-e-reta/ponto-e-reta.equacao';
+
+type Pergunta =
+  | 'distancia'
+  | 'inclinacao'
+  | 'ponto-medio-x'
+  | 'distancia-reta'
+  | 'perpendicular'
+  | 'reta-dois-pontos'
+  | 'intersecao';
 
 /** Exercícios de ponto e reta no plano cartesiano. */
 export const geradorPontoReta: GeradorExercicio<number> = {
@@ -26,6 +38,8 @@ export const geradorPontoReta: GeradorExercicio<number> = {
     const pergunta = sortearPergunta(nivel, rng);
     if (pergunta === 'distancia-reta') return exercicioDistanciaPontoReta(nivel, rng);
     if (pergunta === 'perpendicular') return exercicioPerpendicular(nivel, rng);
+    if (pergunta === 'reta-dois-pontos') return exercicioRetaPorDoisPontos(nivel, rng);
+    if (pergunta === 'intersecao') return exercicioIntersecao(nivel, rng);
 
     const { a, b } = sortearPontos(nivel, rng, pergunta);
 
@@ -205,13 +219,27 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
         'ponto-medio-x',
         'distancia-reta',
         'perpendicular',
+        'reta-dois-pontos',
+        'intersecao',
       ]);
     case 'dificil':
-      return rng.escolher<Pergunta>(['distancia', 'inclinacao', 'distancia-reta', 'perpendicular']);
+      return rng.escolher<Pergunta>([
+        'distancia',
+        'inclinacao',
+        'distancia-reta',
+        'perpendicular',
+        'reta-dois-pontos',
+        'intersecao',
+      ]);
     // A reta chega na forma que não serve à fórmula — reduzida para a distância,
     // geral para a perpendicular — e é preciso convertê-la antes.
     case 'extremo':
-      return rng.escolher<Pergunta>(['inclinacao', 'distancia-reta', 'perpendicular']);
+      return rng.escolher<Pergunta>([
+        'inclinacao',
+        'distancia-reta',
+        'perpendicular',
+        'intersecao',
+      ]);
   }
 }
 
