@@ -372,6 +372,10 @@
         "descricao": "Facteur commun, regroupement et trinôme carré parfait.",
         "titulo": "Factorisation"
       },
+      "fisica-com-calculo": {
+        "descricao": "Force variable : travail, déplacement, centre de masse et la gravité qui décroît en 1/r².",
+        "titulo": "Physique avec calcul"
+      },
       "fluidos-e-aerodinamica": {
         "descricao": "Pression, poussée d’Archimède, équation de Bernoulli et d’où vient la portance.",
         "titulo": "Fluides et aérodynamique"

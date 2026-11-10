@@ -1,0 +1,32 @@
+<app-topico-layout topicoId="fisica-com-calculo">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="c" [rotulo]="texto('coeficiente')" [min]="1" [max]="10" />
+      <app-controle-parametro [(valor)]="p" [rotulo]="texto('expoente')" [min]="0" [max]="3" />
+      <app-controle-parametro [(valor)]="a" [rotulo]="texto('inicio')" [min]="0" [max]="6" />
+      <app-controle-parametro [(valor)]="b" [rotulo]="texto('fim')" [min]="0" [max]="6" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="formulaTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>{{ texto('areaETrabalho') }}</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [areas]="areas()"
+        [descricao]="descricaoGrafico()"
+        [altura]="360"
+      />
+      <p class="observacao">{{ comparacao() }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

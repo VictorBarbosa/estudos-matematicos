@@ -13,6 +13,7 @@ import { TEORIA_EXPRESSOES as t_expressoes_algebricas } from '@features/algebra/
 import { TEORIA_FATORACAO as t_fatoracao } from '@features/algebra/fatoracao/fatoracao.teoria';
 import { TEORIA_INEQUACOES as t_inequacoes } from '@features/algebra/inequacoes/inequacoes.teoria';
 import { TEORIA_POLIEDROS as t_poliedros } from '@features/geometria/poliedros/poliedros.teoria';
+import { TEORIA_FISICA_COM_CALCULO as t_fisica_com_calculo } from '@features/calculo-2/fisica-com-calculo/fisica-com-calculo.teoria';
 import { TEORIA_POLARES as t_coordenadas_polares } from '@features/geometria-analitica/coordenadas-polares/coordenadas-polares.teoria';
 import { TEORIA_BINOMIO as t_binomio_de_newton } from '@features/estatistica/binomio-de-newton/binomio-de-newton.teoria';
 import { TEORIA_EQUACOES_EXPONENCIAIS as t_equacoes_exponenciais } from '@features/funcoes/equacoes-exponenciais/equacoes-exponenciais.teoria';
@@ -127,6 +128,7 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['equacoes-exponenciais', t_equacoes_exponenciais],
   ['binomio-de-newton', t_binomio_de_newton],
   ['coordenadas-polares', t_coordenadas_polares],
+  ['fisica-com-calculo', t_fisica_com_calculo],
   ['poliedros', t_poliedros],
   ['polinomios', t_polinomios],
   ['produtos-notaveis', t_produtos_notaveis],

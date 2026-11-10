@@ -372,6 +372,10 @@
         "descricao": "Common factor, grouping and perfect square trinomial.",
         "titulo": "Factoring"
       },
+      "fisica-com-calculo": {
+        "descricao": "Varying forces: work, displacement, center of mass and gravity falling off as 1/r².",
+        "titulo": "Physics with calculus"
+      },
       "fluidos-e-aerodinamica": {
         "descricao": "Pressure, buoyancy, Bernoulli’s equation and where lift comes from.",
         "titulo": "Fluids and aerodynamics"

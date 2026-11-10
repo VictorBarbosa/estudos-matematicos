@@ -38,6 +38,14 @@ export const rotas: Routes = [
     loadComponent: () => import('@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral').then((m) => m.AplicacoesDaIntegral),
   },
   {
+    path: 'fisica-com-calculo',
+    title: 'Física com cálculo · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/calculo-2/fisica-com-calculo/fisica-com-calculo').then(
+        (m) => m.FisicaComCalculo,
+      ),
+  },
+  {
     path: 'sequencias-e-series',
     title: 'Sequências e séries · Estudos Matemáticos',
     loadComponent: () =>

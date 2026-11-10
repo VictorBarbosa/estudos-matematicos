@@ -164,6 +164,10 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'fatoracao.diferenca': 'Diferença de quadrados',
   'fatoracao.ideia': 'Fatorar é fechar parênteses',
   'fatoracao.trinomio': 'Trinômios',
+  'fcc.centro-de-massa': 'Centro de massa de um corpo contínuo',
+  'fcc.gravidade': 'Trabalho contra a gravidade de longe',
+  'fcc.integral-acumula': 'A integral acumula',
+  'fcc.trabalho': 'Trabalho de uma força variável',
   'fluidos.bernoulli': 'Equação de Bernoulli',
   'fluidos.pressao': 'Pressão e empuxo',
   'fluidos.sustentacao': 'De onde vem a sustentação',
@@ -613,6 +617,10 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'fatoracao.diferenca': 'fatoracao',
   'fatoracao.ideia': 'fatoracao',
   'fatoracao.trinomio': 'fatoracao',
+  'fcc.centro-de-massa': 'fisica-com-calculo',
+  'fcc.gravidade': 'fisica-com-calculo',
+  'fcc.integral-acumula': 'fisica-com-calculo',
+  'fcc.trabalho': 'fisica-com-calculo',
   'fluidos.bernoulli': 'fluidos-e-aerodinamica',
   'fluidos.pressao': 'fluidos-e-aerodinamica',
   'fluidos.sustentacao': 'fluidos-e-aerodinamica',
@@ -981,6 +989,10 @@ export const CARREGAR_TEORIA_DO_TOPICO: Readonly<Record<string, () => Promise<re
     'aplicacoes-da-integral': () =>
       import('@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.teoria').then(
         (m) => m.TEORIA_APLICACOES_INTEGRAL,
+      ),
+    'fisica-com-calculo': () =>
+      import('@features/calculo-2/fisica-com-calculo/fisica-com-calculo.teoria').then(
+        (m) => m.TEORIA_FISICA_COM_CALCULO,
       ),
     'integrais-improprias': () =>
       import('@features/calculo-2/integrais-improprias/integrais-improprias.teoria').then(

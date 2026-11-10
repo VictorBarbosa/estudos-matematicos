@@ -1,0 +1,22 @@
+{
+  "coeficiente": { "pt": "Coeficiente c", "fr": "Coefficient c", "en": "Coefficient c" },
+  "expoente": { "pt": "Expoente p", "fr": "Exposant p", "en": "Exponent p" },
+  "inicio": { "pt": "De x =", "fr": "De x =", "en": "From x =" },
+  "fim": { "pt": "Até x =", "fr": "Jusqu’à x =", "en": "To x =" },
+  "curvaForca": { "pt": "F(x)", "fr": "F(x)", "en": "F(x)" },
+  "areaETrabalho": {
+    "pt": "A área sob a força é o trabalho",
+    "fr": "L’aire sous la force est le travail",
+    "en": "The area under the force is the work"
+  },
+  "descricaoGrafico": {
+    "pt": "A força F(x) com a área de {a} a {b} sombreada: o trabalho vale {w} J.",
+    "fr": "La force F(x) avec l’aire de {a} à {b} ombrée : le travail vaut {w} J.",
+    "en": "The force F(x) with the area from {a} to {b} shaded: the work is {w} J."
+  },
+  "comparacao": {
+    "pt": "Força final × distância daria {ingenuo} J; a integral dá {w} J. Só coincidem quando a força é constante (p = 0).",
+    "fr": "Force finale × distance donnerait {ingenuo} J ; l’intégrale donne {w} J. Elles ne coïncident que si la force est constante (p = 0).",
+    "en": "Final force × distance would give {ingenuo} J; the integral gives {w} J. They only agree when the force is constant (p = 0)."
+  }
+}

@@ -84,6 +84,10 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       import('@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.gerador').then(
         (m) => m.geradorAplicacoesIntegral,
       ),
+    'fisica-com-calculo': () =>
+      import('@features/calculo-2/fisica-com-calculo/fisica-com-calculo.gerador').then(
+        (m) => m.geradorFisicaComCalculo,
+      ),
     'integrais-improprias': () =>
       import('@features/calculo-2/integrais-improprias/integrais-improprias.gerador').then(
         (m) => m.geradorIntegraisImproprias,

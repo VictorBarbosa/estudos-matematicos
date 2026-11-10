@@ -784,6 +784,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'fisica-com-calculo',
+        titulo: 'Física com cálculo',
+        descricao:
+          'Força que varia: trabalho, deslocamento, centro de massa e a gravidade que cai com 1/r².',
+        pronto: true,
+      },
+      {
         id: 'integrais-improprias',
         titulo: 'Integrais impróprias',
         descricao:

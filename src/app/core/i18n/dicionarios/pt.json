@@ -372,6 +372,10 @@
         "descricao": "Fator comum, agrupamento e trinômio quadrado perfeito.",
         "titulo": "Fatoração"
       },
+      "fisica-com-calculo": {
+        "descricao": "Força que varia: trabalho, deslocamento, centro de massa e a gravidade que cai com 1/r².",
+        "titulo": "Física com cálculo"
+      },
       "fluidos-e-aerodinamica": {
         "descricao": "Pressão, empuxo, equação de Bernoulli e de onde vem a sustentação.",
         "titulo": "Fluidos e aerodinâmica"

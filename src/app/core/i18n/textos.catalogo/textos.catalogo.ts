@@ -25,6 +25,7 @@ import t_regra_da_cadeia from '@features/calculo-1/regra-da-cadeia/regra-da-cade
 import t_regras_de_derivacao from '@features/calculo-1/regras-de-derivacao/regras-de-derivacao.i18n.json';
 import t_taxa_de_variacao from '@features/calculo-1/taxa-de-variacao/taxa-de-variacao.i18n.json';
 import t_aplicacoes_da_integral from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.i18n.json';
+import t_fisica_com_calculo from '@features/calculo-2/fisica-com-calculo/fisica-com-calculo.i18n.json';
 import t_integrais_improprias from '@features/calculo-2/integrais-improprias/integrais-improprias.i18n.json';
 import t_integral_definida from '@features/calculo-2/integral-definida/integral-definida.i18n.json';
 import t_integral_indefinida from '@features/calculo-2/integral-indefinida/integral-indefinida.i18n.json';
@@ -138,6 +139,7 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['regras-de-derivacao', t_regras_de_derivacao as TabelaDeTextos],
   ['taxa-de-variacao', t_taxa_de_variacao as TabelaDeTextos],
   ['aplicacoes-da-integral', t_aplicacoes_da_integral as TabelaDeTextos],
+  ['fisica-com-calculo', t_fisica_com_calculo as TabelaDeTextos],
   ['integrais-improprias', t_integrais_improprias as TabelaDeTextos],
   ['integral-definida', t_integral_definida as TabelaDeTextos],
   ['integral-indefinida', t_integral_indefinida as TabelaDeTextos],

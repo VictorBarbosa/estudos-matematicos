@@ -137,7 +137,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] Bernoulli corrigido pela variação de pressão (bug 9); gravitação com tolerância coerente (bug 12)
 - [ ] **Eletricidade e magnetismo (0P02)** — zero ocorrências de carga, campo, circuito ou indução. **Exigido por todos os programas.**
 - [ ] **Ondas e física moderna (0P03)** — só o movimento harmônico; faltam ondas, som, óptica, relatividade, fotoelétrico
-- [ ] Física com cálculo (força variável, trabalho como integral, MHS como EDO) — a trilha linear põe toda a Física antes do Cálculo, então isso não cabe onde a área está. Decisão registrada: **manter a ordem** e, se vier, criar um bloco «Física com cálculo» depois do Cálculo 2
+- [x] Física com cálculo — feito como tópico `fisica-com-calculo` em Cálculo 2 (10/11), mantendo a ordem da trilha. O MHS como EDO já está em Cálculo 4
 - [x] ~~**Resoluções que saltam da fórmula para o número**~~ — feito em 09/11: todos os passos citados agora mostram a substituição (plano inclinado, gravidade na altitude, órbita, escape, Kepler, Tsiolkovsky, Isp, empuxo, Bernoulli, sustentação, mistura térmica, impulso, colisões, centro de massa). Antes: nos módulos do núcleo: `core/math/fisica/mecanica/mecanica.ts:219-242` (plano inclinado, cinco resultados e nenhuma conta), `gravitacao/gravitacao.ts` (oito saltos), `fluidos/fluidos.ts:91,95,193,198`, `termica/termica.ts:269` («Substituindo.» sem substituir), `energia/energia.ts:189,259,323`. O padrão certo já existe no mesmo repositório (`espacial.ts`, `termica.ts:67`)
 - [ ] Teoria curta demais: `cinematica-escalar` (2 verbetes para 5 perguntas; falta Torricelli e referencial), `analise-dimensional` (2 para 6; falta o teorema Π)
 - [ ] Química (0C01–0C02) — fora do escopo do site; fazer pelo curso formal
@@ -303,7 +303,7 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 - [ ] **Eletricidade e magnetismo (0P02)**: carga e Coulomb, campo e potencial, capacitores, circuitos CC e RC, campo magnético, indução
 - [ ] **Ondas e física moderna (0P03)**: ondas e som, óptica geométrica e física, relatividade restrita, fotoelétrico
-- [ ] Bloco opcional «Física com cálculo» depois do Cálculo 2
+- [x] Bloco «Física com cálculo» — tópico novo `fisica-com-calculo` em Cálculo 2, depois de aplicações da integral (10/11): mola, força variável, deslocamento e velocidade por integração, centro de massa contínuo e trabalho contra a gravidade 1/r²
 
 ### Em paralelo — o que o site não resolve
 
