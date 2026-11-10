@@ -135,7 +135,7 @@ function daInclinacao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<
         conceito: 'regressao.minimos-quadrados',
       },
     ],
-    dica: nivel === 'facil' ? 'A inclinação é o quanto y avança a cada unidade de x.' : undefined,
+    dica: 'A inclinação é o quanto y avança a cada unidade de x: Σ(x − x̄)(y − ȳ) / Σ(x − x̄)².',
   });
 }
 
@@ -177,6 +177,7 @@ function doIntercepto(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<
         conceito: 'regressao.extrapolar',
       },
     ],
+    dica: 'Primeiro a inclinação b; depois o intercepto sai de a = ȳ − b·x̄, porque a reta passa pelo ponto das médias.',
   });
 }
 
@@ -220,6 +221,7 @@ function doPearson(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<num
         conceito: 'correlacao.pearson',
       },
     ],
+    dica: 'r = Σ(x − x̄)(y − ȳ) / √[Σ(x − x̄)² · Σ(y − ȳ)²]: comece pelas médias e pelos desvios de cada ponto.',
   });
 }
 
@@ -263,6 +265,7 @@ function daDeterminacao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercici
         conceito: 'correlacao.determinacao',
       },
     ],
+    dica: 'A fração explicada é r²: calcule o coeficiente de Pearson e eleve ao quadrado.',
   });
 }
 
@@ -304,7 +307,7 @@ function daPrevisao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<nu
     ],
     dica: nivelAoMenos(nivel, 'dificil')
       ? 'Repare em que faixa de x os dados foram medidos antes de confiar na previsão.'
-      : undefined,
+      : 'Ajuste a reta (inclinação e intercepto) e substitua o x pedido nela.',
   });
 }
 
@@ -350,6 +353,7 @@ function doResiduo(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<num
         conceito: 'regressao.minimos-quadrados',
       },
     ],
+    dica: 'Resíduo = y observado − y previsto pela reta naquele x.',
   });
 }
 

@@ -136,7 +136,7 @@ function exercicioProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'As bases são iguais — o que acontece com os expoentes?' : undefined,
+    dica: `As bases são iguais: mantenha ${base} e SOME os expoentes.`,
   };
 }
 
@@ -203,6 +203,7 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       (a, b) => Math.abs(a - b) < 1e-9,
     ),
+    dica: `Mesma base ${base} em cima e embaixo: mantenha a base e SUBTRAIA os expoentes, ${m} − ${n}.`,
   };
 }
 
@@ -244,6 +245,7 @@ function exercicioPotenciaDePotencia(nivel: Nivel, rng: Rng): Exercicio<number> 
       gabarito,
       proximos,
     ),
+    dica: `Potência de potência: mantenha ${base} e MULTIPLIQUE os expoentes, ${m} × ${n}.`,
   };
 }
 
@@ -319,5 +321,6 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: `Procure o maior quadrado perfeito que divide ${radicando} — teste 4, 9, 16, 25, 36… A raiz desse quadrado é o que sai.`,
   };
 }

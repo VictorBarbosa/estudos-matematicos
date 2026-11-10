@@ -99,7 +99,7 @@ function exercicioModulo(rng: Rng, nivel: Nivel): Exercicio<number> {
       resolucao.resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Eleve cada componente ao quadrado, some e tire a raiz.' : undefined,
+    dica: 'Eleve cada componente ao quadrado, some e tire a raiz.',
   };
 }
 
@@ -136,6 +136,7 @@ function exercicioEscalar(rng: Rng, nivel: Nivel): Exercicio<number> {
       resolucao.resultado,
       proximos,
     ),
+    dica: `Multiplique componente com componente e some: (${a.x})(${b.x}) + (${a.y})(${b.y}) + (${a.z})(${b.z}).`,
   };
 }
 
@@ -182,7 +183,9 @@ function exercicioVetorial(rng: Rng, nivel: Nivel): Exercicio<number> {
     dica:
       eixo === 'y'
         ? 'Atenção ao y: a ordem dos termos é trocada, e é aí que o sinal costuma se perder.'
-        : undefined,
+        : eixo === 'x'
+          ? 'A componente x usa só y e z: a_y·b_z − a_z·b_y.'
+          : 'A componente z usa só x e y: aₓ·b_y − a_y·bₓ.',
   };
 }
 
@@ -225,6 +228,7 @@ function exercicioAngulo(rng: Rng, nivel: Nivel): Exercicio<number> {
       resolucao.resultado,
       proximos,
     ),
+    dica: 'cos θ = a·b / (|a| |b|): calcule o escalar, os dois módulos, divida e tire o arco-cosseno.',
   };
 }
 
@@ -264,6 +268,7 @@ function exercicioUnitario(rng: Rng, nivel: Nivel): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `Divida cada componente pelo módulo de v, √((${v.x})² + (${v.y})² + (${v.z})²).`,
   };
 }
 

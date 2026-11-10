@@ -103,7 +103,7 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? '|v| = √(vₓ² + v_y²)' : undefined,
+    dica: '|v| = √(vₓ² + v_y²): eleve cada componente ao quadrado, some e tire a raiz.',
   };
 }
 
@@ -159,7 +159,10 @@ function exercicioComponente(eixo: 'x' | 'y', nivel: Nivel, rng: Rng): Exercicio
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' ? (eixo === 'x' ? 'vₓ = |v|·cos θ' : 'v_y = |v|·sen θ') : undefined,
+    dica:
+      eixo === 'x'
+        ? 'vₓ = |v| · cos θ: o módulo vezes o cosseno do ângulo com o eixo x.'
+        : 'v_y = |v| · sen θ: o módulo vezes o seno do ângulo com o eixo x.',
   };
 }
 
@@ -211,6 +214,7 @@ function exercicioModuloDaSoma(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: 'Some componente com componente (x com x, y com y) e só então calcule o módulo do resultado.',
   };
 }
 
@@ -276,5 +280,6 @@ function exercicioDirecao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `Calcule arctg(v_y / vₓ) e corrija pelo quadrante: as componentes indicam o ${sinalX > 0 ? (sinalY > 0 ? '1º' : '4º') : sinalY > 0 ? '2º' : '3º'}.`,
   };
 }

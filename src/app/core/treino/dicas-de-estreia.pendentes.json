@@ -1,17 +1,4 @@
 {
-  "analise-combinatoria": [
-    "dificil | Uma comissão terá N entre N engenheiros e N entre N técnicasN Quantas comissões diferentes são possíveis?",
-    "medio | Entre N pessoasN de quantos modos se pode formar uma fila de N importando a ordem?",
-    "medio | Quantos anagramas distintos tem a palavra AMOR?",
-    "medio | Quantos anagramas distintos tem a palavra ARARA?",
-    "medio | Quantos anagramas distintos tem a palavra BANANA?",
-    "medio | Quantos anagramas distintos tem a palavra BATATA?",
-    "medio | Quantos anagramas distintos tem a palavra CARRO?",
-    "medio | Quantos anagramas distintos tem a palavra CASA?",
-    "medio | Quantos anagramas distintos tem a palavra LIVRO?",
-    "medio | Quantos anagramas distintos tem a palavra MATEMATICA?",
-    "medio | Quantos anagramas distintos tem a palavra OVO?"
-  ],
   "angulos-e-triangulos": [
     "dificil | Quanto mede cada ângulo interno de um heptágono regular? (em graus)",
     "dificil | Quanto mede cada ângulo interno de um octógono regular? (em graus)",
@@ -61,7 +48,10 @@
     "facil | Qual é o raio desta circunferência?",
     "medio | Qual é a distância do ponto (N N) ao centro desta circunferência?"
   ],
-  "composicao-inversa": ["facil | Calcule f(g(N))N", "medio | Calcule g(f(N))N"],
+  "composicao-inversa": [
+    "facil | Calcule f(g(N))N",
+    "medio | Calcule g(f(N))N"
+  ],
   "conceito-funcao": [
     "facil | Calcule f(N)N",
     "medio | Qual é o MENOR valor que esta função pode assumir?"
@@ -71,41 +61,23 @@
     "medio | Qual é a distância focal c desta hipérbole?",
     "medio | Qual é o valor do semieixo a desta hipérbole?"
   ],
-  "continuidade": ["medio | Qual valor de k torna a função contínua em x = N?"],
+  "continuidade": [
+    "medio | Qual valor de k torna a função contínua em x = N?"
+  ],
   "coordenadas-no-espaco": [
     "dificil | Um ponto tem coordenadas cartesianas (N N N)N Qual é o raio ρ dele em coordenadas esféricas? Responda com N casas decimaisN",
     "dificil | Um ponto tem coordenadas esféricas ρ = N φ = N° (medido do eixo z) e θ = N°N Qual é a coordenada cartesiana x? Responda com N casas decimaisN",
     "medio | Um ponto tem coordenadas esféricas ρ = N φ = N° (medido do eixo z) e θ = N°N Qual é a coordenada cartesiana z? Responda com N casas decimaisN"
   ],
-  "definicao-de-derivada": ["facil | Usando a definiçãoN calcule f'(N)N"],
+  "definicao-de-derivada": [
+    "facil | Usando a definiçãoN calcule f'(N)N"
+  ],
   "derivacao-implicita": [
     "extremo | A curva passa pelo ponto (N N)N Encontre a reta tangente nesse ponto e informe onde ela corta o eixo yN Responda como fração ou com N casas decimaisN"
   ],
   "derivadas-parciais": [
     "medio | Qual é a segunda derivada parcial em relação a xN duas vezes? Responda com N casas decimaisN",
     "medio | Qual é a segunda derivada parcial em relação a yN duas vezes? Responda com N casas decimaisN"
-  ],
-  "distribuicao-normal": [
-    "dificil | Um lote de parafusos tem a resistência à tração normalN com média N MPa e desvio N MPaN Que proporção fica entre N e N MPa? Responda entre N e N com N casas decimaisN",
-    "dificil | Um motor de série tem o empuxo medido normalN com média N kN e desvio N kNN Que proporção fica entre N e N kN? Responda entre N e N com N casas decimaisN",
-    "dificil | Um sensor tem a leitura normalN com média N mV e desvio N mVN Que proporção fica entre N e N mV? Responda entre N e N com N casas decimaisN",
-    "dificil | Uma bateria tem a capacidade normalN com média N Ah e desvio N AhN Que proporção fica entre N e N Ah? Responda entre N e N com N casas decimaisN",
-    "dificil | Uma peça usinada tem o diâmetro normalN com média N mm e desvio N mmN Que proporção fica entre N e N mm? Responda entre N e N com N casas decimaisN",
-    "facil | Um lote de parafusos tem a resistência à tração normalN com média N MPa e desvio N MPaN Que proporção fica a até N desvio(s) padrão da média? Responda entre N e N com N casas decimaisN",
-    "facil | Um motor de série tem o empuxo medido normalN com média N kN e desvio N kNN Que proporção fica a até N desvio(s) padrão da média? Responda entre N e N com N casas decimaisN",
-    "facil | Um sensor tem a leitura normalN com média N mV e desvio N mVN Que proporção fica a até N desvio(s) padrão da média? Responda entre N e N com N casas decimaisN",
-    "facil | Uma bateria tem a capacidade normalN com média N Ah e desvio N AhN Que proporção fica a até N desvio(s) padrão da média? Responda entre N e N com N casas decimaisN",
-    "facil | Uma peça usinada tem o diâmetro normalN com média N mm e desvio N mmN Que proporção fica a até N desvio(s) padrão da média? Responda entre N e N com N casas decimaisN",
-    "medio | Um lote de parafusos tem a resistência à tração normalN com média N MPa e desvio N MPaN Que proporção fica ABAIXO de N MPa? Responda entre N e N com N casas decimaisN",
-    "medio | Um lote de parafusos tem a resistência à tração normalN com média N MPa e desvio N MPaN Que proporção fica ACIMA de N MPa? Responda entre N e N com N casas decimaisN",
-    "medio | Um motor de série tem o empuxo medido normalN com média N kN e desvio N kNN Que proporção fica ABAIXO de N kN? Responda entre N e N com N casas decimaisN",
-    "medio | Um motor de série tem o empuxo medido normalN com média N kN e desvio N kNN Que proporção fica ACIMA de N kN? Responda entre N e N com N casas decimaisN",
-    "medio | Um sensor tem a leitura normalN com média N mV e desvio N mVN Que proporção fica ABAIXO de N mV? Responda entre N e N com N casas decimaisN",
-    "medio | Um sensor tem a leitura normalN com média N mV e desvio N mVN Que proporção fica ACIMA de N mV? Responda entre N e N com N casas decimaisN",
-    "medio | Uma bateria tem a capacidade normalN com média N Ah e desvio N AhN Que proporção fica ABAIXO de N Ah? Responda entre N e N com N casas decimaisN",
-    "medio | Uma bateria tem a capacidade normalN com média N Ah e desvio N AhN Que proporção fica ACIMA de N Ah? Responda entre N e N com N casas decimaisN",
-    "medio | Uma peça usinada tem o diâmetro normalN com média N mm e desvio N mmN Que proporção fica ABAIXO de N mm? Responda entre N e N com N casas decimaisN",
-    "medio | Uma peça usinada tem o diâmetro normalN com média N mm e desvio N mmN Que proporção fica ACIMA de N mm? Responda entre N e N com N casas decimaisN"
   ],
   "edo-primeira-ordem": [
     "medio | Resolva esta equação com y(N) igual a N e calcule y(N)N Responda com N casas decimaisN",
@@ -127,24 +99,6 @@
   "equacoes-trigonometricas": [
     "extremo | Resolva em [N°N N°) e informe a maior soluçãoN em grausN (N casas decimais)"
   ],
-  "estatistica-e-incerteza": [
-    "dificil | Um retângulo tem base N ± N cm e altura N ± N cmN Qual é a incerteza da áreaN em cm²? (N casas decimais)",
-    "facil | Para as medidas N; N; N; N qual é a mediana? (N casas decimais)",
-    "facil | Para as medidas N; N; N; N; N qual é a mediana? (N casas decimais)",
-    "facil | Para as medidas N; N; N; N; N; N qual é a mediana? (N casas decimais)",
-    "facil | Para as medidas N; N; N; N; N; N; N qual é a mediana? (N casas decimais)",
-    "facil | Para as medidas N; N; N; N; N; N; N; N qual é a mediana? (N casas decimais)",
-    "medio | Para as medidas N; N; N; N qual é a incerteza da média (desvio padrão da média)? (N casas decimais)",
-    "medio | Para as medidas N; N; N; N qual é o desvio padrão amostral? (N casas decimais)",
-    "medio | Para as medidas N; N; N; N; N qual é a incerteza da média (desvio padrão da média)? (N casas decimais)",
-    "medio | Para as medidas N; N; N; N; N qual é o desvio padrão amostral? (N casas decimais)",
-    "medio | Para as medidas N; N; N; N; N; N qual é a incerteza da média (desvio padrão da média)? (N casas decimais)",
-    "medio | Para as medidas N; N; N; N; N; N qual é o desvio padrão amostral? (N casas decimais)",
-    "medio | Para as medidas N; N; N; N; N; N; N qual é a incerteza da média (desvio padrão da média)? (N casas decimais)",
-    "medio | Para as medidas N; N; N; N; N; N; N qual é o desvio padrão amostral? (N casas decimais)",
-    "medio | Para as medidas N; N; N; N; N; N; N; N qual é a incerteza da média (desvio padrão da média)? (N casas decimais)",
-    "medio | Para as medidas N; N; N; N; N; N; N; N qual é o desvio padrão amostral? (N casas decimais)"
-  ],
   "expressoes-algebricas": [
     "extremo | DistribuaN reduza os termos semelhantes e informe o coeficiente de xN",
     "medio | Reduza os termos semelhantes e informe o coeficiente de x no resultadoN"
@@ -153,7 +107,6 @@
     "extremo | Fatore a expressão e informe a raiz REAL — só existe umaN Responda como fraçãoN exN: N/N",
     "extremo | Fatore por agrupamento e informe a MAIOR raiz realN Responda como fraçãoN exN: N/N"
   ],
-  "fracoes": ["medio | Converta os números mistos em fraçõesN calcule e simplifiqueN"],
   "funcao-afim": [
     "facil | Qual é o valor de f(N)?",
     "medio | Qual é a taxa de variação da funçãoN ou sejaN quanto y muda quando x avança N?"
@@ -236,12 +189,6 @@
   "limites-laterais": [
     "extremo | Qual é o salto do gráfico em x = N isto éN o limite pela direita menos o limite pela esquerda? (N se o limite existir)"
   ],
-  "matrizes-determinantes": [
-    "dificil | Qual é o determinante do produto A·B?",
-    "medio | Qual é o determinante desta matriz N×N?",
-    "medio | Resolva o sistema por CramerN Quanto vale x?",
-    "medio | Resolva o sistema por CramerN Quanto vale y?"
-  ],
   "metodos-numericos": [
     "dificil | Com EulerN integre de N a N partindo de y(N) = N primeiro com passo N e depois com metade deleN Por qual fator o erro foi dividido? Responda com N casas decimaisN",
     "medio | Com passo h = N e N passosN de quanto é o erro do método de Euler frente à solução exataN partindo de y(N) = N? Responda com N casas decimaisN"
@@ -249,136 +196,6 @@
   "nocao-intuitiva-de-limite": [
     "facil | Calcule o limiteN Atenção: a substituição direta dá N/N",
     "medio | Calcule o limiteN simplificando a expressão primeiroN"
-  ],
-  "notacao-matematica": [
-    "dificil | Com A = {N N N N} e B = {N N N N N}N quantos elementos tem o conjunto?",
-    "dificil | Com A = {N N} e B = {N N N N}N quantos elementos tem o conjunto?",
-    "dificil | Com A = {N N} e B = {N N}N quantos elementos tem o conjunto?",
-    "dificil | Escreva em símbolos: a função f recebe um inteiro e devolve um real",
-    "dificil | Escreva em símbolos: a função f recebe um natural e devolve um real",
-    "dificil | Escreva em símbolos: a função f recebe um real e devolve um inteiro",
-    "dificil | Escreva em símbolos: a soma de os dobros de kN com k indo de N até N",
-    "dificil | Escreva em símbolos: a soma de os dobros de kN com k indo de N até n",
-    "dificil | Escreva em símbolos: a soma de os quadrados de kN com k indo de N até N",
-    "dificil | Escreva em símbolos: a soma de os quadrados de kN com k indo de N até n",
-    "dificil | Escreva em símbolos: a soma de os valores de kN com k indo de N até N",
-    "dificil | Escreva em símbolos: a soma de os valores de kN com k indo de N até n",
-    "dificil | Escreva em símbolos: existe um x inteiro maior ou igual a N",
-    "dificil | Escreva em símbolos: para todo x naturalN x é diferente de N",
-    "dificil | Escreva em símbolos: para todo x realN x é diferente de N",
-    "extremo | Com A = {N N N N N} e B = {N N N}N quantos elementos tem o conjunto?",
-    "extremo | Com A = {N N N} e B = {N N N N N}N quantos elementos tem o conjunto?",
-    "extremo | Com A = {N N} e B = {N}N quantos elementos tem o conjunto?",
-    "extremo | Escreva em símbolos: existe um x inteiro diferente de N",
-    "extremo | Escreva em símbolos: para todo x realN x é maior que N",
-    "facil | Leia os dois símbolos e calculeN",
-    "medio | Com A = {N N N N N} e B = {N N N N N}N quantos elementos tem o conjunto?",
-    "medio | Com A = {N N N N} e B = {N N N N}N quantos elementos tem o conjunto?",
-    "medio | Com A = {N N N N} e B = {N N N}N quantos elementos tem o conjunto?",
-    "medio | Com A = {N N N N} e B = {N N}N quantos elementos tem o conjunto?",
-    "medio | Com A = {N N N} e B = {N N N N}N quantos elementos tem o conjunto?",
-    "medio | Com A = {N N N} e B = {N N N}N quantos elementos tem o conjunto?",
-    "medio | Com A = {N N N} e B = {N N}N quantos elementos tem o conjunto?",
-    "medio | Com A = {N N} e B = {N N N N N}N quantos elementos tem o conjunto?",
-    "medio | Com A = {N N} e B = {N N N}N quantos elementos tem o conjunto?",
-    "medio | Escreva em símbolos: a função f recebe um inteiro e devolve um inteiro",
-    "medio | Escreva em símbolos: a função f recebe um inteiro e devolve um natural",
-    "medio | Escreva em símbolos: a função f recebe um natural e devolve um inteiro",
-    "medio | Escreva em símbolos: a função f recebe um natural e devolve um natural",
-    "medio | Escreva em símbolos: a função f recebe um real e devolve um natural",
-    "medio | Escreva em símbolos: a função f recebe um real e devolve um real",
-    "medio | Escreva em símbolos: existe um x inteiro maior que N",
-    "medio | Escreva em símbolos: existe um x natural diferente de N",
-    "medio | Escreva em símbolos: existe um x natural maior ou igual a N",
-    "medio | Escreva em símbolos: existe um x natural maior que N",
-    "medio | Escreva em símbolos: existe um x real diferente de N",
-    "medio | Escreva em símbolos: existe um x real maior ou igual a N",
-    "medio | Escreva em símbolos: existe um x real maior que N",
-    "medio | Escreva em símbolos: o número N pertence ao conjunto dos naturals",
-    "medio | Escreva em símbolos: para todo x inteiroN x é diferente de N",
-    "medio | Escreva em símbolos: para todo x inteiroN x é maior ou igual a N",
-    "medio | Escreva em símbolos: para todo x inteiroN x é maior que N",
-    "medio | Escreva em símbolos: para todo x naturalN x é maior ou igual a N",
-    "medio | Escreva em símbolos: para todo x naturalN x é maior que N",
-    "medio | Escreva em símbolos: para todo x realN x é maior ou igual a N",
-    "medio | Leia o produtório e calcule o valorN"
-  ],
-  "numeros-complexos": [
-    "dificil | Dividindo (N + Ni) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N + Ni) por (N + i)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N + Ni) por (N - Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N + Ni) por (N - i)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N + Ni) por (Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N + i) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N - Ni) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N - Ni) por (N + i)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N - Ni) por (N - Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N - Ni) por (N - i)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N - Ni) por (N)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N - Ni) por (Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N - i) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N - i) por (N - Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N - i) por (Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (N) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (Ni) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (Ni) por (N + i)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Dividindo (Ni) por (Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "dificil | Multiplicando (N + Ni) por (Ni)N qual é a parte REAL do resultado?",
-    "dificil | Multiplicando (N + i) por (Ni)N qual é a parte REAL do resultado?",
-    "dificil | Multiplicando (N - Ni) por (Ni)N qual é a parte REAL do resultado?",
-    "dificil | Multiplicando (N) por (N + i)N qual é a parte REAL do resultado?",
-    "dificil | Qual é o argumento de N + NiN medido no sentido anti-horário a partir do eixo real? (em grausN N casas)",
-    "dificil | Qual é o argumento de N + iN medido no sentido anti-horário a partir do eixo real? (em grausN N casas)",
-    "dificil | Qual é o argumento de N - NiN medido no sentido anti-horário a partir do eixo real? (em grausN N casas)",
-    "dificil | Qual é o argumento de N - iN medido no sentido anti-horário a partir do eixo real? (em grausN N casas)",
-    "extremo | Dividindo (N - i) por (N + i)N qual é a parte REAL do resultado? (N casas decimais)",
-    "extremo | Dividindo (N - i) por (N)N qual é a parte REAL do resultado? (N casas decimais)",
-    "extremo | Dividindo (N) por (N + i)N qual é a parte REAL do resultado? (N casas decimais)",
-    "extremo | Dividindo (N) por (N - Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "extremo | Dividindo (Ni) por (N - Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "extremo | Dividindo (i) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
-    "medio | Multiplicando (N + Ni) por (N + Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N + Ni) por (N + Ni)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N + Ni) por (N + i)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N + Ni) por (N + i)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N + Ni) por (N - Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N + Ni) por (N - Ni)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N + Ni) por (N - i)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N + Ni) por (N - i)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N + Ni) por (N)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N + i) por (N + Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N + i) por (N - Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N + i) por (N - Ni)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N + i) por (N)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N - Ni) por (N + Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N - Ni) por (N + Ni)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N - Ni) por (N + i)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N - Ni) por (N + i)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N - Ni) por (N - Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N - Ni) por (N - Ni)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N - Ni) por (N - i)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N - Ni) por (N)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N - Ni) por (N)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N - Ni) por (Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N - i) por (N + Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N - i) por (N + Ni)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N - i) por (N - Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N - i) por (N - Ni)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N - i) por (i)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N) por (N + Ni)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (N) por (N + i)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (N) por (N - i)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (Ni) por (N + Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (Ni) por (N + Ni)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (Ni) por (N - Ni)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Multiplicando (Ni) por (N - Ni)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (Ni) por (N - i)N qual é a parte REAL do resultado?",
-    "medio | Multiplicando (Ni) por (N)N qual é a parte IMAGINÁRIA do resultado?",
-    "medio | Qual é o módulo de -i? (N casas decimais)"
-  ],
-  "numeros-decimais": [
-    "dificil | Encontre a fração geratriz desta dízima periódica compostaN",
-    "medio | Encontre a fração geratriz desta dízima periódicaN"
   ],
   "polinomios": [
     "medio | Divida P(x) por (x + N)N No quocienteN qual é o coeficiente de x?",
@@ -389,19 +206,8 @@
     "medio | Divida P(x) por (x - N)N No quocienteN qual é o termo constante?",
     "medio | Todas as raízes deste polinômio são racionaisN Considerando TODAS elasN qual é a menor?"
   ],
-  "ponto-e-reta": ["medio | Qual é o coeficiente angular da reta que passa pelos dois pontos?"],
-  "potenciacao-radiciacao": [
-    "medio | Simplificando √N qual é o número que SAI do radical?",
-    "medio | Simplifique e informe o valor numéricoN"
-  ],
-  "probabilidade": [
-    "dificil | Um lote tem N peçasN das quais N são defeituosasN Retirando N peças de uma vezN qual é a probabilidade de NENHUMA ser defeituosa?",
-    "medio | Uma urna tem N bolas vermelhas e N azuisN Retirando duas bolas SEM reposiçãoN qual é a probabilidade de ambas serem vermelhas?"
-  ],
-  "produto-escalar-vetorial": [
-    "dificil | Uma força de N N é aplicada a N° do deslocamentoN que vale N mN Qual é o trabalho realizadoN em joules? (N casas)",
-    "medio | Qual é a projeção de (N N) sobre a direção de (N N)? (N casas decimais)",
-    "medio | Qual é o ângulo entre (N N) e (N N)? (em grausN N casas)"
+  "ponto-e-reta": [
+    "medio | Qual é o coeficiente angular da reta que passa pelos dois pontos?"
   ],
   "produtos-notaveis": [
     "dificil | Esse trinômio é um quadrado perfeitoN Escreva-o como (px + q)²N com p positivoN e informe qN",
@@ -411,18 +217,13 @@
     "medio | Numa PA de primeiro termo N e razão N qual é a soma dos N primeiros termos?",
     "medio | Numa PG de primeiro termo N e razão N qual é a soma dos N primeiros termos?"
   ],
-  "regra-da-cadeia": ["extremo | Use a regra da cadeia e calcule f'(N)N (N casas decimais)"],
+  "regra-da-cadeia": [
+    "extremo | Use a regra da cadeia e calcule f'(N)N (N casas decimais)"
+  ],
   "regras-de-derivacao": [
     "facil | Derive e calcule f'(N)N",
     "facil | Derive e escreva f'(x) — a expressão inteiraN não um valorN",
     "facil | Derive e informe o coeficiente de x na derivadaN"
-  ],
-  "regressao-e-correlacao": [
-    "dificil | Qual é o resíduo do ponto de x igual a N em relação à reta de mínimos quadrados destes dados? Responda com N casas decimaisN",
-    "dificil | Que fração da variação de y a reta ajustada explica nestes dados? Responda entre N e N com N casas decimaisN",
-    "facil | Qual é o intercepto da reta de mínimos quadrados para estes dados? Responda com N casas decimaisN",
-    "medio | Qual é o coeficiente de correlação de Pearson destes dados? Responda com N casas decimaisN",
-    "medio | Use a reta de mínimos quadrados destes dados para prever y quando x vale N Responda com N casas decimaisN"
   ],
   "semelhanca-e-pitagoras": [
     "medio | Um feixe de paralelas corta duas transversaisN Numa delas os segmentos medem N cm e N cm; na outraN o segmento correspondente ao primeiro mede N cmN Quanto mede xN correspondente ao segundoN em cm?",
@@ -465,20 +266,6 @@
   ],
   "triangulo-retangulo": [
     "extremo | Num triângulo retânguloN o cateto oposto a um ângulo mede N e o adjacente mede N Quanto mede esse ânguloN em graus? (N casas decimais)"
-  ],
-  "vetores-no-espaco": [
-    "facil | Calcule o produto escalar dos dois vetoresN",
-    "facil | Qual é a componente x do vetor unitário na direção de v? Arredonde para duas casas decimaisN",
-    "facil | Qual é a componente y do vetor unitário na direção de v? Arredonde para duas casas decimaisN",
-    "facil | Qual é a componente z do vetor unitário na direção de v? Arredonde para duas casas decimaisN",
-    "medio | Calcule a componente x do produto vetorial a × bN",
-    "medio | Calcule a componente z do produto vetorial a × bN",
-    "medio | Qual é o ângulo entre os dois vetoresN em graus? Arredonde para duas casas decimaisN"
-  ],
-  "vetores-no-plano": [
-    "dificil | Qual é o ângulo que o vetor (N N) forma com o eixo x positivoN medido no sentido anti-horário? (em grausN N casas)",
-    "medio | Qual é o módulo da soma dos vetores (N N) e (N N)? (N casas decimais)",
-    "medio | Um vetor de módulo N forma N° com o eixo xN Qual é sua componente vertical? (N casas decimais)"
   ],
   "vizinhancas-e-infinito": [
     "medio | Qual é o limite quando x tende ao infinito? (N casas decimais)"

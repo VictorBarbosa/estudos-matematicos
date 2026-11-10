@@ -171,7 +171,12 @@ function exercicioResumo(
       gabarito,
       proximos,
     ),
-    dica: nivel === 'facil' && oque === 'media' ? 'Some tudo e divida pela quantidade.' : undefined,
+    dica: {
+      media: `Some as ${medidas.length} medidas e divida por ${medidas.length}.`,
+      mediana: `Ponha as ${medidas.length} medidas em ordem; ${medidas.length % 2 === 1 ? 'a mediana é a do meio' : 'com quantidade par, a mediana é a média das duas do meio'}.`,
+      desvio: `Ache a média, some os QUADRADOS dos desvios em relação a ela e divida por n − 1 = ${medidas.length - 1}; depois tire a raiz.`,
+      incerteza: `Calcule o desvio padrão amostral e divida pela raiz de n = ${medidas.length}.`,
+    }[oque],
   };
 }
 
@@ -215,10 +220,7 @@ function exercicioPropagarSoma(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica:
-      nivel === 'medio'
-        ? 'Incertezas independentes não se somam direto: some os QUADRADOS e tire a raiz — σ = √(σ₁² + σ₂²).'
-        : undefined,
+    dica: 'Incertezas independentes não se somam direto: some os QUADRADOS e tire a raiz — σ = √(σ₁² + σ₂²).',
   };
 }
 
@@ -280,6 +282,7 @@ function exercicioPropagarProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica: `Num produto somam-se as incertezas RELATIVAS ao quadrado: (${incertezaBase}/${base})² + (${incertezaAltura}/${altura})²; tire a raiz e multiplique pela área.`,
   };
 }
 
@@ -323,7 +326,6 @@ function exercicioInclinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado.inclinacao,
       proximos,
     ),
-    dica:
-      nivel === 'dificil' ? 'A inclinação é Δy/Δx entre dois pontos quaisquer da reta.' : undefined,
+    dica: 'A inclinação é Δy/Δx entre dois pontos quaisquer da reta.',
   };
 }

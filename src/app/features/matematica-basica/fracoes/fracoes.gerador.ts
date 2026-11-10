@@ -131,11 +131,11 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
         resolucao.resultado,
         deslocamentoMisto(a, b, comMista),
       ),
-      dica:
-        nivel === 'facil'
-          ? comMista
-            ? 'Um número misto vira fração: 2 1/3 é (2·3 + 1)/3.'
-            : 'Comece comparando os denominadores.'
+      // O misto estreia no Médio: a dica dele vale em qualquer nível.
+      dica: comMista
+        ? 'Um número misto vira fração: 2 1/3 é (2·3 + 1)/3. Converta os dois antes de operar.'
+        : nivel === 'facil'
+          ? 'Comece comparando os denominadores.'
           : undefined,
     };
   },
