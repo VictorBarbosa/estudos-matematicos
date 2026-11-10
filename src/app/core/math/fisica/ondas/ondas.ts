@@ -21,7 +21,7 @@ export function numeroOnda(v: number, casas = 2): string {
 }
 
 /** 3,2 × 10⁻⁵ em LaTeX. */
-export function cientificoTex(v: number, casas = 1): string {
+export function notacaoCientificaTex(v: number, casas = 1): string {
   const [mantissa, expoente] = v.toExponential(casas).split('e');
   return `${mantissa!.replace('.', '{,}')} \\times 10^{${Number(expoente)}}`;
 }
@@ -129,7 +129,7 @@ export function nivelSonoroComPassos(intensidade: number): Resolucao<number> {
       },
       {
         descricao: 'A razão entre a intensidade e a de referência.',
-        tex: `\\frac{I}{I_0} = \\frac{${cientificoTex(intensidade)}}{10^{-12}} = ${cientificoTex(razao)}`,
+        tex: `\\frac{I}{I_0} = \\frac{${notacaoCientificaTex(intensidade)}}{10^{-12}} = ${notacaoCientificaTex(razao)}`,
       },
       {
         descricao: 'Dez vezes o logaritmo decimal.',
@@ -278,7 +278,7 @@ export function fendaDuplaComPassos(
         descricao: 'Tudo em metros: 1 nm = 10⁻⁹ m e 1 mm = 10⁻³ m.',
         tex:
           `y_{${ordem}} = \\frac{${ordem} \\cdot ${n(comprimentoNm)} \\times 10^{-9} \\cdot ${n(distanciaTela)}}` +
-          `{${n(separacaoMm)} \\times 10^{-3}} = ${cientificoTex(y, 3)}\\ \\text{m}`,
+          `{${n(separacaoMm)} \\times 10^{-3}} = ${notacaoCientificaTex(y, 3)}\\ \\text{m}`,
       },
       {
         descricao: 'Em milímetros.',

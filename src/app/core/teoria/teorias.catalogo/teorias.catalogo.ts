@@ -66,6 +66,10 @@ import { TEORIA_MOMENTO as t_impulso_e_momento } from '@features/fisica/impulso-
 import { TEORIA_NEWTON as t_leis_de_newton } from '@features/fisica/leis-de-newton/leis-de-newton.teoria';
 import { TEORIA_MHS as t_movimento_harmonico } from '@features/fisica/movimento-harmonico/movimento-harmonico.teoria';
 import { TEORIA_PROPULSAO as t_propulsao_de_foguetes } from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.teoria';
+import { TEORIA_ELETROSTATICA as t_eletrostatica } from '@features/eletromagnetismo/eletrostatica/eletrostatica.teoria';
+import { TEORIA_POTENCIAL_CAPACITORES as t_potencial_e_capacitores } from '@features/eletromagnetismo/potencial-e-capacitores/potencial-e-capacitores.teoria';
+import { TEORIA_CIRCUITOS as t_circuitos } from '@features/eletromagnetismo/circuitos/circuitos.teoria';
+import { TEORIA_MAGNETISMO as t_magnetismo_e_inducao } from '@features/eletromagnetismo/magnetismo-e-inducao/magnetismo-e-inducao.teoria';
 import { TEORIA_TERMO as t_termodinamica_e_gases } from '@features/fisica/termodinamica-e-gases/termodinamica-e-gases.teoria';
 import { TEORIA_ENERGIA as t_trabalho_e_energia } from '@features/fisica/trabalho-e-energia/trabalho-e-energia.teoria';
 import { TEORIA_BALISTICA as t_trajetoria_balistica } from '@features/fisica/trajetoria-balistica/trajetoria-balistica.teoria';
@@ -178,6 +182,10 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['leis-de-newton', t_leis_de_newton],
   ['movimento-harmonico', t_movimento_harmonico],
   ['propulsao-de-foguetes', t_propulsao_de_foguetes],
+  ['eletrostatica', t_eletrostatica],
+  ['potencial-e-capacitores', t_potencial_e_capacitores],
+  ['circuitos', t_circuitos],
+  ['magnetismo-e-inducao', t_magnetismo_e_inducao],
   ['termodinamica-e-gases', t_termodinamica_e_gases],
   ['trabalho-e-energia', t_trabalho_e_energia],
   ['trajetoria-balistica', t_trajetoria_balistica],

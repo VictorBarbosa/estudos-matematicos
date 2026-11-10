@@ -164,6 +164,22 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       import('@features/calculo-4/metodos-numericos/metodos-numericos.gerador').then(
         (m) => m.geradorMetodosNumericos,
       ),
+    circuitos: () =>
+      import('@features/eletromagnetismo/circuitos/circuitos.gerador').then(
+        (m) => m.geradorCircuitos,
+      ),
+    eletrostatica: () =>
+      import('@features/eletromagnetismo/eletrostatica/eletrostatica.gerador').then(
+        (m) => m.geradorEletrostatica,
+      ),
+    'magnetismo-e-inducao': () =>
+      import('@features/eletromagnetismo/magnetismo-e-inducao/magnetismo-e-inducao.gerador').then(
+        (m) => m.geradorMagnetismo,
+      ),
+    'potencial-e-capacitores': () =>
+      import('@features/eletromagnetismo/potencial-e-capacitores/potencial-e-capacitores.gerador').then(
+        (m) => m.geradorPotencialCapacitores,
+      ),
     'analise-combinatoria': () =>
       import('@features/estatistica/analise-combinatoria/analise-combinatoria.gerador').then(
         (m) => m.geradorCombinatoria,

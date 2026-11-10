@@ -100,6 +100,14 @@ export const routes: Routes = [
     canActivateChild: [topicoLiberadoGuard],
   },
   {
+    path: 'eletromagnetismo',
+    loadChildren: () =>
+      import('@features/eletromagnetismo/eletromagnetismo.routes/eletromagnetismo.routes').then(
+        (m) => m.rotas,
+      ),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
     path: 'ondas-e-fisica-moderna',
     loadChildren: () =>
       import('@features/ondas-e-fisica-moderna/ondas-e-fisica-moderna.routes/ondas-e-fisica-moderna.routes').then(

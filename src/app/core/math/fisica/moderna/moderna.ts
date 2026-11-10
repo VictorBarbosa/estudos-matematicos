@@ -1,5 +1,5 @@
 import { ErroMatematico, Resolucao } from '@core/math/tipos/tipos';
-import { cientificoTex, numeroOnda as n } from '@core/math/fisica/ondas/ondas';
+import { notacaoCientificaTex, numeroOnda as n } from '@core/math/fisica/ondas/ondas';
 
 /**
  * Física moderna: relatividade restrita e a luz como partícula.
@@ -154,11 +154,11 @@ export function deBroglieComPassos(massa: number, velocidade: number): Resolucao
       },
       {
         descricao: 'O momento.',
-        tex: `p = ${cientificoTex(massa, 2)} \\cdot ${cientificoTex(velocidade, 1)} = ${cientificoTex(momento, 3)}\\ \\text{kg·m/s}`,
+        tex: `p = ${notacaoCientificaTex(massa, 2)} \\cdot ${notacaoCientificaTex(velocidade, 1)} = ${notacaoCientificaTex(momento, 3)}\\ \\text{kg·m/s}`,
       },
       {
         descricao: 'Dividindo h por p, e passando para nanômetros (1 nm = 10⁻⁹ m).',
-        tex: `\\lambda = \\frac{6{,}626 \\times 10^{-34}}{${cientificoTex(momento, 3)}} = ${cientificoTex(metros, 3)}\\ \\text{m} = ${n(resultado, 4)}\\ \\text{nm}`,
+        tex: `\\lambda = \\frac{6{,}626 \\times 10^{-34}}{${notacaoCientificaTex(momento, 3)}} = ${notacaoCientificaTex(metros, 3)}\\ \\text{m} = ${n(resultado, 4)}\\ \\text{nm}`,
       },
     ],
   };

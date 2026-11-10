@@ -1,0 +1,39 @@
+{
+  "resistencia": { "pt": "R (kΩ)", "fr": "R (kΩ)", "en": "R (kΩ)" },
+  "capacitancia": { "pt": "C (μF)", "fr": "C (μF)", "en": "C (μF)" },
+  "fonte": { "pt": "Fonte (V)", "fr": "Source (V)", "en": "Source (V)" },
+  "tempo": {
+    "pt": "Tempo (décimos de s)",
+    "fr": "Temps (dixièmes de s)",
+    "en": "Time (tenths of s)"
+  },
+  "dicaTempo": {
+    "pt": "Ponha o tempo igual a τ e confira os 63%.",
+    "fr": "Réglez le temps sur τ et vérifiez les 63 %.",
+    "en": "Set the time to τ and check the 63%."
+  },
+  "constanteTempo": { "pt": "τ = RC", "fr": "τ = RC", "en": "τ = RC" },
+  "cargaAgora": { "pt": "Carga em t", "fr": "Charge à t", "en": "Charge at t" },
+  "daCargaFinal": {
+    "pt": "da carga final",
+    "fr": "de la charge finale",
+    "en": "of the final charge"
+  },
+  "curvaCarga": { "pt": "q(t) (μC)", "fr": "q(t) (μC)", "en": "q(t) (μC)" },
+  "curvaFinal": { "pt": "Q = CV", "fr": "Q = CV", "en": "Q = CV" },
+  "cargaNoTempo": {
+    "pt": "A carga do capacitor no tempo",
+    "fr": "La charge du condensateur dans le temps",
+    "en": "The capacitor’s charge over time"
+  },
+  "descricaoGrafico": {
+    "pt": "Curva de carga q(t) que sobe até CV; τ = {tau} s; em t = {t} s, q = {q} μC.",
+    "fr": "Courbe de charge q(t) qui monte jusqu’à CV ; τ = {tau} s ; à t = {t} s, q = {q} μC.",
+    "en": "Charging curve q(t) rising toward CV; τ = {tau} s; at t = {t} s, q = {q} μC."
+  },
+  "leitura": {
+    "pt": "A carga sobe rápido no começo e cada vez mais devagar: a corrente diminui porque o capacitor já carregado empurra contra a fonte. Em t = τ (linha tracejada) ela chega a 63% de CV; em 5τ, praticamente cheia.",
+    "fr": "La charge monte vite au début puis de plus en plus lentement : le courant diminue parce que le condensateur déjà chargé s’oppose à la source. À t = τ (pointillés) elle atteint 63 % de CV ; à 5τ, presque pleine.",
+    "en": "The charge rises fast at first and ever more slowly: the current drops because the already charged capacitor pushes back against the source. At t = τ (dashed line) it reaches 63% of CV; at 5τ, nearly full."
+  }
+}

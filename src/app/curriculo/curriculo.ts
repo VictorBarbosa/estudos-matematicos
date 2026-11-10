@@ -619,6 +619,50 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     ],
   },
   {
+    id: 'eletromagnetismo',
+    titulo: 'Eletricidade e magnetismo',
+    descricao:
+      'Cargas, campos, circuitos e indução: a física do 0P02, da lei de Coulomb a Faraday.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *University Physics Volume 2*',
+        url: 'https://openstax.org/details/books/university-physics-volume-2',
+        nota: 'Capítulos 5 a 13: eletrostática, potencial, capacitância, circuitos CC e RC, magnetismo e indução.',
+      },
+      {
+        titulo: 'MIT OCW 8.02 — *Physics II: Electricity and Magnetism*',
+        url: 'https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/',
+        nota: 'Aulas, problemas resolvidos e as demonstrações de laboratório que um site não substitui.',
+      },
+    ],
+    topicos: [
+      {
+        id: 'eletrostatica',
+        titulo: 'Eletrostática',
+        descricao: 'Carga, lei de Coulomb, campo elétrico e a superposição de forças.',
+        pronto: true,
+      },
+      {
+        id: 'potencial-e-capacitores',
+        titulo: 'Potencial e capacitores',
+        descricao: 'Potencial e trabalho, o capacitor de placas, energia e associações.',
+        pronto: true,
+      },
+      {
+        id: 'circuitos',
+        titulo: 'Circuitos',
+        descricao: 'Ohm, potência, série e paralelo, Kirchhoff e o circuito RC.',
+        pronto: true,
+      },
+      {
+        id: 'magnetismo-e-inducao',
+        titulo: 'Magnetismo e indução',
+        descricao: 'Força de Lorentz, campos de correntes, fluxo, Faraday e Lenz.',
+        pronto: true,
+      },
+    ],
+  },
+  {
     id: 'ondas-e-fisica-moderna',
     titulo: 'Ondas e física moderna',
     descricao: 'Som, luz e o começo do século XX: a física que a mecânica não explica.',

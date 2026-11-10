@@ -1,0 +1,33 @@
+{
+  "area": {
+    "pt": "Área das placas (cm²)",
+    "fr": "Aire des plaques (cm²)",
+    "en": "Plate area (cm²)"
+  },
+  "separacao": { "pt": "Separação (mm)", "fr": "Écartement (mm)", "en": "Separation (mm)" },
+  "dicaSeparacao": {
+    "pt": "Aproxime as placas e veja a capacitância subir.",
+    "fr": "Rapprochez les plaques et voyez la capacité monter.",
+    "en": "Bring the plates closer and watch the capacitance rise."
+  },
+  "tensao": { "pt": "Tensão (V)", "fr": "Tension (V)", "en": "Voltage (V)" },
+  "capacitancia": { "pt": "Capacitância", "fr": "Capacité", "en": "Capacitance" },
+  "carga": { "pt": "Carga Q = CV", "fr": "Charge Q = CV", "en": "Charge Q = CV" },
+  "energia": { "pt": "Energia ½CV²", "fr": "Énergie ½CV²", "en": "Energy ½CV²" },
+  "curvaEnergia": { "pt": "U (nJ)", "fr": "U (nJ)", "en": "U (nJ)" },
+  "energiaPelaTensao": {
+    "pt": "A energia guardada conforme a tensão",
+    "fr": "L’énergie stockée selon la tension",
+    "en": "Stored energy against voltage"
+  },
+  "descricaoGrafico": {
+    "pt": "Parábola da energia em função da tensão; em {v} V, a energia é {u} nJ.",
+    "fr": "Parabole de l’énergie en fonction de la tension ; à {v} V, l’énergie vaut {u} nJ.",
+    "en": "Parabola of energy against voltage; at {v} V, the energy is {u} nJ."
+  },
+  "leitura": {
+    "pt": "A energia cresce com o QUADRADO da tensão: dobrar V quadruplica U. A capacitância vem só da geometria — mexa na área e na separação e veja a parábola abrir ou fechar.",
+    "fr": "L’énergie croît avec le CARRÉ de la tension : doubler V quadruple U. La capacité ne dépend que de la géométrie — changez l’aire et l’écartement et voyez la parabole s’ouvrir ou se fermer.",
+    "en": "Energy grows with the SQUARE of voltage: doubling V quadruples U. Capacitance depends only on geometry — change the area and separation and watch the parabola open or close."
+  }
+}

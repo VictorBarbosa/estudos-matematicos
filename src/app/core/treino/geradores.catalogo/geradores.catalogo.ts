@@ -66,6 +66,10 @@ import { geradorMomento as g_impulso_e_momento } from '@features/fisica/impulso-
 import { geradorNewton as g_leis_de_newton } from '@features/fisica/leis-de-newton/leis-de-newton.gerador';
 import { geradorMhs as g_movimento_harmonico } from '@features/fisica/movimento-harmonico/movimento-harmonico.gerador';
 import { geradorPropulsao as g_propulsao_de_foguetes } from '@features/fisica/propulsao-de-foguetes/propulsao-de-foguetes.gerador';
+import { geradorEletrostatica as g_eletrostatica } from '@features/eletromagnetismo/eletrostatica/eletrostatica.gerador';
+import { geradorPotencialCapacitores as g_potencial_e_capacitores } from '@features/eletromagnetismo/potencial-e-capacitores/potencial-e-capacitores.gerador';
+import { geradorCircuitos as g_circuitos } from '@features/eletromagnetismo/circuitos/circuitos.gerador';
+import { geradorMagnetismo as g_magnetismo_e_inducao } from '@features/eletromagnetismo/magnetismo-e-inducao/magnetismo-e-inducao.gerador';
 import { geradorTermo as g_termodinamica_e_gases } from '@features/fisica/termodinamica-e-gases/termodinamica-e-gases.gerador';
 import { geradorEnergia as g_trabalho_e_energia } from '@features/fisica/trabalho-e-energia/trabalho-e-energia.gerador';
 import { geradorBalistica as g_trajetoria_balistica } from '@features/fisica/trajetoria-balistica/trajetoria-balistica.gerador';
@@ -184,6 +188,10 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['leis-de-newton', g_leis_de_newton],
   ['movimento-harmonico', g_movimento_harmonico],
   ['propulsao-de-foguetes', g_propulsao_de_foguetes],
+  ['eletrostatica', g_eletrostatica],
+  ['potencial-e-capacitores', g_potencial_e_capacitores],
+  ['circuitos', g_circuitos],
+  ['magnetismo-e-inducao', g_magnetismo_e_inducao],
   ['termodinamica-e-gases', g_termodinamica_e_gases],
   ['trabalho-e-energia', g_trabalho_e_energia],
   ['trajetoria-balistica', g_trajetoria_balistica],
