@@ -89,7 +89,7 @@ export function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           descricao: 'Substituindo na segunda.',
-          tex: `${p}x ${q >= 0 ? '+' : '-'} ${Math.abs(q)}(${n} - x) = ${t} \\;\\Rightarrow\; ${p - q}x = ${t - q * n}`,
+          tex: `${p}x ${q >= 0 ? '+' : '-'} ${Math.abs(q)}(${n} - x) = ${t} \\;\\Rightarrow\\; ${p - q}x = ${t - q * n}`,
         },
         {
           descricao: 'Isolando x.',
@@ -203,7 +203,7 @@ export function exercicioClassificacao(nivel: Nivel, rng: Rng): Exercicio<number
         },
         {
           descricao: 'Isolando k.',
-          tex: `${a1}k = ${a2 * b1} \\;\\Rightarrow\; k = ${k}`,
+          tex: `${a1}k = ${a2 * b1} \\;\\Rightarrow\\; k = ${k}`,
         },
         {
           descricao:

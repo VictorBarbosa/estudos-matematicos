@@ -86,6 +86,12 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['equacao-primeiro-grau', 'medio', 'O perímetro soma os quatro lados'],
   ['equacao-primeiro-grau', 'dificil', 'o numerador INTEIRO'],
   ['equacao-primeiro-grau', 'dificil', 'Consecutivos são x'],
+  ['continuidade', 'medio', 'Teste 0/0'],
+  ['continuidade', 'medio', 'Calcule os dois laterais'],
+  ['continuidade', 'medio', 'indica assíntota'],
+  ['continuidade', 'extremo', 'Fator que cancela: removível'],
+  ['aplicacoes-da-derivada', 'medio', 'ache onde f′ = 0'],
+  ['aplicacoes-da-derivada', 'extremo', 'Inflexão é onde f″ troca de sinal'],
 ];
 
 describe('dicas alcançáveis', () => {

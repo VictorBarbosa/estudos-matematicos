@@ -233,7 +233,7 @@ function exercicioSinal(nivel: Nivel, rng: Rng, sorteado: number): Exercicio<num
     id: `circulo-sinal-${funcao}-${graus}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: `Qual é o sinal de ${funcao} ${graus}°? Responda 1 se for positivo e -1 se for negativo.`,
-    enunciadoTex: `\\operatorname{${funcao}} ${graus}° \\gtrless 0 \;?`,
+    enunciadoTex: `\\operatorname{${funcao}} ${graus}° \\gtrless 0 \\;?`,
     gabarito,
     resolucao: {
       resultado: gabarito,

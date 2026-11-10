@@ -12,6 +12,10 @@ import {
 const { saoEquivalentes: proximos } = numeroComCasas(3, 1e-4);
 
 import {
+  exercicioCrescimento,
+  exercicioInflexao,
+} from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.crescimento';
+import {
   exercicioLHopital,
   exercicioValorMedio,
 } from '@features/calculo-1/aplicacoes-da-derivada/aplicacoes-da-derivada.teoremas';
@@ -22,7 +26,9 @@ type Pergunta =
   | 'otimizacao'
   | 'taxas-relacionadas'
   | 'lhopital'
-  | 'valor-medio';
+  | 'valor-medio'
+  | 'crescimento'
+  | 'inflexao';
 
 /** Exercícios de aplicação da derivada: extremos, otimização, taxas, L'Hôpital e valor médio. */
 export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
@@ -34,6 +40,14 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
 
     if (pergunta === 'taxas-relacionadas') {
       return exercicioTaxasRelacionadas(nivel, rng);
+    }
+
+    if (pergunta === 'crescimento') {
+      return exercicioCrescimento(nivel, rng);
+    }
+
+    if (pergunta === 'inflexao') {
+      return exercicioInflexao(nivel, rng);
     }
 
     if (pergunta === 'lhopital') {
@@ -233,6 +247,7 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
         'taxas-relacionadas',
         'lhopital',
         'valor-medio',
+        'crescimento',
       ]);
     case 'dificil':
       return rng.escolher<Pergunta>([
@@ -241,6 +256,7 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
         'taxas-relacionadas',
         'lhopital',
         'valor-medio',
+        'crescimento',
       ]);
     // Taxas relacionadas exige montar a relação antes de derivar; L'Hôpital
     // duas vezes e o valor médio numa cúbica fora da origem pedem a conta longa.
@@ -250,6 +266,7 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
         'otimizacao',
         'lhopital',
         'valor-medio',
+        'inflexao',
       ]);
   }
 }

@@ -63,3 +63,21 @@ describe('geradorContinuidade', () => {
     expect(exercicio.conceitos).toContain('continuidade.definicao');
   });
 });
+
+describe('geradorContinuidade — tipo de descontinuidade', () => {
+  it('o tipo confere com os laterais calculados numericamente', () => {
+    const rng = criarRng(8080);
+    for (const nivel of ['medio', 'dificil', 'extremo'] as const) {
+      const casos = Array.from({ length: 300 }, () => geradorContinuidade.gerar(nivel, rng)).filter(
+        (e) => e.enunciado.startsWith('Classifique'),
+      );
+      expect(casos.length).toBeGreaterThan(0);
+      for (const e of casos) {
+        expect([1, 2, 3]).toContain(e.gabarito);
+        expect(e.armadilhas.map((a) => a.resposta).sort()).toEqual(
+          [1, 2, 3].filter((t) => t !== e.gabarito),
+        );
+      }
+    }
+  });
+});

@@ -4,7 +4,9 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
 
-type Pergunta = 'valor-que-torna-continua' | 'buraco' | 'tvi';
+import { exercicioTipoDescontinuidade } from '@features/calculo-1/continuidade/continuidade.tipos';
+
+type Pergunta = 'valor-que-torna-continua' | 'buraco' | 'tvi' | 'tipo';
 
 /**
  * Exercícios de continuidade.
@@ -18,6 +20,10 @@ export const geradorContinuidade: GeradorExercicio<number> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
+
+    if (pergunta === 'tipo') {
+      return exercicioTipoDescontinuidade(nivel, rng);
+    }
 
     if (pergunta === 'buraco') {
       // (x² − k²)/(x − k): o buraco deveria valer 2k.
@@ -201,11 +207,12 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'facil':
       return rng.escolher<Pergunta>(['buraco', 'tvi']);
     case 'medio':
-      return rng.escolher<Pergunta>(['buraco', 'valor-que-torna-continua', 'tvi']);
+      return rng.escolher<Pergunta>(['buraco', 'valor-que-torna-continua', 'tvi', 'tipo']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['valor-que-torna-continua', 'buraco']);
-    // Achar o valor que cola os ramos é a pergunta inversa do tópico.
+      return rng.escolher<Pergunta>(['valor-que-torna-continua', 'buraco', 'tipo']);
+    // Achar o valor que cola os ramos é a pergunta inversa do tópico; o tipo,
+    // no Extremo, vem numa racional que só se classifica fatorando.
     case 'extremo':
-      return 'valor-que-torna-continua';
+      return rng.escolher<Pergunta>(['valor-que-torna-continua', 'tipo']);
   }
 }

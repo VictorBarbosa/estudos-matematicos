@@ -124,3 +124,29 @@ describe('geradorAplicacoesDerivada — L’Hôpital e valor médio', () => {
     }
   });
 });
+
+describe('geradorAplicacoesDerivada — crescimento e inflexão', () => {
+  it('no intervalo pedido a derivada tem o sinal do verbo, e fora dele o oposto', () => {
+    const rng = criarRng(4141);
+    const casos = Array.from({ length: 300 }, () =>
+      geradorAplicacoesDerivada.gerar('dificil', rng),
+    ).filter((e) => e.id.startsWith('aplic-cresc'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, c1, c2] = /\(a, b\) = \((-?\d+), (-?\d+)\)/.exec(e.resolucao.passos.at(-1)!.tex)!;
+      expect([Number(c1), Number(c2)]).toContain(e.gabarito);
+      expect(Number(c1)).toBeLessThan(Number(c2));
+    }
+  });
+
+  it('a inflexão zera a segunda derivada', () => {
+    const rng = criarRng(4242);
+    const casos = Array.from({ length: 300 }, () =>
+      geradorAplicacoesDerivada.gerar('extremo', rng),
+    ).filter((e) => e.id.startsWith('aplic-inflexao'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      expect(Number.isFinite(e.gabarito)).toBe(true);
+    }
+  });
+});

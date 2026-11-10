@@ -127,7 +127,7 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     enunciado:
       `Num triângulo retângulo, o cateto oposto a um ângulo mede ${oposto} e o adjacente ` +
       `mede ${adjacente}. Quanto mede esse ângulo, em graus? (2 casas decimais)`,
-    enunciadoTex: `\\text{oposto} = ${oposto} \\qquad \\text{adjacente} = ${adjacente} \\qquad \\theta = \;?`,
+    enunciadoTex: `\\text{oposto} = ${oposto} \\qquad \\text{adjacente} = ${adjacente} \\qquad \\theta = \\;?`,
     gabarito,
     resolucao: {
       resultado: gabarito,

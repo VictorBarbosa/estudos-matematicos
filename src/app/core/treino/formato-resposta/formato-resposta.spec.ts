@@ -53,11 +53,15 @@ function numerosDe(passo: { readonly tex: string; readonly nota?: string }): rea
     valores.push(Number(achado[0].replace(',', '.')));
   }
 
-  for (const achado of texto.matchAll(/\\frac\{(-?\d+(?:[.,]\d+)?)\}\{(-?\d+(?:[.,]\d+)?)\}/g)) {
-    const numerador = Number(achado[1]!.replace(',', '.'));
-    const denominador = Number(achado[2]!.replace(',', '.'));
+  // O sinal pode vir dentro (\frac{-1}{2}) ou fora (-\frac{1}{2}) da fração.
+  for (const achado of texto.matchAll(
+    /(-)?\\frac\{(-?\d+(?:[.,]\d+)?)\}\{(-?\d+(?:[.,]\d+)?)\}/g,
+  )) {
+    const sinal = achado[1] ? -1 : 1;
+    const numerador = Number(achado[2]!.replace(',', '.'));
+    const denominador = Number(achado[3]!.replace(',', '.'));
     if (denominador !== 0) {
-      valores.push(numerador / denominador);
+      valores.push((sinal * numerador) / denominador);
     }
   }
 
