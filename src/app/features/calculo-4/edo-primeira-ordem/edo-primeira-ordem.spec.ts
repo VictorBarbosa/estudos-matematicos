@@ -38,9 +38,11 @@ describe('geradorEdoPrimeiraOrdem', () => {
     });
   }
 
-  it('o Fácil fica na separável', () => {
+  it('o Fácil fica na separável ou no k da equação exata', () => {
     for (const exercicio of amostra('facil', 150)) {
-      expect(exercicio.conceitos).toContain('edo1.separavel');
+      expect(
+        exercicio.conceitos.includes('edo1.separavel') || exercicio.conceitos.includes('edo1.exata'),
+      ).toBe(true);
     }
   });
 
@@ -65,9 +67,7 @@ describe('geradorEdoPrimeiraOrdem', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('não é linear')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('não é linear'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('não é linear'))!;
     const resultado = corrigir(
       geradorEdoPrimeiraOrdem,
       exercicio,
@@ -144,5 +144,69 @@ describe('EDO de primeira ordem', () => {
 
     expect(passos[3]!.nota).toContain('regime permanente');
     expect(passos[1]!.nota).toContain('derivada de um produto');
+  });
+});
+
+describe('geradorEdoPrimeiraOrdem — equação exata', () => {
+  const rng = criarRng(4455);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorEdoPrimeiraOrdem.gerar(nivel, rng)).filter((e) =>
+      e.conceitos.includes('edo1.exata'),
+    );
+
+  /** Avalia uma soma de termos em LaTeX (cxᵖyᵠ e ceˣ) num ponto. */
+  function avaliar(tex: string, x: number, y: number): number {
+    const js = tex
+      .replace(/\s/g, '')
+      .replace(/e\^\{x\}/g, 'E')
+      .replace(/([xy])\^\{(\d+)\}/g, '($1**$2)')
+      .replace(/(\d)([xyE(])/g, '$1*$2')
+      .replace(/([xyE)])([xyE(])/g, '$1*$2')
+      .replace(/([xyE)])([xyE(])/g, '$1*$2');
+    return new Function('x', 'y', 'E', `return ${js};`)(x, y, Math.exp(x)) as number;
+  }
+
+  it('no Fácil aparece o k da exatidão, e com ele as derivadas cruzadas coincidem', () => {
+    const casos = lote('facil').filter((e) => e.enunciado.includes('valor de k'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, m, n] = /\\left\((.*?)\\right\)dx \+ \\left\((.*?)\\right\)dy/.exec(
+        e.enunciadoTex.replace(/k/g, String(e.gabarito)),
+      )!;
+      const h = 1e-5;
+      for (const [x, y] of [
+        [1.3, 0.7],
+        [-0.8, 1.9],
+      ]) {
+        const dMdy = (avaliar(m!, x!, y! + h) - avaliar(m!, x!, y! - h)) / (2 * h);
+        const dNdx = (avaliar(n!, x! + h, y!) - avaliar(n!, x! - h, y!)) / (2 * h);
+        expect(dMdy).toBeCloseTo(dNdx, 4);
+      }
+    }
+  });
+
+  it('a constante C é F no ponto, e F tem as derivadas M e N do enunciado', () => {
+    for (const nivel of ['medio', 'dificil', 'extremo'] as const) {
+      const casos = lote(nivel).filter((e) => e.enunciado.includes('valor de C'));
+      expect(casos.length).toBeGreaterThan(0);
+      for (const e of casos) {
+        const [, m, n] = /\\left\((.*?)\\right\)dx \+ \\left\((.*?)\\right\)dy/.exec(
+          e.enunciadoTex,
+        )!;
+        const fTex = /F\(x, y\) = (.*)$/.exec(e.resolucao.passos[3]!.tex)![1]!;
+        const [, x0, y0] = /\((-?\d+), (-?\d+)\)/.exec(e.enunciado)!.map(Number);
+        expect(avaliar(fTex, x0!, y0!)).toBeCloseTo(e.gabarito, 6);
+        const h = 1e-5;
+        const [x, y] = [0.6, -1.1];
+        expect((avaliar(fTex, x + h, y) - avaliar(fTex, x - h, y)) / (2 * h)).toBeCloseTo(
+          avaliar(m!, x, y),
+          4,
+        );
+        expect((avaliar(fTex, x, y + h) - avaliar(fTex, x, y - h)) / (2 * h)).toBeCloseTo(
+          avaliar(n!, x, y),
+          4,
+        );
+      }
+    }
   });
 });

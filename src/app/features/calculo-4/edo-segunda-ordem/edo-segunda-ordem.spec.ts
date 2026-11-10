@@ -170,3 +170,41 @@ describe('EDO de segunda ordem', () => {
     expect(passos[2]!.nota).toContain('parte real controla o decaimento');
   });
 });
+
+describe('geradorEdoSegundaOrdem — regime de amortecimento', () => {
+  const rng = criarRng(6611);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorEdoSegundaOrdem.gerar(nivel, rng)).filter((e) =>
+      e.conceitos.includes('edo2.amortecimento'),
+    );
+  const numeros = (texto: string) =>
+    [...texto.matchAll(/(\d+) (kg|N\/m|N·s\/m)/g)].map((m) => Number(m[1]));
+
+  it('o c crítico zera o discriminante', () => {
+    const casos = lote('medio');
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [m, k] = numeros(e.enunciado);
+      expect(e.gabarito ** 2 - 4 * m! * k!).toBeCloseTo(0, 9);
+    }
+  });
+
+  it('a rigidez-limite zera o discriminante', () => {
+    const casos = lote('dificil');
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [m, c] = numeros(e.enunciado);
+      expect(c! ** 2 - 4 * m! * e.gabarito).toBeCloseTo(0, 9);
+    }
+  });
+
+  it('na meia-amplitude, a envoltória e^(−ct/2m) vale 1/2 no tempo informado', () => {
+    const casos = lote('extremo');
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [m, k, c] = numeros(e.enunciado);
+      expect(c! ** 2).toBeLessThan(4 * m! * k!);
+      expect(Math.exp((-c! * e.gabarito) / (2 * m!))).toBeCloseTo(0.5, 9);
+    }
+  });
+});

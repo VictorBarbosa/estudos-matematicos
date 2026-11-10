@@ -11,7 +11,7 @@ export const TEORIA_EDO1: readonly Teoria[] = [
       'integrar os dois lados. O caso mais importante é a taxa proporcional ao próprio valor, ' +
       'que produz a exponencial — e descreve juros, decaimento e população sem limite.',
     formulas: [
-      { tex: "\\frac{dy}{dt} = ky \\;\\Longrightarrow\\; y(t) = y_{0}e^{kt}" },
+      { tex: '\\frac{dy}{dt} = ky \\;\\Longrightarrow\\; y(t) = y_{0}e^{kt}' },
       { tex: '\\frac{dy}{y} = k\\,dt' },
     ],
     demonstracao: [
@@ -76,7 +76,10 @@ export const TEORIA_EDO1: readonly Teoria[] = [
       'amostra.',
     formulas: [
       { tex: 't_{1/2} = \\frac{\\ln 2}{|k|}' },
-      { tex: 'y(t) = y_{0}\\left(\\frac{1}{2}\\right)^{t/t_{1/2}}', legenda: 'A mesma solução, escrita em meias-vidas.' },
+      {
+        tex: 'y(t) = y_{0}\\left(\\frac{1}{2}\\right)^{t/t_{1/2}}',
+        legenda: 'A mesma solução, escrita em meias-vidas.',
+      },
     ],
     demonstracao: [
       {
@@ -146,7 +149,10 @@ export const TEORIA_EDO1: readonly Teoria[] = [
     formulas: [
       { tex: 'y_{\\infty} = \\frac{q}{p}' },
       { tex: 'y(t) = y_{\\infty} + \\left(y_{0} - y_{\\infty}\\right)e^{-pt}' },
-      { tex: '\\tau = \\frac{1}{p}', legenda: 'A constante de tempo: quanto o transiente demora a sumir.' },
+      {
+        tex: '\\tau = \\frac{1}{p}',
+        legenda: 'A constante de tempo: quanto o transiente demora a sumir.',
+      },
     ],
     demonstracao: [
       {
@@ -168,5 +174,57 @@ export const TEORIA_EDO1: readonly Teoria[] = [
       },
     ],
     vejaTambem: ['edo1.fator-integrante', 'edo1.condicao-inicial'],
+  },
+  {
+    id: 'edo1.exata',
+    titulo: 'Equação exata',
+    resumo: 'Se M dx + N dy é a diferencial de uma F, as soluções são as curvas F(x, y) = C.',
+    definicao:
+      'Uma equação M dx + N dy = 0 é exata quando existe uma função F(x, y) com ∂F/∂x = M e ' +
+      '∂F/∂y = N. Então a equação diz dF = 0, e as soluções são as curvas de nível F(x, y) = C. ' +
+      'O teste é a igualdade das derivadas cruzadas, ∂M/∂y = ∂N/∂x. Para achar F, integra-se M ' +
+      'em x somando uma g(y) — a «constante» que pode depender de y — e acha-se g comparando a ' +
+      'derivada em y com N.',
+    formulas: [
+      {
+        tex: '\\frac{\\partial M}{\\partial y} = \\frac{\\partial N}{\\partial x}',
+        legenda: 'O teste de exatidão.',
+      },
+      {
+        tex: "F = \\int M\\,dx + g(y), \\qquad \\frac{\\partial F}{\\partial y} = N \\;\\Rightarrow\\; g'(y)",
+        legenda: 'A receita para montar F.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Se M = ∂F/∂x e N = ∂F/∂y, as derivadas cruzadas são as derivadas mistas de F.',
+        tex: '\\frac{\\partial M}{\\partial y} = \\frac{\\partial^{2} F}{\\partial y\\,\\partial x} = \\frac{\\partial^{2} F}{\\partial x\\,\\partial y} = \\frac{\\partial N}{\\partial x}',
+        nota: 'As derivadas mistas de uma função suave não dependem da ordem (teorema de Schwarz).',
+      },
+      {
+        descricao: 'Ao longo de uma solução, dF = M dx + N dy = 0: F não muda.',
+        tex: 'dF = 0 \\;\\Rightarrow\\; F(x, y) = C',
+      },
+    ],
+    exemplo: {
+      enunciado: '(2xy + 3) dx + (x² + 4y) dy = 0, pela curva que passa por (1, 2).',
+      passos: [
+        {
+          descricao: 'Teste: as derivadas cruzadas coincidem.',
+          tex: '\\frac{\\partial M}{\\partial y} = 2x = \\frac{\\partial N}{\\partial x}',
+        },
+        { descricao: 'Integrando M em x.', tex: 'F = x^{2}y + 3x + g(y)' },
+        {
+          descricao: 'Derivando em y e comparando com N.',
+          tex: "x^{2} + g'(y) = x^{2} + 4y \\;\\Rightarrow\\; g(y) = 2y^{2}",
+        },
+        {
+          descricao: 'O ponto (1, 2) escolhe a curva.',
+          tex: 'C = 1 \\cdot 2 + 3 \\cdot 1 + 2 \\cdot 4 = 13',
+          nota: 'A solução é x²y + 3x + 2y² = 13.',
+        },
+      ],
+    },
+    vejaTambem: ['edo1.separavel', 'edo1.fator-integrante'],
   },
 ];
