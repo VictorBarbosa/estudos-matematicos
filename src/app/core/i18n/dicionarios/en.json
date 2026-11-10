@@ -206,6 +206,10 @@
         "descricao": "The foundation: how numbers combine, compare and measure.",
         "titulo": "Basic mathematics"
       },
+      "ondas-e-fisica-moderna": {
+        "descricao": "Sound, light and the early 20th century: the physics mechanics cannot explain.",
+        "titulo": "Waves and modern physics"
+      },
       "pre-calculo": {
         "descricao": "The bridge: the idea of approximation, before the machinery of calculus — from intuitive to formal.",
         "titulo": "Precalculus"
@@ -376,6 +380,10 @@
         "descricao": "Varying forces: work, displacement, center of mass and gravity falling off as 1/r².",
         "titulo": "Physics with calculus"
       },
+      "fisica-moderna": {
+        "descricao": "Special relativity, the photon, the photoelectric effect and matter waves.",
+        "titulo": "Modern physics"
+      },
       "fluidos-e-aerodinamica": {
         "descricao": "Pressure, buoyancy, Bernoulli’s equation and where lift comes from.",
         "titulo": "Fluids and aerodynamics"
@@ -524,9 +532,17 @@
         "descricao": "Decimals as fractions with powers of ten in the denominator, and repeating decimals.",
         "titulo": "Decimal numbers"
       },
+      "ondas-e-som": {
+        "descricao": "v = λf, string and pipe harmonics, decibels and the Doppler effect.",
+        "titulo": "Waves and sound"
+      },
       "operacoes-fundamentais": {
         "descricao": "Properties of addition and multiplication, and the order of operations.",
         "titulo": "Fundamental operations"
+      },
+      "optica": {
+        "descricao": "Refraction and Snell’s law, total reflection, thin lenses and the double slit.",
+        "titulo": "Optics"
       },
       "poliedros": {
         "descricao": "Vertices, edges and faces: Euler’s formula, Plato, prisms and pyramids.",

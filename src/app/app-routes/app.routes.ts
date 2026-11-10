@@ -100,6 +100,14 @@ export const routes: Routes = [
     canActivateChild: [topicoLiberadoGuard],
   },
   {
+    path: 'ondas-e-fisica-moderna',
+    loadChildren: () =>
+      import('@features/ondas-e-fisica-moderna/ondas-e-fisica-moderna.routes/ondas-e-fisica-moderna.routes').then(
+        (m) => m.rotas,
+      ),
+    canActivateChild: [topicoLiberadoGuard],
+  },
+  {
     path: 'pre-calculo',
     loadChildren: () =>
       import('@features/pre-calculo/pre-calculo.routes/pre-calculo.routes').then((m) => m.rotas),

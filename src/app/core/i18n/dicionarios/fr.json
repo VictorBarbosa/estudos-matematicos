@@ -206,6 +206,10 @@
         "descricao": "Le socle : comment les nombres se combinent, se comparent et se mesurent.",
         "titulo": "Mathématiques de base"
       },
+      "ondas-e-fisica-moderna": {
+        "descricao": "Son, lumière et le début du XXe siècle : la physique que la mécanique n’explique pas.",
+        "titulo": "Ondes et physique moderne"
+      },
       "pre-calculo": {
         "descricao": "Le pont : l’idée d’approximation, avant la machine du calcul — de l’intuitif au formel.",
         "titulo": "Pré-calcul"
@@ -376,6 +380,10 @@
         "descricao": "Force variable : travail, déplacement, centre de masse et la gravité qui décroît en 1/r².",
         "titulo": "Physique avec calcul"
       },
+      "fisica-moderna": {
+        "descricao": "Relativité restreinte, le photon, l’effet photoélectrique et les ondes de matière.",
+        "titulo": "Physique moderne"
+      },
       "fluidos-e-aerodinamica": {
         "descricao": "Pression, poussée d’Archimède, équation de Bernoulli et d’où vient la portance.",
         "titulo": "Fluides et aérodynamique"
@@ -524,9 +532,17 @@
         "descricao": "Les décimaux comme fractions de dénominateur puissance de dix, et les développements périodiques.",
         "titulo": "Nombres décimaux"
       },
+      "ondas-e-som": {
+        "descricao": "v = λf, harmoniques de la corde et du tuyau, décibels et effet Doppler.",
+        "titulo": "Ondes et son"
+      },
       "operacoes-fundamentais": {
         "descricao": "Propriétés de l’addition et de la multiplication, et l’ordre des opérations.",
         "titulo": "Opérations fondamentales"
+      },
+      "optica": {
+        "descricao": "Réfraction et Snell, réflexion totale, lentilles minces et fentes de Young.",
+        "titulo": "Optique"
       },
       "poliedros": {
         "descricao": "Sommets, arêtes et faces : la relation d’Euler, Platon, prismes et pyramides.",

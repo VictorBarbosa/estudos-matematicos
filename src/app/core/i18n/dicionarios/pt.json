@@ -206,6 +206,10 @@
         "descricao": "O alicerce: como os números se combinam, se comparam e se medem.",
         "titulo": "Matemática básica"
       },
+      "ondas-e-fisica-moderna": {
+        "descricao": "Som, luz e o começo do século XX: a física que a mecânica não explica.",
+        "titulo": "Ondas e física moderna"
+      },
       "pre-calculo": {
         "descricao": "A ponte: a ideia de aproximação, antes da máquina do cálculo — do intuitivo ao formal.",
         "titulo": "Pré-cálculo"
@@ -376,6 +380,10 @@
         "descricao": "Força que varia: trabalho, deslocamento, centro de massa e a gravidade que cai com 1/r².",
         "titulo": "Física com cálculo"
       },
+      "fisica-moderna": {
+        "descricao": "Relatividade restrita, o fóton, o efeito fotoelétrico e as ondas de matéria.",
+        "titulo": "Física moderna"
+      },
       "fluidos-e-aerodinamica": {
         "descricao": "Pressão, empuxo, equação de Bernoulli e de onde vem a sustentação.",
         "titulo": "Fluidos e aerodinâmica"
@@ -524,9 +532,17 @@
         "descricao": "Decimais como frações de denominador potência de dez, e dízimas periódicas.",
         "titulo": "Números decimais"
       },
+      "ondas-e-som": {
+        "descricao": "v = λf, harmônicos da corda e do tubo, decibéis e o efeito Doppler.",
+        "titulo": "Ondas e som"
+      },
       "operacoes-fundamentais": {
         "descricao": "Propriedades da adição e da multiplicação e a ordem das operações.",
         "titulo": "Operações fundamentais"
+      },
+      "optica": {
+        "descricao": "Refração e Snell, reflexão total, lentes delgadas e a fenda dupla.",
+        "titulo": "Óptica"
       },
       "poliedros": {
         "descricao": "Vértices, arestas e faces: a relação de Euler, Platão, prismas e pirâmides.",

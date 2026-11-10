@@ -1,0 +1,51 @@
+<app-topico-layout topicoId="fisica-moderna">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="porcento"
+        [rotulo]="texto('velocidade')"
+        [min]="0"
+        [max]="99"
+        [dica]="texto('dicaVelocidade')"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">{{ texto('fatorLorentz') }}</span>
+        <strong>{{ formatar(gama()) }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">{{ texto('umSegundo') }}</span>
+        <strong>{{ formatar(gama()) }} s</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">{{ texto('umMetro') }}</span>
+        <strong>{{ formatar(1 / gama()) }} m</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>{{ texto('oFator') }}</h2>
+      <app-math-plot
+        [dominio]="dominio"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="320"
+      />
+      <p class="observacao">{{ texto('leitura') }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

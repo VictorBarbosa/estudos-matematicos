@@ -1,0 +1,50 @@
+<app-topico-layout topicoId="ondas-e-som">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="ordem" [rotulo]="texto('harmonico')" [min]="1" [max]="6" />
+      <app-controle-parametro
+        [(valor)]="comprimentoCm"
+        [rotulo]="texto('comprimentoCm')"
+        [min]="20"
+        [max]="150"
+      />
+      <app-controle-parametro
+        [(valor)]="velocidade"
+        [rotulo]="texto('velocidade')"
+        [min]="100"
+        [max]="600"
+        [dica]="texto('dicaVelocidade')"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">{{ texto('frequenciaDoHarmonico', { n: ordem() }) }}</span>
+        <strong>{{ formatar(frequencia()) }} Hz</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>{{ texto('ondaEstacionaria') }}</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="300"
+      />
+      <p class="observacao">{{ texto('leitura') }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

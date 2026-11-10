@@ -1,0 +1,44 @@
+{
+  "harmonico": { "pt": "Harmônico n", "fr": "Harmonique n", "en": "Harmonic n" },
+  "comprimentoCm": {
+    "pt": "Comprimento da corda (cm)",
+    "fr": "Longueur de la corde (cm)",
+    "en": "String length (cm)"
+  },
+  "velocidade": {
+    "pt": "Velocidade da onda (m/s)",
+    "fr": "Vitesse de l’onde (m/s)",
+    "en": "Wave speed (m/s)"
+  },
+  "dicaVelocidade": {
+    "pt": "Apertar a corda aumenta v = √(T/μ).",
+    "fr": "Tendre la corde augmente v = √(T/μ).",
+    "en": "Tightening the string raises v = √(T/μ)."
+  },
+  "frequenciaDoHarmonico": {
+    "pt": "Frequência do {n}º harmônico",
+    "fr": "Fréquence de la {n}e harmonique",
+    "en": "Frequency of harmonic {n}"
+  },
+  "ondaEstacionaria": {
+    "pt": "A onda estacionária na corda",
+    "fr": "L’onde stationnaire sur la corde",
+    "en": "The standing wave on the string"
+  },
+  "curvaCorda": { "pt": "a corda", "fr": "la corde", "en": "the string" },
+  "curvaMeioPeriodo": {
+    "pt": "meio período depois",
+    "fr": "une demi-période plus tard",
+    "en": "half a period later"
+  },
+  "descricaoGrafico": {
+    "pt": "Onda estacionária do {n}º harmônico, com {nos} nós; frequência {f} Hz.",
+    "fr": "Onde stationnaire de la {n}e harmonique, avec {nos} nœuds ; fréquence {f} Hz.",
+    "en": "Standing wave of harmonic {n}, with {nos} nodes; frequency {f} Hz."
+  },
+  "leitura": {
+    "pt": "Os pontos marcados são os nós: nunca se movem. No n-ésimo harmônico cabem n meias ondas, então a frequência é n vezes a fundamental. Encurte a corda e veja a frequência subir — é o que o dedo faz no braço do violão.",
+    "fr": "Les points marqués sont les nœuds : ils ne bougent jamais. À la n-ième harmonique tiennent n demi-ondes, donc la fréquence vaut n fois la fondamentale. Raccourcissez la corde et voyez la fréquence monter — c’est ce que fait le doigt sur le manche.",
+    "en": "The marked points are the nodes: they never move. Harmonic n fits n half-waves, so its frequency is n times the fundamental. Shorten the string and watch the frequency rise — that is what a finger on the fretboard does."
+  }
+}

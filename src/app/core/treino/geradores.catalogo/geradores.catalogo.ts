@@ -11,6 +11,9 @@ import { geradorEquacao1 as g_equacao_primeiro_grau } from '@features/algebra/eq
 import { geradorEquacao2 as g_equacao_segundo_grau } from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.gerador';
 import { geradorExpressoes as g_expressoes_algebricas } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.gerador';
 import { geradorFatoracao as g_fatoracao } from '@features/algebra/fatoracao/fatoracao.gerador';
+import { geradorOndasESom as g_ondas_e_som } from '@features/ondas-e-fisica-moderna/ondas-e-som/ondas-e-som.gerador';
+import { geradorOptica as g_optica } from '@features/ondas-e-fisica-moderna/optica/optica.gerador';
+import { geradorFisicaModerna as g_fisica_moderna } from '@features/ondas-e-fisica-moderna/fisica-moderna/fisica-moderna.gerador';
 import { geradorInequacoes as g_inequacoes } from '@features/algebra/inequacoes/inequacoes.gerador';
 import { geradorPoliedros as g_poliedros } from '@features/geometria/poliedros/poliedros.gerador';
 import { geradorFisicaComCalculo as g_fisica_com_calculo } from '@features/calculo-2/fisica-com-calculo/fisica-com-calculo.gerador';
@@ -130,6 +133,9 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['expressoes-algebricas', g_expressoes_algebricas],
   ['fatoracao', g_fatoracao],
   ['inequacoes', g_inequacoes],
+  ['ondas-e-som', g_ondas_e_som],
+  ['optica', g_optica],
+  ['fisica-moderna', g_fisica_moderna],
   ['inequacoes-segundo-grau', g_inequacoes_segundo_grau],
   ['equacoes-exponenciais', g_equacoes_exponenciais],
   ['binomio-de-newton', g_binomio_de_newton],

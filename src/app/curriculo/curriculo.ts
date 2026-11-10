@@ -619,6 +619,53 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     ],
   },
   {
+    id: 'ondas-e-fisica-moderna',
+    titulo: 'Ondas e física moderna',
+    descricao: 'Som, luz e o começo do século XX: a física que a mecânica não explica.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *University Physics Volume 1* (cap. 16–17)',
+        url: 'https://openstax.org/details/books/university-physics-volume-1',
+        nota: 'Ondas mecânicas e som: harmônicos, decibéis e Doppler.',
+      },
+      {
+        titulo: 'OpenStax, *University Physics Volume 3*',
+        url: 'https://openstax.org/details/books/university-physics-volume-3',
+        nota: 'Óptica geométrica e física, relatividade e física quântica — o 0P03.',
+      },
+      {
+        titulo: 'MIT OCW 8.03 — *Vibrations and Waves*',
+        url: 'https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/',
+        nota: 'Ondas com o tratamento completo, de cordas a óptica.',
+      },
+      {
+        titulo: 'MIT OCW 8.04 — *Quantum Physics I*',
+        url: 'https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/',
+        nota: 'O passo seguinte ao fotoelétrico e a de Broglie.',
+      },
+    ],
+    topicos: [
+      {
+        id: 'ondas-e-som',
+        titulo: 'Ondas e som',
+        descricao: 'v = λf, harmônicos da corda e do tubo, decibéis e o efeito Doppler.',
+        pronto: true,
+      },
+      {
+        id: 'optica',
+        titulo: 'Óptica',
+        descricao: 'Refração e Snell, reflexão total, lentes delgadas e a fenda dupla.',
+        pronto: true,
+      },
+      {
+        id: 'fisica-moderna',
+        titulo: 'Física moderna',
+        descricao: 'Relatividade restrita, o fóton, o efeito fotoelétrico e as ondas de matéria.',
+        pronto: true,
+      },
+    ],
+  },
+  {
     id: 'pre-calculo',
     titulo: 'Pré-cálculo',
     descricao:

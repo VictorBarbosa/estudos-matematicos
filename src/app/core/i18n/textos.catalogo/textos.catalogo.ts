@@ -99,6 +99,9 @@ import t_numeros_decimais from '@features/matematica-basica/numeros-decimais/num
 import t_operacoes_fundamentais from '@features/matematica-basica/operacoes-fundamentais/operacoes-fundamentais.i18n.json';
 import t_potenciacao_radiciacao from '@features/matematica-basica/potenciacao-radiciacao/potenciacao-radiciacao.i18n.json';
 import t_razao_proporcao from '@features/matematica-basica/razao-proporcao/razao-proporcao.i18n.json';
+import t_fisica_moderna from '@features/ondas-e-fisica-moderna/fisica-moderna/fisica-moderna.i18n.json';
+import t_ondas_e_som from '@features/ondas-e-fisica-moderna/ondas-e-som/ondas-e-som.i18n.json';
+import t_optica from '@features/ondas-e-fisica-moderna/optica/optica.i18n.json';
 import t_nocao_intuitiva_de_limite from '@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.i18n.json';
 import t_vizinhancas_e_infinito from '@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.i18n.json';
 import t_prova from '@features/prova/prova.i18n.json';
@@ -213,6 +216,9 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['operacoes-fundamentais', t_operacoes_fundamentais as TabelaDeTextos],
   ['potenciacao-radiciacao', t_potenciacao_radiciacao as TabelaDeTextos],
   ['razao-proporcao', t_razao_proporcao as TabelaDeTextos],
+  ['fisica-moderna', t_fisica_moderna as TabelaDeTextos],
+  ['ondas-e-som', t_ondas_e_som as TabelaDeTextos],
+  ['optica', t_optica as TabelaDeTextos],
   ['nocao-intuitiva-de-limite', t_nocao_intuitiva_de_limite as TabelaDeTextos],
   ['vizinhancas-e-infinito', t_vizinhancas_e_infinito as TabelaDeTextos],
   ['prova', t_prova as TabelaDeTextos],
