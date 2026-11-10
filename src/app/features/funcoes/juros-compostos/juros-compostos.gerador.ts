@@ -105,7 +105,7 @@ export const geradorJuros: GeradorExercicio<number> = {
       id: `juros-${pergunta}-${capital}${taxa}${periodos}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado:
-        `Um capital de R$ ${capital},00 é aplicado a ${taxa}% ao período, por ${periodos} ` +
+        `Um capital de $ ${capital},00 é aplicado a ${taxa}% ao período, por ${periodos} ` +
         `períodos, a juros compostos. Qual é ${pergunta === 'montante' ? 'o montante final' : 'o juro total'}? (2 casas)`,
       enunciadoTex: `C = ${capital} \\qquad i = ${taxa}\\% \\qquad n = ${periodos}`,
       gabarito,
@@ -164,7 +164,7 @@ export const geradorJuros: GeradorExercicio<number> = {
   },
 
   /**
-   * Aceita "1610,51", "1610.51", "R$ 1.610,51" e "1610".
+   * Aceita "1610,51", "1610.51", "$ 1.610,51" e "1610".
    *
    * O ponto só conta como separador de milhar quando a vírgula já ocupa a casa
    * decimal, ou quando ele separa grupos de três dígitos. Fora disso é o

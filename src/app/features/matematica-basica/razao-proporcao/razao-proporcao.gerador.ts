@@ -22,7 +22,7 @@ interface Contexto {
 const CONTEXTOS_DIRETOS: readonly Contexto[] = [
   {
     enunciado: (a: number, b: number, c: number) =>
-      `Se ${a} kg de farinha custam R$ ${b},00, quanto custam ${c} kg?`,
+      `Se ${a} kg de farinha custam $ ${b},00, quanto custam ${c} kg?`,
     unidade: 'reais',
   },
   {
@@ -32,7 +32,7 @@ const CONTEXTOS_DIRETOS: readonly Contexto[] = [
   },
   {
     enunciado: (a: number, b: number, c: number) =>
-      `Se ${a} cadernos custam R$ ${b},00, quanto custam ${c} cadernos?`,
+      `Se ${a} cadernos custam $ ${b},00, quanto custam ${c} cadernos?`,
     unidade: 'reais',
   },
 ];

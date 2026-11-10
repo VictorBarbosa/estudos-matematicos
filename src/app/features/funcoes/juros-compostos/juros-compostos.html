@@ -41,15 +41,15 @@
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
         <span class="rotulo">{{ texto('montanteCompostos') }}</span>
-        <strong>R$ {{ formatar(montante()) }}</strong>
+        <strong>$ {{ formatar(montante()) }}</strong>
       </div>
       <div class="indicador">
         <span class="rotulo">{{ texto('seFosseSimples') }}</span>
-        <strong>R$ {{ formatar(simples()) }}</strong>
+        <strong>$ {{ formatar(simples()) }}</strong>
       </div>
       <div class="indicador">
         <span class="rotulo">{{ i18n.t('explorar.diferenca') }}</span>
-        <strong>R$ {{ formatar(diferenca()) }}</strong>
+        <strong>$ {{ formatar(diferenca()) }}</strong>
         <span class="legenda">{{ texto('juroSobreJuro') }}</span>
       </div>
       <div class="indicador">

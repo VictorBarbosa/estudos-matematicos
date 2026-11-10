@@ -30,7 +30,7 @@ export const TEORIA_JUROS: readonly Teoria[] = [
       },
     ],
     exemplo: {
-      enunciado: 'R$ 1.000 a 10% ao período, por 5 períodos.',
+      enunciado: '$ 1.000 a 10% ao período, por 5 períodos.',
       passos: jurosCompostosComPassos(1000, 10, 5).passos,
     },
     vejaTambem: ['juros.simples', 'juros.tempo'],

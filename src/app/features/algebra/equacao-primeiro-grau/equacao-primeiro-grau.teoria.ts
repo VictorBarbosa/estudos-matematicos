@@ -188,7 +188,7 @@ export const TEORIA_EQUACAO_1: readonly Teoria[] = [
     ],
     demonstracao: [
       {
-        descricao: 'Exemplo: um táxi cobra R$ 5 de bandeirada e R$ 3 por km; a corrida deu R$ 41.',
+        descricao: 'Exemplo: um táxi cobra $ 5 de bandeirada e $ 3 por km; a corrida deu $ 41.',
         tex: 'x = \\text{km rodados}',
       },
       {

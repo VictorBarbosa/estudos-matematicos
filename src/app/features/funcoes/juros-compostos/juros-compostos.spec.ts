@@ -52,7 +52,7 @@ describe('geradorJuros', () => {
 
   it('aceita valores com separador de milhar e vírgula decimal', () => {
     expect(geradorJuros.analisar('1.610,51')).toBeCloseTo(1610.51);
-    expect(geradorJuros.analisar('R$ 2500')).toBe(2500);
+    expect(geradorJuros.analisar('$ 2500')).toBe(2500);
   });
 
   it('entende o ponto como casa decimal quando não há vírgula', () => {

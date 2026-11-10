@@ -529,7 +529,7 @@ function barra(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: `Encadeie: fem = B·L·v, corrente = fem/R${pede === 'forca' ? ', força = B·I·L' : ''}.`,
+    dica: `Encadeie: fem = B·L·v, corrente = fem/${pede === 'forca' ? ', força = B·I·L' : ''}.`,
   };
 }
 

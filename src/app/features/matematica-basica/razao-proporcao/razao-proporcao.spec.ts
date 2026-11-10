@@ -84,7 +84,7 @@ describe('a fórmula que o Difícil não entrega', () => {
     /*
      * A divisão proporcional saiu do treino.
      *
-     * "Dividindo R$ 230,00 em partes proporcionais a 1 e 4, qual é a MAIOR das
+     * "Dividindo $ 230,00 em partes proporcionais a 1 e 4, qual é a MAIOR das
      * partes?" exercitava uma receita — somar os pesos, achar k, multiplicar —
      * e não a decisão entre direta e inversa, que é o que este tópico ensina.
      * Ela continua na teoria e na aba Explorar, onde é consulta e não prova.

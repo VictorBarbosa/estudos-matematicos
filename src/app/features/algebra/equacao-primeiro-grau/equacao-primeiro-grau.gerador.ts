@@ -327,8 +327,8 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const T = b + p * x;
       resposta = x;
       enunciado =
-        `Uma corrida de táxi custa R$ ${b},00 de bandeirada mais R$ ${p},00 por quilômetro rodado. ` +
-        `Uma corrida custou R$ ${T},00. Quantos quilômetros foram rodados?`;
+        `Uma corrida de táxi custa $ ${b},00 de bandeirada mais $ ${p},00 por quilômetro rodado. ` +
+        `Uma corrida custou $ ${T},00. Quantos quilômetros foram rodados?`;
       dados =
         `\\text{bandeirada} = \\text{R}\\$\\,${b} \\qquad \\text{por km} = \\text{R}\\$\\,${p} ` +
         `\\qquad \\text{total} = \\text{R}\\$\\,${T}`;
@@ -343,7 +343,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       erradas = [
         ...armadilhaDe(
           () => Fracao.criar(T, p),
-          `Você dividiu o total por ${p} sem descontar a bandeirada de R$ ${b},00, que é paga uma vez só.`,
+          `Você dividiu o total por ${p} sem descontar a bandeirada de $ ${b},00, que é paga uma vez só.`,
           1,
           'equacao1.problemas',
         ),

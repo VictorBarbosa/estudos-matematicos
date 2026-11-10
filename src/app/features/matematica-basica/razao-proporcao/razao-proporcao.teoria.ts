@@ -134,7 +134,7 @@ export const TEORIA_PROPORCAO: readonly Teoria[] = [
       },
     ],
     exemplo: {
-      enunciado: 'Dividir R$ 500,00 entre dois sócios, na razão 2 para 3.',
+      enunciado: 'Dividir $ 500,00 entre dois sócios, na razão 2 para 3.',
       passos: divisaoProporcionalComPassos(500, [2, 3]).passos,
     },
     vejaTambem: ['proporcao.regra-de-tres'],
