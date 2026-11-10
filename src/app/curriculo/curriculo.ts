@@ -812,6 +812,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'binomio-de-newton',
+        titulo: 'Binômio de Newton',
+        descricao: 'Triângulo de Pascal, termo geral, soma dos coeficientes e termo independente.',
+        pronto: true,
+      },
+      {
         id: 'probabilidade',
         titulo: 'Probabilidade',
         descricao: 'Espaço amostral, eventos independentes e probabilidade condicional.',

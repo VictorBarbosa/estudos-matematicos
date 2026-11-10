@@ -248,6 +248,10 @@
         "descricao": "Where each area formula comes from, and why the ratio of areas is k².",
         "titulo": "Areas of plane figures"
       },
+      "binomio-de-newton": {
+        "descricao": "Pascal’s triangle, the general term, the sum of coefficients and the constant term.",
+        "titulo": "Binomial theorem"
+      },
       "cinematica-escalar": {
         "descricao": "Uniform and uniformly accelerated motion, motion graphs and the area under the velocity curve.",
         "titulo": "Scalar kinematics"

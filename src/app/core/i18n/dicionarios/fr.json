@@ -248,6 +248,10 @@
         "descricao": "D’où vient chaque formule d’aire, et pourquoi le rapport des aires vaut k².",
         "titulo": "Aires des figures planes"
       },
+      "binomio-de-newton": {
+        "descricao": "Triangle de Pascal, terme général, somme des coefficients et terme indépendant.",
+        "titulo": "Binôme de Newton"
+      },
       "cinematica-escalar": {
         "descricao": "MRU et MRUA, les graphes du mouvement et l’aire sous la courbe de vitesse.",
         "titulo": "Cinématique scalaire"

@@ -160,6 +160,10 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       import('@features/estatistica/analise-combinatoria/analise-combinatoria.gerador').then(
         (m) => m.geradorCombinatoria,
       ),
+    'binomio-de-newton': () =>
+      import('@features/estatistica/binomio-de-newton/binomio-de-newton.gerador').then(
+        (m) => m.geradorBinomio,
+      ),
     'distribuicao-normal': () =>
       import('@features/estatistica/distribuicao-normal/distribuicao-normal.gerador').then(
         (m) => m.geradorDistribuicaoNormal,

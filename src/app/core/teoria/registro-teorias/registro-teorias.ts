@@ -38,6 +38,10 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'balistica.alcance': 'O ângulo de alcance máximo',
   'balistica.independencia': 'Dois movimentos independentes',
   'balistica.parabola': 'Por que a trajetória é uma parábola',
+  'binomio.independente': 'O termo independente',
+  'binomio.pascal': 'O triângulo de Pascal',
+  'binomio.soma-coeficientes': 'A soma dos coeficientes',
+  'binomio.termo-geral': 'O termo geral',
   'cadeia.camadas': 'Várias camadas',
   'cadeia.erro-comum': 'O fator que se esquece',
   'cadeia.regra': 'Derivar de fora para dentro',
@@ -463,6 +467,10 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'balistica.alcance': 'trajetoria-balistica',
   'balistica.independencia': 'trajetoria-balistica',
   'balistica.parabola': 'trajetoria-balistica',
+  'binomio.independente': 'binomio-de-newton',
+  'binomio.pascal': 'binomio-de-newton',
+  'binomio.soma-coeficientes': 'binomio-de-newton',
+  'binomio.termo-geral': 'binomio-de-newton',
   'cadeia.camadas': 'regra-da-cadeia',
   'cadeia.erro-comum': 'regra-da-cadeia',
   'cadeia.regra': 'regra-da-cadeia',
@@ -1009,6 +1017,10 @@ export const CARREGAR_TEORIA_DO_TOPICO: Readonly<Record<string, () => Promise<re
     'analise-combinatoria': () =>
       import('@features/estatistica/analise-combinatoria/analise-combinatoria.teoria').then(
         (m) => m.TEORIA_COMBINATORIA,
+      ),
+    'binomio-de-newton': () =>
+      import('@features/estatistica/binomio-de-newton/binomio-de-newton.teoria').then(
+        (m) => m.TEORIA_BINOMIO,
       ),
     'distribuicao-normal': () =>
       import('@features/estatistica/distribuicao-normal/distribuicao-normal.teoria').then(

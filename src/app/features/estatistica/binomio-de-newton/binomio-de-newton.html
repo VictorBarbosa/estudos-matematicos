@@ -1,0 +1,25 @@
+<app-topico-layout topicoId="binomio-de-newton">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="n" [rotulo]="texto('expoente')" [min]="0" [max]="10" />
+      <app-controle-parametro [(valor)]="b" [rotulo]="texto('segundoTermo')" [min]="-3" [max]="3" />
+    </section>
+
+    <section class="triangulo">
+      <h2>{{ texto('trianguloAte', { n: n() }) }}</h2>
+      <app-formula [tex]="trianguloTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>{{ texto('desenvolvimento') }}</h2>
+      <app-formula [tex]="desenvolvimentoTex()" [bloco]="true" />
+      <p class="observacao">{{ texto('leitura') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

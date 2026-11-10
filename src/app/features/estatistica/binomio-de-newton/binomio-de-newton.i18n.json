@@ -1,0 +1,15 @@
+{
+  "expoente": { "pt": "Expoente n", "fr": "Exposant n", "en": "Exponent n" },
+  "segundoTermo": { "pt": "Segundo termo (b)", "fr": "Second terme (b)", "en": "Second term (b)" },
+  "trianguloAte": {
+    "pt": "O triângulo de Pascal até a linha {n}",
+    "fr": "Le triangle de Pascal jusqu’à la ligne {n}",
+    "en": "Pascal’s triangle up to row {n}"
+  },
+  "desenvolvimento": { "pt": "O desenvolvimento", "fr": "Le développement", "en": "The expansion" },
+  "leitura": {
+    "pt": "A última linha do triângulo traz os C(n, k). No desenvolvimento, cada coeficiente é C(n, k) vezes b elevado a k: com b negativo, os sinais alternam.",
+    "fr": "La dernière ligne du triangle donne les C(n, k). Dans le développement, chaque coefficient est C(n, k) fois b à la puissance k : avec b négatif, les signes alternent.",
+    "en": "The last row of the triangle holds the C(n, k). In the expansion, each coefficient is C(n, k) times b to the power k: with negative b, the signs alternate."
+  }
+}

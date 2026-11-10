@@ -16,6 +16,14 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'binomio-de-newton',
+    title: 'Binômio de Newton · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/estatistica/binomio-de-newton/binomio-de-newton').then(
+        (m) => m.BinomioDeNewton,
+      ),
+  },
+  {
     path: 'probabilidade',
     title: 'Probabilidade · Estudos Matemáticos',
     loadComponent: () =>

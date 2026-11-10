@@ -248,6 +248,10 @@
         "descricao": "De onde vem cada fórmula de área, e por que a razão de áreas é k².",
         "titulo": "Áreas de figuras planas"
       },
+      "binomio-de-newton": {
+        "descricao": "Triângulo de Pascal, termo geral, soma dos coeficientes e termo independente.",
+        "titulo": "Binômio de Newton"
+      },
       "cinematica-escalar": {
         "descricao": "MRU e MRUV, os gráficos do movimento e a área sob a curva da velocidade.",
         "titulo": "Cinemática escalar"
