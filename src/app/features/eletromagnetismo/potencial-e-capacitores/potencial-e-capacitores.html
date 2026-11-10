@@ -1,0 +1,66 @@
+<app-topico-layout topicoId="potencial-e-capacitores">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="area"
+        [rotulo]="texto('area')"
+        [min]="10"
+        [max]="1000"
+        [passo]="10"
+      />
+      <app-controle-parametro
+        [(valor)]="distancia"
+        [rotulo]="texto('separacao')"
+        [min]="0.1"
+        [max]="5"
+        [passo]="0.1"
+        [dica]="texto('dicaSeparacao')"
+      />
+      <app-controle-parametro
+        [(valor)]="tensao"
+        [rotulo]="texto('tensao')"
+        [min]="0"
+        [max]="250"
+        [passo]="5"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">{{ texto('capacitancia') }}</span>
+        <strong>{{ formatar(capacitancia()) }} pF</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">{{ texto('carga') }}</span>
+        <strong>{{ formatar(carga()) }} nC</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">{{ texto('energia') }}</span>
+        <strong>{{ formatar(energia()) }} nJ</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>{{ texto('energiaPelaTensao') }}</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="320"
+      />
+      <p class="observacao">{{ texto('leitura') }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

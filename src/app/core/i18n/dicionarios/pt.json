@@ -182,6 +182,10 @@
         "descricao": "Equações diferenciais: a regra pela qual as grandezas mudam.",
         "titulo": "Cálculo 4"
       },
+      "eletromagnetismo": {
+        "descricao": "Cargas, campos, circuitos e indução: a física do 0P02, da lei de Coulomb a Faraday.",
+        "titulo": "Eletricidade e magnetismo"
+      },
       "estatistica": {
         "descricao": "Contar possibilidades e medir incerteza — nenhuma medida real é exata. Não é pré-requisito das engenharias, e por isso fecha a trilha.",
         "titulo": "Combinatória e estatística"
@@ -260,6 +264,10 @@
         "descricao": "Posição, velocidade e aceleração como vetores, em duas e três dimensões.",
         "titulo": "Cinemática vetorial"
       },
+      "circuitos": {
+        "descricao": "Ohm, potência, série e paralelo, Kirchhoff e o circuito RC.",
+        "titulo": "Circuitos"
+      },
       "circulo-e-poligonos": {
         "descricao": "Comprimento, área do círculo, setores e polígonos regulares.",
         "titulo": "Círculo e polígonos"
@@ -331,6 +339,10 @@
       "edo-segunda-ordem": {
         "descricao": "Equação característica e os três regimes de amortecimento.",
         "titulo": "EDO de segunda ordem"
+      },
+      "eletrostatica": {
+        "descricao": "Carga, lei de Coulomb, campo elétrico e a superposição de forças.",
+        "titulo": "Eletrostática"
       },
       "equacao-primeiro-grau": {
         "descricao": "Resolver ax + b = 0 e ver a raiz como o cruzamento da reta com o eixo x.",
@@ -480,6 +492,10 @@
         "descricao": "Definição formal, propriedades e indeterminações.",
         "titulo": "Limites"
       },
+      "magnetismo-e-inducao": {
+        "descricao": "Força de Lorentz, campos de correntes, fluxo, Faraday e Lenz.",
+        "titulo": "Magnetismo e indução"
+      },
       "matrizes-determinantes": {
         "descricao": "Operações com matrizes, determinante como área e regra de Cramer.",
         "titulo": "Matrizes e determinantes"
@@ -539,6 +555,10 @@
       "potenciacao-radiciacao": {
         "descricao": "Propriedades das potências, expoentes negativos e raízes como potências.",
         "titulo": "Potenciação e radiciação"
+      },
+      "potencial-e-capacitores": {
+        "descricao": "Potencial e trabalho, o capacitor de placas, energia e associações.",
+        "titulo": "Potencial e capacitores"
       },
       "probabilidade": {
         "descricao": "Espaço amostral, eventos independentes e probabilidade condicional.",

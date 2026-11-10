@@ -1,0 +1,31 @@
+{
+  "cargaUm": { "pt": "Carga q₁ (μC)", "fr": "Charge q₁ (μC)", "en": "Charge q₁ (μC)" },
+  "cargaDois": { "pt": "Carga q₂ (μC)", "fr": "Charge q₂ (μC)", "en": "Charge q₂ (μC)" },
+  "distancia": { "pt": "Distância (cm)", "fr": "Distance (cm)", "en": "Distance (cm)" },
+  "dicaDistancia": {
+    "pt": "Leve a distância à metade e veja a força quadruplicar.",
+    "fr": "Divisez la distance par deux et voyez la force quadrupler.",
+    "en": "Halve the distance and watch the force quadruple."
+  },
+  "forca": { "pt": "Módulo da força", "fr": "Module de la force", "en": "Force magnitude" },
+  "interacao": { "pt": "Interação", "fr": "Interaction", "en": "Interaction" },
+  "repulsao": { "pt": "repulsão", "fr": "répulsion", "en": "repulsion" },
+  "atracao": { "pt": "atração", "fr": "attraction", "en": "attraction" },
+  "nenhuma": { "pt": "nenhuma", "fr": "aucune", "en": "none" },
+  "curvaForca": { "pt": "|F| (N)", "fr": "|F| (N)", "en": "|F| (N)" },
+  "forcaPelaDistancia": {
+    "pt": "A força conforme a distância",
+    "fr": "La force selon la distance",
+    "en": "The force against distance"
+  },
+  "descricaoGrafico": {
+    "pt": "Curva do módulo da força em função da distância em cm; no ponto marcado, r = {r} cm e |F| = {f} N.",
+    "fr": "Courbe du module de la force en fonction de la distance en cm ; au point marqué, r = {r} cm et |F| = {f} N.",
+    "en": "Curve of the force magnitude against distance in cm; at the marked point, r = {r} cm and |F| = {f} N."
+  },
+  "leitura": {
+    "pt": "A curva despenca: é o 1/r². Perto das cargas a força é enorme; a meio metro, já é pequena. Trocar o sinal de uma carga não muda o módulo — só transforma repulsão em atração.",
+    "fr": "La courbe chute : c’est le 1/r². Près des charges la force est énorme ; à un demi-mètre, elle est déjà petite. Changer le signe d’une charge ne change pas le module — seulement la répulsion en attraction.",
+    "en": "The curve plunges: that is the 1/r². Near the charges the force is huge; half a meter away it is already small. Flipping a charge’s sign doesn’t change the magnitude — only turns repulsion into attraction."
+  }
+}

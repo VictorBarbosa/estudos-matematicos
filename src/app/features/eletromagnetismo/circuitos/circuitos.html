@@ -1,0 +1,60 @@
+<app-topico-layout topicoId="circuitos">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="r" [rotulo]="texto('resistencia')" [min]="1" [max]="100" />
+      <app-controle-parametro
+        [(valor)]="c"
+        [rotulo]="texto('capacitancia')"
+        [min]="1"
+        [max]="470"
+      />
+      <app-controle-parametro [(valor)]="v" [rotulo]="texto('fonte')" [min]="1" [max]="24" />
+      <app-controle-parametro
+        [(valor)]="decimos"
+        [rotulo]="texto('tempo')"
+        [min]="0"
+        [max]="100"
+        [dica]="texto('dicaTempo')"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">{{ texto('constanteTempo') }}</span>
+        <strong>{{ formatar(tau()) }} s</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">{{ texto('cargaAgora') }}</span>
+        <strong>{{ formatar(resolucao().resultado) }} μC</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">{{ texto('daCargaFinal') }}</span>
+        <strong>{{ formatar(percentual()) }}%</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>{{ texto('cargaNoTempo') }}</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [segmentos]="segmentos()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="340"
+      />
+      <p class="observacao">{{ texto('leitura') }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

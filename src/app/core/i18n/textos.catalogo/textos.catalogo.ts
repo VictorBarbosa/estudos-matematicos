@@ -44,6 +44,10 @@ import t_aplicacoes_de_edo from '@features/calculo-4/aplicacoes-de-edo/aplicacoe
 import t_edo_primeira_ordem from '@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.i18n.json';
 import t_edo_segunda_ordem from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.i18n.json';
 import t_metodos_numericos from '@features/calculo-4/metodos-numericos/metodos-numericos.i18n.json';
+import t_circuitos from '@features/eletromagnetismo/circuitos/circuitos.i18n.json';
+import t_eletrostatica from '@features/eletromagnetismo/eletrostatica/eletrostatica.i18n.json';
+import t_magnetismo_e_inducao from '@features/eletromagnetismo/magnetismo-e-inducao/magnetismo-e-inducao.i18n.json';
+import t_potencial_e_capacitores from '@features/eletromagnetismo/potencial-e-capacitores/potencial-e-capacitores.i18n.json';
 import t_analise_combinatoria from '@features/estatistica/analise-combinatoria/analise-combinatoria.i18n.json';
 import t_binomio_de_newton from '@features/estatistica/binomio-de-newton/binomio-de-newton.i18n.json';
 import t_distribuicao_normal from '@features/estatistica/distribuicao-normal/distribuicao-normal.i18n.json';
@@ -157,6 +161,10 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['edo-primeira-ordem', t_edo_primeira_ordem as TabelaDeTextos],
   ['edo-segunda-ordem', t_edo_segunda_ordem as TabelaDeTextos],
   ['metodos-numericos', t_metodos_numericos as TabelaDeTextos],
+  ['circuitos', t_circuitos as TabelaDeTextos],
+  ['eletrostatica', t_eletrostatica as TabelaDeTextos],
+  ['magnetismo-e-inducao', t_magnetismo_e_inducao as TabelaDeTextos],
+  ['potencial-e-capacitores', t_potencial_e_capacitores as TabelaDeTextos],
   ['analise-combinatoria', t_analise_combinatoria as TabelaDeTextos],
   ['binomio-de-newton', t_binomio_de_newton as TabelaDeTextos],
   ['distribuicao-normal', t_distribuicao_normal as TabelaDeTextos],

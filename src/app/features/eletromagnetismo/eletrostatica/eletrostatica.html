@@ -1,0 +1,49 @@
+<app-topico-layout topicoId="eletrostatica">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="q1" [rotulo]="texto('cargaUm')" [min]="-10" [max]="10" />
+      <app-controle-parametro [(valor)]="q2" [rotulo]="texto('cargaDois')" [min]="-10" [max]="10" />
+      <app-controle-parametro
+        [(valor)]="rCm"
+        [rotulo]="texto('distancia')"
+        [min]="5"
+        [max]="100"
+        [dica]="texto('dicaDistancia')"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">{{ texto('forca') }}</span>
+        <strong>{{ forcaTexto() }} N</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">{{ texto('interacao') }}</span>
+        <strong>{{ texto(tipo()) }}</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>{{ texto('forcaPelaDistancia') }}</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="340"
+      />
+      <p class="observacao">{{ texto('leitura') }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

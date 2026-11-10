@@ -1,0 +1,46 @@
+{
+  "carga": { "pt": "Carga (μC)", "fr": "Charge (μC)", "en": "Charge (μC)" },
+  "velocidade": { "pt": "Velocidade (m/s)", "fr": "Vitesse (m/s)", "en": "Speed (m/s)" },
+  "campo": {
+    "pt": "Campo B (décimos de T)",
+    "fr": "Champ B (dixièmes de T)",
+    "en": "Field B (tenths of T)"
+  },
+  "angulo": {
+    "pt": "Ângulo entre v e B (graus)",
+    "fr": "Angle entre v et B (degrés)",
+    "en": "Angle between v and B (degrees)"
+  },
+  "dicaAngulo": {
+    "pt": "Em 0° e 180° a força some; em 90° é máxima.",
+    "fr": "À 0° et 180° la force s’annule ; à 90° elle est maximale.",
+    "en": "At 0° and 180° the force vanishes; at 90° it is maximal."
+  },
+  "forca": {
+    "pt": "Força magnética |F|",
+    "fr": "Force magnétique |F|",
+    "en": "Magnetic force |F|"
+  },
+  "osTresVetores": { "pt": "v, B e a força", "fr": "v, B et la force", "en": "v, B and the force" },
+  "descricaoVista": {
+    "pt": "Desenho em perspectiva da velocidade v, do campo B e da força magnética F, perpendicular aos dois.",
+    "fr": "Dessin en perspective de la vitesse v, du champ B et de la force magnétique F, perpendiculaire aux deux.",
+    "en": "Perspective drawing of the velocity v, the field B and the magnetic force F, perpendicular to both."
+  },
+  "girar": { "pt": "Girar", "fr": "Tourner", "en": "Rotate" },
+  "positiva": {
+    "pt": "Carga positiva: F = qv × B segue a regra da mão direita — dedos de v para B, polegar em F. A força é perpendicular a v e a B, e o seu tamanho acompanha o sen do ângulo.",
+    "fr": "Charge positive : F = qv × B suit la règle de la main droite — doigts de v vers B, pouce vers F. La force est perpendiculaire à v et à B, et sa taille suit le sinus de l’angle.",
+    "en": "Positive charge: F = qv × B follows the right-hand rule — fingers from v to B, thumb along F. The force is perpendicular to v and B, and its size follows the sine of the angle."
+  },
+  "negativa": {
+    "pt": "Carga negativa: a força tem o sentido OPOSTO ao da regra da mão direita. O módulo é o mesmo.",
+    "fr": "Charge négative : la force est dans le sens OPPOSÉ à celui de la règle de la main droite. Le module est le même.",
+    "en": "Negative charge: the force points OPPOSITE to the right-hand rule. The magnitude is the same."
+  },
+  "semForca": {
+    "pt": "Sem força: a carga é nula ou se move paralela ao campo (sen 0° = sen 180° = 0).",
+    "fr": "Pas de force : la charge est nulle ou se déplace parallèlement au champ (sin 0° = sin 180° = 0).",
+    "en": "No force: the charge is zero or moves parallel to the field (sin 0° = sin 180° = 0)."
+  }
+}

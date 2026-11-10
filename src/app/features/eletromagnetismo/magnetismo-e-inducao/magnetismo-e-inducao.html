@@ -1,0 +1,52 @@
+<app-topico-layout topicoId="magnetismo-e-inducao">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="carga" [rotulo]="texto('carga')" [min]="-9" [max]="9" />
+      <app-controle-parametro
+        [(valor)]="velocidade"
+        [rotulo]="texto('velocidade')"
+        [min]="100"
+        [max]="10000"
+        [passo]="100"
+      />
+      <app-controle-parametro [(valor)]="campo" [rotulo]="texto('campo')" [min]="1" [max]="20" />
+      <app-controle-parametro
+        [(valor)]="angulo"
+        [rotulo]="texto('angulo')"
+        [min]="0"
+        [max]="180"
+        [passo]="5"
+        [dica]="texto('dicaAngulo')"
+      />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador" data-destaque="true">
+        <span class="rotulo">{{ texto('forca') }}</span>
+        <strong>{{ forcaTexto() }} N</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2>{{ texto('osTresVetores') }}</h2>
+      <app-vista-3d
+        [tracos]="tracos()"
+        [eixos]="3.5"
+        [descricao]="texto('descricaoVista')"
+        [rotuloGiro]="texto('girar')"
+      />
+      <p class="observacao">{{ texto(leituraForca()) }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>
