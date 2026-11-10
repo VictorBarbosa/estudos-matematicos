@@ -4,7 +4,30 @@ import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica
 import { anguloRedondo } from '@core/treino/sorteio/sorteio';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
+import {
+  exercicioAltura,
+  exercicioDuasVisadas,
+  exercicioNotavel,
+} from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.aplicacoes';
+
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
+
+type Pergunta = 'cateto' | 'notavel' | 'altura' | 'angulo' | 'duas-visadas';
+
+function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
+  switch (nivel) {
+    case 'facil':
+      return rng.escolher<Pergunta>(['cateto', 'notavel']);
+    case 'medio':
+      return rng.escolher<Pergunta>(['cateto', 'notavel', 'altura']);
+    case 'dificil':
+      return rng.escolher<Pergunta>(['cateto', 'altura']);
+    // Dos lados para o ângulo, e a torre vista de dois pontos: as duas
+    // perguntas que pedem montar o triângulo, não só aplicar a razão.
+    case 'extremo':
+      return rng.escolher<Pergunta>(['angulo', 'duas-visadas', 'cateto']);
+  }
+}
 
 /**
  * Exercícios de triângulo retângulo.
@@ -17,10 +40,11 @@ export const geradorTriangulo: GeradorExercicio<number> = {
   formatoResposta: 'um número com até 2 casas, ex.: 8,66',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
-    // No Extremo entra a pergunta inversa: dos lados para o ângulo.
-    if (nivel === 'extremo' && rng.booleano()) {
-      return exercicioAngulo(nivel, rng);
-    }
+    const pergunta = sortearPergunta(nivel, rng);
+    if (pergunta === 'angulo') return exercicioAngulo(nivel, rng);
+    if (pergunta === 'notavel') return exercicioNotavel(nivel, rng);
+    if (pergunta === 'altura') return exercicioAltura(nivel, rng);
+    if (pergunta === 'duas-visadas') return exercicioDuasVisadas(nivel, rng);
 
     // Múltiplos de 5°: no fácil, entre 15° e 75°. Os notáveis continuam
     // aparecendo, mas não são os únicos — era isso que limitava o tópico a

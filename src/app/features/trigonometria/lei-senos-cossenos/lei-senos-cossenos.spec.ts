@@ -26,8 +26,8 @@ describe('geradorLeis', () => {
     });
   }
 
-  it('no nível fácil só aparece a lei dos cossenos', () => {
-    for (const exercicio of amostra('facil')) {
+  it('no nível fácil só aparece a lei dos cossenos (fora a área)', () => {
+    for (const exercicio of amostra('facil').filter((e) => !e.conceitos.includes('leis.area'))) {
       expect(exercicio.conceitos).toContain('leis.cossenos');
     }
   });
@@ -86,6 +86,30 @@ describe('o maior ângulo (Extremo)', () => {
 
       expect(exercicio.gabarito).toBeCloseTo(Math.max(...angulos), 6);
       expect(angulos.reduce((s, x) => s + x, 0)).toBeCloseTo(180, 6);
+    }
+  });
+
+  it('a área confere com a fórmula de Herão', () => {
+    const rng = criarRng(4747);
+    for (const nivel of NIVEIS) {
+      const casos = Array.from({ length: 200 }, () => geradorLeis.gerar(nivel, rng)).filter((e) =>
+        e.conceitos.includes('leis.area'),
+      );
+      expect(casos.length).toBeGreaterThan(0);
+      for (const e of casos) {
+        let lados: number[];
+        const tres = /area3-(\d+)-(\d+)-(\d+)/.exec(e.id);
+        if (tres) {
+          lados = [Number(tres[1]), Number(tres[2]), Number(tres[3])];
+        } else {
+          const [, a, b, ang] = /area-(\d+)-(\d+)-(\d+)/.exec(e.id)!;
+          const [x, y, t] = [Number(a), Number(b), (Number(ang) * Math.PI) / 180];
+          lados = [x, y, Math.sqrt(x * x + y * y - 2 * x * y * Math.cos(t))];
+        }
+        const sp = lados.reduce((s, v) => s + v, 0) / 2;
+        const heron = Math.sqrt(sp * (sp - lados[0]!) * (sp - lados[1]!) * (sp - lados[2]!));
+        expect(e.gabarito).toBeCloseTo(heron, 6);
+      }
     }
   });
 });
