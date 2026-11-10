@@ -77,6 +77,10 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? `Cada fatia é um disco de raio y = ${a}x: integre π vezes y ao quadrado de 0 a ${h}.`
+            : undefined,
       };
     }
 
@@ -197,6 +201,10 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil'
+          ? `A área é a integral de 0 a ${ate}: aumente o expoente em 1, divida pelo novo expoente e substitua ${ate}.`
+          : undefined,
     };
   },
 

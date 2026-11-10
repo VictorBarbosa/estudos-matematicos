@@ -178,6 +178,10 @@ function doDecaimento(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'aplicacoes.decaimento',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `Em ${t} anos passam ${t}/${meiaVida} meias-vidas; a cada uma, a massa cai à metade: ${inicial} vezes (1/2) elevado a esse número.`
+        : undefined,
   });
 }
 
@@ -286,6 +290,10 @@ function daMola(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'aplicacoes.mola',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? `Monte m·x″ + c·x′ + k·x = 0 com os valores do enunciado, ache as raízes da característica e use x(0) = ${String(x0).replace('.', ',')} e velocidade inicial zero.`
+        : undefined,
   });
 }
 

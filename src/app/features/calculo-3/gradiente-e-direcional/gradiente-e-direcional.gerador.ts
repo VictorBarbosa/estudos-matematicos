@@ -167,6 +167,10 @@ function doModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'gradiente.vetor',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `A maior taxa é o módulo do gradiente: calcule as duas parciais em (${x}, ${y}) e faça a raiz da soma dos quadrados.`
+        : undefined,
   });
 }
 

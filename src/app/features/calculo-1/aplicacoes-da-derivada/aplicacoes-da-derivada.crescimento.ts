@@ -77,8 +77,9 @@ export function exercicioCrescimento(nivel: Nivel, rng: Rng): Exercicio<number> 
       gabarito,
       proximos,
     ),
+    // No Médio a é sempre positivo (decrescente); o «crescente» estreia no Difícil.
     dica:
-      nivel === 'medio'
+      nivel === 'medio' || (nivel === 'dificil' && a < 0)
         ? 'Derive, ache onde f′ = 0 e veja o sinal de f′ entre essas raízes (é um trinômio: sinal contrário ao de a entre as raízes).'
         : undefined,
   };

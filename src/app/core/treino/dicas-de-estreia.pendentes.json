@@ -176,21 +176,6 @@
     "medio | Quanto mede cada ângulo interno de um polígono de N lados regular? (em graus)",
     "medio | Quanto mede cada ângulo interno de um triângulo regular? (em graus)"
   ],
-  "aplicacoes-da-derivada": [
-    "dificil | A função é crescente num único intervalo limitado (aN b)N Informe aN o extremo esquerdoN",
-    "dificil | A função é crescente num único intervalo limitado (aN b)N Informe bN o extremo direitoN",
-    "facil | Esta função tem dois pontos críticosN Informe o MAIOR delesN",
-    "medio | O lado de um quadrado cresce N cm/sN A que taxa cresce a ÁREA no instante em que o lado mede N cm? (em cm²/s)",
-    "medio | Qual é o valor do MÁXIMO local desta função?"
-  ],
-  "aplicacoes-da-integral": [
-    "facil | Qual é a área sob a curva de N a N? (N casas decimais)",
-    "medio | Girando a reta em torno do eixo xN de N a N qual é o volume do sólido? (N casas decimais)"
-  ],
-  "aplicacoes-de-edo": [
-    "dificil | Uma massa de N kg presa a uma mola de constante N N/mN com amortecimento N N·s/mN é solta do repouso a N m do equilíbrioN Qual é a posição em t = N sN em m? Responda com N casas decimaisN",
-    "facil | Uma amostra de N g tem meia-vida de N anosN Quanto resta depois de N anosN em g? Responda com N casas decimaisN"
-  ],
   "areas-de-figuras-planas": [
     "medio | Um retângulo tem área N cm² e base N cmN Qual é sua alturaN em cm?",
     "medio | Um trapézio tem bases N cm e N cm e altura N cmN Qual é sua áreaN em cm²?",
@@ -229,20 +214,6 @@
     "medio | Qual é a distância focal c desta hipérbole?",
     "medio | Qual é o valor do semieixo a desta hipérbole?"
   ],
-  "continuidade": ["medio | Qual valor de k torna a função contínua em x = N?"],
-  "coordenadas-no-espaco": [
-    "dificil | Um ponto tem coordenadas cartesianas (N N N)N Qual é o raio ρ dele em coordenadas esféricas? Responda com N casas decimaisN",
-    "dificil | Um ponto tem coordenadas esféricas ρ = N φ = N° (medido do eixo z) e θ = N°N Qual é a coordenada cartesiana x? Responda com N casas decimaisN",
-    "medio | Um ponto tem coordenadas esféricas ρ = N φ = N° (medido do eixo z) e θ = N°N Qual é a coordenada cartesiana z? Responda com N casas decimaisN"
-  ],
-  "definicao-de-derivada": ["facil | Usando a definiçãoN calcule f'(N)N"],
-  "derivacao-implicita": [
-    "extremo | A curva passa pelo ponto (N N)N Encontre a reta tangente nesse ponto e informe onde ela corta o eixo yN Responda como fração ou com N casas decimaisN"
-  ],
-  "derivadas-parciais": [
-    "medio | Qual é a segunda derivada parcial em relação a xN duas vezes? Responda com N casas decimaisN",
-    "medio | Qual é a segunda derivada parcial em relação a yN duas vezes? Responda com N casas decimaisN"
-  ],
   "dinamica-rotacional": [
     "medio | Um disco ou cilindro maciço de N kg e N m de raio gira a N rad/sN Qual é a energia cinética de rotaçãoN em J? Responda com N casas decimaisN",
     "medio | Um partícula de N kg e N m de raio gira a N rad/sN Qual é a energia cinética de rotaçãoN em J? Responda com N casas decimaisN",
@@ -276,14 +247,6 @@
     "medio | Uma bateria tem a capacidade normalN com média N Ah e desvio N AhN Que proporção fica ACIMA de N Ah? Responda entre N e N com N casas decimaisN",
     "medio | Uma peça usinada tem o diâmetro normalN com média N mm e desvio N mmN Que proporção fica ABAIXO de N mm? Responda entre N e N com N casas decimaisN",
     "medio | Uma peça usinada tem o diâmetro normalN com média N mm e desvio N mmN Que proporção fica ACIMA de N mm? Responda entre N e N com N casas decimaisN"
-  ],
-  "edo-primeira-ordem": [
-    "medio | Resolva esta equação com y(N) igual a N e calcule y(N)N Responda com N casas decimaisN",
-    "medio | Uma substância decai segundo esta equaçãoN com t em anosN Qual é a meia-vida delaN em anos? Responda com N casas decimaisN"
-  ],
-  "edo-segunda-ordem": [
-    "facil | Qual é o discriminante da equação característica desta EDO? Responda com N casas decimaisN",
-    "medio | Com y(N) = N e y'(N) = N quanto vale a solução em t = N? Responda com N casas decimaisN"
   ],
   "equacao-segundo-grau": [
     "dificil | Esta equação não tem raízes reaisN Informe o valor do discriminante ΔN"
@@ -355,10 +318,6 @@
     "facil | Qual é o valor de f(N)?",
     "medio | Qual é o valor máximo ou mínimo da funçãoN ou sejaN a ordenada do vértice?"
   ],
-  "funcoes-de-varias-variaveis": [
-    "facil | Qual é o valor de k da curva de nível que passa pelo ponto (N N)? Responda com N casas decimaisN",
-    "medio | No domínio desta funçãoN qual é o maior valor que x pode assumir quando y = N? Responda com N casas decimaisN"
-  ],
   "funcoes-por-partes": [
     "dificil | De quanto é o salto desta função em x = N? Use o limite pela direita menos o limite pela esquerdaN Responda com N casas decimaisN",
     "medio | Qual é o limite desta função quando x tende a N pela DIREITA? Responda com N casas decimaisN",
@@ -373,9 +332,6 @@
     "dificil | Qual é o valor MÍNIMO que esta função atinge?",
     "facil | Qual é a amplitude desta função?",
     "medio | Qual é o valor MÁXIMO que esta função atinge?"
-  ],
-  "gradiente-e-direcional": [
-    "facil | Qual é a maior taxa de variação possível desta função no ponto (N N)N em qualquer direção? Responda com N casas decimaisN"
   ],
   "gravitacao-e-orbitas": [
     "dificil | Qual é o período orbital a N km de altitude? (em minutosN N casas decimais)",
@@ -396,21 +352,6 @@
   "inequacoes": [
     "facil | Resolva a inequação e informe o conjunto soluçãoN no formato x > valor (use <=N >= quando a fronteira entrar)N"
   ],
-  "integrais-multiplas": [
-    "medio | Qual é o valor médio desta função sobre o retângulo de N a N em x e de N a N em y? Responda com N casas decimaisN",
-    "medio | Qual é o volume sob esta superfície e acima do retângulo de N a N em x e de N a N em y? Responda com N casas decimaisN"
-  ],
-  "integral-definida": [
-    "dificil | Sabendo que a integral de f vale N e a de g vale N no intervalo de N a N quanto vale a integral de f + N·g?",
-    "medio | Qual é o valor MÉDIO da função no intervalo? (use a áreaN N casas decimais)",
-    "medio | Sabendo que a integral de f de N a N vale N e de N a N vale N quanto vale a integral de N a N?",
-    "medio | Sabendo que a integral de f de N a N vale N quanto vale a integral de N a N?",
-    "medio | Sabendo que a integral de f de N a N vale N quanto vale a integral de N·f no mesmo intervalo?"
-  ],
-  "integral-indefinida": [
-    "facil | Integre e informe o coeficiente de x³ na primitivaN",
-    "medio | Qual é o valor da constante CN sabendo que F(N) = N?"
-  ],
   "juros-compostos": [
     "medio | A uma taxa de N% por períodoN em quantos períodos um capital se multiplica por N? (N casas decimais)"
   ],
@@ -422,24 +363,11 @@
     "medio | Um bloco de N kg desliza num plano de N° com coeficiente de atrito N Qual é a aceleraçãoN em m/s²? (N casas decimais)",
     "medio | Um bloco de N kg repousa num plano inclinado de N°N Qual é a força normalN em newtons? (use g = N m/s²; N casas decimais)"
   ],
-  "limites": [
-    "dificil | Calcule o limiteN racionalizando o numeradorN (N casas decimais)",
-    "facil | Calcule o limiteN",
-    "facil | Calcule o limiteN fatorando o numeradorN",
-    "medio | Calcule o limite no infinitoN (N casas decimais)"
-  ],
-  "limites-laterais": [
-    "extremo | Qual é o salto do gráfico em x = N isto éN o limite pela direita menos o limite pela esquerda? (N se o limite existir)"
-  ],
   "matrizes-determinantes": [
     "dificil | Qual é o determinante do produto A·B?",
     "medio | Qual é o determinante desta matriz N×N?",
     "medio | Resolva o sistema por CramerN Quanto vale x?",
     "medio | Resolva o sistema por CramerN Quanto vale y?"
-  ],
-  "metodos-numericos": [
-    "dificil | Com EulerN integre de N a N partindo de y(N) = N primeiro com passo N e depois com metade deleN Por qual fator o erro foi dividido? Responda com N casas decimaisN",
-    "medio | Com passo h = N e N passosN de quanto é o erro do método de Euler frente à solução exataN partindo de y(N) = N? Responda com N casas decimaisN"
   ],
   "momento-angular": [
     "dificil | Um corpo gira sem torque externo com inércia N kg·m² a N rad/sN e recolhe a massa até a inércia cair para N De quanto VARIOU a energia cinética de rotaçãoN em J? Responda com N casas decimaisN",
@@ -622,12 +550,6 @@
     "dificil | Para obter N km/s de delta-v com exaustão a N m/sN qual razão de massas é necessária? (N casas decimais)",
     "medio | Um foguete parte com N t e termina a queima com N tN Que fração da massa inicial era propelente? (responda entre N e N com N casas decimais)"
   ],
-  "regra-da-cadeia": ["extremo | Use a regra da cadeia e calcule f'(N)N (N casas decimais)"],
-  "regras-de-derivacao": [
-    "facil | Derive e calcule f'(N)N",
-    "facil | Derive e escreva f'(x) — a expressão inteiraN não um valorN",
-    "facil | Derive e informe o coeficiente de x na derivadaN"
-  ],
   "regressao-e-correlacao": [
     "dificil | Qual é o resíduo do ponto de x igual a N em relação à reta de mínimos quadrados destes dados? Responda com N casas decimaisN",
     "dificil | Que fração da variação de y a reta ajustada explica nestes dados? Responda entre N e N com N casas decimaisN",
@@ -643,31 +565,10 @@
     "facil | Sabendo que sen N° vale issoN qual é o valor? (N casas)",
     "medio | Se sen θ = N e θ está no Nº quadranteN qual é cos θ? (N casas)"
   ],
-  "sequencias-e-series": [
-    "facil | Qual é a soma dos N primeiros termos desta progressão aritmética?",
-    "medio | Qual é a soma dos N primeiros termos desta progressão geométrica?",
-    "medio | Qual é o Nº termo desta progressão geométrica?"
-  ],
-  "series-de-taylor": [
-    "dificil | Aproxime a raiz quadrada de N pelo polinômio de Taylor de grau N centrado em N Responda com N casas decimaisN",
-    "facil | Use o polinômio de Maclaurin de grau N para aproximar esta função em x = N Responda com N casas decimaisN",
-    "medio | Aproximando esta função em x = N pelo polinômio de Maclaurin de grau N de quanto é o erro cometido? Responda com N casas decimaisN"
-  ],
   "solidos-e-volumes": [
     "dificil | Um cilindro de raio N cm tem volume N cm³N Qual é sua alturaN em cm?",
     "dificil | Um cone de raio N cm tem volume N cm³N Qual é sua alturaN em cm?",
     "medio | Uma pirâmide tem área da base N cm² e altura N cmN Qual é seu volumeN em cm³?"
-  ],
-  "soma-de-riemann": [
-    "medio | Aproxime a área sob a curva no intervalo [N N] usando N retângulosN com altura tomada pela direitaN (N casas decimais)"
-  ],
-  "taxa-de-variacao": [
-    "dificil | A posição de um corpoN em metrosN é dada em função do tempo em segundosN com t ≥ N Em que instante ele para pela primeira vez?",
-    "medio | A posição de um corpoN em metrosN é dada em função do tempo em segundosN Qual é a aceleração em t = N s?"
-  ],
-  "teorema-fundamental": [
-    "facil | Use o Teorema Fundamental para calcular a integralN",
-    "medio | Para qual valor de k a integral vale N?"
   ],
   "termodinamica-e-gases": [
     "medio | Qual é a pressão de N mol de gás ideal em N L a N °C? (em kPaN N casas decimais)",

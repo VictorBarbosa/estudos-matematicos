@@ -173,6 +173,12 @@ function daEsferica(nivel: Nivel, rng: Rng, pedir: 'x' | 'z'): Exercicio<number>
         conceito: 'coordenadas.esfericas',
       },
     ],
+    dica:
+      (pedir === 'z' && nivel === 'medio') || (pedir === 'x' && nivel === 'dificil')
+        ? pedir === 'z'
+          ? `z = ρ·cos φ: só o ângulo com o eixo z importa, ${phi}°; θ não entra.`
+          : `x = ρ·sen φ·cos θ: primeiro projete no plano (ρ·sen ${phi}°), depois use θ = ${theta}°.`
+        : undefined,
   });
 }
 
@@ -237,6 +243,10 @@ function doRaioEsferico(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'coordenadas.esfericas',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? `ρ é a distância até a origem: a raiz de x² + y² + z², com os três valores ao quadrado.`
+        : undefined,
   });
 }
 

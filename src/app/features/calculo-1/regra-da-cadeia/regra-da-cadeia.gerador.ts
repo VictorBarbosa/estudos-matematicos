@@ -207,5 +207,6 @@ function exercicioOutraCasca(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: `Derive a função de fora mantendo o miolo, calcule o miolo em x = ${ponto} (dá ${u}) e não esqueça de multiplicar por ${a}, a derivada do miolo.`,
   };
 }

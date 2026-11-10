@@ -189,6 +189,10 @@ function daSegunda(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'parciais.uma-de-cada-vez',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `Derive duas vezes em ${variavel}, tratando a outra variável como constante: só o termo com ${variavel}² deixa algo.`
+        : undefined,
   });
 }
 

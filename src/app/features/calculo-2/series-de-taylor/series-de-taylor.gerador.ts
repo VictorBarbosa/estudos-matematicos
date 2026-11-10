@@ -186,6 +186,10 @@ function daAproximacao(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'taylor.polinomio',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `Escreva a série até o termo de grau ${grau} e substitua x = ${String(x).replace('.', ',')} em cada termo antes de somar.`
+        : undefined,
   });
 }
 
@@ -236,6 +240,10 @@ function doErro(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'taylor.erro',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `O erro é a distância entre o valor exato da função e o polinômio de grau ${grau}: calcule os dois em x = ${String(x).replace('.', ',')} e subtraia.`
+        : undefined,
   });
 }
 
@@ -339,6 +347,10 @@ function daRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'taylor.fora-da-origem',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? `Em torno de ${a}: √${a} = ${Math.sqrt(a)} e a derivada da raiz é 1 sobre (2√x). Use x − ${a} como o pequeno passo.`
+        : undefined,
   });
 }
 

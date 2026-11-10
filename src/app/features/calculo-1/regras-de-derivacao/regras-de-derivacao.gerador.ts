@@ -158,6 +158,10 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? 'Derive termo a termo: o termo em x da derivada vem do termo em x² da função (2 vezes o coeficiente dele).'
+            : undefined,
       };
     }
 
@@ -224,8 +228,8 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
           proximos,
         ),
         dica:
-          nivel === 'medio'
-            ? 'Derive um termo por vez; a soma das derivadas é a derivada da soma.'
+          nivel === 'facil'
+            ? 'Derive um termo por vez (o expoente desce e diminui em um) e escreva a soma; a constante some.'
             : undefined,
       };
     }
@@ -274,6 +278,10 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil'
+          ? `Derive termo a termo (o expoente desce e diminui em um) e só depois substitua x = ${ponto}.`
+          : undefined,
     };
   },
 

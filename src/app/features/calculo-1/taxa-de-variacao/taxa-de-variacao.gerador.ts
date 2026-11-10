@@ -95,7 +95,9 @@ function exercicioDeMovimento(
     dica:
       nivel === 'facil'
         ? 'Derive a posição para obter a velocidade; a taxa média não precisa de derivada.'
-        : undefined,
+        : nivel === 'medio' && pergunta === 'aceleracao'
+          ? `A aceleração é a derivada da velocidade: derive s(t) DUAS vezes e só então use t = ${t0}.`
+          : undefined,
   };
 }
 
@@ -258,6 +260,9 @@ function exercicioDeParada(nivel: Nivel, rng: Rng): Exercicio<number> {
       primeira,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Parar é ter velocidade zero.' : undefined,
+    dica:
+      nivel === 'dificil'
+        ? 'Parar é ter velocidade zero: derive s(t), iguale a zero e fique com a menor raiz positiva.'
+        : undefined,
   };
 }

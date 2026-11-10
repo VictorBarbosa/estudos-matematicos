@@ -187,6 +187,10 @@ function doValor(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'edo2.regimes',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `Ache as raízes da característica, escreva a solução geral com duas constantes e use y(0) = ${y0} e y′(0) = ${v0} para achá-las.`
+        : undefined,
   });
 }
 
@@ -296,6 +300,10 @@ function doDiscriminante(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'edo2.caracteristica',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `A equação característica é r² + b·r + c = 0, com b = ${String(b).replace('.', ',')} e c = ${String(c).replace('.', ',')}; o discriminante é b² − 4c.`
+        : undefined,
   });
 }
 
