@@ -94,6 +94,20 @@ export const TEORIA_MOVIMENTO_CIRCULAR: readonly Teoria[] = [
         nota: 'É por isso que curvas rápidas exigem tanto das estruturas.',
       },
     ],
+    exemplo: {
+      enunciado: 'Um carro faz uma curva de raio 50 m a 20 m/s. Qual é a aceleração centrípeta?',
+      passos: [
+        {
+          descricao: 'A aceleração centrípeta aponta para o centro e vale v²/r.',
+          tex: 'a_c = \\frac{v^{2}}{r}',
+        },
+        {
+          descricao: 'Substituindo.',
+          tex: 'a_c = \\frac{20^{2}}{50} = \\frac{400}{50} = 8\\ \\text{m/s}^{2}',
+          nota: 'Cerca de 0,8 g: é o atrito dos pneus que precisa fornecer essa força.',
+        },
+      ],
+    },
     vejaTambem: ['circular.forca-centripeta', 'circular.velocidade-angular'],
   },
   {

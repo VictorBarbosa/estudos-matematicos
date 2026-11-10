@@ -95,6 +95,23 @@ export const TEORIA_RACIONAIS: readonly Teoria[] = [
         tex: 'x = 5 \\;\\text{é assíntota vertical}',
       },
     ],
+    exemplo: {
+      enunciado: 'f(x) = (x² − 4)/(x² − x − 2). Onde há buraco e onde há assíntota vertical?',
+      passos: [
+        {
+          descricao: 'Fatoramos em cima e embaixo.',
+          tex: '\\frac{x^{2} - 4}{x^{2} - x - 2} = \\frac{(x - 2)(x + 2)}{(x - 2)(x + 1)}',
+        },
+        {
+          descricao: 'O fator x − 2 se cancela: em x = 2 há um buraco, na altura do que sobra.',
+          tex: '\\lim_{x \\to 2} \\frac{x + 2}{x + 1} = \\frac{4}{3}',
+        },
+        {
+          descricao: 'O fator x + 1 fica embaixo: em x = −1 a função explode.',
+          tex: 'x = -1 \\;\\Rightarrow\\; \\text{assíntota vertical}',
+        },
+      ],
+    },
     vejaTambem: ['racionais.assintota-vertical', 'racionais.dominio'],
   },
   {
@@ -160,6 +177,20 @@ export const TEORIA_RACIONAIS: readonly Teoria[] = [
         nota: 'O gráfico se cola nessa reta longe da origem, por cima ou por baixo.',
       },
     ],
+    exemplo: {
+      enunciado: 'Ache a assíntota oblíqua de f(x) = (x² + 1)/(x − 1).',
+      passos: [
+        {
+          descricao: 'Dividimos o numerador pelo denominador.',
+          tex: 'x^{2} + 1 = (x - 1)(x + 1) + 2',
+        },
+        {
+          descricao: 'A função é um polinômio do 1º grau mais um resto que some no infinito.',
+          tex: 'f(x) = x + 1 + \\frac{2}{x - 1}',
+        },
+        { descricao: 'Quando x cresce, 2/(x − 1) vai a zero.', tex: 'y = x + 1' },
+      ],
+    },
     vejaTambem: ['racionais.comportamento-no-infinito', 'racionais.assintota-vertical'],
   },
 ];

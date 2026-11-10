@@ -62,6 +62,24 @@ export const TEORIA_CINEMATICA_VETORIAL: readonly Teoria[] = [
         nota: 'As duas médias respondem perguntas diferentes, e ambas estão certas.',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Um corpo vai de (1, 2) m a (7, 10) m em 5 s. Qual é a velocidade média vetorial e seu módulo?',
+      passos: [
+        {
+          descricao: 'O deslocamento é a diferença das posições.',
+          tex: '\\Delta\\mathbf{r} = (7 - 1,\\; 10 - 2) = (6,\\; 8)\\ \\text{m}',
+        },
+        {
+          descricao: 'Dividimos pelo tempo.',
+          tex: '\\mathbf{v}_m = \\frac{(6,\\; 8)}{5} = (1{,}2;\\; 1{,}6)\\ \\text{m/s}',
+        },
+        {
+          descricao: 'O módulo.',
+          tex: '|\\mathbf{v}_m| = \\sqrt{1{,}2^{2} + 1{,}6^{2}} = \\sqrt{4} = 2\\ \\text{m/s}',
+        },
+      ],
+    },
     vejaTambem: ['cin-vetorial.deslocamento', 'cin-vetorial.componentes-da-aceleracao'],
   },
   {
@@ -134,6 +152,24 @@ export const TEORIA_CINEMATICA_VETORIAL: readonly Teoria[] = [
         nota: 'Chegar em frente custa tempo: é um compromisso, não um almoço grátis.',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Um barco atravessa um rio de 80 m a 4 m/s, apontado perpendicular à margem; a correnteza é de 3 m/s. Quanto tempo leva e quanto é arrastado?',
+      passos: [
+        {
+          descricao: 'Só a componente perpendicular atravessa o rio.',
+          tex: 't = \\frac{80}{4} = 20\\ \\text{s}',
+        },
+        {
+          descricao: 'Nesse tempo a correnteza arrasta o barco rio abaixo.',
+          tex: 'd = 3 \\cdot 20 = 60\\ \\text{m}',
+        },
+        {
+          descricao: 'A velocidade em relação à margem soma as duas.',
+          tex: '|\\mathbf{v}| = \\sqrt{4^{2} + 3^{2}} = 5\\ \\text{m/s}',
+        },
+      ],
+    },
     vejaTambem: ['cin-vetorial.velocidade-relativa', 'cin-vetorial.deslocamento'],
   },
   {

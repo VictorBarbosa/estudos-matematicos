@@ -98,6 +98,19 @@ export const TEORIA_DERIVADAS_TRIG: readonly Teoria[] = [
         nota: 'A onda de frequência tripla sobe três vezes mais depressa na origem.',
       },
     ],
+    exemplo: {
+      enunciado: 'f(x) = sen(3x). Calcule f′(π/9).',
+      passos: [
+        {
+          descricao: 'A derivada do seno é o cosseno, e o 3 de dentro sai pela cadeia.',
+          tex: "f'(x) = 3\\cos(3x)",
+        },
+        {
+          descricao: 'Em x = π/9, o argumento vale π/3.',
+          tex: "f'\\left(\\frac{\\pi}{9}\\right) = 3\\cos\\frac{\\pi}{3} = 3 \\cdot \\frac{1}{2} = \\frac{3}{2}",
+        },
+      ],
+    },
     vejaTambem: ['trig-derivada.tabela', 'trig-derivada.tangente', 'trig-derivada.potencia'],
   },
   {
@@ -165,6 +178,19 @@ export const TEORIA_DERIVADAS_TRIG: readonly Teoria[] = [
         nota: 'Escrever só uma das parcelas é o erro mais frequente deste formato.',
       },
     ],
+    exemplo: {
+      enunciado: 'f(x) = x²·cos x. Calcule f′(π).',
+      passos: [
+        {
+          descricao: 'Regra do produto, com a derivada do cosseno levando o menos.',
+          tex: "f'(x) = 2x\\cos x - x^{2}\\sin x",
+        },
+        {
+          descricao: 'Em x = π: cos π = −1 e sen π = 0.',
+          tex: "f'(\\pi) = 2\\pi \\cdot (-1) - \\pi^{2} \\cdot 0 = -2\\pi \\approx -6{,}283",
+        },
+      ],
+    },
     vejaTambem: ['trig-derivada.tabela', 'trig-derivada.potencia'],
   },
   {

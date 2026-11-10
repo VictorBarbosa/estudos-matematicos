@@ -59,6 +59,24 @@ export const TEORIA_COORDENADAS: readonly Teoria[] = [
         nota: 'A distância à ORIGEM seria outra, e envolveria o z.',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Converta o ponto cilíndrico (r, θ, z) = (2, 60°, 5) para coordenadas cartesianas.',
+      passos: [
+        {
+          descricao: 'x é a projeção de r no eixo x.',
+          tex: 'x = r\\cos\\theta = 2\\cos 60^{\\circ} = 2 \\cdot \\frac{1}{2} = 1',
+        },
+        {
+          descricao: 'y é a projeção de r no eixo y.',
+          tex: 'y = r\\sin\\theta = 2\\sin 60^{\\circ} = 2 \\cdot \\frac{\\sqrt{3}}{2} = \\sqrt{3} \\approx 1{,}732',
+        },
+        {
+          descricao: 'A altura z é a mesma nos dois sistemas.',
+          tex: '(x, y, z) = (1,\\; \\sqrt{3},\\; 5)',
+        },
+      ],
+    },
     vejaTambem: ['coordenadas.esfericas', 'coordenadas.escolher-o-sistema'],
   },
   {

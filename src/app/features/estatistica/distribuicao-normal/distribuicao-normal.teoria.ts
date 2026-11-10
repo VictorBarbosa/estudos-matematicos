@@ -62,6 +62,17 @@ export const TEORIA_NORMAL: readonly Teoria[] = [
         tex: '\\Phi(1) \\approx 0{,}8413',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Alturas seguem uma normal com μ = 170 cm e σ = 10 cm. Quantos desvios acima da média está 185 cm?',
+      passos: [
+        {
+          descricao: 'Padronizar: distância à média, medida em desvios.',
+          tex: 'z = \\frac{x - \\mu}{\\sigma}',
+        },
+        { descricao: 'Substituindo.', tex: 'z = \\frac{185 - 170}{10} = \\frac{15}{10} = 1{,}5' },
+      ],
+    },
     vejaTambem: ['normal.area', 'normal.quantil', 'normal.curva'],
   },
   {
@@ -93,6 +104,18 @@ export const TEORIA_NORMAL: readonly Teoria[] = [
         nota: 'Somar em vez de subtrair contaria a parte de baixo duas vezes.',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Com μ = 170 cm e σ = 10 cm, qual é a probabilidade de uma altura ficar abaixo de 185 cm?',
+      passos: [
+        { descricao: 'Padronizamos o valor.', tex: 'z = \\frac{185 - 170}{10} = 1{,}5' },
+        {
+          descricao: 'A probabilidade é a área à esquerda de z na tabela.',
+          tex: 'P(X < 185) = P(Z < 1{,}5) = \\Phi(1{,}5) = 0{,}9332',
+        },
+        { descricao: 'Em porcentagem.', tex: '0{,}9332 = 93{,}32\\%' },
+      ],
+    },
     vejaTambem: ['normal.simetria', 'normal.padronizacao', 'normal.regra-empirica'],
   },
   {

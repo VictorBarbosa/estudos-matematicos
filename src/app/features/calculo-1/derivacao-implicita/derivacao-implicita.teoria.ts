@@ -63,6 +63,22 @@ export const TEORIA_DERIVACAO_IMPLICITA: readonly Teoria[] = [
         tex: '\\frac{d}{dx}\\left[25\\right] = 0',
       },
     ],
+    exemplo: {
+      enunciado: 'Na circunferência x² + y² = 25, calcule dy/dx no ponto (3, 4).',
+      passos: [
+        {
+          descricao:
+            'Derivamos os dois lados em relação a x; como y depende de x, y² vira 2y·y′ pela regra da cadeia.',
+          tex: "2x + 2y\\,y' = 0",
+        },
+        { descricao: 'Isolamos y′.', tex: "y' = -\\frac{2x}{2y} = -\\frac{x}{y}" },
+        {
+          descricao: 'No ponto (3, 4).',
+          tex: "y' = -\\frac{3}{4} = -0{,}75",
+          nota: 'A tangente ali desce 3 para cada 4 que avança — perpendicular ao raio, que tem inclinação 4/3.',
+        },
+      ],
+    },
     vejaTambem: ['implicita.isolamento', 'implicita.quando-usar'],
   },
   {

@@ -126,6 +126,20 @@ export const TEORIA_MOMENTO_ANGULAR: readonly Teoria[] = [
         nota: 'Acelerar uma roda interna faz o corpo girar para o outro lado.',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Uma patinadora gira a 2 rad/s com I = 4 kg·m². Ao fechar os braços, I cai para 1,6 kg·m². Qual é a nova velocidade angular?',
+      passos: [
+        {
+          descricao: 'Sem torque externo, o momento angular se conserva.',
+          tex: 'L = I\\omega = 4 \\cdot 2 = 8\\ \\text{kg·m}^{2}\\text{/s}',
+        },
+        {
+          descricao: 'Com o novo momento de inércia.',
+          tex: "\\omega' = \\frac{L}{I'} = \\frac{8}{1{,}6} = 5\\ \\text{rad/s}",
+        },
+      ],
+    },
     vejaTambem: ['angular.energia-nao-se-conserva', 'angular.dicionario'],
   },
   {
@@ -160,6 +174,25 @@ export const TEORIA_MOMENTO_ANGULAR: readonly Teoria[] = [
         nota: 'Os 24 joules a mais foram o trabalho dos músculos ao puxar os braços.',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Na mesma patinadora (de 2 para 5 rad/s), compare a energia cinética antes e depois.',
+      passos: [
+        {
+          descricao: 'Antes, com os braços abertos.',
+          tex: 'K = \\frac{1}{2} \\cdot 4 \\cdot 2^{2} = 8\\ \\text{J}',
+        },
+        {
+          descricao: 'Depois, com os braços fechados.',
+          tex: "K' = \\frac{1}{2} \\cdot 1{,}6 \\cdot 5^{2} = 20\\ \\text{J}",
+        },
+        {
+          descricao: 'A energia aumentou.',
+          tex: "K' - K = 12\\ \\text{J}",
+          nota: 'Os 12 J vêm do trabalho dos músculos ao puxar os braços para dentro.',
+        },
+      ],
+    },
     vejaTambem: ['angular.conservacao', 'angular.momento'],
   },
 ];

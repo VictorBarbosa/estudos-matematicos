@@ -10,7 +10,9 @@ export const TEORIA_LINHA: readonly Teoria[] = [
       'A técnica é sempre a mesma: parametrizar a curva, substituir, e o que sobra é uma ' +
       'integral comum no parâmetro. É a ponte entre as equações paramétricas e a integração.',
     formulas: [
-      { tex: '\\int_{C} \\vec{F} \\cdot d\\vec{r} = \\int_{a}^{b} \\vec{F}(\\vec{r}(t)) \\cdot \\vec{r}\\,^{\\prime}(t)\\,dt' },
+      {
+        tex: '\\int_{C} \\vec{F} \\cdot d\\vec{r} = \\int_{a}^{b} \\vec{F}(\\vec{r}(t)) \\cdot \\vec{r}\\,^{\\prime}(t)\\,dt',
+      },
       { tex: '\\vec{r}(t) = \\left(x(t),\\; y(t)\\right)' },
     ],
     demonstracao: [
@@ -41,7 +43,10 @@ export const TEORIA_LINHA: readonly Teoria[] = [
       'trabalho nenhum.',
     formulas: [
       { tex: 'W = \\int_{C} \\vec{F} \\cdot d\\vec{r}' },
-      { tex: 'W = \\vec{F} \\cdot \\Delta\\vec{r}', legenda: 'Com força constante e caminho reto.' },
+      {
+        tex: 'W = \\vec{F} \\cdot \\Delta\\vec{r}',
+        legenda: 'Com força constante e caminho reto.',
+      },
     ],
     demonstracao: [
       {
@@ -63,6 +68,24 @@ export const TEORIA_LINHA: readonly Teoria[] = [
         tex: '\\int_{-C} \\vec{F} \\cdot d\\vec{r} = -\\int_{C} \\vec{F} \\cdot d\\vec{r}',
       },
     ],
+    exemplo: {
+      enunciado: 'Trabalho do campo F = (y, x) ao longo de r(t) = (t, t²), com t de 0 a 1.',
+      passos: [
+        {
+          descricao: 'O campo sobre a curva e a velocidade da parametrização.',
+          tex: "\\mathbf{F}(\\mathbf{r}(t)) = (t^{2},\\; t) \\qquad \\mathbf{r}'(t) = (1,\\; 2t)",
+        },
+        {
+          descricao: 'O produto escalar dá o integrando.',
+          tex: "\\mathbf{F} \\cdot \\mathbf{r}' = t^{2} \\cdot 1 + t \\cdot 2t = 3t^{2}",
+        },
+        {
+          descricao: 'Integramos em t.',
+          tex: 'W = \\int_{0}^{1} 3t^{2}\\,dt = \\left[t^{3}\\right]_{0}^{1} = 1',
+          nota: 'F é o gradiente de xy, que vale 0 em (0, 0) e 1 em (1, 1): o caminho não importa.',
+        },
+      ],
+    },
     vejaTambem: ['linha.conservativo', 'linha.parametrizar'],
   },
   {
@@ -76,7 +99,10 @@ export const TEORIA_LINHA: readonly Teoria[] = [
       'zero, e isso distingue campos conservativos dos demais.',
     formulas: [
       { tex: '\\oint_{C} \\vec{F} \\cdot d\\vec{r}' },
-      { tex: '\\oint_{C} \\nabla\\varphi \\cdot d\\vec{r} = 0', legenda: 'Num campo conservativo, sempre zero.' },
+      {
+        tex: '\\oint_{C} \\nabla\\varphi \\cdot d\\vec{r} = 0',
+        legenda: 'Num campo conservativo, sempre zero.',
+      },
     ],
     demonstracao: [
       {
@@ -105,8 +131,13 @@ export const TEORIA_LINHA: readonly Teoria[] = [
       'a gravidade e com a força elétrica, e é a razão de existir energia potencial: ela é ' +
       'essa função.',
     formulas: [
-      { tex: '\\vec{F} = \\nabla\\varphi \\;\\Longrightarrow\\; \\int_{C} \\vec{F} \\cdot d\\vec{r} = \\varphi(B) - \\varphi(A)' },
-      { tex: '\\frac{\\partial P}{\\partial y} = \\frac{\\partial Q}{\\partial x}', legenda: 'O teste que detecta um campo conservativo.' },
+      {
+        tex: '\\vec{F} = \\nabla\\varphi \\;\\Longrightarrow\\; \\int_{C} \\vec{F} \\cdot d\\vec{r} = \\varphi(B) - \\varphi(A)',
+      },
+      {
+        tex: '\\frac{\\partial P}{\\partial y} = \\frac{\\partial Q}{\\partial x}',
+        legenda: 'O teste que detecta um campo conservativo.',
+      },
     ],
     demonstracao: [
       {

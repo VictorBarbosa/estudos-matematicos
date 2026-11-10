@@ -12,7 +12,10 @@ export const TEORIA_TAYLOR: readonly Teoria[] = [
       'engenharia lineariza um sistema antes de projetar um controlador.',
     formulas: [
       { tex: 'P_{n}(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(a)}{k!}(x - a)^{k}' },
-      { tex: 'P_{n}(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(0)}{k!}x^{k}', legenda: 'Maclaurin: centro em zero.' },
+      {
+        tex: 'P_{n}(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(0)}{k!}x^{k}',
+        legenda: 'Maclaurin: centro em zero.',
+      },
     ],
     demonstracao: [
       {
@@ -33,6 +36,24 @@ export const TEORIA_TAYLOR: readonly Teoria[] = [
         nota: 'O fatorial no denominador não é enfeite: ele desfaz o que derivar repetidamente produz.',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Use o polinômio de Taylor de grau 3 de eˣ em torno de 0 para aproximar e elevado a 0,1.',
+      passos: [
+        {
+          descricao: 'Todas as derivadas de eˣ valem 1 em x = 0.',
+          tex: 'P_{3}(x) = 1 + x + \\frac{x^{2}}{2} + \\frac{x^{3}}{6}',
+        },
+        {
+          descricao: 'Substituindo x = 0,1.',
+          tex: 'P_{3}(0{,}1) = 1 + 0{,}1 + 0{,}005 + 0{,}000167 = 1{,}105167',
+        },
+        {
+          descricao: 'Comparando com o valor exato.',
+          tex: 'e^{0{,}1} = 1{,}105171 \\;\\Rightarrow\\; \\text{erro} \\approx 0{,}000004',
+        },
+      ],
+    },
     vejaTambem: ['taylor.coeficientes', 'taylor.erro', 'taylor.fora-da-origem'],
   },
   {
@@ -45,7 +66,10 @@ export const TEORIA_TAYLOR: readonly Teoria[] = [
       'aproximação é local — ela só sabe o que acontece no ponto, e extrapola a partir dali.',
     formulas: [
       { tex: 'a_{k} = \\frac{f^{(k)}(a)}{k!}' },
-      { tex: "f^{(k)}(a) = k!\\,a_{k}", legenda: 'A leitura inversa: o coeficiente devolve a derivada.' },
+      {
+        tex: 'f^{(k)}(a) = k!\\,a_{k}',
+        legenda: 'A leitura inversa: o coeficiente devolve a derivada.',
+      },
     ],
     demonstracao: [
       {
@@ -116,7 +140,10 @@ export const TEORIA_TAYLOR: readonly Teoria[] = [
       'a série de confiar nela cegamente.',
     formulas: [
       { tex: 'R_{n}(x) = f(x) - P_{n}(x)' },
-      { tex: 'R_{n}(x) \\approx \\frac{f^{(n+1)}(a)}{(n+1)!}(x - a)^{n+1}', legenda: 'O primeiro termo desprezado domina o erro.' },
+      {
+        tex: 'R_{n}(x) \\approx \\frac{f^{(n+1)}(a)}{(n+1)!}(x - a)^{n+1}',
+        legenda: 'O primeiro termo desprezado domina o erro.',
+      },
     ],
     demonstracao: [
       {
@@ -150,7 +177,9 @@ export const TEORIA_TAYLOR: readonly Teoria[] = [
       'Trocando essa derivada por uma cota superior, obtém-se um limite confiável para o erro.',
     formulas: [
       { tex: 'R_{n}(x) = \\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x - a)^{n+1}' },
-      { tex: '\\left|R_{n}(x)\\right| \\leq \\frac{M\\left|x - a\\right|^{n+1}}{(n+1)!}, \\quad \\left|f^{(n+1)}\\right| \\leq M' },
+      {
+        tex: '\\left|R_{n}(x)\\right| \\leq \\frac{M\\left|x - a\\right|^{n+1}}{(n+1)!}, \\quad \\left|f^{(n+1)}\\right| \\leq M',
+      },
     ],
     demonstracao: [
       {
@@ -171,6 +200,25 @@ export const TEORIA_TAYLOR: readonly Teoria[] = [
         tex: '\\frac{1}{6!} = \\frac{1}{720} \\approx 0{,}00139',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Estime, sem o valor exato, o erro máximo de P₃(0,1) como aproximação de e elevado a 0,1.',
+      passos: [
+        {
+          descricao: 'O resto de Lagrange usa a quarta derivada num ponto entre 0 e 0,1.',
+          tex: '|R_{3}| \\leq \\frac{M \\cdot x^{4}}{4!}',
+        },
+        {
+          descricao: 'A quarta derivada é eˣ, que entre 0 e 0,1 não passa de 1,2.',
+          tex: 'M = 1{,}2',
+        },
+        {
+          descricao: 'Substituindo x = 0,1.',
+          tex: '|R_{3}| \\leq \\frac{1{,}2 \\cdot 0{,}1^{4}}{24} = \\frac{0{,}00012}{24} = 0{,}000005',
+          nota: 'O erro real, 0,000004, fica abaixo da estimativa — como tem de ser.',
+        },
+      ],
+    },
     vejaTambem: ['taylor.erro', 'taylor.polinomio'],
   },
   {
@@ -184,12 +232,14 @@ export const TEORIA_TAYLOR: readonly Teoria[] = [
       'não é x, é o afastamento em relação ao centro.',
     formulas: [
       { tex: 'P_{n}(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(a)}{k!}(x - a)^{k}' },
-      { tex: '\\sqrt{x} \\approx \\sqrt{a} + \\frac{x - a}{2\\sqrt{a}} - \\frac{(x - a)^{2}}{8a\\sqrt{a}}' },
+      {
+        tex: '\\sqrt{x} \\approx \\sqrt{a} + \\frac{x - a}{2\\sqrt{a}} - \\frac{(x - a)^{2}}{8a\\sqrt{a}}',
+      },
     ],
     demonstracao: [
       {
         descricao: 'Para estimar a raiz de 4,2, centramos em 4, onde a raiz é exata.',
-        tex: 'f(4) = 2 \\qquad f\'(4) = \\frac{1}{4}',
+        tex: "f(4) = 2 \\qquad f'(4) = \\frac{1}{4}",
       },
       {
         descricao: 'O termo linear corrige pelo afastamento.',
