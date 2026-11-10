@@ -185,7 +185,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 ### 3.13 Cálculo 3 — aceitável
 
 - [x] Funções de várias variáveis, parciais, gradiente e direcional, integrais múltiplas, coordenadas no espaço, integrais de linha — toda a etapa futura do plano anterior
-- [ ] Integrais de superfície e os teoremas de Green, Stokes e da divergência — fecham o que `integrais-de-linha` abre
+- [x] Integrais de superfície e os teoremas de Green, Stokes e da divergência — tópico novo `teoremas-integrais` (10/11), depois de `integrais-de-linha`, com Explorar que mostra circulação e integral dupla coincidindo
 - [x] Os 6 tópicos têm exemplo numérico resolvido na teoria (09/11)
 - [ ] ~24 diagnósticos de armadilha só corretivos («Faltou extrair a raiz quadrada.»), concentrados aqui e no Cálculo 4
 
@@ -294,7 +294,7 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 - [ ] Geometria: congruência, quadriláteros, poliedros e Euler
 - [x] Geometria analítica: coordenadas polares (10/11)
 - [x] Combinatória: binômio de Newton (10/11)
-- [ ] Cálculo 3: integrais de superfície e teoremas
+- [x] Cálculo 3: integrais de superfície e teoremas (10/11)
 - [x] Equações exponenciais e logarítmicas (10/11)
 
 ### Fase 4 — Física para a admissão (meses)
