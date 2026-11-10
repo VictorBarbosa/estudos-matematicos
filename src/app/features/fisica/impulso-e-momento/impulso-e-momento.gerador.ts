@@ -210,6 +210,10 @@ function exercicioForcaMedia(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `O impulso é a variação do momento: o corpo perde ${massa}·${velocidade} kg·m/s. Divida pelo tempo de ${String(tempo).replace('.', ',')} s.`
+        : undefined,
   };
 }
 
@@ -267,6 +271,10 @@ function exercicioColisao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado.velocidadeFinalA,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? 'O momento total se conserva: some m·v dos dois antes (com o sinal de cada sentido) e divida pela massa total.'
+        : undefined,
   };
 }
 
@@ -343,5 +351,9 @@ function exercicioEnergiaPerdida(nivel: Nivel, rng: Rng): Exercicio<number> {
       perdida,
       proximos,
     ),
+    dica:
+      nivel === 'dificil'
+        ? 'Primeiro a velocidade comum, pela conservação do momento. Depois compare a energia cinética antes e depois: a diferença é a perdida.'
+        : undefined,
   };
 }

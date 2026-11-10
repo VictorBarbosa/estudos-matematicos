@@ -261,6 +261,10 @@ function exercicioRazaoMassas(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'dificil'
+        ? `Inverta Tsiolkovsky: Δv/vₑ = ln(m₀/m_f). Converta ${deltaVKm} km/s para m/s, divida por ${exaustao} e aplique e elevado a esse número.`
+        : undefined,
   };
 }
 
@@ -313,5 +317,9 @@ function exercicioFracaoCombustivel(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? 'O propelente é o que foi queimado: (massa inicial − massa final) dividido pela massa inicial. Converta as duas para a mesma unidade.'
+        : undefined,
   };
 }

@@ -249,6 +249,10 @@ function exercicioPotencia(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `Potência é trabalho por tempo: ${trabalho} J divididos pelos ${tempo} s.`
+        : undefined,
   };
 }
 
@@ -302,5 +306,9 @@ function exercicioAlturaMaxima(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'dificil'
+        ? `No topo a velocidade é zero: toda a energia cinética vira potencial. Iguale v²/2 a g·h, com v = ${velocidade} ao quadrado.`
+        : undefined,
   };
 }

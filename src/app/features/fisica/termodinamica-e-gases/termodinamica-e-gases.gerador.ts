@@ -169,6 +169,10 @@ function exercicioPressao(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `pV = nRT no SI: ${temperaturaCelsius} °C vira kelvin (some 273,15) e ${volumeLitros} L vira m³ (divida por 1000). A pressão sai em Pa; divida por 1000 para kPa.`
+        : undefined,
   };
 }
 
@@ -241,6 +245,10 @@ function exercicioTransformacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `Para a mesma quantidade de gás, pV/T não muda: ${pressao1}·${volume1}/${temperatura1} = ${pressao2}·V/${temperatura2}. Isole V.`
+        : undefined,
   };
 }
 
@@ -339,5 +347,9 @@ function exercicioTrabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `À pressão constante, W = p·ΔV. Use p em Pa (${pressaoAtm} atm = ${pressaoAtm} × 101 325 Pa) e ΔV em m³ (os ${volumeFinal - volumeInicial} L divididos por 1000).`
+        : undefined,
   };
 }

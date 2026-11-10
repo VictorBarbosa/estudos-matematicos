@@ -137,10 +137,8 @@ function daConducao(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'termica.conducao',
       },
     ],
-    dica:
-      nivel === 'facil'
-        ? 'Multiplique condutividade, área e diferença; divida pela espessura.'
-        : undefined,
+    // O material muda a cada sorteio, e com ele o enunciado: a dica vale em todos os níveis.
+    dica: `Multiplique a condutividade (${numero(material.k)}), a área e a diferença de ${deltaT} K; divida pela espessura.`,
   });
 }
 
@@ -179,6 +177,8 @@ function daResistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'termica.resistencia',
       },
     ],
+    // O material varia: a dica vale em todos os níveis.
+    dica: `Como na resistência elétrica: espessura sobre (condutividade × área), isto é, ${numero(espessura)} dividido por ${numero(material.k)} vezes ${numero(area)}.`,
   });
 }
 
@@ -217,6 +217,10 @@ function daConveccao(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'termica.conveccao',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `Lei de resfriamento de Newton: o fluxo é o produto direto h × A × ΔT, aqui ${h} × ${numero(area)} × ${deltaT}.`
+        : undefined,
   });
 }
 
@@ -266,6 +270,10 @@ function daRadiacao(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'termica.radiacao',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? `Passe ${celsius} °C para kelvin (some 273,15) ANTES de elevar à quarta potência.`
+        : undefined,
   });
 }
 
@@ -361,6 +369,8 @@ function daCalorimetria(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'termica.fluxo-e-energia',
       },
     ],
+    // O material varia: a dica vale em todos os níveis.
+    dica: `Q = m × c × ΔT: ${numero(massa)} kg vezes ${material.c} J/(kg·K) vezes ${deltaT} K.`,
   });
 }
 
@@ -414,6 +424,8 @@ function daMistura(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'termica.equilibrio',
       },
     ],
+    // Os materiais variam: a dica vale em todos os níveis.
+    dica: 'O calor que o quente perde é o que o frio ganha: m₁c₁(T − T₁) + m₂c₂(T − T₂) = 0. Isole T.',
   });
 }
 

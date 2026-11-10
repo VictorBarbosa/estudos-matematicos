@@ -191,6 +191,10 @@ function exercicioPeriodo(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica:
+      nivel === 'dificil'
+        ? `O raio da órbita é medido do CENTRO: some o raio da Terra (6371 km) aos ${altitudeKm.toLocaleString('pt-BR')} km. Depois T = 2π·r/v, com v = √(GM/r).`
+        : undefined,
   };
 }
 
@@ -243,6 +247,7 @@ function exercicioEscape(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: `A energia cinética precisa cancelar a potencial: v = √(2GM/R), com a massa e o raio de ${corpo.nome}. A conta sai em m/s; divida por 1000.`,
   };
 }
 

@@ -113,7 +113,14 @@ export const geradorBalistica: GeradorExercicio<number> = {
       },
       conceitos: ['balistica.independencia', 'balistica.alcance'],
       armadilhas: semColisoes(armadilhas, gabarito, proximos),
-      dica: nivel === 'facil' ? 'Decomponha a velocidade antes de qualquer conta.' : undefined,
+      dica:
+        nivel === 'facil'
+          ? 'Decomponha a velocidade antes de qualquer conta.'
+          : nivel === 'medio' && pergunta === 'alcance'
+            ? `O alcance usa as duas componentes: o tempo de voo vem da vertical (${velocidadeInicial}·sen ${anguloGraus}°) e a distância, da horizontal (${velocidadeInicial}·cos ${anguloGraus}° vezes esse tempo).`
+            : nivel === 'dificil' && alturaInicial > 0
+              ? `Partindo de ${alturaInicial} m, o projétil cai ALÉM do nível de lançamento: some a altura inicial (na altura máxima) ou resolva y(t) = 0 com ela (no tempo de voo).`
+              : undefined,
     };
   },
 

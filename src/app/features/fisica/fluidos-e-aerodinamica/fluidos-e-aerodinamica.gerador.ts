@@ -198,6 +198,10 @@ function exercicioFracaoSubmersa(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado.fracaoSubmersa,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `Flutuando, o peso iguala o empuxo; o volume se cancela e a fração submersa é a razão das densidades: ${densidadeCorpo} sobre 1000.`
+        : undefined,
   };
 }
 
@@ -254,6 +258,10 @@ function exercicioSustentacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `Bernoulli dá a diferença de pressão, (ρ/2)·(${superior}² − ${inferior}²); a sustentação é essa diferença vezes a área de ${area} m².`
+        : undefined,
   };
 }
 
@@ -337,5 +345,9 @@ function exercicioBernoulli(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica:
+      nivel === 'dificil'
+        ? `Num duto horizontal, a energia de pressão vira energia de movimento: a queda é (ρ/2)·(${velocidadeB}² − ${velocidadeA}²), com ρ do ar = 1,225 kg/m³.`
+        : undefined,
   };
 }
