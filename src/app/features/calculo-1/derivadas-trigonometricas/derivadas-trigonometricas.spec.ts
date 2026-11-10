@@ -220,3 +220,38 @@ describe('derivadas trigonométricas', () => {
     expect(resultado).toBeCloseTo(1, 10);
   });
 });
+
+describe('geradorDerivadasTrig — derivada segunda e reta tangente', () => {
+  const rng = criarRng(27_182);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorDerivadasTrig.gerar(nivel, rng));
+  const lerId = (id: string) => {
+    const [, f, a, b, k, m] = /^trig-(?:segunda|reta)-(sen|cos)-(\d)(\d)-(\d+)(\d)-/.exec(id)!;
+    const fn = (x: number) =>
+      Number(a) * (f === 'sen' ? Math.sin(Number(b) * x) : Math.cos(Number(b) * x));
+    return { fn, x0: (Number(k) * Math.PI) / Number(m) };
+  };
+
+  it('a derivada segunda confere com a diferença finita', () => {
+    const casos = [...lote('facil'), ...lote('dificil')].filter((e) =>
+      e.id.startsWith('trig-segunda'),
+    );
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const { fn, x0 } = lerId(e.id);
+      const h = 1e-3;
+      expect(e.gabarito).toBeCloseTo((fn(x0 + h) - 2 * fn(x0) + fn(x0 - h)) / (h * h), 3);
+    }
+  });
+
+  it('o coeficiente linear da tangente confere', () => {
+    const casos = lote('extremo').filter((e) => e.id.startsWith('trig-reta'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const { fn, x0 } = lerId(e.id);
+      const h = 1e-6;
+      const m = (fn(x0 + h) - fn(x0 - h)) / (2 * h);
+      expect(e.gabarito).toBeCloseTo(fn(x0) - m * x0, 4);
+    }
+  });
+});

@@ -36,7 +36,9 @@ describe('geradorLaterais', () => {
 
   it('no nível fácil as sentenças emendam, e o limite existe', () => {
     // Só a função por partes; o módulo tem os laterais opostos de propósito.
-    for (const exercicio of amostra('facil').filter((e) => e.enunciadoTex.includes('\\begin{cases}'))) {
+    for (const exercicio of amostra('facil').filter((e) =>
+      e.enunciadoTex.includes('\\begin{cases}'),
+    )) {
       const ultimoPasso = exercicio.resolucao.passos.at(-1)!;
       expect(ultimoPasso.descricao).toContain('coincidem');
     }
@@ -60,5 +62,37 @@ describe('geradorLaterais', () => {
 
     expect(resultado.veredito).toBe('incorreto');
     expect(resultado.conceitoAssociado).toBe('laterais.por-partes');
+  });
+});
+
+describe('geradorLaterais — módulo e lateral infinito', () => {
+  const rng = criarRng(42_424);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorLaterais.gerar(nivel, rng));
+
+  it('o lateral com módulo confere com a função avaliada do lado pedido', () => {
+    const casos = lote('medio').filter((e) => e.id.startsWith('laterais-modulo'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, lado, a] = /pela (esquerda|direita) no ponto x = (-?\d+)/.exec(e.enunciado)!;
+      const [, k, , , cs, c] =
+        /\\frac\{(\d*)\|x ([+-]) (\d+)\|\}\{x [+-] \d+\}(?: ([+-]) (\d+))?/.exec(e.enunciadoTex)!;
+      const K = Number(k || 1);
+      const C = cs ? (cs === '+' ? 1 : -1) * Number(c) : 0;
+      const x = Number(a) + (lado === 'direita' ? 1e-7 : -1e-7);
+      expect(e.gabarito).toBeCloseTo((K * Math.abs(x - Number(a))) / (x - Number(a)) + C, 6);
+    }
+  });
+
+  it('o lateral infinito tem o sinal da função perto do ponto', () => {
+    const casos = lote('dificil').filter((e) => e.id.startsWith('laterais-infinito'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, lado, a] = /pela (esquerda|direita) em x = (-?\d+)/.exec(e.enunciado)!;
+      const [, k, n] = /\\frac\{(-?\d+)\}\{\(x [+-] \d+\)(?:\^\{(\d)\})?\}/.exec(e.enunciadoTex)!;
+      const x = Number(a) + (lado === 'direita' ? 1e-4 : -1e-4);
+      const valor = Number(k) / (x - Number(a)) ** Number(n ?? 1);
+      expect(e.gabarito).toBe(valor > 0 ? 1 : 2);
+    }
   });
 });

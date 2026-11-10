@@ -93,3 +93,37 @@ describe('outras cascas (Extremo)', () => {
     }
   });
 });
+
+describe('geradorCadeia — derivada segunda e três camadas', () => {
+  const rng = criarRng(73_737);
+  const lote = (nivel: Nivel) => Array.from({ length: 300 }, () => geradorCadeia.gerar(nivel, rng));
+  const binomio = (tex: string) => {
+    const [, a, s, b] = /\\left\((\d*)x ([+-]) (\d+)\\right\)/.exec(tex)!;
+    return [Number(a || 1), (s === '+' ? 1 : -1) * Number(b)] as const;
+  };
+
+  it('a derivada segunda confere com a diferença finita', () => {
+    const casos = lote('medio').filter((e) => e.id.startsWith('cadeia-segunda'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [a, b] = binomio(e.enunciadoTex);
+      const n = Number(/\^\{(\d+)\}$/.exec(e.enunciadoTex)![1]);
+      const p = Number(/f''\((-?\d+)\)/.exec(e.enunciado)![1]);
+      const f = (x: number) => (a * x + b) ** n;
+      const h = 1e-3;
+      expect(e.gabarito).toBeCloseTo((f(p + h) - 2 * f(p) + f(p - h)) / (h * h), 1);
+    }
+  });
+
+  it('as três camadas conferem com a derivada numérica', () => {
+    const casos = lote('dificil').filter((e) => e.id.startsWith('cadeia-tres'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [a, b] = binomio(e.enunciadoTex);
+      const p = Number(/f'\((-?\d+)\)/.exec(e.enunciado)![1]);
+      const f = (x: number) => Math.log(1 + (a * x + b) ** 2);
+      const h = 1e-6;
+      expect(e.gabarito).toBeCloseTo((f(p + h) - f(p - h)) / (2 * h), 4);
+    }
+  });
+});

@@ -58,3 +58,52 @@ describe('geradorLimites', () => {
     expect(exercicio).toBeDefined();
   });
 });
+
+describe('geradorLimites — limite fundamental e existência', () => {
+  const rng = criarRng(11_235);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorLimites.gerar(nivel, rng));
+
+  it('o limite fundamental confere com o valor da função perto de zero', () => {
+    for (const nivel of ['facil', 'medio', 'dificil', 'extremo'] as const) {
+      const casos = lote(nivel).filter((e) => e.id.startsWith('lim-fund'));
+      expect(casos.length).toBeGreaterThan(0);
+      for (const e of casos) {
+        const t = e.enunciadoTex;
+        const x = 1e-4;
+        let valor: number;
+        const cos = /\\frac\{1 - \\cos\((\d+)x\)\}\{x\^\{2\}\}/.exec(t);
+        if (cos) {
+          valor = (1 - Math.cos(Number(cos[1]) * x)) / (x * x);
+        } else {
+          const [, k, den] = /\\frac\{\\sin\((\d+)x\)\}\{(.+)\}$/.exec(t)!;
+          const s = /\\sin\((\d+)x\)/.exec(den!);
+          const d = s
+            ? Math.sin(Number(s[1]) * x)
+            : den === 'x'
+              ? x
+              : Number(den!.replace('x', '')) * x;
+          valor = Math.sin(Number(k) * x) / d;
+        }
+        expect(e.gabarito).toBeCloseTo(valor, 2);
+      }
+    }
+  });
+
+  it('a classificação confere com os laterais calculados perto do ponto', () => {
+    const casos = lote('extremo').filter((e) => e.id.startsWith('lim-existe'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, caso, a, k] = /^lim-existe-(existe|infinito|salto)-(-?\d+)-(\d+)-/.exec(e.id)!;
+      const [A, K] = [Number(a), Number(k)];
+      const f = {
+        existe: (x: number) => (x * x - A * A) / (x - A),
+        infinito: (x: number) => K / (x - A) ** 2,
+        salto: (x: number) => (K * Math.abs(x - A)) / (x - A),
+      }[caso as 'existe' | 'infinito' | 'salto'];
+      const [esq, dir] = [f(A - 1e-7), f(A + 1e-7)];
+      const codigo = Math.abs(esq) > 1e6 ? 2 : Math.abs(esq - dir) > 1e-3 ? 3 : 1;
+      expect(e.gabarito).toBe(codigo);
+    }
+  });
+});
