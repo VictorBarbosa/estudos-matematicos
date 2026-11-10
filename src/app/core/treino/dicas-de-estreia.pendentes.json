@@ -1,0 +1,746 @@
+{
+  "analise-combinatoria": [
+    "dificil | Uma comissão terá N entre N engenheiros e N entre N técnicasN Quantas comissões diferentes são possíveis?",
+    "medio | Entre N pessoasN de quantos modos se pode formar uma fila de N importando a ordem?",
+    "medio | Quantos anagramas distintos tem a palavra AMOR?",
+    "medio | Quantos anagramas distintos tem a palavra ARARA?",
+    "medio | Quantos anagramas distintos tem a palavra BANANA?",
+    "medio | Quantos anagramas distintos tem a palavra BATATA?",
+    "medio | Quantos anagramas distintos tem a palavra CARRO?",
+    "medio | Quantos anagramas distintos tem a palavra CASA?",
+    "medio | Quantos anagramas distintos tem a palavra LIVRO?",
+    "medio | Quantos anagramas distintos tem a palavra MATEMATICA?",
+    "medio | Quantos anagramas distintos tem a palavra OVO?"
+  ],
+  "analise-dimensional": [
+    "dificil | Considere o produto de aceleração angular por constante elástica elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Considere o produto de aceleração angular por velocidade elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Considere o produto de comprimento por torque elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Considere o produto de constante elástica por vazão mássica elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "dificil | Considere o produto de densidade por densidade elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Considere o produto de impulso por massa elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Considere o produto de massa por densidade superficial elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "dificil | Considere o produto de massa por vazão elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Considere o produto de massa por área elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Considere o produto de momento de inércia por densidade elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Considere o produto de momento de inércia por tempo elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Considere o produto de momento linear por potência elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Considere o produto de potência por tensão superficial elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Considere o produto de potência por torque elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Considere o produto de potência por vazão elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "dificil | Considere o produto de potência por velocidade elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "dificil | Considere o produto de pressão por tempo elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "dificil | Considere o produto de tempo por frequência elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Considere o produto de tempo por área elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Considere o produto de torque por tensão superficial elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Considere o produto de vazão mássica por torque elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Considere o produto de vazão mássica por volume elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Considere o produto de vazão por tempo elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Considere o produto de velocidade por tensão superficial elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "dificil | Considere o produto de volume por comprimento elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Considere o produto de volume por força elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Considere o produto de volume por vazão elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "dificil | Considere o produto de área por torque elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "dificil | Na dimensão de frequência (unidade Hz)N qual é o expoente de M? (responda N se não aparece)",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) comprimento sobre gravidade\nN) raiz de comprimento sobre gravidade\nN) raiz de gravidade sobre comprimento\nN) raiz do produto",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) comprimento sobre gravidade\nN) raiz de comprimento sobre gravidade\nN) raiz do produto\nN) raiz de gravidade sobre comprimento",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) comprimento sobre gravidade\nN) raiz de gravidade sobre comprimento\nN) raiz de comprimento sobre gravidade\nN) raiz do produto",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) raiz de comprimento sobre gravidade\nN) comprimento sobre gravidade\nN) raiz de gravidade sobre comprimento\nN) raiz do produto",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) raiz de comprimento sobre gravidade\nN) raiz de gravidade sobre comprimento\nN) comprimento sobre gravidade\nN) raiz do produto",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) raiz de comprimento sobre gravidade\nN) raiz de gravidade sobre comprimento\nN) raiz do produto\nN) comprimento sobre gravidade",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) raiz de comprimento sobre gravidade\nN) raiz do produto\nN) raiz de gravidade sobre comprimento\nN) comprimento sobre gravidade",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) raiz de gravidade sobre comprimento\nN) comprimento sobre gravidade\nN) raiz de comprimento sobre gravidade\nN) raiz do produto",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) raiz de gravidade sobre comprimento\nN) raiz de comprimento sobre gravidade\nN) comprimento sobre gravidade\nN) raiz do produto",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) raiz de gravidade sobre comprimento\nN) raiz de comprimento sobre gravidade\nN) raiz do produto\nN) comprimento sobre gravidade",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) raiz de gravidade sobre comprimento\nN) raiz do produto\nN) raiz de comprimento sobre gravidade\nN) comprimento sobre gravidade",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) raiz do produto\nN) raiz de comprimento sobre gravidade\nN) raiz de gravidade sobre comprimento\nN) comprimento sobre gravidade",
+    "dificil | Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opçãoN\nN) raiz do produto\nN) raiz de gravidade sobre comprimento\nN) comprimento sobre gravidade\nN) raiz de comprimento sobre gravidade",
+    "extremo | Considere o produto de aceleração angular por aceleração angular elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de aceleração angular por comprimento elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de aceleração angular por massa elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de aceleração angular por tensão superficial elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de comprimento por tempo elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de comprimento por volume elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de constante elástica por energia elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de constante elástica por impulso elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de densidade por frequência elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de densidade por vazão mássica elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de densidade superficial por densidade elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de densidade superficial por pressão elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de energia por densidade superficial elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de energia por energia elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de energia por pressão elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de força por constante elástica elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de frequência por densidade elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de frequência por tensão superficial elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de impulso por aceleração angular elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de impulso por pressão elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de impulso por pressão elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de massa por densidade superficial elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de massa por momento linear elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de massa por tempo elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de massa por torque elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de massa por vazão mássica elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de massa por área elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de massa por área elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de massa por área elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de momento de inércia por comprimento elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de momento de inércia por frequência elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de momento de inércia por tempo elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de momento linear por aceleração elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de momento linear por comprimento elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de momento linear por vazão elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de potência por frequência elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de pressão por aceleração elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de pressão por densidade elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de pressão por densidade superficial elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de pressão por densidade superficial elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de pressão por densidade superficial elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de pressão por massa elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de tempo por aceleração elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de tempo por constante elástica elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de tempo por densidade elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de tempo por pressão elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de tempo por tempo elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de tensão superficial por frequência elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de tensão superficial por impulso elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de vazão mássica por momento de inércia elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de velocidade por pressão elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de velocidade por torque elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de volume por constante elástica elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de volume por constante elástica elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de volume por constante elástica elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "extremo | Considere o produto de volume por energia elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "extremo | Considere o produto de volume por frequência elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "extremo | Considere o produto de volume por pressão elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de aceleração angular por momento de inércia elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de aceleração por vazão elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de constante elástica por força elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de densidade superficial por potência elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de energia por massa elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "medio | Considere o produto de força por momento linear elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de força por pressão elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de frequência por impulso elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de frequência por potência elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "medio | Considere o produto de impulso por frequência elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de massa por volume elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "medio | Considere o produto de momento de inércia por pressão elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de momento de inércia por tempo elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de momento linear por densidade superficial elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "medio | Considere o produto de potência por volume elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "medio | Considere o produto de pressão por massa elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de pressão por volume elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de tempo por momento de inércia elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de tensão superficial por tensão superficial elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de tensão superficial por tensão superficial elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "medio | Considere o produto de tensão superficial por vazão elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de torque por constante elástica elevado ao cuboN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de torque por frequência elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de torque por pressão elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de torque por área elevado ao cuboN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "medio | Considere o produto de vazão mássica por aceleração elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de vazão mássica por momento linear elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de T? (responda N se não aparece)",
+    "medio | Considere o produto de vazão por força elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de vazão por momento linear elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de velocidade por aceleração elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de velocidade por densidade superficial elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Considere o produto de volume por momento de inércia elevado ao quadradoN Na dimensão do resultadoN qual é o expoente de L? (responda N se não aparece)",
+    "medio | Considere o produto de volume por área elevado ao cuboN Na dimensão do resultadoN qual é o expoente de M? (responda N se não aparece)",
+    "medio | Converta N g/cm³ para kg/m³N",
+    "medio | Converta N m² para cm²N",
+    "medio | Converta N m³ para cm³N",
+    "medio | Converta N m³ para litrosN",
+    "medio | Na dimensão de aceleração (unidade m/s²)N qual é o expoente de M? (responda N se não aparece)",
+    "medio | Na dimensão de constante elástica (unidade N/m)N qual é o expoente de T? (responda N se não aparece)",
+    "medio | Na dimensão de impulso (unidade N·s)N qual é o expoente de M? (responda N se não aparece)",
+    "medio | Na dimensão de potência (unidade W)N qual é o expoente de M? (responda N se não aparece)",
+    "medio | Na dimensão de torque (unidade N·m)N qual é o expoente de M? (responda N se não aparece)",
+    "medio | Na dimensão de vazão (unidade m³/s)N qual é o expoente de M? (responda N se não aparece)",
+    "medio | Na dimensão de vazão (unidade m³/s)N qual é o expoente de T? (responda N se não aparece)",
+    "medio | Na dimensão de volume (unidade m³)N qual é o expoente de T? (responda N se não aparece)",
+    "medio | Quantos metros por segundo valem N km/h?"
+  ],
+  "angulos-e-triangulos": [
+    "dificil | Quanto mede cada ângulo interno de um heptágono regular? (em graus)",
+    "dificil | Quanto mede cada ângulo interno de um octógono regular? (em graus)",
+    "dificil | Quanto mede cada ângulo interno de um quadrilátero regular? (em graus)",
+    "dificil | Um polígono regular tem ângulo interno de N°N Quantos lados ele tem?",
+    "medio | Qual é a soma dos ângulos internos de um decágono? (em graus)",
+    "medio | Qual é a soma dos ângulos internos de um dodecágono? (em graus)",
+    "medio | Qual é a soma dos ângulos internos de um quadrilátero? (em graus)",
+    "medio | Quanto mede cada ângulo interno de um decágono regular? (em graus)",
+    "medio | Quanto mede cada ângulo interno de um dodecágono regular? (em graus)",
+    "medio | Quanto mede cada ângulo interno de um eneágono regular? (em graus)",
+    "medio | Quanto mede cada ângulo interno de um hexágono regular? (em graus)",
+    "medio | Quanto mede cada ângulo interno de um pentágono regular? (em graus)",
+    "medio | Quanto mede cada ângulo interno de um polígono de N lados regular? (em graus)",
+    "medio | Quanto mede cada ângulo interno de um triângulo regular? (em graus)"
+  ],
+  "aplicacoes-da-derivada": [
+    "dificil | A função é crescente num único intervalo limitado (aN b)N Informe aN o extremo esquerdoN",
+    "dificil | A função é crescente num único intervalo limitado (aN b)N Informe bN o extremo direitoN",
+    "facil | Esta função tem dois pontos críticosN Informe o MAIOR delesN",
+    "medio | O lado de um quadrado cresce N cm/sN A que taxa cresce a ÁREA no instante em que o lado mede N cm? (em cm²/s)",
+    "medio | Qual é o valor do MÁXIMO local desta função?"
+  ],
+  "aplicacoes-da-integral": [
+    "facil | Qual é a área sob a curva de N a N? (N casas decimais)",
+    "medio | Girando a reta em torno do eixo xN de N a N qual é o volume do sólido? (N casas decimais)"
+  ],
+  "aplicacoes-de-edo": [
+    "dificil | Uma massa de N kg presa a uma mola de constante N N/mN com amortecimento N N·s/mN é solta do repouso a N m do equilíbrioN Qual é a posição em t = N sN em m? Responda com N casas decimaisN",
+    "facil | Uma amostra de N g tem meia-vida de N anosN Quanto resta depois de N anosN em g? Responda com N casas decimaisN"
+  ],
+  "areas-de-figuras-planas": [
+    "medio | Um retângulo tem área N cm² e base N cmN Qual é sua alturaN em cm?",
+    "medio | Um trapézio tem bases N cm e N cm e altura N cmN Qual é sua áreaN em cm²?",
+    "medio | Um triângulo tem área N cm² e base N cmN Qual é sua alturaN em cm?"
+  ],
+  "cinematica-escalar": [
+    "medio | Partindo de N m/s com aceleração de N m/s²N qual é a velocidade após percorrer N m? (N casas decimais)",
+    "medio | Um veículo a N m/s freia com desaceleração de N m/s²N Em quanto tempo ele para? (N casas decimais)"
+  ],
+  "cinematica-vetorial": [
+    "dificil | Com esta velocidade e esta aceleraçãoN em unidades do SIN qual é o raio de curvatura da trajetória nesse instanteN em m? Responda com N casas decimaisN",
+    "dificil | Um barco de N m/s quer atravessar um rio de correnteza N m/s chegando exatamente em frente ao ponto de partidaN Quantos grausN em relação à perpendicularN ele deve apontar rio acima? Responda com N casas decimaisN",
+    "facil | A primeira é a velocidade da aeronave em relação ao ar e a segunda é a do ventoN em m/sN Qual é o módulo da velocidade em relação ao solo? Responda com N casas decimaisN",
+    "medio | Num certo instanteN um corpo tem esta velocidade e esta aceleraçãoN em unidades do SIN Qual é a componente TANGENCIAL da aceleraçãoN em m/s²? Responda com N casas decimaisN"
+  ],
+  "circulo-e-poligonos": [
+    "medio | Qual é a área de um setor circular de raio N cm e ângulo N°? (em cm²N N casas decimais)",
+    "medio | Um círculo tem área N cm²N Qual é o seu raio? (em cmN N casas decimais)"
+  ],
+  "circulo-trigonometrico": [
+    "facil | Converta N° para radianosN (N casas decimais)",
+    "medio | Qual é o valor de cos N°? (N casas decimais)",
+    "medio | Qual é o valor de sen N°? (N casas decimais)"
+  ],
+  "circunferencia": [
+    "facil | Qual é o raio desta circunferência?",
+    "medio | Qual é a distância do ponto (N N) ao centro desta circunferência?"
+  ],
+  "composicao-inversa": ["facil | Calcule f(g(N))N", "medio | Calcule g(f(N))N"],
+  "conceito-funcao": [
+    "facil | Calcule f(N)N",
+    "medio | Qual é o MENOR valor que esta função pode assumir?"
+  ],
+  "conicas": [
+    "facil | Qual é a distância focal c desta elipse?",
+    "medio | Qual é a distância focal c desta hipérbole?",
+    "medio | Qual é o valor do semieixo a desta hipérbole?"
+  ],
+  "continuidade": ["medio | Qual valor de k torna a função contínua em x = N?"],
+  "coordenadas-no-espaco": [
+    "dificil | Um ponto tem coordenadas cartesianas (N N N)N Qual é o raio ρ dele em coordenadas esféricas? Responda com N casas decimaisN",
+    "dificil | Um ponto tem coordenadas esféricas ρ = N φ = N° (medido do eixo z) e θ = N°N Qual é a coordenada cartesiana x? Responda com N casas decimaisN",
+    "medio | Um ponto tem coordenadas esféricas ρ = N φ = N° (medido do eixo z) e θ = N°N Qual é a coordenada cartesiana z? Responda com N casas decimaisN"
+  ],
+  "definicao-de-derivada": ["facil | Usando a definiçãoN calcule f'(N)N"],
+  "derivacao-implicita": [
+    "extremo | A curva passa pelo ponto (N N)N Encontre a reta tangente nesse ponto e informe onde ela corta o eixo yN Responda como fração ou com N casas decimaisN"
+  ],
+  "derivadas-parciais": [
+    "medio | Qual é a segunda derivada parcial em relação a xN duas vezes? Responda com N casas decimaisN",
+    "medio | Qual é a segunda derivada parcial em relação a yN duas vezes? Responda com N casas decimaisN"
+  ],
+  "dinamica-rotacional": [
+    "medio | Um disco ou cilindro maciço de N kg e N m de raio gira a N rad/sN Qual é a energia cinética de rotaçãoN em J? Responda com N casas decimaisN",
+    "medio | Um partícula de N kg e N m de raio gira a N rad/sN Qual é a energia cinética de rotaçãoN em J? Responda com N casas decimaisN",
+    "medio | Um torque de N N·m é aplicado a um disco ou cilindro maciço de N kg e N m de raioN Qual é a aceleração angularN em rad/s²? Responda com N casas decimaisN",
+    "medio | Um torque de N N·m é aplicado a um partícula de N kg e N m de raioN Qual é a aceleração angularN em rad/s²? Responda com N casas decimaisN",
+    "medio | Um torque de N N·m é aplicado a uma casca cilíndrica de N kg e N m de raioN Qual é a aceleração angularN em rad/s²? Responda com N casas decimaisN",
+    "medio | Um torque de N N·m é aplicado a uma casca esférica de N kg e N m de raioN Qual é a aceleração angularN em rad/s²? Responda com N casas decimaisN",
+    "medio | Um torque de N N·m é aplicado a uma esfera maciça de N kg e N m de raioN Qual é a aceleração angularN em rad/s²? Responda com N casas decimaisN",
+    "medio | Uma casca cilíndrica de N kg e N m de raio gira a N rad/sN Qual é a energia cinética de rotaçãoN em J? Responda com N casas decimaisN",
+    "medio | Uma casca esférica de N kg e N m de raio gira a N rad/sN Qual é a energia cinética de rotaçãoN em J? Responda com N casas decimaisN",
+    "medio | Uma esfera maciça de N kg e N m de raio gira a N rad/sN Qual é a energia cinética de rotaçãoN em J? Responda com N casas decimaisN"
+  ],
+  "distribuicao-normal": [
+    "dificil | Um lote de parafusos tem a resistência à tração normalN com média N MPa e desvio N MPaN Que proporção fica entre N e N MPa? Responda entre N e N com N casas decimaisN",
+    "dificil | Um motor de série tem o empuxo medido normalN com média N kN e desvio N kNN Que proporção fica entre N e N kN? Responda entre N e N com N casas decimaisN",
+    "dificil | Um sensor tem a leitura normalN com média N mV e desvio N mVN Que proporção fica entre N e N mV? Responda entre N e N com N casas decimaisN",
+    "dificil | Uma bateria tem a capacidade normalN com média N Ah e desvio N AhN Que proporção fica entre N e N Ah? Responda entre N e N com N casas decimaisN",
+    "dificil | Uma peça usinada tem o diâmetro normalN com média N mm e desvio N mmN Que proporção fica entre N e N mm? Responda entre N e N com N casas decimaisN",
+    "facil | Um lote de parafusos tem a resistência à tração normalN com média N MPa e desvio N MPaN Que proporção fica a até N desvio(s) padrão da média? Responda entre N e N com N casas decimaisN",
+    "facil | Um motor de série tem o empuxo medido normalN com média N kN e desvio N kNN Que proporção fica a até N desvio(s) padrão da média? Responda entre N e N com N casas decimaisN",
+    "facil | Um sensor tem a leitura normalN com média N mV e desvio N mVN Que proporção fica a até N desvio(s) padrão da média? Responda entre N e N com N casas decimaisN",
+    "facil | Uma bateria tem a capacidade normalN com média N Ah e desvio N AhN Que proporção fica a até N desvio(s) padrão da média? Responda entre N e N com N casas decimaisN",
+    "facil | Uma peça usinada tem o diâmetro normalN com média N mm e desvio N mmN Que proporção fica a até N desvio(s) padrão da média? Responda entre N e N com N casas decimaisN",
+    "medio | Um lote de parafusos tem a resistência à tração normalN com média N MPa e desvio N MPaN Que proporção fica ABAIXO de N MPa? Responda entre N e N com N casas decimaisN",
+    "medio | Um lote de parafusos tem a resistência à tração normalN com média N MPa e desvio N MPaN Que proporção fica ACIMA de N MPa? Responda entre N e N com N casas decimaisN",
+    "medio | Um motor de série tem o empuxo medido normalN com média N kN e desvio N kNN Que proporção fica ABAIXO de N kN? Responda entre N e N com N casas decimaisN",
+    "medio | Um motor de série tem o empuxo medido normalN com média N kN e desvio N kNN Que proporção fica ACIMA de N kN? Responda entre N e N com N casas decimaisN",
+    "medio | Um sensor tem a leitura normalN com média N mV e desvio N mVN Que proporção fica ABAIXO de N mV? Responda entre N e N com N casas decimaisN",
+    "medio | Um sensor tem a leitura normalN com média N mV e desvio N mVN Que proporção fica ACIMA de N mV? Responda entre N e N com N casas decimaisN",
+    "medio | Uma bateria tem a capacidade normalN com média N Ah e desvio N AhN Que proporção fica ABAIXO de N Ah? Responda entre N e N com N casas decimaisN",
+    "medio | Uma bateria tem a capacidade normalN com média N Ah e desvio N AhN Que proporção fica ACIMA de N Ah? Responda entre N e N com N casas decimaisN",
+    "medio | Uma peça usinada tem o diâmetro normalN com média N mm e desvio N mmN Que proporção fica ABAIXO de N mm? Responda entre N e N com N casas decimaisN",
+    "medio | Uma peça usinada tem o diâmetro normalN com média N mm e desvio N mmN Que proporção fica ACIMA de N mm? Responda entre N e N com N casas decimaisN"
+  ],
+  "edo-primeira-ordem": [
+    "medio | Resolva esta equação com y(N) igual a N e calcule y(N)N Responda com N casas decimaisN",
+    "medio | Uma substância decai segundo esta equaçãoN com t em anosN Qual é a meia-vida delaN em anos? Responda com N casas decimaisN"
+  ],
+  "edo-segunda-ordem": [
+    "facil | Qual é o discriminante da equação característica desta EDO? Responda com N casas decimaisN",
+    "medio | Com y(N) = N e y'(N) = N quanto vale a solução em t = N? Responda com N casas decimaisN"
+  ],
+  "equacao-segundo-grau": [
+    "dificil | Esta equação não tem raízes reaisN Informe o valor do discriminante ΔN"
+  ],
+  "equacoes-parametricas": [
+    "dificil | Um projétil parte a N m/s formando N graus com a horizontalN com g igual a N m/s²N Qual é o alcanceN em m? Responda com N casas decimaisN",
+    "facil | Qual é a coordenada y quando o parâmetro vale N doze avos de uma volta completa? Responda com N casas decimaisN",
+    "medio | Qual é a coordenada x quando o parâmetro vale N doze avos de uma volta? Responda com N casas decimaisN",
+    "medio | Um projétil parte a N m/s formando N graus com a horizontalN com g igual a N m/s²N Qual é a altura no instante t = N s? Responda com N casas decimaisN"
+  ],
+  "equacoes-trigonometricas": [
+    "extremo | Resolva em [N°N N°) e informe a maior soluçãoN em grausN (N casas decimais)"
+  ],
+  "estatica-e-torque": [
+    "dificil | Uma barra homogênea de N m e N N está apoiada numa pontaN Uma carga de N N está a N m desse apoioN Que força vertical na outra ponta mantém a barra em equilíbrioN em newtons? (N casas decimais)",
+    "medio | Três corpos sobre uma barra: N kg em x = N mN N kg em x = N mN N kg em x = N mN Onde fica o centro de massaN em metros? (N casas decimais)"
+  ],
+  "estatistica-e-incerteza": [
+    "dificil | Um retângulo tem base N ± N cm e altura N ± N cmN Qual é a incerteza da áreaN em cm²? (N casas decimais)",
+    "facil | Para as medidas N; N; N; N qual é a mediana? (N casas decimais)",
+    "facil | Para as medidas N; N; N; N; N qual é a mediana? (N casas decimais)",
+    "facil | Para as medidas N; N; N; N; N; N qual é a mediana? (N casas decimais)",
+    "facil | Para as medidas N; N; N; N; N; N; N qual é a mediana? (N casas decimais)",
+    "facil | Para as medidas N; N; N; N; N; N; N; N qual é a mediana? (N casas decimais)",
+    "medio | Para as medidas N; N; N; N qual é a incerteza da média (desvio padrão da média)? (N casas decimais)",
+    "medio | Para as medidas N; N; N; N qual é o desvio padrão amostral? (N casas decimais)",
+    "medio | Para as medidas N; N; N; N; N qual é a incerteza da média (desvio padrão da média)? (N casas decimais)",
+    "medio | Para as medidas N; N; N; N; N qual é o desvio padrão amostral? (N casas decimais)",
+    "medio | Para as medidas N; N; N; N; N; N qual é a incerteza da média (desvio padrão da média)? (N casas decimais)",
+    "medio | Para as medidas N; N; N; N; N; N qual é o desvio padrão amostral? (N casas decimais)",
+    "medio | Para as medidas N; N; N; N; N; N; N qual é a incerteza da média (desvio padrão da média)? (N casas decimais)",
+    "medio | Para as medidas N; N; N; N; N; N; N qual é o desvio padrão amostral? (N casas decimais)",
+    "medio | Para as medidas N; N; N; N; N; N; N; N qual é a incerteza da média (desvio padrão da média)? (N casas decimais)",
+    "medio | Para as medidas N; N; N; N; N; N; N; N qual é o desvio padrão amostral? (N casas decimais)"
+  ],
+  "expressoes-algebricas": [
+    "extremo | DistribuaN reduza os termos semelhantes e informe o coeficiente de xN",
+    "medio | Reduza os termos semelhantes e informe o coeficiente de x no resultadoN"
+  ],
+  "fatoracao": [
+    "extremo | Fatore a expressão e informe a raiz REAL — só existe umaN Responda como fraçãoN exN: N/N",
+    "extremo | Fatore por agrupamento e informe a MAIOR raiz realN Responda como fraçãoN exN: N/N"
+  ],
+  "fluidos-e-aerodinamica": [
+    "dificil | Ar acelera de N para N m/s num duto horizontalN De quanto CAI a pressãoN em Pa? (N casa decimal)",
+    "medio | Um corpo de densidade N kg/m³ flutua em águaN Que fração do seu volume fica submersa? (responda entre N e N com N casas decimais)",
+    "medio | Uma asa de N m² tem ar a N m/s na face superior e N m/s na inferiorN Qual é a sustentaçãoN em newtons? (N casas decimais)"
+  ],
+  "fracoes": ["medio | Converta os números mistos em fraçõesN calcule e simplifiqueN"],
+  "funcao-afim": [
+    "facil | Qual é o valor de f(N)?",
+    "medio | Qual é a taxa de variação da funçãoN ou sejaN quanto y muda quando x avança N?"
+  ],
+  "funcao-exponencial": [
+    "facil | Qual é o valor de f(N)?",
+    "medio | Quantas unidades de x são necessárias para o valor DOBRAR? (arredonde para N casas)"
+  ],
+  "funcao-logaritmica": [
+    "facil | Calcule o logaritmoN",
+    "medio | Use a propriedade do produto e informe o valorN"
+  ],
+  "funcao-modular": [
+    "facil | Qual é o valor de f(N)?",
+    "medio | Em que valor de x fica o \"bico\" do gráfico? Responda como fraçãoN",
+    "medio | Resolva a equação modular e informe a MAIOR das soluçõesN",
+    "medio | Resolva a equação modular e informe a MAIOR das soluçõesN Responda como fraçãoN"
+  ],
+  "funcao-quadratica": [
+    "facil | Qual é o valor de f(N)?",
+    "medio | Qual é o valor máximo ou mínimo da funçãoN ou sejaN a ordenada do vértice?"
+  ],
+  "funcoes-de-varias-variaveis": [
+    "facil | Qual é o valor de k da curva de nível que passa pelo ponto (N N)? Responda com N casas decimaisN",
+    "medio | No domínio desta funçãoN qual é o maior valor que x pode assumir quando y = N? Responda com N casas decimaisN"
+  ],
+  "funcoes-por-partes": [
+    "dificil | De quanto é o salto desta função em x = N? Use o limite pela direita menos o limite pela esquerdaN Responda com N casas decimaisN",
+    "medio | Qual é o limite desta função quando x tende a N pela DIREITA? Responda com N casas decimaisN",
+    "medio | Qual é o limite desta função quando x tende a N pela ESQUERDA? Responda com N casas decimaisN"
+  ],
+  "funcoes-racionais": [
+    "dificil | Esta função tem assíntota oblíquaN Qual é o coeficiente angular dessa reta? Responda com N casas decimaisN",
+    "facil | Quanto vale esta função em x = N? Responda com N casas decimaisN",
+    "medio | Qual é o valor da assíntota horizontal desta função? Responda com N casas decimaisN"
+  ],
+  "funcoes-trigonometricas": [
+    "dificil | Qual é o valor MÍNIMO que esta função atinge?",
+    "facil | Qual é a amplitude desta função?",
+    "medio | Qual é o valor MÁXIMO que esta função atinge?"
+  ],
+  "gradiente-e-direcional": [
+    "facil | Qual é a maior taxa de variação possível desta função no ponto (N N)N em qualquer direção? Responda com N casas decimaisN"
+  ],
+  "gravitacao-e-orbitas": [
+    "dificil | Qual é o período orbital a N km de altitude? (em minutosN N casas decimais)",
+    "medio | Qual é a velocidade de escape da superfície de Júpiter? (em km/sN N casas decimais)",
+    "medio | Qual é a velocidade de escape da superfície de Marte? (em km/sN N casas decimais)",
+    "medio | Qual é a velocidade de escape da superfície de a Lua? (em km/sN N casas decimais)",
+    "medio | Qual é a velocidade de escape da superfície de a Terra? (em km/sN N casas decimais)"
+  ],
+  "identidades-trigonometricas": [
+    "facil | Se sen θ = N com θ no Nº quadranteN quanto vale cos θ?",
+    "medio | Use a fórmula do arco duplo para calcular sen N°N"
+  ],
+  "impulso-e-momento": [
+    "dificil | Um corpo de N kg a N m/s atinge outro de N kg paradoN e os dois seguem juntosN Quanta energia cinética foi perdidaN em joules? (N casas)",
+    "medio | Um corpo de N kg a N m/s colide com outro de N kg a N m/s e os dois seguem juntosN Qual é a velocidade finalN em m/s? (N casas decimais)",
+    "medio | Um corpo de N kg a N m/s é parado em N sN Qual é a força média aplicadaN em newtons? (N casas decimais)"
+  ],
+  "inequacoes": [
+    "facil | Resolva a inequação e informe o conjunto soluçãoN no formato x > valor (use <=N >= quando a fronteira entrar)N"
+  ],
+  "integrais-multiplas": [
+    "medio | Qual é o valor médio desta função sobre o retângulo de N a N em x e de N a N em y? Responda com N casas decimaisN",
+    "medio | Qual é o volume sob esta superfície e acima do retângulo de N a N em x e de N a N em y? Responda com N casas decimaisN"
+  ],
+  "integral-definida": [
+    "dificil | Sabendo que a integral de f vale N e a de g vale N no intervalo de N a N quanto vale a integral de f + N·g?",
+    "medio | Qual é o valor MÉDIO da função no intervalo? (use a áreaN N casas decimais)",
+    "medio | Sabendo que a integral de f de N a N vale N e de N a N vale N quanto vale a integral de N a N?",
+    "medio | Sabendo que a integral de f de N a N vale N quanto vale a integral de N a N?",
+    "medio | Sabendo que a integral de f de N a N vale N quanto vale a integral de N·f no mesmo intervalo?"
+  ],
+  "integral-indefinida": [
+    "facil | Integre e informe o coeficiente de x³ na primitivaN",
+    "medio | Qual é o valor da constante CN sabendo que F(N) = N?"
+  ],
+  "juros-compostos": [
+    "medio | A uma taxa de N% por períodoN em quantos períodos um capital se multiplica por N? (N casas decimais)"
+  ],
+  "lei-senos-cossenos": [
+    "extremo | Um triângulo tem lados N N e N Quanto mede o MAIOR ânguloN em graus? (N casas)",
+    "medio | Num triânguloN o lado de medida N é oposto ao ângulo de N°N Quanto mede o lado oposto ao ângulo de N°? (N casas)"
+  ],
+  "leis-de-newton": [
+    "medio | Um bloco de N kg desliza num plano de N° com coeficiente de atrito N Qual é a aceleraçãoN em m/s²? (N casas decimais)",
+    "medio | Um bloco de N kg repousa num plano inclinado de N°N Qual é a força normalN em newtons? (use g = N m/s²; N casas decimais)"
+  ],
+  "limites": [
+    "dificil | Calcule o limiteN racionalizando o numeradorN (N casas decimais)",
+    "facil | Calcule o limiteN",
+    "facil | Calcule o limiteN fatorando o numeradorN",
+    "medio | Calcule o limite no infinitoN (N casas decimais)"
+  ],
+  "limites-laterais": [
+    "extremo | Qual é o salto do gráfico em x = N isto éN o limite pela direita menos o limite pela esquerda? (N se o limite existir)"
+  ],
+  "matrizes-determinantes": [
+    "dificil | Qual é o determinante do produto A·B?",
+    "medio | Qual é o determinante desta matriz N×N?",
+    "medio | Resolva o sistema por CramerN Quanto vale x?",
+    "medio | Resolva o sistema por CramerN Quanto vale y?"
+  ],
+  "metodos-numericos": [
+    "dificil | Com EulerN integre de N a N partindo de y(N) = N primeiro com passo N e depois com metade deleN Por qual fator o erro foi dividido? Responda com N casas decimaisN",
+    "medio | Com passo h = N e N passosN de quanto é o erro do método de Euler frente à solução exataN partindo de y(N) = N? Responda com N casas decimaisN"
+  ],
+  "momento-angular": [
+    "dificil | Um corpo gira sem torque externo com inércia N kg·m² a N rad/sN e recolhe a massa até a inércia cair para N De quanto VARIOU a energia cinética de rotaçãoN em J? Responda com N casas decimaisN",
+    "facil | Uma partícula de N kg passa a N m de um pontoN com velocidade de N m/s formando N graus com o raioN Qual é o módulo do momento angular em relação a esse ponto? Responda com N casas decimaisN"
+  ],
+  "movimento-circular": [
+    "facil | Um ponto a N metros do eixo completa uma volta em N sN Qual é a velocidade tangencialN em m/s? Responda com N casas decimaisN",
+    "facil | Um rotor gira a N rotações por minutoN Qual é a velocidade angularN em rad/s? Responda com N casas decimaisN",
+    "medio | Um corpo gira em círculo de N m de raioN com período de N sN Qual é a aceleração centrípetaN em m/s ao quadrado? Responda com N casas decimaisN"
+  ],
+  "movimento-harmonico": [
+    "medio | Uma massa de N kg oscila presa a uma mola de constante N N/mN com amplitude de N mN Qual é a velocidade máximaN em m/s? (N casas)"
+  ],
+  "nocao-intuitiva-de-limite": [
+    "facil | Calcule o limiteN Atenção: a substituição direta dá N/N",
+    "medio | Calcule o limiteN simplificando a expressão primeiroN"
+  ],
+  "notacao-matematica": [
+    "dificil | Com A = {N N N N} e B = {N N N N N}N quantos elementos tem o conjunto?",
+    "dificil | Com A = {N N} e B = {N N N N}N quantos elementos tem o conjunto?",
+    "dificil | Com A = {N N} e B = {N N}N quantos elementos tem o conjunto?",
+    "dificil | Escreva em símbolos: a função f recebe um inteiro e devolve um real",
+    "dificil | Escreva em símbolos: a função f recebe um natural e devolve um real",
+    "dificil | Escreva em símbolos: a função f recebe um real e devolve um inteiro",
+    "dificil | Escreva em símbolos: a soma de os dobros de kN com k indo de N até N",
+    "dificil | Escreva em símbolos: a soma de os dobros de kN com k indo de N até n",
+    "dificil | Escreva em símbolos: a soma de os quadrados de kN com k indo de N até N",
+    "dificil | Escreva em símbolos: a soma de os quadrados de kN com k indo de N até n",
+    "dificil | Escreva em símbolos: a soma de os valores de kN com k indo de N até N",
+    "dificil | Escreva em símbolos: a soma de os valores de kN com k indo de N até n",
+    "dificil | Escreva em símbolos: existe um x inteiro maior ou igual a N",
+    "dificil | Escreva em símbolos: para todo x naturalN x é diferente de N",
+    "dificil | Escreva em símbolos: para todo x realN x é diferente de N",
+    "extremo | Com A = {N N N N N} e B = {N N N}N quantos elementos tem o conjunto?",
+    "extremo | Com A = {N N N} e B = {N N N N N}N quantos elementos tem o conjunto?",
+    "extremo | Com A = {N N} e B = {N}N quantos elementos tem o conjunto?",
+    "extremo | Escreva em símbolos: existe um x inteiro diferente de N",
+    "extremo | Escreva em símbolos: para todo x realN x é maior que N",
+    "facil | Leia os dois símbolos e calculeN",
+    "medio | Com A = {N N N N N} e B = {N N N N N}N quantos elementos tem o conjunto?",
+    "medio | Com A = {N N N N} e B = {N N N N}N quantos elementos tem o conjunto?",
+    "medio | Com A = {N N N N} e B = {N N N}N quantos elementos tem o conjunto?",
+    "medio | Com A = {N N N N} e B = {N N}N quantos elementos tem o conjunto?",
+    "medio | Com A = {N N N} e B = {N N N N}N quantos elementos tem o conjunto?",
+    "medio | Com A = {N N N} e B = {N N N}N quantos elementos tem o conjunto?",
+    "medio | Com A = {N N N} e B = {N N}N quantos elementos tem o conjunto?",
+    "medio | Com A = {N N} e B = {N N N N N}N quantos elementos tem o conjunto?",
+    "medio | Com A = {N N} e B = {N N N}N quantos elementos tem o conjunto?",
+    "medio | Escreva em símbolos: a função f recebe um inteiro e devolve um inteiro",
+    "medio | Escreva em símbolos: a função f recebe um inteiro e devolve um natural",
+    "medio | Escreva em símbolos: a função f recebe um natural e devolve um inteiro",
+    "medio | Escreva em símbolos: a função f recebe um natural e devolve um natural",
+    "medio | Escreva em símbolos: a função f recebe um real e devolve um natural",
+    "medio | Escreva em símbolos: a função f recebe um real e devolve um real",
+    "medio | Escreva em símbolos: existe um x inteiro maior que N",
+    "medio | Escreva em símbolos: existe um x natural diferente de N",
+    "medio | Escreva em símbolos: existe um x natural maior ou igual a N",
+    "medio | Escreva em símbolos: existe um x natural maior que N",
+    "medio | Escreva em símbolos: existe um x real diferente de N",
+    "medio | Escreva em símbolos: existe um x real maior ou igual a N",
+    "medio | Escreva em símbolos: existe um x real maior que N",
+    "medio | Escreva em símbolos: o número N pertence ao conjunto dos naturals",
+    "medio | Escreva em símbolos: para todo x inteiroN x é diferente de N",
+    "medio | Escreva em símbolos: para todo x inteiroN x é maior ou igual a N",
+    "medio | Escreva em símbolos: para todo x inteiroN x é maior que N",
+    "medio | Escreva em símbolos: para todo x naturalN x é maior ou igual a N",
+    "medio | Escreva em símbolos: para todo x naturalN x é maior que N",
+    "medio | Escreva em símbolos: para todo x realN x é maior ou igual a N",
+    "medio | Leia o produtório e calcule o valorN"
+  ],
+  "numeros-complexos": [
+    "dificil | Dividindo (N + Ni) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N + Ni) por (N + i)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N + Ni) por (N - Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N + Ni) por (N - i)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N + Ni) por (Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N + i) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N - Ni) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N - Ni) por (N + i)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N - Ni) por (N - Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N - Ni) por (N - i)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N - Ni) por (N)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N - Ni) por (Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N - i) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N - i) por (N - Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N - i) por (Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (N) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (Ni) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (Ni) por (N + i)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Dividindo (Ni) por (Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "dificil | Multiplicando (N + Ni) por (Ni)N qual é a parte REAL do resultado?",
+    "dificil | Multiplicando (N + i) por (Ni)N qual é a parte REAL do resultado?",
+    "dificil | Multiplicando (N - Ni) por (Ni)N qual é a parte REAL do resultado?",
+    "dificil | Multiplicando (N) por (N + i)N qual é a parte REAL do resultado?",
+    "dificil | Qual é o argumento de N + NiN medido no sentido anti-horário a partir do eixo real? (em grausN N casas)",
+    "dificil | Qual é o argumento de N + iN medido no sentido anti-horário a partir do eixo real? (em grausN N casas)",
+    "dificil | Qual é o argumento de N - NiN medido no sentido anti-horário a partir do eixo real? (em grausN N casas)",
+    "dificil | Qual é o argumento de N - iN medido no sentido anti-horário a partir do eixo real? (em grausN N casas)",
+    "extremo | Dividindo (N - i) por (N + i)N qual é a parte REAL do resultado? (N casas decimais)",
+    "extremo | Dividindo (N - i) por (N)N qual é a parte REAL do resultado? (N casas decimais)",
+    "extremo | Dividindo (N) por (N + i)N qual é a parte REAL do resultado? (N casas decimais)",
+    "extremo | Dividindo (N) por (N - Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "extremo | Dividindo (Ni) por (N - Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "extremo | Dividindo (i) por (N + Ni)N qual é a parte REAL do resultado? (N casas decimais)",
+    "medio | Multiplicando (N + Ni) por (N + Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N + Ni) por (N + Ni)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N + Ni) por (N + i)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N + Ni) por (N + i)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N + Ni) por (N - Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N + Ni) por (N - Ni)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N + Ni) por (N - i)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N + Ni) por (N - i)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N + Ni) por (N)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N + i) por (N + Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N + i) por (N - Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N + i) por (N - Ni)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N + i) por (N)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N - Ni) por (N + Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N - Ni) por (N + Ni)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N - Ni) por (N + i)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N - Ni) por (N + i)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N - Ni) por (N - Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N - Ni) por (N - Ni)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N - Ni) por (N - i)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N - Ni) por (N)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N - Ni) por (N)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N - Ni) por (Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N - i) por (N + Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N - i) por (N + Ni)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N - i) por (N - Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N - i) por (N - Ni)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N - i) por (i)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N) por (N + Ni)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (N) por (N + i)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (N) por (N - i)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (Ni) por (N + Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (Ni) por (N + Ni)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (Ni) por (N - Ni)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Multiplicando (Ni) por (N - Ni)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (Ni) por (N - i)N qual é a parte REAL do resultado?",
+    "medio | Multiplicando (Ni) por (N)N qual é a parte IMAGINÁRIA do resultado?",
+    "medio | Qual é o módulo de -i? (N casas decimais)"
+  ],
+  "numeros-decimais": [
+    "dificil | Encontre a fração geratriz desta dízima periódica compostaN",
+    "medio | Encontre a fração geratriz desta dízima periódicaN"
+  ],
+  "polinomios": [
+    "medio | Divida P(x) por (x + N)N No quocienteN qual é o coeficiente de x?",
+    "medio | Divida P(x) por (x + N)N No quocienteN qual é o coeficiente de x^N?",
+    "medio | Divida P(x) por (x + N)N No quocienteN qual é o termo constante?",
+    "medio | Divida P(x) por (x - N)N No quocienteN qual é o coeficiente de x?",
+    "medio | Divida P(x) por (x - N)N No quocienteN qual é o coeficiente de x^N?",
+    "medio | Divida P(x) por (x - N)N No quocienteN qual é o termo constante?",
+    "medio | Todas as raízes deste polinômio são racionaisN Considerando TODAS elasN qual é a menor?"
+  ],
+  "ponto-e-reta": ["medio | Qual é o coeficiente angular da reta que passa pelos dois pontos?"],
+  "potenciacao-radiciacao": [
+    "medio | Simplificando √N qual é o número que SAI do radical?",
+    "medio | Simplifique e informe o valor numéricoN"
+  ],
+  "probabilidade": [
+    "dificil | Um lote tem N peçasN das quais N são defeituosasN Retirando N peças de uma vezN qual é a probabilidade de NENHUMA ser defeituosa?",
+    "medio | Uma urna tem N bolas vermelhas e N azuisN Retirando duas bolas SEM reposiçãoN qual é a probabilidade de ambas serem vermelhas?"
+  ],
+  "produto-escalar-vetorial": [
+    "dificil | Uma força de N N é aplicada a N° do deslocamentoN que vale N mN Qual é o trabalho realizadoN em joules? (N casas)",
+    "medio | Qual é a projeção de (N N) sobre a direção de (N N)? (N casas decimais)",
+    "medio | Qual é o ângulo entre (N N) e (N N)? (em grausN N casas)"
+  ],
+  "produtos-notaveis": [
+    "dificil | Esse trinômio é um quadrado perfeitoN Escreva-o como (px + q)²N com p positivoN e informe qN",
+    "medio | Expanda e informe o coeficiente de x no resultadoN"
+  ],
+  "progressoes": [
+    "medio | Numa PA de primeiro termo N e razão N qual é a soma dos N primeiros termos?",
+    "medio | Numa PG de primeiro termo N e razão N qual é a soma dos N primeiros termos?"
+  ],
+  "propulsao-de-foguetes": [
+    "dificil | Para obter N km/s de delta-v com exaustão a N m/sN qual razão de massas é necessária? (N casas decimais)",
+    "medio | Um foguete parte com N t e termina a queima com N tN Que fração da massa inicial era propelente? (responda entre N e N com N casas decimais)"
+  ],
+  "regra-da-cadeia": ["extremo | Use a regra da cadeia e calcule f'(N)N (N casas decimais)"],
+  "regras-de-derivacao": [
+    "facil | Derive e calcule f'(N)N",
+    "facil | Derive e escreva f'(x) — a expressão inteiraN não um valorN",
+    "facil | Derive e informe o coeficiente de x na derivadaN"
+  ],
+  "regressao-e-correlacao": [
+    "dificil | Qual é o resíduo do ponto de x igual a N em relação à reta de mínimos quadrados destes dados? Responda com N casas decimaisN",
+    "dificil | Que fração da variação de y a reta ajustada explica nestes dados? Responda entre N e N com N casas decimaisN",
+    "facil | Qual é o intercepto da reta de mínimos quadrados para estes dados? Responda com N casas decimaisN",
+    "medio | Qual é o coeficiente de correlação de Pearson destes dados? Responda com N casas decimaisN",
+    "medio | Use a reta de mínimos quadrados destes dados para prever y quando x vale N Responda com N casas decimaisN"
+  ],
+  "semelhanca-e-pitagoras": [
+    "medio | Um feixe de paralelas corta duas transversaisN Numa delas os segmentos medem N cm e N cm; na outraN o segmento correspondente ao primeiro mede N cmN Quanto mede xN correspondente ao segundoN em cm?",
+    "medio | Um triângulo tem lados N cmN N cm e N cmN Quanto vale o quadrado do maior lado? (o enunciado seguinte compara com a soma dos outros dois)"
+  ],
+  "seno-cosseno-tangente": [
+    "facil | Sabendo que sen N° vale issoN qual é o valor? (N casas)",
+    "medio | Se sen θ = N e θ está no Nº quadranteN qual é cos θ? (N casas)"
+  ],
+  "sequencias-e-series": [
+    "facil | Qual é a soma dos N primeiros termos desta progressão aritmética?",
+    "medio | Qual é a soma dos N primeiros termos desta progressão geométrica?",
+    "medio | Qual é o Nº termo desta progressão geométrica?"
+  ],
+  "series-de-taylor": [
+    "dificil | Aproxime a raiz quadrada de N pelo polinômio de Taylor de grau N centrado em N Responda com N casas decimaisN",
+    "facil | Use o polinômio de Maclaurin de grau N para aproximar esta função em x = N Responda com N casas decimaisN",
+    "medio | Aproximando esta função em x = N pelo polinômio de Maclaurin de grau N de quanto é o erro cometido? Responda com N casas decimaisN"
+  ],
+  "solidos-e-volumes": [
+    "dificil | Um cilindro de raio N cm tem volume N cm³N Qual é sua alturaN em cm?",
+    "dificil | Um cone de raio N cm tem volume N cm³N Qual é sua alturaN em cm?",
+    "medio | Uma pirâmide tem área da base N cm² e altura N cmN Qual é seu volumeN em cm³?"
+  ],
+  "soma-de-riemann": [
+    "medio | Aproxime a área sob a curva no intervalo [N N] usando N retângulosN com altura tomada pela direitaN (N casas decimais)"
+  ],
+  "taxa-de-variacao": [
+    "dificil | A posição de um corpoN em metrosN é dada em função do tempo em segundosN com t ≥ N Em que instante ele para pela primeira vez?",
+    "medio | A posição de um corpoN em metrosN é dada em função do tempo em segundosN Qual é a aceleração em t = N s?"
+  ],
+  "teorema-fundamental": [
+    "facil | Use o Teorema Fundamental para calcular a integralN",
+    "medio | Para qual valor de k a integral vale N?"
+  ],
+  "termodinamica-e-gases": [
+    "medio | Qual é a pressão de N mol de gás ideal em N L a N °C? (em kPaN N casas decimais)",
+    "medio | Um gás a N atm ocupa N L a N KN Levado a N atm e N KN que volume passa a ocupar? (em litrosN N casas decimais)",
+    "medio | Um gás expande de N L para N L à pressão constante de N atmN Qual é o trabalho realizado pelo gásN em joules? (N casas decimais)"
+  ],
+  "trabalho-e-energia": [
+    "dificil | Um corpo é lançado verticalmente para cima a N m/sN Que altura máxima ele alcançaN em metros? (N casas decimais)",
+    "medio | Um motor realiza N J de trabalho em N sN Qual é sua potência médiaN em watts? (N casas decimais)"
+  ],
+  "trajetoria-balistica": [
+    "dificil | Um projétil é lançado a N m/s formando N° com a horizontalN de uma altura de N mN Qual é a altura máxima? (em mN N casas)",
+    "dificil | Um projétil é lançado a N m/s formando N° com a horizontalN de uma altura de N mN Qual é o alcance horizontal? (em mN N casas)",
+    "medio | Um projétil é lançado a N m/s formando N° com a horizontalN Qual é o alcance horizontal? (em mN N casas)"
+  ],
+  "transferencia-de-calor": [
+    "dificil | N kg de alumínio a N °C são misturados com N kg de alumínio a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de alumínio a N °C são misturados com N kg de cobre a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de alumínio a N °C são misturados com N kg de ferro a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de alumínio a N °C são misturados com N kg de água a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de cobre a N °C são misturados com N kg de alumínio a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de ferro a N °C são misturados com N kg de alumínio a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de ferro a N °C são misturados com N kg de cobre a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de ferro a N °C são misturados com N kg de ferro a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de ferro a N °C são misturados com N kg de vidro a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de ferro a N °C são misturados com N kg de água a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de vidro a N °C são misturados com N kg de alumínio a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de vidro a N °C são misturados com N kg de ferro a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de vidro a N °C são misturados com N kg de vidro a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de vidro a N °C são misturados com N kg de água a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de água a N °C são misturados com N kg de cobre a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de água a N °C são misturados com N kg de ferro a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de água a N °C são misturados com N kg de vidro a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | N kg de água a N °C são misturados com N kg de água a N °CN num recipiente isoladoN Qual é a temperatura finalN em °C? Os calores específicos são N e N J/(kg·K)N Responda com N casas decimaisN",
+    "dificil | Um corpo de N m² e emissividade N está a N °CN Qual é a potência irradiadaN em W? Responda com N casas decimaisN",
+    "facil | Quanta energiaN em JN é preciso para aquecer N kg de alumínio em N K? O calor específico é N J/(kg·K)N Responda com N casas decimaisN",
+    "facil | Quanta energiaN em JN é preciso para aquecer N kg de cobre em N K? O calor específico é N J/(kg·K)N Responda com N casas decimaisN",
+    "facil | Quanta energiaN em JN é preciso para aquecer N kg de ferro em N K? O calor específico é N J/(kg·K)N Responda com N casas decimaisN",
+    "facil | Quanta energiaN em JN é preciso para aquecer N kg de vidro em N K? O calor específico é N J/(kg·K)N Responda com N casas decimaisN",
+    "facil | Quanta energiaN em JN é preciso para aquecer N kg de água em N K? O calor específico é N J/(kg·K)N Responda com N casas decimaisN",
+    "medio | Qual é a resistência térmica de uma camada de alumínio com N m de espessura e N m² de áreaN em K/W? A condutividade é N W/(m·K)N Responda com N casas decimaisN",
+    "medio | Qual é a resistência térmica de uma camada de ar parado com N m de espessura e N m² de áreaN em K/W? A condutividade é N W/(m·K)N Responda com N casas decimaisN",
+    "medio | Qual é a resistência térmica de uma camada de aço inoxidável com N m de espessura e N m² de áreaN em K/W? A condutividade é N W/(m·K)N Responda com N casas decimaisN",
+    "medio | Qual é a resistência térmica de uma camada de cobre com N m de espessura e N m² de áreaN em K/W? A condutividade é N W/(m·K)N Responda com N casas decimaisN",
+    "medio | Qual é a resistência térmica de uma camada de lã de vidro com N m de espessura e N m² de áreaN em K/W? A condutividade é N W/(m·K)N Responda com N casas decimaisN",
+    "medio | Qual é a resistência térmica de uma camada de madeira com N m de espessura e N m² de áreaN em K/W? A condutividade é N W/(m·K)N Responda com N casas decimaisN",
+    "medio | Qual é a resistência térmica de uma camada de vidro com N m de espessura e N m² de áreaN em K/W? A condutividade é N W/(m·K)N Responda com N casas decimaisN",
+    "medio | Qual é a resistência térmica de uma camada de água com N m de espessura e N m² de áreaN em K/W? A condutividade é N W/(m·K)N Responda com N casas decimaisN",
+    "medio | Uma superfície de N m² está N K acima do ar que a banhaN com coeficiente de convecção N W/(m²·K)N Qual é o fluxo de calorN em W? Responda com N casas decimaisN"
+  ],
+  "transformacoes-de-graficos": [
+    "facil | O ponto (N N) pertence ao gráfico de fN Qual é a ORDENADA do ponto correspondente no gráfico transformado? Responda com N casas decimaisN",
+    "medio | A função f tem um zero em x = N Em que valor de x o gráfico transformado cruza o eixo horizontal? Responda com N casas decimaisN",
+    "medio | O ponto (N N) pertence ao gráfico de fN Qual é a ABSCISSA do ponto correspondente no gráfico transformado? Responda com N casas decimaisN"
+  ],
+  "triangulo-retangulo": [
+    "extremo | Num triângulo retânguloN o cateto oposto a um ângulo mede N e o adjacente mede N Quanto mede esse ânguloN em graus? (N casas decimais)"
+  ],
+  "vetores-no-espaco": [
+    "facil | Calcule o produto escalar dos dois vetoresN",
+    "facil | Qual é a componente x do vetor unitário na direção de v? Arredonde para duas casas decimaisN",
+    "facil | Qual é a componente y do vetor unitário na direção de v? Arredonde para duas casas decimaisN",
+    "facil | Qual é a componente z do vetor unitário na direção de v? Arredonde para duas casas decimaisN",
+    "medio | Calcule a componente x do produto vetorial a × bN",
+    "medio | Calcule a componente z do produto vetorial a × bN",
+    "medio | Qual é o ângulo entre os dois vetoresN em graus? Arredonde para duas casas decimaisN"
+  ],
+  "vetores-no-plano": [
+    "dificil | Qual é o ângulo que o vetor (N N) forma com o eixo x positivoN medido no sentido anti-horário? (em grausN N casas)",
+    "medio | Qual é o módulo da soma dos vetores (N N) e (N N)? (N casas decimais)",
+    "medio | Um vetor de módulo N forma N° com o eixo xN Qual é sua componente vertical? (N casas decimais)"
+  ],
+  "vizinhancas-e-infinito": [
+    "medio | Qual é o limite quando x tende ao infinito? (N casas decimais)"
+  ]
+}
