@@ -120,6 +120,7 @@ import t_escalonamento_e_inversa from '@features/vetores-matrizes/escalonamento-
 import t_matrizes_determinantes from '@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.i18n.json';
 import t_numeros_complexos from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.i18n.json';
 import t_produto_escalar_vetorial from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.i18n.json';
+import t_retas_e_planos from '@features/vetores-matrizes/retas-e-planos/retas-e-planos.i18n.json';
 import t_vetores_no_espaco from '@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.i18n.json';
 import t_vetores_no_plano from '@features/vetores-matrizes/vetores-no-plano/vetores-no-plano.i18n.json';
 
@@ -241,6 +242,7 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['matrizes-determinantes', t_matrizes_determinantes as TabelaDeTextos],
   ['numeros-complexos', t_numeros_complexos as TabelaDeTextos],
   ['produto-escalar-vetorial', t_produto_escalar_vetorial as TabelaDeTextos],
+  ['retas-e-planos', t_retas_e_planos as TabelaDeTextos],
   ['vetores-no-espaco', t_vetores_no_espaco as TabelaDeTextos],
   ['vetores-no-plano', t_vetores_no_plano as TabelaDeTextos],
 ]);

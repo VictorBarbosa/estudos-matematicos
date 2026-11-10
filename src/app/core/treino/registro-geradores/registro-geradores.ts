@@ -444,6 +444,10 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       import('@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.gerador').then(
         (m) => m.geradorProdutos,
       ),
+    'retas-e-planos': () =>
+      import('@features/vetores-matrizes/retas-e-planos/retas-e-planos.gerador').then(
+        (m) => m.geradorRetasPlanos,
+      ),
     'vetores-no-espaco': () =>
       import('@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.gerador').then(
         (m) => m.geradorVetores3,

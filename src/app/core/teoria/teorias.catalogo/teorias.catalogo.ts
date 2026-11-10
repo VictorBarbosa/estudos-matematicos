@@ -108,6 +108,7 @@ import { TEORIA_LEIS as t_lei_senos_cossenos } from '@features/trigonometria/lei
 import { TEORIA_RAZOES as t_seno_cosseno_tangente } from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.teoria';
 import { TEORIA_TRIANGULO as t_triangulo_retangulo } from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.teoria';
 import { TEORIA_MATRIZES as t_matrizes_determinantes } from '@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.teoria';
+import { TEORIA_RETAS_PLANOS as t_retas_e_planos } from '@features/vetores-matrizes/retas-e-planos/retas-e-planos.teoria';
 import { TEORIA_ESCALONAMENTO as t_escalonamento_e_inversa } from '@features/vetores-matrizes/escalonamento-e-inversa/escalonamento-e-inversa.teoria';
 import { TEORIA_COMPLEXOS as t_numeros_complexos } from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.teoria';
 import { TEORIA_PRODUTOS as t_produto_escalar_vetorial } from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.teoria';
@@ -228,6 +229,7 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['triangulo-retangulo', t_triangulo_retangulo],
   ['matrizes-determinantes', t_matrizes_determinantes],
   ['escalonamento-e-inversa', t_escalonamento_e_inversa],
+  ['retas-e-planos', t_retas_e_planos],
   ['numeros-complexos', t_numeros_complexos],
   ['produto-escalar-vetorial', t_produto_escalar_vetorial],
   ['vetores-no-plano', t_vetores_no_plano],

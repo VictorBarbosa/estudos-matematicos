@@ -616,6 +616,10 @@
         "descricao": "The line that best passes through the points, and how much it explains.",
         "titulo": "Regression and correlation"
       },
+      "retas-e-planos": {
+        "descricao": "Plane equation, point-to-plane distance, angles and linear independence through the determinant.",
+        "titulo": "Lines and planes in space"
+      },
       "semelhanca-e-pitagoras": {
         "descricao": "Similarity ratio, the intercept theorem and the proof of Pythagoras.",
         "titulo": "Similarity and Pythagoras"

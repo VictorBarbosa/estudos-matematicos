@@ -338,6 +338,11 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'parciais.significado': 'O que a parcial mede',
   'parciais.termo-misto': 'O termo que tem as duas',
   'parciais.uma-de-cada-vez': 'Derivar numa direção só',
+  'planos.angulo': 'Ângulo entre planos e entre retas',
+  'planos.combinacao': 'Combinação linear',
+  'planos.distancia': 'Distância de ponto a plano',
+  'planos.equacao': 'A equação do plano',
+  'planos.independencia': 'Independência linear e o determinante',
   'polares.conversao': 'De polar para cartesiano e de volta',
   'polares.curvas': 'Curvas em forma polar',
   'polares.orbita': 'A órbita em forma polar',
@@ -481,6 +486,7 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'trig-derivada.tabela': 'O ciclo das quatro derivadas',
   'trig-derivada.tangente': 'A derivada da tangente',
   'vetores.definicao': 'O que um vetor acrescenta',
+  'vetores.direcao': 'A direção de um vetor',
   'vetores.soma': 'Somar vetores',
   'vetores3.angulo': 'Ângulo entre vetores',
   'vetores3.componentes': 'Três componentes',
@@ -827,6 +833,11 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'parciais.significado': 'derivadas-parciais',
   'parciais.termo-misto': 'derivadas-parciais',
   'parciais.uma-de-cada-vez': 'derivadas-parciais',
+  'planos.angulo': 'retas-e-planos',
+  'planos.combinacao': 'retas-e-planos',
+  'planos.distancia': 'retas-e-planos',
+  'planos.equacao': 'retas-e-planos',
+  'planos.independencia': 'retas-e-planos',
   'polares.conversao': 'coordenadas-polares',
   'polares.curvas': 'coordenadas-polares',
   'polares.orbita': 'coordenadas-polares',
@@ -970,6 +981,7 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'trig-derivada.tabela': 'derivadas-trigonometricas',
   'trig-derivada.tangente': 'derivadas-trigonometricas',
   'vetores.definicao': 'vetores-no-plano',
+  'vetores.direcao': 'vetores-no-plano',
   'vetores.soma': 'vetores-no-plano',
   'vetores3.angulo': 'vetores-no-espaco',
   'vetores3.componentes': 'vetores-no-espaco',
@@ -1421,6 +1433,10 @@ export const CARREGAR_TEORIA_DO_TOPICO: Readonly<Record<string, () => Promise<re
     'produto-escalar-vetorial': () =>
       import('@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.teoria').then(
         (m) => m.TEORIA_PRODUTOS,
+      ),
+    'retas-e-planos': () =>
+      import('@features/vetores-matrizes/retas-e-planos/retas-e-planos.teoria').then(
+        (m) => m.TEORIA_RETAS_PLANOS,
       ),
     'vetores-no-espaco': () =>
       import('@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.teoria').then(

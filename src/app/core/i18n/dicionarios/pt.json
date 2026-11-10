@@ -616,6 +616,10 @@
         "descricao": "A reta que melhor passa pelos pontos, e o quanto ela explica.",
         "titulo": "Regressão e correlação"
       },
+      "retas-e-planos": {
+        "descricao": "Equação do plano, distância de ponto a plano, ângulos e independência linear pelo determinante.",
+        "titulo": "Retas e planos no espaço"
+      },
       "semelhanca-e-pitagoras": {
         "descricao": "Razão de semelhança, teorema de Tales e a demonstração de Pitágoras.",
         "titulo": "Semelhança e Pitágoras"
