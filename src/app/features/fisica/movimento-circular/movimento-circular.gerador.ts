@@ -168,6 +168,10 @@ function daFrequencia(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'circular.periodo-frequencia',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `${rotacoesPorMinuto} voltas por minuto são ${rotacoesPorMinuto}/60 voltas por segundo; cada volta vale 2 pi radianos.`
+        : undefined,
   });
 }
 
@@ -216,6 +220,10 @@ function daTangencial(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'circular.periodo-frequencia',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `Numa volta o ponto percorre a circunferência, 2 pi vezes ${String(raio).replace('.', ',')} m, em ${periodo} s.`
+        : undefined,
   });
 }
 
@@ -272,6 +280,10 @@ function daCentripeta(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'circular.velocidade-angular',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `Ache a velocidade (2 pi vezes o raio sobre ${periodo} s) e use v ao quadrado dividido pelo raio.`
+        : undefined,
   });
 }
 

@@ -102,7 +102,12 @@ export const geradorMhs: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
-      dica: nivel === 'facil' ? 'Comece calculando ω = √(k/m).' : undefined,
+      dica:
+        nivel === 'facil'
+          ? 'Comece calculando ω = √(k/m).'
+          : pergunta === 'velocidade-maxima' && nivel === 'medio'
+            ? `Primeiro ω = √(${constante}/${massa}); a velocidade máxima é a amplitude vezes ω: ${amplitude}·ω.`
+            : undefined,
     };
   },
 

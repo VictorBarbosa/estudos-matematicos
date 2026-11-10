@@ -200,6 +200,10 @@ function exercicioNormalPlano(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado.normal,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `A normal equilibra só a parte do peso perpendicular ao plano: N = m·g·cos ${angulo}°.`
+        : undefined,
   };
 }
 
@@ -249,6 +253,10 @@ function exercicioAceleracaoPlano(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado.aceleracao,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `Ao longo do plano: a componente do peso, g·sen ${angulo}°, puxa para baixo; o atrito, μ·g·cos ${angulo}°, segura. A massa se cancela.`
+        : undefined,
   };
 }
 

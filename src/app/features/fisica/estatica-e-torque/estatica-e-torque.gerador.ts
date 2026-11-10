@@ -182,6 +182,10 @@ function exercicioCentroMassa(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? 'Média ponderada: some massa × posição dos três e divida pela massa total.'
+        : undefined,
   };
 }
 
@@ -261,5 +265,9 @@ function exercicioForcaEquilibrio(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'dificil'
+        ? `Tome torques em relação ao apoio: o peso da barra age no meio (${comprimento}/2 m), a carga a ${cargaDistancia} m, e a força que você procura na ponta, a ${comprimento} m.`
+        : undefined,
   };
 }

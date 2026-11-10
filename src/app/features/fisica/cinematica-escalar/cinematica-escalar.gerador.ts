@@ -200,6 +200,10 @@ function exercicioTorricelli(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `Sem o tempo, use Torricelli: v² = ${v0}² + 2·${a}·${deslocamento}; depois tire a raiz quadrada.`
+        : undefined,
   };
 }
 
@@ -251,6 +255,10 @@ function exercicioTempoDeParada(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `A cada segundo a velocidade cai ${desaceleracao} m/s. Quantos segundos para perder os ${v0} m/s?`
+        : undefined,
   };
 }
 

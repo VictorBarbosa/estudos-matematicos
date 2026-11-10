@@ -173,6 +173,10 @@ function daParticula(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'angular.momento',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `L = m·v·r·sen θ: com o ângulo de 90°, o braço é a própria distância de ${numero(distancia)} m.`
+        : undefined,
   });
 }
 
@@ -292,6 +296,10 @@ function daEnergiaNaConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'angular.energia-nao-se-conserva',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? `Primeiro a nova velocidade angular, pela conservação: I·ω não muda. Depois compare ½·I·ω² antes e depois.`
+        : undefined,
   });
 }
 

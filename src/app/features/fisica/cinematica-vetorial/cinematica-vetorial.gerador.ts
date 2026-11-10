@@ -175,6 +175,10 @@ function daRelativa(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'cin-vetorial.velocidade-relativa',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? 'O vento carrega o ar inteiro: some os dois vetores componente a componente e só então calcule o módulo.'
+        : undefined,
   });
 }
 
@@ -271,6 +275,10 @@ function daCompensacao(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'cin-vetorial.travessia',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? `A parte do barco que aponta rio acima tem de anular a correnteza: ${barco}·sen θ = ${rio}.`
+        : undefined,
   });
 }
 
@@ -324,6 +332,10 @@ function dasComponentes(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'cin-vetorial.componentes-da-aceleracao',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? 'A tangencial é a projeção da aceleração na direção da velocidade: produto escalar a·v, dividido pelo módulo de v.'
+        : undefined,
   });
 }
 
@@ -375,6 +387,10 @@ function daCurvatura(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'cin-vetorial.curvatura',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? `Só a componente da aceleração perpendicular à velocidade curva a trajetória. Com ela, r = v²/aₙ, e aqui v = ${rapidez}.`
+        : undefined,
   });
 }
 

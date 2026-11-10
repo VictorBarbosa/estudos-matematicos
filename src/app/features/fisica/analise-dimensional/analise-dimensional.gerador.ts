@@ -125,10 +125,10 @@ function exercicioExpoente(base: keyof Dimensao, nivel: Nivel, rng: Rng): Exerci
       gabarito,
       proximos,
     ),
+    // A grandeza muda a cada sorteio, então cada uma é uma pergunta nova: a dica vale sempre.
     dica:
-      nivel === 'facil'
-        ? 'Escreva a grandeza em termos de m, kg e s, e leia os expoentes.'
-        : undefined,
+      `Escreva a unidade ${grandeza.unidade} só com kg, m e s e leia o expoente de ${base} ` +
+      `(${base === 'M' ? 'kg' : base === 'L' ? 'm' : 's'}); se não aparecer, é 0.`,
   };
 }
 
@@ -219,6 +219,7 @@ function exercicioConsistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: 'Um período é um TEMPO: procure a opção cuja dimensão é só T¹ — sem M, sem L.',
   };
 }
 
@@ -228,36 +229,42 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<number> {
     readonly tex: string;
     readonly fator: number;
     readonly nota: string;
+    readonly dica: string;
   }[] = [
     {
       enunciado: 'Converta 1 m³ para litros.',
       tex: '1\\,\\text{m}^{3} = ?\\,\\text{L}',
       fator: 1000,
       nota: '1 L = 1 dm³, e 1 m³ tem 10³ dm³.',
+      dica: 'Um litro é um decímetro cúbico. 1 m = 10 dm, e o volume tem três dimensões: 10 ao cubo.',
     },
     {
       enunciado: 'Converta 1 m² para cm².',
       tex: '1\\,\\text{m}^{2} = ?\\,\\text{cm}^{2}',
       fator: 10000,
       nota: 'O fator linear 100 entra ao quadrado: 100² = 10 000.',
+      dica: '1 m = 100 cm em cada lado; a área multiplica dois lados, então o fator entra ao quadrado.',
     },
     {
       enunciado: 'Converta 1 m³ para cm³.',
       tex: '1\\,\\text{m}^{3} = ?\\,\\text{cm}^{3}',
       fator: 1e6,
       nota: 'O fator linear 100 entra ao cubo: 100³ = 10⁶.',
+      dica: '1 m = 100 cm em cada aresta; o volume multiplica três arestas, então o fator entra ao cubo.',
     },
     {
       enunciado: 'Quantos metros por segundo valem 36 km/h?',
       tex: '36\\,\\text{km/h} = ?\\,\\text{m/s}',
       fator: 10,
       nota: 'Dividir por 3,6 converte km/h em m/s.',
+      dica: '1 km = 1000 m e 1 h = 3600 s: cada km/h vale 1000/3600 m/s, isto é, divida por 3,6.',
     },
     {
       enunciado: 'Converta 1 g/cm³ para kg/m³.',
       tex: '1\\,\\text{g/cm}^{3} = ?\\,\\text{kg/m}^{3}',
       fator: 1000,
       nota: 'A massa divide por 1000 e o volume por 10⁻⁶: sobra o fator 1000.',
+      dica: 'Converta em cima (1 g = 0,001 kg) e embaixo (1 cm³ = 100 ao cubo vezes menor que 1 m³) separadamente.',
     },
   ];
 
@@ -306,6 +313,7 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<number> {
       caso.fator,
       proximos,
     ),
+    dica: caso.dica,
   };
 }
 
@@ -388,7 +396,11 @@ function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    // As duas grandezas mudam a cada sorteio: a dica vale em todos os níveis.
     dica:
-      nivel === 'facil' ? 'Multiplicar grandezas soma os expoentes de cada dimensão.' : undefined,
+      expoente === 1
+        ? 'Multiplicar grandezas soma os expoentes de cada dimensão.'
+        : `Eleve ${segunda.nome} ${expoente === 2 ? 'ao quadrado' : 'ao cubo'} multiplicando cada expoente dela ` +
+          `por ${expoente}; depois some com os expoentes de ${primeira.nome}.`,
   };
 }

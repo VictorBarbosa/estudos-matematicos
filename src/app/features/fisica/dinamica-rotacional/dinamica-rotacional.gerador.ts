@@ -118,10 +118,8 @@ function daInercia(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'rotacional.dicionario',
       },
     ],
-    dica:
-      nivel === 'facil'
-        ? 'O fator de forma vai multiplicando a massa e o raio ao quadrado.'
-        : undefined,
+    // O corpo muda a cada sorteio, e com ele o enunciado: a dica vale em todos os níveis.
+    dica: `I = fator de forma × m × r²: o raio ${numero(raio)} m entra ao quadrado.`,
   });
 }
 
@@ -171,6 +169,8 @@ function doTorque(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'rotacional.inercia',
       },
     ],
+    // O corpo varia: a dica vale em todos os níveis.
+    dica: `Primeiro o momento de inércia (fator de forma × ${numero(massa)} × ${numero(raio)}²); depois divida o torque por ele, como a = F/m.`,
   });
 }
 
@@ -220,6 +220,8 @@ function daEnergia(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'rotacional.energia',
       },
     ],
+    // O corpo varia: a dica vale em todos os níveis.
+    dica: `Como ½mv², mas com a inércia no lugar da massa: ½·I·ω², com ω = ${numero(omega)} rad/s ao quadrado.`,
   });
 }
 
