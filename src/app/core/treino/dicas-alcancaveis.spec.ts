@@ -92,6 +92,14 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['continuidade', 'extremo', 'Fator que cancela: removível'],
   ['aplicacoes-da-derivada', 'medio', 'ache onde f′ = 0'],
   ['aplicacoes-da-derivada', 'extremo', 'Inflexão é onde f″ troca de sinal'],
+  // Fase 2 (09/11): Funções.
+  ['funcao-modular', 'dificil', '|u| < c é o mesmo que −c < u < c'],
+  ['funcao-modular', 'extremo', 'Os que NÃO satisfazem estão no meio'],
+  ['progressoes', 'medio', 'Entre aₚ e a_q há (q − p) razões'],
+  ['progressoes', 'dificil', 'Ache a razão primeiro'],
+  ['progressoes', 'extremo', 'Na PG, a_q / aₚ'],
+  ['juros-compostos', 'dificil', '1 + i_anual = (1 + i_'],
+  ['juros-compostos', 'extremo', 'Volte pela raiz'],
 ];
 
 describe('dicas alcançáveis', () => {

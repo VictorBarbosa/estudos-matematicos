@@ -107,4 +107,42 @@ export const TEORIA_MODULAR: readonly Teoria[] = [
     },
     vejaTambem: ['modular.grafico', 'modular.distancia'],
   },
+  {
+    id: 'modular.inequacoes',
+    titulo: 'Inequações com módulo',
+    resumo: '|u| < c é «perto de zero», um intervalo; |u| > c é «longe de zero», duas semirretas.',
+    definicao:
+      'Como |u| é a distância de u até zero, |u| < c diz que u está a menos de c da origem: ' +
+      'entre −c e c. Já |u| > c diz que u está a mais de c: abaixo de −c ou acima de c. A ' +
+      'desigualdade com módulo vira, portanto, uma dupla desigualdade (caso «menor») ou um par ' +
+      'de desigualdades ligadas por «ou» (caso «maior»). Com ≤ ou ≥, as bordas entram.',
+    formulas: [
+      { tex: '|u| < c \\iff -c < u < c \\quad (c > 0)' },
+      { tex: '|u| > c \\iff u < -c \\;\\text{ ou }\\; u > c' },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Na reta, os pontos a menos de 3 da origem formam um intervalo.',
+        tex: '|x| < 3 \\iff -3 < x < 3',
+      },
+      {
+        descricao: 'Os pontos a mais de 3 ficam nas duas pontas.',
+        tex: '|x| > 3 \\iff x < -3 \\;\\text{ ou }\\; x > 3',
+        nota: 'Escrever −3 > x > 3 junta numa frase só duas condições que nunca valem juntas — é o erro clássico.',
+      },
+    ],
+    exemplo: {
+      enunciado: '|2x − 1| ≤ 5',
+      passos: [
+        { descricao: 'Perto de zero: dupla desigualdade.', tex: '-5 \\leq 2x - 1 \\leq 5' },
+        { descricao: 'Somamos 1 nos três membros.', tex: '-4 \\leq 2x \\leq 6' },
+        {
+          descricao: 'Dividimos por 2 (positivo, nada se inverte).',
+          tex: '-2 \\leq x \\leq 3',
+          nota: 'São 6 inteiros: −2, −1, 0, 1, 2 e 3.',
+        },
+      ],
+    },
+    vejaTambem: ['modular.equacoes', 'modular.distancia', 'inequacoes.conjunto'],
+  },
 ];
