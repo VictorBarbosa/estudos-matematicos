@@ -581,8 +581,8 @@
         "titulo": "Sine, cosine and tangent"
       },
       "sequencias-e-series": {
-        "descricao": "Progressions, infinite sums and convergence.",
-        "titulo": "Sequences and series"
+        "descricao": "Convergence tests and the radius of convergence of power series.",
+        "titulo": "Series and convergence"
       },
       "series-de-taylor": {
         "descricao": "Approximating a function with polynomials, and the error that remains.",

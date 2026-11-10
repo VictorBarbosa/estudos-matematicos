@@ -32,7 +32,7 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['conicas', 'facil', 'RAIZ QUADRADA do denominador'],
   ['ponto-e-reta', 'facil', 'média das abscissas'],
   ['continuidade', 'facil', 'onde o sinal troca'],
-  ['sequencias-e-series', 'facil', 'PA: aₙ = a₁ + (n − 1)·r'],
+  ['sequencias-e-series', 'facil', 'converge só se p > 1'],
   ['vizinhancas-e-infinito', 'facil', 'o denominador cresce mais rápido'],
   // Perguntas novas (09/11): a dica nasce no nível de estreia.
   ['regras-de-derivacao', 'dificil', 'Regra do quociente'],

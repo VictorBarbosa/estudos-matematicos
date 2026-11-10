@@ -581,8 +581,8 @@
         "titulo": "Sinus, cosinus et tangente"
       },
       "sequencias-e-series": {
-        "descricao": "Progressions, sommes infinies et convergence.",
-        "titulo": "Suites et séries"
+        "descricao": "Critères de convergence et rayon de convergence des séries entières.",
+        "titulo": "Séries et convergence"
       },
       "series-de-taylor": {
         "descricao": "Approcher une fonction par des polynômes, et l’erreur qui reste.",

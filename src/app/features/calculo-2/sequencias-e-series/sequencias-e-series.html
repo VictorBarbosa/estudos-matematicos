@@ -1,100 +1,46 @@
 <app-topico-layout topicoId="sequencias-e-series">
   <div explorar class="explorar">
-    <section class="seletor-pills" role="group" [attr.aria-label]="texto('tipoDeProgressao')">
-      <button
-        type="button"
-        [class.ativo]="!geometrica()"
-        [attr.aria-pressed]="!geometrica()"
-        (click)="alternarTipo(false)"
-      >
-        {{ texto('aritmetica') }}
-      </button>
-      <button
-        type="button"
-        [class.ativo]="geometrica()"
-        [attr.aria-pressed]="geometrica()"
-        (click)="alternarTipo(true)"
-      >
-        {{ texto('geometrica') }}
-      </button>
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('escolhaSerie')">
+      @for (serie of series; track serie.id) {
+        <button
+          type="button"
+          [class.ativo]="escolhida().id === serie.id"
+          [attr.aria-pressed]="escolhida().id === serie.id"
+          [attr.aria-label]="texto('serie_' + serie.id)"
+          (click)="escolher(serie)"
+        >
+          <app-formula [tex]="serie.tex" />
+        </button>
+      }
     </section>
 
     <section class="painel grade-controles">
       <app-controle-parametro
-        [(valor)]="primeiro"
-        [rotulo]="i18n.t('explorar.primeiroTermo')"
-        [min]="1"
-        [max]="20"
-      />
-      <app-controle-parametro
-        [(valor)]="razaoEmDecimos"
-        [rotulo]="geometrica() ? texto('razaoDecimos') : texto('razao')"
-        [min]="geometrica() ? 1 : -9"
-        [max]="geometrica() ? 25 : 9"
-        [dica]="geometrica() ? texto('razaoAtual', { valor: formatar(razao()) }) : undefined"
-      />
-      <app-controle-parametro
         [(valor)]="quantidade"
-        [rotulo]="i18n.t('explorar.quantosTermos')"
-        [min]="3"
-        [max]="15"
+        [rotulo]="texto('quantosTermos')"
+        [min]="5"
+        [max]="200"
       />
     </section>
 
     <section class="destaque-formula">
-      <app-formula [tex]="formulaTex()" [bloco]="true" />
-    </section>
-
-    <section class="indicadores">
-      <div class="indicador">
-        <span class="rotulo">{{ i18n.t('explorar.ultimoTermo') }}</span>
-        <strong>{{ formatar(termos()[termos().length - 1]!) }}</strong>
-      </div>
-      <div class="indicador" data-destaque="true">
-        <span class="rotulo">{{ texto('somaDos', { quantidade: quantidade() }) }}</span>
-        <strong>{{ formatar(soma().resultado) }}</strong>
-      </div>
-      @if (infinita(); as serie) {
-        <div class="indicador">
-          <span class="rotulo">{{ i18n.t('explorar.somaInfinita') }}</span>
-          <strong>
-            {{ serie.resultado === null ? texto('diverge') : formatar(serie.resultado) }}
-          </strong>
-          <span class="legenda">{{ converge() ? '|q| < 1' : '|q| ≥ 1' }}</span>
-        </div>
-      }
+      <app-formula [tex]="escolhida().tex" [bloco]="true" />
+      <app-formula [tex]="somaParcialTex()" [bloco]="true" />
     </section>
 
     <section>
-      <h2>{{ texto('termosESomasAcumuladas') }}</h2>
+      <h2>{{ texto('somasParciais') }}</h2>
       <app-math-plot
         [dominio]="dominio()"
+        [curvas]="curvas()"
         [pontos]="pontos()"
-        [segmentos]="segmentos()"
         [descricao]="descricaoGrafico()"
         [altura]="360"
       />
       <p class="observacao">
-        {{ texto('pontosClaros') }}
-        @if (converge()) {
-          {{ texto('linhaTracejadaELimite') }}
-        } @else {
-          {{ texto('semConvergencia') }}
-        }
+        {{ escolhida().soma === null ? texto('leituraDiverge') : texto('leituraConverge') }}
       </p>
     </section>
-
-    <section>
-      <h2>{{ texto('passoAPassoDaSoma') }}</h2>
-      <app-passo-a-passo [passos]="soma().passos" />
-    </section>
-
-    @if (infinita(); as serie) {
-      <section>
-        <h2>{{ texto('aSomaInfinita') }}</h2>
-        <app-passo-a-passo [passos]="serie.passos" />
-      </section>
-    }
 
     <app-conceitos-topico [conceitos]="conceitos" />
   </div>

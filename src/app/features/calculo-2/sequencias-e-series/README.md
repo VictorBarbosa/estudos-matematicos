@@ -1,22 +1,19 @@
-# Sequências e séries
+# Séries e convergência
 
-Progressões, somas infinitas e convergência.
+Testes de convergência — termo geral, p-série, comparação, razão, telescópica, alternada — e o raio
+de convergência das séries de potências.
 
-**Área:** Pré-cálculo · **Rota:** `/calculo-2/sequencias-e-series`
+**Área:** Cálculo 2 · **Rota:** `/calculo-2/sequencias-e-series` (o id antigo foi mantido para não
+perder o progresso salvo)
 
-## O que este módulo precisa ter
+- `sequencias-e-series.ts` / `.html` / `.scss` — Explorar com as somas parciais Sₙ × n de seis séries,
+  quatro que convergem e duas que divergem.
+- `sequencias-e-series.gerador.ts` — limite do termo geral, p-série, comparação, L da razão, soma
+  telescópica, cota do erro da alternada, raio de convergência, extremos do intervalo e número de
+  termos para uma tolerância.
+- `sequencias-e-series.teoria.ts` — sete verbetes, cada um com exemplo resolvido.
 
-- `sequencias-e-series.ts` / `.html` / `.scss` — componente dentro de `<app-topico-layout>`,
-  com as abas **Explorar** e **Treinar**.
-- `sequencias-e-series.gerador.ts` — `GeradorExercicio`, incluindo as armadilhas
-  (os erros típicos deste tema) que tornam a correção didática.
-- `sequencias-e-series.teoria.ts` — conteúdo dos popups de teoria, como dado tipado.
-- `sequencias-e-series.spec.ts` — testes do gerador.
+## Por que mudou
 
-A matemática em si vai em `src/app/core/math/`, nunca nesta pasta, para que
-outros tópicos possam reaproveitá-la.
-
-## Ao concluir
-
-1. Registre a rota em `src/app/features/pre-calculo/pre-calculo.routes.ts`.
-2. Marque `pronto: true` no currículo (`src/app/curriculo/curriculo.ts`).
+Na avaliação de 09/11/2026 o tópico era uma cópia de `funcoes/progressoes` (PA e PG) e prometia
+convergência sem cobrá-la. PA e PG continuam em Funções; aqui ficam os testes.

@@ -786,8 +786,8 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       },
       {
         id: 'sequencias-e-series',
-        titulo: 'Sequências e séries',
-        descricao: 'Progressões, somas infinitas e convergência.',
+        titulo: 'Séries e convergência',
+        descricao: 'Testes de convergência e o raio de convergência das séries de potências.',
         pronto: true,
       },
       {

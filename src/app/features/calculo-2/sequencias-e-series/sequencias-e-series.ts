@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { somaComPassos, somaInfinitaComPassos, somasParciais, termosIniciais } from '@core/math';
 import { TeoriaService } from '@core/teoria/services/teoria.service';
 import { TopicoLayout } from '@layout/topico-layout/topico-layout';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
@@ -7,26 +6,72 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
-import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { textoLocal } from '@core/i18n/textos-locais';
 import textos from '@features/calculo-2/sequencias-e-series/sequencias-e-series.i18n.json';
 import { geradorSequencias } from '@features/calculo-2/sequencias-e-series/sequencias-e-series.gerador';
 import { TEORIA_SEQUENCIAS } from '@features/calculo-2/sequencias-e-series/sequencias-e-series.teoria';
 
+/** As séries do painel: cada uma ilustra um teste, e duas divergem. */
+interface SerieExemplo {
+  readonly id: string;
+  readonly tex: string;
+  readonly termo: (n: number) => number;
+  /** O limite das somas parciais, ou null quando a série diverge. */
+  readonly soma: number | null;
+  readonly somaTex: string;
+}
+
+const SERIES: readonly SerieExemplo[] = [
+  {
+    id: 'harmonica',
+    tex: '\\sum \\frac{1}{n}',
+    termo: (n) => 1 / n,
+    soma: null,
+    somaTex: '\\infty',
+  },
+  {
+    id: 'basel',
+    tex: '\\sum \\frac{1}{n^{2}}',
+    termo: (n) => 1 / (n * n),
+    soma: (Math.PI * Math.PI) / 6,
+    somaTex: '\\frac{\\pi^{2}}{6} \\approx 1{,}645',
+  },
+  {
+    id: 'alternada',
+    tex: '\\sum \\frac{(-1)^{n+1}}{n}',
+    termo: (n) => (n % 2 === 1 ? 1 : -1) / n,
+    soma: Math.LN2,
+    somaTex: '\\ln 2 \\approx 0{,}693',
+  },
+  {
+    id: 'geometrica',
+    tex: '\\sum \\left(\\frac{1}{2}\\right)^{n}',
+    termo: (n) => 0.5 ** n,
+    soma: 1,
+    somaTex: '1',
+  },
+  {
+    id: 'telescopica',
+    tex: '\\sum \\frac{1}{n(n + 1)}',
+    termo: (n) => 1 / (n * (n + 1)),
+    soma: 1,
+    somaTex: '1',
+  },
+  {
+    id: 'raiz',
+    tex: '\\sum \\frac{1}{\\sqrt{n}}',
+    termo: (n) => 1 / Math.sqrt(n),
+    soma: null,
+    somaTex: '\\infty',
+  },
+];
+
 @Component({
   selector: 'app-sequencias-e-series',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    MathPlot,
-    PassoAPasso,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, MathPlot, TopicoLayout],
   templateUrl: './sequencias-e-series.html',
   styleUrl: './sequencias-e-series.scss',
 })
@@ -35,115 +80,68 @@ export class SequenciasESeries {
   protected readonly texto = textoLocal(textos);
   protected readonly gerador = geradorSequencias;
   protected readonly conceitos = TEORIA_SEQUENCIAS.map((teoria) => teoria.id);
+  protected readonly series = SERIES;
 
-  protected readonly primeiro = signal(1);
-  /** A razão é controlada em décimos, para permitir valores entre 0 e 1. */
-  protected readonly razaoEmDecimos = signal(5);
-  protected readonly geometrica = signal(true);
-  protected readonly quantidade = signal(8);
+  protected readonly escolhida = signal<SerieExemplo>(SERIES[1]!);
+  protected readonly quantidade = signal(30);
 
-  protected readonly razao = computed(() =>
-    this.geometrica() ? this.razaoEmDecimos() / 10 : this.razaoEmDecimos(),
-  );
-
-  protected readonly progressao = computed(() => ({
-    primeiro: this.primeiro(),
-    razao: this.razao(),
-    geometrica: this.geometrica(),
-  }));
-
-  protected readonly termos = computed(() =>
-    termosIniciais(this.progressao(), this.quantidade()),
-  );
-
-  protected readonly parciais = computed(() =>
-    somasParciais(this.progressao(), this.quantidade()),
-  );
-
-  protected readonly soma = computed(() =>
-    somaComPassos(this.progressao(), this.quantidade()),
-  );
-
-  protected readonly infinita = computed(() =>
-    this.geometrica() ? somaInfinitaComPassos(this.primeiro(), this.razao()) : null,
-  );
-
-  protected readonly converge = computed(
-    () => this.geometrica() && Math.abs(this.razao()) < 1,
-  );
-
-  protected readonly formulaTex = computed(() =>
-    this.geometrica()
-      ? `a_n = ${this.primeiro()} \\cdot ${formatar(this.razao())}^{\\,n-1}`
-      : `a_n = ${this.primeiro()} + (n-1) \\cdot ${formatar(this.razao())}`,
-  );
-
-  /** Termos e somas parciais lado a lado, para ver a convergência. */
-  protected readonly pontos = computed<readonly PontoPlot[]>(() => [
-    ...this.termos().map((valor, indice) => ({
-      x: indice + 1,
-      y: valor,
-      cor: 'serie-2' as const,
-    })),
-    ...this.parciais().map((valor, indice) => ({
-      x: indice + 1,
-      y: valor,
-      cor: 'acento' as const,
-    })),
-  ]);
-
-  /** A reta do limite, quando a série converge. */
-  protected readonly segmentos = computed<readonly SegmentoPlot[]>(() => {
-    const infinita = this.infinita();
-    if (infinita === null || infinita.resultado === null) {
-      return [];
+  /** S₁, S₂, …, Sₙ. */
+  protected readonly parciais = computed(() => {
+    const serie = this.escolhida();
+    const somas: number[] = [];
+    let acumulado = 0;
+    for (let n = 1; n <= this.quantidade(); n++) {
+      acumulado += serie.termo(n);
+      somas.push(acumulado);
     }
+    return somas;
+  });
 
-    return [
-      {
-        x1: 0,
-        y1: infinita.resultado,
-        x2: this.quantidade() + 1,
-        y2: infinita.resultado,
-        cor: 'serie-3',
-        tracejado: true,
-      },
-    ];
+  protected readonly ultima = computed(() => this.parciais().at(-1) ?? 0);
+
+  protected readonly pontos = computed<readonly PontoPlot[]>(() =>
+    this.parciais().map((s, i) => ({ x: i + 1, y: s, cor: 'serie-1' })),
+  );
+
+  protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
+    const soma = this.escolhida().soma;
+    return soma === null
+      ? []
+      : [{ fn: () => soma, cor: 'serie-2', tracejada: true, rotulo: this.texto('limite') }];
   });
 
   protected readonly dominio = computed(() => {
-    const valores = [...this.termos(), ...this.parciais()];
-    const minimo = Math.min(0, ...valores);
-    const maximo = Math.max(...valores);
-    const folga = Math.max(1, (maximo - minimo) * 0.15);
-
-    return {
-      xMin: 0,
-      xMax: this.quantidade() + 1,
-      yMin: minimo - folga,
-      yMax: maximo + folga,
-    };
+    const somas = this.parciais();
+    const soma = this.escolhida().soma;
+    const valores = soma === null ? somas : [...somas, soma];
+    const yMax = Math.max(...valores);
+    const yMin = Math.min(0, ...valores);
+    const folga = (yMax - yMin) * 0.12 || 1;
+    return { xMin: 0, xMax: this.quantidade() + 1, yMin: yMin - folga, yMax: yMax + folga };
   });
 
+  protected readonly somaParcialTex = computed(
+    () =>
+      `S_{${this.quantidade()}} = ${this.formatar(this.ultima()).replace(',', '{,}')} \\qquad ` +
+      `\\lim S_n = ${this.escolhida().somaTex}`,
+  );
+
   protected readonly descricaoGrafico = computed(() =>
-    this.converge() ? this.texto('descricaoConverge') : this.texto('descricaoDiverge'),
+    this.texto('descricaoGrafico', {
+      n: String(this.quantidade()),
+      s: this.formatar(this.ultima()),
+    }),
   );
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_SEQUENCIAS);
   }
 
-  protected alternarTipo(geometrica: boolean): void {
-    this.geometrica.set(geometrica);
-    // As faixas úteis de razão são bem diferentes nos dois casos.
-    this.razaoEmDecimos.set(geometrica ? 5 : 3);
+  protected escolher(serie: SerieExemplo): void {
+    this.escolhida.set(serie);
   }
 
   protected formatar(valor: number): string {
-    return formatar(valor);
+    return Number(valor.toFixed(4)).toLocaleString('pt-BR', { maximumFractionDigits: 4 });
   }
-}
-
-function formatar(valor: number): string {
-  return Number(valor.toFixed(3)).toLocaleString('pt-BR', { maximumFractionDigits: 3 });
 }

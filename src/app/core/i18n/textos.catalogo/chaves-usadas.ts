@@ -176,12 +176,11 @@ export const CHAVES_USADAS: readonly (readonly [string, string])[] = [
   ['explorar.ponto', 'features/calculo-1/derivacao-implicita/derivacao-implicita.html'],
   ['explorar.porQueImporta', 'features/algebra/polinomios/polinomios.html'],
   ['explorar.posicaoInicial', 'features/calculo-1/taxa-de-variacao/taxa-de-variacao.html'],
-  ['explorar.primeiroTermo', 'features/calculo-2/sequencias-e-series/sequencias-e-series.html'],
   [
     'explorar.produtoEscalar',
     'features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.html',
   ],
-  ['explorar.quantosTermos', 'features/calculo-2/sequencias-e-series/sequencias-e-series.html'],
+  ['explorar.quantosTermos', 'features/funcoes/progressoes/progressoes.html'],
   ['explorar.raio', 'features/geometria/circulo-e-poligonos/circulo-e-poligonos.html'],
   ['explorar.raioDecimos', 'features/fisica/dinamica-rotacional/dinamica-rotacional.html'],
   ['explorar.razaoK', 'features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.html'],
@@ -195,7 +194,7 @@ export const CHAVES_USADAS: readonly (readonly [string, string])[] = [
     'features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.html',
   ],
   ['explorar.senTheta', 'features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.html'],
-  ['explorar.somaInfinita', 'features/calculo-2/sequencias-e-series/sequencias-e-series.html'],
+  ['explorar.somaInfinita', 'features/funcoes/progressoes/progressoes.html'],
   [
     'explorar.superficieVolume',
     'features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.html',
@@ -210,7 +209,7 @@ export const CHAVES_USADAS: readonly (readonly [string, string])[] = [
     'explorar.trianguloPascal',
     'features/estatistica/analise-combinatoria/analise-combinatoria.html',
   ],
-  ['explorar.ultimoTermo', 'features/calculo-2/sequencias-e-series/sequencias-e-series.html'],
+  ['explorar.ultimoTermo', 'features/funcoes/progressoes/progressoes.html'],
   [
     'explorar.valorNoPonto',
     'features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.html',

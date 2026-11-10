@@ -1,82 +1,55 @@
 {
-  "tipoDeProgressao": {
-    "pt": "Tipo de progressão",
-    "fr": "Type de progression",
-    "en": "Type of progression"
+  "escolhaSerie": {
+    "pt": "Escolha a série",
+    "fr": "Choisissez la série",
+    "en": "Choose the series"
   },
-  "aritmetica": {
-    "pt": "Aritmética (soma)",
-    "fr": "Arithmétique (somme)",
-    "en": "Arithmetic (sum)"
+  "serie_harmonica": { "pt": "Série harmônica", "fr": "Série harmonique", "en": "Harmonic series" },
+  "serie_basel": {
+    "pt": "Soma de 1 sobre n ao quadrado",
+    "fr": "Somme de 1 sur n au carré",
+    "en": "Sum of 1 over n squared"
   },
-  "geometrica": {
-    "pt": "Geométrica (multiplica)",
-    "fr": "Géométrique (multiplication)",
-    "en": "Geometric (multiply)"
+  "serie_alternada": {
+    "pt": "Harmônica alternada",
+    "fr": "Harmonique alternée",
+    "en": "Alternating harmonic"
   },
-  "razaoDecimos": {
-    "pt": "Razão (em décimos)",
-    "fr": "Raison (en dixièmes)",
-    "en": "Ratio (in tenths)"
+  "serie_geometrica": {
+    "pt": "Geométrica de razão um meio",
+    "fr": "Géométrique de raison un demi",
+    "en": "Geometric with ratio one half"
   },
-  "razao": {
-    "pt": "Razão",
-    "fr": "Raison",
-    "en": "Ratio"
+  "serie_telescopica": { "pt": "Telescópica", "fr": "Télescopique", "en": "Telescoping" },
+  "serie_raiz": {
+    "pt": "Soma de 1 sobre raiz de n",
+    "fr": "Somme de 1 sur racine de n",
+    "en": "Sum of 1 over root n"
   },
-  "razaoAtual": {
-    "pt": "Razão atual: {valor}",
-    "fr": "Raison actuelle : {valor}",
-    "en": "Current ratio: {valor}"
+  "quantosTermos": {
+    "pt": "Quantos termos somar (n)",
+    "fr": "Combien de termes additionner (n)",
+    "en": "How many terms to add (n)"
   },
-  "somaDos": {
-    "pt": "Soma dos {quantidade}",
-    "fr": "Somme des {quantidade}",
-    "en": "Sum of the {quantidade}"
+  "somasParciais": {
+    "pt": "As somas parciais Sₙ",
+    "fr": "Les sommes partielles Sₙ",
+    "en": "The partial sums Sₙ"
   },
-  "diverge": {
-    "pt": "diverge",
-    "fr": "diverge",
-    "en": "diverges"
+  "limite": { "pt": "o limite", "fr": "la limite", "en": "the limit" },
+  "descricaoGrafico": {
+    "pt": "As somas parciais da série escolhida até n = {n}; a última vale {s}.",
+    "fr": "Les sommes partielles de la série choisie jusqu’à n = {n} ; la dernière vaut {s}.",
+    "en": "The partial sums of the chosen series up to n = {n}; the last one is {s}."
   },
-  "termosESomasAcumuladas": {
-    "pt": "Termos e somas acumuladas",
-    "fr": "Termes et sommes accumulées",
-    "en": "Terms and accumulated sums"
+  "leituraConverge": {
+    "pt": "Os pontos se acomodam na linha tracejada: a série converge para esse valor. Na alternada, as somas pulam para cima e para baixo, cercando o limite — a distância até ele é sempre menor que o próximo termo.",
+    "fr": "Les points se stabilisent sur la ligne pointillée : la série converge vers cette valeur. Pour l’alternée, les sommes oscillent autour de la limite — l’écart est toujours inférieur au terme suivant.",
+    "en": "The points settle on the dashed line: the series converges to that value. For the alternating one, the sums bounce above and below the limit — the gap is always smaller than the next term."
   },
-  "pontosClaros": {
-    "pt": "Os pontos claros são os termos; os destacados são as somas parciais.",
-    "fr": "Les points clairs sont les termes ; les points en évidence sont les sommes partielles.",
-    "en": "The light points are the terms; the highlighted ones are the partial sums."
-  },
-  "linhaTracejadaELimite": {
-    "pt": "A linha tracejada é o limite: repare que as somas se aproximam dela sem nunca ultrapassá-la, mesmo somando infinitas parcelas.",
-    "fr": "La ligne en pointillés est la limite : remarquez que les sommes s'en approchent sans jamais la dépasser, même en additionnant une infinité de termes.",
-    "en": "The dashed line is the limit: notice that the sums approach it without ever crossing it, even when adding infinitely many terms."
-  },
-  "semConvergencia": {
-    "pt": "Sem convergência, as somas parciais crescem indefinidamente.",
-    "fr": "Sans convergence, les sommes partielles croissent indéfiniment.",
-    "en": "Without convergence, the partial sums grow without bound."
-  },
-  "passoAPassoDaSoma": {
-    "pt": "Passo a passo da soma",
-    "fr": "Étapes de la somme",
-    "en": "Step by step of the sum"
-  },
-  "aSomaInfinita": {
-    "pt": "A soma infinita",
-    "fr": "La somme infinie",
-    "en": "The infinite sum"
-  },
-  "descricaoConverge": {
-    "pt": "Termos da progressão e somas parciais acumuladas, com a reta do limite da série infinita.",
-    "fr": "Termes de la progression et sommes partielles accumulées, avec la droite limite de la série infinie.",
-    "en": "Terms of the progression and accumulated partial sums, with the limit line of the infinite series."
-  },
-  "descricaoDiverge": {
-    "pt": "Termos da progressão e somas parciais acumuladas.",
-    "fr": "Termes de la progression et sommes partielles accumulées.",
-    "en": "Terms of the progression and accumulated partial sums."
+  "leituraDiverge": {
+    "pt": "O termo vai a zero, mas as somas não param de crescer: a série diverge. Aumente n e veja — devagar, sem teto. É por isso que «o termo vai a zero» não basta.",
+    "fr": "Le terme tend vers zéro, mais les sommes ne cessent de croître : la série diverge. Augmentez n et regardez — lentement, sans plafond. C’est pourquoi « le terme tend vers zéro » ne suffit pas.",
+    "en": "The term goes to zero, but the sums keep growing: the series diverges. Increase n and watch — slowly, with no ceiling. That is why “the term goes to zero” is not enough."
   }
 }

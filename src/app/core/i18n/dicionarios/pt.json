@@ -581,8 +581,8 @@
         "titulo": "Seno, cosseno e tangente"
       },
       "sequencias-e-series": {
-        "descricao": "Progressões, somas infinitas e convergência.",
-        "titulo": "Sequências e séries"
+        "descricao": "Testes de convergência e o raio de convergência das séries de potências.",
+        "titulo": "Séries e convergência"
       },
       "series-de-taylor": {
         "descricao": "Aproximar uma função por polinômios, e o erro que sobra.",
