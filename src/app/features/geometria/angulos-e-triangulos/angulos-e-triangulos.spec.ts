@@ -113,3 +113,65 @@ describe('geradorAngulos', () => {
     expect(geradorAngulos.analisar('reto')).toBeNull();
   });
 });
+
+describe('geradorAngulos — congruência, quadriláteros e diagonais', () => {
+  const lote = (nivel: Nivel) => {
+    const rng = criarRng(1414);
+    return Array.from({ length: 300 }, () => geradorAngulos.gerar(nivel, rng));
+  };
+  const num = (t: string) => Number(t.replace(',', '.'));
+
+  it('na congruência, a medida pedida é a do elemento correspondente', () => {
+    for (const nivel of ['facil', 'dificil'] as const) {
+      const casos = lote(nivel).filter((e) => e.conceitos.includes('angulos.congruencia'));
+      expect(casos.length).toBeGreaterThan(0);
+      for (const e of casos) {
+        let m = /BC = (\d+) cm/.exec(e.enunciado);
+        if (m) {
+          expect(e.gabarito).toBe(Number(m[1]));
+          continue;
+        }
+        m = /AB = (\d*)x \+ (\d+) cm e DE = (\d+)x ([+−]) (\d+) cm/.exec(e.enunciado);
+        if (m) {
+          const p = m[1] === '' ? 1 : Number(m[1]);
+          const s = (m[4] === '−' ? -1 : 1) * Number(m[5]);
+          const x = (s - Number(m[2])) / (p - Number(m[3]));
+          expect(e.gabarito).toBeCloseTo(p * x + Number(m[2]), 9);
+          continue;
+        }
+        m = /ângulo A mede (\d+)° e o ângulo E mede (\d+)°/.exec(e.enunciado)!;
+        expect(e.gabarito).toBe(180 - Number(m[1]) - Number(m[2]));
+      }
+    }
+  });
+
+  it('nos quadriláteros, os ângulos fecham 360° e os consecutivos 180°', () => {
+    const casos = [...lote('medio'), ...lote('dificil')].filter((e) =>
+      e.conceitos.includes('angulos.quadrilateros'),
+    );
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const nums = [...e.enunciado.matchAll(/(\d+)°/g)].map((m) => Number(m[1]));
+      if (e.enunciado.startsWith('Três ângulos')) {
+        expect(nums.reduce((a, b) => a + b, 0) + e.gabarito).toBe(360);
+      } else if (e.enunciado.includes('losango')) {
+        expect(e.gabarito).toBeCloseTo((180 - nums[0]!) / 2, 9);
+      } else {
+        expect(e.gabarito + nums[0]!).toBe(180);
+      }
+    }
+  });
+
+  it('as diagonais conferem com n(n − 3)/2 do polígono do ângulo dado', () => {
+    const casos = [...lote('medio'), ...lote('extremo')].filter((e) =>
+      e.conceitos.includes('angulos.poligono-regular'),
+    );
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, tipo, ang] = /ângulo (interno|externo) de ([\d,]+)°/.exec(e.enunciado)!;
+      const externo = tipo === 'externo' ? num(ang!) : 180 - num(ang!);
+      const n = Math.round(360 / externo);
+      expect(e.gabarito).toBe((n * (n - 3)) / 2);
+    }
+  });
+});

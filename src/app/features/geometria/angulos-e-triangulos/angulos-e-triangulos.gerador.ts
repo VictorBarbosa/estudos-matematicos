@@ -5,11 +5,24 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 
 const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
 
-type Pergunta = 'soma-internos' | 'angulo-regular' | 'terceiro-angulo' | 'lados-pelo-angulo';
+import {
+  exercicioCongruencia,
+  exercicioDiagonais,
+  exercicioQuadrilatero,
+} from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.poligonos';
+
+type Pergunta =
+  | 'soma-internos'
+  | 'angulo-regular'
+  | 'terceiro-angulo'
+  | 'lados-pelo-angulo'
+  | 'congruencia'
+  | 'quadrilatero'
+  | 'diagonais';
 
 export const geradorAngulos: GeradorExercicio<number> = {
   topicoId: 'angulos-e-triangulos',
-  formatoResposta: 'um número em graus, ex.: 120',
+  formatoResposta: 'um número, ex.: 120',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     switch (sortearPergunta(nivel, rng)) {
@@ -21,11 +34,17 @@ export const geradorAngulos: GeradorExercicio<number> = {
         return exercicioTerceiroAngulo(nivel, rng);
       case 'lados-pelo-angulo':
         return exercicioLadosPeloAngulo(nivel, rng);
+      case 'congruencia':
+        return exercicioCongruencia(nivel, rng);
+      case 'quadrilatero':
+        return exercicioQuadrilatero(nivel, rng);
+      case 'diagonais':
+        return exercicioDiagonais(nivel, rng);
     }
   },
 
   // O grau é ruído de unidade: a resposta em si é um número.
-  analisar: (entrada) => analisarNumero(entrada.replace(/°/g, '')),
+  analisar: (entrada) => analisarNumero(entrada.replace(/°|cm/g, '')),
 
   ...numeroComCasas(2, 1e-4),
 };
@@ -33,18 +52,29 @@ export const geradorAngulos: GeradorExercicio<number> = {
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
   switch (nivel) {
     case 'facil':
-      return rng.escolher<Pergunta>(['soma-internos', 'terceiro-angulo']);
+      return rng.escolher<Pergunta>(['soma-internos', 'terceiro-angulo', 'congruencia']);
     case 'medio':
-      return rng.escolher<Pergunta>(['angulo-regular', 'soma-internos', 'terceiro-angulo']);
+      return rng.escolher<Pergunta>([
+        'angulo-regular',
+        'soma-internos',
+        'terceiro-angulo',
+        'quadrilatero',
+        'diagonais',
+      ]);
     case 'dificil':
-      return rng.escolher<Pergunta>(['lados-pelo-angulo', 'angulo-regular']);
+      return rng.escolher<Pergunta>([
+        'lados-pelo-angulo',
+        'angulo-regular',
+        'congruencia',
+        'quadrilatero',
+      ]);
     /*
      * As duas perguntas inversas: do ângulo para o número de lados, e do
      * ângulo de um polígono regular para a sua identidade. Com uma só, o
      * nível virava a mesma pergunta repetida.
      */
     case 'extremo':
-      return rng.escolher<Pergunta>(['lados-pelo-angulo', 'angulo-regular']);
+      return rng.escolher<Pergunta>(['lados-pelo-angulo', 'angulo-regular', 'diagonais']);
   }
 }
 

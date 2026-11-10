@@ -209,7 +209,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         id: 'angulos-e-triangulos',
         titulo: 'Ângulos e triângulos',
-        descricao: 'Soma dos ângulos, congruência e a desigualdade triangular.',
+        descricao: 'Soma dos ângulos, congruência, polígonos e quadriláteros.',
         pronto: true,
       },
       {
@@ -228,6 +228,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         id: 'circulo-e-poligonos',
         titulo: 'Círculo e polígonos',
         descricao: 'Comprimento, área do círculo, setores e polígonos regulares.',
+        pronto: true,
+      },
+      {
+        id: 'poliedros',
+        titulo: 'Poliedros',
+        descricao: 'Vértices, arestas e faces: a relação de Euler, Platão, prismas e pirâmides.',
         pronto: true,
       },
       {

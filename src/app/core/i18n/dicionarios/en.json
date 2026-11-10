@@ -229,7 +229,7 @@
         "titulo": "Quantities and dimensional analysis"
       },
       "angulos-e-triangulos": {
-        "descricao": "Angle sum, congruence and the triangle inequality.",
+        "descricao": "Angle sums, congruence, polygons and quadrilaterals.",
         "titulo": "Angles and triangles"
       },
       "aplicacoes-da-derivada": {
@@ -523,6 +523,10 @@
       "operacoes-fundamentais": {
         "descricao": "Properties of addition and multiplication, and the order of operations.",
         "titulo": "Fundamental operations"
+      },
+      "poliedros": {
+        "descricao": "Vertices, edges and faces: Euler’s formula, Plato, prisms and pyramids.",
+        "titulo": "Polyhedra"
       },
       "polinomios": {
         "descricao": "Degree, division, the remainder theorem and the hunt for roots.",

@@ -328,6 +328,8 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       import('@features/geometria/circulo-e-poligonos/circulo-e-poligonos.gerador').then(
         (m) => m.geradorCirculo,
       ),
+    poliedros: () =>
+      import('@features/geometria/poliedros/poliedros.gerador').then((m) => m.geradorPoliedros),
     'semelhanca-e-pitagoras': () =>
       import('@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.gerador').then(
         (m) => m.geradorSemelhanca,

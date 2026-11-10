@@ -40,6 +40,11 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'poliedros',
+    title: 'Poliedros · Estudos Matemáticos',
+    loadComponent: () => import('@features/geometria/poliedros/poliedros').then((m) => m.Poliedros),
+  },
+  {
     path: 'solidos-e-volumes',
     title: 'Sólidos e volumes · Estudos Matemáticos',
     loadComponent: () =>

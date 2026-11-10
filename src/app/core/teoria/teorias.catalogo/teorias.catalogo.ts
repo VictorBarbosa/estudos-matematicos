@@ -12,6 +12,7 @@ import { TEORIA_EQUACAO_2 as t_equacao_segundo_grau } from '@features/algebra/eq
 import { TEORIA_EXPRESSOES as t_expressoes_algebricas } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.teoria';
 import { TEORIA_FATORACAO as t_fatoracao } from '@features/algebra/fatoracao/fatoracao.teoria';
 import { TEORIA_INEQUACOES as t_inequacoes } from '@features/algebra/inequacoes/inequacoes.teoria';
+import { TEORIA_POLIEDROS as t_poliedros } from '@features/geometria/poliedros/poliedros.teoria';
 import { TEORIA_POLARES as t_coordenadas_polares } from '@features/geometria-analitica/coordenadas-polares/coordenadas-polares.teoria';
 import { TEORIA_BINOMIO as t_binomio_de_newton } from '@features/estatistica/binomio-de-newton/binomio-de-newton.teoria';
 import { TEORIA_EQUACOES_EXPONENCIAIS as t_equacoes_exponenciais } from '@features/funcoes/equacoes-exponenciais/equacoes-exponenciais.teoria';
@@ -126,6 +127,7 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['equacoes-exponenciais', t_equacoes_exponenciais],
   ['binomio-de-newton', t_binomio_de_newton],
   ['coordenadas-polares', t_coordenadas_polares],
+  ['poliedros', t_poliedros],
   ['polinomios', t_polinomios],
   ['produtos-notaveis', t_produtos_notaveis],
   ['progressoes', t_progressoes],
