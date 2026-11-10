@@ -67,7 +67,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 - [x] Operações, notação, MMC/MDC, frações, decimais, razão e proporção, potências e raízes
 - [x] Frações com cobertura por tipo (nove operações, cinco acertos em cada)
-- [ ] Nada a acrescentar. Simplificação pedida no plano anterior (MMC/MDC sem aprofundamento) — **◐** o tópico continua do mesmo tamanho; decisão: manter.
+- [x] Nada a acrescentar. Simplificação pedida no plano anterior (MMC/MDC sem aprofundamento) — decidido: manter o tópico como está.
 
 ### 3.2 Álgebra — frágil (treino)
 
@@ -97,7 +97,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [ ] **◐** Domínio e imagem «com maior profundidade»: o treino ainda pede só «o único valor excluído», nunca o domínio como intervalo
 - [ ] **◐** Logaritmo natural: mencionado, sem verbete próprio
 - [ ] **◐** Treino (09/11): entraram inequação modular, razão e primeiro termo da PA/PG dados dois termos e taxa equivalente em juros, e esses três tópicos deixaram de ter Extremo com uma pergunta só. Faltam: injetora/sobrejetora; a^x = b por igualdade de bases
-- [ ] `juros-compostos` — plano anterior pedia «simplificar»; decisão: manter como aplicação do crescimento exponencial, opcional na trilha
+- [x] `juros-compostos` — decidido: manter como aplicação do crescimento exponencial (ganhou taxa equivalente em 09/11)
 
 ### 3.5 Trigonometria — aceitável
 
@@ -118,7 +118,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] «det = 0 ⟺ linhas proporcionais»: reconferido em 09/11 — a teoria já explica que no 3×3 a condição é dependência linear, e «proporcionais» só aparece onde vale (2×2 ou como caso particular)
 - [x] Explorar de `vetores-no-espaco` desenha a, b, o paralelogramo e a × b em 3D girável, com a regra da mão direita (09/11)
 - [ ] Teoria de `vetores-no-plano`: a pergunta `direcao` existe sem verbete próprio
-- [ ] Álgebra linear avançada (espaços vetoriais, autovalores) — etapa futura do plano anterior; não iniciada e **não é pré-requisito de admissão**
+- [x] Álgebra linear avançada (espaços vetoriais, autovalores) — decidido: fora do escopo, **não é pré-requisito de admissão** (autovalores aparecem só nos sistemas de EDOs)
 
 ### 3.7 Geometria analítica — aceitável
 
@@ -146,7 +146,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 - [x] Ordem corrigida: noção intuitiva antes de vizinhanças e infinito (a inversão da avaliação anterior)
 - [x] Sequências e séries transferidas para o Cálculo 2
-- [ ] A reformulação ampla do plano anterior (revisão de funções, gráficos, exponenciais) **não foi feita** — decisão: não refazer; essas revisões já vivem nos tópicos de Funções, e o Pré-cálculo fica como ponte de dois tópicos
+- [x] A reformulação ampla do plano anterior (revisão de funções, gráficos, exponenciais) — decidido: não refazer; essas revisões já vivem nos tópicos de Funções, e o Pré-cálculo fica como ponte de dois tópicos
 - [ ] Seção «Limites laterais» de `nocao-intuitiva-de-limite.teoria.ts:77` repete `calculo-1/limites-laterais` inteiro — remover a seção
 
 ### 3.10 Cálculo 1 — frágil (treino)
@@ -169,7 +169,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] Séries de potências e raio de convergência — no tópico refundado (10/11)
 - [ ] Substituição trigonométrica — ausente (depende da trigonometria inversa, 3.5)
 - [ ] Volumes por cascas cilíndricas
-- [ ] **◐** `integral-definida` continua exigindo primitiva antes de `teorema-fundamental` (ordem mantida). Decisão: aceitar, com o enunciado dizendo «use a primitiva» — ou reordenar
+- [x] `integral-definida` antes de `teorema-fundamental` — decidido: manter a ordem (a primitiva é ensinada em `integral-indefinida`, que vem logo depois, e o enunciado pede a primitiva)
 - [x] Exemplo resolvido na teoria de `aplicacoes-da-integral`, `integrais-improprias`, `series-de-taylor`, `tecnicas-de-integracao` (09/11)
 
 ### 3.12 Combinatória e estatística — aceitável
@@ -204,7 +204,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 - [x] 1. Revelar a resolução conta como desistência, trava o campo e zera a sequência
 - [x] 2–3. O domínio exige nível: 8 de 10, 3 no Médio ou Difícil, 3 seguidos ao final; o Fácil não libera etapa
-- [ ] **◐** 4. «Vale revisar» por tópico: o filtro `startsWith(topicoId)` ainda existe em `shared/components/painel-progresso` (2 ocorrências) — não confirmado se o mapeamento conceito→tópico foi corrigido
+- [x] 4. «Vale revisar» por tópico: confirmado em 10/11 — o painel usa o índice `TOPICO_DO_CONCEITO`; `startsWith` só aparece no comentário que explica o bug antigo, e há teste para isso
 - [x] 5. Links «Veja também»: há teste garantindo que todo id citado existe (`core/teoria/teorias/teorias.spec.ts`)
 - [x] 6–13. Tolerâncias e formatos: fração aceita em todo gerador numérico; √ e π aceitos; tolerância coerente com as casas pedidas (ver 4.2)
 - [x] 16–17. Erros de conteúdo da área entre curvas e dos anagramas
@@ -226,10 +226,10 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 ### 4.3 O que falta na mecânica
 
-- [ ] **◐ Cobertura da prova.** `planoDaProva` só exige um item por tipo onde há `TIPOS_POR_TOPICO`, e **só `fracoes` declara** (`core/progressao/models/progressao.model.ts:155-168`).
+- [x] **Cobertura da prova (10/11).** Cada tópico entra 2 vezes na prova (configurável de 1 a 3), com formas de pergunta diferentes e alternando Médio e Difícil; tópicos com tipos declarados entram uma vez por tipo. Optou-se por isso em vez de declarar `TIPOS_POR_TOPICO` em todos os tópicos, que mexeria na progressão das etapas. Antes: `planoDaProva` só exige um item por tipo onde há `TIPOS_POR_TOPICO`, e **só `fracoes` declara** (`core/progressao/models/progressao.model.ts:155-168`).
   - **Feito em 09/11 (a parte barata):** quando um tópico repete na prova, a segunda questão sai com **forma de enunciado diferente** da primeira (`sortearInedita`, até 30 tentativas, em `core/prova/models/prova.model.ts`), e o **nível alterna** Médio/Difícil por tópico — antes, com número par de tópicos, cada tópico caía sempre no mesmo nível. Testado em `prova.model.spec.ts`.
   - **Falta (não é barato):** `TIPOS_POR_TOPICO` também alimenta os requisitos das ETAPAS (`REQUISITOS_POR_TOPICO`) e exige geradores que aceitem `pendentes`. Declará-lo em outros tópicos muda a progressão do treino, não só a prova — ao menos `aplicacoes-da-derivada` (6), `equacoes-parametricas` (6), `progressoes` (5), `funcoes-por-partes` (5), `funcoes-racionais` (5), `transformacoes-de-graficos` (5). Esforço médio; decidir junto com a exigência da prova (item abaixo).
-- [ ] **Exigência da prova varia com o tamanho da área**: 2 erros tolerados valem 75% de acerto em 8 questões e 88% em 16 (Física). Decidir: tolerância proporcional, ou prova de tamanho fixo
+- [x] **Exigência da prova proporcional (10/11)**: a régua agora é «acerto mínimo» de 75% (configurável); os erros tolerados saem do tamanho da prova — 8 questões toleram 2, 34 toleram 8. Antes: 2 erros fixos valiam 75% em 8 questões e 88% em 16
 - [x] **Dois tipos de pergunta mortos** ligados: `'sinal'` em `circulo-trigonometrico` e `'taxa-media'` em `definicao-de-derivada` (09/11)
 - [x] **Extremo igual ao Difícil** nos 6 tópicos — cada um ganhou uma pergunta própria do Extremo, sorteada em metade das vezes (09/11): `limites-laterais` (salto com parábola), `triangulo-retangulo` (ângulo por arctg), `regra-da-cadeia` (√, eᵘ, ln, sen por fora), `expressoes-algebricas` (distribuir k(p) − (dx+e)(fx+g) e achar o coeficiente de x), `derivacao-implicita` (reta tangente, corte no eixo y), `lei-senos-cossenos` (maior ângulo pelos três lados)
 - [x] **Dicas presas em nível que a pergunta não alcança**: as 9 listadas e mais uma achada no caminho (`estatistica-e-incerteza`, inclinação) — 10 ao todo, movidas para o nível em que a pergunta estreia, com o expoente em palavras (09/11)
@@ -237,7 +237,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] **Toda forma de pergunta tem dica no nível em que estreia** (10/11): eram 573 de 1046 formas em 92 tópicos; zeradas, com dicas que usam os números do exercício. O guarda `core/treino/dicas-de-estreia.spec.ts` agora é absoluto — pergunta nova sem dica de estreia não passa
 - [ ] **Dicas com fórmula crua** (`'v = √(2gh)'`, `'σ = √(σ₁² + σ₂²)'`): o padrão é dizer o expoente em palavras e usar o número do enunciado — `gravitacao-e-orbitas:109,299`, `fluidos-e-aerodinamica:161`, `trabalho-e-energia:161`, `vetores-no-plano:106`, `numeros-complexos:145`, `circulo-e-poligonos:140,422`, `semelhanca-e-pitagoras:120,161`, `juros-compostos:155`, `probabilidade:123`
 - [ ] **Respostas simbólicas** (derivadas e primitivas como expressão, comparadas por avaliação em pontos): o analisador existe (`core/treino/resposta-simbolica`) mas só **um** gerador o usa
-- [ ] Teste diagnóstico de nivelamento por bloco — proposto na avaliação anterior, não iniciado
+- [x] Teste de nivelamento por área (10/11): a prova de uma área já aberta na trilha pode ser feita antes das etapas; passando, a área inteira conta como vencida e a próxima abre; falhando, nada é apagado. A barra lateral marca «nivelamento»
 - [ ] Textos dos geradores (enunciados, dicas, diagnósticos) só em português; a interface tem pt/fr/en. Um glossário FR/EN por tópico continua pendente
 
 ---
@@ -261,7 +261,7 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 **Concluída em 09/11/2026**, exceto a parte cara da cobertura da prova (detalhe em 4.3).
 
-- [ ] **◐** Cobertura da prova — feito: forma de enunciado inédita quando o tópico repete e alternância Médio/Difícil por tópico. Falta: `TIPOS_POR_TOPICO` nos demais tópicos, que mexe na progressão das etapas (passou para a Fase 1)
+- [x] Cobertura da prova — feito em 09–10/11: forma inédita, alternância de nível e 2 questões por tópico
 - [x] Ligar os dois tipos mortos (`'sinal'`, `'taxa-media'`)
 - [x] Corrigir as dicas presas (10) e dar dica às perguntas de estreia (10); guarda `dicas-alcancaveis.spec.ts`
 - [x] `\;` (1 linha real) e «proporcionais» (já estava certo)
@@ -272,7 +272,7 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 **Feita em 09/11/2026**, exceto `TIPOS_POR_TOPICO`, que depende de uma decisão sobre a exigência da prova (4.3). Efeito colateral dos tópicos novos: a trilha só fica aberta até a primeira etapa não vencida, então quem já tinha passado de Álgebra, Trigonometria ou Vetores e matrizes encontra a etapa nova a vencer.
 
-- [ ] `TIPOS_POR_TOPICO` nos tópicos com várias perguntas (vindo da Fase 0), decidido junto com a exigência da prova por tamanho de área
+- [x] Cobertura da prova e régua proporcional (10/11) — resolvido com 2 questões por tópico em vez de `TIPOS_POR_TOPICO`
 - [x] Novo tópico **Estudo de sinal e inequações de 2º grau** (destrava `aplicacoes-da-derivada`) — 09/11
 - [x] Novo tópico **Equações trigonométricas e funções inversas** (destrava substituição trigonométrica) — 09/11
 - [x] Novo tópico **Escalonamento e matriz inversa** (fecha o 0M04) — 09/11
