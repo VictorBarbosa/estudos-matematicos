@@ -8,7 +8,23 @@ import {
   semColisoes,
 } from '@core/treino/models/treino.model';
 
+import {
+  exercicioSegundaCadeia,
+  exercicioTresCamadas,
+} from '@features/calculo-1/regra-da-cadeia/regra-da-cadeia.novas';
+
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
+
+type Pergunta = 'potencia' | 'segunda' | 'tres-camadas' | 'outra-casca';
+
+const PERGUNTAS_POR_NIVEL: Readonly<Record<Nivel, readonly Pergunta[]>> = {
+  facil: ['potencia', 'segunda'],
+  medio: ['potencia', 'segunda', 'tres-camadas'],
+  dificil: ['potencia', 'tres-camadas', 'segunda'],
+  // No Extremo a casca de fora deixa de ser potência: raiz, exponencial,
+  // logaritmo ou seno, cada uma com a sua derivada — só aqui.
+  extremo: ['outra-casca', 'tres-camadas', 'potencia'],
+};
 
 /**
  * Exercícios de regra da cadeia com potências de binômios.
@@ -20,11 +36,10 @@ export const geradorCadeia: GeradorExercicio<number> = {
   formatoResposta: 'um número, ex.: 24',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
-    // No Extremo a casca de fora deixa de ser potência: raiz, exponencial,
-    // logaritmo ou seno, cada uma com a sua derivada.
-    if (nivel === 'extremo' && rng.booleano()) {
-      return exercicioOutraCasca(nivel, rng);
-    }
+    const pergunta = rng.escolher(PERGUNTAS_POR_NIVEL[nivel]);
+    if (pergunta === 'outra-casca') return exercicioOutraCasca(nivel, rng);
+    if (pergunta === 'segunda') return exercicioSegundaCadeia(nivel, rng);
+    if (pergunta === 'tres-camadas') return exercicioTresCamadas(nivel, rng);
 
     const a = rng.inteiro(2, nivel === 'facil' ? 3 : 5);
     const b = rng.inteiro(-4, 4);

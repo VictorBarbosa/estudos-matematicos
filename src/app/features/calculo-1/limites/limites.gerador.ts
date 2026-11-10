@@ -1,10 +1,14 @@
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  exercicioLimiteExiste,
+  exercicioLimiteFundamental,
+} from '@features/calculo-1/limites/limites.novas';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
 
-type Tipo = 'substituicao' | 'fatoracao' | 'conjugado' | 'infinito';
+type Tipo = 'substituicao' | 'fatoracao' | 'conjugado' | 'infinito' | 'fundamental' | 'existe';
 
 /** Exercícios de cálculo de limites, cobrindo as três técnicas principais. */
 export const geradorLimites: GeradorExercicio<number> = {
@@ -13,6 +17,9 @@ export const geradorLimites: GeradorExercicio<number> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const tipo = sortearTipo(nivel, rng);
+
+    if (tipo === 'fundamental') return exercicioLimiteFundamental(nivel, rng);
+    if (tipo === 'existe') return exercicioLimiteExiste(nivel, rng);
 
     if (tipo === 'substituicao') {
       const a = rng.inteiro(1, 4);
@@ -246,14 +253,14 @@ export const geradorLimites: GeradorExercicio<number> = {
 function sortearTipo(nivel: Nivel, rng: Rng): Tipo {
   switch (nivel) {
     case 'facil':
-      return rng.escolher<Tipo>(['substituicao', 'fatoracao']);
+      return rng.escolher<Tipo>(['substituicao', 'fatoracao', 'fundamental']);
     case 'medio':
-      return rng.escolher<Tipo>(['fatoracao', 'infinito', 'substituicao']);
+      return rng.escolher<Tipo>(['fatoracao', 'infinito', 'substituicao', 'fundamental']);
     case 'dificil':
-      return rng.escolher<Tipo>(['conjugado', 'infinito', 'fatoracao']);
-    // O conjugado é a técnica que não se adivinha: multiplicar em cima e
-    // embaixo para desfazer a indeterminação da raiz.
+      return rng.escolher<Tipo>(['conjugado', 'infinito', 'fatoracao', 'fundamental']);
+    // O conjugado é a técnica que não se adivinha; decidir se o limite existe
+    // (0/0, número/0 ou laterais opostos) só aparece aqui.
     case 'extremo':
-      return 'conjugado';
+      return rng.escolher<Tipo>(['conjugado', 'existe', 'fundamental']);
   }
 }

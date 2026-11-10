@@ -65,8 +65,9 @@ describe('geradorDerivadasExpLog', () => {
         continue;
       }
 
-      const [, ponto] = /f'\((-?\d+)\)/.exec(exercicio.enunciado)!;
-      expect(Number(ponto), exercicio.enunciado).toBeGreaterThan(0);
+      // f'(x₀), f''(x₀) ou «em x = x₀» (a reta tangente).
+      const [, a, b] = /f'+\((-?\d+)\)|em x = (-?\d+)/.exec(exercicio.enunciado)!;
+      expect(Number(a ?? b), exercicio.enunciado).toBeGreaterThan(0);
     }
   });
 

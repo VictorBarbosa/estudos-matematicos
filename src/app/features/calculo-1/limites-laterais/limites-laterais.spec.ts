@@ -23,8 +23,11 @@ describe('geradorLaterais', () => {
       }
     });
 
-    it(`no nível ${nivel}, o enunciado apresenta as duas sentenças`, () => {
-      for (const exercicio of amostra(nivel)) {
+    it(`no nível ${nivel}, a função por partes apresenta as duas sentenças`, () => {
+      // Só as perguntas de função por partes; módulo e infinito têm fórmula única.
+      for (const exercicio of amostra(nivel).filter(
+        (e) => !e.id.startsWith('laterais-modulo') && !e.id.startsWith('laterais-infinito'),
+      )) {
         expect(exercicio.enunciadoTex).toContain('\\begin{cases}');
         expect(exercicio.enunciadoTex).toContain('\\\\');
       }
@@ -32,7 +35,8 @@ describe('geradorLaterais', () => {
   }
 
   it('no nível fácil as sentenças emendam, e o limite existe', () => {
-    for (const exercicio of amostra('facil')) {
+    // Só a função por partes; o módulo tem os laterais opostos de propósito.
+    for (const exercicio of amostra('facil').filter((e) => e.enunciadoTex.includes('\\begin{cases}'))) {
       const ultimoPasso = exercicio.resolucao.passos.at(-1)!;
       expect(ultimoPasso.descricao).toContain('coincidem');
     }

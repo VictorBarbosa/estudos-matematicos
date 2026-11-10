@@ -12,7 +12,10 @@ describe('geradorCadeia', () => {
   for (const nivel of NIVEIS) {
     it(`no nível ${nivel}, o gabarito da potência de binômio é inteiro`, () => {
       // As cascas de raiz, exponencial, ln e seno (só no Extremo) dão decimais.
-      for (const exercicio of amostra(nivel).filter((e) => e.enunciadoTex.includes('\\right)^{'))) {
+      // A potência de binômio original; derivada segunda e três camadas têm testes próprios.
+      for (const exercicio of amostra(nivel).filter(
+        (e) => e.enunciadoTex.includes('\\right)^{') && !e.id.startsWith('cadeia-tres'),
+      )) {
         expect(Number.isInteger(exercicio.gabarito)).toBe(true);
       }
     });
@@ -27,7 +30,9 @@ describe('geradorCadeia', () => {
   }
 
   it('o gabarito confere com a derivada numérica', () => {
-    for (const exercicio of amostra('medio', 40)) {
+    for (const exercicio of amostra('medio', 40).filter(
+      (e) => !e.id.startsWith('cadeia-segunda') && !e.id.startsWith('cadeia-tres'),
+    )) {
       const [, aTexto, sinal, bTexto, nTexto] =
         /\\left\((\d*)x ([+-]) (\d+)\\right\)\^\{(\d+)\}/.exec(exercicio.enunciadoTex)!;
       const [, ponto] = /f'\((-?\d+)\)/.exec(exercicio.enunciado)!;

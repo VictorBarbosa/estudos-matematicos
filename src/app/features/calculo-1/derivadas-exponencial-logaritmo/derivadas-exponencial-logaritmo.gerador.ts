@@ -10,6 +10,10 @@ import {
 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
+  exercicioRetaTangenteExpLog,
+  exercicioSegundaExpLog,
+} from '@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.segunda';
+import {
   FORMATO_NUMERICO_AMPLO,
   analisarNumero,
   numeroComCasas,
@@ -36,15 +40,23 @@ const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
 const PEDIDO = 'Responda com 3 casas decimais.';
 
-type Tipo = 'exponencial' | 'logaritmo' | 'base' | 'log-base' | 'produto' | 'potencia-no-log';
+type Tipo =
+  | 'exponencial'
+  | 'logaritmo'
+  | 'base'
+  | 'log-base'
+  | 'produto'
+  | 'potencia-no-log'
+  | 'segunda'
+  | 'reta';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
-  facil: ['exponencial', 'logaritmo'],
-  medio: ['exponencial', 'logaritmo', 'base', 'potencia-no-log'],
-  dificil: ['base', 'log-base', 'produto', 'potencia-no-log'],
-  // Potência dentro do log e produto: as duas que encadeiam propriedade do
-  // logaritmo com regra de derivação.
-  extremo: ['potencia-no-log', 'produto'],
+  facil: ['exponencial', 'logaritmo', 'segunda'],
+  medio: ['exponencial', 'logaritmo', 'base', 'potencia-no-log', 'segunda'],
+  dificil: ['base', 'log-base', 'produto', 'potencia-no-log', 'segunda'],
+  // Potência dentro do log e produto encadeiam propriedade do logaritmo com
+  // regra de derivação; a reta tangente só aparece aqui.
+  extremo: ['potencia-no-log', 'produto', 'reta'],
 };
 
 export const geradorDerivadasExpLog: GeradorExercicio<number> = {
@@ -63,6 +75,10 @@ export const geradorDerivadasExpLog: GeradorExercicio<number> = {
         return doLogaritmoDeBase(nivel, rng);
       case 'produto':
         return doProduto(nivel, rng);
+      case 'segunda':
+        return exercicioSegundaExpLog(nivel, rng);
+      case 'reta':
+        return exercicioRetaTangenteExpLog(nivel, rng);
       default:
         return daPotenciaNoLogaritmo(nivel, rng);
     }

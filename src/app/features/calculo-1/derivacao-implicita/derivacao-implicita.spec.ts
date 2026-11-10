@@ -50,7 +50,8 @@ describe('geradorDerivacaoImplicita', () => {
     // É a propriedade que o tópico inteiro depende: a curva é montada A PARTIR
     // do ponto, e não o contrário, justamente para que isso nunca falhe.
     for (const nivel of NIVEIS) {
-      for (const exercicio of amostra(nivel, 60)) {
+      // A tangente horizontal não dá ponto: pede justamente achá-lo.
+      for (const exercicio of amostra(nivel, 60).filter((e) => e.enunciado.includes('ponto ('))) {
         const [, x, y] = /\((-?\d+), (-?\d+)\)/.exec(exercicio.enunciado)!;
         const constante = Number(
           /= (-?\d+)$/.exec(exercicio.enunciadoTex.replace(/\{,\}/g, '.'))![1],
@@ -81,7 +82,7 @@ describe('geradorDerivacaoImplicita', () => {
   });
 
   it('diagnostica quem inverte o sinal ao isolar', () => {
-    const exercicio = amostra('facil', 120)[0]!;
+    const exercicio = amostra('facil', 120).find((e) => e.enunciado.includes('Encontre dy/dx'))!;
     const resultado = corrigir(
       geradorDerivacaoImplicita,
       exercicio,

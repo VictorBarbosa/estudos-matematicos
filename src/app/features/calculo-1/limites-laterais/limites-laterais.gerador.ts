@@ -1,10 +1,24 @@
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  exercicioLateralInfinito,
+  exercicioLateralModulo,
+} from '@features/calculo-1/limites-laterais/limites-laterais.novas';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
 
 type Lado = 'esquerda' | 'direita';
+
+type Pergunta = 'sentencas' | 'modulo' | 'infinito' | 'salto';
+
+const PERGUNTAS_POR_NIVEL: Readonly<Record<Nivel, readonly Pergunta[]>> = {
+  facil: ['sentencas', 'modulo'],
+  medio: ['sentencas', 'modulo', 'infinito'],
+  dificil: ['sentencas', 'infinito', 'modulo'],
+  // O salto exige os DOIS laterais de uma vez — só no Extremo.
+  extremo: ['salto', 'infinito', 'sentencas'],
+};
 
 /**
  * Exercícios de limites laterais em funções definidas por partes.
@@ -17,10 +31,10 @@ export const geradorLaterais: GeradorExercicio<number> = {
   formatoResposta: 'um número, ex.: 5',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
-    // No Extremo entra uma pergunta que exige os DOIS laterais: o salto.
-    if (nivel === 'extremo' && rng.booleano()) {
-      return exercicioSalto(nivel, rng);
-    }
+    const pergunta = rng.escolher(PERGUNTAS_POR_NIVEL[nivel]);
+    if (pergunta === 'salto') return exercicioSalto(nivel, rng);
+    if (pergunta === 'modulo') return exercicioLateralModulo(nivel, rng);
+    if (pergunta === 'infinito') return exercicioLateralInfinito(nivel, rng);
 
     const ponto = rng.inteiro(-3, 4);
     const lado: Lado = rng.booleano() ? 'esquerda' : 'direita';
