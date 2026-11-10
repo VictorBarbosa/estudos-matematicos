@@ -75,6 +75,10 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? `O log de um produto é a soma dos logs: separe em log de ${base ** m} mais log de ${base ** n}, cada um na base ${base}.`
+            : undefined,
       };
     }
 
@@ -178,6 +182,10 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
         expoente,
         proximos,
       ),
+      dica:
+        nivel === 'facil'
+          ? `Pergunte: ${base} elevado a quanto dá ${argumento}? Multiplique ${base} por ele mesmo até chegar lá.`
+          : undefined,
     };
   },
 

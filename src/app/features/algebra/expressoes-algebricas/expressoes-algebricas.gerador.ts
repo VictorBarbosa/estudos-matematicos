@@ -174,6 +174,12 @@ function exercicioReduzir(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       saoIguais,
     ),
+    dica:
+      nivel !== 'medio'
+        ? undefined
+        : subtrai
+          ? 'O menos antes do parêntese troca o sinal de TODOS os termos de dentro. Depois junte só os termos em x.'
+          : `Junte só os termos em x: o coeficiente de x do primeiro parêntese (${primeira.coeficiente(1)}) com o do segundo (${segunda.coeficiente(1)}).`,
   };
 }
 
@@ -259,5 +265,8 @@ function exercicioDistribuir(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       saoIguais,
     ),
+    dica:
+      `O termo em x vem de três lugares: ${k} vezes o x do primeiro parêntese, e as duas ` +
+      'multiplicações cruzadas do produto, com o sinal de menos aplicado a ele inteiro.',
   };
 }

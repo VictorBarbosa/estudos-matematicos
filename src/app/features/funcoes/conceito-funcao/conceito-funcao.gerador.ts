@@ -132,6 +132,10 @@ export const geradorConceito: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? 'Um quadrado nunca fica abaixo de zero. Qual é o menor valor do termo ao quadrado, e quanto se soma a ele?'
+            : undefined,
       };
     }
 
@@ -183,6 +187,10 @@ export const geradorConceito: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil'
+          ? `Troque x por ${x} e faça a potência antes do produto: (${x})² = ${x * x}.`
+          : undefined,
     };
   },
 

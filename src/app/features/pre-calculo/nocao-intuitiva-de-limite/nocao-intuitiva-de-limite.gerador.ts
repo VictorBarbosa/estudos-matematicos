@@ -119,6 +119,10 @@ export const geradorLimiteIntuitivo: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? `x² − ${k * k} é diferença de quadrados: (x − ${k})(x + ${k}). Cancele o (x − ${k}) e só então substitua x = ${k}.`
+            : undefined,
       };
     }
 
@@ -177,6 +181,10 @@ export const geradorLimiteIntuitivo: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'medio'
+          ? 'O fator de baixo aparece também em cima: cancele-o e substitua o ponto no que sobrar.'
+          : undefined,
     };
   },
 

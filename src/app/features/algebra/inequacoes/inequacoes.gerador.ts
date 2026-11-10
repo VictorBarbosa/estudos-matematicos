@@ -131,7 +131,9 @@ export const geradorInequacoes: GeradorExercicio<ConjuntoSolucao> = {
         a < 0 && nivel !== 'facil'
           ? `O coeficiente de x é ${a}: ao dividir por ele, o sentido se inverte. ` +
             `Na reta, a solução é ${intervaloTexto}.`
-          : undefined,
+          : nivel === 'facil'
+            ? `Isole x como numa equação: passe o ${Math.abs(b)} para o outro lado e divida por ${a}. Como ${a} é positivo, o sinal fica igual.`
+            : undefined,
     };
   },
 

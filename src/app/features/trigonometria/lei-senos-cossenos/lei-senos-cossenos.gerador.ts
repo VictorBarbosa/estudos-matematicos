@@ -114,6 +114,10 @@ export const geradorLeis: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'medio'
+          ? `Lado sobre o seno do ângulo oposto é constante: ${ladoA}/sen ${anguloA}° = x/sen ${anguloB}°. Isole x.`
+          : undefined,
     };
   },
 
@@ -200,5 +204,6 @@ function exercicioMaiorAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: `O maior ângulo fica oposto ao maior lado (${a}). Use a lei dos cossenos para ele: cos = (${b}² + ${c}² − ${a}²) / (2 · ${b} · ${c}).`,
   };
 }

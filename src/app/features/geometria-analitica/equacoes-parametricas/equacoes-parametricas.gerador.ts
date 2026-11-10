@@ -169,6 +169,10 @@ function daCircunferencia(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'parametricas.circunferencia',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `Uma volta é 2π: ${doze} doze avos dão t = ${doze}·2π/12. Substitua t na equação de y.`
+        : undefined,
   });
 }
 
@@ -206,6 +210,10 @@ function daElipse(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'parametricas.circunferencia',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `Uma volta é 2π, então t = ${doze}·2π/12. Substitua na equação de x: ${a} vezes o cosseno de t.`
+        : undefined,
   });
 }
 
@@ -253,6 +261,10 @@ function doLancamento(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'parametricas.movimento',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `y = v₀·sen θ·t − g·t²/2: a subida usa só a componente vertical, ${v0}·sen ${angulo}°, e o tempo entra AO QUADRADO na parte da gravidade.`
+        : undefined,
   });
 }
 
@@ -336,6 +348,10 @@ function doAlcance(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'parametricas.movimento',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? `Alcance = v₀²·sen(2θ)/g: aqui ${v0}² vezes sen ${2 * angulo}°, dividido por 9,81.`
+        : undefined,
   });
 }
 

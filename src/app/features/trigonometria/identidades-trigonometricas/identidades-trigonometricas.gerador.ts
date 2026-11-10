@@ -70,6 +70,10 @@ export const geradorIdentidades: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? `Use sen²θ + cos²θ = 1: cos θ é a raiz de 1 − (${seno.toFixed(2).replace('.', ',')})², positiva no 1º quadrante.`
+            : undefined,
       };
     }
 
@@ -126,6 +130,10 @@ export const geradorIdentidades: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? `sen ${2 * graus}° = sen(2 · ${graus}°) = 2 · sen ${graus}° · cos ${graus}°. Calcule seno e cosseno de ${graus}° e multiplique.`
+            : undefined,
       };
     }
 

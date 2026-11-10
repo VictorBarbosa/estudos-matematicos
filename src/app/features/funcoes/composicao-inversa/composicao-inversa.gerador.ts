@@ -147,6 +147,10 @@ export const geradorComposicao: GeradorExercicio<Fracao> = {
         gabarito,
         saoEquivalentes,
       ),
+      dica:
+        (direta && nivel === 'facil') || (!direta && nivel === 'medio')
+          ? `Comece pela função de DENTRO: calcule ${direta ? 'g' : 'f'}(${x}) e use o resultado como entrada de ${direta ? 'f' : 'g'}.`
+          : undefined,
     };
   },
 

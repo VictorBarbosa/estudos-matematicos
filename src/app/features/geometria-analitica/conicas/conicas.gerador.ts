@@ -136,8 +136,9 @@ export const geradorConicas: GeradorExercicio<number> = {
           proximos,
         ),
         dica:
-          nivel === 'facil'
-            ? 'Na equação reduzida, o semieixo é a RAIZ QUADRADA do denominador, não o denominador.'
+          // A hipérbole só entra do Médio em diante e estreia ali.
+          nivel === 'facil' || (nivel === 'medio' && hiperbole)
+            ? `Na equação reduzida, o semieixo é a RAIZ QUADRADA do denominador do termo em x: raiz de ${a * a}.`
             : undefined,
       };
     }
@@ -179,6 +180,12 @@ export const geradorConicas: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil' || (nivel === 'medio' && hiperbole)
+          ? hiperbole
+            ? `Na hipérbole os quadrados se SOMAM: c² = ${a * a} + ${Math.round(b * b)}. Depois tire a raiz.`
+            : `Na elipse o menor quadrado sai do maior: c² = ${a * a} − ${b * b}. Depois tire a raiz.`
+          : undefined,
     };
   },
 

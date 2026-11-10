@@ -79,7 +79,11 @@ export const geradorModular: GeradorExercicio<Fracao> = {
           gabarito,
           saoEquivalentes,
         ),
-        dica: nivel === 'facil' ? 'Iguale o que está dentro do módulo a zero.' : undefined,
+        // A forma com fração só aparece do Médio em diante (a ≠ 1): a dica vai até lá.
+        dica:
+          nivel === 'facil' || nivel === 'medio'
+            ? `O bico é onde o de dentro zera: resolva ${interna.replace(/\s+/g, ' ')} = 0.`
+            : undefined,
       };
     }
 
@@ -147,6 +151,10 @@ export const geradorModular: GeradorExercicio<Fracao> = {
           gabarito,
           saoEquivalentes,
         ),
+        dica:
+          nivel === 'medio'
+            ? `|algo| = ${k} quer dizer algo = ${k} ou algo = ${-k}. Resolva os dois casos e fique com o maior x.`
+            : undefined,
       };
     }
 
@@ -192,6 +200,10 @@ export const geradorModular: GeradorExercicio<Fracao> = {
         gabarito,
         saoEquivalentes,
       ),
+      dica:
+        nivel === 'facil'
+          ? `Calcule primeiro o de dentro com x = ${x}; o módulo só tira o sinal de menos, se houver.`
+          : undefined,
     };
   },
 

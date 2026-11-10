@@ -202,6 +202,10 @@ function exercicioTales(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `Paralelas cortam as transversais em partes proporcionais: ${a}/${b} = ${c}/x. Multiplique cruzado.`
+        : undefined,
   };
 }
 
@@ -345,6 +349,10 @@ function exercicioEhRetangulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `O maior lado mede ${maior} cm: eleve ao quadrado, ${maior} · ${maior}.`
+        : undefined,
   };
 }
 

@@ -183,6 +183,12 @@ function exercicioSoma(geometrica: boolean, nivel: Nivel, rng: Rng): Exercicio<n
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? geometrica
+          ? `Soma da PG: Sₙ = a₁·(qⁿ − 1)/(q − 1). Aqui a₁ = ${primeiro}, q = ${razao}, n = ${n}.`
+          : `Soma da PA: ache o ${n}º termo e use Sₙ = (a₁ + aₙ)·n/2 — a média dos extremos vezes ${n}.`
+        : undefined,
   };
 }
 

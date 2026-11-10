@@ -250,9 +250,10 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    // A pergunta estreia no Médio: a dica estava presa no Fácil, que nunca a sorteia.
     dica:
-      nivel === 'facil'
-        ? 'Teste os divisores do termo constante: toda raiz racional está entre eles.'
+      nivel === 'medio'
+        ? `Teste os divisores do termo constante (${p.coeficiente(0)}) divididos pelos do líder: ache uma raiz, divida e resolva o resto por Bhaskara.`
         : undefined,
   };
 }
@@ -274,7 +275,7 @@ function exercicioCoeficienteQuociente(nivel: Nivel, rng: Rng): Exercicio<number
       ? 'o termo constante'
       : grau === 1
         ? 'o coeficiente de x'
-        : `o coeficiente de x^${grau}`;
+        : `o coeficiente de x${grau === 2 ? '²' : '³'}`;
 
   return {
     id: `poli-coef-${p.coeficientes.join('_')}-${a}-${grau}-${rng.inteiro(0, 9999)}`,
@@ -313,5 +314,8 @@ function exercicioCoeficienteQuociente(nivel: Nivel, rng: Rng): Exercicio<number
       gabarito,
       proximos,
     ),
+    // O termo pedido muda a forma do enunciado (x³ só aparece com o quíntico do
+    // Extremo), então a dica acompanha a pergunta em todo nível em que ela cai.
+    dica: `Use Briot-Ruffini com ${a}: desça o primeiro coeficiente, multiplique por ${a} e some ao seguinte, coluna a coluna.`,
   };
 }

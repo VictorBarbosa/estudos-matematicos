@@ -189,6 +189,10 @@ function exercicioRaioPelaArea(nivel: Nivel, rng: Rng): Exercicio<number> {
       raio,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? 'A = πr²: divida a área por π e tire a raiz quadrada para voltar ao raio.'
+        : undefined,
   };
 }
 
@@ -240,6 +244,10 @@ function exercicioSetor(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `O setor é a fração ${anguloGraus}/360 do círculo inteiro: calcule π · ${raio}² e multiplique por essa fração.`
+        : undefined,
   };
 }
 

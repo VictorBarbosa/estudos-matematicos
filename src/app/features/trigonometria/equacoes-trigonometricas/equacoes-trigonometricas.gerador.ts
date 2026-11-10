@@ -589,7 +589,7 @@ function exercicioArcoMultiplo(nivel: Nivel, rng: Rng): Exercicio<number> {
     dica:
       nivel === 'dificil'
         ? 'Se x vai de 0° a 360°, então 2x vai de 0° a 720°: são duas voltas para procurar soluções.'
-        : undefined,
+        : `Chame u = ${n}x. Se x vai de 0° a 360°, u vai de 0° a ${360 * n}°: são ${n} voltas. Ache todos os u e divida por ${n}.`,
   };
 }
 

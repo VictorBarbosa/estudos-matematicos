@@ -70,6 +70,10 @@ export const geradorQuadratica: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? `Troque x por ${x} e resolva a potência primeiro: (${x})² = ${x * x}.`
+            : undefined,
       };
     }
 
@@ -121,7 +125,12 @@ export const geradorQuadratica: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
-      dica: nivel === 'facil' ? 'Comece calculando x_v = −b/(2a).' : undefined,
+      dica:
+        pergunta === 'vertice-x' && nivel === 'facil'
+          ? `Comece calculando x_v = −b/(2a), com a = ${a} e b = ${b}.`
+          : pergunta === 'vertice-y' && nivel === 'medio'
+            ? `Ache primeiro x_v = −b/(2a) e depois calcule f(x_v): esse é o valor máximo ou mínimo.`
+            : undefined,
     };
   },
 

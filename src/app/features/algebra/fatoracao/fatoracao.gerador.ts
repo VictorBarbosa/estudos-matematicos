@@ -222,7 +222,9 @@ function exercicioCubos(nivel: Nivel, rng: Rng): Exercicio<number> {
     dica:
       nivel === 'medio'
         ? `${b3} é um cubo perfeito (${b}³). Use u³ ${op} v³ = (u ${op} v)(u² ${opMeio} uv + v²) e iguale o primeiro fator a zero.`
-        : undefined,
+        : nivel === 'extremo'
+          ? `${a3}x³ é o cubo de ${a}x e ${b3} é o cubo de ${b}. O fator (${a}x ${op} ${b}) dá a raiz: iguale-o a zero e deixe como fração.`
+          : undefined,
   };
 }
 
@@ -328,7 +330,9 @@ function exercicioAgrupamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     dica:
       nivel === 'dificil'
         ? 'Separe os quatro termos em dois pares e tire o fator comum de cada par: o mesmo parêntese deve aparecer nos dois.'
-        : undefined,
+        : nivel === 'extremo'
+          ? `Tire x² do primeiro par e ${s * k2} do segundo: sobra o parêntese (${linear}) nos dois. Compare as raízes de cada fator.`
+          : undefined,
   };
 }
 

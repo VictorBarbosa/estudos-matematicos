@@ -76,6 +76,10 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? 'Ache o centro na equação e calcule a distância entre ele e o ponto: raiz da soma dos quadrados das diferenças.'
+            : undefined,
       };
     }
 
@@ -179,6 +183,10 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil'
+          ? `Na forma reduzida, o lado direito é o raio AO QUADRADO: o raio é a raiz de ${raio * raio}.`
+          : undefined,
     };
   },
 

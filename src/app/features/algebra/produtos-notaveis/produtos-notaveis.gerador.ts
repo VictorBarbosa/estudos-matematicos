@@ -96,7 +96,9 @@ export const geradorProdutos: GeradorExercicio<number> = {
       dica:
         nivel === 'facil'
           ? 'Multiplique o binômio por ele mesmo e some os termos semelhantes.'
-          : undefined,
+          : nivel === 'medio' && tipo === 'diferenca-de-quadrados'
+            ? 'Em (a + b)(a − b) os dois termos cruzados se cancelam. O que sobra no termo em x?'
+            : undefined,
     };
   },
 
@@ -323,7 +325,9 @@ function exercicioInverso(nivel: Nivel, rng: Rng, forma: Inverso): Exercicio<num
     dica:
       nivel === 'medio'
         ? 'O último termo é q²: tire a raiz quadrada. O sinal de q é o sinal do termo do meio.'
-        : undefined,
+        : nivel === 'dificil'
+          ? `O primeiro termo é (${p}x)², então p = ${p}. O último é q²: tire a raiz e dê a q o sinal do termo do meio.`
+          : undefined,
   };
 }
 

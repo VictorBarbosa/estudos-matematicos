@@ -57,6 +57,10 @@ export const geradorRazoes: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? `Ângulos complementares: sen ${90 - graus}° é igual a cos ${graus}°. Somam 90°.`
+            : undefined,
       };
     }
 
@@ -111,6 +115,10 @@ export const geradorRazoes: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? `Use sen²θ + cos²θ = 1: cos θ = raiz de 1 − sen²θ, positivo no 1º quadrante.`
+            : undefined,
       };
     }
 
