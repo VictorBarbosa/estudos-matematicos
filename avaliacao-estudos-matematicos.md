@@ -130,13 +130,13 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] Coordenadas polares — tópico novo `coordenadas-polares` (10/11): conversão, ângulo com quadrante, circunferência polar, distância entre pontos polares e a órbita r = p/(1 + e·cos θ)
 - [ ] **◐** Extremo com uma pergunta só: `ponto-e-reta` e `conicas` resolvidos em 09/11; falta `circunferencia`
 
-### 3.8 Física — sólida (mecânica) · ausente (E&M, ondas)
+### 3.8 Física — sólida (mecânica, E&M e ondas desde 10/11)
 
 - [x] A reordenação pedida: Leis de Newton antes de balística; estática antes de harmônico
 - [x] Os sete acréscimos do plano anterior: cinemática vetorial, movimento circular, dinâmica rotacional, momento angular, continuidade e Bernoulli (com as hipóteses, bug 19), transferência de calor
 - [x] Bernoulli corrigido pela variação de pressão (bug 9); gravitação com tolerância coerente (bug 12)
-- [ ] **Eletricidade e magnetismo (0P02)** — zero ocorrências de carga, campo, circuito ou indução. **Exigido por todos os programas.**
-- [ ] **Ondas e física moderna (0P03)** — só o movimento harmônico; faltam ondas, som, óptica, relatividade, fotoelétrico
+- [x] **Eletricidade e magnetismo (0P02)** — área nova `eletromagnetismo` depois de Física (10/11): eletrostática, potencial e capacitores, circuitos (com RC e Kirchhoff), magnetismo e indução; 17 verbetes. Fora: lei de Gauss, dielétricos, indutância/RL
+- [x] **Ondas e física moderna (0P03)** — área nova `ondas-e-fisica-moderna` (10/11): ondas e som (harmônicos, dB, Doppler), óptica (Snell, reflexão total, lentes, fenda dupla), física moderna (relatividade, fóton, fotoelétrico, de Broglie); 15 verbetes. Fora: espelho esférico como pergunta, difração por fenda única
 - [x] Física com cálculo — feito como tópico `fisica-com-calculo` em Cálculo 2 (10/11), mantendo a ordem da trilha. O MHS como EDO já está em Cálculo 4
 - [x] ~~**Resoluções que saltam da fórmula para o número**~~ — feito em 09/11: todos os passos citados agora mostram a substituição (plano inclinado, gravidade na altitude, órbita, escape, Kepler, Tsiolkovsky, Isp, empuxo, Bernoulli, sustentação, mistura térmica, impulso, colisões, centro de massa). Antes: nos módulos do núcleo: `core/math/fisica/mecanica/mecanica.ts:219-242` (plano inclinado, cinco resultados e nenhuma conta), `gravitacao/gravitacao.ts` (oito saltos), `fluidos/fluidos.ts:91,95,193,198`, `termica/termica.ts:269` («Substituindo.» sem substituir), `energia/energia.ts:189,259,323`. O padrão certo já existe no mesmo repositório (`espacial.ts`, `termica.ts:67`)
 - [ ] Teoria curta demais: `cinematica-escalar` (2 verbetes para 5 perguntas; falta Torricelli e referencial), `analise-dimensional` (2 para 6; falta o teorema Π)
@@ -301,8 +301,10 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 ### Fase 4 — Física para a admissão (meses)
 
-- [ ] **Eletricidade e magnetismo (0P02)**: carga e Coulomb, campo e potencial, capacitores, circuitos CC e RC, campo magnético, indução
-- [ ] **Ondas e física moderna (0P03)**: ondas e som, óptica geométrica e física, relatividade restrita, fotoelétrico
+**Feita em 10/11/2026** — duas áreas novas e o bloco de Física com cálculo. O site passou a ter 117 tópicos em 16 áreas.
+
+- [x] **Eletricidade e magnetismo (0P02)**: área nova com 4 tópicos (10/11)
+- [x] **Ondas e física moderna (0P03)**: área nova com 3 tópicos (10/11)
 - [x] Bloco «Física com cálculo» — tópico novo `fisica-com-calculo` em Cálculo 2, depois de aplicações da integral (10/11): mola, força variável, deslocamento e velocidade por integração, centro de massa contínuo e trabalho contra a gravidade 1/r²
 
 ### Em paralelo — o que o site não resolve
