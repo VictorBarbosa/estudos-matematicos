@@ -8,10 +8,14 @@ import {
   nivelAoMenos,
   semColisoes,
 } from '@core/treino/models/treino.model';
+import {
+  exercicioDistanciaPontoReta,
+  exercicioPerpendicular,
+} from '@features/geometria-analitica/ponto-e-reta/ponto-e-reta.retas';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 
-type Pergunta = 'distancia' | 'inclinacao' | 'ponto-medio-x';
+type Pergunta = 'distancia' | 'inclinacao' | 'ponto-medio-x' | 'distancia-reta' | 'perpendicular';
 
 /** Exercícios de ponto e reta no plano cartesiano. */
 export const geradorPontoReta: GeradorExercicio<number> = {
@@ -20,6 +24,9 @@ export const geradorPontoReta: GeradorExercicio<number> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
+    if (pergunta === 'distancia-reta') return exercicioDistanciaPontoReta(nivel, rng);
+    if (pergunta === 'perpendicular') return exercicioPerpendicular(nivel, rng);
+
     const { a, b } = sortearPontos(nivel, rng, pergunta);
 
     const par = `A${pontoTex(a)} \\qquad B${pontoTex(b)}`;
@@ -188,12 +195,19 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'facil':
       return rng.escolher<Pergunta>(['distancia', 'ponto-medio-x']);
     case 'medio':
-      return rng.escolher<Pergunta>(['distancia', 'inclinacao', 'ponto-medio-x']);
+      return rng.escolher<Pergunta>([
+        'distancia',
+        'inclinacao',
+        'ponto-medio-x',
+        'distancia-reta',
+        'perpendicular',
+      ]);
     case 'dificil':
-      return rng.escolher<Pergunta>(['distancia', 'inclinacao']);
-    // A inclinação entre dois pontos sorteados longe um do outro.
+      return rng.escolher<Pergunta>(['distancia', 'inclinacao', 'distancia-reta', 'perpendicular']);
+    // A reta chega na forma que não serve à fórmula — reduzida para a distância,
+    // geral para a perpendicular — e é preciso convertê-la antes.
     case 'extremo':
-      return 'inclinacao';
+      return rng.escolher<Pergunta>(['inclinacao', 'distancia-reta', 'perpendicular']);
   }
 }
 

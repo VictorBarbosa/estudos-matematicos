@@ -114,4 +114,53 @@ export const TEORIA_PONTO_RETA: readonly Teoria[] = [
     },
     vejaTambem: ['ponto-reta.equacao'],
   },
+  {
+    id: 'ponto-reta.distancia-reta',
+    titulo: 'Distância de ponto a reta',
+    resumo: 'Substitua o ponto na equação da reta e divida pelo comprimento de (a, b).',
+    definicao:
+      'A distância de um ponto a uma reta é medida pelo caminho mais curto, que é ' +
+      'perpendicular à reta. Com a reta na forma geral ax + by + c = 0, o vetor (a, b) é ' +
+      'perpendicular a ela; substituir o ponto na expressão ax + by + c mede quanto ele está ' +
+      'fora da reta, e dividir por √(a² + b²) transforma isso em comprimento. Se a reta vier ' +
+      'como y = mx + q, primeiro passe tudo para um lado.',
+    formulas: [
+      {
+        tex: 'd = \\frac{|ax_0 + by_0 + c|}{\\sqrt{a^{2} + b^{2}}}',
+        legenda: 'Ponto (x₀, y₀), reta ax + by + c = 0.',
+      },
+      {
+        tex: 'y = mx + q \\;\\Rightarrow\\; mx - y + q = 0',
+        legenda: 'Da forma reduzida para a geral: a = m, b = −1, c = q.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'O vetor (a, b) é perpendicular à reta: andar sobre ela não muda ax + by.',
+        tex: 'a(x + b t) + b(y - a t) = ax + by',
+      },
+      {
+        descricao: 'Num ponto fora da reta, ax₀ + by₀ + c deixa de ser zero.',
+        tex: 'ax_0 + by_0 + c \\neq 0',
+      },
+      {
+        descricao:
+          'Dividir pelo comprimento de (a, b) normaliza: multiplicar a equação por 2 não muda a distância.',
+        tex: '\\frac{|2ax_0 + 2by_0 + 2c|}{\\sqrt{4a^{2} + 4b^{2}}} = \\frac{|ax_0 + by_0 + c|}{\\sqrt{a^{2} + b^{2}}}',
+        nota: 'O módulo garante distância positiva, de qualquer lado da reta.',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Distância de P(1, 2) à reta 3x + 4y − 1 = 0.',
+      passos: [
+        {
+          descricao: 'Numerador: o ponto na expressão da reta.',
+          tex: '|3 \\cdot 1 + 4 \\cdot 2 - 1| = |10| = 10',
+        },
+        { descricao: 'Denominador: o comprimento de (3, 4).', tex: '\\sqrt{3^{2} + 4^{2}} = 5' },
+        { descricao: 'Dividindo.', tex: 'd = \\frac{10}{5} = 2' },
+      ],
+    },
+    vejaTambem: ['ponto-reta.distancia', 'ponto-reta.posicoes'],
+  },
 ];

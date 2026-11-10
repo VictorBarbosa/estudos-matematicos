@@ -86,6 +86,15 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['equacao-primeiro-grau', 'medio', 'O perímetro soma os quatro lados'],
   ['equacao-primeiro-grau', 'dificil', 'o numerador INTEIRO'],
   ['equacao-primeiro-grau', 'dificil', 'Consecutivos são x'],
+  ['ponto-e-reta', 'medio', 'd = |a·x₀ + b·y₀ + c|'],
+  ['ponto-e-reta', 'medio', 'inverta a inclinação'],
+  ['ponto-e-reta', 'dificil', 'n = y₀ − m′·x₀'],
+  ['ponto-e-reta', 'extremo', 'antes de usar a fórmula da distância'],
+  ['ponto-e-reta', 'extremo', 'a inclinação é −a/b'],
+  ['conicas', 'facil', 'o foco fica em (0, p)'],
+  ['conicas', 'medio', 'A diretriz é a reta y = −p'],
+  ['conicas', 'dificil', 'lido com os sinais trocados'],
+  ['conicas', 'extremo', 'Complete o quadrado'],
 ];
 
 describe('dicas alcançáveis', () => {
