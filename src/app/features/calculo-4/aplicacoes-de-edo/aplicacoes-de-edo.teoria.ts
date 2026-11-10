@@ -49,7 +49,7 @@ export const TEORIA_APLICACOES_EDO: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Trocamos a variável pela diferença.',
-        tex: 'u = T - T_{amb} \\;\\Longrightarrow\\; u\' = -ku',
+        tex: "u = T - T_{amb} \\;\\Longrightarrow\\; u' = -ku",
         nota: 'A substituição transforma o problema na equação exponencial simples.',
       },
       {
@@ -65,6 +65,25 @@ export const TEORIA_APLICACOES_EDO: readonly Teoria[] = [
         tex: 'T(10) = 20 + 70e^{-0{,}5} \\approx 62{,}5\\ ^\\circ\\text{C}',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Um café a 90 °C esfria numa sala a 20 °C, com k = 0,1 por minuto. Qual a temperatura após 10 minutos?',
+      passos: [
+        {
+          descricao:
+            'A solução da lei de Newton: a diferença para o ambiente decai exponencialmente.',
+          tex: 'T(t) = T_a + (T_0 - T_a)\\,e^{-kt}',
+        },
+        {
+          descricao: 'Substituímos T_a = 20, T_0 = 90, k = 0,1 e t = 10.',
+          tex: 'T(10) = 20 + (90 - 20)\\,e^{-0{,}1 \\cdot 10} = 20 + 70\\,e^{-1}',
+        },
+        {
+          descricao: 'Com e⁻¹ ≈ 0,3679, a diferença de 70 °C cai para cerca de 25,75 °C.',
+          tex: 'T(10) = 20 + 70 \\cdot 0{,}3679 \\approx 45{,}75\\ ^{\\circ}\\text{C}',
+        },
+      ],
+    },
     vejaTambem: ['aplicacoes.montar', 'aplicacoes.decaimento'],
   },
   {
@@ -99,6 +118,25 @@ export const TEORIA_APLICACOES_EDO: readonly Teoria[] = [
         tex: 't = -\\frac{1}{k}\\ln\\frac{m}{m_{0}}',
       },
     ],
+    exemplo: {
+      enunciado:
+        'O carbono-14 tem meia-vida de 5730 anos. Que fração de uma amostra resta depois de 2000 anos?',
+      passos: [
+        {
+          descricao: 'A constante de decaimento sai da meia-vida.',
+          tex: 'k = \\frac{\\ln 2}{t_{1/2}} = \\frac{0{,}6931}{5730} \\approx 1{,}2097 \\times 10^{-4}\\ \\text{ano}^{-1}',
+        },
+        {
+          descricao: 'A fração que resta é e elevado a menos k vezes t.',
+          tex: '\\frac{N}{N_0} = e^{-kt} = e^{-1{,}2097 \\times 10^{-4} \\cdot 2000} = e^{-0{,}2419}',
+        },
+        {
+          descricao: 'Calculando a exponencial.',
+          tex: '\\frac{N}{N_0} \\approx 0{,}7851 \\quad (78{,}5\\%)',
+          nota: 'Menos de meia-vida se passou, então resta mais da metade — confere.',
+        },
+      ],
+    },
     vejaTambem: ['aplicacoes.resfriamento', 'aplicacoes.montar'],
   },
   {
@@ -182,7 +220,10 @@ export const TEORIA_APLICACOES_EDO: readonly Teoria[] = [
       'para chegar lá.',
     formulas: [
       { tex: "S' = q_{e}c_{e} - \\frac{q_{s}}{V}S" },
-      { tex: 'S_{\\infty} = V c_{e}', legenda: 'Com vazões iguais, o tanque termina na concentração de entrada.' },
+      {
+        tex: 'S_{\\infty} = V c_{e}',
+        legenda: 'Com vazões iguais, o tanque termina na concentração de entrada.',
+      },
     ],
     demonstracao: [
       {
