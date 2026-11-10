@@ -49,6 +49,7 @@ export * from '@core/math/trigonometria/equacoes-trig/equacoes-trig';
 // Geometria analítica
 export * from '@core/math/geometria/plana/plana';
 export * from '@core/math/geometria/espacial/espacial';
+export * from '@core/math/geometria/poliedros/poliedros';
 export * from '@core/math/geometria/analitica/analitica';
 export * from '@core/math/geometria/parametricas/parametricas';
 

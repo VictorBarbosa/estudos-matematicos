@@ -87,6 +87,7 @@ import t_ponto_e_reta from '@features/geometria-analitica/ponto-e-reta/ponto-e-r
 import t_angulos_e_triangulos from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.i18n.json';
 import t_areas_de_figuras_planas from '@features/geometria/areas-de-figuras-planas/areas-de-figuras-planas.i18n.json';
 import t_circulo_e_poligonos from '@features/geometria/circulo-e-poligonos/circulo-e-poligonos.i18n.json';
+import t_poliedros from '@features/geometria/poliedros/poliedros.i18n.json';
 import t_semelhanca_e_pitagoras from '@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.i18n.json';
 import t_solidos_e_volumes from '@features/geometria/solidos-e-volumes/solidos-e-volumes.i18n.json';
 import t_fracoes from '@features/matematica-basica/fracoes/fracoes.i18n.json';
@@ -198,6 +199,7 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['angulos-e-triangulos', t_angulos_e_triangulos as TabelaDeTextos],
   ['areas-de-figuras-planas', t_areas_de_figuras_planas as TabelaDeTextos],
   ['circulo-e-poligonos', t_circulo_e_poligonos as TabelaDeTextos],
+  ['poliedros', t_poliedros as TabelaDeTextos],
   ['semelhanca-e-pitagoras', t_semelhanca_e_pitagoras as TabelaDeTextos],
   ['solidos-e-volumes', t_solidos_e_volumes as TabelaDeTextos],
   ['fracoes', t_fracoes as TabelaDeTextos],

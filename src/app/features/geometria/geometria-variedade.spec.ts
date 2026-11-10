@@ -15,6 +15,7 @@ const MINIMO_DE_FORMAS: Readonly<Record<string, number>> = {
   'areas-de-figuras-planas': 9,
   'circulo-e-poligonos': 9,
   'solidos-e-volumes': 10,
+  poliedros: 15,
 };
 
 describe('variedade da geometria', () => {

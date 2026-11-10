@@ -229,7 +229,7 @@
         "titulo": "Grandeurs et analyse dimensionnelle"
       },
       "angulos-e-triangulos": {
-        "descricao": "Somme des angles, congruence et inégalité triangulaire.",
+        "descricao": "Somme des angles, congruence, polygones et quadrilatères.",
         "titulo": "Angles et triangles"
       },
       "aplicacoes-da-derivada": {
@@ -523,6 +523,10 @@
       "operacoes-fundamentais": {
         "descricao": "Propriétés de l’addition et de la multiplication, et l’ordre des opérations.",
         "titulo": "Opérations fondamentales"
+      },
+      "poliedros": {
+        "descricao": "Sommets, arêtes et faces : la relation d’Euler, Platon, prismes et pyramides.",
+        "titulo": "Polyèdres"
       },
       "polinomios": {
         "descricao": "Degré, division, théorème du reste et la recherche des racines.",

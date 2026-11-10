@@ -12,6 +12,7 @@ import { geradorEquacao2 as g_equacao_segundo_grau } from '@features/algebra/equ
 import { geradorExpressoes as g_expressoes_algebricas } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.gerador';
 import { geradorFatoracao as g_fatoracao } from '@features/algebra/fatoracao/fatoracao.gerador';
 import { geradorInequacoes as g_inequacoes } from '@features/algebra/inequacoes/inequacoes.gerador';
+import { geradorPoliedros as g_poliedros } from '@features/geometria/poliedros/poliedros.gerador';
 import { geradorPolares as g_coordenadas_polares } from '@features/geometria-analitica/coordenadas-polares/coordenadas-polares.gerador';
 import { geradorBinomio as g_binomio_de_newton } from '@features/estatistica/binomio-de-newton/binomio-de-newton.gerador';
 import { geradorEquacoesExponenciais as g_equacoes_exponenciais } from '@features/funcoes/equacoes-exponenciais/equacoes-exponenciais.gerador';
@@ -131,6 +132,7 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['equacoes-exponenciais', g_equacoes_exponenciais],
   ['binomio-de-newton', g_binomio_de_newton],
   ['coordenadas-polares', g_coordenadas_polares],
+  ['poliedros', g_poliedros],
   ['polinomios', g_polinomios],
   ['produtos-notaveis', g_produtos_notaveis],
   ['progressoes', g_progressoes],

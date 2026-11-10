@@ -1,0 +1,25 @@
+{
+  "qualPoliedro": { "pt": "Qual poliedro", "fr": "Quel polyèdre", "en": "Which polyhedron" },
+  "tetraedro": { "pt": "tetraedro", "fr": "tétraèdre", "en": "tetrahedron" },
+  "cubo": { "pt": "cubo", "fr": "cube", "en": "cube" },
+  "octaedro": { "pt": "octaedro", "fr": "octaèdre", "en": "octahedron" },
+  "dodecaedro": { "pt": "dodecaedro", "fr": "dodécaèdre", "en": "dodecahedron" },
+  "icosaedro": { "pt": "icosaedro", "fr": "icosaèdre", "en": "icosahedron" },
+  "prisma": { "pt": "prisma", "fr": "prisme", "en": "prism" },
+  "piramide": { "pt": "pirâmide", "fr": "pyramide", "en": "pyramid" },
+  "ladosDaBase": { "pt": "Lados da base", "fr": "Côtés de la base", "en": "Sides of the base" },
+  "girar": { "pt": "Girar", "fr": "Tourner", "en": "Rotate" },
+  "vertices": { "pt": "Vértices (V)", "fr": "Sommets (S)", "en": "Vertices (V)" },
+  "arestas": { "pt": "Arestas (A)", "fr": "Arêtes (A)", "en": "Edges (E)" },
+  "faces": { "pt": "Faces (F)", "fr": "Faces (F)", "en": "Faces (F)" },
+  "descricaoVista": {
+    "pt": "Desenho em arame do {nome}: {v} vértices, {a} arestas e {f} faces.",
+    "fr": "Dessin filaire du {nome} : {v} sommets, {a} arêtes et {f} faces.",
+    "en": "Wireframe drawing of the {nome}: {v} vertices, {a} edges and {f} faces."
+  },
+  "sempreDois": {
+    "pt": "Troque de poliedro ou mude os lados da base: V, A e F mudam, mas V − A + F continua 2. É a relação de Euler, válida para todo poliedro convexo.",
+    "fr": "Changez de polyèdre ou de nombre de côtés : S, A et F changent, mais S − A + F reste 2. C’est la relation d’Euler, valable pour tout polyèdre convexe.",
+    "en": "Switch polyhedra or change the number of sides: V, E and F change, but V − E + F stays 2. That is Euler’s formula, true for every convex polyhedron."
+  }
+}

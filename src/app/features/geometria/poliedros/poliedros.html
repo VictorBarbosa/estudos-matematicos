@@ -1,0 +1,57 @@
+<app-topico-layout topicoId="poliedros">
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('qualPoliedro')">
+      @for (opcao of escolhas; track opcao) {
+        <button
+          type="button"
+          [class.ativo]="escolha() === opcao"
+          [attr.aria-pressed]="escolha() === opcao"
+          (click)="selecionar(opcao)"
+        >
+          {{ texto(opcao) }}
+        </button>
+      }
+    </section>
+
+    @if (usaLados()) {
+      <section class="painel grade-controles">
+        <app-controle-parametro
+          [(valor)]="lados"
+          [rotulo]="texto('ladosDaBase')"
+          [min]="3"
+          [max]="10"
+        />
+      </section>
+    }
+
+    <section>
+      <app-vista-3d [tracos]="tracos()" [descricao]="descricao()" [rotuloGiro]="texto('girar')" />
+    </section>
+
+    <section class="indicadores">
+      <div class="indicador">
+        <span class="rotulo">{{ texto('vertices') }}</span>
+        <strong>{{ v() }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">{{ texto('arestas') }}</span>
+        <strong>{{ a() }}</strong>
+      </div>
+      <div class="indicador">
+        <span class="rotulo">{{ texto('faces') }}</span>
+        <strong>{{ f() }}</strong>
+      </div>
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="eulerTex()" [bloco]="true" />
+      <p class="observacao">{{ texto('sempreDois') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>
