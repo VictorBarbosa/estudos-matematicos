@@ -161,4 +161,48 @@ export const TEORIA_CONICAS: readonly Teoria[] = [
     ],
     vejaTambem: ['conicas.elipse', 'conicas.hiperbole', 'gravitacao.orbita', 'gravitacao.escape'],
   },
+  {
+    id: 'conicas.parabola',
+    titulo: 'Parábola: foco e diretriz',
+    resumo: 'Cada ponto fica à mesma distância do foco e da diretriz.',
+    definicao:
+      'A parábola é o conjunto dos pontos que estão à mesma distância de um ponto, o foco, e ' +
+      'de uma reta, a diretriz. Com o vértice na origem e o eixo vertical, ela é x² = 4py: o ' +
+      'foco fica em (0, p) e a diretriz é y = −p. Se p > 0, abre para cima; se p < 0, para ' +
+      'baixo. Deslocada para o vértice (h, k), vira (x − h)² = 4p(y − k), com foco (h, k + p). ' +
+      'É a forma das antenas parabólicas: todo raio paralelo ao eixo reflete para o foco.',
+    formulas: [
+      { tex: 'x^{2} = 4py \\qquad F = (0,\\; p) \\qquad \\text{diretriz: } y = -p' },
+      {
+        tex: '(x - h)^{2} = 4p(y - k) \\qquad F = (h,\\; k + p)',
+        legenda: 'Vértice em (h, k).',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Distância de (x, y) ao foco (0, p) igual à distância à diretriz y = −p.',
+        tex: '\\sqrt{x^{2} + (y - p)^{2}} = |y + p|',
+      },
+      {
+        descricao: 'Elevando ao quadrado e expandindo.',
+        tex: 'x^{2} + y^{2} - 2py + p^{2} = y^{2} + 2py + p^{2}',
+      },
+      {
+        descricao: 'Os termos y² e p² se cancelam.',
+        tex: 'x^{2} = 4py',
+        nota: 'Por isso o coeficiente de y é 4p: p é a distância do vértice ao foco.',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Foco e diretriz de x² = 12y.',
+      passos: [
+        { descricao: 'Comparando com x² = 4py.', tex: '4p = 12 \\;\\Rightarrow\\; p = 3' },
+        {
+          descricao: 'O foco fica p acima do vértice; a diretriz, p abaixo.',
+          tex: 'F = (0,\\; 3) \\qquad y = -3',
+        },
+      ],
+    },
+    vejaTambem: ['conicas.familia', 'quadratica.parabola'],
+  },
 ];

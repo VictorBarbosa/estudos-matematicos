@@ -2,10 +2,11 @@ import { ternosPitagoricos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import { exercicioParabola } from '@features/geometria-analitica/conicas/conicas.parabola';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 
-type Pergunta = 'distancia-focal' | 'excentricidade' | 'semieixo';
+type Pergunta = 'distancia-focal' | 'excentricidade' | 'semieixo' | 'parabola';
 
 /**
  * Exercícios de cônicas.
@@ -19,6 +20,8 @@ export const geradorConicas: GeradorExercicio<number> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
+    if (pergunta === 'parabola') return exercicioParabola(nivel, rng);
+
     const hiperbole = nivel === 'facil' ? false : rng.booleano();
 
     // Ternos pitagóricos garantem c inteiro nos dois casos. Gerados, e não
@@ -189,13 +192,14 @@ export const geradorConicas: GeradorExercicio<number> = {
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
   switch (nivel) {
     case 'facil':
-      return rng.escolher<Pergunta>(['semieixo', 'distancia-focal']);
+      return rng.escolher<Pergunta>(['semieixo', 'distancia-focal', 'parabola']);
     case 'medio':
-      return rng.escolher<Pergunta>(['distancia-focal', 'excentricidade', 'semieixo']);
+      return rng.escolher<Pergunta>(['distancia-focal', 'excentricidade', 'semieixo', 'parabola']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['excentricidade', 'distancia-focal']);
-    // A excentricidade depende de a e c, que vêm de b: três passos.
+      return rng.escolher<Pergunta>(['excentricidade', 'distancia-focal', 'parabola']);
+    // A excentricidade depende de a e c, que vêm de b: três passos. A parábola
+    // chega expandida e exige completar o quadrado.
     case 'extremo':
-      return 'excentricidade';
+      return rng.escolher<Pergunta>(['excentricidade', 'parabola']);
   }
 }

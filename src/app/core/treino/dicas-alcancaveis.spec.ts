@@ -100,6 +100,15 @@ const DICAS: readonly (readonly [topico: string, nivel: Nivel, trecho: string])[
   ['progressoes', 'extremo', 'Na PG, a_q / aₚ'],
   ['juros-compostos', 'dificil', '1 + i_anual = (1 + i_'],
   ['juros-compostos', 'extremo', 'Volte pela raiz'],
+  ['ponto-e-reta', 'medio', 'd = |a·x₀ + b·y₀ + c|'],
+  ['ponto-e-reta', 'medio', 'inverta a inclinação'],
+  ['ponto-e-reta', 'dificil', 'n = y₀ − m′·x₀'],
+  ['ponto-e-reta', 'extremo', 'antes de usar a fórmula da distância'],
+  ['ponto-e-reta', 'extremo', 'a inclinação é −a/b'],
+  ['conicas', 'facil', 'o foco fica em (0, p)'],
+  ['conicas', 'medio', 'A diretriz é a reta y = −p'],
+  ['conicas', 'dificil', 'lido com os sinais trocados'],
+  ['conicas', 'extremo', 'Complete o quadrado'],
 ];
 
 describe('dicas alcançáveis', () => {
