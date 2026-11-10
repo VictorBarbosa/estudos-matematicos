@@ -33,10 +33,7 @@
     "facil | Qual é o raio desta circunferência?",
     "medio | Qual é a distância do ponto (N N) ao centro desta circunferência?"
   ],
-  "composicao-inversa": [
-    "facil | Calcule f(g(N))N",
-    "medio | Calcule g(f(N))N"
-  ],
+  "composicao-inversa": ["facil | Calcule f(g(N))N", "medio | Calcule g(f(N))N"],
   "conceito-funcao": [
     "facil | Calcule f(N)N",
     "medio | Qual é o MENOR valor que esta função pode assumir?"
@@ -130,9 +127,7 @@
     "medio | Divida P(x) por (x - N)N No quocienteN qual é o termo constante?",
     "medio | Todas as raízes deste polinômio são racionaisN Considerando TODAS elasN qual é a menor?"
   ],
-  "ponto-e-reta": [
-    "medio | Qual é o coeficiente angular da reta que passa pelos dois pontos?"
-  ],
+  "ponto-e-reta": ["medio | Qual é o coeficiente angular da reta que passa pelos dois pontos?"],
   "produtos-notaveis": [
     "dificil | Esse trinômio é um quadrado perfeitoN Escreva-o como (px + q)²N com p positivoN e informe qN",
     "medio | Expanda e informe o coeficiente de x no resultadoN"
