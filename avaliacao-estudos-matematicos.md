@@ -87,7 +87,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [ ] Quadriláteros e polígonos (classificação e propriedades) — antes de áreas
 - [ ] Poliedros e relação de Euler — antes de sólidos
 - [ ] Teoria de `angulos-e-triangulos` tem só 2 verbetes para 4 tipos de pergunta: faltam ângulo interno/externo do polígono regular e classificação de triângulos
-- [ ] Explorar de `solidos-e-volumes` não desenha o sólido — único painel da área sem figura
+- [x] Explorar de `solidos-e-volumes` desenha o sólido em 3D girável, com r, h e g marcados (09/11). Antes: único painel da área sem figura
 
 ### 3.4 Funções — sólida (conteúdo) · aceitável (treino)
 
@@ -96,7 +96,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [ ] **Equações exponenciais e logarítmicas** — `curriculo.ts:243` admite a falta; pré-requisito de `calculo-4/aplicacoes-de-edo`
 - [ ] **◐** Domínio e imagem «com maior profundidade»: o treino ainda pede só «o único valor excluído», nunca o domínio como intervalo
 - [ ] **◐** Logaritmo natural: mencionado, sem verbete próprio
-- [ ] Treino: 8 dos 12 tópicos têm Extremo com uma pergunta só. Faltam: inequação modular; injetora/sobrejetora; razão ou primeiro termo da PA dados dois termos; taxa equivalente em juros; a^x = b por igualdade de bases
+- [ ] **◐** Treino (09/11): entraram inequação modular, razão e primeiro termo da PA/PG dados dois termos e taxa equivalente em juros, e esses três tópicos deixaram de ter Extremo com uma pergunta só. Faltam: injetora/sobrejetora; a^x = b por igualdade de bases
 - [ ] `juros-compostos` — plano anterior pedia «simplificar»; decisão: manter como aplicação do crescimento exponencial, opcional na trilha
 
 ### 3.5 Trigonometria — aceitável
@@ -116,7 +116,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] **Escalonamento (Gauss-Jordan) e matriz inversa** — tópico novo `escalonamento-e-inversa` (09/11), depois de matrizes: operações de linha, Gauss-Jordan 3×3 (com troca de linhas no Extremo), classificação pelo escalonamento, inversa 2×2 e 3×3 por (A | I). Antes: `curriculo.ts:386` listava como o que falta; `sistemas-lineares` só ensina substituição 2×2. É o que fecha o 0M04. **Prioridade alta.**
 - [ ] Retas e planos no espaço; combinação linear, independência e bases
 - [x] «det = 0 ⟺ linhas proporcionais»: reconferido em 09/11 — a teoria já explica que no 3×3 a condição é dependência linear, e «proporcionais» só aparece onde vale (2×2 ou como caso particular)
-- [ ] Explorar de `vetores-no-espaco` não tem desenho: o produto vetorial é explicado em texto, sem a regra da mão direita
+- [x] Explorar de `vetores-no-espaco` desenha a, b, o paralelogramo e a × b em 3D girável, com a regra da mão direita (09/11)
 - [ ] Teoria de `vetores-no-plano`: a pergunta `direcao` existe sem verbete próprio
 - [ ] Álgebra linear avançada (espaços vetoriais, autovalores) — etapa futura do plano anterior; não iniciada e **não é pré-requisito de admissão**
 
@@ -124,11 +124,11 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 - [x] Ponto e reta, circunferência, cônicas e **equações paramétricas** (pedidas no plano anterior)
 - [x] Distância entre dois pontos (`ponto-e-reta`)
-- [ ] **Distância de ponto a reta**, paralelismo/perpendicularidade pelos coeficientes, reta por dois pontos, interseção de retas
-- [ ] **Parábola** — não há nenhuma pergunta de parábola em `conicas` (foco, diretriz, parâmetro)
+- [ ] **◐** Feito em 09/11: **distância de ponto a reta** e **perpendicular** (inclinação −1/m e coeficiente linear pela reta por P). Faltam: reta por dois pontos, interseção de retas
+- [x] **Parábola** em `conicas` (09/11): foco, diretriz, forma transladada e, no Extremo, completar o quadrado
 - [ ] Circunferência: completar quadrados para achar centro e raio; reta tangente
 - [ ] Coordenadas polares — `curriculo.ts:430` cita a forma polar das órbitas; degrau natural antes de `calculo-3/coordenadas-no-espaco`
-- [ ] Extremo com uma pergunta só em `ponto-e-reta`, `circunferencia` e `conicas`
+- [ ] **◐** Extremo com uma pergunta só: `ponto-e-reta` e `conicas` resolvidos em 09/11; falta `circunferencia`
 
 ### 3.8 Física — sólida (mecânica) · ausente (E&M, ondas)
 
@@ -157,9 +157,9 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] **Regra do quociente** — pergunta no Difícil e no Extremo de `regras-de-derivacao`, com resposta em fração e as armadilhas da ordem e do quadrado; o exemplo da teoria agora é um quociente de verdade (09/11)
 - [x] Tipo `'taxa-media'` ligado em `definicao-de-derivada`: velocidade média de um carro em m/s, do Médio ao Extremo (09/11)
 - [x] Dica da regra do produto movida para o Médio, onde a pergunta estreia (09/11)
-- [ ] 6 dos 11 tópicos fazem uma pergunta só (`derivacao-implicita`, `derivadas-exponencial-logaritmo`, `derivadas-trigonometricas`, `limites`, `limites-laterais`, `regra-da-cadeia`). Faltam: reta tangente; derivada segunda; sen x/x; limite que não existe; classificação de descontinuidade; crescimento, concavidade e inflexão; cadeia com √, e^u, ln u (**feito no Extremo em 09/11**: √, eᵘ, ln u e sen u por fora)
+- [ ] 6 dos 11 tópicos fazem uma pergunta só (`derivacao-implicita`, `derivadas-exponencial-logaritmo`, `derivadas-trigonometricas`, `limites`, `limites-laterais`, `regra-da-cadeia`). Faltam: reta tangente; derivada segunda; sen x/x; limite que não existe; ~~classificação de descontinuidade; crescimento, concavidade e inflexão~~ (feitos em 09/11, em `continuidade` e `aplicacoes-da-derivada`); cadeia com √, e^u, ln u (**feito no Extremo em 09/11**: √, eᵘ, ln u e sen u por fora)
 - [x] Extremo igual ao Difícil em `limites-laterais` (agora pede o salto: lateral direita menos esquerda, com parábola), `regra-da-cadeia` (outra função por fora) e `derivacao-implicita` (reta tangente e onde corta o eixo y) — 09/11
-- [ ] Nenhum exemplo numérico resolvido na teoria de `derivacao-implicita`, `derivadas-exponencial-logaritmo` (9 verbetes, zero exemplos), `derivadas-trigonometricas`, `regra-da-cadeia`
+- [x] Exemplo numérico resolvido na teoria de `derivacao-implicita`, `derivadas-exponencial-logaritmo`, `derivadas-trigonometricas`, `regra-da-cadeia` (09/11)
 
 ### 3.11 Cálculo 2 — frágil (um tópico duplicado)
 
@@ -170,7 +170,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [ ] Substituição trigonométrica — ausente (depende da trigonometria inversa, 3.5)
 - [ ] Volumes por cascas cilíndricas
 - [ ] **◐** `integral-definida` continua exigindo primitiva antes de `teorema-fundamental` (ordem mantida). Decisão: aceitar, com o enunciado dizendo «use a primitiva» — ou reordenar
-- [ ] Nenhum exemplo resolvido na teoria de `aplicacoes-da-integral`, `integrais-improprias`, `series-de-taylor`, `tecnicas-de-integracao`
+- [x] Exemplo resolvido na teoria de `aplicacoes-da-integral`, `integrais-improprias`, `series-de-taylor`, `tecnicas-de-integracao` (09/11)
 
 ### 3.12 Combinatória e estatística — aceitável
 
@@ -186,15 +186,15 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 - [x] Funções de várias variáveis, parciais, gradiente e direcional, integrais múltiplas, coordenadas no espaço, integrais de linha — toda a etapa futura do plano anterior
 - [ ] Integrais de superfície e os teoremas de Green, Stokes e da divergência — fecham o que `integrais-de-linha` abre
-- [ ] Nenhum dos 6 tópicos tem exemplo numérico resolvido na teoria
+- [x] Os 6 tópicos têm exemplo numérico resolvido na teoria (09/11)
 - [ ] ~24 diagnósticos de armadilha só corretivos («Faltou extrair a raiz quadrada.»), concentrados aqui e no Cálculo 4
 
 ### 3.14 Cálculo 4 — sólida
 
 - [x] EDO de 1ª e 2ª ordem, aplicações, métodos numéricos — o núcleo de um primeiro curso
-- [ ] Sistemas de EDOs; EDO exata e fator integrante; não homogênea; logístico; Newton-Raphson
-- [ ] Nenhum dos 4 tópicos tem exemplo numérico resolvido na teoria
-- [ ] Fácil com uma pergunta só em `edo-primeira-ordem` (só separável) e `metodos-numericos` (só Euler)
+- [ ] **◐** Feito em 09/11: **EDO exata** (k da exatidão e constante C), **regime de amortecimento** (c crítico, rigidez, meia-amplitude) e **Newton-Raphson** (uma e duas iterações). Faltam: sistemas de EDOs; fator integrante; não homogênea; logístico
+- [x] Os 4 tópicos têm exemplo numérico resolvido na teoria (09/11)
+- [x] Fácil com duas perguntas em `edo-primeira-ordem` (separável e exata) e `metodos-numericos` (Euler e Newton) — 09/11
 
 ---
 
@@ -281,10 +281,12 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 ### Fase 2 — Treino nas demais áreas magras (semanas)
 
-- [ ] Trigonometria, Cálculo 1, Geometria analítica (parábola, distância ponto-reta), Funções, Cálculo 4 — as 20 perguntas priorizadas pelo relator de treino, por ordem: ~~soma e produto das raízes; inequação de 2º grau; equação trigonométrica; regra do quociente~~; distância de ponto a reta; perpendicular; foco da parábola; intervalo de crescimento; ~~L'Hôpital~~; tipo de descontinuidade; ~~sistema 3×3~~; ~~fatoração por agrupamento~~; inequação modular; razão da PA; taxa equivalente; EDO exata; regime de amortecimento; Newton-Raphson; ~~ângulo no triângulo retângulo; maior ângulo pela lei dos cossenos~~ (feitos em 09/11, no Extremo)
+**Quase toda feita em 09/11/2026.** Falta a dica de estreia nas formas que não têm.
+
+- [x] As 20 perguntas priorizadas pelo relator de treino — todas feitas em 09/11: soma e produto das raízes; inequação de 2º grau; equação trigonométrica; regra do quociente; distância de ponto a reta; perpendicular; foco da parábola; intervalo de crescimento; L'Hôpital; tipo de descontinuidade; sistema 3×3; fatoração por agrupamento; inequação modular; razão da PA; taxa equivalente; EDO exata; regime de amortecimento; Newton-Raphson; ângulo no triângulo retângulo; maior ângulo pela lei dos cossenos
 - [ ] Dica no nível de estreia para as 577 formas que não têm (guarda geral em `dicas-alcancaveis.spec.ts`)
-- [ ] Exemplo numérico resolvido nos 32 tópicos de teoria que não têm nenhum
-- [ ] Desenho nos Explorar de `solidos-e-volumes` e `vetores-no-espaco`
+- [x] Exemplo numérico resolvido nos 32 tópicos de teoria que não tinham nenhum — 44 exemplos, contas conferidas (09/11)
+- [x] Desenho nos Explorar de `solidos-e-volumes` e `vetores-no-espaco` — componente novo `app-vista-3d` (09/11)
 
 ### Fase 3 — Conteúdo novo de cobertura (meses)
 
