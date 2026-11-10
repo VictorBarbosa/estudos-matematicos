@@ -93,7 +93,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 
 - [x] Os nove tópicos do plano, mais os quatro que ele pedia: **racionais, por partes, transformações de gráficos**, e progressões movidas da Álgebra para cá
 - [x] O número **e** é apresentado na exponencial (`funcao-exponencial.teoria.ts`)
-- [ ] **Equações exponenciais e logarítmicas** — `curriculo.ts:243` admite a falta; pré-requisito de `calculo-4/aplicacoes-de-edo`
+- [x] **Equações exponenciais e logarítmicas** — tópico novo `equacoes-exponenciais` (10/11), depois de função logarítmica: mesma base, tirar o ln, soma de logs com domínio, substituição t = aˣ, tempo de crescimento e bases diferentes
 - [ ] **◐** Domínio e imagem «com maior profundidade»: o treino ainda pede só «o único valor excluído», nunca o domínio como intervalo
 - [ ] **◐** Logaritmo natural: mencionado, sem verbete próprio
 - [ ] **◐** Treino (09/11): entraram inequação modular, razão e primeiro termo da PA/PG dados dois termos e taxa equivalente em juros, e esses três tópicos deixaram de ter Extremo com uma pergunta só. Faltam: injetora/sobrejetora; a^x = b por igualdade de bases
@@ -177,7 +177,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] Os três tópicos originais mais os acréscimos pedidos: **distribuição normal, regressão e correlação**, incerteza e propagação
 - [x] Teoria de incerteza não usa mais derivadas parciais (bug da avaliação anterior)
 - [x] Anagramas: a lista fixa de repetições (`['CARRO', [2, 2]]`, bug 17) não existe mais
-- [ ] Binômio de Newton — nenhum tópico o cobre
+- [x] Binômio de Newton — tópico novo `binomio-de-newton` (10/11): Pascal, soma dos coeficientes, coeficiente de xᵖ, k-ésimo termo e termo independente
 - [ ] Intervalos de confiança e testes de hipótese
 - [ ] «Ajuste de reta» duplicado: uma seção em `estatistica-e-incerteza.teoria.ts:95` e sete em `regressao-e-correlacao` — mover para o tópico dedicado
 - [x] Dica de `ao-menos-um` movida para o Médio; `uniao` ganhou dica no Fácil (09/11)
@@ -234,7 +234,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] **Extremo igual ao Difícil** nos 6 tópicos — cada um ganhou uma pergunta própria do Extremo, sorteada em metade das vezes (09/11): `limites-laterais` (salto com parábola), `triangulo-retangulo` (ângulo por arctg), `regra-da-cadeia` (√, eᵘ, ln, sen por fora), `expressoes-algebricas` (distribuir k(p) − (dx+e)(fx+g) e achar o coeficiente de x), `derivacao-implicita` (reta tangente, corte no eixo y), `lei-senos-cossenos` (maior ângulo pelos três lados)
 - [x] **Dicas presas em nível que a pergunta não alcança**: as 9 listadas e mais uma achada no caminho (`estatistica-e-incerteza`, inclinação) — 10 ao todo, movidas para o nível em que a pergunta estreia, com o expoente em palavras (09/11)
 - [x] **Perguntas que estreiam no Fácil sem dica**: as 10 listadas ganharam dica (`ponto-e-reta:197` era uma função auxiliar, não pergunta) — 09/11. O guarda `core/treino/dicas-alcancaveis.spec.ts` amostra 300 exercícios por caso e falha se alguma dessas 20 dicas deixar de aparecer
-- [ ] **Medição nova (09/11): 577 das 924 formas de pergunta estreiam sem dica, em 87 tópicos.** Um guarda geral («toda pergunta tem dica no nível em que estreia») ficou fora da Fase 0 por ser trabalho de semanas; vai para a Fase 2
+- [x] **Toda forma de pergunta tem dica no nível em que estreia** (10/11): eram 573 de 1046 formas em 92 tópicos; zeradas, com dicas que usam os números do exercício. O guarda `core/treino/dicas-de-estreia.spec.ts` agora é absoluto — pergunta nova sem dica de estreia não passa
 - [ ] **Dicas com fórmula crua** (`'v = √(2gh)'`, `'σ = √(σ₁² + σ₂²)'`): o padrão é dizer o expoente em palavras e usar o número do enunciado — `gravitacao-e-orbitas:109,299`, `fluidos-e-aerodinamica:161`, `trabalho-e-energia:161`, `vetores-no-plano:106`, `numeros-complexos:145`, `circulo-e-poligonos:140,422`, `semelhanca-e-pitagoras:120,161`, `juros-compostos:155`, `probabilidade:123`
 - [ ] **Respostas simbólicas** (derivadas e primitivas como expressão, comparadas por avaliação em pontos): o analisador existe (`core/treino/resposta-simbolica`) mas só **um** gerador o usa
 - [ ] Teste diagnóstico de nivelamento por bloco — proposto na avaliação anterior, não iniciado
@@ -281,10 +281,10 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 ### Fase 2 — Treino nas demais áreas magras (semanas)
 
-**Quase toda feita em 09/11/2026.** Falta a dica de estreia nas formas que não têm.
+**Feita em 09–10/11/2026.**
 
 - [x] As 20 perguntas priorizadas pelo relator de treino — todas feitas em 09/11: soma e produto das raízes; inequação de 2º grau; equação trigonométrica; regra do quociente; distância de ponto a reta; perpendicular; foco da parábola; intervalo de crescimento; L'Hôpital; tipo de descontinuidade; sistema 3×3; fatoração por agrupamento; inequação modular; razão da PA; taxa equivalente; EDO exata; regime de amortecimento; Newton-Raphson; ângulo no triângulo retângulo; maior ângulo pela lei dos cossenos
-- [ ] Dica no nível de estreia para as 577 formas que não têm (guarda geral em `dicas-alcancaveis.spec.ts`)
+- [x] Dica no nível de estreia em todas as formas de pergunta, com guarda absoluto (10/11)
 - [x] Exemplo numérico resolvido nos 32 tópicos de teoria que não tinham nenhum — 44 exemplos, contas conferidas (09/11)
 - [x] Desenho nos Explorar de `solidos-e-volumes` e `vetores-no-espaco` — componente novo `app-vista-3d` (09/11)
 
@@ -293,9 +293,9 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 - [ ] Refundar `sequencias-e-series` como testes de convergência; séries de potências
 - [ ] Geometria: congruência, quadriláteros, poliedros e Euler
 - [ ] Geometria analítica: coordenadas polares
-- [ ] Combinatória: binômio de Newton
+- [x] Combinatória: binômio de Newton (10/11)
 - [ ] Cálculo 3: integrais de superfície e teoremas
-- [ ] Equações exponenciais e logarítmicas
+- [x] Equações exponenciais e logarítmicas (10/11)
 
 ### Fase 4 — Física para a admissão (meses)
 
