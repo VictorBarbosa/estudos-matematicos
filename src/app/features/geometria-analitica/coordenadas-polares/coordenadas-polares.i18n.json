@@ -1,0 +1,19 @@
+{
+  "raioR": { "pt": "Distância r", "fr": "Distance r", "en": "Distance r" },
+  "anguloTheta": { "pt": "Ângulo θ (graus)", "fr": "Angle θ (degrés)", "en": "Angle θ (degrees)" },
+  "oPonto": {
+    "pt": "O ponto nos dois sistemas",
+    "fr": "Le point dans les deux systèmes",
+    "en": "The point in both systems"
+  },
+  "descricaoGrafico": {
+    "pt": "O ponto a distância {r} da origem, no ângulo {theta}°, com as projeções x = {x} e y = {y}.",
+    "fr": "Le point à distance {r} de l’origine, à l’angle {theta}°, avec les projections x = {x} et y = {y}.",
+    "en": "The point at distance {r} from the origin, at angle {theta}°, with projections x = {x} and y = {y}."
+  },
+  "leitura": {
+    "pt": "O segmento verde tem comprimento r; as linhas tracejadas são as projeções x = r·cos θ e y = r·sen θ. Passe θ de 90° e veja x ficar negativo: o sinal vem do quadrante.",
+    "fr": "Le segment vert a pour longueur r ; les pointillés sont les projections x = r·cos θ et y = r·sin θ. Dépassez 90° et voyez x devenir négatif : le signe vient du quadrant.",
+    "en": "The green segment has length r; the dashed lines are the projections x = r·cos θ and y = r·sin θ. Go past 90° and watch x turn negative: the sign comes from the quadrant."
+  }
+}

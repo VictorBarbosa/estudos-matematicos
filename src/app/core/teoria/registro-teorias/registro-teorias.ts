@@ -298,6 +298,10 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'parciais.significado': 'O que a parcial mede',
   'parciais.termo-misto': 'O termo que tem as duas',
   'parciais.uma-de-cada-vez': 'Derivar numa direção só',
+  'polares.conversao': 'De polar para cartesiano e de volta',
+  'polares.curvas': 'Curvas em forma polar',
+  'polares.orbita': 'A órbita em forma polar',
+  'polares.quadrante': 'O ângulo e o quadrante',
   'polinomios.divisao': 'Divisão de polinômios',
   'polinomios.estrutura': 'Grau e identidade',
   'polinomios.raizes': 'Teorema do resto e raízes',
@@ -727,6 +731,10 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'parciais.significado': 'derivadas-parciais',
   'parciais.termo-misto': 'derivadas-parciais',
   'parciais.uma-de-cada-vez': 'derivadas-parciais',
+  'polares.conversao': 'coordenadas-polares',
+  'polares.curvas': 'coordenadas-polares',
+  'polares.orbita': 'coordenadas-polares',
+  'polares.quadrante': 'coordenadas-polares',
   'polinomios.divisao': 'polinomios',
   'polinomios.estrutura': 'polinomios',
   'polinomios.raizes': 'polinomios',
@@ -1158,6 +1166,10 @@ export const CARREGAR_TEORIA_DO_TOPICO: Readonly<Record<string, () => Promise<re
       ),
     conicas: () =>
       import('@features/geometria-analitica/conicas/conicas.teoria').then((m) => m.TEORIA_CONICAS),
+    'coordenadas-polares': () =>
+      import('@features/geometria-analitica/coordenadas-polares/coordenadas-polares.teoria').then(
+        (m) => m.TEORIA_POLARES,
+      ),
     'equacoes-parametricas': () =>
       import('@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.teoria').then(
         (m) => m.TEORIA_PARAMETRICAS,

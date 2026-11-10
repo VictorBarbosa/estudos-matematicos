@@ -81,6 +81,7 @@ import t_progressoes from '@features/funcoes/progressoes/progressoes.i18n.json';
 import t_transformacoes_de_graficos from '@features/funcoes/transformacoes-de-graficos/transformacoes-de-graficos.i18n.json';
 import t_circunferencia from '@features/geometria-analitica/circunferencia/circunferencia.i18n.json';
 import t_conicas from '@features/geometria-analitica/conicas/conicas.i18n.json';
+import t_coordenadas_polares from '@features/geometria-analitica/coordenadas-polares/coordenadas-polares.i18n.json';
 import t_equacoes_parametricas from '@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.i18n.json';
 import t_ponto_e_reta from '@features/geometria-analitica/ponto-e-reta/ponto-e-reta.i18n.json';
 import t_angulos_e_triangulos from '@features/geometria/angulos-e-triangulos/angulos-e-triangulos.i18n.json';
@@ -191,6 +192,7 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['transformacoes-de-graficos', t_transformacoes_de_graficos as TabelaDeTextos],
   ['circunferencia', t_circunferencia as TabelaDeTextos],
   ['conicas', t_conicas as TabelaDeTextos],
+  ['coordenadas-polares', t_coordenadas_polares as TabelaDeTextos],
   ['equacoes-parametricas', t_equacoes_parametricas as TabelaDeTextos],
   ['ponto-e-reta', t_ponto_e_reta as TabelaDeTextos],
   ['angulos-e-triangulos', t_angulos_e_triangulos as TabelaDeTextos],

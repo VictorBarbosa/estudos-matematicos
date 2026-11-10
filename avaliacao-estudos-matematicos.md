@@ -127,7 +127,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [ ] **◐** Feito em 09/11: **distância de ponto a reta** e **perpendicular** (inclinação −1/m e coeficiente linear pela reta por P). Faltam: reta por dois pontos, interseção de retas
 - [x] **Parábola** em `conicas` (09/11): foco, diretriz, forma transladada e, no Extremo, completar o quadrado
 - [ ] Circunferência: completar quadrados para achar centro e raio; reta tangente
-- [ ] Coordenadas polares — `curriculo.ts:430` cita a forma polar das órbitas; degrau natural antes de `calculo-3/coordenadas-no-espaco`
+- [x] Coordenadas polares — tópico novo `coordenadas-polares` (10/11): conversão, ângulo com quadrante, circunferência polar, distância entre pontos polares e a órbita r = p/(1 + e·cos θ)
 - [ ] **◐** Extremo com uma pergunta só: `ponto-e-reta` e `conicas` resolvidos em 09/11; falta `circunferencia`
 
 ### 3.8 Física — sólida (mecânica) · ausente (E&M, ondas)
@@ -292,7 +292,7 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 - [ ] Refundar `sequencias-e-series` como testes de convergência; séries de potências
 - [ ] Geometria: congruência, quadriláteros, poliedros e Euler
-- [ ] Geometria analítica: coordenadas polares
+- [x] Geometria analítica: coordenadas polares (10/11)
 - [x] Combinatória: binômio de Newton (10/11)
 - [ ] Cálculo 3: integrais de superfície e teoremas
 - [x] Equações exponenciais e logarítmicas (10/11)

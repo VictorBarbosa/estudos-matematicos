@@ -1,0 +1,35 @@
+<app-topico-layout topicoId="coordenadas-polares">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="r" [rotulo]="texto('raioR')" [min]="1" [max]="10" />
+      <app-controle-parametro
+        [(valor)]="theta"
+        [rotulo]="texto('anguloTheta')"
+        [min]="0"
+        [max]="359"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="conversaoTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>{{ texto('oPonto') }}</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [segmentos]="segmentos()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">{{ texto('leitura') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

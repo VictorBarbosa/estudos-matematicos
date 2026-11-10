@@ -292,6 +292,10 @@
         "descricao": "Changing systems so the symmetry drops out of the computation — and the Jacobian.",
         "titulo": "Cylindrical and spherical coordinates"
       },
+      "coordenadas-polares": {
+        "descricao": "Distance and direction: conversion, the angle’s quadrant and the orbit in polar form.",
+        "titulo": "Polar coordinates"
+      },
       "definicao-de-derivada": {
         "descricao": "From secant to tangent: the limit of Newton’s quotient.",
         "titulo": "Definition of the derivative"

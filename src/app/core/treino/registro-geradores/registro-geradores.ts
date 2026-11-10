@@ -300,6 +300,10 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       ),
     conicas: () =>
       import('@features/geometria-analitica/conicas/conicas.gerador').then((m) => m.geradorConicas),
+    'coordenadas-polares': () =>
+      import('@features/geometria-analitica/coordenadas-polares/coordenadas-polares.gerador').then(
+        (m) => m.geradorPolares,
+      ),
     'equacoes-parametricas': () =>
       import('@features/geometria-analitica/equacoes-parametricas/equacoes-parametricas.gerador').then(
         (m) => m.geradorEquacoesParametricas,

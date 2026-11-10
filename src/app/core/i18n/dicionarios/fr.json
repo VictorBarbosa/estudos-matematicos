@@ -292,6 +292,10 @@
         "descricao": "Changer de système pour que la symétrie disparaisse du calcul — et le jacobien.",
         "titulo": "Coordonnées cylindriques et sphériques"
       },
+      "coordenadas-polares": {
+        "descricao": "Distance et direction : conversion, le quadrant de l’angle et l’orbite en forme polaire.",
+        "titulo": "Coordonnées polaires"
+      },
       "definicao-de-derivada": {
         "descricao": "De la sécante à la tangente : la limite du quotient de Newton.",
         "titulo": "Définition de la dérivée"

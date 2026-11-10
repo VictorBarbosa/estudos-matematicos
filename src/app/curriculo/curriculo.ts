@@ -481,6 +481,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'A curva descrita pelo tempo: x(t) e y(t), e a trajetória que elas desenham.',
         pronto: true,
       },
+      {
+        id: 'coordenadas-polares',
+        titulo: 'Coordenadas polares',
+        descricao:
+          'Distância e direção: conversão, o quadrante do ângulo e a órbita em forma polar.',
+        pronto: true,
+      },
     ],
   },
   {

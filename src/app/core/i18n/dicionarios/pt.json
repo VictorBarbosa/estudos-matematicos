@@ -292,6 +292,10 @@
         "descricao": "Trocar de sistema para que a simetria some da conta — e o jacobiano.",
         "titulo": "Coordenadas cilíndricas e esféricas"
       },
+      "coordenadas-polares": {
+        "descricao": "Distância e direção: conversão, o quadrante do ângulo e a órbita em forma polar.",
+        "titulo": "Coordenadas polares"
+      },
       "definicao-de-derivada": {
         "descricao": "Da reta secante à tangente: o limite do quociente de Newton.",
         "titulo": "Definição de derivada"

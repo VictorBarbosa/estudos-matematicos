@@ -35,5 +35,13 @@ export const rotas: Routes = [
         (m) => m.EquacoesParametricas,
       ),
   },
+  {
+    path: 'coordenadas-polares',
+    title: 'Coordenadas polares · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/geometria-analitica/coordenadas-polares/coordenadas-polares').then(
+        (m) => m.CoordenadasPolares,
+      ),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'ponto-e-reta' },
 ];
