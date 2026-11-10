@@ -31,6 +31,21 @@ export const TEORIA_TERMICA: readonly Teoria[] = [
         nota: 'Vinte vezes menos, com a mesma espessura: é para isso que serve um isolante.',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Uma parede de 0,2 m de espessura e 10 m² tem k = 0,8 W/(m·K). Dentro faz 20 °C, fora 0 °C. Qual é o fluxo de calor?',
+      passos: [
+        {
+          descricao:
+            'Lei de Fourier: o fluxo cresce com k, a área e a diferença de temperatura, e cai com a espessura.',
+          tex: '\\dot{Q} = \\frac{kA\\,\\Delta T}{L}',
+        },
+        {
+          descricao: 'Substituindo; a diferença de 20 °C é a mesma de 20 K.',
+          tex: '\\dot{Q} = \\frac{0{,}8 \\cdot 10 \\cdot 20}{0{,}2} = 800\\ \\text{W}',
+        },
+      ],
+    },
     vejaTambem: ['termica.resistencia', 'termica.conveccao', 'termica.fluxo-e-energia'],
   },
   {
@@ -123,6 +138,20 @@ export const TEORIA_TERMICA: readonly Teoria[] = [
         nota: 'É esse expoente que torna o controle térmico orbital um problema de área e emissividade.',
       },
     ],
+    exemplo: {
+      enunciado: 'Uma placa de 1 m², com emissividade 0,9, está a 400 K. Quanto ela irradia?',
+      passos: [
+        {
+          descricao: 'Lei de Stefan-Boltzmann, com a temperatura em kelvin.',
+          tex: 'P = \\varepsilon\\sigma A T^{4}',
+        },
+        { descricao: 'A quarta potência primeiro.', tex: '400^{4} = 2{,}56 \\times 10^{10}' },
+        {
+          descricao: 'Substituindo.',
+          tex: 'P = 0{,}9 \\cdot 5{,}67 \\times 10^{-8} \\cdot 1 \\cdot 2{,}56 \\times 10^{10} \\approx 1306\\ \\text{W}',
+        },
+      ],
+    },
     vejaTambem: ['termica.kelvin', 'termica.vacuo', 'termica.conveccao'],
   },
   {

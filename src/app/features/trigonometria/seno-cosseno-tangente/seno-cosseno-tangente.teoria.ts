@@ -28,6 +28,23 @@ export const TEORIA_RAZOES: readonly Teoria[] = [
         tex: '\\cos 90° = 0 \\;\\Rightarrow\\; \\tan 90° \\text{ indefinida}',
       },
     ],
+    exemplo: {
+      enunciado: 'sen θ = 3/5, com θ no 1º quadrante. Calcule cos θ e tg θ.',
+      passos: [
+        {
+          descricao: 'Da relação fundamental, sen²θ + cos²θ = 1.',
+          tex: '\\cos^{2}\\theta = 1 - \\left(\\frac{3}{5}\\right)^{2} = 1 - \\frac{9}{25} = \\frac{16}{25}',
+        },
+        {
+          descricao: 'No 1º quadrante o cosseno é positivo.',
+          tex: '\\cos\\theta = \\sqrt{\\frac{16}{25}} = \\frac{4}{5}',
+        },
+        {
+          descricao: 'A tangente é o seno dividido pelo cosseno.',
+          tex: '\\tan\\theta = \\frac{3/5}{4/5} = \\frac{3}{4}',
+        },
+      ],
+    },
     vejaTambem: ['razoes.assintotas', 'razoes.complementares'],
   },
   {

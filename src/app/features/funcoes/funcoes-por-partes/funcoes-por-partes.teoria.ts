@@ -126,6 +126,23 @@ export const TEORIA_POR_PARTES: readonly Teoria[] = [
         nota: 'Agora as duas pontas se encontram e o gráfico fica inteiro.',
       },
     ],
+    exemplo: {
+      enunciado: 'f(x) = x + k para x < 2 e f(x) = x² para x ≥ 2. Que valor de k torna f contínua?',
+      passos: [
+        {
+          descricao: 'Pela esquerda vale a primeira sentença.',
+          tex: '\\lim_{x \\to 2^{-}} f(x) = 2 + k',
+        },
+        {
+          descricao: 'Pela direita, e no próprio ponto, vale a segunda.',
+          tex: '\\lim_{x \\to 2^{+}} f(x) = f(2) = 2^{2} = 4',
+        },
+        {
+          descricao: 'Contínua: os dois lados precisam coincidir.',
+          tex: '2 + k = 4 \\;\\Rightarrow\\; k = 2',
+        },
+      ],
+    },
     vejaTambem: ['por-partes.salto', 'por-partes.fronteira'],
   },
 ];

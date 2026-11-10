@@ -36,6 +36,23 @@ export const TEORIA_CADEIA: readonly Teoria[] = [
         tex: '\\frac{d}{dx}(9x^{2} + 6x + 1) = 18x + 6 = 6(3x+1) \\;\\checkmark',
       },
     ],
+    exemplo: {
+      enunciado: 'Derive f(x) = (3x² + 1)⁴ e calcule f′(1).',
+      passos: [
+        {
+          descricao: 'As duas camadas: a potência por fora, o miolo u = 3x² + 1 por dentro.',
+          tex: 'u = 3x^{2} + 1 \\qquad f = u^{4}',
+        },
+        {
+          descricao: 'Derivada de fora mantendo o miolo, vezes a derivada do miolo.',
+          tex: "f'(x) = 4(3x^{2} + 1)^{3} \\cdot 6x",
+        },
+        {
+          descricao: 'Em x = 1 o miolo vale 3·1² + 1 = 4.',
+          tex: "f'(1) = 4 \\cdot 4^{3} \\cdot 6 = 4 \\cdot 64 \\cdot 6 = 1536",
+        },
+      ],
+    },
     vejaTambem: ['cadeia.erro-comum', 'cadeia.camadas'],
   },
   {

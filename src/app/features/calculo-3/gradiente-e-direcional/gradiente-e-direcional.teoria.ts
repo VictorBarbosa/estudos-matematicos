@@ -10,7 +10,9 @@ export const TEORIA_GRADIENTE: readonly Teoria[] = [
       'é um objeto com direção e módulo — e é dele que saem todas as taxas: a de qualquer ' +
       'direção se obtém projetando-o nela.',
     formulas: [
-      { tex: '\\nabla f = \\left(\\frac{\\partial f}{\\partial x},\\; \\frac{\\partial f}{\\partial y}\\right)' },
+      {
+        tex: '\\nabla f = \\left(\\frac{\\partial f}{\\partial x},\\; \\frac{\\partial f}{\\partial y}\\right)',
+      },
       { tex: '\\left|\\nabla f\\right| = \\sqrt{f_{x}^{2} + f_{y}^{2}}' },
     ],
     demonstracao: [
@@ -41,7 +43,9 @@ export const TEORIA_GRADIENTE: readonly Teoria[] = [
       'mais usado da computação numérica.',
     formulas: [
       { tex: 'D_{\\hat{u}}f = \\nabla f \\cdot \\hat{u} = \\left|\\nabla f\\right|\\cos\\theta' },
-      { tex: '\\max_{\\hat{u}} D_{\\hat{u}}f = \\left|\\nabla f\\right|, \\;\\text{quando } \\hat{u} \\parallel \\nabla f' },
+      {
+        tex: '\\max_{\\hat{u}} D_{\\hat{u}}f = \\left|\\nabla f\\right|, \\;\\text{quando } \\hat{u} \\parallel \\nabla f',
+      },
     ],
     demonstracao: [
       {
@@ -75,7 +79,9 @@ export const TEORIA_GRADIENTE: readonly Teoria[] = [
       'vezes maior, o que não faz sentido nenhum — a inclinação de uma encosta não depende do ' +
       'comprimento da seta que se desenha sobre ela.',
     formulas: [
-      { tex: 'D_{\\hat{u}}f = \\nabla f \\cdot \\hat{u}, \\qquad \\hat{u} = \\frac{\\vec{v}}{\\left|\\vec{v}\\right|}' },
+      {
+        tex: 'D_{\\hat{u}}f = \\nabla f \\cdot \\hat{u}, \\qquad \\hat{u} = \\frac{\\vec{v}}{\\left|\\vec{v}\\right|}',
+      },
     ],
     demonstracao: [
       {
@@ -96,6 +102,24 @@ export const TEORIA_GRADIENTE: readonly Teoria[] = [
         nota: 'E repare que 5 é exatamente o módulo do gradiente: a direção coincidia com ele.',
       },
     ],
+    exemplo: {
+      enunciado:
+        'f(x, y) = x²y. Calcule a derivada direcional em (1, 2) na direção do vetor (3, 4).',
+      passos: [
+        {
+          descricao: 'O gradiente reúne as duas parciais.',
+          tex: '\\nabla f = (2xy,\\; x^{2}) \\;\\Rightarrow\\; \\nabla f(1, 2) = (4,\\; 1)',
+        },
+        {
+          descricao: 'A direção precisa ser unitária: dividimos (3, 4) pelo seu comprimento, 5.',
+          tex: '\\mathbf{u} = \\left(\\frac{3}{5},\\; \\frac{4}{5}\\right)',
+        },
+        {
+          descricao: 'A derivada direcional é o produto escalar.',
+          tex: 'D_{\\mathbf{u}}f = 4 \\cdot \\frac{3}{5} + 1 \\cdot \\frac{4}{5} = \\frac{16}{5} = 3{,}2',
+        },
+      ],
+    },
     vejaTambem: ['gradiente.direcao-de-subida', 'gradiente.vetor'],
   },
   {

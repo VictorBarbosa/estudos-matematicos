@@ -12,7 +12,10 @@ export const TEORIA_MULTIVAR: readonly Teoria[] = [
       'ideia de derivada e de integral continua valendo, mas cada uma ganha versões novas.',
     formulas: [
       { tex: 'f : \\mathbb{R}^{2} \\to \\mathbb{R}, \\qquad z = f(x,y)' },
-      { tex: 'f(x,y) = x^{2} + y^{2}', legenda: 'O paraboloide, a superfície mais simples depois do plano.' },
+      {
+        tex: 'f(x,y) = x^{2} + y^{2}',
+        legenda: 'O paraboloide, a superfície mais simples depois do plano.',
+      },
     ],
     demonstracao: [
       {
@@ -99,6 +102,20 @@ export const TEORIA_MULTIVAR: readonly Teoria[] = [
         nota: 'É o desenho que separa a região que sobe da que desce.',
       },
     ],
+    exemplo: {
+      enunciado: 'f(x, y) = x² + y². Qual é a curva de nível f = 9?',
+      passos: [
+        {
+          descricao: 'A curva de nível reúne os pontos onde f vale a constante.',
+          tex: 'x^{2} + y^{2} = 9',
+        },
+        {
+          descricao: 'É uma circunferência centrada na origem, de raio √9.',
+          tex: 'r = \\sqrt{9} = 3',
+        },
+        { descricao: 'Conferindo com um ponto dela, (3, 0).', tex: 'f(3, 0) = 3^{2} + 0^{2} = 9' },
+      ],
+    },
     vejaTambem: ['multivar.superficie', 'multivar.dominio'],
   },
 ];

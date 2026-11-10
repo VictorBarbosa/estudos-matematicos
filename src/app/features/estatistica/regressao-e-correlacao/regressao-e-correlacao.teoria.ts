@@ -65,6 +65,21 @@ export const TEORIA_REGRESSAO: readonly Teoria[] = [
         nota: 'Um intercepto grande demais denuncia erro sistemático na montagem.',
       },
     ],
+    exemplo: {
+      enunciado: 'Ajuste a reta de mínimos quadrados aos pontos (1, 2), (2, 3), (3, 5), (4, 6).',
+      passos: [
+        { descricao: 'As médias.', tex: '\\bar{x} = 2{,}5 \\qquad \\bar{y} = 4' },
+        {
+          descricao: 'As somas de desvios: produtos cruzados e quadrados em x.',
+          tex: 'S_{xy} = 3 + 0{,}5 + 0{,}5 + 3 = 7 \\qquad S_{xx} = 2{,}25 + 0{,}25 + 0{,}25 + 2{,}25 = 5',
+        },
+        {
+          descricao: 'Inclinação e intercepto.',
+          tex: 'b = \\frac{7}{5} = 1{,}4 \\qquad a = 4 - 1{,}4 \\cdot 2{,}5 = 0{,}5',
+        },
+        { descricao: 'A reta.', tex: '\\hat{y} = 0{,}5 + 1{,}4x' },
+      ],
+    },
     vejaTambem: ['regressao.minimos-quadrados', 'regressao.extrapolar'],
   },
   {
@@ -162,6 +177,21 @@ export const TEORIA_REGRESSAO: readonly Teoria[] = [
         nota: 'A relação é perfeita e determinística, e mesmo assim o Pearson não a vê.',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Para os mesmos pontos (1, 2), (2, 3), (3, 5), (4, 6), calcule o coeficiente de correlação r.',
+      passos: [
+        {
+          descricao: 'Além de Sxy = 7 e Sxx = 5, falta a soma dos quadrados dos desvios em y.',
+          tex: 'S_{yy} = 4 + 1 + 1 + 4 = 10',
+        },
+        {
+          descricao: 'A fórmula de Pearson.',
+          tex: 'r = \\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}} = \\frac{7}{\\sqrt{5 \\cdot 10}} = \\frac{7}{\\sqrt{50}} \\approx 0{,}990',
+          nota: 'Muito perto de 1: os pontos quase caem sobre uma reta crescente.',
+        },
+      ],
+    },
     vejaTambem: [
       'correlacao.determinacao',
       'correlacao.nao-e-causa',

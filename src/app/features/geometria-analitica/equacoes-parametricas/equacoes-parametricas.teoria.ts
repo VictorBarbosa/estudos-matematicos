@@ -137,6 +137,20 @@ export const TEORIA_PARAMETRICAS: readonly Teoria[] = [
         tex: '\\vec{r} \\cdot \\vec{v} = -r^{2}\\cos t\\operatorname{sen} t + r^{2}\\operatorname{sen} t\\cos t = 0',
       },
     ],
+    exemplo: {
+      enunciado: 'Um ponto se move com x = t² e y = 3t. Qual é a rapidez em t = 2?',
+      passos: [
+        {
+          descricao: 'A velocidade é a derivada de cada coordenada.',
+          tex: "x'(t) = 2t \\qquad y'(t) = 3",
+        },
+        { descricao: 'Em t = 2.', tex: '\\mathbf{v}(2) = (4,\\; 3)' },
+        {
+          descricao: 'A rapidez é o comprimento do vetor.',
+          tex: '|\\mathbf{v}| = \\sqrt{4^{2} + 3^{2}} = \\sqrt{25} = 5',
+        },
+      ],
+    },
     vejaTambem: ['parametricas.movimento', 'parametricas.parametro'],
   },
   {
@@ -177,6 +191,21 @@ export const TEORIA_PARAMETRICAS: readonly Teoria[] = [
         nota: 'Há curvas que só existem, na prática, na forma paramétrica.',
       },
     ],
+    exemplo: {
+      enunciado: 'Elimine o parâmetro de x = 2t + 1, y = t².',
+      passos: [
+        { descricao: 'Isolamos t na equação mais simples.', tex: 't = \\frac{x - 1}{2}' },
+        {
+          descricao: 'Substituímos na outra.',
+          tex: 'y = \\left(\\frac{x - 1}{2}\\right)^{2} = \\frac{(x - 1)^{2}}{4}',
+        },
+        {
+          descricao: 'É uma parábola com vértice em (1, 0).',
+          tex: 'y = \\frac{(x - 1)^{2}}{4}',
+          nota: 'Perde-se o sentido do percurso: a equação em x e y não diz para que lado o ponto anda.',
+        },
+      ],
+    },
     vejaTambem: ['parametricas.circunferencia', 'parametricas.movimento'],
   },
 ];

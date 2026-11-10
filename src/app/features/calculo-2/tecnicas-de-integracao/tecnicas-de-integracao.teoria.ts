@@ -42,9 +42,7 @@ export const TEORIA_TECNICAS: readonly Teoria[] = [
       'Quando o integrando é um produto de naturezas diferentes — um polinômio vezes uma ' +
       'exponencial, por exemplo — a integração por partes troca a integral original por ' +
       'outra, mais fácil.',
-    formulas: [
-      { tex: '\\int u\\,dv = uv - \\int v\\,du' },
-    ],
+    formulas: [{ tex: '\\int u\\,dv = uv - \\int v\\,du' }],
     demonstracao: [
       {
         descricao: 'Partimos da regra do produto.',
@@ -65,6 +63,23 @@ export const TEORIA_TECNICAS: readonly Teoria[] = [
         nota: 'Derivar x o faz sumir; derivar eˣ não muda nada. Por isso u = x.',
       },
     ],
+    exemplo: {
+      enunciado: 'Calcule a integral de x·eˣ.',
+      passos: [
+        {
+          descricao: 'u é o que simplifica ao derivar; dv, o que se integra fácil.',
+          tex: 'u = x,\\; du = dx \\qquad dv = e^{x}dx,\\; v = e^{x}',
+        },
+        {
+          descricao: 'Por partes: u·v menos a integral de v·du.',
+          tex: '\\int x e^{x}\\,dx = x e^{x} - \\int e^{x}\\,dx',
+        },
+        {
+          descricao: 'A integral que sobrou é imediata.',
+          tex: '= x e^{x} - e^{x} + C = e^{x}(x - 1) + C',
+        },
+      ],
+    },
     vejaTambem: ['tecnicas.substituicao', 'tecnicas.escolha'],
   },
   {
@@ -77,7 +92,9 @@ export const TEORIA_TECNICAS: readonly Teoria[] = [
       'é metade do trabalho.',
     formulas: [
       { tex: "\\text{composta} + g' \\;\\to\\; \\text{substituição}" },
-      { tex: '\\text{polinômio} \\times \\text{exponencial ou trig.} \\;\\to\\; \\text{por partes}' },
+      {
+        tex: '\\text{polinômio} \\times \\text{exponencial ou trig.} \\;\\to\\; \\text{por partes}',
+      },
     ],
     demonstracao: [
       {

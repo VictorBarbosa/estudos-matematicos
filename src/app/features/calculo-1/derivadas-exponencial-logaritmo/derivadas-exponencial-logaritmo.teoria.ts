@@ -57,6 +57,16 @@ export const TEORIA_DERIVADAS_EXP_LOG: readonly Teoria[] = [
         nota: 'Com expoente igual a x o fator vale 1, e por isso ele passa despercebido.',
       },
     ],
+    exemplo: {
+      enunciado: 'f(x) = e elevado a 3x². Calcule f′(1).',
+      passos: [
+        {
+          descricao: 'A exponencial se repete, e a derivada do expoente desce multiplicando.',
+          tex: "f'(x) = e^{3x^{2}} \\cdot 6x",
+        },
+        { descricao: 'Em x = 1.', tex: "f'(1) = 6e^{3} \\approx 6 \\cdot 20{,}086 = 120{,}51" },
+      ],
+    },
     vejaTambem: ['exp-log.exponencial', 'exp-log.produto', 'exp-log.base-ou-expoente'],
   },
   {
@@ -145,6 +155,13 @@ export const TEORIA_DERIVADAS_EXP_LOG: readonly Teoria[] = [
         nota: 'A derivada cai quando x cresce: o logaritmo sobe cada vez mais devagar.',
       },
     ],
+    exemplo: {
+      enunciado: 'f(x) = ln(x² + 1). Calcule f′(2).',
+      passos: [
+        { descricao: 'A derivada de ln u é u′/u.', tex: "f'(x) = \\frac{2x}{x^{2} + 1}" },
+        { descricao: 'Em x = 2.', tex: "f'(2) = \\frac{4}{5} = 0{,}8" },
+      ],
+    },
     vejaTambem: [
       'exp-log.constante-no-logaritmo',
       'exp-log.potencia-no-logaritmo',

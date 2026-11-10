@@ -34,6 +34,24 @@ export const TEORIA_TRANSFORMACOES: readonly Teoria[] = [
         tex: 'x_{novo} = \\frac{x_{antigo}}{b} + h',
       },
     ],
+    exemplo: {
+      enunciado: 'g(x) = (x − 3)² + 1 vem de f(x) = x². Onde fica o vértice de g?',
+      passos: [
+        {
+          descricao:
+            'Dentro do parêntese, x − 3: o gráfico vai 3 para a DIREITA — o sinal se inverte.',
+          tex: 'f(x - 3) \\;\\Rightarrow\\; 3 \\text{ para a direita}',
+        },
+        {
+          descricao: 'Fora, + 1: o gráfico sobe 1 — sem inversão.',
+          tex: 'f(x - 3) + 1 \\;\\Rightarrow\\; 1 \\text{ para cima}',
+        },
+        {
+          descricao: 'O vértice de x², em (0, 0), acompanha os dois movimentos.',
+          tex: '(0, 0) \\to (0 + 3,\\; 0 + 1) = (3, 1)',
+        },
+      ],
+    },
     vejaTambem: ['transformacoes.deslocamento', 'transformacoes.escala'],
   },
   {

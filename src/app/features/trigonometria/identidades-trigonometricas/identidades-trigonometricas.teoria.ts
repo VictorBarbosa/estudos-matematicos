@@ -67,6 +67,23 @@ export const TEORIA_IDENTIDADES: readonly Teoria[] = [
         nota: 'Soma de arcos, menos no meio; diferença de arcos, mais no meio.',
       },
     ],
+    exemplo: {
+      enunciado: 'Calcule sen 75° exatamente.',
+      passos: [
+        {
+          descricao: '75° não é notável, mas é a soma de dois que são.',
+          tex: '\\sin 75^{\\circ} = \\sin(45^{\\circ} + 30^{\\circ})',
+        },
+        {
+          descricao: 'Seno da soma.',
+          tex: '= \\sin 45^{\\circ}\\cos 30^{\\circ} + \\cos 45^{\\circ}\\sin 30^{\\circ}',
+        },
+        {
+          descricao: 'Substituindo os valores notáveis.',
+          tex: '= \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2} \\cdot \\frac{1}{2} = \\frac{\\sqrt{6} + \\sqrt{2}}{4} \\approx 0{,}9659',
+        },
+      ],
+    },
     vejaTambem: ['identidades.arco-duplo', 'identidades.fundamental'],
   },
   {

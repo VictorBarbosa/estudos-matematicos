@@ -37,6 +37,23 @@ export const TEORIA_IMPROPRIAS: readonly Teoria[] = [
         nota: 'O logaritmo cresce devagar, mas cresce sem parar: aqui não há limite.',
       },
     ],
+    exemplo: {
+      enunciado: 'Calcule a integral de 1/x² de 1 até o infinito.',
+      passos: [
+        {
+          descricao: 'O infinito vira um limite.',
+          tex: '\\int_{1}^{\\infty} \\frac{dx}{x^{2}} = \\lim_{b \\to \\infty} \\int_{1}^{b} \\frac{dx}{x^{2}}',
+        },
+        {
+          descricao: 'A primitiva de 1/x² é −1/x.',
+          tex: '\\int_{1}^{b} \\frac{dx}{x^{2}} = \\left[-\\frac{1}{x}\\right]_{1}^{b} = 1 - \\frac{1}{b}',
+        },
+        {
+          descricao: 'Com b indo ao infinito, 1/b some.',
+          tex: '\\lim_{b \\to \\infty} \\left(1 - \\frac{1}{b}\\right) = 1',
+        },
+      ],
+    },
     vejaTambem: [
       'improprias.criterio-da-potencia',
       'improprias.integrando-ilimitado',
@@ -115,6 +132,24 @@ export const TEORIA_IMPROPRIAS: readonly Teoria[] = [
         tex: '\\int_{0}^{1} x^{-1/2}\\,dx = \\left[2\\sqrt{x}\\right]_{0}^{1} = 2 \\;\\checkmark',
       },
     ],
+    exemplo: {
+      enunciado: 'Calcule a integral de 1/√x de 0 a 1.',
+      passos: [
+        {
+          descricao: 'O integrando explode em x = 0: a borda vira limite.',
+          tex: '\\int_{0}^{1} \\frac{dx}{\\sqrt{x}} = \\lim_{a \\to 0^{+}} \\int_{a}^{1} x^{-1/2}\\,dx',
+        },
+        {
+          descricao: 'A primitiva de x elevado a −1/2 é 2√x.',
+          tex: '\\left[2\\sqrt{x}\\right]_{a}^{1} = 2 - 2\\sqrt{a}',
+        },
+        {
+          descricao: 'Com a indo a zero.',
+          tex: '\\lim_{a \\to 0^{+}} (2 - 2\\sqrt{a}) = 2',
+          nota: 'Expoente 1/2 menor que 1 perto de zero: converge, como diz o critério da potência.',
+        },
+      ],
+    },
     vejaTambem: ['improprias.criterio-da-potencia', 'improprias.limite-na-borda'],
   },
   {
@@ -188,8 +223,12 @@ export const TEORIA_IMPROPRIAS: readonly Teoria[] = [
       'acima de algo que diverge, ele diverge. O teste dá o veredito, nunca o valor — e é ' +
       'exatamente o veredito que costuma bastar.',
     formulas: [
-      { tex: '0 \\leq f \\leq g \\;\\text{e}\\; \\int g \\;\\text{converge} \\Longrightarrow \\int f \\;\\text{converge}' },
-      { tex: 'f \\geq g \\geq 0 \\;\\text{e}\\; \\int g \\;\\text{diverge} \\Longrightarrow \\int f \\;\\text{diverge}' },
+      {
+        tex: '0 \\leq f \\leq g \\;\\text{e}\\; \\int g \\;\\text{converge} \\Longrightarrow \\int f \\;\\text{converge}',
+      },
+      {
+        tex: 'f \\geq g \\geq 0 \\;\\text{e}\\; \\int g \\;\\text{diverge} \\Longrightarrow \\int f \\;\\text{diverge}',
+      },
     ],
     demonstracao: [
       {

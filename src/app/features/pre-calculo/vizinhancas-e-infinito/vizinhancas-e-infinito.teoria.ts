@@ -65,6 +65,20 @@ export const TEORIA_VIZINHANCAS: readonly Teoria[] = [
         nota: 'Essa é a assíntota horizontal: a reta que a curva persegue no infinito.',
       },
     ],
+    exemplo: {
+      enunciado: 'Calcule o limite de (3x² + 2x)/(x² − 5) quando x → ∞.',
+      passos: [
+        {
+          descricao: 'Dividimos em cima e embaixo pela maior potência do denominador, x².',
+          tex: '\\frac{3x^{2} + 2x}{x^{2} - 5} = \\frac{3 + \\frac{2}{x}}{1 - \\frac{5}{x^{2}}}',
+        },
+        {
+          descricao: 'Com x cada vez maior, as frações com x embaixo vão a zero.',
+          tex: '\\lim_{x \\to \\infty} \\frac{3 + \\frac{2}{x}}{1 - \\frac{5}{x^{2}}} = \\frac{3 + 0}{1 - 0} = 3',
+          nota: 'Mesmo grau em cima e embaixo: o limite é a razão dos coeficientes líderes, 3/1.',
+        },
+      ],
+    },
     vejaTambem: ['vizinhancas.epsilon-delta', 'vizinhancas.assintotas'],
   },
   {

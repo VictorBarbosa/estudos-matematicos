@@ -9,9 +9,7 @@ export const TEORIA_APLICACOES_INTEGRAL: readonly Teoria[] = [
       'Para a região entre dois gráficos, integra-se a diferença (superior − inferior). O ' +
       'resultado já é a área geométrica, porque a diferença é positiva em toda a região — ' +
       'desde que se respeite quem está em cima.',
-    formulas: [
-      { tex: 'A = \\int_{a}^{b} \\left[f(x) - g(x)\\right] dx, \\quad f \\geq g' },
-    ],
+    formulas: [{ tex: 'A = \\int_{a}^{b} \\left[f(x) - g(x)\\right] dx, \\quad f \\geq g' }],
     demonstracao: [
       {
         descricao: 'Uma tira vertical fina tem altura igual à diferença das funções.',
@@ -31,6 +29,24 @@ export const TEORIA_APLICACOES_INTEGRAL: readonly Teoria[] = [
         nota: 'Se as curvas trocam de posição, é preciso dividir em partes.',
       },
     ],
+    exemplo: {
+      enunciado: 'Área entre y = x e y = x², de x = 0 a x = 1.',
+      passos: [
+        {
+          descricao:
+            'Entre 0 e 1, a reta fica acima da parábola (por exemplo, em x = 0,5: 0,5 > 0,25).',
+          tex: 'x \\geq x^{2} \\quad \\text{em } [0, 1]',
+        },
+        {
+          descricao: 'Integramos a de cima menos a de baixo.',
+          tex: 'A = \\int_{0}^{1} (x - x^{2})\\,dx',
+        },
+        {
+          descricao: 'Primitiva e limites de integração.',
+          tex: '\\left[\\frac{x^{2}}{2} - \\frac{x^{3}}{3}\\right]_{0}^{1} = \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6} \\approx 0{,}167',
+        },
+      ],
+    },
     vejaTambem: ['aplic-integral.volume', 'aplic-integral.comprimento'],
   },
   {
@@ -41,9 +57,7 @@ export const TEORIA_APLICACOES_INTEGRAL: readonly Teoria[] = [
       'Girando uma curva em torno do eixo x, cada fatia perpendicular vira um disco de raio ' +
       'f(x). Somando as áreas desses discos ao longo do intervalo, obtém-se o volume do ' +
       'sólido.',
-    formulas: [
-      { tex: 'V = \\pi\\int_{a}^{b} \\left[f(x)\\right]^{2} dx' },
-    ],
+    formulas: [{ tex: 'V = \\pi\\int_{a}^{b} \\left[f(x)\\right]^{2} dx' }],
     demonstracao: [
       {
         descricao: 'Uma fatia fina do sólido é praticamente um disco.',
@@ -68,9 +82,7 @@ export const TEORIA_APLICACOES_INTEGRAL: readonly Teoria[] = [
     definicao:
       'Um pedacinho da curva é quase um segmento de reta, com catetos dx e dy. Somando os ' +
       'comprimentos desses segmentos ao longo do intervalo, obtém-se o comprimento total.',
-    formulas: [
-      { tex: 'L = \\int_{a}^{b} \\sqrt{1 + \\left[f\'(x)\\right]^{2}}\\,dx' },
-    ],
+    formulas: [{ tex: "L = \\int_{a}^{b} \\sqrt{1 + \\left[f'(x)\\right]^{2}}\\,dx" }],
     demonstracao: [
       {
         descricao: 'Um pedaço infinitesimal da curva é a hipotenusa de dx e dy.',
@@ -78,7 +90,7 @@ export const TEORIA_APLICACOES_INTEGRAL: readonly Teoria[] = [
       },
       {
         descricao: 'Pondo dx em evidência dentro da raiz.',
-        tex: "= \\sqrt{1 + \\left(\\frac{dy}{dx}\\right)^{2}}\\,dx",
+        tex: '= \\sqrt{1 + \\left(\\frac{dy}{dx}\\right)^{2}}\\,dx',
       },
       {
         descricao: 'A razão dy/dx é a derivada.',

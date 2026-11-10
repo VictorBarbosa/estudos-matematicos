@@ -28,6 +28,19 @@ export const TEORIA_MULTIPLAS: readonly Teoria[] = [
         nota: 'Cada passo é uma integral do Cálculo 2, sem nada novo na técnica.',
       },
     ],
+    exemplo: {
+      enunciado: 'Calcule a integral de (x + y) com y de 0 a 1 e x de 0 a 2.',
+      passos: [
+        {
+          descricao: 'A de dentro, em y, com x parado.',
+          tex: '\\int_{0}^{1} (x + y)\\,dy = \\left[xy + \\frac{y^{2}}{2}\\right]_{0}^{1} = x + \\frac{1}{2}',
+        },
+        {
+          descricao: 'A de fora, em x.',
+          tex: '\\int_{0}^{2} \\left(x + \\frac{1}{2}\\right)dx = \\left[\\frac{x^{2}}{2} + \\frac{x}{2}\\right]_{0}^{2} = 2 + 1 = 3',
+        },
+      ],
+    },
     vejaTambem: ['multiplas.fubini', 'multiplas.volume', 'multiplas.polares'],
   },
   {
@@ -97,9 +110,7 @@ export const TEORIA_MULTIPLAS: readonly Teoria[] = [
       'região — a mesma ideia da média em uma variável, com área no lugar de comprimento. É ' +
       'com ela que se responde qual é a temperatura média de uma placa ou a pressão média ' +
       'sobre uma superfície.',
-    formulas: [
-      { tex: '\\bar{f} = \\frac{1}{A}\\iint_{R} f\\,dA' },
-    ],
+    formulas: [{ tex: '\\bar{f} = \\frac{1}{A}\\iint_{R} f\\,dA' }],
     demonstracao: [
       {
         descricao: 'Calculamos a integral sobre o quadrado unitário.',
@@ -150,6 +161,23 @@ export const TEORIA_MULTIPLAS: readonly Teoria[] = [
         nota: 'É o tipo de limite que polares existem para eliminar.',
       },
     ],
+    exemplo: {
+      enunciado: 'Integre x² + y² sobre o disco de raio 2 centrado na origem.',
+      passos: [
+        {
+          descricao: 'Em polares, x² + y² vira r², e a área ganha o jacobiano r.',
+          tex: 'x^{2} + y^{2} = r^{2} \\qquad dA = r\\,dr\\,d\\theta',
+        },
+        {
+          descricao: 'A integral em r, de 0 a 2.',
+          tex: '\\int_{0}^{2} r^{2} \\cdot r\\,dr = \\left[\\frac{r^{4}}{4}\\right]_{0}^{2} = 4',
+        },
+        {
+          descricao: 'A integral em θ, de 0 a 2π.',
+          tex: '\\int_{0}^{2\\pi} 4\\,d\\theta = 8\\pi \\approx 25{,}13',
+        },
+      ],
+    },
     vejaTambem: ['multiplas.iterada', 'multiplas.fubini'],
   },
 ];

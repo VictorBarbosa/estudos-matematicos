@@ -112,6 +112,20 @@ export const TEORIA_DINAMICA_ROTACIONAL: readonly Teoria[] = [
         tex: '\\alpha = \\frac{3}{0{,}25} = 12\\ \\text{rad/s}^{2}',
       },
     ],
+    exemplo: {
+      enunciado:
+        'Um disco maciço de 4 kg e raio 0,5 m recebe um torque de 2 N·m. Qual é a aceleração angular?',
+      passos: [
+        {
+          descricao: 'Momento de inércia do disco maciço.',
+          tex: 'I = \\frac{1}{2}MR^{2} = \\frac{1}{2} \\cdot 4 \\cdot 0{,}5^{2} = 0{,}5\\ \\text{kg·m}^{2}',
+        },
+        {
+          descricao: 'A segunda lei da rotação: τ = I·α.',
+          tex: '\\alpha = \\frac{\\tau}{I} = \\frac{2}{0{,}5} = 4\\ \\text{rad/s}^{2}',
+        },
+      ],
+    },
     vejaTambem: ['rotacional.inercia', 'rotacional.dicionario'],
   },
   {
@@ -146,6 +160,20 @@ export const TEORIA_DINAMICA_ROTACIONAL: readonly Teoria[] = [
         tex: '\\omega \\to 2\\omega \\;\\Longrightarrow\\; K \\to 4K',
       },
     ],
+    exemplo: {
+      enunciado:
+        'O mesmo disco (I = 0,5 kg·m²) gira a 10 rad/s. Qual é a energia cinética de rotação?',
+      passos: [
+        {
+          descricao: 'A energia de rotação troca m por I e v por ω.',
+          tex: 'K = \\frac{1}{2}I\\omega^{2}',
+        },
+        {
+          descricao: 'Substituindo.',
+          tex: 'K = \\frac{1}{2} \\cdot 0{,}5 \\cdot 10^{2} = 25\\ \\text{J}',
+        },
+      ],
+    },
     vejaTambem: ['rotacional.rolamento', 'rotacional.dicionario'],
   },
   {
