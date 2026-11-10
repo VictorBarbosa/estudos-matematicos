@@ -128,5 +128,15 @@
     "pt": "Você já passou na prova final de {sessao}. Ela não se refaz: refazer só poderia tirar o que já foi ganho.",
     "fr": "Vous avez déjà réussi l’examen final de {sessao}. On ne le repasse pas : le repasser ne pourrait que retirer ce qui est acquis.",
     "en": "You have already passed the final exam for {sessao}. It is not retaken: retaking could only take away what you have earned."
+  },
+  "nivelamentoAviso": {
+    "pt": "Teste de nivelamento: você ainda não venceu as etapas desta área. Passando, a área inteira conta como vencida e a próxima abre. Falhando, nada é apagado — siga pelas etapas.",
+    "fr": "Test de niveau : vous n’avez pas encore validé les étapes de ce domaine. En réussissant, tout le domaine compte comme validé et le suivant s’ouvre. En échouant, rien n’est effacé — suivez les étapes.",
+    "en": "Placement test: you haven’t cleared this area’s stages yet. Pass it and the whole area counts as cleared and the next one opens. Fail it and nothing is erased — just follow the stages."
+  },
+  "nivelamentoReprovado": {
+    "pt": "O nivelamento de {sessao} não passou desta vez. Nada foi apagado: siga pelas etapas da área, que a prova continua esperando no fim.",
+    "fr": "Le test de niveau de {sessao} n’est pas réussi cette fois. Rien n’a été effacé : suivez les étapes du domaine, l’examen vous attend à la fin.",
+    "en": "The {sessao} placement test didn’t pass this time. Nothing was erased: follow the area’s stages, and the exam will be waiting at the end."
   }
 }

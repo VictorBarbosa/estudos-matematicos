@@ -87,7 +87,28 @@ export class ProvaService {
       return 'vencida';
     }
 
-    return this.cumpridas().has(sessaoId) ? 'disponivel' : 'trancada';
+    if (this.cumpridas().has(sessaoId)) {
+      return 'disponivel';
+    }
+
+    return this.alcancavel(sessaoId) ? 'nivelamento' : 'trancada';
+  }
+
+  /**
+   * A área já está aberta na trilha: é a primeira, ou a anterior teve a prova
+   * vencida. Só nesse caso o nivelamento faz sentido — pular de Álgebra para
+   * Cálculo 3 sem passar pelas provas do meio não é nivelar, é saltar.
+   */
+  alcancavel(sessaoId: string): boolean {
+    const sessoes = this.sessoes();
+    const indice = sessoes.findIndex((sessao) => sessao.id === sessaoId);
+    if (indice < 0) return false;
+    return indice === 0 || this.vencidas().has(sessoes[indice - 1]!.id);
+  }
+
+  /** A prova desta sessão pode ser feita agora como teste de nivelamento? */
+  emNivelamento(sessaoId: string): boolean {
+    return this.estadoDe(sessaoId) === 'nivelamento';
   }
 
   venceu(sessaoId: string): boolean {

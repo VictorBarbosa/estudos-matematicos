@@ -122,6 +122,13 @@ li.prova {
   font-weight: 600;
 }
 
+/* Nivelamento: a prova está aberta, mas como teste — cor mais discreta. */
+.etiqueta-prova.nivelamento {
+  background: transparent;
+  color: var(--acento);
+  border: 1px solid var(--acento);
+}
+
 /* Atalho para os ajustes da progressão, no mesmo formato do de revisão. */
 .atalho-configuracoes {
   display: block;

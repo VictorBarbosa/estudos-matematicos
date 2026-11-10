@@ -80,6 +80,19 @@
                 <span class="etiqueta-prova">{{ i18n.t('sidebar.provaAberta') }}</span>
               </a>
             }
+            @case ('nivelamento') {
+              <a
+                [routerLink]="area.prova.rota"
+                routerLinkActive="ativo"
+                (click)="navegou.emit()"
+                [title]="i18n.t('sidebar.provaNivelamentoTitulo')"
+              >
+                {{ i18n.t('sidebar.prova') }}
+                <span class="etiqueta-prova nivelamento">{{
+                  i18n.t('sidebar.provaNivelamento')
+                }}</span>
+              </a>
+            }
             @case ('vencida') {
               <a [routerLink]="area.prova.rota" routerLinkActive="ativo" (click)="navegou.emit()">
                 {{ i18n.t('sidebar.prova') }}

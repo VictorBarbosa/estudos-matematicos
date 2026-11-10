@@ -186,3 +186,10 @@
 .aviso {
   color: var(--texto-suave);
 }
+
+.aviso-nivelamento {
+  margin-top: var(--esp-2);
+  padding: var(--esp-2) var(--esp-3);
+  border-left: 3px solid var(--acento);
+  background: var(--superficie-2, transparent);
+}

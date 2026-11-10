@@ -184,6 +184,12 @@ export type EstadoDaProva =
   | 'trancada'
   /** Todas as etapas vencidas, prova por fazer. */
   | 'disponivel'
+  /**
+   * A área já está aberta na trilha, mas as etapas não foram vencidas: a prova
+   * pode ser feita como teste de nivelamento. Passar pula a área; falhar não
+   * zera nada.
+   */
+  | 'nivelamento'
   /** Prova já passada. */
   | 'vencida';
 

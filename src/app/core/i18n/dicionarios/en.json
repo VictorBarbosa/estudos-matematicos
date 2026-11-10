@@ -940,6 +940,8 @@
     "prova": "Final exam",
     "provaAberta": "open",
     "provaDisponivelTitulo": "This session's exam is open",
+    "provaNivelamento": "placement",
+    "provaNivelamentoTitulo": "Available now as a placement test: pass it and the whole area is skipped",
     "provaTrancadaTitulo": "The exam opens once every stage of the session is cleared",
     "provaVencida": "exam passed",
     "revisao": "Today's review",

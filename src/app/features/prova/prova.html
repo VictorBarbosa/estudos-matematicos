@@ -4,6 +4,9 @@
     <p class="descricao">
       {{ texto('subtitulo', { tolerados: errosTolerados(), total: questoes().length }) }}
     </p>
+    @if (nivelamento()) {
+      <p class="aviso-nivelamento">{{ texto('nivelamentoAviso') }}</p>
+    }
   </header>
 
   @switch (fase()) {
@@ -139,8 +142,12 @@
     @case ('reprovado') {
       <section class="painel resultado reprovado" role="alert">
         <h2>{{ texto('reprovadoTitulo') }}</h2>
-        <p>{{ texto('reprovadoResumo', { sessao: titulo() }) }}</p>
-        <p class="observacao">{{ texto('reprovadoPorque') }}</p>
+        @if (nivelamento()) {
+          <p>{{ texto('nivelamentoReprovado', { sessao: titulo() }) }}</p>
+        } @else {
+          <p>{{ texto('reprovadoResumo', { sessao: titulo() }) }}</p>
+          <p class="observacao">{{ texto('reprovadoPorque') }}</p>
+        }
         @if (recomeco(); as rota) {
           <a class="avancar" [routerLink]="rota">
             {{ texto('recomecar') }}

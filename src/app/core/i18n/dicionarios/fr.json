@@ -940,6 +940,8 @@
     "prova": "Examen final",
     "provaAberta": "ouvert",
     "provaDisponivelTitulo": "L’examen de cette session est ouvert",
+    "provaNivelamento": "niveau",
+    "provaNivelamentoTitulo": "Possible maintenant comme test de niveau : en réussissant, tout le domaine est validé",
     "provaTrancadaTitulo": "L’examen s’ouvre quand toutes les étapes de la session sont réussies",
     "provaVencida": "examen réussi",
     "revisao": "Révision du jour",

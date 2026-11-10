@@ -55,9 +55,11 @@ describe('ProvaService', () => {
     prova = TestBed.inject(ProvaService);
   });
 
-  it('começa com toda prova trancada', () => {
+  it('começa com a primeira prova em nivelamento e as demais trancadas', () => {
     for (const sessao of SESSOES) {
-      expect(prova.estadoDe(sessao.id), sessao.id).toBe('trancada');
+      expect(prova.estadoDe(sessao.id), sessao.id).toBe(
+        sessao.id === prova.sessoes()[0]!.id ? 'nivelamento' : 'trancada',
+      );
     }
 
     expect(prova.pendente()).toBeNull();
@@ -69,7 +71,7 @@ describe('ProvaService', () => {
     for (const topicoId of topicos.slice(0, -1)) {
       vencer(progresso, topicoId);
     }
-    expect(prova.estadoDe(primeira.id)).toBe('trancada');
+    expect(prova.estadoDe(primeira.id)).toBe('nivelamento');
 
     vencer(progresso, topicos.at(-1)!);
     expect(prova.estadoDe(primeira.id)).toBe('disponivel');
@@ -115,7 +117,7 @@ describe('ProvaService', () => {
 
     // O que estava fora da sessão continua onde estava.
     expect(progresso.historicoDe(daSegunda).length).toBeGreaterThan(0);
-    expect(prova.estadoDe(primeira.id)).toBe('trancada');
+    expect(prova.estadoDe(primeira.id)).toBe('nivelamento');
   });
 
   it('reprovar apaga também a cobertura por tipo da sessão', () => {

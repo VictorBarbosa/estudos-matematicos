@@ -276,6 +276,8 @@ export const CHAVES_USADAS: readonly (readonly [string, string])[] = [
   ['sidebar.prova', 'layout/sidebar/sidebar.html'],
   ['sidebar.provaAberta', 'layout/sidebar/sidebar.html'],
   ['sidebar.provaDisponivelTitulo', 'layout/sidebar/sidebar.html'],
+  ['sidebar.provaNivelamento', 'layout/sidebar/sidebar.html'],
+  ['sidebar.provaNivelamentoTitulo', 'layout/sidebar/sidebar.html'],
   ['sidebar.provaTrancadaTitulo', 'layout/sidebar/sidebar.html'],
   ['sidebar.provaVencida', 'layout/sidebar/sidebar.html'],
   ['sidebar.revisao', 'features/home/home.html'],

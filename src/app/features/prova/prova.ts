@@ -108,6 +108,8 @@ export class Prova {
    * nada.
    */
   protected readonly perdida = signal(false);
+  /** A prova está sendo feita como teste de nivelamento (etapas ainda não vencidas). */
+  protected readonly nivelamento = signal(false);
   protected readonly resposta = signal('');
   protected readonly validacao = signal<Validacao | null>(null);
 
@@ -216,8 +218,11 @@ export class Prova {
     this.erros.set(erros);
 
     if (reprovou(erros, this.errosTolerados())) {
-      // Grava na hora: recarregar a página não escapa daqui.
-      this.provas.reprovar(this.sessaoId);
+      // Grava na hora: recarregar a página não escapa daqui. No nivelamento
+      // não há o que zerar — as etapas ainda nem foram vencidas.
+      if (!this.nivelamento()) {
+        this.provas.reprovar(this.sessaoId);
+      }
       this.perdida.set(true);
     }
   }
@@ -262,10 +267,11 @@ export class Prova {
       return;
     }
 
-    if (!this.provas.estaDisponivel(this.sessaoId)) {
+    if (!this.provas.estaDisponivel(this.sessaoId) && !this.provas.emNivelamento(this.sessaoId)) {
       this.fase.set('trancada');
       return;
     }
+    this.nivelamento.set(this.provas.emNivelamento(this.sessaoId));
 
     const plano = planoDaProva(this.sessao, this.configuracao.prova());
     const rng = criarRng(sementeAleatoria());

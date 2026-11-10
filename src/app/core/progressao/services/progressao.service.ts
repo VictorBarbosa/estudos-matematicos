@@ -59,15 +59,22 @@ export class ProgressaoService {
   readonly totalDeEtapas = computed(() => this.trilha().length);
   readonly modoLivre = this.livre.asReadonly();
 
-  /** Tópicos já vencidos, em qualquer ordem. */
+  /**
+   * Tópicos já vencidos, em qualquer ordem.
+   *
+   * Um tópico conta como vencido também quando a prova da área dele foi
+   * passada — é o que faz o teste de nivelamento pular a área inteira.
+   */
   readonly concluidas = computed(() => {
     const historicos = this.progresso.porHistorico();
     const conceitos = this.progresso.porConceito();
+    const provasVencidas = this.prova.vencidas();
 
     return new Set(
       this.trilha()
         .filter(
           (etapa) =>
+            provasVencidas.has(etapa.areaId) ||
             dominioDe(
               historicos[etapa.topicoId] ?? [],
               etapa.topicoId,
