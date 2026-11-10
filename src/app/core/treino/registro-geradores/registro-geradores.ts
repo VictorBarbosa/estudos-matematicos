@@ -250,6 +250,10 @@ export const CARREGAR_GERADOR: Readonly<Record<string, () => Promise<GeradorExer
       import('@features/funcoes/conceito-funcao/conceito-funcao.gerador').then(
         (m) => m.geradorConceito,
       ),
+    'equacoes-exponenciais': () =>
+      import('@features/funcoes/equacoes-exponenciais/equacoes-exponenciais.gerador').then(
+        (m) => m.geradorEquacoesExponenciais,
+      ),
     'funcao-afim': () =>
       import('@features/funcoes/funcao-afim/funcao-afim.gerador').then((m) => m.geradorAfim),
     'funcao-exponencial': () =>

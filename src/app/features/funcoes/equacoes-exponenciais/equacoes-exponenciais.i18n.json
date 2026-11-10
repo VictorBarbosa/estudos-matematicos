@@ -1,0 +1,30 @@
+{
+  "dicaBase": {
+    "pt": "A base da potência bˣ.",
+    "fr": "La base de la puissance bˣ.",
+    "en": "The base of the power bˣ."
+  },
+  "valorK": { "pt": "Lado direito (c)", "fr": "Membre de droite (c)", "en": "Right side (c)" },
+  "curvaPotencia": { "pt": "y = bˣ", "fr": "y = bˣ", "en": "y = bˣ" },
+  "curvaReta": { "pt": "y = c", "fr": "y = c", "en": "y = c" },
+  "ondeCruzam": {
+    "pt": "Onde a curva encontra a reta",
+    "fr": "Où la courbe rencontre la droite",
+    "en": "Where the curve meets the line"
+  },
+  "descricaoGrafico": {
+    "pt": "A curva y = {base}ˣ e a reta y = {c}; elas se cruzam em x = {x}.",
+    "fr": "La courbe y = {base}ˣ et la droite y = {c} ; elles se croisent en x = {x}.",
+    "en": "The curve y = {base}ˣ and the line y = {c}; they cross at x = {x}."
+  },
+  "leitura": {
+    "pt": "Resolver bˣ = c é achar onde a curva exponencial atinge a altura c. Se c é potência exata da base, x é inteiro (iguale as bases); senão, x = ln c / ln b. Com c ≤ 0 não há cruzamento: bˣ nunca é negativo nem zero.",
+    "fr": "Résoudre bˣ = c, c’est trouver où la courbe exponentielle atteint la hauteur c. Si c est une puissance exacte de la base, x est entier (égalez les bases) ; sinon, x = ln c / ln b. Avec c ≤ 0 il n’y a pas d’intersection : bˣ n’est jamais négatif ni nul.",
+    "en": "Solving bˣ = c means finding where the exponential curve reaches height c. If c is an exact power of the base, x is an integer (match the bases); otherwise x = ln c / ln b. With c ≤ 0 there is no crossing: bˣ is never negative or zero."
+  },
+  "semSolucao": {
+    "pt": "Sem solução: bˣ é sempre positivo.",
+    "fr": "Pas de solution : bˣ est toujours positif.",
+    "en": "No solution: bˣ is always positive."
+  }
+}

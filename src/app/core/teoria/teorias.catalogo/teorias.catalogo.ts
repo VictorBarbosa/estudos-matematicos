@@ -12,6 +12,7 @@ import { TEORIA_EQUACAO_2 as t_equacao_segundo_grau } from '@features/algebra/eq
 import { TEORIA_EXPRESSOES as t_expressoes_algebricas } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.teoria';
 import { TEORIA_FATORACAO as t_fatoracao } from '@features/algebra/fatoracao/fatoracao.teoria';
 import { TEORIA_INEQUACOES as t_inequacoes } from '@features/algebra/inequacoes/inequacoes.teoria';
+import { TEORIA_EQUACOES_EXPONENCIAIS as t_equacoes_exponenciais } from '@features/funcoes/equacoes-exponenciais/equacoes-exponenciais.teoria';
 import { TEORIA_INEQUACOES_SEGUNDO_GRAU as t_inequacoes_segundo_grau } from '@features/algebra/inequacoes-segundo-grau/inequacoes-segundo-grau.teoria';
 import { TEORIA_POLINOMIOS as t_polinomios } from '@features/algebra/polinomios/polinomios.teoria';
 import { TEORIA_PRODUTOS as t_produtos_notaveis } from '@features/algebra/produtos-notaveis/produtos-notaveis.teoria';
@@ -119,6 +120,7 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['fatoracao', t_fatoracao],
   ['inequacoes', t_inequacoes],
   ['inequacoes-segundo-grau', t_inequacoes_segundo_grau],
+  ['equacoes-exponenciais', t_equacoes_exponenciais],
   ['polinomios', t_polinomios],
   ['produtos-notaveis', t_produtos_notaveis],
   ['progressoes', t_progressoes],

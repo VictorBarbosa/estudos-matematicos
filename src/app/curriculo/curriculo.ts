@@ -246,7 +246,7 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       {
         titulo: 'OpenStax, *College Algebra 2e*',
         url: 'https://openstax.org/details/books/college-algebra-2e',
-        nota: 'Funções, transformações de gráficos, exponenciais e logaritmos — inclusive as equações exponenciais que faltam aqui.',
+        nota: 'Funções, transformações de gráficos, exponenciais e logaritmos, com as equações exponenciais.',
       },
     ],
     topicos: [
@@ -284,6 +284,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         id: 'funcao-logaritmica',
         titulo: 'Função logarítmica',
         descricao: 'Logaritmo como inverso da exponencial e suas propriedades.',
+        pronto: true,
+      },
+      {
+        id: 'equacoes-exponenciais',
+        titulo: 'Equações exponenciais',
+        descricao:
+          'Igualar as bases, tirar o logaritmo, trocar a potência por t e conferir o domínio.',
         pronto: true,
       },
       {

@@ -336,6 +336,10 @@
         "descricao": "A curva descrita pelo tempo: x(t) e y(t), e a trajetória que elas desenham.",
         "titulo": "Equações paramétricas"
       },
+      "equacoes-exponenciais": {
+        "descricao": "Igualar as bases, tirar o logaritmo, trocar a potência por t e conferir o domínio.",
+        "titulo": "Equações exponenciais"
+      },
       "equacoes-trigonometricas": {
         "descricao": "Arcsen, arccos e arctg, e as equações que têm mais de uma solução na volta.",
         "titulo": "Equações trigonométricas"

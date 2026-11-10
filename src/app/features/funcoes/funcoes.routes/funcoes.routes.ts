@@ -38,6 +38,14 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'equacoes-exponenciais',
+    title: 'Equações exponenciais · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/funcoes/equacoes-exponenciais/equacoes-exponenciais').then(
+        (m) => m.EquacoesExponenciais,
+      ),
+  },
+  {
     path: 'funcao-modular',
     title: 'Função modular · Estudos Matemáticos',
     loadComponent: () =>

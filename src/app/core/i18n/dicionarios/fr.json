@@ -336,6 +336,10 @@
         "descricao": "La courbe décrite par le temps : x(t) et y(t), et la trajectoire qu’elles dessinent.",
         "titulo": "Équations paramétriques"
       },
+      "equacoes-exponenciais": {
+        "descricao": "Égaler les bases, prendre le logarithme, poser t = aˣ et vérifier le domaine.",
+        "titulo": "Équations exponentielles"
+      },
       "equacoes-trigonometricas": {
         "descricao": "Arcsin, arccos et arctan, et les équations qui ont plus d’une solution sur un tour.",
         "titulo": "Équations trigonométriques"

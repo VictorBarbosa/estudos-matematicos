@@ -67,6 +67,7 @@ import t_trajetoria_balistica from '@features/fisica/trajetoria-balistica/trajet
 import t_transferencia_de_calor from '@features/fisica/transferencia-de-calor/transferencia-de-calor.i18n.json';
 import t_composicao_inversa from '@features/funcoes/composicao-inversa/composicao-inversa.i18n.json';
 import t_conceito_funcao from '@features/funcoes/conceito-funcao/conceito-funcao.i18n.json';
+import t_equacoes_exponenciais from '@features/funcoes/equacoes-exponenciais/equacoes-exponenciais.i18n.json';
 import t_funcao_afim from '@features/funcoes/funcao-afim/funcao-afim.i18n.json';
 import t_funcao_exponencial from '@features/funcoes/funcao-exponencial/funcao-exponencial.i18n.json';
 import t_funcao_logaritmica from '@features/funcoes/funcao-logaritmica/funcao-logaritmica.i18n.json';
@@ -175,6 +176,7 @@ export const TODOS_OS_TEXTOS: ReadonlyMap<string, TabelaDeTextos> = new Map([
   ['transferencia-de-calor', t_transferencia_de_calor as TabelaDeTextos],
   ['composicao-inversa', t_composicao_inversa as TabelaDeTextos],
   ['conceito-funcao', t_conceito_funcao as TabelaDeTextos],
+  ['equacoes-exponenciais', t_equacoes_exponenciais as TabelaDeTextos],
   ['funcao-afim', t_funcao_afim as TabelaDeTextos],
   ['funcao-exponencial', t_funcao_exponencial as TabelaDeTextos],
   ['funcao-logaritmica', t_funcao_logaritmica as TabelaDeTextos],

@@ -336,6 +336,10 @@
         "descricao": "The curve described by time: x(t) and y(t), and the path they trace.",
         "titulo": "Parametric equations"
       },
+      "equacoes-exponenciais": {
+        "descricao": "Matching bases, taking logarithms, substituting t = aˣ and checking the domain.",
+        "titulo": "Exponential equations"
+      },
       "equacoes-trigonometricas": {
         "descricao": "Arcsin, arccos and arctan, and the equations with more than one solution per turn.",
         "titulo": "Trigonometric equations"

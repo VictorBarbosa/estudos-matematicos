@@ -1,0 +1,37 @@
+<app-topico-layout topicoId="equacoes-exponenciais">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="base"
+        [rotulo]="i18n.t('explorar.base')"
+        [min]="2"
+        [max]="10"
+        [dica]="texto('dicaBase')"
+      />
+      <app-controle-parametro [(valor)]="c" [rotulo]="texto('valorK')" [min]="-4" [max]="100" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="equacaoTex()" [bloco]="true" />
+      <app-formula [tex]="solucaoTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>{{ texto('ondeCruzam') }}</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [curvas]="curvas()"
+        [pontos]="pontos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">{{ solucao() === null ? texto('semSolucao') : texto('leitura') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

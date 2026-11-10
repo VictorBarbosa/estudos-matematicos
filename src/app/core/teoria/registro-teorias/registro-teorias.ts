@@ -139,6 +139,10 @@ export const TITULO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'exp-log.logaritmo-de-base': 'Logaritmo de base qualquer',
   'exp-log.potencia-no-logaritmo': 'Simplificar antes de derivar',
   'exp-log.produto': 'Potência vezes exponencial',
+  'expeq.dominio': 'Equação logarítmica e o domínio',
+  'expeq.logaritmo': 'Tirar o logaritmo dos dois lados',
+  'expeq.mesma-base': 'Igualar as bases',
+  'expeq.substituicao': 'Trocar a potência por t',
   'exponencial.assintota': 'A assíntota horizontal',
   'exponencial.crescimento': 'Crescimento e decaimento',
   'exponencial.definicao': 'A variável no expoente',
@@ -560,6 +564,10 @@ export const TOPICO_DO_CONCEITO: Readonly<Record<string, string>> = {
   'exp-log.logaritmo-de-base': 'derivadas-exponencial-logaritmo',
   'exp-log.potencia-no-logaritmo': 'derivadas-exponencial-logaritmo',
   'exp-log.produto': 'derivadas-exponencial-logaritmo',
+  'expeq.dominio': 'equacoes-exponenciais',
+  'expeq.logaritmo': 'equacoes-exponenciais',
+  'expeq.mesma-base': 'equacoes-exponenciais',
+  'expeq.substituicao': 'equacoes-exponenciais',
   'exponencial.assintota': 'funcao-exponencial',
   'exponencial.crescimento': 'funcao-exponencial',
   'exponencial.definicao': 'funcao-exponencial',
@@ -1091,6 +1099,10 @@ export const CARREGAR_TEORIA_DO_TOPICO: Readonly<Record<string, () => Promise<re
     'conceito-funcao': () =>
       import('@features/funcoes/conceito-funcao/conceito-funcao.teoria').then(
         (m) => m.TEORIA_CONCEITO,
+      ),
+    'equacoes-exponenciais': () =>
+      import('@features/funcoes/equacoes-exponenciais/equacoes-exponenciais.teoria').then(
+        (m) => m.TEORIA_EQUACOES_EXPONENCIAIS,
       ),
     'funcao-afim': () =>
       import('@features/funcoes/funcao-afim/funcao-afim.teoria').then((m) => m.TEORIA_AFIM),
