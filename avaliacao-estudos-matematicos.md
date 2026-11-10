@@ -83,10 +83,10 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] Os cinco tópicos do plano
 - [x] Unidades em todos os enunciados; ângulos desenhados com arco e medida; resoluções com a potência do raio à vista (`core/math/geometria/espacial/espacial.ts`)
 - [x] Variedade: semelhança e círculo subiram de 5 para 9 formas; nenhum nível com uma pergunta só (guarda em `features/geometria/geometria-variedade.spec.ts`)
-- [ ] **Congruência de triângulos** — prometida em `curriculo.ts:206`, inexistente no código
-- [ ] Quadriláteros e polígonos (classificação e propriedades) — antes de áreas
-- [ ] Poliedros e relação de Euler — antes de sólidos
-- [ ] Teoria de `angulos-e-triangulos` tem só 2 verbetes para 4 tipos de pergunta: faltam ângulo interno/externo do polígono regular e classificação de triângulos
+- [x] **Congruência de triângulos** — em `angulos-e-triangulos` (10/11): lado e ângulo correspondentes, inclusive por equação; verbete com LAL, ALA, LLL, LAAₒ
+- [x] Quadriláteros e polígonos — em `angulos-e-triangulos` (10/11): quarto ângulo, paralelogramo, trapézio isósceles, losango, diagonais pelo ângulo externo ou interno
+- [x] Poliedros e relação de Euler — tópico novo `poliedros` antes de sólidos (10/11), com os cinco de Platão, prismas e pirâmides em 3D
+- [x] Teoria de `angulos-e-triangulos` ganhou 4 verbetes: congruência, classificação de triângulos, polígono regular e quadriláteros (10/11)
 - [x] Explorar de `solidos-e-volumes` desenha o sólido em 3D girável, com r, h e g marcados (09/11). Antes: único painel da área sem figura
 
 ### 3.4 Funções — sólida (conteúdo) · aceitável (treino)
@@ -210,7 +210,7 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] 16–17. Erros de conteúdo da área entre curvas e dos anagramas
 - [x] 18. Determinante: reconferido em 09/11 — a teoria já distingue 2×2 (proporcionais) de 3×3 (dependência linear)
 - [x] 19. Bernoulli com hipóteses
-- [ ] **◐** 20. Descrições que prometem o que não existe: taxas relacionadas e frações parciais foram feitas; **congruência** (`curriculo.ts:206`) e **convergência** (`:757`) continuam prometidas e ausentes
+- [x] 20. Descrições que prometem o que não existe: taxas relacionadas, frações parciais, **congruência** e **convergência** — todas entregues (a última em 10/11)
 - [x] 21. `\;` com barra única: das 5 linhas restantes, só 1 era erro real (`sistema-linear.ts:239`), corrigida em 09/11; as outras 4 eram comentário ou teste
 
 ### 4.2 O que este comitê encontrou e já está feito (sessões de 06 a 09/11)
@@ -290,8 +290,10 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 ### Fase 3 — Conteúdo novo de cobertura (meses)
 
+**Feita em 10/11/2026** — 6 tópicos novos (equações exponenciais, binômio de Newton, coordenadas polares, poliedros, teoremas integrais) mais a refundação de séries e a ampliação de ângulos e triângulos. O site passou a ter 109 tópicos.
+
 - [x] Refundar `sequencias-e-series` como testes de convergência; séries de potências (10/11)
-- [ ] Geometria: congruência, quadriláteros, poliedros e Euler
+- [x] Geometria: congruência, quadriláteros, poliedros e Euler (10/11)
 - [x] Geometria analítica: coordenadas polares (10/11)
 - [x] Combinatória: binômio de Newton (10/11)
 - [x] Cálculo 3: integrais de superfície e teoremas (10/11)
