@@ -32,7 +32,16 @@ const AMOSTRA = 600;
 /** Tópico → formas distintas no Fácil, no Médio, no Difícil e no Extremo. */
 const PISO: Readonly<Record<string, readonly [number, number, number, number]>> = {
   'analise-combinatoria': [2, 11, 11, 10],
-  'analise-dimensional': [194, 189, 207, 293],
+  /*
+   * O Difícil era 207 e passou a 200 em 10/11/2026 — não por queda de conteúdo.
+   *
+   * O gerador embaralhava as opções com `sort(() => rng.inteiro(-1, 1))`, e o
+   * `sort` consome o RNG um número de vezes que muda com a versão do Node: a
+   * mesma semente gerava 207 formas aqui (Node 26) e 205 no runner (Node 22).
+   * Trocado por `rng.embaralhar`, o fluxo ficou fixo — e o número passou a ser
+   * um só, 200, em qualquer motor. Guarda: `scripts/verificar-geradores.mjs`.
+   */
+  'analise-dimensional': [194, 189, 200, 293],
   'angulos-e-triangulos': [15, 25, 19, 12],
   'aplicacoes-da-derivada': [2, 9, 11, 8],
   'aplicacoes-da-integral': [2, 3, 2, 1],

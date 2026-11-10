@@ -47,6 +47,12 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
+      # Aleatoriedade fora do RNG semeado quebra a reprodutibilidade entre
+      # versões do Node — foi o que fez a contagem de formas de um tópico dar
+      # 207 numa máquina e 205 na outra. O guarda roda antes dos testes.
+      - name: Conferir os geradores
+        run: npm run verificar:geradores
+
       # O site só vai ao ar se a suíte passar.
       - name: Rodar os testes
         run: npm test -- --watch=false

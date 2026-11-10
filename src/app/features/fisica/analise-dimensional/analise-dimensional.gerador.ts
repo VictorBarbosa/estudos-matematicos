@@ -162,7 +162,20 @@ function exercicioConsistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
   ];
 
   const periodo = { M: 0, L: 0, T: 1 };
-  const embaralhadas = [...candidatas].sort(() => rng.inteiro(-1, 1));
+  /*
+   * O embaralhamento é o do RNG, não `sort` com comparador aleatório.
+   *
+   * `.sort(() => rng.inteiro(-1, 1))` parece sortear, mas não sorteia: o
+   * `sort` do V8 chama o comparador um número de vezes que depende da
+   * implementação e do tamanho do array. As opções saíam embaralhadas, sim —
+   * e o fluxo do RNG era consumido por um caminho que muda entre versões do
+   * Node. O mesmo exercício deixava de ser reproduzível de uma máquina para
+   * outra, e a contagem de formas do tópico oscilava (207 aqui, 205 no runner).
+   *
+   * Fisher-Yates consome exatamente `n − 1` números, sempre, o que é o que
+   * torna a semente uma promessa e não uma esperança.
+   */
+  const embaralhadas = rng.embaralhar(candidatas);
 
   const correta = embaralhadas.findIndex((candidata) =>
     dimensoesIguais(candidata.dimensao, periodo),
