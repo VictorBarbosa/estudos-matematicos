@@ -83,10 +83,10 @@ export class Optica {
     ];
   });
 
-  /** Proporção 1:1 para os ângulos desenhados serem os de verdade (o gráfico é ~2× mais largo). */
+  /** Quadrado; o gráfico usa `mesmaEscala` para os ângulos desenhados serem os de verdade. */
   protected readonly dominio = {
-    xMin: -2 * (RAIO + 0.5),
-    xMax: 2 * (RAIO + 0.5),
+    xMin: -(RAIO + 0.5),
+    xMax: RAIO + 0.5,
     yMin: -(RAIO + 0.5),
     yMax: RAIO + 0.5,
   };

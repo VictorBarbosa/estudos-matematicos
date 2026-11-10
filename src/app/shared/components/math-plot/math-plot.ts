@@ -58,6 +58,14 @@ export class MathPlot {
   readonly mostrarGrade = input(true);
   /** Altura em unidades do viewBox; a largura é sempre 800. */
   readonly altura = input(460);
+  /**
+   * Mesma escala nos dois eixos: uma unidade em x mede o mesmo que em y.
+   *
+   * Sem isto, um ângulo desenhado (raio refratado, ponto polar) aparece
+   * distorcido, porque o gráfico é bem mais largo que alto. O domínio pedido
+   * fica inteiro visível; o eixo com sobra é que se alarga, centrado.
+   */
+  readonly mesmaEscala = input(false);
 
   protected readonly LARGURA = LARGURA;
   protected readonly idClip = `plot-clip-${proximoId++}`;
@@ -72,7 +80,8 @@ export class MathPlot {
   protected readonly limites = computed(() => {
     const dominio = this.dominio();
     const { yMin, yMax } = deduzirLimitesVerticais(dominio, this.curvas(), this.pontos());
-    return { xMin: dominio.xMin, xMax: dominio.xMax, yMin, yMax };
+    const limites = { xMin: dominio.xMin, xMax: dominio.xMax, yMin, yMax };
+    return this.mesmaEscala() ? igualarEscalas(limites, this.margens(), this.altura()) : limites;
   });
 
   private readonly projecao = computed(
@@ -246,4 +255,25 @@ function construirPontaSeta(x1: number, y1: number, x2: number, y2: number): str
     `L${(baseX + px).toFixed(2)},${(baseY + py).toFixed(2)} ` +
     `L${(baseX - px).toFixed(2)},${(baseY - py).toFixed(2)} Z`
   );
+}
+
+/** Alarga o eixo que sobra para que uma unidade meça o mesmo em x e em y. */
+function igualarEscalas(
+  limites: { xMin: number; xMax: number; yMin: number; yMax: number },
+  margens: Margens,
+  altura: number,
+): { xMin: number; xMax: number; yMin: number; yMax: number } {
+  const larguraUtil = LARGURA - margens.esquerda - margens.direita;
+  const alturaUtil = altura - margens.topo - margens.baixo;
+  const porX = larguraUtil / (limites.xMax - limites.xMin);
+  const porY = alturaUtil / (limites.yMax - limites.yMin);
+  if (porX > porY) {
+    // x tem pixels de sobra: alargamos o intervalo de x.
+    const meia = larguraUtil / porY / 2;
+    const centro = (limites.xMin + limites.xMax) / 2;
+    return { ...limites, xMin: centro - meia, xMax: centro + meia };
+  }
+  const meia = alturaUtil / porX / 2;
+  const centro = (limites.yMin + limites.yMax) / 2;
+  return { ...limites, yMin: centro - meia, yMax: centro + meia };
 }

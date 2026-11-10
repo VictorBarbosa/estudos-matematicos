@@ -57,10 +57,9 @@ export class CoordenadasPolares {
   ]);
 
   protected readonly dominio = computed(() => {
-    // O gráfico é cerca de duas vezes mais largo que alto: o x ganha o dobro
-    // de alcance para a escala ficar 1:1 e o ângulo desenhado ser o de verdade.
+    // Quadrado; o gráfico usa `mesmaEscala` para o ângulo desenhado ser o de verdade.
     const m = Math.max(4, this.r() + 1);
-    return { xMin: -2 * m, xMax: 2 * m, yMin: -m, yMax: m };
+    return { xMin: -m, xMax: m, yMin: -m, yMax: m };
   });
 
   protected readonly descricaoGrafico = computed(() =>
