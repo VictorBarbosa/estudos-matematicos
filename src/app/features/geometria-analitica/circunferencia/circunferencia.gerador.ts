@@ -4,7 +4,12 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 
-type Pergunta = 'raio' | 'centro-x' | 'posicao';
+import {
+  exercicioRaioComCoeficiente,
+  exercicioTangente,
+} from '@features/geometria-analitica/circunferencia/circunferencia.tangente';
+
+type Pergunta = 'raio' | 'centro-x' | 'posicao' | 'tangente' | 'raio-coeficiente';
 
 /** Exercícios de circunferência, sempre com centro e raio inteiros. */
 export const geradorCircunferencia: GeradorExercicio<number> = {
@@ -13,6 +18,8 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
+    if (pergunta === 'tangente') return exercicioTangente(nivel, rng);
+    if (pergunta === 'raio-coeficiente') return exercicioRaioComCoeficiente(nivel, rng);
 
     const a = rng.inteiro(-6, 6);
     const b = rng.inteiro(-6, 6);
@@ -204,10 +211,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'medio':
       return rng.escolher<Pergunta>(['raio', 'centro-x', 'posicao']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['raio', 'posicao']);
-    // Posicionar um ponto exige comparar distância com raio, depois de
-    // completar quadrados para achar o centro.
+      return rng.escolher<Pergunta>(['raio', 'posicao', 'tangente']);
+    // Posicionar um ponto, a tangente pedindo o coeficiente linear e a equação
+    // com coeficiente em x² e y², que precisa ser dividida antes de completar.
     case 'extremo':
-      return 'posicao';
+      return rng.escolher<Pergunta>(['posicao', 'tangente', 'raio-coeficiente']);
   }
 }

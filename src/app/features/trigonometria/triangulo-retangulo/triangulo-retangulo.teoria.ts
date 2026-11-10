@@ -109,4 +109,44 @@ export const TEORIA_TRIANGULO: readonly Teoria[] = [
     },
     vejaTambem: ['triangulo.razoes', 'identidades.fundamental'],
   },
+  {
+    id: 'triangulo.elevacao',
+    titulo: 'Ângulo de elevação e alturas',
+    resumo: 'A altura é o cateto oposto, a distância no chão é o adjacente: tangente.',
+    definicao:
+      'Para medir a altura de algo que não se alcança, mede-se a distância até a base e o ângulo ' +
+      'com que se vê o topo (o ângulo de elevação). A altura é o cateto oposto, a distância é o ' +
+      'adjacente, e a razão que liga os dois é a tangente. Se o ângulo foi medido da altura dos ' +
+      'olhos, essa altura se soma no fim. Quando a distância até a base não é conhecida, duas ' +
+      'medidas de pontos diferentes dão duas equações.',
+    formulas: [
+      { tex: 'h = d \\cdot \\tan\\theta' },
+      {
+        tex: 'h = x\\tan\\beta = (x + d)\\tan\\alpha',
+        legenda: 'Duas visadas: x é a distância do ponto mais perto, d o quanto se andou.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'O topo, a base e o observador formam um triângulo retângulo na base.',
+        tex: '\\tan\\theta = \\frac{\\text{oposto}}{\\text{adjacente}} = \\frac{h}{d}',
+      },
+      { descricao: 'Isolando a altura.', tex: 'h = d\\tan\\theta' },
+    ],
+    exemplo: {
+      enunciado:
+        'A 40 m de um prédio, o topo é visto a 35° acima do horizonte, com os olhos a 1,6 m do chão.',
+      passos: [
+        {
+          descricao: 'A parte acima dos olhos.',
+          tex: '40 \\cdot \\tan 35^{\\circ} = 40 \\cdot 0{,}7002 = 28{,}01\\ \\text{m}',
+        },
+        {
+          descricao: 'Somando a altura dos olhos.',
+          tex: 'h = 28{,}01 + 1{,}6 = 29{,}61\\ \\text{m}',
+        },
+      ],
+    },
+    vejaTambem: ['triangulo.razoes', 'triangulo.notaveis'],
+  },
 ];

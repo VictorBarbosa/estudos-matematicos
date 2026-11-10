@@ -48,6 +48,14 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'retas-e-planos',
+    title: 'Retas e planos no espaço · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/vetores-matrizes/retas-e-planos/retas-e-planos').then(
+        (m) => m.RetasEPlanos,
+      ),
+  },
+  {
     path: 'numeros-complexos',
     title: 'Números complexos · Estudos Matemáticos',
     loadComponent: () =>

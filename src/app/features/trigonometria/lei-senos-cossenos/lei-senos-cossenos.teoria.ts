@@ -99,4 +99,44 @@ export const TEORIA_LEIS: readonly Teoria[] = [
     },
     vejaTambem: ['leis.cossenos', 'leis.senos'],
   },
+  {
+    id: 'leis.area',
+    titulo: 'Área por dois lados e o ângulo entre eles',
+    resumo: 'A = ½·a·b·sen C: a altura é b·sen C.',
+    definicao:
+      'A área de qualquer triângulo é metade da base vezes a altura. Tomando o lado a como base, ' +
+      'a altura relativa a ele é b·sen C, em que C é o ângulo entre a e b. Daí A = ½·a·b·sen C, ' +
+      'que dispensa medir a altura. Com ângulo reto, sen 90° = 1 e volta a fórmula do retângulo ' +
+      'pela metade; com ângulo obtuso, sen C = sen(180° − C) e a área continua positiva. Se só os ' +
+      'três lados são dados, a lei dos cossenos fornece C primeiro.',
+    formulas: [
+      { tex: 'A = \\tfrac{1}{2}\\,a\\,b\\,\\sin C' },
+      {
+        tex: '\\cos C = \\frac{a^{2} + b^{2} - c^{2}}{2ab}',
+        legenda: 'Quando só os lados são conhecidos.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao:
+          'Baixando a altura h sobre o lado a, ela é o cateto oposto a C no triângulo de hipotenusa b.',
+        tex: 'h = b\\sin C',
+      },
+      {
+        descricao: 'Metade da base vezes a altura.',
+        tex: 'A = \\tfrac{1}{2}\\,a\\,h = \\tfrac{1}{2}\\,a\\,b\\,\\sin C',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Lados de 8 cm e 5 cm, com 120° entre eles.',
+      passos: [
+        { descricao: 'sen 120° = sen 60°.', tex: '\\sin 120^{\\circ} = 0{,}8660' },
+        {
+          descricao: 'A área.',
+          tex: 'A = \\tfrac{1}{2} \\cdot 8 \\cdot 5 \\cdot 0{,}8660 = 17{,}32\\ \\text{cm}^{2}',
+        },
+      ],
+    },
+    vejaTambem: ['leis.cossenos', 'leis.senos'],
+  },
 ];

@@ -103,7 +103,7 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: '|v| = √(vₓ² + v_y²): eleve cada componente ao quadrado, some e tire a raiz.',
+    dica: `O módulo é a hipotenusa das componentes: (${x}) ao quadrado mais (${y}) ao quadrado, e a raiz da soma.`,
   };
 }
 
@@ -258,7 +258,7 @@ function exercicioDirecao(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
       ],
     },
-    conceitos: ['vetores.definicao'],
+    conceitos: ['vetores.direcao', 'vetores.definicao'],
     armadilhas: semColisoes(
       [
         {
@@ -267,14 +267,14 @@ function exercicioDirecao(nivel: Nivel, rng: Rng): Exercicio<number> {
             'Esse é o resultado cru do arco-tangente, que sempre cai entre −90° e 90°. É ' +
             'preciso corrigir pelo quadrante, olhando os sinais das componentes.',
           passo: 1,
-          conceito: 'vetores.definicao',
+          conceito: 'vetores.direcao',
         },
         {
           resposta: (Math.atan(x / y) * 180) / Math.PI,
           diagnostico:
             'A razão está invertida: a tangente é a componente VERTICAL sobre a horizontal.',
           passo: 0,
-          conceito: 'vetores.definicao',
+          conceito: 'vetores.direcao',
         },
       ],
       resultado,

@@ -3,6 +3,8 @@ import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
+import { exercicioArea } from '@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.area';
+
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
 
 /** Exercícios das leis dos senos e dos cossenos. */
@@ -11,6 +13,12 @@ export const geradorLeis: GeradorExercicio<number> = {
   formatoResposta: 'um número com até 2 casas, ex.: 6,24',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
+    // A área por ½·a·b·sen C entra em todos os níveis, um terço das vezes; no
+    // Extremo, a partir dos três lados.
+    if (rng.inteiro(0, 2) === 0) {
+      return exercicioArea(nivel, rng);
+    }
+
     // No Extremo entra a lei dos cossenos de trás para a frente: os três lados
     // dados, o maior ângulo pedido.
     if (nivel === 'extremo' && rng.booleano()) {

@@ -444,6 +444,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'retas-e-planos',
+        titulo: 'Retas e planos no espaço',
+        descricao:
+          'Equação do plano, distância de ponto a plano, ângulos e independência linear pelo determinante.',
+        pronto: true,
+      },
+      {
         id: 'numeros-complexos',
         titulo: 'Números complexos',
         descricao: 'O plano de Argand-Gauss, forma polar e multiplicação como rotação.',

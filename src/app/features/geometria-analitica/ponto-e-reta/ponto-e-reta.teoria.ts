@@ -163,4 +163,41 @@ export const TEORIA_PONTO_RETA: readonly Teoria[] = [
     },
     vejaTambem: ['ponto-reta.distancia', 'ponto-reta.posicoes'],
   },
+  {
+    id: 'ponto-reta.intersecao',
+    titulo: 'Interseção de duas retas',
+    resumo: 'O ponto comum resolve as duas equações ao mesmo tempo.',
+    definicao:
+      'Duas retas com inclinações diferentes se cruzam em exatamente um ponto, que satisfaz as ' +
+      'duas equações. Na forma reduzida, iguala-se os dois y; na forma geral, resolve-se o ' +
+      'sistema (eliminação ou Cramer). Se as inclinações forem iguais, as retas são paralelas ' +
+      '(nenhum ponto) ou a mesma reta (todos).',
+    formulas: [
+      { tex: 'm_1 x + q_1 = m_2 x + q_2 \\;\\Rightarrow\\; x = \\frac{q_2 - q_1}{m_1 - m_2}' },
+      {
+        tex: 'x = \\frac{c_1 b_2 - c_2 b_1}{a_1 b_2 - a_2 b_1} \\qquad y = \\frac{a_1 c_2 - a_2 c_1}{a_1 b_2 - a_2 b_1}',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'No ponto comum, o mesmo x dá o mesmo y nas duas retas.',
+        tex: 'y = m_1 x + q_1 = m_2 x + q_2',
+      },
+      {
+        descricao: 'Com m₁ ≠ m₂, a equação em x tem uma única solução.',
+        tex: '(m_1 - m_2)\\,x = q_2 - q_1',
+      },
+    ],
+    exemplo: {
+      enunciado: 'r: y = 2x − 1 e s: y = −x + 5.',
+      passos: [
+        {
+          descricao: 'Igualando.',
+          tex: '2x - 1 = -x + 5 \\;\\Rightarrow\\; 3x = 6 \\;\\Rightarrow\\; x = 2',
+        },
+        { descricao: 'Substituindo em r.', tex: 'y = 2 \\cdot 2 - 1 = 3 \\qquad P = (2,\\; 3)' },
+      ],
+    },
+    vejaTambem: ['ponto-reta.equacao', 'sistemas.intersecao'],
+  },
 ];

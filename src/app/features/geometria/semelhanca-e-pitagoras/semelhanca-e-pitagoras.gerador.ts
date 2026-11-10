@@ -117,7 +117,10 @@ function exercicioHipotenusa(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'a² = b² + c²' : undefined,
+    dica:
+      nivel === 'facil'
+        ? `A hipotenusa ao quadrado é a soma dos catetos ao quadrado: ${b}² + ${c}² = ${b * b} + ${c * c}. Depois tire a raiz.`
+        : undefined,
   };
 }
 
@@ -158,7 +161,10 @@ function exercicioCateto(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'c² = a² − b²' : undefined,
+    dica:
+      nivel === 'facil'
+        ? `O cateto ao quadrado é a hipotenusa ao quadrado menos o outro cateto ao quadrado: ${a}² − ${conhecido}². Depois tire a raiz.`
+        : undefined,
   };
 }
 

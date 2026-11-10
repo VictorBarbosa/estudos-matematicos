@@ -102,7 +102,7 @@ function exercicioComprimento(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'C = 2πr' : undefined,
+    dica: nivel === 'facil' ? `O comprimento é 2·π·r: aqui, 2·π·${raio}.` : undefined,
   };
 }
 
@@ -137,7 +137,10 @@ function exercicioAreaCirculo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'A = πr²' : undefined,
+    dica:
+      nivel === 'facil'
+        ? `A área é π vezes o raio AO QUADRADO: π·${raio}², ou seja, π·${raio * raio}.`
+        : undefined,
   };
 }
 
@@ -290,7 +293,10 @@ function exercicioPoligono(nivel: Nivel, rng: Rng): Exercicio<number> {
       proximos,
     ),
     // O polígono estreia no Difícil; no Fácil esta dica nunca aparecia.
-    dica: nivel === 'dificil' ? 'A = p·a/2, com p = n·ℓ.' : undefined,
+    dica:
+      nivel === 'dificil'
+        ? `A área é o perímetro vezes o apótema, dividido por 2. O perímetro é ${lados} lados de ${base}.`
+        : undefined,
   };
 }
 
@@ -357,7 +363,10 @@ function exercicioArco(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'O arco é 2πr vezes θ/360.' : undefined,
+    dica:
+      nivel === 'facil'
+        ? `O arco é a fração ${anguloGraus}/360 da volta inteira, que mede 2·π·${raio}.`
+        : undefined,
   };
 }
 
@@ -427,7 +436,10 @@ function exercicioCoroa(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'dificil' ? 'Área da coroa = πR² − πr².' : undefined,
+    dica:
+      nivel === 'dificil'
+        ? `A coroa é o círculo grande menos o pequeno: π·${maior}² − π·${menor}².`
+        : undefined,
   };
 }
 

@@ -137,3 +137,65 @@ describe('geradorPontoReta — distância a reta e perpendicular', () => {
     }
   });
 });
+
+describe('geradorPontoReta — reta por dois pontos e interseção', () => {
+  const rng = criarRng(8282);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorPontoReta.gerar(nivel, rng));
+
+  /** Lê «y = 2x - 3», «y = -x», «y = x + 4» (coeficientes inteiros). */
+  function reduzida(tex: string): [number, number] {
+    const m = /y = (-?\d*)x(?: ([+-]) (\d+))?/.exec(tex)!;
+    const a = m[1] === '' ? 1 : m[1] === '-' ? -1 : Number(m[1]);
+    const q = m[2] ? (m[2] === '-' ? -1 : 1) * Number(m[3]) : 0;
+    return [a, q];
+  }
+
+  /** Lê «2x - 3y = 5». */
+  function geral(tex: string): [number, number, number] {
+    const m = /(-?\d*)x ([+-]) (\d*)y = (-?\d+)/.exec(tex)!;
+    const a = m[1] === '' ? 1 : m[1] === '-' ? -1 : Number(m[1]);
+    const b = (m[2] === '-' ? -1 : 1) * (m[3] === '' ? 1 : Number(m[3]));
+    return [a, b, Number(m[4])];
+  }
+
+  it('o q da reta por dois pontos faz a reta passar pelos dois', () => {
+    const casos = [...lote('medio'), ...lote('dificil')].filter((e) =>
+      e.id.startsWith('ponto-reta-dois'),
+    );
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, x1, y1, x2, y2] = /A\((-?\d+), (-?\d+)\) e B\((-?\d+), (-?\d+)\)/
+        .exec(e.enunciado)!
+        .map(Number);
+      const m = (y2! - y1!) / (x2! - x1!);
+      expect(m * x1! + e.gabarito).toBeCloseTo(y1!, 9);
+      expect(m * x2! + e.gabarito).toBeCloseTo(y2!, 9);
+    }
+  });
+
+  it('o ponto de interseção está nas duas retas', () => {
+    const casos = [...lote('medio'), ...lote('dificil'), ...lote('extremo')].filter((e) =>
+      e.conceitos.includes('ponto-reta.intersecao'),
+    );
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [texR, texS] = e.enunciadoTex.split('\\qquad');
+      const pedeX = e.enunciado.includes('coordenada x');
+      if (e.id.includes('-geral-')) {
+        const [a1, b1, c1] = geral(texR!);
+        const [a2, b2, c2] = geral(texS!);
+        const det = a1 * b2 - a2 * b1;
+        const x = (c1 * b2 - c2 * b1) / det;
+        const y = (a1 * c2 - a2 * c1) / det;
+        expect(e.gabarito).toBeCloseTo(pedeX ? x : y, 9);
+        expect(a1 * x + b1 * y).toBeCloseTo(c1, 9);
+      } else {
+        const [m1, q1] = reduzida(texR!);
+        const [m2, q2] = reduzida(texS!);
+        const x = (q2 - q1) / (m1 - m2);
+        expect(e.gabarito).toBeCloseTo(pedeX ? x : m1 * x + q1, 9);
+      }
+    }
+  });
+});

@@ -108,6 +108,7 @@ import { geradorLeis as g_lei_senos_cossenos } from '@features/trigonometria/lei
 import { geradorRazoes as g_seno_cosseno_tangente } from '@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.gerador';
 import { geradorTriangulo as g_triangulo_retangulo } from '@features/trigonometria/triangulo-retangulo/triangulo-retangulo.gerador';
 import { geradorMatrizes as g_matrizes_determinantes } from '@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.gerador';
+import { geradorRetasPlanos as g_retas_e_planos } from '@features/vetores-matrizes/retas-e-planos/retas-e-planos.gerador';
 import { geradorEscalonamento as g_escalonamento_e_inversa } from '@features/vetores-matrizes/escalonamento-e-inversa/escalonamento-e-inversa.gerador';
 import { geradorComplexos as g_numeros_complexos } from '@features/vetores-matrizes/numeros-complexos/numeros-complexos.gerador';
 import { geradorProdutos as g_produto_escalar_vetorial } from '@features/vetores-matrizes/produto-escalar-vetorial/produto-escalar-vetorial.gerador';
@@ -234,6 +235,7 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['triangulo-retangulo', g_triangulo_retangulo],
   ['matrizes-determinantes', g_matrizes_determinantes],
   ['escalonamento-e-inversa', g_escalonamento_e_inversa],
+  ['retas-e-planos', g_retas_e_planos],
   ['numeros-complexos', g_numeros_complexos],
   ['produto-escalar-vetorial', g_produto_escalar_vetorial],
   ['vetores-no-plano', g_vetores_no_plano],

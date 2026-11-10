@@ -76,4 +76,44 @@ export const TEORIA_VETORES: readonly Teoria[] = [
     },
     vejaTambem: ['vetores.definicao', 'angulos.triangulo'],
   },
+  {
+    id: 'vetores.direcao',
+    titulo: 'A direção de um vetor',
+    resumo: 'θ = arctg(v_y / vₓ), corrigido pelo quadrante.',
+    definicao:
+      'A direção de um vetor é o ângulo θ que ele faz com o eixo x positivo, medido no sentido ' +
+      'anti-horário. A tangente desse ângulo é v_y / vₓ, mas a calculadora devolve arctg só entre ' +
+      '−90° e 90°: vetores apontando para a esquerda (vₓ < 0) precisam de 180° a mais, e os do 4º ' +
+      'quadrante, de 360° para ficar entre 0° e 360°.',
+    formulas: [
+      { tex: '\\tan\\theta = \\frac{v_y}{v_x}' },
+      {
+        tex: '\\theta = \\arctan\\frac{v_y}{v_x} + \\begin{cases} 0^{\\circ} & \\text{1º quadrante} \\\\ 180^{\\circ} & \\text{2º e 3º} \\\\ 360^{\\circ} & \\text{4º} \\end{cases}',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'As componentes são os catetos do triângulo cujo ângulo na origem é θ.',
+        tex: 'v_x = |\\vec{v}|\\cos\\theta \\qquad v_y = |\\vec{v}|\\sin\\theta',
+      },
+      {
+        descricao: 'Dividindo, o módulo some e sobra a tangente — que não distingue θ de θ + 180°.',
+        tex: '\\frac{v_y}{v_x} = \\tan\\theta = \\tan(\\theta + 180^{\\circ})',
+      },
+    ],
+    exemplo: {
+      enunciado: 'A direção de v = (−4, 3).',
+      passos: [
+        {
+          descricao: 'arctg da razão.',
+          tex: '\\arctan\\left(\\frac{3}{-4}\\right) = -36{,}87^{\\circ}',
+        },
+        {
+          descricao: 'vₓ < 0 e v_y > 0: 2º quadrante, soma 180°.',
+          tex: '\\theta = 143{,}13^{\\circ}',
+        },
+      ],
+    },
+    vejaTambem: ['vetores.definicao', 'vetores.soma'],
+  },
 ];

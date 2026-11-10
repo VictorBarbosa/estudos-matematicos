@@ -100,4 +100,43 @@ export const TEORIA_CIRCUNFERENCIA: readonly Teoria[] = [
     },
     vejaTambem: ['circunferencia.definicao', 'ponto-reta.distancia'],
   },
+  {
+    id: 'circunferencia.tangente',
+    titulo: 'A reta tangente',
+    resumo: 'A tangente é perpendicular ao raio no ponto de contato.',
+    definicao:
+      'A reta tangente toca a circunferência num único ponto P, e ali ela faz ângulo reto com o ' +
+      'raio CP. Então a inclinação da tangente é a do raio invertida e com sinal trocado: se o ' +
+      'raio sobe dy enquanto avança dx, a tangente tem inclinação −dx/dy. Com a inclinação e o ' +
+      'ponto P, a reta fica determinada.',
+    formulas: [
+      {
+        tex: 'm_{CP} = \\frac{y_P - b}{x_P - a} \\qquad m_t = -\\frac{1}{m_{CP}} = -\\frac{x_P - a}{y_P - b}',
+      },
+      { tex: 'y - y_P = m_t\\,(x - x_P)' },
+    ],
+    demonstracao: [
+      {
+        descricao:
+          'Se a tangente não fosse perpendicular ao raio, haveria pontos dela mais perto de C que P — dentro do círculo.',
+        tex: 'CP \\perp t',
+      },
+      {
+        descricao: 'Retas perpendiculares têm inclinações de produto −1.',
+        tex: 'm_{CP} \\cdot m_t = -1',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Circunferência de centro (1, 2) e o ponto P(4, 6) sobre ela.',
+      passos: [
+        { descricao: 'Inclinação do raio.', tex: 'm_{CP} = \\frac{6 - 2}{4 - 1} = \\frac{4}{3}' },
+        { descricao: 'Da tangente.', tex: 'm_t = -\\frac{3}{4}' },
+        {
+          descricao: 'A reta.',
+          tex: 'y - 6 = -\\tfrac{3}{4}(x - 4) \\;\\Rightarrow\\; y = -\\tfrac{3}{4}x + 9',
+        },
+      ],
+    },
+    vejaTambem: ['circunferencia.geral', 'ponto-reta.posicoes'],
+  },
 ];

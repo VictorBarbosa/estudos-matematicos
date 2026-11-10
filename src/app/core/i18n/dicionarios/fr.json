@@ -618,6 +618,10 @@
         "descricao": "La droite qui passe au mieux par les points, et ce qu’elle explique.",
         "titulo": "Régression et corrélation"
       },
+      "retas-e-planos": {
+        "descricao": "Équation du plan, distance d’un point à un plan, angles et indépendance linéaire par le déterminant.",
+        "titulo": "Droites et plans dans l’espace"
+      },
       "semelhanca-e-pitagoras": {
         "descricao": "Rapport de similitude, théorème de Thalès et la démonstration de Pythagore.",
         "titulo": "Similitude et Pythagore"

@@ -1,0 +1,25 @@
+{
+  "normalA": { "pt": "Normal: a", "fr": "Normale : a", "en": "Normal: a" },
+  "normalB": { "pt": "Normal: b", "fr": "Normale : b", "en": "Normal: b" },
+  "normalC": { "pt": "Normal: c", "fr": "Normale : c", "en": "Normal: c" },
+  "termoD": { "pt": "Termo d", "fr": "Terme d", "en": "Constant d" },
+  "pontoX": { "pt": "Ponto P: x", "fr": "Point P : x", "en": "Point P: x" },
+  "pontoY": { "pt": "Ponto P: y", "fr": "Point P : y", "en": "Point P: y" },
+  "pontoZ": { "pt": "Ponto P: z", "fr": "Point P : z", "en": "Point P: z" },
+  "oPlano": {
+    "pt": "O plano, a normal e a distância de P",
+    "fr": "Le plan, la normale et la distance de P",
+    "en": "The plane, the normal and P’s distance"
+  },
+  "girar": { "pt": "Girar", "fr": "Tourner", "en": "Rotate" },
+  "descricaoVista": {
+    "pt": "Desenho em perspectiva de um pedaço do plano, do vetor normal e do segmento perpendicular de P até o plano, que mede {d}.",
+    "fr": "Dessin en perspective d’un morceau du plan, du vecteur normal et du segment perpendiculaire de P au plan, qui mesure {d}.",
+    "en": "Perspective drawing of a patch of the plane, the normal vector and the perpendicular segment from P to the plane, which measures {d}."
+  },
+  "leitura": {
+    "pt": "Os coeficientes a, b, c são a normal: mude-os e veja o plano girar. O tracejado é o caminho mais curto de P ao plano, paralelo à normal; mova P para dentro do plano e a distância vai a zero.",
+    "fr": "Les coefficients a, b, c sont la normale : changez-les et voyez le plan tourner. Les pointillés sont le chemin le plus court de P au plan, parallèle à la normale ; placez P dans le plan et la distance devient nulle.",
+    "en": "The coefficients a, b, c are the normal: change them and watch the plane turn. The dashed line is the shortest path from P to the plane, parallel to the normal; move P onto the plane and the distance drops to zero."
+  }
+}

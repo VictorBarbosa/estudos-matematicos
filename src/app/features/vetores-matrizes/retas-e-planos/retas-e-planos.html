@@ -1,0 +1,35 @@
+<app-topico-layout topicoId="retas-e-planos">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" [rotulo]="texto('normalA')" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="b" [rotulo]="texto('normalB')" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="c" [rotulo]="texto('normalC')" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="d" [rotulo]="texto('termoD')" [min]="-8" [max]="8" />
+      <app-controle-parametro [(valor)]="px" [rotulo]="texto('pontoX')" [min]="-4" [max]="4" />
+      <app-controle-parametro [(valor)]="py" [rotulo]="texto('pontoY')" [min]="-4" [max]="4" />
+      <app-controle-parametro [(valor)]="pz" [rotulo]="texto('pontoZ')" [min]="-4" [max]="4" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="planoTex()" [bloco]="true" />
+      <app-formula [tex]="distanciaTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>{{ texto('oPlano') }}</h2>
+      <app-vista-3d
+        [tracos]="tracos()"
+        [eixos]="5"
+        [descricao]="texto('descricaoVista', { d: formatar(distancia()) })"
+        [rotuloGiro]="texto('girar')"
+      />
+      <p class="observacao">{{ texto('leitura') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>
