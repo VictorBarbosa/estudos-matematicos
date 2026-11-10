@@ -110,6 +110,7 @@ import { geradorGradiente as g_gradiente_e_direcional } from '@features/calculo-
 import { geradorIntegraisMultiplas as g_integrais_multiplas } from '@features/calculo-3/integrais-multiplas/integrais-multiplas.gerador';
 import { geradorCoordenadasNoEspaco as g_coordenadas_no_espaco } from '@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.gerador';
 import { geradorIntegraisDeLinha as g_integrais_de_linha } from '@features/calculo-3/integrais-de-linha/integrais-de-linha.gerador';
+import { geradorTeoremasIntegrais as g_teoremas_integrais } from '@features/calculo-3/teoremas-integrais/teoremas-integrais.gerador';
 import { geradorEdoPrimeiraOrdem as g_edo_primeira_ordem } from '@features/calculo-4/edo-primeira-ordem/edo-primeira-ordem.gerador';
 import { geradorEdoSegundaOrdem as g_edo_segunda_ordem } from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.gerador';
 import { geradorAplicacoesDeEdo as g_aplicacoes_de_edo } from '@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.gerador';
@@ -225,6 +226,7 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['integrais-multiplas', g_integrais_multiplas],
   ['coordenadas-no-espaco', g_coordenadas_no_espaco],
   ['integrais-de-linha', g_integrais_de_linha],
+  ['teoremas-integrais', g_teoremas_integrais],
   ['edo-primeira-ordem', g_edo_primeira_ordem],
   ['edo-segunda-ordem', g_edo_segunda_ordem],
   ['aplicacoes-de-edo', g_aplicacoes_de_edo],

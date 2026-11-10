@@ -1,0 +1,32 @@
+<app-topico-layout topicoId="teoremas-integrais">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="alfa" [rotulo]="texto('alfa')" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="beta" [rotulo]="texto('beta')" [min]="-3" [max]="3" />
+      <app-controle-parametro [(valor)]="largura" [rotulo]="texto('largura')" [min]="1" [max]="5" />
+      <app-controle-parametro [(valor)]="altura" [rotulo]="texto('altura')" [min]="1" [max]="5" />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="campoTex()" [bloco]="true" />
+      <app-formula [tex]="comparacaoTex()" [bloco]="true" />
+    </section>
+
+    <section>
+      <h2>{{ texto('campoNoRetangulo') }}</h2>
+      <app-math-plot
+        [dominio]="dominio()"
+        [segmentos]="segmentos()"
+        [descricao]="descricaoGrafico()"
+        [altura]="380"
+      />
+      <p class="observacao">{{ texto('leitura') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

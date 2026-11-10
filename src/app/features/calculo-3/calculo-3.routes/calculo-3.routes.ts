@@ -37,5 +37,10 @@ export const rotas: Routes = [
     title: 'Integrais de linha · Estudos Matemáticos',
     loadComponent: () => import('@features/calculo-3/integrais-de-linha/integrais-de-linha').then((m) => m.IntegraisDeLinha),
   },
+  {
+    path: 'teoremas-integrais',
+    title: 'Superfície e teoremas · Estudos Matemáticos',
+    loadComponent: () => import('@features/calculo-3/teoremas-integrais/teoremas-integrais').then((m) => m.TeoremasIntegrais),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'funcoes-de-varias-variaveis' },
 ];
