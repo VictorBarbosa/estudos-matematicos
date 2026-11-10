@@ -77,6 +77,10 @@ export const geradorIndefinida: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? `Ache a primitiva com + C, substitua x = ${ponto} e iguale a ${condicao}; o que sobra é C.`
+            : undefined,
       };
     }
 
@@ -173,6 +177,10 @@ export const geradorIndefinida: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil'
+          ? 'O x³ da primitiva vem do x² do integrando: aumente o expoente para 3 e divida o coeficiente por 3.'
+          : undefined,
     };
   },
 

@@ -147,8 +147,9 @@ function doRetangulo(nivel: Nivel, rng: Rng, comoVolume: boolean): Exercicio<num
         conceito: 'multiplas.volume',
       },
     ],
+    // O volume só é sorteado do Médio em diante; a dica o acompanha na estreia.
     dica:
-      nivel === 'facil'
+      nivel === 'facil' || (nivel === 'medio' && comoVolume)
         ? 'Integre primeiro em x, tratando y como constante; depois integre o resultado em y.'
         : undefined,
   });
@@ -211,6 +212,10 @@ function daMedia(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'multiplas.valor-medio',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `Valor médio = integral dupla dividida pela área do retângulo, (${x1} − ${x0})·(${y1} − ${y0}).`
+        : undefined,
   });
 }
 

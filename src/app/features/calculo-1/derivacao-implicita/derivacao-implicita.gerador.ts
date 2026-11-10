@@ -312,6 +312,6 @@ function comoTangente(base: Exercicio<number>, rng: Rng): Exercicio<number> {
       gabarito,
       saoEquivalentes,
     ),
-    dica: undefined,
+    dica: `A inclinação da tangente é a derivada no ponto. A reta é y − ${y} = m(x − ${x}); em x = 0, y = ${y} − m·${x}.`,
   };
 }

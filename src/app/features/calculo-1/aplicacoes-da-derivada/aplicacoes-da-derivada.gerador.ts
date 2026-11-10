@@ -181,6 +181,10 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? `Os pontos críticos são ±${k}. A segunda derivada é 6x: onde ela é negativa está o máximo — substitua esse x em f.`
+            : undefined,
       };
     }
 
@@ -227,6 +231,10 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil'
+          ? `Derive (3x² − ${3 * k * k}), iguale a zero e isole x² antes de tirar a raiz.`
+          : undefined,
     };
   },
 
@@ -410,6 +418,10 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'medio'
+          ? `Derive A = L² em relação ao tempo (dá 2L vezes dL/dt) e só depois use L = ${lado}.`
+          : undefined,
     };
   }
 

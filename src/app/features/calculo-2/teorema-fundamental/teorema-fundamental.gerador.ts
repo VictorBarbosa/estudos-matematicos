@@ -122,6 +122,10 @@ export const geradorTfc: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? 'Integre de 0 a k para ter uma expressão em k, iguale ao valor dado e teste k = 1, 2, 3, 4.'
+            : undefined,
       };
     }
 
@@ -160,6 +164,7 @@ export const geradorTfc: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica: nivel === 'facil' ? `Ache uma primitiva F e calcule F(${ate}) − F(${de}).` : undefined,
     };
   },
 

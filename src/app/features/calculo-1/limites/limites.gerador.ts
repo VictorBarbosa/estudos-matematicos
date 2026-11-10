@@ -52,6 +52,10 @@ export const geradorLimites: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'facil'
+            ? `A função é um polinômio, sem divisão por zero: basta substituir x = ${ponto}.`
+            : undefined,
       };
     }
 
@@ -117,6 +121,10 @@ export const geradorLimites: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'dificil'
+            ? `Substituir dá 0/0. Multiplique em cima e embaixo pelo conjugado, √(x + ${k}) + ${raizDeK}, e simplifique o x.`
+            : undefined,
       };
     }
 
@@ -165,6 +173,10 @@ export const geradorLimites: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        dica:
+          nivel === 'medio'
+            ? 'Divida em cima e embaixo pela maior potência de x: sobram só os coeficientes dos termos dominantes.'
+            : undefined,
       };
     }
 
@@ -217,6 +229,10 @@ export const geradorLimites: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil'
+          ? `Substituir dá 0/0. Fatore a diferença de cubos: x³ − ${a ** 3} = (x − ${a})(x² + ${a}x + ${a * a}).`
+          : undefined,
     };
   },
 

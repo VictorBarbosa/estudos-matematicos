@@ -196,6 +196,10 @@ function daCurvaDeNivel(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'multivar.superficie',
       },
     ],
+    dica:
+      nivel === 'facil'
+        ? `A curva de nível é f(x, y) = k: o k é o próprio valor de f no ponto (${x}, ${y}).`
+        : undefined,
   });
 }
 
@@ -285,6 +289,10 @@ function doDominio(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'multivar.dominio',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `A raiz exige o de dentro maior ou igual a zero. Com y = ${y0}, isole x² e tire a raiz.`
+        : undefined,
   });
 }
 

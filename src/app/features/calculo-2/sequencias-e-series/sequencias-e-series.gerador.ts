@@ -129,8 +129,9 @@ export const geradorSequencias: GeradorExercicio<number> = {
           gabarito,
           proximos,
         ),
+        // A PG só é sorteada do Médio em diante.
         dica:
-          nivel === 'facil'
+          nivel === 'facil' || (nivel === 'medio' && geometrica)
             ? 'PA: aₙ = a₁ + (n − 1)·r. PG: aₙ = a₁ · q elevado a (n − 1).'
             : undefined,
       };
@@ -169,6 +170,10 @@ export const geradorSequencias: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil' || (nivel === 'medio' && geometrica)
+          ? 'PA: S = n·(a₁ + aₙ)/2. PG: S = a₁·(qⁿ − 1)/(q − 1).'
+          : undefined,
     };
   },
 

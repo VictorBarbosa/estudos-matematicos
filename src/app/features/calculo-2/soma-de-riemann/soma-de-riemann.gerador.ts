@@ -97,7 +97,11 @@ export const geradorRiemann: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
-      dica: nivel === 'facil' ? 'Calcule Δx primeiro, depois some as alturas.' : undefined,
+      // A altura pela direita só é sorteada do Médio em diante: a dica a acompanha na estreia.
+      dica:
+        nivel === 'facil' || (nivel === 'medio' && tipo === 'direita')
+          ? `Calcule Δx primeiro, depois some as alturas tomadas na borda ${tipo} de cada retângulo.`
+          : undefined,
     };
   },
 

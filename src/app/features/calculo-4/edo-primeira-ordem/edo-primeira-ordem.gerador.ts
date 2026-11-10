@@ -161,6 +161,10 @@ function daMeiaVida(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'edo1.meia-vida',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? 'A solução é y = y₀·e elevado a (−kt). Meia-vida é quando sobra metade: resolva e^(−kt) = 1/2, o que dá t = ln 2 dividido por k.'
+        : undefined,
   });
 }
 
@@ -209,6 +213,10 @@ function daLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'edo1.fator-integrante',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `A solução é o equilíbrio q/p mais (y₀ − equilíbrio) vezes e elevado a (−p·t), com p = ${String(p).replace('.', ',')} e q = ${q}. Use y(0) = ${y0}.`
+        : undefined,
   });
 }
 

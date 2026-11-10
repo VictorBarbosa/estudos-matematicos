@@ -192,6 +192,10 @@ export const geradorContinuidade: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'medio'
+          ? `As duas sentenças têm de dar o mesmo valor em x = ${ponto}: calcule a de cima nesse ponto e iguale a ${c}·${ponto} + k.`
+          : undefined,
     };
   },
 

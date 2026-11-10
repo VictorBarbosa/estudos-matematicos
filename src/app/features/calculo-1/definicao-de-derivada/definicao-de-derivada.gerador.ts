@@ -142,6 +142,10 @@ export const geradorDefinicaoDerivada: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'facil'
+          ? `Monte f(${ponto} + h) − f(${ponto}), divida por h e simplifique; só no fim faça h tender a zero.`
+          : undefined,
     };
   },
 

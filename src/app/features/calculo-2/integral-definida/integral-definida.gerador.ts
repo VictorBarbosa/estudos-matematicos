@@ -276,6 +276,10 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'medio'
+          ? `Os intervalos se emendam em ${b}: a integral de ${a} a ${c} é a soma das duas.`
+          : undefined,
     };
   }
 
@@ -325,6 +329,10 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'medio'
+          ? 'Trocar os limites de integração troca o sinal da integral.'
+          : undefined,
     };
   }
 
@@ -369,6 +377,10 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
         gabarito,
         proximos,
       ),
+      dica:
+        nivel === 'medio'
+          ? `Uma constante sai da integral: a de ${fator}·f é ${fator} vezes a de f.`
+          : undefined,
     };
   }
 
@@ -420,6 +432,10 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica:
+      nivel === 'dificil'
+        ? `A integral é linear: separe em integral de f mais ${fator} vezes a integral de g.`
+        : undefined,
   };
 }
 
@@ -487,5 +503,9 @@ function exercicioValorMedio(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica:
+      nivel === 'medio'
+        ? `Valor médio = área dividida pela largura do intervalo (${largura}). A área aqui é um trapézio.`
+        : undefined,
   };
 }

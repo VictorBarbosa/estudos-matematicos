@@ -173,6 +173,10 @@ function doErroDeEuler(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'numerico.erro',
       },
     ],
+    dica:
+      nivel === 'medio'
+        ? `Faça os ${quantos} passos de Euler com h = ${String(passo).replace('.', ',')}, calcule a solução exata no mesmo instante e subtraia.`
+        : undefined,
   });
 }
 
@@ -310,6 +314,10 @@ function daOrdemDoMetodo(nivel: Nivel, rng: Rng): Exercicio<number> {
         conceito: 'numerico.erro',
       },
     ],
+    dica:
+      nivel === 'dificil'
+        ? 'Euler é de primeira ordem: o erro cai na mesma proporção do passo. Calcule os dois erros e divida um pelo outro.'
+        : undefined,
   });
 }
 

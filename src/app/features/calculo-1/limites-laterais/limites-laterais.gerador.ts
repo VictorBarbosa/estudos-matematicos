@@ -179,5 +179,6 @@ function exercicioSalto(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
+    dica: `Calcule os dois laterais em x = ${ponto}: a reta pela esquerda e a parábola (com x ao quadrado) pela direita. O salto é direita menos esquerda.`,
   };
 }
