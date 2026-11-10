@@ -15,6 +15,8 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
+import { Vista3d } from '@shared/components/vista-3d/vista-3d';
+import { Traco3d } from '@shared/components/vista-3d/vista-3d.model';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { textoLocal } from '@core/i18n/textos-locais';
 import textos from '@features/vetores-matrizes/vetores-no-espaco/vetores-no-espaco.i18n.json';
@@ -32,7 +34,15 @@ import { TEORIA_VETORES_ESPACO } from '@features/vetores-matrizes/vetores-no-esp
 @Component({
   selector: 'app-vetores-no-espaco',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, PassoAPasso, TopicoLayout],
+  imports: [
+    AreaTreino,
+    ConceitosTopico,
+    ControleParametro,
+    Formula,
+    PassoAPasso,
+    TopicoLayout,
+    Vista3d,
+  ],
   templateUrl: './vetores-no-espaco.html',
   styleUrl: './vetores-no-espaco.scss',
 })
@@ -68,6 +78,49 @@ export class VetoresNoEspaco {
   protected readonly trocadoTex = computed(() =>
     vetor3ParaTex(produtoVetorial(this.b(), this.a())),
   );
+  /**
+   * a, b e a × b desenhados a partir da origem, com o paralelogramo de a e b.
+   *
+   * O produto vetorial costuma ser bem maior que a e b (seu módulo é a ÁREA do
+   * paralelogramo); para caber no mesmo desenho, ele é redesenhado com o
+   * comprimento do maior dos dois — a direção, que é o que a regra da mão
+   * direita diz, fica intacta.
+   */
+  protected readonly tracos3d = computed<readonly Traco3d[]>(() => {
+    const a = this.a();
+    const b = this.b();
+    const v = this.vetorial();
+    const tamanho = Math.max(modulo3(a), modulo3(b), 1);
+    const mv = modulo3(v);
+    const k = mv > 1e-9 ? tamanho / mv : 0;
+    const p = (u: Vetor3): readonly [number, number, number] => [u.x, u.y, u.z];
+    const tracos: Traco3d[] = [
+      {
+        pontos: [[0, 0, 0], p(a), [a.x + b.x, a.y + b.y, a.z + b.z], p(b)],
+        cor: 'apoio',
+        preenchido: true,
+      },
+      { pontos: [[0, 0, 0], p(a)], cor: 'serie-1', seta: true, rotulo: 'a' },
+      { pontos: [[0, 0, 0], p(b)], cor: 'serie-2', seta: true, rotulo: 'b' },
+    ];
+    if (k > 0) {
+      tracos.push({
+        pontos: [
+          [0, 0, 0],
+          [v.x * k, v.y * k, v.z * k],
+        ],
+        cor: 'serie-3',
+        seta: true,
+        rotulo: 'a × b',
+      });
+    }
+    return tracos;
+  });
+
+  protected readonly alcance3d = computed(
+    () => Math.max(modulo3(this.a()), modulo3(this.b()), 3) * 0.9,
+  );
+
   protected readonly passos = computed(() => produtoVetorial3ComPassos(this.a(), this.b()).passos);
 
   /** Conferência que vale a pena ver mudando: o resultado é perpendicular aos dois. */

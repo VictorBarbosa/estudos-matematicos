@@ -34,6 +34,15 @@
       <app-formula [tex]="volumeTex()" [bloco]="true" />
     </section>
 
+    <section>
+      <app-vista-3d
+        [tracos]="tracos3d()"
+        [descricao]="texto('descricaoVista')"
+        [rotuloGiro]="texto('girarVista')"
+      />
+      <p class="apoio">{{ texto('leituraVista') }}</p>
+    </section>
+
     <section class="indicadores">
       <div class="indicador" data-destaque="true">
         <span class="rotulo">{{ texto('volume') }}</span>

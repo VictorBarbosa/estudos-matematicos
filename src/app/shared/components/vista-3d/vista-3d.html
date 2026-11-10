@@ -1,0 +1,42 @@
+<figure class="vista">
+  <svg [attr.viewBox]="'0 0 ' + LARGURA + ' ' + ALTURA" role="img" [attr.aria-label]="descricao()">
+    <defs>
+      @for (cor of ['serie-1', 'serie-2', 'serie-3', 'acento', 'aresta', 'apoio']; track cor) {
+        <marker
+          [attr.id]="'seta-3d-' + cor"
+          viewBox="0 0 10 10"
+          refX="9"
+          refY="5"
+          markerWidth="7"
+          markerHeight="7"
+          orient="auto-start-reverse"
+        >
+          <path d="M0,0 L10,5 L0,10 z" [attr.class]="'ponta ' + cor" />
+        </marker>
+      }
+    </defs>
+    @for (traco of desenho(); track $index) {
+      <path
+        [attr.d]="traco.d"
+        [attr.class]="'traco ' + traco.cor"
+        [class.tracejado]="traco.tracejado"
+        [class.preenchido]="traco.preenchido"
+        [attr.marker-end]="traco.seta ? 'url(#seta-3d-' + traco.cor + ')' : null"
+      />
+      @if (traco.rotulo; as r) {
+        <text
+          [attr.x]="r.x"
+          [attr.y]="r.y"
+          [attr.text-anchor]="r.ancora"
+          [attr.class]="'rotulo ' + traco.cor"
+        >
+          {{ r.texto }}
+        </text>
+      }
+    }
+  </svg>
+  <label class="giro">
+    <span>{{ rotuloGiro() }}</span>
+    <input type="range" min="0" max="360" step="5" [value]="giro()" (input)="girar($event)" />
+  </label>
+</figure>

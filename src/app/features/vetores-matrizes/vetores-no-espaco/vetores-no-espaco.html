@@ -50,6 +50,17 @@
       </div>
     </section>
 
+    <section class="no-espaco">
+      <h2>{{ texto('noEspaco') }}</h2>
+      <app-vista-3d
+        [tracos]="tracos3d()"
+        [eixos]="alcance3d()"
+        [descricao]="texto('descricaoVista')"
+        [rotuloGiro]="texto('girarVista')"
+      />
+      <p class="apoio">{{ texto('regraMaoDireita') }}</p>
+    </section>
+
     <section class="conferencia">
       <h2>{{ texto('aConferencia') }}</h2>
       <p class="apoio">{{ texto('oProdutoVetorialE') }}</p>

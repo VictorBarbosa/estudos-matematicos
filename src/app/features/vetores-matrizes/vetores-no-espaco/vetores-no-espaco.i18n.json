@@ -1,12 +1,44 @@
 {
-  "vetorA": { "pt": "Vetor a", "fr": "Vecteur a", "en": "Vector a" },
-  "vetorB": { "pt": "Vetor b", "fr": "Vecteur b", "en": "Vector b" },
-  "xDeA": { "pt": "x de a", "fr": "x de a", "en": "x of a" },
-  "yDeA": { "pt": "y de a", "fr": "y de a", "en": "y of a" },
-  "zDeA": { "pt": "z de a", "fr": "z de a", "en": "z of a" },
-  "xDeB": { "pt": "x de b", "fr": "x de b", "en": "x of b" },
-  "yDeB": { "pt": "y de b", "fr": "y de b", "en": "y of b" },
-  "zDeB": { "pt": "z de b", "fr": "z de b", "en": "z of b" },
+  "vetorA": {
+    "pt": "Vetor a",
+    "fr": "Vecteur a",
+    "en": "Vector a"
+  },
+  "vetorB": {
+    "pt": "Vetor b",
+    "fr": "Vecteur b",
+    "en": "Vector b"
+  },
+  "xDeA": {
+    "pt": "x de a",
+    "fr": "x de a",
+    "en": "x of a"
+  },
+  "yDeA": {
+    "pt": "y de a",
+    "fr": "y de a",
+    "en": "y of a"
+  },
+  "zDeA": {
+    "pt": "z de a",
+    "fr": "z de a",
+    "en": "z of a"
+  },
+  "xDeB": {
+    "pt": "x de b",
+    "fr": "x de b",
+    "en": "x of b"
+  },
+  "yDeB": {
+    "pt": "y de b",
+    "fr": "y de b",
+    "en": "y of b"
+  },
+  "zDeB": {
+    "pt": "z de b",
+    "fr": "z de b",
+    "en": "z of b"
+  },
   "osDoisVetores": {
     "pt": "Os dois vetores",
     "fr": "Les deux vecteurs",
@@ -17,7 +49,11 @@
     "fr": "Avec les vecteurs unitaires des axes :",
     "en": "With the unit vectors of the axes:"
   },
-  "modulos": { "pt": "Módulos", "fr": "Modules", "en": "Magnitudes" },
+  "modulos": {
+    "pt": "Módulos",
+    "fr": "Modules",
+    "en": "Magnitudes"
+  },
   "umNumeroAngulo": {
     "pt": "Um número. Ângulo entre eles: {angulo}°.",
     "fr": "Un nombre. Angle entre eux : {angulo}°.",
@@ -57,5 +93,25 @@
     "pt": "Como o produto vetorial sai",
     "fr": "Comment le produit vectoriel s’obtient",
     "en": "How the cross product comes out"
+  },
+  "noEspaco": {
+    "pt": "Os três vetores no espaço",
+    "fr": "Les trois vecteurs dans l’espace",
+    "en": "The three vectors in space"
+  },
+  "descricaoVista": {
+    "pt": "Desenho em perspectiva dos vetores a e b, do paralelogramo que eles formam e do produto vetorial a × b, perpendicular aos dois.",
+    "fr": "Dessin en perspective des vecteurs a et b, du parallélogramme qu’ils forment et du produit vectoriel a × b, perpendiculaire aux deux.",
+    "en": "Perspective drawing of vectors a and b, the parallelogram they span, and the cross product a × b, perpendicular to both."
+  },
+  "girarVista": {
+    "pt": "Girar",
+    "fr": "Tourner",
+    "en": "Rotate"
+  },
+  "regraMaoDireita": {
+    "pt": "Regra da mão direita: aponte os dedos para a e feche-os em direção a b — o polegar aponta para a × b, perpendicular ao paralelogramo. O módulo de a × b é a área desse paralelogramo; no desenho, a × b aparece reduzido ao tamanho do maior vetor, para caber. Gire a vista para ver que ele é perpendicular aos dois.",
+    "fr": "Règle de la main droite : pointez les doigts vers a et refermez-les vers b — le pouce indique a × b, perpendiculaire au parallélogramme. La norme de a × b est l’aire de ce parallélogramme ; sur le dessin, a × b est ramené à la taille du plus grand vecteur pour tenir. Tournez la vue pour voir qu’il est perpendiculaire aux deux.",
+    "en": "Right-hand rule: point your fingers along a and curl them toward b — your thumb points along a × b, perpendicular to the parallelogram. The length of a × b is that parallelogram’s area; in the drawing, a × b is scaled to the larger vector so it fits. Rotate the view to see it is perpendicular to both."
   }
 }

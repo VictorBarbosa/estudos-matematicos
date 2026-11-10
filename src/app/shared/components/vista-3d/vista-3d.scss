@@ -1,0 +1,79 @@
+:host {
+  display: block;
+}
+
+.vista {
+  margin: 0;
+  background: var(--plot-fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  padding: var(--esp-2);
+}
+
+svg {
+  display: block;
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+.traco {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  &.tracejado {
+    stroke-dasharray: 5 4;
+  }
+
+  &.preenchido {
+    fill-opacity: 0.15;
+  }
+}
+
+.rotulo {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+$cores: (
+  'serie-1': var(--serie-1),
+  'serie-2': var(--serie-2),
+  'serie-3': var(--serie-3),
+  'acento': var(--acento),
+  'aresta': var(--texto),
+  'apoio': var(--plot-eixo),
+);
+
+@each $nome, $cor in $cores {
+  .traco.#{$nome} {
+    stroke: $cor;
+  }
+  .traco.preenchido.#{$nome} {
+    fill: $cor;
+  }
+  .ponta.#{$nome},
+  .rotulo.#{$nome} {
+    fill: $cor;
+  }
+}
+
+.traco.apoio {
+  stroke-width: 1.5;
+}
+
+.giro {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  justify-content: center;
+  margin-top: var(--esp-2);
+  font-size: 0.875rem;
+  color: var(--texto-suave, inherit);
+
+  input {
+    width: min(16rem, 60%);
+  }
+}

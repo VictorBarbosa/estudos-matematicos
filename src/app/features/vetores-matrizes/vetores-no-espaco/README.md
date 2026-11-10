@@ -8,7 +8,7 @@ Componentes x, y e z, vetores unitários e os dois produtos em três dimensões.
 
 O plano é onde se aprende; o espaço é onde a engenharia acontece. Uma força sobre uma asa, a
 posição de um satélite e o torque de um motor têm três componentes — e o plano de estudo
-chama vetores de *"uma das áreas que mais precisam de complementação"* justamente por isso.
+chama vetores de _"uma das áreas que mais precisam de complementação"_ justamente por isso.
 
 Dois exercícios daqui **não existem no plano**:
 
@@ -29,13 +29,13 @@ que teriam de ser aceitas.
 
 Cada uma é um erro que se comete de verdade, não um distrator:
 
-| Erro | O que o diagnóstico diz |
-|---|---|
-| Somar as componentes para achar o módulo | O módulo é a raiz da soma dos **quadrados** |
-| Esquecer o z | Pitágoras se aplica duas vezes, não uma |
-| Responder `b × a` | A ordem importa: trocar os vetores troca o sinal |
-| Dar o escalar quando se pede o vetorial | Um devolve número, o outro devolve vetor |
-| Esquecer o módulo no produto misto | O sinal é a orientação; volume é sempre positivo |
+| Erro                                     | O que o diagnóstico diz                          |
+| ---------------------------------------- | ------------------------------------------------ |
+| Somar as componentes para achar o módulo | O módulo é a raiz da soma dos **quadrados**      |
+| Esquecer o z                             | Pitágoras se aplica duas vezes, não uma          |
+| Responder `b × a`                        | A ordem importa: trocar os vetores troca o sinal |
+| Dar o escalar quando se pede o vetorial  | Um devolve número, o outro devolve vetor         |
+| Esquecer o módulo no produto misto       | O sinal é a orientação; volume é sempre positivo |
 
 A componente **y** do produto vetorial tem dica própria: a ordem dos termos é trocada ali, e é
 onde o sinal se perde.

@@ -1,6 +1,14 @@
 {
-  "solido": { "pt": "Sólido", "fr": "Solide", "en": "Solid" },
-  "volume": { "pt": "Volume", "fr": "Volume", "en": "Volume" },
+  "solido": {
+    "pt": "Sólido",
+    "fr": "Solide",
+    "en": "Solid"
+  },
+  "volume": {
+    "pt": "Volume",
+    "fr": "Volume",
+    "en": "Volume"
+  },
   "cilindroEquivalente": {
     "pt": "Cilindro equivalente",
     "fr": "Cylindre équivalent",
@@ -26,7 +34,11 @@
     "fr": "exactement 2/3",
     "en": "exactly 2/3"
   },
-  "oProprio": { "pt": "o próprio", "fr": "lui-même", "en": "itself" },
+  "oProprio": {
+    "pt": "o próprio",
+    "fr": "lui-même",
+    "en": "itself"
+  },
   "porQueEsseVolume": {
     "pt": "Por que esse volume",
     "fr": "Pourquoi ce volume",
@@ -37,7 +49,11 @@
     "fr": "Changez de solide et regardez la dernière colonne ci-dessus : le cône reste à 33,3 % du cylindre et la sphère à 66,7 %, toujours. Ce ne sont pas des approximations — ce sont les fractions exactes qu’Archimède a démontrées sans calcul différentiel.",
     "en": "Switch solids and watch the last column above: the cone stays at 33.3% of the cylinder and the sphere at 66.7%, always. These are not approximations — they are the exact fractions Archimedes proved without calculus."
   },
-  "superficie": { "pt": "Superfície", "fr": "Surface", "en": "Surface area" },
+  "superficie": {
+    "pt": "Superfície",
+    "fr": "Surface",
+    "en": "Surface area"
+  },
   "ampliarMudaFisica": {
     "pt": "Ampliar um projeto muda a física",
     "fr": "Agrandir un projet change la physique",
@@ -53,10 +69,29 @@
     "fr": "Surface × k²",
     "en": "Surface × k²"
   },
-  "caiComUmSobreK": { "pt": "cai com 1/k", "fr": "décroît en 1/k", "en": "falls as 1/k" },
+  "caiComUmSobreK": {
+    "pt": "cai com 1/k",
+    "fr": "décroît en 1/k",
+    "en": "falls as 1/k"
+  },
   "essaQueda": {
     "pt": "Essa queda da razão superfície/volume é um dos fatos mais consequentes da engenharia. A massa de um foguete cresce com k³, mas a área que dissipa calor e a secção que resiste a esforços crescem só com k². Dobrar o tamanho não dobra o problema: o multiplica por oito, com o dobro de área para resolvê-lo.",
     "fr": "Cette chute du rapport surface/volume est l’un des faits les plus lourds de conséquences en ingénierie. La masse d’une fusée croît en k³, mais l’aire qui dissipe la chaleur et la section qui résiste aux efforts ne croissent qu’en k². Doubler la taille ne double pas le problème : il le multiplie par huit, avec deux fois plus d’aire pour le résoudre.",
     "en": "This fall in the surface-to-volume ratio is one of the most consequential facts in engineering. A rocket's mass grows as k³, but the area that sheds heat and the cross-section that carries loads grow only as k². Doubling the size does not double the problem: it multiplies it by eight, with twice the area to solve it."
+  },
+  "descricaoVista": {
+    "pt": "Desenho em arame do sólido escolhido, com o raio da base, a altura e, no cone, a geratriz marcados.",
+    "fr": "Dessin filaire du solide choisi, avec le rayon de la base, la hauteur et, pour le cône, la génératrice.",
+    "en": "Wireframe drawing of the chosen solid, with the base radius, the height and, for the cone, the slant height marked."
+  },
+  "girarVista": {
+    "pt": "Girar",
+    "fr": "Tourner",
+    "en": "Rotate"
+  },
+  "leituraVista": {
+    "pt": "r é o raio da BASE (é ele que vai ao quadrado em πr²), h é a altura medida do centro da base até o topo, e g, no cone, é a geratriz: a hipotenusa do triângulo de catetos r e h.",
+    "fr": "r est le rayon de la BASE (c’est lui qui est au carré dans πr²), h est la hauteur mesurée du centre de la base jusqu’au sommet, et g, pour le cône, est la génératrice : l’hypoténuse du triangle de côtés r et h.",
+    "en": "r is the BASE radius (the one squared in πr²), h is the height from the base center to the top, and g, on the cone, is the slant height: the hypotenuse of the triangle with legs r and h."
   }
 }
