@@ -82,3 +82,43 @@ describe('geradorJuros', () => {
     expect(exercicio).toBeDefined();
   });
 });
+
+describe('geradorJuros — taxa equivalente', () => {
+  const rng = criarRng(8686);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorJuros.gerar(nivel, rng)).filter((e) =>
+      e.conceitos.includes('juros.equivalente'),
+    );
+  const numero = (t: string) => Number(t.replace(',', '.'));
+  const PERIODOS: Record<string, number> = {
+    mês: 12,
+    mensal: 12,
+    trimestre: 4,
+    trimestral: 4,
+    semestre: 2,
+    semestral: 2,
+  };
+
+  it('no Difícil, a taxa anual leva ao mesmo montante que a do período', () => {
+    const casos = lote('dificil');
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, taxa, periodo] = /equivale a ([\d,]+)% ao (mês|trimestre|semestre)/.exec(
+        e.enunciado,
+      )!;
+      const k = PERIODOS[periodo!]!;
+      expect(1 + e.gabarito / 100).toBeCloseTo((1 + numero(taxa!) / 100) ** k, 9);
+    }
+  });
+
+  it('no Extremo, a taxa do período composta k vezes devolve a anual', () => {
+    const casos = lote('extremo');
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const [, anual] = /rende ([\d,]+)% ao ano/.exec(e.enunciado)!;
+      const [, adjetivo] = /taxa (MENSAL|TRIMESTRAL|SEMESTRAL)/.exec(e.enunciado)!;
+      const k = PERIODOS[adjetivo!.toLowerCase()]!;
+      expect((1 + e.gabarito / 100) ** k).toBeCloseTo(1 + numero(anual!) / 100, 9);
+    }
+  });
+});

@@ -114,4 +114,40 @@ export const TEORIA_PROGRESSOES: readonly Teoria[] = [
     },
     vejaTambem: ['progressoes.geometrica', 'limite.intuicao'],
   },
+  {
+    id: 'progressoes.dois-termos',
+    titulo: 'A progressão dada por dois termos',
+    resumo: 'Entre aₚ e a_q há q − p saltos: na PA eles somam, na PG multiplicam.',
+    definicao:
+      'Nem sempre a progressão vem com o primeiro termo e a razão. Dados dois termos quaisquer, ' +
+      'aₚ e a_q, basta contar os saltos entre eles: são q − p. Numa PA, a diferença a_q − aₚ ' +
+      'vale (q − p) razões; numa PG, o quociente a_q / aₚ vale a razão elevada a (q − p). ' +
+      'Achada a razão, volta-se ao primeiro termo andando p − 1 saltos para trás.',
+    formulas: [
+      { tex: 'r = \\frac{a_q - a_p}{q - p}', legenda: 'PA.' },
+      {
+        tex: 'q^{\\,q-p} = \\frac{a_q}{a_p}',
+        legenda: 'PG (aqui q é a razão; os índices são p e q).',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Pelo termo geral, cada termo é o primeiro mais alguns saltos.',
+        tex: 'a_q = a_1 + (q - 1)r \\qquad a_p = a_1 + (p - 1)r',
+      },
+      {
+        descricao: 'Subtraindo, o a₁ some e sobram só os saltos entre os dois.',
+        tex: 'a_q - a_p = (q - p)r',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Numa PA, a₃ = 7 e a₈ = 22. Ache r e a₁.',
+      passos: [
+        { descricao: 'De a₃ a a₈ são 5 saltos.', tex: '22 = 7 + 5r' },
+        { descricao: 'A razão.', tex: 'r = \\frac{22 - 7}{5} = 3' },
+        { descricao: 'Dois saltos para trás até a₁.', tex: 'a_1 = 7 - 2 \\cdot 3 = 1' },
+      ],
+    },
+    vejaTambem: ['progressoes.aritmetica', 'progressoes.geometrica'],
+  },
 ];

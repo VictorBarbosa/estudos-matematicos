@@ -131,3 +131,45 @@ describe('geradorProgressoes', () => {
     expect(geradorProgressoes.analisar('oito')).toBeNull();
   });
 });
+
+describe('geradorProgressoes — progressão dada por dois termos', () => {
+  const rng = criarRng(6464);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorProgressoes.gerar(nivel, rng)).filter((e) =>
+      e.conceitos.includes('progressoes.dois-termos'),
+    );
+
+  function termos(e: { enunciado: string }) {
+    const [, p, ap, q, aq] = /o (\d+)º termo é (-?\d+) e o (\d+)º termo é (-?\d+)/.exec(
+      e.enunciado,
+    )!;
+    return { p: Number(p), ap: Number(ap), q: Number(q), aq: Number(aq) };
+  }
+
+  it('na PA, a razão ou o primeiro termo reconstrói os dois termos dados', () => {
+    for (const nivel of ['medio', 'dificil'] as const) {
+      const casos = lote(nivel);
+      expect(casos.length).toBeGreaterThan(0);
+      for (const e of casos) {
+        const { p, ap, q, aq } = termos(e);
+        const r = (aq - ap) / (q - p);
+        const a1 = e.enunciado.includes('razão') ? ap - (p - 1) * e.gabarito : e.gabarito;
+        if (e.enunciado.includes('razão')) expect(e.gabarito).toBe(r);
+        expect(a1 + (p - 1) * r).toBe(ap);
+        expect(a1 + (q - 1) * r).toBe(aq);
+      }
+    }
+  });
+
+  it('na PG do Extremo, o primeiro termo reconstrói os dois termos dados', () => {
+    const casos = lote('extremo');
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      const { p, ap, q, aq } = termos(e);
+      expect(e.enunciado).toContain('PG');
+      const razao = Math.sign(aq / ap) * Math.abs(aq / ap) ** (1 / (q - p));
+      expect(e.gabarito * razao ** (p - 1)).toBeCloseTo(ap, 9);
+      expect(e.gabarito * razao ** (q - 1)).toBeCloseTo(aq, 9);
+    }
+  });
+});

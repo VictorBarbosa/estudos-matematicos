@@ -81,3 +81,54 @@ describe('geradorModular', () => {
     expect(resultado.diagnostico).toContain('DUAS respostas');
   });
 });
+
+describe('geradorModular — inequação modular', () => {
+  const rng = criarRng(4343);
+  const lote = (nivel: Nivel) =>
+    Array.from({ length: 300 }, () => geradorModular.gerar(nivel, rng));
+
+  /** Lê |ax + b| (rel) c do enunciado e conta os inteiros por força bruta. */
+  function contarPorForcaBruta(tex: string, contarOsQueFalham: boolean): number {
+    const [, a, b, rel, c] = /\\left\|(-?\d*)x ([+-] \d+)\\right\| (\\leq|\\geq|<|>) (\d+)/.exec(
+      tex,
+    )!;
+    const coef = a === '' ? 1 : a === '-' ? -1 : Number(a);
+    const termo = Number(b!.replace(' ', ''));
+    const limite = Number(c);
+    const vale = (x: number): boolean => {
+      const u = Math.abs(coef * x + termo);
+      return rel === '<'
+        ? u < limite
+        : rel === '>'
+          ? u > limite
+          : rel === '\\leq'
+            ? u <= limite
+            : u >= limite;
+    };
+    let total = 0;
+    for (let x = -100; x <= 100; x++) if (vale(x) !== contarOsQueFalham) total++;
+    return total;
+  }
+
+  it('no Difícil, a contagem de inteiros que satisfazem confere por força bruta', () => {
+    const casos = lote('dificil').filter((e) => e.conceitos.includes('modular.inequacoes'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      expect(e.gabarito.paraDecimal()).toBe(contarPorForcaBruta(e.enunciadoTex!, false));
+    }
+  });
+
+  it('no Extremo, a contagem dos que NÃO satisfazem confere por força bruta', () => {
+    const casos = lote('extremo').filter((e) => e.conceitos.includes('modular.inequacoes'));
+    expect(casos.length).toBeGreaterThan(0);
+    for (const e of casos) {
+      expect(e.enunciado).toContain('NÃO satisfazem');
+      expect(e.gabarito.paraDecimal()).toBe(contarPorForcaBruta(e.enunciadoTex!, true));
+    }
+  });
+
+  it('o Extremo deixou de ter uma pergunta só', () => {
+    const formas = new Set(lote('extremo').map((e) => e.conceitos[0]));
+    expect(formas.size).toBeGreaterThan(1);
+  });
+});

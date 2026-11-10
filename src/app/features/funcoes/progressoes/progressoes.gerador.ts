@@ -5,7 +5,9 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-6;
 
-type Pergunta = 'termo-pa' | 'soma-pa' | 'termo-pg' | 'soma-pg' | 'soma-infinita';
+import { exercicioDoisTermos } from '@features/funcoes/progressoes/progressoes.dois-termos';
+
+type Pergunta = 'termo-pa' | 'soma-pa' | 'termo-pg' | 'soma-pg' | 'soma-infinita' | 'dois-termos';
 
 export const geradorProgressoes: GeradorExercicio<number> = {
   topicoId: 'progressoes',
@@ -23,6 +25,8 @@ export const geradorProgressoes: GeradorExercicio<number> = {
         return exercicioSoma(true, nivel, rng);
       case 'soma-infinita':
         return exercicioSomaInfinita(nivel, rng);
+      case 'dois-termos':
+        return exercicioDoisTermos(nivel, rng);
     }
   },
 
@@ -38,12 +42,13 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'facil':
       return rng.escolher<Pergunta>(['termo-pa', 'termo-pg']);
     case 'medio':
-      return rng.escolher<Pergunta>(['soma-pa', 'termo-pg', 'soma-pg']);
+      return rng.escolher<Pergunta>(['soma-pa', 'termo-pg', 'soma-pg', 'dois-termos']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['soma-pg', 'soma-infinita', 'soma-pa']);
-    // A soma infinita só existe com |q| < 1, e é onde o conceito aparece.
+      return rng.escolher<Pergunta>(['soma-pg', 'soma-infinita', 'soma-pa', 'dois-termos']);
+    // A soma infinita só existe com |q| < 1, e é onde o conceito aparece; os
+    // dois termos de uma PG pedem a razão por raiz antes de voltar ao a₁.
     case 'extremo':
-      return rng.escolher<Pergunta>(['soma-infinita', 'soma-pg']);
+      return rng.escolher<Pergunta>(['soma-infinita', 'soma-pg', 'dois-termos']);
   }
 }
 

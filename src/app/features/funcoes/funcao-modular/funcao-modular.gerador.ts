@@ -8,9 +8,11 @@ import {
   semColisoes,
 } from '@core/treino/models/treino.model';
 
+import { exercicioInequacaoModular } from '@features/funcoes/funcao-modular/funcao-modular.inequacoes';
+
 const saoEquivalentes = (a: Fracao, b: Fracao): boolean => a.igualA(b);
 
-type Pergunta = 'valor' | 'bico' | 'equacao';
+type Pergunta = 'valor' | 'bico' | 'equacao' | 'inequacao';
 
 /**
  * Exercícios de função modular.
@@ -24,6 +26,7 @@ export const geradorModular: GeradorExercicio<Fracao> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     const pergunta = sortearPergunta(nivel, rng);
+    if (pergunta === 'inequacao') return exercicioInequacaoModular(nivel, rng);
     const a = nivel === 'facil' ? 1 : rng.inteiro(1, 4) * (rng.booleano(0.7) ? 1 : -1);
     const b = rng.inteiro(-8, 8);
 
@@ -207,9 +210,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'medio':
       return rng.escolher<Pergunta>(['valor', 'bico', 'equacao']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['bico', 'equacao']);
-    // A equação modular tem dois casos a resolver e a verificação no fim.
+      return rng.escolher<Pergunta>(['bico', 'equacao', 'inequacao']);
+    // A equação modular tem dois casos; a inequação de «maior que» pede as duas
+    // semirretas e a contagem do complementar.
     case 'extremo':
-      return 'equacao';
+      return rng.escolher<Pergunta>(['equacao', 'inequacao']);
   }
 }

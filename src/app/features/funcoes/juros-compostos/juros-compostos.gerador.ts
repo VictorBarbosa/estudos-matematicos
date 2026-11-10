@@ -5,7 +5,9 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
 
-type Pergunta = 'montante' | 'juro' | 'tempo-para-dobrar';
+import { exercicioTaxaEquivalente } from '@features/funcoes/juros-compostos/juros-compostos.taxa-equivalente';
+
+type Pergunta = 'montante' | 'juro' | 'tempo-para-dobrar' | 'taxa-equivalente';
 
 /** Exercícios de juros compostos. */
 export const geradorJuros: GeradorExercicio<number> = {
@@ -14,6 +16,7 @@ export const geradorJuros: GeradorExercicio<number> = {
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
+    if (pergunta === 'taxa-equivalente') return exercicioTaxaEquivalente(nivel, rng);
     const capital = rng.inteiro(1, 20) * 500;
     // No extremo a taxa deixa de ser redonda: 7%, 13%, 17% não têm atalho
     // mental, e o tempo para dobrar tem de sair do logaritmo mesmo.
@@ -184,9 +187,10 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'medio':
       return rng.escolher<Pergunta>(['montante', 'juro', 'tempo-para-dobrar']);
     case 'dificil':
-      return rng.escolher<Pergunta>(['tempo-para-dobrar', 'juro']);
-    // O tempo para dobrar é o que exige logaritmo, e não só a fórmula.
+      return rng.escolher<Pergunta>(['tempo-para-dobrar', 'juro', 'taxa-equivalente']);
+    // O tempo para dobrar exige logaritmo; a taxa equivalente de volta, uma raiz
+    // de índice 12 — nenhum dos dois sai só da fórmula do montante.
     case 'extremo':
-      return 'tempo-para-dobrar';
+      return rng.escolher<Pergunta>(['tempo-para-dobrar', 'taxa-equivalente']);
   }
 }

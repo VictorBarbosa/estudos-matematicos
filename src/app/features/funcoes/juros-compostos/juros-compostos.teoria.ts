@@ -104,4 +104,45 @@ export const TEORIA_JUROS: readonly Teoria[] = [
     },
     vejaTambem: ['juros.compostos', 'logaritmica.definicao'],
   },
+  {
+    id: 'juros.equivalente',
+    titulo: 'Taxas equivalentes',
+    resumo: '1% ao mês não é 12% ao ano: em juros compostos, a conversão é por potência.',
+    definicao:
+      'Duas taxas são equivalentes quando levam o mesmo capital ao mesmo montante no mesmo ' +
+      'prazo. Em juros compostos, os juros de cada mês rendem juros nos meses seguintes, então ' +
+      'um ano a i ao mês multiplica o capital por (1 + i)¹², e não por 1 + 12i. A taxa ' +
+      'proporcional, que só multiplica pelo número de períodos, é a dos juros simples. Para ' +
+      'voltar da anual para a mensal, desfaz-se a potência com a raiz de índice 12.',
+    formulas: [
+      { tex: '1 + i_{\\text{anual}} = \\left(1 + i_{\\text{mensal}}\\right)^{12}' },
+      {
+        tex: 'i_{\\text{mensal}} = \\sqrt[12]{1 + i_{\\text{anual}}} - 1',
+        legenda: 'O mesmo vale para trimestre (índice 4) e semestre (índice 2).',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Em 12 meses, o capital é multiplicado por (1 + i) doze vezes.',
+        tex: 'M = C(1 + i_{\\text{mensal}})^{12}',
+      },
+      {
+        descricao: 'Em 1 ano à taxa anual, uma vez só por (1 + i_anual). Igualando os montantes:',
+        tex: 'C(1 + i_{\\text{anual}}) = C(1 + i_{\\text{mensal}})^{12}',
+        nota: 'O capital se cancela: a equivalência não depende do valor aplicado.',
+      },
+    ],
+    exemplo: {
+      enunciado: '1% ao mês equivale a quanto ao ano?',
+      passos: [
+        { descricao: 'Potência 12 do fator mensal.', tex: '(1{,}01)^{12} = 1{,}126825' },
+        {
+          descricao: 'Tirando o 1.',
+          tex: 'i_{\\text{anual}} = 0{,}126825 = 12{,}68\\%',
+          nota: 'Mais que os 12% da conta proporcional: é o juro sobre juro.',
+        },
+      ],
+    },
+    vejaTambem: ['juros.compostos', 'juros.simples'],
+  },
 ];
