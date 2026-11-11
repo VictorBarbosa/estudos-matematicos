@@ -101,3 +101,83 @@ describe('analisarConjunto', () => {
     expect(analisarConjunto('x < 3 ou y > 2')).toBeNull();
   });
 });
+
+/**
+ * A inequação que vem de uma situação.
+ *
+ * A expressão continua no enunciado (é ela que a resolução desenvolve), então
+ * o teste ponto a ponto que já existia cobre estas formas sem mudança — foi a
+ * razão de manter o `tex`. Aqui ficam as garantias que são só das histórias.
+ */
+describe('as histórias de sinal', () => {
+  const comHistoria = (nivel: Nivel, quantidade = 120) =>
+    amostra(nivel, quantidade).filter((e) => e.id.includes('-historia-'));
+
+  it('metade das formas vem de uma situação, com a expressão visível', () => {
+    for (const nivel of NIVEIS) {
+      const exercicios = amostra(nivel, 160);
+      const historias = exercicios.filter((e) => e.id.includes('-historia-'));
+
+      expect(historias.length, nivel).toBeGreaterThan(40);
+      expect(historias.length, nivel).toBeLessThan(120);
+
+      for (const exercicio of historias) {
+        // Ao contrário de `inequacoes`, aqui a conta aparece: a lição é
+        // interpretar o sinal, não montar o trinômio.
+        expect(exercicio.enunciadoTex, exercicio.enunciado).toMatch(/\\leq|\\geq|[<>]/);
+        expect(exercicio.enunciado.length).toBeGreaterThan(120);
+        expect(exercicio.dica?.length ?? 0).toBeGreaterThan(30);
+      }
+    }
+  });
+
+  it('toda história cita o conceito de modelagem', () => {
+    for (const nivel of NIVEIS) {
+      for (const exercicio of comHistoria(nivel, 60)) {
+        expect(exercicio.conceitos).toContain('sinal.modelagem');
+      }
+    }
+  });
+
+  it('a história existe em francês e inglês', () => {
+    for (const nivel of NIVEIS) {
+      for (const exercicio of comHistoria(nivel, 60)) {
+        expect(exercicio.traducoes?.fr?.enunciado.length ?? 0).toBeGreaterThan(100);
+        expect(exercicio.traducoes?.en?.enunciado.length ?? 0).toBeGreaterThan(100);
+      }
+    }
+  });
+
+  it('o vocabulário da situação não promete um pedaço que a conta não dá', () => {
+    // «Lucro positivo» tem de devolver um intervalo com dois extremos; «custo
+    // abaixo» também. Já «nunca negativo» devolve «todos» — e essa é a resposta
+    // certa, não um erro de geração.
+    for (const nivel of NIVEIS) {
+      for (const exercicio of comHistoria(nivel, 100)) {
+        const texto = exercicio.enunciado;
+
+        if (/lucro .*positivo|área .*passa do alvo/i.test(texto)) {
+          expect(['entre', 'fora', 'vazio'], texto).toContain(exercicio.gabarito.tipo);
+        }
+      }
+    }
+  });
+
+  it('a resposta «vazio» só aparece quando o trinômio realmente não tem sinal pedido', () => {
+    for (const nivel of NIVEIS) {
+      for (const exercicio of comHistoria(nivel, 150)) {
+        if (exercicio.gabarito.tipo !== 'vazio') {
+          continue;
+        }
+
+        // Confere por fora: nenhum x inteiro e meio satisfaz o enunciado.
+        const f = ladoEsquerdo(exercicio.enunciadoTex!);
+        const vale = relacaoDe(exercicio.enunciadoTex!);
+
+        for (let x = -20; x <= 20; x += 0.5) {
+          expect(vale(f(x)), `${exercicio.enunciadoTex} em x = ${x}`).toBe(false);
+        }
+      }
+    }
+  });
+});

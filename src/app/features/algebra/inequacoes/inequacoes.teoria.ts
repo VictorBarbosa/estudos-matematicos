@@ -110,4 +110,56 @@ export const TEORIA_INEQUACOES: readonly Teoria[] = [
     },
     vejaTambem: ['inequacoes.conjunto'],
   },
+  {
+    id: 'inequacoes.modelagem',
+    titulo: 'Do texto à inequação',
+    resumo: '«No máximo», «pelo menos», «a partir de»: a inequação já está no vocabulário.',
+    definicao:
+      'Quase todo problema de inequação do 1º grau é uma frase com um gasto por unidade, um ' +
+      'gasto fixo e um limite. O trabalho não é dividir dos dois lados — é decidir o que é x, ' +
+      'o que se repete a cada unidade, o que é cobrado uma vez só e de que lado fica o limite. ' +
+      'As palavras do enunciado já dizem o sentido: «no máximo» e «até» fecham a bolinha (≤); ' +
+      '«pelo menos» e «a partir de» também fecham (≥); «acima de» e «abaixo de» não fecham ' +
+      '(< e >). Trocar uma pela outra é o erro mais comum do tema, e nenhuma conta conserta.',
+    formulas: [
+      {
+        tex: '\\text{total}(x) = (\\text{por unidade}) \\cdot x + \\text{cobrado uma vez}',
+        legenda: 'O mesmo modelo de toda situação de orçamento, plano ou capacidade.',
+      },
+      {
+        tex: '\\text{no máximo} \\to \\le \\qquad \\text{pelo menos} \\to \\ge',
+        legenda: 'A fronteira ENTRA: o limite é permitido.',
+      },
+      {
+        tex: '\\text{acima de} \\to > \\qquad \\text{abaixo de} \\to <',
+        legenda: 'A fronteira NÃO entra: ela é exatamente o valor que não se quer.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao:
+          'Tenho R$ 60; cada caderno custa R$ 8 e o frete é R$ 4, cobrado uma vez. Chamando de ' +
+          'x a quantidade, o gasto é 8x + 4.',
+        tex: '8x + 4 \\le 60',
+      },
+      {
+        descricao: '«Cabem no orçamento» é «no máximo o orçamento»: a fronteira entra.',
+        tex: '8x \\le 56 \\;\\Rightarrow\\; x \\le 7',
+      },
+      {
+        descricao:
+          'A resposta tem de ser lida na grandeza do problema: 7 cadernos, e 8 já estouram ' +
+          '(8·8 + 4 = 68 > 60).',
+        tex: 'x \\le 7 \\quad \\text{isto é, até 7 cadernos}',
+        nota: 'Conferir um valor de cada lado é o teste que pega o sentido trocado.',
+      },
+    ],
+    exemplo: {
+      enunciado:
+        'Um tanque tem 60 litros e perde 5 litros por hora. Por quantas horas ainda restam ' +
+        'pelo menos 20 litros?',
+      passos: resolverInequacaoComPassos(-5, 60, '>=', 20).passos,
+    },
+    vejaTambem: ['inequacoes.conjunto', 'inequacoes.inversao'],
+  },
 ];

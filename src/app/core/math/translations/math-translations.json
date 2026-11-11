@@ -4162,5 +4162,17 @@
   "É a quantidade que minimiza o custo de produção.": {
     "fr": "C’est la quantité qui minimise le coût de production.",
     "en": "It is the quantity that minimises production cost."
+  },
+  "A fronteira entra na solução, por isso o colchete e a bolinha preenchida.": {
+    "fr": "La frontière fait partie de la solution, d’où le crochet et le point plein.",
+    "en": "The boundary is part of the solution, hence the bracket and the filled dot."
+  },
+  "A fronteira fica de fora, por isso o parêntese e a bolinha vazada.": {
+    "fr": "La frontière est exclue, d’où la parenthèse et le point creux.",
+    "en": "The boundary is excluded, hence the parenthesis and the hollow dot."
+  },
+  "O ponto é a fronteira ENTRE as duas raízes, onde a parábola cruza o eixo.": {
+    "fr": "Le point est la frontière ENTRE les deux racines, où la parabole coupe l’axe.",
+    "en": "The point is the boundary BETWEEN the two roots, where the parabola crosses the axis."
   }
 }

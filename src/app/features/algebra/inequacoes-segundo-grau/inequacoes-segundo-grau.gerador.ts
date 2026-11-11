@@ -20,6 +20,11 @@ import {
   TeclaDeSimbolo,
   semColisoes,
 } from '@core/treino/models/treino.model';
+import {
+  HistoriaSinal,
+  historiaSinalPara,
+  resolverHistoria,
+} from '@features/algebra/inequacoes-segundo-grau/inequacoes-segundo-grau.contextos';
 
 type Pergunta =
   'produto' | 'trinomio' | 'trinomio-negativo' | 'racional' | 'sem-raiz' | 'quociente';
@@ -134,6 +139,18 @@ export const geradorInequacoesSegundoGrau: GeradorExercicio<ConjuntoSolucaoReal>
   simbolos: SIMBOLOS,
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<ConjuntoSolucaoReal> {
+    /*
+     * Metade das vezes a inequação vem de uma situação.
+     *
+     * Aqui a expressão CONTINUA visível: a lição do tópico é interpretar o
+     * sinal — decidir entre as raízes ou fora delas —, não montar o trinômio.
+     * Na situação, «entre» deixa de ser um pedaço da reta e passa a ser «entre
+     * os dois preços em que o lucro é zero».
+     */
+    if (rng.booleano(0.5)) {
+      return exercicioComHistoria(nivel, rng);
+    }
+
     const pergunta = sortearPergunta(nivel, rng);
     const relacao = rng.escolher(RELACOES);
 
@@ -208,6 +225,64 @@ function armadilhasDeIntervalo(
       conceito: 'sinal.trinomio',
     },
   ];
+}
+
+/**
+ * A inequação que vem de uma situação.
+ *
+ * O `tex` do enunciado é o mesmo formato do caminho simbólico, e é de
+ * propósito: o teste do tópico confere o conjunto solução ponto a ponto
+ * avaliando essa expressão, então as histórias passam pela mesma prova.
+ */
+function exercicioComHistoria(nivel: Nivel, rng: Rng): Exercicio<ConjuntoSolucaoReal> {
+  const historia = historiaSinalPara(nivel, rng);
+  const resolucao = resolverHistoria(historia);
+  const gabarito = resolucao.resultado;
+  const ultimo = resolucao.passos.length - 1;
+
+  /*
+   * A armadilha da situação vem ANTES das genéricas.
+   *
+   * `semColisoes` mantém a primeira ocorrência de cada resposta errada, então
+   * pôr aqui a versão com o vocabulário da história faz o diagnóstico falar de
+   * lucro, altura ou área — e não de «um pedaço da reta».
+   */
+  const armadilhas: Armadilha<ConjuntoSolucaoReal>[] = [];
+  if (gabarito.tipo === 'entre' || gabarito.tipo === 'fora') {
+    armadilhas.push({
+      resposta: { ...gabarito, tipo: gabarito.tipo === 'entre' ? 'fora' : 'entre' },
+      diagnostico:
+        'As fronteiras estão certas, mas o lado não. Na situação, pergunte-se o que acontece ' +
+        'COM A GRANDEZA no meio do intervalo — não no meio da conta: teste um valor entre as ' +
+        'raízes na expressão e veja se o resultado é o que o enunciado pede.',
+      diagnosticoTraducoes: {
+        fr:
+          'Les frontières sont justes, mais pas le côté. Dans la situation, demandez-vous ce qui ' +
+          'arrive à LA GRANDEUR au milieu de l’intervalle : testez une valeur entre les racines.',
+        en:
+          'The boundaries are right, but the side is not. In the situation, ask what happens to ' +
+          'THE QUANTITY in the middle of the interval: test a value between the roots.',
+      },
+      passo: ultimo,
+      conceito: historia.conceito,
+    });
+  }
+  armadilhas.push(...armadilhasDeIntervalo(gabarito, ultimo - 1, ultimo, historia.conceito));
+
+  return {
+    id: `sinal-historia-${historia.cenario}-${resolucao.resultado.tipo}-${rng.inteiro(0, 99999)}`,
+    nivel,
+    // A história já pede o conjunto: repetir «escreva o conjunto solução»
+    // deixava a frase com dois pedidos iguais em sequência.
+    enunciado: historia.texto.enunciado,
+    traducoes: historia.texto.traducoes,
+    enunciadoTex: historia.tex,
+    gabarito,
+    resolucao: { resultado: gabarito, passos: resolucao.passos },
+    conceitos: [historia.conceito, 'sinal.modelagem'],
+    armadilhas: semColisoes(armadilhas, gabarito, mesmoConjunto),
+    dica: historia.texto.dica,
+  };
 }
 
 function montar(

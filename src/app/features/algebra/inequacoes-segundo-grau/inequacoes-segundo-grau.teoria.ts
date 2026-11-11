@@ -153,4 +153,54 @@ export const TEORIA_INEQUACOES_SEGUNDO_GRAU: readonly Teoria[] = [
     },
     vejaTambem: ['sinal.produto', 'inequacoes.representacao'],
   },
+  {
+    id: 'sinal.modelagem',
+    titulo: 'Entre ou fora: o que a situação está perguntando',
+    resumo: 'O quadro de sinais responde «onde» — a situação diz «o quê» é bom ali.',
+    definicao:
+      'Uma inequação do 2º grau tem sempre a mesma forma de resposta: um pedaço da reta ' +
+      'determinado pelas raízes. O que muda de um problema para outro é o SIGNIFICADO desse ' +
+      'pedaço. Lucro positivo costuma ficar ENTRE dois preços — abaixo deles não cobre o custo, ' +
+      'acima deles a demanda some. Custo abaixo de um limite também fica entre duas quantidades. ' +
+      'Já «nunca abaixo de zero», com discriminante negativo, não tem pedaço nenhum: a resposta ' +
+      'é todos os reais ou o vazio, e as duas são respostas legítimas.',
+    formulas: [
+      {
+        tex: 'a(x - r_1)(x - r_2) \\;\\text{tem o sinal de } a \\text{ FORA e o oposto ENTRE}',
+        legenda: 'A regra que o quadro de sinais mostra.',
+      },
+      {
+        tex: '\\Delta < 0 \\;\\Rightarrow\\; \\text{sempre o sinal de } a',
+        legenda: 'Sem raízes, não há troca de sinal: a resposta é «todos» ou «vazio».',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao:
+          'O lucro de uma peça é (p − 10)(50 − p): ele é zero nos dois preços em que a conta ' +
+          'empata, e positivo entre eles.',
+        tex: '(p - 10)(50 - p) > 0 \\;\\Longleftrightarrow\\; 10 < p < 50',
+      },
+      {
+        descricao:
+          'Um custo nunca fica negativo: se Δ < 0 e a > 0, o trinômio é positivo em toda a reta ' +
+          'e «custo < 0» não tem solução.',
+        tex: 'x^{2} + 2 > 0 \\;\\Rightarrow\\; S = \\mathbb{R}',
+        nota: '«Vazio» e «todos» são respostas — não sinais de que a conta deu errado.',
+      },
+      {
+        descricao:
+          'Na fração, o zero do denominador nunca entra: ali a expressão não existe, e nenhuma ' +
+          'relação com «ou igual» muda isso.',
+        tex: '\\frac{x+1}{x-3} \\geq 0 \\;\\Rightarrow\\; x \\leq -1 \\;\\text{ou}\\; x > 3',
+      },
+    ],
+    exemplo: {
+      enunciado:
+        'Com 60 m de cerca em três lados, a área menos 400 m² é −2x² + 60x − 400. Para que ' +
+        'larguras a área passa de 400 m²?',
+      passos: resolverInequacaoQuadraticaComPassos(-2, 60, -400, '>').passos,
+    },
+    vejaTambem: ['sinal.trinomio', 'sinal.delta', 'sinal.quociente'],
+  },
 ];

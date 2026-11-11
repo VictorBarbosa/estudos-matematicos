@@ -15,8 +15,9 @@
  * dela: enriquecer um gerador nunca pode ser desfeito por acidente. Subir o
  * número é sempre permitido, e o caminho é o dos tópicos já convertidos:
  * `razao-proporcao` (1 forma → 14/26/34/12), `operacoes-fundamentais`,
- * `funcao-afim` e `funcao-quadratica`, todos com um catálogo de situações
- * trilíngues.
+ * `funcao-afim`, `funcao-quadratica`, `inequacoes` (1/1/1/1 → 5/8/9/8) e
+ * `inequacoes-segundo-grau` (1/1/2/2 → 8/11/8/12), todos com um catálogo de
+ * situações trilíngues.
  *
  * Ampliar a régua: apague a entrada do tópico, rode a suíte, copie o número
  * novo e devolva-o aqui maior. O teste não é o lugar de decidir o conteúdo; é
@@ -32,15 +33,6 @@ const AMOSTRA = 600;
 /** Tópico → formas distintas no Fácil, no Médio, no Difícil e no Extremo. */
 const PISO: Readonly<Record<string, readonly [number, number, number, number]>> = {
   'analise-combinatoria': [2, 11, 11, 10],
-  /*
-   * O Difícil era 207 e passou a 200 em 10/11/2026 — não por queda de conteúdo.
-   *
-   * O gerador embaralhava as opções com `sort(() => rng.inteiro(-1, 1))`, e o
-   * `sort` consome o RNG um número de vezes que muda com a versão do Node: a
-   * mesma semente gerava 207 formas aqui (Node 26) e 205 no runner (Node 22).
-   * Trocado por `rng.embaralhar`, o fluxo ficou fixo — e o número passou a ser
-   * um só, 200, em qualquer motor. Guarda: `scripts/verificar-geradores.mjs`.
-   */
   'analise-dimensional': [194, 189, 200, 293],
   'angulos-e-triangulos': [15, 25, 19, 12],
   'aplicacoes-da-derivada': [2, 9, 11, 8],
@@ -97,8 +89,8 @@ const PISO: Readonly<Record<string, readonly [number, number, number, number]>> 
   'gravitacao-e-orbitas': [2, 6, 6, 5],
   'identidades-trigonometricas': [2, 3, 2, 1],
   'impulso-e-momento': [2, 3, 3, 2],
-  inequacoes: [1, 1, 1, 1],
-  'inequacoes-segundo-grau': [1, 1, 2, 2],
+  inequacoes: [5, 8, 9, 8],
+  'inequacoes-segundo-grau': [8, 11, 8, 12],
   'integrais-de-linha': [1, 1, 3, 2],
   'integrais-improprias': [1, 2, 3, 2],
   'integrais-multiplas': [1, 3, 3, 2],

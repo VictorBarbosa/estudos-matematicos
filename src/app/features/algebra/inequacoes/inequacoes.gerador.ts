@@ -5,7 +5,14 @@ import {
   formatarNumero,
   proximosEmCasas,
 } from '@core/treino/resposta-numerica/resposta-numerica';
-import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+import {
+  Exercicio,
+  GeradorExercicio,
+  Nivel,
+  SEM_FORMULA,
+  semColisoes,
+} from '@core/treino/models/treino.model';
+import { HistoriaInequacao, historiaPara } from '@features/algebra/inequacoes/inequacoes.contextos';
 
 /**
  * A resposta de uma inequação: o conjunto solução, não só a fronteira.
@@ -59,6 +66,18 @@ export const geradorInequacoes: GeradorExercicio<ConjuntoSolucao> = {
   formatoResposta: 'o conjunto solução, ex.: x > 3 · x <= -1,5 · x > 3/4',
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<ConjuntoSolucao> {
+    /*
+     * Metade das vezes a inequação nasce de uma história.
+     *
+     * A conta escrita treina o algoritmo; a história treina o que o algoritmo
+     * não ensina — decidir que «no máximo» vira ≤, que o frete é cobrado uma
+     * vez e que prejuízo é lucro negativo. Na história a fórmula NÃO aparece:
+     * montá-la é metade do exercício.
+     */
+    if (rng.booleano(0.5)) {
+      return exercicioComHistoria(nivel, rng);
+    }
+
     const { a, b, c, relacao } = sortear(nivel, rng);
 
     const resolucao = resolverInequacaoComPassos(a, b, relacao, c);
@@ -162,6 +181,138 @@ export const geradorInequacoes: GeradorExercicio<ConjuntoSolucao> = {
   formatar: ({ relacao, fronteira }) =>
     `x ${relacao === '<=' ? '≤' : relacao === '>=' ? '≥' : relacao} ${formatarNumero(fronteira, 2)}`,
 };
+
+/**
+ * A inequação que vem de uma situação.
+ *
+ * O modelo é o mesmo do caminho simbólico — `a·x + b REL c`, resolvido pelo
+ * mesmo `resolverInequacaoComPassos` —, então a resolução prova o gabarito do
+ * mesmo jeito. O que muda é de onde vem a inequação, e a armadilha ganha o
+ * vocabulário da história: «você leu “no máximo” como “pelo menos”» ensina
+ * mais que «o sentido foi trocado».
+ */
+function exercicioComHistoria(nivel: Nivel, rng: Rng): Exercicio<ConjuntoSolucao> {
+  const historia = historiaPara(nivel, rng);
+  const { a, b, c, relacao } = historia;
+
+  const resolucao = resolverInequacaoComPassos(a, b, relacao, c);
+  const { fronteira, relacao: relacaoFinal, intervaloTexto } = resolucao.resultado;
+  const gabarito: ConjuntoSolucao = { relacao: relacaoFinal, fronteira };
+
+  const dividePorNegativo = a < 0;
+  const estrita = relacaoFinal === '<' || relacaoFinal === '>';
+
+  return {
+    id: `inequacoes-historia-${historia.cenario}-${a}-${b}-${c}-${relacao}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado: historia.texto.enunciado,
+    traducoes: historia.texto.traducoes,
+    enunciadoTex: SEM_FORMULA,
+    gabarito,
+    resolucao: { resultado: gabarito, passos: resolucao.passos },
+    conceitos: dividePorNegativo
+      ? ['inequacoes.modelagem', 'inequacoes.inversao']
+      : ['inequacoes.modelagem', 'inequacoes.conjunto'],
+    armadilhas: semColisoes(
+      [
+        {
+          resposta: { relacao: INVERSA[relacaoFinal], fronteira },
+          diagnostico: dividePorNegativo
+            ? `A fronteira está certa, mas o SENTIDO não. Ao dividir por ${a}, que é negativo, ` +
+              'a desigualdade se inverte — e a história não muda isso. Confira com um exemplo: ' +
+              '2 < 3, mas −2 > −3.'
+            : 'O sentido está trocado, e aqui o coeficiente de x é POSITIVO: nada justifica ' +
+              'inverter. Confira se você leu «no máximo» como «pelo menos», ou «acima de» como ' +
+              '«abaixo de».',
+          diagnosticoTraducoes: {
+            fr: dividePorNegativo
+              ? `La frontière est juste, mais pas le SENS. En divisant par ${a}, qui est négatif, ` +
+                'l’inégalité s’inverse — et l’histoire n’y change rien.'
+              : 'Le sens est inversé, et ici le coefficient de x est POSITIF : rien ne justifie ' +
+                'de l’inverser. Vérifiez si vous avez lu « au maximum » comme « au moins ».',
+            en: dividePorNegativo
+              ? `The boundary is right, but the DIRECTION is not. Dividing by ${a}, which is ` +
+                'negative, flips the inequality — and the story does not change that.'
+              : 'The direction is flipped, and here the x coefficient is POSITIVE: nothing ' +
+                'justifies it. Check whether you read “at most” as “at least”.',
+          },
+          passo: resolucao.passos.length - 2,
+          conceito: dividePorNegativo ? 'inequacoes.inversao' : 'inequacoes.modelagem',
+        },
+        {
+          resposta: { relacao: relacaoFinal, fronteira: (c + b) / a },
+          diagnostico:
+            `Você somou ${Math.abs(b)} em vez de subtrair ao isolar x. O termo que está somando ` +
+            'de um lado passa SUBTRAINDO do outro — a operação precisa desfazer o que está ' +
+            'escrito.',
+          diagnosticoTraducoes: {
+            fr:
+              `Vous avez additionné ${Math.abs(b)} au lieu de soustraire. Le terme qui est ` +
+              'additionné d’un côté passe en soustraction de l’autre.',
+            en:
+              `You added ${Math.abs(b)} instead of subtracting. The term that is added on one ` +
+              'side moves across as a subtraction.',
+          },
+          passo: 1,
+          conceito: 'inequacoes.conjunto',
+        },
+        {
+          resposta: {
+            relacao: INVERSA[relacaoFinal],
+            fronteira: estrita ? fronteira : -fronteira,
+          },
+          diagnostico:
+            'Duas coisas mudaram de uma vez: o sentido e o sinal da fronteira. Resolva uma de ' +
+            'cada vez — primeiro isole x com o sentido certo, depois confira o sinal.',
+          diagnosticoTraducoes: {
+            fr:
+              'Deux choses ont changé à la fois : le sens et le signe de la frontière. Traitez ' +
+              'les deux séparément.',
+            en:
+              'Two things changed at once: the direction and the sign of the boundary. Handle ' +
+              'them one at a time.',
+          },
+          passo: resolucao.passos.length - 2,
+          conceito: 'inequacoes.conjunto',
+        },
+        {
+          resposta: {
+            relacao: estrita
+              ? relacaoFinal === '<'
+                ? '<='
+                : '>='
+              : relacaoFinal === '<='
+                ? '<'
+                : '>',
+            fronteira,
+          },
+          diagnostico: estrita
+            ? 'A fronteira NÃO entra no conjunto: a situação pede «a partir de» ou «acima de» ' +
+              'com valor exato, e a desigualdade é estrita.'
+            : 'A fronteira ENTRA no conjunto: a situação diz «no máximo» ou «pelo menos», que ' +
+              'é ≤ ou ≥, e não < ou >.',
+          diagnosticoTraducoes: {
+            fr: estrita
+              ? 'La frontière N’ENTRE PAS dans l’ensemble : la situation impose une inégalité ' +
+                'stricte.'
+              : 'La frontière ENTRE dans l’ensemble : la situation dit « au maximum » ou « au ' +
+                'moins », donc ≤ ou ≥, pas < ou >.',
+            en: estrita
+              ? 'The boundary does NOT enter the set: the situation calls for a strict ' +
+                'inequality.'
+              : 'The boundary DOES enter the set: the situation says “at most” or “at least”, ' +
+                'so ≤ or ≥, not < or >.',
+          },
+          passo: resolucao.passos.length - 1,
+          conceito: 'inequacoes.representacao',
+        },
+      ],
+      gabarito,
+      mesmoConjunto,
+    ),
+    dica: historia.texto.dica ?? `A solução é ${intervaloTexto}.`,
+  };
+}
 
 function sortear(nivel: Nivel, rng: Rng): { a: number; b: number; c: number; relacao: Relacao } {
   const relacao = rng.escolher(RELACOES);
