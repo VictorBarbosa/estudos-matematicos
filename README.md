@@ -263,6 +263,42 @@ refresh devolve a trilha exatamente onde ela estava.
 O **modo livre**, no painel da página inicial, destranca tudo para consulta sem apagar o
 progresso — ele também é lembrado entre sessões.
 
+## A prova surpresa
+
+A prova de fim de área chega anunciada: o aluno vence a última etapa, vê o
+convite e escolhe o dia. Ela mede o que ele sabe naquele dia.
+
+A prova surpresa mede outra coisa: **o que ficou**. Ela aparece sem aviso, de
+tempos em tempos (`Configurações → Prova surpresa`), e cobra tudo o que já foi
+vencido até ali — os tópicos fora do plano ficam de fora, como em todo o resto
+do site. Não há contagem regressiva de propósito: saber quando ela vem é o mesmo
+que saber o que revisar antes.
+
+O que a torna útil é o que a torna desconfortável:
+
+- **Ela não se adia.** Enquanto está aberta, o guard `semSurpresaAtivaGuard`
+  fecha os tópicos, a revisão do dia e a prova de área. Sobram a própria prova,
+  a home e as configurações — sem essas portas, um gerador com problema
+  prenderia o aluno numa tela sem saída.
+- **Ela sobrevive ao refresh.** O `localStorage` guarda o plano, a semente, a
+  questão atual e as respostas dadas. Os exercícios são sorteados de novo com a
+  mesma semente, porque os geradores são determinísticos — persistir os
+  exercícios prontos não funcionaria, já que o gabarito de Frações é uma
+  instância de classe e o JSON lhe tiraria os métodos de comparação.
+- **Abaixo de 75% (`Configurações`), os tópicos errados voltam a ser exigidos.**
+  O histórico deles é apagado — o que trava a trilha naquele ponto — e a
+  aprovação da área é revogada, senão ela valeria como «todos os tópicos
+  vencidos» e o trancamento não teria efeito. A tranca se desfaz sozinha quando
+  o tópico é vencido de novo: é o reestudar que a reprovação exige.
+
+```
+core/prova/
+  models/prova-surpresa.model.ts     quando ela é devida, o que cobra, a régua
+  services/prova-surpresa.service.ts o estado guardado, o trancamento, o resultado
+  surpresa.guard/                    o que fecha enquanto ela está aberta
+features/surpresa/                   a tela: questão, veredito, resultado
+```
+
 ## Revisão espaçada
 
 A trilha só anda para a frente. A rota `/revisar` faz o caminho de volta: uma fila diária de

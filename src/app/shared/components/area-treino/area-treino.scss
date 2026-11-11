@@ -266,3 +266,18 @@
     font-weight: 700;
   }
 }
+
+/*
+ * O aviso de trancamento.
+ *
+ * Ele fica acima do enunciado, e não no rodapé: quem chega aqui depois de uma
+ * reprovação na prova surpresa encontra o placar zerado, e a explicação tem de
+ * estar onde o olho vai primeiro.
+ */
+.trancado {
+  padding: var(--esp-3) var(--esp-4);
+  border-left: 4px solid var(--erro);
+  border-radius: 0 var(--raio-md) var(--raio-md) 0;
+  background: var(--erro-suave);
+  font-size: var(--texto-sm);
+}

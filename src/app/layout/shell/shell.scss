@@ -141,3 +141,45 @@
   font-weight: 700;
   letter-spacing: 0.04em;
 }
+
+/*
+ * O aviso da prova surpresa.
+ *
+ * Ele fica dentro do conteúdo, acima do roteador, e não no cabeçalho: no
+ * celular o cabeçalho já carrega cinco botões, e uma tarja ali espremeria o
+ * resto. Aqui ela aparece em toda página que não seja a própria prova.
+ */
+.prova-surpresa {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-4);
+  padding: var(--esp-3) var(--esp-4);
+  border: 1px solid var(--acento);
+  border-radius: var(--raio-md);
+  background: var(--acento-suave);
+  color: var(--texto);
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--superficie-3);
+  }
+
+  .marca {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--acento);
+    color: var(--acento-contraste);
+    font-weight: 700;
+    flex: none;
+  }
+
+  .texto {
+    font-size: var(--texto-sm);
+    font-weight: 600;
+  }
+}

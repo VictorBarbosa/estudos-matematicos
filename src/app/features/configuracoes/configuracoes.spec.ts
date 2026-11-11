@@ -40,12 +40,29 @@ describe('Configuracoes', () => {
     fixture.detectChanges();
   });
 
-  it('mostra os quatro blocos e os dez ajustes numéricos', () => {
-    expect(fixture.nativeElement.querySelectorAll('.bloco').length).toBe(4);
-    expect(fixture.nativeElement.querySelectorAll('.ajustes input').length).toBe(10);
+  it('mostra os cinco blocos e os quatorze ajustes numéricos', () => {
+    expect(fixture.nativeElement.querySelectorAll('.bloco').length).toBe(5);
+    expect(fixture.nativeElement.querySelectorAll('.ajustes input').length).toBe(15);
+    expect(fixture.nativeElement.querySelectorAll('.ajustes input[type="number"]').length).toBe(14);
     expect(texto()).toContain('Para abrir a próxima etapa');
     expect(texto()).toContain('Prova final da sessão');
+    expect(texto()).toContain('Prova surpresa');
     expect(texto()).toContain('O seu plano de estudo');
+  });
+
+  it('a prova surpresa liga e desliga por caixa de seleção', () => {
+    // Os outros ajustes são números; este é o único 0/1, e um campo numérico
+    // pedindo «0 ou 1» seria pior que uma caixa.
+    const caixa = fixture.nativeElement.querySelector(
+      '.ajustes input[type="checkbox"]',
+    ) as HTMLInputElement;
+
+    expect(caixa.checked).toBe(true);
+
+    caixa.click();
+
+    expect(config.surpresa().ativa).toBe(0);
+    expect(caixa.checked).toBe(false);
   });
 
   it('escrever um número guarda o ajuste', async () => {

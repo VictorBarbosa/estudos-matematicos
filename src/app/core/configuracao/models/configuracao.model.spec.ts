@@ -19,6 +19,13 @@ describe('configuração', () => {
       },
       escada: { acertosParaSubir: 3, errosParaDescer: 2 },
       prova: { percentualDeAcerto: 75, minimoDeQuestoes: 8, questoesPorTopico: 2 },
+      surpresa: {
+        ativa: 1,
+        intervaloEmDias: 7,
+        minimoDeTopicos: 3,
+        questoesPorTopico: 1,
+        percentualDeAcerto: 75,
+      },
     });
   });
 

@@ -81,6 +81,17 @@ export class AreaTreino {
   protected readonly alvoExigente = ACERTOS_EXIGENTES;
   protected readonly acertosPorTipo = ACERTOS_POR_TIPO;
 
+  /**
+   * O tópico está trancado por uma reprovação na prova surpresa?
+   *
+   * O aviso existe porque o efeito é brutal e silencioso: o progresso do
+   * tópico é apagado, e sem uma frase explicando, o aluno acharia que o site
+   * perdeu os dados.
+   */
+  protected readonly trancado = computed(() =>
+    this.progressao.estaTrancado(this.gerador().topicoId),
+  );
+
   /** Como este tópico está em relação ao critério de domínio. */
   protected readonly dominio = computed(() => this.progressao.dominioEm(this.gerador().topicoId));
 

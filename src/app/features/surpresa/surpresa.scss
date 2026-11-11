@@ -1,0 +1,147 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.surpresa {
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+.cabecalho h1 {
+  font-size: var(--texto-3xl);
+}
+
+.descricao {
+  margin-top: var(--esp-2);
+  max-width: 58ch;
+  font-size: var(--texto-lg);
+  color: var(--texto-suave);
+}
+
+.carregando {
+  color: var(--texto-suave);
+}
+
+.painel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-5);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-lg);
+  background: var(--superficie);
+  box-shadow: var(--sombra-1);
+}
+
+.andamento {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+}
+
+.progresso {
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.barra {
+  height: 6px;
+  border-radius: var(--raio-sm);
+  background: var(--superficie-3);
+  overflow: hidden;
+}
+
+.barra .feita {
+  height: 100%;
+  background: var(--acento);
+  transition: width 0.2s ease;
+}
+
+.enunciado p {
+  font-size: var(--texto-lg);
+  line-height: 1.5;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+}
+
+.principal {
+  @include botao-base;
+
+  align-self: flex-start;
+  background: var(--acento);
+  color: var(--acento-contraste);
+
+  &:hover:not(:disabled) {
+    background: var(--acento-forte);
+  }
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+}
+
+.veredito {
+  padding: var(--esp-3) var(--esp-4);
+  border-left: 4px solid var(--borda);
+  border-radius: 0 var(--raio-md) var(--raio-md) 0;
+  background: var(--superficie-2);
+}
+
+.veredito[data-veredito='correto'] {
+  border-left-color: var(--acerto);
+  background: var(--acerto-suave);
+}
+
+.veredito[data-veredito='incorreto'] {
+  border-left-color: var(--erro);
+  background: var(--erro-suave);
+}
+
+.gabarito,
+.diagnostico,
+.aviso,
+.numeros {
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.diagnostico {
+  padding: var(--esp-3);
+  border-left: 3px solid var(--acento);
+  border-radius: 0 var(--raio-sm) var(--raio-sm) 0;
+  background: var(--superficie-2);
+}
+
+.resolucao h3 {
+  margin-bottom: var(--esp-3);
+  font-size: var(--texto-base);
+  color: var(--texto-suave);
+}
+
+.resultado h2 {
+  font-size: var(--texto-2xl);
+}
+
+.resultado[data-aprovado='true'] h2 {
+  color: var(--acerto);
+}
+
+.resultado[data-aprovado='false'] h2 {
+  color: var(--erro);
+}
+
+.trancados {
+  margin: 0;
+  padding-left: var(--esp-5);
+}

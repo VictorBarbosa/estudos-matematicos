@@ -1,0 +1,132 @@
+{
+  "titulo": {
+    "pt": "Prova surpresa",
+    "fr": "Examen surprise",
+    "en": "Surprise test"
+  },
+  "subtitulo": {
+    "pt": "Sem aviso, sobre tudo o que você já venceu: {total} questões, {tolerados} erro(s) tolerado(s) para {percentual}% de acerto.",
+    "fr": "Sans préavis, sur tout ce que vous avez déjà validé : {total} questions, {tolerados} erreur(s) tolérée(s) pour {percentual} % de réussite.",
+    "en": "Unannounced, on everything you have already cleared: {total} questions, {tolerados} mistake(s) allowed for {percentual}% correct."
+  },
+  "carregando": {
+    "pt": "Sorteando as questões…",
+    "fr": "Tirage des questions…",
+    "en": "Drawing the questions…"
+  },
+  "semProva": {
+    "pt": "Nenhuma prova surpresa em andamento.",
+    "fr": "Aucun examen surprise en cours.",
+    "en": "No surprise test in progress."
+  },
+  "semProvaAjuda": {
+    "pt": "Ela aparece sozinha, de tempos em tempos, cobrando tudo o que você já venceu — os tópicos fora do plano ficam de fora, como em todo o resto do site. Não há contagem regressiva: saber quando ela vem é o que permite revisar antes.",
+    "fr": "Il apparaît tout seul, de temps en temps, sur tout ce que vous avez validé — les sujets hors du plan n’en font pas partie, comme partout ailleurs. Il n’y a pas de compte à rebours : savoir quand il arrive permettrait de réviser avant.",
+    "en": "It shows up on its own, now and then, covering everything you have cleared — topics outside your plan stay out, as everywhere else. There is no countdown: knowing when it comes is what lets you revise first."
+  },
+  "elegiveis": {
+    "pt": "Hoje ela cobraria {quantos} tópico(s), em {questoes} questão(ões).",
+    "fr": "Aujourd’hui, il porterait sur {quantos} sujet(s), en {questoes} question(s).",
+    "en": "Today it would cover {quantos} topic(s), in {questoes} question(s)."
+  },
+  "desligada": {
+    "pt": "A prova surpresa está desligada nas configurações.",
+    "fr": "L’examen surprise est désactivé dans les réglages.",
+    "en": "The surprise test is turned off in the settings."
+  },
+  "proximaEm": {
+    "pt": "A próxima é devida a partir de {quando}.",
+    "fr": "Le prochain est dû à partir du {quando}.",
+    "en": "The next one is due from {quando}."
+  },
+  "questaoDeTotal": {
+    "pt": "Questão {numero} de {total}",
+    "fr": "Question {numero} sur {total}",
+    "en": "Question {numero} of {total}"
+  },
+  "suaResposta": {
+    "pt": "Sua resposta",
+    "fr": "Votre réponse",
+    "en": "Your answer"
+  },
+  "responder": {
+    "pt": "Responder",
+    "fr": "Répondre",
+    "en": "Answer"
+  },
+  "proxima": {
+    "pt": "Próxima questão",
+    "fr": "Question suivante",
+    "en": "Next question"
+  },
+  "terminar": {
+    "pt": "Ver o resultado",
+    "fr": "Voir le résultat",
+    "en": "See the result"
+  },
+  "correto": {
+    "pt": "Correto.",
+    "fr": "Correct.",
+    "en": "Correct."
+  },
+  "gabarito": {
+    "pt": "A resposta era {valor}.",
+    "fr": "La réponse était {valor}.",
+    "en": "The answer was {valor}."
+  },
+  "comoSeResolve": {
+    "pt": "Onde a conta saiu do trilho",
+    "fr": "Où le calcul a déraillé",
+    "en": "Where the work went off track"
+  },
+  "aprovadoTitulo": {
+    "pt": "Passou",
+    "fr": "Réussi",
+    "en": "Passed"
+  },
+  "aprovadoResumo": {
+    "pt": "{acertos} acertos em {total} questões ({percentual}%). Nada foi trancado, e a próxima aparece quando o intervalo vencer.",
+    "fr": "{acertos} bonnes réponses sur {total} questions ({percentual} %). Rien n’a été verrouillé, et le prochain arrivera à la fin de l’intervalle.",
+    "en": "{acertos} correct of {total} questions ({percentual}%). Nothing was locked, and the next one appears when the interval is up."
+  },
+  "reprovadoTitulo": {
+    "pt": "Abaixo do mínimo",
+    "fr": "Sous le minimum",
+    "en": "Below the minimum"
+  },
+  "reprovadoResumo": {
+    "pt": "{acertos} acertos em {total} questões ({percentual}%), abaixo dos {exigido}% exigidos. Os tópicos em que você errou voltam a ser exigidos, e as etapas seguintes ficam trancadas até você vencê-los de novo.",
+    "fr": "{acertos} bonnes réponses sur {total} questions ({percentual} %), sous les {exigido} % exigés. Les sujets où vous avez échoué redeviennent obligatoires, et les étapes suivantes restent verrouillées jusqu’à ce que vous les validiez de nouveau.",
+    "en": "{acertos} correct of {total} questions ({percentual}%), below the {exigido}% required. The topics you missed are required again, and the following stages stay locked until you clear them once more."
+  },
+  "reprovadoPorque": {
+    "pt": "A prova não existe para punir: existe para mostrar o que não ficou. Errar aqui é a informação mais útil que este site dá — e é por isso que ela vem sem aviso.",
+    "fr": "L’examen n’est pas là pour punir : il est là pour montrer ce qui n’est pas resté. Se tromper ici est l’information la plus utile que ce site puisse donner — et c’est pour cela qu’il arrive sans préavis.",
+    "en": "The test is not there to punish: it is there to show what did not stick. Getting it wrong here is the most useful information this site gives — and that is why it arrives unannounced."
+  },
+  "trancados": {
+    "pt": "Tópicos a reestudar",
+    "fr": "Sujets à retravailler",
+    "en": "Topics to rework"
+  },
+  "reestudar": {
+    "pt": "Reestudar {topico}",
+    "fr": "Retravailler {topico}",
+    "en": "Rework {topico}"
+  },
+  "voltarAoInicio": {
+    "pt": "Voltar ao início",
+    "fr": "Revenir à l’accueil",
+    "en": "Back to the start"
+  },
+  "ultimoResultado": {
+    "pt": "Última prova: {acertos} de {total} ({percentual}%).",
+    "fr": "Dernier examen : {acertos} sur {total} ({percentual} %).",
+    "en": "Last test: {acertos} of {total} ({percentual}%)."
+  },
+  "trancadoAviso": {
+    "pt": "Este tópico está trancado por uma reprovação na prova surpresa. Vença o critério de novo para destrancá-lo.",
+    "fr": "Ce sujet est verrouillé à la suite d’un échec à l’examen surprise. Validez de nouveau le critère pour le déverrouiller.",
+    "en": "This topic is locked after a failed surprise test. Meet the criterion again to unlock it."
+  }
+}

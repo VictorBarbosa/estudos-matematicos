@@ -155,6 +155,25 @@ export class ProvaService {
     });
   }
 
+  /**
+   * Esquece a aprovação de UMA sessão, sem tocar no progresso dos tópicos.
+   *
+   * Quem usa é a prova surpresa: ao reprovar um tópico de uma área cuja prova
+   * já foi passada, a aprovação da área esconderia o trancamento — ela vale
+   * como «todos os tópicos vencidos». Esquecê-la devolve a área ao estado de
+   * «prova pendente», que é o que a reprovação quer dizer.
+   */
+  esquecerVitoria(sessaoId: string): void {
+    if (!this.vencidas().has(sessaoId)) {
+      return;
+    }
+
+    this.guardar({
+      versao: 1,
+      vencidas: this.estado().vencidas.filter((id) => id !== sessaoId),
+    });
+  }
+
   /** Esquece todas as aprovações. Chamado ao recomeçar a trilha do zero. */
   limpar(): void {
     this.estado.set({ versao: 1, vencidas: [] });

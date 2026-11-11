@@ -41,6 +41,12 @@
     </dl>
   </header>
 
+  @if (trancado()) {
+    <p class="trancado" role="alert">
+      {{ i18n.t('treino.trancadoPelaSurpresa') }}
+    </p>
+  }
+
   <div class="enunciado">
     <p>{{ enunciado() }}</p>
     <!-- Sem fórmula quando o exercício é só o enunciado: montar a expressão

@@ -1,6 +1,7 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
 import { ProvaService } from '@core/prova/services/prova.service';
+import { ProvaSurpresaService } from '@core/prova/services/prova-surpresa.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import {
   ACERTOS_EXIGENTES,
@@ -46,6 +47,7 @@ const CHAVE_MODO_LIVRE = 'estudos-matematicos.modo-livre.v1';
 export class ProgressaoService {
   private readonly progresso = inject(ProgressoService);
   private readonly prova = inject(ProvaService);
+  private readonly surpresa = inject(ProvaSurpresaService);
   private readonly configuracao = inject(ConfiguracaoService);
   private readonly livre = signal(carregarModoLivre());
 
@@ -69,21 +71,44 @@ export class ProgressaoService {
     const historicos = this.progresso.porHistorico();
     const conceitos = this.progresso.porConceito();
     const provasVencidas = this.prova.vencidas();
+    /*
+     * O trancamento da prova surpresa vem ANTES de tudo.
+     *
+     * Ele precisa vencer até a aprovação da área: uma prova de área vencida
+     * vale como «todos os tópicos dela vencidos», e sem esta precedência o
+     * tópico reprovado na surpresa continuaria contando como vencido — o
+     * trancamento não teria efeito nenhum.
+     */
+    const trancados = this.surpresa.trancadosAtivos();
 
     return new Set(
       this.trilha()
         .filter(
           (etapa) =>
-            provasVencidas.has(etapa.areaId) ||
-            dominioDe(
-              historicos[etapa.topicoId] ?? [],
-              etapa.topicoId,
-              conceitos,
-              this.configuracao.etapa(),
-            ).vencido,
+            !trancados.has(etapa.topicoId) &&
+            (provasVencidas.has(etapa.areaId) ||
+              dominioDe(
+                historicos[etapa.topicoId] ?? [],
+                etapa.topicoId,
+                conceitos,
+                this.configuracao.etapa(),
+              ).vencido),
         )
         .map((etapa) => etapa.topicoId),
     );
+  });
+
+  /** O tópico está trancado por uma reprovação na prova surpresa? */
+  estaTrancado(topicoId: string): boolean {
+    return this.surpresa.trancadosAtivos().has(topicoId);
+  }
+
+  /** Os tópicos trancados por reprovação, na ordem da trilha. */
+  readonly trancados = computed(() => {
+    const trancados = this.surpresa.trancadosAtivos();
+    return this.trilha()
+      .filter((etapa) => trancados.has(etapa.topicoId))
+      .map((etapa) => ({ topicoId: etapa.topicoId, titulo: etapa.titulo, rota: etapa.rota }));
   });
 
   /**
@@ -255,6 +280,7 @@ export class ProgressaoService {
   reiniciar(): void {
     this.progresso.limpar();
     this.prova.limpar();
+    this.surpresa.limpar();
     this.definirModoLivre(false);
   }
 

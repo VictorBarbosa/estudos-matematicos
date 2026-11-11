@@ -47,10 +47,36 @@ export interface RegraDaProva {
   readonly questoesPorTopico: number;
 }
 
+/**
+ * A prova surpresa.
+ *
+ * Uma prova de fim de área mede a área; esta mede o que ficou do estudo
+ * inteiro, e aparece sem aviso — é justamente o aviso que permite revisar
+ * antes e desmanchar a medida. O que se pode ajustar é a FREQUÊNCIA e a régua,
+ * não o momento.
+ *
+ * `ativa` é 0 ou 1 porque o resto da configuração é numérica: o mesmo
+ * `definir`/`validar`/`harmonizar` vale para ela sem um caminho paralelo para
+ * booleanos, e a tela desenha uma caixa de seleção no lugar do campo.
+ */
+export interface ConfiguracaoSurpresa {
+  /** 0 desliga, 1 liga. */
+  readonly ativa: number;
+  /** Dias entre uma prova surpresa e a seguinte. */
+  readonly intervaloEmDias: number;
+  /** Quantos tópicos já vencidos são necessários para a primeira prova. */
+  readonly minimoDeTopicos: number;
+  /** Quantas vezes cada tópico entra, com pergunta diferente. */
+  readonly questoesPorTopico: number;
+  /** Acerto mínimo, em %, para não trancar nada. */
+  readonly percentualDeAcerto: number;
+}
+
 export interface Configuracao {
   readonly etapa: CriterioDaEtapa;
   readonly escada: EscadaDeNivel;
   readonly prova: RegraDaProva;
+  readonly surpresa: ConfiguracaoSurpresa;
 }
 
 /** Os valores de fábrica: exatamente os que o site usava antes desta tela. */
@@ -71,6 +97,13 @@ export const CONFIGURACAO_PADRAO: Configuracao = {
     minimoDeQuestoes: 8,
     questoesPorTopico: 2,
   },
+  surpresa: {
+    ativa: 1,
+    intervaloEmDias: 7,
+    minimoDeTopicos: 3,
+    questoesPorTopico: 1,
+    percentualDeAcerto: 75,
+  },
 };
 
 /** O caminho de um ajuste dentro da configuração: `['etapa', 'acertosNaJanela']`. */
@@ -78,7 +111,8 @@ export type Grupo = keyof Configuracao;
 export type Ajuste =
   | readonly ['etapa', keyof CriterioDaEtapa]
   | readonly ['escada', keyof EscadaDeNivel]
-  | readonly ['prova', keyof RegraDaProva];
+  | readonly ['prova', keyof RegraDaProva]
+  | readonly ['surpresa', keyof ConfiguracaoSurpresa];
 
 /** Até onde cada ajuste pode ir, e o que ele significa na tela. */
 export interface LimiteDoAjuste {
@@ -105,6 +139,11 @@ export const LIMITES: readonly LimiteDoAjuste[] = [
   { ajuste: ['prova', 'percentualDeAcerto'], minimo: 50, maximo: 100 },
   { ajuste: ['prova', 'minimoDeQuestoes'], minimo: 1, maximo: 60 },
   { ajuste: ['prova', 'questoesPorTopico'], minimo: 1, maximo: 3 },
+  { ajuste: ['surpresa', 'ativa'], minimo: 0, maximo: 1 },
+  { ajuste: ['surpresa', 'intervaloEmDias'], minimo: 1, maximo: 90 },
+  { ajuste: ['surpresa', 'minimoDeTopicos'], minimo: 1, maximo: 40 },
+  { ajuste: ['surpresa', 'questoesPorTopico'], minimo: 1, maximo: 3 },
+  { ajuste: ['surpresa', 'percentualDeAcerto'], minimo: 50, maximo: 100 },
 ];
 
 function limiteDe(ajuste: Ajuste): LimiteDoAjuste {

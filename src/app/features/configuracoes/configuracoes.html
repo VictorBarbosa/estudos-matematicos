@@ -18,16 +18,30 @@
             </label>
 
             <div class="controle">
-              <input
-                type="number"
-                [id]="campo.chave"
-                [value]="campo.valor"
-                [min]="campo.minimo"
-                [max]="campo.maximo"
-                step="1"
-                inputmode="numeric"
-                (change)="definir(campo.ajuste, $any($event.target).value)"
-              />
+              <!--
+                A prova surpresa liga e desliga: é a única chave de 0 e 1 da
+                tela, e um campo numérico pedindo «0 ou 1» seria pior que uma
+                caixa de seleção.
+              -->
+              @if (campo.ajuste[1] === 'ativa') {
+                <input
+                  type="checkbox"
+                  [id]="campo.chave"
+                  [checked]="surpresaAtivaLigada()"
+                  (change)="alternarSurpresa()"
+                />
+              } @else {
+                <input
+                  type="number"
+                  [id]="campo.chave"
+                  [value]="campo.valor"
+                  [min]="campo.minimo"
+                  [max]="campo.maximo"
+                  step="1"
+                  inputmode="numeric"
+                  (change)="definir(campo.ajuste, $any($event.target).value)"
+                />
+              }
               @if (campo.mudado) {
                 <span class="padrao">{{ i18n.t('config.padrao', { valor: campo.padrao }) }}</span>
               }
@@ -41,6 +55,22 @@
         <p class="resumo">{{ resumoDaEtapa() }}</p>
       } @else if (bloco.id === 'prova') {
         <p class="resumo">{{ resumoDaProva() }}</p>
+      } @else if (bloco.id === 'surpresa') {
+        <p class="resumo">{{ resumoDaSurpresa() }}</p>
+
+        <!-- A saída de emergência fica aqui, longe da prova, para não parecer
+             um botão de desistir. -->
+        @if (surpresaAtiva(); as ativa) {
+          <p class="resumo">{{ i18n.t('config.emAndamento') }} ({{ ativa.itens.length }})</p>
+          <button type="button" class="texto" (click)="encerrarSurpresa()">
+            {{ i18n.t('config.encerrar') }}
+          </button>
+          <p class="ajuda">{{ i18n.t('config.encerrarAjuda') }}</p>
+        }
+
+        @if (trancados() > 0) {
+          <p class="resumo">{{ i18n.t('config.trancadosAtuais', { quantos: trancados() }) }}</p>
+        }
       }
     </section>
   }

@@ -1,4 +1,5 @@
 import { toleranciaDaProva } from '@core/prova/models/prova.model';
+import { ProvaSurpresaService } from '@core/prova/services/prova-surpresa.service';
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import {
@@ -56,6 +57,11 @@ const ORDEM: readonly Ajuste[] = [
   ['prova', 'percentualDeAcerto'],
   ['prova', 'minimoDeQuestoes'],
   ['prova', 'questoesPorTopico'],
+  ['surpresa', 'ativa'],
+  ['surpresa', 'intervaloEmDias'],
+  ['surpresa', 'minimoDeTopicos'],
+  ['surpresa', 'questoesPorTopico'],
+  ['surpresa', 'percentualDeAcerto'],
 ];
 
 /**
@@ -75,13 +81,18 @@ const ORDEM: readonly Ajuste[] = [
 export class Configuracoes {
   protected readonly i18n = inject(I18nService);
   private readonly servico = inject(ConfiguracaoService);
+  private readonly provaSurpresa = inject(ProvaSurpresaService);
+
+  /** A prova surpresa aberta agora, se houver. */
+  protected readonly surpresaAtiva = this.provaSurpresa.ativa;
+  protected readonly trancados = computed(() => this.provaSurpresa.trancadosAtivos().size);
 
   protected readonly intocada = this.servico.intocada;
 
   protected readonly blocos = computed<readonly Bloco[]>(() => {
     const atual = this.servico.configuracao();
 
-    return (['etapa', 'escada', 'prova'] as const).map((id) => ({
+    return (['etapa', 'escada', 'prova', 'surpresa'] as const).map((id) => ({
       id,
       campos: ORDEM.filter((ajuste) => ajuste[0] === id).map((ajuste) => this.campo(ajuste, atual)),
     }));
@@ -107,6 +118,35 @@ export class Configuracoes {
       tolerados: toleranciaDaProva(prova.minimoDeQuestoes, prova),
     });
   });
+
+  /** Como a prova surpresa vai funcionar agora, em palavras. */
+  protected readonly resumoDaSurpresa = computed(() => {
+    const { surpresa } = this.servico.configuracao();
+    return this.i18n.t('config.resumoSurpresa', {
+      dias: surpresa.intervaloEmDias,
+      questoes: this.provaSurpresa.tamanhoPrevisto(),
+      quantos: this.provaSurpresa.quantosElegiveis(),
+      percentual: surpresa.percentualDeAcerto,
+    });
+  });
+
+  /** A prova surpresa está ligada? A tela mostra a caixa marcada. */
+  protected readonly surpresaAtivaLigada = computed(() => this.servico.surpresa().ativa === 1);
+
+  protected alternarSurpresa(): void {
+    this.servico.definir(['surpresa', 'ativa'], this.surpresaAtivaLigada() ? 0 : 1);
+  }
+
+  /**
+   * Encerra a prova surpresa aberta sem avaliar.
+   *
+   * É a saída de emergência: existe para que um gerador com problema não
+   * prenda o aluno numa prova que ele não consegue terminar. Fica aqui, e não
+   * na prova, justamente para não parecer um botão de fuga.
+   */
+  protected encerrarSurpresa(): void {
+    this.provaSurpresa.encerrarSemAvaliar();
+  }
 
   /** O currículo inteiro, marcando o que está dentro do plano. */
   protected readonly areas = computed<readonly AreaEscolhivel[]>(() => {
@@ -178,7 +218,9 @@ export class Configuracoes {
 
     return {
       ajuste,
-      chave: `config.${chave}`,
+      // A chave leva o grupo: `questoesPorTopico` existe na prova e na
+      // surpresa, com textos diferentes.
+      chave: `config.${grupo}.${chave}`,
       valor,
       padrao,
       minimo: limite.minimo,

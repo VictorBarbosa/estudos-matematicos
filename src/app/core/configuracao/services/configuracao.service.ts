@@ -37,6 +37,7 @@ export class ConfiguracaoService {
   readonly etapa = computed(() => this.estado().etapa);
   readonly escada = computed(() => this.estado().escada);
   readonly prova = computed(() => this.estado().prova);
+  readonly surpresa = computed(() => this.estado().surpresa);
 
   /** Está tudo como veio de fábrica? */
   readonly intocada = computed(() => ehPadrao(this.estado()) && this.fora().size === 0);

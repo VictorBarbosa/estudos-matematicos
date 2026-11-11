@@ -129,6 +129,22 @@
     }
 
     <main class="conteudo">
+      <!--
+        A prova surpresa acompanha o aluno por todo o site.
+
+        O guard já impede abrir tópicos enquanto ela está aberta; o aviso é o
+        que explica por que a porta fechou, e leva direto à questão da vez.
+        Sem ele, quem tenta abrir um tópico volta para a home sem entender.
+      -->
+      @if (surpresa.ativa(); as ativa) {
+        <a class="prova-surpresa" routerLink="/surpresa">
+          <span class="marca" aria-hidden="true">!</span>
+          <span class="texto">
+            {{ i18n.t('surpresa.banner', { atual: ativa.indice + 1, total: ativa.itens.length }) }}
+          </span>
+        </a>
+      }
+
       <router-outlet />
     </main>
   </div>

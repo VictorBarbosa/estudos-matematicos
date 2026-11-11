@@ -1,0 +1,174 @@
+<section class="surpresa">
+  <header class="cabecalho">
+    <h1>{{ texto('titulo') }}</h1>
+
+    @if (fase() === 'respondendo') {
+      <p class="descricao">
+        {{
+          texto('subtitulo', {
+            total: total(),
+            tolerados: tolerados(),
+            percentual: regra().percentualDeAcerto,
+          })
+        }}
+      </p>
+    }
+  </header>
+
+  @if (fase() === 'carregando') {
+    <p class="carregando" role="status">{{ texto('carregando') }}</p>
+  }
+
+  @if (fase() === 'sem-prova') {
+    <section class="painel">
+      <h2>{{ texto('semProva') }}</h2>
+      <p>{{ texto('semProvaAjuda') }}</p>
+
+      @if (regra().ativa !== 1) {
+        <p class="aviso">{{ texto('desligada') }}</p>
+      } @else {
+        <p class="numeros">
+          {{ texto('elegiveis', { quantos: elegiveis(), questoes: previstas() }) }}
+        </p>
+      }
+
+      @if (ultimoResultado(); as ultimo) {
+        <p class="numeros">
+          {{
+            texto('ultimoResultado', {
+              acertos: ultimo.acertos,
+              total: ultimo.total,
+              percentual: ultimo.percentual,
+            })
+          }}
+        </p>
+      }
+
+      <a class="principal" routerLink="/">{{ texto('voltarAoInicio') }}</a>
+    </section>
+  }
+
+  @if (fase() === 'respondendo' && questao(); as q) {
+    <section class="painel">
+      <div class="andamento">
+        <span class="progresso">
+          {{ texto('questaoDeTotal', { numero: numero(), total: total() }) }}
+        </span>
+        <div
+          class="barra"
+          role="progressbar"
+          [attr.aria-valuenow]="numero()"
+          [attr.aria-valuemin]="1"
+          [attr.aria-valuemax]="total()"
+        >
+          <div class="feita" [style.width.%]="(numero() / total()) * 100"></div>
+        </div>
+      </div>
+
+      <div class="enunciado">
+        <p>{{ enunciado() }}</p>
+        @if (q.exercicio.enunciadoTex !== '') {
+          <app-formula [tex]="q.exercicio.enunciadoTex" [bloco]="true" />
+        }
+      </div>
+
+      <!-- Sem dica e sem resolução antes de responder: numa prova surpresa,
+           consultar é a própria pergunta que se está respondendo. -->
+      <app-campo-resposta
+        #campo
+        [(valor)]="resposta"
+        [rotulo]="texto('suaResposta')"
+        [ajuda]="ajudaDoFormato()"
+        [simbolos]="q.gerador.simbolos ?? []"
+        [estado]="estadoCampo()"
+        [bloqueado]="corrigida()"
+        (enviar)="responder()"
+      />
+
+      <div class="acoes">
+        @if (corrigida()) {
+          <button type="button" class="principal" (click)="proxima()">
+            {{ ultima() ? texto('terminar') : texto('proxima') }}
+          </button>
+        } @else {
+          <button
+            type="button"
+            class="principal"
+            [disabled]="resposta().trim() === ''"
+            (click)="responder()"
+          >
+            {{ texto('responder') }}
+          </button>
+        }
+      </div>
+
+      <div class="feedback" role="status" aria-live="polite">
+        @if (validacao(); as v) {
+          <p class="veredito" [attr.data-veredito]="v.veredito">
+            {{ v.veredito === 'correto' ? texto('correto') : v.mensagem }}
+          </p>
+
+          @if (v.veredito === 'incorreto') {
+            <p class="gabarito">{{ texto('gabarito', { valor: gabarito() }) }}</p>
+
+            @if (diagnostico(); as d) {
+              <p class="diagnostico">{{ d }}</p>
+            }
+
+            <section class="resolucao">
+              <h3>{{ texto('comoSeResolve') }}</h3>
+              <app-passo-a-passo
+                [passos]="q.exercicio.resolucao.passos"
+                [passoDestacado]="v.passoDivergente ?? null"
+              />
+            </section>
+          }
+        }
+      </div>
+    </section>
+  }
+
+  @if (fase() === 'terminada') {
+    @if (resultado(); as r) {
+      <section class="painel resultado" [attr.data-aprovado]="r.aprovado">
+        <h2>{{ r.aprovado ? texto('aprovadoTitulo') : texto('reprovadoTitulo') }}</h2>
+
+        <p>
+          @if (r.aprovado) {
+            {{
+              texto('aprovadoResumo', {
+                acertos: r.acertos,
+                total: r.total,
+                percentual: r.percentual,
+              })
+            }}
+          } @else {
+            {{
+              texto('reprovadoResumo', {
+                acertos: r.acertos,
+                total: r.total,
+                percentual: r.percentual,
+                exigido: regra().percentualDeAcerto,
+              })
+            }}
+          }
+        </p>
+
+        @if (!r.aprovado) {
+          <p class="aviso">{{ texto('reprovadoPorque') }}</p>
+
+          @if (r.reprovados.length > 0) {
+            <h3>{{ texto('trancados') }}</h3>
+            <ul class="trancados">
+              @for (topicoId of r.reprovados; track topicoId) {
+                <li>{{ i18n.tituloDoTopico(topicoId) }}</li>
+              }
+            </ul>
+          }
+        }
+
+        <a class="principal" routerLink="/">{{ texto('voltarAoInicio') }}</a>
+      </section>
+    }
+  }
+</section>
