@@ -12,7 +12,7 @@
         class="folha buraco"
         [class.escolhida]="ehSelecionada(caminho)"
         [attr.aria-label]="rotulo(no, 'rascunho.papel.buraco')"
-        [attr.aria-pressed]="ehSelecionada(caminho)"
+        [attr.aria-current]="ehSelecionada(caminho) ? 'true' : null"
         (click)="aoEscolher(caminho)"
       >
         <span aria-hidden="true">▢</span>
@@ -25,7 +25,7 @@
         class="folha numero"
         [class.escolhida]="ehSelecionada(caminho)"
         [attr.aria-label]="rotulo(no, 'rascunho.papel.numero')"
-        [attr.aria-pressed]="ehSelecionada(caminho)"
+        [attr.aria-current]="ehSelecionada(caminho) ? 'true' : null"
         (click)="aoEscolher(caminho)"
       >
         {{ numero(no) }}
@@ -38,7 +38,7 @@
         class="folha incognita"
         [class.escolhida]="ehSelecionada(caminho)"
         [attr.aria-label]="rotulo(no, 'rascunho.papel.incognita')"
-        [attr.aria-pressed]="ehSelecionada(caminho)"
+        [attr.aria-current]="ehSelecionada(caminho) ? 'true' : null"
         (click)="aoEscolher(caminho)"
       >
         x
@@ -69,7 +69,7 @@
             class="sinal"
             [class.escolhida]="ehSelecionada(caminho)"
             [attr.aria-label]="rotulo(no, 'rascunho.papel.operacao')"
-            [attr.aria-pressed]="ehSelecionada(caminho)"
+            [attr.aria-current]="ehSelecionada(caminho) ? 'true' : null"
             (click)="aoEscolher(caminho)"
           >
             {{ sinalDe(no.operador) }}
@@ -104,7 +104,7 @@
           class="barra"
           [class.escolhida]="ehSelecionada(caminho)"
           [attr.aria-label]="rotulo(no, 'rascunho.papel.fracao')"
-          [attr.aria-pressed]="ehSelecionada(caminho)"
+          [attr.aria-current]="ehSelecionada(caminho) ? 'true' : null"
           (click)="aoEscolher(caminho)"
         ></button>
 
@@ -129,7 +129,7 @@
           class="sinal"
           [class.escolhida]="ehSelecionada(caminho)"
           [attr.aria-label]="rotulo(no, 'rascunho.papel.igualdade')"
-          [attr.aria-pressed]="ehSelecionada(caminho)"
+          [attr.aria-current]="ehSelecionada(caminho) ? 'true' : null"
           (click)="aoEscolher(caminho)"
         >
           =
@@ -141,10 +141,35 @@
         />
       </span>
     }
+
+    <!--
+      Quando √ e ^ chegarem, um caso esquecido aqui faria a peça existir na
+      árvore, contar para a profundidade, aparecer em `paraTexto` — e ser
+      invisível no tabuleiro. Um defeito óbvio é melhor que um fantasma.
+    -->
+    @default {
+      <button
+        type="button"
+        class="folha desconhecida"
+        [class.escolhida]="ehSelecionada(caminho)"
+        [attr.aria-label]="i18n.t('rascunho.papel.desconhecida')"
+        [attr.aria-current]="ehSelecionada(caminho) ? 'true' : null"
+        (click)="aoEscolher(caminho)"
+      >
+        <span aria-hidden="true">⚠</span>
+      </button>
+    }
   }
 </ng-template>
 
-<span class="conta" role="tree" [attr.aria-label]="i18n.t('rascunho.conta')">
+<!--
+  `role="math"` com a conta falada inteira, e não `role="tree"`.
+  Uma árvore anunciada sem um único `treeitem` dentro é lida como árvore VAZIA, e
+  a expressão podia desaparecer da navegação; e um `tree` promete um só ponto de
+  tabulação com setas, enquanto aqui cada peça é um botão tabulável. O padrão da
+  casa já é este: a barra de fração didática é `role="img"` com descrição falada.
+-->
+<span class="conta" role="math" [attr.aria-label]="rotuloDaConta()">
   <ng-container
     [ngTemplateOutlet]="peca"
     [ngTemplateOutletContext]="{ no: arvore(), caminho: [] }"

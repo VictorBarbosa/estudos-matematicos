@@ -1,4 +1,4 @@
-import { Arvore, paraTexto } from '@core/rascunho/models/peca/peca';
+import { Arvore, paraTexto, textoDoNumero } from '@core/rascunho/models/peca/peca';
 import {
   LIMITE_DE_FRACOES,
   MONTAGEM_VAZIA,
@@ -14,6 +14,7 @@ import {
   virarLados,
 } from '@core/rascunho/models/montagem/montagem';
 
+const BURACO_LIVRE: Arvore = { tipo: 'buraco' };
 const digito = (valor: string): Peca => ({ tipo: 'algarismo', valor });
 const operacao = (operador: '+' | '-' | '*' | '/'): Peca => ({ tipo: 'operacao', operador });
 const FRACAO: Peca = { tipo: 'fracao' };
@@ -45,10 +46,28 @@ describe('montagem', () => {
 
     it('a vírgula não começa número sozinha, e não se repete', () => {
       const comVirgula = tocar(MONTAGEM_VAZIA, [{ tipo: 'virgula' }]);
-      expect(paraTexto(comVirgula.arvore)).toBe('0,');
+      const no = comVirgula.arvore;
+      // Na tela ela aparece: o aluno está no meio de escrever o número.
+      expect(no.tipo === 'numero' && textoDoNumero(no)).toBe('0,');
 
       const umaSo = tocar(comVirgula, [digito('5'), { tipo: 'virgula' }]);
       expect(paraTexto(umaSo.arvore)).toBe('0,5');
+    });
+
+    /**
+     * A vírgula pendurada não escapa para o texto da conta.
+     *
+     * `5,` é número em composição, e mostrá-lo assim é honesto. Mas o corretor
+     * do treino não reconhece `5.` como número, então a conferência da fase 2
+     * diria «não sei conferir» por causa de uma vírgula que o aluno ia
+     * preencher.
+     */
+    it('o texto da conta não leva vírgula pendurada', () => {
+      const pendurada = tocar(MONTAGEM_VAZIA, [digito('5'), { tipo: 'virgula' }]);
+      const no = pendurada.arvore;
+
+      expect(no.tipo === 'numero' && textoDoNumero(no)).toBe('5,');
+      expect(paraTexto(pendurada.arvore)).toBe('5');
     });
 
     it('o sinal troca o sinal do número, e não mexe em outra peça', () => {
@@ -137,6 +156,38 @@ describe('montagem', () => {
       const comIgual = encaixar(MONTAGEM_VAZIA, IGUAL).montagem;
 
       expect(encaixar(comIgual, IGUAL).recusa).toBe('igualdade-repetida');
+    });
+
+    /**
+     * O caminho que levava a duas igualdades numa linha, em seis toques.
+     *
+     * `2 = 3`, tocar no sinal `=` (que seleciona a raiz), envolver em `+` — e a
+     * raiz deixava de ser igualdade, liberando o `=` outra vez. Saía
+     * `(2 = 3) + ? = ?`, que não é conta nenhuma.
+     */
+    it('uma igualdade não se envolve em outra conta', () => {
+      const equacao = montagemDe({
+        tipo: 'igualdade',
+        esquerda: num('2'),
+        direita: num('3'),
+      });
+      const naRaiz = selecionar(equacao, []).montagem;
+
+      expect(encaixar(naRaiz, operacao('+')).recusa).toBe('igualdade-envolvida');
+      expect(encaixar(naRaiz, FRACAO).recusa).toBe('igualdade-envolvida');
+    });
+
+    it('o igual é recusado mesmo escondido no fundo da árvore', () => {
+      // Defesa em profundidade: se um dia uma árvore assim chegar do disco, a
+      // peça `=` não a piora.
+      const estranha = montagemDe({
+        tipo: 'operacao',
+        operador: '+',
+        esquerda: { tipo: 'igualdade', esquerda: num('2'), direita: num('3') },
+        direita: BURACO_LIVRE,
+      });
+
+      expect(encaixar(estranha, IGUAL).recusa).toBe('igualdade-repetida');
     });
 
     it('envolver um buraco é permitido: é como se monta de cima para baixo', () => {
@@ -257,6 +308,16 @@ describe('montagem', () => {
       const envolvida = encaixar(comDois, FRACAO);
 
       expect(paraTexto(envolvida.montagem.arvore)).toBe('(2)/(?) + ?');
+    });
+
+    it('sem buraco para onde ir, o encaixe continua valendo sem recusa', () => {
+      // Montar `2x` numa linha sem outro buraco: a árvore está certa, então
+      // `recusa` tem de ser nula — ela é API, não só fonte de aviso na tela.
+      const comDois = encaixar(MONTAGEM_VAZIA, digito('2'));
+      const comX = avancarSePreciso(encaixar(comDois.montagem, INCOGNITA), INCOGNITA);
+
+      expect(paraTexto(comX.montagem.arvore)).toBe('2x');
+      expect(comX.recusa).toBeNull();
     });
 
     it('o avanço automático não quebra o número em composição', () => {

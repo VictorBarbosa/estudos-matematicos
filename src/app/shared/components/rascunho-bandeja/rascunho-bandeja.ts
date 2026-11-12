@@ -1,7 +1,16 @@
-import { ChangeDetectionStrategy, Component, inject, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input, output } from '@angular/core';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { Operador } from '@core/rascunho/models/peca/peca';
-import { Peca } from '@core/rascunho/models/montagem/montagem';
+import {
+  Montagem,
+  Peca,
+  Recusa,
+  apagar,
+  encaixar,
+  irAoProximoBuraco,
+  subirNivel,
+  virarLados,
+} from '@core/rascunho/models/montagem/montagem';
 
 /** O que uma tecla da bandeja faz. */
 export type AcaoDaBandeja =
@@ -63,6 +72,9 @@ function operacao(rotulo: string, nome: string, operador: Operador): Tecla {
   styleUrl: './rascunho-bandeja.scss',
 })
 export class RascunhoBandeja {
+  /** A linha em edição, para saber que peça pode agir sobre a seleção. */
+  readonly montagem = input<Montagem | null>(null);
+
   readonly acionar = output<AcaoDaBandeja>();
 
   protected readonly i18n = inject(I18nService);
@@ -127,6 +139,59 @@ export class RascunhoBandeja {
     },
     { rotulo: '⌫', nome: 'apagar', acao: { tipo: 'apagar' }, classe: 'navegar' },
   ];
+
+  /**
+   * O que esta tecla faria, se tocada agora — por **ensaio com o próprio
+   * modelo**, nunca por uma segunda cópia das regras. Por construção não há
+   * como as duas discordarem.
+   */
+  private recusaDe(tecla: Tecla): Recusa | null {
+    const montagem = this.montagem();
+    if (montagem === null) {
+      return null;
+    }
+
+    const acao = tecla.acao;
+
+    switch (acao.tipo) {
+      case 'peca':
+        return encaixar(montagem, acao.peca).recusa;
+      case 'apagar':
+        return apagar(montagem).recusa;
+      case 'subir':
+        return subirNivel(montagem).recusa;
+      case 'proximo':
+        return irAoProximoBuraco(montagem).recusa;
+      case 'virar':
+        return virarLados(montagem).recusa;
+    }
+  }
+
+  /**
+   * Tecla muda, sem nada a explicar: desabilitada.
+   *
+   * `±` sobre um buraco, `⇄` sobre um número, `⬆` na raiz — todas davam
+   * «sem efeito», e a tela engole essa recusa de propósito para não virar ruído
+   * a cada toque. O resultado era uma bandeja com teclas que não respondiam e
+   * nenhuma pista da regra. Desabilitar mostra a regra antes do toque.
+   */
+  protected impedida(tecla: Tecla): boolean {
+    return this.recusaDe(tecla) === 'sem-efeito';
+  }
+
+  /**
+   * Tecla que não cabe **por um motivo**: apagada, mas tocável.
+   *
+   * Aqui desabilitar seria pior. Uma igualdade dentro de outra conta, ou a
+   * quarta fração aninhada, têm explicação — e botão desabilitado não pode ser
+   * tocado, então o recado nunca apareceria. Apagada, a tecla avisa que algo
+   * não cabe; tocada, ela diz por quê.
+   */
+  protected comMotivo(tecla: Tecla): boolean {
+    const recusa = this.recusaDe(tecla);
+
+    return recusa !== null && recusa !== 'sem-efeito';
+  }
 
   protected aoTocar(tecla: Tecla): void {
     this.acionar.emit(tecla.acao);

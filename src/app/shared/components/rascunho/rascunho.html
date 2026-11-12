@@ -1,5 +1,14 @@
 @if (abertura.aberto()) {
-  <section class="gaveta" role="dialog" [attr.aria-label]="i18n.t('rascunho.titulo')">
+  <!--
+    `aria-modal` é verdade aqui, e não seria numa janela pequena: a gaveta ocupa
+    a tela toda e cobre o cabeçalho, então não há nada atrás com que interagir.
+  -->
+  <section
+    class="gaveta"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="i18n.t('rascunho.titulo')"
+  >
     <header class="barra">
       <h2 class="titulo">{{ i18n.t('rascunho.titulo') }}</h2>
 
@@ -36,6 +45,23 @@
         >
           <span aria-hidden="true">🗑</span>
         </button>
+
+        <!--
+          A lixeira de um slot. Apagar com a raiz selecionada leva a linha
+          inteira, e a raiz se alcança com um toque no «=»: sem esta volta, dois
+          toques distraídos levariam vinte linhas de conta.
+        -->
+        @if (rascunho.podeDesfazer()) {
+          <button
+            type="button"
+            class="desfazer"
+            [title]="i18n.t('rascunho.desfazer')"
+            [attr.aria-label]="i18n.t('rascunho.desfazer')"
+            (click)="rascunho.desfazer()"
+          >
+            <span aria-hidden="true">↶</span>
+          </button>
+        }
       </div>
 
       <button
@@ -103,6 +129,6 @@
       }
     </div>
 
-    <app-rascunho-bandeja (acionar)="aoAcionar($event)" />
+    <app-rascunho-bandeja [montagem]="rascunho.montagem()" (acionar)="aoAcionar($event)" />
   </section>
 }

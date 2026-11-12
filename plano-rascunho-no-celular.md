@@ -9,9 +9,9 @@ Com o dedo, numa tela de 390 px, armar uma divisão é pior que qualquer caderno
 
 > Quarta versão, depois de duas revisões contra o código. O histórico está na seção 12.
 >
-> **A Fase 1 está implementada** (11/11/2026). O que a implementação revelou, e mudou em relação
-> a este plano, está na seção 14 — inclusive dois defeitos de desenho que só apareceram quando
-> os testes rodaram.
+> **A Fase 1 está implementada** (11/11/2026). O que a implementação revelou está na seção 14, e
+> o que uma revisão do código corrigiu depois, na seção 15 — inclusive um defeito que fazia a
+> persistência parar de funcionar no segundo tópico.
 
 ---
 
@@ -577,3 +577,122 @@ guardado: 506,30 kB de base, 509,10 kB agora).
 | Arquivos novos            | 5 de modelo e serviço, 3 de componente, 6 de teste                                    |
 | Tocados                   | `DispositivoService`, `shell` (`.ts`/`.html`/`.scss`), 3 dicionários, `chaves-usadas` |
 | Não tocados               | `area-treino`, `prova`, `surpresa`, tela de configurações                             |
+
+---
+
+## 15. O que a revisão do código corrigiu (11/11/2026)
+
+A Fase 1 passou por uma revisão de código. Três defeitos graves, dois deles reproduzidos pelo
+revisor com medição.
+
+### 15.1 A persistência parava de funcionar no segundo tópico
+
+`LIMITE_DE_BYTES` eram 8 kB e valiam para **a gravação inteira**, não por tópico — enquanto
+`LIMITE_DE_TOPICOS` prometia cinco tópicos guardados. Medido: um tópico com as 20 linhas
+permitidas ocupa perto de 7 kB, ou **82% do teto**; o segundo estourava e a gravação parava
+**para todos**. O aluno continuava montando, o disco ficava com a versão velha, e a aba morta no
+avião levava tudo — exatamente o acidente que esta persistência existe para evitar.
+
+Pior: a reação era global (não gravar nada) e o controle de quantidade era local (`guardar` já
+descartava o sexto tópico). A assimetria não tinha defesa.
+
+Agora o teto são 128 kB — 2,5% de uma cota típica de 5 MB —, e ao estourar **largam-se os
+tópicos mais antigos até caber**, o mesmo critério que a contagem já aplicava. `null` ficou
+reservado ao caso em que nem o tópico mais recente cabe: aí não se grava nada, porque gravar
+uma lista vazia apagaria o rascunho dos outros para registrar o fracasso deste.
+
+O teste antigo usava dado sintético e por isso não viu nada. Agora há um com cinco tópicos de
+pilha cheia e equações reais.
+
+### 15.2 Duas igualdades numa linha, em seis toques
+
+`igualdade()` recusava só quando **a raiz** já era igualdade, mas envolver era permitido sobre
+qualquer nó. Então: `2 = 3`, tocar no sinal `=` (que seleciona a raiz **em um toque**), envolver
+em `+` — e a raiz deixava de ser igualdade, liberando o `=` outra vez. Saía `(2 = 3) + ? = ?`,
+que não é conta nenhuma, e que a conferência da fase seguinte não saberia tratar.
+
+Dois consertos: envolver recusa quando o alvo é igualdade (recusa nova,
+`igualdade-envolvida`), e a contagem de igualdades passou a varrer a árvore toda.
+
+### 15.3 Dois toques apagavam vinte linhas, sem volta
+
+O sinal `=` seleciona a raiz com um toque; o `⌫` logo depois levava a linha inteira. E havia
+outros dois caminhos sem volta: o cesto, que joga fora o rascunho do tópico, e o `×` de uma
+linha — num alvo de 28 px encostado nas peças. Como o desfazer genérico ficou para depois, não
+havia volta de nenhum.
+
+Entrou uma **lixeira de um slot**: apagar com a raiz selecionada, o cesto e tirar uma linha
+guardam o estado de antes, e a gaveta mostra um botão de desfazer. Um slot basta, e é melhor que
+uma pilha — cobre exatamente o arrependimento imediato. Qualquer alteração seguinte a esvazia,
+para que o botão nunca desfaça algo mais antigo do que o aluno espera.
+
+### 15.4 `role="tree"` era pior que papel nenhum
+
+O contêiner anunciava `role="tree"` e não havia um único `treeitem` dentro: para a tecnologia
+assistiva, uma árvore **vazia** — a expressão inteira podia desaparecer da navegação. E um
+`tree` promete um só ponto de tabulação com setas, enquanto aqui cada peça é um botão tabulável.
+
+Agora é `role="math"` com a conta falada inteira no `aria-label`, que é o padrão da casa — a
+barra de fração didática já é `role="img"` com descrição. O `aria-pressed` das peças virou
+`aria-current`, porque a seleção é «o item em foco de uma coleção», não um liga/desliga. E a
+gaveta ganhou `aria-modal`, que aqui é verdade: ela ocupa a tela toda.
+
+### 15.5 O alvo tocável não era de 44 px, e a barra da fração tinha 14
+
+Todo o argumento geométrico fala de 44 px. O código tinha peças de 36 px mais 4 px de área
+sensível por lado: chegava a 44, mas por via de halo — e halos de peças vizinhas se sobrepunham
+sobre um vão de 2 px, com o empate indo para a última peça na ordem do documento. Tocar a borda
+do `+` podia acertar o número antes dele.
+
+Agora a peça tem 44 px de verdade e não há halo nenhum. E a barra da fração — que é a **única**
+alça da fração — deixou de ser um botão de 2 px com 6 de halo: ela tem altura de dedo, com a
+linha fina pintada por dentro.
+
+### 15.6 A seleção passou a ser saneada por construção
+
+Trocar de tópico mudava `linhas()` na hora, e o efeito que recomeçava a seleção rodava depois:
+havia uma janela de um quadro em que a árvore nova convivia com o caminho antigo, e um toque
+nela escreveria no nó errado. O `computed` da montagem agora verifica o caminho contra a árvore,
+o que troca um invariante temporal por um estrutural.
+
+### 15.7 As teclas mudas, e as que não cabem
+
+A tela engole a recusa «sem efeito» de propósito, para não virar ruído — e o efeito colateral
+era uma bandeja com teclas que simplesmente não respondiam. Agora:
+
+- tecla **muda**, sem nada a explicar (`±` sobre buraco, `⇄` sobre número, `⬆` na raiz): fica
+  **desabilitada**, e a regra se vê antes do toque;
+- tecla que não cabe **por um motivo** (igualdade repetida, quarta fração): fica **apagada mas
+  tocável**, porque botão desabilitado não pode ser tocado e aí o recado nunca apareceria.
+
+A resposta vem de um **ensaio com o próprio modelo** — pergunta-se à ação o que ela faria —,
+nunca de uma segunda cópia das regras. Por construção não há como as duas discordarem.
+
+### 15.8 Miudezas da mesma rodada
+
+- `avancarSePreciso` relatava `'sem-efeito'` numa ação **bem-sucedida** quando não havia buraco
+  para onde avançar. Invisível na tela, mas `recusa` é API.
+- `paraTexto` levava a vírgula pendurada: `5,` virava `5.` na gramática do corretor, que não
+  reconhece isso como número — a conferência da fase seguinte diria «não sei conferir» por causa
+  de uma vírgula que o aluno ia preencher. Na tela ela continua aparecendo, porque ali é honesto.
+- `validarArvore` validava a **forma** e não os **invariantes**: uma árvore vinda do disco podia
+  ter sete frações aninhadas, ser desenhada, tomar a tela e travar todo envolvimento sem
+  explicação. Agora a leitura também confere profundidade e igualdade única na raiz.
+- Linha estragada no disco **virava buraco** em vez de desaparecer: descartá-la renumerava as
+  outras e `atual` passava a apontar para outra linha.
+- O regex do número aceitava vírgula solta e número vazio.
+- `@switch` do tabuleiro ganhou `@default`: quando `√` e `^` chegarem, um caso esquecido vira
+  defeito visível em vez de peça invisível.
+- O comentário do `@defer` dizia que fechar a gaveta «não a descarrega, e nem poderia». A razão
+  real é outra: `@defer (when …)` dispara uma vez e não volta. Corrigido.
+
+### 15.9 O que a revisão apontou e ficou de fora
+
+- **Mostrar na gaveta de que tópico é o rascunho.** Navegar troca o tópico e a conta sai da tela
+  — não está perdida, mas parece. Mostrar um nome exige traduzir a chave da URL em título de
+  currículo, e isso vai junto com o enunciado no topo, na fase que traz o «exercício em foco».
+- **A gaveta cobrir o cabeçalho.** Tela cheia foi escolha minha; o revisor preferia deixar o
+  enunciado espiando. Fica como está até a medição no aparelho dizer quanto cabe.
+- **Decisão mantida, com apoio:** envolver age sobre a peça selecionada, e montar `2x` e tocar
+  `+` exige um `⬆` antes. Qualquer heurística ali seria adivinhação, e a primeira vez que
+  adivinhasse errado custaria a confiança na ferramenta inteira.

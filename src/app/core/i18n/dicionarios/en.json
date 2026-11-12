@@ -922,30 +922,31 @@
     "vazio": "No exercises answered yet. Your results show up here as soon as you practise."
   },
   "rascunho": {
-    "titulo": "Building blocks",
-    "fechar": "Close the building blocks",
-    "novaLinha": "New line, empty",
-    "copiarLinha": "New line, starting as a copy of the one above",
-    "limpar": "Throw this scratch work away",
-    "irALinha": "Edit line {numero}",
-    "removerLinha": "Remove line {numero}",
-    "vireOAparelho": "Turn the device upright to build the calculation: the whole tray fits that way.",
-    "naoCoube": "This scratch work is past the size that gets saved. It stays here, but it will not come back if the tab closes.",
-    "conta": "The calculation you built",
     "bandeja": "Pieces",
     "buraco": "empty slot",
+    "conta": "The calculation you built",
+    "copiarLinha": "New line, starting as a copy of the one above",
+    "desfazer": "Undo what was just deleted",
+    "fechar": "Close the building blocks",
+    "irALinha": "Edit line {numero}",
+    "limpar": "Throw this scratch work away",
+    "naoCoube": "This scratch work is past the size that gets saved. It stays here, but it will not come back if the tab closes.",
+    "novaLinha": "New line, empty",
     "papel": {
       "buraco": "Slot",
-      "numero": "Number",
-      "incognita": "Unknown",
-      "operacao": "Operation",
+      "desconhecida": "Unknown piece",
       "fracao": "Fraction",
-      "igualdade": "Equation"
+      "igualdade": "Equation",
+      "incognita": "Unknown",
+      "numero": "Number",
+      "operacao": "Operation"
     },
     "recusa": {
-      "profundidade": "A fraction inside a fraction up to three levels: deeper than that would not fit on screen.",
-      "igualdade-repetida": "This line already has an equals sign."
+      "igualdade-envolvida": "An equation does not go inside another calculation: it already is the whole calculation.",
+      "igualdade-repetida": "This line already has an equals sign.",
+      "profundidade": "A fraction inside a fraction up to three levels: deeper than that would not fit on screen."
     },
+    "removerLinha": "Remove line {numero}",
     "tecla": {
       "algarismo0": "Zero",
       "algarismo1": "One",
@@ -971,7 +972,9 @@
       "proximo": "Go to the next slot",
       "virar": "Swap the sides of the operation",
       "apagar": "Delete the selected piece"
-    }
+    },
+    "titulo": "Building blocks",
+    "vireOAparelho": "Turn the device upright to build the calculation: the whole tray fits that way."
   },
   "revisar": {
     "abrirTopico": "Open the whole topic",

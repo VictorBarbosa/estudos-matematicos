@@ -101,7 +101,10 @@ describe('Rascunho', () => {
     tecla(fixture, '2').click();
     await fixture.whenStable();
 
+    // Entre um toque e outro é preciso redesenhar: o estado das teclas
+    // acompanha a seleção, e `⇄` só pode agir depois que `⬆` chega à raiz.
     tecla(fixture, '⬆').click();
+    await fixture.whenStable();
     tecla(fixture, '⇄').click();
     await fixture.whenStable();
     expect(paraTexto(rascunho.montagem().arvore)).toBe('2 - 5');
@@ -137,20 +140,39 @@ describe('Rascunho', () => {
     expect(atuais.length).toBe(1);
   });
 
-  it('o recado de recusa aparece, e «sem efeito» não vira ruído', async () => {
+  it('a tecla que não cabe fica apagada, e tocada explica por quê', async () => {
     const { fixture } = await montar();
 
-    // Dois iguais na mesma linha: recusa com motivo.
     tecla(fixture, '=').click();
-    tecla(fixture, '⬆').click();
-    tecla(fixture, '=').click();
+    await fixture.whenStable();
+
+    // Segunda igualdade: apagada, mas tocável — é tocando que vem o motivo.
+    const igual = tecla(fixture, '=');
+    expect(igual.disabled).toBe(false);
+    expect(igual.classList.contains('nao-cabe')).toBe(true);
+
+    igual.click();
     await fixture.whenStable();
     expect(html(fixture).querySelector('.aviso')).not.toBeNull();
 
-    // Apagar um buraco é «sem efeito»: tentativa, não erro.
-    tecla(fixture, '⌫').click();
+    // O recado sai de cena quando o aluno volta a montar.
+    tecla(fixture, '1').click();
+    await fixture.whenStable();
+    expect(html(fixture).querySelector('.aviso')).toBeNull();
+  });
+
+  it('a tecla muda nem responde, e não vira recado', async () => {
+    const { fixture } = await montar();
+
+    // Apagar sem nada a apagar: tentativa, não erro.
+    expect(tecla(fixture, '⌫').disabled).toBe(true);
+    // `±` só age sobre número; `⇄` só sobre operação ou fração.
+    expect(tecla(fixture, '±').disabled).toBe(true);
+    expect(tecla(fixture, '⇄').disabled).toBe(true);
+
     tecla(fixture, '⌫').click();
     await fixture.whenStable();
+
     expect(html(fixture).querySelector('.aviso')).toBeNull();
   });
 

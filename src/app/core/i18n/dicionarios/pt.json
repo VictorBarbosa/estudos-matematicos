@@ -922,30 +922,31 @@
     "vazio": "Nenhum exercício respondido ainda. O desempenho aparece aqui assim que você treinar."
   },
   "rascunho": {
-    "titulo": "Monta monta",
-    "fechar": "Fechar o monta monta",
-    "novaLinha": "Linha nova, vazia",
-    "copiarLinha": "Linha nova, começando igual à de cima",
-    "limpar": "Jogar fora este rascunho",
-    "irALinha": "Editar a linha {numero}",
-    "removerLinha": "Tirar a linha {numero}",
-    "vireOAparelho": "Vire o aparelho para montar a conta: de pé cabe a bandeja inteira.",
-    "naoCoube": "O rascunho passou do tamanho que se guarda. Ele continua aqui, mas não será recuperado se a aba fechar.",
-    "conta": "A conta montada",
     "bandeja": "Peças",
     "buraco": "buraco vazio",
+    "conta": "A conta montada",
+    "copiarLinha": "Linha nova, começando igual à de cima",
+    "desfazer": "Desfazer o que acabou de ser apagado",
+    "fechar": "Fechar o monta monta",
+    "irALinha": "Editar a linha {numero}",
+    "limpar": "Jogar fora este rascunho",
+    "naoCoube": "O rascunho passou do tamanho que se guarda. Ele continua aqui, mas não será recuperado se a aba fechar.",
+    "novaLinha": "Linha nova, vazia",
     "papel": {
       "buraco": "Buraco",
-      "numero": "Número",
-      "incognita": "Incógnita",
-      "operacao": "Operação",
+      "desconhecida": "Peça desconhecida",
       "fracao": "Fração",
-      "igualdade": "Igualdade"
+      "igualdade": "Igualdade",
+      "incognita": "Incógnita",
+      "numero": "Número",
+      "operacao": "Operação"
     },
     "recusa": {
-      "profundidade": "Fração dentro de fração só até três níveis: mais que isso não caberia na tela.",
-      "igualdade-repetida": "Esta linha já tem um igual."
+      "igualdade-envolvida": "Uma igualdade não entra dentro de outra conta: ela já é a conta inteira.",
+      "igualdade-repetida": "Esta linha já tem um igual.",
+      "profundidade": "Fração dentro de fração só até três níveis: mais que isso não caberia na tela."
     },
+    "removerLinha": "Tirar a linha {numero}",
     "tecla": {
       "algarismo0": "Zero",
       "algarismo1": "Um",
@@ -971,7 +972,9 @@
       "proximo": "Ir ao próximo buraco",
       "virar": "Virar os lados da operação",
       "apagar": "Apagar a peça selecionada"
-    }
+    },
+    "titulo": "Monta monta",
+    "vireOAparelho": "Vire o aparelho para montar a conta: de pé cabe a bandeja inteira."
   },
   "revisar": {
     "abrirTopico": "Abrir o tópico inteiro",

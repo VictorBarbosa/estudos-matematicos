@@ -922,30 +922,31 @@
     "vazio": "Aucun exercice répondu pour l’instant. Les résultats apparaissent ici dès que vous vous entraînez."
   },
   "rascunho": {
-    "titulo": "Jeu de construction",
-    "fechar": "Fermer le jeu de construction",
-    "novaLinha": "Nouvelle ligne, vide",
-    "copiarLinha": "Nouvelle ligne, copie de celle du dessus",
-    "limpar": "Jeter ce brouillon",
-    "irALinha": "Modifier la ligne {numero}",
-    "removerLinha": "Retirer la ligne {numero}",
-    "vireOAparelho": "Tournez l'appareil pour monter le calcul : à la verticale, tout le plateau tient.",
-    "naoCoube": "Le brouillon dépasse la taille enregistrable. Il reste ici, mais ne sera pas récupéré si l'onglet se ferme.",
-    "conta": "Le calcul monté",
     "bandeja": "Pièces",
     "buraco": "case vide",
+    "conta": "Le calcul monté",
+    "copiarLinha": "Nouvelle ligne, copie de celle du dessus",
+    "desfazer": "Annuler ce qui vient d'être effacé",
+    "fechar": "Fermer le jeu de construction",
+    "irALinha": "Modifier la ligne {numero}",
+    "limpar": "Jeter ce brouillon",
+    "naoCoube": "Le brouillon dépasse la taille enregistrable. Il reste ici, mais ne sera pas récupéré si l'onglet se ferme.",
+    "novaLinha": "Nouvelle ligne, vide",
     "papel": {
       "buraco": "Case",
-      "numero": "Nombre",
-      "incognita": "Inconnue",
-      "operacao": "Opération",
+      "desconhecida": "Pièce inconnue",
       "fracao": "Fraction",
-      "igualdade": "Égalité"
+      "igualdade": "Égalité",
+      "incognita": "Inconnue",
+      "numero": "Nombre",
+      "operacao": "Opération"
     },
     "recusa": {
-      "profundidade": "Une fraction dans une fraction jusqu'à trois niveaux : au-delà, cela ne tiendrait pas à l'écran.",
-      "igualdade-repetida": "Cette ligne a déjà un égal."
+      "igualdade-envolvida": "Une égalité ne se place pas dans un autre calcul : elle est déjà le calcul entier.",
+      "igualdade-repetida": "Cette ligne a déjà un égal.",
+      "profundidade": "Une fraction dans une fraction jusqu'à trois niveaux : au-delà, cela ne tiendrait pas à l'écran."
     },
+    "removerLinha": "Retirer la ligne {numero}",
     "tecla": {
       "algarismo0": "Zéro",
       "algarismo1": "Un",
@@ -971,7 +972,9 @@
       "proximo": "Aller à la case suivante",
       "virar": "Inverser les côtés de l'opération",
       "apagar": "Effacer la pièce sélectionnée"
-    }
+    },
+    "titulo": "Jeu de construction",
+    "vireOAparelho": "Tournez l'appareil pour monter le calcul : à la verticale, tout le plateau tient."
   },
   "revisar": {
     "abrirTopico": "Ouvrir le sujet complet",

@@ -5,6 +5,7 @@ import {
   Operador,
   RAIZ,
   buracosDe,
+  contarIgualdades,
   ehBuraco,
   noEm,
   paiDe,
@@ -38,7 +39,7 @@ export interface Montagem {
 }
 
 /** Por que uma ação não teve efeito. A interface avisa; nada acontece. */
-export type Recusa = 'profundidade' | 'igualdade-repetida' | 'sem-efeito';
+export type Recusa = 'profundidade' | 'igualdade-repetida' | 'igualdade-envolvida' | 'sem-efeito';
 
 export interface Resultado {
   readonly montagem: Montagem;
@@ -258,6 +259,19 @@ function estrutura(
   alvo: Arvore,
   montar: (dentro: Arvore) => Arvore,
 ): Resultado {
+  /*
+   * Uma igualdade não entra dentro de outra conta.
+   *
+   * Sem esta recusa havia caminho para duas igualdades numa linha, em seis
+   * toques: `2 = 3`, tocar no sinal `=` (que seleciona a raiz), envolver em `+`
+   * — e a raiz deixava de ser igualdade, liberando o `=` de novo. O resultado,
+   * `(2 = 3) + ? = ?`, não é conta nenhuma, e nem a conferência da fase 2
+   * saberia o que fazer com ele.
+   */
+  if (alvo.tipo === 'igualdade') {
+    return sem(montagem, 'igualdade-envolvida');
+  }
+
   const dentro = ehBuraco(alvo) ? BURACO : alvo;
   const nova = montar(dentro);
   const arvore = trocarEm(montagem.arvore, montagem.selecao, nova);
@@ -286,7 +300,8 @@ function estrutura(
 function igualdade(montagem: Montagem): Resultado {
   const raiz = montagem.arvore;
 
-  if (raiz.tipo === 'igualdade') {
+  // Em qualquer profundidade, e não só na raiz: ver o comentário de `estrutura`.
+  if (contarIgualdades(raiz) > 0) {
     return sem(montagem, 'igualdade-repetida');
   }
 
@@ -394,5 +409,15 @@ export function avancarSePreciso(resultado: Resultado, peca: Peca): Resultado {
     return resultado;
   }
 
-  return irAoProximoBuraco(resultado.montagem);
+  const avancado = irAoProximoBuraco(resultado.montagem);
+
+  /*
+   * Não havendo buraco para onde ir, o encaixe continua valendo.
+   *
+   * Sem isto, montar `2x` numa linha sem outro buraco devolvia a árvore certa
+   * com `recusa: 'sem-efeito'` — a tela engole essa recusa, então nada
+   * aparecia, mas `recusa` deixaria de ser confiável para quem amanhã pusesse
+   * vibração ou telemetria em cima dela.
+   */
+  return avancado.recusa === null ? avancado : resultado;
 }

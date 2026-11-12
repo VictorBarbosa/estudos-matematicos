@@ -4,6 +4,8 @@
       type="button"
       class="tecla"
       [class]="tecla.classe"
+      [disabled]="impedida(tecla)"
+      [class.nao-cabe]="comMotivo(tecla)"
       [attr.aria-label]="i18n.t('rascunho.tecla.' + tecla.nome)"
       [title]="i18n.t('rascunho.tecla.' + tecla.nome)"
       (click)="aoTocar(tecla)"

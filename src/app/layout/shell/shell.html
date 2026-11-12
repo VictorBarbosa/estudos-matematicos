@@ -190,10 +190,12 @@
 }
 
 <!--
-  O monta monta também só baixa quando alguém o abre. Fechar a gaveta não o
-  descarrega, e nem poderia: o rascunho vive no serviço, não no componente, e é
-  isso que o mantém de pé quando o aparelho ganha um teclado e deixa de ser
-  classificado como celular no meio de uma conta.
+  O monta monta também só baixa quando alguém o abre.
+
+  `@defer (when …)` dispara uma vez: depois que a condição fica verdadeira, o
+  bloco não volta ao estado de espera quando ela fica falsa. Quem esconde a
+  gaveta é o `@if` dentro do componente. E o rascunho não depende de nada disso
+  para sobreviver, porque vive no serviço e no disco — não no componente.
 -->
 @defer (when rascunho.aberto() && dispositivo.rascunhoPermitido()) {
   <app-rascunho />

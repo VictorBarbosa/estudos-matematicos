@@ -176,6 +176,109 @@ describe('RascunhoService', () => {
     expect(rascunho.montagem().selecao).toEqual([0]);
   });
 
+  describe('a lixeira de um slot', () => {
+    /**
+     * O acidente de dois toques: o sinal `=` seleciona a raiz, e o `⌫` logo
+     * depois leva a linha inteira. Sem volta, vinte linhas de conta iam embora.
+     */
+    it('apagar com a raiz selecionada tem volta', () => {
+      const { rascunho } = fingirRota('/frac');
+
+      rascunho.tocarPeca({ tipo: 'algarismo', valor: '2' });
+      rascunho.tocarPeca({ tipo: 'incognita' });
+      rascunho.escolherPeca([]);
+      expect(rascunho.podeDesfazer()).toBe(false);
+
+      rascunho.apagarPeca();
+      expect(rascunho.montagem().arvore.tipo).toBe('buraco');
+      expect(rascunho.podeDesfazer()).toBe(true);
+
+      rascunho.desfazer();
+      expect(paraTexto(rascunho.montagem().arvore)).toBe('2x');
+      expect(rascunho.podeDesfazer()).toBe(false);
+    });
+
+    it('apagar uma peça comum não enche a lixeira: é um toque de volta', () => {
+      const { rascunho } = fingirRota('/frac');
+
+      rascunho.tocarPeca({ tipo: 'operacao', operador: '+' });
+      rascunho.tocarPeca({ tipo: 'algarismo', valor: '5' });
+      rascunho.apagarPeca();
+
+      expect(rascunho.podeDesfazer()).toBe(false);
+    });
+
+    it('o cesto tem volta', () => {
+      const { rascunho } = fingirRota('/frac');
+
+      rascunho.tocarPeca({ tipo: 'algarismo', valor: '8' });
+      rascunho.limpar();
+      expect(rascunho.vazio()).toBe(true);
+
+      rascunho.desfazer();
+      expect(paraTexto(rascunho.montagem().arvore)).toBe('8');
+    });
+
+    it('tirar uma linha tem volta', () => {
+      const { rascunho } = fingirRota('/frac');
+
+      rascunho.tocarPeca({ tipo: 'algarismo', valor: '1' });
+      rascunho.copiarLinha();
+      rascunho.remover(1);
+      expect(rascunho.linhas().linhas.length).toBe(1);
+
+      rascunho.desfazer();
+      expect(rascunho.linhas().linhas.length).toBe(2);
+    });
+
+    /**
+     * A lixeira cobre só o arrependimento imediato.
+     *
+     * Se ela durasse, o botão desfaria algo mais antigo do que o aluno espera —
+     * e levaria embora o que ele montou depois.
+     */
+    it('qualquer alteração depois esvazia a lixeira', () => {
+      const { rascunho } = fingirRota('/frac');
+
+      rascunho.tocarPeca({ tipo: 'algarismo', valor: '3' });
+      rascunho.limpar();
+      expect(rascunho.podeDesfazer()).toBe(true);
+
+      rascunho.tocarPeca({ tipo: 'algarismo', valor: '9' });
+      expect(rascunho.podeDesfazer()).toBe(false);
+    });
+
+    it('desfazer sem nada na lixeira não faz nada', () => {
+      const { rascunho } = fingirRota('/frac');
+
+      rascunho.tocarPeca({ tipo: 'algarismo', valor: '4' });
+      rascunho.desfazer();
+
+      expect(paraTexto(rascunho.montagem().arvore)).toBe('4');
+    });
+  });
+
+  /**
+   * A seleção nunca aponta para um nó que não existe.
+   *
+   * Trocar de tópico muda `linhas()` na hora, e o efeito que recomeça a seleção
+   * roda depois: havia uma janela de um quadro em que a árvore nova convivia
+   * com o caminho antigo. Saneado no `computed`, o invariante não depende mais
+   * de ordem de execução.
+   */
+  it('a seleção é saneada contra a árvore em edição', () => {
+    const { eventos, rascunho } = fingirRota('/a');
+
+    rascunho.tocarPeca({ tipo: 'operacao', operador: '+' });
+    rascunho.escolherPeca([1]);
+    expect(rascunho.montagem().selecao).toEqual([1]);
+
+    navegar(eventos, '/b');
+
+    // No tópico novo a linha é um buraco só: o caminho [1] não existe nela.
+    expect(rascunho.montagem().selecao).toEqual([]);
+  });
+
   it('virar os lados troca a operação de mão', () => {
     const { rascunho } = fingirRota('/frac');
 

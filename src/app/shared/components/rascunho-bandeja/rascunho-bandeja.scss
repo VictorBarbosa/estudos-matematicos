@@ -43,6 +43,17 @@ $tecla: 3.25rem;
   &:active {
     background: var(--acento-suave);
   }
+
+  /* Tecla muda: a regra se vê antes do toque, em vez de se sentir depois. */
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  /* Não cabe, mas tem explicação — tocável, para o recado poder aparecer. */
+  &.nao-cabe:not(:disabled) {
+    opacity: 0.55;
+  }
 }
 
 /* Três famílias, para o dedo achar o que procura sem ler: número, operação e

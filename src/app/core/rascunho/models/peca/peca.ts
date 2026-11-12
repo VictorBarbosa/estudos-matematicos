@@ -145,6 +145,40 @@ export function profundidadeVertical(no: Arvore): number {
   return no.tipo === 'fracao' ? dentro + 1 : dentro;
 }
 
+/**
+ * Quantas igualdades a linha tem, em qualquer profundidade.
+ *
+ * Contar em toda a árvore, e não só na raiz, é o que impede `(2 = 3) + ? = ?`:
+ * bastava envolver a igualdade da raiz numa soma para a raiz deixar de ser
+ * igualdade e o lugar voltar a parecer livre.
+ */
+export function contarIgualdades(no: Arvore): number {
+  const dentro = filhosDe(no).reduce((total, filho) => total + contarIgualdades(filho), 0);
+
+  return no.tipo === 'igualdade' ? dentro + 1 : dentro;
+}
+
+/**
+ * A linha respeita o que a montagem garante?
+ *
+ * Uma igualdade, e na raiz; e frações aninhadas dentro do teto. Serve à leitura
+ * do disco, onde a árvore pode ter vindo de uma versão com outras regras — ou de
+ * uma mão alheia.
+ */
+export function linhaCoerente(arvore: Arvore, limiteDeFracoes: number): boolean {
+  if (profundidadeVertical(arvore) > limiteDeFracoes) {
+    return false;
+  }
+
+  const igualdades = contarIgualdades(arvore);
+
+  if (igualdades === 0) {
+    return true;
+  }
+
+  return igualdades === 1 && arvore.tipo === 'igualdade';
+}
+
 /** Todos os caminhos da árvore, em ordem de leitura (o nó antes dos filhos). */
 export function caminhosDe(arvore: Arvore, raiz: Caminho = RAIZ): readonly Caminho[] {
   const filhos = filhosDe(arvore);
@@ -250,6 +284,20 @@ export function textoDoNumero(no: Extract<Arvore, { tipo: 'numero' }>): string {
 }
 
 /**
+ * O número para quem vai fazer conta com ele: sem a vírgula pendurada.
+ *
+ * Na tela `5,` é um número em composição, e mostrá-lo assim é honesto — o aluno
+ * está no meio de escrevê-lo. Num texto a ser analisado, `5.` não casa com o
+ * número que o corretor do treino reconhece, e a conferência diria «não sei
+ * conferir» por causa de uma vírgula que o aluno ia preencher.
+ */
+function numeroParaConta(no: Extract<Arvore, { tipo: 'numero' }>): string {
+  const corpo = (no.algarismos === '' ? '0' : no.algarismos).replace(/,$/, '');
+
+  return no.negativo ? `-${corpo}` : corpo;
+}
+
+/**
  * A linha como texto, na gramática que o corretor do treino já lê.
  *
  * Serve aos rótulos falados, e é o que a conferência de igualdade vai usar
@@ -262,7 +310,7 @@ export function paraTexto(no: Arvore): string {
     case 'buraco':
       return '?';
     case 'numero':
-      return textoDoNumero(no);
+      return numeroParaConta(no);
     case 'incognita':
       return 'x';
     case 'fracao':

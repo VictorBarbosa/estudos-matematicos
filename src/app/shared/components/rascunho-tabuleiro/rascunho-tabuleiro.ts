@@ -57,6 +57,9 @@ export class RascunhoTabuleiro {
     return caminho === null ? null : caminho.join('.');
   });
 
+  /** A conta inteira, falada — é o que `role="math"` anuncia. */
+  protected readonly rotuloDaConta = computed(() => paraTexto(this.arvore()));
+
   protected ehSelecionada(caminho: Caminho): boolean {
     return this.selecionada() === caminho.join('.');
   }
