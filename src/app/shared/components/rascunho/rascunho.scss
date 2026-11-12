@@ -17,7 +17,7 @@
   inset: auto 0 0 0;
   z-index: 70;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
   max-height: 100dvh;
   height: 100dvh;
   padding: 0.5rem 0.75rem calc(0.75rem + env(safe-area-inset-bottom));
@@ -67,6 +67,28 @@
   &:disabled {
     opacity: 0.45;
     cursor: default;
+  }
+}
+
+/*
+ * A pergunta fica fixa no alto, e rola por dentro se for comprida.
+ *
+ * Fixa porque é para ela que o aluno olha entre dois toques; com teto de altura
+ * porque um enunciado de física tem três linhas e, sem limite, empurraria o
+ * tabuleiro para fora da tela.
+ */
+.pergunta {
+  max-height: 22vh;
+  overflow: auto;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-sm);
+  background: var(--superficie);
+  font-size: 0.875rem;
+  line-height: 1.35;
+
+  p {
+    margin: 0;
   }
 }
 

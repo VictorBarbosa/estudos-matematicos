@@ -12,6 +12,7 @@ import {
   RESPOSTAS_NA_JANELA,
   TRILHA,
 } from '@core/progressao/models/progressao.model';
+import { ExercicioEmFocoService } from '@core/exercicio/services/exercicio-em-foco.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
@@ -598,5 +599,46 @@ describe('AreaTreino: quanto falta no placar', () => {
 
     expect(quanto()).toBe('0');
     expect(bloco().querySelector('dd')!.classList).toContain('certo');
+  });
+});
+
+/**
+ * A área de treino publica a pergunta para fora.
+ *
+ * No celular o monta monta ocupa a tela toda e cobre o enunciado: foi a
+ * primeira coisa que faltou no aparelho de verdade. Esta tela não conhece a
+ * gaveta — só diz o que está perguntando. Sem este teste, a publicação poderia
+ * sumir num refactor e os testes do rascunho continuariam verdes, porque lá a
+ * pergunta é posta à mão.
+ */
+describe('AreaTreino e a pergunta publicada', () => {
+  let fixture: ComponentFixture<AreaTreino>;
+  let emFoco: ExercicioEmFocoService;
+
+  beforeEach(async () => {
+    localStorage.clear();
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [provideZonelessChangeDetection(), provideRouter([])],
+    });
+
+    emFoco = TestBed.inject(ExercicioEmFocoService);
+    fixture = TestBed.createComponent(AreaTreino);
+    // O tópico sai do próprio gerador; o componente recebe só o gerador.
+    fixture.componentRef.setInput('gerador', geradorFixo);
+    await fixture.whenStable();
+  });
+
+  it('publica o enunciado e a fórmula do exercício na tela', () => {
+    expect(emFoco.exercicio()).toEqual({
+      enunciado: exercicioFixo.enunciado,
+      tex: exercicioFixo.enunciadoTex,
+    });
+  });
+
+  it('para de publicar quando a tela sai', () => {
+    fixture.destroy();
+
+    expect(emFoco.exercicio()).toBeNull();
   });
 });

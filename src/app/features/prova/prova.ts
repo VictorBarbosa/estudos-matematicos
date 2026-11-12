@@ -1,13 +1,16 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  DestroyRef,
   computed,
+  effect,
   inject,
   signal,
   viewChild,
 } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
+import { ExercicioEmFocoService } from '@core/exercicio/services/exercicio-em-foco.service';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { textoLocal } from '@core/i18n/textos-locais';
 import {
@@ -80,6 +83,8 @@ type Fase = 'carregando' | 'trancada' | 'vencida' | 'respondendo' | 'aprovado' |
 })
 export class Prova {
   private readonly rota = inject(ActivatedRoute);
+  private readonly emFoco = inject(ExercicioEmFocoService);
+  private readonly destroi = inject(DestroyRef);
   private readonly configuracao = inject(ConfiguracaoService);
   private readonly provas = inject(ProvaService);
   private readonly progressao = inject(ProgressaoService);
@@ -216,6 +221,26 @@ export class Prova {
 
   constructor() {
     void this.montar();
+
+    /*
+     * A pergunta também vale para o monta monta, que no celular cobre a tela.
+     * Esta prova não sabe que ele existe: só publica o que está perguntando.
+     */
+    effect(() => {
+      const questao = this.questao();
+
+      if (questao === null) {
+        this.emFoco.limpar();
+        return;
+      }
+
+      this.emFoco.mostrar({
+        enunciado: this.enunciadoDe(questao),
+        tex: questao.exercicio.enunciadoTex,
+      });
+    });
+
+    this.destroi.onDestroy(() => this.emFoco.limpar());
   }
 
   protected responder(): void {

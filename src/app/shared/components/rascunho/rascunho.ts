@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { ExercicioEmFocoService } from '@core/exercicio/services/exercicio-em-foco.service';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { Caminho } from '@core/rascunho/models/peca/peca';
 import { RascunhoAberturaService } from '@core/rascunho/services/rascunho-abertura.service';
@@ -8,6 +9,7 @@ import {
   RascunhoBandeja,
 } from '@shared/components/rascunho-bandeja/rascunho-bandeja';
 import { RascunhoTabuleiro } from '@shared/components/rascunho-tabuleiro/rascunho-tabuleiro';
+import { Formula } from '@shared/components/formula/formula';
 
 /**
  * A gaveta do monta monta, para quem estuda sem papel e sem onde escrever.
@@ -29,13 +31,23 @@ import { RascunhoTabuleiro } from '@shared/components/rascunho-tabuleiro/rascunh
 @Component({
   selector: 'app-rascunho',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RascunhoBandeja, RascunhoTabuleiro],
+  imports: [Formula, RascunhoBandeja, RascunhoTabuleiro],
   templateUrl: './rascunho.html',
   styleUrl: './rascunho.scss',
 })
 export class Rascunho {
   protected readonly rascunho = inject(RascunhoService);
   protected readonly abertura = inject(RascunhoAberturaService);
+
+  /**
+   * A pergunta que está sendo resolvida, fixa no alto da gaveta.
+   *
+   * Sem ela a gaveta cobria o enunciado e a conta virava conta de cabeça — foi
+   * a primeira coisa que faltou no aparelho de verdade. A pergunta chega pelo
+   * `ExercicioEmFocoService`, que as telas de exercício alimentam: a gaveta não
+   * conhece nenhuma delas.
+   */
+  protected readonly emFoco = inject(ExercicioEmFocoService);
   protected readonly i18n = inject(I18nService);
 
   protected readonly linhas = computed(() => this.rascunho.linhas().linhas);

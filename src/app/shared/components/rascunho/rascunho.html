@@ -87,6 +87,20 @@
     -->
     <p class="deitado">{{ i18n.t('rascunho.vireOAparelho') }}</p>
 
+    <!--
+      O enunciado vem primeiro e não rola com a conta: é a pergunta que a
+      gaveta tapava. `enunciadoTex` sai do código dos geradores, nunca do aluno,
+      então desenhá-lo com o KaTeX é o mesmo que o resto do site faz.
+    -->
+    @if (emFoco.exercicio(); as exercicio) {
+      <div class="pergunta">
+        <p>{{ exercicio.enunciado }}</p>
+        @if (exercicio.tex !== '') {
+          <app-formula [tex]="exercicio.tex" [bloco]="true" />
+        }
+      </div>
+    }
+
     <div class="corpo">
       <ol class="pilha">
         @for (linha of linhas(); track $index) {

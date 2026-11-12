@@ -9,9 +9,9 @@ Com o dedo, numa tela de 390 px, armar uma divisão é pior que qualquer caderno
 
 > Quarta versão, depois de duas revisões contra o código. O histórico está na seção 12.
 >
-> **A Fase 1 está implementada** (11/11/2026). O que a implementação revelou está na seção 14, e
-> o que uma revisão do código corrigiu depois, na seção 15 — inclusive um defeito que fazia a
-> persistência parar de funcionar no segundo tópico.
+> **A Fase 1 está implementada** (11/11/2026). O que a implementação revelou está na seção 14; o
+> que uma revisão de código corrigiu, na seção 15; e o que o uso no aparelho de verdade exigiu,
+> na seção 16 — o enunciado dentro da gaveta, que era um item de fase posterior.
 
 ---
 
@@ -696,3 +696,56 @@ nunca de uma segunda cópia das regras. Por construção não há como as duas d
 - **Decisão mantida, com apoio:** envolver age sobre a peça selecionada, e montar `2x` e tocar
   `+` exige um `⬆` antes. Qualquer heurística ali seria adivinhação, e a primeira vez que
   adivinhasse errado custaria a confiança na ferramenta inteira.
+
+---
+
+## 16. O que o aparelho de verdade exigiu (12/11/2026)
+
+A Fase 1 foi publicada e usada num iPhone. Na primeira conta apareceu o problema que nenhum
+teste podia ter pegado:
+
+> «da maneira que se encontra, nós não vemos o enunciado, assim fica difícil saber qual conta
+> fazer»
+
+A gaveta ocupa a tela toda — porque a bandeja de peças não cabe em meia tela — e cobria a
+pergunta. **Montar a conta sem o enunciado à vista é conta de cabeça**, que é exatamente o que
+esta ferramenta existe para evitar. A primeira versão deste plano já dizia isso, com estas
+palavras; o item foi adiado por custo, e o uso mostrou que ele não era adiável.
+
+### 16.1 Espiar por trás da gaveta não resolvia
+
+A saída barata que a revisão de código sugeria era reduzir a gaveta a ~88% da altura, para a
+primeira linha do enunciado espiar por cima. Não serve: uma tira de enunciado não se lê, e um
+enunciado de física tem três linhas. A pergunta tinha de **entrar** na gaveta.
+
+### 16.2 O serviço que estava na Fase 3 subiu para agora
+
+Era o custo que fez o item ser adiado, e ele continua sendo o que era: a gaveta vive no casco,
+fora do `<router-outlet />`, e não alcança quem desenhou a pergunta — a sessão de treino nasce
+num `computed` local da área de treino, e há **três** telas que servem exercício.
+
+Então a direção se inverte. `ExercicioEmFocoService` é um serviço de raiz com uma pergunta
+dentro; a área de treino, a prova de área e a prova surpresa **publicam** o que estão
+perguntando, e quem precisa, lê. O acoplamento continua de uma via só: nenhuma das três sabe que
+o monta monta existe, e todas limpam ao sair — mostrar a pergunta da tela anterior seria pior
+que não mostrar nenhuma, porque o aluno montaria a conta errada.
+
+A gaveta passou a ter quatro faixas: pergunta fixa no alto, pilha de linhas rolando no meio,
+bandeja embaixo, barra de ações no topo. A pergunta tem teto de altura própria, senão um
+enunciado comprido empurraria o tabuleiro para fora da tela.
+
+### 16.3 O que isto mudou nas fases
+
+A Fase 3 perdeu seu item mais caro, e com ele o impedimento que fazia os **números do enunciado
+na bandeja** parecerem distantes: o serviço que faltava para isso agora existe. O que sobra ali
+é só decidir como extrair os números do texto.
+
+### 16.4 Testes
+
+Quatro na gaveta (mostra o enunciado; sem fórmula mostra só o texto; sem pergunta não sobra
+espaço vazio; a pergunta sai quando quem a publicou sai), três no serviço, e **dois na área de
+treino** — estes últimos são os que importam, porque sem eles a publicação poderia desaparecer
+num refactor e os testes da gaveta continuariam verdes, já que lá a pergunta é posta à mão.
+
+Suíte: 203 arquivos, 8.025 testes. O pacote inicial não cresceu (509,28 kB): o serviço são
+quarenta linhas e o componente de fórmula já estava lá.

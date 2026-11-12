@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { paraTexto } from '@core/rascunho/models/peca/peca';
 import { RascunhoAberturaService } from '@core/rascunho/services/rascunho-abertura.service';
+import { ExercicioEmFocoService } from '@core/exercicio/services/exercicio-em-foco.service';
 import { RascunhoService } from '@core/rascunho/services/rascunho.service';
 import { Rascunho } from '@shared/components/rascunho/rascunho';
 
@@ -174,6 +175,55 @@ describe('Rascunho', () => {
     await fixture.whenStable();
 
     expect(html(fixture).querySelector('.aviso')).toBeNull();
+  });
+
+  describe('a pergunta no alto da gaveta', () => {
+    /**
+     * Era a primeira coisa que faltava no aparelho de verdade: a gaveta ocupa a
+     * tela toda e cobria o enunciado, então a conta virava conta de cabeça.
+     */
+    it('mostra o enunciado de quem está perguntando', async () => {
+      const { fixture } = await montar();
+      const emFoco = TestBed.inject(ExercicioEmFocoService);
+
+      emFoco.mostrar({ enunciado: 'Quanto é 2x + 3 = 11?', tex: '2x + 3 = 11' });
+      await fixture.whenStable();
+
+      const pergunta = html(fixture).querySelector('.pergunta');
+      expect(pergunta).not.toBeNull();
+      expect(pergunta!.textContent).toContain('Quanto é 2x + 3 = 11?');
+    });
+
+    it('sem fórmula, mostra só o texto', async () => {
+      const { fixture } = await montar();
+      TestBed.inject(ExercicioEmFocoService).mostrar({
+        enunciado: 'As grandezas são direta ou inversamente proporcionais?',
+        tex: '',
+      });
+      await fixture.whenStable();
+
+      expect(html(fixture).querySelector('.pergunta app-formula')).toBeNull();
+      expect(html(fixture).querySelector('.pergunta')!.textContent).toContain('grandezas');
+    });
+
+    it('sem pergunta publicada, não sobra espaço vazio', async () => {
+      const { fixture } = await montar();
+
+      expect(html(fixture).querySelector('.pergunta')).toBeNull();
+    });
+
+    it('a pergunta sai de cena quando a tela que a publicou sai', async () => {
+      const { fixture } = await montar();
+      const emFoco = TestBed.inject(ExercicioEmFocoService);
+
+      emFoco.mostrar({ enunciado: 'Pergunta antiga', tex: '' });
+      await fixture.whenStable();
+
+      emFoco.limpar();
+      await fixture.whenStable();
+
+      expect(html(fixture).querySelector('.pergunta')).toBeNull();
+    });
   });
 
   it('tem o recado de virar o aparelho, para a paisagem', async () => {

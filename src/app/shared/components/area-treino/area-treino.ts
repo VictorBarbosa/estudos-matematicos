@@ -1,7 +1,9 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  DestroyRef,
   computed,
+  effect,
   inject,
   input,
   untracked,
@@ -14,6 +16,7 @@ import {
   ACERTOS_POR_TIPO,
   RESPOSTAS_NA_JANELA,
 } from '@core/progressao/models/progressao.model';
+import { ExercicioEmFocoService } from '@core/exercicio/services/exercicio-em-foco.service';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProvaService } from '@core/prova/services/prova.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
@@ -211,6 +214,26 @@ export class AreaTreino {
   );
 
   protected readonly dica = computed(() => dicaEm(this.sessao().exercicio(), this.i18n.idioma()));
+
+  private readonly emFoco = inject(ExercicioEmFocoService);
+  private readonly destroi = inject(DestroyRef);
+
+  /**
+   * Publica a pergunta para quem precisar dela fora desta tela.
+   *
+   * No celular o monta monta cobre o enunciado — a bandeja de peças não cabe em
+   * meia tela —, e montar a conta sem a pergunta à vista é conta de cabeça.
+   * Esta tela não sabe que ele existe: só diz o que está perguntando, e limpa
+   * ao sair, senão a gaveta mostraria a pergunta da tela anterior.
+   */
+  constructor() {
+    effect(() => {
+      const exercicio = this.sessao().exercicio();
+      this.emFoco.mostrar({ enunciado: this.enunciado(), tex: exercicio.enunciadoTex });
+    });
+
+    this.destroi.onDestroy(() => this.emFoco.limpar());
+  }
 
   /** O texto de apoio do campo de resposta, na língua da interface. */
   protected readonly ajudaDoFormato = computed(() =>

@@ -678,6 +678,24 @@ seguinte o esvazia, para que o botão nunca desfaça algo mais antigo do que o a
 acoplamento algum com a área de treino, a prova e a prova surpresa — nenhuma das três sabe que
 ela existe. O preço é que o rascunho é do _tópico_, não da _questão_.
 
+### A pergunta fica no alto da gaveta
+
+Foi a primeira coisa que faltou no aparelho de verdade: a gaveta ocupa a tela toda, cobria o
+enunciado, e **montar a conta sem a pergunta à vista é conta de cabeça** — exatamente o que a
+ferramenta existe para evitar. Espiar por trás da gaveta não resolve: uma tira de enunciado não
+se lê. A pergunta tinha de entrar.
+
+Só que a gaveta vive no casco, fora do roteador, e não alcança quem desenhou a pergunta: a sessão
+de treino nasce dentro de um `computed` local da área de treino, e há **três** telas que servem
+exercício. Então a direção se inverte — cada uma **publica** em `ExercicioEmFocoService` o que
+está perguntando, e quem precisa, lê. Continua valendo que nenhuma delas sabe que o monta monta
+existe, e quem sai de cena limpa o que publicou, senão a gaveta mostraria a pergunta da tela
+anterior, que é pior que não mostrar nenhuma.
+
+A pergunta fica fixa e não rola com a conta, com teto de altura: um enunciado de física tem três
+linhas e, sem limite, empurraria o tabuleiro para fora da tela. O `enunciadoTex` vem do código
+dos geradores, nunca do aluno, então desenhá-lo com o KaTeX é o mesmo que o resto do site faz.
+
 ### Dois detalhes de carregamento e de tela
 
 `RascunhoAberturaService` existe só para responder «está aberta?». Sem ele, o cabeçalho
@@ -694,7 +712,8 @@ mais honesto que entregar uma gaveta que não serve.
 
 `√`, `^` e a **conta armada** em colunas (com «vai um» e restos) são a fase seguinte: são o
 desenho mais caro — o telhado do radical não estica — e o menos usado para isolar `x`. Depois
-vêm os números do enunciado já prontos na bandeja, e **conferir se o passo manteve a igualdade**,
+vêm os números do enunciado já prontos na bandeja como peças de um toque, e **conferir se o passo
+manteve a igualdade**,
 que precisa de três vereditos — `bateu`, `não bateu` e **`não sei conferir`** —, porque
 `analisarSimbolica` não conhece o sinal `=` e avalia uma variável só: um verificador que diz
 «errado» a quem acertou é pior que não ter verificador. O plano inteiro está em
