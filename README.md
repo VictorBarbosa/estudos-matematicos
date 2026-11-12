@@ -581,7 +581,11 @@ como o KaTeX faz (0,7), o terceiro chega a 5 px, ilegível e intocável.
 Nenhum CSS atende aos dois. As escolhas, por escrito:
 
 - **nada encolhe** — toda peça tem o mesmo corpo em qualquer nível;
-- **o alvo passa da caixa pintada**, e quem está mais dentro ganha o empate;
+- **a peça tem 44 px, e literalmente** — não 36 px mais um halo de área sensível, que foi a
+  primeira tentativa: halos de peças vizinhas se sobrepunham sobre um vão de 2 px, e o empate ia
+  para a última na ordem do documento, de modo que tocar a borda do `+` podia acertar o número
+  antes dele. A barra da fração, que é a **única** alça da fração, também tem altura de dedo, com
+  a linha fina pintada por dentro dela;
 - **teto de três frações aninhadas** (`LIMITE_DE_FRACOES`), recusado com aviso;
 - **seleção por navegação**: `⬆` sobe um nível e `⇥` vai ao próximo buraco. É o que desacopla o
   polegar da profundidade, e é também o que alcança o produto implícito `2x`, que não desenha
@@ -610,6 +614,21 @@ Nenhuma das quatro escolhe peça ou preenche buraco: todas movem o foco, e a ré
 pé. **O número em composição ganha do atalho 2**, e tem de ganhar: com a regra ao contrário, um
 número de dois algarismos seria impossível sempre que houvesse outro buraco na árvore.
 
+### A tecla que não cabe, e a que não tem o que dizer
+
+A tela engole a recusa de «sem efeito» de propósito — tentativa não é erro, e um aviso a cada
+toque viraria ruído. O efeito colateral era uma bandeja com teclas que simplesmente não
+respondiam. Então há dois estados:
+
+- **muda**, sem nada a explicar (`±` sobre um buraco, `⇄` sobre um número, `⬆` na raiz):
+  **desabilitada**, e a regra se vê antes do toque;
+- **não cabe por um motivo** (igualdade repetida, quarta fração aninhada): **apagada, mas
+  tocável** — botão desabilitado não pode ser tocado, e aí o recado que explica o motivo nunca
+  apareceria.
+
+A resposta vem de um **ensaio com o próprio modelo**: pergunta-se à ação o que ela faria e
+olha-se a recusa. Nunca de uma segunda cópia das regras, que poderia discordar da primeira.
+
 E a economia maior não é atalho nenhum: **só a primeira linha é caríssima.** As seguintes saem
 de **copiar a anterior e editar** — apagar o `3`, trocar o `11` pelo `8` —, que é também o que
 se faz no papel, onde a linha de baixo repete a de cima com uma diferença.
@@ -623,13 +642,37 @@ descarta aba em segundo plano; perder oito linhas de conta para o gerenciador de
 pior resultado possível.
 
 Então persiste em `localStorage`, **por tópico**, com chave versionada, cinco tópicos mais
-recentes e teto de ~8 kB. Ao estourar o teto, **recusa-se a gravar e avisa-se** — descartar a
-linha mais antiga apagaria o ponto de partida da conta. E a leitura é desconfiada: `validarArvore`
-confere nó por nó, porque o formato vai crescer entre as fases e uma peça desconhecida chegaria
-como lixo tipado.
+recentes e teto de 128 kB. Ao estourar, **largam-se os tópicos mais antigos até caber** — o mesmo
+critério que a contagem de tópicos já aplica; reagir ao excesso de bytes de um jeito e ao de
+tópicos de outro não teria defesa. O teto era de 8 kB, e isso quebrava a ferramenta no segundo
+tópico: um tópico com as 20 linhas permitidas ocupa perto de 7 kB, então o segundo estourava e a
+gravação parava **para todos**, com o aluno seguindo em frente e o disco guardando a versão
+velha. Não gravar nada ficou reservado ao caso em que nem o tópico mais recente cabe — gravar
+uma lista vazia apagaria o rascunho dos outros para registrar o fracasso deste.
+
+A leitura é desconfiada em dois níveis: `validarArvore` confere **a forma** nó por nó, porque o
+formato vai crescer entre as fases e uma peça desconhecida chegaria como lixo tipado; e
+`linhaCoerente` confere **os invariantes** — uma igualdade, na raiz, e frações dentro do teto —,
+porque uma árvore mais funda vinda do disco seria desenhada, tomaria a tela inteira e travaria
+todo envolvimento sem o aluno entender por quê. Linha estragada vira buraco em vez de
+desaparecer: descartá-la renumeraria as outras e a linha em edição passaria a ser outra.
 
 **A seleção não persiste**, de propósito: ela é foco, da mesma natureza do cursor num campo de
-texto, e ninguém espera reencontrá-lo onde o deixou na semana passada.
+texto, e ninguém espera reencontrá-lo onde o deixou na semana passada. O `computed` que entrega a
+linha em edição **saneia o caminho** contra a árvore, em vez de confiar em quando um efeito roda:
+trocar de tópico muda as linhas na hora, e havia uma janela de um quadro em que a árvore nova
+convivia com o caminho antigo.
+
+### Uma lixeira de um slot
+
+Três caminhos apagavam trabalho sem volta, e um custava **dois toques**: o sinal `=` seleciona a
+raiz, e o `⌫` logo depois leva a linha inteira. Os outros são o cesto, que joga fora o rascunho
+do tópico, e o `×` de uma linha. Como o desfazer genérico ficou para depois, não havia retorno de
+nenhum.
+
+Os três guardam o estado de antes, e a gaveta mostra um botão de desfazer. **Um slot basta, e é
+melhor que uma pilha**: ele cobre exatamente o arrependimento imediato. Qualquer alteração
+seguinte o esvazia, para que o botão nunca desfaça algo mais antigo do que o aluno espera.
 
 **O tópico vem da URL**, não de quem desenha o exercício. É o que mantém a ferramenta sem
 acoplamento algum com a área de treino, a prova e a prova surpresa — nenhuma das três sabe que
