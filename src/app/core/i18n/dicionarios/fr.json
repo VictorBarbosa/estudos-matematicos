@@ -921,6 +921,58 @@
     "valeRevisar": "À revoir :",
     "vazio": "Aucun exercice répondu pour l’instant. Les résultats apparaissent ici dès que vous vous entraînez."
   },
+  "rascunho": {
+    "titulo": "Jeu de construction",
+    "fechar": "Fermer le jeu de construction",
+    "novaLinha": "Nouvelle ligne, vide",
+    "copiarLinha": "Nouvelle ligne, copie de celle du dessus",
+    "limpar": "Jeter ce brouillon",
+    "irALinha": "Modifier la ligne {numero}",
+    "removerLinha": "Retirer la ligne {numero}",
+    "vireOAparelho": "Tournez l'appareil pour monter le calcul : à la verticale, tout le plateau tient.",
+    "naoCoube": "Le brouillon dépasse la taille enregistrable. Il reste ici, mais ne sera pas récupéré si l'onglet se ferme.",
+    "conta": "Le calcul monté",
+    "bandeja": "Pièces",
+    "buraco": "case vide",
+    "papel": {
+      "buraco": "Case",
+      "numero": "Nombre",
+      "incognita": "Inconnue",
+      "operacao": "Opération",
+      "fracao": "Fraction",
+      "igualdade": "Égalité"
+    },
+    "recusa": {
+      "profundidade": "Une fraction dans une fraction jusqu'à trois niveaux : au-delà, cela ne tiendrait pas à l'écran.",
+      "igualdade-repetida": "Cette ligne a déjà un égal."
+    },
+    "tecla": {
+      "algarismo0": "Zéro",
+      "algarismo1": "Un",
+      "algarismo2": "Deux",
+      "algarismo3": "Trois",
+      "algarismo4": "Quatre",
+      "algarismo5": "Cinq",
+      "algarismo6": "Six",
+      "algarismo7": "Sept",
+      "algarismo8": "Huit",
+      "algarismo9": "Neuf",
+      "virgula": "Virgule décimale",
+      "sinal": "Changer le signe du nombre",
+      "incognita": "Inconnue x",
+      "somar": "Additionner",
+      "subtrair": "Soustraire",
+      "multiplicar": "Multiplier",
+      "dividir": "Diviser",
+      "fracao": "Fraction, avec numérateur et dénominateur",
+      "coeficiente": "Coefficient fois x",
+      "igualdade": "Égal",
+      "subir": "Sélectionner la pièce englobante",
+      "proximo": "Aller à la case suivante",
+      "virar": "Inverser les côtés de l'opération",
+      "apagar": "Effacer la pièce sélectionnée"
+    }
+  },
   "revisar": {
     "abrirTopico": "Ouvrir le sujet complet",
     "carregando": "Chargement des exercices de ce sujet…",
@@ -950,7 +1002,8 @@
     "idioma": "Changer de langue. Actuelle : {atual}",
     "marca": "Études mathématiques",
     "menu": "Ouvrir ou fermer le menu des sujets",
-    "tema": "Changer de thème. Actuel : {atual}"
+    "tema": "Changer de thème. Actuel : {atual}",
+    "rascunho": "Afficher ou masquer le jeu de construction"
   },
   "sidebar": {
     "configuracoes": "Réglages",
@@ -975,6 +1028,9 @@
     "esfera": "sphère",
     "piramide": "pyramide",
     "prisma": "prisme"
+  },
+  "surpresa": {
+    "banner": "Examen surprise en cours — question {atual} sur {total}"
   },
   "tecla": {
     "abreParentese": "Parenthèse ouvrante",
@@ -1096,8 +1152,5 @@
     "recomecar": "Recommencer à zéro",
     "titulo": "Votre parcours",
     "zerarTudo": "Oui, tout effacer"
-  },
-  "surpresa": {
-    "banner": "Examen surprise en cours — question {atual} sur {total}"
   }
 }

@@ -54,9 +54,11 @@ describe('DispositivoService', () => {
 
     expect(d.tipo()).toBe('computador');
     expect(d.calculadoraPermitida()).toBe(false);
+    // No computador há papel na mesa.
+    expect(d.rascunhoPermitido()).toBe(false);
   });
 
-  it('celular não tem calculadora nem folha', () => {
+  it('celular não tem calculadora nem folha, e tem o monta monta', () => {
     const d = fingir({
       largura: 430,
       altura: 932,
@@ -69,6 +71,21 @@ describe('DispositivoService', () => {
     expect(d.ehCelular()).toBe(true);
     expect(d.calculadoraPermitida()).toBe(false);
     expect(d.folhaPermitida()).toBe(false);
+    // Aqui não há como escrever nem desenhar: em vez da folha, peças.
+    expect(d.rascunhoPermitido()).toBe(true);
+  });
+
+  it('celular deitado continua celular: o menor lado não muda ao girar', () => {
+    const d = fingir({
+      largura: 932,
+      altura: 430,
+      grosso: true,
+      agente: 'Mozilla/5.0 (iPhone)',
+      toques: 5,
+    });
+
+    expect(d.tipo()).toBe('celular');
+    expect(d.rascunhoPermitido()).toBe(true);
   });
 
   it('iPad em retrato é tablet: tem calculadora e folha, apesar de estreito', () => {
@@ -84,6 +101,8 @@ describe('DispositivoService', () => {
     expect(d.ehTablet()).toBe(true);
     expect(d.calculadoraPermitida()).toBe(true);
     expect(d.folhaPermitida()).toBe(true);
+    // No tablet a folha à mão livre já resolve; o monta monta não aparece.
+    expect(d.rascunhoPermitido()).toBe(false);
   });
 
   it('iPad que se diz Mac é desmascarado pelos pontos de toque', () => {

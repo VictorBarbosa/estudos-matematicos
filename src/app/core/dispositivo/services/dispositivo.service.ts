@@ -75,6 +75,17 @@ export class DispositivoService {
    */
   readonly folhaPermitida = computed(() => this.tipo() === 'tablet');
 
+  /**
+   * O monta monta pode aparecer?
+   *
+   * Só no celular, e é o complemento exato da folha: ali não há como escrever
+   * nem desenhar — com o dedo, numa tela de 390 px, armar uma conta é pior que
+   * qualquer caderno —, então em vez de uma folha em branco o aluno recebe
+   * peças para encaixar. No tablet a folha à mão livre já resolve, e no
+   * computador há papel na mesa.
+   */
+  readonly rascunhoPermitido = computed(() => this.tipo() === 'celular');
+
   constructor() {
     const janela = this.janela;
     if (janela === null) {

@@ -85,10 +85,10 @@ funciona.
 
 O que ajustar, se precisar:
 
-| Onde | O quê |
-| --- | --- |
-| `ngsw-config.json` | O que entra em cache. `casca` vem junto na instalação (~375 kB); os 402 `chunk-*.js` dos tópicos e as fontes do KaTeX ficam `lazy`, cada um guardado na primeira visita — prefetch de tudo baixaria 4 MB para quem só quer abrir Frações. |
-| `INTERVALO_DE_CHECAGEM` | De quanto em quanto tempo perguntar se saiu versão nova (30 min). Também se pergunta a cada volta para a aba, com piso de 1 min entre checagens. |
+| Onde                    | O quê                                                                                                                                                                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ngsw-config.json`      | O que entra em cache. `casca` vem junto na instalação (~375 kB); os 402 `chunk-*.js` dos tópicos e as fontes do KaTeX ficam `lazy`, cada um guardado na primeira visita — prefetch de tudo baixaria 4 MB para quem só quer abrir Frações. |
+| `INTERVALO_DE_CHECAGEM` | De quanto em quanto tempo perguntar se saiu versão nova (30 min). Também se pergunta a cada volta para a aba, com piso de 1 min entre checagens.                                                                                          |
 
 Em desenvolvimento o service worker não é registrado — `enabled: !isDevMode()` —, senão o
 cache serviria código velho a cada recarga. Para desligar o service worker de um navegador que
@@ -104,7 +104,7 @@ Os onze ícones saem de um desenho só — o mesmo sinal de integral do cabeçal
 acento — por `npm run gerar:icones`. O símbolo entra como texto, então o desenho é rasterizado
 na geração, com as fontes da máquina: são os PNGs que vão para o repositório, nunca um SVG com
 `<text>`, que cada aparelho renderizaria com a fonte que tivesse. Há duas versões do desenho: a
-comum, de cantos arredondados, e a *maskable*, de canto reto e símbolo menor — ali quem recorta
+comum, de cantos arredondados, e a _maskable_, de canto reto e símbolo menor — ali quem recorta
 é o Android, e um canto já arredondado apareceria cortado duas vezes.
 
 A cor da barra do navegador acompanha o tema, por duas `<meta name="theme-color">` com
@@ -323,8 +323,8 @@ avaliação em vários pontos, então `6x + 4`, `4 + 6x` e `2(3x + 2)` contam ig
 
 A correção é **por valor, nunca por forma**: `10/20` vale o mesmo que `1/2` e conta como
 acerto, como contam `6/8` para `3/4` e `0,5` para `1/2`. O que o site acrescenta é um recado —
-*"Aceita — 10/20 é o mesmo número que 1/2, que é a forma mais simples: divida os dois termos
-por 10"* —, porque a forma menor é a que o gabarito mostra e a que deixa a conta seguinte mais
+_"Aceita — 10/20 é o mesmo número que 1/2, que é a forma mais simples: divida os dois termos
+por 10"_ —, porque a forma menor é a que o gabarito mostra e a que deixa a conta seguinte mais
 leve. O recado não muda o veredito nem o conceito contado: é sobre a escrita, não uma ressalva
 sobre a matemática. Quem respondeu `0,5` não o recebe — apontar termos que ele não escreveu
 soaria como erro de leitura.
@@ -349,7 +349,7 @@ seguinte.
 
 **A pergunta vai com a tela junto.** O que está em `<main>` — tópico aberto, enunciado,
 resposta dada, veredito — acompanha cada pergunta, cortado em 4 000 caracteres. É o que
-torna *"por que isso está errado?"* uma pergunta respondível: sem o contexto, quem responde
+torna _"por que isso está errado?"_ uma pergunta respondível: sem o contexto, quem responde
 não enxerga o "isso". A navegação lateral fica de fora de propósito — ela tem os 75 tópicos
 e encheria o contexto com uma lista de links.
 
@@ -519,6 +519,144 @@ publicar um pacote npm para dois projetos de um autor só; o README de lá lista
 arquivo o que veio daqui, para que a recópia continue sendo um `cp`. O que é só do telefone —
 o menu lateral, o teclado que não fecha, o modo **Decimal em fração** — vive lá e nunca aqui.
 
+## O monta monta: armar a conta no celular
+
+No computador e no iPad as contas saem no papel, ou na folha de rascunho à mão livre. No ônibus
+e no avião não há papel — e **no celular não há como escrever nem desenhar**: com o dedo, numa
+tela de 390 px, armar uma divisão é pior que qualquer caderno. É por isso que
+`DispositivoService.folhaPermitida` libera a folha **só no tablet**, e a calculadora nem lá.
+
+A resposta para o celular não é liberar a folha, é outra ferramenta: um **monta monta**. Não se
+escreve, **encaixa-se**.
+
+O papel dá duas coisas de graça, e tira uma:
+
+|                           | Papel                   | Celular            |
+| ------------------------- | ----------------------- | ------------------ |
+| Espaço para armar a conta | de graça — você desenha | **é o que não dá** |
+| Saber se errou no meio    | não dá nada             | de graça           |
+
+Daí o desenho inteiro: **o celular dá a forma da conta e nunca o passo.**
+
+### A linha é uma árvore, não um texto
+
+Cada linha nasce como um buraco só. Toca-se no buraco e escolhe-se a peça; se a peça é uma
+estrutura, ela entra trazendo buracos novos. **Tocar para escolher, tocar para encaixar — nunca
+arrastar**, que em tela pequena disputa com a rolagem.
+
+Isso resolve dois problemas de uma vez: a conta **já nasce desenhada certa**, porque a
+estrutura _é_ o desenho; e não existe conversor de texto para LaTeX, porque não há texto para
+analisar — o projeto só tem o caminho inverso (`texParaTexto`).
+
+Três ações, e duas delas são o mesmo toque — o que muda é o que está selecionado:
+
+| Ação         | Como                                 | O que faz                                                |
+| ------------ | ------------------------------------ | -------------------------------------------------------- |
+| **Encaixar** | buraco selecionado + peça            | a peça entra no buraco                                   |
+| **Envolver** | peça selecionada + peça de estrutura | a selecionada entra no primeiro buraco da estrutura nova |
+| **Apagar**   | peça selecionada + `⌫`               | a peça volta a ser buraco                                |
+
+É **envolver** que faz a álgebra andar. Dividir os dois lados por 2 é selecionar `2x`, tocar em
+`÷` e encaixar `2`; depois selecionar `8` e repetir. **Quem decidiu dividir por 2 foi o aluno** —
+a ferramenta só desenhou.
+
+### A régua do «nada muito já feito»
+
+A peça é **átomo**: algarismo, `x`, operador, fração. Não existe peça «divida os dois lados por
+2», e há teste que falha se alguma aparecer na bandeja. O rascunho nunca escolhe peça, nunca
+preenche buraco, nunca calcula resultado — nem parcial —, nunca sugere passo, nunca simplifica,
+e **não copia nada para o campo de resposta**: é essa última fronteira que o separa de uma
+calculadora com um passo a mais.
+
+O que ele faz sozinho é **desenhar a estrutura** — a barra da fração no lugar, o parêntese que a
+precedência exige. Isso é desenho, não aritmética, e é o que a mão não consegue fazer ali.
+
+### As decisões que a geometria forçou
+
+Alvo tocável e aninhamento **se excluem**. Uma fração tem o dobro da altura do filho, então três
+níveis com folha tocável de 44 px já tomam a tela inteira, sem sobrar lugar para a pilha de
+passos — que é o conceito. E o caminho tipográfico vai para o lado oposto: encolhendo cada nível
+como o KaTeX faz (0,7), o terceiro chega a 5 px, ilegível e intocável.
+
+Nenhum CSS atende aos dois. As escolhas, por escrito:
+
+- **nada encolhe** — toda peça tem o mesmo corpo em qualquer nível;
+- **o alvo passa da caixa pintada**, e quem está mais dentro ganha o empate;
+- **teto de três frações aninhadas** (`LIMITE_DE_FRACOES`), recusado com aviso;
+- **seleção por navegação**: `⬆` sobe um nível e `⇥` vai ao próximo buraco. É o que desacopla o
+  polegar da profundidade, e é também o que alcança o produto implícito `2x`, que não desenha
+  sinal e portanto não tem o que tocar.
+
+**Só a fração conta para o teto**, e não qualquer estrutura: soma, produto e igualdade correm na
+linha e não custam altura. Limitar estruturas barraria `2x + 3 = 11`, que é o caso de uso.
+
+### Quinze toques, e como chegar a oito
+
+Montar `2x + 3 = 11` pelo caminho ingênuo — tocar o buraco, tocar a peça, para cada átomo —
+custa **quinze toques**. A caneta escreve essa linha em três segundos, e numa pilha de oito
+linhas seriam uns cem toques por exercício: é o número que decide se a ferramenta é usada ou
+abandonada, e o único problema que nenhum teste pega.
+
+Quatro coisas levam isso a **oito**, e há teste que conta os toques:
+
+1. a peça **`▢x`** — `2x` aparece em quase toda linha, e pelo caminho geral custa três encaixes;
+2. **encaixe direto quando há um buraco só** na árvore, sem o toque de seleção;
+3. **avanço automático** para o próximo buraco depois de encaixar, como num campo de código de
+   verificação;
+4. o **`=` acha a raiz sozinho** — é o único lugar onde ele pode existir, então exigir que o
+   aluno subisse até lá seria cobrar um toque por um destino único.
+
+Nenhuma das quatro escolhe peça ou preenche buraco: todas movem o foco, e a régua continua de
+pé. **O número em composição ganha do atalho 2**, e tem de ganhar: com a regra ao contrário, um
+número de dois algarismos seria impossível sempre que houvesse outro buraco na árvore.
+
+E a economia maior não é atalho nenhum: **só a primeira linha é caríssima.** As seguintes saem
+de **copiar a anterior e editar** — apagar o `3`, trocar o `11` pelo `8` —, que é também o que
+se faz no papel, onde a linha de baixo repete a de cima com uma diferença.
+
+### O que persiste, e por que aqui é diferente da folha
+
+`FolhaService` guarda os traços **só em memória**, e tem razão: um rascunho à mão são milhares
+de pontos. Uma árvore de peças são **bytes**, e serializa em JSON sem esforço — é a forma em que
+ela já vive. E o cenário manda guardar: a ferramenta existe para o avião, e o Safari do iOS
+descarta aba em segundo plano; perder oito linhas de conta para o gerenciador de memória é o
+pior resultado possível.
+
+Então persiste em `localStorage`, **por tópico**, com chave versionada, cinco tópicos mais
+recentes e teto de ~8 kB. Ao estourar o teto, **recusa-se a gravar e avisa-se** — descartar a
+linha mais antiga apagaria o ponto de partida da conta. E a leitura é desconfiada: `validarArvore`
+confere nó por nó, porque o formato vai crescer entre as fases e uma peça desconhecida chegaria
+como lixo tipado.
+
+**A seleção não persiste**, de propósito: ela é foco, da mesma natureza do cursor num campo de
+texto, e ninguém espera reencontrá-lo onde o deixou na semana passada.
+
+**O tópico vem da URL**, não de quem desenha o exercício. É o que mantém a ferramenta sem
+acoplamento algum com a área de treino, a prova e a prova surpresa — nenhuma das três sabe que
+ela existe. O preço é que o rascunho é do _tópico_, não da _questão_.
+
+### Dois detalhes de carregamento e de tela
+
+`RascunhoAberturaService` existe só para responder «está aberta?». Sem ele, o cabeçalho
+perguntaria ao `RascunhoService` e traria no pacote inicial a árvore, as três ações, a pilha e a
+guarda do disco — quase 13 kB para todo visitante, inclusive quem está no computador e nunca
+verá a ferramenta. A medida pesa mais aqui que em qualquer outra: esta é a ferramenta do lugar
+sem rede.
+
+Em **paisagem** a gaveta pede para virar o aparelho: deitado sobram ~390 px de altura e a bandeja
+sozinha come quase tudo. O layout de duas colunas que caberia ali é de outra fase, e dizer isso é
+mais honesto que entregar uma gaveta que não serve.
+
+### O que ela ainda não faz
+
+`√`, `^` e a **conta armada** em colunas (com «vai um» e restos) são a fase seguinte: são o
+desenho mais caro — o telhado do radical não estica — e o menos usado para isolar `x`. Depois
+vêm os números do enunciado já prontos na bandeja, e **conferir se o passo manteve a igualdade**,
+que precisa de três vereditos — `bateu`, `não bateu` e **`não sei conferir`** —, porque
+`analisarSimbolica` não conhece o sinal `=` e avalia uma variável só: um verificador que diz
+«errado» a quem acertou é pior que não ter verificador. O plano inteiro está em
+`plano-rascunho-no-celular.md`.
+
 ## Convenções
 
 - Standalone em tudo, `ChangeDetectionStrategy.OnPush`.
@@ -555,22 +693,22 @@ estudo, aquela que costuma acontecer já dentro da graduação. O campo `pronto`
 currículo: ele é o que torna visível, na navegação, qualquer tópico novo que entre no plano
 antes de ser escrito.
 
-| # | Área | Tópicos |
-|---|------|---------|
-| 1 | Matemática básica | 8 |
-| 2 | Álgebra | 8 |
-| 3 | Geometria plana e espacial | 5 |
-| 4 | Funções | 12 |
-| 5 | Trigonometria | 6 |
-| 6 | Vetores e matrizes | 5 |
-| 7 | Geometria analítica | 4 |
-| 8 | Física | 17 |
-| 9 | Pré-cálculo | 2 |
-| 10 | Cálculo 1 | 11 |
-| 11 | Cálculo 2 | 9 |
-| 12 | Combinatória e estatística | 5 |
-| 13 | Cálculo 3 | 6 |
-| 14 | Cálculo 4 | 4 |
+| #   | Área                       | Tópicos |
+| --- | -------------------------- | ------- |
+| 1   | Matemática básica          | 8       |
+| 2   | Álgebra                    | 8       |
+| 3   | Geometria plana e espacial | 5       |
+| 4   | Funções                    | 12      |
+| 5   | Trigonometria              | 6       |
+| 6   | Vetores e matrizes         | 5       |
+| 7   | Geometria analítica        | 4       |
+| 8   | Física                     | 17      |
+| 9   | Pré-cálculo                | 2       |
+| 10  | Cálculo 1                  | 11      |
+| 11  | Cálculo 2                  | 9       |
+| 12  | Combinatória e estatística | 5       |
+| 13  | Cálculo 3                  | 6       |
+| 14  | Cálculo 4                  | 4       |
 
 A área de Física fecha com **propulsão de foguetes**: a equação de Tsiolkovsky, onde logaritmo,
 conservação de momento, gases e gravitação se encontram.

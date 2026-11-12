@@ -1,0 +1,108 @@
+@if (abertura.aberto()) {
+  <section class="gaveta" role="dialog" [attr.aria-label]="i18n.t('rascunho.titulo')">
+    <header class="barra">
+      <h2 class="titulo">{{ i18n.t('rascunho.titulo') }}</h2>
+
+      <div class="acoes">
+        <button
+          type="button"
+          [title]="i18n.t('rascunho.novaLinha')"
+          [attr.aria-label]="i18n.t('rascunho.novaLinha')"
+          (click)="rascunho.linhaNova()"
+        >
+          <span aria-hidden="true">＋</span>
+        </button>
+
+        <!--
+          Copiar a linha de cima é o caminho principal, não um atalho: só a
+          primeira linha se monta do zero, e as seguintes saem desta com uma
+          peça trocada — como no papel, onde a linha de baixo repete a de cima.
+        -->
+        <button
+          type="button"
+          [title]="i18n.t('rascunho.copiarLinha')"
+          [attr.aria-label]="i18n.t('rascunho.copiarLinha')"
+          (click)="rascunho.copiarLinha()"
+        >
+          <span aria-hidden="true">⎘</span>
+        </button>
+
+        <button
+          type="button"
+          [disabled]="rascunho.vazio()"
+          [title]="i18n.t('rascunho.limpar')"
+          [attr.aria-label]="i18n.t('rascunho.limpar')"
+          (click)="rascunho.limpar()"
+        >
+          <span aria-hidden="true">🗑</span>
+        </button>
+      </div>
+
+      <button
+        type="button"
+        class="fechar"
+        [attr.aria-label]="i18n.t('rascunho.fechar')"
+        (click)="abertura.fechar()"
+      >
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.3 19.71 2.88 18.3 9.17 12 2.88 5.71 4.3 4.29l6.29 6.3 6.3-6.3z"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <!--
+      Em paisagem sobram ~390 px de altura, e a bandeja sozinha come quase
+      tudo. O layout de duas colunas que resolveria isso é de outra fase; até
+      lá, pedir para virar o aparelho é mais honesto que entregar uma gaveta
+      que não serve.
+    -->
+    <p class="deitado">{{ i18n.t('rascunho.vireOAparelho') }}</p>
+
+    <div class="corpo">
+      <ol class="pilha">
+        @for (linha of linhas(); track $index) {
+          <li class="linha" [class.atual]="$index === atual()">
+            <button
+              type="button"
+              class="numero"
+              [attr.aria-label]="i18n.t('rascunho.irALinha', { numero: $index + 1 })"
+              (click)="rascunho.escolher($index)"
+            >
+              {{ $index + 1 }}
+            </button>
+
+            <app-rascunho-tabuleiro
+              [arvore]="linha.arvore"
+              [selecao]="selecaoDe($index)"
+              (escolher)="aoEscolherPeca($index, $event)"
+            />
+
+            @if (linhas().length > 1) {
+              <button
+                type="button"
+                class="remover"
+                [attr.aria-label]="i18n.t('rascunho.removerLinha', { numero: $index + 1 })"
+                (click)="rascunho.remover($index)"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            }
+          </li>
+        }
+      </ol>
+
+      @if (aviso()) {
+        <p class="aviso" role="status">{{ aviso() }}</p>
+      }
+
+      @if (rascunho.naoCoube()) {
+        <p class="aviso" role="status">{{ i18n.t('rascunho.naoCoube') }}</p>
+      }
+    </div>
+
+    <app-rascunho-bandeja (acionar)="aoAcionar($event)" />
+  </section>
+}

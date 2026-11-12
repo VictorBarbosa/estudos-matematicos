@@ -921,6 +921,58 @@
     "valeRevisar": "Vale revisar:",
     "vazio": "Nenhum exercício respondido ainda. O desempenho aparece aqui assim que você treinar."
   },
+  "rascunho": {
+    "titulo": "Monta monta",
+    "fechar": "Fechar o monta monta",
+    "novaLinha": "Linha nova, vazia",
+    "copiarLinha": "Linha nova, começando igual à de cima",
+    "limpar": "Jogar fora este rascunho",
+    "irALinha": "Editar a linha {numero}",
+    "removerLinha": "Tirar a linha {numero}",
+    "vireOAparelho": "Vire o aparelho para montar a conta: de pé cabe a bandeja inteira.",
+    "naoCoube": "O rascunho passou do tamanho que se guarda. Ele continua aqui, mas não será recuperado se a aba fechar.",
+    "conta": "A conta montada",
+    "bandeja": "Peças",
+    "buraco": "buraco vazio",
+    "papel": {
+      "buraco": "Buraco",
+      "numero": "Número",
+      "incognita": "Incógnita",
+      "operacao": "Operação",
+      "fracao": "Fração",
+      "igualdade": "Igualdade"
+    },
+    "recusa": {
+      "profundidade": "Fração dentro de fração só até três níveis: mais que isso não caberia na tela.",
+      "igualdade-repetida": "Esta linha já tem um igual."
+    },
+    "tecla": {
+      "algarismo0": "Zero",
+      "algarismo1": "Um",
+      "algarismo2": "Dois",
+      "algarismo3": "Três",
+      "algarismo4": "Quatro",
+      "algarismo5": "Cinco",
+      "algarismo6": "Seis",
+      "algarismo7": "Sete",
+      "algarismo8": "Oito",
+      "algarismo9": "Nove",
+      "virgula": "Vírgula decimal",
+      "sinal": "Trocar o sinal do número",
+      "incognita": "Incógnita x",
+      "somar": "Somar",
+      "subtrair": "Subtrair",
+      "multiplicar": "Multiplicar",
+      "dividir": "Dividir",
+      "fracao": "Fração, com numerador e denominador",
+      "coeficiente": "Coeficiente vezes x",
+      "igualdade": "Igual",
+      "subir": "Selecionar a peça de fora",
+      "proximo": "Ir ao próximo buraco",
+      "virar": "Virar os lados da operação",
+      "apagar": "Apagar a peça selecionada"
+    }
+  },
   "revisar": {
     "abrirTopico": "Abrir o tópico inteiro",
     "carregando": "Carregando os exercícios deste tópico…",
@@ -950,7 +1002,8 @@
     "idioma": "Mudar o idioma. Atual: {atual}",
     "marca": "Estudos Matemáticos",
     "menu": "Abrir ou fechar o menu de tópicos",
-    "tema": "Alternar tema. Atual: {atual}"
+    "tema": "Alternar tema. Atual: {atual}",
+    "rascunho": "Mostrar ou esconder o monta monta"
   },
   "sidebar": {
     "configuracoes": "Configurações",
@@ -975,6 +1028,9 @@
     "esfera": "esfera",
     "piramide": "pirâmide",
     "prisma": "prisma"
+  },
+  "surpresa": {
+    "banner": "Prova surpresa em andamento — questão {atual} de {total}"
   },
   "tecla": {
     "abreParentese": "Abre parêntese",
@@ -1096,8 +1152,5 @@
     "recomecar": "Recomeçar do zero",
     "titulo": "Sua trilha",
     "zerarTudo": "Sim, zerar tudo"
-  },
-  "surpresa": {
-    "banner": "Prova surpresa em andamento — questão {atual} de {total}"
   }
 }

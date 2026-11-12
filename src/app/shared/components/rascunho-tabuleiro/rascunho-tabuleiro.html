@@ -1,0 +1,152 @@
+<!--
+  A recursão é por `ngTemplateOutlet` dentro de um componente só, como o
+  assistente já faz com os blocos do Markdown. Um componente que se importasse a
+  si mesmo faria o mesmo trabalho, mas deixaria OnPush e a auto-importação em
+  standalone mais difíceis do que precisam ser.
+-->
+<ng-template #peca let-no="no" let-caminho="caminho">
+  @switch (no.tipo) {
+    @case ('buraco') {
+      <button
+        type="button"
+        class="folha buraco"
+        [class.escolhida]="ehSelecionada(caminho)"
+        [attr.aria-label]="rotulo(no, 'rascunho.papel.buraco')"
+        [attr.aria-pressed]="ehSelecionada(caminho)"
+        (click)="aoEscolher(caminho)"
+      >
+        <span aria-hidden="true">▢</span>
+      </button>
+    }
+
+    @case ('numero') {
+      <button
+        type="button"
+        class="folha numero"
+        [class.escolhida]="ehSelecionada(caminho)"
+        [attr.aria-label]="rotulo(no, 'rascunho.papel.numero')"
+        [attr.aria-pressed]="ehSelecionada(caminho)"
+        (click)="aoEscolher(caminho)"
+      >
+        {{ numero(no) }}
+      </button>
+    }
+
+    @case ('incognita') {
+      <button
+        type="button"
+        class="folha incognita"
+        [class.escolhida]="ehSelecionada(caminho)"
+        [attr.aria-label]="rotulo(no, 'rascunho.papel.incognita')"
+        [attr.aria-pressed]="ehSelecionada(caminho)"
+        (click)="aoEscolher(caminho)"
+      >
+        x
+      </button>
+    }
+
+    @case ('operacao') {
+      <span class="operacao" [class.alvo]="ehSelecionada(caminho)">
+        @if (comParenteses(no, 0)) {
+          <span class="parentese" aria-hidden="true">(</span>
+        }
+        <ng-container
+          [ngTemplateOutlet]="peca"
+          [ngTemplateOutletContext]="{ no: filhos(no)[0], caminho: filho(caminho, 0) }"
+        />
+        @if (comParenteses(no, 0)) {
+          <span class="parentese" aria-hidden="true">)</span>
+        }
+
+        <!--
+          O produto implícito não desenha sinal — `2x` é como se escreve no
+          papel —, e então não há o que tocar para selecionar o produto. É o
+          `⬆` da bandeja que alcança este nó.
+        -->
+        @if (!implicito(no)) {
+          <button
+            type="button"
+            class="sinal"
+            [class.escolhida]="ehSelecionada(caminho)"
+            [attr.aria-label]="rotulo(no, 'rascunho.papel.operacao')"
+            [attr.aria-pressed]="ehSelecionada(caminho)"
+            (click)="aoEscolher(caminho)"
+          >
+            {{ sinalDe(no.operador) }}
+          </button>
+        }
+
+        @if (comParenteses(no, 1)) {
+          <span class="parentese" aria-hidden="true">(</span>
+        }
+        <ng-container
+          [ngTemplateOutlet]="peca"
+          [ngTemplateOutletContext]="{ no: filhos(no)[1], caminho: filho(caminho, 1) }"
+        />
+        @if (comParenteses(no, 1)) {
+          <span class="parentese" aria-hidden="true">)</span>
+        }
+      </span>
+    }
+
+    @case ('fracao') {
+      <span class="fracao" [class.alvo]="ehSelecionada(caminho)">
+        <span class="andar">
+          <ng-container
+            [ngTemplateOutlet]="peca"
+            [ngTemplateOutletContext]="{ no: filhos(no)[0], caminho: filho(caminho, 0) }"
+          />
+        </span>
+
+        <!-- A barra é a alça da fração: é por ela que a fração se seleciona. -->
+        <button
+          type="button"
+          class="barra"
+          [class.escolhida]="ehSelecionada(caminho)"
+          [attr.aria-label]="rotulo(no, 'rascunho.papel.fracao')"
+          [attr.aria-pressed]="ehSelecionada(caminho)"
+          (click)="aoEscolher(caminho)"
+        ></button>
+
+        <span class="andar">
+          <ng-container
+            [ngTemplateOutlet]="peca"
+            [ngTemplateOutletContext]="{ no: filhos(no)[1], caminho: filho(caminho, 1) }"
+          />
+        </span>
+      </span>
+    }
+
+    @case ('igualdade') {
+      <span class="igualdade" [class.alvo]="ehSelecionada(caminho)">
+        <ng-container
+          [ngTemplateOutlet]="peca"
+          [ngTemplateOutletContext]="{ no: filhos(no)[0], caminho: filho(caminho, 0) }"
+        />
+
+        <button
+          type="button"
+          class="sinal"
+          [class.escolhida]="ehSelecionada(caminho)"
+          [attr.aria-label]="rotulo(no, 'rascunho.papel.igualdade')"
+          [attr.aria-pressed]="ehSelecionada(caminho)"
+          (click)="aoEscolher(caminho)"
+        >
+          =
+        </button>
+
+        <ng-container
+          [ngTemplateOutlet]="peca"
+          [ngTemplateOutletContext]="{ no: filhos(no)[1], caminho: filho(caminho, 1) }"
+        />
+      </span>
+    }
+  }
+</ng-template>
+
+<span class="conta" role="tree" [attr.aria-label]="i18n.t('rascunho.conta')">
+  <ng-container
+    [ngTemplateOutlet]="peca"
+    [ngTemplateOutletContext]="{ no: arvore(), caminho: [] }"
+  />
+</span>

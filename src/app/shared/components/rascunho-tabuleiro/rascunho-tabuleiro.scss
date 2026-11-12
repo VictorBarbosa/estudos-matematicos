@@ -1,0 +1,148 @@
+@use 'mixins' as *;
+
+/*
+ * O corpo da peça é o mesmo em qualquer nível de aninhamento.
+ *
+ * Não é descuido tipográfico: encolher cada nível, como o KaTeX faz, levaria a
+ * peça a 5 px no terceiro nível de fração — ilegível, e intocável com o
+ * polegar. Aqui o requisito do dedo ganha do requisito da notação, e o
+ * aninhamento tem teto em vez de ter escala.
+ */
+$peca: 2.25rem;
+
+/*
+ * A área sensível passa da caixa pintada.
+ *
+ * Um denominador desenhado tem a altura da sua linha, que é menor que o mínimo
+ * tocável. O `::after` estende o alvo sem mexer no desenho, e quem está mais
+ * dentro ganha o empate, porque é a peça mais difícil de acertar.
+ */
+@mixin alvo-generoso($folga: 0.25rem) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -$folga;
+  }
+}
+
+:host {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.conta {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.125rem;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.folha,
+.sinal {
+  @include alvo-generoso;
+
+  min-width: $peca;
+  min-height: $peca;
+  padding: 0 0.25rem;
+  border: 1px solid transparent;
+  border-radius: var(--raio-sm);
+  background: none;
+  color: var(--texto);
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+
+  &:focus-visible {
+    @include foco-visivel;
+  }
+
+  &.escolhida {
+    border-color: var(--acento);
+    background: color-mix(in oklab, var(--acento) 18%, transparent);
+  }
+}
+
+.buraco {
+  color: var(--texto-suave);
+  border-color: var(--borda);
+  border-style: dashed;
+}
+
+.incognita {
+  font-style: italic;
+}
+
+.sinal {
+  color: var(--texto-suave);
+}
+
+.operacao,
+.igualdade {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+/* A igualdade respira mais que uma soma: ela separa os dois lados da conta. */
+.igualdade > .sinal {
+  margin: 0 0.25rem;
+}
+
+.parentese {
+  color: var(--texto-suave);
+  font-size: 1.25em;
+}
+
+/*
+ * A fração empilha, e é ela que gasta altura: cada nível dobra o que havia.
+ *
+ * O alinhamento com o que está ao lado é pela barra, por centralização do
+ * conjunto. Isso acerta um nível e se afasta quando há fração ao lado de
+ * fração, porque layout matemático de verdade carrega altura e profundidade por
+ * caixa — é o que o KaTeX faz, e o que aqui se dispensa em troca de peças
+ * tocáveis.
+ */
+.fracao {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.0625rem;
+  vertical-align: middle;
+}
+
+.andar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.125rem;
+}
+
+.barra {
+  @include alvo-generoso(0.375rem);
+
+  width: 100%;
+  min-width: $peca;
+  height: 0.125rem;
+  padding: 0;
+  border: none;
+  border-radius: 1px;
+  background: var(--texto);
+  cursor: pointer;
+
+  &:focus-visible {
+    @include foco-visivel;
+  }
+
+  &.escolhida {
+    background: var(--acento);
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--acento) 30%, transparent);
+  }
+}
+
+.alvo {
+  border-radius: var(--raio-sm);
+}

@@ -240,6 +240,9 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] **Prova surpresa (10/11)**: nasce sem aviso a cada N dias (fábrica: 7, depois de 3 tópicos vencidos), sobre todos os tópicos vencidos que estão no plano; sobrevive ao refresh (estado com semente, questão atual e respostas) e não se adia — o casco leva o aluno à prova quando ela nasce e o guard `semSurpresaAtivaGuard` fecha tópicos, revisão e prova de área. Abaixo do acerto mínimo (75%), o histórico dos tópicos errados é apagado e a aprovação da área revogada; a tranca se desfaz quando o tópico é vencido de novo. Ajustes em Configurações → Prova surpresa
 - [x] Teste de nivelamento por área (10/11): a prova de uma área já aberta na trilha pode ser feita antes das etapas; passando, a área inteira conta como vencida e a próxima abre; falhando, nada é apagado. A barra lateral marca «nivelamento»
 - [ ] Textos dos geradores (enunciados, dicas, diagnósticos) só em português; a interface tem pt/fr/en. Um glossário FR/EN por tópico continua pendente
+- ◐ **Armar a conta no celular — o monta monta (11/11).** No celular não há como escrever nem desenhar, e por isso a folha à mão livre é liberada só no tablet: quem estuda no ônibus ou no avião não tinha onde armar a conta. A Fase 1 está no ar: a linha é uma árvore de peças que nasce como um buraco só, com três ações — encaixar, **envolver** (o que faz a álgebra andar: seleciono `2x`, toco em `÷`, encaixo `2`) e apagar —, bandeja fixa de algarismos, pilha de linhas com cópia da anterior, persistência por tópico com chave versionada e leitura validada nó por nó. Só no celular (`rascunhoPermitido`), em paisagem pede para virar o aparelho, e `RascunhoAberturaService` mantém 13 kB de modelos fora do pacote inicial. A régua: a peça é átomo, nunca «divida os dois lados por 2», e nada copia para o campo de resposta — com testes que falham se isso mudar. Montar `2x + 3 = 11` custa 8 toques (eram 15 no caminho ingênuo), e há teste que os conta.
+  - **Falta (Fase 1.5 e seguintes):** `√` e `^`; a **conta armada** em colunas com «vai um» e restos; desfazer genérico; layout de duas colunas para a paisagem; os números do enunciado prontos na bandeja (exige um serviço «exercício em foco», porque a `SessaoTreino` nasce num `computed` local de `area-treino.ts:72` e há três consumidores de exercício); e **conferir se o passo manteve a igualdade**, que precisa de três vereditos — `analisarSimbolica` não conhece `=` e avalia uma variável só, então um verificador ingênuo diria «errado» a quem acertou. Plano completo em `plano-rascunho-no-celular.md`.
+  - **Pendente de aparelho:** medir num iPhone real quanta altura sobra abaixo do cabeçalho e qual o menor corpo de peça que o polegar acerta — o segundo confirma ou derruba o teto de três frações aninhadas. O layout se adapta (`dvh`) em vez de depender de um número suposto.
 
 ---
 
@@ -310,25 +313,25 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 ### Em paralelo — o que o site não resolve
 
-- [ ] **Escolher a rota de admissão e confirmar com cada universidade.** O site prepara o conhecimento; a admissão pede **créditos** das disciplinas do cégep (0M02–0M04, 0P01–0P03, 0C01–0C02) ou de um preparatório universitário. Rotas para adulto sem DEC identificadas na avaliação anterior (confirmar: as regras mudam a cada ciclo): *mature entry* da Concordia (21+, 24 meses fora da escola); *certificat préparatoire* de Sherbrooke; *année préparatoire* da UdeM para concorrer à Polytechnique — cuja *année propédeutique* **não dá acesso ao génie aérospatial*. McGill e algumas outras exigem **laboratório** em mecânica e química, que não se faz num site.
+- [ ] **Escolher a rota de admissão e confirmar com cada universidade.** O site prepara o conhecimento; a admissão pede **créditos** das disciplinas do cégep (0M02–0M04, 0P01–0P03, 0C01–0C02) ou de um preparatório universitário. Rotas para adulto sem DEC identificadas na avaliação anterior (confirmar: as regras mudam a cada ciclo): _mature entry_ da Concordia (21+, 24 meses fora da escola); _certificat préparatoire_ de Sherbrooke; _année préparatoire_ da UdeM para concorrer à Polytechnique — cuja _année propédeutique_ *_não dá acesso ao génie aérospatial_. McGill e algumas outras exigem **laboratório** em mecânica e química, que não se faz num site.
 - [ ] Química: fora do site; fazer pelo curso formal.
-- [x] Material externo por área: as referências de `curriculo.ts` indicam os capítulos de cada livro (10/11). *Chemistry 2e* fica para a química, que é feita fora do site.
+- [x] Material externo por área: as referências de `curriculo.ts` indicam os capítulos de cada livro (10/11). _Chemistry 2e_ fica para a química, que é feita fora do site.
 
 ---
 
 ## 7. Síntese das decisões
 
-| Ação | Conteúdos |
-|---|---|
-| **Manter** | Todos os 101 tópicos; a ordem atual da trilha (Física antes do Cálculo); juros e complexos como complementares |
-| **Consertar já** | ~~Tipos mortos; dicas presas; Extremo repetido; `\;`; resoluções de Física~~ (feitos em 09/11); cobertura da prova (◐) |
-| **Refundar** | `sequencias-e-series` → testes de convergência |
-| **Remover / mover** | Seção duplicada de limites laterais no Pré-cálculo; «Ajuste de reta» para regressão |
+| Ação                             | Conteúdos                                                                                                                                |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Manter**                       | Todos os 101 tópicos; a ordem atual da trilha (Física antes do Cálculo); juros e complexos como complementares                           |
+| **Consertar já**                 | ~~Tipos mortos; dicas presas; Extremo repetido; `\;`; resoluções de Física~~ (feitos em 09/11); cobertura da prova (◐)                   |
+| **Refundar**                     | `sequencias-e-series` → testes de convergência                                                                                           |
+| **Remover / mover**              | Seção duplicada de limites laterais no Pré-cálculo; «Ajuste de reta» para regressão                                                      |
 | **Acrescentar (pré-requisitos)** | ~~Estudo de sinal; equações trigonométricas e inversas; escalonamento e inversa; L'Hôpital e TVM; regra do quociente~~ (feitos em 09/11) |
-| **Acrescentar (cobertura)** | Congruência, quadriláteros, poliedros; polares; binômio de Newton; superfície e teoremas; exponenciais/logarítmicas; séries de potências |
-| **Acrescentar (admissão)** | Eletromagnetismo; ondas e física moderna |
-| **Ampliar treino** | Álgebra primeiro; depois Trigonometria, Cálculo 1, Geometria analítica, Funções, Cálculo 4 |
-| **Fora do site** | Química; laboratórios; créditos formais |
+| **Acrescentar (cobertura)**      | Congruência, quadriláteros, poliedros; polares; binômio de Newton; superfície e teoremas; exponenciais/logarítmicas; séries de potências |
+| **Acrescentar (admissão)**       | Eletromagnetismo; ondas e física moderna                                                                                                 |
+| **Ampliar treino**               | Álgebra primeiro; depois Trigonometria, Cálculo 1, Geometria analítica, Funções, Cálculo 4                                               |
+| **Fora do site**                 | Química; laboratórios; créditos formais                                                                                                  |
 
 ---
 
@@ -336,12 +339,12 @@ Ordem pela regra «primeiro o que está quebrado e é barato; depois o que destr
 
 Não dar um tópico por concluído por ter lido a explicação. Quatro níveis:
 
-| Nível | Critério |
-|---|---|
-| 1 — Reconhecer | Explico o conceito e seus símbolos |
-| 2 — Aplicar | Resolvo exercícios básicos |
-| 3 — Dominar | Resolvo problemas sem consultar exemplos |
-| 4 — Modelar | Aplico a um problema real ou físico |
+| Nível          | Critério                                 |
+| -------------- | ---------------------------------------- |
+| 1 — Reconhecer | Explico o conceito e seus símbolos       |
+| 2 — Aplicar    | Resolvo exercícios básicos               |
+| 3 — Dominar    | Resolvo problemas sem consultar exemplos |
+| 4 — Modelar    | Aplico a um problema real ou físico      |
 
 O critério de domínio da trilha (8 de 10, 3 no Médio ou Difícil, 3 seguidos) mede até o nível 3. O nível 4 é o que a prova final e os problemas de modelagem (foguete, órbita, aerodinâmica) deveriam cobrar — hoje a prova ainda sorteia a mesma pergunta do treino (4.3).
 

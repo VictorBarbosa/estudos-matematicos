@@ -145,9 +145,10 @@
 /*
  * O aviso da prova surpresa.
  *
- * Ele fica dentro do conteúdo, acima do roteador, e não no cabeçalho: no
- * celular o cabeçalho já carrega cinco botões, e uma tarja ali espremeria o
- * resto. Aqui ela aparece em toda página que não seja a própria prova.
+ * Ele fica dentro do conteúdo, acima do roteador, e não no cabeçalho: uma
+ * tarja de aviso ali espremeria a marca e as ferramentas, e no celular ela
+ * teria de competir com o botão do monta monta. Aqui ela aparece em toda
+ * página que não seja a própria prova.
  */
 .prova-surpresa {
   display: flex;

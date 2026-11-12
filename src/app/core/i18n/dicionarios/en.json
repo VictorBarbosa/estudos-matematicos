@@ -921,6 +921,58 @@
     "valeRevisar": "Worth reviewing:",
     "vazio": "No exercises answered yet. Your results show up here as soon as you practise."
   },
+  "rascunho": {
+    "titulo": "Building blocks",
+    "fechar": "Close the building blocks",
+    "novaLinha": "New line, empty",
+    "copiarLinha": "New line, starting as a copy of the one above",
+    "limpar": "Throw this scratch work away",
+    "irALinha": "Edit line {numero}",
+    "removerLinha": "Remove line {numero}",
+    "vireOAparelho": "Turn the device upright to build the calculation: the whole tray fits that way.",
+    "naoCoube": "This scratch work is past the size that gets saved. It stays here, but it will not come back if the tab closes.",
+    "conta": "The calculation you built",
+    "bandeja": "Pieces",
+    "buraco": "empty slot",
+    "papel": {
+      "buraco": "Slot",
+      "numero": "Number",
+      "incognita": "Unknown",
+      "operacao": "Operation",
+      "fracao": "Fraction",
+      "igualdade": "Equation"
+    },
+    "recusa": {
+      "profundidade": "A fraction inside a fraction up to three levels: deeper than that would not fit on screen.",
+      "igualdade-repetida": "This line already has an equals sign."
+    },
+    "tecla": {
+      "algarismo0": "Zero",
+      "algarismo1": "One",
+      "algarismo2": "Two",
+      "algarismo3": "Three",
+      "algarismo4": "Four",
+      "algarismo5": "Five",
+      "algarismo6": "Six",
+      "algarismo7": "Seven",
+      "algarismo8": "Eight",
+      "algarismo9": "Nine",
+      "virgula": "Decimal comma",
+      "sinal": "Flip the number's sign",
+      "incognita": "Unknown x",
+      "somar": "Add",
+      "subtrair": "Subtract",
+      "multiplicar": "Multiply",
+      "dividir": "Divide",
+      "fracao": "Fraction, with numerator and denominator",
+      "coeficiente": "Coefficient times x",
+      "igualdade": "Equals",
+      "subir": "Select the enclosing piece",
+      "proximo": "Go to the next slot",
+      "virar": "Swap the sides of the operation",
+      "apagar": "Delete the selected piece"
+    }
+  },
   "revisar": {
     "abrirTopico": "Open the whole topic",
     "carregando": "Loading this topic’s exercises…",
@@ -950,7 +1002,8 @@
     "idioma": "Change language. Current: {atual}",
     "marca": "Mathematics Studies",
     "menu": "Open or close the topics menu",
-    "tema": "Switch theme. Current: {atual}"
+    "tema": "Switch theme. Current: {atual}",
+    "rascunho": "Show or hide the building blocks"
   },
   "sidebar": {
     "configuracoes": "Settings",
@@ -975,6 +1028,9 @@
     "esfera": "sphere",
     "piramide": "pyramid",
     "prisma": "prism"
+  },
+  "surpresa": {
+    "banner": "Surprise test in progress — question {atual} of {total}"
   },
   "tecla": {
     "abreParentese": "Open bracket",
@@ -1096,8 +1152,5 @@
     "recomecar": "Start over",
     "titulo": "Your path",
     "zerarTudo": "Yes, erase everything"
-  },
-  "surpresa": {
-    "banner": "Surprise test in progress — question {atual} of {total}"
   }
 }
