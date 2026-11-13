@@ -6,6 +6,27 @@ import {
   ternosPitagoricos,
 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
+import { enunciadoTrilingue } from '@core/treino/textos/texto-trilingue';
+import {
+  ALTURA,
+  CATETO,
+  DICA_ALTURA,
+  DICA_CATETO,
+  DICA_ESCALA_AREA,
+  DICA_ESCALA_VOLUME,
+  DICA_HIPOTENUSA,
+  DICA_MAIOR_LADO,
+  DICA_PROJECAO,
+  DICA_SOMBRA,
+  DICA_TALES,
+  ESCALA_AREA,
+  ESCALA_VOLUME,
+  HIPOTENUSA,
+  MAIOR_LADO,
+  PROJECAO,
+  SOMBRA,
+  TALES,
+} from '@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.textos';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
@@ -85,12 +106,13 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
 function exercicioHipotenusa(nivel: Nivel, rng: Rng): Exercicio<number> {
   const [b, c] = rng.escolher(TERNOS);
   const { resultado, passos } = pitagorasComPassos(b, c);
+  const texto = enunciadoTrilingue(HIPOTENUSA, [b, c], DICA_HIPOTENUSA);
 
   return {
     id: `sem-hip-${b}-${c}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um triângulo retângulo tem catetos ${b} cm e ${c} cm. ` + 'Quanto mede a hipotenusa, em cm?',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `b = ${b} \\qquad c = ${c}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -117,10 +139,7 @@ function exercicioHipotenusa(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica:
-      nivel === 'facil'
-        ? `A hipotenusa ao quadrado é a soma dos catetos ao quadrado: ${b}² + ${c}² = ${b * b} + ${c * c}. Depois tire a raiz.`
-        : undefined,
+    dica: nivel === 'facil' ? texto.dica : undefined,
   };
 }
 
@@ -128,13 +147,13 @@ function exercicioCateto(nivel: Nivel, rng: Rng): Exercicio<number> {
   const [b, c, a] = rng.escolher(TERNOS);
   const conhecido = rng.escolher([b, c]);
   const { resultado, passos } = catetoComPassos(a, conhecido);
+  const texto = enunciadoTrilingue(CATETO, [a, conhecido], DICA_CATETO);
 
   return {
     id: `sem-cat-${a}-${conhecido}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um triângulo retângulo tem hipotenusa ${a} cm e um cateto ${conhecido} cm. ` +
-      'Quanto mede o outro cateto, em cm?',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `a = ${a} \\qquad b = ${conhecido}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -161,10 +180,7 @@ function exercicioCateto(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica:
-      nivel === 'facil'
-        ? `O cateto ao quadrado é a hipotenusa ao quadrado menos o outro cateto ao quadrado: ${a}² − ${conhecido}². Depois tire a raiz.`
-        : undefined,
+    dica: nivel === 'facil' ? texto.dica : undefined,
   };
 }
 
@@ -174,14 +190,13 @@ function exercicioTales(nivel: Nivel, rng: Rng): Exercicio<number> {
   const c = rng.inteiro(2, 12);
 
   const { resultado, passos } = talesComPassos(a, b, c);
+  const texto = enunciadoTrilingue(TALES, [a, b, c], DICA_TALES);
 
   return {
     id: `sem-tales-${a}-${b}-${c}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um feixe de paralelas corta duas transversais. Numa delas os segmentos medem ${a} cm ` +
-      `e ${b} cm; na outra, o segmento correspondente ao primeiro mede ${c} cm. ` +
-      'Quanto mede x, correspondente ao segundo, em cm?',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\frac{${a}}{${b}} = \\frac{${c}}{x}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -208,10 +223,7 @@ function exercicioTales(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica:
-      nivel === 'medio'
-        ? `Paralelas cortam as transversais em partes proporcionais: ${a}/${b} = ${c}/x. Multiplique cruzado.`
-        : undefined,
+    dica: nivel === 'medio' ? texto.dica : undefined,
   };
 }
 
@@ -225,16 +237,26 @@ function exercicioEscala(dimensao: 2 | 3, nivel: Nivel, rng: Rng): Exercicio<num
   const fator = escalaComPassos(k, dimensao).resultado;
   const resultado = original * fator;
 
-  const grandeza = dimensao === 2 ? 'área' : 'volume';
   const comoTexto = String(k).replace('.', ',');
-  const unidade = dimensao === 2 ? 'cm²' : 'cm³';
+  /*
+   * Com artigo, e não só o substantivo.
+   *
+   * O texto antigo montava «a nova ${grandeza}» e saía «a nova volume» — erro
+   * de concordância que aparecia em metade dos exercícios desta pergunta.
+   * Guardar o artigo junto do nome resolve de uma vez, aqui e na resolução.
+   */
+  const aGrandeza = dimensao === 2 ? 'a área' : 'o volume';
+  const AGrandeza = dimensao === 2 ? 'A área' : 'O volume';
+  const texto =
+    dimensao === 2
+      ? enunciadoTrilingue(ESCALA_AREA, [original, comoTexto], DICA_ESCALA_AREA)
+      : enunciadoTrilingue(ESCALA_VOLUME, [original, comoTexto], DICA_ESCALA_VOLUME);
 
   return {
     id: `sem-escala-${dimensao}-${k}-${original}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Uma figura tem ${grandeza} ${original} ${unidade}. Ampliando todos os comprimentos por ` +
-      `${String(k).replace('.', ',')}, qual é a nova ${grandeza}?`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `k = ${String(k).replace('.', '{,}')} \\qquad ${dimensao === 2 ? 'A' : 'V'} = ${original}`,
     gabarito: resultado,
     resolucao: {
@@ -242,7 +264,7 @@ function exercicioEscala(dimensao: 2 | 3, nivel: Nivel, rng: Rng): Exercicio<num
       passos: [
         ...escalaComPassos(k, dimensao).passos,
         {
-          descricao: `Multiplicamos a ${grandeza} original por esse fator.`,
+          descricao: `Multiplicamos ${aGrandeza} original por esse fator.`,
           tex: `${original} \\times ${Number(fator.toFixed(4))} = ${Number(resultado.toFixed(4))}`,
         },
       ],
@@ -253,7 +275,7 @@ function exercicioEscala(dimensao: 2 | 3, nivel: Nivel, rng: Rng): Exercicio<num
         {
           resposta: original * k,
           diagnostico:
-            `A razão k multiplica COMPRIMENTOS. A ${grandeza} depende de ` +
+            `A razão k multiplica COMPRIMENTOS. ${AGrandeza} depende de ` +
             `${dimensao} dimensões, então o fator é k${EXPOENTE[dimensao]}.`,
           passo: 1,
           conceito: 'semelhanca.razao',
@@ -276,11 +298,7 @@ function exercicioEscala(dimensao: 2 | 3, nivel: Nivel, rng: Rng): Exercicio<num
     // A dica vem no PRIMEIRO nível em que a pergunta aparece: a área escalada
     // estreia no Médio e o volume no Difícil. Presa no Fácil, como estava, ela
     // nunca chegava à tela — `sortearPergunta` não gera escala no Fácil.
-    dica:
-      nivel === (dimensao === 2 ? 'medio' : 'dificil')
-        ? `A ${grandeza} escala com k${EXPOENTE[dimensao]}, não com k. Aqui k = ${comoTexto}, ` +
-          `então o fator é ${comoTexto}${EXPOENTE[dimensao]}.`
-        : undefined,
+    dica: nivel === (dimensao === 2 ? 'medio' : 'dificil') ? texto.dica : undefined,
   };
 }
 
@@ -299,13 +317,13 @@ function exercicioEhRetangulo(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const soma = b * b + c * c;
   const resultado = maior * maior;
+  const texto = enunciadoTrilingue(MAIOR_LADO, [b, c, maior], DICA_MAIOR_LADO);
 
   return {
     id: `sem-retang-${b}-${c}-${maior}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um triângulo tem lados ${b} cm, ${c} cm e ${maior} cm. Quanto vale o quadrado do ` +
-      'maior lado? (o enunciado seguinte compara com a soma dos outros dois)',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `a = ${maior} \\qquad b = ${b} \\qquad c = ${c}`,
     gabarito: resultado,
     resolucao: {
@@ -355,10 +373,7 @@ function exercicioEhRetangulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica:
-      nivel === 'medio'
-        ? `O maior lado mede ${maior} cm: eleve ao quadrado, ${maior} · ${maior}.`
-        : undefined,
+    dica: nivel === 'medio' ? texto.dica : undefined,
   };
 }
 
@@ -379,15 +394,15 @@ function exercicioRelacaoMetrica(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const pedeAltura = rng.escolher([true, false]);
   const resultado = pedeAltura ? altura : m;
+  const texto = pedeAltura
+    ? enunciadoTrilingue(ALTURA, [b, c], DICA_ALTURA)
+    : enunciadoTrilingue(PROJECAO, [b, c], DICA_PROJECAO);
 
   return {
     id: `sem-metrica-${b}-${c}-${pedeAltura ? 'h' : 'm'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: pedeAltura
-      ? `Um triângulo retângulo tem catetos ${b} cm e ${c} cm. Quanto mede a altura ` +
-        'relativa à hipotenusa, em cm?'
-      : `Um triângulo retângulo tem catetos ${b} cm e ${c} cm. Quanto mede a projeção do ` +
-        `cateto de ${c} cm sobre a hipotenusa, em cm?`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `b = ${b} \\qquad c = ${c}`,
     gabarito: resultado,
     resolucao: {
@@ -440,24 +455,32 @@ function exercicioRelacaoMetrica(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'dificil' ? 'a·h = b·c, e c² = a·m.' : undefined,
+    dica: nivel === 'dificil' ? texto.dica : undefined,
   };
 }
 
 /** Semelhança aplicada: a sombra, que é como se mede o que não se alcança. */
 function exercicioSombra(nivel: Nivel, rng: Rng): Exercicio<number> {
   const alturaVara = rng.inteiro(1, 3);
-  const sombraVara = rng.inteiro(1, 4);
+  /*
+   * A sombra da vara nunca é igual à altura dela.
+   *
+   * Com as duas iguais, a razão vira 1 e o exercício deixa de exercitar: a
+   * altura do prédio é a própria sombra, e a dica passa a dizer «2 para 2», que
+   * não ensina nada. O Sol a 45° é um caso particular bonito — e o pior
+   * possível para treinar proporção.
+   */
+  const sombraVara = rng.escolher([1, 2, 3, 4].filter((medida) => medida !== alturaVara));
   const sombraPredio = sombraVara * rng.inteiro(4, 25);
 
   const resultado = (alturaVara * sombraPredio) / sombraVara;
+  const texto = enunciadoTrilingue(SOMBRA, [alturaVara, sombraVara, sombraPredio], DICA_SOMBRA);
 
   return {
     id: `sem-sombra-${alturaVara}-${sombraVara}-${sombraPredio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `No mesmo instante, uma vara de ${alturaVara} m projeta sombra de ${sombraVara} m e ` +
-      `um prédio projeta sombra de ${sombraPredio} m. Qual é a altura do prédio, em m?`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\frac{${alturaVara}}{${sombraVara}} = \\frac{h}{${sombraPredio}}`,
     gabarito: resultado,
     resolucao: {
@@ -509,6 +532,6 @@ function exercicioSombra(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: nivel === 'facil' ? 'Altura e sombra guardam a mesma razão nas duas figuras.' : undefined,
+    dica: nivel === 'facil' ? texto.dica : undefined,
   };
 }

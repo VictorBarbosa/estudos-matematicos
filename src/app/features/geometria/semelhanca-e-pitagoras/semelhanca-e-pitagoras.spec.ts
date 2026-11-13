@@ -61,7 +61,9 @@ describe('geradorSemelhanca', () => {
   }
 
   it('a hipotenusa fecha Pitágoras e forma triângulo retângulo', () => {
-    const exercicios = amostra('facil', 90).filter((e) => e.enunciado.includes('a hipotenusa'));
+    const exercicios = amostra('facil', 90).filter((e) =>
+      e.enunciado.includes('Quanto mede a hipotenusa'),
+    );
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -77,7 +79,7 @@ describe('geradorSemelhanca', () => {
 
   it('a hipotenusa é sempre o maior lado', () => {
     for (const exercicio of amostra('facil', 90).filter((e) =>
-      e.enunciado.includes('a hipotenusa'),
+      e.enunciado.includes('Quanto mede a hipotenusa'),
     )) {
       const [, b, c] = /b = (\d+) \\qquad c = (\d+)/.exec(exercicio.enunciadoTex)!;
 
@@ -101,9 +103,7 @@ describe('geradorSemelhanca', () => {
   });
 
   it('Tales mantém a proporção', () => {
-    const exercicios = amostra('medio', 120).filter((e) =>
-      e.enunciado.includes('feixe de paralelas'),
-    );
+    const exercicios = amostra('medio', 120).filter((e) => e.enunciado.includes('transversais'));
 
     expect(exercicios.length).toBeGreaterThan(0);
 
@@ -168,5 +168,109 @@ describe('geradorSemelhanca', () => {
     expect(geradorSemelhanca.analisar('15/2')).toBe(7.5);
     expect(geradorSemelhanca.analisar('13')).toBe(13);
     expect(geradorSemelhanca.analisar('treze')).toBeNull();
+  });
+});
+
+/**
+ * O enunciado mostra a figura antes de dar nome a ela.
+ *
+ * «Quanto mede a projeção do cateto de 63 cm sobre a hipotenusa?» era tudo o
+ * que a pergunta dizia, e o nome supõe uma figura que quem está aprendendo
+ * ainda não sabe desenhar. O termo continua — tirá-lo abandonaria o aluno na
+ * prova —, mas agora vem depois do desenho.
+ */
+describe('geradorSemelhanca: o enunciado se explica', () => {
+  const metricas = amostra('extremo', 200).filter((e) => e.enunciado.includes('ângulo reto'));
+
+  it('há relações métricas na amostra', () => {
+    expect(metricas.length).toBeGreaterThan(0);
+  });
+
+  it('diz de onde o segmento sai e que ângulo ele faz, antes de nomeá-lo', () => {
+    for (const exercicio of metricas) {
+      expect(exercicio.enunciado).toContain('Do vértice do ângulo reto');
+      expect(exercicio.enunciado).toContain('formando 90°');
+
+      const nome = exercicio.enunciado.includes('projeção')
+        ? 'projeção'
+        : 'altura relativa à hipotenusa';
+      const ondeExplica = exercicio.enunciado.indexOf('formando 90°');
+      const ondeNomeia = exercicio.enunciado.indexOf(nome);
+
+      // O desenho vem primeiro; o nome, depois.
+      expect(ondeNomeia).toBeGreaterThan(ondeExplica);
+    }
+  });
+
+  it('a dica das relações métricas diz o caminho em palavras, não em letras soltas', () => {
+    const comDica = amostra('dificil', 200).filter(
+      (e) => e.enunciado.includes('ângulo reto') && e.dica !== undefined,
+    );
+
+    expect(comDica.length).toBeGreaterThan(0);
+
+    for (const exercicio of comDica) {
+      // Era `a·h = b·c, e c² = a·m.`: quatro letras que ninguém apresentou.
+      expect(exercicio.dica).toContain('hipotenusa');
+      expect(exercicio.dica).not.toMatch(/a·h|a \\cdot h/);
+    }
+  });
+
+  it('Tales localiza cada pedaço em vez de dizer «correspondente»', () => {
+    const tales = amostra('medio', 200).filter((e) => e.enunciado.includes('transversais'));
+
+    expect(tales.length).toBeGreaterThan(0);
+
+    for (const exercicio of tales) {
+      expect(exercicio.enunciado).toContain('1ª e a 2ª paralela');
+      expect(exercicio.enunciado).not.toContain('feixe de paralelas');
+    }
+  });
+
+  it('a escala concorda em gênero: a área e o volume', () => {
+    const escalas = amostra('dificil', 200).filter((e) => e.enunciado.includes('Ampliando'));
+
+    expect(escalas.length).toBeGreaterThan(0);
+
+    for (const exercicio of escalas) {
+      // Saía «qual é a nova volume?».
+      expect(exercicio.enunciado).not.toContain('a nova volume');
+      expect(exercicio.enunciado).toMatch(/a nova área|o novo volume/);
+    }
+  });
+
+  it('a sombra da vara nunca é igual à altura dela', () => {
+    const sombras = amostra('facil', 200).filter((e) => e.enunciado.includes('sombra'));
+
+    expect(sombras.length).toBeGreaterThan(0);
+
+    for (const exercicio of sombras) {
+      const [, vara, sombraVara] = /vara de (\d+) m projeta uma sombra de (\d+) m/.exec(
+        exercicio.enunciado,
+      )!;
+
+      // Razão 1 faz a altura do prédio ser a própria sombra: não treina nada.
+      expect(vara).not.toBe(sombraVara);
+    }
+  });
+
+  it('as nove formas de pergunta estão nas três línguas', () => {
+    const formas = new Set<string>();
+
+    for (const nivel of ['facil', 'medio', 'dificil', 'extremo'] as const) {
+      for (const exercicio of amostra(nivel, 200)) {
+        formas.add(exercicio.enunciado.replace(/\d+(,\d+)?/g, '#'));
+
+        expect(exercicio.traducoes?.fr?.enunciado, exercicio.enunciado).toBeTruthy();
+        expect(exercicio.traducoes?.en?.enunciado, exercicio.enunciado).toBeTruthy();
+
+        if (exercicio.dica !== undefined) {
+          expect(exercicio.traducoes?.fr?.dica, exercicio.enunciado).toBeTruthy();
+          expect(exercicio.traducoes?.en?.dica, exercicio.enunciado).toBeTruthy();
+        }
+      }
+    }
+
+    expect(formas.size).toBe(9);
   });
 });
