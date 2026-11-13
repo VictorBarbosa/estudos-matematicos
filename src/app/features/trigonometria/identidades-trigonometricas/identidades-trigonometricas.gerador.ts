@@ -22,14 +22,31 @@ export const geradorIdentidades: GeradorExercicio<number> = {
     const pergunta = sortearPergunta(nivel, rng);
 
     if (pergunta === 'fundamental') {
-      const graus = anguloAgudo(rng, nivel);
-      const seno = Math.sin(paraRadianos(graus));
-      const gabarito = Math.cos(paraRadianos(graus));
+      /*
+       * O ângulo para em 84°, e o gabarito sai do seno EXIBIDO.
+       *
+       * Antes o gabarito vinha do ângulo exato enquanto o aluno recebia o seno
+       * arredondado em duas casas, e perto de 90° isso separa os dois: em 84°
+       * o seno 0,9945 aparece como 0,99, de onde cos θ = 0,1411 — mas o
+       * gabarito era cos 84° = 0,1045, e a diferença de 0,037 estourava a
+       * tolerância. O aluno fazia tudo certo e era marcado como errado (80°,
+       * 84° e 85° faziam isso).
+       *
+       * A regra geral: **a resposta tem de seguir do dado como ele foi
+       * escrito**. Calcular o gabarito a partir do seno exibido torna o
+       * enunciado autoconsistente.
+       *
+       * E 85° fica de fora porque lá o seno arredonda para 1,00, o que no 1º
+       * quadrante só vale para 90° — ângulo que não é agudo.
+       */
+      const graus = Math.min(anguloAgudo(rng, nivel), 84);
+      const seno = Number(Math.sin(paraRadianos(graus)).toFixed(2));
+      const gabarito = Math.sqrt(1 - seno * seno);
 
       return {
         id: `identidades-fundamental-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Se sen θ = ${seno.toFixed(2)} com θ no 1º quadrante, quanto vale cos θ?`,
+        enunciado: `Se sen θ = ${seno.toFixed(2)} com θ no 1º quadrante, quanto vale cos θ? (2 casas)`,
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\quad \\Rightarrow \\quad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {

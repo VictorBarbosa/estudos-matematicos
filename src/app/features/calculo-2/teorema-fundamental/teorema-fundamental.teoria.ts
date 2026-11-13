@@ -12,7 +12,7 @@ export const TEORIA_TFC: readonly Teoria[] = [
       'que exigiria um limite de somas infinitas — numa simples subtração.',
     formulas: [
       { tex: "\\int_{a}^{b} f(x)\\,dx = F(b) - F(a), \\quad F' = f" },
-      { tex: "\\frac{d}{dx}\\int_{a}^{x} f(t)\\,dt = f(x)", legenda: 'A outra metade do teorema.' },
+      { tex: '\\frac{d}{dx}\\int_{a}^{x} f(t)\\,dt = f(x)', legenda: 'A outra metade do teorema.' },
     ],
     demonstracao: [
       {
@@ -48,9 +48,7 @@ export const TEORIA_TFC: readonly Teoria[] = [
       'Na integral indefinida a constante é indispensável; na definida, ela desaparece. ' +
       'Como calculamos F(b) − F(a), qualquer constante somada aparece dos dois lados e se ' +
       'anula.',
-    formulas: [
-      { tex: '(F(b) + C) - (F(a) + C) = F(b) - F(a)' },
-    ],
+    formulas: [{ tex: '(F(b) + C) - (F(a) + C) = F(b) - F(a)' }],
     demonstracao: [
       {
         descricao: 'Tomando duas antiderivadas diferentes da mesma função.',
@@ -80,9 +78,7 @@ export const TEORIA_TFC: readonly Teoria[] = [
       'A segunda parte do teorema é talvez mais surpreendente: se definirmos uma função que ' +
       'acumula área da esquerda até x, sua derivada em cada ponto é exatamente a altura da ' +
       'curva ali. Acumular e medir variação são operações opostas.',
-    formulas: [
-      { tex: "A(x) = \\int_{a}^{x} f(t)\\,dt \\;\\Rightarrow\\; A'(x) = f(x)" },
-    ],
+    formulas: [{ tex: "A(x) = \\int_{a}^{x} f(t)\\,dt \\;\\Rightarrow\\; A'(x) = f(x)" }],
     demonstracao: [
       {
         descricao: 'Onde a função é alta, a área acumula depressa.',

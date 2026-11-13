@@ -39,9 +39,7 @@ describe('geradorTfc', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('valor da ÁREA')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('valor da ÁREA'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('valor da ÁREA'))!;
 
     const resultado = corrigir(geradorTfc, exercicio, String(armadilha.resposta));
     expect(resultado.veredito).toBe('incorreto');
@@ -60,10 +58,23 @@ describe('geradorTfc', () => {
   it('o k pedido é a única solução positiva', () => {
     const rng = criarRng(31_415);
     const exercicios = Array.from({ length: 400 }, () => geradorTfc.gerar('dificil', rng)).filter(
-      (e) => e.enunciado.includes('Para qual valor de k'),
+      (e) => e.enunciado.includes('valor inteiro de k'),
     );
 
     expect(exercicios.length).toBeGreaterThan(20);
+
+    /*
+     * O enunciado tem de dizer que k é inteiro.
+     *
+     * O valor da integral é exibido com quatro casas — 37/3 vira 12,3333 —, e
+     * quem resolve de volta para k chega a 2,99998. Sem saber que k é inteiro,
+     * o aluno não tem como escolher o lado do arredondamento, e errar o lado é
+     * errar a questão.
+     */
+    for (const exercicio of exercicios) {
+      expect(exercicio.enunciado).toContain('valor inteiro de k');
+      expect(Number.isInteger(exercicio.gabarito)).toBe(true);
+    }
 
     for (const exercicio of exercicios) {
       const [, coefA, sinal, coefB] =
@@ -74,7 +85,8 @@ describe('geradorTfc', () => {
       expect(coefA, exercicio.enunciadoTex).toBeDefined();
 
       const qa = coefA === '' ? 1 : Number(coefA);
-      const qb = coefB === undefined ? 0 : (sinal === '-' ? -1 : 1) * (coefB === '' ? 1 : Number(coefB));
+      const qb =
+        coefB === undefined ? 0 : (sinal === '-' ? -1 : 1) * (coefB === '' ? 1 : Number(coefB));
 
       // F(x) = a x³/3 + b x²/2; procuramos outro k > 0 com o mesmo valor.
       const f = (x: number): number => (qa * x ** 3) / 3 + (qb * x ** 2) / 2;

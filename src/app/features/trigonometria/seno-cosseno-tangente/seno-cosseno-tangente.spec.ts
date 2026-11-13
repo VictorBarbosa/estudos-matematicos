@@ -60,3 +60,29 @@ describe('geradorRazoes', () => {
     expect(exercicio.conceitos).toContain('razoes.complementares');
   });
 });
+
+/**
+ * O mesmo cuidado da identidade fundamental, no tópico das razões.
+ *
+ * O gabarito sai do seno exibido, não do ângulo exato: o aluno refaz a conta a
+ * partir do que leu, e é essa conta que precisa fechar.
+ */
+describe('geradorRazoes: o cosseno segue do seno exibido', () => {
+  const comSeno = amostra('dificil', 200).filter((e) => e.enunciado.includes('Se sen θ'));
+
+  it('há exercícios desse tipo na amostra', () => {
+    expect(comSeno.length).toBeGreaterThan(0);
+  });
+
+  it('refazer a conta a partir do enunciado dá exatamente o gabarito, e é aceita', () => {
+    for (const exercicio of comSeno) {
+      const senoDado = Number(/sen θ = ([\d,.]+)/.exec(exercicio.enunciado)![1].replace(',', '.'));
+
+      expect(senoDado).toBeLessThan(1);
+      expect(exercicio.gabarito).toBeCloseTo(Math.sqrt(1 - senoDado * senoDado), 12);
+
+      const escrita = Math.sqrt(1 - senoDado * senoDado).toFixed(2);
+      expect(corrigir(geradorRazoes, exercicio, escrita).veredito).toBe('correto');
+    }
+  });
+});

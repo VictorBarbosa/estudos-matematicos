@@ -340,6 +340,36 @@ Cinco travas globais cuidam dessa parte, para os 102 geradores de uma vez
 - toda fórmula compila no KaTeX e todo id de conceito citado existe;
 - enunciado sem fórmula diz tudo em palavras, com os números da conta.
 
+### A resposta tem de seguir do dado como ele foi escrito
+
+O aluno só tem o enunciado. Se o dado aparece arredondado e o gabarito foi calculado do valor
+exato, os dois caminhos se separam e **o aluno erra fazendo tudo certo**. Três casos reais,
+achados quando um deles apareceu na tela:
+
+- «Um polígono regular tem ângulo interno de 169,71°. Quantos lados?» — o gerador sorteava 35
+  lados, cujo ângulo é 169,714285…°, e arredondava para exibir. **Nenhum polígono regular tem
+  ângulo interno de 169,71°**: dividindo 360 por 10,29 o aluno achava 34,98 e não tinha como
+  saber para que lado arredondar. A resolução ainda afirmava `360/10,29 = 35`. Consertado
+  sorteando só polígonos cujo ângulo é exato — os divisores de 360.
+- «Se sen θ = 0,99, quanto vale cos θ?» — o gabarito vinha do ângulo exato. Em 84° o seno
+  0,9945 aparece como 0,99, de onde cos θ = 0,1411, mas o gabarito era cos 84° = 0,1045: a
+  diferença estourava a tolerância. Em 80°, 84° e 85° a resposta certa era recusada. Consertado
+  calculando o gabarito **do seno exibido**, e tirando 85°, onde o seno arredonda para 1,00 e o
+  enunciado passaria a descrever 90° — que não é agudo.
+- «Para qual valor de k a integral vale 12,3333?» — resolvendo de volta, k = 2,99998. Agora o
+  enunciado diz **valor inteiro de k**, o que remove a dúvida sem entregar a resposta.
+
+As duas saídas, por ordem de preferência: **escolher dados que fecham exatos**, e só quando o
+número é irredutivelmente quebrado — um heptágono tem 128,571…° de ângulo interno, e isso é
+verdade — **dizer no enunciado quantas casas se espera**, e apenas quando o arredondamento é
+necessário: pedir casas decimais onde a resposta é 120° exatos só confundiria.
+
+Isto é convenção com teste por tópico, **não** uma trava global, e de propósito: não há como uma
+trava genérica refazer a conta do aluno para conferir se ela fecha. O que daria para checar
+mecanicamente — «gabarito inteiro e dado decimal» — acusaria exercícios corretos, porque um dado
+como 12,5 m pode ser exato. O teste do polígono já existia e deixou passar o defeito por usar
+`toBeCloseTo(angulo, 1)`, que tolera 0,05°: hoje ele exige igualdade e refaz o caminho do aluno.
+
 ## O assistente local
 
 O botão ao lado da calculadora abre uma janela de conversa ligada a um **LLM rodando na

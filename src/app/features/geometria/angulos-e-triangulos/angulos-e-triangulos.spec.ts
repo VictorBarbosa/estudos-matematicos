@@ -65,7 +65,19 @@ describe('geradorAngulos', () => {
     }
   });
 
-  it('o número de lados pedido reproduz o ângulo dado', () => {
+  /**
+   * O ângulo do enunciado é de um polígono que existe — e a conta fecha exata.
+   *
+   * Este teste existia com `toBeCloseTo(angulo, 1)`, que tolera 0,05°, e foi
+   * justamente essa folga que deixou passar o defeito: com 35 lados o ângulo
+   * interno é 169,714285…°, o enunciado dizia 169,71° — e **nenhum polígono
+   * regular tem ângulo interno de 169,71°**. O aluno dividia 360 por 10,29,
+   * achava 34,98 e não tinha como saber para que lado arredondar.
+   *
+   * Agora a exigência é a do aluno: refazer a conta pelo caminho que a dica
+   * manda e cair no inteiro do gabarito, sem arredondar nada.
+   */
+  it('o ângulo dado é de um polígono real, e a conta do aluno fecha exata', () => {
     const exercicios = amostra('dificil', 120).filter((e) => e.enunciado.includes('Quantos lados'));
 
     expect(exercicios.length).toBeGreaterThan(0);
@@ -75,7 +87,42 @@ describe('geradorAngulos', () => {
 
       expect(Number.isInteger(exercicio.gabarito)).toBe(true);
       expect(exercicio.gabarito).toBeGreaterThanOrEqual(3);
-      expect(anguloInternoRegular(exercicio.gabarito)).toBeCloseTo(angulo, 1);
+
+      // O ângulo não foi arredondado: é o do polígono do gabarito, exato.
+      expect(anguloInternoRegular(exercicio.gabarito)).toBe(angulo);
+
+      // E o caminho do aluno — 360° ÷ ângulo externo — dá o inteiro na mosca.
+      const externo = 180 - angulo;
+      expect(360 / externo).toBe(exercicio.gabarito);
+      expect(Number.isInteger(360 / externo)).toBe(true);
+    }
+  });
+
+  /**
+   * Resposta quebrada só com o enunciado dizendo quantas casas quer.
+   *
+   * Um heptágono tem 128,571428…° de verdade — aqui o número quebrado não é
+   * defeito. O que faltava era avisar: sem isso o aluno escreve 128,6 e leva um
+   * «não é isso» sem saber que o problema era de precisão. E onde o ângulo é
+   * exato, pedir casas decimais só confundiria.
+   */
+  it('pede casas decimais exatamente quando o ângulo não é inteiro', () => {
+    const exercicios = amostra('medio', 200).filter((e) => e.enunciado.includes('cada ângulo'));
+
+    expect(exercicios.length).toBeGreaterThan(0);
+
+    const quebrados = exercicios.filter((e) => !Number.isInteger(e.gabarito));
+    const exatos = exercicios.filter((e) => Number.isInteger(e.gabarito));
+
+    expect(quebrados.length).toBeGreaterThan(0);
+    expect(exatos.length).toBeGreaterThan(0);
+
+    for (const exercicio of quebrados) {
+      expect(exercicio.enunciado).toContain('duas casas decimais');
+    }
+
+    for (const exercicio of exatos) {
+      expect(exercicio.enunciado).not.toContain('casas decimais');
     }
   });
 

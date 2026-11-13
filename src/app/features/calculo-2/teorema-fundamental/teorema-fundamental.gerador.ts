@@ -93,7 +93,16 @@ export const geradorTfc: GeradorExercicio<number> = {
       return {
         id: `tfc-limsup-${a}${b}-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Para qual valor de k a integral vale ${Number(valor.toFixed(4))}?`,
+        /*
+         * «valor inteiro», e isso não é detalhe de redação.
+         *
+         * O valor da integral é exibido com quatro casas, porque F(k) raramente
+         * é redondo: 37/3 aparece como 12,3333. Quem resolve de volta para k
+         * chega a 2,99998 e não tem como saber para que lado arredondar — e
+         * errar o lado é errar a questão. Dizer que k é inteiro remove a dúvida
+         * sem entregar a resposta: achar o inteiro continua exigindo a conta.
+         */
+        enunciado: `Para qual valor inteiro de k a integral vale ${Number(valor.toFixed(4))}?`,
         enunciadoTex: `\\int_{0}^{k} \\left(${p.paraTex()}\\right) dx = ${Number(valor.toFixed(4))}`,
         gabarito,
         resolucao: {

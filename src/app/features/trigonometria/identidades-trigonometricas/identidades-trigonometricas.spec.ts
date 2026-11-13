@@ -67,3 +67,56 @@ describe('geradorIdentidades', () => {
     expect(exercicio.conceitos).toContain('identidades.arco-duplo');
   });
 });
+
+/**
+ * A resposta segue do dado como ele foi escrito.
+ *
+ * Era o defeito mais silencioso do tópico: o gabarito vinha do ângulo exato
+ * enquanto o aluno recebia o seno arredondado em duas casas. Perto de 90° os
+ * dois caminhos se separam — em 84° o seno 0,9945 aparece como 0,99, de onde
+ * cos θ = 0,1411, mas o gabarito era cos 84° = 0,1045 —, e a diferença
+ * estourava a tolerância de 0,02. Em 80°, 84° e 85° o aluno raciocinava certo e
+ * era marcado como errado.
+ */
+describe('geradorIdentidades: o cosseno segue do seno exibido', () => {
+  // A identidade fundamental é pergunta de Fácil e Médio; no Difícil a rotação
+  // passa a soma de arcos e arco duplo.
+  const comSeno = amostra('medio', 200).filter((e) => e.enunciado.includes('Se sen θ'));
+
+  it('há exercícios desse tipo na amostra', () => {
+    expect(comSeno.length).toBeGreaterThan(0);
+  });
+
+  it('refazer a conta a partir do enunciado dá exatamente o gabarito', () => {
+    for (const exercicio of comSeno) {
+      const senoDado = Number(/sen θ = ([\d,.]+)/.exec(exercicio.enunciado)![1].replace(',', '.'));
+      const cossenoDoAluno = Math.sqrt(1 - senoDado * senoDado);
+
+      expect(exercicio.gabarito).toBeCloseTo(cossenoDoAluno, 12);
+    }
+  });
+
+  it('a resposta que o aluno escreveria é aceita', () => {
+    for (const exercicio of comSeno) {
+      const senoDado = Number(/sen θ = ([\d,.]+)/.exec(exercicio.enunciado)![1].replace(',', '.'));
+      const escrita = Math.sqrt(1 - senoDado * senoDado).toFixed(2);
+
+      expect(corrigir(geradorIdentidades, exercicio, escrita).veredito).toBe('correto');
+    }
+  });
+
+  it('o seno dado nunca é 1, que no 1º quadrante seria 90°', () => {
+    for (const exercicio of comSeno) {
+      const senoDado = Number(/sen θ = ([\d,.]+)/.exec(exercicio.enunciado)![1].replace(',', '.'));
+
+      expect(senoDado).toBeLessThan(1);
+      expect(senoDado).toBeGreaterThan(0);
+    }
+  });
+
+  it('o enunciado diz quantas casas quer', () => {
+    for (const exercicio of comSeno) {
+      expect(exercicio.enunciado).toContain('2 casas');
+    }
+  });
+});

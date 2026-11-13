@@ -66,11 +66,27 @@ export const geradorRazoes: GeradorExercicio<number> = {
 
     if (pergunta === 'identidade') {
       // Dado o seno, achar o cosseno pela identidade fundamental.
-      const seno = Math.sin(radianos);
-      const gabarito = Math.cos(radianos);
+      /*
+       * O gabarito sai do seno EXIBIDO, não do ângulo exato.
+       *
+       * O aluno recebe o seno arredondado em duas casas e refaz a conta a
+       * partir dele; perto de 90° os dois caminhos se separam — em 84° o seno
+       * 0,9945 aparece como 0,99, de onde cos θ = 0,1411, enquanto cos 84° é
+       * 0,1045. A diferença estourava a tolerância e o aluno era marcado como
+       * errado tendo raciocinado certo. A resposta tem de seguir do dado como
+       * ele foi escrito.
+       */
+      /*
+       * E 85° fica de fora: lá o seno arredonda para 1,00, e «sen θ = 1,00 no
+       * 1º quadrante» só vale para 90° — ângulo que não é agudo. O ângulo
+       * sorteado serve às outras perguntas desta função, então o corte é aqui.
+       */
+      const agudoDeVerdade = Math.min(graus, 84);
+      const seno = Number(Math.sin(paraRadianos(agudoDeVerdade)).toFixed(2));
+      const gabarito = Math.sqrt(1 - seno * seno);
 
       return {
-        id: `razoes-identidade-${graus}-${rng.inteiro(0, 9999)}`,
+        id: `razoes-identidade-${agudoDeVerdade}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: `Se sen θ = ${seno.toFixed(2)} e θ está no 1º quadrante, qual é cos θ? (2 casas)`,
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\qquad \\cos\\theta = \\;?`,

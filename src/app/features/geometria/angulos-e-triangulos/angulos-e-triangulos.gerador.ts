@@ -149,10 +149,22 @@ function exercicioAnguloRegular(nivel: Nivel, rng: Rng): Exercicio<number> {
   const soma = somaAngulosInternosComPassos(lados).resultado;
   const resultado = anguloInternoRegular(lados);
 
+  /*
+   * O enunciado pede o arredondamento — mas só quando ele é necessário.
+   *
+   * Um heptágono tem 128,571428…° de ângulo interno, e isso é verdade: aqui a
+   * resposta quebrada não é defeito do enunciado, é o número. O que faltava era
+   * dizer quantas casas se espera, senão o aluno escreve 128,6 e leva um «não é
+   * isso» sem entender que o problema era de precisão. Num hexágono, onde o
+   * ângulo é 120° exatos, pedir casas decimais só confundiria.
+   */
+  const exato = Number.isInteger(resultado);
+  const casas = exato ? '' : ', com duas casas decimais';
+
   return {
     id: `ang-reg-${lados}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Quanto mede cada ângulo interno de um ${nomeDe(lados)} regular? (em graus)`,
+    enunciado: `Quanto mede cada ângulo interno de um ${nomeDe(lados)} regular? (em graus${casas})`,
     enunciadoTex: `n = ${lados} \\quad \\text{(regular)}`,
     gabarito: resultado,
     resolucao: {
@@ -250,22 +262,60 @@ function exercicioTerceiroAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   };
 }
 
+/**
+ * O número como se escreve em português: 157,5 e não 157.5.
+ *
+ * O LaTeX fica com o ponto, que é a notação da fórmula; o texto corrido do
+ * enunciado e da dica é que precisa da vírgula.
+ */
+function emPortugues(valor: number): string {
+  return String(valor).replace('.', ',');
+}
+
+/**
+ * Quantos lados pode ter o polígono desta pergunta.
+ *
+ * **Só divisores de 1440**, e a razão é que o enunciado precisa ser verdade.
+ * Antes aqui havia `rng.inteiro(5, 120)`: com 35 lados o ângulo interno é
+ * 169,714285…°, o enunciado o arredondava para 169,71° — e **nenhum polígono
+ * regular tem ângulo interno de 169,71°**. O aluno então dividia 360 por 10,29,
+ * achava 34,98 e não tinha como saber para que lado arredondar; pior, a
+ * resolução afirmava `360/10,29 = 35`, que é falso.
+ *
+ * Com o número de lados dividindo 1440, o ângulo externo é múltiplo de 0,25° —
+ * decimal exato de até duas casas, e exato também em ponto flutuante, que é o
+ * que permite ao teste exigir igualdade em vez de aproximação. O interno sai
+ * exato junto, e a conta de volta fecha na mosca.
+ *
+ * Dizer ao aluno «arredonde para o inteiro mais próximo» seria remendar o
+ * enunciado em vez de consertá-lo: o dado continuaria sendo de um polígono que
+ * não existe.
+ *
+ * Divisores de 360 bastariam para a exatidão, mas são só dezoito e a variedade
+ * do nível caía abaixo do piso que o projeto cobra. Os de 1440 são vinte e
+ * três e acrescentam ângulos com meia e um quarto de grau — do pentágono ao de
+ * 120 lados.
+ */
+const LADOS_COM_ANGULO_EXATO: readonly number[] = [
+  5, 6, 8, 9, 10, 12, 15, 16, 18, 20, 24, 30, 32, 36, 40, 45, 48, 60, 72, 80, 90, 96, 120,
+];
+
 function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
-  const lados = rng.inteiro(5, 120);
+  const lados = LADOS_COM_ANGULO_EXATO[rng.inteiro(0, LADOS_COM_ANGULO_EXATO.length - 1)]!;
   const angulo = anguloInternoRegular(lados);
 
   return {
     id: `ang-lados-${lados}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um polígono regular tem ângulo interno de ${Number(angulo.toFixed(2))}°. Quantos lados ele tem?`,
-    enunciadoTex: `a_i = ${Number(angulo.toFixed(2))}^\\circ`,
+    enunciado: `Um polígono regular tem ângulo interno de ${emPortugues(angulo)}°. Quantos lados ele tem?`,
+    enunciadoTex: `a_i = ${angulo}^\\circ`,
     gabarito: lados,
     resolucao: {
       resultado: lados,
       passos: [
         {
           descricao: 'O ângulo externo é o suplementar do interno.',
-          tex: `a_e = 180^\\circ - ${Number(angulo.toFixed(2))}^\\circ = ${Number((180 - angulo).toFixed(2))}^\\circ`,
+          tex: `a_e = 180^\\circ - ${angulo}^\\circ = ${180 - angulo}^\\circ`,
         },
         {
           descricao: 'A soma dos externos é 360°, e num regular eles são todos iguais.',
@@ -274,7 +324,7 @@ function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
         },
         {
           descricao: 'Dividindo.',
-          tex: `n = \\frac{360}{${Number((180 - angulo).toFixed(2))}} = ${lados}`,
+          tex: `n = \\frac{360}{${180 - angulo}} = ${lados}`,
         },
       ],
     },
@@ -299,6 +349,6 @@ function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       lados,
       proximos,
     ),
-    dica: `Passe pelo ângulo externo: 180° − ${Number(angulo.toFixed(2))}°. Os externos de qualquer polígono somam 360°.`,
+    dica: `Passe pelo ângulo externo: 180° − ${emPortugues(angulo)}°. Os externos de qualquer polígono somam 360°.`,
   };
 }
