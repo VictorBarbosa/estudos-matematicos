@@ -1,6 +1,7 @@
 import { Idioma } from '@core/i18n/models/i18n.model';
 import { Resolucao } from '@core/math/tipos/tipos';
 import { Rng } from '@core/treino/rng/rng';
+import { FOLGA_DE_CONSTANTE_ARREDONDADA } from '@core/treino/resposta-numerica/resposta-numerica';
 
 /**
  * Os degraus de dificuldade.
@@ -377,6 +378,58 @@ function arredondamentoCurto<T>(
   );
 }
 
+/**
+ * A resposta certa obtida com uma constante arredondada.
+ *
+ * O aluno que calcula a área de um círculo de raio 33 com π = 3,14 — o π que a
+ * escola ensina — chega a 3419,46, e o valor exato é 3421,19. Ele fez tudo
+ * certo, e um comparador de tolerância absoluta responde «não é isso» e exibe
+ * um número que ele não tinha como obter.
+ *
+ * O erro de arredondar uma constante é **relativo**: π = 3,14 custa 0,051%,
+ * g = 9,8 custa 0,102%, cos 37° ≈ 0,80 custa 0,17%. Por isso ele não aparece em
+ * resposta pequena e reprova em resposta grande — e por isso tolerância
+ * absoluta, por generosa que seja, sempre quebra em algum tamanho. Era o caso
+ * de mais de quarenta geradores deste site.
+ *
+ * Três travas mantêm isto honesto:
+ *
+ * 1. **Só gabarito não inteiro.** Onde a resposta é um inteiro — quantas
+ *    combinações, quantos lados —, não houve constante a arredondar, e a
+ *    exatidão é a própria medida. Sem esta trava, um gabarito de 65 536
+ *    aceitaria ±131.
+ * 2. **Depois das armadilhas.** Os erros clássicos de cada tópico são checados
+ *    antes, então um desvio conhecido continua sendo diagnosticado em vez de
+ *    passar por «quase certo».
+ * 3. **Com aviso.** Vale como acerto e diz por que: o aluno vê que o número
+ *    dele não é o do gabarito, e que a diferença é de arredondamento. Calar
+ *    isso ensinaria que 0,2% não importa.
+ */
+function certoComConstanteArredondada<T>(
+  gerador: GeradorExercicio<T>,
+  gabarito: T,
+  valor: T,
+): string | null {
+  if (typeof valor !== 'number' || typeof gabarito !== 'number') {
+    return null;
+  }
+
+  if (!Number.isFinite(valor) || !Number.isFinite(gabarito) || Number.isInteger(gabarito)) {
+    return null;
+  }
+
+  const distancia = Math.abs(valor - gabarito);
+  if (distancia > Math.abs(gabarito) * FOLGA_DE_CONSTANTE_ARREDONDADA) {
+    return null;
+  }
+
+  return (
+    'Aceito: a diferença é de arredondamento, não de conta. O valor exato é ' +
+    `${formasDoGabarito(gerador, gabarito).join(' ou ')} — a sua resposta sai de arredondar ` +
+    'uma constante no caminho, como usar π = 3,14.'
+  );
+}
+
 export function corrigir<T>(
   gerador: GeradorExercicio<T>,
   exercicio: Exercicio<T>,
@@ -442,6 +495,13 @@ export function corrigir<T>(
       passoDivergente: armadilha.passo,
       conceitoAssociado: armadilha.conceito,
     };
+  }
+
+  // Depois das armadilhas, de propósito: o desvio conhecido é diagnosticado, e
+  // só o que sobra pode ser arredondamento de constante.
+  const porConstante = certoComConstanteArredondada(gerador, exercicio.gabarito, valor);
+  if (porConstante !== null) {
+    return { veredito: 'correto', mensagem: 'Correto!', observacao: porConstante };
   }
 
   const formas = formasDoGabarito(gerador, exercicio.gabarito);

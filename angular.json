@@ -29,9 +29,14 @@
                 "input": "public"
               }
             ],
-            "styles": ["node_modules/katex/dist/katex.min.css", "src/styles.scss"],
+            "styles": [
+              "node_modules/katex/dist/katex.min.css",
+              "src/styles.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/app/shared/styles"]
+              "includePaths": [
+                "src/app/shared/styles"
+              ]
             }
           },
           "configurations": {
@@ -74,13 +79,23 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
-            "coverageReporters": [["text", { "maxCols": 200 }], "html", "lcovonly"],
+            "coverageReporters": [
+              [
+                "text",
+                {
+                  "maxCols": 200
+                }
+              ],
+              "html",
+              "lcovonly"
+            ],
             "coverageExclude": [
               "src/app/**/*.catalogo.ts",
               "src/app/core/teoria/registro-teorias.ts",
               "src/app/core/treino/registro-geradores.ts",
               "src/main.ts"
-            ]
+            ],
+            "runnerConfig": "vitest.config.ts"
           }
         }
       }

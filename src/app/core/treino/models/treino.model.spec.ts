@@ -61,3 +61,77 @@ describe('corrigir e o ponto ambíguo', () => {
     expect(vereditoDe(5, 'qualquer coisa')).toBe('invalido');
   });
 });
+
+/**
+ * A resposta certa obtida com uma constante arredondada.
+ *
+ * O aluno que calcula a área de um círculo de raio 33 com π = 3,14 — o π que a
+ * escola ensina — chega a 3419,46, e o valor exato é 3421,19. Ele fez tudo
+ * certo, e um comparador de tolerância absoluta responde «não é isso» exibindo
+ * um número que ele não tinha como obter. O erro de arredondar uma constante é
+ * relativo, então nenhuma tolerância absoluta resolve: ela esconde o problema
+ * em resposta pequena e reprova em resposta grande.
+ */
+describe('corrigir e a constante arredondada', () => {
+  const EXATO = Math.PI * 33 * 33; // 3421,1944
+  const COM_ESCOLA = 3.14 * 33 * 33; // 3419,46
+
+  it('aceita a resposta de quem usou π = 3,14, e diz por quê', () => {
+    const validacao = corrigir(
+      geradorCom(EXATO),
+      exercicioCom(EXATO),
+      COM_ESCOLA.toFixed(2).replace('.', ','),
+    );
+
+    expect(validacao.veredito).toBe('correto');
+    // Vale como acerto e explica: calar isso ensinaria que a diferença não existe.
+    expect(validacao.observacao).toContain('arredondamento');
+    expect(validacao.observacao).toContain('3.421,19');
+  });
+
+  it('o erro de conceito continua errado', () => {
+    // Quem esqueceu de elevar o raio ao quadrado: π·33 em vez de π·33².
+    expect(corrigir(geradorCom(EXATO), exercicioCom(EXATO), '103,67').veredito).toBe('incorreto');
+    // E um desvio de 1% está fora da folga de 0,2%.
+    expect(corrigir(geradorCom(EXATO), exercicioCom(EXATO), '3455,41').veredito).toBe('incorreto');
+  });
+
+  /**
+   * Onde a resposta é inteira não houve constante a arredondar, e a exatidão é
+   * a própria medida: sem esta trava, um gabarito de 65 536 aceitaria ±131.
+   */
+  it('gabarito inteiro não ganha folga nenhuma', () => {
+    expect(corrigir(geradorCom(65_536), exercicioCom(65_536), '65.500').veredito).toBe('incorreto');
+    expect(corrigir(geradorCom(252), exercicioCom(252), '252,4').veredito).toBe('incorreto');
+    expect(corrigir(geradorCom(252), exercicioCom(252), '252').veredito).toBe('correto');
+  });
+
+  /**
+   * A armadilha é conferida ANTES da folga, senão um desvio conhecido passaria
+   * por «quase certo» e o aluno perderia o diagnóstico — que é o que o site tem
+   * de melhor.
+   */
+  it('a armadilha dentro da folga continua sendo diagnosticada', () => {
+    const quaseCerto = EXATO * 1.001; // dentro de 0,2%
+    const validacao = corrigir(
+      geradorCom(EXATO, quaseCerto),
+      exercicioCom(EXATO, quaseCerto),
+      quaseCerto.toFixed(2).replace('.', ','),
+    );
+
+    expect(validacao.veredito).toBe('incorreto');
+    expect(validacao.diagnostico).toBe('Desvio conhecido.');
+  });
+
+  it('a folga acompanha o tamanho: a mesma diferença absoluta decide diferente', () => {
+    // 1,73 sobre 3421 é arredondamento de constante; sobre 12,57 é outra conta.
+    expect(corrigir(geradorCom(EXATO), exercicioCom(EXATO), '3419,46').veredito).toBe('correto');
+
+    const pequeno = Math.PI * 2 * 2; // 12,566
+    expect(corrigir(geradorCom(pequeno), exercicioCom(pequeno), '10,84').veredito).toBe(
+      'incorreto',
+    );
+    // Mas o π da escola também vale no pequeno: 3,14·4 = 12,56.
+    expect(corrigir(geradorCom(pequeno), exercicioCom(pequeno), '12,56').veredito).toBe('correto');
+  });
+});

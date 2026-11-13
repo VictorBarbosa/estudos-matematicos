@@ -188,15 +188,17 @@ export function analisarValorSimples(entrada: string): number | null {
  * aluno fazia a conta certa, com o π que lhe ensinaram, e o site respondia «não
  * é isso», mostrando um número que ele não tinha como obter.
  *
- * 0,1% cobre π = 3,14 com o dobro da margem, e continua apertado o bastante
- * para recusar erro de conceito: num gabarito de 3421, aceita ±3,4 — menos que
- * a diferença de qualquer erro de fórmula.
+ * 0,2% cobre as três com margem — é o valor que Cálculo 2 já havia adotado ao
+ * bater neste mesmo problema — e continua apertado o bastante para recusar erro
+ * de conceito: num gabarito de 3421 aceita ±6,8, menos que a diferença de
+ * qualquer erro de fórmula. E quem protege de fato contra erro de conceito são
+ * as armadilhas, conferidas antes desta folga.
  *
  * **Não serve para quem pede muitas casas decimais.** Ali a folga relativa
  * engoliria as casas pedidas; esses tópicos continuam com a tolerância ligada
  * ao número de casas.
  */
-export const FOLGA_DE_CONSTANTE_ARREDONDADA = 0.001;
+export const FOLGA_DE_CONSTANTE_ARREDONDADA = 0.002;
 
 /**
  * Comparador coerente com o arredondamento que o enunciado pede.
