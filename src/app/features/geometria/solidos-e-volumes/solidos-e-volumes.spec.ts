@@ -185,3 +185,34 @@ describe('geradorSolidos', () => {
     expect(geradorSolidos.analisar('muito')).toBeNull();
   });
 });
+
+/**
+ * O mesmo cuidado dos círculos, onde os números são maiores.
+ *
+ * Esfera, cone e cilindro trazem π em toda resposta, e os volumes passam de
+ * mil: a tolerância absoluta de 0,05 que havia aqui reprovava quem usou
+ * π = 3,14 em dois terços da amostra.
+ */
+describe('geradorSolidos: o π da escola também vale', () => {
+  it('a resposta obtida com 3,14 é aceita', () => {
+    let conferidos = 0;
+
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 120)) {
+        const comEscola = exercicio.gabarito * (3.14 / Math.PI);
+
+        if (Math.abs(comEscola - exercicio.gabarito) < 1e-12) {
+          continue;
+        }
+
+        conferidos++;
+        expect(
+          geradorSolidos.saoEquivalentes!(comEscola, exercicio.gabarito),
+          `${exercicio.enunciado} → ${comEscola}`,
+        ).toBe(true);
+      }
+    }
+
+    expect(conferidos).toBeGreaterThan(50);
+  });
+});

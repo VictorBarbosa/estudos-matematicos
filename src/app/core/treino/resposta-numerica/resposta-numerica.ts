@@ -179,6 +179,26 @@ export function analisarValorSimples(entrada: string): number | null {
 }
 
 /**
+ * Folga relativa para quem arredondou uma CONSTANTE antes de contar.
+ *
+ * π = 3,14 é o valor que a escola ensina, e ele difere do π de verdade em
+ * 0,051%. Numa tolerância absoluta isso não aparece em resposta pequena e
+ * reprova em resposta grande: a área de um círculo de raio 33 dá 3421,19 com π
+ * e 3419,46 com 3,14 — uma diferença de 1,73, contra uma tolerância de 0,02. O
+ * aluno fazia a conta certa, com o π que lhe ensinaram, e o site respondia «não
+ * é isso», mostrando um número que ele não tinha como obter.
+ *
+ * 0,1% cobre π = 3,14 com o dobro da margem, e continua apertado o bastante
+ * para recusar erro de conceito: num gabarito de 3421, aceita ±3,4 — menos que
+ * a diferença de qualquer erro de fórmula.
+ *
+ * **Não serve para quem pede muitas casas decimais.** Ali a folga relativa
+ * engoliria as casas pedidas; esses tópicos continuam com a tolerância ligada
+ * ao número de casas.
+ */
+export const FOLGA_DE_CONSTANTE_ARREDONDADA = 0.001;
+
+/**
  * Comparador coerente com o arredondamento que o enunciado pede.
  *
  * `casas` é o número de casas decimais pedido: quem arredonda corretamente

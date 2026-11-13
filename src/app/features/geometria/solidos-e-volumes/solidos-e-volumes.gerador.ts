@@ -1,9 +1,21 @@
 import { NOME_SOLIDO, Solido, superficieComPassos, volumeComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
-import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
+import {
+  FOLGA_DE_CONSTANTE_ARREDONDADA,
+  analisarNumero,
+  numeroComCasas,
+} from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
-const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
+/*
+ * Esfera, cone e cilindro trazem π em toda resposta, e os volumes passam de
+ * mil com facilidade: a tolerância tem de acompanhar o tamanho da resposta,
+ * senão reprova quem usou π = 3,14 — ver `FOLGA_DE_CONSTANTE_ARREDONDADA`.
+ */
+const { saoEquivalentes: proximos, formatar: formatarVolume } = numeroComCasas(
+  2,
+  FOLGA_DE_CONSTANTE_ARREDONDADA,
+);
 
 type Pergunta = 'volume' | 'superficie' | 'escala' | 'altura-faltante';
 
@@ -27,8 +39,7 @@ export const geradorSolidos: GeradorExercicio<number> = {
   analisar: analisarNumero,
 
   saoEquivalentes: proximos,
-  formatar: (valor) =>
-    Number(valor.toFixed(2)).toLocaleString('pt-BR', { minimumFractionDigits: 2 }),
+  formatar: formatarVolume,
 };
 
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {

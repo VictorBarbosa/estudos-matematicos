@@ -1,9 +1,21 @@
 import { areaComPassos, perimetroCirculoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
-import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
+import {
+  FOLGA_DE_CONSTANTE_ARREDONDADA,
+  analisarNumero,
+  numeroComCasas,
+} from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
-const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
+/*
+ * Quase toda resposta deste tópico passa por π, e quem está aprendendo usa
+ * 3,14. A tolerância precisa acompanhar o tamanho da resposta — ver
+ * `FOLGA_DE_CONSTANTE_ARREDONDADA`.
+ */
+const { saoEquivalentes: proximos, formatar: formatarArea } = numeroComCasas(
+  2,
+  FOLGA_DE_CONSTANTE_ARREDONDADA,
+);
 
 type Pergunta =
   | 'comprimento'
@@ -43,8 +55,7 @@ export const geradorCirculo: GeradorExercicio<number> = {
   analisar: analisarNumero,
 
   saoEquivalentes: proximos,
-  formatar: (valor) =>
-    Number(valor.toFixed(2)).toLocaleString('pt-BR', { minimumFractionDigits: 2 }),
+  formatar: formatarArea,
 };
 
 function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {

@@ -153,3 +153,55 @@ describe('geradorCirculo (círculo e polígonos)', () => {
     expect(geradorCirculo.analisar('circunferência')).toBeNull();
   });
 });
+
+/**
+ * Quem usou π = 3,14 acertou.
+ *
+ * É o π que a escola ensina, e ele difere do π de verdade em 0,051%. Com a
+ * tolerância absoluta de 0,02 que havia aqui, isso não aparecia em resposta
+ * pequena e reprovava em resposta grande: a área de um círculo de raio 33 dá
+ * 3421,19 com π e 3419,46 com 3,14 — diferença de 1,73. O aluno fazia a conta
+ * certa e o site respondia «não é isso», mostrando um número que ele não tinha
+ * como obter.
+ */
+describe('geradorCirculo: o π da escola também vale', () => {
+  const COM_TRES_CATORZE = 3.14;
+
+  it('a área de um círculo de raio 33 aceita as duas contas', () => {
+    // «raio 33 cm» também aparece na pergunta do comprimento: aqui é a área.
+    const exercicio = amostra('facil', 400).find(
+      (e) => e.enunciado.includes('raio 33 cm') && e.enunciado.includes('área'),
+    );
+
+    expect(exercicio, 'nenhum exercício de raio 33 na amostra').toBeDefined();
+
+    expect(corrigir(geradorCirculo, exercicio!, '3421,19').veredito).toBe('correto');
+    expect(corrigir(geradorCirculo, exercicio!, '3419,46').veredito).toBe('correto');
+    // Erro de conceito continua recusado: usar o raio sem elevar ao quadrado.
+    expect(corrigir(geradorCirculo, exercicio!, '103,67').veredito).toBe('incorreto');
+  });
+
+  it('em toda a amostra, a resposta obtida com 3,14 é aceita', () => {
+    const vistos: number[] = [];
+
+    for (const nivel of NIVEIS) {
+      for (const exercicio of amostra(nivel, 120)) {
+        // Refaz a conta trocando π por 3,14: o desvio relativo é o mesmo em
+        // qualquer fórmula em que π apareça uma vez.
+        const comEscola = exercicio.gabarito * (COM_TRES_CATORZE / Math.PI);
+
+        if (Math.abs(comEscola - exercicio.gabarito) < 1e-12) {
+          continue; // a resposta não depende de π
+        }
+
+        vistos.push(exercicio.gabarito);
+        expect(
+          geradorCirculo.saoEquivalentes!(comEscola, exercicio.gabarito),
+          `${exercicio.enunciado} → ${comEscola}`,
+        ).toBe(true);
+      }
+    }
+
+    expect(vistos.length).toBeGreaterThan(50);
+  });
+});
