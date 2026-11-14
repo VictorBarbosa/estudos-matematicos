@@ -117,6 +117,7 @@ export const CARREGAR_GERADOR: Readonly<
   'estequiometria': () => import('@features/quimica/estequiometria/estequiometria.gerador').then((m) => m.geradorEstequiometria),
   'limitante-e-rendimento': () => import('@features/quimica/limitante-e-rendimento/limitante-e-rendimento.gerador').then((m) => m.geradorLimitante),
   'mol-e-massa-molar': () => import('@features/quimica/mol-e-massa-molar/mol-e-massa-molar.gerador').then((m) => m.geradorMol),
+  'solucoes-e-concentracao': () => import('@features/quimica/solucoes-e-concentracao/solucoes-e-concentracao.gerador').then((m) => m.geradorSolucoes),
   'circulo-trigonometrico': () => import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.gerador').then((m) => m.geradorCirculo),
   'equacoes-trigonometricas': () => import('@features/trigonometria/equacoes-trigonometricas/equacoes-trigonometricas.gerador').then((m) => m.geradorEquacoesTrig),
   'funcoes-trigonometricas': () => import('@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.gerador').then((m) => m.geradorOndas),

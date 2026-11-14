@@ -35,4 +35,12 @@ export const rotas: Routes = [
         (m) => m.LimitanteERendimento,
       ),
   },
+  {
+    path: 'solucoes-e-concentracao',
+    title: 'Soluções e concentração · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/quimica/solucoes-e-concentracao/solucoes-e-concentracao').then(
+        (m) => m.SolucoesEConcentracao,
+      ),
+  },
 ];

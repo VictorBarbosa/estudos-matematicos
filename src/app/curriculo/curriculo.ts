@@ -282,6 +282,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'Quem acaba primeiro decide quanto se forma — e o que sobra do outro.',
         pronto: true,
       },
+      {
+        id: 'solucoes-e-concentracao',
+        titulo: 'Soluções e concentração',
+        descricao: 'Mols por litro de solução, diluição e mistura — com o volume em mililitros.',
+        pronto: true,
+      },
     ],
   },
   {

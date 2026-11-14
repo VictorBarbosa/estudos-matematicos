@@ -11,6 +11,7 @@ import { geradorAtomos as g_atomos_isotopos_ions } from '@features/quimica/atomo
 import { geradorMol as g_mol_e_massa_molar } from '@features/quimica/mol-e-massa-molar/mol-e-massa-molar.gerador';
 import { geradorEstequiometria as g_estequiometria } from '@features/quimica/estequiometria/estequiometria.gerador';
 import { geradorLimitante as g_limitante_e_rendimento } from '@features/quimica/limitante-e-rendimento/limitante-e-rendimento.gerador';
+import { geradorSolucoes as g_solucoes_e_concentracao } from '@features/quimica/solucoes-e-concentracao/solucoes-e-concentracao.gerador';
 import { geradorEquacao1 as g_equacao_primeiro_grau } from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.gerador';
 import { geradorEquacao2 as g_equacao_segundo_grau } from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.gerador';
 import { geradorExpressoes as g_expressoes_algebricas } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.gerador';
@@ -259,4 +260,5 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['mol-e-massa-molar', g_mol_e_massa_molar],
   ['estequiometria', g_estequiometria],
   ['limitante-e-rendimento', g_limitante_e_rendimento],
+  ['solucoes-e-concentracao', g_solucoes_e_concentracao],
 ];

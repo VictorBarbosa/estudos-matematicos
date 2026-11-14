@@ -681,6 +681,10 @@
         "descricao": "Prismes, cylindres, cônes et sphères : volume, surface et échelle cubique.",
         "titulo": "Solides et volumes"
       },
+      "solucoes-e-concentracao": {
+        "descricao": "Moles par litre de solution, dilution et mélange — avec le volume en millilitres.",
+        "titulo": "Solutions et concentration"
+      },
       "soma-de-riemann": {
         "descricao": "Approcher l’aire par des rectangles et affiner la partition jusqu’à la limite.",
         "titulo": "Somme de Riemann"

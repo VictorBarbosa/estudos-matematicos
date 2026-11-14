@@ -92,3 +92,4 @@ export * from '@core/math/quimica/atomo/atomo';
 export * from '@core/math/quimica/mol/mol';
 export * from '@core/math/quimica/estequiometria/estequiometria';
 export * from '@core/math/quimica/limitante/limitante';
+export * from '@core/math/quimica/solucoes/solucoes';

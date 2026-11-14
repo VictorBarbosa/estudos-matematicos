@@ -108,6 +108,7 @@ const PISO: Readonly<Record<string, readonly [number, number, number, number]>> 
   'mol-e-massa-molar': [2, 3, 3, 2],
   estequiometria: [2, 3, 3, 2],
   'limitante-e-rendimento': [2, 3, 3, 2],
+  'solucoes-e-concentracao': [2, 3, 3, 2],
   'mmc-mdc': [2, 2, 2, 2],
   'momento-angular': [6, 7, 3, 2],
   'movimento-circular': [3, 3, 3, 2],

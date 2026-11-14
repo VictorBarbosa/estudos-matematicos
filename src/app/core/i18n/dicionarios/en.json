@@ -681,6 +681,10 @@
         "descricao": "Prisms, cylinders, cones and spheres: volume, surface area and cubic scaling.",
         "titulo": "Solids and volumes"
       },
+      "solucoes-e-concentracao": {
+        "descricao": "Moles per litre of solution, dilution and mixing — with the volume in millilitres.",
+        "titulo": "Solutions and concentration"
+      },
       "soma-de-riemann": {
         "descricao": "Approximating area with rectangles and refining the partition to the limit.",
         "titulo": "Riemann sum"

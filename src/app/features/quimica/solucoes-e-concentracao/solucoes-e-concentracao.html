@@ -1,0 +1,79 @@
+<app-topico-layout topicoId="solucoes-e-concentracao">
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('soluto')">
+      @for (opcao of solutos; track opcao.formula; let i = $index) {
+        <button
+          type="button"
+          [class.ativo]="escolhido() === i"
+          [attr.aria-pressed]="escolhido() === i"
+          (click)="escolher(i)"
+        >
+          {{ opcao.formula }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula tex="C = \frac{n}{V} = \frac{m / M}{V}" [bloco]="true" />
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="centigramas"
+        [rotulo]="texto('massa')"
+        [min]="10"
+        [max]="5000"
+      />
+      <app-controle-parametro
+        [(valor)]="mililitros"
+        [rotulo]="texto('volume')"
+        [min]="50"
+        [max]="2000"
+        [dica]="texto('dicaVolume')"
+      />
+      <app-controle-parametro
+        [(valor)]="aguaEmMililitros"
+        [rotulo]="texto('agua')"
+        [min]="0"
+        [max]="2000"
+      />
+    </section>
+
+    <section class="painel leituras">
+      <dl>
+        <div>
+          <dt>{{ texto('mols') }}</dt>
+          <dd>{{ arredondar(mols(), 4) }} mol</dd>
+        </div>
+        <div>
+          <dt>{{ texto('volume') }}</dt>
+          <dd>{{ arredondar(litros(), 3) }} L</dd>
+        </div>
+        <div>
+          <dt>{{ texto('concentracao') }}</dt>
+          <dd class="certo">{{ arredondar(concentracao()) }} mol/L</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="painel diluicao">
+      <dl>
+        <div>
+          <dt>{{ texto('depoisDaAgua') }}</dt>
+          <dd>{{ arredondar(concentracaoDepois()) }} mol/L</dd>
+        </div>
+        <div>
+          <dt>{{ texto('mols') }}</dt>
+          <dd>{{ arredondar(mols(), 4) }} mol</dd>
+        </div>
+      </dl>
+      <p class="nota">{{ texto('notaDiluicao') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

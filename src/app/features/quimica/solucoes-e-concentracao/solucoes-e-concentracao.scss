@@ -1,0 +1,36 @@
+@use 'mixins' as *;
+
+dl {
+  display: grid;
+  gap: var(--esp-3);
+  margin: 0;
+}
+
+.leituras dl {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.diluicao dl {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+dt {
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+}
+
+dd {
+  margin: 0;
+  font-size: 1.375rem;
+  font-variant-numeric: tabular-nums;
+
+  &.certo {
+    color: var(--acerto);
+  }
+}
+
+.nota {
+  margin: var(--esp-3) 0 0;
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+}

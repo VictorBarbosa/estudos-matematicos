@@ -1,0 +1,31 @@
+{
+  "soluto": { "pt": "Soluto", "fr": "Soluté", "en": "Solute" },
+  "massa": { "pt": "Massa de soluto (g)", "fr": "Masse de soluté (g)", "en": "Mass of solute (g)" },
+  "volume": {
+    "pt": "Volume da solução (mL)",
+    "fr": "Volume de la solution (mL)",
+    "en": "Volume of solution (mL)"
+  },
+  "agua": {
+    "pt": "Água acrescentada (mL)",
+    "fr": "Eau ajoutée (mL)",
+    "en": "Water added (mL)"
+  },
+  "dicaVolume": {
+    "pt": "O volume está em mililitros, como na bancada. A concentração é por litro: divida por 1000.",
+    "fr": "Le volume est en millilitres, comme à la paillasse. La concentration est par litre : divisez par 1000.",
+    "en": "The volume is in millilitres, as on the bench. Concentration is per litre: divide by 1000."
+  },
+  "mols": { "pt": "Quantidade de soluto", "fr": "Quantité de soluté", "en": "Amount of solute" },
+  "concentracao": { "pt": "Concentração", "fr": "Concentration", "en": "Concentration" },
+  "depoisDaAgua": {
+    "pt": "Depois da água",
+    "fr": "Après l’eau",
+    "en": "After the water"
+  },
+  "notaDiluicao": {
+    "pt": "Os mols não mudam quando se acrescenta água: o que muda é o volume em que eles estão.",
+    "fr": "Les moles ne changent pas quand on ajoute de l’eau : ce qui change, c’est le volume où elles se trouvent.",
+    "en": "The moles do not change when water is added: what changes is the volume they sit in."
+  }
+}
