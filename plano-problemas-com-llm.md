@@ -401,6 +401,55 @@ ninguém o que `[]` e `[2]` eram.
 
 ---
 
+## 5.5. Álgebra, tópico por tópico — e os sete «não»
+
+Pedido: «faça para todos em álgebra». São nove tópicos, e **dois** recebem história. Os
+outros sete não recebem por motivo, não por falta de tempo:
+
+| Tópico                      | História?                     | Por quê                                                                                                                                                                                                                                                            |
+| --------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Equação do primeiro grau    | **sim**, forma `ax + b = c`   |                                                                                                                                                                                                                                                                    |
+| Equação do segundo grau     | **sim**, forma soma-e-produto | só quando `a = 1` e as duas raízes são inteiras positivas distintas: aí a equação **é** «dois números somam S e multiplicam P», e a maior raiz é o maior deles. Fora disso, coeficientes sorteados vestidos de história dariam enunciado falso                     |
+| Valor numérico de expressão | **não** — tentei e medi       | `a·x² + b·x + c` em prosa fica longo e sai errado: o modelo escreveu «o custo adicional é {0} vezes o número de peças já produzidas», que não é `{0}x²`. Zero de quatro. O enunciado de hoje já dá a expressão, que é como um problema aplicado de verdade a daria |
+| Produtos notáveis           | **não**                       | a pergunta É a manipulação simbólica                                                                                                                                                                                                                               |
+| Fatoração                   | **não**                       | idem                                                                                                                                                                                                                                                               |
+| Polinômios                  | **não**                       | idem                                                                                                                                                                                                                                                               |
+| Inequações                  | **não**                       | já tem problemas de palavra escritos à mão (`exercicioComHistoria`), e a resposta é um intervalo, não um número                                                                                                                                                    |
+| Inequações do segundo grau  | **não**                       | idem                                                                                                                                                                                                                                                               |
+| Sistemas lineares           | **não**                       | já tem a forma `problema`, escrita à mão                                                                                                                                                                                                                           |
+
+Vestir «fatore x² − 9» de história produziria exercício falso, que é pior que exercício seco.
+
+### O defeito que isto revelou no que já estava no ar
+
+A história aparecia **com a fórmula embaixo**. Em «Resolva 3x + 7 = 22» vestido de oficina,
+a equação continuava à vista — ou seja, a modelagem já feita, ao lado do texto que pede para
+modelar. Entrou `esconderFormula` na declaração, e ele é **por tópico** porque depende do
+que a fórmula é: em equação, MMC, PA e juros ela é a resposta do primeiro passo e sai de
+cena; em estequiometria é a equação balanceada, que a história não diz e o aluno precisa, e
+ali ela fica. Sem história, a fórmula sempre aparece — senão não há o que resolver.
+
+### Mais duas regras minhas que atrapalhavam
+
+- **«Dois números somam…»** caía inteiro, pelo mesmo «dois» que derrubava o MMC. A exceção
+  já existia, bastou declará-la.
+- **O limite de 280 caracteres** era de 240, e isso recusava histórias boas de soma e
+  produto: montar uma situação com duas quantidades e duas operações custa palavras. Duas de
+  quatro caíam só por tamanho.
+
+### Depois de tudo: 24 de 24
+
+| Tópico                                | Aprovados |
+| ------------------------------------- | --------- |
+| Equação do primeiro grau              | 4 de 4    |
+| Dois números pela soma e pelo produto | 4 de 4    |
+| Mínimo múltiplo comum                 | 4 de 4    |
+| Progressão aritmética                 | 4 de 4    |
+| Juros compostos                       | 4 de 4    |
+| Estequiometria                        | 4 de 4    |
+
+---
+
 ## 6. Configuração, em Configurações
 
 | Opção                | Padrão                                         |

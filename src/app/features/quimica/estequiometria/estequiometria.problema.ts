@@ -81,4 +81,7 @@ export const PROBLEMA_ESTEQUIOMETRIA: ProblemaDeTexto = {
     fr: 'en grammes, 2 décimales',
     en: 'in grams, 2 decimal places',
   },
+  // A equação balanceada FICA: a história não a diz, e sem ela não há
+  // proporção para aplicar.
+  esconderFormula: false,
 };

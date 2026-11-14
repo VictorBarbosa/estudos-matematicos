@@ -82,9 +82,16 @@ const IDIOMAS = ['pt', 'fr', 'en'] as const;
 
 type Idioma = (typeof IDIOMAS)[number];
 
-/** Um enunciado de celular: duas frases e a pergunta, não um parágrafo. */
+/**
+ * Um enunciado de celular: duas frases e a pergunta, não um parágrafo.
+ *
+ * Eram 240, e isso recusava histórias boas de «dois números somam S e
+ * multiplicam P» — montar a situação com duas quantidades e duas operações
+ * custa palavras. Duas de quatro caíam só por tamanho. 280 ainda são três ou
+ * quatro linhas num celular, e não um parágrafo.
+ */
 const MINIMO_DE_CARACTERES = 40;
-const MAXIMO_DE_CARACTERES = 240;
+const MAXIMO_DE_CARACTERES = 280;
 
 /**
  * Números escritos em palavras, que burlariam a regra do dígito solto.

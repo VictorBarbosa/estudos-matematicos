@@ -242,6 +242,27 @@ export class AreaTreino {
     this.historias.temHistoria(this.sessao().exercicio().id),
   );
 
+  /**
+   * A fórmula fica à vista?
+   *
+   * Com história vestindo o exercício e o tópico pedindo para esconder, não:
+   * em equação do primeiro grau a fórmula é `3x + 7 = 22`, a modelagem já
+   * feita, e mostrá-la ao lado da história entrega o passo que o problema de
+   * palavra existe para treinar. Sem história, ela sempre aparece — é o que o
+   * enunciado seco tem para resolver.
+   */
+  protected readonly mostrarFormula = computed(() => {
+    const exercicio = this.sessao().exercicio();
+
+    if (exercicio.enunciadoTex === '') {
+      return false;
+    }
+
+    const esconder = this.gerador().problemaDeTexto?.esconderFormula === true;
+
+    return !(esconder && this.comHistoria());
+  });
+
   /** A LLM está escrevendo um lote agora? É o que explica a espera. */
   protected readonly preparandoHistorias = computed(() => this.historias.preparando());
 

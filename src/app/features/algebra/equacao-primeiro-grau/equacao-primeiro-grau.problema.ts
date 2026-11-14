@@ -38,4 +38,7 @@ export const PROBLEMA_EQUACAO1: ProblemaDeTexto = {
     pergunta: 'quantas vezes a quantidade que se repete foi repetida, isto é, o x',
     contextos: ['oficina', 'transporte de carga', 'obra', 'linha de montagem'],
   },
+  // A fórmula é a modelagem já feita: ao lado da história, entrega o passo
+  // que o problema de palavra existe para treinar.
+  esconderFormula: true,
 };

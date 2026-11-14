@@ -48,4 +48,7 @@ export const PROBLEMA_PA: ProblemaDeTexto = {
       'caixas empilhadas por camada',
     ],
   },
+  // A fórmula é a modelagem já feita: ao lado da história, entrega o passo
+  // que o problema de palavra existe para treinar.
+  esconderFormula: true,
 };

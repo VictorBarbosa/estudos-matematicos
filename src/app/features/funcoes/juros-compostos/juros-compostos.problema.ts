@@ -58,4 +58,7 @@ export const PROBLEMA_MONTANTE: ProblemaDeTexto = {
     fr: '2 décimales',
     en: '2 decimal places',
   },
+  // A fórmula é a modelagem já feita: ao lado da história, entrega o passo
+  // que o problema de palavra existe para treinar.
+  esconderFormula: true,
 };

@@ -475,11 +475,17 @@ de sempre.
 
 ### Quais tópicos recebem história
 
-Cinco, e em cada um só uma forma de pergunta: **equação do primeiro grau** (a forma crua
-`ax + b = c`), **mínimo múltiplo comum** (não o MDC, que é história de partilha e não de
-reencontro), **progressão aritmética** (só a de razão positiva, porque «cada mês acrescenta
-−4 caixas» ninguém escreve), **juros compostos** (só o montante, porque «quanto rendeu» com
-gabarito de montante faria o aluno errar fazendo tudo certo) e **estequiometria**.
+**Seis**, e em cada um só uma forma de pergunta: **mínimo múltiplo comum** (não o MDC, que é
+história de partilha e não de reencontro), **equação do primeiro grau** (a forma crua
+`ax + b = c`), **equação do segundo grau** (só quando a equação é, de fato, «dois números
+somam S e multiplicam P»), **progressão aritmética** (só a de razão positiva), **juros
+compostos** (só o montante) e **estequiometria**.
+
+Onde NÃO recebe, é por motivo: em fatoração, produtos notáveis e polinômios a pergunta é a
+manipulação simbólica, e vestir «fatore x² − 9» de história daria exercício falso; em
+inequações e sistemas lineares já existem problemas de palavra escritos à mão; e em valor
+numérico de expressão eu tentei, medi e desisti — `a·x² + b·x + c` em prosa fica longo e sai
+errado.
 
 A declaração de cada um fica em `<topico>.problema.ts`, com `import type` — é o que permite
 a `scripts/comparar-modelos.ts` importá-la por caminho relativo e medir o prompt de verdade,

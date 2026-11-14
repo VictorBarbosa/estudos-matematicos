@@ -30,4 +30,17 @@ export interface ProblemaDeTexto {
    * errar fazendo tudo certo.
    */
   readonly contrato?: ContratoDaResposta;
+  /**
+   * A fórmula do enunciado sai de cena quando a história entra?
+   *
+   * Depende do que a fórmula É. Em equação do primeiro grau ela é
+   * `3x + 7 = 22` — ou seja, a modelagem já feita —, e deixá-la ao lado da
+   * história entrega o passo que o problema de palavra existe para treinar.
+   * Em estequiometria ela é a equação balanceada, que a história não diz e o
+   * aluno precisa: ali ela fica.
+   *
+   * Vale só quando a história está vestindo o exercício. Sem história, o
+   * enunciado seco precisa da fórmula — senão não há o que resolver.
+   */
+  readonly esconderFormula?: boolean;
 }

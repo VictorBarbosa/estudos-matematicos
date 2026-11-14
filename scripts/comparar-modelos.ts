@@ -26,6 +26,7 @@ import {
   montarPrompt,
 } from '../src/app/core/problemas/prompt/montar-prompt.ts';
 import { PROBLEMA_EQUACAO1 } from '../src/app/features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.problema.ts';
+import { PROBLEMA_SOMA_PRODUTO } from '../src/app/features/algebra/equacao-segundo-grau/equacao-segundo-grau.problema.ts';
 import { PROBLEMA_MMC } from '../src/app/features/matematica-basica/mmc-mdc/mmc-mdc.problema.ts';
 import { PROBLEMA_PA } from '../src/app/features/funcoes/progressoes/progressoes.problema.ts';
 import { PROBLEMA_MONTANTE } from '../src/app/features/funcoes/juros-compostos/juros-compostos.problema.ts';
@@ -63,6 +64,7 @@ const SAIDA = 'comparacao-modelos.md';
  */
 const DECLARACOES = [
   PROBLEMA_EQUACAO1,
+  PROBLEMA_SOMA_PRODUTO,
   PROBLEMA_MMC,
   PROBLEMA_PA,
   PROBLEMA_MONTANTE,
