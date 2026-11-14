@@ -489,7 +489,10 @@ cache e não a mostra de novo.
 
 ### Para funcionar
 
-Servidor e modelo vêm do assistente — se ele funciona, isto funciona. O que muda é de onde
+O **endereço** do servidor vem do assistente — se ele alcança o Ollama, isto alcança. O
+**modelo**, não: escrever seis enunciados em lote é tarefa de modelo rápido, e o padrão é
+`gpt-oss:20b` com raciocínio baixo (13 s por lote, contra 50 s de um modelo grande). O do
+assistente é escolhido para conversar, e pode ser muito maior. O que muda é de onde
 você abre o site:
 
 | Onde                                        | Funciona?                | O que precisa                                                                                    |

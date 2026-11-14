@@ -314,9 +314,16 @@ O que ficou, depois de desfazer:
 | Política do lote (filtrar, repetir, desistir) | `problemas/servicos/lote-de-historias.ts`, sem Angular |
 | Fila, cache, atribuição, descarte             | `problemas/servicos/historias.service.ts`              |
 
-E um ganho que não estava no plano: **servidor e modelo vêm do assistente**, que o aluno já
-configurou. Se o assistente funciona, as histórias funcionam — zero configuração. A escolha
-manual continua possível, para quem quiser um modelo para conversar e outro para escrever.
+E um ganho que não estava no plano: **o endereço do servidor vem do assistente**, que o
+aluno já configurou. Se o assistente alcança o Ollama, as histórias alcançam — zero
+configuração.
+
+**O modelo, não — e herdá-lo foi um erro meu.** O modelo do assistente é escolhido para
+CONVERSAR, e o aluno pode ter posto um de 43 GB lá. Foi o que aconteceu: um lote de seis
+histórias saiu pedindo ao `qwen3.6:Uncensored`. Escrever em lote é tarefa de modelo rápido,
+e quem espera é a fila — fila lenta é fila que não chega antes do próximo exercício. O
+padrão passou a ser o que a comparação escolheu, `gpt-oss:20b` com raciocínio baixo, com a
+escolha manual por cima.
 
 Confirmado por medição: o Ollama libera `http://localhost:4200` por padrão (preflight
 `204`, com `Access-Control-Allow-Origin` certo), então `ng serve` funciona **sem mexer em

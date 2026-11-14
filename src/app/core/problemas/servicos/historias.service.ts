@@ -80,21 +80,24 @@ export class HistoriasService {
   private readonly escolhaManual = signal<Partial<ConfiguracaoDaLlm>>({});
 
   /**
-   * Servidor e modelo vêm do assistente, que o aluno já configurou.
+   * O ENDEREÇO vem do assistente; o MODELO, não.
    *
    * O assistente conversa com o mesmo Ollama desde antes deste mecanismo
-   * existir, e guarda o endereço e o modelo escolhidos. Herdar dali significa
-   * **zero configuração**: se o assistente funciona, as histórias funcionam.
-   * A escolha manual existe para quem quiser um modelo diferente para
-   * escrever e outro para conversar.
+   * existir, e herdar o endereço dele significa zero configuração: se o
+   * assistente alcança o servidor, as histórias alcançam.
+   *
+   * O modelo é outra história, e herdá-lo foi um erro meu. O do assistente é
+   * escolhido para CONVERSAR — o aluno pode ter posto um de 43 GB lá, e foi o
+   * que aconteceu: um lote de seis histórias saiu pedindo ao
+   * `qwen3.6:Uncensored`. Escrever enunciado em lote é tarefa de modelo rápido,
+   * e a comparação de 14/11 escolheu o `gpt-oss:20b` com raciocínio baixo: 13
+   * segundos por lote contra 50, com a mesma taxa de aprovação. Quem espera é
+   * a fila, e fila lenta é fila que não chega antes do próximo exercício.
    */
   private readonly configuracao = computed<ConfiguracaoDaLlm>(() => {
-    const doAssistente = {
-      endpoint: this.assistente.servidor() || CONFIGURACAO_PADRAO.endpoint,
-      modelo: this.assistente.modelo() || CONFIGURACAO_PADRAO.modelo,
-    };
+    const endpoint = this.assistente.servidor() || CONFIGURACAO_PADRAO.endpoint;
 
-    return { ...CONFIGURACAO_PADRAO, ...doAssistente, ...this.escolhaManual() };
+    return { ...CONFIGURACAO_PADRAO, endpoint, ...this.escolhaManual() };
   });
 
   /** A fila por chave. Nasce do cache e cresce com o que a LLM traz. */
