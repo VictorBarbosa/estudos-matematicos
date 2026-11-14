@@ -1,0 +1,61 @@
+<app-topico-layout topicoId="equacoes-e-balanceamento">
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('reacao')">
+      @for (opcao of reacoes; track opcao.rotulo; let i = $index) {
+        <button
+          type="button"
+          [class.ativo]="escolhida() === i"
+          [attr.aria-pressed]="escolhida() === i"
+          (click)="escolher(i)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="painel">
+      <h3>{{ texto('crua') }}</h3>
+      <app-formula [tex]="texCrua()" [bloco]="true" />
+    </section>
+
+    <section class="painel">
+      <h3>{{ texto('balanceada') }}</h3>
+      <app-formula [tex]="texBalanceada()" [bloco]="true" />
+      <dl class="resumo">
+        <div>
+          <dt>{{ texto('soma') }}</dt>
+          <dd>{{ soma() }}</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="painel">
+      <h3>{{ texto('contagem') }}</h3>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">{{ texto('esquerda') }}</th>
+            <th scope="col">{{ texto('direita') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (linha of contagem(); track linha.simbolo) {
+            <tr>
+              <th scope="row">{{ linha.simbolo }}</th>
+              <td>{{ linha.esquerda }}</td>
+              <td [class.certo]="linha.esquerda === linha.direita">{{ linha.direita }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <p class="nota">{{ texto('notaContagem') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

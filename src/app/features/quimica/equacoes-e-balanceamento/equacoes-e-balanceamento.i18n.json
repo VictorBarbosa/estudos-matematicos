@@ -1,0 +1,22 @@
+{
+  "reacao": { "pt": "Reação", "fr": "Réaction", "en": "Reaction" },
+  "crua": { "pt": "Sem coeficientes", "fr": "Sans coefficients", "en": "Without coefficients" },
+  "balanceada": { "pt": "Balanceada", "fr": "Équilibrée", "en": "Balanced" },
+  "contagem": {
+    "pt": "Átomos de cada lado",
+    "fr": "Atomes de chaque côté",
+    "en": "Atoms on each side"
+  },
+  "esquerda": { "pt": "Esquerda", "fr": "Gauche", "en": "Left" },
+  "direita": { "pt": "Direita", "fr": "Droite", "en": "Right" },
+  "soma": {
+    "pt": "Soma dos coeficientes",
+    "fr": "Somme des coefficients",
+    "en": "Sum of coefficients"
+  },
+  "notaContagem": {
+    "pt": "Compare as duas colunas: é esta contagem que prova o balanceamento, e é ela que se faz para conferir sem gabarito.",
+    "fr": "Comparez les deux colonnes : c’est ce décompte qui prouve l’équilibrage, et c’est lui qu’on fait pour vérifier sans corrigé.",
+    "en": "Compare the two columns: this count is what proves the balance, and it is what you do to check without an answer key."
+  }
+}

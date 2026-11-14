@@ -385,6 +385,10 @@
         "descricao": "Formule quadratique, discriminant et les trois situations possibles pour les racines.",
         "titulo": "Équation du second degré"
       },
+      "equacoes-e-balanceamento": {
+        "descricao": "Ajuster les coefficients, jamais les indices — et compter les atomes pour vérifier.",
+        "titulo": "Équations et équilibrage"
+      },
       "equacoes-exponenciais": {
         "descricao": "Égaler les bases, prendre le logarithme, poser t = aˣ et vérifier le domaine.",
         "titulo": "Équations exponentielles"

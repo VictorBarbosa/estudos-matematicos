@@ -385,6 +385,10 @@
         "descricao": "Bhaskara, discriminante e as três situações possíveis de raízes.",
         "titulo": "Equação do 2º grau"
       },
+      "equacoes-e-balanceamento": {
+        "descricao": "Ajustar coeficientes, nunca índices — e contar os átomos para conferir.",
+        "titulo": "Equações e balanceamento"
+      },
       "equacoes-exponenciais": {
         "descricao": "Igualar as bases, tirar o logaritmo, trocar a potência por t e conferir o domínio.",
         "titulo": "Equações exponenciais"

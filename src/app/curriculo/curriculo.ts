@@ -271,6 +271,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'equacoes-e-balanceamento',
+        titulo: 'Equações e balanceamento',
+        descricao: 'Ajustar coeficientes, nunca índices — e contar os átomos para conferir.',
+        pronto: true,
+      },
+      {
         id: 'estequiometria',
         titulo: 'Estequiometria',
         descricao: 'A proporção da equação balanceada, convertida em massa: o trajeto completo.',

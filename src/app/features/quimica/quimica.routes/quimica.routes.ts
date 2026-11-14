@@ -22,6 +22,14 @@ export const rotas: Routes = [
       import('@features/quimica/mol-e-massa-molar/mol-e-massa-molar').then((m) => m.MolEMassaMolar),
   },
   {
+    path: 'equacoes-e-balanceamento',
+    title: 'Equações e balanceamento · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/quimica/equacoes-e-balanceamento/equacoes-e-balanceamento').then(
+        (m) => m.EquacoesEBalanceamento,
+      ),
+  },
+  {
     path: 'estequiometria',
     title: 'Estequiometria · Estudos Matemáticos',
     loadComponent: () =>

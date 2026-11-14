@@ -385,6 +385,10 @@
         "descricao": "The quadratic formula, the discriminant and the three possible root situations.",
         "titulo": "Quadratic equations"
       },
+      "equacoes-e-balanceamento": {
+        "descricao": "Adjust coefficients, never subscripts — and count the atoms to check.",
+        "titulo": "Equations and balancing"
+      },
       "equacoes-exponenciais": {
         "descricao": "Matching bases, taking logarithms, substituting t = aˣ and checking the domain.",
         "titulo": "Exponential equations"

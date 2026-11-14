@@ -132,6 +132,7 @@ import { TEORIA_LIMITANTE as t_limitante_e_rendimento } from '@features/quimica/
 import { TEORIA_SOLUCOES as t_solucoes_e_concentracao } from '@features/quimica/solucoes-e-concentracao/solucoes-e-concentracao.teoria';
 import { TEORIA_GASES as t_gases_ideais } from '@features/quimica/gases-ideais/gases-ideais.teoria';
 import { TEORIA_COMPOSICAO as t_composicao_e_formula } from '@features/quimica/composicao-e-formula/composicao-e-formula.teoria';
+import { TEORIA_BALANCEAMENTO as t_equacoes_e_balanceamento } from '@features/quimica/equacoes-e-balanceamento/equacoes-e-balanceamento.teoria';
 
 export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[] = [
   ['equacao-primeiro-grau', t_equacao_primeiro_grau],
@@ -259,4 +260,5 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['solucoes-e-concentracao', t_solucoes_e_concentracao],
   ['gases-ideais', t_gases_ideais],
   ['composicao-e-formula', t_composicao_e_formula],
+  ['equacoes-e-balanceamento', t_equacoes_e_balanceamento],
 ];

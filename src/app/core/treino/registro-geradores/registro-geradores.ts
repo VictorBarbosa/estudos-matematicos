@@ -115,6 +115,7 @@ export const CARREGAR_GERADOR: Readonly<
   'vizinhancas-e-infinito': () => import('@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.gerador').then((m) => m.geradorVizinhancas),
   'atomos-isotopos-ions': () => import('@features/quimica/atomos-isotopos-ions/atomos-isotopos-ions.gerador').then((m) => m.geradorAtomos),
   'composicao-e-formula': () => import('@features/quimica/composicao-e-formula/composicao-e-formula.gerador').then((m) => m.geradorComposicao),
+  'equacoes-e-balanceamento': () => import('@features/quimica/equacoes-e-balanceamento/equacoes-e-balanceamento.gerador').then((m) => m.geradorBalanceamento),
   'estequiometria': () => import('@features/quimica/estequiometria/estequiometria.gerador').then((m) => m.geradorEstequiometria),
   'gases-ideais': () => import('@features/quimica/gases-ideais/gases-ideais.gerador').then((m) => m.geradorGases),
   'limitante-e-rendimento': () => import('@features/quimica/limitante-e-rendimento/limitante-e-rendimento.gerador').then((m) => m.geradorLimitante),
