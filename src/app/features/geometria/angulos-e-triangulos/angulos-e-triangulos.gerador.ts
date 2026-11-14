@@ -137,9 +137,14 @@ function exercicioSomaInternos(nivel: Nivel, rng: Rng): Exercicio<number> {
       proximos,
     ),
     // O nome do polígono muda a forma do enunciado; os novos aparecem no Médio.
+    //
+    // A dica dá a RAZÃO do (n − 2), e não a fórmula: quem sabe de onde vem o
+    // dois não precisa decorar a expressão, e quem só decorou não sabe o que
+    // fazer quando o enunciado muda de forma.
     dica:
       nivel === 'facil' || nivel === 'medio'
-        ? `Sᵢ = (n − 2) · 180°, com n = ${lados} lados.`
+        ? `Ligue um vértice a todos os outros: o polígono se reparte em ${lados} − 2 ` +
+          'triângulos, e cada triângulo traz 180°.'
         : undefined,
   };
 }
@@ -197,7 +202,10 @@ function exercicioAnguloRegular(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: `Some os internos com (${lados} − 2) · 180° e divida pelos ${lados} ângulos, que são iguais.`,
+    dica:
+      `Ligando um vértice aos outros, o polígono se reparte em ${lados} − 2 triângulos de ` +
+      `180° cada — essa é a soma de todos os internos. Num polígono regular os ${lados} ` +
+      'ângulos são iguais entre si.',
   };
 }
 
@@ -314,17 +322,27 @@ function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado: lados,
       passos: [
         {
-          descricao: 'O ângulo externo é o suplementar do interno.',
+          descricao:
+            'No vértice, o lado segue em linha reta do outro lado: o interno e o externo ' +
+            'completam 180°.',
           tex: `a_e = 180^\\circ - ${angulo}^\\circ = ${180 - angulo}^\\circ`,
+          nota: 'É por isso que se subtrai de 180: os dois são suplementares, não por convenção.',
         },
         {
-          descricao: 'A soma dos externos é 360°, e num regular eles são todos iguais.',
-          tex: `n = \\frac{360^\\circ}{a_e}`,
-          nota: 'Pelo externo a conta sai em um passo; pelo interno exigiria resolver uma equação.',
+          descricao:
+            'Andando o contorno inteiro, cada vértice faz você girar um ângulo externo — e no ' +
+            'fim você está olhando para o mesmo lado do começo.',
+          tex: `\\text{soma dos externos} = 360^\\circ`,
+          nota:
+            'Uma volta completa. É daí que vem o 360°, e é por isso que ele não depende do ' +
+            'número de lados: qualquer polígono convexo dá uma volta e só uma.',
         },
         {
-          descricao: 'Dividindo.',
+          descricao:
+            `Num polígono regular todos os externos são iguais, então contar quantos cabem na ` +
+            `volta é contar os vértices.`,
           tex: `n = \\frac{360}{${180 - angulo}} = ${lados}`,
+          nota: 'Pelo interno a mesma conta exigiria resolver uma equação; pelo externo é uma divisão.',
         },
       ],
     },
@@ -349,6 +367,18 @@ function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       lados,
       proximos,
     ),
-    dica: `Passe pelo ângulo externo: 180° − ${emPortugues(angulo)}°. Os externos de qualquer polígono somam 360°.`,
+    /*
+     * A dica conta de onde vêm os 360°, em vez de só anunciá-los.
+     *
+     * «Os externos somam 360°» é um fato que não ajuda quem não sabe o que
+     * fazer com ele. A imagem da volta inteira resolve as duas pontas: explica
+     * por que a soma não depende do número de lados, e deixa claro que contar
+     * quantos externos cabem na volta é contar os vértices.
+     */
+    dica:
+      `No vértice, o lado segue em linha reta: o interno e o externo completam 180°, então o ` +
+      `externo é 180° − ${emPortugues(angulo)}°. Andando o contorno inteiro, você gira um ` +
+      'externo em cada vértice e termina olhando para o mesmo lado do começo — uma volta ' +
+      'completa, 360°.',
   };
 }

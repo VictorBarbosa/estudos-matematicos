@@ -258,6 +258,22 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
 - [x] **Autovalores e autovetores (14/11)** — a etapa 3 do plano, e a última lacuna certa de MATH 204. O tópico entrou em Vetores e matrizes, depois de escalonamento. Duas das cinco perguntas são as identidades do polinômio característico — a soma dos autovalores é o traço, o produto é o determinante —, e a dica as **entrega** de propósito: elas não são pegadinha a descobrir, são a ferramenta com que o aluno confere a própria resposta sem gabarito. O discriminante negativo não é falha de conta e sim a matriz GIRAR: `autovalores` devolve indefinido, e a aba Explorar diz isso em palavras em vez de mostrar um número que não existe — mexer nos quatro controles até atravessar essa fronteira é o que um exercício de conta não ensina. As matrizes vêm de `A = P D P⁻¹` com `P` de determinante 1, o que as mantém inteiras e NÃO triangulares (guarda no spec): triangular deixaria a resposta na diagonal. A pergunta da triangular 3×3 existe separada, e o contraste é o argumento — é por isso que diagonalizar vale o esforço.
 - [ ] **Espaços vetoriais e transformações lineares** — etapa 4 do plano, e a única que **não** faço sem confirmar: elas entram em MATH 204 «às vezes», e o plano manda conferir a ementa antes. Pendente de uma informação que só a Concordia dá, não de trabalho.
 
+- ◐ **Dica que dá fórmula e não dá razão (14/11).** Apontado em uso: «Passe pelo ângulo
+  externo: 180° − 168°. Os externos de qualquer polígono somam 360°» — dois fatos, e nenhum
+  ligado à pergunta. Não diz por que se subtrai de 180 (o lado segue em linha reta, então
+  interno e externo são suplementares), nem o que fazer com os 360° (num regular são todos
+  iguais, logo quantos cabem na volta é quantos vértices há). As três dicas de polígono de
+  `angulos-e-triangulos` foram reescritas pela RAZÃO, e os passos da resolução ganharam a
+  imagem que falta: andando o contorno, cada vértice faz girar um externo, e no fim se está
+  olhando para o mesmo lado — uma volta, 360°, e é por isso que a soma não depende do número
+  de lados. **Medição do resto:** de 197 dicas do site, 84 têm sinal de conta e nenhuma
+  conjunção que explique o porquê; 42 explicam. A heurística superconta — a de poliedros,
+  «cada aresta tem duas pontas: 2A = n·V», explica no próprio texto —, mas a ordem de
+  grandeza é essa. Concentra-se em eletromagnetismo (22), vetores e matrizes (16), ondas e
+  física moderna (12), estatística (10) e cálculo (13). Falta a varredura dessas áreas, e
+  ela é trabalho de reescrever cada uma sabendo de onde a fórmula vem — não de achar e
+  substituir.
+
 ---
 
 ## 5. Decisões: remover ou fundir
