@@ -450,6 +450,66 @@ cru não ajuda ninguém.
 Some abaixo de 60rem, como a calculadora, e aqui não é só espaço: `localhost:11434` visto do
 celular é o próprio celular, onde não há servidor nenhum.
 
+## Problemas de palavra, escritos pela LLM local
+
+Alguns tópicos aceitam que o enunciado venha vestido de história — «uma oficina cobra tanto
+por hora…» em vez de «resolva 3x + 7 = 22». Quem escreve a história é o mesmo Ollama do
+assistente; quem escolhe os números e calcula a resposta continua sendo o código.
+
+**A LLM nunca vê a resposta.** Ela recebe o assunto, o papel de cada dado e a carga de
+leitura do nível, e devolve a história com lacunas nas três línguas:
+
+```
+pt: "Uma oficina cobra {0} reais por hora e mais {1} de taxa fixa. Quantas horas cabem em {2} reais?"
+```
+
+O gerador sorteia `a`, `b` e `c` como sempre, e o site troca `{0}` por `numeroEscrito(a, idioma)`
+— vírgula em português e francês, ponto em inglês. Daí três coisas: o separador decimal sai
+certo por construção, os três idiomas carregam os mesmos números na mesma ordem, e **uma
+história serve para infinitos sorteios**.
+
+O `gerar()` não muda. A história veste o texto na hora de exibir, e por isso o sorteio
+continua puro e semeado — `verificar:geradores` e os guardas de variedade valem sem exceção.
+Sem LLM no ar, sem fila, ou com valores que não servem para a história, aparece o enunciado
+de sempre.
+
+### O portão
+
+Texto de LLM não vai para a tela sem passar por `core/problemas/validacao`: nenhum dígito
+fora das lacunas (um número que não passou pelo sorteio pode ser a própria resposta,
+vazada), nenhum número por extenso, as lacunas uma vez cada — exceto fórmula química, que se
+repete naturalmente —, a mesma ordem nos três idiomas, pergunta presente, 40 a 240
+caracteres, sem LaTeX, sem markdown, sem «Problema:». Em química há ainda uma lista de
+palavras proibidas por tópico: os modelos classificavam a substância («massa de sal
+formado») sem saber o que estava na equação.
+
+**O portão confere formato, não sentido.** Uma história pode passar e ainda assim perguntar
+outra coisa. Por isso há, abaixo do enunciado, um «esta história está errada» que a apaga do
+cache e não a mostra de novo.
+
+### Para funcionar
+
+Servidor e modelo vêm do assistente — se ele funciona, isto funciona. O que muda é de onde
+você abre o site:
+
+| Onde                                        | Funciona? | O que precisa                                                                                    |
+| ------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------ |
+| `http://localhost:4200`                     | sim       | nada                                                                                             |
+| Outro aparelho na mesma Wi-Fi               | sim       | `npm run start:rede`, `OLLAMA_ORIGINS` com essa origem, e o endereço do Mac no campo de servidor |
+| Site publicado, Ollama em http              | **não**   | mixed content: página https não chama http, e CORS não contorna                                  |
+| Site publicado, Ollama atrás de túnel https | sim       | `cloudflared tunnel --url http://localhost:11434`                                                |
+| Longe do Mac, sem rede                      | **não**   | só o que já estiver no cache                                                                     |
+
+Sem `OLLAMA_ORIGINS`, a origem não autorizada recebe `403` no preflight e o Chrome mostra
+`net::ERR_FAILED` em `api/tags` — o mesmo recado que o assistente já descreve acima.
+
+### Escolher o modelo
+
+`node scripts/comparar-modelos.ts` pede as mesmas histórias a dois modelos, aplica o portão
+de verdade e escreve `comparacao-modelos.md` com a taxa de aprovação e os textos lado a lado,
+para a escolha ser por leitura e não por tamanho. Ele roda na máquina de quem estuda, nunca
+no CI: teste que depende de modelo local não é teste.
+
 ## A calculadora flutuante
 
 O botão no cabeçalho abre uma calculadora que **não é um modal**: ela flutua, arrasta pela

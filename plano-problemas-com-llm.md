@@ -70,16 +70,29 @@ contrato da resposta é do site. Ela é instruída a **não** mencionar unidade 
 
 ### O que a rota ao vivo custa — dito uma vez
 
-| Onde                                           | Funciona?                                                                                    |
-| ---------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Mac, com `ng serve` em `http://localhost:4200` | **sim**                                                                                      |
-| Mac, no site publicado (`https://…github.io`)  | **não** — página https não chama `http://localhost` (mixed content + Private Network Access) |
-| iPhone, no site publicado                      | **não** — a LLM está no Mac                                                                  |
-| iPhone no ônibus ou no avião                   | **não**                                                                                      |
+| Onde você abre o site                                  | Funciona? | O que precisa                                                                                                  |
+| ------------------------------------------------------ | --------- | -------------------------------------------------------------------------------------------------------------- |
+| Mac, `http://localhost:4200`                           | **sim**   | nada: o Ollama libera localhost por padrão                                                                     |
+| **iPhone na mesma Wi-Fi**, `http://192.168.2.42:4200`  | **sim**   | `npm run start:rede`, `OLLAMA_ORIGINS` com essa origem, e o endereço do Mac no campo de servidor do assistente |
+| Site publicado (`https://…github.io`) → Ollama em http | **não**   | impossível: página https não chama http, e CORS não contorna isso                                              |
+| Site publicado → túnel https do Ollama                 | **sim**   | `cloudflared tunnel --url http://localhost:11434` e `OLLAMA_ORIGINS` com o github.io                           |
+| iPhone longe do Mac, ônibus, avião                     | **não**   | nada local alcança: só o banco versionado                                                                      |
 
-Isso é o oposto da restrição que originou o monta monta, que existe justamente para quem
-está no celular sem papel. Duas mitigações entram no desenho desde já, e nenhuma delas
-contraria a escolha:
+Tudo acima **medido em 14/11** nesta máquina, não deduzido: o Ollama já escuta em todas as
+interfaces (`*:11434`, e `200` pelo IP da rede); sem `OLLAMA_ORIGINS` ele recusa a origem da
+rede local com `403` — e o Chrome mostra isso como `net::ERR_FAILED` —, e com a variável
+devolve `204` e o `Access-Control-Allow-Origin` certo, tanto para `http://192.168.2.42:4200`
+como para `https://victorbarbosa.github.io`; e `ng serve --host 0.0.0.0` responde `200` pelo
+IP da rede.
+
+> **Correção de registro.** Eu havia escrito aqui que «o iPhone fica de fora» na rota ao
+> vivo. Isso vale para o site publicado e para quando se está longe do Mac — **não** para o
+> celular na mesma Wi-Fi, que funciona e não exige mudança de código, porque o endereço do
+> servidor vem do assistente.
+
+O que sobra de verdade fora de alcance é o celular **longe do Mac** — o ônibus e o avião,
+que é a restrição que originou o monta monta. Duas mitigações entram no desenho desde já, e
+nenhuma delas contraria a escolha:
 
 - **Cache local do que já foi gerado** (`localStorage`, por tópico/nível/forma, com teto de
   bytes e descarte do mais antigo — o mesmo padrão que o rascunho já usa). O que você viu
