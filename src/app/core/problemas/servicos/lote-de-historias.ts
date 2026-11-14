@@ -35,25 +35,48 @@ export interface ConfiguracaoDaLlm {
 }
 
 /**
- * O padrão foi escolhido lendo os textos dos dois modelos.
+ * O padrão foi escolhido lendo os textos, e depois medindo.
  *
- * O `gpt-oss:20b` com raciocínio baixo escreve o mesmo formato que o
- * `qwen3.8:27b-mlx` em metade do tempo — 12 a 27 segundos por lote de seis,
- * contra 32 a 53 — e, depois das correções de prompt, aprova 18 de 18 nos três
- * tópicos de teste. A comparação está em `comparacao-modelos.md`.
+ * O `gpt-oss:20b` escreve o mesmo formato que o `qwen3.8:27b-mlx` e é o mais
+ * rápido dos dois; a comparação está em `comparacao-modelos.md`.
+ *
+ * **O raciocínio fica desligado**, e a medição de 14/11 com o modelo quente
+ * mostra o porquê de não ser só princípio:
+ *
+ * | `think` | Tempo por lote | Aprovados de 6 |
+ * | ------- | -------------- | -------------- |
+ * | `false` | 82 a 117 s     | 6 de 6         |
+ * | `'low'` | 17 a 34 s      | 2 a 4 de 6     |
+ *
+ * Desligar sai mais lento no relógio e melhor no resultado: um lote inteiro
+ * aproveitável contra um terço. Como ninguém espera por este pedido — a fila
+ * repõe em segundo plano e o exercício aparece com o enunciado de sempre —, o
+ * que interessa é quantas histórias boas chegam, não em quantos segundos.
+ * Escrever enunciado também não é tarefa de raciocínio: não há conta a fazer.
+ *
+ * `OllamaService.pedirChat` recua sozinho se o modelo recusar o campo `think`,
+ * então `false` é seguro mesmo em modelo que não o conheça.
  */
 export const CONFIGURACAO_PADRAO: ConfiguracaoDaLlm = {
   endpoint: SERVIDOR_PADRAO,
   modelo: 'gpt-oss:20b',
-  raciocinio: 'low',
+  raciocinio: false,
   lote: 6,
 };
 
 /** Depois de três falhas seguidas, para de tentar até o próximo tópico. */
 const FALHAS_ATE_DESISTIR = 3;
 
-/** Um lote demora de 12 a 53 segundos; 60 é desistir, não é apressar. */
-const LIMITE_EM_MS = 60_000;
+/**
+ * Quando desistir de um lote.
+ *
+ * Eram 60 segundos, e isso cancelava tudo: com o raciocínio desligado o lote
+ * leva de 82 a 117 segundos, e o `AbortController` matava a requisição antes
+ * de ela voltar — o pedido aparecia como cancelado sem nenhum erro de verdade.
+ * Três minutos cobrem o lote lento e a primeira carga do modelo na memória, e
+ * não custam nada a quem estuda: ninguém espera por este pedido.
+ */
+const LIMITE_EM_MS = 180_000;
 
 interface RespostaDoLote {
   readonly problemas?: readonly ModeloBruto[];

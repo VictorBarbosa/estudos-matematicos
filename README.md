@@ -491,8 +491,16 @@ cache e não a mostra de novo.
 
 O **endereço** do servidor vem do assistente — se ele alcança o Ollama, isto alcança. O
 **modelo**, não: escrever seis enunciados em lote é tarefa de modelo rápido, e o padrão é
-`gpt-oss:20b` com raciocínio baixo (13 s por lote, contra 50 s de um modelo grande). O do
-assistente é escolhido para conversar, e pode ser muito maior. O que muda é de onde
+`gpt-oss:20b`. O do assistente é escolhido para conversar, e pode ser muito maior — um de
+43 GB fez o lote estourar o limite de tempo e aparecer como cancelado.
+
+**O raciocínio fica desligado**, e medindo com o modelo quente dá para ver que não é só
+princípio: com `think: false` o lote leva de 82 a 117 s e aproveita 6 de 6 histórias; com
+`'low'`, leva de 17 a 34 s e aproveita 2 a 4. Como ninguém espera por esse pedido — a fila
+repõe em segundo plano —, o que interessa é quantas histórias boas chegam. O limite de
+desistência é de três minutos, para caber o lote lento e a primeira carga do modelo.
+
+O que muda é de onde
 você abre o site:
 
 | Onde                                        | Funciona?                | O que precisa                                                                                    |

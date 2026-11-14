@@ -219,12 +219,26 @@ Era o pedido explícito: gerar várias de uma vez e explicar a espera.
 
 Medido hoje, e vale ficar escrito:
 
-- **`think: false` é obrigatório.** Na primeira execução, o `gpt-oss:20b` gastou o
-  orçamento inteiro de tokens pensando e devolveu `content` vazio em dois de três pedidos
-  (`done_reason: length`). O `qwen3.8:27b-mlx` aceita `think: false` e responde; o gpt-oss
-  precisa de `think: 'low'`.
-- **Escrever enunciado não é tarefa de raciocínio.** O modelo não tem conta para fazer —
-  ele tem uma história para escrever. Deixar a cadeia de pensamento solta só gasta tempo.
+- **`think: false` é o padrão — e o orçamento de tokens tem de ser largo.** Na primeira
+  execução o `gpt-oss:20b` devolveu `content` vazio em dois de três pedidos
+  (`done_reason: length`) e eu culpei o `think`. Mas eu havia mudado o raciocínio **e** o
+  orçamento de tokens na mesma tentativa, que é experimento sem controle. Isolando, com
+  8192 tokens e o modelo quente, o quadro é outro:
+
+  | `think` | Tempo por lote | Aprovados de 6 |
+  | ------- | -------------- | -------------- |
+  | `false` | 82 a 117 s     | 6 de 6         |
+  | `'low'` | 17 a 34 s      | 2 a 4 de 6     |
+
+  Desligar sai mais lento no relógio e melhor no resultado. Como ninguém espera pelo lote —
+  a fila repõe em segundo plano e o exercício aparece com o enunciado de sempre —, o que
+  interessa é quantas histórias boas chegam, não em quantos segundos. E escrever enunciado
+  não é tarefa de raciocínio: não há conta a fazer, há história a escrever.
+
+- **O limite de desistência subiu de 60 s para três minutos.** Com 60, o lote sem
+  raciocínio era cancelado antes de voltar, e aparecia como «cancelado» sem erro nenhum —
+  foi o que apareceu em uso. Três minutos cobrem o lote lento e a primeira carga do modelo
+  na memória.
 
 ---
 
