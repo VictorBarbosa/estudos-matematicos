@@ -545,6 +545,10 @@
         "descricao": "Factorisation en nombres premiers, algorithme d’Euclide et l’usage de chacun.",
         "titulo": "PPCM et PGCD"
       },
+      "mol-e-massa-molar": {
+        "descricao": "Le pont entre la masse que l’on pèse et la quantité de particules qui réagit.",
+        "titulo": "La mole et la masse molaire"
+      },
       "momento-angular": {
         "descricao": "Pourquoi la patineuse accélère en repliant les bras — et ce que cela fait sur un satellite.",
         "titulo": "Conservation du moment cinétique"

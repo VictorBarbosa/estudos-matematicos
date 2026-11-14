@@ -545,6 +545,10 @@
         "descricao": "Prime factorization, Euclid’s algorithm and where each one is used.",
         "titulo": "LCM and GCD"
       },
+      "mol-e-massa-molar": {
+        "descricao": "The bridge between the mass you weigh and the number of particles that react.",
+        "titulo": "The mole and molar mass"
+      },
       "momento-angular": {
         "descricao": "Why the skater speeds up when she pulls her arms in — and what that does on a satellite.",
         "titulo": "Conservation of angular momentum"

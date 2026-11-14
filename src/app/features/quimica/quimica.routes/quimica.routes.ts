@@ -15,4 +15,10 @@ export const rotas: Routes = [
         (m) => m.AtomosIsotoposIons,
       ),
   },
+  {
+    path: 'mol-e-massa-molar',
+    title: 'O mol e a massa molar · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/quimica/mol-e-massa-molar/mol-e-massa-molar').then((m) => m.MolEMassaMolar),
+  },
 ];

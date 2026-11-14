@@ -545,6 +545,10 @@
         "descricao": "Fatoração em primos, algoritmo de Euclides e onde cada um é usado.",
         "titulo": "MMC e MDC"
       },
+      "mol-e-massa-molar": {
+        "descricao": "A ponte entre a massa que se pesa e a quantidade de partículas que reage.",
+        "titulo": "O mol e a massa molar"
+      },
       "momento-angular": {
         "descricao": "Por que a patinadora acelera ao fechar os braços — e o que isso faz num satélite.",
         "titulo": "Conservação do momento angular"

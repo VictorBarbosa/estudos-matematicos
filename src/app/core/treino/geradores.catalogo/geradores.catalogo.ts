@@ -8,6 +8,7 @@
  */
 import { GeradorExercicio } from '@core/treino/models/treino.model';
 import { geradorAtomos as g_atomos_isotopos_ions } from '@features/quimica/atomos-isotopos-ions/atomos-isotopos-ions.gerador';
+import { geradorMol as g_mol_e_massa_molar } from '@features/quimica/mol-e-massa-molar/mol-e-massa-molar.gerador';
 import { geradorEquacao1 as g_equacao_primeiro_grau } from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.gerador';
 import { geradorEquacao2 as g_equacao_segundo_grau } from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.gerador';
 import { geradorExpressoes as g_expressoes_algebricas } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.gerador';
@@ -253,4 +254,5 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['aplicacoes-de-edo', g_aplicacoes_de_edo],
   ['metodos-numericos', g_metodos_numericos],
   ['atomos-isotopos-ions', g_atomos_isotopos_ions],
+  ['mol-e-massa-molar', g_mol_e_massa_molar],
 ];

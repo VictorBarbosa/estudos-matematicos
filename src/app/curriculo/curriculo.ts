@@ -245,6 +245,34 @@ export const CURRICULO: readonly AreaCurriculo[] = [
     ],
   },
   {
+    id: 'quimica',
+    titulo: 'Química',
+    descricao:
+      'A química geral que a admissão exige: contagem de partículas, o mol, reações e gases.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Chemistry 2e*',
+        url: 'https://openstax.org/details/books/chemistry-2e',
+        nota: 'O livro que a ementa de CHEM 205 adota na Concordia.',
+      },
+    ],
+    topicos: [
+      {
+        id: 'atomos-isotopos-ions',
+        titulo: 'Átomos, isótopos e íons',
+        descricao:
+          'As três contagens: quem define o elemento, quem dá a massa e quem carrega a carga.',
+        pronto: true,
+      },
+      {
+        id: 'mol-e-massa-molar',
+        titulo: 'O mol e a massa molar',
+        descricao: 'A ponte entre a massa que se pesa e a quantidade de partículas que reage.',
+        pronto: true,
+      },
+    ],
+  },
+  {
     id: 'funcoes',
     titulo: 'Funções',
     descricao: 'A linguagem com que a engenharia descreve uma grandeza dependendo de outra.',
@@ -1062,28 +1090,6 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         id: 'metodos-numericos',
         titulo: 'Métodos numéricos',
         descricao: 'Euler, Runge-Kutta e a ordem com que o erro responde ao passo.',
-        pronto: true,
-      },
-    ],
-  },
-  {
-    id: 'quimica',
-    titulo: 'Química',
-    descricao:
-      'A química geral que a admissão exige: contagem de partículas, o mol, reações e gases.',
-    referencias: [
-      {
-        titulo: 'OpenStax, *Chemistry 2e*',
-        url: 'https://openstax.org/details/books/chemistry-2e',
-        nota: 'O livro que a ementa de CHEM 205 adota na Concordia.',
-      },
-    ],
-    topicos: [
-      {
-        id: 'atomos-isotopos-ions',
-        titulo: 'Átomos, isótopos e íons',
-        descricao:
-          'As três contagens: quem define o elemento, quem dá a massa e quem carrega a carga.',
         pronto: true,
       },
     ],

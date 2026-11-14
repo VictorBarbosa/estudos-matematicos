@@ -1,0 +1,54 @@
+<app-topico-layout topicoId="mol-e-massa-molar">
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('substancia')">
+      @for (opcao of substancias; track opcao.formula; let i = $index) {
+        <button
+          type="button"
+          [class.ativo]="escolhida() === i"
+          [attr.aria-pressed]="escolhida() === i"
+          (click)="escolher(i)"
+        >
+          {{ opcao.formula }}
+        </button>
+      }
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="decimos"
+        [rotulo]="texto('quantidade')"
+        [min]="1"
+        [max]="50"
+        [dica]="texto('dicaQuantidade')"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="formulaTex()" [bloco]="true" />
+    </section>
+
+    <section class="painel ponte">
+      <dl>
+        <div>
+          <dt>{{ texto('massaMolar') }}</dt>
+          <dd>{{ arredondar(molar()) }} g/mol</dd>
+        </div>
+        <div>
+          <dt>{{ texto('massa') }}</dt>
+          <dd>{{ arredondar(massa()) }} g</dd>
+        </div>
+        <div>
+          <dt>{{ texto('particulas') }}</dt>
+          <dd>{{ arredondar(particulas()) }} × 10²³</dd>
+        </div>
+      </dl>
+      <p class="nota">{{ texto('notaPonte') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

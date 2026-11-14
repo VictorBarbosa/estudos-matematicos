@@ -83,6 +83,12 @@ export const routes: Routes = [
     canActivateChild: [semSurpresaAtivaGuard, topicoLiberadoGuard],
   },
   {
+    path: 'quimica',
+    loadChildren: () =>
+      import('@features/quimica/quimica.routes/quimica.routes').then((m) => m.rotas),
+    canActivateChild: [semSurpresaAtivaGuard, topicoLiberadoGuard],
+  },
+  {
     path: 'funcoes',
     loadChildren: () =>
       import('@features/funcoes/funcoes.routes/funcoes.routes').then((m) => m.rotas),
@@ -167,12 +173,6 @@ export const routes: Routes = [
     path: 'calculo-4',
     loadChildren: () =>
       import('@features/calculo-4/calculo-4.routes/calculo-4.routes').then((m) => m.rotas),
-    canActivateChild: [semSurpresaAtivaGuard, topicoLiberadoGuard],
-  },
-  {
-    path: 'quimica',
-    loadChildren: () =>
-      import('@features/quimica/quimica.routes/quimica.routes').then((m) => m.rotas),
     canActivateChild: [semSurpresaAtivaGuard, topicoLiberadoGuard],
   },
   { path: '**', redirectTo: '' },

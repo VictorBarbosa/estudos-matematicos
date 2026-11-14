@@ -1,0 +1,17 @@
+{
+  "quantidade": { "pt": "Quantidade (mol)", "fr": "Quantité (mol)", "en": "Amount (mol)" },
+  "substancia": { "pt": "Substância", "fr": "Substance", "en": "Substance" },
+  "dicaQuantidade": {
+    "pt": "Mais mols, mais massa e mais partículas — tudo na mesma proporção.",
+    "fr": "Plus de moles, plus de masse et plus de particules — tout dans la même proportion.",
+    "en": "More moles means more mass and more particles — all in the same proportion."
+  },
+  "massaMolar": { "pt": "Massa molar", "fr": "Masse molaire", "en": "Molar mass" },
+  "massa": { "pt": "Massa", "fr": "Masse", "en": "Mass" },
+  "particulas": { "pt": "Partículas", "fr": "Particules", "en": "Particles" },
+  "notaPonte": {
+    "pt": "A balança mede a massa; a reação conta partículas. O mol é o que traduz uma na outra.",
+    "fr": "La balance mesure la masse ; la réaction compte des particules. La mole traduit l’une dans l’autre.",
+    "en": "The scale measures mass; the reaction counts particles. The mole translates one into the other."
+  }
+}

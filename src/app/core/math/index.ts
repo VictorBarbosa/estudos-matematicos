@@ -89,3 +89,4 @@ export * from '@core/math/fisica/moderna/moderna';
 
 // Química: a contagem das partículas e a massa atômica média.
 export * from '@core/math/quimica/atomo/atomo';
+export * from '@core/math/quimica/mol/mol';
