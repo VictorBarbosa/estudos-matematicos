@@ -329,9 +329,103 @@ export function semColisoes<T>(
  */
 const PONTO_AMBIGUO = /^[+-]?\d{1,3}\.\d{3}$/;
 
+/**
+ * As unidades que o aluno escreve junto do número.
+ *
+ * O enunciado pede «em m/s» e ele responde «547,72 m/s» — escrever a unidade é
+ * o que a escola ensina e o que qualquer professor aceitaria. O site respondia
+ * «Não consegui ler essa resposta», porque o analisador de número para no
+ * primeiro caractere que não é número. Medido: **39 tópicos** recusavam a
+ * unidade que eles próprios pediram.
+ *
+ * A lista é fechada de propósito. Apagar «qualquer letra no fim» quebraria as
+ * respostas que SÃO letras — `3x`, `2\pi`, `√5` —, e aqui não se adivinha:
+ * tira-se uma unidade conhecida, ou não se tira nada.
+ *
+ * A ordem importa: as compostas vêm antes das simples, senão `m/s²` perderia só
+ * o `m` e sobraria `/s²`.
+ */
+const UNIDADES = [
+  'km/h',
+  'm/s²',
+  'm/s2',
+  'm/s',
+  'cm²',
+  'cm³',
+  'cm2',
+  'cm3',
+  'm²',
+  'm³',
+  'm2',
+  'm3',
+  'rad/s',
+  'graus',
+  'rad',
+  'km',
+  'cm',
+  'mm',
+  'kg',
+  'µs',
+  'μs',
+  'ms',
+  'Hz',
+  'Pa',
+  'atm',
+  'mol',
+  'eV',
+  'ºC',
+  '°C',
+  'º',
+  '°',
+  'm',
+  's',
+  'g',
+  'N',
+  'J',
+  'W',
+  'V',
+  'A',
+  'C',
+  'T',
+  'L',
+  'K',
+  'Ω',
+] as const;
+
+/** A entrada sem a unidade do fim, ou `null` se não havia unidade. */
+function semUnidade(entrada: string): string | null {
+  const texto = entrada.trim();
+
+  for (const unidade of UNIDADES) {
+    if (texto.length > unidade.length && texto.endsWith(unidade)) {
+      const corpo = texto.slice(0, -unidade.length).trim();
+      // Só vale se o que sobrou ainda parece um número ou uma conta.
+      return corpo === '' ? null : corpo;
+    }
+  }
+
+  return null;
+}
+
 function outrasLeituras(entrada: string): readonly string[] {
   const texto = entrada.trim();
-  return PONTO_AMBIGUO.test(texto) ? [texto.replace('.', ',')] : [];
+  const leituras: string[] = [];
+
+  if (PONTO_AMBIGUO.test(texto)) {
+    leituras.push(texto.replace('.', ','));
+  }
+
+  const corpo = semUnidade(texto);
+  if (corpo !== null) {
+    leituras.push(corpo);
+
+    // A unidade pode vir junto do ponto ambíguo: «1.375 m».
+    if (PONTO_AMBIGUO.test(corpo)) {
+      leituras.push(corpo.replace('.', ','));
+    }
+  }
+
+  return leituras;
 }
 
 /** Quantas casas decimais o enunciado pede, quando ele diz. */
@@ -376,6 +470,52 @@ function arredondamentoCurto<T>(
     `O enunciado pede ${pedidas} casas decimais, e você arredondou para ` +
     `${escritas}. O valor está certo; só confira a precisão pedida.`
   );
+}
+
+/** A primeira das outras leituras que o gerador consegue ler, ou `null`. */
+function primeiraLeituraValida<T>(gerador: GeradorExercicio<T>, entrada: string): T | null {
+  for (const outra of outrasLeituras(entrada)) {
+    const lido = gerador.analisar(outra);
+    if (lido !== null) {
+      return lido;
+    }
+  }
+
+  return null;
+}
+
+/**
+ * A resposta confere nas casas que o enunciado pediu.
+ *
+ * «2 casas decimais» é um contrato: o que vem depois da segunda casa não foi
+ * pedido e não deve decidir nada. Escrever MAIS casas é ser mais exato, e ser
+ * mais exato nunca pode custar o acerto — nem quando o gabarito guardado já
+ * está arredondado e a resposta mais longa do aluno fica, por isso, mais
+ * distante dele do que uma resposta curta ficaria.
+ *
+ * Então os dois lados são arredondados no número de casas pedido e comparados
+ * ali. É mais honesto que uma tolerância: a tolerância adivinha quanto perdoar,
+ * esta regra responde exatamente a pergunta que o enunciado fez.
+ *
+ * Vale só quando o enunciado DIZ quantas casas quer. Sem contrato escrito não
+ * há o que desconsiderar, e aí decidem o comparador do tópico e a folga de
+ * constante arredondada.
+ */
+function certoNasCasasPedidas<T>(exercicio: Exercicio<T>, valor: T): boolean {
+  if (typeof valor !== 'number' || typeof exercicio.gabarito !== 'number') {
+    return false;
+  }
+
+  if (!Number.isFinite(valor) || !Number.isFinite(exercicio.gabarito)) {
+    return false;
+  }
+
+  const pedidas = Number(CASAS_PEDIDAS.exec(exercicio.enunciado)?.[1] ?? NaN);
+  if (!Number.isInteger(pedidas) || pedidas < 0 || pedidas > 20) {
+    return false;
+  }
+
+  return Number(valor.toFixed(pedidas)) === Number(exercicio.gabarito.toFixed(pedidas));
 }
 
 /**
@@ -435,7 +575,15 @@ export function corrigir<T>(
   exercicio: Exercicio<T>,
   entrada: string,
 ): Validacao {
-  const valor = gerador.analisar(entrada);
+  /*
+   * A leitura tenta a entrada e, se ela não se lê, as outras formas.
+   *
+   * A unidade era o caso que isto conserta: o enunciado pede «em m/s», o aluno
+   * responde «547,72 m/s» e o analisador de número parava no espaço. O
+   * «inválido» vinha antes de qualquer segunda tentativa, então nem o ponto
+   * ambíguo nem a unidade chegavam a ser considerados aqui.
+   */
+  const valor = gerador.analisar(entrada) ?? primeiraLeituraValida(gerador, entrada);
 
   if (valor === null) {
     return {
@@ -498,7 +646,12 @@ export function corrigir<T>(
   }
 
   // Depois das armadilhas, de propósito: o desvio conhecido é diagnosticado, e
-  // só o que sobra pode ser arredondamento de constante.
+  // só o que sobra pode ser excesso de casas ou arredondamento de constante.
+  if (certoNasCasasPedidas(exercicio, valor)) {
+    // Sem recado: escrever mais casas do que o pedido não é erro de nada.
+    return { veredito: 'correto', mensagem: 'Correto!' };
+  }
+
   const porConstante = certoComConstanteArredondada(gerador, exercicio.gabarito, valor);
   if (porConstante !== null) {
     return { veredito: 'correto', mensagem: 'Correto!', observacao: porConstante };
