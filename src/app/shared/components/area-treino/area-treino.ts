@@ -18,6 +18,7 @@ import {
 } from '@core/progressao/models/progressao.model';
 import { ExercicioEmFocoService } from '@core/exercicio/services/exercicio-em-foco.service';
 import { HistoriasService } from '@core/problemas/servicos/historias.service';
+import { derivarProblema } from '@core/problemas/derivacao/derivar-problema';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProvaService } from '@core/prova/services/prova.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
@@ -213,6 +214,41 @@ export class AreaTreino {
   private readonly historias = inject(HistoriasService);
 
   /**
+   * A declaração que vale para este exercício — escrita à mão, ou derivada do
+   * próprio enunciado.
+   *
+   * A derivada é o que faz a LLM ser chamada em TODOS os tópicos, e não só nos
+   * seis que tinham declaração. Ela é o enunciado de origem com os números
+   * trocados por lacunas: a conta não pode mudar, porque a conta é o texto.
+   *
+   * `null` quando não há número no enunciado — «Calcule e escreva o resultado
+   * na forma mais simples» não vira história, e ali o tópico segue com o
+   * enunciado de sempre, como antes.
+   */
+  private readonly problema = computed(() => {
+    const exercicio = this.sessao().exercicio();
+    const gerador = this.gerador();
+    const propria = gerador.problemaDeTexto;
+
+    if (propria !== undefined && exercicio.dadosDoProblema !== undefined) {
+      return { declaracao: propria, valores: exercicio.dadosDoProblema, modo: 'declarada' as const };
+    }
+
+    if (propria !== undefined) {
+      return null;
+    }
+
+    const derivada = derivarProblema(
+      enunciadoEm(exercicio, 'pt'),
+      this.i18n.tituloDoTopico(gerador.topicoId),
+    );
+
+    return derivada === null
+      ? null
+      : { declaracao: derivada.declaracao, valores: derivada.valores, modo: 'reescrita' as const };
+  });
+
+  /**
    * O enunciado, vestido de história quando houver uma.
    *
    * A ordem importa: primeiro a história, depois o enunciado de sempre. Um
@@ -223,11 +259,16 @@ export class AreaTreino {
   protected readonly enunciado = computed(() => {
     const exercicio = this.sessao().exercicio();
     const idioma = this.i18n.idioma();
-    const declaracao = this.gerador().problemaDeTexto;
-    const dados = exercicio.dadosDoProblema;
 
-    if (declaracao !== undefined && dados !== undefined) {
-      const vestido = this.historias.vestir(exercicio.id, dados, idioma, declaracao.contrato);
+    const problema = this.problema();
+
+    if (problema !== null) {
+      const vestido = this.historias.vestir(
+        exercicio.id,
+        problema.valores,
+        idioma,
+        problema.declaracao.contrato,
+      );
 
       if (vestido !== undefined) {
         return vestido;
@@ -297,14 +338,20 @@ export class AreaTreino {
     effect(() => {
       const exercicio = this.sessao().exercicio();
       const gerador = this.gerador();
-      const declaracao = gerador.problemaDeTexto;
-      const dados = exercicio.dadosDoProblema;
+      const problema = this.problema();
 
-      if (declaracao === undefined || dados === undefined) {
+      if (problema === null) {
         return;
       }
 
-      this.historias.atribuir(exercicio.id, gerador.topicoId, exercicio.nivel, declaracao, dados);
+      this.historias.atribuir(
+        exercicio.id,
+        gerador.topicoId,
+        exercicio.nivel,
+        problema.declaracao,
+        problema.valores,
+        problema.modo,
+      );
     });
   }
 

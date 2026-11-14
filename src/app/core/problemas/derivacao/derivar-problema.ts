@@ -1,0 +1,204 @@
+import type { ProblemaDeTexto } from '@core/problemas/models/problema-de-texto';
+import type { DadoDoProblema, PedidoDeProblema } from '@core/problemas/prompt/montar-prompt';
+import type { ValorDaLacuna } from '@core/problemas/vestir/vestir-enunciado';
+
+/**
+ * A declaração que se escreve sozinha, para os tópicos que não têm uma.
+ *
+ * ## O problema que isto resolve
+ *
+ * Havia seis declarações escritas à mão, e a LLM só era chamada nesses seis
+ * tópicos. Nos outros 124 — que são a maior parte da trilha — nenhuma
+ * requisição saía, e quem estudava concluía, com razão, que o recurso não
+ * existia.
+ *
+ * Escrever 124 declarações à mão era a alternativa, e ela é a certa quando o
+ * tópico vale o esforço. Mas a declaração escrita existe para uma coisa só:
+ * dizer à LLM **qual conta** a história tem de significar. E o enunciado do
+ * exercício já diz isso — ele é a pergunta, com os números no lugar.
+ *
+ * Então a derivação é a mais conservadora possível: **o próprio enunciado,
+ * com cada número trocado por uma lacuna**. A LLM não escreve nada de novo,
+ * ela reescreve a mesma pergunta numa situação concreta. A conta não pode
+ * mudar, porque a conta é o texto de origem.
+ *
+ * ## O que fica de fora, e por que
+ *
+ * Enunciado sem número nenhum — «Calcule e escreva o resultado na forma mais
+ * simples», de frações — não vira história: não há dado para virar lacuna, e o
+ * que sobra é uma frase que manda fazer uma conta. `null` ali é a resposta
+ * certa, e o tópico cai no enunciado de sempre, como antes.
+ *
+ * Números dentro de parênteses também ficam de fora: «(em cm³, 2 casas
+ * decimais)» não é dado do problema, é contrato de resposta. Virar lacuna
+ * faria a história prometer duas casas decimais como se fosse uma quantidade.
+ */
+
+/** Um número com separador de milhar ou decimal, ou um inteiro. */
+const NUMERO = /-?\d+(?:[.,]\d+)*/g;
+
+/** Um trecho entre parênteses: contrato de resposta, não dado. */
+const ENTRE_PARENTESES = /\([^)]*\)/g;
+
+/**
+ * Uma grandeza de verdade: número com unidade, moeda, tempo ou porcentagem.
+ *
+ * **A barreira que separa «dá para contar uma história» de «não dá».** Foi
+ * medida, e o motivo é concreto: reescrever «um poliedro convexo tem 9 arestas
+ * e 5 faces» produziu, em três tentativas, um «cubo», uma «caixa de madeira» e
+ * um «avião de papel» — e nenhum deles tem 9 arestas. O número não corresponde
+ * a objeto nenhum, então qualquer cenário concreto é falso, e o aluno que
+ * conhece o assunto percebe. O portão não pega isso: ele confere formato, não
+ * sentido.
+ *
+ * Onde há unidade, ao contrário, a história é verdadeira por construção: 4 cm,
+ * 9 litros, R$ 45 e 17 minutos cabem em qualquer situação que se invente, e o
+ * que muda é só quem mede e por quê. É por isso que a barreira é a unidade, e
+ * não o assunto.
+ */
+const GRANDEZA = new RegExp(
+  String.raw`\d\s*(?:cm|mm|km|dm|m²|m³|kg|mg|ml|mL|litros?|mililitros?|gramas?|quilogramas?|` +
+    String.raw`horas?|minutos?|dias?|anos?|meses|graus?|%|°)` +
+    String.raw`|R\$|\$|reais`,
+  'i',
+);
+
+/** A unidade colada ao número, sem exigir espaço: «4cm» também vale. */
+const GRANDEZA_COLADA = new RegExp(String.raw`\d(?:cm|mm|km|kg|mg|ml|mL|m²|m³)`, 'i');
+
+/**
+ * O enunciado descreve uma situação que se pode reescrever?
+ *
+ * Exige ao menos uma grandeza com unidade. Enunciado de relação abstrata
+ * («quantos vértices tem um poliedro de 9 arestas») fica de fora: a história
+ * seria falsa, e um exercício falso é pior que exercício nenhum.
+ */
+export function admiteHistoria(enunciado: string): boolean {
+  const limpo = enunciado.replace(ENTRE_PARENTESES, '');
+
+  return GRANDEZA.test(limpo) || GRANDEZA_COLADA.test(limpo);
+}
+
+interface Derivacao {
+  readonly declaracao: ProblemaDeTexto;
+  readonly valores: readonly ValorDaLacuna[];
+}
+
+/** `3,5` e `1.234` escritos como o JavaScript entende. */
+function comoNumero(texto: string): number {
+  const semMilhar = texto.replace(/\.(?=\d{3}\b)/g, '');
+  return Number(semMilhar.replace(',', '.'));
+}
+
+/**
+ * Troca cada número do enunciado por `{0}`, `{1}`, … e devolve os valores.
+ *
+ * Um número que aparece duas vezes ganha duas lacunas, com o mesmo valor. É o
+ * caminho que evita a regra de «lacuna repetida» do portão: a história fala de
+ * cada quantidade uma vez só, e o código põe o mesmo número nas duas.
+ */
+function generalizar(enunciado: string): {
+  molde: string;
+  valores: readonly number[];
+} | null {
+  // Os parênteses saem da conta de generalização, mas ficam no texto.
+  /*
+   * O marcador não pode conter dígito: `\u00000\u0000` casaria com a própria
+   * expressão de número e o índice viraria lacuna — foi o defeito que este
+   * teste pegou (`[4, 9, 0]` em vez de `[4, 9]`).
+   */
+  const protegidos: string[] = [];
+  const semParenteses = enunciado.replace(ENTRE_PARENTESES, (trecho) => {
+    protegidos.push(trecho);
+    return '\u0000';
+  });
+
+  const valores: number[] = [];
+  let indice = 0;
+
+  const molde = semParenteses.replace(NUMERO, (achado) => {
+    const numero = comoNumero(achado);
+
+    if (!Number.isFinite(numero)) {
+      return achado;
+    }
+
+    valores.push(numero);
+    return `{${indice++}}`;
+  });
+
+  if (valores.length === 0) {
+    return null;
+  }
+
+  // Devolve os parênteses ao lugar, sem generalizar o que está dentro deles.
+  return {
+    molde: molde.replace(/\u0000/g, () => protegidos.shift() ?? ''),
+    valores,
+  };
+}
+
+/**
+ * A declaração derivada para este exercício, ou `null` quando não há o que
+ * derivar.
+ *
+ * `topico` é o título que a tela mostra, e serve só para a LLM saber do que se
+ * trata — não entra na conta.
+ */
+export function derivarProblema(
+  enunciado: string,
+  topico: string,
+): Derivacao | null {
+  if (!admiteHistoria(enunciado)) {
+    return null;
+  }
+
+  const generalizado = generalizar(enunciado);
+
+  if (generalizado === null) {
+    return null;
+  }
+
+  const { molde, valores } = generalizado;
+
+  /*
+   * A pergunta é a última frase do enunciado — é onde ela sempre está.
+   * `split` por fim de frase simples basta: os enunciados do site têm uma ou
+   * duas frases, e a última termina em «?».
+   */
+  const frases = molde.split(/(?<=[.?!])\s+/);
+  const pergunta =
+    [...frases].reverse().find((frase) => frase.includes('?')) ?? frases[frases.length - 1]!;
+
+  const dados: readonly DadoDoProblema[] = valores.map((valor, indice) => ({
+    indice,
+    significado:
+      `o ${indice + 1}º dado citado no enunciado, que vale ${valor} e entra na história ` +
+      'na mesma ordem e na mesma grandeza',
+    tipo: Number.isInteger(valor) ? 'inteiro' : 'decimal',
+  }));
+
+  return {
+    valores,
+    declaracao: {
+      // A forma é o molde: dois exercícios com o mesmo molde compartilham fila,
+      // e um molde diferente abre outra — que é o que se quer, porque a
+      // história de um não serve para o outro.
+      forma: `auto:${molde}`,
+      pedido: {
+        topico,
+        oQueExercita: 'resolver exatamente o problema do enunciado de origem',
+        relacao: molde,
+        pergunta,
+        dados,
+        contextos: undefined,
+      } satisfies Omit<PedidoDeProblema, 'quantas' | 'niveis'>,
+      /*
+       * A fórmula em tela some quando a história entra, pela mesma razão de
+       * equação do primeiro grau: ela é a modelagem feita. É `true` aqui porque
+       * na derivação a fórmula costuma ser exatamente a resposta (`x = ?`).
+       */
+      esconderFormula: true,
+    },
+  };
+}

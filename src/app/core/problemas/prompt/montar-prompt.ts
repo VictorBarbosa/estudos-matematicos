@@ -59,6 +59,17 @@ export interface PedidoDeProblema {
    * etiqueta que veio junto.
    */
   readonly niveis: readonly Nivel[];
+  /**
+   * De onde vem a história: de uma declaração escrita à mão, ou da reescrita
+   * do próprio enunciado.
+   *
+   * São instruções diferentes e não podiam ser a mesma. Na declarada, a LLM
+   * recebe a RELAÇÃO e inventa a situação — e o texto proíbe repetir a
+   * relação. Na derivada, ela recebe o enunciado de origem e o reescreve: a
+   * conta está dada, e o trabalho é vesti-la. Misturar as duas produz texto
+   * torto nos dois casos.
+   */
+  readonly modo?: 'declarada' | 'reescrita';
   /** Os valores que o gerador vai substituir, em ordem. */
   readonly dados: readonly DadoDoProblema[];
   /** O que a resposta representa — `quantas horas de serviço`. */
@@ -192,7 +203,23 @@ export interface PromptDeProblema {
   readonly esquema: unknown;
 }
 
+const REGRAS_REESCRITA = [
+  'You REWRITE the given problem as a concrete, everyday situation.',
+  'The question and the quantity asked must stay EXACTLY the same.',
+  'The placeholders {0}, {1}, {2}... are the data, in the order they appear: keep that order and that meaning.',
+  'Do not add data, do not remove data, do not change what is being asked.',
+  'The rewritten text must not be harder to solve — you are changing the clothing, not the maths.',
+  'KEEP the object of the original text and the name of each quantity. A "poliedro convexo" with ' +
+    '{0} arestas and {1} faces must stay a convex polyhedron with edges and faces — do NOT turn ' +
+    'it into a cube, a box, a cardboard model or a drone. Any familiar object you name has known ' +
+    'properties, and when the numbers do not fit them the exercise becomes false and the student ' +
+    'notices.',
+  'What you change is the SCENARIO: who is measuring, where, and why. Not the object, not the ' +
+    'quantities, not the question.',
+];
+
 export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
+  const reescrita = pedido.modo === 'reescrita';
   const dados = [...pedido.dados]
     .sort((a, b) => a.indice - b.indice)
     .map((dado) => {
@@ -230,6 +257,7 @@ export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
     '',
     'RULES:',
     ...REGRAS.map((regra) => `- ${regra}`),
+    ...(reescrita ? REGRAS_REESCRITA.map((regra) => `- ${regra}`) : []),
     '',
     'FORMAT — two examples. Copy the FORMAT only.',
     'These examples are about another subject on purpose. Reusing their story, their wording or',
@@ -242,15 +270,26 @@ export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
     `Tópico: ${pedido.topico}.`,
     `A conta que o aluno vai fazer: ${pedido.oQueExercita}.`,
     '',
-    `RELAÇÃO (instrução para você, NUNCA texto para o aluno): ${pedido.relacao}`,
-    'A história tem de significar exatamente essa relação — mas **não a escreva**. Nada de',
-    '«x», nada de letra de variável, nada de «está para … como … está para». O aluno lê uma',
-    'situação; a álgebra é ele que monta, e montá-la é o exercício.',
-    '',
-    'O x é DESCONHECIDO. Por isso:',
-    '- nunca diga o valor de x, nem dê um dado que seja igual a x;',
-    '- nunca escreva uma quantidade de repetições já feitas, nem um «já fez tantas vezes»;',
-    '- cada lacuna é uma quantidade CONHECIDA e fixa, que não depende de x.',
+    ...(reescrita
+      ? [
+          'O ENUNCIADO DE ORIGEM, que você vai reescrever — os números já são as lacunas, na',
+          'ordem em que aparecem:',
+          `  ${pedido.relacao}`,
+          'Reescreva-o como uma situação concreta do dia a dia, mantendo EXATAMENTE a mesma',
+          'pergunta e os mesmos dados. Quem lê a sua versão tem de fazer a mesma conta que fazia',
+          'com o enunciado de origem.',
+        ]
+      : [
+          `RELAÇÃO (instrução para você, NUNCA texto para o aluno): ${pedido.relacao}`,
+          'A história tem de significar exatamente essa relação — mas **não a escreva**. Nada de',
+          '«x», nada de letra de variável, nada de «está para … como … está para». O aluno lê uma',
+          'situação; a álgebra é ele que monta, e montá-la é o exercício.',
+          '',
+          'O x é DESCONHECIDO. Por isso:',
+          '- nunca diga o valor de x, nem dê um dado que seja igual a x;',
+          '- nunca escreva uma quantidade de repetições já feitas, nem um «já fez tantas vezes»;',
+          '- cada lacuna é uma quantidade CONHECIDA e fixa, que não depende de x.',
+        ]),
     '',
     'Os dados da história, que entram como lacunas:',
     dados,

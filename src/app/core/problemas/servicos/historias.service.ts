@@ -158,6 +158,7 @@ export class HistoriasService {
     nivel: string,
     declaracao: ProblemaDeTexto,
     valores: readonly ValorDaLacuna[],
+    modo: 'declarada' | 'reescrita' = 'declarada',
   ): void {
     if (this.atribuidas()[exercicioId] !== undefined) {
       return;
@@ -188,7 +189,7 @@ export class HistoriasService {
      * qualquer nível — já encontra história.
      */
     if ((this.filas()[chave] ?? []).length < PISO_DA_FILA) {
-      void this.repor(topicoId, declaracao.forma, declaracao);
+      void this.repor(topicoId, declaracao.forma, declaracao, modo);
     }
   }
 
@@ -259,6 +260,7 @@ export class HistoriasService {
     topicoId: string,
     forma: string,
     declaracao: ProblemaDeTexto,
+    modo: 'declarada' | 'reescrita',
   ): Promise<void> {
     const chaveDoPedido = `${topicoId}|${forma}`;
 
@@ -274,6 +276,7 @@ export class HistoriasService {
         ...declaracao.pedido,
         niveis: NIVEIS,
         quantas: configuracao.lote,
+        modo,
       };
 
       const lote = await this.lote.pedir(pedido, configuracao);
