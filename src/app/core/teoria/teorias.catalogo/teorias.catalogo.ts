@@ -134,6 +134,7 @@ import { TEORIA_GASES as t_gases_ideais } from '@features/quimica/gases-ideais/g
 import { TEORIA_COMPOSICAO as t_composicao_e_formula } from '@features/quimica/composicao-e-formula/composicao-e-formula.teoria';
 import { TEORIA_BALANCEAMENTO as t_equacoes_e_balanceamento } from '@features/quimica/equacoes-e-balanceamento/equacoes-e-balanceamento.teoria';
 import { TEORIA_ELETRONS as t_estrutura_eletronica } from '@features/quimica/estrutura-eletronica/estrutura-eletronica.teoria';
+import { TEORIA_LIGACAO as t_tabela_e_ligacao } from '@features/quimica/tabela-e-ligacao/tabela-e-ligacao.teoria';
 
 export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[] = [
   ['equacao-primeiro-grau', t_equacao_primeiro_grau],
@@ -263,4 +264,5 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['composicao-e-formula', t_composicao_e_formula],
   ['equacoes-e-balanceamento', t_equacoes_e_balanceamento],
   ['estrutura-eletronica', t_estrutura_eletronica],
+  ['tabela-e-ligacao', t_tabela_e_ligacao],
 ];

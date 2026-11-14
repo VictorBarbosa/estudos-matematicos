@@ -1,0 +1,92 @@
+<app-topico-layout topicoId="tabela-e-ligacao">
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('primeiro')">
+      @for (opcao of escolhas; track opcao.simbolo; let i = $index) {
+        <button
+          type="button"
+          [class.ativo]="indicePrimeiro() === i"
+          [attr.aria-pressed]="indicePrimeiro() === i"
+          (click)="escolherPrimeiro(i)"
+        >
+          {{ opcao.simbolo }}
+        </button>
+      }
+    </section>
+
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('segundo')">
+      @for (opcao of escolhas; track opcao.simbolo; let i = $index) {
+        <button
+          type="button"
+          [class.ativo]="indiceSegundo() === i"
+          [attr.aria-pressed]="indiceSegundo() === i"
+          (click)="escolherSegundo(i)"
+        >
+          {{ opcao.simbolo }}
+        </button>
+      }
+    </section>
+
+    <section class="painel">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">{{ fichaPrimeira().simbolo }}</th>
+            <th scope="col">{{ fichaSegunda().simbolo }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{ texto('grupo') }}</th>
+            <td>{{ fichaPrimeira().grupo ?? texto('semValor') }}</td>
+            <td>{{ fichaSegunda().grupo ?? texto('semValor') }}</td>
+          </tr>
+          <tr>
+            <th scope="row">{{ texto('periodo') }}</th>
+            <td>{{ fichaPrimeira().periodo }}</td>
+            <td>{{ fichaSegunda().periodo }}</td>
+          </tr>
+          <tr>
+            <th scope="row">{{ texto('ultima') }}</th>
+            <td>{{ fichaPrimeira().ultima }}</td>
+            <td>{{ fichaSegunda().ultima }}</td>
+          </tr>
+          <tr>
+            <th scope="row">{{ texto('carga') }}</th>
+            <td>{{ fichaPrimeira().carga ?? texto('semValor') }}</td>
+            <td>{{ fichaSegunda().carga ?? texto('semValor') }}</td>
+          </tr>
+          <tr>
+            <th scope="row">{{ texto('eletro') }}</th>
+            <td>{{ arredondar(fichaPrimeira().eletro) }}</td>
+            <td>{{ arredondar(fichaSegunda().eletro) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="painel">
+      <dl class="resumo">
+        <div>
+          <dt>{{ texto('diferenca') }}</dt>
+          <dd>{{ arredondar(diferenca()) }}</dd>
+        </div>
+        <div>
+          <dt>{{ texto('tipo') }}</dt>
+          <dd>{{ tipo() }}</dd>
+        </div>
+        <div>
+          <dt>{{ texto('composto') }}</dt>
+          <dd class="certo">{{ composto() ?? texto('semValor') }}</dd>
+        </div>
+      </dl>
+      <p class="nota">{{ texto('notaRegua') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

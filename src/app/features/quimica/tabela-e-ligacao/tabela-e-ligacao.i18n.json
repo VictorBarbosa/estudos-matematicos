@@ -1,0 +1,25 @@
+{
+  "primeiro": { "pt": "Primeiro elemento", "fr": "Premier élément", "en": "First element" },
+  "segundo": { "pt": "Segundo elemento", "fr": "Second élément", "en": "Second element" },
+  "grupo": { "pt": "Grupo", "fr": "Groupe", "en": "Group" },
+  "periodo": { "pt": "Período", "fr": "Période", "en": "Period" },
+  "ultima": { "pt": "Última camada", "fr": "Dernière couche", "en": "Outer shell" },
+  "carga": { "pt": "Íon provável", "fr": "Ion probable", "en": "Likely ion" },
+  "eletro": { "pt": "Eletronegatividade", "fr": "Électronégativité", "en": "Electronegativity" },
+  "diferenca": { "pt": "Diferença", "fr": "Différence", "en": "Difference" },
+  "composto": { "pt": "Composto iônico", "fr": "Composé ionique", "en": "Ionic compound" },
+  "tipo": {
+    "pt": "Pela régua da escola",
+    "fr": "Selon la règle scolaire",
+    "en": "By the school rule"
+  },
+  "ionica": { "pt": "iônica", "fr": "ionique", "en": "ionic" },
+  "polar": { "pt": "covalente polar", "fr": "covalente polaire", "en": "polar covalent" },
+  "apolar": { "pt": "covalente apolar", "fr": "covalente apolaire", "en": "nonpolar covalent" },
+  "semValor": { "pt": "—", "fr": "—", "en": "—" },
+  "notaRegua": {
+    "pt": "Os cortes de 1,7 e 0,4 são convenção de ensino, não lei: o HF tem 1,78 e se comporta como molécula covalente muito polar. Perto do limite, nenhum número decide.",
+    "fr": "Les seuils de 1,7 et 0,4 sont une convention d’enseignement, pas une loi : HF vaut 1,78 et se comporte comme une molécule covalente très polaire. Près de la limite, aucun nombre ne décide.",
+    "en": "The 1.7 and 0.4 cut-offs are a teaching convention, not a law: HF is 1.78 and behaves as a very polar covalent molecule. Near the boundary, no number decides."
+  }
+}

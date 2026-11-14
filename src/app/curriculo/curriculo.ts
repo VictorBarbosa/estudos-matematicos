@@ -271,6 +271,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'tabela-e-ligacao',
+        titulo: 'Tabela periódica e ligação',
+        descricao: 'O grupo, a carga do íon e a fórmula do composto — tudo da última camada.',
+        pronto: true,
+      },
+      {
         id: 'mol-e-massa-molar',
         titulo: 'O mol e a massa molar',
         descricao: 'A ponte entre a massa que se pesa e a quantidade de partículas que reage.',

@@ -705,6 +705,10 @@
         "descricao": "Aproximar área por retângulos e refinar a partição até o limite.",
         "titulo": "Soma de Riemann"
       },
+      "tabela-e-ligacao": {
+        "descricao": "O grupo, a carga do íon e a fórmula do composto — tudo da última camada.",
+        "titulo": "Tabela periódica e ligação"
+      },
       "taxa-de-variacao": {
         "descricao": "Velocidade e aceleração como derivadas da posição.",
         "titulo": "Taxa de variação"

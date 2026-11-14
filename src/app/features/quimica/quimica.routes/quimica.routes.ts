@@ -24,6 +24,12 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'tabela-e-ligacao',
+    title: 'Tabela periódica e ligação · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/quimica/tabela-e-ligacao/tabela-e-ligacao').then((m) => m.TabelaELigacao),
+  },
+  {
     path: 'mol-e-massa-molar',
     title: 'O mol e a massa molar · Estudos Matemáticos',
     loadComponent: () =>

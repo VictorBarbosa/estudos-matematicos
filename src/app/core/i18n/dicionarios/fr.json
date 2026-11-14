@@ -705,6 +705,10 @@
         "descricao": "Approcher l’aire par des rectangles et affiner la partition jusqu’à la limite.",
         "titulo": "Somme de Riemann"
       },
+      "tabela-e-ligacao": {
+        "descricao": "Le groupe, la charge de l’ion et la formule du composé — tout vient de la dernière couche.",
+        "titulo": "Tableau périodique et liaison"
+      },
       "taxa-de-variacao": {
         "descricao": "Vitesse et accélération comme dérivées de la position.",
         "titulo": "Taux de variation"
