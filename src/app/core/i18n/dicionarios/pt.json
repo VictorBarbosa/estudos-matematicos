@@ -469,6 +469,10 @@
         "descricao": "Amplitude, período e fase: a forma da onda.",
         "titulo": "Funções trigonométricas"
       },
+      "gases-ideais": {
+        "descricao": "PV = nRT com a temperatura em kelvin, a lei combinada e a fração molar.",
+        "titulo": "Gases ideais e pressões parciais"
+      },
       "gradiente-e-direcional": {
         "descricao": "O vetor da subida mais íngreme, e a taxa em qualquer direção.",
         "titulo": "Gradiente e derivada direcional"

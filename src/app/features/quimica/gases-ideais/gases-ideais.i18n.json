@@ -1,0 +1,26 @@
+{
+  "mols": {
+    "pt": "Quantidade de gás (mol)",
+    "fr": "Quantité de gaz (mol)",
+    "en": "Amount of gas (mol)"
+  },
+  "pressao": { "pt": "Pressão (atm)", "fr": "Pression (atm)", "en": "Pressure (atm)" },
+  "temperatura": { "pt": "Temperatura (°C)", "fr": "Température (°C)", "en": "Temperature (°C)" },
+  "dicaTemperatura": {
+    "pt": "O controle está em graus Celsius, como num problema real. Veja o kelvin logo abaixo.",
+    "fr": "Le curseur est en degrés Celsius, comme dans un problème réel. Le kelvin est juste en dessous.",
+    "en": "The slider is in degrees Celsius, as in a real problem. The kelvin reading is just below."
+  },
+  "emKelvin": { "pt": "Em kelvin", "fr": "En kelvins", "en": "In kelvin" },
+  "volume": { "pt": "Volume", "fr": "Volume", "en": "Volume" },
+  "seFosseCelsius": {
+    "pt": "Se T fosse usada em °C",
+    "fr": "Si T était utilisée en °C",
+    "en": "If T were used in °C"
+  },
+  "notaCelsius": {
+    "pt": "O volume é proporcional à temperatura absoluta: numa escala com zero arbitrário, a proporção não vale.",
+    "fr": "Le volume est proportionnel à la température absolue : sur une échelle au zéro arbitraire, la proportion ne tient pas.",
+    "en": "Volume is proportional to absolute temperature: on a scale with an arbitrary zero, the proportion does not hold."
+  }
+}

@@ -130,6 +130,7 @@ import { TEORIA_MOL as t_mol_e_massa_molar } from '@features/quimica/mol-e-massa
 import { TEORIA_ESTEQUIOMETRIA as t_estequiometria } from '@features/quimica/estequiometria/estequiometria.teoria';
 import { TEORIA_LIMITANTE as t_limitante_e_rendimento } from '@features/quimica/limitante-e-rendimento/limitante-e-rendimento.teoria';
 import { TEORIA_SOLUCOES as t_solucoes_e_concentracao } from '@features/quimica/solucoes-e-concentracao/solucoes-e-concentracao.teoria';
+import { TEORIA_GASES as t_gases_ideais } from '@features/quimica/gases-ideais/gases-ideais.teoria';
 
 export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[] = [
   ['equacao-primeiro-grau', t_equacao_primeiro_grau],
@@ -255,4 +256,5 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['estequiometria', t_estequiometria],
   ['limitante-e-rendimento', t_limitante_e_rendimento],
   ['solucoes-e-concentracao', t_solucoes_e_concentracao],
+  ['gases-ideais', t_gases_ideais],
 ];

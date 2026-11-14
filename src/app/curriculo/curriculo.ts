@@ -288,6 +288,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'Mols por litro de solução, diluição e mistura — com o volume em mililitros.',
         pronto: true,
       },
+      {
+        id: 'gases-ideais',
+        titulo: 'Gases ideais e pressões parciais',
+        descricao: 'PV = nRT com a temperatura em kelvin, a lei combinada e a fração molar.',
+        pronto: true,
+      },
     ],
   },
   {

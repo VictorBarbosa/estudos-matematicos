@@ -469,6 +469,10 @@
         "descricao": "Amplitude, période et phase : la forme de l’onde.",
         "titulo": "Fonctions trigonométriques"
       },
+      "gases-ideais": {
+        "descricao": "PV = nRT avec la température en kelvins, la loi combinée et la fraction molaire.",
+        "titulo": "Gaz parfaits et pressions partielles"
+      },
       "gradiente-e-direcional": {
         "descricao": "Le vecteur de la montée la plus raide, et le taux dans n’importe quelle direction.",
         "titulo": "Gradient et dérivée directionnelle"

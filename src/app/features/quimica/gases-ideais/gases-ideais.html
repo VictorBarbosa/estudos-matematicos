@@ -1,0 +1,58 @@
+<app-topico-layout topicoId="gases-ideais">
+  <div explorar class="explorar">
+    <section class="destaque-formula">
+      <app-formula tex="PV = nRT" [bloco]="true" />
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="centesimosDeMol"
+        [rotulo]="texto('mols')"
+        [min]="10"
+        [max]="500"
+      />
+      <app-controle-parametro
+        [(valor)]="centesimosDeAtm"
+        [rotulo]="texto('pressao')"
+        [min]="25"
+        [max]="500"
+      />
+      <app-controle-parametro
+        [(valor)]="celsius"
+        [rotulo]="texto('temperatura')"
+        [min]="5"
+        [max]="200"
+        [dica]="texto('dicaTemperatura')"
+      />
+    </section>
+
+    <section class="painel leituras">
+      <dl>
+        <div>
+          <dt>{{ texto('emKelvin') }}</dt>
+          <dd>{{ arredondar(temperaturaK()) }} K</dd>
+        </div>
+        <div>
+          <dt>{{ texto('volume') }}</dt>
+          <dd class="certo">{{ arredondar(volume()) }} L</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="painel engano">
+      <dl>
+        <div>
+          <dt>{{ texto('seFosseCelsius') }}</dt>
+          <dd class="errado">{{ arredondar(volumeComCelsius()) }} L</dd>
+        </div>
+      </dl>
+      <p class="nota">{{ texto('notaCelsius') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

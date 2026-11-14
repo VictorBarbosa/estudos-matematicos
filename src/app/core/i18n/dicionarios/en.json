@@ -469,6 +469,10 @@
         "descricao": "Amplitude, period and phase: the shape of the wave.",
         "titulo": "Trigonometric functions"
       },
+      "gases-ideais": {
+        "descricao": "PV = nRT with temperature in kelvin, the combined law and the mole fraction.",
+        "titulo": "Ideal gases and partial pressures"
+      },
       "gradiente-e-direcional": {
         "descricao": "The vector of steepest ascent, and the rate in any direction.",
         "titulo": "Gradient and directional derivative"

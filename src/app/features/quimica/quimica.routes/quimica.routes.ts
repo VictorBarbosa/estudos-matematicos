@@ -43,4 +43,10 @@ export const rotas: Routes = [
         (m) => m.SolucoesEConcentracao,
       ),
   },
+  {
+    path: 'gases-ideais',
+    title: 'Gases ideais e pressões parciais · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/quimica/gases-ideais/gases-ideais').then((m) => m.GasesIdeais),
+  },
 ];
