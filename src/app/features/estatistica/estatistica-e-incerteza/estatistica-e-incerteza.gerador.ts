@@ -7,6 +7,7 @@ import {
   resumirAmostra,
 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
+import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
@@ -133,7 +134,7 @@ function exercicioResumo(
   return {
     id: `inc-${oque}-${medidas.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Para as medidas ${medidas.join('; ')}, qual é ${rotulo}? (2 casas decimais)`,
+    enunciado: `Para as medidas ${medidas.map(numeroEmPortugues).join('; ')}, qual é ${rotulo}? (2 casas decimais)`,
     enunciadoTex: medidas.map((valor) => String(valor).replace('.', '{,}')).join(',\\; '),
     gabarito,
     resolucao: { resultado: gabarito, passos: completos },
@@ -282,7 +283,10 @@ function exercicioPropagarProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       resultado,
       proximos,
     ),
-    dica: `Num produto somam-se as incertezas RELATIVAS ao quadrado: (${incertezaBase}/${base})² + (${incertezaAltura}/${altura})²; tire a raiz e multiplique pela área.`,
+    dica:
+      'Num produto somam-se as incertezas RELATIVAS ao quadrado: ' +
+      `(${numeroEmPortugues(incertezaBase)}/${base})² + (${numeroEmPortugues(incertezaAltura)}/${altura})²; ` +
+      'tire a raiz e multiplique pela área.',
   };
 }
 

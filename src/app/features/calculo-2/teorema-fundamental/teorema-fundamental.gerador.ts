@@ -1,4 +1,5 @@
 import { Polinomio, teoremaFundamentalComPassos } from '@core/math';
+import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import {
@@ -102,7 +103,7 @@ export const geradorTfc: GeradorExercicio<number> = {
          * errar o lado é errar a questão. Dizer que k é inteiro remove a dúvida
          * sem entregar a resposta: achar o inteiro continua exigindo a conta.
          */
-        enunciado: `Para qual valor inteiro de k a integral vale ${Number(valor.toFixed(4))}?`,
+        enunciado: `Para qual valor inteiro de k a integral vale ${numeroEmPortugues(Number(valor.toFixed(4)))}?`,
         enunciadoTex: `\\int_{0}^{k} \\left(${p.paraTex()}\\right) dx = ${Number(valor.toFixed(4))}`,
         gabarito,
         resolucao: {

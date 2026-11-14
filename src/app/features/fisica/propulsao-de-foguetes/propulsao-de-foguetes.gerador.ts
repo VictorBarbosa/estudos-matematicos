@@ -1,4 +1,5 @@
 import { empuxoDeMotorComPassos, tsiolkovskyComPassos } from '@core/math';
+import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -263,7 +264,9 @@ function exercicioRazaoMassas(nivel: Nivel, rng: Rng): Exercicio<number> {
     ),
     dica:
       nivel === 'dificil'
-        ? `Inverta Tsiolkovsky: Δv/vₑ = ln(m₀/m_f). Converta ${deltaVKm} km/s para m/s, divida por ${exaustao} e aplique e elevado a esse número.`
+        ? 'Inverta Tsiolkovsky: Δv/vₑ = ln(m₀/m_f). Converta ' +
+          `${numeroEmPortugues(deltaVKm)} km/s para m/s, divida por ${numeroEmPortugues(exaustao)} ` +
+          'e aplique e elevado a esse número.'
         : undefined,
   };
 }

@@ -1,4 +1,5 @@
 import { Polinomio } from '@core/math';
+import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -37,7 +38,7 @@ export const geradorDefinicaoDerivada: GeradorExercicio<number> = {
         nivel,
         enunciado:
           `Qual é a inclinação da reta secante que passa pelos pontos de abscissas ` +
-          `${ponto} e ${ponto + h}? (2 casas)`,
+          `${numeroEmPortugues(ponto)} e ${numeroEmPortugues(ponto + h)}? (2 casas)`,
         enunciadoTex: `f(x) = ${p.paraTex()}`,
         gabarito,
         resolucao: {
@@ -95,7 +96,7 @@ export const geradorDefinicaoDerivada: GeradorExercicio<number> = {
     return {
       id: `defder-derivada-${a}${b}${c}-${ponto}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Usando a definição, calcule f'(${ponto}).`,
+      enunciado: `Usando a definição, calcule f'(${numeroEmPortugues(ponto)}).`,
       enunciadoTex: `f(x) = ${p.paraTex()}`,
       gabarito,
       resolucao: {

@@ -1,4 +1,5 @@
 import { paraRadianos } from '@core/math';
+import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { anguloAgudo } from '@core/treino/sorteio/sorteio';
@@ -46,7 +47,7 @@ export const geradorIdentidades: GeradorExercicio<number> = {
       return {
         id: `identidades-fundamental-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Se sen θ = ${seno.toFixed(2)} com θ no 1º quadrante, quanto vale cos θ? (2 casas)`,
+        enunciado: `Se sen θ = ${numeroEmPortugues(seno)} com θ no 1º quadrante, quanto vale cos θ? (2 casas)`,
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\quad \\Rightarrow \\quad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {

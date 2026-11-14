@@ -1,4 +1,5 @@
 import { paraRadianos } from '@core/math';
+import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { anguloAgudo } from '@core/treino/sorteio/sorteio';
@@ -88,7 +89,7 @@ export const geradorRazoes: GeradorExercicio<number> = {
       return {
         id: `razoes-identidade-${agudoDeVerdade}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Se sen θ = ${seno.toFixed(2)} e θ está no 1º quadrante, qual é cos θ? (2 casas)`,
+        enunciado: `Se sen θ = ${numeroEmPortugues(seno)} e θ está no 1º quadrante, qual é cos θ? (2 casas)`,
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\qquad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {

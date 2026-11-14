@@ -1,4 +1,5 @@
 import { Figura, NOME_FIGURA, areaComPassos } from '@core/math';
+import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -143,7 +144,8 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `area-alt-${triangulo ? 'tri' : 'ret'}-${base}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um ${triangulo ? 'triângulo' : 'retângulo'} tem área ${area} cm² e base ${base} cm. ` +
+      `Um ${triangulo ? 'triângulo' : 'retângulo'} tem área ${numeroEmPortugues(area)} cm² e base ` +
+      `${numeroEmPortugues(base)} cm. ` +
       'Qual é sua altura, em cm?',
     enunciadoTex: `A = ${area} \\qquad b = ${base}`,
     gabarito,

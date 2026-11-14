@@ -1,4 +1,5 @@
 import { NOME_SOLIDO, Solido, superficieComPassos, volumeComPassos } from '@core/math';
+import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
 import {
   FOLGA_DE_CONSTANTE_ARREDONDADA,
@@ -279,7 +280,7 @@ function exercicioEscala(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `sol-escala-${k}-${volume}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um sólido de volume ${volume} cm³ é ampliado ${k} vezes em todas as dimensões. Qual é ` +
+      `Um sólido de volume ${numeroEmPortugues(volume)} cm³ é ampliado ${numeroEmPortugues(k)} vezes em todas as dimensões. Qual é ` +
       'o novo volume, em cm³?',
     enunciadoTex: `V = ${volume} \\qquad k = ${k}`,
     gabarito,
@@ -341,7 +342,7 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado:
       `Um ${cone ? 'cone' : 'cilindro'} de raio ${raio} cm tem volume ` +
-      `${Number(volume.toFixed(2))} cm³. Qual é sua altura, em cm?`,
+      `${numeroEmPortugues(Number(volume.toFixed(2)))} cm³. Qual é sua altura, em cm?`,
     enunciadoTex: `r = ${raio} \\qquad V = ${Number(volume.toFixed(2))}`,
     gabarito: altura,
     resolucao: {

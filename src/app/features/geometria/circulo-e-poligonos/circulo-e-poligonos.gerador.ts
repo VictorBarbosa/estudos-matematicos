@@ -1,4 +1,5 @@
 import { areaComPassos, perimetroCirculoComPassos } from '@core/math';
+import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
 import {
   FOLGA_DE_CONSTANTE_ARREDONDADA,
@@ -164,7 +165,7 @@ function exercicioRaioPelaArea(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-raio-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um círculo tem área ${Number(area.toFixed(2))} cm². Qual é o seu raio? ` +
+      `Um círculo tem área ${numeroEmPortugues(Number(area.toFixed(2)))} cm². Qual é o seu raio? ` +
       '(em cm, 2 casas decimais)',
     enunciadoTex: `A = ${Number(area.toFixed(2))}`,
     gabarito: raio,
@@ -278,7 +279,7 @@ function exercicioPoligono(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado:
       `Um polígono regular de ${lados} lados tem lado ${base} cm e apótema ` +
-      `${Number(apotema.toFixed(3))} cm. Qual é sua área? (em cm², 2 casas decimais)`,
+      `${numeroEmPortugues(Number(apotema.toFixed(3)))} cm. Qual é sua área? (em cm², 2 casas decimais)`,
     enunciadoTex: `n = ${lados} \\qquad \\ell = ${base} \\qquad a = ${Number(apotema.toFixed(3))}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -466,10 +467,10 @@ function exercicioAnguloInscrito(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-inscrito-${central}-${doCentral ? 'i' : 'c'}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: doCentral
-      ? `Um ângulo central mede ${central}°. Quanto mede o ângulo inscrito que enxerga o ` +
-        'mesmo arco? (em graus)'
-      : `Um ângulo inscrito mede ${inscrito}°. Quanto mede o ângulo central que enxerga o ` +
-        'mesmo arco? (em graus)',
+      ? `Um ângulo central mede ${numeroEmPortugues(central)}°. Quanto mede o ângulo inscrito ` +
+        'que enxerga o mesmo arco? (em graus)'
+      : `Um ângulo inscrito mede ${numeroEmPortugues(inscrito)}°. Quanto mede o ângulo central ` +
+        'que enxerga o mesmo arco? (em graus)',
     enunciadoTex: doCentral ? `\\hat{C} = ${central}^\\circ` : `\\hat{I} = ${inscrito}^\\circ`,
     gabarito: resultado,
     resolucao: {

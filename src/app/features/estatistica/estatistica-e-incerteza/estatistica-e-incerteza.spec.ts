@@ -10,7 +10,12 @@ function amostra(nivel: Nivel, quantidade = 60) {
 
 /** Lê a lista de medidas do enunciado. */
 function medidasDe(enunciado: string): number[] {
-  return /medidas (.*?), qual/.exec(enunciado)![1]!.split('; ').map(Number);
+  // O enunciado escreve os números como em português — 46,8 e não 46.8 —,
+  // então ler de volta exige desfazer a vírgula decimal.
+  return /medidas (.*?), qual/
+    .exec(enunciado)![1]!
+    .split('; ')
+    .map((escrito) => Number(escrito.replace(',', '.')));
 }
 
 describe('geradorIncerteza', () => {

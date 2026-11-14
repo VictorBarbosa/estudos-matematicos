@@ -1,4 +1,5 @@
 import { resolverOscilacaoComPassos } from '@core/math';
+import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -43,8 +44,8 @@ export const geradorMhs: GeradorExercicio<number> = {
       id: `mhs-${pergunta}-${massa}${constante}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado:
-        `Uma massa de ${massa} kg oscila presa a uma mola de constante ${constante} N/m, ` +
-        `com amplitude de ${amplitude} m. Qual é ${nome}? (3 casas)`,
+        `Uma massa de ${numeroEmPortugues(massa)} kg oscila presa a uma mola de constante ${numeroEmPortugues(constante)} N/m, ` +
+        `com amplitude de ${numeroEmPortugues(amplitude)} m. Qual é ${nome}? (3 casas)`,
       enunciadoTex: `m = ${massa}\\text{ kg} \\qquad k = ${constante}\\text{ N/m} \\qquad A = ${amplitude}\\text{ m}`,
       gabarito,
       resolucao: {
@@ -106,7 +107,8 @@ export const geradorMhs: GeradorExercicio<number> = {
         nivel === 'facil'
           ? 'Comece calculando ω = √(k/m).'
           : pergunta === 'velocidade-maxima' && nivel === 'medio'
-            ? `Primeiro ω = √(${constante}/${massa}); a velocidade máxima é a amplitude vezes ω: ${amplitude}·ω.`
+            ? `Primeiro ω = √(${numeroEmPortugues(constante)}/${numeroEmPortugues(massa)}); a velocidade ` +
+              `máxima é a amplitude vezes ω: ${numeroEmPortugues(amplitude)}·ω.`
             : undefined,
     };
   },
