@@ -417,6 +417,10 @@
         "descricao": "A proporção da equação balanceada, convertida em massa: o trajeto completo.",
         "titulo": "Estequiometria"
       },
+      "estrutura-eletronica": {
+        "descricao": "A ordem de energia dos subníveis, as camadas e o que a última delas explica.",
+        "titulo": "Estrutura eletrônica"
+      },
       "expressoes-algebricas": {
         "descricao": "Variáveis, termos semelhantes e avaliação de expressões.",
         "titulo": "Expressões algébricas"

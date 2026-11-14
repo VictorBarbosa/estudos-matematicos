@@ -16,6 +16,14 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'estrutura-eletronica',
+    title: 'Estrutura eletrônica · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/quimica/estrutura-eletronica/estrutura-eletronica').then(
+        (m) => m.EstruturaEletronica,
+      ),
+  },
+  {
     path: 'mol-e-massa-molar',
     title: 'O mol e a massa molar · Estudos Matemáticos',
     loadComponent: () =>

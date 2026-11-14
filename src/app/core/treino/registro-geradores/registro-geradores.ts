@@ -117,6 +117,7 @@ export const CARREGAR_GERADOR: Readonly<
   'composicao-e-formula': () => import('@features/quimica/composicao-e-formula/composicao-e-formula.gerador').then((m) => m.geradorComposicao),
   'equacoes-e-balanceamento': () => import('@features/quimica/equacoes-e-balanceamento/equacoes-e-balanceamento.gerador').then((m) => m.geradorBalanceamento),
   'estequiometria': () => import('@features/quimica/estequiometria/estequiometria.gerador').then((m) => m.geradorEstequiometria),
+  'estrutura-eletronica': () => import('@features/quimica/estrutura-eletronica/estrutura-eletronica.gerador').then((m) => m.geradorEletrons),
   'gases-ideais': () => import('@features/quimica/gases-ideais/gases-ideais.gerador').then((m) => m.geradorGases),
   'limitante-e-rendimento': () => import('@features/quimica/limitante-e-rendimento/limitante-e-rendimento.gerador').then((m) => m.geradorLimitante),
   'mol-e-massa-molar': () => import('@features/quimica/mol-e-massa-molar/mol-e-massa-molar.gerador').then((m) => m.geradorMol),

@@ -15,6 +15,7 @@ import { geradorSolucoes as g_solucoes_e_concentracao } from '@features/quimica/
 import { geradorGases as g_gases_ideais } from '@features/quimica/gases-ideais/gases-ideais.gerador';
 import { geradorComposicao as g_composicao_e_formula } from '@features/quimica/composicao-e-formula/composicao-e-formula.gerador';
 import { geradorBalanceamento as g_equacoes_e_balanceamento } from '@features/quimica/equacoes-e-balanceamento/equacoes-e-balanceamento.gerador';
+import { geradorEletrons as g_estrutura_eletronica } from '@features/quimica/estrutura-eletronica/estrutura-eletronica.gerador';
 import { geradorEquacao1 as g_equacao_primeiro_grau } from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.gerador';
 import { geradorEquacao2 as g_equacao_segundo_grau } from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.gerador';
 import { geradorExpressoes as g_expressoes_algebricas } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.gerador';
@@ -267,4 +268,5 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['gases-ideais', g_gases_ideais],
   ['composicao-e-formula', g_composicao_e_formula],
   ['equacoes-e-balanceamento', g_equacoes_e_balanceamento],
+  ['estrutura-eletronica', g_estrutura_eletronica],
 ];

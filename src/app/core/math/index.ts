@@ -97,3 +97,4 @@ export * from '@core/math/quimica/gases/gases';
 export * from '@core/math/quimica/elementos/elementos';
 export * from '@core/math/quimica/formula/formula';
 export * from '@core/math/quimica/balanceamento/balanceamento';
+export * from '@core/math/quimica/eletrons/eletrons';

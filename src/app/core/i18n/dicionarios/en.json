@@ -417,6 +417,10 @@
         "descricao": "The balanced equation’s ratio, turned into mass: the whole path.",
         "titulo": "Stoichiometry"
       },
+      "estrutura-eletronica": {
+        "descricao": "The energy order of the subshells, the shells, and what the outermost one explains.",
+        "titulo": "Electron structure"
+      },
       "expressoes-algebricas": {
         "descricao": "Variables, like terms and evaluating expressions.",
         "titulo": "Algebraic expressions"

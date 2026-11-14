@@ -1,0 +1,65 @@
+@use 'mixins' as *;
+
+h3 {
+  margin: 0 0 var(--esp-3);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.resumo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--esp-3);
+  margin: 0;
+}
+
+dt {
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+}
+
+dd {
+  margin: 0;
+  font-size: 1.375rem;
+  font-variant-numeric: tabular-nums;
+
+  &.certo {
+    color: var(--acerto);
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  padding: var(--esp-2) 0;
+  text-align: right;
+  border-bottom: 1px solid var(--borda);
+}
+
+th[scope='row'],
+thead th:first-child {
+  text-align: left;
+}
+
+thead th {
+  color: var(--texto-suave);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+/* A capacidade fica apagada: ela é referência, não resposta. */
+td.suave {
+  color: var(--texto-suave);
+}
+
+.aviso {
+  margin: var(--esp-3) 0 0;
+  color: var(--erro);
+  font-size: 0.875rem;
+}

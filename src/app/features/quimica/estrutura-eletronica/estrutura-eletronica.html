@@ -1,0 +1,66 @@
+<app-topico-layout topicoId="estrutura-eletronica">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="z"
+        [rotulo]="texto('numeroAtomico')"
+        [min]="1"
+        [max]="54"
+        [dica]="texto('notaOrdem')"
+      />
+    </section>
+
+    <section class="painel">
+      <dl class="resumo">
+        <div>
+          <dt>{{ texto('elemento') }}</dt>
+          <dd>{{ simbolo() }}</dd>
+        </div>
+        <div>
+          <dt>{{ texto('ultimaCamada') }}</dt>
+          <dd class="certo">{{ ultima() }}</dd>
+        </div>
+        <div>
+          <dt>{{ texto('periodo') }}</dt>
+          <dd>{{ camadasOcupadas() }}</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="painel">
+      <h3>{{ texto('distribuicao') }}</h3>
+      <app-formula [tex]="distribuicaoTex()" [bloco]="true" />
+      @if (excecao()) {
+        <p class="aviso">{{ texto('notaExcecao') }}</p>
+      }
+    </section>
+
+    <section class="painel">
+      <h3>{{ texto('porCamada') }}</h3>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">{{ texto('camada') }}</th>
+            <th scope="col">{{ texto('tem') }}</th>
+            <th scope="col">{{ texto('cabe') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (linha of porCamada(); track linha.n) {
+            <tr>
+              <th scope="row">{{ linha.n }}</th>
+              <td>{{ linha.tem }}</td>
+              <td class="suave">{{ linha.cabe }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

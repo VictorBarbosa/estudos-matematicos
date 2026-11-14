@@ -1,0 +1,21 @@
+{
+  "elemento": { "pt": "Elemento", "fr": "Élément", "en": "Element" },
+  "numeroAtomico": { "pt": "Número atômico", "fr": "Numéro atomique", "en": "Atomic number" },
+  "distribuicao": { "pt": "Distribuição", "fr": "Répartition", "en": "Configuration" },
+  "porCamada": { "pt": "Por camada", "fr": "Par couche", "en": "Per shell" },
+  "ultimaCamada": { "pt": "Última camada", "fr": "Dernière couche", "en": "Outermost shell" },
+  "periodo": { "pt": "Camadas ocupadas", "fr": "Couches occupées", "en": "Occupied shells" },
+  "camada": { "pt": "Camada", "fr": "Couche", "en": "Shell" },
+  "cabe": { "pt": "Cabe", "fr": "Capacité", "en": "Capacity" },
+  "tem": { "pt": "Tem", "fr": "Contient", "en": "Holds" },
+  "notaOrdem": {
+    "pt": "Compare a ordem: depois do 3p vem o 4s, não o 3d. O que manda é a energia, não o número da camada.",
+    "fr": "Comparez l’ordre : après le 3p vient le 4s, pas le 3d. C’est l’énergie qui décide, pas le numéro de la couche.",
+    "en": "Compare the order: after 3p comes 4s, not 3d. Energy decides, not the shell number."
+  },
+  "notaExcecao": {
+    "pt": "Neste elemento a regra diagonal não acerta a configuração medida: um subnível semicheio custa menos energia do que ela prevê.",
+    "fr": "Pour cet élément la règle diagonale ne donne pas la configuration mesurée : un sous-niveau à demi rempli coûte moins d’énergie qu’elle ne le prévoit.",
+    "en": "For this element the diagonal rule does not match the measured configuration: a half-filled subshell costs less energy than it predicts."
+  }
+}

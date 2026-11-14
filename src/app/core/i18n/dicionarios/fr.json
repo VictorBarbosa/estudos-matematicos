@@ -417,6 +417,10 @@
         "descricao": "La proportion de l’équation équilibrée, convertie en masse : le trajet complet.",
         "titulo": "Stœchiométrie"
       },
+      "estrutura-eletronica": {
+        "descricao": "L’ordre des énergies des sous-niveaux, les couches et ce que la dernière explique.",
+        "titulo": "Structure électronique"
+      },
       "expressoes-algebricas": {
         "descricao": "Variables, termes semblables et évaluation d’expressions.",
         "titulo": "Expressions algébriques"

@@ -265,6 +265,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'estrutura-eletronica',
+        titulo: 'Estrutura eletrônica',
+        descricao: 'A ordem de energia dos subníveis, as camadas e o que a última delas explica.',
+        pronto: true,
+      },
+      {
         id: 'mol-e-massa-molar',
         titulo: 'O mol e a massa molar',
         descricao: 'A ponte entre a massa que se pesa e a quantidade de partículas que reage.',
