@@ -67,6 +67,55 @@ const GRANDEZA = new RegExp(
 const GRANDEZA_COLADA = new RegExp(String.raw`\d(?:cm|mm|km|kg|mg|ml|mL|m²|m³)`, 'i');
 
 /**
+ * A álgebra já está no enunciado, à vista?
+ *
+ * **A segunda barreira, e a que faltava.** O enunciado `AB = 4x + 3 cm e
+ * DE = 5x − 4 cm` passava pela barreira de unidade — tem «cm» — e virava o
+ * molde `AB = {0}x + {1} cm e DE = {2}x − {3} cm`. A história saía então com a
+ * equação escrita dentro dela: *«dois pedaços de fita mediram AB = {0}x + {1} cm
+ * e DE = {2}x − {3} cm»*. Isso é o enunciado de origem com roupa nova, e pior:
+ * entrega ao aluno a modelagem que ele deveria montar.
+ *
+ * Onde a incógnita já está no texto, vestir de história não tem o que vestir —
+ * o exercício É a manipulação. `null` ali é a resposta certa.
+ *
+ * Os padrões olham a FORMA da álgebra, e não a letra: `x` é convenção, mas
+ * `n`, `t` e `k` aparecem tanto quanto. O que os separa de uma unidade é o que
+ * vem depois — um operador, um expoente, um sinal de igual.
+ */
+const ALGEBRA = [
+  // `4x +`, `5n −`, `3t =`: número colado numa letra, e um operador depois.
+  // O `·` fica de fora: ele é o sinal de unidade composta (`N·s/m`), não de
+  // multiplicação algébrica, e casá-lo barrava toda a cinemática de mola.
+  /\d\s*[a-zA-Z]\s*[+\-−=×]/,
+  /*
+   * `x²`, `t³`: a letra com expoente — mas NÃO `m²`, `m/s²`, `kg/m³`.
+   *
+   * A distinção é a letra, não a forma: `m`, `s`, `g`, `L`, `N` são unidades
+   * quando vêm com expoente, e `x`, `y`, `n`, `t` são incógnitas. Sem as duas
+   * exclusões — a letra que precede (de `cm²`) e a lista de unidades — esta
+   * regra barrava TODO problema de área, de aceleração e de densidade do site:
+   * foram cinco tópicos perdidos por engano na primeira versão.
+   */
+  /(?<![a-zA-Z])(?![mgsLlWJNVAF]\s*[²³⁴])[a-zA-Z]\s*[²³⁴]/,
+  // `x = 3`, `n = 12`: a incógnita isolada à esquerda de uma igualdade. Pega
+  // também `R = 16 Ω` e `t = 0`, e isso é intencional: a história repetiria os
+  // símbolos do circuito, e «com R = {0} ohms» não é situação, é notação.
+  /\b[a-zA-Z]\s*=\s*-?\d/,
+  // `f(x)`, `L(x)`: notação de função.
+  /\b[a-zA-Z]\s*\(\s*[a-zA-Z]\s*\)/,
+  // `sen x`, `log x`, `f(`, e não `tangente`: o separador depois do nome é o
+  // que distingue a função da palavra. Sem ele, «tangente» casava com `tan`.
+  /\b(?:sen|cos|tan|log|ln)(?:\s+[a-zA-Z]|\s*\()/i,
+  /\bsen\s+[a-zA-Z]/i,
+];
+
+/** O enunciado tem incógnita ou notação de função? */
+export function temAlgebra(enunciado: string): boolean {
+  return ALGEBRA.some((padrao) => padrao.test(enunciado));
+}
+
+/**
  * O enunciado descreve uma situação que se pode reescrever?
  *
  * Exige ao menos uma grandeza com unidade. Enunciado de relação abstrata
@@ -149,7 +198,7 @@ export function derivarProblema(
   enunciado: string,
   topico: string,
 ): Derivacao | null {
-  if (!admiteHistoria(enunciado)) {
+  if (!admiteHistoria(enunciado) || temAlgebra(enunciado)) {
     return null;
   }
 

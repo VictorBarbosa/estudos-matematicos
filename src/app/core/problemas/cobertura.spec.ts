@@ -10,18 +10,24 @@ import { derivarProblema } from '@core/problemas/derivacao/derivar-problema';
  * mão, e nos outros 124 nenhuma requisição saía. Quem estudava concluía, com
  * razão, que o recurso não existia.
  *
- * A derivação automática levou a cobertura de 6 para 59 tópicos. Os outros 71
- * ficam de fora por um motivo, e não por esquecimento: o enunciado deles é
- * relação abstrata ou manipulação simbólica («derive f(x) = 3x² + 2x», «quantos
- * vértices tem um poliedro de 9 arestas»). Ali uma história seria FALSA — um
- * poliedro de 9 arestas não é um cubo, e nenhum objeto real tem essas medidas.
- * O portão confere formato, não sentido, então ele não pegaria isso; a barreira
- * de viabilidade é que pega.
+ * A derivação automática levou a cobertura de 6 para 58 tópicos. Os outros 72
+ * ficam de fora por um motivo, e não por esquecimento, e são duas barreiras:
+ *
+ * - **sem unidade**: relação abstrata («quantos vértices tem um poliedro de 9
+ *   arestas»). Ali uma história seria FALSA — um poliedro de 9 arestas não é
+ *   um cubo, e nenhum objeto real tem essas medidas;
+ * - **com álgebra à vista**: a incógnita já está no texto (`AB = 4x + 3 cm e
+ *   DE = 5x − 4 cm`). Vestir de história não tem o que vestir: o molde mantém o
+ *   `x` e a história repete a equação, que é justamente o passo que o aluno
+ *   deveria dar.
+ *
+ * O portão confere formato, não sentido, então ele não pegaria nenhum dos dois;
+ * as barreiras de viabilidade é que pegam.
  *
  * O piso é uma catraca: subir é sempre permitido (mais um tópico com
  * declaração escrita à mão), descer falha e obriga a olhar.
  */
-const PISO_DE_TOPICOS = 59;
+const PISO_DE_TOPICOS = 58;
 
 describe('cobertura da chamada à LLM', () => {
   it('nenhum tópico perde a chamada sem alguém decidir isso', async () => {
@@ -71,6 +77,38 @@ describe('cobertura da chamada à LLM', () => {
     expect(derivada.valores).toEqual([4, 9]);
     expect(derivada.declaracao.pedido.relacao).not.toContain('{2}');
     expect(derivada.declaracao.pedido.relacao).toContain('2 casas decimais');
+  });
+
+  it('enunciado com a incógnita à vista não vira história', () => {
+    /*
+     * O caso que o aluno relatou: a história chegou com «AB = {0}x + {1} cm e
+     * DE = {2}x − {3} cm» dentro — o enunciado de origem com roupa nova, e a
+     * modelagem entregue de graça.
+     */
+    expect(
+      derivarProblema(
+        'Os triângulos ABC e DEF são congruentes. Sabendo que AB = 4x + 3 cm e DE = 5x − 4 cm, quanto mede AB?',
+        'Ângulos e triângulos',
+      ),
+    ).toBeNull();
+
+    expect(derivarProblema('O lucro é C(q) = 1q² − 8q + 76, com q o preço.', 'Função quadrática')).toBeNull();
+  });
+
+  it('unidade com expoente NÃO é álgebra', () => {
+    /*
+     * A primeira versão da barreira barrou cinco tópicos por engano, porque
+     * `m²`, `m/s²` e `kg/m³` pareciam `x²`. Estes quatro são o caso real que
+     * precisa continuar funcionando.
+     */
+    for (const enunciado of [
+      'Uma asa de 116 m² tem ar a 96 m/s na face superior. Qual é a sustentação, em newtons?',
+      'Uma força resultante de 13 N age sobre um corpo de 6 kg. Qual é a aceleração, em m/s²?',
+      'Um corpo de densidade 920 kg/m³ flutua em água. Que fração do volume fica submersa?',
+      'Converta 1 m³ para cm³.',
+    ]) {
+      expect(derivarProblema(enunciado, 'Física'), enunciado).not.toBeNull();
+    }
   });
 
   it('enunciado de relação abstrata não vira história', () => {

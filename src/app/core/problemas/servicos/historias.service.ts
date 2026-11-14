@@ -126,6 +126,22 @@ export class HistoriasService {
   /** Que história está vestindo cada exercício, pelo id dele. */
   private readonly atribuidas = signal<Readonly<Record<string, ModeloDeProblema>>>({});
 
+  /**
+   * Os exercícios que apareceram ANTES de haver história para eles.
+   *
+   * **O defeito que isto corrige é o mais caro de todos**, porque fazia o
+   * recurso parecer inexistente: o exercício entra na tela no mesmo instante em
+   * que é sorteado, e o lote leva de 20 a 120 segundos. Quando a história
+   * chegava, ninguém voltava ao exercício que já estava ali — ele ficava com o
+   * enunciado de sempre para sempre, e o aluno concluía que a LLM não estava
+   * sendo usada.
+   *
+   * A chave é o id do exercício; o valor, o que é preciso para vesti-lo depois.
+   */
+  private readonly esperando = signal<
+    Readonly<Record<string, { readonly chave: string; readonly lacunas: number }>>
+  >({});
+
   /** Chaves cujo lote está sendo pedido agora, para não pedir duas vezes. */
   private readonly pedindo = new Set<string>();
 
@@ -171,6 +187,15 @@ export class HistoriasService {
         [chave]: (atuais[chave] ?? []).filter((modelo) => modelo !== escolhida),
       }));
       this.gravarCache();
+    } else {
+      /*
+       * Nada na fila: o exercício entra para a lista de espera. É o caso
+       * NORMAL no primeiro exercício de um tópico, e era o que se perdia.
+       */
+      this.esperando.update((atuais) => ({
+        ...atuais,
+        [exercicioId]: { chave, lacunas: valores.length },
+      }));
     }
 
     /*
@@ -225,6 +250,14 @@ export class HistoriasService {
     );
 
     this.atribuidas.update((atuais) => {
+      const restantes = { ...atuais };
+      delete restantes[exercicioId];
+      return restantes;
+    });
+
+    // O exercício descartado não fica esperando de novo: o aluno pediu o
+    // enunciado de sempre para ele.
+    this.esperando.update((atuais) => {
       const restantes = { ...atuais };
       delete restantes[exercicioId];
       return restantes;
@@ -289,10 +322,75 @@ export class HistoriasService {
           return copia;
         });
         this.gravarCache();
+
+        // O passo que faltava: quem chegou primeiro recebe a história agora.
+        this.servirQuemEsperava();
       }
     } finally {
       this.pedindo.delete(chaveDoPedido);
     }
+  }
+
+  /**
+   * Veste os exercícios que apareceram antes do lote.
+   *
+   * Roda a cada lote que traz história. Não faz nada quando a lista de espera
+   * está vazia — o caso comum depois do primeiro exercício de cada tópico.
+   */
+  private servirQuemEsperava(): void {
+    const pendentes = this.esperando();
+    const ids = Object.keys(pendentes);
+
+    if (ids.length === 0) {
+      return;
+    }
+
+    const filas = this.filas();
+    const atribuidas: Record<string, ModeloDeProblema> = { ...this.atribuidas() };
+    const restantes: Record<string, { readonly chave: string; readonly lacunas: number }> = {
+      ...pendentes,
+    };
+    let mudou = false;
+
+    for (const id of ids) {
+      const espera = pendentes[id]!;
+      const fila = filas[espera.chave] ?? [];
+      const servem = fila.filter((modelo) => modelo.lacunas === espera.lacunas);
+
+      if (servem.length === 0) {
+        continue;
+      }
+
+      const escolhida = servem[0]!;
+      atribuidas[id] = escolhida;
+      delete restantes[id];
+      mudou = true;
+    }
+
+    if (!mudou) {
+      return;
+    }
+
+    /*
+     * As filas são reconstruídas UMA vez, com todas as escolhas já feitas.
+     * Retirar uma por uma, dentro do laço, faria a segunda escolha não
+     * enxergar a primeira — duas histórias iguais vestiriam dois exercícios.
+     */
+    const escolhidas = new Set(
+      Object.values(atribuidas).map((modelo) => assinaturaDoModelo(modelo)),
+    );
+
+    this.atribuidas.set(atribuidas);
+    this.esperando.set(restantes);
+    this.filas.update((atuais) =>
+      Object.fromEntries(
+        Object.entries(atuais).map(([chave, modelos]) => [
+          chave,
+          modelos.filter((modelo) => !escolhidas.has(assinaturaDoModelo(modelo))),
+        ]),
+      ),
+    );
+    this.gravarCache();
   }
 
   private gravarCache(): void {
