@@ -309,6 +309,10 @@
         "descricao": "Standard and general equations, and how a line can meet a circle.",
         "titulo": "Circle"
       },
+      "composicao-e-formula": {
+        "descricao": "From the formula to each element’s percentage, and from the percentage back to the formula.",
+        "titulo": "Percent composition and empirical formula"
+      },
       "composicao-inversa": {
         "descricao": "Chaining functions and reflecting the graph in the line y = x.",
         "titulo": "Composition and inverse"

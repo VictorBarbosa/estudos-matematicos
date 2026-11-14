@@ -309,6 +309,10 @@
         "descricao": "Équation réduite et générale, et positions relatives entre droite et cercle.",
         "titulo": "Cercle"
       },
+      "composicao-e-formula": {
+        "descricao": "De la formule au pourcentage de chaque élément, et du pourcentage à la formule.",
+        "titulo": "Composition centésimale et formule empirique"
+      },
       "composicao-inversa": {
         "descricao": "Enchaîner des fonctions et réfléchir le graphe sur la droite y = x.",
         "titulo": "Composition et réciproque"

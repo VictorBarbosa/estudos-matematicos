@@ -309,6 +309,10 @@
         "descricao": "Equação reduzida e geral, e posições relativas entre reta e circunferência.",
         "titulo": "Circunferência"
       },
+      "composicao-e-formula": {
+        "descricao": "Da fórmula à porcentagem de cada elemento, e da porcentagem de volta à fórmula.",
+        "titulo": "Composição percentual e fórmula empírica"
+      },
       "composicao-inversa": {
         "descricao": "Encadear funções e refletir o gráfico na reta y = x.",
         "titulo": "Composição e inversa"

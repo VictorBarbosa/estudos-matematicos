@@ -283,6 +283,13 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'composicao-e-formula',
+        titulo: 'Composição percentual e fórmula empírica',
+        descricao:
+          'Da fórmula à porcentagem de cada elemento, e da porcentagem de volta à fórmula.',
+        pronto: true,
+      },
+      {
         id: 'solucoes-e-concentracao',
         titulo: 'Soluções e concentração',
         descricao: 'Mols por litro de solução, diluição e mistura — com o volume em mililitros.',

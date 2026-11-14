@@ -44,6 +44,14 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'composicao-e-formula',
+    title: 'Composição percentual e fórmula empírica · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/quimica/composicao-e-formula/composicao-e-formula').then(
+        (m) => m.ComposicaoEFormula,
+      ),
+  },
+  {
     path: 'gases-ideais',
     title: 'Gases ideais e pressões parciais · Estudos Matemáticos',
     loadComponent: () =>

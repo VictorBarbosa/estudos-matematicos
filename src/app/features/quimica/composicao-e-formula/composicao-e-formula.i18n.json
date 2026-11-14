@@ -1,0 +1,21 @@
+{
+  "composto": { "pt": "Composto", "fr": "Composé", "en": "Compound" },
+  "massaMolar": { "pt": "Massa molar", "fr": "Masse molaire", "en": "Molar mass" },
+  "composicao": {
+    "pt": "Composição em massa",
+    "fr": "Composition massique",
+    "en": "Composition by mass"
+  },
+  "empirica": { "pt": "Fórmula empírica", "fr": "Formule empirique", "en": "Empirical formula" },
+  "atomos": { "pt": "Átomos", "fr": "Atomes", "en": "Atoms" },
+  "notaComposicao": {
+    "pt": "Contagem e massa não coincidem: em H₂O há dois hidrogênios para um oxigênio, e o oxigênio é quase noventa por cento da massa.",
+    "fr": "Le nombre et la masse ne coïncident pas : dans H₂O il y a deux hydrogènes pour un oxygène, et l’oxygène fait presque quatre-vingt-dix pour cent de la masse.",
+    "en": "Count and mass do not match: H₂O has two hydrogens per oxygen, and the oxygen is nearly ninety percent of the mass."
+  },
+  "notaEmpirica": {
+    "pt": "A empírica dá a proporção, não a molécula: só a massa molar escolhe entre os compostos que a compartilham.",
+    "fr": "L’empirique donne la proportion, pas la molécule : seule la masse molaire choisit parmi les composés qui la partagent.",
+    "en": "The empirical formula gives the ratio, not the molecule: only the molar mass picks among the compounds that share it."
+  }
+}

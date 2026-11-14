@@ -94,3 +94,5 @@ export * from '@core/math/quimica/estequiometria/estequiometria';
 export * from '@core/math/quimica/limitante/limitante';
 export * from '@core/math/quimica/solucoes/solucoes';
 export * from '@core/math/quimica/gases/gases';
+export * from '@core/math/quimica/elementos/elementos';
+export * from '@core/math/quimica/formula/formula';

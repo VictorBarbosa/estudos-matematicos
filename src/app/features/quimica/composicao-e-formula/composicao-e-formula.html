@@ -1,0 +1,75 @@
+<app-topico-layout topicoId="composicao-e-formula">
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('composto')">
+      @for (opcao of compostos; track opcao.molecular; let i = $index) {
+        <button
+          type="button"
+          [class.ativo]="escolhido() === i"
+          [attr.aria-pressed]="escolhido() === i"
+          (click)="escolher(i)"
+        >
+          {{ opcao.molecular }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula
+        [tex]="'\\%_{\\text{elemento}} = \\frac{n \\cdot m_{\\text{atômica}}}{M} \\times 100'"
+        [bloco]="true"
+      />
+    </section>
+
+    <section class="painel">
+      <dl class="resumo">
+        <div>
+          <dt>{{ texto('composto') }}</dt>
+          <dd>{{ moleculaEscrita() }}</dd>
+        </div>
+        <div>
+          <dt>{{ texto('massaMolar') }}</dt>
+          <dd>{{ arredondar(massaMolar()) }} g/mol</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="painel">
+      <h3>{{ texto('composicao') }}</h3>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">{{ texto('composto') }}</th>
+            <th scope="col">{{ texto('atomos') }}</th>
+            <th scope="col">%</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (linha of linhas(); track linha.simbolo) {
+            <tr>
+              <th scope="row">{{ linha.simbolo }}</th>
+              <td>{{ linha.quantidade }}</td>
+              <td>{{ arredondar(linha.percentual) }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <p class="nota">{{ texto('notaComposicao') }}</p>
+    </section>
+
+    <section class="painel">
+      <dl class="resumo">
+        <div>
+          <dt>{{ texto('empirica') }}</dt>
+          <dd [class.destacada]="proporcaoSeRepete()">{{ empiricaEscrita() }}</dd>
+        </div>
+      </dl>
+      <p class="nota">{{ texto('notaEmpirica') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>
