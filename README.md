@@ -512,6 +512,11 @@ space»_. Libera-se pelo ícone à esquerda do endereço, em configurações do 
 `chrome://settings/content/localNetworkAccess`. O túnel https dispensa essa permissão,
 porque aí o destino não é mais loopback.
 
+Trocar a grafia do endereço **não** contorna: a permissão é sobre o espaço de endereço, não
+sobre o nome. `127.0.0.1` é o mesmo espaço loopback que `localhost`, e o IP da rede
+(`192.168.x.x`) é pior — ele está no espaço privado e perde a isenção de mixed content, que
+existe só para loopback. Duas barreiras em vez de uma.
+
 ### Escolher o modelo
 
 `node scripts/comparar-modelos.ts` pede as mesmas histórias a dois modelos, aplica o portão
