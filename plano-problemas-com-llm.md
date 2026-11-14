@@ -276,6 +276,33 @@ texto, senão o número não significa nada.
 
 ---
 
+## 5.3. A duplicação que eu criei e desfiz
+
+Depois de escrever um `LlmService` do zero, descobri que **o projeto já conversava com o
+Ollama desde antes**: `core/assistente/services/ollama.service.ts`, com a listagem de
+modelos, o recuo do campo `think` para os modelos que o recusam, e a mensagem de «sem
+contato» traduzida. Era a disciplina da casa que eu não segui — conferir a premissa no
+código antes de construir.
+
+O que ficou, depois de desfazer:
+
+| Peça                                          | Onde                                                   |
+| --------------------------------------------- | ------------------------------------------------------ |
+| Falar com o Ollama                            | `assistente/ollama.service.ts`, que ganhou `pedirJson` |
+| Política do lote (filtrar, repetir, desistir) | `problemas/servicos/lote-de-historias.ts`, sem Angular |
+| Fila, cache, atribuição, descarte             | `problemas/servicos/historias.service.ts`              |
+
+E um ganho que não estava no plano: **servidor e modelo vêm do assistente**, que o aluno já
+configurou. Se o assistente funciona, as histórias funcionam — zero configuração. A escolha
+manual continua possível, para quem quiser um modelo para conversar e outro para escrever.
+
+Confirmado por medição: o Ollama libera `http://localhost:4200` por padrão (preflight
+`204`, com `Access-Control-Allow-Origin` certo), então `ng serve` funciona **sem mexer em
+`OLLAMA_ORIGINS`**. E `https://victorbarbosa.github.io` recebe `403` — como previsto na
+seção 2.
+
+---
+
 ## 6. Configuração, em Configurações
 
 | Opção                | Padrão                                         |

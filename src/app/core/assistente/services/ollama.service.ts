@@ -138,6 +138,65 @@ export class OllamaService {
   }
 
   /**
+   * Uma resposta inteira, em JSON, conforme um esquema.
+   *
+   * O assistente transmite em fluxo porque o aluno está esperando ler; aqui é
+   * o contrário — ninguém lê isto, o código lê. Quem usa são os problemas de
+   * palavra: um lote de histórias chega de uma vez, é validado e entra na
+   * fila, e o aluno nunca espera por ele.
+   *
+   * O `format` com esquema é o que faz valer a pena: sem ele, metade das
+   * respostas volta embrulhada em markdown e o `JSON.parse` falha. Com ele, o
+   * Ollama garante a forma.
+   *
+   * O `think` segue a mesma regra do fluxo, e por um motivo medido: sem
+   * contê-lo, o `gpt-oss:20b` gasta o orçamento inteiro de tokens deliberando
+   * e devolve conteúdo vazio com `done_reason: length`. Escrever um enunciado
+   * não é tarefa de raciocínio — não há conta a fazer, há texto a escrever.
+   * `raciocinio` existe porque alguns modelos recusam `false` e aceitam
+   * `'low'`.
+   */
+  async pedirJson<T>(
+    servidor: string,
+    modelo: string,
+    sistema: string,
+    usuario: string,
+    esquema: unknown,
+    sinal: AbortSignal,
+    raciocinio: boolean | string = false,
+  ): Promise<T | null> {
+    const url = `${semBarra(servidor)}/api/chat`;
+    const corpo = {
+      model: modelo,
+      stream: false,
+      format: esquema,
+      options: { temperature: 0.8, num_predict: 8192 },
+      messages: [
+        { role: 'system', content: sistema },
+        { role: 'user', content: usuario },
+      ],
+    };
+
+    const resposta =
+      (await this.pedirChat(url, { ...corpo, think: raciocinio }, sinal)) ??
+      (await this.pedirChat(url, corpo, sinal, true))!;
+
+    const lido = (await resposta.json()) as { message?: { content?: string } };
+    const conteudo = (lido.message?.content ?? '').trim();
+
+    if (conteudo.length === 0) {
+      return null;
+    }
+
+    try {
+      return JSON.parse(conteudo) as T;
+    } catch {
+      // Modelo que ignorou o esquema. Quem chama tem um caminho de reserva.
+      return null;
+    }
+  }
+
+  /**
    * Pede a conversa. Devolve `null` quando o modelo recusou o campo `think`.
    *
    * `obrigatorio` desliga esse recuo: na segunda tentativa, qualquer erro é

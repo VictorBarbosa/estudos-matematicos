@@ -2,11 +2,13 @@ import { Injectable, computed, inject, signal } from '@angular/core';
 import { Idioma } from '@core/i18n/models/i18n.model';
 import { ProblemaDeTexto } from '@core/problemas/models/problema-de-texto';
 import { PedidoDeProblema } from '@core/problemas/prompt/montar-prompt';
+import { AssistenteService } from '@core/assistente/services/assistente.service';
+import { OllamaService } from '@core/assistente/services/ollama.service';
 import {
   CONFIGURACAO_PADRAO,
   ConfiguracaoDaLlm,
-  LlmService,
-} from '@core/problemas/servicos/llm.service';
+  LoteDeHistorias,
+} from '@core/problemas/servicos/lote-de-historias';
 import { ModeloDeProblema, assinaturaDoModelo } from '@core/problemas/validacao/validar-modelo';
 import { ValorDaLacuna, vestirEnunciado } from '@core/problemas/vestir/vestir-enunciado';
 
@@ -71,9 +73,29 @@ interface CacheGravado {
 
 @Injectable({ providedIn: 'root' })
 export class HistoriasService {
-  private readonly llm = inject(LlmService);
+  private readonly ollama = inject(OllamaService);
+  private readonly assistente = inject(AssistenteService);
+  private readonly lote = new LoteDeHistorias(this.ollama);
 
-  private readonly configuracao = signal<ConfiguracaoDaLlm>(CONFIGURACAO_PADRAO);
+  private readonly escolhaManual = signal<Partial<ConfiguracaoDaLlm>>({});
+
+  /**
+   * Servidor e modelo vêm do assistente, que o aluno já configurou.
+   *
+   * O assistente conversa com o mesmo Ollama desde antes deste mecanismo
+   * existir, e guarda o endereço e o modelo escolhidos. Herdar dali significa
+   * **zero configuração**: se o assistente funciona, as histórias funcionam.
+   * A escolha manual existe para quem quiser um modelo diferente para
+   * escrever e outro para conversar.
+   */
+  private readonly configuracao = computed<ConfiguracaoDaLlm>(() => {
+    const doAssistente = {
+      endpoint: this.assistente.servidor() || CONFIGURACAO_PADRAO.endpoint,
+      modelo: this.assistente.modelo() || CONFIGURACAO_PADRAO.modelo,
+    };
+
+    return { ...CONFIGURACAO_PADRAO, ...doAssistente, ...this.escolhaManual() };
+  });
 
   /** A fila por chave. Nasce do cache e cresce com o que a LLM traz. */
   private readonly filas =
@@ -92,15 +114,16 @@ export class HistoriasService {
   readonly ligado = signal(true);
 
   /** Verdadeiro enquanto o primeiro lote de um tópico não chegou. */
-  readonly preparando = computed(() => this.llm.pedindo());
+  readonly preparando = computed(() => this.lote.pedindo());
 
-  definirConfiguracao(configuracao: ConfiguracaoDaLlm): void {
-    this.configuracao.set(configuracao);
+  /** Sobrepõe o que vem do assistente — modelo, lote ou endereço. */
+  definirConfiguracao(escolha: Partial<ConfiguracaoDaLlm>): void {
+    this.escolhaManual.set(escolha);
   }
 
   /** Esquece as falhas ao entrar noutro tópico. */
   recomecar(): void {
-    this.llm.recomecar();
+    this.lote.recomecar();
   }
 
   /**
@@ -197,7 +220,7 @@ export class HistoriasService {
   }
 
   private async repor(chave: string, nivel: string, declaracao: ProblemaDeTexto): Promise<void> {
-    if (this.pedindo.has(chave) || !this.ligado() || !this.llm.valeTentarDeNovo()) {
+    if (this.pedindo.has(chave) || !this.ligado() || !this.lote.valeTentarDeNovo()) {
       return;
     }
 
@@ -211,7 +234,7 @@ export class HistoriasService {
         quantas: configuracao.lote,
       };
 
-      const lote = await this.llm.pedirLote(pedido, configuracao);
+      const lote = await this.lote.pedir(pedido, configuracao);
       const negras = new Set(this.listaNegra());
       const novas = lote.filter((modelo) => !negras.has(assinaturaDoModelo(modelo)));
 
