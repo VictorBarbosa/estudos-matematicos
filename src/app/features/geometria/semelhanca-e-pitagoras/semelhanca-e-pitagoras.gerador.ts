@@ -24,7 +24,7 @@ import {
   HIPOTENUSA,
   MAIOR_LADO,
   PROJECAO,
-  SOMBRA,
+  SOMBRAS,
   TALES,
 } from '@features/geometria/semelhanca-e-pitagoras/semelhanca-e-pitagoras.textos';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -474,7 +474,11 @@ function exercicioSombra(nivel: Nivel, rng: Rng): Exercicio<number> {
   const sombraPredio = sombraVara * rng.inteiro(4, 25);
 
   const resultado = (alturaVara * sombraPredio) / sombraVara;
-  const texto = enunciadoTrilingue(SOMBRA, [alturaVara, sombraVara, sombraPredio], DICA_SOMBRA);
+  const texto = enunciadoTrilingue(
+    rng.escolher(SOMBRAS),
+    [alturaVara, sombraVara, sombraPredio],
+    DICA_SOMBRA,
+  );
 
   return {
     id: `sem-sombra-${alturaVara}-${sombraVara}-${sombraPredio}-${rng.inteiro(0, 9999)}`,

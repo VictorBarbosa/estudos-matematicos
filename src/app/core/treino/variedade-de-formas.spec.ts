@@ -142,7 +142,7 @@ const PISO: Readonly<Record<string, readonly [number, number, number, number]>> 
   'regras-de-derivacao': [3, 4, 5, 3],
   'regressao-e-correlacao': [2, 4, 4, 2],
   'retas-e-planos': [7, 9, 4, 4],
-  'semelhanca-e-pitagoras': [3, 5, 5, 3],
+  'semelhanca-e-pitagoras': [7, 9, 5, 3],
   'seno-cosseno-tangente': [2, 3, 2, 1],
   'sequencias-e-series': [2, 3, 4, 6],
   'series-de-taylor': [2, 3, 6, 4],

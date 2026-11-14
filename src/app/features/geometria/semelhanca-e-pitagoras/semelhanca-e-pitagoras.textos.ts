@@ -255,17 +255,94 @@ export const DICA_PROJECAO: Frases<[number, number]> = {
     'the hypotenuse times its projection.',
 };
 
-export const SOMBRA: Frases<[number, number, number]> = {
-  pt: (alturaVara, sombraVara, sombraPredio) =>
-    `No mesmo instante, uma vara de ${alturaVara} m projeta uma sombra de ${sombraVara} m e um ` +
-    `prédio projeta uma sombra de ${sombraPredio} m. Qual é a altura do prédio, em m?`,
-  fr: (alturaVara, sombraVara, sombraPredio) =>
-    `Au même instant, une perche de ${alturaVara} m projette une ombre de ${sombraVara} m et un ` +
-    `immeuble projette une ombre de ${sombraPredio} m. Quelle est la hauteur de l’immeuble, en m ?`,
-  en: (alturaVara, sombraVara, sombraPredio) =>
-    `At the same moment, a ${alturaVara} m pole casts a ${sombraVara} m shadow and a building ` +
-    `casts a ${sombraPredio} m shadow. How tall is the building, in m?`,
-};
+/**
+ * A sombra: uma redação por situação, e não uma situação com números trocados.
+ *
+ * Era um molde só, e o aluno reencontrava «No mesmo instante, uma vara de …
+ * projeta uma sombra…» a cada três exercícios do Fácil, com outros números e
+ * nada mais. Trocar os números não é variar o enunciado: é a mesma pergunta
+ * com outra roupa, e quem errou a primeira não tem o que decidir na segunda.
+ *
+ * O que varia aqui é a ESTRUTURA, não o substantivo:
+ *
+ * - a ordem em que os dados aparecem (a referência primeiro, ou a sombra do
+ *   alvo primeiro);
+ * - quem é o objeto de referência (vara, poste, estaca, mastro, bastão) e o
+ *   alvo (prédio, torre, árvore, muro, edifício);
+ * - o jeito de perguntar («qual é a altura», «quantos metros tem», «que altura
+ *   tem», «determine a altura»).
+ *
+ * O que **não** varia é a matemática: os três argumentos chegam sempre na
+ * mesma ordem — altura da referência, sombra da referência, sombra do alvo —
+ * e a proporção é a mesma. A `enunciadoTex` é montada fora daqui, então a
+ * fórmula em tela não depende da redação escolhida.
+ *
+ * A primeira é a de sempre: quem já a conhece continua reconhecendo o
+ * exercício, e as outras quatro são o que o sorteio acrescenta.
+ */
+export const SOMBRAS: readonly Frases<[number, number, number]>[] = [
+  {
+    pt: (alturaVara, sombraVara, sombraPredio) =>
+      `No mesmo instante, uma vara de ${alturaVara} m projeta uma sombra de ${sombraVara} m e um ` +
+      `prédio projeta uma sombra de ${sombraPredio} m. Qual é a altura do prédio, em m?`,
+    fr: (alturaVara, sombraVara, sombraPredio) =>
+      `Au même instant, une perche de ${alturaVara} m projette une ombre de ${sombraVara} m et un ` +
+      `immeuble projette une ombre de ${sombraPredio} m. Quelle est la hauteur de l’immeuble, en m ?`,
+    en: (alturaVara, sombraVara, sombraPredio) =>
+      `At the same moment, a ${alturaVara} m pole casts a ${sombraVara} m shadow and a building ` +
+      `casts a ${sombraPredio} m shadow. How tall is the building, in m?`,
+  },
+  {
+    // O alvo abre a frase: a sombra dele vem antes da referência.
+    pt: (alturaVara, sombraVara, sombraPredio) =>
+      `A sombra de uma torre mede ${sombraPredio} m no momento em que um poste de ` +
+      `${alturaVara} m projeta ${sombraVara} m de sombra. Quantos metros tem a torre?`,
+    fr: (alturaVara, sombraVara, sombraPredio) =>
+      `L’ombre d’une tour mesure ${sombraPredio} m au moment où un poteau de ${alturaVara} m ` +
+      `projette une ombre de ${sombraVara} m. Combien de mètres mesure la tour ?`,
+    en: (alturaVara, sombraVara, sombraPredio) =>
+      `A tower’s shadow is ${sombraPredio} m long at the moment a ${alturaVara} m post casts a ` +
+      `${sombraVara} m shadow. How many metres tall is the tower?`,
+  },
+  {
+    // Duas frases curtas, sem «no mesmo instante»: a simultaneidade fica implícita.
+    pt: (alturaVara, sombraVara, sombraPredio) =>
+      `Fincada no chão, uma estaca de ${alturaVara} m faz uma sombra de ${sombraVara} m. Ao ` +
+      `lado, uma árvore faz uma sombra de ${sombraPredio} m. Que altura tem a árvore?`,
+    fr: (alturaVara, sombraVara, sombraPredio) =>
+      `Planté dans le sol, un pieu de ${alturaVara} m fait une ombre de ${sombraVara} m. Juste ` +
+      `à côté, un arbre fait une ombre de ${sombraPredio} m. Quelle est la hauteur de l’arbre ?`,
+    en: (alturaVara, sombraVara, sombraPredio) =>
+      `Stuck in the ground, a ${alturaVara} m stake casts a ${sombraVara} m shadow. Right beside ` +
+      `it, a tree casts a ${sombraPredio} m shadow. How tall is the tree?`,
+  },
+  {
+    // O Sol entra como sujeito, e a pergunta pede a altura do muro.
+    pt: (alturaVara, sombraVara, sombraPredio) =>
+      `Sob o mesmo Sol, um mastro de ${alturaVara} m e o muro ao lado projetam sombras de ` +
+      `${sombraVara} m e ${sombraPredio} m. Qual é a altura do muro?`,
+    fr: (alturaVara, sombraVara, sombraPredio) =>
+      `Sous le même soleil, un mât de ${alturaVara} m et le mur d’à côté projettent des ombres ` +
+      `de ${sombraVara} m et ${sombraPredio} m. Quelle est la hauteur du mur ?`,
+    en: (alturaVara, sombraVara, sombraPredio) =>
+      `Under the same sun, a ${alturaVara} m mast and the wall beside it cast shadows of ` +
+      `${sombraVara} m and ${sombraPredio} m. How tall is the wall?`,
+  },
+  {
+    // Forma de comando: «determine», e a altura é desconhecida desde o início.
+    pt: (alturaVara, sombraVara, sombraPredio) =>
+      `Um bastão de ${alturaVara} m e um edifício de altura desconhecida estão sob a mesma luz ` +
+      `e projetam sombras de ${sombraVara} m e ${sombraPredio} m. Determine a altura do ` +
+      `edifício, em metros.`,
+    fr: (alturaVara, sombraVara, sombraPredio) =>
+      `Un bâton de ${alturaVara} m et un édifice de hauteur inconnue sont sous la même lumière ` +
+      `et projettent des ombres de ${sombraVara} m et ${sombraPredio} m. Déterminez la hauteur ` +
+      `de l’édifice, en mètres.`,
+    en: (alturaVara, sombraVara, sombraPredio) =>
+      `A ${alturaVara} m staff and a building of unknown height stand in the same light and cast ` +
+      `shadows of ${sombraVara} m and ${sombraPredio} m. Find the height of the building, in metres.`,
+  },
+];
 
 export const DICA_SOMBRA: Frases<[number, number, number]> = {
   pt: (alturaVara, sombraVara, _sombraPredio) =>

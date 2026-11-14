@@ -239,22 +239,64 @@ describe('geradorSemelhanca: o enunciado se explica', () => {
     }
   });
 
-  it('a sombra da vara nunca é igual à altura dela', () => {
-    const sombras = amostra('facil', 200).filter((e) => e.enunciado.includes('sombra'));
-
+  it('a sombra da referência nunca é igual à altura dela', () => {
+    /*
+     * A invariante é sobre os números, não sobre a redação.
+     *
+     * Antes isto lia o texto com uma expressão regular — «vara de (\d+) m
+     * projeta uma sombra de (\d+) m» —, e a leitura quebrou assim que as
+     * redações passaram a variar. Quem carrega os três números de forma
+     * estável é a fórmula, que é montada fora dos moldes: `A/S = h/P`. Lendo-a,
+     * o teste mede o que quer medir e não depende de como a frase é escrita.
+     */
+    const sombras = amostra('facil', 200).filter((e) =>
+      e.enunciadoTex.startsWith('\\frac'),
+    );
     expect(sombras.length).toBeGreaterThan(0);
 
-    for (const exercicio of sombras) {
-      const [, vara, sombraVara] = /vara de (\d+) m projeta uma sombra de (\d+) m/.exec(
-        exercicio.enunciado,
-      )!;
+    let vistas = 0;
 
-      // Razão 1 faz a altura do prédio ser a própria sombra: não treina nada.
-      expect(vara).not.toBe(sombraVara);
+    for (const exercicio of sombras) {
+      const lido = /\\frac\{(\d+)\}\{(\d+)\}/.exec(exercicio.enunciadoTex);
+
+      if (lido === null) {
+        continue;
+      }
+
+      vistas++;
+      // Razão 1 faz a altura do alvo ser a própria sombra: não treina nada.
+      expect(lido[1]).not.toBe(lido[2]);
     }
+
+    expect(vistas).toBeGreaterThan(0);
   });
 
-  it('as nove formas de pergunta estão nas três línguas', () => {
+  it('a sombra aparece com mais de uma redação, e as três línguas acompanham', () => {
+    /*
+     * O defeito que este teste tranca: o molde era UM só, e o aluno reencontrava
+     * «No mesmo instante, uma vara de …» a cada três exercícios do Fácil, com
+     * outros números e mais nada. Trocar os números não é variar o enunciado.
+     */
+    const redacoes = new Set<string>();
+
+    for (const nivel of ['facil', 'medio'] as const) {
+      for (const exercicio of amostra(nivel, 300)) {
+        if (!exercicio.enunciadoTex.startsWith('\\frac')) {
+          continue;
+        }
+
+        // A forma: o enunciado sem os números, para contar redações e não sorteios.
+        redacoes.add(exercicio.enunciado.replace(/\d+(,\d+)?/g, '#'));
+
+        expect(exercicio.traducoes?.fr?.enunciado, exercicio.enunciado).toBeTruthy();
+        expect(exercicio.traducoes?.en?.enunciado, exercicio.enunciado).toBeTruthy();
+      }
+    }
+
+    expect(redacoes.size).toBeGreaterThanOrEqual(5);
+  });
+
+  it('as treze formas de pergunta estão nas três línguas', () => {
     const formas = new Set<string>();
 
     for (const nivel of ['facil', 'medio', 'dificil', 'extremo'] as const) {
@@ -271,6 +313,11 @@ describe('geradorSemelhanca: o enunciado se explica', () => {
       }
     }
 
-    expect(formas.size).toBe(9);
+    /*
+     * Eram 9. A história da sombra tinha um molde só e passou a ter cinco
+     * redações — estruturas diferentes, não substantivos trocados —, o que
+     * levanta o total para 13. Se cair, alguém devolveu a repetição.
+     */
+    expect(formas.size).toBe(13);
   });
 });
