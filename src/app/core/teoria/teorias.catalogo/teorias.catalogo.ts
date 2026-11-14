@@ -127,6 +127,7 @@ import { TEORIA_APLICACOES_EDO as t_aplicacoes_de_edo } from '@features/calculo-
 import { TEORIA_NUMERICO as t_metodos_numericos } from '@features/calculo-4/metodos-numericos/metodos-numericos.teoria';
 import { TEORIA_ATOMOS as t_atomos_isotopos_ions } from '@features/quimica/atomos-isotopos-ions/atomos-isotopos-ions.teoria';
 import { TEORIA_MOL as t_mol_e_massa_molar } from '@features/quimica/mol-e-massa-molar/mol-e-massa-molar.teoria';
+import { TEORIA_ESTEQUIOMETRIA as t_estequiometria } from '@features/quimica/estequiometria/estequiometria.teoria';
 
 export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[] = [
   ['equacao-primeiro-grau', t_equacao_primeiro_grau],
@@ -249,4 +250,5 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['metodos-numericos', t_metodos_numericos],
   ['atomos-isotopos-ions', t_atomos_isotopos_ions],
   ['mol-e-massa-molar', t_mol_e_massa_molar],
+  ['estequiometria', t_estequiometria],
 ];

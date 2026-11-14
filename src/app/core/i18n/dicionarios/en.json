@@ -405,6 +405,10 @@
         "descricao": "Mean, standard deviation, line fitting and error propagation in a measurement.",
         "titulo": "Statistics and uncertainty"
       },
+      "estequiometria": {
+        "descricao": "The balanced equation’s ratio, turned into mass: the whole path.",
+        "titulo": "Stoichiometry"
+      },
       "expressoes-algebricas": {
         "descricao": "Variables, like terms and evaluating expressions.",
         "titulo": "Algebraic expressions"

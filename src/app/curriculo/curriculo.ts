@@ -270,6 +270,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'A ponte entre a massa que se pesa e a quantidade de partículas que reage.',
         pronto: true,
       },
+      {
+        id: 'estequiometria',
+        titulo: 'Estequiometria',
+        descricao: 'A proporção da equação balanceada, convertida em massa: o trajeto completo.',
+        pronto: true,
+      },
     ],
   },
   {

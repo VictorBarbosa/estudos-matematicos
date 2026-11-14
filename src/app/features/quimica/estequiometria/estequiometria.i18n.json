@@ -1,0 +1,26 @@
+{
+  "reacao": { "pt": "Reação", "fr": "Réaction", "en": "Reaction" },
+  "massaDada": {
+    "pt": "Massa de partida (g)",
+    "fr": "Masse de départ (g)",
+    "en": "Starting mass (g)"
+  },
+  "dicaMassa": {
+    "pt": "Mude a massa e veja os três trechos do trajeto se moverem juntos.",
+    "fr": "Changez la masse et regardez les trois étapes du trajet bouger ensemble.",
+    "en": "Change the mass and watch the three legs of the path move together."
+  },
+  "mols": { "pt": "Mols de partida", "fr": "Moles de départ", "en": "Starting moles" },
+  "molsObtidos": { "pt": "Mols obtidos", "fr": "Moles obtenues", "en": "Moles obtained" },
+  "massaObtida": { "pt": "Massa obtida", "fr": "Masse obtenue", "en": "Mass obtained" },
+  "pelaProporcaoCrua": {
+    "pt": "Se a proporção fosse aplicada direto às massas",
+    "fr": "Si la proportion était appliquée directement aux masses",
+    "en": "If the ratio were applied straight to the masses"
+  },
+  "notaErroClassico": {
+    "pt": "Esse é o erro clássico: o número sai plausível, e nada denuncia que está errado.",
+    "fr": "C’est l’erreur classique : le nombre paraît plausible, et rien ne révèle qu’il est faux.",
+    "en": "That is the classic mistake: the number looks plausible, and nothing reveals it is wrong."
+  }
+}

@@ -1,0 +1,63 @@
+<app-topico-layout topicoId="estequiometria">
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('reacao')">
+      @for (opcao of reacoes; track opcao.rotulo; let i = $index) {
+        <button
+          type="button"
+          [class.ativo]="escolhida() === i"
+          [attr.aria-pressed]="escolhida() === i"
+          (click)="escolher(i)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="reacao().tex" [bloco]="true" />
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="decimos"
+        [rotulo]="texto('massaDada')"
+        [min]="10"
+        [max]="2000"
+        [dica]="texto('dicaMassa')"
+      />
+    </section>
+
+    <section class="painel trajeto">
+      <dl>
+        <div>
+          <dt>{{ texto('mols') }}</dt>
+          <dd>{{ arredondar(molsDePartida()) }} mol</dd>
+        </div>
+        <div>
+          <dt>{{ texto('molsObtidos') }}</dt>
+          <dd>{{ arredondar(molsObtidos()) }} mol</dd>
+        </div>
+        <div>
+          <dt>{{ texto('massaObtida') }}</dt>
+          <dd class="certo">{{ arredondar(massaObtida()) }} g</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="painel engano">
+      <dl>
+        <div>
+          <dt>{{ texto('pelaProporcaoCrua') }}</dt>
+          <dd class="errado">{{ arredondar(pelaProporcaoCrua()) }} g</dd>
+        </div>
+      </dl>
+      <p class="nota">{{ texto('notaErroClassico') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

@@ -405,6 +405,10 @@
         "descricao": "Média, desvio padrão, ajuste de reta e propagação de erro numa medida.",
         "titulo": "Estatística e incerteza"
       },
+      "estequiometria": {
+        "descricao": "A proporção da equação balanceada, convertida em massa: o trajeto completo.",
+        "titulo": "Estequiometria"
+      },
       "expressoes-algebricas": {
         "descricao": "Variáveis, termos semelhantes e avaliação de expressões.",
         "titulo": "Expressões algébricas"

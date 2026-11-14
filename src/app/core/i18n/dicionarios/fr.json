@@ -405,6 +405,10 @@
         "descricao": "Moyenne, écart type, ajustement de droite et propagation d’erreur dans une mesure.",
         "titulo": "Statistique et incertitude"
       },
+      "estequiometria": {
+        "descricao": "La proportion de l’équation équilibrée, convertie en masse : le trajet complet.",
+        "titulo": "Stœchiométrie"
+      },
       "expressoes-algebricas": {
         "descricao": "Variables, termes semblables et évaluation d’expressions.",
         "titulo": "Expressions algébriques"

@@ -21,4 +21,10 @@ export const rotas: Routes = [
     loadComponent: () =>
       import('@features/quimica/mol-e-massa-molar/mol-e-massa-molar').then((m) => m.MolEMassaMolar),
   },
+  {
+    path: 'estequiometria',
+    title: 'Estequiometria · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/quimica/estequiometria/estequiometria').then((m) => m.Estequiometria),
+  },
 ];
