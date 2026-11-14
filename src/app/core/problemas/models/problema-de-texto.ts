@@ -8,8 +8,10 @@ import { ContratoDaResposta } from '@core/problemas/vestir/vestir-enunciado';
  * referenciado de dois lados que não devem se conhecer: o modelo do gerador
  * (`treino.model.ts`) e o serviço que conversa com a LLM.
  *
- * A declaração é por TÓPICO, e o nível vem depois — ele muda só a carga de
- * leitura pedida à LLM, não o que a história precisa conter.
+ * A declaração é por TÓPICO, e os níveis vêm depois — eles mudam só a carga
+ * de leitura pedida à LLM, não o que a história precisa conter. Quem decide
+ * quais níveis pedir é a fila, no momento do pedido: o mesmo tópico pede um
+ * lote cobrindo os quatro de uma vez.
  */
 export interface ProblemaDeTexto {
   /**
@@ -21,7 +23,7 @@ export interface ProblemaDeTexto {
    */
   readonly forma: string;
   /** O pedido à LLM, sem os números e sem o nível. */
-  readonly pedido: Omit<PedidoDeProblema, 'quantas' | 'nivel'>;
+  readonly pedido: Omit<PedidoDeProblema, 'quantas' | 'niveis'>;
   /**
    * O contrato da resposta, acrescentado pelo código ao fim do enunciado.
    *

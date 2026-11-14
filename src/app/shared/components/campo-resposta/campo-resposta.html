@@ -1,19 +1,33 @@
 <div class="campo" [attr.data-estado]="estado()">
   <label [attr.for]="id">{{ rotulo() }}</label>
-  <input
-    #entrada
-    type="text"
-    inputmode="text"
-    autocomplete="off"
-    spellcheck="false"
-    [attr.id]="id"
-    [attr.placeholder]="ajuda()"
-    [attr.aria-describedby]="ajuda() ? id + '-ajuda' : null"
-    [value]="valor()"
-    [disabled]="bloqueado()"
-    (input)="aoDigitar($any($event.target))"
-    (keydown.enter)="enviar.emit()"
-  />
+  <div class="entrada">
+    <input
+      #entrada
+      type="text"
+      inputmode="text"
+      autocomplete="off"
+      spellcheck="false"
+      [attr.id]="id"
+      [attr.placeholder]="ajuda()"
+      [attr.aria-describedby]="ajuda() ? id + '-ajuda' : null"
+      [value]="valor()"
+      [disabled]="bloqueado()"
+      (input)="aoDigitar($any($event.target))"
+      (keydown.enter)="enviar.emit()"
+    />
+    @if (preparando()) {
+      <!--
+        O indicador fica DENTRO do campo, e não numa linha abaixo: é onde o
+        olho já está, e a pergunta «está carregando?» nasce ali, ao lado do
+        cursor. `aria-live` avisa quem não vê o giro.
+      -->
+      <span class="carregando" role="status" aria-live="polite">
+        <span class="giro" aria-hidden="true"></span>
+        <span class="texto">{{ i18n.t('treino.carregandoHistorias') }}</span>
+      </span>
+    }
+  </div>
+
   @if (simbolos().length > 0) {
     <!-- ∀, ∈ e ∑ não estão no teclado de ninguém. -->
     <div class="simbolos" role="group" [attr.aria-label]="i18n.t('campo.simbolos')">

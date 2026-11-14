@@ -16,6 +16,11 @@
  * montado no navegador e no script que compara modelos.
  */
 
+/** As quatro dificuldades, na ordem em que se ensina. */
+export const NIVEIS: readonly Nivel[] = ['facil', 'medio', 'dificil', 'extremo'];
+
+export type Nivel = 'facil' | 'medio' | 'dificil' | 'extremo';
+
 /** O que um dos espaços reservados representa na história. */
 export interface DadoDoProblema {
   /** O índice da lacuna: 0 vira `{0}`. */
@@ -43,14 +48,24 @@ export interface PedidoDeProblema {
    * entrega a FORMA, que é o que a história precisa respeitar.
    */
   readonly relacao: string;
-  readonly nivel: 'facil' | 'medio' | 'dificil' | 'extremo';
+  /**
+   * As dificuldades pedidas NESTE lote.
+   *
+   * Era um nível só, e a fila pedia um lote por nível: quatro pedidos para
+   * cobrir os quatro níveis, e o aluno via sempre o mesmo grau de leitura
+   * enquanto os outros três não chegavam. Agora um lote cobre os quatro de
+   * uma vez — a LLM recebe a carga de leitura de cada um e devolve, para cada
+   * problema, o nível a que ele pertence. Quem separa é o código, pela
+   * etiqueta que veio junto.
+   */
+  readonly niveis: readonly Nivel[];
   /** Os valores que o gerador vai substituir, em ordem. */
   readonly dados: readonly DadoDoProblema[];
   /** O que a resposta representa — `quantas horas de serviço`. */
   readonly pergunta: string;
   /** A unidade da resposta, quando há uma. */
   readonly unidade?: string;
-  /** Quantas histórias pedir de uma vez. */
+  /** Quantas histórias pedir POR NÍVEL. */
   readonly quantas: number;
   /** Contextos preferidos, para a história não ser sempre de loja. */
   readonly contextos?: readonly string[];
@@ -83,7 +98,7 @@ export interface PedidoDeProblema {
  * que se pede a ela. Confundir as duas coisas daria um enunciado fácil com
  * números difíceis, ou o contrário.
  */
-const CARGA_DE_LEITURA: Readonly<Record<PedidoDeProblema['nivel'], string>> = {
+const CARGA_DE_LEITURA: Readonly<Record<Nivel, string>> = {
   facil:
     'uma situação direta, com os dados na ordem em que serão usados e uma pergunta só. ' +
     'Nada de informação que não entre na conta.',
@@ -140,6 +155,36 @@ const REGRAS = [
     'filled by the site with the real formula: refer to it, do not replace it by a name.',
 ];
 
+
+/**
+ * Dois exemplos do FORMATO, e de nada mais.
+ *
+ * Foram o que faltava para o modelo acertar de primeira: sem ver um exemplo,
+ * ele oscilava entre escrever os números por conta (recusado pelo portão),
+ * repetir a relação em forma de álgebra (o exercício entregue) e embrulhar o
+ * JSON em markdown. O exemplo resolve as três de uma vez, porque mostra o
+ * formato exato — lacuna no lugar do número, prosa pura, os três idiomas com
+ * os mesmos espaços na mesma ordem.
+ *
+ * O conteúdo é de outro assunto **de propósito**: um exemplo do próprio tópico
+ * vira molde, e o aluno recebe seis variações da mesma história. Por isso o
+ * pedido sempre diz «copie o formato, nunca o conteúdo».
+ */
+const EXEMPLOS = [
+  {
+    nivel: 'facil',
+    pt: 'Uma padaria assa {0} pães por fornada e já tinha {1} pães prontos. Quantos pães ela tem ao todo?',
+    fr: 'Une boulangerie cuit {0} pains par fournée et en avait déjà {1} de prêts. Combien de pains a-t-elle en tout ?',
+    en: 'A bakery bakes {0} loaves per batch and already had {1} loaves ready. How many loaves does it have in total?',
+  },
+  {
+    nivel: 'dificil',
+    pt: 'Um entregador percorre {0} km por viagem. No fim do dia somou {1} km, já contando os {2} km que fez de manhã. Quantas viagens ele fez à tarde?',
+    fr: 'Un livreur parcourt {0} km par trajet. En fin de journée, il totalisait {1} km, en comptant les {2} km faits le matin. Combien de trajets a-t-il faits l\u2019après-midi ?',
+    en: 'A courier rides {0} km per trip. By the end of the day he had covered {1} km, counting the {2} km he did in the morning. How many trips did he make in the afternoon?',
+  },
+];
+
 export interface PromptDeProblema {
   readonly system: string;
   readonly user: string;
@@ -162,12 +207,35 @@ export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
       ? 'oficina, laboratório, obra, cozinha industrial, voo, transporte'
       : pedido.contextos.join(', ');
 
+  /*
+   * A carga de leitura, um bloco por nível pedido.
+   *
+   * Escrita assim, e não «nível medio: …», porque a instrução precisa dizer
+   * com todas as letras que os níveis convivem no MESMO lote e que cada
+   * problema volta etiquetado. Foi o que a versão de um nível só não podia
+   * fazer: ela pedia o mesmo grau de leitura seis vezes.
+   */
+  const niveis = pedido.niveis
+    .map((nivel) => `- "${nivel}": ${CARGA_DE_LEITURA[nivel]}`)
+    .join('\n');
+
+  const exemplos = EXEMPLOS.map(
+    (exemplo) =>
+      `  ${JSON.stringify({ nivel: exemplo.nivel, pt: exemplo.pt, fr: exemplo.fr, en: exemplo.en })},`,
+  ).join('\n');
+
   const system = [
     'You write short word problems for a trilingual study site (Portuguese, French, English).',
     'The numbers and the answer belong to the site’s code, not to you.',
     '',
     'RULES:',
     ...REGRAS.map((regra) => `- ${regra}`),
+    '',
+    'FORMAT — two examples. Copy the FORMAT only.',
+    'These examples are about another subject on purpose. Reusing their story, their wording or',
+    'their subject is a failure: the student would get the same problem six times.',
+    '',
+    `{"problemas": [\n${exemplos}\n]}`,
   ].join('\n');
 
   const user = [
@@ -191,7 +259,17 @@ export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
       `${pedido.unidade ? ` (a resposta sai em ${pedido.unidade})` : ''}.`,
     'Não copie a frase acima. Se a história é de etapas, pergunte «quantas etapas»; se é de',
     'viagens, «quantas viagens». A pergunta tem de soar como parte da situação.',
-    `Carga de leitura (nível ${pedido.nivel}): ${CARGA_DE_LEITURA[pedido.nivel]}`,
+    '',
+    'OS NÍVEIS DESTE LOTE. Cada problema que você escrever leva a etiqueta de um destes, e a',
+    'carga de leitura tem de corresponder à etiqueta:',
+    niveis,
+    '',
+    `Escreva ${pedido.quantas} problemas de CADA nível — ${pedido.quantas * pedido.niveis.length} ` +
+      'no total —, todos diferentes entre si dentro do mesmo nível.',
+    'Trocar só os substantivos, mantendo «faz {0} por etapa, já tinha {1}, totalizando {2}» seis',
+    'vezes, não é variedade: é a mesma história com outra roupa. Varie quem age, a ordem em que',
+    'os dados aparecem e o jeito de perguntar. Entre níveis, o que muda é a leitura, não a conta.',
+    '',
     `Contextos possíveis: ${contextos}. Varie entre eles.`,
     ...(pedido.proibidas === undefined || pedido.proibidas.length === 0
       ? []
@@ -202,11 +280,7 @@ export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
             'não diga que sobra ou falta reagente, e não invente nenhuma etapa da reação.',
         ]),
     '',
-    `Escreva ${pedido.quantas} problemas DIFERENTES entre si — contextos diferentes E frases ` +
-      'de forma diferente. Trocar só os substantivos, mantendo «faz {0} por etapa, já tinha ' +
-      '{1}, totalizando {2}» seis vezes, não é variedade: é a mesma história com outra roupa. ' +
-      'Varie quem age, a ordem em que os dados aparecem e o jeito de perguntar.',
-    'Devolva apenas o JSON pedido.',
+    'Cada problema é um objeto com a etiqueta "nivel", e os três textos. Devolva apenas o JSON.',
   ].join('\n');
 
   const esquema = {
@@ -214,15 +288,16 @@ export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
     properties: {
       problemas: {
         type: 'array',
-        minItems: pedido.quantas,
+        minItems: pedido.quantas * pedido.niveis.length,
         items: {
           type: 'object',
           properties: {
+            nivel: { type: 'string', enum: pedido.niveis },
             pt: { type: 'string' },
             fr: { type: 'string' },
             en: { type: 'string' },
           },
-          required: ['pt', 'fr', 'en'],
+          required: ['nivel', 'pt', 'fr', 'en'],
         },
       },
     },

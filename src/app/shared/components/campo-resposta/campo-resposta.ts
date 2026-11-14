@@ -36,6 +36,15 @@ export class CampoResposta {
   readonly estado = input<'neutro' | 'correto' | 'incorreto'>('neutro');
   readonly bloqueado = input(false);
   /**
+   * A LLM está escrevendo um enunciado agora?
+   *
+   * Não bloqueia o campo: o exercício é respondível no instante em que
+   * aparece, com o enunciado de sempre, e a história veste o texto DEPOIS se
+   * chegar. O indicador existe porque o pedido leva minutos, e sem ele a
+   * demora é indistinguível de «não funciona».
+   */
+  readonly preparando = input(false);
+  /**
    * Teclas de símbolo, quando o tópico pede notação que não está no teclado.
    *
    * Vazio na maioria dos tópicos — ninguém precisa de paleta para digitar 3/4.

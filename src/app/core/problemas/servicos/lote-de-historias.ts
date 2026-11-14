@@ -31,6 +31,15 @@ export interface ConfiguracaoDaLlm {
   readonly modelo: string;
   /** `false`, ou `'low'` nos modelos que não aceitam desligar o raciocínio. */
   readonly raciocinio: boolean | string;
+  /**
+   * Quantas histórias pedir POR NÍVEL.
+   *
+   * Era o total do lote, quando o lote tinha um nível só. Agora um pedido
+   * cobre os quatro níveis, então o total é `lote × 4`: seis viraria vinte e
+   * quatro histórias de uma vez, e o prazo de três minutos não cobre isso.
+   * Dois por nível — oito no total — enche as quatro filas no mesmo tempo que
+   * o lote antigo, e o piso da fila é três, reposto no exercício seguinte.
+   */
   readonly lote: number;
 }
 
@@ -61,7 +70,7 @@ export const CONFIGURACAO_PADRAO: ConfiguracaoDaLlm = {
   endpoint: SERVIDOR_PADRAO,
   modelo: 'gpt-oss:20b',
   raciocinio: false,
-  lote: 6,
+  lote: 2,
 };
 
 /** Depois de três falhas seguidas, para de tentar até o próximo tópico. */
@@ -73,10 +82,16 @@ const FALHAS_ATE_DESISTIR = 3;
  * Eram 60 segundos, e isso cancelava tudo: com o raciocínio desligado o lote
  * leva de 82 a 117 segundos, e o `AbortController` matava a requisição antes
  * de ela voltar — o pedido aparecia como cancelado sem nenhum erro de verdade.
- * Três minutos cobrem o lote lento e a primeira carga do modelo na memória, e
- * não custam nada a quem estuda: ninguém espera por este pedido.
+ *
+ * Agora são QUATRO MINUTOS, e o número foi medido, não estimado: o lote que
+ * cobre os quatro níveis (dois por nível, oito no total) levou 143 s com o
+ * modelo quente nesta máquina. Três minutos deixavam onze segundos de folga, e
+ * a primeira carga do modelo na memória come os trinta que faltavam — o lote
+ * morreria calado justamente na primeira vez de cada sessão. Quatro minutos
+ * cobrem o lote lento e a carga inicial, e não custam nada a quem estuda:
+ * ninguém espera por este pedido, que repõe a fila em segundo plano.
  */
-const LIMITE_EM_MS = 180_000;
+const LIMITE_EM_MS = 240_000;
 
 interface RespostaDoLote {
   readonly problemas?: readonly ModeloBruto[];
@@ -178,6 +193,10 @@ export class LoteDeHistorias {
         proibidas: pedido.proibidas,
         permitidas: pedido.permitidas,
         repetiveis,
+        // Sem esta lista o portão não confere a etiqueta, e uma história de
+        // nível difícil cairia na fila do fácil — o pedido de quatro níveis
+        // viraria um lote de um, sem erro nenhum à vista.
+        niveis: pedido.niveis,
       });
 
       if (!veredito.ok) {

@@ -1,6 +1,7 @@
 import { TODOS_OS_GERADORES } from '@core/treino/geradores.catalogo/geradores.catalogo';
 import { NIVEIS, Nivel } from '@core/treino/models/treino.model';
 import { criarRng } from '@core/treino/rng/rng';
+import { NIVEIS as NIVEIS_PROMPT, montarPrompt } from '@core/problemas/prompt/montar-prompt';
 import { validarModelo } from '@core/problemas/validacao/validar-modelo';
 import { vestirEnunciado } from '@core/problemas/vestir/vestir-enunciado';
 
@@ -157,4 +158,72 @@ describe('declaração de problema de texto', () => {
       });
     });
   }
+});
+
+describe('o lote cobre as quatro dificuldades', () => {
+  const declaracao = COM_HISTORIA[0]![1].problemaDeTexto!;
+
+  it('o pedido lista os quatro níveis, e o esquema exige a etiqueta', () => {
+    const pedido = { ...declaracao.pedido, niveis: NIVEIS_PROMPT, quantas: 2 };
+    const { user, esquema } = montarPrompt(pedido);
+
+    // A etiqueta é o que permite ao código separar as histórias por fila.
+    const itens = (esquema as { properties: { problemas: { items: { required: string[] } } } })
+      .properties.problemas.items;
+    expect(itens.required).toContain('nivel');
+
+    // E o texto do pedido tem de dizer a carga de leitura de cada um, senão o
+    // modelo devolve quatro textos iguais com etiquetas diferentes.
+    for (const nivel of NIVEIS_PROMPT) {
+      expect(user, nivel).toContain(`"${nivel}"`);
+    }
+  });
+
+  it('o pedido mostra os exemplos de formato, e manda não copiar o conteúdo', () => {
+    const { system } = montarPrompt({ ...declaracao.pedido, niveis: NIVEIS_PROMPT, quantas: 1 });
+
+    expect(system).toContain('Copy the FORMAT only');
+    expect(system).toContain('Reusing their story');
+  });
+
+  it('o portão recusa etiqueta fora da lista pedida', () => {
+    const modelo = {
+      nivel: 'impossivel',
+      pt: 'Uma oficina faz {0} peças por hora e já tinha {1}. Quantas horas até {2}?',
+      fr: 'Un atelier fait {0} pièces par heure et en avait déjà {1}. Combien d’heures jusqu’à {2} ?',
+      en: 'A workshop makes {0} parts per hour and already had {1}. How many hours until {2}?',
+    };
+
+    const veredito = validarModelo(modelo, 3, { niveis: NIVEIS_PROMPT });
+
+    expect(veredito.ok).toBe(false);
+    expect(veredito.ok === false && veredito.motivos).toContain('nivel-invalido');
+  });
+
+  it('o portão recusa história sem etiqueta quando o pedido pede níveis', () => {
+    const modelo = {
+      pt: 'Uma oficina faz {0} peças por hora e já tinha {1}. Quantas horas até {2}?',
+      fr: 'Un atelier fait {0} pièces par heure et en avait déjà {1}. Combien d’heures jusqu’à {2} ?',
+      en: 'A workshop makes {0} parts per hour and already had {1}. How many hours until {2}?',
+    };
+
+    const veredito = validarModelo(modelo, 3, { niveis: NIVEIS_PROMPT });
+
+    expect(veredito.ok).toBe(false);
+    expect(veredito.ok === false && veredito.motivos).toContain('nivel-ausente');
+  });
+
+  it('a etiqueta aprovada chega ao modelo, que é o que separa as filas', () => {
+    const modelo = {
+      nivel: 'dificil',
+      pt: 'Uma oficina faz {0} peças por hora e já tinha {1}. Quantas horas até {2}?',
+      fr: 'Un atelier fait {0} pièces par heure et en avait déjà {1}. Combien d’heures jusqu’à {2} ?',
+      en: 'A workshop makes {0} parts per hour and already had {1}. How many hours until {2}?',
+    };
+
+    const veredito = validarModelo(modelo, 3, { niveis: NIVEIS_PROMPT });
+
+    expect(veredito.ok).toBe(true);
+    expect(veredito.ok === true && veredito.modelo.nivel).toBe('dificil');
+  });
 });

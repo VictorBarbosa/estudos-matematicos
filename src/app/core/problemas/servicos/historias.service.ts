@@ -1,7 +1,7 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { Idioma } from '@core/i18n/models/i18n.model';
 import { ProblemaDeTexto } from '@core/problemas/models/problema-de-texto';
-import { PedidoDeProblema } from '@core/problemas/prompt/montar-prompt';
+import { NIVEIS, PedidoDeProblema } from '@core/problemas/prompt/montar-prompt';
 import { AssistenteService } from '@core/assistente/services/assistente.service';
 import { OllamaService } from '@core/assistente/services/ollama.service';
 import {
@@ -73,8 +73,16 @@ const CHAVE_DA_LISTA_NEGRA = 'estudos-matematicos.problemas.descartados.v1';
  */
 const LIMITE_DE_BYTES = 256 * 1024;
 
-/** Quantas histórias na fila antes de pedir mais. */
-const PISO_DA_FILA = 3;
+/**
+ * Quantas histórias na fila antes de pedir mais.
+ *
+ * Era três, quando o lote trazia seis de um nível só. Com o lote por nível em
+ * dois, um piso de três pediria de novo a cada exercício: a fila nunca chega a
+ * três, então `atribuir` dispararia reposição sempre. Com piso um, a cadência
+ * fica uma reposição a cada dois exercícios de cada nível — o lote rende, e a
+ * fila não seca entre um e outro.
+ */
+const PISO_DA_FILA = 1;
 
 interface CacheGravado {
   readonly [chave: string]: readonly ModeloDeProblema[];
@@ -170,8 +178,17 @@ export class HistoriasService {
       this.gravarCache();
     }
 
+    /*
+     * A reposição pede os QUATRO níveis, não só o deste exercício.
+     *
+     * Antes pedia um lote do nível corrente, e isso tinha um custo escondido:
+     * quatro pedidos para cobrir os quatro níveis, cada um esperando o outro.
+     * Quem estudava via sempre o mesmo grau de leitura até os demais chegarem.
+     * Agora um lote só enche as quatro filas, e o exercício seguinte — de
+     * qualquer nível — já encontra história.
+     */
     if ((this.filas()[chave] ?? []).length < PISO_DA_FILA) {
-      void this.repor(chave, nivel, declaracao);
+      void this.repor(topicoId, declaracao.forma, declaracao);
     }
   }
 
@@ -231,18 +248,31 @@ export class HistoriasService {
     gravarListaNegra(this.listaNegra());
   }
 
-  private async repor(chave: string, nivel: string, declaracao: ProblemaDeTexto): Promise<void> {
-    if (this.pedindo.has(chave) || !this.ligado() || !this.lote.valeTentarDeNovo()) {
+  /**
+   * Pede um lote cobrindo os quatro níveis, e distribui por etiqueta.
+   *
+   * A chave de controle é `(tópico, forma)` e não inclui o nível: um pedido
+   * traz os quatro de uma vez, então pedir de novo por causa de outro nível
+   * seria pedir a mesma coisa duas vezes.
+   */
+  private async repor(
+    topicoId: string,
+    forma: string,
+    declaracao: ProblemaDeTexto,
+  ): Promise<void> {
+    const chaveDoPedido = `${topicoId}|${forma}`;
+
+    if (this.pedindo.has(chaveDoPedido) || !this.ligado() || !this.lote.valeTentarDeNovo()) {
       return;
     }
 
-    this.pedindo.add(chave);
+    this.pedindo.add(chaveDoPedido);
 
     try {
       const configuracao = this.configuracao();
       const pedido: PedidoDeProblema = {
         ...declaracao.pedido,
-        nivel: nivel as PedidoDeProblema['nivel'],
+        niveis: NIVEIS,
         quantas: configuracao.lote,
       };
 
@@ -251,14 +281,20 @@ export class HistoriasService {
       const novas = lote.filter((modelo) => !negras.has(assinaturaDoModelo(modelo)));
 
       if (novas.length > 0) {
-        this.filas.update((atuais) => ({
-          ...atuais,
-          [chave]: [...(atuais[chave] ?? []), ...novas],
-        }));
+        this.filas.update((atuais) => {
+          const copia: Record<string, readonly ModeloDeProblema[]> = { ...atuais };
+
+          for (const modelo of novas) {
+            const destino = chaveDe(topicoId, forma, modelo.nivel);
+            copia[destino] = [...(copia[destino] ?? []), modelo];
+          }
+
+          return copia;
+        });
         this.gravarCache();
       }
     } finally {
-      this.pedindo.delete(chave);
+      this.pedindo.delete(chaveDoPedido);
     }
   }
 

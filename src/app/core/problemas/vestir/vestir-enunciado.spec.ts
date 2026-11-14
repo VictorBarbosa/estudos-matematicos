@@ -2,6 +2,7 @@ import { ModeloDeProblema } from '@core/problemas/validacao/validar-modelo';
 import { vestirEnunciado } from '@core/problemas/vestir/vestir-enunciado';
 
 const MODELO: ModeloDeProblema = {
+  nivel: 'medio',
   pt: 'Uma oficina cobra {0} por hora e {1} de taxa. Quantas horas cabem em {2}?',
   fr: 'Un atelier facture {0} l’heure et {1} de frais. Combien d’heures tient-on dans {2} ?',
   en: 'A workshop charges {0} per hour plus {1} in fees. How many hours fit in {2}?',

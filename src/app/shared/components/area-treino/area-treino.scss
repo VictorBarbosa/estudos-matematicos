@@ -301,8 +301,5 @@
 }
 
 /* Aviso, não espera: o exercício já está na tela quando ele aparece. */
-.preparando {
-  margin: var(--esp-2) 0 0;
-  color: var(--texto-suave);
-  font-size: 0.8125rem;
-}
+/* O aviso de preparo migrou para dentro do campo de resposta: ali ele responde
+   à pergunta «está carregando?», que nasce ao lado do cursor. */

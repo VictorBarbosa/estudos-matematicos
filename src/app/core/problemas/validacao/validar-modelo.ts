@@ -27,6 +27,15 @@
 
 /** O texto cru que voltou da LLM, antes de qualquer conferência. */
 export interface ModeloBruto {
+  /**
+   * A dificuldade que a própria LLM etiquetou.
+   *
+   * Um lote agora cobre os quatro níveis, e é esta etiqueta que diz em qual
+   * fila cada história entra. Ela não é obedecida às cegas: `validarModelo`
+   * recusa etiqueta fora dos níveis que o pedido listou, e o texto ainda passa
+   * por todas as regras de forma como antes.
+   */
+  readonly nivel?: string;
   readonly pt: string;
   readonly fr: string;
   readonly en: string;
@@ -36,6 +45,8 @@ export interface ModeloBruto {
 export interface ModeloDeProblema extends ModeloBruto {
   /** Quantos espaços reservados ele usa, de `{0}` a `{n-1}`. */
   readonly lacunas: number;
+  /** O nível a que ele pertence — a fila é separada por ele. */
+  readonly nivel: string;
 }
 
 /**
@@ -51,6 +62,8 @@ export interface RestricoesDoTopico {
   readonly repetiveis?: readonly number[];
   /** Números por extenso que este tópico aceita, porque são enredo. */
   readonly permitidas?: readonly string[];
+  /** Os níveis que o pedido listou. Etiqueta fora deles é recusada. */
+  readonly niveis?: readonly string[];
 }
 
 export type MotivoDeRecusa =
@@ -66,7 +79,9 @@ export type MotivoDeRecusa =
   | 'longo'
   | 'latex'
   | 'metatexto'
-  | 'palavra-proibida';
+  | 'palavra-proibida'
+  | 'nivel-invalido'
+  | 'nivel-ausente';
 
 export interface Recusa {
   readonly ok: false;
@@ -371,6 +386,23 @@ export function validarModelo(
     motivos.add('ordem-diferente');
   }
 
+  /*
+   * A etiqueta de nível, quando o pedido lista níveis.
+   *
+   * Sem esta conferência, um modelo que ignorasse o campo devolveria tudo com
+   * a mesma etiqueta e o lote inteiro cairia numa fila só — o pedido de quatro
+   * dificuldades viraria um lote de uma, sem nenhum erro visível.
+   */
+  const niveis = restricoes.niveis;
+
+  if (niveis !== undefined && niveis.length > 0) {
+    if (bruto.nivel === undefined || bruto.nivel === '') {
+      motivos.add('nivel-ausente');
+    } else if (!niveis.includes(bruto.nivel)) {
+      motivos.add('nivel-invalido');
+    }
+  }
+
   if (motivos.size > 0) {
     return { ok: false, motivos: [...motivos] };
   }
@@ -378,6 +410,7 @@ export function validarModelo(
   return {
     ok: true,
     modelo: {
+      nivel: bruto.nivel ?? 'facil',
       pt: bruto.pt.trim(),
       fr: bruto.fr.trim(),
       en: bruto.en.trim(),

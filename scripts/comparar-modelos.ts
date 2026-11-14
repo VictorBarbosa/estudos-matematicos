@@ -22,7 +22,9 @@ import {
   validarModelo,
 } from '../src/app/core/problemas/validacao/validar-modelo.ts';
 import {
+  type Nivel,
   type PedidoDeProblema,
+  NIVEIS,
   montarPrompt,
 } from '../src/app/core/problemas/prompt/montar-prompt.ts';
 import { PROBLEMA_EQUACAO1 } from '../src/app/features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.problema.ts';
@@ -71,13 +73,18 @@ const DECLARACOES = [
   PROBLEMA_ESTEQUIOMETRIA,
 ];
 
-/** O nível pedido a cada tópico na medição. */
-const NIVEL: PedidoDeProblema['nivel'] = 'medio';
+/**
+ * Os níveis pedidos na medição: os quatro, como o site faz.
+ *
+ * Medir um nível só compararia um prompt que o site não usa mais — e o custo
+ * de cada nível é justamente o que o lote agora mede junto.
+ */
+const NIVEIS_MEDIDOS: readonly Nivel[] = NIVEIS;
 
 const PEDIDOS: readonly PedidoDeProblema[] = DECLARACOES.map((declaracao) => ({
   ...declaracao.pedido,
-  nivel: NIVEL,
-  quantas: 6,
+  niveis: NIVEIS_MEDIDOS,
+  quantas: 2,
 }));
 
 interface Resultado {
@@ -185,6 +192,7 @@ async function avaliar(modelo: string, pedido: PedidoDeProblema): Promise<Result
         repetiveis: pedido.dados
           .filter((dado) => dado.tipo === 'formula')
           .map((dado) => dado.indice),
+        niveis: pedido.niveis,
       });
 
       if (!veredito.ok) {
