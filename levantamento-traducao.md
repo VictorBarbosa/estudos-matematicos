@@ -33,6 +33,28 @@ português ao trocar de tipo de exercício dentro do mesmo tópico.
 
 ---
 
+## 1.1. Como está em 14/11/2026 (medição nova)
+
+O site passou de 118 a **130 tópicos** — a área de Química (11) e Autovalores. Os novos
+**nasceram traduzidos**, e por isso a conta mudou:
+
+| Camada                    | 13/11       | 14/11   |
+| ------------------------- | ----------- | ------- |
+| Tópicos                   | 118         | **130** |
+| Geradores com `traducoes` | 3 completos | **20**  |
+| Faltam                    | 115         | **110** |
+
+Os 17 que entraram: os 11 de Química, Autovalores e autovetores, substituição
+trigonométrica, e os que já contavam em parte e foram completados. A regra que ficou:
+**tópico novo nasce com `*.textos.ts` trilíngue**, e o guarda
+`core/treino/textos-traduzidos.spec.ts` reprova meia tradução — foi ele que pegou, em
+Soluções, o enunciado em inglês com os números fora de ordem.
+
+O que **não** mudou: as duas camadas sem campo onde pôr tradução (resolução passo a passo
+e teoria) continuam sem campo. Essa parte é mudança de modelo, não de texto.
+
+---
+
 ## 2. O tamanho do trabalho, em frases
 
 Contagem de literais no código-fonte:
