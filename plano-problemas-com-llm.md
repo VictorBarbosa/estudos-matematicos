@@ -70,15 +70,24 @@ contrato da resposta é do site. Ela é instruída a **não** mencionar unidade 
 
 ### O que a rota ao vivo custa — dito uma vez
 
-| Onde você abre o site                                  | Funciona? | O que precisa                                                                                                  |
-| ------------------------------------------------------ | --------- | -------------------------------------------------------------------------------------------------------------- |
-| Mac, `http://localhost:4200`                           | **sim**   | nada: o Ollama libera localhost por padrão                                                                     |
-| **iPhone na mesma Wi-Fi**, `http://192.168.2.42:4200`  | **sim**   | `npm run start:rede`, `OLLAMA_ORIGINS` com essa origem, e o endereço do Mac no campo de servidor do assistente |
-| Site publicado (`https://…github.io`) → Ollama em http | **não**   | impossível: página https não chama http, e CORS não contorna isso                                              |
-| Site publicado → túnel https do Ollama                 | **sim**   | `cloudflared tunnel --url http://localhost:11434` e `OLLAMA_ORIGINS` com o github.io                           |
-| iPhone longe do Mac, ônibus, avião                     | **não**   | nada local alcança: só o banco versionado                                                                      |
+| Onde você abre o site                                         | Funciona?                    | O que precisa                                                                                                                              |
+| ------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Mac, `http://localhost:4200`                                  | **sim**                      | nada: o Ollama libera localhost por padrão                                                                                                 |
+| **iPhone na mesma Wi-Fi**, `http://192.168.2.42:4200`         | **sim**                      | `npm run start:rede`, `OLLAMA_ORIGINS` com essa origem, e o endereço do Mac no campo de servidor do assistente                             |
+| Site publicado (`https://…github.io`) → Ollama em `localhost` | **sim, com duas permissões** | `OLLAMA_ORIGINS` com o github.io **e** o «acesso à rede local» liberado para o site no Chrome                                              |
+| Site publicado → túnel https do Ollama                        | **sim**                      | `cloudflared tunnel --url http://localhost:11434` e `OLLAMA_ORIGINS` com o github.io — sem espaço de loopback, sem permissão de rede local |
+| iPhone longe do Mac, ônibus, avião                            | **não**                      | nada local alcança: só o banco versionado                                                                                                  |
 
-Tudo acima **medido em 14/11** nesta máquina, não deduzido: o Ollama já escuta em todas as
+> **Segunda correção de registro, e esta é um erro meu de diagnóstico.** Eu havia escrito
+> aqui que a página publicada «não chama http, e isso não tem contorno — mixed content».
+> **Está errado.** O Chrome trata `http://localhost` como origem potencialmente confiável,
+> então mixed content não se aplica e a requisição sai. O que bloqueia é outra coisa, e o
+> erro real diz qual: _«Permission was denied for this request to access the `loopback`
+> address space»_ — é o **Local Network Access**, a permissão que o Chrome pede a um site
+> público para alcançar `localhost`. Ela se concede por site, e sem ela nem o CORS entra em
+> cena. Diagnosticar por memória, em vez de pelo erro, me custou duas respostas erradas.
+
+Tudo abaixo **medido em 14/11** nesta máquina, não deduzido: o Ollama já escuta em todas as
 interfaces (`*:11434`, e `200` pelo IP da rede); sem `OLLAMA_ORIGINS` ele recusa a origem da
 rede local com `403` — e o Chrome mostra isso como `net::ERR_FAILED` —, e com a variável
 devolve `204` e o `Access-Control-Allow-Origin` certo, tanto para `http://192.168.2.42:4200`

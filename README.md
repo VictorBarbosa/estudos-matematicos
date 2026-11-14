@@ -492,16 +492,25 @@ cache e não a mostra de novo.
 Servidor e modelo vêm do assistente — se ele funciona, isto funciona. O que muda é de onde
 você abre o site:
 
-| Onde                                        | Funciona? | O que precisa                                                                                    |
-| ------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------ |
-| `http://localhost:4200`                     | sim       | nada                                                                                             |
-| Outro aparelho na mesma Wi-Fi               | sim       | `npm run start:rede`, `OLLAMA_ORIGINS` com essa origem, e o endereço do Mac no campo de servidor |
-| Site publicado, Ollama em http              | **não**   | mixed content: página https não chama http, e CORS não contorna                                  |
-| Site publicado, Ollama atrás de túnel https | sim       | `cloudflared tunnel --url http://localhost:11434`                                                |
-| Longe do Mac, sem rede                      | **não**   | só o que já estiver no cache                                                                     |
+| Onde                                        | Funciona?                | O que precisa                                                                                    |
+| ------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------ |
+| `http://localhost:4200`                     | sim                      | nada                                                                                             |
+| Outro aparelho na mesma Wi-Fi               | sim                      | `npm run start:rede`, `OLLAMA_ORIGINS` com essa origem, e o endereço do Mac no campo de servidor |
+| Site publicado, Ollama em `localhost`       | sim, com duas permissões | `OLLAMA_ORIGINS` com o github.io **e** «acesso à rede local» liberado para o site no Chrome      |
+| Site publicado, Ollama atrás de túnel https | sim                      | `cloudflared tunnel --url http://localhost:11434` — dispensa a permissão de rede local           |
+| Longe do Mac, sem rede                      | **não**                  | só o que já estiver no cache                                                                     |
 
 Sem `OLLAMA_ORIGINS`, a origem não autorizada recebe `403` no preflight e o Chrome mostra
 `net::ERR_FAILED` em `api/tags` — o mesmo recado que o assistente já descreve acima.
+
+**Do site publicado há uma segunda permissão, e ela não é CORS.** Mixed content **não** é o
+problema: o Chrome trata `http://localhost` como origem potencialmente confiável e deixa a
+requisição sair. O que barra é o **Local Network Access** — um site público alcançando
+`localhost` precisa da permissão «acesso à rede local», concedida por site. Negada, o erro
+é literal: _«Permission was denied for this request to access the `loopback` address
+space»_. Libera-se pelo ícone à esquerda do endereço, em configurações do site, ou em
+`chrome://settings/content/localNetworkAccess`. O túnel https dispensa essa permissão,
+porque aí o destino não é mais loopback.
 
 ### Escolher o modelo
 
