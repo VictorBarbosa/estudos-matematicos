@@ -113,6 +113,7 @@ export const CARREGAR_GERADOR: Readonly<
   'optica': () => import('@features/ondas-e-fisica-moderna/optica/optica.gerador').then((m) => m.geradorOptica),
   'nocao-intuitiva-de-limite': () => import('@features/pre-calculo/nocao-intuitiva-de-limite/nocao-intuitiva-de-limite.gerador').then((m) => m.geradorLimiteIntuitivo),
   'vizinhancas-e-infinito': () => import('@features/pre-calculo/vizinhancas-e-infinito/vizinhancas-e-infinito.gerador').then((m) => m.geradorVizinhancas),
+  'atomos-isotopos-ions': () => import('@features/quimica/atomos-isotopos-ions/atomos-isotopos-ions.gerador').then((m) => m.geradorAtomos),
   'circulo-trigonometrico': () => import('@features/trigonometria/circulo-trigonometrico/circulo-trigonometrico.gerador').then((m) => m.geradorCirculo),
   'equacoes-trigonometricas': () => import('@features/trigonometria/equacoes-trigonometricas/equacoes-trigonometricas.gerador').then((m) => m.geradorEquacoesTrig),
   'funcoes-trigonometricas': () => import('@features/trigonometria/funcoes-trigonometricas/funcoes-trigonometricas.gerador').then((m) => m.geradorOndas),

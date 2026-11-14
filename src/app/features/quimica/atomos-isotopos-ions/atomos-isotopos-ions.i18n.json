@@ -1,0 +1,36 @@
+{
+  "numeroAtomico": {
+    "pt": "Número atômico (Z)",
+    "fr": "Numéro atomique (Z)",
+    "en": "Atomic number (Z)"
+  },
+  "numeroDeMassa": {
+    "pt": "Número de massa (A)",
+    "fr": "Nombre de masse (A)",
+    "en": "Mass number (A)"
+  },
+  "carga": { "pt": "Carga do íon", "fr": "Charge de l’ion", "en": "Ion charge" },
+  "dicaZ": {
+    "pt": "Mexer em Z troca o elemento, não o isótopo.",
+    "fr": "Changer Z change l’élément, pas l’isotope.",
+    "en": "Changing Z changes the element, not the isotope."
+  },
+  "dicaA": {
+    "pt": "Mexer em A troca o isótopo: mesmos prótons, outros nêutrons.",
+    "fr": "Changer A change l’isotope : mêmes protons, autres neutrons.",
+    "en": "Changing A changes the isotope: same protons, different neutrons."
+  },
+  "dicaCarga": {
+    "pt": "Carga positiva é elétron que falta; negativa é elétron a mais.",
+    "fr": "Une charge positive, c’est un électron qui manque ; négative, un électron en plus.",
+    "en": "A positive charge is a missing electron; negative is an extra one."
+  },
+  "protons": { "pt": "Prótons", "fr": "Protons", "en": "Protons" },
+  "neutrons": { "pt": "Nêutrons", "fr": "Neutrons", "en": "Neutrons" },
+  "eletrons": { "pt": "Elétrons", "fr": "Électrons", "en": "Electrons" },
+  "notaContagem": {
+    "pt": "O número de massa nunca fica abaixo do atômico: um núcleo com menos partículas que prótons não existe.",
+    "fr": "Le nombre de masse ne descend jamais sous le numéro atomique : un noyau avec moins de particules que de protons n’existe pas.",
+    "en": "The mass number never drops below the atomic number: a nucleus with fewer particles than protons does not exist."
+  }
+}

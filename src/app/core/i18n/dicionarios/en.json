@@ -215,13 +215,13 @@
         "descricao": "The language engineering uses to describe one quantity depending on another.",
         "titulo": "Functions"
       },
-      "geometria-analitica": {
-        "descricao": "Geometry solved with algebra, once the plane has coordinates.",
-        "titulo": "Analytic geometry"
-      },
       "geometria": {
         "descricao": "Measuring space: angles, areas and volumes before moving to coordinates.",
         "titulo": "Plane and solid geometry"
+      },
+      "geometria-analitica": {
+        "descricao": "Geometry solved with algebra, once the plane has coordinates.",
+        "titulo": "Analytic geometry"
       },
       "matematica-basica": {
         "descricao": "The foundation: how numbers combine, compare and measure.",
@@ -234,6 +234,10 @@
       "pre-calculo": {
         "descricao": "The bridge: the idea of approximation, before the machinery of calculus — from intuitive to formal.",
         "titulo": "Precalculus"
+      },
+      "quimica": {
+        "descricao": "The general chemistry admission asks for: counting particles, the mole, reactions and gases.",
+        "titulo": "Chemistry"
       },
       "trigonometria": {
         "descricao": "Angles become numbers — and that is how a trajectory is computed.",
@@ -272,6 +276,10 @@
       "areas-de-figuras-planas": {
         "descricao": "Where each area formula comes from, and why the ratio of areas is k².",
         "titulo": "Areas of plane figures"
+      },
+      "atomos-isotopos-ions": {
+        "descricao": "The three counts: what defines the element, what gives it mass, and what carries the charge.",
+        "titulo": "Atoms, isotopes and ions"
       },
       "binomio-de-newton": {
         "descricao": "Pascal’s triangle, the general term, the sum of coefficients and the constant term.",
@@ -373,13 +381,13 @@
         "descricao": "The quadratic formula, the discriminant and the three possible root situations.",
         "titulo": "Quadratic equations"
       },
-      "equacoes-parametricas": {
-        "descricao": "The curve described by time: x(t) and y(t), and the path they trace.",
-        "titulo": "Parametric equations"
-      },
       "equacoes-exponenciais": {
         "descricao": "Matching bases, taking logarithms, substituting t = aˣ and checking the domain.",
         "titulo": "Exponential equations"
+      },
+      "equacoes-parametricas": {
+        "descricao": "The curve described by time: x(t) and y(t), and the path they trace.",
+        "titulo": "Parametric equations"
       },
       "equacoes-trigonometricas": {
         "descricao": "Arcsin, arccos and arctan, and the equations with more than one solution per turn.",
@@ -513,13 +521,13 @@
         "descricao": "Inertia, F = ma and action and reaction, with free-body diagrams.",
         "titulo": "Newton’s laws"
       },
-      "limites-laterais": {
-        "descricao": "Arriving from the left and from the right, and when the limit does not exist.",
-        "titulo": "One-sided limits"
-      },
       "limites": {
         "descricao": "Formal definition, properties and indeterminate forms.",
         "titulo": "Limits"
+      },
+      "limites-laterais": {
+        "descricao": "Arriving from the left and from the right, and when the limit does not exist.",
+        "titulo": "One-sided limits"
       },
       "magnetismo-e-inducao": {
         "descricao": "Lorentz force, fields of currents, flux, Faraday and Lenz.",

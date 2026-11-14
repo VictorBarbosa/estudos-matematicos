@@ -215,13 +215,13 @@
         "descricao": "A linguagem com que a engenharia descreve uma grandeza dependendo de outra.",
         "titulo": "Funções"
       },
-      "geometria-analitica": {
-        "descricao": "Geometria resolvida com álgebra, depois que o plano ganhou coordenadas.",
-        "titulo": "Geometria analítica"
-      },
       "geometria": {
         "descricao": "Medir o espaço: ângulos, áreas e volumes antes de levá-los a coordenadas.",
         "titulo": "Geometria plana e espacial"
+      },
+      "geometria-analitica": {
+        "descricao": "Geometria resolvida com álgebra, depois que o plano ganhou coordenadas.",
+        "titulo": "Geometria analítica"
       },
       "matematica-basica": {
         "descricao": "O alicerce: como os números se combinam, se comparam e se medem.",
@@ -234,6 +234,10 @@
       "pre-calculo": {
         "descricao": "A ponte: a ideia de aproximação, antes da máquina do cálculo — do intuitivo ao formal.",
         "titulo": "Pré-cálculo"
+      },
+      "quimica": {
+        "descricao": "A química geral que a admissão exige: contagem de partículas, o mol, reações e gases.",
+        "titulo": "Química"
       },
       "trigonometria": {
         "descricao": "Ângulos viram números — e é assim que se calcula uma trajetória.",
@@ -272,6 +276,10 @@
       "areas-de-figuras-planas": {
         "descricao": "De onde vem cada fórmula de área, e por que a razão de áreas é k².",
         "titulo": "Áreas de figuras planas"
+      },
+      "atomos-isotopos-ions": {
+        "descricao": "As três contagens: quem define o elemento, quem dá a massa e quem carrega a carga.",
+        "titulo": "Átomos, isótopos e íons"
       },
       "binomio-de-newton": {
         "descricao": "Triângulo de Pascal, termo geral, soma dos coeficientes e termo independente.",
@@ -373,13 +381,13 @@
         "descricao": "Bhaskara, discriminante e as três situações possíveis de raízes.",
         "titulo": "Equação do 2º grau"
       },
-      "equacoes-parametricas": {
-        "descricao": "A curva descrita pelo tempo: x(t) e y(t), e a trajetória que elas desenham.",
-        "titulo": "Equações paramétricas"
-      },
       "equacoes-exponenciais": {
         "descricao": "Igualar as bases, tirar o logaritmo, trocar a potência por t e conferir o domínio.",
         "titulo": "Equações exponenciais"
+      },
+      "equacoes-parametricas": {
+        "descricao": "A curva descrita pelo tempo: x(t) e y(t), e a trajetória que elas desenham.",
+        "titulo": "Equações paramétricas"
       },
       "equacoes-trigonometricas": {
         "descricao": "Arcsen, arccos e arctg, e as equações que têm mais de uma solução na volta.",
@@ -513,13 +521,13 @@
         "descricao": "Inércia, F = ma e ação e reação, com diagramas de corpo livre.",
         "titulo": "Leis de Newton"
       },
-      "limites-laterais": {
-        "descricao": "Chegar pela esquerda e pela direita, e quando o limite não existe.",
-        "titulo": "Limites laterais"
-      },
       "limites": {
         "descricao": "Definição formal, propriedades e indeterminações.",
         "titulo": "Limites"
+      },
+      "limites-laterais": {
+        "descricao": "Chegar pela esquerda e pela direita, e quando o limite não existe.",
+        "titulo": "Limites laterais"
       },
       "magnetismo-e-inducao": {
         "descricao": "Força de Lorentz, campos de correntes, fluxo, Faraday e Lenz.",

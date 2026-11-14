@@ -1,0 +1,27 @@
+@use 'mixins' as *;
+
+.contagens {
+  dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--esp-3);
+    margin: 0;
+  }
+
+  dt {
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 1.75rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .nota {
+    margin: var(--esp-3) 0 0;
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+  }
+}

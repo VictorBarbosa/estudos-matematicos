@@ -1066,6 +1066,28 @@ export const CURRICULO: readonly AreaCurriculo[] = [
       },
     ],
   },
+  {
+    id: 'quimica',
+    titulo: 'Química',
+    descricao:
+      'A química geral que a admissão exige: contagem de partículas, o mol, reações e gases.',
+    referencias: [
+      {
+        titulo: 'OpenStax, *Chemistry 2e*',
+        url: 'https://openstax.org/details/books/chemistry-2e',
+        nota: 'O livro que a ementa de CHEM 205 adota na Concordia.',
+      },
+    ],
+    topicos: [
+      {
+        id: 'atomos-isotopos-ions',
+        titulo: 'Átomos, isótopos e íons',
+        descricao:
+          'As três contagens: quem define o elemento, quem dá a massa e quem carrega a carga.',
+        pronto: true,
+      },
+    ],
+  },
 ];
 
 /** Caminho de navegação de um tópico. */

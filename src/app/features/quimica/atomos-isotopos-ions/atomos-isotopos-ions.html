@@ -1,0 +1,60 @@
+<app-topico-layout topicoId="atomos-isotopos-ions">
+  <div explorar class="explorar">
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="z"
+        [rotulo]="texto('numeroAtomico')"
+        [min]="1"
+        [max]="92"
+        [dica]="texto('dicaZ')"
+      />
+      <app-controle-parametro
+        [(valor)]="a"
+        [rotulo]="texto('numeroDeMassa')"
+        [min]="1"
+        [max]="238"
+        [dica]="texto('dicaA')"
+      />
+      <app-controle-parametro
+        [(valor)]="carga"
+        [rotulo]="texto('carga')"
+        [min]="-3"
+        [max]="3"
+        [dica]="texto('dicaCarga')"
+      />
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="simboloTex()" [bloco]="true" />
+    </section>
+
+    <section class="painel contagens">
+      <dl>
+        <div>
+          <dt>{{ texto('protons') }}</dt>
+          <dd>{{ contagem().protons }}</dd>
+        </div>
+        <div>
+          <dt>{{ texto('neutrons') }}</dt>
+          <dd>{{ contagem().neutrons }}</dd>
+        </div>
+        <div>
+          <dt>{{ texto('eletrons') }}</dt>
+          <dd>{{ contagem().eletrons }}</dd>
+        </div>
+      </dl>
+      <p class="nota">{{ texto('notaContagem') }}</p>
+    </section>
+
+    <section>
+      <h2>{{ i18n.t('explorar.passoAPasso') }}</h2>
+      <app-passo-a-passo [passos]="resolucao().passos" />
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

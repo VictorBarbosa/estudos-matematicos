@@ -104,6 +104,7 @@ const PISO: Readonly<Record<string, readonly [number, number, number, number]>> 
   'magnetismo-e-inducao': [3, 4, 5, 3],
   'matrizes-determinantes': [2, 4, 4, 3],
   'metodos-numericos': [2, 3, 4, 3],
+  'atomos-isotopos-ions': [2, 3, 3, 2],
   'mmc-mdc': [2, 2, 2, 2],
   'momento-angular': [6, 7, 3, 2],
   'movimento-circular': [3, 3, 3, 2],

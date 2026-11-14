@@ -215,13 +215,13 @@
         "descricao": "Le langage avec lequel l’ingénierie décrit une grandeur qui dépend d’une autre.",
         "titulo": "Fonctions"
       },
-      "geometria-analitica": {
-        "descricao": "La géométrie résolue par l’algèbre, une fois le plan muni de coordonnées.",
-        "titulo": "Géométrie analytique"
-      },
       "geometria": {
         "descricao": "Mesurer l’espace : angles, aires et volumes avant de passer aux coordonnées.",
         "titulo": "Géométrie plane et dans l’espace"
+      },
+      "geometria-analitica": {
+        "descricao": "La géométrie résolue par l’algèbre, une fois le plan muni de coordonnées.",
+        "titulo": "Géométrie analytique"
       },
       "matematica-basica": {
         "descricao": "Le socle : comment les nombres se combinent, se comparent et se mesurent.",
@@ -234,6 +234,10 @@
       "pre-calculo": {
         "descricao": "Le pont : l’idée d’approximation, avant la machine du calcul — de l’intuitif au formel.",
         "titulo": "Pré-calcul"
+      },
+      "quimica": {
+        "descricao": "La chimie générale exigée à l’admission : compter les particules, la mole, les réactions et les gaz.",
+        "titulo": "Chimie"
       },
       "trigonometria": {
         "descricao": "Les angles deviennent des nombres — et c’est ainsi qu’on calcule une trajectoire.",
@@ -272,6 +276,10 @@
       "areas-de-figuras-planas": {
         "descricao": "D’où vient chaque formule d’aire, et pourquoi le rapport des aires vaut k².",
         "titulo": "Aires des figures planes"
+      },
+      "atomos-isotopos-ions": {
+        "descricao": "Les trois comptes : ce qui définit l’élément, ce qui donne la masse et ce qui porte la charge.",
+        "titulo": "Atomes, isotopes et ions"
       },
       "binomio-de-newton": {
         "descricao": "Triangle de Pascal, terme général, somme des coefficients et terme indépendant.",
@@ -373,13 +381,13 @@
         "descricao": "Formule quadratique, discriminant et les trois situations possibles pour les racines.",
         "titulo": "Équation du second degré"
       },
-      "equacoes-parametricas": {
-        "descricao": "La courbe décrite par le temps : x(t) et y(t), et la trajectoire qu’elles dessinent.",
-        "titulo": "Équations paramétriques"
-      },
       "equacoes-exponenciais": {
         "descricao": "Égaler les bases, prendre le logarithme, poser t = aˣ et vérifier le domaine.",
         "titulo": "Équations exponentielles"
+      },
+      "equacoes-parametricas": {
+        "descricao": "La courbe décrite par le temps : x(t) et y(t), et la trajectoire qu’elles dessinent.",
+        "titulo": "Équations paramétriques"
       },
       "equacoes-trigonometricas": {
         "descricao": "Arcsin, arccos et arctan, et les équations qui ont plus d’une solution sur un tour.",
@@ -513,13 +521,13 @@
         "descricao": "Inertie, F = ma et action-réaction, avec diagrammes de corps libre.",
         "titulo": "Lois de Newton"
       },
-      "limites-laterais": {
-        "descricao": "Arriver par la gauche et par la droite, et quand la limite n’existe pas.",
-        "titulo": "Limites latérales"
-      },
       "limites": {
         "descricao": "Définition formelle, propriétés et formes indéterminées.",
         "titulo": "Limites"
+      },
+      "limites-laterais": {
+        "descricao": "Arriver par la gauche et par la droite, et quand la limite n’existe pas.",
+        "titulo": "Limites latérales"
       },
       "magnetismo-e-inducao": {
         "descricao": "Force de Lorentz, champs des courants, flux, Faraday et Lenz.",

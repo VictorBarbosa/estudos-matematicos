@@ -86,3 +86,6 @@ export * from '@core/math/fisica/termica/termica';
 export * from '@core/math/fisica/eletromagnetismo/eletromagnetismo';
 export * from '@core/math/fisica/ondas/ondas';
 export * from '@core/math/fisica/moderna/moderna';
+
+// Química: a contagem das partículas e a massa atômica média.
+export * from '@core/math/quimica/atomo/atomo';

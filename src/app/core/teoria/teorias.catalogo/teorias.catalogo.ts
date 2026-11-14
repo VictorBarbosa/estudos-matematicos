@@ -125,6 +125,7 @@ import { TEORIA_EDO1 as t_edo_primeira_ordem } from '@features/calculo-4/edo-pri
 import { TEORIA_EDO2 as t_edo_segunda_ordem } from '@features/calculo-4/edo-segunda-ordem/edo-segunda-ordem.teoria';
 import { TEORIA_APLICACOES_EDO as t_aplicacoes_de_edo } from '@features/calculo-4/aplicacoes-de-edo/aplicacoes-de-edo.teoria';
 import { TEORIA_NUMERICO as t_metodos_numericos } from '@features/calculo-4/metodos-numericos/metodos-numericos.teoria';
+import { TEORIA_ATOMOS as t_atomos_isotopos_ions } from '@features/quimica/atomos-isotopos-ions/atomos-isotopos-ions.teoria';
 
 export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[] = [
   ['equacao-primeiro-grau', t_equacao_primeiro_grau],
@@ -245,4 +246,5 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['edo-segunda-ordem', t_edo_segunda_ordem],
   ['aplicacoes-de-edo', t_aplicacoes_de_edo],
   ['metodos-numericos', t_metodos_numericos],
+  ['atomos-isotopos-ions', t_atomos_isotopos_ions],
 ];
