@@ -33,6 +33,16 @@ export interface PedidoDeProblema {
   readonly topico: string;
   /** O que a conta exercita — `resolver ax + b = c para x`. */
   readonly oQueExercita: string;
+  /**
+   * A relação exata que a história tem de expressar, com as lacunas.
+   *
+   * Existe por um defeito real: sem ela, descrever `{1}` como «uma parcela
+   * fixa» fez o modelo escrever «já completou {1} viagens» — o que significa
+   * `{2} − {0}×{1}`, outra conta. Seis de oito histórias saíram assim. Dizer
+   * `{0} × x + {1} = {2}` não entrega a resposta (ninguém sabe os números),
+   * entrega a FORMA, que é o que a história precisa respeitar.
+   */
+  readonly relacao: string;
   readonly nivel: 'facil' | 'medio' | 'dificil' | 'extremo';
   /** Os valores que o gerador vai substituir, em ordem. */
   readonly dados: readonly DadoDoProblema[];
@@ -102,6 +112,10 @@ const REGRAS = [
   'NEVER write a digit. Every number is a placeholder: {0}, {1}, {2}...',
   'Use each placeholder exactly once, and in the SAME ORDER in the three languages.',
   'Never state, hint at or compute the answer. You do not know the numbers.',
+  'The story must MEAN the given relation exactly — but never write the relation, the letter ' +
+    'x, or any variable. The reader turns the situation into algebra: that is the exercise.',
+  'Never restate the relation as a different calculation, and never make the unknown appear ' +
+    'as a known datum.',
   'Do not write numbers in words either (no "two", "dez", "trois").',
   'Plain prose only: no LaTeX, no markdown, no bullet points, no headings.',
   'No label such as "Problem:", "Answer:" or "Here is". Start with the story.',
@@ -151,10 +165,23 @@ export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
     `Tópico: ${pedido.topico}.`,
     `A conta que o aluno vai fazer: ${pedido.oQueExercita}.`,
     '',
+    `RELAÇÃO (instrução para você, NUNCA texto para o aluno): ${pedido.relacao}`,
+    'A história tem de significar exatamente essa relação — mas **não a escreva**. Nada de',
+    '«x», nada de letra de variável, nada de «está para … como … está para». O aluno lê uma',
+    'situação; a álgebra é ele que monta, e montá-la é o exercício.',
+    '',
+    'O x é DESCONHECIDO. Por isso:',
+    '- nunca diga o valor de x, nem dê um dado que seja igual a x;',
+    '- nunca escreva uma quantidade de repetições já feitas, nem um «já fez tantas vezes»;',
+    '- cada lacuna é uma quantidade CONHECIDA e fixa, que não depende de x.',
+    '',
     'Os dados da história, que entram como lacunas:',
     dados,
     '',
-    `A pergunta deve cobrar: ${pedido.pergunta}${pedido.unidade ? ` (a resposta sai em ${pedido.unidade})` : ''}.`,
+    `A pergunta deve cobrar ISTO, dito com as palavras da própria história: ${pedido.pergunta}` +
+      `${pedido.unidade ? ` (a resposta sai em ${pedido.unidade})` : ''}.`,
+    'Não copie a frase acima. Se a história é de etapas, pergunte «quantas etapas»; se é de',
+    'viagens, «quantas viagens». A pergunta tem de soar como parte da situação.',
     `Carga de leitura (nível ${pedido.nivel}): ${CARGA_DE_LEITURA[pedido.nivel]}`,
     `Contextos possíveis: ${contextos}. Varie entre eles.`,
     ...(pedido.proibidas === undefined || pedido.proibidas.length === 0
@@ -166,8 +193,10 @@ export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
             'não diga que sobra ou falta reagente, e não invente nenhuma etapa da reação.',
         ]),
     '',
-    `Escreva ${pedido.quantas} problemas DIFERENTES entre si — contextos diferentes, não o ` +
-      'mesmo texto com outra palavra.',
+    `Escreva ${pedido.quantas} problemas DIFERENTES entre si — contextos diferentes E frases ` +
+      'de forma diferente. Trocar só os substantivos, mantendo «faz {0} por etapa, já tinha ' +
+      '{1}, totalizando {2}» seis vezes, não é variedade: é a mesma história com outra roupa. ' +
+      'Varie quem age, a ordem em que os dados aparecem e o jeito de perguntar.',
     'Devolva apenas o JSON pedido.',
   ].join('\n');
 

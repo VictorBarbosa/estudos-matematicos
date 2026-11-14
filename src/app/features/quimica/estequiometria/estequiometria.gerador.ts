@@ -158,6 +158,9 @@ export const geradorEstequiometria: GeradorExercicio<number> = {
         { indice: 1, significado: 'a fórmula do reagente de partida', tipo: 'formula' },
         { indice: 2, significado: 'a fórmula do produto que se quer', tipo: 'formula' },
       ],
+      relacao:
+        'de {0} gramas de {1} sai uma massa de {2}, pela proporção da equação balanceada que ' +
+        'aparece abaixo do enunciado — a massa do produto é o que se pergunta',
       pergunta: 'a massa de produto formada',
       unidade: 'gramas',
       contextos: [

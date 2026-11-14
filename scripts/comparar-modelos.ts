@@ -57,6 +57,9 @@ const PEDIDOS: readonly PedidoDeProblema[] = [
   {
     topico: 'Equação do primeiro grau',
     oQueExercita: 'resolver ax + b = c, achando o valor de x',
+    relacao:
+      '{0} × x + {1} = {2}, em que x é QUANTAS VEZES a quantidade {0} se repete — e x é ' +
+      'justamente o que a pergunta cobra',
     nivel: 'facil',
     dados: [
       {
@@ -67,19 +70,24 @@ const PEDIDOS: readonly PedidoDeProblema[] = [
       },
       {
         indice: 1,
-        significado: 'uma parcela fixa, que entra uma vez só',
+        significado:
+          'uma quantidade da MESMA grandeza e da MESMA unidade do total, que já está lá ' +
+          'desde o começo e não depende de x — uma taxa fixa, um estoque inicial, uma ' +
+          'parcela de entrada. Se o total está em doces, esta também está em doces, nunca ' +
+          'em caixas de doces',
         tipo: 'inteiro',
         faixa: [1, 40],
       },
       { indice: 2, significado: 'o total alcançado no fim', tipo: 'inteiro', faixa: [20, 200] },
     ],
-    pergunta: 'quantas unidades da grandeza que se repete',
+    pergunta: 'quantas vezes a quantidade que se repete foi repetida, isto é, o x',
     quantas: 6,
     contextos: ['oficina', 'transporte', 'obra'],
   },
   {
     topico: 'Razão e proporção',
     oQueExercita: 'uma regra de três direta entre duas grandezas proporcionais',
+    relacao: '{0} está para {1} como {2} está para x, e x é o que a pergunta cobra',
     nivel: 'medio',
     dados: [
       {
@@ -110,6 +118,9 @@ const PEDIDOS: readonly PedidoDeProblema[] = [
     oQueExercita:
       'converter massa de um reagente em massa de produto pela equação balanceada, que ' +
       'aparece abaixo do enunciado',
+    relacao:
+      'de {0} gramas de {1} sai uma massa de {2}, pela proporção da equação balanceada que ' +
+      'aparece abaixo do enunciado — a massa do produto é o que se pergunta',
     nivel: 'dificil',
     dados: [
       {

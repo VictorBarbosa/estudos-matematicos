@@ -51,7 +51,16 @@ function chaveDe(topicoId: string, forma: string, nivel: string): string {
   return `${topicoId}|${forma}|${nivel}`;
 }
 
-const CHAVE_DO_CACHE = 'estudos-matematicos.problemas.v1';
+/*
+ * `v2` porque o `v1` ficou envenenado.
+ *
+ * As primeiras histórias de equação do primeiro grau expressavam outra conta —
+ * «já completou {1} viagens» é `{2} − {0}×{1}`, não `({2} − {1}) / {0}` — e
+ * seis de oito estavam assim. Corrigir o prompt não apaga o que já está no
+ * navegador de quem usou, e uma história errada guardada é pior que nenhuma:
+ * ela volta todo dia. Subir a versão da chave descarta o lote inteiro.
+ */
+const CHAVE_DO_CACHE = 'estudos-matematicos.problemas.v2';
 const CHAVE_DA_LISTA_NEGRA = 'estudos-matematicos.problemas.descartados.v1';
 
 /**

@@ -57,22 +57,29 @@ export const geradorEquacao1: GeradorExercicio<Fracao> = {
     pedido: {
       topico: 'Equação do primeiro grau',
       oQueExercita: 'resolver ax + b = c, achando o valor de x',
+      relacao:
+        '{0} × x + {1} = {2}, em que x é QUANTAS VEZES a quantidade {0} se repete — e x é ' +
+        'justamente o que a pergunta cobra',
       dados: [
         {
           indice: 0,
-          significado: 'o valor que se repete a cada unidade',
+          significado: 'quanto cada repetição acrescenta ao total',
           tipo: 'inteiro',
           faixa: [2, 12],
         },
         {
           indice: 1,
-          significado: 'uma parcela fixa, que entra uma vez só',
+          significado:
+            'uma quantidade da MESMA grandeza e da MESMA unidade do total, que já está lá ' +
+            'desde o começo e não depende de x — uma taxa fixa, um estoque inicial, uma ' +
+            'parcela de entrada. Se o total está em doces, esta também está em doces, nunca ' +
+            'em caixas de doces',
           tipo: 'inteiro',
           faixa: [1, 20],
         },
-        { indice: 2, significado: 'o total alcançado no fim', tipo: 'inteiro', faixa: [20, 200] },
+        { indice: 2, significado: 'o total no fim', tipo: 'inteiro', faixa: [20, 200] },
       ],
-      pergunta: 'quantas unidades da grandeza que se repete',
+      pergunta: 'quantas vezes a quantidade que se repete foi repetida, isto é, o x',
       contextos: ['oficina', 'transporte de carga', 'obra', 'linha de montagem'],
     },
   },
