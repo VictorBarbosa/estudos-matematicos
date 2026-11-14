@@ -107,7 +107,9 @@ const PEDIDOS: readonly PedidoDeProblema[] = [
   },
   {
     topico: 'Estequiometria',
-    oQueExercita: 'converter massa de um reagente em massa de produto pela equação balanceada',
+    oQueExercita:
+      'converter massa de um reagente em massa de produto pela equação balanceada, que ' +
+      'aparece abaixo do enunciado',
     nivel: 'dificil',
     dados: [
       {
@@ -116,11 +118,40 @@ const PEDIDOS: readonly PedidoDeProblema[] = [
         tipo: 'decimal',
         faixa: [1, 500],
       },
+      { indice: 1, significado: 'a fórmula do reagente de partida', tipo: 'formula' },
+      { indice: 2, significado: 'a fórmula do produto que se quer', tipo: 'formula' },
     ],
     pergunta: 'a massa de produto formada',
     unidade: 'gramas',
     quantas: 6,
     contextos: ['laboratório', 'indústria química', 'tratamento de água'],
+    proibidas: [
+      'sal',
+      'sel',
+      'salt',
+      'ácido',
+      'acido',
+      'acide',
+      'acid',
+      'óxido',
+      'oxido',
+      'oxyde',
+      'oxide',
+      'polímero',
+      'polimero',
+      'polymère',
+      'polymere',
+      'polymer',
+      'monômero',
+      'monomero',
+      'monomère',
+      'monomere',
+      'monomer',
+      'excesso',
+      'excès',
+      'exces',
+      'excess',
+    ],
   },
 ];
 
@@ -223,7 +254,12 @@ async function avaliar(modelo: string, pedido: PedidoDeProblema): Promise<Result
     let repetidos = 0;
 
     for (const bruto of brutos) {
-      const veredito = validarModelo(bruto, pedido.dados.length);
+      const veredito = validarModelo(
+        bruto,
+        pedido.dados.length,
+        pedido.proibidas ?? [],
+        pedido.dados.filter((dado) => dado.tipo === 'formula').map((dado) => dado.indice),
+      );
 
       if (!veredito.ok) {
         recusados.push({ bruto, motivos: veredito.motivos });

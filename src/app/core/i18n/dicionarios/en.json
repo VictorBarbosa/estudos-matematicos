@@ -1166,6 +1166,7 @@
     "etapaVencida": "Stage cleared!",
     "falta": "Left",
     "faltaPara": "To open the next stage: {itens}.",
+    "historiaErrada": "This word problem is wrong",
     "irPara": "Go to {titulo}",
     "irParaProva": "Take the final exam for {sessao}",
     "nadaFalta": "Nothing: the next stage is already open.",
@@ -1174,6 +1175,7 @@
     "ou": "or",
     "paraAbrir": "To open the next stage:",
     "porTipo": "And {quantos} correct answers for each exercise type:",
+    "preparandoHistorias": "Preparing problems in the three languages — this runs on your computer.",
     "proximo": "Next exercise",
     "respostaCorreta": "Correct answer:",
     "resumoOperacoes": ", with all {quantas} operations practised",
@@ -1183,9 +1185,9 @@
     "suaResposta": "Your answer",
     "subir": "{quantos} correct answer(s) in a row to move up",
     "subiu": "Level {nivel} — the exercises get harder.",
+    "trancadoPelaSurpresa": "This topic is locked after a failed surprise test. Its progress was wiped on purpose: meet the criterion again to unlock it.",
     "verificar": "Check",
-    "zeraComErro": "(resets on every mistake)",
-    "trancadoPelaSurpresa": "This topic is locked after a failed surprise test. Its progress was wiped on purpose: meet the criterion again to unlock it."
+    "zeraComErro": "(resets on every mistake)"
   },
   "trilha": {
     "barra": "Progress along the path: {percentual} per cent",

@@ -1166,6 +1166,7 @@
     "etapaVencida": "Étape réussie !",
     "falta": "Reste",
     "faltaPara": "Pour ouvrir l’étape suivante, il reste : {itens}.",
+    "historiaErrada": "Cette mise en situation est fausse",
     "irPara": "Aller à {titulo}",
     "irParaProva": "Passer l’examen final de {sessao}",
     "nadaFalta": "Rien : l’étape suivante est déjà ouverte.",
@@ -1174,6 +1175,7 @@
     "ou": "ou",
     "paraAbrir": "Pour ouvrir l'étape suivante :",
     "porTipo": "Et {quantos} bonnes réponses pour chaque type d’exercice :",
+    "preparandoHistorias": "Préparation de problèmes dans les trois langues — cela tourne sur votre ordinateur.",
     "proximo": "Exercice suivant",
     "respostaCorreta": "Bonne réponse :",
     "resumoOperacoes": ", avec les {quantas} opérations pratiquées",
@@ -1183,9 +1185,9 @@
     "suaResposta": "Votre réponse",
     "subir": "{quantos} bonne(s) réponse(s) de suite pour monter",
     "subiu": "Niveau {nivel} — les exercices deviennent plus exigeants.",
+    "trancadoPelaSurpresa": "Ce sujet est verrouillé à la suite d’un échec à l’examen surprise. La progression a été remise à zéro volontairement : validez de nouveau le critère pour le déverrouiller.",
     "verificar": "Vérifier",
-    "zeraComErro": "(remise à zéro à chaque erreur)",
-    "trancadoPelaSurpresa": "Ce sujet est verrouillé à la suite d’un échec à l’examen surprise. La progression a été remise à zéro volontairement : validez de nouveau le critère pour le déverrouiller."
+    "zeraComErro": "(remise à zéro à chaque erreur)"
   },
   "trilha": {
     "barra": "Progression du parcours : {percentual} pour cent",

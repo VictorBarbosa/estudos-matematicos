@@ -203,6 +203,96 @@ describe('validar modelo de problema', () => {
   });
 });
 
+/**
+ * A regra «cada lacuna uma vez» nasceu errada para fórmula.
+ *
+ * Repetir um NÚMERO confunde quem lê; repetir a substância é escrita natural —
+ * ela é nomeada na história e cobrada na pergunta. A comparação de modelos
+ * recusou seis histórias boas de química por isto antes da correção.
+ */
+describe('lacuna repetível', () => {
+  const COM_FORMULA_REPETIDA = {
+    pt: 'Num laboratório há {0} gramas de {1} e se quer saber a massa de {2}. Quantos gramas de {2} resultam?',
+    fr: 'Dans un laboratoire il y a {0} grammes de {1} et on veut la masse de {2}. Combien de grammes de {2} en résultent ?',
+    en: 'A laboratory has {0} grams of {1} and wants the mass of {2}. How many grams of {2} result?',
+  };
+
+  it('sem permissão, a repetição é recusada', () => {
+    const veredito = validarModelo(COM_FORMULA_REPETIDA, 3);
+
+    expect(veredito.ok).toBe(false);
+    if (!veredito.ok) {
+      expect(veredito.motivos).toContain('lacuna-repetida');
+    }
+  });
+
+  it('com a lacuna declarada repetível, passa', () => {
+    expect(validarModelo(COM_FORMULA_REPETIDA, 3, [], [2]).ok).toBe(true);
+  });
+
+  it('a permissão é por lacuna: o número continua uma vez só', () => {
+    const numeroRepetido = {
+      ...COM_FORMULA_REPETIDA,
+      pt: `${COM_FORMULA_REPETIDA.pt} Lembre: {0}.`,
+    };
+
+    expect(validarModelo(numeroRepetido, 3, [], [2]).ok).toBe(false);
+  });
+
+  it('repetir não dispensa a mesma ordem nos três idiomas', () => {
+    const fora = {
+      ...COM_FORMULA_REPETIDA,
+      en: 'A laboratory wants the mass of {2} from {0} grams of {1}. How many grams of {2}?',
+    };
+
+    const veredito = validarModelo(fora, 3, [], [2]);
+
+    expect(veredito.ok).toBe(false);
+    if (!veredito.ok) {
+      expect(veredito.motivos).toContain('ordem-diferente');
+    }
+  });
+});
+
+/**
+ * A lista de proibidas é por tópico, e isso é a parte importante.
+ *
+ * «sal» tem de ser recusado em estequiometria, onde a LLM não sabe o que está
+ * na equação, e aceito em razão e proporção, onde sal é o que se põe na panela.
+ */
+describe('palavras proibidas pelo tópico', () => {
+  const COM_SAL = {
+    pt: 'Na cozinha industrial, cada panela leva {0} gramas de sal e {1} de tempero. Quantas panelas cabem em {2} gramas?',
+    fr: 'À la cuisine industrielle, chaque marmite prend {0} grammes de sel et {1} d’épices. Combien de marmites tient-on dans {2} grammes ?',
+    en: 'In the industrial kitchen, each pot takes {0} grams of salt and {1} of seasoning. How many pots fit in {2} grams?',
+  };
+
+  it('sem lista, a palavra passa', () => {
+    expect(validarModelo(COM_SAL, 3).ok).toBe(true);
+  });
+
+  it('com a lista do tópico, a mesma palavra é recusada', () => {
+    const veredito = validarModelo(COM_SAL, 3, ['sal', 'sel', 'salt']);
+
+    expect(veredito.ok).toBe(false);
+    if (!veredito.ok) {
+      expect(veredito.motivos).toContain('palavra-proibida');
+    }
+  });
+
+  it('a recusa vale nos três idiomas, não só no português', () => {
+    const soEmIngles = { ...COM_SAL, pt: COM_SAL.pt.replace('de sal', 'de tempero') };
+
+    expect(validarModelo(soEmIngles, 3, ['salt']).ok).toBe(false);
+  });
+
+  it('a palavra proibida não precisa da caixa certa', () => {
+    expect(validarModelo({ ...COM_SAL, pt: COM_SAL.pt.replace('sal', 'Sal') }, 3, ['sal']).ok).toBe(
+      false,
+    );
+  });
+});
+
 describe('assinatura, para pegar repetição', () => {
   it('a mesma história com outro número tem a mesma assinatura', () => {
     const outra = {

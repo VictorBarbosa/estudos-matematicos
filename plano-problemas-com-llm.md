@@ -244,6 +244,38 @@ Três achados valem mais que a tabela:
 
 ---
 
+## 5.2. Três regras que nasceram erradas, e a química que passou a funcionar
+
+Rodar de verdade corrigiu o desenho em três pontos. Os números abaixo são do
+`gpt-oss:20b@low`, seis pedidos por tópico:
+
+| Rodada                                    | Álgebra | Razão   | Estequiometria                         |
+| ----------------------------------------- | ------- | ------- | -------------------------------------- |
+| Primeira, com química nomeando substância | 6/6     | 6/6     | 3/6 — e as aprovadas inventavam reação |
+| Com a fórmula como dado                   | 6/6     | 4/6     | 2/6                                    |
+| Com as três correções abaixo              | **6/6** | **6/6** | **6/6**                                |
+
+1. **A fórmula química virou DADO.** A decisão «a história não nomeia substância» tinha um
+   furo que só apareceu ao escrever o tópico: dizer «o reagente» é ambíguo numa equação de
+   dois reagentes, e o exercício ficaria sem resposta. Agora o código passa `H₂O` e `CaCO₃`
+   como valores de lacuna — a LLM se refere a eles e nunca os escolhe. `ValorDaLacuna`
+   passou a ser `number | string`.
+2. **Palavras proibidas por tópico.** Mesmo sem inventar fórmula, os modelos
+   CLASSIFICAVAM: «massa de sal formado», «excesso de monômero», para reações em que nem
+   uma nem outra palavra cabia. A lista é do tópico e não global, porque «sal» tem de ser
+   recusado em estequiometria e aceito numa história de cozinha industrial.
+3. **A regra «cada lacuna uma vez» valia só para número.** Ela recusou seis histórias boas
+   de química seguidas: «quer saber a massa de {2}… quantos gramas de {2} resultam?» é
+   escrita natural — quem repete é a substância, não o dado. Lacuna de tipo fórmula passou
+   a ser repetível, e a exigência de mesma ordem nos três idiomas continua valendo.
+
+E uma regra que estava escrita ao contrário: o prompt proibia dizer a unidade, e por isso
+saíam enunciados com «a quantidade disponível é {0}», sem gramas. A proibição é da unidade
+**da resposta**, que é contrato do corretor; a unidade de cada **dado** tem de estar no
+texto, senão o número não significa nada.
+
+---
+
 ## 6. Configuração, em Configurações
 
 | Opção                | Padrão                                         |

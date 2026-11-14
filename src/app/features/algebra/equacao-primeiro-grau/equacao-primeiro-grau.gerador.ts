@@ -43,6 +43,40 @@ export const geradorEquacao1: GeradorExercicio<Fracao> = {
   // decimal exato, então a resposta certa era recusada sem explicação.
   formatoResposta: 'inteiro ou fração, ex.: 4 ou -3/2 — decimal só se for exato',
 
+  /**
+   * A história que uma LLM local pode escrever em volta de `ax + b = c`.
+   *
+   * Só os três coeficientes vão para ela, e só quando servem para uma
+   * contagem: `a` positivo, `b` positivo, `c` maior que `b` e raiz inteira
+   * positiva. Sem essas condições a história ficaria absurda — «montou −3
+   * kits», «sobrou 2,5 peças» —, e quem sabe isso é o gerador, não o
+   * validador de texto.
+   */
+  problemaDeTexto: {
+    forma: 'ax-mais-b',
+    pedido: {
+      topico: 'Equação do primeiro grau',
+      oQueExercita: 'resolver ax + b = c, achando o valor de x',
+      dados: [
+        {
+          indice: 0,
+          significado: 'o valor que se repete a cada unidade',
+          tipo: 'inteiro',
+          faixa: [2, 12],
+        },
+        {
+          indice: 1,
+          significado: 'uma parcela fixa, que entra uma vez só',
+          tipo: 'inteiro',
+          faixa: [1, 20],
+        },
+        { indice: 2, significado: 'o total alcançado no fim', tipo: 'inteiro', faixa: [20, 200] },
+      ],
+      pergunta: 'quantas unidades da grandeza que se repete',
+      contextos: ['oficina', 'transporte de carga', 'obra', 'linha de montagem'],
+    },
+  },
+
   gerar(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     const pergunta = sortearPergunta(nivel, rng);
     if (pergunta === 'fracoes') {
@@ -65,6 +99,12 @@ export const geradorEquacao1: GeradorExercicio<Fracao> = {
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },
       conceitos: ['equacao1.igualdade', 'equacao1.verificacao'],
+      // A história só serve para contagem: coeficientes positivos, total
+      // acima da parcela fixa e raiz inteira positiva.
+      dadosDoProblema:
+        a > 0 && b > 0 && c > b && gabarito.ehInteira && gabarito.numerador > 0
+          ? [a, b, c]
+          : undefined,
       armadilhas: semColisoes(
         [
           // Somou b em vez de subtrair.

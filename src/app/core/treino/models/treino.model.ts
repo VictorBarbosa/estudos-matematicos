@@ -1,4 +1,6 @@
 import { Idioma } from '@core/i18n/models/i18n.model';
+import { ProblemaDeTexto } from '@core/problemas/models/problema-de-texto';
+import { ValorDaLacuna } from '@core/problemas/vestir/vestir-enunciado';
 import { Resolucao } from '@core/math/tipos/tipos';
 import { Rng } from '@core/treino/rng/rng';
 import { FOLGA_DE_CONSTANTE_ARREDONDADA } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -126,6 +128,16 @@ export interface Exercicio<T> {
    * a outra escrita.
    */
   readonly exigeFracao?: boolean;
+  /**
+   * Os números que uma história de LLM pode usar, na ordem das lacunas.
+   *
+   * Só os geradores que aderem aos problemas de palavra preenchem isto, e eles
+   * preenchem **apenas quando os valores sorteados servem para uma história**:
+   * «2,5 pessoas» e «idade negativa» são absurdos que nenhuma validação de
+   * texto pega, e quem sabe o domínio é o gerador. Sem este campo, o exercício
+   * aparece com o enunciado de sempre — que é o caminho normal de 130 tópicos.
+   */
+  readonly dadosDoProblema?: readonly ValorDaLacuna[];
 }
 
 /**
@@ -226,6 +238,16 @@ export interface GeradorExercicio<T> {
    * dela não declara nada e o campo fica como sempre foi.
    */
   readonly simbolos?: readonly TeclaDeSimbolo[];
+  /**
+   * A declaração que permite a este tópico receber histórias de uma LLM local.
+   *
+   * Quem declara isto **não muda de comportamento** quando a LLM está fora do
+   * ar: o enunciado de sempre continua sendo o enunciado. A história veste o
+   * exercício na hora de exibir, fora do `gerar()`, para que o sorteio
+   * continue puro e semeado — é o que mantém `verificar:geradores` e os
+   * guardas de variedade valendo sem exceção.
+   */
+  readonly problemaDeTexto?: ProblemaDeTexto;
   /**
    * Um recado sobre a forma de uma resposta CERTA, quando há o que dizer.
    *

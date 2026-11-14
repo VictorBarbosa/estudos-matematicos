@@ -17,6 +17,7 @@ import {
   RESPOSTAS_NA_JANELA,
 } from '@core/progressao/models/progressao.model';
 import { ExercicioEmFocoService } from '@core/exercicio/services/exercicio-em-foco.service';
+import { HistoriasService } from '@core/problemas/servicos/historias.service';
 import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProvaService } from '@core/prova/services/prova.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
@@ -209,9 +210,40 @@ export class AreaTreino {
    * o que faz a troca de idioma no cabeçalho valer também para a pergunta que
    * já está na tela, sem sorteá-la de novo.
    */
-  protected readonly enunciado = computed(() =>
-    enunciadoEm(this.sessao().exercicio(), this.i18n.idioma()),
+  private readonly historias = inject(HistoriasService);
+
+  /**
+   * O enunciado, vestido de história quando houver uma.
+   *
+   * A ordem importa: primeiro a história, depois o enunciado de sempre. Um
+   * `undefined` do serviço — LLM fora do ar, fila vazia, valores que não
+   * servem — devolve exatamente o site de antes, e é por isso que 130 tópicos
+   * não mudam de comportamento.
+   */
+  protected readonly enunciado = computed(() => {
+    const exercicio = this.sessao().exercicio();
+    const idioma = this.i18n.idioma();
+    const declaracao = this.gerador().problemaDeTexto;
+    const dados = exercicio.dadosDoProblema;
+
+    if (declaracao !== undefined && dados !== undefined) {
+      const vestido = this.historias.vestir(exercicio.id, dados, idioma, declaracao.contrato);
+
+      if (vestido !== undefined) {
+        return vestido;
+      }
+    }
+
+    return enunciadoEm(exercicio, idioma);
+  });
+
+  /** Há história neste exercício? É o que decide o botão de descarte. */
+  protected readonly comHistoria = computed(() =>
+    this.historias.temHistoria(this.sessao().exercicio().id),
   );
+
+  /** A LLM está escrevendo um lote agora? É o que explica a espera. */
+  protected readonly preparandoHistorias = computed(() => this.historias.preparando());
 
   protected readonly dica = computed(() => dicaEm(this.sessao().exercicio(), this.i18n.idioma()));
 
@@ -233,6 +265,31 @@ export class AreaTreino {
     });
 
     this.destroi.onDestroy(() => this.emFoco.limpar());
+
+    /**
+     * Pede uma história para o exercício que está na tela.
+     *
+     * Num `effect` e não num `computed`: atribuir e repor a fila são efeitos.
+     * O exercício já está visível quando isto roda — a história veste o texto
+     * depois, se chegar, e não chegar é um caminho normal.
+     */
+    effect(() => {
+      const exercicio = this.sessao().exercicio();
+      const gerador = this.gerador();
+      const declaracao = gerador.problemaDeTexto;
+      const dados = exercicio.dadosDoProblema;
+
+      if (declaracao === undefined || dados === undefined) {
+        return;
+      }
+
+      this.historias.atribuir(exercicio.id, gerador.topicoId, exercicio.nivel, declaracao, dados);
+    });
+  }
+
+  /** «Esta história está errada»: o enunciado de sempre volta na hora. */
+  protected descartarHistoria(): void {
+    this.historias.descartar(this.sessao().exercicio().id);
   }
 
   /** O texto de apoio do campo de resposta, na língua da interface. */

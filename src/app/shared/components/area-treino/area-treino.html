@@ -57,6 +57,19 @@
     @if (dica(); as dica) {
       <p class="dica">{{ dica }}</p>
     }
+    <!-- O portão confere formato, não sentido: uma história pode passar e
+         ainda assim perguntar outra coisa. No modo ao vivo não há revisão
+         antes de publicar, então quem revisa é quem estuda. -->
+    @if (comHistoria()) {
+      <button type="button" class="descartar-historia" (click)="descartarHistoria()">
+        {{ i18n.t('treino.historiaErrada') }}
+      </button>
+    }
+    <!-- Aviso, não espera: o exercício já está na tela. Ele existe para
+         explicar por que o próximo pode vir com história e este não. -->
+    @if (preparandoHistorias()) {
+      <p class="preparando" role="status">{{ i18n.t('treino.preparandoHistorias') }}</p>
+    }
   </div>
 
   <app-campo-resposta

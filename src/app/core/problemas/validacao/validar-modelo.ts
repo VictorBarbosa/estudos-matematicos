@@ -50,7 +50,8 @@ export type MotivoDeRecusa =
   | 'curto'
   | 'longo'
   | 'latex'
-  | 'metatexto';
+  | 'metatexto'
+  | 'palavra-proibida';
 
 export interface Recusa {
   readonly ok: false;
@@ -204,7 +205,12 @@ function semLacunas(texto: string): string {
   return texto.replace(/\{\d+\}/g, ' ');
 }
 
-function conferirIdioma(texto: string, lacunas: number): MotivoDeRecusa[] {
+function conferirIdioma(
+  texto: string,
+  lacunas: number,
+  proibidas: readonly string[],
+  repetiveis: readonly number[],
+): MotivoDeRecusa[] {
   const motivos: MotivoDeRecusa[] = [];
   const aparado = texto.trim();
 
@@ -229,7 +235,7 @@ function conferirIdioma(texto: string, lacunas: number): MotivoDeRecusa[] {
 
     if (vezes === 0) {
       motivos.push('lacuna-faltando');
-    } else if (vezes > 1) {
+    } else if (vezes > 1 && !repetiveis.includes(esperado)) {
       motivos.push('lacuna-repetida');
     }
   }
@@ -268,6 +274,14 @@ function conferirIdioma(texto: string, lacunas: number): MotivoDeRecusa[] {
     motivos.push('metatexto');
   }
 
+  // Palavras que o tópico proíbe. Em química são as que CLASSIFICAM a
+  // substância — «sal», «ácido», «polímero» —, porque a LLM não sabe o que
+  // está na equação: ela recebeu a fórmula, não a identidade. Chamar H₂O de
+  // sal é química falsa com aparência de verdadeira.
+  if (proibidas.some((proibida) => palavras.includes(proibida.toLocaleLowerCase('pt-BR')))) {
+    motivos.push('palavra-proibida');
+  }
+
   return motivos;
 }
 
@@ -277,12 +291,28 @@ function conferirIdioma(texto: string, lacunas: number): MotivoDeRecusa[] {
  * `lacunas` é quantos valores o gerador do tópico vai substituir — não é
  * negociável pela LLM, e um texto com lacuna a mais ou a menos é inútil
  * porque o enunciado sairia com `{2}` na tela ou com um dado escondido.
+ *
+ * `proibidas` é por tópico, e não global, por um motivo prático: «sal» tem de
+ * ser recusado numa história de estequiometria, em que a LLM não sabe o que
+ * está na equação, e tem de ser aceito numa de razão e proporção, em que sal
+ * é só o que se põe na panela.
+ *
+ * `repetiveis` corrige uma regra que nasceu errada. Exigir cada lacuna uma vez
+ * só vale para NÚMERO — o mesmo valor duas vezes confunde quem lê. Para
+ * FÓRMULA não vale: «quer saber a massa de {2}… quantos gramas de {2}
+ * resultam?» é escrita natural, e era recusada. Quem repete é a substância,
+ * não o dado.
  */
-export function validarModelo(bruto: ModeloBruto, lacunas: number): Aprovacao | Recusa {
+export function validarModelo(
+  bruto: ModeloBruto,
+  lacunas: number,
+  proibidas: readonly string[] = [],
+  repetiveis: readonly number[] = [],
+): Aprovacao | Recusa {
   const motivos = new Set<MotivoDeRecusa>();
 
   for (const idioma of IDIOMAS) {
-    for (const motivo of conferirIdioma(bruto[idioma] ?? '', lacunas)) {
+    for (const motivo of conferirIdioma(bruto[idioma] ?? '', lacunas, proibidas, repetiveis)) {
       motivos.add(motivo);
     }
   }

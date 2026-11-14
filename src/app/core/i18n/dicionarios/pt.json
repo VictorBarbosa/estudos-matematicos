@@ -1166,6 +1166,7 @@
     "etapaVencida": "Etapa vencida!",
     "falta": "Falta",
     "faltaPara": "Falta para liberar a próxima etapa: {itens}.",
+    "historiaErrada": "Esta história está errada",
     "irPara": "Ir para {titulo}",
     "irParaProva": "Fazer a prova final de {sessao}",
     "nadaFalta": "Nada: a próxima etapa já está liberada.",
@@ -1174,6 +1175,7 @@
     "ou": "ou",
     "paraAbrir": "Para abrir a próxima etapa:",
     "porTipo": "E {quantos} acertos em cada tipo de exercício:",
+    "preparandoHistorias": "Preparando problemas nos três idiomas — isto roda no seu computador.",
     "proximo": "Próximo exercício",
     "respostaCorreta": "Resposta correta:",
     "resumoOperacoes": ", com as {quantas} operações praticadas",
@@ -1183,9 +1185,9 @@
     "suaResposta": "Sua resposta",
     "subir": "{quantos} acerto(s) seguido(s) para subir",
     "subiu": "Nível {nivel} — os exercícios ficam mais exigentes.",
+    "trancadoPelaSurpresa": "Este tópico está trancado por uma reprovação na prova surpresa. O progresso foi zerado de propósito: vença o critério de novo para destrancá-lo.",
     "verificar": "Verificar",
-    "zeraComErro": "(zera a cada erro)",
-    "trancadoPelaSurpresa": "Este tópico está trancado por uma reprovação na prova surpresa. O progresso foi zerado de propósito: vença o critério de novo para destrancá-lo."
+    "zeraComErro": "(zera a cada erro)"
   },
   "trilha": {
     "barra": "Progresso na trilha: {percentual} por cento",

@@ -23,7 +23,7 @@ export interface DadoDoProblema {
   /** O que esse valor é, em português, para a LLM entender o papel dele. */
   readonly significado: string;
   /** Inteiro de contagem, decimal de medida, ou dinheiro. */
-  readonly tipo: 'inteiro' | 'decimal' | 'dinheiro';
+  readonly tipo: 'inteiro' | 'decimal' | 'dinheiro' | 'formula';
   /** A faixa que o gerador sorteia, quando ela restringe a história. */
   readonly faixa?: readonly [number, number];
 }
@@ -44,6 +44,15 @@ export interface PedidoDeProblema {
   readonly quantas: number;
   /** Contextos preferidos, para a história não ser sempre de loja. */
   readonly contextos?: readonly string[];
+  /**
+   * Palavras que este tópico não aceita no texto.
+   *
+   * Em química são as que classificam a substância: a LLM recebeu a fórmula,
+   * não a identidade, e chamar H₂O de «sal» é química falsa com aparência de
+   * verdadeira. O validador recusa quem as usa, então a lista serve duas
+   * vezes — como instrução e como portão.
+   */
+  readonly proibidas?: readonly string[];
 }
 
 /**
@@ -74,6 +83,9 @@ const TIPO_EM_PALAVRAS: Readonly<Record<DadoDoProblema['tipo'], string>> = {
   inteiro: 'um número inteiro de contagem (pessoas, peças, voltas)',
   decimal: 'uma medida, que pode ter casas decimais',
   dinheiro: 'um valor em dinheiro, com centavos',
+  formula:
+    'uma FÓRMULA QUÍMICA que o site escreve (H₂O, CaCO₃) — você não a inventa, só se refere ' +
+    'a ela, como em «o reagente {n}»',
 };
 
 /**
@@ -95,9 +107,14 @@ const REGRAS = [
   'No label such as "Problem:", "Answer:" or "Here is". Start with the story.',
   'End with the question, and the question must ask exactly what is requested.',
   'At most two sentences plus the question. It is read on a phone screen.',
-  'Do not state the unit or the number of decimal places: the site appends that.',
+  'State the unit of each DATUM when it has one ("{0} grams of {1}"): without it the number ' +
+    'means nothing.',
+  'Never state the unit or the number of decimal places OF THE ANSWER: the site appends that, ' +
+    'and it must match what the corrector requires.',
   'Portuguese from Brazil, French from Quebec, plain international English.',
   'Invent no brand names, no real people and no implausible context.',
+  'Never invent a chemical substance, reaction or formula. A placeholder of type FÓRMULA is ' +
+    'filled by the site with the real formula: refer to it, do not replace it by a name.',
 ];
 
 export interface PromptDeProblema {
@@ -140,6 +157,14 @@ export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
     `A pergunta deve cobrar: ${pedido.pergunta}${pedido.unidade ? ` (a resposta sai em ${pedido.unidade})` : ''}.`,
     `Carga de leitura (nível ${pedido.nivel}): ${CARGA_DE_LEITURA[pedido.nivel]}`,
     `Contextos possíveis: ${contextos}. Varie entre eles.`,
+    ...(pedido.proibidas === undefined || pedido.proibidas.length === 0
+      ? []
+      : [
+          '',
+          `NÃO use estas palavras, em nenhuma das três línguas: ${pedido.proibidas.join(', ')}. ` +
+            'Você não sabe o que as fórmulas representam — não classifique as substâncias, ' +
+            'não diga que sobra ou falta reagente, e não invente nenhuma etapa da reação.',
+        ]),
     '',
     `Escreva ${pedido.quantas} problemas DIFERENTES entre si — contextos diferentes, não o ` +
       'mesmo texto com outra palavra.',

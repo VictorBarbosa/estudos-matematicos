@@ -281,3 +281,28 @@
   background: var(--erro-suave);
   font-size: var(--texto-sm);
 }
+
+/* O botão de descarte é discreto de propósito: ele existe para o caso raro em
+   que a história passou pelo portão e ainda assim não faz sentido. */
+.descartar-historia {
+  margin: var(--esp-2) 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--texto-suave);
+  font-size: 0.8125rem;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--erro);
+  }
+}
+
+/* Aviso, não espera: o exercício já está na tela quando ele aparece. */
+.preparando {
+  margin: var(--esp-2) 0 0;
+  color: var(--texto-suave);
+  font-size: 0.8125rem;
+}
