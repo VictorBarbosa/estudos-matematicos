@@ -1,7 +1,7 @@
 import { CARREGAR_GERADOR } from '@core/treino/registro-geradores/registro-geradores';
 import { criarRng } from '@core/treino/rng/rng';
 import { NIVEIS, enunciadoEm } from '@core/treino/models/treino.model';
-import { derivarProblema } from '@core/problemas/derivacao/derivar-problema';
+import { admiteHistoria, derivarProblema } from '@core/problemas/derivacao/derivar-problema';
 
 /**
  * Quantos tópicos chamam a LLM — e o piso que não pode cair.
@@ -28,6 +28,24 @@ import { derivarProblema } from '@core/problemas/derivacao/derivar-problema';
  * declaração escrita à mão), descer falha e obriga a olhar.
  */
 const PISO_DE_TOPICOS = 58;
+
+/**
+ * O piso por área da geometria, e por que ele é do tópico e não só do total.
+ *
+ * Medido em 14/11: `poliedros` era 0% e os outros cinco 66 a 100%. A média
+ * escondia o zero — cinco tópicos bons puxavam a conta e o sexto não chamava a
+ * LLM nenhuma vez. `poliedros` ficou em 35% porque só a forma de Euler aceita
+ * história: as outras perguntam sobre um poliedro NOMEADO, e o nome carrega a
+ * resposta.
+ */
+const PISO_DA_GEOMETRIA: Readonly<Record<string, number>> = {
+  'angulos-e-triangulos': 80,
+  'semelhanca-e-pitagoras': 95,
+  'areas-de-figuras-planas': 95,
+  'circulo-e-poligonos': 95,
+  poliedros: 30,
+  'solidos-e-volumes': 95,
+};
 
 describe('cobertura da chamada à LLM', () => {
   it('nenhum tópico perde a chamada sem alguém decidir isso', async () => {
@@ -109,6 +127,57 @@ describe('cobertura da chamada à LLM', () => {
     ]) {
       expect(derivarProblema(enunciado, 'Física'), enunciado).not.toBeNull();
     }
+  });
+
+  it('cada tópico de geometria chama, e não só a área no total', async () => {
+    for (const [id, piso] of Object.entries(PISO_DA_GEOMETRIA)) {
+      const gerador = await CARREGAR_GERADOR[id]!();
+      const rng = criarRng(4242);
+      let chamam = 0;
+      const total = 240;
+
+      for (const nivel of NIVEIS) {
+        for (let i = 0; i < 60; i++) {
+          const exercicio = gerador.gerar(nivel, rng);
+          const chama =
+            gerador.problemaDeTexto !== undefined
+              ? exercicio.dadosDoProblema !== undefined
+              : derivarProblema(enunciadoEm(exercicio, 'pt'), id) !== null;
+          if (chama) {
+            chamam++;
+          }
+        }
+      }
+
+      const percentual = Math.round((chamam / total) * 100);
+
+      expect(percentual, `${id}: ${percentual}% chamam, o piso é ${piso}%`).toBeGreaterThanOrEqual(
+        piso,
+      );
+    }
+  });
+
+  it('metro sozinho é unidade, e a unidade dentro do contrato também conta', () => {
+    /*
+     * As duas falhas que faziam `poliedros` e metade da geometria ficarem de
+     * fora sem ninguém notar: `m` não estava na lista de unidades (só `cm`,
+     * `km`, `m²` e `m³`), e a busca era feita no texto SEM parênteses — o que
+     * descartava «(em graus)», a única unidade de um enunciado de ângulos.
+     */
+    expect(derivarProblema('A sombra de uma torre mede 24 m. Qual é a altura?', 'X')).not.toBeNull();
+
+    /*
+     * O segundo é o caso que a barreira de unidade aceita e a generalização
+     * recusa — e as duas coisas estão certas: o contrato diz «em graus», mas
+     * «octógono» não tem dígito nenhum para virar lacuna, e essa é a
+     * diferença entre «dá para reescrever» e «há o que generalizar».
+     */
+    expect(admiteHistoria('Qual é a soma dos ângulos internos de um octógono? (em graus)')).toBe(
+      true,
+    );
+    expect(
+      derivarProblema('Qual é a soma dos ângulos internos de um octógono? (em graus)', 'X'),
+    ).toBeNull();
   });
 
   it('a derivação libera o numeral de enredo, e veda o que for dado', () => {

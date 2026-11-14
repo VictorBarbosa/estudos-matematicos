@@ -91,10 +91,37 @@ const ENTRE_PARENTESES = /\([^)]*\)/g;
  */
 const GRANDEZA = new RegExp(
   String.raw`\d\s*(?:cm|mm|km|dm|m²|m³|kg|mg|ml|mL|litros?|mililitros?|gramas?|quilogramas?|` +
-    String.raw`horas?|minutos?|dias?|anos?|meses|graus?|%|°)` +
+    String.raw`horas?|minutos?|dias?|anos?|meses|graus?|newtons?|joules?|volts?|watts?|%|°)` +
+    /*
+     * O metro sozinho, e ele faltava.
+     *
+     * Foi o erro mais caro desta barreira: sem `m`, todo enunciado de
+     * geometria em metros — «uma torre mede 24 m», «o poste projeta 2 m» — era
+     * lido como «sem unidade» e o tópico nem tentava. Geometria é justamente
+     * onde o metro mais aparece, e a cobertura caía de 83% para 100% de nada.
+     *
+     * `\b` no fim para não casar o `m` de «m²« nem de uma palavra; e o espaço
+     * é exigido, senão «5min» e «3metros» ainda passariam pela colada.
+     */
+    String.raw`|\d\s*m\b` +
     String.raw`|R\$|\$|reais`,
   'i',
 );
+
+/**
+ * A unidade citada no contrato, sem número ao lado.
+ *
+ * «Qual é a soma dos ângulos internos de um octógono? (em graus)» não tem
+ * dígito antes de «graus», e a grandeza está só no parêntese — que é onde o
+ * site escreve a unidade da RESPOSTA. Sem esta busca, todo o tópico de ângulos
+ * internos de polígono ficava de fora por «não ter unidade», quando o exercício
+ * é de graus do começo ao fim.
+ *
+ * Só vale depois de «em»/«en»/«in», que é a forma do contrato: «(em graus)»,
+ * «(en degrés)». Um «graus» solto no meio de uma frase não serve de prova.
+ */
+const UNIDADE_NO_CONTRATO =
+  /\(\s*(?:em|en|in)\s+[^)]*?(?:graus|degrés|degrees|metros?|metres?|centímetros?|cm|mm|km|m²|m³|kg|gramas?|litros?|l\b|segundos?|minutos?|horas?|newtons?)/i;
 
 /** A unidade colada ao número, sem exigir espaço: «4cm» também vale. */
 const GRANDEZA_COLADA = new RegExp(String.raw`\d(?:cm|mm|km|kg|mg|ml|mL|m²|m³)`, 'i');
@@ -156,9 +183,22 @@ export function temAlgebra(enunciado: string): boolean {
  * seria falsa, e um exercício falso é pior que exercício nenhum.
  */
 export function admiteHistoria(enunciado: string): boolean {
-  const limpo = enunciado.replace(ENTRE_PARENTESES, '');
-
-  return GRANDEZA.test(limpo) || GRANDEZA_COLADA.test(limpo);
+  /*
+   * A busca é no texto INTEIRO, parênteses inclusive.
+   *
+   * Antes ela era feita no texto sem parênteses, e isso descartava a unidade
+   * que o próprio contrato carrega: «Qual é a soma dos ângulos internos de um
+   * octógono? (em graus)» não tem grau nenhum fora dos parênteses, e a barreira
+   * lia «sem unidade» — quando o exercício é justamente de graus.
+   *
+   * O parêntese só sai na hora de generalizar, onde «(2 casas decimais)»
+   * viraria lacuna. São perguntas diferentes e mereciam buscas diferentes.
+   */
+  return (
+    GRANDEZA.test(enunciado) ||
+    GRANDEZA_COLADA.test(enunciado) ||
+    UNIDADE_NO_CONTRATO.test(enunciado)
+  );
 }
 
 interface Derivacao {
