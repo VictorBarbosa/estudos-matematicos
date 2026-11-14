@@ -1,315 +1,280 @@
 # Plano de adições ao currículo — Preparação para Engenharia Aeroespacial
 
-**Tipo de documento:** especificação de conteúdo e implementação para outro LLM ou agente de programação  
-**Idioma do conteúdo:** português  
-**Fonte de referência:** `aulas.md`, fornecido pelo usuário  
-**Escopo:** ampliar o currículo preparatório sem modificar ou prejudicar a trilha existente
+**Revisado em 14/11/2026**, conferindo cada premissa contra o código. O original está no
+histórico (`a6d87b8`), e a seção 15 lista o que mudou e por quê.
+
+**Tipo de documento:** especificação de conteúdo e implementação
+**Escopo:** ampliar o currículo preparatório sem prejudicar a trilha existente
 
 ---
 
 ## 1. Objetivo
 
-Este documento transforma a análise do arquivo `aulas.md` em uma proposta concreta de adições ao site de estudos matemáticos.
+Fortalecer a preparação matemática e física para a graduação em Engenharia Aeroespacial,
+complementando a formação existente sem reproduzir uma graduação e sem alterar a sequência
+que já funciona.
 
-O objetivo é fortalecer a preparação matemática e física para uma futura graduação em Engenharia Aeroespacial. As adições devem complementar a formação existente, sem tentar reproduzir uma graduação completa e sem alterar a sequência que já funciona.
+**O princípio que decide o que entra** já está escrito no README, e é o critério deste
+documento:
 
-O currículo de referência contém **118 aulas, distribuídas em 16 áreas e 10 faixas**, desde matemática básica até cálculo multivariável e equações diferenciais.
+> O objetivo é chegar ao primeiro ano de engenharia sem buracos, **não formar um engenheiro**.
 
-## 2. Instruções obrigatórias de preservação
+Toda proposta abaixo foi medida contra essa frase. Três dos cinco módulos do plano original
+não passam nela — ver a seção 10.
 
-As regras abaixo têm prioridade sobre qualquer decisão de implementação:
+## 2. Premissas, conferidas contra o código
 
-1. **Não excluir nenhuma das 118 aulas existentes.**
-2. **Não alterar a ordem das aulas existentes.**
-3. **Não renumerar as aulas existentes.**
-4. **Não substituir aulas existentes por aulas novas.**
-5. **Não tornar os módulos complementares pré-requisitos obrigatórios para concluir a trilha principal.**
-6. Criar uma camada separada de conteúdo, com um nome como **“Complementos para Engenharia Aeroespacial”**.
-7. Identificar claramente os pré-requisitos, o nível e a posição recomendada de cada aula nova.
-8. Preservar identificadores, rotas, progresso do usuário, configurações e estado das aulas existentes.
-9. Antes de publicar, validar a contagem da trilha, a barra lateral, a navegação e a persistência do progresso.
+| O que o plano original afirmava                               | O que o código diz                                                                 |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| 118 aulas                                                     | **confere** — 118 tópicos                                                          |
+| 16 áreas                                                      | **confere**                                                                        |
+| 10 faixas                                                     | **não existe.** O currículo se organiza em áreas; não há «faixa» em `curriculo.ts` |
+| Fatoração, Inequações e Sistemas lineares estão desabilitadas | **não.** As três existem e estão `pronto: true`                                    |
+| Estudo de sinal está desabilitado e deve ser reativado        | **não existe**, nunca existiu                                                      |
 
-### Orientação técnica importante
+As contagens saem de `src/app/curriculo/curriculo.ts`: 7 + 9 + 6 + 13 + 7 + 7 + 5 + 17 + 4 +
+3 + 2 + 11 + 10 + 6 + 7 + 4 = 118.
 
-O arquivo original informa que `src/app/curriculo/curriculo.ts` é a fonte única da ordem da trilha principal. Portanto, a implementação mais segura é cadastrar os novos módulos em uma estrutura de dados separada, sem inserir aulas novas no array principal e sem alterar a ordenação atual.
+## 3. Instruções obrigatórias de preservação
 
-Se a arquitetura do projeto exigir integração com estruturas existentes, preservar a separação lógica: a trilha principal continua independente dos complementos. Não fazer refatorações amplas como parte desta tarefa.
+Mantidas do original, com uma correção de método:
 
-## 3. Aulas existentes que devem ser reativadas
-
-No plano pessoal do usuário, recomenda-se reativar estas quatro aulas que aparecem como desabilitadas no documento de referência:
-
-| Aula existente | Ação recomendada | Justificativa |
-|---|---|---|
-| Fatoração | **Reativar** | É usada em manipulação algébrica, funções racionais e técnicas de integração. |
-| Inequações | **Reativar** | Ajuda a trabalhar intervalos, domínios e condições matemáticas. |
-| Estudo de sinal | **Reativar** | É útil para analisar funções, raízes, intervalos e otimização. |
-| Sistemas lineares | **Reativar** | Prepara para matrizes, álgebra linear e modelagem de sistemas. |
-
-### Aulas que podem continuar fora da trilha prioritária
-
-| Aula existente | Recomendação |
-|---|---|
-| MMC e MDC | Pode continuar desabilitada na trilha pessoal, se essa for a preferência do usuário. Não excluir do currículo completo. |
-| Círculo e polígonos | Pode continuar desabilitada na trilha pessoal, se essa for a preferência do usuário. Não excluir do currículo completo. |
-
-**Importante:** desabilitar uma aula no plano pessoal não significa apagá-la do currículo ou do código.
+1. Não excluir, reordenar, renumerar ou substituir nenhuma das 118 aulas.
+2. Não tornar os complementos pré-requisitos da trilha principal.
+3. Criar camada separada, **Complementos para Engenharia Aeroespacial**.
+4. Declarar pré-requisitos, nível e posição de cada aula nova.
+5. Preservar identificadores, rotas, progresso, configurações e estado.
+6. **A validação é por teste, não por inspeção.** O repositório já guarda contagem de trilha,
+   variedade por nível, dicas de estreia, contrato de casas decimais, leitura de unidade e
+   completude de tradução. Um complemento novo passa por todos eles, e é isso que substitui
+   o checklist conferido a olho (ver a seção 12).
 
 ---
 
-## 4. Módulo complementar A — Álgebra Linear
+## 4. Seção 3 do original — o que ela pedia não é trabalho de código
 
-**Prioridade:** alta  
-**Posição sugerida:** depois da Faixa 4 — Vetores, matrizes e coordenadas  
-**Tipo:** complemento matemático
+O plano mandava «reativar» quatro aulas. Conferindo:
 
-### Justificativa
+| Aula                | Estado real            |
+| ------------------- | ---------------------- |
+| Fatoração           | existe, `pronto: true` |
+| Inequações          | existe, `pronto: true` |
+| Sistemas lineares   | existe, `pronto: true` |
+| **Estudo de sinal** | **não existe**         |
 
-O site já apresenta vetores, matrizes, determinantes, escalonamento e matriz inversa. O novo módulo deve aprofundar esses fundamentos, sem repetir as aulas existentes.
+As três primeiras estão ativas no código. Se aparecem desligadas, é no **plano pessoal** —
+a tela de Configurações permite tirar tópicos da trilha, e isso vive no navegador do aluno,
+não no repositório. **Reativá-las é marcar três caixas em Configurações; nenhuma linha de
+código muda, e nenhuma deve mudar.** Mexer no currículo por isso seria confundir preferência
+pessoal com conteúdo.
 
-### Aulas propostas
+MMC e MDC e Círculo e polígonos: mesma coisa, no sentido inverso. Desligar no plano pessoal
+não apaga do currículo.
 
-| Nova aula | Conteúdo a abordar | Aplicação possível |
-|---|---|---|
-| Espaços vetoriais | Subespaços, combinações lineares, conjunto gerador, base e dimensão. | Organização matemática de estados, forças e grandezas. |
-| Transformações lineares | Núcleo, imagem, posto e mudança de coordenadas. | Transformações entre referenciais e representação de sistemas. |
-| Autovalores e autovetores | Cálculo e interpretação geométrica de autovalores e autovetores. | Estabilidade, vibrações e dinâmica de sistemas. |
-| Diagonalização | Matrizes diagonalizáveis e interpretação de sistemas em uma base adequada. | Simplificação de modelos dinâmicos e análise de modos. |
-| Ortogonalidade e mínimos quadrados | Vetores ortogonais, projeções, bases ortogonais e ajuste por mínimos quadrados. | Análise de dados, aproximações e métodos computacionais. |
-
-### Pré-requisitos
-
-- Aulas atuais de vetores e matrizes.
-- Vetores no plano e no espaço.
-- Operações com matrizes e determinantes.
-- Escalonamento de sistemas lineares.
-
-### Diretriz de implementação
-
-Criar uma área própria de Álgebra Linear. Não duplicar as aulas existentes sobre matrizes, determinantes, escalonamento ou vetores. O módulo novo deve começar a partir desses conhecimentos.
+**Estudo de sinal é criação, não reativação** — e já está registrado como lacuna em
+`avaliacao-estudos-matematicos.md`, na lista de pré-requisitos que travam tópicos de cima.
+Ver a seção 5.
 
 ---
 
-## 5. Módulo complementar B — Matemática Aplicada Avançada
+## 5. Prioridade zero: os pré-requisitos que travam o que já existe
 
-**Prioridade:** alta a média  
-**Posição sugerida:** depois do Cálculo 4  
-**Tipo:** complemento matemático avançado
+**Isto não estava no plano original, e deveria vir antes de qualquer módulo novo.** A
+avaliação do site já identificou lacunas que não são aprofundamento: são buracos no caminho
+de tópicos que já estão no ar.
 
-### Justificativa
+| Falta                           | Trava                                         | Por que vem primeiro                                                           |
+| ------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Estudo de sinal**             | aplicações da derivada, inequações do 2º grau | o aluno precisa dele para analisar crescimento e concavidade, e ele não existe |
+| **Trigonometria inversa**       | técnicas de integração                        | sem ela, a substituição trigonométrica não tem como ser ensinada               |
+| **Substituição trigonométrica** | integrais com raízes                          | listada como ausente na avaliação, depende da anterior                         |
 
-O currículo já inclui cálculo diferencial e integral, cálculo multivariável e equações diferenciais ordinárias (EDOs). As adições ampliam esse conjunto para problemas com grandezas acopladas, sinais e campos físicos.
-
-### Aulas propostas
-
-| Nova aula | Conteúdo a abordar | Pré-requisito principal |
-|---|---|---|
-| Sistemas de equações diferenciais | Sistemas acoplados de EDOs e introdução à solução por métodos matriciais. | EDOs de primeira e segunda ordem; álgebra linear. |
-| Transformada de Laplace | Transformada, transformada inversa e aplicação à solução de EDOs. | Integrais e EDOs. |
-| Séries de Fourier | Representação periódica por senos e cossenos e interpretação dos coeficientes. | Trigonometria e integração. |
-| Introdução às equações diferenciais parciais (EDPs) | Noções de EDPs e exemplos relacionados a calor, ondas e fluidos. | Cálculo multivariável e integral; familiaridade com EDOs. |
-
-### Ordem didática recomendada
-
-1. Séries de Fourier podem ser estudadas depois de trigonometria e integração.
-2. Sistemas de EDOs e Transformada de Laplace devem ser estudados depois de Cálculo 4 e Álgebra Linear.
-3. Introdução às EDPs deve ficar por último, como tópico avançado.
-
-### Restrições
-
-- Não exigir esses tópicos para concluir a trilha principal.
-- Não exigir esses tópicos como condição para considerar o usuário preparado para iniciar a graduação.
-- Identificar claramente as EDPs como conteúdo avançado e introdutório nesta etapa.
+Três aulas que **destravam conteúdo já publicado** valem mais que trinta que acrescentam uma
+camada nova. Elas também são baratas: entram nas áreas existentes, com os pré-requisitos já
+no lugar.
 
 ---
 
-## 6. Módulo complementar C — Mecânica dos Materiais e Estruturas
+## 6. O que uma aula nova custa neste repositório
 
-**Prioridade:** média  
-**Posição sugerida:** após Física clássica, com cálculo como apoio  
-**Tipo:** fundamentos de engenharia
+O plano original tratava cada aula como uma linha de tabela. Aqui ela é, no mínimo:
 
-### Justificativa
+| Arquivo                           | O quê                                                      |
+| --------------------------------- | ---------------------------------------------------------- |
+| `curriculo.ts`                    | entrada na área, na posição certa da ordem de aprendizagem |
+| `<area>.routes.ts`                | rota com carregamento sob demanda                          |
+| `<topico>.ts` / `.html` / `.scss` | a aba **Explorar**, interativa                             |
+| `<topico>.teoria.ts`              | os verbetes dos popups, com demonstração                   |
+| `<topico>.gerador.ts`             | o gerador de exercícios, com armadilhas diagnosticadas     |
+| `<topico>.spec.ts`                | os testes do tópico                                        |
+| `<topico>.i18n.json`              | os textos da aba Explorar, em três idiomas                 |
 
-O currículo já contém leis de Newton, trabalho e energia, estática, torque e dinâmica rotacional. Falta uma introdução organizada à resposta dos materiais quando submetidos a cargas.
+E ela precisa passar nos guardas globais, que não negociam:
 
-### Aulas propostas
+- **variedade**: ao menos 60 enunciados distintos por nível, medidos em 1 200 sorteios;
+- **dica de estreia**: toda forma de pergunta tem dica no nível em que aparece pela primeira
+  vez;
+- **contrato de casas decimais**: o enunciado que promete 2 casas aceita 2 casas;
+- **unidade digitada**: o gabarito exibido, mais a unidade do enunciado, é aceito;
+- **armadilhas**: nenhuma coincide com o gabarito, e cada uma diagnostica um erro real;
+- **fórmulas**: todo LaTeX compila, todo id de conceito citado existe;
+- **determinismo**: o gerador produz o mesmo exercício para a mesma semente.
 
-| Nova aula | Conteúdo a abordar |
-|---|---|
-| Tensão e deformação | Tensão normal e de cisalhamento; deformação; interpretação física das grandezas. |
-| Lei de Hooke e módulo de elasticidade | Regime elástico, relação tensão-deformação e módulo de Young. |
-| Coeficiente de Poisson | Deformação transversal e longitudinal e comportamento elástico básico. |
-| Flexão | Momento fletor, tensão de flexão e deformação de vigas em nível introdutório. |
-| Torção | Torque aplicado, tensão de cisalhamento e deformação angular em eixos. |
-| Flambagem | Instabilidade de elementos comprimidos e introdução à carga crítica. |
-| Fadiga e falha de materiais | Cargas cíclicas, vida em fadiga e modos gerais de falha. |
-| Introdução aos materiais compósitos | Matriz, reforço, propriedades direcionais e aplicações aeroespaciais. |
-
-### Conexão aeroespacial
-
-Este módulo prepara a compreensão de asas, fuselagens, estruturas, suportes, componentes de veículos espaciais e seleção preliminar de materiais.
-
-### Limite de profundidade
-
-Manter o módulo em nível introdutório. Dimensionamento estrutural avançado, análise estrutural especializada e projeto de componentes devem permanecer para etapas posteriores da formação universitária.
+Uma estimativa honesta é **de dois a quatro dias de trabalho por aula**, não uma hora. Os
+cinco módulos do plano original somam **30 aulas** — ou seja, de dois a quatro **meses**.
+Este número é a informação que faltava para decidir o que cortar.
 
 ---
 
-## 7. Módulo complementar D — Mecânica dos Fluidos e Aerodinâmica
+## 7. Dívida que cada aula nova aumenta
 
-**Prioridade:** média  
-**Posição sugerida:** depois da aula atual “Fluidos e aerodinâmica”  
-**Tipo:** fundamentos de engenharia
+`levantamento-traducao.md`, medido em 13/11: dos 118 geradores, **3** têm o enunciado
+traduzido; dicas 2, diagnósticos 2. A resolução passo a passo e os 497 verbetes de teoria
+**não têm nem campo de tradução no modelo**.
 
-### Justificativa
-
-A aula atual apresenta pressão, empuxo, Bernoulli e sustentação. O complemento deve ampliar gradualmente a descrição do escoamento, começando pelas propriedades dos fluidos e avançando até escoamentos compressíveis.
-
-### Aulas propostas
-
-| Nova aula | Conteúdo a abordar |
-|---|---|
-| Viscosidade | Viscosidade dinâmica e cinemática; diferença entre comportamento idealizado e real. |
-| Equação da continuidade | Conservação de massa e relação entre área e velocidade em escoamentos simples. |
-| Número de Reynolds | Significado físico e relação com regimes de escoamento. |
-| Camada limite | Conceito, desenvolvimento próximo à superfície e separação em nível introdutório. |
-| Introdução às equações de Navier–Stokes | Significado dos termos e interpretação física; sem exigir solução avançada. |
-| Escoamento compressível | Densidade variável, velocidade do som e noções de escoamentos compressíveis. |
-| Número de Mach e ondas de choque | Regimes subsônico, transônico e supersônico; noções de ondas de choque. |
-
-### Sequência didática recomendada
-
-Viscosidade → Equação da continuidade → Número de Reynolds → Camada limite → Introdução a Navier–Stokes → Escoamento compressível → Número de Mach e ondas de choque.
-
-### Limite de profundidade
-
-Os últimos tópicos devem ser identificados como avançados. A introdução a Navier–Stokes deve explicar o significado físico e os termos da equação, sem exigir que o aluno resolva problemas avançados de dinâmica dos fluidos.
+O conteúdo já escrito soma ≈ 10 000 frases por traduzir. Cada aula nova acrescenta ≈ 85.
+Não é argumento contra crescer — é argumento para **escolher** o que cresce, e para decidir
+antes se a tradução acompanha ou fica para depois.
 
 ---
 
-## 8. Módulo complementar E — Sistemas de Controle
+## 8. Módulo A — Álgebra Linear · **recomendado**
 
-**Prioridade:** média  
-**Posição sugerida:** depois de Álgebra Linear e Matemática Aplicada Avançada  
-**Tipo:** fundamentos de engenharia
+**Posição:** depois de Vetores, matrizes e coordenadas · **5 aulas**
 
-### Justificativa
+Passa no critério da seção 1: álgebra linear é disciplina de **primeiro ano** de engenharia,
+e o site já tem exatamente os pré-requisitos — `matrizes-determinantes`,
+`escalonamento-e-inversa`, `vetores-no-plano`, `vetores-no-espaco`,
+`produto-escalar-vetorial`. Nenhuma das cinco existe hoje.
 
-O site já apresenta movimento, aceleração, oscilações e equações diferenciais. O novo módulo conecta a modelagem matemática ao comportamento de sistemas que precisam medir, corrigir e manter uma resposta desejada.
+| Aula                               | Conteúdo                                                           |
+| ---------------------------------- | ------------------------------------------------------------------ |
+| Espaços vetoriais                  | subespaços, combinações lineares, conjunto gerador, base, dimensão |
+| Transformações lineares            | núcleo, imagem, posto, mudança de coordenadas                      |
+| Autovalores e autovetores          | cálculo e interpretação geométrica                                 |
+| Diagonalização                     | matrizes diagonalizáveis e mudança para uma base adequada          |
+| Ortogonalidade e mínimos quadrados | projeções, bases ortogonais, ajuste                                |
 
-### Aulas propostas
-
-| Nova aula | Conteúdo a abordar |
-|---|---|
-| Malha aberta e malha fechada | Diferença entre sistemas sem realimentação e sistemas com realimentação. |
-| Realimentação (feedback) | Referência, erro, sensor, controlador, atuador e processo em um diagrama funcional. |
-| Funções de transferência | Relação entrada-saída no domínio de Laplace e interpretação introdutória de polos e zeros. |
-| Estabilidade | Resposta transitória, regime permanente e noções de estabilidade de sistemas. |
-| Controladores PID | Ações proporcional, integral e derivativa e efeito qualitativo de cada parcela. |
-| Espaço de estados | Variáveis de estado, representação matricial e relação com sistemas de EDOs. |
-
-### Pré-requisitos
-
-- Equações diferenciais.
-- Álgebra linear.
-- Transformada de Laplace.
-
-### Limite de profundidade
-
-O módulo deve ser uma introdução conceitual e matemática. Não deve se transformar em um curso de implementação de controle de voo, nem incluir instruções de construção ou operação de sistemas propulsivos ou veículos.
+Não duplicar as aulas existentes de matrizes, determinantes, escalonamento ou vetores: o
+módulo **começa** onde elas terminam.
 
 ---
 
-## 9. Ordem de implementação recomendada
+## 9. Módulo B — Matemática Aplicada · **recomendado em parte**
 
-| Etapa | O que fazer | Condição para avançar |
-|---|---|---|
-| 1 — Correções seguras | Reativar Fatoração, Inequações, Estudo de sinal e Sistemas lineares no plano pessoal. | Confirmar que a trilha continua correta e que o progresso foi preservado. |
-| 2 — Base matemática | Criar o módulo de Álgebra Linear. | Usar as aulas atuais de vetores e matrizes como pré-requisitos. |
-| 3 — Matemática aplicada | Criar Sistemas de EDOs, Transformada de Laplace, Séries de Fourier e Introdução às EDPs. | Manter o conteúdo avançado separado da trilha principal. |
-| 4 — Engenharia aplicada | Criar os módulos de Mecânica dos Materiais e Estruturas e de Mecânica dos Fluidos e Aerodinâmica. | Declarar pré-requisitos e nível introdutório ou avançado. |
-| 5 — Sistemas | Criar o módulo de Sistemas de Controle. | Disponibilizar depois de Álgebra Linear e Matemática Aplicada Avançada. |
+**Posição:** depois do Cálculo 4
 
-A ordem acima é uma ordem de implementação sugerida, não uma obrigação de tornar todos os módulos pré-requisitos uns dos outros. Os pré-requisitos de cada aula devem ser respeitados individualmente.
-
----
-
-## 10. Conteúdos que não devem ser adicionados nesta fase
-
-Nesta fase, não criar módulos extensos de:
-
-- Mecânica quântica avançada.
-- Relatividade geral.
-- Combustão avançada.
-- Projeto completo de motores ou foguetes.
-- Projeto estrutural aeroespacial avançado.
-
-Esses temas não são irrelevantes; apenas não são necessários para a próxima expansão do currículo preparatório.
-
-**Manter a aula atual “Propulsão de foguetes”.** Um aprofundamento especializado pode ser avaliado em outra etapa, depois de consolidada a base matemática, física e de engenharia.
+| Aula                        | Veredito                            | Razão                                                                              |
+| --------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------- |
+| **Séries de Fourier**       | **entra**                           | depende só de trigonometria e integração, que já existem; é primeiro e segundo ano |
+| **Transformada de Laplace** | **entra**                           | ferramenta de EDO, e o site já tem EDOs de 1ª e 2ª ordem                           |
+| **Sistemas de EDOs**        | **entra**, depois da Álgebra Linear | é onde autovalores ganham sentido físico                                           |
+| Introdução às EDPs          | **fica fora por ora**               | é conteúdo de segundo ou terceiro ano, e sem ele não falta nada no primeiro        |
 
 ---
 
-## 11. Química: preparação separada por enquanto
+## 10. Módulos C, D e E — **recomendo remover**
 
-Química pode ser importante para determinados caminhos de admissão e para estudos posteriores de materiais e propulsão.
+Esta é a mudança de fundo em relação ao plano original, e a decisão é do usuário. O
+argumento:
 
-Como os requisitos de admissão variam conforme a formação anterior e a rota de candidatura, manter a preparação de Química separada por enquanto. Antes de criar uma área obrigatória no site, conferir os requisitos oficiais aplicáveis ao histórico acadêmico do usuário.
+**Módulo C — Mecânica dos Materiais e Estruturas** (tensão, Hooke, Poisson, flexão, torção,
+flambagem, fadiga, compósitos). São **oito aulas de uma disciplina de graduação**. Nenhuma
+delas é pré-requisito de admissão, e nenhuma destrava conteúdo do site. «Resistência dos
+Materiais» é uma cadeira do segundo ano — cursá-la antes, por conta e em nível introdutório,
+não acelera a entrada e consome os meses que faltam para fechar as lacunas da seção 5.
 
-Não presumir que uma única lista de disciplinas de Química seja obrigatória para todos os candidatos.
+**Módulo D — Mecânica dos Fluidos** (viscosidade, continuidade, Reynolds, camada limite,
+Navier–Stokes, escoamento compressível, Mach). Mesmo argumento, com um agravante: o site já
+tem `fluidos-e-aerodinamica`, com pressão, empuxo, Bernoulli e sustentação — que é
+exatamente a parte de fluidos que cabe na preparação. As sete propostas são o curso.
 
----
+**Módulo E — Sistemas de Controle** (malha aberta e fechada, realimentação, funções de
+transferência, estabilidade, PID, espaço de estados). Disciplina de terceiro ano, e depende
+de Laplace e Álgebra Linear, que ainda não existem aqui.
 
-## 12. Checklist de validação antes de publicar
+Os três somam **21 das 30 aulas propostas** — de um e meio a três meses de trabalho — e
+nenhum ajuda a chegar ao primeiro ano sem buracos. Eles ajudam a chegar ao **terceiro**, o
+que é outra coisa, e para a qual a universidade existe.
 
-### Integridade da trilha principal
-
-- [ ] As 118 aulas originais continuam presentes.
-- [ ] As 10 faixas originais continuam presentes.
-- [ ] A ordem das aulas originais não foi alterada.
-- [ ] A numeração das aulas originais não foi alterada.
-- [ ] Nenhuma aula original foi substituída ou removida.
-- [ ] A contagem da trilha principal continua correta.
-
-### Separação dos complementos
-
-- [ ] Os novos conteúdos aparecem em uma área separada de complementos.
-- [ ] Os módulos complementares não são pré-requisitos obrigatórios da trilha principal.
-- [ ] Cada aula nova declara pré-requisitos.
-- [ ] Cada aula nova declara seu nível (introdutório, intermediário ou avançado).
-- [ ] Não há duplicação desnecessária de aulas existentes.
-
-### Integridade técnica e experiência do usuário
-
-- [ ] Identificadores e rotas existentes foram preservados.
-- [ ] O progresso das aulas existentes foi preservado.
-- [ ] As configurações pessoais de aulas habilitadas/desabilitadas foram preservadas.
-- [ ] A barra lateral continua mostrando a trilha principal corretamente.
-- [ ] A navegação dos módulos complementares funciona sem interferir na trilha principal.
-- [ ] A aplicação foi testada antes da publicação.
+**Se o objetivo mudou** — se não é mais «chegar preparado», mas «adiantar matéria de
+graduação» —, então os três fazem sentido e este documento precisa ser reescrito a partir
+de outro princípio. É a única pergunta aqui que eu não consigo responder.
 
 ---
 
-## 13. Resultado esperado
+## 11. Ordem recomendada
 
-O resultado desejado é:
+| Etapa | O quê                                                                   | Aulas | Por que nesta ordem                       |
+| ----- | ----------------------------------------------------------------------- | ----- | ----------------------------------------- |
+| 0     | Reativar no **plano pessoal** Fatoração, Inequações, Sistemas lineares  | 0     | três caixas em Configurações, zero código |
+| 1     | **Estudo de sinal**, trigonometria inversa, substituição trigonométrica | 3     | destravam conteúdo já publicado           |
+| 2     | **Álgebra Linear**                                                      | 5     | primeiro ano, pré-requisitos prontos      |
+| 3     | Fourier, Laplace, Sistemas de EDOs                                      | 3     | aproveitam a Álgebra Linear               |
+| —     | EDPs, Materiais, Fluidos avançado, Controle                             | 22    | fora do escopo declarado do site          |
 
-1. Um currículo principal estável, com as 118 aulas originais preservadas.
-2. Uma segunda camada de aprofundamento em matemática e fundamentos de engenharia.
-3. Complementos claramente identificados, com pré-requisitos e nível de dificuldade.
-4. Uma preparação mais direcionada à Engenharia Aeroespacial, sem transformar o site em uma graduação antecipada.
-
-## 14. Instrução final para o LLM que implementar este plano
-
-Antes de modificar o código, inspecione a estrutura atual do projeto e localize a definição da trilha principal, especialmente `src/app/curriculo/curriculo.ts`.
-
-Implemente somente as adições descritas neste documento e as quatro reativações indicadas para o plano pessoal. Preserve a trilha principal e seus dados. Não invente novas aulas, não remova conteúdo existente, não renumere etapas e não faça refatorações não solicitadas.
-
-Se a implementação exigir uma decisão que possa alterar a ordem, a contagem, os identificadores, as rotas ou o progresso da trilha principal, **não faça essa alteração automaticamente**. Mantenha a estrutura atual e registre a limitação para decisão do usuário.
-
-Ao terminar, apresente um resumo verificável das alterações, indicando os arquivos modificados, os novos módulos adicionados e os testes realizados. Confirme explicitamente que as 118 aulas originais e sua ordem foram preservadas.
+**11 aulas em vez de 30**, e as três primeiras consertam o que já existe.
 
 ---
 
-**Nota de escopo:** este documento é uma proposta de organização curricular baseada no arquivo `aulas.md` e nas recomendações de preparação discutidas. Não substitui os requisitos oficiais de admissão nem o plano de estudos atualizado da universidade.
+## 12. Validação — por teste, não por checklist
+
+O original trazia um checklist para conferir a olho. Boa parte dele já é teste neste
+repositório, e o resto deveria virar teste:
+
+| O que validar                                | Como                                                    |
+| -------------------------------------------- | ------------------------------------------------------- |
+| as 118 aulas continuam presentes, na ordem   | teste que fixa a lista e a ordem de `curriculo.ts`      |
+| nenhum identificador ou rota mudou           | os testes de rota já falham se um id sumir              |
+| o progresso foi preservado                   | `progressao.service.spec.ts`                            |
+| os complementos não são pré-requisito        | teste que confere que a trilha principal fecha sem eles |
+| cada aula nova declara pré-requisito e nível | campo obrigatório no tipo, verificado pelo compilador   |
+| a aula nova passa nos guardas                | a suíte inteira, mais `verificar:geradores`             |
+
+**Conferir a olho uma lista de 118 itens é como o erro entra.** Um teste que fixa a lista
+falha no instante em que alguém a altera, e diz qual item mudou.
+
+---
+
+## 13. Fora de escopo, mantido do original
+
+Mecânica quântica avançada, relatividade geral, combustão, projeto de motores e projeto
+estrutural aeroespacial. **Manter `propulsao-de-foguetes`** como está.
+
+**Química** continua separada: os requisitos variam com a rota de candidatura e com o
+histórico, e presumir uma lista única seria inventar exigência. Conferir no edital antes de
+criar área.
+
+---
+
+## 14. Instrução para quem implementar
+
+Antes de tocar no código, inspecionar `src/app/curriculo/curriculo.ts`. Implementar **apenas**
+o que estiver aprovado neste documento. Não inventar aulas, não remover conteúdo, não
+renumerar, não refatorar o que não foi pedido.
+
+Se uma decisão puder alterar ordem, contagem, identificadores, rotas ou progresso da trilha
+principal, **não fazer automaticamente**: registrar e perguntar.
+
+Ao terminar, apresentar resumo verificável — arquivos tocados, aulas novas, testes rodados —
+e confirmar que as 118 aulas e sua ordem foram preservadas, **citando a saída do teste que
+mede isso**, não a inspeção.
+
+---
+
+## 15. O que esta revisão mudou
+
+1. **Três premissas de fato.** «10 faixas» não existe; Fatoração, Inequações e Sistemas
+   lineares **estão ativas** no código; **Estudo de sinal não existe** e nunca existiu — era
+   criação, não reativação.
+2. **Entrou a prioridade zero** (seção 5): três pré-requisitos que travam conteúdo já
+   publicado, que o plano original não mencionava.
+3. **Entrou o custo real** (seção 6): sete arquivos e sete guardas por aula, de dois a quatro
+   dias cada — logo, 30 aulas são de dois a quatro meses. Sem esse número não havia como
+   decidir o que cortar.
+4. **Entrou a dívida de tradução** (seção 7), que cada aula nova aumenta.
+5. **Saiu a recomendação dos módulos C, D e E** (seção 10): 21 das 30 aulas são disciplinas
+   de graduação, e contrariam o princípio escrito do projeto. A decisão é do usuário, e a
+   pergunta que a resolve está no fim da seção.
+6. **O checklist virou teste** (seção 12): conferir 118 itens a olho é como o erro entra.
+7. **A seção 4 deixou de pedir código** para o que é configuração pessoal.
