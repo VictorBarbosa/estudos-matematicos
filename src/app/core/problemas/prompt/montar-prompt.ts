@@ -216,6 +216,15 @@ const REGRAS_REESCRITA = [
     'notices.',
   'What you change is the SCENARIO: who is measuring, where, and why. Not the object, not the ' +
     'quantities, not the question.',
+  /*
+   * A exceção que faltava, e que sozinha recusava 8 de 8 histórias de
+   * congruência: «dois triângulos» não é dado, é o enredo. Sem ela, a regra
+   * geral do número por extenso barrava toda história que precisasse dizer
+   * que há duas figuras.
+   */
+  'A counting word that describes the SUBJECT is allowed: "dois triângulos", "duas peças", ' +
+    '"três lados". The forbidden thing is a number in words standing for a DATUM. If the data ' +
+    'is a quantity, it is a placeholder — never a word.',
 ];
 
 export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
@@ -256,7 +265,11 @@ export function montarPrompt(pedido: PedidoDeProblema): PromptDeProblema {
     'The numbers and the answer belong to the site’s code, not to you.',
     '',
     'RULES:',
-    ...REGRAS.map((regra) => `- ${regra}`),
+    ...REGRAS.filter(
+      // No modo reescrita, a proibição absoluta do numeral cede à regra
+      // específica de REGRAS_REESCRITA — que libera o enredo e veda o dado.
+      (regra) => !(reescrita && regra.includes('Do not write numbers in words')),
+    ).map((regra) => `- ${regra}`),
     ...(reescrita ? REGRAS_REESCRITA.map((regra) => `- ${regra}`) : []),
     '',
     'FORMAT — two examples. Copy the FORMAT only.',

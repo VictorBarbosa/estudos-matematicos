@@ -102,11 +102,19 @@ type Idioma = (typeof IDIOMAS)[number];
  *
  * Eram 240, e isso recusava histórias boas de «dois números somam S e
  * multiplicam P» — montar a situação com duas quantidades e duas operações
- * custa palavras. Duas de quatro caíam só por tamanho. 280 ainda são três ou
- * quatro linhas num celular, e não um parágrafo.
+ * custa palavras. Duas de quatro caíam só por tamanho. Passou a 280.
+ *
+ * **Agora são 400, e a razão é uma contradição interna.** O prompt pede, no
+ * nível extremo, «uma situação realista e um pouco mais longa» — e o portão
+ * cortava em 280. Medido com o `gpt-oss:20b` no exercício de congruência: 6 de
+ * 8 passavam, e as duas recusas eram `longo` com 367 e 368 caracteres, textos
+ * corretos que seguiam a instrução. A instrução pedia o que o portão recusava.
+ *
+ * 400 ainda são cinco ou seis linhas num celular, e a instrução do prompt já
+ * limita a duas frases mais a pergunta. Quem escreve demais continua caindo.
  */
 const MINIMO_DE_CARACTERES = 40;
-const MAXIMO_DE_CARACTERES = 280;
+const MAXIMO_DE_CARACTERES = 400;
 
 /**
  * Números escritos em palavras, que burlariam a regra do dígito solto.

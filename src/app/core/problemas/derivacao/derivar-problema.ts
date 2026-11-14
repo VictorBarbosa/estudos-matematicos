@@ -34,6 +34,39 @@ import type { ValorDaLacuna } from '@core/problemas/vestir/vestir-enunciado';
  * faria a história prometer duas casas decimais como se fosse uma quantidade.
  */
 
+/**
+ * Os numerais que são enredo, e não dado.
+ *
+ * **A terceira causa do «a tela não muda», e a mais silenciosa.** Medido com o
+ * modelo de verdade: o enunciado de ângulos rendia oito histórias, e as oito
+ * eram recusadas no portão por `numero-escrito` — todas começavam com «dois
+ * triângulos» ou «dois pedaços». A história de uma congruência É sobre duas
+ * figuras, e a regra que existe para impedir número fora do sorteio barrava
+ * justamente a palavra que descreve o enredo.
+ *
+ * O conjunto é pequeno e filtrado: só entra o numeral cujo valor NÃO está
+ * entre os dados sorteados. Se `{0}` vale 2, «dois» pode ser a própria
+ * resposta, e aí ele não é liberado.
+ */
+const ENREDO: readonly (readonly [string, number])[] = [
+  ['dois', 2],
+  ['duas', 2],
+  ['três', 3],
+  ['tres', 3],
+  ['quatro', 4],
+  ['deux', 2],
+  ['trois', 3],
+  ['quatre', 4],
+  ['two', 2],
+  ['three', 3],
+  ['four', 4],
+];
+
+/** Os numerais de enredo que este exercício pode usar, dado o que ele sorteou. */
+function enredoPermitido(valores: readonly number[]): readonly string[] {
+  return ENREDO.filter(([, valor]) => !valores.includes(valor)).map(([palavra]) => palavra);
+}
+
 /** Um número com separador de milhar ou decimal, ou um inteiro. */
 const NUMERO = /-?\d+(?:[.,]\d+)*/g;
 
@@ -240,6 +273,7 @@ export function derivarProblema(
         relacao: molde,
         pergunta,
         dados,
+        permitidas: enredoPermitido(valores),
         contextos: undefined,
       } satisfies Omit<PedidoDeProblema, 'quantas' | 'niveis'>,
       /*

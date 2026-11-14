@@ -111,6 +111,31 @@ describe('cobertura da chamada à LLM', () => {
     }
   });
 
+  it('a derivação libera o numeral de enredo, e veda o que for dado', () => {
+    /*
+     * Esta é a causa mais silenciosa do «a tela não muda»: oito histórias de
+     * congruência voltavam corretas da LLM e as oito eram recusadas por
+     * `numero-escrito` — todas começavam com «dois triângulos». A história de
+     * uma congruência É sobre duas figuras.
+     */
+    const derivada = derivarProblema(
+      'Os triângulos ABC e DEF são congruentes. O ângulo A mede 44° e o ângulo E mede 78°. Quanto mede o ângulo C?',
+      'Ângulos e triângulos',
+    )!;
+
+    expect(derivada.declaracao.pedido.permitidas).toContain('dois');
+    expect(derivada.declaracao.pedido.permitidas).toContain('duas');
+
+    // Mas se o dado sorteado for 2, «dois» pode ser a própria resposta.
+    const comDois = derivarProblema(
+      'Uma caixa tem altura 2 cm e largura 7 cm. Qual é a área, em cm²?',
+      'Áreas',
+    )!;
+
+    expect(comDois.valores).toContain(2);
+    expect(comDois.declaracao.pedido.permitidas).not.toContain('dois');
+  });
+
   it('enunciado de relação abstrata não vira história', () => {
     expect(
       derivarProblema('Um poliedro convexo tem 9 arestas e 5 faces. Quantos vértices ele tem?', 'Poliedros'),
