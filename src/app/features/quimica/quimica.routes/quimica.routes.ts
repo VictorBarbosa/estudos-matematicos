@@ -27,4 +27,12 @@ export const rotas: Routes = [
     loadComponent: () =>
       import('@features/quimica/estequiometria/estequiometria').then((m) => m.Estequiometria),
   },
+  {
+    path: 'limitante-e-rendimento',
+    title: 'Reagente limitante e rendimento · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/quimica/limitante-e-rendimento/limitante-e-rendimento').then(
+        (m) => m.LimitanteERendimento,
+      ),
+  },
 ];

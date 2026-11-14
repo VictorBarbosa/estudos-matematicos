@@ -525,6 +525,10 @@
         "descricao": "Inertia, F = ma and action and reaction, with free-body diagrams.",
         "titulo": "Newton’s laws"
       },
+      "limitante-e-rendimento": {
+        "descricao": "Whichever runs out first decides how much forms — and what is left of the other.",
+        "titulo": "Limiting reactant and yield"
+      },
       "limites": {
         "descricao": "Formal definition, properties and indeterminate forms.",
         "titulo": "Limits"

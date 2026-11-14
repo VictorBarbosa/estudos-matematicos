@@ -525,6 +525,10 @@
         "descricao": "Inertie, F = ma et action-réaction, avec diagrammes de corps libre.",
         "titulo": "Lois de Newton"
       },
+      "limitante-e-rendimento": {
+        "descricao": "Celui qui s’épuise en premier décide combien se forme — et ce qui reste de l’autre.",
+        "titulo": "Réactif limitant et rendement"
+      },
       "limites": {
         "descricao": "Définition formelle, propriétés et formes indéterminées.",
         "titulo": "Limites"

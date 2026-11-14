@@ -1,0 +1,49 @@
+@use 'mixins' as *;
+
+h3 {
+  margin: 0 0 var(--esp-3);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+dl {
+  display: grid;
+  gap: var(--esp-3);
+  margin: 0;
+}
+
+.receitas dl {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.resultado dl {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+dt {
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+}
+
+dd {
+  margin: 0;
+  font-size: 1.375rem;
+  font-variant-numeric: tabular-nums;
+
+  &.certo {
+    color: var(--acerto);
+  }
+}
+
+/* O menor número é o que manda: ele fica marcado enquanto as massas mudam. */
+.limita {
+  border-left: 3px solid var(--acerto);
+  padding-left: var(--esp-2);
+}
+
+.nota {
+  margin: var(--esp-3) 0 0;
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+}

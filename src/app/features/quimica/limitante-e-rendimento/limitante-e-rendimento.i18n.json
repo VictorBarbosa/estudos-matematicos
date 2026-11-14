@@ -1,0 +1,27 @@
+{
+  "reacao": { "pt": "Reação", "fr": "Réaction", "en": "Reaction" },
+  "massaPrimeiro": {
+    "pt": "Massa do 1º reagente (g)",
+    "fr": "Masse du 1er réactif (g)",
+    "en": "Mass of 1st reactant (g)"
+  },
+  "massaSegundo": {
+    "pt": "Massa do 2º reagente (g)",
+    "fr": "Masse du 2e réactif (g)",
+    "en": "Mass of 2nd reactant (g)"
+  },
+  "dicaMassas": {
+    "pt": "Mude as duas massas e veja o limitante trocar — nem sempre é o de menos gramas.",
+    "fr": "Changez les deux masses et voyez le réactif limitant changer — ce n’est pas toujours celui qui a le moins de grammes.",
+    "en": "Change both masses and watch the limiting reactant switch — it is not always the one with fewer grams."
+  },
+  "receitas": { "pt": "Receitas alcançadas", "fr": "Recettes atteintes", "en": "Batches reached" },
+  "limitante": { "pt": "Limitante", "fr": "Réactif limitant", "en": "Limiting reactant" },
+  "produto": { "pt": "Produto formado", "fr": "Produit formé", "en": "Product formed" },
+  "sobra": { "pt": "Sobra do excesso", "fr": "Reste de l’excès", "en": "Excess left over" },
+  "notaReceitas": {
+    "pt": "A medida é mols dividido pelo coeficiente: é ela que diz quantas vezes a reação cabe.",
+    "fr": "La mesure est les moles divisées par le coefficient : c’est elle qui dit combien de fois la réaction tient.",
+    "en": "The measure is moles divided by the coefficient: it says how many times the reaction fits."
+  }
+}

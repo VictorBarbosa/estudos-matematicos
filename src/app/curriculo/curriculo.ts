@@ -276,6 +276,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         descricao: 'A proporção da equação balanceada, convertida em massa: o trajeto completo.',
         pronto: true,
       },
+      {
+        id: 'limitante-e-rendimento',
+        titulo: 'Reagente limitante e rendimento',
+        descricao: 'Quem acaba primeiro decide quanto se forma — e o que sobra do outro.',
+        pronto: true,
+      },
     ],
   },
   {

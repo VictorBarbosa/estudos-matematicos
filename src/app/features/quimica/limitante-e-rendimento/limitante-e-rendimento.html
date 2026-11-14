@@ -1,0 +1,74 @@
+<app-topico-layout topicoId="limitante-e-rendimento">
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('reacao')">
+      @for (opcao of reacoes; track opcao.rotulo; let i = $index) {
+        <button
+          type="button"
+          [class.ativo]="escolhida() === i"
+          [attr.aria-pressed]="escolhida() === i"
+          (click)="escolher(i)"
+        >
+          {{ opcao.rotulo }}
+        </button>
+      }
+    </section>
+
+    <section class="destaque-formula">
+      <app-formula [tex]="reacao().tex" [bloco]="true" />
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro
+        [(valor)]="decimosDoPrimeiro"
+        [rotulo]="texto('massaPrimeiro')"
+        [min]="10"
+        [max]="4000"
+        [dica]="texto('dicaMassas')"
+      />
+      <app-controle-parametro
+        [(valor)]="decimosDoSegundo"
+        [rotulo]="texto('massaSegundo')"
+        [min]="10"
+        [max]="4000"
+      />
+    </section>
+
+    <section class="painel receitas">
+      <h3>{{ texto('receitas') }}</h3>
+      <dl>
+        <div [class.limita]="primeiroLimita()">
+          <dt>{{ reacao().primeiro.formula }}</dt>
+          <dd>{{ arredondar(receitasDoPrimeiro()) }}</dd>
+        </div>
+        <div [class.limita]="!primeiroLimita()">
+          <dt>{{ reacao().segundo.formula }}</dt>
+          <dd>{{ arredondar(receitasDoSegundo()) }}</dd>
+        </div>
+      </dl>
+      <p class="nota">{{ texto('notaReceitas') }}</p>
+    </section>
+
+    <section class="painel resultado">
+      <dl>
+        <div>
+          <dt>{{ texto('limitante') }}</dt>
+          <dd class="certo">{{ analise().limitante.participante.formula }}</dd>
+        </div>
+        <div>
+          <dt>{{ texto('produto') }}</dt>
+          <dd>{{ arredondar(produtoFormado()) }} g</dd>
+        </div>
+        <div>
+          <dt>{{ texto('sobra') }}</dt>
+          <dd>{{ arredondar(sobra()) }} g {{ analise().excesso.participante.formula }}</dd>
+        </div>
+      </dl>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>
