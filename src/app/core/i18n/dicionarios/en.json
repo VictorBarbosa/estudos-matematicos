@@ -143,7 +143,24 @@
     "tirarArea": "Remove the whole area",
     "titulo": "Settings",
     "trancadosAtuais": "{quantos} topic(s) locked after a failed surprise test.",
-    "voltar": "Back to start"
+    "voltar": "Back to start",
+    "bloco.llm": "Local LLM",
+    "explicacao.llm": "The model that writes the problems as stories. It runs on your machine through Ollama — nothing leaves it.",
+    "llm.modelo": "Model that writes the stories",
+    "llm.modeloAjuda": "Writing problems in batches is a fast-model job: a large model takes minutes and blows the deadline.",
+    "llm.recarregar": "Read from server again",
+    "llm.modeloAusente": "“{modelo}” is not installed on the server — every batch will fail until you pull it (ollama pull).",
+    "llm.endpoint": "Server address",
+    "llm.endpointAjuda": "Empty inherits the assistant’s address. Fill it only if Ollama runs on another machine.",
+    "llm.endpointVazio": "inherit from assistant",
+    "llm.lote": "Stories per difficulty",
+    "llm.loteAjuda": "Each request covers all four difficulties, so the total is four times this number.",
+    "llm.raciocinio": "Reasoning",
+    "llm.raciocinioAjuda": "Off writes slower and gets more right; Low is for models that refuse to turn it off.",
+    "llm.raciocinioDesligado": "Off (recommended)",
+    "llm.raciocinioBaixo": "Low",
+    "llm.resumo": "Each request brings {total} stories: this number per difficulty, across the four.",
+    "llm.redefinir": "Reset the LLM to factory values"
   },
   "controle": {
     "valorExato": "{rotulo} (exact value)"

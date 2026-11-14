@@ -4,11 +4,9 @@ import { ProblemaDeTexto } from '@core/problemas/models/problema-de-texto';
 import { NIVEIS, PedidoDeProblema } from '@core/problemas/prompt/montar-prompt';
 import { AssistenteService } from '@core/assistente/services/assistente.service';
 import { OllamaService } from '@core/assistente/services/ollama.service';
-import {
-  CONFIGURACAO_PADRAO,
-  ConfiguracaoDaLlm,
-  LoteDeHistorias,
-} from '@core/problemas/servicos/lote-de-historias';
+import type { ConfiguracaoDaLlm } from '@core/configuracao/models/llm.model';
+import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
+import { LoteDeHistorias } from '@core/problemas/servicos/lote-de-historias';
 import { ModeloDeProblema, assinaturaDoModelo } from '@core/problemas/validacao/validar-modelo';
 import { ValorDaLacuna, vestirEnunciado } from '@core/problemas/vestir/vestir-enunciado';
 
@@ -94,27 +92,28 @@ export class HistoriasService {
   private readonly assistente = inject(AssistenteService);
   private readonly lote = new LoteDeHistorias(this.ollama);
 
-  private readonly escolhaManual = signal<Partial<ConfiguracaoDaLlm>>({});
+  private readonly configuracaoDoSite = inject(ConfiguracaoService);
 
   /**
-   * O ENDEREÇO vem do assistente; o MODELO, não.
+   * O que vale: o que a tela de configurações deixou, com uma herança.
    *
-   * O assistente conversa com o mesmo Ollama desde antes deste mecanismo
-   * existir, e herdar o endereço dele significa zero configuração: se o
-   * assistente alcança o servidor, as histórias alcançam.
+   * A configuração vive em `ConfiguracaoService` desde que deixou de ser
+   * constante no código — antes, trocar de modelo exigia um deploy.
    *
-   * O modelo é outra história, e herdá-lo foi um erro meu. O do assistente é
-   * escolhido para CONVERSAR — o aluno pode ter posto um de 43 GB lá, e foi o
-   * que aconteceu: um lote de seis histórias saiu pedindo ao
-   * `qwen3.6:Uncensored`. Escrever enunciado em lote é tarefa de modelo rápido,
-   * e a comparação de 14/11 escolheu o `gpt-oss:20b` com raciocínio baixo: 13
-   * segundos por lote contra 50, com a mesma taxa de aprovação. Quem espera é
-   * a fila, e fila lenta é fila que não chega antes do próximo exercício.
+   * **O endereço tem herança; o modelo, não.** Se o aluno não escreveu um
+   * endereço, herda-se o do assistente, e isso dá zero configuração: quem já
+   * usa o assistente não precisa configurar nada para as histórias
+   * funcionarem. O modelo nunca é herdado, e a razão é medida: o do assistente
+   * é escolhido para CONVERSAR, e um de 43 GB fez o lote estourar o prazo.
+   * Escrever enunciado em lote é tarefa de modelo rápido.
    */
   private readonly configuracao = computed<ConfiguracaoDaLlm>(() => {
-    const endpoint = this.assistente.servidor() || CONFIGURACAO_PADRAO.endpoint;
+    const escolhida = this.configuracaoDoSite.configuracaoDaLlm();
 
-    return { ...CONFIGURACAO_PADRAO, endpoint, ...this.escolhaManual() };
+    return {
+      ...escolhida,
+      endpoint: escolhida.endpoint || this.assistente.servidor(),
+    };
   });
 
   /** A fila por chave. Nasce do cache e cresce com o que a LLM traz. */
@@ -135,11 +134,6 @@ export class HistoriasService {
 
   /** Verdadeiro enquanto o primeiro lote de um tópico não chegou. */
   readonly preparando = computed(() => this.lote.pedindo());
-
-  /** Sobrepõe o que vem do assistente — modelo, lote ou endereço. */
-  definirConfiguracao(escolha: Partial<ConfiguracaoDaLlm>): void {
-    this.escolhaManual.set(escolha);
-  }
 
   /** Esquece as falhas ao entrar noutro tópico. */
   recomecar(): void {

@@ -68,6 +68,126 @@
           <p class="ajuda">{{ i18n.t('config.encerrarAjuda') }}</p>
         }
 
+
+  <!--
+    A LLM local.
+    Fica fora do @for dos blocos numéricos porque é o único com texto: endereço,
+    nome de modelo e um grau de raciocínio não se ajustam com step="1".
+  -->
+  <section class="bloco">
+    <h2>{{ i18n.t('config.bloco.llm') }}</h2>
+    <p class="explicacao">{{ i18n.t('config.explicacao.llm') }}</p>
+
+    <ul class="ajustes">
+      <li [class.mudado]="llm().modelo !== llmPadrao.modelo">
+        <label for="llm-modelo">
+          <span class="rotulo">{{ i18n.t('config.llm.modelo') }}</span>
+          <span class="ajuda">{{ i18n.t('config.llm.modeloAjuda') }}</span>
+        </label>
+
+        <div class="controle">
+          <!--
+            Seletor, e não campo de texto: o nome tem de existir no servidor,
+            senão todo lote falha calado. `list` mantém a digitação possível
+            para quem sabe o nome de um modelo que ainda vai baixar.
+          -->
+          <input
+            id="llm-modelo"
+            type="text"
+            list="llm-modelos"
+            [value]="llm().modelo"
+            (change)="trocarCampoLlm('modelo', $any($event.target).value)"
+          />
+          <datalist id="llm-modelos">
+            @for (modelo of modelos(); track modelo.nome) {
+              <option [value]="modelo.nome"></option>
+            }
+          </datalist>
+
+          <button type="button" class="texto" (click)="recarregarModelos()">
+            {{ i18n.t('config.llm.recarregar') }}
+          </button>
+
+          @if (modeloAusente()) {
+            <span class="aviso">{{ i18n.t('config.llm.modeloAusente', { modelo: llm().modelo }) }}</span>
+          }
+          @if (llm().modelo !== llmPadrao.modelo) {
+            <span class="padrao">{{ i18n.t('config.padrao', { valor: llmPadrao.modelo }) }}</span>
+          }
+        </div>
+      </li>
+
+      <li [class.mudado]="llm().endpoint !== llmPadrao.endpoint">
+        <label for="llm-endpoint">
+          <span class="rotulo">{{ i18n.t('config.llm.endpoint') }}</span>
+          <span class="ajuda">{{ i18n.t('config.llm.endpointAjuda') }}</span>
+        </label>
+
+        <div class="controle">
+          <input
+            id="llm-endpoint"
+            type="text"
+            inputmode="url"
+            [value]="llm().endpoint"
+            [attr.placeholder]="i18n.t('config.llm.endpointVazio')"
+            (change)="trocarCampoLlm('endpoint', $any($event.target).value)"
+          />
+        </div>
+      </li>
+
+      <li [class.mudado]="llm().lote !== llmPadrao.lote">
+        <label for="llm-lote">
+          <span class="rotulo">{{ i18n.t('config.llm.lote') }}</span>
+          <span class="ajuda">{{ i18n.t('config.llm.loteAjuda') }}</span>
+        </label>
+
+        <div class="controle">
+          <input
+            id="llm-lote"
+            type="number"
+            [value]="llm().lote"
+            [min]="loteMinimo"
+            [max]="loteMaximo"
+            step="1"
+            inputmode="numeric"
+            (change)="trocarCampoLlm('lote', $any($event.target).value)"
+          />
+          @if (llm().lote !== llmPadrao.lote) {
+            <span class="padrao">{{ i18n.t('config.padrao', { valor: llmPadrao.lote }) }}</span>
+          }
+        </div>
+      </li>
+
+      <li [class.mudado]="llm().raciocinio !== llmPadrao.raciocinio">
+        <label for="llm-raciocinio">
+          <span class="rotulo">{{ i18n.t('config.llm.raciocinio') }}</span>
+          <span class="ajuda">{{ i18n.t('config.llm.raciocinioAjuda') }}</span>
+        </label>
+
+        <div class="controle">
+          <select
+            id="llm-raciocinio"
+            (change)="trocarCampoLlm('raciocinio', $any($event.target).value)"
+          >
+            <option value="false" [selected]="llm().raciocinio === 'false'">
+              {{ i18n.t('config.llm.raciocinioDesligado') }}
+            </option>
+            <option value="low" [selected]="llm().raciocinio === 'low'">
+              {{ i18n.t('config.llm.raciocinioBaixo') }}
+            </option>
+          </select>
+        </div>
+      </li>
+    </ul>
+
+    <p class="resumo">{{ i18n.t('config.llm.resumo', { total: llm().lote * 4 }) }}</p>
+
+    @if (!llmIntocada()) {
+      <button type="button" class="texto" (click)="redefinirLlm()">
+        {{ i18n.t('config.llm.redefinir') }}
+      </button>
+    }
+  </section>
         @if (trancados() > 0) {
           <p class="resumo">{{ i18n.t('config.trancadosAtuais', { quantos: trancados() }) }}</p>
         }

@@ -143,7 +143,24 @@
     "tirarArea": "Retirer tout le domaine",
     "titulo": "Réglages",
     "trancadosAtuais": "{quantos} sujet(s) verrouillé(s) après un échec à l’examen surprise.",
-    "voltar": "Retour à l’accueil"
+    "voltar": "Retour à l’accueil",
+    "bloco.llm": "LLM locale",
+    "explicacao.llm": "Le modèle qui rédige les énoncés sous forme d’histoire. Il tourne sur votre machine, via Ollama — rien ne sort d’ici.",
+    "llm.modelo": "Modèle qui écrit les histoires",
+    "llm.modeloAjuda": "Rédiger des énoncés en lot demande un modèle rapide : un gros modèle prend des minutes et fait dépasser le délai.",
+    "llm.recarregar": "Relire depuis le serveur",
+    "llm.modeloAusente": "« {modelo} » n’est pas installé sur le serveur — chaque lot échouera jusqu’à ce que vous le téléchargiez (ollama pull).",
+    "llm.endpoint": "Adresse du serveur",
+    "llm.endpointAjuda": "Vide, elle hérite de celle de l’assistant. À remplir seulement si Ollama est sur une autre machine.",
+    "llm.endpointVazio": "hériter de l’assistant",
+    "llm.lote": "Histoires par difficulté",
+    "llm.loteAjuda": "Chaque demande couvre les quatre difficultés, donc le total est quatre fois ce nombre.",
+    "llm.raciocinio": "Raisonnement",
+    "llm.raciocinioAjuda": "Désactivé écrit plus lentement et réussit mieux ; Faible est pour les modèles qui refusent de le désactiver.",
+    "llm.raciocinioDesligado": "Désactivé (recommandé)",
+    "llm.raciocinioBaixo": "Faible",
+    "llm.resumo": "Chaque demande apporte {total} histoires : ce nombre par difficulté, sur les quatre.",
+    "llm.redefinir": "Remettre la LLM aux valeurs d’usine"
   },
   "controle": {
     "valorExato": "{rotulo} (valeur exacte)"

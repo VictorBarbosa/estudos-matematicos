@@ -143,7 +143,24 @@
     "tirarArea": "Tirar a área inteira",
     "titulo": "Configurações",
     "trancadosAtuais": "{quantos} tópico(s) trancado(s) por reprovação na prova surpresa.",
-    "voltar": "Voltar ao início"
+    "voltar": "Voltar ao início",
+    "bloco.llm": "LLM local",
+    "explicacao.llm": "O modelo que escreve os enunciados em forma de história. Ele roda na sua máquina, pelo Ollama — nada sai daqui. O exercício aparece na hora com o enunciado de sempre; a história veste o texto quando chega.",
+    "llm.modelo": "Modelo que escreve as histórias",
+    "llm.modeloAjuda": "Escrever enunciado em lote é tarefa de modelo rápido: um modelo grande leva minutos e faz o lote estourar o prazo.",
+    "llm.recarregar": "Reler do servidor",
+    "llm.modeloAusente": "«{modelo}» não está instalado no servidor — todo lote vai falhar até você baixá-lo (ollama pull).",
+    "llm.endpoint": "Endereço do servidor",
+    "llm.endpointAjuda": "Em branco, herda o endereço do assistente. Preencha só se o Ollama estiver noutra máquina.",
+    "llm.endpointVazio": "herdar do assistente",
+    "llm.lote": "Histórias por dificuldade",
+    "llm.loteAjuda": "Cada pedido cobre as quatro dificuldades, então o total é quatro vezes este número.",
+    "llm.raciocinio": "Raciocínio",
+    "llm.raciocinioAjuda": "Desligado escreve mais devagar e acerta mais; Baixo é para modelos que recusam desligar.",
+    "llm.raciocinioDesligado": "Desligado (recomendado)",
+    "llm.raciocinioBaixo": "Baixo",
+    "llm.resumo": "Cada pedido traz {total} histórias: este número por dificuldade, nas quatro dificuldades.",
+    "llm.redefinir": "Voltar a LLM ao padrão de fábrica"
   },
   "controle": {
     "valorExato": "{rotulo} (valor exato)"

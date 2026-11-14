@@ -1,4 +1,5 @@
 import { signal } from '@angular/core';
+import type { ConfiguracaoDaLlm } from '@core/configuracao/models/llm.model';
 import { SERVIDOR_PADRAO } from '@core/assistente/models/assistente.model';
 import { OllamaService } from '@core/assistente/services/ollama.service';
 import { PedidoDeProblema, montarPrompt } from '@core/problemas/prompt/montar-prompt';
@@ -25,53 +26,16 @@ import {
  * ou sai de cena.
  */
 
-/** Onde o Ollama responde, com qual modelo, e em lotes de quanto. */
-export interface ConfiguracaoDaLlm {
-  readonly endpoint: string;
-  readonly modelo: string;
-  /** `false`, ou `'low'` nos modelos que não aceitam desligar o raciocínio. */
-  readonly raciocinio: boolean | string;
-  /**
-   * Quantas histórias pedir POR NÍVEL.
-   *
-   * Era o total do lote, quando o lote tinha um nível só. Agora um pedido
-   * cobre os quatro níveis, então o total é `lote × 4`: seis viraria vinte e
-   * quatro histórias de uma vez, e o prazo de três minutos não cobre isso.
-   * Dois por nível — oito no total — enche as quatro filas no mesmo tempo que
-   * o lote antigo, e o piso da fila é três, reposto no exercício seguinte.
-   */
-  readonly lote: number;
-}
-
 /**
- * O padrão foi escolhido lendo os textos, e depois medindo.
+ * A configuração da LLM passou a viver em `configuracao/models/llm.model`,
+ * onde a tela de configurações a alcança — era constante aqui, e trocar de
+ * modelo exigia um deploy.
  *
- * O `gpt-oss:20b` escreve o mesmo formato que o `qwen3.8:27b-mlx` e é o mais
- * rápido dos dois; a comparação está em `comparacao-modelos.md`.
- *
- * **O raciocínio fica desligado**, e a medição de 14/11 com o modelo quente
- * mostra o porquê de não ser só princípio:
- *
- * | `think` | Tempo por lote | Aprovados de 6 |
- * | ------- | -------------- | -------------- |
- * | `false` | 82 a 117 s     | 6 de 6         |
- * | `'low'` | 17 a 34 s      | 2 a 4 de 6     |
- *
- * Desligar sai mais lento no relógio e melhor no resultado: um lote inteiro
- * aproveitável contra um terço. Como ninguém espera por este pedido — a fila
- * repõe em segundo plano e o exercício aparece com o enunciado de sempre —, o
- * que interessa é quantas histórias boas chegam, não em quantos segundos.
- * Escrever enunciado também não é tarefa de raciocínio: não há conta a fazer.
- *
- * `OllamaService.pedirChat` recua sozinho se o modelo recusar o campo `think`,
- * então `false` é seguro mesmo em modelo que não o conheça.
+ * Fica o reexport para quem já importava deste arquivo, e porque é esta classe
+ * quem usa a configuração de fato.
  */
-export const CONFIGURACAO_PADRAO: ConfiguracaoDaLlm = {
-  endpoint: SERVIDOR_PADRAO,
-  modelo: 'gpt-oss:20b',
-  raciocinio: false,
-  lote: 2,
-};
+export { LLM_PADRAO as CONFIGURACAO_PADRAO } from '@core/configuracao/models/llm.model';
+export type { ConfiguracaoDaLlm } from '@core/configuracao/models/llm.model';
 
 /** Depois de três falhas seguidas, para de tentar até o próximo tópico. */
 const FALHAS_ATE_DESISTIR = 3;
@@ -144,7 +108,9 @@ export class LoteDeHistorias {
         user,
         esquema,
         controle.signal,
-        configuracao.raciocinio,
+        // `'false'` guardado como texto vira o booleano que a API espera;
+        // `'low'` passa como grau, para os modelos que recusam desligar.
+        configuracao.raciocinio === 'false' ? false : 'low',
       );
 
       const aprovados = this.filtrar(resposta?.problemas ?? [], pedido);

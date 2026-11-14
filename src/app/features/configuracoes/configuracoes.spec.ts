@@ -40,14 +40,64 @@ describe('Configuracoes', () => {
     fixture.detectChanges();
   });
 
-  it('mostra os cinco blocos e os quatorze ajustes numéricos', () => {
-    expect(fixture.nativeElement.querySelectorAll('.bloco').length).toBe(5);
-    expect(fixture.nativeElement.querySelectorAll('.ajustes input').length).toBe(15);
-    expect(fixture.nativeElement.querySelectorAll('.ajustes input[type="number"]').length).toBe(14);
+  it('mostra os seis blocos, e a LLM entre eles', () => {
+    // Eram cinco. O sexto é a LLM local, que deixou de ser constante no código:
+    // modelo, endereço, raciocínio e lote agora se ajustam aqui.
+    expect(fixture.nativeElement.querySelectorAll('.bloco').length).toBe(6);
+    expect(fixture.nativeElement.querySelectorAll('.ajustes input').length).toBe(18);
+    // Os numéricos são os quatorze da progressão mais o lote da LLM.
+    expect(fixture.nativeElement.querySelectorAll('.ajustes input[type="number"]').length).toBe(15);
     expect(texto()).toContain('Para abrir a próxima etapa');
     expect(texto()).toContain('Prova final da sessão');
     expect(texto()).toContain('Prova surpresa');
     expect(texto()).toContain('O seu plano de estudo');
+    expect(texto()).toContain('LLM local');
+  });
+
+  it('o modelo da LLM se troca pela tela, e fica gravado', () => {
+    const campo = fixture.nativeElement.querySelector('#llm-modelo') as HTMLInputElement;
+
+    expect(campo.value).toBe('gpt-oss:20b');
+
+    campo.value = 'ministral-3:3b';
+    campo.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+
+    expect(config.configuracaoDaLlm().modelo).toBe('ministral-3:3b');
+  });
+
+  it('o lote fica preso entre um e quatro', () => {
+    const campo = fixture.nativeElement.querySelector('#llm-lote') as HTMLInputElement;
+
+    campo.value = '99';
+    campo.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+
+    expect(config.configuracaoDaLlm().lote).toBe(4);
+  });
+
+  it('endereço em branco é a herança do assistente, e isso é o padrão', () => {
+    const campo = fixture.nativeElement.querySelector('#llm-endpoint') as HTMLInputElement;
+
+    expect(campo.value).toBe('');
+
+    campo.value = 'http://192.168.1.9:11434';
+    campo.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+
+    expect(config.configuracaoDaLlm().endpoint).toBe('http://192.168.1.9:11434');
+  });
+
+  it('o raciocínio é um grau, e não um sim ou não', () => {
+    const campo = fixture.nativeElement.querySelector('#llm-raciocinio') as HTMLSelectElement;
+
+    expect(campo.value).toBe('false');
+
+    campo.value = 'low';
+    campo.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+
+    expect(config.configuracaoDaLlm().raciocinio).toBe('low');
   });
 
   it('a prova surpresa liga e desliga por caixa de seleção', () => {
