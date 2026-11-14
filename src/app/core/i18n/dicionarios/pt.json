@@ -441,6 +441,10 @@
         "descricao": "Pressão, empuxo, equação de Bernoulli e de onde vem a sustentação.",
         "titulo": "Fluidos e aerodinâmica"
       },
+      "formulas-e-nomenclatura": {
+        "descricao": "Do nome à fórmula, e o numeral romano que diz a carga do metal.",
+        "titulo": "Fórmulas e nomenclatura"
+      },
       "fracoes": {
         "descricao": "Partes de um inteiro, equivalência, simplificação e as quatro operações, nas duas formas: fração e número misto. Mais a conversão de decimais — nove tipos ao todo, três acertos em cada um para a etapa abrir.",
         "titulo": "Frações"

@@ -277,6 +277,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'formulas-e-nomenclatura',
+        titulo: 'Fórmulas e nomenclatura',
+        descricao: 'Do nome à fórmula, e o numeral romano que diz a carga do metal.',
+        pronto: true,
+      },
+      {
         id: 'mol-e-massa-molar',
         titulo: 'O mol e a massa molar',
         descricao: 'A ponte entre a massa que se pesa e a quantidade de partículas que reage.',

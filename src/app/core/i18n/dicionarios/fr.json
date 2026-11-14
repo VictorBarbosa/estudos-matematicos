@@ -441,6 +441,10 @@
         "descricao": "Pression, poussée d’Archimède, équation de Bernoulli et d’où vient la portance.",
         "titulo": "Fluides et aérodynamique"
       },
+      "formulas-e-nomenclatura": {
+        "descricao": "Du nom à la formule, et le chiffre romain qui donne la charge du métal.",
+        "titulo": "Formules et nomenclature"
+      },
       "fracoes": {
         "descricao": "Parts d’un entier, équivalence, simplification et les quatre opérations, sous les deux formes : fraction et nombre fractionnaire. Plus la conversion des décimaux — neuf types en tout, trois bonnes réponses pour chacun avant l’ouverture de l’étape.",
         "titulo": "Fractions"

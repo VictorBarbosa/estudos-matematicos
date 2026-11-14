@@ -30,6 +30,14 @@ export const rotas: Routes = [
       import('@features/quimica/tabela-e-ligacao/tabela-e-ligacao').then((m) => m.TabelaELigacao),
   },
   {
+    path: 'formulas-e-nomenclatura',
+    title: 'Fórmulas e nomenclatura · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/quimica/formulas-e-nomenclatura/formulas-e-nomenclatura').then(
+        (m) => m.FormulasENomenclatura,
+      ),
+  },
+  {
     path: 'mol-e-massa-molar',
     title: 'O mol e a massa molar · Estudos Matemáticos',
     loadComponent: () =>

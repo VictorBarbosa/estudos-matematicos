@@ -114,6 +114,7 @@ const PISO: Readonly<Record<string, readonly [number, number, number, number]>> 
   'equacoes-e-balanceamento': [2, 3, 3, 2],
   'estrutura-eletronica': [2, 3, 3, 2],
   'tabela-e-ligacao': [2, 3, 3, 2],
+  'formulas-e-nomenclatura': [2, 3, 3, 2],
   'mmc-mdc': [2, 2, 2, 2],
   'momento-angular': [6, 7, 3, 2],
   'movimento-circular': [3, 3, 3, 2],

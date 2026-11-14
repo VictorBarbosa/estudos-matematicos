@@ -1,0 +1,77 @@
+<app-topico-layout topicoId="formulas-e-nomenclatura">
+  <div explorar class="explorar">
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('metal')">
+      @for (opcao of metais; track opcao.simbolo; let i = $index) {
+        <button
+          type="button"
+          [class.ativo]="indiceDoMetal() === i"
+          [attr.aria-pressed]="indiceDoMetal() === i"
+          (click)="escolherMetal(i)"
+        >
+          {{ opcao.simbolo }}
+        </button>
+      }
+    </section>
+
+    <section class="seletor-pills" role="group" [attr.aria-label]="texto('naoMetal')">
+      @for (opcao of naoMetais; track opcao.simbolo; let i = $index) {
+        <button
+          type="button"
+          [class.ativo]="indiceDoNaoMetal() === i"
+          [attr.aria-pressed]="indiceDoNaoMetal() === i"
+          (click)="escolherNaoMetal(i)"
+        >
+          {{ opcao.simbolo }}
+        </button>
+      }
+    </section>
+
+    @if (variavel()) {
+      <section class="seletor-pills" role="group" [attr.aria-label]="texto('carga')">
+        @for (opcao of cargas(); track opcao; let i = $index) {
+          <button
+            type="button"
+            [class.ativo]="carga() === opcao"
+            [attr.aria-pressed]="carga() === opcao"
+            (click)="escolherCarga(i)"
+          >
+            {{ comSinal(opcao) }}
+          </button>
+        }
+      </section>
+    }
+
+    <section class="destaque-formula">
+      <app-formula [tex]="'\\text{' + formula() + '}'" [bloco]="true" />
+    </section>
+
+    <section class="painel">
+      <h3>{{ texto('nome') }}</h3>
+      <dl class="nomes">
+        @for (linha of nomes(); track linha.idioma) {
+          <div>
+            <dt>{{ linha.idioma }}</dt>
+            <dd>{{ linha.nome }}</dd>
+          </div>
+        }
+      </dl>
+      <p class="nota">{{ texto('notaOrdem') }}</p>
+    </section>
+
+    <section class="painel">
+      <dl class="resumo">
+        <div>
+          <dt>{{ texto('nox') }}</dt>
+          <dd>{{ comSinal(nox()) }}</dd>
+        </div>
+      </dl>
+      <p class="nota">{{ texto('notaRomano') }}</p>
+    </section>
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

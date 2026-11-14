@@ -1,0 +1,18 @@
+{
+  "metal": { "pt": "Metal", "fr": "Métal", "en": "Metal" },
+  "naoMetal": { "pt": "Não metal", "fr": "Non-métal", "en": "Nonmetal" },
+  "carga": { "pt": "Carga do metal", "fr": "Charge du métal", "en": "Metal charge" },
+  "nome": { "pt": "Nome do composto", "fr": "Nom du composé", "en": "Compound name" },
+  "formula": { "pt": "Fórmula", "fr": "Formule", "en": "Formula" },
+  "nox": { "pt": "Nox do metal", "fr": "Nox du métal", "en": "Metal oxidation number" },
+  "notaOrdem": {
+    "pt": "A ordem das palavras muda de língua: em português e francês o ânion vem primeiro, em inglês vem por último.",
+    "fr": "L’ordre des mots change selon la langue : en portugais et en français l’anion vient d’abord, en anglais il vient en dernier.",
+    "en": "Word order changes by language: in Portuguese and French the anion comes first, in English it comes last."
+  },
+  "notaRomano": {
+    "pt": "O numeral romano só aparece nos metais de mais de uma carga — e aí ele é necessário: «cloreto de ferro» não diz se é FeCl₂ ou FeCl₃.",
+    "fr": "Le chiffre romain n’apparaît que pour les métaux à plusieurs charges — et il est alors nécessaire : « chlorure de fer » ne dit pas s’il s’agit de FeCl₂ ou FeCl₃.",
+    "en": "The Roman numeral appears only for metals with more than one charge — and there it is necessary: “iron chloride” does not say whether it is FeCl₂ or FeCl₃."
+  }
+}
