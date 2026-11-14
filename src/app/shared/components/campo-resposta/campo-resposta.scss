@@ -16,58 +16,6 @@
   }
 }
 
-.entrada {
-  position: relative;
-}
-
-/*
- * O indicador vive dentro do campo, à direita, e não empurra o texto: ele é
- * posicionado por cima. Em tela pequena o rótulo encurta — a frase inteira
- * não cabe ao lado de um campo de resposta, e cortá-la no meio é pior que
- * dizer o essencial.
- */
-.carregando {
-  position: absolute;
-  inset-inline-end: var(--esp-3);
-  top: 50%;
-  translate: 0 -50%;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--esp-2);
-  max-width: 60%;
-  color: var(--texto-suave);
-  font-size: 0.75rem;
-  pointer-events: none;
-
-  .texto {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
-
-.giro {
-  inline-size: 0.875rem;
-  block-size: 0.875rem;
-  border: 2px solid var(--borda-forte);
-  border-top-color: var(--acento, currentcolor);
-  border-radius: 50%;
-  animation: girar 0.8s linear infinite;
-  flex: none;
-}
-
-@keyframes girar {
-  to {
-    rotate: 360deg;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .giro {
-    animation-duration: 2.4s;
-  }
-}
-
 input {
   width: 100%;
   padding: var(--esp-3) var(--esp-4);

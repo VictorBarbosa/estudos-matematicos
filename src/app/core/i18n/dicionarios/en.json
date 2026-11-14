@@ -1195,7 +1195,6 @@
     "paraAbrir": "To open the next stage:",
     "porTipo": "And {quantos} correct answers for each exercise type:",
     "preparandoHistorias": "Preparing problems in the three languages — this runs on your computer.",
-    "carregandoHistorias": "Writing a new problem…",
     "proximo": "Next exercise",
     "respostaCorreta": "Correct answer:",
     "resumoOperacoes": ", with all {quantas} operations practised",
@@ -1207,7 +1206,8 @@
     "subiu": "Level {nivel} — the exercises get harder.",
     "trancadoPelaSurpresa": "This topic is locked after a failed surprise test. Its progress was wiped on purpose: meet the criterion again to unlock it.",
     "verificar": "Check",
-    "zeraComErro": "(resets on every mistake)"
+    "zeraComErro": "(resets on every mistake)",
+    "escrevendoEnunciados": "Writing the problems, in all three languages — this runs on your computer. The exercise below can already be answered."
   },
   "trilha": {
     "barra": "Progress along the path: {percentual} per cent",

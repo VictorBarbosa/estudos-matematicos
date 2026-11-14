@@ -104,6 +104,48 @@
   }
 }
 
+/*
+ * O aviso de que a LLM está escrevendo.
+ *
+ * Discreto e visível ao mesmo tempo: fica numa faixa acima do enunciado, com o
+ * mesmo tratamento do bloco de texto e um giro à esquerda. Não é erro nem
+ * alerta — é uma espera que pode ser ignorada, então nada de cor de aviso.
+ */
+.escrevendo {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  margin: 0 0 var(--esp-2);
+  padding: var(--esp-2) var(--esp-3);
+  border: 1px dashed var(--borda-forte);
+  border-radius: var(--raio-md);
+  background: var(--superficie-2);
+  color: var(--texto-suave);
+  font-size: var(--texto-sm);
+
+  .giro {
+    inline-size: 0.875rem;
+    block-size: 0.875rem;
+    border: 2px solid var(--borda-forte);
+    border-top-color: var(--acento, currentcolor);
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+    flex: none;
+  }
+}
+
+@keyframes girar {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .escrevendo .giro {
+    animation-duration: 2.4s;
+  }
+}
+
 .enunciado {
   background: var(--superficie-2);
   border-radius: var(--raio-md);

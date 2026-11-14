@@ -1195,7 +1195,6 @@
     "paraAbrir": "Para abrir a próxima etapa:",
     "porTipo": "E {quantos} acertos em cada tipo de exercício:",
     "preparandoHistorias": "Preparando problemas nos três idiomas — isto roda no seu computador.",
-    "carregandoHistorias": "Escrevendo um novo enunciado…",
     "proximo": "Próximo exercício",
     "respostaCorreta": "Resposta correta:",
     "resumoOperacoes": ", com as {quantas} operações praticadas",
@@ -1207,7 +1206,8 @@
     "subiu": "Nível {nivel} — os exercícios ficam mais exigentes.",
     "trancadoPelaSurpresa": "Este tópico está trancado por uma reprovação na prova surpresa. O progresso foi zerado de propósito: vença o critério de novo para destrancá-lo.",
     "verificar": "Verificar",
-    "zeraComErro": "(zera a cada erro)"
+    "zeraComErro": "(zera a cada erro)",
+    "escrevendoEnunciados": "Escrevendo os enunciados, nos três idiomas — isto roda no seu computador. O exercício abaixo já pode ser respondido."
   },
   "trilha": {
     "barra": "Progresso na trilha: {percentual} por cento",

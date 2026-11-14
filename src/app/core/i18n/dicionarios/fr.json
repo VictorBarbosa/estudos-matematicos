@@ -1195,7 +1195,6 @@
     "paraAbrir": "Pour ouvrir l'étape suivante :",
     "porTipo": "Et {quantos} bonnes réponses pour chaque type d’exercice :",
     "preparandoHistorias": "Préparation de problèmes dans les trois langues — cela tourne sur votre ordinateur.",
-    "carregandoHistorias": "Rédaction d’un nouvel énoncé…",
     "proximo": "Exercice suivant",
     "respostaCorreta": "Bonne réponse :",
     "resumoOperacoes": ", avec les {quantas} opérations pratiquées",
@@ -1207,7 +1206,8 @@
     "subiu": "Niveau {nivel} — les exercices deviennent plus exigeants.",
     "trancadoPelaSurpresa": "Ce sujet est verrouillé à la suite d’un échec à l’examen surprise. La progression a été remise à zéro volontairement : validez de nouveau le critère pour le déverrouiller.",
     "verificar": "Vérifier",
-    "zeraComErro": "(remise à zéro à chaque erreur)"
+    "zeraComErro": "(remise à zéro à chaque erreur)",
+    "escrevendoEnunciados": "Rédaction des énoncés, dans les trois langues — cela tourne sur votre ordinateur. L’exercice ci-dessous peut déjà être résolu."
   },
   "trilha": {
     "barra": "Progression du parcours : {percentual} pour cent",

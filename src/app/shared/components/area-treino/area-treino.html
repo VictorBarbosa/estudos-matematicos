@@ -47,6 +47,24 @@
     </p>
   }
 
+  <!--
+    O aviso de que a LLM está escrevendo.
+
+    Fica ACIMA do enunciado, e não dentro do campo de resposta, porque é o texto
+    do enunciado que vai mudar: o aviso ocupa o lugar da mudança. O pedido leva
+    de 20 s a 4 min, e sem um aviso visível a demora é indistinguível de «não
+    funciona» — foi exatamente o que aconteceu.
+
+    Não bloqueia nada: o exercício é respondível no instante em que aparece, com
+    o enunciado de sempre. Quando a história chega, o texto é trocado no lugar.
+  -->
+  @if (preparandoHistorias()) {
+    <p class="escrevendo" role="status" aria-live="polite">
+      <span class="giro" aria-hidden="true"></span>
+      <span>{{ i18n.t('treino.escrevendoEnunciados') }}</span>
+    </p>
+  }
+
   <div class="enunciado">
     <p>{{ enunciado() }}</p>
     <!-- Sem fórmula quando o exercício é só o enunciado: montar a expressão
@@ -73,7 +91,6 @@
     #campo
     [(valor)]="s.resposta"
     [rotulo]="i18n.t('treino.suaResposta')"
-    [preparando]="preparandoHistorias()"
     [ajuda]="ajudaDoFormato()"
     [simbolos]="gerador().simbolos ?? []"
     [estado]="estadoCampo()"
