@@ -7,6 +7,18 @@ import {
   nivelAoMenos,
   semColisoes,
 } from '@core/treino/models/treino.model';
+import { enunciadoTrilingue } from '@core/treino/textos/texto-trilingue';
+import {
+  DICA_FRACOES_PARCIAIS,
+  DICA_POR_PARTES,
+  DICA_SENO,
+  DICA_SUBSTITUICAO,
+  DICA_TANGENTE,
+  FRACOES_PARCIAIS,
+  POR_PARTES,
+  SUBSTITUICAO,
+  SUBSTITUICAO_TRIGONOMETRICA,
+} from '@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao.textos';
 
 const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-6);
 
@@ -20,7 +32,7 @@ const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-6);
  */
 const MAIOR_GABARITO = 1e5;
 
-type Pergunta = 'substituicao' | 'por-partes' | 'fracoes-parciais';
+type Pergunta = 'substituicao' | 'por-partes' | 'fracoes-parciais' | 'trigonometrica';
 
 /**
  * Exercícios das três técnicas de integração do 0M03.
@@ -45,10 +57,15 @@ export const geradorTecnicas: GeradorExercicio<number> = {
       return exercicioFracoesParciais(nivel, rng);
     }
 
+    if (pergunta === 'trigonometrica') {
+      return exercicioTrigonometrica(nivel, rng);
+    }
+
     const a = rng.inteiro(2, nivel === 'facil' ? 6 : 9);
     const b = rng.inteiro(-9, 9);
     const n = rng.inteiro(2, nivelAoMenos(nivel, 'dificil') ? 5 : 4);
 
+    const textoSubstituicao = enunciadoTrilingue(SUBSTITUICAO, [], DICA_SUBSTITUICAO);
     const de = 0;
     // |ax+b| no topo do intervalo não pode estourar o teto do gabarito.
     const maiorInterno = (MAIOR_GABARITO * a * (n + 1)) ** (1 / (n + 1));
@@ -67,7 +84,8 @@ export const geradorTecnicas: GeradorExercicio<number> = {
     return {
       id: `tecnicas-${a}${b}${n}-${de}${ate}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Resolva por substituição. (2 casas decimais)',
+      enunciado: textoSubstituicao.enunciado,
+      traducoes: textoSubstituicao.traducoes,
       enunciadoTex: `\\int_{${de}}^{${ate}} \\left(${internoTex}\\right)^{${n}} dx`,
       gabarito,
       resolucao: {
@@ -123,10 +141,7 @@ export const geradorTecnicas: GeradorExercicio<number> = {
         gabarito,
         proximos,
       ),
-      dica:
-        nivel === 'facil'
-          ? 'Depois de trocar por u, não esqueça o fator que vem de dx = du/a.'
-          : undefined,
+      dica: nivel === 'facil' ? textoSubstituicao.dica : undefined,
     };
   },
 
@@ -140,13 +155,26 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
     case 'facil':
       return 'substituicao';
     case 'medio':
-      return rng.escolher<Pergunta>(['substituicao', 'por-partes', 'fracoes-parciais']);
+      return rng.escolher<Pergunta>([
+        'substituicao',
+        'por-partes',
+        'fracoes-parciais',
+        'trigonometrica',
+      ]);
     case 'dificil':
-      return rng.escolher<Pergunta>(['por-partes', 'fracoes-parciais', 'substituicao']);
-    // As duas técnicas que exigem montar antes de integrar: escolher u e dv,
-    // ou decompor a fração. Substituição direta sai de cena.
+      return rng.escolher<Pergunta>([
+        'por-partes',
+        'fracoes-parciais',
+        'substituicao',
+        'trigonometrica',
+      ]);
+    /*
+     * As três técnicas que exigem montar antes de integrar: escolher u e dv,
+     * decompor a fração, ou reconhecer qual troca trigonométrica a expressão
+     * pede. Substituição direta sai de cena.
+     */
     case 'extremo':
-      return rng.escolher<Pergunta>(['por-partes', 'fracoes-parciais']);
+      return rng.escolher<Pergunta>(['por-partes', 'fracoes-parciais', 'trigonometrica']);
   }
 }
 
@@ -159,6 +187,7 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
 function exercicioPorPartes(nivel: Nivel, rng: Rng): Exercicio<number> {
   const ate = rng.inteiro(2, 8);
   const coeficiente = rng.inteiro(1, 4);
+  const texto = enunciadoTrilingue(POR_PARTES, [], DICA_POR_PARTES);
 
   // ∫₁^k c·x·ln x dx = c·[x²/2·ln x − x²/4]₁^k
   const primitiva = (x: number): number =>
@@ -170,7 +199,8 @@ function exercicioPorPartes(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `tecnicas-partes-${coeficiente}-${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Resolva por partes. (2 casas decimais)',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\int_{1}^{${ate}} ${fator}x\\ln x\\,dx`,
     gabarito,
     resolucao: {
@@ -231,9 +261,7 @@ function exercicioPorPartes(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: !nivelAoMenos(nivel, 'dificil')
-      ? 'Tome u = ln x. A escolha certa é a que simplifica ao derivar.'
-      : undefined,
+    dica: !nivelAoMenos(nivel, 'dificil') ? texto.dica : undefined,
   };
 }
 
@@ -249,6 +277,7 @@ function exercicioFracoesParciais(nivel: Nivel, rng: Rng): Exercicio<number> {
   const p = rng.inteiro(1, 5);
   const q = rng.inteiro(-6, 6);
   const ate = rng.inteiro(1, 5);
+  const texto = enunciadoTrilingue(FRACOES_PARCIAIS, [m, n], DICA_FRACOES_PARCIAIS);
 
   // (px + q)/((x+m)(x+n)) = A/(x+m) + B/(x+n), avaliando em x = −m e x = −n.
   const A = (q - p * m) / (n - m);
@@ -262,7 +291,8 @@ function exercicioFracoesParciais(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `tecnicas-parciais-${m}${n}${p}${q}-${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Resolva por frações parciais. (2 casas decimais)',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\int_{0}^{${ate}} \\frac{${numeradorTex}}{${denominadorTex}}\\,dx`,
     gabarito,
     resolucao: {
@@ -325,8 +355,172 @@ function exercicioFracoesParciais(nivel: Nivel, rng: Rng): Exercicio<number> {
       gabarito,
       proximos,
     ),
-    dica: !nivelAoMenos(nivel, 'dificil')
-      ? `Fatore em A/(x+${m}) + B/(x+${n}) e avalie em x = -${m} e x = -${n}.`
-      : undefined,
+    dica: !nivelAoMenos(nivel, 'dificil') ? texto.dica : undefined,
   };
+}
+
+/**
+ * Substituição trigonométrica — a técnica que faltava no tópico.
+ *
+ * `√(a² − x²)` e `a² + x²` não cedem às outras três: não há `u` cuja derivada
+ * apareça no integrando, e não há o que decompor. O que dissolve a raiz é
+ * trocar `x` por `a·sen θ`, porque aí `√(a² − a²sen²θ) = a·cos θ` pela
+ * identidade fundamental; a soma de quadrados pede `a·tg θ`, pelo mesmo motivo
+ * com `1 + tg² = sec²`.
+ *
+ * Os dois casos devolvem a resposta através de uma função inversa — arcsen ou
+ * arctg —, e é por isso que esta técnica só pôde entrar depois que
+ * `equacoes-trigonometricas` passou a ensinar as inversas.
+ *
+ * As duas integrais são exatas:
+ *
+ *     ∫₀^k √(a² − x²) dx = (k/2)·√(a² − k²) + (a²/2)·arcsen(k/a)
+ *     ∫₀^k dx/(a² + x²)  = (1/a)·arctg(k/a)
+ */
+function exercicioTrigonometrica(nivel: Nivel, rng: Rng): Exercicio<number> {
+  const a = rng.inteiro(2, nivelAoMenos(nivel, 'dificil') ? 9 : 6);
+  // A raiz exige k ≤ a; a tangente aceita qualquer k, e aqui os dois usam a
+  // mesma faixa para que o enunciado não revele a técnica pelo intervalo.
+  const ate = rng.inteiro(1, a);
+  const comRaiz = rng.escolher([true, false]);
+
+  const gabarito = comRaiz
+    ? (ate / 2) * Math.sqrt(a * a - ate * ate) + ((a * a) / 2) * Math.asin(ate / a)
+    : (1 / a) * Math.atan(ate / a);
+
+  const texto = comRaiz
+    ? enunciadoTrilingue(SUBSTITUICAO_TRIGONOMETRICA, [], undefined)
+    : enunciadoTrilingue(SUBSTITUICAO_TRIGONOMETRICA, [], undefined);
+  const dica = comRaiz
+    ? enunciadoTrilingue(DICA_SENO, [a], DICA_SENO)
+    : enunciadoTrilingue(DICA_TANGENTE, [a], DICA_TANGENTE);
+
+  const integrando = comRaiz ? `\\sqrt{${a * a} - x^{2}}` : `\\frac{1}{${a * a} + x^{2}}`;
+
+  return {
+    id: `tecnicas-trig-${comRaiz ? 'sen' : 'tg'}-${a}-${ate}-${rng.inteiro(0, 9999)}`,
+    nivel,
+    enunciado: texto.enunciado,
+    traducoes: {
+      fr: { enunciado: texto.traducoes.fr!.enunciado, dica: dica.traducoes.fr!.enunciado },
+      en: { enunciado: texto.traducoes.en!.enunciado, dica: dica.traducoes.en!.enunciado },
+    },
+    enunciadoTex: `\\int_{0}^{${ate}} ${integrando}\\,dx`,
+    gabarito,
+    resolucao: {
+      resultado: gabarito,
+      passos: comRaiz ? passosDoSeno(a, ate, gabarito) : passosDaTangente(a, ate, gabarito),
+    },
+    conceitos: ['tecnicas.escolha', 'tecnicas.substituicao'],
+    armadilhas: semColisoes(
+      comRaiz
+        ? [
+            {
+              resposta: ((a * a) / 2) * Math.asin(ate / a),
+              diagnostico:
+                'Essa é só a parcela do arco. A integral de cos²θ tem DUAS parcelas: ' +
+                'θ/2 e sen(2θ)/4 — a segunda é a que vira (k/2)·√(a² − k²).',
+              passo: 3,
+              conceito: 'tecnicas.escolha',
+            },
+            {
+              resposta: (ate / 2) * Math.sqrt(a * a - ate * ate),
+              diagnostico: 'Essa é só a outra parcela. Faltou o termo com o arco-seno.',
+              passo: 3,
+              conceito: 'tecnicas.escolha',
+            },
+            {
+              resposta: a * ate - (ate * ate) / 2,
+              diagnostico:
+                'Você tratou √(a² − x²) como (a − x). A raiz de uma diferença não é a ' +
+                'diferença das raízes — é justamente por isso que a troca trigonométrica existe.',
+              passo: 0,
+              conceito: 'tecnicas.escolha',
+            },
+          ]
+        : [
+            {
+              resposta: Math.atan(ate / a),
+              diagnostico:
+                'Faltou o fator 1/a. Ele vem de dx = a·sec²θ dθ dividido por a²·sec²θ, ' +
+                'que deixa dθ/a — e não dθ.',
+              passo: 2,
+              conceito: 'tecnicas.escolha',
+            },
+            {
+              resposta: (1 / a) * Math.asin(ate / a),
+              diagnostico:
+                'Arco-seno resolve a RAIZ de uma diferença de quadrados. Uma SOMA de ' +
+                'quadrados no denominador pede a tangente, e devolve arco-tangente.',
+              passo: 1,
+              conceito: 'tecnicas.escolha',
+            },
+          ],
+      gabarito,
+      proximos,
+    ),
+    dica: nivelAoMenos(nivel, 'extremo') ? undefined : dica.enunciado,
+  };
+}
+
+function passosDoSeno(a: number, ate: number, gabarito: number) {
+  const raiz = Math.sqrt(a * a - ate * ate);
+
+  return [
+    {
+      descricao: 'A raiz de uma diferença de quadrados pede o seno.',
+      tex: `x = ${a}\\sin\\theta \\qquad dx = ${a}\\cos\\theta\\,d\\theta`,
+      nota: 'Com essa troca, a identidade fundamental dissolve a raiz.',
+    },
+    {
+      descricao: 'A raiz vira um cosseno.',
+      tex:
+        `\\sqrt{${a * a} - ${a * a}\\sin^{2}\\theta} = ` +
+        `${a}\\sqrt{1 - \\sin^{2}\\theta} = ${a}\\cos\\theta`,
+    },
+    {
+      descricao: 'O integrando fica em cos², que se abaixa de grau.',
+      tex:
+        `\\int ${a * a}\\cos^{2}\\theta\\,d\\theta = ` +
+        `${a * a}\\left(\\frac{\\theta}{2} + \\frac{\\sin 2\\theta}{4}\\right)`,
+      nota: 'cos²θ = (1 + cos 2θ)/2 — sem isso a integral não fecha.',
+    },
+    {
+      descricao: 'Voltando para x, com θ = arcsen(x/a).',
+      tex:
+        `F(x) = \\frac{x}{2}\\sqrt{${a * a} - x^{2}} + ` +
+        `\\frac{${a * a}}{2}\\arcsin\\frac{x}{${a}}`,
+    },
+    {
+      descricao: 'Avaliando nos limites, e F(0) = 0.',
+      tex:
+        `\\frac{${ate}}{2}\\cdot ${Number(raiz.toFixed(4))} + ` +
+        `\\frac{${a * a}}{2}\\arcsin\\frac{${ate}}{${a}} = ${gabarito.toFixed(4)}`,
+    },
+  ];
+}
+
+function passosDaTangente(a: number, ate: number, gabarito: number) {
+  return [
+    {
+      descricao: 'Uma soma de quadrados pede a tangente.',
+      tex: `x = ${a}\\tan\\theta \\qquad dx = ${a}\\sec^{2}\\theta\\,d\\theta`,
+      nota: 'Aqui não há raiz para dissolver: a troca serve para somar quadrados em um só.',
+    },
+    {
+      descricao: 'O denominador vira uma secante ao quadrado.',
+      tex: `${a * a} + ${a * a}\\tan^{2}\\theta = ${a * a}\\sec^{2}\\theta`,
+      nota: '1 + tg²θ = sec²θ.',
+    },
+    {
+      descricao: 'Tudo se cancela, menos o fator 1/a.',
+      tex:
+        `\\int \\frac{${a}\\sec^{2}\\theta\\,d\\theta}{${a * a}\\sec^{2}\\theta} = ` +
+        `\\frac{1}{${a}}\\int d\\theta = \\frac{\\theta}{${a}}`,
+    },
+    {
+      descricao: 'Voltando para x, com θ = arctg(x/a), e avaliando.',
+      tex: `\\frac{1}{${a}}\\arctan\\frac{${ate}}{${a}} = ${gabarito.toFixed(4)}`,
+    },
+  ];
 }

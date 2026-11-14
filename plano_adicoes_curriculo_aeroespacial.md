@@ -69,17 +69,27 @@ adiantamento, e adiantamento compete com o que falta.
 
 ---
 
-## 3. As três lacunas dentro do que É exigido
+## 3. As lacunas dentro do que É exigido — conferidas, e duas já existiam
 
-Estas travam conteúdo que já está no ar, e vêm antes de qualquer coisa nova:
+Conferidas uma a uma contra o código em 14/11, **antes** de escrever qualquer linha:
 
-| Falta                           | Trava                                         |
-| ------------------------------- | --------------------------------------------- |
-| **Estudo de sinal**             | aplicações da derivada, inequações do 2º grau |
-| **Trigonometria inversa**       | técnicas de integração                        |
-| **Substituição trigonométrica** | integrais com raiz                            |
+| Falta apontada                  | Estado real                                                                                                                                                   |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Estudo de sinal                 | **já existe** — é o tópico `inequacoes-segundo-grau`, cujo título no currículo é «Estudo de sinal»: quadro de sinais, inequação-produto e inequação-quociente |
+| Trigonometria inversa           | **já existe** — é o conceito `eqtrig.inversas`, em `equacoes-trigonometricas`                                                                                 |
+| **Substituição trigonométrica** | **faltava mesmo — feita em 14/11**                                                                                                                            |
 
-Três aulas, dentro das áreas existentes, com os pré-requisitos no lugar. **Prioridade um.**
+A lista veio da seção 2 da avaliação, que é de 09/11 e envelheceu: o repositório fechou as
+duas primeiras depois disso. **Eu teria construído dois tópicos duplicados** se tivesse
+seguido o plano sem conferir.
+
+A que faltava não era tópico novo: era uma **técnica** dentro de `tecnicas-de-integracao`,
+que já ensinava substituição, por partes e frações parciais. Entrou nos dois casos clássicos
+— `√(a² − x²)` com x = a·sen θ, e `a² + x²` com x = a·tg θ —, com verbete de teoria e os
+diagnósticos dos dois erros clássicos: responder só a parcela do arco, e esquecer o fator
+1/a. O tópico ficou **trilíngue por inteiro** de passagem.
+
+**Prioridade um: concluída.**
 
 ---
 
@@ -181,15 +191,15 @@ São **22 aulas**, de um e meio a três meses. Nenhuma aproxima da admissão.
 
 ## 7. O plano, em ordem
 
-| Etapa | O quê                                                                      | Aulas | Tempo        |
-| ----- | -------------------------------------------------------------------------- | ----- | ------------ |
-| 0     | Desligar Poliedros, Juros, Óptica, Ondas e Física moderna no plano pessoal | 0     | minutos      |
-| 1     | Estudo de sinal, trigonometria inversa, substituição trigonométrica        | 3     | 1–2 semanas  |
-| 2     | **Química geral**                                                          | 12    | 6–10 semanas |
-| 3     | Autovalores e autovetores                                                  | 1     | 2–4 dias     |
-| 4     | Espaços vetoriais e transformações lineares, se MATH 204 as cobrir         | 2     | 1 semana     |
+| Etapa | O quê                                                                                  | Aulas | Tempo              |
+| ----- | -------------------------------------------------------------------------------------- | ----- | ------------------ |
+| 0     | Desligar Poliedros, Juros, Óptica, Ondas e Física moderna no plano pessoal             | 0     | minutos            |
+| 1     | ~~Estudo de sinal, trigonometria inversa~~ (já existiam) · substituição trigonométrica | 1     | **feita em 14/11** |
+| 2     | **Química geral**                                                                      | 12    | 6–10 semanas       |
+| 3     | Autovalores e autovetores                                                              | 1     | 2–4 dias           |
+| 4     | Espaços vetoriais e transformações lineares, se MATH 204 as cobrir                     | 2     | 1 semana           |
 
-**18 aulas**, contra as 30 do plano original — e com uma troca de fundo: saíram 22 aulas de
+**16 aulas**, contra as 30 do plano original — e com uma troca de fundo: saíram 22 aulas de
 disciplinas de graduação, entraram 12 de química, que é exigência de admissão.
 
 ---

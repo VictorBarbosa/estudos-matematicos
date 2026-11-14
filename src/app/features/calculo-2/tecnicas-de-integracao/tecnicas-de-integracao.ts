@@ -19,14 +19,7 @@ type Tecnica = 'substituicao' | 'por-partes';
 @Component({
   selector: 'app-tecnicas-de-integracao',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    MathPlot,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, MathPlot, TopicoLayout],
   templateUrl: './tecnicas-de-integracao.html',
   styleUrl: './tecnicas-de-integracao.scss',
 })
@@ -53,9 +46,7 @@ export class TecnicasDeIntegracao {
     return (x: number) => x * Math.exp(x / 2);
   });
 
-  protected readonly valor = computed(() =>
-    integralNumerica(this.integrando(), 0, this.ate()),
-  );
+  protected readonly valor = computed(() => integralNumerica(this.integrando(), 0, this.ate()));
 
   protected readonly enunciadoTex = computed(() => {
     const interno = `${this.a() === 1 ? '' : this.a()}x ${this.b() >= 0 ? '+' : '-'} ${Math.abs(this.b())}`;
