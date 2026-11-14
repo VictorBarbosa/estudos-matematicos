@@ -114,6 +114,23 @@ export class Configuracoes {
   protected readonly modelos = this.assistente.modelos;
 
   /**
+   * O motivo de a lista estar vazia, quando houver.
+   *
+   * Vem da sondagem do assistente, que já traduz as três falhas possíveis —
+   * servidor desligado, origem não autorizada e permissão de rede local
+   * negada — num texto que diz o que fazer. Sem ele, «nenhum modelo» é um beco
+   * sem saída.
+   */
+  protected readonly erroDoServidor = computed(() =>
+    this.modelos().length === 0 ? this.assistente.erro() : null,
+  );
+
+  /** `4.3 GB`, para o seletor dizer o que é grande e o que é pequeno. */
+  protected tamanho(bytes: number): string {
+    return bytes === 0 ? '' : `${(bytes / 1e9).toFixed(1)} GB`;
+  }
+
+  /**
    * O modelo escolhido não está instalado?
    *
    * Acontece de verdade: o padrão é `gpt-oss:20b`, e quem nunca o baixou recebe

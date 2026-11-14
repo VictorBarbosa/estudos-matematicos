@@ -88,21 +88,41 @@
         <div class="controle">
           <!--
             Seletor, e não campo de texto: o nome tem de existir no servidor,
-            senão todo lote falha calado. `list` mantém a digitação possível
-            para quem sabe o nome de um modelo que ainda vai baixar.
+            senão todo lote falha calado.
+
+            Era um `datalist`, e ele não serve aqui: um campo de texto com
+            lista esconde as opções até o clique na seta, e quando a lista
+            chega vazia — servidor fora do ar — o único nome à vista é o do
+            próprio campo, o que parece «só existe este modelo». Um `select`
+            diz o que há, e diz «nenhum» quando não há nenhum.
           -->
-          <input
+          <select
             id="llm-modelo"
-            type="text"
-            list="llm-modelos"
-            [value]="llm().modelo"
+            [disabled]="modelos().length === 0"
             (change)="trocarCampoLlm('modelo', $any($event.target).value)"
-          />
-          <datalist id="llm-modelos">
-            @for (modelo of modelos(); track modelo.nome) {
-              <option [value]="modelo.nome"></option>
+          >
+            @if (modelos().length === 0) {
+              <option [value]="llm().modelo">
+                {{ i18n.t('config.llm.semModelos', { modelo: llm().modelo }) }}
+              </option>
+            } @else {
+              <!--
+                O modelo escolhido pode não estar instalado — o padrão é
+                `gpt-oss:20b`, e quem nunca o baixou precisa dele na lista para
+                não ver a escolha trocar sozinha ao abrir a tela.
+              -->
+              @if (modeloAusente()) {
+                <option [value]="llm().modelo" selected>
+                  {{ i18n.t('config.llm.naoInstaladoOpcao', { modelo: llm().modelo }) }}
+                </option>
+              }
+              @for (modelo of modelos(); track modelo.nome) {
+                <option [value]="modelo.nome" [selected]="modelo.nome === llm().modelo">
+                  {{ modelo.nome }} · {{ tamanho(modelo.bytes) }}
+                </option>
+              }
             }
-          </datalist>
+          </select>
 
           <button type="button" class="texto" (click)="recarregarModelos()">
             {{ i18n.t('config.llm.recarregar') }}
@@ -179,6 +199,16 @@
         </div>
       </li>
     </ul>
+
+    <!--
+      Por que a lista está vazia.
+      Sem isto, «nenhum modelo» é um beco sem saída: pode ser servidor
+      desligado, origem não autorizada ou permissão de rede local negada, e as
+      três se parecem com um site quebrado.
+    -->
+    @if (erroDoServidor(); as erro) {
+      <p class="aviso">{{ erro }}</p>
+    }
 
     <p class="resumo">{{ i18n.t('config.llm.resumo', { total: llm().lote * 4 }) }}</p>
 

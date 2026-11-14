@@ -160,7 +160,9 @@
     "llm.raciocinioDesligado": "Désactivé (recommandé)",
     "llm.raciocinioBaixo": "Faible",
     "llm.resumo": "Chaque demande apporte {total} histoires : ce nombre par difficulté, sur les quatre.",
-    "llm.redefinir": "Remettre la LLM aux valeurs d’usine"
+    "llm.redefinir": "Remettre la LLM aux valeurs d’usine",
+    "llm.semModelos": "aucun modèle trouvé — le serveur n’a pas répondu",
+    "llm.naoInstaladoOpcao": "{modelo} (non installé)"
   },
   "controle": {
     "valorExato": "{rotulo} (valeur exacte)"

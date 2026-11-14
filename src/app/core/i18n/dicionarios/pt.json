@@ -160,7 +160,9 @@
     "llm.raciocinioDesligado": "Desligado (recomendado)",
     "llm.raciocinioBaixo": "Baixo",
     "llm.resumo": "Cada pedido traz {total} histórias: este número por dificuldade, nas quatro dificuldades.",
-    "llm.redefinir": "Voltar a LLM ao padrão de fábrica"
+    "llm.redefinir": "Voltar a LLM ao padrão de fábrica",
+    "llm.semModelos": "nenhum modelo encontrado — o servidor não respondeu",
+    "llm.naoInstaladoOpcao": "{modelo} (não instalado)"
   },
   "controle": {
     "valorExato": "{rotulo} (valor exato)"

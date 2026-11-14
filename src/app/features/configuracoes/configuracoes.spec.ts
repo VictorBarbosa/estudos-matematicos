@@ -2,6 +2,7 @@ import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
+import { AssistenteService } from '@core/assistente/services/assistente.service';
 import { Configuracoes } from '@features/configuracoes/configuracoes';
 
 describe('Configuracoes', () => {
@@ -26,8 +27,29 @@ describe('Configuracoes', () => {
     fixture.detectChanges();
   }
 
+  /*
+   * O servidor de mentira, com os modelos instalados.
+   *
+   * Sem ele a tela chama o Ollama de verdade: o teste passa numa máquina com o
+   * servidor no ar e falha na integração contínua — e, pior, o conteúdo da
+   * lista muda com o que está instalado em cada lugar.
+   */
+  const MODELOS = [
+    { name: 'ministral-3:3b', size: 3_200_000_000 },
+    { name: 'qwen3.5:0.8b-mlx', size: 800_000_000 },
+    { name: 'gpt-oss:20b', size: 14_000_000_000 },
+  ];
+
+  let fetchOriginal: typeof globalThis.fetch;
+
   beforeEach(async () => {
     localStorage.clear();
+    fetchOriginal = globalThis.fetch;
+    globalThis.fetch = (async () =>
+      new Response(JSON.stringify({ models: MODELOS }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      })) as typeof globalThis.fetch;
     TestBed.resetTestingModule();
     await TestBed.configureTestingModule({
       imports: [Configuracoes],
@@ -40,11 +62,20 @@ describe('Configuracoes', () => {
     fixture.detectChanges();
   });
 
+  afterEach(() => {
+    globalThis.fetch = fetchOriginal;
+  });
+
   it('mostra os seis blocos, e a LLM entre eles', () => {
     // Eram cinco. O sexto é a LLM local, que deixou de ser constante no código:
     // modelo, endereço, raciocínio e lote agora se ajustam aqui.
     expect(fixture.nativeElement.querySelectorAll('.bloco').length).toBe(6);
-    expect(fixture.nativeElement.querySelectorAll('.ajustes input').length).toBe(18);
+    // Dezenove controles: quatorze números da progressão, a caixa da surpresa,
+    // os dois campos de texto da LLM, o lote — e dois `<select>`, modelo e
+    // raciocínio. O modelo era `<input>` e virou `<select>`.
+    expect(
+      fixture.nativeElement.querySelectorAll('.ajustes input, .ajustes select').length,
+    ).toBe(19);
     // Os numéricos são os quatorze da progressão mais o lote da LLM.
     expect(fixture.nativeElement.querySelectorAll('.ajustes input[type="number"]').length).toBe(15);
     expect(texto()).toContain('Para abrir a próxima etapa');
@@ -55,7 +86,7 @@ describe('Configuracoes', () => {
   });
 
   it('o modelo da LLM se troca pela tela, e fica gravado', () => {
-    const campo = fixture.nativeElement.querySelector('#llm-modelo') as HTMLInputElement;
+    const campo = fixture.nativeElement.querySelector('#llm-modelo') as HTMLSelectElement;
 
     expect(campo.value).toBe('gpt-oss:20b');
 
@@ -64,6 +95,42 @@ describe('Configuracoes', () => {
     fixture.detectChanges();
 
     expect(config.configuracaoDaLlm().modelo).toBe('ministral-3:3b');
+  });
+
+  it('o seletor mostra TODOS os modelos do servidor, não só o escolhido', async () => {
+    /*
+     * O defeito relatado: a lista mostrava um modelo só. Era um `datalist`, que
+     * esconde as opções até o clique na seta — e com a lista vazia (servidor
+     * fora do ar) o único nome à vista era o do próprio campo. Este teste fixa
+     * o seletor com três modelos instalados.
+     */
+    await fixture.whenStable();
+    const assistente = TestBed.inject(AssistenteService);
+    await assistente.carregarModelos();
+    fixture.detectChanges();
+
+    const opcoes = [
+      ...(fixture.nativeElement.querySelectorAll(
+        '#llm-modelo option',
+      ) as NodeListOf<HTMLOptionElement>),
+    ];
+    const nomes = opcoes.map((opcao) => opcao.value);
+
+    expect(nomes).toContain('ministral-3:3b');
+    expect(nomes).toContain('qwen3.5:0.8b-mlx');
+    expect(nomes).toContain('gpt-oss:20b');
+    // E o escolhido aparece marcado, para o seletor não trocar sozinho.
+    expect(opcoes.find((opcao) => opcao.value === 'gpt-oss:20b')!.selected).toBe(true);
+  });
+
+  it('o botão de reler o servidor continua na tela', () => {
+    // Ele sumiu numa edição e nada avisou: sem ele, quem instala um modelo
+    // novo precisa recarregar a página inteira para vê-lo na lista.
+    const botao = [...(fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>)].find(
+      (candidato) => candidato.textContent?.includes('Reler do servidor'),
+    );
+
+    expect(botao, 'o botão de reler os modelos sumiu').toBeDefined();
   });
 
   it('o lote fica preso entre um e quatro', () => {
