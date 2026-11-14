@@ -174,12 +174,11 @@ export class LoteDeHistorias {
     const vistos = new Set<string>();
 
     for (const bruto of brutos) {
-      const veredito = validarModelo(
-        bruto,
-        pedido.dados.length,
-        pedido.proibidas ?? [],
+      const veredito = validarModelo(bruto, pedido.dados.length, {
+        proibidas: pedido.proibidas,
+        permitidas: pedido.permitidas,
         repetiveis,
-      );
+      });
 
       if (!veredito.ok) {
         continue;

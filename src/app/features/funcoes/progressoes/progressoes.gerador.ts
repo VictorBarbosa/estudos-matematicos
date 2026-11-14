@@ -1,4 +1,5 @@
 import { somaComPassos, somaInfinitaComPassos, termoGeral } from '@core/math';
+import { PROBLEMA_PA } from '@features/funcoes/progressoes/progressoes.problema';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -12,6 +13,7 @@ type Pergunta = 'termo-pa' | 'soma-pa' | 'termo-pg' | 'soma-pg' | 'soma-infinita
 export const geradorProgressoes: GeradorExercicio<number> = {
   topicoId: 'progressoes',
   formatoResposta: 'um número, ex.: 48 ou 1,5',
+  problemaDeTexto: PROBLEMA_PA,
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     switch (sortearPergunta(nivel, rng)) {
@@ -71,6 +73,9 @@ function exercicioTermo(geometrica: boolean, nivel: Nivel, rng: Rng): Exercicio<
     id: `prog-termo-${nome}-${primeiro}-${razao}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: `Numa ${nome} de primeiro termo ${primeiro} e razão ${razao}, qual é o ${n}º termo?`,
+    // A história é de crescimento, então só serve à PA que cresce a partir de
+    // um valor positivo: «cada mês acrescenta −4 caixas» ninguém escreve.
+    dadosDoProblema: !geometrica && primeiro > 0 && razao > 0 ? [primeiro, razao, n] : undefined,
     enunciadoTex: `a_1 = ${primeiro} \\qquad ${letraRazao} = ${razao} \\qquad n = ${n}`,
     gabarito,
     resolucao: {

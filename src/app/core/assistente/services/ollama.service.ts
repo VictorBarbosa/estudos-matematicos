@@ -170,7 +170,9 @@ export class OllamaService {
       model: modelo,
       stream: false,
       format: esquema,
-      options: { temperature: 0.8, num_predict: 8192 },
+      // 16384 porque 8192 truncava o JSON de um lote de seis em três
+      // línguas — o erro chegava como «Unterminated string in JSON».
+      options: { temperature: 0.8, num_predict: 16384 },
       messages: [
         { role: 'system', content: sistema },
         { role: 'user', content: usuario },

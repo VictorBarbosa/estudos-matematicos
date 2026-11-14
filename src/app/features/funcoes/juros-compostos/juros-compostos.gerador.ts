@@ -1,4 +1,5 @@
 import { jurosCompostosComPassos } from '@core/math';
+import { PROBLEMA_MONTANTE } from '@features/funcoes/juros-compostos/juros-compostos.problema';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -13,6 +14,7 @@ type Pergunta = 'montante' | 'juro' | 'tempo-para-dobrar' | 'taxa-equivalente';
 export const geradorJuros: GeradorExercicio<number> = {
   topicoId: 'juros-compostos',
   formatoResposta: 'um número, ex.: 1610,51',
+  problemaDeTexto: PROBLEMA_MONTANTE,
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
@@ -108,6 +110,9 @@ export const geradorJuros: GeradorExercicio<number> = {
         `Um capital de $ ${capital},00 é aplicado a ${taxa}% ao período, por ${periodos} ` +
         `períodos, a juros compostos. Qual é ${pergunta === 'montante' ? 'o montante final' : 'o juro total'}? (2 casas)`,
       enunciadoTex: `C = ${capital} \\qquad i = ${taxa}\\% \\qquad n = ${periodos}`,
+      // Só o montante: «quanto rendeu» com gabarito de montante faria o aluno
+      // errar fazendo tudo certo.
+      dadosDoProblema: pergunta === 'montante' ? [capital, taxa, periodos] : undefined,
       gabarito,
       resolucao: {
         resultado: gabarito,

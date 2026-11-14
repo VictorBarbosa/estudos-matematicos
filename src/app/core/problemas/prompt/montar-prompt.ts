@@ -63,6 +63,15 @@ export interface PedidoDeProblema {
    * vezes — como instrução e como portão.
    */
   readonly proibidas?: readonly string[];
+  /**
+   * Números por extenso que este tópico aceita.
+   *
+   * A regra geral recusa «dois», «trois», «two» — um número que o site não
+   * sorteou. Mas as melhores histórias de MMC começam com «Dois ônibus
+   * partem…», e ali «dois» é o enredo: a história é SOBRE duas coisas. Sem
+   * esta exceção a regra atrapalhava justamente o que devia proteger.
+   */
+  readonly permitidas?: readonly string[];
 }
 
 /**

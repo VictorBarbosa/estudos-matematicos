@@ -346,6 +346,61 @@ seção 2.
 
 ---
 
+## 5.4. A rodada dos cinco tópicos, e o que ela corrigiu
+
+Entraram **mínimo múltiplo comum**, **progressão aritmética** e **juros compostos**, que com
+equação do primeiro grau e estequiometria fecham cinco. Em cada um só UMA forma de pergunta
+recebe história, e por decisão explícita:
+
+| Tópico          | Recebe                                 | Não recebe, e por quê                                                                                      |
+| --------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| MMC e MDC       | o MMC                                  | o MDC é história de partilha, não de reencontro — a de reencontro ficaria sem resposta                     |
+| Progressões     | PA de razão e primeiro termo positivos | PG multiplica, e PA negativa pediria contexto que diminui: «cada mês acrescenta −4 caixas» ninguém escreve |
+| Juros compostos | o montante                             | «quanto rendeu» com gabarito de montante faria o aluno errar fazendo tudo certo                            |
+
+### A declaração saiu do gerador
+
+Cada tópico guarda a sua em `<topico>.problema.ts`, com `import type`. O motivo é o
+comparador: ele agora importa **essas** declarações por caminho relativo — o node apaga
+`import type`, então os apelidos `@core` e `@features` não precisam resolver — e mede o
+prompt que o site usa. Antes era uma cópia à mão, e a cópia desandou: eu passei a medir um
+prompt que não existia mais. Acrescentar um tópico à medição é acrescentar uma linha.
+
+### Três regras minhas que atrapalhavam o que deviam proteger
+
+Todas apareceram medindo, nenhuma teria aparecido lendo o código:
+
+1. **«Dois ônibus partem…»** era recusado por «dois» estar na lista de números por extenso —
+   e as histórias de MMC que começam assim eram as melhores do lote. Seis de seis caíam. Ali
+   «dois» é o enredo: a história é SOBRE duas coisas, e nenhum dado se esconde nele. Entrou
+   `permitidas`, por tópico.
+2. **«{1} por cento ao mês»** era recusado por «cento». É a única forma de dizer porcentagem
+   em prosa, e quatro de quatro histórias de juros caíam. A locução passou a ser apagada
+   antes da conferência — sem exceção por tópico, e um «cento» solto continua pego.
+3. **O orçamento de tokens** truncava o JSON de um lote de seis em três línguas, e o erro
+   chegava como «Unterminated string in JSON». Subiu de 8192 para 16384.
+
+E a assinatura do validador virou objeto: `validarModelo(bruto, 3, [], [2])` não dizia a
+ninguém o que `[]` e `[2]` eram.
+
+### Depois das correções
+
+| Tópico                   | Aprovados |
+| ------------------------ | --------- |
+| Equação do primeiro grau | 4 de 4    |
+| Mínimo múltiplo comum    | 4 de 4    |
+| Progressão aritmética    | 4 de 4    |
+| Juros compostos          | 4 de 4    |
+| Estequiometria           | 4 de 4    |
+
+> «O ônibus parte a cada {0} minutos e o trem a cada {1} minutos. Quando eles sairão juntos
+> novamente?»
+>
+> «Uma fábrica produz {0} unidades no primeiro mês, e aumenta a produção em {1} unidades a
+> cada mês. Quantas unidades serão produzidas no mês {2}?»
+
+---
+
 ## 6. Configuração, em Configurações
 
 | Opção                | Padrão                                         |

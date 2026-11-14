@@ -25,6 +25,11 @@ import {
   type PedidoDeProblema,
   montarPrompt,
 } from '../src/app/core/problemas/prompt/montar-prompt.ts';
+import { PROBLEMA_EQUACAO1 } from '../src/app/features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.problema.ts';
+import { PROBLEMA_MMC } from '../src/app/features/matematica-basica/mmc-mdc/mmc-mdc.problema.ts';
+import { PROBLEMA_PA } from '../src/app/features/funcoes/progressoes/progressoes.problema.ts';
+import { PROBLEMA_MONTANTE } from '../src/app/features/funcoes/juros-compostos/juros-compostos.problema.ts';
+import { PROBLEMA_ESTEQUIOMETRIA } from '../src/app/features/quimica/estequiometria/estequiometria.problema.ts';
 
 const ENDPOINT = process.env.OLLAMA_URL ?? 'http://localhost:11434';
 
@@ -46,125 +51,32 @@ const NUM_PREDICT = 8192;
 const SAIDA = 'comparacao-modelos.md';
 
 /**
- * Os três pedidos do teste.
+ * Os tópicos medidos: as declarações DE VERDADE, não cópias.
  *
- * Um de álgebra, um de aritmética aplicada e um de química: as três famílias
- * em que o problema de palavra se comporta de forma diferente. Se um modelo
- * escreve bem equação do primeiro grau e tropeça em estequiometria, é melhor
- * saber antes de gerar quarenta tópicos.
+ * Antes isto era uma cópia à mão de cada pedido, e a cópia desandou — eu
+ * passei a medir um prompt que não era o que o site usava. Agora cada tópico
+ * guarda a sua declaração num `*.problema.ts` que só importa TIPO, e o node
+ * apaga `import type` ao rodar: por isso o caminho relativo funciona aqui sem
+ * resolver os apelidos `@core` e `@features`.
+ *
+ * Acrescentar um tópico à medição é acrescentar uma linha a esta lista.
  */
-const PEDIDOS: readonly PedidoDeProblema[] = [
-  {
-    topico: 'Equação do primeiro grau',
-    oQueExercita: 'resolver ax + b = c, achando o valor de x',
-    relacao:
-      '{0} × x + {1} = {2}, em que x é QUANTAS VEZES a quantidade {0} se repete — e x é ' +
-      'justamente o que a pergunta cobra',
-    nivel: 'facil',
-    dados: [
-      {
-        indice: 0,
-        significado: 'o valor que se repete a cada unidade',
-        tipo: 'inteiro',
-        faixa: [2, 12],
-      },
-      {
-        indice: 1,
-        significado:
-          'uma quantidade da MESMA grandeza e da MESMA unidade do total, que já está lá ' +
-          'desde o começo e não depende de x — uma taxa fixa, um estoque inicial, uma ' +
-          'parcela de entrada. Se o total está em doces, esta também está em doces, nunca ' +
-          'em caixas de doces',
-        tipo: 'inteiro',
-        faixa: [1, 40],
-      },
-      { indice: 2, significado: 'o total alcançado no fim', tipo: 'inteiro', faixa: [20, 200] },
-    ],
-    pergunta: 'quantas vezes a quantidade que se repete foi repetida, isto é, o x',
-    quantas: 6,
-    contextos: ['oficina', 'transporte', 'obra'],
-  },
-  {
-    topico: 'Razão e proporção',
-    oQueExercita: 'uma regra de três direta entre duas grandezas proporcionais',
-    relacao: '{0} está para {1} como {2} está para x, e x é o que a pergunta cobra',
-    nivel: 'medio',
-    dados: [
-      {
-        indice: 0,
-        significado: 'a primeira grandeza, na situação conhecida',
-        tipo: 'inteiro',
-        faixa: [2, 20],
-      },
-      {
-        indice: 1,
-        significado: 'a segunda grandeza, na situação conhecida',
-        tipo: 'inteiro',
-        faixa: [5, 300],
-      },
-      {
-        indice: 2,
-        significado: 'a primeira grandeza, na situação perguntada',
-        tipo: 'inteiro',
-        faixa: [2, 40],
-      },
-    ],
-    pergunta: 'o valor da segunda grandeza na situação perguntada',
-    quantas: 6,
-    contextos: ['receita de cozinha industrial', 'consumo de combustível', 'tempo de máquina'],
-  },
-  {
-    topico: 'Estequiometria',
-    oQueExercita:
-      'converter massa de um reagente em massa de produto pela equação balanceada, que ' +
-      'aparece abaixo do enunciado',
-    relacao:
-      'de {0} gramas de {1} sai uma massa de {2}, pela proporção da equação balanceada que ' +
-      'aparece abaixo do enunciado — a massa do produto é o que se pergunta',
-    nivel: 'dificil',
-    dados: [
-      {
-        indice: 0,
-        significado: 'a massa de reagente disponível, em gramas',
-        tipo: 'decimal',
-        faixa: [1, 500],
-      },
-      { indice: 1, significado: 'a fórmula do reagente de partida', tipo: 'formula' },
-      { indice: 2, significado: 'a fórmula do produto que se quer', tipo: 'formula' },
-    ],
-    pergunta: 'a massa de produto formada',
-    unidade: 'gramas',
-    quantas: 6,
-    contextos: ['laboratório', 'indústria química', 'tratamento de água'],
-    proibidas: [
-      'sal',
-      'sel',
-      'salt',
-      'ácido',
-      'acido',
-      'acide',
-      'acid',
-      'óxido',
-      'oxido',
-      'oxyde',
-      'oxide',
-      'polímero',
-      'polimero',
-      'polymère',
-      'polymere',
-      'polymer',
-      'monômero',
-      'monomero',
-      'monomère',
-      'monomere',
-      'monomer',
-      'excesso',
-      'excès',
-      'exces',
-      'excess',
-    ],
-  },
+const DECLARACOES = [
+  PROBLEMA_EQUACAO1,
+  PROBLEMA_MMC,
+  PROBLEMA_PA,
+  PROBLEMA_MONTANTE,
+  PROBLEMA_ESTEQUIOMETRIA,
 ];
+
+/** O nível pedido a cada tópico na medição. */
+const NIVEL: PedidoDeProblema['nivel'] = 'medio';
+
+const PEDIDOS: readonly PedidoDeProblema[] = DECLARACOES.map((declaracao) => ({
+  ...declaracao.pedido,
+  nivel: NIVEL,
+  quantas: 6,
+}));
 
 interface Resultado {
   readonly modelo: string;
@@ -265,12 +177,13 @@ async function avaliar(modelo: string, pedido: PedidoDeProblema): Promise<Result
     let repetidos = 0;
 
     for (const bruto of brutos) {
-      const veredito = validarModelo(
-        bruto,
-        pedido.dados.length,
-        pedido.proibidas ?? [],
-        pedido.dados.filter((dado) => dado.tipo === 'formula').map((dado) => dado.indice),
-      );
+      const veredito = validarModelo(bruto, pedido.dados.length, {
+        proibidas: pedido.proibidas,
+        permitidas: pedido.permitidas,
+        repetiveis: pedido.dados
+          .filter((dado) => dado.tipo === 'formula')
+          .map((dado) => dado.indice),
+      });
 
       if (!veredito.ok) {
         recusados.push({ bruto, motivos: veredito.motivos });

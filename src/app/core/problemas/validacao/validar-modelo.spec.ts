@@ -210,6 +210,70 @@ describe('validar modelo de problema', () => {
  * ela é nomeada na história e cobrada na pergunta. A comparação de modelos
  * recusou seis histórias boas de química por isto antes da correção.
  */
+/**
+ * A exceção que o MMC cobrou.
+ *
+ * As melhores histórias de mínimo múltiplo comum começam com «Dois ônibus
+ * partem…», e a regra do número por extenso recusou seis de seis. Ali «dois»
+ * é o enredo: a história é SOBRE duas coisas, e nenhum dado se esconde nele.
+ */
+/**
+ * «por cento» não é um número por extenso.
+ *
+ * `cento` está na lista e deve estar, mas a locução é a única forma de dizer
+ * porcentagem em prosa — e a regra recusava quatro de quatro histórias de
+ * juros compostos.
+ */
+describe('a locução da porcentagem', () => {
+  const COM_PORCENTAGEM = {
+    pt: 'Alguém aplicou {0} reais numa conta que rende {1} por cento ao mês. Depois de {2} meses, quanto terá no total?',
+    fr: 'Quelqu’un a placé {0} dollars dans un compte qui rapporte {1} pour cent par mois. Après {2} mois, combien aura-t-il au total ?',
+    en: 'Someone put {0} dollars in an account earning {1} percent a month. After {2} months, how much will there be in total?',
+  };
+
+  it('passa, sem o tópico precisar abrir exceção', () => {
+    expect(validarModelo(COM_PORCENTAGEM, 3).ok).toBe(true);
+  });
+
+  it('um «cento» solto continua sendo pego', () => {
+    const solto = {
+      ...COM_PORCENTAGEM,
+      pt: COM_PORCENTAGEM.pt.replace('{0} reais', 'um cento de reais'),
+    };
+
+    expect(validarModelo(solto, 3).ok).toBe(false);
+  });
+});
+
+describe('número por extenso liberado pelo tópico', () => {
+  const DOIS_ONIBUS = {
+    pt: 'Dois ônibus partem do terminal; um a cada {0} minutos e o outro a cada {1} minutos. Quando partem juntos outra vez?',
+    fr: 'Deux autobus partent du terminus ; l’un toutes les {0} minutes et l’autre toutes les {1} minutes. Quand partent-ils ensemble de nouveau ?',
+    en: 'Two buses leave the terminal; one every {0} minutes and the other every {1} minutes. When do they leave together again?',
+  };
+
+  it('sem a liberação, a história boa é recusada', () => {
+    const veredito = validarModelo(DOIS_ONIBUS, 2);
+
+    expect(veredito.ok).toBe(false);
+    if (!veredito.ok) {
+      expect(veredito.motivos).toContain('numero-escrito');
+    }
+  });
+
+  it('com a liberação do tópico, passa', () => {
+    expect(validarModelo(DOIS_ONIBUS, 2, { permitidas: ['dois', 'duas', 'deux', 'two'] }).ok).toBe(
+      true,
+    );
+  });
+
+  it('a liberação é só das palavras listadas', () => {
+    const comTres = { ...DOIS_ONIBUS, pt: DOIS_ONIBUS.pt.replace('Dois', 'Três') };
+
+    expect(validarModelo(comTres, 2, { permitidas: ['dois', 'deux', 'two'] }).ok).toBe(false);
+  });
+});
+
 describe('lacuna repetível', () => {
   const COM_FORMULA_REPETIDA = {
     pt: 'Num laboratório há {0} gramas de {1} e se quer saber a massa de {2}. Quantos gramas de {2} resultam?',
@@ -227,7 +291,7 @@ describe('lacuna repetível', () => {
   });
 
   it('com a lacuna declarada repetível, passa', () => {
-    expect(validarModelo(COM_FORMULA_REPETIDA, 3, [], [2]).ok).toBe(true);
+    expect(validarModelo(COM_FORMULA_REPETIDA, 3, { repetiveis: [2] }).ok).toBe(true);
   });
 
   it('a permissão é por lacuna: o número continua uma vez só', () => {
@@ -236,7 +300,7 @@ describe('lacuna repetível', () => {
       pt: `${COM_FORMULA_REPETIDA.pt} Lembre: {0}.`,
     };
 
-    expect(validarModelo(numeroRepetido, 3, [], [2]).ok).toBe(false);
+    expect(validarModelo(numeroRepetido, 3, { repetiveis: [2] }).ok).toBe(false);
   });
 
   it('repetir não dispensa a mesma ordem nos três idiomas', () => {
@@ -245,7 +309,7 @@ describe('lacuna repetível', () => {
       en: 'A laboratory wants the mass of {2} from {0} grams of {1}. How many grams of {2}?',
     };
 
-    const veredito = validarModelo(fora, 3, [], [2]);
+    const veredito = validarModelo(fora, 3, { repetiveis: [2] });
 
     expect(veredito.ok).toBe(false);
     if (!veredito.ok) {
@@ -272,7 +336,7 @@ describe('palavras proibidas pelo tópico', () => {
   });
 
   it('com a lista do tópico, a mesma palavra é recusada', () => {
-    const veredito = validarModelo(COM_SAL, 3, ['sal', 'sel', 'salt']);
+    const veredito = validarModelo(COM_SAL, 3, { proibidas: ['sal', 'sel', 'salt'] });
 
     expect(veredito.ok).toBe(false);
     if (!veredito.ok) {
@@ -283,13 +347,14 @@ describe('palavras proibidas pelo tópico', () => {
   it('a recusa vale nos três idiomas, não só no português', () => {
     const soEmIngles = { ...COM_SAL, pt: COM_SAL.pt.replace('de sal', 'de tempero') };
 
-    expect(validarModelo(soEmIngles, 3, ['salt']).ok).toBe(false);
+    expect(validarModelo(soEmIngles, 3, { proibidas: ['salt'] }).ok).toBe(false);
   });
 
   it('a palavra proibida não precisa da caixa certa', () => {
-    expect(validarModelo({ ...COM_SAL, pt: COM_SAL.pt.replace('sal', 'Sal') }, 3, ['sal']).ok).toBe(
-      false,
-    );
+    expect(
+      validarModelo({ ...COM_SAL, pt: COM_SAL.pt.replace('sal', 'Sal') }, 3, { proibidas: ['sal'] })
+        .ok,
+    ).toBe(false);
   });
 });
 

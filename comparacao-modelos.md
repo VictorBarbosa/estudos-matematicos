@@ -1,6 +1,6 @@
 # Comparação de modelos locais para escrever os problemas
 
-Gerado em 2026-11-14 15:54, com 6 pedidos por tópico e por modelo.
+Gerado em 2026-11-14 16:29, com 4 pedidos por tópico e por modelo.
 
 A taxa de aprovação é do validador que o site usa de verdade
 (`core/problemas/validacao/validar-modelo.ts`): dígito solto, lacuna faltando, ordem
@@ -11,9 +11,11 @@ mas iguais a outra do mesmo lote.
 
 | Modelo | Tópico | Aprovados | Taxa | Repetidos | Tempo | Recusas |
 | --- | --- | --- | --- | --- | --- | --- |
-| gpt-oss:20b | Equação do primeiro grau | 5/6 | 83% | 0 | 80.0 s | longo |
-| gpt-oss:20b | Razão e proporção | 6/6 | 100% | 0 | 117.6 s | — |
-| gpt-oss:20b | Estequiometria | 6/6 | 100% | 0 | 97.7 s | — |
+| gpt-oss:20b | Equação do primeiro grau | 4/4 | 100% | 0 | 79.5 s | — |
+| gpt-oss:20b | Mínimo múltiplo comum | 4/4 | 100% | 0 | 66.7 s | — |
+| gpt-oss:20b | Progressão aritmética | 4/4 | 100% | 0 | 58.3 s | — |
+| gpt-oss:20b | Juros compostos | 4/4 | 100% | 0 | 79.5 s | — |
+| gpt-oss:20b | Estequiometria | 4/4 | 100% | 0 | 45.8 s | — |
 
 ## Os textos, para ler
 
@@ -21,78 +23,114 @@ mas iguais a outra do mesmo lote.
 
 **1.**
 
-- pt: Um mecânico pintou {0} carros a cada sessão, já tinha pintado {1} antes de iniciar a nova série, e ao fim havia pintado {2} carros. Quantas sessões de pintura foram necessárias?
-- fr: Un mécanicien a peint {0} voitures à chaque séance, il avait déjà peint {1} avant de commencer la nouvelle série, et à la fin il avait peint {2} voitures. Combien de séances de peinture ont été nécessaires?
-- en: A mechanic painted {0} cars each session, he had already painted {1} before starting the new batch, and at the end he had painted {2} cars. How many painting sessions were needed?
+- pt: O canteiro de obras adiciona {0} tijolos por dia, já tinha {1} tijolos, totalizando {2} tijolos. Quantas vezes foram adicionados tijolos?
+- fr: Le chantier ajoute {0} briques par jour, il avait déjà {1} briques, pour un total de {2} briques. Combien de fois ont été ajoutées des briques?
+- en: The construction site adds {0} bricks per day, it already had {1} bricks, ending up with {2} bricks. How many times were bricks added?
 
 **2.**
 
-- pt: Um caminhão entregou {0} pacotes a cada viagem, já tinha entregue {1} antes de começar a rota, e no fim totalizou {2} pacotes. Quantas viagens o caminhão realizou?
-- fr: Un camion a livré {0} colis à chaque voyage, il avait déjà livré {1} avant de commencer la tournée, et à la fin il avait totalisé {2} colis. Combien de voyages le camion a-t-il effectués?
-- en: A truck delivered {0} packages each trip, it had already delivered {1} before starting the route, and at the end it had totaled {2} packages. How many trips did the truck make?
+- pt: A padaria produz {0} biscoitos em cada lote, já tinha {1} biscoitos, totalizando {2} biscoitos. Quantas vezes foram produzidos biscoitos?
+- fr: La boulangerie produit {0} biscuits par lot, elle avait déjà {1} biscuits, pour un total de {2} biscuits. Combien de fois ont été produits des biscuits?
+- en: The bakery produces {0} cookies per batch, it already had {1} cookies, ending up with {2} cookies. How many times were cookies produced?
 
 **3.**
 
-- pt: Na obra, cada etapa acrescentou {0} metros de andaime, já havia montado {1} metros antes de começar a nova etapa, e ao fim o total de metros de andaime era {2}. Quantas etapas de montagem foram realizadas?
-- fr: Sur le chantier, chaque étape ajoutait {0} mètres de échafaudage, on avait déjà monté {1} mètres avant de commencer la nouvelle étape, et à la fin le total de mètres d'échafaudage était de {2}. Combien d'étapes de montage ont été réalisées?
-- en: At the construction site, each step added {0} meters of scaffold, we had already assembled {1} meters before starting the new step, and at the end the total meters of scaffold was {2}. How many assembly steps were carried out?
+- pt: A linha de montagem adiciona {0} unidades a cada turno, já tinha {1} unidades, totalizando {2} unidades. Quantas vezes foram adicionadas unidades?
+- fr: La ligne de production ajoute {0} unités à chaque quart, elle avait déjà {1} unités, pour un total de {2} unités. Combien de fois ont été ajoutées des unités?
+- en: The assembly line adds {0} units each shift, it already had {1} units, ending up with {2} units. How many times were units added?
 
 **4.**
 
-- pt: Um atleta corria {0} voltas por treino, já tinha completado {1} voltas antes do último treino, e ao fim havia corrido {2} voltas. Quantos treinos de corrida foram feitos?
-- fr: Un athlète courait {0} tours par entraînement, il avait déjà couru {1} tours avant le dernier entraînement, et à la fin il avait couru {2} tours. Combien d'entraînements de course ont été faits?
-- en: A runner ran {0} laps per workout, he had already run {1} laps before the last workout, and at the end he had run {2} laps. How many workout sessions were performed?
+- pt: O corredor cobre {0} quilômetros a cada corrida, já tinha percorrido {1} quilômetros, totalizando {2} quilômetros. Quantas vezes foram cobertos quilômetros?
+- fr: Le coureur parcourt {0} kilomètres à chaque course, il avait déjà parcouru {1} kilomètres, pour un total de {2} kilomètres. Combien de fois ont été parcourus des kilomètres?
+- en: The runner covers {0} kilometers per run, it already had {1} kilometers, ending up with {2} kilometers. How many times were kilometers covered?
 
-**5.**
-
-- pt: Na fábrica, cada caixa continha {0} unidades de doces, já havia empilhado {1} caixas antes da nova linha, e no fim a quantidade total de doces era {2}. Quantas caixas foram empilhadas na nova linha?
-- fr: Dans l'usine, chaque boîte contenait {0} unités de bonbons, on avait déjà empilé {1} boîtes avant la nouvelle ligne, et à la fin le nombre total de bonbons était de {2}. Combien de boîtes ont été empilées sur la nouvelle ligne?
-- en: In the factory, each box contained {0} units of candy, we had already stacked {1} boxes before the new line, and at the end the total number of candies was {2}. How many boxes were stacked on the new line?
-
-
-#### Recusados
-
-- _longo_: Um pintor cobriu {0} metros quadrados de cerca a cada dia, já havia pintado {1} metros quadrados antes de começar a nova fase, e ao fim a área total pintada era {2} metros quadrados. Quantos dias de pintura foram necessários?
 
 ---
 
-### gpt-oss:20b — Razão e proporção
+### gpt-oss:20b — Mínimo múltiplo comum
 
 **1.**
 
-- pt: Em uma padaria, {0} padeiros produzem {1} pães em uma manhã. Quando {2} padeiros trabalham, a produção de pães aumenta. Quantos pães serão produzidos?
-- fr: Dans une boulangerie, {0} boulangers produisent {1} pains en un matin. Lorsque {2} boulangers travaillent, la production de pains augmente. Combien de pains seront produits ?
-- en: In a bakery, {0} bakers produce {1} loaves of bread in one morning. When {2} bakers work, the bread production increases. How many loaves of bread will be produced?
+- pt: O ônibus parte a cada {0} minutos e o trem a cada {1} minutos. Quando eles sairão juntos novamente?
+- fr: Le bus part toutes les {0} minutes et le train toutes les {1} minutes. Quand repartiront-ils ensemble?
+- en: The bus leaves every {0} minutes and the train every {1} minutes. When will they depart together again?
 
 **2.**
 
-- pt: Em uma fábrica de brinquedos, {0} máquinas produzem {1} brinquedos por hora. Quando {2} máquinas operam, a produção de brinquedos aumenta. Quantos brinquedos serão produzidos por hora?
-- fr: Dans une usine de jouets, {0} machines produisent {1} jouets par heure. Lorsque {2} machines fonctionnent, la production de jouets augmente. Combien de jouets seront produits par heure ?
-- en: In a toy factory, {0} machines produce {1} toys per hour. When {2} machines operate, the toy production increases. How many toys will be produced per hour?
+- pt: Uma engrenagem gira a cada {0} revoluções e a outra a cada {1} revoluções. Quando ambas girarão juntas pela próxima vez?
+- fr: Une roue dentée tourne toutes les {0} révolutions et l'autre toutes les {1} révolutions. Quand tourneront-elles ensemble la prochaine fois?
+- en: One gear turns every {0} rotations and the other every {1} rotations. When will they turn together again?
 
 **3.**
 
-- pt: Em uma granja, {0} galinhas põem {1} ovos em um dia. Quando {2} galinhas estão na granja, a produção de ovos aumenta. Quantos ovos serão produzidos?
-- fr: Dans une ferme, {0} poules pondent {1} œufs en un jour. Lorsque {2} poules sont dans la ferme, la production d'œufs augmente. Combien d'œufs seront produits ?
-- en: In a farm, {0} hens lay {1} eggs in one day. When {2} hens are on the farm, egg production increases. How many eggs will be produced?
+- pt: Um semáforo pisca a cada {0} segundos e outro a cada {1} segundos. Quando ambos piscarão ao mesmo tempo novamente?
+- fr: Un feu clignote toutes les {0} secondes et un autre toutes les {1} secondes. Quand clignoteront-ils en même temps à nouveau?
+- en: One streetlight flickers every {0} seconds and another every {1} seconds. When will they flicker together again?
 
 **4.**
 
-- pt: Em um festival de música, {0} músicos tocam {1} músicas em um palco. Quando {2} músicos tocarem, a quantidade de músicas aumenta. Quantas músicas serão tocadas?
-- fr: Lors d'un festival de musique, {0} musiciens jouent {1} chansons sur une scène. Lorsque {2} musiciens jouent, le nombre de chansons augmente. Combien de chansons seront jouées ?
-- en: At a music festival, {0} musicians play {1} songs on a stage. When {2} musicians play, the number of songs increases. How many songs will be played?
+- pt: Um aspersor abre a cada {0} minutos e o outro a cada {1} minutos. Quando eles abrirão simultaneamente novamente?
+- fr: Un arroseur s'ouvre toutes les {0} minutes et l'autre toutes les {1} minutes. Quand s'ouvriront-ils simultanément à nouveau?
+- en: One sprinkler turns on every {0} minutes and the other every {1} minutes. When will they turn on at the same time again?
 
-**5.**
 
-- pt: Em uma escola, {0} professores dão {1} aulas por semana. Quando {2} professores dão aulas, o número de aulas aumenta. Quantas aulas serão dadas?
-- fr: Dans une école, {0} professeurs donnent {1} cours par semaine. Lorsque {2} professeurs donnent des cours, le nombre de cours augmente. Combien de cours seront donnés ?
-- en: In a school, {0} teachers give {1} lessons per week. When {2} teachers give lessons, the number of lessons increases. How many lessons will be given?
+---
 
-**6.**
+### gpt-oss:20b — Progressão aritmética
 
-- pt: Em uma livraria, {0} atendentes vendem {1} livros por dia. Quando {2} atendentes vendem, a quantidade de livros aumenta. Quantos livros serão vendidos?
-- fr: Dans une librairie, {0} vendeurs vendent {1} livres par jour. Lorsque {2} vendeurs vendent, le nombre de livres augmente. Combien de livres seront vendus ?
-- en: In a bookstore, {0} attendants sell {1} books per day. When {2} attendants sell, the number of books increases. How many books will be sold?
+**1.**
+
+- pt: Na fila do supermercado, {0} pessoas já esperam na primeira posição. Em cada nova posição, mais {1} pessoas se juntam. Quantas pessoas haverá na posição {2}?
+- fr: Dans la file d'attente du supermarché, {0} personnes attendent déjà à la première place. À chaque nouvelle place, plus {1} personnes se joignent. Combien de personnes y aura-t-il à la place {2}?
+- en: In the supermarket line, {0} people are already waiting at the first spot. With each new spot, an additional {1} people join. How many people will be at spot {2}?
+
+**2.**
+
+- pt: No muro, o primeiro degrau tem {0} tijolos. A cada degrau subsequente, adiciona-se mais {1} tijolos. Quantos tijolos haverá no degrau {2}?
+- fr: Sur le mur, le premier escalier comporte {0} briques. À chaque escalier suivant, on ajoute plus {1} briques. Combien de briques y aura-t-il au escalier {2}?
+- en: On the wall, the first step contains {0} bricks. For each subsequent step, an additional {1} bricks are added. How many bricks will the step {2} have?
+
+**3.**
+
+- pt: Na prateleira de livros, a primeira prateleira contém {0} livros. Em cada prateleira seguinte, coloca-se mais {1} livros. Quantos livros estarão na prateleira {2}?
+- fr: Sur l'étagère, la première étagère contient {0} livres. À chaque étagère suivante, on ajoute plus {1} livres. Combien de livres y aura-t-il à l'étagère {2}?
+- en: On the bookshelf, the first shelf holds {0} books. On each following shelf, an additional {1} books are added. How many books will be on shelf {2}?
+
+**4.**
+
+- pt: Ao começar a economizar, você tem {0} dólares. A cada mês, acrescenta-se mais {1} dólares. Quanto dinheiro você terá no mês {2}?
+- fr: En commençant à économiser, vous avez {0} dollars. Chaque mois, vous ajoutez plus {1} dollars. Combien d'argent aurez-vous au mois {2}?
+- en: When starting to save, you have {0} dollars. Each month, you add an additional {1} dollars. How much money will you have at month {2}?
+
+
+---
+
+### gpt-oss:20b — Juros compostos
+
+**1.**
+
+- pt: Um investidor deposita {0} reais em uma conta de poupança que rende {1} por cento ao mês, por {2} meses. Qual será o valor total acumulado ao final desses meses?
+- fr: Un investisseur dépose {0} euros dans un compte d'épargne qui rapporte {1} pour cent par mois, pendant {2} mois. Quelle sera la valeur totale accumulée à la fin de ces mois?
+- en: An investor deposits {0} dollars in a savings account that earns {1} percent per month, for {2} months. What will be the total amount accumulated at the end of those months?
+
+**2.**
+
+- pt: Um proprietário pede um empréstimo de {0} reais para reformar sua casa, com juros de {1} por cento por mês, durante {2} meses. Qual será o valor total que ele terá que pagar ao final desses meses?
+- fr: Un propriétaire contracte un prêt de {0} euros pour rénover sa maison, avec un taux d'intérêt de {1} pour cent par mois, pendant {2} mois. Quelle sera la valeur totale qu'il devra rembourser à la fin de ces mois?
+- en: A homeowner takes a loan of {0} dollars to renovate his house, with an interest rate of {1} percent per month, for {2} months. What will be the total amount he will have to repay at the end of those months?
+
+**3.**
+
+- pt: Um agricultor compra sementes no valor de {0} reais, que rendem {1} por cento a cada estação, por {2} estações. Qual será o valor total acumulado ao final dessas estações?
+- fr: Un agriculteur achète des semences d'une valeur de {0} euros, qui donnent un rendement de {1} pour cent à chaque saison, pendant {2} saisons. Quelle sera la valeur totale accumulée à la fin de ces saisons?
+- en: A farmer buys seeds worth {0} dollars, which yield {1} percent each season, for {2} seasons. What will be the total amount accumulated at the end of those seasons?
+
+**4.**
+
+- pt: Um investidor compra um título no valor de {0} reais, que paga juros de {1} por cento ao ano, por {2} anos. Qual será o valor total acumulado ao final desses anos?
+- fr: Un investisseur achète une obligation d'une valeur de {0} euros, qui verse un taux d'intérêt de {1} pour cent par an, pendant {2} ans. Quelle sera la valeur totale accumulée à la fin de ces années?
+- en: An investor buys a bond worth {0} dollars, which pays interest at {1} percent per year, for {2} years. What will be the total amount accumulated at the end of those years?
 
 
 ---
@@ -101,37 +139,25 @@ mas iguais a outra do mesmo lote.
 
 **1.**
 
-- pt: Um químico de laboratório mistura {0} gramas de {1} e observa a formação de {2}. Qual a massa de {2} formada?
-- fr: Un chimiste de laboratoire mélange {0} grammes de {1} et observe la formation de {2}. Quelle est la masse de {2} formée?
-- en: A laboratory chemist mixes {0} grams of {1} and observes the formation of {2}. What is the mass of {2} formed?
+- pt: No laboratório, o químico misturou {0} gramas de {1} em um recipiente e observou a formação de {2}. Qual é a massa de {2} formada?
+- fr: Dans le laboratoire, le chimiste a mélangé {0} grammes de {1} dans un récipient et a observé la formation de {2}. Quelle est la masse de {2} produite?
+- en: In the laboratory, the chemist mixed {0} grams of {1} in a container and observed the formation of {2}. What is the mass of {2} produced?
 
 **2.**
 
-- pt: Um engenheiro industrial adiciona {0} gramas de {1} a uma reação e monitora a produção de {2}. Qual a massa de {2} formada?
-- fr: Un ingénieur industriel ajoute {0} grammes de {1} à une réaction et surveille la production de {2}. Quelle est la masse de {2} formée?
-- en: An industrial engineer adds {0} grams of {1} to a reaction and monitors the production of {2}. What is the mass of {2} formed?
+- pt: Durante a inspeção de qualidade, o inspetor verificou que {0} gramas de {1} foram utilizados no processo e que {2} resultou da reação. Qual é a massa de {2} formada?
+- fr: Lors de l'inspection qualité, l'inspecteur a constaté que {0} grammes de {1} étaient utilisés dans le processus et que {2} résultait de la réaction. Quelle est la masse de {2} produite?
+- en: During quality inspection, the inspector verified that {0} grams of {1} were used in the process and that {2} resulted from the reaction. What is the mass of {2} produced?
 
 **3.**
 
-- pt: Um operador de estação de tratamento de água coloca {0} gramas de {1} na solução e observa a formação de {2}. Qual a massa de {2} formada?
-- fr: Un opérateur d'usine de traitement de l'eau introduit {0} grammes de {1} dans la solution et observe la formation de {2}. Quelle est la masse de {2} formée?
-- en: A water treatment plant operator adds {0} grams of {1} to the solution and observes the formation of {2}. What is the mass of {2} formed?
+- pt: No centro de tratamento de água, o operador adicionou {0} gramas de {1} à estação e observou que {2} foi gerado. Qual é a massa de {2} formada?
+- fr: Au centre de traitement de l'eau, l'opérateur a ajouté {0} grammes de {1} à l'installation et a constaté que {2} était généré. Quelle est la masse de {2} produite?
+- en: At the water treatment plant, the operator added {0} grams of {1} to the station and observed that {2} was generated. What is the mass of {2} produced?
 
 **4.**
 
-- pt: Um cientista agrícola aplica {0} gramas de {1} em um ensaio e mede a produção de {2}. Qual a massa de {2} formada?
-- fr: Un scientifique agricole applique {0} grammes de {1} dans une expérience et mesure la production de {2}. Quelle est la masse de {2} formée?
-- en: An agricultural scientist applies {0} grams of {1} in a trial and measures the production of {2}. What is the mass of {2} formed?
-
-**5.**
-
-- pt: Um pesquisador de materiais mistura {0} gramas de {1} e observa a criação de {2}. Qual a massa de {2} formada?
-- fr: Un chercheur en matériaux mélange {0} grammes de {1} et observe la création de {2}. Quelle est la masse de {2} formée?
-- en: A materials researcher mixes {0} grams of {1} and observes the creation of {2}. What is the mass of {2} formed?
-
-**6.**
-
-- pt: Um técnico de controle de qualidade adiciona {0} gramas de {1} à amostra e verifica a formação de {2}. Qual a massa de {2} formada?
-- fr: Un technicien de contrôle qualité ajoute {0} grammes de {1} à l'échantillon et vérifie la formation de {2}. Quelle est la masse de {2} formée?
-- en: A quality control technician adds {0} grams of {1} to the sample and checks the formation of {2}. What is the mass of {2} formed?
+- pt: Para a análise, o pesquisador preparou {0} gramas de {1} e notou que {2} resultou da reação. Qual é a massa de {2} formada?
+- fr: Pour l'analyse, le chercheur a préparé {0} grammes de {1} et a constaté que {2} résultait de la réaction. Quelle est la masse de {2} produite?
+- en: For the analysis, the researcher prepared {0} grams of {1} and noted that {2} resulted from the reaction. What is the mass of {2} produced?
 

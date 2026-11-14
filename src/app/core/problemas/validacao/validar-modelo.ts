@@ -38,6 +38,21 @@ export interface ModeloDeProblema extends ModeloBruto {
   readonly lacunas: number;
 }
 
+/**
+ * O que um tópico afrouxa ou aperta na conferência.
+ *
+ * Num objeto, e não em parâmetros soltos, porque já eram três listas — e
+ * `validarModelo(bruto, 3, [], [2])` não diz a ninguém o que `[]` e `[2]` são.
+ */
+export interface RestricoesDoTopico {
+  /** Palavras que este tópico não aceita no texto. */
+  readonly proibidas?: readonly string[];
+  /** Lacunas que podem aparecer mais de uma vez — fórmula, nome. */
+  readonly repetiveis?: readonly number[];
+  /** Números por extenso que este tópico aceita, porque são enredo. */
+  readonly permitidas?: readonly string[];
+}
+
 export type MotivoDeRecusa =
   | 'texto-vazio'
   | 'lacuna-faltando'
@@ -195,6 +210,23 @@ const METATEXTO = [
   'aqui está',
 ];
 
+/**
+ * Apaga «por cento» e companhia antes de procurar número por extenso.
+ *
+ * `cento` e `cent` estão na lista de números escritos, e deviam estar — mas
+ * «{1} por cento ao mês» é a única forma de dizer porcentagem em prosa, e a
+ * regra recusava quatro de quatro histórias de juros compostos. Apagar a
+ * locução resolve sem abrir exceção por tópico: um «cento» solto, que seria
+ * uma quantidade de verdade, continua sendo pego.
+ */
+function semMarcaDePorcentagem(texto: string): string {
+  return texto
+    .replace(/\bpor\s+cento\b/g, ' ')
+    .replace(/\bpour\s+cent\b/g, ' ')
+    .replace(/\bper\s+cent\b/g, ' ')
+    .replace(/\bpercent\b/g, ' ');
+}
+
 /** Os índices dos espaços reservados, na ordem em que aparecem no texto. */
 export function lacunasDe(texto: string): readonly number[] {
   return [...texto.matchAll(/\{(\d+)\}/g)].map((achado) => Number(achado[1]));
@@ -208,9 +240,9 @@ function semLacunas(texto: string): string {
 function conferirIdioma(
   texto: string,
   lacunas: number,
-  proibidas: readonly string[],
-  repetiveis: readonly number[],
+  restricoes: RestricoesDoTopico,
 ): MotivoDeRecusa[] {
+  const { proibidas = [], repetiveis = [], permitidas = [] } = restricoes;
   const motivos: MotivoDeRecusa[] = [];
   const aparado = texto.trim();
 
@@ -250,12 +282,15 @@ function conferirIdioma(
     motivos.push('digito-solto');
   }
 
-  const palavras = prosa
-    .toLocaleLowerCase('pt-BR')
+  const palavras = semMarcaDePorcentagem(prosa.toLocaleLowerCase('pt-BR'))
     .split(/[^\p{L}]+/u)
     .filter((palavra) => palavra.length > 0);
 
-  if (palavras.some((palavra) => NUMEROS_ESCRITOS.includes(palavra))) {
+  const liberadas = permitidas.map((palavra) => palavra.toLocaleLowerCase('pt-BR'));
+
+  if (
+    palavras.some((palavra) => NUMEROS_ESCRITOS.includes(palavra) && !liberadas.includes(palavra))
+  ) {
     motivos.push('numero-escrito');
   }
 
@@ -297,6 +332,11 @@ function conferirIdioma(
  * está na equação, e tem de ser aceito numa de razão e proporção, em que sal
  * é só o que se põe na panela.
  *
+ * `permitidas` abre exceção na regra do número por extenso, e ela nasceu de um
+ * falso positivo: as melhores histórias de MMC começam com «Dois ônibus
+ * partem…», e «dois» ali é o enredo, não um dado — a história é SOBRE duas
+ * coisas. Recusá-las era a regra atrapalhando o que ela devia proteger.
+ *
  * `repetiveis` corrige uma regra que nasceu errada. Exigir cada lacuna uma vez
  * só vale para NÚMERO — o mesmo valor duas vezes confunde quem lê. Para
  * FÓRMULA não vale: «quer saber a massa de {2}… quantos gramas de {2}
@@ -306,13 +346,12 @@ function conferirIdioma(
 export function validarModelo(
   bruto: ModeloBruto,
   lacunas: number,
-  proibidas: readonly string[] = [],
-  repetiveis: readonly number[] = [],
+  restricoes: RestricoesDoTopico = {},
 ): Aprovacao | Recusa {
   const motivos = new Set<MotivoDeRecusa>();
 
   for (const idioma of IDIOMAS) {
-    for (const motivo of conferirIdioma(bruto[idioma] ?? '', lacunas, proibidas, repetiveis)) {
+    for (const motivo of conferirIdioma(bruto[idioma] ?? '', lacunas, restricoes)) {
       motivos.add(motivo);
     }
   }

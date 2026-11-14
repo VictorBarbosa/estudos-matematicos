@@ -473,6 +473,18 @@ continua puro e semeado — `verificar:geradores` e os guardas de variedade vale
 Sem LLM no ar, sem fila, ou com valores que não servem para a história, aparece o enunciado
 de sempre.
 
+### Quais tópicos recebem história
+
+Cinco, e em cada um só uma forma de pergunta: **equação do primeiro grau** (a forma crua
+`ax + b = c`), **mínimo múltiplo comum** (não o MDC, que é história de partilha e não de
+reencontro), **progressão aritmética** (só a de razão positiva, porque «cada mês acrescenta
+−4 caixas» ninguém escreve), **juros compostos** (só o montante, porque «quanto rendeu» com
+gabarito de montante faria o aluno errar fazendo tudo certo) e **estequiometria**.
+
+A declaração de cada um fica em `<topico>.problema.ts`, com `import type` — é o que permite
+a `scripts/comparar-modelos.ts` importá-la por caminho relativo e medir o prompt de verdade,
+em vez de uma cópia.
+
 ### O portão
 
 Texto de LLM não vai para a tela sem passar por `core/problemas/validacao`: nenhum dígito
