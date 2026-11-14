@@ -1,0 +1,27 @@
+{
+  "autovalores": { "pt": "Autovalores", "fr": "Valeurs propres", "en": "Eigenvalues" },
+  "traco": { "pt": "Traço (soma)", "fr": "Trace (somme)", "en": "Trace (sum)" },
+  "determinante": {
+    "pt": "Determinante (produto)",
+    "fr": "Déterminant (produit)",
+    "en": "Determinant (product)"
+  },
+  "polinomio": {
+    "pt": "Polinômio característico",
+    "fr": "Polynôme caractéristique",
+    "en": "Characteristic polynomial"
+  },
+  "autovetores": { "pt": "Autovetores", "fr": "Vecteurs propres", "en": "Eigenvectors" },
+  "aplicado": { "pt": "A·v", "fr": "A·v", "en": "A·v" },
+  "entrada": { "pt": "Matriz", "fr": "Matrice", "en": "Matrix" },
+  "gira": {
+    "pt": "Esta matriz gira: o discriminante é negativo e nenhuma direção fica parada. Não há autovalor real.",
+    "fr": "Cette matrice tourne : le discriminant est négatif et aucune direction ne reste fixe. Il n’y a pas de valeur propre réelle.",
+    "en": "This matrix rotates: the discriminant is negative and no direction stays put. There is no real eigenvalue."
+  },
+  "notaDirecao": {
+    "pt": "Compare A·v com v: para um autovetor, os dois são paralelos — a matriz esticou e não torceu.",
+    "fr": "Comparez A·v et v : pour un vecteur propre, les deux sont parallèles — la matrice a étiré sans tordre.",
+    "en": "Compare A·v with v: for an eigenvector the two are parallel — the matrix stretched without twisting."
+  }
+}

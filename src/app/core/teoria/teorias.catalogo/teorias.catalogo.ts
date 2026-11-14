@@ -136,6 +136,7 @@ import { TEORIA_BALANCEAMENTO as t_equacoes_e_balanceamento } from '@features/qu
 import { TEORIA_ELETRONS as t_estrutura_eletronica } from '@features/quimica/estrutura-eletronica/estrutura-eletronica.teoria';
 import { TEORIA_LIGACAO as t_tabela_e_ligacao } from '@features/quimica/tabela-e-ligacao/tabela-e-ligacao.teoria';
 import { TEORIA_NOMENCLATURA as t_formulas_e_nomenclatura } from '@features/quimica/formulas-e-nomenclatura/formulas-e-nomenclatura.teoria';
+import { TEORIA_AUTOVALORES as t_autovalores_e_autovetores } from '@features/vetores-matrizes/autovalores-e-autovetores/autovalores-e-autovetores.teoria';
 
 export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[] = [
   ['equacao-primeiro-grau', t_equacao_primeiro_grau],
@@ -267,4 +268,5 @@ export const TODAS_AS_TEORIAS: readonly (readonly [string, readonly Teoria[]])[]
   ['estrutura-eletronica', t_estrutura_eletronica],
   ['tabela-e-ligacao', t_tabela_e_ligacao],
   ['formulas-e-nomenclatura', t_formulas_e_nomenclatura],
+  ['autovalores-e-autovetores', t_autovalores_e_autovetores],
 ];

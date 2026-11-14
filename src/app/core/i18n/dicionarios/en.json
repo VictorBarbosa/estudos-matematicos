@@ -281,6 +281,10 @@
         "descricao": "The three counts: what defines the element, what gives it mass, and what carries the charge.",
         "titulo": "Atoms, isotopes and ions"
       },
+      "autovalores-e-autovetores": {
+        "descricao": "The directions the matrix does not twist, and the two identities that check them.",
+        "titulo": "Eigenvalues and eigenvectors"
+      },
       "binomio-de-newton": {
         "descricao": "Pascal’s triangle, the general term, the sum of coefficients and the constant term.",
         "titulo": "Binomial theorem"

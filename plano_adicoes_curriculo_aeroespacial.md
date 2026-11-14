@@ -191,13 +191,13 @@ São **22 aulas**, de um e meio a três meses. Nenhuma aproxima da admissão.
 
 ## 7. O plano, em ordem
 
-| Etapa | O quê                                                                                  | Aulas | Tempo              |
-| ----- | -------------------------------------------------------------------------------------- | ----- | ------------------ |
-| 0     | Desligar Poliedros, Juros, Óptica, Ondas e Física moderna no plano pessoal             | 0     | minutos            |
-| 1     | ~~Estudo de sinal, trigonometria inversa~~ (já existiam) · substituição trigonométrica | 1     | **feita em 14/11** |
-| 2     | **Química geral**                                                                      | 12    | 6–10 semanas       |
-| 3     | Autovalores e autovetores                                                              | 1     | 2–4 dias           |
-| 4     | Espaços vetoriais e transformações lineares, se MATH 204 as cobrir                     | 2     | 1 semana           |
+| Etapa | O quê                                                                                                                                       | Aulas | Tempo              |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ------------------ |
+| 0     | Desligar Poliedros, Juros, Óptica, Ondas e Física moderna no plano pessoal                                                                  | 0     | minutos            |
+| 1     | ~~Estudo de sinal, trigonometria inversa~~ (já existiam) · substituição trigonométrica                                                      | 1     | **feita em 14/11** |
+| 2     | ~~**Química geral**~~                                                                                                                       | 11    | **feita em 14/11** |
+| 3     | ~~Autovalores e autovetores~~                                                                                                               | 1     | **feita em 14/11** |
+| 4     | Espaços vetoriais e transformações lineares, **se** MATH 204 as cobrir — _depende de confirmar a ementa com a Concordia; não faço sem isso_ | 2     | 1 semana           |
 
 **16 aulas**, contra as 30 do plano original — e com uma troca de fundo: saíram 22 aulas de
 disciplinas de graduação, entraram 12 de química, que é exigência de admissão.

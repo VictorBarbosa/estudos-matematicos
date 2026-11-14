@@ -281,6 +281,10 @@
         "descricao": "Les trois comptes : ce qui définit l’élément, ce qui donne la masse et ce qui porte la charge.",
         "titulo": "Atomes, isotopes et ions"
       },
+      "autovalores-e-autovetores": {
+        "descricao": "Les directions que la matrice ne tord pas, et les deux identités qui les vérifient.",
+        "titulo": "Valeurs et vecteurs propres"
+      },
       "binomio-de-newton": {
         "descricao": "Triangle de Pascal, terme général, somme des coefficients et terme indépendant.",
         "titulo": "Binôme de Newton"

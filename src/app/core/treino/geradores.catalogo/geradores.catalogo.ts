@@ -18,6 +18,7 @@ import { geradorBalanceamento as g_equacoes_e_balanceamento } from '@features/qu
 import { geradorEletrons as g_estrutura_eletronica } from '@features/quimica/estrutura-eletronica/estrutura-eletronica.gerador';
 import { geradorLigacao as g_tabela_e_ligacao } from '@features/quimica/tabela-e-ligacao/tabela-e-ligacao.gerador';
 import { geradorNomenclatura as g_formulas_e_nomenclatura } from '@features/quimica/formulas-e-nomenclatura/formulas-e-nomenclatura.gerador';
+import { geradorAutovalores as g_autovalores_e_autovetores } from '@features/vetores-matrizes/autovalores-e-autovetores/autovalores-e-autovetores.gerador';
 import { geradorEquacao1 as g_equacao_primeiro_grau } from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.gerador';
 import { geradorEquacao2 as g_equacao_segundo_grau } from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.gerador';
 import { geradorExpressoes as g_expressoes_algebricas } from '@features/algebra/expressoes-algebricas/expressoes-algebricas.gerador';
@@ -273,4 +274,5 @@ export const TODOS_OS_GERADORES: readonly (readonly [string, GeradorExercicio<un
   ['estrutura-eletronica', g_estrutura_eletronica],
   ['tabela-e-ligacao', g_tabela_e_ligacao],
   ['formulas-e-nomenclatura', g_formulas_e_nomenclatura],
+  ['autovalores-e-autovetores', g_autovalores_e_autovetores],
 ];

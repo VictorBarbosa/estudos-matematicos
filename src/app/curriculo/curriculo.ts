@@ -527,6 +527,12 @@ export const CURRICULO: readonly AreaCurriculo[] = [
         pronto: true,
       },
       {
+        id: 'autovalores-e-autovetores',
+        titulo: 'Autovalores e autovetores',
+        descricao: 'As direções que a matriz não torce, e as duas identidades que as conferem.',
+        pronto: true,
+      },
+      {
         id: 'retas-e-planos',
         titulo: 'Retas e planos no espaço',
         descricao:

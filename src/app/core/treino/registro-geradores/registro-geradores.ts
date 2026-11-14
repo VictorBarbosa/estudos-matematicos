@@ -131,6 +131,7 @@ export const CARREGAR_GERADOR: Readonly<
   'lei-senos-cossenos': () => import('@features/trigonometria/lei-senos-cossenos/lei-senos-cossenos.gerador').then((m) => m.geradorLeis),
   'seno-cosseno-tangente': () => import('@features/trigonometria/seno-cosseno-tangente/seno-cosseno-tangente.gerador').then((m) => m.geradorRazoes),
   'triangulo-retangulo': () => import('@features/trigonometria/triangulo-retangulo/triangulo-retangulo.gerador').then((m) => m.geradorTriangulo),
+  'autovalores-e-autovetores': () => import('@features/vetores-matrizes/autovalores-e-autovetores/autovalores-e-autovetores.gerador').then((m) => m.geradorAutovalores),
   'escalonamento-e-inversa': () => import('@features/vetores-matrizes/escalonamento-e-inversa/escalonamento-e-inversa.gerador').then((m) => m.geradorEscalonamento),
   'matrizes-determinantes': () => import('@features/vetores-matrizes/matrizes-determinantes/matrizes-determinantes.gerador').then((m) => m.geradorMatrizes),
   'numeros-complexos': () => import('@features/vetores-matrizes/numeros-complexos/numeros-complexos.gerador').then((m) => m.geradorComplexos),

@@ -1,0 +1,69 @@
+<app-topico-layout topicoId="autovalores-e-autovetores">
+  <div explorar class="explorar">
+    <section class="destaque-formula">
+      <app-formula [tex]="'A\\,v = \\lambda\\,v'" [bloco]="true" />
+    </section>
+
+    <section class="painel grade-controles">
+      <app-controle-parametro [(valor)]="a" rotulo="a" [min]="-9" [max]="9" />
+      <app-controle-parametro [(valor)]="b" rotulo="b" [min]="-9" [max]="9" />
+      <app-controle-parametro [(valor)]="c" rotulo="c" [min]="-9" [max]="9" />
+      <app-controle-parametro [(valor)]="d" rotulo="d" [min]="-9" [max]="9" />
+    </section>
+
+    <section class="painel">
+      <h3>{{ texto('entrada') }}</h3>
+      <app-formula [tex]="matrizTex()" [bloco]="true" />
+    </section>
+
+    <section class="painel">
+      <h3>{{ texto('polinomio') }}</h3>
+      <app-formula [tex]="polinomioTex() + ' = 0'" [bloco]="true" />
+      <dl class="resumo">
+        <div>
+          <dt>{{ texto('traco') }}</dt>
+          <dd>{{ traco() }}</dd>
+        </div>
+        <div>
+          <dt>{{ texto('determinante') }}</dt>
+          <dd>{{ determinante() }}</dd>
+        </div>
+      </dl>
+    </section>
+
+    @if (valores() === undefined) {
+      <section class="painel">
+        <p class="aviso">{{ texto('gira') }}</p>
+      </section>
+    } @else {
+      <section class="painel">
+        <h3>{{ texto('autovalores') }}</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">λ</th>
+              <th scope="col">{{ texto('autovetores') }}</th>
+              <th scope="col">{{ texto('aplicado') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (linha of direcoes(); track linha.autovalor) {
+              <tr>
+                <th scope="row">{{ linha.autovalor }}</th>
+                <td>{{ linha.vetor }}</td>
+                <td class="certo">{{ linha.aplicado }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+        <p class="nota">{{ texto('notaDirecao') }}</p>
+      </section>
+    }
+
+    <app-conceitos-topico [conceitos]="conceitos" />
+  </div>
+
+  <div treinar>
+    <app-area-treino [gerador]="gerador" />
+  </div>
+</app-topico-layout>

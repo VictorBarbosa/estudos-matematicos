@@ -48,6 +48,14 @@ export const rotas: Routes = [
       ),
   },
   {
+    path: 'autovalores-e-autovetores',
+    title: 'Autovalores e autovetores · Estudos Matemáticos',
+    loadComponent: () =>
+      import('@features/vetores-matrizes/autovalores-e-autovetores/autovalores-e-autovetores').then(
+        (m) => m.AutovaloresEAutovetores,
+      ),
+  },
+  {
     path: 'retas-e-planos',
     title: 'Retas e planos no espaço · Estudos Matemáticos',
     loadComponent: () =>

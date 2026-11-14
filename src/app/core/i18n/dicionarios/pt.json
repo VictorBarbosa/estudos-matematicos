@@ -281,6 +281,10 @@
         "descricao": "As três contagens: quem define o elemento, quem dá a massa e quem carrega a carga.",
         "titulo": "Átomos, isótopos e íons"
       },
+      "autovalores-e-autovetores": {
+        "descricao": "As direções que a matriz não torce, e as duas identidades que as conferem.",
+        "titulo": "Autovalores e autovetores"
+      },
       "binomio-de-newton": {
         "descricao": "Triângulo de Pascal, termo geral, soma dos coeficientes e termo independente.",
         "titulo": "Binômio de Newton"
