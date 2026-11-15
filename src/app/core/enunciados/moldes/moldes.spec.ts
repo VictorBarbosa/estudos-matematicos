@@ -31,9 +31,22 @@ describe('moldes de enunciado', () => {
         expect(TOPICOS.has(molde.topico), molde.topico).toBe(true);
       });
 
-      it('traz o texto nas três línguas', () => {
-        for (const idioma of ['br', 'fr', 'en'] as const) {
-          expect(molde.texto[idioma]?.trim().length, idioma).toBeGreaterThan(10);
+      it('traz o texto em português', () => {
+        expect(molde.texto.br?.trim().length, 'br').toBeGreaterThan(10);
+      });
+
+      /**
+       * Tradução que existe tem de ser tradução de verdade.
+       *
+       * O campo é opcional, mas um `fr` com três palavras é pior que nenhum:
+       * a tela mostraria um pedaço de frase onde antes mostrava a pergunta
+       * inteira em português.
+       */
+      it('a tradução que existe não é um pedaço de frase', () => {
+        for (const idioma of ['fr', 'en'] as const) {
+          if (molde.texto[idioma] !== undefined) {
+            expect(molde.texto[idioma]!.trim().length, idioma).toBeGreaterThan(10);
+          }
         }
       });
 
@@ -48,13 +61,11 @@ describe('moldes de enunciado', () => {
       it('as três línguas citam os valores na mesma ordem', () => {
         const pt = citadosEm(molde.texto.br).join(',');
 
-        expect(citadosEm(molde.texto.fr).join(','), 'fr').toBe(pt);
-        expect(citadosEm(molde.texto.en).join(','), 'en').toBe(pt);
-      });
-
-      it('cita ao menos um valor', () => {
-        // Um molde sem lacuna é um enunciado fixo, e esse é o outro arquivo.
-        expect(citadosEm(molde.texto.br).length, molde.texto.br).toBeGreaterThan(0);
+        for (const idioma of ['fr', 'en'] as const) {
+          if (molde.texto[idioma] !== undefined) {
+            expect(citadosEm(molde.texto[idioma]!).join(','), idioma).toBe(pt);
+          }
+        }
       });
 
       it('vestido com números, não deixa lacuna na tela', () => {

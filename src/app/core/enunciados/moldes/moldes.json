@@ -412,5 +412,40 @@
       "fr": "{dados-calculo.a} tracteurs, travaillant {dados-calculo.b} heures par jour, labourent le champ en {dados-calculo.c} jours. En combien de jours {dados-calculo.d} tracteurs, travaillant {dados-calculo.e} heures par jour, labourent-ils le même champ ?",
       "en": "{dados-calculo.a} tractors, working {dados-calculo.b} hours a day, plough the field in {dados-calculo.c} days. In how many days do {dados-calculo.d} tractors, working {dados-calculo.e} hours a day, plough the same field?"
     }
+  },
+  {
+    "topico": "equacao-primeiro-grau",
+    "forma": "forma-1",
+    "texto": {
+      "br": "Resolva a equação e informe o valor exato de x."
+    }
+  },
+  {
+    "topico": "equacao-primeiro-grau",
+    "forma": "forma-2",
+    "texto": {
+      "br": "Uma corrida de táxi custa $ {dados-calculo.b},00 de bandeirada mais $ {dados-calculo.p},00 por quilômetro rodado. Uma corrida custou $ {dados-calculo.T},00. Quantos quilômetros foram rodados?"
+    }
+  },
+  {
+    "topico": "equacao-primeiro-grau",
+    "forma": "forma-3",
+    "texto": {
+      "br": "Ana tem o {dados-calculo.v1} da idade de Bia. Daqui a {dados-calculo.k} anos, a soma das idades das duas será {dados-calculo.S} anos. Quantos anos Bia tem hoje?"
+    }
+  },
+  {
+    "topico": "equacao-primeiro-grau",
+    "forma": "forma-4",
+    "texto": {
+      "br": "Um retângulo tem o comprimento {dados-calculo.d} cm maior que a largura, e o perímetro mede {dados-calculo.P} cm. Qual é a largura, em cm?"
+    }
+  },
+  {
+    "topico": "equacao-primeiro-grau",
+    "forma": "forma-5",
+    "texto": {
+      "br": "Três prateleiras têm quantidades consecutivas de livros e, juntas, guardam {dados-calculo.S} livros. Quantos livros tem a prateleira mais cheia?"
+    }
   }
 ]

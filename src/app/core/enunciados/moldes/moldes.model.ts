@@ -26,6 +26,10 @@ import moldes from '@core/enunciados/moldes/moldes.json';
  *
  * ## A `forma`
  *
+ * Um molde pode não ter lacuna nenhuma: «Calcule e escreva o resultado na forma
+ * mais simples» é pergunta inteira, e o lugar dela é aqui também — o critério
+ * é o texto estar fora do código, não ele ter números.
+ *
  * Um tópico tem várias formas de pergunta — `direta`, `inversa`, `unitaria` —,
  * e cada uma tem vários moldes, que o gerador sorteia. A forma é o que liga o
  * molde ao ramo do código que sabe calcular aquela pergunta: trocar o texto de
@@ -38,11 +42,21 @@ export interface MoldeDeEnunciado {
   readonly topico: string;
   /** Qual pergunta este molde faz. O gerador escolhe os moldes por aqui. */
   readonly forma: string;
-  /** O texto nas três línguas. `br` é o português, como no arquivo. */
+  /**
+   * O texto. `br` é o português e é obrigatório; `fr` e `en` são opcionais.
+   *
+   * Opcionais porque 110 dos 122 geradores do site nunca tiveram tradução de
+   * enunciado — o texto deles existia só em português, dentro do `.ts`. Exigir
+   * as três línguas aqui significaria traduzir novecentas frases antes de
+   * poder mover qualquer uma, e o texto continuaria preso ao código enquanto
+   * isso. Sem o campo, a tela cai no português, que é exatamente o que ela já
+   * fazia; com ele, passa a traduzir — e traduzir vira preencher um campo
+   * neste arquivo, não editar um gerador.
+   */
   readonly texto: {
     readonly br: string;
-    readonly fr: string;
-    readonly en: string;
+    readonly fr?: string;
+    readonly en?: string;
   };
 }
 
@@ -88,7 +102,11 @@ export function textoDoMolde(
     Object.entries(valores).map(([nome, valor]) => [nome, String(valor)]),
   );
 
-  return vestirTexto(molde.texto[idioma === 'pt' ? 'br' : idioma], comoTexto, idioma);
+  // Sem tradução, o português responde: é o que a tela já mostrava antes de o
+  // texto sair do gerador, e meia tradução é pior que nenhuma.
+  const escrito = idioma === 'pt' ? molde.texto.br : (molde.texto[idioma] ?? molde.texto.br);
+
+  return vestirTexto(escrito, comoTexto, idioma);
 }
 
 /** O texto nas três línguas de uma vez, que é o formato que o exercício usa. */

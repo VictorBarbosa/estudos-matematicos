@@ -1,4 +1,5 @@
 import { Fracao, mmcLista, observarSimplificacao, resolverLinearComPassos } from '@core/math';
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import {
   Armadilha,
@@ -157,7 +158,7 @@ function exercicioFracoes(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     return {
       id: `equacao1-fracoes-${p}${r}-${k}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Resolva a equação e informe o valor exato de x.',
+      enunciado: textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-1')[0]!, {  }, 'pt'),
       enunciadoTex: `\\frac{x}{${p}} + \\frac{x}{${r}} = ${k}`,
       gabarito,
       resolucao: {
@@ -328,8 +329,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const T = b + p * x;
       resposta = x;
       enunciado =
-        `Uma corrida de táxi custa $ ${b},00 de bandeirada mais $ ${p},00 por quilômetro rodado. ` +
-        `Uma corrida custou $ ${T},00. Quantos quilômetros foram rodados?`;
+        textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-2')[0]!, { b, p, T }, 'pt');
       dados =
         `\\text{bandeirada} = \\text{R}\\$\\,${b} \\qquad \\text{por km} = \\text{R}\\$\\,${p} ` +
         `\\qquad \\text{total} = \\text{R}\\$\\,${T}`;
@@ -368,8 +368,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const S = (m + 1) * x + 2 * k;
       resposta = x;
       enunciado =
-        `Ana tem o ${VEZES[m - 2]} da idade de Bia. Daqui a ${k} anos, a soma das idades das ` +
-        `duas será ${S} anos. Quantos anos Bia tem hoje?`;
+        textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-3')[0]!, { v1: VEZES[m - 2], k, S }, 'pt');
       dados = `\\text{Ana} = ${m} \\times \\text{Bia} \\qquad \\text{daqui a } ${k} \\text{ anos: soma} = ${S} \\text{ anos}`;
       passos = [
         {
@@ -418,8 +417,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const P = 4 * x + 2 * d;
       resposta = x;
       enunciado =
-        `Um retângulo tem o comprimento ${d} cm maior que a largura, e o perímetro mede ${P} cm. ` +
-        'Qual é a largura, em cm?';
+        textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-4')[0]!, { d, P }, 'pt');
       dados = `\\text{comprimento} = \\text{largura} + ${d}\\,\\text{cm} \\qquad P = ${P}\\,\\text{cm}`;
       passos = [
         {
@@ -461,8 +459,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const S = 3 * x + 3;
       resposta = x + 2;
       enunciado =
-        `Três prateleiras têm quantidades consecutivas de livros e, juntas, guardam ${S} livros. ` +
-        'Quantos livros tem a prateleira mais cheia?';
+        textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-5')[0]!, { S }, 'pt');
       dados = `\\text{3 quantidades consecutivas} \\qquad \\text{soma} = ${S} \\text{ livros}`;
       passos = [
         {
