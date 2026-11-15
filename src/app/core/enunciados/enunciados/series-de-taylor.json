@@ -1,0 +1,83 @@
+{
+  "topico": "series-de-taylor",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "O polinômio de Maclaurin de grau 2 da função exponencial é 1 mais x mais metade do quadrado de x. Quanto vale essa aproximação em x = {dados-calculo.ponto}?",
+        "fr": "Le polynôme de Maclaurin de degré 2 de la fonction exponentielle est 1 plus x plus la moitié du carré de x. Combien vaut cette approximation en x = {dados-calculo.ponto} ?",
+        "en": "The degree 2 Maclaurin polynomial of the exponential function is 1 plus x plus half of x squared. What is that approximation at x = {dados-calculo.ponto}?"
+      },
+      "dados-calculo": {
+        "ponto": "0",
+        "total": "1"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "O polinômio de Maclaurin de grau 2 da função cosseno é 1 menos metade do quadrado de x. Quanto vale essa aproximação em x = {dados-calculo.ponto}? Responda como fração.",
+        "fr": "Le polynôme de Maclaurin de degré 2 de la fonction cosinus est 1 moins la moitié du carré de x. Combien vaut cette approximation en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+        "en": "The degree 2 Maclaurin polynomial of the cosine function is 1 minus half of x squared. What is that approximation at x = {dados-calculo.ponto}? Answer as a fraction."
+      },
+      "dados-calculo": {
+        "ponto": "1",
+        "total": "1/2"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "O polinômio de Maclaurin de grau 1 do seno é o próprio x. Quanto vale essa aproximação em x = {dados-calculo.ponto}?",
+        "fr": "Le polynôme de Maclaurin de degré 1 du sinus est x lui-même. Combien vaut cette approximation en x = {dados-calculo.ponto} ?",
+        "en": "The degree 1 Maclaurin polynomial of the sine is x itself. What is that approximation at x = {dados-calculo.ponto}?"
+      },
+      "dados-calculo": {
+        "ponto": "0.2",
+        "total": "0.2"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "O polinômio de Maclaurin de grau 2 da função exponencial é 1 mais x mais metade do quadrado de x. Quanto vale essa aproximação em x = {dados-calculo.ponto}? Responda como fração.",
+        "fr": "Le polynôme de Maclaurin de degré 2 de la fonction exponentielle est 1 plus x plus la moitié du carré de x. Combien vaut cette approximation en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+        "en": "The degree 2 Maclaurin polynomial of the exponential function is 1 plus x plus half of x squared. What is that approximation at x = {dados-calculo.ponto}? Answer as a fraction."
+      },
+      "dados-calculo": {
+        "ponto": "1",
+        "total": "5/2"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o coeficiente de x elevado a {dados-calculo.n} na série de Maclaurin desta função? Responda com 5 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Use o polinômio de Maclaurin de grau {dados-calculo.grau} para aproximar esta função em x = {dados-calculo.expressao1}. Responda com 5 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Aproximando esta função em x = {dados-calculo.expressao1} pelo polinômio de Maclaurin de grau {dados-calculo.grau}, de quanto é o erro cometido? Responda com 5 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Estime, pelo resto de Lagrange, o erro máximo ao aproximar {dados-calculo.expressao1} em x = {dados-calculo.expressao2} com o polinômio de grau {dados-calculo.grau}. Use M = {dados-calculo.expressao3}. Responda com 5 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Aproxime a raiz quadrada de {dados-calculo.expressao1} pelo polinômio de Taylor de grau {dados-calculo.grau} centrado em {dados-calculo.a}. Responda com 5 casas decimais."
+      }
+    }
+  ]
+}

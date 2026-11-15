@@ -1,0 +1,77 @@
+{
+  "topico": "integral-indefinida",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma primitiva de {dados-calculo.a} vezes x é {dados-calculo.metade} vezes o quadrado de x. Tomando a constante igual a zero, quanto vale essa primitiva em x = {dados-calculo.ponto}?",
+        "fr": "Une primitive de {dados-calculo.a} fois x est {dados-calculo.metade} fois le carré de x. En prenant la constante nulle, combien vaut cette primitive en x = {dados-calculo.ponto} ?",
+        "en": "An antiderivative of {dados-calculo.a} times x is {dados-calculo.metade} times x squared. Taking the constant as zero, what is that antiderivative at x = {dados-calculo.ponto}?"
+      },
+      "dados-calculo": {
+        "a": "6",
+        "metade": "3",
+        "ponto": "4",
+        "total": "48"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Qual é a primitiva do quadrado de x, avaliada em x = {dados-calculo.ponto}, tomando a constante igual a zero? (a primitiva é o cubo de x dividido por 3)",
+        "fr": "Quelle est la primitive du carré de x, évaluée en x = {dados-calculo.ponto}, avec une constante nulle ? (la primitive est le cube de x divisé par 3)",
+        "en": "What is the antiderivative of x squared, evaluated at x = {dados-calculo.ponto}, taking the constant as zero? (the antiderivative is x cubed divided by 3)"
+      },
+      "dados-calculo": {
+        "ponto": "3",
+        "total": "9"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "A velocidade de um corpo, em m/s, é {dados-calculo.a} vezes o tempo. Partindo da posição {dados-calculo.inicial} m, em que posição, em metros, ele está no instante {dados-calculo.tempo} s?",
+        "fr": "La vitesse d’un corps, en m/s, est {dados-calculo.a} fois le temps. Partant de la position {dados-calculo.inicial} m, à quelle position, en mètres, est-il à l’instant {dados-calculo.tempo} s ?",
+        "en": "A body’s speed, in m/s, is {dados-calculo.a} times the time. Starting from position {dados-calculo.inicial} m, where is it, in metres, at {dados-calculo.tempo} s?"
+      },
+      "dados-calculo": {
+        "a": "4",
+        "inicial": "10",
+        "tempo": "3",
+        "total": "28"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma função tem derivada igual a {dados-calculo.a} e vale {dados-calculo.valor} em x = {dados-calculo.ponto}. Quanto ela vale em x = 0?",
+        "fr": "Une fonction a une dérivée égale à {dados-calculo.a} et vaut {dados-calculo.valor} en x = {dados-calculo.ponto}. Combien vaut-elle en x = 0 ?",
+        "en": "A function has derivative {dados-calculo.a} and equals {dados-calculo.valor} at x = {dados-calculo.ponto}. What is its value at x = 0?"
+      },
+      "dados-calculo": {
+        "a": "5",
+        "valor": "22",
+        "ponto": "4",
+        "total": "2"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o valor da constante C, sabendo que F({dados-calculo.ponto}) = {dados-calculo.condicao}?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Tomando C = 0, qual é o valor de F({dados-calculo.ponto})?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Integre e informe o coeficiente de x³ na primitiva."
+      }
+    }
+  ]
+}

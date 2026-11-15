@@ -1,0 +1,81 @@
+{
+  "topico": "integrais-improprias",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "A área sob a curva que vale 1 dividido pelo quadrado de x, de x = 1 até o infinito, é finita. Quanto ela vale?",
+        "fr": "L’aire sous la courbe qui vaut 1 divisé par le carré de x, de x = 1 à l’infini, est finie. Combien vaut-elle ?",
+        "en": "The area under the curve equal to 1 divided by x squared, from x = 1 to infinity, is finite. What is it?"
+      },
+      "dados-calculo": {
+        "total": "1"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "A área sob a curva que vale {dados-calculo.a} dividido pelo quadrado de x, de x = 1 até o infinito, é finita. Quanto ela vale?",
+        "fr": "L’aire sous la courbe qui vaut {dados-calculo.a} divisé par le carré de x, de x = 1 à l’infini, est finie. Combien vaut-elle ?",
+        "en": "The area under the curve equal to {dados-calculo.a} divided by x squared, from x = 1 to infinity, is finite. What is it?"
+      },
+      "dados-calculo": {
+        "a": "5",
+        "total": "5"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "A área sob a curva que vale 1 dividido por x, de x = 1 até o infinito, cresce sem limite. Escreva a resposta que o site usa quando a integral não tem valor.",
+        "fr": "L’aire sous la courbe qui vaut 1 divisé par x, de x = 1 à l’infini, croît sans limite. Écrivez la réponse que le site utilise quand l’intégrale n’a pas de valeur.",
+        "en": "The area under the curve equal to 1 divided by x, from x = 1 to infinity, grows without bound. Write the answer the site uses when the integral has no value."
+      },
+      "dados-calculo": {
+        "total": "diverge"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "A área sob a curva que vale 1 dividido por x elevado a {dados-calculo.expoente}, de x = 1 até o infinito, é finita. Quanto ela vale? Responda como fração.",
+        "fr": "L’aire sous la courbe qui vaut 1 divisé par x à la puissance {dados-calculo.expoente}, de x = 1 à l’infini, est finie. Combien vaut-elle ? Répondez sous forme de fraction.",
+        "en": "The area under the curve equal to 1 divided by x to the power of {dados-calculo.expoente}, from x = 1 to infinity, is finite. What is it? Answer as a fraction."
+      },
+      "dados-calculo": {
+        "expoente": "3",
+        "total": "1/2"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Calcule a integral imprópria, ou escreva \"diverge\". Se houver valor, use 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "O integrando explode em zero. Calcule a integral, ou escreva \"diverge\". Se houver valor, use 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Calcule a integral imprópria, ou escreva \"diverge\". Se houver valor, use 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Calcule a integral imprópria, ou escreva \"diverge\". Se houver valor, use 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Este integrando não tem primitiva elementar. Decida pelo teste da comparação e responda \"converge\" ou \"diverge\"."
+      }
+    }
+  ]
+}

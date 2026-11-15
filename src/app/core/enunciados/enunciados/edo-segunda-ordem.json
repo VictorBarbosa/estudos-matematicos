@@ -1,0 +1,81 @@
+{
+  "topico": "edo-segunda-ordem",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "A equação característica de uma equação diferencial tem raízes {dados-calculo.r1} e {dados-calculo.r2}. Qual é a MAIOR delas?",
+        "fr": "L’équation caractéristique d’une équation différentielle a pour racines {dados-calculo.r1} et {dados-calculo.r2}. Quelle est la PLUS GRANDE ?",
+        "en": "The characteristic equation of a differential equation has roots {dados-calculo.r1} and {dados-calculo.r2}. Which is the LARGER one?"
+      },
+      "dados-calculo": {
+        "r1": "-4",
+        "r2": "-9",
+        "total": "-4"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "A equação característica tem soma das raízes igual a {dados-calculo.soma} e produto igual a {dados-calculo.produto}. Sabendo que uma raiz vale {dados-calculo.uma}, qual é a outra?",
+        "fr": "L’équation caractéristique a une somme de racines égale à {dados-calculo.soma} et un produit égal à {dados-calculo.produto}. Sachant qu’une racine vaut {dados-calculo.uma}, quelle est l’autre ?",
+        "en": "The characteristic equation has roots summing to {dados-calculo.soma} and multiplying to {dados-calculo.produto}. Knowing one root is {dados-calculo.uma}, what is the other?"
+      },
+      "dados-calculo": {
+        "soma": "7",
+        "produto": "12",
+        "uma": "3",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um oscilador sem amortecimento tem massa {dados-calculo.massa} kg e constante elástica {dados-calculo.constante} N/m. Qual é a frequência angular da solução, em rad/s?",
+        "fr": "Un oscillateur sans amortissement a une masse de {dados-calculo.massa} kg et une constante élastique de {dados-calculo.constante} N/m. Quelle est la pulsation de la solution, en rad/s ?",
+        "en": "An undamped oscillator has mass {dados-calculo.massa} kg and spring constant {dados-calculo.constante} N/m. What is the angular frequency of the solution, in rad/s?"
+      },
+      "dados-calculo": {
+        "massa": "2",
+        "constante": "32",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "A equação característica tem raiz dupla igual a {dados-calculo.raiz}. Quantas raízes DISTINTAS ela tem?",
+        "fr": "L’équation caractéristique a une racine double égale à {dados-calculo.raiz}. Combien de racines DISTINCTES a-t-elle ?",
+        "en": "The characteristic equation has a double root equal to {dados-calculo.raiz}. How many DISTINCT roots does it have?"
+      },
+      "dados-calculo": {
+        "raiz": "-3",
+        "total": "1"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é a MAIOR raiz da equação característica desta EDO? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Com y(0) = {dados-calculo.y0} e y'(0) = {dados-calculo.v0}, quanto vale a solução em t = {dados-calculo.expressao1}? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é o período da oscilação descrita por esta EDO? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Qual é o discriminante da equação característica desta EDO? Responda com 4 casas decimais."
+      }
+    }
+  ]
+}

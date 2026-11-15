@@ -2,7 +2,7 @@ import { Idioma } from '@core/i18n/models/i18n.model';
 import { numeroEscrito } from '@core/treino/textos/numero-escrito';
 import { Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
 import { Rng } from '@core/treino/rng/rng';
-import banco from '@core/enunciados/enunciados.json';
+import { ENUNCIADOS_POR_TOPICO } from '@core/enunciados/enunciados/catalogo';
 
 /**
  * O banco de enunciados escritos à mão.
@@ -117,27 +117,26 @@ export const CHAVE_DO_TOTAL = 'total';
 export const CHAVES_RESERVADAS: readonly string[] = [CHAVE_DO_TOTAL, 'acao'];
 
 /**
- * O arquivo é agrupado POR TÓPICO, e aqui ele vira uma lista plana.
+ * Um arquivo por tópico, e aqui tudo vira uma lista plana.
  *
- * Agrupado porque é assim que se lê e se edita: todas as perguntas de Frações
- * juntas, com o nome do tópico escrito uma vez. Plano porque é assim que o
- * código procura — por tópico e nível, ou por tópico e forma. O `topico` volta
- * para dentro de cada entrada nesta linha, e o resto do site nem sabe que o
- * arquivo tem dois níveis.
+ * Por tópico porque é assim que se lê e se edita: as perguntas de Frações
+ * ficam em `enunciados/fracoes.json`, com o nome do tópico escrito uma vez, e
+ * quem for mexer nelas abre um arquivo de duzentas linhas em vez de um de meio
+ * megabyte. Plano porque é assim que o código procura — por tópico e nível, ou
+ * por tópico e forma. O `topico` volta para dentro de cada entrada nesta
+ * linha, e o resto do site nem sabe que o arquivo tem dois níveis.
  *
  * `as unknown` no meio do caminho porque o TypeScript infere do JSON um tipo
  * fechado — com `x3?: undefined` nas entradas que não usam `x3` —, e esse tipo
  * não é comparável a um `Record<string, string>`. O guarda do banco confere o
  * formato de verdade, entrada por entrada, e é ele que vale aqui.
  */
-interface TopicoDoArquivo {
-  readonly topico: string;
-  readonly enunciados: readonly Omit<EnunciadoDoBanco, 'topico'>[];
-}
-
-const ENTRADAS: readonly EnunciadoDoBanco[] = (
-  banco as unknown as readonly TopicoDoArquivo[]
-).flatMap((grupo) => grupo.enunciados.map((entrada) => ({ ...entrada, topico: grupo.topico })));
+const ENTRADAS: readonly EnunciadoDoBanco[] = ENUNCIADOS_POR_TOPICO.flatMap((grupo) =>
+  (grupo.enunciados as readonly Omit<EnunciadoDoBanco, 'topico'>[]).map((entrada) => ({
+    ...entrada,
+    topico: grupo.topico,
+  })),
+);
 
 /** Tudo o que está no arquivo, as duas naturezas juntas. */
 export function todasAsEntradas(): readonly EnunciadoDoBanco[] {

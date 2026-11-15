@@ -1,0 +1,430 @@
+{
+  "topico": "razao-proporcao",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma receita para {dados-calculo.x1} pessoas pede {dados-calculo.x2} gramas de farinha. Para {dados-calculo.x3} pessoas, quantos gramas são necessários?",
+        "fr": "Une recette pour {dados-calculo.x1} personnes demande {dados-calculo.x2} grammes de farine. Pour {dados-calculo.x3} personnes, combien de grammes faut-il ?",
+        "en": "A recipe for {dados-calculo.x1} people calls for {dados-calculo.x2} grams of flour. For {dados-calculo.x3} people, how many grams are needed?"
+      },
+      "dados-calculo": {
+        "x1": "4",
+        "x2": "300",
+        "x3": "10",
+        "total": "750"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma receita para {dados-calculo.pessoas1} pessoas usa {dados-calculo.farinha} g de farinha. Quantos gramas de farinha são necessários para {dados-calculo.pessoas2} pessoas?",
+        "fr": "Une recette pour {dados-calculo.pessoas1} personnes utilise {dados-calculo.farinha} g de farine. Combien de grammes de farine faut-il pour {dados-calculo.pessoas2} personnes ?",
+        "en": "A recipe for {dados-calculo.pessoas1} people uses {dados-calculo.farinha} g of flour. How many grams of flour are needed for {dados-calculo.pessoas2} people?"
+      },
+      "dados-calculo": {
+        "pessoas1": "4",
+        "farinha": "600",
+        "pessoas2": "10",
+        "total": "1500"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "{dados-calculo.o1} operários levantam um muro em {dados-calculo.dias} dias. No mesmo ritmo, em quantos dias {dados-calculo.o2} operários levantam o mesmo muro?",
+        "fr": "{dados-calculo.o1} ouvriers montent un mur en {dados-calculo.dias} jours. Au même rythme, en combien de jours {dados-calculo.o2} ouvriers montent-ils le même mur ?",
+        "en": "{dados-calculo.o1} workers build a wall in {dados-calculo.dias} days. At the same pace, in how many days do {dados-calculo.o2} workers build the same wall?"
+      },
+      "dados-calculo": {
+        "o1": "6",
+        "dias": "14",
+        "o2": "21",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma máquina enche {dados-calculo.garrafas} garrafas em {dados-calculo.minutos} minutos. Quantas garrafas {dados-calculo.maquinas} máquinas iguais enchem em {dados-calculo.horas} horas?",
+        "fr": "Une machine remplit {dados-calculo.garrafas} bouteilles en {dados-calculo.minutos} minutes. Combien de bouteilles {dados-calculo.maquinas} machines identiques remplissent-elles en {dados-calculo.horas} heures ?",
+        "en": "One machine fills {dados-calculo.garrafas} bottles in {dados-calculo.minutos} minutes. How many bottles do {dados-calculo.maquinas} identical machines fill in {dados-calculo.horas} hours?"
+      },
+      "dados-calculo": {
+        "garrafas": "180",
+        "minutos": "12",
+        "maquinas": "4",
+        "horas": "3",
+        "total": "10800"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} kg de farinha custam R$ {dados-calculo.b}. Quanto custam {dados-calculo.c} kg?",
+        "fr": "{dados-calculo.a} kg de farine coûtent {dados-calculo.b} $. Combien coûtent {dados-calculo.c} kg ?",
+        "en": "{dados-calculo.a} kg of flour cost ${dados-calculo.b}. How much do {dados-calculo.c} kg cost?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "Um carro percorre {dados-calculo.b} km com {dados-calculo.a} litros de combustível. Quantos quilômetros percorre com {dados-calculo.c} litros?",
+        "fr": "Une voiture parcourt {dados-calculo.b} km avec {dados-calculo.a} litres de carburant. Combien de kilomètres parcourt-elle avec {dados-calculo.c} litres ?",
+        "en": "A car travels {dados-calculo.b} km on {dados-calculo.a} litres of fuel. How many kilometres does it travel on {dados-calculo.c} litres?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "Uma receita para {dados-calculo.a} pessoas pede {dados-calculo.b} g de açúcar. Quantos gramas são necessários para {dados-calculo.c} pessoas?",
+        "fr": "Une recette pour {dados-calculo.a} personnes demande {dados-calculo.b} g de sucre. Combien de grammes faut-il pour {dados-calculo.c} personnes ?",
+        "en": "A recipe for {dados-calculo.a} people calls for {dados-calculo.b} g of sugar. How many grams are needed for {dados-calculo.c} people?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "Num mapa, {dados-calculo.a} cm representam {dados-calculo.b} km. Quantos quilômetros representam {dados-calculo.c} cm?",
+        "fr": "Sur une carte, {dados-calculo.a} cm représentent {dados-calculo.b} km. Combien de kilomètres représentent {dados-calculo.c} cm ?",
+        "en": "On a map, {dados-calculo.a} cm represent {dados-calculo.b} km. How many kilometres do {dados-calculo.c} cm represent?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} latas de tinta cobrem {dados-calculo.b} m² de parede. Quantos metros quadrados cobrem {dados-calculo.c} latas?",
+        "fr": "{dados-calculo.a} pots de peinture couvrent {dados-calculo.b} m² de mur. Combien de mètres carrés couvrent {dados-calculo.c} pots ?",
+        "en": "{dados-calculo.a} cans of paint cover {dados-calculo.b} m² of wall. How many square metres do {dados-calculo.c} cans cover?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "Uma impressora imprime {dados-calculo.b} páginas em {dados-calculo.a} minutos. Quantas páginas imprime em {dados-calculo.c} minutos?",
+        "fr": "Une imprimante imprime {dados-calculo.b} pages en {dados-calculo.a} minutes. Combien de pages imprime-t-elle en {dados-calculo.c} minutes ?",
+        "en": "A printer prints {dados-calculo.b} pages in {dados-calculo.a} minutes. How many pages does it print in {dados-calculo.c} minutes?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} metros de tecido custam R$ {dados-calculo.b}. Quanto custam {dados-calculo.c} metros?",
+        "fr": "{dados-calculo.a} mètres de tissu coûtent {dados-calculo.b} $. Combien coûtent {dados-calculo.c} mètres ?",
+        "en": "{dados-calculo.a} metres of fabric cost ${dados-calculo.b}. How much do {dados-calculo.c} metres cost?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "Um trabalhador recebe R$ {dados-calculo.b} por {dados-calculo.a} dias de trabalho. Quanto recebe por {dados-calculo.c} dias, no mesmo contrato?",
+        "fr": "Un travailleur reçoit {dados-calculo.b} $ pour {dados-calculo.a} jours de travail. Combien reçoit-il pour {dados-calculo.c} jours, au même contrat ?",
+        "en": "A worker earns ${dados-calculo.b} for {dados-calculo.a} days of work. How much does he earn for {dados-calculo.c} days under the same contract?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} kg de sementes produzem {dados-calculo.b} kg de grãos. Quantos quilos de grãos produzem {dados-calculo.c} kg de sementes?",
+        "fr": "{dados-calculo.a} kg de semences produisent {dados-calculo.b} kg de grains. Combien de kilos de grains produisent {dados-calculo.c} kg de semences ?",
+        "en": "{dados-calculo.a} kg of seeds yield {dados-calculo.b} kg of grain. How many kilograms of grain do {dados-calculo.c} kg of seeds yield?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "Uma estante com {dados-calculo.a} prateleiras guarda {dados-calculo.b} livros. Quantos livros cabem em {dados-calculo.c} prateleiras iguais?",
+        "fr": "Une étagère de {dados-calculo.a} tablettes contient {dados-calculo.b} livres. Combien de livres tiennent sur {dados-calculo.c} tablettes identiques ?",
+        "en": "A shelf with {dados-calculo.a} boards holds {dados-calculo.b} books. How many books fit on {dados-calculo.c} identical boards?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "Caminhando sempre no mesmo ritmo, {dados-calculo.a} horas cobrem {dados-calculo.b} km. Quantos quilômetros são cobertos em {dados-calculo.c} horas?",
+        "fr": "En marchant toujours au même rythme, {dados-calculo.a} heures couvrent {dados-calculo.b} km. Combien de kilomètres sont couverts en {dados-calculo.c} heures ?",
+        "en": "Walking at a steady pace, {dados-calculo.a} hours cover {dados-calculo.b} km. How many kilometres are covered in {dados-calculo.c} hours?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "Um xarope dá {dados-calculo.b} gotas para {dados-calculo.a} kg de peso. Quantas gotas para {dados-calculo.c} kg?",
+        "fr": "Un sirop donne {dados-calculo.b} gouttes pour {dados-calculo.a} kg de poids. Combien de gouttes pour {dados-calculo.c} kg ?",
+        "en": "A syrup gives {dados-calculo.b} drops per {dados-calculo.a} kg of body weight. How many drops for {dados-calculo.c} kg?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} resmas de papel têm {dados-calculo.b} folhas. Quantas folhas têm {dados-calculo.c} resmas?",
+        "fr": "{dados-calculo.a} rames de papier contiennent {dados-calculo.b} feuilles. Combien de feuilles contiennent {dados-calculo.c} rames ?",
+        "en": "{dados-calculo.a} reams of paper contain {dados-calculo.b} sheets. How many sheets do {dados-calculo.c} reams contain?"
+      }
+    },
+    {
+      "forma": "direta",
+      "enunciado": {
+        "br": "Uma bomba tira {dados-calculo.b} litros de água em {dados-calculo.a} minutos. Quantos litros tira em {dados-calculo.c} minutos?",
+        "fr": "Une pompe tire {dados-calculo.b} litres d'eau en {dados-calculo.a} minutes. Combien de litres tire-t-elle en {dados-calculo.c} minutes ?",
+        "en": "A pump draws {dados-calculo.b} litres of water in {dados-calculo.a} minutes. How many litres does it draw in {dados-calculo.c} minutes?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} operários fazem uma obra em {dados-calculo.b} dias. Em quantos dias {dados-calculo.c} operários fazem a mesma obra, no mesmo ritmo?",
+        "fr": "{dados-calculo.a} ouvriers font un ouvrage en {dados-calculo.b} jours. En combien de jours {dados-calculo.c} ouvriers font-ils le même ouvrage, au même rythme ?",
+        "en": "{dados-calculo.a} workers do a job in {dados-calculo.b} days. In how many days do {dados-calculo.c} workers do the same job at the same pace?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} torneiras enchem um tanque em {dados-calculo.b} minutos. Em quantos minutos {dados-calculo.c} torneiras iguais enchem o mesmo tanque?",
+        "fr": "{dados-calculo.a} robinets remplissent un réservoir en {dados-calculo.b} minutes. En combien de minutes {dados-calculo.c} robinets identiques remplissent-ils le même réservoir ?",
+        "en": "{dados-calculo.a} taps fill a tank in {dados-calculo.b} minutes. In how many minutes do {dados-calculo.c} identical taps fill the same tank?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "Viajando a {dados-calculo.a} km/h, leva-se {dados-calculo.b} horas. Quantas horas leva a {dados-calculo.c} km/h, no mesmo trajeto?",
+        "fr": "En roulant à {dados-calculo.a} km/h, on met {dados-calculo.b} heures. Combien d'heures met-on à {dados-calculo.c} km/h, sur le même trajet ?",
+        "en": "Travelling at {dados-calculo.a} km/h takes {dados-calculo.b} hours. How many hours does {dados-calculo.c} km/h take on the same route?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} bombas esvaziam um reservatório em {dados-calculo.b} horas. Em quantas horas {dados-calculo.c} bombas iguais o esvaziam?",
+        "fr": "{dados-calculo.a} pompes vident un réservoir en {dados-calculo.b} heures. En combien d'heures {dados-calculo.c} pompes identiques le vident-elles ?",
+        "en": "{dados-calculo.a} pumps empty a reservoir in {dados-calculo.b} hours. In how many hours do {dados-calculo.c} identical pumps empty it?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} máquinas produzem um lote em {dados-calculo.b} horas. Em quantas horas {dados-calculo.c} máquinas iguais produzem o mesmo lote?",
+        "fr": "{dados-calculo.a} machines produisent un lot en {dados-calculo.b} heures. En combien d'heures {dados-calculo.c} machines identiques produisent-elles le même lot ?",
+        "en": "{dados-calculo.a} machines produce a batch in {dados-calculo.b} hours. In how many hours do {dados-calculo.c} identical machines produce the same batch?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "Uma engrenagem de {dados-calculo.a} dentes dá {dados-calculo.b} voltas para mover outra. Quantas voltas dá a de {dados-calculo.c} dentes?",
+        "fr": "Un engrenage de {dados-calculo.a} dents fait {dados-calculo.b} tours pour en entraîner un autre. Combien de tours fait celui de {dados-calculo.c} dents ?",
+        "en": "A gear with {dados-calculo.a} teeth turns {dados-calculo.b} times to drive another. How many turns does the one with {dados-calculo.c} teeth make?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} vacas consomem a ração de um celeiro em {dados-calculo.b} dias. Em quantos dias {dados-calculo.c} vacas consomem a mesma ração?",
+        "fr": "{dados-calculo.a} vaches consomment le fourrage d'une grange en {dados-calculo.b} jours. En combien de jours {dados-calculo.c} vaches consomment-elles le même fourrage ?",
+        "en": "{dados-calculo.a} cows eat a barn's feed in {dados-calculo.b} days. In how many days do {dados-calculo.c} cows eat the same feed?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} digitadores terminam um trabalho em {dados-calculo.b} horas. Em quantas horas {dados-calculo.c} digitadores, no mesmo ritmo, terminam o mesmo trabalho?",
+        "fr": "{dados-calculo.a} dactylos terminent un travail en {dados-calculo.b} heures. En combien d'heures {dados-calculo.c} dactylos, au même rythme, terminent-ils le même travail ?",
+        "en": "{dados-calculo.a} typists finish a job in {dados-calculo.b} hours. In how many hours do {dados-calculo.c} typists, at the same pace, finish the same job?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "Baixar um arquivo a {dados-calculo.a} MB/s leva {dados-calculo.b} segundos. Quantos segundos leva a {dados-calculo.c} MB/s?",
+        "fr": "Télécharger un fichier à {dados-calculo.a} Mo/s prend {dados-calculo.b} secondes. Combien de secondes prend-il à {dados-calculo.c} Mo/s ?",
+        "en": "Downloading a file at {dados-calculo.a} MB/s takes {dados-calculo.b} seconds. How many seconds does {dados-calculo.c} MB/s take?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "Uma torneira de {dados-calculo.a} litros por minuto enche um tanque em {dados-calculo.b} minutos. Em quantos minutos uma de {dados-calculo.c} litros por minuto o enche?",
+        "fr": "Un robinet de {dados-calculo.a} litres par minute remplit un réservoir en {dados-calculo.b} minutes. En combien de minutes un robinet de {dados-calculo.c} litres par minute le remplit-il ?",
+        "en": "A tap at {dados-calculo.a} litres per minute fills a tank in {dados-calculo.b} minutes. In how many minutes does one at {dados-calculo.c} litres per minute fill it?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} servidores processam um lote em {dados-calculo.b} minutos. Em quantos minutos {dados-calculo.c} servidores iguais processam o mesmo lote?",
+        "fr": "{dados-calculo.a} serveurs traitent un lot en {dados-calculo.b} minutes. En combien de minutes {dados-calculo.c} serveurs identiques traitent-ils le même lot ?",
+        "en": "{dados-calculo.a} servers process a batch in {dados-calculo.b} minutes. In how many minutes do {dados-calculo.c} identical servers process the same batch?"
+      }
+    },
+    {
+      "forma": "inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} escavadeiras abrem uma vala em {dados-calculo.b} dias. Em quantos dias {dados-calculo.c} escavadeiras iguais abrem a mesma vala?",
+        "fr": "{dados-calculo.a} excavatrices creusent une tranchée en {dados-calculo.b} jours. En combien de jours {dados-calculo.c} excavatrices identiques creusent-elles la même tranchée ?",
+        "en": "{dados-calculo.a} excavators dig a trench in {dados-calculo.b} days. In how many days do {dados-calculo.c} identical excavators dig the same trench?"
+      }
+    },
+    {
+      "forma": "unitaria-direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} kg de café custam R$ {dados-calculo.b}. Quanto custa 1 kg?",
+        "fr": "{dados-calculo.a} kg de café coûtent {dados-calculo.b} $. Combien coûte 1 kg ?",
+        "en": "{dados-calculo.a} kg of coffee cost ${dados-calculo.b}. How much does 1 kg cost?"
+      }
+    },
+    {
+      "forma": "unitaria-direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} cadernos custam R$ {dados-calculo.b}. Quanto custa um caderno?",
+        "fr": "{dados-calculo.a} cahiers coûtent {dados-calculo.b} $. Combien coûte un cahier ?",
+        "en": "{dados-calculo.a} notebooks cost ${dados-calculo.b}. How much does one notebook cost?"
+      }
+    },
+    {
+      "forma": "unitaria-direta",
+      "enunciado": {
+        "br": "Uma impressora imprime {dados-calculo.b} páginas em {dados-calculo.a} minutos. Quantas páginas imprime em 1 minuto?",
+        "fr": "Une imprimante imprime {dados-calculo.b} pages en {dados-calculo.a} minutes. Combien de pages imprime-t-elle en 1 minute ?",
+        "en": "A printer prints {dados-calculo.b} pages in {dados-calculo.a} minutes. How many pages does it print in 1 minute?"
+      }
+    },
+    {
+      "forma": "unitaria-direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} metros de fio pesam {dados-calculo.b} kg. Quanto pesa 1 metro?",
+        "fr": "{dados-calculo.a} mètres de fil pèsent {dados-calculo.b} kg. Combien pèse 1 mètre ?",
+        "en": "{dados-calculo.a} metres of wire weigh {dados-calculo.b} kg. How much does 1 metre weigh?"
+      }
+    },
+    {
+      "forma": "unitaria-inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} operários fazem a obra em {dados-calculo.b} dias. Em quantos dias 1 operário faz a mesma obra?",
+        "fr": "{dados-calculo.a} ouvriers font l'ouvrage en {dados-calculo.b} jours. En combien de jours 1 ouvrier fait-il le même ouvrage ?",
+        "en": "{dados-calculo.a} workers do the job in {dados-calculo.b} days. In how many days does 1 worker do the same job?"
+      }
+    },
+    {
+      "forma": "unitaria-inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} torneiras enchem o tanque em {dados-calculo.b} minutos. Em quantos minutos 1 torneira o enche?",
+        "fr": "{dados-calculo.a} robinets remplissent le réservoir en {dados-calculo.b} minutes. En combien de minutes 1 robinet le remplit-il ?",
+        "en": "{dados-calculo.a} taps fill the tank in {dados-calculo.b} minutes. In how many minutes does 1 tap fill it?"
+      }
+    },
+    {
+      "forma": "unitaria-inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} máquinas produzem o lote em {dados-calculo.b} horas. Em quantas horas 1 máquina produz o mesmo lote?",
+        "fr": "{dados-calculo.a} machines produisent le lot en {dados-calculo.b} heures. En combien d'heures 1 machine produit-elle le même lot ?",
+        "en": "{dados-calculo.a} machines produce the batch in {dados-calculo.b} hours. In how many hours does 1 machine produce the same batch?"
+      }
+    },
+    {
+      "forma": "unitaria-inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} vacas comem a ração em {dados-calculo.b} dias. Em quantos dias 1 vaca come a mesma ração?",
+        "fr": "{dados-calculo.a} vaches mangent le fourrage en {dados-calculo.b} jours. En combien de jours 1 vache mange-t-elle le même fourrage ?",
+        "en": "{dados-calculo.a} cows eat the feed in {dados-calculo.b} days. In how many days does 1 cow eat the same feed?"
+      }
+    },
+    {
+      "forma": "composta-direta-direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} máquinas produzem {dados-calculo.b} peças em {dados-calculo.c} horas. Quantas peças {dados-calculo.d} máquinas iguais produzem em {dados-calculo.e} horas?",
+        "fr": "{dados-calculo.a} machines produisent {dados-calculo.b} pièces en {dados-calculo.c} heures. Combien de pièces {dados-calculo.d} machines identiques produisent-elles en {dados-calculo.e} heures ?",
+        "en": "{dados-calculo.a} machines produce {dados-calculo.b} parts in {dados-calculo.c} hours. How many parts do {dados-calculo.d} identical machines produce in {dados-calculo.e} hours?"
+      }
+    },
+    {
+      "forma": "composta-direta-direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} operários constroem {dados-calculo.b} metros de muro em {dados-calculo.c} dias. Quantos metros {dados-calculo.d} operários constroem em {dados-calculo.e} dias, no mesmo ritmo?",
+        "fr": "{dados-calculo.a} ouvriers construisent {dados-calculo.b} mètres de mur en {dados-calculo.c} jours. Combien de mètres {dados-calculo.d} ouvriers construisent-ils en {dados-calculo.e} jours, au même rythme ?",
+        "en": "{dados-calculo.a} workers build {dados-calculo.b} metres of wall in {dados-calculo.c} days. How many metres do {dados-calculo.d} workers build in {dados-calculo.e} days at the same pace?"
+      }
+    },
+    {
+      "forma": "composta-direta-direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} impressoras imprimem {dados-calculo.b} páginas em {dados-calculo.c} minutos. Quantas páginas {dados-calculo.d} impressoras iguais imprimem em {dados-calculo.e} minutos?",
+        "fr": "{dados-calculo.a} imprimantes impriment {dados-calculo.b} pages en {dados-calculo.c} minutes. Combien de pages {dados-calculo.d} imprimantes identiques impriment-elles en {dados-calculo.e} minutes ?",
+        "en": "{dados-calculo.a} printers print {dados-calculo.b} pages in {dados-calculo.c} minutes. How many pages do {dados-calculo.d} identical printers print in {dados-calculo.e} minutes?"
+      }
+    },
+    {
+      "forma": "composta-direta-direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} tratores aram {dados-calculo.b} hectares em {dados-calculo.c} dias. Quantos hectares {dados-calculo.d} tratores iguais aram em {dados-calculo.e} dias?",
+        "fr": "{dados-calculo.a} tracteurs labourent {dados-calculo.b} hectares en {dados-calculo.c} jours. Combien d'hectares {dados-calculo.d} tracteurs identiques labourent-ils en {dados-calculo.e} jours ?",
+        "en": "{dados-calculo.a} tractors plough {dados-calculo.b} hectares in {dados-calculo.c} days. How many hectares do {dados-calculo.d} identical tractors plough in {dados-calculo.e} days?"
+      }
+    },
+    {
+      "forma": "composta-inversa-inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} operários, trabalhando {dados-calculo.b} horas por dia, terminam a obra em {dados-calculo.c} dias. Em quantos dias {dados-calculo.d} operários, trabalhando {dados-calculo.e} horas por dia, terminam a mesma obra?",
+        "fr": "{dados-calculo.a} ouvriers, travaillant {dados-calculo.b} heures par jour, terminent l'ouvrage en {dados-calculo.c} jours. En combien de jours {dados-calculo.d} ouvriers, travaillant {dados-calculo.e} heures par jour, terminent-ils le même ouvrage ?",
+        "en": "{dados-calculo.a} workers, working {dados-calculo.b} hours a day, finish the job in {dados-calculo.c} days. In how many days do {dados-calculo.d} workers, working {dados-calculo.e} hours a day, finish the same job?"
+      }
+    },
+    {
+      "forma": "composta-inversa-inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} escavadeiras, trabalhando {dados-calculo.b} horas por dia, abrem a vala em {dados-calculo.c} dias. Em quantos dias {dados-calculo.d} escavadeiras, trabalhando {dados-calculo.e} horas por dia, abrem a mesma vala?",
+        "fr": "{dados-calculo.a} excavatrices, travaillant {dados-calculo.b} heures par jour, creusent la tranchée en {dados-calculo.c} jours. En combien de jours {dados-calculo.d} excavatrices, travaillant {dados-calculo.e} heures par jour, creusent-elles la même tranchée ?",
+        "en": "{dados-calculo.a} excavators, working {dados-calculo.b} hours a day, dig the trench in {dados-calculo.c} days. In how many days do {dados-calculo.d} excavators, working {dados-calculo.e} hours a day, dig the same trench?"
+      }
+    },
+    {
+      "forma": "composta-direta-direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} caminhões transportam {dados-calculo.b} toneladas em {dados-calculo.c} viagens. Quantas toneladas {dados-calculo.d} caminhões iguais transportam em {dados-calculo.e} viagens?",
+        "fr": "{dados-calculo.a} camions transportent {dados-calculo.b} tonnes en {dados-calculo.c} voyages. Combien de tonnes {dados-calculo.d} camions identiques transportent-ils en {dados-calculo.e} voyages ?",
+        "en": "{dados-calculo.a} trucks carry {dados-calculo.b} tonnes in {dados-calculo.c} trips. How many tonnes do {dados-calculo.d} identical trucks carry in {dados-calculo.e} trips?"
+      }
+    },
+    {
+      "forma": "composta-direta-direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} colheitadeiras colhem {dados-calculo.b} hectares em {dados-calculo.c} dias. Quantos hectares {dados-calculo.d} colheitadeiras iguais colhem em {dados-calculo.e} dias?",
+        "fr": "{dados-calculo.a} moissonneuses récoltent {dados-calculo.b} hectares en {dados-calculo.c} jours. Combien d'hectares {dados-calculo.d} moissonneuses identiques récoltent-elles en {dados-calculo.e} jours ?",
+        "en": "{dados-calculo.a} harvesters reap {dados-calculo.b} hectares in {dados-calculo.c} days. How many hectares do {dados-calculo.d} identical harvesters reap in {dados-calculo.e} days?"
+      }
+    },
+    {
+      "forma": "composta-direta-direta",
+      "enunciado": {
+        "br": "{dados-calculo.a} costureiras fazem {dados-calculo.b} camisas em {dados-calculo.c} dias. Quantas camisas {dados-calculo.d} costureiras, no mesmo ritmo, fazem em {dados-calculo.e} dias?",
+        "fr": "{dados-calculo.a} couturières font {dados-calculo.b} chemises en {dados-calculo.c} jours. Combien de chemises {dados-calculo.d} couturières, au même rythme, font-elles en {dados-calculo.e} jours ?",
+        "en": "{dados-calculo.a} seamstresses make {dados-calculo.b} shirts in {dados-calculo.c} days. How many shirts do {dados-calculo.d} seamstresses, at the same pace, make in {dados-calculo.e} days?"
+      }
+    },
+    {
+      "forma": "composta-inversa-inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} pintores, trabalhando {dados-calculo.b} horas por dia, pintam o prédio em {dados-calculo.c} dias. Em quantos dias {dados-calculo.d} pintores, trabalhando {dados-calculo.e} horas por dia, pintam o mesmo prédio?",
+        "fr": "{dados-calculo.a} peintres, travaillant {dados-calculo.b} heures par jour, peignent l'immeuble en {dados-calculo.c} jours. En combien de jours {dados-calculo.d} peintres, travaillant {dados-calculo.e} heures par jour, peignent-ils le même immeuble ?",
+        "en": "{dados-calculo.a} painters, working {dados-calculo.b} hours a day, paint the building in {dados-calculo.c} days. In how many days do {dados-calculo.d} painters, working {dados-calculo.e} hours a day, paint the same building?"
+      }
+    },
+    {
+      "forma": "composta-inversa-inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} máquinas, ligadas {dados-calculo.b} horas por dia, produzem o lote em {dados-calculo.c} dias. Em quantos dias {dados-calculo.d} máquinas, ligadas {dados-calculo.e} horas por dia, produzem o mesmo lote?",
+        "fr": "{dados-calculo.a} machines, allumées {dados-calculo.b} heures par jour, produisent le lot en {dados-calculo.c} jours. En combien de jours {dados-calculo.d} machines, allumées {dados-calculo.e} heures par jour, produisent-elles le même lot ?",
+        "en": "{dados-calculo.a} machines, running {dados-calculo.b} hours a day, produce the batch in {dados-calculo.c} days. In how many days do {dados-calculo.d} machines, running {dados-calculo.e} hours a day, produce the same batch?"
+      }
+    },
+    {
+      "forma": "composta-inversa-inversa",
+      "enunciado": {
+        "br": "{dados-calculo.a} tratores, trabalhando {dados-calculo.b} horas por dia, aram o campo em {dados-calculo.c} dias. Em quantos dias {dados-calculo.d} tratores, trabalhando {dados-calculo.e} horas por dia, aram o mesmo campo?",
+        "fr": "{dados-calculo.a} tracteurs, travaillant {dados-calculo.b} heures par jour, labourent le champ en {dados-calculo.c} jours. En combien de jours {dados-calculo.d} tracteurs, travaillant {dados-calculo.e} heures par jour, labourent-ils le même champ ?",
+        "en": "{dados-calculo.a} tractors, working {dados-calculo.b} hours a day, plough the field in {dados-calculo.c} days. In how many days do {dados-calculo.d} tractors, working {dados-calculo.e} hours a day, plough the same field?"
+      }
+    }
+  ]
+}

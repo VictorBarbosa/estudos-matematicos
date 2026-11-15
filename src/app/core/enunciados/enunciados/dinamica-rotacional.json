@@ -1,0 +1,81 @@
+{
+  "topico": "dinamica-rotacional",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Qual é o momento de inércia, em kg·m², de um disco maciço de {dados-calculo.massa} kg e raio {dados-calculo.raio} m girando em torno do seu eixo? (três casas decimais)",
+        "fr": "Quel est le moment d’inertie, en kg·m², d’un disque plein de {dados-calculo.massa} kg et de rayon {dados-calculo.raio} m tournant autour de son axe ? (trois décimales)",
+        "en": "What is the moment of inertia, in kg·m², of a solid disc of {dados-calculo.massa} kg and radius {dados-calculo.raio} m spinning about its axis? (three decimal places)"
+      },
+      "dados-calculo": {
+        "massa": "4",
+        "raio": "0.5",
+        "total": "0.500"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um torque de {dados-calculo.torque} N·m age sobre um corpo de momento de inércia {dados-calculo.inercia} kg·m². Qual é a aceleração angular, em rad/s²? (três casas decimais)",
+        "fr": "Un couple de {dados-calculo.torque} N·m agit sur un corps de moment d’inertie {dados-calculo.inercia} kg·m². Quelle est l’accélération angulaire, en rad/s² ? (trois décimales)",
+        "en": "A torque of {dados-calculo.torque} N·m acts on a body with moment of inertia {dados-calculo.inercia} kg·m². What is the angular acceleration, in rad/s²? (three decimal places)"
+      },
+      "dados-calculo": {
+        "torque": "10",
+        "inercia": "2",
+        "total": "5.000"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Qual é a energia cinética de rotação, em joules, de um corpo com momento de inércia {dados-calculo.inercia} kg·m² girando a {dados-calculo.angular} rad/s? (três casas decimais)",
+        "fr": "Quelle est l’énergie cinétique de rotation, en joules, d’un corps de moment d’inertie {dados-calculo.inercia} kg·m² tournant à {dados-calculo.angular} rad/s ? (trois décimales)",
+        "en": "What is the rotational kinetic energy, in joules, of a body with moment of inertia {dados-calculo.inercia} kg·m² spinning at {dados-calculo.angular} rad/s? (three decimal places)"
+      },
+      "dados-calculo": {
+        "inercia": "2",
+        "angular": "3",
+        "total": "9.000"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Qual é o momento de inércia, em kg·m², de uma esfera maciça de {dados-calculo.massa} kg e raio {dados-calculo.raio} m, que vale dois quintos de massa vezes raio ao quadrado? (três casas decimais)",
+        "fr": "Quel est le moment d’inertie, en kg·m², d’une sphère pleine de {dados-calculo.massa} kg et de rayon {dados-calculo.raio} m, qui vaut deux cinquièmes de la masse fois le rayon au carré ? (trois décimales)",
+        "en": "What is the moment of inertia, in kg·m², of a solid sphere of {dados-calculo.massa} kg and radius {dados-calculo.raio} m, which is two fifths of mass times radius squared? (three decimal places)"
+      },
+      "dados-calculo": {
+        "massa": "5",
+        "raio": "0.3",
+        "total": "0.180"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o momento de inércia de {dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio, em kg·m²? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Um torque de {dados-calculo.v1} N·m é aplicado a {dados-calculo.v2} {dados-calculo.v3} de {dados-calculo.v4} kg e {dados-calculo.v5} m de raio. Qual é a aceleração angular, em rad/s²? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "{dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio gira a {dados-calculo.v5} rad/s. Qual é a energia cinética de rotação, em J? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "{dados-calculo.v1} {dados-calculo.v2} rola sem deslizar a partir do repouso, descendo {dados-calculo.v3} m de desnível. Com gravidade de 9,81 m/s ao quadrado, qual é a velocidade do centro de massa no fim, em m/s? Responda com 3 casas decimais."
+      }
+    }
+  ]
+}

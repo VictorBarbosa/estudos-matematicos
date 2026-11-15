@@ -1,0 +1,94 @@
+{
+  "topico": "coordenadas-polares",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Qual é a distância r, da origem até o ponto ({dados-calculo.x}, {dados-calculo.y}), que é a coordenada polar r?",
+        "fr": "Quelle est la distance r, de l’origine au point ({dados-calculo.x}, {dados-calculo.y}), c’est-à-dire la coordonnée polaire r ?",
+        "en": "What is the distance r from the origin to the point ({dados-calculo.x}, {dados-calculo.y}), the polar coordinate r?"
+      },
+      "dados-calculo": {
+        "x": "5",
+        "y": "12",
+        "total": "13"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um ponto tem coordenadas polares r igual a {dados-calculo.r} e ângulo {dados-calculo.angulo}°. Qual é a sua coordenada x?",
+        "fr": "Un point a pour coordonnées polaires r égal à {dados-calculo.r} et un angle de {dados-calculo.angulo}°. Quelle est sa coordonnée x ?",
+        "en": "A point has polar coordinates r equal to {dados-calculo.r} and angle {dados-calculo.angulo}°. What is its x coordinate?"
+      },
+      "dados-calculo": {
+        "r": "8",
+        "angulo": "180",
+        "total": "-8"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Qual é a distância entre os pontos de coordenadas polares ({dados-calculo.r1}, {dados-calculo.a1}°) e ({dados-calculo.r2}, {dados-calculo.a2}°)? (duas casas decimais)",
+        "fr": "Quelle est la distance entre les points de coordonnées polaires ({dados-calculo.r1}, {dados-calculo.a1}°) et ({dados-calculo.r2}, {dados-calculo.a2}°) ? (deux décimales)",
+        "en": "What is the distance between the points with polar coordinates ({dados-calculo.r1}, {dados-calculo.a1}°) and ({dados-calculo.r2}, {dados-calculo.a2}°)? (two decimal places)"
+      },
+      "dados-calculo": {
+        "r1": "6",
+        "a1": "45",
+        "r2": "7",
+        "a2": "195",
+        "total": "12.56"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um ponto está sobre o eixo y positivo, a {dados-calculo.distancia} unidades da origem. Qual é o seu ângulo polar, em graus?",
+        "fr": "Un point est sur l’axe des y positif, à {dados-calculo.distancia} unités de l’origine. Quel est son angle polaire, en degrés ?",
+        "en": "A point lies on the positive y-axis, {dados-calculo.distancia} units from the origin. What is its polar angle, in degrees?"
+      },
+      "dados-calculo": {
+        "distancia": "7",
+        "total": "90"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "O ponto tem coordenadas polares (r, θ) = ({dados-calculo.r}, {dados-calculo.theta}°). Qual é a coordenada {dados-calculo.v1}? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é a distância r do ponto ({dados-calculo.x}, {dados-calculo.y}) até a origem — a coordenada polar r?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é o ângulo polar θ do ponto ({dados-calculo.x}, {dados-calculo.y}), em graus, com 0° ≤ θ < 360°? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "A curva polar abaixo é uma circunferência. Qual é o raio dela?"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Qual é a distância entre os pontos polares ({dados-calculo.r1}, {dados-calculo.t1}°) e ({dados-calculo.r2}, {dados-calculo.t2}°)? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "A órbita de um satélite, com o planeta num foco, é r = p/(1 + e·cos θ), em km. Qual é {dados-calculo.nome}? (2 casas decimais)"
+      }
+    }
+  ]
+}

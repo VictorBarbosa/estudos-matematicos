@@ -1,0 +1,91 @@
+{
+  "topico": "derivadas-exponencial-logaritmo",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Qual é a derivada da função logaritmo natural em x = {dados-calculo.ponto}? Responda como fração.",
+        "fr": "Quelle est la dérivée de la fonction logarithme naturel en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+        "en": "What is the derivative of the natural logarithm function at x = {dados-calculo.ponto}? Answer as a fraction."
+      },
+      "dados-calculo": {
+        "ponto": "7",
+        "total": "1/7"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma função vale a constante e elevada a x. Quanto vale a sua derivada no ponto em que a própria função vale {dados-calculo.valor}?",
+        "fr": "Une fonction vaut la constante e élevée à x. Combien vaut sa dérivée au point où la fonction elle-même vaut {dados-calculo.valor} ?",
+        "en": "A function is the constant e raised to x. What is its derivative at the point where the function itself equals {dados-calculo.valor}?"
+      },
+      "dados-calculo": {
+        "valor": "5",
+        "total": "5"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma função vale {dados-calculo.a} vezes o logaritmo natural de x. Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+        "fr": "Une fonction vaut {dados-calculo.a} fois le logarithme naturel de x. Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+        "en": "A function is {dados-calculo.a} times the natural logarithm of x. What is its derivative at x = {dados-calculo.ponto}?"
+      },
+      "dados-calculo": {
+        "a": "6",
+        "ponto": "3",
+        "total": "2"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma função vale a constante e elevada a ({dados-calculo.a} vezes x). Quanto vale a sua derivada no ponto em que a própria função vale {dados-calculo.valor}?",
+        "fr": "Une fonction vaut la constante e élevée à ({dados-calculo.a} fois x). Combien vaut sa dérivée au point où la fonction elle-même vaut {dados-calculo.valor} ?",
+        "en": "A function is the constant e raised to ({dados-calculo.a} times x). What is its derivative at the point where the function itself equals {dados-calculo.valor}?"
+      },
+      "dados-calculo": {
+        "a": "3",
+        "valor": "2",
+        "total": "6"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.x0}). Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.x0}). Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.x0}). Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.x0}). Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.x0}). Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.x0}). Responda com 3 casas decimais."
+      }
+    }
+  ]
+}

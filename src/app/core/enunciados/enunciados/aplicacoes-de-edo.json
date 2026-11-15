@@ -1,0 +1,92 @@
+{
+  "topico": "aplicacoes-de-edo",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um corpo a {dados-calculo.corpo} °C é deixado num ambiente a {dados-calculo.ambiente} °C. De que temperatura, em °C, ele se aproxima depois de muito tempo?",
+        "fr": "Un corps à {dados-calculo.corpo} °C est laissé dans un milieu à {dados-calculo.ambiente} °C. De quelle température, en °C, s’approche-t-il après très longtemps ?",
+        "en": "A body at {dados-calculo.corpo} °C is left in surroundings at {dados-calculo.ambiente} °C. What temperature, in °C, does it approach after a long time?"
+      },
+      "dados-calculo": {
+        "corpo": "77",
+        "ambiente": "22",
+        "total": "22"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um corpo a {dados-calculo.corpo} °C num ambiente a {dados-calculo.ambiente} °C perde metade da diferença de temperatura a cada {dados-calculo.intervalo} minutos. Que temperatura, em °C, ele tem depois de {dados-calculo.tempo} minutos?",
+        "fr": "Un corps à {dados-calculo.corpo} °C dans un milieu à {dados-calculo.ambiente} °C perd la moitié de l’écart de température toutes les {dados-calculo.intervalo} minutes. Quelle température, en °C, a-t-il après {dados-calculo.tempo} minutes ?",
+        "en": "A body at {dados-calculo.corpo} °C in surroundings at {dados-calculo.ambiente} °C loses half of the temperature difference every {dados-calculo.intervalo} minutes. What temperature, in °C, does it have after {dados-calculo.tempo} minutes?"
+      },
+      "dados-calculo": {
+        "corpo": "100",
+        "ambiente": "20",
+        "intervalo": "10",
+        "tempo": "20",
+        "total": "40"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma população dobra a cada {dados-calculo.intervalo} anos. Partindo de {dados-calculo.inicial} indivíduos, quantos haverá depois de {dados-calculo.tempo} anos?",
+        "fr": "Une population double tous les {dados-calculo.intervalo} ans. En partant de {dados-calculo.inicial} individus, combien y en aura-t-il après {dados-calculo.tempo} ans ?",
+        "en": "A population doubles every {dados-calculo.intervalo} years. Starting from {dados-calculo.inicial} individuals, how many will there be after {dados-calculo.tempo} years?"
+      },
+      "dados-calculo": {
+        "intervalo": "5",
+        "inicial": "300",
+        "tempo": "15",
+        "total": "2400"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um tanque recebe {dados-calculo.entrada} L por minuto e perde {dados-calculo.saida} L por minuto. Partindo de {dados-calculo.inicial} L, quantos litros há depois de {dados-calculo.tempo} minutos?",
+        "fr": "Un réservoir reçoit {dados-calculo.entrada} L par minute et en perd {dados-calculo.saida} L par minute. En partant de {dados-calculo.inicial} L, combien de litres y a-t-il après {dados-calculo.tempo} minutes ?",
+        "en": "A tank takes in {dados-calculo.entrada} L per minute and loses {dados-calculo.saida} L per minute. Starting from {dados-calculo.inicial} L, how many litres are there after {dados-calculo.tempo} minutes?"
+      },
+      "dados-calculo": {
+        "entrada": "12",
+        "saida": "5",
+        "inicial": "100",
+        "tempo": "20",
+        "total": "240"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Um corpo a {dados-calculo.inicial} °C é deixado num ambiente a {dados-calculo.ambiente} °C, e sua temperatura obedece à lei de resfriamento de Newton com constante {dados-calculo.expressao1} por minuto. Qual é a temperatura em {dados-calculo.t} minutos, em °C? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Uma amostra de {dados-calculo.inicial} g tem meia-vida de {dados-calculo.meiaVida} anos. Quanto resta depois de {dados-calculo.t} anos, em g? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Num circuito RL com R = {dados-calculo.resistencia} Ω, L = {dados-calculo.expressao1} H e tensão de {dados-calculo.tensao} V, ligado em t = 0 com corrente inicial nula, qual é a corrente em t = {dados-calculo.expressao2} s, em A? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Uma massa de {dados-calculo.massa} kg presa a uma mola de constante {dados-calculo.rigidez} N/m, com amortecimento {dados-calculo.amortecimento} N·s/m, é solta do repouso a {dados-calculo.expressao1} m do equilíbrio. Qual é a posição em t = {dados-calculo.expressao2} s, em m? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Um tanque com {dados-calculo.volume} L de água recebe {dados-calculo.vazao} L/min de solução a {dados-calculo.expressao1} kg/L e escoa na mesma vazão, bem misturado. Com {dados-calculo.inicial} kg de sal no início, quanto sal há em {dados-calculo.t} min, em kg? Responda com 4 casas decimais."
+      }
+    }
+  ]
+}

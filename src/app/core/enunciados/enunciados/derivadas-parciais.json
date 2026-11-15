@@ -1,0 +1,75 @@
+{
+  "topico": "derivadas-parciais",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma função vale {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Qual é a derivada parcial em relação a y?",
+        "fr": "Une fonction vaut {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Quelle est la dérivée partielle par rapport à y ?",
+        "en": "A function equals {dados-calculo.a} times x plus {dados-calculo.b} times y. What is the partial derivative with respect to y?"
+      },
+      "dados-calculo": {
+        "a": "7",
+        "b": "-11",
+        "total": "-11"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma função vale o produto de x por y. Qual é a derivada parcial em relação a x no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+        "fr": "Une fonction vaut le produit de x par y. Quelle est la dérivée partielle par rapport à x au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+        "en": "A function equals x times y. What is the partial derivative with respect to x at the point ({dados-calculo.px}, {dados-calculo.py})?"
+      },
+      "dados-calculo": {
+        "px": "2",
+        "py": "9",
+        "total": "9"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma função vale o quadrado de x mais o quadrado de y. Qual é a derivada parcial em relação a x no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+        "fr": "Une fonction vaut le carré de x plus le carré de y. Quelle est la dérivée partielle par rapport à x au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+        "en": "A function equals x squared plus y squared. What is the partial derivative with respect to x at the point ({dados-calculo.px}, {dados-calculo.py})?"
+      },
+      "dados-calculo": {
+        "px": "4",
+        "py": "7",
+        "total": "8"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma função vale o quadrado de x vezes y. Qual é a derivada parcial SEGUNDA em relação a x, no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+        "fr": "Une fonction vaut le carré de x fois y. Quelle est la dérivée partielle SECONDE par rapport à x, au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+        "en": "A function equals x squared times y. What is the SECOND partial derivative with respect to x, at the point ({dados-calculo.px}, {dados-calculo.py})?"
+      },
+      "dados-calculo": {
+        "px": "5",
+        "py": "3",
+        "total": "6"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é a segunda derivada parcial em relação a {dados-calculo.variavel}, duas vezes? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é a derivada parcial em relação a {dados-calculo.variavel}, avaliada no ponto ({dados-calculo.x}, {dados-calculo.y})? "
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é a derivada parcial mista desta função, derivando primeiro em x e depois em y? "
+      }
+    }
+  ]
+}

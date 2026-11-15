@@ -1,0 +1,90 @@
+{
+  "topico": "equacao-primeiro-grau",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Pedro pensou num número, multiplicou-o por {dados-calculo.fator}, somou {dados-calculo.soma} e chegou a {dados-calculo.resultado}. Em que número ele pensou?",
+        "fr": "Pedro a pensé à un nombre, l’a multiplié par {dados-calculo.fator}, a ajouté {dados-calculo.soma} et a obtenu {dados-calculo.resultado}. À quel nombre a-t-il pensé ?",
+        "en": "Pedro thought of a number, multiplied it by {dados-calculo.fator}, added {dados-calculo.soma} and got {dados-calculo.resultado}. What number did he think of?"
+      },
+      "dados-calculo": {
+        "fator": "4",
+        "soma": "7",
+        "resultado": "43",
+        "total": "9"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Carlos tem {dados-calculo.diferenca} anos mais que Marta. Juntos, os dois têm {dados-calculo.soma} anos. Quantos anos tem Marta?",
+        "fr": "Carlos a {dados-calculo.diferenca} ans de plus que Marta. Ensemble, ils ont {dados-calculo.soma} ans. Quel âge a Marta ?",
+        "en": "Carlos is {dados-calculo.diferenca} years older than Marta. Together they are {dados-calculo.soma} years old. How old is Marta?"
+      },
+      "dados-calculo": {
+        "diferenca": "12",
+        "soma": "58",
+        "total": "23"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um reservatório começou com {dados-calculo.inicial} litros e perde {dados-calculo.taxa} litros por hora. Depois de quantas horas ele chega a {dados-calculo.restante} litros?",
+        "fr": "Un réservoir contenait au départ {dados-calculo.inicial} litres et perd {dados-calculo.taxa} litres par heure. Au bout de combien d’heures atteint-il {dados-calculo.restante} litres ?",
+        "en": "A tank started with {dados-calculo.inicial} litres and loses {dados-calculo.taxa} litres per hour. After how many hours does it reach {dados-calculo.restante} litres?"
+      },
+      "dados-calculo": {
+        "inicial": "1200",
+        "taxa": "35",
+        "restante": "815",
+        "total": "11"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um ciclista percorreu {dados-calculo.parte} da rota, depois pedalou mais {dados-calculo.km} km e, com isso, completou {dados-calculo.acumulado} da rota. Quantos quilômetros tem a rota inteira?",
+        "fr": "Un cycliste a parcouru {dados-calculo.parte} du trajet, puis a pédalé {dados-calculo.km} km de plus et a ainsi complété {dados-calculo.acumulado} du trajet. Combien de kilomètres fait le trajet entier ?",
+        "en": "A cyclist covered {dados-calculo.parte} of the route, then rode {dados-calculo.km} km more and had thus completed {dados-calculo.acumulado} of the route. How many kilometres is the whole route?"
+      },
+      "dados-calculo": {
+        "parte": "1/3",
+        "km": "15",
+        "acumulado": "3/4",
+        "total": "36"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Resolva a equação e informe o valor exato de x."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Uma corrida de táxi custa $ {dados-calculo.b},00 de bandeirada mais $ {dados-calculo.p},00 por quilômetro rodado. Uma corrida custou $ {dados-calculo.T},00. Quantos quilômetros foram rodados?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Ana tem o {dados-calculo.v1} da idade de Bia. Daqui a {dados-calculo.k} anos, a soma das idades das duas será {dados-calculo.S} anos. Quantos anos Bia tem hoje?"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Um retângulo tem o comprimento {dados-calculo.d} cm maior que a largura, e o perímetro mede {dados-calculo.P} cm. Qual é a largura, em cm?"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Três prateleiras têm quantidades consecutivas de livros e, juntas, guardam {dados-calculo.S} livros. Quantos livros tem a prateleira mais cheia?"
+      }
+    }
+  ]
+}

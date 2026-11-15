@@ -1,0 +1,72 @@
+{
+  "topico": "numeros-decimais",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma balança de precisão mostrou {dados-calculo.massa} kg. Escreva esse decimal como fração irredutível.",
+        "fr": "Une balance de précision a affiché {dados-calculo.massa} kg. Écrivez ce décimal sous forme de fraction irréductible.",
+        "en": "A precision scale showed {dados-calculo.massa} kg. Write that decimal as a fraction in lowest terms."
+      },
+      "dados-calculo": {
+        "massa": "0.45",
+        "total": "9/20"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um número tem parte inteira zero e o algarismo {dados-calculo.d} se repete infinitamente depois da vírgula. Qual é a fração geratriz, na forma irredutível?",
+        "fr": "Un nombre a une partie entière nulle et le chiffre {dados-calculo.d} se répète à l’infini après la virgule. Quelle est la fraction génératrice, sous forme irréductible ?",
+        "en": "A number has whole part zero and the digit {dados-calculo.d} repeating forever after the decimal point. What is the generating fraction, in lowest terms?"
+      },
+      "dados-calculo": {
+        "d": "7",
+        "total": "7/9"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um número tem parte inteira zero, o algarismo {dados-calculo.a} logo depois da vírgula e, em seguida, o algarismo {dados-calculo.d} repetindo-se para sempre. Escreva a fração irredutível.",
+        "fr": "Un nombre a une partie entière nulle, le chiffre {dados-calculo.a} juste après la virgule, puis le chiffre {dados-calculo.d} qui se répète à l’infini. Écrivez la fraction irréductible.",
+        "en": "A number has whole part zero, the digit {dados-calculo.a} right after the decimal point and then the digit {dados-calculo.d} repeating forever. Write the fraction in lowest terms."
+      },
+      "dados-calculo": {
+        "a": "5",
+        "d": "3",
+        "total": "8/15"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Num número de parte inteira zero, o par de algarismos {dados-calculo.p} se repete infinitamente depois da vírgula. Escreva a fração irredutível.",
+        "fr": "Dans un nombre de partie entière nulle, le couple de chiffres {dados-calculo.p} se répète à l’infini après la virgule. Écrivez la fraction irréductible.",
+        "en": "In a number with whole part zero, the pair of digits {dados-calculo.p} repeats forever after the decimal point. Write the fraction in lowest terms."
+      },
+      "dados-calculo": {
+        "p": "36",
+        "total": "4/11"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Escreva o decimal como fração irredutível."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Encontre a fração geratriz desta dízima periódica."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Encontre a fração geratriz desta dízima periódica composta."
+      }
+    }
+  ]
+}

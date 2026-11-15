@@ -1,0 +1,74 @@
+{
+  "topico": "funcao-afim",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um táxi cobra {dados-calculo.fixo} reais fixos mais {dados-calculo.porKm} reais por quilômetro. Para que distância, em quilômetros, a corrida custa {dados-calculo.valor} reais?",
+        "fr": "Un taxi facture {dados-calculo.fixo} reais fixes plus {dados-calculo.porKm} reais par kilomètre. Pour quelle distance, en kilomètres, la course coûte-t-elle {dados-calculo.valor} reais ?",
+        "en": "A taxi charges {dados-calculo.fixo} reais fixed plus {dados-calculo.porKm} reais per kilometre. For what distance, in kilometres, does the ride cost {dados-calculo.valor} reais?"
+      },
+      "dados-calculo": {
+        "fixo": "5",
+        "porKm": "3",
+        "valor": "29",
+        "total": "8"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma função afim vale {dados-calculo.b} quando x é zero e diminui {dados-calculo.queda} unidades a cada aumento de 1 em x. Em que valor de x ela se anula?",
+        "fr": "Une fonction affine vaut {dados-calculo.b} quand x est nul et diminue de {dados-calculo.queda} unités à chaque augmentation de 1 de x. Pour quelle valeur de x s’annule-t-elle ?",
+        "en": "A linear function equals {dados-calculo.b} when x is zero and drops {dados-calculo.queda} units for every increase of 1 in x. At what value of x does it reach zero?"
+      },
+      "dados-calculo": {
+        "b": "12",
+        "queda": "4",
+        "total": "3"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma função afim vale {dados-calculo.y1} em x = {dados-calculo.x1} e vale {dados-calculo.y2} em x = {dados-calculo.x2}. Qual é a sua taxa de variação?",
+        "fr": "Une fonction affine vaut {dados-calculo.y1} en x = {dados-calculo.x1} et {dados-calculo.y2} en x = {dados-calculo.x2}. Quel est son taux de variation ?",
+        "en": "A linear function equals {dados-calculo.y1} at x = {dados-calculo.x1} and {dados-calculo.y2} at x = {dados-calculo.x2}. What is its rate of change?"
+      },
+      "dados-calculo": {
+        "y1": "7",
+        "x1": "2",
+        "y2": "19",
+        "x2": "6",
+        "total": "3"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma função afim vale {dados-calculo.y1} em x = {dados-calculo.x1} e vale {dados-calculo.y2} em x = {dados-calculo.x2}. Quanto ela vale em x = 0?",
+        "fr": "Une fonction affine vaut {dados-calculo.y1} en x = {dados-calculo.x1} et {dados-calculo.y2} en x = {dados-calculo.x2}. Combien vaut-elle en x = 0 ?",
+        "en": "A linear function equals {dados-calculo.y1} at x = {dados-calculo.x1} and {dados-calculo.y2} at x = {dados-calculo.x2}. What is its value at x = 0?"
+      },
+      "dados-calculo": {
+        "y1": "7",
+        "x1": "2",
+        "y2": "19",
+        "x2": "6",
+        "total": "1"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é a taxa de variação da função, ou seja, quanto y muda quando x avança 1?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é o valor de f({dados-calculo.x})?"
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "topico": "semelhanca-e-pitagoras",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma escada de {dados-calculo.escada} m está apoiada numa parede, com o pé a {dados-calculo.pe} m da parede. A quantos metros de altura a escada toca a parede?",
+        "fr": "Une échelle de {dados-calculo.escada} m est appuyée contre un mur, le pied à {dados-calculo.pe} m du mur. À quelle hauteur, en mètres, l’échelle touche-t-elle le mur ?",
+        "en": "A {dados-calculo.escada} m ladder leans against a wall with its foot {dados-calculo.pe} m from the wall. How many metres up the wall does the ladder touch?"
+      },
+      "dados-calculo": {
+        "escada": "13",
+        "pe": "5",
+        "total": "12"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Num dia de sol, uma vara de {dados-calculo.vara} m projeta uma sombra de {dados-calculo.sombraVara} m. No mesmo instante, a sombra de um prédio mede {dados-calculo.sombraPredio} m. Quantos metros tem o prédio?",
+        "fr": "Par une journée ensoleillée, une tige de {dados-calculo.vara} m projette une ombre de {dados-calculo.sombraVara} m. Au même instant, l’ombre d’un immeuble mesure {dados-calculo.sombraPredio} m. Combien de mètres fait l’immeuble ?",
+        "en": "On a sunny day a {dados-calculo.vara} m pole casts a {dados-calculo.sombraVara} m shadow. At the same moment a building’s shadow is {dados-calculo.sombraPredio} m long. How many metres tall is the building?"
+      },
+      "dados-calculo": {
+        "vara": "2",
+        "sombraVara": "3",
+        "sombraPredio": "36",
+        "total": "24"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Numa maquete, todos os comprimentos são {dados-calculo.fator} vezes menores que os reais. Se o terreno real tem {dados-calculo.areaReal} m² de área, quantos metros quadrados tem o terreno da maquete?",
+        "fr": "Dans une maquette, toutes les longueurs sont {dados-calculo.fator} fois plus petites que les vraies. Si le terrain réel a {dados-calculo.areaReal} m² d’aire, combien de mètres carrés fait le terrain de la maquette ?",
+        "en": "In a scale model every length is {dados-calculo.fator} times smaller than in reality. If the real plot has an area of {dados-calculo.areaReal} m², how many square metres does the model plot have?"
+      },
+      "dados-calculo": {
+        "fator": "5",
+        "areaReal": "450",
+        "total": "18"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um triângulo retângulo tem catetos de {dados-calculo.cateto1} cm e {dados-calculo.cateto2} cm. Quantos centímetros mede a altura traçada do ângulo reto até a hipotenusa?",
+        "fr": "Un triangle rectangle a des cathètes de {dados-calculo.cateto1} cm et {dados-calculo.cateto2} cm. Combien de centimètres mesure la hauteur tracée de l’angle droit jusqu’à l’hypoténuse ?",
+        "en": "A right triangle has legs of {dados-calculo.cateto1} cm and {dados-calculo.cateto2} cm. How many centimetres is the height drawn from the right angle to the hypotenuse?"
+      },
+      "dados-calculo": {
+        "cateto1": "9",
+        "cateto2": "12",
+        "total": "7.2"
+      }
+    }
+  ]
+}

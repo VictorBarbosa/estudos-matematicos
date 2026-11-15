@@ -1,0 +1,103 @@
+{
+  "topico": "fisica-moderna",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma nave viaja a {dados-calculo.fracao} da velocidade da luz. Qual é o fator de Lorentz? (duas casas decimais)",
+        "fr": "Un vaisseau voyage à {dados-calculo.fracao} de la vitesse de la lumière. Quel est le facteur de Lorentz ? (deux décimales)",
+        "en": "A ship travels at {dados-calculo.fracao} of the speed of light. What is the Lorentz factor? (two decimal places)"
+      },
+      "dados-calculo": {
+        "fracao": "0.6",
+        "total": "1.25"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um relógio a bordo de uma nave a {dados-calculo.fracao} da velocidade da luz mede {dados-calculo.tempo} s. Quantos segundos passam para quem ficou parado? (duas casas decimais)",
+        "fr": "Une horloge à bord d’un vaisseau à {dados-calculo.fracao} de la vitesse de la lumière mesure {dados-calculo.tempo} s. Combien de secondes passent pour celui qui est resté immobile ? (deux décimales)",
+        "en": "A clock aboard a ship at {dados-calculo.fracao} of the speed of light reads {dados-calculo.tempo} s. How many seconds pass for someone at rest? (two decimal places)"
+      },
+      "dados-calculo": {
+        "fracao": "0.6",
+        "tempo": "10",
+        "total": "12.50"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma régua de {dados-calculo.comprimento} m viaja a {dados-calculo.fracao} da velocidade da luz, na sua própria direção. Que comprimento, em metros, ela tem para quem a vê passar? (duas casas decimais)",
+        "fr": "Une règle de {dados-calculo.comprimento} m voyage à {dados-calculo.fracao} de la vitesse de la lumière, dans sa propre direction. Quelle longueur, en mètres, a-t-elle pour celui qui la voit passer ? (deux décimales)",
+        "en": "A {dados-calculo.comprimento} m rod travels at {dados-calculo.fracao} of the speed of light along its own direction. What length, in metres, does it have for someone watching it go by? (two decimal places)"
+      },
+      "dados-calculo": {
+        "comprimento": "100",
+        "fracao": "0.8",
+        "total": "60.00"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Qual é o fator de Lorentz para uma nave a {dados-calculo.fracao} da velocidade da luz? (duas casas decimais)",
+        "fr": "Quel est le facteur de Lorentz pour un vaisseau à {dados-calculo.fracao} de la vitesse de la lumière ? (deux décimales)",
+        "en": "What is the Lorentz factor for a ship at {dados-calculo.fracao} of the speed of light? (two decimal places)"
+      },
+      "dados-calculo": {
+        "fracao": "0.8",
+        "total": "1.67"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é a energia de um fóton de luz com comprimento de onda {dados-calculo.lambda} nm, em elétron-volts (eV)?{dados-calculo.v1}"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Uma nave viaja a {dados-calculo.v1}c. Qual é o fator de Lorentz γ?{dados-calculo.v2}"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Uma nave mede {dados-calculo.proprio} m em repouso. Passando a {dados-calculo.v1}c, que comprimento ela tem para um observador na Terra, em metros?{dados-calculo.v2}"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Luz de {dados-calculo.lambda} nm incide sobre {dados-calculo.metal}, cuja função trabalho é {dados-calculo.v1} eV. Qual é a energia cinética máxima dos elétrons arrancados, em eV?{dados-calculo.v2}"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "A função trabalho do {dados-calculo.metal} é {dados-calculo.v1} eV. Qual é o MAIOR comprimento de onda que ainda arranca elétrons dele, em nm?{dados-calculo.v2}"
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "Um elétron (m = 9,11 × 10⁻³¹ kg) se move a {dados-calculo.v1} × 10⁶ m/s. Qual é o comprimento de onda de de Broglie dele, em nm? (h = 6,626 × 10⁻³⁴ J·s){dados-calculo.v2}"
+      }
+    },
+    {
+      "forma": "forma-7",
+      "enunciado": {
+        "br": "Uma partícula instável vive {dados-calculo.v1} vezes mais no laboratório do que no próprio referencial. Qual é a velocidade dela, como fração de c (v/c)?{dados-calculo.v2}"
+      }
+    },
+    {
+      "forma": "forma-8",
+      "enunciado": {
+        "br": "Um elétron (energia de repouso mc² = 511 keV) se move a {dados-calculo.v1}c. Qual é a energia cinética dele, em keV?{dados-calculo.v2}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "topico": "funcao-logaritmica",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Quantas vezes é preciso multiplicar {dados-calculo.base} por si mesmo para chegar a {dados-calculo.valor}? Esse número é o logaritmo de {dados-calculo.valor} na base {dados-calculo.base}.",
+        "fr": "Combien de fois faut-il multiplier {dados-calculo.base} par lui-même pour atteindre {dados-calculo.valor} ? Ce nombre est le logarithme de {dados-calculo.valor} en base {dados-calculo.base}.",
+        "en": "How many times must {dados-calculo.base} be multiplied by itself to reach {dados-calculo.valor}? That number is the logarithm of {dados-calculo.valor} to base {dados-calculo.base}."
+      },
+      "dados-calculo": {
+        "base": "2",
+        "valor": "1024",
+        "total": "10"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "O pH de uma solução é o logaritmo decimal da concentração, com o sinal trocado. Se a concentração é 10 elevado a menos {dados-calculo.expoente}, qual é o pH?",
+        "fr": "Le pH d’une solution est le logarithme décimal de la concentration, avec le signe inversé. Si la concentration est 10 à la puissance moins {dados-calculo.expoente}, quel est le pH ?",
+        "en": "The pH of a solution is the base-10 logarithm of the concentration with the sign flipped. If the concentration is 10 to the power of minus {dados-calculo.expoente}, what is the pH?"
+      },
+      "dados-calculo": {
+        "expoente": "5",
+        "total": "5"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Quantas vezes é preciso dividir {dados-calculo.valor} por {dados-calculo.base} até chegar a 1?",
+        "fr": "Combien de fois faut-il diviser {dados-calculo.valor} par {dados-calculo.base} pour arriver à 1 ?",
+        "en": "How many times must {dados-calculo.valor} be divided by {dados-calculo.base} to reach 1?"
+      },
+      "dados-calculo": {
+        "valor": "729",
+        "base": "3",
+        "total": "6"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Numa escala logarítmica de base 10, quantas vezes maior é a grandeza de magnitude {dados-calculo.m2} em relação à de magnitude {dados-calculo.m1}?",
+        "fr": "Sur une échelle logarithmique de base 10, combien de fois plus grande est la grandeur de magnitude {dados-calculo.m2} par rapport à celle de magnitude {dados-calculo.m1} ?",
+        "en": "On a base-10 logarithmic scale, how many times larger is a quantity of magnitude {dados-calculo.m2} than one of magnitude {dados-calculo.m1}?"
+      },
+      "dados-calculo": {
+        "m2": "7",
+        "m1": "4",
+        "total": "1000"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Use a propriedade do produto e informe o valor."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Resolva a equação logarítmica."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Calcule o logaritmo."
+      }
+    }
+  ]
+}

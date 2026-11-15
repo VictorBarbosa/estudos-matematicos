@@ -1,0 +1,110 @@
+{
+  "topico": "escalonamento-e-inversa",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Num sistema já escalonado, a última equação diz que {dados-calculo.coef}y vale {dados-calculo.valor}. Quanto vale y?",
+        "fr": "Dans un système déjà échelonné, la dernière équation dit que {dados-calculo.coef}y vaut {dados-calculo.valor}. Combien vaut y ?",
+        "en": "In an already row-reduced system, the last equation says {dados-calculo.coef}y equals {dados-calculo.valor}. What is y?"
+      },
+      "dados-calculo": {
+        "coef": "4",
+        "valor": "12",
+        "total": "3"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Num sistema escalonado, y vale {dados-calculo.y} e a primeira equação diz que x mais {dados-calculo.coef}y vale {dados-calculo.valor}. Quanto vale x?",
+        "fr": "Dans un système échelonné, y vaut {dados-calculo.y} et la première équation dit que x plus {dados-calculo.coef}y vaut {dados-calculo.valor}. Combien vaut x ?",
+        "en": "In a row-reduced system, y is {dados-calculo.y} and the first equation says x plus {dados-calculo.coef}y equals {dados-calculo.valor}. What is x?"
+      },
+      "dados-calculo": {
+        "y": "3",
+        "coef": "2",
+        "valor": "11",
+        "total": "5"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha {dados-calculo.c} e {dados-calculo.d}. Qual é a entrada da linha 1, coluna 1 da matriz inversa?",
+        "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne {dados-calculo.c} et {dados-calculo.d}. Quelle est l’entrée ligne 1, colonne 1 de la matrice inverse ?",
+        "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row {dados-calculo.c} and {dados-calculo.d}. What is the row 1, column 1 entry of the inverse matrix?"
+      },
+      "dados-calculo": {
+        "a": "4",
+        "b": "3",
+        "c": "3",
+        "d": "2",
+        "total": "-2"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha {dados-calculo.c} e {dados-calculo.d}. Qual é o determinante dela, que é o número pelo qual a inversa divide?",
+        "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne {dados-calculo.c} et {dados-calculo.d}. Quel est son déterminant, le nombre par lequel l’inverse divise ?",
+        "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row {dados-calculo.c} and {dados-calculo.d}. What is its determinant, the number the inverse divides by?"
+      },
+      "dados-calculo": {
+        "a": "4",
+        "b": "3",
+        "c": "3",
+        "d": "2",
+        "total": "-1"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "{dados-calculo.enunciado} Responda como fração."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Aplique {dados-calculo.op} na matriz aumentada. Qual é a nova entrada da {dados-calculo.Li} na coluna {dados-calculo.v1}{dados-calculo.v2}?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "A matriz aumentada do sistema já está escalonada. Encontre x, substituindo de baixo para cima."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "A matriz aumentada já está escalonada. Quantas soluções tem o sistema? Responda 0 (nenhuma solução), 1 (uma só) ou 2 (infinitas)."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Escalone o sistema. Quantas soluções ele tem? Responda 0 (nenhuma solução), 1 (uma só) ou 2 (infinitas)."
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "Resolva o sistema por escalonamento e informe o valor de {dados-calculo.nome}."
+      }
+    },
+    {
+      "forma": "forma-7",
+      "enunciado": {
+        "br": "Para que valor de k o sistema deixa de ter solução única?"
+      }
+    },
+    {
+      "forma": "forma-8",
+      "enunciado": {
+        "br": "Calcule a inversa por escalonamento de (A | I) e informe a entrada da linha {dados-calculo.v1}, coluna {dados-calculo.v2} de A⁻¹."
+      }
+    }
+  ]
+}

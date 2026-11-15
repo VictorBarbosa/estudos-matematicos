@@ -1,0 +1,53 @@
+{
+  "topico": "estequiometria",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "O calcário se decompõe como CaCO₃ → CaO + CO₂. Que massa de CO₂, em gramas, sai de {dados-calculo.massa} g de CaCO₃? (duas casas decimais)",
+        "fr": "Le calcaire se décompose comme CaCO₃ → CaO + CO₂. Quelle masse de CO₂, en grammes, provient de {dados-calculo.massa} g de CaCO₃ ? (deux décimales)",
+        "en": "Limestone decomposes as CaCO₃ → CaO + CO₂. What mass of CO₂, in grams, comes from {dados-calculo.massa} g of CaCO₃? (two decimal places)"
+      },
+      "dados-calculo": {
+        "massa": "200.18",
+        "total": "88.02"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Na combustão completa do metano, CH₄ + 2 O₂ → CO₂ + 2 H₂O, que massa de CO₂, em gramas, vem de {dados-calculo.massa} g de metano? (duas casas decimais)",
+        "fr": "Dans la combustion complète du méthane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, quelle masse de CO₂, en grammes, provient de {dados-calculo.massa} g de méthane ? (deux décimales)",
+        "en": "In the complete combustion of methane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, what mass of CO₂, in grams, comes from {dados-calculo.massa} g of methane? (two decimal places)"
+      },
+      "dados-calculo": {
+        "massa": "32.1",
+        "total": "88.02"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Na combustão completa do metano, CH₄ + 2 O₂ → CO₂ + 2 H₂O, que massa de água, em gramas, se forma a partir de {dados-calculo.massa} g de metano? (duas casas decimais)",
+        "fr": "Dans la combustion complète du méthane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, quelle masse d’eau, en grammes, se forme à partir de {dados-calculo.massa} g de méthane ? (deux décimales)",
+        "en": "In the complete combustion of methane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, what mass of water, in grams, forms from {dados-calculo.massa} g of methane? (two decimal places)"
+      },
+      "dados-calculo": {
+        "massa": "16.05",
+        "total": "36.04"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "A ferrugem se forma como 4 Fe + 3 O₂ → 2 Fe₂O₃. Que massa de Fe₂O₃, em gramas, se forma a partir de {dados-calculo.massa} g de ferro? (duas casas decimais)",
+        "fr": "La rouille se forme comme 4 Fe + 3 O₂ → 2 Fe₂O₃. Quelle masse de Fe₂O₃, en grammes, se forme à partir de {dados-calculo.massa} g de fer ? (deux décimales)",
+        "en": "Rust forms as 4 Fe + 3 O₂ → 2 Fe₂O₃. What mass of Fe₂O₃, in grams, forms from {dados-calculo.massa} g of iron? (two decimal places)"
+      },
+      "dados-calculo": {
+        "massa": "223.4",
+        "total": "319.40"
+      }
+    }
+  ]
+}

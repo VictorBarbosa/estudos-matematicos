@@ -1,0 +1,76 @@
+{
+  "topico": "teorema-fundamental",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "A área acumulada sob uma curva, a partir de zero, tem derivada igual ao valor da própria curva. Se a curva vale {dados-calculo.valor} em x = {dados-calculo.ponto}, quanto vale a derivada da área acumulada nesse ponto?",
+        "fr": "L’aire accumulée sous une courbe, à partir de zéro, a une dérivée égale à la valeur de la courbe elle-même. Si la courbe vaut {dados-calculo.valor} en x = {dados-calculo.ponto}, combien vaut la dérivée de l’aire accumulée en ce point ?",
+        "en": "The area accumulated under a curve from zero has a derivative equal to the value of the curve itself. If the curve equals {dados-calculo.valor} at x = {dados-calculo.ponto}, what is the derivative of the accumulated area there?"
+      },
+      "dados-calculo": {
+        "valor": "30",
+        "ponto": "3",
+        "total": "30"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma primitiva de uma função vale {dados-calculo.fim} no extremo superior e {dados-calculo.inicio} no extremo inferior. Quanto vale a integral definida entre esses extremos?",
+        "fr": "Une primitive d’une fonction vaut {dados-calculo.fim} à la borne supérieure et {dados-calculo.inicio} à la borne inférieure. Combien vaut l’intégrale définie entre ces bornes ?",
+        "en": "An antiderivative of a function equals {dados-calculo.fim} at the upper limit and {dados-calculo.inicio} at the lower limit. What is the definite integral between those limits?"
+      },
+      "dados-calculo": {
+        "fim": "40",
+        "inicio": "15",
+        "total": "25"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "A área acumulada sob a reta que vale {dados-calculo.a} vezes x, a partir de zero, é avaliada em x = {dados-calculo.ponto}. Quanto ela vale?",
+        "fr": "L’aire accumulée sous la droite qui vaut {dados-calculo.a} fois x, à partir de zéro, est évaluée en x = {dados-calculo.ponto}. Combien vaut-elle ?",
+        "en": "The area accumulated under the line equal to {dados-calculo.a} times x, starting from zero, is evaluated at x = {dados-calculo.ponto}. What is it?"
+      },
+      "dados-calculo": {
+        "a": "6",
+        "ponto": "5",
+        "total": "75"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "A área acumulada sob uma curva, a partir de zero, vale {dados-calculo.area} em x = {dados-calculo.ponto}. Se a curva vale {dados-calculo.valor} nesse ponto, quanto vale a derivada da área acumulada ali?",
+        "fr": "L’aire accumulée sous une courbe, à partir de zéro, vaut {dados-calculo.area} en x = {dados-calculo.ponto}. Si la courbe vaut {dados-calculo.valor} en ce point, combien vaut la dérivée de l’aire accumulée ?",
+        "en": "The area accumulated under a curve from zero equals {dados-calculo.area} at x = {dados-calculo.ponto}. If the curve equals {dados-calculo.valor} there, what is the derivative of the accumulated area at that point?"
+      },
+      "dados-calculo": {
+        "area": "18",
+        "ponto": "3",
+        "valor": "12",
+        "total": "12"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Sendo A(x) a área acumulada a partir de 0, quanto vale A'({dados-calculo.ponto})?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Para qual valor inteiro de k a integral vale {dados-calculo.expressao1}?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Use o Teorema Fundamental para calcular a integral."
+      }
+    }
+  ]
+}

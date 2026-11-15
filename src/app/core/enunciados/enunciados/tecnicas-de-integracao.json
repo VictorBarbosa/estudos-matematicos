@@ -1,0 +1,56 @@
+{
+  "topico": "tecnicas-de-integracao",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Por substituição, qual é a área sob a curva {dados-calculo.a} vezes x vezes o quadrado de x, entre 0 e {dados-calculo.fim}? (duas casas decimais)",
+        "fr": "Par substitution, quelle est l’aire sous la courbe {dados-calculo.a} fois x fois le carré de x, entre 0 et {dados-calculo.fim} ? (deux décimales)",
+        "en": "By substitution, what is the area under the curve {dados-calculo.a} times x times x squared, from 0 to {dados-calculo.fim}? (two decimal places)"
+      },
+      "dados-calculo": {
+        "a": "4",
+        "fim": "2",
+        "total": "16.00"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Qual é a área sob a curva que vale o cubo de x, entre 0 e {dados-calculo.fim}? (duas casas decimais)",
+        "fr": "Quelle est l’aire sous la courbe qui vaut le cube de x, entre 0 et {dados-calculo.fim} ? (deux décimales)",
+        "en": "What is the area under the curve equal to x cubed, from 0 to {dados-calculo.fim}? (two decimal places)"
+      },
+      "dados-calculo": {
+        "fim": "2",
+        "total": "4.00"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Qual é a área sob a curva que vale {dados-calculo.a} dividido por x, entre x = 1 e x = e, a base do logaritmo natural? (duas casas decimais)",
+        "fr": "Quelle est l’aire sous la courbe qui vaut {dados-calculo.a} divisé par x, entre x = 1 et x = e, la base du logarithme naturel ? (deux décimales)",
+        "en": "What is the area under the curve equal to {dados-calculo.a} divided by x, from x = 1 to x = e, the base of the natural logarithm? (two decimal places)"
+      },
+      "dados-calculo": {
+        "a": "5",
+        "total": "5.00"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Qual é a área sob a curva que vale {dados-calculo.a} vezes o quadrado de x, entre {dados-calculo.inicio} e {dados-calculo.fim}? (duas casas decimais)",
+        "fr": "Quelle est l’aire sous la courbe qui vaut {dados-calculo.a} fois le carré de x, entre {dados-calculo.inicio} et {dados-calculo.fim} ? (deux décimales)",
+        "en": "What is the area under the curve equal to {dados-calculo.a} times x squared, from {dados-calculo.inicio} to {dados-calculo.fim}? (two decimal places)"
+      },
+      "dados-calculo": {
+        "a": "3",
+        "inicio": "1",
+        "fim": "2",
+        "total": "7.00"
+      }
+    }
+  ]
+}

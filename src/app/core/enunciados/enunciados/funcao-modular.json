@@ -1,0 +1,63 @@
+{
+  "topico": "funcao-modular",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "A distância, na reta, entre um número x e {dados-calculo.a} é {dados-calculo.distancia}. Qual é o maior valor possível de x?",
+        "fr": "La distance, sur la droite, entre un nombre x et {dados-calculo.a} est {dados-calculo.distancia}. Quelle est la plus grande valeur possible de x ?",
+        "en": "The distance on the number line between a number x and {dados-calculo.a} is {dados-calculo.distancia}. What is the largest possible value of x?"
+      },
+      "dados-calculo": {
+        "a": "3",
+        "distancia": "5",
+        "total": "8"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "A distância entre um número x e {dados-calculo.a} é menor que {dados-calculo.distancia}. Qual é o maior número inteiro que x pode ser?",
+        "fr": "La distance entre un nombre x et {dados-calculo.a} est inférieure à {dados-calculo.distancia}. Quel est le plus grand entier que x peut être ?",
+        "en": "The distance between a number x and {dados-calculo.a} is less than {dados-calculo.distancia}. What is the largest whole number x can be?"
+      },
+      "dados-calculo": {
+        "a": "4",
+        "distancia": "3",
+        "total": "6"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma função devolve a distância entre x e {dados-calculo.a}, menos {dados-calculo.b}. Qual é o menor valor que ela assume?",
+        "fr": "Une fonction renvoie la distance entre x et {dados-calculo.a}, moins {dados-calculo.b}. Quelle est la plus petite valeur qu’elle prend ?",
+        "en": "A function returns the distance between x and {dados-calculo.a}, minus {dados-calculo.b}. What is the smallest value it takes?"
+      },
+      "dados-calculo": {
+        "a": "2",
+        "b": "7",
+        "total": "-7"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Quantos números inteiros x têm distância até {dados-calculo.a} menor ou igual a {dados-calculo.distancia}?",
+        "fr": "Combien d’entiers x ont une distance jusqu’à {dados-calculo.a} inférieure ou égale à {dados-calculo.distancia} ?",
+        "en": "How many whole numbers x are at a distance from {dados-calculo.a} less than or equal to {dados-calculo.distancia}?"
+      },
+      "dados-calculo": {
+        "a": "0",
+        "distancia": "4",
+        "total": "9"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o valor de f({dados-calculo.x})?"
+      }
+    }
+  ]
+}

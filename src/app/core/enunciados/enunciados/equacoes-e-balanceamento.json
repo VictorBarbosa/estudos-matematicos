@@ -1,0 +1,49 @@
+{
+  "topico": "equacoes-e-balanceamento",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "A combustão do metano é CH₄ + O₂ → CO₂ + H₂O. Balanceando com os menores inteiros, qual é a soma de todos os coeficientes, dos dois lados?",
+        "fr": "La combustion du méthane est CH₄ + O₂ → CO₂ + H₂O. En équilibrant avec les plus petits entiers, quelle est la somme de tous les coefficients, des deux côtés ?",
+        "en": "The combustion of methane is CH₄ + O₂ → CO₂ + H₂O. Balancing with the smallest whole numbers, what is the sum of all coefficients on both sides?"
+      },
+      "dados-calculo": {
+        "total": "6"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "A formação da água é H₂ + O₂ → H₂O. Balanceando com os menores inteiros, qual é a soma de todos os coeficientes?",
+        "fr": "La formation de l’eau est H₂ + O₂ → H₂O. En équilibrant avec les plus petits entiers, quelle est la somme de tous les coefficients ?",
+        "en": "Water forms as H₂ + O₂ → H₂O. Balancing with the smallest whole numbers, what is the sum of all coefficients?"
+      },
+      "dados-calculo": {
+        "total": "5"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "A ferrugem se forma como Fe + O₂ → Fe₂O₃. Depois de balancear com os menores inteiros, quantos átomos de oxigênio há em cada lado?",
+        "fr": "La rouille se forme comme Fe + O₂ → Fe₂O₃. Après avoir équilibré avec les plus petits entiers, combien d’atomes d’oxygène y a-t-il de chaque côté ?",
+        "en": "Rust forms as Fe + O₂ → Fe₂O₃. After balancing with the smallest whole numbers, how many oxygen atoms are on each side?"
+      },
+      "dados-calculo": {
+        "total": "6"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "A combustão do propano é C₃H₈ + O₂ → CO₂ + H₂O. Balanceando com os menores inteiros, qual é o coeficiente do O₂?",
+        "fr": "La combustion du propane est C₃H₈ + O₂ → CO₂ + H₂O. En équilibrant avec les plus petits entiers, quel est le coefficient de O₂ ?",
+        "en": "The combustion of propane is C₃H₈ + O₂ → CO₂ + H₂O. Balancing with the smallest whole numbers, what is the coefficient of O₂?"
+      },
+      "dados-calculo": {
+        "total": "5"
+      }
+    }
+  ]
+}

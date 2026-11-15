@@ -1,0 +1,105 @@
+{
+  "topico": "vetores-no-espaco",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Calcule o produto escalar entre o deslocamento ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) e a força ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}).",
+        "fr": "Calculez le produit scalaire entre le déplacement ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) et la force ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}).",
+        "en": "Work out the dot product of the displacement ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) and the force ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz})."
+      },
+      "dados-calculo": {
+        "ax": "3",
+        "ay": "4",
+        "az": "0",
+        "bx": "2",
+        "by": "5",
+        "bz": "7",
+        "total": "26"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Qual é o módulo do vetor de componentes ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z})?",
+        "fr": "Quel est le module du vecteur de composantes ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z}) ?",
+        "en": "What is the magnitude of the vector with components ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z})?"
+      },
+      "dados-calculo": {
+        "x": "2",
+        "y": "3",
+        "z": "6",
+        "total": "7"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Qual é o ângulo, em graus, entre os vetores ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) e ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz})? (duas casas decimais)",
+        "fr": "Quel est l’angle, en degrés, entre les vecteurs ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) et ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}) ? (deux décimales)",
+        "en": "What is the angle, in degrees, between the vectors ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) and ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz})? (two decimal places)"
+      },
+      "dados-calculo": {
+        "ax": "1",
+        "ay": "2",
+        "az": "2",
+        "bx": "2",
+        "by": "0",
+        "bz": "1",
+        "total": "53.40"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Dois vetores têm produto escalar igual a zero: ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) e ({dados-calculo.bx}, {dados-calculo.by}, k). Qual é o valor de k?",
+        "fr": "Deux vecteurs ont un produit scalaire nul : ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) et ({dados-calculo.bx}, {dados-calculo.by}, k). Quelle est la valeur de k ?",
+        "en": "Two vectors have a dot product of zero: ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) and ({dados-calculo.bx}, {dados-calculo.by}, k). What is k?"
+      },
+      "dados-calculo": {
+        "ax": "1",
+        "ay": "2",
+        "az": "3",
+        "bx": "4",
+        "by": "1",
+        "total": "-2"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o módulo deste vetor?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Calcule o produto escalar dos dois vetores."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Calcule a componente {dados-calculo.eixo} do produto vetorial a × b."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Qual é o ângulo entre os dois vetores, em graus? Arredonde para duas casas decimais."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Qual é a componente {dados-calculo.eixo} do vetor unitário na direção de v? Arredonde para duas casas decimais."
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "Qual é o volume do paralelepípedo formado pelos três vetores?"
+      }
+    }
+  ]
+}

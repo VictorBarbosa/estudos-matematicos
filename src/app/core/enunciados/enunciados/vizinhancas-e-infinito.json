@@ -1,0 +1,74 @@
+{
+  "topico": "vizinhancas-e-infinito",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "De que valor se aproxima {dados-calculo.numerador} dividido por x, quando x cresce sem limite?",
+        "fr": "De quelle valeur s’approche {dados-calculo.numerador} divisé par x, quand x croît sans limite ?",
+        "en": "What value does {dados-calculo.numerador} divided by x approach as x grows without bound?"
+      },
+      "dados-calculo": {
+        "numerador": "7",
+        "total": "0"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "De que valor se aproxima a razão entre {dados-calculo.a} vezes x e {dados-calculo.b} vezes x mais {dados-calculo.c}, quando x cresce sem limite?",
+        "fr": "De quelle valeur s’approche le rapport entre {dados-calculo.a} fois x et {dados-calculo.b} fois x plus {dados-calculo.c}, quand x croît sans limite ?",
+        "en": "What value does the ratio of {dados-calculo.a} times x to {dados-calculo.b} times x plus {dados-calculo.c} approach as x grows without bound?"
+      },
+      "dados-calculo": {
+        "a": "6",
+        "b": "3",
+        "c": "5",
+        "total": "2"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um remédio tem concentração igual a {dados-calculo.a} vezes o tempo dividido pelo tempo mais {dados-calculo.b}. De que valor a concentração se aproxima depois de muito tempo?",
+        "fr": "Un médicament a une concentration égale à {dados-calculo.a} fois le temps divisé par le temps plus {dados-calculo.b}. De quelle valeur la concentration s’approche-t-elle après très longtemps ?",
+        "en": "A drug has a concentration of {dados-calculo.a} times the time divided by the time plus {dados-calculo.b}. What value does the concentration approach after a long time?"
+      },
+      "dados-calculo": {
+        "a": "12",
+        "b": "4",
+        "total": "12"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "De que valor se aproxima a razão entre o quadrado de x e {dados-calculo.b} vezes o quadrado de x mais x, quando x cresce sem limite? Responda como fração.",
+        "fr": "De quelle valeur s’approche le rapport entre le carré de x et {dados-calculo.b} fois le carré de x plus x, quand x croît sans limite ? Répondez sous forme de fraction.",
+        "en": "What value does the ratio of x squared to {dados-calculo.b} times x squared plus x approach as x grows without bound? Answer as a fraction."
+      },
+      "dados-calculo": {
+        "b": "4",
+        "total": "1/4"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Em que valor de x esta função tem uma assíntota vertical?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é o limite quando x tende ao infinito?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é o limite quando x tende ao infinito? (2 casas decimais)"
+      }
+    }
+  ]
+}

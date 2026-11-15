@@ -1,0 +1,90 @@
+{
+  "topico": "numeros-complexos",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Qual é a parte real do produto de ({dados-calculo.a} mais {dados-calculo.b}i) por ({dados-calculo.c} mais {dados-calculo.d}i)? (duas casas decimais)",
+        "fr": "Quelle est la partie réelle du produit de ({dados-calculo.a} plus {dados-calculo.b}i) par ({dados-calculo.c} plus {dados-calculo.d}i) ? (deux décimales)",
+        "en": "What is the real part of ({dados-calculo.a} plus {dados-calculo.b}i) times ({dados-calculo.c} plus {dados-calculo.d}i)? (two decimal places)"
+      },
+      "dados-calculo": {
+        "a": "2",
+        "b": "3",
+        "c": "1",
+        "d": "4",
+        "total": "-10.00"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Qual é o módulo do número complexo {dados-calculo.a} mais {dados-calculo.b}i? (duas casas decimais)",
+        "fr": "Quel est le module du nombre complexe {dados-calculo.a} plus {dados-calculo.b}i ? (deux décimales)",
+        "en": "What is the modulus of the complex number {dados-calculo.a} plus {dados-calculo.b}i? (two decimal places)"
+      },
+      "dados-calculo": {
+        "a": "3",
+        "b": "4",
+        "total": "5.00"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Dividindo ({dados-calculo.a} mais {dados-calculo.b}i) por ({dados-calculo.c} mais {dados-calculo.d}i), qual é a parte REAL do resultado? (duas casas decimais)",
+        "fr": "En divisant ({dados-calculo.a} plus {dados-calculo.b}i) par ({dados-calculo.c} plus {dados-calculo.d}i), quelle est la partie RÉELLE du résultat ? (deux décimales)",
+        "en": "Dividing ({dados-calculo.a} plus {dados-calculo.b}i) by ({dados-calculo.c} plus {dados-calculo.d}i), what is the REAL part of the result? (two decimal places)"
+      },
+      "dados-calculo": {
+        "a": "1",
+        "b": "1",
+        "c": "2",
+        "d": "3",
+        "total": "0.38"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Qual é a parte real de i elevado a {dados-calculo.expoente}? (duas casas decimais)",
+        "fr": "Quelle est la partie réelle de i à la puissance {dados-calculo.expoente} ? (deux décimales)",
+        "en": "What is the real part of i to the power of {dados-calculo.expoente}? (two decimal places)"
+      },
+      "dados-calculo": {
+        "expoente": "22",
+        "total": "-1"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o módulo de {dados-calculo.v1}? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Multiplicando ({dados-calculo.v1}) por ({dados-calculo.v2}), qual é a parte {dados-calculo.v3} do resultado?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é o argumento de {dados-calculo.v1}, medido no sentido anti-horário a partir do eixo real? (em graus, 2 casas)"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Qual é a parte real de i^{dados-calculo.expoente}?"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Dividindo ({dados-calculo.v1}) por ({dados-calculo.v2}), qual é a parte REAL do resultado? (2 casas decimais)"
+      }
+    }
+  ]
+}

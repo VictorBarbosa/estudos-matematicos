@@ -1,0 +1,99 @@
+{
+  "topico": "sequencias-e-series",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma série geométrica tem primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}. Ela converge? Responda 1 se converge e 0 se diverge.",
+        "fr": "Une série géométrique a pour premier terme {dados-calculo.primeiro} et pour raison {dados-calculo.razao}. Converge-t-elle ? Répondez 1 si elle converge et 0 si elle diverge.",
+        "en": "A geometric series has first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}. Does it converge? Answer 1 if it converges and 0 if it diverges."
+      },
+      "dados-calculo": {
+        "primeiro": "6",
+        "razao": "1/2",
+        "total": "1"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Qual é a soma de uma série geométrica infinita de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}?",
+        "fr": "Quelle est la somme d’une série géométrique infinie de premier terme {dados-calculo.primeiro} et de raison {dados-calculo.razao} ?",
+        "en": "What is the sum of an infinite geometric series with first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}?"
+      },
+      "dados-calculo": {
+        "primeiro": "6",
+        "razao": "1/2",
+        "total": "12"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma série geométrica tem primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}. Ela converge? Responda 1 se converge e 0 se diverge.",
+        "fr": "Une série géométrique a pour premier terme {dados-calculo.primeiro} et pour raison {dados-calculo.razao}. Converge-t-elle ? Répondez 1 si elle converge et 0 si elle diverge.",
+        "en": "A geometric series has first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}. Does it converge? Answer 1 if it converges and 0 if it diverges."
+      },
+      "dados-calculo": {
+        "primeiro": "2",
+        "razao": "3",
+        "total": "0"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Qual é a soma de uma série geométrica infinita de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}? Responda como fração.",
+        "fr": "Quelle est la somme d’une série géométrique infinie de premier terme {dados-calculo.primeiro} et de raison {dados-calculo.razao} ? Répondez sous forme de fraction.",
+        "en": "What is the sum of an infinite geometric series with first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}? Answer as a fraction."
+      },
+      "dados-calculo": {
+        "primeiro": "1",
+        "razao": "1/3",
+        "total": "3/2"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Calcule o limite do termo geral quando n tende ao infinito (fração ou 3 casas decimais). Se não der zero, a série diverge."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Pelo teste da razão, calcule L = lim |aₙ₊₁ / aₙ| quando n tende ao infinito (fração ou 3 casas decimais)."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Calcule a soma da série telescópica (fração ou 3 casas decimais)."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Somando só os {dados-calculo.N} primeiros termos, qual é a cota do erro dada pelo teorema da série alternada? Responda como fração."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Qual é o raio de convergência R da série de potências? (fração ou 3 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "A série de potências tem centro a e raio R dados ao lado. Dos dois extremos do intervalo, x = a − R e x = a + R, quantos pertencem ao intervalo de convergência? Responda 0, 1 ou 2."
+      }
+    },
+    {
+      "forma": "forma-7",
+      "enunciado": {
+        "br": "Qual é o menor número N de termos que garante, pelo teorema da série alternada, erro menor que 10⁻{dados-calculo.potencia}?"
+      }
+    }
+  ]
+}

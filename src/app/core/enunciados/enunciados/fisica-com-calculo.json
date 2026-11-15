@@ -1,0 +1,92 @@
+{
+  "topico": "fisica-com-calculo",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma mola de constante {dados-calculo.constante} N/m é esticada de 0 até {dados-calculo.deslocamento} m. Quanto trabalho, em joules, é realizado?",
+        "fr": "Un ressort de constante {dados-calculo.constante} N/m est étiré de 0 à {dados-calculo.deslocamento} m. Quel travail, en joules, est effectué ?",
+        "en": "A spring with constant {dados-calculo.constante} N/m is stretched from 0 to {dados-calculo.deslocamento} m. How much work, in joules, is done?"
+      },
+      "dados-calculo": {
+        "constante": "200",
+        "deslocamento": "0.2",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "A velocidade de um corpo, em m/s, é {dados-calculo.a} vezes o tempo. Qual é a aceleração, em m/s², em qualquer instante?",
+        "fr": "La vitesse d’un corps, en m/s, est {dados-calculo.a} fois le temps. Quelle est l’accélération, en m/s², à tout instant ?",
+        "en": "A body’s speed, in m/s, is {dados-calculo.a} times the time. What is the acceleration, in m/s², at any moment?"
+      },
+      "dados-calculo": {
+        "a": "7",
+        "total": "7"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma força variável vale {dados-calculo.a} vezes a posição, em newtons. Qual é o trabalho, em joules, realizado de x = 0 até x = {dados-calculo.fim} m?",
+        "fr": "Une force variable vaut {dados-calculo.a} fois la position, en newtons. Quel est le travail, en joules, effectué de x = 0 à x = {dados-calculo.fim} m ?",
+        "en": "A varying force equals {dados-calculo.a} times the position, in newtons. What work, in joules, is done from x = 0 to x = {dados-calculo.fim} m?"
+      },
+      "dados-calculo": {
+        "a": "10",
+        "fim": "3",
+        "total": "45"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "A aceleração de um corpo é constante e vale {dados-calculo.aceleracao} m/s². Partindo do repouso, qual é a velocidade, em m/s, no instante {dados-calculo.tempo} s?",
+        "fr": "L’accélération d’un corps est constante et vaut {dados-calculo.aceleracao} m/s². Partant du repos, quelle est la vitesse, en m/s, à l’instant {dados-calculo.tempo} s ?",
+        "en": "A body’s acceleration is constant at {dados-calculo.aceleracao} m/s². Starting from rest, what is the speed, in m/s, at {dados-calculo.tempo} s?"
+      },
+      "dados-calculo": {
+        "aceleracao": "4",
+        "tempo": "6",
+        "total": "24"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Um carro tem velocidade v(t) = {dados-calculo.a}t + {dados-calculo.b} (m/s). Quanto ele se desloca entre t = {dados-calculo.t1} s e t = {dados-calculo.t2} s, em metros?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Uma mola de constante k = {dados-calculo.k} N/m é esticada de x = {dados-calculo.expressao1} m até x = {dados-calculo.expressao2} m. Qual é o trabalho feito, em joules? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Uma força F(x) (em N, x em metros) empurra um corpo de x = {dados-calculo.a} m até x = {dados-calculo.b} m. Qual é o trabalho, em joules? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Um foguete parte com {dados-calculo.v0} m/s e tem aceleração a(t) (m/s², t em s). Qual é a velocidade em t = {dados-calculo.t} s, em m/s? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Uma barra de {dados-calculo.L} m tem densidade linear λ(x) (kg/m), com x medido de uma ponta. Onde fica o centro de massa, em metros a partir dessa ponta? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "Quanto trabalho é preciso para levar um satélite de {dados-calculo.m} kg da superfície da Terra até {dados-calculo.hKm} km de altitude (sem contar a velocidade orbital)? Responda em gigajoules, GJ. (2 casas decimais)"
+      }
+    }
+  ]
+}

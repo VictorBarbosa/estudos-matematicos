@@ -1,0 +1,93 @@
+{
+  "topico": "distribuicao-normal",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Numa distribuição normal, que porcentagem dos valores fica a até {dados-calculo.desvios} desvio padrão da média? Responda o número com uma casa decimal.",
+        "fr": "Dans une distribution normale, quel pourcentage des valeurs se trouve à moins de {dados-calculo.desvios} écart-type de la moyenne ? Donnez le nombre avec une décimale.",
+        "en": "In a normal distribution, what percentage of the values lie within {dados-calculo.desvios} standard deviation of the mean? Give the number to one decimal place."
+      },
+      "dados-calculo": {
+        "desvios": "1",
+        "total": "68.3"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Numa distribuição normal, que porcentagem dos valores fica a até {dados-calculo.desvios} desvios padrão da média? Responda o número com uma casa decimal.",
+        "fr": "Dans une distribution normale, quel pourcentage des valeurs se trouve à moins de {dados-calculo.desvios} écarts-types de la moyenne ? Donnez le nombre avec une décimale.",
+        "en": "In a normal distribution, what percentage of the values lie within {dados-calculo.desvios} standard deviations of the mean? Give the number to one decimal place."
+      },
+      "dados-calculo": {
+        "desvios": "2",
+        "total": "95.4"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma medida tem média {dados-calculo.media} e desvio padrão {dados-calculo.desvio}. Quantos desvios padrão acima da média está o valor {dados-calculo.valor}?",
+        "fr": "Une mesure a une moyenne de {dados-calculo.media} et un écart-type de {dados-calculo.desvio}. Combien d’écarts-types au-dessus de la moyenne se trouve la valeur {dados-calculo.valor} ?",
+        "en": "A measurement has mean {dados-calculo.media} and standard deviation {dados-calculo.desvio}. How many standard deviations above the mean is the value {dados-calculo.valor}?"
+      },
+      "dados-calculo": {
+        "media": "100",
+        "desvio": "15",
+        "valor": "130",
+        "total": "2"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Numa distribuição normal de média {dados-calculo.media} e desvio padrão {dados-calculo.desvio}, entre que valor e {dados-calculo.superior} ficam aproximadamente 68% dos casos? Informe o valor INFERIOR.",
+        "fr": "Dans une distribution normale de moyenne {dados-calculo.media} et d’écart-type {dados-calculo.desvio}, entre quelle valeur et {dados-calculo.superior} se trouvent environ 68% des cas ? Donnez la valeur INFÉRIEURE.",
+        "en": "In a normal distribution with mean {dados-calculo.media} and standard deviation {dados-calculo.desvio}, between what value and {dados-calculo.superior} do about 68% of cases fall? Give the LOWER value."
+      },
+      "dados-calculo": {
+        "media": "100",
+        "desvio": "15",
+        "superior": "115",
+        "total": "85"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} com média {dados-calculo.media} {dados-calculo.expressao3} e desvio padrão {dados-calculo.desvio} {dados-calculo.expressao3}. Qual é o escore z de uma leitura de {dados-calculo.valor} {dados-calculo.expressao3}? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica ABAIXO de {dados-calculo.valor} {dados-calculo.expressao3}? Responda entre 0 e 1, com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica ACIMA de {dados-calculo.valor} {dados-calculo.expressao3}? Responda entre 0 e 1, com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica entre {dados-calculo.de} e {dados-calculo.ate} {dados-calculo.expressao3}? Responda entre 0 e 1, com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que valor deixa {dados-calculo.percentil}% das peças abaixo dele, em {dados-calculo.expressao3}? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica a até {dados-calculo.desvios} desvio(s) padrão da média? Responda entre 0 e 1, com 4 casas decimais."
+      }
+    }
+  ]
+}

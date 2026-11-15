@@ -1,0 +1,84 @@
+{
+  "topico": "derivadas-trigonometricas",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Qual é a derivada da função seno no ponto em que o cosseno vale {dados-calculo.cosseno}?",
+        "fr": "Quelle est la dérivée de la fonction sinus au point où le cosinus vaut {dados-calculo.cosseno} ?",
+        "en": "What is the derivative of the sine function at the point where the cosine is {dados-calculo.cosseno}?"
+      },
+      "dados-calculo": {
+        "cosseno": "0.5",
+        "total": "0.5"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma função vale {dados-calculo.a} vezes o seno de x. Quanto vale a sua derivada no ponto em que o cosseno de x é {dados-calculo.cosseno}?",
+        "fr": "Une fonction vaut {dados-calculo.a} fois le sinus de x. Combien vaut sa dérivée au point où le cosinus de x est {dados-calculo.cosseno} ?",
+        "en": "A function is {dados-calculo.a} times the sine of x. What is its derivative at the point where the cosine of x is {dados-calculo.cosseno}?"
+      },
+      "dados-calculo": {
+        "a": "4",
+        "cosseno": "0.5",
+        "total": "2"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Qual é a derivada da função cosseno no ponto em que o seno vale {dados-calculo.seno}?",
+        "fr": "Quelle est la dérivée de la fonction cosinus au point où le sinus vaut {dados-calculo.seno} ?",
+        "en": "What is the derivative of the cosine function at the point where the sine is {dados-calculo.seno}?"
+      },
+      "dados-calculo": {
+        "seno": "0.6",
+        "total": "-0.6"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma função vale o seno de x. Quanto vale a sua derivada SEGUNDA no ponto em que o seno de x é {dados-calculo.seno}?",
+        "fr": "Une fonction vaut le sinus de x. Combien vaut sa dérivée SECONDE au point où le sinus de x est {dados-calculo.seno} ?",
+        "en": "A function is the sine of x. What is its SECOND derivative at the point where the sine of x is {dados-calculo.seno}?"
+      },
+      "dados-calculo": {
+        "seno": "0.6",
+        "total": "-0.6"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.expressao1}). Responda na forma exata ou com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.expressao1}). Responda na forma exata ou com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.expressao1}). Responda na forma exata ou com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.expressao1}). Responda na forma exata ou com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Derive e calcule f'({dados-calculo.expressao1}). Responda na forma exata ou com 3 casas decimais."
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "topico": "composicao-e-formula",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Qual é a porcentagem em massa de oxigênio no gás carbônico, CO₂? (em %, duas casas decimais)",
+        "fr": "Quel est le pourcentage en masse d’oxygène dans le dioxyde de carbone, CO₂ ? (en %, deux décimales)",
+        "en": "What is the percentage by mass of oxygen in carbon dioxide, CO₂? (in %, two decimal places)"
+      },
+      "dados-calculo": {
+        "total": "72.71"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Qual é a massa molar do carbonato de sódio, Na₂CO₃, em g/mol? (duas casas decimais)",
+        "fr": "Quelle est la masse molaire du carbonate de sodium, Na₂CO₃, en g/mol ? (deux décimales)",
+        "en": "What is the molar mass of sodium carbonate, Na₂CO₃, in g/mol? (two decimal places)"
+      },
+      "dados-calculo": {
+        "total": "105.99"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um gás é formado só por carbono e oxigênio, com {dados-calculo.pC}% de carbono e {dados-calculo.pO}% de oxigênio em massa. Qual é a sua fórmula empírica?",
+        "fr": "Un gaz est formé uniquement de carbone et d’oxygène, avec {dados-calculo.pC}% de carbone et {dados-calculo.pO}% d’oxygène en masse. Quelle est sa formule empirique ?",
+        "en": "A gas is made only of carbon and oxygen, with {dados-calculo.pC}% carbon and {dados-calculo.pO}% oxygen by mass. What is its empirical formula?"
+      },
+      "dados-calculo": {
+        "pC": "27.29",
+        "pO": "72.71",
+        "total": "CO2"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um mineral tem {dados-calculo.pCa}% de cálcio, {dados-calculo.pC}% de carbono e {dados-calculo.pO}% de oxigênio em massa. Qual é a sua fórmula empírica?",
+        "fr": "Un minéral contient {dados-calculo.pCa}% de calcium, {dados-calculo.pC}% de carbone et {dados-calculo.pO}% d’oxygène en masse. Quelle est sa formule empirique ?",
+        "en": "A mineral has {dados-calculo.pCa}% calcium, {dados-calculo.pC}% carbon and {dados-calculo.pO}% oxygen by mass. What is its empirical formula?"
+      },
+      "dados-calculo": {
+        "pCa": "40.04",
+        "pC": "12.00",
+        "pO": "47.96",
+        "total": "CaCO3"
+      }
+    }
+  ]
+}

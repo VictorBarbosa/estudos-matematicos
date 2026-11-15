@@ -1,0 +1,89 @@
+{
+  "topico": "cinematica-escalar",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um carro passa a {dados-calculo.velocidade} m/s e acelera a {dados-calculo.aceleracao} m/s² durante {dados-calculo.tempo} s. Quantos metros ele percorre nesse tempo? (duas casas decimais)",
+        "fr": "Une voiture passe à {dados-calculo.velocidade} m/s et accélère à {dados-calculo.aceleracao} m/s² pendant {dados-calculo.tempo} s. Combien de mètres parcourt-elle ? (deux décimales)",
+        "en": "A car passes at {dados-calculo.velocidade} m/s and accelerates at {dados-calculo.aceleracao} m/s² for {dados-calculo.tempo} s. How many metres does it cover? (two decimal places)"
+      },
+      "dados-calculo": {
+        "velocidade": "8",
+        "aceleracao": "4",
+        "tempo": "4",
+        "total": "64.00"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um carro a {dados-calculo.velocidade} m/s freia a {dados-calculo.desaceleracao} m/s² até parar. Quantos metros ele percorre até parar? (duas casas decimais)",
+        "fr": "Une voiture à {dados-calculo.velocidade} m/s freine à {dados-calculo.desaceleracao} m/s² jusqu’à l’arrêt. Combien de mètres parcourt-elle avant de s’arrêter ? (deux décimales)",
+        "en": "A car at {dados-calculo.velocidade} m/s brakes at {dados-calculo.desaceleracao} m/s² until it stops. How many metres does it travel before stopping? (two decimal places)"
+      },
+      "dados-calculo": {
+        "velocidade": "20",
+        "desaceleracao": "5",
+        "total": "40.00"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Quantos segundos leva para a velocidade ir de {dados-calculo.inicial} m/s a {dados-calculo.final} m/s com aceleração de {dados-calculo.aceleracao} m/s²? (duas casas decimais)",
+        "fr": "Combien de secondes faut-il pour que la vitesse passe de {dados-calculo.inicial} m/s à {dados-calculo.final} m/s avec une accélération de {dados-calculo.aceleracao} m/s² ? (deux décimales)",
+        "en": "How many seconds does it take for the speed to go from {dados-calculo.inicial} m/s to {dados-calculo.final} m/s with an acceleration of {dados-calculo.aceleracao} m/s²? (two decimal places)"
+      },
+      "dados-calculo": {
+        "inicial": "10",
+        "final": "30",
+        "aceleracao": "4",
+        "total": "5.00"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Dois carros partem juntos do mesmo ponto: um mantém {dados-calculo.velocidade} m/s constantes e o outro parte do repouso acelerando a {dados-calculo.aceleracao} m/s². Em quantos segundos o segundo alcança o primeiro? (duas casas decimais)",
+        "fr": "Deux voitures partent ensemble du même point : l’une garde {dados-calculo.velocidade} m/s constants et l’autre part du repos en accélérant à {dados-calculo.aceleracao} m/s². En combien de secondes la seconde rattrape-t-elle la première ? (deux décimales)",
+        "en": "Two cars start together from the same point: one keeps a constant {dados-calculo.velocidade} m/s and the other starts from rest accelerating at {dados-calculo.aceleracao} m/s². In how many seconds does the second catch the first? (two decimal places)"
+      },
+      "dados-calculo": {
+        "velocidade": "20",
+        "aceleracao": "5",
+        "total": "8.00"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Um corpo parte com {dados-calculo.v0} m/s e acelera a {dados-calculo.a} m/s². Qual é sua velocidade após {dados-calculo.t} s?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Um corpo parte do repouso de uma posição com {dados-calculo.v0} m/s e acelera a {dados-calculo.a} m/s². Quanto ele se desloca em {dados-calculo.t} s?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Partindo de {dados-calculo.v0} m/s com aceleração de {dados-calculo.a} m/s², qual é a velocidade após percorrer {dados-calculo.deslocamento} m? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Um veículo a {dados-calculo.v0} m/s freia com desaceleração de {dados-calculo.desaceleracao} m/s². Em quanto tempo ele para? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Um veículo a {dados-calculo.v0} m/s freia com desaceleração de {dados-calculo.desaceleracao} m/s². Que distância ele percorre até parar? (2 casas decimais)"
+      }
+    }
+  ]
+}

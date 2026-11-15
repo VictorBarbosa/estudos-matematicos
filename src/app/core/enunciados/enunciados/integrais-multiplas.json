@@ -1,0 +1,70 @@
+{
+  "topico": "integrais-multiplas",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Qual é a integral dupla da função constante igual a {dados-calculo.altura} sobre um retângulo de lados {dados-calculo.lado1} e {dados-calculo.lado2}?",
+        "fr": "Quelle est l’intégrale double de la fonction constante égale à {dados-calculo.altura} sur un rectangle de côtés {dados-calculo.lado1} et {dados-calculo.lado2} ?",
+        "en": "What is the double integral of the constant function {dados-calculo.altura} over a rectangle with sides {dados-calculo.lado1} and {dados-calculo.lado2}?"
+      },
+      "dados-calculo": {
+        "altura": "5",
+        "lado1": "2",
+        "lado2": "3",
+        "total": "30"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Qual é o volume sob o plano de altura constante {dados-calculo.altura} sobre um quadrado de lado {dados-calculo.lado}?",
+        "fr": "Quel est le volume sous le plan de hauteur constante {dados-calculo.altura} sur un carré de côté {dados-calculo.lado} ?",
+        "en": "What is the volume under the plane of constant height {dados-calculo.altura} over a square of side {dados-calculo.lado}?"
+      },
+      "dados-calculo": {
+        "altura": "7",
+        "lado": "4",
+        "total": "112"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Qual é a integral dupla da função que vale x, sobre o retângulo em que x vai de 0 a {dados-calculo.fimX} e y vai de 0 a {dados-calculo.fimY}?",
+        "fr": "Quelle est l’intégrale double de la fonction qui vaut x, sur le rectangle où x va de 0 à {dados-calculo.fimX} et y de 0 à {dados-calculo.fimY} ?",
+        "en": "What is the double integral of the function equal to x, over the rectangle where x goes from 0 to {dados-calculo.fimX} and y from 0 to {dados-calculo.fimY}?"
+      },
+      "dados-calculo": {
+        "fimX": "2",
+        "fimY": "3",
+        "total": "6"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Qual é a integral dupla da função que vale o produto de x por y, sobre o retângulo em que x vai de 0 a {dados-calculo.fimX} e y vai de 0 a {dados-calculo.fimY}?",
+        "fr": "Quelle est l’intégrale double de la fonction qui vaut le produit de x par y, sur le rectangle où x va de 0 à {dados-calculo.fimX} et y de 0 à {dados-calculo.fimY} ?",
+        "en": "What is the double integral of the function equal to x times y, over the rectangle where x goes from 0 to {dados-calculo.fimX} and y from 0 to {dados-calculo.fimY}?"
+      },
+      "dados-calculo": {
+        "fimX": "2",
+        "fimY": "4",
+        "total": "16"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o valor médio desta função sobre o retângulo de {dados-calculo.x0} a {dados-calculo.x1} em x e de {dados-calculo.y0} a {dados-calculo.y1} em y? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Integre a função constante {dados-calculo.constante} sobre um setor circular de raio {dados-calculo.raio} e ângulo de {dados-calculo.doze} doze avos de volta, usando coordenadas polares. Responda com 3 casas decimais."
+      }
+    }
+  ]
+}

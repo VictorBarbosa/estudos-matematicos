@@ -1,0 +1,95 @@
+{
+  "topico": "equacoes-trigonometricas",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Resolva, em graus, a equação em que o seno de x vale {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a SOMA de todas as soluções.",
+        "fr": "Résolvez, en degrés, l’équation où le sinus de x vaut {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la SOMME de toutes les solutions.",
+        "en": "Solve, in degrees, the equation where the sine of x is {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the SUM of all solutions."
+      },
+      "dados-calculo": {
+        "valor": "0.5",
+        "total": "180"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Resolva, em graus, a equação em que o cosseno de x vale {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a SOMA de todas as soluções.",
+        "fr": "Résolvez, en degrés, l’équation où le cosinus de x vaut {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la SOMME de toutes les solutions.",
+        "en": "Solve, in degrees, the equation where the cosine of x is {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the SUM of all solutions."
+      },
+      "dados-calculo": {
+        "valor": "0.5",
+        "total": "360"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Resolva, em graus, a equação em que a tangente de x vale {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a MAIOR solução.",
+        "fr": "Résolvez, en degrés, l’équation où la tangente de x vaut {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la PLUS GRANDE solution.",
+        "en": "Solve, in degrees, the equation where the tangent of x is {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the LARGEST solution."
+      },
+      "dados-calculo": {
+        "valor": "1",
+        "total": "225"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Resolva, em graus, a equação em que o seno de x vale menos {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a MENOR solução.",
+        "fr": "Résolvez, en degrés, l’équation où le sinus de x vaut moins {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la PLUS PETITE solution.",
+        "en": "Solve, in degrees, the equation where the sine of x is minus {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the SMALLEST solution."
+      },
+      "dados-calculo": {
+        "valor": "0.5",
+        "total": "210"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Calcule {dados-calculo.v1}({dados-calculo.v2}), em graus."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Calcule {dados-calculo.v1}({dados-calculo.valorTexto}), em graus. (1 casa decimal)"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Resolva em [0°, 360°) e informe {dados-calculo.v1}."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Resolva em [0°, 360°) e informe {dados-calculo.v1}."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Resolva em [0°, 360°) e informe {dados-calculo.v1}. (1 casa decimal)"
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "Resolva em [0°, 360°) e informe {dados-calculo.v1}.{dados-calculo.v2}"
+      }
+    },
+    {
+      "forma": "forma-7",
+      "enunciado": {
+        "br": "Resolva em [0°, 360°) e informe {dados-calculo.v1}."
+      }
+    }
+  ]
+}

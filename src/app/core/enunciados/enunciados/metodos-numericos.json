@@ -1,0 +1,85 @@
+{
+  "topico": "metodos-numericos",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Pelo método da bisseção, qual é o ponto médio do intervalo entre {dados-calculo.a} e {dados-calculo.b}?",
+        "fr": "Par la méthode de dichotomie, quel est le milieu de l’intervalle entre {dados-calculo.a} et {dados-calculo.b} ?",
+        "en": "By the bisection method, what is the midpoint of the interval between {dados-calculo.a} and {dados-calculo.b}?"
+      },
+      "dados-calculo": {
+        "a": "2",
+        "b": "6",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma função vale {dados-calculo.fa} em x = {dados-calculo.a} e {dados-calculo.fb} em x = {dados-calculo.b}, e é contínua. A raiz está entre eles? Responda 1 para sim e 0 para não.",
+        "fr": "Une fonction vaut {dados-calculo.fa} en x = {dados-calculo.a} et {dados-calculo.fb} en x = {dados-calculo.b}, et elle est continue. La racine est-elle entre les deux ? Répondez 1 pour oui et 0 pour non.",
+        "en": "A function equals {dados-calculo.fa} at x = {dados-calculo.a} and {dados-calculo.fb} at x = {dados-calculo.b}, and it is continuous. Is the root between them? Answer 1 for yes and 0 for no."
+      },
+      "dados-calculo": {
+        "fa": "-2",
+        "a": "1",
+        "fb": "3",
+        "b": "2",
+        "total": "1"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "No método de Newton-Raphson, o próximo valor é o atual menos a função dividida pela derivada. Partindo de x igual a {dados-calculo.x}, com a função valendo {dados-calculo.f} e a derivada {dados-calculo.derivada}, qual é o próximo valor?",
+        "fr": "Dans la méthode de Newton-Raphson, la valeur suivante est l’actuelle moins la fonction divisée par la dérivée. En partant de x égal à {dados-calculo.x}, avec la fonction valant {dados-calculo.f} et la dérivée {dados-calculo.derivada}, quelle est la valeur suivante ?",
+        "en": "In the Newton-Raphson method, the next value is the current one minus the function divided by the derivative. Starting from x equal to {dados-calculo.x}, with the function equal to {dados-calculo.f} and the derivative {dados-calculo.derivada}, what is the next value?"
+      },
+      "dados-calculo": {
+        "x": "4",
+        "f": "6",
+        "derivada": "3",
+        "total": "2"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Pela regra do trapézio, qual é a área aproximada sob uma curva num intervalo de largura {dados-calculo.largura}, cujas alturas nas pontas valem {dados-calculo.altura1} e {dados-calculo.altura2}?",
+        "fr": "Par la règle du trapèze, quelle est l’aire approchée sous une courbe sur un intervalle de largeur {dados-calculo.largura}, dont les hauteurs aux extrémités valent {dados-calculo.altura1} et {dados-calculo.altura2} ?",
+        "en": "By the trapezoid rule, what is the approximate area under a curve over an interval of width {dados-calculo.largura}, with end heights {dados-calculo.altura1} and {dados-calculo.altura2}?"
+      },
+      "dados-calculo": {
+        "largura": "4",
+        "altura1": "3",
+        "altura2": "7",
+        "total": "20"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Aplique o método de Euler com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, partindo de y(0) = {dados-calculo.y0}. Qual é o valor aproximado obtido? Responda com 5 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, de quanto é o erro do método de Euler frente à solução exata, partindo de y(0) = {dados-calculo.y0}? Responda com 5 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Aplique Runge-Kutta de quarta ordem com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, partindo de y(0) = {dados-calculo.y0}. Qual é o valor obtido? Responda com 5 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Com Euler, integre de 0 a {dados-calculo.tempo} partindo de y(0) = {dados-calculo.y0}, primeiro com passo {dados-calculo.expressao1} e depois com metade dele. Por qual fator o erro foi dividido? Responda com 5 casas decimais."
+      }
+    }
+  ]
+}

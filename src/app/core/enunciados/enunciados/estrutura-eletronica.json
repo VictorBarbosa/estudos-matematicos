@@ -1,0 +1,53 @@
+{
+  "topico": "estrutura-eletronica",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Quantos elétrons há na última camada do átomo neutro de oxigênio, cujo número atômico é {dados-calculo.z}?",
+        "fr": "Combien d’électrons y a-t-il sur la dernière couche de l’atome neutre d’oxygène, dont le numéro atomique est {dados-calculo.z} ?",
+        "en": "How many electrons are in the outermost shell of a neutral oxygen atom, whose atomic number is {dados-calculo.z}?"
+      },
+      "dados-calculo": {
+        "z": "8",
+        "total": "6"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Quantos elétrons há no subnível 3p do átomo neutro de enxofre, cujo número atômico é {dados-calculo.z}?",
+        "fr": "Combien d’électrons y a-t-il dans la sous-couche 3p de l’atome neutre de soufre, dont le numéro atomique est {dados-calculo.z} ?",
+        "en": "How many electrons are in the 3p subshell of a neutral sulfur atom, whose atomic number is {dados-calculo.z}?"
+      },
+      "dados-calculo": {
+        "z": "16",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Quantas camadas eletrônicas ocupadas tem o átomo neutro de cálcio, cujo número atômico é {dados-calculo.z}?",
+        "fr": "Combien de couches électroniques occupées a l’atome neutre de calcium, dont le numéro atomique est {dados-calculo.z} ?",
+        "en": "How many occupied electron shells does a neutral calcium atom have, whose atomic number is {dados-calculo.z}?"
+      },
+      "dados-calculo": {
+        "z": "20",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Quantos elétrons há no subnível 3d do átomo neutro de ferro, cujo número atômico é {dados-calculo.z}?",
+        "fr": "Combien d’électrons y a-t-il dans la sous-couche 3d de l’atome neutre de fer, dont le numéro atomique est {dados-calculo.z} ?",
+        "en": "How many electrons are in the 3d subshell of a neutral iron atom, whose atomic number is {dados-calculo.z}?"
+      },
+      "dados-calculo": {
+        "z": "26",
+        "total": "6"
+      }
+    }
+  ]
+}

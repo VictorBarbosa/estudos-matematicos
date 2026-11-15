@@ -1,0 +1,89 @@
+{
+  "topico": "aplicacoes-da-derivada",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Com {dados-calculo.cerca} m de cerca, qual é a MAIOR área retangular, em metros quadrados, que se pode cercar?",
+        "fr": "Avec {dados-calculo.cerca} m de clôture, quelle est la PLUS GRANDE aire rectangulaire, en mètres carrés, que l’on peut clôturer ?",
+        "en": "With {dados-calculo.cerca} m of fencing, what is the LARGEST rectangular area, in square metres, that can be enclosed?"
+      },
+      "dados-calculo": {
+        "cerca": "180",
+        "total": "2025"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma função vale o quadrado de x menos {dados-calculo.b} vezes x. Em que valor de x ela atinge o mínimo?",
+        "fr": "Une fonction vaut le carré de x moins {dados-calculo.b} fois x. Pour quelle valeur de x atteint-elle son minimum ?",
+        "en": "A function is x squared minus {dados-calculo.b} times x. At what value of x does it reach its minimum?"
+      },
+      "dados-calculo": {
+        "b": "10",
+        "total": "5"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma caixa sem tampa é feita de uma folha quadrada de {dados-calculo.lado} cm de lado, cortando quadrados dos cantos e dobrando. Que lado, em centímetros, devem ter os quadrados cortados para o volume ser máximo?",
+        "fr": "Une boîte sans couvercle est faite d’une feuille carrée de {dados-calculo.lado} cm de côté, en coupant des carrés aux coins et en pliant. Quel côté, en centimètres, doivent avoir les carrés coupés pour que le volume soit maximal ?",
+        "en": "An open box is made from a square sheet {dados-calculo.lado} cm on a side, cutting squares from the corners and folding. What side, in centimetres, must the cut squares have for the greatest volume?"
+      },
+      "dados-calculo": {
+        "lado": "12",
+        "total": "2"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "A posição de um corpo, em metros, é o cubo do tempo menos {dados-calculo.b} vezes o quadrado do tempo. Em que instante, em segundos, a aceleração é zero?",
+        "fr": "La position d’un corps, en mètres, est le cube du temps moins {dados-calculo.b} fois le carré du temps. À quel instant, en secondes, l’accélération est-elle nulle ?",
+        "en": "A body’s position, in metres, is the cube of the time minus {dados-calculo.b} times the square of the time. At what time, in seconds, is the acceleration zero?"
+      },
+      "dados-calculo": {
+        "b": "6",
+        "total": "2"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Com {dados-calculo.perimetro} m de cerca, qual é a MAIOR área retangular que se pode cercar?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é o valor do MÁXIMO local desta função?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Esta função tem dois pontos críticos. Informe o MAIOR deles."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Um balão esférico é inflado e seu raio cresce {dados-calculo.taxaRaio} cm/s. A que taxa o VOLUME cresce no instante em que o raio vale {dados-calculo.raio} cm? (em cm³/s, 2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "O lado de um quadrado cresce {dados-calculo.taxaLado} cm/s. A que taxa cresce a ÁREA no instante em que o lado mede {dados-calculo.lado} cm? (em cm²/s)"
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "Uma escada de {dados-calculo.comprimento} m escorrega: o pé dela se afasta da parede a {dados-calculo.taxaX} m/s. A que taxa o topo desce quando o pé está a {dados-calculo.x} m da parede? (em m/s, com sinal, 3 casas decimais)"
+      }
+    }
+  ]
+}

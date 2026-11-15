@@ -1,0 +1,84 @@
+{
+  "topico": "analise-combinatoria",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "De quantos modos se pode escolher uma equipe de {dados-calculo.escolhidos} pessoas entre {dados-calculo.candidatos} candidatos, sem distinguir papéis?",
+        "fr": "De combien de façons peut-on choisir une équipe de {dados-calculo.escolhidos} personnes parmi {dados-calculo.candidatos} candidats, sans distinguer les rôles ?",
+        "en": "In how many ways can a team of {dados-calculo.escolhidos} people be chosen from {dados-calculo.candidatos} candidates, with no distinct roles?"
+      },
+      "dados-calculo": {
+        "escolhidos": "4",
+        "candidatos": "15",
+        "total": "1365"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "De quantos modos {dados-calculo.pessoas} pessoas podem se sentar em fila, em {dados-calculo.pessoas} cadeiras?",
+        "fr": "De combien de façons {dados-calculo.pessoas} personnes peuvent-elles s’asseoir en file, sur {dados-calculo.pessoas} chaises ?",
+        "en": "In how many ways can {dados-calculo.pessoas} people sit in a row of {dados-calculo.pessoas} chairs?"
+      },
+      "dados-calculo": {
+        "pessoas": "6",
+        "total": "720"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Quantas senhas de {dados-calculo.posicoes} algarismos existem, usando os dígitos de 0 a 9, podendo repetir?",
+        "fr": "Combien de mots de passe de {dados-calculo.posicoes} chiffres existent, avec les chiffres de 0 à 9, les répétitions permises ?",
+        "en": "How many {dados-calculo.posicoes}-digit passwords are there, using digits 0 to 9, repeats allowed?"
+      },
+      "dados-calculo": {
+        "posicoes": "4",
+        "total": "10000"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "De quantos modos se pode escolher um presidente e um vice entre {dados-calculo.candidatos} candidatos, sendo os dois cargos diferentes?",
+        "fr": "De combien de façons peut-on choisir un président et un vice-président parmi {dados-calculo.candidatos} candidats, les deux postes étant différents ?",
+        "en": "In how many ways can a president and a vice-president be chosen from {dados-calculo.candidatos} candidates, the two roles being different?"
+      },
+      "dados-calculo": {
+        "candidatos": "10",
+        "total": "90"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Alguém tem {dados-calculo.camisas} camisas, {dados-calculo.calcas} calças e {dados-calculo.sapatos} pares de sapato. Quantos trajes diferentes consegue montar?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Entre {dados-calculo.n} pessoas, de quantos modos se pode formar uma fila de {dados-calculo.p}, importando a ordem?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "De quantos modos se pode escolher uma equipe de {dados-calculo.p} pessoas entre {dados-calculo.n} candidatos, sem distinguir cargos?"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Quantos anagramas distintos tem a palavra {dados-calculo.palavra}?"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Uma comissão terá {dados-calculo.escolhidosH} entre {dados-calculo.homens} engenheiros e {dados-calculo.escolhidasM} entre {dados-calculo.mulheres} técnicas. Quantas comissões diferentes são possíveis?"
+      }
+    }
+  ]
+}

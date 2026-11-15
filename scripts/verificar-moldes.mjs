@@ -16,7 +16,8 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
-const ARQUIVO = 'src/app/core/enunciados/enunciados.json';
+const PASTA = 'src/app/core/enunciados/enunciados';
+const CATALOGO = 'src/app/core/enunciados/enunciados/catalogo.ts';
 const RAIZ = 'src/app';
 
 function todosOsArquivos(diretorio) {
@@ -29,7 +30,42 @@ function todosOsArquivos(diretorio) {
   });
 }
 
-const grupos = JSON.parse(readFileSync(ARQUIVO, 'utf8'));
+/*
+ * O catálogo tem de listar TODOS os arquivos da pasta.
+ *
+ * Um `.json` que ninguém importa não é um tópico sem perguntas: é um tópico
+ * cujas perguntas o site não enxerga. Nada quebra, nada avisa — o aluno só
+ * recebe o gerador de sempre, como se o arquivo não existisse. O contrário,
+ * um import para arquivo apagado, o compilador pega sozinho.
+ */
+const naPasta = readdirSync(PASTA)
+  .filter((nome) => nome.endsWith('.json'))
+  .map((nome) => nome.replace('.json', ''))
+  .sort();
+
+const fonteCatalogo = readFileSync(CATALOGO, 'utf8');
+const noCatalogo = [...fonteCatalogo.matchAll(/enunciados\/([a-z0-9-]+)\.json'/g)]
+  .map((achado) => achado[1])
+  .sort();
+
+const faltando = naPasta.filter((nome) => !noCatalogo.includes(nome));
+if (faltando.length > 0) {
+  console.error(`Tópicos na pasta e fora do catálogo (${faltando.length}):`);
+  for (const nome of faltando) {
+    console.error(`  ${nome}`);
+  }
+  process.exit(1);
+}
+
+const grupos = naPasta.map((nome) => JSON.parse(readFileSync(join(PASTA, `${nome}.json`), 'utf8')));
+
+for (const grupo of grupos) {
+  const esperado = naPasta[grupos.indexOf(grupo)];
+  if (grupo.topico !== esperado) {
+    console.error(`O arquivo ${esperado}.json diz ser do tópico "${grupo.topico}".`);
+    process.exit(1);
+  }
+}
 const fontes = todosOsArquivos(RAIZ).map((caminho) => readFileSync(caminho, 'utf8'));
 const codigo = fontes.join('\n');
 
@@ -118,4 +154,4 @@ if (problemas.length > 0) {
 }
 
 const total = grupos.flatMap((g) => g.enunciados).filter((e) => e.forma !== undefined).length;
-console.log(`Moldes alcançáveis: ${total} conferidos.`);
+console.log(`Moldes alcançáveis: ${total} conferidos, em ${naPasta.length} arquivos de tópico.`);

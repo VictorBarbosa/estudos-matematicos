@@ -1,0 +1,84 @@
+{
+  "topico": "polinomios",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um polinômio de grau {dados-calculo.grauP} é dividido por um polinômio de grau {dados-calculo.grauD}. Qual é o grau do quociente?",
+        "fr": "Un polynôme de degré {dados-calculo.grauP} est divisé par un polynôme de degré {dados-calculo.grauD}. Quel est le degré du quotient ?",
+        "en": "A polynomial of degree {dados-calculo.grauP} is divided by a polynomial of degree {dados-calculo.grauD}. What is the degree of the quotient?"
+      },
+      "dados-calculo": {
+        "grauP": "7",
+        "grauD": "3",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um polinômio P deixa resto {dados-calculo.r1} na divisão por (x menos 1) e resto {dados-calculo.r2} na divisão por (x mais 1). Quanto vale P(1) somado a P(−1)?",
+        "fr": "Un polynôme P laisse un reste {dados-calculo.r1} dans la division par (x moins 1) et un reste {dados-calculo.r2} dans la division par (x plus 1). Combien vaut P(1) ajouté à P(−1) ?",
+        "en": "A polynomial P leaves remainder {dados-calculo.r1} when divided by (x minus 1) and remainder {dados-calculo.r2} when divided by (x plus 1). What is P(1) plus P(−1)?"
+      },
+      "dados-calculo": {
+        "r1": "5",
+        "r2": "9",
+        "total": "14"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um polinômio de grau 3 tem como raízes {dados-calculo.r1}, {dados-calculo.r2} e {dados-calculo.r3}. Qual é a soma das raízes?",
+        "fr": "Un polynôme de degré 3 a pour racines {dados-calculo.r1}, {dados-calculo.r2} et {dados-calculo.r3}. Quelle est la somme des racines ?",
+        "en": "A degree 3 polynomial has roots {dados-calculo.r1}, {dados-calculo.r2} and {dados-calculo.r3}. What is the sum of the roots?"
+      },
+      "dados-calculo": {
+        "r1": "2",
+        "r2": "-3",
+        "r3": "5",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um polinômio de grau 3 tem raízes {dados-calculo.r1}, {dados-calculo.r2} e {dados-calculo.r3}, e o coeficiente do termo de maior grau é {dados-calculo.lider}. Quanto vale esse polinômio em x = 0?",
+        "fr": "Un polynôme de degré 3 a pour racines {dados-calculo.r1}, {dados-calculo.r2} et {dados-calculo.r3}, et le coefficient du terme de plus haut degré est {dados-calculo.lider}. Combien vaut ce polynôme en x = 0 ?",
+        "en": "A degree 3 polynomial has roots {dados-calculo.r1}, {dados-calculo.r2} and {dados-calculo.r3}, and the leading coefficient is {dados-calculo.lider}. What is the value of that polynomial at x = 0?"
+      },
+      "dados-calculo": {
+        "r1": "1",
+        "r2": "2",
+        "r3": "3",
+        "lider": "2",
+        "total": "-12"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o resto da divisão de P(x) por (x {dados-calculo.sinal} {dados-calculo.v1})?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Dividindo um polinômio de grau {dados-calculo.grauP} por um de grau {dados-calculo.grauD}, qual é o grau do quociente?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Todas as raízes deste polinômio são racionais. Considerando TODAS elas, qual é a menor?"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Divida P(x) por (x {dados-calculo.sinal} {dados-calculo.v1}). No quociente, qual é {dados-calculo.termo}?"
+      }
+    }
+  ]
+}

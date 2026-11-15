@@ -1,0 +1,96 @@
+{
+  "topico": "equacoes-parametricas",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um ponto se move com x igual a {dados-calculo.vx} vezes o tempo e y igual a {dados-calculo.vy} vezes o tempo. Qual é a coordenada y quando o tempo vale {dados-calculo.t}?",
+        "fr": "Un point se déplace avec x égal à {dados-calculo.vx} fois le temps et y égal à {dados-calculo.vy} fois le temps. Quelle est la coordonnée y quand le temps vaut {dados-calculo.t} ?",
+        "en": "A point moves with x equal to {dados-calculo.vx} times the time and y equal to {dados-calculo.vy} times the time. What is the y coordinate when the time is {dados-calculo.t}?"
+      },
+      "dados-calculo": {
+        "vx": "3",
+        "vy": "4",
+        "t": "5",
+        "total": "20"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um ponto percorre uma circunferência de raio {dados-calculo.raio} centrada na origem. Qual é a coordenada x quando o parâmetro angular vale {dados-calculo.angulo}°?",
+        "fr": "Un point parcourt un cercle de rayon {dados-calculo.raio} centré à l’origine. Quelle est la coordonnée x quand le paramètre angulaire vaut {dados-calculo.angulo}° ?",
+        "en": "A point travels around a circle of radius {dados-calculo.raio} centred at the origin. What is the x coordinate when the angular parameter is {dados-calculo.angulo}°?"
+      },
+      "dados-calculo": {
+        "raio": "10",
+        "angulo": "180",
+        "total": "-10"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um projétil parte com velocidade horizontal {dados-calculo.vx} m/s e velocidade vertical {dados-calculo.vy} m/s. Em quantos segundos ele volta à altura de partida, com a gravidade valendo {dados-calculo.gravidade} m/s²?",
+        "fr": "Un projectile part avec une vitesse horizontale de {dados-calculo.vx} m/s et une vitesse verticale de {dados-calculo.vy} m/s. En combien de secondes revient-il à sa hauteur de départ, la gravité valant {dados-calculo.gravidade} m/s² ?",
+        "en": "A projectile leaves with horizontal speed {dados-calculo.vx} m/s and vertical speed {dados-calculo.vy} m/s. In how many seconds does it return to its starting height, with gravity at {dados-calculo.gravidade} m/s²?"
+      },
+      "dados-calculo": {
+        "vx": "30",
+        "vy": "20",
+        "gravidade": "10",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um projétil parte com velocidade horizontal {dados-calculo.vx} m/s e velocidade vertical {dados-calculo.vy} m/s, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é o alcance horizontal, em metros, quando ele volta à altura de partida?",
+        "fr": "Un projectile part avec une vitesse horizontale de {dados-calculo.vx} m/s et une vitesse verticale de {dados-calculo.vy} m/s, la gravité valant {dados-calculo.gravidade} m/s². Quelle est la portée horizontale, en mètres, à son retour à la hauteur de départ ?",
+        "en": "A projectile leaves with horizontal speed {dados-calculo.vx} m/s and vertical speed {dados-calculo.vy} m/s, with gravity at {dados-calculo.gravidade} m/s². What is the horizontal range, in metres, when it returns to its starting height?"
+      },
+      "dados-calculo": {
+        "vx": "30",
+        "vy": "20",
+        "gravidade": "10",
+        "total": "120"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Um móvel segue estas equações, com t em segundos. Qual é a coordenada x no instante t = {dados-calculo.t}? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é a coordenada x quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Um projétil parte a {dados-calculo.v0} m/s formando {dados-calculo.angulo} graus com a horizontal, com g igual a 9,81 m/s². Qual é a altura no instante t = {dados-calculo.t} s? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Um projétil parte a {dados-calculo.v0} m/s formando {dados-calculo.angulo} graus com a horizontal, com g igual a 9,81 m/s². Qual é o alcance, em m? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Qual é a coordenada y quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta completa? "
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "Qual é a rapidez do móvel quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta? "
+      }
+    }
+  ]
+}

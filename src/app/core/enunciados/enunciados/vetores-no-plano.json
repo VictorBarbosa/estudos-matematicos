@@ -1,0 +1,81 @@
+{
+  "topico": "vetores-no-plano",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um avião voa a {dados-calculo.modulo} km/h numa direção que forma {dados-calculo.angulo}° com o leste. Qual é a componente para o leste, em km/h? (duas casas decimais)",
+        "fr": "Un avion vole à {dados-calculo.modulo} km/h dans une direction formant {dados-calculo.angulo}° avec l’est. Quelle est la composante vers l’est, en km/h ? (deux décimales)",
+        "en": "A plane flies at {dados-calculo.modulo} km/h in a direction making {dados-calculo.angulo}° with east. What is the eastward component, in km/h? (two decimal places)"
+      },
+      "dados-calculo": {
+        "modulo": "50",
+        "angulo": "37",
+        "total": "39.93"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um barco é empurrado {dados-calculo.leste} km para o leste e {dados-calculo.norte} km para o norte. Qual é a distância em linha reta até o ponto de partida, em km? (duas casas decimais)",
+        "fr": "Un bateau est poussé de {dados-calculo.leste} km vers l’est et {dados-calculo.norte} km vers le nord. Quelle est la distance en ligne droite jusqu’au point de départ, en km ? (deux décimales)",
+        "en": "A boat is pushed {dados-calculo.leste} km east and {dados-calculo.norte} km north. What is the straight-line distance back to the start, in km? (two decimal places)"
+      },
+      "dados-calculo": {
+        "leste": "3",
+        "norte": "4",
+        "total": "5.00"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um deslocamento tem {dados-calculo.x} km para o leste e {dados-calculo.y} km para o norte. Que ângulo ele forma com o leste, em graus, no sentido anti-horário? (duas casas decimais)",
+        "fr": "Un déplacement a {dados-calculo.x} km vers l’est et {dados-calculo.y} km vers le nord. Quel angle forme-t-il avec l’est, en degrés, dans le sens antihoraire ? (deux décimales)",
+        "en": "A displacement is {dados-calculo.x} km east and {dados-calculo.y} km north. What angle does it make with east, in degrees, counterclockwise? (two decimal places)"
+      },
+      "dados-calculo": {
+        "x": "3",
+        "y": "4",
+        "total": "53.13"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Duas forças agem no mesmo ponto: uma de {dados-calculo.f1} N para o leste e outra de {dados-calculo.f2} N para o norte. Qual é o módulo da força resultante, em newtons? (duas casas decimais)",
+        "fr": "Deux forces agissent au même point : une de {dados-calculo.f1} N vers l’est et une autre de {dados-calculo.f2} N vers le nord. Quel est le module de la force résultante, en newtons ? (deux décimales)",
+        "en": "Two forces act at the same point: one of {dados-calculo.f1} N east and another of {dados-calculo.f2} N north. What is the magnitude of the resultant force, in newtons? (two decimal places)"
+      },
+      "dados-calculo": {
+        "f1": "6",
+        "f2": "8",
+        "total": "10.00"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o módulo do vetor ({dados-calculo.x}, {dados-calculo.y})? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Um vetor de módulo {dados-calculo.comprimento} forma {dados-calculo.angulo}° com o eixo x. Qual é sua componente {dados-calculo.v1}? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é o módulo da soma dos vetores ({dados-calculo.v1}, {dados-calculo.v2}) e ({dados-calculo.v3}, {dados-calculo.v4})? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Qual é o ângulo que o vetor ({dados-calculo.x}, {dados-calculo.y}) forma com o eixo x positivo, medido no sentido anti-horário? (em graus, 2 casas)"
+      }
+    }
+  ]
+}

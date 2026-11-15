@@ -1,0 +1,75 @@
+{
+  "topico": "nocao-intuitiva-de-limite",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma função vale o quadrado de x menos {dados-calculo.a}, dividido por x menos {dados-calculo.raiz}. Ela não existe em x = {dados-calculo.raiz}, mas de que valor ela se aproxima quando x se aproxima de {dados-calculo.raiz}?",
+        "fr": "Une fonction vaut le carré de x moins {dados-calculo.a}, divisé par x moins {dados-calculo.raiz}. Elle n’existe pas en x = {dados-calculo.raiz}, mais de quelle valeur s’approche-t-elle quand x s’approche de {dados-calculo.raiz} ?",
+        "en": "A function is the square of x minus {dados-calculo.a}, divided by x minus {dados-calculo.raiz}. It does not exist at x = {dados-calculo.raiz}, but what value does it approach as x approaches {dados-calculo.raiz}?"
+      },
+      "dados-calculo": {
+        "a": "25",
+        "raiz": "5",
+        "total": "10"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um polígono regular inscrito numa circunferência de raio {dados-calculo.raio} tem o perímetro cada vez mais próximo de um valor, conforme o número de lados cresce. Dividindo esse valor-limite por π, quanto se obtém?",
+        "fr": "Un polygone régulier inscrit dans un cercle de rayon {dados-calculo.raio} a un périmètre de plus en plus proche d’une valeur, à mesure que le nombre de côtés augmente. En divisant cette valeur limite par π, qu’obtient-on ?",
+        "en": "A regular polygon inscribed in a circle of radius {dados-calculo.raio} has a perimeter approaching a value as the number of sides grows. Dividing that limit value by π, what do you get?"
+      },
+      "dados-calculo": {
+        "raio": "7",
+        "total": "14"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma função vale {dados-calculo.a} para todo x diferente de {dados-calculo.ponto}, e vale {dados-calculo.b} exatamente em x = {dados-calculo.ponto}. De que valor ela se aproxima quando x tende a {dados-calculo.ponto}?",
+        "fr": "Une fonction vaut {dados-calculo.a} pour tout x différent de {dados-calculo.ponto}, et vaut {dados-calculo.b} exactement en x = {dados-calculo.ponto}. De quelle valeur s’approche-t-elle quand x tend vers {dados-calculo.ponto} ?",
+        "en": "A function equals {dados-calculo.a} for every x other than {dados-calculo.ponto}, and equals {dados-calculo.b} exactly at x = {dados-calculo.ponto}. What value does it approach as x tends to {dados-calculo.ponto}?"
+      },
+      "dados-calculo": {
+        "a": "4",
+        "ponto": "2",
+        "b": "9",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma bola cai de {dados-calculo.altura} m e, a cada quique, volta a {dados-calculo.fracao} da altura anterior. Somando todas as subidas, de quantos metros ela se aproxima no total?",
+        "fr": "Une balle tombe de {dados-calculo.altura} m et, à chaque rebond, remonte à {dados-calculo.fracao} de la hauteur précédente. En additionnant toutes les remontées, de combien de mètres s’approche-t-elle au total ?",
+        "en": "A ball falls from {dados-calculo.altura} m and on each bounce returns to {dados-calculo.fracao} of the previous height. Adding up all the rises, how many metres does the total approach?"
+      },
+      "dados-calculo": {
+        "altura": "10",
+        "fracao": "1/2",
+        "total": "10"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Calcule o limite."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Calcule o limite. Atenção: a substituição direta dá 0/0."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Calcule o limite, simplificando a expressão primeiro."
+      }
+    }
+  ]
+}

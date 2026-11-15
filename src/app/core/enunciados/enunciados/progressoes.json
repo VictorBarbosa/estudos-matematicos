@@ -1,0 +1,79 @@
+{
+  "topico": "progressoes",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma pessoa guarda {dados-calculo.primeiro} reais no primeiro mês e aumenta {dados-calculo.aumento} reais a cada mês seguinte. Quantos reais ela guarda no mês número {dados-calculo.mes}?",
+        "fr": "Une personne met {dados-calculo.primeiro} reais de côté le premier mois et augmente de {dados-calculo.aumento} reais chaque mois suivant. Combien de reais met-elle de côté au mois numéro {dados-calculo.mes} ?",
+        "en": "Someone saves {dados-calculo.primeiro} reais in the first month and adds {dados-calculo.aumento} reais more each following month. How many reais do they save in month number {dados-calculo.mes}?"
+      },
+      "dados-calculo": {
+        "primeiro": "50",
+        "aumento": "20",
+        "mes": "10",
+        "total": "230"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma pessoa guarda {dados-calculo.primeiro} reais no primeiro mês e aumenta {dados-calculo.aumento} reais a cada mês seguinte. Quantos reais ela guardou ao todo nos primeiros {dados-calculo.meses} meses?",
+        "fr": "Une personne met {dados-calculo.primeiro} reais de côté le premier mois et augmente de {dados-calculo.aumento} reais chaque mois suivant. Combien de reais a-t-elle mis de côté en tout pendant les {dados-calculo.meses} premiers mois ?",
+        "en": "Someone saves {dados-calculo.primeiro} reais in the first month and adds {dados-calculo.aumento} reais more each following month. How many reais have they saved in total over the first {dados-calculo.meses} months?"
+      },
+      "dados-calculo": {
+        "primeiro": "50",
+        "aumento": "20",
+        "meses": "10",
+        "total": "1400"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma bola cai de {dados-calculo.altura} m e, a cada quique, sobe {dados-calculo.fracao} da altura anterior. Quantos metros ela sobe no quique número {dados-calculo.quique}?",
+        "fr": "Une balle tombe de {dados-calculo.altura} m et, à chaque rebond, remonte à {dados-calculo.fracao} de la hauteur précédente. De combien de mètres remonte-t-elle au rebond numéro {dados-calculo.quique} ?",
+        "en": "A ball falls from {dados-calculo.altura} m and on each bounce rises {dados-calculo.fracao} of the previous height. How many metres does it rise on bounce number {dados-calculo.quique}?"
+      },
+      "dados-calculo": {
+        "altura": "81",
+        "fracao": "1/3",
+        "quique": "4",
+        "total": "1"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Numa progressão geométrica de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}, qual é a soma dos {dados-calculo.termos} primeiros termos?",
+        "fr": "Dans une suite géométrique de premier terme {dados-calculo.primeiro} et de raison {dados-calculo.razao}, quelle est la somme des {dados-calculo.termos} premiers termes ?",
+        "en": "In a geometric sequence with first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}, what is the sum of the first {dados-calculo.termos} terms?"
+      },
+      "dados-calculo": {
+        "primeiro": "3",
+        "razao": "3",
+        "termos": "7",
+        "total": "3279"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Numa {dados-calculo.nome} de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}, qual é o {dados-calculo.n}º termo?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Numa {dados-calculo.nome} de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}, qual é a soma dos {dados-calculo.n} primeiros termos?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é a soma de todos os infinitos termos desta PG?"
+      }
+    }
+  ]
+}

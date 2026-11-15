@@ -1,0 +1,84 @@
+{
+  "topico": "areas-de-figuras-planas",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um terreno retangular mede {dados-calculo.base} metros de frente por {dados-calculo.altura} metros de fundo. Qual é a área dele, em metros quadrados?",
+        "fr": "Un terrain rectangulaire mesure {dados-calculo.base} mètres de façade sur {dados-calculo.altura} mètres de profondeur. Quelle est son aire, en mètres carrés ?",
+        "en": "A rectangular lot is {dados-calculo.base} metres wide and {dados-calculo.altura} metres deep. What is its area, in square metres?"
+      },
+      "dados-calculo": {
+        "base": "12",
+        "altura": "7.5",
+        "total": "90"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um salão retangular de {dados-calculo.base} m por {dados-calculo.altura} m será forrado com placas quadradas de {dados-calculo.lado} m de lado. Quantas placas são necessárias?",
+        "fr": "Une salle rectangulaire de {dados-calculo.base} m sur {dados-calculo.altura} m sera recouverte de dalles carrées de {dados-calculo.lado} m de côté. Combien de dalles faut-il ?",
+        "en": "A rectangular hall of {dados-calculo.base} m by {dados-calculo.altura} m will be covered with square tiles {dados-calculo.lado} m on a side. How many tiles are needed?"
+      },
+      "dados-calculo": {
+        "base": "12",
+        "altura": "9",
+        "lado": "3",
+        "total": "12"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um terreno em forma de trapézio tem bases de {dados-calculo.baseMaior} m e {dados-calculo.baseMenor} m e altura de {dados-calculo.altura} m. Quantos metros quadrados ele tem?",
+        "fr": "Un terrain en forme de trapèze a des bases de {dados-calculo.baseMaior} m et {dados-calculo.baseMenor} m et une hauteur de {dados-calculo.altura} m. Combien de mètres carrés fait-il ?",
+        "en": "A trapezium-shaped plot has bases of {dados-calculo.baseMaior} m and {dados-calculo.baseMenor} m and a height of {dados-calculo.altura} m. How many square metres is it?"
+      },
+      "dados-calculo": {
+        "baseMaior": "14",
+        "baseMenor": "8",
+        "altura": "6",
+        "total": "66"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um quintal retangular de {dados-calculo.base} m por {dados-calculo.altura} m tem, no meio, uma piscina quadrada de {dados-calculo.lado} m de lado. Quantos metros quadrados sobram para a grama?",
+        "fr": "Une cour rectangulaire de {dados-calculo.base} m sur {dados-calculo.altura} m a, au milieu, une piscine carrée de {dados-calculo.lado} m de côté. Combien de mètres carrés restent pour la pelouse ?",
+        "en": "A rectangular yard of {dados-calculo.base} m by {dados-calculo.altura} m has a square pool {dados-calculo.lado} m on a side in the middle. How many square metres are left for grass?"
+      },
+      "dados-calculo": {
+        "base": "20",
+        "altura": "10",
+        "lado": "4",
+        "total": "184"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Um {dados-calculo.v1} tem área {dados-calculo.v2} cm² e base {dados-calculo.v3} cm. Qual é sua altura, em cm?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Uma figura de área {dados-calculo.area} cm² é ampliada de modo que todos os comprimentos fiquem {dados-calculo.k} vezes maiores. Qual é a nova área, em cm²?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Um losango tem diagonais de {dados-calculo.maior} cm e {dados-calculo.menor} cm. Qual é sua área, em cm²?"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Uma figura é formada por um retângulo de {dados-calculo.base} cm por {dados-calculo.alturaRetangulo} cm com um triângulo de mesma base e altura {dados-calculo.alturaTriangulo} cm apoiado em cima. Qual é a área total, em cm²?"
+      }
+    }
+  ]
+}

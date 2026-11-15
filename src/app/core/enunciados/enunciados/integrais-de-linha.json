@@ -1,0 +1,80 @@
+{
+  "topico": "integrais-de-linha",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um campo de força constante de {dados-calculo.forca} N, na direção do movimento, atua ao longo de um caminho de {dados-calculo.comprimento} m. Qual é o trabalho, em joules?",
+        "fr": "Un champ de force constant de {dados-calculo.forca} N, dans la direction du mouvement, agit le long d’un chemin de {dados-calculo.comprimento} m. Quel est le travail, en joules ?",
+        "en": "A constant force field of {dados-calculo.forca} N, along the direction of motion, acts over a path of {dados-calculo.comprimento} m. What is the work, in joules?"
+      },
+      "dados-calculo": {
+        "forca": "6",
+        "comprimento": "4",
+        "total": "24"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um campo de força constante de {dados-calculo.forca} N atua PERPENDICULARMENTE ao caminho, de {dados-calculo.comprimento} m. Qual é o trabalho, em joules?",
+        "fr": "Un champ de force constant de {dados-calculo.forca} N agit PERPENDICULAIREMENT au chemin, de {dados-calculo.comprimento} m. Quel est le travail, en joules ?",
+        "en": "A constant force field of {dados-calculo.forca} N acts PERPENDICULAR to the path, which is {dados-calculo.comprimento} m long. What is the work, in joules?"
+      },
+      "dados-calculo": {
+        "forca": "6",
+        "comprimento": "4",
+        "total": "0"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um campo conservativo tem potencial {dados-calculo.inicial} no início do caminho e {dados-calculo.final} no fim. Qual é o trabalho realizado ao longo do caminho?",
+        "fr": "Un champ conservatif a un potentiel de {dados-calculo.inicial} au début du chemin et de {dados-calculo.final} à la fin. Quel est le travail effectué le long du chemin ?",
+        "en": "A conservative field has potential {dados-calculo.inicial} at the start of the path and {dados-calculo.final} at the end. What work is done along the path?"
+      },
+      "dados-calculo": {
+        "inicial": "20",
+        "final": "8",
+        "total": "-12"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um campo conservativo tem potencial {dados-calculo.valor} num ponto. Qual é o trabalho ao longo de um caminho FECHADO que começa e termina nesse ponto?",
+        "fr": "Un champ conservatif a un potentiel de {dados-calculo.valor} en un point. Quel est le travail le long d’un chemin FERMÉ qui commence et finit en ce point ?",
+        "en": "A conservative field has potential {dados-calculo.valor} at a point. What is the work along a CLOSED path that starts and ends at that point?"
+      },
+      "dados-calculo": {
+        "valor": "15",
+        "total": "0"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o trabalho deste campo ao longo do segmento que vai de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) a ({dados-calculo.expressao3}, {dados-calculo.expressao4})? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é o trabalho deste campo ao longo do segmento que vai de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) a ({dados-calculo.expressao3}, {dados-calculo.expressao4})? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é o trabalho deste campo ao percorrer o segmento de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) a ({dados-calculo.expressao3}, {dados-calculo.expressao4}) e voltar pelo mesmo caminho? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Este campo é conservativo. Qual é o trabalho dele de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) até ({dados-calculo.expressao3}, {dados-calculo.expressao4}), por qualquer caminho? Responda com 3 casas decimais."
+      }
+    }
+  ]
+}

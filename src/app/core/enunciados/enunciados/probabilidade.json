@@ -1,0 +1,86 @@
+{
+  "topico": "probabilidade",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Num dado de {dados-calculo.faces} faces, qual é a probabilidade de sair um número maior que {dados-calculo.alvo}? Responda como fração.",
+        "fr": "Sur un dé à {dados-calculo.faces} faces, quelle est la probabilité d’obtenir un nombre supérieur à {dados-calculo.alvo} ? Répondez sous forme de fraction.",
+        "en": "On a {dados-calculo.faces}-sided die, what is the probability of rolling a number greater than {dados-calculo.alvo}? Answer as a fraction."
+      },
+      "dados-calculo": {
+        "faces": "6",
+        "alvo": "4",
+        "total": "1/3"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Numa urna há {dados-calculo.brancas} bolas brancas e {dados-calculo.pretas} pretas. Qual é a probabilidade de tirar uma branca? Responda como fração.",
+        "fr": "Dans une urne il y a {dados-calculo.brancas} boules blanches et {dados-calculo.pretas} noires. Quelle est la probabilité de tirer une blanche ? Répondez sous forme de fraction.",
+        "en": "An urn holds {dados-calculo.brancas} white balls and {dados-calculo.pretas} black ones. What is the probability of drawing a white one? Answer as a fraction."
+      },
+      "dados-calculo": {
+        "brancas": "3",
+        "pretas": "5",
+        "total": "3/8"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Jogando {dados-calculo.moedas} moedas honestas, qual é a probabilidade de sair cara em todas? Responda como fração.",
+        "fr": "En lançant {dados-calculo.moedas} pièces équilibrées, quelle est la probabilité d’obtenir face à chaque fois ? Répondez sous forme de fraction.",
+        "en": "Tossing {dados-calculo.moedas} fair coins, what is the probability of getting heads every time? Answer as a fraction."
+      },
+      "dados-calculo": {
+        "moedas": "3",
+        "total": "1/8"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Numa urna há {dados-calculo.brancas} bolas brancas e {dados-calculo.pretas} pretas. Tirando duas sem reposição, qual é a probabilidade de as duas serem brancas? Responda como fração.",
+        "fr": "Dans une urne il y a {dados-calculo.brancas} boules blanches et {dados-calculo.pretas} noires. En tirant deux boules sans remise, quelle est la probabilité que les deux soient blanches ? Répondez sous forme de fraction.",
+        "en": "An urn holds {dados-calculo.brancas} white balls and {dados-calculo.pretas} black ones. Drawing two without replacement, what is the probability both are white? Answer as a fraction."
+      },
+      "dados-calculo": {
+        "brancas": "4",
+        "pretas": "6",
+        "total": "2/15"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Num dado honesto de {dados-calculo.faces} faces, qual é a probabilidade de sair {dados-calculo.expressao1}?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Uma urna tem {dados-calculo.vermelhas} bolas vermelhas e {dados-calculo.azuis} azuis. Retirando duas bolas SEM reposição, qual é a probabilidade de ambas serem vermelhas?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Lançando um dado de {dados-calculo.faces} faces {dados-calculo.tentativas} vezes, qual é a probabilidade de sair o maior valor ao menos uma vez?"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Num dado de 6 faces, qual é a probabilidade de sair {dados-calculo.expressao1}?"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Um lote tem {dados-calculo.total} peças, das quais {dados-calculo.defeituosas} são defeituosas. Retirando {dados-calculo.retiradas} peças de uma vez, qual é a probabilidade de NENHUMA ser defeituosa?"
+      }
+    }
+  ]
+}

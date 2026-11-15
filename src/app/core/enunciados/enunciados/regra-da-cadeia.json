@@ -1,0 +1,70 @@
+{
+  "topico": "regra-da-cadeia",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma função vale o quadrado de ({dados-calculo.a} vezes x mais {dados-calculo.b}). Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+        "fr": "Une fonction vaut le carré de ({dados-calculo.a} fois x plus {dados-calculo.b}). Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+        "en": "A function is the square of ({dados-calculo.a} times x plus {dados-calculo.b}). What is its derivative at x = {dados-calculo.ponto}?"
+      },
+      "dados-calculo": {
+        "a": "3",
+        "b": "1",
+        "ponto": "2",
+        "total": "42"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma função vale o cubo de (x mais {dados-calculo.b}). Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+        "fr": "Une fonction vaut le cube de (x plus {dados-calculo.b}). Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+        "en": "A function is the cube of (x plus {dados-calculo.b}). What is its derivative at x = {dados-calculo.ponto}?"
+      },
+      "dados-calculo": {
+        "b": "1",
+        "ponto": "2",
+        "total": "27"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma função vale a raiz quadrada de ({dados-calculo.a} vezes x). Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+        "fr": "Une fonction vaut la racine carrée de ({dados-calculo.a} fois x). Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+        "en": "A function is the square root of ({dados-calculo.a} times x). What is its derivative at x = {dados-calculo.ponto}?"
+      },
+      "dados-calculo": {
+        "a": "4",
+        "ponto": "1",
+        "total": "1"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma função vale o quadrado de ({dados-calculo.a} vezes x mais {dados-calculo.b}). Quanto vale a sua derivada SEGUNDA em qualquer ponto?",
+        "fr": "Une fonction vaut le carré de ({dados-calculo.a} fois x plus {dados-calculo.b}). Combien vaut sa dérivée SECONDE en tout point ?",
+        "en": "A function is the square of ({dados-calculo.a} times x plus {dados-calculo.b}). What is its SECOND derivative at any point?"
+      },
+      "dados-calculo": {
+        "a": "3",
+        "b": "1",
+        "total": "18"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Use a regra da cadeia e calcule f'({dados-calculo.ponto})."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Use a regra da cadeia e calcule f'({dados-calculo.ponto}). (3 casas decimais)"
+      }
+    }
+  ]
+}

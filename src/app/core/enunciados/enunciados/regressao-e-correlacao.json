@@ -1,0 +1,91 @@
+{
+  "topico": "regressao-e-correlacao",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma reta de mínimos quadrados tem inclinação {dados-calculo.inclinacao} e passa pelo ponto ({dados-calculo.px}, {dados-calculo.py}). Qual é o seu intercepto?",
+        "fr": "Une droite des moindres carrés a une pente de {dados-calculo.inclinacao} et passe par le point ({dados-calculo.px}, {dados-calculo.py}). Quelle est son ordonnée à l’origine ?",
+        "en": "A least-squares line has slope {dados-calculo.inclinacao} and passes through ({dados-calculo.px}, {dados-calculo.py}). What is its intercept?"
+      },
+      "dados-calculo": {
+        "inclinacao": "2",
+        "px": "3",
+        "py": "7",
+        "total": "1"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma reta de mínimos quadrados tem inclinação {dados-calculo.inclinacao} e intercepto {dados-calculo.intercepto}. Que valor ela prevê para x = {dados-calculo.x}?",
+        "fr": "Une droite des moindres carrés a une pente de {dados-calculo.inclinacao} et une ordonnée à l’origine de {dados-calculo.intercepto}. Quelle valeur prédit-elle pour x = {dados-calculo.x} ?",
+        "en": "A least-squares line has slope {dados-calculo.inclinacao} and intercept {dados-calculo.intercepto}. What value does it predict for x = {dados-calculo.x}?"
+      },
+      "dados-calculo": {
+        "inclinacao": "3",
+        "intercepto": "4",
+        "x": "5",
+        "total": "19"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Dois conjuntos de dados estão alinhados numa reta crescente perfeita. Qual é o coeficiente de correlação?",
+        "fr": "Deux ensembles de données sont alignés sur une droite croissante parfaite. Quel est le coefficient de corrélation ?",
+        "en": "Two data sets lie exactly on a perfectly increasing line. What is the correlation coefficient?"
+      },
+      "dados-calculo": {
+        "total": "1"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Dois conjuntos de dados estão alinhados numa reta DECRESCENTE perfeita. Qual é o coeficiente de correlação?",
+        "fr": "Deux ensembles de données sont alignés sur une droite DÉCROISSANTE parfaite. Quel est le coefficient de corrélation ?",
+        "en": "Two data sets lie exactly on a perfectly DECREASING line. What is the correlation coefficient?"
+      },
+      "dados-calculo": {
+        "total": "-1"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é a inclinação da reta de mínimos quadrados para estes dados? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é o intercepto da reta de mínimos quadrados para estes dados? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é o coeficiente de correlação de Pearson destes dados? Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Que fração da variação de y a reta ajustada explica nestes dados? Responda entre 0 e 1, com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Use a reta de mínimos quadrados destes dados para prever y quando x vale {dados-calculo.x}. Responda com 4 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "Qual é o resíduo do ponto de x igual a {dados-calculo.expressao1} em relação à reta de mínimos quadrados destes dados? Responda com 4 casas decimais."
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "topico": "circunferencia",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma circunferência tem centro em ({dados-calculo.cx}, {dados-calculo.cy}) e raio {dados-calculo.raio}. Qual é a abscissa do centro?",
+        "fr": "Un cercle a son centre en ({dados-calculo.cx}, {dados-calculo.cy}) et un rayon de {dados-calculo.raio}. Quelle est l’abscisse du centre ?",
+        "en": "A circle has centre ({dados-calculo.cx}, {dados-calculo.cy}) and radius {dados-calculo.raio}. What is the x-coordinate of the centre?"
+      },
+      "dados-calculo": {
+        "cx": "3",
+        "cy": "-2",
+        "raio": "5",
+        "total": "3"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma circunferência tem centro em ({dados-calculo.cx}, {dados-calculo.cy}) e passa pelo ponto ({dados-calculo.px}, {dados-calculo.py}). Qual é o seu raio?",
+        "fr": "Un cercle a son centre en ({dados-calculo.cx}, {dados-calculo.cy}) et passe par le point ({dados-calculo.px}, {dados-calculo.py}). Quel est son rayon ?",
+        "en": "A circle has centre ({dados-calculo.cx}, {dados-calculo.cy}) and goes through ({dados-calculo.px}, {dados-calculo.py}). What is its radius?"
+      },
+      "dados-calculo": {
+        "cx": "0",
+        "cy": "0",
+        "px": "3",
+        "py": "4",
+        "total": "5"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Qual é a distância entre o ponto ({dados-calculo.px}, {dados-calculo.py}) e o centro de uma circunferência que fica em ({dados-calculo.cx}, {dados-calculo.cy})?",
+        "fr": "Quelle est la distance entre le point ({dados-calculo.px}, {dados-calculo.py}) et le centre d’un cercle situé en ({dados-calculo.cx}, {dados-calculo.cy}) ?",
+        "en": "What is the distance between the point ({dados-calculo.px}, {dados-calculo.py}) and the centre of a circle located at ({dados-calculo.cx}, {dados-calculo.cy})?"
+      },
+      "dados-calculo": {
+        "px": "9",
+        "py": "1",
+        "cx": "0",
+        "cy": "1",
+        "total": "9"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma circunferência tem centro na origem e raio {dados-calculo.raio}. Um ponto está a {dados-calculo.distancia} unidades da origem. Quantas unidades separam esse ponto da circunferência?",
+        "fr": "Un cercle a son centre à l’origine et un rayon de {dados-calculo.raio}. Un point est à {dados-calculo.distancia} unités de l’origine. Combien d’unités séparent ce point du cercle ?",
+        "en": "A circle is centred at the origin with radius {dados-calculo.raio}. A point lies {dados-calculo.distancia} units from the origin. How many units separate that point from the circle?"
+      },
+      "dados-calculo": {
+        "raio": "5",
+        "distancia": "13",
+        "total": "8"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é a distância do ponto ({dados-calculo.v1}, {dados-calculo.v2}) ao centro desta circunferência?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é a abscissa do centro desta circunferência?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é o raio desta circunferência?"
+      }
+    }
+  ]
+}

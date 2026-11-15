@@ -1,0 +1,91 @@
+{
+  "topico": "funcoes-racionais",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "A concentração de um remédio no sangue é {dados-calculo.a} vezes o tempo, dividido pelo tempo ao quadrado mais {dados-calculo.b}. Qual é a concentração no instante t = {dados-calculo.t}? (três casas decimais)",
+        "fr": "La concentration d’un médicament dans le sang est {dados-calculo.a} fois le temps, divisé par le temps au carré plus {dados-calculo.b}. Quelle est la concentration à l’instant t = {dados-calculo.t} ? (trois décimales)",
+        "en": "A drug’s blood concentration is {dados-calculo.a} times the time, divided by the time squared plus {dados-calculo.b}. What is the concentration at t = {dados-calculo.t}? (three decimal places)"
+      },
+      "dados-calculo": {
+        "a": "20",
+        "b": "4",
+        "t": "2",
+        "total": "5.000"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "O custo médio por peça é o custo fixo de {dados-calculo.fixo} reais somado a {dados-calculo.porPeca} reais por peça, tudo dividido pelo número de peças. Qual é o custo médio para {dados-calculo.pecas} peças? (três casas decimais)",
+        "fr": "Le coût moyen par pièce est le coût fixe de {dados-calculo.fixo} reais ajouté à {dados-calculo.porPeca} reais par pièce, le tout divisé par le nombre de pièces. Quel est le coût moyen pour {dados-calculo.pecas} pièces ? (trois décimales)",
+        "en": "The average cost per part is the fixed cost of {dados-calculo.fixo} reais plus {dados-calculo.porPeca} reais per part, all divided by the number of parts. What is the average cost for {dados-calculo.pecas} parts? (three decimal places)"
+      },
+      "dados-calculo": {
+        "fixo": "1200",
+        "porPeca": "18",
+        "pecas": "100",
+        "total": "30.000"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma função divide {dados-calculo.a} vezes x mais {dados-calculo.b} por {dados-calculo.c} vezes x mais {dados-calculo.d}. Em que valor de y está a assíntota horizontal? (três casas decimais)",
+        "fr": "Une fonction divise {dados-calculo.a} fois x plus {dados-calculo.b} par {dados-calculo.c} fois x plus {dados-calculo.d}. À quelle valeur de y se trouve l’asymptote horizontale ? (trois décimales)",
+        "en": "A function divides {dados-calculo.a} times x plus {dados-calculo.b} by {dados-calculo.c} times x plus {dados-calculo.d}. At what value of y is the horizontal asymptote? (three decimal places)"
+      },
+      "dados-calculo": {
+        "a": "6",
+        "b": "1",
+        "c": "4",
+        "d": "5",
+        "total": "1.500"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma função divide o quadrado de x menos {dados-calculo.a} por x menos {dados-calculo.b}. Em que valor de x o gráfico tem um buraco, e não uma assíntota?",
+        "fr": "Une fonction divise le carré de x moins {dados-calculo.a} par x moins {dados-calculo.b}. À quelle valeur de x le graphe a-t-il un trou, et non une asymptote ?",
+        "en": "A function divides the square of x minus {dados-calculo.a} by x minus {dados-calculo.b}. At what value of x does the graph have a hole rather than an asymptote?"
+      },
+      "dados-calculo": {
+        "a": "9",
+        "b": "3",
+        "total": "3"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Em que valor de x está a assíntota vertical desta função? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é o valor da assíntota horizontal desta função? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Quanto vale esta função em x = {dados-calculo.ponto}? Responda com 3 casas decimais."
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Esta função tem um buraco e uma assíntota vertical. Em que valor de x está o BURACO? "
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Esta função tem assíntota oblíqua. Qual é o coeficiente angular dessa reta? "
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "topico": "leis-de-newton",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma força resultante de {dados-calculo.forca} N age sobre um corpo de {dados-calculo.massa} kg. Qual é a aceleração, em m/s²? (duas casas decimais)",
+        "fr": "Une force résultante de {dados-calculo.forca} N agit sur un corps de {dados-calculo.massa} kg. Quelle est l’accélération, en m/s² ? (deux décimales)",
+        "en": "A net force of {dados-calculo.forca} N acts on a {dados-calculo.massa} kg body. What is the acceleration, in m/s²? (two decimal places)"
+      },
+      "dados-calculo": {
+        "forca": "100",
+        "massa": "20",
+        "total": "5.00"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Qual é o peso, em newtons, de um corpo de {dados-calculo.massa} kg num lugar onde a gravidade vale {dados-calculo.gravidade} m/s²? (duas casas decimais)",
+        "fr": "Quel est le poids, en newtons, d’un corps de {dados-calculo.massa} kg là où la gravité vaut {dados-calculo.gravidade} m/s² ? (deux décimales)",
+        "en": "What is the weight, in newtons, of a {dados-calculo.massa} kg body where gravity is {dados-calculo.gravidade} m/s²? (two decimal places)"
+      },
+      "dados-calculo": {
+        "massa": "12",
+        "gravidade": "9.81",
+        "total": "117.72"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um bloco de {dados-calculo.massa} kg é empurrado por uma força de {dados-calculo.forca} N contra um atrito de {dados-calculo.atrito} N. Qual é a aceleração, em m/s²? (duas casas decimais)",
+        "fr": "Un bloc de {dados-calculo.massa} kg est poussé par une force de {dados-calculo.forca} N contre un frottement de {dados-calculo.atrito} N. Quelle est l’accélération, en m/s² ? (deux décimales)",
+        "en": "A {dados-calculo.massa} kg block is pushed by a {dados-calculo.forca} N force against {dados-calculo.atrito} N of friction. What is the acceleration, in m/s²? (two decimal places)"
+      },
+      "dados-calculo": {
+        "massa": "10",
+        "forca": "50",
+        "atrito": "20",
+        "total": "3.00"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um elevador de {dados-calculo.massa} kg sobe acelerando a {dados-calculo.aceleracao} m/s², com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é a tração no cabo, em newtons? (duas casas decimais)",
+        "fr": "Un ascenseur de {dados-calculo.massa} kg monte en accélérant à {dados-calculo.aceleracao} m/s², la gravité valant {dados-calculo.gravidade} m/s². Quelle est la tension du câble, en newtons ? (deux décimales)",
+        "en": "A {dados-calculo.massa} kg lift accelerates upwards at {dados-calculo.aceleracao} m/s², with gravity at {dados-calculo.gravidade} m/s². What is the tension in the cable, in newtons? (two decimal places)"
+      },
+      "dados-calculo": {
+        "massa": "500",
+        "aceleracao": "2",
+        "gravidade": "9.81",
+        "total": "5905.00"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Um bloco recebe uma força de {dados-calculo.aFavor} N para a direita e sofre {dados-calculo.contra} N de atrito. Qual é a força resultante, em newtons?"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Uma força resultante de {dados-calculo.forca} N age sobre um corpo de {dados-calculo.massa} kg. Qual é a aceleração, em m/s²? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Um bloco de {dados-calculo.massa} kg repousa num plano inclinado de {dados-calculo.angulo}°. Qual é a força normal, em newtons? (use g = 9,81 m/s²; 2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Um bloco de {dados-calculo.massa} kg desliza num plano de {dados-calculo.angulo}° com coeficiente de atrito {dados-calculo.v1}. Qual é a aceleração, em m/s²? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Com coeficiente de atrito estático {dados-calculo.v1}, a partir de que ângulo de inclinação o bloco começa a deslizar? (em graus, 2 casas)"
+      }
+    }
+  ]
+}

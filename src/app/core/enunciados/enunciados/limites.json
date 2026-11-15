@@ -1,0 +1,81 @@
+{
+  "topico": "limites",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Qual é o limite da razão entre o quadrado de x menos {dados-calculo.a} e x menos {dados-calculo.raiz}, quando x tende a {dados-calculo.raiz}?",
+        "fr": "Quelle est la limite du rapport entre le carré de x moins {dados-calculo.a} et x moins {dados-calculo.raiz}, quand x tend vers {dados-calculo.raiz} ?",
+        "en": "What is the limit of the ratio of x squared minus {dados-calculo.a} to x minus {dados-calculo.raiz}, as x tends to {dados-calculo.raiz}?"
+      },
+      "dados-calculo": {
+        "a": "9",
+        "raiz": "3",
+        "total": "6"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Qual é o limite do cubo de x menos {dados-calculo.a}, dividido por x menos {dados-calculo.raiz}, quando x tende a {dados-calculo.raiz}?",
+        "fr": "Quelle est la limite du cube de x moins {dados-calculo.a}, divisé par x moins {dados-calculo.raiz}, quand x tend vers {dados-calculo.raiz} ?",
+        "en": "What is the limit of x cubed minus {dados-calculo.a}, divided by x minus {dados-calculo.raiz}, as x tends to {dados-calculo.raiz}?"
+      },
+      "dados-calculo": {
+        "a": "27",
+        "raiz": "3",
+        "total": "27"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Qual é o limite de {dados-calculo.a} vezes x mais {dados-calculo.b}, quando x tende a {dados-calculo.ponto}?",
+        "fr": "Quelle est la limite de {dados-calculo.a} fois x plus {dados-calculo.b}, quand x tend vers {dados-calculo.ponto} ?",
+        "en": "What is the limit of {dados-calculo.a} times x plus {dados-calculo.b}, as x tends to {dados-calculo.ponto}?"
+      },
+      "dados-calculo": {
+        "a": "5",
+        "b": "2",
+        "ponto": "4",
+        "total": "22"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Qual é o limite da razão entre o quadrado de x menos {dados-calculo.b} vezes x e x, quando x tende a zero?",
+        "fr": "Quelle est la limite du rapport entre le carré de x moins {dados-calculo.b} fois x et x, quand x tend vers zéro ?",
+        "en": "What is the limit of the ratio of x squared minus {dados-calculo.b} times x to x, as x tends to zero?"
+      },
+      "dados-calculo": {
+        "b": "7",
+        "total": "-7"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Calcule o limite."
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Calcule o limite, racionalizando o numerador. (3 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Calcule o limite no infinito. (3 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Calcule o limite, fatorando o numerador."
+      }
+    }
+  ]
+}

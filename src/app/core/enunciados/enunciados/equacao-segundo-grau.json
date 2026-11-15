@@ -1,0 +1,57 @@
+{
+  "topico": "equacao-segundo-grau",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Dois números têm soma {dados-calculo.soma} e produto {dados-calculo.produto}. Qual é o maior dos dois?",
+        "fr": "Deux nombres ont pour somme {dados-calculo.soma} et pour produit {dados-calculo.produto}. Quel est le plus grand des deux ?",
+        "en": "Two numbers have sum {dados-calculo.soma} and product {dados-calculo.produto}. Which is the larger of the two?"
+      },
+      "dados-calculo": {
+        "soma": "11",
+        "produto": "24",
+        "total": "8"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Um retângulo tem a base {dados-calculo.diferenca} cm maior que a altura e área de {dados-calculo.area} cm². Quantos centímetros mede a base?",
+        "fr": "Un rectangle a une base {dados-calculo.diferenca} cm plus grande que sa hauteur et une aire de {dados-calculo.area} cm². Combien de centimètres mesure la base ?",
+        "en": "A rectangle has a base {dados-calculo.diferenca} cm longer than its height and an area of {dados-calculo.area} cm². How many centimetres is the base?"
+      },
+      "dados-calculo": {
+        "diferenca": "5",
+        "area": "84",
+        "total": "12"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma pedra é atirada para cima a {dados-calculo.velocidade} m/s, de uma altura de {dados-calculo.altura} m. Com a gravidade valendo {dados-calculo.gravidade} m/s², em quantos segundos ela chega ao chão?",
+        "fr": "Une pierre est lancée vers le haut à {dados-calculo.velocidade} m/s, depuis une hauteur de {dados-calculo.altura} m. Avec une gravité de {dados-calculo.gravidade} m/s², en combien de secondes atteint-elle le sol ?",
+        "en": "A stone is thrown upwards at {dados-calculo.velocidade} m/s from a height of {dados-calculo.altura} m. With gravity at {dados-calculo.gravidade} m/s², in how many seconds does it reach the ground?"
+      },
+      "dados-calculo": {
+        "velocidade": "20",
+        "altura": "25",
+        "gravidade": "10",
+        "total": "5"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "A soma de um número positivo com o seu inverso é {dados-calculo.soma}. Qual é o maior valor que esse número pode ter?",
+        "fr": "La somme d’un nombre positif et de son inverse est {dados-calculo.soma}. Quelle est la plus grande valeur que ce nombre peut prendre ?",
+        "en": "The sum of a positive number and its reciprocal is {dados-calculo.soma}. What is the largest value that number can take?"
+      },
+      "dados-calculo": {
+        "soma": "5/2",
+        "total": "2"
+      }
+    }
+  ]
+}

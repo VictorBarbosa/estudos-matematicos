@@ -1,0 +1,90 @@
+{
+  "topico": "fluidos-e-aerodinamica",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um corpo de {dados-calculo.volume} L fica totalmente submerso em água, de densidade {dados-calculo.densidade} kg/m³, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é o empuxo, em newtons? (duas casas decimais)",
+        "fr": "Un corps de {dados-calculo.volume} L est entièrement immergé dans l’eau, de densité {dados-calculo.densidade} kg/m³, la gravité valant {dados-calculo.gravidade} m/s². Quelle est la poussée, en newtons ? (deux décimales)",
+        "en": "A body of {dados-calculo.volume} L is fully submerged in water of density {dados-calculo.densidade} kg/m³, with gravity at {dados-calculo.gravidade} m/s². What is the buoyant force, in newtons? (two decimal places)"
+      },
+      "dados-calculo": {
+        "volume": "20",
+        "densidade": "1000",
+        "gravidade": "9.81",
+        "total": "196.20"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Qual é a pressão da água, em kPa, a {dados-calculo.profundidade} m de profundidade, com densidade {dados-calculo.densidade} kg/m³ e gravidade {dados-calculo.gravidade} m/s²? (duas casas decimais)",
+        "fr": "Quelle est la pression de l’eau, en kPa, à {dados-calculo.profundidade} m de profondeur, avec une densité de {dados-calculo.densidade} kg/m³ et une gravité de {dados-calculo.gravidade} m/s² ? (deux décimales)",
+        "en": "What is the water pressure, in kPa, at {dados-calculo.profundidade} m depth, with density {dados-calculo.densidade} kg/m³ and gravity {dados-calculo.gravidade} m/s²? (two decimal places)"
+      },
+      "dados-calculo": {
+        "profundidade": "10",
+        "densidade": "1000",
+        "gravidade": "9.81",
+        "total": "98.10"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Um tubo de área {dados-calculo.area} m² conduz água a {dados-calculo.velocidade} m/s. Qual é a vazão, em m³/s? (duas casas decimais)",
+        "fr": "Un tuyau de section {dados-calculo.area} m² conduit de l’eau à {dados-calculo.velocidade} m/s. Quel est le débit, en m³/s ? (deux décimales)",
+        "en": "A pipe of cross-section {dados-calculo.area} m² carries water at {dados-calculo.velocidade} m/s. What is the flow rate, in m³/s? (two decimal places)"
+      },
+      "dados-calculo": {
+        "area": "0.05",
+        "velocidade": "4",
+        "total": "0.20"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Um tubo estreita de {dados-calculo.area1} m² para {dados-calculo.area2} m² de área. Se a água entra a {dados-calculo.velocidade} m/s, com que velocidade, em m/s, ela sai? (duas casas decimais)",
+        "fr": "Un tuyau se rétrécit de {dados-calculo.area1} m² à {dados-calculo.area2} m² de section. Si l’eau entre à {dados-calculo.velocidade} m/s, à quelle vitesse, en m/s, sort-elle ? (deux décimales)",
+        "en": "A pipe narrows from {dados-calculo.area1} m² to {dados-calculo.area2} m². If water enters at {dados-calculo.velocidade} m/s, at what speed, in m/s, does it leave? (two decimal places)"
+      },
+      "dados-calculo": {
+        "area1": "0.1",
+        "area2": "0.04",
+        "velocidade": "2",
+        "total": "5.00"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é a pressão total a {dados-calculo.profundidade} m de profundidade na água? (em kPa, 2 casas decimais; considere a atmosfera de 101,325 kPa)"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Um corpo de {dados-calculo.volumeLitros} L totalmente submerso em água sofre que empuxo, em newtons? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Um corpo de densidade {dados-calculo.densidadeCorpo} kg/m³ flutua em água. Que fração do seu volume fica submersa? (responda entre 0 e 1, com 2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Uma asa de {dados-calculo.area} m² tem ar a {dados-calculo.superior} m/s na face superior e {dados-calculo.inferior} m/s na inferior. Qual é a sustentação, em newtons? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Ar acelera de {dados-calculo.velocidadeA} para {dados-calculo.velocidadeB} m/s num duto horizontal. De quanto CAI a pressão, em Pa? (1 casa decimal)"
+      }
+    }
+  ]
+}

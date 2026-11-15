@@ -1,0 +1,111 @@
+{
+  "topico": "potencial-e-capacitores",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um capacitor de {dados-calculo.capacitancia} μF é ligado a uma bateria de {dados-calculo.tensao} V. Que carga ele armazena, em μC?",
+        "fr": "Un condensateur de {dados-calculo.capacitancia} μF est branché à une pile de {dados-calculo.tensao} V. Quelle charge stocke-t-il, en μC ?",
+        "en": "A {dados-calculo.capacitancia} μF capacitor is connected to a {dados-calculo.tensao} V battery. What charge does it store, in μC?"
+      },
+      "dados-calculo": {
+        "capacitancia": "22",
+        "tensao": "12",
+        "total": "264"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Quanta energia, em joules, fica armazenada num capacitor de {dados-calculo.capacitancia} μF ligado a {dados-calculo.tensao} V? (duas casas decimais)",
+        "fr": "Combien d’énergie, en joules, est stockée dans un condensateur de {dados-calculo.capacitancia} μF branché à {dados-calculo.tensao} V ? (deux décimales)",
+        "en": "How much energy, in joules, is stored in a {dados-calculo.capacitancia} μF capacitor connected to {dados-calculo.tensao} V? (two decimal places)"
+      },
+      "dados-calculo": {
+        "capacitancia": "10",
+        "tensao": "100",
+        "total": "0.05"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Dois capacitores, de {dados-calculo.c1} μF e {dados-calculo.c2} μF, são ligados em SÉRIE. Qual é a capacitância equivalente, em μF?",
+        "fr": "Deux condensateurs, de {dados-calculo.c1} μF et {dados-calculo.c2} μF, sont branchés en SÉRIE. Quelle est la capacité équivalente, en μF ?",
+        "en": "Two capacitors, {dados-calculo.c1} μF and {dados-calculo.c2} μF, are connected in SERIES. What is the equivalent capacitance, in μF?"
+      },
+      "dados-calculo": {
+        "c1": "6",
+        "c2": "3",
+        "total": "2"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Dois capacitores, de {dados-calculo.c1} μF e {dados-calculo.c2} μF, são ligados em PARALELO. Qual é a capacitância equivalente, em μF?",
+        "fr": "Deux condensateurs, de {dados-calculo.c1} μF et {dados-calculo.c2} μF, sont branchés en PARALLÈLE. Quelle est la capacité équivalente, en μF ?",
+        "en": "Two capacitors, {dados-calculo.c1} μF and {dados-calculo.c2} μF, are connected in PARALLEL. What is the equivalent capacitance, in μF?"
+      },
+      "dados-calculo": {
+        "c1": "6",
+        "c2": "3",
+        "total": "9"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é o potencial elétrico a {dados-calculo.v1} m de uma carga de {dados-calculo.v2} μC, em kV (com sinal)? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Um capacitor de {dados-calculo.v1} μF é ligado a uma bateria de {dados-calculo.v} V. Qual carga ele armazena, em μC?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual trabalho um agente externo realiza para levar, devagar, uma carga de {dados-calculo.v1} μC de um ponto a {dados-calculo.va} V até um ponto a {dados-calculo.vb} V, em mJ (com sinal)? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Um capacitor tem placas paralelas de {dados-calculo.a} cm² separadas por {dados-calculo.v1} mm de ar. Qual é sua capacitância, em pF? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Quanta energia guarda um capacitor de {dados-calculo.c} μF carregado a {dados-calculo.v} V, em mJ? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "Capacitores de {dados-calculo.v1} μF estão ligados em {dados-calculo.v2}. Qual é a capacitância equivalente, em μF? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-7",
+      "enunciado": {
+        "br": "Um ponto P está a {dados-calculo.v1} m de uma carga de {dados-calculo.v2} μC e a {dados-calculo.v3} m de outra de {dados-calculo.v4} μC. Qual é o potencial em P, em kV (com sinal)? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-8",
+      "enunciado": {
+        "br": "Um capacitor de placas de {dados-calculo.a} cm², separadas por {dados-calculo.v1} mm de ar, é carregado a {dados-calculo.v} V. Quanta energia ele guarda, em nJ? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-9",
+      "enunciado": {
+        "br": "C₁ = {dados-calculo.c1} μF está em série com a associação em paralelo de C₂ = {dados-calculo.c2} μF e C₃ = {dados-calculo.c3} μF, ligados a {dados-calculo.v} V. "
+      }
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "topico": "circuitos",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Um resistor de {dados-calculo.resistencia} Ω é ligado a {dados-calculo.tensao} V. Quanta potência ele dissipa, em watts? (duas casas decimais)",
+        "fr": "Une résistance de {dados-calculo.resistencia} Ω est branchée à {dados-calculo.tensao} V. Quelle puissance dissipe-t-elle, en watts ? (deux décimales)",
+        "en": "A {dados-calculo.resistencia} Ω resistor is connected to {dados-calculo.tensao} V. How much power does it dissipate, in watts? (two decimal places)"
+      },
+      "dados-calculo": {
+        "resistencia": "12",
+        "tensao": "24",
+        "total": "48.00"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Que corrente, em ampères, passa por um resistor de {dados-calculo.resistencia} Ω ligado a {dados-calculo.tensao} V?",
+        "fr": "Quel courant, en ampères, traverse une résistance de {dados-calculo.resistencia} Ω branchée à {dados-calculo.tensao} V ?",
+        "en": "What current, in amperes, flows through a {dados-calculo.resistencia} Ω resistor connected to {dados-calculo.tensao} V?"
+      },
+      "dados-calculo": {
+        "resistencia": "8",
+        "tensao": "24",
+        "total": "3"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Dois resistores, de {dados-calculo.r1} Ω e {dados-calculo.r2} Ω, estão em SÉRIE, ligados a {dados-calculo.tensao} V. Que corrente, em ampères, percorre o circuito?",
+        "fr": "Deux résistances, de {dados-calculo.r1} Ω et {dados-calculo.r2} Ω, sont en SÉRIE, branchées à {dados-calculo.tensao} V. Quel courant, en ampères, parcourt le circuit ?",
+        "en": "Two resistors, {dados-calculo.r1} Ω and {dados-calculo.r2} Ω, are in SERIES across {dados-calculo.tensao} V. What current, in amperes, flows in the circuit?"
+      },
+      "dados-calculo": {
+        "r1": "4",
+        "r2": "6",
+        "tensao": "20",
+        "total": "2"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Dois resistores, de {dados-calculo.r1} Ω e {dados-calculo.r2} Ω, estão em PARALELO. Qual é a resistência equivalente, em ohms?",
+        "fr": "Deux résistances, de {dados-calculo.r1} Ω et {dados-calculo.r2} Ω, sont en PARALLÈLE. Quelle est la résistance équivalente, en ohms ?",
+        "en": "Two resistors, {dados-calculo.r1} Ω and {dados-calculo.r2} Ω, are in PARALLEL. What is the equivalent resistance, in ohms?"
+      },
+      "dados-calculo": {
+        "r1": "6",
+        "r2": "3",
+        "total": "2"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Um resistor de {dados-calculo.r} Ω está ligado a {dados-calculo.expressao1} V. Qual corrente o atravessa, em mA? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Uma corrente de {dados-calculo.expressao1} A atravessa um resistor de {dados-calculo.r} Ω. Quanta potência ele dissipa, em W? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Um resistor de {dados-calculo.r} Ω está ligado a {dados-calculo.v} V. Quanta potência ele dissipa, em W? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-4",
+      "enunciado": {
+        "br": "Resistores de {dados-calculo.expressao1} Ω estão ligados em {dados-calculo.expressao2}. Qual é a resistência equivalente, em Ω? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-5",
+      "enunciado": {
+        "br": "Num divisor de tensão, R₁ = {dados-calculo.expressao1} kΩ e R₂ = {dados-calculo.expressao2} kΩ estão em série com uma fonte de {dados-calculo.v} V. Qual é a tensão sobre R₂, em V? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-6",
+      "enunciado": {
+        "br": "R₁ = {dados-calculo.r1} Ω está em série com o paralelo de R₂ = {dados-calculo.r2} Ω e R₃ = {dados-calculo.r3} Ω, tudo ligado a {dados-calculo.v} V. Qual corrente sai da fonte, em A? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-7",
+      "enunciado": {
+        "br": "Uma única malha tem uma bateria de {dados-calculo.e1} V e outra de {dados-calculo.e2} V {dados-calculo.expressao1}, e resistores de {dados-calculo.r1} Ω e {dados-calculo.r2} Ω. Qual é a corrente na malha, em A? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-8",
+      "enunciado": {
+        "br": "Um circuito RC tem R = {dados-calculo.expressao1} kΩ e C = {dados-calculo.c} μF. Qual é a constante de tempo, em ms? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-9",
+      "enunciado": {
+        "br": "Um capacitor de {dados-calculo.c} μF, inicialmente descarregado, é carregado por uma fonte de {dados-calculo.v} V através de {dados-calculo.r} kΩ. Qual é a carga dele após {dados-calculo.expressao1} s, em μC? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-10",
+      "enunciado": {
+        "br": "Dois ramos com fontes — {dados-calculo.e1} V em série com {dados-calculo.r1} Ω, e {dados-calculo.e2} V em série com {dados-calculo.r2} Ω — estão em paralelo com um resistor de {dados-calculo.r3} Ω (os polos positivos do mesmo lado). Qual corrente atravessa o resistor de {dados-calculo.r3} Ω, em A? (2 casas decimais)"
+      }
+    }
+  ]
+}

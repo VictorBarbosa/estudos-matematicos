@@ -751,9 +751,18 @@ que precisa de três vereditos — `bateu`, `não bateu` e **`não sei conferir`
 
 ## Os enunciados: um arquivo, duas naturezas
 
-**Todo texto de enunciado do site vive em `core/enunciados/enunciados.json`** — nenhum
-gerador tem frase de pergunta dentro dele. Acrescentar ou reescrever uma pergunta é editar o
-arquivo. Nada de código.
+**O texto dos enunciados vive em `core/enunciados/enunciados/`, um arquivo por tópico.** As
+perguntas de Frações estão em `fracoes.json`, as de Cálculo 3 em `derivadas-parciais.json`, e
+assim por diante — 128 arquivos. Acrescentar ou reescrever uma pergunta é editar o arquivo do
+tópico; o maior tem 30 KB e o menor, 200 bytes.
+
+Eram todos um arquivo só, de meio megabyte: achar a pergunta que se queria editar era rolar
+por milhares de linhas, e duas pessoas mexendo em tópicos diferentes brigavam pelo mesmo
+arquivo.
+
+`enunciados/catalogo.ts` é a única parte que precisa conhecer todos, e ele é conferido por
+`npm run verificar:geradores`: um `.json` novo na pasta que não esteja no catálogo reprova a
+verificação — senão o site simplesmente não veria aquele tópico, sem quebrar e sem avisar.
 
 O arquivo guarda duas naturezas de entrada, e é o que a entrada **traz** que diz qual é:
 

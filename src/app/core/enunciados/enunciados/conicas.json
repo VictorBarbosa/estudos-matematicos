@@ -1,0 +1,75 @@
+{
+  "topico": "conicas",
+  "enunciados": [
+    {
+      "nivel": "facil",
+      "enunciado": {
+        "br": "Uma elipse tem semieixo maior {dados-calculo.a} e semieixo menor {dados-calculo.b}. Qual é a distância focal c?",
+        "fr": "Une ellipse a un demi-grand axe de {dados-calculo.a} et un demi-petit axe de {dados-calculo.b}. Quelle est la distance focale c ?",
+        "en": "An ellipse has semi-major axis {dados-calculo.a} and semi-minor axis {dados-calculo.b}. What is the focal distance c?"
+      },
+      "dados-calculo": {
+        "a": "5",
+        "b": "3",
+        "total": "4"
+      }
+    },
+    {
+      "nivel": "medio",
+      "enunciado": {
+        "br": "Uma elipse tem semieixo maior {dados-calculo.a} e distância focal {dados-calculo.c}. Qual é o semieixo menor?",
+        "fr": "Une ellipse a un demi-grand axe de {dados-calculo.a} et une distance focale de {dados-calculo.c}. Quel est le demi-petit axe ?",
+        "en": "An ellipse has semi-major axis {dados-calculo.a} and focal distance {dados-calculo.c}. What is the semi-minor axis?"
+      },
+      "dados-calculo": {
+        "a": "13",
+        "c": "12",
+        "total": "5"
+      }
+    },
+    {
+      "nivel": "dificil",
+      "enunciado": {
+        "br": "Uma hipérbole tem semieixo real {dados-calculo.a} e semieixo imaginário {dados-calculo.b}. Qual é a distância focal c?",
+        "fr": "Une hyperbole a un demi-axe réel de {dados-calculo.a} et un demi-axe imaginaire de {dados-calculo.b}. Quelle est la distance focale c ?",
+        "en": "A hyperbola has real semi-axis {dados-calculo.a} and imaginary semi-axis {dados-calculo.b}. What is the focal distance c?"
+      },
+      "dados-calculo": {
+        "a": "3",
+        "b": "4",
+        "total": "5"
+      }
+    },
+    {
+      "nivel": "extremo",
+      "enunciado": {
+        "br": "Uma elipse tem semieixo maior {dados-calculo.a} e semieixo menor {dados-calculo.b}. Qual é a sua excentricidade?",
+        "fr": "Une ellipse a un demi-grand axe de {dados-calculo.a} et un demi-petit axe de {dados-calculo.b}. Quelle est son excentricité ?",
+        "en": "An ellipse has semi-major axis {dados-calculo.a} and semi-minor axis {dados-calculo.b}. What is its eccentricity?"
+      },
+      "dados-calculo": {
+        "a": "5",
+        "b": "3",
+        "total": "0.8"
+      }
+    },
+    {
+      "forma": "forma-1",
+      "enunciado": {
+        "br": "Qual é a excentricidade desta {dados-calculo.nome}? (2 casas decimais)"
+      }
+    },
+    {
+      "forma": "forma-2",
+      "enunciado": {
+        "br": "Qual é o valor do semieixo a desta {dados-calculo.nome}?"
+      }
+    },
+    {
+      "forma": "forma-3",
+      "enunciado": {
+        "br": "Qual é a distância focal c desta {dados-calculo.nome}?"
+      }
+    }
+  ]
+}
