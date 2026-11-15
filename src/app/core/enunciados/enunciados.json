@@ -189,9 +189,9 @@
       {
         "forma": "forma-11",
         "enunciado": {
-          "br": "Um grupo de {dados-calculo.pessoas} pessoas pediu, cada uma, um prato de R$ {dados-calculo.prato} e uma sobremesa de R$ {dados-calculo.c}. Na hora de pagar, usaram um cupom de R$ {dados-calculo.cupom} de desconto. Quanto o grupo pagou?",
-          "fr": "Un groupe de {dados-calculo.pessoas} personnes a commandé, chacune, un plat à {dados-calculo.prato} $ et un dessert à {dados-calculo.c} $. Au moment de payer, ils ont utilisé un coupon de {dados-calculo.cupom} $ de réduction. Combien le groupe a-t-il payé ?",
-          "en": "A group of {dados-calculo.pessoas} people each ordered a ${dados-calculo.prato} dish and a ${dados-calculo.c} dessert. At the counter they used a ${dados-calculo.cupom} coupon. How much did the group pay?"
+          "br": "Um grupo de {dados-calculo.pessoas} pessoas pediu, cada uma, um prato de R$ {dados-calculo.prato} e uma sobremesa de R$ {dados-calculo.sobremesa}. Na hora de pagar, usaram um cupom de R$ {dados-calculo.cupom} de desconto. Quanto o grupo pagou?",
+          "fr": "Un groupe de {dados-calculo.pessoas} personnes a commandé, chacune, un plat à {dados-calculo.prato} $ et un dessert à {dados-calculo.sobremesa} $. Au moment de payer, ils ont utilisé un coupon de {dados-calculo.cupom} $ de réduction. Combien le groupe a-t-il payé ?",
+          "en": "A group of {dados-calculo.pessoas} people each ordered a ${dados-calculo.prato} dish and a ${dados-calculo.sobremesa} dessert. At the counter they used a ${dados-calculo.cupom} coupon. How much did the group pay?"
         },
         "dica": {
           "br": "Cada pessoa paga prato e sobremesa; o cupom é descontado uma vez, do total.",
