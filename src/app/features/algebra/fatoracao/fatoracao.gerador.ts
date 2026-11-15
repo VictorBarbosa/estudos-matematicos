@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, fatorarComPassos, formatar, mdc } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -48,8 +49,7 @@ export const geradorFatoracao: GeradorExercicio<number> = {
       id: `fatoracao-${nivel}-${polinomio.paraTex()}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado:
-        'Fatore a expressão e informe a MAIOR raiz, ou seja, o maior valor de x que a anula.' +
-        (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
+        textoDoMolde(moldesDe('fatoracao', 'forma-1')[0]!, {  }, 'pt') + (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
       enunciadoTex: `${polinomio.paraTex()} = 0`,
       gabarito,
       resolucao: {
@@ -158,8 +158,7 @@ function exercicioCubos(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `fatoracao-cubos-${a}${op}${b}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      'Fatore a expressão e informe a raiz REAL — só existe uma.' +
-      (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
+      textoDoMolde(moldesDe('fatoracao', 'forma-2')[0]!, {  }, 'pt') + (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
     enunciadoTex: `${polinomio.paraTex()} = 0`,
     gabarito,
     resolucao: {
@@ -260,8 +259,7 @@ function exercicioAgrupamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `fatoracao-agrupamento-${a}${b}${s * k2}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      'Fatore por agrupamento e informe a MAIOR raiz real.' +
-      (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
+      textoDoMolde(moldesDe('fatoracao', 'forma-3')[0]!, {  }, 'pt') + (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
     enunciadoTex: `${polinomio.paraTex()} = 0`,
     gabarito,
     resolucao: {

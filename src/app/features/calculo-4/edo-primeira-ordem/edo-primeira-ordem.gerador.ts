@@ -230,8 +230,7 @@ function doEquilibrio(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Para onde a solução desta equação tende quando o tempo cresce, com y(0) igual a ${y0}? ` +
-      PEDIDO,
+      textoDoMolde(moldesDe('edo-primeira-ordem', 'forma-4')[0]!, { y0 }, 'pt') + PEDIDO,
     enunciadoTex: `y' + ${formatar(p)}y = ${formatar(q)}`,
     gabarito,
     resolucao: {

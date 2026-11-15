@@ -443,8 +443,7 @@ function kDependentes(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `planos-k-${u.join('')}-${v.join('')}-${a}${b}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      'Para que valor de k os três vetores são linearmente dependentes (estão num mesmo plano)?' +
-      (Number.isInteger(gabarito) ? '' : ' Responda como fração ou com 2 casas decimais.'),
+      textoDoMolde(moldesDe('retas-e-planos', 'forma-7')[0]!, {  }, 'pt') + (Number.isInteger(gabarito) ? '' : ' Responda como fração ou com 2 casas decimais.'),
     enunciadoTex: `\\vec{u} = ${vTex(u)} \\qquad \\vec{v} = ${vTex(v)} \\qquad \\vec{w} = (${a},\\; ${b},\\; k)`,
     gabarito,
     resolucao: {

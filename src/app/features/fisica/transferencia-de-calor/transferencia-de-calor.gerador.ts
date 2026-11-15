@@ -310,9 +310,7 @@ function doEquilibrioRadiativo(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um radiador de satélite com ${numero(area)} m² e emissividade ${numero(emissividade)} ` +
-      `precisa dissipar ${potencia} W no vácuo. Qual é a temperatura de equilíbrio, em K? ` +
-      PEDIDO,
+      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-7')[0]!, { expressao1: numero(area), expressao2: numero(emissividade), potencia }, 'pt') + PEDIDO,
     enunciadoTex: `P = \\varepsilon\\sigma A T^{4}`,
     gabarito,
     resolucao: equilibrioRadiativoComPassos(potencia, emissividade, area),

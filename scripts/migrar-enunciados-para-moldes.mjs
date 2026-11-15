@@ -78,17 +78,54 @@ function converter(template) {
 /** Os templates concatenados de uma atribuição, juntados num texto só. */
 function juntar(trecho) {
   const partes = [...trecho.matchAll(/`([^`]*)`|'([^'\n]*)'/g)].map((m) => m[1] ?? m[2]);
-  return partes.join('');
+  /*
+   * As fugas do JavaScript viram o caractere que elas representam.
+   *
+   * No fonte, `'...opção.\n'` tem uma barra e um ene — dois caracteres. Copiar
+   * isso para o JSON guardaria a barra e o ene, e a lista de opções sairia
+   * grudada na pergunta, numa linha só. O spec do tópico foi quem viu.
+   */
+  return partes
+    .join('')
+    .replace(/\\n/g, '\n')
+    .replace(/\\t/g, '\t')
+    .replace(/\\(['"`\\])/g, '$1');
 }
 
 const achados = [];
 
-// enunciado: `...`,  /  enunciado = `...` + `...`;
-const padrao =
-  /enunciado(\s*[:=]\s*)((?:(?:`[^`]*`|'[^'\n]*')\s*\+\s*)*(?:`[^`]*`|'[^'\n]*'))\s*([,;])/g;
+/*
+ * Duas formas, e a segunda é a que mais aparece.
+ *
+ * `enunciado: '...' ,` é a frase inteira. `enunciado: '...' + pedindoFracao(x)`
+ * é a frase MAIS um pedaço montado em código — e aí só a frase migra, com o
+ * `+` e o que vem depois ficando onde estão. O texto sai do TypeScript do
+ * mesmo jeito; o que fica é a junção, que é estrutura, não conteúdo.
+ */
+const literal = '(?:`[^`]*`|\'[^\'\n]*\')';
+const padroes = [
+  new RegExp(`enunciado(\\s*[:=]\\s*)((?:${literal}\\s*\\+\\s*)*${literal})\\s*([,;])`, 'g'),
+  new RegExp(`enunciado(\\s*[:=]\\s*)((?:${literal}\\s*\\+\\s*)+)`, 'g'),
+];
+
+/*
+ * O segundo padrão não pode repescar o que o primeiro já levou.
+ *
+ * «'frase' + 'outra',» casa nos dois: inteiro no primeiro, e sem a última
+ * parte no segundo. Substituir as duas vezes reescreve texto já reescrito, e o
+ * enunciado sai pela metade — o guarda de variedade foi quem viu, contando 63
+ * formas onde havia 194.
+ */
+const consumidos = [];
 
 let encontro;
-while ((encontro = padrao.exec(fonte)) !== null) {
+for (const padrao of padroes)
+  while ((encontro = padrao.exec(fonte)) !== null) {
+  const inicio = encontro.index;
+  if (consumidos.some(([de, ate]) => inicio >= de && inicio < ate)) {
+    continue;
+  }
+  consumidos.push([inicio, inicio + encontro[0].length]);
   const bruto = juntar(encontro[2]);
   if (bruto.trim().length < 10) {
     continue; // Pedaço solto, não uma pergunta.
@@ -117,8 +154,8 @@ while ((encontro = padrao.exec(fonte)) !== null) {
     console.log(`  (pulado: chave dentro de texto) ${bruto.slice(0, 70)}`);
     continue;
   }
-  achados.push({ inteiro: encontro[0], ligacao: encontro[1], fim: encontro[3], bruto });
-}
+  achados.push({ inteiro: encontro[0], ligacao: encontro[1], fim: encontro[3] ?? ' + ', bruto });
+  }
 
 if (achados.length === 0) {
   console.log(`${topico}: nenhum enunciado no padrão reconhecido.`);
@@ -128,9 +165,21 @@ if (achados.length === 0) {
 let saida = fonte;
 const novos = [];
 
+/*
+ * A numeração continua de onde o arquivo parou.
+ *
+ * Rodar o script duas vezes no mesmo gerador criava uma segunda `forma-1`, e
+ * `moldesDe(...)[0]` passava a devolver a PRIMEIRA — o enunciado de um
+ * exercício saía com o texto de outro. Começar do que já existe é o que torna
+ * o script seguro de repetir.
+ */
+const jaExistem = moldes.filter(
+  (molde) => molde.topico === topico && /^forma-\d+$/.test(molde.forma ?? ''),
+).length;
+
 achados.forEach((achado, indice) => {
   const { texto, valores } = converter(achado.bruto);
-  const forma = `forma-${indice + 1}`;
+  const forma = `forma-${jaExistem + indice + 1}`;
   novos.push({ topico, forma, enunciado: { br: texto } });
 
   const dados = valores

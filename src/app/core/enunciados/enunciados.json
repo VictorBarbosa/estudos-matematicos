@@ -10564,5 +10564,173 @@
     "enunciado": {
       "br": "Usando a definição, calcule f'({dados-calculo.expressao1})."
     }
+  },
+  {
+    "topico": "fatoracao",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Fatore a expressão e informe a MAIOR raiz, ou seja, o maior valor de x que a anula."
+    }
+  },
+  {
+    "topico": "fatoracao",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Fatore a expressão e informe a raiz REAL — só existe uma."
+    }
+  },
+  {
+    "topico": "fatoracao",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Fatore por agrupamento e informe a MAIOR raiz real."
+    }
+  },
+  {
+    "topico": "regras-de-derivacao",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Use a regra do quociente e calcule f'({dados-calculo.ponto})."
+    }
+  },
+  {
+    "topico": "derivadas-parciais",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a derivada parcial em relação a {dados-calculo.variavel}, avaliada no ponto ({dados-calculo.x}, {dados-calculo.y})? "
+    }
+  },
+  {
+    "topico": "derivadas-parciais",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é a derivada parcial mista desta função, derivando primeiro em x e depois em y? "
+    }
+  },
+  {
+    "topico": "funcoes-de-varias-variaveis",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "No domínio desta função, qual é o maior valor que x pode assumir quando y = {dados-calculo.y0}? "
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Qual é a área do pedaço do plano que fica acima do retângulo 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M}?"
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "forma": "forma-8",
+    "enunciado": {
+      "br": "Use o teorema de Green para calcular a circulação ∮ P dx + Q dy na borda do retângulo 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M}, percorrida no sentido anti-horário."
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "forma": "forma-9",
+    "enunciado": {
+      "br": "Pelo teorema da divergência, qual é o fluxo do campo para fora do cubo 0 ≤ x, y, z ≤ {dados-calculo.L}?"
+    }
+  },
+  {
+    "topico": "edo-primeira-ordem",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Para onde a solução desta equação tende quando o tempo cresce, com y(0) igual a {dados-calculo.y0}? "
+    }
+  },
+  {
+    "topico": "eletrostatica",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Uma carga é multiplicada por {dados-calculo.a}, a outra por {dados-calculo.b}, e a distância entre elas é multiplicada por {dados-calculo.expressao1}. Por quanto fica multiplicada a força?"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "forma": "forma-8",
+    "enunciado": {
+      "br": "Uma barra de {dados-calculo.expressao1} m desliza a {dados-calculo.v} m/s sobre trilhos, num campo de {dados-calculo.expressao2} T perpendicular ao plano. O circuito fechado tem {dados-calculo.expressao3} Ω. "
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "forma": "forma-9",
+    "enunciado": {
+      "br": "C₁ = {dados-calculo.c1} μF está em série com a associação em paralelo de C₂ = {dados-calculo.c2} μF e C₃ = {dados-calculo.c3} μF, ligados a {dados-calculo.v} V. "
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opção.\n"
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "forma": "forma-8",
+    "enunciado": {
+      "br": "Considere o produto de {dados-calculo.expressao1} por {dados-calculo.expressao2}"
+    }
+  },
+  {
+    "topico": "estatica-e-torque",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Três corpos sobre uma barra: "
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Um radiador de satélite com {dados-calculo.expressao1} m² e emissividade {dados-calculo.expressao2} precisa dissipar {dados-calculo.potencia} W no vácuo. Qual é a temperatura de equilíbrio, em K? "
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Resolva a equação exponencial."
+    }
+  },
+  {
+    "topico": "funcoes-racionais",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Esta função tem um buraco e uma assíntota vertical. Em que valor de x está o BURACO? "
+    }
+  },
+  {
+    "topico": "funcoes-racionais",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Esta função tem assíntota oblíqua. Qual é o coeficiente angular dessa reta? "
+    }
+  },
+  {
+    "topico": "equacoes-parametricas",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Qual é a coordenada y quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta completa? "
+    }
+  },
+  {
+    "topico": "equacoes-parametricas",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Qual é a rapidez do móvel quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta? "
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Para que valor de k os três vetores são linearmente dependentes (estão num mesmo plano)?"
+    }
   }
 ]

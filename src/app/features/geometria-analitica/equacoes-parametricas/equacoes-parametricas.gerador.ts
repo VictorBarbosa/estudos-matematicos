@@ -138,8 +138,7 @@ function daCircunferencia(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Qual é a coordenada y quando o parâmetro vale ${doze} doze avos de uma volta completa? ` +
-      PEDIDO,
+      textoDoMolde(moldesDe('equacoes-parametricas', 'forma-5')[0]!, { doze }, 'pt') + PEDIDO,
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: posicaoNoInstanteComPassos(curva, t).passos },
@@ -288,7 +287,7 @@ function daVelocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Qual é a rapidez do móvel quando o parâmetro vale ${doze} doze avos de uma volta? ` + PEDIDO,
+      textoDoMolde(moldesDe('equacoes-parametricas', 'forma-6')[0]!, { doze }, 'pt') + PEDIDO,
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito: resolucao.resultado,
     resolucao,

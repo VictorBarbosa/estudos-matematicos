@@ -93,8 +93,7 @@ function daParcial(nivel: Nivel, rng: Rng, emX: boolean): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Qual é a derivada parcial em relação a ${variavel}, avaliada no ponto (${x}, ${y})? ` +
-      PEDIDO,
+      textoDoMolde(moldesDe('derivadas-parciais', 'forma-2')[0]!, { variavel, x, y }, 'pt') + PEDIDO,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: parcialComPassos(q, x, y, emX),
@@ -212,8 +211,7 @@ function daMista(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      'Qual é a derivada parcial mista desta função, derivando primeiro em x e depois em y? ' +
-      PEDIDO,
+      textoDoMolde(moldesDe('derivadas-parciais', 'forma-3')[0]!, {  }, 'pt') + PEDIDO,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {

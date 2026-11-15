@@ -187,8 +187,7 @@ function areaDoPlano(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `teor-area-${a}${b}${c}-${L}${M}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é a área do pedaço do plano que fica acima do retângulo 0 ≤ x ≤ ${L}, 0 ≤ y ≤ ${M}?` +
-      casas(gabarito),
+      textoDoMolde(moldesDe('teoremas-integrais', 'forma-7')[0]!, { L, M }, 'pt') + casas(gabarito),
     enunciadoTex: plano,
     gabarito,
     resolucao: {
@@ -316,9 +315,7 @@ function greenNoRetangulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `teor-green-${monoTex(p)}-${monoTex(q)}-${L}${M}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Use o teorema de Green para calcular a circulação ∮ P dx + Q dy na borda do retângulo ` +
-      `0 ≤ x ≤ ${L}, 0 ≤ y ≤ ${M}, percorrida no sentido anti-horário.` +
-      casas(gabarito),
+      textoDoMolde(moldesDe('teoremas-integrais', 'forma-8')[0]!, { L, M }, 'pt') + casas(gabarito),
     enunciadoTex: campo2(p, q),
     gabarito,
     resolucao: {
@@ -438,8 +435,7 @@ function divergenciaCuboOuEsfera(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `teor-fluxo-cubo-${monoTex(p)}-${monoTex(q)}-${monoTex(r)}-${L}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Pelo teorema da divergência, qual é o fluxo do campo para fora do cubo 0 ≤ x, y, z ≤ ${L}?` +
-      casas(gabarito),
+      textoDoMolde(moldesDe('teoremas-integrais', 'forma-9')[0]!, { L }, 'pt') + casas(gabarito),
     enunciadoTex: campo3(p, q, r),
     gabarito,
     resolucao: {

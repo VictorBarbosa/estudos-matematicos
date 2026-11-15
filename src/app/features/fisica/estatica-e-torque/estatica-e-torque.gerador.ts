@@ -159,8 +159,7 @@ function exercicioCentroMassa(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `tor-cm-${corpos.map((c) => `${c.massa}@${c.posicao}`).join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      'Três corpos sobre uma barra: ' +
-      corpos.map((c) => `${c.massa} kg em x = ${c.posicao} m`).join(', ') +
+      textoDoMolde(moldesDe('estatica-e-torque', 'forma-4')[0]!, {  }, 'pt') + corpos.map((c) => `${c.massa} kg em x = ${c.posicao} m`).join(', ') +
       '. Onde fica o centro de massa, em metros? (2 casas decimais)',
     enunciadoTex: corpos.map((c) => `m = ${c.massa},\\; x = ${c.posicao}`).join(' \\quad '),
     gabarito: resultado,

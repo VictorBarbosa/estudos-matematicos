@@ -445,8 +445,7 @@ function misto(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `pot-misto-${c1}-${c2}-${c3}-${v}-${pedeCarga ? 'q' : 'c'}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `C₁ = ${c1} μF está em série com a associação em paralelo de C₂ = ${c2} μF e C₃ = ${c3} μF, ligados a ${v} V. ` +
-      (pedeCarga
+      textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-9')[0]!, { c1, c2, c3, v }, 'pt') + (pedeCarga
         ? 'Qual é a carga fornecida pela fonte, em μC? (2 casas decimais)'
         : 'Qual é a capacitância equivalente, em μF? (2 casas decimais)'),
     enunciadoTex: `C_1 \\;\\text{em série com}\\; (C_2 \\parallel C_3) \\qquad V = ${v}\\ \\text{V}`,

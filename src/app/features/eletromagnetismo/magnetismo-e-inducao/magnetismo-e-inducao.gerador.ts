@@ -494,9 +494,7 @@ function barra(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mag-barra-${b}-${l}-${v}-${r}-${pede}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma barra de ${txt(l)} m desliza a ${v} m/s sobre trilhos, num campo de ${txt(b)} T perpendicular ao plano. ` +
-      `O circuito fechado tem ${txt(r)} Ω. ` +
-      (pede === 'corrente'
+      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-8')[0]!, { expressao1: txt(l), v, expressao2: txt(b), expressao3: txt(r) }, 'pt') + (pede === 'corrente'
         ? 'Qual é a corrente induzida, em A? (2 casas decimais)'
         : 'Qual é a força magnética que freia a barra, em N? (2 casas decimais)'),
     enunciadoTex: `B = ${tex(b)}\\ \\text{T} \\qquad L = ${tex(l)}\\ \\text{m} \\qquad v = ${v}\\ \\text{m/s} \\qquad R = ${tex(r)}\\ \\Omega`,

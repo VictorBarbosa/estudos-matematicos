@@ -270,8 +270,7 @@ function doDominio(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `No domínio desta função, qual é o maior valor que x pode assumir quando y = ${y0}? ` +
-      PEDIDO,
+      textoDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-4')[0]!, { y0 }, 'pt') + PEDIDO,
     enunciadoTex: `f(x,y) = \\sqrt{${raio * raio} - x^{2} - y^{2}}`,
     gabarito,
     resolucao: dominioDaRaizComPassos(raio, y0),

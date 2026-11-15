@@ -192,8 +192,7 @@ function doBuraco(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      'Esta função tem um buraco e uma assíntota vertical. Em que valor de x está o BURACO? ' +
-      PEDIDO,
+      textoDoMolde(moldesDe('funcoes-racionais', 'forma-4')[0]!, {  }, 'pt') + PEDIDO,
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito: comum,
     resolucao: { resultado: comum, passos: assintotaOuBuracoComPassos(f, comum).passos },
@@ -243,7 +242,7 @@ function daObliqua(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      'Esta função tem assíntota oblíqua. Qual é o coeficiente angular dessa reta? ' + PEDIDO,
+      textoDoMolde(moldesDe('funcoes-racionais', 'forma-5')[0]!, {  }, 'pt') + PEDIDO,
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: comportamentoNoInfinitoComPassos(f).passos },
