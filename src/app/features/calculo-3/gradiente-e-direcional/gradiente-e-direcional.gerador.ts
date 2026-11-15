@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Quadrica,
   classificarCritico,
@@ -136,9 +137,11 @@ function doModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `md-${q.a}${q.b}${q.c}${q.d}${q.e}-${x}${y}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é a maior taxa de variação possível desta função no ponto (${x}, ${y}), em qualquer ` +
-      `direção? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('gradiente-e-direcional', 'forma-1')[0]!,
+      { x, y, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: gradienteComPassos(q, x, y),
@@ -189,9 +192,11 @@ function daDirecional(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `dd-${q.a}${q.b}${q.c}${q.d}${q.e}-${x}${y}-${direcao.x}${direcao.y}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é a derivada direcional desta função no ponto (${x}, ${y}), na direção do vetor ` +
-      `(${direcao.x}, ${direcao.y})? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('gradiente-e-direcional', 'forma-2')[0]!,
+      { x, y, expressao1: direcao.x, expressao2: direcao.y, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: derivadaDirecionalComPassos(q, x, y, direcao),
@@ -250,7 +255,7 @@ function doCritico(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `pc-${q.a}${q.b}${q.c}${q.d}${q.e}`,
     nivel,
     rng,
-    enunciado: `Esta função tem um único ponto crítico. Qual é a abscissa dele? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('gradiente-e-direcional', 'forma-3')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: pontoCriticoComPassos(q),

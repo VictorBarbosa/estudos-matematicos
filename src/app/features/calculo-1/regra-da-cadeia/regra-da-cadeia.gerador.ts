@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import {
@@ -56,7 +57,7 @@ export const geradorCadeia: GeradorExercicio<number> = {
     return {
       id: `cadeia-${a}${b}${n}-${ponto}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Use a regra da cadeia e calcule f'(${ponto}).`,
+      enunciado: textoDoMolde(moldesDe('regra-da-cadeia', 'forma-1')[0]!, { ponto }, 'pt'),
       enunciadoTex: `f(x) = \\left(${internoTex}\\right)^{${n}}`,
       gabarito,
       resolucao: {
@@ -183,7 +184,7 @@ function exercicioOutraCasca(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cadeia-${casca}-${a}${b}-${ponto}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Use a regra da cadeia e calcule f'(${ponto}). (3 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('regra-da-cadeia', 'forma-2')[0]!, { ponto }, 'pt'),
     enunciadoTex: `f(x) = ${fora.f}`,
     gabarito,
     resolucao: {

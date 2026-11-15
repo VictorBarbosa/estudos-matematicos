@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -72,7 +73,7 @@ function deslocamento(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `fcc-desloc-${a}${b}-${t1}${t2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um carro tem velocidade v(t) = ${a}t + ${b} (m/s). Quanto ele se desloca entre t = ${t1} s e t = ${t2} s, em metros?`,
+    enunciado: textoDoMolde(moldesDe('fisica-com-calculo', 'forma-1')[0]!, { a, b, t1, t2 }, 'pt'),
     enunciadoTex: `v(t) = ${v.paraTex('t')} \\qquad \\Delta s = \\int_{${t1}}^{${t2}} v(t)\\,dt`,
     gabarito,
     resolucao: {
@@ -124,9 +125,11 @@ function mola(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `fcc-mola-${k}-${x1}-${x2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Uma mola de constante k = ${k} N/m é esticada de x = ${n(x1)} m até x = ${n(x2)} m. ` +
-      'Qual é o trabalho feito, em joules? (2 casas decimais)',
+    enunciado: textoDoMolde(
+      moldesDe('fisica-com-calculo', 'forma-2')[0]!,
+      { k, expressao1: n(x1), expressao2: n(x2) },
+      'pt',
+    ),
     enunciadoTex: `F(x) = ${k}x \\qquad W = \\int_{${t(x1)}}^{${t(x2)}} ${k}x\\,dx`,
     gabarito,
     resolucao: {
@@ -179,7 +182,7 @@ function forcaVariavel(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `fcc-forca-${c2}${c1}-${a}${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Uma força F(x) (em N, x em metros) empurra um corpo de x = ${a} m até x = ${b} m. Qual é o trabalho, em joules? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('fisica-com-calculo', 'forma-3')[0]!, { a, b }, 'pt'),
     enunciadoTex: `F(x) = ${F.paraTex()}`,
     gabarito,
     resolucao: {
@@ -232,7 +235,7 @@ function velocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `fcc-vel-${p}${q}-${v0}-${t}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um foguete parte com ${v0} m/s e tem aceleração a(t) (m/s², t em s). Qual é a velocidade em t = ${t} s, em m/s? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('fisica-com-calculo', 'forma-4')[0]!, { v0, t }, 'pt'),
     enunciadoTex: `a(t) = ${aT.paraTex('t')} \\qquad v(0) = ${v0}`,
     gabarito,
     resolucao: {
@@ -287,7 +290,7 @@ function centroDeMassa(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `fcc-cm-${a}${b}${c}-${L}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Uma barra de ${L} m tem densidade linear λ(x) (kg/m), com x medido de uma ponta. Onde fica o centro de massa, em metros a partir dessa ponta? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('fisica-com-calculo', 'forma-5')[0]!, { L }, 'pt'),
     enunciadoTex: `\\lambda(x) = ${lambda.paraTex()} \\qquad 0 \\leq x \\leq ${L}`,
     gabarito,
     resolucao: {
@@ -351,9 +354,7 @@ function gravidade(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `fcc-grav-${m}-${hKm}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Quanto trabalho é preciso para levar um satélite de ${m} kg da superfície da Terra até ${hKm} km de altitude ` +
-      '(sem contar a velocidade orbital)? Responda em gigajoules, GJ. (2 casas decimais)',
+    enunciado: textoDoMolde(moldesDe('fisica-com-calculo', 'forma-6')[0]!, { m, hKm }, 'pt'),
     enunciadoTex: `F(r) = \\frac{GMm}{r^{2}} \\qquad W = \\int_{R}^{R + h} \\frac{GMm}{r^{2}}\\,dr`,
     gabarito,
     resolucao: {

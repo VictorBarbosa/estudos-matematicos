@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   aoMenosUmComPassos,
   combinacoes,
@@ -94,7 +95,11 @@ function exercicioDado(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prob-dado-${faces}-${caso.texto}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Num dado honesto de ${faces} faces, qual é a probabilidade de sair ${caso.texto}?`,
+    enunciado: textoDoMolde(
+      moldesDe('probabilidade', 'forma-1')[0]!,
+      { faces, expressao1: caso.texto },
+      'pt',
+    ),
     enunciadoTex: `n(\\Omega) = ${faces} \\qquad n(A) = ${favoraveis}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -137,9 +142,7 @@ function exercicioSemReposicao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prob-semrep-${vermelhas}-${azuis}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Uma urna tem ${vermelhas} bolas vermelhas e ${azuis} azuis. Retirando duas bolas SEM ` +
-      'reposição, qual é a probabilidade de ambas serem vermelhas?',
+    enunciado: textoDoMolde(moldesDe('probabilidade', 'forma-2')[0]!, { vermelhas, azuis }, 'pt'),
     enunciadoTex: `${vermelhas}\\text{ vermelhas} \\qquad ${azuis}\\text{ azuis}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -187,9 +190,7 @@ function exercicioAoMenosUm(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prob-aomenos-${faces}-${tentativas}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Lançando um dado de ${faces} faces ${tentativas} vezes, qual é a probabilidade de sair ` +
-      'o maior valor ao menos uma vez?',
+    enunciado: textoDoMolde(moldesDe('probabilidade', 'forma-3')[0]!, { faces, tentativas }, 'pt'),
     enunciadoTex: `p = \\frac{1}{${faces}} \\qquad n = ${tentativas}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -242,7 +243,11 @@ function exercicioUniao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prob-uniao-${caso.texto}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Num dado de 6 faces, qual é a probabilidade de sair ${caso.texto}?`,
+    enunciado: textoDoMolde(
+      moldesDe('probabilidade', 'forma-4')[0]!,
+      { expressao1: caso.texto },
+      'pt',
+    ),
     enunciadoTex: `n(\\Omega) = ${faces}`,
     gabarito: resultado,
     resolucao: {
@@ -296,9 +301,11 @@ function exercicioComCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prob-comb-${defeituosas}-${boas}-${retiradas}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um lote tem ${total} peças, das quais ${defeituosas} são defeituosas. Retirando ` +
-      `${retiradas} peças de uma vez, qual é a probabilidade de NENHUMA ser defeituosa?`,
+    enunciado: textoDoMolde(
+      moldesDe('probabilidade', 'forma-5')[0]!,
+      { total, defeituosas, retiradas },
+      'pt',
+    ),
     enunciadoTex: `C_{${boas},${retiradas}} / C_{${total},${retiradas}}`,
     gabarito: resultado,
     resolucao: {

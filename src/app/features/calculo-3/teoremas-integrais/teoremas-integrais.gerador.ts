@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -111,7 +112,7 @@ function divergenteNoPonto(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `teor-div-${monoTex(p)}-${monoTex(q)}-${monoTex(r)}-${x0}${y0}${z0}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule o divergente do campo no ponto (${x0}, ${y0}, ${z0}).`,
+    enunciado: textoDoMolde(moldesDe('teoremas-integrais', 'forma-1')[0]!, { x0, y0, z0 }, 'pt'),
     enunciadoTex: campo3(p, q, r),
     gabarito,
     resolucao: {
@@ -248,7 +249,7 @@ function rotacionalNoPonto(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `teor-rot-${monoTex(pXY)}-${monoTex(qXY)}-${x0}${y0}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule a componente z do rotacional do campo plano no ponto (${x0}, ${y0}).`,
+    enunciado: textoDoMolde(moldesDe('teoremas-integrais', 'forma-2')[0]!, { x0, y0 }, 'pt'),
     enunciadoTex: campo2(pXY, qXY),
     gabarito,
     resolucao: {
@@ -381,7 +382,7 @@ function divergenciaCuboOuEsfera(nivel: Nivel, rng: Rng): Exercicio<number> {
     return {
       id: `teor-fluxo-esfera-${a}${b}${c}-${R}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Pelo teorema da divergência, qual é o fluxo do campo para fora da esfera de raio ${R} centrada na origem? (2 casas decimais)`,
+      enunciado: textoDoMolde(moldesDe('teoremas-integrais', 'forma-3')[0]!, { R }, 'pt'),
       enunciadoTex: campo3(mono(a, 1), mono(b, 0, 1), mono(c, 0, 0, 1)),
       gabarito,
       resolucao: {
@@ -498,9 +499,11 @@ function stokesNoDisco(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `teor-stokes-${alfa}${beta}${extraP}${extraQ}-${R}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Use o teorema de Stokes para calcular a circulação do campo na circunferência x² + y² = ${R * R}, ` +
-      'no plano z = 0, percorrida no sentido anti-horário. (2 casas decimais)',
+    enunciado: textoDoMolde(
+      moldesDe('teoremas-integrais', 'forma-4')[0]!,
+      { expressao1: R * R },
+      'pt',
+    ),
     enunciadoTex: tex,
     gabarito,
     resolucao: {
@@ -561,9 +564,11 @@ function divergenciaCilindro(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `teor-cil-${a}${b}${c}-${R}${H}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Pelo teorema da divergência, qual é o fluxo do campo para fora do cilindro x² + y² ≤ ${R * R}, ` +
-      `0 ≤ z ≤ ${H} (com as tampas)? (2 casas decimais)`,
+    enunciado: textoDoMolde(
+      moldesDe('teoremas-integrais', 'forma-5')[0]!,
+      { expressao1: R * R, H },
+      'pt',
+    ),
     enunciadoTex: campo3(mono(a, 1), mono(b, 0, 1), mono(c, 0, 0, 2)),
     gabarito,
     resolucao: {
@@ -620,9 +625,7 @@ function areaPorGreen(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `teor-areagreen-${a}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'Pelo teorema de Green com o campo F = (−y/2, x/2), a área da região é igual à circulação ' +
-      'na borda. Calcule a área da elipse. (2 casas decimais)',
+    enunciado: textoDoMolde(moldesDe('teoremas-integrais', 'forma-6')[0]!, {}, 'pt'),
     enunciadoTex: `\\frac{x^{2}}{${a * a}} + \\frac{y^{2}}{${b * b}} = 1`,
     gabarito,
     resolucao: {

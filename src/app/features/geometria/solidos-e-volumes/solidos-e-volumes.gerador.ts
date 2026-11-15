@@ -280,8 +280,11 @@ function exercicioEscala(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `sol-escala-${k}-${volume}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('solidos-e-volumes', 'forma-1')[0]!, { v1: numeroEmPortugues(volume), v2: numeroEmPortugues(k) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('solidos-e-volumes', 'forma-1')[0]!,
+      { v1: numeroEmPortugues(volume), v2: numeroEmPortugues(k) },
+      'pt',
+    ),
     enunciadoTex: `V = ${volume} \\qquad k = ${k}`,
     gabarito,
     resolucao: {
@@ -340,8 +343,11 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `sol-alt-${cone ? 'cone' : 'cil'}-${raio}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('solidos-e-volumes', 'forma-2')[0]!, { v1: cone ? 'cone' : 'cilindro', raio, v2: numeroEmPortugues(Number(volume.toFixed(2))) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('solidos-e-volumes', 'forma-2')[0]!,
+      { v1: cone ? 'cone' : 'cilindro', raio, v2: numeroEmPortugues(Number(volume.toFixed(2))) },
+      'pt',
+    ),
     enunciadoTex: `r = ${raio} \\qquad V = ${Number(volume.toFixed(2))}`,
     gabarito: altura,
     resolucao: {

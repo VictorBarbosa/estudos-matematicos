@@ -104,8 +104,7 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
         return {
           id: `afim-taxa-${a}-${b}-${rng.inteiro(0, 9999)}`,
           nivel,
-          enunciado:
-            textoDoMolde(moldesDe('funcao-afim', 'forma-1')[0]!, {  }, 'pt'),
+          enunciado: textoDoMolde(moldesDe('funcao-afim', 'forma-1')[0]!, {}, 'pt'),
           enunciadoTex: funcaoTex,
           gabarito,
           resolucao: {

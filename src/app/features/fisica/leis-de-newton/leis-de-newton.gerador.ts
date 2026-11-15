@@ -69,8 +69,7 @@ function exercicioResultante(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `new-res-${aFavor}-${contra}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('leis-de-newton', 'forma-1')[0]!, { aFavor, contra }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('leis-de-newton', 'forma-1')[0]!, { aFavor, contra }, 'pt'),
     enunciadoTex: `F = ${aFavor}\\,\\text{N} \\qquad f = ${contra}\\,\\text{N} \\qquad m = ${massa}\\,\\text{kg}`,
     gabarito: resultado.resultante,
     resolucao: { resultado: resultado.resultante, passos },
@@ -112,8 +111,7 @@ function exercicioAceleracao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `new-acel-${forca}-${massa}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('leis-de-newton', 'forma-2')[0]!, { forca, massa }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('leis-de-newton', 'forma-2')[0]!, { forca, massa }, 'pt'),
     enunciadoTex: `F_R = ${forca}\\,\\text{N} \\qquad m = ${massa}\\,\\text{kg}`,
     gabarito: resultado.aceleracao,
     resolucao: { resultado: resultado.aceleracao, passos },
@@ -161,8 +159,7 @@ function exercicioNormalPlano(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `new-normal-${massa}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('leis-de-newton', 'forma-3')[0]!, { massa, angulo }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('leis-de-newton', 'forma-3')[0]!, { massa, angulo }, 'pt'),
     enunciadoTex: `m = ${massa}\\,\\text{kg} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito: resultado.normal,
     resolucao: {
@@ -215,8 +212,11 @@ function exercicioAceleracaoPlano(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `new-aplano-${massa}-${angulo}-${mu}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('leis-de-newton', 'forma-4')[0]!, { massa, angulo, v1: mu.toLocaleString('pt-BR') }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('leis-de-newton', 'forma-4')[0]!,
+      { massa, angulo, v1: mu.toLocaleString('pt-BR') },
+      'pt',
+    ),
     enunciadoTex: `m = ${massa} \\qquad \\theta = ${angulo}^\\circ \\qquad \\mu = ${String(mu).replace('.', '{,}')}`,
     gabarito: resultado.aceleracao,
     resolucao: { resultado: resultado.aceleracao, passos },
@@ -264,8 +264,11 @@ function exercicioAnguloCritico(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `new-crit-${mu}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('leis-de-newton', 'forma-5')[0]!, { v1: mu.toLocaleString('pt-BR') }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('leis-de-newton', 'forma-5')[0]!,
+      { v1: mu.toLocaleString('pt-BR') },
+      'pt',
+    ),
     enunciadoTex: `\\mu = ${String(mu).replace('.', '{,}')}`,
     gabarito: resultado,
     resolucao: { resultado, passos },

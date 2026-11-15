@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   acumuladaPadrao,
   escoreZ,
@@ -98,10 +99,19 @@ function doEscore(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `z-${media}-${desvio}-${valor}`,
     nivel,
     rng,
-    enunciado:
-      `${cenario.sujeito} tem ${cenario.grandeza} com média ${media} ${cenario.unidade} e desvio ` +
-      `padrão ${desvio} ${cenario.unidade}. Qual é o escore z de uma leitura de ${valor} ` +
-      `${cenario.unidade}? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('distribuicao-normal', 'forma-1')[0]!,
+      {
+        expressao1: cenario.sujeito,
+        expressao2: cenario.grandeza,
+        media,
+        expressao3: cenario.unidade,
+        desvio,
+        valor,
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `z = \\frac{x - \\mu}{\\sigma}`,
     gabarito,
     resolucao: escoreZComPassos(valor, media, desvio),
@@ -149,10 +159,18 @@ function daAreaAbaixo(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ab-${media}-${desvio}-${valor}`,
     nivel,
     rng,
-    enunciado:
-      `${cenario.sujeito} tem ${cenario.grandeza} normal, com média ${media} ${cenario.unidade} ` +
-      `e desvio ${desvio} ${cenario.unidade}. Que proporção fica ABAIXO de ${valor} ` +
-      `${cenario.unidade}? Responda entre 0 e 1, com 4 casas decimais.`,
+    enunciado: textoDoMolde(
+      moldesDe('distribuicao-normal', 'forma-2')[0]!,
+      {
+        expressao1: cenario.sujeito,
+        expressao2: cenario.grandeza,
+        media,
+        expressao3: cenario.unidade,
+        desvio,
+        valor,
+      },
+      'pt',
+    ),
     enunciadoTex: `P(X < ${valor})`,
     gabarito,
     resolucao: probabilidadeAbaixoComPassos(valor, media, desvio),
@@ -199,10 +217,18 @@ function daAreaAcima(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ac-${media}-${desvio}-${valor}`,
     nivel,
     rng,
-    enunciado:
-      `${cenario.sujeito} tem ${cenario.grandeza} normal, com média ${media} ${cenario.unidade} ` +
-      `e desvio ${desvio} ${cenario.unidade}. Que proporção fica ACIMA de ${valor} ` +
-      `${cenario.unidade}? Responda entre 0 e 1, com 4 casas decimais.`,
+    enunciado: textoDoMolde(
+      moldesDe('distribuicao-normal', 'forma-3')[0]!,
+      {
+        expressao1: cenario.sujeito,
+        expressao2: cenario.grandeza,
+        media,
+        expressao3: cenario.unidade,
+        desvio,
+        valor,
+      },
+      'pt',
+    ),
     enunciadoTex: `P(X > ${valor}) = 1 - \\Phi(z)`,
     gabarito,
     resolucao: {
@@ -254,10 +280,19 @@ function daAreaEntre(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `en-${media}-${desvio}-${de}-${ate}`,
     nivel,
     rng,
-    enunciado:
-      `${cenario.sujeito} tem ${cenario.grandeza} normal, com média ${media} ${cenario.unidade} ` +
-      `e desvio ${desvio} ${cenario.unidade}. Que proporção fica entre ${de} e ${ate} ` +
-      `${cenario.unidade}? Responda entre 0 e 1, com 4 casas decimais.`,
+    enunciado: textoDoMolde(
+      moldesDe('distribuicao-normal', 'forma-4')[0]!,
+      {
+        expressao1: cenario.sujeito,
+        expressao2: cenario.grandeza,
+        media,
+        expressao3: cenario.unidade,
+        desvio,
+        de,
+        ate,
+      },
+      'pt',
+    ),
     enunciadoTex: `P(${de} < X < ${ate})`,
     gabarito,
     resolucao: probabilidadeEntreComPassos(de, ate, media, desvio),
@@ -309,10 +344,19 @@ function doQuantil(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `qt-${media}-${desvio}-${percentil}`,
     nivel,
     rng,
-    enunciado:
-      `${cenario.sujeito} tem ${cenario.grandeza} normal, com média ${media} ${cenario.unidade} ` +
-      `e desvio ${desvio} ${cenario.unidade}. Que valor deixa ${percentil}% das peças abaixo ` +
-      `dele, em ${cenario.unidade}? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('distribuicao-normal', 'forma-5')[0]!,
+      {
+        expressao1: cenario.sujeito,
+        expressao2: cenario.grandeza,
+        media,
+        expressao3: cenario.unidade,
+        desvio,
+        percentil,
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `x = \\mu + z\\sigma`,
     gabarito,
     resolucao: valorDoQuantilComPassos(probabilidade, media, desvio),
@@ -360,10 +404,18 @@ function daRegraEmpirica(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `re-${media}-${desvio}-${desvios}`,
     nivel,
     rng,
-    enunciado:
-      `${cenario.sujeito} tem ${cenario.grandeza} normal, com média ${media} ${cenario.unidade} ` +
-      `e desvio ${desvio} ${cenario.unidade}. Que proporção fica a até ${desvios} desvio(s) ` +
-      `padrão da média? Responda entre 0 e 1, com 4 casas decimais.`,
+    enunciado: textoDoMolde(
+      moldesDe('distribuicao-normal', 'forma-6')[0]!,
+      {
+        expressao1: cenario.sujeito,
+        expressao2: cenario.grandeza,
+        media,
+        expressao3: cenario.unidade,
+        desvio,
+        desvios,
+      },
+      'pt',
+    ),
     enunciadoTex: `P\\left(\\mu - ${desvios}\\sigma < X < \\mu + ${desvios}\\sigma\\right)`,
     gabarito,
     resolucao: regraEmpiricaComPassos(desvios, media, desvio),

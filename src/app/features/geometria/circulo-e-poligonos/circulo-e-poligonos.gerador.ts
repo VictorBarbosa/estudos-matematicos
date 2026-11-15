@@ -88,8 +88,7 @@ function exercicioComprimento(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-comp-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-1')[0]!, { raio }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-1')[0]!, { raio }, 'pt'),
     enunciadoTex: `r = ${raio}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -164,8 +163,11 @@ function exercicioRaioPelaArea(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-raio-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-3')[0]!, { v1: numeroEmPortugues(Number(area.toFixed(2))) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('circulo-e-poligonos', 'forma-3')[0]!,
+      { v1: numeroEmPortugues(Number(area.toFixed(2))) },
+      'pt',
+    ),
     enunciadoTex: `A = ${Number(area.toFixed(2))}`,
     gabarito: raio,
     resolucao: {
@@ -221,8 +223,11 @@ function exercicioSetor(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-setor-${raio}-${anguloGraus}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-4')[0]!, { raio, anguloGraus }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('circulo-e-poligonos', 'forma-4')[0]!,
+      { raio, anguloGraus },
+      'pt',
+    ),
     enunciadoTex: `r = ${raio} \\qquad \\theta = ${anguloGraus}^\\circ`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -275,8 +280,11 @@ function exercicioPoligono(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-poli-${lados}-${base}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-5')[0]!, { lados, base, v1: numeroEmPortugues(Number(apotema.toFixed(3))) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('circulo-e-poligonos', 'forma-5')[0]!,
+      { lados, base, v1: numeroEmPortugues(Number(apotema.toFixed(3))) },
+      'pt',
+    ),
     enunciadoTex: `n = ${lados} \\qquad \\ell = ${base} \\qquad a = ${Number(apotema.toFixed(3))}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -320,8 +328,11 @@ function exercicioArco(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-arco-${raio}-${anguloGraus}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-6')[0]!, { raio, anguloGraus }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('circulo-e-poligonos', 'forma-6')[0]!,
+      { raio, anguloGraus },
+      'pt',
+    ),
     enunciadoTex: `r = ${raio} \\qquad \\theta = ${anguloGraus}^\\circ`,
     gabarito: resultado,
     resolucao: {
@@ -390,8 +401,7 @@ function exercicioCoroa(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-coroa-${menor}-${maior}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-7')[0]!, { menor, maior }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-7')[0]!, { menor, maior }, 'pt'),
     enunciadoTex: `R = ${maior} \\qquad r = ${menor}`,
     gabarito: resultado,
     resolucao: {

@@ -102,7 +102,11 @@ function exercicioSomaInternos(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ang-soma-${lados}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('angulos-e-triangulos', 'forma-1')[0]!, { v1: nomeDe(lados) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('angulos-e-triangulos', 'forma-1')[0]!,
+      { v1: nomeDe(lados) },
+      'pt',
+    ),
     enunciadoTex: `n = ${lados}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -170,7 +174,11 @@ function exercicioAnguloRegular(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ang-reg-${lados}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('angulos-e-triangulos', 'forma-2')[0]!, { v1: nomeDe(lados), casas }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('angulos-e-triangulos', 'forma-2')[0]!,
+      { v1: nomeDe(lados), casas },
+      'pt',
+    ),
     enunciadoTex: `n = ${lados} \\quad \\text{(regular)}`,
     gabarito: resultado,
     resolucao: {
@@ -218,7 +226,11 @@ function exercicioTerceiroAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ang-terceiro-${primeiro}-${segundo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('angulos-e-triangulos', 'forma-3')[0]!, { primeiro, segundo }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('angulos-e-triangulos', 'forma-3')[0]!,
+      { primeiro, segundo },
+      'pt',
+    ),
     enunciadoTex: `\\alpha = ${primeiro}^\\circ \\qquad \\beta = ${segundo}^\\circ`,
     gabarito: resultado,
     resolucao: {
@@ -316,7 +328,11 @@ function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ang-lados-${lados}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('angulos-e-triangulos', 'forma-4')[0]!, { v1: emPortugues(angulo) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('angulos-e-triangulos', 'forma-4')[0]!,
+      { v1: emPortugues(angulo) },
+      'pt',
+    ),
     enunciadoTex: `a_i = ${angulo}^\\circ`,
     gabarito: lados,
     resolucao: {

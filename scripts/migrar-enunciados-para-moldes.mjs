@@ -106,6 +106,17 @@ while ((encontro = padrao.exec(fonte)) !== null) {
     console.log(`  (pulado: template aninhado) ${bruto.slice(0, 70)}`);
     continue;
   }
+  /*
+   * Chave dentro de texto também fica para a mão.
+   *
+   * `${num(x).replace('{,}', ',')}` tem uma `}` que é PARTE de uma string, e o
+   * recorte — que procura a primeira `}` — para ali, no meio da expressão. O
+   * sinal é sempre uma aspa com chave dentro.
+   */
+  if (/\$\{[^}]*['"][^'"]*[{}]/.test(encontro[2])) {
+    console.log(`  (pulado: chave dentro de texto) ${bruto.slice(0, 70)}`);
+    continue;
+  }
   achados.push({ inteiro: encontro[0], ligacao: encontro[1], fim: encontro[3], bruto });
 }
 

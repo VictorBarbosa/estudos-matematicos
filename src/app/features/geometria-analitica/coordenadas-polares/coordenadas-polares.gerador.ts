@@ -80,7 +80,11 @@ function paraCartesiano(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `polar-cart-${r}-${theta}-${pedeX ? 'x' : 'y'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-1')[0]!, { r, theta, v1: pedeX ? 'x' : 'y' }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('coordenadas-polares', 'forma-1')[0]!,
+      { r, theta, v1: pedeX ? 'x' : 'y' },
+      'pt',
+    ),
     enunciadoTex: `(r, \\theta) = (${r},\\; ${theta}^{\\circ}) \\;\\to\\; ${pedeX ? 'x' : 'y'} = \\;?`,
     gabarito,
     resolucao: {
@@ -251,7 +255,7 @@ function circunferencia(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `polar-circ-${d}-${cosseno ? 'c' : 's'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-4')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-4')[0]!, {}, 'pt'),
     enunciadoTex: `r = ${d}${trig}\\theta`,
     gabarito,
     resolucao: {
@@ -312,7 +316,11 @@ function distancia(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `polar-dist-${r1}-${t1}-${r2}-${t2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-5')[0]!, { r1, t1, r2, t2 }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('coordenadas-polares', 'forma-5')[0]!,
+      { r1, t1, r2, t2 },
+      'pt',
+    ),
     enunciadoTex: `P_1 = (${r1},\\; ${t1}^{\\circ}) \\qquad P_2 = (${r2},\\; ${t2}^{\\circ})`,
     gabarito,
     resolucao: {

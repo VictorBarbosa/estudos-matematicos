@@ -45,7 +45,7 @@ export const geradorOndas: GeradorExercicio<number> = {
     const configuracoes = {
       periodo: {
         gabarito: periodo,
-        enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-1')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-1')[0]!, {}, 'pt'),
         passos: [
           {
             descricao: 'O período é 2π dividido pelo coeficiente de x.',
@@ -78,7 +78,7 @@ export const geradorOndas: GeradorExercicio<number> = {
       },
       amplitude: {
         gabarito: Math.abs(amplitude),
-        enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-2')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-2')[0]!, {}, 'pt'),
         passos: [
           {
             descricao: 'A amplitude é o módulo do coeficiente que multiplica o seno.',
@@ -111,7 +111,7 @@ export const geradorOndas: GeradorExercicio<number> = {
       },
       maximo: {
         gabarito: maximo,
-        enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-3')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-3')[0]!, {}, 'pt'),
         passos: [
           { descricao: 'O seno vale no máximo 1.', tex: '\\sin(Bx) \\leq 1' },
           {
@@ -141,7 +141,7 @@ export const geradorOndas: GeradorExercicio<number> = {
       },
       minimo: {
         gabarito: minimo,
-        enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-4')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-4')[0]!, {}, 'pt'),
         passos: [
           { descricao: 'O seno vale no mínimo −1.', tex: '\\sin(Bx) \\geq -1' },
           {

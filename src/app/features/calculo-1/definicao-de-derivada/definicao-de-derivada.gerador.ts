@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -36,9 +37,11 @@ export const geradorDefinicaoDerivada: GeradorExercicio<number> = {
       return {
         id: `defder-secante-${a}${b}${c}-${ponto}-${h}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado:
-          `Qual é a inclinação da reta secante que passa pelos pontos de abscissas ` +
-          `${numeroEmPortugues(ponto)} e ${numeroEmPortugues(ponto + h)}? (2 casas)`,
+        enunciado: textoDoMolde(
+          moldesDe('definicao-de-derivada', 'forma-1')[0]!,
+          { expressao1: numeroEmPortugues(ponto), expressao2: numeroEmPortugues(ponto + h) },
+          'pt',
+        ),
         enunciadoTex: `f(x) = ${p.paraTex()}`,
         gabarito,
         resolucao: {
@@ -96,7 +99,11 @@ export const geradorDefinicaoDerivada: GeradorExercicio<number> = {
     return {
       id: `defder-derivada-${a}${b}${c}-${ponto}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Usando a definição, calcule f'(${numeroEmPortugues(ponto)}).`,
+      enunciado: textoDoMolde(
+        moldesDe('definicao-de-derivada', 'forma-2')[0]!,
+        { expressao1: numeroEmPortugues(ponto) },
+        'pt',
+      ),
       enunciadoTex: `f(x) = ${p.paraTex()}`,
       gabarito,
       resolucao: {

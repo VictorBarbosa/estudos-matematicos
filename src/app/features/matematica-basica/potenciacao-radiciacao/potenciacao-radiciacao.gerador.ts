@@ -109,7 +109,7 @@ function exercicioProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: identificador('produto', rng),
     nivel,
-    enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-1')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: `${potenciaParaTex({ base, expoente: m })} \\cdot ${potenciaParaTex({ base, expoente: n })} = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -166,7 +166,7 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: identificador('quociente', rng),
     nivel,
-    enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-2')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-2')[0]!, {}, 'pt'),
     enunciadoTex: `\\frac{${potenciaParaTex({ base, expoente: m })}}{${potenciaParaTex({ base, expoente: n })}} = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -219,7 +219,7 @@ function exercicioPotenciaDePotencia(nivel: Nivel, rng: Rng): Exercicio<number> 
   return {
     id: identificador('potencia-de-potencia', rng),
     nivel,
-    enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-3')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-3')[0]!, {}, 'pt'),
     enunciadoTex: `\\left(${potenciaParaTex({ base, expoente: m })}\\right)^{${n}} = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -261,7 +261,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
     return {
       id: identificador('raiz-exata', rng),
       nivel,
-      enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-4')[0]!, {  }, 'pt'),
+      enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-4')[0]!, {}, 'pt'),
       enunciadoTex: `\\sqrt{${radicando}} = \\;?`,
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },

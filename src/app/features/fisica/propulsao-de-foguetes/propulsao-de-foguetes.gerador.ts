@@ -59,8 +59,11 @@ function exercicioEmpuxo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prop-emp-${vazao}-${exaustao}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-1')[0]!, { vazao, exaustao }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('propulsao-de-foguetes', 'forma-1')[0]!,
+      { vazao, exaustao },
+      'pt',
+    ),
     enunciadoTex: `\\dot{m} = ${vazao}\\,\\text{kg/s} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
     gabarito,
     resolucao: {
@@ -103,8 +106,7 @@ function exercicioImpulsoEspecifico(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prop-isp-${exaustao}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-2')[0]!, { exaustao }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-2')[0]!, { exaustao }, 'pt'),
     enunciadoTex: `v_e = ${exaustao}\\,\\text{m/s} \\qquad g_0 = 9{,}81\\,\\text{m/s}^{2}`,
     gabarito: resultado,
     resolucao: {
@@ -162,8 +164,11 @@ function exercicioDeltaV(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prop-dv-${razao}-${exaustao}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-3')[0]!, { razao, exaustao }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('propulsao-de-foguetes', 'forma-3')[0]!,
+      { razao, exaustao },
+      'pt',
+    ),
     enunciadoTex: `\\frac{m_0}{m_f} = ${razao} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -212,8 +217,11 @@ function exercicioRazaoMassas(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prop-rm-${deltaVKm}-${exaustao}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-4')[0]!, { v1: deltaVKm.toLocaleString('pt-BR'), exaustao }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('propulsao-de-foguetes', 'forma-4')[0]!,
+      { v1: deltaVKm.toLocaleString('pt-BR'), exaustao },
+      'pt',
+    ),
     enunciadoTex: `\\Delta v = ${String(deltaVKm).replace('.', '{,}')}\\,\\text{km/s} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
     gabarito: resultado,
     resolucao: {
@@ -279,8 +287,14 @@ function exercicioFracaoCombustivel(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prop-frac-${massaInicial}-${razao}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-5')[0]!, { v1: (massaInicial / 1000).toLocaleString('pt-BR'), v2: (massaFinal / 1000).toLocaleString('pt-BR') }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('propulsao-de-foguetes', 'forma-5')[0]!,
+      {
+        v1: (massaInicial / 1000).toLocaleString('pt-BR'),
+        v2: (massaFinal / 1000).toLocaleString('pt-BR'),
+      },
+      'pt',
+    ),
     enunciadoTex: `m_0 = ${massaInicial}\\,\\text{kg} \\qquad m_f = ${Number(massaFinal.toFixed(0))}\\,\\text{kg}`,
     gabarito,
     resolucao: {

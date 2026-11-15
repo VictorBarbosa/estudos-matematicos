@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { comparacaoNumericaComPassos, eulerComPassos, rungeKutta4 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { exercicioNewton } from '@features/calculo-4/metodos-numericos/metodos-numericos.newton';
@@ -87,9 +88,11 @@ function doEuler(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `eu-${k}-${y0}-${passo}-${quantos}`,
     nivel,
     rng,
-    enunciado:
-      `Aplique o método de Euler com passo h = ${String(passo).replace('.', ',')} e ${quantos} ` +
-      `passos, partindo de y(0) = ${y0}. Qual é o valor aproximado obtido? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('metodos-numericos', 'forma-1')[0]!,
+      { expressao1: String(passo).replace('.', ','), quantos, y0, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `y' = ${formatar(k)}y, \\qquad y_{n+1} = y_{n} + h\\,f(t_{n},\\, y_{n})`,
     gabarito: y,
     resolucao: eulerComPassos(k, y0, passo, quantos),
@@ -143,9 +146,11 @@ function doErroDeEuler(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `er-${k}-${y0}-${passo}-${quantos}`,
     nivel,
     rng,
-    enunciado:
-      `Com passo h = ${String(passo).replace('.', ',')} e ${quantos} passos, de quanto é o erro ` +
-      `do método de Euler frente à solução exata, partindo de y(0) = ${y0}? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('metodos-numericos', 'forma-2')[0]!,
+      { expressao1: String(passo).replace('.', ','), quantos, y0, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `y' = ${formatar(k)}y, \\qquad y(t) = ${y0}e^{${formatar(k)}t}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: eulerComPassos(k, y0, passo, quantos).passos },
@@ -190,9 +195,11 @@ function doRungeKutta(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `rk-${k}-${y0}-${passo}-${quantos}`,
     nivel,
     rng,
-    enunciado:
-      `Aplique Runge-Kutta de quarta ordem com passo h = ${String(passo).replace('.', ',')} e ` +
-      `${quantos} passos, partindo de y(0) = ${y0}. Qual é o valor obtido? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('metodos-numericos', 'forma-3')[0]!,
+      { expressao1: String(passo).replace('.', ','), quantos, y0, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `y' = ${formatar(k)}y, \\qquad y_{n+1} = y_{n} + \\frac{h}{6}\\left(k_{1} + 2k_{2} + 2k_{3} + k_{4}\\right)`,
     gabarito,
     resolucao: {
@@ -259,10 +266,11 @@ function daOrdemDoMetodo(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `or-${k}-${y0}-${passo}-${tempo}`,
     nivel,
     rng,
-    enunciado:
-      `Com Euler, integre de 0 a ${tempo} partindo de y(0) = ${y0}, primeiro com passo ` +
-      `${String(passo).replace('.', ',')} e depois com metade dele. Por qual fator o erro foi ` +
-      `dividido? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('metodos-numericos', 'forma-4')[0]!,
+      { tempo, y0, expressao1: String(passo).replace('.', ','), PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `y' = ${formatar(k)}y`,
     gabarito,
     resolucao: {

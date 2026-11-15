@@ -48,7 +48,11 @@ export const geradorIdentidades: GeradorExercicio<number> = {
       return {
         id: `identidades-fundamental-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('identidades-trigonometricas', 'forma-1')[0]!, { v1: numeroEmPortugues(seno) }, 'pt'),
+        enunciado: textoDoMolde(
+          moldesDe('identidades-trigonometricas', 'forma-1')[0]!,
+          { v1: numeroEmPortugues(seno) },
+          'pt',
+        ),
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\quad \\Rightarrow \\quad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {
@@ -111,7 +115,11 @@ export const geradorIdentidades: GeradorExercicio<number> = {
       return {
         id: `identidades-duplo-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('identidades-trigonometricas', 'forma-2')[0]!, { v1: 2 * graus }, 'pt'),
+        enunciado: textoDoMolde(
+          moldesDe('identidades-trigonometricas', 'forma-2')[0]!,
+          { v1: 2 * graus },
+          'pt',
+        ),
         enunciadoTex: `\\sin ${2 * graus}° = \\;?`,
         gabarito,
         resolucao: {
@@ -166,7 +174,11 @@ export const geradorIdentidades: GeradorExercicio<number> = {
     return {
       id: `identidades-soma-${a}-${b}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: textoDoMolde(moldesDe('identidades-trigonometricas', 'forma-3')[0]!, { a, b }, 'pt'),
+      enunciado: textoDoMolde(
+        moldesDe('identidades-trigonometricas', 'forma-3')[0]!,
+        { a, b },
+        'pt',
+      ),
       enunciadoTex: `\\sin(${a}° + ${b}°) = \\;?`,
       gabarito,
       resolucao: {

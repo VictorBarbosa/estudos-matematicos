@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   linearPrimeiraOrdemComPassos,
   meiaVidaComPassos,
@@ -84,9 +85,7 @@ function daSeparavel(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `sep-${k}-${y0}-${t}`,
     nivel,
     rng,
-    enunciado:
-      `Uma grandeza obedece a esta equação, com valor inicial ${y0}. Quanto ela vale em ` +
-      `t = ${t}? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('edo-primeira-ordem', 'forma-1')[0]!, { y0, t, PEDIDO }, 'pt'),
     enunciadoTex: `\\frac{dy}{dt} = ${formatar(k)}y, \\qquad y(0) = ${y0}`,
     gabarito,
     resolucao: separavelExponencialComPassos(k, y0, t),
@@ -130,9 +129,7 @@ function daMeiaVida(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `mv-${k}`,
     nivel,
     rng,
-    enunciado:
-      `Uma substância decai segundo esta equação, com t em anos. Qual é a meia-vida dela, em ` +
-      `anos? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('edo-primeira-ordem', 'forma-2')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: `\\frac{dy}{dt} = ${formatar(k)}y`,
     gabarito,
     resolucao: meiaVidaComPassos(k),
@@ -182,7 +179,7 @@ function daLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `lin-${p}-${q}-${y0}-${t}`,
     nivel,
     rng,
-    enunciado: `Resolva esta equação com y(0) igual a ${y0} e calcule y(${t}). ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('edo-primeira-ordem', 'forma-3')[0]!, { y0, t, PEDIDO }, 'pt'),
     enunciadoTex: `y' + ${formatar(p)}y = ${formatar(q)}, \\qquad y(0) = ${y0}`,
     gabarito,
     resolucao: linearPrimeiraOrdemComPassos(p, q, y0, t),

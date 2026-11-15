@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   ExpoenteRacional,
   Resolucao,
@@ -150,8 +151,7 @@ function noInfinito(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
     chave: `inf-${a}-${p.num}-${p.den}`,
     nivel,
     rng,
-    enunciado:
-      'Calcule a integral imprópria, ou escreva "diverge". Se houver valor, use 3 casas decimais.',
+    enunciado: textoDoMolde(moldesDe('integrais-improprias', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: `\\int_{${a}}^{\\infty} ${integrandoPotenciaTex(p)}\\,dx`,
     gabarito,
     resolucao,
@@ -183,9 +183,7 @@ function naOrigem(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
     chave: `org-${b}-${p.num}-${p.den}`,
     nivel,
     rng,
-    enunciado:
-      'O integrando explode em zero. Calcule a integral, ou escreva "diverge". ' +
-      'Se houver valor, use 3 casas decimais.',
+    enunciado: textoDoMolde(moldesDe('integrais-improprias', 'forma-2')[0]!, {}, 'pt'),
     enunciadoTex: `\\int_{0}^{${b}} ${integrandoPotenciaTex(p)}\\,dx`,
     gabarito,
     resolucao,
@@ -211,8 +209,7 @@ function daExponencial(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
     chave: `exp-${a}-${k}`,
     nivel,
     rng,
-    enunciado:
-      'Calcule a integral imprópria, ou escreva "diverge". Se houver valor, use 3 casas decimais.',
+    enunciado: textoDoMolde(moldesDe('integrais-improprias', 'forma-3')[0]!, {}, 'pt'),
     enunciadoTex: `\\int_{${a}}^{\\infty} e^{-${k}x}\\,dx`,
     gabarito,
     resolucao,
@@ -263,8 +260,7 @@ function doArcotangente(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
     chave: `arc-${a}`,
     nivel,
     rng,
-    enunciado:
-      'Calcule a integral imprópria, ou escreva "diverge". Se houver valor, use 3 casas decimais.',
+    enunciado: textoDoMolde(moldesDe('integrais-improprias', 'forma-4')[0]!, {}, 'pt'),
     enunciadoTex: `\\int_{${a}}^{\\infty} \\frac{dx}{1 + x^{2}}`,
     gabarito,
     resolucao,
@@ -318,9 +314,7 @@ function daComparacao(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
     chave: `cmp-${caso.chave}-${a}`,
     nivel,
     rng,
-    enunciado:
-      'Este integrando não tem primitiva elementar. Decida pelo teste da comparação e ' +
-      'responda "converge" ou "diverge".',
+    enunciado: textoDoMolde(moldesDe('integrais-improprias', 'forma-5')[0]!, {}, 'pt'),
     enunciadoTex: `\\int_{${a}}^{\\infty} ${caso.tex}\\,dx`,
     gabarito: gabarito,
     resolucao: {

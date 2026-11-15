@@ -54,7 +54,7 @@ export const geradorPontoReta: GeradorExercicio<number> = {
       return {
         id: `ponto-reta-dist-${a.x}${a.y}-${b.x}${b.y}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('ponto-e-reta', 'forma-1')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('ponto-e-reta', 'forma-1')[0]!, {}, 'pt'),
         enunciadoTex: par,
         gabarito,
         resolucao: {
@@ -103,7 +103,7 @@ export const geradorPontoReta: GeradorExercicio<number> = {
       return {
         id: `ponto-reta-medio-${a.x}${b.x}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('ponto-e-reta', 'forma-2')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('ponto-e-reta', 'forma-2')[0]!, {}, 'pt'),
         enunciadoTex: par,
         gabarito,
         resolucao: {
@@ -152,7 +152,7 @@ export const geradorPontoReta: GeradorExercicio<number> = {
     return {
       id: `ponto-reta-incl-${a.x}${a.y}-${b.x}${b.y}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: textoDoMolde(moldesDe('ponto-e-reta', 'forma-3')[0]!, {  }, 'pt'),
+      enunciado: textoDoMolde(moldesDe('ponto-e-reta', 'forma-3')[0]!, {}, 'pt'),
       enunciadoTex: par,
       gabarito,
       resolucao: {

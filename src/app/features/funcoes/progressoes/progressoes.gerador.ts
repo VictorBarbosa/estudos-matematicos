@@ -71,7 +71,11 @@ function exercicioTermo(geometrica: boolean, nivel: Nivel, rng: Rng): Exercicio<
   return {
     id: `prog-termo-${nome}-${primeiro}-${razao}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('progressoes', 'forma-1')[0]!, { nome, primeiro, razao, n }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('progressoes', 'forma-1')[0]!,
+      { nome, primeiro, razao, n },
+      'pt',
+    ),
     enunciadoTex: `a_1 = ${primeiro} \\qquad ${letraRazao} = ${razao} \\qquad n = ${n}`,
     gabarito,
     resolucao: {
@@ -144,8 +148,11 @@ function exercicioSoma(geometrica: boolean, nivel: Nivel, rng: Rng): Exercicio<n
   return {
     id: `prog-soma-${nome}-${primeiro}-${razao}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('progressoes', 'forma-2')[0]!, { nome, primeiro, razao, n }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('progressoes', 'forma-2')[0]!,
+      { nome, primeiro, razao, n },
+      'pt',
+    ),
     enunciadoTex: `a_1 = ${primeiro} \\qquad ${letraRazao} = ${razao} \\qquad n = ${n}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -224,7 +231,7 @@ function exercicioSomaInfinita(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prog-inf-${primeiro}-${numerador}_${denominador}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('progressoes', 'forma-3')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('progressoes', 'forma-3')[0]!, {}, 'pt'),
     enunciadoTex: `a_1 = ${primeiro} \\qquad q = ${razaoTex}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },

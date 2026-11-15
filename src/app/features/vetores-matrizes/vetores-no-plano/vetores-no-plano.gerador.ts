@@ -119,8 +119,11 @@ function exercicioComponente(eixo: 'x' | 'y', nivel: Nivel, rng: Rng): Exercicio
   return {
     id: `vet-comp-${eixo}-${comprimento}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('vetores-no-plano', 'forma-2')[0]!, { comprimento, angulo, v1: eixo === 'x' ? 'horizontal' : 'vertical' }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('vetores-no-plano', 'forma-2')[0]!,
+      { comprimento, angulo, v1: eixo === 'x' ? 'horizontal' : 'vertical' },
+      'pt',
+    ),
     enunciadoTex: `|\\vec{v}| = ${comprimento} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito,
     resolucao: {
@@ -176,8 +179,11 @@ function exercicioModuloDaSoma(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `vet-soma-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('vetores-no-plano', 'forma-3')[0]!, { v1: a.x, v2: a.y, v3: b.x, v4: b.y }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('vetores-no-plano', 'forma-3')[0]!,
+      { v1: a.x, v2: a.y, v3: b.x, v4: b.y },
+      'pt',
+    ),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito,
     resolucao: {
@@ -234,8 +240,7 @@ function exercicioDirecao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `vet-dir-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('vetores-no-plano', 'forma-4')[0]!, { x, y }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('vetores-no-plano', 'forma-4')[0]!, { x, y }, 'pt'),
     enunciadoTex: `\\vec{v} = (${x},\\; ${y})`,
     gabarito: resultado,
     resolucao: {

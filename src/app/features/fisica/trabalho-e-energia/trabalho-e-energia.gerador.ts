@@ -66,8 +66,11 @@ function exercicioTrabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ene-trab-${forca}-${deslocamento}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('trabalho-e-energia', 'forma-1')[0]!, { forca, angulo, deslocamento }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('trabalho-e-energia', 'forma-1')[0]!,
+      { forca, angulo, deslocamento },
+      'pt',
+    ),
     enunciadoTex: `F = ${forca}\\,\\text{N} \\qquad d = ${deslocamento}\\,\\text{m} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -107,8 +110,11 @@ function exercicioCinetica(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ene-cin-${massa}-${velocidade}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('trabalho-e-energia', 'forma-2')[0]!, { massa, velocidade }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('trabalho-e-energia', 'forma-2')[0]!,
+      { massa, velocidade },
+      'pt',
+    ),
     enunciadoTex: `m = ${massa}\\,\\text{kg} \\qquad v = ${velocidade}\\,\\text{m/s}`,
     gabarito: resultado,
     resolucao: {
@@ -170,8 +176,7 @@ function exercicioVelocidadeQueda(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ene-queda-${massa}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('trabalho-e-energia', 'forma-3')[0]!, { massa, altura }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('trabalho-e-energia', 'forma-3')[0]!, { massa, altura }, 'pt'),
     enunciadoTex: `m = ${massa}\\,\\text{kg} \\qquad h = ${altura}\\,\\text{m}`,
     gabarito: resultado.velocidadeFinal,
     resolucao: { resultado: resultado.velocidadeFinal, passos },
@@ -220,8 +225,11 @@ function exercicioPotencia(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ene-pot-${trabalho}-${tempo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('trabalho-e-energia', 'forma-4')[0]!, { trabalho, tempo }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('trabalho-e-energia', 'forma-4')[0]!,
+      { trabalho, tempo },
+      'pt',
+    ),
     enunciadoTex: `W = ${trabalho}\\,\\text{J} \\qquad \\Delta t = ${tempo}\\,\\text{s}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -260,8 +268,7 @@ function exercicioAlturaMaxima(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ene-altura-${velocidade}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('trabalho-e-energia', 'forma-5')[0]!, { velocidade }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('trabalho-e-energia', 'forma-5')[0]!, { velocidade }, 'pt'),
     enunciadoTex: `v_0 = ${velocidade}\\,\\text{m/s} \\qquad v_{topo} = 0`,
     gabarito: resultado,
     resolucao: {

@@ -121,8 +121,17 @@ function euler(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-euler-${p.v}-${p.a}-${p.f}-${falta}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('poliedros', 'forma-1')[0]!, { v1: p[dados[0]!], v2: nomes[dados[0]!], v3: p[dados[1]!], v4: nomes[dados[1]!], v5: nomes[falta] }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('poliedros', 'forma-1')[0]!,
+      {
+        v1: p[dados[0]!],
+        v2: nomes[dados[0]!],
+        v3: p[dados[1]!],
+        v4: nomes[dados[1]!],
+        v5: nomes[falta],
+      },
+      'pt',
+    ),
     enunciadoTex: `V - A + F = 2`,
     gabarito,
     resolucao: {
@@ -193,7 +202,11 @@ function prismaPiramide(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-pp-${solido}-${n}-${pede}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('poliedros', 'forma-2')[0]!, { v1: nomes[pede], v2: ePrisma ? 'um' : 'uma', solido, v3: NOME_BASE[n] }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('poliedros', 'forma-2')[0]!,
+      { v1: nomes[pede], v2: ePrisma ? 'um' : 'uma', solido, v3: NOME_BASE[n] },
+      'pt',
+    ),
     enunciadoTex: `n = ${n} \\text{ lados na base}`,
     gabarito,
     resolucao: {
@@ -261,7 +274,11 @@ function facesIguais(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-iguais-${k}-${f}-${pedeV ? 'v' : 'a'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('poliedros', 'forma-3')[0]!, { f, nomeFace, v1: pedeV ? 'vértices' : 'arestas' }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('poliedros', 'forma-3')[0]!,
+      { f, nomeFace, v1: pedeV ? 'vértices' : 'arestas' },
+      'pt',
+    ),
     enunciadoTex: `F = ${f} \\qquad \\text{cada face com } ${k} \\text{ lados}`,
     gabarito,
     resolucao: {
@@ -483,8 +500,7 @@ function grau(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-grau-${o.f}-${o.k}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('poliedros', 'forma-5')[0]!, { v1: o.f, v2: o.k }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('poliedros', 'forma-5')[0]!, { v1: o.f, v2: o.k }, 'pt'),
     enunciadoTex: `F = ${o.f} \\qquad \\text{${o.k} arestas por vértice}`,
     gabarito: v,
     resolucao: {

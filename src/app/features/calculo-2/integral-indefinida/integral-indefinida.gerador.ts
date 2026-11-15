@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -37,7 +38,11 @@ export const geradorIndefinida: GeradorExercicio<number> = {
       return {
         id: `indef-const-${a}${b}${c}-${ponto}${condicao}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Qual é o valor da constante C, sabendo que F(${ponto}) = ${condicao}?`,
+        enunciado: textoDoMolde(
+          moldesDe('integral-indefinida', 'forma-1')[0]!,
+          { ponto, condicao },
+          'pt',
+        ),
         enunciadoTex: `F(x) = \\int \\left(${integrando.paraTex()}\\right) dx`,
         gabarito,
         resolucao: {
@@ -91,7 +96,7 @@ export const geradorIndefinida: GeradorExercicio<number> = {
       return {
         id: `indef-valor-${a}${b}${c}-${ponto}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Tomando C = 0, qual é o valor de F(${ponto})?`,
+        enunciado: textoDoMolde(moldesDe('integral-indefinida', 'forma-2')[0]!, { ponto }, 'pt'),
         enunciadoTex: `F(x) = \\int \\left(${integrando.paraTex()}\\right) dx`,
         gabarito,
         resolucao: {
@@ -138,7 +143,7 @@ export const geradorIndefinida: GeradorExercicio<number> = {
     return {
       id: `indef-coef-${a}${b}${c}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Integre e informe o coeficiente de x³ na primitiva.',
+      enunciado: textoDoMolde(moldesDe('integral-indefinida', 'forma-3')[0]!, {}, 'pt'),
       enunciadoTex: `\\int \\left(${integrando.paraTex()}\\right) dx`,
       gabarito,
       resolucao: {

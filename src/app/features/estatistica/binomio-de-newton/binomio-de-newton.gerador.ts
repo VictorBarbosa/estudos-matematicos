@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { combinacoes } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -78,7 +79,7 @@ function pascal(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `binomio-pascal-${n}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Quanto vale C(${n}, ${k}), o número na linha ${n}, posição ${k} do triângulo de Pascal (contando do 0)?`,
+    enunciado: textoDoMolde(moldesDe('binomio-de-newton', 'forma-1')[0]!, { n, k }, 'pt'),
     enunciadoTex: `\\binom{${n}}{${k}} = \\;?`,
     gabarito,
     resolucao: {
@@ -129,7 +130,7 @@ function somaCoeficientes(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `binomio-soma-${a}${b}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Qual é a soma de todos os coeficientes do desenvolvimento?',
+    enunciado: textoDoMolde(moldesDe('binomio-de-newton', 'forma-2')[0]!, {}, 'pt'),
     enunciadoTex: `\\left(${binomioTex(a, b)}\\right)^{${n}}`,
     gabarito,
     resolucao: {
@@ -182,7 +183,11 @@ function coeficiente(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `binomio-coef-${a}${b}-${n}-${p}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o coeficiente de x${p === 1 ? '' : elevado(p)} no desenvolvimento?`,
+    enunciado: textoDoMolde(
+      moldesDe('binomio-de-newton', 'forma-3')[0]!,
+      { expressao1: p === 1 ? '' : elevado(p) },
+      'pt',
+    ),
     enunciadoTex: `\\left(${binomioTex(a, b)}\\right)^{${n}}`,
     gabarito,
     resolucao: {
@@ -250,7 +255,7 @@ function termo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `binomio-termo-${b}-${n}-${ordem}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `No desenvolvimento em potências decrescentes de x, qual é o coeficiente do ${ordem}º termo?`,
+    enunciado: textoDoMolde(moldesDe('binomio-de-newton', 'forma-4')[0]!, { ordem }, 'pt'),
     enunciadoTex: `\\left(x ${b >= 0 ? '+' : '-'} ${Math.abs(b)}\\right)^{${n}}`,
     gabarito,
     resolucao: {
@@ -305,7 +310,7 @@ function independente(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `binomio-indep-${q}-${c}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Qual é o termo independente de x (o termo sem x) no desenvolvimento?',
+    enunciado: textoDoMolde(moldesDe('binomio-de-newton', 'forma-5')[0]!, {}, 'pt'),
     enunciadoTex: `\\left(${primeiro} ${c >= 0 ? '+' : '-'} \\frac{${Math.abs(c)}}{x}\\right)^{${n}}`,
     gabarito,
     resolucao: {

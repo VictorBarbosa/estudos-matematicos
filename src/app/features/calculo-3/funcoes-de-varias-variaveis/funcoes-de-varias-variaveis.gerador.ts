@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Quadrica,
   avaliarQuadrica,
@@ -88,7 +89,11 @@ function daAvaliacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `av-${q.a}${q.b}${q.c}${q.d}${q.e}${q.f0}-${x}-${y}`,
     nivel,
     rng,
-    enunciado: `Quanto vale esta função no ponto (${x}, ${y})? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('funcoes-de-varias-variaveis', 'forma-1')[0]!,
+      { x, y, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {
@@ -149,7 +154,11 @@ function daCurvaDeNivel(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `nv-${q.a}${q.b}${q.c}${q.d}${q.e}${q.f0}-${x}-${y}`,
     nivel,
     rng,
-    enunciado: `Qual é o valor de k da curva de nível que passa pelo ponto (${x}, ${y})? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('funcoes-de-varias-variaveis', 'forma-2')[0]!,
+      { x, y, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {
@@ -214,9 +223,11 @@ function doCorte(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ct-${q.a}${q.b}${q.c}${q.d}${q.e}${q.f0}-${y0}`,
     nivel,
     rng,
-    enunciado:
-      `Cortando a superfície com o plano y = ${y0}, sobra uma parábola em x. Qual é a abscissa ` +
-      `do vértice dessa parábola? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('funcoes-de-varias-variaveis', 'forma-3')[0]!,
+      { y0, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: corteVerticalComPassos(q, y0),

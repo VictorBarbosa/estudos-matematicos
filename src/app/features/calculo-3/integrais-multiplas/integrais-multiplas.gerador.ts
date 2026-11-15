@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Quadrica,
   avaliarQuadrica,
@@ -168,9 +169,11 @@ function daMedia(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `md-${q.a}${q.b}${q.c}${q.d}${q.e}${q.f0}-${x0}${x1}${y0}${y1}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é o valor médio desta função sobre o retângulo de ${x0} a ${x1} em x e de ${y0} a ` +
-      `${y1} em y? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('integrais-multiplas', 'forma-1')[0]!,
+      { x0, x1, y0, y1, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\bar{f} = \\frac{1}{A}\\iint_{R} f\\,dA`,
     gabarito,
     resolucao: {
@@ -233,9 +236,11 @@ function daPolar(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `pl-${constante}-${raio}-${doze}`,
     nivel,
     rng,
-    enunciado:
-      `Integre a função constante ${constante} sobre um setor circular de raio ${raio} e ` +
-      `ângulo de ${doze} doze avos de volta, usando coordenadas polares. ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('integrais-multiplas', 'forma-2')[0]!,
+      { constante, raio, doze, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\iint_{S} ${constante}\\,dA, \\quad dA = r\\,dr\\,d\\theta`,
     gabarito,
     resolucao,

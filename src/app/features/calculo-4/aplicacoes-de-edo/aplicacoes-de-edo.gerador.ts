@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   linearPrimeiraOrdemComPassos,
   meiaVidaComPassos,
@@ -81,10 +82,11 @@ function doResfriamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `res-${ambiente}-${inicial}-${k}-${t}`,
     nivel,
     rng,
-    enunciado:
-      `Um corpo a ${inicial} °C é deixado num ambiente a ${ambiente} °C, e sua temperatura ` +
-      `obedece à lei de resfriamento de Newton com constante ${String(k).replace('.', ',')} por ` +
-      `minuto. Qual é a temperatura em ${t} minutos, em °C? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('aplicacoes-de-edo', 'forma-1')[0]!,
+      { inicial, ambiente, expressao1: String(k).replace('.', ','), t, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\frac{dT}{dt} = -${formatar(k)}\\left(T - ${ambiente}\\right)`,
     gabarito,
     resolucao: linearPrimeiraOrdemComPassos(k, k * ambiente, inicial, t),
@@ -135,9 +137,11 @@ function doDecaimento(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `dec-${meiaVida}-${inicial}-${t}`,
     nivel,
     rng,
-    enunciado:
-      `Uma amostra de ${inicial} g tem meia-vida de ${meiaVida} anos. Quanto resta depois de ` +
-      `${t} anos, em g? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('aplicacoes-de-edo', 'forma-2')[0]!,
+      { inicial, meiaVida, t, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\frac{dm}{dt} = -km, \\qquad k = \\frac{\\ln 2}{${meiaVida}}`,
     gabarito,
     resolucao: {
@@ -199,10 +203,17 @@ function doCircuito(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `rl-${resistencia}-${indutancia}-${tensao}-${t}`,
     nivel,
     rng,
-    enunciado:
-      `Num circuito RL com R = ${resistencia} Ω, L = ${String(indutancia).replace('.', ',')} H e ` +
-      `tensão de ${tensao} V, ligado em t = 0 com corrente inicial nula, qual é a corrente em ` +
-      `t = ${String(t).replace('.', ',')} s, em A? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('aplicacoes-de-edo', 'forma-3')[0]!,
+      {
+        resistencia,
+        expressao1: String(indutancia).replace('.', ','),
+        tensao,
+        expressao2: String(t).replace('.', ','),
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `L\\frac{di}{dt} + Ri = V`,
     gabarito,
     resolucao: linearPrimeiraOrdemComPassos(resistencia / indutancia, tensao / indutancia, 0, t),
@@ -257,10 +268,18 @@ function daMola(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `mol-${massa}-${amortecimento}-${rigidez}-${x0}-${t}`,
     nivel,
     rng,
-    enunciado:
-      `Uma massa de ${massa} kg presa a uma mola de constante ${rigidez} N/m, com amortecimento ` +
-      `${amortecimento} N·s/m, é solta do repouso a ${String(x0).replace('.', ',')} m do ` +
-      `equilíbrio. Qual é a posição em t = ${String(t).replace('.', ',')} s, em m? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('aplicacoes-de-edo', 'forma-4')[0]!,
+      {
+        massa,
+        rigidez,
+        amortecimento,
+        expressao1: String(x0).replace('.', ','),
+        expressao2: String(t).replace('.', ','),
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `m\\ddot{x} + c\\dot{x} + kx = 0`,
     gabarito,
     resolucao: segundaOrdemComPassos(b, c, x0, 0, t),
@@ -314,10 +333,11 @@ function doTanque(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `tq-${volume}-${vazao}-${concentracao}-${inicial}-${t}`,
     nivel,
     rng,
-    enunciado:
-      `Um tanque com ${volume} L de água recebe ${vazao} L/min de solução a ` +
-      `${String(concentracao).replace('.', ',')} kg/L e escoa na mesma vazão, bem misturado. ` +
-      `Com ${inicial} kg de sal no início, quanto sal há em ${t} min, em kg? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('aplicacoes-de-edo', 'forma-5')[0]!,
+      { volume, vazao, expressao1: String(concentracao).replace('.', ','), inicial, t, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\frac{dS}{dt} = ${formatar(q)} - \\frac{${vazao}}{${volume}}S`,
     gabarito,
     resolucao: linearPrimeiraOrdemComPassos(p, q, inicial, t),

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, analisarMovimentoComPassos, taxaMediaComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -205,9 +206,7 @@ function exercicioDeParada(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `taxa-parada-${primeira}-${segunda}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'A posição de um corpo, em metros, é dada em função do tempo em segundos, com t ≥ 0. ' +
-      'Em que instante ele para pela primeira vez?',
+    enunciado: textoDoMolde(moldesDe('taxa-de-variacao', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: `s(t) = ${s.paraTex('t')}`,
     gabarito: primeira,
     resolucao: {

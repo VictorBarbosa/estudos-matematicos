@@ -67,8 +67,11 @@ export const geradorTriangulo: GeradorExercicio<number> = {
     return {
       id: `triangulo-${anguloGraus}-${hipotenusa}-${procurado}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        textoDoMolde(moldesDe('triangulo-retangulo', 'forma-1')[0]!, { hipotenusa, anguloGraus, nomeLado }, 'pt'),
+      enunciado: textoDoMolde(
+        moldesDe('triangulo-retangulo', 'forma-1')[0]!,
+        { hipotenusa, anguloGraus, nomeLado },
+        'pt',
+      ),
       enunciadoTex: `h = ${hipotenusa} \\qquad \\theta = ${anguloGraus}° \\qquad \\text{cateto } ${nomeLado} = \\;?`,
       gabarito,
       resolucao: {
@@ -148,8 +151,11 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `triangulo-angulo-${oposto}-${adjacente}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('triangulo-retangulo', 'forma-2')[0]!, { oposto, adjacente }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('triangulo-retangulo', 'forma-2')[0]!,
+      { oposto, adjacente },
+      'pt',
+    ),
     enunciadoTex: `\\text{oposto} = ${oposto} \\qquad \\text{adjacente} = ${adjacente} \\qquad \\theta = \\;?`,
     gabarito,
     resolucao: {

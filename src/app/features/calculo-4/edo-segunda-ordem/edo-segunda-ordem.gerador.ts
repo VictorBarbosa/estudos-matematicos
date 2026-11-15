@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   avaliarSegundaOrdem,
   periodoAmortecidoComPassos,
@@ -102,7 +103,7 @@ function daRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `rz-${b}-${c}`,
     nivel,
     rng,
-    enunciado: `Qual é a MAIOR raiz da equação característica desta EDO? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-1')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: {
@@ -155,9 +156,11 @@ function doValor(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `vl-${b}-${c}-${y0}-${v0}-${t}`,
     nivel,
     rng,
-    enunciado:
-      `Com y(0) = ${y0} e y'(0) = ${v0}, quanto vale a solução em t = ` +
-      `${String(t).replace('.', ',')}? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('edo-segunda-ordem', 'forma-2')[0]!,
+      { y0, v0, expressao1: String(t).replace('.', ','), PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: segundaOrdemComPassos(b, c, y0, v0, t),
@@ -204,7 +207,7 @@ function doPeriodo(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `pr-${b}-${c}`,
     nivel,
     rng,
-    enunciado: `Qual é o período da oscilação descrita por esta EDO? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-3')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: periodoAmortecidoComPassos(b, c),
@@ -249,7 +252,7 @@ function doDiscriminante(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ds-${b}-${c}`,
     nivel,
     rng,
-    enunciado: `Qual é o discriminante da equação característica desta EDO? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-4')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: {

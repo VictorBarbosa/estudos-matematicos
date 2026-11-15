@@ -55,7 +55,7 @@ function exercicioDecimalFinito(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
   return {
     id: `decimais-finito-${numerador}-${potencia}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('numeros-decimais', 'forma-1')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('numeros-decimais', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: `${String(decimal).replace('.', '{,}')} = \\;?`,
     gabarito,
     resolucao,
@@ -94,7 +94,7 @@ function exercicioDizimaSimples(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
   return {
     id: `decimais-dizima-${periodo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('numeros-decimais', 'forma-2')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('numeros-decimais', 'forma-2')[0]!, {}, 'pt'),
     enunciadoTex: `0{,}\\overline{${periodo}} = \\;?`,
     gabarito,
     resolucao,
@@ -135,7 +135,7 @@ function exercicioDizimaComposta(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
   return {
     id: `decimais-dizima-composta-${naoPeriodica}-${periodo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('numeros-decimais', 'forma-3')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('numeros-decimais', 'forma-3')[0]!, {}, 'pt'),
     enunciadoTex: `0{,}${naoPeriodica}\\overline{${periodo}} = \\;?`,
     gabarito,
     resolucao,

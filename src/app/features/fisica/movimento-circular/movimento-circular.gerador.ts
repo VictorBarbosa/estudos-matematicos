@@ -93,8 +93,11 @@ function daAngular(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ang-${periodo}-${raio}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('movimento-circular', 'forma-1')[0]!, { periodo, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('movimento-circular', 'forma-1')[0]!,
+      { periodo, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `T = ${periodo}\\ \\text{s} \\qquad \\omega = \\frac{2\\pi}{T}`,
     gabarito,
     resolucao: ate(movimentoCircularComPassos(periodo, raio, 1), 1, gabarito),
@@ -137,8 +140,11 @@ function daFrequencia(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `freq-${rotacoesPorMinuto}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('movimento-circular', 'forma-2')[0]!, { rotacoesPorMinuto, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('movimento-circular', 'forma-2')[0]!,
+      { rotacoesPorMinuto, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `n = ${rotacoesPorMinuto}\\ \\text{rpm} \\qquad \\omega = 2\\pi f`,
     gabarito,
     resolucao: daRotacaoPorMinuto(rotacoesPorMinuto, gabarito),
@@ -186,8 +192,11 @@ function daTangencial(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `tan-${periodo}-${raio}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('movimento-circular', 'forma-3')[0]!, { v1: String(raio).replace('.', ','), periodo, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('movimento-circular', 'forma-3')[0]!,
+      { v1: String(raio).replace('.', ','), periodo, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `r = ${String(raio).replace('.', '{,}')}\\ \\text{m} \\qquad T = ${periodo}\\ \\text{s}`,
     gabarito,
     resolucao: ate(movimentoCircularComPassos(periodo, raio, 1), 2, gabarito),
@@ -238,8 +247,11 @@ function daCentripeta(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `cen-${periodo}-${raio}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('movimento-circular', 'forma-4')[0]!, { v1: String(raio).replace('.', ','), periodo, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('movimento-circular', 'forma-4')[0]!,
+      { v1: String(raio).replace('.', ','), periodo, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `a_{c} = \\frac{v^{2}}{r} = \\omega^{2}r`,
     gabarito,
     resolucao: ate(movimentoCircularComPassos(periodo, raio, 1), 3, gabarito),
@@ -298,8 +310,11 @@ function daForca(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `for-${periodo}-${raio}-${massa}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('movimento-circular', 'forma-5')[0]!, { v1: String(massa).replace('.', ','), v2: String(raio).replace('.', ','), periodo, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('movimento-circular', 'forma-5')[0]!,
+      { v1: String(massa).replace('.', ','), v2: String(raio).replace('.', ','), periodo, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `F_{c} = m\\frac{v^{2}}{r}`,
     gabarito,
     resolucao: ate(movimentoCircularComPassos(periodo, raio, massa), 4, gabarito),

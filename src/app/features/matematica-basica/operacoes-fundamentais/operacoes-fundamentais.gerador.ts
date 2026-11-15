@@ -64,14 +64,14 @@ function exercicioSimbolico(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `operacoes-simbolico-${nivel}-${rng.inteiro(0, 99999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-1')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-1')[0]!, {}, 'pt'),
     traducoes: {
       fr: {
-        enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-2')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-2')[0]!, {}, 'pt'),
         dica: 'Que faut-il calculer en premier dans cette expression ?',
       },
       en: {
-        enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-3')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-3')[0]!, {}, 'pt'),
         dica: 'What has to be computed first in this expression?',
       },
     },

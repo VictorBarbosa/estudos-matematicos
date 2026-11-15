@@ -56,7 +56,9 @@ const ehInteiro = (valor: number): boolean => Math.abs(valor - Math.round(valor)
 
 /** Acrescenta o pedido de fração quando o gabarito não é inteiro. */
 const comFracao = (enunciado: string, gabarito: number): string =>
-  ehInteiro(gabarito) ? enunciado : textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-1')[0]!, { enunciado }, 'pt');
+  ehInteiro(gabarito)
+    ? enunciado
+    : textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-1')[0]!, { enunciado }, 'pt');
 
 /** `x`, `-x`, `3x`: o coeficiente 1 não se escreve. */
 const cx = (c: number, nome: string): string =>
@@ -211,8 +213,11 @@ function exercicioOperacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `escal-op-${m.flat().join('_')}-${coluna}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-2')[0]!, { op, Li, v1: coluna + 1, v2: coluna === 3 ? ' (a dos termos independentes)' : '' }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('escalonamento-e-inversa', 'forma-2')[0]!,
+      { op, Li, v1: coluna + 1, v2: coluna === 3 ? ' (a dos termos independentes)' : '' },
+      'pt',
+    ),
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -362,8 +367,7 @@ function exercicioRetro(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `escal-retro-${m.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-3')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-3')[0]!, {}, 'pt'),
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -476,7 +480,11 @@ function exercicioClassificarEscalonada(nivel: Nivel, rng: Rng): Exercicio<numbe
   return {
     id: `escal-classe-${m.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-4')[0]!, { LEGENDA_TIPO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('escalonamento-e-inversa', 'forma-4')[0]!,
+      { LEGENDA_TIPO },
+      'pt',
+    ),
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -541,7 +549,11 @@ function exercicioClassificarSistema(nivel: Nivel, rng: Rng): Exercicio<number> 
   return {
     id: `escal-classe-sis-${aumentada.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-5')[0]!, { LEGENDA_TIPO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('escalonamento-e-inversa', 'forma-5')[0]!,
+      { LEGENDA_TIPO },
+      'pt',
+    ),
     enunciadoTex: sistemaTex(base, b),
     gabarito,
     resolucao: {
@@ -748,7 +760,7 @@ function exercicioParametro(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `escal-param-${[...r1, ...r2, a31, a32].join('_')}-${b.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-7')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-7')[0]!, {}, 'pt'),
     enunciadoTex: sistemaTex([r1, r2, [a31, a32, 'k']], b),
     gabarito,
     resolucao: {
@@ -827,7 +839,11 @@ function exercicioInversa3(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `escal-inv3-${A.flat().join('_')}-${i}${j}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-8')[0]!, { v1: i + 1, v2: j + 1 }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('escalonamento-e-inversa', 'forma-8')[0]!,
+      { v1: i + 1, v2: j + 1 },
+      'pt',
+    ),
     enunciadoTex: `A = ${aumentadaParaTex(paraFracoes(A), 3)}`,
     gabarito,
     resolucao: {

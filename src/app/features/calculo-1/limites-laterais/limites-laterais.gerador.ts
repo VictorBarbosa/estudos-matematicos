@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -58,7 +59,7 @@ export const geradorLaterais: GeradorExercicio<number> = {
     return {
       id: `laterais-${ponto}-${lado}-${a}${b}${c}${d}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Calcule o limite pela ${lado} no ponto x = ${ponto}.`,
+      enunciado: textoDoMolde(moldesDe('limites-laterais', 'forma-1')[0]!, { lado, ponto }, 'pt'),
       enunciadoTex:
         `f(x) = \\begin{cases} ${esquerdaTex} & x < ${ponto} \\\\ ${direitaTex} & x \\geq ${ponto} \\end{cases}` +
         ` \\qquad \\lim_{x \\to ${ponto}^{${lado === 'esquerda' ? '-' : '+'}}} f(x) = \\;?`,
@@ -142,9 +143,7 @@ function exercicioSalto(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `laterais-salto-${ponto}-${a}${b}${c}${d}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Qual é o salto do gráfico em x = ${ponto}, isto é, o limite pela direita menos o ` +
-      'limite pela esquerda? (0 se o limite existir)',
+    enunciado: textoDoMolde(moldesDe('limites-laterais', 'forma-2')[0]!, { ponto }, 'pt'),
     enunciadoTex: `f(x) = \\begin{cases} ${esquerdaTex} & x < ${ponto} \\\\ ${direitaTex} & x \\geq ${ponto} \\end{cases}`,
     gabarito,
     resolucao: {

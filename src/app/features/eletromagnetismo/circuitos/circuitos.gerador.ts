@@ -131,7 +131,11 @@ function potencia(nivel: Nivel, rng: Rng, porCorrente: boolean): Exercicio<numbe
     return {
       id: `circ-pot-ri-${r}-${i}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: textoDoMolde(moldesDe('circuitos', 'forma-2')[0]!, { expressao1: txt(i), r }, 'pt'),
+      enunciado: textoDoMolde(
+        moldesDe('circuitos', 'forma-2')[0]!,
+        { expressao1: txt(i), r },
+        'pt',
+      ),
       enunciadoTex: `I = ${tex(i)}\\ \\text{A} \\qquad R = ${r}\\ \\Omega`,
       gabarito,
       resolucao: {
@@ -219,8 +223,11 @@ function equivalente(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-eq-${tipo}-${valores.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circuitos', 'forma-4')[0]!, { expressao1: valores.join(', '), expressao2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO' }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('circuitos', 'forma-4')[0]!,
+      { expressao1: valores.join(', '), expressao2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO' },
+      'pt',
+    ),
     enunciadoTex: `${valores.map((v, i) => `R_${i + 1} = ${v}`).join(' \\quad ')} \\quad (\\Omega)`,
     gabarito,
     resolucao: {
@@ -260,8 +267,11 @@ function divisor(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-div-${v}-${r1}-${r2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circuitos', 'forma-5')[0]!, { expressao1: txt(r1), expressao2: txt(r2), v }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('circuitos', 'forma-5')[0]!,
+      { expressao1: txt(r1), expressao2: txt(r2), v },
+      'pt',
+    ),
     enunciadoTex: `V = ${v}\\ \\text{V} \\qquad R_1 = ${tex(r1)}\\ \\text{k}\\Omega \\qquad R_2 = ${tex(r2)}\\ \\text{k}\\Omega`,
     gabarito,
     resolucao: {
@@ -314,8 +324,7 @@ function misto(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-misto-${r1}-${r2}-${r3}-${v}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circuitos', 'forma-6')[0]!, { r1, r2, r3, v }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('circuitos', 'forma-6')[0]!, { r1, r2, r3, v }, 'pt'),
     enunciadoTex: `R_1 + (R_2 \\parallel R_3) \\qquad V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {
@@ -372,8 +381,17 @@ function malha(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-malha-${e1}-${e2}-${r1}-${r2}-${oposicao ? 'op' : 'fa'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circuitos', 'forma-7')[0]!, { e1, e2, expressao1: oposicao ? 'em OPOSIÇÃO (polos se enfrentando)' : 'no MESMO sentido', r1, r2 }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('circuitos', 'forma-7')[0]!,
+      {
+        e1,
+        e2,
+        expressao1: oposicao ? 'em OPOSIÇÃO (polos se enfrentando)' : 'no MESMO sentido',
+        r1,
+        r2,
+      },
+      'pt',
+    ),
     enunciadoTex: `\\varepsilon_1 = ${e1}\\ \\text{V} \\qquad \\varepsilon_2 = ${e2}\\ \\text{V} \\qquad R_1 = ${r1}\\ \\Omega \\qquad R_2 = ${r2}\\ \\Omega`,
     gabarito,
     resolucao: {
@@ -475,8 +493,11 @@ function rc(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-rc-${r}-${c}-${v}-${t}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circuitos', 'forma-9')[0]!, { c, v, r, expressao1: txt(t) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('circuitos', 'forma-9')[0]!,
+      { c, v, r, expressao1: txt(t) },
+      'pt',
+    ),
     enunciadoTex: `q(t) = Q\\left(1 - e^{-t/RC}\\right) \\qquad R = ${r}\\ \\text{k}\\Omega,\\; C = ${c}\\ \\mu\\text{F},\\; V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {
@@ -527,8 +548,7 @@ function duasMalhas(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-2malhas-${e1}-${e2}-${r1}-${r2}-${r3}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('circuitos', 'forma-10')[0]!, { e1, r1, e2, r2, r3 }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('circuitos', 'forma-10')[0]!, { e1, r1, e2, r2, r3 }, 'pt'),
     enunciadoTex: `(\\varepsilon_1 = ${e1}\\ \\text{V},\\; R_1 = ${r1}\\ \\Omega) \\parallel (\\varepsilon_2 = ${e2}\\ \\text{V},\\; R_2 = ${r2}\\ \\Omega) \\parallel R_3 = ${r3}\\ \\Omega`,
     gabarito,
     resolucao: {

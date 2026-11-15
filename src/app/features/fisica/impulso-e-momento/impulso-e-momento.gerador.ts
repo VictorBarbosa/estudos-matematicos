@@ -57,8 +57,11 @@ function exercicioMomento(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mom-p-${massa}-${velocidade}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('impulso-e-momento', 'forma-1')[0]!, { massa, velocidade }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('impulso-e-momento', 'forma-1')[0]!,
+      { massa, velocidade },
+      'pt',
+    ),
     enunciadoTex: `m = ${massa}\\,\\text{kg} \\qquad v = ${velocidade}\\,\\text{m/s}`,
     gabarito: resultado,
     resolucao: {
@@ -107,8 +110,11 @@ function exercicioImpulso(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mom-j-${forca}-${tempo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('impulso-e-momento', 'forma-2')[0]!, { forca, tempo, massa }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('impulso-e-momento', 'forma-2')[0]!,
+      { forca, tempo, massa },
+      'pt',
+    ),
     enunciadoTex: `F = ${forca}\\,\\text{N} \\qquad \\Delta t = ${tempo}\\,\\text{s} \\qquad m = ${massa}\\,\\text{kg}`,
     gabarito: resultado,
     resolucao: {
@@ -155,8 +161,11 @@ function exercicioForcaMedia(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mom-f-${massa}-${velocidade}-${tempo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('impulso-e-momento', 'forma-3')[0]!, { massa, velocidade, v1: tempo.toLocaleString('pt-BR') }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('impulso-e-momento', 'forma-3')[0]!,
+      { massa, velocidade, v1: tempo.toLocaleString('pt-BR') },
+      'pt',
+    ),
     enunciadoTex:
       `m = ${massa}\\,\\text{kg} \\qquad v = ${velocidade}\\,\\text{m/s} \\qquad ` +
       `\\Delta t = ${String(tempo).replace('.', '{,}')}\\,\\text{s}`,
@@ -232,8 +241,11 @@ function exercicioColisao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mom-col-${massaA}_${velocidadeA}-${massaB}_${velocidadeB}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('impulso-e-momento', 'forma-4')[0]!, { massaA, velocidadeA, massaB, velocidadeB }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('impulso-e-momento', 'forma-4')[0]!,
+      { massaA, velocidadeA, massaB, velocidadeB },
+      'pt',
+    ),
     enunciadoTex: `m_A = ${massaA} \\quad v_A = ${velocidadeA} \\quad m_B = ${massaB} \\quad v_B = ${velocidadeB}`,
     gabarito: resultado.velocidadeFinalA,
     resolucao: { resultado: resultado.velocidadeFinalA, passos },
@@ -291,8 +303,11 @@ function exercicioEnergiaPerdida(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mom-perda-${massaA}-${massaB}-${velocidadeA}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('impulso-e-momento', 'forma-5')[0]!, { massaA, velocidadeA, massaB }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('impulso-e-momento', 'forma-5')[0]!,
+      { massaA, velocidadeA, massaB },
+      'pt',
+    ),
     enunciadoTex: `m_A = ${massaA} \\quad v_A = ${velocidadeA} \\quad m_B = ${massaB} \\quad v_B = 0`,
     gabarito: perdida,
     resolucao: {

@@ -28,7 +28,11 @@ export const geradorRazoes: GeradorExercicio<number> = {
       return {
         id: `razoes-complementar-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('seno-cosseno-tangente', 'forma-1')[0]!, { v1: 90 - graus }, 'pt'),
+        enunciado: textoDoMolde(
+          moldesDe('seno-cosseno-tangente', 'forma-1')[0]!,
+          { v1: 90 - graus },
+          'pt',
+        ),
         enunciadoTex: `\\sin(90° - ${graus}°) = \\;?`,
         gabarito,
         resolucao: {
@@ -90,7 +94,11 @@ export const geradorRazoes: GeradorExercicio<number> = {
       return {
         id: `razoes-identidade-${agudoDeVerdade}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('seno-cosseno-tangente', 'forma-2')[0]!, { v1: numeroEmPortugues(seno) }, 'pt'),
+        enunciado: textoDoMolde(
+          moldesDe('seno-cosseno-tangente', 'forma-2')[0]!,
+          { v1: numeroEmPortugues(seno) },
+          'pt',
+        ),
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\qquad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {

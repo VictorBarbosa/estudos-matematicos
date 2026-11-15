@@ -51,8 +51,11 @@ export const geradorExponencial: GeradorExercicio<number> = {
       return {
         id: `exponencial-meiavida-${lambda}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado:
-          textoDoMolde(moldesDe('funcao-exponencial', 'forma-1')[0]!, { v1: String(lambda).replace('.', ',') }, 'pt'),
+        enunciado: textoDoMolde(
+          moldesDe('funcao-exponencial', 'forma-1')[0]!,
+          { v1: String(lambda).replace('.', ',') },
+          'pt',
+        ),
         enunciadoTex: `N(t) = N_0 e^{-${String(lambda).replace('.', '{,}')}\\,t}`,
         gabarito,
         resolucao: {
@@ -115,8 +118,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
       return {
         id: `exponencial-duplicacao-${base}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado:
-          textoDoMolde(moldesDe('funcao-exponencial', 'forma-2')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('funcao-exponencial', 'forma-2')[0]!, {}, 'pt'),
         enunciadoTex: funcaoTex,
         gabarito,
         resolucao: {
@@ -162,7 +164,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
       return {
         id: `exponencial-inicial-${inicial}-${base}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('funcao-exponencial', 'forma-3')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('funcao-exponencial', 'forma-3')[0]!, {}, 'pt'),
         enunciadoTex: funcaoTex,
         gabarito,
         resolucao: {

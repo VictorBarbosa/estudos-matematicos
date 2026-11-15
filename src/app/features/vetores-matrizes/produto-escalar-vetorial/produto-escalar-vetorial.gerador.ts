@@ -70,7 +70,11 @@ function exercicioEscalar(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prod-esc-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('produto-escalar-vetorial', 'forma-1')[0]!, { v1: a.x, v2: a.y, v3: b.x, v4: b.y }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('produto-escalar-vetorial', 'forma-1')[0]!,
+      { v1: a.x, v2: a.y, v3: b.x, v4: b.y },
+      'pt',
+    ),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: {
@@ -138,7 +142,11 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prod-ang-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('produto-escalar-vetorial', 'forma-2')[0]!, { v1: a.x, v2: a.y, v3: b.x, v4: b.y }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('produto-escalar-vetorial', 'forma-2')[0]!,
+      { v1: a.x, v2: a.y, v3: b.x, v4: b.y },
+      'pt',
+    ),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -178,8 +186,11 @@ function exercicioProjecao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prod-proj-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('produto-escalar-vetorial', 'forma-3')[0]!, { v1: a.x, v2: a.y, v3: b.x, v4: b.y }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('produto-escalar-vetorial', 'forma-3')[0]!,
+      { v1: a.x, v2: a.y, v3: b.x, v4: b.y },
+      'pt',
+    ),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -226,7 +237,11 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prod-area-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('produto-escalar-vetorial', 'forma-4')[0]!, { v1: a.x, v2: a.y, v3: b.x, v4: b.y }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('produto-escalar-vetorial', 'forma-4')[0]!,
+      { v1: a.x, v2: a.y, v3: b.x, v4: b.y },
+      'pt',
+    ),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -275,8 +290,11 @@ function exercicioTrabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prod-trab-${forca}-${deslocamento}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('produto-escalar-vetorial', 'forma-5')[0]!, { forca, angulo, deslocamento }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('produto-escalar-vetorial', 'forma-5')[0]!,
+      { forca, angulo, deslocamento },
+      'pt',
+    ),
     enunciadoTex: `F = ${forca}\\,\\text{N} \\qquad d = ${deslocamento}\\,\\text{m} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito: resultado,
     resolucao: {

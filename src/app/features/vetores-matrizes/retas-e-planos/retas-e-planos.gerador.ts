@@ -127,7 +127,11 @@ function combinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `planos-comb-${u.join('')}-${v.join('')}-${alfa}${beta}-${i}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('retas-e-planos', 'forma-1')[0]!, { nome, alfa, v1: beta < 0 ? '−' : '+', v2: Math.abs(beta) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('retas-e-planos', 'forma-1')[0]!,
+      { nome, alfa, v1: beta < 0 ? '−' : '+', v2: Math.abs(beta) },
+      'pt',
+    ),
     enunciadoTex: `\\vec{u} = ${vTex(u)} \\qquad \\vec{v} = ${vTex(v)}`,
     gabarito,
     resolucao: {
@@ -177,8 +181,11 @@ function planoD(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `planos-d-${n.join('')}-${p.join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('retas-e-planos', 'forma-2')[0]!, { v1: p.join(', '), v2: n.join(', ') }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('retas-e-planos', 'forma-2')[0]!,
+      { v1: p.join(', '), v2: n.join(', ') },
+      'pt',
+    ),
     enunciadoTex: `P = ${vTex(p)} \\qquad \\vec{n} = ${vTex(n)}`,
     gabarito,
     resolucao: {
@@ -235,7 +242,11 @@ function distancia(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `planos-dist-${n.join('')}-${d}-${p.join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('retas-e-planos', 'forma-3')[0]!, { v1: Number.isInteger(Number(gabarito.toFixed(9))) ? '' : ' (2 casas decimais)' }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('retas-e-planos', 'forma-3')[0]!,
+      { v1: Number.isInteger(Number(gabarito.toFixed(9))) ? '' : ' (2 casas decimais)' },
+      'pt',
+    ),
     enunciadoTex: `P = ${vTex(p)} \\qquad ${planoTex(n, d)}`,
     gabarito,
     resolucao: {
@@ -304,7 +315,11 @@ function anguloEntre(nivel: Nivel, rng: Rng, tipo: 'planos' | 'retas'): Exercici
   return {
     id: `planos-ang-${tipo}-${u.join('')}-${v.join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('retas-e-planos', 'forma-4')[0]!, { v1: tipo === 'planos' ? 'os dois planos' : 'as duas retas' }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('retas-e-planos', 'forma-4')[0]!,
+      { v1: tipo === 'planos' ? 'os dois planos' : 'as duas retas' },
+      'pt',
+    ),
     enunciadoTex:
       tipo === 'planos'
         ? `\\pi_1:\\; ${planoTex(u, d1)} \\qquad \\pi_2:\\; ${planoTex(v, d2)}`
@@ -362,8 +377,7 @@ function determinante(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `planos-det-${u.join('')}-${v.join('')}-${w.join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('retas-e-planos', 'forma-5')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('retas-e-planos', 'forma-5')[0]!, {}, 'pt'),
     enunciadoTex: `\\vec{u} = ${vTex(u)} \\qquad \\vec{v} = ${vTex(v)} \\qquad \\vec{w} = ${vTex(w)}`,
     gabarito,
     resolucao: {
@@ -491,8 +505,7 @@ function planoTresPontos(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `planos-3p-${A.join('')}-${B.join('')}-${C.join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('retas-e-planos', 'forma-6')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('retas-e-planos', 'forma-6')[0]!, {}, 'pt'),
     enunciadoTex: `A = ${vTex(A)} \\qquad B = ${vTex(B)} \\qquad C = ${vTex(C)}`,
     gabarito,
     resolucao: {

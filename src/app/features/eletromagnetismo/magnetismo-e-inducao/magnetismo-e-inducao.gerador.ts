@@ -168,8 +168,11 @@ function forcaFio(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mag-fio-${i}-${l}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-1')[0]!, { v1: txt(l), i, v2: txt(b) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('magnetismo-e-inducao', 'forma-1')[0]!,
+      { v1: txt(l), i, v2: txt(b) },
+      'pt',
+    ),
     enunciadoTex: `I = ${i}\\ \\text{A} \\qquad L = ${tex(l)}\\ \\text{m} \\qquad B = ${tex(b)}\\ \\text{T}`,
     gabarito,
     resolucao: {
@@ -260,8 +263,11 @@ function fluxo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mag-fluxo-${b}-${a}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-3')[0]!, { a, v1: txt(b), angulo }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('magnetismo-e-inducao', 'forma-3')[0]!,
+      { a, v1: txt(b), angulo },
+      'pt',
+    ),
     enunciadoTex: `B = ${tex(b)}\\ \\text{T} \\qquad A = ${a}\\ \\text{cm}^{2} \\qquad \\theta = ${angulo}^{\\circ}`,
     gabarito,
     resolucao: {
@@ -319,8 +325,17 @@ function raio(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mag-raio-${qual}-${v}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-4')[0]!, { v1: qual === 'proton' ? 'Um próton' : 'Um elétron', v2: p.mTexto, vTexto, v3: txt(b), unidade }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('magnetismo-e-inducao', 'forma-4')[0]!,
+      {
+        v1: qual === 'proton' ? 'Um próton' : 'Um elétron',
+        v2: p.mTexto,
+        vTexto,
+        v3: txt(b),
+        unidade,
+      },
+      'pt',
+    ),
     enunciadoTex: `r = \\frac{mv}{|q|B}`,
     gabarito,
     resolucao: {
@@ -372,8 +387,11 @@ function faraday(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mag-faraday-${n}-${a}-${b1}-${b2}-${dt}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-5')[0]!, { n, a, v1: txt(b1), v2: txt(b2), v3: txt(dt) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('magnetismo-e-inducao', 'forma-5')[0]!,
+      { n, a, v1: txt(b1), v2: txt(b2), v3: txt(dt) },
+      'pt',
+    ),
     enunciadoTex: `N = ${n} \\qquad A = ${a}\\ \\text{cm}^{2} \\qquad B: ${tex(b1)} \\to ${tex(b2)}\\ \\text{T} \\qquad \\Delta t = ${tex(dt)}\\ \\text{s}`,
     gabarito,
     resolucao: {
@@ -416,8 +434,11 @@ function solenoide(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mag-solenoide-${espiras}-${comprimento}-${i}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-6')[0]!, { comprimento, espiras, v1: txt(i) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('magnetismo-e-inducao', 'forma-6')[0]!,
+      { comprimento, espiras, v1: txt(i) },
+      'pt',
+    ),
     enunciadoTex: `B = \\mu_0 n I \\qquad N = ${espiras} \\qquad L = ${comprimento}\\ \\text{cm} \\qquad I = ${tex(i)}\\ \\text{A}`,
     gabarito,
     resolucao: {
@@ -540,8 +561,11 @@ function raioAcelerado(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mag-raio-acel-${ddp}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-7')[0]!, { ddp, v1: txt(b) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('magnetismo-e-inducao', 'forma-7')[0]!,
+      { ddp, v1: txt(b) },
+      'pt',
+    ),
     enunciadoTex: `\\Delta V = ${ddp}\\ \\text{V} \\qquad B = ${tex(b)}\\ \\text{T}`,
     gabarito,
     resolucao: {

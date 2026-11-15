@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, formatar, formatarEmTexto, integralNumerica } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -33,9 +34,7 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
       return {
         id: `aplint-vol-${a}${h}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado:
-          `Girando a reta em torno do eixo x, de 0 a ${h}, qual é o volume do sólido? ` +
-          '(3 casas decimais)',
+        enunciado: textoDoMolde(moldesDe('aplicacoes-da-integral', 'forma-1')[0]!, { h }, 'pt'),
         enunciadoTex: `y = ${a === 1 ? '' : a}x \\qquad 0 \\leq x \\leq ${h}`,
         gabarito,
         resolucao: {
@@ -94,7 +93,7 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
       return {
         id: `aplint-entre-${a}_${b}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Qual é a área da região entre as duas curvas? (3 casas decimais)',
+        enunciado: textoDoMolde(moldesDe('aplicacoes-da-integral', 'forma-2')[0]!, {}, 'pt'),
         enunciadoTex: `y = ${a}x \\qquad y = ${b === 1 ? '' : b}x^{2}`,
         gabarito,
         resolucao: {
@@ -168,7 +167,7 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
     return {
       id: `aplint-simples-${a}_${expoente}_${ate}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Qual é a área sob a curva de 0 a ${ate}? (3 casas decimais)`,
+      enunciado: textoDoMolde(moldesDe('aplicacoes-da-integral', 'forma-3')[0]!, { ate }, 'pt'),
       enunciadoTex: `y = ${p.paraTex()}`,
       gabarito,
       resolucao: {

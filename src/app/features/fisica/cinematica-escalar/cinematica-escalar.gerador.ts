@@ -110,8 +110,7 @@ function exercicioPosicao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cin-pos-${v0}-${a}-${t}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('cinematica-escalar', 'forma-2')[0]!, { v0, a, t }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('cinematica-escalar', 'forma-2')[0]!, { v0, a, t }, 'pt'),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = ${a}\\,\\text{m/s}^{2} \\qquad t = ${t}\\,\\text{s}`,
     gabarito: posicao,
     resolucao: {
@@ -173,8 +172,11 @@ function exercicioTorricelli(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cin-torr-${v0}-${a}-${deslocamento}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('cinematica-escalar', 'forma-3')[0]!, { v0, a, deslocamento }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('cinematica-escalar', 'forma-3')[0]!,
+      { v0, a, deslocamento },
+      'pt',
+    ),
     enunciadoTex: `v_0 = ${v0} \\qquad a = ${a} \\qquad \\Delta s = ${deslocamento}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -214,8 +216,11 @@ function exercicioTempoDeParada(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cin-parada-${v0}-${desaceleracao}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('cinematica-escalar', 'forma-4')[0]!, { v0, desaceleracao }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('cinematica-escalar', 'forma-4')[0]!,
+      { v0, desaceleracao },
+      'pt',
+    ),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = -${desaceleracao}\\,\\text{m/s}^{2}`,
     gabarito: resultado,
     resolucao: {
@@ -268,8 +273,11 @@ function exercicioDistanciaFrenagem(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cin-fren-${v0}-${desaceleracao}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('cinematica-escalar', 'forma-5')[0]!, { v0, desaceleracao }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('cinematica-escalar', 'forma-5')[0]!,
+      { v0, desaceleracao },
+      'pt',
+    ),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = -${desaceleracao}\\,\\text{m/s}^{2} \\qquad v = 0`,
     gabarito: resultado,
     resolucao: {

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Par,
   ajustarRetaComPassos,
@@ -104,7 +105,7 @@ function daInclinacao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<
     chave: `inc-${chaveDa(pares)}`,
     nivel,
     rng,
-    enunciado: `Qual é a inclinação da reta de mínimos quadrados para estes dados? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-1')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -148,7 +149,7 @@ function doIntercepto(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<
     chave: `int-${chaveDa(pares)}`,
     nivel,
     rng,
-    enunciado: `Qual é o intercepto da reta de mínimos quadrados para estes dados? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-2')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -190,7 +191,7 @@ function doPearson(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<num
     chave: `pe-${chaveDa(pares)}`,
     nivel,
     rng,
-    enunciado: `Qual é o coeficiente de correlação de Pearson destes dados? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-3')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: pearsonComPassos(pares),
@@ -234,9 +235,7 @@ function daDeterminacao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercici
     chave: `de-${chaveDa(pares)}`,
     nivel,
     rng,
-    enunciado:
-      'Que fração da variação de y a reta ajustada explica nestes dados? Responda entre 0 e 1, ' +
-      'com 4 casas decimais.',
+    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-4')[0]!, {}, 'pt'),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: determinacaoComPassos(r),
@@ -284,7 +283,7 @@ function daPrevisao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<nu
     chave: `pr-${chaveDa(pares)}-${x}`,
     nivel,
     rng,
-    enunciado: `Use a reta de mínimos quadrados destes dados para prever y quando x vale ${x}. ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-5')[0]!, { x, PEDIDO }, 'pt'),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: preverComPassos(inclinacao, intercepto, x, faixa),
@@ -322,9 +321,11 @@ function doResiduo(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<num
     chave: `rs-${chaveDa(pares)}-${par.x}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é o resíduo do ponto de x igual a ${par.x} em relação à reta de mínimos quadrados ` +
-      `destes dados? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('regressao-e-correlacao', 'forma-6')[0]!,
+      { expressao1: par.x, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: residuoComPassos(inclinacao, intercepto, par),

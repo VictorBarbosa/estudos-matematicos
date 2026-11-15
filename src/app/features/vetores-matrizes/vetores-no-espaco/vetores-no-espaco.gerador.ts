@@ -73,7 +73,7 @@ function exercicioModulo(rng: Rng, nivel: Nivel): Exercicio<number> {
   return {
     id: `v3-modulo-${v.x}-${v.y}-${v.z}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-1')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: `\\vec{v} = ${vetor3ParaTex(v)}`,
     gabarito: resolucao.resultado,
     resolucao,
@@ -112,7 +112,7 @@ function exercicioEscalar(rng: Rng, nivel: Nivel): Exercicio<number> {
   return {
     id: `v3-escalar-${a.x}${a.y}${a.z}-${b.x}${b.y}${b.z}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-2')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-2')[0]!, {}, 'pt'),
     enunciadoTex: `\\vec{a} = ${vetor3ParaTex(a)} \\qquad \\vec{b} = ${vetor3ParaTex(b)}`,
     gabarito: resolucao.resultado,
     resolucao,
@@ -209,8 +209,7 @@ function exercicioAngulo(rng: Rng, nivel: Nivel): Exercicio<number> {
     nivel,
     // Duas casas, que é a tolerância da correção deste tópico: prometer uma
     // casa seria prometer um arredondamento que o campo recusa.
-    enunciado:
-      textoDoMolde(moldesDe('vetores-no-espaco', 'forma-4')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-4')[0]!, {}, 'pt'),
     enunciadoTex: `\\vec{a} = ${vetor3ParaTex(a)} \\qquad \\vec{b} = ${vetor3ParaTex(b)}`,
     gabarito: resolucao.resultado,
     resolucao,
@@ -282,7 +281,7 @@ function exercicioVolume(rng: Rng, nivel: Nivel): Exercicio<number> {
   return {
     id: `v3-volume-${a.x}${b.y}${c.z}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-6')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-6')[0]!, {}, 'pt'),
     enunciadoTex:
       `\\vec{a} = ${vetor3ParaTex(a)} \\quad \\vec{b} = ${vetor3ParaTex(b)} \\quad ` +
       `\\vec{c} = ${vetor3ParaTex(c)}`,

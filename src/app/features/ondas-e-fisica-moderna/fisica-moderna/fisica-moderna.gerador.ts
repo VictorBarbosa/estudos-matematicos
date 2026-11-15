@@ -108,7 +108,11 @@ function foton(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-foton-${lambda}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('fisica-moderna', 'forma-1')[0]!, { lambda, v1: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('fisica-moderna', 'forma-1')[0]!,
+      { lambda, v1: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `\\lambda = ${lambda}\\ \\text{nm} \\qquad hc = 1240\\ \\text{eV·nm}`,
     gabarito,
     resolucao,
@@ -144,7 +148,11 @@ function gama(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-gama-${beta}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('fisica-moderna', 'forma-2')[0]!, { v1: exato(beta), v2: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('fisica-moderna', 'forma-2')[0]!,
+      { v1: exato(beta), v2: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `v = ${tex(beta)}\\,c \\qquad \\gamma = \\;?`,
     gabarito,
     resolucao,
@@ -222,7 +230,11 @@ function contracao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-contr-${beta}-${proprio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('fisica-moderna', 'forma-3')[0]!, { proprio, v1: exato(beta), v2: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('fisica-moderna', 'forma-3')[0]!,
+      { proprio, v1: exato(beta), v2: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `L_0 = ${proprio}\\ \\text{m} \\qquad v = ${tex(beta)}\\,c`,
     gabarito,
     resolucao,
@@ -255,8 +267,11 @@ function fotoeletrico(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-foto-${metal}-${lambda}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('fisica-moderna', 'forma-4')[0]!, { lambda, metal, v1: t(phi), v2: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('fisica-moderna', 'forma-4')[0]!,
+      { lambda, metal, v1: t(phi), v2: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `\\lambda = ${lambda}\\ \\text{nm} \\qquad \\phi = ${tex(phi)}\\ \\text{eV}`,
     gabarito,
     resolucao,
@@ -292,7 +307,11 @@ function corte(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-corte-${metal}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('fisica-moderna', 'forma-5')[0]!, { metal, v1: t(phi), v2: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('fisica-moderna', 'forma-5')[0]!,
+      { metal, v1: t(phi), v2: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `\\phi = ${tex(phi)}\\ \\text{eV} \\qquad \\lambda_c = \\;?`,
     gabarito,
     resolucao,
@@ -322,8 +341,11 @@ function deBroglie(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-broglie-${mantissa}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('fisica-moderna', 'forma-6')[0]!, { v1: t(mantissa), v2: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('fisica-moderna', 'forma-6')[0]!,
+      { v1: t(mantissa), v2: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `m = 9{,}11 \\times 10^{-31}\\ \\text{kg} \\qquad v = ${tex(mantissa)} \\times 10^{6}\\ \\text{m/s}`,
     gabarito,
     resolucao,
@@ -359,8 +381,11 @@ function betaDeGama(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-beta-${gamaValor}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('fisica-moderna', 'forma-7')[0]!, { v1: t(gamaValor), v2: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('fisica-moderna', 'forma-7')[0]!,
+      { v1: t(gamaValor), v2: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `\\frac{\\Delta t}{\\Delta t_0} = \\gamma = ${tex(gamaValor)} \\qquad \\frac{v}{c} = \\;?`,
     gabarito,
     resolucao: {
@@ -408,8 +433,11 @@ function energiaCinetica(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-ec-${beta}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('fisica-moderna', 'forma-8')[0]!, { v1: exato(beta), v2: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('fisica-moderna', 'forma-8')[0]!,
+      { v1: exato(beta), v2: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `mc^{2} = 511\\ \\text{keV} \\qquad v = ${tex(beta)}\\,c`,
     gabarito,
     resolucao: {

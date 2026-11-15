@@ -86,8 +86,11 @@ function daInercia(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ine-${corpo.nome}-${massa}-${raio}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('dinamica-rotacional', 'forma-1')[0]!, { v1: artigo(corpo), v2: corpo.nome, v3: numero(massa), v4: numero(raio), PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('dinamica-rotacional', 'forma-1')[0]!,
+      { v1: artigo(corpo), v2: corpo.nome, v3: numero(massa), v4: numero(raio), PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
     resolucao: ate(segundaLeiRotacionalComPassos(corpo, massa, raio, 1), 1, gabarito),
@@ -137,8 +140,18 @@ function doTorque(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `tor-${corpo.nome}-${massa}-${raio}-${torque}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('dinamica-rotacional', 'forma-2')[0]!, { v1: numero(torque), v2: artigo(corpo), v3: corpo.nome, v4: numero(massa), v5: numero(raio), PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('dinamica-rotacional', 'forma-2')[0]!,
+      {
+        v1: numero(torque),
+        v2: artigo(corpo),
+        v3: corpo.nome,
+        v4: numero(massa),
+        v5: numero(raio),
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `\\tau = I\\alpha \\qquad I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
     resolucao: segundaLeiRotacionalComPassos(corpo, massa, raio, torque),
@@ -186,8 +199,18 @@ function daEnergia(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ene-${corpo.nome}-${massa}-${raio}-${omega}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('dinamica-rotacional', 'forma-3')[0]!, { v1: capitalizar(artigo(corpo)), v2: corpo.nome, v3: numero(massa), v4: numero(raio), v5: numero(omega), PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('dinamica-rotacional', 'forma-3')[0]!,
+      {
+        v1: capitalizar(artigo(corpo)),
+        v2: corpo.nome,
+        v3: numero(massa),
+        v4: numero(raio),
+        v5: numero(omega),
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `K_{rot} = \\frac{1}{2}I\\omega^{2}`,
     gabarito,
     resolucao: energiaDeRotacaoComPassos(corpo, massa, raio, omega),
@@ -232,8 +255,11 @@ function doRolamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `rol-${corpo.nome}-${altura}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('dinamica-rotacional', 'forma-4')[0]!, { v1: capitalizar(artigo(corpo)), v2: corpo.nome, v3: numero(altura), PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('dinamica-rotacional', 'forma-4')[0]!,
+      { v1: capitalizar(artigo(corpo)), v2: corpo.nome, v3: numero(altura), PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `mgh = \\frac{1}{2}mv^{2} + \\frac{1}{2}I\\omega^{2} \\qquad \\omega = \\frac{v}{r}`,
     gabarito,
     resolucao: rolamentoComPassos(corpo, altura),

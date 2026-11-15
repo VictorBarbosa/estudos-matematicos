@@ -28,7 +28,7 @@ export const geradorConceito: GeradorExercicio<number> = {
       return {
         id: `conceito-dominio-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('conceito-funcao', 'forma-1')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('conceito-funcao', 'forma-1')[0]!, {}, 'pt'),
         enunciadoTex: `f(x) = \\frac{1}{x ${k >= 0 ? '-' : '+'} ${Math.abs(k)}}`,
         gabarito,
         resolucao: {
@@ -90,7 +90,7 @@ export const geradorConceito: GeradorExercicio<number> = {
       return {
         id: `conceito-imagem-${a}-${h}-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('conceito-funcao', 'forma-2')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('conceito-funcao', 'forma-2')[0]!, {}, 'pt'),
         enunciadoTex: `f(x) = ${corpo} ${k >= 0 ? '+' : '-'} ${Math.abs(k)}`,
         gabarito,
         resolucao: {

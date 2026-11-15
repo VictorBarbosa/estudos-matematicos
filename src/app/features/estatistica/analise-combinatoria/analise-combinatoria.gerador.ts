@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   arranjosComPassos,
   combinacoes,
@@ -65,9 +66,11 @@ function exercicioMultiplicativo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `comb-mult-${camisas}-${calcas}-${sapatos}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Alguém tem ${camisas} camisas, ${calcas} calças e ${sapatos} pares de sapato. Quantos ` +
-      'trajes diferentes consegue montar?',
+    enunciado: textoDoMolde(
+      moldesDe('analise-combinatoria', 'forma-1')[0]!,
+      { camisas, calcas, sapatos },
+      'pt',
+    ),
     enunciadoTex: `${camisas} \\times ${calcas} \\times ${sapatos}`,
     gabarito: resultado,
     resolucao: {
@@ -118,9 +121,7 @@ function exercicioArranjo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `comb-arr-${n}-${p}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Entre ${n} pessoas, de quantos modos se pode formar uma fila de ${p}, importando a ` +
-      'ordem?',
+    enunciado: textoDoMolde(moldesDe('analise-combinatoria', 'forma-2')[0]!, { n, p }, 'pt'),
     enunciadoTex: `A_{${n},${p}}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -160,9 +161,7 @@ function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `comb-comb-${n}-${p}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `De quantos modos se pode escolher uma equipe de ${p} pessoas entre ${n} candidatos, ` +
-      'sem distinguir cargos?',
+    enunciado: textoDoMolde(moldesDe('analise-combinatoria', 'forma-3')[0]!, { p, n }, 'pt'),
     enunciadoTex: `C_{${n},${p}}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -228,7 +227,7 @@ function exercicioAnagrama(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `comb-ana-${palavra}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Quantos anagramas distintos tem a palavra ${palavra}?`,
+    enunciado: textoDoMolde(moldesDe('analise-combinatoria', 'forma-4')[0]!, { palavra }, 'pt'),
     enunciadoTex: `\\text{${palavra}}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -271,9 +270,11 @@ function exercicioComiteMisto(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `comb-misto-${homens}_${escolhidosH}-${mulheres}_${escolhidasM}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Uma comissão terá ${escolhidosH} entre ${homens} engenheiros e ${escolhidasM} entre ` +
-      `${mulheres} técnicas. Quantas comissões diferentes são possíveis?`,
+    enunciado: textoDoMolde(
+      moldesDe('analise-combinatoria', 'forma-5')[0]!,
+      { escolhidosH, homens, escolhidasM, mulheres },
+      'pt',
+    ),
     enunciadoTex: `C_{${homens},${escolhidosH}} \\cdot C_{${mulheres},${escolhidasM}}`,
     gabarito: resultado,
     resolucao: {

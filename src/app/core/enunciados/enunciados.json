@@ -9556,5 +9556,1013 @@
     "enunciado": {
       "br": "Duas cordas de {dados-calculo.expressao1} m, presas nas pontas, conduzem ondas a {dados-calculo.v1} m/s e a {dados-calculo.v2} m/s. Tocadas juntas no fundamental, quantos batimentos por segundo se ouvem?{dados-calculo.expressao2}"
     }
+  },
+  {
+    "topico": "aplicacoes-da-derivada",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Com {dados-calculo.perimetro} m de cerca, qual é a MAIOR área retangular que se pode cercar?"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-derivada",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o valor do MÁXIMO local desta função?"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-derivada",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Esta função tem dois pontos críticos. Informe o MAIOR deles."
+    }
+  },
+  {
+    "topico": "aplicacoes-da-derivada",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um balão esférico é inflado e seu raio cresce {dados-calculo.taxaRaio} cm/s. A que taxa o VOLUME cresce no instante em que o raio vale {dados-calculo.raio} cm? (em cm³/s, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-derivada",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "O lado de um quadrado cresce {dados-calculo.taxaLado} cm/s. A que taxa cresce a ÁREA no instante em que o lado mede {dados-calculo.lado} cm? (em cm²/s)"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-derivada",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Uma escada de {dados-calculo.comprimento} m escorrega: o pé dela se afasta da parede a {dados-calculo.taxaX} m/s. A que taxa o topo desce quando o pé está a {dados-calculo.x} m da parede? (em m/s, com sinal, 3 casas decimais)"
+    }
+  },
+  {
+    "topico": "continuidade",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Esta função não está definida em x = {dados-calculo.k}. Que valor deveria ser atribuído ali para torná-la contínua?"
+    }
+  },
+  {
+    "topico": "continuidade",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Pelo teorema do valor intermediário, entre quais inteiros consecutivos está a raiz de f(x) = x³ − {dados-calculo.k}? Informe o MENOR deles."
+    }
+  },
+  {
+    "topico": "continuidade",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual valor de k torna a função contínua em x = {dados-calculo.ponto}?"
+    }
+  },
+  {
+    "topico": "derivacao-implicita",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "A curva passa pelo ponto ({dados-calculo.x}, {dados-calculo.y}). Encontre dy/dx nesse ponto, derivando implicitamente. Responda como fração ou com 4 casas decimais."
+    }
+  },
+  {
+    "topico": "derivacao-implicita",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "A curva passa pelo ponto ({dados-calculo.x}, {dados-calculo.y}). Encontre a reta tangente nesse ponto e informe onde ela corta o eixo y. Responda como fração ou com 4 casas decimais."
+    }
+  },
+  {
+    "topico": "derivadas-exponencial-logaritmo",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.x0}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-exponencial-logaritmo",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.x0}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-exponencial-logaritmo",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.x0}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-exponencial-logaritmo",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.x0}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-exponencial-logaritmo",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.x0}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-exponencial-logaritmo",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.x0}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-trigonometricas",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.expressao1}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-trigonometricas",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.expressao1}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-trigonometricas",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.expressao1}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-trigonometricas",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.expressao1}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-trigonometricas",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.expressao1}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "limites-laterais",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Calcule o limite pela {dados-calculo.lado} no ponto x = {dados-calculo.ponto}."
+    }
+  },
+  {
+    "topico": "limites-laterais",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o salto do gráfico em x = {dados-calculo.ponto}, isto é, o limite pela direita menos o limite pela esquerda? (0 se o limite existir)"
+    }
+  },
+  {
+    "topico": "limites",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Calcule o limite."
+    }
+  },
+  {
+    "topico": "limites",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Calcule o limite, racionalizando o numerador. (3 casas decimais)"
+    }
+  },
+  {
+    "topico": "limites",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Calcule o limite no infinito. (3 casas decimais)"
+    }
+  },
+  {
+    "topico": "limites",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Calcule o limite, fatorando o numerador."
+    }
+  },
+  {
+    "topico": "regra-da-cadeia",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Use a regra da cadeia e calcule f'({dados-calculo.ponto})."
+    }
+  },
+  {
+    "topico": "regra-da-cadeia",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Use a regra da cadeia e calcule f'({dados-calculo.ponto}). (3 casas decimais)"
+    }
+  },
+  {
+    "topico": "regras-de-derivacao",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Use a regra do produto e calcule f'({dados-calculo.ponto})."
+    }
+  },
+  {
+    "topico": "regras-de-derivacao",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Derive e informe o coeficiente de x na derivada."
+    }
+  },
+  {
+    "topico": "regras-de-derivacao",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Derive e calcule f'({dados-calculo.ponto})."
+    }
+  },
+  {
+    "topico": "taxa-de-variacao",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "A posição de um corpo, em metros, é dada em função do tempo em segundos, com t ≥ 0. Em que instante ele para pela primeira vez?"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-integral",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Girando a reta em torno do eixo x, de 0 a {dados-calculo.h}, qual é o volume do sólido? (3 casas decimais)"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-integral",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a área da região entre as duas curvas? (3 casas decimais)"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-integral",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é a área sob a curva de 0 a {dados-calculo.ate}? (3 casas decimais)"
+    }
+  },
+  {
+    "topico": "fisica-com-calculo",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um carro tem velocidade v(t) = {dados-calculo.a}t + {dados-calculo.b} (m/s). Quanto ele se desloca entre t = {dados-calculo.t1} s e t = {dados-calculo.t2} s, em metros?"
+    }
+  },
+  {
+    "topico": "fisica-com-calculo",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma mola de constante k = {dados-calculo.k} N/m é esticada de x = {dados-calculo.expressao1} m até x = {dados-calculo.expressao2} m. Qual é o trabalho feito, em joules? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "fisica-com-calculo",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Uma força F(x) (em N, x em metros) empurra um corpo de x = {dados-calculo.a} m até x = {dados-calculo.b} m. Qual é o trabalho, em joules? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "fisica-com-calculo",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um foguete parte com {dados-calculo.v0} m/s e tem aceleração a(t) (m/s², t em s). Qual é a velocidade em t = {dados-calculo.t} s, em m/s? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "fisica-com-calculo",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Uma barra de {dados-calculo.L} m tem densidade linear λ(x) (kg/m), com x medido de uma ponta. Onde fica o centro de massa, em metros a partir dessa ponta? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "fisica-com-calculo",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Quanto trabalho é preciso para levar um satélite de {dados-calculo.m} kg da superfície da Terra até {dados-calculo.hKm} km de altitude (sem contar a velocidade orbital)? Responda em gigajoules, GJ. (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "integrais-improprias",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Calcule a integral imprópria, ou escreva \"diverge\". Se houver valor, use 3 casas decimais."
+    }
+  },
+  {
+    "topico": "integrais-improprias",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "O integrando explode em zero. Calcule a integral, ou escreva \"diverge\". Se houver valor, use 3 casas decimais."
+    }
+  },
+  {
+    "topico": "integrais-improprias",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Calcule a integral imprópria, ou escreva \"diverge\". Se houver valor, use 3 casas decimais."
+    }
+  },
+  {
+    "topico": "integrais-improprias",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Calcule a integral imprópria, ou escreva \"diverge\". Se houver valor, use 3 casas decimais."
+    }
+  },
+  {
+    "topico": "integrais-improprias",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Este integrando não tem primitiva elementar. Decida pelo teste da comparação e responda \"converge\" ou \"diverge\"."
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Calcule a integral pela GEOMETRIA da região: ela é um trapézio. (sem usar primitivas)"
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Calcule a integral de uma função constante."
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Sabendo que a integral de f de {dados-calculo.a} a {dados-calculo.b} vale {dados-calculo.primeira} e de {dados-calculo.b} a {dados-calculo.c} vale {dados-calculo.segunda}, quanto vale a integral de {dados-calculo.a} a {dados-calculo.c}?"
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Sabendo que a integral de f de {dados-calculo.a} a {dados-calculo.b} vale {dados-calculo.primeira}, quanto vale a integral de {dados-calculo.b} a {dados-calculo.a}?"
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Sabendo que a integral de f de {dados-calculo.a} a {dados-calculo.b} vale {dados-calculo.primeira}, quanto vale a integral de {dados-calculo.fator}·f no mesmo intervalo?"
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Sabendo que a integral de f vale {dados-calculo.primeira} e a de g vale {dados-calculo.segunda} no intervalo de {dados-calculo.a} a {dados-calculo.b}, quanto vale a integral de f + {dados-calculo.fator}·g?"
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Qual é o valor MÉDIO da função no intervalo? (use a área, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "integral-indefinida",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o valor da constante C, sabendo que F({dados-calculo.ponto}) = {dados-calculo.condicao}?"
+    }
+  },
+  {
+    "topico": "integral-indefinida",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Tomando C = 0, qual é o valor de F({dados-calculo.ponto})?"
+    }
+  },
+  {
+    "topico": "integral-indefinida",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Integre e informe o coeficiente de x³ na primitiva."
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Calcule o limite do termo geral quando n tende ao infinito (fração ou 3 casas decimais). Se não der zero, a série diverge."
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Pelo teste da razão, calcule L = lim |aₙ₊₁ / aₙ| quando n tende ao infinito (fração ou 3 casas decimais)."
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Calcule a soma da série telescópica (fração ou 3 casas decimais)."
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Somando só os {dados-calculo.N} primeiros termos, qual é a cota do erro dada pelo teorema da série alternada? Responda como fração."
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Qual é o raio de convergência R da série de potências? (fração ou 3 casas decimais)"
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "A série de potências tem centro a e raio R dados ao lado. Dos dois extremos do intervalo, x = a − R e x = a + R, quantos pertencem ao intervalo de convergência? Responda 0, 1 ou 2."
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Qual é o menor número N de termos que garante, pelo teorema da série alternada, erro menor que 10⁻{dados-calculo.potencia}?"
+    }
+  },
+  {
+    "topico": "series-de-taylor",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o coeficiente de x elevado a {dados-calculo.n} na série de Maclaurin desta função? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "series-de-taylor",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Use o polinômio de Maclaurin de grau {dados-calculo.grau} para aproximar esta função em x = {dados-calculo.expressao1}. {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "series-de-taylor",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Aproximando esta função em x = {dados-calculo.expressao1} pelo polinômio de Maclaurin de grau {dados-calculo.grau}, de quanto é o erro cometido? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "series-de-taylor",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Estime, pelo resto de Lagrange, o erro máximo ao aproximar {dados-calculo.expressao1} em x = {dados-calculo.expressao2} com o polinômio de grau {dados-calculo.grau}. Use M = {dados-calculo.expressao3}. {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "series-de-taylor",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Aproxime a raiz quadrada de {dados-calculo.expressao1} pelo polinômio de Taylor de grau {dados-calculo.grau} centrado em {dados-calculo.a}. {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "soma-de-riemann",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Aproxime a área sob a curva no intervalo [{dados-calculo.de}, {dados-calculo.ate}] usando {dados-calculo.n} retângulos, com altura tomada pela {dados-calculo.tipo}. (3 casas decimais)"
+    }
+  },
+  {
+    "topico": "teorema-fundamental",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Sendo A(x) a área acumulada a partir de 0, quanto vale A'({dados-calculo.ponto})?"
+    }
+  },
+  {
+    "topico": "teorema-fundamental",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Para qual valor inteiro de k a integral vale {dados-calculo.expressao1}?"
+    }
+  },
+  {
+    "topico": "teorema-fundamental",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Use o Teorema Fundamental para calcular a integral."
+    }
+  },
+  {
+    "topico": "coordenadas-no-espaco",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um ponto tem coordenadas cilíndricas r = {dados-calculo.r}, θ = {dados-calculo.theta}° e z = {dados-calculo.z}. Qual é a coordenada cartesiana {dados-calculo.expressao1}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "coordenadas-no-espaco",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um ponto tem coordenadas esféricas ρ = {dados-calculo.rho}, φ = {dados-calculo.phi}° (medido do eixo z) e θ = {dados-calculo.theta}°. Qual é a coordenada cartesiana {dados-calculo.pedir}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "coordenadas-no-espaco",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um ponto tem coordenadas cartesianas ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z}). Qual é o raio ρ dele em coordenadas esféricas? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "derivadas-parciais",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a segunda derivada parcial em relação a {dados-calculo.variavel}, duas vezes? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "funcoes-de-varias-variaveis",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Quanto vale esta função no ponto ({dados-calculo.x}, {dados-calculo.y})? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "funcoes-de-varias-variaveis",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o valor de k da curva de nível que passa pelo ponto ({dados-calculo.x}, {dados-calculo.y})? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "funcoes-de-varias-variaveis",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Cortando a superfície com o plano y = {dados-calculo.y0}, sobra uma parábola em x. Qual é a abscissa do vértice dessa parábola? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "gradiente-e-direcional",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a maior taxa de variação possível desta função no ponto ({dados-calculo.x}, {dados-calculo.y}), em qualquer direção? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "gradiente-e-direcional",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a derivada direcional desta função no ponto ({dados-calculo.x}, {dados-calculo.y}), na direção do vetor ({dados-calculo.expressao1}, {dados-calculo.expressao2})? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "gradiente-e-direcional",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Esta função tem um único ponto crítico. Qual é a abscissa dele? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "integrais-de-linha",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o trabalho deste campo ao longo do segmento que vai de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) a ({dados-calculo.expressao3}, {dados-calculo.expressao4})? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "integrais-de-linha",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o trabalho deste campo ao longo do segmento que vai de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) a ({dados-calculo.expressao3}, {dados-calculo.expressao4})? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "integrais-de-linha",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o trabalho deste campo ao percorrer o segmento de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) a ({dados-calculo.expressao3}, {dados-calculo.expressao4}) e voltar pelo mesmo caminho? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "integrais-de-linha",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Este campo é conservativo. Qual é o trabalho dele de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) até ({dados-calculo.expressao3}, {dados-calculo.expressao4}), por qualquer caminho? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "integrais-multiplas",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o valor médio desta função sobre o retângulo de {dados-calculo.x0} a {dados-calculo.x1} em x e de {dados-calculo.y0} a {dados-calculo.y1} em y? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "integrais-multiplas",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Integre a função constante {dados-calculo.constante} sobre um setor circular de raio {dados-calculo.raio} e ângulo de {dados-calculo.doze} doze avos de volta, usando coordenadas polares. {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Calcule o divergente do campo no ponto ({dados-calculo.x0}, {dados-calculo.y0}, {dados-calculo.z0})."
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Calcule a componente z do rotacional do campo plano no ponto ({dados-calculo.x0}, {dados-calculo.y0})."
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Pelo teorema da divergência, qual é o fluxo do campo para fora da esfera de raio {dados-calculo.R} centrada na origem? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Use o teorema de Stokes para calcular a circulação do campo na circunferência x² + y² = {dados-calculo.expressao1}, no plano z = 0, percorrida no sentido anti-horário. (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Pelo teorema da divergência, qual é o fluxo do campo para fora do cilindro x² + y² ≤ {dados-calculo.expressao1}, 0 ≤ z ≤ {dados-calculo.H} (com as tampas)? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Pelo teorema de Green com o campo F = (−y/2, x/2), a área da região é igual à circulação na borda. Calcule a área da elipse. (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "aplicacoes-de-edo",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um corpo a {dados-calculo.inicial} °C é deixado num ambiente a {dados-calculo.ambiente} °C, e sua temperatura obedece à lei de resfriamento de Newton com constante {dados-calculo.expressao1} por minuto. Qual é a temperatura em {dados-calculo.t} minutos, em °C? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "aplicacoes-de-edo",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma amostra de {dados-calculo.inicial} g tem meia-vida de {dados-calculo.meiaVida} anos. Quanto resta depois de {dados-calculo.t} anos, em g? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "aplicacoes-de-edo",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Num circuito RL com R = {dados-calculo.resistencia} Ω, L = {dados-calculo.expressao1} H e tensão de {dados-calculo.tensao} V, ligado em t = 0 com corrente inicial nula, qual é a corrente em t = {dados-calculo.expressao2} s, em A? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "aplicacoes-de-edo",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Uma massa de {dados-calculo.massa} kg presa a uma mola de constante {dados-calculo.rigidez} N/m, com amortecimento {dados-calculo.amortecimento} N·s/m, é solta do repouso a {dados-calculo.expressao1} m do equilíbrio. Qual é a posição em t = {dados-calculo.expressao2} s, em m? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "aplicacoes-de-edo",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um tanque com {dados-calculo.volume} L de água recebe {dados-calculo.vazao} L/min de solução a {dados-calculo.expressao1} kg/L e escoa na mesma vazão, bem misturado. Com {dados-calculo.inicial} kg de sal no início, quanto sal há em {dados-calculo.t} min, em kg? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "edo-primeira-ordem",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Uma grandeza obedece a esta equação, com valor inicial {dados-calculo.y0}. Quanto ela vale em t = {dados-calculo.t}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "edo-primeira-ordem",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma substância decai segundo esta equação, com t em anos. Qual é a meia-vida dela, em anos? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "edo-primeira-ordem",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Resolva esta equação com y(0) igual a {dados-calculo.y0} e calcule y({dados-calculo.t}). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "edo-segunda-ordem",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a MAIOR raiz da equação característica desta EDO? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "edo-segunda-ordem",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Com y(0) = {dados-calculo.y0} e y'(0) = {dados-calculo.v0}, quanto vale a solução em t = {dados-calculo.expressao1}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "edo-segunda-ordem",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o período da oscilação descrita por esta EDO? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "edo-segunda-ordem",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é o discriminante da equação característica desta EDO? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "metodos-numericos",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Aplique o método de Euler com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, partindo de y(0) = {dados-calculo.y0}. Qual é o valor aproximado obtido? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "metodos-numericos",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, de quanto é o erro do método de Euler frente à solução exata, partindo de y(0) = {dados-calculo.y0}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "metodos-numericos",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Aplique Runge-Kutta de quarta ordem com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, partindo de y(0) = {dados-calculo.y0}. Qual é o valor obtido? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "metodos-numericos",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Com Euler, integre de 0 a {dados-calculo.tempo} partindo de y(0) = {dados-calculo.y0}, primeiro com passo {dados-calculo.expressao1} e depois com metade dele. Por qual fator o erro foi dividido? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "analise-combinatoria",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Alguém tem {dados-calculo.camisas} camisas, {dados-calculo.calcas} calças e {dados-calculo.sapatos} pares de sapato. Quantos trajes diferentes consegue montar?"
+    }
+  },
+  {
+    "topico": "analise-combinatoria",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Entre {dados-calculo.n} pessoas, de quantos modos se pode formar uma fila de {dados-calculo.p}, importando a ordem?"
+    }
+  },
+  {
+    "topico": "analise-combinatoria",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "De quantos modos se pode escolher uma equipe de {dados-calculo.p} pessoas entre {dados-calculo.n} candidatos, sem distinguir cargos?"
+    }
+  },
+  {
+    "topico": "analise-combinatoria",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Quantos anagramas distintos tem a palavra {dados-calculo.palavra}?"
+    }
+  },
+  {
+    "topico": "analise-combinatoria",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Uma comissão terá {dados-calculo.escolhidosH} entre {dados-calculo.homens} engenheiros e {dados-calculo.escolhidasM} entre {dados-calculo.mulheres} técnicas. Quantas comissões diferentes são possíveis?"
+    }
+  },
+  {
+    "topico": "binomio-de-newton",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Quanto vale C({dados-calculo.n}, {dados-calculo.k}), o número na linha {dados-calculo.n}, posição {dados-calculo.k} do triângulo de Pascal (contando do 0)?"
+    }
+  },
+  {
+    "topico": "binomio-de-newton",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a soma de todos os coeficientes do desenvolvimento?"
+    }
+  },
+  {
+    "topico": "binomio-de-newton",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o coeficiente de x{dados-calculo.expressao1} no desenvolvimento?"
+    }
+  },
+  {
+    "topico": "binomio-de-newton",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "No desenvolvimento em potências decrescentes de x, qual é o coeficiente do {dados-calculo.ordem}º termo?"
+    }
+  },
+  {
+    "topico": "binomio-de-newton",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Qual é o termo independente de x (o termo sem x) no desenvolvimento?"
+    }
+  },
+  {
+    "topico": "distribuicao-normal",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} com média {dados-calculo.media} {dados-calculo.expressao3} e desvio padrão {dados-calculo.desvio} {dados-calculo.expressao3}. Qual é o escore z de uma leitura de {dados-calculo.valor} {dados-calculo.expressao3}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "distribuicao-normal",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica ABAIXO de {dados-calculo.valor} {dados-calculo.expressao3}? Responda entre 0 e 1, com 4 casas decimais."
+    }
+  },
+  {
+    "topico": "distribuicao-normal",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica ACIMA de {dados-calculo.valor} {dados-calculo.expressao3}? Responda entre 0 e 1, com 4 casas decimais."
+    }
+  },
+  {
+    "topico": "distribuicao-normal",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica entre {dados-calculo.de} e {dados-calculo.ate} {dados-calculo.expressao3}? Responda entre 0 e 1, com 4 casas decimais."
+    }
+  },
+  {
+    "topico": "distribuicao-normal",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que valor deixa {dados-calculo.percentil}% das peças abaixo dele, em {dados-calculo.expressao3}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "distribuicao-normal",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica a até {dados-calculo.desvios} desvio(s) padrão da média? Responda entre 0 e 1, com 4 casas decimais."
+    }
+  },
+  {
+    "topico": "estatistica-e-incerteza",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Para as medidas {dados-calculo.expressao1}, qual é {dados-calculo.rotulo}? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "estatistica-e-incerteza",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Dois comprimentos são medidos com incertezas de {dados-calculo.texto} cm. Somando os dois, qual é a incerteza do resultado, em cm? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "estatistica-e-incerteza",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um retângulo tem base {dados-calculo.base} ± {dados-calculo.expressao1} cm e altura {dados-calculo.altura} ± {dados-calculo.expressao2} cm. Qual é a incerteza da área, em cm²? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "probabilidade",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Num dado honesto de {dados-calculo.faces} faces, qual é a probabilidade de sair {dados-calculo.expressao1}?"
+    }
+  },
+  {
+    "topico": "probabilidade",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma urna tem {dados-calculo.vermelhas} bolas vermelhas e {dados-calculo.azuis} azuis. Retirando duas bolas SEM reposição, qual é a probabilidade de ambas serem vermelhas?"
+    }
+  },
+  {
+    "topico": "probabilidade",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Lançando um dado de {dados-calculo.faces} faces {dados-calculo.tentativas} vezes, qual é a probabilidade de sair o maior valor ao menos uma vez?"
+    }
+  },
+  {
+    "topico": "probabilidade",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Num dado de 6 faces, qual é a probabilidade de sair {dados-calculo.expressao1}?"
+    }
+  },
+  {
+    "topico": "probabilidade",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um lote tem {dados-calculo.total} peças, das quais {dados-calculo.defeituosas} são defeituosas. Retirando {dados-calculo.retiradas} peças de uma vez, qual é a probabilidade de NENHUMA ser defeituosa?"
+    }
+  },
+  {
+    "topico": "regressao-e-correlacao",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a inclinação da reta de mínimos quadrados para estes dados? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "regressao-e-correlacao",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o intercepto da reta de mínimos quadrados para estes dados? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "regressao-e-correlacao",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o coeficiente de correlação de Pearson destes dados? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "regressao-e-correlacao",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Que fração da variação de y a reta ajustada explica nestes dados? Responda entre 0 e 1, com 4 casas decimais."
+    }
+  },
+  {
+    "topico": "regressao-e-correlacao",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Use a reta de mínimos quadrados destes dados para prever y quando x vale {dados-calculo.x}. {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "regressao-e-correlacao",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Qual é o resíduo do ponto de x igual a {dados-calculo.expressao1} em relação à reta de mínimos quadrados destes dados? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "definicao-de-derivada",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a inclinação da reta secante que passa pelos pontos de abscissas {dados-calculo.expressao1} e {dados-calculo.expressao2}? (2 casas)"
+    }
+  },
+  {
+    "topico": "definicao-de-derivada",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Usando a definição, calcule f'({dados-calculo.expressao1})."
+    }
   }
 ]

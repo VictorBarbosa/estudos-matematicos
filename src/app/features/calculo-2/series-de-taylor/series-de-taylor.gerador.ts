@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   FUNCAO_TEX,
   FuncaoDeSerie,
@@ -94,7 +95,7 @@ function doCoeficiente(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `coef-${funcao}-${n}`,
     nivel,
     rng,
-    enunciado: `Qual é o coeficiente de x elevado a ${n} na série de Maclaurin desta função? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('series-de-taylor', 'forma-1')[0]!, { n, PEDIDO }, 'pt'),
     enunciadoTex: FUNCAO_TEX[funcao],
     gabarito,
     resolucao: coeficienteComPassos(funcao, n),
@@ -153,9 +154,11 @@ function daAproximacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `apx-${funcao}-${grau}-${x}`,
     nivel,
     rng,
-    enunciado:
-      `Use o polinômio de Maclaurin de grau ${grau} para aproximar esta função em ` +
-      `x = ${String(x).replace('.', ',')}. ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('series-de-taylor', 'forma-2')[0]!,
+      { grau, expressao1: String(x).replace('.', ','), PEDIDO },
+      'pt',
+    ),
     enunciadoTex: FUNCAO_TEX[funcao],
     gabarito,
     resolucao: maclaurinComPassos(funcao, grau, x),
@@ -207,9 +210,11 @@ function doErro(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `err-${funcao}-${grau}-${x}`,
     nivel,
     rng,
-    enunciado:
-      `Aproximando esta função em x = ${String(x).replace('.', ',')} pelo polinômio de ` +
-      `Maclaurin de grau ${grau}, de quanto é o erro cometido? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('series-de-taylor', 'forma-3')[0]!,
+      { expressao1: String(x).replace('.', ','), grau, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: FUNCAO_TEX[funcao],
     gabarito,
     resolucao: erroDaAproximacaoComPassos(funcao, grau, x),
@@ -262,10 +267,17 @@ function daCota(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `lag-${funcao}-${grau}-${x}`,
     nivel,
     rng,
-    enunciado:
-      `Estime, pelo resto de Lagrange, o erro máximo ao aproximar ${NOME_DA_SERIE[funcao]} em ` +
-      `x = ${String(x).replace('.', ',')} com o polinômio de grau ${grau}. ` +
-      `Use M = ${Number(cota.toFixed(4)).toString().replace('.', ',')}. ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('series-de-taylor', 'forma-4')[0]!,
+      {
+        expressao1: NOME_DA_SERIE[funcao],
+        expressao2: String(x).replace('.', ','),
+        grau,
+        expressao3: Number(cota.toFixed(4)).toString().replace('.', ','),
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `\\left|R_{${grau}}(x)\\right| \\leq \\frac{M\\left|x\\right|^{${grau + 1}}}{(${grau + 1})!}`,
     gabarito,
     resolucao: cotaDeLagrangeComPassos(grau, x, cota),
@@ -314,9 +326,11 @@ function daRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `raiz-${a}-${desvio}-${grau}`,
     nivel,
     rng,
-    enunciado:
-      `Aproxime a raiz quadrada de ${String(x).replace('.', ',')} pelo polinômio de Taylor de ` +
-      `grau ${grau} centrado em ${a}. ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('series-de-taylor', 'forma-5')[0]!,
+      { expressao1: String(x).replace('.', ','), grau, a, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `f(x) = \\sqrt{x} \\quad\\text{em torno de } x = ${a}`,
     gabarito,
     resolucao,

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Quadrica,
   avaliarLinear2,
@@ -141,7 +142,11 @@ function daSegunda(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `s${variavel}-${q.a}${q.b}${q.c}${q.d}${q.e}`,
     nivel,
     rng,
-    enunciado: `Qual é a segunda derivada parcial em relação a ${variavel}, duas vezes? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('derivadas-parciais', 'forma-1')[0]!,
+      { variavel, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {

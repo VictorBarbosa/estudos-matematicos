@@ -39,8 +39,11 @@ export const geradorJuros: GeradorExercicio<number> = {
       return {
         id: `juros-dobrar-${taxa}-${multiplo}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado:
-          textoDoMolde(moldesDe('juros-compostos', 'forma-1')[0]!, { taxa, comoTexto }, 'pt'),
+        enunciado: textoDoMolde(
+          moldesDe('juros-compostos', 'forma-1')[0]!,
+          { taxa, comoTexto },
+          'pt',
+        ),
         enunciadoTex: `i = ${taxa}\\% \\qquad M = ${comoTexto.replace(',', '{,}')}C`,
         gabarito,
         resolucao: {
@@ -104,8 +107,16 @@ export const geradorJuros: GeradorExercicio<number> = {
     return {
       id: `juros-${pergunta}-${capital}${taxa}${periodos}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        textoDoMolde(moldesDe('juros-compostos', 'forma-2')[0]!, { capital, taxa, periodos, v1: pergunta === 'montante' ? 'o montante final' : 'o juro total' }, 'pt'),
+      enunciado: textoDoMolde(
+        moldesDe('juros-compostos', 'forma-2')[0]!,
+        {
+          capital,
+          taxa,
+          periodos,
+          v1: pergunta === 'montante' ? 'o montante final' : 'o juro total',
+        },
+        'pt',
+      ),
       enunciadoTex: `C = ${capital} \\qquad i = ${taxa}\\% \\qquad n = ${periodos}`,
       gabarito,
       resolucao: {

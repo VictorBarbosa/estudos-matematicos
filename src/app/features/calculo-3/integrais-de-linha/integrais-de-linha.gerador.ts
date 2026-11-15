@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Linear2, avaliarLinear2, linear2ParaTex, trabalhoNoSegmentoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -75,9 +76,11 @@ function doCampoConstante(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `cte-${campoX.k0}${campoY.k0}-${de.x}${de.y}-${ate.x}${ate.y}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é o trabalho deste campo ao longo do segmento que vai de (${de.x}, ${de.y}) a ` +
-      `(${ate.x}, ${ate.y})? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('integrais-de-linha', 'forma-1')[0]!,
+      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\vec{F} = \\left(${formatar(campoX.k0)},\\; ${formatar(campoY.k0)}\\right)`,
     gabarito,
     resolucao: trabalhoNoSegmentoComPassos(campoX, campoY, de, ate),
@@ -137,9 +140,11 @@ function doCampoLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `lin-${campoX.kx}${campoX.ky}${campoX.k0}-${campoY.kx}${campoY.ky}${campoY.k0}-${de.x}${de.y}${ate.x}${ate.y}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é o trabalho deste campo ao longo do segmento que vai de (${de.x}, ${de.y}) a ` +
-      `(${ate.x}, ${ate.y})? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('integrais-de-linha', 'forma-2')[0]!,
+      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\vec{F} = \\left(${linear2ParaTex(campoX)},\\; ${linear2ParaTex(campoY)}\\right)`,
     gabarito,
     resolucao,
@@ -196,9 +201,11 @@ function doCaminhoFechado(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `fec-${campoX.kx}${campoX.ky}-${campoY.kx}${campoY.ky}-${de.x}${de.y}${ate.x}${ate.y}`,
     nivel,
     rng,
-    enunciado:
-      `Qual é o trabalho deste campo ao percorrer o segmento de (${de.x}, ${de.y}) a ` +
-      `(${ate.x}, ${ate.y}) e voltar pelo mesmo caminho? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('integrais-de-linha', 'forma-3')[0]!,
+      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\vec{F} = \\left(${linear2ParaTex(campoX)},\\; ${linear2ParaTex(campoY)}\\right)`,
     gabarito,
     resolucao: {
@@ -260,9 +267,11 @@ function doConservativo(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `cns-${a}${b}-${de.x}${de.y}${ate.x}${ate.y}`,
     nivel,
     rng,
-    enunciado:
-      `Este campo é conservativo. Qual é o trabalho dele de (${de.x}, ${de.y}) até ` +
-      `(${ate.x}, ${ate.y}), por qualquer caminho? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('integrais-de-linha', 'forma-4')[0]!,
+      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\vec{F} = \\left(${a === 1 ? '' : a}x,\\; ${b === 1 ? '' : b}y\\right)`,
     gabarito,
     resolucao: {

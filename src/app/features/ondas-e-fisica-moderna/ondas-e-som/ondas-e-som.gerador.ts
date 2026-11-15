@@ -102,7 +102,11 @@ function velocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
     return {
       id: `onda-lambda-${v}-${f}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: textoDoMolde(moldesDe('ondas-e-som', 'forma-1')[0]!, { f, meio, v, expressao1: casas(gabarito) }, 'pt'),
+      enunciado: textoDoMolde(
+        moldesDe('ondas-e-som', 'forma-1')[0]!,
+        { f, meio, v, expressao1: casas(gabarito) },
+        'pt',
+      ),
       enunciadoTex: `v = ${v}\\ \\text{m/s} \\qquad f = ${f}\\ \\text{Hz} \\qquad \\lambda = \\;?`,
       gabarito,
       resolucao: {
@@ -143,7 +147,11 @@ function velocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-v-${lambda}-${f}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('ondas-e-som', 'forma-2')[0]!, { expressao1: t(lambda), f, expressao2: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('ondas-e-som', 'forma-2')[0]!,
+      { expressao1: t(lambda), f, expressao2: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `\\lambda = ${numeroOnda(lambda)}\\ \\text{m} \\qquad f = ${f}\\ \\text{Hz}`,
     gabarito,
     resolucao,
@@ -177,7 +185,11 @@ function corda(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-corda-${tracao}-${gramas}-${emGramas ? 'g' : 'kg'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('ondas-e-som', 'forma-3')[0]!, { tracao, muTexto, expressao1: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('ondas-e-som', 'forma-3')[0]!,
+      { tracao, muTexto, expressao1: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `T = ${tracao}\\ \\text{N} \\qquad \\mu = ${emGramas ? `${gramas}\\ \\text{g/m}` : `${numeroOnda(mu, 3)}\\ \\text{kg/m}`}`,
     gabarito,
     resolucao: emGramas
@@ -230,7 +242,11 @@ function harmonicoCorda(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-harm-${ordem}-${L}-${v}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('ondas-e-som', 'forma-4')[0]!, { expressao1: t(L), v, nome, expressao2: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('ondas-e-som', 'forma-4')[0]!,
+      { expressao1: t(L), v, nome, expressao2: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `L = ${numeroOnda(L)}\\ \\text{m} \\qquad v = ${v}\\ \\text{m/s} \\qquad n = ${ordem}`,
     gabarito,
     resolucao,
@@ -271,7 +287,11 @@ function decibeis(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-db-${mantissa}-${expoente}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('ondas-e-som', 'forma-5')[0]!, { intensidadeTexto, expressao1: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('ondas-e-som', 'forma-5')[0]!,
+      { intensidadeTexto, expressao1: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `I = ${mantissa === 1 ? '' : `${mantissa} \\times `}10^{${expoente}}\\ \\text{W/m}^{2} \\qquad I_0 = 10^{-12}\\ \\text{W/m}^{2}`,
     gabarito,
     resolucao,
@@ -313,8 +333,17 @@ function tubo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-tubo-${fechado ? 'f' : 'a'}-${ordem}-${L}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('ondas-e-som', 'forma-6')[0]!, { expressao1: t(L), expressao2: fechado ? 'fechado numa ponta e aberto na outra' : 'aberto nas duas pontas', SOM_NO_AR, ordem, expressao3: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('ondas-e-som', 'forma-6')[0]!,
+      {
+        expressao1: t(L),
+        expressao2: fechado ? 'fechado numa ponta e aberto na outra' : 'aberto nas duas pontas',
+        SOM_NO_AR,
+        ordem,
+        expressao3: casas(gabarito),
+      },
+      'pt',
+    ),
     enunciadoTex: `L = ${numeroOnda(L)}\\ \\text{m} \\qquad v = ${SOM_NO_AR}\\ \\text{m/s} \\qquad n = ${ordem}`,
     gabarito,
     resolucao,
@@ -356,8 +385,11 @@ function doppler(nivel: Nivel, rng: Rng, ambos: boolean): Exercicio<number> {
   return {
     id: `onda-doppler-${ambos ? 'ab' : 'f'}-${f}-${vf}-${vo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('ondas-e-som', 'forma-7')[0]!, { f, fonteTexto, observadorTexto, SOM_NO_AR, expressao1: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('ondas-e-som', 'forma-7')[0]!,
+      { f, fonteTexto, observadorTexto, SOM_NO_AR, expressao1: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `f = ${f}\\ \\text{Hz} \\qquad v_f = ${vf}\\ \\text{m/s} \\qquad v_o = ${vo}\\ \\text{m/s}`,
     gabarito,
     resolucao,
@@ -399,8 +431,11 @@ function batimento(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-bat-${L}-${v1}-${v2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('ondas-e-som', 'forma-8')[0]!, { expressao1: t(L), v1, v2, expressao2: casas(gabarito) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('ondas-e-som', 'forma-8')[0]!,
+      { expressao1: t(L), v1, v2, expressao2: casas(gabarito) },
+      'pt',
+    ),
     enunciadoTex: `L = ${numeroOnda(L)}\\ \\text{m} \\qquad v_1 = ${v1}\\ \\text{m/s} \\qquad v_2 = ${v2}\\ \\text{m/s}`,
     gabarito,
     resolucao: {

@@ -88,8 +88,7 @@ function daReta(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ret-${x0}${y0}-${vx}${vy}-${t}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('equacoes-parametricas', 'forma-1')[0]!, { t, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('equacoes-parametricas', 'forma-1')[0]!, { t, PEDIDO }, 'pt'),
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: posicaoNoInstanteComPassos(curva, t),
@@ -190,7 +189,11 @@ function daElipse(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `eli-${a}${b}-${doze}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('equacoes-parametricas', 'forma-2')[0]!, { doze, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('equacoes-parametricas', 'forma-2')[0]!,
+      { doze, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: posicaoNoInstanteComPassos(curva, t),
@@ -230,8 +233,11 @@ function doLancamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `lan-${v0}-${angulo}-${t}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('equacoes-parametricas', 'forma-3')[0]!, { v0, angulo, t, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('equacoes-parametricas', 'forma-3')[0]!,
+      { v0, angulo, t, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: posicaoNoInstanteComPassos(curva, t).passos },
@@ -316,8 +322,11 @@ function doAlcance(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `alc-${v0}-${angulo}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('equacoes-parametricas', 'forma-4')[0]!, { v0, angulo, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('equacoes-parametricas', 'forma-4')[0]!,
+      { v0, angulo, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `t_{voo} = \\frac{2v_{0}\\operatorname{sen}\\theta}{g}`,
     gabarito: resolucao.resultado,
     resolucao,

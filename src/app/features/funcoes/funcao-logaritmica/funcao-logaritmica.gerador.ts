@@ -36,7 +36,7 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
       return {
         id: `log-propriedade-${base}-${m}-${n}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('funcao-logaritmica', 'forma-1')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('funcao-logaritmica', 'forma-1')[0]!, {}, 'pt'),
         enunciadoTex: `\\log_{${base}} \\left(${base ** m} \\cdot ${base ** n}\\right) = \\;?`,
         gabarito,
         resolucao: {
@@ -90,7 +90,7 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
       return {
         id: `log-equacao-${base}-${y}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('funcao-logaritmica', 'forma-2')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('funcao-logaritmica', 'forma-2')[0]!, {}, 'pt'),
         enunciadoTex: `\\log_{${base}} x = ${y}`,
         gabarito,
         resolucao: {
@@ -137,7 +137,7 @@ export const geradorLogaritmica: GeradorExercicio<number> = {
     return {
       id: `log-valor-${base}-${expoente}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: textoDoMolde(moldesDe('funcao-logaritmica', 'forma-3')[0]!, {  }, 'pt'),
+      enunciado: textoDoMolde(moldesDe('funcao-logaritmica', 'forma-3')[0]!, {}, 'pt'),
       enunciadoTex:
         expoente < 0
           ? `\\log_{${base}} \\frac{1}{${base ** -expoente}} = \\;?`

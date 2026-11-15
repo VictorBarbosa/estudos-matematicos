@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -30,7 +31,7 @@ export const geradorLimites: GeradorExercicio<number> = {
       return {
         id: `lim-subst-${a}${b}-${ponto}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Calcule o limite.',
+        enunciado: textoDoMolde(moldesDe('limites', 'forma-1')[0]!, {}, 'pt'),
         enunciadoTex: `\\lim_{x \\to ${ponto}} \\left(${a === 1 ? '' : a}x^{2} ${b >= 0 ? '+' : '-'} ${Math.abs(b)}x\\right)`,
         gabarito,
         resolucao: {
@@ -84,7 +85,7 @@ export const geradorLimites: GeradorExercicio<number> = {
       return {
         id: `lim-conj-${a}-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Calcule o limite, racionalizando o numerador. (3 casas decimais)',
+        enunciado: textoDoMolde(moldesDe('limites', 'forma-2')[0]!, {}, 'pt'),
         enunciadoTex: `\\lim_{x \\to 0} \\frac{\\sqrt{${dentro}} - ${raizDeK}}{x}`,
         gabarito,
         resolucao: {
@@ -143,7 +144,7 @@ export const geradorLimites: GeradorExercicio<number> = {
       return {
         id: `lim-inf-${a}${b}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Calcule o limite no infinito. (3 casas decimais)',
+        enunciado: textoDoMolde(moldesDe('limites', 'forma-3')[0]!, {}, 'pt'),
         enunciadoTex: `\\lim_{x \\to \\infty} \\frac{${a}x^{2} + ${rng.inteiro(1, 9)}x}{${b}x^{2} - ${rng.inteiro(1, 9)}}`,
         gabarito,
         resolucao: {
@@ -194,7 +195,7 @@ export const geradorLimites: GeradorExercicio<number> = {
     return {
       id: `lim-fat-${a}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Calcule o limite, fatorando o numerador.',
+      enunciado: textoDoMolde(moldesDe('limites', 'forma-4')[0]!, {}, 'pt'),
       enunciadoTex: `\\lim_{x \\to ${a}} \\frac{x^{3} - ${a ** 3}}{x - ${a}}`,
       gabarito,
       resolucao: {

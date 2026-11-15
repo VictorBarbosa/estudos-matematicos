@@ -87,8 +87,18 @@ function doCorpoRigido(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `rig-${corpo.nome}-${massa}-${raio}-${omega}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('momento-angular', 'forma-1')[0]!, { v1: capitalizar(artigo(corpo)), v2: corpo.nome, v3: numero(massa), v4: numero(raio), v5: numero(omega), PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('momento-angular', 'forma-1')[0]!,
+      {
+        v1: capitalizar(artigo(corpo)),
+        v2: corpo.nome,
+        v3: numero(massa),
+        v4: numero(raio),
+        v5: numero(omega),
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `L = I\\omega \\qquad I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
     resolucao: momentoAngularComPassos(corpo, massa, raio, omega),
@@ -138,8 +148,11 @@ function daParticula(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `par-${massa}-${velocidade}-${distancia}-${angulo}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('momento-angular', 'forma-2')[0]!, { v1: numero(massa), v2: numero(distancia), velocidade, angulo, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('momento-angular', 'forma-2')[0]!,
+      { v1: numero(massa), v2: numero(distancia), velocidade, angulo, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `L = mvr\\operatorname{sen}\\theta`,
     gabarito,
     resolucao: momentoAngularDePartiComPassos(massa, velocidade, distancia, angulo),
@@ -190,8 +203,11 @@ function daConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `cons-${inerciaInicial}-${omegaInicial}-${fator}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('momento-angular', 'forma-3')[0]!, { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal), PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('momento-angular', 'forma-3')[0]!,
+      { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal), PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `I_{1}\\omega_{1} = I_{2}\\omega_{2}`,
     gabarito,
     resolucao: conservacaoAngularComPassos(inerciaInicial, omegaInicial, inerciaFinal),
@@ -245,8 +261,11 @@ function daEnergiaNaConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ene-${inerciaInicial}-${omegaInicial}-${fator}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('momento-angular', 'forma-4')[0]!, { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal), PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('momento-angular', 'forma-4')[0]!,
+      { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal), PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\Delta K = \\frac{1}{2}I_{2}\\omega_{2}^{2} - \\frac{1}{2}I_{1}\\omega_{1}^{2}`,
     gabarito,
     resolucao: {

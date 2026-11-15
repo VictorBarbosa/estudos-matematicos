@@ -173,7 +173,7 @@ function lerSomatorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-soma-${de}-${ate}-${termo.corpo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-1')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: `\\sum_{k=${de}}^{${ate}} ${termo.corpo} = \\;?`,
     gabarito: numero(resolucao.resultado),
     resolucao: comoResposta(resolucao),
@@ -214,7 +214,7 @@ function lerProdutorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-prod-${ate}-${termo.corpo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-2')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-2')[0]!, {}, 'pt'),
     enunciadoTex: `\\prod_{k=${de}}^{${ate}} ${termo.corpo} = \\;?`,
     gabarito: numero(resolucao.resultado),
     resolucao: comoResposta(resolucao),
@@ -250,7 +250,7 @@ function lerModuloFatorial(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-mod-${dentro}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-3')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-3')[0]!, {}, 'pt'),
     enunciadoTex: `\\left|${dentro}\\right| + ${n}! = \\;?`,
     gabarito: numero(resultado),
     resolucao: {
@@ -312,7 +312,7 @@ function lerIntervalo(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-intervalo-${de}-${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-4')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-4')[0]!, {}, 'pt'),
     enunciadoTex: `x \\in ${intervaloParaTex(intervalo)}`,
     gabarito: numero(resolucao.resultado),
     resolucao: comoResposta(resolucao),
@@ -363,7 +363,11 @@ function lerConjuntos(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-conj-${operacao}-${a.join('')}-${b.join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-5')[0]!, { v1: a.join(', '), v2: b.join(', ') }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('notacao-matematica', 'forma-5')[0]!,
+      { v1: a.join(', '), v2: b.join(', ') },
+      'pt',
+    ),
     enunciadoTex: `A ${simbolo} B`,
     gabarito: numero(resolucao.resultado.length),
     resolucao: {

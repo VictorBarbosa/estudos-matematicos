@@ -44,8 +44,16 @@ export const geradorMhs: GeradorExercicio<number> = {
     return {
       id: `mhs-${pergunta}-${massa}${constante}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        textoDoMolde(moldesDe('movimento-harmonico', 'forma-1')[0]!, { v1: numeroEmPortugues(massa), v2: numeroEmPortugues(constante), v3: numeroEmPortugues(amplitude), nome }, 'pt'),
+      enunciado: textoDoMolde(
+        moldesDe('movimento-harmonico', 'forma-1')[0]!,
+        {
+          v1: numeroEmPortugues(massa),
+          v2: numeroEmPortugues(constante),
+          v3: numeroEmPortugues(amplitude),
+          nome,
+        },
+        'pt',
+      ),
       enunciadoTex: `m = ${massa}\\text{ kg} \\qquad k = ${constante}\\text{ N/m} \\qquad A = ${amplitude}\\text{ m}`,
       gabarito,
       resolucao: {

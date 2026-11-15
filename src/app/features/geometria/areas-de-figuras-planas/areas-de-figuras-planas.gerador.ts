@@ -144,8 +144,15 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `area-alt-${triangulo ? 'tri' : 'ret'}-${base}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('areas-de-figuras-planas', 'forma-1')[0]!, { v1: triangulo ? 'triângulo' : 'retângulo', v2: numeroEmPortugues(area), v3: numeroEmPortugues(base) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('areas-de-figuras-planas', 'forma-1')[0]!,
+      {
+        v1: triangulo ? 'triângulo' : 'retângulo',
+        v2: numeroEmPortugues(area),
+        v3: numeroEmPortugues(base),
+      },
+      'pt',
+    ),
     enunciadoTex: `A = ${area} \\qquad b = ${base}`,
     gabarito,
     resolucao: {
@@ -207,8 +214,7 @@ function exercicioEscala(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `area-escala-${k}-${area}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('areas-de-figuras-planas', 'forma-2')[0]!, { area, k }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('areas-de-figuras-planas', 'forma-2')[0]!, { area, k }, 'pt'),
     enunciadoTex: `A = ${area} \\qquad k = ${k}`,
     gabarito,
     resolucao: {
@@ -274,8 +280,11 @@ function exercicioLosango(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `area-losango-${maior}-${menor}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('areas-de-figuras-planas', 'forma-3')[0]!, { maior, menor }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('areas-de-figuras-planas', 'forma-3')[0]!,
+      { maior, menor },
+      'pt',
+    ),
     enunciadoTex: `D = ${maior} \\qquad d = ${menor}`,
     gabarito,
     resolucao: {
@@ -339,8 +348,11 @@ function exercicioComposta(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `area-composta-${base}-${alturaRetangulo}-${alturaTriangulo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('areas-de-figuras-planas', 'forma-4')[0]!, { base, alturaRetangulo, alturaTriangulo }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('areas-de-figuras-planas', 'forma-4')[0]!,
+      { base, alturaRetangulo, alturaTriangulo },
+      'pt',
+    ),
     enunciadoTex: `b = ${base} \\qquad h_r = ${alturaRetangulo} \\qquad h_t = ${alturaTriangulo}`,
     gabarito,
     resolucao: {

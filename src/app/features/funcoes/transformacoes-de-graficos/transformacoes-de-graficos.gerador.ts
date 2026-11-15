@@ -89,7 +89,11 @@ function doVertice(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ver-${t.a}-${t.h}-${t.k}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-1')[0]!, { PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transformacoes-de-graficos', 'forma-1')[0]!,
+      { PEDIDO },
+      'pt',
+    ),
     enunciadoTex: parabolaTex(t),
     gabarito: t.h,
     resolucao: verticeTransformadoComPassos(t),
@@ -134,8 +138,11 @@ function doPontoX(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `px-${t.a}${t.b}${t.h}${t.k}-${ponto.x}${ponto.y}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-2')[0]!, { v1: ponto.x, v2: ponto.y, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transformacoes-de-graficos', 'forma-2')[0]!,
+      { v1: ponto.x, v2: ponto.y, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito: destino.x,
     resolucao: pontoTransformadoComPassos(ponto, t),
@@ -183,8 +190,11 @@ function doPontoY(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `py-${t.a}${t.b}${t.h}${t.k}-${ponto.x}${ponto.y}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-3')[0]!, { v1: ponto.x, v2: ponto.y, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transformacoes-de-graficos', 'forma-3')[0]!,
+      { v1: ponto.x, v2: ponto.y, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito: destino.y,
     resolucao: {
@@ -235,8 +245,11 @@ function daHorizontal(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `hor-${b}-${largura}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-4')[0]!, { largura, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transformacoes-de-graficos', 'forma-4')[0]!,
+      { largura, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito,
     resolucao: daLargura(largura, b, gabarito),
@@ -273,8 +286,11 @@ function doZeroDeslocado(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `zer-${t.a}${t.b}${t.h}-${zero}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-5')[0]!, { zero, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transformacoes-de-graficos', 'forma-5')[0]!,
+      { zero, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito: destino.x,
     resolucao: pontoTransformadoComPassos({ x: zero, y: 0 }, t),

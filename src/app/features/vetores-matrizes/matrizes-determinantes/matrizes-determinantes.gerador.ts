@@ -67,7 +67,7 @@ function exercicioDet2(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mat-det2-${a}_${b}_${c}_${d}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-1')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: matrizTex([
       [a, b],
       [c, d],
@@ -136,7 +136,7 @@ function exercicioDet3(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mat-det3-${m.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-2')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-2')[0]!, {}, 'pt'),
     enunciadoTex: matrizTex(m),
     gabarito: resultado,
     resolucao: {
@@ -197,7 +197,11 @@ function exercicioEntradaProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mat-prod-${a.flat().join('')}-${b.flat().join('')}-${i}${j}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-3')[0]!, { v1: i + 1, v2: j + 1 }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('matrizes-determinantes', 'forma-3')[0]!,
+      { v1: i + 1, v2: j + 1 },
+      'pt',
+    ),
     enunciadoTex: `A = ${matrizTex(a)} \\qquad B = ${matrizTex(b)}`,
     gabarito,
     resolucao: {
@@ -263,7 +267,11 @@ function exercicioCramer(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mat-cramer-${a.flat().join('')}-${incognita}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-4')[0]!, { v1: incognita === 0 ? 'x' : 'y' }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('matrizes-determinantes', 'forma-4')[0]!,
+      { v1: incognita === 0 ? 'x' : 'y' },
+      'pt',
+    ),
     enunciadoTex:
       `\\begin{cases} ${a[0]![0]}x ${a[0]![1]! >= 0 ? '+' : '-'} ${Math.abs(a[0]![1]!)}y = ${constantes[0]} \\\\ ` +
       `${a[1]![0]}x ${a[1]![1]! >= 0 ? '+' : '-'} ${Math.abs(a[1]![1]!)}y = ${constantes[1]} \\end{cases}`,
@@ -322,7 +330,7 @@ function exercicioDetProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mat-detprod-${a.flat().join('')}-${b.flat().join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-5')[0]!, {  }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-5')[0]!, {}, 'pt'),
     enunciadoTex: `A = ${matrizTex(a)} \\qquad B = ${matrizTex(b)}`,
     gabarito,
     resolucao: {

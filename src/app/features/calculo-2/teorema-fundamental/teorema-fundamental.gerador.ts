@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, teoremaFundamentalComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -41,7 +42,7 @@ export const geradorTfc: GeradorExercicio<number> = {
       return {
         id: `tfc-area-${a}${b}-${ponto}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Sendo A(x) a área acumulada a partir de 0, quanto vale A'(${ponto})?`,
+        enunciado: textoDoMolde(moldesDe('teorema-fundamental', 'forma-1')[0]!, { ponto }, 'pt'),
         enunciadoTex: `A(x) = \\int_{0}^{x} \\left(${p.paraTex('t')}\\right) dt`,
         gabarito,
         resolucao: {
@@ -103,7 +104,11 @@ export const geradorTfc: GeradorExercicio<number> = {
          * errar o lado é errar a questão. Dizer que k é inteiro remove a dúvida
          * sem entregar a resposta: achar o inteiro continua exigindo a conta.
          */
-        enunciado: `Para qual valor inteiro de k a integral vale ${numeroEmPortugues(Number(valor.toFixed(4)))}?`,
+        enunciado: textoDoMolde(
+          moldesDe('teorema-fundamental', 'forma-2')[0]!,
+          { expressao1: numeroEmPortugues(Number(valor.toFixed(4))) },
+          'pt',
+        ),
         enunciadoTex: `\\int_{0}^{k} \\left(${p.paraTex()}\\right) dx = ${Number(valor.toFixed(4))}`,
         gabarito,
         resolucao: {
@@ -147,7 +152,7 @@ export const geradorTfc: GeradorExercicio<number> = {
     return {
       id: `tfc-integral-${a}${b}-${de}${ate}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Use o Teorema Fundamental para calcular a integral.',
+      enunciado: textoDoMolde(moldesDe('teorema-fundamental', 'forma-3')[0]!, {}, 'pt'),
       enunciadoTex: `\\int_{${de}}^{${ate}} \\left(${p.paraTex()}\\right) dx`,
       gabarito,
       resolucao,

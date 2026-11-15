@@ -68,8 +68,11 @@ function exercicioGravidade(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `grav-g-${altitudeKm}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-1')[0]!, { v1: altitudeKm.toLocaleString('pt-BR') }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('gravitacao-e-orbitas', 'forma-1')[0]!,
+      { v1: altitudeKm.toLocaleString('pt-BR') },
+      'pt',
+    ),
     enunciadoTex: `h = ${altitudeKm.toLocaleString('pt-BR').replace(/\./g, '\\,')}\\,\\text{km}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -120,8 +123,11 @@ function exercicioVelocidadeOrbital(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `grav-v-${altitudeKm}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-2')[0]!, { v1: altitudeKm.toLocaleString('pt-BR') }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('gravitacao-e-orbitas', 'forma-2')[0]!,
+      { v1: altitudeKm.toLocaleString('pt-BR') },
+      'pt',
+    ),
     enunciadoTex: `h = ${altitudeKm.toLocaleString('pt-BR').replace(/\./g, '\\,')}\\,\\text{km}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -164,8 +170,11 @@ function exercicioPeriodo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `grav-t-${altitudeKm}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-3')[0]!, { v1: altitudeKm.toLocaleString('pt-BR') }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('gravitacao-e-orbitas', 'forma-3')[0]!,
+      { v1: altitudeKm.toLocaleString('pt-BR') },
+      'pt',
+    ),
     enunciadoTex: `h = ${altitudeKm.toLocaleString('pt-BR').replace(/\./g, '\\,')}\\,\\text{km}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -216,8 +225,11 @@ function exercicioEscape(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `grav-esc-${corpo.nome}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-4')[0]!, { v1: corpo.nome }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('gravitacao-e-orbitas', 'forma-4')[0]!,
+      { v1: corpo.nome },
+      'pt',
+    ),
     enunciadoTex: `M = ${corpo.massa.toExponential(3)}\\,\\text{kg} \\qquad R = ${corpo.raio.toExponential(3)}\\,\\text{m}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -255,8 +267,7 @@ function exercicioRazaoForca(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `grav-razao-${fator}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-5')[0]!, { fator }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-5')[0]!, { fator }, 'pt'),
     enunciadoTex: `d \\to ${fator}d \\qquad F \\to \\frac{F}{?}`,
     gabarito: resultado,
     resolucao: {

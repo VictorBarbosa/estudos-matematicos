@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -67,7 +68,11 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
       return {
         id: `aplic-otim-${perimetro}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Com ${perimetro} m de cerca, qual é a MAIOR área retangular que se pode cercar?`,
+        enunciado: textoDoMolde(
+          moldesDe('aplicacoes-da-derivada', 'forma-1')[0]!,
+          { perimetro },
+          'pt',
+        ),
         enunciadoTex: `2x + 2y = ${perimetro} \\qquad A = xy`,
         gabarito,
         resolucao: {
@@ -134,7 +139,7 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
       return {
         id: `aplic-max-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Qual é o valor do MÁXIMO local desta função?',
+        enunciado: textoDoMolde(moldesDe('aplicacoes-da-derivada', 'forma-2')[0]!, {}, 'pt'),
         enunciadoTex: `f(x) = ${p.paraTex()}`,
         gabarito,
         resolucao: {
@@ -193,7 +198,7 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
     return {
       id: `aplic-critico-${k}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Esta função tem dois pontos críticos. Informe o MAIOR deles.',
+      enunciado: textoDoMolde(moldesDe('aplicacoes-da-derivada', 'forma-3')[0]!, {}, 'pt'),
       enunciadoTex: `f(x) = ${p.paraTex()}`,
       gabarito,
       resolucao: {
@@ -303,9 +308,11 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
     return {
       id: `aplic-taxas-esfera-${raio}-${taxaRaio}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        `Um balão esférico é inflado e seu raio cresce ${taxaRaio} cm/s. A que taxa o VOLUME ` +
-        `cresce no instante em que o raio vale ${raio} cm? (em cm³/s, 2 casas decimais)`,
+      enunciado: textoDoMolde(
+        moldesDe('aplicacoes-da-derivada', 'forma-4')[0]!,
+        { taxaRaio, raio },
+        'pt',
+      ),
       enunciadoTex:
         `V = \\frac{4}{3}\\pi r^{3} \\qquad \\frac{dr}{dt} = ${taxaRaio} ` + `\\qquad r = ${raio}`,
       gabarito,
@@ -371,9 +378,11 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
     return {
       id: `aplic-taxas-quadrado-${lado}-${taxaLado}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        `O lado de um quadrado cresce ${taxaLado} cm/s. A que taxa cresce a ÁREA no instante ` +
-        `em que o lado mede ${lado} cm? (em cm²/s)`,
+      enunciado: textoDoMolde(
+        moldesDe('aplicacoes-da-derivada', 'forma-5')[0]!,
+        { taxaLado, lado },
+        'pt',
+      ),
       enunciadoTex: `A = L^{2} \\qquad \\frac{dL}{dt} = ${taxaLado} \\qquad L = ${lado}`,
       gabarito,
       resolucao: {
@@ -441,10 +450,11 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `aplic-taxas-escada-${x}-${y}-${taxaX}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Uma escada de ${comprimento} m escorrega: o pé dela se afasta da parede a ${taxaX} m/s. ` +
-      `A que taxa o topo desce quando o pé está a ${x} m da parede? ` +
-      '(em m/s, com sinal, 3 casas decimais)',
+    enunciado: textoDoMolde(
+      moldesDe('aplicacoes-da-derivada', 'forma-6')[0]!,
+      { comprimento, taxaX, x },
+      'pt',
+    ),
     enunciadoTex:
       `x^{2} + y^{2} = ${comprimento}^{2} \\qquad \\frac{dx}{dt} = ${taxaX} ` + `\\qquad x = ${x}`,
     gabarito,

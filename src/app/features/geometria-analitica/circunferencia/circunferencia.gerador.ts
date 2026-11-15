@@ -44,7 +44,11 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
       return {
         id: `circunf-posicao-${a}${b}${raio}-${deslocamento}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('circunferencia', 'forma-1')[0]!, { v1: ponto.x, v2: ponto.y }, 'pt'),
+        enunciado: textoDoMolde(
+          moldesDe('circunferencia', 'forma-1')[0]!,
+          { v1: ponto.x, v2: ponto.y },
+          'pt',
+        ),
         enunciadoTex: `(x ${a >= 0 ? '-' : '+'} ${Math.abs(a)})^{2} + (y ${b >= 0 ? '-' : '+'} ${Math.abs(b)})^{2} = ${raio * raio}`,
         gabarito,
         resolucao: {
@@ -97,7 +101,7 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
       return {
         id: `circunf-centro-${a}${b}${raio}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: textoDoMolde(moldesDe('circunferencia', 'forma-2')[0]!, {  }, 'pt'),
+        enunciado: textoDoMolde(moldesDe('circunferencia', 'forma-2')[0]!, {}, 'pt'),
         enunciadoTex: geralTex,
         gabarito,
         resolucao: {
@@ -147,7 +151,7 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
     return {
       id: `circunf-raio-${a}${b}${raio}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: textoDoMolde(moldesDe('circunferencia', 'forma-3')[0]!, {  }, 'pt'),
+      enunciado: textoDoMolde(moldesDe('circunferencia', 'forma-3')[0]!, {}, 'pt'),
       enunciadoTex:
         nivel === 'facil'
           ? `(x ${a >= 0 ? '-' : '+'} ${Math.abs(a)})^{2} + (y ${b >= 0 ? '-' : '+'} ${Math.abs(b)})^{2} = ${raio * raio}`

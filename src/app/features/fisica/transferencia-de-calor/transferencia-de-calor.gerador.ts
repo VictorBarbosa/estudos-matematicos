@@ -106,8 +106,18 @@ function daConducao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `cond-${material.material}-${area}-${deltaT}-${espessura}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-1')[0]!, { v1: material.material, v2: numero(area), v3: numero(espessura), deltaT, v4: numero(material.k), PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transferencia-de-calor', 'forma-1')[0]!,
+      {
+        v1: material.material,
+        v2: numero(area),
+        v3: numero(espessura),
+        deltaT,
+        v4: numero(material.k),
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `\\frac{Q}{t} = \\frac{kA\\,\\Delta T}{L}`,
     gabarito,
     resolucao: conducaoComPassos(material.k, area, deltaT, espessura),
@@ -153,8 +163,17 @@ function daResistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `res-${material.material}-${area}-${espessura}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-2')[0]!, { v1: material.material, v2: numero(espessura), v3: numero(area), v4: numero(material.k), PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transferencia-de-calor', 'forma-2')[0]!,
+      {
+        v1: material.material,
+        v2: numero(espessura),
+        v3: numero(area),
+        v4: numero(material.k),
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `R = \\frac{L}{kA}`,
     gabarito,
     resolucao: resistenciaTermicaComPassos(espessura, material.k, area),
@@ -191,8 +210,11 @@ function daConveccao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `conv-${h}-${area}-${deltaT}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-3')[0]!, { v1: numero(area), deltaT, h, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transferencia-de-calor', 'forma-3')[0]!,
+      { v1: numero(area), deltaT, h, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\frac{Q}{t} = hA\\,\\Delta T`,
     gabarito,
     resolucao: conveccaoComPassos(h, area, deltaT),
@@ -233,8 +255,11 @@ function daRadiacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `rad-${emissividade}-${area}-${celsius}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-4')[0]!, { v1: numero(area), v2: numero(emissividade), celsius, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transferencia-de-calor', 'forma-4')[0]!,
+      { v1: numero(area), v2: numero(emissividade), celsius, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\frac{Q}{t} = \\varepsilon\\sigma A T^{4}`,
     gabarito,
     resolucao: radiacaoComPassos(emissividade, area, kelvin),
@@ -334,8 +359,11 @@ function daCalorimetria(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `cal-${material.nome}-${massa}-${deltaT}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-5')[0]!, { v1: numero(massa), v2: material.nome, deltaT, v3: material.c, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transferencia-de-calor', 'forma-5')[0]!,
+      { v1: numero(massa), v2: material.nome, deltaT, v3: material.c, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `Q = mc\\,\\Delta T`,
     gabarito,
     resolucao: calorSensivelComPassos(massa, material.c, deltaT),
@@ -384,8 +412,21 @@ function daMistura(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `mis-${primeiro.nome}${m1}${t1}-${segundo.nome}${m2}${t2}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-6')[0]!, { v1: numero(m1), v2: primeiro.nome, t1, v3: numero(m2), v4: segundo.nome, t2, v5: primeiro.c, v6: segundo.c, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('transferencia-de-calor', 'forma-6')[0]!,
+      {
+        v1: numero(m1),
+        v2: primeiro.nome,
+        t1,
+        v3: numero(m2),
+        v4: segundo.nome,
+        t2,
+        v5: primeiro.c,
+        v6: segundo.c,
+        PEDIDO,
+      },
+      'pt',
+    ),
     enunciadoTex: `Q_{1} + Q_{2} = 0`,
     gabarito,
     resolucao: equilibrioTermicoComPassos(m1, primeiro.c, t1, m2, segundo.c, t2),

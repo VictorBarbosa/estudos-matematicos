@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   ajustarRetaComPassos,
   desvioPadraoComPassos,
@@ -134,7 +135,11 @@ function exercicioResumo(
   return {
     id: `inc-${oque}-${medidas.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Para as medidas ${medidas.map(numeroEmPortugues).join('; ')}, qual é ${rotulo}? (2 casas decimais)`,
+    enunciado: textoDoMolde(
+      moldesDe('estatistica-e-incerteza', 'forma-1')[0]!,
+      { expressao1: medidas.map(numeroEmPortugues).join('; '), rotulo },
+      'pt',
+    ),
     enunciadoTex: medidas.map((valor) => String(valor).replace('.', '{,}')).join(',\\; '),
     gabarito,
     resolucao: { resultado: gabarito, passos: completos },
@@ -190,9 +195,7 @@ function exercicioPropagarSoma(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `inc-soma-${incertezas.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Dois comprimentos são medidos com incertezas de ${texto} cm. Somando os dois, qual é a ` +
-      'incerteza do resultado, em cm? (2 casas decimais)',
+    enunciado: textoDoMolde(moldesDe('estatistica-e-incerteza', 'forma-2')[0]!, { texto }, 'pt'),
     enunciadoTex: incertezas
       .map((valor, indice) => `\\sigma_${indice + 1} = ${String(valor).replace('.', '{,}')}`)
       .join(' \\qquad '),
@@ -243,10 +246,16 @@ function exercicioPropagarProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `inc-prod-${base}_${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um retângulo tem base ${base} ± ${incertezaBase.toLocaleString('pt-BR')} cm e altura ` +
-      `${altura} ± ${incertezaAltura.toLocaleString('pt-BR')} cm. Qual é a incerteza da área, ` +
-      'em cm²? (2 casas decimais)',
+    enunciado: textoDoMolde(
+      moldesDe('estatistica-e-incerteza', 'forma-3')[0]!,
+      {
+        base,
+        expressao1: incertezaBase.toLocaleString('pt-BR'),
+        altura,
+        expressao2: incertezaAltura.toLocaleString('pt-BR'),
+      },
+      'pt',
+    ),
     enunciadoTex:
       `b = ${base} \\pm ${String(incertezaBase).replace('.', '{,}')} \\qquad ` +
       `h = ${altura} \\pm ${String(incertezaAltura).replace('.', '{,}')}`,

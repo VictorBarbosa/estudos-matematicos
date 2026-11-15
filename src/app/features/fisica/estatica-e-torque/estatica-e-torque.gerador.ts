@@ -61,8 +61,11 @@ function exercicioTorque(anguloFixo: number, nivel: Nivel, rng: Rng): Exercicio<
   return {
     id: `tor-t-${forca}-${braco}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('estatica-e-torque', 'forma-1')[0]!, { forca, v1: braco.toLocaleString('pt-BR'), angulo }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('estatica-e-torque', 'forma-1')[0]!,
+      { forca, v1: braco.toLocaleString('pt-BR'), angulo },
+      'pt',
+    ),
     enunciadoTex:
       `F = ${forca}\\,\\text{N} \\qquad r = ${String(braco).replace('.', '{,}')}\\,\\text{m} ` +
       `\\qquad \\theta = ${angulo}^\\circ`,
@@ -106,8 +109,11 @@ function exercicioAlavanca(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `tor-alav-${forcaA}-${distanciaA}-${forcaB}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('estatica-e-torque', 'forma-2')[0]!, { forcaA, v1: distanciaA.toLocaleString('pt-BR'), forcaB }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('estatica-e-torque', 'forma-2')[0]!,
+      { forcaA, v1: distanciaA.toLocaleString('pt-BR'), forcaB },
+      'pt',
+    ),
     enunciadoTex:
       `F_A = ${forcaA}\\,\\text{N} \\qquad d_A = ${String(distanciaA).replace('.', '{,}')}\\,\\text{m} ` +
       `\\qquad F_B = ${forcaB}\\,\\text{N}`,
@@ -201,8 +207,11 @@ function exercicioForcaEquilibrio(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `tor-eq-${pesoBarra}-${carga}-${cargaDistancia}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('estatica-e-torque', 'forma-3')[0]!, { comprimento, pesoBarra, carga, cargaDistancia }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('estatica-e-torque', 'forma-3')[0]!,
+      { comprimento, pesoBarra, carga, cargaDistancia },
+      'pt',
+    ),
     enunciadoTex:
       `L = ${comprimento}\\,\\text{m} \\qquad P = ${pesoBarra}\\,\\text{N} \\qquad ` +
       `Q = ${carga}\\,\\text{N} \\qquad d = ${cargaDistancia}\\,\\text{m}`,

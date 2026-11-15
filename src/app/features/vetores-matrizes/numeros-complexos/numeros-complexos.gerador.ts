@@ -100,7 +100,11 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cpx-mod-${z.real}_${z.imaginario}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(moldesDe('numeros-complexos', 'forma-1')[0]!, { v1: escrever(z) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('numeros-complexos', 'forma-1')[0]!,
+      { v1: escrever(z) },
+      'pt',
+    ),
     enunciadoTex: `z = ${escrever(z)}`,
     gabarito: resultado,
     resolucao: {
@@ -160,8 +164,11 @@ function exercicioProduto(parte: 'real' | 'imaginario', nivel: Nivel, rng: Rng):
   return {
     id: `cpx-prod-${parte}-${a.real}_${a.imaginario}-${b.real}_${b.imaginario}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('numeros-complexos', 'forma-2')[0]!, { v1: escrever(a), v2: escrever(b), v3: parte === 'real' ? 'REAL' : 'IMAGINÁRIA' }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('numeros-complexos', 'forma-2')[0]!,
+      { v1: escrever(a), v2: escrever(b), v3: parte === 'real' ? 'REAL' : 'IMAGINÁRIA' },
+      'pt',
+    ),
     enunciadoTex: `z_1 = ${escrever(a)} \\qquad z_2 = ${escrever(b)}`,
     gabarito,
     resolucao: {
@@ -222,8 +229,11 @@ function exercicioArgumento(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cpx-arg-${z.real}_${z.imaginario}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('numeros-complexos', 'forma-3')[0]!, { v1: escrever(z) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('numeros-complexos', 'forma-3')[0]!,
+      { v1: escrever(z) },
+      'pt',
+    ),
     enunciadoTex: `z = ${escrever(z)}`,
     gabarito: resultado,
     resolucao: {
@@ -342,8 +352,11 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cpx-quo-${a.real}_${a.imaginario}-${b.real}_${b.imaginario}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('numeros-complexos', 'forma-5')[0]!, { v1: escrever(a), v2: escrever(b) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('numeros-complexos', 'forma-5')[0]!,
+      { v1: escrever(a), v2: escrever(b) },
+      'pt',
+    ),
     enunciadoTex: `\\frac{${escrever(a)}}{${escrever(b)}}`,
     gabarito,
     resolucao: {

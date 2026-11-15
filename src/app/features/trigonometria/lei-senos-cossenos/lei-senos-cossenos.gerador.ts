@@ -41,8 +41,11 @@ export const geradorLeis: GeradorExercicio<number> = {
       return {
         id: `leis-cossenos-${b}-${c}-${angulo}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado:
-          textoDoMolde(moldesDe('lei-senos-cossenos', 'forma-1')[0]!, { b, c, angulo }, 'pt'),
+        enunciado: textoDoMolde(
+          moldesDe('lei-senos-cossenos', 'forma-1')[0]!,
+          { b, c, angulo },
+          'pt',
+        ),
         enunciadoTex: `b = ${b} \\qquad c = ${c} \\qquad A = ${angulo}° \\qquad a = \\;?`,
         gabarito,
         resolucao,
@@ -93,8 +96,11 @@ export const geradorLeis: GeradorExercicio<number> = {
     return {
       id: `leis-senos-${ladoA}-${anguloA}-${anguloB}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        textoDoMolde(moldesDe('lei-senos-cossenos', 'forma-2')[0]!, { ladoA, anguloA, anguloB }, 'pt'),
+      enunciado: textoDoMolde(
+        moldesDe('lei-senos-cossenos', 'forma-2')[0]!,
+        { ladoA, anguloA, anguloB },
+        'pt',
+      ),
       enunciadoTex: `\\frac{${ladoA}}{\\sin ${anguloA}°} = \\frac{x}{\\sin ${anguloB}°}`,
       gabarito,
       resolucao,
@@ -157,8 +163,7 @@ function exercicioMaiorAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `leis-maior-angulo-${b}-${c}-${a}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('lei-senos-cossenos', 'forma-3')[0]!, { b, c, a }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('lei-senos-cossenos', 'forma-3')[0]!, { b, c, a }, 'pt'),
     enunciadoTex: `a = ${a} \\qquad b = ${b} \\qquad c = ${c} \\qquad \\hat{A} = \\;?`,
     gabarito,
     resolucao: {

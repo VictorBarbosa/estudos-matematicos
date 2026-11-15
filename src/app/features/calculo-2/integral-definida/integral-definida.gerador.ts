@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -84,8 +85,7 @@ function exercicioAreaTrapezio(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `def-trap-${m}_${k}-${de}${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'Calcule a integral pela GEOMETRIA da região: ela é um trapézio. ' + '(sem usar primitivas)',
+    enunciado: textoDoMolde(moldesDe('integral-definida', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: `\\int_{${de}}^{${ate}} \\left(${retaTex(m, k)}\\right) dx`,
     gabarito,
     resolucao: {
@@ -155,7 +155,7 @@ function exercicioConstante(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `def-const-${valor}-${de}${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Calcule a integral de uma função constante.',
+    enunciado: textoDoMolde(moldesDe('integral-definida', 'forma-2')[0]!, {}, 'pt'),
     enunciadoTex: `\\int_{${de}}^{${ate}} ${valor}\\,dx`,
     gabarito,
     resolucao: {
@@ -234,9 +234,11 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
     return {
       id: `def-prop-adit-${a}${b}${c}-${primeira}_${segunda}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        `Sabendo que a integral de f de ${a} a ${b} vale ${primeira} e de ${b} a ${c} vale ` +
-        `${segunda}, quanto vale a integral de ${a} a ${c}?`,
+      enunciado: textoDoMolde(
+        moldesDe('integral-definida', 'forma-3')[0]!,
+        { a, b, primeira, c, segunda },
+        'pt',
+      ),
       enunciadoTex:
         `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${b}}^{${c}} f = ${segunda} ` +
         `\\qquad \\int_{${a}}^{${c}} f = \\;?`,
@@ -289,9 +291,11 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
     return {
       id: `def-prop-inv-${a}${b}-${primeira}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        `Sabendo que a integral de f de ${a} a ${b} vale ${primeira}, quanto vale a integral ` +
-        `de ${b} a ${a}?`,
+      enunciado: textoDoMolde(
+        moldesDe('integral-definida', 'forma-4')[0]!,
+        { a, b, primeira },
+        'pt',
+      ),
       enunciadoTex: `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${b}}^{${a}} f = \\;?`,
       gabarito,
       resolucao: {
@@ -342,9 +346,11 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
     return {
       id: `def-prop-mult-${a}${b}-${fator}_${primeira}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        `Sabendo que a integral de f de ${a} a ${b} vale ${primeira}, quanto vale a integral ` +
-        `de ${fator}·f no mesmo intervalo?`,
+      enunciado: textoDoMolde(
+        moldesDe('integral-definida', 'forma-5')[0]!,
+        { a, b, primeira, fator },
+        'pt',
+      ),
       enunciadoTex: `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${a}}^{${b}} ${fator}f = \\;?`,
       gabarito,
       resolucao: {
@@ -389,9 +395,11 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `def-prop-soma-${a}${b}-${primeira}_${fator}_${segunda}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Sabendo que a integral de f vale ${primeira} e a de g vale ${segunda} no intervalo de ` +
-      `${a} a ${b}, quanto vale a integral de f + ${fator}·g?`,
+    enunciado: textoDoMolde(
+      moldesDe('integral-definida', 'forma-6')[0]!,
+      { primeira, segunda, a, b, fator },
+      'pt',
+    ),
     enunciadoTex:
       `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${a}}^{${b}} g = ${segunda} ` +
       `\\qquad \\int_{${a}}^{${b}} (f + ${fator}g) = \\;?`,
@@ -451,7 +459,7 @@ function exercicioValorMedio(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `def-media-${m}_${k}-${de}${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Qual é o valor MÉDIO da função no intervalo? (use a área, 2 casas decimais)',
+    enunciado: textoDoMolde(moldesDe('integral-definida', 'forma-7')[0]!, {}, 'pt'),
     enunciadoTex:
       `f(x) = ${retaTex(m, k)} \\qquad [${de},\\, ${ate}] \\qquad ` +
       `\\bar{f} = \\frac{1}{b-a}\\int_{a}^{b} f`,

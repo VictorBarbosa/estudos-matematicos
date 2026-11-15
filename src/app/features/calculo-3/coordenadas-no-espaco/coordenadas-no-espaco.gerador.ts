@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { cilindricasComPassos, esfericasComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -80,9 +81,11 @@ function daCilindrica(nivel: Nivel, rng: Rng, pedirX: boolean): Exercicio<number
     chave: `cil-${r}-${theta}-${z}-${pedirX}`,
     nivel,
     rng,
-    enunciado:
-      `Um ponto tem coordenadas cilíndricas r = ${r}, θ = ${theta}° e z = ${z}. Qual é a ` +
-      `coordenada cartesiana ${pedirX ? 'x' : 'y'}? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('coordenadas-no-espaco', 'forma-1')[0]!,
+      { r, theta, z, expressao1: pedirX ? 'x' : 'y', PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `x = r\\cos\\theta \\qquad y = r\\operatorname{sen}\\theta \\qquad z = z`,
     gabarito,
     resolucao: {
@@ -136,9 +139,11 @@ function daEsferica(nivel: Nivel, rng: Rng, pedir: 'x' | 'z'): Exercicio<number>
     chave: `esf-${rho}-${phi}-${theta}-${pedir}`,
     nivel,
     rng,
-    enunciado:
-      `Um ponto tem coordenadas esféricas ρ = ${rho}, φ = ${phi}° (medido do eixo z) e ` +
-      `θ = ${theta}°. Qual é a coordenada cartesiana ${pedir}? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('coordenadas-no-espaco', 'forma-2')[0]!,
+      { rho, phi, theta, pedir, PEDIDO },
+      'pt',
+    ),
     enunciadoTex:
       'x = \\rho\\operatorname{sen}\\varphi\\cos\\theta \\qquad ' + 'z = \\rho\\cos\\varphi',
     gabarito,
@@ -194,9 +199,11 @@ function doRaioEsferico(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `raio-${x}-${y}-${z}`,
     nivel,
     rng,
-    enunciado:
-      `Um ponto tem coordenadas cartesianas (${x}, ${y}, ${z}). Qual é o raio ρ dele em ` +
-      `coordenadas esféricas? ${PEDIDO}`,
+    enunciado: textoDoMolde(
+      moldesDe('coordenadas-no-espaco', 'forma-3')[0]!,
+      { x, y, z, PEDIDO },
+      'pt',
+    ),
     enunciadoTex: `\\rho = \\sqrt{x^{2} + y^{2} + z^{2}}`,
     gabarito,
     resolucao: {

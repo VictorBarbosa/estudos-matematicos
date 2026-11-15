@@ -73,8 +73,11 @@ function exercicioExpoente(base: keyof Dimensao, nivel: Nivel, rng: Rng): Exerci
   return {
     id: `dim-exp-${base}-${grandeza.nome}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('analise-dimensional', 'forma-1')[0]!, { v1: grandeza.nome, v2: grandeza.unidade, base }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('analise-dimensional', 'forma-1')[0]!,
+      { v1: grandeza.nome, v2: grandeza.unidade, base },
+      'pt',
+    ),
     enunciadoTex: `[\\text{${grandeza.nome}}] = ?`,
     gabarito,
     resolucao: {
@@ -245,35 +248,35 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<number> {
     readonly dica: string;
   }[] = [
     {
-      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-2')[0]!, {  }, 'pt'),
+      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-2')[0]!, {}, 'pt'),
       tex: '1\\,\\text{m}^{3} = ?\\,\\text{L}',
       fator: 1000,
       nota: '1 L = 1 dm³, e 1 m³ tem 10³ dm³.',
       dica: 'Um litro é um decímetro cúbico. 1 m = 10 dm, e o volume tem três dimensões: 10 ao cubo.',
     },
     {
-      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-3')[0]!, {  }, 'pt'),
+      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-3')[0]!, {}, 'pt'),
       tex: '1\\,\\text{m}^{2} = ?\\,\\text{cm}^{2}',
       fator: 10000,
       nota: 'O fator linear 100 entra ao quadrado: 100² = 10 000.',
       dica: '1 m = 100 cm em cada lado; a área multiplica dois lados, então o fator entra ao quadrado.',
     },
     {
-      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-4')[0]!, {  }, 'pt'),
+      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-4')[0]!, {}, 'pt'),
       tex: '1\\,\\text{m}^{3} = ?\\,\\text{cm}^{3}',
       fator: 1e6,
       nota: 'O fator linear 100 entra ao cubo: 100³ = 10⁶.',
       dica: '1 m = 100 cm em cada aresta; o volume multiplica três arestas, então o fator entra ao cubo.',
     },
     {
-      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-5')[0]!, {  }, 'pt'),
+      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-5')[0]!, {}, 'pt'),
       tex: '36\\,\\text{km/h} = ?\\,\\text{m/s}',
       fator: 10,
       nota: 'Dividir por 3,6 converte km/h em m/s.',
       dica: '1 km = 1000 m e 1 h = 3600 s: cada km/h vale 1000/3600 m/s, isto é, divida por 3,6.',
     },
     {
-      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-6')[0]!, {  }, 'pt'),
+      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-6')[0]!, {}, 'pt'),
       tex: '1\\,\\text{g/cm}^{3} = ?\\,\\text{kg/m}^{3}',
       fator: 1000,
       nota: 'A massa divide por 1000 e o volume por 10⁻⁶: sobra o fator 1000.',

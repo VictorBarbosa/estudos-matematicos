@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   CurvaImplicita,
   FAMILIAS_IMPLICITAS,
@@ -213,9 +214,7 @@ function montarExercicio(
   return {
     id: `implicita-${curva.nome}-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `A curva passa pelo ponto (${x}, ${y}). Encontre dy/dx nesse ponto, ` +
-      'derivando implicitamente. Responda como fração ou com 4 casas decimais.',
+    enunciado: textoDoMolde(moldesDe('derivacao-implicita', 'forma-1')[0]!, { x, y }, 'pt'),
     enunciadoTex: curvaImplicitaParaTex(curva),
     gabarito,
     resolucao: derivadaImplicitaComPassos(curva, x, y),
@@ -294,9 +293,7 @@ function comoTangente(base: Exercicio<number>, rng: Rng): Exercicio<number> {
   return {
     ...base,
     id: base.id.replace('implicita-', 'implicita-tangente-') + `-${rng.inteiro(0, 99)}`,
-    enunciado:
-      `A curva passa pelo ponto (${x}, ${y}). Encontre a reta tangente nesse ponto e informe ` +
-      'onde ela corta o eixo y. Responda como fração ou com 4 casas decimais.',
+    enunciado: textoDoMolde(moldesDe('derivacao-implicita', 'forma-2')[0]!, { x, y }, 'pt'),
     gabarito,
     resolucao: {
       resultado: gabarito,

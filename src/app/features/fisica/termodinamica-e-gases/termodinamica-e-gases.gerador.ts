@@ -74,8 +74,11 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ter-v-${mols}-${temperaturaCelsius}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('termodinamica-e-gases', 'forma-1')[0]!, { mols, temperaturaCelsius }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('termodinamica-e-gases', 'forma-1')[0]!,
+      { mols, temperaturaCelsius },
+      'pt',
+    ),
     enunciadoTex: `n = ${mols}\\,\\text{mol} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C} \\qquad p = 1\\,\\text{atm}`,
     gabarito,
     resolucao: {
@@ -133,8 +136,11 @@ function exercicioPressao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ter-p-${mols}-${volumeLitros}-${temperaturaCelsius}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('termodinamica-e-gases', 'forma-2')[0]!, { mols, volumeLitros, temperaturaCelsius }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('termodinamica-e-gases', 'forma-2')[0]!,
+      { mols, volumeLitros, temperaturaCelsius },
+      'pt',
+    ),
     enunciadoTex: `n = ${mols} \\qquad V = ${volumeLitros}\\,\\text{L} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C}`,
     gabarito,
     resolucao: {
@@ -188,8 +194,11 @@ function exercicioTransformacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ter-trans-${pressao1}_${volume1}_${temperatura1}-${pressao2}_${temperatura2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('termodinamica-e-gases', 'forma-3')[0]!, { pressao1, volume1, temperatura1, pressao2, temperatura2 }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('termodinamica-e-gases', 'forma-3')[0]!,
+      { pressao1, volume1, temperatura1, pressao2, temperatura2 },
+      'pt',
+    ),
     enunciadoTex:
       `p_1 = ${pressao1} \\quad V_1 = ${volume1} \\quad T_1 = ${temperatura1} \\quad ` +
       `p_2 = ${pressao2} \\quad T_2 = ${temperatura2}`,
@@ -259,8 +268,16 @@ function exercicioEnergiaInterna(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ter-u-${calor}-${trabalho}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('termodinamica-e-gases', 'forma-4')[0]!, { v1: calor >= 0 ? 'recebe' : 'perde', v2: Math.abs(calor), v3: trabalho >= 0 ? 'realiza' : 'recebe', v4: Math.abs(trabalho) }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('termodinamica-e-gases', 'forma-4')[0]!,
+      {
+        v1: calor >= 0 ? 'recebe' : 'perde',
+        v2: Math.abs(calor),
+        v3: trabalho >= 0 ? 'realiza' : 'recebe',
+        v4: Math.abs(trabalho),
+      },
+      'pt',
+    ),
     enunciadoTex: `Q = ${calor}\\,\\text{J} \\qquad W = ${trabalho}\\,\\text{J}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -305,8 +322,11 @@ function exercicioTrabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ter-w-${pressaoAtm}-${volumeInicial}-${volumeFinal}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('termodinamica-e-gases', 'forma-5')[0]!, { volumeInicial, volumeFinal, pressaoAtm }, 'pt'),
+    enunciado: textoDoMolde(
+      moldesDe('termodinamica-e-gases', 'forma-5')[0]!,
+      { volumeInicial, volumeFinal, pressaoAtm },
+      'pt',
+    ),
     enunciadoTex:
       `p = ${pressaoAtm}\\,\\text{atm} \\qquad V_i = ${volumeInicial}\\,\\text{L} \\qquad ` +
       `V_f = ${volumeFinal}\\,\\text{L}`,
