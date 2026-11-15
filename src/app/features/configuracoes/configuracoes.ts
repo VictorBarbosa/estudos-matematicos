@@ -62,6 +62,7 @@ const ORDEM: readonly Ajuste[] = [
   ['surpresa', 'minimoDeTopicos'],
   ['surpresa', 'questoesPorTopico'],
   ['surpresa', 'percentualDeAcerto'],
+  ['banco', 'umEmCada'],
 ];
 
 /**
@@ -91,7 +92,7 @@ export class Configuracoes {
   protected readonly blocos = computed<readonly Bloco[]>(() => {
     const atual = this.servico.configuracao();
 
-    return (['etapa', 'escada', 'prova', 'surpresa'] as const).map((id) => ({
+    return (['etapa', 'escada', 'prova', 'surpresa', 'banco'] as const).map((id) => ({
       id,
       campos: ORDEM.filter((ajuste) => ajuste[0] === id).map((ajuste) => this.campo(ajuste, atual)),
     }));

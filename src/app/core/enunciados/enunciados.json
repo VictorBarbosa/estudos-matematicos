@@ -60,34 +60,6 @@
     }
   },
   {
-    "topico": "mmc-mdc",
-    "nivel": "medio",
-    "enunciado": {
-      "br": "Dois ônibus partem do terminal: um a cada {dados-calculo.x1} minutos e o outro a cada {dados-calculo.x2} minutos. Depois de quantos minutos eles partem juntos outra vez?",
-      "fr": "Deux autobus quittent le terminus : l'un toutes les {dados-calculo.x1} minutes et l'autre toutes les {dados-calculo.x2} minutes. Après combien de minutes partent-ils ensemble de nouveau ?",
-      "en": "Two buses leave the terminal: one every {dados-calculo.x1} minutes and the other every {dados-calculo.x2} minutes. After how many minutes do they leave together again?"
-    },
-    "dados-calculo": {
-      "x1": "12",
-      "x2": "18",
-      "total": "36"
-    }
-  },
-  {
-    "topico": "mmc-mdc",
-    "nivel": "dificil",
-    "enunciado": {
-      "br": "Duas engrenagens voltam à posição inicial a cada {dados-calculo.x1} e {dados-calculo.x2} segundos. Em quantos segundos as duas voltam juntas à posição inicial?",
-      "fr": "Deux engrenages reviennent à leur position initiale toutes les {dados-calculo.x1} et {dados-calculo.x2} secondes. Au bout de combien de secondes y reviennent-ils ensemble ?",
-      "en": "Two gears return to their starting position every {dados-calculo.x1} and {dados-calculo.x2} seconds. After how many seconds do both return together?"
-    },
-    "dados-calculo": {
-      "x1": "45",
-      "x2": "60",
-      "total": "180"
-    }
-  },
-  {
     "topico": "razao-proporcao",
     "nivel": "facil",
     "enunciado": {
@@ -145,35 +117,6 @@
       "desceram2": "14",
       "subiram": "11",
       "total": "40"
-    }
-  },
-  {
-    "topico": "mmc-mdc",
-    "nivel": "facil",
-    "enunciado": {
-      "br": "Dois sinos tocam juntos neste instante: um toca a cada {dados-calculo.a} minutos e o outro a cada {dados-calculo.b} minutos. Em quantos minutos eles voltarão a tocar juntos?",
-      "fr": "Deux cloches sonnent ensemble en ce moment : l’une sonne toutes les {dados-calculo.a} minutes et l’autre toutes les {dados-calculo.b} minutes. Dans combien de minutes sonneront-elles ensemble de nouveau ?",
-      "en": "Two bells ring together right now: one rings every {dados-calculo.a} minutes and the other every {dados-calculo.b} minutes. In how many minutes will they ring together again?"
-    },
-    "dados-calculo": {
-      "a": "6",
-      "b": "8",
-      "total": "24"
-    }
-  },
-  {
-    "topico": "mmc-mdc",
-    "nivel": "extremo",
-    "enunciado": {
-      "br": "Três faróis piscam a cada {dados-calculo.a}, {dados-calculo.b} e {dados-calculo.c} segundos. Eles piscaram juntos agora. Em quantos segundos piscarão juntos novamente?",
-      "fr": "Trois phares clignotent toutes les {dados-calculo.a}, {dados-calculo.b} et {dados-calculo.c} secondes. Ils ont clignoté ensemble à l’instant. Dans combien de secondes clignoteront-ils ensemble de nouveau ?",
-      "en": "Three lighthouses flash every {dados-calculo.a}, {dados-calculo.b} and {dados-calculo.c} seconds. They flashed together just now. In how many seconds will they flash together again?"
-    },
-    "dados-calculo": {
-      "a": "18",
-      "b": "24",
-      "c": "60",
-      "total": "360"
     }
   },
   {
@@ -332,114 +275,6 @@
     }
   },
   {
-    "topico": "potenciacao-radiciacao",
-    "nivel": "facil",
-    "enunciado": {
-      "br": "Um terreno quadrado tem área de {dados-calculo.area} m². Quantos metros mede o lado desse terreno?",
-      "fr": "Un terrain carré a une aire de {dados-calculo.area} m². Combien de mètres mesure le côté de ce terrain ?",
-      "en": "A square plot has an area of {dados-calculo.area} m². How many metres long is its side?"
-    },
-    "dados-calculo": {
-      "area": "144",
-      "total": "12"
-    }
-  },
-  {
-    "topico": "potenciacao-radiciacao",
-    "nivel": "medio",
-    "enunciado": {
-      "br": "Uma caixa em forma de cubo tem volume de {dados-calculo.volume} cm³. Quantos centímetros mede a aresta?",
-      "fr": "Une boîte en forme de cube a un volume de {dados-calculo.volume} cm³. Combien de centimètres mesure l’arête ?",
-      "en": "A cube-shaped box has a volume of {dados-calculo.volume} cm³. How many centimetres long is its edge?"
-    },
-    "dados-calculo": {
-      "volume": "1728",
-      "total": "12"
-    }
-  },
-  {
-    "topico": "potenciacao-radiciacao",
-    "nivel": "dificil",
-    "enunciado": {
-      "br": "Uma cultura de bactérias dobra de tamanho a cada hora. Começando com {dados-calculo.inicio} bactérias, quantas haverá depois de {dados-calculo.horas} horas?",
-      "fr": "Une culture de bactéries double de taille chaque heure. En partant de {dados-calculo.inicio} bactéries, combien y en aura-t-il après {dados-calculo.horas} heures ?",
-      "en": "A bacteria culture doubles in size every hour. Starting with {dados-calculo.inicio} bacteria, how many will there be after {dados-calculo.horas} hours?"
-    },
-    "dados-calculo": {
-      "inicio": "5",
-      "horas": "10",
-      "total": "5120"
-    }
-  },
-  {
-    "topico": "potenciacao-radiciacao",
-    "nivel": "extremo",
-    "enunciado": {
-      "br": "Um valor dobra a cada ano. Partindo de {dados-calculo.inicio} reais, quantos reais haverá depois de {dados-calculo.anos} anos?",
-      "fr": "Une somme double chaque année. En partant de {dados-calculo.inicio} reais, combien de reais y aura-t-il après {dados-calculo.anos} ans ?",
-      "en": "An amount doubles every year. Starting from {dados-calculo.inicio} reais, how many reais will there be after {dados-calculo.anos} years?"
-    },
-    "dados-calculo": {
-      "inicio": "250",
-      "anos": "12",
-      "total": "1024000"
-    }
-  },
-  {
-    "topico": "notacao-matematica",
-    "nivel": "facil",
-    "enunciado": {
-      "br": "Escreva em símbolos: o número x está entre {dados-calculo.a} e {dados-calculo.b}, sem poder valer nenhum dos dois.",
-      "fr": "Écrivez en symboles : le nombre x est entre {dados-calculo.a} et {dados-calculo.b}, sans pouvoir valoir ni l’un ni l’autre.",
-      "en": "Write in symbols: the number x lies between {dados-calculo.a} and {dados-calculo.b}, and can equal neither of them."
-    },
-    "dados-calculo": {
-      "a": "3",
-      "b": "9",
-      "total": "x ∈ (3, 9)"
-    }
-  },
-  {
-    "topico": "notacao-matematica",
-    "nivel": "medio",
-    "enunciado": {
-      "br": "Escreva em símbolos: a função g recebe um número real e devolve um número real.",
-      "fr": "Écrivez en symboles : la fonction g reçoit un nombre réel et renvoie un nombre réel.",
-      "en": "Write in symbols: the function g takes a real number and returns a real number."
-    },
-    "dados-calculo": {
-      "total": "g: ℝ → ℝ"
-    }
-  },
-  {
-    "topico": "notacao-matematica",
-    "nivel": "dificil",
-    "enunciado": {
-      "br": "Escreva em símbolos: a soma dos valores de k, com k indo de {dados-calculo.i} até {dados-calculo.f}.",
-      "fr": "Écrivez en symboles : la somme des valeurs de k, avec k allant de {dados-calculo.i} à {dados-calculo.f}.",
-      "en": "Write in symbols: the sum of the values of k, with k going from {dados-calculo.i} to {dados-calculo.f}."
-    },
-    "dados-calculo": {
-      "i": "1",
-      "f": "20",
-      "total": "∑_{k=1}^{20} k"
-    }
-  },
-  {
-    "topico": "notacao-matematica",
-    "nivel": "extremo",
-    "enunciado": {
-      "br": "Escreva em símbolos: x é maior ou igual a {dados-calculo.a} e menor que {dados-calculo.b}.",
-      "fr": "Écrivez en symboles : x est supérieur ou égal à {dados-calculo.a} et inférieur à {dados-calculo.b}.",
-      "en": "Write in symbols: x is greater than or equal to {dados-calculo.a} and less than {dados-calculo.b}."
-    },
-    "dados-calculo": {
-      "a": "2",
-      "b": "11",
-      "total": "x ∈ [2, 11)"
-    }
-  },
-  {
     "topico": "expressoes-algebricas",
     "nivel": "facil",
     "enunciado": {
@@ -560,115 +395,6 @@
     }
   },
   {
-    "topico": "produtos-notaveis",
-    "nivel": "facil",
-    "enunciado": {
-      "br": "Um quadrado de lado {dados-calculo.lado} cm teve o lado aumentado em {dados-calculo.aumento} cm. Em quantos centímetros quadrados a área aumentou?",
-      "fr": "Un carré de côté {dados-calculo.lado} cm a vu son côté augmenter de {dados-calculo.aumento} cm. De combien de centimètres carrés l’aire a-t-elle augmenté ?",
-      "en": "A square of side {dados-calculo.lado} cm had its side increased by {dados-calculo.aumento} cm. By how many square centimetres did the area grow?"
-    },
-    "dados-calculo": {
-      "lado": "20",
-      "aumento": "3",
-      "total": "129"
-    }
-  },
-  {
-    "topico": "produtos-notaveis",
-    "nivel": "medio",
-    "enunciado": {
-      "br": "Dois números somam {dados-calculo.soma} e a diferença entre eles é {dados-calculo.diferenca}. Qual é o produto desses dois números?",
-      "fr": "Deux nombres ont pour somme {dados-calculo.soma} et leur différence est {dados-calculo.diferenca}. Quel est le produit de ces deux nombres ?",
-      "en": "Two numbers add up to {dados-calculo.soma} and their difference is {dados-calculo.diferenca}. What is the product of those two numbers?"
-    },
-    "dados-calculo": {
-      "soma": "24",
-      "diferenca": "6",
-      "total": "135"
-    }
-  },
-  {
-    "topico": "produtos-notaveis",
-    "nivel": "dificil",
-    "enunciado": {
-      "br": "Um número somado ao seu inverso dá {dados-calculo.soma}. Quanto vale o quadrado desse número somado ao quadrado do seu inverso?",
-      "fr": "Un nombre ajouté à son inverse donne {dados-calculo.soma}. Combien vaut le carré de ce nombre ajouté au carré de son inverse ?",
-      "en": "A number added to its reciprocal gives {dados-calculo.soma}. What is the square of that number plus the square of its reciprocal?"
-    },
-    "dados-calculo": {
-      "soma": "5",
-      "total": "23"
-    }
-  },
-  {
-    "topico": "produtos-notaveis",
-    "nivel": "extremo",
-    "enunciado": {
-      "br": "A soma de dois números é {dados-calculo.soma} e a soma dos seus quadrados é {dados-calculo.somaQuadrados}. Qual é o produto dos dois números?",
-      "fr": "La somme de deux nombres est {dados-calculo.soma} et la somme de leurs carrés est {dados-calculo.somaQuadrados}. Quel est le produit des deux nombres ?",
-      "en": "The sum of two numbers is {dados-calculo.soma} and the sum of their squares is {dados-calculo.somaQuadrados}. What is the product of the two numbers?"
-    },
-    "dados-calculo": {
-      "soma": "14",
-      "somaQuadrados": "116",
-      "total": "40"
-    }
-  },
-  {
-    "topico": "fatoracao",
-    "nivel": "facil",
-    "enunciado": {
-      "br": "Um retângulo tem área de {dados-calculo.area} cm² e a base mede {dados-calculo.diferenca} cm mais que a altura. Quantos centímetros mede a altura?",
-      "fr": "Un rectangle a une aire de {dados-calculo.area} cm² et la base mesure {dados-calculo.diferenca} cm de plus que la hauteur. Combien de centimètres mesure la hauteur ?",
-      "en": "A rectangle has an area of {dados-calculo.area} cm² and its base is {dados-calculo.diferenca} cm longer than its height. How many centimetres is the height?"
-    },
-    "dados-calculo": {
-      "area": "40",
-      "diferenca": "3",
-      "total": "5"
-    }
-  },
-  {
-    "topico": "fatoracao",
-    "nivel": "medio",
-    "enunciado": {
-      "br": "Um terreno retangular tem perímetro de {dados-calculo.perimetro} m e área de {dados-calculo.area} m². Quantos metros mede o lado maior?",
-      "fr": "Un terrain rectangulaire a un périmètre de {dados-calculo.perimetro} m et une aire de {dados-calculo.area} m². Combien de mètres mesure le plus grand côté ?",
-      "en": "A rectangular plot has a perimeter of {dados-calculo.perimetro} m and an area of {dados-calculo.area} m². How many metres long is the longer side?"
-    },
-    "dados-calculo": {
-      "perimetro": "46",
-      "area": "120",
-      "total": "15"
-    }
-  },
-  {
-    "topico": "fatoracao",
-    "nivel": "dificil",
-    "enunciado": {
-      "br": "O produto de dois números inteiros consecutivos é {dados-calculo.produto}. Qual é o maior dos dois?",
-      "fr": "Le produit de deux entiers consécutifs est {dados-calculo.produto}. Quel est le plus grand des deux ?",
-      "en": "The product of two consecutive whole numbers is {dados-calculo.produto}. Which is the larger of the two?"
-    },
-    "dados-calculo": {
-      "produto": "342",
-      "total": "19"
-    }
-  },
-  {
-    "topico": "fatoracao",
-    "nivel": "extremo",
-    "enunciado": {
-      "br": "Um número positivo somado ao seu próprio quadrado dá {dados-calculo.soma}. Que número é esse?",
-      "fr": "Un nombre positif ajouté à son propre carré donne {dados-calculo.soma}. Quel est ce nombre ?",
-      "en": "A positive number added to its own square gives {dados-calculo.soma}. What is that number?"
-    },
-    "dados-calculo": {
-      "soma": "156",
-      "total": "12"
-    }
-  },
-  {
     "topico": "equacao-segundo-grau",
     "nivel": "facil",
     "enunciado": {
@@ -722,180 +448,6 @@
     "dados-calculo": {
       "soma": "5/2",
       "total": "2"
-    }
-  },
-  {
-    "topico": "inequacoes",
-    "nivel": "facil",
-    "enunciado": {
-      "br": "Um táxi cobra {dados-calculo.fixo} reais fixos mais {dados-calculo.porKm} reais por quilômetro. Com {dados-calculo.dinheiro} reais no bolso, quantos quilômetros x o passageiro pode rodar? Escreva o conjunto solução.",
-      "fr": "Un taxi facture {dados-calculo.fixo} reais fixes plus {dados-calculo.porKm} reais par kilomètre. Avec {dados-calculo.dinheiro} reais en poche, combien de kilomètres x le passager peut-il faire ? Écrivez l’ensemble solution.",
-      "en": "A taxi charges {dados-calculo.fixo} reais fixed plus {dados-calculo.porKm} reais per kilometre. With {dados-calculo.dinheiro} reais in hand, how many kilometres x can the passenger travel? Write the solution set."
-    },
-    "dados-calculo": {
-      "fixo": "8",
-      "porKm": "3",
-      "dinheiro": "44",
-      "total": "x <= 12"
-    }
-  },
-  {
-    "topico": "inequacoes",
-    "nivel": "medio",
-    "enunciado": {
-      "br": "Uma academia cobra {dados-calculo.mensalidade} reais de mensalidade mais {dados-calculo.porAula} reais por aula. Outra cobra {dados-calculo.outra} reais por aula, sem mensalidade. Para que número de aulas x a primeira fica mais barata? Escreva o conjunto solução.",
-      "fr": "Un gymnase facture {dados-calculo.mensalidade} reais d’abonnement plus {dados-calculo.porAula} reais par cours. Un autre facture {dados-calculo.outra} reais par cours, sans abonnement. Pour quel nombre de cours x le premier est-il moins cher ? Écrivez l’ensemble solution.",
-      "en": "One gym charges {dados-calculo.mensalidade} reais a month plus {dados-calculo.porAula} reais per class. Another charges {dados-calculo.outra} reais per class with no monthly fee. For what number of classes x is the first one cheaper? Write the solution set."
-    },
-    "dados-calculo": {
-      "mensalidade": "60",
-      "porAula": "5",
-      "outra": "11",
-      "total": "x > 10"
-    }
-  },
-  {
-    "topico": "inequacoes",
-    "nivel": "dificil",
-    "enunciado": {
-      "br": "O triplo de um número x, menos {dados-calculo.a}, é maior que esse mesmo número mais {dados-calculo.b}. Que valores x pode ter? Escreva o conjunto solução.",
-      "fr": "Le triple d’un nombre x, moins {dados-calculo.a}, est supérieur à ce même nombre plus {dados-calculo.b}. Quelles valeurs x peut-il prendre ? Écrivez l’ensemble solution.",
-      "en": "Three times a number x, minus {dados-calculo.a}, is greater than that same number plus {dados-calculo.b}. What values can x take? Write the solution set."
-    },
-    "dados-calculo": {
-      "a": "7",
-      "b": "5",
-      "total": "x > 6"
-    }
-  },
-  {
-    "topico": "inequacoes",
-    "nivel": "extremo",
-    "enunciado": {
-      "br": "Um aluno tirou {dados-calculo.n1} e {dados-calculo.n2} nas duas primeiras provas. Para que a média das três provas seja pelo menos {dados-calculo.media}, que valores a terceira nota x pode ter? Escreva o conjunto solução.",
-      "fr": "Un élève a obtenu {dados-calculo.n1} et {dados-calculo.n2} aux deux premiers examens. Pour que la moyenne des trois examens soit d’au moins {dados-calculo.media}, quelles valeurs la troisième note x peut-elle prendre ? Écrivez l’ensemble solution.",
-      "en": "A student scored {dados-calculo.n1} and {dados-calculo.n2} on the first two tests. For the average of the three tests to be at least {dados-calculo.media}, what values can the third score x take? Write the solution set."
-    },
-    "dados-calculo": {
-      "n1": "6",
-      "n2": "7",
-      "media": "7",
-      "total": "x >= 8"
-    }
-  },
-  {
-    "topico": "inequacoes-segundo-grau",
-    "nivel": "facil",
-    "enunciado": {
-      "br": "Para que valores de x o produto de (x menos {dados-calculo.a}) por (x menos {dados-calculo.b}) é positivo? Escreva o conjunto solução.",
-      "fr": "Pour quelles valeurs de x le produit de (x moins {dados-calculo.a}) par (x moins {dados-calculo.b}) est-il positif ? Écrivez l’ensemble solution.",
-      "en": "For which values of x is the product of (x minus {dados-calculo.a}) and (x minus {dados-calculo.b}) positive? Write the solution set."
-    },
-    "dados-calculo": {
-      "a": "1",
-      "b": "5",
-      "total": "x < 1 ou x > 5"
-    }
-  },
-  {
-    "topico": "inequacoes-segundo-grau",
-    "nivel": "medio",
-    "enunciado": {
-      "br": "Um número x multiplicado por ele mesmo, menos {dados-calculo.k} vezes esse número, dá um resultado negativo. Entre que valores está x? Escreva o conjunto solução.",
-      "fr": "Un nombre x multiplié par lui-même, moins {dados-calculo.k} fois ce nombre, donne un résultat négatif. Entre quelles valeurs se trouve x ? Écrivez l’ensemble solution.",
-      "en": "A number x times itself, minus {dados-calculo.k} times that number, gives a negative result. Between which values does x lie? Write the solution set."
-    },
-    "dados-calculo": {
-      "k": "6",
-      "total": "0 < x < 6"
-    }
-  },
-  {
-    "topico": "inequacoes-segundo-grau",
-    "nivel": "dificil",
-    "enunciado": {
-      "br": "Para que valores de x o quadrado de x é maior que {dados-calculo.k}? Escreva o conjunto solução.",
-      "fr": "Pour quelles valeurs de x le carré de x est-il supérieur à {dados-calculo.k} ? Écrivez l’ensemble solution.",
-      "en": "For which values of x is the square of x greater than {dados-calculo.k}? Write the solution set."
-    },
-    "dados-calculo": {
-      "k": "9",
-      "total": "x < -3 ou x > 3"
-    }
-  },
-  {
-    "topico": "inequacoes-segundo-grau",
-    "nivel": "extremo",
-    "enunciado": {
-      "br": "Para que valores de x o quadrado de (x menos {dados-calculo.a}) é maior ou igual a zero? Escreva o conjunto solução.",
-      "fr": "Pour quelles valeurs de x le carré de (x moins {dados-calculo.a}) est-il supérieur ou égal à zéro ? Écrivez l’ensemble solution.",
-      "en": "For which values of x is the square of (x minus {dados-calculo.a}) greater than or equal to zero? Write the solution set."
-    },
-    "dados-calculo": {
-      "a": "4",
-      "total": "todos"
-    }
-  },
-  {
-    "topico": "sistemas-lineares",
-    "nivel": "facil",
-    "enunciado": {
-      "br": "Num estacionamento há carros e motos: {dados-calculo.veiculos} veículos e {dados-calculo.rodas} rodas ao todo. Quantas motos há?",
-      "fr": "Dans un stationnement il y a des voitures et des motos : {dados-calculo.veiculos} véhicules et {dados-calculo.rodas} roues en tout. Combien de motos y a-t-il ?",
-      "en": "A car park holds cars and motorcycles: {dados-calculo.veiculos} vehicles and {dados-calculo.rodas} wheels in all. How many motorcycles are there?"
-    },
-    "dados-calculo": {
-      "veiculos": "30",
-      "rodas": "94",
-      "total": "13"
-    }
-  },
-  {
-    "topico": "sistemas-lineares",
-    "nivel": "medio",
-    "enunciado": {
-      "br": "{dados-calculo.c1} canetas e {dados-calculo.d1} cadernos custaram {dados-calculo.t1} reais. {dados-calculo.c2} canetas e {dados-calculo.d2} cadernos iguais custaram {dados-calculo.t2} reais. Quanto custa um caderno?",
-      "fr": "{dados-calculo.c1} stylos et {dados-calculo.d1} cahiers ont coûté {dados-calculo.t1} reais. {dados-calculo.c2} stylos et {dados-calculo.d2} cahiers identiques ont coûté {dados-calculo.t2} reais. Combien coûte un cahier ?",
-      "en": "{dados-calculo.c1} pens and {dados-calculo.d1} notebooks cost {dados-calculo.t1} reais. {dados-calculo.c2} pens and {dados-calculo.d2} identical notebooks cost {dados-calculo.t2} reais. How much does one notebook cost?"
-    },
-    "dados-calculo": {
-      "c1": "3",
-      "d1": "2",
-      "t1": "46",
-      "c2": "5",
-      "d2": "4",
-      "t2": "86",
-      "total": "14"
-    }
-  },
-  {
-    "topico": "sistemas-lineares",
-    "nivel": "dificil",
-    "enunciado": {
-      "br": "Uma liga de {dados-calculo.massa} kg é feita de cobre e zinco. O cobre custa {dados-calculo.precoCobre} reais por quilo e o zinco {dados-calculo.precoZinco} reais por quilo, e a liga toda custou {dados-calculo.custo} reais. Quantos quilos de cobre ela tem?",
-      "fr": "Un alliage de {dados-calculo.massa} kg est fait de cuivre et de zinc. Le cuivre coûte {dados-calculo.precoCobre} reais le kilo et le zinc {dados-calculo.precoZinco} reais le kilo, et l’alliage entier a coûté {dados-calculo.custo} reais. Combien de kilos de cuivre contient-il ?",
-      "en": "A {dados-calculo.massa} kg alloy is made of copper and zinc. Copper costs {dados-calculo.precoCobre} reais per kilo and zinc {dados-calculo.precoZinco} reais per kilo, and the whole alloy cost {dados-calculo.custo} reais. How many kilos of copper does it contain?"
-    },
-    "dados-calculo": {
-      "massa": "50",
-      "precoCobre": "30",
-      "precoZinco": "10",
-      "custo": "1100",
-      "total": "30"
-    }
-  },
-  {
-    "topico": "sistemas-lineares",
-    "nivel": "extremo",
-    "enunciado": {
-      "br": "Três números somam {dados-calculo.soma}. O segundo é {dados-calculo.diferenca} unidades maior que o primeiro, e o terceiro é o dobro do primeiro. Quanto vale o terceiro número?",
-      "fr": "Trois nombres ont pour somme {dados-calculo.soma}. Le deuxième est {dados-calculo.diferenca} unités plus grand que le premier, et le troisième est le double du premier. Combien vaut le troisième nombre ?",
-      "en": "Three numbers add up to {dados-calculo.soma}. The second is {dados-calculo.diferenca} units larger than the first, and the third is twice the first. What is the third number?"
-    },
-    "dados-calculo": {
-      "soma": "62",
-      "diferenca": "6",
-      "total": "28"
     }
   },
   {
@@ -1270,6 +822,1350 @@
       "raioEsfera": "6",
       "raioCilindro": "4",
       "total": "18.00"
+    }
+  },
+  {
+    "topico": "atomos-isotopos-ions",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um átomo de potássio tem {dados-calculo.protons} prótons e {dados-calculo.neutrons} nêutrons. Qual é o seu número de massa?",
+      "fr": "Un atome de potassium a {dados-calculo.protons} protons et {dados-calculo.neutrons} neutrons. Quel est son nombre de masse ?",
+      "en": "A potassium atom has {dados-calculo.protons} protons and {dados-calculo.neutrons} neutrons. What is its mass number?"
+    },
+    "dados-calculo": {
+      "protons": "19",
+      "neutrons": "20",
+      "total": "39"
+    }
+  },
+  {
+    "topico": "atomos-isotopos-ions",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um íon de ferro tem {dados-calculo.protons} prótons e carga {dados-calculo.carga}+. Quantos elétrons ele tem?",
+      "fr": "Un ion de fer a {dados-calculo.protons} protons et une charge {dados-calculo.carga}+. Combien d’électrons a-t-il ?",
+      "en": "An iron ion has {dados-calculo.protons} protons and charge {dados-calculo.carga}+. How many electrons does it have?"
+    },
+    "dados-calculo": {
+      "protons": "26",
+      "carga": "3",
+      "total": "23"
+    }
+  },
+  {
+    "topico": "atomos-isotopos-ions",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "O cloro tem dois isótopos naturais: massa {dados-calculo.massa1} com {dados-calculo.abundancia1}% de abundância e massa {dados-calculo.massa2} com o restante. Qual é a massa atômica média?",
+      "fr": "Le chlore a deux isotopes naturels : masse {dados-calculo.massa1} avec {dados-calculo.abundancia1}% d’abondance et masse {dados-calculo.massa2} pour le reste. Quelle est la masse atomique moyenne ?",
+      "en": "Chlorine has two natural isotopes: mass {dados-calculo.massa1} at {dados-calculo.abundancia1}% abundance and mass {dados-calculo.massa2} for the rest. What is the average atomic mass?"
+    },
+    "dados-calculo": {
+      "massa1": "35",
+      "abundancia1": "75",
+      "massa2": "37",
+      "total": "35.5"
+    }
+  },
+  {
+    "topico": "atomos-isotopos-ions",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um íon de cálcio, cujo número atômico é {dados-calculo.z}, tem carga {dados-calculo.carga}+. Quantos elétrons ele tem?",
+      "fr": "Un ion de calcium, dont le numéro atomique est {dados-calculo.z}, a une charge {dados-calculo.carga}+. Combien d’électrons a-t-il ?",
+      "en": "A calcium ion, whose atomic number is {dados-calculo.z}, has charge {dados-calculo.carga}+. How many electrons does it have?"
+    },
+    "dados-calculo": {
+      "z": "20",
+      "carga": "2",
+      "total": "18"
+    }
+  },
+  {
+    "topico": "estrutura-eletronica",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Quantos elétrons há na última camada do átomo neutro de oxigênio, cujo número atômico é {dados-calculo.z}?",
+      "fr": "Combien d’électrons y a-t-il sur la dernière couche de l’atome neutre d’oxygène, dont le numéro atomique est {dados-calculo.z} ?",
+      "en": "How many electrons are in the outermost shell of a neutral oxygen atom, whose atomic number is {dados-calculo.z}?"
+    },
+    "dados-calculo": {
+      "z": "8",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "estrutura-eletronica",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Quantos elétrons há no subnível 3p do átomo neutro de enxofre, cujo número atômico é {dados-calculo.z}?",
+      "fr": "Combien d’électrons y a-t-il dans la sous-couche 3p de l’atome neutre de soufre, dont le numéro atomique est {dados-calculo.z} ?",
+      "en": "How many electrons are in the 3p subshell of a neutral sulfur atom, whose atomic number is {dados-calculo.z}?"
+    },
+    "dados-calculo": {
+      "z": "16",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "estrutura-eletronica",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Quantas camadas eletrônicas ocupadas tem o átomo neutro de cálcio, cujo número atômico é {dados-calculo.z}?",
+      "fr": "Combien de couches électroniques occupées a l’atome neutre de calcium, dont le numéro atomique est {dados-calculo.z} ?",
+      "en": "How many occupied electron shells does a neutral calcium atom have, whose atomic number is {dados-calculo.z}?"
+    },
+    "dados-calculo": {
+      "z": "20",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "estrutura-eletronica",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Quantos elétrons há no subnível 3d do átomo neutro de ferro, cujo número atômico é {dados-calculo.z}?",
+      "fr": "Combien d’électrons y a-t-il dans la sous-couche 3d de l’atome neutre de fer, dont le numéro atomique est {dados-calculo.z} ?",
+      "en": "How many electrons are in the 3d subshell of a neutral iron atom, whose atomic number is {dados-calculo.z}?"
+    },
+    "dados-calculo": {
+      "z": "26",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "tabela-e-ligacao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a fórmula do composto iônico formado por sódio, de número atômico {dados-calculo.zMetal}, e cloro, de número atômico {dados-calculo.zNaoMetal}?",
+      "fr": "Quelle est la formule du composé ionique formé par le sodium, de numéro atomique {dados-calculo.zMetal}, et le chlore, de numéro atomique {dados-calculo.zNaoMetal} ?",
+      "en": "What is the formula of the ionic compound formed by sodium, atomic number {dados-calculo.zMetal}, and chlorine, atomic number {dados-calculo.zNaoMetal}?"
+    },
+    "dados-calculo": {
+      "zMetal": "11",
+      "zNaoMetal": "17",
+      "total": "NaCl"
+    }
+  },
+  {
+    "topico": "tabela-e-ligacao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a carga do íon mais comum do alumínio, cujo número atômico é {dados-calculo.z}? Responda com o sinal.",
+      "fr": "Quelle est la charge de l’ion le plus courant de l’aluminium, dont le numéro atomique est {dados-calculo.z} ? Répondez avec le signe.",
+      "en": "What is the charge of the most common aluminium ion, whose atomic number is {dados-calculo.z}? Answer with the sign."
+    },
+    "dados-calculo": {
+      "z": "13",
+      "total": "+3"
+    }
+  },
+  {
+    "topico": "tabela-e-ligacao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é a fórmula do composto iônico formado por cálcio, de número atômico {dados-calculo.zMetal}, e cloro, de número atômico {dados-calculo.zNaoMetal}?",
+      "fr": "Quelle est la formule du composé ionique formé par le calcium, de numéro atomique {dados-calculo.zMetal}, et le chlore, de numéro atomique {dados-calculo.zNaoMetal} ?",
+      "en": "What is the formula of the ionic compound formed by calcium, atomic number {dados-calculo.zMetal}, and chlorine, atomic number {dados-calculo.zNaoMetal}?"
+    },
+    "dados-calculo": {
+      "zMetal": "20",
+      "zNaoMetal": "17",
+      "total": "CaCl2"
+    }
+  },
+  {
+    "topico": "tabela-e-ligacao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é a fórmula do composto iônico formado por alumínio, de número atômico {dados-calculo.zMetal}, e oxigênio, de número atômico {dados-calculo.zNaoMetal}?",
+      "fr": "Quelle est la formule du composé ionique formé par l’aluminium, de numéro atomique {dados-calculo.zMetal}, et l’oxygène, de numéro atomique {dados-calculo.zNaoMetal} ?",
+      "en": "What is the formula of the ionic compound formed by aluminium, atomic number {dados-calculo.zMetal}, and oxygen, atomic number {dados-calculo.zNaoMetal}?"
+    },
+    "dados-calculo": {
+      "zMetal": "13",
+      "zNaoMetal": "8",
+      "total": "Al2O3"
+    }
+  },
+  {
+    "topico": "formulas-e-nomenclatura",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a fórmula do cloreto de sódio, o sal de cozinha?",
+      "fr": "Quelle est la formule du chlorure de sodium, le sel de table ?",
+      "en": "What is the formula of sodium chloride, table salt?"
+    },
+    "dados-calculo": {
+      "total": "NaCl"
+    }
+  },
+  {
+    "topico": "formulas-e-nomenclatura",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é o número de oxidação do enxofre no ácido sulfúrico, H₂SO₄? Responda com o sinal.",
+      "fr": "Quel est le nombre d’oxydation du soufre dans l’acide sulfurique, H₂SO₄ ? Répondez avec le signe.",
+      "en": "What is the oxidation number of sulfur in sulfuric acid, H₂SO₄? Answer with the sign."
+    },
+    "dados-calculo": {
+      "total": "+6"
+    }
+  },
+  {
+    "topico": "formulas-e-nomenclatura",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é a fórmula do sulfato de cálcio, o gesso?",
+      "fr": "Quelle est la formule du sulfate de calcium, le plâtre ?",
+      "en": "What is the formula of calcium sulfate, gypsum?"
+    },
+    "dados-calculo": {
+      "total": "CaSO4"
+    }
+  },
+  {
+    "topico": "formulas-e-nomenclatura",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é a fórmula do cloreto de ferro (III)?",
+      "fr": "Quelle est la formule du chlorure de fer (III) ?",
+      "en": "What is the formula of iron (III) chloride?"
+    },
+    "dados-calculo": {
+      "total": "FeCl3"
+    }
+  },
+  {
+    "topico": "mol-e-massa-molar",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Quantos mols de água há numa amostra de {dados-calculo.massa} g? (duas casas decimais)",
+      "fr": "Combien de moles d’eau y a-t-il dans un échantillon de {dados-calculo.massa} g ? (deux décimales)",
+      "en": "How many moles of water are in a {dados-calculo.massa} g sample? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "180.2",
+      "total": "10.00"
+    }
+  },
+  {
+    "topico": "mol-e-massa-molar",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a massa, em gramas, de {dados-calculo.mols} mol de gás carbônico? (duas casas decimais)",
+      "fr": "Quelle est la masse, en grammes, de {dados-calculo.mols} mol de dioxyde de carbone ? (deux décimales)",
+      "en": "What is the mass, in grams, of {dados-calculo.mols} mol of carbon dioxide? (two decimal places)"
+    },
+    "dados-calculo": {
+      "mols": "3",
+      "total": "132.03"
+    }
+  },
+  {
+    "topico": "mol-e-massa-molar",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um pedaço de calcário puro, carbonato de cálcio, tem {dados-calculo.massa} g. Quantos mols ele contém? (duas casas decimais)",
+      "fr": "Un morceau de calcaire pur, carbonate de calcium, pèse {dados-calculo.massa} g. Combien de moles contient-il ? (deux décimales)",
+      "en": "A piece of pure limestone, calcium carbonate, weighs {dados-calculo.massa} g. How many moles does it hold? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "500.45",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "mol-e-massa-molar",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é a massa molar do ácido sulfúrico, H₂SO₄, em g/mol? (duas casas decimais)",
+      "fr": "Quelle est la masse molaire de l’acide sulfurique, H₂SO₄, en g/mol ? (deux décimales)",
+      "en": "What is the molar mass of sulfuric acid, H₂SO₄, in g/mol? (two decimal places)"
+    },
+    "dados-calculo": {
+      "total": "98.08"
+    }
+  },
+  {
+    "topico": "equacoes-e-balanceamento",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "A combustão do metano é CH₄ + O₂ → CO₂ + H₂O. Balanceando com os menores inteiros, qual é a soma de todos os coeficientes, dos dois lados?",
+      "fr": "La combustion du méthane est CH₄ + O₂ → CO₂ + H₂O. En équilibrant avec les plus petits entiers, quelle est la somme de tous les coefficients, des deux côtés ?",
+      "en": "The combustion of methane is CH₄ + O₂ → CO₂ + H₂O. Balancing with the smallest whole numbers, what is the sum of all coefficients on both sides?"
+    },
+    "dados-calculo": {
+      "total": "6"
+    }
+  },
+  {
+    "topico": "equacoes-e-balanceamento",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "A formação da água é H₂ + O₂ → H₂O. Balanceando com os menores inteiros, qual é a soma de todos os coeficientes?",
+      "fr": "La formation de l’eau est H₂ + O₂ → H₂O. En équilibrant avec les plus petits entiers, quelle est la somme de tous les coefficients ?",
+      "en": "Water forms as H₂ + O₂ → H₂O. Balancing with the smallest whole numbers, what is the sum of all coefficients?"
+    },
+    "dados-calculo": {
+      "total": "5"
+    }
+  },
+  {
+    "topico": "equacoes-e-balanceamento",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "A ferrugem se forma como Fe + O₂ → Fe₂O₃. Depois de balancear com os menores inteiros, quantos átomos de oxigênio há em cada lado?",
+      "fr": "La rouille se forme comme Fe + O₂ → Fe₂O₃. Après avoir équilibré avec les plus petits entiers, combien d’atomes d’oxygène y a-t-il de chaque côté ?",
+      "en": "Rust forms as Fe + O₂ → Fe₂O₃. After balancing with the smallest whole numbers, how many oxygen atoms are on each side?"
+    },
+    "dados-calculo": {
+      "total": "6"
+    }
+  },
+  {
+    "topico": "equacoes-e-balanceamento",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A combustão do propano é C₃H₈ + O₂ → CO₂ + H₂O. Balanceando com os menores inteiros, qual é o coeficiente do O₂?",
+      "fr": "La combustion du propane est C₃H₈ + O₂ → CO₂ + H₂O. En équilibrant avec les plus petits entiers, quel est le coefficient de O₂ ?",
+      "en": "The combustion of propane is C₃H₈ + O₂ → CO₂ + H₂O. Balancing with the smallest whole numbers, what is the coefficient of O₂?"
+    },
+    "dados-calculo": {
+      "total": "5"
+    }
+  },
+  {
+    "topico": "estequiometria",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "O calcário se decompõe como CaCO₃ → CaO + CO₂. Que massa de CO₂, em gramas, sai de {dados-calculo.massa} g de CaCO₃? (duas casas decimais)",
+      "fr": "Le calcaire se décompose comme CaCO₃ → CaO + CO₂. Quelle masse de CO₂, en grammes, provient de {dados-calculo.massa} g de CaCO₃ ? (deux décimales)",
+      "en": "Limestone decomposes as CaCO₃ → CaO + CO₂. What mass of CO₂, in grams, comes from {dados-calculo.massa} g of CaCO₃? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "200.18",
+      "total": "88.02"
+    }
+  },
+  {
+    "topico": "estequiometria",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Na combustão completa do metano, CH₄ + 2 O₂ → CO₂ + 2 H₂O, que massa de CO₂, em gramas, vem de {dados-calculo.massa} g de metano? (duas casas decimais)",
+      "fr": "Dans la combustion complète du méthane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, quelle masse de CO₂, en grammes, provient de {dados-calculo.massa} g de méthane ? (deux décimales)",
+      "en": "In the complete combustion of methane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, what mass of CO₂, in grams, comes from {dados-calculo.massa} g of methane? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "32.1",
+      "total": "88.02"
+    }
+  },
+  {
+    "topico": "estequiometria",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Na combustão completa do metano, CH₄ + 2 O₂ → CO₂ + 2 H₂O, que massa de água, em gramas, se forma a partir de {dados-calculo.massa} g de metano? (duas casas decimais)",
+      "fr": "Dans la combustion complète du méthane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, quelle masse d’eau, en grammes, se forme à partir de {dados-calculo.massa} g de méthane ? (deux décimales)",
+      "en": "In the complete combustion of methane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, what mass of water, in grams, forms from {dados-calculo.massa} g of methane? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "16.05",
+      "total": "36.04"
+    }
+  },
+  {
+    "topico": "estequiometria",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A ferrugem se forma como 4 Fe + 3 O₂ → 2 Fe₂O₃. Que massa de Fe₂O₃, em gramas, se forma a partir de {dados-calculo.massa} g de ferro? (duas casas decimais)",
+      "fr": "La rouille se forme comme 4 Fe + 3 O₂ → 2 Fe₂O₃. Quelle masse de Fe₂O₃, en grammes, se forme à partir de {dados-calculo.massa} g de fer ? (deux décimales)",
+      "en": "Rust forms as 4 Fe + 3 O₂ → 2 Fe₂O₃. What mass of Fe₂O₃, in grams, forms from {dados-calculo.massa} g of iron? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "223.4",
+      "total": "319.40"
+    }
+  },
+  {
+    "topico": "limitante-e-rendimento",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma reação poderia dar {dados-calculo.teorica} g de produto, e na bancada saíram {dados-calculo.obtida} g. Qual é o rendimento percentual? (duas casas decimais)",
+      "fr": "Une réaction pourrait donner {dados-calculo.teorica} g de produit, et au laboratoire on a obtenu {dados-calculo.obtida} g. Quel est le rendement en pourcentage ? (deux décimales)",
+      "en": "A reaction could give {dados-calculo.teorica} g of product, and {dados-calculo.obtida} g came out at the bench. What is the percent yield? (two decimal places)"
+    },
+    "dados-calculo": {
+      "teorica": "200",
+      "obtida": "150",
+      "total": "75.00"
+    }
+  },
+  {
+    "topico": "limitante-e-rendimento",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma reação com rendimento de {dados-calculo.rendimento}% partiu de uma massa teórica de {dados-calculo.teorica} g de produto. Que massa, em gramas, saiu de fato? (duas casas decimais)",
+      "fr": "Une réaction avec un rendement de {dados-calculo.rendimento}% partait d’une masse théorique de {dados-calculo.teorica} g de produit. Quelle masse, en grammes, a réellement été obtenue ? (deux décimales)",
+      "en": "A reaction with a {dados-calculo.rendimento}% yield had a theoretical mass of {dados-calculo.teorica} g of product. What mass, in grams, actually came out? (two decimal places)"
+    },
+    "dados-calculo": {
+      "rendimento": "80",
+      "teorica": "250",
+      "total": "200.00"
+    }
+  },
+  {
+    "topico": "limitante-e-rendimento",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Reagem {dados-calculo.massaH2} g de H₂ com {dados-calculo.massaO2} g de O₂ segundo 2 H₂ + O₂ → 2 H₂O. Que massa de água, em gramas, se forma? (duas casas decimais)",
+      "fr": "On fait réagir {dados-calculo.massaH2} g de H₂ avec {dados-calculo.massaO2} g de O₂ selon 2 H₂ + O₂ → 2 H₂O. Quelle masse d’eau, en grammes, se forme ? (deux décimales)",
+      "en": "{dados-calculo.massaH2} g of H₂ react with {dados-calculo.massaO2} g of O₂ as 2 H₂ + O₂ → 2 H₂O. What mass of water, in grams, forms? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massaH2": "8.08",
+      "massaO2": "32",
+      "total": "36.04"
+    }
+  },
+  {
+    "topico": "limitante-e-rendimento",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Reagem {dados-calculo.massaH2} g de H₂ com {dados-calculo.massaO2} g de O₂ segundo 2 H₂ + O₂ → 2 H₂O. Que massa, em gramas, sobra do reagente em excesso? (duas casas decimais)",
+      "fr": "On fait réagir {dados-calculo.massaH2} g de H₂ avec {dados-calculo.massaO2} g de O₂ selon 2 H₂ + O₂ → 2 H₂O. Quelle masse, en grammes, reste-t-il du réactif en excès ? (deux décimales)",
+      "en": "{dados-calculo.massaH2} g of H₂ react with {dados-calculo.massaO2} g of O₂ as 2 H₂ + O₂ → 2 H₂O. What mass, in grams, of the excess reagent is left over? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massaH2": "8.08",
+      "massaO2": "32",
+      "total": "4.04"
+    }
+  },
+  {
+    "topico": "composicao-e-formula",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a porcentagem em massa de oxigênio no gás carbônico, CO₂? (em %, duas casas decimais)",
+      "fr": "Quel est le pourcentage en masse d’oxygène dans le dioxyde de carbone, CO₂ ? (en %, deux décimales)",
+      "en": "What is the percentage by mass of oxygen in carbon dioxide, CO₂? (in %, two decimal places)"
+    },
+    "dados-calculo": {
+      "total": "72.71"
+    }
+  },
+  {
+    "topico": "composicao-e-formula",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a massa molar do carbonato de sódio, Na₂CO₃, em g/mol? (duas casas decimais)",
+      "fr": "Quelle est la masse molaire du carbonate de sodium, Na₂CO₃, en g/mol ? (deux décimales)",
+      "en": "What is the molar mass of sodium carbonate, Na₂CO₃, in g/mol? (two decimal places)"
+    },
+    "dados-calculo": {
+      "total": "105.99"
+    }
+  },
+  {
+    "topico": "composicao-e-formula",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um gás é formado só por carbono e oxigênio, com {dados-calculo.pC}% de carbono e {dados-calculo.pO}% de oxigênio em massa. Qual é a sua fórmula empírica?",
+      "fr": "Un gaz est formé uniquement de carbone et d’oxygène, avec {dados-calculo.pC}% de carbone et {dados-calculo.pO}% d’oxygène en masse. Quelle est sa formule empirique ?",
+      "en": "A gas is made only of carbon and oxygen, with {dados-calculo.pC}% carbon and {dados-calculo.pO}% oxygen by mass. What is its empirical formula?"
+    },
+    "dados-calculo": {
+      "pC": "27.29",
+      "pO": "72.71",
+      "total": "CO2"
+    }
+  },
+  {
+    "topico": "composicao-e-formula",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um mineral tem {dados-calculo.pCa}% de cálcio, {dados-calculo.pC}% de carbono e {dados-calculo.pO}% de oxigênio em massa. Qual é a sua fórmula empírica?",
+      "fr": "Un minéral contient {dados-calculo.pCa}% de calcium, {dados-calculo.pC}% de carbone et {dados-calculo.pO}% d’oxygène en masse. Quelle est sa formule empirique ?",
+      "en": "A mineral has {dados-calculo.pCa}% calcium, {dados-calculo.pC}% carbon and {dados-calculo.pO}% oxygen by mass. What is its empirical formula?"
+    },
+    "dados-calculo": {
+      "pCa": "40.04",
+      "pC": "12.00",
+      "pO": "47.96",
+      "total": "CaCO3"
+    }
+  },
+  {
+    "topico": "solucoes-e-concentracao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Que massa de sal de cozinha, NaCl, há em {dados-calculo.volume} mL de solução a {dados-calculo.concentracao} mol/L? (em gramas, duas casas decimais)",
+      "fr": "Quelle masse de sel de table, NaCl, y a-t-il dans {dados-calculo.volume} mL de solution à {dados-calculo.concentracao} mol/L ? (en grammes, deux décimales)",
+      "en": "What mass of table salt, NaCl, is in {dados-calculo.volume} mL of a {dados-calculo.concentracao} mol/L solution? (in grams, two decimal places)"
+    },
+    "dados-calculo": {
+      "volume": "500",
+      "concentracao": "2",
+      "total": "58.44"
+    }
+  },
+  {
+    "topico": "solucoes-e-concentracao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Dissolvem-se {dados-calculo.massa} g de NaCl em água até completar {dados-calculo.volume} mL de solução. Qual é a concentração, em mol/L? (duas casas decimais)",
+      "fr": "On dissout {dados-calculo.massa} g de NaCl dans l’eau jusqu’à obtenir {dados-calculo.volume} mL de solution. Quelle est la concentration, en mol/L ? (deux décimales)",
+      "en": "{dados-calculo.massa} g of NaCl is dissolved in water up to {dados-calculo.volume} mL of solution. What is the concentration, in mol/L? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "116.88",
+      "volume": "1000",
+      "total": "2.00"
+    }
+  },
+  {
+    "topico": "solucoes-e-concentracao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "A {dados-calculo.volumeInicial} mL de solução a {dados-calculo.concentracaoInicial} mol/L acrescenta-se água até completar {dados-calculo.volumeFinal} mL. Qual é a concentração final, em mol/L? (duas casas decimais)",
+      "fr": "À {dados-calculo.volumeInicial} mL de solution à {dados-calculo.concentracaoInicial} mol/L on ajoute de l’eau jusqu’à {dados-calculo.volumeFinal} mL. Quelle est la concentration finale, en mol/L ? (deux décimales)",
+      "en": "Water is added to {dados-calculo.volumeInicial} mL of a {dados-calculo.concentracaoInicial} mol/L solution up to {dados-calculo.volumeFinal} mL. What is the final concentration, in mol/L? (two decimal places)"
+    },
+    "dados-calculo": {
+      "volumeInicial": "100",
+      "concentracaoInicial": "3",
+      "volumeFinal": "500",
+      "total": "0.60"
+    }
+  },
+  {
+    "topico": "solucoes-e-concentracao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Misturam-se {dados-calculo.v1} mL de solução a {dados-calculo.c1} mol/L com {dados-calculo.v2} mL de solução a {dados-calculo.c2} mol/L do mesmo sal. Qual é a concentração final, em mol/L? (duas casas decimais)",
+      "fr": "On mélange {dados-calculo.v1} mL de solution à {dados-calculo.c1} mol/L avec {dados-calculo.v2} mL de solution à {dados-calculo.c2} mol/L du même sel. Quelle est la concentration finale, en mol/L ? (deux décimales)",
+      "en": "{dados-calculo.v1} mL of a {dados-calculo.c1} mol/L solution is mixed with {dados-calculo.v2} mL of a {dados-calculo.c2} mol/L solution of the same salt. What is the final concentration, in mol/L? (two decimal places)"
+    },
+    "dados-calculo": {
+      "v1": "200",
+      "c1": "1.5",
+      "v2": "300",
+      "c2": "2.5",
+      "total": "2.10"
+    }
+  },
+  {
+    "topico": "gases-ideais",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Quantos mols de gás há num recipiente de {dados-calculo.volume} L, a {dados-calculo.pressao} atm e {dados-calculo.temperatura} °C? (duas casas decimais)",
+      "fr": "Combien de moles de gaz y a-t-il dans un récipient de {dados-calculo.volume} L, à {dados-calculo.pressao} atm et {dados-calculo.temperatura} °C ? (deux décimales)",
+      "en": "How many moles of gas are in a {dados-calculo.volume} L container at {dados-calculo.pressao} atm and {dados-calculo.temperatura} °C? (two decimal places)"
+    },
+    "dados-calculo": {
+      "volume": "22.4",
+      "pressao": "1",
+      "temperatura": "0",
+      "total": "1.00"
+    }
+  },
+  {
+    "topico": "gases-ideais",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a pressão, em atm, de {dados-calculo.mols} mol de gás num recipiente de {dados-calculo.volume} L a {dados-calculo.temperatura} °C? (duas casas decimais)",
+      "fr": "Quelle est la pression, en atm, de {dados-calculo.mols} mol de gaz dans un récipient de {dados-calculo.volume} L à {dados-calculo.temperatura} °C ? (deux décimales)",
+      "en": "What is the pressure, in atm, of {dados-calculo.mols} mol of gas in a {dados-calculo.volume} L container at {dados-calculo.temperatura} °C? (two decimal places)"
+    },
+    "dados-calculo": {
+      "mols": "2",
+      "volume": "10",
+      "temperatura": "27",
+      "total": "4.93"
+    }
+  },
+  {
+    "topico": "gases-ideais",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um balão ocupa {dados-calculo.volume} L a {dados-calculo.temperatura1} °C. Aquecido até {dados-calculo.temperatura2} °C, à mesma pressão e sem perder gás, que volume em litros ele passa a ocupar? (duas casas decimais)",
+      "fr": "Un ballon occupe {dados-calculo.volume} L à {dados-calculo.temperatura1} °C. Chauffé à {dados-calculo.temperatura2} °C, à la même pression et sans perte de gaz, quel volume en litres occupe-t-il ? (deux décimales)",
+      "en": "A balloon takes up {dados-calculo.volume} L at {dados-calculo.temperatura1} °C. Heated to {dados-calculo.temperatura2} °C at the same pressure and with no gas lost, what volume in litres does it take up? (two decimal places)"
+    },
+    "dados-calculo": {
+      "volume": "10",
+      "temperatura1": "27",
+      "temperatura2": "127",
+      "total": "13.33"
+    }
+  },
+  {
+    "topico": "gases-ideais",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um recipiente contém {dados-calculo.molsN2} mol de N₂ e {dados-calculo.molsO2} mol de O₂, com pressão total de {dados-calculo.pressaoTotal} atm. Qual é a pressão parcial do O₂, em atm? (duas casas decimais)",
+      "fr": "Un récipient contient {dados-calculo.molsN2} mol de N₂ et {dados-calculo.molsO2} mol de O₂, avec une pression totale de {dados-calculo.pressaoTotal} atm. Quelle est la pression partielle de O₂, en atm ? (deux décimales)",
+      "en": "A container holds {dados-calculo.molsN2} mol of N₂ and {dados-calculo.molsO2} mol of O₂, with a total pressure of {dados-calculo.pressaoTotal} atm. What is the partial pressure of O₂, in atm? (two decimal places)"
+    },
+    "dados-calculo": {
+      "molsN2": "3",
+      "molsO2": "2",
+      "pressaoTotal": "5",
+      "total": "2.00"
+    }
+  },
+  {
+    "topico": "conceito-funcao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma função devolve a divisão de {dados-calculo.numerador} por (x menos {dados-calculo.b}). Qual é o único valor de x que NÃO pertence ao domínio?",
+      "fr": "Une fonction renvoie la division de {dados-calculo.numerador} par (x moins {dados-calculo.b}). Quelle est la seule valeur de x qui N’APPARTIENT PAS au domaine ?",
+      "en": "A function returns {dados-calculo.numerador} divided by (x minus {dados-calculo.b}). What is the only value of x that is NOT in the domain?"
+    },
+    "dados-calculo": {
+      "numerador": "10",
+      "b": "3",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "conceito-funcao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função devolve a raiz quadrada de (x menos {dados-calculo.a}). Qual é o menor valor de x que pertence ao domínio?",
+      "fr": "Une fonction renvoie la racine carrée de (x moins {dados-calculo.a}). Quelle est la plus petite valeur de x qui appartient au domaine ?",
+      "en": "A function returns the square root of (x minus {dados-calculo.a}). What is the smallest value of x in the domain?"
+    },
+    "dados-calculo": {
+      "a": "7",
+      "total": "7"
+    }
+  },
+  {
+    "topico": "conceito-funcao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "O lucro de uma loja é o produto do preço pela diferença entre {dados-calculo.limite} e o preço. Para que preço o lucro é máximo?",
+      "fr": "Le profit d’un magasin est le produit du prix par la différence entre {dados-calculo.limite} et le prix. Pour quel prix le profit est-il maximal ?",
+      "en": "A shop’s profit is the price times the difference between {dados-calculo.limite} and the price. At what price is the profit greatest?"
+    },
+    "dados-calculo": {
+      "limite": "40",
+      "total": "20"
+    }
+  },
+  {
+    "topico": "conceito-funcao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função devolve o quadrado de (x menos {dados-calculo.a}) somado a {dados-calculo.b}. Qual é o menor valor que ela pode assumir?",
+      "fr": "Une fonction renvoie le carré de (x moins {dados-calculo.a}) ajouté à {dados-calculo.b}. Quelle est la plus petite valeur qu’elle peut prendre ?",
+      "en": "A function returns the square of (x minus {dados-calculo.a}) plus {dados-calculo.b}. What is the smallest value it can take?"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "b": "-3",
+      "total": "-3"
+    }
+  },
+  {
+    "topico": "funcao-afim",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um táxi cobra {dados-calculo.fixo} reais fixos mais {dados-calculo.porKm} reais por quilômetro. Para que distância, em quilômetros, a corrida custa {dados-calculo.valor} reais?",
+      "fr": "Un taxi facture {dados-calculo.fixo} reais fixes plus {dados-calculo.porKm} reais par kilomètre. Pour quelle distance, en kilomètres, la course coûte-t-elle {dados-calculo.valor} reais ?",
+      "en": "A taxi charges {dados-calculo.fixo} reais fixed plus {dados-calculo.porKm} reais per kilometre. For what distance, in kilometres, does the ride cost {dados-calculo.valor} reais?"
+    },
+    "dados-calculo": {
+      "fixo": "5",
+      "porKm": "3",
+      "valor": "29",
+      "total": "8"
+    }
+  },
+  {
+    "topico": "funcao-afim",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função afim vale {dados-calculo.b} quando x é zero e diminui {dados-calculo.queda} unidades a cada aumento de 1 em x. Em que valor de x ela se anula?",
+      "fr": "Une fonction affine vaut {dados-calculo.b} quand x est nul et diminue de {dados-calculo.queda} unités à chaque augmentation de 1 de x. Pour quelle valeur de x s’annule-t-elle ?",
+      "en": "A linear function equals {dados-calculo.b} when x is zero and drops {dados-calculo.queda} units for every increase of 1 in x. At what value of x does it reach zero?"
+    },
+    "dados-calculo": {
+      "b": "12",
+      "queda": "4",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "funcao-afim",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função afim vale {dados-calculo.y1} em x = {dados-calculo.x1} e vale {dados-calculo.y2} em x = {dados-calculo.x2}. Qual é a sua taxa de variação?",
+      "fr": "Une fonction affine vaut {dados-calculo.y1} en x = {dados-calculo.x1} et {dados-calculo.y2} en x = {dados-calculo.x2}. Quel est son taux de variation ?",
+      "en": "A linear function equals {dados-calculo.y1} at x = {dados-calculo.x1} and {dados-calculo.y2} at x = {dados-calculo.x2}. What is its rate of change?"
+    },
+    "dados-calculo": {
+      "y1": "7",
+      "x1": "2",
+      "y2": "19",
+      "x2": "6",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "funcao-afim",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função afim vale {dados-calculo.y1} em x = {dados-calculo.x1} e vale {dados-calculo.y2} em x = {dados-calculo.x2}. Quanto ela vale em x = 0?",
+      "fr": "Une fonction affine vaut {dados-calculo.y1} en x = {dados-calculo.x1} et {dados-calculo.y2} en x = {dados-calculo.x2}. Combien vaut-elle en x = 0 ?",
+      "en": "A linear function equals {dados-calculo.y1} at x = {dados-calculo.x1} and {dados-calculo.y2} at x = {dados-calculo.x2}. What is its value at x = 0?"
+    },
+    "dados-calculo": {
+      "y1": "7",
+      "x1": "2",
+      "y2": "19",
+      "x2": "6",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "funcao-quadratica",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma bola é lançada para cima a {dados-calculo.velocidade} m/s e sua altura, em metros, é essa velocidade vezes o tempo menos {dados-calculo.coeficiente} vezes o tempo ao quadrado. Em quantos segundos ela atinge a altura máxima?",
+      "fr": "Un ballon est lancé vers le haut à {dados-calculo.velocidade} m/s et sa hauteur, en mètres, est cette vitesse fois le temps moins {dados-calculo.coeficiente} fois le temps au carré. En combien de secondes atteint-il sa hauteur maximale ?",
+      "en": "A ball is thrown up at {dados-calculo.velocidade} m/s and its height, in metres, is that speed times the time minus {dados-calculo.coeficiente} times the time squared. In how many seconds does it reach its greatest height?"
+    },
+    "dados-calculo": {
+      "velocidade": "20",
+      "coeficiente": "5",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "funcao-quadratica",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma bola é lançada para cima a {dados-calculo.velocidade} m/s e sua altura, em metros, é essa velocidade vezes o tempo menos {dados-calculo.coeficiente} vezes o tempo ao quadrado. Qual é a altura máxima, em metros?",
+      "fr": "Un ballon est lancé vers le haut à {dados-calculo.velocidade} m/s et sa hauteur, en mètres, est cette vitesse fois le temps moins {dados-calculo.coeficiente} fois le temps au carré. Quelle est la hauteur maximale, en mètres ?",
+      "en": "A ball is thrown up at {dados-calculo.velocidade} m/s and its height, in metres, is that speed times the time minus {dados-calculo.coeficiente} times the time squared. What is the greatest height, in metres?"
+    },
+    "dados-calculo": {
+      "velocidade": "20",
+      "coeficiente": "5",
+      "total": "20"
+    }
+  },
+  {
+    "topico": "funcao-quadratica",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um terreno retangular será cercado com {dados-calculo.cerca} m de tela, aproveitando um muro já existente em um dos lados. Qual é a maior área possível, em metros quadrados?",
+      "fr": "Un terrain rectangulaire sera clôturé avec {dados-calculo.cerca} m de grillage, en profitant d’un mur déjà existant sur un des côtés. Quelle est la plus grande aire possible, en mètres carrés ?",
+      "en": "A rectangular plot will be fenced with {dados-calculo.cerca} m of wire, using an existing wall on one side. What is the largest possible area, in square metres?"
+    },
+    "dados-calculo": {
+      "cerca": "40",
+      "total": "200"
+    }
+  },
+  {
+    "topico": "funcao-quadratica",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma loja vende {dados-calculo.quantidade} unidades por mês a {dados-calculo.preco} reais cada. Cada real de desconto no preço faz vender {dados-calculo.extra} unidades a mais. Que preço, em reais, dá a maior receita?",
+      "fr": "Un magasin vend {dados-calculo.quantidade} unités par mois à {dados-calculo.preco} reais chacune. Chaque real de rabais fait vendre {dados-calculo.extra} unités de plus. Quel prix, en reais, donne la plus grande recette ?",
+      "en": "A shop sells {dados-calculo.quantidade} units a month at {dados-calculo.preco} reais each. Every real of discount sells {dados-calculo.extra} more units. What price, in reais, gives the greatest revenue?"
+    },
+    "dados-calculo": {
+      "quantidade": "100",
+      "preco": "50",
+      "extra": "5",
+      "total": "35"
+    }
+  },
+  {
+    "topico": "funcao-modular",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "A distância, na reta, entre um número x e {dados-calculo.a} é {dados-calculo.distancia}. Qual é o maior valor possível de x?",
+      "fr": "La distance, sur la droite, entre un nombre x et {dados-calculo.a} est {dados-calculo.distancia}. Quelle est la plus grande valeur possible de x ?",
+      "en": "The distance on the number line between a number x and {dados-calculo.a} is {dados-calculo.distancia}. What is the largest possible value of x?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "distancia": "5",
+      "total": "8"
+    }
+  },
+  {
+    "topico": "funcao-modular",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "A distância entre um número x e {dados-calculo.a} é menor que {dados-calculo.distancia}. Qual é o maior número inteiro que x pode ser?",
+      "fr": "La distance entre un nombre x et {dados-calculo.a} est inférieure à {dados-calculo.distancia}. Quel est le plus grand entier que x peut être ?",
+      "en": "The distance between a number x and {dados-calculo.a} is less than {dados-calculo.distancia}. What is the largest whole number x can be?"
+    },
+    "dados-calculo": {
+      "a": "4",
+      "distancia": "3",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "funcao-modular",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função devolve a distância entre x e {dados-calculo.a}, menos {dados-calculo.b}. Qual é o menor valor que ela assume?",
+      "fr": "Une fonction renvoie la distance entre x et {dados-calculo.a}, moins {dados-calculo.b}. Quelle est la plus petite valeur qu’elle prend ?",
+      "en": "A function returns the distance between x and {dados-calculo.a}, minus {dados-calculo.b}. What is the smallest value it takes?"
+    },
+    "dados-calculo": {
+      "a": "2",
+      "b": "7",
+      "total": "-7"
+    }
+  },
+  {
+    "topico": "funcao-modular",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Quantos números inteiros x têm distância até {dados-calculo.a} menor ou igual a {dados-calculo.distancia}?",
+      "fr": "Combien d’entiers x ont une distance jusqu’à {dados-calculo.a} inférieure ou égale à {dados-calculo.distancia} ?",
+      "en": "How many whole numbers x are at a distance from {dados-calculo.a} less than or equal to {dados-calculo.distancia}?"
+    },
+    "dados-calculo": {
+      "a": "0",
+      "distancia": "4",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "funcao-exponencial",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma colônia começa com {dados-calculo.inicial} bactérias e dobra a cada hora. Quantas bactérias há depois de {dados-calculo.horas} horas?",
+      "fr": "Une colonie commence avec {dados-calculo.inicial} bactéries et double chaque heure. Combien de bactéries y a-t-il après {dados-calculo.horas} heures ?",
+      "en": "A colony starts with {dados-calculo.inicial} bacteria and doubles every hour. How many bacteria are there after {dados-calculo.horas} hours?"
+    },
+    "dados-calculo": {
+      "inicial": "200",
+      "horas": "3",
+      "total": "1600"
+    }
+  },
+  {
+    "topico": "funcao-exponencial",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um carro vale {dados-calculo.valor} reais e perde {dados-calculo.perda}% do valor a cada ano. Quantos reais ele vale depois de {dados-calculo.anos} anos?",
+      "fr": "Une voiture vaut {dados-calculo.valor} reais et perd {dados-calculo.perda}% de sa valeur chaque année. Combien de reais vaut-elle après {dados-calculo.anos} ans ?",
+      "en": "A car is worth {dados-calculo.valor} reais and loses {dados-calculo.perda}% of its value each year. How many reais is it worth after {dados-calculo.anos} years?"
+    },
+    "dados-calculo": {
+      "valor": "40000",
+      "perda": "50",
+      "anos": "3",
+      "total": "5000"
+    }
+  },
+  {
+    "topico": "funcao-exponencial",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma substância tem meia-vida de {dados-calculo.meiaVida} anos. De uma amostra de {dados-calculo.massa} g, quantos gramas restam depois de {dados-calculo.anos} anos?",
+      "fr": "Une substance a une demi-vie de {dados-calculo.meiaVida} ans. D’un échantillon de {dados-calculo.massa} g, combien de grammes restent après {dados-calculo.anos} ans ?",
+      "en": "A substance has a half-life of {dados-calculo.meiaVida} years. Of a {dados-calculo.massa} g sample, how many grams are left after {dados-calculo.anos} years?"
+    },
+    "dados-calculo": {
+      "meiaVida": "5",
+      "massa": "320",
+      "anos": "20",
+      "total": "20"
+    }
+  },
+  {
+    "topico": "funcao-exponencial",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma amostra cai para {dados-calculo.fracao} do valor inicial em {dados-calculo.anos} anos, dividindo-se pela metade sempre no mesmo intervalo. Qual é a meia-vida, em anos?",
+      "fr": "Un échantillon tombe à {dados-calculo.fracao} de sa valeur initiale en {dados-calculo.anos} ans, en se divisant par deux toujours dans le même intervalle. Quelle est la demi-vie, en années ?",
+      "en": "A sample falls to {dados-calculo.fracao} of its starting value in {dados-calculo.anos} years, halving over the same interval each time. What is the half-life, in years?"
+    },
+    "dados-calculo": {
+      "fracao": "1/8",
+      "anos": "18",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "funcao-logaritmica",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Quantas vezes é preciso multiplicar {dados-calculo.base} por si mesmo para chegar a {dados-calculo.valor}? Esse número é o logaritmo de {dados-calculo.valor} na base {dados-calculo.base}.",
+      "fr": "Combien de fois faut-il multiplier {dados-calculo.base} par lui-même pour atteindre {dados-calculo.valor} ? Ce nombre est le logarithme de {dados-calculo.valor} en base {dados-calculo.base}.",
+      "en": "How many times must {dados-calculo.base} be multiplied by itself to reach {dados-calculo.valor}? That number is the logarithm of {dados-calculo.valor} to base {dados-calculo.base}."
+    },
+    "dados-calculo": {
+      "base": "2",
+      "valor": "1024",
+      "total": "10"
+    }
+  },
+  {
+    "topico": "funcao-logaritmica",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "O pH de uma solução é o logaritmo decimal da concentração, com o sinal trocado. Se a concentração é 10 elevado a menos {dados-calculo.expoente}, qual é o pH?",
+      "fr": "Le pH d’une solution est le logarithme décimal de la concentration, avec le signe inversé. Si la concentration est 10 à la puissance moins {dados-calculo.expoente}, quel est le pH ?",
+      "en": "The pH of a solution is the base-10 logarithm of the concentration with the sign flipped. If the concentration is 10 to the power of minus {dados-calculo.expoente}, what is the pH?"
+    },
+    "dados-calculo": {
+      "expoente": "5",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "funcao-logaritmica",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Quantas vezes é preciso dividir {dados-calculo.valor} por {dados-calculo.base} até chegar a 1?",
+      "fr": "Combien de fois faut-il diviser {dados-calculo.valor} par {dados-calculo.base} pour arriver à 1 ?",
+      "en": "How many times must {dados-calculo.valor} be divided by {dados-calculo.base} to reach 1?"
+    },
+    "dados-calculo": {
+      "valor": "729",
+      "base": "3",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "funcao-logaritmica",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Numa escala logarítmica de base 10, quantas vezes maior é a grandeza de magnitude {dados-calculo.m2} em relação à de magnitude {dados-calculo.m1}?",
+      "fr": "Sur une échelle logarithmique de base 10, combien de fois plus grande est la grandeur de magnitude {dados-calculo.m2} par rapport à celle de magnitude {dados-calculo.m1} ?",
+      "en": "On a base-10 logarithmic scale, how many times larger is a quantity of magnitude {dados-calculo.m2} than one of magnitude {dados-calculo.m1}?"
+    },
+    "dados-calculo": {
+      "m2": "7",
+      "m1": "4",
+      "total": "1000"
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Em quantos anos um capital dobra a {dados-calculo.taxa}% ao ano, com juros compostos? (três casas decimais)",
+      "fr": "En combien d’années un capital double-t-il à {dados-calculo.taxa}% par an, en intérêts composés ? (trois décimales)",
+      "en": "In how many years does an amount double at {dados-calculo.taxa}% a year with compound interest? (three decimal places)"
+    },
+    "dados-calculo": {
+      "taxa": "10",
+      "total": "7.273"
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Dois elevado a x é igual a {dados-calculo.valor}. Quanto vale x?",
+      "fr": "Deux à la puissance x est égal à {dados-calculo.valor}. Combien vaut x ?",
+      "en": "Two to the power of x equals {dados-calculo.valor}. What is x?"
+    },
+    "dados-calculo": {
+      "valor": "512",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma população cresce continuamente a uma taxa de {dados-calculo.taxa} por ano, no modelo com a constante e. Em quantos anos ela triplica? (três casas decimais)",
+      "fr": "Une population croît continûment au taux de {dados-calculo.taxa} par an, dans le modèle avec la constante e. En combien d’années triple-t-elle ? (trois décimales)",
+      "en": "A population grows continuously at a rate of {dados-calculo.taxa} per year, in the model with the constant e. In how many years does it triple? (three decimal places)"
+    },
+    "dados-calculo": {
+      "taxa": "0.04",
+      "total": "27.465"
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma amostra decai continuamente a uma taxa de {dados-calculo.taxa} por ano, no modelo com a constante e. Em quantos anos ela cai a {dados-calculo.fracao} do valor inicial? (três casas decimais)",
+      "fr": "Un échantillon décroît continûment au taux de {dados-calculo.taxa} par an, dans le modèle avec la constante e. En combien d’années tombe-t-il à {dados-calculo.fracao} de sa valeur initiale ? (trois décimales)",
+      "en": "A sample decays continuously at a rate of {dados-calculo.taxa} per year, in the model with the constant e. In how many years does it fall to {dados-calculo.fracao} of its starting value? (three decimal places)"
+    },
+    "dados-calculo": {
+      "taxa": "0.5",
+      "fracao": "1/10",
+      "total": "4.605"
+    }
+  },
+  {
+    "topico": "funcoes-racionais",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "A concentração de um remédio no sangue é {dados-calculo.a} vezes o tempo, dividido pelo tempo ao quadrado mais {dados-calculo.b}. Qual é a concentração no instante t = {dados-calculo.t}? (três casas decimais)",
+      "fr": "La concentration d’un médicament dans le sang est {dados-calculo.a} fois le temps, divisé par le temps au carré plus {dados-calculo.b}. Quelle est la concentration à l’instant t = {dados-calculo.t} ? (trois décimales)",
+      "en": "A drug’s blood concentration is {dados-calculo.a} times the time, divided by the time squared plus {dados-calculo.b}. What is the concentration at t = {dados-calculo.t}? (three decimal places)"
+    },
+    "dados-calculo": {
+      "a": "20",
+      "b": "4",
+      "t": "2",
+      "total": "5.000"
+    }
+  },
+  {
+    "topico": "funcoes-racionais",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "O custo médio por peça é o custo fixo de {dados-calculo.fixo} reais somado a {dados-calculo.porPeca} reais por peça, tudo dividido pelo número de peças. Qual é o custo médio para {dados-calculo.pecas} peças? (três casas decimais)",
+      "fr": "Le coût moyen par pièce est le coût fixe de {dados-calculo.fixo} reais ajouté à {dados-calculo.porPeca} reais par pièce, le tout divisé par le nombre de pièces. Quel est le coût moyen pour {dados-calculo.pecas} pièces ? (trois décimales)",
+      "en": "The average cost per part is the fixed cost of {dados-calculo.fixo} reais plus {dados-calculo.porPeca} reais per part, all divided by the number of parts. What is the average cost for {dados-calculo.pecas} parts? (three decimal places)"
+    },
+    "dados-calculo": {
+      "fixo": "1200",
+      "porPeca": "18",
+      "pecas": "100",
+      "total": "30.000"
+    }
+  },
+  {
+    "topico": "funcoes-racionais",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função divide {dados-calculo.a} vezes x mais {dados-calculo.b} por {dados-calculo.c} vezes x mais {dados-calculo.d}. Em que valor de y está a assíntota horizontal? (três casas decimais)",
+      "fr": "Une fonction divise {dados-calculo.a} fois x plus {dados-calculo.b} par {dados-calculo.c} fois x plus {dados-calculo.d}. À quelle valeur de y se trouve l’asymptote horizontale ? (trois décimales)",
+      "en": "A function divides {dados-calculo.a} times x plus {dados-calculo.b} by {dados-calculo.c} times x plus {dados-calculo.d}. At what value of y is the horizontal asymptote? (three decimal places)"
+    },
+    "dados-calculo": {
+      "a": "6",
+      "b": "1",
+      "c": "4",
+      "d": "5",
+      "total": "1.500"
+    }
+  },
+  {
+    "topico": "funcoes-racionais",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função divide o quadrado de x menos {dados-calculo.a} por x menos {dados-calculo.b}. Em que valor de x o gráfico tem um buraco, e não uma assíntota?",
+      "fr": "Une fonction divise le carré de x moins {dados-calculo.a} par x moins {dados-calculo.b}. À quelle valeur de x le graphe a-t-il un trou, et non une asymptote ?",
+      "en": "A function divides the square of x minus {dados-calculo.a} by x minus {dados-calculo.b}. At what value of x does the graph have a hole rather than an asymptote?"
+    },
+    "dados-calculo": {
+      "a": "9",
+      "b": "3",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "funcoes-por-partes",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma tarifa cobra {dados-calculo.preco1} reais por minuto nos primeiros {dados-calculo.limite} minutos e {dados-calculo.preco2} real por minuto depois disso. Quanto custa uma ligação de {dados-calculo.minutos} minutos? (três casas decimais)",
+      "fr": "Un tarif facture {dados-calculo.preco1} reais par minute pour les {dados-calculo.limite} premières minutes et {dados-calculo.preco2} real par minute ensuite. Combien coûte un appel de {dados-calculo.minutos} minutes ? (trois décimales)",
+      "en": "A tariff charges {dados-calculo.preco1} reais per minute for the first {dados-calculo.limite} minutes and {dados-calculo.preco2} real per minute after that. How much does a {dados-calculo.minutos} minute call cost? (three decimal places)"
+    },
+    "dados-calculo": {
+      "preco1": "2",
+      "limite": "10",
+      "preco2": "1",
+      "minutos": "15",
+      "total": "25.000"
+    }
+  },
+  {
+    "topico": "funcoes-por-partes",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma tarifa cobra {dados-calculo.preco1} reais por minuto nos primeiros {dados-calculo.limite} minutos e {dados-calculo.preco2} real por minuto depois disso. Quanto custa uma ligação de {dados-calculo.minutos} minutos? (três casas decimais)",
+      "fr": "Un tarif facture {dados-calculo.preco1} reais par minute pour les {dados-calculo.limite} premières minutes et {dados-calculo.preco2} real par minute ensuite. Combien coûte un appel de {dados-calculo.minutos} minutes ? (trois décimales)",
+      "en": "A tariff charges {dados-calculo.preco1} reais per minute for the first {dados-calculo.limite} minutes and {dados-calculo.preco2} real per minute after that. How much does a {dados-calculo.minutos} minute call cost? (three decimal places)"
+    },
+    "dados-calculo": {
+      "preco1": "2",
+      "limite": "10",
+      "preco2": "1",
+      "minutos": "8",
+      "total": "16.000"
+    }
+  },
+  {
+    "topico": "funcoes-por-partes",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um imposto cobra {dados-calculo.taxa1}% sobre a renda até {dados-calculo.limite} reais e {dados-calculo.taxa2}% sobre o que passar desse limite. Quanto paga, em reais, quem ganha {dados-calculo.renda}? (três casas decimais)",
+      "fr": "Un impôt prélève {dados-calculo.taxa1}% sur le revenu jusqu’à {dados-calculo.limite} reais et {dados-calculo.taxa2}% sur ce qui dépasse. Combien paie, en reais, celui qui gagne {dados-calculo.renda} ? (trois décimales)",
+      "en": "A tax takes {dados-calculo.taxa1}% of income up to {dados-calculo.limite} reais and {dados-calculo.taxa2}% of whatever is above that. How much, in reais, does someone earning {dados-calculo.renda} pay? (three decimal places)"
+    },
+    "dados-calculo": {
+      "taxa1": "10",
+      "limite": "2000",
+      "taxa2": "20",
+      "renda": "5000",
+      "total": "800.000"
+    }
+  },
+  {
+    "topico": "funcoes-por-partes",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.antes} para x menor que {dados-calculo.ponto} e vale {dados-calculo.depois} para x maior ou igual a {dados-calculo.ponto}. De quanto é o salto em x = {dados-calculo.ponto}? (três casas decimais)",
+      "fr": "Une fonction vaut {dados-calculo.antes} pour x inférieur à {dados-calculo.ponto} et {dados-calculo.depois} pour x supérieur ou égal à {dados-calculo.ponto}. De combien est le saut en x = {dados-calculo.ponto} ? (trois décimales)",
+      "en": "A function equals {dados-calculo.antes} for x less than {dados-calculo.ponto} and {dados-calculo.depois} for x greater than or equal to {dados-calculo.ponto}. How big is the jump at x = {dados-calculo.ponto}? (three decimal places)"
+    },
+    "dados-calculo": {
+      "antes": "3",
+      "ponto": "0",
+      "depois": "7",
+      "total": "4.000"
+    }
+  },
+  {
+    "topico": "transformacoes-de-graficos",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "O ponto ({dados-calculo.x}, {dados-calculo.y}) pertence ao gráfico de f. Qual é a ordenada do ponto correspondente no gráfico de f somada a {dados-calculo.k}?",
+      "fr": "Le point ({dados-calculo.x}, {dados-calculo.y}) appartient au graphe de f. Quelle est l’ordonnée du point correspondant sur le graphe de f augmentée de {dados-calculo.k} ?",
+      "en": "The point ({dados-calculo.x}, {dados-calculo.y}) is on the graph of f. What is the y-coordinate of the matching point on the graph of f plus {dados-calculo.k}?"
+    },
+    "dados-calculo": {
+      "x": "5",
+      "y": "0",
+      "k": "1",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "transformacoes-de-graficos",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "O ponto ({dados-calculo.x}, {dados-calculo.y}) pertence ao gráfico de f. Qual é a ordenada do ponto correspondente no gráfico de f multiplicada por {dados-calculo.fator}?",
+      "fr": "Le point ({dados-calculo.x}, {dados-calculo.y}) appartient au graphe de f. Quelle est l’ordonnée du point correspondant sur le graphe de f multipliée par {dados-calculo.fator} ?",
+      "en": "The point ({dados-calculo.x}, {dados-calculo.y}) is on the graph of f. What is the y-coordinate of the matching point on the graph of f times {dados-calculo.fator}?"
+    },
+    "dados-calculo": {
+      "x": "2",
+      "y": "4",
+      "fator": "3",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "transformacoes-de-graficos",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "O gráfico de f corta o eixo x em x = {dados-calculo.zero}. Deslocando o gráfico {dados-calculo.deslocamento} unidades para a direita, em que valor de x fica o novo zero?",
+      "fr": "Le graphe de f coupe l’axe des x en x = {dados-calculo.zero}. En décalant le graphe de {dados-calculo.deslocamento} unités vers la droite, à quelle valeur de x se trouve le nouveau zéro ?",
+      "en": "The graph of f crosses the x-axis at x = {dados-calculo.zero}. Shifting the graph {dados-calculo.deslocamento} units to the right, at what value of x is the new zero?"
+    },
+    "dados-calculo": {
+      "zero": "2",
+      "deslocamento": "5",
+      "total": "7"
+    }
+  },
+  {
+    "topico": "transformacoes-de-graficos",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "O gráfico de f corta o eixo x em x = {dados-calculo.zero}. Comprimindo o gráfico horizontalmente por um fator {dados-calculo.fator}, em que valor de x fica o novo zero?",
+      "fr": "Le graphe de f coupe l’axe des x en x = {dados-calculo.zero}. En comprimant le graphe horizontalement d’un facteur {dados-calculo.fator}, à quelle valeur de x se trouve le nouveau zéro ?",
+      "en": "The graph of f crosses the x-axis at x = {dados-calculo.zero}. Compressing the graph horizontally by a factor of {dados-calculo.fator}, at what value of x is the new zero?"
+    },
+    "dados-calculo": {
+      "zero": "8",
+      "fator": "2",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "composicao-inversa",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma função multiplica o número por {dados-calculo.fator} e soma {dados-calculo.soma}. Que número a função inversa devolve quando recebe {dados-calculo.saida}?",
+      "fr": "Une fonction multiplie le nombre par {dados-calculo.fator} et ajoute {dados-calculo.soma}. Quel nombre la fonction inverse renvoie-t-elle quand elle reçoit {dados-calculo.saida} ?",
+      "en": "A function multiplies the number by {dados-calculo.fator} and adds {dados-calculo.soma}. What number does the inverse function return when given {dados-calculo.saida}?"
+    },
+    "dados-calculo": {
+      "fator": "3",
+      "soma": "4",
+      "saida": "19",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "composicao-inversa",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "A função f multiplica por {dados-calculo.fator} e soma {dados-calculo.soma}; a função g soma {dados-calculo.somaG}. Quanto vale f aplicada a g de {dados-calculo.x}?",
+      "fr": "La fonction f multiplie par {dados-calculo.fator} et ajoute {dados-calculo.soma} ; la fonction g ajoute {dados-calculo.somaG}. Combien vaut f appliquée à g de {dados-calculo.x} ?",
+      "en": "The function f multiplies by {dados-calculo.fator} and adds {dados-calculo.soma}; the function g adds {dados-calculo.somaG}. What is f applied to g of {dados-calculo.x}?"
+    },
+    "dados-calculo": {
+      "fator": "2",
+      "soma": "1",
+      "somaG": "3",
+      "x": "4",
+      "total": "15"
+    }
+  },
+  {
+    "topico": "composicao-inversa",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função multiplica por {dados-calculo.fator} e subtrai {dados-calculo.subtrai}. Quanto vale a função inversa em {dados-calculo.saida}? Responda como fração.",
+      "fr": "Une fonction multiplie par {dados-calculo.fator} et soustrait {dados-calculo.subtrai}. Combien vaut la fonction inverse en {dados-calculo.saida} ? Répondez sous forme de fraction.",
+      "en": "A function multiplies by {dados-calculo.fator} and subtracts {dados-calculo.subtrai}. What is the inverse function at {dados-calculo.saida}? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "fator": "4",
+      "subtrai": "1",
+      "saida": "2",
+      "total": "3/4"
+    }
+  },
+  {
+    "topico": "composicao-inversa",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função multiplica por {dados-calculo.fator} e soma {dados-calculo.soma}. Para que valor de x a função aplicada a si mesma dá {dados-calculo.saida}?",
+      "fr": "Une fonction multiplie par {dados-calculo.fator} et ajoute {dados-calculo.soma}. Pour quelle valeur de x la fonction appliquée à elle-même donne-t-elle {dados-calculo.saida} ?",
+      "en": "A function multiplies by {dados-calculo.fator} and adds {dados-calculo.soma}. For what value of x does the function applied to itself give {dados-calculo.saida}?"
+    },
+    "dados-calculo": {
+      "fator": "2",
+      "soma": "3",
+      "saida": "21",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "progressoes",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma pessoa guarda {dados-calculo.primeiro} reais no primeiro mês e aumenta {dados-calculo.aumento} reais a cada mês seguinte. Quantos reais ela guarda no mês número {dados-calculo.mes}?",
+      "fr": "Une personne met {dados-calculo.primeiro} reais de côté le premier mois et augmente de {dados-calculo.aumento} reais chaque mois suivant. Combien de reais met-elle de côté au mois numéro {dados-calculo.mes} ?",
+      "en": "Someone saves {dados-calculo.primeiro} reais in the first month and adds {dados-calculo.aumento} reais more each following month. How many reais do they save in month number {dados-calculo.mes}?"
+    },
+    "dados-calculo": {
+      "primeiro": "50",
+      "aumento": "20",
+      "mes": "10",
+      "total": "230"
+    }
+  },
+  {
+    "topico": "progressoes",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma pessoa guarda {dados-calculo.primeiro} reais no primeiro mês e aumenta {dados-calculo.aumento} reais a cada mês seguinte. Quantos reais ela guardou ao todo nos primeiros {dados-calculo.meses} meses?",
+      "fr": "Une personne met {dados-calculo.primeiro} reais de côté le premier mois et augmente de {dados-calculo.aumento} reais chaque mois suivant. Combien de reais a-t-elle mis de côté en tout pendant les {dados-calculo.meses} premiers mois ?",
+      "en": "Someone saves {dados-calculo.primeiro} reais in the first month and adds {dados-calculo.aumento} reais more each following month. How many reais have they saved in total over the first {dados-calculo.meses} months?"
+    },
+    "dados-calculo": {
+      "primeiro": "50",
+      "aumento": "20",
+      "meses": "10",
+      "total": "1400"
+    }
+  },
+  {
+    "topico": "progressoes",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma bola cai de {dados-calculo.altura} m e, a cada quique, sobe {dados-calculo.fracao} da altura anterior. Quantos metros ela sobe no quique número {dados-calculo.quique}?",
+      "fr": "Une balle tombe de {dados-calculo.altura} m et, à chaque rebond, remonte à {dados-calculo.fracao} de la hauteur précédente. De combien de mètres remonte-t-elle au rebond numéro {dados-calculo.quique} ?",
+      "en": "A ball falls from {dados-calculo.altura} m and on each bounce rises {dados-calculo.fracao} of the previous height. How many metres does it rise on bounce number {dados-calculo.quique}?"
+    },
+    "dados-calculo": {
+      "altura": "81",
+      "fracao": "1/3",
+      "quique": "4",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "progressoes",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Numa progressão geométrica de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}, qual é a soma dos {dados-calculo.termos} primeiros termos?",
+      "fr": "Dans une suite géométrique de premier terme {dados-calculo.primeiro} et de raison {dados-calculo.razao}, quelle est la somme des {dados-calculo.termos} premiers termes ?",
+      "en": "In a geometric sequence with first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}, what is the sum of the first {dados-calculo.termos} terms?"
+    },
+    "dados-calculo": {
+      "primeiro": "3",
+      "razao": "3",
+      "termos": "7",
+      "total": "3279"
+    }
+  },
+  {
+    "topico": "juros-compostos",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um capital de {dados-calculo.capital} reais é aplicado a {dados-calculo.taxa}% por período, a juros compostos, durante {dados-calculo.periodos} períodos. Qual é o montante final, em reais? (duas casas decimais)",
+      "fr": "Un capital de {dados-calculo.capital} reais est placé à {dados-calculo.taxa}% par période, en intérêts composés, pendant {dados-calculo.periodos} périodes. Quel est le montant final, en reais ? (deux décimales)",
+      "en": "An amount of {dados-calculo.capital} reais is invested at {dados-calculo.taxa}% per period, compounded, for {dados-calculo.periodos} periods. What is the final amount, in reais? (two decimal places)"
+    },
+    "dados-calculo": {
+      "capital": "1000",
+      "taxa": "10",
+      "periodos": "3",
+      "total": "1331.00"
+    }
+  },
+  {
+    "topico": "juros-compostos",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um capital de {dados-calculo.capital} reais é aplicado a {dados-calculo.taxa}% por período, a juros compostos, durante {dados-calculo.periodos} períodos. Quantos reais de juros ele rendeu? (duas casas decimais)",
+      "fr": "Un capital de {dados-calculo.capital} reais est placé à {dados-calculo.taxa}% par période, en intérêts composés, pendant {dados-calculo.periodos} périodes. Combien de reais d’intérêts a-t-il rapportés ? (deux décimales)",
+      "en": "An amount of {dados-calculo.capital} reais is invested at {dados-calculo.taxa}% per period, compounded, for {dados-calculo.periodos} periods. How many reais of interest did it earn? (two decimal places)"
+    },
+    "dados-calculo": {
+      "capital": "1000",
+      "taxa": "10",
+      "periodos": "3",
+      "total": "331.00"
+    }
+  },
+  {
+    "topico": "juros-compostos",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Em quantos períodos um capital de {dados-calculo.capital} reais vira {dados-calculo.montante} reais, a {dados-calculo.taxa}% por período em juros compostos?",
+      "fr": "En combien de périodes un capital de {dados-calculo.capital} reais devient-il {dados-calculo.montante} reais, à {dados-calculo.taxa}% par période en intérêts composés ?",
+      "en": "In how many periods does {dados-calculo.capital} reais become {dados-calculo.montante} reais at {dados-calculo.taxa}% per period, compounded?"
+    },
+    "dados-calculo": {
+      "capital": "1000",
+      "montante": "1331",
+      "taxa": "10",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "juros-compostos",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma aplicação rende {dados-calculo.taxaAnual}% ao ano em juros compostos. Qual é a taxa SEMESTRAL equivalente, em porcentagem? (duas casas decimais)",
+      "fr": "Un placement rapporte {dados-calculo.taxaAnual}% par an en intérêts composés. Quel est le taux SEMESTRIEL équivalent, en pourcentage ? (deux décimales)",
+      "en": "An investment earns {dados-calculo.taxaAnual}% a year, compounded. What is the equivalent SIX-MONTH rate, as a percentage? (two decimal places)"
+    },
+    "dados-calculo": {
+      "taxaAnual": "21",
+      "total": "10.00"
     }
   }
 ]

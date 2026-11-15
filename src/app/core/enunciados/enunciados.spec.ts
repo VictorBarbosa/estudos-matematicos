@@ -8,6 +8,7 @@ import {
   todosOsEnunciados,
   vestirTexto,
 } from '@core/enunciados/models/enunciado.model';
+import { TOPICOS_DO_BANCO } from '@core/enunciados/topicos-do-banco';
 import { TODOS_OS_GERADORES } from '@core/treino/geradores.catalogo/geradores.catalogo';
 import { NIVEIS, Nivel, corrigir } from '@core/treino/models/treino.model';
 import { criarRng } from '@core/treino/rng/rng';
@@ -35,6 +36,26 @@ describe('banco de enunciados', () => {
     expect(ENTRADAS.length).toBeGreaterThan(0);
   });
 
+  it('a lista de tópicos do banco só cita tópicos do currículo', () => {
+    for (const topico of TOPICOS_DO_BANCO) {
+      expect(TOPICOS.has(topico), topico).toBe(true);
+    }
+  });
+
+  /**
+   * Quanto da lista já tem enunciado, e em que nível.
+   *
+   * Não é uma régua de qualidade: é o mapa do que falta escrever. Ele fica num
+   * teste porque é a única forma de a contagem acompanhar o arquivo sem
+   * ninguém atualizar um número à mão em lugar nenhum.
+   */
+  it('a cobertura da lista é conhecida', () => {
+    const cobertos = new Set(ENTRADAS.map((entrada) => entrada.topico));
+    const semNenhuma = TOPICOS_DO_BANCO.filter((topico) => !cobertos.has(topico));
+
+    expect(cobertos.size + semNenhuma.length).toBe(TOPICOS_DO_BANCO.length);
+  });
+
   for (const [indice, entrada] of ENTRADAS.entries()) {
     const nome = `${indice}: ${entrada.topico} / ${entrada.nivel}`;
 
@@ -43,6 +64,17 @@ describe('banco de enunciados', () => {
         // Um id errado não quebra nada: a entrada simplesmente nunca aparece.
         // É o pior tipo de defeito, porque não se manifesta.
         expect(TOPICOS.has(entrada.topico), entrada.topico).toBe(true);
+      });
+
+      /**
+       * E esse tópico está na lista que pode ter enunciado no banco.
+       *
+       * A lista é escolha de quem estuda, e há tópicos prontos fora dela. Sem
+       * este teste, escrever uma entrada para um tópico de fora passaria —
+       * silenciosamente, porque a entrada funcionaria.
+       */
+      it('está na lista de tópicos do banco', () => {
+        expect(TOPICOS_DO_BANCO, entrada.topico).toContain(entrada.topico);
       });
 
       it('usa um dos quatro níveis do site', () => {

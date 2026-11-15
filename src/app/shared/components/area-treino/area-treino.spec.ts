@@ -13,6 +13,7 @@ import {
   TRILHA,
 } from '@core/progressao/models/progressao.model';
 import { ExercicioEmFocoService } from '@core/exercicio/services/exercicio-em-foco.service';
+import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
@@ -399,6 +400,14 @@ describe('AreaTreino e os tipos que faltam', () => {
       imports: [AreaTreino],
       providers: [provideZonelessChangeDetection(), provideRouter([])],
     }).compileComponents();
+
+    /*
+     * Com o banco desligado, todo sorteio passa pelo gerador — que aqui é o
+     * espião. Frações tem enunciado escrito à mão, e com o banco ligado parte
+     * dos sorteios vinha do arquivo, sem pedir nada ao gerador: o espião ficava
+     * sem registro e o teste falhava conforme a semente da sessão.
+     */
+    TestBed.inject(ConfiguracaoService).definir(['banco', 'umEmCada'], 0);
 
     progresso = TestBed.inject(ProgressoService);
     fixture = TestBed.createComponent(AreaTreino);

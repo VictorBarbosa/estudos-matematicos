@@ -66,19 +66,20 @@ describe('Configuracoes', () => {
     globalThis.fetch = fetchOriginal;
   });
 
-  it('mostra os cinco blocos de ajuste', () => {
-    // Eram seis enquanto existiu o bloco da LLM local, removido com o
-    // mecanismo de histórias: sem ele, voltam a ser os cinco da progressão.
-    expect(fixture.nativeElement.querySelectorAll('.bloco').length).toBe(5);
-    // Quinze controles: os quatorze números da progressão e a caixa da
-    // prova surpresa.
+  it('mostra os seis blocos de ajuste', () => {
+    // Eram cinco depois de o bloco da LLM local sair; o sexto é o do banco de
+    // enunciados escritos à mão, que decide de quantos em quantos exercícios
+    // a pergunta em prosa aparece.
+    expect(fixture.nativeElement.querySelectorAll('.bloco').length).toBe(6);
+    // Dezesseis controles: os quinze números e a caixa da prova surpresa.
     expect(fixture.nativeElement.querySelectorAll('.ajustes input, .ajustes select').length).toBe(
-      15,
+      16,
     );
-    expect(fixture.nativeElement.querySelectorAll('.ajustes input[type="number"]').length).toBe(14);
+    expect(fixture.nativeElement.querySelectorAll('.ajustes input[type="number"]').length).toBe(15);
     expect(texto()).toContain('Para abrir a próxima etapa');
     expect(texto()).toContain('Prova final da sessão');
     expect(texto()).toContain('Prova surpresa');
+    expect(texto()).toContain('Enunciados escritos à mão');
     expect(texto()).toContain('O seu plano de estudo');
   });
 

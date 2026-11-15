@@ -26,6 +26,9 @@ describe('configuração', () => {
         questoesPorTopico: 1,
         percentualDeAcerto: 75,
       },
+      // Um exercício em três vem do banco de enunciados escritos à mão, onde
+      // houver pergunta escrita para o tópico e o nível.
+      banco: { umEmCada: 3 },
     });
   });
 

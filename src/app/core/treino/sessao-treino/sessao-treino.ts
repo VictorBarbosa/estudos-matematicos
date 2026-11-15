@@ -13,15 +13,6 @@ import {
 } from '@core/treino/models/treino.model';
 
 /**
- * De quantos em quantos sorteios o banco de enunciados pode aparecer.
- *
- * Um em três. Com mais que isso, as poucas perguntas escritas à mão se
- * repetem até serem decoradas; com menos, elas quase não aparecem. Trocar este
- * número é a única coisa a mexer para dar mais ou menos espaço ao banco.
- */
-const PARTES_DO_SORTEIO = 3;
-
-/**
  * Estado de uma rodada de treino.
  *
  * Mantida fora do componente para que a mecânica — sortear, corrigir, pontuar,
@@ -150,10 +141,12 @@ export class SessaoTreino<T> {
      * variedade sem fim — o piso de variedade do site exige sessenta formas
      * distintas por nível, e nenhum arquivo escrito à mão chega perto. Então o
      * banco aparece numa fração dos sorteios: o suficiente para a pergunta de
-     * texto aparecer, pouco para não cansar.
+     * texto aparecer, pouco para não cansar. A fração é ajuste — quem estuda
+     * decide, em Configurações, e `0` devolve o sorteio inteiro aos geradores.
      */
+    const umEmCada = this.configuracao().banco.umEmCada;
     const doBanco =
-      this.rng.inteiro(1, PARTES_DO_SORTEIO) === 1
+      umEmCada > 0 && this.rng.inteiro(1, umEmCada) === 1
         ? sortearDoBanco(this.gerador, this.nivel(), this.rng)
         : undefined;
 

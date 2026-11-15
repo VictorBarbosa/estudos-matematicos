@@ -72,11 +72,29 @@ export interface ConfiguracaoSurpresa {
   readonly percentualDeAcerto: number;
 }
 
+/**
+ * Quanto espaço o banco de enunciados ocupa no sorteio.
+ *
+ * O site tem duas fontes de exercício: os geradores, que montam a conta e
+ * sabem diagnosticar o erro, e o banco de enunciados escritos à mão, que traz
+ * a pergunta em prosa e nas três línguas. `umEmCada` diz de quantos em quantos
+ * sorteios o banco pode aparecer, onde houver entrada para o tópico e o nível.
+ *
+ * Era uma constante no código. Virou ajuste porque é a decisão mais pessoal do
+ * conjunto: quem estuda sabe se quer mais problema de texto ou mais conta
+ * seca. `0` desliga o banco e devolve o sorteio inteiro aos geradores.
+ */
+export interface ConfiguracaoDoBanco {
+  /** De quantos em quantos sorteios o banco entra. 0 desliga. */
+  readonly umEmCada: number;
+}
+
 export interface Configuracao {
   readonly etapa: CriterioDaEtapa;
   readonly escada: EscadaDeNivel;
   readonly prova: RegraDaProva;
   readonly surpresa: ConfiguracaoSurpresa;
+  readonly banco: ConfiguracaoDoBanco;
 }
 
 /** Os valores de fábrica: exatamente os que o site usava antes desta tela. */
@@ -104,6 +122,9 @@ export const CONFIGURACAO_PADRAO: Configuracao = {
     questoesPorTopico: 1,
     percentualDeAcerto: 75,
   },
+  banco: {
+    umEmCada: 3,
+  },
 };
 
 /** O caminho de um ajuste dentro da configuração: `['etapa', 'acertosNaJanela']`. */
@@ -112,7 +133,8 @@ export type Ajuste =
   | readonly ['etapa', keyof CriterioDaEtapa]
   | readonly ['escada', keyof EscadaDeNivel]
   | readonly ['prova', keyof RegraDaProva]
-  | readonly ['surpresa', keyof ConfiguracaoSurpresa];
+  | readonly ['surpresa', keyof ConfiguracaoSurpresa]
+  | readonly ['banco', keyof ConfiguracaoDoBanco];
 
 /** Até onde cada ajuste pode ir, e o que ele significa na tela. */
 export interface LimiteDoAjuste {
@@ -144,6 +166,9 @@ export const LIMITES: readonly LimiteDoAjuste[] = [
   { ajuste: ['surpresa', 'minimoDeTopicos'], minimo: 1, maximo: 40 },
   { ajuste: ['surpresa', 'questoesPorTopico'], minimo: 1, maximo: 3 },
   { ajuste: ['surpresa', 'percentualDeAcerto'], minimo: 50, maximo: 100 },
+  // 0 desliga o banco; 1 faria todo exercício sair do arquivo, e as poucas
+  // perguntas escritas à mão se repetiriam até serem decoradas.
+  { ajuste: ['banco', 'umEmCada'], minimo: 0, maximo: 20 },
 ];
 
 function limiteDe(ajuste: Ajuste): LimiteDoAjuste {
