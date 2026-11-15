@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   CORPOS_RIGIDOS,
   CorpoRigido,
@@ -87,9 +88,7 @@ function doCorpoRigido(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `${capitalizar(artigo(corpo))} ${corpo.nome} de ${numero(massa)} kg e ` +
-      `${numero(raio)} m de raio gira a ${numero(omega)} rad/s. Qual é o ` +
-      `momento angular, em kg·m²/s? ${PEDIDO}`,
+      textoDoMolde(moldesDe('momento-angular', 'forma-1')[0]!, { v1: capitalizar(artigo(corpo)), v2: corpo.nome, v3: numero(massa), v4: numero(raio), v5: numero(omega), PEDIDO }, 'pt'),
     enunciadoTex: `L = I\\omega \\qquad I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
     resolucao: momentoAngularComPassos(corpo, massa, raio, omega),
@@ -140,9 +139,7 @@ function daParticula(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Uma partícula de ${numero(massa)} kg passa a ${numero(distancia)} m de um ` +
-      `ponto, com velocidade de ${velocidade} m/s formando ${angulo} graus com o ` +
-      `raio. Qual é o módulo do momento angular em relação a esse ponto? ${PEDIDO}`,
+      textoDoMolde(moldesDe('momento-angular', 'forma-2')[0]!, { v1: numero(massa), v2: numero(distancia), velocidade, angulo, PEDIDO }, 'pt'),
     enunciadoTex: `L = mvr\\operatorname{sen}\\theta`,
     gabarito,
     resolucao: momentoAngularDePartiComPassos(massa, velocidade, distancia, angulo),
@@ -194,9 +191,7 @@ function daConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um corpo gira livremente, sem torque externo, com momento de inércia ` +
-      `${numero(inerciaInicial)} kg·m² a ${numero(omegaInicial)} rad/s. A inércia passa a ` +
-      `${numero(inerciaFinal)}. Qual é a nova velocidade angular, em rad/s? ${PEDIDO}`,
+      textoDoMolde(moldesDe('momento-angular', 'forma-3')[0]!, { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal), PEDIDO }, 'pt'),
     enunciadoTex: `I_{1}\\omega_{1} = I_{2}\\omega_{2}`,
     gabarito,
     resolucao: conservacaoAngularComPassos(inerciaInicial, omegaInicial, inerciaFinal),
@@ -251,10 +246,7 @@ function daEnergiaNaConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um corpo gira sem torque externo com inércia ${numero(inerciaInicial)} kg·m² a ` +
-      `${numero(omegaInicial)} rad/s, e recolhe a massa até a ` +
-      `inércia cair para ${numero(inerciaFinal)}. De quanto VARIOU a energia cinética de ` +
-      `rotação, em J? ${PEDIDO}`,
+      textoDoMolde(moldesDe('momento-angular', 'forma-4')[0]!, { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal), PEDIDO }, 'pt'),
     enunciadoTex: `\\Delta K = \\frac{1}{2}I_{2}\\omega_{2}^{2} - \\frac{1}{2}I_{1}\\omega_{1}^{2}`,
     gabarito,
     resolucao: {

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { numeroEmTex, numeroEmTexto } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -79,7 +80,7 @@ function mesmaBase(nivel: Nivel, rng: Rng): Exercicio<number> {
     return {
       id: `expeq-base-${base}-${q}-${n}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Resolva a equação exponencial.',
+      enunciado: textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-1')[0]!, {  }, 'pt'),
       enunciadoTex: `${base}^{${expoente}} = ${valor}`,
       gabarito,
       resolucao: {
@@ -199,7 +200,7 @@ function comLogaritmo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `expeq-log-${base}-${k}-${c}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Resolva a equação. (3 casas decimais)',
+    enunciado: textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-2')[0]!, {  }, 'pt'),
     enunciadoTex: `${k === 1 ? '' : `${k} \\cdot `}${base}^{x} = ${direita}`,
     gabarito,
     resolucao: {
@@ -289,7 +290,7 @@ function somaDeLogs(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `expeq-somalog-${base}-${r}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Resolva a equação logarítmica (confira o domínio).',
+    enunciado: textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-3')[0]!, {  }, 'pt'),
     enunciadoTex: `\\log_{${base}} x + \\log_{${base}} (x + ${k}) = ${n}`,
     gabarito,
     resolucao: {
@@ -359,7 +360,7 @@ function substituicao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `expeq-subst-${a}-${t1}-${t2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Resolva a equação e informe a MAIOR solução real.',
+    enunciado: textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-4')[0]!, {  }, 'pt'),
     enunciadoTex: `${nome}^{x}${termo(p, ` \\cdot ${a}^{x}`)}${termo(q, '')} = 0`,
     gabarito,
     resolucao: {
@@ -428,8 +429,7 @@ function tempo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `expeq-tempo-${p0}-${fator}-${taxa}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma população de bactérias cresce como P(t) = ${p0}·e^(${String(taxa).replace('.', ',')}·t), com t em horas. ` +
-      `Em quantas horas ela chega a ${alvo}? (3 casas decimais)`,
+      textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-5')[0]!, { p0, v1: String(taxa).replace('.', ','), alvo }, 'pt'),
     enunciadoTex: `P(t) = ${p0}\\,e^{${t(taxa)}t} = ${alvo}`,
     gabarito,
     resolucao: {
@@ -489,7 +489,7 @@ function basesDiferentes(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `expeq-bases-${b}-${c}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Resolva a equação. (3 casas decimais)',
+    enunciado: textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-6')[0]!, {  }, 'pt'),
     enunciadoTex: `${b}^{x} = ${c}^{x - ${k}}`,
     gabarito,
     resolucao: {

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   EPSILON_0,
   K_COULOMB,
@@ -88,7 +89,7 @@ function potencial(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `pot-pontual-${q}-${r}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o potencial elétrico a ${txt(r)} m de uma carga de ${par(q)} μC, em kV (com sinal)? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-1')[0]!, { v1: txt(r), v2: par(q) }, 'pt'),
     enunciadoTex: `q = ${q}\\ \\mu\\text{C} \\qquad r = ${tex(r)}\\ \\text{m} \\qquad V = \\;?\\ \\text{kV}`,
     gabarito,
     resolucao: {
@@ -129,7 +130,7 @@ function carga(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `pot-carga-${c}-${v}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um capacitor de ${txt(c)} μF é ligado a uma bateria de ${v} V. Qual carga ele armazena, em μC?`,
+    enunciado: textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-2')[0]!, { v1: txt(c), v }, 'pt'),
     enunciadoTex: `C = ${tex(c)}\\ \\mu\\text{F} \\qquad V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {
@@ -177,8 +178,7 @@ function trabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `pot-trabalho-${q}-${va}-${vb}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual trabalho um agente externo realiza para levar, devagar, uma carga de ${par(q)} μC de um ponto a ` +
-      `${va} V até um ponto a ${vb} V, em mJ (com sinal)? (2 casas decimais)`,
+      textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-3')[0]!, { v1: par(q), va, vb }, 'pt'),
     enunciadoTex: `q = ${q}\\ \\mu\\text{C} \\qquad V_A = ${va}\\ \\text{V} \\qquad V_B = ${vb}\\ \\text{V}`,
     gabarito,
     resolucao: {
@@ -228,8 +228,7 @@ function placas(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `pot-placas-${a}-${d}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um capacitor tem placas paralelas de ${a} cm² separadas por ${txt(d)} mm de ar. Qual é sua capacitância, ` +
-      'em pF? (2 casas decimais)',
+      textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-4')[0]!, { a, v1: txt(d) }, 'pt'),
     enunciadoTex: `A = ${a}\\ \\text{cm}^{2} \\qquad d = ${tex(d)}\\ \\text{mm} \\qquad \\varepsilon_0 = 8{,}85 \\times 10^{-12}\\ \\text{F/m}`,
     gabarito,
     resolucao: {
@@ -270,7 +269,7 @@ function energia(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `pot-energia-${c}-${v}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Quanta energia guarda um capacitor de ${c} μF carregado a ${v} V, em mJ? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-5')[0]!, { c, v }, 'pt'),
     enunciadoTex: `C = ${c}\\ \\mu\\text{F} \\qquad V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {
@@ -326,8 +325,7 @@ function associacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `pot-assoc-${tipo}-${valores.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Capacitores de ${valores.join(', ')} μF estão ligados em ${tipo === 'serie' ? 'SÉRIE' : 'PARALELO'}. ` +
-      'Qual é a capacitância equivalente, em μF? (2 casas decimais)',
+      textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-6')[0]!, { v1: valores.join(', '), v2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO' }, 'pt'),
     enunciadoTex: `${valores.map((v, i) => `C_${i + 1} = ${v}`).join(' \\quad ')} \\quad (\\mu\\text{F})`,
     gabarito,
     resolucao: {
@@ -372,8 +370,7 @@ function doisPotenciais(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `pot-dois-${q1}-${q2}-${r1}-${r2}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um ponto P está a ${txt(r1)} m de uma carga de ${par(q1)} μC e a ${txt(r2)} m de outra de ${par(q2)} μC. ` +
-      'Qual é o potencial em P, em kV (com sinal)? (2 casas decimais)',
+      textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-7')[0]!, { v1: txt(r1), v2: par(q1), v3: txt(r2), v4: par(q2) }, 'pt'),
     enunciadoTex: `q_1 = ${q1}\\ \\mu\\text{C},\\; r_1 = ${tex(r1)}\\ \\text{m} \\qquad q_2 = ${q2}\\ \\mu\\text{C},\\; r_2 = ${tex(r2)}\\ \\text{m}`,
     gabarito,
     resolucao: {
@@ -492,8 +489,7 @@ function energiaPlacas(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `pot-energia-placas-${a}-${d}-${v}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um capacitor de placas de ${a} cm², separadas por ${txt(d)} mm de ar, é carregado a ${v} V. ` +
-      'Quanta energia ele guarda, em nJ? (2 casas decimais)',
+      textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-8')[0]!, { a, v1: txt(d), v }, 'pt'),
     enunciadoTex: `A = ${a}\\ \\text{cm}^{2} \\qquad d = ${tex(d)}\\ \\text{mm} \\qquad V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {

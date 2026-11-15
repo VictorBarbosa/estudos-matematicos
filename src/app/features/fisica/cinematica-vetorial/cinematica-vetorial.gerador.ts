@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Vetor,
   anguloDeCompensacaoComPassos,
@@ -94,8 +95,7 @@ function doDeslocamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um corpo vai da primeira posição à segunda em ${tempo} s, com as coordenadas em ` +
-      `metros. Qual é o módulo da velocidade média vetorial, em m/s? ${PEDIDO}`,
+      textoDoMolde(moldesDe('cinematica-vetorial', 'forma-1')[0]!, { tempo, PEDIDO }, 'pt'),
     enunciadoTex: `\\vec{r}_{1} = ${vetorParaTex(inicio)} \\qquad \\vec{r}_{2} = ${vetorParaTex(fim)}`,
     gabarito,
     resolucao: deslocamentoVetorialComPassos(inicio, fim, tempo),
@@ -143,8 +143,7 @@ function daRelativa(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      'A primeira é a velocidade da aeronave em relação ao ar e a segunda é a do vento, em ' +
-      `m/s. Qual é o módulo da velocidade em relação ao solo? ${PEDIDO}`,
+      textoDoMolde(moldesDe('cinematica-vetorial', 'forma-2')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: `\\vec{v}_{ar} = ${vetorParaTex(aeronave)} \\qquad \\vec{v}_{vento} = ${vetorParaTex(vento)}`,
     gabarito,
     resolucao: velocidadeRelativaComPassos(aeronave, vento),
@@ -196,9 +195,7 @@ function daTravessia(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um barco cruza um rio de ${largura} m de largura apontando perpendicularmente à ` +
-      `margem, a ${barco} m/s. A correnteza corre a ${rio} m/s. ` +
-      `Quantos metros rio abaixo ele chega? ${PEDIDO}`,
+      textoDoMolde(moldesDe('cinematica-vetorial', 'forma-3')[0]!, { largura, barco, rio, PEDIDO }, 'pt'),
     enunciadoTex: `v_{barco} = ${barco}\\ \\text{m/s} \\qquad v_{rio} = ${rio}\\ \\text{m/s} \\qquad d = ${largura}\\ \\text{m}`,
     gabarito,
     resolucao: travessiaDeRioComPassos(barco, rio, largura),
@@ -243,9 +240,7 @@ function daCompensacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um barco de ${barco} m/s quer atravessar um rio de correnteza ${rio} ` +
-      'm/s chegando exatamente em frente ao ponto de partida. Quantos graus, ' +
-      `em relação à perpendicular, ele deve apontar rio acima? ${PEDIDO}`,
+      textoDoMolde(moldesDe('cinematica-vetorial', 'forma-4')[0]!, { barco, rio, PEDIDO }, 'pt'),
     enunciadoTex: `v_{barco}\\operatorname{sen}\\theta = v_{rio}`,
     gabarito,
     resolucao: anguloDeCompensacaoComPassos(barco, rio),
@@ -295,8 +290,7 @@ function dasComponentes(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      'Num certo instante, um corpo tem esta velocidade e esta aceleração, em unidades do SI. ' +
-      `Qual é a componente TANGENCIAL da aceleração, em m/s²? ${PEDIDO}`,
+      textoDoMolde(moldesDe('cinematica-vetorial', 'forma-5')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: `\\vec{v} = ${vetorParaTex(velocidade)} \\qquad \\vec{a} = ${vetorParaTex(aceleracao)}`,
     gabarito,
     resolucao: componentesDaAceleracaoComPassos(velocidade, aceleracao),
@@ -355,8 +349,7 @@ function daCurvatura(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      'Com esta velocidade e esta aceleração, em unidades do SI, qual é o raio de curvatura da ' +
-      `trajetória nesse instante, em m? ${PEDIDO}`,
+      textoDoMolde(moldesDe('cinematica-vetorial', 'forma-6')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: `\\vec{v} = ${vetorParaTex(velocidade)} \\qquad \\vec{a} = ${vetorParaTex(aceleracao)}`,
     gabarito,
     resolucao: raioDeCurvaturaComPassos(velocidade, aceleracao),

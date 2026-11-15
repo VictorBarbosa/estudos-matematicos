@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Intervalo,
   Resolucao,
@@ -172,7 +173,7 @@ function lerSomatorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-soma-${de}-${ate}-${termo.corpo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Leia o somatório e calcule o valor.',
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-1')[0]!, {  }, 'pt'),
     enunciadoTex: `\\sum_{k=${de}}^{${ate}} ${termo.corpo} = \\;?`,
     gabarito: numero(resolucao.resultado),
     resolucao: comoResposta(resolucao),
@@ -213,7 +214,7 @@ function lerProdutorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-prod-${ate}-${termo.corpo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Leia o produtório e calcule o valor.',
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-2')[0]!, {  }, 'pt'),
     enunciadoTex: `\\prod_{k=${de}}^{${ate}} ${termo.corpo} = \\;?`,
     gabarito: numero(resolucao.resultado),
     resolucao: comoResposta(resolucao),
@@ -249,7 +250,7 @@ function lerModuloFatorial(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-mod-${dentro}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Leia os dois símbolos e calcule.',
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-3')[0]!, {  }, 'pt'),
     enunciadoTex: `\\left|${dentro}\\right| + ${n}! = \\;?`,
     gabarito: numero(resultado),
     resolucao: {
@@ -311,7 +312,7 @@ function lerIntervalo(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-intervalo-${de}-${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Quantos números INTEIROS existem neste intervalo?',
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-4')[0]!, {  }, 'pt'),
     enunciadoTex: `x \\in ${intervaloParaTex(intervalo)}`,
     gabarito: numero(resolucao.resultado),
     resolucao: comoResposta(resolucao),
@@ -362,7 +363,7 @@ function lerConjuntos(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-conj-${operacao}-${a.join('')}-${b.join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Com A = {${a.join(', ')}} e B = {${b.join(', ')}}, quantos elementos tem o conjunto?`,
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-5')[0]!, { v1: a.join(', '), v2: b.join(', ') }, 'pt'),
     enunciadoTex: `A ${simbolo} B`,
     gabarito: numero(resolucao.resultado.length),
     resolucao: {
@@ -409,7 +410,7 @@ function lerFuncao(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
   return {
     id: `notacao-funcao-${a}-${b}-${x}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Leia a assinatura e a regra da função, e calcule f(${x}).`,
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-6')[0]!, { x }, 'pt'),
     enunciadoTex: `f: \\mathbb{R} \\to \\mathbb{R}, \\quad f(x) = ${a}x ${sinal} ${Math.abs(b)}`,
     gabarito: numero(resultado),
     resolucao: {
@@ -465,7 +466,7 @@ function escrever(
   return {
     id: `notacao-escrever-${conceito}-${canonizarNotacao(gabarito.exibida)}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Escreva em símbolos: ${texto}`,
+    enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-7')[0]!, { texto }, 'pt'),
     // Sem fórmula: a notação é a resposta, não a pergunta.
     enunciadoTex: SEM_FORMULA,
     gabarito,

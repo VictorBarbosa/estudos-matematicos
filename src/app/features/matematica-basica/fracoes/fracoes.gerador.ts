@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Fracao,
   OperacaoFracao,
@@ -215,7 +216,7 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
      * enunciado prometeria uma cobrança que não existe. Simplificar continua
      * sendo o último passo da resolução, e é o que a dica pede.
      */
-    enunciado: 'Escreva este decimal como fração.',
+    enunciado: textoDoMolde(moldesDe('fracoes', 'forma-1')[0]!, {  }, 'pt'),
     enunciadoTex: `${String(decimal).replace('.', '{,}')} = \\;?`,
     gabarito: resultado,
     resolucao: { resultado, passos },

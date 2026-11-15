@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { paraRadianos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -47,7 +48,7 @@ export const geradorIdentidades: GeradorExercicio<number> = {
       return {
         id: `identidades-fundamental-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Se sen θ = ${numeroEmPortugues(seno)} com θ no 1º quadrante, quanto vale cos θ? (2 casas)`,
+        enunciado: textoDoMolde(moldesDe('identidades-trigonometricas', 'forma-1')[0]!, { v1: numeroEmPortugues(seno) }, 'pt'),
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\quad \\Rightarrow \\quad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {
@@ -110,7 +111,7 @@ export const geradorIdentidades: GeradorExercicio<number> = {
       return {
         id: `identidades-duplo-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Use a fórmula do arco duplo para calcular sen ${2 * graus}°.`,
+        enunciado: textoDoMolde(moldesDe('identidades-trigonometricas', 'forma-2')[0]!, { v1: 2 * graus }, 'pt'),
         enunciadoTex: `\\sin ${2 * graus}° = \\;?`,
         gabarito,
         resolucao: {
@@ -165,7 +166,7 @@ export const geradorIdentidades: GeradorExercicio<number> = {
     return {
       id: `identidades-soma-${a}-${b}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Calcule sen(${a}° + ${b}°) usando a fórmula da soma de arcos.`,
+      enunciado: textoDoMolde(moldesDe('identidades-trigonometricas', 'forma-3')[0]!, { a, b }, 'pt'),
       enunciadoTex: `\\sin(${a}° + ${b}°) = \\;?`,
       gabarito,
       resolucao: {

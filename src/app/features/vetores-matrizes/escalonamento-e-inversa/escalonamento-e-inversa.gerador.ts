@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Fracao,
   Matriz,
@@ -55,7 +56,7 @@ const ehInteiro = (valor: number): boolean => Math.abs(valor - Math.round(valor)
 
 /** Acrescenta o pedido de fração quando o gabarito não é inteiro. */
 const comFracao = (enunciado: string, gabarito: number): string =>
-  ehInteiro(gabarito) ? enunciado : `${enunciado} Responda como fração.`;
+  ehInteiro(gabarito) ? enunciado : textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-1')[0]!, { enunciado }, 'pt');
 
 /** `x`, `-x`, `3x`: o coeficiente 1 não se escreve. */
 const cx = (c: number, nome: string): string =>
@@ -211,8 +212,7 @@ function exercicioOperacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `escal-op-${m.flat().join('_')}-${coluna}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Aplique ${op} na matriz aumentada. Qual é a nova entrada da ${Li} na coluna ` +
-      `${coluna + 1}${coluna === 3 ? ' (a dos termos independentes)' : ''}?`,
+      textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-2')[0]!, { op, Li, v1: coluna + 1, v2: coluna === 3 ? ' (a dos termos independentes)' : '' }, 'pt'),
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -363,8 +363,7 @@ function exercicioRetro(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `escal-retro-${m.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      'A matriz aumentada do sistema já está escalonada. Encontre x, substituindo de baixo ' +
-      'para cima.',
+      textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-3')[0]!, {  }, 'pt'),
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -477,7 +476,7 @@ function exercicioClassificarEscalonada(nivel: Nivel, rng: Rng): Exercicio<numbe
   return {
     id: `escal-classe-${m.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `A matriz aumentada já está escalonada. Quantas soluções tem o sistema? ${LEGENDA_TIPO}`,
+    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-4')[0]!, { LEGENDA_TIPO }, 'pt'),
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -542,7 +541,7 @@ function exercicioClassificarSistema(nivel: Nivel, rng: Rng): Exercicio<number> 
   return {
     id: `escal-classe-sis-${aumentada.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Escalone o sistema. Quantas soluções ele tem? ${LEGENDA_TIPO}`,
+    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-5')[0]!, { LEGENDA_TIPO }, 'pt'),
     enunciadoTex: sistemaTex(base, b),
     gabarito,
     resolucao: {
@@ -595,7 +594,7 @@ function exercicioGauss(nivel: Nivel, rng: Rng, troca: boolean): Exercicio<numbe
   return {
     id: `escal-gauss${troca ? '-troca' : ''}-${A.flat().join('_')}-${b.join('_')}-${pedida}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Resolva o sistema por escalonamento e informe o valor de ${nome}.`,
+    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-6')[0]!, { nome }, 'pt'),
     enunciadoTex: sistemaTex(A, b),
     gabarito,
     resolucao: { resultado: gabarito, passos: gauss.passos },
@@ -749,7 +748,7 @@ function exercicioParametro(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `escal-param-${[...r1, ...r2, a31, a32].join('_')}-${b.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Para que valor de k o sistema deixa de ter solução única?',
+    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-7')[0]!, {  }, 'pt'),
     enunciadoTex: sistemaTex([r1, r2, [a31, a32, 'k']], b),
     gabarito,
     resolucao: {
@@ -828,7 +827,7 @@ function exercicioInversa3(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `escal-inv3-${A.flat().join('_')}-${i}${j}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule a inversa por escalonamento de (A | I) e informe a entrada da linha ${i + 1}, coluna ${j + 1} de A⁻¹.`,
+    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-8')[0]!, { v1: i + 1, v2: j + 1 }, 'pt'),
     enunciadoTex: `A = ${aumentadaParaTex(paraFracoes(A), 3)}`,
     gabarito,
     resolucao: {

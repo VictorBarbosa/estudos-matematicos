@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   R_GASES,
   gasIdealComPassos,
@@ -74,8 +75,7 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `ter-v-${mols}-${temperaturaCelsius}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Que volume ocupam ${mols} mol de gás ideal a ${temperaturaCelsius} °C e 1 atm? (em ` +
-      'litros, 2 casas decimais)',
+      textoDoMolde(moldesDe('termodinamica-e-gases', 'forma-1')[0]!, { mols, temperaturaCelsius }, 'pt'),
     enunciadoTex: `n = ${mols}\\,\\text{mol} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C} \\qquad p = 1\\,\\text{atm}`,
     gabarito,
     resolucao: {
@@ -134,8 +134,7 @@ function exercicioPressao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `ter-p-${mols}-${volumeLitros}-${temperaturaCelsius}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é a pressão de ${mols} mol de gás ideal em ${volumeLitros} L a ` +
-      `${temperaturaCelsius} °C? (em kPa, 2 casas decimais)`,
+      textoDoMolde(moldesDe('termodinamica-e-gases', 'forma-2')[0]!, { mols, volumeLitros, temperaturaCelsius }, 'pt'),
     enunciadoTex: `n = ${mols} \\qquad V = ${volumeLitros}\\,\\text{L} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C}`,
     gabarito,
     resolucao: {
@@ -190,8 +189,7 @@ function exercicioTransformacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `ter-trans-${pressao1}_${volume1}_${temperatura1}-${pressao2}_${temperatura2}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um gás a ${pressao1} atm ocupa ${volume1} L a ${temperatura1} K. Levado a ${pressao2} ` +
-      `atm e ${temperatura2} K, que volume passa a ocupar? (em litros, 2 casas decimais)`,
+      textoDoMolde(moldesDe('termodinamica-e-gases', 'forma-3')[0]!, { pressao1, volume1, temperatura1, pressao2, temperatura2 }, 'pt'),
     enunciadoTex:
       `p_1 = ${pressao1} \\quad V_1 = ${volume1} \\quad T_1 = ${temperatura1} \\quad ` +
       `p_2 = ${pressao2} \\quad T_2 = ${temperatura2}`,
@@ -262,9 +260,7 @@ function exercicioEnergiaInterna(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `ter-u-${calor}-${trabalho}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um gás ${calor >= 0 ? 'recebe' : 'perde'} ${Math.abs(calor)} J de calor e ` +
-      `${trabalho >= 0 ? 'realiza' : 'recebe'} ${Math.abs(trabalho)} J de trabalho. Qual é a ` +
-      'variação da energia interna, em joules?',
+      textoDoMolde(moldesDe('termodinamica-e-gases', 'forma-4')[0]!, { v1: calor >= 0 ? 'recebe' : 'perde', v2: Math.abs(calor), v3: trabalho >= 0 ? 'realiza' : 'recebe', v4: Math.abs(trabalho) }, 'pt'),
     enunciadoTex: `Q = ${calor}\\,\\text{J} \\qquad W = ${trabalho}\\,\\text{J}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -310,8 +306,7 @@ function exercicioTrabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `ter-w-${pressaoAtm}-${volumeInicial}-${volumeFinal}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um gás expande de ${volumeInicial} L para ${volumeFinal} L à pressão constante de ` +
-      `${pressaoAtm} atm. Qual é o trabalho realizado pelo gás, em joules? (2 casas decimais)`,
+      textoDoMolde(moldesDe('termodinamica-e-gases', 'forma-5')[0]!, { volumeInicial, volumeFinal, pressaoAtm }, 'pt'),
     enunciadoTex:
       `p = ${pressaoAtm}\\,\\text{atm} \\qquad V_i = ${volumeInicial}\\,\\text{L} \\qquad ` +
       `V_f = ${volumeFinal}\\,\\text{L}`,

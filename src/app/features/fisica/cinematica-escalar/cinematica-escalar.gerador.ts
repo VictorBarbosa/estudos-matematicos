@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { movimentoUniformementeVariado, torricelliComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -58,7 +59,7 @@ function exercicioVelocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cin-vel-${v0}-${a}-${t}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um corpo parte com ${v0} m/s e acelera a ${a} m/s². Qual é sua velocidade após ${t} s?`,
+    enunciado: textoDoMolde(moldesDe('cinematica-escalar', 'forma-1')[0]!, { v0, a, t }, 'pt'),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = ${a}\\,\\text{m/s}^{2} \\qquad t = ${t}\\,\\text{s}`,
     gabarito: velocidade,
     resolucao: {
@@ -110,8 +111,7 @@ function exercicioPosicao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `cin-pos-${v0}-${a}-${t}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um corpo parte do repouso de uma posição com ${v0} m/s e acelera a ${a} m/s². Quanto ` +
-      `ele se desloca em ${t} s?`,
+      textoDoMolde(moldesDe('cinematica-escalar', 'forma-2')[0]!, { v0, a, t }, 'pt'),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = ${a}\\,\\text{m/s}^{2} \\qquad t = ${t}\\,\\text{s}`,
     gabarito: posicao,
     resolucao: {
@@ -174,8 +174,7 @@ function exercicioTorricelli(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `cin-torr-${v0}-${a}-${deslocamento}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Partindo de ${v0} m/s com aceleração de ${a} m/s², qual é a velocidade após percorrer ` +
-      `${deslocamento} m? (2 casas decimais)`,
+      textoDoMolde(moldesDe('cinematica-escalar', 'forma-3')[0]!, { v0, a, deslocamento }, 'pt'),
     enunciadoTex: `v_0 = ${v0} \\qquad a = ${a} \\qquad \\Delta s = ${deslocamento}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -216,8 +215,7 @@ function exercicioTempoDeParada(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `cin-parada-${v0}-${desaceleracao}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um veículo a ${v0} m/s freia com desaceleração de ${desaceleracao} m/s². Em quanto ` +
-      'tempo ele para? (2 casas decimais)',
+      textoDoMolde(moldesDe('cinematica-escalar', 'forma-4')[0]!, { v0, desaceleracao }, 'pt'),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = -${desaceleracao}\\,\\text{m/s}^{2}`,
     gabarito: resultado,
     resolucao: {
@@ -271,8 +269,7 @@ function exercicioDistanciaFrenagem(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `cin-fren-${v0}-${desaceleracao}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um veículo a ${v0} m/s freia com desaceleração de ${desaceleracao} m/s². Que distância ` +
-      'ele percorre até parar? (2 casas decimais)',
+      textoDoMolde(moldesDe('cinematica-escalar', 'forma-5')[0]!, { v0, desaceleracao }, 'pt'),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = -${desaceleracao}\\,\\text{m/s}^{2} \\qquad v = 0`,
     gabarito: resultado,
     resolucao: {

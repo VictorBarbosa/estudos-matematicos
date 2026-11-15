@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   argumentoGraus,
   dividirComplexosComPassos,
@@ -99,7 +100,7 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cpx-mod-${z.real}_${z.imaginario}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o módulo de ${escrever(z)}? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('numeros-complexos', 'forma-1')[0]!, { v1: escrever(z) }, 'pt'),
     enunciadoTex: `z = ${escrever(z)}`,
     gabarito: resultado,
     resolucao: {
@@ -160,8 +161,7 @@ function exercicioProduto(parte: 'real' | 'imaginario', nivel: Nivel, rng: Rng):
     id: `cpx-prod-${parte}-${a.real}_${a.imaginario}-${b.real}_${b.imaginario}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Multiplicando (${escrever(a)}) por (${escrever(b)}), qual é a parte ` +
-      `${parte === 'real' ? 'REAL' : 'IMAGINÁRIA'} do resultado?`,
+      textoDoMolde(moldesDe('numeros-complexos', 'forma-2')[0]!, { v1: escrever(a), v2: escrever(b), v3: parte === 'real' ? 'REAL' : 'IMAGINÁRIA' }, 'pt'),
     enunciadoTex: `z_1 = ${escrever(a)} \\qquad z_2 = ${escrever(b)}`,
     gabarito,
     resolucao: {
@@ -223,8 +223,7 @@ function exercicioArgumento(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `cpx-arg-${z.real}_${z.imaginario}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é o argumento de ${escrever(z)}, medido no sentido anti-horário a partir do eixo ` +
-      'real? (em graus, 2 casas)',
+      textoDoMolde(moldesDe('numeros-complexos', 'forma-3')[0]!, { v1: escrever(z) }, 'pt'),
     enunciadoTex: `z = ${escrever(z)}`,
     gabarito: resultado,
     resolucao: {
@@ -282,7 +281,7 @@ function exercicioPotenciaDeI(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `cpx-poti-${expoente}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é a parte real de i^${expoente}?`,
+    enunciado: textoDoMolde(moldesDe('numeros-complexos', 'forma-4')[0]!, { expoente }, 'pt'),
     enunciadoTex: `i^{${expoente}}`,
     gabarito,
     resolucao: {
@@ -344,8 +343,7 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `cpx-quo-${a.real}_${a.imaginario}-${b.real}_${b.imaginario}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Dividindo (${escrever(a)}) por (${escrever(b)}), qual é a parte REAL do resultado? ` +
-      '(2 casas decimais)',
+      textoDoMolde(moldesDe('numeros-complexos', 'forma-5')[0]!, { v1: escrever(a), v2: escrever(b) }, 'pt'),
     enunciadoTex: `\\frac{${escrever(a)}}{${escrever(b)}}`,
     gabarito,
     resolucao: {

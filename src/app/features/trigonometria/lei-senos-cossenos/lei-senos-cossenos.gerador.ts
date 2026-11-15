@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { leiDosCossenosComPassos, leiDosSenosComPassos, paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -41,8 +42,7 @@ export const geradorLeis: GeradorExercicio<number> = {
         id: `leis-cossenos-${b}-${c}-${angulo}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado:
-          `Um triângulo tem lados ${b} e ${c}, com ângulo de ${angulo}° entre eles. ` +
-          'Quanto mede o terceiro lado? (2 casas)',
+          textoDoMolde(moldesDe('lei-senos-cossenos', 'forma-1')[0]!, { b, c, angulo }, 'pt'),
         enunciadoTex: `b = ${b} \\qquad c = ${c} \\qquad A = ${angulo}° \\qquad a = \\;?`,
         gabarito,
         resolucao,
@@ -94,8 +94,7 @@ export const geradorLeis: GeradorExercicio<number> = {
       id: `leis-senos-${ladoA}-${anguloA}-${anguloB}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado:
-        `Num triângulo, o lado de medida ${ladoA} é oposto ao ângulo de ${anguloA}°. ` +
-        `Quanto mede o lado oposto ao ângulo de ${anguloB}°? (2 casas)`,
+        textoDoMolde(moldesDe('lei-senos-cossenos', 'forma-2')[0]!, { ladoA, anguloA, anguloB }, 'pt'),
       enunciadoTex: `\\frac{${ladoA}}{\\sin ${anguloA}°} = \\frac{x}{\\sin ${anguloB}°}`,
       gabarito,
       resolucao,
@@ -159,8 +158,7 @@ function exercicioMaiorAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `leis-maior-angulo-${b}-${c}-${a}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um triângulo tem lados ${b}, ${c} e ${a}. Quanto mede o MAIOR ângulo, em graus? ` +
-      '(2 casas)',
+      textoDoMolde(moldesDe('lei-senos-cossenos', 'forma-3')[0]!, { b, c, a }, 'pt'),
     enunciadoTex: `a = ${a} \\qquad b = ${b} \\qquad c = ${c} \\qquad \\hat{A} = \\;?`,
     gabarito,
     resolucao: {

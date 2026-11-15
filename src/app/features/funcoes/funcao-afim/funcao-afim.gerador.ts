@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Fracao, observarSimplificacao } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -104,7 +105,7 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
           id: `afim-taxa-${a}-${b}-${rng.inteiro(0, 9999)}`,
           nivel,
           enunciado:
-            'Qual é a taxa de variação da função, ou seja, quanto y muda quando x avança 1?',
+            textoDoMolde(moldesDe('funcao-afim', 'forma-1')[0]!, {  }, 'pt'),
           enunciadoTex: funcaoTex,
           gabarito,
           resolucao: {
@@ -162,7 +163,7 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
         return {
           id: `afim-valor-${a}-${b}-${x}-${rng.inteiro(0, 9999)}`,
           nivel,
-          enunciado: `Qual é o valor de f(${x})?`,
+          enunciado: textoDoMolde(moldesDe('funcao-afim', 'forma-2')[0]!, { x }, 'pt'),
           enunciadoTex: funcaoTex,
           gabarito,
           resolucao: {

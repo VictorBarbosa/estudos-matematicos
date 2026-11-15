@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { somaComPassos, somaInfinitaComPassos, termoGeral } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -70,7 +71,7 @@ function exercicioTermo(geometrica: boolean, nivel: Nivel, rng: Rng): Exercicio<
   return {
     id: `prog-termo-${nome}-${primeiro}-${razao}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Numa ${nome} de primeiro termo ${primeiro} e razão ${razao}, qual é o ${n}º termo?`,
+    enunciado: textoDoMolde(moldesDe('progressoes', 'forma-1')[0]!, { nome, primeiro, razao, n }, 'pt'),
     enunciadoTex: `a_1 = ${primeiro} \\qquad ${letraRazao} = ${razao} \\qquad n = ${n}`,
     gabarito,
     resolucao: {
@@ -144,8 +145,7 @@ function exercicioSoma(geometrica: boolean, nivel: Nivel, rng: Rng): Exercicio<n
     id: `prog-soma-${nome}-${primeiro}-${razao}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Numa ${nome} de primeiro termo ${primeiro} e razão ${razao}, qual é a soma dos ${n} ` +
-      'primeiros termos?',
+      textoDoMolde(moldesDe('progressoes', 'forma-2')[0]!, { nome, primeiro, razao, n }, 'pt'),
     enunciadoTex: `a_1 = ${primeiro} \\qquad ${letraRazao} = ${razao} \\qquad n = ${n}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -224,7 +224,7 @@ function exercicioSomaInfinita(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prog-inf-${primeiro}-${numerador}_${denominador}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Qual é a soma de todos os infinitos termos desta PG?',
+    enunciado: textoDoMolde(moldesDe('progressoes', 'forma-3')[0]!, {  }, 'pt'),
     enunciadoTex: `a_1 = ${primeiro} \\qquad q = ${razaoTex}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },

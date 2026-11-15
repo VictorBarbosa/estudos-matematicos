@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -26,7 +27,7 @@ export const geradorVizinhancas: GeradorExercicio<number> = {
       return {
         id: `viz-assintota-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Em que valor de x esta função tem uma assíntota vertical?',
+        enunciado: textoDoMolde(moldesDe('vizinhancas-e-infinito', 'forma-1')[0]!, {  }, 'pt'),
         enunciadoTex: `f(x) = \\frac{1}{x ${k >= 0 ? '-' : '+'} ${Math.abs(k)}}`,
         gabarito,
         resolucao: {
@@ -78,7 +79,7 @@ export const geradorVizinhancas: GeradorExercicio<number> = {
       return {
         id: `viz-graumenor-${a}${b}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Qual é o limite quando x tende ao infinito?',
+        enunciado: textoDoMolde(moldesDe('vizinhancas-e-infinito', 'forma-2')[0]!, {  }, 'pt'),
         enunciadoTex: `\\lim_{x \\to \\infty} \\frac{${a}x + ${b}}{${rng.inteiro(1, 5)}x^{2} + ${rng.inteiro(1, 9)}}`,
         gabarito,
         resolucao: {
@@ -132,7 +133,7 @@ export const geradorVizinhancas: GeradorExercicio<number> = {
     return {
       id: `viz-mesmograu-${a}${b}${grau}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Qual é o limite quando x tende ao infinito? (2 casas decimais)',
+      enunciado: textoDoMolde(moldesDe('vizinhancas-e-infinito', 'forma-3')[0]!, {  }, 'pt'),
       enunciadoTex:
         `\\lim_{x \\to \\infty} \\frac{${a}${potencia} + ${rng.inteiro(1, 9)}}` +
         `{${b}${potencia} + ${rng.inteiro(1, 9)}}`,

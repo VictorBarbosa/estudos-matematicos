@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Transformacao,
   pontoTransformadoComPassos,
@@ -88,7 +89,7 @@ function doVertice(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ver-${t.a}-${t.h}-${t.k}`,
     nivel,
     rng,
-    enunciado: `Qual é a abscissa do vértice desta parábola? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-1')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: parabolaTex(t),
     gabarito: t.h,
     resolucao: verticeTransformadoComPassos(t),
@@ -134,8 +135,7 @@ function doPontoX(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `O ponto (${ponto.x}, ${ponto.y}) pertence ao gráfico de f. Qual é a ABSCISSA do ponto ` +
-      `correspondente no gráfico transformado? ${PEDIDO}`,
+      textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-2')[0]!, { v1: ponto.x, v2: ponto.y, PEDIDO }, 'pt'),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito: destino.x,
     resolucao: pontoTransformadoComPassos(ponto, t),
@@ -184,8 +184,7 @@ function doPontoY(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `O ponto (${ponto.x}, ${ponto.y}) pertence ao gráfico de f. Qual é a ORDENADA do ponto ` +
-      `correspondente no gráfico transformado? ${PEDIDO}`,
+      textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-3')[0]!, { v1: ponto.x, v2: ponto.y, PEDIDO }, 'pt'),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito: destino.y,
     resolucao: {
@@ -237,8 +236,7 @@ function daHorizontal(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `O gráfico de f ocupa uma largura de ${largura} unidades no eixo x. Qual largura o ` +
-      `gráfico transformado ocupa? ${PEDIDO}`,
+      textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-4')[0]!, { largura, PEDIDO }, 'pt'),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito,
     resolucao: daLargura(largura, b, gabarito),
@@ -276,8 +274,7 @@ function doZeroDeslocado(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `A função f tem um zero em x = ${zero}. Em que valor de x o gráfico transformado cruza o ` +
-      `eixo horizontal? ${PEDIDO}`,
+      textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-5')[0]!, { zero, PEDIDO }, 'pt'),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito: destino.x,
     resolucao: pontoTransformadoComPassos({ x: zero, y: 0 }, t),

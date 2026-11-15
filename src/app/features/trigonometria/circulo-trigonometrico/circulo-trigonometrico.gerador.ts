@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { paraRadianos, quadrante } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -28,7 +29,7 @@ export const geradorCirculo: GeradorExercicio<number> = {
       return {
         id: `circulo-quadrante-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Em qual quadrante está este ângulo? Responda com 1, 2, 3 ou 4.',
+        enunciado: textoDoMolde(moldesDe('circulo-trigonometrico', 'forma-1')[0]!, {  }, 'pt'),
         enunciadoTex: `\\theta = ${graus}°`,
         gabarito,
         resolucao: {
@@ -70,7 +71,7 @@ export const geradorCirculo: GeradorExercicio<number> = {
       return {
         id: `circulo-radianos-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Converta ${graus}° para radianos. (2 casas decimais)`,
+        enunciado: textoDoMolde(moldesDe('circulo-trigonometrico', 'forma-2')[0]!, { graus }, 'pt'),
         enunciadoTex: `${graus}° = \\;?\\text{ rad}`,
         gabarito,
         resolucao: {
@@ -121,7 +122,7 @@ export const geradorCirculo: GeradorExercicio<number> = {
     return {
       id: `circulo-valor-${graus}-${ehSeno}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Qual é o valor de ${ehSeno ? 'sen' : 'cos'} ${graus}°? (2 casas decimais)`,
+      enunciado: textoDoMolde(moldesDe('circulo-trigonometrico', 'forma-3')[0]!, { v1: ehSeno ? 'sen' : 'cos', graus }, 'pt'),
       enunciadoTex: `${nome} ${graus}° = \\;?`,
       gabarito,
       resolucao: {
@@ -240,7 +241,7 @@ function exercicioSinal(nivel: Nivel, rng: Rng, sorteado: number): Exercicio<num
   return {
     id: `circulo-sinal-${funcao}-${graus}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o sinal de ${funcao} ${graus}°? Responda 1 se for positivo e -1 se for negativo.`,
+    enunciado: textoDoMolde(moldesDe('circulo-trigonometrico', 'forma-4')[0]!, { funcao, graus }, 'pt'),
     enunciadoTex: `\\operatorname{${funcao}} ${graus}° \\gtrless 0 \\;?`,
     gabarito,
     resolucao: {

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { empuxoDeMotorComPassos, tsiolkovskyComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -59,8 +60,7 @@ function exercicioEmpuxo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prop-emp-${vazao}-${exaustao}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um motor queima ${vazao} kg/s de propelente com velocidade de exaustão de ` +
-      `${exaustao} m/s. Qual é o empuxo, em kN? (2 casas decimais)`,
+      textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-1')[0]!, { vazao, exaustao }, 'pt'),
     enunciadoTex: `\\dot{m} = ${vazao}\\,\\text{kg/s} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
     gabarito,
     resolucao: {
@@ -104,8 +104,7 @@ function exercicioImpulsoEspecifico(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prop-isp-${exaustao}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um motor tem velocidade de exaustão de ${exaustao} m/s. Qual é seu impulso específico, ` +
-      'em segundos? (2 casas decimais)',
+      textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-2')[0]!, { exaustao }, 'pt'),
     enunciadoTex: `v_e = ${exaustao}\\,\\text{m/s} \\qquad g_0 = 9{,}81\\,\\text{m/s}^{2}`,
     gabarito: resultado,
     resolucao: {
@@ -164,8 +163,7 @@ function exercicioDeltaV(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prop-dv-${razao}-${exaustao}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um foguete tem razão de massas ${razao} e velocidade de exaustão de ${exaustao} m/s. ` +
-      'Qual é o delta-v disponível, em km/s? (2 casas decimais)',
+      textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-3')[0]!, { razao, exaustao }, 'pt'),
     enunciadoTex: `\\frac{m_0}{m_f} = ${razao} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -215,8 +213,7 @@ function exercicioRazaoMassas(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prop-rm-${deltaVKm}-${exaustao}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Para obter ${deltaVKm.toLocaleString('pt-BR')} km/s de delta-v com exaustão a ` +
-      `${exaustao} m/s, qual razão de massas é necessária? (2 casas decimais)`,
+      textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-4')[0]!, { v1: deltaVKm.toLocaleString('pt-BR'), exaustao }, 'pt'),
     enunciadoTex: `\\Delta v = ${String(deltaVKm).replace('.', '{,}')}\\,\\text{km/s} \\qquad v_e = ${exaustao}\\,\\text{m/s}`,
     gabarito: resultado,
     resolucao: {
@@ -283,9 +280,7 @@ function exercicioFracaoCombustivel(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prop-frac-${massaInicial}-${razao}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um foguete parte com ${(massaInicial / 1000).toLocaleString('pt-BR')} t e termina a ` +
-      `queima com ${(massaFinal / 1000).toLocaleString('pt-BR')} t. Que fração da massa ` +
-      'inicial era propelente? (responda entre 0 e 1, com 2 casas decimais)',
+      textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-5')[0]!, { v1: (massaInicial / 1000).toLocaleString('pt-BR'), v2: (massaFinal / 1000).toLocaleString('pt-BR') }, 'pt'),
     enunciadoTex: `m_0 = ${massaInicial}\\,\\text{kg} \\qquad m_f = ${Number(massaFinal.toFixed(0))}\\,\\text{kg}`,
     gabarito,
     resolucao: {

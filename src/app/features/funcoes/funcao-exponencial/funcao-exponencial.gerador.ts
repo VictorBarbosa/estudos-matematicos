@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import {
@@ -51,8 +52,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
         id: `exponencial-meiavida-${lambda}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado:
-          `Uma amostra decai segundo N(t) = N₀·e^(−${String(lambda).replace('.', ',')}t), com t ` +
-          'em anos. Qual é a meia-vida? (arredonde para 2 casas)',
+          textoDoMolde(moldesDe('funcao-exponencial', 'forma-1')[0]!, { v1: String(lambda).replace('.', ',') }, 'pt'),
         enunciadoTex: `N(t) = N_0 e^{-${String(lambda).replace('.', '{,}')}\\,t}`,
         gabarito,
         resolucao: {
@@ -116,7 +116,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
         id: `exponencial-duplicacao-${base}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado:
-          'Quantas unidades de x são necessárias para o valor DOBRAR? (arredonde para 2 casas)',
+          textoDoMolde(moldesDe('funcao-exponencial', 'forma-2')[0]!, {  }, 'pt'),
         enunciadoTex: funcaoTex,
         gabarito,
         resolucao: {
@@ -162,7 +162,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
       return {
         id: `exponencial-inicial-${inicial}-${base}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: 'Qual é o valor da função em x = 0?',
+        enunciado: textoDoMolde(moldesDe('funcao-exponencial', 'forma-3')[0]!, {  }, 'pt'),
         enunciadoTex: funcaoTex,
         gabarito,
         resolucao: {
@@ -208,7 +208,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
     return {
       id: `exponencial-valor-${inicial}-${base}-${x}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Qual é o valor de f(${x})?`,
+      enunciado: textoDoMolde(moldesDe('funcao-exponencial', 'forma-4')[0]!, { x }, 'pt'),
       enunciadoTex: funcaoTex,
       gabarito,
       resolucao: {

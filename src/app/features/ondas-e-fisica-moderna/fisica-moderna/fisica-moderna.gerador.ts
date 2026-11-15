@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   MASSA_ELETRON,
   REPOUSO_ELETRON_KEV,
@@ -107,7 +108,7 @@ function foton(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-foton-${lambda}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é a energia de um fóton de luz com comprimento de onda ${lambda} nm, em elétron-volts (eV)?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('fisica-moderna', 'forma-1')[0]!, { lambda, v1: casas(gabarito) }, 'pt'),
     enunciadoTex: `\\lambda = ${lambda}\\ \\text{nm} \\qquad hc = 1240\\ \\text{eV·nm}`,
     gabarito,
     resolucao,
@@ -143,7 +144,7 @@ function gama(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-gama-${beta}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Uma nave viaja a ${exato(beta)}c. Qual é o fator de Lorentz γ?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('fisica-moderna', 'forma-2')[0]!, { v1: exato(beta), v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `v = ${tex(beta)}\\,c \\qquad \\gamma = \\;?`,
     gabarito,
     resolucao,
@@ -221,7 +222,7 @@ function contracao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-contr-${beta}-${proprio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Uma nave mede ${proprio} m em repouso. Passando a ${exato(beta)}c, que comprimento ela tem para um observador na Terra, em metros?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('fisica-moderna', 'forma-3')[0]!, { proprio, v1: exato(beta), v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `L_0 = ${proprio}\\ \\text{m} \\qquad v = ${tex(beta)}\\,c`,
     gabarito,
     resolucao,
@@ -255,8 +256,7 @@ function fotoeletrico(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `moderna-foto-${metal}-${lambda}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Luz de ${lambda} nm incide sobre ${metal}, cuja função trabalho é ${t(phi)} eV. ` +
-      `Qual é a energia cinética máxima dos elétrons arrancados, em eV?${casas(gabarito)}`,
+      textoDoMolde(moldesDe('fisica-moderna', 'forma-4')[0]!, { lambda, metal, v1: t(phi), v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `\\lambda = ${lambda}\\ \\text{nm} \\qquad \\phi = ${tex(phi)}\\ \\text{eV}`,
     gabarito,
     resolucao,
@@ -292,7 +292,7 @@ function corte(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `moderna-corte-${metal}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `A função trabalho do ${metal} é ${t(phi)} eV. Qual é o MAIOR comprimento de onda que ainda arranca elétrons dele, em nm?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('fisica-moderna', 'forma-5')[0]!, { metal, v1: t(phi), v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `\\phi = ${tex(phi)}\\ \\text{eV} \\qquad \\lambda_c = \\;?`,
     gabarito,
     resolucao,
@@ -323,8 +323,7 @@ function deBroglie(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `moderna-broglie-${mantissa}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um elétron (m = 9,11 × 10⁻³¹ kg) se move a ${t(mantissa)} × 10⁶ m/s. ` +
-      `Qual é o comprimento de onda de de Broglie dele, em nm? (h = 6,626 × 10⁻³⁴ J·s)${casas(gabarito)}`,
+      textoDoMolde(moldesDe('fisica-moderna', 'forma-6')[0]!, { v1: t(mantissa), v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `m = 9{,}11 \\times 10^{-31}\\ \\text{kg} \\qquad v = ${tex(mantissa)} \\times 10^{6}\\ \\text{m/s}`,
     gabarito,
     resolucao,
@@ -361,8 +360,7 @@ function betaDeGama(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `moderna-beta-${gamaValor}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma partícula instável vive ${t(gamaValor)} vezes mais no laboratório do que no próprio referencial. ` +
-      `Qual é a velocidade dela, como fração de c (v/c)?${casas(gabarito)}`,
+      textoDoMolde(moldesDe('fisica-moderna', 'forma-7')[0]!, { v1: t(gamaValor), v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `\\frac{\\Delta t}{\\Delta t_0} = \\gamma = ${tex(gamaValor)} \\qquad \\frac{v}{c} = \\;?`,
     gabarito,
     resolucao: {
@@ -411,8 +409,7 @@ function energiaCinetica(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `moderna-ec-${beta}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um elétron (energia de repouso mc² = 511 keV) se move a ${exato(beta)}c. ` +
-      `Qual é a energia cinética dele, em keV?${casas(gabarito)}`,
+      textoDoMolde(moldesDe('fisica-moderna', 'forma-8')[0]!, { v1: exato(beta), v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `mc^{2} = 511\\ \\text{keV} \\qquad v = ${tex(beta)}\\,c`,
     gabarito,
     resolucao: {

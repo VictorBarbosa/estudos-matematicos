@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   CORPOS_RIGIDOS,
   CorpoRigido,
@@ -86,8 +87,7 @@ function daInercia(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Qual é o momento de inércia de ${artigo(corpo)} ${corpo.nome} de ` +
-      `${numero(massa)} kg e ${numero(raio)} m de raio, em kg·m²? ${PEDIDO}`,
+      textoDoMolde(moldesDe('dinamica-rotacional', 'forma-1')[0]!, { v1: artigo(corpo), v2: corpo.nome, v3: numero(massa), v4: numero(raio), PEDIDO }, 'pt'),
     enunciadoTex: `I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
     resolucao: ate(segundaLeiRotacionalComPassos(corpo, massa, raio, 1), 1, gabarito),
@@ -138,9 +138,7 @@ function doTorque(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um torque de ${numero(torque)} N·m é aplicado a ${artigo(corpo)} ` +
-      `${corpo.nome} de ${numero(massa)} kg e ${numero(raio)} m de raio. Qual é a ` +
-      `aceleração angular, em rad/s²? ${PEDIDO}`,
+      textoDoMolde(moldesDe('dinamica-rotacional', 'forma-2')[0]!, { v1: numero(torque), v2: artigo(corpo), v3: corpo.nome, v4: numero(massa), v5: numero(raio), PEDIDO }, 'pt'),
     enunciadoTex: `\\tau = I\\alpha \\qquad I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
     resolucao: segundaLeiRotacionalComPassos(corpo, massa, raio, torque),
@@ -189,9 +187,7 @@ function daEnergia(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `${capitalizar(artigo(corpo))} ${corpo.nome} de ${numero(massa)} kg e ` +
-      `${numero(raio)} m de raio gira a ${numero(omega)} rad/s. Qual é a ` +
-      `energia cinética de rotação, em J? ${PEDIDO}`,
+      textoDoMolde(moldesDe('dinamica-rotacional', 'forma-3')[0]!, { v1: capitalizar(artigo(corpo)), v2: corpo.nome, v3: numero(massa), v4: numero(raio), v5: numero(omega), PEDIDO }, 'pt'),
     enunciadoTex: `K_{rot} = \\frac{1}{2}I\\omega^{2}`,
     gabarito,
     resolucao: energiaDeRotacaoComPassos(corpo, massa, raio, omega),
@@ -237,9 +233,7 @@ function doRolamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `${capitalizar(artigo(corpo))} ${corpo.nome} rola sem deslizar a partir do repouso, ` +
-      `descendo ${numero(altura)} m de desnível. Com gravidade de 9,81 m/s ` +
-      `ao quadrado, qual é a velocidade do centro de massa no fim, em m/s? ${PEDIDO}`,
+      textoDoMolde(moldesDe('dinamica-rotacional', 'forma-4')[0]!, { v1: capitalizar(artigo(corpo)), v2: corpo.nome, v3: numero(altura), PEDIDO }, 'pt'),
     enunciadoTex: `mgh = \\frac{1}{2}mv^{2} + \\frac{1}{2}I\\omega^{2} \\qquad \\omega = \\frac{v}{r}`,
     gabarito,
     resolucao: rolamentoComPassos(corpo, altura),

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { areaComPassos, perimetroCirculoComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -88,8 +89,7 @@ function exercicioComprimento(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-comp-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é o comprimento de uma circunferência de raio ${raio} cm? ` +
-      '(em cm, 2 casas decimais)',
+      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-1')[0]!, { raio }, 'pt'),
     enunciadoTex: `r = ${raio}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -125,7 +125,7 @@ function exercicioAreaCirculo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-area-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é a área de um círculo de raio ${raio} cm? (em cm², 2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-2')[0]!, { raio }, 'pt'),
     enunciadoTex: `r = ${raio}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -165,8 +165,7 @@ function exercicioRaioPelaArea(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-raio-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um círculo tem área ${numeroEmPortugues(Number(area.toFixed(2)))} cm². Qual é o seu raio? ` +
-      '(em cm, 2 casas decimais)',
+      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-3')[0]!, { v1: numeroEmPortugues(Number(area.toFixed(2))) }, 'pt'),
     enunciadoTex: `A = ${Number(area.toFixed(2))}`,
     gabarito: raio,
     resolucao: {
@@ -223,8 +222,7 @@ function exercicioSetor(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-setor-${raio}-${anguloGraus}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é a área de um setor circular de raio ${raio} cm e ângulo ${anguloGraus}°? ` +
-      '(em cm², 2 casas decimais)',
+      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-4')[0]!, { raio, anguloGraus }, 'pt'),
     enunciadoTex: `r = ${raio} \\qquad \\theta = ${anguloGraus}^\\circ`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -278,8 +276,7 @@ function exercicioPoligono(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-poli-${lados}-${base}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um polígono regular de ${lados} lados tem lado ${base} cm e apótema ` +
-      `${numeroEmPortugues(Number(apotema.toFixed(3)))} cm. Qual é sua área? (em cm², 2 casas decimais)`,
+      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-5')[0]!, { lados, base, v1: numeroEmPortugues(Number(apotema.toFixed(3))) }, 'pt'),
     enunciadoTex: `n = ${lados} \\qquad \\ell = ${base} \\qquad a = ${Number(apotema.toFixed(3))}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -324,8 +321,7 @@ function exercicioArco(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-arco-${raio}-${anguloGraus}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é o comprimento do arco de uma circunferência de raio ${raio} cm ` +
-      `correspondente a um ângulo central de ${anguloGraus}°? (em cm, 2 casas decimais)`,
+      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-6')[0]!, { raio, anguloGraus }, 'pt'),
     enunciadoTex: `r = ${raio} \\qquad \\theta = ${anguloGraus}^\\circ`,
     gabarito: resultado,
     resolucao: {
@@ -395,8 +391,7 @@ function exercicioCoroa(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-coroa-${menor}-${maior}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Dois círculos concêntricos têm raios ${menor} cm e ${maior} cm. Qual é a área da ` +
-      'coroa entre eles? (em cm², 2 casas decimais)',
+      textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-7')[0]!, { menor, maior }, 'pt'),
     enunciadoTex: `R = ${maior} \\qquad r = ${menor}`,
     gabarito: resultado,
     resolucao: {

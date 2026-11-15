@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   FuncaoRacional,
   Passo,
@@ -84,7 +85,7 @@ function daAssintota(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ass-${polo}-${zero}`,
     nivel,
     rng,
-    enunciado: `Em que valor de x está a assíntota vertical desta função? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('funcoes-racionais', 'forma-1')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito: polo,
     resolucao: ate(analisarRacionalComPassos(f), 2, polo),
@@ -137,7 +138,7 @@ function daHorizontal(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `hor-${a}${b}-${c}${d}`,
     nivel,
     rng,
-    enunciado: `Qual é o valor da assíntota horizontal desta função? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('funcoes-racionais', 'forma-2')[0]!, { PEDIDO }, 'pt'),
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: comportamentoNoInfinitoComPassos(f).passos },
@@ -296,7 +297,7 @@ function doValor(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `val-${polo}-${zero}-${ponto}`,
     nivel,
     rng,
-    enunciado: `Quanto vale esta função em x = ${ponto}? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('funcoes-racionais', 'forma-3')[0]!, { ponto, PEDIDO }, 'pt'),
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito,
     resolucao: {

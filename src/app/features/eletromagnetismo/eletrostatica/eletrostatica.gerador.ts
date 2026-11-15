@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { K_COULOMB, campoPontualComPassos, coulombComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -86,8 +87,7 @@ function forca(nivel: Nivel, rng: Rng, emCm: boolean): Exercicio<number> {
     id: `elet-forca-${q1}-${q2}-${rCm}-${emCm ? 'cm' : 'm'}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Duas cargas pontuais, q₁ = ${par(q1)} μC e q₂ = ${par(q2)} μC, estão a ${distancia} uma da outra. ` +
-      'Qual é o módulo da força elétrica entre elas, em newtons? (2 casas decimais)',
+      textoDoMolde(moldesDe('eletrostatica', 'forma-1')[0]!, { expressao1: par(q1), expressao2: par(q2), distancia }, 'pt'),
     enunciadoTex: `q_1 = ${q1}\\ \\mu\\text{C} \\qquad q_2 = ${q2}\\ \\mu\\text{C} \\qquad r = ${emCm ? `${rCm}\\ \\text{cm}` : `${tex(r)}\\ \\text{m}`}`,
     gabarito,
     resolucao: {
@@ -152,8 +152,7 @@ function campo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `elet-campo-${q}-${rCm}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é a intensidade do campo elétrico criado por uma carga de ${par(q)} μC a ${txt(r)} m dela, ` +
-      'em kN/C? (2 casas decimais)',
+      textoDoMolde(moldesDe('eletrostatica', 'forma-2')[0]!, { expressao1: par(q), expressao2: txt(r) }, 'pt'),
     enunciadoTex: `q = ${q}\\ \\mu\\text{C} \\qquad r = ${tex(r)}\\ \\text{m} \\qquad E = \\;?\\ \\text{kN/C}`,
     gabarito,
     resolucao: {
@@ -196,8 +195,7 @@ function forcaNoCampo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `elet-forca-campo-${q}-${e}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma carga de ${par(q)} μC é colocada num campo elétrico uniforme de ${e} N/C. ` +
-      'Qual é o módulo da força sobre ela, em mN? (2 casas decimais)',
+      textoDoMolde(moldesDe('eletrostatica', 'forma-3')[0]!, { expressao1: par(q), e }, 'pt'),
     enunciadoTex: `q = ${q}\\ \\mu\\text{C} \\qquad E = ${e}\\ \\text{N/C}`,
     gabarito,
     resolucao: {
@@ -308,9 +306,7 @@ function linha(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `elet-linha-${qa}-${qm}-${qb}-${da}-${db}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Três cargas estão numa reta: A = ${par(qa)} μC à esquerda, M = ${qm} μC no meio e B = ${par(qb)} μC ` +
-      `à direita. M está a ${txt(da)} m de A e a ${txt(db)} m de B. Qual é a força resultante sobre M, em N, ` +
-      'com sinal positivo para a direita? (2 casas decimais)',
+      textoDoMolde(moldesDe('eletrostatica', 'forma-4')[0]!, { expressao1: par(qa), qm, expressao2: par(qb), expressao3: txt(da), expressao4: txt(db) }, 'pt'),
     enunciadoTex: `A\\,(${qa}\\ \\mu\\text{C}) \\;\\xleftrightarrow{${tex(da)}\\ \\text{m}}\\; M\\,(${qm}\\ \\mu\\text{C}) \\;\\xleftrightarrow{${tex(db)}\\ \\text{m}}\\; B\\,(${qb}\\ \\mu\\text{C})`,
     gabarito,
     resolucao: {
@@ -370,9 +366,7 @@ function perpendicular(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `elet-perp-${q}-${q1}-${q2}-${d1}-${d2}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma carga de ${q} μC está no vértice do ângulo reto de um triângulo. Sobre um cateto, a ${txt(d1)} m, ` +
-      `há uma carga de ${q1} μC; sobre o outro, a ${txt(d2)} m, uma de ${q2} μC. Qual é o módulo da força ` +
-      'resultante sobre a primeira, em N? (2 casas decimais)',
+      textoDoMolde(moldesDe('eletrostatica', 'forma-5')[0]!, { q, expressao1: txt(d1), q1, expressao2: txt(d2), q2 }, 'pt'),
     enunciadoTex: `F_1 \\perp F_2 \\qquad r_1 = ${tex(d1)}\\ \\text{m} \\qquad r_2 = ${tex(d2)}\\ \\text{m}`,
     gabarito,
     resolucao: {
@@ -432,8 +426,7 @@ function pontoNulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `elet-nulo-${q1}-${q2}-${d}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Duas cargas positivas, de ${q1} μC e ${q2} μC, estão a ${d} cm uma da outra. A que distância da carga de ` +
-      `${q1} μC, entre elas, o campo elétrico é nulo, em cm? (2 casas decimais)`,
+      textoDoMolde(moldesDe('eletrostatica', 'forma-6')[0]!, { q1, q2, d }, 'pt'),
     enunciadoTex: `q_1 = ${q1}\\ \\mu\\text{C} \\qquad q_2 = ${q2}\\ \\mu\\text{C} \\qquad d = ${d}\\ \\text{cm}`,
     gabarito,
     resolucao: {

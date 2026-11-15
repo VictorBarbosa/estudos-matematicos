@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { anguloInternoRegular, somaAngulosInternosComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -101,7 +102,7 @@ function exercicioSomaInternos(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ang-soma-${lados}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é a soma dos ângulos internos de um ${nomeDe(lados)}? (em graus)`,
+    enunciado: textoDoMolde(moldesDe('angulos-e-triangulos', 'forma-1')[0]!, { v1: nomeDe(lados) }, 'pt'),
     enunciadoTex: `n = ${lados}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -169,7 +170,7 @@ function exercicioAnguloRegular(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ang-reg-${lados}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Quanto mede cada ângulo interno de um ${nomeDe(lados)} regular? (em graus${casas})`,
+    enunciado: textoDoMolde(moldesDe('angulos-e-triangulos', 'forma-2')[0]!, { v1: nomeDe(lados), casas }, 'pt'),
     enunciadoTex: `n = ${lados} \\quad \\text{(regular)}`,
     gabarito: resultado,
     resolucao: {
@@ -217,7 +218,7 @@ function exercicioTerceiroAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ang-terceiro-${primeiro}-${segundo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Num triângulo, dois ângulos medem ${primeiro}° e ${segundo}°. Quanto mede o terceiro?`,
+    enunciado: textoDoMolde(moldesDe('angulos-e-triangulos', 'forma-3')[0]!, { primeiro, segundo }, 'pt'),
     enunciadoTex: `\\alpha = ${primeiro}^\\circ \\qquad \\beta = ${segundo}^\\circ`,
     gabarito: resultado,
     resolucao: {
@@ -315,7 +316,7 @@ function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ang-lados-${lados}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um polígono regular tem ângulo interno de ${emPortugues(angulo)}°. Quantos lados ele tem?`,
+    enunciado: textoDoMolde(moldesDe('angulos-e-triangulos', 'forma-4')[0]!, { v1: emPortugues(angulo) }, 'pt'),
     enunciadoTex: `a_i = ${angulo}^\\circ`,
     gabarito: lados,
     resolucao: {

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { colisaoComPassos, energiaCinetica, impulsoComPassos, momentoLinear } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -57,8 +58,7 @@ function exercicioMomento(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mom-p-${massa}-${velocidade}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um corpo de ${massa} kg move-se a ${velocidade} m/s. Qual é seu momento linear, em ` +
-      'kg·m/s?',
+      textoDoMolde(moldesDe('impulso-e-momento', 'forma-1')[0]!, { massa, velocidade }, 'pt'),
     enunciadoTex: `m = ${massa}\\,\\text{kg} \\qquad v = ${velocidade}\\,\\text{m/s}`,
     gabarito: resultado,
     resolucao: {
@@ -108,8 +108,7 @@ function exercicioImpulso(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mom-j-${forca}-${tempo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma força de ${forca} N age por ${tempo} s sobre um corpo de ${massa} kg. Qual é o ` +
-      'impulso, em N·s?',
+      textoDoMolde(moldesDe('impulso-e-momento', 'forma-2')[0]!, { forca, tempo, massa }, 'pt'),
     enunciadoTex: `F = ${forca}\\,\\text{N} \\qquad \\Delta t = ${tempo}\\,\\text{s} \\qquad m = ${massa}\\,\\text{kg}`,
     gabarito: resultado,
     resolucao: {
@@ -157,8 +156,7 @@ function exercicioForcaMedia(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mom-f-${massa}-${velocidade}-${tempo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um corpo de ${massa} kg a ${velocidade} m/s é parado em ${tempo.toLocaleString('pt-BR')} s. ` +
-      'Qual é a força média aplicada, em newtons? (2 casas decimais)',
+      textoDoMolde(moldesDe('impulso-e-momento', 'forma-3')[0]!, { massa, velocidade, v1: tempo.toLocaleString('pt-BR') }, 'pt'),
     enunciadoTex:
       `m = ${massa}\\,\\text{kg} \\qquad v = ${velocidade}\\,\\text{m/s} \\qquad ` +
       `\\Delta t = ${String(tempo).replace('.', '{,}')}\\,\\text{s}`,
@@ -235,9 +233,7 @@ function exercicioColisao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mom-col-${massaA}_${velocidadeA}-${massaB}_${velocidadeB}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um corpo de ${massaA} kg a ${velocidadeA} m/s colide com outro de ${massaB} kg a ` +
-      `${velocidadeB} m/s e os dois seguem juntos. Qual é a velocidade final, em m/s? ` +
-      '(2 casas decimais)',
+      textoDoMolde(moldesDe('impulso-e-momento', 'forma-4')[0]!, { massaA, velocidadeA, massaB, velocidadeB }, 'pt'),
     enunciadoTex: `m_A = ${massaA} \\quad v_A = ${velocidadeA} \\quad m_B = ${massaB} \\quad v_B = ${velocidadeB}`,
     gabarito: resultado.velocidadeFinalA,
     resolucao: { resultado: resultado.velocidadeFinalA, passos },
@@ -296,8 +292,7 @@ function exercicioEnergiaPerdida(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mom-perda-${massaA}-${massaB}-${velocidadeA}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um corpo de ${massaA} kg a ${velocidadeA} m/s atinge outro de ${massaB} kg parado, e ` +
-      'os dois seguem juntos. Quanta energia cinética foi perdida, em joules? (2 casas)',
+      textoDoMolde(moldesDe('impulso-e-momento', 'forma-5')[0]!, { massaA, velocidadeA, massaB }, 'pt'),
     enunciadoTex: `m_A = ${massaA} \\quad v_A = ${velocidadeA} \\quad m_B = ${massaB} \\quad v_B = 0`,
     gabarito: perdida,
     resolucao: {

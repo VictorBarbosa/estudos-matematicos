@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   CONDUTIVIDADES,
   STEFAN_BOLTZMANN,
@@ -106,9 +107,7 @@ function daConducao(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Uma placa de ${material.material} tem ${numero(area)} m² de área e ${numero(espessura)} m ` +
-      `de espessura, com uma diferença de ${deltaT} K entre as faces. A condutividade é ` +
-      `${numero(material.k)} W/(m·K). Qual é o fluxo de calor, em W? ${PEDIDO}`,
+      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-1')[0]!, { v1: material.material, v2: numero(area), v3: numero(espessura), deltaT, v4: numero(material.k), PEDIDO }, 'pt'),
     enunciadoTex: `\\frac{Q}{t} = \\frac{kA\\,\\Delta T}{L}`,
     gabarito,
     resolucao: conducaoComPassos(material.k, area, deltaT, espessura),
@@ -155,9 +154,7 @@ function daResistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Qual é a resistência térmica de uma camada de ${material.material} com ${numero(espessura)} m ` +
-      `de espessura e ${numero(area)} m² de área, em K/W? A condutividade é ` +
-      `${numero(material.k)} W/(m·K). ${PEDIDO}`,
+      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-2')[0]!, { v1: material.material, v2: numero(espessura), v3: numero(area), v4: numero(material.k), PEDIDO }, 'pt'),
     enunciadoTex: `R = \\frac{L}{kA}`,
     gabarito,
     resolucao: resistenciaTermicaComPassos(espessura, material.k, area),
@@ -195,8 +192,7 @@ function daConveccao(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Uma superfície de ${numero(area)} m² está ${deltaT} K acima do ar que a banha, com ` +
-      `coeficiente de convecção ${h} W/(m²·K). Qual é o fluxo de calor, em W? ${PEDIDO}`,
+      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-3')[0]!, { v1: numero(area), deltaT, h, PEDIDO }, 'pt'),
     enunciadoTex: `\\frac{Q}{t} = hA\\,\\Delta T`,
     gabarito,
     resolucao: conveccaoComPassos(h, area, deltaT),
@@ -238,8 +234,7 @@ function daRadiacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um corpo de ${numero(area)} m² e emissividade ${numero(emissividade)} está a ${celsius} °C. ` +
-      `Qual é a potência irradiada, em W? ${PEDIDO}`,
+      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-4')[0]!, { v1: numero(area), v2: numero(emissividade), celsius, PEDIDO }, 'pt'),
     enunciadoTex: `\\frac{Q}{t} = \\varepsilon\\sigma A T^{4}`,
     gabarito,
     resolucao: radiacaoComPassos(emissividade, area, kelvin),
@@ -340,8 +335,7 @@ function daCalorimetria(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Quanta energia, em J, é preciso para aquecer ${numero(massa)} kg de ${material.nome} em ` +
-      `${deltaT} K? O calor específico é ${material.c} J/(kg·K). ${PEDIDO}`,
+      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-5')[0]!, { v1: numero(massa), v2: material.nome, deltaT, v3: material.c, PEDIDO }, 'pt'),
     enunciadoTex: `Q = mc\\,\\Delta T`,
     gabarito,
     resolucao: calorSensivelComPassos(massa, material.c, deltaT),
@@ -391,9 +385,7 @@ function daMistura(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `${numero(m1)} kg de ${primeiro.nome} a ${t1} °C são misturados com ${numero(m2)} kg de ` +
-      `${segundo.nome} a ${t2} °C, num recipiente isolado. Qual é a temperatura final, em °C? ` +
-      `Os calores específicos são ${primeiro.c} e ${segundo.c} J/(kg·K). ${PEDIDO}`,
+      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-6')[0]!, { v1: numero(m1), v2: primeiro.nome, t1, v3: numero(m2), v4: segundo.nome, t2, v5: primeiro.c, v6: segundo.c, PEDIDO }, 'pt'),
     enunciadoTex: `Q_{1} + Q_{2} = 0`,
     gabarito,
     resolucao: equilibrioTermicoComPassos(m1, primeiro.c, t1, m2, segundo.c, t2),

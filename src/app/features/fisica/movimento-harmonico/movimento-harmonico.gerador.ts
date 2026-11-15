@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { resolverOscilacaoComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -44,8 +45,7 @@ export const geradorMhs: GeradorExercicio<number> = {
       id: `mhs-${pergunta}-${massa}${constante}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado:
-        `Uma massa de ${numeroEmPortugues(massa)} kg oscila presa a uma mola de constante ${numeroEmPortugues(constante)} N/m, ` +
-        `com amplitude de ${numeroEmPortugues(amplitude)} m. Qual é ${nome}? (3 casas)`,
+        textoDoMolde(moldesDe('movimento-harmonico', 'forma-1')[0]!, { v1: numeroEmPortugues(massa), v2: numeroEmPortugues(constante), v3: numeroEmPortugues(amplitude), nome }, 'pt'),
       enunciadoTex: `m = ${massa}\\text{ kg} \\qquad k = ${constante}\\text{ N/m} \\qquad A = ${amplitude}\\text{ m}`,
       gabarito,
       resolucao: {

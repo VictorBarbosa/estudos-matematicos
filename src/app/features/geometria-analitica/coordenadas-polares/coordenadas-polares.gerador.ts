@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -79,7 +80,7 @@ function paraCartesiano(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `polar-cart-${r}-${theta}-${pedeX ? 'x' : 'y'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `O ponto tem coordenadas polares (r, θ) = (${r}, ${theta}°). Qual é a coordenada ${pedeX ? 'x' : 'y'}? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-1')[0]!, { r, theta, v1: pedeX ? 'x' : 'y' }, 'pt'),
     enunciadoTex: `(r, \\theta) = (${r},\\; ${theta}^{\\circ}) \\;\\to\\; ${pedeX ? 'x' : 'y'} = \\;?`,
     gabarito,
     resolucao: {
@@ -130,7 +131,7 @@ function raio(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `polar-raio-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é a distância r do ponto (${x}, ${y}) até a origem — a coordenada polar r?`,
+    enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-2')[0]!, { x, y }, 'pt'),
     enunciadoTex: `(x, y) = (${x},\\; ${y}) \\;\\to\\; r = \\;?`,
     gabarito: r,
     resolucao: {
@@ -185,7 +186,7 @@ function angulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `polar-angulo-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o ângulo polar θ do ponto (${x}, ${y}), em graus, com 0° ≤ θ < 360°? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-3')[0]!, { x, y }, 'pt'),
     enunciadoTex: `(x, y) = (${x},\\; ${y}) \\;\\to\\; \\theta = \\;?`,
     gabarito,
     resolucao: {
@@ -250,7 +251,7 @@ function circunferencia(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `polar-circ-${d}-${cosseno ? 'c' : 's'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'A curva polar abaixo é uma circunferência. Qual é o raio dela?',
+    enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-4')[0]!, {  }, 'pt'),
     enunciadoTex: `r = ${d}${trig}\\theta`,
     gabarito,
     resolucao: {
@@ -311,7 +312,7 @@ function distancia(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `polar-dist-${r1}-${t1}-${r2}-${t2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é a distância entre os pontos polares (${r1}, ${t1}°) e (${r2}, ${t2}°)? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-5')[0]!, { r1, t1, r2, t2 }, 'pt'),
     enunciadoTex: `P_1 = (${r1},\\; ${t1}^{\\circ}) \\qquad P_2 = (${r2},\\; ${t2}^{\\circ})`,
     gabarito,
     resolucao: {
@@ -375,7 +376,7 @@ function orbita(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `polar-orbita-${p}-${e}-${pede}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `A órbita de um satélite, com o planeta num foco, é r = p/(1 + e·cos θ), em km. Qual é ${nome}? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-6')[0]!, { nome }, 'pt'),
     enunciadoTex: `r = \\frac{${p}}{1 + ${eTex}\\cos\\theta}`,
     gabarito,
     resolucao: {

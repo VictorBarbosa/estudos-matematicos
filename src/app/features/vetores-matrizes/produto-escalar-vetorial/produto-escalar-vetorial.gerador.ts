@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   anguloEntreComPassos,
   areaParalelogramoComPassos,
@@ -69,7 +70,7 @@ function exercicioEscalar(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prod-esc-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o produto escalar de (${a.x}, ${a.y}) por (${b.x}, ${b.y})?`,
+    enunciado: textoDoMolde(moldesDe('produto-escalar-vetorial', 'forma-1')[0]!, { v1: a.x, v2: a.y, v3: b.x, v4: b.y }, 'pt'),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: {
@@ -137,7 +138,7 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prod-ang-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o ângulo entre (${a.x}, ${a.y}) e (${b.x}, ${b.y})? (em graus, 2 casas)`,
+    enunciado: textoDoMolde(moldesDe('produto-escalar-vetorial', 'forma-2')[0]!, { v1: a.x, v2: a.y, v3: b.x, v4: b.y }, 'pt'),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -178,8 +179,7 @@ function exercicioProjecao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prod-proj-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é a projeção de (${a.x}, ${a.y}) sobre a direção de (${b.x}, ${b.y})? ` +
-      '(2 casas decimais)',
+      textoDoMolde(moldesDe('produto-escalar-vetorial', 'forma-3')[0]!, { v1: a.x, v2: a.y, v3: b.x, v4: b.y }, 'pt'),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -226,7 +226,7 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `prod-area-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é a área do paralelogramo formado por (${a.x}, ${a.y}) e (${b.x}, ${b.y})?`,
+    enunciado: textoDoMolde(moldesDe('produto-escalar-vetorial', 'forma-4')[0]!, { v1: a.x, v2: a.y, v3: b.x, v4: b.y }, 'pt'),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -276,8 +276,7 @@ function exercicioTrabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prod-trab-${forca}-${deslocamento}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma força de ${forca} N é aplicada a ${angulo}° do deslocamento, que vale ` +
-      `${deslocamento} m. Qual é o trabalho realizado, em joules? (2 casas)`,
+      textoDoMolde(moldesDe('produto-escalar-vetorial', 'forma-5')[0]!, { forca, angulo, deslocamento }, 'pt'),
     enunciadoTex: `F = ${forca}\\,\\text{N} \\qquad d = ${deslocamento}\\,\\text{m} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito: resultado,
     resolucao: {

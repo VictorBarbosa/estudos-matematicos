@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { ternosPitagoricos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -49,7 +50,7 @@ export const geradorConicas: GeradorExercicio<number> = {
       return {
         id: `conicas-exc-${a}-${b}-${hiperbole}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Qual é a excentricidade desta ${nome}? (2 casas decimais)`,
+        enunciado: textoDoMolde(moldesDe('conicas', 'forma-1')[0]!, { nome }, 'pt'),
         enunciadoTex: equacaoTex,
         gabarito,
         resolucao: {
@@ -108,7 +109,7 @@ export const geradorConicas: GeradorExercicio<number> = {
       return {
         id: `conicas-semieixo-${a}-${b}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Qual é o valor do semieixo a desta ${nome}?`,
+        enunciado: textoDoMolde(moldesDe('conicas', 'forma-2')[0]!, { nome }, 'pt'),
         enunciadoTex: equacaoTex,
         gabarito,
         resolucao: {
@@ -148,7 +149,7 @@ export const geradorConicas: GeradorExercicio<number> = {
     return {
       id: `conicas-focal-${a}-${b}-${hiperbole}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Qual é a distância focal c desta ${nome}?`,
+      enunciado: textoDoMolde(moldesDe('conicas', 'forma-3')[0]!, { nome }, 'pt'),
       enunciadoTex: equacaoTex,
       gabarito,
       resolucao: {

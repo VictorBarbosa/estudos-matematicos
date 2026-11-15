@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   FuncaoPorPartes,
   Polinomio,
@@ -106,7 +107,7 @@ function daAvaliacao(nivel: Nivel, rng: Rng, naFronteira: boolean): Exercicio<nu
     chave: `av-${fronteira}-${ponto}-${esquerda.toString()}-${direita.toString()}`,
     nivel,
     rng,
-    enunciado: `Quanto vale esta função em x = ${ponto}? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('funcoes-por-partes', 'forma-1')[0]!, { ponto, PEDIDO }, 'pt'),
     enunciadoTex: porPartesParaTex(f),
     gabarito,
     resolucao: avaliarPorPartesComPassos(f, ponto),
@@ -154,8 +155,7 @@ function doSalto(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `De quanto é o salto desta função em x = ${fronteira}? Use o limite pela direita menos o ` +
-      `limite pela esquerda. ${PEDIDO}`,
+      textoDoMolde(moldesDe('funcoes-por-partes', 'forma-2')[0]!, { fronteira, PEDIDO }, 'pt'),
     enunciadoTex: porPartesParaTex(f),
     gabarito,
     resolucao: continuidadeComPassos(f, fronteira),
@@ -206,8 +206,7 @@ function doLateral(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Qual é o limite desta função quando x tende a ${fronteira} pela ` +
-      `${pelaEsquerda ? 'ESQUERDA' : 'DIREITA'}? ${PEDIDO}`,
+      textoDoMolde(moldesDe('funcoes-por-partes', 'forma-3')[0]!, { fronteira, v1: pelaEsquerda ? 'ESQUERDA' : 'DIREITA', PEDIDO }, 'pt'),
     enunciadoTex: porPartesParaTex(f),
     gabarito,
     resolucao: {
@@ -255,7 +254,7 @@ function daColagem(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `col-${fronteira}-${esquerda.toString()}-${direitaSemConstante.toString()}`,
     nivel,
     rng,
-    enunciado: `Qual valor da constante c torna esta função contínua em x = ${fronteira}? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('funcoes-por-partes', 'forma-4')[0]!, { fronteira, PEDIDO }, 'pt'),
     enunciadoTex:
       `f(x) = \\begin{cases} ${esquerda.paraTex()}, & x < ${fronteira} \\\\ ` +
       `${direitaSemConstante.paraTex()} + c, & x \\geq ${fronteira} \\end{cases}`,

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   MU_0,
   campoFioComPassos,
@@ -168,8 +169,7 @@ function forcaFio(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mag-fio-${i}-${l}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um fio de ${txt(l)} m, com corrente de ${i} A, está perpendicular a um campo magnético de ${txt(b)} T. ` +
-      'Qual é a força sobre ele, em N? (2 casas decimais)',
+      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-1')[0]!, { v1: txt(l), i, v2: txt(b) }, 'pt'),
     enunciadoTex: `I = ${i}\\ \\text{A} \\qquad L = ${tex(l)}\\ \\text{m} \\qquad B = ${tex(b)}\\ \\text{T}`,
     gabarito,
     resolucao: {
@@ -217,7 +217,7 @@ function campoFio(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mag-campofio-${i}-${r}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o campo magnético a ${r} cm de um fio longo com ${i} A, em μT? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-2')[0]!, { r, i }, 'pt'),
     enunciadoTex: `I = ${i}\\ \\text{A} \\qquad r = ${r}\\ \\text{cm} \\qquad \\mu_0 = 4\\pi \\times 10^{-7}\\ \\text{T·m/A}`,
     gabarito,
     resolucao: {
@@ -261,8 +261,7 @@ function fluxo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mag-fluxo-${b}-${a}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma espira de ${a} cm² está num campo uniforme de ${txt(b)} T, que forma ${angulo}° com a NORMAL da espira. ` +
-      'Qual é o fluxo magnético, em mWb? (2 casas decimais)',
+      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-3')[0]!, { a, v1: txt(b), angulo }, 'pt'),
     enunciadoTex: `B = ${tex(b)}\\ \\text{T} \\qquad A = ${a}\\ \\text{cm}^{2} \\qquad \\theta = ${angulo}^{\\circ}`,
     gabarito,
     resolucao: {
@@ -321,8 +320,7 @@ function raio(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mag-raio-${qual}-${v}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `${qual === 'proton' ? 'Um próton' : 'Um elétron'} (massa ${p.mTexto}, carga 1,6×10⁻¹⁹ C) entra a ${vTexto} m/s, ` +
-      `perpendicular, num campo de ${txt(b)} T. Qual é o raio da órbita, em ${unidade}? (2 casas decimais)`,
+      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-4')[0]!, { v1: qual === 'proton' ? 'Um próton' : 'Um elétron', v2: p.mTexto, vTexto, v3: txt(b), unidade }, 'pt'),
     enunciadoTex: `r = \\frac{mv}{|q|B}`,
     gabarito,
     resolucao: {
@@ -375,8 +373,7 @@ function faraday(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mag-faraday-${n}-${a}-${b1}-${b2}-${dt}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma bobina de ${n} espiras, cada uma com ${a} cm², está perpendicular a um campo que passa de ${txt(b1)} T ` +
-      `para ${txt(b2)} T em ${txt(dt)} s. Qual é o módulo da fem induzida, em V? (2 casas decimais)`,
+      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-5')[0]!, { n, a, v1: txt(b1), v2: txt(b2), v3: txt(dt) }, 'pt'),
     enunciadoTex: `N = ${n} \\qquad A = ${a}\\ \\text{cm}^{2} \\qquad B: ${tex(b1)} \\to ${tex(b2)}\\ \\text{T} \\qquad \\Delta t = ${tex(dt)}\\ \\text{s}`,
     gabarito,
     resolucao: {
@@ -420,8 +417,7 @@ function solenoide(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mag-solenoide-${espiras}-${comprimento}-${i}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um solenoide de ${comprimento} cm tem ${espiras} espiras e corrente de ${txt(i)} A. Qual é o campo no ` +
-      'interior, em mT? (2 casas decimais)',
+      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-6')[0]!, { comprimento, espiras, v1: txt(i) }, 'pt'),
     enunciadoTex: `B = \\mu_0 n I \\qquad N = ${espiras} \\qquad L = ${comprimento}\\ \\text{cm} \\qquad I = ${tex(i)}\\ \\text{A}`,
     gabarito,
     resolucao: {
@@ -545,8 +541,7 @@ function raioAcelerado(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mag-raio-acel-${ddp}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um próton (massa 1,67×10⁻²⁷ kg, carga 1,6×10⁻¹⁹ C), partindo do repouso, é acelerado por ${ddp} V e entra ` +
-      `perpendicular num campo de ${txt(b)} T. Qual é o raio da órbita, em cm? (2 casas decimais)`,
+      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-7')[0]!, { ddp, v1: txt(b) }, 'pt'),
     enunciadoTex: `\\Delta V = ${ddp}\\ \\text{V} \\qquad B = ${tex(b)}\\ \\text{T}`,
     gabarito,
     resolucao: {

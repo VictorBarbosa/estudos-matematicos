@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   G,
   MASSA_TERRA,
@@ -68,8 +69,7 @@ function exercicioGravidade(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `grav-g-${altitudeKm}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é a aceleração da gravidade a ${altitudeKm.toLocaleString('pt-BR')} km de ` +
-      'altitude? (em m/s², 2 casas decimais)',
+      textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-1')[0]!, { v1: altitudeKm.toLocaleString('pt-BR') }, 'pt'),
     enunciadoTex: `h = ${altitudeKm.toLocaleString('pt-BR').replace(/\./g, '\\,')}\\,\\text{km}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -121,8 +121,7 @@ function exercicioVelocidadeOrbital(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `grav-v-${altitudeKm}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é a velocidade de um satélite em órbita circular a ` +
-      `${altitudeKm.toLocaleString('pt-BR')} km de altitude? (em km/s, 2 casas decimais)`,
+      textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-2')[0]!, { v1: altitudeKm.toLocaleString('pt-BR') }, 'pt'),
     enunciadoTex: `h = ${altitudeKm.toLocaleString('pt-BR').replace(/\./g, '\\,')}\\,\\text{km}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -166,8 +165,7 @@ function exercicioPeriodo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `grav-t-${altitudeKm}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é o período orbital a ${altitudeKm.toLocaleString('pt-BR')} km de altitude? ` +
-      '(em minutos, 2 casas decimais)',
+      textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-3')[0]!, { v1: altitudeKm.toLocaleString('pt-BR') }, 'pt'),
     enunciadoTex: `h = ${altitudeKm.toLocaleString('pt-BR').replace(/\./g, '\\,')}\\,\\text{km}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -219,8 +217,7 @@ function exercicioEscape(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `grav-esc-${corpo.nome}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é a velocidade de escape da superfície de ${corpo.nome}? (em km/s, 2 casas ` +
-      'decimais)',
+      textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-4')[0]!, { v1: corpo.nome }, 'pt'),
     enunciadoTex: `M = ${corpo.massa.toExponential(3)}\\,\\text{kg} \\qquad R = ${corpo.raio.toExponential(3)}\\,\\text{m}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -259,8 +256,7 @@ function exercicioRazaoForca(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `grav-razao-${fator}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Se a distância entre dois corpos for multiplicada por ${fator}, a força gravitacional ` +
-      'entre eles fica dividida por quanto?',
+      textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-5')[0]!, { fator }, 'pt'),
     enunciadoTex: `d \\to ${fator}d \\qquad F \\to \\frac{F}{?}`,
     gabarito: resultado,
     resolucao: {

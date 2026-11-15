@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { centroDeMassaComPassos, equilibrioAlavancaComPassos, torqueComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -61,8 +62,7 @@ function exercicioTorque(anguloFixo: number, nivel: Nivel, rng: Rng): Exercicio<
     id: `tor-t-${forca}-${braco}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma força de ${forca} N é aplicada a ${braco.toLocaleString('pt-BR')} m do eixo, a ` +
-      `${angulo}° do braço. Qual é o torque, em N·m? (2 casas decimais)`,
+      textoDoMolde(moldesDe('estatica-e-torque', 'forma-1')[0]!, { forca, v1: braco.toLocaleString('pt-BR'), angulo }, 'pt'),
     enunciadoTex:
       `F = ${forca}\\,\\text{N} \\qquad r = ${String(braco).replace('.', '{,}')}\\,\\text{m} ` +
       `\\qquad \\theta = ${angulo}^\\circ`,
@@ -107,9 +107,7 @@ function exercicioAlavanca(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `tor-alav-${forcaA}-${distanciaA}-${forcaB}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Numa alavanca, ${forcaA} N atuam a ${distanciaA.toLocaleString('pt-BR')} m do apoio. ` +
-      `A que distância deve atuar uma força de ${forcaB} N do outro lado para equilibrar, em ` +
-      'metros? (2 casas decimais)',
+      textoDoMolde(moldesDe('estatica-e-torque', 'forma-2')[0]!, { forcaA, v1: distanciaA.toLocaleString('pt-BR'), forcaB }, 'pt'),
     enunciadoTex:
       `F_A = ${forcaA}\\,\\text{N} \\qquad d_A = ${String(distanciaA).replace('.', '{,}')}\\,\\text{m} ` +
       `\\qquad F_B = ${forcaB}\\,\\text{N}`,
@@ -204,9 +202,7 @@ function exercicioForcaEquilibrio(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `tor-eq-${pesoBarra}-${carga}-${cargaDistancia}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma barra homogênea de ${comprimento} m e ${pesoBarra} N está apoiada numa ponta. Uma ` +
-      `carga de ${carga} N está a ${cargaDistancia} m desse apoio. Que força vertical na outra ` +
-      'ponta mantém a barra em equilíbrio, em newtons? (2 casas decimais)',
+      textoDoMolde(moldesDe('estatica-e-torque', 'forma-3')[0]!, { comprimento, pesoBarra, carga, cargaDistancia }, 'pt'),
     enunciadoTex:
       `L = ${comprimento}\\,\\text{m} \\qquad P = ${pesoBarra}\\,\\text{N} \\qquad ` +
       `Q = ${carga}\\,\\text{N} \\qquad d = ${cargaDistancia}\\,\\text{m}`,

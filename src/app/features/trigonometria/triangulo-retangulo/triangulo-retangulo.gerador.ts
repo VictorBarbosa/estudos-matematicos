@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Razao, paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -67,8 +68,7 @@ export const geradorTriangulo: GeradorExercicio<number> = {
       id: `triangulo-${anguloGraus}-${hipotenusa}-${procurado}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado:
-        `Num triângulo retângulo com hipotenusa ${hipotenusa} e um ângulo de ${anguloGraus}°, ` +
-        `qual é a medida do cateto ${nomeLado}? (2 casas decimais)`,
+        textoDoMolde(moldesDe('triangulo-retangulo', 'forma-1')[0]!, { hipotenusa, anguloGraus, nomeLado }, 'pt'),
       enunciadoTex: `h = ${hipotenusa} \\qquad \\theta = ${anguloGraus}° \\qquad \\text{cateto } ${nomeLado} = \\;?`,
       gabarito,
       resolucao: {
@@ -149,8 +149,7 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `triangulo-angulo-${oposto}-${adjacente}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Num triângulo retângulo, o cateto oposto a um ângulo mede ${oposto} e o adjacente ` +
-      `mede ${adjacente}. Quanto mede esse ângulo, em graus? (2 casas decimais)`,
+      textoDoMolde(moldesDe('triangulo-retangulo', 'forma-2')[0]!, { oposto, adjacente }, 'pt'),
     enunciadoTex: `\\text{oposto} = ${oposto} \\qquad \\text{adjacente} = ${adjacente} \\qquad \\theta = \\;?`,
     gabarito,
     resolucao: {

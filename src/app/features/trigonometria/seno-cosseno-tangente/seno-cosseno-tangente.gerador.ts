@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { paraRadianos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -27,7 +28,7 @@ export const geradorRazoes: GeradorExercicio<number> = {
       return {
         id: `razoes-complementar-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Sabendo que sen ${90 - graus}° vale isso, qual é o valor? (2 casas)`,
+        enunciado: textoDoMolde(moldesDe('seno-cosseno-tangente', 'forma-1')[0]!, { v1: 90 - graus }, 'pt'),
         enunciadoTex: `\\sin(90° - ${graus}°) = \\;?`,
         gabarito,
         resolucao: {
@@ -89,7 +90,7 @@ export const geradorRazoes: GeradorExercicio<number> = {
       return {
         id: `razoes-identidade-${agudoDeVerdade}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: `Se sen θ = ${numeroEmPortugues(seno)} e θ está no 1º quadrante, qual é cos θ? (2 casas)`,
+        enunciado: textoDoMolde(moldesDe('seno-cosseno-tangente', 'forma-2')[0]!, { v1: numeroEmPortugues(seno) }, 'pt'),
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\qquad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {
@@ -144,7 +145,7 @@ export const geradorRazoes: GeradorExercicio<number> = {
     return {
       id: `razoes-tangente-${graus}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Qual é o valor de tg ${graus}°? (2 casas decimais)`,
+      enunciado: textoDoMolde(moldesDe('seno-cosseno-tangente', 'forma-3')[0]!, { graus }, 'pt'),
       enunciadoTex: `\\tan ${graus}° = \\;?`,
       gabarito,
       resolucao: {

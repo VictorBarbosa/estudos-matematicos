@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -121,8 +122,7 @@ function euler(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `poli-euler-${p.v}-${p.a}-${p.f}-${falta}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um poliedro convexo tem ${p[dados[0]!]} ${nomes[dados[0]!]} e ${p[dados[1]!]} ${nomes[dados[1]!]}. ` +
-      `Quantos ${nomes[falta]} ele tem?`,
+      textoDoMolde(moldesDe('poliedros', 'forma-1')[0]!, { v1: p[dados[0]!], v2: nomes[dados[0]!], v3: p[dados[1]!], v4: nomes[dados[1]!], v5: nomes[falta] }, 'pt'),
     enunciadoTex: `V - A + F = 2`,
     gabarito,
     resolucao: {
@@ -193,7 +193,7 @@ function prismaPiramide(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-pp-${solido}-${n}-${pede}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Quantos ${nomes[pede]} tem ${ePrisma ? 'um' : 'uma'} ${solido} de base ${NOME_BASE[n]}?`,
+    enunciado: textoDoMolde(moldesDe('poliedros', 'forma-2')[0]!, { v1: nomes[pede], v2: ePrisma ? 'um' : 'uma', solido, v3: NOME_BASE[n] }, 'pt'),
     enunciadoTex: `n = ${n} \\text{ lados na base}`,
     gabarito,
     resolucao: {
@@ -261,7 +261,7 @@ function facesIguais(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-iguais-${k}-${f}-${pedeV ? 'v' : 'a'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um poliedro convexo tem ${f} faces, todas ${nomeFace}. Quantos ${pedeV ? 'vértices' : 'arestas'} ele tem?`,
+    enunciado: textoDoMolde(moldesDe('poliedros', 'forma-3')[0]!, { f, nomeFace, v1: pedeV ? 'vértices' : 'arestas' }, 'pt'),
     enunciadoTex: `F = ${f} \\qquad \\text{cada face com } ${k} \\text{ lados}`,
     gabarito,
     resolucao: {
@@ -416,7 +416,7 @@ function facesMistas(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-mistas-${m.faces.flat().join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um poliedro convexo tem como faces ${descreve}. Quantos vértices ele tem?`,
+    enunciado: textoDoMolde(moldesDe('poliedros', 'forma-4')[0]!, { descreve }, 'pt'),
     enunciadoTex: `F = ${f} \\qquad ${m.faces.map(([q, l]) => `${q} \\times ${l}\\text{ lados}`).join(',\\; ')}`,
     gabarito: v,
     resolucao: {
@@ -484,8 +484,7 @@ function grau(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `poli-grau-${o.f}-${o.k}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um poliedro convexo tem ${o.f} faces, e em cada vértice se encontram exatamente ${o.k} arestas. ` +
-      'Quantos vértices ele tem?',
+      textoDoMolde(moldesDe('poliedros', 'forma-5')[0]!, { v1: o.f, v2: o.k }, 'pt'),
     enunciadoTex: `F = ${o.f} \\qquad \\text{${o.k} arestas por vértice}`,
     gabarito: v,
     resolucao: {

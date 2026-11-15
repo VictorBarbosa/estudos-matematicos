@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { decomporComPassos, direcaoGraus, modulo, somarComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -59,7 +60,7 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `vet-mod-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o módulo do vetor (${x}, ${y})? (2 casas decimais)`,
+    enunciado: textoDoMolde(moldesDe('vetores-no-plano', 'forma-1')[0]!, { x, y }, 'pt'),
     enunciadoTex: `\\vec{v} = (${x},\\; ${y})`,
     gabarito: resultado,
     resolucao: {
@@ -119,8 +120,7 @@ function exercicioComponente(eixo: 'x' | 'y', nivel: Nivel, rng: Rng): Exercicio
     id: `vet-comp-${eixo}-${comprimento}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um vetor de módulo ${comprimento} forma ${angulo}° com o eixo x. Qual é sua componente ` +
-      `${eixo === 'x' ? 'horizontal' : 'vertical'}? (2 casas decimais)`,
+      textoDoMolde(moldesDe('vetores-no-plano', 'forma-2')[0]!, { comprimento, angulo, v1: eixo === 'x' ? 'horizontal' : 'vertical' }, 'pt'),
     enunciadoTex: `|\\vec{v}| = ${comprimento} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito,
     resolucao: {
@@ -177,8 +177,7 @@ function exercicioModuloDaSoma(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `vet-soma-${a.x}_${a.y}-${b.x}_${b.y}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é o módulo da soma dos vetores (${a.x}, ${a.y}) e (${b.x}, ${b.y})? ` +
-      '(2 casas decimais)',
+      textoDoMolde(moldesDe('vetores-no-plano', 'forma-3')[0]!, { v1: a.x, v2: a.y, v3: b.x, v4: b.y }, 'pt'),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito,
     resolucao: {
@@ -236,8 +235,7 @@ function exercicioDirecao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `vet-dir-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é o ângulo que o vetor (${x}, ${y}) forma com o eixo x positivo, medido no ` +
-      'sentido anti-horário? (em graus, 2 casas)',
+      textoDoMolde(moldesDe('vetores-no-plano', 'forma-4')[0]!, { x, y }, 'pt'),
     enunciadoTex: `\\vec{v} = (${x},\\; ${y})`,
     gabarito: resultado,
     resolucao: {

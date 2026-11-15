@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Vetor3,
   anguloEntreVetores3ComPassos,
@@ -72,7 +73,7 @@ function exercicioModulo(rng: Rng, nivel: Nivel): Exercicio<number> {
   return {
     id: `v3-modulo-${v.x}-${v.y}-${v.z}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Qual é o módulo deste vetor?',
+    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-1')[0]!, {  }, 'pt'),
     enunciadoTex: `\\vec{v} = ${vetor3ParaTex(v)}`,
     gabarito: resolucao.resultado,
     resolucao,
@@ -111,7 +112,7 @@ function exercicioEscalar(rng: Rng, nivel: Nivel): Exercicio<number> {
   return {
     id: `v3-escalar-${a.x}${a.y}${a.z}-${b.x}${b.y}${b.z}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Calcule o produto escalar dos dois vetores.',
+    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-2')[0]!, {  }, 'pt'),
     enunciadoTex: `\\vec{a} = ${vetor3ParaTex(a)} \\qquad \\vec{b} = ${vetor3ParaTex(b)}`,
     gabarito: resolucao.resultado,
     resolucao,
@@ -153,7 +154,7 @@ function exercicioVetorial(rng: Rng, nivel: Nivel): Exercicio<number> {
   return {
     id: `v3-vetorial-${eixo}-${a.x}${a.y}${a.z}-${b.x}${b.y}${b.z}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule a componente ${eixo} do produto vetorial a × b.`,
+    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-3')[0]!, { eixo }, 'pt'),
     enunciadoTex: `\\vec{a} = ${vetor3ParaTex(a)} \\qquad \\vec{b} = ${vetor3ParaTex(b)}`,
     gabarito: resultado,
     resolucao: { resultado, passos: resolucao.passos },
@@ -209,7 +210,7 @@ function exercicioAngulo(rng: Rng, nivel: Nivel): Exercicio<number> {
     // Duas casas, que é a tolerância da correção deste tópico: prometer uma
     // casa seria prometer um arredondamento que o campo recusa.
     enunciado:
-      'Qual é o ângulo entre os dois vetores, em graus? Arredonde para duas casas decimais.',
+      textoDoMolde(moldesDe('vetores-no-espaco', 'forma-4')[0]!, {  }, 'pt'),
     enunciadoTex: `\\vec{a} = ${vetor3ParaTex(a)} \\qquad \\vec{b} = ${vetor3ParaTex(b)}`,
     gabarito: resolucao.resultado,
     resolucao,
@@ -241,7 +242,7 @@ function exercicioUnitario(rng: Rng, nivel: Nivel): Exercicio<number> {
   return {
     id: `v3-unitario-${eixo}-${v.x}${v.y}${v.z}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é a componente ${eixo} do vetor unitário na direção de v? Arredonde para duas casas decimais.`,
+    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-5')[0]!, { eixo }, 'pt'),
     enunciadoTex: `\\vec{v} = ${vetor3ParaTex(v)}`,
     gabarito: resultado,
     resolucao: { resultado, passos: resolucao.passos },
@@ -281,7 +282,7 @@ function exercicioVolume(rng: Rng, nivel: Nivel): Exercicio<number> {
   return {
     id: `v3-volume-${a.x}${b.y}${c.z}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Qual é o volume do paralelepípedo formado pelos três vetores?',
+    enunciado: textoDoMolde(moldesDe('vetores-no-espaco', 'forma-6')[0]!, {  }, 'pt'),
     enunciadoTex:
       `\\vec{a} = ${vetor3ParaTex(a)} \\quad \\vec{b} = ${vetor3ParaTex(b)} \\quad ` +
       `\\vec{c} = ${vetor3ParaTex(c)}`,

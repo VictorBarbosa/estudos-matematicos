@@ -7470,5 +7470,2091 @@
     "enunciado": {
       "br": "Resolva o sistema e informe o valor de x."
     }
+  },
+  {
+    "topico": "conceito-funcao",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o único valor de x que NÃO pertence ao domínio desta função?"
+    }
+  },
+  {
+    "topico": "conceito-funcao",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o MENOR valor que esta função pode assumir?"
+    }
+  },
+  {
+    "topico": "conceito-funcao",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Calcule f({dados-calculo.x})."
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Resolva a equação exponencial."
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Resolva a equação. (3 casas decimais)"
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Resolva a equação logarítmica (confira o domínio)."
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Resolva a equação e informe a MAIOR solução real."
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Uma população de bactérias cresce como P(t) = {dados-calculo.p0}·e^({dados-calculo.v1}·t), com t em horas. Em quantas horas ela chega a {dados-calculo.alvo}? (3 casas decimais)"
+    }
+  },
+  {
+    "topico": "equacoes-exponenciais",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Resolva a equação. (3 casas decimais)"
+    }
+  },
+  {
+    "topico": "funcao-afim",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a taxa de variação da função, ou seja, quanto y muda quando x avança 1?"
+    }
+  },
+  {
+    "topico": "funcao-afim",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o valor de f({dados-calculo.x})?"
+    }
+  },
+  {
+    "topico": "funcao-exponencial",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Uma amostra decai segundo N(t) = N₀·e^(−{dados-calculo.v1}t), com t em anos. Qual é a meia-vida? (arredonde para 2 casas)"
+    }
+  },
+  {
+    "topico": "funcao-exponencial",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Quantas unidades de x são necessárias para o valor DOBRAR? (arredonde para 2 casas)"
+    }
+  },
+  {
+    "topico": "funcao-exponencial",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o valor da função em x = 0?"
+    }
+  },
+  {
+    "topico": "funcao-exponencial",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é o valor de f({dados-calculo.x})?"
+    }
+  },
+  {
+    "topico": "funcao-logaritmica",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Use a propriedade do produto e informe o valor."
+    }
+  },
+  {
+    "topico": "funcao-logaritmica",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Resolva a equação logarítmica."
+    }
+  },
+  {
+    "topico": "funcao-logaritmica",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Calcule o logaritmo."
+    }
+  },
+  {
+    "topico": "funcao-modular",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o valor de f({dados-calculo.x})?"
+    }
+  },
+  {
+    "topico": "funcao-quadratica",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o valor de f({dados-calculo.x})?"
+    }
+  },
+  {
+    "topico": "funcoes-por-partes",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Quanto vale esta função em x = {dados-calculo.ponto}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "funcoes-por-partes",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "De quanto é o salto desta função em x = {dados-calculo.fronteira}? Use o limite pela direita menos o limite pela esquerda. {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "funcoes-por-partes",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o limite desta função quando x tende a {dados-calculo.fronteira} pela {dados-calculo.v1}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "funcoes-por-partes",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual valor da constante c torna esta função contínua em x = {dados-calculo.fronteira}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "funcoes-racionais",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Em que valor de x está a assíntota vertical desta função? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "funcoes-racionais",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o valor da assíntota horizontal desta função? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "funcoes-racionais",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Quanto vale esta função em x = {dados-calculo.ponto}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "juros-compostos",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "A uma taxa de {dados-calculo.taxa}% por período, em quantos períodos um capital se multiplica por {dados-calculo.comoTexto}? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "juros-compostos",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um capital de $ {dados-calculo.capital},00 é aplicado a {dados-calculo.taxa}% ao período, por {dados-calculo.periodos} períodos, a juros compostos. Qual é {dados-calculo.v1}? (2 casas)"
+    }
+  },
+  {
+    "topico": "progressoes",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Numa {dados-calculo.nome} de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}, qual é o {dados-calculo.n}º termo?"
+    }
+  },
+  {
+    "topico": "progressoes",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Numa {dados-calculo.nome} de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}, qual é a soma dos {dados-calculo.n} primeiros termos?"
+    }
+  },
+  {
+    "topico": "progressoes",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é a soma de todos os infinitos termos desta PG?"
+    }
+  },
+  {
+    "topico": "transformacoes-de-graficos",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a abscissa do vértice desta parábola? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "transformacoes-de-graficos",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "O ponto ({dados-calculo.v1}, {dados-calculo.v2}) pertence ao gráfico de f. Qual é a ABSCISSA do ponto correspondente no gráfico transformado? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "transformacoes-de-graficos",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "O ponto ({dados-calculo.v1}, {dados-calculo.v2}) pertence ao gráfico de f. Qual é a ORDENADA do ponto correspondente no gráfico transformado? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "transformacoes-de-graficos",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "O gráfico de f ocupa uma largura de {dados-calculo.largura} unidades no eixo x. Qual largura o gráfico transformado ocupa? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "transformacoes-de-graficos",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "A função f tem um zero em x = {dados-calculo.zero}. Em que valor de x o gráfico transformado cruza o eixo horizontal? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "angulos-e-triangulos",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a soma dos ângulos internos de um {dados-calculo.v1}? (em graus)"
+    }
+  },
+  {
+    "topico": "angulos-e-triangulos",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Quanto mede cada ângulo interno de um {dados-calculo.v1} regular? (em graus{dados-calculo.casas})"
+    }
+  },
+  {
+    "topico": "angulos-e-triangulos",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Num triângulo, dois ângulos medem {dados-calculo.primeiro}° e {dados-calculo.segundo}°. Quanto mede o terceiro?"
+    }
+  },
+  {
+    "topico": "angulos-e-triangulos",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um polígono regular tem ângulo interno de {dados-calculo.v1}°. Quantos lados ele tem?"
+    }
+  },
+  {
+    "topico": "areas-de-figuras-planas",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um {dados-calculo.v1} tem área {dados-calculo.v2} cm² e base {dados-calculo.v3} cm. Qual é sua altura, em cm?"
+    }
+  },
+  {
+    "topico": "areas-de-figuras-planas",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma figura de área {dados-calculo.area} cm² é ampliada de modo que todos os comprimentos fiquem {dados-calculo.k} vezes maiores. Qual é a nova área, em cm²?"
+    }
+  },
+  {
+    "topico": "areas-de-figuras-planas",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um losango tem diagonais de {dados-calculo.maior} cm e {dados-calculo.menor} cm. Qual é sua área, em cm²?"
+    }
+  },
+  {
+    "topico": "areas-de-figuras-planas",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Uma figura é formada por um retângulo de {dados-calculo.base} cm por {dados-calculo.alturaRetangulo} cm com um triângulo de mesma base e altura {dados-calculo.alturaTriangulo} cm apoiado em cima. Qual é a área total, em cm²?"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o comprimento de uma circunferência de raio {dados-calculo.raio} cm? (em cm, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a área de um círculo de raio {dados-calculo.raio} cm? (em cm², 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um círculo tem área {dados-calculo.v1} cm². Qual é o seu raio? (em cm, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é a área de um setor circular de raio {dados-calculo.raio} cm e ângulo {dados-calculo.anguloGraus}°? (em cm², 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um polígono regular de {dados-calculo.lados} lados tem lado {dados-calculo.base} cm e apótema {dados-calculo.v1} cm. Qual é sua área? (em cm², 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Qual é o comprimento do arco de uma circunferência de raio {dados-calculo.raio} cm correspondente a um ângulo central de {dados-calculo.anguloGraus}°? (em cm, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Dois círculos concêntricos têm raios {dados-calculo.menor} cm e {dados-calculo.maior} cm. Qual é a área da coroa entre eles? (em cm², 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "poliedros",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um poliedro convexo tem {dados-calculo.v1} {dados-calculo.v2} e {dados-calculo.v3} {dados-calculo.v4}. Quantos {dados-calculo.v5} ele tem?"
+    }
+  },
+  {
+    "topico": "poliedros",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Quantos {dados-calculo.v1} tem {dados-calculo.v2} {dados-calculo.solido} de base {dados-calculo.v3}?"
+    }
+  },
+  {
+    "topico": "poliedros",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um poliedro convexo tem {dados-calculo.f} faces, todas {dados-calculo.nomeFace}. Quantos {dados-calculo.v1} ele tem?"
+    }
+  },
+  {
+    "topico": "poliedros",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um poliedro convexo tem como faces {dados-calculo.descreve}. Quantos vértices ele tem?"
+    }
+  },
+  {
+    "topico": "poliedros",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um poliedro convexo tem {dados-calculo.v1} faces, e em cada vértice se encontram exatamente {dados-calculo.v2} arestas. Quantos vértices ele tem?"
+    }
+  },
+  {
+    "topico": "solidos-e-volumes",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um sólido de volume {dados-calculo.v1} cm³ é ampliado {dados-calculo.v2} vezes em todas as dimensões. Qual é o novo volume, em cm³?"
+    }
+  },
+  {
+    "topico": "solidos-e-volumes",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um {dados-calculo.v1} de raio {dados-calculo.raio} cm tem volume {dados-calculo.v2} cm³. Qual é sua altura, em cm?"
+    }
+  },
+  {
+    "topico": "fracoes",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Escreva este decimal como fração."
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Leia o somatório e calcule o valor."
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Leia o produtório e calcule o valor."
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Leia os dois símbolos e calcule."
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Quantos números INTEIROS existem neste intervalo?"
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Com A = {{dados-calculo.v1}} e B = {{dados-calculo.v2}}, quantos elementos tem o conjunto?"
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Leia a assinatura e a regra da função, e calcule f({dados-calculo.x})."
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Escreva em símbolos: {dados-calculo.texto}"
+    }
+  },
+  {
+    "topico": "numeros-decimais",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Escreva o decimal como fração irredutível."
+    }
+  },
+  {
+    "topico": "numeros-decimais",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Encontre a fração geratriz desta dízima periódica."
+    }
+  },
+  {
+    "topico": "numeros-decimais",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Encontre a fração geratriz desta dízima periódica composta."
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Resolva respeitando a ordem das operações."
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Calculez en respectant l’ordre des opérations."
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Evaluate, respecting the order of operations."
+    }
+  },
+  {
+    "topico": "potenciacao-radiciacao",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Aplique a propriedade e informe o valor numérico."
+    }
+  },
+  {
+    "topico": "potenciacao-radiciacao",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Simplifique e informe o valor numérico."
+    }
+  },
+  {
+    "topico": "potenciacao-radiciacao",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Aplique a propriedade e informe o valor numérico."
+    }
+  },
+  {
+    "topico": "potenciacao-radiciacao",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Calcule a raiz quadrada."
+    }
+  },
+  {
+    "topico": "potenciacao-radiciacao",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Simplificando √{dados-calculo.radicando}, qual é o número que SAI do radical?"
+    }
+  },
+  {
+    "topico": "circulo-trigonometrico",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Em qual quadrante está este ângulo? Responda com 1, 2, 3 ou 4."
+    }
+  },
+  {
+    "topico": "circulo-trigonometrico",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Converta {dados-calculo.graus}° para radianos. (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circulo-trigonometrico",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o valor de {dados-calculo.v1} {dados-calculo.graus}°? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circulo-trigonometrico",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é o sinal de {dados-calculo.funcao} {dados-calculo.graus}°? Responda 1 se for positivo e -1 se for negativo."
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Calcule {dados-calculo.v1}({dados-calculo.v2}), em graus."
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Calcule {dados-calculo.v1}({dados-calculo.valorTexto}), em graus. (1 casa decimal)"
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Resolva {dados-calculo.INTERVALO} e informe {dados-calculo.v1}."
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Resolva {dados-calculo.INTERVALO} e informe {dados-calculo.v1}."
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Resolva {dados-calculo.INTERVALO} e informe {dados-calculo.v1}. (1 casa decimal)"
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Resolva {dados-calculo.INTERVALO} e informe {dados-calculo.v1}.{dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Resolva {dados-calculo.INTERVALO} e informe {dados-calculo.v1}."
+    }
+  },
+  {
+    "topico": "funcoes-trigonometricas",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o período desta função? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "funcoes-trigonometricas",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a amplitude desta função?"
+    }
+  },
+  {
+    "topico": "funcoes-trigonometricas",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o valor MÁXIMO que esta função atinge?"
+    }
+  },
+  {
+    "topico": "funcoes-trigonometricas",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é o valor MÍNIMO que esta função atinge?"
+    }
+  },
+  {
+    "topico": "identidades-trigonometricas",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Se sen θ = {dados-calculo.v1} com θ no 1º quadrante, quanto vale cos θ? (2 casas)"
+    }
+  },
+  {
+    "topico": "identidades-trigonometricas",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Use a fórmula do arco duplo para calcular sen {dados-calculo.v1}°."
+    }
+  },
+  {
+    "topico": "identidades-trigonometricas",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Calcule sen({dados-calculo.a}° + {dados-calculo.b}°) usando a fórmula da soma de arcos."
+    }
+  },
+  {
+    "topico": "lei-senos-cossenos",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um triângulo tem lados {dados-calculo.b} e {dados-calculo.c}, com ângulo de {dados-calculo.angulo}° entre eles. Quanto mede o terceiro lado? (2 casas)"
+    }
+  },
+  {
+    "topico": "lei-senos-cossenos",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Num triângulo, o lado de medida {dados-calculo.ladoA} é oposto ao ângulo de {dados-calculo.anguloA}°. Quanto mede o lado oposto ao ângulo de {dados-calculo.anguloB}°? (2 casas)"
+    }
+  },
+  {
+    "topico": "lei-senos-cossenos",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um triângulo tem lados {dados-calculo.b}, {dados-calculo.c} e {dados-calculo.a}. Quanto mede o MAIOR ângulo, em graus? (2 casas)"
+    }
+  },
+  {
+    "topico": "seno-cosseno-tangente",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Sabendo que sen {dados-calculo.v1}° vale isso, qual é o valor? (2 casas)"
+    }
+  },
+  {
+    "topico": "seno-cosseno-tangente",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Se sen θ = {dados-calculo.v1} e θ está no 1º quadrante, qual é cos θ? (2 casas)"
+    }
+  },
+  {
+    "topico": "seno-cosseno-tangente",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o valor de tg {dados-calculo.graus}°? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "triangulo-retangulo",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Num triângulo retângulo com hipotenusa {dados-calculo.hipotenusa} e um ângulo de {dados-calculo.anguloGraus}°, qual é a medida do cateto {dados-calculo.nomeLado}? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "triangulo-retangulo",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Num triângulo retângulo, o cateto oposto a um ângulo mede {dados-calculo.oposto} e o adjacente mede {dados-calculo.adjacente}. Quanto mede esse ângulo, em graus? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "{dados-calculo.enunciado} Responda como fração."
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Aplique {dados-calculo.op} na matriz aumentada. Qual é a nova entrada da {dados-calculo.Li} na coluna {dados-calculo.v1}{dados-calculo.v2}?"
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "A matriz aumentada do sistema já está escalonada. Encontre x, substituindo de baixo para cima."
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "A matriz aumentada já está escalonada. Quantas soluções tem o sistema? {dados-calculo.LEGENDA_TIPO}"
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Escalone o sistema. Quantas soluções ele tem? {dados-calculo.LEGENDA_TIPO}"
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Resolva o sistema por escalonamento e informe o valor de {dados-calculo.nome}."
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Para que valor de k o sistema deixa de ter solução única?"
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "forma": "forma-8",
+    "enunciado": {
+      "br": "Calcule a inversa por escalonamento de (A | I) e informe a entrada da linha {dados-calculo.v1}, coluna {dados-calculo.v2} de A⁻¹."
+    }
+  },
+  {
+    "topico": "matrizes-determinantes",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o determinante desta matriz?"
+    }
+  },
+  {
+    "topico": "matrizes-determinantes",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o determinante desta matriz 3×3?"
+    }
+  },
+  {
+    "topico": "matrizes-determinantes",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "No produto A·B, qual é a entrada da linha {dados-calculo.v1}, coluna {dados-calculo.v2}?"
+    }
+  },
+  {
+    "topico": "matrizes-determinantes",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Resolva o sistema por Cramer. Quanto vale {dados-calculo.v1}?"
+    }
+  },
+  {
+    "topico": "matrizes-determinantes",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Qual é o determinante do produto A·B?"
+    }
+  },
+  {
+    "topico": "numeros-complexos",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o módulo de {dados-calculo.v1}? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "numeros-complexos",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Multiplicando ({dados-calculo.v1}) por ({dados-calculo.v2}), qual é a parte {dados-calculo.v3} do resultado?"
+    }
+  },
+  {
+    "topico": "numeros-complexos",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o argumento de {dados-calculo.v1}, medido no sentido anti-horário a partir do eixo real? (em graus, 2 casas)"
+    }
+  },
+  {
+    "topico": "numeros-complexos",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é a parte real de i^{dados-calculo.expoente}?"
+    }
+  },
+  {
+    "topico": "numeros-complexos",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Dividindo ({dados-calculo.v1}) por ({dados-calculo.v2}), qual é a parte REAL do resultado? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "produto-escalar-vetorial",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o produto escalar de ({dados-calculo.v1}, {dados-calculo.v2}) por ({dados-calculo.v3}, {dados-calculo.v4})?"
+    }
+  },
+  {
+    "topico": "produto-escalar-vetorial",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o ângulo entre ({dados-calculo.v1}, {dados-calculo.v2}) e ({dados-calculo.v3}, {dados-calculo.v4})? (em graus, 2 casas)"
+    }
+  },
+  {
+    "topico": "produto-escalar-vetorial",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é a projeção de ({dados-calculo.v1}, {dados-calculo.v2}) sobre a direção de ({dados-calculo.v3}, {dados-calculo.v4})? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "produto-escalar-vetorial",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é a área do paralelogramo formado por ({dados-calculo.v1}, {dados-calculo.v2}) e ({dados-calculo.v3}, {dados-calculo.v4})?"
+    }
+  },
+  {
+    "topico": "produto-escalar-vetorial",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Uma força de {dados-calculo.forca} N é aplicada a {dados-calculo.angulo}° do deslocamento, que vale {dados-calculo.deslocamento} m. Qual é o trabalho realizado, em joules? (2 casas)"
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Com u e v abaixo, qual é a coordenada {dados-calculo.nome} da combinação linear w = {dados-calculo.alfa}u {dados-calculo.v1} {dados-calculo.v2}v?"
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "O plano passa por P({dados-calculo.v1}) e tem vetor normal n = ({dados-calculo.v2}). Escrito como ax + by + cz = d, quanto vale d?"
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é a distância do ponto P ao plano?{dados-calculo.v1}"
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é o ângulo agudo entre {dados-calculo.v1}, em graus? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Qual é o volume do paralelepípedo formado pelos três vetores? (Volume zero significa que eles são linearmente dependentes.)"
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "O plano passa por A, B e C. Escrito como ax + by + cz = d com a > 0 e (a, b, c) = AB × AC (ou o oposto, para deixar a positivo), quanto vale d?"
+    }
+  },
+  {
+    "topico": "vetores-no-espaco",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o módulo deste vetor?"
+    }
+  },
+  {
+    "topico": "vetores-no-espaco",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Calcule o produto escalar dos dois vetores."
+    }
+  },
+  {
+    "topico": "vetores-no-espaco",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Calcule a componente {dados-calculo.eixo} do produto vetorial a × b."
+    }
+  },
+  {
+    "topico": "vetores-no-espaco",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é o ângulo entre os dois vetores, em graus? Arredonde para duas casas decimais."
+    }
+  },
+  {
+    "topico": "vetores-no-espaco",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Qual é a componente {dados-calculo.eixo} do vetor unitário na direção de v? Arredonde para duas casas decimais."
+    }
+  },
+  {
+    "topico": "vetores-no-espaco",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Qual é o volume do paralelepípedo formado pelos três vetores?"
+    }
+  },
+  {
+    "topico": "vetores-no-plano",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o módulo do vetor ({dados-calculo.x}, {dados-calculo.y})? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "vetores-no-plano",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um vetor de módulo {dados-calculo.comprimento} forma {dados-calculo.angulo}° com o eixo x. Qual é sua componente {dados-calculo.v1}? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "vetores-no-plano",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o módulo da soma dos vetores ({dados-calculo.v1}, {dados-calculo.v2}) e ({dados-calculo.v3}, {dados-calculo.v4})? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "vetores-no-plano",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é o ângulo que o vetor ({dados-calculo.x}, {dados-calculo.y}) forma com o eixo x positivo, medido no sentido anti-horário? (em graus, 2 casas)"
+    }
+  },
+  {
+    "topico": "circunferencia",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a distância do ponto ({dados-calculo.v1}, {dados-calculo.v2}) ao centro desta circunferência?"
+    }
+  },
+  {
+    "topico": "circunferencia",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a abscissa do centro desta circunferência?"
+    }
+  },
+  {
+    "topico": "circunferencia",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o raio desta circunferência?"
+    }
+  },
+  {
+    "topico": "conicas",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a excentricidade desta {dados-calculo.nome}? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "conicas",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o valor do semieixo a desta {dados-calculo.nome}?"
+    }
+  },
+  {
+    "topico": "conicas",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é a distância focal c desta {dados-calculo.nome}?"
+    }
+  },
+  {
+    "topico": "coordenadas-polares",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "O ponto tem coordenadas polares (r, θ) = ({dados-calculo.r}, {dados-calculo.theta}°). Qual é a coordenada {dados-calculo.v1}? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "coordenadas-polares",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a distância r do ponto ({dados-calculo.x}, {dados-calculo.y}) até a origem — a coordenada polar r?"
+    }
+  },
+  {
+    "topico": "coordenadas-polares",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o ângulo polar θ do ponto ({dados-calculo.x}, {dados-calculo.y}), em graus, com 0° ≤ θ < 360°? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "coordenadas-polares",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "A curva polar abaixo é uma circunferência. Qual é o raio dela?"
+    }
+  },
+  {
+    "topico": "coordenadas-polares",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Qual é a distância entre os pontos polares ({dados-calculo.r1}, {dados-calculo.t1}°) e ({dados-calculo.r2}, {dados-calculo.t2}°)? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "coordenadas-polares",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "A órbita de um satélite, com o planeta num foco, é r = p/(1 + e·cos θ), em km. Qual é {dados-calculo.nome}? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "equacoes-parametricas",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um móvel segue estas equações, com t em segundos. Qual é a coordenada x no instante t = {dados-calculo.t}? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "equacoes-parametricas",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a coordenada x quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "equacoes-parametricas",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um projétil parte a {dados-calculo.v0} m/s formando {dados-calculo.angulo} graus com a horizontal, com g igual a 9,81 m/s². Qual é a altura no instante t = {dados-calculo.t} s? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "equacoes-parametricas",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um projétil parte a {dados-calculo.v0} m/s formando {dados-calculo.angulo} graus com a horizontal, com g igual a 9,81 m/s². Qual é o alcance, em m? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "ponto-e-reta",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a distância entre os dois pontos? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "ponto-e-reta",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a abscissa (coordenada x) do ponto médio do segmento AB?"
+    }
+  },
+  {
+    "topico": "ponto-e-reta",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o coeficiente angular da reta que passa pelos dois pontos?"
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Na dimensão de {dados-calculo.v1} (unidade {dados-calculo.v2}), qual é o expoente de {dados-calculo.base}? (responda 0 se não aparece)"
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Converta 1 m³ para litros."
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Converta 1 m² para cm²."
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Converta 1 m³ para cm³."
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Quantos metros por segundo valem 36 km/h?"
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Converta 1 g/cm³ para kg/m³."
+    }
+  },
+  {
+    "topico": "cinematica-escalar",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um corpo parte com {dados-calculo.v0} m/s e acelera a {dados-calculo.a} m/s². Qual é sua velocidade após {dados-calculo.t} s?"
+    }
+  },
+  {
+    "topico": "cinematica-escalar",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um corpo parte do repouso de uma posição com {dados-calculo.v0} m/s e acelera a {dados-calculo.a} m/s². Quanto ele se desloca em {dados-calculo.t} s?"
+    }
+  },
+  {
+    "topico": "cinematica-escalar",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Partindo de {dados-calculo.v0} m/s com aceleração de {dados-calculo.a} m/s², qual é a velocidade após percorrer {dados-calculo.deslocamento} m? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "cinematica-escalar",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um veículo a {dados-calculo.v0} m/s freia com desaceleração de {dados-calculo.desaceleracao} m/s². Em quanto tempo ele para? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "cinematica-escalar",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um veículo a {dados-calculo.v0} m/s freia com desaceleração de {dados-calculo.desaceleracao} m/s². Que distância ele percorre até parar? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "cinematica-vetorial",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um corpo vai da primeira posição à segunda em {dados-calculo.tempo} s, com as coordenadas em metros. Qual é o módulo da velocidade média vetorial, em m/s? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "cinematica-vetorial",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "A primeira é a velocidade da aeronave em relação ao ar e a segunda é a do vento, em m/s. Qual é o módulo da velocidade em relação ao solo? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "cinematica-vetorial",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um barco cruza um rio de {dados-calculo.largura} m de largura apontando perpendicularmente à margem, a {dados-calculo.barco} m/s. A correnteza corre a {dados-calculo.rio} m/s. Quantos metros rio abaixo ele chega? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "cinematica-vetorial",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um barco de {dados-calculo.barco} m/s quer atravessar um rio de correnteza {dados-calculo.rio} m/s chegando exatamente em frente ao ponto de partida. Quantos graus, em relação à perpendicular, ele deve apontar rio acima? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "cinematica-vetorial",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Num certo instante, um corpo tem esta velocidade e esta aceleração, em unidades do SI. Qual é a componente TANGENCIAL da aceleração, em m/s²? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "cinematica-vetorial",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Com esta velocidade e esta aceleração, em unidades do SI, qual é o raio de curvatura da trajetória nesse instante, em m? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "dinamica-rotacional",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o momento de inércia de {dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio, em kg·m²? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "dinamica-rotacional",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um torque de {dados-calculo.v1} N·m é aplicado a {dados-calculo.v2} {dados-calculo.v3} de {dados-calculo.v4} kg e {dados-calculo.v5} m de raio. Qual é a aceleração angular, em rad/s²? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "dinamica-rotacional",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "{dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio gira a {dados-calculo.v5} rad/s. Qual é a energia cinética de rotação, em J? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "dinamica-rotacional",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "{dados-calculo.v1} {dados-calculo.v2} rola sem deslizar a partir do repouso, descendo {dados-calculo.v3} m de desnível. Com gravidade de 9,81 m/s ao quadrado, qual é a velocidade do centro de massa no fim, em m/s? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "estatica-e-torque",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Uma força de {dados-calculo.forca} N é aplicada a {dados-calculo.v1} m do eixo, a {dados-calculo.angulo}° do braço. Qual é o torque, em N·m? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "estatica-e-torque",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Numa alavanca, {dados-calculo.forcaA} N atuam a {dados-calculo.v1} m do apoio. A que distância deve atuar uma força de {dados-calculo.forcaB} N do outro lado para equilibrar, em metros? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "estatica-e-torque",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Uma barra homogênea de {dados-calculo.comprimento} m e {dados-calculo.pesoBarra} N está apoiada numa ponta. Uma carga de {dados-calculo.carga} N está a {dados-calculo.cargaDistancia} m desse apoio. Que força vertical na outra ponta mantém a barra em equilíbrio, em newtons? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "fluidos-e-aerodinamica",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a pressão total a {dados-calculo.profundidade} m de profundidade na água? (em kPa, 2 casas decimais; considere a atmosfera de 101,325 kPa)"
+    }
+  },
+  {
+    "topico": "fluidos-e-aerodinamica",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.volumeLitros} L totalmente submerso em água sofre que empuxo, em newtons? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "fluidos-e-aerodinamica",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um corpo de densidade {dados-calculo.densidadeCorpo} kg/m³ flutua em água. Que fração do seu volume fica submersa? (responda entre 0 e 1, com 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "fluidos-e-aerodinamica",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Uma asa de {dados-calculo.area} m² tem ar a {dados-calculo.superior} m/s na face superior e {dados-calculo.inferior} m/s na inferior. Qual é a sustentação, em newtons? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "fluidos-e-aerodinamica",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Ar acelera de {dados-calculo.velocidadeA} para {dados-calculo.velocidadeB} m/s num duto horizontal. De quanto CAI a pressão, em Pa? (1 casa decimal)"
+    }
+  },
+  {
+    "topico": "gravitacao-e-orbitas",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a aceleração da gravidade a {dados-calculo.v1} km de altitude? (em m/s², 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "gravitacao-e-orbitas",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a velocidade de um satélite em órbita circular a {dados-calculo.v1} km de altitude? (em km/s, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "gravitacao-e-orbitas",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o período orbital a {dados-calculo.v1} km de altitude? (em minutos, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "gravitacao-e-orbitas",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é a velocidade de escape da superfície de {dados-calculo.v1}? (em km/s, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "gravitacao-e-orbitas",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Se a distância entre dois corpos for multiplicada por {dados-calculo.fator}, a força gravitacional entre eles fica dividida por quanto?"
+    }
+  },
+  {
+    "topico": "impulso-e-momento",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.massa} kg move-se a {dados-calculo.velocidade} m/s. Qual é seu momento linear, em kg·m/s?"
+    }
+  },
+  {
+    "topico": "impulso-e-momento",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma força de {dados-calculo.forca} N age por {dados-calculo.tempo} s sobre um corpo de {dados-calculo.massa} kg. Qual é o impulso, em N·s?"
+    }
+  },
+  {
+    "topico": "impulso-e-momento",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.massa} kg a {dados-calculo.velocidade} m/s é parado em {dados-calculo.v1} s. Qual é a força média aplicada, em newtons? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "impulso-e-momento",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.massaA} kg a {dados-calculo.velocidadeA} m/s colide com outro de {dados-calculo.massaB} kg a {dados-calculo.velocidadeB} m/s e os dois seguem juntos. Qual é a velocidade final, em m/s? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "impulso-e-momento",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.massaA} kg a {dados-calculo.velocidadeA} m/s atinge outro de {dados-calculo.massaB} kg parado, e os dois seguem juntos. Quanta energia cinética foi perdida, em joules? (2 casas)"
+    }
+  },
+  {
+    "topico": "leis-de-newton",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um bloco recebe uma força de {dados-calculo.aFavor} N para a direita e sofre {dados-calculo.contra} N de atrito. Qual é a força resultante, em newtons?"
+    }
+  },
+  {
+    "topico": "leis-de-newton",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma força resultante de {dados-calculo.forca} N age sobre um corpo de {dados-calculo.massa} kg. Qual é a aceleração, em m/s²? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "leis-de-newton",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um bloco de {dados-calculo.massa} kg repousa num plano inclinado de {dados-calculo.angulo}°. Qual é a força normal, em newtons? (use g = 9,81 m/s²; 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "leis-de-newton",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um bloco de {dados-calculo.massa} kg desliza num plano de {dados-calculo.angulo}° com coeficiente de atrito {dados-calculo.v1}. Qual é a aceleração, em m/s²? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "leis-de-newton",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Com coeficiente de atrito estático {dados-calculo.v1}, a partir de que ângulo de inclinação o bloco começa a deslizar? (em graus, 2 casas)"
+    }
+  },
+  {
+    "topico": "momento-angular",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "{dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio gira a {dados-calculo.v5} rad/s. Qual é o momento angular, em kg·m²/s? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "momento-angular",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma partícula de {dados-calculo.v1} kg passa a {dados-calculo.v2} m de um ponto, com velocidade de {dados-calculo.velocidade} m/s formando {dados-calculo.angulo} graus com o raio. Qual é o módulo do momento angular em relação a esse ponto? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "momento-angular",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um corpo gira livremente, sem torque externo, com momento de inércia {dados-calculo.v1} kg·m² a {dados-calculo.v2} rad/s. A inércia passa a {dados-calculo.v3}. Qual é a nova velocidade angular, em rad/s? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "momento-angular",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um corpo gira sem torque externo com inércia {dados-calculo.v1} kg·m² a {dados-calculo.v2} rad/s, e recolhe a massa até a inércia cair para {dados-calculo.v3}. De quanto VARIOU a energia cinética de rotação, em J? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "movimento-circular",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um ponto descreve uma circunferência com período de {dados-calculo.periodo} s. Qual é a velocidade angular, em rad/s? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "movimento-circular",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um rotor gira a {dados-calculo.rotacoesPorMinuto} rotações por minuto. Qual é a velocidade angular, em rad/s? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "movimento-circular",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um ponto a {dados-calculo.v1} metros do eixo completa uma volta em {dados-calculo.periodo} s. Qual é a velocidade tangencial, em m/s? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "movimento-circular",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um corpo gira em círculo de {dados-calculo.v1} m de raio, com período de {dados-calculo.periodo} s. Qual é a aceleração centrípeta, em m/s ao quadrado? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "movimento-circular",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.v1} kg gira em círculo de {dados-calculo.v2} m de raio com período de {dados-calculo.periodo} s. Qual é o módulo da força centrípeta, em N? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "movimento-harmonico",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Uma massa de {dados-calculo.v1} kg oscila presa a uma mola de constante {dados-calculo.v2} N/m, com amplitude de {dados-calculo.v3} m. Qual é {dados-calculo.nome}? (3 casas)"
+    }
+  },
+  {
+    "topico": "propulsao-de-foguetes",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um motor queima {dados-calculo.vazao} kg/s de propelente com velocidade de exaustão de {dados-calculo.exaustao} m/s. Qual é o empuxo, em kN? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "propulsao-de-foguetes",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um motor tem velocidade de exaustão de {dados-calculo.exaustao} m/s. Qual é seu impulso específico, em segundos? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "propulsao-de-foguetes",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um foguete tem razão de massas {dados-calculo.razao} e velocidade de exaustão de {dados-calculo.exaustao} m/s. Qual é o delta-v disponível, em km/s? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "propulsao-de-foguetes",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Para obter {dados-calculo.v1} km/s de delta-v com exaustão a {dados-calculo.exaustao} m/s, qual razão de massas é necessária? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "propulsao-de-foguetes",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um foguete parte com {dados-calculo.v1} t e termina a queima com {dados-calculo.v2} t. Que fração da massa inicial era propelente? (responda entre 0 e 1, com 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "termodinamica-e-gases",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Que volume ocupam {dados-calculo.mols} mol de gás ideal a {dados-calculo.temperaturaCelsius} °C e 1 atm? (em litros, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "termodinamica-e-gases",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a pressão de {dados-calculo.mols} mol de gás ideal em {dados-calculo.volumeLitros} L a {dados-calculo.temperaturaCelsius} °C? (em kPa, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "termodinamica-e-gases",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um gás a {dados-calculo.pressao1} atm ocupa {dados-calculo.volume1} L a {dados-calculo.temperatura1} K. Levado a {dados-calculo.pressao2} atm e {dados-calculo.temperatura2} K, que volume passa a ocupar? (em litros, 2 casas decimais)"
+    }
+  },
+  {
+    "topico": "termodinamica-e-gases",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um gás {dados-calculo.v1} {dados-calculo.v2} J de calor e {dados-calculo.v3} {dados-calculo.v4} J de trabalho. Qual é a variação da energia interna, em joules?"
+    }
+  },
+  {
+    "topico": "termodinamica-e-gases",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um gás expande de {dados-calculo.volumeInicial} L para {dados-calculo.volumeFinal} L à pressão constante de {dados-calculo.pressaoAtm} atm. Qual é o trabalho realizado pelo gás, em joules? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "trabalho-e-energia",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Uma força de {dados-calculo.forca} N age a {dados-calculo.angulo}° do deslocamento, que vale {dados-calculo.deslocamento} m. Qual é o trabalho realizado, em joules?"
+    }
+  },
+  {
+    "topico": "trabalho-e-energia",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.massa} kg move-se a {dados-calculo.velocidade} m/s. Qual é sua energia cinética, em joules?"
+    }
+  },
+  {
+    "topico": "trabalho-e-energia",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.massa} kg cai de {dados-calculo.altura} m, partindo do repouso e sem atrito. Com que velocidade chega ao solo, em m/s? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "trabalho-e-energia",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um motor realiza {dados-calculo.trabalho} J de trabalho em {dados-calculo.tempo} s. Qual é sua potência média, em watts? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "trabalho-e-energia",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um corpo é lançado verticalmente para cima a {dados-calculo.velocidade} m/s. Que altura máxima ele alcança, em metros? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Uma placa de {dados-calculo.v1} tem {dados-calculo.v2} m² de área e {dados-calculo.v3} m de espessura, com uma diferença de {dados-calculo.deltaT} K entre as faces. A condutividade é {dados-calculo.v4} W/(m·K). Qual é o fluxo de calor, em W? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a resistência térmica de uma camada de {dados-calculo.v1} com {dados-calculo.v2} m de espessura e {dados-calculo.v3} m² de área, em K/W? A condutividade é {dados-calculo.v4} W/(m·K). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Uma superfície de {dados-calculo.v1} m² está {dados-calculo.deltaT} K acima do ar que a banha, com coeficiente de convecção {dados-calculo.h} W/(m²·K). Qual é o fluxo de calor, em W? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.v1} m² e emissividade {dados-calculo.v2} está a {dados-calculo.celsius} °C. Qual é a potência irradiada, em W? {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Quanta energia, em J, é preciso para aquecer {dados-calculo.v1} kg de {dados-calculo.v2} em {dados-calculo.deltaT} K? O calor específico é {dados-calculo.v3} J/(kg·K). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "{dados-calculo.v1} kg de {dados-calculo.v2} a {dados-calculo.t1} °C são misturados com {dados-calculo.v3} kg de {dados-calculo.v4} a {dados-calculo.t2} °C, num recipiente isolado. Qual é a temperatura final, em °C? Os calores específicos são {dados-calculo.v5} e {dados-calculo.v6} J/(kg·K). {dados-calculo.PEDIDO}"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um fio de {dados-calculo.v1} m, com corrente de {dados-calculo.i} A, está perpendicular a um campo magnético de {dados-calculo.v2} T. Qual é a força sobre ele, em N? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o campo magnético a {dados-calculo.r} cm de um fio longo com {dados-calculo.i} A, em μT? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Uma espira de {dados-calculo.a} cm² está num campo uniforme de {dados-calculo.v1} T, que forma {dados-calculo.angulo}° com a NORMAL da espira. Qual é o fluxo magnético, em mWb? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "{dados-calculo.v1} (massa {dados-calculo.v2}, carga 1,6×10⁻¹⁹ C) entra a {dados-calculo.vTexto} m/s, perpendicular, num campo de {dados-calculo.v3} T. Qual é o raio da órbita, em {dados-calculo.unidade}? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Uma bobina de {dados-calculo.n} espiras, cada uma com {dados-calculo.a} cm², está perpendicular a um campo que passa de {dados-calculo.v1} T para {dados-calculo.v2} T em {dados-calculo.v3} s. Qual é o módulo da fem induzida, em V? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Um solenoide de {dados-calculo.comprimento} cm tem {dados-calculo.espiras} espiras e corrente de {dados-calculo.v1} A. Qual é o campo no interior, em mT? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Um próton (massa 1,67×10⁻²⁷ kg, carga 1,6×10⁻¹⁹ C), partindo do repouso, é acelerado por {dados-calculo.ddp} V e entra perpendicular num campo de {dados-calculo.v1} T. Qual é o raio da órbita, em cm? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é o potencial elétrico a {dados-calculo.v1} m de uma carga de {dados-calculo.v2} μC, em kV (com sinal)? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um capacitor de {dados-calculo.v1} μF é ligado a uma bateria de {dados-calculo.v} V. Qual carga ele armazena, em μC?"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual trabalho um agente externo realiza para levar, devagar, uma carga de {dados-calculo.v1} μC de um ponto a {dados-calculo.va} V até um ponto a {dados-calculo.vb} V, em mJ (com sinal)? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um capacitor tem placas paralelas de {dados-calculo.a} cm² separadas por {dados-calculo.v1} mm de ar. Qual é sua capacitância, em pF? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Quanta energia guarda um capacitor de {dados-calculo.c} μF carregado a {dados-calculo.v} V, em mJ? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Capacitores de {dados-calculo.v1} μF estão ligados em {dados-calculo.v2}. Qual é a capacitância equivalente, em μF? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Um ponto P está a {dados-calculo.v1} m de uma carga de {dados-calculo.v2} μC e a {dados-calculo.v3} m de outra de {dados-calculo.v4} μC. Qual é o potencial em P, em kV (com sinal)? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "forma": "forma-8",
+    "enunciado": {
+      "br": "Um capacitor de placas de {dados-calculo.a} cm², separadas por {dados-calculo.v1} mm de ar, é carregado a {dados-calculo.v} V. Quanta energia ele guarda, em nJ? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Qual é a energia de um fóton de luz com comprimento de onda {dados-calculo.lambda} nm, em elétron-volts (eV)?{dados-calculo.v1}"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma nave viaja a {dados-calculo.v1}c. Qual é o fator de Lorentz γ?{dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Uma nave mede {dados-calculo.proprio} m em repouso. Passando a {dados-calculo.v1}c, que comprimento ela tem para um observador na Terra, em metros?{dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Luz de {dados-calculo.lambda} nm incide sobre {dados-calculo.metal}, cuja função trabalho é {dados-calculo.v1} eV. Qual é a energia cinética máxima dos elétrons arrancados, em eV?{dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "A função trabalho do {dados-calculo.metal} é {dados-calculo.v1} eV. Qual é o MAIOR comprimento de onda que ainda arranca elétrons dele, em nm?{dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Um elétron (m = 9,11 × 10⁻³¹ kg) se move a {dados-calculo.v1} × 10⁶ m/s. Qual é o comprimento de onda de de Broglie dele, em nm? (h = 6,626 × 10⁻³⁴ J·s){dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Uma partícula instável vive {dados-calculo.v1} vezes mais no laboratório do que no próprio referencial. Qual é a velocidade dela, como fração de c (v/c)?{dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "forma": "forma-8",
+    "enunciado": {
+      "br": "Um elétron (energia de repouso mc² = 511 keV) se move a {dados-calculo.v1}c. Qual é a energia cinética dele, em keV?{dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "optica",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "A luz atravessa um material a {dados-calculo.v1} × 10⁸ m/s. Qual é o índice de refração dele?{dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "optica",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um raio de luz passa do ar (n = 1,00) para {dados-calculo.nome} (n = {dados-calculo.v1}), fazendo {dados-calculo.theta1}° com a normal. Que ângulo o raio refratado faz com a normal, em graus?{dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "optica",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "A luz sai de {dados-calculo.nome} (n = {dados-calculo.v1}) para {dados-calculo.destino}. A partir de que ângulo com a normal ocorre reflexão total, em graus?{dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "optica",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um objeto está a {dados-calculo.p} cm de uma lente {dados-calculo.tipo}. A que distância da lente se forma a imagem, em cm? (negativo se a imagem for virtual){dados-calculo.v1}"
+    }
+  },
+  {
+    "topico": "optica",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um objeto de {dados-calculo.h} cm de altura está a {dados-calculo.v1} cm de uma lente convergente de foco {dados-calculo.f} cm. Qual é a altura da imagem, em cm? (negativa se a imagem for invertida){dados-calculo.v2}"
+    }
+  },
+  {
+    "topico": "optica",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Luz de {dados-calculo.lambda} nm passa por duas fendas separadas por {dados-calculo.v1} mm, e a tela fica a {dados-calculo.v2} m. A que distância do centro está a {dados-calculo.ordem}ª franja clara, em mm?{dados-calculo.v3}"
+    }
+  },
+  {
+    "topico": "optica",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Num experimento de fenda dupla com fendas separadas por {dados-calculo.v1} mm e tela a {dados-calculo.v2} m, a {dados-calculo.ordem}ª franja clara aparece a {dados-calculo.v3} mm do centro. Qual é o comprimento de onda da luz, em nm?{dados-calculo.v4}"
+    }
+  },
+  {
+    "topico": "optica",
+    "forma": "forma-8",
+    "enunciado": {
+      "br": "Duas lentes convergentes estão a {dados-calculo.separacao} cm uma da outra; a primeira tem foco {dados-calculo.f1} cm e a segunda, {dados-calculo.f2} cm. Um objeto está a {dados-calculo.p1} cm antes da primeira. A que distância DEPOIS da segunda lente se forma a imagem final, em cm?{dados-calculo.v1}"
+    }
+  },
+  {
+    "topico": "nocao-intuitiva-de-limite",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Calcule o limite."
+    }
+  },
+  {
+    "topico": "nocao-intuitiva-de-limite",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Calcule o limite. Atenção: a substituição direta dá 0/0."
+    }
+  },
+  {
+    "topico": "nocao-intuitiva-de-limite",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Calcule o limite, simplificando a expressão primeiro."
+    }
+  },
+  {
+    "topico": "vizinhancas-e-infinito",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Em que valor de x esta função tem uma assíntota vertical?"
+    }
+  },
+  {
+    "topico": "vizinhancas-e-infinito",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é o limite quando x tende ao infinito?"
+    }
+  },
+  {
+    "topico": "vizinhancas-e-infinito",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Qual é o limite quando x tende ao infinito? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um resistor de {dados-calculo.r} Ω está ligado a {dados-calculo.expressao1} V. Qual corrente o atravessa, em mA? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma corrente de {dados-calculo.expressao1} A atravessa um resistor de {dados-calculo.r} Ω. Quanta potência ele dissipa, em W? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Um resistor de {dados-calculo.r} Ω está ligado a {dados-calculo.v} V. Quanta potência ele dissipa, em W? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Resistores de {dados-calculo.expressao1} Ω estão ligados em {dados-calculo.expressao2}. Qual é a resistência equivalente, em Ω? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Num divisor de tensão, R₁ = {dados-calculo.expressao1} kΩ e R₂ = {dados-calculo.expressao2} kΩ estão em série com uma fonte de {dados-calculo.v} V. Qual é a tensão sobre R₂, em V? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "R₁ = {dados-calculo.r1} Ω está em série com o paralelo de R₂ = {dados-calculo.r2} Ω e R₃ = {dados-calculo.r3} Ω, tudo ligado a {dados-calculo.v} V. Qual corrente sai da fonte, em A? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Uma única malha tem uma bateria de {dados-calculo.e1} V e outra de {dados-calculo.e2} V {dados-calculo.expressao1}, e resistores de {dados-calculo.r1} Ω e {dados-calculo.r2} Ω. Qual é a corrente na malha, em A? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "forma": "forma-8",
+    "enunciado": {
+      "br": "Um circuito RC tem R = {dados-calculo.expressao1} kΩ e C = {dados-calculo.c} μF. Qual é a constante de tempo, em ms? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "forma": "forma-9",
+    "enunciado": {
+      "br": "Um capacitor de {dados-calculo.c} μF, inicialmente descarregado, é carregado por uma fonte de {dados-calculo.v} V através de {dados-calculo.r} kΩ. Qual é a carga dele após {dados-calculo.expressao1} s, em μC? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "forma": "forma-10",
+    "enunciado": {
+      "br": "Dois ramos com fontes — {dados-calculo.e1} V em série com {dados-calculo.r1} Ω, e {dados-calculo.e2} V em série com {dados-calculo.r2} Ω — estão em paralelo com um resistor de {dados-calculo.r3} Ω (os polos positivos do mesmo lado). Qual corrente atravessa o resistor de {dados-calculo.r3} Ω, em A? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "eletrostatica",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Duas cargas pontuais, q₁ = {dados-calculo.expressao1} μC e q₂ = {dados-calculo.expressao2} μC, estão a {dados-calculo.distancia} uma da outra. Qual é o módulo da força elétrica entre elas, em newtons? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "eletrostatica",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Qual é a intensidade do campo elétrico criado por uma carga de {dados-calculo.expressao1} μC a {dados-calculo.expressao2} m dela, em kN/C? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "eletrostatica",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Uma carga de {dados-calculo.expressao1} μC é colocada num campo elétrico uniforme de {dados-calculo.e} N/C. Qual é o módulo da força sobre ela, em mN? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "eletrostatica",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Três cargas estão numa reta: A = {dados-calculo.expressao1} μC à esquerda, M = {dados-calculo.qm} μC no meio e B = {dados-calculo.expressao2} μC à direita. M está a {dados-calculo.expressao3} m de A e a {dados-calculo.expressao4} m de B. Qual é a força resultante sobre M, em N, com sinal positivo para a direita? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "eletrostatica",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Uma carga de {dados-calculo.q} μC está no vértice do ângulo reto de um triângulo. Sobre um cateto, a {dados-calculo.expressao1} m, há uma carga de {dados-calculo.q1} μC; sobre o outro, a {dados-calculo.expressao2} m, uma de {dados-calculo.q2} μC. Qual é o módulo da força resultante sobre a primeira, em N? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "eletrostatica",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Duas cargas positivas, de {dados-calculo.q1} μC e {dados-calculo.q2} μC, estão a {dados-calculo.d} cm uma da outra. A que distância da carga de {dados-calculo.q1} μC, entre elas, o campo elétrico é nulo, em cm? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um som de {dados-calculo.f} Hz se propaga {dados-calculo.meio} a {dados-calculo.v} m/s. Qual é o comprimento de onda, em metros?{dados-calculo.expressao1}"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Uma onda tem comprimento de onda {dados-calculo.expressao1} m e frequência {dados-calculo.f} Hz. Qual é a velocidade dela, em m/s?{dados-calculo.expressao2}"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "Uma corda está esticada com tração de {dados-calculo.tracao} N e tem densidade linear de {dados-calculo.muTexto}. Com que velocidade uma onda corre por ela, em m/s?{dados-calculo.expressao1}"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Uma corda de violão de {dados-calculo.expressao1} m, presa nas duas pontas, conduz ondas a {dados-calculo.v} m/s. Qual é {dados-calculo.nome}, em Hz?{dados-calculo.expressao2}"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Um som chega com intensidade de {dados-calculo.intensidadeTexto} W/m². Qual é o nível sonoro, em dB?{dados-calculo.expressao1}"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Um tubo de {dados-calculo.expressao1} m {dados-calculo.expressao2} ressoa com o som a {dados-calculo.SOM_NO_AR} m/s. Qual é a frequência do {dados-calculo.ordem}º harmônico, em Hz?{dados-calculo.expressao3}"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Uma sirene de {dados-calculo.f} Hz {dados-calculo.fonteTexto}{dados-calculo.observadorTexto}. Com o som a {dados-calculo.SOM_NO_AR} m/s, que frequência o ouvinte escuta, em Hz?{dados-calculo.expressao1}"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "forma": "forma-8",
+    "enunciado": {
+      "br": "Duas cordas de {dados-calculo.expressao1} m, presas nas pontas, conduzem ondas a {dados-calculo.v1} m/s e a {dados-calculo.v2} m/s. Tocadas juntas no fundamental, quantos batimentos por segundo se ouvem?{dados-calculo.expressao2}"
+    }
   }
 ]

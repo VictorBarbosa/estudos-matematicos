@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   INVERSA_TEX,
   INVERSA_TEXTO,
@@ -263,7 +264,7 @@ function exercicioInversa(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `eqtrig-inversa-${razao}-${notavel.texto}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule ${INVERSA_TEXTO[razao]}(${notavel.texto}), em graus.`,
+    enunciado: textoDoMolde(moldesDe('equacoes-trigonometricas', 'forma-1')[0]!, { v1: INVERSA_TEXTO[razao], v2: notavel.texto }, 'pt'),
     enunciadoTex: `${inversa}\\left(${notavel.tex}\\right) = \\;?`,
     gabarito,
     resolucao: {
@@ -323,7 +324,7 @@ function exercicioInversaDecimal(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `eqtrig-inversa-decimal-${razao}-${valor}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule ${INVERSA_TEXTO[razao]}(${valorTexto}), em graus. (1 casa decimal)`,
+    enunciado: textoDoMolde(moldesDe('equacoes-trigonometricas', 'forma-2')[0]!, { v1: INVERSA_TEXTO[razao], valorTexto }, 'pt'),
     enunciadoTex: `${INVERSA_TEX[razao]}\\left(${valorTex}\\right) = \\;?`,
     gabarito,
     resolucao: {
@@ -362,7 +363,7 @@ function exercicioBasica(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `eqtrig-basica-${razao}-${notavel.texto}-${pedido}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Resolva ${INTERVALO} e informe ${PEDIDO_TEXTO[pedido]}.`,
+    enunciado: textoDoMolde(moldesDe('equacoes-trigonometricas', 'forma-3')[0]!, { INTERVALO, v1: PEDIDO_TEXTO[pedido] }, 'pt'),
     enunciadoTex: `${RAZAO_TEX[razao]} x = ${notavel.tex}`,
     gabarito,
     resolucao: {
@@ -460,7 +461,7 @@ function exercicioLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `eqtrig-linear-${razao}-${equacaoTex}-${pedido}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Resolva ${INTERVALO} e informe ${PEDIDO_TEXTO[pedido]}.`,
+    enunciado: textoDoMolde(moldesDe('equacoes-trigonometricas', 'forma-4')[0]!, { INTERVALO, v1: PEDIDO_TEXTO[pedido] }, 'pt'),
     enunciadoTex: equacaoTex,
     gabarito,
     resolucao: {
@@ -498,7 +499,7 @@ function exercicioDecimal(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `eqtrig-decimal-${razao}-${valor}-${pedido}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Resolva ${INTERVALO} e informe ${PEDIDO_TEXTO[pedido]}. (1 casa decimal)`,
+    enunciado: textoDoMolde(moldesDe('equacoes-trigonometricas', 'forma-5')[0]!, { INTERVALO, v1: PEDIDO_TEXTO[pedido] }, 'pt'),
     enunciadoTex: `${RAZAO_TEX[razao]} x = ${valorTex}`,
     gabarito,
     resolucao: {
@@ -539,7 +540,7 @@ function exercicioArcoMultiplo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `eqtrig-multiplo-${razao}-${n}-${notavel.texto}-${pedido}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Resolva ${INTERVALO} e informe ${PEDIDO_TEXTO[pedido]}.${avisoDeCasas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('equacoes-trigonometricas', 'forma-6')[0]!, { INTERVALO, v1: PEDIDO_TEXTO[pedido], v2: avisoDeCasas(gabarito) }, 'pt'),
     enunciadoTex: `${RAZAO_TEX[razao]}(${n}x) = ${notavel.tex}`,
     gabarito,
     resolucao: {
@@ -716,7 +717,7 @@ function exercicioQuadratica(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `eqtrig-quadratica-${razao}-${A}_${B}_${C}-${pedido}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Resolva ${INTERVALO} e informe ${PEDIDO_TEXTO[pedido]}.`,
+    enunciado: textoDoMolde(moldesDe('equacoes-trigonometricas', 'forma-7')[0]!, { INTERVALO, v1: PEDIDO_TEXTO[pedido] }, 'pt'),
     enunciadoTex: equacaoTex,
     gabarito,
     resolucao: { resultado: gabarito, passos },

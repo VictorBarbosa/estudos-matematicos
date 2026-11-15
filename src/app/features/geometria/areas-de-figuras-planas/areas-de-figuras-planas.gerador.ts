@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Figura, NOME_FIGURA, areaComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -144,9 +145,7 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `area-alt-${triangulo ? 'tri' : 'ret'}-${base}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um ${triangulo ? 'triângulo' : 'retângulo'} tem área ${numeroEmPortugues(area)} cm² e base ` +
-      `${numeroEmPortugues(base)} cm. ` +
-      'Qual é sua altura, em cm?',
+      textoDoMolde(moldesDe('areas-de-figuras-planas', 'forma-1')[0]!, { v1: triangulo ? 'triângulo' : 'retângulo', v2: numeroEmPortugues(area), v3: numeroEmPortugues(base) }, 'pt'),
     enunciadoTex: `A = ${area} \\qquad b = ${base}`,
     gabarito,
     resolucao: {
@@ -209,8 +208,7 @@ function exercicioEscala(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `area-escala-${k}-${area}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma figura de área ${area} cm² é ampliada de modo que todos os comprimentos fiquem ` +
-      `${k} vezes maiores. Qual é a nova área, em cm²?`,
+      textoDoMolde(moldesDe('areas-de-figuras-planas', 'forma-2')[0]!, { area, k }, 'pt'),
     enunciadoTex: `A = ${area} \\qquad k = ${k}`,
     gabarito,
     resolucao: {
@@ -277,7 +275,7 @@ function exercicioLosango(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `area-losango-${maior}-${menor}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um losango tem diagonais de ${maior} cm e ${menor} cm. ` + 'Qual é sua área, em cm²?',
+      textoDoMolde(moldesDe('areas-de-figuras-planas', 'forma-3')[0]!, { maior, menor }, 'pt'),
     enunciadoTex: `D = ${maior} \\qquad d = ${menor}`,
     gabarito,
     resolucao: {
@@ -342,9 +340,7 @@ function exercicioComposta(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `area-composta-${base}-${alturaRetangulo}-${alturaTriangulo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma figura é formada por um retângulo de ${base} cm por ${alturaRetangulo} cm com um ` +
-      `triângulo de mesma base e altura ${alturaTriangulo} cm apoiado em cima. ` +
-      'Qual é a área total, em cm²?',
+      textoDoMolde(moldesDe('areas-de-figuras-planas', 'forma-4')[0]!, { base, alturaRetangulo, alturaTriangulo }, 'pt'),
     enunciadoTex: `b = ${base} \\qquad h_r = ${alturaRetangulo} \\qquad h_t = ${alturaTriangulo}`,
     gabarito,
     resolucao: {

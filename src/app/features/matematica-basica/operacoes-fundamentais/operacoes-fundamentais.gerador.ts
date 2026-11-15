@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { No, avaliar, expressaoParaTex, numero, op, resolverExpressaoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarValorSimples } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -63,14 +64,14 @@ function exercicioSimbolico(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `operacoes-simbolico-${nivel}-${rng.inteiro(0, 99999)}`,
     nivel,
-    enunciado: 'Resolva respeitando a ordem das operações.',
+    enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-1')[0]!, {  }, 'pt'),
     traducoes: {
       fr: {
-        enunciado: 'Calculez en respectant l’ordre des opérations.',
+        enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-2')[0]!, {  }, 'pt'),
         dica: 'Que faut-il calculer en premier dans cette expression ?',
       },
       en: {
-        enunciado: 'Evaluate, respecting the order of operations.',
+        enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-3')[0]!, {  }, 'pt'),
         dica: 'What has to be computed first in this expression?',
       },
     },

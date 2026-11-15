@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   DENSIDADE_AGUA,
   DENSIDADE_AR,
@@ -71,8 +72,7 @@ function exercicioPressao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `flu-p-${profundidade}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Qual é a pressão total a ${profundidade} m de profundidade na água? (em kPa, 2 casas ` +
-      'decimais; considere a atmosfera de 101,325 kPa)',
+      textoDoMolde(moldesDe('fluidos-e-aerodinamica', 'forma-1')[0]!, { profundidade }, 'pt'),
     enunciadoTex: `h = ${profundidade}\\,\\text{m} \\qquad \\rho = 1000\\,\\text{kg/m}^{3}`,
     gabarito,
     resolucao: {
@@ -121,8 +121,7 @@ function exercicioEmpuxo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `flu-e-${volumeLitros}-${densidadeCorpo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um corpo de ${volumeLitros} L totalmente submerso em água sofre que empuxo, em ` +
-      'newtons? (2 casas decimais)',
+      textoDoMolde(moldesDe('fluidos-e-aerodinamica', 'forma-2')[0]!, { volumeLitros }, 'pt'),
     enunciadoTex: `V = ${volumeLitros}\\,\\text{L} \\qquad \\rho_{água} = 1000\\,\\text{kg/m}^{3}`,
     gabarito: resultado.empuxo,
     resolucao: {
@@ -170,8 +169,7 @@ function exercicioFracaoSubmersa(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `flu-fs-${densidadeCorpo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um corpo de densidade ${densidadeCorpo} kg/m³ flutua em água. Que fração do seu volume ` +
-      'fica submersa? (responda entre 0 e 1, com 2 casas decimais)',
+      textoDoMolde(moldesDe('fluidos-e-aerodinamica', 'forma-3')[0]!, { densidadeCorpo }, 'pt'),
     enunciadoTex: `\\rho_{corpo} = ${densidadeCorpo} \\qquad \\rho_{água} = 1000\\,\\text{kg/m}^{3}`,
     gabarito: resultado.fracaoSubmersa,
     resolucao: { resultado: resultado.fracaoSubmersa, passos },
@@ -216,8 +214,7 @@ function exercicioSustentacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `flu-sus-${area}-${superior}-${inferior}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma asa de ${area} m² tem ar a ${superior} m/s na face superior e ${inferior} m/s na ` +
-      'inferior. Qual é a sustentação, em newtons? (2 casas decimais)',
+      textoDoMolde(moldesDe('fluidos-e-aerodinamica', 'forma-4')[0]!, { area, superior, inferior }, 'pt'),
     enunciadoTex: `A = ${area}\\,\\text{m}^{2} \\qquad v_{sup} = ${superior} \\qquad v_{inf} = ${inferior}`,
     gabarito: resultado,
     resolucao: {
@@ -285,8 +282,7 @@ function exercicioBernoulli(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `flu-bern-${velocidadeA}-${velocidadeB}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Ar acelera de ${velocidadeA} para ${velocidadeB} m/s num duto horizontal. ` +
-      'De quanto CAI a pressão, em Pa? (1 casa decimal)',
+      textoDoMolde(moldesDe('fluidos-e-aerodinamica', 'forma-5')[0]!, { velocidadeA, velocidadeB }, 'pt'),
     enunciadoTex:
       `v_A = ${velocidadeA} \\qquad v_B = ${velocidadeB} \\qquad ` +
       '\\rho = 1{,}225\\,\\text{kg/m}^{3}',

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { jurosCompostosComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -39,8 +40,7 @@ export const geradorJuros: GeradorExercicio<number> = {
         id: `juros-dobrar-${taxa}-${multiplo}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado:
-          `A uma taxa de ${taxa}% por período, em quantos períodos um capital se ` +
-          `multiplica por ${comoTexto}? (2 casas decimais)`,
+          textoDoMolde(moldesDe('juros-compostos', 'forma-1')[0]!, { taxa, comoTexto }, 'pt'),
         enunciadoTex: `i = ${taxa}\\% \\qquad M = ${comoTexto.replace(',', '{,}')}C`,
         gabarito,
         resolucao: {
@@ -105,8 +105,7 @@ export const geradorJuros: GeradorExercicio<number> = {
       id: `juros-${pergunta}-${capital}${taxa}${periodos}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado:
-        `Um capital de $ ${capital},00 é aplicado a ${taxa}% ao período, por ${periodos} ` +
-        `períodos, a juros compostos. Qual é ${pergunta === 'montante' ? 'o montante final' : 'o juro total'}? (2 casas)`,
+        textoDoMolde(moldesDe('juros-compostos', 'forma-2')[0]!, { capital, taxa, periodos, v1: pergunta === 'montante' ? 'o montante final' : 'o juro total' }, 'pt'),
       enunciadoTex: `C = ${capital} \\qquad i = ${taxa}\\% \\qquad n = ${periodos}`,
       gabarito,
       resolucao: {

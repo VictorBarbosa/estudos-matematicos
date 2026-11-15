@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   anguloLimiteComPassos,
   fendaDuplaComPassos,
@@ -88,7 +89,7 @@ function indice(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `optica-indice-${v}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `A luz atravessa um material a ${t(v)} × 10⁸ m/s. Qual é o índice de refração dele?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('optica', 'forma-1')[0]!, { v1: t(v), v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `c = 3 \\times 10^{8}\\ \\text{m/s} \\qquad v = ${tex(v)} \\times 10^{8}\\ \\text{m/s}`,
     gabarito,
     resolucao: {
@@ -131,7 +132,7 @@ function snell(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `optica-snell-${n2}-${theta1}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um raio de luz passa do ar (n = 1,00) para ${nome} (n = ${t(n2)}), fazendo ${theta1}° com a normal. Que ângulo o raio refratado faz com a normal, em graus?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('optica', 'forma-2')[0]!, { nome, v1: t(n2), theta1, v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `n_1 = 1{,}00 \\qquad \\theta_1 = ${theta1}^{\\circ} \\qquad n_2 = ${tex(n2)}`,
     gabarito,
     resolucao,
@@ -171,7 +172,7 @@ function critico(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `optica-critico-${n1}-${n2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `A luz sai de ${nome} (n = ${t(n1)}) para ${destino}. A partir de que ângulo com a normal ocorre reflexão total, em graus?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('optica', 'forma-3')[0]!, { nome, v1: t(n1), destino, v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `n_1 = ${tex(n1)} \\qquad n_2 = ${tex(n2)} \\qquad \\theta_c = \\;?`,
     gabarito,
     resolucao,
@@ -216,8 +217,7 @@ function lente(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `optica-lente-${f}-${p}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um objeto está a ${p} cm de uma lente ${tipo}. A que distância da lente se forma a imagem, em cm? ` +
-      `(negativo se a imagem for virtual)${casas(gabarito)}`,
+      textoDoMolde(moldesDe('optica', 'forma-4')[0]!, { p, tipo, v1: casas(gabarito) }, 'pt'),
     enunciadoTex: `f = ${f}\\ \\text{cm} \\qquad p = ${p}\\ \\text{cm} \\qquad p' = \\;?`,
     gabarito,
     resolucao,
@@ -269,8 +269,7 @@ function aumento(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `optica-aumento-${f}-${p}-${h}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um objeto de ${h} cm de altura está a ${t(p)} cm de uma lente convergente de foco ${f} cm. ` +
-      `Qual é a altura da imagem, em cm? (negativa se a imagem for invertida)${casas(gabarito)}`,
+      textoDoMolde(moldesDe('optica', 'forma-5')[0]!, { h, v1: t(p), f, v2: casas(gabarito) }, 'pt'),
     enunciadoTex: `f = ${f}\\ \\text{cm} \\qquad p = ${tex(p)}\\ \\text{cm} \\qquad h = ${h}\\ \\text{cm}`,
     gabarito,
     resolucao: {
@@ -326,8 +325,7 @@ function fenda(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `optica-fenda-${ordem}-${lambda}-${L}-${d}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Luz de ${lambda} nm passa por duas fendas separadas por ${t(d)} mm, e a tela fica a ${t(L)} m. ` +
-      `A que distância do centro está a ${ordem}ª franja clara, em mm?${casas(gabarito)}`,
+      textoDoMolde(moldesDe('optica', 'forma-6')[0]!, { lambda, v1: t(d), v2: t(L), ordem, v3: casas(gabarito) }, 'pt'),
     enunciadoTex: `\\lambda = ${lambda}\\ \\text{nm} \\qquad d = ${tex(d)}\\ \\text{mm} \\qquad L = ${tex(L)}\\ \\text{m} \\qquad m = ${ordem}`,
     gabarito,
     resolucao,
@@ -367,8 +365,7 @@ function fendaLambda(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `optica-lambda-${ordem}-${lambda}-${L}-${d}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Num experimento de fenda dupla com fendas separadas por ${t(d)} mm e tela a ${t(L)} m, a ${ordem}ª franja clara aparece a ${t(y)} mm do centro. ` +
-      `Qual é o comprimento de onda da luz, em nm?${casas(gabarito)}`,
+      textoDoMolde(moldesDe('optica', 'forma-7')[0]!, { v1: t(d), v2: t(L), ordem, v3: t(y), v4: casas(gabarito) }, 'pt'),
     enunciadoTex: `y_{${ordem}} = ${tex(y)}\\ \\text{mm} \\qquad d = ${tex(d)}\\ \\text{mm} \\qquad L = ${tex(L)}\\ \\text{m}`,
     gabarito,
     resolucao: {
@@ -424,8 +421,7 @@ function lenteDuas(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `optica-duas-${f1}-${p1}-${separacao}-${f2}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Duas lentes convergentes estão a ${separacao} cm uma da outra; a primeira tem foco ${f1} cm e a segunda, ${f2} cm. ` +
-      `Um objeto está a ${p1} cm antes da primeira. A que distância DEPOIS da segunda lente se forma a imagem final, em cm?${casas(gabarito)}`,
+      textoDoMolde(moldesDe('optica', 'forma-8')[0]!, { separacao, f1, f2, p1, v1: casas(gabarito) }, 'pt'),
     enunciadoTex: `f_1 = ${f1} \\qquad f_2 = ${f2} \\qquad D = ${separacao} \\qquad p_1 = ${p1}\\ (\\text{cm})`,
     gabarito,
     resolucao: {

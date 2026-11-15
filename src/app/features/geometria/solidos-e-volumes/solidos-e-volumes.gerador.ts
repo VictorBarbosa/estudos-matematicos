@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { NOME_SOLIDO, Solido, superficieComPassos, volumeComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -280,8 +281,7 @@ function exercicioEscala(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `sol-escala-${k}-${volume}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um sólido de volume ${numeroEmPortugues(volume)} cm³ é ampliado ${numeroEmPortugues(k)} vezes em todas as dimensões. Qual é ` +
-      'o novo volume, em cm³?',
+      textoDoMolde(moldesDe('solidos-e-volumes', 'forma-1')[0]!, { v1: numeroEmPortugues(volume), v2: numeroEmPortugues(k) }, 'pt'),
     enunciadoTex: `V = ${volume} \\qquad k = ${k}`,
     gabarito,
     resolucao: {
@@ -341,8 +341,7 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `sol-alt-${cone ? 'cone' : 'cil'}-${raio}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um ${cone ? 'cone' : 'cilindro'} de raio ${raio} cm tem volume ` +
-      `${numeroEmPortugues(Number(volume.toFixed(2)))} cm³. Qual é sua altura, em cm?`,
+      textoDoMolde(moldesDe('solidos-e-volumes', 'forma-2')[0]!, { v1: cone ? 'cone' : 'cilindro', raio, v2: numeroEmPortugues(Number(volume.toFixed(2))) }, 'pt'),
     enunciadoTex: `r = ${raio} \\qquad V = ${Number(volume.toFixed(2))}`,
     gabarito: altura,
     resolucao: {

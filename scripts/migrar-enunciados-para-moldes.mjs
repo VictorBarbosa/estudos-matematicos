@@ -41,20 +41,37 @@ const moldes = JSON.parse(readFileSync(moldesPath, 'utf8'));
 
 /** `${a}` vira `{dados-calculo.a}`; expressões viram chaves sintéticas. */
 function converter(template) {
-  const valores = [];
+  /*
+   * `nomes` guarda expressão -> chave, e é ele que impede duas armadilhas.
+   *
+   * A mesma expressão citada duas vezes tem de virar a MESMA chave — o objeto
+   * não aceita `{ r3, r3 }`. E uma expressão diferente nunca pode cair numa
+   * chave já usada: um gerador com uma variável chamada `v1` e uma expressão
+   * sintética também chamada `v1` perdia uma das duas, calado, e o enunciado
+   * saía com o número errado no lugar certo. Por isso o nome sintético é
+   * `expressao1`, e ainda assim é conferido contra os que já existem.
+   */
+  const nomes = new Map();
   let sintetico = 0;
 
-  const texto = template.replace(/\$\{([^}]*)\}/g, (_inteiro, expressao) => {
-    const limpa = expressao.trim();
-    if (/^[A-Za-z_$][A-Za-z0-9_$]*$/.test(limpa)) {
-      valores.push([limpa, limpa]);
-      return `{dados-calculo.${limpa}}`;
+  const chave = (expressao) => {
+    if (nomes.has(expressao)) {
+      return nomes.get(expressao);
     }
-    const nome = `v${++sintetico}`;
-    valores.push([nome, limpa]);
-    return `{dados-calculo.${nome}}`;
+    const simples = /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(expressao);
+    let nome = simples ? expressao : `expressao${++sintetico}`;
+    while ([...nomes.values()].includes(nome)) {
+      nome = `expressao${++sintetico}`;
+    }
+    nomes.set(expressao, nome);
+    return nome;
+  };
+
+  const texto = template.replace(/\$\{([^}]*)\}/g, (_inteiro, expressao) => {
+    return `{dados-calculo.${chave(expressao.trim())}}`;
   });
 
+  const valores = [...nomes].map(([expressao, nome]) => [nome, expressao]);
   return { texto, valores };
 }
 
@@ -75,6 +92,19 @@ while ((encontro = padrao.exec(fonte)) !== null) {
   const bruto = juntar(encontro[2]);
   if (bruto.trim().length < 10) {
     continue; // Pedaço solto, não uma pergunta.
+  }
+  /*
+   * Template ANINHADO fica para a mão.
+   *
+   * `${altura > 0 ? \`, de uma altura de ${altura} m\` : ''}` é texto que só
+   * aparece às vezes, e a crase de dentro fecha o template de fora antes da
+   * hora: o recorte sai pela metade e leva junto o que vinha depois. Foi o que
+   * aconteceu em quatro geradores de física antes desta guarda existir — e o
+   * TypeScript só reclamou dez linhas adiante, no `formatar`.
+   */
+  if (/\$\{[^}]*`/.test(encontro[2])) {
+    console.log(`  (pulado: template aninhado) ${bruto.slice(0, 70)}`);
+    continue;
   }
   achados.push({ inteiro: encontro[0], ligacao: encontro[1], fim: encontro[3], bruto });
 }

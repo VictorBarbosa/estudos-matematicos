@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   alcanceDoLancamentoComPassos,
   cicloideParametrica,
@@ -88,8 +89,7 @@ function daReta(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um móvel segue estas equações, com t em segundos. Qual é a coordenada x no instante ` +
-      `t = ${t}? ${PEDIDO}`,
+      textoDoMolde(moldesDe('equacoes-parametricas', 'forma-1')[0]!, { t, PEDIDO }, 'pt'),
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: posicaoNoInstanteComPassos(curva, t),
@@ -190,7 +190,7 @@ function daElipse(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `eli-${a}${b}-${doze}`,
     nivel,
     rng,
-    enunciado: `Qual é a coordenada x quando o parâmetro vale ${doze} doze avos de uma volta? ${PEDIDO}`,
+    enunciado: textoDoMolde(moldesDe('equacoes-parametricas', 'forma-2')[0]!, { doze, PEDIDO }, 'pt'),
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: posicaoNoInstanteComPassos(curva, t),
@@ -231,8 +231,7 @@ function doLancamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um projétil parte a ${v0} m/s formando ${angulo} graus com a horizontal, com g igual a ` +
-      `9,81 m/s². Qual é a altura no instante t = ${t} s? ${PEDIDO}`,
+      textoDoMolde(moldesDe('equacoes-parametricas', 'forma-3')[0]!, { v0, angulo, t, PEDIDO }, 'pt'),
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: posicaoNoInstanteComPassos(curva, t).passos },
@@ -318,8 +317,7 @@ function doAlcance(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Um projétil parte a ${v0} m/s formando ${angulo} graus com a horizontal, com g igual a ` +
-      `9,81 m/s². Qual é o alcance, em m? ${PEDIDO}`,
+      textoDoMolde(moldesDe('equacoes-parametricas', 'forma-4')[0]!, { v0, angulo, PEDIDO }, 'pt'),
     enunciadoTex: `t_{voo} = \\frac{2v_{0}\\operatorname{sen}\\theta}{g}`,
     gabarito: resolucao.resultado,
     resolucao,

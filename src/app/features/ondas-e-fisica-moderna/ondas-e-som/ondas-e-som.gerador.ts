@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   dopplerComPassos,
   harmonicoComPassos,
@@ -101,7 +102,7 @@ function velocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
     return {
       id: `onda-lambda-${v}-${f}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Um som de ${f} Hz se propaga ${meio} a ${v} m/s. Qual é o comprimento de onda, em metros?${casas(gabarito)}`,
+      enunciado: textoDoMolde(moldesDe('ondas-e-som', 'forma-1')[0]!, { f, meio, v, expressao1: casas(gabarito) }, 'pt'),
       enunciadoTex: `v = ${v}\\ \\text{m/s} \\qquad f = ${f}\\ \\text{Hz} \\qquad \\lambda = \\;?`,
       gabarito,
       resolucao: {
@@ -142,7 +143,7 @@ function velocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-v-${lambda}-${f}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Uma onda tem comprimento de onda ${t(lambda)} m e frequência ${f} Hz. Qual é a velocidade dela, em m/s?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('ondas-e-som', 'forma-2')[0]!, { expressao1: t(lambda), f, expressao2: casas(gabarito) }, 'pt'),
     enunciadoTex: `\\lambda = ${numeroOnda(lambda)}\\ \\text{m} \\qquad f = ${f}\\ \\text{Hz}`,
     gabarito,
     resolucao,
@@ -176,7 +177,7 @@ function corda(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-corda-${tracao}-${gramas}-${emGramas ? 'g' : 'kg'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Uma corda está esticada com tração de ${tracao} N e tem densidade linear de ${muTexto}. Com que velocidade uma onda corre por ela, em m/s?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('ondas-e-som', 'forma-3')[0]!, { tracao, muTexto, expressao1: casas(gabarito) }, 'pt'),
     enunciadoTex: `T = ${tracao}\\ \\text{N} \\qquad \\mu = ${emGramas ? `${gramas}\\ \\text{g/m}` : `${numeroOnda(mu, 3)}\\ \\text{kg/m}`}`,
     gabarito,
     resolucao: emGramas
@@ -229,7 +230,7 @@ function harmonicoCorda(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-harm-${ordem}-${L}-${v}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Uma corda de violão de ${t(L)} m, presa nas duas pontas, conduz ondas a ${v} m/s. Qual é ${nome}, em Hz?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('ondas-e-som', 'forma-4')[0]!, { expressao1: t(L), v, nome, expressao2: casas(gabarito) }, 'pt'),
     enunciadoTex: `L = ${numeroOnda(L)}\\ \\text{m} \\qquad v = ${v}\\ \\text{m/s} \\qquad n = ${ordem}`,
     gabarito,
     resolucao,
@@ -270,7 +271,7 @@ function decibeis(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-db-${mantissa}-${expoente}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um som chega com intensidade de ${intensidadeTexto} W/m². Qual é o nível sonoro, em dB?${casas(gabarito)}`,
+    enunciado: textoDoMolde(moldesDe('ondas-e-som', 'forma-5')[0]!, { intensidadeTexto, expressao1: casas(gabarito) }, 'pt'),
     enunciadoTex: `I = ${mantissa === 1 ? '' : `${mantissa} \\times `}10^{${expoente}}\\ \\text{W/m}^{2} \\qquad I_0 = 10^{-12}\\ \\text{W/m}^{2}`,
     gabarito,
     resolucao,
@@ -313,8 +314,7 @@ function tubo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `onda-tubo-${fechado ? 'f' : 'a'}-${ordem}-${L}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Um tubo de ${t(L)} m ${fechado ? 'fechado numa ponta e aberto na outra' : 'aberto nas duas pontas'} ressoa com o som a ${SOM_NO_AR} m/s. ` +
-      `Qual é a frequência do ${ordem}º harmônico, em Hz?${casas(gabarito)}`,
+      textoDoMolde(moldesDe('ondas-e-som', 'forma-6')[0]!, { expressao1: t(L), expressao2: fechado ? 'fechado numa ponta e aberto na outra' : 'aberto nas duas pontas', SOM_NO_AR, ordem, expressao3: casas(gabarito) }, 'pt'),
     enunciadoTex: `L = ${numeroOnda(L)}\\ \\text{m} \\qquad v = ${SOM_NO_AR}\\ \\text{m/s} \\qquad n = ${ordem}`,
     gabarito,
     resolucao,
@@ -357,8 +357,7 @@ function doppler(nivel: Nivel, rng: Rng, ambos: boolean): Exercicio<number> {
     id: `onda-doppler-${ambos ? 'ab' : 'f'}-${f}-${vf}-${vo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Uma sirene de ${f} Hz ${fonteTexto}${observadorTexto}. Com o som a ${SOM_NO_AR} m/s, ` +
-      `que frequência o ouvinte escuta, em Hz?${casas(gabarito)}`,
+      textoDoMolde(moldesDe('ondas-e-som', 'forma-7')[0]!, { f, fonteTexto, observadorTexto, SOM_NO_AR, expressao1: casas(gabarito) }, 'pt'),
     enunciadoTex: `f = ${f}\\ \\text{Hz} \\qquad v_f = ${vf}\\ \\text{m/s} \\qquad v_o = ${vo}\\ \\text{m/s}`,
     gabarito,
     resolucao,
@@ -401,8 +400,7 @@ function batimento(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `onda-bat-${L}-${v1}-${v2}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      `Duas cordas de ${t(L)} m, presas nas pontas, conduzem ondas a ${v1} m/s e a ${v2} m/s. ` +
-      `Tocadas juntas no fundamental, quantos batimentos por segundo se ouvem?${casas(gabarito)}`,
+      textoDoMolde(moldesDe('ondas-e-som', 'forma-8')[0]!, { expressao1: t(L), v1, v2, expressao2: casas(gabarito) }, 'pt'),
     enunciadoTex: `L = ${numeroOnda(L)}\\ \\text{m} \\qquad v_1 = ${v1}\\ \\text{m/s} \\qquad v_2 = ${v2}\\ \\text{m/s}`,
     gabarito,
     resolucao: {
