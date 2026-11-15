@@ -171,10 +171,29 @@ export class HistoriasService {
    * tela.
    */
   esperandoPrimeiroLote(topicoId: string, forma: string, nivel: string): boolean {
-    return (
-      this.emVoo().includes(`${topicoId}|${forma}`) &&
-      (this.filas()[chaveDe(topicoId, forma, nivel)] ?? []).length === 0
-    );
+    const filaVazia = (this.filas()[chaveDe(topicoId, forma, nivel)] ?? []).length === 0;
+
+    if (!filaVazia) {
+      return false;
+    }
+
+    // Em voo, ou a ponto de ir: sem a segunda metade, o enunciado de sempre
+    // piscava na tela no instante entre o exercício aparecer e o pedido sair,
+    // porque quem dispara o pedido é um `effect`, que roda depois do primeiro
+    // desenho. «Vai tentar» cobre esse vão.
+    return this.emVoo().includes(`${topicoId}|${forma}`) || this.vaiTentar();
+  }
+
+  /**
+   * Ainda vale pedir à LLM?
+   *
+   * Falso com o mecanismo desligado nas Configurações e falso depois das
+   * falhas seguidas — e é isso que impede a tela de esperar para sempre por
+   * quem não vai responder. Com o Ollama fora do ar, a primeira tentativa
+   * falha depressa e o exercício aparece.
+   */
+  vaiTentar(): boolean {
+    return this.ligado() && this.lote.valeTentarDeNovo();
   }
 
   /** Esquece as falhas ao entrar noutro tópico. */

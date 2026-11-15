@@ -116,6 +116,24 @@ describe('o aviso de escrita na tela', () => {
     ).toBeNull();
   });
 
+  /**
+   * O instante do piscar.
+   *
+   * Quem dispara o pedido à LLM é um `effect`, que roda depois do primeiro
+   * desenho — então havia um quadro em que o enunciado de sempre aparecia
+   * antes de a espera ligar. Sem espera para esse vão, o original pisca na
+   * tela, que é exatamente o que não se quer.
+   */
+  it('o enunciado original não pisca antes do pedido sair', () => {
+    fixture.detectChanges();
+
+    expect(
+      fixture.nativeElement.querySelector('.enunciado'),
+      'o original não pode aparecer nem por um quadro',
+    ).toBeNull();
+    expect(fixture.nativeElement.querySelector('.escrevendo')).not.toBeNull();
+  });
+
   it('o aviso explica a espera e diz que ela tem fim', async () => {
     await new Promise((r) => setTimeout(r, 30));
     fixture.detectChanges();
