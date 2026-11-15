@@ -191,8 +191,7 @@ function doBuraco(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `bur-${comum}-${polo}-${zero}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('funcoes-racionais', 'forma-4')[0]!, {  }, 'pt') + PEDIDO,
+    enunciado: textoDoMolde(moldesDe('funcoes-racionais', 'forma-4')[0]!, {}, 'pt') + PEDIDO,
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito: comum,
     resolucao: { resultado: comum, passos: assintotaOuBuracoComPassos(f, comum).passos },
@@ -241,8 +240,7 @@ function daObliqua(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `obl-${a}${b}${c}-${d}${e}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('funcoes-racionais', 'forma-5')[0]!, {  }, 'pt') + PEDIDO,
+    enunciado: textoDoMolde(moldesDe('funcoes-racionais', 'forma-5')[0]!, {}, 'pt') + PEDIDO,
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: comportamentoNoInfinitoComPassos(f).passos },

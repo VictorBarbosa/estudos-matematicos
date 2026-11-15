@@ -354,7 +354,8 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<Simbolica> {
     id: `regras-quociente-${a}${b}${c}${d}-${ponto}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      textoDoMolde(moldesDe('regras-de-derivacao', 'forma-4')[0]!, { ponto }, 'pt') + (Number.isInteger(valor) ? '' : ' Responda como fração, ex.: -7/16.'),
+      textoDoMolde(moldesDe('regras-de-derivacao', 'forma-4')[0]!, { ponto }, 'pt') +
+      (Number.isInteger(valor) ? '' : ' Responda como fração, ex.: -7/16.'),
     enunciadoTex: `f(x) = \\frac{${binomio(a, b)}}{${binomio(c, d)}}`,
     gabarito,
     resolucao: {

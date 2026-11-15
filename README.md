@@ -749,11 +749,35 @@ que precisa de três vereditos — `bateu`, `não bateu` e **`não sei conferir`
 «errado» a quem acertou é pior que não ter verificador. O plano inteiro está em
 `plano-rascunho-no-celular.md`.
 
-## O banco de enunciados escritos à mão
+## Os enunciados: um arquivo, duas naturezas
 
-Os 135 geradores montam a conta; o banco traz **enunciados de texto escritos à mão**, um
-arquivo JSON em `core/enunciados/enunciados.json`. Acrescentar uma pergunta é acrescentar um
-objeto; tirar é apagar o objeto. Nada de código.
+**Todo texto de enunciado do site vive em `core/enunciados/enunciados.json`** — nenhum
+gerador tem frase de pergunta dentro dele. Acrescentar ou reescrever uma pergunta é editar o
+arquivo. Nada de código.
+
+O arquivo guarda duas naturezas de entrada, e é o que a entrada **traz** que diz qual é:
+
+| traz                             | é                       | quem dá os números                        |
+| -------------------------------- | ----------------------- | ----------------------------------------- |
+| `nivel` e `dados-calculo`        | uma **pergunta pronta** | já estão escritos, e `total` é a resposta |
+| `forma` e nenhum `dados-calculo` | um **molde**            | o gerador, a cada sorteio                 |
+
+As duas usam as mesmas lacunas `{dados-calculo.x}`, e por isso moram juntas: para quem
+escreve, são a mesma coisa — o texto de uma pergunta.
+
+### O molde e a forma
+
+Um molde é o texto de uma pergunta que o gerador monta: «{dados-calculo.a} kg de farinha
+custam R$ {dados-calculo.b}». A `forma` liga o molde ao ramo do código que sabe calcular
+aquela pergunta — `direta`, `inversa`, `composta-inversa-inversa`. Trocar as palavras de um
+molde é livre; **mudar a forma dele muda a matemática**.
+
+Nos moldes, `fr` e `en` são opcionais: 110 geradores nunca tiveram tradução de enunciado, e
+sem o campo a tela cai no português, que é o que ela já fazia. Com o campo, passa a traduzir —
+e traduzir virou preencher uma linha do JSON, não editar um gerador. Numa pergunta pronta as
+três línguas seguem obrigatórias.
+
+### A pergunta pronta
 
 ```json
 {

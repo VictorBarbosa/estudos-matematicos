@@ -10732,5 +10732,61 @@
     "enunciado": {
       "br": "Para que valor de k os três vetores são linearmente dependentes (estão num mesmo plano)?"
     }
+  },
+  {
+    "topico": "trajetoria-balistica",
+    "forma": "forma-1",
+    "enunciado": {
+      "br": "Um projétil é lançado a {dados-calculo.velocidadeInicial} m/s formando {dados-calculo.anguloGraus}° com a horizontal, de uma altura de {dados-calculo.alturaInicial} m. Qual é {dados-calculo.nome}? (em {dados-calculo.unidade}, 2 casas)"
+    }
+  },
+  {
+    "topico": "trajetoria-balistica",
+    "forma": "forma-2",
+    "enunciado": {
+      "br": "Um projétil é lançado a {dados-calculo.velocidadeInicial} m/s formando {dados-calculo.anguloGraus}° com a horizontal. Qual é {dados-calculo.nome}? (em {dados-calculo.unidade}, 2 casas)"
+    }
+  },
+  {
+    "topico": "gradiente-e-direcional",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Qual é a componente x do gradiente desta função no ponto ({dados-calculo.x}, {dados-calculo.y})? "
+    }
+  },
+  {
+    "topico": "gradiente-e-direcional",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Qual é a componente y do gradiente desta função no ponto ({dados-calculo.x}, {dados-calculo.y})? "
+    }
+  },
+  {
+    "topico": "estatistica-e-incerteza",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Um experimento produziu os pares (x, y): {dados-calculo.pares}. Qual é a inclinação da reta ajustada?"
+    }
+  },
+  {
+    "topico": "definicao-de-derivada",
+    "forma": "forma-3",
+    "enunciado": {
+      "br": "A posição de um carro, em metros, é s(t) com t em segundos. Qual é a velocidade média entre t = {dados-calculo.inicio} s e t = {dados-calculo.fim} s, em m/s? (2 casas)"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "forma": "forma-9",
+    "enunciado": {
+      "br": "Uma partícula de carga {dados-calculo.carga} μC atravessa a {dados-calculo.v} m/s um campo magnético de {dados-calculo.campo} T, formando {dados-calculo.angulo}° com ele. Qual é o módulo da força magnética, em mN? (2 casas decimais)"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "forma": "forma-10",
+    "enunciado": {
+      "br": "Uma partícula de carga {dados-calculo.carga} μC atravessa a {dados-calculo.v} m/s um campo magnético de {dados-calculo.campo} T, perpendicular a ele. Qual é o módulo da força magnética, em mN? (2 casas decimais)"
+    }
   }
 ]

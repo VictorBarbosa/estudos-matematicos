@@ -102,7 +102,7 @@ const achados = [];
  * `+` e o que vem depois ficando onde estão. O texto sai do TypeScript do
  * mesmo jeito; o que fica é a junção, que é estrutura, não conteúdo.
  */
-const literal = '(?:`[^`]*`|\'[^\'\n]*\')';
+const literal = "(?:`[^`]*`|'[^'\n]*')";
 const padroes = [
   new RegExp(`enunciado(\\s*[:=]\\s*)((?:${literal}\\s*\\+\\s*)*${literal})\\s*([,;])`, 'g'),
   new RegExp(`enunciado(\\s*[:=]\\s*)((?:${literal}\\s*\\+\\s*)+)`, 'g'),
@@ -121,40 +121,40 @@ const consumidos = [];
 let encontro;
 for (const padrao of padroes)
   while ((encontro = padrao.exec(fonte)) !== null) {
-  const inicio = encontro.index;
-  if (consumidos.some(([de, ate]) => inicio >= de && inicio < ate)) {
-    continue;
-  }
-  consumidos.push([inicio, inicio + encontro[0].length]);
-  const bruto = juntar(encontro[2]);
-  if (bruto.trim().length < 10) {
-    continue; // Pedaço solto, não uma pergunta.
-  }
-  /*
-   * Template ANINHADO fica para a mão.
-   *
-   * `${altura > 0 ? \`, de uma altura de ${altura} m\` : ''}` é texto que só
-   * aparece às vezes, e a crase de dentro fecha o template de fora antes da
-   * hora: o recorte sai pela metade e leva junto o que vinha depois. Foi o que
-   * aconteceu em quatro geradores de física antes desta guarda existir — e o
-   * TypeScript só reclamou dez linhas adiante, no `formatar`.
-   */
-  if (/\$\{[^}]*`/.test(encontro[2])) {
-    console.log(`  (pulado: template aninhado) ${bruto.slice(0, 70)}`);
-    continue;
-  }
-  /*
-   * Chave dentro de texto também fica para a mão.
-   *
-   * `${num(x).replace('{,}', ',')}` tem uma `}` que é PARTE de uma string, e o
-   * recorte — que procura a primeira `}` — para ali, no meio da expressão. O
-   * sinal é sempre uma aspa com chave dentro.
-   */
-  if (/\$\{[^}]*['"][^'"]*[{}]/.test(encontro[2])) {
-    console.log(`  (pulado: chave dentro de texto) ${bruto.slice(0, 70)}`);
-    continue;
-  }
-  achados.push({ inteiro: encontro[0], ligacao: encontro[1], fim: encontro[3] ?? ' + ', bruto });
+    const inicio = encontro.index;
+    if (consumidos.some(([de, ate]) => inicio >= de && inicio < ate)) {
+      continue;
+    }
+    consumidos.push([inicio, inicio + encontro[0].length]);
+    const bruto = juntar(encontro[2]);
+    if (bruto.trim().length < 10) {
+      continue; // Pedaço solto, não uma pergunta.
+    }
+    /*
+     * Template ANINHADO fica para a mão.
+     *
+     * `${altura > 0 ? \`, de uma altura de ${altura} m\` : ''}` é texto que só
+     * aparece às vezes, e a crase de dentro fecha o template de fora antes da
+     * hora: o recorte sai pela metade e leva junto o que vinha depois. Foi o que
+     * aconteceu em quatro geradores de física antes desta guarda existir — e o
+     * TypeScript só reclamou dez linhas adiante, no `formatar`.
+     */
+    if (/\$\{[^}]*`/.test(encontro[2])) {
+      console.log(`  (pulado: template aninhado) ${bruto.slice(0, 70)}`);
+      continue;
+    }
+    /*
+     * Chave dentro de texto também fica para a mão.
+     *
+     * `${num(x).replace('{,}', ',')}` tem uma `}` que é PARTE de uma string, e o
+     * recorte — que procura a primeira `}` — para ali, no meio da expressão. O
+     * sinal é sempre uma aspa com chave dentro.
+     */
+    if (/\$\{[^}]*['"][^'"]*[{}]/.test(encontro[2])) {
+      console.log(`  (pulado: chave dentro de texto) ${bruto.slice(0, 70)}`);
+      continue;
+    }
+    achados.push({ inteiro: encontro[0], ligacao: encontro[1], fim: encontro[3] ?? ' + ', bruto });
   }
 
 if (achados.length === 0) {

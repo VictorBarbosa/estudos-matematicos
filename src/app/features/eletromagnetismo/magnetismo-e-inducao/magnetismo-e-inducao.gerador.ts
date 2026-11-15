@@ -113,9 +113,13 @@ function lorentz(nivel: Nivel, rng: Rng, comAngulo: boolean): Exercicio<number> 
   return {
     id: `mag-lorentz-${q}-${v}-${b}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Uma partícula de carga ${q < 0 ? `(${q})` : q} μC atravessa a ${v} m/s um campo magnético de ${txt(b)} T, ` +
-      `${comAngulo ? `formando ${angulo}° com ele` : 'perpendicular a ele'}. Qual é o módulo da força magnética, em mN? (2 casas decimais)`,
+    enunciado: textoDoMolde(
+      moldesDe('magnetismo-e-inducao', comAngulo ? 'forma-9' : 'forma-10')[0]!,
+      // A carga negativa vai entre parênteses para não colar no «-» que a
+      // frase já tem; o ângulo só é citado no molde que o menciona.
+      { carga: q < 0 ? `(${q})` : q, v, campo: txt(b), angulo },
+      'pt',
+    ),
     enunciadoTex: `q = ${q}\\ \\mu\\text{C} \\qquad v = ${v}\\ \\text{m/s} \\qquad B = ${tex(b)}\\ \\text{T} \\qquad \\theta = ${angulo}^{\\circ}`,
     gabarito,
     resolucao: {
@@ -494,7 +498,12 @@ function barra(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mag-barra-${b}-${l}-${v}-${r}-${pede}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-8')[0]!, { expressao1: txt(l), v, expressao2: txt(b), expressao3: txt(r) }, 'pt') + (pede === 'corrente'
+      textoDoMolde(
+        moldesDe('magnetismo-e-inducao', 'forma-8')[0]!,
+        { expressao1: txt(l), v, expressao2: txt(b), expressao3: txt(r) },
+        'pt',
+      ) +
+      (pede === 'corrente'
         ? 'Qual é a corrente induzida, em A? (2 casas decimais)'
         : 'Qual é a força magnética que freia a barra, em N? (2 casas decimais)'),
     enunciadoTex: `B = ${tex(b)}\\ \\text{T} \\qquad L = ${tex(l)}\\ \\text{m} \\qquad v = ${v}\\ \\text{m/s} \\qquad R = ${tex(r)}\\ \\Omega`,

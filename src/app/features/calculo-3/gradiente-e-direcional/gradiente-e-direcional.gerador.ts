@@ -95,8 +95,11 @@ function daComponente(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      `Qual é a componente ${emX ? 'x' : 'y'} do gradiente desta função no ponto (${x}, ${y})? ` +
-      PEDIDO,
+      textoDoMolde(
+        moldesDe('gradiente-e-direcional', emX ? 'forma-4' : 'forma-5')[0]!,
+        { x, y },
+        'pt',
+      ) + PEDIDO,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {

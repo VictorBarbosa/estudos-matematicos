@@ -93,7 +93,8 @@ function daParcial(nivel: Nivel, rng: Rng, emX: boolean): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      textoDoMolde(moldesDe('derivadas-parciais', 'forma-2')[0]!, { variavel, x, y }, 'pt') + PEDIDO,
+      textoDoMolde(moldesDe('derivadas-parciais', 'forma-2')[0]!, { variavel, x, y }, 'pt') +
+      PEDIDO,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: parcialComPassos(q, x, y, emX),
@@ -210,8 +211,7 @@ function daMista(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `mx-${q.a}${q.b}${q.c}${q.d}${q.e}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('derivadas-parciais', 'forma-3')[0]!, {  }, 'pt') + PEDIDO,
+    enunciado: textoDoMolde(moldesDe('derivadas-parciais', 'forma-3')[0]!, {}, 'pt') + PEDIDO,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {

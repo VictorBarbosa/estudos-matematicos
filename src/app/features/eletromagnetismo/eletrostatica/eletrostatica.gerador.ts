@@ -256,7 +256,8 @@ function escala(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `elet-escala-${a}-${b}-${d}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      textoDoMolde(moldesDe('eletrostatica', 'forma-7')[0]!, { a, b, expressao1: txt(d) }, 'pt') + (fracao ? ' Responda como fração ou com 2 casas decimais.' : ''),
+      textoDoMolde(moldesDe('eletrostatica', 'forma-7')[0]!, { a, b, expressao1: txt(d) }, 'pt') +
+      (fracao ? ' Responda como fração ou com 2 casas decimais.' : ''),
     enunciadoTex: `q_1 \\to ${a}q_1 \\qquad q_2 \\to ${b}q_2 \\qquad r \\to ${tex(d)}r`,
     gabarito,
     resolucao: {

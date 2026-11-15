@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { GRAVIDADE, paraRadianos, resolverLancamentoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -93,10 +94,17 @@ export const geradorBalistica: GeradorExercicio<number> = {
     return {
       id: `balistica-${pergunta}-${velocidadeInicial}${anguloGraus}${alturaInicial}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        `Um projétil é lançado a ${velocidadeInicial} m/s formando ${anguloGraus}° com a ` +
-        `horizontal${alturaInicial > 0 ? `, de uma altura de ${alturaInicial} m` : ''}. ` +
-        `Qual é ${nome}? (em ${unidade}, 2 casas)`,
+      /*
+       * Dois moldes, e não um com um pedaço condicional dentro: a altura de
+       * lançamento ou está na pergunta ou não está, e um «{dados-calculo.x}»
+       * que às vezes vira texto e às vezes vira nada deixaria meia frase no
+       * arquivo e a outra metade no código.
+       */
+      enunciado: textoDoMolde(
+        moldesDe('trajetoria-balistica', alturaInicial > 0 ? 'forma-1' : 'forma-2')[0]!,
+        { velocidadeInicial, anguloGraus, alturaInicial, nome, unidade },
+        'pt',
+      ),
       enunciadoTex:
         `v_0 = ${velocidadeInicial}\\text{ m/s} \\qquad \\theta = ${anguloGraus}° \\qquad ` +
         `h_0 = ${alturaInicial}\\text{ m} \\qquad g = 9{,}81\\text{ m/s}^{2}`,

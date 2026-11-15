@@ -134,7 +134,8 @@ function mesmaBase(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `expeq-base2-${familia.nome}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-7')[0]!, {  }, 'pt') + (Number.isInteger(gabarito) ? '' : ' Responda como fração.'),
+      textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-7')[0]!, {}, 'pt') +
+      (Number.isInteger(gabarito) ? '' : ' Responda como fração.'),
     enunciadoTex: `${familia.nome}^{x} = ${lado}`,
     gabarito,
     resolucao: {

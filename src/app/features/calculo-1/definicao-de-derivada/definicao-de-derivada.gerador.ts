@@ -199,10 +199,13 @@ function exercicioTaxaMedia(nivel: Nivel, rng: Rng, s: Polinomio): Exercicio<num
   return {
     id: `defder-taxa-${s.coeficientes.join('_')}-${inicio}-${fim}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `A posição de um carro, em metros, é s(t) com t em segundos. Qual é a velocidade ` +
-      `média entre t = ${num(inicio).replace('{,}', ',')} s e t = ${num(fim).replace('{,}', ',')} s, ` +
-      'em m/s? (2 casas)',
+    // Os instantes entram como números: quem põe a vírgula decimal é o idioma,
+    // no `textoDoMolde`, e não um `replace` no meio da frase.
+    enunciado: textoDoMolde(
+      moldesDe('definicao-de-derivada', 'forma-3')[0]!,
+      { inicio, fim },
+      'pt',
+    ),
     enunciadoTex: `s(t) = ${s.paraTex('t')}`,
     gabarito,
     resolucao: {

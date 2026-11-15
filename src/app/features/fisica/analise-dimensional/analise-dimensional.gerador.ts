@@ -190,7 +190,8 @@ function exercicioConsistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `dim-cons-${embaralhadas.map((c) => c.descricao[0]).join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      textoDoMolde(moldesDe('analise-dimensional', 'forma-7')[0]!, {  }, 'pt') + embaralhadas.map((candidata, indice) => `${indice + 1}) ${candidata.descricao}`).join('\n'),
+      textoDoMolde(moldesDe('analise-dimensional', 'forma-7')[0]!, {}, 'pt') +
+      embaralhadas.map((candidata, indice) => `${indice + 1}) ${candidata.descricao}`).join('\n'),
     enunciadoTex: embaralhadas
       .map((candidata, indice) => `${indice + 1})\\; ${candidata.tex}`)
       .join(' \\qquad '),
@@ -356,7 +357,12 @@ function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `dim-comb-${primeira.nome}-${segunda.nome}-${expoente}-${base}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      textoDoMolde(moldesDe('analise-dimensional', 'forma-8')[0]!, { expressao1: primeira.nome, expressao2: segunda.nome }, 'pt') + `${expoente === 1 ? '' : ` elevado${expoente === 2 ? ' ao quadrado' : ' ao cubo'}`}. ` +
+      textoDoMolde(
+        moldesDe('analise-dimensional', 'forma-8')[0]!,
+        { expressao1: primeira.nome, expressao2: segunda.nome },
+        'pt',
+      ) +
+      `${expoente === 1 ? '' : ` elevado${expoente === 2 ? ' ao quadrado' : ' ao cubo'}`}. ` +
       `Na dimensão do resultado, qual é o expoente de ${base}? (responda 0 se não aparece)`,
     enunciadoTex: `\\left[\\text{${primeira.simbolo}} \\cdot \\text{${segunda.simbolo}}${potencia}\\right] = ?`,
     gabarito,

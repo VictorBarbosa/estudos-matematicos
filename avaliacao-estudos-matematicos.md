@@ -337,6 +337,24 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
     foi calculado com a convenção do próprio tópico — duas ou três casas decimais onde o corretor
     as exige, fração onde ele pede fração, fórmula química onde ele lê fórmula — e conferido pelo
     corretor do tópico, entrada por entrada. Documentado no README. Suíte em **14 555 testes**.
+  - **O texto saiu do código por inteiro (15/11).** O pedido foi literal: nada de enunciado
+    em TypeScript. Hoje **nenhum dos 130 geradores tem frase de pergunta dentro dele** — são
+    **535 moldes** no mesmo `enunciados.json`, com `forma` no lugar de `nivel` e sem
+    `dados-calculo`, porque os números chegam do gerador a cada sorteio. O que ficou em cada
+    gerador é o que não é texto: o sorteio, a conta, a resolução passo a passo, as armadilhas
+    e os diagnósticos.
+  - **A migração foi feita por script** (`scripts/migrar-enunciados-para-moldes.mjs`), um
+    gerador por vez, com os testes do tópico como rede. Ela recusa três casos, e cada recusa
+    nasceu de um defeito que os testes pegaram: template aninhado (a crase de dentro fecha o
+    de fora e o recorte leva junto o que vinha depois), chave dentro de texto
+    (`replace('{,}', ',')` tem uma `}` que não é o fim da expressão) e **colisão de nomes** —
+    um gerador com variável `v1` e uma expressão sintética também `v1` perdia uma das duas
+    calado, trocando o número no enunciado sem quebrar a compilação. Os quatro casos
+    recusados foram migrados à mão, e o trecho condicional virou DOIS moldes: a altura de
+    lançamento ou está na pergunta ou não está.
+  - Dois defeitos meus que só os guardas viram: as fugas do JavaScript (`\n`) iam para o JSON
+    como barra e ene, grudando a lista de opções na pergunta; e a numeração das formas
+    recomeçava do 1 a cada execução, fazendo um exercício exibir o texto de outro.
   - **O que o guarda NÃO confere:** a matemática do enunciado. Ele refaz a conta só quando ela
     está declarada (`x1 acao x2`); nas demais, ele garante que o corretor ACEITA o total, o que
     não é o mesmo que o total estar certo. Quem escrever uma entrada nova continua responsável

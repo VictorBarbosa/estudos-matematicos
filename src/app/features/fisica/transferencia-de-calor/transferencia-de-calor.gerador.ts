@@ -310,7 +310,11 @@ function doEquilibrioRadiativo(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado:
-      textoDoMolde(moldesDe('transferencia-de-calor', 'forma-7')[0]!, { expressao1: numero(area), expressao2: numero(emissividade), potencia }, 'pt') + PEDIDO,
+      textoDoMolde(
+        moldesDe('transferencia-de-calor', 'forma-7')[0]!,
+        { expressao1: numero(area), expressao2: numero(emissividade), potencia },
+        'pt',
+      ) + PEDIDO,
     enunciadoTex: `P = \\varepsilon\\sigma A T^{4}`,
     gabarito,
     resolucao: equilibrioRadiativoComPassos(potencia, emissividade, area),

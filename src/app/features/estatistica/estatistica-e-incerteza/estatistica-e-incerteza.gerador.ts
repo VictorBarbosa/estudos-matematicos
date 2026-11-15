@@ -310,9 +310,11 @@ function exercicioInclinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `inc-reta-${inclinacao}-${intercepto}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um experimento produziu os pares (x, y): ${pontos.map((p) => `(${p.x}; ${p.y})`).join(', ')}. ` +
-      'Qual é a inclinação da reta ajustada?',
+    enunciado: textoDoMolde(
+      moldesDe('estatistica-e-incerteza', 'forma-4')[0]!,
+      { pares: pontos.map((p) => `(${p.x}; ${p.y})`).join(', ') },
+      'pt',
+    ),
     enunciadoTex: pontos.map((p) => `(${p.x},\\, ${p.y})`).join(' \\quad '),
     gabarito: resultado.inclinacao,
     resolucao: { resultado: resultado.inclinacao, passos },

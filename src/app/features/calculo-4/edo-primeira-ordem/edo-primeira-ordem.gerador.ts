@@ -229,8 +229,7 @@ function doEquilibrio(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `eq-${p}-${q}-${y0}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('edo-primeira-ordem', 'forma-4')[0]!, { y0 }, 'pt') + PEDIDO,
+    enunciado: textoDoMolde(moldesDe('edo-primeira-ordem', 'forma-4')[0]!, { y0 }, 'pt') + PEDIDO,
     enunciadoTex: `y' + ${formatar(p)}y = ${formatar(q)}`,
     gabarito,
     resolucao: {

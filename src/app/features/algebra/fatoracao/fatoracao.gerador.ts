@@ -49,7 +49,8 @@ export const geradorFatoracao: GeradorExercicio<number> = {
       id: `fatoracao-${nivel}-${polinomio.paraTex()}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado:
-        textoDoMolde(moldesDe('fatoracao', 'forma-1')[0]!, {  }, 'pt') + (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
+        textoDoMolde(moldesDe('fatoracao', 'forma-1')[0]!, {}, 'pt') +
+        (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
       enunciadoTex: `${polinomio.paraTex()} = 0`,
       gabarito,
       resolucao: {
@@ -158,7 +159,8 @@ function exercicioCubos(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `fatoracao-cubos-${a}${op}${b}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      textoDoMolde(moldesDe('fatoracao', 'forma-2')[0]!, {  }, 'pt') + (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
+      textoDoMolde(moldesDe('fatoracao', 'forma-2')[0]!, {}, 'pt') +
+      (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
     enunciadoTex: `${polinomio.paraTex()} = 0`,
     gabarito,
     resolucao: {
@@ -259,7 +261,8 @@ function exercicioAgrupamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `fatoracao-agrupamento-${a}${b}${s * k2}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado:
-      textoDoMolde(moldesDe('fatoracao', 'forma-3')[0]!, {  }, 'pt') + (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
+      textoDoMolde(moldesDe('fatoracao', 'forma-3')[0]!, {}, 'pt') +
+      (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
     enunciadoTex: `${polinomio.paraTex()} = 0`,
     gabarito,
     resolucao: {
