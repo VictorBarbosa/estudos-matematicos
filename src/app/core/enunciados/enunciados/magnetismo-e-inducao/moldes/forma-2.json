@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o campo magnético a {dados-calculo.r} cm de um fio longo com {dados-calculo.i} A, em μT? (2 casas decimais)"
+    "br": "Qual é o campo magnético a {dados-calculo.r} cm de um fio longo com {dados-calculo.i} A, em μT? (2 casas decimais)",
+    "fr": "Quel est le champ magnétique à {dados-calculo.r} cm d'un long fil parcouru par {dados-calculo.i} A, en μT ? (2 décimales)",
+    "en": "What is the magnetic field at {dados-calculo.r} cm from a long wire carrying {dados-calculo.i} A, in μT? (2 decimal places)"
   }
 }

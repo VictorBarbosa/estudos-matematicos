@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a soma dos ângulos internos de um {dados-calculo.v1}? (em graus)"
+    "br": "Qual é a soma dos ângulos internos de um {dados-calculo.v1}? (em graus)",
+    "fr": "Quelle est la somme des angles intérieurs d'un {dados-calculo.v1} ? (en degrés)",
+    "en": "What is the sum of the interior angles of a {dados-calculo.v1}? (in degrees)"
   }
 }

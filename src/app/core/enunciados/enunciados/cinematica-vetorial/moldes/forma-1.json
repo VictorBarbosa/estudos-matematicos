@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo vai da primeira posição à segunda em {dados-calculo.tempo} s, com as coordenadas em metros. Qual é o módulo da velocidade média vetorial, em m/s? Responda com 2 casas decimais."
+    "br": "Um corpo vai da primeira posição à segunda em {dados-calculo.tempo} s, com as coordenadas em metros. Qual é o módulo da velocidade média vetorial, em m/s? Responda com 2 casas decimais.",
+    "fr": "Un corps va de la première position à la seconde en {dados-calculo.tempo} s, les coordonnées étant en mètres. Quel est le module de la vitesse moyenne vectorielle, en m/s ? Répondez avec 2 décimales.",
+    "en": "A body goes from the first position to the second in {dados-calculo.tempo} s, with coordinates in metres. What is the magnitude of the average velocity vector, in m/s? Answer with 2 decimal places."
   }
 }

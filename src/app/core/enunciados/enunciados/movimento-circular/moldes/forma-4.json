@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo gira em círculo de {dados-calculo.v1} m de raio, com período de {dados-calculo.periodo} s. Qual é a aceleração centrípeta, em m/s ao quadrado? Responda com 3 casas decimais."
+    "br": "Um corpo gira em círculo de {dados-calculo.v1} m de raio, com período de {dados-calculo.periodo} s. Qual é a aceleração centrípeta, em m/s ao quadrado? Responda com 3 casas decimais.",
+    "fr": "Un corps tourne en cercle de {dados-calculo.v1} m de rayon, avec une période de {dados-calculo.periodo} s. Quelle est l'accélération centripète, en m/s au carré ? Répondez avec 3 décimales.",
+    "en": "A body moves in a circle of radius {dados-calculo.v1} m, with a period of {dados-calculo.periodo} s. What is the centripetal acceleration, in m/s squared? Answer with 3 decimal places."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o momento de inércia de {dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio, em kg·m²? Responda com 3 casas decimais."
+    "br": "Qual é o momento de inércia de {dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio, em kg·m²? Responda com 3 casas decimais.",
+    "fr": "Quel est le moment d'inertie de {dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg et de {dados-calculo.v4} m de rayon, en kg·m² ? Répondez avec 3 décimales.",
+    "en": "What is the moment of inertia of {dados-calculo.v1} {dados-calculo.v2} of {dados-calculo.v3} kg and radius {dados-calculo.v4} m, in kg·m²? Answer with 3 decimal places."
   }
 }

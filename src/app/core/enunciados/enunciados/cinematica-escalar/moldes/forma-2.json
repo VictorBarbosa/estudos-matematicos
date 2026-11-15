@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo parte do repouso de uma posição com {dados-calculo.v0} m/s e acelera a {dados-calculo.a} m/s². Quanto ele se desloca em {dados-calculo.t} s?"
+    "br": "Um corpo parte do repouso de uma posição com {dados-calculo.v0} m/s e acelera a {dados-calculo.a} m/s². Quanto ele se desloca em {dados-calculo.t} s?",
+    "fr": "Un corps part du repos d'une position avec {dados-calculo.v0} m/s et accélère à {dados-calculo.a} m/s². De combien se déplace-t-il en {dados-calculo.t} s ?",
+    "en": "A body starts from rest from a position with {dados-calculo.v0} m/s and accelerates at {dados-calculo.a} m/s². How far does it travel in {dados-calculo.t} s?"
   }
 }

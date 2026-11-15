@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma bobina de {dados-calculo.n} espiras, cada uma com {dados-calculo.a} cm², está perpendicular a um campo que passa de {dados-calculo.v1} T para {dados-calculo.v2} T em {dados-calculo.v3} s. Qual é o módulo da fem induzida, em V? (2 casas decimais)"
+    "br": "Uma bobina de {dados-calculo.n} espiras, cada uma com {dados-calculo.a} cm², está perpendicular a um campo que passa de {dados-calculo.v1} T para {dados-calculo.v2} T em {dados-calculo.v3} s. Qual é o módulo da fem induzida, em V? (2 casas decimais)",
+    "fr": "Une bobine de {dados-calculo.n} spires, chacune de {dados-calculo.a} cm², est perpendiculaire à un champ qui passe de {dados-calculo.v1} T à {dados-calculo.v2} T en {dados-calculo.v3} s. Quel est le module de la fem induite, en V ? (2 décimales)",
+    "en": "A coil of {dados-calculo.n} turns, each of {dados-calculo.a} cm², is perpendicular to a field that goes from {dados-calculo.v1} T to {dados-calculo.v2} T in {dados-calculo.v3} s. What is the magnitude of the induced emf, in V? (2 decimal places)"
   }
 }

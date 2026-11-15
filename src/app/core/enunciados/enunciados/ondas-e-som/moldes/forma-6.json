@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um tubo de {dados-calculo.expressao1} m {dados-calculo.expressao2} ressoa com o som a {dados-calculo.SOM_NO_AR} m/s. Qual é a frequência do {dados-calculo.ordem}º harmônico, em Hz?{dados-calculo.expressao3}"
+    "br": "Um tubo de {dados-calculo.expressao1} m {dados-calculo.expressao2} ressoa com o som a {dados-calculo.SOM_NO_AR} m/s. Qual é a frequência do {dados-calculo.ordem}º harmônico, em Hz?{dados-calculo.expressao3}",
+    "fr": "Un tube de {dados-calculo.expressao1} m {dados-calculo.expressao2} résonne avec le son à {dados-calculo.SOM_NO_AR} m/s. Quelle est la fréquence de l'harmonique {dados-calculo.ordem}, en Hz ?{dados-calculo.expressao3}",
+    "en": "A tube of {dados-calculo.expressao1} m {dados-calculo.expressao2} resonates with sound at {dados-calculo.SOM_NO_AR} m/s. What is the frequency of the {dados-calculo.ordem}th harmonic, in Hz?{dados-calculo.expressao3}"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Quanta energia guarda um capacitor de {dados-calculo.c} μF carregado a {dados-calculo.v} V, em mJ? (2 casas decimais)"
+    "br": "Quanta energia guarda um capacitor de {dados-calculo.c} μF carregado a {dados-calculo.v} V, em mJ? (2 casas decimais)",
+    "fr": "Quelle énergie stocke un condensateur de {dados-calculo.c} μF chargé à {dados-calculo.v} V, en mJ ? (2 décimales)",
+    "en": "How much energy does a capacitor of {dados-calculo.c} μF charged to {dados-calculo.v} V store, in mJ? (2 decimal places)"
   }
 }

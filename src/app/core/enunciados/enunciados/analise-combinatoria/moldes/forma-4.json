@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Quantos anagramas distintos tem a palavra {dados-calculo.palavra}?"
+    "br": "Quantos anagramas distintos tem a palavra {dados-calculo.palavra}?",
+    "fr": "Combien d'anagrammes distincts le mot {dados-calculo.palavra} possède-t-il ?",
+    "en": "How many distinct anagrams does the word {dados-calculo.palavra} have?"
   }
 }

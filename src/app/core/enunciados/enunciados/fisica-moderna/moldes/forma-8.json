@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um elétron (energia de repouso mc² = 511 keV) se move a {dados-calculo.v1}c. Qual é a energia cinética dele, em keV?{dados-calculo.v2}"
+    "br": "Um elétron (energia de repouso mc² = 511 keV) se move a {dados-calculo.v1}c. Qual é a energia cinética dele, em keV?{dados-calculo.v2}",
+    "fr": "Un électron (énergie au repos mc² = 511 keV) se déplace à {dados-calculo.v1}c. Quelle est son énergie cinétique, en keV ?{dados-calculo.v2}",
+    "en": "An electron (rest energy mc² = 511 keV) moves at {dados-calculo.v1}c. What is its kinetic energy, in keV?{dados-calculo.v2}"
   }
 }

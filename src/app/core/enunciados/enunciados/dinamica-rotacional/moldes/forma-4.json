@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.v1} {dados-calculo.v2} rola sem deslizar a partir do repouso, descendo {dados-calculo.v3} m de desnível. Com gravidade de 9,81 m/s ao quadrado, qual é a velocidade do centro de massa no fim, em m/s? Responda com 3 casas decimais."
+    "br": "{dados-calculo.v1} {dados-calculo.v2} rola sem deslizar a partir do repouso, descendo {dados-calculo.v3} m de desnível. Com gravidade de 9,81 m/s ao quadrado, qual é a velocidade do centro de massa no fim, em m/s? Responda com 3 casas decimais.",
+    "fr": "{dados-calculo.v1} {dados-calculo.v2} roule sans glisser à partir du repos en descendant {dados-calculo.v3} m de dénivelé. Avec une gravité de 9,81 m/s au carré, quelle est la vitesse du centre de masse à la fin, en m/s ? Répondez avec 3 décimales.",
+    "en": "{dados-calculo.v1} {dados-calculo.v2} rolls without slipping from rest, descending {dados-calculo.v3} m of height. With gravity 9.81 m/s squared, what is the speed of the centre of mass at the end, in m/s? Answer with 3 decimal places."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Derive e calcule f'({dados-calculo.x0}). Responda com 3 casas decimais."
+    "br": "Derive e calcule f'({dados-calculo.x0}). Responda com 3 casas decimais.",
+    "fr": "Dérivez et calculez f'({dados-calculo.x0}). Répondez avec 3 décimales.",
+    "en": "Differentiate and calculate f'({dados-calculo.x0}). Answer with 3 decimal places."
   }
 }

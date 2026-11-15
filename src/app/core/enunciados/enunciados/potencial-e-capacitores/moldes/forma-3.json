@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual trabalho um agente externo realiza para levar, devagar, uma carga de {dados-calculo.v1} μC de um ponto a {dados-calculo.va} V até um ponto a {dados-calculo.vb} V, em mJ (com sinal)? (2 casas decimais)"
+    "br": "Qual trabalho um agente externo realiza para levar, devagar, uma carga de {dados-calculo.v1} μC de um ponto a {dados-calculo.va} V até um ponto a {dados-calculo.vb} V, em mJ (com sinal)? (2 casas decimais)",
+    "fr": "Quel travail un agent extérieur effectue-t-il pour amener, lentement, une charge de {dados-calculo.v1} μC d'un point à {dados-calculo.va} V jusqu'à un point à {dados-calculo.vb} V, en mJ (avec signe) ? (2 décimales)",
+    "en": "What work does an external agent do to move, slowly, a charge of {dados-calculo.v1} μC from a point at {dados-calculo.va} V to a point at {dados-calculo.vb} V, in mJ (with sign)? (2 decimal places)"
   }
 }

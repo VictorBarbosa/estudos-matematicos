@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Derive e calcule f'({dados-calculo.ponto})."
+    "br": "Derive e calcule f'({dados-calculo.ponto}).",
+    "fr": "Dérivez et calculez f'({dados-calculo.ponto}).",
+    "en": "Differentiate and calculate f'({dados-calculo.ponto})."
   }
 }

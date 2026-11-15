@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A primeira é a velocidade da aeronave em relação ao ar e a segunda é a do vento, em m/s. Qual é o módulo da velocidade em relação ao solo? Responda com 2 casas decimais."
+    "br": "A primeira é a velocidade da aeronave em relação ao ar e a segunda é a do vento, em m/s. Qual é o módulo da velocidade em relação ao solo? Responda com 2 casas decimais.",
+    "fr": "La première est la vitesse de l'aéronef par rapport à l'air et la seconde celle du vent, en m/s. Quel est le module de la vitesse par rapport au sol ? Répondez avec 2 décimales.",
+    "en": "The first is the aircraft's velocity relative to the air and the second is the wind's, in m/s. What is the magnitude of the velocity relative to the ground? Answer with 2 decimal places."
   }
 }

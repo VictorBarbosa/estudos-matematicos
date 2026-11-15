@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A série de potências tem centro a e raio R dados ao lado. Dos dois extremos do intervalo, x = a − R e x = a + R, quantos pertencem ao intervalo de convergência? Responda 0, 1 ou 2."
+    "br": "A série de potências tem centro a e raio R dados ao lado. Dos dois extremos do intervalo, x = a − R e x = a + R, quantos pertencem ao intervalo de convergência? Responda 0, 1 ou 2.",
+    "fr": "La série entière a pour centre a et pour rayon R les valeurs données à côté. Des deux extrémités de l'intervalle, x = a − R et x = a + R, combien appartiennent à l'intervalle de convergence ? Répondez 0, 1 ou 2.",
+    "en": "The power series has centre a and radius R given alongside. Of the two endpoints of the interval, x = a − R and x = a + R, how many belong to the interval of convergence? Answer 0, 1 or 2."
   }
 }

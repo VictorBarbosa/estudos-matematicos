@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um {dados-calculo.v1} tem área {dados-calculo.v2} cm² e base {dados-calculo.v3} cm. Qual é sua altura, em cm?"
+    "br": "Um {dados-calculo.v1} tem área {dados-calculo.v2} cm² e base {dados-calculo.v3} cm. Qual é sua altura, em cm?",
+    "fr": "Un {dados-calculo.v1} a une aire de {dados-calculo.v2} cm² et une base de {dados-calculo.v3} cm. Quelle est sa hauteur, en cm ?",
+    "en": "A {dados-calculo.v1} has area {dados-calculo.v2} cm² and base {dados-calculo.v3} cm. What is its height, in cm?"
   }
 }

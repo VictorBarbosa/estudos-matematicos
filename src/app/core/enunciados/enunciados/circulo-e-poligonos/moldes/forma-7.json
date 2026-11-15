@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Dois círculos concêntricos têm raios {dados-calculo.menor} cm e {dados-calculo.maior} cm. Qual é a área da coroa entre eles? (em cm², 2 casas decimais)"
+    "br": "Dois círculos concêntricos têm raios {dados-calculo.menor} cm e {dados-calculo.maior} cm. Qual é a área da coroa entre eles? (em cm², 2 casas decimais)",
+    "fr": "Deux cercles concentriques ont des rayons de {dados-calculo.menor} cm et {dados-calculo.maior} cm. Quelle est l'aire de la couronne comprise entre eux ? (en cm², 2 décimales)",
+    "en": "Two concentric circles have radii {dados-calculo.menor} cm and {dados-calculo.maior} cm. What is the area of the ring between them? (in cm², 2 decimal places)"
   }
 }

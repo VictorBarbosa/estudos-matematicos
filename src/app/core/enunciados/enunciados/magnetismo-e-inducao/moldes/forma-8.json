@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma barra de {dados-calculo.expressao1} m desliza a {dados-calculo.v} m/s sobre trilhos, num campo de {dados-calculo.expressao2} T perpendicular ao plano. O circuito fechado tem {dados-calculo.expressao3} Ω. "
+    "br": "Uma barra de {dados-calculo.expressao1} m desliza a {dados-calculo.v} m/s sobre trilhos, num campo de {dados-calculo.expressao2} T perpendicular ao plano. O circuito fechado tem {dados-calculo.expressao3} Ω. ",
+    "fr": "Une barre de {dados-calculo.expressao1} m glisse à {dados-calculo.v} m/s sur des rails, dans un champ de {dados-calculo.expressao2} T perpendiculaire au plan. Le circuit fermé a {dados-calculo.expressao3} Ω. ",
+    "en": "A bar of {dados-calculo.expressao1} m slides at {dados-calculo.v} m/s on rails, in a field of {dados-calculo.expressao2} T perpendicular to the plane. The closed circuit has {dados-calculo.expressao3} Ω. "
   }
 }

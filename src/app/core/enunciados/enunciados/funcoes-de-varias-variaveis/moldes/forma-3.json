@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Cortando a superfície com o plano y = {dados-calculo.y0}, sobra uma parábola em x. Qual é a abscissa do vértice dessa parábola? Responda com 3 casas decimais."
+    "br": "Cortando a superfície com o plano y = {dados-calculo.y0}, sobra uma parábola em x. Qual é a abscissa do vértice dessa parábola? Responda com 3 casas decimais.",
+    "fr": "En coupant la surface par le plan y = {dados-calculo.y0}, il reste une parabole en x. Quelle est l'abscisse du sommet de cette parabole ? Répondez avec 3 décimales.",
+    "en": "Cutting the surface with the plane y = {dados-calculo.y0} leaves a parabola in x. What is the x-coordinate of the vertex of that parabola? Answer with 3 decimal places."
   }
 }

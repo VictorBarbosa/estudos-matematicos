@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um círculo tem área {dados-calculo.v1} cm². Qual é o seu raio? (em cm, 2 casas decimais)"
+    "br": "Um círculo tem área {dados-calculo.v1} cm². Qual é o seu raio? (em cm, 2 casas decimais)",
+    "fr": "Un disque a une aire de {dados-calculo.v1} cm². Quel est son rayon ? (en cm, 2 décimales)",
+    "en": "A circle has area {dados-calculo.v1} cm². What is its radius? (in cm, 2 decimal places)"
   }
 }

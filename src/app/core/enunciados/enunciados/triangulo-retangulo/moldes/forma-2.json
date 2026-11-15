@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Num triângulo retângulo, o cateto oposto a um ângulo mede {dados-calculo.oposto} e o adjacente mede {dados-calculo.adjacente}. Quanto mede esse ângulo, em graus? (2 casas decimais)"
+    "br": "Num triângulo retângulo, o cateto oposto a um ângulo mede {dados-calculo.oposto} e o adjacente mede {dados-calculo.adjacente}. Quanto mede esse ângulo, em graus? (2 casas decimais)",
+    "fr": "Dans un triangle rectangle, le côté opposé à un angle mesure {dados-calculo.oposto} et le côté adjacent mesure {dados-calculo.adjacente}. Combien mesure cet angle, en degrés ? (2 décimales)",
+    "en": "In a right triangle, the side opposite an angle measures {dados-calculo.oposto} and the adjacent side measures {dados-calculo.adjacente}. How large is that angle, in degrees? (2 decimal places)"
   }
 }

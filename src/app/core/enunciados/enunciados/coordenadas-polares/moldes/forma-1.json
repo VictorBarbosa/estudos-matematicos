@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "O ponto tem coordenadas polares (r, θ) = ({dados-calculo.r}, {dados-calculo.theta}°). Qual é a coordenada {dados-calculo.v1}? (2 casas decimais)"
+    "br": "O ponto tem coordenadas polares (r, θ) = ({dados-calculo.r}, {dados-calculo.theta}°). Qual é a coordenada {dados-calculo.v1}? (2 casas decimais)",
+    "fr": "Le point a pour coordonnées polaires (r, θ) = ({dados-calculo.r}, {dados-calculo.theta}°). Quelle est la coordonnée {dados-calculo.v1} ? (2 décimales)",
+    "en": "The point has polar coordinates (r, θ) = ({dados-calculo.r}, {dados-calculo.theta}°). What is the {dados-calculo.v1} coordinate? (2 decimal places)"
   }
 }

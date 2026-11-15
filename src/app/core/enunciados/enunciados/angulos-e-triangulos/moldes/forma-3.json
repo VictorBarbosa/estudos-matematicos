@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Num triângulo, dois ângulos medem {dados-calculo.primeiro}° e {dados-calculo.segundo}°. Quanto mede o terceiro?"
+    "br": "Num triângulo, dois ângulos medem {dados-calculo.primeiro}° e {dados-calculo.segundo}°. Quanto mede o terceiro?",
+    "fr": "Dans un triangle, deux angles mesurent {dados-calculo.primeiro}° et {dados-calculo.segundo}°. Combien mesure le troisième ?",
+    "en": "In a triangle, two angles measure {dados-calculo.primeiro}° and {dados-calculo.segundo}°. How large is the third one?"
   }
 }

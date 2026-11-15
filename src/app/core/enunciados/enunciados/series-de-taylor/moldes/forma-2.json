@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Use o polinômio de Maclaurin de grau {dados-calculo.grau} para aproximar esta função em x = {dados-calculo.expressao1}. Responda com 5 casas decimais."
+    "br": "Use o polinômio de Maclaurin de grau {dados-calculo.grau} para aproximar esta função em x = {dados-calculo.expressao1}. Responda com 5 casas decimais.",
+    "fr": "Utilisez le polynôme de Maclaurin de degré {dados-calculo.grau} pour approcher cette fonction en x = {dados-calculo.expressao1}. Répondez avec 5 décimales.",
+    "en": "Use the Maclaurin polynomial of degree {dados-calculo.grau} to approximate this function at x = {dados-calculo.expressao1}. Answer with 5 decimal places."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Numa {dados-calculo.nome} de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}, qual é a soma dos {dados-calculo.n} primeiros termos?"
+    "br": "Numa {dados-calculo.nome} de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}, qual é a soma dos {dados-calculo.n} primeiros termos?",
+    "fr": "Dans une {dados-calculo.nome} de premier terme {dados-calculo.primeiro} et de raison {dados-calculo.razao}, quelle est la somme des {dados-calculo.n} premiers termes ?",
+    "en": "In a {dados-calculo.nome} with first term {dados-calculo.primeiro} and common difference {dados-calculo.razao}, what is the sum of the first {dados-calculo.n} terms?"
   }
 }

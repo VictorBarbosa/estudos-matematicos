@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Resolva o sistema por Cramer. Quanto vale {dados-calculo.v1}?"
+    "br": "Resolva o sistema por Cramer. Quanto vale {dados-calculo.v1}?",
+    "fr": "Résolvez le système par Cramer. Combien vaut {dados-calculo.v1} ?",
+    "en": "Solve the system by Cramer's rule. What is {dados-calculo.v1}?"
   }
 }

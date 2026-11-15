@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o módulo de {dados-calculo.v1}? (2 casas decimais)"
+    "br": "Qual é o módulo de {dados-calculo.v1}? (2 casas decimais)",
+    "fr": "Quel est le module de {dados-calculo.v1} ? (2 décimales)",
+    "en": "What is the modulus of {dados-calculo.v1}? (2 decimal places)"
   }
 }

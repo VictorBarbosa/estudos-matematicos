@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o valor de f({dados-calculo.x})?"
+    "br": "Qual é o valor de f({dados-calculo.x})?",
+    "fr": "Quelle est la valeur de f({dados-calculo.x}) ?",
+    "en": "What is the value of f({dados-calculo.x})?"
   }
 }

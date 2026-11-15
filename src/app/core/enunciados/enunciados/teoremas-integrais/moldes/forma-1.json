@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule o divergente do campo no ponto ({dados-calculo.x0}, {dados-calculo.y0}, {dados-calculo.z0})."
+    "br": "Calcule o divergente do campo no ponto ({dados-calculo.x0}, {dados-calculo.y0}, {dados-calculo.z0}).",
+    "fr": "Calculez la divergence du champ au point ({dados-calculo.x0}, {dados-calculo.y0}, {dados-calculo.z0}).",
+    "en": "Calculate the divergence of the field at the point ({dados-calculo.x0}, {dados-calculo.y0}, {dados-calculo.z0})."
   }
 }

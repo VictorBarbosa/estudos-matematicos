@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, de quanto é o erro do método de Euler frente à solução exata, partindo de y(0) = {dados-calculo.y0}? Responda com 5 casas decimais."
+    "br": "Com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, de quanto é o erro do método de Euler frente à solução exata, partindo de y(0) = {dados-calculo.y0}? Responda com 5 casas decimais.",
+    "fr": "Avec un pas h = {dados-calculo.expressao1} et {dados-calculo.quantos} pas, quelle est l'erreur de la méthode d'Euler par rapport à la solution exacte, en partant de y(0) = {dados-calculo.y0} ? Répondez avec 5 décimales.",
+    "en": "With step h = {dados-calculo.expressao1} and {dados-calculo.quantos} steps, how large is the error of Euler's method compared with the exact solution, starting from y(0) = {dados-calculo.y0}? Answer with 5 decimal places."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma carga de {dados-calculo.q} μC está no vértice do ângulo reto de um triângulo. Sobre um cateto, a {dados-calculo.expressao1} m, há uma carga de {dados-calculo.q1} μC; sobre o outro, a {dados-calculo.expressao2} m, uma de {dados-calculo.q2} μC. Qual é o módulo da força resultante sobre a primeira, em N? (2 casas decimais)"
+    "br": "Uma carga de {dados-calculo.q} μC está no vértice do ângulo reto de um triângulo. Sobre um cateto, a {dados-calculo.expressao1} m, há uma carga de {dados-calculo.q1} μC; sobre o outro, a {dados-calculo.expressao2} m, uma de {dados-calculo.q2} μC. Qual é o módulo da força resultante sobre a primeira, em N? (2 casas decimais)",
+    "fr": "Une charge de {dados-calculo.q} μC se trouve au sommet de l'angle droit d'un triangle. Sur un côté de l'angle droit, à {dados-calculo.expressao1} m, il y a une charge de {dados-calculo.q1} μC ; sur l'autre, à {dados-calculo.expressao2} m, une charge de {dados-calculo.q2} μC. Quel est le module de la force résultante sur la première, en N ? (2 décimales)",
+    "en": "A charge of {dados-calculo.q} μC is at the vertex of the right angle of a triangle. On one leg, at {dados-calculo.expressao1} m, there is a charge of {dados-calculo.q1} μC; on the other, at {dados-calculo.expressao2} m, a charge of {dados-calculo.q2} μC. What is the magnitude of the net force on the first one, in N? (2 decimal places)"
   }
 }

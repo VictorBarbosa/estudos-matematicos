@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o comprimento de uma circunferência de raio {dados-calculo.raio} cm? (em cm, 2 casas decimais)"
+    "br": "Qual é o comprimento de uma circunferência de raio {dados-calculo.raio} cm? (em cm, 2 casas decimais)",
+    "fr": "Quelle est la longueur d'une circonférence de rayon {dados-calculo.raio} cm ? (en cm, 2 décimales)",
+    "en": "What is the circumference of a circle of radius {dados-calculo.raio} cm? (in cm, 2 decimal places)"
   }
 }

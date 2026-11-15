@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a área de um setor circular de raio {dados-calculo.raio} cm e ângulo {dados-calculo.anguloGraus}°? (em cm², 2 casas decimais)"
+    "br": "Qual é a área de um setor circular de raio {dados-calculo.raio} cm e ângulo {dados-calculo.anguloGraus}°? (em cm², 2 casas decimais)",
+    "fr": "Quelle est l'aire d'un secteur circulaire de rayon {dados-calculo.raio} cm et d'angle {dados-calculo.anguloGraus}° ? (en cm², 2 décimales)",
+    "en": "What is the area of a circular sector of radius {dados-calculo.raio} cm and angle {dados-calculo.anguloGraus}°? (in cm², 2 decimal places)"
   }
 }

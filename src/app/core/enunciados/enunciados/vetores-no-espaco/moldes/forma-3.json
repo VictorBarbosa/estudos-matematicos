@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule a componente {dados-calculo.eixo} do produto vetorial a × b."
+    "br": "Calcule a componente {dados-calculo.eixo} do produto vetorial a × b.",
+    "fr": "Calculez la composante {dados-calculo.eixo} du produit vectoriel a × b.",
+    "en": "Calculate the {dados-calculo.eixo} component of the cross product a × b."
   }
 }

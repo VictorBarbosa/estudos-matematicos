@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um motor queima {dados-calculo.vazao} kg/s de propelente com velocidade de exaustão de {dados-calculo.exaustao} m/s. Qual é o empuxo, em kN? (2 casas decimais)"
+    "br": "Um motor queima {dados-calculo.vazao} kg/s de propelente com velocidade de exaustão de {dados-calculo.exaustao} m/s. Qual é o empuxo, em kN? (2 casas decimais)",
+    "fr": "Un moteur brûle {dados-calculo.vazao} kg/s de propergol avec une vitesse d'éjection de {dados-calculo.exaustao} m/s. Quelle est la poussée, en kN ? (2 décimales)",
+    "en": "An engine burns {dados-calculo.vazao} kg/s of propellant with an exhaust velocity of {dados-calculo.exaustao} m/s. What is the thrust, in kN? (2 decimal places)"
   }
 }

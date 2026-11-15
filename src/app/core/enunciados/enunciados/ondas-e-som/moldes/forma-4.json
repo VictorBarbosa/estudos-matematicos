@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma corda de violão de {dados-calculo.expressao1} m, presa nas duas pontas, conduz ondas a {dados-calculo.v} m/s. Qual é {dados-calculo.nome}, em Hz?{dados-calculo.expressao2}"
+    "br": "Uma corda de violão de {dados-calculo.expressao1} m, presa nas duas pontas, conduz ondas a {dados-calculo.v} m/s. Qual é {dados-calculo.nome}, em Hz?{dados-calculo.expressao2}",
+    "fr": "Une corde de guitare de {dados-calculo.expressao1} m, fixée aux deux extrémités, conduit des ondes à {dados-calculo.v} m/s. Quel est {dados-calculo.nome}, en Hz ?{dados-calculo.expressao2}",
+    "en": "A guitar string of {dados-calculo.expressao1} m, fixed at both ends, carries waves at {dados-calculo.v} m/s. What is {dados-calculo.nome}, in Hz?{dados-calculo.expressao2}"
   }
 }

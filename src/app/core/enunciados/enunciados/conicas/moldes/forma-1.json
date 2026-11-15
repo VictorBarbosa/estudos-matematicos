@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a excentricidade desta {dados-calculo.nome}? (2 casas decimais)"
+    "br": "Qual é a excentricidade desta {dados-calculo.nome}? (2 casas decimais)",
+    "fr": "Quelle est l'excentricité de cette {dados-calculo.nome} ? (2 décimales)",
+    "en": "What is the eccentricity of this {dados-calculo.nome}? (2 decimal places)"
   }
 }

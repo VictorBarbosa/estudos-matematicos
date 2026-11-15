@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Três cargas estão numa reta: A = {dados-calculo.expressao1} μC à esquerda, M = {dados-calculo.qm} μC no meio e B = {dados-calculo.expressao2} μC à direita. M está a {dados-calculo.expressao3} m de A e a {dados-calculo.expressao4} m de B. Qual é a força resultante sobre M, em N, com sinal positivo para a direita? (2 casas decimais)"
+    "br": "Três cargas estão numa reta: A = {dados-calculo.expressao1} μC à esquerda, M = {dados-calculo.qm} μC no meio e B = {dados-calculo.expressao2} μC à direita. M está a {dados-calculo.expressao3} m de A e a {dados-calculo.expressao4} m de B. Qual é a força resultante sobre M, em N, com sinal positivo para a direita? (2 casas decimais)",
+    "fr": "Trois charges sont alignées : A = {dados-calculo.expressao1} μC à gauche, M = {dados-calculo.qm} μC au milieu et B = {dados-calculo.expressao2} μC à droite. M est à {dados-calculo.expressao3} m de A et à {dados-calculo.expressao4} m de B. Quelle est la force résultante sur M, en N, avec un signe positif vers la droite ? (2 décimales)",
+    "en": "Three charges lie on a line: A = {dados-calculo.expressao1} μC on the left, M = {dados-calculo.qm} μC in the middle and B = {dados-calculo.expressao2} μC on the right. M is {dados-calculo.expressao3} m from A and {dados-calculo.expressao4} m from B. What is the net force on M, in N, with positive sign to the right? (2 decimal places)"
   }
 }

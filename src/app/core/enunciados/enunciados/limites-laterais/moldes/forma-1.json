@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule o limite pela {dados-calculo.lado} no ponto x = {dados-calculo.ponto}."
+    "br": "Calcule o limite pela {dados-calculo.lado} no ponto x = {dados-calculo.ponto}.",
+    "fr": "Calculez la limite par la {dados-calculo.lado} au point x = {dados-calculo.ponto}.",
+    "en": "Calculate the limit from the {dados-calculo.lado} at the point x = {dados-calculo.ponto}."
   }
 }

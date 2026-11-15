@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma grandeza obedece a esta equação, com valor inicial {dados-calculo.y0}. Quanto ela vale em t = {dados-calculo.t}? Responda com 4 casas decimais."
+    "br": "Uma grandeza obedece a esta equação, com valor inicial {dados-calculo.y0}. Quanto ela vale em t = {dados-calculo.t}? Responda com 4 casas decimais.",
+    "fr": "Une grandeur obéit à cette équation, avec une valeur initiale de {dados-calculo.y0}. Combien vaut-elle à t = {dados-calculo.t} ? Répondez avec 4 décimales.",
+    "en": "A quantity obeys this equation, with initial value {dados-calculo.y0}. What is its value at t = {dados-calculo.t}? Answer with 4 decimal places."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A curva passa pelo ponto ({dados-calculo.x}, {dados-calculo.y}). Encontre a reta tangente nesse ponto e informe onde ela corta o eixo y. Responda como fração ou com 4 casas decimais."
+    "br": "A curva passa pelo ponto ({dados-calculo.x}, {dados-calculo.y}). Encontre a reta tangente nesse ponto e informe onde ela corta o eixo y. Responda como fração ou com 4 casas decimais.",
+    "fr": "La courbe passe par le point ({dados-calculo.x}, {dados-calculo.y}). Trouvez la tangente en ce point et indiquez où elle coupe l'axe y. Répondez sous forme de fraction ou avec 4 décimales.",
+    "en": "The curve passes through the point ({dados-calculo.x}, {dados-calculo.y}). Find the tangent line at that point and give where it crosses the y-axis. Answer as a fraction or with 4 decimal places."
   }
 }

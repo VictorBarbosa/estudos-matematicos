@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule o limite no infinito. (3 casas decimais)"
+    "br": "Calcule o limite no infinito. (3 casas decimais)",
+    "fr": "Calculez la limite à l'infini. (3 décimales)",
+    "en": "Calculate the limit at infinity. (3 decimal places)"
   }
 }

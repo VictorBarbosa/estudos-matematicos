@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Use a reta de mínimos quadrados destes dados para prever y quando x vale {dados-calculo.x}. Responda com 4 casas decimais."
+    "br": "Use a reta de mínimos quadrados destes dados para prever y quando x vale {dados-calculo.x}. Responda com 4 casas decimais.",
+    "fr": "Utilisez la droite des moindres carrés de ces données pour prévoir y lorsque x vaut {dados-calculo.x}. Répondez avec 4 décimales.",
+    "en": "Use the least-squares line for these data to predict y when x is {dados-calculo.x}. Answer with 4 decimal places."
   }
 }

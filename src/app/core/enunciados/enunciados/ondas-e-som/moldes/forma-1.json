@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um som de {dados-calculo.f} Hz se propaga {dados-calculo.meio} a {dados-calculo.v} m/s. Qual é o comprimento de onda, em metros?{dados-calculo.expressao1}"
+    "br": "Um som de {dados-calculo.f} Hz se propaga {dados-calculo.meio} a {dados-calculo.v} m/s. Qual é o comprimento de onda, em metros?{dados-calculo.expressao1}",
+    "fr": "Un son de {dados-calculo.f} Hz se propage {dados-calculo.meio} à {dados-calculo.v} m/s. Quelle est la longueur d'onde, en mètres ?{dados-calculo.expressao1}",
+    "en": "A sound of {dados-calculo.f} Hz propagates {dados-calculo.meio} at {dados-calculo.v} m/s. What is the wavelength, in metres?{dados-calculo.expressao1}"
   }
 }

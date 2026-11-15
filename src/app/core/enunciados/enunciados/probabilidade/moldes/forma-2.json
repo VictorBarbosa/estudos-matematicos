@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma urna tem {dados-calculo.vermelhas} bolas vermelhas e {dados-calculo.azuis} azuis. Retirando duas bolas SEM reposição, qual é a probabilidade de ambas serem vermelhas?"
+    "br": "Uma urna tem {dados-calculo.vermelhas} bolas vermelhas e {dados-calculo.azuis} azuis. Retirando duas bolas SEM reposição, qual é a probabilidade de ambas serem vermelhas?",
+    "fr": "Une urne contient {dados-calculo.vermelhas} boules rouges et {dados-calculo.azuis} bleues. En tirant deux boules SANS remise, quelle est la probabilité que les deux soient rouges ?",
+    "en": "An urn contains {dados-calculo.vermelhas} red balls and {dados-calculo.azuis} blue ones. Drawing two balls WITHOUT replacement, what is the probability that both are red?"
   }
 }

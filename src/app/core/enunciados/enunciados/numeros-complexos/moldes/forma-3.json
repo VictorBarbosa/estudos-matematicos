@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o argumento de {dados-calculo.v1}, medido no sentido anti-horário a partir do eixo real? (em graus, 2 casas)"
+    "br": "Qual é o argumento de {dados-calculo.v1}, medido no sentido anti-horário a partir do eixo real? (em graus, 2 casas)",
+    "fr": "Quel est l'argument de {dados-calculo.v1}, mesuré dans le sens anti-horaire à partir de l'axe réel ? (en degrés, 2 décimales)",
+    "en": "What is the argument of {dados-calculo.v1}, measured counterclockwise from the real axis? (in degrees, 2 decimals)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma força resultante de {dados-calculo.forca} N age sobre um corpo de {dados-calculo.massa} kg. Qual é a aceleração, em m/s²? (2 casas decimais)"
+    "br": "Uma força resultante de {dados-calculo.forca} N age sobre um corpo de {dados-calculo.massa} kg. Qual é a aceleração, em m/s²? (2 casas decimais)",
+    "fr": "Une force résultante de {dados-calculo.forca} N agit sur un corps de {dados-calculo.massa} kg. Quelle est l'accélération, en m/s² ? (2 décimales)",
+    "en": "A net force of {dados-calculo.forca} N acts on a body of {dados-calculo.massa} kg. What is the acceleration, in m/s²? (2 decimal places)"
   }
 }

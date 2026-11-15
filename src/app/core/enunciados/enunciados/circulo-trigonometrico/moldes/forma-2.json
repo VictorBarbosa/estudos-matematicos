@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Converta {dados-calculo.graus}° para radianos. (2 casas decimais)"
+    "br": "Converta {dados-calculo.graus}° para radianos. (2 casas decimais)",
+    "fr": "Convertissez {dados-calculo.graus}° en radians. (2 décimales)",
+    "en": "Convert {dados-calculo.graus}° to radians. (2 decimal places)"
   }
 }

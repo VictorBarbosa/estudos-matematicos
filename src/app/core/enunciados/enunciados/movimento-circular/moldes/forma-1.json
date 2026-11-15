@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um ponto descreve uma circunferência com período de {dados-calculo.periodo} s. Qual é a velocidade angular, em rad/s? Responda com 3 casas decimais."
+    "br": "Um ponto descreve uma circunferência com período de {dados-calculo.periodo} s. Qual é a velocidade angular, em rad/s? Responda com 3 casas decimais.",
+    "fr": "Un point décrit une circonférence avec une période de {dados-calculo.periodo} s. Quelle est la vitesse angulaire, en rad/s ? Répondez avec 3 décimales.",
+    "en": "A point moves along a circle with a period of {dados-calculo.periodo} s. What is the angular velocity, in rad/s? Answer with 3 decimal places."
   }
 }

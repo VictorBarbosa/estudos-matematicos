@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um gás {dados-calculo.v1} {dados-calculo.v2} J de calor e {dados-calculo.v3} {dados-calculo.v4} J de trabalho. Qual é a variação da energia interna, em joules?"
+    "br": "Um gás {dados-calculo.v1} {dados-calculo.v2} J de calor e {dados-calculo.v3} {dados-calculo.v4} J de trabalho. Qual é a variação da energia interna, em joules?",
+    "fr": "Un gaz {dados-calculo.v1} {dados-calculo.v2} J de chaleur et {dados-calculo.v3} {dados-calculo.v4} J de travail. Quelle est la variation de l'énergie interne, en joules ?",
+    "en": "A gas {dados-calculo.v1} {dados-calculo.v2} J of heat and {dados-calculo.v3} {dados-calculo.v4} J of work. What is the change in internal energy, in joules?"
   }
 }

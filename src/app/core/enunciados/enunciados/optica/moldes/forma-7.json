@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Num experimento de fenda dupla com fendas separadas por {dados-calculo.v1} mm e tela a {dados-calculo.v2} m, a {dados-calculo.ordem}ª franja clara aparece a {dados-calculo.v3} mm do centro. Qual é o comprimento de onda da luz, em nm?{dados-calculo.v4}"
+    "br": "Num experimento de fenda dupla com fendas separadas por {dados-calculo.v1} mm e tela a {dados-calculo.v2} m, a {dados-calculo.ordem}ª franja clara aparece a {dados-calculo.v3} mm do centro. Qual é o comprimento de onda da luz, em nm?{dados-calculo.v4}",
+    "fr": "Dans une expérience à double fente avec des fentes séparées de {dados-calculo.v1} mm et un écran à {dados-calculo.v2} m, la {dados-calculo.ordem}e frange claire apparaît à {dados-calculo.v3} mm du centre. Quelle est la longueur d'onde de la lumière, en nm ?{dados-calculo.v4}",
+    "en": "In a double-slit experiment with slits separated by {dados-calculo.v1} mm and a screen at {dados-calculo.v2} m, the {dados-calculo.ordem}th bright fringe appears {dados-calculo.v3} mm from the centre. What is the wavelength of the light, in nm?{dados-calculo.v4}"
   }
 }

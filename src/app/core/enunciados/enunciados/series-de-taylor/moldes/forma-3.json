@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Aproximando esta função em x = {dados-calculo.expressao1} pelo polinômio de Maclaurin de grau {dados-calculo.grau}, de quanto é o erro cometido? Responda com 5 casas decimais."
+    "br": "Aproximando esta função em x = {dados-calculo.expressao1} pelo polinômio de Maclaurin de grau {dados-calculo.grau}, de quanto é o erro cometido? Responda com 5 casas decimais.",
+    "fr": "En approchant cette fonction en x = {dados-calculo.expressao1} par le polynôme de Maclaurin de degré {dados-calculo.grau}, quelle est l'erreur commise ? Répondez avec 5 décimales.",
+    "en": "Approximating this function at x = {dados-calculo.expressao1} by the Maclaurin polynomial of degree {dados-calculo.grau}, how large is the error made? Answer with 5 decimal places."
   }
 }

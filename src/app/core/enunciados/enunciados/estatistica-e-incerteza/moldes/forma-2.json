@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Dois comprimentos são medidos com incertezas de {dados-calculo.texto} cm. Somando os dois, qual é a incerteza do resultado, em cm? (2 casas decimais)"
+    "br": "Dois comprimentos são medidos com incertezas de {dados-calculo.texto} cm. Somando os dois, qual é a incerteza do resultado, em cm? (2 casas decimais)",
+    "fr": "Deux longueurs sont mesurées avec des incertitudes de {dados-calculo.texto} cm. En les additionnant, quelle est l'incertitude du résultat, en cm ? (2 décimales)",
+    "en": "Two lengths are measured with uncertainties of {dados-calculo.texto} cm. Adding the two, what is the uncertainty of the result, in cm? (2 decimal places)"
   }
 }

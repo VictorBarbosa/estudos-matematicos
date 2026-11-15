@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma nave viaja a {dados-calculo.v1}c. Qual é o fator de Lorentz γ?{dados-calculo.v2}"
+    "br": "Uma nave viaja a {dados-calculo.v1}c. Qual é o fator de Lorentz γ?{dados-calculo.v2}",
+    "fr": "Un vaisseau voyage à {dados-calculo.v1}c. Quel est le facteur de Lorentz γ ?{dados-calculo.v2}",
+    "en": "A ship travels at {dados-calculo.v1}c. What is the Lorentz factor γ?{dados-calculo.v2}"
   }
 }

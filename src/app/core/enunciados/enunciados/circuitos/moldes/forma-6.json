@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "R₁ = {dados-calculo.r1} Ω está em série com o paralelo de R₂ = {dados-calculo.r2} Ω e R₃ = {dados-calculo.r3} Ω, tudo ligado a {dados-calculo.v} V. Qual corrente sai da fonte, em A? (2 casas decimais)"
+    "br": "R₁ = {dados-calculo.r1} Ω está em série com o paralelo de R₂ = {dados-calculo.r2} Ω e R₃ = {dados-calculo.r3} Ω, tudo ligado a {dados-calculo.v} V. Qual corrente sai da fonte, em A? (2 casas decimais)",
+    "fr": "R₁ = {dados-calculo.r1} Ω est en série avec le parallèle de R₂ = {dados-calculo.r2} Ω et R₃ = {dados-calculo.r3} Ω, le tout branché sur {dados-calculo.v} V. Quel courant sort de la source, en A ? (2 décimales)",
+    "en": "R₁ = {dados-calculo.r1} Ω is in series with the parallel combination of R₂ = {dados-calculo.r2} Ω and R₃ = {dados-calculo.r3} Ω, all connected to {dados-calculo.v} V. What current leaves the source, in A? (2 decimal places)"
   }
 }

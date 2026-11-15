@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o limite quando x tende ao infinito?"
+    "br": "Qual é o limite quando x tende ao infinito?",
+    "fr": "Quelle est la limite lorsque x tend vers l'infini ?",
+    "en": "What is the limit as x tends to infinity?"
   }
 }

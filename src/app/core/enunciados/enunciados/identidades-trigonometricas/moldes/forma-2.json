@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Use a fórmula do arco duplo para calcular sen {dados-calculo.v1}°."
+    "br": "Use a fórmula do arco duplo para calcular sen {dados-calculo.v1}°.",
+    "fr": "Utilisez la formule de l'angle double pour calculer sin {dados-calculo.v1}°.",
+    "en": "Use the double-angle formula to calculate sin {dados-calculo.v1}°."
   }
 }

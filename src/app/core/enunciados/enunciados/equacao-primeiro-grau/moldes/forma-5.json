@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Três prateleiras têm quantidades consecutivas de livros e, juntas, guardam {dados-calculo.S} livros. Quantos livros tem a prateleira mais cheia?"
+    "br": "Três prateleiras têm quantidades consecutivas de livros e, juntas, guardam {dados-calculo.S} livros. Quantos livros tem a prateleira mais cheia?",
+    "fr": "Trois étagères contiennent des quantités consécutives de livres et, ensemble, elles en rangent {dados-calculo.S}. Combien de livres contient l'étagère la plus remplie ?",
+    "en": "Three shelves hold consecutive numbers of books and, together, they hold {dados-calculo.S} books. How many books does the fullest shelf hold?"
   }
 }

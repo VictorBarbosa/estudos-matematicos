@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um capacitor de {dados-calculo.c} μF, inicialmente descarregado, é carregado por uma fonte de {dados-calculo.v} V através de {dados-calculo.r} kΩ. Qual é a carga dele após {dados-calculo.expressao1} s, em μC? (2 casas decimais)"
+    "br": "Um capacitor de {dados-calculo.c} μF, inicialmente descarregado, é carregado por uma fonte de {dados-calculo.v} V através de {dados-calculo.r} kΩ. Qual é a carga dele após {dados-calculo.expressao1} s, em μC? (2 casas decimais)",
+    "fr": "Un condensateur de {dados-calculo.c} μF, initialement déchargé, est chargé par une source de {dados-calculo.v} V à travers {dados-calculo.r} kΩ. Quelle est sa charge après {dados-calculo.expressao1} s, en μC ? (2 décimales)",
+    "en": "A capacitor of {dados-calculo.c} μF, initially uncharged, is charged by a source of {dados-calculo.v} V through {dados-calculo.r} kΩ. What is its charge after {dados-calculo.expressao1} s, in μC? (2 decimal places)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma figura de área {dados-calculo.area} cm² é ampliada de modo que todos os comprimentos fiquem {dados-calculo.k} vezes maiores. Qual é a nova área, em cm²?"
+    "br": "Uma figura de área {dados-calculo.area} cm² é ampliada de modo que todos os comprimentos fiquem {dados-calculo.k} vezes maiores. Qual é a nova área, em cm²?",
+    "fr": "Une figure d'aire {dados-calculo.area} cm² est agrandie de sorte que toutes les longueurs deviennent {dados-calculo.k} fois plus grandes. Quelle est la nouvelle aire, en cm² ?",
+    "en": "A figure with area {dados-calculo.area} cm² is enlarged so that all lengths become {dados-calculo.k} times larger. What is the new area, in cm²?"
   }
 }

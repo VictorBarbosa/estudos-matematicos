@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule o limite. Atenção: a substituição direta dá 0/0."
+    "br": "Calcule o limite. Atenção: a substituição direta dá 0/0.",
+    "fr": "Calculez la limite. Attention : la substitution directe donne 0/0.",
+    "en": "Calculate the limit. Careful: direct substitution gives 0/0."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a inclinação da reta secante que passa pelos pontos de abscissas {dados-calculo.expressao1} e {dados-calculo.expressao2}? (2 casas)"
+    "br": "Qual é a inclinação da reta secante que passa pelos pontos de abscissas {dados-calculo.expressao1} e {dados-calculo.expressao2}? (2 casas)",
+    "fr": "Quel est le coefficient directeur de la sécante qui passe par les points d'abscisses {dados-calculo.expressao1} et {dados-calculo.expressao2} ? (2 décimales)",
+    "en": "What is the slope of the secant line through the points with x-coordinates {dados-calculo.expressao1} and {dados-calculo.expressao2}? (2 decimals)"
   }
 }

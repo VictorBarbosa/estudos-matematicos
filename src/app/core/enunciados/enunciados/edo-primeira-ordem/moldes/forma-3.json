@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Resolva esta equação com y(0) igual a {dados-calculo.y0} e calcule y({dados-calculo.t}). Responda com 4 casas decimais."
+    "br": "Resolva esta equação com y(0) igual a {dados-calculo.y0} e calcule y({dados-calculo.t}). Responda com 4 casas decimais.",
+    "fr": "Résolvez cette équation avec y(0) égal à {dados-calculo.y0} et calculez y({dados-calculo.t}). Répondez avec 4 décimales.",
+    "en": "Solve this equation with y(0) equal to {dados-calculo.y0} and calculate y({dados-calculo.t}). Answer with 4 decimal places."
   }
 }

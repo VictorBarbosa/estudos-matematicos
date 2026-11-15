@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma população de bactérias cresce como P(t) = {dados-calculo.p0}·e^({dados-calculo.v1}·t), com t em horas. Em quantas horas ela chega a {dados-calculo.alvo}? (3 casas decimais)"
+    "br": "Uma população de bactérias cresce como P(t) = {dados-calculo.p0}·e^({dados-calculo.v1}·t), com t em horas. Em quantas horas ela chega a {dados-calculo.alvo}? (3 casas decimais)",
+    "fr": "Une population de bactéries croît selon P(t) = {dados-calculo.p0}·e^({dados-calculo.v1}·t), avec t en heures. En combien d'heures atteint-elle {dados-calculo.alvo} ? (3 décimales)",
+    "en": "A bacterial population grows as P(t) = {dados-calculo.p0}·e^({dados-calculo.v1}·t), with t in hours. In how many hours does it reach {dados-calculo.alvo}? (3 decimal places)"
   }
 }

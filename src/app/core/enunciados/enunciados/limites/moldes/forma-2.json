@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule o limite, racionalizando o numerador. (3 casas decimais)"
+    "br": "Calcule o limite, racionalizando o numerador. (3 casas decimais)",
+    "fr": "Calculez la limite, en rationalisant le numérateur. (3 décimales)",
+    "en": "Calculate the limit by rationalizing the numerator. (3 decimal places)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma espira de {dados-calculo.a} cm² está num campo uniforme de {dados-calculo.v1} T, que forma {dados-calculo.angulo}° com a NORMAL da espira. Qual é o fluxo magnético, em mWb? (2 casas decimais)"
+    "br": "Uma espira de {dados-calculo.a} cm² está num campo uniforme de {dados-calculo.v1} T, que forma {dados-calculo.angulo}° com a NORMAL da espira. Qual é o fluxo magnético, em mWb? (2 casas decimais)",
+    "fr": "Une spire de {dados-calculo.a} cm² se trouve dans un champ uniforme de {dados-calculo.v1} T, qui forme {dados-calculo.angulo}° avec la NORMALE de la spire. Quel est le flux magnétique, en mWb ? (2 décimales)",
+    "en": "A loop of {dados-calculo.a} cm² is in a uniform field of {dados-calculo.v1} T, which makes {dados-calculo.angulo}° with the NORMAL to the loop. What is the magnetic flux, in mWb? (2 decimal places)"
   }
 }

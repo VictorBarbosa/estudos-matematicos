@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Num certo instante, um corpo tem esta velocidade e esta aceleração, em unidades do SI. Qual é a componente TANGENCIAL da aceleração, em m/s²? Responda com 2 casas decimais."
+    "br": "Num certo instante, um corpo tem esta velocidade e esta aceleração, em unidades do SI. Qual é a componente TANGENCIAL da aceleração, em m/s²? Responda com 2 casas decimais.",
+    "fr": "À un certain instant, un corps a cette vitesse et cette accélération, en unités SI. Quelle est la composante TANGENTIELLE de l'accélération, en m/s² ? Répondez avec 2 décimales.",
+    "en": "At a given instant, a body has this velocity and this acceleration, in SI units. What is the TANGENTIAL component of the acceleration, in m/s²? Answer with 2 decimal places."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Se sen θ = {dados-calculo.v1} com θ no 1º quadrante, quanto vale cos θ? (2 casas)"
+    "br": "Se sen θ = {dados-calculo.v1} com θ no 1º quadrante, quanto vale cos θ? (2 casas)",
+    "fr": "Si sin θ = {dados-calculo.v1} avec θ dans le 1er quadrant, combien vaut cos θ ? (2 décimales)",
+    "en": "If sin θ = {dados-calculo.v1} with θ in the 1st quadrant, what is cos θ? (2 decimals)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "No domínio desta função, qual é o maior valor que x pode assumir quando y = {dados-calculo.y0}? "
+    "br": "No domínio desta função, qual é o maior valor que x pode assumir quando y = {dados-calculo.y0}? ",
+    "fr": "Dans le domaine de cette fonction, quelle est la plus grande valeur que x peut prendre lorsque y = {dados-calculo.y0} ? ",
+    "en": "In the domain of this function, what is the largest value x can take when y = {dados-calculo.y0}? "
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o resto da divisão de P(x) por (x {dados-calculo.sinal} {dados-calculo.v1})?"
+    "br": "Qual é o resto da divisão de P(x) por (x {dados-calculo.sinal} {dados-calculo.v1})?",
+    "fr": "Quel est le reste de la division de P(x) par (x {dados-calculo.sinal} {dados-calculo.v1}) ?",
+    "en": "What is the remainder of dividing P(x) by (x {dados-calculo.sinal} {dados-calculo.v1})?"
   }
 }

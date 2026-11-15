@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Sabendo que a integral de f de {dados-calculo.a} a {dados-calculo.b} vale {dados-calculo.primeira}, quanto vale a integral de {dados-calculo.fator}·f no mesmo intervalo?"
+    "br": "Sabendo que a integral de f de {dados-calculo.a} a {dados-calculo.b} vale {dados-calculo.primeira}, quanto vale a integral de {dados-calculo.fator}·f no mesmo intervalo?",
+    "fr": "Sachant que l'intégrale de f de {dados-calculo.a} à {dados-calculo.b} vaut {dados-calculo.primeira}, combien vaut l'intégrale de {dados-calculo.fator}·f sur le même intervalle ?",
+    "en": "Knowing that the integral of f from {dados-calculo.a} to {dados-calculo.b} equals {dados-calculo.primeira}, what is the integral of {dados-calculo.fator}·f over the same interval?"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma corrente de {dados-calculo.expressao1} A atravessa um resistor de {dados-calculo.r} Ω. Quanta potência ele dissipa, em W? (2 casas decimais)"
+    "br": "Uma corrente de {dados-calculo.expressao1} A atravessa um resistor de {dados-calculo.r} Ω. Quanta potência ele dissipa, em W? (2 casas decimais)",
+    "fr": "Un courant de {dados-calculo.expressao1} A traverse une résistance de {dados-calculo.r} Ω. Quelle puissance dissipe-t-elle, en W ? (2 décimales)",
+    "en": "A current of {dados-calculo.expressao1} A flows through a resistor of {dados-calculo.r} Ω. How much power does it dissipate, in W? (2 decimal places)"
   }
 }

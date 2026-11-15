@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo de {dados-calculo.massaA} kg a {dados-calculo.velocidadeA} m/s atinge outro de {dados-calculo.massaB} kg parado, e os dois seguem juntos. Quanta energia cinética foi perdida, em joules? (2 casas)"
+    "br": "Um corpo de {dados-calculo.massaA} kg a {dados-calculo.velocidadeA} m/s atinge outro de {dados-calculo.massaB} kg parado, e os dois seguem juntos. Quanta energia cinética foi perdida, em joules? (2 casas)",
+    "fr": "Un corps de {dados-calculo.massaA} kg à {dados-calculo.velocidadeA} m/s heurte un autre de {dados-calculo.massaB} kg à l'arrêt, et les deux continuent ensemble. Quelle énergie cinétique a été perdue, en joules ? (2 décimales)",
+    "en": "A body of {dados-calculo.massaA} kg at {dados-calculo.velocidadeA} m/s hits another of {dados-calculo.massaB} kg at rest, and the two move on together. How much kinetic energy was lost, in joules? (2 decimals)"
   }
 }

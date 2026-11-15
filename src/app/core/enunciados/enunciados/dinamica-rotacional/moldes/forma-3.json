@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio gira a {dados-calculo.v5} rad/s. Qual é a energia cinética de rotação, em J? Responda com 3 casas decimais."
+    "br": "{dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio gira a {dados-calculo.v5} rad/s. Qual é a energia cinética de rotação, em J? Responda com 3 casas decimais.",
+    "fr": "{dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg et de {dados-calculo.v4} m de rayon tourne à {dados-calculo.v5} rad/s. Quelle est l'énergie cinétique de rotation, en J ? Répondez avec 3 décimales.",
+    "en": "{dados-calculo.v1} {dados-calculo.v2} of {dados-calculo.v3} kg and radius {dados-calculo.v4} m spins at {dados-calculo.v5} rad/s. What is the rotational kinetic energy, in J? Answer with 3 decimal places."
   }
 }

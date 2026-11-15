@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Aproxime a raiz quadrada de {dados-calculo.expressao1} pelo polinômio de Taylor de grau {dados-calculo.grau} centrado em {dados-calculo.a}. Responda com 5 casas decimais."
+    "br": "Aproxime a raiz quadrada de {dados-calculo.expressao1} pelo polinômio de Taylor de grau {dados-calculo.grau} centrado em {dados-calculo.a}. Responda com 5 casas decimais.",
+    "fr": "Approchez la racine carrée de {dados-calculo.expressao1} par le polynôme de Taylor de degré {dados-calculo.grau} centré en {dados-calculo.a}. Répondez avec 5 décimales.",
+    "en": "Approximate the square root of {dados-calculo.expressao1} by the Taylor polynomial of degree {dados-calculo.grau} centred at {dados-calculo.a}. Answer with 5 decimal places."
   }
 }

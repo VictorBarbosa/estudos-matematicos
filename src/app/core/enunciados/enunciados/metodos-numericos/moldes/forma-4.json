@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Com Euler, integre de 0 a {dados-calculo.tempo} partindo de y(0) = {dados-calculo.y0}, primeiro com passo {dados-calculo.expressao1} e depois com metade dele. Por qual fator o erro foi dividido? Responda com 5 casas decimais."
+    "br": "Com Euler, integre de 0 a {dados-calculo.tempo} partindo de y(0) = {dados-calculo.y0}, primeiro com passo {dados-calculo.expressao1} e depois com metade dele. Por qual fator o erro foi dividido? Responda com 5 casas decimais.",
+    "fr": "Avec Euler, intégrez de 0 à {dados-calculo.tempo} en partant de y(0) = {dados-calculo.y0}, d'abord avec un pas {dados-calculo.expressao1} puis avec la moitié de celui-ci. Par quel facteur l'erreur a-t-elle été divisée ? Répondez avec 5 décimales.",
+    "en": "With Euler, integrate from 0 to {dados-calculo.tempo} starting from y(0) = {dados-calculo.y0}, first with step {dados-calculo.expressao1} and then with half of it. By what factor was the error divided? Answer with 5 decimal places."
   }
 }

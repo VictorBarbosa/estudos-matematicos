@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma força F(x) (em N, x em metros) empurra um corpo de x = {dados-calculo.a} m até x = {dados-calculo.b} m. Qual é o trabalho, em joules? (2 casas decimais)"
+    "br": "Uma força F(x) (em N, x em metros) empurra um corpo de x = {dados-calculo.a} m até x = {dados-calculo.b} m. Qual é o trabalho, em joules? (2 casas decimais)",
+    "fr": "Une force F(x) (en N, x en mètres) pousse un corps de x = {dados-calculo.a} m à x = {dados-calculo.b} m. Quel est le travail, en joules ? (2 décimales)",
+    "en": "A force F(x) (in N, x in metres) pushes a body from x = {dados-calculo.a} m to x = {dados-calculo.b} m. What is the work, in joules? (2 decimal places)"
   }
 }

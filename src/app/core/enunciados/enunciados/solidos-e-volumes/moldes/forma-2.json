@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um {dados-calculo.v1} de raio {dados-calculo.raio} cm tem volume {dados-calculo.v2} cm³. Qual é sua altura, em cm?"
+    "br": "Um {dados-calculo.v1} de raio {dados-calculo.raio} cm tem volume {dados-calculo.v2} cm³. Qual é sua altura, em cm?",
+    "fr": "Un {dados-calculo.v1} de rayon {dados-calculo.raio} cm a un volume de {dados-calculo.v2} cm³. Quelle est sa hauteur, en cm ?",
+    "en": "A {dados-calculo.v1} of radius {dados-calculo.raio} cm has volume {dados-calculo.v2} cm³. What is its height, in cm?"
   }
 }

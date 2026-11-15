@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Aplique Runge-Kutta de quarta ordem com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, partindo de y(0) = {dados-calculo.y0}. Qual é o valor obtido? Responda com 5 casas decimais."
+    "br": "Aplique Runge-Kutta de quarta ordem com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, partindo de y(0) = {dados-calculo.y0}. Qual é o valor obtido? Responda com 5 casas decimais.",
+    "fr": "Appliquez Runge-Kutta d'ordre quatre avec un pas h = {dados-calculo.expressao1} et {dados-calculo.quantos} pas, en partant de y(0) = {dados-calculo.y0}. Quelle est la valeur obtenue ? Répondez avec 5 décimales.",
+    "en": "Apply fourth-order Runge-Kutta with step h = {dados-calculo.expressao1} and {dados-calculo.quantos} steps, starting from y(0) = {dados-calculo.y0}. What is the value obtained? Answer with 5 decimal places."
   }
 }

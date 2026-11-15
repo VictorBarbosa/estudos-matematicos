@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Num triângulo, o lado de medida {dados-calculo.ladoA} é oposto ao ângulo de {dados-calculo.anguloA}°. Quanto mede o lado oposto ao ângulo de {dados-calculo.anguloB}°? (2 casas)"
+    "br": "Num triângulo, o lado de medida {dados-calculo.ladoA} é oposto ao ângulo de {dados-calculo.anguloA}°. Quanto mede o lado oposto ao ângulo de {dados-calculo.anguloB}°? (2 casas)",
+    "fr": "Dans un triangle, le côté de mesure {dados-calculo.ladoA} est opposé à l'angle de {dados-calculo.anguloA}°. Combien mesure le côté opposé à l'angle de {dados-calculo.anguloB}° ? (2 décimales)",
+    "en": "In a triangle, the side of length {dados-calculo.ladoA} is opposite the angle of {dados-calculo.anguloA}°. How long is the side opposite the angle of {dados-calculo.anguloB}°? (2 decimals)"
   }
 }

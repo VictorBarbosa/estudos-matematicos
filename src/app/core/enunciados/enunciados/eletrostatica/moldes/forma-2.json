@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a intensidade do campo elétrico criado por uma carga de {dados-calculo.expressao1} μC a {dados-calculo.expressao2} m dela, em kN/C? (2 casas decimais)"
+    "br": "Qual é a intensidade do campo elétrico criado por uma carga de {dados-calculo.expressao1} μC a {dados-calculo.expressao2} m dela, em kN/C? (2 casas decimais)",
+    "fr": "Quelle est l'intensité du champ électrique créé par une charge de {dados-calculo.expressao1} μC à {dados-calculo.expressao2} m d'elle, en kN/C ? (2 décimales)",
+    "en": "What is the strength of the electric field created by a charge of {dados-calculo.expressao1} μC at {dados-calculo.expressao2} m from it, in kN/C? (2 decimal places)"
   }
 }

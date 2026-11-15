@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o salto do gráfico em x = {dados-calculo.ponto}, isto é, o limite pela direita menos o limite pela esquerda? (0 se o limite existir)"
+    "br": "Qual é o salto do gráfico em x = {dados-calculo.ponto}, isto é, o limite pela direita menos o limite pela esquerda? (0 se o limite existir)",
+    "fr": "Quel est le saut du graphique en x = {dados-calculo.ponto}, c'est-à-dire la limite à droite moins la limite à gauche ? (0 si la limite existe)",
+    "en": "What is the jump of the graph at x = {dados-calculo.ponto}, that is, the right-hand limit minus the left-hand limit? (0 if the limit exists)"
   }
 }

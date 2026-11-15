@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A matriz aumentada do sistema já está escalonada. Encontre x, substituindo de baixo para cima."
+    "br": "A matriz aumentada do sistema já está escalonada. Encontre x, substituindo de baixo para cima.",
+    "fr": "La matrice augmentée du système est déjà échelonnée. Trouvez x par remontée, en substituant du bas vers le haut.",
+    "en": "The augmented matrix of the system is already in row echelon form. Find x by back-substitution, from the bottom up."
   }
 }

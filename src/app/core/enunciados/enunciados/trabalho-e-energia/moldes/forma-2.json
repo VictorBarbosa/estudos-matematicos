@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo de {dados-calculo.massa} kg move-se a {dados-calculo.velocidade} m/s. Qual é sua energia cinética, em joules?"
+    "br": "Um corpo de {dados-calculo.massa} kg move-se a {dados-calculo.velocidade} m/s. Qual é sua energia cinética, em joules?",
+    "fr": "Un corps de {dados-calculo.massa} kg se déplace à {dados-calculo.velocidade} m/s. Quelle est son énergie cinétique, en joules ?",
+    "en": "A body of {dados-calculo.massa} kg moves at {dados-calculo.velocidade} m/s. What is its kinetic energy, in joules?"
   }
 }

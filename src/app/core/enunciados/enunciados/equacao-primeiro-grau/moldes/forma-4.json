@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um retângulo tem o comprimento {dados-calculo.d} cm maior que a largura, e o perímetro mede {dados-calculo.P} cm. Qual é a largura, em cm?"
+    "br": "Um retângulo tem o comprimento {dados-calculo.d} cm maior que a largura, e o perímetro mede {dados-calculo.P} cm. Qual é a largura, em cm?",
+    "fr": "Un rectangle a une longueur de {dados-calculo.d} cm de plus que sa largeur, et son périmètre mesure {dados-calculo.P} cm. Quelle est la largeur, en cm ?",
+    "en": "A rectangle's length is {dados-calculo.d} cm longer than its width, and its perimeter measures {dados-calculo.P} cm. What is the width, in cm?"
   }
 }

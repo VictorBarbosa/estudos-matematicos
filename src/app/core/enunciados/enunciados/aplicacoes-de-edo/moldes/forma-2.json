@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma amostra de {dados-calculo.inicial} g tem meia-vida de {dados-calculo.meiaVida} anos. Quanto resta depois de {dados-calculo.t} anos, em g? Responda com 4 casas decimais."
+    "br": "Uma amostra de {dados-calculo.inicial} g tem meia-vida de {dados-calculo.meiaVida} anos. Quanto resta depois de {dados-calculo.t} anos, em g? Responda com 4 casas decimais.",
+    "fr": "Un échantillon de {dados-calculo.inicial} g a une demi-vie de {dados-calculo.meiaVida} ans. Combien en reste-t-il après {dados-calculo.t} ans, en g ? Répondez avec 4 décimales.",
+    "en": "A sample of {dados-calculo.inicial} g has a half-life of {dados-calculo.meiaVida} years. How much remains after {dados-calculo.t} years, in g? Answer with 4 decimal places."
   }
 }

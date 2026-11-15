@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um foguete parte com {dados-calculo.v0} m/s e tem aceleração a(t) (m/s², t em s). Qual é a velocidade em t = {dados-calculo.t} s, em m/s? (2 casas decimais)"
+    "br": "Um foguete parte com {dados-calculo.v0} m/s e tem aceleração a(t) (m/s², t em s). Qual é a velocidade em t = {dados-calculo.t} s, em m/s? (2 casas decimais)",
+    "fr": "Une fusée part à {dados-calculo.v0} m/s et a une accélération a(t) (m/s², t en s). Quelle est la vitesse à t = {dados-calculo.t} s, en m/s ? (2 décimales)",
+    "en": "A rocket starts at {dados-calculo.v0} m/s and has acceleration a(t) (m/s², t in s). What is the velocity at t = {dados-calculo.t} s, in m/s? (2 decimal places)"
   }
 }

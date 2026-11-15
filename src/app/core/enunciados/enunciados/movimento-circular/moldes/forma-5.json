@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo de {dados-calculo.v1} kg gira em círculo de {dados-calculo.v2} m de raio com período de {dados-calculo.periodo} s. Qual é o módulo da força centrípeta, em N? Responda com 3 casas decimais."
+    "br": "Um corpo de {dados-calculo.v1} kg gira em círculo de {dados-calculo.v2} m de raio com período de {dados-calculo.periodo} s. Qual é o módulo da força centrípeta, em N? Responda com 3 casas decimais.",
+    "fr": "Un corps de {dados-calculo.v1} kg tourne en cercle de {dados-calculo.v2} m de rayon avec une période de {dados-calculo.periodo} s. Quel est le module de la force centripète, en N ? Répondez avec 3 décimales.",
+    "en": "A body of {dados-calculo.v1} kg moves in a circle of radius {dados-calculo.v2} m with a period of {dados-calculo.periodo} s. What is the magnitude of the centripetal force, in N? Answer with 3 decimal places."
   }
 }

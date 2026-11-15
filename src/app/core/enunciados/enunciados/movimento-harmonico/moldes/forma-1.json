@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma massa de {dados-calculo.v1} kg oscila presa a uma mola de constante {dados-calculo.v2} N/m, com amplitude de {dados-calculo.v3} m. Qual é {dados-calculo.nome}? (3 casas)"
+    "br": "Uma massa de {dados-calculo.v1} kg oscila presa a uma mola de constante {dados-calculo.v2} N/m, com amplitude de {dados-calculo.v3} m. Qual é {dados-calculo.nome}? (3 casas)",
+    "fr": "Une masse de {dados-calculo.v1} kg oscille attachée à un ressort de constante {dados-calculo.v2} N/m, avec une amplitude de {dados-calculo.v3} m. Quel est {dados-calculo.nome} ? (3 décimales)",
+    "en": "A mass of {dados-calculo.v1} kg oscillates attached to a spring of constant {dados-calculo.v2} N/m, with amplitude {dados-calculo.v3} m. What is {dados-calculo.nome}? (3 decimals)"
   }
 }

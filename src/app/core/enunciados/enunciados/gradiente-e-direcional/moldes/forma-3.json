@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Esta função tem um único ponto crítico. Qual é a abscissa dele? Responda com 3 casas decimais."
+    "br": "Esta função tem um único ponto crítico. Qual é a abscissa dele? Responda com 3 casas decimais.",
+    "fr": "Cette fonction a un unique point critique. Quelle est son abscisse ? Répondez avec 3 décimales.",
+    "en": "This function has a single critical point. What is its x-coordinate? Answer with 3 decimal places."
   }
 }

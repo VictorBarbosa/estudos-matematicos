@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Estime, pelo resto de Lagrange, o erro máximo ao aproximar {dados-calculo.expressao1} em x = {dados-calculo.expressao2} com o polinômio de grau {dados-calculo.grau}. Use M = {dados-calculo.expressao3}. Responda com 5 casas decimais."
+    "br": "Estime, pelo resto de Lagrange, o erro máximo ao aproximar {dados-calculo.expressao1} em x = {dados-calculo.expressao2} com o polinômio de grau {dados-calculo.grau}. Use M = {dados-calculo.expressao3}. Responda com 5 casas decimais.",
+    "fr": "Estimez, par le reste de Lagrange, l'erreur maximale en approchant {dados-calculo.expressao1} en x = {dados-calculo.expressao2} avec le polynôme de degré {dados-calculo.grau}. Utilisez M = {dados-calculo.expressao3}. Répondez avec 5 décimales.",
+    "en": "Estimate, using the Lagrange remainder, the maximum error when approximating {dados-calculo.expressao1} at x = {dados-calculo.expressao2} with the polynomial of degree {dados-calculo.grau}. Use M = {dados-calculo.expressao3}. Answer with 5 decimal places."
   }
 }

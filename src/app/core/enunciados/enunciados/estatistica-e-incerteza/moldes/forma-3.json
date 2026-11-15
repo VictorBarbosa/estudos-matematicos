@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um retângulo tem base {dados-calculo.base} ± {dados-calculo.expressao1} cm e altura {dados-calculo.altura} ± {dados-calculo.expressao2} cm. Qual é a incerteza da área, em cm²? (2 casas decimais)"
+    "br": "Um retângulo tem base {dados-calculo.base} ± {dados-calculo.expressao1} cm e altura {dados-calculo.altura} ± {dados-calculo.expressao2} cm. Qual é a incerteza da área, em cm²? (2 casas decimais)",
+    "fr": "Un rectangle a une base de {dados-calculo.base} ± {dados-calculo.expressao1} cm et une hauteur de {dados-calculo.altura} ± {dados-calculo.expressao2} cm. Quelle est l'incertitude de l'aire, en cm² ? (2 décimales)",
+    "en": "A rectangle has base {dados-calculo.base} ± {dados-calculo.expressao1} cm and height {dados-calculo.altura} ± {dados-calculo.expressao2} cm. What is the uncertainty of the area, in cm²? (2 decimal places)"
   }
 }

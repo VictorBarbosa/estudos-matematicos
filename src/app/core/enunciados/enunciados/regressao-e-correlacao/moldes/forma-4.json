@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Que fração da variação de y a reta ajustada explica nestes dados? Responda entre 0 e 1, com 4 casas decimais."
+    "br": "Que fração da variação de y a reta ajustada explica nestes dados? Responda entre 0 e 1, com 4 casas decimais.",
+    "fr": "Quelle fraction de la variation de y la droite ajustée explique-t-elle dans ces données ? Répondez entre 0 et 1, avec 4 décimales.",
+    "en": "What fraction of the variation in y does the fitted line explain in these data? Answer between 0 and 1, with 4 decimal places."
   }
 }

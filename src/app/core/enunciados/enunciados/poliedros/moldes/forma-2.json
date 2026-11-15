@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Quantos {dados-calculo.v1} tem {dados-calculo.v2} {dados-calculo.solido} de base {dados-calculo.v3}?"
+    "br": "Quantos {dados-calculo.v1} tem {dados-calculo.v2} {dados-calculo.solido} de base {dados-calculo.v3}?",
+    "fr": "Combien de {dados-calculo.v1} a {dados-calculo.v2} {dados-calculo.solido} de base {dados-calculo.v3} ?",
+    "en": "How many {dados-calculo.v1} does {dados-calculo.v2} {dados-calculo.solido} with base {dados-calculo.v3} have?"
   }
 }

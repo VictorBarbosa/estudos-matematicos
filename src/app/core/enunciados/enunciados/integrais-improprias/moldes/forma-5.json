@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Este integrando não tem primitiva elementar. Decida pelo teste da comparação e responda \"converge\" ou \"diverge\"."
+    "br": "Este integrando não tem primitiva elementar. Decida pelo teste da comparação e responda \"converge\" ou \"diverge\".",
+    "fr": "Cet intégrande n'a pas de primitive élémentaire. Décidez par le test de comparaison et répondez « converge » ou « diverge ».",
+    "en": "This integrand has no elementary antiderivative. Decide by the comparison test and answer \"converges\" or \"diverges\"."
   }
 }

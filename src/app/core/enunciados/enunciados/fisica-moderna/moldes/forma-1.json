@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a energia de um fóton de luz com comprimento de onda {dados-calculo.lambda} nm, em elétron-volts (eV)?{dados-calculo.v1}"
+    "br": "Qual é a energia de um fóton de luz com comprimento de onda {dados-calculo.lambda} nm, em elétron-volts (eV)?{dados-calculo.v1}",
+    "fr": "Quelle est l'énergie d'un photon de lumière de longueur d'onde {dados-calculo.lambda} nm, en électron-volts (eV) ?{dados-calculo.v1}",
+    "en": "What is the energy of a light photon with wavelength {dados-calculo.lambda} nm, in electron-volts (eV)?{dados-calculo.v1}"
   }
 }

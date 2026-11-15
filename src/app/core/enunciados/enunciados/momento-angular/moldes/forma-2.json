@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma partícula de {dados-calculo.v1} kg passa a {dados-calculo.v2} m de um ponto, com velocidade de {dados-calculo.velocidade} m/s formando {dados-calculo.angulo} graus com o raio. Qual é o módulo do momento angular em relação a esse ponto? Responda com 3 casas decimais."
+    "br": "Uma partícula de {dados-calculo.v1} kg passa a {dados-calculo.v2} m de um ponto, com velocidade de {dados-calculo.velocidade} m/s formando {dados-calculo.angulo} graus com o raio. Qual é o módulo do momento angular em relação a esse ponto? Responda com 3 casas decimais.",
+    "fr": "Une particule de {dados-calculo.v1} kg passe à {dados-calculo.v2} m d'un point, avec une vitesse de {dados-calculo.velocidade} m/s formant {dados-calculo.angulo} degrés avec le rayon. Quel est le module du moment cinétique par rapport à ce point ? Répondez avec 3 décimales.",
+    "en": "A particle of {dados-calculo.v1} kg passes at {dados-calculo.v2} m from a point, with a velocity of {dados-calculo.velocidade} m/s making {dados-calculo.angulo} degrees with the radius. What is the magnitude of the angular momentum about that point? Answer with 3 decimal places."
   }
 }

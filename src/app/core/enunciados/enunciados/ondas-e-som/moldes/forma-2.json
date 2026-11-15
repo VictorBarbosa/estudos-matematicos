@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma onda tem comprimento de onda {dados-calculo.expressao1} m e frequência {dados-calculo.f} Hz. Qual é a velocidade dela, em m/s?{dados-calculo.expressao2}"
+    "br": "Uma onda tem comprimento de onda {dados-calculo.expressao1} m e frequência {dados-calculo.f} Hz. Qual é a velocidade dela, em m/s?{dados-calculo.expressao2}",
+    "fr": "Une onde a une longueur d'onde de {dados-calculo.expressao1} m et une fréquence de {dados-calculo.f} Hz. Quelle est sa vitesse, en m/s ?{dados-calculo.expressao2}",
+    "en": "A wave has wavelength {dados-calculo.expressao1} m and frequency {dados-calculo.f} Hz. What is its speed, in m/s?{dados-calculo.expressao2}"
   }
 }

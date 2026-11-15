@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Pelo teorema da divergência, qual é o fluxo do campo para fora do cilindro x² + y² ≤ {dados-calculo.expressao1}, 0 ≤ z ≤ {dados-calculo.H} (com as tampas)? (2 casas decimais)"
+    "br": "Pelo teorema da divergência, qual é o fluxo do campo para fora do cilindro x² + y² ≤ {dados-calculo.expressao1}, 0 ≤ z ≤ {dados-calculo.H} (com as tampas)? (2 casas decimais)",
+    "fr": "Par le théorème de la divergence, quel est le flux du champ sortant du cylindre x² + y² ≤ {dados-calculo.expressao1}, 0 ≤ z ≤ {dados-calculo.H} (avec les bases) ? (2 décimales)",
+    "en": "By the divergence theorem, what is the outward flux of the field from the cylinder x² + y² ≤ {dados-calculo.expressao1}, 0 ≤ z ≤ {dados-calculo.H} (including the caps)? (2 decimal places)"
   }
 }

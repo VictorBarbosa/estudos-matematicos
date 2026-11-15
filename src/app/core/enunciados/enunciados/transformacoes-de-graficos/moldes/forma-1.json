@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a abscissa do vértice desta parábola? Responda com 3 casas decimais."
+    "br": "Qual é a abscissa do vértice desta parábola? Responda com 3 casas decimais.",
+    "fr": "Quelle est l'abscisse du sommet de cette parabole ? Répondez avec 3 décimales.",
+    "en": "What is the x-coordinate of the vertex of this parabola? Answer with 3 decimal places."
   }
 }

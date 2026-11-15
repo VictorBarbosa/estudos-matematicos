@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "O plano passa por A, B e C. Escrito como ax + by + cz = d com a > 0 e (a, b, c) = AB × AC (ou o oposto, para deixar a positivo), quanto vale d?"
+    "br": "O plano passa por A, B e C. Escrito como ax + by + cz = d com a > 0 e (a, b, c) = AB × AC (ou o oposto, para deixar a positivo), quanto vale d?",
+    "fr": "Le plan passe par A, B et C. Écrit sous la forme ax + by + cz = d avec a > 0 et (a, b, c) = AB × AC (ou l'opposé, pour rendre a positif), combien vaut d ?",
+    "en": "The plane passes through A, B and C. Written as ax + by + cz = d with a > 0 and (a, b, c) = AB × AC (or the opposite, to make a positive), what is d?"
   }
 }

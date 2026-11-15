@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a abscissa (coordenada x) do ponto médio do segmento AB?"
+    "br": "Qual é a abscissa (coordenada x) do ponto médio do segmento AB?",
+    "fr": "Quelle est l'abscisse (coordonnée x) du milieu du segment AB ?",
+    "en": "What is the x-coordinate of the midpoint of segment AB?"
   }
 }

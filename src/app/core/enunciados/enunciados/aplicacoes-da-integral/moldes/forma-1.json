@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Girando a reta em torno do eixo x, de 0 a {dados-calculo.h}, qual é o volume do sólido? (3 casas decimais)"
+    "br": "Girando a reta em torno do eixo x, de 0 a {dados-calculo.h}, qual é o volume do sólido? (3 casas decimais)",
+    "fr": "En faisant tourner la droite autour de l'axe x, de 0 à {dados-calculo.h}, quel est le volume du solide ? (3 décimales)",
+    "en": "Rotating the line about the x-axis, from 0 to {dados-calculo.h}, what is the volume of the solid? (3 decimal places)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um projétil parte a {dados-calculo.v0} m/s formando {dados-calculo.angulo} graus com a horizontal, com g igual a 9,81 m/s². Qual é a altura no instante t = {dados-calculo.t} s? Responda com 3 casas decimais."
+    "br": "Um projétil parte a {dados-calculo.v0} m/s formando {dados-calculo.angulo} graus com a horizontal, com g igual a 9,81 m/s². Qual é a altura no instante t = {dados-calculo.t} s? Responda com 3 casas decimais.",
+    "fr": "Un projectile part à {dados-calculo.v0} m/s en formant {dados-calculo.angulo} degrés avec l'horizontale, avec g égal à 9,81 m/s². Quelle est la hauteur à l'instant t = {dados-calculo.t} s ? Répondez avec 3 décimales.",
+    "en": "A projectile starts at {dados-calculo.v0} m/s making {dados-calculo.angulo} degrees with the horizontal, with g equal to 9.81 m/s². What is the height at time t = {dados-calculo.t} s? Answer with 3 decimal places."
   }
 }

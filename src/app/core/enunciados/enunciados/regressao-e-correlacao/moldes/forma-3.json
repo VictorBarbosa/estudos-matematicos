@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o coeficiente de correlação de Pearson destes dados? Responda com 4 casas decimais."
+    "br": "Qual é o coeficiente de correlação de Pearson destes dados? Responda com 4 casas decimais.",
+    "fr": "Quel est le coefficient de corrélation de Pearson de ces données ? Répondez avec 4 décimales.",
+    "en": "What is Pearson's correlation coefficient for these data? Answer with 4 decimal places."
   }
 }

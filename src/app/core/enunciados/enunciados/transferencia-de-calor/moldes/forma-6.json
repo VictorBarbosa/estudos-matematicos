@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.v1} kg de {dados-calculo.v2} a {dados-calculo.t1} °C são misturados com {dados-calculo.v3} kg de {dados-calculo.v4} a {dados-calculo.t2} °C, num recipiente isolado. Qual é a temperatura final, em °C? Os calores específicos são {dados-calculo.v5} e {dados-calculo.v6} J/(kg·K). Responda com 3 casas decimais."
+    "br": "{dados-calculo.v1} kg de {dados-calculo.v2} a {dados-calculo.t1} °C são misturados com {dados-calculo.v3} kg de {dados-calculo.v4} a {dados-calculo.t2} °C, num recipiente isolado. Qual é a temperatura final, em °C? Os calores específicos são {dados-calculo.v5} e {dados-calculo.v6} J/(kg·K). Responda com 3 casas decimais.",
+    "fr": "{dados-calculo.v1} kg de {dados-calculo.v2} à {dados-calculo.t1} °C sont mélangés avec {dados-calculo.v3} kg de {dados-calculo.v4} à {dados-calculo.t2} °C, dans un récipient isolé. Quelle est la température finale, en °C ? Les chaleurs massiques sont {dados-calculo.v5} et {dados-calculo.v6} J/(kg·K). Répondez avec 3 décimales.",
+    "en": "{dados-calculo.v1} kg of {dados-calculo.v2} at {dados-calculo.t1} °C are mixed with {dados-calculo.v3} kg of {dados-calculo.v4} at {dados-calculo.t2} °C, in an insulated container. What is the final temperature, in °C? The specific heats are {dados-calculo.v5} and {dados-calculo.v6} J/(kg·K). Answer with 3 decimal places."
   }
 }

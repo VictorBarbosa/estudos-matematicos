@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um solenoide de {dados-calculo.comprimento} cm tem {dados-calculo.espiras} espiras e corrente de {dados-calculo.v1} A. Qual é o campo no interior, em mT? (2 casas decimais)"
+    "br": "Um solenoide de {dados-calculo.comprimento} cm tem {dados-calculo.espiras} espiras e corrente de {dados-calculo.v1} A. Qual é o campo no interior, em mT? (2 casas decimais)",
+    "fr": "Un solénoïde de {dados-calculo.comprimento} cm a {dados-calculo.espiras} spires et un courant de {dados-calculo.v1} A. Quel est le champ à l'intérieur, en mT ? (2 décimales)",
+    "en": "A solenoid of {dados-calculo.comprimento} cm has {dados-calculo.espiras} turns and a current of {dados-calculo.v1} A. What is the field inside, in mT? (2 decimal places)"
   }
 }

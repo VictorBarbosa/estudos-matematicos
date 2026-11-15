@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Use o teorema de Green para calcular a circulação ∮ P dx + Q dy na borda do retângulo 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M}, percorrida no sentido anti-horário."
+    "br": "Use o teorema de Green para calcular a circulação ∮ P dx + Q dy na borda do retângulo 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M}, percorrida no sentido anti-horário.",
+    "fr": "Utilisez le théorème de Green pour calculer la circulation ∮ P dx + Q dy sur le bord du rectangle 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M}, parcouru dans le sens anti-horaire.",
+    "en": "Use Green's theorem to calculate the circulation ∮ P dx + Q dy along the boundary of the rectangle 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M}, traversed counterclockwise."
   }
 }

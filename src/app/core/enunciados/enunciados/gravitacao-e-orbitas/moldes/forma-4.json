@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a velocidade de escape da superfície de {dados-calculo.v1}? (em km/s, 2 casas decimais)"
+    "br": "Qual é a velocidade de escape da superfície de {dados-calculo.v1}? (em km/s, 2 casas decimais)",
+    "fr": "Quelle est la vitesse d'échappement depuis la surface de {dados-calculo.v1} ? (en km/s, 2 décimales)",
+    "en": "What is the escape velocity from the surface of {dados-calculo.v1}? (in km/s, 2 decimal places)"
   }
 }

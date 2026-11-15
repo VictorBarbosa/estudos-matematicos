@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o valor MÉDIO da função no intervalo? (use a área, 2 casas decimais)"
+    "br": "Qual é o valor MÉDIO da função no intervalo? (use a área, 2 casas decimais)",
+    "fr": "Quelle est la valeur MOYENNE de la fonction sur l'intervalle ? (utilisez l'aire, 2 décimales)",
+    "en": "What is the AVERAGE value of the function on the interval? (use the area, 2 decimal places)"
   }
 }

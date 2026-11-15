@@ -705,8 +705,6 @@ import eoperacoesFundamentaisMedio02 from '@core/enunciados/enunciados/operacoes
 import eoperacoesFundamentaisDificil01 from '@core/enunciados/enunciados/operacoes-fundamentais/dificil/01.json';
 import eoperacoesFundamentaisExtremo01 from '@core/enunciados/enunciados/operacoes-fundamentais/extremo/01.json';
 import eoperacoesFundamentaisMoldesForma1 from '@core/enunciados/enunciados/operacoes-fundamentais/moldes/forma-1.json';
-import eoperacoesFundamentaisMoldesForma2 from '@core/enunciados/enunciados/operacoes-fundamentais/moldes/forma-2.json';
-import eoperacoesFundamentaisMoldesForma3 from '@core/enunciados/enunciados/operacoes-fundamentais/moldes/forma-3.json';
 import eoperacoesFundamentaisMoldesForma4 from '@core/enunciados/enunciados/operacoes-fundamentais/moldes/forma-4.json';
 import eoperacoesFundamentaisMoldesForma5 from '@core/enunciados/enunciados/operacoes-fundamentais/moldes/forma-5.json';
 import eoperacoesFundamentaisMoldesForma6 from '@core/enunciados/enunciados/operacoes-fundamentais/moldes/forma-6.json';
@@ -1751,8 +1749,6 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'operacoes-fundamentais', nivel: 'dificil', conteudo: eoperacoesFundamentaisDificil01 },
   { topico: 'operacoes-fundamentais', nivel: 'extremo', conteudo: eoperacoesFundamentaisExtremo01 },
   { topico: 'operacoes-fundamentais', forma: 'forma-1', conteudo: eoperacoesFundamentaisMoldesForma1 },
-  { topico: 'operacoes-fundamentais', forma: 'forma-2', conteudo: eoperacoesFundamentaisMoldesForma2 },
-  { topico: 'operacoes-fundamentais', forma: 'forma-3', conteudo: eoperacoesFundamentaisMoldesForma3 },
   { topico: 'operacoes-fundamentais', forma: 'forma-4', conteudo: eoperacoesFundamentaisMoldesForma4 },
   { topico: 'operacoes-fundamentais', forma: 'forma-5', conteudo: eoperacoesFundamentaisMoldesForma5 },
   { topico: 'operacoes-fundamentais', forma: 'forma-6', conteudo: eoperacoesFundamentaisMoldesForma6 },

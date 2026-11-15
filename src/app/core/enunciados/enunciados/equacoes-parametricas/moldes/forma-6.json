@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a rapidez do móvel quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta? "
+    "br": "Qual é a rapidez do móvel quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta? ",
+    "fr": "Quelle est la vitesse du mobile lorsque le paramètre vaut {dados-calculo.doze} douzièmes d'un tour ? ",
+    "en": "What is the speed of the object when the parameter equals {dados-calculo.doze} twelfths of a turn? "
   }
 }

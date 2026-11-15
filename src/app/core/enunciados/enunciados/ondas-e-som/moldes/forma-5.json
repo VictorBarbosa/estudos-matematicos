@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um som chega com intensidade de {dados-calculo.intensidadeTexto} W/m². Qual é o nível sonoro, em dB?{dados-calculo.expressao1}"
+    "br": "Um som chega com intensidade de {dados-calculo.intensidadeTexto} W/m². Qual é o nível sonoro, em dB?{dados-calculo.expressao1}",
+    "fr": "Un son arrive avec une intensité de {dados-calculo.intensidadeTexto} W/m². Quel est le niveau sonore, en dB ?{dados-calculo.expressao1}",
+    "en": "A sound arrives with an intensity of {dados-calculo.intensidadeTexto} W/m². What is the sound level, in dB?{dados-calculo.expressao1}"
   }
 }

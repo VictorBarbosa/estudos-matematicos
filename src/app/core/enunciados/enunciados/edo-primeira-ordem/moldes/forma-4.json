@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Para onde a solução desta equação tende quando o tempo cresce, com y(0) igual a {dados-calculo.y0}? "
+    "br": "Para onde a solução desta equação tende quando o tempo cresce, com y(0) igual a {dados-calculo.y0}? ",
+    "fr": "Vers quoi tend la solution de cette équation lorsque le temps croît, avec y(0) égal à {dados-calculo.y0} ? ",
+    "en": "What does the solution of this equation tend to as time grows, with y(0) equal to {dados-calculo.y0}? "
   }
 }

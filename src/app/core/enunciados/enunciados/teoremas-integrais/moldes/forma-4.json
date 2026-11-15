@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Use o teorema de Stokes para calcular a circulação do campo na circunferência x² + y² = {dados-calculo.expressao1}, no plano z = 0, percorrida no sentido anti-horário. (2 casas decimais)"
+    "br": "Use o teorema de Stokes para calcular a circulação do campo na circunferência x² + y² = {dados-calculo.expressao1}, no plano z = 0, percorrida no sentido anti-horário. (2 casas decimais)",
+    "fr": "Utilisez le théorème de Stokes pour calculer la circulation du champ sur la circonférence x² + y² = {dados-calculo.expressao1}, dans le plan z = 0, parcourue dans le sens anti-horaire. (2 décimales)",
+    "en": "Use Stokes' theorem to calculate the circulation of the field around the circle x² + y² = {dados-calculo.expressao1}, in the plane z = 0, traversed counterclockwise. (2 decimal places)"
   }
 }

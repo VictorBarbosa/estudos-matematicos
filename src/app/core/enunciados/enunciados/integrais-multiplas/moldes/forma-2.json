@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Integre a função constante {dados-calculo.constante} sobre um setor circular de raio {dados-calculo.raio} e ângulo de {dados-calculo.doze} doze avos de volta, usando coordenadas polares. Responda com 3 casas decimais."
+    "br": "Integre a função constante {dados-calculo.constante} sobre um setor circular de raio {dados-calculo.raio} e ângulo de {dados-calculo.doze} doze avos de volta, usando coordenadas polares. Responda com 3 casas decimais.",
+    "fr": "Intégrez la fonction constante {dados-calculo.constante} sur un secteur circulaire de rayon {dados-calculo.raio} et d'angle de {dados-calculo.doze} douzièmes de tour, en coordonnées polaires. Répondez avec 3 décimales.",
+    "en": "Integrate the constant function {dados-calculo.constante} over a circular sector of radius {dados-calculo.raio} and angle of {dados-calculo.doze} twelfths of a turn, using polar coordinates. Answer with 3 decimal places."
   }
 }

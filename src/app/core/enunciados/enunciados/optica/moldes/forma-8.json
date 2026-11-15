@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Duas lentes convergentes estão a {dados-calculo.separacao} cm uma da outra; a primeira tem foco {dados-calculo.f1} cm e a segunda, {dados-calculo.f2} cm. Um objeto está a {dados-calculo.p1} cm antes da primeira. A que distância DEPOIS da segunda lente se forma a imagem final, em cm?{dados-calculo.v1}"
+    "br": "Duas lentes convergentes estão a {dados-calculo.separacao} cm uma da outra; a primeira tem foco {dados-calculo.f1} cm e a segunda, {dados-calculo.f2} cm. Um objeto está a {dados-calculo.p1} cm antes da primeira. A que distância DEPOIS da segunda lente se forma a imagem final, em cm?{dados-calculo.v1}",
+    "fr": "Deux lentilles convergentes sont à {dados-calculo.separacao} cm l'une de l'autre ; la première a une focale de {dados-calculo.f1} cm et la seconde de {dados-calculo.f2} cm. Un objet est à {dados-calculo.p1} cm avant la première. À quelle distance APRÈS la seconde lentille se forme l'image finale, en cm ?{dados-calculo.v1}",
+    "en": "Two converging lenses are {dados-calculo.separacao} cm apart; the first has focal length {dados-calculo.f1} cm and the second {dados-calculo.f2} cm. An object is {dados-calculo.p1} cm in front of the first. At what distance BEYOND the second lens is the final image formed, in cm?{dados-calculo.v1}"
   }
 }

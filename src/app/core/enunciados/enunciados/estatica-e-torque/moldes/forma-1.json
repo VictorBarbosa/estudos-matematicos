@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma força de {dados-calculo.forca} N é aplicada a {dados-calculo.v1} m do eixo, a {dados-calculo.angulo}° do braço. Qual é o torque, em N·m? (2 casas decimais)"
+    "br": "Uma força de {dados-calculo.forca} N é aplicada a {dados-calculo.v1} m do eixo, a {dados-calculo.angulo}° do braço. Qual é o torque, em N·m? (2 casas decimais)",
+    "fr": "Une force de {dados-calculo.forca} N est appliquée à {dados-calculo.v1} m de l'axe, à {dados-calculo.angulo}° du bras. Quel est le couple, en N·m ? (2 décimales)",
+    "en": "A force of {dados-calculo.forca} N is applied at {dados-calculo.v1} m from the axis, at {dados-calculo.angulo}° to the arm. What is the torque, in N·m? (2 decimal places)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Resolva em [0°, 360°) e informe {dados-calculo.v1}.{dados-calculo.v2}"
+    "br": "Resolva em [0°, 360°) e informe {dados-calculo.v1}.{dados-calculo.v2}",
+    "fr": "Résolvez sur [0°, 360°) et indiquez {dados-calculo.v1}.{dados-calculo.v2}",
+    "en": "Solve on [0°, 360°) and give {dados-calculo.v1}.{dados-calculo.v2}"
   }
 }

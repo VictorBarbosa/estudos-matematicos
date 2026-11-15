@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo de densidade {dados-calculo.densidadeCorpo} kg/m³ flutua em água. Que fração do seu volume fica submersa? (responda entre 0 e 1, com 2 casas decimais)"
+    "br": "Um corpo de densidade {dados-calculo.densidadeCorpo} kg/m³ flutua em água. Que fração do seu volume fica submersa? (responda entre 0 e 1, com 2 casas decimais)",
+    "fr": "Un corps de masse volumique {dados-calculo.densidadeCorpo} kg/m³ flotte dans l'eau. Quelle fraction de son volume est immergée ? (répondez entre 0 et 1, avec 2 décimales)",
+    "en": "A body with density {dados-calculo.densidadeCorpo} kg/m³ floats in water. What fraction of its volume is submerged? (answer between 0 and 1, with 2 decimal places)"
   }
 }

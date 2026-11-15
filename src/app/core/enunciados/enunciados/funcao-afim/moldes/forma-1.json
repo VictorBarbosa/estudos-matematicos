@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a taxa de variação da função, ou seja, quanto y muda quando x avança 1?"
+    "br": "Qual é a taxa de variação da função, ou seja, quanto y muda quando x avança 1?",
+    "fr": "Quel est le taux de variation de la fonction, c'est-à-dire de combien y change lorsque x augmente de 1 ?",
+    "en": "What is the rate of change of the function, that is, how much y changes when x increases by 1?"
   }
 }

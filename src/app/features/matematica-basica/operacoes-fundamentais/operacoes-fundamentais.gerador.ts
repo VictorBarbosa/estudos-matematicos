@@ -65,13 +65,21 @@ function exercicioSimbolico(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `operacoes-simbolico-${nivel}-${rng.inteiro(0, 99999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-1')[0]!, {}, 'pt'),
+    /*
+     * As traduções saem do MESMO molde do enunciado, com o idioma pedido.
+     *
+     * Antes elas vinham de dois moldes extras (`forma-2` e `forma-3`) que
+     * guardavam o francês e o inglês no campo `br`, porque o molde não tinha
+     * onde pôr tradução — o gerador os lia como se fossem português. Agora que
+     * o molde tem `fr` e `en`, os dois arquivos não têm mais razão de existir.
+     */
     traducoes: {
       fr: {
-        enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-2')[0]!, {}, 'pt'),
+        enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-1')[0]!, {}, 'fr'),
         dica: 'Que faut-il calculer en premier dans cette expression ?',
       },
       en: {
-        enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-3')[0]!, {}, 'pt'),
+        enunciado: textoDoMolde(moldesDe('operacoes-fundamentais', 'forma-1')[0]!, {}, 'en'),
         dica: 'What has to be computed first in this expression?',
       },
     },

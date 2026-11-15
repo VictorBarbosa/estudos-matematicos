@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um carro tem velocidade v(t) = {dados-calculo.a}t + {dados-calculo.b} (m/s). Quanto ele se desloca entre t = {dados-calculo.t1} s e t = {dados-calculo.t2} s, em metros?"
+    "br": "Um carro tem velocidade v(t) = {dados-calculo.a}t + {dados-calculo.b} (m/s). Quanto ele se desloca entre t = {dados-calculo.t1} s e t = {dados-calculo.t2} s, em metros?",
+    "fr": "Une voiture a une vitesse v(t) = {dados-calculo.a}t + {dados-calculo.b} (m/s). De combien se déplace-t-elle entre t = {dados-calculo.t1} s et t = {dados-calculo.t2} s, en mètres ?",
+    "en": "A car has velocity v(t) = {dados-calculo.a}t + {dados-calculo.b} (m/s). How far does it travel between t = {dados-calculo.t1} s and t = {dados-calculo.t2} s, in metres?"
   }
 }

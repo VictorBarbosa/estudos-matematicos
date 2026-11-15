@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a MAIOR raiz da equação característica desta EDO? Responda com 4 casas decimais."
+    "br": "Qual é a MAIOR raiz da equação característica desta EDO? Responda com 4 casas decimais.",
+    "fr": "Quelle est la PLUS GRANDE racine de l'équation caractéristique de cette EDO ? Répondez avec 4 décimales.",
+    "en": "What is the LARGEST root of the characteristic equation of this ODE? Answer with 4 decimal places."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a velocidade de um satélite em órbita circular a {dados-calculo.v1} km de altitude? (em km/s, 2 casas decimais)"
+    "br": "Qual é a velocidade de um satélite em órbita circular a {dados-calculo.v1} km de altitude? (em km/s, 2 casas decimais)",
+    "fr": "Quelle est la vitesse d'un satellite en orbite circulaire à {dados-calculo.v1} km d'altitude ? (en km/s, 2 décimales)",
+    "en": "What is the speed of a satellite in circular orbit at an altitude of {dados-calculo.v1} km? (in km/s, 2 decimal places)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma asa de {dados-calculo.area} m² tem ar a {dados-calculo.superior} m/s na face superior e {dados-calculo.inferior} m/s na inferior. Qual é a sustentação, em newtons? (2 casas decimais)"
+    "br": "Uma asa de {dados-calculo.area} m² tem ar a {dados-calculo.superior} m/s na face superior e {dados-calculo.inferior} m/s na inferior. Qual é a sustentação, em newtons? (2 casas decimais)",
+    "fr": "Une aile de {dados-calculo.area} m² a de l'air à {dados-calculo.superior} m/s sur la face supérieure et à {dados-calculo.inferior} m/s sur l'inférieure. Quelle est la portance, en newtons ? (2 décimales)",
+    "en": "A wing of {dados-calculo.area} m² has air at {dados-calculo.superior} m/s on the upper surface and {dados-calculo.inferior} m/s on the lower one. What is the lift, in newtons? (2 decimal places)"
   }
 }

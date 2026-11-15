@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Pelo teorema da divergência, qual é o fluxo do campo para fora do cubo 0 ≤ x, y, z ≤ {dados-calculo.L}?"
+    "br": "Pelo teorema da divergência, qual é o fluxo do campo para fora do cubo 0 ≤ x, y, z ≤ {dados-calculo.L}?",
+    "fr": "Par le théorème de la divergence, quel est le flux du champ sortant du cube 0 ≤ x, y, z ≤ {dados-calculo.L} ?",
+    "en": "By the divergence theorem, what is the outward flux of the field from the cube 0 ≤ x, y, z ≤ {dados-calculo.L}?"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Quanta energia, em J, é preciso para aquecer {dados-calculo.v1} kg de {dados-calculo.v2} em {dados-calculo.deltaT} K? O calor específico é {dados-calculo.v3} J/(kg·K). Responda com 3 casas decimais."
+    "br": "Quanta energia, em J, é preciso para aquecer {dados-calculo.v1} kg de {dados-calculo.v2} em {dados-calculo.deltaT} K? O calor específico é {dados-calculo.v3} J/(kg·K). Responda com 3 casas decimais.",
+    "fr": "Quelle énergie, en J, faut-il pour chauffer {dados-calculo.v1} kg de {dados-calculo.v2} de {dados-calculo.deltaT} K ? La chaleur massique est de {dados-calculo.v3} J/(kg·K). Répondez avec 3 décimales.",
+    "en": "How much energy, in J, is needed to heat {dados-calculo.v1} kg of {dados-calculo.v2} by {dados-calculo.deltaT} K? The specific heat is {dados-calculo.v3} J/(kg·K). Answer with 3 decimal places."
   }
 }

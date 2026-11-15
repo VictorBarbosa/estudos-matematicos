@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Escreva a expressão como (px + q)(px − q), com p e q positivos, e informe q."
+    "br": "Escreva a expressão como (px + q)(px − q), com p e q positivos, e informe q.",
+    "fr": "Écrivez l'expression sous la forme (px + q)(px − q), avec p et q positifs, et indiquez q.",
+    "en": "Write the expression as (px + q)(px − q), with p and q positive, and give q."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo de {dados-calculo.v1} m² e emissividade {dados-calculo.v2} está a {dados-calculo.celsius} °C. Qual é a potência irradiada, em W? Responda com 3 casas decimais."
+    "br": "Um corpo de {dados-calculo.v1} m² e emissividade {dados-calculo.v2} está a {dados-calculo.celsius} °C. Qual é a potência irradiada, em W? Responda com 3 casas decimais.",
+    "fr": "Un corps de {dados-calculo.v1} m² et d'émissivité {dados-calculo.v2} est à {dados-calculo.celsius} °C. Quelle est la puissance rayonnée, en W ? Répondez avec 3 décimales.",
+    "en": "A body of {dados-calculo.v1} m² and emissivity {dados-calculo.v2} is at {dados-calculo.celsius} °C. What is the radiated power, in W? Answer with 3 decimal places."
   }
 }

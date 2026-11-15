@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a coordenada x quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta? Responda com 3 casas decimais."
+    "br": "Qual é a coordenada x quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta? Responda com 3 casas decimais.",
+    "fr": "Quelle est la coordonnée x lorsque le paramètre vaut {dados-calculo.doze} douzièmes d'un tour ? Répondez avec 3 décimales.",
+    "en": "What is the x-coordinate when the parameter equals {dados-calculo.doze} twelfths of a turn? Answer with 3 decimal places."
   }
 }

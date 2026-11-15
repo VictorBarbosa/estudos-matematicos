@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o ângulo entre os dois vetores, em graus? Arredonde para duas casas decimais."
+    "br": "Qual é o ângulo entre os dois vetores, em graus? Arredonde para duas casas decimais.",
+    "fr": "Quel est l'angle entre les deux vecteurs, en degrés ? Arrondissez à deux décimales.",
+    "en": "What is the angle between the two vectors, in degrees? Round to two decimal places."
   }
 }

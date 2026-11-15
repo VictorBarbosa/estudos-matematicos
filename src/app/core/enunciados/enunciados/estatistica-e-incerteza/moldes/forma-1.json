@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Para as medidas {dados-calculo.expressao1}, qual é {dados-calculo.rotulo}? (2 casas decimais)"
+    "br": "Para as medidas {dados-calculo.expressao1}, qual é {dados-calculo.rotulo}? (2 casas decimais)",
+    "fr": "Pour les mesures {dados-calculo.expressao1}, quel est {dados-calculo.rotulo} ? (2 décimales)",
+    "en": "For the measurements {dados-calculo.expressao1}, what is {dados-calculo.rotulo}? (2 decimal places)"
   }
 }

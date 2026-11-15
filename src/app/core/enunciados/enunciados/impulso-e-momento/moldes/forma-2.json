@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma força de {dados-calculo.forca} N age por {dados-calculo.tempo} s sobre um corpo de {dados-calculo.massa} kg. Qual é o impulso, em N·s?"
+    "br": "Uma força de {dados-calculo.forca} N age por {dados-calculo.tempo} s sobre um corpo de {dados-calculo.massa} kg. Qual é o impulso, em N·s?",
+    "fr": "Une force de {dados-calculo.forca} N agit pendant {dados-calculo.tempo} s sur un corps de {dados-calculo.massa} kg. Quelle est l'impulsion, en N·s ?",
+    "en": "A force of {dados-calculo.forca} N acts for {dados-calculo.tempo} s on a body of {dados-calculo.massa} kg. What is the impulse, in N·s?"
   }
 }

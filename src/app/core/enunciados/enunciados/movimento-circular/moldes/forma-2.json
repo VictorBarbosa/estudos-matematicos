@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um rotor gira a {dados-calculo.rotacoesPorMinuto} rotações por minuto. Qual é a velocidade angular, em rad/s? Responda com 3 casas decimais."
+    "br": "Um rotor gira a {dados-calculo.rotacoesPorMinuto} rotações por minuto. Qual é a velocidade angular, em rad/s? Responda com 3 casas decimais.",
+    "fr": "Un rotor tourne à {dados-calculo.rotacoesPorMinuto} tours par minute. Quelle est la vitesse angulaire, en rad/s ? Répondez avec 3 décimales.",
+    "en": "A rotor spins at {dados-calculo.rotacoesPorMinuto} revolutions per minute. What is the angular velocity, in rad/s? Answer with 3 decimal places."
   }
 }

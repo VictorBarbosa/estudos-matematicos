@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Use a regra da cadeia e calcule f'({dados-calculo.ponto}). (3 casas decimais)"
+    "br": "Use a regra da cadeia e calcule f'({dados-calculo.ponto}). (3 casas decimais)",
+    "fr": "Utilisez la règle de la chaîne et calculez f'({dados-calculo.ponto}). (3 décimales)",
+    "en": "Use the chain rule and calculate f'({dados-calculo.ponto}). (3 decimal places)"
   }
 }

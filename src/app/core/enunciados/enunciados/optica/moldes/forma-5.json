@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um objeto de {dados-calculo.h} cm de altura está a {dados-calculo.v1} cm de uma lente convergente de foco {dados-calculo.f} cm. Qual é a altura da imagem, em cm? (negativa se a imagem for invertida){dados-calculo.v2}"
+    "br": "Um objeto de {dados-calculo.h} cm de altura está a {dados-calculo.v1} cm de uma lente convergente de foco {dados-calculo.f} cm. Qual é a altura da imagem, em cm? (negativa se a imagem for invertida){dados-calculo.v2}",
+    "fr": "Un objet de {dados-calculo.h} cm de hauteur est à {dados-calculo.v1} cm d'une lentille convergente de focale {dados-calculo.f} cm. Quelle est la hauteur de l'image, en cm ? (négative si l'image est renversée){dados-calculo.v2}",
+    "en": "An object of height {dados-calculo.h} cm is {dados-calculo.v1} cm from a converging lens of focal length {dados-calculo.f} cm. What is the height of the image, in cm? (negative if the image is inverted){dados-calculo.v2}"
   }
 }

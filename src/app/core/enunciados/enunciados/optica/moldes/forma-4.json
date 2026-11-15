@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um objeto está a {dados-calculo.p} cm de uma lente {dados-calculo.tipo}. A que distância da lente se forma a imagem, em cm? (negativo se a imagem for virtual){dados-calculo.v1}"
+    "br": "Um objeto está a {dados-calculo.p} cm de uma lente {dados-calculo.tipo}. A que distância da lente se forma a imagem, em cm? (negativo se a imagem for virtual){dados-calculo.v1}",
+    "fr": "Un objet est à {dados-calculo.p} cm d'une lentille {dados-calculo.tipo}. À quelle distance de la lentille se forme l'image, en cm ? (négatif si l'image est virtuelle){dados-calculo.v1}",
+    "en": "An object is {dados-calculo.p} cm from a {dados-calculo.tipo} lens. At what distance from the lens is the image formed, in cm? (negative if the image is virtual){dados-calculo.v1}"
   }
 }

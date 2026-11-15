@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo gira livremente, sem torque externo, com momento de inércia {dados-calculo.v1} kg·m² a {dados-calculo.v2} rad/s. A inércia passa a {dados-calculo.v3}. Qual é a nova velocidade angular, em rad/s? Responda com 3 casas decimais."
+    "br": "Um corpo gira livremente, sem torque externo, com momento de inércia {dados-calculo.v1} kg·m² a {dados-calculo.v2} rad/s. A inércia passa a {dados-calculo.v3}. Qual é a nova velocidade angular, em rad/s? Responda com 3 casas decimais.",
+    "fr": "Un corps tourne librement, sans couple externe, avec un moment d'inertie de {dados-calculo.v1} kg·m² à {dados-calculo.v2} rad/s. L'inertie passe à {dados-calculo.v3}. Quelle est la nouvelle vitesse angulaire, en rad/s ? Répondez avec 3 décimales.",
+    "en": "A body spins freely, without external torque, with moment of inertia {dados-calculo.v1} kg·m² at {dados-calculo.v2} rad/s. The inertia changes to {dados-calculo.v3}. What is the new angular velocity, in rad/s? Answer with 3 decimal places."
   }
 }

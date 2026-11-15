@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a coordenada y quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta completa? "
+    "br": "Qual é a coordenada y quando o parâmetro vale {dados-calculo.doze} doze avos de uma volta completa? ",
+    "fr": "Quelle est la coordonnée y lorsque le paramètre vaut {dados-calculo.doze} douzièmes d'un tour complet ? ",
+    "en": "What is the y-coordinate when the parameter equals {dados-calculo.doze} twelfths of a full turn? "
   }
 }

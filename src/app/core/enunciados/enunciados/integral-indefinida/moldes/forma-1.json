@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o valor da constante C, sabendo que F({dados-calculo.ponto}) = {dados-calculo.condicao}?"
+    "br": "Qual é o valor da constante C, sabendo que F({dados-calculo.ponto}) = {dados-calculo.condicao}?",
+    "fr": "Quelle est la valeur de la constante C, sachant que F({dados-calculo.ponto}) = {dados-calculo.condicao} ?",
+    "en": "What is the value of the constant C, knowing that F({dados-calculo.ponto}) = {dados-calculo.condicao}?"
   }
 }

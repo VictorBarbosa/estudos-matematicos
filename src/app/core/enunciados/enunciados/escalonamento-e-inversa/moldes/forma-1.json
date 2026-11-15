@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.enunciado} Responda como fração."
+    "br": "{dados-calculo.enunciado} Responda como fração.",
+    "fr": "{dados-calculo.enunciado} Répondez sous forme de fraction.",
+    "en": "{dados-calculo.enunciado} Answer as a fraction."
   }
 }

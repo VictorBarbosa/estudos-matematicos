@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Em qual quadrante está este ângulo? Responda com 1, 2, 3 ou 4."
+    "br": "Em qual quadrante está este ângulo? Responda com 1, 2, 3 ou 4.",
+    "fr": "Dans quel quadrant se trouve cet angle ? Répondez par 1, 2, 3 ou 4.",
+    "en": "Which quadrant is this angle in? Answer with 1, 2, 3 or 4."
   }
 }

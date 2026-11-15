@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o módulo da soma dos vetores ({dados-calculo.v1}, {dados-calculo.v2}) e ({dados-calculo.v3}, {dados-calculo.v4})? (2 casas decimais)"
+    "br": "Qual é o módulo da soma dos vetores ({dados-calculo.v1}, {dados-calculo.v2}) e ({dados-calculo.v3}, {dados-calculo.v4})? (2 casas decimais)",
+    "fr": "Quel est le module de la somme des vecteurs ({dados-calculo.v1}, {dados-calculo.v2}) et ({dados-calculo.v3}, {dados-calculo.v4}) ? (2 décimales)",
+    "en": "What is the magnitude of the sum of the vectors ({dados-calculo.v1}, {dados-calculo.v2}) and ({dados-calculo.v3}, {dados-calculo.v4})? (2 decimal places)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Sabendo que sen {dados-calculo.v1}° vale isso, qual é o valor? (2 casas)"
+    "br": "Sabendo que sen {dados-calculo.v1}° vale isso, qual é o valor? (2 casas)",
+    "fr": "Sachant que sin {dados-calculo.v1}° vaut cela, quelle est la valeur ? (2 décimales)",
+    "en": "Knowing that sin {dados-calculo.v1}° equals this, what is the value? (2 decimals)"
   }
 }

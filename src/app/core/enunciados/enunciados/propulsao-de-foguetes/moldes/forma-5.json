@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um foguete parte com {dados-calculo.v1} t e termina a queima com {dados-calculo.v2} t. Que fração da massa inicial era propelente? (responda entre 0 e 1, com 2 casas decimais)"
+    "br": "Um foguete parte com {dados-calculo.v1} t e termina a queima com {dados-calculo.v2} t. Que fração da massa inicial era propelente? (responda entre 0 e 1, com 2 casas decimais)",
+    "fr": "Une fusée part avec {dados-calculo.v1} t et termine la combustion avec {dados-calculo.v2} t. Quelle fraction de la masse initiale était du propergol ? (répondez entre 0 et 1, avec 2 décimales)",
+    "en": "A rocket starts with {dados-calculo.v1} t and ends the burn with {dados-calculo.v2} t. What fraction of the initial mass was propellant? (answer between 0 and 1, with 2 decimal places)"
   }
 }

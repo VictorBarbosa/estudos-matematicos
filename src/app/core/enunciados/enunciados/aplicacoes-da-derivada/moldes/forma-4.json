@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um balão esférico é inflado e seu raio cresce {dados-calculo.taxaRaio} cm/s. A que taxa o VOLUME cresce no instante em que o raio vale {dados-calculo.raio} cm? (em cm³/s, 2 casas decimais)"
+    "br": "Um balão esférico é inflado e seu raio cresce {dados-calculo.taxaRaio} cm/s. A que taxa o VOLUME cresce no instante em que o raio vale {dados-calculo.raio} cm? (em cm³/s, 2 casas decimais)",
+    "fr": "Un ballon sphérique est gonflé et son rayon croît de {dados-calculo.taxaRaio} cm/s. À quel taux le VOLUME croît-il à l'instant où le rayon vaut {dados-calculo.raio} cm ? (en cm³/s, 2 décimales)",
+    "en": "A spherical balloon is inflated and its radius grows at {dados-calculo.taxaRaio} cm/s. At what rate is the VOLUME growing at the instant when the radius is {dados-calculo.raio} cm? (in cm³/s, 2 decimal places)"
   }
 }

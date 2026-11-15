@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A posição de um carro, em metros, é s(t) com t em segundos. Qual é a velocidade média entre t = {dados-calculo.inicio} s e t = {dados-calculo.fim} s, em m/s? (2 casas)"
+    "br": "A posição de um carro, em metros, é s(t) com t em segundos. Qual é a velocidade média entre t = {dados-calculo.inicio} s e t = {dados-calculo.fim} s, em m/s? (2 casas)",
+    "fr": "La position d'une voiture, en mètres, est s(t) avec t en secondes. Quelle est la vitesse moyenne entre t = {dados-calculo.inicio} s et t = {dados-calculo.fim} s, en m/s ? (2 décimales)",
+    "en": "The position of a car, in metres, is s(t) with t in seconds. What is the average velocity between t = {dados-calculo.inicio} s and t = {dados-calculo.fim} s, in m/s? (2 decimals)"
   }
 }

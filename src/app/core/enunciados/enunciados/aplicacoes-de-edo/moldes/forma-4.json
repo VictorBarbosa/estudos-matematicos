@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma massa de {dados-calculo.massa} kg presa a uma mola de constante {dados-calculo.rigidez} N/m, com amortecimento {dados-calculo.amortecimento} N·s/m, é solta do repouso a {dados-calculo.expressao1} m do equilíbrio. Qual é a posição em t = {dados-calculo.expressao2} s, em m? Responda com 4 casas decimais."
+    "br": "Uma massa de {dados-calculo.massa} kg presa a uma mola de constante {dados-calculo.rigidez} N/m, com amortecimento {dados-calculo.amortecimento} N·s/m, é solta do repouso a {dados-calculo.expressao1} m do equilíbrio. Qual é a posição em t = {dados-calculo.expressao2} s, em m? Responda com 4 casas decimais.",
+    "fr": "Une masse de {dados-calculo.massa} kg attachée à un ressort de constante {dados-calculo.rigidez} N/m, avec un amortissement de {dados-calculo.amortecimento} N·s/m, est lâchée du repos à {dados-calculo.expressao1} m de l'équilibre. Quelle est la position à t = {dados-calculo.expressao2} s, en m ? Répondez avec 4 décimales.",
+    "en": "A mass of {dados-calculo.massa} kg attached to a spring of constant {dados-calculo.rigidez} N/m, with damping {dados-calculo.amortecimento} N·s/m, is released from rest at {dados-calculo.expressao1} m from equilibrium. What is the position at t = {dados-calculo.expressao2} s, in m? Answer with 4 decimal places."
   }
 }

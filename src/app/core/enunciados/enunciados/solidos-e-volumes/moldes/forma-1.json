@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um sólido de volume {dados-calculo.v1} cm³ é ampliado {dados-calculo.v2} vezes em todas as dimensões. Qual é o novo volume, em cm³?"
+    "br": "Um sólido de volume {dados-calculo.v1} cm³ é ampliado {dados-calculo.v2} vezes em todas as dimensões. Qual é o novo volume, em cm³?",
+    "fr": "Un solide de volume {dados-calculo.v1} cm³ est agrandi {dados-calculo.v2} fois dans toutes ses dimensions. Quel est le nouveau volume, en cm³ ?",
+    "en": "A solid of volume {dados-calculo.v1} cm³ is enlarged {dados-calculo.v2} times in all dimensions. What is the new volume, in cm³?"
   }
 }

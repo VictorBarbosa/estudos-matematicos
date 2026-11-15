@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a derivada parcial mista desta função, derivando primeiro em x e depois em y? "
+    "br": "Qual é a derivada parcial mista desta função, derivando primeiro em x e depois em y? ",
+    "fr": "Quelle est la dérivée partielle mixte de cette fonction, en dérivant d'abord par rapport à x puis par rapport à y ? ",
+    "en": "What is the mixed partial derivative of this function, differentiating first with respect to x and then with respect to y? "
   }
 }

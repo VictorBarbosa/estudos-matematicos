@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma barra de {dados-calculo.L} m tem densidade linear λ(x) (kg/m), com x medido de uma ponta. Onde fica o centro de massa, em metros a partir dessa ponta? (2 casas decimais)"
+    "br": "Uma barra de {dados-calculo.L} m tem densidade linear λ(x) (kg/m), com x medido de uma ponta. Onde fica o centro de massa, em metros a partir dessa ponta? (2 casas decimais)",
+    "fr": "Une barre de {dados-calculo.L} m a une densité linéique λ(x) (kg/m), avec x mesuré depuis une extrémité. Où se trouve le centre de masse, en mètres depuis cette extrémité ? (2 décimales)",
+    "en": "A rod of {dados-calculo.L} m has linear density λ(x) (kg/m), with x measured from one end. Where is the centre of mass, in metres from that end? (2 decimal places)"
   }
 }

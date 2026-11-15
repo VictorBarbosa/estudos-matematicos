@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A luz sai de {dados-calculo.nome} (n = {dados-calculo.v1}) para {dados-calculo.destino}. A partir de que ângulo com a normal ocorre reflexão total, em graus?{dados-calculo.v2}"
+    "br": "A luz sai de {dados-calculo.nome} (n = {dados-calculo.v1}) para {dados-calculo.destino}. A partir de que ângulo com a normal ocorre reflexão total, em graus?{dados-calculo.v2}",
+    "fr": "La lumière sort de {dados-calculo.nome} (n = {dados-calculo.v1}) vers {dados-calculo.destino}. À partir de quel angle avec la normale se produit la réflexion totale, en degrés ?{dados-calculo.v2}",
+    "en": "Light leaves {dados-calculo.nome} (n = {dados-calculo.v1}) towards {dados-calculo.destino}. From what angle with the normal does total internal reflection occur, in degrees?{dados-calculo.v2}"
   }
 }

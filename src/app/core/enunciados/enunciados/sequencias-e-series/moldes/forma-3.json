@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule a soma da série telescópica (fração ou 3 casas decimais)."
+    "br": "Calcule a soma da série telescópica (fração ou 3 casas decimais).",
+    "fr": "Calculez la somme de la série télescopique (fraction ou 3 décimales).",
+    "en": "Calculate the sum of the telescoping series (fraction or 3 decimal places)."
   }
 }

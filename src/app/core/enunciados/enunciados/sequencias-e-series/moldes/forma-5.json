@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o raio de convergência R da série de potências? (fração ou 3 casas decimais)"
+    "br": "Qual é o raio de convergência R da série de potências? (fração ou 3 casas decimais)",
+    "fr": "Quel est le rayon de convergence R de la série entière ? (fraction ou 3 décimales)",
+    "en": "What is the radius of convergence R of the power series? (fraction or 3 decimal places)"
   }
 }

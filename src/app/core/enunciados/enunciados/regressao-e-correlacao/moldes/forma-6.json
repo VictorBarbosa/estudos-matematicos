@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o resíduo do ponto de x igual a {dados-calculo.expressao1} em relação à reta de mínimos quadrados destes dados? Responda com 4 casas decimais."
+    "br": "Qual é o resíduo do ponto de x igual a {dados-calculo.expressao1} em relação à reta de mínimos quadrados destes dados? Responda com 4 casas decimais.",
+    "fr": "Quel est le résidu du point d'abscisse {dados-calculo.expressao1} par rapport à la droite des moindres carrés de ces données ? Répondez avec 4 décimales.",
+    "en": "What is the residual of the point with x equal to {dados-calculo.expressao1} relative to the least-squares line for these data? Answer with 4 decimal places."
   }
 }

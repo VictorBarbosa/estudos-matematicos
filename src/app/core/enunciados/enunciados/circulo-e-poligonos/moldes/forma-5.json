@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um polígono regular de {dados-calculo.lados} lados tem lado {dados-calculo.base} cm e apótema {dados-calculo.v1} cm. Qual é sua área? (em cm², 2 casas decimais)"
+    "br": "Um polígono regular de {dados-calculo.lados} lados tem lado {dados-calculo.base} cm e apótema {dados-calculo.v1} cm. Qual é sua área? (em cm², 2 casas decimais)",
+    "fr": "Un polygone régulier de {dados-calculo.lados} côtés a un côté de {dados-calculo.base} cm et un apothème de {dados-calculo.v1} cm. Quelle est son aire ? (en cm², 2 décimales)",
+    "en": "A regular polygon with {dados-calculo.lados} sides has a side of {dados-calculo.base} cm and an apothem of {dados-calculo.v1} cm. What is its area? (in cm², 2 decimal places)"
   }
 }

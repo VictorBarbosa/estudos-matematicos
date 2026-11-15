@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.v1} (massa {dados-calculo.v2}, carga 1,6×10⁻¹⁹ C) entra a {dados-calculo.vTexto} m/s, perpendicular, num campo de {dados-calculo.v3} T. Qual é o raio da órbita, em {dados-calculo.unidade}? (2 casas decimais)"
+    "br": "{dados-calculo.v1} (massa {dados-calculo.v2}, carga 1,6×10⁻¹⁹ C) entra a {dados-calculo.vTexto} m/s, perpendicular, num campo de {dados-calculo.v3} T. Qual é o raio da órbita, em {dados-calculo.unidade}? (2 casas decimais)",
+    "fr": "{dados-calculo.v1} (masse {dados-calculo.v2}, charge 1,6×10⁻¹⁹ C) entre à {dados-calculo.vTexto} m/s, perpendiculairement, dans un champ de {dados-calculo.v3} T. Quel est le rayon de l'orbite, en {dados-calculo.unidade} ? (2 décimales)",
+    "en": "{dados-calculo.v1} (mass {dados-calculo.v2}, charge 1.6×10⁻¹⁹ C) enters at {dados-calculo.vTexto} m/s, perpendicularly, into a field of {dados-calculo.v3} T. What is the orbital radius, in {dados-calculo.unidade}? (2 decimal places)"
   }
 }

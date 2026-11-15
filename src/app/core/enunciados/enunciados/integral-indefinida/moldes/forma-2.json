@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Tomando C = 0, qual é o valor de F({dados-calculo.ponto})?"
+    "br": "Tomando C = 0, qual é o valor de F({dados-calculo.ponto})?",
+    "fr": "En prenant C = 0, quelle est la valeur de F({dados-calculo.ponto}) ?",
+    "en": "Taking C = 0, what is the value of F({dados-calculo.ponto})?"
   }
 }

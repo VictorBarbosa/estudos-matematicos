@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "O ponto ({dados-calculo.v1}, {dados-calculo.v2}) pertence ao gráfico de f. Qual é a ABSCISSA do ponto correspondente no gráfico transformado? Responda com 3 casas decimais."
+    "br": "O ponto ({dados-calculo.v1}, {dados-calculo.v2}) pertence ao gráfico de f. Qual é a ABSCISSA do ponto correspondente no gráfico transformado? Responda com 3 casas decimais.",
+    "fr": "Le point ({dados-calculo.v1}, {dados-calculo.v2}) appartient au graphique de f. Quelle est l'ABSCISSE du point correspondant sur le graphique transformé ? Répondez avec 3 décimales.",
+    "en": "The point ({dados-calculo.v1}, {dados-calculo.v2}) belongs to the graph of f. What is the X-COORDINATE of the corresponding point on the transformed graph? Answer with 3 decimal places."
   }
 }

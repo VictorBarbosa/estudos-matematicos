@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Pelo teste da razão, calcule L = lim |aₙ₊₁ / aₙ| quando n tende ao infinito (fração ou 3 casas decimais)."
+    "br": "Pelo teste da razão, calcule L = lim |aₙ₊₁ / aₙ| quando n tende ao infinito (fração ou 3 casas decimais).",
+    "fr": "Par le test du rapport, calculez L = lim |aₙ₊₁ / aₙ| lorsque n tend vers l'infini (fraction ou 3 décimales).",
+    "en": "By the ratio test, calculate L = lim |aₙ₊₁ / aₙ| as n tends to infinity (fraction or 3 decimal places)."
   }
 }

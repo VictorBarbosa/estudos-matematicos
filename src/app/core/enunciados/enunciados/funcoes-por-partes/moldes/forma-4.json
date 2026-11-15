@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual valor da constante c torna esta função contínua em x = {dados-calculo.fronteira}? Responda com 3 casas decimais."
+    "br": "Qual valor da constante c torna esta função contínua em x = {dados-calculo.fronteira}? Responda com 3 casas decimais.",
+    "fr": "Quelle valeur de la constante c rend cette fonction continue en x = {dados-calculo.fronteira} ? Répondez avec 3 décimales.",
+    "en": "What value of the constant c makes this function continuous at x = {dados-calculo.fronteira}? Answer with 3 decimal places."
   }
 }

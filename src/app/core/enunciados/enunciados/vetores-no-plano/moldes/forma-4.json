@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o ângulo que o vetor ({dados-calculo.x}, {dados-calculo.y}) forma com o eixo x positivo, medido no sentido anti-horário? (em graus, 2 casas)"
+    "br": "Qual é o ângulo que o vetor ({dados-calculo.x}, {dados-calculo.y}) forma com o eixo x positivo, medido no sentido anti-horário? (em graus, 2 casas)",
+    "fr": "Quel est l'angle que le vecteur ({dados-calculo.x}, {dados-calculo.y}) forme avec l'axe x positif, mesuré dans le sens anti-horaire ? (en degrés, 2 décimales)",
+    "en": "What is the angle that the vector ({dados-calculo.x}, {dados-calculo.y}) makes with the positive x-axis, measured counterclockwise? (in degrees, 2 decimals)"
   }
 }

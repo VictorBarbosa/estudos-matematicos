@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Luz de {dados-calculo.lambda} nm passa por duas fendas separadas por {dados-calculo.v1} mm, e a tela fica a {dados-calculo.v2} m. A que distância do centro está a {dados-calculo.ordem}ª franja clara, em mm?{dados-calculo.v3}"
+    "br": "Luz de {dados-calculo.lambda} nm passa por duas fendas separadas por {dados-calculo.v1} mm, e a tela fica a {dados-calculo.v2} m. A que distância do centro está a {dados-calculo.ordem}ª franja clara, em mm?{dados-calculo.v3}",
+    "fr": "De la lumière de {dados-calculo.lambda} nm passe par deux fentes séparées de {dados-calculo.v1} mm, et l'écran est à {dados-calculo.v2} m. À quelle distance du centre se trouve la {dados-calculo.ordem}e frange claire, en mm ?{dados-calculo.v3}",
+    "en": "Light of {dados-calculo.lambda} nm passes through two slits separated by {dados-calculo.v1} mm, and the screen is at {dados-calculo.v2} m. At what distance from the centre is the {dados-calculo.ordem}th bright fringe, in mm?{dados-calculo.v3}"
   }
 }

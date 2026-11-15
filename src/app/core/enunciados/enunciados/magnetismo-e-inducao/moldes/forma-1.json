@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um fio de {dados-calculo.v1} m, com corrente de {dados-calculo.i} A, está perpendicular a um campo magnético de {dados-calculo.v2} T. Qual é a força sobre ele, em N? (2 casas decimais)"
+    "br": "Um fio de {dados-calculo.v1} m, com corrente de {dados-calculo.i} A, está perpendicular a um campo magnético de {dados-calculo.v2} T. Qual é a força sobre ele, em N? (2 casas decimais)",
+    "fr": "Un fil de {dados-calculo.v1} m, parcouru par un courant de {dados-calculo.i} A, est perpendiculaire à un champ magnétique de {dados-calculo.v2} T. Quelle est la force qui s'exerce sur lui, en N ? (2 décimales)",
+    "en": "A wire of {dados-calculo.v1} m, carrying a current of {dados-calculo.i} A, is perpendicular to a magnetic field of {dados-calculo.v2} T. What is the force on it, in N? (2 decimal places)"
   }
 }

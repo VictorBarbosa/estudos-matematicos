@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Para que valor de k o sistema deixa de ter solução única?"
+    "br": "Para que valor de k o sistema deixa de ter solução única?",
+    "fr": "Pour quelle valeur de k le système cesse-t-il d'avoir une solution unique ?",
+    "en": "For what value of k does the system stop having a unique solution?"
   }
 }

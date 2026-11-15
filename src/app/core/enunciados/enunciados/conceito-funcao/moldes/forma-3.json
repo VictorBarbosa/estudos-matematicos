@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule f({dados-calculo.x})."
+    "br": "Calcule f({dados-calculo.x}).",
+    "fr": "Calculez f({dados-calculo.x}).",
+    "en": "Calculate f({dados-calculo.x})."
   }
 }

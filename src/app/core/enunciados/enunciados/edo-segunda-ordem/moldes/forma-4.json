@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o discriminante da equação característica desta EDO? Responda com 4 casas decimais."
+    "br": "Qual é o discriminante da equação característica desta EDO? Responda com 4 casas decimais.",
+    "fr": "Quel est le discriminant de l'équation caractéristique de cette EDO ? Répondez avec 4 décimales.",
+    "en": "What is the discriminant of the characteristic equation of this ODE? Answer with 4 decimal places."
   }
 }

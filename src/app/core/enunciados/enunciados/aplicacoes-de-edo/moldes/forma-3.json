@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Num circuito RL com R = {dados-calculo.resistencia} Ω, L = {dados-calculo.expressao1} H e tensão de {dados-calculo.tensao} V, ligado em t = 0 com corrente inicial nula, qual é a corrente em t = {dados-calculo.expressao2} s, em A? Responda com 4 casas decimais."
+    "br": "Num circuito RL com R = {dados-calculo.resistencia} Ω, L = {dados-calculo.expressao1} H e tensão de {dados-calculo.tensao} V, ligado em t = 0 com corrente inicial nula, qual é a corrente em t = {dados-calculo.expressao2} s, em A? Responda com 4 casas decimais.",
+    "fr": "Dans un circuit RL avec R = {dados-calculo.resistencia} Ω, L = {dados-calculo.expressao1} H et une tension de {dados-calculo.tensao} V, fermé à t = 0 avec un courant initial nul, quel est le courant à t = {dados-calculo.expressao2} s, en A ? Répondez avec 4 décimales.",
+    "en": "In an RL circuit with R = {dados-calculo.resistencia} Ω, L = {dados-calculo.expressao1} H and a voltage of {dados-calculo.tensao} V, switched on at t = 0 with zero initial current, what is the current at t = {dados-calculo.expressao2} s, in A? Answer with 4 decimal places."
   }
 }

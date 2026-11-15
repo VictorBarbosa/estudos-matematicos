@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um projétil é lançado a {dados-calculo.velocidadeInicial} m/s formando {dados-calculo.anguloGraus}° com a horizontal. Qual é {dados-calculo.nome}? (em {dados-calculo.unidade}, 2 casas)"
+    "br": "Um projétil é lançado a {dados-calculo.velocidadeInicial} m/s formando {dados-calculo.anguloGraus}° com a horizontal. Qual é {dados-calculo.nome}? (em {dados-calculo.unidade}, 2 casas)",
+    "fr": "Un projectile est lancé à {dados-calculo.velocidadeInicial} m/s en formant {dados-calculo.anguloGraus}° avec l'horizontale. Quel est {dados-calculo.nome} ? (en {dados-calculo.unidade}, 2 décimales)",
+    "en": "A projectile is launched at {dados-calculo.velocidadeInicial} m/s making {dados-calculo.anguloGraus}° with the horizontal. What is {dados-calculo.nome}? (in {dados-calculo.unidade}, 2 decimals)"
   }
 }

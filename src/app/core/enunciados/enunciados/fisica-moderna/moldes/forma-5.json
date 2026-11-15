@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A função trabalho do {dados-calculo.metal} é {dados-calculo.v1} eV. Qual é o MAIOR comprimento de onda que ainda arranca elétrons dele, em nm?{dados-calculo.v2}"
+    "br": "A função trabalho do {dados-calculo.metal} é {dados-calculo.v1} eV. Qual é o MAIOR comprimento de onda que ainda arranca elétrons dele, em nm?{dados-calculo.v2}",
+    "fr": "Le travail d'extraction du {dados-calculo.metal} est de {dados-calculo.v1} eV. Quelle est la PLUS GRANDE longueur d'onde qui arrache encore des électrons, en nm ?{dados-calculo.v2}",
+    "en": "The work function of {dados-calculo.metal} is {dados-calculo.v1} eV. What is the LARGEST wavelength that still ejects electrons from it, in nm?{dados-calculo.v2}"
   }
 }

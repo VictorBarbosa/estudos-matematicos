@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio gira a {dados-calculo.v5} rad/s. Qual é o momento angular, em kg·m²/s? Responda com 3 casas decimais."
+    "br": "{dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio gira a {dados-calculo.v5} rad/s. Qual é o momento angular, em kg·m²/s? Responda com 3 casas decimais.",
+    "fr": "{dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg et de {dados-calculo.v4} m de rayon tourne à {dados-calculo.v5} rad/s. Quel est le moment cinétique, en kg·m²/s ? Répondez avec 3 décimales.",
+    "en": "{dados-calculo.v1} {dados-calculo.v2} of {dados-calculo.v3} kg and radius {dados-calculo.v4} m spins at {dados-calculo.v5} rad/s. What is the angular momentum, in kg·m²/s? Answer with 3 decimal places."
   }
 }

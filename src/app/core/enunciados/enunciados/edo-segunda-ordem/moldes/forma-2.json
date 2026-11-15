@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Com y(0) = {dados-calculo.y0} e y'(0) = {dados-calculo.v0}, quanto vale a solução em t = {dados-calculo.expressao1}? Responda com 4 casas decimais."
+    "br": "Com y(0) = {dados-calculo.y0} e y'(0) = {dados-calculo.v0}, quanto vale a solução em t = {dados-calculo.expressao1}? Responda com 4 casas decimais.",
+    "fr": "Avec y(0) = {dados-calculo.y0} et y'(0) = {dados-calculo.v0}, combien vaut la solution à t = {dados-calculo.expressao1} ? Répondez avec 4 décimales.",
+    "en": "With y(0) = {dados-calculo.y0} and y'(0) = {dados-calculo.v0}, what is the value of the solution at t = {dados-calculo.expressao1}? Answer with 4 decimal places."
   }
 }

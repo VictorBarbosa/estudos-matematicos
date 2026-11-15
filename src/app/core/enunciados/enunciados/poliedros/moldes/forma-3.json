@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um poliedro convexo tem {dados-calculo.f} faces, todas {dados-calculo.nomeFace}. Quantos {dados-calculo.v1} ele tem?"
+    "br": "Um poliedro convexo tem {dados-calculo.f} faces, todas {dados-calculo.nomeFace}. Quantos {dados-calculo.v1} ele tem?",
+    "fr": "Un polyèdre convexe a {dados-calculo.f} faces, toutes {dados-calculo.nomeFace}. Combien de {dados-calculo.v1} possède-t-il ?",
+    "en": "A convex polyhedron has {dados-calculo.f} faces, all {dados-calculo.nomeFace}. How many {dados-calculo.v1} does it have?"
   }
 }

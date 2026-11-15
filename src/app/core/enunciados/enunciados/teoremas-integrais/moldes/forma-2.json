@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule a componente z do rotacional do campo plano no ponto ({dados-calculo.x0}, {dados-calculo.y0})."
+    "br": "Calcule a componente z do rotacional do campo plano no ponto ({dados-calculo.x0}, {dados-calculo.y0}).",
+    "fr": "Calculez la composante z du rotationnel du champ plan au point ({dados-calculo.x0}, {dados-calculo.y0}).",
+    "en": "Calculate the z-component of the curl of the planar field at the point ({dados-calculo.x0}, {dados-calculo.y0})."
   }
 }

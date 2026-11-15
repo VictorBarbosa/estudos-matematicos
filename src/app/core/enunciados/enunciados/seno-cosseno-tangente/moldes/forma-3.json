@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o valor de tg {dados-calculo.graus}°? (2 casas decimais)"
+    "br": "Qual é o valor de tg {dados-calculo.graus}°? (2 casas decimais)",
+    "fr": "Quelle est la valeur de tan {dados-calculo.graus}° ? (2 décimales)",
+    "en": "What is the value of tan {dados-calculo.graus}°? (2 decimal places)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um torque de {dados-calculo.v1} N·m é aplicado a {dados-calculo.v2} {dados-calculo.v3} de {dados-calculo.v4} kg e {dados-calculo.v5} m de raio. Qual é a aceleração angular, em rad/s²? Responda com 3 casas decimais."
+    "br": "Um torque de {dados-calculo.v1} N·m é aplicado a {dados-calculo.v2} {dados-calculo.v3} de {dados-calculo.v4} kg e {dados-calculo.v5} m de raio. Qual é a aceleração angular, em rad/s²? Responda com 3 casas decimais.",
+    "fr": "Un couple de {dados-calculo.v1} N·m est appliqué à {dados-calculo.v2} {dados-calculo.v3} de {dados-calculo.v4} kg et de {dados-calculo.v5} m de rayon. Quelle est l'accélération angulaire, en rad/s² ? Répondez avec 3 décimales.",
+    "en": "A torque of {dados-calculo.v1} N·m is applied to {dados-calculo.v2} {dados-calculo.v3} of {dados-calculo.v4} kg and radius {dados-calculo.v5} m. What is the angular acceleration, in rad/s²? Answer with 3 decimal places."
   }
 }

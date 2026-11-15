@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule a inversa por escalonamento de (A | I) e informe a entrada da linha {dados-calculo.v1}, coluna {dados-calculo.v2} de A⁻¹."
+    "br": "Calcule a inversa por escalonamento de (A | I) e informe a entrada da linha {dados-calculo.v1}, coluna {dados-calculo.v2} de A⁻¹.",
+    "fr": "Calculez l'inverse par échelonnement de (A | I) et indiquez l'entrée de la ligne {dados-calculo.v1}, colonne {dados-calculo.v2} de A⁻¹.",
+    "en": "Calculate the inverse by row reduction of (A | I) and give the entry in row {dados-calculo.v1}, column {dados-calculo.v2} of A⁻¹."
   }
 }

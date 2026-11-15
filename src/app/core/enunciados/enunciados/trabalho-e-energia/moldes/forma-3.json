@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo de {dados-calculo.massa} kg cai de {dados-calculo.altura} m, partindo do repouso e sem atrito. Com que velocidade chega ao solo, em m/s? (2 casas decimais)"
+    "br": "Um corpo de {dados-calculo.massa} kg cai de {dados-calculo.altura} m, partindo do repouso e sem atrito. Com que velocidade chega ao solo, em m/s? (2 casas decimais)",
+    "fr": "Un corps de {dados-calculo.massa} kg tombe de {dados-calculo.altura} m, en partant du repos et sans frottement. À quelle vitesse arrive-t-il au sol, en m/s ? (2 décimales)",
+    "en": "A body of {dados-calculo.massa} kg falls from {dados-calculo.altura} m, starting from rest and without friction. At what speed does it reach the ground, in m/s? (2 decimal places)"
   }
 }

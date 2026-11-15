@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule o limite, fatorando o numerador."
+    "br": "Calcule o limite, fatorando o numerador.",
+    "fr": "Calculez la limite, en factorisant le numérateur.",
+    "en": "Calculate the limit by factoring the numerator."
   }
 }

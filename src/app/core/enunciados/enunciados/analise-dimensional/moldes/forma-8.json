@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Considere o produto de {dados-calculo.expressao1} por {dados-calculo.expressao2}"
+    "br": "Considere o produto de {dados-calculo.expressao1} por {dados-calculo.expressao2}",
+    "fr": "Considérez le produit de {dados-calculo.expressao1} par {dados-calculo.expressao2}",
+    "en": "Consider the product of {dados-calculo.expressao1} and {dados-calculo.expressao2}"
   }
 }

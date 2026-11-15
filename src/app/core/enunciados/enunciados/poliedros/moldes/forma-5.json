@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um poliedro convexo tem {dados-calculo.v1} faces, e em cada vértice se encontram exatamente {dados-calculo.v2} arestas. Quantos vértices ele tem?"
+    "br": "Um poliedro convexo tem {dados-calculo.v1} faces, e em cada vértice se encontram exatamente {dados-calculo.v2} arestas. Quantos vértices ele tem?",
+    "fr": "Un polyèdre convexe a {dados-calculo.v1} faces, et en chaque sommet se rencontrent exactement {dados-calculo.v2} arêtes. Combien de sommets possède-t-il ?",
+    "en": "A convex polyhedron has {dados-calculo.v1} faces, and exactly {dados-calculo.v2} edges meet at each vertex. How many vertices does it have?"
   }
 }

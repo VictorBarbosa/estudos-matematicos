@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Simplificando √{dados-calculo.radicando}, qual é o número que SAI do radical?"
+    "br": "Simplificando √{dados-calculo.radicando}, qual é o número que SAI do radical?",
+    "fr": "En simplifiant √{dados-calculo.radicando}, quel est le nombre qui SORT du radical ?",
+    "en": "Simplifying √{dados-calculo.radicando}, what number comes OUT of the radical?"
   }
 }

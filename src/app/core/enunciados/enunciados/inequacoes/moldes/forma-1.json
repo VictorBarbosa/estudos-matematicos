@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Resolva a inequação e informe o conjunto solução, no formato x > valor (use <=, >= quando a fronteira entrar)."
+    "br": "Resolva a inequação e informe o conjunto solução, no formato x > valor (use <=, >= quando a fronteira entrar).",
+    "fr": "Résolvez l'inéquation et indiquez l'ensemble solution, au format x > valeur (utilisez <=, >= lorsque la borne est incluse).",
+    "en": "Solve the inequality and give the solution set, in the form x > value (use <=, >= when the boundary is included)."
   }
 }

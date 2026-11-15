@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o limite desta função quando x tende a {dados-calculo.fronteira} pela {dados-calculo.v1}? Responda com 3 casas decimais."
+    "br": "Qual é o limite desta função quando x tende a {dados-calculo.fronteira} pela {dados-calculo.v1}? Responda com 3 casas decimais.",
+    "fr": "Quelle est la limite de cette fonction lorsque x tend vers {dados-calculo.fronteira} par la {dados-calculo.v1} ? Répondez avec 3 décimales.",
+    "en": "What is the limit of this function as x tends to {dados-calculo.fronteira} from the {dados-calculo.v1}? Answer with 3 decimal places."
   }
 }

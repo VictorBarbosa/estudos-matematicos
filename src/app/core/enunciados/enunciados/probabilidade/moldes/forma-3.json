@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Lançando um dado de {dados-calculo.faces} faces {dados-calculo.tentativas} vezes, qual é a probabilidade de sair o maior valor ao menos uma vez?"
+    "br": "Lançando um dado de {dados-calculo.faces} faces {dados-calculo.tentativas} vezes, qual é a probabilidade de sair o maior valor ao menos uma vez?",
+    "fr": "En lançant un dé de {dados-calculo.faces} faces {dados-calculo.tentativas} fois, quelle est la probabilité d'obtenir la plus grande valeur au moins une fois ?",
+    "en": "Rolling a {dados-calculo.faces}-sided die {dados-calculo.tentativas} times, what is the probability of getting the highest value at least once?"
   }
 }

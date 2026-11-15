@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Num dado de 6 faces, qual é a probabilidade de sair {dados-calculo.expressao1}?"
+    "br": "Num dado de 6 faces, qual é a probabilidade de sair {dados-calculo.expressao1}?",
+    "fr": "Avec un dé de 6 faces, quelle est la probabilité d'obtenir {dados-calculo.expressao1} ?",
+    "en": "With a 6-sided die, what is the probability of rolling {dados-calculo.expressao1}?"
   }
 }

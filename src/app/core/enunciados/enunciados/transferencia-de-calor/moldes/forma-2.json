@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a resistência térmica de uma camada de {dados-calculo.v1} com {dados-calculo.v2} m de espessura e {dados-calculo.v3} m² de área, em K/W? A condutividade é {dados-calculo.v4} W/(m·K). Responda com 3 casas decimais."
+    "br": "Qual é a resistência térmica de uma camada de {dados-calculo.v1} com {dados-calculo.v2} m de espessura e {dados-calculo.v3} m² de área, em K/W? A condutividade é {dados-calculo.v4} W/(m·K). Responda com 3 casas decimais.",
+    "fr": "Quelle est la résistance thermique d'une couche de {dados-calculo.v1} avec {dados-calculo.v2} m d'épaisseur et {dados-calculo.v3} m² d'aire, en K/W ? La conductivité est de {dados-calculo.v4} W/(m·K). Répondez avec 3 décimales.",
+    "en": "What is the thermal resistance of a layer of {dados-calculo.v1} with thickness {dados-calculo.v2} m and area {dados-calculo.v3} m², in K/W? The conductivity is {dados-calculo.v4} W/(m·K). Answer with 3 decimal places."
   }
 }

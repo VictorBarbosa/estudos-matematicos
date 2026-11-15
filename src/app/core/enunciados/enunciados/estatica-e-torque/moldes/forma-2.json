@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Numa alavanca, {dados-calculo.forcaA} N atuam a {dados-calculo.v1} m do apoio. A que distância deve atuar uma força de {dados-calculo.forcaB} N do outro lado para equilibrar, em metros? (2 casas decimais)"
+    "br": "Numa alavanca, {dados-calculo.forcaA} N atuam a {dados-calculo.v1} m do apoio. A que distância deve atuar uma força de {dados-calculo.forcaB} N do outro lado para equilibrar, em metros? (2 casas decimais)",
+    "fr": "Sur un levier, {dados-calculo.forcaA} N agissent à {dados-calculo.v1} m du point d'appui. À quelle distance doit agir une force de {dados-calculo.forcaB} N de l'autre côté pour équilibrer, en mètres ? (2 décimales)",
+    "en": "On a lever, {dados-calculo.forcaA} N act at {dados-calculo.v1} m from the fulcrum. At what distance must a force of {dados-calculo.forcaB} N act on the other side to balance it, in metres? (2 decimal places)"
   }
 }

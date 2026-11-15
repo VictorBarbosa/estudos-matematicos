@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Com u e v abaixo, qual é a coordenada {dados-calculo.nome} da combinação linear w = {dados-calculo.alfa}u {dados-calculo.v1} {dados-calculo.v2}v?"
+    "br": "Com u e v abaixo, qual é a coordenada {dados-calculo.nome} da combinação linear w = {dados-calculo.alfa}u {dados-calculo.v1} {dados-calculo.v2}v?",
+    "fr": "Avec u et v ci-dessous, quelle est la coordonnée {dados-calculo.nome} de la combinaison linéaire w = {dados-calculo.alfa}u {dados-calculo.v1} {dados-calculo.v2}v ?",
+    "en": "With u and v below, what is the {dados-calculo.nome} coordinate of the linear combination w = {dados-calculo.alfa}u {dados-calculo.v1} {dados-calculo.v2}v?"
   }
 }

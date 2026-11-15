@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Escreva em símbolos: {dados-calculo.texto}"
+    "br": "Escreva em símbolos: {dados-calculo.texto}",
+    "fr": "Écrivez en symboles : {dados-calculo.texto}",
+    "en": "Write in symbols: {dados-calculo.texto}"
   }
 }

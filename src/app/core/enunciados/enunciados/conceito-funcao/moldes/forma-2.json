@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o MENOR valor que esta função pode assumir?"
+    "br": "Qual é o MENOR valor que esta função pode assumir?",
+    "fr": "Quelle est la PLUS PETITE valeur que cette fonction peut prendre ?",
+    "en": "What is the SMALLEST value this function can take?"
   }
 }

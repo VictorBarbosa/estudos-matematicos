@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Ar acelera de {dados-calculo.velocidadeA} para {dados-calculo.velocidadeB} m/s num duto horizontal. De quanto CAI a pressão, em Pa? (1 casa decimal)"
+    "br": "Ar acelera de {dados-calculo.velocidadeA} para {dados-calculo.velocidadeB} m/s num duto horizontal. De quanto CAI a pressão, em Pa? (1 casa decimal)",
+    "fr": "L'air accélère de {dados-calculo.velocidadeA} à {dados-calculo.velocidadeB} m/s dans une conduite horizontale. De combien la pression CHUTE-t-elle, en Pa ? (1 décimale)",
+    "en": "Air accelerates from {dados-calculo.velocidadeA} to {dados-calculo.velocidadeB} m/s in a horizontal duct. By how much does the pressure DROP, in Pa? (1 decimal place)"
   }
 }

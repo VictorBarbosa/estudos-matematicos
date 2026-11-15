@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Encontre a fração geratriz desta dízima periódica."
+    "br": "Encontre a fração geratriz desta dízima periódica.",
+    "fr": "Trouvez la fraction génératrice de ce nombre décimal périodique.",
+    "en": "Find the generating fraction of this repeating decimal."
   }
 }

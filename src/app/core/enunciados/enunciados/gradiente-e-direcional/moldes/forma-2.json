@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a derivada direcional desta função no ponto ({dados-calculo.x}, {dados-calculo.y}), na direção do vetor ({dados-calculo.expressao1}, {dados-calculo.expressao2})? Responda com 3 casas decimais."
+    "br": "Qual é a derivada direcional desta função no ponto ({dados-calculo.x}, {dados-calculo.y}), na direção do vetor ({dados-calculo.expressao1}, {dados-calculo.expressao2})? Responda com 3 casas decimais.",
+    "fr": "Quelle est la dérivée directionnelle de cette fonction au point ({dados-calculo.x}, {dados-calculo.y}), dans la direction du vecteur ({dados-calculo.expressao1}, {dados-calculo.expressao2}) ? Répondez avec 3 décimales.",
+    "en": "What is the directional derivative of this function at the point ({dados-calculo.x}, {dados-calculo.y}), in the direction of the vector ({dados-calculo.expressao1}, {dados-calculo.expressao2})? Answer with 3 decimal places."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Divida P(x) por (x {dados-calculo.sinal} {dados-calculo.v1}). No quociente, qual é {dados-calculo.termo}?"
+    "br": "Divida P(x) por (x {dados-calculo.sinal} {dados-calculo.v1}). No quociente, qual é {dados-calculo.termo}?",
+    "fr": "Divisez P(x) par (x {dados-calculo.sinal} {dados-calculo.v1}). Dans le quotient, quel est {dados-calculo.termo} ?",
+    "en": "Divide P(x) by (x {dados-calculo.sinal} {dados-calculo.v1}). In the quotient, what is {dados-calculo.termo}?"
   }
 }

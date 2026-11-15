@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo de {dados-calculo.massa} kg move-se a {dados-calculo.velocidade} m/s. Qual é seu momento linear, em kg·m/s?"
+    "br": "Um corpo de {dados-calculo.massa} kg move-se a {dados-calculo.velocidade} m/s. Qual é seu momento linear, em kg·m/s?",
+    "fr": "Un corps de {dados-calculo.massa} kg se déplace à {dados-calculo.velocidade} m/s. Quelle est sa quantité de mouvement, en kg·m/s ?",
+    "en": "A body of {dados-calculo.massa} kg moves at {dados-calculo.velocidade} m/s. What is its linear momentum, in kg·m/s?"
   }
 }

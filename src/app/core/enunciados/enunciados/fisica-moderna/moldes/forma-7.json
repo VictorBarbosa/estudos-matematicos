@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma partícula instável vive {dados-calculo.v1} vezes mais no laboratório do que no próprio referencial. Qual é a velocidade dela, como fração de c (v/c)?{dados-calculo.v2}"
+    "br": "Uma partícula instável vive {dados-calculo.v1} vezes mais no laboratório do que no próprio referencial. Qual é a velocidade dela, como fração de c (v/c)?{dados-calculo.v2}",
+    "fr": "Une particule instable vit {dados-calculo.v1} fois plus longtemps au laboratoire que dans son propre référentiel. Quelle est sa vitesse, en fraction de c (v/c) ?{dados-calculo.v2}",
+    "en": "An unstable particle lives {dados-calculo.v1} times longer in the laboratory than in its own frame. What is its speed, as a fraction of c (v/c)?{dados-calculo.v2}"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Quanto vale esta função em x = {dados-calculo.ponto}? Responda com 3 casas decimais."
+    "br": "Quanto vale esta função em x = {dados-calculo.ponto}? Responda com 3 casas decimais.",
+    "fr": "Combien vaut cette fonction en x = {dados-calculo.ponto} ? Répondez avec 3 décimales.",
+    "en": "What is the value of this function at x = {dados-calculo.ponto}? Answer with 3 decimal places."
   }
 }

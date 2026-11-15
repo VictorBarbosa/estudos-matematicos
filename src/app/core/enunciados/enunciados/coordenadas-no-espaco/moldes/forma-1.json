@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um ponto tem coordenadas cilíndricas r = {dados-calculo.r}, θ = {dados-calculo.theta}° e z = {dados-calculo.z}. Qual é a coordenada cartesiana {dados-calculo.expressao1}? Responda com 3 casas decimais."
+    "br": "Um ponto tem coordenadas cilíndricas r = {dados-calculo.r}, θ = {dados-calculo.theta}° e z = {dados-calculo.z}. Qual é a coordenada cartesiana {dados-calculo.expressao1}? Responda com 3 casas decimais.",
+    "fr": "Un point a pour coordonnées cylindriques r = {dados-calculo.r}, θ = {dados-calculo.theta}° et z = {dados-calculo.z}. Quelle est la coordonnée cartésienne {dados-calculo.expressao1} ? Répondez avec 3 décimales.",
+    "en": "A point has cylindrical coordinates r = {dados-calculo.r}, θ = {dados-calculo.theta}° and z = {dados-calculo.z}. What is the Cartesian coordinate {dados-calculo.expressao1}? Answer with 3 decimal places."
   }
 }

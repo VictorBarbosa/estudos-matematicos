@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "De quanto é o salto desta função em x = {dados-calculo.fronteira}? Use o limite pela direita menos o limite pela esquerda. Responda com 3 casas decimais."
+    "br": "De quanto é o salto desta função em x = {dados-calculo.fronteira}? Use o limite pela direita menos o limite pela esquerda. Responda com 3 casas decimais.",
+    "fr": "Quelle est la valeur du saut de cette fonction en x = {dados-calculo.fronteira} ? Utilisez la limite à droite moins la limite à gauche. Répondez avec 3 décimales.",
+    "en": "How large is the jump of this function at x = {dados-calculo.fronteira}? Use the right-hand limit minus the left-hand limit. Answer with 3 decimal places."
   }
 }

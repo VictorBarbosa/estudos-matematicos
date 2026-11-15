@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule a integral imprópria, ou escreva \"diverge\". Se houver valor, use 3 casas decimais."
+    "br": "Calcule a integral imprópria, ou escreva \"diverge\". Se houver valor, use 3 casas decimais.",
+    "fr": "Calculez l'intégrale impropre, ou écrivez « diverge ». S'il y a une valeur, utilisez 3 décimales.",
+    "en": "Calculate the improper integral, or write \"diverges\". If there is a value, use 3 decimal places."
   }
 }

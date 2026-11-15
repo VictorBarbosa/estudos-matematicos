@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um ponto a {dados-calculo.v1} metros do eixo completa uma volta em {dados-calculo.periodo} s. Qual é a velocidade tangencial, em m/s? Responda com 3 casas decimais."
+    "br": "Um ponto a {dados-calculo.v1} metros do eixo completa uma volta em {dados-calculo.periodo} s. Qual é a velocidade tangencial, em m/s? Responda com 3 casas decimais.",
+    "fr": "Un point à {dados-calculo.v1} mètres de l'axe effectue un tour en {dados-calculo.periodo} s. Quelle est la vitesse tangentielle, en m/s ? Répondez avec 3 décimales.",
+    "en": "A point {dados-calculo.v1} metres from the axis completes one turn in {dados-calculo.periodo} s. What is the tangential speed, in m/s? Answer with 3 decimal places."
   }
 }

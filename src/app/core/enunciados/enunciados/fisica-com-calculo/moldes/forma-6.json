@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Quanto trabalho é preciso para levar um satélite de {dados-calculo.m} kg da superfície da Terra até {dados-calculo.hKm} km de altitude (sem contar a velocidade orbital)? Responda em gigajoules, GJ. (2 casas decimais)"
+    "br": "Quanto trabalho é preciso para levar um satélite de {dados-calculo.m} kg da superfície da Terra até {dados-calculo.hKm} km de altitude (sem contar a velocidade orbital)? Responda em gigajoules, GJ. (2 casas decimais)",
+    "fr": "Quel travail faut-il pour amener un satellite de {dados-calculo.m} kg de la surface de la Terre à {dados-calculo.hKm} km d'altitude (sans compter la vitesse orbitale) ? Répondez en gigajoules, GJ. (2 décimales)",
+    "en": "How much work is needed to take a satellite of {dados-calculo.m} kg from the Earth's surface to an altitude of {dados-calculo.hKm} km (not counting orbital velocity)? Answer in gigajoules, GJ. (2 decimal places)"
   }
 }

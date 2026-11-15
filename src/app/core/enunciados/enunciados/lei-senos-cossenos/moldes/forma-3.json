@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um triângulo tem lados {dados-calculo.b}, {dados-calculo.c} e {dados-calculo.a}. Quanto mede o MAIOR ângulo, em graus? (2 casas)"
+    "br": "Um triângulo tem lados {dados-calculo.b}, {dados-calculo.c} e {dados-calculo.a}. Quanto mede o MAIOR ângulo, em graus? (2 casas)",
+    "fr": "Un triangle a des côtés {dados-calculo.b}, {dados-calculo.c} et {dados-calculo.a}. Combien mesure le PLUS GRAND angle, en degrés ? (2 décimales)",
+    "en": "A triangle has sides {dados-calculo.b}, {dados-calculo.c} and {dados-calculo.a}. How large is the LARGEST angle, in degrees? (2 decimals)"
   }
 }

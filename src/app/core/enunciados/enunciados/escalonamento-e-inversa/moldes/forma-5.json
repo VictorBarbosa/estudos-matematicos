@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Escalone o sistema. Quantas soluções ele tem? Responda 0 (nenhuma solução), 1 (uma só) ou 2 (infinitas)."
+    "br": "Escalone o sistema. Quantas soluções ele tem? Responda 0 (nenhuma solução), 1 (uma só) ou 2 (infinitas).",
+    "fr": "Échelonnez le système. Combien de solutions a-t-il ? Répondez 0 (aucune solution), 1 (une seule) ou 2 (une infinité).",
+    "en": "Put the system in row echelon form. How many solutions does it have? Answer 0 (no solution), 1 (exactly one) or 2 (infinitely many)."
   }
 }

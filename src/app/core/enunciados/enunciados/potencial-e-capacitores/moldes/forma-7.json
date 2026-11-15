@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um ponto P está a {dados-calculo.v1} m de uma carga de {dados-calculo.v2} μC e a {dados-calculo.v3} m de outra de {dados-calculo.v4} μC. Qual é o potencial em P, em kV (com sinal)? (2 casas decimais)"
+    "br": "Um ponto P está a {dados-calculo.v1} m de uma carga de {dados-calculo.v2} μC e a {dados-calculo.v3} m de outra de {dados-calculo.v4} μC. Qual é o potencial em P, em kV (com sinal)? (2 casas decimais)",
+    "fr": "Un point P est à {dados-calculo.v1} m d'une charge de {dados-calculo.v2} μC et à {dados-calculo.v3} m d'une autre de {dados-calculo.v4} μC. Quel est le potentiel en P, en kV (avec signe) ? (2 décimales)",
+    "en": "A point P is {dados-calculo.v1} m from a charge of {dados-calculo.v2} μC and {dados-calculo.v3} m from another of {dados-calculo.v4} μC. What is the potential at P, in kV (with sign)? (2 decimal places)"
   }
 }

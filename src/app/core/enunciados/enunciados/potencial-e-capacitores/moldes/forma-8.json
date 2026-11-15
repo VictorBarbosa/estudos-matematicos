@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um capacitor de placas de {dados-calculo.a} cm², separadas por {dados-calculo.v1} mm de ar, é carregado a {dados-calculo.v} V. Quanta energia ele guarda, em nJ? (2 casas decimais)"
+    "br": "Um capacitor de placas de {dados-calculo.a} cm², separadas por {dados-calculo.v1} mm de ar, é carregado a {dados-calculo.v} V. Quanta energia ele guarda, em nJ? (2 casas decimais)",
+    "fr": "Un condensateur à plaques de {dados-calculo.a} cm², séparées par {dados-calculo.v1} mm d'air, est chargé à {dados-calculo.v} V. Quelle énergie stocke-t-il, en nJ ? (2 décimales)",
+    "en": "A capacitor with plates of {dados-calculo.a} cm², separated by {dados-calculo.v1} mm of air, is charged to {dados-calculo.v} V. How much energy does it store, in nJ? (2 decimal places)"
   }
 }

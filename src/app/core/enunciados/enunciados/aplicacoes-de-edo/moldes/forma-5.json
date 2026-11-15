@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um tanque com {dados-calculo.volume} L de água recebe {dados-calculo.vazao} L/min de solução a {dados-calculo.expressao1} kg/L e escoa na mesma vazão, bem misturado. Com {dados-calculo.inicial} kg de sal no início, quanto sal há em {dados-calculo.t} min, em kg? Responda com 4 casas decimais."
+    "br": "Um tanque com {dados-calculo.volume} L de água recebe {dados-calculo.vazao} L/min de solução a {dados-calculo.expressao1} kg/L e escoa na mesma vazão, bem misturado. Com {dados-calculo.inicial} kg de sal no início, quanto sal há em {dados-calculo.t} min, em kg? Responda com 4 casas decimais.",
+    "fr": "Un réservoir contenant {dados-calculo.volume} L d'eau reçoit {dados-calculo.vazao} L/min d'une solution à {dados-calculo.expressao1} kg/L et se vide au même débit, bien mélangé. Avec {dados-calculo.inicial} kg de sel au départ, combien de sel y a-t-il au bout de {dados-calculo.t} min, en kg ? Répondez avec 4 décimales.",
+    "en": "A tank with {dados-calculo.volume} L of water receives {dados-calculo.vazao} L/min of a solution at {dados-calculo.expressao1} kg/L and drains at the same rate, well mixed. With {dados-calculo.inicial} kg of salt initially, how much salt is there after {dados-calculo.t} min, in kg? Answer with 4 decimal places."
   }
 }

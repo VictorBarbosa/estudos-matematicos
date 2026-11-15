@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Usando a definição, calcule f'({dados-calculo.expressao1})."
+    "br": "Usando a definição, calcule f'({dados-calculo.expressao1}).",
+    "fr": "En utilisant la définition, calculez f'({dados-calculo.expressao1}).",
+    "en": "Using the definition, calculate f'({dados-calculo.expressao1})."
   }
 }

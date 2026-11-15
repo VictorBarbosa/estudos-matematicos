@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um capacitor de {dados-calculo.v1} μF é ligado a uma bateria de {dados-calculo.v} V. Qual carga ele armazena, em μC?"
+    "br": "Um capacitor de {dados-calculo.v1} μF é ligado a uma bateria de {dados-calculo.v} V. Qual carga ele armazena, em μC?",
+    "fr": "Un condensateur de {dados-calculo.v1} μF est branché sur une batterie de {dados-calculo.v} V. Quelle charge stocke-t-il, en μC ?",
+    "en": "A capacitor of {dados-calculo.v1} μF is connected to a battery of {dados-calculo.v} V. What charge does it store, in μC?"
   }
 }

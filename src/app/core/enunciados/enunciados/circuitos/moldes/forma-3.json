@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um resistor de {dados-calculo.r} Ω está ligado a {dados-calculo.v} V. Quanta potência ele dissipa, em W? (2 casas decimais)"
+    "br": "Um resistor de {dados-calculo.r} Ω está ligado a {dados-calculo.v} V. Quanta potência ele dissipa, em W? (2 casas decimais)",
+    "fr": "Une résistance de {dados-calculo.r} Ω est branchée sur {dados-calculo.v} V. Quelle puissance dissipe-t-elle, en W ? (2 décimales)",
+    "en": "A resistor of {dados-calculo.r} Ω is connected to {dados-calculo.v} V. How much power does it dissipate, in W? (2 decimal places)"
   }
 }

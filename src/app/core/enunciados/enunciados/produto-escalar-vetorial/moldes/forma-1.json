@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o produto escalar de ({dados-calculo.v1}, {dados-calculo.v2}) por ({dados-calculo.v3}, {dados-calculo.v4})?"
+    "br": "Qual é o produto escalar de ({dados-calculo.v1}, {dados-calculo.v2}) por ({dados-calculo.v3}, {dados-calculo.v4})?",
+    "fr": "Quel est le produit scalaire de ({dados-calculo.v1}, {dados-calculo.v2}) par ({dados-calculo.v3}, {dados-calculo.v4}) ?",
+    "en": "What is the dot product of ({dados-calculo.v1}, {dados-calculo.v2}) and ({dados-calculo.v3}, {dados-calculo.v4})?"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Partindo de {dados-calculo.v0} m/s com aceleração de {dados-calculo.a} m/s², qual é a velocidade após percorrer {dados-calculo.deslocamento} m? (2 casas decimais)"
+    "br": "Partindo de {dados-calculo.v0} m/s com aceleração de {dados-calculo.a} m/s², qual é a velocidade após percorrer {dados-calculo.deslocamento} m? (2 casas decimais)",
+    "fr": "Partant de {dados-calculo.v0} m/s avec une accélération de {dados-calculo.a} m/s², quelle est la vitesse après avoir parcouru {dados-calculo.deslocamento} m ? (2 décimales)",
+    "en": "Starting from {dados-calculo.v0} m/s with an acceleration of {dados-calculo.a} m/s², what is the velocity after travelling {dados-calculo.deslocamento} m? (2 decimal places)"
   }
 }

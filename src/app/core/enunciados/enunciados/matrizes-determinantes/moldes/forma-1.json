@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o determinante desta matriz?"
+    "br": "Qual é o determinante desta matriz?",
+    "fr": "Quel est le déterminant de cette matrice ?",
+    "en": "What is the determinant of this matrix?"
   }
 }

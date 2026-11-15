@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o período orbital a {dados-calculo.v1} km de altitude? (em minutos, 2 casas decimais)"
+    "br": "Qual é o período orbital a {dados-calculo.v1} km de altitude? (em minutos, 2 casas decimais)",
+    "fr": "Quelle est la période orbitale à {dados-calculo.v1} km d'altitude ? (en minutes, 2 décimales)",
+    "en": "What is the orbital period at an altitude of {dados-calculo.v1} km? (in minutes, 2 decimal places)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule a integral pela GEOMETRIA da região: ela é um trapézio. (sem usar primitivas)"
+    "br": "Calcule a integral pela GEOMETRIA da região: ela é um trapézio. (sem usar primitivas)",
+    "fr": "Calculez l'intégrale par la GÉOMÉTRIE de la région : c'est un trapèze. (sans utiliser de primitives)",
+    "en": "Calculate the integral using the GEOMETRY of the region: it is a trapezium. (without using antiderivatives)"
   }
 }

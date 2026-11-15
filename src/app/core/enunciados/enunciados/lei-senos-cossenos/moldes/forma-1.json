@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um triângulo tem lados {dados-calculo.b} e {dados-calculo.c}, com ângulo de {dados-calculo.angulo}° entre eles. Quanto mede o terceiro lado? (2 casas)"
+    "br": "Um triângulo tem lados {dados-calculo.b} e {dados-calculo.c}, com ângulo de {dados-calculo.angulo}° entre eles. Quanto mede o terceiro lado? (2 casas)",
+    "fr": "Un triangle a des côtés {dados-calculo.b} et {dados-calculo.c}, avec un angle de {dados-calculo.angulo}° entre eux. Combien mesure le troisième côté ? (2 décimales)",
+    "en": "A triangle has sides {dados-calculo.b} and {dados-calculo.c}, with an angle of {dados-calculo.angulo}° between them. How long is the third side? (2 decimals)"
   }
 }

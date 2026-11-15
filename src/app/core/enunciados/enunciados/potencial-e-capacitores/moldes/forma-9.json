@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "C₁ = {dados-calculo.c1} μF está em série com a associação em paralelo de C₂ = {dados-calculo.c2} μF e C₃ = {dados-calculo.c3} μF, ligados a {dados-calculo.v} V. "
+    "br": "C₁ = {dados-calculo.c1} μF está em série com a associação em paralelo de C₂ = {dados-calculo.c2} μF e C₃ = {dados-calculo.c3} μF, ligados a {dados-calculo.v} V. ",
+    "fr": "C₁ = {dados-calculo.c1} μF est en série avec l'association en parallèle de C₂ = {dados-calculo.c2} μF et C₃ = {dados-calculo.c3} μF, branchés sur {dados-calculo.v} V. ",
+    "en": "C₁ = {dados-calculo.c1} μF is in series with the parallel combination of C₂ = {dados-calculo.c2} μF and C₃ = {dados-calculo.c3} μF, connected to {dados-calculo.v} V. "
   }
 }

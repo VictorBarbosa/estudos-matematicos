@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma carga é multiplicada por {dados-calculo.a}, a outra por {dados-calculo.b}, e a distância entre elas é multiplicada por {dados-calculo.expressao1}. Por quanto fica multiplicada a força?"
+    "br": "Uma carga é multiplicada por {dados-calculo.a}, a outra por {dados-calculo.b}, e a distância entre elas é multiplicada por {dados-calculo.expressao1}. Por quanto fica multiplicada a força?",
+    "fr": "Une charge est multipliée par {dados-calculo.a}, l'autre par {dados-calculo.b}, et la distance entre elles est multipliée par {dados-calculo.expressao1}. Par combien la force est-elle multipliée ?",
+    "en": "One charge is multiplied by {dados-calculo.a}, the other by {dados-calculo.b}, and the distance between them is multiplied by {dados-calculo.expressao1}. By how much is the force multiplied?"
   }
 }

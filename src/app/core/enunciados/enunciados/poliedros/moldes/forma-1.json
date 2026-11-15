@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um poliedro convexo tem {dados-calculo.v1} {dados-calculo.v2} e {dados-calculo.v3} {dados-calculo.v4}. Quantos {dados-calculo.v5} ele tem?"
+    "br": "Um poliedro convexo tem {dados-calculo.v1} {dados-calculo.v2} e {dados-calculo.v3} {dados-calculo.v4}. Quantos {dados-calculo.v5} ele tem?",
+    "fr": "Un polyèdre convexe a {dados-calculo.v1} {dados-calculo.v2} et {dados-calculo.v3} {dados-calculo.v4}. Combien de {dados-calculo.v5} possède-t-il ?",
+    "en": "A convex polyhedron has {dados-calculo.v1} {dados-calculo.v2} and {dados-calculo.v3} {dados-calculo.v4}. How many {dados-calculo.v5} does it have?"
   }
 }

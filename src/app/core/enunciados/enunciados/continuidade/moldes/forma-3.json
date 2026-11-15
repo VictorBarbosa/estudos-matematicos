@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual valor de k torna a função contínua em x = {dados-calculo.ponto}?"
+    "br": "Qual valor de k torna a função contínua em x = {dados-calculo.ponto}?",
+    "fr": "Quelle valeur de k rend la fonction continue en x = {dados-calculo.ponto} ?",
+    "en": "What value of k makes the function continuous at x = {dados-calculo.ponto}?"
   }
 }

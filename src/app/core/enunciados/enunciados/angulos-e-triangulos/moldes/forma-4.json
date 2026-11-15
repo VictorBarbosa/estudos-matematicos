@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um polígono regular tem ângulo interno de {dados-calculo.v1}°. Quantos lados ele tem?"
+    "br": "Um polígono regular tem ângulo interno de {dados-calculo.v1}°. Quantos lados ele tem?",
+    "fr": "Un polygone régulier a un angle intérieur de {dados-calculo.v1}°. Combien de côtés a-t-il ?",
+    "en": "A regular polygon has an interior angle of {dados-calculo.v1}°. How many sides does it have?"
   }
 }

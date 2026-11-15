@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A função f tem um zero em x = {dados-calculo.zero}. Em que valor de x o gráfico transformado cruza o eixo horizontal? Responda com 3 casas decimais."
+    "br": "A função f tem um zero em x = {dados-calculo.zero}. Em que valor de x o gráfico transformado cruza o eixo horizontal? Responda com 3 casas decimais.",
+    "fr": "La fonction f a un zéro en x = {dados-calculo.zero}. En quelle valeur de x le graphique transformé croise-t-il l'axe horizontal ? Répondez avec 3 décimales.",
+    "en": "The function f has a zero at x = {dados-calculo.zero}. At what value of x does the transformed graph cross the horizontal axis? Answer with 3 decimal places."
   }
 }

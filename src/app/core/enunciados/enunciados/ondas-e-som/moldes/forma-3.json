@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma corda está esticada com tração de {dados-calculo.tracao} N e tem densidade linear de {dados-calculo.muTexto}. Com que velocidade uma onda corre por ela, em m/s?{dados-calculo.expressao1}"
+    "br": "Uma corda está esticada com tração de {dados-calculo.tracao} N e tem densidade linear de {dados-calculo.muTexto}. Com que velocidade uma onda corre por ela, em m/s?{dados-calculo.expressao1}",
+    "fr": "Une corde est tendue avec une tension de {dados-calculo.tracao} N et a une densité linéique de {dados-calculo.muTexto}. À quelle vitesse une onde la parcourt-elle, en m/s ?{dados-calculo.expressao1}",
+    "en": "A string is stretched with a tension of {dados-calculo.tracao} N and has linear density {dados-calculo.muTexto}. At what speed does a wave travel along it, in m/s?{dados-calculo.expressao1}"
   }
 }

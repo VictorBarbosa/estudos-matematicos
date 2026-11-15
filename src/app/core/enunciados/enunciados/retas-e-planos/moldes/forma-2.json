@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "O plano passa por P({dados-calculo.v1}) e tem vetor normal n = ({dados-calculo.v2}). Escrito como ax + by + cz = d, quanto vale d?"
+    "br": "O plano passa por P({dados-calculo.v1}) e tem vetor normal n = ({dados-calculo.v2}). Escrito como ax + by + cz = d, quanto vale d?",
+    "fr": "Le plan passe par P({dados-calculo.v1}) et a pour vecteur normal n = ({dados-calculo.v2}). Écrit sous la forme ax + by + cz = d, combien vaut d ?",
+    "en": "The plane passes through P({dados-calculo.v1}) and has normal vector n = ({dados-calculo.v2}). Written as ax + by + cz = d, what is d?"
   }
 }

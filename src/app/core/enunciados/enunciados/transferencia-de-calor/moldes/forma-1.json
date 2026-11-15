@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma placa de {dados-calculo.v1} tem {dados-calculo.v2} m² de área e {dados-calculo.v3} m de espessura, com uma diferença de {dados-calculo.deltaT} K entre as faces. A condutividade é {dados-calculo.v4} W/(m·K). Qual é o fluxo de calor, em W? Responda com 3 casas decimais."
+    "br": "Uma placa de {dados-calculo.v1} tem {dados-calculo.v2} m² de área e {dados-calculo.v3} m de espessura, com uma diferença de {dados-calculo.deltaT} K entre as faces. A condutividade é {dados-calculo.v4} W/(m·K). Qual é o fluxo de calor, em W? Responda com 3 casas decimais.",
+    "fr": "Une plaque de {dados-calculo.v1} a une aire de {dados-calculo.v2} m² et une épaisseur de {dados-calculo.v3} m, avec une différence de {dados-calculo.deltaT} K entre les faces. La conductivité est de {dados-calculo.v4} W/(m·K). Quel est le flux de chaleur, en W ? Répondez avec 3 décimales.",
+    "en": "A plate of {dados-calculo.v1} has an area of {dados-calculo.v2} m² and a thickness of {dados-calculo.v3} m, with a difference of {dados-calculo.deltaT} K between the faces. The conductivity is {dados-calculo.v4} W/(m·K). What is the heat flux, in W? Answer with 3 decimal places."
   }
 }

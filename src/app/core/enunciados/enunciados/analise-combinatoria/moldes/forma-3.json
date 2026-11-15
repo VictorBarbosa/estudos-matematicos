@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "De quantos modos se pode escolher uma equipe de {dados-calculo.p} pessoas entre {dados-calculo.n} candidatos, sem distinguir cargos?"
+    "br": "De quantos modos se pode escolher uma equipe de {dados-calculo.p} pessoas entre {dados-calculo.n} candidatos, sem distinguir cargos?",
+    "fr": "De combien de façons peut-on choisir une équipe de {dados-calculo.p} personnes parmi {dados-calculo.n} candidats, sans distinguer les postes ?",
+    "en": "In how many ways can a team of {dados-calculo.p} people be chosen from {dados-calculo.n} candidates, regardless of roles?"
   }
 }

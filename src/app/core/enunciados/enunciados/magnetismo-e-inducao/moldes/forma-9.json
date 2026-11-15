@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma partícula de carga {dados-calculo.carga} μC atravessa a {dados-calculo.v} m/s um campo magnético de {dados-calculo.campo} T, formando {dados-calculo.angulo}° com ele. Qual é o módulo da força magnética, em mN? (2 casas decimais)"
+    "br": "Uma partícula de carga {dados-calculo.carga} μC atravessa a {dados-calculo.v} m/s um campo magnético de {dados-calculo.campo} T, formando {dados-calculo.angulo}° com ele. Qual é o módulo da força magnética, em mN? (2 casas decimais)",
+    "fr": "Une particule de charge {dados-calculo.carga} μC traverse à {dados-calculo.v} m/s un champ magnétique de {dados-calculo.campo} T, en formant {dados-calculo.angulo}° avec lui. Quel est le module de la force magnétique, en mN ? (2 décimales)",
+    "en": "A particle of charge {dados-calculo.carga} μC crosses at {dados-calculo.v} m/s a magnetic field of {dados-calculo.campo} T, making {dados-calculo.angulo}° with it. What is the magnitude of the magnetic force, in mN? (2 decimal places)"
   }
 }

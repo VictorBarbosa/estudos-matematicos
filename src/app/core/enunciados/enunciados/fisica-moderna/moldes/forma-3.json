@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma nave mede {dados-calculo.proprio} m em repouso. Passando a {dados-calculo.v1}c, que comprimento ela tem para um observador na Terra, em metros?{dados-calculo.v2}"
+    "br": "Uma nave mede {dados-calculo.proprio} m em repouso. Passando a {dados-calculo.v1}c, que comprimento ela tem para um observador na Terra, em metros?{dados-calculo.v2}",
+    "fr": "Un vaisseau mesure {dados-calculo.proprio} m au repos. Passant à {dados-calculo.v1}c, quelle longueur a-t-il pour un observateur sur Terre, en mètres ?{dados-calculo.v2}",
+    "en": "A ship measures {dados-calculo.proprio} m at rest. Moving at {dados-calculo.v1}c, what length does it have for an observer on Earth, in metres?{dados-calculo.v2}"
   }
 }

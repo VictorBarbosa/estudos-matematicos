@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "O lado de um quadrado cresce {dados-calculo.taxaLado} cm/s. A que taxa cresce a ÁREA no instante em que o lado mede {dados-calculo.lado} cm? (em cm²/s)"
+    "br": "O lado de um quadrado cresce {dados-calculo.taxaLado} cm/s. A que taxa cresce a ÁREA no instante em que o lado mede {dados-calculo.lado} cm? (em cm²/s)",
+    "fr": "Le côté d'un carré croît de {dados-calculo.taxaLado} cm/s. À quel taux l'AIRE croît-elle à l'instant où le côté mesure {dados-calculo.lado} cm ? (en cm²/s)",
+    "en": "The side of a square grows at {dados-calculo.taxaLado} cm/s. At what rate is the AREA growing at the instant when the side measures {dados-calculo.lado} cm? (in cm²/s)"
   }
 }

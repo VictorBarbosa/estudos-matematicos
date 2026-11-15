@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o coeficiente de x elevado a {dados-calculo.n} na série de Maclaurin desta função? Responda com 5 casas decimais."
+    "br": "Qual é o coeficiente de x elevado a {dados-calculo.n} na série de Maclaurin desta função? Responda com 5 casas decimais.",
+    "fr": "Quel est le coefficient de x élevé à la puissance {dados-calculo.n} dans la série de Maclaurin de cette fonction ? Répondez avec 5 décimales.",
+    "en": "What is the coefficient of x raised to {dados-calculo.n} in the Maclaurin series of this function? Answer with 5 decimal places."
   }
 }

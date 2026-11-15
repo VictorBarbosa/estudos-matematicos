@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Alguém tem {dados-calculo.camisas} camisas, {dados-calculo.calcas} calças e {dados-calculo.sapatos} pares de sapato. Quantos trajes diferentes consegue montar?"
+    "br": "Alguém tem {dados-calculo.camisas} camisas, {dados-calculo.calcas} calças e {dados-calculo.sapatos} pares de sapato. Quantos trajes diferentes consegue montar?",
+    "fr": "Quelqu'un possède {dados-calculo.camisas} chemises, {dados-calculo.calcas} pantalons et {dados-calculo.sapatos} paires de chaussures. Combien de tenues différentes peut-il composer ?",
+    "en": "Someone has {dados-calculo.camisas} shirts, {dados-calculo.calcas} pairs of trousers and {dados-calculo.sapatos} pairs of shoes. How many different outfits can they put together?"
   }
 }

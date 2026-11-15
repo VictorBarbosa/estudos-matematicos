@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma sirene de {dados-calculo.f} Hz {dados-calculo.fonteTexto}{dados-calculo.observadorTexto}. Com o som a {dados-calculo.SOM_NO_AR} m/s, que frequência o ouvinte escuta, em Hz?{dados-calculo.expressao1}"
+    "br": "Uma sirene de {dados-calculo.f} Hz {dados-calculo.fonteTexto}{dados-calculo.observadorTexto}. Com o som a {dados-calculo.SOM_NO_AR} m/s, que frequência o ouvinte escuta, em Hz?{dados-calculo.expressao1}",
+    "fr": "Une sirène de {dados-calculo.f} Hz {dados-calculo.fonteTexto}{dados-calculo.observadorTexto}. Avec le son à {dados-calculo.SOM_NO_AR} m/s, quelle fréquence l'auditeur entend-il, en Hz ?{dados-calculo.expressao1}",
+    "en": "A siren of {dados-calculo.f} Hz {dados-calculo.fonteTexto}{dados-calculo.observadorTexto}. With sound at {dados-calculo.SOM_NO_AR} m/s, what frequency does the listener hear, in Hz?{dados-calculo.expressao1}"
   }
 }

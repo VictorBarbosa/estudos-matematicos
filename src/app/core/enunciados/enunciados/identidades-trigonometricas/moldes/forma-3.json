@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule sen({dados-calculo.a}° + {dados-calculo.b}°) usando a fórmula da soma de arcos."
+    "br": "Calcule sen({dados-calculo.a}° + {dados-calculo.b}°) usando a fórmula da soma de arcos.",
+    "fr": "Calculez sin({dados-calculo.a}° + {dados-calculo.b}°) en utilisant la formule d'addition des arcs.",
+    "en": "Calculate sin({dados-calculo.a}° + {dados-calculo.b}°) using the angle-sum formula."
   }
 }

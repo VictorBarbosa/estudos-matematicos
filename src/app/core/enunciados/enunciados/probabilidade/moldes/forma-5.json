@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um lote tem {dados-calculo.total} peças, das quais {dados-calculo.defeituosas} são defeituosas. Retirando {dados-calculo.retiradas} peças de uma vez, qual é a probabilidade de NENHUMA ser defeituosa?"
+    "br": "Um lote tem {dados-calculo.total} peças, das quais {dados-calculo.defeituosas} são defeituosas. Retirando {dados-calculo.retiradas} peças de uma vez, qual é a probabilidade de NENHUMA ser defeituosa?",
+    "fr": "Un lot contient {dados-calculo.total} pièces, dont {dados-calculo.defeituosas} sont défectueuses. En retirant {dados-calculo.retiradas} pièces d'un coup, quelle est la probabilité qu'AUCUNE ne soit défectueuse ?",
+    "en": "A lot has {dados-calculo.total} parts, of which {dados-calculo.defeituosas} are defective. Drawing {dados-calculo.retiradas} parts at once, what is the probability that NONE is defective?"
   }
 }

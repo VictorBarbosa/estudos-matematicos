@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um losango tem diagonais de {dados-calculo.maior} cm e {dados-calculo.menor} cm. Qual é sua área, em cm²?"
+    "br": "Um losango tem diagonais de {dados-calculo.maior} cm e {dados-calculo.menor} cm. Qual é sua área, em cm²?",
+    "fr": "Un losange a des diagonales de {dados-calculo.maior} cm et {dados-calculo.menor} cm. Quelle est son aire, en cm² ?",
+    "en": "A rhombus has diagonals of {dados-calculo.maior} cm and {dados-calculo.menor} cm. What is its area, in cm²?"
   }
 }

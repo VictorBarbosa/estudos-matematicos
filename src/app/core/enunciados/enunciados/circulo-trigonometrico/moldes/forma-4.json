@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o sinal de {dados-calculo.funcao} {dados-calculo.graus}°? Responda 1 se for positivo e -1 se for negativo."
+    "br": "Qual é o sinal de {dados-calculo.funcao} {dados-calculo.graus}°? Responda 1 se for positivo e -1 se for negativo.",
+    "fr": "Quel est le signe de {dados-calculo.funcao} {dados-calculo.graus}° ? Répondez 1 si c'est positif et -1 si c'est négatif.",
+    "en": "What is the sign of {dados-calculo.funcao} {dados-calculo.graus}°? Answer 1 if it is positive and -1 if it is negative."
   }
 }

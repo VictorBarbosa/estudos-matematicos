@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma corrida de táxi custa $ {dados-calculo.b},00 de bandeirada mais $ {dados-calculo.p},00 por quilômetro rodado. Uma corrida custou $ {dados-calculo.T},00. Quantos quilômetros foram rodados?"
+    "br": "Uma corrida de táxi custa $ {dados-calculo.b},00 de bandeirada mais $ {dados-calculo.p},00 por quilômetro rodado. Uma corrida custou $ {dados-calculo.T},00. Quantos quilômetros foram rodados?",
+    "fr": "Une course de taxi coûte $ {dados-calculo.b},00 de prise en charge plus $ {dados-calculo.p},00 par kilomètre parcouru. Une course a coûté $ {dados-calculo.T},00. Combien de kilomètres ont été parcourus ?",
+    "en": "A taxi ride costs $ {dados-calculo.b},00 as a base fare plus $ {dados-calculo.p},00 per kilometre travelled. One ride cost $ {dados-calculo.T},00. How many kilometres were travelled?"
   }
 }

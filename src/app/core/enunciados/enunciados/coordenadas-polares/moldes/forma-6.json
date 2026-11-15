@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A órbita de um satélite, com o planeta num foco, é r = p/(1 + e·cos θ), em km. Qual é {dados-calculo.nome}? (2 casas decimais)"
+    "br": "A órbita de um satélite, com o planeta num foco, é r = p/(1 + e·cos θ), em km. Qual é {dados-calculo.nome}? (2 casas decimais)",
+    "fr": "L'orbite d'un satellite, avec la planète à un foyer, est r = p/(1 + e·cos θ), en km. Quel est {dados-calculo.nome} ? (2 décimales)",
+    "en": "The orbit of a satellite, with the planet at a focus, is r = p/(1 + e·cos θ), in km. What is {dados-calculo.nome}? (2 decimal places)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Esse trinômio é um quadrado perfeito. Escreva-o como {dados-calculo.v1} e informe q."
+    "br": "Esse trinômio é um quadrado perfeito. Escreva-o como {dados-calculo.v1} e informe q.",
+    "fr": "Ce trinôme est un carré parfait. Écrivez-le sous la forme {dados-calculo.v1} et indiquez q.",
+    "en": "This trinomial is a perfect square. Write it as {dados-calculo.v1} and give q."
   }
 }

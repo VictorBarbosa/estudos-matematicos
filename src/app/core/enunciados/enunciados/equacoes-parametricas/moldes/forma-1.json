@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um móvel segue estas equações, com t em segundos. Qual é a coordenada x no instante t = {dados-calculo.t}? Responda com 3 casas decimais."
+    "br": "Um móvel segue estas equações, com t em segundos. Qual é a coordenada x no instante t = {dados-calculo.t}? Responda com 3 casas decimais.",
+    "fr": "Un mobile suit ces équations, avec t en secondes. Quelle est la coordonnée x à l'instant t = {dados-calculo.t} ? Répondez avec 3 décimales.",
+    "en": "A moving object follows these equations, with t in seconds. What is the x-coordinate at time t = {dados-calculo.t}? Answer with 3 decimal places."
   }
 }

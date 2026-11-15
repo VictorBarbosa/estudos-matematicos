@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Quanto mede cada ângulo interno de um {dados-calculo.v1} regular? (em graus{dados-calculo.casas})"
+    "br": "Quanto mede cada ângulo interno de um {dados-calculo.v1} regular? (em graus{dados-calculo.casas})",
+    "fr": "Combien mesure chaque angle intérieur d'un {dados-calculo.v1} régulier ? (en degrés{dados-calculo.casas}",
+    "en": "How large is each interior angle of a regular {dados-calculo.v1}? (in degrees{dados-calculo.casas}"
   }
 }

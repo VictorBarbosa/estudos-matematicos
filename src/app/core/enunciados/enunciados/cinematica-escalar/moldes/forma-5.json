@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um veículo a {dados-calculo.v0} m/s freia com desaceleração de {dados-calculo.desaceleracao} m/s². Que distância ele percorre até parar? (2 casas decimais)"
+    "br": "Um veículo a {dados-calculo.v0} m/s freia com desaceleração de {dados-calculo.desaceleracao} m/s². Que distância ele percorre até parar? (2 casas decimais)",
+    "fr": "Un véhicule à {dados-calculo.v0} m/s freine avec une décélération de {dados-calculo.desaceleracao} m/s². Quelle distance parcourt-il jusqu'à l'arrêt ? (2 décimales)",
+    "en": "A vehicle at {dados-calculo.v0} m/s brakes with a deceleration of {dados-calculo.desaceleracao} m/s². What distance does it cover before stopping? (2 decimal places)"
   }
 }

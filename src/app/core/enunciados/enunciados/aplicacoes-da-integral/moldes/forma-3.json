@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a área sob a curva de 0 a {dados-calculo.ate}? (3 casas decimais)"
+    "br": "Qual é a área sob a curva de 0 a {dados-calculo.ate}? (3 casas decimais)",
+    "fr": "Quelle est l'aire sous la courbe de 0 à {dados-calculo.ate} ? (3 décimales)",
+    "en": "What is the area under the curve from 0 to {dados-calculo.ate}? (3 decimal places)"
   }
 }

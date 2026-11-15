@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a componente {dados-calculo.eixo} do vetor unitário na direção de v? Arredonde para duas casas decimais."
+    "br": "Qual é a componente {dados-calculo.eixo} do vetor unitário na direção de v? Arredonde para duas casas decimais.",
+    "fr": "Quelle est la composante {dados-calculo.eixo} du vecteur unitaire dans la direction de v ? Arrondissez à deux décimales.",
+    "en": "What is the {dados-calculo.eixo} component of the unit vector in the direction of v? Round to two decimal places."
   }
 }

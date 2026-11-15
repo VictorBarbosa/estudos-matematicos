@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule o valor numérico da expressão para x = {dados-calculo.x}."
+    "br": "Calcule o valor numérico da expressão para x = {dados-calculo.x}.",
+    "fr": "Calculez la valeur numérique de l'expression pour x = {dados-calculo.x}.",
+    "en": "Calculate the numerical value of the expression for x = {dados-calculo.x}."
   }
 }

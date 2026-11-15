@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a área do paralelogramo formado por ({dados-calculo.v1}, {dados-calculo.v2}) e ({dados-calculo.v3}, {dados-calculo.v4})?"
+    "br": "Qual é a área do paralelogramo formado por ({dados-calculo.v1}, {dados-calculo.v2}) e ({dados-calculo.v3}, {dados-calculo.v4})?",
+    "fr": "Quelle est l'aire du parallélogramme formé par ({dados-calculo.v1}, {dados-calculo.v2}) et ({dados-calculo.v3}, {dados-calculo.v4}) ?",
+    "en": "What is the area of the parallelogram formed by ({dados-calculo.v1}, {dados-calculo.v2}) and ({dados-calculo.v3}, {dados-calculo.v4})?"
   }
 }

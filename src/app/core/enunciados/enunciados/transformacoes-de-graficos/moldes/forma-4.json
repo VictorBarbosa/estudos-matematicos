@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "O gráfico de f ocupa uma largura de {dados-calculo.largura} unidades no eixo x. Qual largura o gráfico transformado ocupa? Responda com 3 casas decimais."
+    "br": "O gráfico de f ocupa uma largura de {dados-calculo.largura} unidades no eixo x. Qual largura o gráfico transformado ocupa? Responda com 3 casas decimais.",
+    "fr": "Le graphique de f occupe une largeur de {dados-calculo.largura} unités sur l'axe x. Quelle largeur le graphique transformé occupe-t-il ? Répondez avec 3 décimales.",
+    "en": "The graph of f occupies a width of {dados-calculo.largura} units on the x-axis. What width does the transformed graph occupy? Answer with 3 decimal places."
   }
 }

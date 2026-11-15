@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Resistores de {dados-calculo.expressao1} Ω estão ligados em {dados-calculo.expressao2}. Qual é a resistência equivalente, em Ω? (2 casas decimais)"
+    "br": "Resistores de {dados-calculo.expressao1} Ω estão ligados em {dados-calculo.expressao2}. Qual é a resistência equivalente, em Ω? (2 casas decimais)",
+    "fr": "Des résistances de {dados-calculo.expressao1} Ω sont branchées en {dados-calculo.expressao2}. Quelle est la résistance équivalente, en Ω ? (2 décimales)",
+    "en": "Resistors of {dados-calculo.expressao1} Ω are connected in {dados-calculo.expressao2}. What is the equivalent resistance, in Ω? (2 decimal places)"
   }
 }

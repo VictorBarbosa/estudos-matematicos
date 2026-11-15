@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Quantos números INTEIROS existem neste intervalo?"
+    "br": "Quantos números INTEIROS existem neste intervalo?",
+    "fr": "Combien de nombres ENTIERS existent dans cet intervalle ?",
+    "en": "How many INTEGER numbers are there in this interval?"
   }
 }

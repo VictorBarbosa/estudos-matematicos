@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Leia a assinatura e a regra da função, e calcule f({dados-calculo.x})."
+    "br": "Leia a assinatura e a regra da função, e calcule f({dados-calculo.x}).",
+    "fr": "Lisez la signature et la règle de la fonction, puis calculez f({dados-calculo.x}).",
+    "en": "Read the signature and the rule of the function, and calculate f({dados-calculo.x})."
   }
 }

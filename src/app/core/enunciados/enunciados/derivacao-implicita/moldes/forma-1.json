@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A curva passa pelo ponto ({dados-calculo.x}, {dados-calculo.y}). Encontre dy/dx nesse ponto, derivando implicitamente. Responda como fração ou com 4 casas decimais."
+    "br": "A curva passa pelo ponto ({dados-calculo.x}, {dados-calculo.y}). Encontre dy/dx nesse ponto, derivando implicitamente. Responda como fração ou com 4 casas decimais.",
+    "fr": "La courbe passe par le point ({dados-calculo.x}, {dados-calculo.y}). Trouvez dy/dx en ce point, par dérivation implicite. Répondez sous forme de fraction ou avec 4 décimales.",
+    "en": "The curve passes through the point ({dados-calculo.x}, {dados-calculo.y}). Find dy/dx at that point by implicit differentiation. Answer as a fraction or with 4 decimal places."
   }
 }

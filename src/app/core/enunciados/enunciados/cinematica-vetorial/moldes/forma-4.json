@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um barco de {dados-calculo.barco} m/s quer atravessar um rio de correnteza {dados-calculo.rio} m/s chegando exatamente em frente ao ponto de partida. Quantos graus, em relação à perpendicular, ele deve apontar rio acima? Responda com 2 casas decimais."
+    "br": "Um barco de {dados-calculo.barco} m/s quer atravessar um rio de correnteza {dados-calculo.rio} m/s chegando exatamente em frente ao ponto de partida. Quantos graus, em relação à perpendicular, ele deve apontar rio acima? Responda com 2 casas decimais.",
+    "fr": "Un bateau de {dados-calculo.barco} m/s veut traverser un fleuve dont le courant est de {dados-calculo.rio} m/s en arrivant exactement en face du point de départ. De combien de degrés, par rapport à la perpendiculaire, doit-il pointer vers l'amont ? Répondez avec 2 décimales.",
+    "en": "A boat moving at {dados-calculo.barco} m/s wants to cross a river with a current of {dados-calculo.rio} m/s, arriving exactly opposite the starting point. How many degrees, relative to the perpendicular, must it point upstream? Answer with 2 decimal places."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A matriz aumentada já está escalonada. Quantas soluções tem o sistema? Responda 0 (nenhuma solução), 1 (uma só) ou 2 (infinitas)."
+    "br": "A matriz aumentada já está escalonada. Quantas soluções tem o sistema? Responda 0 (nenhuma solução), 1 (uma só) ou 2 (infinitas).",
+    "fr": "La matrice augmentée est déjà échelonnée. Combien de solutions le système a-t-il ? Répondez 0 (aucune solution), 1 (une seule) ou 2 (une infinité).",
+    "en": "The augmented matrix is already in row echelon form. How many solutions does the system have? Answer 0 (no solution), 1 (exactly one) or 2 (infinitely many)."
   }
 }

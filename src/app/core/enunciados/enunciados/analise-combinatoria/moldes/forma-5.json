@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma comissão terá {dados-calculo.escolhidosH} entre {dados-calculo.homens} engenheiros e {dados-calculo.escolhidasM} entre {dados-calculo.mulheres} técnicas. Quantas comissões diferentes são possíveis?"
+    "br": "Uma comissão terá {dados-calculo.escolhidosH} entre {dados-calculo.homens} engenheiros e {dados-calculo.escolhidasM} entre {dados-calculo.mulheres} técnicas. Quantas comissões diferentes são possíveis?",
+    "fr": "Une commission comptera {dados-calculo.escolhidosH} parmi {dados-calculo.homens} ingénieurs et {dados-calculo.escolhidasM} parmi {dados-calculo.mulheres} ingénieures. Combien de commissions différentes sont possibles ?",
+    "en": "A committee will have {dados-calculo.escolhidosH} of {dados-calculo.homens} male engineers and {dados-calculo.escolhidasM} of {dados-calculo.mulheres} female engineers. How many different committees are possible?"
   }
 }

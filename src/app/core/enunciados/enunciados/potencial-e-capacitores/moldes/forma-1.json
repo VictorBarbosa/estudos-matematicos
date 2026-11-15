@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o potencial elétrico a {dados-calculo.v1} m de uma carga de {dados-calculo.v2} μC, em kV (com sinal)? (2 casas decimais)"
+    "br": "Qual é o potencial elétrico a {dados-calculo.v1} m de uma carga de {dados-calculo.v2} μC, em kV (com sinal)? (2 casas decimais)",
+    "fr": "Quel est le potentiel électrique à {dados-calculo.v1} m d'une charge de {dados-calculo.v2} μC, en kV (avec signe) ? (2 décimales)",
+    "en": "What is the electric potential at {dados-calculo.v1} m from a charge of {dados-calculo.v2} μC, in kV (with sign)? (2 decimal places)"
   }
 }

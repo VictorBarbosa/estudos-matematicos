@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a distância entre os dois pontos? (2 casas decimais)"
+    "br": "Qual é a distância entre os dois pontos? (2 casas decimais)",
+    "fr": "Quelle est la distance entre les deux points ? (2 décimales)",
+    "en": "What is the distance between the two points? (2 decimal places)"
   }
 }

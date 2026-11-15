@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a área do pedaço do plano que fica acima do retângulo 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M}?"
+    "br": "Qual é a área do pedaço do plano que fica acima do retângulo 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M}?",
+    "fr": "Quelle est l'aire de la partie du plan située au-dessus du rectangle 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M} ?",
+    "en": "What is the area of the part of the plane above the rectangle 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M}?"
   }
 }

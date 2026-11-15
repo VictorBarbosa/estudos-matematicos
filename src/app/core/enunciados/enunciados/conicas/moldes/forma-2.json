@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o valor do semieixo a desta {dados-calculo.nome}?"
+    "br": "Qual é o valor do semieixo a desta {dados-calculo.nome}?",
+    "fr": "Quelle est la valeur du demi-axe a de cette {dados-calculo.nome} ?",
+    "en": "What is the value of the semi-axis a of this {dados-calculo.nome}?"
   }
 }

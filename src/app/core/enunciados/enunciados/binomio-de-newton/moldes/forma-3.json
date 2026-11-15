@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o coeficiente de x{dados-calculo.expressao1} no desenvolvimento?"
+    "br": "Qual é o coeficiente de x{dados-calculo.expressao1} no desenvolvimento?",
+    "fr": "Quel est le coefficient de x{dados-calculo.expressao1} dans le développement ?",
+    "en": "What is the coefficient of x{dados-calculo.expressao1} in the expansion?"
   }
 }

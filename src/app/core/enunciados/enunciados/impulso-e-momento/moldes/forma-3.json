@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo de {dados-calculo.massa} kg a {dados-calculo.velocidade} m/s é parado em {dados-calculo.v1} s. Qual é a força média aplicada, em newtons? (2 casas decimais)"
+    "br": "Um corpo de {dados-calculo.massa} kg a {dados-calculo.velocidade} m/s é parado em {dados-calculo.v1} s. Qual é a força média aplicada, em newtons? (2 casas decimais)",
+    "fr": "Un corps de {dados-calculo.massa} kg à {dados-calculo.velocidade} m/s est arrêté en {dados-calculo.v1} s. Quelle est la force moyenne appliquée, en newtons ? (2 décimales)",
+    "en": "A body of {dados-calculo.massa} kg at {dados-calculo.velocidade} m/s is stopped in {dados-calculo.v1} s. What is the average force applied, in newtons? (2 decimal places)"
   }
 }

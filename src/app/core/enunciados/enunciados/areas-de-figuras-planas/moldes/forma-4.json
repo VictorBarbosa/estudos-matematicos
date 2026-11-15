@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma figura é formada por um retângulo de {dados-calculo.base} cm por {dados-calculo.alturaRetangulo} cm com um triângulo de mesma base e altura {dados-calculo.alturaTriangulo} cm apoiado em cima. Qual é a área total, em cm²?"
+    "br": "Uma figura é formada por um retângulo de {dados-calculo.base} cm por {dados-calculo.alturaRetangulo} cm com um triângulo de mesma base e altura {dados-calculo.alturaTriangulo} cm apoiado em cima. Qual é a área total, em cm²?",
+    "fr": "Une figure est formée d'un rectangle de {dados-calculo.base} cm sur {dados-calculo.alturaRetangulo} cm surmonté d'un triangle de même base et de hauteur {dados-calculo.alturaTriangulo} cm. Quelle est l'aire totale, en cm² ?",
+    "en": "A figure is made of a rectangle of {dados-calculo.base} cm by {dados-calculo.alturaRetangulo} cm with a triangle of the same base and height {dados-calculo.alturaTriangulo} cm on top. What is the total area, in cm²?"
   }
 }

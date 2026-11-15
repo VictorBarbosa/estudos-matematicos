@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Duas cordas de {dados-calculo.expressao1} m, presas nas pontas, conduzem ondas a {dados-calculo.v1} m/s e a {dados-calculo.v2} m/s. Tocadas juntas no fundamental, quantos batimentos por segundo se ouvem?{dados-calculo.expressao2}"
+    "br": "Duas cordas de {dados-calculo.expressao1} m, presas nas pontas, conduzem ondas a {dados-calculo.v1} m/s e a {dados-calculo.v2} m/s. Tocadas juntas no fundamental, quantos batimentos por segundo se ouvem?{dados-calculo.expressao2}",
+    "fr": "Deux cordes de {dados-calculo.expressao1} m, fixées aux extrémités, conduisent des ondes à {dados-calculo.v1} m/s et à {dados-calculo.v2} m/s. Jouées ensemble dans le fondamental, combien de battements par seconde entend-on ?{dados-calculo.expressao2}",
+    "en": "Two strings of {dados-calculo.expressao1} m, fixed at the ends, carry waves at {dados-calculo.v1} m/s and {dados-calculo.v2} m/s. Played together in the fundamental, how many beats per second are heard?{dados-calculo.expressao2}"
   }
 }

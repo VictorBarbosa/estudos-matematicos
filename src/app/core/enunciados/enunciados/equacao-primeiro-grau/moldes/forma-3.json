@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Ana tem o {dados-calculo.v1} da idade de Bia. Daqui a {dados-calculo.k} anos, a soma das idades das duas será {dados-calculo.S} anos. Quantos anos Bia tem hoje?"
+    "br": "Ana tem o {dados-calculo.v1} da idade de Bia. Daqui a {dados-calculo.k} anos, a soma das idades das duas será {dados-calculo.S} anos. Quantos anos Bia tem hoje?",
+    "fr": "Ana a le {dados-calculo.v1} de l'âge de Bia. Dans {dados-calculo.k} ans, la somme de leurs deux âges sera de {dados-calculo.S} ans. Quel âge Bia a-t-elle aujourd'hui ?",
+    "en": "Ana has the {dados-calculo.v1} of Bia's age. In {dados-calculo.k} years, the sum of their two ages will be {dados-calculo.S} years. How old is Bia today?"
   }
 }

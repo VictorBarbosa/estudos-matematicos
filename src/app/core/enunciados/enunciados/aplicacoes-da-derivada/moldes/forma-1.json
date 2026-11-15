@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Com {dados-calculo.perimetro} m de cerca, qual é a MAIOR área retangular que se pode cercar?"
+    "br": "Com {dados-calculo.perimetro} m de cerca, qual é a MAIOR área retangular que se pode cercar?",
+    "fr": "Avec {dados-calculo.perimetro} m de clôture, quelle est la PLUS GRANDE aire rectangulaire que l'on peut clôturer ?",
+    "en": "With {dados-calculo.perimetro} m of fence, what is the LARGEST rectangular area that can be enclosed?"
   }
 }

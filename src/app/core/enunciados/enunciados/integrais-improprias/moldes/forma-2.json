@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "O integrando explode em zero. Calcule a integral, ou escreva \"diverge\". Se houver valor, use 3 casas decimais."
+    "br": "O integrando explode em zero. Calcule a integral, ou escreva \"diverge\". Se houver valor, use 3 casas decimais.",
+    "fr": "L'intégrande explose en zéro. Calculez l'intégrale, ou écrivez « diverge ». S'il y a une valeur, utilisez 3 décimales.",
+    "en": "The integrand blows up at zero. Calculate the integral, or write \"diverges\". If there is a value, use 3 decimal places."
   }
 }

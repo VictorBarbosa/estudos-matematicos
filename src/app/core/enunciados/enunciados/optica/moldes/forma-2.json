@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um raio de luz passa do ar (n = 1,00) para {dados-calculo.nome} (n = {dados-calculo.v1}), fazendo {dados-calculo.theta1}° com a normal. Que ângulo o raio refratado faz com a normal, em graus?{dados-calculo.v2}"
+    "br": "Um raio de luz passa do ar (n = 1,00) para {dados-calculo.nome} (n = {dados-calculo.v1}), fazendo {dados-calculo.theta1}° com a normal. Que ângulo o raio refratado faz com a normal, em graus?{dados-calculo.v2}",
+    "fr": "Un rayon de lumière passe de l'air (n = 1,00) à {dados-calculo.nome} (n = {dados-calculo.v1}), en faisant {dados-calculo.theta1}° avec la normale. Quel angle le rayon réfracté fait-il avec la normale, en degrés ?{dados-calculo.v2}",
+    "en": "A light ray passes from air (n = 1.00) into {dados-calculo.nome} (n = {dados-calculo.v1}), making {dados-calculo.theta1}° with the normal. What angle does the refracted ray make with the normal, in degrees?{dados-calculo.v2}"
   }
 }

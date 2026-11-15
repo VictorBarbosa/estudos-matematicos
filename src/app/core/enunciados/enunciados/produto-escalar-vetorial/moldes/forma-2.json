@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o ângulo entre ({dados-calculo.v1}, {dados-calculo.v2}) e ({dados-calculo.v3}, {dados-calculo.v4})? (em graus, 2 casas)"
+    "br": "Qual é o ângulo entre ({dados-calculo.v1}, {dados-calculo.v2}) e ({dados-calculo.v3}, {dados-calculo.v4})? (em graus, 2 casas)",
+    "fr": "Quel est l'angle entre ({dados-calculo.v1}, {dados-calculo.v2}) et ({dados-calculo.v3}, {dados-calculo.v4}) ? (en degrés, 2 décimales)",
+    "en": "What is the angle between ({dados-calculo.v1}, {dados-calculo.v2}) and ({dados-calculo.v3}, {dados-calculo.v4})? (in degrees, 2 decimals)"
   }
 }

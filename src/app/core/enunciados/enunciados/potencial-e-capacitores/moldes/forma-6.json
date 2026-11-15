@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Capacitores de {dados-calculo.v1} μF estão ligados em {dados-calculo.v2}. Qual é a capacitância equivalente, em μF? (2 casas decimais)"
+    "br": "Capacitores de {dados-calculo.v1} μF estão ligados em {dados-calculo.v2}. Qual é a capacitância equivalente, em μF? (2 casas decimais)",
+    "fr": "Des condensateurs de {dados-calculo.v1} μF sont branchés en {dados-calculo.v2}. Quelle est la capacité équivalente, en μF ? (2 décimales)",
+    "en": "Capacitors of {dados-calculo.v1} μF are connected in {dados-calculo.v2}. What is the equivalent capacitance, in μF? (2 decimal places)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma carga de {dados-calculo.expressao1} μC é colocada num campo elétrico uniforme de {dados-calculo.e} N/C. Qual é o módulo da força sobre ela, em mN? (2 casas decimais)"
+    "br": "Uma carga de {dados-calculo.expressao1} μC é colocada num campo elétrico uniforme de {dados-calculo.e} N/C. Qual é o módulo da força sobre ela, em mN? (2 casas decimais)",
+    "fr": "Une charge de {dados-calculo.expressao1} μC est placée dans un champ électrique uniforme de {dados-calculo.e} N/C. Quel est le module de la force qui s'exerce sur elle, en mN ? (2 décimales)",
+    "en": "A charge of {dados-calculo.expressao1} μC is placed in a uniform electric field of {dados-calculo.e} N/C. What is the magnitude of the force on it, in mN? (2 decimal places)"
   }
 }

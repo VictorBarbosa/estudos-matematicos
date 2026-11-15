@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um poliedro convexo tem como faces {dados-calculo.descreve}. Quantos vértices ele tem?"
+    "br": "Um poliedro convexo tem como faces {dados-calculo.descreve}. Quantos vértices ele tem?",
+    "fr": "Un polyèdre convexe a pour faces {dados-calculo.descreve}. Combien de sommets possède-t-il ?",
+    "en": "A convex polyhedron has as its faces {dados-calculo.descreve}. How many vertices does it have?"
   }
 }

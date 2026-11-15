@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a projeção de ({dados-calculo.v1}, {dados-calculo.v2}) sobre a direção de ({dados-calculo.v3}, {dados-calculo.v4})? (2 casas decimais)"
+    "br": "Qual é a projeção de ({dados-calculo.v1}, {dados-calculo.v2}) sobre a direção de ({dados-calculo.v3}, {dados-calculo.v4})? (2 casas decimais)",
+    "fr": "Quelle est la projection de ({dados-calculo.v1}, {dados-calculo.v2}) sur la direction de ({dados-calculo.v3}, {dados-calculo.v4}) ? (2 décimales)",
+    "en": "What is the projection of ({dados-calculo.v1}, {dados-calculo.v2}) onto the direction of ({dados-calculo.v3}, {dados-calculo.v4})? (2 decimal places)"
   }
 }

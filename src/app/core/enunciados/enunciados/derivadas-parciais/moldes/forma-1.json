@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a segunda derivada parcial em relação a {dados-calculo.variavel}, duas vezes? Responda com 3 casas decimais."
+    "br": "Qual é a segunda derivada parcial em relação a {dados-calculo.variavel}, duas vezes? Responda com 3 casas decimais.",
+    "fr": "Quelle est la dérivée partielle seconde par rapport à {dados-calculo.variavel}, prise deux fois ? Répondez avec 3 décimales.",
+    "en": "What is the second partial derivative with respect to {dados-calculo.variavel}, taken twice? Answer with 3 decimal places."
   }
 }

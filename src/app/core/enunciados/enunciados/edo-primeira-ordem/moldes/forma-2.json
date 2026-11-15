@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma substância decai segundo esta equação, com t em anos. Qual é a meia-vida dela, em anos? Responda com 4 casas decimais."
+    "br": "Uma substância decai segundo esta equação, com t em anos. Qual é a meia-vida dela, em anos? Responda com 4 casas decimais.",
+    "fr": "Une substance décroît selon cette équation, avec t en années. Quelle est sa demi-vie, en années ? Répondez avec 4 décimales.",
+    "en": "A substance decays according to this equation, with t in years. What is its half-life, in years? Answer with 4 decimal places."
   }
 }

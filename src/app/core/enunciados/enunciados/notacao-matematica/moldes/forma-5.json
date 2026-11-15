@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Com A = {{dados-calculo.v1}} e B = {{dados-calculo.v2}}, quantos elementos tem o conjunto?"
+    "br": "Com A = {{dados-calculo.v1}} e B = {{dados-calculo.v2}}, quantos elementos tem o conjunto?",
+    "fr": "Avec A = {{dados-calculo.v1}} et B = {{dados-calculo.v2}}, combien d'éléments l'ensemble possède-t-il ?",
+    "en": "With A = {{dados-calculo.v1}} and B = {{dados-calculo.v2}}, how many elements does the set have?"
   }
 }

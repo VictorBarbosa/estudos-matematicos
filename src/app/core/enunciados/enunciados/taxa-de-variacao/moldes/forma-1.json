@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "A posição de um corpo, em metros, é dada em função do tempo em segundos, com t ≥ 0. Em que instante ele para pela primeira vez?"
+    "br": "A posição de um corpo, em metros, é dada em função do tempo em segundos, com t ≥ 0. Em que instante ele para pela primeira vez?",
+    "fr": "La position d'un corps, en mètres, est donnée en fonction du temps en secondes, avec t ≥ 0. À quel instant s'arrête-t-il pour la première fois ?",
+    "en": "The position of a body, in metres, is given as a function of time in seconds, with t ≥ 0. At what instant does it stop for the first time?"
   }
 }

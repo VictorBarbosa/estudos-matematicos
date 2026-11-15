@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a distância do ponto ({dados-calculo.v1}, {dados-calculo.v2}) ao centro desta circunferência?"
+    "br": "Qual é a distância do ponto ({dados-calculo.v1}, {dados-calculo.v2}) ao centro desta circunferência?",
+    "fr": "Quelle est la distance du point ({dados-calculo.v1}, {dados-calculo.v2}) au centre de ce cercle ?",
+    "en": "What is the distance from the point ({dados-calculo.v1}, {dados-calculo.v2}) to the centre of this circle?"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a aceleração da gravidade a {dados-calculo.v1} km de altitude? (em m/s², 2 casas decimais)"
+    "br": "Qual é a aceleração da gravidade a {dados-calculo.v1} km de altitude? (em m/s², 2 casas decimais)",
+    "fr": "Quelle est l'accélération de la gravité à {dados-calculo.v1} km d'altitude ? (en m/s², 2 décimales)",
+    "en": "What is the acceleration due to gravity at an altitude of {dados-calculo.v1} km? (in m/s², 2 decimal places)"
   }
 }

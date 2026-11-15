@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o ângulo agudo entre {dados-calculo.v1}, em graus? (2 casas decimais)"
+    "br": "Qual é o ângulo agudo entre {dados-calculo.v1}, em graus? (2 casas decimais)",
+    "fr": "Quel est l'angle aigu entre {dados-calculo.v1}, en degrés ? (2 décimales)",
+    "en": "What is the acute angle between {dados-calculo.v1}, in degrees? (2 decimal places)"
   }
 }

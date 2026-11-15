@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um vetor de módulo {dados-calculo.comprimento} forma {dados-calculo.angulo}° com o eixo x. Qual é sua componente {dados-calculo.v1}? (2 casas decimais)"
+    "br": "Um vetor de módulo {dados-calculo.comprimento} forma {dados-calculo.angulo}° com o eixo x. Qual é sua componente {dados-calculo.v1}? (2 casas decimais)",
+    "fr": "Un vecteur de module {dados-calculo.comprimento} forme {dados-calculo.angulo}° avec l'axe x. Quelle est sa composante {dados-calculo.v1} ? (2 décimales)",
+    "en": "A vector of magnitude {dados-calculo.comprimento} makes {dados-calculo.angulo}° with the x-axis. What is its {dados-calculo.v1} component? (2 decimal places)"
   }
 }

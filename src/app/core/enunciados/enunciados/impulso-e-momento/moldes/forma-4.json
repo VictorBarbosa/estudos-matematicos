@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo de {dados-calculo.massaA} kg a {dados-calculo.velocidadeA} m/s colide com outro de {dados-calculo.massaB} kg a {dados-calculo.velocidadeB} m/s e os dois seguem juntos. Qual é a velocidade final, em m/s? (2 casas decimais)"
+    "br": "Um corpo de {dados-calculo.massaA} kg a {dados-calculo.velocidadeA} m/s colide com outro de {dados-calculo.massaB} kg a {dados-calculo.velocidadeB} m/s e os dois seguem juntos. Qual é a velocidade final, em m/s? (2 casas decimais)",
+    "fr": "Un corps de {dados-calculo.massaA} kg à {dados-calculo.velocidadeA} m/s entre en collision avec un autre de {dados-calculo.massaB} kg à {dados-calculo.velocidadeB} m/s, et les deux continuent ensemble. Quelle est la vitesse finale, en m/s ? (2 décimales)",
+    "en": "A body of {dados-calculo.massaA} kg at {dados-calculo.velocidadeA} m/s collides with another of {dados-calculo.massaB} kg at {dados-calculo.velocidadeB} m/s, and the two move on together. What is the final velocity, in m/s? (2 decimal places)"
   }
 }

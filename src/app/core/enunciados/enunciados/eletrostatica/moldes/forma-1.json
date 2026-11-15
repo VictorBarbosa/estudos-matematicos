@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Duas cargas pontuais, q₁ = {dados-calculo.expressao1} μC e q₂ = {dados-calculo.expressao2} μC, estão a {dados-calculo.distancia} uma da outra. Qual é o módulo da força elétrica entre elas, em newtons? (2 casas decimais)"
+    "br": "Duas cargas pontuais, q₁ = {dados-calculo.expressao1} μC e q₂ = {dados-calculo.expressao2} μC, estão a {dados-calculo.distancia} uma da outra. Qual é o módulo da força elétrica entre elas, em newtons? (2 casas decimais)",
+    "fr": "Deux charges ponctuelles, q₁ = {dados-calculo.expressao1} μC et q₂ = {dados-calculo.expressao2} μC, sont à une distance de {dados-calculo.distancia} l'une de l'autre. Quel est le module de la force électrique entre elles, en newtons ? (2 décimales)",
+    "en": "Two point charges, q₁ = {dados-calculo.expressao1} μC and q₂ = {dados-calculo.expressao2} μC, are {dados-calculo.distancia} apart. What is the magnitude of the electric force between them, in newtons? (2 decimal places)"
   }
 }

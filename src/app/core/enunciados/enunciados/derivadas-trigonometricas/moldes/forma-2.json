@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Derive e calcule f'({dados-calculo.expressao1}). Responda na forma exata ou com 3 casas decimais."
+    "br": "Derive e calcule f'({dados-calculo.expressao1}). Responda na forma exata ou com 3 casas decimais.",
+    "fr": "Dérivez et calculez f'({dados-calculo.expressao1}). Répondez sous forme exacte ou avec 3 décimales.",
+    "en": "Differentiate and calculate f'({dados-calculo.expressao1}). Answer in exact form or with 3 decimal places."
   }
 }

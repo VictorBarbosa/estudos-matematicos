@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o intercepto da reta de mínimos quadrados para estes dados? Responda com 4 casas decimais."
+    "br": "Qual é o intercepto da reta de mínimos quadrados para estes dados? Responda com 4 casas decimais.",
+    "fr": "Quelle est l'ordonnée à l'origine de la droite des moindres carrés pour ces données ? Répondez avec 4 décimales.",
+    "en": "What is the intercept of the least-squares line for these data? Answer with 4 decimal places."
   }
 }

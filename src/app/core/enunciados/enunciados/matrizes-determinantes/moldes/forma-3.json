@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "No produto A·B, qual é a entrada da linha {dados-calculo.v1}, coluna {dados-calculo.v2}?"
+    "br": "No produto A·B, qual é a entrada da linha {dados-calculo.v1}, coluna {dados-calculo.v2}?",
+    "fr": "Dans le produit A·B, quelle est l'entrée de la ligne {dados-calculo.v1}, colonne {dados-calculo.v2} ?",
+    "en": "In the product A·B, what is the entry in row {dados-calculo.v1}, column {dados-calculo.v2}?"
   }
 }

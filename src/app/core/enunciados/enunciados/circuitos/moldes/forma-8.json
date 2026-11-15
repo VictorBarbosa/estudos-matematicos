@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um circuito RC tem R = {dados-calculo.expressao1} kΩ e C = {dados-calculo.c} μF. Qual é a constante de tempo, em ms? (2 casas decimais)"
+    "br": "Um circuito RC tem R = {dados-calculo.expressao1} kΩ e C = {dados-calculo.c} μF. Qual é a constante de tempo, em ms? (2 casas decimais)",
+    "fr": "Un circuit RC a R = {dados-calculo.expressao1} kΩ et C = {dados-calculo.c} μF. Quelle est la constante de temps, en ms ? (2 décimales)",
+    "en": "An RC circuit has R = {dados-calculo.expressao1} kΩ and C = {dados-calculo.c} μF. What is the time constant, in ms? (2 decimal places)"
   }
 }

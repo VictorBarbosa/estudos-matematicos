@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Este campo é conservativo. Qual é o trabalho dele de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) até ({dados-calculo.expressao3}, {dados-calculo.expressao4}), por qualquer caminho? Responda com 3 casas decimais."
+    "br": "Este campo é conservativo. Qual é o trabalho dele de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) até ({dados-calculo.expressao3}, {dados-calculo.expressao4}), por qualquer caminho? Responda com 3 casas decimais.",
+    "fr": "Ce champ est conservatif. Quel est son travail de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) à ({dados-calculo.expressao3}, {dados-calculo.expressao4}), par n'importe quel chemin ? Répondez avec 3 décimales.",
+    "en": "This field is conservative. What is its work from ({dados-calculo.expressao1}, {dados-calculo.expressao2}) to ({dados-calculo.expressao3}, {dados-calculo.expressao4}), along any path? Answer with 3 decimal places."
   }
 }

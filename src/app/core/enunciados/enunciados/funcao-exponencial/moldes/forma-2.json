@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Quantas unidades de x são necessárias para o valor DOBRAR? (arredonde para 2 casas)"
+    "br": "Quantas unidades de x são necessárias para o valor DOBRAR? (arredonde para 2 casas)",
+    "fr": "Combien d'unités de x faut-il pour que la valeur DOUBLE ? (arrondissez à 2 décimales)",
+    "en": "How many units of x are needed for the value to DOUBLE? (round to 2 decimals)"
   }
 }

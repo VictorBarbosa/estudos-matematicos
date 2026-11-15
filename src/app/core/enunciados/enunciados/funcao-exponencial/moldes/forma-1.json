@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma amostra decai segundo N(t) = N₀·e^(−{dados-calculo.v1}t), com t em anos. Qual é a meia-vida? (arredonde para 2 casas)"
+    "br": "Uma amostra decai segundo N(t) = N₀·e^(−{dados-calculo.v1}t), com t em anos. Qual é a meia-vida? (arredonde para 2 casas)",
+    "fr": "Un échantillon décroît selon N(t) = N₀·e^(−{dados-calculo.v1}t), avec t en années. Quelle est la demi-vie ? (arrondissez à 2 décimales)",
+    "en": "A sample decays as N(t) = N₀·e^(−{dados-calculo.v1}t), with t in years. What is the half-life? (round to 2 decimals)"
   }
 }

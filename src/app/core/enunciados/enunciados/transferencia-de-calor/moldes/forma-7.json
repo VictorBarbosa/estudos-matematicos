@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um radiador de satélite com {dados-calculo.expressao1} m² e emissividade {dados-calculo.expressao2} precisa dissipar {dados-calculo.potencia} W no vácuo. Qual é a temperatura de equilíbrio, em K? "
+    "br": "Um radiador de satélite com {dados-calculo.expressao1} m² e emissividade {dados-calculo.expressao2} precisa dissipar {dados-calculo.potencia} W no vácuo. Qual é a temperatura de equilíbrio, em K? ",
+    "fr": "Un radiateur de satellite avec {dados-calculo.expressao1} m² et une émissivité de {dados-calculo.expressao2} doit dissiper {dados-calculo.potencia} W dans le vide. Quelle est la température d'équilibre, en K ? ",
+    "en": "A satellite radiator with {dados-calculo.expressao1} m² and emissivity {dados-calculo.expressao2} must dissipate {dados-calculo.potencia} W in vacuum. What is the equilibrium temperature, in K? "
   }
 }

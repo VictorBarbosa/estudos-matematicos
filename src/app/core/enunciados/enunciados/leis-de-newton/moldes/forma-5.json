@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Com coeficiente de atrito estático {dados-calculo.v1}, a partir de que ângulo de inclinação o bloco começa a deslizar? (em graus, 2 casas)"
+    "br": "Com coeficiente de atrito estático {dados-calculo.v1}, a partir de que ângulo de inclinação o bloco começa a deslizar? (em graus, 2 casas)",
+    "fr": "Avec un coefficient de frottement statique {dados-calculo.v1}, à partir de quel angle d'inclinaison le bloc commence-t-il à glisser ? (en degrés, 2 décimales)",
+    "en": "With a static friction coefficient of {dados-calculo.v1}, from what angle of inclination does the block start to slide? (in degrees, 2 decimals)"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um motor realiza {dados-calculo.trabalho} J de trabalho em {dados-calculo.tempo} s. Qual é sua potência média, em watts? (2 casas decimais)"
+    "br": "Um motor realiza {dados-calculo.trabalho} J de trabalho em {dados-calculo.tempo} s. Qual é sua potência média, em watts? (2 casas decimais)",
+    "fr": "Un moteur effectue {dados-calculo.trabalho} J de travail en {dados-calculo.tempo} s. Quelle est sa puissance moyenne, en watts ? (2 décimales)",
+    "en": "A motor does {dados-calculo.trabalho} J of work in {dados-calculo.tempo} s. What is its average power, in watts? (2 decimal places)"
   }
 }

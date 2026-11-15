@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Duas cargas positivas, de {dados-calculo.q1} μC e {dados-calculo.q2} μC, estão a {dados-calculo.d} cm uma da outra. A que distância da carga de {dados-calculo.q1} μC, entre elas, o campo elétrico é nulo, em cm? (2 casas decimais)"
+    "br": "Duas cargas positivas, de {dados-calculo.q1} μC e {dados-calculo.q2} μC, estão a {dados-calculo.d} cm uma da outra. A que distância da carga de {dados-calculo.q1} μC, entre elas, o campo elétrico é nulo, em cm? (2 casas decimais)",
+    "fr": "Deux charges positives, de {dados-calculo.q1} μC et {dados-calculo.q2} μC, sont distantes de {dados-calculo.d} cm. À quelle distance de la charge de {dados-calculo.q1} μC, entre elles, le champ électrique est-il nul, en cm ? (2 décimales)",
+    "en": "Two positive charges, of {dados-calculo.q1} μC and {dados-calculo.q2} μC, are {dados-calculo.d} cm apart. At what distance from the charge of {dados-calculo.q1} μC, between them, is the electric field zero, in cm? (2 decimal places)"
   }
 }

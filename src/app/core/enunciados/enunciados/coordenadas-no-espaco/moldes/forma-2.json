@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um ponto tem coordenadas esféricas ρ = {dados-calculo.rho}, φ = {dados-calculo.phi}° (medido do eixo z) e θ = {dados-calculo.theta}°. Qual é a coordenada cartesiana {dados-calculo.pedir}? Responda com 3 casas decimais."
+    "br": "Um ponto tem coordenadas esféricas ρ = {dados-calculo.rho}, φ = {dados-calculo.phi}° (medido do eixo z) e θ = {dados-calculo.theta}°. Qual é a coordenada cartesiana {dados-calculo.pedir}? Responda com 3 casas decimais.",
+    "fr": "Un point a pour coordonnées sphériques ρ = {dados-calculo.rho}, φ = {dados-calculo.phi}° (mesuré depuis l'axe z) et θ = {dados-calculo.theta}°. Quelle est la coordonnée cartésienne {dados-calculo.pedir} ? Répondez avec 3 décimales.",
+    "en": "A point has spherical coordinates ρ = {dados-calculo.rho}, φ = {dados-calculo.phi}° (measured from the z-axis) and θ = {dados-calculo.theta}°. What is the Cartesian coordinate {dados-calculo.pedir}? Answer with 3 decimal places."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma escada de {dados-calculo.comprimento} m escorrega: o pé dela se afasta da parede a {dados-calculo.taxaX} m/s. A que taxa o topo desce quando o pé está a {dados-calculo.x} m da parede? (em m/s, com sinal, 3 casas decimais)"
+    "br": "Uma escada de {dados-calculo.comprimento} m escorrega: o pé dela se afasta da parede a {dados-calculo.taxaX} m/s. A que taxa o topo desce quando o pé está a {dados-calculo.x} m da parede? (em m/s, com sinal, 3 casas decimais)",
+    "fr": "Une échelle de {dados-calculo.comprimento} m glisse : son pied s'éloigne du mur à {dados-calculo.taxaX} m/s. À quel taux le haut descend-il lorsque le pied est à {dados-calculo.x} m du mur ? (en m/s, avec signe, 3 décimales)",
+    "en": "A ladder of {dados-calculo.comprimento} m slides: its foot moves away from the wall at {dados-calculo.taxaX} m/s. At what rate does the top descend when the foot is {dados-calculo.x} m from the wall? (in m/s, with sign, 3 decimal places)"
   }
 }

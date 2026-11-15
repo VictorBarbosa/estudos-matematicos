@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma força de {dados-calculo.forca} N age a {dados-calculo.angulo}° do deslocamento, que vale {dados-calculo.deslocamento} m. Qual é o trabalho realizado, em joules?"
+    "br": "Uma força de {dados-calculo.forca} N age a {dados-calculo.angulo}° do deslocamento, que vale {dados-calculo.deslocamento} m. Qual é o trabalho realizado, em joules?",
+    "fr": "Une force de {dados-calculo.forca} N agit à {dados-calculo.angulo}° du déplacement, qui vaut {dados-calculo.deslocamento} m. Quel est le travail effectué, en joules ?",
+    "en": "A force of {dados-calculo.forca} N acts at {dados-calculo.angulo}° to the displacement, which is {dados-calculo.deslocamento} m. What is the work done, in joules?"
   }
 }

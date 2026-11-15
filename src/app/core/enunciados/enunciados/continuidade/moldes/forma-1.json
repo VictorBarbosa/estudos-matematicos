@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Esta função não está definida em x = {dados-calculo.k}. Que valor deveria ser atribuído ali para torná-la contínua?"
+    "br": "Esta função não está definida em x = {dados-calculo.k}. Que valor deveria ser atribuído ali para torná-la contínua?",
+    "fr": "Cette fonction n'est pas définie en x = {dados-calculo.k}. Quelle valeur faudrait-il lui attribuer en ce point pour la rendre continue ?",
+    "en": "This function is not defined at x = {dados-calculo.k}. What value should be assigned there to make it continuous?"
   }
 }

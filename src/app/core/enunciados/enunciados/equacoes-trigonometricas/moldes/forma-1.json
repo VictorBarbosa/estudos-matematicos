@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule {dados-calculo.v1}({dados-calculo.v2}), em graus."
+    "br": "Calcule {dados-calculo.v1}({dados-calculo.v2}), em graus.",
+    "fr": "Calculez {dados-calculo.v1}({dados-calculo.v2}), en degrés.",
+    "en": "Calculate {dados-calculo.v1}({dados-calculo.v2}), in degrees."
   }
 }

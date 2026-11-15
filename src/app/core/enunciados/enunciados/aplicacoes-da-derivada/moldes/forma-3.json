@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Esta função tem dois pontos críticos. Informe o MAIOR deles."
+    "br": "Esta função tem dois pontos críticos. Informe o MAIOR deles.",
+    "fr": "Cette fonction a deux points critiques. Indiquez le PLUS GRAND d'entre eux.",
+    "en": "This function has two critical points. Give the LARGER one."
   }
 }

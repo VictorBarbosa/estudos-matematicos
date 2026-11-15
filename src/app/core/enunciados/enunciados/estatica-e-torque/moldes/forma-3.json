@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma barra homogênea de {dados-calculo.comprimento} m e {dados-calculo.pesoBarra} N está apoiada numa ponta. Uma carga de {dados-calculo.carga} N está a {dados-calculo.cargaDistancia} m desse apoio. Que força vertical na outra ponta mantém a barra em equilíbrio, em newtons? (2 casas decimais)"
+    "br": "Uma barra homogênea de {dados-calculo.comprimento} m e {dados-calculo.pesoBarra} N está apoiada numa ponta. Uma carga de {dados-calculo.carga} N está a {dados-calculo.cargaDistancia} m desse apoio. Que força vertical na outra ponta mantém a barra em equilíbrio, em newtons? (2 casas decimais)",
+    "fr": "Une barre homogène de {dados-calculo.comprimento} m et de {dados-calculo.pesoBarra} N repose sur une extrémité. Une charge de {dados-calculo.carga} N se trouve à {dados-calculo.cargaDistancia} m de cet appui. Quelle force verticale à l'autre extrémité maintient la barre en équilibre, en newtons ? (2 décimales)",
+    "en": "A uniform rod of {dados-calculo.comprimento} m and {dados-calculo.pesoBarra} N rests on one end. A load of {dados-calculo.carga} N is at {dados-calculo.cargaDistancia} m from that support. What vertical force at the other end keeps the rod in equilibrium, in newtons? (2 decimal places)"
   }
 }

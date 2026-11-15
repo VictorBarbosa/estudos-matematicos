@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Multiplicando ({dados-calculo.v1}) por ({dados-calculo.v2}), qual é a parte {dados-calculo.v3} do resultado?"
+    "br": "Multiplicando ({dados-calculo.v1}) por ({dados-calculo.v2}), qual é a parte {dados-calculo.v3} do resultado?",
+    "fr": "En multipliant ({dados-calculo.v1}) par ({dados-calculo.v2}), quelle est la partie {dados-calculo.v3} du résultat ?",
+    "en": "Multiplying ({dados-calculo.v1}) by ({dados-calculo.v2}), what is the {dados-calculo.v3} part of the result?"
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o menor número N de termos que garante, pelo teorema da série alternada, erro menor que 10⁻{dados-calculo.potencia}?"
+    "br": "Qual é o menor número N de termos que garante, pelo teorema da série alternada, erro menor que 10⁻{dados-calculo.potencia}?",
+    "fr": "Quel est le plus petit nombre N de termes qui garantit, par le théorème des séries alternées, une erreur inférieure à 10⁻{dados-calculo.potencia} ?",
+    "en": "What is the smallest number N of terms that guarantees, by the alternating series theorem, an error smaller than 10⁻{dados-calculo.potencia}?"
   }
 }

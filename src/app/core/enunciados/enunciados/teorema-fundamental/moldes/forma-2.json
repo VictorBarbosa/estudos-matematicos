@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Para qual valor inteiro de k a integral vale {dados-calculo.expressao1}?"
+    "br": "Para qual valor inteiro de k a integral vale {dados-calculo.expressao1}?",
+    "fr": "Pour quelle valeur entière de k l'intégrale vaut-elle {dados-calculo.expressao1} ?",
+    "en": "For what integer value of k does the integral equal {dados-calculo.expressao1}?"
   }
 }

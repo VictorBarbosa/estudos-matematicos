@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo de {dados-calculo.volumeLitros} L totalmente submerso em água sofre que empuxo, em newtons? (2 casas decimais)"
+    "br": "Um corpo de {dados-calculo.volumeLitros} L totalmente submerso em água sofre que empuxo, em newtons? (2 casas decimais)",
+    "fr": "Un corps de {dados-calculo.volumeLitros} L entièrement immergé dans l'eau subit quelle poussée d'Archimède, en newtons ? (2 décimales)",
+    "en": "A body of {dados-calculo.volumeLitros} L fully submerged in water experiences what buoyant force, in newtons? (2 decimal places)"
   }
 }

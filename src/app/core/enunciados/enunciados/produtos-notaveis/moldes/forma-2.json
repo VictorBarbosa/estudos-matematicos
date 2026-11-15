@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Essa expressão é um cubo perfeito. Escreva-a como (px + q)³, com p positivo, e informe q."
+    "br": "Essa expressão é um cubo perfeito. Escreva-a como (px + q)³, com p positivo, e informe q.",
+    "fr": "Cette expression est un cube parfait. Écrivez-la sous la forme (px + q)³, avec p positif, et indiquez q.",
+    "en": "This expression is a perfect cube. Write it as (px + q)³, with p positive, and give q."
   }
 }

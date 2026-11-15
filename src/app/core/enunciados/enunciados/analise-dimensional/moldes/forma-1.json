@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Na dimensão de {dados-calculo.v1} (unidade {dados-calculo.v2}), qual é o expoente de {dados-calculo.base}? (responda 0 se não aparece)"
+    "br": "Na dimensão de {dados-calculo.v1} (unidade {dados-calculo.v2}), qual é o expoente de {dados-calculo.base}? (responda 0 se não aparece)",
+    "fr": "Dans la dimension de {dados-calculo.v1} (unité {dados-calculo.v2}), quel est l'exposant de {dados-calculo.base} ? (répondez 0 s'il n'apparaît pas)",
+    "en": "In the dimension of {dados-calculo.v1} (unit {dados-calculo.v2}), what is the exponent of {dados-calculo.base}? (answer 0 if it does not appear)"
   }
 }

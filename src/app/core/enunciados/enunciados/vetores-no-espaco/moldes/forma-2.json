@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule o produto escalar dos dois vetores."
+    "br": "Calcule o produto escalar dos dois vetores.",
+    "fr": "Calculez le produit scalaire des deux vecteurs.",
+    "en": "Calculate the dot product of the two vectors."
   }
 }

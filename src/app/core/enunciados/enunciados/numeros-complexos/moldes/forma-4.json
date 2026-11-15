@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a parte real de i^{dados-calculo.expoente}?"
+    "br": "Qual é a parte real de i^{dados-calculo.expoente}?",
+    "fr": "Quelle est la partie réelle de i^{dados-calculo.expoente} ?",
+    "en": "What is the real part of i^{dados-calculo.expoente}?"
   }
 }

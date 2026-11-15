@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a pressão de {dados-calculo.mols} mol de gás ideal em {dados-calculo.volumeLitros} L a {dados-calculo.temperaturaCelsius} °C? (em kPa, 2 casas decimais)"
+    "br": "Qual é a pressão de {dados-calculo.mols} mol de gás ideal em {dados-calculo.volumeLitros} L a {dados-calculo.temperaturaCelsius} °C? (em kPa, 2 casas decimais)",
+    "fr": "Quelle est la pression de {dados-calculo.mols} mol de gaz parfait dans {dados-calculo.volumeLitros} L à {dados-calculo.temperaturaCelsius} °C ? (en kPa, 2 décimales)",
+    "en": "What is the pressure of {dados-calculo.mols} mol of ideal gas in {dados-calculo.volumeLitros} L at {dados-calculo.temperaturaCelsius} °C? (in kPa, 2 decimal places)"
   }
 }

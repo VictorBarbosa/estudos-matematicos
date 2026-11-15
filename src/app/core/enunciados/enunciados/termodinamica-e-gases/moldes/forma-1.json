@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Que volume ocupam {dados-calculo.mols} mol de gás ideal a {dados-calculo.temperaturaCelsius} °C e 1 atm? (em litros, 2 casas decimais)"
+    "br": "Que volume ocupam {dados-calculo.mols} mol de gás ideal a {dados-calculo.temperaturaCelsius} °C e 1 atm? (em litros, 2 casas decimais)",
+    "fr": "Quel volume occupent {dados-calculo.mols} mol de gaz parfait à {dados-calculo.temperaturaCelsius} °C et 1 atm ? (en litres, 2 décimales)",
+    "en": "What volume do {dados-calculo.mols} mol of ideal gas occupy at {dados-calculo.temperaturaCelsius} °C and 1 atm? (in litres, 2 decimal places)"
   }
 }

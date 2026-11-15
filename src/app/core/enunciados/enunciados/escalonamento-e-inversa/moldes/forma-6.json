@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Resolva o sistema por escalonamento e informe o valor de {dados-calculo.nome}."
+    "br": "Resolva o sistema por escalonamento e informe o valor de {dados-calculo.nome}.",
+    "fr": "Résolvez le système par échelonnement et indiquez la valeur de {dados-calculo.nome}.",
+    "en": "Solve the system by elimination and give the value of {dados-calculo.nome}."
   }
 }

@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um corpo gira sem torque externo com inércia {dados-calculo.v1} kg·m² a {dados-calculo.v2} rad/s, e recolhe a massa até a inércia cair para {dados-calculo.v3}. De quanto VARIOU a energia cinética de rotação, em J? Responda com 3 casas decimais."
+    "br": "Um corpo gira sem torque externo com inércia {dados-calculo.v1} kg·m² a {dados-calculo.v2} rad/s, e recolhe a massa até a inércia cair para {dados-calculo.v3}. De quanto VARIOU a energia cinética de rotação, em J? Responda com 3 casas decimais.",
+    "fr": "Un corps tourne sans couple externe avec une inertie de {dados-calculo.v1} kg·m² à {dados-calculo.v2} rad/s, et ramène la masse jusqu'à ce que l'inertie tombe à {dados-calculo.v3}. De combien l'énergie cinétique de rotation a-t-elle VARIÉ, en J ? Répondez avec 3 décimales.",
+    "en": "A body spins without external torque with inertia {dados-calculo.v1} kg·m² at {dados-calculo.v2} rad/s, and pulls the mass in until the inertia drops to {dados-calculo.v3}. By how much did the rotational kinetic energy CHANGE, in J? Answer with 3 decimal places."
   }
 }

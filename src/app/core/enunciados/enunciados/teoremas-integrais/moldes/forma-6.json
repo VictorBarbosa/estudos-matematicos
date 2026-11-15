@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Pelo teorema de Green com o campo F = (−y/2, x/2), a área da região é igual à circulação na borda. Calcule a área da elipse. (2 casas decimais)"
+    "br": "Pelo teorema de Green com o campo F = (−y/2, x/2), a área da região é igual à circulação na borda. Calcule a área da elipse. (2 casas decimais)",
+    "fr": "Par le théorème de Green avec le champ F = (−y/2, x/2), l'aire de la région est égale à la circulation sur le bord. Calculez l'aire de l'ellipse. (2 décimales)",
+    "en": "By Green's theorem with the field F = (−y/2, x/2), the area of the region equals the circulation along the boundary. Calculate the area of the ellipse. (2 decimal places)"
   }
 }

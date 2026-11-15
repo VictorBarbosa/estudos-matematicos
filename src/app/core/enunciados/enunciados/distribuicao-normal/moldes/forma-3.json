@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica ACIMA de {dados-calculo.valor} {dados-calculo.expressao3}? Responda entre 0 e 1, com 4 casas decimais."
+    "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica ACIMA de {dados-calculo.valor} {dados-calculo.expressao3}? Responda entre 0 e 1, com 4 casas decimais.",
+    "fr": "{dados-calculo.expressao1} présente {dados-calculo.expressao2} normale, avec une moyenne de {dados-calculo.media} {dados-calculo.expressao3} et un écart-type de {dados-calculo.desvio} {dados-calculo.expressao3}. Quelle proportion se trouve AU-DESSUS de {dados-calculo.valor} {dados-calculo.expressao3} ? Répondez entre 0 et 1, avec 4 décimales.",
+    "en": "{dados-calculo.expressao1} has a normal {dados-calculo.expressao2}, with a mean of {dados-calculo.media} {dados-calculo.expressao3} and a standard deviation of {dados-calculo.desvio} {dados-calculo.expressao3}. What proportion lies ABOVE {dados-calculo.valor} {dados-calculo.expressao3}? Answer between 0 and 1, with 4 decimal places."
   }
 }

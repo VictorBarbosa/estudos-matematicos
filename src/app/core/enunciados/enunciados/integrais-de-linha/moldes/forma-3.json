@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o trabalho deste campo ao percorrer o segmento de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) a ({dados-calculo.expressao3}, {dados-calculo.expressao4}) e voltar pelo mesmo caminho? Responda com 3 casas decimais."
+    "br": "Qual é o trabalho deste campo ao percorrer o segmento de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) a ({dados-calculo.expressao3}, {dados-calculo.expressao4}) e voltar pelo mesmo caminho? Responda com 3 casas decimais.",
+    "fr": "Quel est le travail de ce champ en parcourant le segment de ({dados-calculo.expressao1}, {dados-calculo.expressao2}) à ({dados-calculo.expressao3}, {dados-calculo.expressao4}) puis en revenant par le même chemin ? Répondez avec 3 décimales.",
+    "en": "What is the work done by this field while going along the segment from ({dados-calculo.expressao1}, {dados-calculo.expressao2}) to ({dados-calculo.expressao3}, {dados-calculo.expressao4}) and back along the same path? Answer with 3 decimal places."
   }
 }

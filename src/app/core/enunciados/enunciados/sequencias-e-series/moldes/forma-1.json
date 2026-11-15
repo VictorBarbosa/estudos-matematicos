@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule o limite do termo geral quando n tende ao infinito (fração ou 3 casas decimais). Se não der zero, a série diverge."
+    "br": "Calcule o limite do termo geral quando n tende ao infinito (fração ou 3 casas decimais). Se não der zero, a série diverge.",
+    "fr": "Calculez la limite du terme général lorsque n tend vers l'infini (fraction ou 3 décimales). Si elle n'est pas nulle, la série diverge.",
+    "en": "Calculate the limit of the general term as n tends to infinity (fraction or 3 decimal places). If it is not zero, the series diverges."
   }
 }

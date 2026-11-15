@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um elétron (m = 9,11 × 10⁻³¹ kg) se move a {dados-calculo.v1} × 10⁶ m/s. Qual é o comprimento de onda de de Broglie dele, em nm? (h = 6,626 × 10⁻³⁴ J·s){dados-calculo.v2}"
+    "br": "Um elétron (m = 9,11 × 10⁻³¹ kg) se move a {dados-calculo.v1} × 10⁶ m/s. Qual é o comprimento de onda de de Broglie dele, em nm? (h = 6,626 × 10⁻³⁴ J·s){dados-calculo.v2}",
+    "fr": "Un électron (m = 9,11 × 10⁻³¹ kg) se déplace à {dados-calculo.v1} × 10⁶ m/s. Quelle est sa longueur d'onde de de Broglie, en nm ? (h = 6,626 × 10⁻³⁴ J·s){dados-calculo.v2}",
+    "en": "An electron (m = 9.11 × 10⁻³¹ kg) moves at {dados-calculo.v1} × 10⁶ m/s. What is its de Broglie wavelength, in nm? (h = 6.626 × 10⁻³⁴ J·s){dados-calculo.v2}"
   }
 }

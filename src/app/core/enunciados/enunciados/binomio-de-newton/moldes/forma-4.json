@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "No desenvolvimento em potências decrescentes de x, qual é o coeficiente do {dados-calculo.ordem}º termo?"
+    "br": "No desenvolvimento em potências decrescentes de x, qual é o coeficiente do {dados-calculo.ordem}º termo?",
+    "fr": "Dans le développement en puissances décroissantes de x, quel est le coefficient du {dados-calculo.ordem}e terme ?",
+    "en": "In the expansion in decreasing powers of x, what is the coefficient of the {dados-calculo.ordem}th term?"
   }
 }

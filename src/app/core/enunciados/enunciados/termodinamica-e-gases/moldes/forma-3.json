@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Um gás a {dados-calculo.pressao1} atm ocupa {dados-calculo.volume1} L a {dados-calculo.temperatura1} K. Levado a {dados-calculo.pressao2} atm e {dados-calculo.temperatura2} K, que volume passa a ocupar? (em litros, 2 casas decimais)"
+    "br": "Um gás a {dados-calculo.pressao1} atm ocupa {dados-calculo.volume1} L a {dados-calculo.temperatura1} K. Levado a {dados-calculo.pressao2} atm e {dados-calculo.temperatura2} K, que volume passa a ocupar? (em litros, 2 casas decimais)",
+    "fr": "Un gaz à {dados-calculo.pressao1} atm occupe {dados-calculo.volume1} L à {dados-calculo.temperatura1} K. Amené à {dados-calculo.pressao2} atm et {dados-calculo.temperatura2} K, quel volume occupe-t-il ? (en litres, 2 décimales)",
+    "en": "A gas at {dados-calculo.pressao1} atm occupies {dados-calculo.volume1} L at {dados-calculo.temperatura1} K. Taken to {dados-calculo.pressao2} atm and {dados-calculo.temperatura2} K, what volume does it occupy? (in litres, 2 decimal places)"
   }
 }

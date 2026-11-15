@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Somando só os {dados-calculo.N} primeiros termos, qual é a cota do erro dada pelo teorema da série alternada? Responda como fração."
+    "br": "Somando só os {dados-calculo.N} primeiros termos, qual é a cota do erro dada pelo teorema da série alternada? Responda como fração.",
+    "fr": "En ne sommant que les {dados-calculo.N} premiers termes, quelle est la borne de l'erreur donnée par le théorème des séries alternées ? Répondez sous forme de fraction.",
+    "en": "Summing only the first {dados-calculo.N} terms, what is the error bound given by the alternating series theorem? Answer as a fraction."
   }
 }

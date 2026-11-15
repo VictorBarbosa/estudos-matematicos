@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Para que valor de k os três vetores são linearmente dependentes (estão num mesmo plano)?"
+    "br": "Para que valor de k os três vetores são linearmente dependentes (estão num mesmo plano)?",
+    "fr": "Pour quelle valeur de k les trois vecteurs sont-ils linéairement dépendants (sont-ils dans un même plan) ?",
+    "en": "For what value of k are the three vectors linearly dependent (in the same plane)?"
   }
 }

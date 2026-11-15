@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma superfície de {dados-calculo.v1} m² está {dados-calculo.deltaT} K acima do ar que a banha, com coeficiente de convecção {dados-calculo.h} W/(m²·K). Qual é o fluxo de calor, em W? Responda com 3 casas decimais."
+    "br": "Uma superfície de {dados-calculo.v1} m² está {dados-calculo.deltaT} K acima do ar que a banha, com coeficiente de convecção {dados-calculo.h} W/(m²·K). Qual é o fluxo de calor, em W? Responda com 3 casas decimais.",
+    "fr": "Une surface de {dados-calculo.v1} m² est à {dados-calculo.deltaT} K au-dessus de l'air ambiant, avec un coefficient de convection de {dados-calculo.h} W/(m²·K). Quel est le flux de chaleur, en W ? Répondez avec 3 décimales.",
+    "en": "A surface of {dados-calculo.v1} m² is {dados-calculo.deltaT} K above the surrounding air, with a convection coefficient of {dados-calculo.h} W/(m²·K). What is the heat flux, in W? Answer with 3 decimal places."
   }
 }

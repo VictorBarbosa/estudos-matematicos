@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Aplique {dados-calculo.op} na matriz aumentada. Qual é a nova entrada da {dados-calculo.Li} na coluna {dados-calculo.v1}{dados-calculo.v2}?"
+    "br": "Aplique {dados-calculo.op} na matriz aumentada. Qual é a nova entrada da {dados-calculo.Li} na coluna {dados-calculo.v1}{dados-calculo.v2}?",
+    "fr": "Appliquez {dados-calculo.op} à la matrice augmentée. Quelle est la nouvelle entrée de {dados-calculo.Li} dans la colonne {dados-calculo.v1}{dados-calculo.v2} ?",
+    "en": "Apply {dados-calculo.op} to the augmented matrix. What is the new entry of {dados-calculo.Li} in column {dados-calculo.v1}{dados-calculo.v2}?"
   }
 }

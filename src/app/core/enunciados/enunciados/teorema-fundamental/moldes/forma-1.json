@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Sendo A(x) a área acumulada a partir de 0, quanto vale A'({dados-calculo.ponto})?"
+    "br": "Sendo A(x) a área acumulada a partir de 0, quanto vale A'({dados-calculo.ponto})?",
+    "fr": "A(x) étant l'aire accumulée à partir de 0, combien vaut A'({dados-calculo.ponto}) ?",
+    "en": "With A(x) the accumulated area starting from 0, what is A'({dados-calculo.ponto})?"
   }
 }

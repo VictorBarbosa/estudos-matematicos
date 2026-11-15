@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é a distância do ponto P ao plano?{dados-calculo.v1}"
+    "br": "Qual é a distância do ponto P ao plano?{dados-calculo.v1}",
+    "fr": "Quelle est la distance du point P au plan ?{dados-calculo.v1}",
+    "en": "What is the distance from point P to the plane?{dados-calculo.v1}"
   }
 }

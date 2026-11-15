@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Qual é o período da oscilação descrita por esta EDO? Responda com 4 casas decimais."
+    "br": "Qual é o período da oscilação descrita por esta EDO? Responda com 4 casas decimais.",
+    "fr": "Quelle est la période de l'oscillation décrite par cette EDO ? Répondez avec 4 décimales.",
+    "en": "What is the period of the oscillation described by this ODE? Answer with 4 decimal places."
   }
 }

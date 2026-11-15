@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Calcule {dados-calculo.v1}({dados-calculo.valorTexto}), em graus. (1 casa decimal)"
+    "br": "Calcule {dados-calculo.v1}({dados-calculo.valorTexto}), em graus. (1 casa decimal)",
+    "fr": "Calculez {dados-calculo.v1}({dados-calculo.valorTexto}), en degrés. (1 décimale)",
+    "en": "Calculate {dados-calculo.v1}({dados-calculo.valorTexto}), in degrees. (1 decimal place)"
   }
 }

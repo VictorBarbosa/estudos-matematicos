@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Uma mola de constante k = {dados-calculo.k} N/m é esticada de x = {dados-calculo.expressao1} m até x = {dados-calculo.expressao2} m. Qual é o trabalho feito, em joules? (2 casas decimais)"
+    "br": "Uma mola de constante k = {dados-calculo.k} N/m é esticada de x = {dados-calculo.expressao1} m até x = {dados-calculo.expressao2} m. Qual é o trabalho feito, em joules? (2 casas decimais)",
+    "fr": "Un ressort de constante k = {dados-calculo.k} N/m est étiré de x = {dados-calculo.expressao1} m à x = {dados-calculo.expressao2} m. Quel est le travail effectué, en joules ? (2 décimales)",
+    "en": "A spring of constant k = {dados-calculo.k} N/m is stretched from x = {dados-calculo.expressao1} m to x = {dados-calculo.expressao2} m. What is the work done, in joules? (2 decimal places)"
   }
 }

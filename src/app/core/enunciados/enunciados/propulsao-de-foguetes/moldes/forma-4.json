@@ -1,5 +1,7 @@
 {
   "enunciado": {
-    "br": "Para obter {dados-calculo.v1} km/s de delta-v com exaustão a {dados-calculo.exaustao} m/s, qual razão de massas é necessária? (2 casas decimais)"
+    "br": "Para obter {dados-calculo.v1} km/s de delta-v com exaustão a {dados-calculo.exaustao} m/s, qual razão de massas é necessária? (2 casas decimais)",
+    "fr": "Pour obtenir {dados-calculo.v1} km/s de delta-v avec une éjection à {dados-calculo.exaustao} m/s, quel rapport de masses est nécessaire ? (2 décimales)",
+    "en": "To obtain {dados-calculo.v1} km/s of delta-v with exhaust at {dados-calculo.exaustao} m/s, what mass ratio is needed? (2 decimal places)"
   }
 }
