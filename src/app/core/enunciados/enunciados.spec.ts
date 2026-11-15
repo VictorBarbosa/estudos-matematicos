@@ -219,10 +219,19 @@ describe('banco de enunciados', () => {
     expect(segundo).toBe(primeiro);
   });
 
+  /**
+   * Tópico sem entrada devolve indefinido, e o gerador segue dono do sorteio.
+   *
+   * O id é inventado de propósito: enquanto o banco cobria poucos tópicos,
+   * este teste usava um tópico real que ainda não tinha entrada — e passou a
+   * falhar no dia em que ele ganhou a sua. O que se quer provar aqui é o
+   * caminho vazio, não qual tópico está vazio hoje.
+   */
   it('tópico sem entrada devolve indefinido, e o gerador segue dono do sorteio', () => {
-    const gerador = GERADORES.get('notacao-matematica')!;
+    const qualquer = GERADORES.get(ENTRADAS[0]!.topico)!;
+    const foraDoBanco = { ...qualquer, topicoId: 'topico-que-nao-esta-no-banco' };
 
-    expect(enunciadosDe('notacao-matematica', 'facil')).toHaveLength(0);
-    expect(sortearDoBanco(gerador, 'facil', criarRng(1))).toBeUndefined();
+    expect(enunciadosDe(foraDoBanco.topicoId, 'facil')).toHaveLength(0);
+    expect(sortearDoBanco(foraDoBanco, 'facil', criarRng(1))).toBeUndefined();
   });
 });

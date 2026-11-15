@@ -7,7 +7,12 @@
       "fr": "Maria avait {dados-calculo.x1} autocollants et en a reçu {dados-calculo.x2}. Combien en a-t-elle maintenant ?",
       "en": "Maria had {dados-calculo.x1} stickers and was given {dados-calculo.x2} more. How many does she have now?"
     },
-    "dados-calculo": { "x1": "17", "acao": "+", "x2": "26", "total": "43" }
+    "dados-calculo": {
+      "x1": "17",
+      "acao": "+",
+      "x2": "26",
+      "total": "43"
+    }
   },
   {
     "topico": "operacoes-fundamentais",
@@ -17,7 +22,12 @@
       "fr": "Un autobus est parti du garage avec {dados-calculo.x1} passagers et {dados-calculo.x2} sont descendus au premier arrêt. Combien ont poursuivi le trajet ?",
       "en": "A bus left the depot with {dados-calculo.x1} passengers and {dados-calculo.x2} got off at the first stop. How many stayed on?"
     },
-    "dados-calculo": { "x1": "52", "acao": "-", "x2": "19", "total": "33" }
+    "dados-calculo": {
+      "x1": "52",
+      "acao": "-",
+      "x2": "19",
+      "total": "33"
+    }
   },
   {
     "topico": "operacoes-fundamentais",
@@ -27,7 +37,12 @@
       "fr": "Un atelier assemble {dados-calculo.x1} vélos par jour, pendant {dados-calculo.x2} jours. Combien de vélos sortent sur la période ?",
       "en": "A workshop assembles {dados-calculo.x1} bicycles a day for {dados-calculo.x2} days. How many bicycles come out over that period?"
     },
-    "dados-calculo": { "x1": "23", "acao": "*", "x2": "14", "total": "322" }
+    "dados-calculo": {
+      "x1": "23",
+      "acao": "*",
+      "x2": "14",
+      "total": "322"
+    }
   },
   {
     "topico": "operacoes-fundamentais",
@@ -37,7 +52,12 @@
       "fr": "Un lot de {dados-calculo.x1} vis a été réparti également dans {dados-calculo.x2} boîtes. Combien de vis par boîte ?",
       "en": "A batch of {dados-calculo.x1} screws was split evenly into {dados-calculo.x2} boxes. How many screws are in each box?"
     },
-    "dados-calculo": { "x1": "456", "acao": "/", "x2": "8", "total": "57" }
+    "dados-calculo": {
+      "x1": "456",
+      "acao": "/",
+      "x2": "8",
+      "total": "57"
+    }
   },
   {
     "topico": "mmc-mdc",
@@ -47,7 +67,11 @@
       "fr": "Deux autobus quittent le terminus : l'un toutes les {dados-calculo.x1} minutes et l'autre toutes les {dados-calculo.x2} minutes. Après combien de minutes partent-ils ensemble de nouveau ?",
       "en": "Two buses leave the terminal: one every {dados-calculo.x1} minutes and the other every {dados-calculo.x2} minutes. After how many minutes do they leave together again?"
     },
-    "dados-calculo": { "x1": "12", "x2": "18", "total": "36" }
+    "dados-calculo": {
+      "x1": "12",
+      "x2": "18",
+      "total": "36"
+    }
   },
   {
     "topico": "mmc-mdc",
@@ -57,7 +81,11 @@
       "fr": "Deux engrenages reviennent à leur position initiale toutes les {dados-calculo.x1} et {dados-calculo.x2} secondes. Au bout de combien de secondes y reviennent-ils ensemble ?",
       "en": "Two gears return to their starting position every {dados-calculo.x1} and {dados-calculo.x2} seconds. After how many seconds do both return together?"
     },
-    "dados-calculo": { "x1": "45", "x2": "60", "total": "180" }
+    "dados-calculo": {
+      "x1": "45",
+      "x2": "60",
+      "total": "180"
+    }
   },
   {
     "topico": "razao-proporcao",
@@ -67,7 +95,12 @@
       "fr": "Une recette pour {dados-calculo.x1} personnes demande {dados-calculo.x2} grammes de farine. Pour {dados-calculo.x3} personnes, combien de grammes faut-il ?",
       "en": "A recipe for {dados-calculo.x1} people calls for {dados-calculo.x2} grams of flour. For {dados-calculo.x3} people, how many grams are needed?"
     },
-    "dados-calculo": { "x1": "4", "x2": "300", "x3": "10", "total": "750" }
+    "dados-calculo": {
+      "x1": "4",
+      "x2": "300",
+      "x3": "10",
+      "total": "750"
+    }
   },
   {
     "topico": "areas-de-figuras-planas",
@@ -77,6 +110,1166 @@
       "fr": "Un terrain rectangulaire mesure {dados-calculo.base} mètres de façade sur {dados-calculo.altura} mètres de profondeur. Quelle est son aire, en mètres carrés ?",
       "en": "A rectangular lot is {dados-calculo.base} metres wide and {dados-calculo.altura} metres deep. What is its area, in square metres?"
     },
-    "dados-calculo": { "base": "12", "altura": "7.5", "total": "90" }
+    "dados-calculo": {
+      "base": "12",
+      "altura": "7.5",
+      "total": "90"
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma escola comprou {dados-calculo.caixas} caixas de livros, cada uma com {dados-calculo.porCaixa} livros, e doou {dados-calculo.doados} livros para a biblioteca do bairro. Quantos livros ficaram na escola?",
+      "fr": "Une école a acheté {dados-calculo.caixas} cartons de livres, chacun contenant {dados-calculo.porCaixa} livres, et a donné {dados-calculo.doados} livres à la bibliothèque du quartier. Combien de livres reste-t-il à l’école ?",
+      "en": "A school bought {dados-calculo.caixas} boxes of books, each holding {dados-calculo.porCaixa} books, and donated {dados-calculo.doados} books to the neighbourhood library. How many books are left at the school?"
+    },
+    "dados-calculo": {
+      "caixas": "14",
+      "porCaixa": "12",
+      "doados": "38",
+      "total": "130"
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um ônibus partiu com {dados-calculo.saida} passageiros. Na primeira parada desceram {dados-calculo.desceram1}, na segunda desceram {dados-calculo.desceram2} e na terceira subiram {dados-calculo.subiram}. Com quantos passageiros ele seguiu viagem?",
+      "fr": "Un autobus est parti avec {dados-calculo.saida} passagers. Au premier arrêt {dados-calculo.desceram1} sont descendus, au deuxième {dados-calculo.desceram2} sont descendus et au troisième {dados-calculo.subiram} sont montés. Avec combien de passagers a-t-il poursuivi sa route ?",
+      "en": "A bus left with {dados-calculo.saida} passengers. At the first stop {dados-calculo.desceram1} got off, at the second {dados-calculo.desceram2} got off and at the third {dados-calculo.subiram} got on. How many passengers did it carry on with?"
+    },
+    "dados-calculo": {
+      "saida": "52",
+      "desceram1": "9",
+      "desceram2": "14",
+      "subiram": "11",
+      "total": "40"
+    }
+  },
+  {
+    "topico": "mmc-mdc",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Dois sinos tocam juntos neste instante: um toca a cada {dados-calculo.a} minutos e o outro a cada {dados-calculo.b} minutos. Em quantos minutos eles voltarão a tocar juntos?",
+      "fr": "Deux cloches sonnent ensemble en ce moment : l’une sonne toutes les {dados-calculo.a} minutes et l’autre toutes les {dados-calculo.b} minutes. Dans combien de minutes sonneront-elles ensemble de nouveau ?",
+      "en": "Two bells ring together right now: one rings every {dados-calculo.a} minutes and the other every {dados-calculo.b} minutes. In how many minutes will they ring together again?"
+    },
+    "dados-calculo": {
+      "a": "6",
+      "b": "8",
+      "total": "24"
+    }
+  },
+  {
+    "topico": "mmc-mdc",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Três faróis piscam a cada {dados-calculo.a}, {dados-calculo.b} e {dados-calculo.c} segundos. Eles piscaram juntos agora. Em quantos segundos piscarão juntos novamente?",
+      "fr": "Trois phares clignotent toutes les {dados-calculo.a}, {dados-calculo.b} et {dados-calculo.c} secondes. Ils ont clignoté ensemble à l’instant. Dans combien de secondes clignoteront-ils ensemble de nouveau ?",
+      "en": "Three lighthouses flash every {dados-calculo.a}, {dados-calculo.b} and {dados-calculo.c} seconds. They flashed together just now. In how many seconds will they flash together again?"
+    },
+    "dados-calculo": {
+      "a": "18",
+      "b": "24",
+      "c": "60",
+      "total": "360"
+    }
+  },
+  {
+    "topico": "fracoes",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma pizza foi cortada em {dados-calculo.pedacos} pedaços iguais e Ana comeu {dados-calculo.comidos} deles. Que fração da pizza ela comeu? Escreva na forma mais simples.",
+      "fr": "Une pizza a été coupée en {dados-calculo.pedacos} parts égales et Ana en a mangé {dados-calculo.comidos}. Quelle fraction de la pizza a-t-elle mangée ? Écrivez-la sous la forme la plus simple.",
+      "en": "A pizza was cut into {dados-calculo.pedacos} equal slices and Ana ate {dados-calculo.comidos} of them. What fraction of the pizza did she eat? Write it in simplest form."
+    },
+    "dados-calculo": {
+      "pedacos": "12",
+      "comidos": "3",
+      "total": "1/4"
+    }
+  },
+  {
+    "topico": "fracoes",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Lucas gastou {dados-calculo.p1} da mesada em livros e {dados-calculo.p2} em transporte. Que fração da mesada ele gastou ao todo?",
+      "fr": "Lucas a dépensé {dados-calculo.p1} de son argent de poche en livres et {dados-calculo.p2} en transport. Quelle fraction de son argent de poche a-t-il dépensée en tout ?",
+      "en": "Lucas spent {dados-calculo.p1} of his allowance on books and {dados-calculo.p2} on transport. What fraction of his allowance did he spend in all?"
+    },
+    "dados-calculo": {
+      "p1": "1/4",
+      "p2": "2/5",
+      "total": "13/20"
+    }
+  },
+  {
+    "topico": "fracoes",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "De um tanque cheio, {dados-calculo.p1} da água foi usada na manhã. À tarde foi usada {dados-calculo.p2} do que havia restado. Que fração do tanque sobrou?",
+      "fr": "D’un réservoir plein, {dados-calculo.p1} de l’eau a été utilisée le matin. L’après-midi, {dados-calculo.p2} de ce qui restait a été utilisée. Quelle fraction du réservoir reste-t-il ?",
+      "en": "From a full tank, {dados-calculo.p1} of the water was used in the morning. In the afternoon {dados-calculo.p2} of what was left was used. What fraction of the tank is left?"
+    },
+    "dados-calculo": {
+      "p1": "1/3",
+      "p2": "1/4",
+      "total": "1/2"
+    }
+  },
+  {
+    "topico": "fracoes",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Três amigos dividiram um prêmio: o primeiro ficou com {dados-calculo.p1} do total, o segundo com {dados-calculo.p2} e o terceiro com o resto. Que fração do prêmio o terceiro recebeu?",
+      "fr": "Trois amis se sont partagé un prix : le premier a reçu {dados-calculo.p1} du total, le deuxième {dados-calculo.p2} et le troisième le reste. Quelle fraction du prix le troisième a-t-il reçue ?",
+      "en": "Three friends shared a prize: the first took {dados-calculo.p1} of the total, the second {dados-calculo.p2} and the third the rest. What fraction of the prize did the third one get?"
+    },
+    "dados-calculo": {
+      "p1": "2/7",
+      "p2": "1/3",
+      "total": "8/21"
+    }
+  },
+  {
+    "topico": "numeros-decimais",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma balança de precisão mostrou {dados-calculo.massa} kg. Escreva esse decimal como fração irredutível.",
+      "fr": "Une balance de précision a affiché {dados-calculo.massa} kg. Écrivez ce décimal sous forme de fraction irréductible.",
+      "en": "A precision scale showed {dados-calculo.massa} kg. Write that decimal as a fraction in lowest terms."
+    },
+    "dados-calculo": {
+      "massa": "0.45",
+      "total": "9/20"
+    }
+  },
+  {
+    "topico": "numeros-decimais",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um número tem parte inteira zero e o algarismo {dados-calculo.d} se repete infinitamente depois da vírgula. Qual é a fração geratriz, na forma irredutível?",
+      "fr": "Un nombre a une partie entière nulle et le chiffre {dados-calculo.d} se répète à l’infini après la virgule. Quelle est la fraction génératrice, sous forme irréductible ?",
+      "en": "A number has whole part zero and the digit {dados-calculo.d} repeating forever after the decimal point. What is the generating fraction, in lowest terms?"
+    },
+    "dados-calculo": {
+      "d": "7",
+      "total": "7/9"
+    }
+  },
+  {
+    "topico": "numeros-decimais",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um número tem parte inteira zero, o algarismo {dados-calculo.a} logo depois da vírgula e, em seguida, o algarismo {dados-calculo.d} repetindo-se para sempre. Escreva a fração irredutível.",
+      "fr": "Un nombre a une partie entière nulle, le chiffre {dados-calculo.a} juste après la virgule, puis le chiffre {dados-calculo.d} qui se répète à l’infini. Écrivez la fraction irréductible.",
+      "en": "A number has whole part zero, the digit {dados-calculo.a} right after the decimal point and then the digit {dados-calculo.d} repeating forever. Write the fraction in lowest terms."
+    },
+    "dados-calculo": {
+      "a": "5",
+      "d": "3",
+      "total": "8/15"
+    }
+  },
+  {
+    "topico": "numeros-decimais",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Num número de parte inteira zero, o par de algarismos {dados-calculo.p} se repete infinitamente depois da vírgula. Escreva a fração irredutível.",
+      "fr": "Dans un nombre de partie entière nulle, le couple de chiffres {dados-calculo.p} se répète à l’infini après la virgule. Écrivez la fraction irréductible.",
+      "en": "In a number with whole part zero, the pair of digits {dados-calculo.p} repeats forever after the decimal point. Write the fraction in lowest terms."
+    },
+    "dados-calculo": {
+      "p": "36",
+      "total": "4/11"
+    }
+  },
+  {
+    "topico": "razao-proporcao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma receita para {dados-calculo.pessoas1} pessoas usa {dados-calculo.farinha} g de farinha. Quantos gramas de farinha são necessários para {dados-calculo.pessoas2} pessoas?",
+      "fr": "Une recette pour {dados-calculo.pessoas1} personnes utilise {dados-calculo.farinha} g de farine. Combien de grammes de farine faut-il pour {dados-calculo.pessoas2} personnes ?",
+      "en": "A recipe for {dados-calculo.pessoas1} people uses {dados-calculo.farinha} g of flour. How many grams of flour are needed for {dados-calculo.pessoas2} people?"
+    },
+    "dados-calculo": {
+      "pessoas1": "4",
+      "farinha": "600",
+      "pessoas2": "10",
+      "total": "1500"
+    }
+  },
+  {
+    "topico": "razao-proporcao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "{dados-calculo.o1} operários levantam um muro em {dados-calculo.dias} dias. No mesmo ritmo, em quantos dias {dados-calculo.o2} operários levantam o mesmo muro?",
+      "fr": "{dados-calculo.o1} ouvriers montent un mur en {dados-calculo.dias} jours. Au même rythme, en combien de jours {dados-calculo.o2} ouvriers montent-ils le même mur ?",
+      "en": "{dados-calculo.o1} workers build a wall in {dados-calculo.dias} days. At the same pace, in how many days do {dados-calculo.o2} workers build the same wall?"
+    },
+    "dados-calculo": {
+      "o1": "6",
+      "dias": "14",
+      "o2": "21",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "razao-proporcao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma máquina enche {dados-calculo.garrafas} garrafas em {dados-calculo.minutos} minutos. Quantas garrafas {dados-calculo.maquinas} máquinas iguais enchem em {dados-calculo.horas} horas?",
+      "fr": "Une machine remplit {dados-calculo.garrafas} bouteilles en {dados-calculo.minutos} minutes. Combien de bouteilles {dados-calculo.maquinas} machines identiques remplissent-elles en {dados-calculo.horas} heures ?",
+      "en": "One machine fills {dados-calculo.garrafas} bottles in {dados-calculo.minutos} minutes. How many bottles do {dados-calculo.maquinas} identical machines fill in {dados-calculo.horas} hours?"
+    },
+    "dados-calculo": {
+      "garrafas": "180",
+      "minutos": "12",
+      "maquinas": "4",
+      "horas": "3",
+      "total": "10800"
+    }
+  },
+  {
+    "topico": "potenciacao-radiciacao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um terreno quadrado tem área de {dados-calculo.area} m². Quantos metros mede o lado desse terreno?",
+      "fr": "Un terrain carré a une aire de {dados-calculo.area} m². Combien de mètres mesure le côté de ce terrain ?",
+      "en": "A square plot has an area of {dados-calculo.area} m². How many metres long is its side?"
+    },
+    "dados-calculo": {
+      "area": "144",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "potenciacao-radiciacao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma caixa em forma de cubo tem volume de {dados-calculo.volume} cm³. Quantos centímetros mede a aresta?",
+      "fr": "Une boîte en forme de cube a un volume de {dados-calculo.volume} cm³. Combien de centimètres mesure l’arête ?",
+      "en": "A cube-shaped box has a volume of {dados-calculo.volume} cm³. How many centimetres long is its edge?"
+    },
+    "dados-calculo": {
+      "volume": "1728",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "potenciacao-radiciacao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma cultura de bactérias dobra de tamanho a cada hora. Começando com {dados-calculo.inicio} bactérias, quantas haverá depois de {dados-calculo.horas} horas?",
+      "fr": "Une culture de bactéries double de taille chaque heure. En partant de {dados-calculo.inicio} bactéries, combien y en aura-t-il après {dados-calculo.horas} heures ?",
+      "en": "A bacteria culture doubles in size every hour. Starting with {dados-calculo.inicio} bacteria, how many will there be after {dados-calculo.horas} hours?"
+    },
+    "dados-calculo": {
+      "inicio": "5",
+      "horas": "10",
+      "total": "5120"
+    }
+  },
+  {
+    "topico": "potenciacao-radiciacao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um valor dobra a cada ano. Partindo de {dados-calculo.inicio} reais, quantos reais haverá depois de {dados-calculo.anos} anos?",
+      "fr": "Une somme double chaque année. En partant de {dados-calculo.inicio} reais, combien de reais y aura-t-il après {dados-calculo.anos} ans ?",
+      "en": "An amount doubles every year. Starting from {dados-calculo.inicio} reais, how many reais will there be after {dados-calculo.anos} years?"
+    },
+    "dados-calculo": {
+      "inicio": "250",
+      "anos": "12",
+      "total": "1024000"
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Escreva em símbolos: o número x está entre {dados-calculo.a} e {dados-calculo.b}, sem poder valer nenhum dos dois.",
+      "fr": "Écrivez en symboles : le nombre x est entre {dados-calculo.a} et {dados-calculo.b}, sans pouvoir valoir ni l’un ni l’autre.",
+      "en": "Write in symbols: the number x lies between {dados-calculo.a} and {dados-calculo.b}, and can equal neither of them."
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "9",
+      "total": "x ∈ (3, 9)"
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Escreva em símbolos: a função g recebe um número real e devolve um número real.",
+      "fr": "Écrivez en symboles : la fonction g reçoit un nombre réel et renvoie un nombre réel.",
+      "en": "Write in symbols: the function g takes a real number and returns a real number."
+    },
+    "dados-calculo": {
+      "total": "g: ℝ → ℝ"
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Escreva em símbolos: a soma dos valores de k, com k indo de {dados-calculo.i} até {dados-calculo.f}.",
+      "fr": "Écrivez en symboles : la somme des valeurs de k, avec k allant de {dados-calculo.i} à {dados-calculo.f}.",
+      "en": "Write in symbols: the sum of the values of k, with k going from {dados-calculo.i} to {dados-calculo.f}."
+    },
+    "dados-calculo": {
+      "i": "1",
+      "f": "20",
+      "total": "∑_{k=1}^{20} k"
+    }
+  },
+  {
+    "topico": "notacao-matematica",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Escreva em símbolos: x é maior ou igual a {dados-calculo.a} e menor que {dados-calculo.b}.",
+      "fr": "Écrivez en symboles : x est supérieur ou égal à {dados-calculo.a} et inférieur à {dados-calculo.b}.",
+      "en": "Write in symbols: x is greater than or equal to {dados-calculo.a} and less than {dados-calculo.b}."
+    },
+    "dados-calculo": {
+      "a": "2",
+      "b": "11",
+      "total": "x ∈ [2, 11)"
+    }
+  },
+  {
+    "topico": "expressoes-algebricas",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um táxi cobra {dados-calculo.fixo} reais de bandeirada mais {dados-calculo.porKm} reais por quilômetro rodado. Quanto custa uma corrida de {dados-calculo.km} km?",
+      "fr": "Un taxi facture {dados-calculo.fixo} reais de prise en charge plus {dados-calculo.porKm} reais par kilomètre parcouru. Combien coûte une course de {dados-calculo.km} km ?",
+      "en": "A taxi charges {dados-calculo.fixo} reais to start plus {dados-calculo.porKm} reais per kilometre driven. How much does a {dados-calculo.km} km ride cost?"
+    },
+    "dados-calculo": {
+      "fixo": "7",
+      "porKm": "3",
+      "km": "12",
+      "total": "43"
+    }
+  },
+  {
+    "topico": "expressoes-algebricas",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Numa oficina, cada bicicleta usa {dados-calculo.porBike} parafusos e cada patinete usa {dados-calculo.porPatinete}. Há x bicicletas e o triplo de x patinetes. Quantos parafusos são usados ao todo quando x vale {dados-calculo.x}?",
+      "fr": "Dans un atelier, chaque vélo utilise {dados-calculo.porBike} vis et chaque trottinette {dados-calculo.porPatinete}. Il y a x vélos et le triple de x trottinettes. Combien de vis sont utilisées en tout quand x vaut {dados-calculo.x} ?",
+      "en": "In a workshop, each bicycle uses {dados-calculo.porBike} screws and each scooter uses {dados-calculo.porPatinete}. There are x bicycles and three times x scooters. How many screws are used in all when x is {dados-calculo.x}?"
+    },
+    "dados-calculo": {
+      "porBike": "8",
+      "porPatinete": "5",
+      "x": "4",
+      "total": "92"
+    }
+  },
+  {
+    "topico": "expressoes-algebricas",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Produzir x peças custa {dados-calculo.fixo} reais de custo fixo mais {dados-calculo.variavel} reais por peça, e cada peça é vendida por {dados-calculo.preco} reais. Qual é o lucro na produção e venda de {dados-calculo.x} peças?",
+      "fr": "Produire x pièces coûte {dados-calculo.fixo} reais de frais fixes plus {dados-calculo.variavel} reais par pièce, et chaque pièce est vendue {dados-calculo.preco} reais. Quel est le profit sur la production et la vente de {dados-calculo.x} pièces ?",
+      "en": "Producing x parts costs {dados-calculo.fixo} reais in fixed costs plus {dados-calculo.variavel} reais per part, and each part sells for {dados-calculo.preco} reais. What is the profit on making and selling {dados-calculo.x} parts?"
+    },
+    "dados-calculo": {
+      "fixo": "1200",
+      "variavel": "18",
+      "preco": "45",
+      "x": "80",
+      "total": "960"
+    }
+  },
+  {
+    "topico": "expressoes-algebricas",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma empresa gasta {dados-calculo.fixo} reais por mês mais {dados-calculo.porHora} reais por hora de máquina, e cobra {dados-calculo.cobra} reais por hora trabalhada. Com quantas horas no mês o faturamento se iguala ao gasto?",
+      "fr": "Une entreprise dépense {dados-calculo.fixo} reais par mois plus {dados-calculo.porHora} reais par heure de machine, et facture {dados-calculo.cobra} reais par heure travaillée. Avec combien d’heures dans le mois le chiffre d’affaires égale-t-il la dépense ?",
+      "en": "A company spends {dados-calculo.fixo} reais per month plus {dados-calculo.porHora} reais per machine hour, and charges {dados-calculo.cobra} reais per hour worked. At how many hours in the month does revenue equal cost?"
+    },
+    "dados-calculo": {
+      "fixo": "2400",
+      "porHora": "35",
+      "cobra": "95",
+      "total": "40"
+    }
+  },
+  {
+    "topico": "equacao-primeiro-grau",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Pedro pensou num número, multiplicou-o por {dados-calculo.fator}, somou {dados-calculo.soma} e chegou a {dados-calculo.resultado}. Em que número ele pensou?",
+      "fr": "Pedro a pensé à un nombre, l’a multiplié par {dados-calculo.fator}, a ajouté {dados-calculo.soma} et a obtenu {dados-calculo.resultado}. À quel nombre a-t-il pensé ?",
+      "en": "Pedro thought of a number, multiplied it by {dados-calculo.fator}, added {dados-calculo.soma} and got {dados-calculo.resultado}. What number did he think of?"
+    },
+    "dados-calculo": {
+      "fator": "4",
+      "soma": "7",
+      "resultado": "43",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "equacao-primeiro-grau",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Carlos tem {dados-calculo.diferenca} anos mais que Marta. Juntos, os dois têm {dados-calculo.soma} anos. Quantos anos tem Marta?",
+      "fr": "Carlos a {dados-calculo.diferenca} ans de plus que Marta. Ensemble, ils ont {dados-calculo.soma} ans. Quel âge a Marta ?",
+      "en": "Carlos is {dados-calculo.diferenca} years older than Marta. Together they are {dados-calculo.soma} years old. How old is Marta?"
+    },
+    "dados-calculo": {
+      "diferenca": "12",
+      "soma": "58",
+      "total": "23"
+    }
+  },
+  {
+    "topico": "equacao-primeiro-grau",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um reservatório começou com {dados-calculo.inicial} litros e perde {dados-calculo.taxa} litros por hora. Depois de quantas horas ele chega a {dados-calculo.restante} litros?",
+      "fr": "Un réservoir contenait au départ {dados-calculo.inicial} litres et perd {dados-calculo.taxa} litres par heure. Au bout de combien d’heures atteint-il {dados-calculo.restante} litres ?",
+      "en": "A tank started with {dados-calculo.inicial} litres and loses {dados-calculo.taxa} litres per hour. After how many hours does it reach {dados-calculo.restante} litres?"
+    },
+    "dados-calculo": {
+      "inicial": "1200",
+      "taxa": "35",
+      "restante": "815",
+      "total": "11"
+    }
+  },
+  {
+    "topico": "equacao-primeiro-grau",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um ciclista percorreu {dados-calculo.parte} da rota, depois pedalou mais {dados-calculo.km} km e, com isso, completou {dados-calculo.acumulado} da rota. Quantos quilômetros tem a rota inteira?",
+      "fr": "Un cycliste a parcouru {dados-calculo.parte} du trajet, puis a pédalé {dados-calculo.km} km de plus et a ainsi complété {dados-calculo.acumulado} du trajet. Combien de kilomètres fait le trajet entier ?",
+      "en": "A cyclist covered {dados-calculo.parte} of the route, then rode {dados-calculo.km} km more and had thus completed {dados-calculo.acumulado} of the route. How many kilometres is the whole route?"
+    },
+    "dados-calculo": {
+      "parte": "1/3",
+      "km": "15",
+      "acumulado": "3/4",
+      "total": "36"
+    }
+  },
+  {
+    "topico": "produtos-notaveis",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um quadrado de lado {dados-calculo.lado} cm teve o lado aumentado em {dados-calculo.aumento} cm. Em quantos centímetros quadrados a área aumentou?",
+      "fr": "Un carré de côté {dados-calculo.lado} cm a vu son côté augmenter de {dados-calculo.aumento} cm. De combien de centimètres carrés l’aire a-t-elle augmenté ?",
+      "en": "A square of side {dados-calculo.lado} cm had its side increased by {dados-calculo.aumento} cm. By how many square centimetres did the area grow?"
+    },
+    "dados-calculo": {
+      "lado": "20",
+      "aumento": "3",
+      "total": "129"
+    }
+  },
+  {
+    "topico": "produtos-notaveis",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Dois números somam {dados-calculo.soma} e a diferença entre eles é {dados-calculo.diferenca}. Qual é o produto desses dois números?",
+      "fr": "Deux nombres ont pour somme {dados-calculo.soma} et leur différence est {dados-calculo.diferenca}. Quel est le produit de ces deux nombres ?",
+      "en": "Two numbers add up to {dados-calculo.soma} and their difference is {dados-calculo.diferenca}. What is the product of those two numbers?"
+    },
+    "dados-calculo": {
+      "soma": "24",
+      "diferenca": "6",
+      "total": "135"
+    }
+  },
+  {
+    "topico": "produtos-notaveis",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um número somado ao seu inverso dá {dados-calculo.soma}. Quanto vale o quadrado desse número somado ao quadrado do seu inverso?",
+      "fr": "Un nombre ajouté à son inverse donne {dados-calculo.soma}. Combien vaut le carré de ce nombre ajouté au carré de son inverse ?",
+      "en": "A number added to its reciprocal gives {dados-calculo.soma}. What is the square of that number plus the square of its reciprocal?"
+    },
+    "dados-calculo": {
+      "soma": "5",
+      "total": "23"
+    }
+  },
+  {
+    "topico": "produtos-notaveis",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A soma de dois números é {dados-calculo.soma} e a soma dos seus quadrados é {dados-calculo.somaQuadrados}. Qual é o produto dos dois números?",
+      "fr": "La somme de deux nombres est {dados-calculo.soma} et la somme de leurs carrés est {dados-calculo.somaQuadrados}. Quel est le produit des deux nombres ?",
+      "en": "The sum of two numbers is {dados-calculo.soma} and the sum of their squares is {dados-calculo.somaQuadrados}. What is the product of the two numbers?"
+    },
+    "dados-calculo": {
+      "soma": "14",
+      "somaQuadrados": "116",
+      "total": "40"
+    }
+  },
+  {
+    "topico": "fatoracao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um retângulo tem área de {dados-calculo.area} cm² e a base mede {dados-calculo.diferenca} cm mais que a altura. Quantos centímetros mede a altura?",
+      "fr": "Un rectangle a une aire de {dados-calculo.area} cm² et la base mesure {dados-calculo.diferenca} cm de plus que la hauteur. Combien de centimètres mesure la hauteur ?",
+      "en": "A rectangle has an area of {dados-calculo.area} cm² and its base is {dados-calculo.diferenca} cm longer than its height. How many centimetres is the height?"
+    },
+    "dados-calculo": {
+      "area": "40",
+      "diferenca": "3",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "fatoracao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um terreno retangular tem perímetro de {dados-calculo.perimetro} m e área de {dados-calculo.area} m². Quantos metros mede o lado maior?",
+      "fr": "Un terrain rectangulaire a un périmètre de {dados-calculo.perimetro} m et une aire de {dados-calculo.area} m². Combien de mètres mesure le plus grand côté ?",
+      "en": "A rectangular plot has a perimeter of {dados-calculo.perimetro} m and an area of {dados-calculo.area} m². How many metres long is the longer side?"
+    },
+    "dados-calculo": {
+      "perimetro": "46",
+      "area": "120",
+      "total": "15"
+    }
+  },
+  {
+    "topico": "fatoracao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "O produto de dois números inteiros consecutivos é {dados-calculo.produto}. Qual é o maior dos dois?",
+      "fr": "Le produit de deux entiers consécutifs est {dados-calculo.produto}. Quel est le plus grand des deux ?",
+      "en": "The product of two consecutive whole numbers is {dados-calculo.produto}. Which is the larger of the two?"
+    },
+    "dados-calculo": {
+      "produto": "342",
+      "total": "19"
+    }
+  },
+  {
+    "topico": "fatoracao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um número positivo somado ao seu próprio quadrado dá {dados-calculo.soma}. Que número é esse?",
+      "fr": "Un nombre positif ajouté à son propre carré donne {dados-calculo.soma}. Quel est ce nombre ?",
+      "en": "A positive number added to its own square gives {dados-calculo.soma}. What is that number?"
+    },
+    "dados-calculo": {
+      "soma": "156",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "equacao-segundo-grau",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Dois números têm soma {dados-calculo.soma} e produto {dados-calculo.produto}. Qual é o maior dos dois?",
+      "fr": "Deux nombres ont pour somme {dados-calculo.soma} et pour produit {dados-calculo.produto}. Quel est le plus grand des deux ?",
+      "en": "Two numbers have sum {dados-calculo.soma} and product {dados-calculo.produto}. Which is the larger of the two?"
+    },
+    "dados-calculo": {
+      "soma": "11",
+      "produto": "24",
+      "total": "8"
+    }
+  },
+  {
+    "topico": "equacao-segundo-grau",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um retângulo tem a base {dados-calculo.diferenca} cm maior que a altura e área de {dados-calculo.area} cm². Quantos centímetros mede a base?",
+      "fr": "Un rectangle a une base {dados-calculo.diferenca} cm plus grande que sa hauteur et une aire de {dados-calculo.area} cm². Combien de centimètres mesure la base ?",
+      "en": "A rectangle has a base {dados-calculo.diferenca} cm longer than its height and an area of {dados-calculo.area} cm². How many centimetres is the base?"
+    },
+    "dados-calculo": {
+      "diferenca": "5",
+      "area": "84",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "equacao-segundo-grau",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma pedra é atirada para cima a {dados-calculo.velocidade} m/s, de uma altura de {dados-calculo.altura} m. Com a gravidade valendo {dados-calculo.gravidade} m/s², em quantos segundos ela chega ao chão?",
+      "fr": "Une pierre est lancée vers le haut à {dados-calculo.velocidade} m/s, depuis une hauteur de {dados-calculo.altura} m. Avec une gravité de {dados-calculo.gravidade} m/s², en combien de secondes atteint-elle le sol ?",
+      "en": "A stone is thrown upwards at {dados-calculo.velocidade} m/s from a height of {dados-calculo.altura} m. With gravity at {dados-calculo.gravidade} m/s², in how many seconds does it reach the ground?"
+    },
+    "dados-calculo": {
+      "velocidade": "20",
+      "altura": "25",
+      "gravidade": "10",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "equacao-segundo-grau",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A soma de um número positivo com o seu inverso é {dados-calculo.soma}. Qual é o maior valor que esse número pode ter?",
+      "fr": "La somme d’un nombre positif et de son inverse est {dados-calculo.soma}. Quelle est la plus grande valeur que ce nombre peut prendre ?",
+      "en": "The sum of a positive number and its reciprocal is {dados-calculo.soma}. What is the largest value that number can take?"
+    },
+    "dados-calculo": {
+      "soma": "5/2",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "inequacoes",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um táxi cobra {dados-calculo.fixo} reais fixos mais {dados-calculo.porKm} reais por quilômetro. Com {dados-calculo.dinheiro} reais no bolso, quantos quilômetros x o passageiro pode rodar? Escreva o conjunto solução.",
+      "fr": "Un taxi facture {dados-calculo.fixo} reais fixes plus {dados-calculo.porKm} reais par kilomètre. Avec {dados-calculo.dinheiro} reais en poche, combien de kilomètres x le passager peut-il faire ? Écrivez l’ensemble solution.",
+      "en": "A taxi charges {dados-calculo.fixo} reais fixed plus {dados-calculo.porKm} reais per kilometre. With {dados-calculo.dinheiro} reais in hand, how many kilometres x can the passenger travel? Write the solution set."
+    },
+    "dados-calculo": {
+      "fixo": "8",
+      "porKm": "3",
+      "dinheiro": "44",
+      "total": "x <= 12"
+    }
+  },
+  {
+    "topico": "inequacoes",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma academia cobra {dados-calculo.mensalidade} reais de mensalidade mais {dados-calculo.porAula} reais por aula. Outra cobra {dados-calculo.outra} reais por aula, sem mensalidade. Para que número de aulas x a primeira fica mais barata? Escreva o conjunto solução.",
+      "fr": "Un gymnase facture {dados-calculo.mensalidade} reais d’abonnement plus {dados-calculo.porAula} reais par cours. Un autre facture {dados-calculo.outra} reais par cours, sans abonnement. Pour quel nombre de cours x le premier est-il moins cher ? Écrivez l’ensemble solution.",
+      "en": "One gym charges {dados-calculo.mensalidade} reais a month plus {dados-calculo.porAula} reais per class. Another charges {dados-calculo.outra} reais per class with no monthly fee. For what number of classes x is the first one cheaper? Write the solution set."
+    },
+    "dados-calculo": {
+      "mensalidade": "60",
+      "porAula": "5",
+      "outra": "11",
+      "total": "x > 10"
+    }
+  },
+  {
+    "topico": "inequacoes",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "O triplo de um número x, menos {dados-calculo.a}, é maior que esse mesmo número mais {dados-calculo.b}. Que valores x pode ter? Escreva o conjunto solução.",
+      "fr": "Le triple d’un nombre x, moins {dados-calculo.a}, est supérieur à ce même nombre plus {dados-calculo.b}. Quelles valeurs x peut-il prendre ? Écrivez l’ensemble solution.",
+      "en": "Three times a number x, minus {dados-calculo.a}, is greater than that same number plus {dados-calculo.b}. What values can x take? Write the solution set."
+    },
+    "dados-calculo": {
+      "a": "7",
+      "b": "5",
+      "total": "x > 6"
+    }
+  },
+  {
+    "topico": "inequacoes",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um aluno tirou {dados-calculo.n1} e {dados-calculo.n2} nas duas primeiras provas. Para que a média das três provas seja pelo menos {dados-calculo.media}, que valores a terceira nota x pode ter? Escreva o conjunto solução.",
+      "fr": "Un élève a obtenu {dados-calculo.n1} et {dados-calculo.n2} aux deux premiers examens. Pour que la moyenne des trois examens soit d’au moins {dados-calculo.media}, quelles valeurs la troisième note x peut-elle prendre ? Écrivez l’ensemble solution.",
+      "en": "A student scored {dados-calculo.n1} and {dados-calculo.n2} on the first two tests. For the average of the three tests to be at least {dados-calculo.media}, what values can the third score x take? Write the solution set."
+    },
+    "dados-calculo": {
+      "n1": "6",
+      "n2": "7",
+      "media": "7",
+      "total": "x >= 8"
+    }
+  },
+  {
+    "topico": "inequacoes-segundo-grau",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Para que valores de x o produto de (x menos {dados-calculo.a}) por (x menos {dados-calculo.b}) é positivo? Escreva o conjunto solução.",
+      "fr": "Pour quelles valeurs de x le produit de (x moins {dados-calculo.a}) par (x moins {dados-calculo.b}) est-il positif ? Écrivez l’ensemble solution.",
+      "en": "For which values of x is the product of (x minus {dados-calculo.a}) and (x minus {dados-calculo.b}) positive? Write the solution set."
+    },
+    "dados-calculo": {
+      "a": "1",
+      "b": "5",
+      "total": "x < 1 ou x > 5"
+    }
+  },
+  {
+    "topico": "inequacoes-segundo-grau",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um número x multiplicado por ele mesmo, menos {dados-calculo.k} vezes esse número, dá um resultado negativo. Entre que valores está x? Escreva o conjunto solução.",
+      "fr": "Un nombre x multiplié par lui-même, moins {dados-calculo.k} fois ce nombre, donne un résultat négatif. Entre quelles valeurs se trouve x ? Écrivez l’ensemble solution.",
+      "en": "A number x times itself, minus {dados-calculo.k} times that number, gives a negative result. Between which values does x lie? Write the solution set."
+    },
+    "dados-calculo": {
+      "k": "6",
+      "total": "0 < x < 6"
+    }
+  },
+  {
+    "topico": "inequacoes-segundo-grau",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Para que valores de x o quadrado de x é maior que {dados-calculo.k}? Escreva o conjunto solução.",
+      "fr": "Pour quelles valeurs de x le carré de x est-il supérieur à {dados-calculo.k} ? Écrivez l’ensemble solution.",
+      "en": "For which values of x is the square of x greater than {dados-calculo.k}? Write the solution set."
+    },
+    "dados-calculo": {
+      "k": "9",
+      "total": "x < -3 ou x > 3"
+    }
+  },
+  {
+    "topico": "inequacoes-segundo-grau",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Para que valores de x o quadrado de (x menos {dados-calculo.a}) é maior ou igual a zero? Escreva o conjunto solução.",
+      "fr": "Pour quelles valeurs de x le carré de (x moins {dados-calculo.a}) est-il supérieur ou égal à zéro ? Écrivez l’ensemble solution.",
+      "en": "For which values of x is the square of (x minus {dados-calculo.a}) greater than or equal to zero? Write the solution set."
+    },
+    "dados-calculo": {
+      "a": "4",
+      "total": "todos"
+    }
+  },
+  {
+    "topico": "sistemas-lineares",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Num estacionamento há carros e motos: {dados-calculo.veiculos} veículos e {dados-calculo.rodas} rodas ao todo. Quantas motos há?",
+      "fr": "Dans un stationnement il y a des voitures et des motos : {dados-calculo.veiculos} véhicules et {dados-calculo.rodas} roues en tout. Combien de motos y a-t-il ?",
+      "en": "A car park holds cars and motorcycles: {dados-calculo.veiculos} vehicles and {dados-calculo.rodas} wheels in all. How many motorcycles are there?"
+    },
+    "dados-calculo": {
+      "veiculos": "30",
+      "rodas": "94",
+      "total": "13"
+    }
+  },
+  {
+    "topico": "sistemas-lineares",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "{dados-calculo.c1} canetas e {dados-calculo.d1} cadernos custaram {dados-calculo.t1} reais. {dados-calculo.c2} canetas e {dados-calculo.d2} cadernos iguais custaram {dados-calculo.t2} reais. Quanto custa um caderno?",
+      "fr": "{dados-calculo.c1} stylos et {dados-calculo.d1} cahiers ont coûté {dados-calculo.t1} reais. {dados-calculo.c2} stylos et {dados-calculo.d2} cahiers identiques ont coûté {dados-calculo.t2} reais. Combien coûte un cahier ?",
+      "en": "{dados-calculo.c1} pens and {dados-calculo.d1} notebooks cost {dados-calculo.t1} reais. {dados-calculo.c2} pens and {dados-calculo.d2} identical notebooks cost {dados-calculo.t2} reais. How much does one notebook cost?"
+    },
+    "dados-calculo": {
+      "c1": "3",
+      "d1": "2",
+      "t1": "46",
+      "c2": "5",
+      "d2": "4",
+      "t2": "86",
+      "total": "14"
+    }
+  },
+  {
+    "topico": "sistemas-lineares",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma liga de {dados-calculo.massa} kg é feita de cobre e zinco. O cobre custa {dados-calculo.precoCobre} reais por quilo e o zinco {dados-calculo.precoZinco} reais por quilo, e a liga toda custou {dados-calculo.custo} reais. Quantos quilos de cobre ela tem?",
+      "fr": "Un alliage de {dados-calculo.massa} kg est fait de cuivre et de zinc. Le cuivre coûte {dados-calculo.precoCobre} reais le kilo et le zinc {dados-calculo.precoZinco} reais le kilo, et l’alliage entier a coûté {dados-calculo.custo} reais. Combien de kilos de cuivre contient-il ?",
+      "en": "A {dados-calculo.massa} kg alloy is made of copper and zinc. Copper costs {dados-calculo.precoCobre} reais per kilo and zinc {dados-calculo.precoZinco} reais per kilo, and the whole alloy cost {dados-calculo.custo} reais. How many kilos of copper does it contain?"
+    },
+    "dados-calculo": {
+      "massa": "50",
+      "precoCobre": "30",
+      "precoZinco": "10",
+      "custo": "1100",
+      "total": "30"
+    }
+  },
+  {
+    "topico": "sistemas-lineares",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Três números somam {dados-calculo.soma}. O segundo é {dados-calculo.diferenca} unidades maior que o primeiro, e o terceiro é o dobro do primeiro. Quanto vale o terceiro número?",
+      "fr": "Trois nombres ont pour somme {dados-calculo.soma}. Le deuxième est {dados-calculo.diferenca} unités plus grand que le premier, et le troisième est le double du premier. Combien vaut le troisième nombre ?",
+      "en": "Three numbers add up to {dados-calculo.soma}. The second is {dados-calculo.diferenca} units larger than the first, and the third is twice the first. What is the third number?"
+    },
+    "dados-calculo": {
+      "soma": "62",
+      "diferenca": "6",
+      "total": "28"
+    }
+  },
+  {
+    "topico": "polinomios",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um polinômio de grau {dados-calculo.grauP} é dividido por um polinômio de grau {dados-calculo.grauD}. Qual é o grau do quociente?",
+      "fr": "Un polynôme de degré {dados-calculo.grauP} est divisé par un polynôme de degré {dados-calculo.grauD}. Quel est le degré du quotient ?",
+      "en": "A polynomial of degree {dados-calculo.grauP} is divided by a polynomial of degree {dados-calculo.grauD}. What is the degree of the quotient?"
+    },
+    "dados-calculo": {
+      "grauP": "7",
+      "grauD": "3",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "polinomios",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um polinômio P deixa resto {dados-calculo.r1} na divisão por (x menos 1) e resto {dados-calculo.r2} na divisão por (x mais 1). Quanto vale P(1) somado a P(−1)?",
+      "fr": "Un polynôme P laisse un reste {dados-calculo.r1} dans la division par (x moins 1) et un reste {dados-calculo.r2} dans la division par (x plus 1). Combien vaut P(1) ajouté à P(−1) ?",
+      "en": "A polynomial P leaves remainder {dados-calculo.r1} when divided by (x minus 1) and remainder {dados-calculo.r2} when divided by (x plus 1). What is P(1) plus P(−1)?"
+    },
+    "dados-calculo": {
+      "r1": "5",
+      "r2": "9",
+      "total": "14"
+    }
+  },
+  {
+    "topico": "polinomios",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um polinômio de grau 3 tem como raízes {dados-calculo.r1}, {dados-calculo.r2} e {dados-calculo.r3}. Qual é a soma das raízes?",
+      "fr": "Un polynôme de degré 3 a pour racines {dados-calculo.r1}, {dados-calculo.r2} et {dados-calculo.r3}. Quelle est la somme des racines ?",
+      "en": "A degree 3 polynomial has roots {dados-calculo.r1}, {dados-calculo.r2} and {dados-calculo.r3}. What is the sum of the roots?"
+    },
+    "dados-calculo": {
+      "r1": "2",
+      "r2": "-3",
+      "r3": "5",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "polinomios",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um polinômio de grau 3 tem raízes {dados-calculo.r1}, {dados-calculo.r2} e {dados-calculo.r3}, e o coeficiente do termo de maior grau é {dados-calculo.lider}. Quanto vale esse polinômio em x = 0?",
+      "fr": "Un polynôme de degré 3 a pour racines {dados-calculo.r1}, {dados-calculo.r2} et {dados-calculo.r3}, et le coefficient du terme de plus haut degré est {dados-calculo.lider}. Combien vaut ce polynôme en x = 0 ?",
+      "en": "A degree 3 polynomial has roots {dados-calculo.r1}, {dados-calculo.r2} and {dados-calculo.r3}, and the leading coefficient is {dados-calculo.lider}. What is the value of that polynomial at x = 0?"
+    },
+    "dados-calculo": {
+      "r1": "1",
+      "r2": "2",
+      "r3": "3",
+      "lider": "2",
+      "total": "-12"
+    }
+  },
+  {
+    "topico": "angulos-e-triangulos",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "A estrutura de uma rampa forma um triângulo com um ângulo reto. O ângulo da rampa com o chão mede {dados-calculo.rampa}°. Quantos graus mede o terceiro ângulo?",
+      "fr": "La structure d’une rampe forme un triangle avec un angle droit. L’angle de la rampe avec le sol mesure {dados-calculo.rampa}°. Combien de degrés mesure le troisième angle ?",
+      "en": "A ramp’s frame forms a triangle with one right angle. The ramp meets the ground at {dados-calculo.rampa}°. How many degrees is the third angle?"
+    },
+    "dados-calculo": {
+      "rampa": "27",
+      "total": "63"
+    }
+  },
+  {
+    "topico": "angulos-e-triangulos",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Duas retas paralelas são cortadas por uma transversal. Um dos ângulos formados mede {dados-calculo.angulo}°. Quantos graus mede o ângulo colateral interno a ele?",
+      "fr": "Deux droites parallèles sont coupées par une sécante. L’un des angles formés mesure {dados-calculo.angulo}°. Combien de degrés mesure son angle co-intérieur ?",
+      "en": "Two parallel lines are cut by a transversal. One of the angles formed measures {dados-calculo.angulo}°. How many degrees is its co-interior angle?"
+    },
+    "dados-calculo": {
+      "angulo": "115",
+      "total": "65"
+    }
+  },
+  {
+    "topico": "angulos-e-triangulos",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um triângulo isósceles tem o ângulo do vértice medindo {dados-calculo.vertice}°. Quantos graus mede cada ângulo da base?",
+      "fr": "Un triangle isocèle a un angle au sommet de {dados-calculo.vertice}°. Combien de degrés mesure chaque angle de la base ?",
+      "en": "An isosceles triangle has its apex angle measuring {dados-calculo.vertice}°. How many degrees is each base angle?"
+    },
+    "dados-calculo": {
+      "vertice": "36",
+      "total": "72"
+    }
+  },
+  {
+    "topico": "angulos-e-triangulos",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "O piso de um salão foi desenhado com um polígono regular de {dados-calculo.lados} lados. Quantos graus mede cada ângulo interno desse polígono?",
+      "fr": "Le sol d’une salle a été dessiné avec un polygone régulier de {dados-calculo.lados} côtés. Combien de degrés mesure chaque angle intérieur de ce polygone ?",
+      "en": "A hall floor was designed with a regular polygon of {dados-calculo.lados} sides. How many degrees is each interior angle of that polygon?"
+    },
+    "dados-calculo": {
+      "lados": "12",
+      "total": "150"
+    }
+  },
+  {
+    "topico": "semelhanca-e-pitagoras",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma escada de {dados-calculo.escada} m está apoiada numa parede, com o pé a {dados-calculo.pe} m da parede. A quantos metros de altura a escada toca a parede?",
+      "fr": "Une échelle de {dados-calculo.escada} m est appuyée contre un mur, le pied à {dados-calculo.pe} m du mur. À quelle hauteur, en mètres, l’échelle touche-t-elle le mur ?",
+      "en": "A {dados-calculo.escada} m ladder leans against a wall with its foot {dados-calculo.pe} m from the wall. How many metres up the wall does the ladder touch?"
+    },
+    "dados-calculo": {
+      "escada": "13",
+      "pe": "5",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "semelhanca-e-pitagoras",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Num dia de sol, uma vara de {dados-calculo.vara} m projeta uma sombra de {dados-calculo.sombraVara} m. No mesmo instante, a sombra de um prédio mede {dados-calculo.sombraPredio} m. Quantos metros tem o prédio?",
+      "fr": "Par une journée ensoleillée, une tige de {dados-calculo.vara} m projette une ombre de {dados-calculo.sombraVara} m. Au même instant, l’ombre d’un immeuble mesure {dados-calculo.sombraPredio} m. Combien de mètres fait l’immeuble ?",
+      "en": "On a sunny day a {dados-calculo.vara} m pole casts a {dados-calculo.sombraVara} m shadow. At the same moment a building’s shadow is {dados-calculo.sombraPredio} m long. How many metres tall is the building?"
+    },
+    "dados-calculo": {
+      "vara": "2",
+      "sombraVara": "3",
+      "sombraPredio": "36",
+      "total": "24"
+    }
+  },
+  {
+    "topico": "semelhanca-e-pitagoras",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Numa maquete, todos os comprimentos são {dados-calculo.fator} vezes menores que os reais. Se o terreno real tem {dados-calculo.areaReal} m² de área, quantos metros quadrados tem o terreno da maquete?",
+      "fr": "Dans une maquette, toutes les longueurs sont {dados-calculo.fator} fois plus petites que les vraies. Si le terrain réel a {dados-calculo.areaReal} m² d’aire, combien de mètres carrés fait le terrain de la maquette ?",
+      "en": "In a scale model every length is {dados-calculo.fator} times smaller than in reality. If the real plot has an area of {dados-calculo.areaReal} m², how many square metres does the model plot have?"
+    },
+    "dados-calculo": {
+      "fator": "5",
+      "areaReal": "450",
+      "total": "18"
+    }
+  },
+  {
+    "topico": "semelhanca-e-pitagoras",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um triângulo retângulo tem catetos de {dados-calculo.cateto1} cm e {dados-calculo.cateto2} cm. Quantos centímetros mede a altura traçada do ângulo reto até a hipotenusa?",
+      "fr": "Un triangle rectangle a des cathètes de {dados-calculo.cateto1} cm et {dados-calculo.cateto2} cm. Combien de centimètres mesure la hauteur tracée de l’angle droit jusqu’à l’hypoténuse ?",
+      "en": "A right triangle has legs of {dados-calculo.cateto1} cm and {dados-calculo.cateto2} cm. How many centimetres is the height drawn from the right angle to the hypotenuse?"
+    },
+    "dados-calculo": {
+      "cateto1": "9",
+      "cateto2": "12",
+      "total": "7.2"
+    }
+  },
+  {
+    "topico": "areas-de-figuras-planas",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um salão retangular de {dados-calculo.base} m por {dados-calculo.altura} m será forrado com placas quadradas de {dados-calculo.lado} m de lado. Quantas placas são necessárias?",
+      "fr": "Une salle rectangulaire de {dados-calculo.base} m sur {dados-calculo.altura} m sera recouverte de dalles carrées de {dados-calculo.lado} m de côté. Combien de dalles faut-il ?",
+      "en": "A rectangular hall of {dados-calculo.base} m by {dados-calculo.altura} m will be covered with square tiles {dados-calculo.lado} m on a side. How many tiles are needed?"
+    },
+    "dados-calculo": {
+      "base": "12",
+      "altura": "9",
+      "lado": "3",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "areas-de-figuras-planas",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um terreno em forma de trapézio tem bases de {dados-calculo.baseMaior} m e {dados-calculo.baseMenor} m e altura de {dados-calculo.altura} m. Quantos metros quadrados ele tem?",
+      "fr": "Un terrain en forme de trapèze a des bases de {dados-calculo.baseMaior} m et {dados-calculo.baseMenor} m et une hauteur de {dados-calculo.altura} m. Combien de mètres carrés fait-il ?",
+      "en": "A trapezium-shaped plot has bases of {dados-calculo.baseMaior} m and {dados-calculo.baseMenor} m and a height of {dados-calculo.altura} m. How many square metres is it?"
+    },
+    "dados-calculo": {
+      "baseMaior": "14",
+      "baseMenor": "8",
+      "altura": "6",
+      "total": "66"
+    }
+  },
+  {
+    "topico": "areas-de-figuras-planas",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um quintal retangular de {dados-calculo.base} m por {dados-calculo.altura} m tem, no meio, uma piscina quadrada de {dados-calculo.lado} m de lado. Quantos metros quadrados sobram para a grama?",
+      "fr": "Une cour rectangulaire de {dados-calculo.base} m sur {dados-calculo.altura} m a, au milieu, une piscine carrée de {dados-calculo.lado} m de côté. Combien de mètres carrés restent pour la pelouse ?",
+      "en": "A rectangular yard of {dados-calculo.base} m by {dados-calculo.altura} m has a square pool {dados-calculo.lado} m on a side in the middle. How many square metres are left for grass?"
+    },
+    "dados-calculo": {
+      "base": "20",
+      "altura": "10",
+      "lado": "4",
+      "total": "184"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma pista circular tem raio de {dados-calculo.raio} m. Quantos metros tem uma volta completa nessa pista? (duas casas decimais)",
+      "fr": "Une piste circulaire a un rayon de {dados-calculo.raio} m. Combien de mètres fait un tour complet de cette piste ? (deux décimales)",
+      "en": "A circular track has a radius of {dados-calculo.raio} m. How many metres is one full lap? (two decimal places)"
+    },
+    "dados-calculo": {
+      "raio": "20",
+      "total": "125.66"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma pizza redonda tem {dados-calculo.diametro} cm de diâmetro. Quantos centímetros quadrados de área ela tem? (duas casas decimais)",
+      "fr": "Une pizza ronde a {dados-calculo.diametro} cm de diamètre. Combien de centimètres carrés d’aire a-t-elle ? (deux décimales)",
+      "en": "A round pizza is {dados-calculo.diametro} cm across. How many square centimetres is its area? (two decimal places)"
+    },
+    "dados-calculo": {
+      "diametro": "30",
+      "total": "706.86"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma fatia de pizza é um setor circular de raio {dados-calculo.raio} cm e ângulo {dados-calculo.angulo}°. Quantos centímetros quadrados tem essa fatia? (duas casas decimais)",
+      "fr": "Une part de pizza est un secteur circulaire de rayon {dados-calculo.raio} cm et d’angle {dados-calculo.angulo}°. Combien de centimètres carrés fait cette part ? (deux décimales)",
+      "en": "A pizza slice is a circular sector of radius {dados-calculo.raio} cm and angle {dados-calculo.angulo}°. How many square centimetres is that slice? (two decimal places)"
+    },
+    "dados-calculo": {
+      "raio": "12",
+      "angulo": "60",
+      "total": "75.40"
+    }
+  },
+  {
+    "topico": "circulo-e-poligonos",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um azulejo tem a forma de um hexágono regular de lado {dados-calculo.lado} cm. Quantos centímetros quadrados de área ele tem? (duas casas decimais)",
+      "fr": "Un carreau a la forme d’un hexagone régulier de côté {dados-calculo.lado} cm. Combien de centimètres carrés d’aire a-t-il ? (deux décimales)",
+      "en": "A tile is a regular hexagon with side {dados-calculo.lado} cm. How many square centimetres is its area? (two decimal places)"
+    },
+    "dados-calculo": {
+      "lado": "10",
+      "total": "259.81"
+    }
+  },
+  {
+    "topico": "poliedros",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma caixa tem a forma de um prisma cuja base é um polígono de {dados-calculo.lados} lados. Quantas arestas tem essa caixa?",
+      "fr": "Une boîte a la forme d’un prisme dont la base est un polygone de {dados-calculo.lados} côtés. Combien d’arêtes a cette boîte ?",
+      "en": "A box is shaped like a prism whose base is a polygon with {dados-calculo.lados} sides. How many edges does the box have?"
+    },
+    "dados-calculo": {
+      "lados": "5",
+      "total": "15"
+    }
+  },
+  {
+    "topico": "poliedros",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma barraca tem a forma de uma pirâmide de base com {dados-calculo.lados} lados. Quantos vértices ela tem?",
+      "fr": "Une tente a la forme d’une pyramide à base de {dados-calculo.lados} côtés. Combien de sommets a-t-elle ?",
+      "en": "A tent is shaped like a pyramid whose base has {dados-calculo.lados} sides. How many vertices does it have?"
+    },
+    "dados-calculo": {
+      "lados": "8",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "poliedros",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um poliedro convexo tem {dados-calculo.faces} faces e {dados-calculo.vertices} vértices. Quantas arestas ele tem?",
+      "fr": "Un polyèdre convexe a {dados-calculo.faces} faces et {dados-calculo.vertices} sommets. Combien d’arêtes a-t-il ?",
+      "en": "A convex polyhedron has {dados-calculo.faces} faces and {dados-calculo.vertices} vertices. How many edges does it have?"
+    },
+    "dados-calculo": {
+      "faces": "12",
+      "vertices": "20",
+      "total": "30"
+    }
+  },
+  {
+    "topico": "poliedros",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um poliedro convexo tem todas as faces triangulares e {dados-calculo.vertices} vértices. Quantas faces ele tem?",
+      "fr": "Un polyèdre convexe a toutes ses faces triangulaires et {dados-calculo.vertices} sommets. Combien de faces a-t-il ?",
+      "en": "A convex polyhedron has all triangular faces and {dados-calculo.vertices} vertices. How many faces does it have?"
+    },
+    "dados-calculo": {
+      "vertices": "10",
+      "total": "16"
+    }
+  },
+  {
+    "topico": "solidos-e-volumes",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma caixa d’água cilíndrica tem raio de {dados-calculo.raio} m e altura de {dados-calculo.altura} m. Quantos metros cúbicos ela comporta? (duas casas decimais)",
+      "fr": "Un réservoir cylindrique a un rayon de {dados-calculo.raio} m et une hauteur de {dados-calculo.altura} m. Combien de mètres cubes contient-il ? (deux décimales)",
+      "en": "A cylindrical water tank has a radius of {dados-calculo.raio} m and a height of {dados-calculo.altura} m. How many cubic metres does it hold? (two decimal places)"
+    },
+    "dados-calculo": {
+      "raio": "2",
+      "altura": "3",
+      "total": "37.70"
+    }
+  },
+  {
+    "topico": "solidos-e-volumes",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma bola tem raio de {dados-calculo.raio} cm. Quantos centímetros cúbicos de volume ela tem? (duas casas decimais)",
+      "fr": "Un ballon a un rayon de {dados-calculo.raio} cm. Combien de centimètres cubes de volume a-t-il ? (deux décimales)",
+      "en": "A ball has a radius of {dados-calculo.raio} cm. How many cubic centimetres is its volume? (two decimal places)"
+    },
+    "dados-calculo": {
+      "raio": "6",
+      "total": "904.78"
+    }
+  },
+  {
+    "topico": "solidos-e-volumes",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma casquinha de sorvete tem a forma de um cone de raio {dados-calculo.raio} cm e altura {dados-calculo.altura} cm. Quantos centímetros cúbicos ela comporta? (duas casas decimais)",
+      "fr": "Un cornet de glace a la forme d’un cône de rayon {dados-calculo.raio} cm et de hauteur {dados-calculo.altura} cm. Combien de centimètres cubes contient-il ? (deux décimales)",
+      "en": "An ice cream cone is a cone of radius {dados-calculo.raio} cm and height {dados-calculo.altura} cm. How many cubic centimetres does it hold? (two decimal places)"
+    },
+    "dados-calculo": {
+      "raio": "7",
+      "altura": "12",
+      "total": "615.75"
+    }
+  },
+  {
+    "topico": "solidos-e-volumes",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma esfera de raio {dados-calculo.raioEsfera} cm é derretida e todo o material é moldado num cilindro de raio {dados-calculo.raioCilindro} cm. Quantos centímetros de altura tem esse cilindro? (duas casas decimais)",
+      "fr": "Une sphère de rayon {dados-calculo.raioEsfera} cm est fondue et toute la matière est moulée en un cylindre de rayon {dados-calculo.raioCilindro} cm. Combien de centimètres de hauteur a ce cylindre ? (deux décimales)",
+      "en": "A sphere of radius {dados-calculo.raioEsfera} cm is melted and all the material is cast into a cylinder of radius {dados-calculo.raioCilindro} cm. How many centimetres tall is that cylinder? (two decimal places)"
+    },
+    "dados-calculo": {
+      "raioEsfera": "6",
+      "raioCilindro": "4",
+      "total": "18.00"
+    }
   }
 ]
