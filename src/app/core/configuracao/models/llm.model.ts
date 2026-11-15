@@ -45,15 +45,30 @@ export interface ConfiguracaoDaLlm {
  * enunciado em lote é tarefa de modelo rápido — o `gpt-oss:20b` levou 13 s no
  * lote de seis contra 50 s do grande, com a mesma taxa de aprovação.
  *
- * O raciocínio fica desligado, e a medição de 14/11 mostra por quê: com
- * `false`, o lote leva 82 a 117 s e aproveita 6 de 6; com `'low'`, leva 17 a
- * 34 s e aproveita 2 a 4. Como ninguém espera por este pedido — a fila repõe em
- * segundo plano —, o que interessa é quantas histórias boas chegam.
+ * **O raciocínio fica em `low`, e isto reverte uma decisão anterior.**
+ *
+ * Ele esteve em `false` por uma medição que envelheceu junto com o prompt.
+ * Refeita em 14/11, com o prompt atual, a máquina livre e o portão aplicado —
+ * dois pedidos de duas histórias num nível:
+ *
+ * | `think` | Aprovadas | Tempo | Por história boa |
+ * | ------- | --------- | ----- | ---------------- |
+ * | `'low'` | 6 de 6    | 17 s  | **3 s**          |
+ * | `false` | 2 de 2    | 69 s  | 35 s             |
+ *
+ * Mesma aprovação, doze vezes mais eficiente — e `low` ainda entrega mais
+ * histórias do que se pede, o que enche a fila num pedido só. E agora o tempo
+ * importa: desde que a tela passou a ESPERAR a história em vez de mostrar o
+ * enunciado seco e trocá-lo depois, esse tempo é tela parada.
+ *
+ * Escrever enunciado continua não sendo tarefa de raciocínio — a diferença não
+ * é de inteligência, é de como o modelo se comporta com o campo desligado.
+ * Quem preferir `false` troca na tela.
  */
 export const LLM_PADRAO: ConfiguracaoDaLlm = {
   endpoint: '',
   modelo: 'gpt-oss:20b',
-  raciocinio: 'false',
+  raciocinio: 'low',
   lote: 2,
 };
 
@@ -84,7 +99,13 @@ export function validarLlm(bruto: unknown): ConfiguracaoDaLlm {
 
   const endpoint = typeof lido.endpoint === 'string' ? lido.endpoint.trim() : LLM_PADRAO.endpoint;
 
-  const raciocinio = lido.raciocinio === 'low' ? 'low' : 'false';
+  // O grau lido do navegador vale se for um dos dois conhecidos; qualquer
+  // outra coisa volta ao PADRÃO, e não a um literal — foi assim que a troca do
+  // padrão deixou este caminho atrás.
+  const raciocinio: ConfiguracaoDaLlm['raciocinio'] =
+    lido.raciocinio === 'low' || lido.raciocinio === 'false'
+      ? lido.raciocinio
+      : LLM_PADRAO.raciocinio;
 
   const lote =
     typeof lido.lote === 'number' && Number.isFinite(lido.lote)
@@ -112,7 +133,13 @@ export function definirLlm(
   }
 
   if (campo === 'raciocinio') {
-    return { ...atual, raciocinio: valor === 'low' ? 'low' : 'false' };
+    // Grau desconhecido volta ao padrão, e não a um literal: deixar `'false'`
+    // escrito aqui fez a troca do padrão passar sem que este caminho a
+    // acompanhasse.
+    const grau: ConfiguracaoDaLlm['raciocinio'] =
+      valor === 'low' || valor === 'false' ? valor : LLM_PADRAO.raciocinio;
+
+    return { ...atual, raciocinio: grau };
   }
 
   return { ...atual, [campo]: String(valor) };

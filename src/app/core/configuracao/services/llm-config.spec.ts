@@ -37,7 +37,8 @@ describe('a configuração da LLM chega a quem pede o lote', () => {
 
       expect(lote, 'nenhum pedido de lote saiu').toBeDefined();
       expect(lote!.corpo.model).toBe('ministral-3:3b');
-      expect(lote!.corpo.think).toBe(false);
+      // `low` é o padrão medido; o campo segue ajustável na tela.
+      expect(lote!.corpo.think).toBe('low');
     } finally {
       globalThis.fetch = original;
     }

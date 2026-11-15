@@ -80,6 +80,22 @@ const LIMITE_DE_BYTES = 256 * 1024;
  * fica uma reposição a cada dois exercícios de cada nível — o lote rende, e a
  * fila não seca entre um e outro.
  */
+/**
+ * O pedido que alguém está esperando sai pequeno.
+ *
+ * Medido em 14/11: um lote de seis leva de 50 s a 2 min, e esse tempo inteiro
+ * é tela parada — é o único momento em que a demora custa algo. Para quem
+ * espera, o que importa é a PRIMEIRA história chegar; duas bastam para vestir
+ * o exercício em tela e o seguinte, e a reposição vem atrás com o lote cheio,
+ * em segundo plano, onde o tempo não custa nada.
+ *
+ * O raciocínio NÃO é tocado aqui, e isso é deliberado: ele é uma preferência
+ * explícita nas Configurações, e trocá-la sozinho para ganhar tempo seria
+ * decidir pelo aluno o que ele já decidiu. Quem quiser mais velocidade põe
+ * `low` na tela.
+ */
+const LOTE_URGENTE = 2;
+
 const PISO_DA_FILA = 1;
 
 interface CacheGravado {
@@ -243,7 +259,7 @@ export class HistoriasService {
      * qualquer nível — já encontra história.
      */
     if ((this.filas()[chave] ?? []).length < PISO_DA_FILA) {
-      void this.repor(topicoId, declaracao.forma, declaracao, modo);
+      void this.repor(topicoId, declaracao.forma, declaracao, modo, nivel);
     }
   }
 
@@ -323,6 +339,7 @@ export class HistoriasService {
     forma: string,
     declaracao: ProblemaDeTexto,
     modo: 'declarada' | 'reescrita',
+    nivelPedido: string,
   ): Promise<void> {
     const chaveDoPedido = `${topicoId}|${forma}`;
 
@@ -333,10 +350,46 @@ export class HistoriasService {
     this.emVoo.update((atuais) => [...atuais, chaveDoPedido]);
 
     try {
-      const configuracao = this.configuracao();
+      /*
+       * Há alguém olhando o carregando agora?
+       *
+       * Enquanto a tela espera, o aluno não faz nada — e esse é o ÚNICO
+       * momento em que o tempo do lote importa. Medido: seis histórias com o
+       * raciocínio desligado levam de 50 s a 2 min; três com raciocínio baixo
+       * levam uma fração disso. Então o pedido urgente sai pequeno e rápido, e
+       * a reposição em segundo plano volta a ser grande e com mais
+       * aproveitamento, onde a demora não custa nada.
+       *
+       * A urgência não é palpite: é a lista de espera. Se ninguém espera,
+       * ninguém está vendo o carregando.
+       */
+      const urgente = Object.values(this.esperando()).some((espera) =>
+        espera.chave.startsWith(`${chaveDoPedido}|`),
+      );
+
+      const configuracao: ConfiguracaoDaLlm = urgente
+        ? { ...this.configuracao(), lote: LOTE_URGENTE }
+        : this.configuracao();
+
+      /*
+       * O pedido urgente cobre UM nível, o da tela.
+       *
+       * Aqui estava o gasto que eu não tinha visto: o pedido normal pede
+       * `quantas` histórias de CADA um dos quatro níveis — com lote 6, são 24
+       * histórias, e medi 138 s até num pedido de «2», que são 8. Enquanto
+       * isso a tela está parada.
+       *
+       * Quem espera está num nível só, e é só esse que precisa chegar agora.
+       * Duas histórias de um nível é um doze avos do trabalho; os outros três
+       * níveis vêm na reposição em segundo plano, com o lote cheio.
+       */
+      const niveis = urgente
+        ? ([nivelPedido] as readonly PedidoDeProblema['niveis'][number][])
+        : NIVEIS;
+
       const pedido: PedidoDeProblema = {
         ...declaracao.pedido,
-        niveis: NIVEIS,
+        niveis,
         quantas: configuracao.lote,
         modo,
       };

@@ -73,9 +73,9 @@ describe('Configuracoes', () => {
     // Dezenove controles: quatorze números da progressão, a caixa da surpresa,
     // os dois campos de texto da LLM, o lote — e dois `<select>`, modelo e
     // raciocínio. O modelo era `<input>` e virou `<select>`.
-    expect(
-      fixture.nativeElement.querySelectorAll('.ajustes input, .ajustes select').length,
-    ).toBe(19);
+    expect(fixture.nativeElement.querySelectorAll('.ajustes input, .ajustes select').length).toBe(
+      19,
+    );
     // Os numéricos são os quatorze da progressão mais o lote da LLM.
     expect(fixture.nativeElement.querySelectorAll('.ajustes input[type="number"]').length).toBe(15);
     expect(texto()).toContain('Para abrir a próxima etapa');
@@ -126,9 +126,9 @@ describe('Configuracoes', () => {
   it('o botão de reler o servidor continua na tela', () => {
     // Ele sumiu numa edição e nada avisou: sem ele, quem instala um modelo
     // novo precisa recarregar a página inteira para vê-lo na lista.
-    const botao = [...(fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>)].find(
-      (candidato) => candidato.textContent?.includes('Reler do servidor'),
-    );
+    const botao = [
+      ...(fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>),
+    ].find((candidato) => candidato.textContent?.includes('Reler do servidor'));
 
     expect(botao, 'o botão de reler os modelos sumiu').toBeDefined();
   });
@@ -158,13 +158,14 @@ describe('Configuracoes', () => {
   it('o raciocínio é um grau, e não um sim ou não', () => {
     const campo = fixture.nativeElement.querySelector('#llm-raciocinio') as HTMLSelectElement;
 
-    expect(campo.value).toBe('false');
+    // O padrão medido é `low`; a tela existe para quem quiser desligar.
+    expect(campo.value).toBe('low');
 
-    campo.value = 'low';
+    campo.value = 'false';
     campo.dispatchEvent(new Event('change'));
     fixture.detectChanges();
 
-    expect(config.configuracaoDaLlm().raciocinio).toBe('low');
+    expect(config.configuracaoDaLlm().raciocinio).toBe('false');
   });
 
   it('a prova surpresa liga e desliga por caixa de seleção', () => {

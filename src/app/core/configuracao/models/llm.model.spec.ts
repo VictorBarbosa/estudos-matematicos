@@ -1,11 +1,20 @@
 import { LLM_PADRAO, LOTE_MAXIMO, definirLlm, llmEhPadrao, validarLlm } from './llm.model';
 
 describe('configuração da LLM', () => {
-  it('o padrão é o que o site usava antes de ser ajustável', () => {
+  /**
+   * O raciocínio padrão é `low`, e isso foi medido, não escolhido.
+   *
+   * Esteve em `false` por uma medição que envelheceu com o prompt. Refeita com
+   * o prompt atual, a máquina livre e o portão aplicado: `low` aprova 6 de 6
+   * em 17 s, e `false` aprova 2 de 2 em 69 s — mesma taxa, doze vezes mais
+   * eficiente. E o tempo passou a importar, porque a tela agora ESPERA a
+   * história em vez de mostrar o enunciado seco e trocá-lo depois.
+   */
+  it('o padrão de fábrica é o que foi medido como melhor', () => {
     expect(LLM_PADRAO).toEqual({
       endpoint: '',
       modelo: 'gpt-oss:20b',
-      raciocinio: 'false',
+      raciocinio: 'low',
       lote: 2,
     });
   });
@@ -25,7 +34,8 @@ describe('configuração da LLM', () => {
 
   it('o raciocínio só aceita os dois graus que a API conhece', () => {
     expect(definirLlm(LLM_PADRAO, 'raciocinio', 'low').raciocinio).toBe('low');
-    expect(definirLlm(LLM_PADRAO, 'raciocinio', 'true').raciocinio).toBe('false');
+    // Qualquer coisa que não seja um grau conhecido volta ao padrão.
+    expect(definirLlm(LLM_PADRAO, 'raciocinio', 'true').raciocinio).toBe(LLM_PADRAO.raciocinio);
   });
 
   it('modelo vazio volta ao padrão em vez de quebrar o lote', () => {
@@ -43,7 +53,7 @@ describe('configuração da LLM', () => {
     expect(lido).toEqual({
       endpoint: '',
       modelo: 'ministral-3:3b',
-      raciocinio: 'false',
+      raciocinio: LLM_PADRAO.raciocinio,
       lote: LLM_PADRAO.lote,
     });
   });
