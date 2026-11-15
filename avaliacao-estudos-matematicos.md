@@ -298,6 +298,32 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
   formato alcança isso. Os 135 geradores escritos à mão seguem sendo o que o site tem de mais
   confiável.
 
+- [x] **O banco de enunciados escritos à mão (15/11).** O que substituiu a LLM, e pelo motivo
+      da lição acima: se enunciado é conteúdo, ele é escrito por quem responde por ele.
+      `core/enunciados/enunciados.json` guarda uma entrada por exercício — tópico, nível, texto
+      nas três línguas e os valores da conta, com `{dados-calculo.x1}` no lugar dos números —, e
+      a sessão sorteia uma entrada do tópico e do nível em que o aluno está, **um de cada três
+      exercícios**; nos outros, e em todo tópico sem entrada, responde o gerador de sempre.
+      Acrescentar uma pergunta é acrescentar um objeto ao arquivo; tirar é apagar o objeto.
+      Nada de código, nada de deploy de lógica, nada de segundo plano: **o texto é o mesmo
+      desde o primeiro quadro**, que era o segundo defeito da lista acima.
+  - **O `total` é lido pelo `analisar` do próprio tópico** — a mesma função que lê o que o aluno
+    digita. É o que faz uma entrada de fração virar gabarito de fração sem uma linha a mais, e
+    é o que permite recusar, antes da tela, uma resposta que o tópico não sabe ler.
+  - **O guarda é por entrada** (`core/enunciados/enunciados.spec.ts`): tópico que existe no
+    currículo, nível entre os quatro, as três línguas citando os mesmos valores na mesma ordem,
+    todo valor citado presente nos dados e todo dado citado no texto, o `total` fechando a conta
+    quando ela está declarada (`x1 acao x2`) e **o corretor do tópico aceitando esse `total`**.
+    O número decimal sai com o separador de cada língua — o arquivo escreve `7.5`, o site mostra
+    `7,5` em português e francês. É o portão que faltava à LLM, e aqui ele funciona porque não
+    precisa julgar sentido: o sentido vem escrito.
+  - **O que o banco não traz é armadilha nem diagnóstico**, e isso é troca consciente: elas
+    dependem de saber qual erro produz qual número, que é o que os 135 geradores fazem com a
+    conta na mão. As entradas levam `conceitos: []` e não contam para os requisitos por conceito
+    da etapa. O banco **complementa** os geradores.
+  - **Estado:** 8 entradas, em 4 tópicos — operações fundamentais (4), MMC e MDC (2), razão e
+    proporção (1), áreas de figuras planas (1). Documentado no README. Suíte em **9 243 testes**.
+
 ---
 
 ## 5. Decisões: remover ou fundir

@@ -749,6 +749,53 @@ que precisa de três vereditos — `bateu`, `não bateu` e **`não sei conferir`
 «errado» a quem acertou é pior que não ter verificador. O plano inteiro está em
 `plano-rascunho-no-celular.md`.
 
+## O banco de enunciados escritos à mão
+
+Os 135 geradores montam a conta; o banco traz **enunciados de texto escritos à mão**, um
+arquivo JSON em `core/enunciados/enunciados.json`. Acrescentar uma pergunta é acrescentar um
+objeto; tirar é apagar o objeto. Nada de código.
+
+```json
+{
+  "topico": "operacoes-fundamentais",
+  "nivel": "facil",
+  "enunciado": {
+    "br": "Maria tinha {dados-calculo.x1} figurinhas e ganhou {dados-calculo.x2}. Com quantas ela ficou?",
+    "fr": "Marie avait {dados-calculo.x1} images et en a gagné {dados-calculo.x2}. Combien en a-t-elle ?",
+    "en": "Maria had {dados-calculo.x1} stickers and won {dados-calculo.x2}. How many does she have?"
+  },
+  "dados-calculo": { "x1": "17", "acao": "+", "x2": "26", "total": "43" }
+}
+```
+
+- `topico` é o id como ele aparece em `curriculo/curriculo.ts`; `nivel` é um dos quatro do site
+  (`facil`, `medio`, `dificil`, `extremo`).
+- As chaves de `dados-calculo` são livres (`x1`, `base`, `altura`) e entram no texto como
+  `{dados-calculo.base}`.
+- **`total` é reservado**: é a resposta de conferência, e não aparece no enunciado. `acao`
+  também é reservado — ela guarda o sinal da operação, e vale tanto citada no texto quanto
+  deixada de fora de uma prosa natural («e ganhou mais 26»).
+- Os números se escrevem com **ponto** decimal (`"7.5"`), porque o separador é do idioma: o
+  site mostra `7,5` em português e francês e `7.5` em inglês.
+
+A sessão de treino sorteia do banco **um de cada três exercícios**, quando há entrada para o
+tópico e o nível em que o aluno está; nos outros casos responde o gerador de sempre. O sorteio
+usa o `rng` da sessão, e por isso a sessão continua reproduzível.
+
+O `total` é lido pelo `analisar` do próprio tópico — a mesma função que lê o que o aluno digita
+—, então uma entrada de um tópico de fração vira gabarito de fração sem uma linha a mais, e uma
+resposta que o tópico não sabe ler é recusada antes de chegar à tela.
+
+O que o banco **não** traz é armadilha nem diagnóstico: eles dependem de saber qual erro produz
+qual número, e isso é o que os geradores fazem com a conta na mão. Por isso as entradas do
+banco levam `conceitos: []` e não contam para os requisitos por conceito da etapa — o banco
+complementa os geradores, não os substitui.
+
+O guarda é `core/enunciados/enunciados.spec.ts`: ele confere, entrada por entrada, que o tópico
+existe, que o nível é um dos quatro, que as três línguas citam os mesmos valores na mesma ordem,
+que todo valor citado existe nos dados e todo dado é citado, que o `total` fecha a conta quando
+ela está declarada (`x1 acao x2`) e que o corretor do tópico aceita esse `total`.
+
 ## Convenções
 
 - Standalone em tudo, `ChangeDetectionStrategy.OnPush`.

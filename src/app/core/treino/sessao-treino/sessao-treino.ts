@@ -1,6 +1,7 @@
 import { Signal, WritableSignal, computed, signal } from '@angular/core';
 import { CONFIGURACAO_PADRAO, Configuracao } from '@core/configuracao/models/configuracao.model';
 import { nivelDoTopico, tiposPendentes } from '@core/progressao/models/progressao.model';
+import { sortearDoBanco } from '@core/enunciados/models/enunciado.model';
 import { ProgressoService } from '@core/treino/services/progresso.service';
 import { Rng, criarRng, sementeAleatoria } from '@core/treino/rng/rng';
 import {
@@ -10,6 +11,15 @@ import {
   Validacao,
   corrigir,
 } from '@core/treino/models/treino.model';
+
+/**
+ * De quantos em quantos sorteios o banco de enunciados pode aparecer.
+ *
+ * Um em três. Com mais que isso, as poucas perguntas escritas à mão se
+ * repetem até serem decoradas; com menos, elas quase não aparecem. Trocar este
+ * número é a única coisa a mexer para dar mais ou menos espaço ao banco.
+ */
+const PARTES_DO_SORTEIO = 3;
 
 /**
  * Estado de uma rodada de treino.
@@ -128,6 +138,29 @@ export class SessaoTreino<T> {
    * 3/5, porque o que já estava cumprido continuava sendo oferecido.
    */
   private sortear(): Exercicio<T> {
+    /*
+     * O banco de enunciados entra aqui, e entra em UM lugar.
+     *
+     * É um arquivo JSON com perguntas escritas à mão, por tópico e nível, e
+     * sortear dele não é trabalho dos 135 geradores: a sessão já sabe em que
+     * tópico e em que nível o aluno está, que é tudo o que o sorteio precisa.
+     *
+     * Não é SEMPRE, e isso é deliberado. Um tópico com três entradas
+     * repetiria as três até o aluno decorá-las, enquanto o gerador tem
+     * variedade sem fim — o piso de variedade do site exige sessenta formas
+     * distintas por nível, e nenhum arquivo escrito à mão chega perto. Então o
+     * banco aparece numa fração dos sorteios: o suficiente para a pergunta de
+     * texto aparecer, pouco para não cansar.
+     */
+    const doBanco =
+      this.rng.inteiro(1, PARTES_DO_SORTEIO) === 1
+        ? sortearDoBanco(this.gerador, this.nivel(), this.rng)
+        : undefined;
+
+    if (doBanco !== undefined) {
+      return doBanco;
+    }
+
     const pendentes = tiposPendentes(
       this.gerador.topicoId,
       this.progresso.porConceito(),

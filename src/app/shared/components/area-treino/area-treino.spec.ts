@@ -12,10 +12,35 @@ import {
   RESPOSTAS_NA_JANELA,
   TRILHA,
 } from '@core/progressao/models/progressao.model';
+import { enunciadosDe } from '@core/enunciados/models/enunciado.model';
 import { ExercicioEmFocoService } from '@core/exercicio/services/exercicio-em-foco.service';
+import { ProgressaoService } from '@core/progressao/services/progressao.service';
 import { ProgressoService } from '@core/treino/services/progresso.service';
-import { Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
+import { Exercicio, GeradorExercicio, NIVEIS, Nivel } from '@core/treino/models/treino.model';
 import { AreaTreino } from '@shared/components/area-treino/area-treino';
+
+/**
+ * Um tópico da trilha que NÃO tem enunciado no banco.
+ *
+ * A sessão sorteia do banco de enunciados escritos à mão num de cada três
+ * exercícios, e o gerador destes testes é falso — devolve sempre o mesmo
+ * exercício, cuja resposta os testes digitam. Num tópico com entrada no banco,
+ * parte dos sorteios viria do arquivo e a resposta digitada estaria errada.
+ *
+ * Escolher o tópico aqui, lendo o próprio banco, é o que mantém os testes
+ * verdadeiros quando alguém acrescentar uma entrada ao arquivo.
+ */
+function topicoSemBanco(): (typeof TRILHA)[number] {
+  const achado = TRILHA.find((item) =>
+    NIVEIS.every((nivel) => enunciadosDe(item.topicoId, nivel).length === 0),
+  );
+
+  if (achado === undefined) {
+    throw new Error('todos os tópicos da trilha têm enunciado no banco');
+  }
+
+  return achado;
+}
 
 /**
  * Gerador determinístico: sempre 1/4 + 1/6, cujo resultado é 5/12.
@@ -223,7 +248,10 @@ describe('AreaTreino', () => {
   });
 
   it('sobe de nível depois de acertos seguidos', async () => {
-    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    const naTrilha: GeradorExercicio<Fracao> = {
+      ...geradorFixo,
+      topicoId: topicoSemBanco().topicoId,
+    };
     fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
@@ -235,7 +263,10 @@ describe('AreaTreino', () => {
   });
 
   it('desce de nível depois de erros seguidos', async () => {
-    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    const naTrilha: GeradorExercicio<Fracao> = {
+      ...geradorFixo,
+      topicoId: topicoSemBanco().topicoId,
+    };
     fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
@@ -255,7 +286,10 @@ describe('AreaTreino', () => {
   });
 
   it('diz quanto falta para o próximo degrau', async () => {
-    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    const naTrilha: GeradorExercicio<Fracao> = {
+      ...geradorFixo,
+      topicoId: topicoSemBanco().topicoId,
+    };
     fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
@@ -284,7 +318,10 @@ describe('AreaTreino', () => {
   it('o erro zera a contagem de acertos seguidos na lista', async () => {
     // O critério sempre foi este; o que faltava era a tela dizer. Quem errava o
     // último exercício via a etapa continuar fechada sem explicação nenhuma.
-    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    const naTrilha: GeradorExercicio<Fracao> = {
+      ...geradorFixo,
+      topicoId: topicoSemBanco().topicoId,
+    };
     fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
@@ -296,7 +333,10 @@ describe('AreaTreino', () => {
   });
 
   it('os acertos da janela não são zerados pelo erro', async () => {
-    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    const naTrilha: GeradorExercicio<Fracao> = {
+      ...geradorFixo,
+      topicoId: topicoSemBanco().topicoId,
+    };
     fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
@@ -307,7 +347,8 @@ describe('AreaTreino', () => {
   });
 
   it('revelar a resolução conta como desistência e tranca o campo', async () => {
-    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    const topico = topicoSemBanco();
+    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: topico.topicoId };
     fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
@@ -325,13 +366,22 @@ describe('AreaTreino', () => {
     expect(texto()).toContain('Como se resolve');
 
     const progresso = TestBed.inject(ProgressoService);
-    expect(progresso.estatisticaDe(TRILHA[0]!.topicoId).erros).toBe(1);
-    expect(progresso.historicoDe(TRILHA[0]!.topicoId).at(-1)?.desistiu).toBe(true);
+    expect(progresso.estatisticaDe(topico.topicoId).erros).toBe(1);
+    expect(progresso.historicoDe(topico.topicoId).at(-1)?.desistiu).toBe(true);
   });
 
   it('celebra o desbloqueio e aponta a próxima etapa', async () => {
     // O gerador fixo precisa pertencer à trilha para que haja o que desbloquear.
-    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: TRILHA[0]!.topicoId };
+    const topico = topicoSemBanco();
+    const progressao = TestBed.inject(ProgressaoService);
+    /*
+     * Modo livre porque a etapa seguinte só é apontada quando está aberta, e a
+     * trilha abre em ordem: o tópico daqui não é o primeiro — é o primeiro sem
+     * enunciado no banco —, e vencê-lo sozinho deixaria a seguinte trancada.
+     */
+    progressao.definirModoLivre(true);
+    const seguinte = progressao.proximaDe(topico.topicoId)!;
+    const naTrilha: GeradorExercicio<Fracao> = { ...geradorFixo, topicoId: topico.topicoId };
     fixture.componentRef.setInput('gerador', naTrilha);
     await fixture.whenStable();
 
@@ -341,7 +391,7 @@ describe('AreaTreino', () => {
     await acertar(RESPOSTAS_NA_JANELA);
 
     expect(texto()).toContain('Etapa vencida!');
-    expect(texto()).toContain(TRILHA[1]!.titulo);
+    expect(texto()).toContain(seguinte.titulo);
   });
 });
 

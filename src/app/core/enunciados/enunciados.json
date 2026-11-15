@@ -1,0 +1,82 @@
+[
+  {
+    "topico": "operacoes-fundamentais",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Maria tinha {dados-calculo.x1} figurinhas e ganhou {dados-calculo.x2}. Com quantas ela ficou?",
+      "fr": "Maria avait {dados-calculo.x1} autocollants et en a reçu {dados-calculo.x2}. Combien en a-t-elle maintenant ?",
+      "en": "Maria had {dados-calculo.x1} stickers and was given {dados-calculo.x2} more. How many does she have now?"
+    },
+    "dados-calculo": { "x1": "17", "acao": "+", "x2": "26", "total": "43" }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um ônibus saiu da garagem com {dados-calculo.x1} passageiros e {dados-calculo.x2} desceram na primeira parada. Quantos seguiram viagem?",
+      "fr": "Un autobus est parti du garage avec {dados-calculo.x1} passagers et {dados-calculo.x2} sont descendus au premier arrêt. Combien ont poursuivi le trajet ?",
+      "en": "A bus left the depot with {dados-calculo.x1} passengers and {dados-calculo.x2} got off at the first stop. How many stayed on?"
+    },
+    "dados-calculo": { "x1": "52", "acao": "-", "x2": "19", "total": "33" }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma oficina monta {dados-calculo.x1} bicicletas por dia, durante {dados-calculo.x2} dias. Quantas bicicletas saem no período?",
+      "fr": "Un atelier assemble {dados-calculo.x1} vélos par jour, pendant {dados-calculo.x2} jours. Combien de vélos sortent sur la période ?",
+      "en": "A workshop assembles {dados-calculo.x1} bicycles a day for {dados-calculo.x2} days. How many bicycles come out over that period?"
+    },
+    "dados-calculo": { "x1": "23", "acao": "*", "x2": "14", "total": "322" }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um lote de {dados-calculo.x1} parafusos foi dividido igualmente em {dados-calculo.x2} caixas. Quantos parafusos ficaram em cada caixa?",
+      "fr": "Un lot de {dados-calculo.x1} vis a été réparti également dans {dados-calculo.x2} boîtes. Combien de vis par boîte ?",
+      "en": "A batch of {dados-calculo.x1} screws was split evenly into {dados-calculo.x2} boxes. How many screws are in each box?"
+    },
+    "dados-calculo": { "x1": "456", "acao": "/", "x2": "8", "total": "57" }
+  },
+  {
+    "topico": "mmc-mdc",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Dois ônibus partem do terminal: um a cada {dados-calculo.x1} minutos e o outro a cada {dados-calculo.x2} minutos. Depois de quantos minutos eles partem juntos outra vez?",
+      "fr": "Deux autobus quittent le terminus : l'un toutes les {dados-calculo.x1} minutes et l'autre toutes les {dados-calculo.x2} minutes. Après combien de minutes partent-ils ensemble de nouveau ?",
+      "en": "Two buses leave the terminal: one every {dados-calculo.x1} minutes and the other every {dados-calculo.x2} minutes. After how many minutes do they leave together again?"
+    },
+    "dados-calculo": { "x1": "12", "x2": "18", "total": "36" }
+  },
+  {
+    "topico": "mmc-mdc",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Duas engrenagens voltam à posição inicial a cada {dados-calculo.x1} e {dados-calculo.x2} segundos. Em quantos segundos as duas voltam juntas à posição inicial?",
+      "fr": "Deux engrenages reviennent à leur position initiale toutes les {dados-calculo.x1} et {dados-calculo.x2} secondes. Au bout de combien de secondes y reviennent-ils ensemble ?",
+      "en": "Two gears return to their starting position every {dados-calculo.x1} and {dados-calculo.x2} seconds. After how many seconds do both return together?"
+    },
+    "dados-calculo": { "x1": "45", "x2": "60", "total": "180" }
+  },
+  {
+    "topico": "razao-proporcao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma receita para {dados-calculo.x1} pessoas pede {dados-calculo.x2} gramas de farinha. Para {dados-calculo.x3} pessoas, quantos gramas são necessários?",
+      "fr": "Une recette pour {dados-calculo.x1} personnes demande {dados-calculo.x2} grammes de farine. Pour {dados-calculo.x3} personnes, combien de grammes faut-il ?",
+      "en": "A recipe for {dados-calculo.x1} people calls for {dados-calculo.x2} grams of flour. For {dados-calculo.x3} people, how many grams are needed?"
+    },
+    "dados-calculo": { "x1": "4", "x2": "300", "x3": "10", "total": "750" }
+  },
+  {
+    "topico": "areas-de-figuras-planas",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um terreno retangular mede {dados-calculo.base} metros de frente por {dados-calculo.altura} metros de fundo. Qual é a área dele, em metros quadrados?",
+      "fr": "Un terrain rectangulaire mesure {dados-calculo.base} mètres de façade sur {dados-calculo.altura} mètres de profondeur. Quelle est son aire, en mètres carrés ?",
+      "en": "A rectangular lot is {dados-calculo.base} metres wide and {dados-calculo.altura} metres deep. What is its area, in square metres?"
+    },
+    "dados-calculo": { "base": "12", "altura": "7.5", "total": "90" }
+  }
+]
