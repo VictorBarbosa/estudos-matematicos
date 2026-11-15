@@ -1,5 +1,4 @@
 import { resolverQuadraticaComPassos } from '@core/math';
-import { PROBLEMA_SOMA_PRODUTO } from '@features/algebra/equacao-segundo-grau/equacao-segundo-grau.problema';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import {
@@ -50,7 +49,6 @@ const { saoEquivalentes: proximos } = numeroComCasas(2, 1e-4);
 export const geradorEquacao2: GeradorExercicio<number> = {
   topicoId: 'equacao-segundo-grau',
   formatoResposta: 'um número, fração ou raiz, ex.: 3 · -1,5 · (1+√5)/2',
-  problemaDeTexto: PROBLEMA_SOMA_PRODUTO,
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const pergunta = sortearPergunta(nivel, rng);
@@ -77,14 +75,6 @@ export const geradorEquacao2: GeradorExercicio<number> = {
       enunciadoTex: `${equacaoTex} = 0`,
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },
-      /*
-       * A história de «dois números somam S e multiplicam P» é exata só aqui:
-       * com a = 1 e as duas raízes inteiras positivas e distintas, a soma é
-       * −b, o produto é c, e a maior raiz é o maior dos dois números. Fora
-       * desse caso, vestir coeficientes sorteados numa história daria
-       * enunciado falso.
-       */
-      dadosDoProblema: historiaDeSomaEProduto(a, b, c, raizes),
       conceitos: semRaizes
         ? ['equacao2.discriminante']
         : ['equacao2.bhaskara', 'equacao2.discriminante'],

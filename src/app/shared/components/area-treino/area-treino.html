@@ -47,78 +47,49 @@
     </p>
   }
 
-  <!--
-    Espera OU pergunta, nunca as duas.
+  <div class="enunciado">
+    <p>{{ enunciado() }}</p>
+    <!-- Sem fórmula quando o exercício é só o enunciado: montar a expressão
+           a partir do texto é parte da pergunta. -->
+    @if (exercicio.enunciadoTex !== '') {
+      <app-formula [tex]="exercicio.enunciadoTex" [bloco]="true" />
+    }
+    @if (dica(); as dica) {
+      <p class="dica">{{ dica }}</p>
+    }
+  </div>
 
-    O aviso ocupa o LUGAR do exercício enquanto a história do primeiro lote não
-    chega. Antes ele aparecia ao lado da pergunta pronta, e isso fazia a tela
-    parecer pela metade: o aluno não sabia se devia responder o que estava
-    vendo ou aguardar outra coisa.
+  <app-campo-resposta
+    #campo
+    [(valor)]="s.resposta"
+    [rotulo]="i18n.t('treino.suaResposta')"
+    [ajuda]="ajudaDoFormato()"
+    [simbolos]="gerador().simbolos ?? []"
+    [estado]="estadoCampo()"
+    [bloqueado]="s.corrigido()"
+    (enviar)="aoEnviar()"
+  />
 
-    Só aparece quando há história a caminho PARA ESTE exercício. Com a LLM
-    desligada, fora do ar, ou em tópico que não declara história, não há espera
-    nenhuma — o exercício aparece na hora, como sempre apareceu.
-  -->
-  @if (esperandoHistoria()) {
-    <p class="escrevendo" role="status" aria-live="polite">
-      <span class="giro" aria-hidden="true"></span>
-      <span>{{ i18n.t('treino.escrevendoEnunciados') }}</span>
-    </p>
-  } @else {
-    <div class="enunciado">
-      <p>{{ enunciado() }}</p>
-      <!-- Sem fórmula quando o exercício é só o enunciado: montar a expressão
-           a partir do texto é parte da pergunta. E sem fórmula também quando uma
-           história veste o exercício num tópico que pede para esconder — ali ela
-           seria a modelagem já feita, ao lado do texto que pede para modelar. -->
-      @if (mostrarFormula()) {
-        <app-formula [tex]="exercicio.enunciadoTex" [bloco]="true" />
-      }
-      @if (dica(); as dica) {
-        <p class="dica">{{ dica }}</p>
-      }
-      <!-- O portão confere formato, não sentido: uma história pode passar e
-           ainda assim perguntar outra coisa. No modo ao vivo não há revisão
-           antes de publicar, então quem revisa é quem estuda. -->
-      @if (comHistoria()) {
-        <button type="button" class="descartar-historia" (click)="descartarHistoria()">
-          {{ i18n.t('treino.historiaErrada') }}
-        </button>
-      }
-    </div>
-
-    <app-campo-resposta
-      #campo
-      [(valor)]="s.resposta"
-      [rotulo]="i18n.t('treino.suaResposta')"
-      [ajuda]="ajudaDoFormato()"
-      [simbolos]="gerador().simbolos ?? []"
-      [estado]="estadoCampo()"
-      [bloqueado]="s.corrigido()"
-      (enviar)="aoEnviar()"
-    />
-
-    <div class="acoes">
-      @if (s.corrigido()) {
-        <button type="button" class="principal" (click)="proximo()">
-          {{ i18n.t('treino.proximo') }}
-        </button>
-      } @else {
-        <button
-          type="button"
-          class="principal"
-          [disabled]="s.resposta().trim() === ''"
-          (click)="s.responder()"
-        >
-          {{ i18n.t('treino.verificar') }}
-        </button>
-        <button type="button" class="secundario" (click)="s.revelarResolucao()">
-          {{ i18n.t('treino.naoSei') }}
-        </button>
-        <p class="aviso-desistencia">{{ i18n.t('treino.avisoDesistencia') }}</p>
-      }
-    </div>
-  }
+  <div class="acoes">
+    @if (s.corrigido()) {
+      <button type="button" class="principal" (click)="proximo()">
+        {{ i18n.t('treino.proximo') }}
+      </button>
+    } @else {
+      <button
+        type="button"
+        class="principal"
+        [disabled]="s.resposta().trim() === ''"
+        (click)="s.responder()"
+      >
+        {{ i18n.t('treino.verificar') }}
+      </button>
+      <button type="button" class="secundario" (click)="s.revelarResolucao()">
+        {{ i18n.t('treino.naoSei') }}
+      </button>
+      <p class="aviso-desistencia">{{ i18n.t('treino.avisoDesistencia') }}</p>
+    }
+  </div>
 
   <!-- aria-live para que o veredito seja anunciado sem roubar o foco. -->
   <div class="feedback" role="status" aria-live="polite">

@@ -1,12 +1,5 @@
 import { Injectable, computed, effect, signal } from '@angular/core';
 import {
-  ConfiguracaoDaLlm,
-  LLM_PADRAO,
-  definirLlm,
-  llmEhPadrao,
-  validarLlm,
-} from '@core/configuracao/models/llm.model';
-import {
   Ajuste,
   CONFIGURACAO_PADRAO,
   Configuracao,
@@ -17,7 +10,6 @@ import {
 
 const CHAVE = 'estudos-matematicos.configuracao.v1';
 const CHAVE_TOPICOS = 'estudos-matematicos.topicos-fora.v1';
-const CHAVE_LLM = 'estudos-matematicos.llm.v1';
 
 /**
  * Os números da progressão, como o aluno os deixou.
@@ -46,7 +38,6 @@ export class ConfiguracaoService {
    * Fica aqui desde que deixou de ser constante no código. Quem lê é
    * `HistoriasService`, e o que se ajusta é a tela de configurações.
    */
-  private readonly llm = signal<ConfiguracaoDaLlm>(carregarLlm());
 
   readonly configuracao = this.estado.asReadonly();
   readonly topicosRemovidos = this.fora.asReadonly();
@@ -56,29 +47,11 @@ export class ConfiguracaoService {
   readonly surpresa = computed(() => this.estado().surpresa);
 
   /** Está tudo como veio de fábrica? */
-  readonly intocada = computed(
-    () => ehPadrao(this.estado()) && this.fora().size === 0 && llmEhPadrao(this.llm()),
-  );
+  readonly intocada = computed(() => ehPadrao(this.estado()) && this.fora().size === 0);
 
   constructor() {
     effect(() => salvar(this.estado()));
     effect(() => salvarFora(this.fora()));
-    effect(() => salvarLlm(this.llm()));
-  }
-
-  /** A configuração da LLM, como a tela a lê. */
-  readonly configuracaoDaLlm = this.llm.asReadonly();
-
-  /** A LLM está de fábrica? */
-  readonly llmIntocada = computed(() => llmEhPadrao(this.llm()));
-
-  /** Troca um campo da LLM. Texto livre, menos o lote, que é preso no limite. */
-  definirLlm(campo: keyof ConfiguracaoDaLlm, valor: string | number): void {
-    this.llm.update((atual) => definirLlm(atual, campo, valor));
-  }
-
-  redefinirLlm(): void {
-    this.llm.set(LLM_PADRAO);
   }
 
   /** Tira o tópico do plano, ou devolve-o. */
@@ -141,23 +114,5 @@ function salvarFora(fora: ReadonlySet<string>): void {
     localStorage.setItem(CHAVE_TOPICOS, JSON.stringify([...fora]));
   } catch {
     // Janela privada: vale só para esta sessão.
-  }
-}
-
-function carregarLlm(): ConfiguracaoDaLlm {
-  try {
-    const gravado = localStorage.getItem(CHAVE_LLM);
-
-    return gravado === null ? LLM_PADRAO : validarLlm(JSON.parse(gravado) as unknown);
-  } catch {
-    return LLM_PADRAO;
-  }
-}
-
-function salvarLlm(llm: ConfiguracaoDaLlm): void {
-  try {
-    localStorage.setItem(CHAVE_LLM, JSON.stringify(llm));
-  } catch {
-    // Aba privada ou armazenamento cheio: a escolha vale só para esta sessão.
   }
 }

@@ -274,6 +274,30 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
   ela é trabalho de reescrever cada uma sabendo de onde a fórmula vem — não de achar e
   substituir.
 
+- [x] **Enunciados escritos por LLM local — tentado e REMOVIDO (14–15/11).** O desenho
+      funcionava no papel: o código sorteava os números e calculava a resposta, como sempre, e a
+      LLM só vestia aquilo numa história com lacunas (`{0}`, `{1}`), nas três línguas de uma vez,
+      com um portão que recusava dígito solto, lacuna faltando, ordem trocada entre idiomas e
+      metatexto. Chegou a rodar em 59 tópicos, com Configurações próprias e fila com cache.
+      **Foi removido por completo a pedido**, depois de uma semana de defeitos em cadeia — e eles
+      valem registro, porque são o que ficou aprendido:
+  - **o portão confere formato, não sentido.** Passaram histórias que contam cargas e
+    perguntam voltas, e seis de oito de equação do primeiro grau descreviam outra conta
+    («já completou {1} viagens» é `{2} − {0}×{1}`, não `({2} − {1})/{0}`);
+  - **a troca de texto na tela.** O enunciado seco aparecia, a LLM respondia em segundo plano
+    e o texto era substituído na cara de quem já estava lendo. Esperar antes de mostrar
+    resolvia isso — e trazia 50 a 120 segundos de tela parada por tópico;
+  - **cada regra do portão atrapalhou algo que ela devia proteger**: «Dois ônibus partem…»
+    caía por «dois», «{1} por cento ao mês» caía por «cento», e histórias boas caíam por
+    tamanho;
+  - **o custo de manutenção era de quem estuda.** Sem etapa de revisão, o revisor era o
+    aluno, no meio do exercício.
+
+  A lição, para a próxima ideia do tipo: **enunciado é conteúdo, não apresentação.** Um texto
+  que muda o que a pergunta significa não é detalhe de interface, e nenhum validador de
+  formato alcança isso. Os 135 geradores escritos à mão seguem sendo o que o site tem de mais
+  confiável.
+
 ---
 
 ## 5. Decisões: remover ou fundir

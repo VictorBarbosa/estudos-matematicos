@@ -104,48 +104,6 @@
   }
 }
 
-/*
- * O aviso de que a LLM está escrevendo.
- *
- * Discreto e visível ao mesmo tempo: fica numa faixa acima do enunciado, com o
- * mesmo tratamento do bloco de texto e um giro à esquerda. Não é erro nem
- * alerta — é uma espera que pode ser ignorada, então nada de cor de aviso.
- */
-.escrevendo {
-  display: flex;
-  align-items: center;
-  gap: var(--esp-2);
-  margin: 0 0 var(--esp-2);
-  padding: var(--esp-2) var(--esp-3);
-  border: 1px dashed var(--borda-forte);
-  border-radius: var(--raio-md);
-  background: var(--superficie-2);
-  color: var(--texto-suave);
-  font-size: var(--texto-sm);
-
-  .giro {
-    inline-size: 0.875rem;
-    block-size: 0.875rem;
-    border: 2px solid var(--borda-forte);
-    border-top-color: var(--acento, currentcolor);
-    border-radius: 50%;
-    animation: girar 0.8s linear infinite;
-    flex: none;
-  }
-}
-
-@keyframes girar {
-  to {
-    rotate: 360deg;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .escrevendo .giro {
-    animation-duration: 2.4s;
-  }
-}
-
 .enunciado {
   background: var(--superficie-2);
   border-radius: var(--raio-md);
@@ -322,24 +280,6 @@
   border-radius: 0 var(--raio-md) var(--raio-md) 0;
   background: var(--erro-suave);
   font-size: var(--texto-sm);
-}
-
-/* O botão de descarte é discreto de propósito: ele existe para o caso raro em
-   que a história passou pelo portão e ainda assim não faz sentido. */
-.descartar-historia {
-  margin: var(--esp-2) 0 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--texto-suave);
-  font-size: 0.8125rem;
-  text-decoration: underline;
-  cursor: pointer;
-
-  &:hover,
-  &:focus-visible {
-    color: var(--erro);
-  }
 }
 
 /* Aviso, não espera: o exercício já está na tela quando ele aparece. */

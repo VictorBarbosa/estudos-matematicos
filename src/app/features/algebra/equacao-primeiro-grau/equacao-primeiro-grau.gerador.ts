@@ -1,5 +1,4 @@
 import { Fracao, mmcLista, observarSimplificacao, resolverLinearComPassos } from '@core/math';
-import { PROBLEMA_EQUACAO1 } from '@features/algebra/equacao-primeiro-grau/equacao-primeiro-grau.problema';
 import { Rng } from '@core/treino/rng/rng';
 import {
   Armadilha,
@@ -44,7 +43,6 @@ export const geradorEquacao1: GeradorExercicio<Fracao> = {
   // decimal exato, então a resposta certa era recusada sem explicação.
   formatoResposta: 'inteiro ou fração, ex.: 4 ou -3/2 — decimal só se for exato',
 
-  problemaDeTexto: PROBLEMA_EQUACAO1,
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     const pergunta = sortearPergunta(nivel, rng);
@@ -68,12 +66,6 @@ export const geradorEquacao1: GeradorExercicio<Fracao> = {
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },
       conceitos: ['equacao1.igualdade', 'equacao1.verificacao'],
-      // A história só serve para contagem: coeficientes positivos, total
-      // acima da parcela fixa e raiz inteira positiva.
-      dadosDoProblema:
-        a > 0 && b > 0 && c > b && gabarito.ehInteira && gabarito.numerador > 0
-          ? [a, b, c]
-          : undefined,
       armadilhas: semColisoes(
         [
           // Somou b em vez de subtrair.

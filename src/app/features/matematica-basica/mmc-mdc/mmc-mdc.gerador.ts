@@ -1,5 +1,4 @@
 import { fatorar, mdc, mdcComPassos, mmc, mmcComPassos } from '@core/math';
-import { PROBLEMA_MMC } from '@features/matematica-basica/mmc-mdc/mmc-mdc.problema';
 import { Rng } from '@core/treino/rng/rng';
 import { Armadilha, Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
 
@@ -15,7 +14,6 @@ type Alvo = 'mdc' | 'mmc';
 export const geradorMmcMdc: GeradorExercicio<number> = {
   topicoId: 'mmc-mdc',
   formatoResposta: 'um número inteiro, ex.: 36',
-  problemaDeTexto: PROBLEMA_MMC,
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     const alvo: Alvo = rng.booleano() ? 'mdc' : 'mmc';
@@ -34,8 +32,6 @@ export const geradorMmcMdc: GeradorExercicio<number> = {
       gabarito: resolucao.resultado,
       resolucao,
       conceitos: ['mmc-mdc.fatoracao', alvo === 'mdc' ? 'mmc-mdc.mdc' : 'mmc-mdc.mmc'],
-      // Só o MMC: a história do MDC é de partilha, não de reencontro.
-      dadosDoProblema: alvo === 'mmc' ? [a, b] : undefined,
       armadilhas: armadilhasDe(a, b, alvo),
       dica: nivel === 'facil' ? 'Comece fatorando os dois números em primos.' : undefined,
     };

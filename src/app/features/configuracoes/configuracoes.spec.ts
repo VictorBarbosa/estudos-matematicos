@@ -66,106 +66,20 @@ describe('Configuracoes', () => {
     globalThis.fetch = fetchOriginal;
   });
 
-  it('mostra os seis blocos, e a LLM entre eles', () => {
-    // Eram cinco. O sexto é a LLM local, que deixou de ser constante no código:
-    // modelo, endereço, raciocínio e lote agora se ajustam aqui.
-    expect(fixture.nativeElement.querySelectorAll('.bloco').length).toBe(6);
-    // Dezenove controles: quatorze números da progressão, a caixa da surpresa,
-    // os dois campos de texto da LLM, o lote — e dois `<select>`, modelo e
-    // raciocínio. O modelo era `<input>` e virou `<select>`.
+  it('mostra os cinco blocos de ajuste', () => {
+    // Eram seis enquanto existiu o bloco da LLM local, removido com o
+    // mecanismo de histórias: sem ele, voltam a ser os cinco da progressão.
+    expect(fixture.nativeElement.querySelectorAll('.bloco').length).toBe(5);
+    // Quinze controles: os quatorze números da progressão e a caixa da
+    // prova surpresa.
     expect(fixture.nativeElement.querySelectorAll('.ajustes input, .ajustes select').length).toBe(
-      19,
+      15,
     );
-    // Os numéricos são os quatorze da progressão mais o lote da LLM.
-    expect(fixture.nativeElement.querySelectorAll('.ajustes input[type="number"]').length).toBe(15);
+    expect(fixture.nativeElement.querySelectorAll('.ajustes input[type="number"]').length).toBe(14);
     expect(texto()).toContain('Para abrir a próxima etapa');
     expect(texto()).toContain('Prova final da sessão');
     expect(texto()).toContain('Prova surpresa');
     expect(texto()).toContain('O seu plano de estudo');
-    expect(texto()).toContain('LLM local');
-  });
-
-  it('o modelo da LLM se troca pela tela, e fica gravado', () => {
-    const campo = fixture.nativeElement.querySelector('#llm-modelo') as HTMLSelectElement;
-
-    expect(campo.value).toBe('gpt-oss:20b');
-
-    campo.value = 'ministral-3:3b';
-    campo.dispatchEvent(new Event('change'));
-    fixture.detectChanges();
-
-    expect(config.configuracaoDaLlm().modelo).toBe('ministral-3:3b');
-  });
-
-  it('o seletor mostra TODOS os modelos do servidor, não só o escolhido', async () => {
-    /*
-     * O defeito relatado: a lista mostrava um modelo só. Era um `datalist`, que
-     * esconde as opções até o clique na seta — e com a lista vazia (servidor
-     * fora do ar) o único nome à vista era o do próprio campo. Este teste fixa
-     * o seletor com três modelos instalados.
-     */
-    await fixture.whenStable();
-    const assistente = TestBed.inject(AssistenteService);
-    await assistente.carregarModelos();
-    fixture.detectChanges();
-
-    const opcoes = [
-      ...(fixture.nativeElement.querySelectorAll(
-        '#llm-modelo option',
-      ) as NodeListOf<HTMLOptionElement>),
-    ];
-    const nomes = opcoes.map((opcao) => opcao.value);
-
-    expect(nomes).toContain('ministral-3:3b');
-    expect(nomes).toContain('qwen3.5:0.8b-mlx');
-    expect(nomes).toContain('gpt-oss:20b');
-    // E o escolhido aparece marcado, para o seletor não trocar sozinho.
-    expect(opcoes.find((opcao) => opcao.value === 'gpt-oss:20b')!.selected).toBe(true);
-  });
-
-  it('o botão de reler o servidor continua na tela', () => {
-    // Ele sumiu numa edição e nada avisou: sem ele, quem instala um modelo
-    // novo precisa recarregar a página inteira para vê-lo na lista.
-    const botao = [
-      ...(fixture.nativeElement.querySelectorAll('button') as NodeListOf<HTMLButtonElement>),
-    ].find((candidato) => candidato.textContent?.includes('Reler do servidor'));
-
-    expect(botao, 'o botão de reler os modelos sumiu').toBeDefined();
-  });
-
-  it('o lote fica preso entre um e quatro', () => {
-    const campo = fixture.nativeElement.querySelector('#llm-lote') as HTMLInputElement;
-
-    campo.value = '99';
-    campo.dispatchEvent(new Event('change'));
-    fixture.detectChanges();
-
-    expect(config.configuracaoDaLlm().lote).toBe(4);
-  });
-
-  it('endereço em branco é a herança do assistente, e isso é o padrão', () => {
-    const campo = fixture.nativeElement.querySelector('#llm-endpoint') as HTMLInputElement;
-
-    expect(campo.value).toBe('');
-
-    campo.value = 'http://192.168.1.9:11434';
-    campo.dispatchEvent(new Event('change'));
-    fixture.detectChanges();
-
-    expect(config.configuracaoDaLlm().endpoint).toBe('http://192.168.1.9:11434');
-  });
-
-  it('o raciocínio é um grau, e não um sim ou não', () => {
-    const campo = fixture.nativeElement.querySelector('#llm-raciocinio') as HTMLSelectElement;
-
-    // O padrão medido é `low`; a tela existe para quem quiser desligar.
-    expect(campo.value).toBe('low');
-
-    campo.value = 'false';
-    campo.dispatchEvent(new Event('change'));
-    fixture.detectChanges();
-
-    expect(config.configuracaoDaLlm().raciocinio).toBe('false');
   });
 
   it('a prova surpresa liga e desliga por caixa de seleção', () => {

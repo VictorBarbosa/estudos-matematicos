@@ -1,5 +1,4 @@
 import { Rng } from '@core/treino/rng/rng';
-import { PROBLEMA_POLIEDROS } from '@features/geometria/poliedros/poliedros.problema';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
@@ -68,7 +67,6 @@ function catalogo(nivel: Nivel): Exemplo[] {
  */
 export const geradorPoliedros: GeradorExercicio<number> = {
   topicoId: 'poliedros',
-  problemaDeTexto: PROBLEMA_POLIEDROS,
 
   formatoResposta: 'um número inteiro, ex.: 12',
 
@@ -142,13 +140,6 @@ function euler(nivel: Nivel, rng: Rng): Exercicio<number> {
       ],
     },
     conceitos: ['poliedros.euler'],
-    /*
-     * A história veste só a contagem: os dois números dados entram como lacunas,
-     * na ordem em que o enunciado os cita. A pergunta é a mesma em qualquer
-     * caso — falta uma das três grandezas —, então a declaração serve para os
-     * três desfechos sem uma forma por desfecho.
-     */
-    dadosDoProblema: [p[dados[0]!], p[dados[1]!]],
     armadilhas: semColisoes(
       [
         {

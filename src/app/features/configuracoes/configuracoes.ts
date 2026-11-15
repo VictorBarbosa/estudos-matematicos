@@ -9,13 +9,6 @@ import {
   LIMITES,
 } from '@core/configuracao/models/configuracao.model';
 import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
-import {
-  ConfiguracaoDaLlm,
-  LOTE_MAXIMO,
-  LOTE_MINIMO,
-  LLM_PADRAO,
-} from '@core/configuracao/models/llm.model';
-import { AssistenteService } from '@core/assistente/services/assistente.service';
 import { CURRICULO } from '@curriculo/curriculo';
 import { I18nService } from '@core/i18n/services/i18n.service';
 
@@ -89,83 +82,11 @@ export class Configuracoes {
   protected readonly i18n = inject(I18nService);
   private readonly servico = inject(ConfiguracaoService);
   private readonly provaSurpresa = inject(ProvaSurpresaService);
-  private readonly assistente = inject(AssistenteService);
-
   /** A prova surpresa aberta agora, se houver. */
   protected readonly surpresaAtiva = this.provaSurpresa.ativa;
   protected readonly trancados = computed(() => this.provaSurpresa.trancadosAtivos().size);
 
   protected readonly intocada = this.servico.intocada;
-
-  /*
-   * A LLM local.
-   *
-   * É o único bloco da tela que não é numérico: tem endereço, modelo, um grau
-   * de raciocínio e o tamanho do lote. Por isso não passa por `blocos()` — um
-   * campo numérico com `step=1` não desenha um seletor de modelo.
-   */
-  protected readonly llm = this.servico.configuracaoDaLlm;
-  protected readonly llmIntocada = this.servico.llmIntocada;
-  protected readonly llmPadrao = LLM_PADRAO;
-  protected readonly loteMinimo = LOTE_MINIMO;
-  protected readonly loteMaximo = LOTE_MAXIMO;
-
-  /** Os modelos instalados no servidor, para o seletor. */
-  protected readonly modelos = this.assistente.modelos;
-
-  /**
-   * O motivo de a lista estar vazia, quando houver.
-   *
-   * Vem da sondagem do assistente, que já traduz as três falhas possíveis —
-   * servidor desligado, origem não autorizada e permissão de rede local
-   * negada — num texto que diz o que fazer. Sem ele, «nenhum modelo» é um beco
-   * sem saída.
-   */
-  protected readonly erroDoServidor = computed(() =>
-    this.modelos().length === 0 ? this.assistente.erro() : null,
-  );
-
-  /** `4.3 GB`, para o seletor dizer o que é grande e o que é pequeno. */
-  protected tamanho(bytes: number): string {
-    return bytes === 0 ? '' : `${(bytes / 1e9).toFixed(1)} GB`;
-  }
-
-  /**
-   * O modelo escolhido não está instalado?
-   *
-   * Acontece de verdade: o padrão é `gpt-oss:20b`, e quem nunca o baixou recebe
-   * todo lote falhando em silêncio. Dizer isso aqui é mais útil que deixar o
-   * aluno descobrir pelo botão do assistente.
-   */
-  protected readonly modeloAusente = computed(() => {
-    const instalados = this.modelos();
-    const escolhido = this.llm().modelo;
-
-    return instalados.length > 0 && !instalados.some((modelo) => modelo.nome === escolhido);
-  });
-
-  protected trocarCampoLlm(campo: keyof ConfiguracaoDaLlm, valor: string): void {
-    this.servico.definirLlm(campo, valor);
-  }
-
-  protected redefinirLlm(): void {
-    this.servico.redefinirLlm();
-  }
-
-  /**
-   * Relê a lista de modelos do servidor.
-   *
-   * O seletor precisa dos modelos INSTALADOS, e isso muda enquanto o site está
-   * aberto — daí o botão. A leitura que o assistente já faz ao abrir a janela
-   * não serve: aqui a tela pode ser aberta sem o assistente.
-   */
-  protected async recarregarModelos(): Promise<void> {
-    await this.assistente.carregarModelos();
-  }
-
-  constructor() {
-    void this.assistente.carregarModelos();
-  }
 
   protected readonly blocos = computed<readonly Bloco[]>(() => {
     const atual = this.servico.configuracao();

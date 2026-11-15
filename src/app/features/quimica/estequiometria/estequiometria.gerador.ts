@@ -9,7 +9,6 @@ import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 import { enunciadoTrilingue } from '@core/treino/textos/texto-trilingue';
-import { PROBLEMA_ESTEQUIOMETRIA } from '@features/quimica/estequiometria/estequiometria.problema';
 import {
   DICA_PROPORCAO,
   DICA_TRAJETO,
@@ -130,7 +129,6 @@ export const geradorEstequiometria: GeradorExercicio<number> = {
   topicoId: 'estequiometria',
   formatoResposta: 'um número, 2 casas decimais',
 
-  problemaDeTexto: PROBLEMA_ESTEQUIOMETRIA,
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     switch (sortearPergunta(nivel, rng)) {
@@ -258,9 +256,6 @@ function exercicioMassaDeProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
     gabarito: resultado,
     resolucao: { resultado, passos },
     conceitos: ['esteq.massa', 'esteq.proporcao'],
-    // As duas FÓRMULAS vão como dado, e é essa a diferença que faz história
-    // de química ser possível: a LLM se refere a elas e nunca as escolhe.
-    dadosDoProblema: [massa, de.formula, para.formula],
     armadilhas: semColisoes(
       [
         {
