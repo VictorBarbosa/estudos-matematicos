@@ -10,32 +10,48 @@ export const rotas: Routes = [
   {
     path: 'soma-de-riemann',
     title: 'Soma de Riemann · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-2/soma-de-riemann/soma-de-riemann').then((m) => m.SomaDeRiemann),
+    loadComponent: () =>
+      import('@features/calculo-2/soma-de-riemann/soma-de-riemann').then((m) => m.SomaDeRiemann),
   },
   {
     path: 'integral-indefinida',
     title: 'Integral indefinida · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-2/integral-indefinida/integral-indefinida').then((m) => m.IntegralIndefinida),
+    loadComponent: () =>
+      import('@features/calculo-2/integral-indefinida/integral-indefinida').then(
+        (m) => m.IntegralIndefinida,
+      ),
   },
   {
     path: 'integral-definida',
     title: 'Integral definida · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-2/integral-definida/integral-definida').then((m) => m.IntegralDefinida),
+    loadComponent: () =>
+      import('@features/calculo-2/integral-definida/integral-definida').then(
+        (m) => m.IntegralDefinida,
+      ),
   },
   {
     path: 'teorema-fundamental',
     title: 'Teorema fundamental do cálculo · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-2/teorema-fundamental/teorema-fundamental').then((m) => m.TeoremaFundamental),
+    loadComponent: () =>
+      import('@features/calculo-2/teorema-fundamental/teorema-fundamental').then(
+        (m) => m.TeoremaFundamental,
+      ),
   },
   {
     path: 'tecnicas-de-integracao',
     title: 'Técnicas de integração · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao').then((m) => m.TecnicasDeIntegracao),
+    loadComponent: () =>
+      import('@features/calculo-2/tecnicas-de-integracao/tecnicas-de-integracao').then(
+        (m) => m.TecnicasDeIntegracao,
+      ),
   },
   {
     path: 'aplicacoes-da-integral',
     title: 'Aplicações da integral · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral').then((m) => m.AplicacoesDaIntegral),
+    loadComponent: () =>
+      import('@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral').then(
+        (m) => m.AplicacoesDaIntegral,
+      ),
   },
   {
     path: 'fisica-com-calculo',
@@ -56,12 +72,16 @@ export const rotas: Routes = [
   {
     path: 'integrais-improprias',
     title: 'Integrais impróprias · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-2/integrais-improprias/integrais-improprias').then((m) => m.IntegraisImproprias),
+    loadComponent: () =>
+      import('@features/calculo-2/integrais-improprias/integrais-improprias').then(
+        (m) => m.IntegraisImproprias,
+      ),
   },
   {
     path: 'series-de-taylor',
     title: 'Séries de Taylor e Maclaurin · Estudos Matemáticos',
-    loadComponent: () => import('@features/calculo-2/series-de-taylor/series-de-taylor').then((m) => m.SeriesDeTaylor),
+    loadComponent: () =>
+      import('@features/calculo-2/series-de-taylor/series-de-taylor').then((m) => m.SeriesDeTaylor),
   },
   { path: '', pathMatch: 'full', redirectTo: 'soma-de-riemann' },
 ];

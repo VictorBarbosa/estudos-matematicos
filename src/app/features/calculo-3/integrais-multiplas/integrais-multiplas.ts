@@ -48,13 +48,10 @@ export class IntegraisMultiplas {
 
   protected readonly integral = computed(
     () =>
-      integralDuplaComPassos(this.funcao(), this.x0(), this.x1(), this.y0(), this.y1())
-        .resultado,
+      integralDuplaComPassos(this.funcao(), this.x0(), this.x1(), this.y0(), this.y1()).resultado,
   );
 
-  protected readonly area = computed(
-    () => (this.x1() - this.x0()) * (this.y1() - this.y0()),
-  );
+  protected readonly area = computed(() => (this.x1() - this.x0()) * (this.y1() - this.y0()));
 
   protected readonly media = computed(() => this.integral() / this.area());
 
@@ -64,10 +61,7 @@ export class IntegraisMultiplas {
     const y = this.yDaFatia();
     const [x0, x1] = [this.x0(), this.x1()];
 
-    return (
-      (q.a * (x1 ** 3 - x0 ** 3)) / 3 +
-      (q.b * y * y + q.f0) * (x1 - x0)
-    );
+    return (q.a * (x1 ** 3 - x0 ** 3)) / 3 + (q.b * y * y + q.f0) * (x1 - x0);
   });
 
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {
@@ -99,9 +93,8 @@ export class IntegraisMultiplas {
     yMin: 0,
   }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      this.texto('descricaoGrafico', { y: this.yDaFatia() }),
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { y: this.yDaFatia() }),
   );
 
   constructor() {

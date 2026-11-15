@@ -33,16 +33,44 @@ import banco from '@core/enunciados/enunciados.json';
  * substituí-los.
  */
 
-/** Uma entrada do arquivo, exatamente como ela é escrita. */
+/**
+ * Uma entrada do arquivo, exatamente como ela é escrita.
+ *
+ * O arquivo guarda duas naturezas de entrada, e é o que ela TRAZ que diz qual
+ * é:
+ *
+ * - com `nivel` e `dados-calculo`, é uma **pergunta pronta** — os números já
+ *   estão escritos, e `total` é a resposta;
+ * - com `forma` e sem `dados-calculo`, é um **molde** — o texto da pergunta
+ *   que um gerador monta, e os números chegam dele a cada sorteio.
+ *
+ * São o mesmo arquivo de propósito: para quem escreve, as duas são a mesma
+ * coisa — o texto de uma pergunta, com lacunas `{dados-calculo.x}` —, e
+ * separá-las em dois arquivos obrigaria a decidir, antes de escrever, de qual
+ * lado a pergunta cai.
+ */
 export interface EnunciadoDoBanco {
   /** O identificador do tópico, como ele aparece no currículo. */
   readonly topico: string;
-  readonly nivel: string;
+  /** O nível, nas perguntas prontas. Os moldes não têm: quem decide é o gerador. */
+  readonly nivel?: string;
+  /** Qual pergunta este molde faz. Só nos moldes. */
+  readonly forma?: string;
   /** O texto nas três línguas. `br` é o português, como no arquivo. */
+  /**
+   * O texto. `br` é o português e é obrigatório; `fr` e `en` são opcionais.
+   *
+   * Opcionais por causa dos moldes: 110 dos geradores do site nunca tiveram
+   * tradução de enunciado — o texto deles existia só em português, dentro do
+   * `.ts`. Exigir as três línguas significaria traduzir novecentas frases
+   * antes de poder mover qualquer uma. Sem o campo, a tela cai no português,
+   * que é o que ela já fazia; com ele, passa a traduzir — e traduzir vira
+   * preencher um campo neste arquivo, não editar um gerador.
+   */
   readonly enunciado: {
     readonly br: string;
-    readonly fr: string;
-    readonly en: string;
+    readonly fr?: string;
+    readonly en?: string;
   };
   /**
    * Os valores que entram no texto, mais o `total`.
@@ -54,7 +82,12 @@ export interface EnunciadoDoBanco {
    * Os números se escrevem com PONTO decimal («7.5»), porque o separador é do
    * idioma: o site mostra vírgula em português e francês e ponto em inglês.
    */
-  readonly 'dados-calculo': Readonly<Record<string, string>>;
+  readonly 'dados-calculo'?: Readonly<Record<string, string>>;
+}
+
+/** A entrada é uma pergunta pronta? Senão, é molde de gerador. */
+export function ehPerguntaPronta(entrada: EnunciadoDoBanco): boolean {
+  return entrada['dados-calculo'] !== undefined;
 }
 
 /** A chave reservada: a resposta de conferência. */
@@ -78,14 +111,22 @@ export const CHAVES_RESERVADAS: readonly string[] = [CHAVE_DO_TOTAL, 'acao'];
  */
 const ENTRADAS = banco as unknown as readonly EnunciadoDoBanco[];
 
-/** Tudo o que está no arquivo, para os guardas conferirem. */
-export function todosOsEnunciados(): readonly EnunciadoDoBanco[] {
+/** Tudo o que está no arquivo, as duas naturezas juntas. */
+export function todasAsEntradas(): readonly EnunciadoDoBanco[] {
   return ENTRADAS;
+}
+
+/** Só as perguntas prontas — as que o guarda do banco confere uma a uma. */
+export function todosOsEnunciados(): readonly EnunciadoDoBanco[] {
+  return ENTRADAS.filter(ehPerguntaPronta);
 }
 
 /** As entradas de um tópico e nível. Vazio quando não há nenhuma. */
 export function enunciadosDe(topicoId: string, nivel: Nivel): readonly EnunciadoDoBanco[] {
-  return ENTRADAS.filter((entrada) => entrada.topico === topicoId && entrada.nivel === nivel);
+  return ENTRADAS.filter(
+    (entrada) =>
+      entrada.topico === topicoId && entrada.nivel === nivel && ehPerguntaPronta(entrada),
+  );
 }
 
 /** Os nomes dos valores citados no texto, na ordem em que aparecem. */
@@ -133,9 +174,11 @@ export function exercicioDoBanco<T>(
   indice: number,
 ): Exercicio<T> | undefined {
   const dados = entrada['dados-calculo'];
-  const total = dados[CHAVE_DO_TOTAL];
+  const total = dados?.[CHAVE_DO_TOTAL];
 
-  if (total === undefined) {
+  // Sem dados ou sem total não é pergunta pronta: é molde, e molde não vira
+  // exercício sozinho — quem o veste com números é o gerador do tópico.
+  if (dados === undefined || total === undefined) {
     return undefined;
   }
 
@@ -146,6 +189,8 @@ export function exercicioDoBanco<T>(
   }
 
   const emPortugues = vestirTexto(entrada.enunciado.br, dados, 'pt');
+  const emFrances = entrada.enunciado.fr ?? entrada.enunciado.br;
+  const emIngles = entrada.enunciado.en ?? entrada.enunciado.br;
 
   return {
     // O índice entra no id para que duas entradas iguais do mesmo tópico não
@@ -154,8 +199,8 @@ export function exercicioDoBanco<T>(
     nivel: entrada.nivel as Nivel,
     enunciado: emPortugues,
     traducoes: {
-      fr: { enunciado: vestirTexto(entrada.enunciado.fr, dados, 'fr') },
-      en: { enunciado: vestirTexto(entrada.enunciado.en, dados, 'en') },
+      fr: { enunciado: vestirTexto(emFrances, dados, 'fr') },
+      en: { enunciado: vestirTexto(emIngles, dados, 'en') },
     },
     // Sem fórmula: o enunciado do banco é texto, e montar a conta a partir
     // dele é parte da pergunta.

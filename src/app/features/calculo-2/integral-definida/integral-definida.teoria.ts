@@ -45,7 +45,10 @@ export const TEORIA_DEFINIDA: readonly Teoria[] = [
       'sem nenhuma conta nova.',
     formulas: [
       { tex: '\\int_{a}^{b} = \\int_{a}^{c} + \\int_{c}^{b}', legenda: 'Aditividade.' },
-      { tex: '\\int_{b}^{a} f\\,dx = -\\int_{a}^{b} f\\,dx', legenda: 'Inverter limites troca o sinal.' },
+      {
+        tex: '\\int_{b}^{a} f\\,dx = -\\int_{a}^{b} f\\,dx',
+        legenda: 'Inverter limites troca o sinal.',
+      },
       { tex: '\\int_{a}^{a} f\\,dx = 0' },
     ],
     demonstracao: [
@@ -76,9 +79,7 @@ export const TEORIA_DEFINIDA: readonly Teoria[] = [
       'Uma integral pode dar zero com uma área geométrica enorme, desde que metade esteja ' +
       'acima e metade abaixo do eixo. Para obter a área de fato, é preciso separar os ' +
       'trechos pelo sinal e somar os módulos.',
-    formulas: [
-      { tex: '\\int_{-1}^{1} x\\,dx = 0 \\qquad \\text{mas a área é } 1' },
-    ],
+    formulas: [{ tex: '\\int_{-1}^{1} x\\,dx = 0 \\qquad \\text{mas a área é } 1' }],
     demonstracao: [
       {
         descricao: 'De −1 a 0 a função é negativa; de 0 a 1, positiva.',

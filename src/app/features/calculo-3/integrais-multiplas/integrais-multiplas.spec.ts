@@ -124,10 +124,7 @@ describe('integrais múltiplas', () => {
     // A armadilha do tópico: ∫∫ dr dθ dá 2πR, que é comprimento, não área.
     const semJacobiano = 2 * Math.PI * 3;
 
-    expect(integralPolarComPassos(1, 3, 2 * Math.PI).resultado).not.toBeCloseTo(
-      semJacobiano,
-      6,
-    );
+    expect(integralPolarComPassos(1, 3, 2 * Math.PI).resultado).not.toBeCloseTo(semJacobiano, 6);
   });
 
   it('meio círculo dá metade da área', () => {

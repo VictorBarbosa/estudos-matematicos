@@ -17,10 +17,9 @@
         <h2>{{ i18n.t('sidebar.revisao') }}</h2>
         <p>
           {{
-            i18n.t(
-              revisaoDeHoje().length === 1 ? 'home.revisaoUm' : 'home.revisaoVarios',
-              { quantos: revisaoDeHoje().length }
-            )
+            i18n.t(revisaoDeHoje().length === 1 ? 'home.revisaoUm' : 'home.revisaoVarios', {
+              quantos: revisaoDeHoje().length,
+            })
           }}
         </p>
       </div>

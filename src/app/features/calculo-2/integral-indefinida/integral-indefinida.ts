@@ -43,9 +43,7 @@ export class IntegralIndefinida {
   /** A constante escolhida, para ver a família de primitivas. */
   protected readonly constante = signal(0);
 
-  protected readonly integrando = computed(() =>
-    Polinomio.de(this.c(), this.b(), this.a()),
-  );
+  protected readonly integrando = computed(() => Polinomio.de(this.c(), this.b(), this.a()));
 
   protected readonly primitiva = computed(() => this.integrando().integrar(this.constante()));
 

@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Polinomio,
   dividirComPassos,
@@ -89,7 +90,11 @@ function exercicioResto(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-resto-${p.coeficientes.join('_')}-${a}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é o resto da divisão de P(x) por (x ${sinal} ${Math.abs(a)})?`,
+    enunciado: textoDoMolde(
+      moldesDe('polinomios', 'forma-1')[0]!,
+      { sinal, v1: Math.abs(a) },
+      'pt',
+    ),
     enunciadoTex: `P(x) = ${p.paraTex()}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -134,7 +139,7 @@ function exercicioGrauQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-grau-${grauP}-${grauD}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Dividindo um polinômio de grau ${grauP} por um de grau ${grauD}, qual é o grau do quociente?`,
+    enunciado: textoDoMolde(moldesDe('polinomios', 'forma-2')[0]!, { grauP, grauD }, 'pt'),
     enunciadoTex: `\\frac{${p.paraTex()}}{${d.paraTex()}}`,
     gabarito,
     resolucao: {
@@ -215,8 +220,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-raiz-${raizes.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'Todas as raízes deste polinômio são racionais. Considerando TODAS elas, qual é a menor?',
+    enunciado: textoDoMolde(moldesDe('polinomios', 'forma-3')[0]!, {}, 'pt'),
     enunciadoTex: `P(x) = ${p.paraTex()}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -280,7 +284,11 @@ function exercicioCoeficienteQuociente(nivel: Nivel, rng: Rng): Exercicio<number
   return {
     id: `poli-coef-${p.coeficientes.join('_')}-${a}-${grau}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Divida P(x) por (x ${sinal} ${Math.abs(a)}). No quociente, qual é ${termo}?`,
+    enunciado: textoDoMolde(
+      moldesDe('polinomios', 'forma-4')[0]!,
+      { sinal, v1: Math.abs(a), termo },
+      'pt',
+    ),
     enunciadoTex: `P(x) = ${p.paraTex()}`,
     gabarito,
     resolucao: {

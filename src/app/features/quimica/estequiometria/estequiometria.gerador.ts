@@ -129,7 +129,6 @@ export const geradorEstequiometria: GeradorExercicio<number> = {
   topicoId: 'estequiometria',
   formatoResposta: 'um número, 2 casas decimais',
 
-
   gerar(nivel: Nivel, rng: Rng): Exercicio<number> {
     switch (sortearPergunta(nivel, rng)) {
       case 'reagente':

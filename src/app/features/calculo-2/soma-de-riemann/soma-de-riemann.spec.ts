@@ -50,9 +50,7 @@ describe('geradorRiemann', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('valor EXATO')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('valor EXATO'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('valor EXATO'))!;
 
     const resultado = corrigir(geradorRiemann, exercicio, String(armadilha.resposta));
     expect(resultado.veredito).toBe('incorreto');

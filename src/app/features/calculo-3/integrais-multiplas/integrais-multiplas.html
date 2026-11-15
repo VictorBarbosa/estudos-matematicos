@@ -12,12 +12,22 @@
     <section class="painel grade-controles">
       <app-controle-parametro [(valor)]="a" [rotulo]="texto('rotuloCoefX2')" [min]="0" [max]="3" />
       <app-controle-parametro [(valor)]="b" [rotulo]="texto('rotuloCoefY2')" [min]="0" [max]="3" />
-      <app-controle-parametro [(valor)]="constante" [rotulo]="texto('rotuloTermoConst')" [min]="0" [max]="12" />
+      <app-controle-parametro
+        [(valor)]="constante"
+        [rotulo]="texto('rotuloTermoConst')"
+        [min]="0"
+        [max]="12"
+      />
       <app-controle-parametro [(valor)]="x0" [rotulo]="texto('rotuloX0')" [min]="-3" [max]="2" />
       <app-controle-parametro [(valor)]="x1" [rotulo]="texto('rotuloX1')" [min]="-1" [max]="5" />
       <app-controle-parametro [(valor)]="y0" [rotulo]="texto('rotuloY0')" [min]="-3" [max]="2" />
       <app-controle-parametro [(valor)]="y1" [rotulo]="texto('rotuloY1')" [min]="-1" [max]="5" />
-      <app-controle-parametro [(valor)]="yDaFatia" [rotulo]="texto('rotuloFatia')" [min]="-3" [max]="5" />
+      <app-controle-parametro
+        [(valor)]="yDaFatia"
+        [rotulo]="texto('rotuloFatia')"
+        [min]="-3"
+        [max]="5"
+      />
     </section>
 
     <section class="destaque-formula">

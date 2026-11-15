@@ -24,7 +24,14 @@
 
     <section class="destaque-formula">
       <app-formula
-        [tex]="'\\int_{0}^{' + x() + '} \\left(' + funcao().paraTex() + '\\right) dx = ' + formatar(areaAteX())"
+        [tex]="
+          '\\int_{0}^{' +
+          x() +
+          '} \\left(' +
+          funcao().paraTex() +
+          '\\right) dx = ' +
+          formatar(areaAteX())
+        "
         [bloco]="true"
       />
     </section>

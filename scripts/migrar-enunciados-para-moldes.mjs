@@ -1,5 +1,5 @@
 /**
- * Move o texto de enunciado de um gerador para `moldes.json`.
+ * Move o texto de enunciado de um gerador para `enunciados.json`.
  *
  * Uso: node scripts/migrar-enunciados-para-moldes.mjs <caminho do gerador> [--aplicar]
  *
@@ -36,7 +36,7 @@ if (caminho === undefined) {
 
 const topico = basename(caminho).replace('.gerador.ts', '');
 const fonte = readFileSync(caminho, 'utf8');
-const moldesPath = 'src/app/core/enunciados/moldes/moldes.json';
+const moldesPath = 'src/app/core/enunciados/enunciados.json';
 const moldes = JSON.parse(readFileSync(moldesPath, 'utf8'));
 
 /** `${a}` vira `{dados-calculo.a}`; expressões viram chaves sintéticas. */
@@ -90,7 +90,7 @@ const novos = [];
 achados.forEach((achado, indice) => {
   const { texto, valores } = converter(achado.bruto);
   const forma = `forma-${indice + 1}`;
-  novos.push({ topico, forma, texto: { br: texto } });
+  novos.push({ topico, forma, enunciado: { br: texto } });
 
   const dados = valores
     .map(([nome, expressao]) => (nome === expressao ? nome : `${nome}: ${expressao}`))
@@ -101,15 +101,20 @@ achados.forEach((achado, indice) => {
 });
 
 if (!saida.includes("from '@core/enunciados/moldes/moldes.model'")) {
-  saida = saida.replace(
-    /^(import .*\n)/,
-    `$1import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';\n`,
-  );
+  // Depois do PRIMEIRO import do arquivo, e não no topo: muitos geradores
+  // abrem com um comentário de bloco que explica o tópico, e um import antes
+  // dele deixaria a explicação órfã no meio do arquivo.
+  const primeiro = saida.search(/^import /m);
+  const linha = `import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';\n`;
+  // ANTES do primeiro import, nunca depois: um `import {` de várias linhas não
+  // tem o seu `;` na primeira delas, e inserir ali parte o import ao meio.
+  saida =
+    primeiro === -1 ? linha + saida : saida.slice(0, primeiro) + linha + saida.slice(primeiro);
 }
 
 console.log(`${topico}: ${achados.length} enunciado(s).`);
 for (const molde of novos) {
-  console.log(`  ${molde.forma}: ${molde.texto.br.slice(0, 90)}`);
+  console.log(`  ${molde.forma}: ${molde.enunciado.br.slice(0, 90)}`);
 }
 
 if (aplicar) {

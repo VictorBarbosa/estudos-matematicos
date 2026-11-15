@@ -41,7 +41,8 @@ describe('geradorEdoPrimeiraOrdem', () => {
   it('o Fácil fica na separável ou no k da equação exata', () => {
     for (const exercicio of amostra('facil', 150)) {
       expect(
-        exercicio.conceitos.includes('edo1.separavel') || exercicio.conceitos.includes('edo1.exata'),
+        exercicio.conceitos.includes('edo1.separavel') ||
+          exercicio.conceitos.includes('edo1.exata'),
       ).toBe(true);
     }
   });

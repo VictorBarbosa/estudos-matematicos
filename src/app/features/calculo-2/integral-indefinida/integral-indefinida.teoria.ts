@@ -17,7 +17,7 @@ export const TEORIA_INDEFINIDA: readonly Teoria[] = [
     demonstracao: [
       {
         descricao: 'Na derivada, o expoente desce e diminui.',
-        tex: "\\frac{d}{dx}(x^{4}) = 4x^{3}",
+        tex: '\\frac{d}{dx}(x^{4}) = 4x^{3}',
       },
       {
         descricao: 'Para desfazer, o expoente sobe e dividimos por ele.',
@@ -25,7 +25,7 @@ export const TEORIA_INDEFINIDA: readonly Teoria[] = [
       },
       {
         descricao: 'Conferindo: derivando o resultado, voltamos ao integrando.',
-        tex: "\\frac{d}{dx}\\left(\\frac{x^{4}}{4}\\right) = x^{3} \\;\\checkmark",
+        tex: '\\frac{d}{dx}\\left(\\frac{x^{4}}{4}\\right) = x^{3} \\;\\checkmark',
         nota: 'Derivar a resposta é sempre a melhor forma de conferir uma integral.',
       },
       {
@@ -47,9 +47,7 @@ export const TEORIA_INDEFINIDA: readonly Teoria[] = [
       'Como a derivada de uma constante é zero, somar qualquer número à antiderivada não ' +
       'muda nada ao derivar de volta. Por isso a resposta não é uma função, mas uma família ' +
       'inteira delas — e o + C representa essa família.',
-    formulas: [
-      { tex: "\\frac{d}{dx}(F(x) + C) = F'(x) = f(x)" },
-    ],
+    formulas: [{ tex: "\\frac{d}{dx}(F(x) + C) = F'(x) = f(x)" }],
     demonstracao: [
       {
         descricao: 'Todas estas funções têm a mesma derivada.',
@@ -57,7 +55,7 @@ export const TEORIA_INDEFINIDA: readonly Teoria[] = [
       },
       {
         descricao: 'Porque a constante some ao derivar.',
-        tex: "\\frac{d}{dx}(x^{2} + C) = 2x",
+        tex: '\\frac{d}{dx}(x^{2} + C) = 2x',
       },
       {
         descricao: 'Graficamente, são cópias deslocadas verticalmente.',

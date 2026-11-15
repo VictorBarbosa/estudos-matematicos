@@ -2,11 +2,14 @@
   <div explorar class="explorar">
     <section class="painel">
       <h2>A equação descreve a REGRA, não a grandeza</h2>
-      <app-formula [tex]="'\\frac{dy}{dt} = ky \\;\\Longrightarrow\\; y(t) = y_{0}e^{kt}'" [bloco]="true" />
+      <app-formula
+        [tex]="'\\frac{dy}{dt} = ky \\;\\Longrightarrow\\; y(t) = y_{0}e^{kt}'"
+        [bloco]="true"
+      />
       <p class="observacao">
-        Uma EDO diz como uma grandeza muda, não quanto ela vale. A solução não é um número: é
-        uma família inteira de funções, e a condição inicial é o que escolhe uma delas. É assim
-        que a física é escrita de verdade — a segunda lei de Newton é uma EDO.
+        Uma EDO diz como uma grandeza muda, não quanto ela vale. A solução não é um número: é uma
+        família inteira de funções, e a condição inicial é o que escolhe uma delas. É assim que a
+        física é escrita de verdade — a segunda lei de Newton é uma EDO.
       </p>
     </section>
 
@@ -52,9 +55,9 @@
         [altura]="380"
       />
       <p class="observacao">
-        As três curvas resolvem a mesma equação, partindo de valores iniciais diferentes. Repare
-        que todas convergem para a mesma linha tracejada: a condição inicial muda o caminho, não
-        o destino. O destino depende apenas dos coeficientes.
+        As três curvas resolvem a mesma equação, partindo de valores iniciais diferentes. Repare que
+        todas convergem para a mesma linha tracejada: a condição inicial muda o caminho, não o
+        destino. O destino depende apenas dos coeficientes.
       </p>
     </section>
 
@@ -65,9 +68,9 @@
         [bloco]="true"
       />
       <p class="observacao">
-        Depois de uma constante de tempo resta cerca de 37% do transiente; depois de cinco,
-        menos de 1%. É a regra prática da engenharia: cinco constantes de tempo, e o sistema
-        chegou. Aumente o coeficiente p e veja a convergência acelerar.
+        Depois de uma constante de tempo resta cerca de 37% do transiente; depois de cinco, menos de
+        1%. É a regra prática da engenharia: cinco constantes de tempo, e o sistema chegou. Aumente
+        o coeficiente p e veja a convergência acelerar.
       </p>
     </section>
 

@@ -7,7 +7,11 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { CurvaPlot, PontoPlot, SegmentoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import {
+  CurvaPlot,
+  PontoPlot,
+  SegmentoPlot,
+} from '@shared/components/math-plot/models/math-plot.model';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { textoLocal } from '@core/i18n/textos-locais';
 import textos from '@features/calculo-3/coordenadas-no-espaco/coordenadas-no-espaco.i18n.json';
@@ -62,7 +66,10 @@ export class CoordenadasNoEspaco {
         cor: 'texto-suave',
         rotulo: this.texto('circuloDeRaioR'),
       },
-      { fn: (x) => (Math.abs(x) <= r ? -Math.sqrt(r * r - x * x) : Number.NaN), cor: 'texto-suave' },
+      {
+        fn: (x) => (Math.abs(x) <= r ? -Math.sqrt(r * r - x * x) : Number.NaN),
+        cor: 'texto-suave',
+      },
     ];
   });
 

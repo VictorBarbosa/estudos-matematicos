@@ -66,7 +66,9 @@ describe('geradorAplicacoesDeEdo', () => {
 
   it('diagnostica quem faz o corpo esfriar até zero', () => {
     const exercicio = amostra('facil', 250).find((candidato) =>
-      candidato.armadilhas.some((a) => a.diagnostico.includes('decai exponencialmente é a DIFERENÇA')),
+      candidato.armadilhas.some((a) =>
+        a.diagnostico.includes('decai exponencialmente é a DIFERENÇA'),
+      ),
     )!;
 
     const armadilha = exercicio.armadilhas.find((a) =>

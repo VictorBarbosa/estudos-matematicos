@@ -2,7 +2,10 @@
   <div explorar class="explorar">
     <section class="painel">
       <h2>{{ texto('sobeUmaDimensao') }}</h2>
-      <app-formula [tex]="'f : \\mathbb{R}^{2} \\to \\mathbb{R}, \\qquad z = f(x,y)'" [bloco]="true" />
+      <app-formula
+        [tex]="'f : \\mathbb{R}^{2} \\to \\mathbb{R}, \\qquad z = f(x,y)'"
+        [bloco]="true"
+      />
       <p class="observacao">{{ texto('oDominioDeixaDeSer') }}</p>
     </section>
 

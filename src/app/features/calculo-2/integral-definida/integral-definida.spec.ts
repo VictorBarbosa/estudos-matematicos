@@ -48,8 +48,9 @@ describe('geradorDefinida', () => {
     expect(trapezios.length).toBeGreaterThan(5);
 
     for (const exercicio of trapezios) {
-      const [, de, ate, reta] =
-        /\\int_\{(-?\d+)\}\^\{(-?\d+)\} \\left\((.+?)\\right\) dx/.exec(exercicio.enunciadoTex)!;
+      const [, de, ate, reta] = /\\int_\{(-?\d+)\}\^\{(-?\d+)\} \\left\((.+?)\\right\) dx/.exec(
+        exercicio.enunciadoTex,
+      )!;
       const [, mTexto, sinal, kTexto] = /^(-?\d*)x(?: ([+-]) (\d+))?$/.exec(reta!)!;
 
       const m = mTexto === '' ? 1 : mTexto === '-' ? -1 : Number(mTexto);
@@ -74,15 +75,14 @@ describe('geradorDefinida', () => {
     expect(constantes.length).toBeGreaterThan(5);
 
     for (const exercicio of constantes) {
-      const [, valor, de, ate] =
-        /\\int_\{(-?\d+)\}\^\{(-?\d+)\} (-?\d+)\\,dx/.exec(exercicio.enunciadoTex)
-          ? (() => {
-              const m = /\\int_\{(-?\d+)\}\^\{(-?\d+)\} (-?\d+)\\,dx/.exec(
-                exercicio.enunciadoTex,
-              )!;
-              return [m[0], m[3], m[1], m[2]];
-            })()
-          : [];
+      const [, valor, de, ate] = /\\int_\{(-?\d+)\}\^\{(-?\d+)\} (-?\d+)\\,dx/.exec(
+        exercicio.enunciadoTex,
+      )
+        ? (() => {
+            const m = /\\int_\{(-?\d+)\}\^\{(-?\d+)\} (-?\d+)\\,dx/.exec(exercicio.enunciadoTex)!;
+            return [m[0], m[3], m[1], m[2]];
+          })()
+        : [];
 
       expect(exercicio.gabarito).toBe(Number(valor) * (Number(ate) - Number(de)));
     }
@@ -96,9 +96,10 @@ describe('geradorDefinida', () => {
     for (const exercicio of aditivos) {
       // Ancorado: sem o ^ a expressão casava também com o segundo par de
       // integrais de outro tipo de exercício.
-      const somados = /^\\int_\{(-?\d+)\}\^\{(-?\d+)\} f = (-?\d+) \\qquad \\int_\{(-?\d+)\}\^\{(-?\d+)\} f = (-?\d+)/.exec(
-        exercicio.enunciadoTex,
-      );
+      const somados =
+        /^\\int_\{(-?\d+)\}\^\{(-?\d+)\} f = (-?\d+) \\qquad \\int_\{(-?\d+)\}\^\{(-?\d+)\} f = (-?\d+)/.exec(
+          exercicio.enunciadoTex,
+        );
 
       if (somados === null) {
         continue;
@@ -116,9 +117,10 @@ describe('geradorDefinida', () => {
     );
 
     for (const exercicio of invertidos) {
-      const m = /^\\int_\{(-?\d+)\}\^\{(-?\d+)\} f = (-?\d+) \\qquad \\int_\{(-?\d+)\}\^\{(-?\d+)\} f = \\;\?$/.exec(
-        exercicio.enunciadoTex,
-      );
+      const m =
+        /^\\int_\{(-?\d+)\}\^\{(-?\d+)\} f = (-?\d+) \\qquad \\int_\{(-?\d+)\}\^\{(-?\d+)\} f = \\;\?$/.exec(
+          exercicio.enunciadoTex,
+        );
 
       if (m === null) {
         continue;
@@ -136,8 +138,9 @@ describe('geradorDefinida', () => {
     expect(medios.length).toBeGreaterThan(5);
 
     for (const exercicio of medios) {
-      const [, reta, de, ate] =
-        /f\(x\) = (.+?) \\qquad \[(-?\d+),\\, (-?\d+)\]/.exec(exercicio.enunciadoTex)!;
+      const [, reta, de, ate] = /f\(x\) = (.+?) \\qquad \[(-?\d+),\\, (-?\d+)\]/.exec(
+        exercicio.enunciadoTex,
+      )!;
       const [, mTexto, sinal, kTexto] = /^(-?\d*)x(?: ([+-]) (\d+))?$/.exec(reta!)!;
 
       const m = mTexto === '' ? 1 : mTexto === '-' ? -1 : Number(mTexto);

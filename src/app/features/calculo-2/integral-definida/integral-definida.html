@@ -35,7 +35,16 @@
 
     <section class="destaque-formula">
       <app-formula
-        [tex]="'\\int_{' + de() + '}^{' + ate() + '} \\left(' + funcao().paraTex() + '\\right) dx = ' + formatar(comSinal())"
+        [tex]="
+          '\\int_{' +
+          de() +
+          '}^{' +
+          ate() +
+          '} \\left(' +
+          funcao().paraTex() +
+          '\\right) dx = ' +
+          formatar(comSinal())
+        "
         [bloco]="true"
       />
     </section>
@@ -73,7 +82,9 @@
       <p class="observacao">{{ texto('aIntegralEDefinidaComo') }}</p>
       <table class="convergencia">
         <caption>
-          {{ texto('captionConvergencia') }}
+          {{
+            texto('captionConvergencia')
+          }}
         </caption>
         <thead>
           <tr>

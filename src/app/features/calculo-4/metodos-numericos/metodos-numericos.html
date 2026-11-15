@@ -7,10 +7,25 @@
     </section>
 
     <section class="painel grade-controles">
-      <app-controle-parametro [(valor)]="decimosDeK" [rotulo]="texto('rotuloK')" [min]="-15" [max]="15" />
-      <app-controle-parametro [(valor)]="decimosDoPasso" [rotulo]="texto('rotuloPasso')" [min]="1" [max]="10" />
+      <app-controle-parametro
+        [(valor)]="decimosDeK"
+        [rotulo]="texto('rotuloK')"
+        [min]="-15"
+        [max]="15"
+      />
+      <app-controle-parametro
+        [(valor)]="decimosDoPasso"
+        [rotulo]="texto('rotuloPasso')"
+        [min]="1"
+        [max]="10"
+      />
       <app-controle-parametro [(valor)]="y0" [rotulo]="texto('rotuloY0')" [min]="1" [max]="10" />
-      <app-controle-parametro [(valor)]="tempo" [rotulo]="texto('rotuloTempo')" [min]="1" [max]="6" />
+      <app-controle-parametro
+        [(valor)]="tempo"
+        [rotulo]="texto('rotuloTempo')"
+        [min]="1"
+        [max]="6"
+      />
     </section>
 
     <section class="destaque-formula">

@@ -96,10 +96,7 @@ export class MetodosNumericos {
 
   protected readonly dominio = computed(() => ({ xMin: 0, xMax: this.tempo() }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      this.texto('descricaoGrafico'),
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_NUMERICO);

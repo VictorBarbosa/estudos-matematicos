@@ -82,7 +82,9 @@ export const TEORIA_RIEMANN: readonly Teoria[] = [
       'ao infinito. É o mesmo movimento conceitual da derivada: uma aproximação que melhora ' +
       'indefinidamente até virar valor exato.',
     formulas: [
-      { tex: '\\int_{a}^{b} f(x)\\,dx = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(x_i)\\,\\Delta x' },
+      {
+        tex: '\\int_{a}^{b} f(x)\\,dx = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} f(x_i)\\,\\Delta x',
+      },
     ],
     demonstracao: [
       {

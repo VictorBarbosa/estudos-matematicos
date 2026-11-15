@@ -1,3 +1,4 @@
+import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, TipoProdutoNotavel, enunciadoParaTex, expandirComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -157,7 +158,7 @@ function exercicioInverso(nivel: Nivel, rng: Rng, forma: Inverso): Exercicio<num
     return {
       id: `produtos-inv-dif-${p}-${q}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Escreva a expressão como (px + q)(px − q), com p e q positivos, e informe q.',
+      enunciado: textoDoMolde(moldesDe('produtos-notaveis', 'forma-1')[0]!, {}, 'pt'),
       enunciadoTex: `${polinomio.paraTex()} = (px + q)(px - q)`,
       gabarito: q,
       resolucao: {
@@ -212,8 +213,7 @@ function exercicioInverso(nivel: Nivel, rng: Rng, forma: Inverso): Exercicio<num
     return {
       id: `produtos-inv-cubo-${p}-${q}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        'Essa expressão é um cubo perfeito. Escreva-a como (px + q)³, com p positivo, e informe q.',
+      enunciado: textoDoMolde(moldesDe('produtos-notaveis', 'forma-2')[0]!, {}, 'pt'),
       enunciadoTex: `${polinomio.paraTex()} = \\left(${p === 1 ? '' : 'p'}x + q\\right)^{3}`,
       gabarito: q,
       resolucao: {
@@ -275,9 +275,11 @@ function exercicioInverso(nivel: Nivel, rng: Rng, forma: Inverso): Exercicio<num
   return {
     id: `produtos-inv-quad-${p}-${q}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'Esse trinômio é um quadrado perfeito. Escreva-o como ' +
-      `${p === 1 ? '(x + q)²' : '(px + q)², com p positivo,'} e informe q.`,
+    enunciado: textoDoMolde(
+      moldesDe('produtos-notaveis', 'forma-3')[0]!,
+      { v1: p === 1 ? '(x + q)²' : '(px + q)², com p positivo,' },
+      'pt',
+    ),
     enunciadoTex: `${polinomio.paraTex()} = \\left(${p === 1 ? '' : 'p'}x + q\\right)^{2}`,
     gabarito: q,
     resolucao: {

@@ -10,9 +10,7 @@ import { geradorFuncoesVariasVariaveis } from '@features/calculo-3/funcoes-de-va
 
 function amostra(nivel: Nivel, quantidade = 80) {
   const rng = criarRng(70_123);
-  return Array.from({ length: quantidade }, () =>
-    geradorFuncoesVariasVariaveis.gerar(nivel, rng),
-  );
+  return Array.from({ length: quantidade }, () => geradorFuncoesVariasVariaveis.gerar(nivel, rng));
 }
 
 describe('geradorFuncoesVariasVariaveis', () => {
@@ -22,10 +20,9 @@ describe('geradorFuncoesVariasVariaveis', () => {
         expect(Number.isFinite(exercicio.gabarito), exercicio.enunciado).toBe(true);
 
         const exibido = geradorFuncoesVariasVariaveis.formatar(exercicio.gabarito);
-        expect(
-          corrigir(geradorFuncoesVariasVariaveis, exercicio, exibido).veredito,
-          exibido,
-        ).toBe('correto');
+        expect(corrigir(geradorFuncoesVariasVariaveis, exercicio, exibido).veredito, exibido).toBe(
+          'correto',
+        );
       }
     });
 

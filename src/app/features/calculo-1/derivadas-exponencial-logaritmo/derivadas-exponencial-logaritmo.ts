@@ -20,7 +20,14 @@ import { geradorDerivadasExpLog } from '@features/calculo-1/derivadas-exponencia
 import { TEORIA_DERIVADAS_EXP_LOG } from '@features/calculo-1/derivadas-exponencial-logaritmo/derivadas-exponencial-logaritmo.teoria';
 
 /** A observação de cada linha da tabela vira uma chave do dicionário deste tópico. */
-const OBSERVACOES_DA_TABELA = ['obsEx', 'obsExK', 'obsBx', 'obsLn', 'obsLnK', 'obsLogBase'] as const;
+const OBSERVACOES_DA_TABELA = [
+  'obsEx',
+  'obsExK',
+  'obsBx',
+  'obsLn',
+  'obsLnK',
+  'obsLogBase',
+] as const;
 
 @Component({
   selector: 'app-derivadas-exponencial-logaritmo',

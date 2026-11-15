@@ -55,9 +55,7 @@ export class FuncoesDeVariasVariaveis {
     return this.a() > 0 ? this.texto('paraboloideCima') : this.texto('paraboloideBaixo');
   });
 
-  protected readonly noCorte = computed(() =>
-    avaliarQuadrica(this.funcao(), 0, this.yDoCorte()),
-  );
+  protected readonly noCorte = computed(() => avaliarQuadrica(this.funcao(), 0, this.yDoCorte()));
 
   /** Vários cortes da superfície, cada um uma função de uma variável só. */
   protected readonly curvas = computed<readonly CurvaPlot[]>(() => {

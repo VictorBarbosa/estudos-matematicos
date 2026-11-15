@@ -82,23 +82,25 @@ describe('banco de enunciados', () => {
       });
 
       it('traz o texto nas três línguas', () => {
+        // Numa pergunta pronta as três são obrigatórias: ela é escrita de uma
+        // vez, e meia tradução aqui seria esquecimento, não herança.
         for (const idioma of ['br', 'fr', 'en'] as const) {
           expect(entrada.enunciado[idioma]?.trim().length, idioma).toBeGreaterThan(10);
         }
       });
 
       it('todo valor citado no texto existe nos dados', () => {
-        const dados = entrada['dados-calculo'];
+        const dados = entrada['dados-calculo']!;
 
         for (const idioma of ['br', 'fr', 'en'] as const) {
-          for (const citado of citadosEm(entrada.enunciado[idioma])) {
+          for (const citado of citadosEm(entrada.enunciado[idioma] ?? '')) {
             expect(dados[citado], `${idioma}: {dados-calculo.${citado}}`).toBeDefined();
           }
         }
       });
 
       it('todo dado é usado, menos os reservados', () => {
-        const dados = entrada['dados-calculo'];
+        const dados = entrada['dados-calculo']!;
         const citados = new Set(citadosEm(entrada.enunciado.br));
 
         for (const nome of Object.keys(dados)) {
@@ -112,7 +114,7 @@ describe('banco de enunciados', () => {
       });
 
       it('tem total, e ele não aparece no texto', () => {
-        const dados = entrada['dados-calculo'];
+        const dados = entrada['dados-calculo']!;
 
         expect(dados[CHAVE_DO_TOTAL], 'falta o total').toBeDefined();
         expect(citadosEm(entrada.enunciado.br)).not.toContain(CHAVE_DO_TOTAL);
@@ -127,8 +129,8 @@ describe('banco de enunciados', () => {
       it('as três línguas citam os valores na mesma ordem', () => {
         const pt = citadosEm(entrada.enunciado.br).join(',');
 
-        expect(citadosEm(entrada.enunciado.fr).join(','), 'fr').toBe(pt);
-        expect(citadosEm(entrada.enunciado.en).join(','), 'en').toBe(pt);
+        expect(citadosEm(entrada.enunciado.fr ?? '').join(','), 'fr').toBe(pt);
+        expect(citadosEm(entrada.enunciado.en ?? '').join(','), 'en').toBe(pt);
       });
 
       /**
@@ -140,7 +142,7 @@ describe('banco de enunciados', () => {
        * resta.
        */
       it('o total fecha a conta declarada', () => {
-        const dados = entrada['dados-calculo'];
+        const dados = entrada['dados-calculo']!;
         const { x1, x2, acao } = dados;
 
         if (x1 === undefined || x2 === undefined || acao === undefined) {
@@ -197,12 +199,12 @@ describe('banco de enunciados', () => {
       });
 
       it('o texto vestido não deixa lacuna na tela', () => {
-        const dados = entrada['dados-calculo'];
+        const dados = entrada['dados-calculo']!;
 
         for (const [idioma, texto] of [
           ['pt', entrada.enunciado.br],
-          ['fr', entrada.enunciado.fr],
-          ['en', entrada.enunciado.en],
+          ['fr', entrada.enunciado.fr ?? entrada.enunciado.br],
+          ['en', entrada.enunciado.en ?? entrada.enunciado.br],
         ] as const) {
           const vestido = vestirTexto(texto, dados, idioma);
 

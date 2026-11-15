@@ -68,7 +68,12 @@ export class EdoSegundaOrdem {
       },
       ...(raizes.regime === 'subamortecido'
         ? [
-            { fn: envoltoria(1), cor: 'texto-suave' as const, tracejada: true, rotulo: 'envoltória' },
+            {
+              fn: envoltoria(1),
+              cor: 'texto-suave' as const,
+              tracejada: true,
+              rotulo: 'envoltória',
+            },
             { fn: envoltoria(-1), cor: 'texto-suave' as const, tracejada: true },
           ]
         : []),
@@ -77,9 +82,8 @@ export class EdoSegundaOrdem {
 
   protected readonly dominio = computed(() => ({ xMin: 0, xMax: 12 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      this.texto('descricaoGrafico', { regime: this.regime() }),
+  protected readonly descricaoGrafico = computed(() =>
+    this.texto('descricaoGrafico', { regime: this.regime() }),
   );
 
   constructor() {

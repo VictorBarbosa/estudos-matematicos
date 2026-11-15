@@ -62,10 +62,7 @@ export class EdoPrimeiraOrdem {
 
   protected readonly dominio = computed(() => ({ xMin: 0, xMax: 10 / this.p() }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      this.texto('descricaoGrafico'),
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_EDO1);

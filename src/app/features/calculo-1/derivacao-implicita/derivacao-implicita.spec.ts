@@ -203,7 +203,9 @@ describe('geradorDerivacaoImplicita — derivada segunda e tangente horizontal',
       const y = (x: number) => Math.sign(y0!) * Math.sqrt((C - A * x * x) / B);
       const h = 1e-4;
       const numerica = (y(x0! + h) - 2 * y(x0!) + y(x0! - h)) / (h * h);
-      expect(Math.abs(e.gabarito - numerica)).toBeLessThan(1e-3 * Math.max(1, Math.abs(e.gabarito)));
+      expect(Math.abs(e.gabarito - numerica)).toBeLessThan(
+        1e-3 * Math.max(1, Math.abs(e.gabarito)),
+      );
     }
   });
 

@@ -7,7 +7,11 @@ import { ConceitosTopico } from '@shared/components/conceitos-topico/conceitos-t
 import { ControleParametro } from '@shared/components/controle-parametro/controle-parametro';
 import { Formula } from '@shared/components/formula/formula';
 import { MathPlot } from '@shared/components/math-plot/math-plot';
-import { AreaPlot, CurvaPlot, PontoPlot } from '@shared/components/math-plot/models/math-plot.model';
+import {
+  AreaPlot,
+  CurvaPlot,
+  PontoPlot,
+} from '@shared/components/math-plot/models/math-plot.model';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import { textoLocal } from '@core/i18n/textos-locais';
 import textos from '@features/calculo-2/aplicacoes-da-integral/aplicacoes-da-integral.i18n.json';
@@ -19,14 +23,7 @@ type Aplicacao = 'area' | 'volume' | 'comprimento';
 @Component({
   selector: 'app-aplicacoes-da-integral',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    MathPlot,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, MathPlot, TopicoLayout],
   templateUrl: './aplicacoes-da-integral.html',
   styleUrl: './aplicacoes-da-integral.scss',
 })

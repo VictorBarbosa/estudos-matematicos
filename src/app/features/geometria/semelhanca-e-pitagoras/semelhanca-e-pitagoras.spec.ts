@@ -249,9 +249,7 @@ describe('geradorSemelhanca: o enunciado se explica', () => {
      * estável é a fórmula, que é montada fora dos moldes: `A/S = h/P`. Lendo-a,
      * o teste mede o que quer medir e não depende de como a frase é escrita.
      */
-    const sombras = amostra('facil', 200).filter((e) =>
-      e.enunciadoTex.startsWith('\\frac'),
-    );
+    const sombras = amostra('facil', 200).filter((e) => e.enunciadoTex.startsWith('\\frac'));
     expect(sombras.length).toBeGreaterThan(0);
 
     let vistas = 0;

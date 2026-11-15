@@ -16,7 +16,9 @@
         {{ i18n.t('revisar.revisados', { quantos: fila().length }) }}
       </p>
       <div class="acoes">
-        <button type="button" class="principal" (click)="recarregar()">{{ i18n.t('revisar.outraFila') }}</button>
+        <button type="button" class="principal" (click)="recarregar()">
+          {{ i18n.t('revisar.outraFila') }}
+        </button>
         <a class="secundario" routerLink="/">{{ i18n.t('revisar.voltar') }}</a>
       </div>
     </section>
@@ -27,9 +29,7 @@
           {{ i18n.t('revisar.item', { indice: indice() + 1, total: fila().length }) }}
         </p>
         <h2>
-          <a [routerLink]="item.etapa.rota">{{
-            i18n.tituloDoTopico(item.etapa.topicoId)
-          }}</a>
+          <a [routerLink]="item.etapa.rota">{{ i18n.tituloDoTopico(item.etapa.topicoId) }}</a>
         </h2>
         <p class="porque">
           @switch (item.motivo) {
@@ -40,7 +40,7 @@
               {{
                 i18n.t('revisar.porTempo', {
                   quantos: item.diasSemPraticar ?? 0,
-                  unidade: i18n.t(item.diasSemPraticar === 1 ? 'revisar.dia' : 'revisar.dias')
+                  unidade: i18n.t(item.diasSemPraticar === 1 ? 'revisar.dia' : 'revisar.dias'),
                 })
               }}
             }
@@ -72,9 +72,7 @@
           {{ i18n.t('revisar.proximoDaFila') }}
           <span aria-hidden="true">→</span>
         </button>
-        <a class="secundario" [routerLink]="item.etapa.rota">{{
-          i18n.t('revisar.abrirTopico')
-        }}</a>
+        <a class="secundario" [routerLink]="item.etapa.rota">{{ i18n.t('revisar.abrirTopico') }}</a>
       </footer>
     </section>
   }

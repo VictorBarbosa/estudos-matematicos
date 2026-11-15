@@ -32,7 +32,7 @@ describe('moldes de enunciado', () => {
       });
 
       it('traz o texto em português', () => {
-        expect(molde.texto.br?.trim().length, 'br').toBeGreaterThan(10);
+        expect(molde.enunciado.br?.trim().length, 'br').toBeGreaterThan(10);
       });
 
       /**
@@ -44,8 +44,8 @@ describe('moldes de enunciado', () => {
        */
       it('a tradução que existe não é um pedaço de frase', () => {
         for (const idioma of ['fr', 'en'] as const) {
-          if (molde.texto[idioma] !== undefined) {
-            expect(molde.texto[idioma]!.trim().length, idioma).toBeGreaterThan(10);
+          if (molde.enunciado[idioma] !== undefined) {
+            expect(molde.enunciado[idioma]!.trim().length, idioma).toBeGreaterThan(10);
           }
         }
       });
@@ -59,17 +59,17 @@ describe('moldes de enunciado', () => {
        * francesa tem ordem natural diferente da portuguesa.
        */
       it('as três línguas citam os valores na mesma ordem', () => {
-        const pt = citadosEm(molde.texto.br).join(',');
+        const pt = citadosEm(molde.enunciado.br).join(',');
 
         for (const idioma of ['fr', 'en'] as const) {
-          if (molde.texto[idioma] !== undefined) {
-            expect(citadosEm(molde.texto[idioma]!).join(','), idioma).toBe(pt);
+          if (molde.enunciado[idioma] !== undefined) {
+            expect(citadosEm(molde.enunciado[idioma]!).join(','), idioma).toBe(pt);
           }
         }
       });
 
       it('vestido com números, não deixa lacuna na tela', () => {
-        const valores = Object.fromEntries(citadosEm(molde.texto.br).map((nome) => [nome, 7]));
+        const valores = Object.fromEntries(citadosEm(molde.enunciado.br).map((nome) => [nome, 7]));
         const textos = textosDoMolde(molde, valores);
 
         for (const [idioma, texto] of Object.entries(textos)) {
@@ -83,7 +83,7 @@ describe('moldes de enunciado', () => {
     const molde = {
       topico: 'teste',
       forma: 'teste',
-      texto: {
+      enunciado: {
         br: 'Mede {dados-calculo.medida} metros.',
         fr: 'Mesure {dados-calculo.medida} mètres.',
         en: 'It measures {dados-calculo.medida} metres.',

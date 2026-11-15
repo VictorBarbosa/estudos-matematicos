@@ -87,7 +87,12 @@ export class IntegraisImproprias {
         cor: 'serie-1',
         rotulo: `1/x^${this.expoenteEscrito()}`,
       },
-      { fn: (x) => (x > 0 ? 1 / x : Number.NaN), cor: 'texto-suave', tracejada: true, rotulo: '1/x' },
+      {
+        fn: (x) => (x > 0 ? 1 / x : Number.NaN),
+        cor: 'texto-suave',
+        tracejada: true,
+        rotulo: '1/x',
+      },
     ];
   });
 

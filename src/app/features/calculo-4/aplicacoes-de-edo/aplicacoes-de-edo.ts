@@ -80,10 +80,7 @@ export class AplicacoesDeEdo {
 
   protected readonly dominio = computed(() => ({ xMin: 0, xMax: 6 / this.k() }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      this.texto('descricaoGrafico'),
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_APLICACOES_EDO);

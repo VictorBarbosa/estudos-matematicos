@@ -41,7 +41,12 @@ describe('geradorAplicacoesIntegral', () => {
       const k = Number(a);
       const m = b === '' ? 1 : Number(b);
       // O cruzamento é a/b, e não a: é exatamente aí que a resolução errava.
-      const esperado = areaEntreCurvas((x) => k * x, (x) => m * x * x, 0, k / m);
+      const esperado = areaEntreCurvas(
+        (x) => k * x,
+        (x) => m * x * x,
+        0,
+        k / m,
+      );
 
       expect(exercicio.gabarito).toBeCloseTo(esperado, 4);
     }

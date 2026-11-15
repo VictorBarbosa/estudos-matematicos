@@ -67,9 +67,7 @@ export class SomaDeRiemann {
     somaDeRiemann(this.fn, this.de(), this.ate(), this.n(), this.tipo()),
   );
 
-  protected readonly exata = computed(() =>
-    integralNumerica(this.fn, this.de(), this.ate()),
-  );
+  protected readonly exata = computed(() => integralNumerica(this.fn, this.de(), this.ate()));
 
   protected readonly erro = computed(() => Math.abs(this.soma() - this.exata()));
 
@@ -89,14 +87,12 @@ export class SomaDeRiemann {
   protected readonly retangulos = computed<readonly RetanguloPlot[]>(() => {
     const tipo = this.tipo() === 'trapezio' ? 'ponto-medio' : this.tipo();
 
-    return retangulosDeRiemann(this.fn, this.de(), this.ate(), this.n(), tipo).map(
-      (retangulo) => ({
-        x: retangulo.x,
-        largura: retangulo.largura,
-        altura: retangulo.altura,
-        cor: 'serie-2' as const,
-      }),
-    );
+    return retangulosDeRiemann(this.fn, this.de(), this.ate(), this.n(), tipo).map((retangulo) => ({
+      x: retangulo.x,
+      largura: retangulo.largura,
+      altura: retangulo.altura,
+      cor: 'serie-2' as const,
+    }));
   });
 
   protected readonly dominio = computed(() => {

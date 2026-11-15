@@ -17,14 +17,7 @@ import { TEORIA_DEFINIDA } from '@features/calculo-2/integral-definida/integral-
 @Component({
   selector: 'app-integral-definida',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AreaTreino,
-    ConceitosTopico,
-    ControleParametro,
-    Formula,
-    MathPlot,
-    TopicoLayout,
-  ],
+  imports: [AreaTreino, ConceitosTopico, ControleParametro, Formula, MathPlot, TopicoLayout],
   templateUrl: './integral-definida.html',
   styleUrl: './integral-definida.scss',
 })
@@ -55,9 +48,7 @@ export class IntegralDefinida {
    * etapas adiante na trilha, e usá-lo aqui era cobrar o que ainda não havia
    * sido ensinado.
    */
-  protected readonly comSinal = computed(() =>
-    integralNumerica(this.fn(), this.de(), this.ate()),
-  );
+  protected readonly comSinal = computed(() => integralNumerica(this.fn(), this.de(), this.ate()));
 
   /** A convergência das somas de Riemann, para ver o limite acontecendo. */
   protected readonly convergencia = computed(() => {

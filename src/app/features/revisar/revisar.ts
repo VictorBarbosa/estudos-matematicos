@@ -1,10 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  inject,
-  signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ItemRevisao, RevisaoService } from '@core/revisao/services/revisao.service';
 import { CARREGAR_GERADOR } from '@core/treino/registro-geradores/registro-geradores';

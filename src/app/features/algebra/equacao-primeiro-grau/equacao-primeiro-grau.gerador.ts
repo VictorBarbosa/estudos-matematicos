@@ -1,5 +1,5 @@
-import { Fracao, mmcLista, observarSimplificacao, resolverLinearComPassos } from '@core/math';
 import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { Fracao, mmcLista, observarSimplificacao, resolverLinearComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
   Armadilha,
@@ -43,7 +43,6 @@ export const geradorEquacao1: GeradorExercicio<Fracao> = {
   // «um número» convidava a responder 0,83 para 5/6 — e 5/6 não tem
   // decimal exato, então a resposta certa era recusada sem explicação.
   formatoResposta: 'inteiro ou fração, ex.: 4 ou -3/2 — decimal só se for exato',
-
 
   gerar(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     const pergunta = sortearPergunta(nivel, rng);
@@ -158,7 +157,7 @@ function exercicioFracoes(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     return {
       id: `equacao1-fracoes-${p}${r}-${k}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-1')[0]!, {  }, 'pt'),
+      enunciado: textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-1')[0]!, {}, 'pt'),
       enunciadoTex: `\\frac{x}{${p}} + \\frac{x}{${r}} = ${k}`,
       gabarito,
       resolucao: {
@@ -328,8 +327,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const x = rng.inteiro(3, 25);
       const T = b + p * x;
       resposta = x;
-      enunciado =
-        textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-2')[0]!, { b, p, T }, 'pt');
+      enunciado = textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-2')[0]!, { b, p, T }, 'pt');
       dados =
         `\\text{bandeirada} = \\text{R}\\$\\,${b} \\qquad \\text{por km} = \\text{R}\\$\\,${p} ` +
         `\\qquad \\text{total} = \\text{R}\\$\\,${T}`;
@@ -367,8 +365,11 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const k = rng.inteiro(2, 10);
       const S = (m + 1) * x + 2 * k;
       resposta = x;
-      enunciado =
-        textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-3')[0]!, { v1: VEZES[m - 2], k, S }, 'pt');
+      enunciado = textoDoMolde(
+        moldesDe('equacao-primeiro-grau', 'forma-3')[0]!,
+        { v1: VEZES[m - 2], k, S },
+        'pt',
+      );
       dados = `\\text{Ana} = ${m} \\times \\text{Bia} \\qquad \\text{daqui a } ${k} \\text{ anos: soma} = ${S} \\text{ anos}`;
       passos = [
         {
@@ -416,8 +417,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const x = rng.inteiro(2, 20);
       const P = 4 * x + 2 * d;
       resposta = x;
-      enunciado =
-        textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-4')[0]!, { d, P }, 'pt');
+      enunciado = textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-4')[0]!, { d, P }, 'pt');
       dados = `\\text{comprimento} = \\text{largura} + ${d}\\,\\text{cm} \\qquad P = ${P}\\,\\text{cm}`;
       passos = [
         {
@@ -458,8 +458,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const x = rng.inteiro(3, 40);
       const S = 3 * x + 3;
       resposta = x + 2;
-      enunciado =
-        textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-5')[0]!, { S }, 'pt');
+      enunciado = textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-5')[0]!, { S }, 'pt');
       dados = `\\text{3 quantidades consecutivas} \\qquad \\text{soma} = ${S} \\text{ livros}`;
       passos = [
         {

@@ -53,9 +53,7 @@ describe('geradorDerivadasParciais', () => {
       candidato.armadilhas.some((a) => a.diagnostico.includes('OUTRA variável')),
     )!;
 
-    const armadilha = exercicio.armadilhas.find((a) =>
-      a.diagnostico.includes('OUTRA variável'),
-    )!;
+    const armadilha = exercicio.armadilhas.find((a) => a.diagnostico.includes('OUTRA variável'))!;
     const resultado = corrigir(
       geradorDerivadasParciais,
       exercicio,

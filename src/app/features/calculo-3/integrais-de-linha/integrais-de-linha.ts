@@ -55,11 +55,13 @@ export class IntegraisDeLinha {
   );
 
   protected readonly trabalho = computed(
-    () => trabalhoNoSegmentoComPassos(this.campoX(), this.campoY(), this.de(), this.ate()).resultado,
+    () =>
+      trabalhoNoSegmentoComPassos(this.campoX(), this.campoY(), this.de(), this.ate()).resultado,
   );
 
   protected readonly trabalhoDaVolta = computed(
-    () => trabalhoNoSegmentoComPassos(this.campoX(), this.campoY(), this.ate(), this.de()).resultado,
+    () =>
+      trabalhoNoSegmentoComPassos(this.campoX(), this.campoY(), this.ate(), this.de()).resultado,
   );
 
   /** O teste das parciais cruzadas: detecta campo conservativo. */
@@ -112,10 +114,7 @@ export class IntegraisDeLinha {
 
   protected readonly dominio = computed(() => ({ xMin: -6, xMax: 6, yMin: -6, yMax: 6 }));
 
-  protected readonly descricaoGrafico = computed(
-    () =>
-      this.texto('descricaoGrafico'),
-  );
+  protected readonly descricaoGrafico = computed(() => this.texto('descricaoGrafico'));
 
   constructor() {
     inject(TeoriaService).registrar(TEORIA_LINHA);

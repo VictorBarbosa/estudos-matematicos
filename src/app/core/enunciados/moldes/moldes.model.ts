@@ -1,6 +1,10 @@
 import { Idioma } from '@core/i18n/models/i18n.model';
-import { vestirTexto } from '@core/enunciados/models/enunciado.model';
-import moldes from '@core/enunciados/moldes/moldes.json';
+import {
+  EnunciadoDoBanco,
+  ehPerguntaPronta,
+  todasAsEntradas,
+  vestirTexto,
+} from '@core/enunciados/models/enunciado.model';
 
 /**
  * Os MOLDES de enunciado: o texto fora do código.
@@ -36,31 +40,21 @@ import moldes from '@core/enunciados/moldes/moldes.json';
  * um molde é livre, mudar a sua forma muda a conta que o responde.
  */
 
-/** Um molde, exatamente como ele é escrito no arquivo. */
-export interface MoldeDeEnunciado {
-  /** O identificador do tópico, como ele aparece no currículo. */
-  readonly topico: string;
-  /** Qual pergunta este molde faz. O gerador escolhe os moldes por aqui. */
+/**
+ * Um molde é uma entrada do arquivo que tem `forma` e não tem `dados-calculo`.
+ *
+ * O tipo é o mesmo do banco de propósito: o arquivo é um só, e a diferença
+ * entre uma pergunta pronta e um molde está no que a entrada traz, não em
+ * onde ela mora.
+ */
+export type MoldeDeEnunciado = EnunciadoDoBanco & {
   readonly forma: string;
-  /**
-   * O texto. `br` é o português e é obrigatório; `fr` e `en` são opcionais.
-   *
-   * Opcionais porque 110 dos 122 geradores do site nunca tiveram tradução de
-   * enunciado — o texto deles existia só em português, dentro do `.ts`. Exigir
-   * as três línguas aqui significaria traduzir novecentas frases antes de
-   * poder mover qualquer uma, e o texto continuaria preso ao código enquanto
-   * isso. Sem o campo, a tela cai no português, que é exatamente o que ela já
-   * fazia; com ele, passa a traduzir — e traduzir vira preencher um campo
-   * neste arquivo, não editar um gerador.
-   */
-  readonly texto: {
-    readonly br: string;
-    readonly fr?: string;
-    readonly en?: string;
-  };
-}
+};
 
-const TODOS = moldes as unknown as readonly MoldeDeEnunciado[];
+const TODOS = todasAsEntradas().filter(
+  (entrada): entrada is MoldeDeEnunciado =>
+    entrada.forma !== undefined && !ehPerguntaPronta(entrada),
+);
 
 /** Tudo o que está no arquivo, para os guardas conferirem. */
 export function todosOsMoldes(): readonly MoldeDeEnunciado[] {
@@ -104,7 +98,8 @@ export function textoDoMolde(
 
   // Sem tradução, o português responde: é o que a tela já mostrava antes de o
   // texto sair do gerador, e meia tradução é pior que nenhuma.
-  const escrito = idioma === 'pt' ? molde.texto.br : (molde.texto[idioma] ?? molde.texto.br);
+  const escrito =
+    idioma === 'pt' ? molde.enunciado.br : (molde.enunciado[idioma] ?? molde.enunciado.br);
 
   return vestirTexto(escrito, comoTexto, idioma);
 }
