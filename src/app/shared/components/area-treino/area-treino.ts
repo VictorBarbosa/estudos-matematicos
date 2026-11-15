@@ -340,11 +340,10 @@ export class AreaTreino {
       return false;
     }
 
-    return this.historias.esperandoPrimeiroLote(
-      gerador.topicoId,
-      declaracao.forma,
-      exercicio.nivel,
-    );
+    // A lista de espera é a fonte da verdade: ela sabe de todos os caminhos
+    // que levam um exercício a aguardar história, inclusive o da fila cheia
+    // sem nenhuma do tamanho certo.
+    return this.historias.estaEsperando(exercicio.id) && this.historias.vaiTentar();
   });
 
   protected readonly dica = computed(() => dicaEm(this.sessao().exercicio(), this.i18n.idioma()));

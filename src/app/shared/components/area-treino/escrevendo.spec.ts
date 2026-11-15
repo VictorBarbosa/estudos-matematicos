@@ -134,6 +134,29 @@ describe('o aviso de escrita na tela', () => {
     expect(fixture.nativeElement.querySelector('.escrevendo')).not.toBeNull();
   });
 
+  /**
+   * Ninguém espera para sempre.
+   *
+   * O lote deste teste volta vazio — `{"problemas":[]}` —, que é o que
+   * acontece quando a LLM falha ou quando o portão recusa tudo. O exercício
+   * tem de APARECER, com o enunciado de sempre, em vez de deixar a tela
+   * girando. E, tendo aparecido, ele não é mais vestido: sair da lista de
+   * espera é o que impede a troca de texto na cara do aluno.
+   */
+  it('lote vazio devolve o exercício em vez de girar para sempre', async () => {
+    liberar();
+    await new Promise((r) => setTimeout(r, 60));
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('.escrevendo'), 'o aviso ficou girando').toBeNull();
+
+    const bloco = fixture.nativeElement.querySelector('.enunciado') as HTMLElement | null;
+
+    expect(bloco, 'o exercício não voltou').not.toBeNull();
+    expect(bloco!.textContent).toContain('Resolva a equação');
+    expect(fixture.nativeElement.querySelector('input')).not.toBeNull();
+  });
+
   it('o aviso explica a espera e diz que ela tem fim', async () => {
     await new Promise((r) => setTimeout(r, 30));
     fixture.detectChanges();

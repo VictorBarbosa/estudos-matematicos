@@ -160,28 +160,18 @@ export class HistoriasService {
   readonly preparando = computed(() => this.lote.pedindo());
 
   /**
-   * ESTE tópico e esta forma estão esperando o primeiro lote?
+   * ESTE exercício está esperando uma história?
    *
    * É a pergunta que a tela faz para escolher entre mostrar a espera e mostrar
-   * o exercício — nunca os dois, que era a confusão: o aviso ao lado da
-   * pergunta pronta faz parecer que a tela está pela metade.
-   *
-   * Verdadeiro só com lote em voo para esta chave E a fila vazia: com fila
-   * cheia não há espera nenhuma, e lote de outro tópico não é da conta desta
-   * tela.
+   * o exercício — nunca os dois. E a resposta vem da lista de espera, não da
+   * fila: antes eu olhava «a fila está vazia», e isso deixava passar o caso em
+   * que a fila tem histórias mas nenhuma com o número de lacunas deste
+   * exercício. Ele entrava na espera, a tela mostrava o enunciado seco, e o
+   * texto era trocado quando o lote seguinte chegava — a troca na cara do
+   * aluno, que é o defeito que se quer eliminar.
    */
-  esperandoPrimeiroLote(topicoId: string, forma: string, nivel: string): boolean {
-    const filaVazia = (this.filas()[chaveDe(topicoId, forma, nivel)] ?? []).length === 0;
-
-    if (!filaVazia) {
-      return false;
-    }
-
-    // Em voo, ou a ponto de ir: sem a segunda metade, o enunciado de sempre
-    // piscava na tela no instante entre o exercício aparecer e o pedido sair,
-    // porque quem dispara o pedido é um `effect`, que roda depois do primeiro
-    // desenho. «Vai tentar» cobre esse vão.
-    return this.emVoo().includes(`${topicoId}|${forma}`) || this.vaiTentar();
+  estaEsperando(exercicioId: string): boolean {
+    return this.esperando()[exercicioId] !== undefined;
   }
 
   /**
@@ -373,6 +363,28 @@ export class HistoriasService {
       }
     } finally {
       this.emVoo.update((atuais) => atuais.filter((atual) => atual !== chaveDoPedido));
+      this.liberarNaoServidos(chaveDoPedido);
+    }
+  }
+
+  /**
+   * Tira da espera quem o lote não conseguiu vestir.
+   *
+   * Sem isto, um lote que falha ou que volta sem história do tamanho certo
+   * deixaria o exercício esperando para sempre, e a tela ficaria no aviso. Com
+   * isto, ele aparece com o enunciado de sempre — e **não** é vestido depois:
+   * sair da lista de espera é justamente o que impede a troca de texto na cara
+   * do aluno. O próximo exercício é que recebe a história.
+   */
+  private liberarNaoServidos(chaveDoPedido: string): void {
+    const pendentes = this.esperando();
+    const prefixo = `${chaveDoPedido}|`;
+    const sobram = Object.fromEntries(
+      Object.entries(pendentes).filter(([, espera]) => !espera.chave.startsWith(prefixo)),
+    );
+
+    if (Object.keys(sobram).length !== Object.keys(pendentes).length) {
+      this.esperando.set(sobram);
     }
   }
 
