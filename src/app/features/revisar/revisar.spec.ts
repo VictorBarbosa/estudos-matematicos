@@ -1,6 +1,7 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
+import { HistoriasService } from '@core/problemas/servicos/historias.service';
 import {
   ACERTOS_EXIGENTES,
   ACERTOS_NA_JANELA,
@@ -35,6 +36,16 @@ describe('Revisar', () => {
     TestBed.configureTestingModule({
       providers: [provideZonelessChangeDetection(), provideRouter([])],
     });
+
+    /*
+     * As histórias da LLM ficam desligadas aqui.
+     *
+     * Esta tela é sobre a revisão espaçada, e com o mecanismo ligado o
+     * exercício legitimamente espera a história antes de aparecer — o que
+     * esconderia o campo de resposta que este teste procura. Deixá-lo ligado
+     * faria o teste medir a LLM, e não a revisão.
+     */
+    TestBed.inject(HistoriasService).ligado.set(false);
   });
 
   it('sem matéria vencida, explica por que a fila está vazia', async () => {

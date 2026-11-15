@@ -311,38 +311,30 @@ export class AreaTreino {
   /**
    * A tela está esperando a história deste exercício?
    *
-   * Quando sim, o aviso aparece **no lugar** do exercício, e não ao lado dele:
-   * mostrar os dois ao mesmo tempo faz parecer que a tela está pela metade, e
-   * o aluno não sabe se deve responder a pergunta que está vendo.
+   * Quando sim, o aviso aparece **no lugar** do exercício. Não é só estética:
+   * o defeito que isto conserta é a TROCA — o enunciado de sempre aparecia, a
+   * LLM respondia em segundo plano, e o texto era substituído na cara de quem
+   * já estava lendo.
    *
-   * As três condições são todas necessárias:
+   * A condição usa `problema()`, que é a MESMA fonte que decide pedir a
+   * história. Isso importa: havia dois caminhos, e eu só tinha coberto um.
+   * Além dos tópicos que declaram `problemaDeTexto`, há os 53 que entram por
+   * `derivarProblema` — a reescrita do enunciado existente —, e para eles
+   * `problemaDeTexto` e `dadosDoProblema` são indefinidos. Com a condição
+   * antiga, a espera nunca ligava neles, e a troca continuava acontecendo em
+   * quase todo o site.
    *
-   * - o tópico declara história e os valores sorteados servem para ela (sem
-   *   isso o exercício nunca receberá uma, e esperar seria esperar o que não
-   *   vem — era o defeito: o aviso aparecia em ângulos e triângulos, que nem
-   *   declara história);
-   * - nenhuma história já veste este exercício;
-   * - há lote em voo para ESTE tópico e esta forma, com a fila vazia.
-   *
-   * Se a LLM estiver desligada ou falhar, não há lote em voo e o exercício
-   * aparece na hora, como sempre apareceu.
+   * `estaEsperando` é a fonte da verdade do serviço: ele conhece todos os
+   * caminhos que levam um exercício a aguardar. E `vaiTentar` impede esperar
+   * por quem desistiu ou está desligado.
    */
   protected readonly esperandoHistoria = computed(() => {
     const exercicio = this.sessao().exercicio();
-    const gerador = this.gerador();
-    const declaracao = gerador.problemaDeTexto;
 
-    if (declaracao === undefined || exercicio.dadosDoProblema === undefined) {
+    if (this.problema() === null || this.historias.temHistoria(exercicio.id)) {
       return false;
     }
 
-    if (this.historias.temHistoria(exercicio.id)) {
-      return false;
-    }
-
-    // A lista de espera é a fonte da verdade: ela sabe de todos os caminhos
-    // que levam um exercício a aguardar história, inclusive o da fila cheia
-    // sem nenhuma do tamanho certo.
     return this.historias.estaEsperando(exercicio.id) && this.historias.vaiTentar();
   });
 
