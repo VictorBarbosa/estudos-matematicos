@@ -3341,5 +3341,967 @@
       "distancia": "7",
       "total": "90"
     }
+  },
+  {
+    "topico": "analise-dimensional",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Na dimensão de velocidade, qual é o expoente de L (comprimento)? Responda 0 se ele não aparecer.",
+      "fr": "Dans la dimension de la vitesse, quel est l’exposant de L (longueur) ? Répondez 0 s’il n’apparaît pas.",
+      "en": "In the dimension of speed, what is the exponent of L (length)? Answer 0 if it does not appear."
+    },
+    "dados-calculo": {
+      "total": "1"
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Na dimensão de força, cuja unidade é o newton, qual é o expoente de M (massa)? Responda 0 se ele não aparecer.",
+      "fr": "Dans la dimension de la force, dont l’unité est le newton, quel est l’exposant de M (masse) ? Répondez 0 s’il n’apparaît pas.",
+      "en": "In the dimension of force, whose unit is the newton, what is the exponent of M (mass)? Answer 0 if it does not appear."
+    },
+    "dados-calculo": {
+      "total": "1"
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Na dimensão de energia, cuja unidade é o joule, qual é o expoente de T (tempo)? Responda 0 se ele não aparecer.",
+      "fr": "Dans la dimension de l’énergie, dont l’unité est le joule, quel est l’exposant de T (temps) ? Répondez 0 s’il n’apparaît pas.",
+      "en": "In the dimension of energy, whose unit is the joule, what is the exponent of T (time)? Answer 0 if it does not appear."
+    },
+    "dados-calculo": {
+      "total": "-2"
+    }
+  },
+  {
+    "topico": "analise-dimensional",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Na dimensão de pressão, cuja unidade é o pascal, qual é o expoente de L (comprimento)? Responda 0 se ele não aparecer.",
+      "fr": "Dans la dimension de la pression, dont l’unité est le pascal, quel est l’exposant de L (longueur) ? Répondez 0 s’il n’apparaît pas.",
+      "en": "In the dimension of pressure, whose unit is the pascal, what is the exponent of L (length)? Answer 0 if it does not appear."
+    },
+    "dados-calculo": {
+      "total": "-1"
+    }
+  },
+  {
+    "topico": "cinematica-escalar",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um carro passa a {dados-calculo.velocidade} m/s e acelera a {dados-calculo.aceleracao} m/s² durante {dados-calculo.tempo} s. Quantos metros ele percorre nesse tempo? (duas casas decimais)",
+      "fr": "Une voiture passe à {dados-calculo.velocidade} m/s et accélère à {dados-calculo.aceleracao} m/s² pendant {dados-calculo.tempo} s. Combien de mètres parcourt-elle ? (deux décimales)",
+      "en": "A car passes at {dados-calculo.velocidade} m/s and accelerates at {dados-calculo.aceleracao} m/s² for {dados-calculo.tempo} s. How many metres does it cover? (two decimal places)"
+    },
+    "dados-calculo": {
+      "velocidade": "8",
+      "aceleracao": "4",
+      "tempo": "4",
+      "total": "64.00"
+    }
+  },
+  {
+    "topico": "cinematica-escalar",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um carro a {dados-calculo.velocidade} m/s freia a {dados-calculo.desaceleracao} m/s² até parar. Quantos metros ele percorre até parar? (duas casas decimais)",
+      "fr": "Une voiture à {dados-calculo.velocidade} m/s freine à {dados-calculo.desaceleracao} m/s² jusqu’à l’arrêt. Combien de mètres parcourt-elle avant de s’arrêter ? (deux décimales)",
+      "en": "A car at {dados-calculo.velocidade} m/s brakes at {dados-calculo.desaceleracao} m/s² until it stops. How many metres does it travel before stopping? (two decimal places)"
+    },
+    "dados-calculo": {
+      "velocidade": "20",
+      "desaceleracao": "5",
+      "total": "40.00"
+    }
+  },
+  {
+    "topico": "cinematica-escalar",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Quantos segundos leva para a velocidade ir de {dados-calculo.inicial} m/s a {dados-calculo.final} m/s com aceleração de {dados-calculo.aceleracao} m/s²? (duas casas decimais)",
+      "fr": "Combien de secondes faut-il pour que la vitesse passe de {dados-calculo.inicial} m/s à {dados-calculo.final} m/s avec une accélération de {dados-calculo.aceleracao} m/s² ? (deux décimales)",
+      "en": "How many seconds does it take for the speed to go from {dados-calculo.inicial} m/s to {dados-calculo.final} m/s with an acceleration of {dados-calculo.aceleracao} m/s²? (two decimal places)"
+    },
+    "dados-calculo": {
+      "inicial": "10",
+      "final": "30",
+      "aceleracao": "4",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "cinematica-escalar",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Dois carros partem juntos do mesmo ponto: um mantém {dados-calculo.velocidade} m/s constantes e o outro parte do repouso acelerando a {dados-calculo.aceleracao} m/s². Em quantos segundos o segundo alcança o primeiro? (duas casas decimais)",
+      "fr": "Deux voitures partent ensemble du même point : l’une garde {dados-calculo.velocidade} m/s constants et l’autre part du repos en accélérant à {dados-calculo.aceleracao} m/s². En combien de secondes la seconde rattrape-t-elle la première ? (deux décimales)",
+      "en": "Two cars start together from the same point: one keeps a constant {dados-calculo.velocidade} m/s and the other starts from rest accelerating at {dados-calculo.aceleracao} m/s². In how many seconds does the second catch the first? (two decimal places)"
+    },
+    "dados-calculo": {
+      "velocidade": "20",
+      "aceleracao": "5",
+      "total": "8.00"
+    }
+  },
+  {
+    "topico": "cinematica-vetorial",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um avião voa a {dados-calculo.aviao} km/h em relação ao ar e sofre um vento de {dados-calculo.vento} km/h perpendicular à sua rota. Qual é o módulo da velocidade resultante, em km/h? (duas casas decimais)",
+      "fr": "Un avion vole à {dados-calculo.aviao} km/h par rapport à l’air et subit un vent de {dados-calculo.vento} km/h perpendiculaire à sa route. Quel est le module de la vitesse résultante, en km/h ? (deux décimales)",
+      "en": "A plane flies at {dados-calculo.aviao} km/h relative to the air with a {dados-calculo.vento} km/h wind perpendicular to its course. What is the magnitude of the resulting speed, in km/h? (two decimal places)"
+    },
+    "dados-calculo": {
+      "aviao": "300",
+      "vento": "40",
+      "total": "302.65"
+    }
+  },
+  {
+    "topico": "cinematica-vetorial",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um barco atravessa um rio a {dados-calculo.barco} m/s, apontado perpendicularmente à correnteza, que corre a {dados-calculo.corrente} m/s. Qual é o módulo da velocidade resultante, em m/s? (duas casas decimais)",
+      "fr": "Un bateau traverse une rivière à {dados-calculo.barco} m/s, pointé perpendiculairement au courant, qui coule à {dados-calculo.corrente} m/s. Quel est le module de la vitesse résultante, en m/s ? (deux décimales)",
+      "en": "A boat crosses a river at {dados-calculo.barco} m/s, pointed perpendicular to the current, which flows at {dados-calculo.corrente} m/s. What is the magnitude of the resulting speed, in m/s? (two decimal places)"
+    },
+    "dados-calculo": {
+      "barco": "3",
+      "corrente": "4",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "cinematica-vetorial",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um barco aponta perpendicularmente à correnteza, a {dados-calculo.barco} m/s, e a correnteza corre a {dados-calculo.corrente} m/s. Que ângulo, em graus, a velocidade resultante faz com a direção para a qual o barco aponta? (duas casas decimais)",
+      "fr": "Un bateau pointe perpendiculairement au courant, à {dados-calculo.barco} m/s, et le courant coule à {dados-calculo.corrente} m/s. Quel angle, en degrés, la vitesse résultante fait-elle avec la direction du bateau ? (deux décimales)",
+      "en": "A boat points perpendicular to the current at {dados-calculo.barco} m/s, and the current flows at {dados-calculo.corrente} m/s. What angle, in degrees, does the resulting velocity make with the direction the boat points? (two decimal places)"
+    },
+    "dados-calculo": {
+      "barco": "3",
+      "corrente": "4",
+      "total": "53.13"
+    }
+  },
+  {
+    "topico": "cinematica-vetorial",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um avião voa a {dados-calculo.aviao} km/h em relação ao ar e quer seguir exatamente para o norte, com um vento de {dados-calculo.vento} km/h para o leste. Que ângulo, em graus, ele deve apontar para o oeste do norte? (duas casas decimais)",
+      "fr": "Un avion vole à {dados-calculo.aviao} km/h par rapport à l’air et veut aller exactement vers le nord, avec un vent de {dados-calculo.vento} km/h vers l’est. De quel angle, en degrés, doit-il pointer à l’ouest du nord ? (deux décimales)",
+      "en": "A plane flies at {dados-calculo.aviao} km/h relative to the air and wants to head due north, with a {dados-calculo.vento} km/h wind towards the east. By what angle, in degrees, must it point west of north? (two decimal places)"
+    },
+    "dados-calculo": {
+      "aviao": "200",
+      "vento": "50",
+      "total": "14.48"
+    }
+  },
+  {
+    "topico": "movimento-circular",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um rotor gira a {dados-calculo.rpm} rotações por minuto. Qual é a velocidade angular, em rad/s? (três casas decimais)",
+      "fr": "Un rotor tourne à {dados-calculo.rpm} rotations par minute. Quelle est la vitesse angulaire, en rad/s ? (trois décimales)",
+      "en": "A rotor spins at {dados-calculo.rpm} revolutions per minute. What is the angular speed, in rad/s? (three decimal places)"
+    },
+    "dados-calculo": {
+      "rpm": "300",
+      "total": "31.416"
+    }
+  },
+  {
+    "topico": "movimento-circular",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma roda de raio {dados-calculo.raio} m gira com velocidade angular de {dados-calculo.angular} rad/s. Qual é a velocidade linear na borda, em m/s? (três casas decimais)",
+      "fr": "Une roue de rayon {dados-calculo.raio} m tourne à une vitesse angulaire de {dados-calculo.angular} rad/s. Quelle est la vitesse linéaire au bord, en m/s ? (trois décimales)",
+      "en": "A wheel of radius {dados-calculo.raio} m turns at an angular speed of {dados-calculo.angular} rad/s. What is the linear speed at the rim, in m/s? (three decimal places)"
+    },
+    "dados-calculo": {
+      "raio": "0.5",
+      "angular": "20",
+      "total": "10.000"
+    }
+  },
+  {
+    "topico": "movimento-circular",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um carro faz uma curva de raio {dados-calculo.raio} m a {dados-calculo.velocidade} m/s. Qual é a aceleração centrípeta, em m/s²? (três casas decimais)",
+      "fr": "Une voiture prend un virage de rayon {dados-calculo.raio} m à {dados-calculo.velocidade} m/s. Quelle est l’accélération centripète, en m/s² ? (trois décimales)",
+      "en": "A car takes a curve of radius {dados-calculo.raio} m at {dados-calculo.velocidade} m/s. What is the centripetal acceleration, in m/s²? (three decimal places)"
+    },
+    "dados-calculo": {
+      "raio": "4",
+      "velocidade": "10",
+      "total": "25.000"
+    }
+  },
+  {
+    "topico": "movimento-circular",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um disco gira a {dados-calculo.rpm} rotações por minuto. Quantos segundos leva uma volta completa? (três casas decimais)",
+      "fr": "Un disque tourne à {dados-calculo.rpm} rotations par minute. Combien de secondes dure un tour complet ? (trois décimales)",
+      "en": "A disc spins at {dados-calculo.rpm} revolutions per minute. How many seconds does one full turn take? (three decimal places)"
+    },
+    "dados-calculo": {
+      "rpm": "120",
+      "total": "0.500"
+    }
+  },
+  {
+    "topico": "leis-de-newton",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma força resultante de {dados-calculo.forca} N age sobre um corpo de {dados-calculo.massa} kg. Qual é a aceleração, em m/s²? (duas casas decimais)",
+      "fr": "Une force résultante de {dados-calculo.forca} N agit sur un corps de {dados-calculo.massa} kg. Quelle est l’accélération, en m/s² ? (deux décimales)",
+      "en": "A net force of {dados-calculo.forca} N acts on a {dados-calculo.massa} kg body. What is the acceleration, in m/s²? (two decimal places)"
+    },
+    "dados-calculo": {
+      "forca": "100",
+      "massa": "20",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "leis-de-newton",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é o peso, em newtons, de um corpo de {dados-calculo.massa} kg num lugar onde a gravidade vale {dados-calculo.gravidade} m/s²? (duas casas decimais)",
+      "fr": "Quel est le poids, en newtons, d’un corps de {dados-calculo.massa} kg là où la gravité vaut {dados-calculo.gravidade} m/s² ? (deux décimales)",
+      "en": "What is the weight, in newtons, of a {dados-calculo.massa} kg body where gravity is {dados-calculo.gravidade} m/s²? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "12",
+      "gravidade": "9.81",
+      "total": "117.72"
+    }
+  },
+  {
+    "topico": "leis-de-newton",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um bloco de {dados-calculo.massa} kg é empurrado por uma força de {dados-calculo.forca} N contra um atrito de {dados-calculo.atrito} N. Qual é a aceleração, em m/s²? (duas casas decimais)",
+      "fr": "Un bloc de {dados-calculo.massa} kg est poussé par une force de {dados-calculo.forca} N contre un frottement de {dados-calculo.atrito} N. Quelle est l’accélération, en m/s² ? (deux décimales)",
+      "en": "A {dados-calculo.massa} kg block is pushed by a {dados-calculo.forca} N force against {dados-calculo.atrito} N of friction. What is the acceleration, in m/s²? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "10",
+      "forca": "50",
+      "atrito": "20",
+      "total": "3.00"
+    }
+  },
+  {
+    "topico": "leis-de-newton",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um elevador de {dados-calculo.massa} kg sobe acelerando a {dados-calculo.aceleracao} m/s², com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é a tração no cabo, em newtons? (duas casas decimais)",
+      "fr": "Un ascenseur de {dados-calculo.massa} kg monte en accélérant à {dados-calculo.aceleracao} m/s², la gravité valant {dados-calculo.gravidade} m/s². Quelle est la tension du câble, en newtons ? (deux décimales)",
+      "en": "A {dados-calculo.massa} kg lift accelerates upwards at {dados-calculo.aceleracao} m/s², with gravity at {dados-calculo.gravidade} m/s². What is the tension in the cable, in newtons? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "500",
+      "aceleracao": "2",
+      "gravidade": "9.81",
+      "total": "5905.00"
+    }
+  },
+  {
+    "topico": "trajetoria-balistica",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma pedra é atirada verticalmente para cima a {dados-calculo.velocidade} m/s, com a gravidade valendo {dados-calculo.gravidade} m/s². Quantos segundos ela leva para atingir o ponto mais alto? (duas casas decimais)",
+      "fr": "Une pierre est lancée verticalement vers le haut à {dados-calculo.velocidade} m/s, la gravité valant {dados-calculo.gravidade} m/s². Combien de secondes met-elle pour atteindre le point le plus haut ? (deux décimales)",
+      "en": "A stone is thrown straight up at {dados-calculo.velocidade} m/s, with gravity at {dados-calculo.gravidade} m/s². How many seconds does it take to reach the highest point? (two decimal places)"
+    },
+    "dados-calculo": {
+      "velocidade": "20",
+      "gravidade": "9.81",
+      "total": "2.04"
+    }
+  },
+  {
+    "topico": "trajetoria-balistica",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma pedra é atirada verticalmente para cima a {dados-calculo.velocidade} m/s, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é a altura máxima, em metros? (duas casas decimais)",
+      "fr": "Une pierre est lancée verticalement vers le haut à {dados-calculo.velocidade} m/s, la gravité valant {dados-calculo.gravidade} m/s². Quelle est la hauteur maximale, en mètres ? (deux décimales)",
+      "en": "A stone is thrown straight up at {dados-calculo.velocidade} m/s, with gravity at {dados-calculo.gravidade} m/s². What is the greatest height, in metres? (two decimal places)"
+    },
+    "dados-calculo": {
+      "velocidade": "20",
+      "gravidade": "9.81",
+      "total": "20.39"
+    }
+  },
+  {
+    "topico": "trajetoria-balistica",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um projétil é lançado a {dados-calculo.velocidade} m/s formando {dados-calculo.angulo}° com a horizontal, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é o alcance, em metros? (duas casas decimais)",
+      "fr": "Un projectile est lancé à {dados-calculo.velocidade} m/s en formant {dados-calculo.angulo}° avec l’horizontale, la gravité valant {dados-calculo.gravidade} m/s². Quelle est la portée, en mètres ? (deux décimales)",
+      "en": "A projectile is launched at {dados-calculo.velocidade} m/s at {dados-calculo.angulo}° to the horizontal, with gravity at {dados-calculo.gravidade} m/s². What is the range, in metres? (two decimal places)"
+    },
+    "dados-calculo": {
+      "velocidade": "20",
+      "angulo": "45",
+      "gravidade": "10",
+      "total": "40.00"
+    }
+  },
+  {
+    "topico": "trajetoria-balistica",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um projétil é lançado a {dados-calculo.velocidade} m/s formando {dados-calculo.angulo}° com a horizontal, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é a altura máxima, em metros? (duas casas decimais)",
+      "fr": "Un projectile est lancé à {dados-calculo.velocidade} m/s en formant {dados-calculo.angulo}° avec l’horizontale, la gravité valant {dados-calculo.gravidade} m/s². Quelle est la hauteur maximale, en mètres ? (deux décimales)",
+      "en": "A projectile is launched at {dados-calculo.velocidade} m/s at {dados-calculo.angulo}° to the horizontal, with gravity at {dados-calculo.gravidade} m/s². What is the greatest height, in metres? (two decimal places)"
+    },
+    "dados-calculo": {
+      "velocidade": "20",
+      "angulo": "30",
+      "gravidade": "10",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "trabalho-e-energia",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.massa} kg move-se a {dados-calculo.velocidade} m/s. Qual é a sua energia cinética, em joules? (duas casas decimais)",
+      "fr": "Un corps de {dados-calculo.massa} kg se déplace à {dados-calculo.velocidade} m/s. Quelle est son énergie cinétique, en joules ? (deux décimales)",
+      "en": "A {dados-calculo.massa} kg body moves at {dados-calculo.velocidade} m/s. What is its kinetic energy, in joules? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "10",
+      "velocidade": "6",
+      "total": "180.00"
+    }
+  },
+  {
+    "topico": "trabalho-e-energia",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.massa} kg está a {dados-calculo.altura} m do chão, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é a sua energia potencial, em joules? (duas casas decimais)",
+      "fr": "Un corps de {dados-calculo.massa} kg est à {dados-calculo.altura} m du sol, la gravité valant {dados-calculo.gravidade} m/s². Quelle est son énergie potentielle, en joules ? (deux décimales)",
+      "en": "A {dados-calculo.massa} kg body sits {dados-calculo.altura} m above the ground, with gravity at {dados-calculo.gravidade} m/s². What is its potential energy, in joules? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "5",
+      "altura": "10",
+      "gravidade": "9.81",
+      "total": "490.50"
+    }
+  },
+  {
+    "topico": "trabalho-e-energia",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um corpo cai de {dados-calculo.altura} m, partindo do repouso, com a gravidade valendo {dados-calculo.gravidade} m/s² e sem atrito. Com que velocidade, em m/s, ele chega ao chão? (duas casas decimais)",
+      "fr": "Un corps tombe de {dados-calculo.altura} m, au repos au départ, la gravité valant {dados-calculo.gravidade} m/s² et sans frottement. À quelle vitesse, en m/s, atteint-il le sol ? (deux décimales)",
+      "en": "A body falls from {dados-calculo.altura} m from rest, with gravity at {dados-calculo.gravidade} m/s² and no friction. At what speed, in m/s, does it hit the ground? (two decimal places)"
+    },
+    "dados-calculo": {
+      "altura": "20",
+      "gravidade": "9.81",
+      "total": "19.81"
+    }
+  },
+  {
+    "topico": "trabalho-e-energia",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma mola de constante {dados-calculo.constante} N/m é comprimida {dados-calculo.compressao} m. Quanta energia, em joules, fica armazenada nela? (duas casas decimais)",
+      "fr": "Un ressort de constante {dados-calculo.constante} N/m est comprimé de {dados-calculo.compressao} m. Combien d’énergie, en joules, y est stockée ? (deux décimales)",
+      "en": "A spring with constant {dados-calculo.constante} N/m is compressed {dados-calculo.compressao} m. How much energy, in joules, is stored in it? (two decimal places)"
+    },
+    "dados-calculo": {
+      "constante": "200",
+      "compressao": "0.3",
+      "total": "9.00"
+    }
+  },
+  {
+    "topico": "impulso-e-momento",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma força de {dados-calculo.forca} N age durante {dados-calculo.tempo} s. Qual é o impulso, em N·s? (duas casas decimais)",
+      "fr": "Une force de {dados-calculo.forca} N agit pendant {dados-calculo.tempo} s. Quelle est l’impulsion, en N·s ? (deux décimales)",
+      "en": "A force of {dados-calculo.forca} N acts for {dados-calculo.tempo} s. What is the impulse, in N·s? (two decimal places)"
+    },
+    "dados-calculo": {
+      "forca": "50",
+      "tempo": "4",
+      "total": "200.00"
+    }
+  },
+  {
+    "topico": "impulso-e-momento",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é o momento linear, em kg·m/s, de um corpo de {dados-calculo.massa} kg que se move a {dados-calculo.velocidade} m/s? (duas casas decimais)",
+      "fr": "Quelle est la quantité de mouvement, en kg·m/s, d’un corps de {dados-calculo.massa} kg se déplaçant à {dados-calculo.velocidade} m/s ? (deux décimales)",
+      "en": "What is the momentum, in kg·m/s, of a {dados-calculo.massa} kg body moving at {dados-calculo.velocidade} m/s? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "3",
+      "velocidade": "8",
+      "total": "24.00"
+    }
+  },
+  {
+    "topico": "impulso-e-momento",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.massa} kg a {dados-calculo.velocidade} m/s colide e para em {dados-calculo.tempo} s. Qual é a força média, em newtons? (duas casas decimais)",
+      "fr": "Un corps de {dados-calculo.massa} kg à {dados-calculo.velocidade} m/s entre en collision et s’arrête en {dados-calculo.tempo} s. Quelle est la force moyenne, en newtons ? (deux décimales)",
+      "en": "A {dados-calculo.massa} kg body at {dados-calculo.velocidade} m/s collides and stops in {dados-calculo.tempo} s. What is the average force, in newtons? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "2",
+      "velocidade": "10",
+      "tempo": "0.5",
+      "total": "40.00"
+    }
+  },
+  {
+    "topico": "impulso-e-momento",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um carrinho de {dados-calculo.massa1} kg a {dados-calculo.velocidade1} m/s atinge outro de {dados-calculo.massa2} kg, parado, e os dois seguem juntos. Qual é a velocidade final, em m/s? (duas casas decimais)",
+      "fr": "Un chariot de {dados-calculo.massa1} kg à {dados-calculo.velocidade1} m/s en heurte un autre de {dados-calculo.massa2} kg, à l’arrêt, et les deux repartent ensemble. Quelle est la vitesse finale, en m/s ? (deux décimales)",
+      "en": "A {dados-calculo.massa1} kg cart at {dados-calculo.velocidade1} m/s hits another of {dados-calculo.massa2} kg at rest, and the two move off together. What is the final speed, in m/s? (two decimal places)"
+    },
+    "dados-calculo": {
+      "massa1": "2",
+      "velocidade1": "6",
+      "massa2": "4",
+      "total": "2.00"
+    }
+  },
+  {
+    "topico": "estatica-e-torque",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Numa alavanca, uma força de {dados-calculo.forca1} N atua a {dados-calculo.distancia1} m do apoio. A que distância do apoio, em metros, deve atuar uma força de {dados-calculo.forca2} N para equilibrar? (duas casas decimais)",
+      "fr": "Sur un levier, une force de {dados-calculo.forca1} N agit à {dados-calculo.distancia1} m du pivot. À quelle distance du pivot, en mètres, doit agir une force de {dados-calculo.forca2} N pour équilibrer ? (deux décimales)",
+      "en": "On a lever, a force of {dados-calculo.forca1} N acts {dados-calculo.distancia1} m from the pivot. At what distance from the pivot, in metres, must a force of {dados-calculo.forca2} N act to balance it? (two decimal places)"
+    },
+    "dados-calculo": {
+      "forca1": "100",
+      "distancia1": "2",
+      "forca2": "50",
+      "total": "4.00"
+    }
+  },
+  {
+    "topico": "estatica-e-torque",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é o torque, em N·m, de uma força de {dados-calculo.forca} N aplicada perpendicularmente a {dados-calculo.distancia} m do eixo? (duas casas decimais)",
+      "fr": "Quel est le couple, en N·m, d’une force de {dados-calculo.forca} N appliquée perpendiculairement à {dados-calculo.distancia} m de l’axe ? (deux décimales)",
+      "en": "What is the torque, in N·m, of a {dados-calculo.forca} N force applied perpendicular at {dados-calculo.distancia} m from the axis? (two decimal places)"
+    },
+    "dados-calculo": {
+      "forca": "30",
+      "distancia": "0.4",
+      "total": "12.00"
+    }
+  },
+  {
+    "topico": "estatica-e-torque",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma barra de {dados-calculo.comprimento} m, apoiada nas duas pontas, sustenta uma carga de {dados-calculo.carga} N exatamente no centro. Qual é a reação em cada apoio, em newtons? (duas casas decimais)",
+      "fr": "Une barre de {dados-calculo.comprimento} m, appuyée aux deux extrémités, soutient une charge de {dados-calculo.carga} N exactement au centre. Quelle est la réaction à chaque appui, en newtons ? (deux décimales)",
+      "en": "A {dados-calculo.comprimento} m bar, resting on both ends, carries a {dados-calculo.carga} N load exactly at the centre. What is the reaction at each support, in newtons? (two decimal places)"
+    },
+    "dados-calculo": {
+      "comprimento": "4",
+      "carga": "200",
+      "total": "100.00"
+    }
+  },
+  {
+    "topico": "estatica-e-torque",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma barra de {dados-calculo.comprimento} m, apoiada nas duas pontas, sustenta uma carga de {dados-calculo.carga} N a {dados-calculo.distancia} m do apoio esquerdo. Qual é a reação no apoio DIREITO, em newtons? (duas casas decimais)",
+      "fr": "Une barre de {dados-calculo.comprimento} m, appuyée aux deux extrémités, soutient une charge de {dados-calculo.carga} N à {dados-calculo.distancia} m de l’appui gauche. Quelle est la réaction à l’appui DROIT, en newtons ? (deux décimales)",
+      "en": "A {dados-calculo.comprimento} m bar, resting on both ends, carries a {dados-calculo.carga} N load {dados-calculo.distancia} m from the left support. What is the reaction at the RIGHT support, in newtons? (two decimal places)"
+    },
+    "dados-calculo": {
+      "comprimento": "4",
+      "carga": "200",
+      "distancia": "1",
+      "total": "50.00"
+    }
+  },
+  {
+    "topico": "dinamica-rotacional",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é o momento de inércia, em kg·m², de um disco maciço de {dados-calculo.massa} kg e raio {dados-calculo.raio} m girando em torno do seu eixo? (três casas decimais)",
+      "fr": "Quel est le moment d’inertie, en kg·m², d’un disque plein de {dados-calculo.massa} kg et de rayon {dados-calculo.raio} m tournant autour de son axe ? (trois décimales)",
+      "en": "What is the moment of inertia, in kg·m², of a solid disc of {dados-calculo.massa} kg and radius {dados-calculo.raio} m spinning about its axis? (three decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "4",
+      "raio": "0.5",
+      "total": "0.500"
+    }
+  },
+  {
+    "topico": "dinamica-rotacional",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um torque de {dados-calculo.torque} N·m age sobre um corpo de momento de inércia {dados-calculo.inercia} kg·m². Qual é a aceleração angular, em rad/s²? (três casas decimais)",
+      "fr": "Un couple de {dados-calculo.torque} N·m agit sur un corps de moment d’inertie {dados-calculo.inercia} kg·m². Quelle est l’accélération angulaire, en rad/s² ? (trois décimales)",
+      "en": "A torque of {dados-calculo.torque} N·m acts on a body with moment of inertia {dados-calculo.inercia} kg·m². What is the angular acceleration, in rad/s²? (three decimal places)"
+    },
+    "dados-calculo": {
+      "torque": "10",
+      "inercia": "2",
+      "total": "5.000"
+    }
+  },
+  {
+    "topico": "dinamica-rotacional",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é a energia cinética de rotação, em joules, de um corpo com momento de inércia {dados-calculo.inercia} kg·m² girando a {dados-calculo.angular} rad/s? (três casas decimais)",
+      "fr": "Quelle est l’énergie cinétique de rotation, en joules, d’un corps de moment d’inertie {dados-calculo.inercia} kg·m² tournant à {dados-calculo.angular} rad/s ? (trois décimales)",
+      "en": "What is the rotational kinetic energy, in joules, of a body with moment of inertia {dados-calculo.inercia} kg·m² spinning at {dados-calculo.angular} rad/s? (three decimal places)"
+    },
+    "dados-calculo": {
+      "inercia": "2",
+      "angular": "3",
+      "total": "9.000"
+    }
+  },
+  {
+    "topico": "dinamica-rotacional",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é o momento de inércia, em kg·m², de uma esfera maciça de {dados-calculo.massa} kg e raio {dados-calculo.raio} m, que vale dois quintos de massa vezes raio ao quadrado? (três casas decimais)",
+      "fr": "Quel est le moment d’inertie, en kg·m², d’une sphère pleine de {dados-calculo.massa} kg et de rayon {dados-calculo.raio} m, qui vaut deux cinquièmes de la masse fois le rayon au carré ? (trois décimales)",
+      "en": "What is the moment of inertia, in kg·m², of a solid sphere of {dados-calculo.massa} kg and radius {dados-calculo.raio} m, which is two fifths of mass times radius squared? (three decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "5",
+      "raio": "0.3",
+      "total": "0.180"
+    }
+  },
+  {
+    "topico": "momento-angular",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma partícula de {dados-calculo.massa} kg passa a {dados-calculo.distancia} m de um ponto, com velocidade de {dados-calculo.velocidade} m/s perpendicular à linha que a liga ao ponto. Qual é o momento angular, em kg·m²/s? (três casas decimais)",
+      "fr": "Une particule de {dados-calculo.massa} kg passe à {dados-calculo.distancia} m d’un point, avec une vitesse de {dados-calculo.velocidade} m/s perpendiculaire à la ligne qui la relie au point. Quel est le moment cinétique, en kg·m²/s ? (trois décimales)",
+      "en": "A {dados-calculo.massa} kg particle passes {dados-calculo.distancia} m from a point, at {dados-calculo.velocidade} m/s perpendicular to the line joining it to the point. What is the angular momentum, in kg·m²/s? (three decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "2",
+      "distancia": "4",
+      "velocidade": "3",
+      "total": "24.000"
+    }
+  },
+  {
+    "topico": "momento-angular",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é o momento angular, em kg·m²/s, de um corpo com momento de inércia {dados-calculo.inercia} kg·m² girando a {dados-calculo.angular} rad/s? (três casas decimais)",
+      "fr": "Quel est le moment cinétique, en kg·m²/s, d’un corps de moment d’inertie {dados-calculo.inercia} kg·m² tournant à {dados-calculo.angular} rad/s ? (trois décimales)",
+      "en": "What is the angular momentum, in kg·m²/s, of a body with moment of inertia {dados-calculo.inercia} kg·m² spinning at {dados-calculo.angular} rad/s? (three decimal places)"
+    },
+    "dados-calculo": {
+      "inercia": "4",
+      "angular": "2.5",
+      "total": "10.000"
+    }
+  },
+  {
+    "topico": "momento-angular",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um patinador gira a {dados-calculo.angular} rad/s com momento de inércia {dados-calculo.inercia1} kg·m². Recolhendo os braços, a inércia cai para {dados-calculo.inercia2} kg·m². Qual é a nova velocidade angular, em rad/s? (três casas decimais)",
+      "fr": "Un patineur tourne à {dados-calculo.angular} rad/s avec un moment d’inertie de {dados-calculo.inercia1} kg·m². En ramenant les bras, l’inertie tombe à {dados-calculo.inercia2} kg·m². Quelle est la nouvelle vitesse angulaire, en rad/s ? (trois décimales)",
+      "en": "A skater spins at {dados-calculo.angular} rad/s with moment of inertia {dados-calculo.inercia1} kg·m². Pulling the arms in, the inertia drops to {dados-calculo.inercia2} kg·m². What is the new angular speed, in rad/s? (three decimal places)"
+    },
+    "dados-calculo": {
+      "angular": "2",
+      "inercia1": "6",
+      "inercia2": "2",
+      "total": "6.000"
+    }
+  },
+  {
+    "topico": "momento-angular",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um patinador recolhe os braços e o seu momento de inércia cai de {dados-calculo.inercia1} kg·m² para {dados-calculo.inercia2} kg·m², sem torque externo. Por quanto a energia cinética de rotação é multiplicada? (três casas decimais)",
+      "fr": "Un patineur ramène les bras et son moment d’inertie tombe de {dados-calculo.inercia1} kg·m² à {dados-calculo.inercia2} kg·m², sans couple extérieur. Par combien l’énergie cinétique de rotation est-elle multipliée ? (trois décimales)",
+      "en": "A skater pulls the arms in and the moment of inertia drops from {dados-calculo.inercia1} kg·m² to {dados-calculo.inercia2} kg·m², with no external torque. By what factor is the rotational kinetic energy multiplied? (three decimal places)"
+    },
+    "dados-calculo": {
+      "inercia1": "6",
+      "inercia2": "2",
+      "total": "3.000"
+    }
+  },
+  {
+    "topico": "movimento-harmonico",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma massa de {dados-calculo.massa} kg oscila presa a uma mola de constante {dados-calculo.constante} N/m. Qual é o período, em segundos? (três casas decimais)",
+      "fr": "Une masse de {dados-calculo.massa} kg oscille attachée à un ressort de constante {dados-calculo.constante} N/m. Quelle est la période, en secondes ? (trois décimales)",
+      "en": "A {dados-calculo.massa} kg mass oscillates on a spring with constant {dados-calculo.constante} N/m. What is the period, in seconds? (three decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "2",
+      "constante": "32",
+      "total": "1.571"
+    }
+  },
+  {
+    "topico": "movimento-harmonico",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma massa de {dados-calculo.massa} kg oscila presa a uma mola de constante {dados-calculo.constante} N/m. Qual é a frequência, em hertz? (três casas decimais)",
+      "fr": "Une masse de {dados-calculo.massa} kg oscille attachée à un ressort de constante {dados-calculo.constante} N/m. Quelle est la fréquence, en hertz ? (trois décimales)",
+      "en": "A {dados-calculo.massa} kg mass oscillates on a spring with constant {dados-calculo.constante} N/m. What is the frequency, in hertz? (three decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "2",
+      "constante": "32",
+      "total": "0.637"
+    }
+  },
+  {
+    "topico": "movimento-harmonico",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um pêndulo de {dados-calculo.comprimento} m oscila num lugar onde a gravidade vale {dados-calculo.gravidade} m/s². Qual é o período, em segundos? (três casas decimais)",
+      "fr": "Un pendule de {dados-calculo.comprimento} m oscille là où la gravité vaut {dados-calculo.gravidade} m/s². Quelle est la période, en secondes ? (trois décimales)",
+      "en": "A pendulum {dados-calculo.comprimento} m long swings where gravity is {dados-calculo.gravidade} m/s². What is the period, in seconds? (three decimal places)"
+    },
+    "dados-calculo": {
+      "comprimento": "1",
+      "gravidade": "9.81",
+      "total": "2.006"
+    }
+  },
+  {
+    "topico": "movimento-harmonico",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma massa de {dados-calculo.massa} kg numa mola de constante {dados-calculo.constante} N/m oscila com amplitude de {dados-calculo.amplitude} m. Qual é a velocidade máxima, em m/s? (três casas decimais)",
+      "fr": "Une masse de {dados-calculo.massa} kg sur un ressort de constante {dados-calculo.constante} N/m oscille avec une amplitude de {dados-calculo.amplitude} m. Quelle est la vitesse maximale, en m/s ? (trois décimales)",
+      "en": "A {dados-calculo.massa} kg mass on a spring with constant {dados-calculo.constante} N/m oscillates with amplitude {dados-calculo.amplitude} m. What is the maximum speed, in m/s? (three decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "2",
+      "constante": "32",
+      "amplitude": "0.1",
+      "total": "0.400"
+    }
+  },
+  {
+    "topico": "gravitacao-e-orbitas",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Se a distância entre dois corpos for multiplicada por {dados-calculo.fator}, por quanto a força gravitacional entre eles fica DIVIDIDA?",
+      "fr": "Si la distance entre deux corps est multipliée par {dados-calculo.fator}, par combien la force gravitationnelle entre eux est-elle DIVISÉE ?",
+      "en": "If the distance between two bodies is multiplied by {dados-calculo.fator}, by how much is the gravitational force between them DIVIDED?"
+    },
+    "dados-calculo": {
+      "fator": "4",
+      "total": "16"
+    }
+  },
+  {
+    "topico": "gravitacao-e-orbitas",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "A massa de um dos corpos é multiplicada por {dados-calculo.fatorMassa} e a distância entre eles também é multiplicada por {dados-calculo.fatorDistancia}. Por quanto a força gravitacional fica multiplicada?",
+      "fr": "La masse d’un des corps est multipliée par {dados-calculo.fatorMassa} et la distance entre eux est aussi multipliée par {dados-calculo.fatorDistancia}. Par combien la force gravitationnelle est-elle multipliée ?",
+      "en": "One body’s mass is multiplied by {dados-calculo.fatorMassa} and the distance between them is also multiplied by {dados-calculo.fatorDistancia}. By what factor is the gravitational force multiplied?"
+    },
+    "dados-calculo": {
+      "fatorMassa": "2",
+      "fatorDistancia": "2",
+      "total": "0.5"
+    }
+  },
+  {
+    "topico": "gravitacao-e-orbitas",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um satélite orbita a {dados-calculo.raios} raios terrestres do CENTRO da Terra. A aceleração da gravidade ali é a da superfície dividida por quanto?",
+      "fr": "Un satellite orbite à {dados-calculo.raios} rayons terrestres du CENTRE de la Terre. L’accélération de la gravité y est celle de la surface divisée par combien ?",
+      "en": "A satellite orbits at {dados-calculo.raios} Earth radii from the CENTRE of the Earth. The gravitational acceleration there is the surface value divided by how much?"
+    },
+    "dados-calculo": {
+      "raios": "3",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "gravitacao-e-orbitas",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Pela terceira lei de Kepler, se o raio da órbita for multiplicado por {dados-calculo.fator}, por quanto o período fica multiplicado?",
+      "fr": "Par la troisième loi de Kepler, si le rayon de l’orbite est multiplié par {dados-calculo.fator}, par combien la période est-elle multipliée ?",
+      "en": "By Kepler’s third law, if the orbital radius is multiplied by {dados-calculo.fator}, by what factor is the period multiplied?"
+    },
+    "dados-calculo": {
+      "fator": "4",
+      "total": "8"
+    }
+  },
+  {
+    "topico": "fluidos-e-aerodinamica",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um corpo de {dados-calculo.volume} L fica totalmente submerso em água, de densidade {dados-calculo.densidade} kg/m³, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é o empuxo, em newtons? (duas casas decimais)",
+      "fr": "Un corps de {dados-calculo.volume} L est entièrement immergé dans l’eau, de densité {dados-calculo.densidade} kg/m³, la gravité valant {dados-calculo.gravidade} m/s². Quelle est la poussée, en newtons ? (deux décimales)",
+      "en": "A body of {dados-calculo.volume} L is fully submerged in water of density {dados-calculo.densidade} kg/m³, with gravity at {dados-calculo.gravidade} m/s². What is the buoyant force, in newtons? (two decimal places)"
+    },
+    "dados-calculo": {
+      "volume": "20",
+      "densidade": "1000",
+      "gravidade": "9.81",
+      "total": "196.20"
+    }
+  },
+  {
+    "topico": "fluidos-e-aerodinamica",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a pressão da água, em kPa, a {dados-calculo.profundidade} m de profundidade, com densidade {dados-calculo.densidade} kg/m³ e gravidade {dados-calculo.gravidade} m/s²? (duas casas decimais)",
+      "fr": "Quelle est la pression de l’eau, en kPa, à {dados-calculo.profundidade} m de profondeur, avec une densité de {dados-calculo.densidade} kg/m³ et une gravité de {dados-calculo.gravidade} m/s² ? (deux décimales)",
+      "en": "What is the water pressure, in kPa, at {dados-calculo.profundidade} m depth, with density {dados-calculo.densidade} kg/m³ and gravity {dados-calculo.gravidade} m/s²? (two decimal places)"
+    },
+    "dados-calculo": {
+      "profundidade": "10",
+      "densidade": "1000",
+      "gravidade": "9.81",
+      "total": "98.10"
+    }
+  },
+  {
+    "topico": "fluidos-e-aerodinamica",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um tubo de área {dados-calculo.area} m² conduz água a {dados-calculo.velocidade} m/s. Qual é a vazão, em m³/s? (duas casas decimais)",
+      "fr": "Un tuyau de section {dados-calculo.area} m² conduit de l’eau à {dados-calculo.velocidade} m/s. Quel est le débit, en m³/s ? (deux décimales)",
+      "en": "A pipe of cross-section {dados-calculo.area} m² carries water at {dados-calculo.velocidade} m/s. What is the flow rate, in m³/s? (two decimal places)"
+    },
+    "dados-calculo": {
+      "area": "0.05",
+      "velocidade": "4",
+      "total": "0.20"
+    }
+  },
+  {
+    "topico": "fluidos-e-aerodinamica",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um tubo estreita de {dados-calculo.area1} m² para {dados-calculo.area2} m² de área. Se a água entra a {dados-calculo.velocidade} m/s, com que velocidade, em m/s, ela sai? (duas casas decimais)",
+      "fr": "Un tuyau se rétrécit de {dados-calculo.area1} m² à {dados-calculo.area2} m² de section. Si l’eau entre à {dados-calculo.velocidade} m/s, à quelle vitesse, en m/s, sort-elle ? (deux décimales)",
+      "en": "A pipe narrows from {dados-calculo.area1} m² to {dados-calculo.area2} m². If water enters at {dados-calculo.velocidade} m/s, at what speed, in m/s, does it leave? (two decimal places)"
+    },
+    "dados-calculo": {
+      "area1": "0.1",
+      "area2": "0.04",
+      "velocidade": "2",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "termodinamica-e-gases",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um gás a {dados-calculo.temperatura1} K ocupa {dados-calculo.volume1} L. À pressão constante, que volume em litros ele ocupa a {dados-calculo.temperatura2} K? (duas casas decimais)",
+      "fr": "Un gaz à {dados-calculo.temperatura1} K occupe {dados-calculo.volume1} L. À pression constante, quel volume en litres occupe-t-il à {dados-calculo.temperatura2} K ? (deux décimales)",
+      "en": "A gas at {dados-calculo.temperatura1} K takes up {dados-calculo.volume1} L. At constant pressure, what volume in litres does it take up at {dados-calculo.temperatura2} K? (two decimal places)"
+    },
+    "dados-calculo": {
+      "temperatura1": "300",
+      "volume1": "10",
+      "temperatura2": "450",
+      "total": "15.00"
+    }
+  },
+  {
+    "topico": "termodinamica-e-gases",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um gás a {dados-calculo.pressao1} atm ocupa {dados-calculo.volume1} L. À temperatura constante, que pressão em atm ele tem quando o volume passa a {dados-calculo.volume2} L? (duas casas decimais)",
+      "fr": "Un gaz à {dados-calculo.pressao1} atm occupe {dados-calculo.volume1} L. À température constante, quelle pression en atm a-t-il quand le volume devient {dados-calculo.volume2} L ? (deux décimales)",
+      "en": "A gas at {dados-calculo.pressao1} atm takes up {dados-calculo.volume1} L. At constant temperature, what pressure in atm does it have when the volume becomes {dados-calculo.volume2} L? (two decimal places)"
+    },
+    "dados-calculo": {
+      "pressao1": "2",
+      "volume1": "6",
+      "volume2": "3",
+      "total": "4.00"
+    }
+  },
+  {
+    "topico": "termodinamica-e-gases",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um gás recebe {dados-calculo.calor} J de calor e realiza {dados-calculo.trabalho} J de trabalho. Qual é a variação da energia interna, em joules? (duas casas decimais)",
+      "fr": "Un gaz reçoit {dados-calculo.calor} J de chaleur et effectue {dados-calculo.trabalho} J de travail. Quelle est la variation d’énergie interne, en joules ? (deux décimales)",
+      "en": "A gas takes in {dados-calculo.calor} J of heat and does {dados-calculo.trabalho} J of work. What is the change in internal energy, in joules? (two decimal places)"
+    },
+    "dados-calculo": {
+      "calor": "500",
+      "trabalho": "200",
+      "total": "300.00"
+    }
+  },
+  {
+    "topico": "termodinamica-e-gases",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma máquina térmica opera entre {dados-calculo.quente} K e {dados-calculo.fria} K. Qual é o rendimento máximo possível, em porcentagem? (duas casas decimais)",
+      "fr": "Une machine thermique fonctionne entre {dados-calculo.quente} K et {dados-calculo.fria} K. Quel est le rendement maximal possible, en pourcentage ? (deux décimales)",
+      "en": "A heat engine runs between {dados-calculo.quente} K and {dados-calculo.fria} K. What is the greatest possible efficiency, as a percentage? (two decimal places)"
+    },
+    "dados-calculo": {
+      "quente": "600",
+      "fria": "300",
+      "total": "50.00"
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Quanta energia, em joules, é preciso para aquecer {dados-calculo.massa} kg de um material de calor específico {dados-calculo.especifico} J/(kg·°C) em {dados-calculo.variacao} °C? (três casas decimais)",
+      "fr": "Combien d’énergie, en joules, faut-il pour chauffer {dados-calculo.massa} kg d’un matériau de chaleur spécifique {dados-calculo.especifico} J/(kg·°C) de {dados-calculo.variacao} °C ? (trois décimales)",
+      "en": "How much energy, in joules, is needed to heat {dados-calculo.massa} kg of a material with specific heat {dados-calculo.especifico} J/(kg·°C) by {dados-calculo.variacao} °C? (three decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "2",
+      "especifico": "500",
+      "variacao": "10",
+      "total": "10000.000"
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a variação de temperatura, em °C, quando {dados-calculo.energia} J entram em {dados-calculo.massa} kg de um material de calor específico {dados-calculo.especifico} J/(kg·°C)? (três casas decimais)",
+      "fr": "Quelle est la variation de température, en °C, quand {dados-calculo.energia} J entrent dans {dados-calculo.massa} kg d’un matériau de chaleur spécifique {dados-calculo.especifico} J/(kg·°C) ? (trois décimales)",
+      "en": "What is the temperature change, in °C, when {dados-calculo.energia} J enter {dados-calculo.massa} kg of a material with specific heat {dados-calculo.especifico} J/(kg·°C)? (three decimal places)"
+    },
+    "dados-calculo": {
+      "energia": "20000",
+      "massa": "4",
+      "especifico": "500",
+      "total": "10.000"
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Quanta energia, em joules, é preciso para fundir {dados-calculo.massa} kg de um sólido já na temperatura de fusão, com calor latente de {dados-calculo.latente} J/kg? (três casas decimais)",
+      "fr": "Combien d’énergie, en joules, faut-il pour fondre {dados-calculo.massa} kg d’un solide déjà à la température de fusion, avec une chaleur latente de {dados-calculo.latente} J/kg ? (trois décimales)",
+      "en": "How much energy, in joules, is needed to melt {dados-calculo.massa} kg of a solid already at its melting point, with latent heat {dados-calculo.latente} J/kg? (three decimal places)"
+    },
+    "dados-calculo": {
+      "massa": "2",
+      "latente": "334000",
+      "total": "668000.000"
+    }
+  },
+  {
+    "topico": "transferencia-de-calor",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma parede de área {dados-calculo.area} m² e espessura {dados-calculo.espessura} m é feita de um material de condutividade {dados-calculo.condutividade} W/(m·K). Com {dados-calculo.diferenca} K de diferença entre as faces, qual é o fluxo de calor, em watts? (três casas decimais)",
+      "fr": "Un mur d’aire {dados-calculo.area} m² et d’épaisseur {dados-calculo.espessura} m est fait d’un matériau de conductivité {dados-calculo.condutividade} W/(m·K). Avec {dados-calculo.diferenca} K d’écart entre les faces, quel est le flux de chaleur, en watts ? (trois décimales)",
+      "en": "A wall of area {dados-calculo.area} m² and thickness {dados-calculo.espessura} m is made of a material with conductivity {dados-calculo.condutividade} W/(m·K). With {dados-calculo.diferenca} K between its faces, what is the heat flow, in watts? (three decimal places)"
+    },
+    "dados-calculo": {
+      "area": "2",
+      "espessura": "0.1",
+      "condutividade": "0.5",
+      "diferenca": "20",
+      "total": "200.000"
+    }
+  },
+  {
+    "topico": "propulsao-de-foguetes",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um motor tem velocidade de exaustão de {dados-calculo.exaustao} m/s. Qual é o seu impulso específico, em segundos, com a gravidade valendo {dados-calculo.gravidade} m/s²? (duas casas decimais)",
+      "fr": "Un moteur a une vitesse d’éjection de {dados-calculo.exaustao} m/s. Quelle est son impulsion spécifique, en secondes, la gravité valant {dados-calculo.gravidade} m/s² ? (deux décimales)",
+      "en": "An engine has an exhaust velocity of {dados-calculo.exaustao} m/s. What is its specific impulse, in seconds, with gravity at {dados-calculo.gravidade} m/s²? (two decimal places)"
+    },
+    "dados-calculo": {
+      "exaustao": "3000",
+      "gravidade": "9.81",
+      "total": "305.81"
+    }
+  },
+  {
+    "topico": "propulsao-de-foguetes",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um motor queima {dados-calculo.vazao} kg de propelente por segundo e o expele a {dados-calculo.exaustao} m/s. Qual é o empuxo, em newtons? (duas casas decimais)",
+      "fr": "Un moteur brûle {dados-calculo.vazao} kg d’ergol par seconde et l’éjecte à {dados-calculo.exaustao} m/s. Quelle est la poussée, en newtons ? (deux décimales)",
+      "en": "An engine burns {dados-calculo.vazao} kg of propellant per second and expels it at {dados-calculo.exaustao} m/s. What is the thrust, in newtons? (two decimal places)"
+    },
+    "dados-calculo": {
+      "vazao": "5",
+      "exaustao": "3000",
+      "total": "15000.00"
+    }
+  },
+  {
+    "topico": "propulsao-de-foguetes",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um foguete com velocidade de exaustão de {dados-calculo.exaustao} m/s tem razão entre a massa inicial e a final igual a {dados-calculo.razao}. Qual é o incremento de velocidade, em m/s? (duas casas decimais)",
+      "fr": "Une fusée avec une vitesse d’éjection de {dados-calculo.exaustao} m/s a un rapport entre masse initiale et finale égal à {dados-calculo.razao}. Quel est l’incrément de vitesse, en m/s ? (deux décimales)",
+      "en": "A rocket with exhaust velocity {dados-calculo.exaustao} m/s has an initial-to-final mass ratio of {dados-calculo.razao}. What is the velocity increment, in m/s? (two decimal places)"
+    },
+    "dados-calculo": {
+      "exaustao": "3000",
+      "razao": "3",
+      "total": "3295.84"
+    }
+  },
+  {
+    "topico": "propulsao-de-foguetes",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Que razão entre a massa inicial e a final um foguete precisa para ganhar {dados-calculo.incremento} m/s de velocidade, com velocidade de exaustão de {dados-calculo.exaustao} m/s? (duas casas decimais)",
+      "fr": "Quel rapport entre masse initiale et finale une fusée doit-elle avoir pour gagner {dados-calculo.incremento} m/s de vitesse, avec une vitesse d’éjection de {dados-calculo.exaustao} m/s ? (deux décimales)",
+      "en": "What initial-to-final mass ratio does a rocket need to gain {dados-calculo.incremento} m/s of velocity, with an exhaust velocity of {dados-calculo.exaustao} m/s? (two decimal places)"
+    },
+    "dados-calculo": {
+      "incremento": "3000",
+      "exaustao": "3000",
+      "total": "2.72"
+    }
   }
 ]
