@@ -321,8 +321,26 @@ treina pouco; **frágil** = falta conteúdo ou o treino é de uma pergunta.
     dependem de saber qual erro produz qual número, que é o que os 135 geradores fazem com a
     conta na mão. As entradas levam `conceitos: []` e não contam para os requisitos por conceito
     da etapa. O banco **complementa** os geradores.
-  - **Estado:** 8 entradas, em 4 tópicos — operações fundamentais (4), MMC e MDC (2), razão e
-    proporção (1), áreas de figuras planas (1). Documentado no README. Suíte em **9 243 testes**.
+  - **A lista de tópicos é contrato (15/11).** Quais tópicos podem ter enunciado no banco veio
+    escrito, tópico por tópico: são **122**, e não os 130 prontos do site. Ficam de fora notação
+    matemática, MMC e MDC, potenciação e radiciação, produtos notáveis, fatoração, inequações,
+    estudo de sinal e sistemas lineares — neles o gerador segue sozinho. A lista vive em
+    `core/enunciados/topicos-do-banco.ts`, explícita e não derivada do currículo, com guarda por
+    entrada: um tópico de fora é recusado no teste, e um tópico novo no currículo não entra no
+    banco por acidente.
+  - **O quanto o banco aparece virou ajuste (15/11).** Era constante no código; é o sexto bloco
+    de Configurações, nas três línguas. `0` desliga o banco. Isso também consertou um teste que
+    passava por sorte da semente: o espião que confere se o gerador recebe os tipos pendentes
+    vive em Frações, que ganhou entrada no banco — com o banco ligado, parte dos sorteios não
+    chegava ao gerador.
+  - **Estado:** **490 entradas, cobrindo os 122 tópicos da lista nos quatro níveis.** Cada total
+    foi calculado com a convenção do próprio tópico — duas ou três casas decimais onde o corretor
+    as exige, fração onde ele pede fração, fórmula química onde ele lê fórmula — e conferido pelo
+    corretor do tópico, entrada por entrada. Documentado no README. Suíte em **14 555 testes**.
+  - **O que o guarda NÃO confere:** a matemática do enunciado. Ele refaz a conta só quando ela
+    está declarada (`x1 acao x2`); nas demais, ele garante que o corretor ACEITA o total, o que
+    não é o mesmo que o total estar certo. Quem escrever uma entrada nova continua responsável
+    pela conta — é a contrapartida de o arquivo ser editável à mão.
 
 ---
 

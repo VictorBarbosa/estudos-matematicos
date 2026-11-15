@@ -780,7 +780,14 @@ objeto; tirar é apagar o objeto. Nada de código.
 
 A sessão de treino sorteia do banco **um de cada três exercícios**, quando há entrada para o
 tópico e o nível em que o aluno está; nos outros casos responde o gerador de sempre. O sorteio
-usa o `rng` da sessão, e por isso a sessão continua reproduzível.
+usa o `rng` da sessão, e por isso a sessão continua reproduzível. Esse «um em três» é ajuste,
+no sexto bloco de Configurações: `0` desliga o banco e devolve o sorteio inteiro aos geradores.
+
+**Quais tópicos podem ter entrada** está em `core/enunciados/topicos-do-banco.ts`: são 122, e
+a lista é escolha de quem estuda, não um recorte automático do currículo. Oito tópicos prontos
+ficam de fora de propósito — notação matemática, MMC e MDC, potenciação e radiciação, produtos
+notáveis, fatoração, inequações, estudo de sinal e sistemas lineares —, e uma entrada escrita
+para eles é recusada pelo guarda. Hoje o arquivo cobre **os 122 tópicos, nos quatro níveis**.
 
 O `total` é lido pelo `analisar` do próprio tópico — a mesma função que lê o que o aluno digita
 —, então uma entrada de um tópico de fração vira gabarito de fração sem uma linha a mais, e uma

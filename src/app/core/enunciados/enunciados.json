@@ -4303,5 +4303,2639 @@
       "exaustao": "3000",
       "total": "2.72"
     }
+  },
+  {
+    "topico": "eletrostatica",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a intensidade do campo elétrico, em kN/C, criado por uma carga de {dados-calculo.carga} μC a {dados-calculo.distancia} m dela? (duas casas decimais)",
+      "fr": "Quelle est l’intensité du champ électrique, en kN/C, créé par une charge de {dados-calculo.carga} μC à {dados-calculo.distancia} m d’elle ? (deux décimales)",
+      "en": "What is the electric field strength, in kN/C, created by a {dados-calculo.carga} μC charge at {dados-calculo.distancia} m from it? (two decimal places)"
+    },
+    "dados-calculo": {
+      "carga": "2",
+      "distancia": "0.5",
+      "total": "71.92"
+    }
+  },
+  {
+    "topico": "eletrostatica",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Duas cargas, de {dados-calculo.carga1} μC e {dados-calculo.carga2} μC, estão a {dados-calculo.distancia} m uma da outra. Qual é a força entre elas, em newtons? (duas casas decimais)",
+      "fr": "Deux charges, de {dados-calculo.carga1} μC et {dados-calculo.carga2} μC, sont à {dados-calculo.distancia} m l’une de l’autre. Quelle est la force entre elles, en newtons ? (deux décimales)",
+      "en": "Two charges, {dados-calculo.carga1} μC and {dados-calculo.carga2} μC, sit {dados-calculo.distancia} m apart. What is the force between them, in newtons? (two decimal places)"
+    },
+    "dados-calculo": {
+      "carga1": "3",
+      "carga2": "4",
+      "distancia": "0.3",
+      "total": "1.20"
+    }
+  },
+  {
+    "topico": "eletrostatica",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é a força, em newtons, sobre uma carga de {dados-calculo.carga} μC colocada num campo elétrico de {dados-calculo.campo} N/C? (duas casas decimais)",
+      "fr": "Quelle est la force, en newtons, sur une charge de {dados-calculo.carga} μC placée dans un champ électrique de {dados-calculo.campo} N/C ? (deux décimales)",
+      "en": "What is the force, in newtons, on a {dados-calculo.carga} μC charge placed in an electric field of {dados-calculo.campo} N/C? (two decimal places)"
+    },
+    "dados-calculo": {
+      "carga": "5",
+      "campo": "200000",
+      "total": "1.00"
+    }
+  },
+  {
+    "topico": "eletrostatica",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Se a distância até uma carga puntiforme for multiplicada por {dados-calculo.fator}, por quanto o campo elétrico fica DIVIDIDO?",
+      "fr": "Si la distance à une charge ponctuelle est multipliée par {dados-calculo.fator}, par combien le champ électrique est-il DIVISÉ ?",
+      "en": "If the distance to a point charge is multiplied by {dados-calculo.fator}, by how much is the electric field DIVIDED?"
+    },
+    "dados-calculo": {
+      "fator": "3",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um capacitor de {dados-calculo.capacitancia} μF é ligado a uma bateria de {dados-calculo.tensao} V. Que carga ele armazena, em μC?",
+      "fr": "Un condensateur de {dados-calculo.capacitancia} μF est branché à une pile de {dados-calculo.tensao} V. Quelle charge stocke-t-il, en μC ?",
+      "en": "A {dados-calculo.capacitancia} μF capacitor is connected to a {dados-calculo.tensao} V battery. What charge does it store, in μC?"
+    },
+    "dados-calculo": {
+      "capacitancia": "22",
+      "tensao": "12",
+      "total": "264"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Quanta energia, em joules, fica armazenada num capacitor de {dados-calculo.capacitancia} μF ligado a {dados-calculo.tensao} V? (duas casas decimais)",
+      "fr": "Combien d’énergie, en joules, est stockée dans un condensateur de {dados-calculo.capacitancia} μF branché à {dados-calculo.tensao} V ? (deux décimales)",
+      "en": "How much energy, in joules, is stored in a {dados-calculo.capacitancia} μF capacitor connected to {dados-calculo.tensao} V? (two decimal places)"
+    },
+    "dados-calculo": {
+      "capacitancia": "10",
+      "tensao": "100",
+      "total": "0.05"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Dois capacitores, de {dados-calculo.c1} μF e {dados-calculo.c2} μF, são ligados em SÉRIE. Qual é a capacitância equivalente, em μF?",
+      "fr": "Deux condensateurs, de {dados-calculo.c1} μF et {dados-calculo.c2} μF, sont branchés en SÉRIE. Quelle est la capacité équivalente, en μF ?",
+      "en": "Two capacitors, {dados-calculo.c1} μF and {dados-calculo.c2} μF, are connected in SERIES. What is the equivalent capacitance, in μF?"
+    },
+    "dados-calculo": {
+      "c1": "6",
+      "c2": "3",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "potencial-e-capacitores",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Dois capacitores, de {dados-calculo.c1} μF e {dados-calculo.c2} μF, são ligados em PARALELO. Qual é a capacitância equivalente, em μF?",
+      "fr": "Deux condensateurs, de {dados-calculo.c1} μF et {dados-calculo.c2} μF, sont branchés en PARALLÈLE. Quelle est la capacité équivalente, en μF ?",
+      "en": "Two capacitors, {dados-calculo.c1} μF and {dados-calculo.c2} μF, are connected in PARALLEL. What is the equivalent capacitance, in μF?"
+    },
+    "dados-calculo": {
+      "c1": "6",
+      "c2": "3",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um resistor de {dados-calculo.resistencia} Ω é ligado a {dados-calculo.tensao} V. Quanta potência ele dissipa, em watts? (duas casas decimais)",
+      "fr": "Une résistance de {dados-calculo.resistencia} Ω est branchée à {dados-calculo.tensao} V. Quelle puissance dissipe-t-elle, en watts ? (deux décimales)",
+      "en": "A {dados-calculo.resistencia} Ω resistor is connected to {dados-calculo.tensao} V. How much power does it dissipate, in watts? (two decimal places)"
+    },
+    "dados-calculo": {
+      "resistencia": "12",
+      "tensao": "24",
+      "total": "48.00"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Que corrente, em ampères, passa por um resistor de {dados-calculo.resistencia} Ω ligado a {dados-calculo.tensao} V?",
+      "fr": "Quel courant, en ampères, traverse une résistance de {dados-calculo.resistencia} Ω branchée à {dados-calculo.tensao} V ?",
+      "en": "What current, in amperes, flows through a {dados-calculo.resistencia} Ω resistor connected to {dados-calculo.tensao} V?"
+    },
+    "dados-calculo": {
+      "resistencia": "8",
+      "tensao": "24",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Dois resistores, de {dados-calculo.r1} Ω e {dados-calculo.r2} Ω, estão em SÉRIE, ligados a {dados-calculo.tensao} V. Que corrente, em ampères, percorre o circuito?",
+      "fr": "Deux résistances, de {dados-calculo.r1} Ω et {dados-calculo.r2} Ω, sont en SÉRIE, branchées à {dados-calculo.tensao} V. Quel courant, en ampères, parcourt le circuit ?",
+      "en": "Two resistors, {dados-calculo.r1} Ω and {dados-calculo.r2} Ω, are in SERIES across {dados-calculo.tensao} V. What current, in amperes, flows in the circuit?"
+    },
+    "dados-calculo": {
+      "r1": "4",
+      "r2": "6",
+      "tensao": "20",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "circuitos",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Dois resistores, de {dados-calculo.r1} Ω e {dados-calculo.r2} Ω, estão em PARALELO. Qual é a resistência equivalente, em ohms?",
+      "fr": "Deux résistances, de {dados-calculo.r1} Ω et {dados-calculo.r2} Ω, sont en PARALLÈLE. Quelle est la résistance équivalente, en ohms ?",
+      "en": "Two resistors, {dados-calculo.r1} Ω and {dados-calculo.r2} Ω, are in PARALLEL. What is the equivalent resistance, in ohms?"
+    },
+    "dados-calculo": {
+      "r1": "6",
+      "r2": "3",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um fio de {dados-calculo.comprimento} m, percorrido por {dados-calculo.corrente} A, está perpendicular a um campo magnético de {dados-calculo.campo} T. Qual é a força sobre ele, em newtons?",
+      "fr": "Un fil de {dados-calculo.comprimento} m, parcouru par {dados-calculo.corrente} A, est perpendiculaire à un champ magnétique de {dados-calculo.campo} T. Quelle est la force sur lui, en newtons ?",
+      "en": "A wire {dados-calculo.comprimento} m long carrying {dados-calculo.corrente} A is perpendicular to a {dados-calculo.campo} T magnetic field. What is the force on it, in newtons?"
+    },
+    "dados-calculo": {
+      "comprimento": "2",
+      "corrente": "4",
+      "campo": "0.5",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma barra de {dados-calculo.comprimento} m desliza a {dados-calculo.velocidade} m/s, perpendicular a um campo de {dados-calculo.campo} T. Qual é a força eletromotriz induzida, em volts?",
+      "fr": "Une barre de {dados-calculo.comprimento} m glisse à {dados-calculo.velocidade} m/s, perpendiculaire à un champ de {dados-calculo.campo} T. Quelle est la force électromotrice induite, en volts ?",
+      "en": "A bar {dados-calculo.comprimento} m long slides at {dados-calculo.velocidade} m/s, perpendicular to a {dados-calculo.campo} T field. What is the induced electromotive force, in volts?"
+    },
+    "dados-calculo": {
+      "comprimento": "0.5",
+      "velocidade": "10",
+      "campo": "0.2",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma espira de área {dados-calculo.area} m² está perpendicular a um campo magnético de {dados-calculo.campo} T. Qual é o fluxo magnético, em webers?",
+      "fr": "Une spire d’aire {dados-calculo.area} m² est perpendiculaire à un champ magnétique de {dados-calculo.campo} T. Quel est le flux magnétique, en webers ?",
+      "en": "A loop of area {dados-calculo.area} m² is perpendicular to a {dados-calculo.campo} T magnetic field. What is the magnetic flux, in webers?"
+    },
+    "dados-calculo": {
+      "area": "0.25",
+      "campo": "0.4",
+      "total": "0.1"
+    }
+  },
+  {
+    "topico": "magnetismo-e-inducao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "O fluxo magnético numa espira varia {dados-calculo.variacao} Wb em {dados-calculo.tempo} s. Qual é a força eletromotriz induzida, em volts?",
+      "fr": "Le flux magnétique dans une spire varie de {dados-calculo.variacao} Wb en {dados-calculo.tempo} s. Quelle est la force électromotrice induite, en volts ?",
+      "en": "The magnetic flux through a loop changes by {dados-calculo.variacao} Wb in {dados-calculo.tempo} s. What is the induced electromotive force, in volts?"
+    },
+    "dados-calculo": {
+      "variacao": "0.6",
+      "tempo": "0.2",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma corda esticada com tração de {dados-calculo.tracao} N tem densidade linear de {dados-calculo.densidade} kg/m. Com que velocidade, em m/s, uma onda a percorre?",
+      "fr": "Une corde tendue avec une tension de {dados-calculo.tracao} N a une densité linéique de {dados-calculo.densidade} kg/m. À quelle vitesse, en m/s, une onde la parcourt-elle ?",
+      "en": "A string under {dados-calculo.tracao} N of tension has a linear density of {dados-calculo.densidade} kg/m. At what speed, in m/s, does a wave travel along it?"
+    },
+    "dados-calculo": {
+      "tracao": "100",
+      "densidade": "0.01",
+      "total": "100"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma onda tem comprimento de onda de {dados-calculo.comprimento} m e frequência de {dados-calculo.frequencia} Hz. Qual é a sua velocidade, em m/s?",
+      "fr": "Une onde a une longueur d’onde de {dados-calculo.comprimento} m et une fréquence de {dados-calculo.frequencia} Hz. Quelle est sa vitesse, en m/s ?",
+      "en": "A wave has a wavelength of {dados-calculo.comprimento} m and a frequency of {dados-calculo.frequencia} Hz. What is its speed, in m/s?"
+    },
+    "dados-calculo": {
+      "comprimento": "2",
+      "frequencia": "170",
+      "total": "340"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "O som viaja a {dados-calculo.velocidade} m/s no ar. Qual é a frequência, em hertz, de uma onda sonora de comprimento de onda {dados-calculo.comprimento} m?",
+      "fr": "Le son se déplace à {dados-calculo.velocidade} m/s dans l’air. Quelle est la fréquence, en hertz, d’une onde sonore de longueur d’onde {dados-calculo.comprimento} m ?",
+      "en": "Sound travels at {dados-calculo.velocidade} m/s in air. What is the frequency, in hertz, of a sound wave with wavelength {dados-calculo.comprimento} m?"
+    },
+    "dados-calculo": {
+      "velocidade": "340",
+      "comprimento": "0.5",
+      "total": "680"
+    }
+  },
+  {
+    "topico": "ondas-e-som",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma sirene de {dados-calculo.frequencia} Hz se aproxima a {dados-calculo.velocidadeFonte} m/s, com o som viajando a {dados-calculo.velocidadeSom} m/s. Que frequência, em hertz, um observador parado ouve? (duas casas decimais)",
+      "fr": "Une sirène de {dados-calculo.frequencia} Hz s’approche à {dados-calculo.velocidadeFonte} m/s, le son voyageant à {dados-calculo.velocidadeSom} m/s. Quelle fréquence, en hertz, un observateur immobile entend-il ? (deux décimales)",
+      "en": "A {dados-calculo.frequencia} Hz siren approaches at {dados-calculo.velocidadeFonte} m/s, with sound travelling at {dados-calculo.velocidadeSom} m/s. What frequency, in hertz, does a stationary listener hear? (two decimal places)"
+    },
+    "dados-calculo": {
+      "frequencia": "400",
+      "velocidadeFonte": "40",
+      "velocidadeSom": "340",
+      "total": "453.33"
+    }
+  },
+  {
+    "topico": "optica",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um raio de luz passa do ar, de índice {dados-calculo.n1}, para um vidro de índice {dados-calculo.n2}, fazendo {dados-calculo.angulo}° com a normal. Que ângulo, em graus, ele faz com a normal dentro do vidro? (duas casas decimais)",
+      "fr": "Un rayon de lumière passe de l’air, d’indice {dados-calculo.n1}, à un verre d’indice {dados-calculo.n2}, en faisant {dados-calculo.angulo}° avec la normale. Quel angle, en degrés, fait-il avec la normale dans le verre ? (deux décimales)",
+      "en": "A light ray goes from air, index {dados-calculo.n1}, into glass of index {dados-calculo.n2}, making {dados-calculo.angulo}° with the normal. What angle, in degrees, does it make with the normal inside the glass? (two decimal places)"
+    },
+    "dados-calculo": {
+      "n1": "1",
+      "n2": "1.5",
+      "angulo": "45",
+      "total": "28.13"
+    }
+  },
+  {
+    "topico": "optica",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um objeto está a {dados-calculo.objeto} cm de uma lente convergente de distância focal {dados-calculo.focal} cm. A que distância, em centímetros, fica a imagem?",
+      "fr": "Un objet est à {dados-calculo.objeto} cm d’une lentille convergente de distance focale {dados-calculo.focal} cm. À quelle distance, en centimètres, se forme l’image ?",
+      "en": "An object sits {dados-calculo.objeto} cm from a converging lens of focal length {dados-calculo.focal} cm. How far, in centimetres, is the image?"
+    },
+    "dados-calculo": {
+      "objeto": "15",
+      "focal": "10",
+      "total": "30"
+    }
+  },
+  {
+    "topico": "optica",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um objeto está a {dados-calculo.objeto} cm de uma lente e a imagem se forma a {dados-calculo.imagem} cm dela. Qual é o aumento, em módulo?",
+      "fr": "Un objet est à {dados-calculo.objeto} cm d’une lentille et l’image se forme à {dados-calculo.imagem} cm de celle-ci. Quel est le grandissement, en valeur absolue ?",
+      "en": "An object sits {dados-calculo.objeto} cm from a lens and the image forms {dados-calculo.imagem} cm from it. What is the magnification, in absolute value?"
+    },
+    "dados-calculo": {
+      "objeto": "15",
+      "imagem": "30",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "optica",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é o ângulo limite, em graus, para a luz que sai de um meio de índice {dados-calculo.n2} para o ar, de índice {dados-calculo.n1}? (duas casas decimais)",
+      "fr": "Quel est l’angle limite, en degrés, pour la lumière qui sort d’un milieu d’indice {dados-calculo.n2} vers l’air, d’indice {dados-calculo.n1} ? (deux décimales)",
+      "en": "What is the critical angle, in degrees, for light leaving a medium of index {dados-calculo.n2} into air of index {dados-calculo.n1}? (two decimal places)"
+    },
+    "dados-calculo": {
+      "n2": "1.5",
+      "n1": "1",
+      "total": "41.81"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma nave viaja a {dados-calculo.fracao} da velocidade da luz. Qual é o fator de Lorentz? (duas casas decimais)",
+      "fr": "Un vaisseau voyage à {dados-calculo.fracao} de la vitesse de la lumière. Quel est le facteur de Lorentz ? (deux décimales)",
+      "en": "A ship travels at {dados-calculo.fracao} of the speed of light. What is the Lorentz factor? (two decimal places)"
+    },
+    "dados-calculo": {
+      "fracao": "0.6",
+      "total": "1.25"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um relógio a bordo de uma nave a {dados-calculo.fracao} da velocidade da luz mede {dados-calculo.tempo} s. Quantos segundos passam para quem ficou parado? (duas casas decimais)",
+      "fr": "Une horloge à bord d’un vaisseau à {dados-calculo.fracao} de la vitesse de la lumière mesure {dados-calculo.tempo} s. Combien de secondes passent pour celui qui est resté immobile ? (deux décimales)",
+      "en": "A clock aboard a ship at {dados-calculo.fracao} of the speed of light reads {dados-calculo.tempo} s. How many seconds pass for someone at rest? (two decimal places)"
+    },
+    "dados-calculo": {
+      "fracao": "0.6",
+      "tempo": "10",
+      "total": "12.50"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma régua de {dados-calculo.comprimento} m viaja a {dados-calculo.fracao} da velocidade da luz, na sua própria direção. Que comprimento, em metros, ela tem para quem a vê passar? (duas casas decimais)",
+      "fr": "Une règle de {dados-calculo.comprimento} m voyage à {dados-calculo.fracao} de la vitesse de la lumière, dans sa propre direction. Quelle longueur, en mètres, a-t-elle pour celui qui la voit passer ? (deux décimales)",
+      "en": "A {dados-calculo.comprimento} m rod travels at {dados-calculo.fracao} of the speed of light along its own direction. What length, in metres, does it have for someone watching it go by? (two decimal places)"
+    },
+    "dados-calculo": {
+      "comprimento": "100",
+      "fracao": "0.8",
+      "total": "60.00"
+    }
+  },
+  {
+    "topico": "fisica-moderna",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é o fator de Lorentz para uma nave a {dados-calculo.fracao} da velocidade da luz? (duas casas decimais)",
+      "fr": "Quel est le facteur de Lorentz pour un vaisseau à {dados-calculo.fracao} de la vitesse de la lumière ? (deux décimales)",
+      "en": "What is the Lorentz factor for a ship at {dados-calculo.fracao} of the speed of light? (two decimal places)"
+    },
+    "dados-calculo": {
+      "fracao": "0.8",
+      "total": "1.67"
+    }
+  },
+  {
+    "topico": "nocao-intuitiva-de-limite",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma função vale o quadrado de x menos {dados-calculo.a}, dividido por x menos {dados-calculo.raiz}. Ela não existe em x = {dados-calculo.raiz}, mas de que valor ela se aproxima quando x se aproxima de {dados-calculo.raiz}?",
+      "fr": "Une fonction vaut le carré de x moins {dados-calculo.a}, divisé par x moins {dados-calculo.raiz}. Elle n’existe pas en x = {dados-calculo.raiz}, mais de quelle valeur s’approche-t-elle quand x s’approche de {dados-calculo.raiz} ?",
+      "en": "A function is the square of x minus {dados-calculo.a}, divided by x minus {dados-calculo.raiz}. It does not exist at x = {dados-calculo.raiz}, but what value does it approach as x approaches {dados-calculo.raiz}?"
+    },
+    "dados-calculo": {
+      "a": "25",
+      "raiz": "5",
+      "total": "10"
+    }
+  },
+  {
+    "topico": "nocao-intuitiva-de-limite",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um polígono regular inscrito numa circunferência de raio {dados-calculo.raio} tem o perímetro cada vez mais próximo de um valor, conforme o número de lados cresce. Dividindo esse valor-limite por π, quanto se obtém?",
+      "fr": "Un polygone régulier inscrit dans un cercle de rayon {dados-calculo.raio} a un périmètre de plus en plus proche d’une valeur, à mesure que le nombre de côtés augmente. En divisant cette valeur limite par π, qu’obtient-on ?",
+      "en": "A regular polygon inscribed in a circle of radius {dados-calculo.raio} has a perimeter approaching a value as the number of sides grows. Dividing that limit value by π, what do you get?"
+    },
+    "dados-calculo": {
+      "raio": "7",
+      "total": "14"
+    }
+  },
+  {
+    "topico": "nocao-intuitiva-de-limite",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.a} para todo x diferente de {dados-calculo.ponto}, e vale {dados-calculo.b} exatamente em x = {dados-calculo.ponto}. De que valor ela se aproxima quando x tende a {dados-calculo.ponto}?",
+      "fr": "Une fonction vaut {dados-calculo.a} pour tout x différent de {dados-calculo.ponto}, et vaut {dados-calculo.b} exactement en x = {dados-calculo.ponto}. De quelle valeur s’approche-t-elle quand x tend vers {dados-calculo.ponto} ?",
+      "en": "A function equals {dados-calculo.a} for every x other than {dados-calculo.ponto}, and equals {dados-calculo.b} exactly at x = {dados-calculo.ponto}. What value does it approach as x tends to {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "a": "4",
+      "ponto": "2",
+      "b": "9",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "nocao-intuitiva-de-limite",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma bola cai de {dados-calculo.altura} m e, a cada quique, volta a {dados-calculo.fracao} da altura anterior. Somando todas as subidas, de quantos metros ela se aproxima no total?",
+      "fr": "Une balle tombe de {dados-calculo.altura} m et, à chaque rebond, remonte à {dados-calculo.fracao} de la hauteur précédente. En additionnant toutes les remontées, de combien de mètres s’approche-t-elle au total ?",
+      "en": "A ball falls from {dados-calculo.altura} m and on each bounce returns to {dados-calculo.fracao} of the previous height. Adding up all the rises, how many metres does the total approach?"
+    },
+    "dados-calculo": {
+      "altura": "10",
+      "fracao": "1/2",
+      "total": "10"
+    }
+  },
+  {
+    "topico": "vizinhancas-e-infinito",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "De que valor se aproxima {dados-calculo.numerador} dividido por x, quando x cresce sem limite?",
+      "fr": "De quelle valeur s’approche {dados-calculo.numerador} divisé par x, quand x croît sans limite ?",
+      "en": "What value does {dados-calculo.numerador} divided by x approach as x grows without bound?"
+    },
+    "dados-calculo": {
+      "numerador": "7",
+      "total": "0"
+    }
+  },
+  {
+    "topico": "vizinhancas-e-infinito",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "De que valor se aproxima a razão entre {dados-calculo.a} vezes x e {dados-calculo.b} vezes x mais {dados-calculo.c}, quando x cresce sem limite?",
+      "fr": "De quelle valeur s’approche le rapport entre {dados-calculo.a} fois x et {dados-calculo.b} fois x plus {dados-calculo.c}, quand x croît sans limite ?",
+      "en": "What value does the ratio of {dados-calculo.a} times x to {dados-calculo.b} times x plus {dados-calculo.c} approach as x grows without bound?"
+    },
+    "dados-calculo": {
+      "a": "6",
+      "b": "3",
+      "c": "5",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "vizinhancas-e-infinito",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um remédio tem concentração igual a {dados-calculo.a} vezes o tempo dividido pelo tempo mais {dados-calculo.b}. De que valor a concentração se aproxima depois de muito tempo?",
+      "fr": "Un médicament a une concentration égale à {dados-calculo.a} fois le temps divisé par le temps plus {dados-calculo.b}. De quelle valeur la concentration s’approche-t-elle après très longtemps ?",
+      "en": "A drug has a concentration of {dados-calculo.a} times the time divided by the time plus {dados-calculo.b}. What value does the concentration approach after a long time?"
+    },
+    "dados-calculo": {
+      "a": "12",
+      "b": "4",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "vizinhancas-e-infinito",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "De que valor se aproxima a razão entre o quadrado de x e {dados-calculo.b} vezes o quadrado de x mais x, quando x cresce sem limite? Responda como fração.",
+      "fr": "De quelle valeur s’approche le rapport entre le carré de x et {dados-calculo.b} fois le carré de x plus x, quand x croît sans limite ? Répondez sous forme de fraction.",
+      "en": "What value does the ratio of x squared to {dados-calculo.b} times x squared plus x approach as x grows without bound? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "b": "4",
+      "total": "1/4"
+    }
+  },
+  {
+    "topico": "limites",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é o limite da razão entre o quadrado de x menos {dados-calculo.a} e x menos {dados-calculo.raiz}, quando x tende a {dados-calculo.raiz}?",
+      "fr": "Quelle est la limite du rapport entre le carré de x moins {dados-calculo.a} et x moins {dados-calculo.raiz}, quand x tend vers {dados-calculo.raiz} ?",
+      "en": "What is the limit of the ratio of x squared minus {dados-calculo.a} to x minus {dados-calculo.raiz}, as x tends to {dados-calculo.raiz}?"
+    },
+    "dados-calculo": {
+      "a": "9",
+      "raiz": "3",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "limites",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é o limite do cubo de x menos {dados-calculo.a}, dividido por x menos {dados-calculo.raiz}, quando x tende a {dados-calculo.raiz}?",
+      "fr": "Quelle est la limite du cube de x moins {dados-calculo.a}, divisé par x moins {dados-calculo.raiz}, quand x tend vers {dados-calculo.raiz} ?",
+      "en": "What is the limit of x cubed minus {dados-calculo.a}, divided by x minus {dados-calculo.raiz}, as x tends to {dados-calculo.raiz}?"
+    },
+    "dados-calculo": {
+      "a": "27",
+      "raiz": "3",
+      "total": "27"
+    }
+  },
+  {
+    "topico": "limites",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é o limite de {dados-calculo.a} vezes x mais {dados-calculo.b}, quando x tende a {dados-calculo.ponto}?",
+      "fr": "Quelle est la limite de {dados-calculo.a} fois x plus {dados-calculo.b}, quand x tend vers {dados-calculo.ponto} ?",
+      "en": "What is the limit of {dados-calculo.a} times x plus {dados-calculo.b}, as x tends to {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "b": "2",
+      "ponto": "4",
+      "total": "22"
+    }
+  },
+  {
+    "topico": "limites",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é o limite da razão entre o quadrado de x menos {dados-calculo.b} vezes x e x, quando x tende a zero?",
+      "fr": "Quelle est la limite du rapport entre le carré de x moins {dados-calculo.b} fois x et x, quand x tend vers zéro ?",
+      "en": "What is the limit of the ratio of x squared minus {dados-calculo.b} times x to x, as x tends to zero?"
+    },
+    "dados-calculo": {
+      "b": "7",
+      "total": "-7"
+    }
+  },
+  {
+    "topico": "limites-laterais",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.esquerda} para x menor que {dados-calculo.ponto} e {dados-calculo.direita} para x maior ou igual a {dados-calculo.ponto}. Qual é o limite pela DIREITA em x = {dados-calculo.ponto}?",
+      "fr": "Une fonction vaut {dados-calculo.esquerda} pour x inférieur à {dados-calculo.ponto} et {dados-calculo.direita} pour x supérieur ou égal à {dados-calculo.ponto}. Quelle est la limite à DROITE en x = {dados-calculo.ponto} ?",
+      "en": "A function equals {dados-calculo.esquerda} for x less than {dados-calculo.ponto} and {dados-calculo.direita} for x greater than or equal to {dados-calculo.ponto}. What is the limit from the RIGHT at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "esquerda": "5",
+      "ponto": "1",
+      "direita": "3",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "limites-laterais",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.esquerda} para x menor que {dados-calculo.ponto} e {dados-calculo.direita} para x maior ou igual a {dados-calculo.ponto}. Qual é o limite pela ESQUERDA em x = {dados-calculo.ponto}?",
+      "fr": "Une fonction vaut {dados-calculo.esquerda} pour x inférieur à {dados-calculo.ponto} et {dados-calculo.direita} pour x supérieur ou égal à {dados-calculo.ponto}. Quelle est la limite à GAUCHE en x = {dados-calculo.ponto} ?",
+      "en": "A function equals {dados-calculo.esquerda} for x less than {dados-calculo.ponto} and {dados-calculo.direita} for x greater than or equal to {dados-calculo.ponto}. What is the limit from the LEFT at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "esquerda": "5",
+      "ponto": "1",
+      "direita": "3",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "limites-laterais",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma tarifa cobra {dados-calculo.esquerda} reais por minuto até {dados-calculo.ponto} minutos e {dados-calculo.direita} reais por minuto depois. De quanto é o SALTO do preço por minuto em {dados-calculo.ponto} minutos?",
+      "fr": "Un tarif facture {dados-calculo.esquerda} reais par minute jusqu’à {dados-calculo.ponto} minutes et {dados-calculo.direita} reais par minute ensuite. De combien est le SAUT du prix par minute à {dados-calculo.ponto} minutes ?",
+      "en": "A tariff charges {dados-calculo.esquerda} reais per minute up to {dados-calculo.ponto} minutes and {dados-calculo.direita} reais per minute after that. How big is the JUMP in the per-minute price at {dados-calculo.ponto} minutes?"
+    },
+    "dados-calculo": {
+      "esquerda": "2",
+      "ponto": "10",
+      "direita": "5",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "limites-laterais",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.esquerda} para x menor que {dados-calculo.ponto} e {dados-calculo.direita} para x maior que {dados-calculo.ponto}. O limite existe em x = {dados-calculo.ponto}? Responda 1 para sim e 0 para não.",
+      "fr": "Une fonction vaut {dados-calculo.esquerda} pour x inférieur à {dados-calculo.ponto} et {dados-calculo.direita} pour x supérieur à {dados-calculo.ponto}. La limite existe-t-elle en x = {dados-calculo.ponto} ? Répondez 1 pour oui et 0 pour non.",
+      "en": "A function equals {dados-calculo.esquerda} for x less than {dados-calculo.ponto} and {dados-calculo.direita} for x greater than {dados-calculo.ponto}. Does the limit exist at x = {dados-calculo.ponto}? Answer 1 for yes and 0 for no."
+    },
+    "dados-calculo": {
+      "esquerda": "4",
+      "ponto": "0",
+      "direita": "4",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "continuidade",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.a} vezes x para x menor que {dados-calculo.ponto}, e vale uma constante k para x maior ou igual a {dados-calculo.ponto}. Para que valor de k ela é contínua?",
+      "fr": "Une fonction vaut {dados-calculo.a} fois x pour x inférieur à {dados-calculo.ponto}, et vaut une constante k pour x supérieur ou égal à {dados-calculo.ponto}. Pour quelle valeur de k est-elle continue ?",
+      "en": "A function equals {dados-calculo.a} times x for x less than {dados-calculo.ponto}, and equals a constant k for x greater than or equal to {dados-calculo.ponto}. For what k is it continuous?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "ponto": "4",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "continuidade",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função é contínua e vale {dados-calculo.fa} em x = {dados-calculo.a} e {dados-calculo.fb} em x = {dados-calculo.b}. Pelo teorema do valor intermediário, ela passa por zero entre {dados-calculo.a} e {dados-calculo.b}? Responda 1 para sim e 0 para não.",
+      "fr": "Une fonction est continue et vaut {dados-calculo.fa} en x = {dados-calculo.a} et {dados-calculo.fb} en x = {dados-calculo.b}. Par le théorème des valeurs intermédiaires, passe-t-elle par zéro entre {dados-calculo.a} et {dados-calculo.b} ? Répondez 1 pour oui et 0 pour non.",
+      "en": "A function is continuous and equals {dados-calculo.fa} at x = {dados-calculo.a} and {dados-calculo.fb} at x = {dados-calculo.b}. By the intermediate value theorem, does it cross zero between {dados-calculo.a} and {dados-calculo.b}? Answer 1 for yes and 0 for no."
+    },
+    "dados-calculo": {
+      "fa": "-3",
+      "a": "1",
+      "fb": "5",
+      "b": "2",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "continuidade",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "A função que divide {dados-calculo.numerador} por x menos {dados-calculo.ponto} é descontínua em qual valor de x?",
+      "fr": "La fonction qui divise {dados-calculo.numerador} par x moins {dados-calculo.ponto} est discontinue pour quelle valeur de x ?",
+      "en": "The function dividing {dados-calculo.numerador} by x minus {dados-calculo.ponto} is discontinuous at what value of x?"
+    },
+    "dados-calculo": {
+      "numerador": "8",
+      "ponto": "5",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "continuidade",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função vale o quadrado de x para x menor que {dados-calculo.ponto}, e vale {dados-calculo.a} vezes x mais k para x maior ou igual a {dados-calculo.ponto}. Para que valor de k ela é contínua?",
+      "fr": "Une fonction vaut le carré de x pour x inférieur à {dados-calculo.ponto}, et vaut {dados-calculo.a} fois x plus k pour x supérieur ou égal à {dados-calculo.ponto}. Pour quelle valeur de k est-elle continue ?",
+      "en": "A function equals x squared for x less than {dados-calculo.ponto}, and equals {dados-calculo.a} times x plus k for x greater than or equal to {dados-calculo.ponto}. For what k is it continuous?"
+    },
+    "dados-calculo": {
+      "ponto": "3",
+      "a": "2",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "definicao-de-derivada",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma função vale o quadrado de x. Usando a definição de derivada, quanto vale a derivada em x = {dados-calculo.ponto}?",
+      "fr": "Une fonction vaut le carré de x. En utilisant la définition de la dérivée, combien vaut la dérivée en x = {dados-calculo.ponto} ?",
+      "en": "A function equals x squared. Using the definition of the derivative, what is the derivative at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "ponto": "3",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "definicao-de-derivada",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.a} vezes x mais {dados-calculo.b}. Usando a definição, quanto vale a derivada em qualquer ponto?",
+      "fr": "Une fonction vaut {dados-calculo.a} fois x plus {dados-calculo.b}. En utilisant la définition, combien vaut la dérivée en tout point ?",
+      "en": "A function equals {dados-calculo.a} times x plus {dados-calculo.b}. Using the definition, what is the derivative at any point?"
+    },
+    "dados-calculo": {
+      "a": "7",
+      "b": "9",
+      "total": "7"
+    }
+  },
+  {
+    "topico": "definicao-de-derivada",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.a} vezes o quadrado de x. Usando a definição, quanto vale a derivada em x = {dados-calculo.ponto}?",
+      "fr": "Une fonction vaut {dados-calculo.a} fois le carré de x. En utilisant la définition, combien vaut la dérivée en x = {dados-calculo.ponto} ?",
+      "en": "A function equals {dados-calculo.a} times x squared. Using the definition, what is the derivative at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "ponto": "2",
+      "total": "20"
+    }
+  },
+  {
+    "topico": "definicao-de-derivada",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função vale o cubo de x. Usando a definição, quanto vale a derivada em x = {dados-calculo.ponto}?",
+      "fr": "Une fonction vaut le cube de x. En utilisant la définition, combien vaut la dérivée en x = {dados-calculo.ponto} ?",
+      "en": "A function equals x cubed. Using the definition, what is the derivative at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "ponto": "2",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "taxa-de-variacao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "A posição de um corpo, em metros, é o quadrado do tempo em segundos vezes {dados-calculo.a}. Qual é a velocidade, em m/s, no instante {dados-calculo.tempo} s?",
+      "fr": "La position d’un corps, en mètres, est le carré du temps en secondes fois {dados-calculo.a}. Quelle est la vitesse, en m/s, à l’instant {dados-calculo.tempo} s ?",
+      "en": "A body’s position, in metres, is {dados-calculo.a} times the square of the time in seconds. What is the speed, in m/s, at {dados-calculo.tempo} s?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "tempo": "4",
+      "total": "24"
+    }
+  },
+  {
+    "topico": "taxa-de-variacao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "A posição de um corpo, em metros, é o quadrado do tempo mais {dados-calculo.b} vezes o tempo. Qual é a velocidade, em m/s, no instante {dados-calculo.tempo} s?",
+      "fr": "La position d’un corps, en mètres, est le carré du temps plus {dados-calculo.b} fois le temps. Quelle est la vitesse, en m/s, à l’instant {dados-calculo.tempo} s ?",
+      "en": "A body’s position, in metres, is the square of the time plus {dados-calculo.b} times the time. What is the speed, in m/s, at {dados-calculo.tempo} s?"
+    },
+    "dados-calculo": {
+      "b": "4",
+      "tempo": "9",
+      "total": "22"
+    }
+  },
+  {
+    "topico": "taxa-de-variacao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um balão esférico tem o raio crescendo a {dados-calculo.taxaRaio} cm/s. Quando o raio vale {dados-calculo.raio} cm, a que taxa cresce o volume, em cm³/s? Responda o número que multiplica π.",
+      "fr": "Un ballon sphérique voit son rayon croître de {dados-calculo.taxaRaio} cm/s. Quand le rayon vaut {dados-calculo.raio} cm, à quel taux croît le volume, en cm³/s ? Donnez le nombre qui multiplie π.",
+      "en": "A spherical balloon’s radius grows at {dados-calculo.taxaRaio} cm/s. When the radius is {dados-calculo.raio} cm, how fast does the volume grow, in cm³/s? Give the number multiplying π."
+    },
+    "dados-calculo": {
+      "taxaRaio": "2",
+      "raio": "5",
+      "total": "200"
+    }
+  },
+  {
+    "topico": "taxa-de-variacao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A posição de um corpo, em metros, é o cubo do tempo menos {dados-calculo.b} vezes o tempo. Em que instante, em segundos positivos, a velocidade é zero? Responda o quadrado desse instante.",
+      "fr": "La position d’un corps, en mètres, est le cube du temps moins {dados-calculo.b} fois le temps. À quel instant, en secondes positives, la vitesse est-elle nulle ? Donnez le carré de cet instant.",
+      "en": "A body’s position, in metres, is the cube of the time minus {dados-calculo.b} times the time. At what positive time, in seconds, is the speed zero? Give the square of that time."
+    },
+    "dados-calculo": {
+      "b": "12",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "regras-de-derivacao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Derive a função que vale {dados-calculo.a} vezes o quadrado de x mais {dados-calculo.b} vezes x, e informe o coeficiente de x na derivada.",
+      "fr": "Dérivez la fonction qui vaut {dados-calculo.a} fois le carré de x plus {dados-calculo.b} fois x, et donnez le coefficient de x dans la dérivée.",
+      "en": "Differentiate the function that is {dados-calculo.a} times x squared plus {dados-calculo.b} times x, and give the coefficient of x in the derivative."
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "5",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "regras-de-derivacao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Derive a função que vale {dados-calculo.a} vezes o cubo de x, e informe o valor da derivada em x = {dados-calculo.ponto}.",
+      "fr": "Dérivez la fonction qui vaut {dados-calculo.a} fois le cube de x, et donnez la valeur de la dérivée en x = {dados-calculo.ponto}.",
+      "en": "Differentiate the function that is {dados-calculo.a} times x cubed, and give the value of the derivative at x = {dados-calculo.ponto}."
+    },
+    "dados-calculo": {
+      "a": "2",
+      "ponto": "3",
+      "total": "54"
+    }
+  },
+  {
+    "topico": "regras-de-derivacao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função é o produto de x por x mais {dados-calculo.b}. Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+      "fr": "Une fonction est le produit de x par x plus {dados-calculo.b}. Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+      "en": "A function is x times x plus {dados-calculo.b}. What is its derivative at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "b": "4",
+      "ponto": "3",
+      "total": "10"
+    }
+  },
+  {
+    "topico": "regras-de-derivacao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função vale o quadrado de x dividido por x mais {dados-calculo.b}. Quanto vale a sua derivada em x = {dados-calculo.ponto}? Responda como fração.",
+      "fr": "Une fonction vaut le carré de x divisé par x plus {dados-calculo.b}. Combien vaut sa dérivée en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+      "en": "A function is x squared divided by x plus {dados-calculo.b}. What is its derivative at x = {dados-calculo.ponto}? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "b": "1",
+      "ponto": "1",
+      "total": "3/4"
+    }
+  },
+  {
+    "topico": "regra-da-cadeia",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma função vale o quadrado de ({dados-calculo.a} vezes x mais {dados-calculo.b}). Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+      "fr": "Une fonction vaut le carré de ({dados-calculo.a} fois x plus {dados-calculo.b}). Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+      "en": "A function is the square of ({dados-calculo.a} times x plus {dados-calculo.b}). What is its derivative at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "1",
+      "ponto": "2",
+      "total": "42"
+    }
+  },
+  {
+    "topico": "regra-da-cadeia",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função vale o cubo de (x mais {dados-calculo.b}). Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+      "fr": "Une fonction vaut le cube de (x plus {dados-calculo.b}). Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+      "en": "A function is the cube of (x plus {dados-calculo.b}). What is its derivative at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "b": "1",
+      "ponto": "2",
+      "total": "27"
+    }
+  },
+  {
+    "topico": "regra-da-cadeia",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função vale a raiz quadrada de ({dados-calculo.a} vezes x). Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+      "fr": "Une fonction vaut la racine carrée de ({dados-calculo.a} fois x). Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+      "en": "A function is the square root of ({dados-calculo.a} times x). What is its derivative at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "a": "4",
+      "ponto": "1",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "regra-da-cadeia",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função vale o quadrado de ({dados-calculo.a} vezes x mais {dados-calculo.b}). Quanto vale a sua derivada SEGUNDA em qualquer ponto?",
+      "fr": "Une fonction vaut le carré de ({dados-calculo.a} fois x plus {dados-calculo.b}). Combien vaut sa dérivée SECONDE en tout point ?",
+      "en": "A function is the square of ({dados-calculo.a} times x plus {dados-calculo.b}). What is its SECOND derivative at any point?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "1",
+      "total": "18"
+    }
+  },
+  {
+    "topico": "derivadas-trigonometricas",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a derivada da função seno no ponto em que o cosseno vale {dados-calculo.cosseno}?",
+      "fr": "Quelle est la dérivée de la fonction sinus au point où le cosinus vaut {dados-calculo.cosseno} ?",
+      "en": "What is the derivative of the sine function at the point where the cosine is {dados-calculo.cosseno}?"
+    },
+    "dados-calculo": {
+      "cosseno": "0.5",
+      "total": "0.5"
+    }
+  },
+  {
+    "topico": "derivadas-trigonometricas",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.a} vezes o seno de x. Quanto vale a sua derivada no ponto em que o cosseno de x é {dados-calculo.cosseno}?",
+      "fr": "Une fonction vaut {dados-calculo.a} fois le sinus de x. Combien vaut sa dérivée au point où le cosinus de x est {dados-calculo.cosseno} ?",
+      "en": "A function is {dados-calculo.a} times the sine of x. What is its derivative at the point where the cosine of x is {dados-calculo.cosseno}?"
+    },
+    "dados-calculo": {
+      "a": "4",
+      "cosseno": "0.5",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "derivadas-trigonometricas",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é a derivada da função cosseno no ponto em que o seno vale {dados-calculo.seno}?",
+      "fr": "Quelle est la dérivée de la fonction cosinus au point où le sinus vaut {dados-calculo.seno} ?",
+      "en": "What is the derivative of the cosine function at the point where the sine is {dados-calculo.seno}?"
+    },
+    "dados-calculo": {
+      "seno": "0.6",
+      "total": "-0.6"
+    }
+  },
+  {
+    "topico": "derivadas-trigonometricas",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função vale o seno de x. Quanto vale a sua derivada SEGUNDA no ponto em que o seno de x é {dados-calculo.seno}?",
+      "fr": "Une fonction vaut le sinus de x. Combien vaut sa dérivée SECONDE au point où le sinus de x est {dados-calculo.seno} ?",
+      "en": "A function is the sine of x. What is its SECOND derivative at the point where the sine of x is {dados-calculo.seno}?"
+    },
+    "dados-calculo": {
+      "seno": "0.6",
+      "total": "-0.6"
+    }
+  },
+  {
+    "topico": "derivadas-exponencial-logaritmo",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a derivada da função logaritmo natural em x = {dados-calculo.ponto}? Responda como fração.",
+      "fr": "Quelle est la dérivée de la fonction logarithme naturel en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+      "en": "What is the derivative of the natural logarithm function at x = {dados-calculo.ponto}? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "ponto": "7",
+      "total": "1/7"
+    }
+  },
+  {
+    "topico": "derivadas-exponencial-logaritmo",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função vale a constante e elevada a x. Quanto vale a sua derivada no ponto em que a própria função vale {dados-calculo.valor}?",
+      "fr": "Une fonction vaut la constante e élevée à x. Combien vaut sa dérivée au point où la fonction elle-même vaut {dados-calculo.valor} ?",
+      "en": "A function is the constant e raised to x. What is its derivative at the point where the function itself equals {dados-calculo.valor}?"
+    },
+    "dados-calculo": {
+      "valor": "5",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "derivadas-exponencial-logaritmo",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.a} vezes o logaritmo natural de x. Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+      "fr": "Une fonction vaut {dados-calculo.a} fois le logarithme naturel de x. Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+      "en": "A function is {dados-calculo.a} times the natural logarithm of x. What is its derivative at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "a": "6",
+      "ponto": "3",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "derivadas-exponencial-logaritmo",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função vale a constante e elevada a ({dados-calculo.a} vezes x). Quanto vale a sua derivada no ponto em que a própria função vale {dados-calculo.valor}?",
+      "fr": "Une fonction vaut la constante e élevée à ({dados-calculo.a} fois x). Combien vaut sa dérivée au point où la fonction elle-même vaut {dados-calculo.valor} ?",
+      "en": "A function is the constant e raised to ({dados-calculo.a} times x). What is its derivative at the point where the function itself equals {dados-calculo.valor}?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "valor": "2",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "derivacao-implicita",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma circunferência tem a soma dos quadrados de x e y igual a {dados-calculo.raioQuadrado}. No ponto ({dados-calculo.px}, {dados-calculo.py}), qual é a inclinação da reta tangente? Responda como fração.",
+      "fr": "Un cercle a la somme des carrés de x et y égale à {dados-calculo.raioQuadrado}. Au point ({dados-calculo.px}, {dados-calculo.py}), quelle est la pente de la tangente ? Répondez sous forme de fraction.",
+      "en": "A circle has the sum of the squares of x and y equal to {dados-calculo.raioQuadrado}. At the point ({dados-calculo.px}, {dados-calculo.py}), what is the slope of the tangent line? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "raioQuadrado": "25",
+      "px": "3",
+      "py": "4",
+      "total": "-3/4"
+    }
+  },
+  {
+    "topico": "derivacao-implicita",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma circunferência tem a soma dos quadrados de x e y igual a {dados-calculo.raioQuadrado}. No ponto ({dados-calculo.px}, {dados-calculo.py}), qual é a inclinação da reta tangente?",
+      "fr": "Un cercle a la somme des carrés de x et y égale à {dados-calculo.raioQuadrado}. Au point ({dados-calculo.px}, {dados-calculo.py}), quelle est la pente de la tangente ?",
+      "en": "A circle has the sum of the squares of x and y equal to {dados-calculo.raioQuadrado}. At the point ({dados-calculo.px}, {dados-calculo.py}), what is the slope of the tangent line?"
+    },
+    "dados-calculo": {
+      "raioQuadrado": "18",
+      "px": "3",
+      "py": "3",
+      "total": "-1"
+    }
+  },
+  {
+    "topico": "derivacao-implicita",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma curva satisfaz: o produto de x por y vale {dados-calculo.produto}. No ponto ({dados-calculo.px}, {dados-calculo.py}), qual é a inclinação da reta tangente?",
+      "fr": "Une courbe satisfait : le produit de x par y vaut {dados-calculo.produto}. Au point ({dados-calculo.px}, {dados-calculo.py}), quelle est la pente de la tangente ?",
+      "en": "A curve satisfies: x times y equals {dados-calculo.produto}. At the point ({dados-calculo.px}, {dados-calculo.py}), what is the slope of the tangent line?"
+    },
+    "dados-calculo": {
+      "produto": "12",
+      "px": "2",
+      "py": "6",
+      "total": "-3"
+    }
+  },
+  {
+    "topico": "derivacao-implicita",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma curva satisfaz: o quadrado de x mais o quadrado de y vale {dados-calculo.soma}. Qual é a coordenada x do ponto mais alto dessa curva, onde a tangente é horizontal?",
+      "fr": "Une courbe satisfait : le carré de x plus le carré de y vaut {dados-calculo.soma}. Quelle est la coordonnée x du point le plus haut de cette courbe, où la tangente est horizontale ?",
+      "en": "A curve satisfies: x squared plus y squared equals {dados-calculo.soma}. What is the x coordinate of the highest point of this curve, where the tangent is horizontal?"
+    },
+    "dados-calculo": {
+      "soma": "16",
+      "total": "0"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-derivada",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Com {dados-calculo.cerca} m de cerca, qual é a MAIOR área retangular, em metros quadrados, que se pode cercar?",
+      "fr": "Avec {dados-calculo.cerca} m de clôture, quelle est la PLUS GRANDE aire rectangulaire, en mètres carrés, que l’on peut clôturer ?",
+      "en": "With {dados-calculo.cerca} m of fencing, what is the LARGEST rectangular area, in square metres, that can be enclosed?"
+    },
+    "dados-calculo": {
+      "cerca": "180",
+      "total": "2025"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-derivada",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função vale o quadrado de x menos {dados-calculo.b} vezes x. Em que valor de x ela atinge o mínimo?",
+      "fr": "Une fonction vaut le carré de x moins {dados-calculo.b} fois x. Pour quelle valeur de x atteint-elle son minimum ?",
+      "en": "A function is x squared minus {dados-calculo.b} times x. At what value of x does it reach its minimum?"
+    },
+    "dados-calculo": {
+      "b": "10",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-derivada",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma caixa sem tampa é feita de uma folha quadrada de {dados-calculo.lado} cm de lado, cortando quadrados dos cantos e dobrando. Que lado, em centímetros, devem ter os quadrados cortados para o volume ser máximo?",
+      "fr": "Une boîte sans couvercle est faite d’une feuille carrée de {dados-calculo.lado} cm de côté, en coupant des carrés aux coins et en pliant. Quel côté, en centimètres, doivent avoir les carrés coupés pour que le volume soit maximal ?",
+      "en": "An open box is made from a square sheet {dados-calculo.lado} cm on a side, cutting squares from the corners and folding. What side, in centimetres, must the cut squares have for the greatest volume?"
+    },
+    "dados-calculo": {
+      "lado": "12",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-derivada",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A posição de um corpo, em metros, é o cubo do tempo menos {dados-calculo.b} vezes o quadrado do tempo. Em que instante, em segundos, a aceleração é zero?",
+      "fr": "La position d’un corps, en mètres, est le cube du temps moins {dados-calculo.b} fois le carré du temps. À quel instant, en secondes, l’accélération est-elle nulle ?",
+      "en": "A body’s position, in metres, is the cube of the time minus {dados-calculo.b} times the square of the time. At what time, in seconds, is the acceleration zero?"
+    },
+    "dados-calculo": {
+      "b": "6",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "soma-de-riemann",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um carro anda a {dados-calculo.velocidade} m/s constantes durante {dados-calculo.tempo} s. Somando as áreas dos retângulos sob o gráfico da velocidade, quantos metros ele percorre? (três casas decimais)",
+      "fr": "Une voiture roule à {dados-calculo.velocidade} m/s constants pendant {dados-calculo.tempo} s. En additionnant les aires des rectangles sous le graphe de la vitesse, combien de mètres parcourt-elle ? (trois décimales)",
+      "en": "A car travels at a constant {dados-calculo.velocidade} m/s for {dados-calculo.tempo} s. Adding the areas of the rectangles under the speed graph, how many metres does it cover? (three decimal places)"
+    },
+    "dados-calculo": {
+      "velocidade": "12",
+      "tempo": "5",
+      "total": "60.000"
+    }
+  },
+  {
+    "topico": "soma-de-riemann",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "A região sob uma reta que vale {dados-calculo.a} vezes x, entre x = 0 e x = {dados-calculo.fim}, é um triângulo. Qual é a sua área exata? (três casas decimais)",
+      "fr": "La région sous une droite qui vaut {dados-calculo.a} fois x, entre x = 0 et x = {dados-calculo.fim}, est un triangle. Quelle est son aire exacte ? (trois décimales)",
+      "en": "The region under a line equal to {dados-calculo.a} times x, from x = 0 to x = {dados-calculo.fim}, is a triangle. What is its exact area? (three decimal places)"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "fim": "4",
+      "total": "24.000"
+    }
+  },
+  {
+    "topico": "soma-de-riemann",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Aproxime a área sob a reta que vale {dados-calculo.a} vezes x, entre 0 e {dados-calculo.fim}, usando {dados-calculo.retangulos} retângulos de mesma largura e a altura na extremidade DIREITA de cada um. (três casas decimais)",
+      "fr": "Approchez l’aire sous la droite qui vaut {dados-calculo.a} fois x, entre 0 et {dados-calculo.fim}, avec {dados-calculo.retangulos} rectangles de même largeur et la hauteur à l’extrémité DROITE de chacun. (trois décimales)",
+      "en": "Approximate the area under the line equal to {dados-calculo.a} times x, from 0 to {dados-calculo.fim}, using {dados-calculo.retangulos} equal-width rectangles with the height at the RIGHT end of each. (three decimal places)"
+    },
+    "dados-calculo": {
+      "a": "2",
+      "fim": "4",
+      "retangulos": "4",
+      "total": "20.000"
+    }
+  },
+  {
+    "topico": "soma-de-riemann",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Aproxime a área sob a reta que vale {dados-calculo.a} vezes x, entre 0 e {dados-calculo.fim}, usando {dados-calculo.retangulos} retângulos de mesma largura e a altura na extremidade ESQUERDA de cada um. (três casas decimais)",
+      "fr": "Approchez l’aire sous la droite qui vaut {dados-calculo.a} fois x, entre 0 et {dados-calculo.fim}, avec {dados-calculo.retangulos} rectangles de même largeur et la hauteur à l’extrémité GAUCHE de chacun. (trois décimales)",
+      "en": "Approximate the area under the line equal to {dados-calculo.a} times x, from 0 to {dados-calculo.fim}, using {dados-calculo.retangulos} equal-width rectangles with the height at the LEFT end of each. (three decimal places)"
+    },
+    "dados-calculo": {
+      "a": "2",
+      "fim": "4",
+      "retangulos": "4",
+      "total": "12.000"
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um corpo anda a {dados-calculo.velocidade} m/s constantes entre os instantes {dados-calculo.inicio} s e {dados-calculo.fim} s. Quantos metros ele percorre nesse intervalo?",
+      "fr": "Un corps se déplace à {dados-calculo.velocidade} m/s constants entre les instants {dados-calculo.inicio} s et {dados-calculo.fim} s. Combien de mètres parcourt-il dans cet intervalle ?",
+      "en": "A body moves at a constant {dados-calculo.velocidade} m/s between {dados-calculo.inicio} s and {dados-calculo.fim} s. How many metres does it cover in that interval?"
+    },
+    "dados-calculo": {
+      "velocidade": "15",
+      "inicio": "2",
+      "fim": "6",
+      "total": "60"
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a área sob a reta que vale {dados-calculo.a} vezes x, entre x = 0 e x = {dados-calculo.fim}?",
+      "fr": "Quelle est l’aire sous la droite qui vaut {dados-calculo.a} fois x, entre x = 0 et x = {dados-calculo.fim} ?",
+      "en": "What is the area under the line equal to {dados-calculo.a} times x, from x = 0 to x = {dados-calculo.fim}?"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "fim": "4",
+      "total": "40"
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é a área sob a parábola que vale o quadrado de x, entre x = 0 e x = {dados-calculo.fim}?",
+      "fr": "Quelle est l’aire sous la parabole qui vaut le carré de x, entre x = 0 et x = {dados-calculo.fim} ?",
+      "en": "What is the area under the parabola equal to x squared, from x = 0 to x = {dados-calculo.fim}?"
+    },
+    "dados-calculo": {
+      "fim": "3",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "integral-definida",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é a área sob a reta que vale {dados-calculo.a} vezes x mais {dados-calculo.b}, entre x = {dados-calculo.inicio} e x = {dados-calculo.fim}?",
+      "fr": "Quelle est l’aire sous la droite qui vaut {dados-calculo.a} fois x plus {dados-calculo.b}, entre x = {dados-calculo.inicio} et x = {dados-calculo.fim} ?",
+      "en": "What is the area under the line equal to {dados-calculo.a} times x plus {dados-calculo.b}, from x = {dados-calculo.inicio} to x = {dados-calculo.fim}?"
+    },
+    "dados-calculo": {
+      "a": "2",
+      "b": "3",
+      "inicio": "1",
+      "fim": "4",
+      "total": "24"
+    }
+  },
+  {
+    "topico": "integral-indefinida",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma primitiva de {dados-calculo.a} vezes x é {dados-calculo.metade} vezes o quadrado de x. Tomando a constante igual a zero, quanto vale essa primitiva em x = {dados-calculo.ponto}?",
+      "fr": "Une primitive de {dados-calculo.a} fois x est {dados-calculo.metade} fois le carré de x. En prenant la constante nulle, combien vaut cette primitive en x = {dados-calculo.ponto} ?",
+      "en": "An antiderivative of {dados-calculo.a} times x is {dados-calculo.metade} times x squared. Taking the constant as zero, what is that antiderivative at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "a": "6",
+      "metade": "3",
+      "ponto": "4",
+      "total": "48"
+    }
+  },
+  {
+    "topico": "integral-indefinida",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a primitiva do quadrado de x, avaliada em x = {dados-calculo.ponto}, tomando a constante igual a zero? (a primitiva é o cubo de x dividido por 3)",
+      "fr": "Quelle est la primitive du carré de x, évaluée en x = {dados-calculo.ponto}, avec une constante nulle ? (la primitive est le cube de x divisé par 3)",
+      "en": "What is the antiderivative of x squared, evaluated at x = {dados-calculo.ponto}, taking the constant as zero? (the antiderivative is x cubed divided by 3)"
+    },
+    "dados-calculo": {
+      "ponto": "3",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "integral-indefinida",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "A velocidade de um corpo, em m/s, é {dados-calculo.a} vezes o tempo. Partindo da posição {dados-calculo.inicial} m, em que posição, em metros, ele está no instante {dados-calculo.tempo} s?",
+      "fr": "La vitesse d’un corps, en m/s, est {dados-calculo.a} fois le temps. Partant de la position {dados-calculo.inicial} m, à quelle position, en mètres, est-il à l’instant {dados-calculo.tempo} s ?",
+      "en": "A body’s speed, in m/s, is {dados-calculo.a} times the time. Starting from position {dados-calculo.inicial} m, where is it, in metres, at {dados-calculo.tempo} s?"
+    },
+    "dados-calculo": {
+      "a": "4",
+      "inicial": "10",
+      "tempo": "3",
+      "total": "28"
+    }
+  },
+  {
+    "topico": "integral-indefinida",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função tem derivada igual a {dados-calculo.a} e vale {dados-calculo.valor} em x = {dados-calculo.ponto}. Quanto ela vale em x = 0?",
+      "fr": "Une fonction a une dérivée égale à {dados-calculo.a} et vaut {dados-calculo.valor} en x = {dados-calculo.ponto}. Combien vaut-elle en x = 0 ?",
+      "en": "A function has derivative {dados-calculo.a} and equals {dados-calculo.valor} at x = {dados-calculo.ponto}. What is its value at x = 0?"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "valor": "22",
+      "ponto": "4",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "teorema-fundamental",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "A área acumulada sob uma curva, a partir de zero, tem derivada igual ao valor da própria curva. Se a curva vale {dados-calculo.valor} em x = {dados-calculo.ponto}, quanto vale a derivada da área acumulada nesse ponto?",
+      "fr": "L’aire accumulée sous une courbe, à partir de zéro, a une dérivée égale à la valeur de la courbe elle-même. Si la courbe vaut {dados-calculo.valor} en x = {dados-calculo.ponto}, combien vaut la dérivée de l’aire accumulée en ce point ?",
+      "en": "The area accumulated under a curve from zero has a derivative equal to the value of the curve itself. If the curve equals {dados-calculo.valor} at x = {dados-calculo.ponto}, what is the derivative of the accumulated area there?"
+    },
+    "dados-calculo": {
+      "valor": "30",
+      "ponto": "3",
+      "total": "30"
+    }
+  },
+  {
+    "topico": "teorema-fundamental",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma primitiva de uma função vale {dados-calculo.fim} no extremo superior e {dados-calculo.inicio} no extremo inferior. Quanto vale a integral definida entre esses extremos?",
+      "fr": "Une primitive d’une fonction vaut {dados-calculo.fim} à la borne supérieure et {dados-calculo.inicio} à la borne inférieure. Combien vaut l’intégrale définie entre ces bornes ?",
+      "en": "An antiderivative of a function equals {dados-calculo.fim} at the upper limit and {dados-calculo.inicio} at the lower limit. What is the definite integral between those limits?"
+    },
+    "dados-calculo": {
+      "fim": "40",
+      "inicio": "15",
+      "total": "25"
+    }
+  },
+  {
+    "topico": "teorema-fundamental",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "A área acumulada sob a reta que vale {dados-calculo.a} vezes x, a partir de zero, é avaliada em x = {dados-calculo.ponto}. Quanto ela vale?",
+      "fr": "L’aire accumulée sous la droite qui vaut {dados-calculo.a} fois x, à partir de zéro, est évaluée en x = {dados-calculo.ponto}. Combien vaut-elle ?",
+      "en": "The area accumulated under the line equal to {dados-calculo.a} times x, starting from zero, is evaluated at x = {dados-calculo.ponto}. What is it?"
+    },
+    "dados-calculo": {
+      "a": "6",
+      "ponto": "5",
+      "total": "75"
+    }
+  },
+  {
+    "topico": "teorema-fundamental",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A área acumulada sob uma curva, a partir de zero, vale {dados-calculo.area} em x = {dados-calculo.ponto}. Se a curva vale {dados-calculo.valor} nesse ponto, quanto vale a derivada da área acumulada ali?",
+      "fr": "L’aire accumulée sous une courbe, à partir de zéro, vaut {dados-calculo.area} en x = {dados-calculo.ponto}. Si la courbe vaut {dados-calculo.valor} en ce point, combien vaut la dérivée de l’aire accumulée ?",
+      "en": "The area accumulated under a curve from zero equals {dados-calculo.area} at x = {dados-calculo.ponto}. If the curve equals {dados-calculo.valor} there, what is the derivative of the accumulated area at that point?"
+    },
+    "dados-calculo": {
+      "area": "18",
+      "ponto": "3",
+      "valor": "12",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "tecnicas-de-integracao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Por substituição, qual é a área sob a curva {dados-calculo.a} vezes x vezes o quadrado de x, entre 0 e {dados-calculo.fim}? (duas casas decimais)",
+      "fr": "Par substitution, quelle est l’aire sous la courbe {dados-calculo.a} fois x fois le carré de x, entre 0 et {dados-calculo.fim} ? (deux décimales)",
+      "en": "By substitution, what is the area under the curve {dados-calculo.a} times x times x squared, from 0 to {dados-calculo.fim}? (two decimal places)"
+    },
+    "dados-calculo": {
+      "a": "4",
+      "fim": "2",
+      "total": "16.00"
+    }
+  },
+  {
+    "topico": "tecnicas-de-integracao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a área sob a curva que vale o cubo de x, entre 0 e {dados-calculo.fim}? (duas casas decimais)",
+      "fr": "Quelle est l’aire sous la courbe qui vaut le cube de x, entre 0 et {dados-calculo.fim} ? (deux décimales)",
+      "en": "What is the area under the curve equal to x cubed, from 0 to {dados-calculo.fim}? (two decimal places)"
+    },
+    "dados-calculo": {
+      "fim": "2",
+      "total": "4.00"
+    }
+  },
+  {
+    "topico": "tecnicas-de-integracao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é a área sob a curva que vale {dados-calculo.a} dividido por x, entre x = 1 e x = e, a base do logaritmo natural? (duas casas decimais)",
+      "fr": "Quelle est l’aire sous la courbe qui vaut {dados-calculo.a} divisé par x, entre x = 1 et x = e, la base du logarithme naturel ? (deux décimales)",
+      "en": "What is the area under the curve equal to {dados-calculo.a} divided by x, from x = 1 to x = e, the base of the natural logarithm? (two decimal places)"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "tecnicas-de-integracao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é a área sob a curva que vale {dados-calculo.a} vezes o quadrado de x, entre {dados-calculo.inicio} e {dados-calculo.fim}? (duas casas decimais)",
+      "fr": "Quelle est l’aire sous la courbe qui vaut {dados-calculo.a} fois le carré de x, entre {dados-calculo.inicio} et {dados-calculo.fim} ? (deux décimales)",
+      "en": "What is the area under the curve equal to {dados-calculo.a} times x squared, from {dados-calculo.inicio} to {dados-calculo.fim}? (two decimal places)"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "inicio": "1",
+      "fim": "2",
+      "total": "7.00"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-integral",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a área, entre x = 0 e x = {dados-calculo.fim}, da região entre a reta que vale {dados-calculo.a} vezes x e o eixo x? (três casas decimais)",
+      "fr": "Quelle est l’aire, entre x = 0 et x = {dados-calculo.fim}, de la région entre la droite qui vaut {dados-calculo.a} fois x et l’axe des x ? (trois décimales)",
+      "en": "What is the area, from x = 0 to x = {dados-calculo.fim}, of the region between the line equal to {dados-calculo.a} times x and the x-axis? (three decimal places)"
+    },
+    "dados-calculo": {
+      "a": "4",
+      "fim": "3",
+      "total": "18.000"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-integral",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a área entre a reta que vale {dados-calculo.a} vezes x e a reta que vale {dados-calculo.b} vezes x, entre x = 0 e x = {dados-calculo.fim}? (três casas decimais)",
+      "fr": "Quelle est l’aire entre la droite qui vaut {dados-calculo.a} fois x et la droite qui vaut {dados-calculo.b} fois x, entre x = 0 et x = {dados-calculo.fim} ? (trois décimales)",
+      "en": "What is the area between the line equal to {dados-calculo.a} times x and the line equal to {dados-calculo.b} times x, from x = 0 to x = {dados-calculo.fim}? (three decimal places)"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "b": "2",
+      "fim": "4",
+      "total": "24.000"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-integral",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um corpo tem velocidade igual a {dados-calculo.a} vezes o tempo, em m/s. Quantos metros ele percorre entre os instantes 0 e {dados-calculo.fim} s? (três casas decimais)",
+      "fr": "Un corps a une vitesse égale à {dados-calculo.a} fois le temps, en m/s. Combien de mètres parcourt-il entre les instants 0 et {dados-calculo.fim} s ? (trois décimales)",
+      "en": "A body has speed equal to {dados-calculo.a} times the time, in m/s. How many metres does it cover between 0 and {dados-calculo.fim} s? (three decimal places)"
+    },
+    "dados-calculo": {
+      "a": "6",
+      "fim": "5",
+      "total": "75.000"
+    }
+  },
+  {
+    "topico": "aplicacoes-da-integral",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é o volume do sólido gerado ao girar, em torno do eixo x, a região sob a reta que vale {dados-calculo.raio} entre x = 0 e x = {dados-calculo.fim}? Responda o número que multiplica π. (três casas decimais)",
+      "fr": "Quel est le volume du solide engendré en faisant tourner, autour de l’axe des x, la région sous la droite qui vaut {dados-calculo.raio} entre x = 0 et x = {dados-calculo.fim} ? Donnez le nombre qui multiplie π. (trois décimales)",
+      "en": "What is the volume of the solid made by spinning, about the x-axis, the region under the line equal to {dados-calculo.raio} from x = 0 to x = {dados-calculo.fim}? Give the number multiplying π. (three decimal places)"
+    },
+    "dados-calculo": {
+      "raio": "3",
+      "fim": "4",
+      "total": "36.000"
+    }
+  },
+  {
+    "topico": "fisica-com-calculo",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma mola de constante {dados-calculo.constante} N/m é esticada de 0 até {dados-calculo.deslocamento} m. Quanto trabalho, em joules, é realizado?",
+      "fr": "Un ressort de constante {dados-calculo.constante} N/m est étiré de 0 à {dados-calculo.deslocamento} m. Quel travail, en joules, est effectué ?",
+      "en": "A spring with constant {dados-calculo.constante} N/m is stretched from 0 to {dados-calculo.deslocamento} m. How much work, in joules, is done?"
+    },
+    "dados-calculo": {
+      "constante": "200",
+      "deslocamento": "0.2",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "fisica-com-calculo",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "A velocidade de um corpo, em m/s, é {dados-calculo.a} vezes o tempo. Qual é a aceleração, em m/s², em qualquer instante?",
+      "fr": "La vitesse d’un corps, en m/s, est {dados-calculo.a} fois le temps. Quelle est l’accélération, en m/s², à tout instant ?",
+      "en": "A body’s speed, in m/s, is {dados-calculo.a} times the time. What is the acceleration, in m/s², at any moment?"
+    },
+    "dados-calculo": {
+      "a": "7",
+      "total": "7"
+    }
+  },
+  {
+    "topico": "fisica-com-calculo",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma força variável vale {dados-calculo.a} vezes a posição, em newtons. Qual é o trabalho, em joules, realizado de x = 0 até x = {dados-calculo.fim} m?",
+      "fr": "Une force variable vaut {dados-calculo.a} fois la position, en newtons. Quel est le travail, en joules, effectué de x = 0 à x = {dados-calculo.fim} m ?",
+      "en": "A varying force equals {dados-calculo.a} times the position, in newtons. What work, in joules, is done from x = 0 to x = {dados-calculo.fim} m?"
+    },
+    "dados-calculo": {
+      "a": "10",
+      "fim": "3",
+      "total": "45"
+    }
+  },
+  {
+    "topico": "fisica-com-calculo",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A aceleração de um corpo é constante e vale {dados-calculo.aceleracao} m/s². Partindo do repouso, qual é a velocidade, em m/s, no instante {dados-calculo.tempo} s?",
+      "fr": "L’accélération d’un corps est constante et vaut {dados-calculo.aceleracao} m/s². Partant du repos, quelle est la vitesse, en m/s, à l’instant {dados-calculo.tempo} s ?",
+      "en": "A body’s acceleration is constant at {dados-calculo.aceleracao} m/s². Starting from rest, what is the speed, in m/s, at {dados-calculo.tempo} s?"
+    },
+    "dados-calculo": {
+      "aceleracao": "4",
+      "tempo": "6",
+      "total": "24"
+    }
+  },
+  {
+    "topico": "integrais-improprias",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "A área sob a curva que vale 1 dividido pelo quadrado de x, de x = 1 até o infinito, é finita. Quanto ela vale?",
+      "fr": "L’aire sous la courbe qui vaut 1 divisé par le carré de x, de x = 1 à l’infini, est finie. Combien vaut-elle ?",
+      "en": "The area under the curve equal to 1 divided by x squared, from x = 1 to infinity, is finite. What is it?"
+    },
+    "dados-calculo": {
+      "total": "1"
+    }
+  },
+  {
+    "topico": "integrais-improprias",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "A área sob a curva que vale {dados-calculo.a} dividido pelo quadrado de x, de x = 1 até o infinito, é finita. Quanto ela vale?",
+      "fr": "L’aire sous la courbe qui vaut {dados-calculo.a} divisé par le carré de x, de x = 1 à l’infini, est finie. Combien vaut-elle ?",
+      "en": "The area under the curve equal to {dados-calculo.a} divided by x squared, from x = 1 to infinity, is finite. What is it?"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "integrais-improprias",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "A área sob a curva que vale 1 dividido por x, de x = 1 até o infinito, cresce sem limite. Escreva a resposta que o site usa quando a integral não tem valor.",
+      "fr": "L’aire sous la courbe qui vaut 1 divisé par x, de x = 1 à l’infini, croît sans limite. Écrivez la réponse que le site utilise quand l’intégrale n’a pas de valeur.",
+      "en": "The area under the curve equal to 1 divided by x, from x = 1 to infinity, grows without bound. Write the answer the site uses when the integral has no value."
+    },
+    "dados-calculo": {
+      "total": "diverge"
+    }
+  },
+  {
+    "topico": "integrais-improprias",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A área sob a curva que vale 1 dividido por x elevado a {dados-calculo.expoente}, de x = 1 até o infinito, é finita. Quanto ela vale? Responda como fração.",
+      "fr": "L’aire sous la courbe qui vaut 1 divisé par x à la puissance {dados-calculo.expoente}, de x = 1 à l’infini, est finie. Combien vaut-elle ? Répondez sous forme de fraction.",
+      "en": "The area under the curve equal to 1 divided by x to the power of {dados-calculo.expoente}, from x = 1 to infinity, is finite. What is it? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "expoente": "3",
+      "total": "1/2"
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma série geométrica tem primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}. Ela converge? Responda 1 se converge e 0 se diverge.",
+      "fr": "Une série géométrique a pour premier terme {dados-calculo.primeiro} et pour raison {dados-calculo.razao}. Converge-t-elle ? Répondez 1 si elle converge et 0 si elle diverge.",
+      "en": "A geometric series has first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}. Does it converge? Answer 1 if it converges and 0 if it diverges."
+    },
+    "dados-calculo": {
+      "primeiro": "6",
+      "razao": "1/2",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a soma de uma série geométrica infinita de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}?",
+      "fr": "Quelle est la somme d’une série géométrique infinie de premier terme {dados-calculo.primeiro} et de raison {dados-calculo.razao} ?",
+      "en": "What is the sum of an infinite geometric series with first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}?"
+    },
+    "dados-calculo": {
+      "primeiro": "6",
+      "razao": "1/2",
+      "total": "12"
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma série geométrica tem primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}. Ela converge? Responda 1 se converge e 0 se diverge.",
+      "fr": "Une série géométrique a pour premier terme {dados-calculo.primeiro} et pour raison {dados-calculo.razao}. Converge-t-elle ? Répondez 1 si elle converge et 0 si elle diverge.",
+      "en": "A geometric series has first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}. Does it converge? Answer 1 if it converges and 0 if it diverges."
+    },
+    "dados-calculo": {
+      "primeiro": "2",
+      "razao": "3",
+      "total": "0"
+    }
+  },
+  {
+    "topico": "sequencias-e-series",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é a soma de uma série geométrica infinita de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}? Responda como fração.",
+      "fr": "Quelle est la somme d’une série géométrique infinie de premier terme {dados-calculo.primeiro} et de raison {dados-calculo.razao} ? Répondez sous forme de fraction.",
+      "en": "What is the sum of an infinite geometric series with first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "primeiro": "1",
+      "razao": "1/3",
+      "total": "3/2"
+    }
+  },
+  {
+    "topico": "series-de-taylor",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "O polinômio de Maclaurin de grau 2 da função exponencial é 1 mais x mais metade do quadrado de x. Quanto vale essa aproximação em x = {dados-calculo.ponto}?",
+      "fr": "Le polynôme de Maclaurin de degré 2 de la fonction exponentielle est 1 plus x plus la moitié du carré de x. Combien vaut cette approximation en x = {dados-calculo.ponto} ?",
+      "en": "The degree 2 Maclaurin polynomial of the exponential function is 1 plus x plus half of x squared. What is that approximation at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "ponto": "0",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "series-de-taylor",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "O polinômio de Maclaurin de grau 2 da função cosseno é 1 menos metade do quadrado de x. Quanto vale essa aproximação em x = {dados-calculo.ponto}? Responda como fração.",
+      "fr": "Le polynôme de Maclaurin de degré 2 de la fonction cosinus est 1 moins la moitié du carré de x. Combien vaut cette approximation en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+      "en": "The degree 2 Maclaurin polynomial of the cosine function is 1 minus half of x squared. What is that approximation at x = {dados-calculo.ponto}? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "ponto": "1",
+      "total": "1/2"
+    }
+  },
+  {
+    "topico": "series-de-taylor",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "O polinômio de Maclaurin de grau 1 do seno é o próprio x. Quanto vale essa aproximação em x = {dados-calculo.ponto}?",
+      "fr": "Le polynôme de Maclaurin de degré 1 du sinus est x lui-même. Combien vaut cette approximation en x = {dados-calculo.ponto} ?",
+      "en": "The degree 1 Maclaurin polynomial of the sine is x itself. What is that approximation at x = {dados-calculo.ponto}?"
+    },
+    "dados-calculo": {
+      "ponto": "0.2",
+      "total": "0.2"
+    }
+  },
+  {
+    "topico": "series-de-taylor",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "O polinômio de Maclaurin de grau 2 da função exponencial é 1 mais x mais metade do quadrado de x. Quanto vale essa aproximação em x = {dados-calculo.ponto}? Responda como fração.",
+      "fr": "Le polynôme de Maclaurin de degré 2 de la fonction exponentielle est 1 plus x plus la moitié du carré de x. Combien vaut cette approximation en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+      "en": "The degree 2 Maclaurin polynomial of the exponential function is 1 plus x plus half of x squared. What is that approximation at x = {dados-calculo.ponto}? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "ponto": "1",
+      "total": "5/2"
+    }
+  },
+  {
+    "topico": "analise-combinatoria",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "De quantos modos se pode escolher uma equipe de {dados-calculo.escolhidos} pessoas entre {dados-calculo.candidatos} candidatos, sem distinguir papéis?",
+      "fr": "De combien de façons peut-on choisir une équipe de {dados-calculo.escolhidos} personnes parmi {dados-calculo.candidatos} candidats, sans distinguer les rôles ?",
+      "en": "In how many ways can a team of {dados-calculo.escolhidos} people be chosen from {dados-calculo.candidatos} candidates, with no distinct roles?"
+    },
+    "dados-calculo": {
+      "escolhidos": "4",
+      "candidatos": "15",
+      "total": "1365"
+    }
+  },
+  {
+    "topico": "analise-combinatoria",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "De quantos modos {dados-calculo.pessoas} pessoas podem se sentar em fila, em {dados-calculo.pessoas} cadeiras?",
+      "fr": "De combien de façons {dados-calculo.pessoas} personnes peuvent-elles s’asseoir en file, sur {dados-calculo.pessoas} chaises ?",
+      "en": "In how many ways can {dados-calculo.pessoas} people sit in a row of {dados-calculo.pessoas} chairs?"
+    },
+    "dados-calculo": {
+      "pessoas": "6",
+      "total": "720"
+    }
+  },
+  {
+    "topico": "analise-combinatoria",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Quantas senhas de {dados-calculo.posicoes} algarismos existem, usando os dígitos de 0 a 9, podendo repetir?",
+      "fr": "Combien de mots de passe de {dados-calculo.posicoes} chiffres existent, avec les chiffres de 0 à 9, les répétitions permises ?",
+      "en": "How many {dados-calculo.posicoes}-digit passwords are there, using digits 0 to 9, repeats allowed?"
+    },
+    "dados-calculo": {
+      "posicoes": "4",
+      "total": "10000"
+    }
+  },
+  {
+    "topico": "analise-combinatoria",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "De quantos modos se pode escolher um presidente e um vice entre {dados-calculo.candidatos} candidatos, sendo os dois cargos diferentes?",
+      "fr": "De combien de façons peut-on choisir un président et un vice-président parmi {dados-calculo.candidatos} candidats, les deux postes étant différents ?",
+      "en": "In how many ways can a president and a vice-president be chosen from {dados-calculo.candidatos} candidates, the two roles being different?"
+    },
+    "dados-calculo": {
+      "candidatos": "10",
+      "total": "90"
+    }
+  },
+  {
+    "topico": "binomio-de-newton",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a soma de todos os coeficientes do desenvolvimento de (a mais b) elevado a {dados-calculo.expoente}?",
+      "fr": "Quelle est la somme de tous les coefficients du développement de (a plus b) à la puissance {dados-calculo.expoente} ?",
+      "en": "What is the sum of all the coefficients in the expansion of (a plus b) to the power of {dados-calculo.expoente}?"
+    },
+    "dados-calculo": {
+      "expoente": "12",
+      "total": "4096"
+    }
+  },
+  {
+    "topico": "binomio-de-newton",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Quantos termos tem o desenvolvimento de (a mais b) elevado a {dados-calculo.expoente}?",
+      "fr": "Combien de termes a le développement de (a plus b) à la puissance {dados-calculo.expoente} ?",
+      "en": "How many terms does the expansion of (a plus b) to the power of {dados-calculo.expoente} have?"
+    },
+    "dados-calculo": {
+      "expoente": "7",
+      "total": "8"
+    }
+  },
+  {
+    "topico": "binomio-de-newton",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "No desenvolvimento de (a mais b) elevado a {dados-calculo.expoente}, qual é o maior coeficiente binomial?",
+      "fr": "Dans le développement de (a plus b) à la puissance {dados-calculo.expoente}, quel est le plus grand coefficient binomial ?",
+      "en": "In the expansion of (a plus b) to the power of {dados-calculo.expoente}, what is the largest binomial coefficient?"
+    },
+    "dados-calculo": {
+      "expoente": "6",
+      "total": "20"
+    }
+  },
+  {
+    "topico": "binomio-de-newton",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "No desenvolvimento de (a mais b) elevado a {dados-calculo.expoente}, qual é o coeficiente do termo em que a aparece elevado a {dados-calculo.grau}?",
+      "fr": "Dans le développement de (a plus b) à la puissance {dados-calculo.expoente}, quel est le coefficient du terme où a est élevé à {dados-calculo.grau} ?",
+      "en": "In the expansion of (a plus b) to the power of {dados-calculo.expoente}, what is the coefficient of the term where a is raised to {dados-calculo.grau}?"
+    },
+    "dados-calculo": {
+      "expoente": "8",
+      "grau": "3",
+      "total": "56"
+    }
+  },
+  {
+    "topico": "probabilidade",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Num dado de {dados-calculo.faces} faces, qual é a probabilidade de sair um número maior que {dados-calculo.alvo}? Responda como fração.",
+      "fr": "Sur un dé à {dados-calculo.faces} faces, quelle est la probabilité d’obtenir un nombre supérieur à {dados-calculo.alvo} ? Répondez sous forme de fraction.",
+      "en": "On a {dados-calculo.faces}-sided die, what is the probability of rolling a number greater than {dados-calculo.alvo}? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "faces": "6",
+      "alvo": "4",
+      "total": "1/3"
+    }
+  },
+  {
+    "topico": "probabilidade",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Numa urna há {dados-calculo.brancas} bolas brancas e {dados-calculo.pretas} pretas. Qual é a probabilidade de tirar uma branca? Responda como fração.",
+      "fr": "Dans une urne il y a {dados-calculo.brancas} boules blanches et {dados-calculo.pretas} noires. Quelle est la probabilité de tirer une blanche ? Répondez sous forme de fraction.",
+      "en": "An urn holds {dados-calculo.brancas} white balls and {dados-calculo.pretas} black ones. What is the probability of drawing a white one? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "brancas": "3",
+      "pretas": "5",
+      "total": "3/8"
+    }
+  },
+  {
+    "topico": "probabilidade",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Jogando {dados-calculo.moedas} moedas honestas, qual é a probabilidade de sair cara em todas? Responda como fração.",
+      "fr": "En lançant {dados-calculo.moedas} pièces équilibrées, quelle est la probabilité d’obtenir face à chaque fois ? Répondez sous forme de fraction.",
+      "en": "Tossing {dados-calculo.moedas} fair coins, what is the probability of getting heads every time? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "moedas": "3",
+      "total": "1/8"
+    }
+  },
+  {
+    "topico": "probabilidade",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Numa urna há {dados-calculo.brancas} bolas brancas e {dados-calculo.pretas} pretas. Tirando duas sem reposição, qual é a probabilidade de as duas serem brancas? Responda como fração.",
+      "fr": "Dans une urne il y a {dados-calculo.brancas} boules blanches et {dados-calculo.pretas} noires. En tirant deux boules sans remise, quelle est la probabilité que les deux soient blanches ? Répondez sous forme de fraction.",
+      "en": "An urn holds {dados-calculo.brancas} white balls and {dados-calculo.pretas} black ones. Drawing two without replacement, what is the probability both are white? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "brancas": "4",
+      "pretas": "6",
+      "total": "2/15"
+    }
+  },
+  {
+    "topico": "estatistica-e-incerteza",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Para as medidas {dados-calculo.m1}, {dados-calculo.m2}, {dados-calculo.m3} e {dados-calculo.m4}, qual é a média? (duas casas decimais)",
+      "fr": "Pour les mesures {dados-calculo.m1}, {dados-calculo.m2}, {dados-calculo.m3} et {dados-calculo.m4}, quelle est la moyenne ? (deux décimales)",
+      "en": "For the measurements {dados-calculo.m1}, {dados-calculo.m2}, {dados-calculo.m3} and {dados-calculo.m4}, what is the mean? (two decimal places)"
+    },
+    "dados-calculo": {
+      "m1": "10",
+      "m2": "12",
+      "m3": "14",
+      "m4": "16",
+      "total": "13.00"
+    }
+  },
+  {
+    "topico": "estatistica-e-incerteza",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Para as medidas {dados-calculo.m1}, {dados-calculo.m2}, {dados-calculo.m3} e {dados-calculo.m4}, qual é a amplitude, ou seja, a diferença entre a maior e a menor? (duas casas decimais)",
+      "fr": "Pour les mesures {dados-calculo.m1}, {dados-calculo.m2}, {dados-calculo.m3} et {dados-calculo.m4}, quelle est l’étendue, c’est-à-dire l’écart entre la plus grande et la plus petite ? (deux décimales)",
+      "en": "For the measurements {dados-calculo.m1}, {dados-calculo.m2}, {dados-calculo.m3} and {dados-calculo.m4}, what is the range, that is, the largest minus the smallest? (two decimal places)"
+    },
+    "dados-calculo": {
+      "m1": "10",
+      "m2": "12",
+      "m3": "14",
+      "m4": "16",
+      "total": "6.00"
+    }
+  },
+  {
+    "topico": "estatistica-e-incerteza",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Para as medidas {dados-calculo.m1}, {dados-calculo.m2} e {dados-calculo.m3}, qual é a mediana? (duas casas decimais)",
+      "fr": "Pour les mesures {dados-calculo.m1}, {dados-calculo.m2} et {dados-calculo.m3}, quelle est la médiane ? (deux décimales)",
+      "en": "For the measurements {dados-calculo.m1}, {dados-calculo.m2} and {dados-calculo.m3}, what is the median? (two decimal places)"
+    },
+    "dados-calculo": {
+      "m1": "7",
+      "m2": "3",
+      "m3": "5",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "estatistica-e-incerteza",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma medida vale {dados-calculo.valor} com incerteza de {dados-calculo.incerteza}. Qual é a incerteza relativa, em porcentagem? (duas casas decimais)",
+      "fr": "Une mesure vaut {dados-calculo.valor} avec une incertitude de {dados-calculo.incerteza}. Quelle est l’incertitude relative, en pourcentage ? (deux décimales)",
+      "en": "A measurement is {dados-calculo.valor} with an uncertainty of {dados-calculo.incerteza}. What is the relative uncertainty, as a percentage? (two decimal places)"
+    },
+    "dados-calculo": {
+      "valor": "50",
+      "incerteza": "2",
+      "total": "4.00"
+    }
+  },
+  {
+    "topico": "distribuicao-normal",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Numa distribuição normal, que porcentagem dos valores fica a até {dados-calculo.desvios} desvio padrão da média? Responda o número com uma casa decimal.",
+      "fr": "Dans une distribution normale, quel pourcentage des valeurs se trouve à moins de {dados-calculo.desvios} écart-type de la moyenne ? Donnez le nombre avec une décimale.",
+      "en": "In a normal distribution, what percentage of the values lie within {dados-calculo.desvios} standard deviation of the mean? Give the number to one decimal place."
+    },
+    "dados-calculo": {
+      "desvios": "1",
+      "total": "68.3"
+    }
+  },
+  {
+    "topico": "distribuicao-normal",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Numa distribuição normal, que porcentagem dos valores fica a até {dados-calculo.desvios} desvios padrão da média? Responda o número com uma casa decimal.",
+      "fr": "Dans une distribution normale, quel pourcentage des valeurs se trouve à moins de {dados-calculo.desvios} écarts-types de la moyenne ? Donnez le nombre avec une décimale.",
+      "en": "In a normal distribution, what percentage of the values lie within {dados-calculo.desvios} standard deviations of the mean? Give the number to one decimal place."
+    },
+    "dados-calculo": {
+      "desvios": "2",
+      "total": "95.4"
+    }
+  },
+  {
+    "topico": "distribuicao-normal",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma medida tem média {dados-calculo.media} e desvio padrão {dados-calculo.desvio}. Quantos desvios padrão acima da média está o valor {dados-calculo.valor}?",
+      "fr": "Une mesure a une moyenne de {dados-calculo.media} et un écart-type de {dados-calculo.desvio}. Combien d’écarts-types au-dessus de la moyenne se trouve la valeur {dados-calculo.valor} ?",
+      "en": "A measurement has mean {dados-calculo.media} and standard deviation {dados-calculo.desvio}. How many standard deviations above the mean is the value {dados-calculo.valor}?"
+    },
+    "dados-calculo": {
+      "media": "100",
+      "desvio": "15",
+      "valor": "130",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "distribuicao-normal",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Numa distribuição normal de média {dados-calculo.media} e desvio padrão {dados-calculo.desvio}, entre que valor e {dados-calculo.superior} ficam aproximadamente 68% dos casos? Informe o valor INFERIOR.",
+      "fr": "Dans une distribution normale de moyenne {dados-calculo.media} et d’écart-type {dados-calculo.desvio}, entre quelle valeur et {dados-calculo.superior} se trouvent environ 68% des cas ? Donnez la valeur INFÉRIEURE.",
+      "en": "In a normal distribution with mean {dados-calculo.media} and standard deviation {dados-calculo.desvio}, between what value and {dados-calculo.superior} do about 68% of cases fall? Give the LOWER value."
+    },
+    "dados-calculo": {
+      "media": "100",
+      "desvio": "15",
+      "superior": "115",
+      "total": "85"
+    }
+  },
+  {
+    "topico": "regressao-e-correlacao",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma reta de mínimos quadrados tem inclinação {dados-calculo.inclinacao} e passa pelo ponto ({dados-calculo.px}, {dados-calculo.py}). Qual é o seu intercepto?",
+      "fr": "Une droite des moindres carrés a une pente de {dados-calculo.inclinacao} et passe par le point ({dados-calculo.px}, {dados-calculo.py}). Quelle est son ordonnée à l’origine ?",
+      "en": "A least-squares line has slope {dados-calculo.inclinacao} and passes through ({dados-calculo.px}, {dados-calculo.py}). What is its intercept?"
+    },
+    "dados-calculo": {
+      "inclinacao": "2",
+      "px": "3",
+      "py": "7",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "regressao-e-correlacao",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma reta de mínimos quadrados tem inclinação {dados-calculo.inclinacao} e intercepto {dados-calculo.intercepto}. Que valor ela prevê para x = {dados-calculo.x}?",
+      "fr": "Une droite des moindres carrés a une pente de {dados-calculo.inclinacao} et une ordonnée à l’origine de {dados-calculo.intercepto}. Quelle valeur prédit-elle pour x = {dados-calculo.x} ?",
+      "en": "A least-squares line has slope {dados-calculo.inclinacao} and intercept {dados-calculo.intercepto}. What value does it predict for x = {dados-calculo.x}?"
+    },
+    "dados-calculo": {
+      "inclinacao": "3",
+      "intercepto": "4",
+      "x": "5",
+      "total": "19"
+    }
+  },
+  {
+    "topico": "regressao-e-correlacao",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Dois conjuntos de dados estão alinhados numa reta crescente perfeita. Qual é o coeficiente de correlação?",
+      "fr": "Deux ensembles de données sont alignés sur une droite croissante parfaite. Quel est le coefficient de corrélation ?",
+      "en": "Two data sets lie exactly on a perfectly increasing line. What is the correlation coefficient?"
+    },
+    "dados-calculo": {
+      "total": "1"
+    }
+  },
+  {
+    "topico": "regressao-e-correlacao",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Dois conjuntos de dados estão alinhados numa reta DECRESCENTE perfeita. Qual é o coeficiente de correlação?",
+      "fr": "Deux ensembles de données sont alignés sur une droite DÉCROISSANTE parfaite. Quel est le coefficient de corrélation ?",
+      "en": "Two data sets lie exactly on a perfectly DECREASING line. What is the correlation coefficient?"
+    },
+    "dados-calculo": {
+      "total": "-1"
+    }
+  },
+  {
+    "topico": "funcoes-de-varias-variaveis",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "A temperatura de uma chapa é {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Quanto ela vale no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+      "fr": "La température d’une plaque est {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Combien vaut-elle au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+      "en": "A plate’s temperature is {dados-calculo.a} times x plus {dados-calculo.b} times y. What is it at the point ({dados-calculo.px}, {dados-calculo.py})?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "4",
+      "px": "5",
+      "py": "2",
+      "total": "23"
+    }
+  },
+  {
+    "topico": "funcoes-de-varias-variaveis",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma superfície vale o quadrado de x mais o quadrado de y. Quanto ela vale no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+      "fr": "Une surface vaut le carré de x plus le carré de y. Combien vaut-elle au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+      "en": "A surface equals x squared plus y squared. What is its value at the point ({dados-calculo.px}, {dados-calculo.py})?"
+    },
+    "dados-calculo": {
+      "px": "3",
+      "py": "4",
+      "total": "25"
+    }
+  },
+  {
+    "topico": "funcoes-de-varias-variaveis",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função vale o produto de x por y. Qual é o valor de k da curva de nível que passa por ({dados-calculo.px}, {dados-calculo.py})?",
+      "fr": "Une fonction vaut le produit de x par y. Quelle est la valeur de k de la courbe de niveau passant par ({dados-calculo.px}, {dados-calculo.py}) ?",
+      "en": "A function equals x times y. What is the value of k for the level curve through ({dados-calculo.px}, {dados-calculo.py})?"
+    },
+    "dados-calculo": {
+      "px": "4",
+      "py": "11",
+      "total": "44"
+    }
+  },
+  {
+    "topico": "funcoes-de-varias-variaveis",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "O volume de um cilindro depende do raio e da altura. Para raio {dados-calculo.raio} e altura {dados-calculo.altura}, qual é o volume? Responda o número que multiplica π.",
+      "fr": "Le volume d’un cylindre dépend du rayon et de la hauteur. Pour un rayon de {dados-calculo.raio} et une hauteur de {dados-calculo.altura}, quel est le volume ? Donnez le nombre qui multiplie π.",
+      "en": "A cylinder’s volume depends on radius and height. For radius {dados-calculo.raio} and height {dados-calculo.altura}, what is the volume? Give the number multiplying π."
+    },
+    "dados-calculo": {
+      "raio": "3",
+      "altura": "5",
+      "total": "45"
+    }
+  },
+  {
+    "topico": "derivadas-parciais",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Qual é a derivada parcial em relação a y?",
+      "fr": "Une fonction vaut {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Quelle est la dérivée partielle par rapport à y ?",
+      "en": "A function equals {dados-calculo.a} times x plus {dados-calculo.b} times y. What is the partial derivative with respect to y?"
+    },
+    "dados-calculo": {
+      "a": "7",
+      "b": "-11",
+      "total": "-11"
+    }
+  },
+  {
+    "topico": "derivadas-parciais",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função vale o produto de x por y. Qual é a derivada parcial em relação a x no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+      "fr": "Une fonction vaut le produit de x par y. Quelle est la dérivée partielle par rapport à x au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+      "en": "A function equals x times y. What is the partial derivative with respect to x at the point ({dados-calculo.px}, {dados-calculo.py})?"
+    },
+    "dados-calculo": {
+      "px": "2",
+      "py": "9",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "derivadas-parciais",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função vale o quadrado de x mais o quadrado de y. Qual é a derivada parcial em relação a x no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+      "fr": "Une fonction vaut le carré de x plus le carré de y. Quelle est la dérivée partielle par rapport à x au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+      "en": "A function equals x squared plus y squared. What is the partial derivative with respect to x at the point ({dados-calculo.px}, {dados-calculo.py})?"
+    },
+    "dados-calculo": {
+      "px": "4",
+      "py": "7",
+      "total": "8"
+    }
+  },
+  {
+    "topico": "derivadas-parciais",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função vale o quadrado de x vezes y. Qual é a derivada parcial SEGUNDA em relação a x, no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+      "fr": "Une fonction vaut le carré de x fois y. Quelle est la dérivée partielle SECONDE par rapport à x, au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+      "en": "A function equals x squared times y. What is the SECOND partial derivative with respect to x, at the point ({dados-calculo.px}, {dados-calculo.py})?"
+    },
+    "dados-calculo": {
+      "px": "5",
+      "py": "3",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "gradiente-e-direcional",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Qual é o módulo do gradiente, que é a maior taxa de variação possível?",
+      "fr": "Une fonction vaut {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Quel est le module du gradient, c’est-à-dire le plus grand taux de variation possible ?",
+      "en": "A function equals {dados-calculo.a} times x plus {dados-calculo.b} times y. What is the magnitude of the gradient, the greatest possible rate of change?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "4",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "gradiente-e-direcional",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Qual é a derivada direcional na direção do eixo x?",
+      "fr": "Une fonction vaut {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Quelle est la dérivée directionnelle dans la direction de l’axe des x ?",
+      "en": "A function equals {dados-calculo.a} times x plus {dados-calculo.b} times y. What is the directional derivative along the x-axis?"
+    },
+    "dados-calculo": {
+      "a": "6",
+      "b": "8",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "gradiente-e-direcional",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma função vale o quadrado de x mais o quadrado de y. Qual é o módulo do gradiente no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+      "fr": "Une fonction vaut le carré de x plus le carré de y. Quel est le module du gradient au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+      "en": "A function equals x squared plus y squared. What is the magnitude of the gradient at the point ({dados-calculo.px}, {dados-calculo.py})?"
+    },
+    "dados-calculo": {
+      "px": "3",
+      "py": "4",
+      "total": "10"
+    }
+  },
+  {
+    "topico": "gradiente-e-direcional",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Qual é a derivada direcional numa direção PERPENDICULAR ao gradiente?",
+      "fr": "Une fonction vaut {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Quelle est la dérivée directionnelle dans une direction PERPENDICULAIRE au gradient ?",
+      "en": "A function equals {dados-calculo.a} times x plus {dados-calculo.b} times y. What is the directional derivative in a direction PERPENDICULAR to the gradient?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "4",
+      "total": "0"
+    }
+  },
+  {
+    "topico": "integrais-multiplas",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a integral dupla da função constante igual a {dados-calculo.altura} sobre um retângulo de lados {dados-calculo.lado1} e {dados-calculo.lado2}?",
+      "fr": "Quelle est l’intégrale double de la fonction constante égale à {dados-calculo.altura} sur un rectangle de côtés {dados-calculo.lado1} et {dados-calculo.lado2} ?",
+      "en": "What is the double integral of the constant function {dados-calculo.altura} over a rectangle with sides {dados-calculo.lado1} and {dados-calculo.lado2}?"
+    },
+    "dados-calculo": {
+      "altura": "5",
+      "lado1": "2",
+      "lado2": "3",
+      "total": "30"
+    }
+  },
+  {
+    "topico": "integrais-multiplas",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é o volume sob o plano de altura constante {dados-calculo.altura} sobre um quadrado de lado {dados-calculo.lado}?",
+      "fr": "Quel est le volume sous le plan de hauteur constante {dados-calculo.altura} sur un carré de côté {dados-calculo.lado} ?",
+      "en": "What is the volume under the plane of constant height {dados-calculo.altura} over a square of side {dados-calculo.lado}?"
+    },
+    "dados-calculo": {
+      "altura": "7",
+      "lado": "4",
+      "total": "112"
+    }
+  },
+  {
+    "topico": "integrais-multiplas",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é a integral dupla da função que vale x, sobre o retângulo em que x vai de 0 a {dados-calculo.fimX} e y vai de 0 a {dados-calculo.fimY}?",
+      "fr": "Quelle est l’intégrale double de la fonction qui vaut x, sur le rectangle où x va de 0 à {dados-calculo.fimX} et y de 0 à {dados-calculo.fimY} ?",
+      "en": "What is the double integral of the function equal to x, over the rectangle where x goes from 0 to {dados-calculo.fimX} and y from 0 to {dados-calculo.fimY}?"
+    },
+    "dados-calculo": {
+      "fimX": "2",
+      "fimY": "3",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "integrais-multiplas",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é a integral dupla da função que vale o produto de x por y, sobre o retângulo em que x vai de 0 a {dados-calculo.fimX} e y vai de 0 a {dados-calculo.fimY}?",
+      "fr": "Quelle est l’intégrale double de la fonction qui vaut le produit de x par y, sur le rectangle où x va de 0 à {dados-calculo.fimX} et y de 0 à {dados-calculo.fimY} ?",
+      "en": "What is the double integral of the function equal to x times y, over the rectangle where x goes from 0 to {dados-calculo.fimX} and y from 0 to {dados-calculo.fimY}?"
+    },
+    "dados-calculo": {
+      "fimX": "2",
+      "fimY": "4",
+      "total": "16"
+    }
+  },
+  {
+    "topico": "coordenadas-no-espaco",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um ponto tem coordenadas cilíndricas r igual a {dados-calculo.r}, ângulo {dados-calculo.angulo}° e altura {dados-calculo.z}. Qual é a sua coordenada z cartesiana?",
+      "fr": "Un point a pour coordonnées cylindriques r égal à {dados-calculo.r}, un angle de {dados-calculo.angulo}° et une hauteur de {dados-calculo.z}. Quelle est sa coordonnée z cartésienne ?",
+      "en": "A point has cylindrical coordinates r equal to {dados-calculo.r}, angle {dados-calculo.angulo}° and height {dados-calculo.z}. What is its Cartesian z coordinate?"
+    },
+    "dados-calculo": {
+      "r": "5",
+      "angulo": "60",
+      "z": "-3.5",
+      "total": "-3.5"
+    }
+  },
+  {
+    "topico": "coordenadas-no-espaco",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um ponto tem coordenadas cilíndricas r igual a {dados-calculo.r} e ângulo {dados-calculo.angulo}°. Qual é a sua coordenada x cartesiana?",
+      "fr": "Un point a pour coordonnées cylindriques r égal à {dados-calculo.r} et un angle de {dados-calculo.angulo}°. Quelle est sa coordonnée x cartésienne ?",
+      "en": "A point has cylindrical coordinates r equal to {dados-calculo.r} and angle {dados-calculo.angulo}°. What is its Cartesian x coordinate?"
+    },
+    "dados-calculo": {
+      "r": "6",
+      "angulo": "180",
+      "total": "-6"
+    }
+  },
+  {
+    "topico": "coordenadas-no-espaco",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um ponto está a {dados-calculo.x}, {dados-calculo.y} e {dados-calculo.z} nos eixos cartesianos. Qual é a sua distância até a origem, que é a coordenada esférica rô?",
+      "fr": "Un point est à {dados-calculo.x}, {dados-calculo.y} et {dados-calculo.z} sur les axes cartésiens. Quelle est sa distance à l’origine, c’est-à-dire la coordonnée sphérique rhô ?",
+      "en": "A point is at {dados-calculo.x}, {dados-calculo.y} and {dados-calculo.z} on the Cartesian axes. What is its distance to the origin, the spherical coordinate rho?"
+    },
+    "dados-calculo": {
+      "x": "2",
+      "y": "3",
+      "z": "6",
+      "total": "7"
+    }
+  },
+  {
+    "topico": "coordenadas-no-espaco",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um ponto tem coordenada esférica rô igual a {dados-calculo.rho} e está sobre o eixo z positivo. Qual é a sua coordenada z cartesiana?",
+      "fr": "Un point a une coordonnée sphérique rhô égale à {dados-calculo.rho} et se trouve sur l’axe z positif. Quelle est sa coordonnée z cartésienne ?",
+      "en": "A point has spherical coordinate rho equal to {dados-calculo.rho} and lies on the positive z-axis. What is its Cartesian z coordinate?"
+    },
+    "dados-calculo": {
+      "rho": "9",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "integrais-de-linha",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um campo de força constante de {dados-calculo.forca} N, na direção do movimento, atua ao longo de um caminho de {dados-calculo.comprimento} m. Qual é o trabalho, em joules?",
+      "fr": "Un champ de force constant de {dados-calculo.forca} N, dans la direction du mouvement, agit le long d’un chemin de {dados-calculo.comprimento} m. Quel est le travail, en joules ?",
+      "en": "A constant force field of {dados-calculo.forca} N, along the direction of motion, acts over a path of {dados-calculo.comprimento} m. What is the work, in joules?"
+    },
+    "dados-calculo": {
+      "forca": "6",
+      "comprimento": "4",
+      "total": "24"
+    }
+  },
+  {
+    "topico": "integrais-de-linha",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um campo de força constante de {dados-calculo.forca} N atua PERPENDICULARMENTE ao caminho, de {dados-calculo.comprimento} m. Qual é o trabalho, em joules?",
+      "fr": "Un champ de force constant de {dados-calculo.forca} N agit PERPENDICULAIREMENT au chemin, de {dados-calculo.comprimento} m. Quel est le travail, en joules ?",
+      "en": "A constant force field of {dados-calculo.forca} N acts PERPENDICULAR to the path, which is {dados-calculo.comprimento} m long. What is the work, in joules?"
+    },
+    "dados-calculo": {
+      "forca": "6",
+      "comprimento": "4",
+      "total": "0"
+    }
+  },
+  {
+    "topico": "integrais-de-linha",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um campo conservativo tem potencial {dados-calculo.inicial} no início do caminho e {dados-calculo.final} no fim. Qual é o trabalho realizado ao longo do caminho?",
+      "fr": "Un champ conservatif a un potentiel de {dados-calculo.inicial} au début du chemin et de {dados-calculo.final} à la fin. Quel est le travail effectué le long du chemin ?",
+      "en": "A conservative field has potential {dados-calculo.inicial} at the start of the path and {dados-calculo.final} at the end. What work is done along the path?"
+    },
+    "dados-calculo": {
+      "inicial": "20",
+      "final": "8",
+      "total": "-12"
+    }
+  },
+  {
+    "topico": "integrais-de-linha",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um campo conservativo tem potencial {dados-calculo.valor} num ponto. Qual é o trabalho ao longo de um caminho FECHADO que começa e termina nesse ponto?",
+      "fr": "Un champ conservatif a un potentiel de {dados-calculo.valor} en un point. Quel est le travail le long d’un chemin FERMÉ qui commence et finit en ce point ?",
+      "en": "A conservative field has potential {dados-calculo.valor} at a point. What is the work along a CLOSED path that starts and ends at that point?"
+    },
+    "dados-calculo": {
+      "valor": "15",
+      "total": "0"
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a área do pedaço de um plano horizontal que fica acima de um retângulo de lados {dados-calculo.lado1} e {dados-calculo.lado2}?",
+      "fr": "Quelle est l’aire du morceau d’un plan horizontal situé au-dessus d’un rectangle de côtés {dados-calculo.lado1} et {dados-calculo.lado2} ?",
+      "en": "What is the area of the piece of a horizontal plane lying above a rectangle with sides {dados-calculo.lado1} and {dados-calculo.lado2}?"
+    },
+    "dados-calculo": {
+      "lado1": "9",
+      "lado2": "12",
+      "total": "108"
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é o fluxo de um campo constante de módulo {dados-calculo.campo}, perpendicular a uma superfície plana de área {dados-calculo.area}?",
+      "fr": "Quel est le flux d’un champ constant de module {dados-calculo.campo}, perpendiculaire à une surface plane d’aire {dados-calculo.area} ?",
+      "en": "What is the flux of a constant field of magnitude {dados-calculo.campo}, perpendicular to a flat surface of area {dados-calculo.area}?"
+    },
+    "dados-calculo": {
+      "campo": "5",
+      "area": "8",
+      "total": "40"
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é o fluxo de um campo constante de módulo {dados-calculo.campo} através de uma superfície plana de área {dados-calculo.area}, quando o campo é PARALELO à superfície?",
+      "fr": "Quel est le flux d’un champ constant de module {dados-calculo.campo} à travers une surface plane d’aire {dados-calculo.area}, quand le champ est PARALLÈLE à la surface ?",
+      "en": "What is the flux of a constant field of magnitude {dados-calculo.campo} through a flat surface of area {dados-calculo.area}, when the field is PARALLEL to the surface?"
+    },
+    "dados-calculo": {
+      "campo": "5",
+      "area": "8",
+      "total": "0"
+    }
+  },
+  {
+    "topico": "teoremas-integrais",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é a área da superfície de uma esfera de raio {dados-calculo.raio}? Responda o número que multiplica π.",
+      "fr": "Quelle est l’aire de la surface d’une sphère de rayon {dados-calculo.raio} ? Donnez le nombre qui multiplie π.",
+      "en": "What is the surface area of a sphere of radius {dados-calculo.raio}? Give the number multiplying π."
+    },
+    "dados-calculo": {
+      "raio": "3",
+      "total": "36"
+    }
+  },
+  {
+    "topico": "edo-primeira-ordem",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma população cresce de modo que a taxa de variação é {dados-calculo.k} vezes a própria população. Qual é a constante que multiplica o tempo no expoente da solução?",
+      "fr": "Une population croît de sorte que le taux de variation est {dados-calculo.k} fois la population elle-même. Quelle est la constante qui multiplie le temps dans l’exposant de la solution ?",
+      "en": "A population grows so that the rate of change is {dados-calculo.k} times the population itself. What constant multiplies the time in the exponent of the solution?"
+    },
+    "dados-calculo": {
+      "k": "9",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "edo-primeira-ordem",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma grandeza satisfaz: a taxa de variação é {dados-calculo.k} vezes a grandeza, e ela vale {dados-calculo.inicial} no instante zero. Quanto ela vale no instante zero?",
+      "fr": "Une grandeur satisfait : le taux de variation est {dados-calculo.k} fois la grandeur, et elle vaut {dados-calculo.inicial} à l’instant zéro. Combien vaut-elle à l’instant zéro ?",
+      "en": "A quantity satisfies: the rate of change is {dados-calculo.k} times the quantity, and it equals {dados-calculo.inicial} at time zero. What is its value at time zero?"
+    },
+    "dados-calculo": {
+      "k": "2",
+      "inicial": "40",
+      "total": "40"
+    }
+  },
+  {
+    "topico": "edo-primeira-ordem",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma substância decai de modo que a taxa é menos {dados-calculo.k} vezes a quantidade. Partindo de {dados-calculo.inicial} g, quantos gramas restam quando a quantidade cai à metade duas vezes seguidas?",
+      "fr": "Une substance décroît de sorte que le taux est moins {dados-calculo.k} fois la quantité. En partant de {dados-calculo.inicial} g, combien de grammes restent quand la quantité est divisée par deux deux fois de suite ?",
+      "en": "A substance decays so the rate is minus {dados-calculo.k} times the amount. Starting from {dados-calculo.inicial} g, how many grams are left after the amount halves twice in a row?"
+    },
+    "dados-calculo": {
+      "k": "0.5",
+      "inicial": "80",
+      "total": "20"
+    }
+  },
+  {
+    "topico": "edo-primeira-ordem",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma grandeza tem taxa de variação constante igual a {dados-calculo.taxa} e vale {dados-calculo.inicial} no instante zero. Quanto ela vale no instante {dados-calculo.tempo}?",
+      "fr": "Une grandeur a un taux de variation constant égal à {dados-calculo.taxa} et vaut {dados-calculo.inicial} à l’instant zéro. Combien vaut-elle à l’instant {dados-calculo.tempo} ?",
+      "en": "A quantity has a constant rate of change of {dados-calculo.taxa} and equals {dados-calculo.inicial} at time zero. What is its value at time {dados-calculo.tempo}?"
+    },
+    "dados-calculo": {
+      "taxa": "3",
+      "inicial": "10",
+      "tempo": "5",
+      "total": "25"
+    }
+  },
+  {
+    "topico": "edo-segunda-ordem",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "A equação característica de uma equação diferencial tem raízes {dados-calculo.r1} e {dados-calculo.r2}. Qual é a MAIOR delas?",
+      "fr": "L’équation caractéristique d’une équation différentielle a pour racines {dados-calculo.r1} et {dados-calculo.r2}. Quelle est la PLUS GRANDE ?",
+      "en": "The characteristic equation of a differential equation has roots {dados-calculo.r1} and {dados-calculo.r2}. Which is the LARGER one?"
+    },
+    "dados-calculo": {
+      "r1": "-4",
+      "r2": "-9",
+      "total": "-4"
+    }
+  },
+  {
+    "topico": "edo-segunda-ordem",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "A equação característica tem soma das raízes igual a {dados-calculo.soma} e produto igual a {dados-calculo.produto}. Sabendo que uma raiz vale {dados-calculo.uma}, qual é a outra?",
+      "fr": "L’équation caractéristique a une somme de racines égale à {dados-calculo.soma} et un produit égal à {dados-calculo.produto}. Sachant qu’une racine vaut {dados-calculo.uma}, quelle est l’autre ?",
+      "en": "The characteristic equation has roots summing to {dados-calculo.soma} and multiplying to {dados-calculo.produto}. Knowing one root is {dados-calculo.uma}, what is the other?"
+    },
+    "dados-calculo": {
+      "soma": "7",
+      "produto": "12",
+      "uma": "3",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "edo-segunda-ordem",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um oscilador sem amortecimento tem massa {dados-calculo.massa} kg e constante elástica {dados-calculo.constante} N/m. Qual é a frequência angular da solução, em rad/s?",
+      "fr": "Un oscillateur sans amortissement a une masse de {dados-calculo.massa} kg et une constante élastique de {dados-calculo.constante} N/m. Quelle est la pulsation de la solution, en rad/s ?",
+      "en": "An undamped oscillator has mass {dados-calculo.massa} kg and spring constant {dados-calculo.constante} N/m. What is the angular frequency of the solution, in rad/s?"
+    },
+    "dados-calculo": {
+      "massa": "2",
+      "constante": "32",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "edo-segunda-ordem",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A equação característica tem raiz dupla igual a {dados-calculo.raiz}. Quantas raízes DISTINTAS ela tem?",
+      "fr": "L’équation caractéristique a une racine double égale à {dados-calculo.raiz}. Combien de racines DISTINCTES a-t-elle ?",
+      "en": "The characteristic equation has a double root equal to {dados-calculo.raiz}. How many DISTINCT roots does it have?"
+    },
+    "dados-calculo": {
+      "raiz": "-3",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "aplicacoes-de-edo",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um corpo a {dados-calculo.corpo} °C é deixado num ambiente a {dados-calculo.ambiente} °C. De que temperatura, em °C, ele se aproxima depois de muito tempo?",
+      "fr": "Un corps à {dados-calculo.corpo} °C est laissé dans un milieu à {dados-calculo.ambiente} °C. De quelle température, en °C, s’approche-t-il après très longtemps ?",
+      "en": "A body at {dados-calculo.corpo} °C is left in surroundings at {dados-calculo.ambiente} °C. What temperature, in °C, does it approach after a long time?"
+    },
+    "dados-calculo": {
+      "corpo": "77",
+      "ambiente": "22",
+      "total": "22"
+    }
+  },
+  {
+    "topico": "aplicacoes-de-edo",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um corpo a {dados-calculo.corpo} °C num ambiente a {dados-calculo.ambiente} °C perde metade da diferença de temperatura a cada {dados-calculo.intervalo} minutos. Que temperatura, em °C, ele tem depois de {dados-calculo.tempo} minutos?",
+      "fr": "Un corps à {dados-calculo.corpo} °C dans un milieu à {dados-calculo.ambiente} °C perd la moitié de l’écart de température toutes les {dados-calculo.intervalo} minutes. Quelle température, en °C, a-t-il après {dados-calculo.tempo} minutes ?",
+      "en": "A body at {dados-calculo.corpo} °C in surroundings at {dados-calculo.ambiente} °C loses half of the temperature difference every {dados-calculo.intervalo} minutes. What temperature, in °C, does it have after {dados-calculo.tempo} minutes?"
+    },
+    "dados-calculo": {
+      "corpo": "100",
+      "ambiente": "20",
+      "intervalo": "10",
+      "tempo": "20",
+      "total": "40"
+    }
+  },
+  {
+    "topico": "aplicacoes-de-edo",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma população dobra a cada {dados-calculo.intervalo} anos. Partindo de {dados-calculo.inicial} indivíduos, quantos haverá depois de {dados-calculo.tempo} anos?",
+      "fr": "Une population double tous les {dados-calculo.intervalo} ans. En partant de {dados-calculo.inicial} individus, combien y en aura-t-il après {dados-calculo.tempo} ans ?",
+      "en": "A population doubles every {dados-calculo.intervalo} years. Starting from {dados-calculo.inicial} individuals, how many will there be after {dados-calculo.tempo} years?"
+    },
+    "dados-calculo": {
+      "intervalo": "5",
+      "inicial": "300",
+      "tempo": "15",
+      "total": "2400"
+    }
+  },
+  {
+    "topico": "aplicacoes-de-edo",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um tanque recebe {dados-calculo.entrada} L por minuto e perde {dados-calculo.saida} L por minuto. Partindo de {dados-calculo.inicial} L, quantos litros há depois de {dados-calculo.tempo} minutos?",
+      "fr": "Un réservoir reçoit {dados-calculo.entrada} L par minute et en perd {dados-calculo.saida} L par minute. En partant de {dados-calculo.inicial} L, combien de litres y a-t-il après {dados-calculo.tempo} minutes ?",
+      "en": "A tank takes in {dados-calculo.entrada} L per minute and loses {dados-calculo.saida} L per minute. Starting from {dados-calculo.inicial} L, how many litres are there after {dados-calculo.tempo} minutes?"
+    },
+    "dados-calculo": {
+      "entrada": "12",
+      "saida": "5",
+      "inicial": "100",
+      "tempo": "20",
+      "total": "240"
+    }
+  },
+  {
+    "topico": "metodos-numericos",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Pelo método da bisseção, qual é o ponto médio do intervalo entre {dados-calculo.a} e {dados-calculo.b}?",
+      "fr": "Par la méthode de dichotomie, quel est le milieu de l’intervalle entre {dados-calculo.a} et {dados-calculo.b} ?",
+      "en": "By the bisection method, what is the midpoint of the interval between {dados-calculo.a} and {dados-calculo.b}?"
+    },
+    "dados-calculo": {
+      "a": "2",
+      "b": "6",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "metodos-numericos",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma função vale {dados-calculo.fa} em x = {dados-calculo.a} e {dados-calculo.fb} em x = {dados-calculo.b}, e é contínua. A raiz está entre eles? Responda 1 para sim e 0 para não.",
+      "fr": "Une fonction vaut {dados-calculo.fa} en x = {dados-calculo.a} et {dados-calculo.fb} en x = {dados-calculo.b}, et elle est continue. La racine est-elle entre les deux ? Répondez 1 pour oui et 0 pour non.",
+      "en": "A function equals {dados-calculo.fa} at x = {dados-calculo.a} and {dados-calculo.fb} at x = {dados-calculo.b}, and it is continuous. Is the root between them? Answer 1 for yes and 0 for no."
+    },
+    "dados-calculo": {
+      "fa": "-2",
+      "a": "1",
+      "fb": "3",
+      "b": "2",
+      "total": "1"
+    }
+  },
+  {
+    "topico": "metodos-numericos",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "No método de Newton-Raphson, o próximo valor é o atual menos a função dividida pela derivada. Partindo de x igual a {dados-calculo.x}, com a função valendo {dados-calculo.f} e a derivada {dados-calculo.derivada}, qual é o próximo valor?",
+      "fr": "Dans la méthode de Newton-Raphson, la valeur suivante est l’actuelle moins la fonction divisée par la dérivée. En partant de x égal à {dados-calculo.x}, avec la fonction valant {dados-calculo.f} et la dérivée {dados-calculo.derivada}, quelle est la valeur suivante ?",
+      "en": "In the Newton-Raphson method, the next value is the current one minus the function divided by the derivative. Starting from x equal to {dados-calculo.x}, with the function equal to {dados-calculo.f} and the derivative {dados-calculo.derivada}, what is the next value?"
+    },
+    "dados-calculo": {
+      "x": "4",
+      "f": "6",
+      "derivada": "3",
+      "total": "2"
+    }
+  },
+  {
+    "topico": "metodos-numericos",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Pela regra do trapézio, qual é a área aproximada sob uma curva num intervalo de largura {dados-calculo.largura}, cujas alturas nas pontas valem {dados-calculo.altura1} e {dados-calculo.altura2}?",
+      "fr": "Par la règle du trapèze, quelle est l’aire approchée sous une courbe sur un intervalle de largeur {dados-calculo.largura}, dont les hauteurs aux extrémités valent {dados-calculo.altura1} et {dados-calculo.altura2} ?",
+      "en": "By the trapezoid rule, what is the approximate area under a curve over an interval of width {dados-calculo.largura}, with end heights {dados-calculo.altura1} and {dados-calculo.altura2}?"
+    },
+    "dados-calculo": {
+      "largura": "4",
+      "altura1": "3",
+      "altura2": "7",
+      "total": "20"
+    }
   }
 ]
