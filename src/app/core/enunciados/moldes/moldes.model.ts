@@ -5,6 +5,7 @@ import {
   todasAsEntradas,
   vestirTexto,
 } from '@core/enunciados/models/enunciado.model';
+import { EnunciadoTrilingue } from '@core/treino/textos/texto-trilingue';
 
 /**
  * Os MOLDES de enunciado: o texto fora do código.
@@ -92,16 +93,26 @@ export function textoDoMolde(
   valores: Readonly<Record<string, number | string>>,
   idioma: Idioma,
 ): string {
-  const comoTexto = Object.fromEntries(
-    Object.entries(valores).map(([nome, valor]) => [nome, String(valor)]),
-  );
 
   // Sem tradução, o português responde: é o que a tela já mostrava antes de o
   // texto sair do gerador, e meia tradução é pior que nenhuma.
   const escrito =
     idioma === 'pt' ? molde.enunciado.br : (molde.enunciado[idioma] ?? molde.enunciado.br);
 
-  return vestirTexto(escrito, comoTexto, idioma);
+  return vestirValores(escrito, valores, idioma);
+}
+
+/** Troca as lacunas de um texto qualquer — enunciado ou dica — pelos valores. */
+function vestirValores(
+  texto: string,
+  valores: Readonly<Record<string, number | string>>,
+  idioma: Idioma,
+): string {
+  const comoTexto = Object.fromEntries(
+    Object.entries(valores).map(([nome, valor]) => [nome, String(valor)]),
+  );
+
+  return vestirTexto(texto, comoTexto, idioma);
 }
 
 /** O texto nas três línguas de uma vez, que é o formato que o exercício usa. */
@@ -113,5 +124,37 @@ export function textosDoMolde(
     pt: textoDoMolde(molde, valores, 'pt'),
     fr: textoDoMolde(molde, valores, 'fr'),
     en: textoDoMolde(molde, valores, 'en'),
+  };
+}
+
+/**
+ * O molde vestido, no formato que o exercício espera.
+ *
+ * Devolve o mesmo que `enunciadoTrilingue` sempre devolveu — enunciado em
+ * português, dica em português e as duas traduções —, só que lendo o texto do
+ * arquivo em vez de funções escritas em TypeScript. É por aqui que passam os
+ * tópicos cujo texto vivia em `.contextos.ts` e `.textos.ts`.
+ */
+export function enunciadoDoMolde(
+  molde: MoldeDeEnunciado,
+  valores: Readonly<Record<string, number | string>>,
+): EnunciadoTrilingue {
+  const textos = textosDoMolde(molde, valores);
+  const dica =
+    molde.dica === undefined
+      ? undefined
+      : {
+          pt: vestirValores(molde.dica.br, valores, 'pt'),
+          fr: vestirValores(molde.dica.fr ?? molde.dica.br, valores, 'fr'),
+          en: vestirValores(molde.dica.en ?? molde.dica.br, valores, 'en'),
+        };
+
+  return {
+    enunciado: textos.pt,
+    dica: dica?.pt,
+    traducoes: {
+      fr: { enunciado: textos.fr, dica: dica?.fr },
+      en: { enunciado: textos.en, dica: dica?.en },
+    },
   };
 }

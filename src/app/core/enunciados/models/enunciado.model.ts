@@ -73,6 +73,19 @@ export interface EnunciadoDoBanco {
     readonly en?: string;
   };
   /**
+   * A dica, quando a pergunta tem uma.
+   *
+   * Dica é texto que o aluno lê, como o enunciado, e com as mesmas lacunas —
+   * «o frete é cobrado uma vez, não por {dados-calculo.q} cadernos». Deixá-la
+   * no gerador enquanto o enunciado sai seria partir a mesma pergunta em dois
+   * lugares.
+   */
+  readonly dica?: {
+    readonly br: string;
+    readonly fr?: string;
+    readonly en?: string;
+  };
+  /**
    * Os valores que entram no texto, mais o `total`.
    *
    * As chaves são livres — `x1`, `base`, `altura` —, e cada uma é referenciada

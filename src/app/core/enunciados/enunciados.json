@@ -10788,5 +10788,116 @@
     "enunciado": {
       "br": "Uma partícula de carga {dados-calculo.carga} μC atravessa a {dados-calculo.v} m/s um campo magnético de {dados-calculo.campo} T, perpendicular a ele. Qual é o módulo da força magnética, em mN? (2 casas decimais)"
     }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-4",
+    "enunciado": {
+      "br": "Paguei R$ {dados-calculo.taxa} de frete e comprei {dados-calculo.q} cadernos a R$ {dados-calculo.preco} cada um. Quanto gastei ao todo?",
+      "fr": "J'ai payé {dados-calculo.taxa} $ de livraison et acheté {dados-calculo.q} cahiers à {dados-calculo.preco} $ chacun. Combien ai-je dépensé en tout ?",
+      "en": "I paid ${dados-calculo.taxa} for shipping and bought {dados-calculo.q} notebooks at ${dados-calculo.preco} each. How much did I spend in total?"
+    },
+    "dica": {
+      "br": "O frete é cobrado uma vez, não por caderno. Qual parcela multiplica e qual soma?",
+      "fr": "La livraison est facturée une fois, pas par cahier. Quelle part multiplie et quelle part additionne ?",
+      "en": "Shipping is charged once, not per notebook. Which part multiplies and which one adds?"
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-5",
+    "enunciado": {
+      "br": "Paguei uma compra com R$ {dados-calculo.pago}. Levei {dados-calculo.q} camisetas de R$ {dados-calculo.preco} cada. Quanto recebi de troco?",
+      "fr": "J'ai payé un achat avec {dados-calculo.pago} $. J'ai pris {dados-calculo.q} t-shirts à {dados-calculo.preco} $ chacune. Combien m’a-t-on rendu ?",
+      "en": "I paid for a purchase with ${dados-calculo.pago}. I took {dados-calculo.q} shirts at ${dados-calculo.preco} each. How much change did I get?"
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-6",
+    "enunciado": {
+      "br": "Um entregador ganhou R$ {dados-calculo.bonus} de bônus e, além disso, R$ {dados-calculo.valor} por cada uma das {dados-calculo.entregas} entregas do dia. Quanto recebeu ao todo?",
+      "fr": "Un livreur a reçu {dados-calculo.bonus} $ de prime et, en plus, {dados-calculo.valor} $ pour chacune des {dados-calculo.entregas} livraisons du jour. Combien a-t-il gagné en tout ?",
+      "en": "A courier got a ${dados-calculo.bonus} bonus and, on top of that, ${dados-calculo.valor} for each of the {dados-calculo.entregas} deliveries that day. How much did he earn in total?"
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-7",
+    "enunciado": {
+      "br": "Um mercado recebeu {dados-calculo.caixas} caixas com {dados-calculo.porCaixa} garrafas cada. Depois devolveu {dados-calculo.devolvidas} caixas com {dados-calculo.porDevolucao} garrafas cada. Quantas garrafas ficaram?",
+      "fr": "Un magasin a reçu {dados-calculo.caixas} caisses de {dados-calculo.porCaixa} bouteilles chacune. Il en a ensuite renvoyé {dados-calculo.devolvidas} de {dados-calculo.porDevolucao} bouteilles chacune. Combien de bouteilles reste-t-il ?",
+      "en": "A shop received {dados-calculo.caixas} boxes of {dados-calculo.porCaixa} bottles each. It then returned {dados-calculo.devolvidas} boxes of {dados-calculo.porDevolucao} bottles each. How many bottles are left?"
+    },
+    "dica": {
+      "br": "São dois produtos inteiros, um subtraindo o outro. Resolva cada um antes de subtrair.",
+      "fr": "Ce sont deux produits entiers, l’un soustrait de l’autre. Calculez chacun avant de soustraire.",
+      "en": "These are two whole products, one subtracted from the other. Work out each first."
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-8",
+    "enunciado": {
+      "br": "Comprei {dados-calculo.kits} kits. Cada kit traz {dados-calculo.lapis} lápis e {dados-calculo.borrachas} borrachas. Quantos itens vieram ao todo?",
+      "fr": "J'ai acheté {dados-calculo.kits} kits. Chaque kit contient {dados-calculo.lapis} crayons et {dados-calculo.borrachas} gommes. Combien d’objets ai-je reçus en tout ?",
+      "en": "I bought {dados-calculo.kits} kits. Each kit has {dados-calculo.lapis} pencils and {dados-calculo.borrachas} erasers. How many items came in total?"
+    },
+    "dica": {
+      "br": "Os dois itens do kit andam juntos: some-os primeiro, depois multiplique pelos kits.",
+      "fr": "Les deux objets du kit vont ensemble : additionnez-les, puis multipliez par le nombre de kits.",
+      "en": "The two items go together: add them first, then multiply by the number of kits."
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-9",
+    "enunciado": {
+      "br": "Um piso já tem {dados-calculo.pronto} m² assentados. Falta assentar {dados-calculo.pecas} peças quadradas cujo lado útil é {dados-calculo.lado} m menos um corte de {dados-calculo.sobra} m em cada lado. Quantos metros quadrados de piso a obra terá ao todo?",
+      "fr": "Un sol a déjà {dados-calculo.pronto} m² posés. Il reste à poser {dados-calculo.pecas} pièces carrées dont le côté utile est {dados-calculo.lado} m moins une coupe de {dados-calculo.sobra} m sur chaque côté. Combien de mètres carrés le chantier aura-t-il en tout ?",
+      "en": "A floor already has {dados-calculo.pronto} m² laid. Still to lay: {dados-calculo.pecas} square pieces whose usable side is {dados-calculo.lado} m minus a {dados-calculo.sobra} m cut on each side. How many square metres will the work have in total?"
+    },
+    "dica": {
+      "br": "Ordem: o parêntese, depois a potência, depois a multiplicação, e a soma por último.",
+      "fr": "Ordre : la parenthèse, puis la puissance, puis la multiplication, et l’addition en dernier.",
+      "en": "Order: the bracket, then the power, then the multiplication, and the sum last."
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-10",
+    "enunciado": {
+      "br": "Uma sala quadrada tinha {dados-calculo.primeiro} m de lado e foi ampliada: cada lado cresceu {dados-calculo.segundo} m. Do piso novo, {dados-calculo.retirados} m² ficam ocupados por um balcão. Quantos metros quadrados de piso livre sobram?",
+      "fr": "Une salle carrée avait {dados-calculo.primeiro} m de côté et a été agrandie : chaque côté a augmenté de {dados-calculo.segundo} m. Sur le nouveau plancher, {dados-calculo.retirados} m² sont occupés par un comptoir. Combien de mètres carrés de plancher libre restent ?",
+      "en": "A square room was {dados-calculo.primeiro} m on a side and was enlarged: each side grew by {dados-calculo.segundo} m. Of the new floor, {dados-calculo.retirados} m² are taken by a counter. How many square metres of free floor remain?"
+    },
+    "dica": {
+      "br": "O lado novo é uma soma: calcule o lado primeiro e só então eleve ao quadrado.",
+      "fr": "Le nouveau côté est une somme : calculez le côté d’abord, puis élevez au carré.",
+      "en": "The new side is a sum: work out the side first, then square it."
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-11",
+    "enunciado": {
+      "br": "Um grupo de {dados-calculo.pessoas} pessoas pediu, cada uma, um prato de R$ {dados-calculo.prato} e uma sobremesa de R$ {dados-calculo.c}. Na hora de pagar, usaram um cupom de R$ {dados-calculo.cupom} de desconto. Quanto o grupo pagou?",
+      "fr": "Un groupe de {dados-calculo.pessoas} personnes a commandé, chacune, un plat à {dados-calculo.prato} $ et un dessert à {dados-calculo.c} $. Au moment de payer, ils ont utilisé un coupon de {dados-calculo.cupom} $ de réduction. Combien le groupe a-t-il payé ?",
+      "en": "A group of {dados-calculo.pessoas} people each ordered a ${dados-calculo.prato} dish and a ${dados-calculo.c} dessert. At the counter they used a ${dados-calculo.cupom} coupon. How much did the group pay?"
+    },
+    "dica": {
+      "br": "Cada pessoa paga prato e sobremesa; o cupom é descontado uma vez, do total.",
+      "fr": "Chaque personne paie plat et dessert ; le coupon est déduit une fois, du total.",
+      "en": "Each person pays for dish and dessert; the coupon is taken off the total once."
+    }
+  },
+  {
+    "topico": "operacoes-fundamentais",
+    "forma": "forma-12",
+    "enunciado": {
+      "br": "Um ciclista já tinha pedalado {dados-calculo.ultimoTrecho} km. Depois disso, pedalou {dados-calculo.porDia} km por dia durante {dados-calculo.dias} dias. Quantos quilômetros pedalou no total?",
+      "fr": "Un cycliste avait déjà roulé {dados-calculo.ultimoTrecho} km. Ensuite, il a roulé {dados-calculo.porDia} km par jour pendant {dados-calculo.dias} jours. Combien de kilomètres a-t-il parcourus en tout ?",
+      "en": "A cyclist had already ridden {dados-calculo.ultimoTrecho} km. After that, he rode {dados-calculo.porDia} km a day for {dados-calculo.dias} days. How many kilometres did he ride in total?"
+    }
   }
 ]
