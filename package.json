@@ -14,7 +14,7 @@
     "start:rede": "ng serve --host 0.0.0.0",
     "test": "ng test",
     "test:cobertura": "ng test --watch=true --coverage",
-    "verificar:geradores": "node scripts/verificar-geradores.mjs",
+    "verificar:geradores": "node scripts/verificar-geradores.mjs && node scripts/verificar-moldes.mjs",
     "verificar:pwa": "npm run build:pages && node scripts/verificar-pwa.mjs",
     "watch": "ng build --watch --configuration development"
   },

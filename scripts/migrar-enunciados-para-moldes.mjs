@@ -37,7 +37,20 @@ if (caminho === undefined) {
 const topico = basename(caminho).replace('.gerador.ts', '');
 const fonte = readFileSync(caminho, 'utf8');
 const moldesPath = 'src/app/core/enunciados/enunciados.json';
-const moldes = JSON.parse(readFileSync(moldesPath, 'utf8'));
+/*
+ * O arquivo é AGRUPADO por tópico: `[{ topico, enunciados: [...] }]`.
+ *
+ * Este script nasceu quando ele era uma lista plana, e por um tempo continuou
+ * tratando-o assim — o que fazia duas coisas ruins de uma vez: a contagem de
+ * formas existentes dava sempre zero (e a numeração recomeçava, colidindo com
+ * o que já havia) e a gravação misturava grupos com moldes soltos, derrubando
+ * a leitura do site inteiro. Agora ele lê e escreve o formato agrupado.
+ */
+const grupos = JSON.parse(readFileSync(moldesPath, 'utf8'));
+const grupo = grupos.find((g) => g.topico === topico) ?? { topico, enunciados: [] };
+if (!grupos.includes(grupo)) {
+  grupos.push(grupo);
+}
 
 /** `${a}` vira `{dados-calculo.a}`; expressões viram chaves sintéticas. */
 function converter(template) {
@@ -173,14 +186,14 @@ const novos = [];
  * exercício saía com o texto de outro. Começar do que já existe é o que torna
  * o script seguro de repetir.
  */
-const jaExistem = moldes.filter(
-  (molde) => molde.topico === topico && /^forma-\d+$/.test(molde.forma ?? ''),
+const jaExistem = grupo.enunciados.filter((entrada) =>
+  /^forma-\d+$/.test(entrada.forma ?? ''),
 ).length;
 
 achados.forEach((achado, indice) => {
   const { texto, valores } = converter(achado.bruto);
   const forma = `forma-${jaExistem + indice + 1}`;
-  novos.push({ topico, forma, enunciado: { br: texto } });
+  novos.push({ forma, enunciado: { br: texto } });
 
   const dados = valores
     .map(([nome, expressao]) => (nome === expressao ? nome : `${nome}: ${expressao}`))
@@ -209,7 +222,8 @@ for (const molde of novos) {
 
 if (aplicar) {
   writeFileSync(caminho, saida, 'utf8');
-  writeFileSync(moldesPath, `${JSON.stringify([...moldes, ...novos], null, 2)}\n`, 'utf8');
+  grupo.enunciados.push(...novos);
+  writeFileSync(moldesPath, `${JSON.stringify(grupos, null, 2)}\n`, 'utf8');
   console.log('Aplicado.');
 } else {
   console.log('(simulação — passe --aplicar para gravar)');
