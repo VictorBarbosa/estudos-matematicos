@@ -2167,5 +2167,1179 @@
       "taxaAnual": "21",
       "total": "10.00"
     }
+  },
+  {
+    "topico": "triangulo-retangulo",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma rampa de {dados-calculo.comprimento} m de comprimento sobe formando {dados-calculo.angulo}° com o chão. Que altura, em metros, ela alcança? (duas casas decimais)",
+      "fr": "Une rampe de {dados-calculo.comprimento} m de longueur monte en formant {dados-calculo.angulo}° avec le sol. Quelle hauteur, en mètres, atteint-elle ? (deux décimales)",
+      "en": "A ramp {dados-calculo.comprimento} m long rises at {dados-calculo.angulo}° to the ground. What height, in metres, does it reach? (two decimal places)"
+    },
+    "dados-calculo": {
+      "comprimento": "10",
+      "angulo": "30",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "triangulo-retangulo",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma escada de {dados-calculo.escada} m está apoiada numa parede formando {dados-calculo.angulo}° com o chão. A que altura, em metros, ela toca a parede? (duas casas decimais)",
+      "fr": "Une échelle de {dados-calculo.escada} m est appuyée contre un mur en formant {dados-calculo.angulo}° avec le sol. À quelle hauteur, en mètres, touche-t-elle le mur ? (deux décimales)",
+      "en": "A {dados-calculo.escada} m ladder leans against a wall at {dados-calculo.angulo}° to the ground. At what height, in metres, does it touch the wall? (two decimal places)"
+    },
+    "dados-calculo": {
+      "escada": "6",
+      "angulo": "60",
+      "total": "5.20"
+    }
+  },
+  {
+    "topico": "triangulo-retangulo",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "De um ponto no chão, a {dados-calculo.distancia} m da base de uma árvore, o topo dela é visto sob um ângulo de {dados-calculo.angulo}°. Qual é a altura da árvore, em metros? (duas casas decimais)",
+      "fr": "D’un point au sol, à {dados-calculo.distancia} m du pied d’un arbre, son sommet est vu sous un angle de {dados-calculo.angulo}°. Quelle est la hauteur de l’arbre, en mètres ? (deux décimales)",
+      "en": "From a point on the ground {dados-calculo.distancia} m from the foot of a tree, its top is seen at an angle of {dados-calculo.angulo}°. How tall is the tree, in metres? (two decimal places)"
+    },
+    "dados-calculo": {
+      "distancia": "20",
+      "angulo": "35",
+      "total": "14.00"
+    }
+  },
+  {
+    "topico": "triangulo-retangulo",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "De um ponto A, o topo de uma torre é visto sob {dados-calculo.angulo1}°. Andando {dados-calculo.passo} m em direção à torre, ele passa a ser visto sob {dados-calculo.angulo2}°. Qual é a altura da torre, em metros? (duas casas decimais)",
+      "fr": "D’un point A, le sommet d’une tour est vu sous {dados-calculo.angulo1}°. En avançant de {dados-calculo.passo} m vers la tour, il est vu sous {dados-calculo.angulo2}°. Quelle est la hauteur de la tour, en mètres ? (deux décimales)",
+      "en": "From point A, a tower’s top is seen at {dados-calculo.angulo1}°. Walking {dados-calculo.passo} m towards the tower, it is seen at {dados-calculo.angulo2}°. How tall is the tower, in metres? (two decimal places)"
+    },
+    "dados-calculo": {
+      "angulo1": "30",
+      "passo": "40",
+      "angulo2": "45",
+      "total": "54.64"
+    }
+  },
+  {
+    "topico": "seno-cosseno-tangente",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Num triângulo retângulo, o seno de um ângulo agudo vale {dados-calculo.seno}. Quanto vale o cosseno desse mesmo ângulo? (duas casas decimais)",
+      "fr": "Dans un triangle rectangle, le sinus d’un angle aigu vaut {dados-calculo.seno}. Combien vaut le cosinus de ce même angle ? (deux décimales)",
+      "en": "In a right triangle, the sine of an acute angle is {dados-calculo.seno}. What is the cosine of that same angle? (two decimal places)"
+    },
+    "dados-calculo": {
+      "seno": "0.6",
+      "total": "0.80"
+    }
+  },
+  {
+    "topico": "seno-cosseno-tangente",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Num triângulo retângulo, o cateto oposto a um ângulo mede {dados-calculo.oposto} e a hipotenusa mede {dados-calculo.hipotenusa}. Quanto vale o seno desse ângulo? (duas casas decimais)",
+      "fr": "Dans un triangle rectangle, la cathète opposée à un angle mesure {dados-calculo.oposto} et l’hypoténuse {dados-calculo.hipotenusa}. Combien vaut le sinus de cet angle ? (deux décimales)",
+      "en": "In a right triangle, the leg opposite an angle is {dados-calculo.oposto} and the hypotenuse is {dados-calculo.hipotenusa}. What is the sine of that angle? (two decimal places)"
+    },
+    "dados-calculo": {
+      "oposto": "7",
+      "hipotenusa": "25",
+      "total": "0.28"
+    }
+  },
+  {
+    "topico": "seno-cosseno-tangente",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "A tangente de um ângulo agudo vale {dados-calculo.tangente}. Quanto vale o seno desse ângulo? (duas casas decimais)",
+      "fr": "La tangente d’un angle aigu vaut {dados-calculo.tangente}. Combien vaut le sinus de cet angle ? (deux décimales)",
+      "en": "The tangent of an acute angle is {dados-calculo.tangente}. What is the sine of that angle? (two decimal places)"
+    },
+    "dados-calculo": {
+      "tangente": "0.75",
+      "total": "0.60"
+    }
+  },
+  {
+    "topico": "seno-cosseno-tangente",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "O cosseno de um ângulo do primeiro quadrante vale {dados-calculo.cosseno}. Quanto vale a tangente desse ângulo? (duas casas decimais)",
+      "fr": "Le cosinus d’un angle du premier quadrant vaut {dados-calculo.cosseno}. Combien vaut la tangente de cet angle ? (deux décimales)",
+      "en": "The cosine of a first-quadrant angle is {dados-calculo.cosseno}. What is the tangent of that angle? (two decimal places)"
+    },
+    "dados-calculo": {
+      "cosseno": "0.28",
+      "total": "3.43"
+    }
+  },
+  {
+    "topico": "circulo-trigonometrico",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma roda girou {dados-calculo.graus}°. Quantos radianos são esses? (duas casas decimais)",
+      "fr": "Une roue a tourné de {dados-calculo.graus}°. Combien de radians cela fait-il ? (deux décimales)",
+      "en": "A wheel turned {dados-calculo.graus}°. How many radians is that? (two decimal places)"
+    },
+    "dados-calculo": {
+      "graus": "60",
+      "total": "1.05"
+    }
+  },
+  {
+    "topico": "circulo-trigonometrico",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um ponteiro girou {dados-calculo.radianos} radianos. Quantos graus são esses? (duas casas decimais)",
+      "fr": "Une aiguille a tourné de {dados-calculo.radianos} radians. Combien de degrés cela fait-il ? (deux décimales)",
+      "en": "A hand turned {dados-calculo.radianos} radians. How many degrees is that? (two decimal places)"
+    },
+    "dados-calculo": {
+      "radianos": "2",
+      "total": "114.59"
+    }
+  },
+  {
+    "topico": "circulo-trigonometrico",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Quanto vale o cosseno de {dados-calculo.graus}°? (duas casas decimais)",
+      "fr": "Combien vaut le cosinus de {dados-calculo.graus}° ? (deux décimales)",
+      "en": "What is the cosine of {dados-calculo.graus}°? (two decimal places)"
+    },
+    "dados-calculo": {
+      "graus": "120",
+      "total": "-0.50"
+    }
+  },
+  {
+    "topico": "circulo-trigonometrico",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é o sinal do seno de {dados-calculo.graus}°? Responda 1 se for positivo e -1 se for negativo.",
+      "fr": "Quel est le signe du sinus de {dados-calculo.graus}° ? Répondez 1 s’il est positif et -1 s’il est négatif.",
+      "en": "What is the sign of the sine of {dados-calculo.graus}°? Answer 1 if positive and -1 if negative."
+    },
+    "dados-calculo": {
+      "graus": "200",
+      "total": "-1"
+    }
+  },
+  {
+    "topico": "funcoes-trigonometricas",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Numa roda-gigante de raio {dados-calculo.raio} m, o centro está a {dados-calculo.centro} m do chão. Qual é a altura máxima, em metros, que um passageiro alcança?",
+      "fr": "Sur une grande roue de rayon {dados-calculo.raio} m, le centre est à {dados-calculo.centro} m du sol. Quelle est la hauteur maximale, en mètres, qu’un passager atteint ?",
+      "en": "On a Ferris wheel of radius {dados-calculo.raio} m, the centre sits {dados-calculo.centro} m above the ground. What is the greatest height, in metres, a rider reaches?"
+    },
+    "dados-calculo": {
+      "raio": "15",
+      "centro": "18",
+      "total": "33"
+    }
+  },
+  {
+    "topico": "funcoes-trigonometricas",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Numa roda-gigante de raio {dados-calculo.raio} m, o centro está a {dados-calculo.centro} m do chão. Qual é a altura mínima, em metros, que um passageiro alcança?",
+      "fr": "Sur une grande roue de rayon {dados-calculo.raio} m, le centre est à {dados-calculo.centro} m du sol. Quelle est la hauteur minimale, en mètres, qu’un passager atteint ?",
+      "en": "On a Ferris wheel of radius {dados-calculo.raio} m, the centre sits {dados-calculo.centro} m above the ground. What is the lowest height, in metres, a rider reaches?"
+    },
+    "dados-calculo": {
+      "raio": "15",
+      "centro": "18",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "funcoes-trigonometricas",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma oscilação completa um ciclo a cada {dados-calculo.periodo} segundos. Qual é a frequência, em hertz? (duas casas decimais)",
+      "fr": "Une oscillation complète un cycle toutes les {dados-calculo.periodo} secondes. Quelle est la fréquence, en hertz ? (deux décimales)",
+      "en": "An oscillation completes one cycle every {dados-calculo.periodo} seconds. What is the frequency, in hertz? (two decimal places)"
+    },
+    "dados-calculo": {
+      "periodo": "4",
+      "total": "0.25"
+    }
+  },
+  {
+    "topico": "funcoes-trigonometricas",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "A maré varia entre {dados-calculo.minimo} m e {dados-calculo.maximo} m ao longo do dia. Qual é a amplitude dessa oscilação, em metros? (duas casas decimais)",
+      "fr": "La marée varie entre {dados-calculo.minimo} m et {dados-calculo.maximo} m au cours de la journée. Quelle est l’amplitude de cette oscillation, en mètres ? (deux décimales)",
+      "en": "The tide varies between {dados-calculo.minimo} m and {dados-calculo.maximo} m over the day. What is the amplitude of that oscillation, in metres? (two decimal places)"
+    },
+    "dados-calculo": {
+      "minimo": "0.4",
+      "maximo": "3.6",
+      "total": "1.60"
+    }
+  },
+  {
+    "topico": "identidades-trigonometricas",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Use a fórmula da soma de arcos para calcular o seno de ({dados-calculo.a}° + {dados-calculo.b}°). (duas casas decimais)",
+      "fr": "Utilisez la formule de l’addition des arcs pour calculer le sinus de ({dados-calculo.a}° + {dados-calculo.b}°). (deux décimales)",
+      "en": "Use the angle sum formula to work out the sine of ({dados-calculo.a}° + {dados-calculo.b}°). (two decimal places)"
+    },
+    "dados-calculo": {
+      "a": "30",
+      "b": "45",
+      "total": "0.97"
+    }
+  },
+  {
+    "topico": "identidades-trigonometricas",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Use a fórmula da diferença de arcos para calcular o cosseno de ({dados-calculo.a}° − {dados-calculo.b}°). (duas casas decimais)",
+      "fr": "Utilisez la formule de la différence des arcs pour calculer le cosinus de ({dados-calculo.a}° − {dados-calculo.b}°). (deux décimales)",
+      "en": "Use the angle difference formula to work out the cosine of ({dados-calculo.a}° − {dados-calculo.b}°). (two decimal places)"
+    },
+    "dados-calculo": {
+      "a": "90",
+      "b": "30",
+      "total": "0.50"
+    }
+  },
+  {
+    "topico": "identidades-trigonometricas",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Use a fórmula do arco duplo para calcular o seno do dobro de {dados-calculo.angulo}°. (duas casas decimais)",
+      "fr": "Utilisez la formule de l’arc double pour calculer le sinus du double de {dados-calculo.angulo}°. (deux décimales)",
+      "en": "Use the double angle formula to work out the sine of twice {dados-calculo.angulo}°. (two decimal places)"
+    },
+    "dados-calculo": {
+      "angulo": "15",
+      "total": "0.50"
+    }
+  },
+  {
+    "topico": "identidades-trigonometricas",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "O seno de um ângulo agudo vale {dados-calculo.seno}. Use o arco duplo para calcular o seno do dobro desse ângulo. (duas casas decimais)",
+      "fr": "Le sinus d’un angle aigu vaut {dados-calculo.seno}. Utilisez l’arc double pour calculer le sinus du double de cet angle. (deux décimales)",
+      "en": "The sine of an acute angle is {dados-calculo.seno}. Use the double angle formula to find the sine of twice that angle. (two decimal places)"
+    },
+    "dados-calculo": {
+      "seno": "0.6",
+      "total": "0.96"
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Resolva, em graus, a equação em que o seno de x vale {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a SOMA de todas as soluções.",
+      "fr": "Résolvez, en degrés, l’équation où le sinus de x vaut {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la SOMME de toutes les solutions.",
+      "en": "Solve, in degrees, the equation where the sine of x is {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the SUM of all solutions."
+    },
+    "dados-calculo": {
+      "valor": "0.5",
+      "total": "180"
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Resolva, em graus, a equação em que o cosseno de x vale {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a SOMA de todas as soluções.",
+      "fr": "Résolvez, en degrés, l’équation où le cosinus de x vaut {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la SOMME de toutes les solutions.",
+      "en": "Solve, in degrees, the equation where the cosine of x is {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the SUM of all solutions."
+    },
+    "dados-calculo": {
+      "valor": "0.5",
+      "total": "360"
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Resolva, em graus, a equação em que a tangente de x vale {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a MAIOR solução.",
+      "fr": "Résolvez, en degrés, l’équation où la tangente de x vaut {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la PLUS GRANDE solution.",
+      "en": "Solve, in degrees, the equation where the tangent of x is {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the LARGEST solution."
+    },
+    "dados-calculo": {
+      "valor": "1",
+      "total": "225"
+    }
+  },
+  {
+    "topico": "equacoes-trigonometricas",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Resolva, em graus, a equação em que o seno de x vale menos {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a MENOR solução.",
+      "fr": "Résolvez, en degrés, l’équation où le sinus de x vaut moins {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la PLUS PETITE solution.",
+      "en": "Solve, in degrees, the equation where the sine of x is minus {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the SMALLEST solution."
+    },
+    "dados-calculo": {
+      "valor": "0.5",
+      "total": "210"
+    }
+  },
+  {
+    "topico": "lei-senos-cossenos",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um terreno triangular tem dois lados de {dados-calculo.lado1} m e {dados-calculo.lado2} m, com {dados-calculo.angulo}° entre eles. Quanto mede o terceiro lado, em metros? (duas casas decimais)",
+      "fr": "Un terrain triangulaire a deux côtés de {dados-calculo.lado1} m et {dados-calculo.lado2} m, avec {dados-calculo.angulo}° entre eux. Combien mesure le troisième côté, en mètres ? (deux décimales)",
+      "en": "A triangular plot has two sides of {dados-calculo.lado1} m and {dados-calculo.lado2} m with {dados-calculo.angulo}° between them. How long is the third side, in metres? (two decimal places)"
+    },
+    "dados-calculo": {
+      "lado1": "8",
+      "lado2": "9",
+      "angulo": "90",
+      "total": "12.04"
+    }
+  },
+  {
+    "topico": "lei-senos-cossenos",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um terreno triangular tem dois lados de {dados-calculo.lado1} m e {dados-calculo.lado2} m, com {dados-calculo.angulo}° entre eles. Quanto mede o terceiro lado, em metros? (duas casas decimais)",
+      "fr": "Un terrain triangulaire a deux côtés de {dados-calculo.lado1} m et {dados-calculo.lado2} m, avec {dados-calculo.angulo}° entre eux. Combien mesure le troisième côté, en mètres ? (deux décimales)",
+      "en": "A triangular plot has two sides of {dados-calculo.lado1} m and {dados-calculo.lado2} m with {dados-calculo.angulo}° between them. How long is the third side, in metres? (two decimal places)"
+    },
+    "dados-calculo": {
+      "lado1": "8",
+      "lado2": "9",
+      "angulo": "60",
+      "total": "8.54"
+    }
+  },
+  {
+    "topico": "lei-senos-cossenos",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Num triângulo, o lado que mede {dados-calculo.lado} está oposto ao ângulo de {dados-calculo.anguloOposto}°. Quanto mede o lado oposto ao ângulo de {dados-calculo.outroAngulo}°? (duas casas decimais)",
+      "fr": "Dans un triangle, le côté qui mesure {dados-calculo.lado} est opposé à l’angle de {dados-calculo.anguloOposto}°. Combien mesure le côté opposé à l’angle de {dados-calculo.outroAngulo}° ? (deux décimales)",
+      "en": "In a triangle, the side measuring {dados-calculo.lado} is opposite the {dados-calculo.anguloOposto}° angle. How long is the side opposite the {dados-calculo.outroAngulo}° angle? (two decimal places)"
+    },
+    "dados-calculo": {
+      "lado": "10",
+      "anguloOposto": "50",
+      "outroAngulo": "80",
+      "total": "12.86"
+    }
+  },
+  {
+    "topico": "lei-senos-cossenos",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um triângulo tem lados {dados-calculo.lado1}, {dados-calculo.lado2} e {dados-calculo.lado3}. Quantos graus mede o maior ângulo? (duas casas decimais)",
+      "fr": "Un triangle a des côtés de {dados-calculo.lado1}, {dados-calculo.lado2} et {dados-calculo.lado3}. Combien de degrés mesure le plus grand angle ? (deux décimales)",
+      "en": "A triangle has sides {dados-calculo.lado1}, {dados-calculo.lado2} and {dados-calculo.lado3}. How many degrees is its largest angle? (two decimal places)"
+    },
+    "dados-calculo": {
+      "lado1": "5",
+      "lado2": "7",
+      "lado3": "9",
+      "total": "95.74"
+    }
+  },
+  {
+    "topico": "vetores-no-plano",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um avião voa a {dados-calculo.modulo} km/h numa direção que forma {dados-calculo.angulo}° com o leste. Qual é a componente para o leste, em km/h? (duas casas decimais)",
+      "fr": "Un avion vole à {dados-calculo.modulo} km/h dans une direction formant {dados-calculo.angulo}° avec l’est. Quelle est la composante vers l’est, en km/h ? (deux décimales)",
+      "en": "A plane flies at {dados-calculo.modulo} km/h in a direction making {dados-calculo.angulo}° with east. What is the eastward component, in km/h? (two decimal places)"
+    },
+    "dados-calculo": {
+      "modulo": "50",
+      "angulo": "37",
+      "total": "39.93"
+    }
+  },
+  {
+    "topico": "vetores-no-plano",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um barco é empurrado {dados-calculo.leste} km para o leste e {dados-calculo.norte} km para o norte. Qual é a distância em linha reta até o ponto de partida, em km? (duas casas decimais)",
+      "fr": "Un bateau est poussé de {dados-calculo.leste} km vers l’est et {dados-calculo.norte} km vers le nord. Quelle est la distance en ligne droite jusqu’au point de départ, en km ? (deux décimales)",
+      "en": "A boat is pushed {dados-calculo.leste} km east and {dados-calculo.norte} km north. What is the straight-line distance back to the start, in km? (two decimal places)"
+    },
+    "dados-calculo": {
+      "leste": "3",
+      "norte": "4",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "vetores-no-plano",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um deslocamento tem {dados-calculo.x} km para o leste e {dados-calculo.y} km para o norte. Que ângulo ele forma com o leste, em graus, no sentido anti-horário? (duas casas decimais)",
+      "fr": "Un déplacement a {dados-calculo.x} km vers l’est et {dados-calculo.y} km vers le nord. Quel angle forme-t-il avec l’est, en degrés, dans le sens antihoraire ? (deux décimales)",
+      "en": "A displacement is {dados-calculo.x} km east and {dados-calculo.y} km north. What angle does it make with east, in degrees, counterclockwise? (two decimal places)"
+    },
+    "dados-calculo": {
+      "x": "3",
+      "y": "4",
+      "total": "53.13"
+    }
+  },
+  {
+    "topico": "vetores-no-plano",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Duas forças agem no mesmo ponto: uma de {dados-calculo.f1} N para o leste e outra de {dados-calculo.f2} N para o norte. Qual é o módulo da força resultante, em newtons? (duas casas decimais)",
+      "fr": "Deux forces agissent au même point : une de {dados-calculo.f1} N vers l’est et une autre de {dados-calculo.f2} N vers le nord. Quel est le module de la force résultante, en newtons ? (deux décimales)",
+      "en": "Two forces act at the same point: one of {dados-calculo.f1} N east and another of {dados-calculo.f2} N north. What is the magnitude of the resultant force, in newtons? (two decimal places)"
+    },
+    "dados-calculo": {
+      "f1": "6",
+      "f2": "8",
+      "total": "10.00"
+    }
+  },
+  {
+    "topico": "produto-escalar-vetorial",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma força de {dados-calculo.forca} N é aplicada na mesma direção de um deslocamento de {dados-calculo.deslocamento} m. Qual é o trabalho realizado, em joules? (duas casas decimais)",
+      "fr": "Une force de {dados-calculo.forca} N est appliquée dans la même direction qu’un déplacement de {dados-calculo.deslocamento} m. Quel est le travail effectué, en joules ? (deux décimales)",
+      "en": "A force of {dados-calculo.forca} N is applied along the same direction as a {dados-calculo.deslocamento} m displacement. What work is done, in joules? (two decimal places)"
+    },
+    "dados-calculo": {
+      "forca": "40",
+      "deslocamento": "5",
+      "total": "200.00"
+    }
+  },
+  {
+    "topico": "produto-escalar-vetorial",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma força de {dados-calculo.forca} N é aplicada a {dados-calculo.angulo}° do deslocamento, que vale {dados-calculo.deslocamento} m. Qual é o trabalho realizado, em joules? (duas casas decimais)",
+      "fr": "Une force de {dados-calculo.forca} N est appliquée à {dados-calculo.angulo}° du déplacement, qui vaut {dados-calculo.deslocamento} m. Quel est le travail effectué, en joules ? (deux décimales)",
+      "en": "A force of {dados-calculo.forca} N is applied at {dados-calculo.angulo}° to a displacement of {dados-calculo.deslocamento} m. What work is done, in joules? (two decimal places)"
+    },
+    "dados-calculo": {
+      "forca": "40",
+      "angulo": "60",
+      "deslocamento": "5",
+      "total": "100.00"
+    }
+  },
+  {
+    "topico": "produto-escalar-vetorial",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um terreno em forma de paralelogramo é definido por dois deslocamentos: um de ({dados-calculo.ax}, {dados-calculo.ay}) e outro de ({dados-calculo.bx}, {dados-calculo.by}), em metros. Qual é a área, em metros quadrados? (duas casas decimais)",
+      "fr": "Un terrain en forme de parallélogramme est défini par deux déplacements : un de ({dados-calculo.ax}, {dados-calculo.ay}) et un autre de ({dados-calculo.bx}, {dados-calculo.by}), en mètres. Quelle est l’aire, en mètres carrés ? (deux décimales)",
+      "en": "A parallelogram-shaped plot is set by two displacements: one of ({dados-calculo.ax}, {dados-calculo.ay}) and another of ({dados-calculo.bx}, {dados-calculo.by}), in metres. What is its area, in square metres? (two decimal places)"
+    },
+    "dados-calculo": {
+      "ax": "3",
+      "ay": "1",
+      "bx": "1",
+      "by": "4",
+      "total": "11.00"
+    }
+  },
+  {
+    "topico": "produto-escalar-vetorial",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma força de {dados-calculo.forca} N é aplicada perpendicularmente a um deslocamento de {dados-calculo.deslocamento} m. Qual é o trabalho realizado, em joules? (duas casas decimais)",
+      "fr": "Une force de {dados-calculo.forca} N est appliquée perpendiculairement à un déplacement de {dados-calculo.deslocamento} m. Quel est le travail effectué, en joules ? (deux décimales)",
+      "en": "A force of {dados-calculo.forca} N is applied perpendicular to a displacement of {dados-calculo.deslocamento} m. What work is done, in joules? (two decimal places)"
+    },
+    "dados-calculo": {
+      "forca": "40",
+      "deslocamento": "5",
+      "total": "0.00"
+    }
+  },
+  {
+    "topico": "vetores-no-espaco",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Calcule o produto escalar entre o deslocamento ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) e a força ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}).",
+      "fr": "Calculez le produit scalaire entre le déplacement ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) et la force ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}).",
+      "en": "Work out the dot product of the displacement ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) and the force ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz})."
+    },
+    "dados-calculo": {
+      "ax": "3",
+      "ay": "4",
+      "az": "0",
+      "bx": "2",
+      "by": "5",
+      "bz": "7",
+      "total": "26"
+    }
+  },
+  {
+    "topico": "vetores-no-espaco",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é o módulo do vetor de componentes ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z})?",
+      "fr": "Quel est le module du vecteur de composantes ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z}) ?",
+      "en": "What is the magnitude of the vector with components ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z})?"
+    },
+    "dados-calculo": {
+      "x": "2",
+      "y": "3",
+      "z": "6",
+      "total": "7"
+    }
+  },
+  {
+    "topico": "vetores-no-espaco",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é o ângulo, em graus, entre os vetores ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) e ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz})? (duas casas decimais)",
+      "fr": "Quel est l’angle, en degrés, entre les vecteurs ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) et ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}) ? (deux décimales)",
+      "en": "What is the angle, in degrees, between the vectors ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) and ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz})? (two decimal places)"
+    },
+    "dados-calculo": {
+      "ax": "1",
+      "ay": "2",
+      "az": "2",
+      "bx": "2",
+      "by": "0",
+      "bz": "1",
+      "total": "53.40"
+    }
+  },
+  {
+    "topico": "vetores-no-espaco",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Dois vetores têm produto escalar igual a zero: ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) e ({dados-calculo.bx}, {dados-calculo.by}, k). Qual é o valor de k?",
+      "fr": "Deux vecteurs ont un produit scalaire nul : ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) et ({dados-calculo.bx}, {dados-calculo.by}, k). Quelle est la valeur de k ?",
+      "en": "Two vectors have a dot product of zero: ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) and ({dados-calculo.bx}, {dados-calculo.by}, k). What is k?"
+    },
+    "dados-calculo": {
+      "ax": "1",
+      "ay": "2",
+      "az": "3",
+      "bx": "4",
+      "by": "1",
+      "total": "-2"
+    }
+  },
+  {
+    "topico": "matrizes-determinantes",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha {dados-calculo.c} e {dados-calculo.d}. Qual é o seu determinante?",
+      "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne {dados-calculo.c} et {dados-calculo.d}. Quel est son déterminant ?",
+      "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row {dados-calculo.c} and {dados-calculo.d}. What is its determinant?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "1",
+      "c": "1",
+      "d": "4",
+      "total": "11"
+    }
+  },
+  {
+    "topico": "matrizes-determinantes",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha {dados-calculo.c} e {dados-calculo.d}. Qual é a soma dos elementos da diagonal principal?",
+      "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne {dados-calculo.c} et {dados-calculo.d}. Quelle est la somme des éléments de la diagonale principale ?",
+      "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row {dados-calculo.c} and {dados-calculo.d}. What is the sum of the main diagonal entries?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "1",
+      "c": "1",
+      "d": "4",
+      "total": "7"
+    }
+  },
+  {
+    "topico": "matrizes-determinantes",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um sistema tem as equações {dados-calculo.a1}x mais {dados-calculo.b1}y igual a {dados-calculo.c1}, e {dados-calculo.a2}x mais {dados-calculo.b2}y igual a {dados-calculo.c2}. Resolvendo por Cramer, quanto vale y?",
+      "fr": "Un système a les équations {dados-calculo.a1}x plus {dados-calculo.b1}y égal {dados-calculo.c1}, et {dados-calculo.a2}x plus {dados-calculo.b2}y égal {dados-calculo.c2}. En résolvant par Cramer, combien vaut y ?",
+      "en": "A system has the equations {dados-calculo.a1}x plus {dados-calculo.b1}y equals {dados-calculo.c1}, and {dados-calculo.a2}x plus {dados-calculo.b2}y equals {dados-calculo.c2}. Solving by Cramer’s rule, what is y?"
+    },
+    "dados-calculo": {
+      "a1": "2",
+      "b1": "1",
+      "c1": "8",
+      "a2": "1",
+      "b2": "3",
+      "c2": "14",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "matrizes-determinantes",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha {dados-calculo.c} e k. Para que valor de k o determinante é zero?",
+      "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne {dados-calculo.c} et k. Pour quelle valeur de k le déterminant est-il nul ?",
+      "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row {dados-calculo.c} and k. For what k is the determinant zero?"
+    },
+    "dados-calculo": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Num sistema já escalonado, a última equação diz que {dados-calculo.coef}y vale {dados-calculo.valor}. Quanto vale y?",
+      "fr": "Dans un système déjà échelonné, la dernière équation dit que {dados-calculo.coef}y vaut {dados-calculo.valor}. Combien vaut y ?",
+      "en": "In an already row-reduced system, the last equation says {dados-calculo.coef}y equals {dados-calculo.valor}. What is y?"
+    },
+    "dados-calculo": {
+      "coef": "4",
+      "valor": "12",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Num sistema escalonado, y vale {dados-calculo.y} e a primeira equação diz que x mais {dados-calculo.coef}y vale {dados-calculo.valor}. Quanto vale x?",
+      "fr": "Dans un système échelonné, y vaut {dados-calculo.y} et la première équation dit que x plus {dados-calculo.coef}y vaut {dados-calculo.valor}. Combien vaut x ?",
+      "en": "In a row-reduced system, y is {dados-calculo.y} and the first equation says x plus {dados-calculo.coef}y equals {dados-calculo.valor}. What is x?"
+    },
+    "dados-calculo": {
+      "y": "3",
+      "coef": "2",
+      "valor": "11",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha {dados-calculo.c} e {dados-calculo.d}. Qual é a entrada da linha 1, coluna 1 da matriz inversa?",
+      "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne {dados-calculo.c} et {dados-calculo.d}. Quelle est l’entrée ligne 1, colonne 1 de la matrice inverse ?",
+      "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row {dados-calculo.c} and {dados-calculo.d}. What is the row 1, column 1 entry of the inverse matrix?"
+    },
+    "dados-calculo": {
+      "a": "4",
+      "b": "3",
+      "c": "3",
+      "d": "2",
+      "total": "-2"
+    }
+  },
+  {
+    "topico": "escalonamento-e-inversa",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha {dados-calculo.c} e {dados-calculo.d}. Qual é o determinante dela, que é o número pelo qual a inversa divide?",
+      "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne {dados-calculo.c} et {dados-calculo.d}. Quel est son déterminant, le nombre par lequel l’inverse divise ?",
+      "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row {dados-calculo.c} and {dados-calculo.d}. What is its determinant, the number the inverse divides by?"
+    },
+    "dados-calculo": {
+      "a": "4",
+      "b": "3",
+      "c": "3",
+      "d": "2",
+      "total": "-1"
+    }
+  },
+  {
+    "topico": "autovalores-e-autovetores",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma matriz diagonal 2 por 2 tem {dados-calculo.a} e {dados-calculo.d} na diagonal principal e zeros fora dela. Qual é o maior autovalor?",
+      "fr": "Une matrice diagonale 2 par 2 a {dados-calculo.a} et {dados-calculo.d} sur la diagonale principale et des zéros ailleurs. Quelle est la plus grande valeur propre ?",
+      "en": "A 2 by 2 diagonal matrix has {dados-calculo.a} and {dados-calculo.d} on the main diagonal and zeros elsewhere. What is the largest eigenvalue?"
+    },
+    "dados-calculo": {
+      "a": "4",
+      "d": "7",
+      "total": "7"
+    }
+  },
+  {
+    "topico": "autovalores-e-autovetores",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma matriz 2 por 2 tem traço {dados-calculo.traco} e determinante {dados-calculo.determinante}. Sabendo que a soma dos autovalores é o traço, e que um deles vale {dados-calculo.um}, qual é o outro?",
+      "fr": "Une matrice 2 par 2 a une trace de {dados-calculo.traco} et un déterminant de {dados-calculo.determinante}. Sachant que la somme des valeurs propres est la trace, et que l’une vaut {dados-calculo.um}, quelle est l’autre ?",
+      "en": "A 2 by 2 matrix has trace {dados-calculo.traco} and determinant {dados-calculo.determinante}. Knowing the eigenvalues add up to the trace, and one of them is {dados-calculo.um}, what is the other?"
+    },
+    "dados-calculo": {
+      "traco": "7",
+      "determinante": "12",
+      "um": "3",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "autovalores-e-autovetores",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma matriz 2 por 2 tem autovalores {dados-calculo.l1} e {dados-calculo.l2}. Qual é o determinante dela, que é o produto dos autovalores?",
+      "fr": "Une matrice 2 par 2 a pour valeurs propres {dados-calculo.l1} et {dados-calculo.l2}. Quel est son déterminant, qui est le produit des valeurs propres ?",
+      "en": "A 2 by 2 matrix has eigenvalues {dados-calculo.l1} and {dados-calculo.l2}. What is its determinant, which is the product of the eigenvalues?"
+    },
+    "dados-calculo": {
+      "l1": "3",
+      "l2": "5",
+      "total": "15"
+    }
+  },
+  {
+    "topico": "autovalores-e-autovetores",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha 0 e {dados-calculo.d}. Qual é a soma dos seus autovalores?",
+      "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne 0 et {dados-calculo.d}. Quelle est la somme de ses valeurs propres ?",
+      "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row 0 and {dados-calculo.d}. What is the sum of its eigenvalues?"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "b": "9",
+      "d": "2",
+      "total": "7"
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um plano passa pelo ponto ({dados-calculo.px}, {dados-calculo.py}, {dados-calculo.pz}) e tem vetor normal ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}). Escrito na forma ax mais by mais cz igual a d, quanto vale d?",
+      "fr": "Un plan passe par le point ({dados-calculo.px}, {dados-calculo.py}, {dados-calculo.pz}) et a pour vecteur normal ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}). Écrit sous la forme ax plus by plus cz égal d, combien vaut d ?",
+      "en": "A plane goes through ({dados-calculo.px}, {dados-calculo.py}, {dados-calculo.pz}) and has normal vector ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}). Written as ax plus by plus cz equals d, what is d?"
+    },
+    "dados-calculo": {
+      "px": "4",
+      "py": "0",
+      "pz": "-5",
+      "nx": "1",
+      "ny": "1",
+      "nz": "1",
+      "total": "-1"
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma reta passa pelos pontos ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) e ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}). Qual é a componente z do vetor diretor obtido subtraindo o primeiro ponto do segundo?",
+      "fr": "Une droite passe par les points ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) et ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}). Quelle est la composante z du vecteur directeur obtenu en soustrayant le premier point du second ?",
+      "en": "A line goes through ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) and ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}). What is the z component of the direction vector found by subtracting the first point from the second?"
+    },
+    "dados-calculo": {
+      "ax": "1",
+      "ay": "2",
+      "az": "3",
+      "bx": "4",
+      "by": "0",
+      "bz": "9",
+      "total": "6"
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Dois planos têm vetores normais ({dados-calculo.n1x}, {dados-calculo.n1y}, {dados-calculo.n1z}) e ({dados-calculo.n2x}, {dados-calculo.n2y}, {dados-calculo.n2z}). Qual é o ângulo agudo entre eles, em graus? (duas casas decimais)",
+      "fr": "Deux plans ont pour vecteurs normaux ({dados-calculo.n1x}, {dados-calculo.n1y}, {dados-calculo.n1z}) et ({dados-calculo.n2x}, {dados-calculo.n2y}, {dados-calculo.n2z}). Quel est l’angle aigu entre eux, en degrés ? (deux décimales)",
+      "en": "Two planes have normal vectors ({dados-calculo.n1x}, {dados-calculo.n1y}, {dados-calculo.n1z}) and ({dados-calculo.n2x}, {dados-calculo.n2y}, {dados-calculo.n2z}). What is the acute angle between them, in degrees? (two decimal places)"
+    },
+    "dados-calculo": {
+      "n1x": "1",
+      "n1y": "1",
+      "n1z": "0",
+      "n2x": "0",
+      "n2y": "1",
+      "n2z": "1",
+      "total": "60.00"
+    }
+  },
+  {
+    "topico": "retas-e-planos",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um plano tem vetor normal ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}) e uma reta tem vetor diretor ({dados-calculo.dx}, {dados-calculo.dy}, k). Para que valor de k a reta é paralela ao plano, ou seja, o produto escalar é zero?",
+      "fr": "Un plan a pour vecteur normal ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}) et une droite a pour vecteur directeur ({dados-calculo.dx}, {dados-calculo.dy}, k). Pour quelle valeur de k la droite est-elle parallèle au plan, c’est-à-dire le produit scalaire nul ?",
+      "en": "A plane has normal vector ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}) and a line has direction vector ({dados-calculo.dx}, {dados-calculo.dy}, k). For what k is the line parallel to the plane, that is, the dot product zero?"
+    },
+    "dados-calculo": {
+      "nx": "2",
+      "ny": "1",
+      "nz": "1",
+      "dx": "1",
+      "dy": "3",
+      "total": "-5"
+    }
+  },
+  {
+    "topico": "numeros-complexos",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a parte real do produto de ({dados-calculo.a} mais {dados-calculo.b}i) por ({dados-calculo.c} mais {dados-calculo.d}i)? (duas casas decimais)",
+      "fr": "Quelle est la partie réelle du produit de ({dados-calculo.a} plus {dados-calculo.b}i) par ({dados-calculo.c} plus {dados-calculo.d}i) ? (deux décimales)",
+      "en": "What is the real part of ({dados-calculo.a} plus {dados-calculo.b}i) times ({dados-calculo.c} plus {dados-calculo.d}i)? (two decimal places)"
+    },
+    "dados-calculo": {
+      "a": "2",
+      "b": "3",
+      "c": "1",
+      "d": "4",
+      "total": "-10.00"
+    }
+  },
+  {
+    "topico": "numeros-complexos",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é o módulo do número complexo {dados-calculo.a} mais {dados-calculo.b}i? (duas casas decimais)",
+      "fr": "Quel est le module du nombre complexe {dados-calculo.a} plus {dados-calculo.b}i ? (deux décimales)",
+      "en": "What is the modulus of the complex number {dados-calculo.a} plus {dados-calculo.b}i? (two decimal places)"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "4",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "numeros-complexos",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Dividindo ({dados-calculo.a} mais {dados-calculo.b}i) por ({dados-calculo.c} mais {dados-calculo.d}i), qual é a parte REAL do resultado? (duas casas decimais)",
+      "fr": "En divisant ({dados-calculo.a} plus {dados-calculo.b}i) par ({dados-calculo.c} plus {dados-calculo.d}i), quelle est la partie RÉELLE du résultat ? (deux décimales)",
+      "en": "Dividing ({dados-calculo.a} plus {dados-calculo.b}i) by ({dados-calculo.c} plus {dados-calculo.d}i), what is the REAL part of the result? (two decimal places)"
+    },
+    "dados-calculo": {
+      "a": "1",
+      "b": "1",
+      "c": "2",
+      "d": "3",
+      "total": "0.38"
+    }
+  },
+  {
+    "topico": "numeros-complexos",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Qual é a parte real de i elevado a {dados-calculo.expoente}? (duas casas decimais)",
+      "fr": "Quelle est la partie réelle de i à la puissance {dados-calculo.expoente} ? (deux décimales)",
+      "en": "What is the real part of i to the power of {dados-calculo.expoente}? (two decimal places)"
+    },
+    "dados-calculo": {
+      "expoente": "22",
+      "total": "-1"
+    }
+  },
+  {
+    "topico": "ponto-e-reta",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a distância entre os pontos ({dados-calculo.ax}, {dados-calculo.ay}) e ({dados-calculo.bx}, {dados-calculo.by})? (duas casas decimais)",
+      "fr": "Quelle est la distance entre les points ({dados-calculo.ax}, {dados-calculo.ay}) et ({dados-calculo.bx}, {dados-calculo.by}) ? (deux décimales)",
+      "en": "What is the distance between the points ({dados-calculo.ax}, {dados-calculo.ay}) and ({dados-calculo.bx}, {dados-calculo.by})? (two decimal places)"
+    },
+    "dados-calculo": {
+      "ax": "1",
+      "ay": "2",
+      "bx": "4",
+      "by": "6",
+      "total": "5.00"
+    }
+  },
+  {
+    "topico": "ponto-e-reta",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Qual é a abscissa do ponto médio do segmento que une ({dados-calculo.ax}, {dados-calculo.ay}) e ({dados-calculo.bx}, {dados-calculo.by})?",
+      "fr": "Quelle est l’abscisse du milieu du segment reliant ({dados-calculo.ax}, {dados-calculo.ay}) et ({dados-calculo.bx}, {dados-calculo.by}) ?",
+      "en": "What is the x-coordinate of the midpoint of the segment joining ({dados-calculo.ax}, {dados-calculo.ay}) and ({dados-calculo.bx}, {dados-calculo.by})?"
+    },
+    "dados-calculo": {
+      "ax": "1",
+      "ay": "2",
+      "bx": "7",
+      "by": "6",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "ponto-e-reta",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma reta passa por ({dados-calculo.ax}, {dados-calculo.ay}) e ({dados-calculo.bx}, {dados-calculo.by}). Qual é o seu coeficiente angular?",
+      "fr": "Une droite passe par ({dados-calculo.ax}, {dados-calculo.ay}) et ({dados-calculo.bx}, {dados-calculo.by}). Quel est son coefficient directeur ?",
+      "en": "A line goes through ({dados-calculo.ax}, {dados-calculo.ay}) and ({dados-calculo.bx}, {dados-calculo.by}). What is its slope?"
+    },
+    "dados-calculo": {
+      "ax": "1",
+      "ay": "2",
+      "bx": "4",
+      "by": "11",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "ponto-e-reta",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma reta tem coeficiente angular {dados-calculo.m}. Qual é o coeficiente angular de uma reta perpendicular a ela? Responda como fração.",
+      "fr": "Une droite a un coefficient directeur de {dados-calculo.m}. Quel est le coefficient directeur d’une droite perpendiculaire ? Répondez sous forme de fraction.",
+      "en": "A line has slope {dados-calculo.m}. What is the slope of a line perpendicular to it? Answer as a fraction."
+    },
+    "dados-calculo": {
+      "m": "4",
+      "total": "-1/4"
+    }
+  },
+  {
+    "topico": "circunferencia",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma circunferência tem centro em ({dados-calculo.cx}, {dados-calculo.cy}) e raio {dados-calculo.raio}. Qual é a abscissa do centro?",
+      "fr": "Un cercle a son centre en ({dados-calculo.cx}, {dados-calculo.cy}) et un rayon de {dados-calculo.raio}. Quelle est l’abscisse du centre ?",
+      "en": "A circle has centre ({dados-calculo.cx}, {dados-calculo.cy}) and radius {dados-calculo.raio}. What is the x-coordinate of the centre?"
+    },
+    "dados-calculo": {
+      "cx": "3",
+      "cy": "-2",
+      "raio": "5",
+      "total": "3"
+    }
+  },
+  {
+    "topico": "circunferencia",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma circunferência tem centro em ({dados-calculo.cx}, {dados-calculo.cy}) e passa pelo ponto ({dados-calculo.px}, {dados-calculo.py}). Qual é o seu raio?",
+      "fr": "Un cercle a son centre en ({dados-calculo.cx}, {dados-calculo.cy}) et passe par le point ({dados-calculo.px}, {dados-calculo.py}). Quel est son rayon ?",
+      "en": "A circle has centre ({dados-calculo.cx}, {dados-calculo.cy}) and goes through ({dados-calculo.px}, {dados-calculo.py}). What is its radius?"
+    },
+    "dados-calculo": {
+      "cx": "0",
+      "cy": "0",
+      "px": "3",
+      "py": "4",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "circunferencia",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é a distância entre o ponto ({dados-calculo.px}, {dados-calculo.py}) e o centro de uma circunferência que fica em ({dados-calculo.cx}, {dados-calculo.cy})?",
+      "fr": "Quelle est la distance entre le point ({dados-calculo.px}, {dados-calculo.py}) et le centre d’un cercle situé en ({dados-calculo.cx}, {dados-calculo.cy}) ?",
+      "en": "What is the distance between the point ({dados-calculo.px}, {dados-calculo.py}) and the centre of a circle located at ({dados-calculo.cx}, {dados-calculo.cy})?"
+    },
+    "dados-calculo": {
+      "px": "9",
+      "py": "1",
+      "cx": "0",
+      "cy": "1",
+      "total": "9"
+    }
+  },
+  {
+    "topico": "circunferencia",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma circunferência tem centro na origem e raio {dados-calculo.raio}. Um ponto está a {dados-calculo.distancia} unidades da origem. Quantas unidades separam esse ponto da circunferência?",
+      "fr": "Un cercle a son centre à l’origine et un rayon de {dados-calculo.raio}. Un point est à {dados-calculo.distancia} unités de l’origine. Combien d’unités séparent ce point du cercle ?",
+      "en": "A circle is centred at the origin with radius {dados-calculo.raio}. A point lies {dados-calculo.distancia} units from the origin. How many units separate that point from the circle?"
+    },
+    "dados-calculo": {
+      "raio": "5",
+      "distancia": "13",
+      "total": "8"
+    }
+  },
+  {
+    "topico": "conicas",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Uma elipse tem semieixo maior {dados-calculo.a} e semieixo menor {dados-calculo.b}. Qual é a distância focal c?",
+      "fr": "Une ellipse a un demi-grand axe de {dados-calculo.a} et un demi-petit axe de {dados-calculo.b}. Quelle est la distance focale c ?",
+      "en": "An ellipse has semi-major axis {dados-calculo.a} and semi-minor axis {dados-calculo.b}. What is the focal distance c?"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "b": "3",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "conicas",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Uma elipse tem semieixo maior {dados-calculo.a} e distância focal {dados-calculo.c}. Qual é o semieixo menor?",
+      "fr": "Une ellipse a un demi-grand axe de {dados-calculo.a} et une distance focale de {dados-calculo.c}. Quel est le demi-petit axe ?",
+      "en": "An ellipse has semi-major axis {dados-calculo.a} and focal distance {dados-calculo.c}. What is the semi-minor axis?"
+    },
+    "dados-calculo": {
+      "a": "13",
+      "c": "12",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "conicas",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Uma hipérbole tem semieixo real {dados-calculo.a} e semieixo imaginário {dados-calculo.b}. Qual é a distância focal c?",
+      "fr": "Une hyperbole a un demi-axe réel de {dados-calculo.a} et un demi-axe imaginaire de {dados-calculo.b}. Quelle est la distance focale c ?",
+      "en": "A hyperbola has real semi-axis {dados-calculo.a} and imaginary semi-axis {dados-calculo.b}. What is the focal distance c?"
+    },
+    "dados-calculo": {
+      "a": "3",
+      "b": "4",
+      "total": "5"
+    }
+  },
+  {
+    "topico": "conicas",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Uma elipse tem semieixo maior {dados-calculo.a} e semieixo menor {dados-calculo.b}. Qual é a sua excentricidade?",
+      "fr": "Une ellipse a un demi-grand axe de {dados-calculo.a} et un demi-petit axe de {dados-calculo.b}. Quelle est son excentricité ?",
+      "en": "An ellipse has semi-major axis {dados-calculo.a} and semi-minor axis {dados-calculo.b}. What is its eccentricity?"
+    },
+    "dados-calculo": {
+      "a": "5",
+      "b": "3",
+      "total": "0.8"
+    }
+  },
+  {
+    "topico": "equacoes-parametricas",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Um ponto se move com x igual a {dados-calculo.vx} vezes o tempo e y igual a {dados-calculo.vy} vezes o tempo. Qual é a coordenada y quando o tempo vale {dados-calculo.t}?",
+      "fr": "Un point se déplace avec x égal à {dados-calculo.vx} fois le temps et y égal à {dados-calculo.vy} fois le temps. Quelle est la coordonnée y quand le temps vaut {dados-calculo.t} ?",
+      "en": "A point moves with x equal to {dados-calculo.vx} times the time and y equal to {dados-calculo.vy} times the time. What is the y coordinate when the time is {dados-calculo.t}?"
+    },
+    "dados-calculo": {
+      "vx": "3",
+      "vy": "4",
+      "t": "5",
+      "total": "20"
+    }
+  },
+  {
+    "topico": "equacoes-parametricas",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um ponto percorre uma circunferência de raio {dados-calculo.raio} centrada na origem. Qual é a coordenada x quando o parâmetro angular vale {dados-calculo.angulo}°?",
+      "fr": "Un point parcourt un cercle de rayon {dados-calculo.raio} centré à l’origine. Quelle est la coordonnée x quand le paramètre angulaire vaut {dados-calculo.angulo}° ?",
+      "en": "A point travels around a circle of radius {dados-calculo.raio} centred at the origin. What is the x coordinate when the angular parameter is {dados-calculo.angulo}°?"
+    },
+    "dados-calculo": {
+      "raio": "10",
+      "angulo": "180",
+      "total": "-10"
+    }
+  },
+  {
+    "topico": "equacoes-parametricas",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Um projétil parte com velocidade horizontal {dados-calculo.vx} m/s e velocidade vertical {dados-calculo.vy} m/s. Em quantos segundos ele volta à altura de partida, com a gravidade valendo {dados-calculo.gravidade} m/s²?",
+      "fr": "Un projectile part avec une vitesse horizontale de {dados-calculo.vx} m/s et une vitesse verticale de {dados-calculo.vy} m/s. En combien de secondes revient-il à sa hauteur de départ, la gravité valant {dados-calculo.gravidade} m/s² ?",
+      "en": "A projectile leaves with horizontal speed {dados-calculo.vx} m/s and vertical speed {dados-calculo.vy} m/s. In how many seconds does it return to its starting height, with gravity at {dados-calculo.gravidade} m/s²?"
+    },
+    "dados-calculo": {
+      "vx": "30",
+      "vy": "20",
+      "gravidade": "10",
+      "total": "4"
+    }
+  },
+  {
+    "topico": "equacoes-parametricas",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um projétil parte com velocidade horizontal {dados-calculo.vx} m/s e velocidade vertical {dados-calculo.vy} m/s, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é o alcance horizontal, em metros, quando ele volta à altura de partida?",
+      "fr": "Un projectile part avec une vitesse horizontale de {dados-calculo.vx} m/s et une vitesse verticale de {dados-calculo.vy} m/s, la gravité valant {dados-calculo.gravidade} m/s². Quelle est la portée horizontale, en mètres, à son retour à la hauteur de départ ?",
+      "en": "A projectile leaves with horizontal speed {dados-calculo.vx} m/s and vertical speed {dados-calculo.vy} m/s, with gravity at {dados-calculo.gravidade} m/s². What is the horizontal range, in metres, when it returns to its starting height?"
+    },
+    "dados-calculo": {
+      "vx": "30",
+      "vy": "20",
+      "gravidade": "10",
+      "total": "120"
+    }
+  },
+  {
+    "topico": "coordenadas-polares",
+    "nivel": "facil",
+    "enunciado": {
+      "br": "Qual é a distância r, da origem até o ponto ({dados-calculo.x}, {dados-calculo.y}), que é a coordenada polar r?",
+      "fr": "Quelle est la distance r, de l’origine au point ({dados-calculo.x}, {dados-calculo.y}), c’est-à-dire la coordonnée polaire r ?",
+      "en": "What is the distance r from the origin to the point ({dados-calculo.x}, {dados-calculo.y}), the polar coordinate r?"
+    },
+    "dados-calculo": {
+      "x": "5",
+      "y": "12",
+      "total": "13"
+    }
+  },
+  {
+    "topico": "coordenadas-polares",
+    "nivel": "medio",
+    "enunciado": {
+      "br": "Um ponto tem coordenadas polares r igual a {dados-calculo.r} e ângulo {dados-calculo.angulo}°. Qual é a sua coordenada x?",
+      "fr": "Un point a pour coordonnées polaires r égal à {dados-calculo.r} et un angle de {dados-calculo.angulo}°. Quelle est sa coordonnée x ?",
+      "en": "A point has polar coordinates r equal to {dados-calculo.r} and angle {dados-calculo.angulo}°. What is its x coordinate?"
+    },
+    "dados-calculo": {
+      "r": "8",
+      "angulo": "180",
+      "total": "-8"
+    }
+  },
+  {
+    "topico": "coordenadas-polares",
+    "nivel": "dificil",
+    "enunciado": {
+      "br": "Qual é a distância entre os pontos de coordenadas polares ({dados-calculo.r1}, {dados-calculo.a1}°) e ({dados-calculo.r2}, {dados-calculo.a2}°)? (duas casas decimais)",
+      "fr": "Quelle est la distance entre les points de coordonnées polaires ({dados-calculo.r1}, {dados-calculo.a1}°) et ({dados-calculo.r2}, {dados-calculo.a2}°) ? (deux décimales)",
+      "en": "What is the distance between the points with polar coordinates ({dados-calculo.r1}, {dados-calculo.a1}°) and ({dados-calculo.r2}, {dados-calculo.a2}°)? (two decimal places)"
+    },
+    "dados-calculo": {
+      "r1": "6",
+      "a1": "45",
+      "r2": "7",
+      "a2": "195",
+      "total": "12.56"
+    }
+  },
+  {
+    "topico": "coordenadas-polares",
+    "nivel": "extremo",
+    "enunciado": {
+      "br": "Um ponto está sobre o eixo y positivo, a {dados-calculo.distancia} unidades da origem. Qual é o seu ângulo polar, em graus?",
+      "fr": "Un point est sur l’axe des y positif, à {dados-calculo.distancia} unités de l’origine. Quel est son angle polaire, en degrés ?",
+      "en": "A point lies on the positive y-axis, {dados-calculo.distancia} units from the origin. What is its polar angle, in degrees?"
+    },
+    "dados-calculo": {
+      "distancia": "7",
+      "total": "90"
+    }
   }
 ]
