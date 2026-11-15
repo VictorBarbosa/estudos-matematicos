@@ -92,24 +92,39 @@ describe('o aviso de escrita na tela', () => {
     expect(fixture.nativeElement.querySelector('.escrevendo')).toBeNull();
   });
 
-  it('o aviso fica ACIMA do enunciado, e não dentro do campo', async () => {
+  /**
+   * Espera OU pergunta, nunca as duas.
+   *
+   * O aviso ocupava o lugar ACIMA do enunciado e o exercício seguia
+   * respondível ao lado — o que parecia certo (nada bloqueia) e na prática
+   * confundia: a tela parecia pela metade, e quem lia não sabia se devia
+   * responder a pergunta à vista ou aguardar outra. A regra passou a ser
+   * exclusiva, e estes dois testes guardam o novo contrato.
+   */
+  it('durante a espera, o exercício não aparece', async () => {
+    await new Promise((r) => setTimeout(r, 30));
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('.escrevendo')).not.toBeNull();
+    expect(
+      fixture.nativeElement.querySelector('.enunciado'),
+      'o enunciado não pode dividir a tela com o aviso',
+    ).toBeNull();
+    expect(
+      fixture.nativeElement.querySelector('input'),
+      'nem o campo de resposta: responder o quê?',
+    ).toBeNull();
+  });
+
+  it('o aviso explica a espera e diz que ela tem fim', async () => {
     await new Promise((r) => setTimeout(r, 30));
     fixture.detectChanges();
 
     const aviso = fixture.nativeElement.querySelector('.escrevendo') as HTMLElement;
-    const bloco = fixture.nativeElement.querySelector('.enunciado') as HTMLElement;
 
-    // O texto do enunciado é o que vai mudar: o aviso ocupa o lugar da mudança.
-    expect(aviso.compareDocumentPosition(bloco) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
-    expect(bloco.contains(aviso)).toBe(false);
-  });
-
-  it('o exercício continua respondível durante a espera', async () => {
-    await new Promise((r) => setTimeout(r, 30));
-    fixture.detectChanges();
-
-    const campo = fixture.nativeElement.querySelector('input') as HTMLInputElement;
-
-    expect(campo.disabled, 'o aviso não pode travar a resposta').toBe(false);
+    // Sem isto a demora é indistinguível de «não funciona» — foi o que
+    // aconteceu —, e sem a promessa de fim o aluno não sabe se deve esperar.
+    expect(aviso.textContent).toContain('seu computador');
+    expect(aviso.textContent).toContain('aparece');
   });
 });

@@ -231,7 +231,11 @@ export class AreaTreino {
     const propria = gerador.problemaDeTexto;
 
     if (propria !== undefined && exercicio.dadosDoProblema !== undefined) {
-      return { declaracao: propria, valores: exercicio.dadosDoProblema, modo: 'declarada' as const };
+      return {
+        declaracao: propria,
+        valores: exercicio.dadosDoProblema,
+        modo: 'declarada' as const,
+      };
     }
 
     if (propria !== undefined) {
@@ -304,8 +308,44 @@ export class AreaTreino {
     return !(esconder && this.comHistoria());
   });
 
-  /** A LLM está escrevendo um lote agora? É o que explica a espera. */
-  protected readonly preparandoHistorias = computed(() => this.historias.preparando());
+  /**
+   * A tela está esperando a história deste exercício?
+   *
+   * Quando sim, o aviso aparece **no lugar** do exercício, e não ao lado dele:
+   * mostrar os dois ao mesmo tempo faz parecer que a tela está pela metade, e
+   * o aluno não sabe se deve responder a pergunta que está vendo.
+   *
+   * As três condições são todas necessárias:
+   *
+   * - o tópico declara história e os valores sorteados servem para ela (sem
+   *   isso o exercício nunca receberá uma, e esperar seria esperar o que não
+   *   vem — era o defeito: o aviso aparecia em ângulos e triângulos, que nem
+   *   declara história);
+   * - nenhuma história já veste este exercício;
+   * - há lote em voo para ESTE tópico e esta forma, com a fila vazia.
+   *
+   * Se a LLM estiver desligada ou falhar, não há lote em voo e o exercício
+   * aparece na hora, como sempre apareceu.
+   */
+  protected readonly esperandoHistoria = computed(() => {
+    const exercicio = this.sessao().exercicio();
+    const gerador = this.gerador();
+    const declaracao = gerador.problemaDeTexto;
+
+    if (declaracao === undefined || exercicio.dadosDoProblema === undefined) {
+      return false;
+    }
+
+    if (this.historias.temHistoria(exercicio.id)) {
+      return false;
+    }
+
+    return this.historias.esperandoPrimeiroLote(
+      gerador.topicoId,
+      declaracao.forma,
+      exercicio.nivel,
+    );
+  });
 
   protected readonly dica = computed(() => dicaEm(this.sessao().exercicio(), this.i18n.idioma()));
 

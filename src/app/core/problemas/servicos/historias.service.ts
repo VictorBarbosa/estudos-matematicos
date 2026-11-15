@@ -142,14 +142,40 @@ export class HistoriasService {
     Readonly<Record<string, { readonly chave: string; readonly lacunas: number }>>
   >({});
 
-  /** Chaves cujo lote está sendo pedido agora, para não pedir duas vezes. */
-  private readonly pedindo = new Set<string>();
+  /**
+   * As chaves cujo lote está sendo pedido agora.
+   *
+   * Num sinal, e não num `Set` solto, porque a tela precisa reagir a isto —
+   * e reagir por TÓPICO. `preparando` é global («há algum lote em voo»), e com
+   * ele o aviso de que a LLM está escrevendo aparecia em tópicos que nem
+   * declaram história: o aluno via «escrevendo os enunciados» numa pergunta de
+   * ângulos e triângulos, que nunca recebe uma.
+   */
+  private readonly emVoo = signal<readonly string[]>([]);
 
   /** Ligado quando há endereço configurado e as tentativas não desistiram. */
   readonly ligado = signal(true);
 
-  /** Verdadeiro enquanto o primeiro lote de um tópico não chegou. */
+  /** Verdadeiro enquanto há algum lote em voo, em qualquer tópico. */
   readonly preparando = computed(() => this.lote.pedindo());
+
+  /**
+   * ESTE tópico e esta forma estão esperando o primeiro lote?
+   *
+   * É a pergunta que a tela faz para escolher entre mostrar a espera e mostrar
+   * o exercício — nunca os dois, que era a confusão: o aviso ao lado da
+   * pergunta pronta faz parecer que a tela está pela metade.
+   *
+   * Verdadeiro só com lote em voo para esta chave E a fila vazia: com fila
+   * cheia não há espera nenhuma, e lote de outro tópico não é da conta desta
+   * tela.
+   */
+  esperandoPrimeiroLote(topicoId: string, forma: string, nivel: string): boolean {
+    return (
+      this.emVoo().includes(`${topicoId}|${forma}`) &&
+      (this.filas()[chaveDe(topicoId, forma, nivel)] ?? []).length === 0
+    );
+  }
 
   /** Esquece as falhas ao entrar noutro tópico. */
   recomecar(): void {
@@ -291,11 +317,11 @@ export class HistoriasService {
   ): Promise<void> {
     const chaveDoPedido = `${topicoId}|${forma}`;
 
-    if (this.pedindo.has(chaveDoPedido) || !this.ligado() || !this.lote.valeTentarDeNovo()) {
+    if (this.emVoo().includes(chaveDoPedido) || !this.ligado() || !this.lote.valeTentarDeNovo()) {
       return;
     }
 
-    this.pedindo.add(chaveDoPedido);
+    this.emVoo.update((atuais) => [...atuais, chaveDoPedido]);
 
     try {
       const configuracao = this.configuracao();
@@ -327,7 +353,7 @@ export class HistoriasService {
         this.servirQuemEsperava();
       }
     } finally {
-      this.pedindo.delete(chaveDoPedido);
+      this.emVoo.update((atuais) => atuais.filter((atual) => atual !== chaveDoPedido));
     }
   }
 

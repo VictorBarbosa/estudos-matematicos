@@ -1182,6 +1182,7 @@
     "comoSeResolve": "Como se resolve",
     "conceitosDoExercicio": "Conceitos deste exercício:",
     "erros": "Erros",
+    "escrevendoEnunciados": "Escrevendo o enunciado nos três idiomas — isto roda no seu computador e leva de meio minuto a dois. O exercício aparece quando o texto chegar; se a LLM não responder, ele aparece do mesmo jeito.",
     "etapaVencida": "Etapa vencida!",
     "falta": "Falta",
     "faltaPara": "Falta para liberar a próxima etapa: {itens}.",
@@ -1206,8 +1207,7 @@
     "subiu": "Nível {nivel} — os exercícios ficam mais exigentes.",
     "trancadoPelaSurpresa": "Este tópico está trancado por uma reprovação na prova surpresa. O progresso foi zerado de propósito: vença o critério de novo para destrancá-lo.",
     "verificar": "Verificar",
-    "zeraComErro": "(zera a cada erro)",
-    "escrevendoEnunciados": "Escrevendo os enunciados, nos três idiomas — isto roda no seu computador. O exercício abaixo já pode ser respondido."
+    "zeraComErro": "(zera a cada erro)"
   },
   "trilha": {
     "barra": "Progresso na trilha: {percentual} por cento",

@@ -21,9 +21,8 @@ describe('o aviso de que a LLM está escrevendo', () => {
      * carregamento em vez da tradução.
      */
     const textos = [pt, fr, en].map(
-      (dicionario) => (dicionario as { treino: Record<string, string> }).treino[
-        'escrevendoEnunciados'
-      ],
+      (dicionario) =>
+        (dicionario as { treino: Record<string, string> }).treino['escrevendoEnunciados'],
     );
 
     for (const [indice, texto] of textos.entries()) {

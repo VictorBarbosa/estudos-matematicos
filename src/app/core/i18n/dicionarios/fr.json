@@ -1182,6 +1182,7 @@
     "comoSeResolve": "Comment on résout",
     "conceitosDoExercicio": "Notions de cet exercice :",
     "erros": "Erreurs",
+    "escrevendoEnunciados": "Rédaction de l’énoncé dans les trois langues — cela tourne sur votre ordinateur et prend d’une demi-minute à deux minutes. L’exercice s’affiche dès que le texte arrive ; si le modèle ne répond pas, il s’affiche quand même.",
     "etapaVencida": "Étape réussie !",
     "falta": "Reste",
     "faltaPara": "Pour ouvrir l’étape suivante, il reste : {itens}.",
@@ -1206,8 +1207,7 @@
     "subiu": "Niveau {nivel} — les exercices deviennent plus exigeants.",
     "trancadoPelaSurpresa": "Ce sujet est verrouillé à la suite d’un échec à l’examen surprise. La progression a été remise à zéro volontairement : validez de nouveau le critère pour le déverrouiller.",
     "verificar": "Vérifier",
-    "zeraComErro": "(remise à zéro à chaque erreur)",
-    "escrevendoEnunciados": "Rédaction des énoncés, dans les trois langues — cela tourne sur votre ordinateur. L’exercice ci-dessous peut déjà être résolu."
+    "zeraComErro": "(remise à zéro à chaque erreur)"
   },
   "trilha": {
     "barra": "Progression du parcours : {percentual} pour cent",
