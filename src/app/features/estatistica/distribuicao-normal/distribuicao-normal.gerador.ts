@@ -35,8 +35,6 @@ import {
 const CASAS = 4;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 4 casas decimais.';
-
 /** Contextos de engenharia, para que os números signifiquem alguma coisa. */
 const CENARIOS: readonly {
   readonly sujeito: string;
@@ -108,7 +106,6 @@ function doEscore(nivel: Nivel, rng: Rng): Exercicio<number> {
         expressao3: cenario.unidade,
         desvio,
         valor,
-        PEDIDO,
       },
       'pt',
     ),
@@ -353,7 +350,6 @@ function doQuantil(nivel: Nivel, rng: Rng): Exercicio<number> {
         expressao3: cenario.unidade,
         desvio,
         percentil,
-        PEDIDO,
       },
       'pt',
     ),

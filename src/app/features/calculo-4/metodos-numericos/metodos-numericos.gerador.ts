@@ -28,8 +28,6 @@ import {
 const CASAS = 5;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 5 casas decimais.';
-
 type Tipo = 'euler' | 'erro-euler' | 'rk4' | 'ordem' | 'newton';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
@@ -90,7 +88,7 @@ function doEuler(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('metodos-numericos', 'forma-1')[0]!,
-      { expressao1: String(passo).replace('.', ','), quantos, y0, PEDIDO },
+      { expressao1: String(passo).replace('.', ','), quantos, y0 },
       'pt',
     ),
     enunciadoTex: `y' = ${formatar(k)}y, \\qquad y_{n+1} = y_{n} + h\\,f(t_{n},\\, y_{n})`,
@@ -148,7 +146,7 @@ function doErroDeEuler(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('metodos-numericos', 'forma-2')[0]!,
-      { expressao1: String(passo).replace('.', ','), quantos, y0, PEDIDO },
+      { expressao1: String(passo).replace('.', ','), quantos, y0 },
       'pt',
     ),
     enunciadoTex: `y' = ${formatar(k)}y, \\qquad y(t) = ${y0}e^{${formatar(k)}t}`,
@@ -197,7 +195,7 @@ function doRungeKutta(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('metodos-numericos', 'forma-3')[0]!,
-      { expressao1: String(passo).replace('.', ','), quantos, y0, PEDIDO },
+      { expressao1: String(passo).replace('.', ','), quantos, y0 },
       'pt',
     ),
     enunciadoTex: `y' = ${formatar(k)}y, \\qquad y_{n+1} = y_{n} + \\frac{h}{6}\\left(k_{1} + 2k_{2} + 2k_{3} + k_{4}\\right)`,
@@ -268,7 +266,7 @@ function daOrdemDoMetodo(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('metodos-numericos', 'forma-4')[0]!,
-      { tempo, y0, expressao1: String(passo).replace('.', ','), PEDIDO },
+      { tempo, y0, expressao1: String(passo).replace('.', ',') },
       'pt',
     ),
     enunciadoTex: `y' = ${formatar(k)}y`,

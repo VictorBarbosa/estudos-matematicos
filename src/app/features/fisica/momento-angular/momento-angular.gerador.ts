@@ -34,8 +34,6 @@ import {
 const CASAS = 3;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 3 casas decimais.';
-
 const CORPOS_POR_RAIO: readonly CorpoRigido[] = CORPOS_RIGIDOS.filter(
   (corpo) => !corpo.nome.startsWith('barra'),
 );
@@ -95,7 +93,6 @@ function doCorpoRigido(nivel: Nivel, rng: Rng): Exercicio<number> {
         v3: numero(massa),
         v4: numero(raio),
         v5: numero(omega),
-        PEDIDO,
       },
       'pt',
     ),
@@ -150,7 +147,7 @@ function daParticula(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('momento-angular', 'forma-2')[0]!,
-      { v1: numero(massa), v2: numero(distancia), velocidade, angulo, PEDIDO },
+      { v1: numero(massa), v2: numero(distancia), velocidade, angulo },
       'pt',
     ),
     enunciadoTex: `L = mvr\\operatorname{sen}\\theta`,
@@ -205,7 +202,7 @@ function daConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('momento-angular', 'forma-3')[0]!,
-      { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal), PEDIDO },
+      { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
       'pt',
     ),
     enunciadoTex: `I_{1}\\omega_{1} = I_{2}\\omega_{2}`,
@@ -263,7 +260,7 @@ function daEnergiaNaConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('momento-angular', 'forma-4')[0]!,
-      { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal), PEDIDO },
+      { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
       'pt',
     ),
     enunciadoTex: `\\Delta K = \\frac{1}{2}I_{2}\\omega_{2}^{2} - \\frac{1}{2}I_{1}\\omega_{1}^{2}`,

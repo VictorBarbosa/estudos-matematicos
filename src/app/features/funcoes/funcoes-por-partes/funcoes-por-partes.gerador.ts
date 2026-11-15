@@ -36,8 +36,6 @@ import {
 const CASAS = 3;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 3 casas decimais.';
-
 type Tipo = 'avaliar' | 'na-fronteira' | 'salto' | 'colar' | 'lateral';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
@@ -107,7 +105,7 @@ function daAvaliacao(nivel: Nivel, rng: Rng, naFronteira: boolean): Exercicio<nu
     chave: `av-${fronteira}-${ponto}-${esquerda.toString()}-${direita.toString()}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('funcoes-por-partes', 'forma-1')[0]!, { ponto, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('funcoes-por-partes', 'forma-1')[0]!, { ponto }, 'pt'),
     enunciadoTex: porPartesParaTex(f),
     gabarito,
     resolucao: avaliarPorPartesComPassos(f, ponto),
@@ -154,11 +152,7 @@ function doSalto(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `sal-${fronteira}-${esquerda.toString()}-${direita.toString()}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('funcoes-por-partes', 'forma-2')[0]!,
-      { fronteira, PEDIDO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('funcoes-por-partes', 'forma-2')[0]!, { fronteira }, 'pt'),
     enunciadoTex: porPartesParaTex(f),
     gabarito,
     resolucao: continuidadeComPassos(f, fronteira),
@@ -210,7 +204,7 @@ function doLateral(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('funcoes-por-partes', 'forma-3')[0]!,
-      { fronteira, v1: pelaEsquerda ? 'ESQUERDA' : 'DIREITA', PEDIDO },
+      { fronteira, v1: pelaEsquerda ? 'ESQUERDA' : 'DIREITA' },
       'pt',
     ),
     enunciadoTex: porPartesParaTex(f),
@@ -260,11 +254,7 @@ function daColagem(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `col-${fronteira}-${esquerda.toString()}-${direitaSemConstante.toString()}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('funcoes-por-partes', 'forma-4')[0]!,
-      { fronteira, PEDIDO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('funcoes-por-partes', 'forma-4')[0]!, { fronteira }, 'pt'),
     enunciadoTex:
       `f(x) = \\begin{cases} ${esquerda.paraTex()}, & x < ${fronteira} \\\\ ` +
       `${direitaSemConstante.paraTex()} + c, & x \\geq ${fronteira} \\end{cases}`,

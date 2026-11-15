@@ -57,8 +57,6 @@ const CONCEITO_DA_RAZAO: Readonly<Record<RazaoTrig, string>> = {
   tg: 'eqtrig.tangente',
 };
 
-const INTERVALO = 'em [0°, 360°)';
-
 /**
  * Exercícios de equações trigonométricas e funções inversas.
  *
@@ -373,7 +371,7 @@ function exercicioBasica(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado: textoDoMolde(
       moldesDe('equacoes-trigonometricas', 'forma-3')[0]!,
-      { INTERVALO, v1: PEDIDO_TEXTO[pedido] },
+      { v1: PEDIDO_TEXTO[pedido] },
       'pt',
     ),
     enunciadoTex: `${RAZAO_TEX[razao]} x = ${notavel.tex}`,
@@ -475,7 +473,7 @@ function exercicioLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado: textoDoMolde(
       moldesDe('equacoes-trigonometricas', 'forma-4')[0]!,
-      { INTERVALO, v1: PEDIDO_TEXTO[pedido] },
+      { v1: PEDIDO_TEXTO[pedido] },
       'pt',
     ),
     enunciadoTex: equacaoTex,
@@ -517,7 +515,7 @@ function exercicioDecimal(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado: textoDoMolde(
       moldesDe('equacoes-trigonometricas', 'forma-5')[0]!,
-      { INTERVALO, v1: PEDIDO_TEXTO[pedido] },
+      { v1: PEDIDO_TEXTO[pedido] },
       'pt',
     ),
     enunciadoTex: `${RAZAO_TEX[razao]} x = ${valorTex}`,
@@ -562,7 +560,7 @@ function exercicioArcoMultiplo(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado: textoDoMolde(
       moldesDe('equacoes-trigonometricas', 'forma-6')[0]!,
-      { INTERVALO, v1: PEDIDO_TEXTO[pedido], v2: avisoDeCasas(gabarito) },
+      { v1: PEDIDO_TEXTO[pedido], v2: avisoDeCasas(gabarito) },
       'pt',
     ),
     enunciadoTex: `${RAZAO_TEX[razao]}(${n}x) = ${notavel.tex}`,
@@ -743,7 +741,7 @@ function exercicioQuadratica(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado: textoDoMolde(
       moldesDe('equacoes-trigonometricas', 'forma-7')[0]!,
-      { INTERVALO, v1: PEDIDO_TEXTO[pedido] },
+      { v1: PEDIDO_TEXTO[pedido] },
       'pt',
     ),
     enunciadoTex: equacaoTex,

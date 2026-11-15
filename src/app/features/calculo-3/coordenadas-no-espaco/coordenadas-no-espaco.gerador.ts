@@ -27,8 +27,6 @@ import {
 const CASAS = 3;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 3 casas decimais.';
-
 const ANGULOS = [0, 30, 45, 60, 90, 120, 135, 150, 180, 210, 225, 240, 270, 300, 315, 330];
 
 type Tipo = 'cilindrica-x' | 'cilindrica-r' | 'esferica-z' | 'esferica-x' | 'esferica-raio';
@@ -83,7 +81,7 @@ function daCilindrica(nivel: Nivel, rng: Rng, pedirX: boolean): Exercicio<number
     rng,
     enunciado: textoDoMolde(
       moldesDe('coordenadas-no-espaco', 'forma-1')[0]!,
-      { r, theta, z, expressao1: pedirX ? 'x' : 'y', PEDIDO },
+      { r, theta, z, expressao1: pedirX ? 'x' : 'y' },
       'pt',
     ),
     enunciadoTex: `x = r\\cos\\theta \\qquad y = r\\operatorname{sen}\\theta \\qquad z = z`,
@@ -141,7 +139,7 @@ function daEsferica(nivel: Nivel, rng: Rng, pedir: 'x' | 'z'): Exercicio<number>
     rng,
     enunciado: textoDoMolde(
       moldesDe('coordenadas-no-espaco', 'forma-2')[0]!,
-      { rho, phi, theta, pedir, PEDIDO },
+      { rho, phi, theta, pedir },
       'pt',
     ),
     enunciadoTex:
@@ -199,11 +197,7 @@ function doRaioEsferico(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `raio-${x}-${y}-${z}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('coordenadas-no-espaco', 'forma-3')[0]!,
-      { x, y, z, PEDIDO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('coordenadas-no-espaco', 'forma-3')[0]!, { x, y, z }, 'pt'),
     enunciadoTex: `\\rho = \\sqrt{x^{2} + y^{2} + z^{2}}`,
     gabarito,
     resolucao: {

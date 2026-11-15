@@ -424,8 +424,6 @@ function exercicioRetro(nivel: Nivel, rng: Rng): Exercicio<number> {
   };
 }
 
-const LEGENDA_TIPO = 'Responda 0 (nenhuma solução), 1 (uma só) ou 2 (infinitas).';
-
 const CODIGO: Readonly<Record<TipoSistema, number>> = {
   impossivel: 0,
   determinado: 1,
@@ -480,11 +478,7 @@ function exercicioClassificarEscalonada(nivel: Nivel, rng: Rng): Exercicio<numbe
   return {
     id: `escal-classe-${m.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('escalonamento-e-inversa', 'forma-4')[0]!,
-      { LEGENDA_TIPO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-4')[0]!, {}, 'pt'),
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -549,11 +543,7 @@ function exercicioClassificarSistema(nivel: Nivel, rng: Rng): Exercicio<number> 
   return {
     id: `escal-classe-sis-${aumentada.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('escalonamento-e-inversa', 'forma-5')[0]!,
-      { LEGENDA_TIPO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-5')[0]!, {}, 'pt'),
     enunciadoTex: sistemaTex(base, b),
     gabarito,
     resolucao: {

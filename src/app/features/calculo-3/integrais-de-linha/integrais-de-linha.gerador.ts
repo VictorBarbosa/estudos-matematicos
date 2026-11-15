@@ -26,8 +26,6 @@ import {
 const CASAS = 3;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 3 casas decimais.';
-
 type Tipo = 'constante' | 'linear' | 'fechado' | 'conservativo';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
@@ -78,7 +76,7 @@ function doCampoConstante(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('integrais-de-linha', 'forma-1')[0]!,
-      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y, PEDIDO },
+      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y },
       'pt',
     ),
     enunciadoTex: `\\vec{F} = \\left(${formatar(campoX.k0)},\\; ${formatar(campoY.k0)}\\right)`,
@@ -142,7 +140,7 @@ function doCampoLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('integrais-de-linha', 'forma-2')[0]!,
-      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y, PEDIDO },
+      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y },
       'pt',
     ),
     enunciadoTex: `\\vec{F} = \\left(${linear2ParaTex(campoX)},\\; ${linear2ParaTex(campoY)}\\right)`,
@@ -203,7 +201,7 @@ function doCaminhoFechado(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('integrais-de-linha', 'forma-3')[0]!,
-      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y, PEDIDO },
+      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y },
       'pt',
     ),
     enunciadoTex: `\\vec{F} = \\left(${linear2ParaTex(campoX)},\\; ${linear2ParaTex(campoY)}\\right)`,
@@ -269,7 +267,7 @@ function doConservativo(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('integrais-de-linha', 'forma-4')[0]!,
-      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y, PEDIDO },
+      { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y },
       'pt',
     ),
     enunciadoTex: `\\vec{F} = \\left(${a === 1 ? '' : a}x,\\; ${b === 1 ? '' : b}y\\right)`,

@@ -39,8 +39,6 @@ import {
 const CASAS = 3;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 3 casas decimais.';
-
 type Tipo =
   | 'exponencial'
   | 'logaritmo'
@@ -104,7 +102,7 @@ function daExponencial(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-exponencial-logaritmo', 'forma-1')[0]!,
-      { x0, PEDIDO },
+      { x0 },
       'pt',
     ),
     enunciadoTex: `f(x) = ${exponencialParaTex(a, k)}`,
@@ -155,7 +153,7 @@ function doLogaritmo(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-exponencial-logaritmo', 'forma-2')[0]!,
-      { x0, PEDIDO },
+      { x0 },
       'pt',
     ),
     enunciadoTex: `f(x) = ${logaritmoParaTex(a, k)}`,
@@ -207,7 +205,7 @@ function daBaseQualquer(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-exponencial-logaritmo', 'forma-3')[0]!,
-      { x0, PEDIDO },
+      { x0 },
       'pt',
     ),
     enunciadoTex: `f(x) = ${a === 1 ? '' : `${a}\\cdot `}${base}^{x}`,
@@ -257,7 +255,7 @@ function doLogaritmoDeBase(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-exponencial-logaritmo', 'forma-4')[0]!,
-      { x0, PEDIDO },
+      { x0 },
       'pt',
     ),
     enunciadoTex: `f(x) = ${a === 1 ? '' : a}\\log_{${base}} x`,
@@ -299,7 +297,7 @@ function doProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-exponencial-logaritmo', 'forma-5')[0]!,
-      { x0, PEDIDO },
+      { x0 },
       'pt',
     ),
     enunciadoTex: `f(x) = ${n === 1 ? 'x' : `x^{${n}}`}e^{${k === 1 ? 'x' : k === -1 ? '-x' : `${k}x`}}`,
@@ -348,7 +346,7 @@ function daPotenciaNoLogaritmo(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-exponencial-logaritmo', 'forma-6')[0]!,
-      { x0, PEDIDO },
+      { x0 },
       'pt',
     ),
     enunciadoTex: `f(x) = ${a === 1 ? '' : a}\\ln\\left(x^{${n}}\\right)`,

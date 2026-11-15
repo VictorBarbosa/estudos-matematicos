@@ -45,8 +45,6 @@ function ate(
 const CASAS = 3;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 3 casas decimais.';
-
 type Tipo = 'angular' | 'tangencial' | 'centripeta' | 'forca' | 'frequencia';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
@@ -93,11 +91,7 @@ function daAngular(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ang-${periodo}-${raio}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('movimento-circular', 'forma-1')[0]!,
-      { periodo, PEDIDO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('movimento-circular', 'forma-1')[0]!, { periodo }, 'pt'),
     enunciadoTex: `T = ${periodo}\\ \\text{s} \\qquad \\omega = \\frac{2\\pi}{T}`,
     gabarito,
     resolucao: ate(movimentoCircularComPassos(periodo, raio, 1), 1, gabarito),
@@ -142,7 +136,7 @@ function daFrequencia(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('movimento-circular', 'forma-2')[0]!,
-      { rotacoesPorMinuto, PEDIDO },
+      { rotacoesPorMinuto },
       'pt',
     ),
     enunciadoTex: `n = ${rotacoesPorMinuto}\\ \\text{rpm} \\qquad \\omega = 2\\pi f`,
@@ -194,7 +188,7 @@ function daTangencial(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('movimento-circular', 'forma-3')[0]!,
-      { v1: String(raio).replace('.', ','), periodo, PEDIDO },
+      { v1: String(raio).replace('.', ','), periodo },
       'pt',
     ),
     enunciadoTex: `r = ${String(raio).replace('.', '{,}')}\\ \\text{m} \\qquad T = ${periodo}\\ \\text{s}`,
@@ -249,7 +243,7 @@ function daCentripeta(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('movimento-circular', 'forma-4')[0]!,
-      { v1: String(raio).replace('.', ','), periodo, PEDIDO },
+      { v1: String(raio).replace('.', ','), periodo },
       'pt',
     ),
     enunciadoTex: `a_{c} = \\frac{v^{2}}{r} = \\omega^{2}r`,
@@ -312,7 +306,7 @@ function daForca(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('movimento-circular', 'forma-5')[0]!,
-      { v1: String(massa).replace('.', ','), v2: String(raio).replace('.', ','), periodo, PEDIDO },
+      { v1: String(massa).replace('.', ','), v2: String(raio).replace('.', ','), periodo },
       'pt',
     ),
     enunciadoTex: `F_{c} = m\\frac{v^{2}}{r}`,

@@ -38,8 +38,6 @@ import {
 const CASAS = 4;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 4 casas decimais.';
-
 type Tipo = 'inclinacao' | 'intercepto' | 'pearson' | 'determinacao' | 'prever' | 'residuo';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
@@ -105,7 +103,7 @@ function daInclinacao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<
     chave: `inc-${chaveDa(pares)}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-1')[0]!, { PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -149,7 +147,7 @@ function doIntercepto(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<
     chave: `int-${chaveDa(pares)}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-2')[0]!, { PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-2')[0]!, {}, 'pt'),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -191,7 +189,7 @@ function doPearson(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<num
     chave: `pe-${chaveDa(pares)}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-3')[0]!, { PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-3')[0]!, {}, 'pt'),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: pearsonComPassos(pares),
@@ -283,7 +281,7 @@ function daPrevisao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<nu
     chave: `pr-${chaveDa(pares)}-${x}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-5')[0]!, { x, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-5')[0]!, { x }, 'pt'),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: preverComPassos(inclinacao, intercepto, x, faixa),
@@ -323,7 +321,7 @@ function doResiduo(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<num
     rng,
     enunciado: textoDoMolde(
       moldesDe('regressao-e-correlacao', 'forma-6')[0]!,
-      { expressao1: par.x, PEDIDO },
+      { expressao1: par.x },
       'pt',
     ),
     enunciadoTex: tabelaTex(pares),

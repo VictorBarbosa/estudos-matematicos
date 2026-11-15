@@ -142,11 +142,7 @@ function daSegunda(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `s${variavel}-${q.a}${q.b}${q.c}${q.d}${q.e}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('derivadas-parciais', 'forma-1')[0]!,
-      { variavel, PEDIDO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('derivadas-parciais', 'forma-1')[0]!, { variavel }, 'pt'),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {

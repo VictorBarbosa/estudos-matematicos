@@ -171,7 +171,7 @@ function daMedia(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('integrais-multiplas', 'forma-1')[0]!,
-      { x0, x1, y0, y1, PEDIDO },
+      { x0, x1, y0, y1 },
       'pt',
     ),
     enunciadoTex: `\\bar{f} = \\frac{1}{A}\\iint_{R} f\\,dA`,
@@ -238,7 +238,7 @@ function daPolar(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('integrais-multiplas', 'forma-2')[0]!,
-      { constante, raio, doze, PEDIDO },
+      { constante, raio, doze },
       'pt',
     ),
     enunciadoTex: `\\iint_{S} ${constante}\\,dA, \\quad dA = r\\,dr\\,d\\theta`,

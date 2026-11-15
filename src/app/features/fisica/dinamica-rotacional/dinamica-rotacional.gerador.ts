@@ -34,8 +34,6 @@ import {
 const CASAS = 3;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 3 casas decimais.';
-
 /** Os corpos com fórmula em massa e raio; a barra usa comprimento, e fica fora. */
 const CORPOS_POR_RAIO: readonly CorpoRigido[] = CORPOS_RIGIDOS.filter(
   (corpo) => !corpo.nome.startsWith('barra'),
@@ -88,7 +86,7 @@ function daInercia(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('dinamica-rotacional', 'forma-1')[0]!,
-      { v1: artigo(corpo), v2: corpo.nome, v3: numero(massa), v4: numero(raio), PEDIDO },
+      { v1: artigo(corpo), v2: corpo.nome, v3: numero(massa), v4: numero(raio) },
       'pt',
     ),
     enunciadoTex: `I = ${corpo.fatorTex}mr^{2}`,
@@ -148,7 +146,6 @@ function doTorque(nivel: Nivel, rng: Rng): Exercicio<number> {
         v3: corpo.nome,
         v4: numero(massa),
         v5: numero(raio),
-        PEDIDO,
       },
       'pt',
     ),
@@ -207,7 +204,6 @@ function daEnergia(nivel: Nivel, rng: Rng): Exercicio<number> {
         v3: numero(massa),
         v4: numero(raio),
         v5: numero(omega),
-        PEDIDO,
       },
       'pt',
     ),
@@ -257,7 +253,7 @@ function doRolamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('dinamica-rotacional', 'forma-4')[0]!,
-      { v1: capitalizar(artigo(corpo)), v2: corpo.nome, v3: numero(altura), PEDIDO },
+      { v1: capitalizar(artigo(corpo)), v2: corpo.nome, v3: numero(altura) },
       'pt',
     ),
     enunciadoTex: `mgh = \\frac{1}{2}mv^{2} + \\frac{1}{2}I\\omega^{2} \\qquad \\omega = \\frac{v}{r}`,

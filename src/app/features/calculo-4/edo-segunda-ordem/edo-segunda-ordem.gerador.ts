@@ -36,8 +36,6 @@ import {
 const CASAS = 4;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 4 casas decimais.';
-
 type Tipo =
   'raiz' | 'valor' | 'periodo' | 'discriminante' | 'critico' | 'rigidez-limite' | 'meia-amplitude';
 
@@ -103,7 +101,7 @@ function daRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `rz-${b}-${c}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-1')[0]!, { PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: {
@@ -158,7 +156,7 @@ function doValor(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('edo-segunda-ordem', 'forma-2')[0]!,
-      { y0, v0, expressao1: String(t).replace('.', ','), PEDIDO },
+      { y0, v0, expressao1: String(t).replace('.', ',') },
       'pt',
     ),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
@@ -207,7 +205,7 @@ function doPeriodo(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `pr-${b}-${c}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-3')[0]!, { PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-3')[0]!, {}, 'pt'),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: periodoAmortecidoComPassos(b, c),
@@ -252,7 +250,7 @@ function doDiscriminante(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ds-${b}-${c}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-4')[0]!, { PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-4')[0]!, {}, 'pt'),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: {

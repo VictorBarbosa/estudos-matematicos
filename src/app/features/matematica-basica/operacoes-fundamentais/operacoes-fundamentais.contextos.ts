@@ -54,7 +54,7 @@ export function compraComTaxa(rng: Rng, nivel: Nivel): Contexto {
   const b = rng.inteiro(3, nivel === 'facil' ? 12 : 25);
   const c = rng.inteiro(2, 15);
 
-    return {
+  return {
     arvore: somar(numero(c), multiplicar(numero(a), numero(b))),
     termos: {
       inicial: numero(c),
@@ -63,7 +63,11 @@ export function compraComTaxa(rng: Rng, nivel: Nivel): Contexto {
         { operador: '*', valor: numero(b) },
       ],
     },
-    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-4')[0]!, { q: a, preco: b, taxa: c }),
+    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-4')[0]!, {
+      q: a,
+      preco: b,
+      taxa: c,
+    }),
   };
 }
 
@@ -73,7 +77,7 @@ export function troco(rng: Rng, nivel: Nivel): Contexto {
   const b = rng.inteiro(2, nivel === 'facil' ? 5 : 9);
   const c = rng.inteiro(4, nivel === 'facil' ? 9 : 14);
 
-    return {
+  return {
     arvore: subtrair(numero(a), multiplicar(numero(b), numero(c))),
     termos: {
       inicial: numero(a),
@@ -82,7 +86,11 @@ export function troco(rng: Rng, nivel: Nivel): Contexto {
         { operador: '*', valor: numero(c) },
       ],
     },
-    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-5')[0]!, { pago: a, q: b, preco: c }),
+    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-5')[0]!, {
+      pago: a,
+      q: b,
+      preco: c,
+    }),
   };
 }
 
@@ -92,7 +100,7 @@ export function producaoComBonus(rng: Rng, nivel: Nivel): Contexto {
   const b = rng.inteiro(6, nivel === 'facil' ? 12 : 18);
   const c = rng.inteiro(5, 30);
 
-    return {
+  return {
     arvore: somar(numero(c), multiplicar(numero(a), numero(b))),
     termos: {
       inicial: numero(c),
@@ -101,7 +109,11 @@ export function producaoComBonus(rng: Rng, nivel: Nivel): Contexto {
         { operador: '*', valor: numero(b) },
       ],
     },
-    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-6')[0]!, { entregas: a, valor: b, bonus: c }),
+    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-6')[0]!, {
+      entregas: a,
+      valor: b,
+      bonus: c,
+    }),
   };
 }
 
@@ -119,7 +131,7 @@ export function doisLotes(rng: Rng): Contexto {
     d = 3;
   }
 
-    const arvore = subtrair(multiplicar(numero(a), numero(b)), multiplicar(numero(c), numero(d)));
+  const arvore = subtrair(multiplicar(numero(a), numero(b)), multiplicar(numero(c), numero(d)));
 
   return {
     arvore,
@@ -131,7 +143,12 @@ export function doisLotes(rng: Rng): Contexto {
         { operador: '*', valor: numero(d) },
       ],
     },
-    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-7')[0]!, { caixas: a, porCaixa: b, devolvidas: c, porDevolucao: d }),
+    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-7')[0]!, {
+      caixas: a,
+      porCaixa: b,
+      devolvidas: c,
+      porDevolucao: d,
+    }),
   };
 }
 
@@ -141,7 +158,7 @@ export function kits(rng: Rng): Contexto {
   const b = rng.inteiro(2, 8);
   const c = rng.inteiro(2, 8);
 
-    return {
+  return {
     arvore: multiplicar(numero(a), somar(numero(b), numero(c))),
     termos: {
       inicial: numero(a),
@@ -150,7 +167,11 @@ export function kits(rng: Rng): Contexto {
         { operador: '+', valor: numero(c) },
       ],
     },
-    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-8')[0]!, { kits: a, lapis: b, borrachas: c }),
+    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-8')[0]!, {
+      kits: a,
+      lapis: b,
+      borrachas: c,
+    }),
   };
 }
 
@@ -165,7 +186,7 @@ export function areaMenosGasto(rng: Rng): Contexto {
   const c = rng.inteiro(5, 9);
   const d = rng.inteiro(1, 4);
 
-    // b·(c−d)² + a — a potência é resolvida antes da multiplicação, e o parêntese antes dela.
+  // b·(c−d)² + a — a potência é resolvida antes da multiplicação, e o parêntese antes dela.
   const arvore = somar(
     numero(a),
     multiplicar(numero(b), potencia(subtrair(numero(c), numero(d)), numero(2))),
@@ -180,7 +201,12 @@ export function areaMenosGasto(rng: Rng): Contexto {
         { operador: '*', valor: potencia(subtrair(numero(c), numero(d)), numero(2)) },
       ],
     },
-    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-9')[0]!, { pronto: a, pecas: b, lado: c, sobra: d }),
+    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-9')[0]!, {
+      pronto: a,
+      pecas: b,
+      lado: c,
+      sobra: d,
+    }),
   };
 }
 
@@ -190,7 +216,7 @@ export function quadradoDaSoma(rng: Rng): Contexto {
   const b = rng.inteiro(2, 8);
   const c = rng.inteiro(5, 25);
 
-    const lado = somar(numero(a), numero(b));
+  const lado = somar(numero(a), numero(b));
   const arvore = subtrair(potencia(lado, numero(2)), numero(c));
 
   return {
@@ -202,7 +228,11 @@ export function quadradoDaSoma(rng: Rng): Contexto {
         { operador: '-', valor: numero(c) },
       ],
     },
-    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-10')[0]!, { primeiro: a, segundo: b, retirados: c }),
+    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-10')[0]!, {
+      primeiro: a,
+      segundo: b,
+      retirados: c,
+    }),
   };
 }
 
@@ -213,7 +243,7 @@ export function contaComCupom(rng: Rng): Contexto {
   const c = rng.inteiro(5, 15);
   const d = rng.inteiro(10, 40);
 
-    return {
+  return {
     arvore: subtrair(multiplicar(numero(a), somar(numero(b), numero(c))), numero(d)),
     termos: {
       inicial: numero(a),
@@ -223,7 +253,12 @@ export function contaComCupom(rng: Rng): Contexto {
         { operador: '-', valor: numero(d) },
       ],
     },
-    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-11')[0]!, { pessoas: a, prato: b, sobremesa: c, cupom: d }),
+    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-11')[0]!, {
+      pessoas: a,
+      prato: b,
+      sobremesa: c,
+      cupom: d,
+    }),
   };
 }
 
@@ -233,7 +268,7 @@ export function doisTrechos(rng: Rng): Contexto {
   const b = rng.inteiro(15, 60);
   const c = rng.inteiro(10, 80);
 
-    return {
+  return {
     arvore: somar(numero(c), multiplicar(numero(a), numero(b))),
     termos: {
       inicial: numero(c),
@@ -242,7 +277,11 @@ export function doisTrechos(rng: Rng): Contexto {
         { operador: '*', valor: numero(b) },
       ],
     },
-    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-12')[0]!, { dias: a, porDia: b, ultimoTrecho: c }),
+    texto: enunciadoDoMolde(moldesDe('operacoes-fundamentais', 'forma-12')[0]!, {
+      dias: a,
+      porDia: b,
+      ultimoTrecho: c,
+    }),
   };
 }
 

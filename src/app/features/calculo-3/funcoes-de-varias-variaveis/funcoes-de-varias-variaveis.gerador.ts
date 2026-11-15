@@ -89,11 +89,7 @@ function daAvaliacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `av-${q.a}${q.b}${q.c}${q.d}${q.e}${q.f0}-${x}-${y}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('funcoes-de-varias-variaveis', 'forma-1')[0]!,
-      { x, y, PEDIDO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-1')[0]!, { x, y }, 'pt'),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {
@@ -154,11 +150,7 @@ function daCurvaDeNivel(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `nv-${q.a}${q.b}${q.c}${q.d}${q.e}${q.f0}-${x}-${y}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('funcoes-de-varias-variaveis', 'forma-2')[0]!,
-      { x, y, PEDIDO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-2')[0]!, { x, y }, 'pt'),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {
@@ -223,11 +215,7 @@ function doCorte(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ct-${q.a}${q.b}${q.c}${q.d}${q.e}${q.f0}-${y0}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('funcoes-de-varias-variaveis', 'forma-3')[0]!,
-      { y0, PEDIDO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-3')[0]!, { y0 }, 'pt'),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: corteVerticalComPassos(q, y0),

@@ -93,7 +93,6 @@ export function textoDoMolde(
   valores: Readonly<Record<string, number | string>>,
   idioma: Idioma,
 ): string {
-
   // Sem tradução, o português responde: é o que a tela já mostrava antes de o
   // texto sair do gerador, e meia tradução é pior que nenhuma.
   const escrito =

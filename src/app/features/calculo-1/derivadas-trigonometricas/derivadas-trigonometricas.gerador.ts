@@ -46,7 +46,6 @@ const CASAS = 3;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
 /** O enunciado avisa as duas formas aceitas, porque as duas são digitáveis. */
-const PEDIDO = 'Responda na forma exata ou com 3 casas decimais.';
 
 type Tipo = 'tabela' | 'cadeia' | 'tangente' | 'produto' | 'potencia' | 'segunda' | 'reta';
 
@@ -109,7 +108,7 @@ function daTabela(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-trigonometricas', 'forma-1')[0]!,
-      { expressao1: arcoTexto(arco), PEDIDO },
+      { expressao1: arcoTexto(arco) },
       'pt',
     ),
     enunciadoTex: `f(x) = ${trigParaTex(funcao, a, 1)}`,
@@ -195,7 +194,7 @@ function comCadeia(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-trigonometricas', 'forma-2')[0]!,
-      { expressao1: arcoTexto(arco), PEDIDO },
+      { expressao1: arcoTexto(arco) },
       'pt',
     ),
     enunciadoTex: `f(x) = ${trigParaTex(funcao, a, b)}`,
@@ -226,7 +225,7 @@ function daTangente(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-trigonometricas', 'forma-3')[0]!,
-      { expressao1: arcoTexto(arco), PEDIDO },
+      { expressao1: arcoTexto(arco) },
       'pt',
     ),
     enunciadoTex: `f(x) = ${trigParaTex('tan', a, b)}`,
@@ -284,7 +283,7 @@ function doProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-trigonometricas', 'forma-4')[0]!,
-      { expressao1: arcoTexto(arco), PEDIDO },
+      { expressao1: arcoTexto(arco) },
       'pt',
     ),
     enunciadoTex: `f(x) = ${n === 1 ? 'x' : `x^{${n}}`}\\,${funcao === 'sen' ? '\\operatorname{sen}' : '\\cos'}(x)`,
@@ -340,7 +339,7 @@ function daPotencia(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('derivadas-trigonometricas', 'forma-5')[0]!,
-      { expressao1: arcoTexto(arco), PEDIDO },
+      { expressao1: arcoTexto(arco) },
       'pt',
     ),
     enunciadoTex: `f(x) = ${funcao === 'sen' ? '\\operatorname{sen}' : '\\cos'}^{${n}}(x)`,

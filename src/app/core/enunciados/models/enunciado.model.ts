@@ -116,13 +116,28 @@ export const CHAVE_DO_TOTAL = 'total';
  */
 export const CHAVES_RESERVADAS: readonly string[] = [CHAVE_DO_TOTAL, 'acao'];
 
-/*
+/**
+ * O arquivo é agrupado POR TÓPICO, e aqui ele vira uma lista plana.
+ *
+ * Agrupado porque é assim que se lê e se edita: todas as perguntas de Frações
+ * juntas, com o nome do tópico escrito uma vez. Plano porque é assim que o
+ * código procura — por tópico e nível, ou por tópico e forma. O `topico` volta
+ * para dentro de cada entrada nesta linha, e o resto do site nem sabe que o
+ * arquivo tem dois níveis.
+ *
  * `as unknown` no meio do caminho porque o TypeScript infere do JSON um tipo
  * fechado — com `x3?: undefined` nas entradas que não usam `x3` —, e esse tipo
  * não é comparável a um `Record<string, string>`. O guarda do banco confere o
  * formato de verdade, entrada por entrada, e é ele que vale aqui.
  */
-const ENTRADAS = banco as unknown as readonly EnunciadoDoBanco[];
+interface TopicoDoArquivo {
+  readonly topico: string;
+  readonly enunciados: readonly Omit<EnunciadoDoBanco, 'topico'>[];
+}
+
+const ENTRADAS: readonly EnunciadoDoBanco[] = (
+  banco as unknown as readonly TopicoDoArquivo[]
+).flatMap((grupo) => grupo.enunciados.map((entrada) => ({ ...entrada, topico: grupo.topico })));
 
 /** Tudo o que está no arquivo, as duas naturezas juntas. */
 export function todasAsEntradas(): readonly EnunciadoDoBanco[] {

@@ -34,8 +34,6 @@ import {
 const CASAS = 3;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 3 casas decimais.';
-
 type Tipo = 'vertice' | 'ponto-x' | 'ponto-y' | 'horizontal' | 'zero-deslocado';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
@@ -89,11 +87,7 @@ function doVertice(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ver-${t.a}-${t.h}-${t.k}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('transformacoes-de-graficos', 'forma-1')[0]!,
-      { PEDIDO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-1')[0]!, {}, 'pt'),
     enunciadoTex: parabolaTex(t),
     gabarito: t.h,
     resolucao: verticeTransformadoComPassos(t),
@@ -140,7 +134,7 @@ function doPontoX(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('transformacoes-de-graficos', 'forma-2')[0]!,
-      { v1: ponto.x, v2: ponto.y, PEDIDO },
+      { v1: ponto.x, v2: ponto.y },
       'pt',
     ),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
@@ -192,7 +186,7 @@ function doPontoY(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('transformacoes-de-graficos', 'forma-3')[0]!,
-      { v1: ponto.x, v2: ponto.y, PEDIDO },
+      { v1: ponto.x, v2: ponto.y },
       'pt',
     ),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
@@ -247,7 +241,7 @@ function daHorizontal(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('transformacoes-de-graficos', 'forma-4')[0]!,
-      { largura, PEDIDO },
+      { largura },
       'pt',
     ),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
@@ -286,11 +280,7 @@ function doZeroDeslocado(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `zer-${t.a}${t.b}${t.h}-${zero}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('transformacoes-de-graficos', 'forma-5')[0]!,
-      { zero, PEDIDO },
-      'pt',
-    ),
+    enunciado: textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-5')[0]!, { zero }, 'pt'),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito: destino.x,
     resolucao: pontoTransformadoComPassos({ x: zero, y: 0 }, t),

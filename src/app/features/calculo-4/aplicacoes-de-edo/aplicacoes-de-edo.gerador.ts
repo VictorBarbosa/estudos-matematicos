@@ -32,8 +32,6 @@ import {
 const CASAS = 4;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 4 casas decimais.';
-
 type Tipo = 'resfriamento' | 'decaimento' | 'circuito-rl' | 'mola' | 'tanque';
 
 const TIPOS_POR_NIVEL: Readonly<Record<Nivel, readonly Tipo[]>> = {
@@ -84,7 +82,7 @@ function doResfriamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('aplicacoes-de-edo', 'forma-1')[0]!,
-      { inicial, ambiente, expressao1: String(k).replace('.', ','), t, PEDIDO },
+      { inicial, ambiente, expressao1: String(k).replace('.', ','), t },
       'pt',
     ),
     enunciadoTex: `\\frac{dT}{dt} = -${formatar(k)}\\left(T - ${ambiente}\\right)`,
@@ -139,7 +137,7 @@ function doDecaimento(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('aplicacoes-de-edo', 'forma-2')[0]!,
-      { inicial, meiaVida, t, PEDIDO },
+      { inicial, meiaVida, t },
       'pt',
     ),
     enunciadoTex: `\\frac{dm}{dt} = -km, \\qquad k = \\frac{\\ln 2}{${meiaVida}}`,
@@ -210,7 +208,6 @@ function doCircuito(nivel: Nivel, rng: Rng): Exercicio<number> {
         expressao1: String(indutancia).replace('.', ','),
         tensao,
         expressao2: String(t).replace('.', ','),
-        PEDIDO,
       },
       'pt',
     ),
@@ -276,7 +273,6 @@ function daMola(nivel: Nivel, rng: Rng): Exercicio<number> {
         amortecimento,
         expressao1: String(x0).replace('.', ','),
         expressao2: String(t).replace('.', ','),
-        PEDIDO,
       },
       'pt',
     ),
@@ -335,7 +331,7 @@ function doTanque(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('aplicacoes-de-edo', 'forma-5')[0]!,
-      { volume, vazao, expressao1: String(concentracao).replace('.', ','), inicial, t, PEDIDO },
+      { volume, vazao, expressao1: String(concentracao).replace('.', ','), inicial, t },
       'pt',
     ),
     enunciadoTex: `\\frac{dS}{dt} = ${formatar(q)} - \\frac{${vazao}}{${volume}}S`,

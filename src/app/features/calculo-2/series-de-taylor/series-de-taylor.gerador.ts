@@ -40,8 +40,6 @@ import {
 const CASAS = 5;
 const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
-const PEDIDO = 'Responda com 5 casas decimais.';
-
 /** Os pontos de avaliação, respeitando o raio de cada série. */
 const PONTOS_AMPLOS: readonly number[] = [-2, -1.5, -1, -0.5, 0.5, 1, 1.5, 2];
 const PONTOS_ESTREITOS: readonly number[] = [-0.75, -0.5, -0.25, 0.25, 0.5, 0.75];
@@ -95,7 +93,7 @@ function doCoeficiente(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `coef-${funcao}-${n}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('series-de-taylor', 'forma-1')[0]!, { n, PEDIDO }, 'pt'),
+    enunciado: textoDoMolde(moldesDe('series-de-taylor', 'forma-1')[0]!, { n }, 'pt'),
     enunciadoTex: FUNCAO_TEX[funcao],
     gabarito,
     resolucao: coeficienteComPassos(funcao, n),
@@ -156,7 +154,7 @@ function daAproximacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('series-de-taylor', 'forma-2')[0]!,
-      { grau, expressao1: String(x).replace('.', ','), PEDIDO },
+      { grau, expressao1: String(x).replace('.', ',') },
       'pt',
     ),
     enunciadoTex: FUNCAO_TEX[funcao],
@@ -212,7 +210,7 @@ function doErro(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('series-de-taylor', 'forma-3')[0]!,
-      { expressao1: String(x).replace('.', ','), grau, PEDIDO },
+      { expressao1: String(x).replace('.', ','), grau },
       'pt',
     ),
     enunciadoTex: FUNCAO_TEX[funcao],
@@ -274,7 +272,6 @@ function daCota(nivel: Nivel, rng: Rng): Exercicio<number> {
         expressao2: String(x).replace('.', ','),
         grau,
         expressao3: Number(cota.toFixed(4)).toString().replace('.', ','),
-        PEDIDO,
       },
       'pt',
     ),
@@ -328,7 +325,7 @@ function daRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
     rng,
     enunciado: textoDoMolde(
       moldesDe('series-de-taylor', 'forma-5')[0]!,
-      { expressao1: String(x).replace('.', ','), grau, a, PEDIDO },
+      { expressao1: String(x).replace('.', ','), grau, a },
       'pt',
     ),
     enunciadoTex: `f(x) = \\sqrt{x} \\quad\\text{em torno de } x = ${a}`,
