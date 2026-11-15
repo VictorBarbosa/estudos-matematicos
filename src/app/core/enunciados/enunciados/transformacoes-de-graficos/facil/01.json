@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "O ponto ({dados-calculo.x}, {dados-calculo.y}) pertence ao gráfico de f. Qual é a ordenada do ponto correspondente no gráfico de f somada a {dados-calculo.k}?",
+    "fr": "Le point ({dados-calculo.x}, {dados-calculo.y}) appartient au graphe de f. Quelle est l’ordonnée du point correspondant sur le graphe de f augmentée de {dados-calculo.k} ?",
+    "en": "The point ({dados-calculo.x}, {dados-calculo.y}) is on the graph of f. What is the y-coordinate of the matching point on the graph of f plus {dados-calculo.k}?"
+  },
+  "dados-calculo": {
+    "x": "5",
+    "y": "0",
+    "k": "1",
+    "total": "1"
+  }
+}

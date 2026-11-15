@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma corda de violão de {dados-calculo.expressao1} m, presa nas duas pontas, conduz ondas a {dados-calculo.v} m/s. Qual é {dados-calculo.nome}, em Hz?{dados-calculo.expressao2}"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma máquina enche {dados-calculo.garrafas} garrafas em {dados-calculo.minutos} minutos. Quantas garrafas {dados-calculo.maquinas} máquinas iguais enchem em {dados-calculo.horas} horas?",
+    "fr": "Une machine remplit {dados-calculo.garrafas} bouteilles en {dados-calculo.minutos} minutes. Combien de bouteilles {dados-calculo.maquinas} machines identiques remplissent-elles en {dados-calculo.horas} heures ?",
+    "en": "One machine fills {dados-calculo.garrafas} bottles in {dados-calculo.minutos} minutes. How many bottles do {dados-calculo.maquinas} identical machines fill in {dados-calculo.horas} hours?"
+  },
+  "dados-calculo": {
+    "garrafas": "180",
+    "minutos": "12",
+    "maquinas": "4",
+    "horas": "3",
+    "total": "10800"
+  }
+}

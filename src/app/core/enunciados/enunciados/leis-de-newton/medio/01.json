@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o peso, em newtons, de um corpo de {dados-calculo.massa} kg num lugar onde a gravidade vale {dados-calculo.gravidade} m/s²? (duas casas decimais)",
+    "fr": "Quel est le poids, en newtons, d’un corps de {dados-calculo.massa} kg là où la gravité vaut {dados-calculo.gravidade} m/s² ? (deux décimales)",
+    "en": "What is the weight, in newtons, of a {dados-calculo.massa} kg body where gravity is {dados-calculo.gravidade} m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "12",
+    "gravidade": "9.81",
+    "total": "117.72"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma espira de área {dados-calculo.area} m² está perpendicular a um campo magnético de {dados-calculo.campo} T. Qual é o fluxo magnético, em webers?",
+    "fr": "Une spire d’aire {dados-calculo.area} m² est perpendiculaire à un champ magnétique de {dados-calculo.campo} T. Quel est le flux magnétique, en webers ?",
+    "en": "A loop of area {dados-calculo.area} m² is perpendicular to a {dados-calculo.campo} T magnetic field. What is the magnetic flux, in webers?"
+  },
+  "dados-calculo": {
+    "area": "0.25",
+    "campo": "0.4",
+    "total": "0.1"
+  }
+}

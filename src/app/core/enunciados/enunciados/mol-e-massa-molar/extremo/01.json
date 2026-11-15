@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa molar do ácido sulfúrico, H₂SO₄, em g/mol? (duas casas decimais)",
+    "fr": "Quelle est la masse molaire de l’acide sulfurique, H₂SO₄, en g/mol ? (deux décimales)",
+    "en": "What is the molar mass of sulfuric acid, H₂SO₄, in g/mol? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "98.08"
+  }
+}

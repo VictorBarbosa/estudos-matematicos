@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um deslocamento tem {dados-calculo.x} km para o leste e {dados-calculo.y} km para o norte. Que ângulo ele forma com o leste, em graus, no sentido anti-horário? (duas casas decimais)",
+    "fr": "Un déplacement a {dados-calculo.x} km vers l’est et {dados-calculo.y} km vers le nord. Quel angle forme-t-il avec l’est, en degrés, dans le sens antihoraire ? (deux décimales)",
+    "en": "A displacement is {dados-calculo.x} km east and {dados-calculo.y} km north. What angle does it make with east, in degrees, counterclockwise? (two decimal places)"
+  },
+  "dados-calculo": {
+    "x": "3",
+    "y": "4",
+    "total": "53.13"
+  }
+}

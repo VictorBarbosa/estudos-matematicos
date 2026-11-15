@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um poliedro convexo tem todas as faces triangulares e {dados-calculo.vertices} vértices. Quantas faces ele tem?",
+    "fr": "Un polyèdre convexe a toutes ses faces triangulaires et {dados-calculo.vertices} sommets. Combien de faces a-t-il ?",
+    "en": "A convex polyhedron has all triangular faces and {dados-calculo.vertices} vertices. How many faces does it have?"
+  },
+  "dados-calculo": {
+    "vertices": "10",
+    "total": "16"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma caixa tem a forma de um prisma cuja base é um polígono de {dados-calculo.lados} lados. Quantas arestas tem essa caixa?",
+    "fr": "Une boîte a la forme d’un prisme dont la base est un polygone de {dados-calculo.lados} côtés. Combien d’arêtes a cette boîte ?",
+    "en": "A box is shaped like a prism whose base is a polygon with {dados-calculo.lados} sides. How many edges does the box have?"
+  },
+  "dados-calculo": {
+    "lados": "5",
+    "total": "15"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Aproximando esta função em x = {dados-calculo.expressao1} pelo polinômio de Maclaurin de grau {dados-calculo.grau}, de quanto é o erro cometido? Responda com 5 casas decimais."
+  }
+}

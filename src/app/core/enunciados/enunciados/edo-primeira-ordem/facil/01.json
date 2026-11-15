@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma população cresce de modo que a taxa de variação é {dados-calculo.k} vezes a própria população. Qual é a constante que multiplica o tempo no expoente da solução?",
+    "fr": "Une population croît de sorte que le taux de variation est {dados-calculo.k} fois la population elle-même. Quelle est la constante qui multiplie le temps dans l’exposant de la solution ?",
+    "en": "A population grows so that the rate of change is {dados-calculo.k} times the population itself. What constant multiplies the time in the exponent of the solution?"
+  },
+  "dados-calculo": {
+    "k": "9",
+    "total": "9"
+  }
+}

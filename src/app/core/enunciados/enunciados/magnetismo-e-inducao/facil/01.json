@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um fio de {dados-calculo.comprimento} m, percorrido por {dados-calculo.corrente} A, está perpendicular a um campo magnético de {dados-calculo.campo} T. Qual é a força sobre ele, em newtons?",
+    "fr": "Un fil de {dados-calculo.comprimento} m, parcouru par {dados-calculo.corrente} A, est perpendiculaire à un champ magnétique de {dados-calculo.campo} T. Quelle est la force sur lui, en newtons ?",
+    "en": "A wire {dados-calculo.comprimento} m long carrying {dados-calculo.corrente} A is perpendicular to a {dados-calculo.campo} T magnetic field. What is the force on it, in newtons?"
+  },
+  "dados-calculo": {
+    "comprimento": "2",
+    "corrente": "4",
+    "campo": "0.5",
+    "total": "4"
+  }
+}

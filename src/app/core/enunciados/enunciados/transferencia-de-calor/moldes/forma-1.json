@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma placa de {dados-calculo.v1} tem {dados-calculo.v2} m² de área e {dados-calculo.v3} m de espessura, com uma diferença de {dados-calculo.deltaT} K entre as faces. A condutividade é {dados-calculo.v4} W/(m·K). Qual é o fluxo de calor, em W? Responda com 3 casas decimais."
+  }
+}

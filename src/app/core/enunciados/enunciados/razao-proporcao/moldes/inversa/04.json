@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} bombas esvaziam um reservatório em {dados-calculo.b} horas. Em quantas horas {dados-calculo.c} bombas iguais o esvaziam?",
+    "fr": "{dados-calculo.a} pompes vident un réservoir en {dados-calculo.b} heures. En combien d'heures {dados-calculo.c} pompes identiques le vident-elles ?",
+    "en": "{dados-calculo.a} pumps empty a reservoir in {dados-calculo.b} hours. In how many hours do {dados-calculo.c} identical pumps empty it?"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma função divide {dados-calculo.a} vezes x mais {dados-calculo.b} por {dados-calculo.c} vezes x mais {dados-calculo.d}. Em que valor de y está a assíntota horizontal? (três casas decimais)",
+    "fr": "Une fonction divise {dados-calculo.a} fois x plus {dados-calculo.b} par {dados-calculo.c} fois x plus {dados-calculo.d}. À quelle valeur de y se trouve l’asymptote horizontale ? (trois décimales)",
+    "en": "A function divides {dados-calculo.a} times x plus {dados-calculo.b} by {dados-calculo.c} times x plus {dados-calculo.d}. At what value of y is the horizontal asymptote? (three decimal places)"
+  },
+  "dados-calculo": {
+    "a": "6",
+    "b": "1",
+    "c": "4",
+    "d": "5",
+    "total": "1.500"
+  }
+}

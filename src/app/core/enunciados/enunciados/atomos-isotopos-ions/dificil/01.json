@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "O cloro tem dois isótopos naturais: massa {dados-calculo.massa1} com {dados-calculo.abundancia1}% de abundância e massa {dados-calculo.massa2} com o restante. Qual é a massa atômica média?",
+    "fr": "Le chlore a deux isotopes naturels : masse {dados-calculo.massa1} avec {dados-calculo.abundancia1}% d’abondance et masse {dados-calculo.massa2} pour le reste. Quelle est la masse atomique moyenne ?",
+    "en": "Chlorine has two natural isotopes: mass {dados-calculo.massa1} at {dados-calculo.abundancia1}% abundance and mass {dados-calculo.massa2} for the rest. What is the average atomic mass?"
+  },
+  "dados-calculo": {
+    "massa1": "35",
+    "abundancia1": "75",
+    "massa2": "37",
+    "total": "35.5"
+  }
+}

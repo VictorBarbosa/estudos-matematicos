@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma partícula de {dados-calculo.massa} kg passa a {dados-calculo.distancia} m de um ponto, com velocidade de {dados-calculo.velocidade} m/s perpendicular à linha que a liga ao ponto. Qual é o momento angular, em kg·m²/s? (três casas decimais)",
+    "fr": "Une particule de {dados-calculo.massa} kg passe à {dados-calculo.distancia} m d’un point, avec une vitesse de {dados-calculo.velocidade} m/s perpendiculaire à la ligne qui la relie au point. Quel est le moment cinétique, en kg·m²/s ? (trois décimales)",
+    "en": "A {dados-calculo.massa} kg particle passes {dados-calculo.distancia} m from a point, at {dados-calculo.velocidade} m/s perpendicular to the line joining it to the point. What is the angular momentum, in kg·m²/s? (three decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "2",
+    "distancia": "4",
+    "velocidade": "3",
+    "total": "24.000"
+  }
+}

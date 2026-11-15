@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Use a fórmula do arco duplo para calcular o seno do dobro de {dados-calculo.angulo}°. (duas casas decimais)",
+    "fr": "Utilisez la formule de l’arc double pour calculer le sinus du double de {dados-calculo.angulo}°. (deux décimales)",
+    "en": "Use the double angle formula to work out the sine of twice {dados-calculo.angulo}°. (two decimal places)"
+  },
+  "dados-calculo": {
+    "angulo": "15",
+    "total": "0.50"
+  }
+}

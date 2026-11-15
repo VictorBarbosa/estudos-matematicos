@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na dimensão de energia, cuja unidade é o joule, qual é o expoente de T (tempo)? Responda 0 se ele não aparecer.",
+    "fr": "Dans la dimension de l’énergie, dont l’unité est le joule, quel est l’exposant de T (temps) ? Répondez 0 s’il n’apparaît pas.",
+    "en": "In the dimension of energy, whose unit is the joule, what is the exponent of T (time)? Answer 0 if it does not appear."
+  },
+  "dados-calculo": {
+    "total": "-2"
+  }
+}

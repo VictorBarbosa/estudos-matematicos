@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Paguei R$ {dados-calculo.taxa} de frete e comprei {dados-calculo.q} cadernos a R$ {dados-calculo.preco} cada um. Quanto gastei ao todo?",
+    "fr": "J'ai payé {dados-calculo.taxa} $ de livraison et acheté {dados-calculo.q} cahiers à {dados-calculo.preco} $ chacun. Combien ai-je dépensé en tout ?",
+    "en": "I paid ${dados-calculo.taxa} for shipping and bought {dados-calculo.q} notebooks at ${dados-calculo.preco} each. How much did I spend in total?"
+  },
+  "dica": {
+    "br": "O frete é cobrado uma vez, não por caderno. Qual parcela multiplica e qual soma?",
+    "fr": "La livraison est facturée une fois, pas par cahier. Quelle part multiplie et quelle part additionne ?",
+    "en": "Shipping is charged once, not per notebook. Which part multiplies and which one adds?"
+  }
+}

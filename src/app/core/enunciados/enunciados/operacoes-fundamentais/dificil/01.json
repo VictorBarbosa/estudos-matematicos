@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma escola comprou {dados-calculo.caixas} caixas de livros, cada uma com {dados-calculo.porCaixa} livros, e doou {dados-calculo.doados} livros para a biblioteca do bairro. Quantos livros ficaram na escola?",
+    "fr": "Une école a acheté {dados-calculo.caixas} cartons de livres, chacun contenant {dados-calculo.porCaixa} livres, et a donné {dados-calculo.doados} livres à la bibliothèque du quartier. Combien de livres reste-t-il à l’école ?",
+    "en": "A school bought {dados-calculo.caixas} boxes of books, each holding {dados-calculo.porCaixa} books, and donated {dados-calculo.doados} books to the neighbourhood library. How many books are left at the school?"
+  },
+  "dados-calculo": {
+    "caixas": "14",
+    "porCaixa": "12",
+    "doados": "38",
+    "total": "130"
+  }
+}

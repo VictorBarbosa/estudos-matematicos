@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A posição de um corpo, em metros, é o cubo do tempo menos {dados-calculo.b} vezes o quadrado do tempo. Em que instante, em segundos, a aceleração é zero?",
+    "fr": "La position d’un corps, en mètres, est le cube du temps moins {dados-calculo.b} fois le carré du temps. À quel instant, en secondes, l’accélération est-elle nulle ?",
+    "en": "A body’s position, in metres, is the cube of the time minus {dados-calculo.b} times the square of the time. At what time, in seconds, is the acceleration zero?"
+  },
+  "dados-calculo": {
+    "b": "6",
+    "total": "2"
+  }
+}

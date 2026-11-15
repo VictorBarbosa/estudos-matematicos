@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um corpo de {dados-calculo.v1} kg gira em círculo de {dados-calculo.v2} m de raio com período de {dados-calculo.periodo} s. Qual é o módulo da força centrípeta, em N? Responda com 3 casas decimais."
+  }
+}

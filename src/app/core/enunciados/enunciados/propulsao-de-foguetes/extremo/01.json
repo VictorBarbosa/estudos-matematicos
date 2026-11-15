@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Que razão entre a massa inicial e a final um foguete precisa para ganhar {dados-calculo.incremento} m/s de velocidade, com velocidade de exaustão de {dados-calculo.exaustao} m/s? (duas casas decimais)",
+    "fr": "Quel rapport entre masse initiale et finale une fusée doit-elle avoir pour gagner {dados-calculo.incremento} m/s de vitesse, avec une vitesse d’éjection de {dados-calculo.exaustao} m/s ? (deux décimales)",
+    "en": "What initial-to-final mass ratio does a rocket need to gain {dados-calculo.incremento} m/s of velocity, with an exhaust velocity of {dados-calculo.exaustao} m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "incremento": "3000",
+    "exaustao": "3000",
+    "total": "2.72"
+  }
+}

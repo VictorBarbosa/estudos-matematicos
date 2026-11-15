@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A área acumulada sob a reta que vale {dados-calculo.a} vezes x, a partir de zero, é avaliada em x = {dados-calculo.ponto}. Quanto ela vale?",
+    "fr": "L’aire accumulée sous la droite qui vaut {dados-calculo.a} fois x, à partir de zéro, est évaluée en x = {dados-calculo.ponto}. Combien vaut-elle ?",
+    "en": "The area accumulated under the line equal to {dados-calculo.a} times x, starting from zero, is evaluated at x = {dados-calculo.ponto}. What is it?"
+  },
+  "dados-calculo": {
+    "a": "6",
+    "ponto": "5",
+    "total": "75"
+  }
+}

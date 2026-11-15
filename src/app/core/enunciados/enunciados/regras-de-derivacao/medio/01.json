@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Derive a função que vale {dados-calculo.a} vezes o cubo de x, e informe o valor da derivada em x = {dados-calculo.ponto}.",
+    "fr": "Dérivez la fonction qui vaut {dados-calculo.a} fois le cube de x, et donnez la valeur de la dérivée en x = {dados-calculo.ponto}.",
+    "en": "Differentiate the function that is {dados-calculo.a} times x cubed, and give the value of the derivative at x = {dados-calculo.ponto}."
+  },
+  "dados-calculo": {
+    "a": "2",
+    "ponto": "3",
+    "total": "54"
+  }
+}

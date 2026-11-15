@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma amostra cai para {dados-calculo.fracao} do valor inicial em {dados-calculo.anos} anos, dividindo-se pela metade sempre no mesmo intervalo. Qual é a meia-vida, em anos?",
+    "fr": "Un échantillon tombe à {dados-calculo.fracao} de sa valeur initiale en {dados-calculo.anos} ans, en se divisant par deux toujours dans le même intervalle. Quelle est la demi-vie, en années ?",
+    "en": "A sample falls to {dados-calculo.fracao} of its starting value in {dados-calculo.anos} years, halving over the same interval each time. What is the half-life, in years?"
+  },
+  "dados-calculo": {
+    "fracao": "1/8",
+    "anos": "18",
+    "total": "6"
+  }
+}

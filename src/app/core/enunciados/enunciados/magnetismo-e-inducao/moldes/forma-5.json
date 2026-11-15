@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma bobina de {dados-calculo.n} espiras, cada uma com {dados-calculo.a} cm², está perpendicular a um campo que passa de {dados-calculo.v1} T para {dados-calculo.v2} T em {dados-calculo.v3} s. Qual é o módulo da fem induzida, em V? (2 casas decimais)"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "A função f multiplica por {dados-calculo.fator} e soma {dados-calculo.soma}; a função g soma {dados-calculo.somaG}. Quanto vale f aplicada a g de {dados-calculo.x}?",
+    "fr": "La fonction f multiplie par {dados-calculo.fator} et ajoute {dados-calculo.soma} ; la fonction g ajoute {dados-calculo.somaG}. Combien vaut f appliquée à g de {dados-calculo.x} ?",
+    "en": "The function f multiplies by {dados-calculo.fator} and adds {dados-calculo.soma}; the function g adds {dados-calculo.somaG}. What is f applied to g of {dados-calculo.x}?"
+  },
+  "dados-calculo": {
+    "fator": "2",
+    "soma": "1",
+    "somaG": "3",
+    "x": "4",
+    "total": "15"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "O gráfico de f corta o eixo x em x = {dados-calculo.zero}. Deslocando o gráfico {dados-calculo.deslocamento} unidades para a direita, em que valor de x fica o novo zero?",
+    "fr": "Le graphe de f coupe l’axe des x en x = {dados-calculo.zero}. En décalant le graphe de {dados-calculo.deslocamento} unités vers la droite, à quelle valeur de x se trouve le nouveau zéro ?",
+    "en": "The graph of f crosses the x-axis at x = {dados-calculo.zero}. Shifting the graph {dados-calculo.deslocamento} units to the right, at what value of x is the new zero?"
+  },
+  "dados-calculo": {
+    "zero": "2",
+    "deslocamento": "5",
+    "total": "7"
+  }
+}

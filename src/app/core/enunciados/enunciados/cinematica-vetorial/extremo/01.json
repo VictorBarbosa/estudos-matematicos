@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um avião voa a {dados-calculo.aviao} km/h em relação ao ar e quer seguir exatamente para o norte, com um vento de {dados-calculo.vento} km/h para o leste. Que ângulo, em graus, ele deve apontar para o oeste do norte? (duas casas decimais)",
+    "fr": "Un avion vole à {dados-calculo.aviao} km/h par rapport à l’air et veut aller exactement vers le nord, avec un vent de {dados-calculo.vento} km/h vers l’est. De quel angle, en degrés, doit-il pointer à l’ouest du nord ? (deux décimales)",
+    "en": "A plane flies at {dados-calculo.aviao} km/h relative to the air and wants to head due north, with a {dados-calculo.vento} km/h wind towards the east. By what angle, in degrees, must it point west of north? (two decimal places)"
+  },
+  "dados-calculo": {
+    "aviao": "200",
+    "vento": "50",
+    "total": "14.48"
+  }
+}

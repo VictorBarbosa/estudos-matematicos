@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A combustão do propano é C₃H₈ + O₂ → CO₂ + H₂O. Balanceando com os menores inteiros, qual é o coeficiente do O₂?",
+    "fr": "La combustion du propane est C₃H₈ + O₂ → CO₂ + H₂O. En équilibrant avec les plus petits entiers, quel est le coefficient de O₂ ?",
+    "en": "The combustion of propane is C₃H₈ + O₂ → CO₂ + H₂O. Balancing with the smallest whole numbers, what is the coefficient of O₂?"
+  },
+  "dados-calculo": {
+    "total": "5"
+  }
+}

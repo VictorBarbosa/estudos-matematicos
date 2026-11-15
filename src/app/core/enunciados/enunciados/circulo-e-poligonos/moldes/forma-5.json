@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um polígono regular de {dados-calculo.lados} lados tem lado {dados-calculo.base} cm e apótema {dados-calculo.v1} cm. Qual é sua área? (em cm², 2 casas decimais)"
+  }
+}

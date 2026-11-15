@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa, em gramas, de {dados-calculo.mols} mol de gás carbônico? (duas casas decimais)",
+    "fr": "Quelle est la masse, en grammes, de {dados-calculo.mols} mol de dioxyde de carbone ? (deux décimales)",
+    "en": "What is the mass, in grams, of {dados-calculo.mols} mol of carbon dioxide? (two decimal places)"
+  },
+  "dados-calculo": {
+    "mols": "3",
+    "total": "132.03"
+  }
+}

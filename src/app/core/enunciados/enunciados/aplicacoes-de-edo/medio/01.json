@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Um corpo a {dados-calculo.corpo} °C num ambiente a {dados-calculo.ambiente} °C perde metade da diferença de temperatura a cada {dados-calculo.intervalo} minutos. Que temperatura, em °C, ele tem depois de {dados-calculo.tempo} minutos?",
+    "fr": "Un corps à {dados-calculo.corpo} °C dans un milieu à {dados-calculo.ambiente} °C perd la moitié de l’écart de température toutes les {dados-calculo.intervalo} minutes. Quelle température, en °C, a-t-il après {dados-calculo.tempo} minutes ?",
+    "en": "A body at {dados-calculo.corpo} °C in surroundings at {dados-calculo.ambiente} °C loses half of the temperature difference every {dados-calculo.intervalo} minutes. What temperature, in °C, does it have after {dados-calculo.tempo} minutes?"
+  },
+  "dados-calculo": {
+    "corpo": "100",
+    "ambiente": "20",
+    "intervalo": "10",
+    "tempo": "20",
+    "total": "40"
+  }
+}

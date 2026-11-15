@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A combustão do metano é CH₄ + O₂ → CO₂ + H₂O. Balanceando com os menores inteiros, qual é a soma de todos os coeficientes, dos dois lados?",
+    "fr": "La combustion du méthane est CH₄ + O₂ → CO₂ + H₂O. En équilibrant avec les plus petits entiers, quelle est la somme de tous les coefficients, des deux côtés ?",
+    "en": "The combustion of methane is CH₄ + O₂ → CO₂ + H₂O. Balancing with the smallest whole numbers, what is the sum of all coefficients on both sides?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma grandeza tem taxa de variação constante igual a {dados-calculo.taxa} e vale {dados-calculo.inicial} no instante zero. Quanto ela vale no instante {dados-calculo.tempo}?",
+    "fr": "Une grandeur a un taux de variation constant égal à {dados-calculo.taxa} et vaut {dados-calculo.inicial} à l’instant zéro. Combien vaut-elle à l’instant {dados-calculo.tempo} ?",
+    "en": "A quantity has a constant rate of change of {dados-calculo.taxa} and equals {dados-calculo.inicial} at time zero. What is its value at time {dados-calculo.tempo}?"
+  },
+  "dados-calculo": {
+    "taxa": "3",
+    "inicial": "10",
+    "tempo": "5",
+    "total": "25"
+  }
+}

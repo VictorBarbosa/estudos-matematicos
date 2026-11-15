@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um capital de {dados-calculo.capital} reais é aplicado a {dados-calculo.taxa}% por período, a juros compostos, durante {dados-calculo.periodos} períodos. Quantos reais de juros ele rendeu? (duas casas decimais)",
+    "fr": "Un capital de {dados-calculo.capital} reais est placé à {dados-calculo.taxa}% par période, en intérêts composés, pendant {dados-calculo.periodos} périodes. Combien de reais d’intérêts a-t-il rapportés ? (deux décimales)",
+    "en": "An amount of {dados-calculo.capital} reais is invested at {dados-calculo.taxa}% per period, compounded, for {dados-calculo.periodos} periods. How many reais of interest did it earn? (two decimal places)"
+  },
+  "dados-calculo": {
+    "capital": "1000",
+    "taxa": "10",
+    "periodos": "3",
+    "total": "331.00"
+  }
+}

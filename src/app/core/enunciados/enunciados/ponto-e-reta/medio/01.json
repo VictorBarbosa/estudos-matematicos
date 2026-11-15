@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Qual é a abscissa do ponto médio do segmento que une ({dados-calculo.ax}, {dados-calculo.ay}) e ({dados-calculo.bx}, {dados-calculo.by})?",
+    "fr": "Quelle est l’abscisse du milieu du segment reliant ({dados-calculo.ax}, {dados-calculo.ay}) et ({dados-calculo.bx}, {dados-calculo.by}) ?",
+    "en": "What is the x-coordinate of the midpoint of the segment joining ({dados-calculo.ax}, {dados-calculo.ay}) and ({dados-calculo.bx}, {dados-calculo.by})?"
+  },
+  "dados-calculo": {
+    "ax": "1",
+    "ay": "2",
+    "bx": "7",
+    "by": "6",
+    "total": "4"
+  }
+}

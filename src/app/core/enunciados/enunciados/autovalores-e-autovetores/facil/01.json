@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma matriz diagonal 2 por 2 tem {dados-calculo.a} e {dados-calculo.d} na diagonal principal e zeros fora dela. Qual é o maior autovalor?",
+    "fr": "Une matrice diagonale 2 par 2 a {dados-calculo.a} et {dados-calculo.d} sur la diagonale principale et des zéros ailleurs. Quelle est la plus grande valeur propre ?",
+    "en": "A 2 by 2 diagonal matrix has {dados-calculo.a} and {dados-calculo.d} on the main diagonal and zeros elsewhere. What is the largest eigenvalue?"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "d": "7",
+    "total": "7"
+  }
+}

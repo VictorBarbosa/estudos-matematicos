@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é a soma de uma série geométrica infinita de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}?",
+    "fr": "Quelle est la somme d’une série géométrique infinie de premier terme {dados-calculo.primeiro} et de raison {dados-calculo.razao} ?",
+    "en": "What is the sum of an infinite geometric series with first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}?"
+  },
+  "dados-calculo": {
+    "primeiro": "6",
+    "razao": "1/2",
+    "total": "12"
+  }
+}

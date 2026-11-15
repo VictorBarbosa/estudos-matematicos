@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um projétil parte com velocidade horizontal {dados-calculo.vx} m/s e velocidade vertical {dados-calculo.vy} m/s. Em quantos segundos ele volta à altura de partida, com a gravidade valendo {dados-calculo.gravidade} m/s²?",
+    "fr": "Un projectile part avec une vitesse horizontale de {dados-calculo.vx} m/s et une vitesse verticale de {dados-calculo.vy} m/s. En combien de secondes revient-il à sa hauteur de départ, la gravité valant {dados-calculo.gravidade} m/s² ?",
+    "en": "A projectile leaves with horizontal speed {dados-calculo.vx} m/s and vertical speed {dados-calculo.vy} m/s. In how many seconds does it return to its starting height, with gravity at {dados-calculo.gravidade} m/s²?"
+  },
+  "dados-calculo": {
+    "vx": "30",
+    "vy": "20",
+    "gravidade": "10",
+    "total": "4"
+  }
+}

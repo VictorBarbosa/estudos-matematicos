@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Qual é a derivada direcional na direção do eixo x?",
+    "fr": "Une fonction vaut {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Quelle est la dérivée directionnelle dans la direction de l’axe des x ?",
+    "en": "A function equals {dados-calculo.a} times x plus {dados-calculo.b} times y. What is the directional derivative along the x-axis?"
+  },
+  "dados-calculo": {
+    "a": "6",
+    "b": "8",
+    "total": "6"
+  }
+}

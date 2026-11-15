@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma receita para {dados-calculo.pessoas1} pessoas usa {dados-calculo.farinha} g de farinha. Quantos gramas de farinha são necessários para {dados-calculo.pessoas2} pessoas?",
+    "fr": "Une recette pour {dados-calculo.pessoas1} personnes utilise {dados-calculo.farinha} g de farine. Combien de grammes de farine faut-il pour {dados-calculo.pessoas2} personnes ?",
+    "en": "A recipe for {dados-calculo.pessoas1} people uses {dados-calculo.farinha} g of flour. How many grams of flour are needed for {dados-calculo.pessoas2} people?"
+  },
+  "dados-calculo": {
+    "pessoas1": "4",
+    "farinha": "600",
+    "pessoas2": "10",
+    "total": "1500"
+  }
+}

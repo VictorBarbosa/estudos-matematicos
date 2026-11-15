@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um bloco de {dados-calculo.massa} kg é empurrado por uma força de {dados-calculo.forca} N contra um atrito de {dados-calculo.atrito} N. Qual é a aceleração, em m/s²? (duas casas decimais)",
+    "fr": "Un bloc de {dados-calculo.massa} kg est poussé par une force de {dados-calculo.forca} N contre un frottement de {dados-calculo.atrito} N. Quelle est l’accélération, en m/s² ? (deux décimales)",
+    "en": "A {dados-calculo.massa} kg block is pushed by a {dados-calculo.forca} N force against {dados-calculo.atrito} N of friction. What is the acceleration, in m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "10",
+    "forca": "50",
+    "atrito": "20",
+    "total": "3.00"
+  }
+}

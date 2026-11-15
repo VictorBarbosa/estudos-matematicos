@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um projétil parte com velocidade horizontal {dados-calculo.vx} m/s e velocidade vertical {dados-calculo.vy} m/s, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é o alcance horizontal, em metros, quando ele volta à altura de partida?",
+    "fr": "Un projectile part avec une vitesse horizontale de {dados-calculo.vx} m/s et une vitesse verticale de {dados-calculo.vy} m/s, la gravité valant {dados-calculo.gravidade} m/s². Quelle est la portée horizontale, en mètres, à son retour à la hauteur de départ ?",
+    "en": "A projectile leaves with horizontal speed {dados-calculo.vx} m/s and vertical speed {dados-calculo.vy} m/s, with gravity at {dados-calculo.gravidade} m/s². What is the horizontal range, in metres, when it returns to its starting height?"
+  },
+  "dados-calculo": {
+    "vx": "30",
+    "vy": "20",
+    "gravidade": "10",
+    "total": "120"
+  }
+}

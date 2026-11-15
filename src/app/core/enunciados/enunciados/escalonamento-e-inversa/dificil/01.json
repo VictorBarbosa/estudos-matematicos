@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha {dados-calculo.c} e {dados-calculo.d}. Qual é a entrada da linha 1, coluna 1 da matriz inversa?",
+    "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne {dados-calculo.c} et {dados-calculo.d}. Quelle est l’entrée ligne 1, colonne 1 de la matrice inverse ?",
+    "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row {dados-calculo.c} and {dados-calculo.d}. What is the row 1, column 1 entry of the inverse matrix?"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "b": "3",
+    "c": "3",
+    "d": "2",
+    "total": "-2"
+  }
+}

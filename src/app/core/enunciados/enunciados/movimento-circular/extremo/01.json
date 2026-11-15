@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um disco gira a {dados-calculo.rpm} rotações por minuto. Quantos segundos leva uma volta completa? (três casas decimais)",
+    "fr": "Un disque tourne à {dados-calculo.rpm} rotations par minute. Combien de secondes dure un tour complet ? (trois décimales)",
+    "en": "A disc spins at {dados-calculo.rpm} revolutions per minute. How many seconds does one full turn take? (three decimal places)"
+  },
+  "dados-calculo": {
+    "rpm": "120",
+    "total": "0.500"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} digitadores terminam um trabalho em {dados-calculo.b} horas. Em quantas horas {dados-calculo.c} digitadores, no mesmo ritmo, terminam o mesmo trabalho?",
+    "fr": "{dados-calculo.a} dactylos terminent un travail en {dados-calculo.b} heures. En combien d'heures {dados-calculo.c} dactylos, au même rythme, terminent-ils le même travail ?",
+    "en": "{dados-calculo.a} typists finish a job in {dados-calculo.b} hours. In how many hours do {dados-calculo.c} typists, at the same pace, finish the same job?"
+  }
+}

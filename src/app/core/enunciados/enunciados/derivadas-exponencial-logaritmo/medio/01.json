@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma função vale a constante e elevada a x. Quanto vale a sua derivada no ponto em que a própria função vale {dados-calculo.valor}?",
+    "fr": "Une fonction vaut la constante e élevée à x. Combien vaut sa dérivée au point où la fonction elle-même vaut {dados-calculo.valor} ?",
+    "en": "A function is the constant e raised to x. What is its derivative at the point where the function itself equals {dados-calculo.valor}?"
+  },
+  "dados-calculo": {
+    "valor": "5",
+    "total": "5"
+  }
+}

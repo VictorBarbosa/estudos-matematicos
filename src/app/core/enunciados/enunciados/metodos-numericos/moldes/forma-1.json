@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Aplique o método de Euler com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, partindo de y(0) = {dados-calculo.y0}. Qual é o valor aproximado obtido? Responda com 5 casas decimais."
+  }
+}

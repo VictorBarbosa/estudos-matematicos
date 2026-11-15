@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma roda de raio {dados-calculo.raio} m gira com velocidade angular de {dados-calculo.angular} rad/s. Qual é a velocidade linear na borda, em m/s? (três casas decimais)",
+    "fr": "Une roue de rayon {dados-calculo.raio} m tourne à une vitesse angulaire de {dados-calculo.angular} rad/s. Quelle est la vitesse linéaire au bord, en m/s ? (trois décimales)",
+    "en": "A wheel of radius {dados-calculo.raio} m turns at an angular speed of {dados-calculo.angular} rad/s. What is the linear speed at the rim, in m/s? (three decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "0.5",
+    "angular": "20",
+    "total": "10.000"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma bola cai de {dados-calculo.altura} m e, a cada quique, volta a {dados-calculo.fracao} da altura anterior. Somando todas as subidas, de quantos metros ela se aproxima no total?",
+    "fr": "Une balle tombe de {dados-calculo.altura} m et, à chaque rebond, remonte à {dados-calculo.fracao} de la hauteur précédente. En additionnant toutes les remontées, de combien de mètres s’approche-t-elle au total ?",
+    "en": "A ball falls from {dados-calculo.altura} m and on each bounce returns to {dados-calculo.fracao} of the previous height. Adding up all the rises, how many metres does the total approach?"
+  },
+  "dados-calculo": {
+    "altura": "10",
+    "fracao": "1/2",
+    "total": "10"
+  }
+}

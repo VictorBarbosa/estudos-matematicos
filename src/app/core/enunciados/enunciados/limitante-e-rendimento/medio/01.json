@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma reação com rendimento de {dados-calculo.rendimento}% partiu de uma massa teórica de {dados-calculo.teorica} g de produto. Que massa, em gramas, saiu de fato? (duas casas decimais)",
+    "fr": "Une réaction avec un rendement de {dados-calculo.rendimento}% partait d’une masse théorique de {dados-calculo.teorica} g de produit. Quelle masse, en grammes, a réellement été obtenue ? (deux décimales)",
+    "en": "A reaction with a {dados-calculo.rendimento}% yield had a theoretical mass of {dados-calculo.teorica} g of product. What mass, in grams, actually came out? (two decimal places)"
+  },
+  "dados-calculo": {
+    "rendimento": "80",
+    "teorica": "250",
+    "total": "200.00"
+  }
+}

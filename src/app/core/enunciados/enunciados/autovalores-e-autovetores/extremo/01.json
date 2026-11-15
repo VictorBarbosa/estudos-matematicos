@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha 0 e {dados-calculo.d}. Qual é a soma dos seus autovalores?",
+    "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne 0 et {dados-calculo.d}. Quelle est la somme de ses valeurs propres ?",
+    "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row 0 and {dados-calculo.d}. What is the sum of its eigenvalues?"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "b": "9",
+    "d": "2",
+    "total": "7"
+  }
+}

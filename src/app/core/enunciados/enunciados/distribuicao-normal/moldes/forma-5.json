@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que valor deixa {dados-calculo.percentil}% das peças abaixo dele, em {dados-calculo.expressao3}? Responda com 4 casas decimais."
+  }
+}

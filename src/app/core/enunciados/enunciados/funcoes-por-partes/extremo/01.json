@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.antes} para x menor que {dados-calculo.ponto} e vale {dados-calculo.depois} para x maior ou igual a {dados-calculo.ponto}. De quanto é o salto em x = {dados-calculo.ponto}? (três casas decimais)",
+    "fr": "Une fonction vaut {dados-calculo.antes} pour x inférieur à {dados-calculo.ponto} et {dados-calculo.depois} pour x supérieur ou égal à {dados-calculo.ponto}. De combien est le saut en x = {dados-calculo.ponto} ? (trois décimales)",
+    "en": "A function equals {dados-calculo.antes} for x less than {dados-calculo.ponto} and {dados-calculo.depois} for x greater than or equal to {dados-calculo.ponto}. How big is the jump at x = {dados-calculo.ponto}? (three decimal places)"
+  },
+  "dados-calculo": {
+    "antes": "3",
+    "ponto": "0",
+    "depois": "7",
+    "total": "4.000"
+  }
+}

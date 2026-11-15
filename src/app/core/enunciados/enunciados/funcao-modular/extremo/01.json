@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Quantos números inteiros x têm distância até {dados-calculo.a} menor ou igual a {dados-calculo.distancia}?",
+    "fr": "Combien d’entiers x ont une distance jusqu’à {dados-calculo.a} inférieure ou égale à {dados-calculo.distancia} ?",
+    "en": "How many whole numbers x are at a distance from {dados-calculo.a} less than or equal to {dados-calculo.distancia}?"
+  },
+  "dados-calculo": {
+    "a": "0",
+    "distancia": "4",
+    "total": "9"
+  }
+}

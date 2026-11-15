@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Quantos elétrons há na última camada do átomo neutro de oxigênio, cujo número atômico é {dados-calculo.z}?",
+    "fr": "Combien d’électrons y a-t-il sur la dernière couche de l’atome neutre d’oxygène, dont le numéro atomique est {dados-calculo.z} ?",
+    "en": "How many electrons are in the outermost shell of a neutral oxygen atom, whose atomic number is {dados-calculo.z}?"
+  },
+  "dados-calculo": {
+    "z": "8",
+    "total": "6"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Num triângulo, o lado de medida {dados-calculo.ladoA} é oposto ao ângulo de {dados-calculo.anguloA}°. Quanto mede o lado oposto ao ângulo de {dados-calculo.anguloB}°? (2 casas)"
+  }
+}

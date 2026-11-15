@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um retângulo tem o comprimento {dados-calculo.d} cm maior que a largura, e o perímetro mede {dados-calculo.P} cm. Qual é a largura, em cm?"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função divide o quadrado de x menos {dados-calculo.a} por x menos {dados-calculo.b}. Em que valor de x o gráfico tem um buraco, e não uma assíntota?",
+    "fr": "Une fonction divise le carré de x moins {dados-calculo.a} par x moins {dados-calculo.b}. À quelle valeur de x le graphe a-t-il un trou, et non une asymptote ?",
+    "en": "A function divides the square of x minus {dados-calculo.a} by x minus {dados-calculo.b}. At what value of x does the graph have a hole rather than an asymptote?"
+  },
+  "dados-calculo": {
+    "a": "9",
+    "b": "3",
+    "total": "3"
+  }
+}

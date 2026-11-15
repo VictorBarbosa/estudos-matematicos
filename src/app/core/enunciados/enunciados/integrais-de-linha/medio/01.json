@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um campo de força constante de {dados-calculo.forca} N atua PERPENDICULARMENTE ao caminho, de {dados-calculo.comprimento} m. Qual é o trabalho, em joules?",
+    "fr": "Un champ de force constant de {dados-calculo.forca} N agit PERPENDICULAIREMENT au chemin, de {dados-calculo.comprimento} m. Quel est le travail, en joules ?",
+    "en": "A constant force field of {dados-calculo.forca} N acts PERPENDICULAR to the path, which is {dados-calculo.comprimento} m long. What is the work, in joules?"
+  },
+  "dados-calculo": {
+    "forca": "6",
+    "comprimento": "4",
+    "total": "0"
+  }
+}

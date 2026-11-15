@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma caixa d’água cilíndrica tem raio de {dados-calculo.raio} m e altura de {dados-calculo.altura} m. Quantos metros cúbicos ela comporta? (duas casas decimais)",
+    "fr": "Un réservoir cylindrique a un rayon de {dados-calculo.raio} m et une hauteur de {dados-calculo.altura} m. Combien de mètres cubes contient-il ? (deux décimales)",
+    "en": "A cylindrical water tank has a radius of {dados-calculo.raio} m and a height of {dados-calculo.altura} m. How many cubic metres does it hold? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "2",
+    "altura": "3",
+    "total": "37.70"
+  }
+}

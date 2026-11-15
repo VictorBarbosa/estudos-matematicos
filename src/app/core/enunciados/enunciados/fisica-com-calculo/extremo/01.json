@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A aceleração de um corpo é constante e vale {dados-calculo.aceleracao} m/s². Partindo do repouso, qual é a velocidade, em m/s, no instante {dados-calculo.tempo} s?",
+    "fr": "L’accélération d’un corps est constante et vaut {dados-calculo.aceleracao} m/s². Partant du repos, quelle est la vitesse, en m/s, à l’instant {dados-calculo.tempo} s ?",
+    "en": "A body’s acceleration is constant at {dados-calculo.aceleracao} m/s². Starting from rest, what is the speed, in m/s, at {dados-calculo.tempo} s?"
+  },
+  "dados-calculo": {
+    "aceleracao": "4",
+    "tempo": "6",
+    "total": "24"
+  }
+}

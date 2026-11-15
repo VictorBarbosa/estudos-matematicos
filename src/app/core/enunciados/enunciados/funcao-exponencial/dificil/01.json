@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma substância tem meia-vida de {dados-calculo.meiaVida} anos. De uma amostra de {dados-calculo.massa} g, quantos gramas restam depois de {dados-calculo.anos} anos?",
+    "fr": "Une substance a une demi-vie de {dados-calculo.meiaVida} ans. D’un échantillon de {dados-calculo.massa} g, combien de grammes restent après {dados-calculo.anos} ans ?",
+    "en": "A substance has a half-life of {dados-calculo.meiaVida} years. Of a {dados-calculo.massa} g sample, how many grams are left after {dados-calculo.anos} years?"
+  },
+  "dados-calculo": {
+    "meiaVida": "5",
+    "massa": "320",
+    "anos": "20",
+    "total": "20"
+  }
+}

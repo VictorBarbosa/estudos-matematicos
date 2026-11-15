@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o cubo de (x mais {dados-calculo.b}). Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+    "fr": "Une fonction vaut le cube de (x plus {dados-calculo.b}). Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+    "en": "A function is the cube of (x plus {dados-calculo.b}). What is its derivative at x = {dados-calculo.ponto}?"
+  },
+  "dados-calculo": {
+    "b": "1",
+    "ponto": "2",
+    "total": "27"
+  }
+}

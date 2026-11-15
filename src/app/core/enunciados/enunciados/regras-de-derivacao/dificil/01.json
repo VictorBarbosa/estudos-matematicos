@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função é o produto de x por x mais {dados-calculo.b}. Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+    "fr": "Une fonction est le produit de x par x plus {dados-calculo.b}. Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+    "en": "A function is x times x plus {dados-calculo.b}. What is its derivative at x = {dados-calculo.ponto}?"
+  },
+  "dados-calculo": {
+    "b": "4",
+    "ponto": "3",
+    "total": "10"
+  }
+}

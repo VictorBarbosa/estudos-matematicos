@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma primitiva de {dados-calculo.a} vezes x é {dados-calculo.metade} vezes o quadrado de x. Tomando a constante igual a zero, quanto vale essa primitiva em x = {dados-calculo.ponto}?",
+    "fr": "Une primitive de {dados-calculo.a} fois x est {dados-calculo.metade} fois le carré de x. En prenant la constante nulle, combien vaut cette primitive en x = {dados-calculo.ponto} ?",
+    "en": "An antiderivative of {dados-calculo.a} times x is {dados-calculo.metade} times x squared. Taking the constant as zero, what is that antiderivative at x = {dados-calculo.ponto}?"
+  },
+  "dados-calculo": {
+    "a": "6",
+    "metade": "3",
+    "ponto": "4",
+    "total": "48"
+  }
+}

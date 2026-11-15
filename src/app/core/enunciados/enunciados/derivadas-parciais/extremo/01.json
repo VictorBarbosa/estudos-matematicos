@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o quadrado de x vezes y. Qual é a derivada parcial SEGUNDA em relação a x, no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+    "fr": "Une fonction vaut le carré de x fois y. Quelle est la dérivée partielle SECONDE par rapport à x, au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+    "en": "A function equals x squared times y. What is the SECOND partial derivative with respect to x, at the point ({dados-calculo.px}, {dados-calculo.py})?"
+  },
+  "dados-calculo": {
+    "px": "5",
+    "py": "3",
+    "total": "6"
+  }
+}

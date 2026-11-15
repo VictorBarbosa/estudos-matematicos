@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma primitiva de uma função vale {dados-calculo.fim} no extremo superior e {dados-calculo.inicio} no extremo inferior. Quanto vale a integral definida entre esses extremos?",
+    "fr": "Une primitive d’une fonction vaut {dados-calculo.fim} à la borne supérieure et {dados-calculo.inicio} à la borne inférieure. Combien vaut l’intégrale définie entre ces bornes ?",
+    "en": "An antiderivative of a function equals {dados-calculo.fim} at the upper limit and {dados-calculo.inicio} at the lower limit. What is the definite integral between those limits?"
+  },
+  "dados-calculo": {
+    "fim": "40",
+    "inicio": "15",
+    "total": "25"
+  }
+}

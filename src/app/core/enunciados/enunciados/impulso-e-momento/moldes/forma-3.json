@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um corpo de {dados-calculo.massa} kg a {dados-calculo.velocidade} m/s é parado em {dados-calculo.v1} s. Qual é a força média aplicada, em newtons? (2 casas decimais)"
+  }
+}

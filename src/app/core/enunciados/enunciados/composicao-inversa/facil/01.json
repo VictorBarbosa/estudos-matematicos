@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma função multiplica o número por {dados-calculo.fator} e soma {dados-calculo.soma}. Que número a função inversa devolve quando recebe {dados-calculo.saida}?",
+    "fr": "Une fonction multiplie le nombre par {dados-calculo.fator} et ajoute {dados-calculo.soma}. Quel nombre la fonction inverse renvoie-t-elle quand elle reçoit {dados-calculo.saida} ?",
+    "en": "A function multiplies the number by {dados-calculo.fator} and adds {dados-calculo.soma}. What number does the inverse function return when given {dados-calculo.saida}?"
+  },
+  "dados-calculo": {
+    "fator": "3",
+    "soma": "4",
+    "saida": "19",
+    "total": "5"
+  }
+}

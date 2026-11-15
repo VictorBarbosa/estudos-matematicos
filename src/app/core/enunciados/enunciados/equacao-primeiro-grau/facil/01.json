@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Pedro pensou num número, multiplicou-o por {dados-calculo.fator}, somou {dados-calculo.soma} e chegou a {dados-calculo.resultado}. Em que número ele pensou?",
+    "fr": "Pedro a pensé à un nombre, l’a multiplié par {dados-calculo.fator}, a ajouté {dados-calculo.soma} et a obtenu {dados-calculo.resultado}. À quel nombre a-t-il pensé ?",
+    "en": "Pedro thought of a number, multiplied it by {dados-calculo.fator}, added {dados-calculo.soma} and got {dados-calculo.resultado}. What number did he think of?"
+  },
+  "dados-calculo": {
+    "fator": "4",
+    "soma": "7",
+    "resultado": "43",
+    "total": "9"
+  }
+}

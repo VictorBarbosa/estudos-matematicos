@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma partícula de {dados-calculo.v1} kg passa a {dados-calculo.v2} m de um ponto, com velocidade de {dados-calculo.velocidade} m/s formando {dados-calculo.angulo} graus com o raio. Qual é o módulo do momento angular em relação a esse ponto? Responda com 3 casas decimais."
+  }
+}

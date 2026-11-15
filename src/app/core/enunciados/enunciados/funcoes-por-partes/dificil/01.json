@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Um imposto cobra {dados-calculo.taxa1}% sobre a renda até {dados-calculo.limite} reais e {dados-calculo.taxa2}% sobre o que passar desse limite. Quanto paga, em reais, quem ganha {dados-calculo.renda}? (três casas decimais)",
+    "fr": "Un impôt prélève {dados-calculo.taxa1}% sur le revenu jusqu’à {dados-calculo.limite} reais et {dados-calculo.taxa2}% sur ce qui dépasse. Combien paie, en reais, celui qui gagne {dados-calculo.renda} ? (trois décimales)",
+    "en": "A tax takes {dados-calculo.taxa1}% of income up to {dados-calculo.limite} reais and {dados-calculo.taxa2}% of whatever is above that. How much, in reais, does someone earning {dados-calculo.renda} pay? (three decimal places)"
+  },
+  "dados-calculo": {
+    "taxa1": "10",
+    "limite": "2000",
+    "taxa2": "20",
+    "renda": "5000",
+    "total": "800.000"
+  }
+}

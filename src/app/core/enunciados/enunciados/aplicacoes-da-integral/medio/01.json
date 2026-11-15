@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a área entre a reta que vale {dados-calculo.a} vezes x e a reta que vale {dados-calculo.b} vezes x, entre x = 0 e x = {dados-calculo.fim}? (três casas decimais)",
+    "fr": "Quelle est l’aire entre la droite qui vaut {dados-calculo.a} fois x et la droite qui vaut {dados-calculo.b} fois x, entre x = 0 et x = {dados-calculo.fim} ? (trois décimales)",
+    "en": "What is the area between the line equal to {dados-calculo.a} times x and the line equal to {dados-calculo.b} times x, from x = 0 to x = {dados-calculo.fim}? (three decimal places)"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "b": "2",
+    "fim": "4",
+    "total": "24.000"
+  }
+}

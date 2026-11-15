@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Duas cargas, de {dados-calculo.carga1} μC e {dados-calculo.carga2} μC, estão a {dados-calculo.distancia} m uma da outra. Qual é a força entre elas, em newtons? (duas casas decimais)",
+    "fr": "Deux charges, de {dados-calculo.carga1} μC et {dados-calculo.carga2} μC, sont à {dados-calculo.distancia} m l’une de l’autre. Quelle est la force entre elles, en newtons ? (deux décimales)",
+    "en": "Two charges, {dados-calculo.carga1} μC and {dados-calculo.carga2} μC, sit {dados-calculo.distancia} m apart. What is the force between them, in newtons? (two decimal places)"
+  },
+  "dados-calculo": {
+    "carga1": "3",
+    "carga2": "4",
+    "distancia": "0.3",
+    "total": "1.20"
+  }
+}

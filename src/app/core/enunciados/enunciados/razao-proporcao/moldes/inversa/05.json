@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} máquinas produzem um lote em {dados-calculo.b} horas. Em quantas horas {dados-calculo.c} máquinas iguais produzem o mesmo lote?",
+    "fr": "{dados-calculo.a} machines produisent un lot en {dados-calculo.b} heures. En combien d'heures {dados-calculo.c} machines identiques produisent-elles le même lot ?",
+    "en": "{dados-calculo.a} machines produce a batch in {dados-calculo.b} hours. In how many hours do {dados-calculo.c} identical machines produce the same batch?"
+  }
+}

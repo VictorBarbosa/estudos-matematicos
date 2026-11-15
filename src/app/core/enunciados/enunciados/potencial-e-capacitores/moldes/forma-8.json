@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um capacitor de placas de {dados-calculo.a} cm², separadas por {dados-calculo.v1} mm de ar, é carregado a {dados-calculo.v} V. Quanta energia ele guarda, em nJ? (2 casas decimais)"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Baixar um arquivo a {dados-calculo.a} MB/s leva {dados-calculo.b} segundos. Quantos segundos leva a {dados-calculo.c} MB/s?",
+    "fr": "Télécharger un fichier à {dados-calculo.a} Mo/s prend {dados-calculo.b} secondes. Combien de secondes prend-il à {dados-calculo.c} Mo/s ?",
+    "en": "Downloading a file at {dados-calculo.a} MB/s takes {dados-calculo.b} seconds. How many seconds does {dados-calculo.c} MB/s take?"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma engrenagem de {dados-calculo.a} dentes dá {dados-calculo.b} voltas para mover outra. Quantas voltas dá a de {dados-calculo.c} dentes?",
+    "fr": "Un engrenage de {dados-calculo.a} dents fait {dados-calculo.b} tours pour en entraîner un autre. Combien de tours fait celui de {dados-calculo.c} dents ?",
+    "en": "A gear with {dados-calculo.a} teeth turns {dados-calculo.b} times to drive another. How many turns does the one with {dados-calculo.c} teeth make?"
+  }
+}

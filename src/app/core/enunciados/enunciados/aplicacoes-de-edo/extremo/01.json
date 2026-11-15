@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Um tanque recebe {dados-calculo.entrada} L por minuto e perde {dados-calculo.saida} L por minuto. Partindo de {dados-calculo.inicial} L, quantos litros há depois de {dados-calculo.tempo} minutos?",
+    "fr": "Un réservoir reçoit {dados-calculo.entrada} L par minute et en perd {dados-calculo.saida} L par minute. En partant de {dados-calculo.inicial} L, combien de litres y a-t-il après {dados-calculo.tempo} minutes ?",
+    "en": "A tank takes in {dados-calculo.entrada} L per minute and loses {dados-calculo.saida} L per minute. Starting from {dados-calculo.inicial} L, how many litres are there after {dados-calculo.tempo} minutes?"
+  },
+  "dados-calculo": {
+    "entrada": "12",
+    "saida": "5",
+    "inicial": "100",
+    "tempo": "20",
+    "total": "240"
+  }
+}

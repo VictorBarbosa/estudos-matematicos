@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do composto iônico formado por alumínio, de número atômico {dados-calculo.zMetal}, e oxigênio, de número atômico {dados-calculo.zNaoMetal}?",
+    "fr": "Quelle est la formule du composé ionique formé par l’aluminium, de numéro atomique {dados-calculo.zMetal}, et l’oxygène, de numéro atomique {dados-calculo.zNaoMetal} ?",
+    "en": "What is the formula of the ionic compound formed by aluminium, atomic number {dados-calculo.zMetal}, and oxygen, atomic number {dados-calculo.zNaoMetal}?"
+  },
+  "dados-calculo": {
+    "zMetal": "13",
+    "zNaoMetal": "8",
+    "total": "Al2O3"
+  }
+}

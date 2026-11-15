@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma circunferência tem a soma dos quadrados de x e y igual a {dados-calculo.raioQuadrado}. No ponto ({dados-calculo.px}, {dados-calculo.py}), qual é a inclinação da reta tangente?",
+    "fr": "Un cercle a la somme des carrés de x et y égale à {dados-calculo.raioQuadrado}. Au point ({dados-calculo.px}, {dados-calculo.py}), quelle est la pente de la tangente ?",
+    "en": "A circle has the sum of the squares of x and y equal to {dados-calculo.raioQuadrado}. At the point ({dados-calculo.px}, {dados-calculo.py}), what is the slope of the tangent line?"
+  },
+  "dados-calculo": {
+    "raioQuadrado": "18",
+    "px": "3",
+    "py": "3",
+    "total": "-1"
+  }
+}

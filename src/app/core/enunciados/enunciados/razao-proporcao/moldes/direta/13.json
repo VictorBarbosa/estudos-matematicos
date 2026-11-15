@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} resmas de papel têm {dados-calculo.b} folhas. Quantas folhas têm {dados-calculo.c} resmas?",
+    "fr": "{dados-calculo.a} rames de papier contiennent {dados-calculo.b} feuilles. Combien de feuilles contiennent {dados-calculo.c} rames ?",
+    "en": "{dados-calculo.a} reams of paper contain {dados-calculo.b} sheets. How many sheets do {dados-calculo.c} reams contain?"
+  }
+}

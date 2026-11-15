@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o quadrado de x menos {dados-calculo.b} vezes x. Em que valor de x ela atinge o mínimo?",
+    "fr": "Une fonction vaut le carré de x moins {dados-calculo.b} fois x. Pour quelle valeur de x atteint-elle son minimum ?",
+    "en": "A function is x squared minus {dados-calculo.b} times x. At what value of x does it reach its minimum?"
+  },
+  "dados-calculo": {
+    "b": "10",
+    "total": "5"
+  }
+}

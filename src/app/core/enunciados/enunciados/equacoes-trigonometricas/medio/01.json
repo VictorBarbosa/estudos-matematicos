@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Resolva, em graus, a equação em que o cosseno de x vale {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a SOMA de todas as soluções.",
+    "fr": "Résolvez, en degrés, l’équation où le cosinus de x vaut {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la SOMME de toutes les solutions.",
+    "en": "Solve, in degrees, the equation where the cosine of x is {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the SUM of all solutions."
+  },
+  "dados-calculo": {
+    "valor": "0.5",
+    "total": "360"
+  }
+}

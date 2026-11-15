@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo com hipotenusa {dados-calculo.hipotenusa} e um ângulo de {dados-calculo.anguloGraus}°, qual é a medida do cateto {dados-calculo.nomeLado}? (2 casas decimais)"
+  }
+}

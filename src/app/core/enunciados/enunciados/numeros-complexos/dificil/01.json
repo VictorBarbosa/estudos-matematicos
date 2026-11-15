@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Dividindo ({dados-calculo.a} mais {dados-calculo.b}i) por ({dados-calculo.c} mais {dados-calculo.d}i), qual é a parte REAL do resultado? (duas casas decimais)",
+    "fr": "En divisant ({dados-calculo.a} plus {dados-calculo.b}i) par ({dados-calculo.c} plus {dados-calculo.d}i), quelle est la partie RÉELLE du résultat ? (deux décimales)",
+    "en": "Dividing ({dados-calculo.a} plus {dados-calculo.b}i) by ({dados-calculo.c} plus {dados-calculo.d}i), what is the REAL part of the result? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "1",
+    "b": "1",
+    "c": "2",
+    "d": "3",
+    "total": "0.38"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma função devolve a raiz quadrada de (x menos {dados-calculo.a}). Qual é o menor valor de x que pertence ao domínio?",
+    "fr": "Une fonction renvoie la racine carrée de (x moins {dados-calculo.a}). Quelle est la plus petite valeur de x qui appartient au domaine ?",
+    "en": "A function returns the square root of (x minus {dados-calculo.a}). What is the smallest value of x in the domain?"
+  },
+  "dados-calculo": {
+    "a": "7",
+    "total": "7"
+  }
+}

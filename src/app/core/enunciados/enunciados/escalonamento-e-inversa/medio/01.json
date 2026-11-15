@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Num sistema escalonado, y vale {dados-calculo.y} e a primeira equação diz que x mais {dados-calculo.coef}y vale {dados-calculo.valor}. Quanto vale x?",
+    "fr": "Dans un système échelonné, y vaut {dados-calculo.y} et la première équation dit que x plus {dados-calculo.coef}y vaut {dados-calculo.valor}. Combien vaut x ?",
+    "en": "In a row-reduced system, y is {dados-calculo.y} and the first equation says x plus {dados-calculo.coef}y equals {dados-calculo.valor}. What is x?"
+  },
+  "dados-calculo": {
+    "y": "3",
+    "coef": "2",
+    "valor": "11",
+    "total": "5"
+  }
+}

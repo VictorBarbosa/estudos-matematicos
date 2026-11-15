@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um ponto percorre uma circunferência de raio {dados-calculo.raio} centrada na origem. Qual é a coordenada x quando o parâmetro angular vale {dados-calculo.angulo}°?",
+    "fr": "Un point parcourt un cercle de rayon {dados-calculo.raio} centré à l’origine. Quelle est la coordonnée x quand le paramètre angulaire vaut {dados-calculo.angulo}° ?",
+    "en": "A point travels around a circle of radius {dados-calculo.raio} centred at the origin. What is the x coordinate when the angular parameter is {dados-calculo.angulo}°?"
+  },
+  "dados-calculo": {
+    "raio": "10",
+    "angulo": "180",
+    "total": "-10"
+  }
+}

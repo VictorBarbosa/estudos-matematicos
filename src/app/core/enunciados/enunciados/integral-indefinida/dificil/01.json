@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "A velocidade de um corpo, em m/s, é {dados-calculo.a} vezes o tempo. Partindo da posição {dados-calculo.inicial} m, em que posição, em metros, ele está no instante {dados-calculo.tempo} s?",
+    "fr": "La vitesse d’un corps, en m/s, est {dados-calculo.a} fois le temps. Partant de la position {dados-calculo.inicial} m, à quelle position, en mètres, est-il à l’instant {dados-calculo.tempo} s ?",
+    "en": "A body’s speed, in m/s, is {dados-calculo.a} times the time. Starting from position {dados-calculo.inicial} m, where is it, in metres, at {dados-calculo.tempo} s?"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "inicial": "10",
+    "tempo": "3",
+    "total": "28"
+  }
+}

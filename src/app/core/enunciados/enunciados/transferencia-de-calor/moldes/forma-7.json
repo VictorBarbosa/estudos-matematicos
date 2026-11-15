@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um radiador de satélite com {dados-calculo.expressao1} m² e emissividade {dados-calculo.expressao2} precisa dissipar {dados-calculo.potencia} W no vácuo. Qual é a temperatura de equilíbrio, em K? "
+  }
+}

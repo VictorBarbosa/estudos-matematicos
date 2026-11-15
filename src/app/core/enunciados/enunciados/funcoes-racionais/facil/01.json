@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "A concentração de um remédio no sangue é {dados-calculo.a} vezes o tempo, dividido pelo tempo ao quadrado mais {dados-calculo.b}. Qual é a concentração no instante t = {dados-calculo.t}? (três casas decimais)",
+    "fr": "La concentration d’un médicament dans le sang est {dados-calculo.a} fois le temps, divisé par le temps au carré plus {dados-calculo.b}. Quelle est la concentration à l’instant t = {dados-calculo.t} ? (trois décimales)",
+    "en": "A drug’s blood concentration is {dados-calculo.a} times the time, divided by the time squared plus {dados-calculo.b}. What is the concentration at t = {dados-calculo.t}? (three decimal places)"
+  },
+  "dados-calculo": {
+    "a": "20",
+    "b": "4",
+    "t": "2",
+    "total": "5.000"
+  }
+}

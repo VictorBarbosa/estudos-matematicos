@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na dimensão de força, cuja unidade é o newton, qual é o expoente de M (massa)? Responda 0 se ele não aparecer.",
+    "fr": "Dans la dimension de la force, dont l’unité est le newton, quel est l’exposant de M (masse) ? Répondez 0 s’il n’apparaît pas.",
+    "en": "In the dimension of force, whose unit is the newton, what is the exponent of M (mass)? Answer 0 if it does not appear."
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

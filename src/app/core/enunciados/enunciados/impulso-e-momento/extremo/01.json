@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um carrinho de {dados-calculo.massa1} kg a {dados-calculo.velocidade1} m/s atinge outro de {dados-calculo.massa2} kg, parado, e os dois seguem juntos. Qual é a velocidade final, em m/s? (duas casas decimais)",
+    "fr": "Un chariot de {dados-calculo.massa1} kg à {dados-calculo.velocidade1} m/s en heurte un autre de {dados-calculo.massa2} kg, à l’arrêt, et les deux repartent ensemble. Quelle est la vitesse finale, en m/s ? (deux décimales)",
+    "en": "A {dados-calculo.massa1} kg cart at {dados-calculo.velocidade1} m/s hits another of {dados-calculo.massa2} kg at rest, and the two move off together. What is the final speed, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa1": "2",
+    "velocidade1": "6",
+    "massa2": "4",
+    "total": "2.00"
+  }
+}

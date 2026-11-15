@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma pizza foi cortada em {dados-calculo.pedacos} pedaços iguais e Ana comeu {dados-calculo.comidos} deles. Que fração da pizza ela comeu? Escreva na forma mais simples.",
+    "fr": "Une pizza a été coupée en {dados-calculo.pedacos} parts égales et Ana en a mangé {dados-calculo.comidos}. Quelle fraction de la pizza a-t-elle mangée ? Écrivez-la sous la forme la plus simple.",
+    "en": "A pizza was cut into {dados-calculo.pedacos} equal slices and Ana ate {dados-calculo.comidos} of them. What fraction of the pizza did she eat? Write it in simplest form."
+  },
+  "dados-calculo": {
+    "pedacos": "12",
+    "comidos": "3",
+    "total": "1/4"
+  }
+}

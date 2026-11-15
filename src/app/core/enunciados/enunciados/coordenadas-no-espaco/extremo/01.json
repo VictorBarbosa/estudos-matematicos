@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um ponto tem coordenada esférica rô igual a {dados-calculo.rho} e está sobre o eixo z positivo. Qual é a sua coordenada z cartesiana?",
+    "fr": "Un point a une coordonnée sphérique rhô égale à {dados-calculo.rho} et se trouve sur l’axe z positif. Quelle est sa coordonnée z cartésienne ?",
+    "en": "A point has spherical coordinate rho equal to {dados-calculo.rho} and lies on the positive z-axis. What is its Cartesian z coordinate?"
+  },
+  "dados-calculo": {
+    "rho": "9",
+    "total": "9"
+  }
+}

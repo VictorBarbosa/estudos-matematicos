@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} metros de fio pesam {dados-calculo.b} kg. Quanto pesa 1 metro?",
+    "fr": "{dados-calculo.a} mètres de fil pèsent {dados-calculo.b} kg. Combien pèse 1 mètre ?",
+    "en": "{dados-calculo.a} metres of wire weigh {dados-calculo.b} kg. How much does 1 metre weigh?"
+  }
+}

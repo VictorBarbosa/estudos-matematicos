@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um oscilador sem amortecimento tem massa {dados-calculo.massa} kg e constante elástica {dados-calculo.constante} N/m. Qual é a frequência angular da solução, em rad/s?",
+    "fr": "Un oscillateur sans amortissement a une masse de {dados-calculo.massa} kg et une constante élastique de {dados-calculo.constante} N/m. Quelle est la pulsation de la solution, en rad/s ?",
+    "en": "An undamped oscillator has mass {dados-calculo.massa} kg and spring constant {dados-calculo.constante} N/m. What is the angular frequency of the solution, in rad/s?"
+  },
+  "dados-calculo": {
+    "massa": "2",
+    "constante": "32",
+    "total": "4"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma balança de precisão mostrou {dados-calculo.massa} kg. Escreva esse decimal como fração irredutível.",
+    "fr": "Une balance de précision a affiché {dados-calculo.massa} kg. Écrivez ce décimal sous forme de fraction irréductible.",
+    "en": "A precision scale showed {dados-calculo.massa} kg. Write that decimal as a fraction in lowest terms."
+  },
+  "dados-calculo": {
+    "massa": "0.45",
+    "total": "9/20"
+  }
+}

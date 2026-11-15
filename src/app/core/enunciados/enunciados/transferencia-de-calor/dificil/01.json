@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Quanta energia, em joules, é preciso para fundir {dados-calculo.massa} kg de um sólido já na temperatura de fusão, com calor latente de {dados-calculo.latente} J/kg? (três casas decimais)",
+    "fr": "Combien d’énergie, en joules, faut-il pour fondre {dados-calculo.massa} kg d’un solide déjà à la température de fusion, avec une chaleur latente de {dados-calculo.latente} J/kg ? (trois décimales)",
+    "en": "How much energy, in joules, is needed to melt {dados-calculo.massa} kg of a solid already at its melting point, with latent heat {dados-calculo.latente} J/kg? (three decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "2",
+    "latente": "334000",
+    "total": "668000.000"
+  }
+}

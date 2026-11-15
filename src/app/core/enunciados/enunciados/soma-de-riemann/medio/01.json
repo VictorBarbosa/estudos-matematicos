@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A região sob uma reta que vale {dados-calculo.a} vezes x, entre x = 0 e x = {dados-calculo.fim}, é um triângulo. Qual é a sua área exata? (três casas decimais)",
+    "fr": "La région sous une droite qui vaut {dados-calculo.a} fois x, entre x = 0 et x = {dados-calculo.fim}, est un triangle. Quelle est son aire exacte ? (trois décimales)",
+    "en": "The region under a line equal to {dados-calculo.a} times x, from x = 0 to x = {dados-calculo.fim}, is a triangle. What is its exact area? (three decimal places)"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "fim": "4",
+    "total": "24.000"
+  }
+}

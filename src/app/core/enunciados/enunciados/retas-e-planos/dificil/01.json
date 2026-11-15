@@ -1,0 +1,16 @@
+{
+  "enunciado": {
+    "br": "Dois planos têm vetores normais ({dados-calculo.n1x}, {dados-calculo.n1y}, {dados-calculo.n1z}) e ({dados-calculo.n2x}, {dados-calculo.n2y}, {dados-calculo.n2z}). Qual é o ângulo agudo entre eles, em graus? (duas casas decimais)",
+    "fr": "Deux plans ont pour vecteurs normaux ({dados-calculo.n1x}, {dados-calculo.n1y}, {dados-calculo.n1z}) et ({dados-calculo.n2x}, {dados-calculo.n2y}, {dados-calculo.n2z}). Quel est l’angle aigu entre eux, en degrés ? (deux décimales)",
+    "en": "Two planes have normal vectors ({dados-calculo.n1x}, {dados-calculo.n1y}, {dados-calculo.n1z}) and ({dados-calculo.n2x}, {dados-calculo.n2y}, {dados-calculo.n2z}). What is the acute angle between them, in degrees? (two decimal places)"
+  },
+  "dados-calculo": {
+    "n1x": "1",
+    "n1y": "1",
+    "n1z": "0",
+    "n2x": "0",
+    "n2y": "1",
+    "n2z": "1",
+    "total": "60.00"
+  }
+}

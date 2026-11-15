@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "No método de Newton-Raphson, o próximo valor é o atual menos a função dividida pela derivada. Partindo de x igual a {dados-calculo.x}, com a função valendo {dados-calculo.f} e a derivada {dados-calculo.derivada}, qual é o próximo valor?",
+    "fr": "Dans la méthode de Newton-Raphson, la valeur suivante est l’actuelle moins la fonction divisée par la dérivée. En partant de x égal à {dados-calculo.x}, avec la fonction valant {dados-calculo.f} et la dérivée {dados-calculo.derivada}, quelle est la valeur suivante ?",
+    "en": "In the Newton-Raphson method, the next value is the current one minus the function divided by the derivative. Starting from x equal to {dados-calculo.x}, with the function equal to {dados-calculo.f} and the derivative {dados-calculo.derivada}, what is the next value?"
+  },
+  "dados-calculo": {
+    "x": "4",
+    "f": "6",
+    "derivada": "3",
+    "total": "2"
+  }
+}

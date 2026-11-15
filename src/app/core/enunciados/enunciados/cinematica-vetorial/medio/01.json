@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um barco atravessa um rio a {dados-calculo.barco} m/s, apontado perpendicularmente à correnteza, que corre a {dados-calculo.corrente} m/s. Qual é o módulo da velocidade resultante, em m/s? (duas casas decimais)",
+    "fr": "Un bateau traverse une rivière à {dados-calculo.barco} m/s, pointé perpendiculairement au courant, qui coule à {dados-calculo.corrente} m/s. Quel est le module de la vitesse résultante, en m/s ? (deux décimales)",
+    "en": "A boat crosses a river at {dados-calculo.barco} m/s, pointed perpendicular to the current, which flows at {dados-calculo.corrente} m/s. What is the magnitude of the resulting speed, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "barco": "3",
+    "corrente": "4",
+    "total": "5.00"
+  }
+}

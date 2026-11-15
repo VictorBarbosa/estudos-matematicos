@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um relógio a bordo de uma nave a {dados-calculo.fracao} da velocidade da luz mede {dados-calculo.tempo} s. Quantos segundos passam para quem ficou parado? (duas casas decimais)",
+    "fr": "Une horloge à bord d’un vaisseau à {dados-calculo.fracao} de la vitesse de la lumière mesure {dados-calculo.tempo} s. Combien de secondes passent pour celui qui est resté immobile ? (deux décimales)",
+    "en": "A clock aboard a ship at {dados-calculo.fracao} of the speed of light reads {dados-calculo.tempo} s. How many seconds pass for someone at rest? (two decimal places)"
+  },
+  "dados-calculo": {
+    "fracao": "0.6",
+    "tempo": "10",
+    "total": "12.50"
+  }
+}

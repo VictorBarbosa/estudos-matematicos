@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Um ônibus partiu com {dados-calculo.saida} passageiros. Na primeira parada desceram {dados-calculo.desceram1}, na segunda desceram {dados-calculo.desceram2} e na terceira subiram {dados-calculo.subiram}. Com quantos passageiros ele seguiu viagem?",
+    "fr": "Un autobus est parti avec {dados-calculo.saida} passagers. Au premier arrêt {dados-calculo.desceram1} sont descendus, au deuxième {dados-calculo.desceram2} sont descendus et au troisième {dados-calculo.subiram} sont montés. Avec combien de passagers a-t-il poursuivi sa route ?",
+    "en": "A bus left with {dados-calculo.saida} passengers. At the first stop {dados-calculo.desceram1} got off, at the second {dados-calculo.desceram2} got off and at the third {dados-calculo.subiram} got on. How many passengers did it carry on with?"
+  },
+  "dados-calculo": {
+    "saida": "52",
+    "desceram1": "9",
+    "desceram2": "14",
+    "subiram": "11",
+    "total": "40"
+  }
+}

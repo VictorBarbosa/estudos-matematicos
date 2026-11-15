@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Pela regra do trapézio, qual é a área aproximada sob uma curva num intervalo de largura {dados-calculo.largura}, cujas alturas nas pontas valem {dados-calculo.altura1} e {dados-calculo.altura2}?",
+    "fr": "Par la règle du trapèze, quelle est l’aire approchée sous une courbe sur un intervalle de largeur {dados-calculo.largura}, dont les hauteurs aux extrémités valent {dados-calculo.altura1} et {dados-calculo.altura2} ?",
+    "en": "By the trapezoid rule, what is the approximate area under a curve over an interval of width {dados-calculo.largura}, with end heights {dados-calculo.altura1} and {dados-calculo.altura2}?"
+  },
+  "dados-calculo": {
+    "largura": "4",
+    "altura1": "3",
+    "altura2": "7",
+    "total": "20"
+  }
+}

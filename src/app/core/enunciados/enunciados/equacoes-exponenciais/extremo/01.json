@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma amostra decai continuamente a uma taxa de {dados-calculo.taxa} por ano, no modelo com a constante e. Em quantos anos ela cai a {dados-calculo.fracao} do valor inicial? (três casas decimais)",
+    "fr": "Un échantillon décroît continûment au taux de {dados-calculo.taxa} par an, dans le modèle avec la constante e. En combien d’années tombe-t-il à {dados-calculo.fracao} de sa valeur initiale ? (trois décimales)",
+    "en": "A sample decays continuously at a rate of {dados-calculo.taxa} per year, in the model with the constant e. In how many years does it fall to {dados-calculo.fracao} of its starting value? (three decimal places)"
+  },
+  "dados-calculo": {
+    "taxa": "0.5",
+    "fracao": "1/10",
+    "total": "4.605"
+  }
+}

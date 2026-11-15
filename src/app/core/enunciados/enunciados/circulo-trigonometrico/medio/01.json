@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um ponteiro girou {dados-calculo.radianos} radianos. Quantos graus são esses? (duas casas decimais)",
+    "fr": "Une aiguille a tourné de {dados-calculo.radianos} radians. Combien de degrés cela fait-il ? (deux décimales)",
+    "en": "A hand turned {dados-calculo.radianos} radians. How many degrees is that? (two decimal places)"
+  },
+  "dados-calculo": {
+    "radianos": "2",
+    "total": "114.59"
+  }
+}

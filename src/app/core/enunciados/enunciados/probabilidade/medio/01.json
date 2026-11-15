@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Numa urna há {dados-calculo.brancas} bolas brancas e {dados-calculo.pretas} pretas. Qual é a probabilidade de tirar uma branca? Responda como fração.",
+    "fr": "Dans une urne il y a {dados-calculo.brancas} boules blanches et {dados-calculo.pretas} noires. Quelle est la probabilité de tirer une blanche ? Répondez sous forme de fraction.",
+    "en": "An urn holds {dados-calculo.brancas} white balls and {dados-calculo.pretas} black ones. What is the probability of drawing a white one? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "brancas": "3",
+    "pretas": "5",
+    "total": "3/8"
+  }
+}

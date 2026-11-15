@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma circunferência tem centro na origem e raio {dados-calculo.raio}. Um ponto está a {dados-calculo.distancia} unidades da origem. Quantas unidades separam esse ponto da circunferência?",
+    "fr": "Un cercle a son centre à l’origine et un rayon de {dados-calculo.raio}. Un point est à {dados-calculo.distancia} unités de l’origine. Combien d’unités séparent ce point du cercle ?",
+    "en": "A circle is centred at the origin with radius {dados-calculo.raio}. A point lies {dados-calculo.distancia} units from the origin. How many units separate that point from the circle?"
+  },
+  "dados-calculo": {
+    "raio": "5",
+    "distancia": "13",
+    "total": "8"
+  }
+}

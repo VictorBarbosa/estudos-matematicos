@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Por substituição, qual é a área sob a curva {dados-calculo.a} vezes x vezes o quadrado de x, entre 0 e {dados-calculo.fim}? (duas casas decimais)",
+    "fr": "Par substitution, quelle est l’aire sous la courbe {dados-calculo.a} fois x fois le carré de x, entre 0 et {dados-calculo.fim} ? (deux décimales)",
+    "en": "By substitution, what is the area under the curve {dados-calculo.a} times x times x squared, from 0 to {dados-calculo.fim}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "fim": "2",
+    "total": "16.00"
+  }
+}

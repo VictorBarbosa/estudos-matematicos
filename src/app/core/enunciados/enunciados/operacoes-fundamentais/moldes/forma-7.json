@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um mercado recebeu {dados-calculo.caixas} caixas com {dados-calculo.porCaixa} garrafas cada. Depois devolveu {dados-calculo.devolvidas} caixas com {dados-calculo.porDevolucao} garrafas cada. Quantas garrafas ficaram?",
+    "fr": "Un magasin a reçu {dados-calculo.caixas} caisses de {dados-calculo.porCaixa} bouteilles chacune. Il en a ensuite renvoyé {dados-calculo.devolvidas} de {dados-calculo.porDevolucao} bouteilles chacune. Combien de bouteilles reste-t-il ?",
+    "en": "A shop received {dados-calculo.caixas} boxes of {dados-calculo.porCaixa} bottles each. It then returned {dados-calculo.devolvidas} boxes of {dados-calculo.porDevolucao} bottles each. How many bottles are left?"
+  },
+  "dica": {
+    "br": "São dois produtos inteiros, um subtraindo o outro. Resolva cada um antes de subtrair.",
+    "fr": "Ce sont deux produits entiers, l’un soustrait de l’autre. Calculez chacun avant de soustraire.",
+    "en": "These are two whole products, one subtracted from the other. Work out each first."
+  }
+}

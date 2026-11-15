@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um motor realiza {dados-calculo.trabalho} J de trabalho em {dados-calculo.tempo} s. Qual é sua potência média, em watts? (2 casas decimais)"
+  }
+}

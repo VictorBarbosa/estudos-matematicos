@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um veículo a {dados-calculo.v0} m/s freia com desaceleração de {dados-calculo.desaceleracao} m/s². Que distância ele percorre até parar? (2 casas decimais)"
+  }
+}

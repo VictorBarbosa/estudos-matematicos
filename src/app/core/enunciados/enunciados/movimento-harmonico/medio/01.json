@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma massa de {dados-calculo.massa} kg oscila presa a uma mola de constante {dados-calculo.constante} N/m. Qual é a frequência, em hertz? (três casas decimais)",
+    "fr": "Une masse de {dados-calculo.massa} kg oscille attachée à un ressort de constante {dados-calculo.constante} N/m. Quelle est la fréquence, en hertz ? (trois décimales)",
+    "en": "A {dados-calculo.massa} kg mass oscillates on a spring with constant {dados-calculo.constante} N/m. What is the frequency, in hertz? (three decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "2",
+    "constante": "32",
+    "total": "0.637"
+  }
+}

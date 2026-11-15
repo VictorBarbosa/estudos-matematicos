@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma pessoa guarda {dados-calculo.primeiro} reais no primeiro mês e aumenta {dados-calculo.aumento} reais a cada mês seguinte. Quantos reais ela guarda no mês número {dados-calculo.mes}?",
+    "fr": "Une personne met {dados-calculo.primeiro} reais de côté le premier mois et augmente de {dados-calculo.aumento} reais chaque mois suivant. Combien de reais met-elle de côté au mois numéro {dados-calculo.mes} ?",
+    "en": "Someone saves {dados-calculo.primeiro} reais in the first month and adds {dados-calculo.aumento} reais more each following month. How many reais do they save in month number {dados-calculo.mes}?"
+  },
+  "dados-calculo": {
+    "primeiro": "50",
+    "aumento": "20",
+    "mes": "10",
+    "total": "230"
+  }
+}

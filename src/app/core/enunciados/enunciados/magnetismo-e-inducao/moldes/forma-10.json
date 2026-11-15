@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma partícula de carga {dados-calculo.carga} μC atravessa a {dados-calculo.v} m/s um campo magnético de {dados-calculo.campo} T, perpendicular a ele. Qual é o módulo da força magnética, em mN? (2 casas decimais)"
+  }
+}

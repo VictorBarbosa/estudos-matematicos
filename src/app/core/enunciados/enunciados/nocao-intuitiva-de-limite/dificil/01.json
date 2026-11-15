@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.a} para todo x diferente de {dados-calculo.ponto}, e vale {dados-calculo.b} exatamente em x = {dados-calculo.ponto}. De que valor ela se aproxima quando x tende a {dados-calculo.ponto}?",
+    "fr": "Une fonction vaut {dados-calculo.a} pour tout x différent de {dados-calculo.ponto}, et vaut {dados-calculo.b} exactement en x = {dados-calculo.ponto}. De quelle valeur s’approche-t-elle quand x tend vers {dados-calculo.ponto} ?",
+    "en": "A function equals {dados-calculo.a} for every x other than {dados-calculo.ponto}, and equals {dados-calculo.b} exactly at x = {dados-calculo.ponto}. What value does it approach as x tends to {dados-calculo.ponto}?"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "ponto": "2",
+    "b": "9",
+    "total": "4"
+  }
+}

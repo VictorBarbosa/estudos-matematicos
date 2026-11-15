@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um polinômio P deixa resto {dados-calculo.r1} na divisão por (x menos 1) e resto {dados-calculo.r2} na divisão por (x mais 1). Quanto vale P(1) somado a P(−1)?",
+    "fr": "Un polynôme P laisse un reste {dados-calculo.r1} dans la division par (x moins 1) et un reste {dados-calculo.r2} dans la division par (x plus 1). Combien vaut P(1) ajouté à P(−1) ?",
+    "en": "A polynomial P leaves remainder {dados-calculo.r1} when divided by (x minus 1) and remainder {dados-calculo.r2} when divided by (x plus 1). What is P(1) plus P(−1)?"
+  },
+  "dados-calculo": {
+    "r1": "5",
+    "r2": "9",
+    "total": "14"
+  }
+}

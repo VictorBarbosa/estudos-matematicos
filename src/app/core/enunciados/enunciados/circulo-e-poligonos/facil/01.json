@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma pista circular tem raio de {dados-calculo.raio} m. Quantos metros tem uma volta completa nessa pista? (duas casas decimais)",
+    "fr": "Une piste circulaire a un rayon de {dados-calculo.raio} m. Combien de mètres fait un tour complet de cette piste ? (deux décimales)",
+    "en": "A circular track has a radius of {dados-calculo.raio} m. How many metres is one full lap? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "20",
+    "total": "125.66"
+  }
+}

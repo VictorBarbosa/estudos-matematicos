@@ -1,0 +1,16 @@
+{
+  "enunciado": {
+    "br": "Um plano passa pelo ponto ({dados-calculo.px}, {dados-calculo.py}, {dados-calculo.pz}) e tem vetor normal ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}). Escrito na forma ax mais by mais cz igual a d, quanto vale d?",
+    "fr": "Un plan passe par le point ({dados-calculo.px}, {dados-calculo.py}, {dados-calculo.pz}) et a pour vecteur normal ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}). Écrit sous la forme ax plus by plus cz égal d, combien vaut d ?",
+    "en": "A plane goes through ({dados-calculo.px}, {dados-calculo.py}, {dados-calculo.pz}) and has normal vector ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}). Written as ax plus by plus cz equals d, what is d?"
+  },
+  "dados-calculo": {
+    "px": "4",
+    "py": "0",
+    "pz": "-5",
+    "nx": "1",
+    "ny": "1",
+    "nz": "1",
+    "total": "-1"
+  }
+}

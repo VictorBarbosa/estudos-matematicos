@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma corda esticada com tração de {dados-calculo.tracao} N tem densidade linear de {dados-calculo.densidade} kg/m. Com que velocidade, em m/s, uma onda a percorre?",
+    "fr": "Une corde tendue avec une tension de {dados-calculo.tracao} N a une densité linéique de {dados-calculo.densidade} kg/m. À quelle vitesse, en m/s, une onde la parcourt-elle ?",
+    "en": "A string under {dados-calculo.tracao} N of tension has a linear density of {dados-calculo.densidade} kg/m. At what speed, in m/s, does a wave travel along it?"
+  },
+  "dados-calculo": {
+    "tracao": "100",
+    "densidade": "0.01",
+    "total": "100"
+  }
+}

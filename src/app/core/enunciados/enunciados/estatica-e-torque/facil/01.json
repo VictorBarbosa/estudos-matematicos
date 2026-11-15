@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Numa alavanca, uma força de {dados-calculo.forca1} N atua a {dados-calculo.distancia1} m do apoio. A que distância do apoio, em metros, deve atuar uma força de {dados-calculo.forca2} N para equilibrar? (duas casas decimais)",
+    "fr": "Sur un levier, une force de {dados-calculo.forca1} N agit à {dados-calculo.distancia1} m du pivot. À quelle distance du pivot, en mètres, doit agir une force de {dados-calculo.forca2} N pour équilibrer ? (deux décimales)",
+    "en": "On a lever, a force of {dados-calculo.forca1} N acts {dados-calculo.distancia1} m from the pivot. At what distance from the pivot, in metres, must a force of {dados-calculo.forca2} N act to balance it? (two decimal places)"
+  },
+  "dados-calculo": {
+    "forca1": "100",
+    "distancia1": "2",
+    "forca2": "50",
+    "total": "4.00"
+  }
+}

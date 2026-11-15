@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A maré varia entre {dados-calculo.minimo} m e {dados-calculo.maximo} m ao longo do dia. Qual é a amplitude dessa oscilação, em metros? (duas casas decimais)",
+    "fr": "La marée varie entre {dados-calculo.minimo} m et {dados-calculo.maximo} m au cours de la journée. Quelle est l’amplitude de cette oscillation, en mètres ? (deux décimales)",
+    "en": "The tide varies between {dados-calculo.minimo} m and {dados-calculo.maximo} m over the day. What is the amplitude of that oscillation, in metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "minimo": "0.4",
+    "maximo": "3.6",
+    "total": "1.60"
+  }
+}

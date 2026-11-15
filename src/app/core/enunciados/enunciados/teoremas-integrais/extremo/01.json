@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a área da superfície de uma esfera de raio {dados-calculo.raio}? Responda o número que multiplica π.",
+    "fr": "Quelle est l’aire de la surface d’une sphère de rayon {dados-calculo.raio} ? Donnez le nombre qui multiplie π.",
+    "en": "What is the surface area of a sphere of radius {dados-calculo.raio}? Give the number multiplying π."
+  },
+  "dados-calculo": {
+    "raio": "3",
+    "total": "36"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um ponto está a {dados-calculo.x}, {dados-calculo.y} e {dados-calculo.z} nos eixos cartesianos. Qual é a sua distância até a origem, que é a coordenada esférica rô?",
+    "fr": "Un point est à {dados-calculo.x}, {dados-calculo.y} et {dados-calculo.z} sur les axes cartésiens. Quelle est sa distance à l’origine, c’est-à-dire la coordonnée sphérique rhô ?",
+    "en": "A point is at {dados-calculo.x}, {dados-calculo.y} and {dados-calculo.z} on the Cartesian axes. What is its distance to the origin, the spherical coordinate rho?"
+  },
+  "dados-calculo": {
+    "x": "2",
+    "y": "3",
+    "z": "6",
+    "total": "7"
+  }
+}

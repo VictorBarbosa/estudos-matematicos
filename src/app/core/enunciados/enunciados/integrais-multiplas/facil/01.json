@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a integral dupla da função constante igual a {dados-calculo.altura} sobre um retângulo de lados {dados-calculo.lado1} e {dados-calculo.lado2}?",
+    "fr": "Quelle est l’intégrale double de la fonction constante égale à {dados-calculo.altura} sur un rectangle de côtés {dados-calculo.lado1} et {dados-calculo.lado2} ?",
+    "en": "What is the double integral of the constant function {dados-calculo.altura} over a rectangle with sides {dados-calculo.lado1} and {dados-calculo.lado2}?"
+  },
+  "dados-calculo": {
+    "altura": "5",
+    "lado1": "2",
+    "lado2": "3",
+    "total": "30"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um lote tem {dados-calculo.total} peças, das quais {dados-calculo.defeituosas} são defeituosas. Retirando {dados-calculo.retiradas} peças de uma vez, qual é a probabilidade de NENHUMA ser defeituosa?"
+  }
+}

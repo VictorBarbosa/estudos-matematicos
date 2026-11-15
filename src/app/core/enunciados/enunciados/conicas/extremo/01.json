@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma elipse tem semieixo maior {dados-calculo.a} e semieixo menor {dados-calculo.b}. Qual é a sua excentricidade?",
+    "fr": "Une ellipse a un demi-grand axe de {dados-calculo.a} et un demi-petit axe de {dados-calculo.b}. Quelle est son excentricité ?",
+    "en": "An ellipse has semi-major axis {dados-calculo.a} and semi-minor axis {dados-calculo.b}. What is its eccentricity?"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "b": "3",
+    "total": "0.8"
+  }
+}

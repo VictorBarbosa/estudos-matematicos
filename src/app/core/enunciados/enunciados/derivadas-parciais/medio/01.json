@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o produto de x por y. Qual é a derivada parcial em relação a x no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+    "fr": "Une fonction vaut le produit de x par y. Quelle est la dérivée partielle par rapport à x au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+    "en": "A function equals x times y. What is the partial derivative with respect to x at the point ({dados-calculo.px}, {dados-calculo.py})?"
+  },
+  "dados-calculo": {
+    "px": "2",
+    "py": "9",
+    "total": "9"
+  }
+}

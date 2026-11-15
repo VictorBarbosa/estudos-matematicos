@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Para as medidas {dados-calculo.m1}, {dados-calculo.m2}, {dados-calculo.m3} e {dados-calculo.m4}, qual é a amplitude, ou seja, a diferença entre a maior e a menor? (duas casas decimais)",
+    "fr": "Pour les mesures {dados-calculo.m1}, {dados-calculo.m2}, {dados-calculo.m3} et {dados-calculo.m4}, quelle est l’étendue, c’est-à-dire l’écart entre la plus grande et la plus petite ? (deux décimales)",
+    "en": "For the measurements {dados-calculo.m1}, {dados-calculo.m2}, {dados-calculo.m3} and {dados-calculo.m4}, what is the range, that is, the largest minus the smallest? (two decimal places)"
+  },
+  "dados-calculo": {
+    "m1": "10",
+    "m2": "12",
+    "m3": "14",
+    "m4": "16",
+    "total": "6.00"
+  }
+}

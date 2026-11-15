@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A equação característica tem raiz dupla igual a {dados-calculo.raiz}. Quantas raízes DISTINTAS ela tem?",
+    "fr": "L’équation caractéristique a une racine double égale à {dados-calculo.raiz}. Combien de racines DISTINCTES a-t-elle ?",
+    "en": "The characteristic equation has a double root equal to {dados-calculo.raiz}. How many DISTINCT roots does it have?"
+  },
+  "dados-calculo": {
+    "raiz": "-3",
+    "total": "1"
+  }
+}

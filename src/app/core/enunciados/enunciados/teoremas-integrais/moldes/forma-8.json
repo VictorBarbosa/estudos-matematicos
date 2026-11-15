@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Use o teorema de Green para calcular a circulação ∮ P dx + Q dy na borda do retângulo 0 ≤ x ≤ {dados-calculo.L}, 0 ≤ y ≤ {dados-calculo.M}, percorrida no sentido anti-horário."
+  }
+}

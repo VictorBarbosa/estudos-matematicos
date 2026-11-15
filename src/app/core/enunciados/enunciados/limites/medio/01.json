@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o limite do cubo de x menos {dados-calculo.a}, dividido por x menos {dados-calculo.raiz}, quando x tende a {dados-calculo.raiz}?",
+    "fr": "Quelle est la limite du cube de x moins {dados-calculo.a}, divisé par x moins {dados-calculo.raiz}, quand x tend vers {dados-calculo.raiz} ?",
+    "en": "What is the limit of x cubed minus {dados-calculo.a}, divided by x minus {dados-calculo.raiz}, as x tends to {dados-calculo.raiz}?"
+  },
+  "dados-calculo": {
+    "a": "27",
+    "raiz": "3",
+    "total": "27"
+  }
+}

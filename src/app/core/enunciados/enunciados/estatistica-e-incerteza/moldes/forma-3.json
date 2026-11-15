@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um retângulo tem base {dados-calculo.base} ± {dados-calculo.expressao1} cm e altura {dados-calculo.altura} ± {dados-calculo.expressao2} cm. Qual é a incerteza da área, em cm²? (2 casas decimais)"
+  }
+}

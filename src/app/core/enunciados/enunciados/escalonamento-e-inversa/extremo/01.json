@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha {dados-calculo.c} e {dados-calculo.d}. Qual é o determinante dela, que é o número pelo qual a inversa divide?",
+    "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne {dados-calculo.c} et {dados-calculo.d}. Quel est son déterminant, le nombre par lequel l’inverse divise ?",
+    "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row {dados-calculo.c} and {dados-calculo.d}. What is its determinant, the number the inverse divides by?"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "b": "3",
+    "c": "3",
+    "d": "2",
+    "total": "-1"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} vacas comem a ração em {dados-calculo.b} dias. Em quantos dias 1 vaca come a mesma ração?",
+    "fr": "{dados-calculo.a} vaches mangent le fourrage en {dados-calculo.b} jours. En combien de jours 1 vache mange-t-elle le même fourrage ?",
+    "en": "{dados-calculo.a} cows eat the feed in {dados-calculo.b} days. In how many days does 1 cow eat the same feed?"
+  }
+}

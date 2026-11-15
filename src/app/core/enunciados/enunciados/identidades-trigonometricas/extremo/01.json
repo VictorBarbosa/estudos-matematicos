@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "O seno de um ângulo agudo vale {dados-calculo.seno}. Use o arco duplo para calcular o seno do dobro desse ângulo. (duas casas decimais)",
+    "fr": "Le sinus d’un angle aigu vaut {dados-calculo.seno}. Utilisez l’arc double pour calculer le sinus du double de cet angle. (deux décimales)",
+    "en": "The sine of an acute angle is {dados-calculo.seno}. Use the double angle formula to find the sine of twice that angle. (two decimal places)"
+  },
+  "dados-calculo": {
+    "seno": "0.6",
+    "total": "0.96"
+  }
+}

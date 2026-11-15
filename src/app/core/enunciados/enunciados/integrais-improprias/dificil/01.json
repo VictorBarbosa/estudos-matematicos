@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A área sob a curva que vale 1 dividido por x, de x = 1 até o infinito, cresce sem limite. Escreva a resposta que o site usa quando a integral não tem valor.",
+    "fr": "L’aire sous la courbe qui vaut 1 divisé par x, de x = 1 à l’infini, croît sans limite. Écrivez la réponse que le site utilise quand l’intégrale n’a pas de valeur.",
+    "en": "The area under the curve equal to 1 divided by x, from x = 1 to infinity, grows without bound. Write the answer the site uses when the integral has no value."
+  },
+  "dados-calculo": {
+    "total": "diverge"
+  }
+}

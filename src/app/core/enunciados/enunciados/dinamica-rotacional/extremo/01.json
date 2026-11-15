@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o momento de inércia, em kg·m², de uma esfera maciça de {dados-calculo.massa} kg e raio {dados-calculo.raio} m, que vale dois quintos de massa vezes raio ao quadrado? (três casas decimais)",
+    "fr": "Quel est le moment d’inertie, en kg·m², d’une sphère pleine de {dados-calculo.massa} kg et de rayon {dados-calculo.raio} m, qui vaut deux cinquièmes de la masse fois le rayon au carré ? (trois décimales)",
+    "en": "What is the moment of inertia, in kg·m², of a solid sphere of {dados-calculo.massa} kg and radius {dados-calculo.raio} m, which is two fifths of mass times radius squared? (three decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "5",
+    "raio": "0.3",
+    "total": "0.180"
+  }
+}

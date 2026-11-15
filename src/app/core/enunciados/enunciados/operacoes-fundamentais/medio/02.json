@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um lote de {dados-calculo.x1} parafusos foi dividido igualmente em {dados-calculo.x2} caixas. Quantos parafusos ficaram em cada caixa?",
+    "fr": "Un lot de {dados-calculo.x1} vis a été réparti également dans {dados-calculo.x2} boîtes. Combien de vis par boîte ?",
+    "en": "A batch of {dados-calculo.x1} screws was split evenly into {dados-calculo.x2} boxes. How many screws are in each box?"
+  },
+  "dados-calculo": {
+    "x1": "456",
+    "acao": "/",
+    "x2": "8",
+    "total": "57"
+  }
+}

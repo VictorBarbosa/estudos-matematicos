@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Partindo de {dados-calculo.v0} m/s com aceleração de {dados-calculo.a} m/s², qual é a velocidade após percorrer {dados-calculo.deslocamento} m? (2 casas decimais)"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um polinômio de grau {dados-calculo.grauP} é dividido por um polinômio de grau {dados-calculo.grauD}. Qual é o grau do quociente?",
+    "fr": "Un polynôme de degré {dados-calculo.grauP} est divisé par un polynôme de degré {dados-calculo.grauD}. Quel est le degré du quotient ?",
+    "en": "A polynomial of degree {dados-calculo.grauP} is divided by a polynomial of degree {dados-calculo.grauD}. What is the degree of the quotient?"
+  },
+  "dados-calculo": {
+    "grauP": "7",
+    "grauD": "3",
+    "total": "4"
+  }
+}

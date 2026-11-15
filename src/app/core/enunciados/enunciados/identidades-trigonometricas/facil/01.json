@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Use a fórmula da soma de arcos para calcular o seno de ({dados-calculo.a}° + {dados-calculo.b}°). (duas casas decimais)",
+    "fr": "Utilisez la formule de l’addition des arcs pour calculer le sinus de ({dados-calculo.a}° + {dados-calculo.b}°). (deux décimales)",
+    "en": "Use the angle sum formula to work out the sine of ({dados-calculo.a}° + {dados-calculo.b}°). (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "30",
+    "b": "45",
+    "total": "0.97"
+  }
+}

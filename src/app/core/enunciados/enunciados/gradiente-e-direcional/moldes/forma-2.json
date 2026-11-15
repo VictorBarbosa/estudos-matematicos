@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Qual é a derivada direcional desta função no ponto ({dados-calculo.x}, {dados-calculo.y}), na direção do vetor ({dados-calculo.expressao1}, {dados-calculo.expressao2})? Responda com 3 casas decimais."
+  }
+}

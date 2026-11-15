@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um barco é empurrado {dados-calculo.leste} km para o leste e {dados-calculo.norte} km para o norte. Qual é a distância em linha reta até o ponto de partida, em km? (duas casas decimais)",
+    "fr": "Un bateau est poussé de {dados-calculo.leste} km vers l’est et {dados-calculo.norte} km vers le nord. Quelle est la distance en ligne droite jusqu’au point de départ, en km ? (deux décimales)",
+    "en": "A boat is pushed {dados-calculo.leste} km east and {dados-calculo.norte} km north. What is the straight-line distance back to the start, in km? (two decimal places)"
+  },
+  "dados-calculo": {
+    "leste": "3",
+    "norte": "4",
+    "total": "5.00"
+  }
+}

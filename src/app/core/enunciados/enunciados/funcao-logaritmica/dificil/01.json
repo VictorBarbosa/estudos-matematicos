@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Quantas vezes é preciso dividir {dados-calculo.valor} por {dados-calculo.base} até chegar a 1?",
+    "fr": "Combien de fois faut-il diviser {dados-calculo.valor} par {dados-calculo.base} pour arriver à 1 ?",
+    "en": "How many times must {dados-calculo.valor} be divided by {dados-calculo.base} to reach 1?"
+  },
+  "dados-calculo": {
+    "valor": "729",
+    "base": "3",
+    "total": "6"
+  }
+}

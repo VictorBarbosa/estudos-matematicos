@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "R₁ = {dados-calculo.r1} Ω está em série com o paralelo de R₂ = {dados-calculo.r2} Ω e R₃ = {dados-calculo.r3} Ω, tudo ligado a {dados-calculo.v} V. Qual corrente sai da fonte, em A? (2 casas decimais)"
+  }
+}

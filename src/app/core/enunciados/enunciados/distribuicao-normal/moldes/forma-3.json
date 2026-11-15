@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} normal, com média {dados-calculo.media} {dados-calculo.expressao3} e desvio {dados-calculo.desvio} {dados-calculo.expressao3}. Que proporção fica ACIMA de {dados-calculo.valor} {dados-calculo.expressao3}? Responda entre 0 e 1, com 4 casas decimais."
+  }
+}

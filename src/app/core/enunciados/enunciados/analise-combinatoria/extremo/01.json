@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "De quantos modos se pode escolher um presidente e um vice entre {dados-calculo.candidatos} candidatos, sendo os dois cargos diferentes?",
+    "fr": "De combien de façons peut-on choisir un président et un vice-président parmi {dados-calculo.candidatos} candidats, les deux postes étant différents ?",
+    "en": "In how many ways can a president and a vice-president be chosen from {dados-calculo.candidatos} candidates, the two roles being different?"
+  },
+  "dados-calculo": {
+    "candidatos": "10",
+    "total": "90"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é a energia cinética de rotação, em joules, de um corpo com momento de inércia {dados-calculo.inercia} kg·m² girando a {dados-calculo.angular} rad/s? (três casas decimais)",
+    "fr": "Quelle est l’énergie cinétique de rotation, en joules, d’un corps de moment d’inertie {dados-calculo.inercia} kg·m² tournant à {dados-calculo.angular} rad/s ? (trois décimales)",
+    "en": "What is the rotational kinetic energy, in joules, of a body with moment of inertia {dados-calculo.inercia} kg·m² spinning at {dados-calculo.angular} rad/s? (three decimal places)"
+  },
+  "dados-calculo": {
+    "inercia": "2",
+    "angular": "3",
+    "total": "9.000"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma medida tem média {dados-calculo.media} e desvio padrão {dados-calculo.desvio}. Quantos desvios padrão acima da média está o valor {dados-calculo.valor}?",
+    "fr": "Une mesure a une moyenne de {dados-calculo.media} et un écart-type de {dados-calculo.desvio}. Combien d’écarts-types au-dessus de la moyenne se trouve la valeur {dados-calculo.valor} ?",
+    "en": "A measurement has mean {dados-calculo.media} and standard deviation {dados-calculo.desvio}. How many standard deviations above the mean is the value {dados-calculo.valor}?"
+  },
+  "dados-calculo": {
+    "media": "100",
+    "desvio": "15",
+    "valor": "130",
+    "total": "2"
+  }
+}

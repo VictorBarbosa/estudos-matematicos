@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A função que divide {dados-calculo.numerador} por x menos {dados-calculo.ponto} é descontínua em qual valor de x?",
+    "fr": "La fonction qui divise {dados-calculo.numerador} par x moins {dados-calculo.ponto} est discontinue pour quelle valeur de x ?",
+    "en": "The function dividing {dados-calculo.numerador} by x minus {dados-calculo.ponto} is discontinuous at what value of x?"
+  },
+  "dados-calculo": {
+    "numerador": "8",
+    "ponto": "5",
+    "total": "5"
+  }
+}

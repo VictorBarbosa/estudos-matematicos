@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma força de {dados-calculo.forca} N age durante {dados-calculo.tempo} s. Qual é o impulso, em N·s? (duas casas decimais)",
+    "fr": "Une force de {dados-calculo.forca} N agit pendant {dados-calculo.tempo} s. Quelle est l’impulsion, en N·s ? (deux décimales)",
+    "en": "A force of {dados-calculo.forca} N acts for {dados-calculo.tempo} s. What is the impulse, in N·s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "forca": "50",
+    "tempo": "4",
+    "total": "200.00"
+  }
+}

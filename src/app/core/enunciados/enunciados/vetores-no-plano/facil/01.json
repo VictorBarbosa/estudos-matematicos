@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um avião voa a {dados-calculo.modulo} km/h numa direção que forma {dados-calculo.angulo}° com o leste. Qual é a componente para o leste, em km/h? (duas casas decimais)",
+    "fr": "Un avion vole à {dados-calculo.modulo} km/h dans une direction formant {dados-calculo.angulo}° avec l’est. Quelle est la composante vers l’est, en km/h ? (deux décimales)",
+    "en": "A plane flies at {dados-calculo.modulo} km/h in a direction making {dados-calculo.angulo}° with east. What is the eastward component, in km/h? (two decimal places)"
+  },
+  "dados-calculo": {
+    "modulo": "50",
+    "angulo": "37",
+    "total": "39.93"
+  }
+}

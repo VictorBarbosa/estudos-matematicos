@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma rampa de {dados-calculo.comprimento} m de comprimento sobe formando {dados-calculo.angulo}° com o chão. Que altura, em metros, ela alcança? (duas casas decimais)",
+    "fr": "Une rampe de {dados-calculo.comprimento} m de longueur monte en formant {dados-calculo.angulo}° avec le sol. Quelle hauteur, en mètres, atteint-elle ? (deux décimales)",
+    "en": "A ramp {dados-calculo.comprimento} m long rises at {dados-calculo.angulo}° to the ground. What height, in metres, does it reach? (two decimal places)"
+  },
+  "dados-calculo": {
+    "comprimento": "10",
+    "angulo": "30",
+    "total": "5.00"
+  }
+}

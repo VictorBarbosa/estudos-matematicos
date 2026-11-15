@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.fa} em x = {dados-calculo.a} e {dados-calculo.fb} em x = {dados-calculo.b}, e é contínua. A raiz está entre eles? Responda 1 para sim e 0 para não.",
+    "fr": "Une fonction vaut {dados-calculo.fa} en x = {dados-calculo.a} et {dados-calculo.fb} en x = {dados-calculo.b}, et elle est continue. La racine est-elle entre les deux ? Répondez 1 pour oui et 0 pour non.",
+    "en": "A function equals {dados-calculo.fa} at x = {dados-calculo.a} and {dados-calculo.fb} at x = {dados-calculo.b}, and it is continuous. Is the root between them? Answer 1 for yes and 0 for no."
+  },
+  "dados-calculo": {
+    "fa": "-2",
+    "a": "1",
+    "fb": "3",
+    "b": "2",
+    "total": "1"
+  }
+}

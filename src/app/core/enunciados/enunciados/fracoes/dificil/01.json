@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "De um tanque cheio, {dados-calculo.p1} da água foi usada na manhã. À tarde foi usada {dados-calculo.p2} do que havia restado. Que fração do tanque sobrou?",
+    "fr": "D’un réservoir plein, {dados-calculo.p1} de l’eau a été utilisée le matin. L’après-midi, {dados-calculo.p2} de ce qui restait a été utilisée. Quelle fraction du réservoir reste-t-il ?",
+    "en": "From a full tank, {dados-calculo.p1} of the water was used in the morning. In the afternoon {dados-calculo.p2} of what was left was used. What fraction of the tank is left?"
+  },
+  "dados-calculo": {
+    "p1": "1/3",
+    "p2": "1/4",
+    "total": "1/2"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Num dado de {dados-calculo.faces} faces, qual é a probabilidade de sair um número maior que {dados-calculo.alvo}? Responda como fração.",
+    "fr": "Sur un dé à {dados-calculo.faces} faces, quelle est la probabilité d’obtenir un nombre supérieur à {dados-calculo.alvo} ? Répondez sous forme de fraction.",
+    "en": "On a {dados-calculo.faces}-sided die, what is the probability of rolling a number greater than {dados-calculo.alvo}? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "faces": "6",
+    "alvo": "4",
+    "total": "1/3"
+  }
+}

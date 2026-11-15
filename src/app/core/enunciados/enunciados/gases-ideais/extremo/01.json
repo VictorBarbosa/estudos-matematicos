@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um recipiente contém {dados-calculo.molsN2} mol de N₂ e {dados-calculo.molsO2} mol de O₂, com pressão total de {dados-calculo.pressaoTotal} atm. Qual é a pressão parcial do O₂, em atm? (duas casas decimais)",
+    "fr": "Un récipient contient {dados-calculo.molsN2} mol de N₂ et {dados-calculo.molsO2} mol de O₂, avec une pression totale de {dados-calculo.pressaoTotal} atm. Quelle est la pression partielle de O₂, en atm ? (deux décimales)",
+    "en": "A container holds {dados-calculo.molsN2} mol of N₂ and {dados-calculo.molsO2} mol of O₂, with a total pressure of {dados-calculo.pressaoTotal} atm. What is the partial pressure of O₂, in atm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "molsN2": "3",
+    "molsO2": "2",
+    "pressaoTotal": "5",
+    "total": "2.00"
+  }
+}

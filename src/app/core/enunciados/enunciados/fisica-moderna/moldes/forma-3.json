@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma nave mede {dados-calculo.proprio} m em repouso. Passando a {dados-calculo.v1}c, que comprimento ela tem para um observador na Terra, em metros?{dados-calculo.v2}"
+  }
+}

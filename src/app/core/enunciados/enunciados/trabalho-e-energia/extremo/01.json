@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma mola de constante {dados-calculo.constante} N/m é comprimida {dados-calculo.compressao} m. Quanta energia, em joules, fica armazenada nela? (duas casas decimais)",
+    "fr": "Un ressort de constante {dados-calculo.constante} N/m est comprimé de {dados-calculo.compressao} m. Combien d’énergie, en joules, y est stockée ? (deux décimales)",
+    "en": "A spring with constant {dados-calculo.constante} N/m is compressed {dados-calculo.compressao} m. How much energy, in joules, is stored in it? (two decimal places)"
+  },
+  "dados-calculo": {
+    "constante": "200",
+    "compressao": "0.3",
+    "total": "9.00"
+  }
+}

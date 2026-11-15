@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma massa de {dados-calculo.massa} kg oscila presa a uma mola de constante {dados-calculo.constante} N/m. Qual é o período, em segundos? (três casas decimais)",
+    "fr": "Une masse de {dados-calculo.massa} kg oscille attachée à un ressort de constante {dados-calculo.constante} N/m. Quelle est la période, en secondes ? (trois décimales)",
+    "en": "A {dados-calculo.massa} kg mass oscillates on a spring with constant {dados-calculo.constante} N/m. What is the period, in seconds? (three decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "2",
+    "constante": "32",
+    "total": "1.571"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma força de {dados-calculo.forca} N é aplicada a {dados-calculo.v1} m do eixo, a {dados-calculo.angulo}° do braço. Qual é o torque, em N·m? (2 casas decimais)"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a derivada da função logaritmo natural em x = {dados-calculo.ponto}? Responda como fração.",
+    "fr": "Quelle est la dérivée de la fonction logarithme naturel en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+    "en": "What is the derivative of the natural logarithm function at x = {dados-calculo.ponto}? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "ponto": "7",
+    "total": "1/7"
+  }
+}

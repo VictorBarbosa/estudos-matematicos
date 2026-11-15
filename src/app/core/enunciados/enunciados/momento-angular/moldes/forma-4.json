@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um corpo gira sem torque externo com inércia {dados-calculo.v1} kg·m² a {dados-calculo.v2} rad/s, e recolhe a massa até a inércia cair para {dados-calculo.v3}. De quanto VARIOU a energia cinética de rotação, em J? Responda com 3 casas decimais."
+  }
+}

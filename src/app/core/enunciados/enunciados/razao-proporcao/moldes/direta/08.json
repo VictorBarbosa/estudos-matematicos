@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um trabalhador recebe R$ {dados-calculo.b} por {dados-calculo.a} dias de trabalho. Quanto recebe por {dados-calculo.c} dias, no mesmo contrato?",
+    "fr": "Un travailleur reçoit {dados-calculo.b} $ pour {dados-calculo.a} jours de travail. Combien reçoit-il pour {dados-calculo.c} jours, au même contrat ?",
+    "en": "A worker earns ${dados-calculo.b} for {dados-calculo.a} days of work. How much does he earn for {dados-calculo.c} days under the same contract?"
+  }
+}

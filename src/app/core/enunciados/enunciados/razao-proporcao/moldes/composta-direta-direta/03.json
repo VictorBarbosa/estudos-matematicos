@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} impressoras imprimem {dados-calculo.b} páginas em {dados-calculo.c} minutos. Quantas páginas {dados-calculo.d} impressoras iguais imprimem em {dados-calculo.e} minutos?",
+    "fr": "{dados-calculo.a} imprimantes impriment {dados-calculo.b} pages en {dados-calculo.c} minutes. Combien de pages {dados-calculo.d} imprimantes identiques impriment-elles en {dados-calculo.e} minutes ?",
+    "en": "{dados-calculo.a} printers print {dados-calculo.b} pages in {dados-calculo.c} minutes. How many pages do {dados-calculo.d} identical printers print in {dados-calculo.e} minutes?"
+  }
+}

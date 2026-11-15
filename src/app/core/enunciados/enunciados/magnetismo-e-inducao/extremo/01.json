@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "O fluxo magnético numa espira varia {dados-calculo.variacao} Wb em {dados-calculo.tempo} s. Qual é a força eletromotriz induzida, em volts?",
+    "fr": "Le flux magnétique dans une spire varie de {dados-calculo.variacao} Wb en {dados-calculo.tempo} s. Quelle est la force électromotrice induite, en volts ?",
+    "en": "The magnetic flux through a loop changes by {dados-calculo.variacao} Wb in {dados-calculo.tempo} s. What is the induced electromotive force, in volts?"
+  },
+  "dados-calculo": {
+    "variacao": "0.6",
+    "tempo": "0.2",
+    "total": "3"
+  }
+}

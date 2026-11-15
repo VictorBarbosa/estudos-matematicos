@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Resolva, em graus, a equação em que a tangente de x vale {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a MAIOR solução.",
+    "fr": "Résolvez, en degrés, l’équation où la tangente de x vaut {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la PLUS GRANDE solution.",
+    "en": "Solve, in degrees, the equation where the tangent of x is {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the LARGEST solution."
+  },
+  "dados-calculo": {
+    "valor": "1",
+    "total": "225"
+  }
+}

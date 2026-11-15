@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "A uma taxa de {dados-calculo.taxa}% por período, em quantos períodos um capital se multiplica por {dados-calculo.comoTexto}? (2 casas decimais)"
+  }
+}

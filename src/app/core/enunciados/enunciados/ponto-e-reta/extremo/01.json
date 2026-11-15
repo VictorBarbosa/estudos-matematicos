@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma reta tem coeficiente angular {dados-calculo.m}. Qual é o coeficiente angular de uma reta perpendicular a ela? Responda como fração.",
+    "fr": "Une droite a un coefficient directeur de {dados-calculo.m}. Quel est le coefficient directeur d’une droite perpendiculaire ? Répondez sous forme de fraction.",
+    "en": "A line has slope {dados-calculo.m}. What is the slope of a line perpendicular to it? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "m": "4",
+    "total": "-1/4"
+  }
+}

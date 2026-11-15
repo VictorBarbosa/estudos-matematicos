@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um carro tem velocidade v(t) = {dados-calculo.a}t + {dados-calculo.b} (m/s). Quanto ele se desloca entre t = {dados-calculo.t1} s e t = {dados-calculo.t2} s, em metros?"
+  }
+}

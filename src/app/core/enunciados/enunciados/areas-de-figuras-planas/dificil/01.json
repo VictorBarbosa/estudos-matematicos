@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um terreno em forma de trapézio tem bases de {dados-calculo.baseMaior} m e {dados-calculo.baseMenor} m e altura de {dados-calculo.altura} m. Quantos metros quadrados ele tem?",
+    "fr": "Un terrain en forme de trapèze a des bases de {dados-calculo.baseMaior} m et {dados-calculo.baseMenor} m et une hauteur de {dados-calculo.altura} m. Combien de mètres carrés fait-il ?",
+    "en": "A trapezium-shaped plot has bases of {dados-calculo.baseMaior} m and {dados-calculo.baseMenor} m and a height of {dados-calculo.altura} m. How many square metres is it?"
+  },
+  "dados-calculo": {
+    "baseMaior": "14",
+    "baseMenor": "8",
+    "altura": "6",
+    "total": "66"
+  }
+}

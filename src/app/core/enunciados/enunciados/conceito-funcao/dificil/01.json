@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "O lucro de uma loja é o produto do preço pela diferença entre {dados-calculo.limite} e o preço. Para que preço o lucro é máximo?",
+    "fr": "Le profit d’un magasin est le produit du prix par la différence entre {dados-calculo.limite} et le prix. Pour quel prix le profit est-il maximal ?",
+    "en": "A shop’s profit is the price times the difference between {dados-calculo.limite} and the price. At what price is the profit greatest?"
+  },
+  "dados-calculo": {
+    "limite": "40",
+    "total": "20"
+  }
+}

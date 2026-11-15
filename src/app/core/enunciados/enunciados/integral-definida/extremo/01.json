@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Qual é a área sob a reta que vale {dados-calculo.a} vezes x mais {dados-calculo.b}, entre x = {dados-calculo.inicio} e x = {dados-calculo.fim}?",
+    "fr": "Quelle est l’aire sous la droite qui vaut {dados-calculo.a} fois x plus {dados-calculo.b}, entre x = {dados-calculo.inicio} et x = {dados-calculo.fim} ?",
+    "en": "What is the area under the line equal to {dados-calculo.a} times x plus {dados-calculo.b}, from x = {dados-calculo.inicio} to x = {dados-calculo.fim}?"
+  },
+  "dados-calculo": {
+    "a": "2",
+    "b": "3",
+    "inicio": "1",
+    "fim": "4",
+    "total": "24"
+  }
+}

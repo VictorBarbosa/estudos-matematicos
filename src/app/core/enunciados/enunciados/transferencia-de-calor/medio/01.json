@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a variação de temperatura, em °C, quando {dados-calculo.energia} J entram em {dados-calculo.massa} kg de um material de calor específico {dados-calculo.especifico} J/(kg·°C)? (três casas decimais)",
+    "fr": "Quelle est la variation de température, en °C, quand {dados-calculo.energia} J entrent dans {dados-calculo.massa} kg d’un matériau de chaleur spécifique {dados-calculo.especifico} J/(kg·°C) ? (trois décimales)",
+    "en": "What is the temperature change, in °C, when {dados-calculo.energia} J enter {dados-calculo.massa} kg of a material with specific heat {dados-calculo.especifico} J/(kg·°C)? (three decimal places)"
+  },
+  "dados-calculo": {
+    "energia": "20000",
+    "massa": "4",
+    "especifico": "500",
+    "total": "10.000"
+  }
+}

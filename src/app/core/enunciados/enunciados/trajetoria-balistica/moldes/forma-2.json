@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um projétil é lançado a {dados-calculo.velocidadeInicial} m/s formando {dados-calculo.anguloGraus}° com a horizontal. Qual é {dados-calculo.nome}? (em {dados-calculo.unidade}, 2 casas)"
+  }
+}

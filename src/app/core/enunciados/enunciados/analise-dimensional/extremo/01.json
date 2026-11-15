@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na dimensão de pressão, cuja unidade é o pascal, qual é o expoente de L (comprimento)? Responda 0 se ele não aparecer.",
+    "fr": "Dans la dimension de la pression, dont l’unité est le pascal, quel est l’exposant de L (longueur) ? Répondez 0 s’il n’apparaît pas.",
+    "en": "In the dimension of pressure, whose unit is the pascal, what is the exponent of L (length)? Answer 0 if it does not appear."
+  },
+  "dados-calculo": {
+    "total": "-1"
+  }
+}

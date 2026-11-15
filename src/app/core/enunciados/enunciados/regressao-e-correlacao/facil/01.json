@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma reta de mínimos quadrados tem inclinação {dados-calculo.inclinacao} e passa pelo ponto ({dados-calculo.px}, {dados-calculo.py}). Qual é o seu intercepto?",
+    "fr": "Une droite des moindres carrés a une pente de {dados-calculo.inclinacao} et passe par le point ({dados-calculo.px}, {dados-calculo.py}). Quelle est son ordonnée à l’origine ?",
+    "en": "A least-squares line has slope {dados-calculo.inclinacao} and passes through ({dados-calculo.px}, {dados-calculo.py}). What is its intercept?"
+  },
+  "dados-calculo": {
+    "inclinacao": "2",
+    "px": "3",
+    "py": "7",
+    "total": "1"
+  }
+}

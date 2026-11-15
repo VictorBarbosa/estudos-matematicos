@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um mineral tem {dados-calculo.pCa}% de cálcio, {dados-calculo.pC}% de carbono e {dados-calculo.pO}% de oxigênio em massa. Qual é a sua fórmula empírica?",
+    "fr": "Un minéral contient {dados-calculo.pCa}% de calcium, {dados-calculo.pC}% de carbone et {dados-calculo.pO}% d’oxygène en masse. Quelle est sa formule empirique ?",
+    "en": "A mineral has {dados-calculo.pCa}% calcium, {dados-calculo.pC}% carbon and {dados-calculo.pO}% oxygen by mass. What is its empirical formula?"
+  },
+  "dados-calculo": {
+    "pCa": "40.04",
+    "pC": "12.00",
+    "pO": "47.96",
+    "total": "CaCO3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um patinador gira a {dados-calculo.angular} rad/s com momento de inércia {dados-calculo.inercia1} kg·m². Recolhendo os braços, a inércia cai para {dados-calculo.inercia2} kg·m². Qual é a nova velocidade angular, em rad/s? (três casas decimais)",
+    "fr": "Un patineur tourne à {dados-calculo.angular} rad/s avec un moment d’inertie de {dados-calculo.inercia1} kg·m². En ramenant les bras, l’inertie tombe à {dados-calculo.inercia2} kg·m². Quelle est la nouvelle vitesse angulaire, en rad/s ? (trois décimales)",
+    "en": "A skater spins at {dados-calculo.angular} rad/s with moment of inertia {dados-calculo.inercia1} kg·m². Pulling the arms in, the inertia drops to {dados-calculo.inercia2} kg·m². What is the new angular speed, in rad/s? (three decimal places)"
+  },
+  "dados-calculo": {
+    "angular": "2",
+    "inercia1": "6",
+    "inercia2": "2",
+    "total": "6.000"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma matriz 2 por 2 tem traço {dados-calculo.traco} e determinante {dados-calculo.determinante}. Sabendo que a soma dos autovalores é o traço, e que um deles vale {dados-calculo.um}, qual é o outro?",
+    "fr": "Une matrice 2 par 2 a une trace de {dados-calculo.traco} et un déterminant de {dados-calculo.determinante}. Sachant que la somme des valeurs propres est la trace, et que l’une vaut {dados-calculo.um}, quelle est l’autre ?",
+    "en": "A 2 by 2 matrix has trace {dados-calculo.traco} and determinant {dados-calculo.determinante}. Knowing the eigenvalues add up to the trace, and one of them is {dados-calculo.um}, what is the other?"
+  },
+  "dados-calculo": {
+    "traco": "7",
+    "determinante": "12",
+    "um": "3",
+    "total": "4"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um corpo de {dados-calculo.v1} m² e emissividade {dados-calculo.v2} está a {dados-calculo.celsius} °C. Qual é a potência irradiada, em W? Responda com 3 casas decimais."
+  }
+}

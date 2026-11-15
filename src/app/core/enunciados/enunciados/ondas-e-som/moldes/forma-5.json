@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um som chega com intensidade de {dados-calculo.intensidadeTexto} W/m². Qual é o nível sonoro, em dB?{dados-calculo.expressao1}"
+  }
+}

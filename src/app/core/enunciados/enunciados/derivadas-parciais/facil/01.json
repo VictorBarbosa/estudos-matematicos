@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Qual é a derivada parcial em relação a y?",
+    "fr": "Une fonction vaut {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Quelle est la dérivée partielle par rapport à y ?",
+    "en": "A function equals {dados-calculo.a} times x plus {dados-calculo.b} times y. What is the partial derivative with respect to y?"
+  },
+  "dados-calculo": {
+    "a": "7",
+    "b": "-11",
+    "total": "-11"
+  }
+}

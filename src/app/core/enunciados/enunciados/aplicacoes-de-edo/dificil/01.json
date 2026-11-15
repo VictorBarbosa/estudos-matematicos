@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma população dobra a cada {dados-calculo.intervalo} anos. Partindo de {dados-calculo.inicial} indivíduos, quantos haverá depois de {dados-calculo.tempo} anos?",
+    "fr": "Une population double tous les {dados-calculo.intervalo} ans. En partant de {dados-calculo.inicial} individus, combien y en aura-t-il après {dados-calculo.tempo} ans ?",
+    "en": "A population doubles every {dados-calculo.intervalo} years. Starting from {dados-calculo.inicial} individuals, how many will there be after {dados-calculo.tempo} years?"
+  },
+  "dados-calculo": {
+    "intervalo": "5",
+    "inicial": "300",
+    "tempo": "15",
+    "total": "2400"
+  }
+}

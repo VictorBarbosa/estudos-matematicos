@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A posição de um corpo, em metros, é o cubo do tempo menos {dados-calculo.b} vezes o tempo. Em que instante, em segundos positivos, a velocidade é zero? Responda o quadrado desse instante.",
+    "fr": "La position d’un corps, en mètres, est le cube du temps moins {dados-calculo.b} fois le temps. À quel instant, en secondes positives, la vitesse est-elle nulle ? Donnez le carré de cet instant.",
+    "en": "A body’s position, in metres, is the cube of the time minus {dados-calculo.b} times the time. At what positive time, in seconds, is the speed zero? Give the square of that time."
+  },
+  "dados-calculo": {
+    "b": "12",
+    "total": "4"
+  }
+}

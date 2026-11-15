@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um átomo de potássio tem {dados-calculo.protons} prótons e {dados-calculo.neutrons} nêutrons. Qual é o seu número de massa?",
+    "fr": "Un atome de potassium a {dados-calculo.protons} protons et {dados-calculo.neutrons} neutrons. Quel est son nombre de masse ?",
+    "en": "A potassium atom has {dados-calculo.protons} protons and {dados-calculo.neutrons} neutrons. What is its mass number?"
+  },
+  "dados-calculo": {
+    "protons": "19",
+    "neutrons": "20",
+    "total": "39"
+  }
+}

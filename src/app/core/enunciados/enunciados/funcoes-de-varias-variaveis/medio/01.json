@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma superfície vale o quadrado de x mais o quadrado de y. Quanto ela vale no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+    "fr": "Une surface vaut le carré de x plus le carré de y. Combien vaut-elle au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+    "en": "A surface equals x squared plus y squared. What is its value at the point ({dados-calculo.px}, {dados-calculo.py})?"
+  },
+  "dados-calculo": {
+    "px": "3",
+    "py": "4",
+    "total": "25"
+  }
+}

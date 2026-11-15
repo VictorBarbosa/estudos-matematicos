@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a derivada da função seno no ponto em que o cosseno vale {dados-calculo.cosseno}?",
+    "fr": "Quelle est la dérivée de la fonction sinus au point où le cosinus vaut {dados-calculo.cosseno} ?",
+    "en": "What is the derivative of the sine function at the point where the cosine is {dados-calculo.cosseno}?"
+  },
+  "dados-calculo": {
+    "cosseno": "0.5",
+    "total": "0.5"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma curva satisfaz: o quadrado de x mais o quadrado de y vale {dados-calculo.soma}. Qual é a coordenada x do ponto mais alto dessa curva, onde a tangente é horizontal?",
+    "fr": "Une courbe satisfait : le carré de x plus le carré de y vaut {dados-calculo.soma}. Quelle est la coordonnée x du point le plus haut de cette courbe, où la tangente est horizontale ?",
+    "en": "A curve satisfies: x squared plus y squared equals {dados-calculo.soma}. What is the x coordinate of the highest point of this curve, where the tangent is horizontal?"
+  },
+  "dados-calculo": {
+    "soma": "16",
+    "total": "0"
+  }
+}

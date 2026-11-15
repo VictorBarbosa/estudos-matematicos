@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} kg de farinha custam R$ {dados-calculo.b}. Quanto custam {dados-calculo.c} kg?",
+    "fr": "{dados-calculo.a} kg de farine coûtent {dados-calculo.b} $. Combien coûtent {dados-calculo.c} kg ?",
+    "en": "{dados-calculo.a} kg of flour cost ${dados-calculo.b}. How much do {dados-calculo.c} kg cost?"
+  }
+}

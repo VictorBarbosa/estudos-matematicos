@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma reta passa por ({dados-calculo.ax}, {dados-calculo.ay}) e ({dados-calculo.bx}, {dados-calculo.by}). Qual é o seu coeficiente angular?",
+    "fr": "Une droite passe par ({dados-calculo.ax}, {dados-calculo.ay}) et ({dados-calculo.bx}, {dados-calculo.by}). Quel est son coefficient directeur ?",
+    "en": "A line goes through ({dados-calculo.ax}, {dados-calculo.ay}) and ({dados-calculo.bx}, {dados-calculo.by}). What is its slope?"
+  },
+  "dados-calculo": {
+    "ax": "1",
+    "ay": "2",
+    "bx": "4",
+    "by": "11",
+    "total": "3"
+  }
+}

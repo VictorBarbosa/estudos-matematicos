@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um gás expande de {dados-calculo.volumeInicial} L para {dados-calculo.volumeFinal} L à pressão constante de {dados-calculo.pressaoAtm} atm. Qual é o trabalho realizado pelo gás, em joules? (2 casas decimais)"
+  }
+}

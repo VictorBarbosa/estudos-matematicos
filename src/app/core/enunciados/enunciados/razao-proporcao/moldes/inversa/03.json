@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Viajando a {dados-calculo.a} km/h, leva-se {dados-calculo.b} horas. Quantas horas leva a {dados-calculo.c} km/h, no mesmo trajeto?",
+    "fr": "En roulant à {dados-calculo.a} km/h, on met {dados-calculo.b} heures. Combien d'heures met-on à {dados-calculo.c} km/h, sur le même trajet ?",
+    "en": "Travelling at {dados-calculo.a} km/h takes {dados-calculo.b} hours. How many hours does {dados-calculo.c} km/h take on the same route?"
+  }
+}

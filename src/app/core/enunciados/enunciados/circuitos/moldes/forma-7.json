@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma única malha tem uma bateria de {dados-calculo.e1} V e outra de {dados-calculo.e2} V {dados-calculo.expressao1}, e resistores de {dados-calculo.r1} Ω e {dados-calculo.r2} Ω. Qual é a corrente na malha, em A? (2 casas decimais)"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} tratores aram {dados-calculo.b} hectares em {dados-calculo.c} dias. Quantos hectares {dados-calculo.d} tratores iguais aram em {dados-calculo.e} dias?",
+    "fr": "{dados-calculo.a} tracteurs labourent {dados-calculo.b} hectares en {dados-calculo.c} jours. Combien d'hectares {dados-calculo.d} tracteurs identiques labourent-ils en {dados-calculo.e} jours ?",
+    "en": "{dados-calculo.a} tractors plough {dados-calculo.b} hectares in {dados-calculo.c} days. How many hectares do {dados-calculo.d} identical tractors plough in {dados-calculo.e} days?"
+  }
+}

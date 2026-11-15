@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um reservatório começou com {dados-calculo.inicial} litros e perde {dados-calculo.taxa} litros por hora. Depois de quantas horas ele chega a {dados-calculo.restante} litros?",
+    "fr": "Un réservoir contenait au départ {dados-calculo.inicial} litres et perd {dados-calculo.taxa} litres par heure. Au bout de combien d’heures atteint-il {dados-calculo.restante} litres ?",
+    "en": "A tank started with {dados-calculo.inicial} litres and loses {dados-calculo.taxa} litres per hour. After how many hours does it reach {dados-calculo.restante} litres?"
+  },
+  "dados-calculo": {
+    "inicial": "1200",
+    "taxa": "35",
+    "restante": "815",
+    "total": "11"
+  }
+}

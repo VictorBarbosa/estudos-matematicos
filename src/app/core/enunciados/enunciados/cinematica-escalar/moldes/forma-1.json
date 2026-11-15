@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um corpo parte com {dados-calculo.v0} m/s e acelera a {dados-calculo.a} m/s². Qual é sua velocidade após {dados-calculo.t} s?"
+  }
+}

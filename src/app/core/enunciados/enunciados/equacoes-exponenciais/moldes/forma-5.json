@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma população de bactérias cresce como P(t) = {dados-calculo.p0}·e^({dados-calculo.v1}·t), com t em horas. Em quantas horas ela chega a {dados-calculo.alvo}? (3 casas decimais)"
+  }
+}

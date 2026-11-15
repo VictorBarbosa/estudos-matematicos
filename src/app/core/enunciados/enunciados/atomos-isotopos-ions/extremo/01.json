@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um íon de cálcio, cujo número atômico é {dados-calculo.z}, tem carga {dados-calculo.carga}+. Quantos elétrons ele tem?",
+    "fr": "Un ion de calcium, dont le numéro atomique est {dados-calculo.z}, a une charge {dados-calculo.carga}+. Combien d’électrons a-t-il ?",
+    "en": "A calcium ion, whose atomic number is {dados-calculo.z}, has charge {dados-calculo.carga}+. How many electrons does it have?"
+  },
+  "dados-calculo": {
+    "z": "20",
+    "carga": "2",
+    "total": "18"
+  }
+}

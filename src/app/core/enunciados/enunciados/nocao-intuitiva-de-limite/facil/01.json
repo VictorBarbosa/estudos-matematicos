@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o quadrado de x menos {dados-calculo.a}, dividido por x menos {dados-calculo.raiz}. Ela não existe em x = {dados-calculo.raiz}, mas de que valor ela se aproxima quando x se aproxima de {dados-calculo.raiz}?",
+    "fr": "Une fonction vaut le carré de x moins {dados-calculo.a}, divisé par x moins {dados-calculo.raiz}. Elle n’existe pas en x = {dados-calculo.raiz}, mais de quelle valeur s’approche-t-elle quand x s’approche de {dados-calculo.raiz} ?",
+    "en": "A function is the square of x minus {dados-calculo.a}, divided by x minus {dados-calculo.raiz}. It does not exist at x = {dados-calculo.raiz}, but what value does it approach as x approaches {dados-calculo.raiz}?"
+  },
+  "dados-calculo": {
+    "a": "25",
+    "raiz": "5",
+    "total": "10"
+  }
+}

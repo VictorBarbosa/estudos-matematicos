@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Numa urna há {dados-calculo.brancas} bolas brancas e {dados-calculo.pretas} pretas. Tirando duas sem reposição, qual é a probabilidade de as duas serem brancas? Responda como fração.",
+    "fr": "Dans une urne il y a {dados-calculo.brancas} boules blanches et {dados-calculo.pretas} noires. En tirant deux boules sans remise, quelle est la probabilité que les deux soient blanches ? Répondez sous forme de fraction.",
+    "en": "An urn holds {dados-calculo.brancas} white balls and {dados-calculo.pretas} black ones. Drawing two without replacement, what is the probability both are white? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "brancas": "4",
+    "pretas": "6",
+    "total": "2/15"
+  }
+}

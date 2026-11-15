@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um gás recebe {dados-calculo.calor} J de calor e realiza {dados-calculo.trabalho} J de trabalho. Qual é a variação da energia interna, em joules? (duas casas decimais)",
+    "fr": "Un gaz reçoit {dados-calculo.calor} J de chaleur et effectue {dados-calculo.trabalho} J de travail. Quelle est la variation d’énergie interne, en joules ? (deux décimales)",
+    "en": "A gas takes in {dados-calculo.calor} J of heat and does {dados-calculo.trabalho} J of work. What is the change in internal energy, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "calor": "500",
+    "trabalho": "200",
+    "total": "300.00"
+  }
+}

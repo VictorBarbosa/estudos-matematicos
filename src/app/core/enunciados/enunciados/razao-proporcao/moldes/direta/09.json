@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} kg de sementes produzem {dados-calculo.b} kg de grãos. Quantos quilos de grãos produzem {dados-calculo.c} kg de sementes?",
+    "fr": "{dados-calculo.a} kg de semences produisent {dados-calculo.b} kg de grains. Combien de kilos de grains produisent {dados-calculo.c} kg de semences ?",
+    "en": "{dados-calculo.a} kg of seeds yield {dados-calculo.b} kg of grain. How many kilograms of grain do {dados-calculo.c} kg of seeds yield?"
+  }
+}

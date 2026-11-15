@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um balão ocupa {dados-calculo.volume} L a {dados-calculo.temperatura1} °C. Aquecido até {dados-calculo.temperatura2} °C, à mesma pressão e sem perder gás, que volume em litros ele passa a ocupar? (duas casas decimais)",
+    "fr": "Un ballon occupe {dados-calculo.volume} L à {dados-calculo.temperatura1} °C. Chauffé à {dados-calculo.temperatura2} °C, à la même pression et sans perte de gaz, quel volume en litres occupe-t-il ? (deux décimales)",
+    "en": "A balloon takes up {dados-calculo.volume} L at {dados-calculo.temperatura1} °C. Heated to {dados-calculo.temperatura2} °C at the same pressure and with no gas lost, what volume in litres does it take up? (two decimal places)"
+  },
+  "dados-calculo": {
+    "volume": "10",
+    "temperatura1": "27",
+    "temperatura2": "127",
+    "total": "13.33"
+  }
+}

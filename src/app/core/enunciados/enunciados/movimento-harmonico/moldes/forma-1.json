@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma massa de {dados-calculo.v1} kg oscila presa a uma mola de constante {dados-calculo.v2} N/m, com amplitude de {dados-calculo.v3} m. Qual é {dados-calculo.nome}? (3 casas)"
+  }
+}

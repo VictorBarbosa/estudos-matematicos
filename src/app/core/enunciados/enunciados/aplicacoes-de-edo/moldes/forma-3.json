@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Num circuito RL com R = {dados-calculo.resistencia} Ω, L = {dados-calculo.expressao1} H e tensão de {dados-calculo.tensao} V, ligado em t = 0 com corrente inicial nula, qual é a corrente em t = {dados-calculo.expressao2} s, em A? Responda com 4 casas decimais."
+  }
+}

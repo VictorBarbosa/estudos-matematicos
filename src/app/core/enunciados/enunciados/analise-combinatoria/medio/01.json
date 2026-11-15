@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "De quantos modos {dados-calculo.pessoas} pessoas podem se sentar em fila, em {dados-calculo.pessoas} cadeiras?",
+    "fr": "De combien de façons {dados-calculo.pessoas} personnes peuvent-elles s’asseoir en file, sur {dados-calculo.pessoas} chaises ?",
+    "en": "In how many ways can {dados-calculo.pessoas} people sit in a row of {dados-calculo.pessoas} chairs?"
+  },
+  "dados-calculo": {
+    "pessoas": "6",
+    "total": "720"
+  }
+}

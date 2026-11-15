@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Estime, pelo resto de Lagrange, o erro máximo ao aproximar {dados-calculo.expressao1} em x = {dados-calculo.expressao2} com o polinômio de grau {dados-calculo.grau}. Use M = {dados-calculo.expressao3}. Responda com 5 casas decimais."
+  }
+}

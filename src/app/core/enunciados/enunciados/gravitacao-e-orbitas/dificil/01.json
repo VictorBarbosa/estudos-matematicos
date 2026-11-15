@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um satélite orbita a {dados-calculo.raios} raios terrestres do CENTRO da Terra. A aceleração da gravidade ali é a da superfície dividida por quanto?",
+    "fr": "Un satellite orbite à {dados-calculo.raios} rayons terrestres du CENTRE de la Terre. L’accélération de la gravité y est celle de la surface divisée par combien ?",
+    "en": "A satellite orbits at {dados-calculo.raios} Earth radii from the CENTRE of the Earth. The gravitational acceleration there is the surface value divided by how much?"
+  },
+  "dados-calculo": {
+    "raios": "3",
+    "total": "9"
+  }
+}

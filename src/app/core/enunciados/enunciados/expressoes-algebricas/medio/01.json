@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Numa oficina, cada bicicleta usa {dados-calculo.porBike} parafusos e cada patinete usa {dados-calculo.porPatinete}. Há x bicicletas e o triplo de x patinetes. Quantos parafusos são usados ao todo quando x vale {dados-calculo.x}?",
+    "fr": "Dans un atelier, chaque vélo utilise {dados-calculo.porBike} vis et chaque trottinette {dados-calculo.porPatinete}. Il y a x vélos et le triple de x trottinettes. Combien de vis sont utilisées en tout quand x vaut {dados-calculo.x} ?",
+    "en": "In a workshop, each bicycle uses {dados-calculo.porBike} screws and each scooter uses {dados-calculo.porPatinete}. There are x bicycles and three times x scooters. How many screws are used in all when x is {dados-calculo.x}?"
+  },
+  "dados-calculo": {
+    "porBike": "8",
+    "porPatinete": "5",
+    "x": "4",
+    "total": "92"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância entre os pontos de coordenadas polares ({dados-calculo.r1}, {dados-calculo.a1}°) e ({dados-calculo.r2}, {dados-calculo.a2}°)? (duas casas decimais)",
+    "fr": "Quelle est la distance entre les points de coordonnées polaires ({dados-calculo.r1}, {dados-calculo.a1}°) et ({dados-calculo.r2}, {dados-calculo.a2}°) ? (deux décimales)",
+    "en": "What is the distance between the points with polar coordinates ({dados-calculo.r1}, {dados-calculo.a1}°) and ({dados-calculo.r2}, {dados-calculo.a2}°)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "r1": "6",
+    "a1": "45",
+    "r2": "7",
+    "a2": "195",
+    "total": "12.56"
+  }
+}

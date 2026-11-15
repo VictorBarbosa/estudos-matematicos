@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Num dia de sol, uma vara de {dados-calculo.vara} m projeta uma sombra de {dados-calculo.sombraVara} m. No mesmo instante, a sombra de um prédio mede {dados-calculo.sombraPredio} m. Quantos metros tem o prédio?",
+    "fr": "Par une journée ensoleillée, une tige de {dados-calculo.vara} m projette une ombre de {dados-calculo.sombraVara} m. Au même instant, l’ombre d’un immeuble mesure {dados-calculo.sombraPredio} m. Combien de mètres fait l’immeuble ?",
+    "en": "On a sunny day a {dados-calculo.vara} m pole casts a {dados-calculo.sombraVara} m shadow. At the same moment a building’s shadow is {dados-calculo.sombraPredio} m long. How many metres tall is the building?"
+  },
+  "dados-calculo": {
+    "vara": "2",
+    "sombraVara": "3",
+    "sombraPredio": "36",
+    "total": "24"
+  }
+}

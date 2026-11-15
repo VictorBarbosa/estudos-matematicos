@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um bloco de {dados-calculo.massa} kg desliza num plano de {dados-calculo.angulo}° com coeficiente de atrito {dados-calculo.v1}. Qual é a aceleração, em m/s²? (2 casas decimais)"
+  }
+}

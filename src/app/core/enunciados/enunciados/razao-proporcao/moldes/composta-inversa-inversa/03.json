@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} pintores, trabalhando {dados-calculo.b} horas por dia, pintam o prédio em {dados-calculo.c} dias. Em quantos dias {dados-calculo.d} pintores, trabalhando {dados-calculo.e} horas por dia, pintam o mesmo prédio?",
+    "fr": "{dados-calculo.a} peintres, travaillant {dados-calculo.b} heures par jour, peignent l'immeuble en {dados-calculo.c} jours. En combien de jours {dados-calculo.d} peintres, travaillant {dados-calculo.e} heures par jour, peignent-ils le même immeuble ?",
+    "en": "{dados-calculo.a} painters, working {dados-calculo.b} hours a day, paint the building in {dados-calculo.c} days. In how many days do {dados-calculo.d} painters, working {dados-calculo.e} hours a day, paint the same building?"
+  }
+}

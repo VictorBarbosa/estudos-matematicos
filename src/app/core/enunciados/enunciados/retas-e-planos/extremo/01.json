@@ -1,0 +1,15 @@
+{
+  "enunciado": {
+    "br": "Um plano tem vetor normal ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}) e uma reta tem vetor diretor ({dados-calculo.dx}, {dados-calculo.dy}, k). Para que valor de k a reta é paralela ao plano, ou seja, o produto escalar é zero?",
+    "fr": "Un plan a pour vecteur normal ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}) et une droite a pour vecteur directeur ({dados-calculo.dx}, {dados-calculo.dy}, k). Pour quelle valeur de k la droite est-elle parallèle au plan, c’est-à-dire le produit scalaire nul ?",
+    "en": "A plane has normal vector ({dados-calculo.nx}, {dados-calculo.ny}, {dados-calculo.nz}) and a line has direction vector ({dados-calculo.dx}, {dados-calculo.dy}, k). For what k is the line parallel to the plane, that is, the dot product zero?"
+  },
+  "dados-calculo": {
+    "nx": "2",
+    "ny": "1",
+    "nz": "1",
+    "dx": "1",
+    "dy": "3",
+    "total": "-5"
+  }
+}

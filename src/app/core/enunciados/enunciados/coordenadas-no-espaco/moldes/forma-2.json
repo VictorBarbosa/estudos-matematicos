@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um ponto tem coordenadas esféricas ρ = {dados-calculo.rho}, φ = {dados-calculo.phi}° (medido do eixo z) e θ = {dados-calculo.theta}°. Qual é a coordenada cartesiana {dados-calculo.pedir}? Responda com 3 casas decimais."
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma força de {dados-calculo.forca} N é aplicada a {dados-calculo.angulo}° do deslocamento, que vale {dados-calculo.deslocamento} m. Qual é o trabalho realizado, em joules? (2 casas)"
+  }
+}

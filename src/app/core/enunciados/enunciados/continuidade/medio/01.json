@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma função é contínua e vale {dados-calculo.fa} em x = {dados-calculo.a} e {dados-calculo.fb} em x = {dados-calculo.b}. Pelo teorema do valor intermediário, ela passa por zero entre {dados-calculo.a} e {dados-calculo.b}? Responda 1 para sim e 0 para não.",
+    "fr": "Une fonction est continue et vaut {dados-calculo.fa} en x = {dados-calculo.a} et {dados-calculo.fb} en x = {dados-calculo.b}. Par le théorème des valeurs intermédiaires, passe-t-elle par zéro entre {dados-calculo.a} et {dados-calculo.b} ? Répondez 1 pour oui et 0 pour non.",
+    "en": "A function is continuous and equals {dados-calculo.fa} at x = {dados-calculo.a} and {dados-calculo.fb} at x = {dados-calculo.b}. By the intermediate value theorem, does it cross zero between {dados-calculo.a} and {dados-calculo.b}? Answer 1 for yes and 0 for no."
+  },
+  "dados-calculo": {
+    "fa": "-3",
+    "a": "1",
+    "fb": "5",
+    "b": "2",
+    "total": "1"
+  }
+}

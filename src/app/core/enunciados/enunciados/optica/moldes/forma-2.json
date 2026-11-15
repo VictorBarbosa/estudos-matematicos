@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um raio de luz passa do ar (n = 1,00) para {dados-calculo.nome} (n = {dados-calculo.v1}), fazendo {dados-calculo.theta1}° com a normal. Que ângulo o raio refratado faz com a normal, em graus?{dados-calculo.v2}"
+  }
+}

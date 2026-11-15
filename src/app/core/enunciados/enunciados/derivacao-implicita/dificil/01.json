@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma curva satisfaz: o produto de x por y vale {dados-calculo.produto}. No ponto ({dados-calculo.px}, {dados-calculo.py}), qual é a inclinação da reta tangente?",
+    "fr": "Une courbe satisfait : le produit de x par y vaut {dados-calculo.produto}. Au point ({dados-calculo.px}, {dados-calculo.py}), quelle est la pente de la tangente ?",
+    "en": "A curve satisfies: x times y equals {dados-calculo.produto}. At the point ({dados-calculo.px}, {dados-calculo.py}), what is the slope of the tangent line?"
+  },
+  "dados-calculo": {
+    "produto": "12",
+    "px": "2",
+    "py": "6",
+    "total": "-3"
+  }
+}

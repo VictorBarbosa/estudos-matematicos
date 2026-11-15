@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Jogando {dados-calculo.moedas} moedas honestas, qual é a probabilidade de sair cara em todas? Responda como fração.",
+    "fr": "En lançant {dados-calculo.moedas} pièces équilibrées, quelle est la probabilité d’obtenir face à chaque fois ? Répondez sous forme de fraction.",
+    "en": "Tossing {dados-calculo.moedas} fair coins, what is the probability of getting heads every time? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "moedas": "3",
+    "total": "1/8"
+  }
+}

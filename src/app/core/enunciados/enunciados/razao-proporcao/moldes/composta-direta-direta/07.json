@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} costureiras fazem {dados-calculo.b} camisas em {dados-calculo.c} dias. Quantas camisas {dados-calculo.d} costureiras, no mesmo ritmo, fazem em {dados-calculo.e} dias?",
+    "fr": "{dados-calculo.a} couturières font {dados-calculo.b} chemises en {dados-calculo.c} jours. Combien de chemises {dados-calculo.d} couturières, au même rythme, font-elles en {dados-calculo.e} jours ?",
+    "en": "{dados-calculo.a} seamstresses make {dados-calculo.b} shirts in {dados-calculo.c} days. How many shirts do {dados-calculo.d} seamstresses, at the same pace, make in {dados-calculo.e} days?"
+  }
+}

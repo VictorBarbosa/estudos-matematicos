@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Dois resistores, de {dados-calculo.r1} Ω e {dados-calculo.r2} Ω, estão em SÉRIE, ligados a {dados-calculo.tensao} V. Que corrente, em ampères, percorre o circuito?",
+    "fr": "Deux résistances, de {dados-calculo.r1} Ω et {dados-calculo.r2} Ω, sont en SÉRIE, branchées à {dados-calculo.tensao} V. Quel courant, en ampères, parcourt le circuit ?",
+    "en": "Two resistors, {dados-calculo.r1} Ω and {dados-calculo.r2} Ω, are in SERIES across {dados-calculo.tensao} V. What current, in amperes, flows in the circuit?"
+  },
+  "dados-calculo": {
+    "r1": "4",
+    "r2": "6",
+    "tensao": "20",
+    "total": "2"
+  }
+}

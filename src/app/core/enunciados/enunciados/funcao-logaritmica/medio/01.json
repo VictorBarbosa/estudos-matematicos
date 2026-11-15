@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "O pH de uma solução é o logaritmo decimal da concentração, com o sinal trocado. Se a concentração é 10 elevado a menos {dados-calculo.expoente}, qual é o pH?",
+    "fr": "Le pH d’une solution est le logarithme décimal de la concentration, avec le signe inversé. Si la concentration est 10 à la puissance moins {dados-calculo.expoente}, quel est le pH ?",
+    "en": "The pH of a solution is the base-10 logarithm of the concentration with the sign flipped. If the concentration is 10 to the power of minus {dados-calculo.expoente}, what is the pH?"
+  },
+  "dados-calculo": {
+    "expoente": "5",
+    "total": "5"
+  }
+}

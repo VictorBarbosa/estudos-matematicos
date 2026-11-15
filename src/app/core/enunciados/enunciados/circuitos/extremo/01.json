@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Dois resistores, de {dados-calculo.r1} Ω e {dados-calculo.r2} Ω, estão em PARALELO. Qual é a resistência equivalente, em ohms?",
+    "fr": "Deux résistances, de {dados-calculo.r1} Ω et {dados-calculo.r2} Ω, sont en PARALLÈLE. Quelle est la résistance équivalente, en ohms ?",
+    "en": "Two resistors, {dados-calculo.r1} Ω and {dados-calculo.r2} Ω, are in PARALLEL. What is the equivalent resistance, in ohms?"
+  },
+  "dados-calculo": {
+    "r1": "6",
+    "r2": "3",
+    "total": "2"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma força de {dados-calculo.forca} N age por {dados-calculo.tempo} s sobre um corpo de {dados-calculo.massa} kg. Qual é o impulso, em N·s?"
+  }
+}

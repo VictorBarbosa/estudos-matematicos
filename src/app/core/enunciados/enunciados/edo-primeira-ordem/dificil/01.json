@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma substância decai de modo que a taxa é menos {dados-calculo.k} vezes a quantidade. Partindo de {dados-calculo.inicial} g, quantos gramas restam quando a quantidade cai à metade duas vezes seguidas?",
+    "fr": "Une substance décroît de sorte que le taux est moins {dados-calculo.k} fois la quantité. En partant de {dados-calculo.inicial} g, combien de grammes restent quand la quantité est divisée par deux deux fois de suite ?",
+    "en": "A substance decays so the rate is minus {dados-calculo.k} times the amount. Starting from {dados-calculo.inicial} g, how many grams are left after the amount halves twice in a row?"
+  },
+  "dados-calculo": {
+    "k": "0.5",
+    "inicial": "80",
+    "total": "20"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Dois elevado a x é igual a {dados-calculo.valor}. Quanto vale x?",
+    "fr": "Deux à la puissance x est égal à {dados-calculo.valor}. Combien vaut x ?",
+    "en": "Two to the power of x equals {dados-calculo.valor}. What is x?"
+  },
+  "dados-calculo": {
+    "valor": "512",
+    "total": "9"
+  }
+}

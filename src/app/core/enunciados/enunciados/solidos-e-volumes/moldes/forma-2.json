@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um {dados-calculo.v1} de raio {dados-calculo.raio} cm tem volume {dados-calculo.v2} cm³. Qual é sua altura, em cm?"
+  }
+}

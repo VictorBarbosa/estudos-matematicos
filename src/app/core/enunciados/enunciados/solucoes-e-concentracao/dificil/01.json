@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "A {dados-calculo.volumeInicial} mL de solução a {dados-calculo.concentracaoInicial} mol/L acrescenta-se água até completar {dados-calculo.volumeFinal} mL. Qual é a concentração final, em mol/L? (duas casas decimais)",
+    "fr": "À {dados-calculo.volumeInicial} mL de solution à {dados-calculo.concentracaoInicial} mol/L on ajoute de l’eau jusqu’à {dados-calculo.volumeFinal} mL. Quelle est la concentration finale, en mol/L ? (deux décimales)",
+    "en": "Water is added to {dados-calculo.volumeInicial} mL of a {dados-calculo.concentracaoInicial} mol/L solution up to {dados-calculo.volumeFinal} mL. What is the final concentration, in mol/L? (two decimal places)"
+  },
+  "dados-calculo": {
+    "volumeInicial": "100",
+    "concentracaoInicial": "3",
+    "volumeFinal": "500",
+    "total": "0.60"
+  }
+}

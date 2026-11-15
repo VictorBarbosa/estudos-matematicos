@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a primitiva do quadrado de x, avaliada em x = {dados-calculo.ponto}, tomando a constante igual a zero? (a primitiva é o cubo de x dividido por 3)",
+    "fr": "Quelle est la primitive du carré de x, évaluée en x = {dados-calculo.ponto}, avec une constante nulle ? (la primitive est le cube de x divisé par 3)",
+    "en": "What is the antiderivative of x squared, evaluated at x = {dados-calculo.ponto}, taking the constant as zero? (the antiderivative is x cubed divided by 3)"
+  },
+  "dados-calculo": {
+    "ponto": "3",
+    "total": "9"
+  }
+}

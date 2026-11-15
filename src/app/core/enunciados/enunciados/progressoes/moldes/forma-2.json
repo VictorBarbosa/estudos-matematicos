@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Numa {dados-calculo.nome} de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}, qual é a soma dos {dados-calculo.n} primeiros termos?"
+  }
+}

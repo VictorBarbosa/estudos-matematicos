@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.a} vezes o seno de x. Quanto vale a sua derivada no ponto em que o cosseno de x é {dados-calculo.cosseno}?",
+    "fr": "Une fonction vaut {dados-calculo.a} fois le sinus de x. Combien vaut sa dérivée au point où le cosinus de x est {dados-calculo.cosseno} ?",
+    "en": "A function is {dados-calculo.a} times the sine of x. What is its derivative at the point where the cosine of x is {dados-calculo.cosseno}?"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "cosseno": "0.5",
+    "total": "2"
+  }
+}

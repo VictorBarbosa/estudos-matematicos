@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma escada de {dados-calculo.comprimento} m escorrega: o pé dela se afasta da parede a {dados-calculo.taxaX} m/s. A que taxa o topo desce quando o pé está a {dados-calculo.x} m da parede? (em m/s, com sinal, 3 casas decimais)"
+  }
+}

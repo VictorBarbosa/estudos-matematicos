@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um campo conservativo tem potencial {dados-calculo.inicial} no início do caminho e {dados-calculo.final} no fim. Qual é o trabalho realizado ao longo do caminho?",
+    "fr": "Un champ conservatif a un potentiel de {dados-calculo.inicial} au début du chemin et de {dados-calculo.final} à la fin. Quel est le travail effectué le long du chemin ?",
+    "en": "A conservative field has potential {dados-calculo.inicial} at the start of the path and {dados-calculo.final} at the end. What work is done along the path?"
+  },
+  "dados-calculo": {
+    "inicial": "20",
+    "final": "8",
+    "total": "-12"
+  }
+}

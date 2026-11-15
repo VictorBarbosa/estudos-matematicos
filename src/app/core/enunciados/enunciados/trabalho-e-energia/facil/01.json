@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um corpo de {dados-calculo.massa} kg move-se a {dados-calculo.velocidade} m/s. Qual é a sua energia cinética, em joules? (duas casas decimais)",
+    "fr": "Un corps de {dados-calculo.massa} kg se déplace à {dados-calculo.velocidade} m/s. Quelle est son énergie cinétique, en joules ? (deux décimales)",
+    "en": "A {dados-calculo.massa} kg body moves at {dados-calculo.velocidade} m/s. What is its kinetic energy, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "10",
+    "velocidade": "6",
+    "total": "180.00"
+  }
+}

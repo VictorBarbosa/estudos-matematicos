@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o ângulo limite, em graus, para a luz que sai de um meio de índice {dados-calculo.n2} para o ar, de índice {dados-calculo.n1}? (duas casas decimais)",
+    "fr": "Quel est l’angle limite, en degrés, pour la lumière qui sort d’un milieu d’indice {dados-calculo.n2} vers l’air, d’indice {dados-calculo.n1} ? (deux décimales)",
+    "en": "What is the critical angle, in degrees, for light leaving a medium of index {dados-calculo.n2} into air of index {dados-calculo.n1}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "n2": "1.5",
+    "n1": "1",
+    "total": "41.81"
+  }
+}

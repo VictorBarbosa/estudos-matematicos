@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Quanto vale C({dados-calculo.n}, {dados-calculo.k}), o número na linha {dados-calculo.n}, posição {dados-calculo.k} do triângulo de Pascal (contando do 0)?"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma barra homogênea de {dados-calculo.comprimento} m e {dados-calculo.pesoBarra} N está apoiada numa ponta. Uma carga de {dados-calculo.carga} N está a {dados-calculo.cargaDistancia} m desse apoio. Que força vertical na outra ponta mantém a barra em equilíbrio, em newtons? (2 casas decimais)"
+  }
+}

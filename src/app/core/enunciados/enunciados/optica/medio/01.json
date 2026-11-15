@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um objeto está a {dados-calculo.objeto} cm de uma lente convergente de distância focal {dados-calculo.focal} cm. A que distância, em centímetros, fica a imagem?",
+    "fr": "Un objet est à {dados-calculo.objeto} cm d’une lentille convergente de distance focale {dados-calculo.focal} cm. À quelle distance, en centimètres, se forme l’image ?",
+    "en": "An object sits {dados-calculo.objeto} cm from a converging lens of focal length {dados-calculo.focal} cm. How far, in centimetres, is the image?"
+  },
+  "dados-calculo": {
+    "objeto": "15",
+    "focal": "10",
+    "total": "30"
+  }
+}

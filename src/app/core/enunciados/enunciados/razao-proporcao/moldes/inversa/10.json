@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma torneira de {dados-calculo.a} litros por minuto enche um tanque em {dados-calculo.b} minutos. Em quantos minutos uma de {dados-calculo.c} litros por minuto o enche?",
+    "fr": "Un robinet de {dados-calculo.a} litres par minute remplit un réservoir en {dados-calculo.b} minutes. En combien de minutes un robinet de {dados-calculo.c} litres par minute le remplit-il ?",
+    "en": "A tap at {dados-calculo.a} litres per minute fills a tank in {dados-calculo.b} minutes. In how many minutes does one at {dados-calculo.c} litres per minute fill it?"
+  }
+}

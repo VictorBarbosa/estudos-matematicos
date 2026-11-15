@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Entre {dados-calculo.n} pessoas, de quantos modos se pode formar uma fila de {dados-calculo.p}, importando a ordem?"
+  }
+}

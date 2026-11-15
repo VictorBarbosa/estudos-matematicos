@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é o limite da razão entre o quadrado de x menos {dados-calculo.b} vezes x e x, quando x tende a zero?",
+    "fr": "Quelle est la limite du rapport entre le carré de x moins {dados-calculo.b} fois x et x, quand x tend vers zéro ?",
+    "en": "What is the limit of the ratio of x squared minus {dados-calculo.b} times x to x, as x tends to zero?"
+  },
+  "dados-calculo": {
+    "b": "7",
+    "total": "-7"
+  }
+}

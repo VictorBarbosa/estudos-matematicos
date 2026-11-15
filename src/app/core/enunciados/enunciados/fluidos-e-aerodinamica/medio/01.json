@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a pressão da água, em kPa, a {dados-calculo.profundidade} m de profundidade, com densidade {dados-calculo.densidade} kg/m³ e gravidade {dados-calculo.gravidade} m/s²? (duas casas decimais)",
+    "fr": "Quelle est la pression de l’eau, en kPa, à {dados-calculo.profundidade} m de profondeur, avec une densité de {dados-calculo.densidade} kg/m³ et une gravité de {dados-calculo.gravidade} m/s² ? (deux décimales)",
+    "en": "What is the water pressure, in kPa, at {dados-calculo.profundidade} m depth, with density {dados-calculo.densidade} kg/m³ and gravity {dados-calculo.gravidade} m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "profundidade": "10",
+    "densidade": "1000",
+    "gravidade": "9.81",
+    "total": "98.10"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Paguei uma compra com R$ {dados-calculo.pago}. Levei {dados-calculo.q} camisetas de R$ {dados-calculo.preco} cada. Quanto recebi de troco?",
+    "fr": "J'ai payé un achat avec {dados-calculo.pago} $. J'ai pris {dados-calculo.q} t-shirts à {dados-calculo.preco} $ chacune. Combien m’a-t-on rendu ?",
+    "en": "I paid for a purchase with ${dados-calculo.pago}. I took {dados-calculo.q} shirts at ${dados-calculo.preco} each. How much change did I get?"
+  }
+}

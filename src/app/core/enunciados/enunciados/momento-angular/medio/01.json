@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o momento angular, em kg·m²/s, de um corpo com momento de inércia {dados-calculo.inercia} kg·m² girando a {dados-calculo.angular} rad/s? (três casas decimais)",
+    "fr": "Quel est le moment cinétique, en kg·m²/s, d’un corps de moment d’inertie {dados-calculo.inercia} kg·m² tournant à {dados-calculo.angular} rad/s ? (trois décimales)",
+    "en": "What is the angular momentum, in kg·m²/s, of a body with moment of inertia {dados-calculo.inercia} kg·m² spinning at {dados-calculo.angular} rad/s? (three decimal places)"
+  },
+  "dados-calculo": {
+    "inercia": "4",
+    "angular": "2.5",
+    "total": "10.000"
+  }
+}

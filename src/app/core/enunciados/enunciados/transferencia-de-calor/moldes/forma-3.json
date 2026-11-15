@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma superfície de {dados-calculo.v1} m² está {dados-calculo.deltaT} K acima do ar que a banha, com coeficiente de convecção {dados-calculo.h} W/(m²·K). Qual é o fluxo de calor, em W? Responda com 3 casas decimais."
+  }
+}

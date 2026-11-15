@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Numa roda-gigante de raio {dados-calculo.raio} m, o centro está a {dados-calculo.centro} m do chão. Qual é a altura máxima, em metros, que um passageiro alcança?",
+    "fr": "Sur une grande roue de rayon {dados-calculo.raio} m, le centre est à {dados-calculo.centro} m du sol. Quelle est la hauteur maximale, en mètres, qu’un passager atteint ?",
+    "en": "On a Ferris wheel of radius {dados-calculo.raio} m, the centre sits {dados-calculo.centro} m above the ground. What is the greatest height, in metres, a rider reaches?"
+  },
+  "dados-calculo": {
+    "raio": "15",
+    "centro": "18",
+    "total": "33"
+  }
+}

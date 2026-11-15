@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Integre a função constante {dados-calculo.constante} sobre um setor circular de raio {dados-calculo.raio} e ângulo de {dados-calculo.doze} doze avos de volta, usando coordenadas polares. Responda com 3 casas decimais."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Qual é a parte real do produto de ({dados-calculo.a} mais {dados-calculo.b}i) por ({dados-calculo.c} mais {dados-calculo.d}i)? (duas casas decimais)",
+    "fr": "Quelle est la partie réelle du produit de ({dados-calculo.a} plus {dados-calculo.b}i) par ({dados-calculo.c} plus {dados-calculo.d}i) ? (deux décimales)",
+    "en": "What is the real part of ({dados-calculo.a} plus {dados-calculo.b}i) times ({dados-calculo.c} plus {dados-calculo.d}i)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "2",
+    "b": "3",
+    "c": "1",
+    "d": "4",
+    "total": "-10.00"
+  }
+}

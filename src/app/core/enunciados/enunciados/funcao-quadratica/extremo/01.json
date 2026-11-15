@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma loja vende {dados-calculo.quantidade} unidades por mês a {dados-calculo.preco} reais cada. Cada real de desconto no preço faz vender {dados-calculo.extra} unidades a mais. Que preço, em reais, dá a maior receita?",
+    "fr": "Un magasin vend {dados-calculo.quantidade} unités par mois à {dados-calculo.preco} reais chacune. Chaque real de rabais fait vendre {dados-calculo.extra} unités de plus. Quel prix, en reais, donne la plus grande recette ?",
+    "en": "A shop sells {dados-calculo.quantidade} units a month at {dados-calculo.preco} reais each. Every real of discount sells {dados-calculo.extra} more units. What price, in reais, gives the greatest revenue?"
+  },
+  "dados-calculo": {
+    "quantidade": "100",
+    "preco": "50",
+    "extra": "5",
+    "total": "35"
+  }
+}

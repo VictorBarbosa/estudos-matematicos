@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A posição de um corpo, em metros, é o quadrado do tempo em segundos vezes {dados-calculo.a}. Qual é a velocidade, em m/s, no instante {dados-calculo.tempo} s?",
+    "fr": "La position d’un corps, en mètres, est le carré du temps en secondes fois {dados-calculo.a}. Quelle est la vitesse, en m/s, à l’instant {dados-calculo.tempo} s ?",
+    "en": "A body’s position, in metres, is {dados-calculo.a} times the square of the time in seconds. What is the speed, in m/s, at {dados-calculo.tempo} s?"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "tempo": "4",
+    "total": "24"
+  }
+}

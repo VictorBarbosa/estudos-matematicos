@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma reta de mínimos quadrados tem inclinação {dados-calculo.inclinacao} e intercepto {dados-calculo.intercepto}. Que valor ela prevê para x = {dados-calculo.x}?",
+    "fr": "Une droite des moindres carrés a une pente de {dados-calculo.inclinacao} et une ordonnée à l’origine de {dados-calculo.intercepto}. Quelle valeur prédit-elle pour x = {dados-calculo.x} ?",
+    "en": "A least-squares line has slope {dados-calculo.inclinacao} and intercept {dados-calculo.intercepto}. What value does it predict for x = {dados-calculo.x}?"
+  },
+  "dados-calculo": {
+    "inclinacao": "3",
+    "intercepto": "4",
+    "x": "5",
+    "total": "19"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um triângulo tem lados {dados-calculo.lado1}, {dados-calculo.lado2} e {dados-calculo.lado3}. Quantos graus mede o maior ângulo? (duas casas decimais)",
+    "fr": "Un triangle a des côtés de {dados-calculo.lado1}, {dados-calculo.lado2} et {dados-calculo.lado3}. Combien de degrés mesure le plus grand angle ? (deux décimales)",
+    "en": "A triangle has sides {dados-calculo.lado1}, {dados-calculo.lado2} and {dados-calculo.lado3}. How many degrees is its largest angle? (two decimal places)"
+  },
+  "dados-calculo": {
+    "lado1": "5",
+    "lado2": "7",
+    "lado3": "9",
+    "total": "95.74"
+  }
+}

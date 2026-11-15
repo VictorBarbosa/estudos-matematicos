@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma elipse tem semieixo maior {dados-calculo.a} e distância focal {dados-calculo.c}. Qual é o semieixo menor?",
+    "fr": "Une ellipse a un demi-grand axe de {dados-calculo.a} et une distance focale de {dados-calculo.c}. Quel est le demi-petit axe ?",
+    "en": "An ellipse has semi-major axis {dados-calculo.a} and focal distance {dados-calculo.c}. What is the semi-minor axis?"
+  },
+  "dados-calculo": {
+    "a": "13",
+    "c": "12",
+    "total": "5"
+  }
+}

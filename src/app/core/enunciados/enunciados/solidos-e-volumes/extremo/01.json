@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma esfera de raio {dados-calculo.raioEsfera} cm é derretida e todo o material é moldado num cilindro de raio {dados-calculo.raioCilindro} cm. Quantos centímetros de altura tem esse cilindro? (duas casas decimais)",
+    "fr": "Une sphère de rayon {dados-calculo.raioEsfera} cm est fondue et toute la matière est moulée en un cylindre de rayon {dados-calculo.raioCilindro} cm. Combien de centimètres de hauteur a ce cylindre ? (deux décimales)",
+    "en": "A sphere of radius {dados-calculo.raioEsfera} cm is melted and all the material is cast into a cylinder of radius {dados-calculo.raioCilindro} cm. How many centimetres tall is that cylinder? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raioEsfera": "6",
+    "raioCilindro": "4",
+    "total": "18.00"
+  }
+}

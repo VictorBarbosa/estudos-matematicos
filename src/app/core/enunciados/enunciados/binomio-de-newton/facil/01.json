@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a soma de todos os coeficientes do desenvolvimento de (a mais b) elevado a {dados-calculo.expoente}?",
+    "fr": "Quelle est la somme de tous les coefficients du développement de (a plus b) à la puissance {dados-calculo.expoente} ?",
+    "en": "What is the sum of all the coefficients in the expansion of (a plus b) to the power of {dados-calculo.expoente}?"
+  },
+  "dados-calculo": {
+    "expoente": "12",
+    "total": "4096"
+  }
+}

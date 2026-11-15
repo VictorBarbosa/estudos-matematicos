@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a porcentagem em massa de oxigênio no gás carbônico, CO₂? (em %, duas casas decimais)",
+    "fr": "Quel est le pourcentage en masse d’oxygène dans le dioxyde de carbone, CO₂ ? (en %, deux décimales)",
+    "en": "What is the percentage by mass of oxygen in carbon dioxide, CO₂? (in %, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "72.71"
+  }
+}

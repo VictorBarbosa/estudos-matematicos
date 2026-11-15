@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} escavadeiras, trabalhando {dados-calculo.b} horas por dia, abrem a vala em {dados-calculo.c} dias. Em quantos dias {dados-calculo.d} escavadeiras, trabalhando {dados-calculo.e} horas por dia, abrem a mesma vala?",
+    "fr": "{dados-calculo.a} excavatrices, travaillant {dados-calculo.b} heures par jour, creusent la tranchée en {dados-calculo.c} jours. En combien de jours {dados-calculo.d} excavatrices, travaillant {dados-calculo.e} heures par jour, creusent-elles la même tranchée ?",
+    "en": "{dados-calculo.a} excavators, working {dados-calculo.b} hours a day, dig the trench in {dados-calculo.c} days. In how many days do {dados-calculo.d} excavators, working {dados-calculo.e} hours a day, dig the same trench?"
+  }
+}

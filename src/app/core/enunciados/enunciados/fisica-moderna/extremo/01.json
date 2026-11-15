@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é o fator de Lorentz para uma nave a {dados-calculo.fracao} da velocidade da luz? (duas casas decimais)",
+    "fr": "Quel est le facteur de Lorentz pour un vaisseau à {dados-calculo.fracao} de la vitesse de la lumière ? (deux décimales)",
+    "en": "What is the Lorentz factor for a ship at {dados-calculo.fracao} of the speed of light? (two decimal places)"
+  },
+  "dados-calculo": {
+    "fracao": "0.8",
+    "total": "1.67"
+  }
+}

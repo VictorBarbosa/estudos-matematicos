@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o fluxo de um campo constante de módulo {dados-calculo.campo}, perpendicular a uma superfície plana de área {dados-calculo.area}?",
+    "fr": "Quel est le flux d’un champ constant de module {dados-calculo.campo}, perpendiculaire à une surface plane d’aire {dados-calculo.area} ?",
+    "en": "What is the flux of a constant field of magnitude {dados-calculo.campo}, perpendicular to a flat surface of area {dados-calculo.area}?"
+  },
+  "dados-calculo": {
+    "campo": "5",
+    "area": "8",
+    "total": "40"
+  }
+}

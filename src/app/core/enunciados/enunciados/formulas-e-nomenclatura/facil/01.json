@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do cloreto de sódio, o sal de cozinha?",
+    "fr": "Quelle est la formule du chlorure de sodium, le sel de table ?",
+    "en": "What is the formula of sodium chloride, table salt?"
+  },
+  "dados-calculo": {
+    "total": "NaCl"
+  }
+}

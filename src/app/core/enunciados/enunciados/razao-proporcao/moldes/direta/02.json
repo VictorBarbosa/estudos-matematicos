@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um carro percorre {dados-calculo.b} km com {dados-calculo.a} litros de combustível. Quantos quilômetros percorre com {dados-calculo.c} litros?",
+    "fr": "Une voiture parcourt {dados-calculo.b} km avec {dados-calculo.a} litres de carburant. Combien de kilomètres parcourt-elle avec {dados-calculo.c} litres ?",
+    "en": "A car travels {dados-calculo.b} km on {dados-calculo.a} litres of fuel. How many kilometres does it travel on {dados-calculo.c} litres?"
+  }
+}

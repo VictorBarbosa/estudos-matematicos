@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o quadrado de x para x menor que {dados-calculo.ponto}, e vale {dados-calculo.a} vezes x mais k para x maior ou igual a {dados-calculo.ponto}. Para que valor de k ela é contínua?",
+    "fr": "Une fonction vaut le carré de x pour x inférieur à {dados-calculo.ponto}, et vaut {dados-calculo.a} fois x plus k pour x supérieur ou égal à {dados-calculo.ponto}. Pour quelle valeur de k est-elle continue ?",
+    "en": "A function equals x squared for x less than {dados-calculo.ponto}, and equals {dados-calculo.a} times x plus k for x greater than or equal to {dados-calculo.ponto}. For what k is it continuous?"
+  },
+  "dados-calculo": {
+    "ponto": "3",
+    "a": "2",
+    "total": "3"
+  }
+}

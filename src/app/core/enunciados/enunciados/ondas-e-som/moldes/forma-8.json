@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Duas cordas de {dados-calculo.expressao1} m, presas nas pontas, conduzem ondas a {dados-calculo.v1} m/s e a {dados-calculo.v2} m/s. Tocadas juntas no fundamental, quantos batimentos por segundo se ouvem?{dados-calculo.expressao2}"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um resistor de {dados-calculo.r} Ω está ligado a {dados-calculo.expressao1} V. Qual corrente o atravessa, em mA? (2 casas decimais)"
+  }
+}

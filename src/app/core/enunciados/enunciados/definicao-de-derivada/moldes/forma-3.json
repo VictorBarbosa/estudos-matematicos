@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "A posição de um carro, em metros, é s(t) com t em segundos. Qual é a velocidade média entre t = {dados-calculo.inicio} s e t = {dados-calculo.fim} s, em m/s? (2 casas)"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma régua de {dados-calculo.comprimento} m viaja a {dados-calculo.fracao} da velocidade da luz, na sua própria direção. Que comprimento, em metros, ela tem para quem a vê passar? (duas casas decimais)",
+    "fr": "Une règle de {dados-calculo.comprimento} m voyage à {dados-calculo.fracao} de la vitesse de la lumière, dans sa propre direction. Quelle longueur, en mètres, a-t-elle pour celui qui la voit passer ? (deux décimales)",
+    "en": "A {dados-calculo.comprimento} m rod travels at {dados-calculo.fracao} of the speed of light along its own direction. What length, in metres, does it have for someone watching it go by? (two decimal places)"
+  },
+  "dados-calculo": {
+    "comprimento": "100",
+    "fracao": "0.8",
+    "total": "60.00"
+  }
+}

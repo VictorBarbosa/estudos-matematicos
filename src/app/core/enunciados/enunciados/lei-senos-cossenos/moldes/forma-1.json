@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um triângulo tem lados {dados-calculo.b} e {dados-calculo.c}, com ângulo de {dados-calculo.angulo}° entre eles. Quanto mede o terceiro lado? (2 casas)"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.a} vezes o logaritmo natural de x. Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+    "fr": "Une fonction vaut {dados-calculo.a} fois le logarithme naturel de x. Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+    "en": "A function is {dados-calculo.a} times the natural logarithm of x. What is its derivative at x = {dados-calculo.ponto}?"
+  },
+  "dados-calculo": {
+    "a": "6",
+    "ponto": "3",
+    "total": "2"
+  }
+}

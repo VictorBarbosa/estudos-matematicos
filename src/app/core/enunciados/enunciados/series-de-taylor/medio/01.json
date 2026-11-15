@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "O polinômio de Maclaurin de grau 2 da função cosseno é 1 menos metade do quadrado de x. Quanto vale essa aproximação em x = {dados-calculo.ponto}? Responda como fração.",
+    "fr": "Le polynôme de Maclaurin de degré 2 de la fonction cosinus est 1 moins la moitié du carré de x. Combien vaut cette approximation en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+    "en": "The degree 2 Maclaurin polynomial of the cosine function is 1 minus half of x squared. What is that approximation at x = {dados-calculo.ponto}? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "ponto": "1",
+    "total": "1/2"
+  }
+}

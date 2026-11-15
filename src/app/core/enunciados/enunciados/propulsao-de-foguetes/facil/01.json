@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um motor tem velocidade de exaustão de {dados-calculo.exaustao} m/s. Qual é o seu impulso específico, em segundos, com a gravidade valendo {dados-calculo.gravidade} m/s²? (duas casas decimais)",
+    "fr": "Un moteur a une vitesse d’éjection de {dados-calculo.exaustao} m/s. Quelle est son impulsion spécifique, en secondes, la gravité valant {dados-calculo.gravidade} m/s² ? (deux décimales)",
+    "en": "An engine has an exhaust velocity of {dados-calculo.exaustao} m/s. What is its specific impulse, in seconds, with gravity at {dados-calculo.gravidade} m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "exaustao": "3000",
+    "gravidade": "9.81",
+    "total": "305.81"
+  }
+}

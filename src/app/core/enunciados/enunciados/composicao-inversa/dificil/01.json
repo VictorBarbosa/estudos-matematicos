@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma função multiplica por {dados-calculo.fator} e subtrai {dados-calculo.subtrai}. Quanto vale a função inversa em {dados-calculo.saida}? Responda como fração.",
+    "fr": "Une fonction multiplie par {dados-calculo.fator} et soustrait {dados-calculo.subtrai}. Combien vaut la fonction inverse en {dados-calculo.saida} ? Répondez sous forme de fraction.",
+    "en": "A function multiplies by {dados-calculo.fator} and subtracts {dados-calculo.subtrai}. What is the inverse function at {dados-calculo.saida}? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "fator": "4",
+    "subtrai": "1",
+    "saida": "2",
+    "total": "3/4"
+  }
+}

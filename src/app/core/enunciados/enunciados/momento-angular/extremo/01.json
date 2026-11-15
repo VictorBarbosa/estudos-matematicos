@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um patinador recolhe os braços e o seu momento de inércia cai de {dados-calculo.inercia1} kg·m² para {dados-calculo.inercia2} kg·m², sem torque externo. Por quanto a energia cinética de rotação é multiplicada? (três casas decimais)",
+    "fr": "Un patineur ramène les bras et son moment d’inertie tombe de {dados-calculo.inercia1} kg·m² à {dados-calculo.inercia2} kg·m², sans couple extérieur. Par combien l’énergie cinétique de rotation est-elle multipliée ? (trois décimales)",
+    "en": "A skater pulls the arms in and the moment of inertia drops from {dados-calculo.inercia1} kg·m² to {dados-calculo.inercia2} kg·m², with no external torque. By what factor is the rotational kinetic energy multiplied? (three decimal places)"
+  },
+  "dados-calculo": {
+    "inercia1": "6",
+    "inercia2": "2",
+    "total": "3.000"
+  }
+}

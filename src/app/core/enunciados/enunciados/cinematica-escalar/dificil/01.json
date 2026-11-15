@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Quantos segundos leva para a velocidade ir de {dados-calculo.inicial} m/s a {dados-calculo.final} m/s com aceleração de {dados-calculo.aceleracao} m/s²? (duas casas decimais)",
+    "fr": "Combien de secondes faut-il pour que la vitesse passe de {dados-calculo.inicial} m/s à {dados-calculo.final} m/s avec une accélération de {dados-calculo.aceleracao} m/s² ? (deux décimales)",
+    "en": "How many seconds does it take for the speed to go from {dados-calculo.inicial} m/s to {dados-calculo.final} m/s with an acceleration of {dados-calculo.aceleracao} m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "inicial": "10",
+    "final": "30",
+    "aceleracao": "4",
+    "total": "5.00"
+  }
+}

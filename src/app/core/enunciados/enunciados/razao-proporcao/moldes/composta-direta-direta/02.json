@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} operários constroem {dados-calculo.b} metros de muro em {dados-calculo.c} dias. Quantos metros {dados-calculo.d} operários constroem em {dados-calculo.e} dias, no mesmo ritmo?",
+    "fr": "{dados-calculo.a} ouvriers construisent {dados-calculo.b} mètres de mur en {dados-calculo.c} jours. Combien de mètres {dados-calculo.d} ouvriers construisent-ils en {dados-calculo.e} jours, au même rythme ?",
+    "en": "{dados-calculo.a} workers build {dados-calculo.b} metres of wall in {dados-calculo.c} days. How many metres do {dados-calculo.d} workers build in {dados-calculo.e} days at the same pace?"
+  }
+}

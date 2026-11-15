@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma força variável vale {dados-calculo.a} vezes a posição, em newtons. Qual é o trabalho, em joules, realizado de x = 0 até x = {dados-calculo.fim} m?",
+    "fr": "Une force variable vaut {dados-calculo.a} fois la position, en newtons. Quel est le travail, en joules, effectué de x = 0 à x = {dados-calculo.fim} m ?",
+    "en": "A varying force equals {dados-calculo.a} times the position, in newtons. What work, in joules, is done from x = 0 to x = {dados-calculo.fim} m?"
+  },
+  "dados-calculo": {
+    "a": "10",
+    "fim": "3",
+    "total": "45"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} caminhões transportam {dados-calculo.b} toneladas em {dados-calculo.c} viagens. Quantas toneladas {dados-calculo.d} caminhões iguais transportam em {dados-calculo.e} viagens?",
+    "fr": "{dados-calculo.a} camions transportent {dados-calculo.b} tonnes en {dados-calculo.c} voyages. Combien de tonnes {dados-calculo.d} camions identiques transportent-ils en {dados-calculo.e} voyages ?",
+    "en": "{dados-calculo.a} trucks carry {dados-calculo.b} tonnes in {dados-calculo.c} trips. How many tonnes do {dados-calculo.d} identical trucks carry in {dados-calculo.e} trips?"
+  }
+}

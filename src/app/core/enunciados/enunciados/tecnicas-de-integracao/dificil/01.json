@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a área sob a curva que vale {dados-calculo.a} dividido por x, entre x = 1 e x = e, a base do logaritmo natural? (duas casas decimais)",
+    "fr": "Quelle est l’aire sous la courbe qui vaut {dados-calculo.a} divisé par x, entre x = 1 et x = e, la base du logarithme naturel ? (deux décimales)",
+    "en": "What is the area under the curve equal to {dados-calculo.a} divided by x, from x = 1 to x = e, the base of the natural logarithm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "total": "5.00"
+  }
+}

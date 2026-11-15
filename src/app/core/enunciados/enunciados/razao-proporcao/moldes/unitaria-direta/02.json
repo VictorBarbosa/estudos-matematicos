@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} cadernos custam R$ {dados-calculo.b}. Quanto custa um caderno?",
+    "fr": "{dados-calculo.a} cahiers coûtent {dados-calculo.b} $. Combien coûte un cahier ?",
+    "en": "{dados-calculo.a} notebooks cost ${dados-calculo.b}. How much does one notebook cost?"
+  }
+}

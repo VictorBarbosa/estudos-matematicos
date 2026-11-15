@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Aproxime a área sob a curva no intervalo [{dados-calculo.de}, {dados-calculo.ate}] usando {dados-calculo.n} retângulos, com altura tomada pela {dados-calculo.tipo}. (3 casas decimais)"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um ciclista percorreu {dados-calculo.parte} da rota, depois pedalou mais {dados-calculo.km} km e, com isso, completou {dados-calculo.acumulado} da rota. Quantos quilômetros tem a rota inteira?",
+    "fr": "Un cycliste a parcouru {dados-calculo.parte} du trajet, puis a pédalé {dados-calculo.km} km de plus et a ainsi complété {dados-calculo.acumulado} du trajet. Combien de kilomètres fait le trajet entier ?",
+    "en": "A cyclist covered {dados-calculo.parte} of the route, then rode {dados-calculo.km} km more and had thus completed {dados-calculo.acumulado} of the route. How many kilometres is the whole route?"
+  },
+  "dados-calculo": {
+    "parte": "1/3",
+    "km": "15",
+    "acumulado": "3/4",
+    "total": "36"
+  }
+}

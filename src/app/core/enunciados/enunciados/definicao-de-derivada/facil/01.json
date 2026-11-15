@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o quadrado de x. Usando a definição de derivada, quanto vale a derivada em x = {dados-calculo.ponto}?",
+    "fr": "Une fonction vaut le carré de x. En utilisant la définition de la dérivée, combien vaut la dérivée en x = {dados-calculo.ponto} ?",
+    "en": "A function equals x squared. Using the definition of the derivative, what is the derivative at x = {dados-calculo.ponto}?"
+  },
+  "dados-calculo": {
+    "ponto": "3",
+    "total": "6"
+  }
+}

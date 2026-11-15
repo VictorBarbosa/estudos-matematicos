@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Resistores de {dados-calculo.expressao1} Ω estão ligados em {dados-calculo.expressao2}. Qual é a resistência equivalente, em Ω? (2 casas decimais)"
+  }
+}

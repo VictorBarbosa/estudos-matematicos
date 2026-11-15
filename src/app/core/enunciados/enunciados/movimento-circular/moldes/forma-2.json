@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um rotor gira a {dados-calculo.rotacoesPorMinuto} rotações por minuto. Qual é a velocidade angular, em rad/s? Responda com 3 casas decimais."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma aplicação rende {dados-calculo.taxaAnual}% ao ano em juros compostos. Qual é a taxa SEMESTRAL equivalente, em porcentagem? (duas casas decimais)",
+    "fr": "Un placement rapporte {dados-calculo.taxaAnual}% par an en intérêts composés. Quel est le taux SEMESTRIEL équivalent, en pourcentage ? (deux décimales)",
+    "en": "An investment earns {dados-calculo.taxaAnual}% a year, compounded. What is the equivalent SIX-MONTH rate, as a percentage? (two decimal places)"
+  },
+  "dados-calculo": {
+    "taxaAnual": "21",
+    "total": "10.00"
+  }
+}

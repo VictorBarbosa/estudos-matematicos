@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Com {dados-calculo.cerca} m de cerca, qual é a MAIOR área retangular, em metros quadrados, que se pode cercar?",
+    "fr": "Avec {dados-calculo.cerca} m de clôture, quelle est la PLUS GRANDE aire rectangulaire, en mètres carrés, que l’on peut clôturer ?",
+    "en": "With {dados-calculo.cerca} m of fencing, what is the LARGEST rectangular area, in square metres, that can be enclosed?"
+  },
+  "dados-calculo": {
+    "cerca": "180",
+    "total": "2025"
+  }
+}

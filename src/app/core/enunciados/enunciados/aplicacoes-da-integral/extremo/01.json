@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o volume do sólido gerado ao girar, em torno do eixo x, a região sob a reta que vale {dados-calculo.raio} entre x = 0 e x = {dados-calculo.fim}? Responda o número que multiplica π. (três casas decimais)",
+    "fr": "Quel est le volume du solide engendré en faisant tourner, autour de l’axe des x, la région sous la droite qui vaut {dados-calculo.raio} entre x = 0 et x = {dados-calculo.fim} ? Donnez le nombre qui multiplie π. (trois décimales)",
+    "en": "What is the volume of the solid made by spinning, about the x-axis, the region under the line equal to {dados-calculo.raio} from x = 0 to x = {dados-calculo.fim}? Give the number multiplying π. (three decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "3",
+    "fim": "4",
+    "total": "36.000"
+  }
+}

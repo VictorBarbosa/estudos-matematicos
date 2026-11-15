@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "O som viaja a {dados-calculo.velocidade} m/s no ar. Qual é a frequência, em hertz, de uma onda sonora de comprimento de onda {dados-calculo.comprimento} m?",
+    "fr": "Le son se déplace à {dados-calculo.velocidade} m/s dans l’air. Quelle est la fréquence, en hertz, d’une onde sonore de longueur d’onde {dados-calculo.comprimento} m ?",
+    "en": "Sound travels at {dados-calculo.velocidade} m/s in air. What is the frequency, in hertz, of a sound wave with wavelength {dados-calculo.comprimento} m?"
+  },
+  "dados-calculo": {
+    "velocidade": "340",
+    "comprimento": "0.5",
+    "total": "680"
+  }
+}

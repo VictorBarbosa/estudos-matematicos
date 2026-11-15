@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Se a distância entre dois corpos for multiplicada por {dados-calculo.fator}, por quanto a força gravitacional entre eles fica DIVIDIDA?",
+    "fr": "Si la distance entre deux corps est multipliée par {dados-calculo.fator}, par combien la force gravitationnelle entre eux est-elle DIVISÉE ?",
+    "en": "If the distance between two bodies is multiplied by {dados-calculo.fator}, by how much is the gravitational force between them DIVIDED?"
+  },
+  "dados-calculo": {
+    "fator": "4",
+    "total": "16"
+  }
+}

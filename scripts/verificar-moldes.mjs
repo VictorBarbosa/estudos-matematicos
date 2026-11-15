@@ -17,7 +17,7 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const PASTA = 'src/app/core/enunciados/enunciados';
-const CATALOGO = 'src/app/core/enunciados/enunciados/catalogo.ts';
+const CATALOGO = join(PASTA, 'catalogo.ts');
 const RAIZ = 'src/app';
 
 function todosOsArquivos(diretorio) {
@@ -31,41 +31,57 @@ function todosOsArquivos(diretorio) {
 }
 
 /*
- * O catálogo tem de listar TODOS os arquivos da pasta.
+ * O catálogo tem de listar TODOS os arquivos da árvore.
  *
- * Um `.json` que ninguém importa não é um tópico sem perguntas: é um tópico
- * cujas perguntas o site não enxerga. Nada quebra, nada avisa — o aluno só
- * recebe o gerador de sempre, como se o arquivo não existisse. O contrário,
- * um import para arquivo apagado, o compilador pega sozinho.
+ * Um `.json` que ninguém importa não é uma pergunta a menos: é uma pergunta
+ * que o site não enxerga. Nada quebra, nada avisa — o aluno só recebe o
+ * gerador de sempre, como se o arquivo não existisse. O contrário, um import
+ * para arquivo apagado, o compilador pega sozinho.
  */
-const naPasta = readdirSync(PASTA)
-  .filter((nome) => nome.endsWith('.json'))
-  .map((nome) => nome.replace('.json', ''))
-  .sort();
+function todosOsJson(diretorio) {
+  return readdirSync(diretorio).flatMap((nome) => {
+    const caminho = join(diretorio, nome);
+    if (statSync(caminho).isDirectory()) {
+      return todosOsJson(caminho);
+    }
+    return nome.endsWith('.json') ? [caminho.slice(PASTA.length + 1)] : [];
+  });
+}
+
+const naArvore = todosOsJson(PASTA).sort();
 
 const fonteCatalogo = readFileSync(CATALOGO, 'utf8');
-const noCatalogo = [...fonteCatalogo.matchAll(/enunciados\/([a-z0-9-]+)\.json'/g)]
+const noCatalogo = [...fonteCatalogo.matchAll(/enunciados\/enunciados\/([^']+\.json)'/g)]
   .map((achado) => achado[1])
   .sort();
 
-const faltando = naPasta.filter((nome) => !noCatalogo.includes(nome));
+const faltando = naArvore.filter((nome) => !noCatalogo.includes(nome));
 if (faltando.length > 0) {
-  console.error(`Tópicos na pasta e fora do catálogo (${faltando.length}):`);
-  for (const nome of faltando) {
+  console.error(`Arquivos na árvore e fora do catálogo (${faltando.length}):`);
+  for (const nome of faltando.slice(0, 20)) {
     console.error(`  ${nome}`);
   }
+  console.error('Rode `npm run enunciados:catalogo`.');
   process.exit(1);
 }
 
-const grupos = naPasta.map((nome) => JSON.parse(readFileSync(join(PASTA, `${nome}.json`), 'utf8')));
-
-for (const grupo of grupos) {
-  const esperado = naPasta[grupos.indexOf(grupo)];
-  if (grupo.topico !== esperado) {
-    console.error(`O arquivo ${esperado}.json diz ser do tópico "${grupo.topico}".`);
-    process.exit(1);
+/** Os moldes, com o tópico e a forma que o CAMINHO declara. */
+const grupos = [];
+for (const caminho of naArvore) {
+  const partes = caminho.split('/');
+  const [topico, pasta] = partes;
+  if (pasta !== 'moldes') {
+    continue;
   }
+  // `moldes/forma-3.json` ou `moldes/direta/01.json`.
+  const forma = partes.length === 3 ? partes[2].replace('.json', '') : partes[2];
+  const grupo = grupos.find((g) => g.topico === topico) ?? { topico, enunciados: [] };
+  if (!grupos.includes(grupo)) {
+    grupos.push(grupo);
+  }
+  grupo.enunciados.push({ forma });
 }
+
 const fontes = todosOsArquivos(RAIZ).map((caminho) => readFileSync(caminho, 'utf8'));
 const codigo = fontes.join('\n');
 
@@ -153,5 +169,5 @@ if (problemas.length > 0) {
   process.exit(1);
 }
 
-const total = grupos.flatMap((g) => g.enunciados).filter((e) => e.forma !== undefined).length;
-console.log(`Moldes alcançáveis: ${total} conferidos, em ${naPasta.length} arquivos de tópico.`);
+const total = grupos.flatMap((g) => g.enunciados).length;
+console.log(`Moldes alcançáveis: ${total} conferidos, em ${naArvore.length} arquivos.`);

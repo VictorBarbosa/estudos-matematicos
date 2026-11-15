@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "O volume de um cilindro depende do raio e da altura. Para raio {dados-calculo.raio} e altura {dados-calculo.altura}, qual é o volume? Responda o número que multiplica π.",
+    "fr": "Le volume d’un cylindre dépend du rayon et de la hauteur. Pour un rayon de {dados-calculo.raio} et une hauteur de {dados-calculo.altura}, quel est le volume ? Donnez le nombre qui multiplie π.",
+    "en": "A cylinder’s volume depends on radius and height. For radius {dados-calculo.raio} and height {dados-calculo.altura}, what is the volume? Give the number multiplying π."
+  },
+  "dados-calculo": {
+    "raio": "3",
+    "altura": "5",
+    "total": "45"
+  }
+}

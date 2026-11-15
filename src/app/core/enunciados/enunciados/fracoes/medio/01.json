@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Lucas gastou {dados-calculo.p1} da mesada em livros e {dados-calculo.p2} em transporte. Que fração da mesada ele gastou ao todo?",
+    "fr": "Lucas a dépensé {dados-calculo.p1} de son argent de poche en livres et {dados-calculo.p2} en transport. Quelle fraction de son argent de poche a-t-il dépensée en tout ?",
+    "en": "Lucas spent {dados-calculo.p1} of his allowance on books and {dados-calculo.p2} on transport. What fraction of his allowance did he spend in all?"
+  },
+  "dados-calculo": {
+    "p1": "1/4",
+    "p2": "2/5",
+    "total": "13/20"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um carro vale {dados-calculo.valor} reais e perde {dados-calculo.perda}% do valor a cada ano. Quantos reais ele vale depois de {dados-calculo.anos} anos?",
+    "fr": "Une voiture vaut {dados-calculo.valor} reais et perd {dados-calculo.perda}% de sa valeur chaque année. Combien de reais vaut-elle après {dados-calculo.anos} ans ?",
+    "en": "A car is worth {dados-calculo.valor} reais and loses {dados-calculo.perda}% of its value each year. How many reais is it worth after {dados-calculo.anos} years?"
+  },
+  "dados-calculo": {
+    "valor": "40000",
+    "perda": "50",
+    "anos": "3",
+    "total": "5000"
+  }
+}

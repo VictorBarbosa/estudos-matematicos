@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Qual é a derivada direcional numa direção PERPENDICULAR ao gradiente?",
+    "fr": "Une fonction vaut {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Quelle est la dérivée directionnelle dans une direction PERPENDICULAIRE au gradient ?",
+    "en": "A function equals {dados-calculo.a} times x plus {dados-calculo.b} times y. What is the directional derivative in a direction PERPENDICULAR to the gradient?"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "b": "4",
+    "total": "0"
+  }
+}

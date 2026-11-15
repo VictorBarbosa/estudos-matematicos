@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Se a distância até uma carga puntiforme for multiplicada por {dados-calculo.fator}, por quanto o campo elétrico fica DIVIDIDO?",
+    "fr": "Si la distance à une charge ponctuelle est multipliée par {dados-calculo.fator}, par combien le champ électrique est-il DIVISÉ ?",
+    "en": "If the distance to a point charge is multiplied by {dados-calculo.fator}, by how much is the electric field DIVIDED?"
+  },
+  "dados-calculo": {
+    "fator": "3",
+    "total": "9"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "O lado de um quadrado cresce {dados-calculo.taxaLado} cm/s. A que taxa cresce a ÁREA no instante em que o lado mede {dados-calculo.lado} cm? (em cm²/s)"
+  }
+}

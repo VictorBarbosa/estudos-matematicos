@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um gás a {dados-calculo.pressao1} atm ocupa {dados-calculo.volume1} L a {dados-calculo.temperatura1} K. Levado a {dados-calculo.pressao2} atm e {dados-calculo.temperatura2} K, que volume passa a ocupar? (em litros, 2 casas decimais)"
+  }
+}

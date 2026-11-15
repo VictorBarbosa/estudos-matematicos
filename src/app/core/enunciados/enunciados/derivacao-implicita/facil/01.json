@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma circunferência tem a soma dos quadrados de x e y igual a {dados-calculo.raioQuadrado}. No ponto ({dados-calculo.px}, {dados-calculo.py}), qual é a inclinação da reta tangente? Responda como fração.",
+    "fr": "Un cercle a la somme des carrés de x et y égale à {dados-calculo.raioQuadrado}. Au point ({dados-calculo.px}, {dados-calculo.py}), quelle est la pente de la tangente ? Répondez sous forme de fraction.",
+    "en": "A circle has the sum of the squares of x and y equal to {dados-calculo.raioQuadrado}. At the point ({dados-calculo.px}, {dados-calculo.py}), what is the slope of the tangent line? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "raioQuadrado": "25",
+    "px": "3",
+    "py": "4",
+    "total": "-3/4"
+  }
+}

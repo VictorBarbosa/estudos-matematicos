@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Numa alavanca, {dados-calculo.forcaA} N atuam a {dados-calculo.v1} m do apoio. A que distância deve atuar uma força de {dados-calculo.forcaB} N do outro lado para equilibrar, em metros? (2 casas decimais)"
+  }
+}

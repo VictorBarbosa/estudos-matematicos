@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma força de {dados-calculo.forca} N é aplicada na mesma direção de um deslocamento de {dados-calculo.deslocamento} m. Qual é o trabalho realizado, em joules? (duas casas decimais)",
+    "fr": "Une force de {dados-calculo.forca} N est appliquée dans la même direction qu’un déplacement de {dados-calculo.deslocamento} m. Quel est le travail effectué, en joules ? (deux décimales)",
+    "en": "A force of {dados-calculo.forca} N is applied along the same direction as a {dados-calculo.deslocamento} m displacement. What work is done, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "forca": "40",
+    "deslocamento": "5",
+    "total": "200.00"
+  }
+}

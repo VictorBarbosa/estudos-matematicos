@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A massa de um dos corpos é multiplicada por {dados-calculo.fatorMassa} e a distância entre eles também é multiplicada por {dados-calculo.fatorDistancia}. Por quanto a força gravitacional fica multiplicada?",
+    "fr": "La masse d’un des corps est multipliée par {dados-calculo.fatorMassa} et la distance entre eux est aussi multipliée par {dados-calculo.fatorDistancia}. Par combien la force gravitationnelle est-elle multipliée ?",
+    "en": "One body’s mass is multiplied by {dados-calculo.fatorMassa} and the distance between them is also multiplied by {dados-calculo.fatorDistancia}. By what factor is the gravitational force multiplied?"
+  },
+  "dados-calculo": {
+    "fatorMassa": "2",
+    "fatorDistancia": "2",
+    "total": "0.5"
+  }
+}

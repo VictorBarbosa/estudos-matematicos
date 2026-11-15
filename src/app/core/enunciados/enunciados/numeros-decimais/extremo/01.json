@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Num número de parte inteira zero, o par de algarismos {dados-calculo.p} se repete infinitamente depois da vírgula. Escreva a fração irredutível.",
+    "fr": "Dans un nombre de partie entière nulle, le couple de chiffres {dados-calculo.p} se répète à l’infini après la virgule. Écrivez la fraction irréductible.",
+    "en": "In a number with whole part zero, the pair of digits {dados-calculo.p} repeats forever after the decimal point. Write the fraction in lowest terms."
+  },
+  "dados-calculo": {
+    "p": "36",
+    "total": "4/11"
+  }
+}

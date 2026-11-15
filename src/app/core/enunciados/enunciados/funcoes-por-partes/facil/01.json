@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma tarifa cobra {dados-calculo.preco1} reais por minuto nos primeiros {dados-calculo.limite} minutos e {dados-calculo.preco2} real por minuto depois disso. Quanto custa uma ligação de {dados-calculo.minutos} minutos? (três casas decimais)",
+    "fr": "Un tarif facture {dados-calculo.preco1} reais par minute pour les {dados-calculo.limite} premières minutes et {dados-calculo.preco2} real par minute ensuite. Combien coûte un appel de {dados-calculo.minutos} minutes ? (trois décimales)",
+    "en": "A tariff charges {dados-calculo.preco1} reais per minute for the first {dados-calculo.limite} minutes and {dados-calculo.preco2} real per minute after that. How much does a {dados-calculo.minutos} minute call cost? (three decimal places)"
+  },
+  "dados-calculo": {
+    "preco1": "2",
+    "limite": "10",
+    "preco2": "1",
+    "minutos": "15",
+    "total": "25.000"
+  }
+}

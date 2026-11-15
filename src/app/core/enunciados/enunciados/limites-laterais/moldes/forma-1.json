@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite pela {dados-calculo.lado} no ponto x = {dados-calculo.ponto}."
+  }
+}

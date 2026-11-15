@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é a área do pedaço de um plano horizontal que fica acima de um retângulo de lados {dados-calculo.lado1} e {dados-calculo.lado2}?",
+    "fr": "Quelle est l’aire du morceau d’un plan horizontal situé au-dessus d’un rectangle de côtés {dados-calculo.lado1} et {dados-calculo.lado2} ?",
+    "en": "What is the area of the piece of a horizontal plane lying above a rectangle with sides {dados-calculo.lado1} and {dados-calculo.lado2}?"
+  },
+  "dados-calculo": {
+    "lado1": "9",
+    "lado2": "12",
+    "total": "108"
+  }
+}

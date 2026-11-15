@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma pedra é atirada verticalmente para cima a {dados-calculo.velocidade} m/s, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é a altura máxima, em metros? (duas casas decimais)",
+    "fr": "Une pierre est lancée verticalement vers le haut à {dados-calculo.velocidade} m/s, la gravité valant {dados-calculo.gravidade} m/s². Quelle est la hauteur maximale, en mètres ? (deux décimales)",
+    "en": "A stone is thrown straight up at {dados-calculo.velocidade} m/s, with gravity at {dados-calculo.gravidade} m/s². What is the greatest height, in metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "velocidade": "20",
+    "gravidade": "9.81",
+    "total": "20.39"
+  }
+}

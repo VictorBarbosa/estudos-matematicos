@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um torque de {dados-calculo.torque} N·m age sobre um corpo de momento de inércia {dados-calculo.inercia} kg·m². Qual é a aceleração angular, em rad/s²? (três casas decimais)",
+    "fr": "Un couple de {dados-calculo.torque} N·m agit sur un corps de moment d’inertie {dados-calculo.inercia} kg·m². Quelle est l’accélération angulaire, en rad/s² ? (trois décimales)",
+    "en": "A torque of {dados-calculo.torque} N·m acts on a body with moment of inertia {dados-calculo.inercia} kg·m². What is the angular acceleration, in rad/s²? (three decimal places)"
+  },
+  "dados-calculo": {
+    "torque": "10",
+    "inercia": "2",
+    "total": "5.000"
+  }
+}

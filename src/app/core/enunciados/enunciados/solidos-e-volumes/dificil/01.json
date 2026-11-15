@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma casquinha de sorvete tem a forma de um cone de raio {dados-calculo.raio} cm e altura {dados-calculo.altura} cm. Quantos centímetros cúbicos ela comporta? (duas casas decimais)",
+    "fr": "Un cornet de glace a la forme d’un cône de rayon {dados-calculo.raio} cm et de hauteur {dados-calculo.altura} cm. Combien de centimètres cubes contient-il ? (deux décimales)",
+    "en": "An ice cream cone is a cone of radius {dados-calculo.raio} cm and height {dados-calculo.altura} cm. How many cubic centimetres does it hold? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "7",
+    "altura": "12",
+    "total": "615.75"
+  }
+}

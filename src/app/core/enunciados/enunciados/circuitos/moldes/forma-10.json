@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Dois ramos com fontes — {dados-calculo.e1} V em série com {dados-calculo.r1} Ω, e {dados-calculo.e2} V em série com {dados-calculo.r2} Ω — estão em paralelo com um resistor de {dados-calculo.r3} Ω (os polos positivos do mesmo lado). Qual corrente atravessa o resistor de {dados-calculo.r3} Ω, em A? (2 casas decimais)"
+  }
+}

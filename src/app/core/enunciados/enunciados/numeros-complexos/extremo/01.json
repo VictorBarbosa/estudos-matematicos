@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a parte real de i elevado a {dados-calculo.expoente}? (duas casas decimais)",
+    "fr": "Quelle est la partie réelle de i à la puissance {dados-calculo.expoente} ? (deux décimales)",
+    "en": "What is the real part of i to the power of {dados-calculo.expoente}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "expoente": "22",
+    "total": "-1"
+  }
+}

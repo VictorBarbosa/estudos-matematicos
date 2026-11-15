@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um entregador ganhou R$ {dados-calculo.bonus} de bônus e, além disso, R$ {dados-calculo.valor} por cada uma das {dados-calculo.entregas} entregas do dia. Quanto recebeu ao todo?",
+    "fr": "Un livreur a reçu {dados-calculo.bonus} $ de prime et, en plus, {dados-calculo.valor} $ pour chacune des {dados-calculo.entregas} livraisons du jour. Combien a-t-il gagné en tout ?",
+    "en": "A courier got a ${dados-calculo.bonus} bonus and, on top of that, ${dados-calculo.valor} for each of the {dados-calculo.entregas} deliveries that day. How much did he earn in total?"
+  }
+}

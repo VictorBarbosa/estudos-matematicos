@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Sabendo que a integral de f de {dados-calculo.a} a {dados-calculo.b} vale {dados-calculo.primeira} e de {dados-calculo.b} a {dados-calculo.c} vale {dados-calculo.segunda}, quanto vale a integral de {dados-calculo.a} a {dados-calculo.c}?"
+  }
+}

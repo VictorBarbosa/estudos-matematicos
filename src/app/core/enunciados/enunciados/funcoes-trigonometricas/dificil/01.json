@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma oscilação completa um ciclo a cada {dados-calculo.periodo} segundos. Qual é a frequência, em hertz? (duas casas decimais)",
+    "fr": "Une oscillation complète un cycle toutes les {dados-calculo.periodo} secondes. Quelle est la fréquence, en hertz ? (deux décimales)",
+    "en": "An oscillation completes one cycle every {dados-calculo.periodo} seconds. What is the frequency, in hertz? (two decimal places)"
+  },
+  "dados-calculo": {
+    "periodo": "4",
+    "total": "0.25"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Aplique {dados-calculo.op} na matriz aumentada. Qual é a nova entrada da {dados-calculo.Li} na coluna {dados-calculo.v1}{dados-calculo.v2}?"
+  }
+}

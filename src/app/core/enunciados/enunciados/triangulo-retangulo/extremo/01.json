@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "De um ponto A, o topo de uma torre é visto sob {dados-calculo.angulo1}°. Andando {dados-calculo.passo} m em direção à torre, ele passa a ser visto sob {dados-calculo.angulo2}°. Qual é a altura da torre, em metros? (duas casas decimais)",
+    "fr": "D’un point A, le sommet d’une tour est vu sous {dados-calculo.angulo1}°. En avançant de {dados-calculo.passo} m vers la tour, il est vu sous {dados-calculo.angulo2}°. Quelle est la hauteur de la tour, en mètres ? (deux décimales)",
+    "en": "From point A, a tower’s top is seen at {dados-calculo.angulo1}°. Walking {dados-calculo.passo} m towards the tower, it is seen at {dados-calculo.angulo2}°. How tall is the tower, in metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "angulo1": "30",
+    "passo": "40",
+    "angulo2": "45",
+    "total": "54.64"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Luz de {dados-calculo.lambda} nm incide sobre {dados-calculo.metal}, cuja função trabalho é {dados-calculo.v1} eV. Qual é a energia cinética máxima dos elétrons arrancados, em eV?{dados-calculo.v2}"
+  }
+}

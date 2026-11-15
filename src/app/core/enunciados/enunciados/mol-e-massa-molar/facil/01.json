@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Quantos mols de água há numa amostra de {dados-calculo.massa} g? (duas casas decimais)",
+    "fr": "Combien de moles d’eau y a-t-il dans un échantillon de {dados-calculo.massa} g ? (deux décimales)",
+    "en": "How many moles of water are in a {dados-calculo.massa} g sample? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "180.2",
+    "total": "10.00"
+  }
+}

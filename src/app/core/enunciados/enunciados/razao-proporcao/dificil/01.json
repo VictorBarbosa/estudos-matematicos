@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.o1} operários levantam um muro em {dados-calculo.dias} dias. No mesmo ritmo, em quantos dias {dados-calculo.o2} operários levantam o mesmo muro?",
+    "fr": "{dados-calculo.o1} ouvriers montent un mur en {dados-calculo.dias} jours. Au même rythme, en combien de jours {dados-calculo.o2} ouvriers montent-ils le même mur ?",
+    "en": "{dados-calculo.o1} workers build a wall in {dados-calculo.dias} days. At the same pace, in how many days do {dados-calculo.o2} workers build the same wall?"
+  },
+  "dados-calculo": {
+    "o1": "6",
+    "dias": "14",
+    "o2": "21",
+    "total": "4"
+  }
+}

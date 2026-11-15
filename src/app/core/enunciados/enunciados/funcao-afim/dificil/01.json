@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma função afim vale {dados-calculo.y1} em x = {dados-calculo.x1} e vale {dados-calculo.y2} em x = {dados-calculo.x2}. Qual é a sua taxa de variação?",
+    "fr": "Une fonction affine vaut {dados-calculo.y1} en x = {dados-calculo.x1} et {dados-calculo.y2} en x = {dados-calculo.x2}. Quel est son taux de variation ?",
+    "en": "A linear function equals {dados-calculo.y1} at x = {dados-calculo.x1} and {dados-calculo.y2} at x = {dados-calculo.x2}. What is its rate of change?"
+  },
+  "dados-calculo": {
+    "y1": "7",
+    "x1": "2",
+    "y2": "19",
+    "x2": "6",
+    "total": "3"
+  }
+}

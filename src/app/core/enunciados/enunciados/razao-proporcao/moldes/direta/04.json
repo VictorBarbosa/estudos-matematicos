@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Num mapa, {dados-calculo.a} cm representam {dados-calculo.b} km. Quantos quilômetros representam {dados-calculo.c} cm?",
+    "fr": "Sur une carte, {dados-calculo.a} cm représentent {dados-calculo.b} km. Combien de kilomètres représentent {dados-calculo.c} cm ?",
+    "en": "On a map, {dados-calculo.a} cm represent {dados-calculo.b} km. How many kilometres do {dados-calculo.c} cm represent?"
+  }
+}

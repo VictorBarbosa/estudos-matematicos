@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Quanta energia, em J, é preciso para aquecer {dados-calculo.v1} kg de {dados-calculo.v2} em {dados-calculo.deltaT} K? O calor específico é {dados-calculo.v3} J/(kg·K). Responda com 3 casas decimais."
+  }
+}

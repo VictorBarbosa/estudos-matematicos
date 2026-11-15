@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A equação característica de uma equação diferencial tem raízes {dados-calculo.r1} e {dados-calculo.r2}. Qual é a MAIOR delas?",
+    "fr": "L’équation caractéristique d’une équation différentielle a pour racines {dados-calculo.r1} et {dados-calculo.r2}. Quelle est la PLUS GRANDE ?",
+    "en": "The characteristic equation of a differential equation has roots {dados-calculo.r1} and {dados-calculo.r2}. Which is the LARGER one?"
+  },
+  "dados-calculo": {
+    "r1": "-4",
+    "r2": "-9",
+    "total": "-4"
+  }
+}

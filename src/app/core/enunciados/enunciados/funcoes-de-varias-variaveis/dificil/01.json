@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o produto de x por y. Qual é o valor de k da curva de nível que passa por ({dados-calculo.px}, {dados-calculo.py})?",
+    "fr": "Une fonction vaut le produit de x par y. Quelle est la valeur de k de la courbe de niveau passant par ({dados-calculo.px}, {dados-calculo.py}) ?",
+    "en": "A function equals x times y. What is the value of k for the level curve through ({dados-calculo.px}, {dados-calculo.py})?"
+  },
+  "dados-calculo": {
+    "px": "4",
+    "py": "11",
+    "total": "44"
+  }
+}

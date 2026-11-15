@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A tangente de um ângulo agudo vale {dados-calculo.tangente}. Quanto vale o seno desse ângulo? (duas casas decimais)",
+    "fr": "La tangente d’un angle aigu vaut {dados-calculo.tangente}. Combien vaut le sinus de cet angle ? (deux décimales)",
+    "en": "The tangent of an acute angle is {dados-calculo.tangente}. What is the sine of that angle? (two decimal places)"
+  },
+  "dados-calculo": {
+    "tangente": "0.75",
+    "total": "0.60"
+  }
+}

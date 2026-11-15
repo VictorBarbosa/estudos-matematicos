@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um avião voa a {dados-calculo.aviao} km/h em relação ao ar e sofre um vento de {dados-calculo.vento} km/h perpendicular à sua rota. Qual é o módulo da velocidade resultante, em km/h? (duas casas decimais)",
+    "fr": "Un avion vole à {dados-calculo.aviao} km/h par rapport à l’air et subit un vent de {dados-calculo.vento} km/h perpendiculaire à sa route. Quel est le module de la vitesse résultante, en km/h ? (deux décimales)",
+    "en": "A plane flies at {dados-calculo.aviao} km/h relative to the air with a {dados-calculo.vento} km/h wind perpendicular to its course. What is the magnitude of the resulting speed, in km/h? (two decimal places)"
+  },
+  "dados-calculo": {
+    "aviao": "300",
+    "vento": "40",
+    "total": "302.65"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Qual é o módulo do gradiente, que é a maior taxa de variação possível?",
+    "fr": "Une fonction vaut {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Quel est le module du gradient, c’est-à-dire le plus grand taux de variation possible ?",
+    "en": "A function equals {dados-calculo.a} times x plus {dados-calculo.b} times y. What is the magnitude of the gradient, the greatest possible rate of change?"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "b": "4",
+    "total": "5"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Maria tinha {dados-calculo.x1} figurinhas e ganhou {dados-calculo.x2}. Com quantas ela ficou?",
+    "fr": "Maria avait {dados-calculo.x1} autocollants et en a reçu {dados-calculo.x2}. Combien en a-t-elle maintenant ?",
+    "en": "Maria had {dados-calculo.x1} stickers and was given {dados-calculo.x2} more. How many does she have now?"
+  },
+  "dados-calculo": {
+    "x1": "17",
+    "acao": "+",
+    "x2": "26",
+    "total": "43"
+  }
+}

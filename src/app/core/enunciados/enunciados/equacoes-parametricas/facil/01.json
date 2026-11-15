@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um ponto se move com x igual a {dados-calculo.vx} vezes o tempo e y igual a {dados-calculo.vy} vezes o tempo. Qual é a coordenada y quando o tempo vale {dados-calculo.t}?",
+    "fr": "Un point se déplace avec x égal à {dados-calculo.vx} fois le temps et y égal à {dados-calculo.vy} fois le temps. Quelle est la coordonnée y quand le temps vaut {dados-calculo.t} ?",
+    "en": "A point moves with x equal to {dados-calculo.vx} times the time and y equal to {dados-calculo.vy} times the time. What is the y coordinate when the time is {dados-calculo.t}?"
+  },
+  "dados-calculo": {
+    "vx": "3",
+    "vy": "4",
+    "t": "5",
+    "total": "20"
+  }
+}

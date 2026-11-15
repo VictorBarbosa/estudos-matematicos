@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma circunferência tem centro em ({dados-calculo.cx}, {dados-calculo.cy}) e passa pelo ponto ({dados-calculo.px}, {dados-calculo.py}). Qual é o seu raio?",
+    "fr": "Un cercle a son centre en ({dados-calculo.cx}, {dados-calculo.cy}) et passe par le point ({dados-calculo.px}, {dados-calculo.py}). Quel est son rayon ?",
+    "en": "A circle has centre ({dados-calculo.cx}, {dados-calculo.cy}) and goes through ({dados-calculo.px}, {dados-calculo.py}). What is its radius?"
+  },
+  "dados-calculo": {
+    "cx": "0",
+    "cy": "0",
+    "px": "3",
+    "py": "4",
+    "total": "5"
+  }
+}

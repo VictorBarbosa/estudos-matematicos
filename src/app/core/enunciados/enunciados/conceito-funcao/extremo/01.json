@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função devolve o quadrado de (x menos {dados-calculo.a}) somado a {dados-calculo.b}. Qual é o menor valor que ela pode assumir?",
+    "fr": "Une fonction renvoie le carré de (x moins {dados-calculo.a}) ajouté à {dados-calculo.b}. Quelle est la plus petite valeur qu’elle peut prendre ?",
+    "en": "A function returns the square of (x minus {dados-calculo.a}) plus {dados-calculo.b}. What is the smallest value it can take?"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "b": "-3",
+    "total": "-3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Duas forças agem no mesmo ponto: uma de {dados-calculo.f1} N para o leste e outra de {dados-calculo.f2} N para o norte. Qual é o módulo da força resultante, em newtons? (duas casas decimais)",
+    "fr": "Deux forces agissent au même point : une de {dados-calculo.f1} N vers l’est et une autre de {dados-calculo.f2} N vers le nord. Quel est le module de la force résultante, en newtons ? (deux décimales)",
+    "en": "Two forces act at the same point: one of {dados-calculo.f1} N east and another of {dados-calculo.f2} N north. What is the magnitude of the resultant force, in newtons? (two decimal places)"
+  },
+  "dados-calculo": {
+    "f1": "6",
+    "f2": "8",
+    "total": "10.00"
+  }
+}

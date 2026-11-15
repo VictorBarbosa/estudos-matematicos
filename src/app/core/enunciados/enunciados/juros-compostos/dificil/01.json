@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Em quantos períodos um capital de {dados-calculo.capital} reais vira {dados-calculo.montante} reais, a {dados-calculo.taxa}% por período em juros compostos?",
+    "fr": "En combien de périodes un capital de {dados-calculo.capital} reais devient-il {dados-calculo.montante} reais, à {dados-calculo.taxa}% par période en intérêts composés ?",
+    "en": "In how many periods does {dados-calculo.capital} reais become {dados-calculo.montante} reais at {dados-calculo.taxa}% per period, compounded?"
+  },
+  "dados-calculo": {
+    "capital": "1000",
+    "montante": "1331",
+    "taxa": "10",
+    "total": "3"
+  }
+}

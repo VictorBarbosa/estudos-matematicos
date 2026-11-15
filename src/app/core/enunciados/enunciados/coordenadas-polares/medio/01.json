@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um ponto tem coordenadas polares r igual a {dados-calculo.r} e ângulo {dados-calculo.angulo}°. Qual é a sua coordenada x?",
+    "fr": "Un point a pour coordonnées polaires r égal à {dados-calculo.r} et un angle de {dados-calculo.angulo}°. Quelle est sa coordonnée x ?",
+    "en": "A point has polar coordinates r equal to {dados-calculo.r} and angle {dados-calculo.angulo}°. What is its x coordinate?"
+  },
+  "dados-calculo": {
+    "r": "8",
+    "angulo": "180",
+    "total": "-8"
+  }
+}

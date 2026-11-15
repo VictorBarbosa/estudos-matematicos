@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma onda tem comprimento de onda de {dados-calculo.comprimento} m e frequência de {dados-calculo.frequencia} Hz. Qual é a sua velocidade, em m/s?",
+    "fr": "Une onde a une longueur d’onde de {dados-calculo.comprimento} m et une fréquence de {dados-calculo.frequencia} Hz. Quelle est sa vitesse, en m/s ?",
+    "en": "A wave has a wavelength of {dados-calculo.comprimento} m and a frequency of {dados-calculo.frequencia} Hz. What is its speed, in m/s?"
+  },
+  "dados-calculo": {
+    "comprimento": "2",
+    "frequencia": "170",
+    "total": "340"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um balão esférico tem o raio crescendo a {dados-calculo.taxaRaio} cm/s. Quando o raio vale {dados-calculo.raio} cm, a que taxa cresce o volume, em cm³/s? Responda o número que multiplica π.",
+    "fr": "Un ballon sphérique voit son rayon croître de {dados-calculo.taxaRaio} cm/s. Quand le rayon vaut {dados-calculo.raio} cm, à quel taux croît le volume, en cm³/s ? Donnez le nombre qui multiplie π.",
+    "en": "A spherical balloon’s radius grows at {dados-calculo.taxaRaio} cm/s. When the radius is {dados-calculo.raio} cm, how fast does the volume grow, in cm³/s? Give the number multiplying π."
+  },
+  "dados-calculo": {
+    "taxaRaio": "2",
+    "raio": "5",
+    "total": "200"
+  }
+}

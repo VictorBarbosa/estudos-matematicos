@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Quantos termos tem o desenvolvimento de (a mais b) elevado a {dados-calculo.expoente}?",
+    "fr": "Combien de termes a le développement de (a plus b) à la puissance {dados-calculo.expoente} ?",
+    "en": "How many terms does the expansion of (a plus b) to the power of {dados-calculo.expoente} have?"
+  },
+  "dados-calculo": {
+    "expoente": "7",
+    "total": "8"
+  }
+}

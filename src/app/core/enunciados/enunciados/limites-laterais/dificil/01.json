@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma tarifa cobra {dados-calculo.esquerda} reais por minuto até {dados-calculo.ponto} minutos e {dados-calculo.direita} reais por minuto depois. De quanto é o SALTO do preço por minuto em {dados-calculo.ponto} minutos?",
+    "fr": "Un tarif facture {dados-calculo.esquerda} reais par minute jusqu’à {dados-calculo.ponto} minutes et {dados-calculo.direita} reais par minute ensuite. De combien est le SAUT du prix par minute à {dados-calculo.ponto} minutes ?",
+    "en": "A tariff charges {dados-calculo.esquerda} reais per minute up to {dados-calculo.ponto} minutes and {dados-calculo.direita} reais per minute after that. How big is the JUMP in the per-minute price at {dados-calculo.ponto} minutes?"
+  },
+  "dados-calculo": {
+    "esquerda": "2",
+    "ponto": "10",
+    "direita": "5",
+    "total": "3"
+  }
+}

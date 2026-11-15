@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Com passo h = {dados-calculo.expressao1} e {dados-calculo.quantos} passos, de quanto é o erro do método de Euler frente à solução exata, partindo de y(0) = {dados-calculo.y0}? Responda com 5 casas decimais."
+  }
+}

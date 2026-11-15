@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "A temperatura de uma chapa é {dados-calculo.a} vezes x mais {dados-calculo.b} vezes y. Quanto ela vale no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+    "fr": "La température d’une plaque est {dados-calculo.a} fois x plus {dados-calculo.b} fois y. Combien vaut-elle au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+    "en": "A plate’s temperature is {dados-calculo.a} times x plus {dados-calculo.b} times y. What is it at the point ({dados-calculo.px}, {dados-calculo.py})?"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "b": "4",
+    "px": "5",
+    "py": "2",
+    "total": "23"
+  }
+}

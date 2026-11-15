@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma corrida de táxi custa $ {dados-calculo.b},00 de bandeirada mais $ {dados-calculo.p},00 por quilômetro rodado. Uma corrida custou $ {dados-calculo.T},00. Quantos quilômetros foram rodados?"
+  }
+}

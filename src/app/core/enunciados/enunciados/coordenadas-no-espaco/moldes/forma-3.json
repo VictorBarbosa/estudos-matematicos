@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um ponto tem coordenadas cartesianas ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z}). Qual é o raio ρ dele em coordenadas esféricas? Responda com 3 casas decimais."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "O custo médio por peça é o custo fixo de {dados-calculo.fixo} reais somado a {dados-calculo.porPeca} reais por peça, tudo dividido pelo número de peças. Qual é o custo médio para {dados-calculo.pecas} peças? (três casas decimais)",
+    "fr": "Le coût moyen par pièce est le coût fixe de {dados-calculo.fixo} reais ajouté à {dados-calculo.porPeca} reais par pièce, le tout divisé par le nombre de pièces. Quel est le coût moyen pour {dados-calculo.pecas} pièces ? (trois décimales)",
+    "en": "The average cost per part is the fixed cost of {dados-calculo.fixo} reais plus {dados-calculo.porPeca} reais per part, all divided by the number of parts. What is the average cost for {dados-calculo.pecas} parts? (three decimal places)"
+  },
+  "dados-calculo": {
+    "fixo": "1200",
+    "porPeca": "18",
+    "pecas": "100",
+    "total": "30.000"
+  }
+}

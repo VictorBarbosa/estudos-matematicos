@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um gás a {dados-calculo.pressao1} atm ocupa {dados-calculo.volume1} L. À temperatura constante, que pressão em atm ele tem quando o volume passa a {dados-calculo.volume2} L? (duas casas decimais)",
+    "fr": "Un gaz à {dados-calculo.pressao1} atm occupe {dados-calculo.volume1} L. À température constante, quelle pression en atm a-t-il quand le volume devient {dados-calculo.volume2} L ? (deux décimales)",
+    "en": "A gas at {dados-calculo.pressao1} atm takes up {dados-calculo.volume1} L. At constant temperature, what pressure in atm does it have when the volume becomes {dados-calculo.volume2} L? (two decimal places)"
+  },
+  "dados-calculo": {
+    "pressao1": "2",
+    "volume1": "6",
+    "volume2": "3",
+    "total": "4.00"
+  }
+}

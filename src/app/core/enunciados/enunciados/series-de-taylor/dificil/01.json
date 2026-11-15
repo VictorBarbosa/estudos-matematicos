@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "O polinômio de Maclaurin de grau 1 do seno é o próprio x. Quanto vale essa aproximação em x = {dados-calculo.ponto}?",
+    "fr": "Le polynôme de Maclaurin de degré 1 du sinus est x lui-même. Combien vaut cette approximation en x = {dados-calculo.ponto} ?",
+    "en": "The degree 1 Maclaurin polynomial of the sine is x itself. What is that approximation at x = {dados-calculo.ponto}?"
+  },
+  "dados-calculo": {
+    "ponto": "0.2",
+    "total": "0.2"
+  }
+}

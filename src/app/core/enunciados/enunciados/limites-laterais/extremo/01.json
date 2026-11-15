@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.esquerda} para x menor que {dados-calculo.ponto} e {dados-calculo.direita} para x maior que {dados-calculo.ponto}. O limite existe em x = {dados-calculo.ponto}? Responda 1 para sim e 0 para não.",
+    "fr": "Une fonction vaut {dados-calculo.esquerda} pour x inférieur à {dados-calculo.ponto} et {dados-calculo.direita} pour x supérieur à {dados-calculo.ponto}. La limite existe-t-elle en x = {dados-calculo.ponto} ? Répondez 1 pour oui et 0 pour non.",
+    "en": "A function equals {dados-calculo.esquerda} for x less than {dados-calculo.ponto} and {dados-calculo.direita} for x greater than {dados-calculo.ponto}. Does the limit exist at x = {dados-calculo.ponto}? Answer 1 for yes and 0 for no."
+  },
+  "dados-calculo": {
+    "esquerda": "4",
+    "ponto": "0",
+    "direita": "4",
+    "total": "1"
+  }
+}

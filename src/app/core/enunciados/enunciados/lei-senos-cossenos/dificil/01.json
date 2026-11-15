@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Num triângulo, o lado que mede {dados-calculo.lado} está oposto ao ângulo de {dados-calculo.anguloOposto}°. Quanto mede o lado oposto ao ângulo de {dados-calculo.outroAngulo}°? (duas casas decimais)",
+    "fr": "Dans un triangle, le côté qui mesure {dados-calculo.lado} est opposé à l’angle de {dados-calculo.anguloOposto}°. Combien mesure le côté opposé à l’angle de {dados-calculo.outroAngulo}° ? (deux décimales)",
+    "en": "In a triangle, the side measuring {dados-calculo.lado} is opposite the {dados-calculo.anguloOposto}° angle. How long is the side opposite the {dados-calculo.outroAngulo}° angle? (two decimal places)"
+  },
+  "dados-calculo": {
+    "lado": "10",
+    "anguloOposto": "50",
+    "outroAngulo": "80",
+    "total": "12.86"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma bomba tira {dados-calculo.b} litros de água em {dados-calculo.a} minutos. Quantos litros tira em {dados-calculo.c} minutos?",
+    "fr": "Une pompe tire {dados-calculo.b} litres d'eau en {dados-calculo.a} minutes. Combien de litres tire-t-elle en {dados-calculo.c} minutes ?",
+    "en": "A pump draws {dados-calculo.b} litres of water in {dados-calculo.a} minutes. How many litres does it draw in {dados-calculo.c} minutes?"
+  }
+}

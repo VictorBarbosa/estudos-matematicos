@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um pedaço de calcário puro, carbonato de cálcio, tem {dados-calculo.massa} g. Quantos mols ele contém? (duas casas decimais)",
+    "fr": "Un morceau de calcaire pur, carbonate de calcium, pèse {dados-calculo.massa} g. Combien de moles contient-il ? (deux décimales)",
+    "en": "A piece of pure limestone, calcium carbonate, weighs {dados-calculo.massa} g. How many moles does it hold? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "500.45",
+    "total": "5.00"
+  }
+}

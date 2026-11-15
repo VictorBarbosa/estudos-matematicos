@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um corpo a {dados-calculo.inicial} °C é deixado num ambiente a {dados-calculo.ambiente} °C, e sua temperatura obedece à lei de resfriamento de Newton com constante {dados-calculo.expressao1} por minuto. Qual é a temperatura em {dados-calculo.t} minutos, em °C? Responda com 4 casas decimais."
+  }
+}

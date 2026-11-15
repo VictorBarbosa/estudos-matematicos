@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é o módulo do vetor de componentes ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z})?",
+    "fr": "Quel est le module du vecteur de composantes ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z}) ?",
+    "en": "What is the magnitude of the vector with components ({dados-calculo.x}, {dados-calculo.y}, {dados-calculo.z})?"
+  },
+  "dados-calculo": {
+    "x": "2",
+    "y": "3",
+    "z": "6",
+    "total": "7"
+  }
+}

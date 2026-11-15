@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um carro faz uma curva de raio {dados-calculo.raio} m a {dados-calculo.velocidade} m/s. Qual é a aceleração centrípeta, em m/s²? (três casas decimais)",
+    "fr": "Une voiture prend un virage de rayon {dados-calculo.raio} m à {dados-calculo.velocidade} m/s. Quelle est l’accélération centripète, en m/s² ? (trois décimales)",
+    "en": "A car takes a curve of radius {dados-calculo.raio} m at {dados-calculo.velocidade} m/s. What is the centripetal acceleration, in m/s²? (three decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "4",
+    "velocidade": "10",
+    "total": "25.000"
+  }
+}

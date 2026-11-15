@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Duas cargas positivas, de {dados-calculo.q1} μC e {dados-calculo.q2} μC, estão a {dados-calculo.d} cm uma da outra. A que distância da carga de {dados-calculo.q1} μC, entre elas, o campo elétrico é nulo, em cm? (2 casas decimais)"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "O piso de um salão foi desenhado com um polígono regular de {dados-calculo.lados} lados. Quantos graus mede cada ângulo interno desse polígono?",
+    "fr": "Le sol d’une salle a été dessiné avec un polygone régulier de {dados-calculo.lados} côtés. Combien de degrés mesure chaque angle intérieur de ce polygone ?",
+    "en": "A hall floor was designed with a regular polygon of {dados-calculo.lados} sides. How many degrees is each interior angle of that polygon?"
+  },
+  "dados-calculo": {
+    "lados": "12",
+    "total": "150"
+  }
+}

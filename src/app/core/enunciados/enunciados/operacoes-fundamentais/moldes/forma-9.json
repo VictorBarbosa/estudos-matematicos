@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um piso já tem {dados-calculo.pronto} m² assentados. Falta assentar {dados-calculo.pecas} peças quadradas cujo lado útil é {dados-calculo.lado} m menos um corte de {dados-calculo.sobra} m em cada lado. Quantos metros quadrados de piso a obra terá ao todo?",
+    "fr": "Un sol a déjà {dados-calculo.pronto} m² posés. Il reste à poser {dados-calculo.pecas} pièces carrées dont le côté utile est {dados-calculo.lado} m moins une coupe de {dados-calculo.sobra} m sur chaque côté. Combien de mètres carrés le chantier aura-t-il en tout ?",
+    "en": "A floor already has {dados-calculo.pronto} m² laid. Still to lay: {dados-calculo.pecas} square pieces whose usable side is {dados-calculo.lado} m minus a {dados-calculo.sobra} m cut on each side. How many square metres will the work have in total?"
+  },
+  "dica": {
+    "br": "Ordem: o parêntese, depois a potência, depois a multiplicação, e a soma por último.",
+    "fr": "Ordre : la parenthèse, puis la puissance, puis la multiplication, et l’addition en dernier.",
+    "en": "Order: the bracket, then the power, then the multiplication, and the sum last."
+  }
+}

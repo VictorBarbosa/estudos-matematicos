@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A área sob a curva que vale {dados-calculo.a} dividido pelo quadrado de x, de x = 1 até o infinito, é finita. Quanto ela vale?",
+    "fr": "L’aire sous la courbe qui vaut {dados-calculo.a} divisé par le carré de x, de x = 1 à l’infini, est finie. Combien vaut-elle ?",
+    "en": "The area under the curve equal to {dados-calculo.a} divided by x squared, from x = 1 to infinity, is finite. What is it?"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "total": "5"
+  }
+}

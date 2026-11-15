@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Uma parede de área {dados-calculo.area} m² e espessura {dados-calculo.espessura} m é feita de um material de condutividade {dados-calculo.condutividade} W/(m·K). Com {dados-calculo.diferenca} K de diferença entre as faces, qual é o fluxo de calor, em watts? (três casas decimais)",
+    "fr": "Un mur d’aire {dados-calculo.area} m² et d’épaisseur {dados-calculo.espessura} m est fait d’un matériau de conductivité {dados-calculo.condutividade} W/(m·K). Avec {dados-calculo.diferenca} K d’écart entre les faces, quel est le flux de chaleur, en watts ? (trois décimales)",
+    "en": "A wall of area {dados-calculo.area} m² and thickness {dados-calculo.espessura} m is made of a material with conductivity {dados-calculo.condutividade} W/(m·K). With {dados-calculo.diferenca} K between its faces, what is the heat flow, in watts? (three decimal places)"
+  },
+  "dados-calculo": {
+    "area": "2",
+    "espessura": "0.1",
+    "condutividade": "0.5",
+    "diferenca": "20",
+    "total": "200.000"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a área sob a curva que vale o cubo de x, entre 0 e {dados-calculo.fim}? (duas casas decimais)",
+    "fr": "Quelle est l’aire sous la courbe qui vaut le cube de x, entre 0 et {dados-calculo.fim} ? (deux décimales)",
+    "en": "What is the area under the curve equal to x cubed, from 0 to {dados-calculo.fim}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "fim": "2",
+    "total": "4.00"
+  }
+}

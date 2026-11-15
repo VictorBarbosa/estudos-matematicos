@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um elevador de {dados-calculo.massa} kg sobe acelerando a {dados-calculo.aceleracao} m/s², com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é a tração no cabo, em newtons? (duas casas decimais)",
+    "fr": "Un ascenseur de {dados-calculo.massa} kg monte en accélérant à {dados-calculo.aceleracao} m/s², la gravité valant {dados-calculo.gravidade} m/s². Quelle est la tension du câble, en newtons ? (deux décimales)",
+    "en": "A {dados-calculo.massa} kg lift accelerates upwards at {dados-calculo.aceleracao} m/s², with gravity at {dados-calculo.gravidade} m/s². What is the tension in the cable, in newtons? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "500",
+    "aceleracao": "2",
+    "gravidade": "9.81",
+    "total": "5905.00"
+  }
+}

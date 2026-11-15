@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Reagem {dados-calculo.massaH2} g de H₂ com {dados-calculo.massaO2} g de O₂ segundo 2 H₂ + O₂ → 2 H₂O. Que massa, em gramas, sobra do reagente em excesso? (duas casas decimais)",
+    "fr": "On fait réagir {dados-calculo.massaH2} g de H₂ avec {dados-calculo.massaO2} g de O₂ selon 2 H₂ + O₂ → 2 H₂O. Quelle masse, en grammes, reste-t-il du réactif en excès ? (deux décimales)",
+    "en": "{dados-calculo.massaH2} g of H₂ react with {dados-calculo.massaO2} g of O₂ as 2 H₂ + O₂ → 2 H₂O. What mass, in grams, of the excess reagent is left over? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massaH2": "8.08",
+    "massaO2": "32",
+    "total": "4.04"
+  }
+}

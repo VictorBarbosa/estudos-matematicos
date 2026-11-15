@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Num experimento de fenda dupla com fendas separadas por {dados-calculo.v1} mm e tela a {dados-calculo.v2} m, a {dados-calculo.ordem}ª franja clara aparece a {dados-calculo.v3} mm do centro. Qual é o comprimento de onda da luz, em nm?{dados-calculo.v4}"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Num divisor de tensão, R₁ = {dados-calculo.expressao1} kΩ e R₂ = {dados-calculo.expressao2} kΩ estão em série com uma fonte de {dados-calculo.v} V. Qual é a tensão sobre R₂, em V? (2 casas decimais)"
+  }
+}

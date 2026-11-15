@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função afim vale {dados-calculo.b} quando x é zero e diminui {dados-calculo.queda} unidades a cada aumento de 1 em x. Em que valor de x ela se anula?",
+    "fr": "Une fonction affine vaut {dados-calculo.b} quand x est nul et diminue de {dados-calculo.queda} unités à chaque augmentation de 1 de x. Pour quelle valeur de x s’annule-t-elle ?",
+    "en": "A linear function equals {dados-calculo.b} when x is zero and drops {dados-calculo.queda} units for every increase of 1 in x. At what value of x does it reach zero?"
+  },
+  "dados-calculo": {
+    "b": "12",
+    "queda": "4",
+    "total": "3"
+  }
+}

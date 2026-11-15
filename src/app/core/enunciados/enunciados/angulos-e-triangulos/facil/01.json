@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A estrutura de uma rampa forma um triângulo com um ângulo reto. O ângulo da rampa com o chão mede {dados-calculo.rampa}°. Quantos graus mede o terceiro ângulo?",
+    "fr": "La structure d’une rampe forme un triangle avec un angle droit. L’angle de la rampe avec le sol mesure {dados-calculo.rampa}°. Combien de degrés mesure le troisième angle ?",
+    "en": "A ramp’s frame forms a triangle with one right angle. The ramp meets the ground at {dados-calculo.rampa}°. How many degrees is the third angle?"
+  },
+  "dados-calculo": {
+    "rampa": "27",
+    "total": "63"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Ar acelera de {dados-calculo.velocidadeA} para {dados-calculo.velocidadeB} m/s num duto horizontal. De quanto CAI a pressão, em Pa? (1 casa decimal)"
+  }
+}

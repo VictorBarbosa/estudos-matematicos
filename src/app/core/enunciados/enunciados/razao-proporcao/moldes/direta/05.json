@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} latas de tinta cobrem {dados-calculo.b} m² de parede. Quantos metros quadrados cobrem {dados-calculo.c} latas?",
+    "fr": "{dados-calculo.a} pots de peinture couvrent {dados-calculo.b} m² de mur. Combien de mètres carrés couvrent {dados-calculo.c} pots ?",
+    "en": "{dados-calculo.a} cans of paint cover {dados-calculo.b} m² of wall. How many square metres do {dados-calculo.c} cans cover?"
+  }
+}

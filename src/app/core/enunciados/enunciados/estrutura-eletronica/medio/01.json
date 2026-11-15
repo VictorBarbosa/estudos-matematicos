@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Quantos elétrons há no subnível 3p do átomo neutro de enxofre, cujo número atômico é {dados-calculo.z}?",
+    "fr": "Combien d’électrons y a-t-il dans la sous-couche 3p de l’atome neutre de soufre, dont le numéro atomique est {dados-calculo.z} ?",
+    "en": "How many electrons are in the 3p subshell of a neutral sulfur atom, whose atomic number is {dados-calculo.z}?"
+  },
+  "dados-calculo": {
+    "z": "16",
+    "total": "4"
+  }
+}

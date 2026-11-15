@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma grandeza obedece a esta equação, com valor inicial {dados-calculo.y0}. Quanto ela vale em t = {dados-calculo.t}? Responda com 4 casas decimais."
+  }
+}

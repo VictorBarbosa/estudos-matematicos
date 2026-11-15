@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Que massa de sal de cozinha, NaCl, há em {dados-calculo.volume} mL de solução a {dados-calculo.concentracao} mol/L? (em gramas, duas casas decimais)",
+    "fr": "Quelle masse de sel de table, NaCl, y a-t-il dans {dados-calculo.volume} mL de solution à {dados-calculo.concentracao} mol/L ? (en grammes, deux décimales)",
+    "en": "What mass of table salt, NaCl, is in {dados-calculo.volume} mL of a {dados-calculo.concentracao} mol/L solution? (in grams, two decimal places)"
+  },
+  "dados-calculo": {
+    "volume": "500",
+    "concentracao": "2",
+    "total": "58.44"
+  }
+}

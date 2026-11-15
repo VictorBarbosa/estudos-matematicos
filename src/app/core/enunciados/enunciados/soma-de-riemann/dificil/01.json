@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Aproxime a área sob a reta que vale {dados-calculo.a} vezes x, entre 0 e {dados-calculo.fim}, usando {dados-calculo.retangulos} retângulos de mesma largura e a altura na extremidade DIREITA de cada um. (três casas decimais)",
+    "fr": "Approchez l’aire sous la droite qui vaut {dados-calculo.a} fois x, entre 0 et {dados-calculo.fim}, avec {dados-calculo.retangulos} rectangles de même largeur et la hauteur à l’extrémité DROITE de chacun. (trois décimales)",
+    "en": "Approximate the area under the line equal to {dados-calculo.a} times x, from 0 to {dados-calculo.fim}, using {dados-calculo.retangulos} equal-width rectangles with the height at the RIGHT end of each. (three decimal places)"
+  },
+  "dados-calculo": {
+    "a": "2",
+    "fim": "4",
+    "retangulos": "4",
+    "total": "20.000"
+  }
+}

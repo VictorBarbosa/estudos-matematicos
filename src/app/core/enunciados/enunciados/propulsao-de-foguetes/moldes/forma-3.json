@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um foguete tem razão de massas {dados-calculo.razao} e velocidade de exaustão de {dados-calculo.exaustao} m/s. Qual é o delta-v disponível, em km/s? (2 casas decimais)"
+  }
+}

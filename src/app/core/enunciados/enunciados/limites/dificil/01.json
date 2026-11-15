@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é o limite de {dados-calculo.a} vezes x mais {dados-calculo.b}, quando x tende a {dados-calculo.ponto}?",
+    "fr": "Quelle est la limite de {dados-calculo.a} fois x plus {dados-calculo.b}, quand x tend vers {dados-calculo.ponto} ?",
+    "en": "What is the limit of {dados-calculo.a} times x plus {dados-calculo.b}, as x tends to {dados-calculo.ponto}?"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "b": "2",
+    "ponto": "4",
+    "total": "22"
+  }
+}

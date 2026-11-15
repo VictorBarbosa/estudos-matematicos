@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma comissão terá {dados-calculo.escolhidosH} entre {dados-calculo.homens} engenheiros e {dados-calculo.escolhidasM} entre {dados-calculo.mulheres} técnicas. Quantas comissões diferentes são possíveis?"
+  }
+}

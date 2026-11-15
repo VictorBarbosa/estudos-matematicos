@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Resolva, em graus, a equação em que o seno de x vale menos {dados-calculo.valor}, no intervalo de 0° a 360° sem incluir 360°. Informe a MENOR solução.",
+    "fr": "Résolvez, en degrés, l’équation où le sinus de x vaut moins {dados-calculo.valor}, dans l’intervalle de 0° à 360° exclu. Donnez la PLUS PETITE solution.",
+    "en": "Solve, in degrees, the equation where the sine of x is minus {dados-calculo.valor}, on the interval from 0° up to but not including 360°. Give the SMALLEST solution."
+  },
+  "dados-calculo": {
+    "valor": "0.5",
+    "total": "210"
+  }
+}

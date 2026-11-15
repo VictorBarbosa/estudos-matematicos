@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Que volume ocupam {dados-calculo.mols} mol de gás ideal a {dados-calculo.temperaturaCelsius} °C e 1 atm? (em litros, 2 casas decimais)"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Um terreno em forma de paralelogramo é definido por dois deslocamentos: um de ({dados-calculo.ax}, {dados-calculo.ay}) e outro de ({dados-calculo.bx}, {dados-calculo.by}), em metros. Qual é a área, em metros quadrados? (duas casas decimais)",
+    "fr": "Un terrain en forme de parallélogramme est défini par deux déplacements : un de ({dados-calculo.ax}, {dados-calculo.ay}) et un autre de ({dados-calculo.bx}, {dados-calculo.by}), en mètres. Quelle est l’aire, en mètres carrés ? (deux décimales)",
+    "en": "A parallelogram-shaped plot is set by two displacements: one of ({dados-calculo.ax}, {dados-calculo.ay}) and another of ({dados-calculo.bx}, {dados-calculo.by}), in metres. What is its area, in square metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "ax": "3",
+    "ay": "1",
+    "bx": "1",
+    "by": "4",
+    "total": "11.00"
+  }
+}

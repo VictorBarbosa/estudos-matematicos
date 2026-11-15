@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma mola de constante {dados-calculo.constante} N/m é esticada de 0 até {dados-calculo.deslocamento} m. Quanto trabalho, em joules, é realizado?",
+    "fr": "Un ressort de constante {dados-calculo.constante} N/m est étiré de 0 à {dados-calculo.deslocamento} m. Quel travail, en joules, est effectué ?",
+    "en": "A spring with constant {dados-calculo.constante} N/m is stretched from 0 to {dados-calculo.deslocamento} m. How much work, in joules, is done?"
+  },
+  "dados-calculo": {
+    "constante": "200",
+    "deslocamento": "0.2",
+    "total": "4"
+  }
+}

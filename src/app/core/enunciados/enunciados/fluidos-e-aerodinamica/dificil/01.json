@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um tubo de área {dados-calculo.area} m² conduz água a {dados-calculo.velocidade} m/s. Qual é a vazão, em m³/s? (duas casas decimais)",
+    "fr": "Un tuyau de section {dados-calculo.area} m² conduit de l’eau à {dados-calculo.velocidade} m/s. Quel est le débit, en m³/s ? (deux décimales)",
+    "en": "A pipe of cross-section {dados-calculo.area} m² carries water at {dados-calculo.velocidade} m/s. What is the flow rate, in m³/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "area": "0.05",
+    "velocidade": "4",
+    "total": "0.20"
+  }
+}

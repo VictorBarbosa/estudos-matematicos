@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um terreno retangular será cercado com {dados-calculo.cerca} m de tela, aproveitando um muro já existente em um dos lados. Qual é a maior área possível, em metros quadrados?",
+    "fr": "Un terrain rectangulaire sera clôturé avec {dados-calculo.cerca} m de grillage, en profitant d’un mur déjà existant sur un des côtés. Quelle est la plus grande aire possible, en mètres carrés ?",
+    "en": "A rectangular plot will be fenced with {dados-calculo.cerca} m of wire, using an existing wall on one side. What is the largest possible area, in square metres?"
+  },
+  "dados-calculo": {
+    "cerca": "40",
+    "total": "200"
+  }
+}

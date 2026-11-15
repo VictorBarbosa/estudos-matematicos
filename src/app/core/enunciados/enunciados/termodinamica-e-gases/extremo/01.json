@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma máquina térmica opera entre {dados-calculo.quente} K e {dados-calculo.fria} K. Qual é o rendimento máximo possível, em porcentagem? (duas casas decimais)",
+    "fr": "Une machine thermique fonctionne entre {dados-calculo.quente} K et {dados-calculo.fria} K. Quel est le rendement maximal possible, en pourcentage ? (deux décimales)",
+    "en": "A heat engine runs between {dados-calculo.quente} K and {dados-calculo.fria} K. What is the greatest possible efficiency, as a percentage? (two decimal places)"
+  },
+  "dados-calculo": {
+    "quente": "600",
+    "fria": "300",
+    "total": "50.00"
+  }
+}

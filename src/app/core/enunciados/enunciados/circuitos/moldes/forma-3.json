@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um resistor de {dados-calculo.r} Ω está ligado a {dados-calculo.v} V. Quanta potência ele dissipa, em W? (2 casas decimais)"
+  }
+}

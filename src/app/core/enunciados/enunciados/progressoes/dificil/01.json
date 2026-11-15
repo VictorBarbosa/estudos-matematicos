@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma bola cai de {dados-calculo.altura} m e, a cada quique, sobe {dados-calculo.fracao} da altura anterior. Quantos metros ela sobe no quique número {dados-calculo.quique}?",
+    "fr": "Une balle tombe de {dados-calculo.altura} m et, à chaque rebond, remonte à {dados-calculo.fracao} de la hauteur précédente. De combien de mètres remonte-t-elle au rebond numéro {dados-calculo.quique} ?",
+    "en": "A ball falls from {dados-calculo.altura} m and on each bounce rises {dados-calculo.fracao} of the previous height. How many metres does it rise on bounce number {dados-calculo.quique}?"
+  },
+  "dados-calculo": {
+    "altura": "81",
+    "fracao": "1/3",
+    "quique": "4",
+    "total": "1"
+  }
+}

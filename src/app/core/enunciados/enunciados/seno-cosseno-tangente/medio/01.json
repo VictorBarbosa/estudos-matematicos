@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo, o cateto oposto a um ângulo mede {dados-calculo.oposto} e a hipotenusa mede {dados-calculo.hipotenusa}. Quanto vale o seno desse ângulo? (duas casas decimais)",
+    "fr": "Dans un triangle rectangle, la cathète opposée à un angle mesure {dados-calculo.oposto} et l’hypoténuse {dados-calculo.hipotenusa}. Combien vaut le sinus de cet angle ? (deux décimales)",
+    "en": "In a right triangle, the leg opposite an angle is {dados-calculo.oposto} and the hypotenuse is {dados-calculo.hipotenusa}. What is the sine of that angle? (two decimal places)"
+  },
+  "dados-calculo": {
+    "oposto": "7",
+    "hipotenusa": "25",
+    "total": "0.28"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma sala quadrada tinha {dados-calculo.primeiro} m de lado e foi ampliada: cada lado cresceu {dados-calculo.segundo} m. Do piso novo, {dados-calculo.retirados} m² ficam ocupados por um balcão. Quantos metros quadrados de piso livre sobram?",
+    "fr": "Une salle carrée avait {dados-calculo.primeiro} m de côté et a été agrandie : chaque côté a augmenté de {dados-calculo.segundo} m. Sur le nouveau plancher, {dados-calculo.retirados} m² sont occupés par un comptoir. Combien de mètres carrés de plancher libre restent ?",
+    "en": "A square room was {dados-calculo.primeiro} m on a side and was enlarged: each side grew by {dados-calculo.segundo} m. Of the new floor, {dados-calculo.retirados} m² are taken by a counter. How many square metres of free floor remain?"
+  },
+  "dica": {
+    "br": "O lado novo é uma soma: calcule o lado primeiro e só então eleve ao quadrado.",
+    "fr": "Le nouveau côté est une somme : calculez le côté d’abord, puis élevez au carré.",
+    "en": "The new side is a sum: work out the side first, then square it."
+  }
+}

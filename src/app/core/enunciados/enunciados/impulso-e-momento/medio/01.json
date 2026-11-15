@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o momento linear, em kg·m/s, de um corpo de {dados-calculo.massa} kg que se move a {dados-calculo.velocidade} m/s? (duas casas decimais)",
+    "fr": "Quelle est la quantité de mouvement, en kg·m/s, d’un corps de {dados-calculo.massa} kg se déplaçant à {dados-calculo.velocidade} m/s ? (deux décimales)",
+    "en": "What is the momentum, in kg·m/s, of a {dados-calculo.massa} kg body moving at {dados-calculo.velocidade} m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "3",
+    "velocidade": "8",
+    "total": "24.00"
+  }
+}

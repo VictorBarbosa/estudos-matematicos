@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a carga do íon mais comum do alumínio, cujo número atômico é {dados-calculo.z}? Responda com o sinal.",
+    "fr": "Quelle est la charge de l’ion le plus courant de l’aluminium, dont le numéro atomique est {dados-calculo.z} ? Répondez avec le signe.",
+    "en": "What is the charge of the most common aluminium ion, whose atomic number is {dados-calculo.z}? Answer with the sign."
+  },
+  "dados-calculo": {
+    "z": "13",
+    "total": "+3"
+  }
+}

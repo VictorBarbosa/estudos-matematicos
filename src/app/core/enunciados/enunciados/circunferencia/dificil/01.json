@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância entre o ponto ({dados-calculo.px}, {dados-calculo.py}) e o centro de uma circunferência que fica em ({dados-calculo.cx}, {dados-calculo.cy})?",
+    "fr": "Quelle est la distance entre le point ({dados-calculo.px}, {dados-calculo.py}) et le centre d’un cercle situé en ({dados-calculo.cx}, {dados-calculo.cy}) ?",
+    "en": "What is the distance between the point ({dados-calculo.px}, {dados-calculo.py}) and the centre of a circle located at ({dados-calculo.cx}, {dados-calculo.cy})?"
+  },
+  "dados-calculo": {
+    "px": "9",
+    "py": "1",
+    "cx": "0",
+    "cy": "1",
+    "total": "9"
+  }
+}

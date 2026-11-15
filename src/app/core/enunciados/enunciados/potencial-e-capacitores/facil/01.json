@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um capacitor de {dados-calculo.capacitancia} μF é ligado a uma bateria de {dados-calculo.tensao} V. Que carga ele armazena, em μC?",
+    "fr": "Un condensateur de {dados-calculo.capacitancia} μF est branché à une pile de {dados-calculo.tensao} V. Quelle charge stocke-t-il, en μC ?",
+    "en": "A {dados-calculo.capacitancia} μF capacitor is connected to a {dados-calculo.tensao} V battery. What charge does it store, in μC?"
+  },
+  "dados-calculo": {
+    "capacitancia": "22",
+    "tensao": "12",
+    "total": "264"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Com Euler, integre de 0 a {dados-calculo.tempo} partindo de y(0) = {dados-calculo.y0}, primeiro com passo {dados-calculo.expressao1} e depois com metade dele. Por qual fator o erro foi dividido? Responda com 5 casas decimais."
+  }
+}

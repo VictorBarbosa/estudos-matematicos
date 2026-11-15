@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Numa maquete, todos os comprimentos são {dados-calculo.fator} vezes menores que os reais. Se o terreno real tem {dados-calculo.areaReal} m² de área, quantos metros quadrados tem o terreno da maquete?",
+    "fr": "Dans une maquette, toutes les longueurs sont {dados-calculo.fator} fois plus petites que les vraies. Si le terrain réel a {dados-calculo.areaReal} m² d’aire, combien de mètres carrés fait le terrain de la maquette ?",
+    "en": "In a scale model every length is {dados-calculo.fator} times smaller than in reality. If the real plot has an area of {dados-calculo.areaReal} m², how many square metres does the model plot have?"
+  },
+  "dados-calculo": {
+    "fator": "5",
+    "areaReal": "450",
+    "total": "18"
+  }
+}

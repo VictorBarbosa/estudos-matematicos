@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor médio desta função sobre o retângulo de {dados-calculo.x0} a {dados-calculo.x1} em x e de {dados-calculo.y0} a {dados-calculo.y1} em y? Responda com 3 casas decimais."
+  }
+}

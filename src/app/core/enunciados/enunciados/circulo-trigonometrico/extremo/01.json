@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é o sinal do seno de {dados-calculo.graus}°? Responda 1 se for positivo e -1 se for negativo.",
+    "fr": "Quel est le signe du sinus de {dados-calculo.graus}° ? Répondez 1 s’il est positif et -1 s’il est négatif.",
+    "en": "What is the sign of the sine of {dados-calculo.graus}°? Answer 1 if positive and -1 if negative."
+  },
+  "dados-calculo": {
+    "graus": "200",
+    "total": "-1"
+  }
+}

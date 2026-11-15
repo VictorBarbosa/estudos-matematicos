@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Quanta energia, em joules, fica armazenada num capacitor de {dados-calculo.capacitancia} μF ligado a {dados-calculo.tensao} V? (duas casas decimais)",
+    "fr": "Combien d’énergie, en joules, est stockée dans un condensateur de {dados-calculo.capacitancia} μF branché à {dados-calculo.tensao} V ? (deux décimales)",
+    "en": "How much energy, in joules, is stored in a {dados-calculo.capacitancia} μF capacitor connected to {dados-calculo.tensao} V? (two decimal places)"
+  },
+  "dados-calculo": {
+    "capacitancia": "10",
+    "tensao": "100",
+    "total": "0.05"
+  }
+}

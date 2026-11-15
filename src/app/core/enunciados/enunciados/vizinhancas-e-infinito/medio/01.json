@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "De que valor se aproxima a razão entre {dados-calculo.a} vezes x e {dados-calculo.b} vezes x mais {dados-calculo.c}, quando x cresce sem limite?",
+    "fr": "De quelle valeur s’approche le rapport entre {dados-calculo.a} fois x et {dados-calculo.b} fois x plus {dados-calculo.c}, quand x croît sans limite ?",
+    "en": "What value does the ratio of {dados-calculo.a} times x to {dados-calculo.b} times x plus {dados-calculo.c} approach as x grows without bound?"
+  },
+  "dados-calculo": {
+    "a": "6",
+    "b": "3",
+    "c": "5",
+    "total": "2"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma massa de {dados-calculo.massa} kg presa a uma mola de constante {dados-calculo.rigidez} N/m, com amortecimento {dados-calculo.amortecimento} N·s/m, é solta do repouso a {dados-calculo.expressao1} m do equilíbrio. Qual é a posição em t = {dados-calculo.expressao2} s, em m? Responda com 4 casas decimais."
+  }
+}

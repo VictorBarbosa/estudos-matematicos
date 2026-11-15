@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma sirene de {dados-calculo.f} Hz {dados-calculo.fonteTexto}{dados-calculo.observadorTexto}. Com o som a {dados-calculo.SOM_NO_AR} m/s, que frequência o ouvinte escuta, em Hz?{dados-calculo.expressao1}"
+  }
+}

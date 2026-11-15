@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Numa progressão geométrica de primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}, qual é a soma dos {dados-calculo.termos} primeiros termos?",
+    "fr": "Dans une suite géométrique de premier terme {dados-calculo.primeiro} et de raison {dados-calculo.razao}, quelle est la somme des {dados-calculo.termos} premiers termes ?",
+    "en": "In a geometric sequence with first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}, what is the sum of the first {dados-calculo.termos} terms?"
+  },
+  "dados-calculo": {
+    "primeiro": "3",
+    "razao": "3",
+    "termos": "7",
+    "total": "3279"
+  }
+}

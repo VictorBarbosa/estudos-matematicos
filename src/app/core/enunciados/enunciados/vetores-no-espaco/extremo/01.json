@@ -1,0 +1,15 @@
+{
+  "enunciado": {
+    "br": "Dois vetores têm produto escalar igual a zero: ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) e ({dados-calculo.bx}, {dados-calculo.by}, k). Qual é o valor de k?",
+    "fr": "Deux vecteurs ont un produit scalaire nul : ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) et ({dados-calculo.bx}, {dados-calculo.by}, k). Quelle est la valeur de k ?",
+    "en": "Two vectors have a dot product of zero: ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) and ({dados-calculo.bx}, {dados-calculo.by}, k). What is k?"
+  },
+  "dados-calculo": {
+    "ax": "1",
+    "ay": "2",
+    "az": "3",
+    "bx": "4",
+    "by": "1",
+    "total": "-2"
+  }
+}

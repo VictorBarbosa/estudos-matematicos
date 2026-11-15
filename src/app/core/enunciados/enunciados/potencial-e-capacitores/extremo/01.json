@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Dois capacitores, de {dados-calculo.c1} μF e {dados-calculo.c2} μF, são ligados em PARALELO. Qual é a capacitância equivalente, em μF?",
+    "fr": "Deux condensateurs, de {dados-calculo.c1} μF et {dados-calculo.c2} μF, sont branchés en PARALLÈLE. Quelle est la capacité équivalente, en μF ?",
+    "en": "Two capacitors, {dados-calculo.c1} μF and {dados-calculo.c2} μF, are connected in PARALLEL. What is the equivalent capacitance, in μF?"
+  },
+  "dados-calculo": {
+    "c1": "6",
+    "c2": "3",
+    "total": "9"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A soma de um número positivo com o seu inverso é {dados-calculo.soma}. Qual é o maior valor que esse número pode ter?",
+    "fr": "La somme d’un nombre positif et de son inverse est {dados-calculo.soma}. Quelle est la plus grande valeur que ce nombre peut prendre ?",
+    "en": "The sum of a positive number and its reciprocal is {dados-calculo.soma}. What is the largest value that number can take?"
+  },
+  "dados-calculo": {
+    "soma": "5/2",
+    "total": "2"
+  }
+}

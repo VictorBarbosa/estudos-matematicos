@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} operários fazem a obra em {dados-calculo.b} dias. Em quantos dias 1 operário faz a mesma obra?",
+    "fr": "{dados-calculo.a} ouvriers font l'ouvrage en {dados-calculo.b} jours. En combien de jours 1 ouvrier fait-il le même ouvrage ?",
+    "en": "{dados-calculo.a} workers do the job in {dados-calculo.b} days. In how many days does 1 worker do the same job?"
+  }
+}

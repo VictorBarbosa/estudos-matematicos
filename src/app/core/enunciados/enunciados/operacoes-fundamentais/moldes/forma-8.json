@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Comprei {dados-calculo.kits} kits. Cada kit traz {dados-calculo.lapis} lápis e {dados-calculo.borrachas} borrachas. Quantos itens vieram ao todo?",
+    "fr": "J'ai acheté {dados-calculo.kits} kits. Chaque kit contient {dados-calculo.lapis} crayons et {dados-calculo.borrachas} gommes. Combien d’objets ai-je reçus en tout ?",
+    "en": "I bought {dados-calculo.kits} kits. Each kit has {dados-calculo.lapis} pencils and {dados-calculo.borrachas} erasers. How many items came in total?"
+  },
+  "dica": {
+    "br": "Os dois itens do kit andam juntos: some-os primeiro, depois multiplique pelos kits.",
+    "fr": "Les deux objets du kit vont ensemble : additionnez-les, puis multipliez par le nombre de kits.",
+    "en": "The two items go together: add them first, then multiply by the number of kits."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do composto iônico formado por cálcio, de número atômico {dados-calculo.zMetal}, e cloro, de número atômico {dados-calculo.zNaoMetal}?",
+    "fr": "Quelle est la formule du composé ionique formé par le calcium, de numéro atomique {dados-calculo.zMetal}, et le chlore, de numéro atomique {dados-calculo.zNaoMetal} ?",
+    "en": "What is the formula of the ionic compound formed by calcium, atomic number {dados-calculo.zMetal}, and chlorine, atomic number {dados-calculo.zNaoMetal}?"
+  },
+  "dados-calculo": {
+    "zMetal": "20",
+    "zNaoMetal": "17",
+    "total": "CaCl2"
+  }
+}

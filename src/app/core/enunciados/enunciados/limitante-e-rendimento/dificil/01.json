@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Reagem {dados-calculo.massaH2} g de H₂ com {dados-calculo.massaO2} g de O₂ segundo 2 H₂ + O₂ → 2 H₂O. Que massa de água, em gramas, se forma? (duas casas decimais)",
+    "fr": "On fait réagir {dados-calculo.massaH2} g de H₂ avec {dados-calculo.massaO2} g de O₂ selon 2 H₂ + O₂ → 2 H₂O. Quelle masse d’eau, en grammes, se forme ? (deux décimales)",
+    "en": "{dados-calculo.massaH2} g of H₂ react with {dados-calculo.massaO2} g of O₂ as 2 H₂ + O₂ → 2 H₂O. What mass of water, in grams, forms? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massaH2": "8.08",
+    "massaO2": "32",
+    "total": "36.04"
+  }
+}

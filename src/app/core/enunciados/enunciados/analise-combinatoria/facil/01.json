@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "De quantos modos se pode escolher uma equipe de {dados-calculo.escolhidos} pessoas entre {dados-calculo.candidatos} candidatos, sem distinguir papéis?",
+    "fr": "De combien de façons peut-on choisir une équipe de {dados-calculo.escolhidos} personnes parmi {dados-calculo.candidatos} candidats, sans distinguer les rôles ?",
+    "en": "In how many ways can a team of {dados-calculo.escolhidos} people be chosen from {dados-calculo.candidatos} candidates, with no distinct roles?"
+  },
+  "dados-calculo": {
+    "escolhidos": "4",
+    "candidatos": "15",
+    "total": "1365"
+  }
+}

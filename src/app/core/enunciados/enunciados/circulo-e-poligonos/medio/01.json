@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma pizza redonda tem {dados-calculo.diametro} cm de diâmetro. Quantos centímetros quadrados de área ela tem? (duas casas decimais)",
+    "fr": "Une pizza ronde a {dados-calculo.diametro} cm de diamètre. Combien de centimètres carrés d’aire a-t-elle ? (deux décimales)",
+    "en": "A round pizza is {dados-calculo.diametro} cm across. How many square centimetres is its area? (two decimal places)"
+  },
+  "dados-calculo": {
+    "diametro": "30",
+    "total": "706.86"
+  }
+}

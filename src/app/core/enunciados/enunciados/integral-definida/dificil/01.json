@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a área sob a parábola que vale o quadrado de x, entre x = 0 e x = {dados-calculo.fim}?",
+    "fr": "Quelle est l’aire sous la parabole qui vaut le carré de x, entre x = 0 et x = {dados-calculo.fim} ?",
+    "en": "What is the area under the parabola equal to x squared, from x = 0 to x = {dados-calculo.fim}?"
+  },
+  "dados-calculo": {
+    "fim": "3",
+    "total": "9"
+  }
+}

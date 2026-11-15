@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Produzir x peças custa {dados-calculo.fixo} reais de custo fixo mais {dados-calculo.variavel} reais por peça, e cada peça é vendida por {dados-calculo.preco} reais. Qual é o lucro na produção e venda de {dados-calculo.x} peças?",
+    "fr": "Produire x pièces coûte {dados-calculo.fixo} reais de frais fixes plus {dados-calculo.variavel} reais par pièce, et chaque pièce est vendue {dados-calculo.preco} reais. Quel est le profit sur la production et la vente de {dados-calculo.x} pièces ?",
+    "en": "Producing x parts costs {dados-calculo.fixo} reais in fixed costs plus {dados-calculo.variavel} reais per part, and each part sells for {dados-calculo.preco} reais. What is the profit on making and selling {dados-calculo.x} parts?"
+  },
+  "dados-calculo": {
+    "fixo": "1200",
+    "variavel": "18",
+    "preco": "45",
+    "x": "80",
+    "total": "960"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Dois carros partem juntos do mesmo ponto: um mantém {dados-calculo.velocidade} m/s constantes e o outro parte do repouso acelerando a {dados-calculo.aceleracao} m/s². Em quantos segundos o segundo alcança o primeiro? (duas casas decimais)",
+    "fr": "Deux voitures partent ensemble du même point : l’une garde {dados-calculo.velocidade} m/s constants et l’autre part du repos en accélérant à {dados-calculo.aceleracao} m/s². En combien de secondes la seconde rattrape-t-elle la première ? (deux décimales)",
+    "en": "Two cars start together from the same point: one keeps a constant {dados-calculo.velocidade} m/s and the other starts from rest accelerating at {dados-calculo.aceleracao} m/s². In how many seconds does the second catch the first? (two decimal places)"
+  },
+  "dados-calculo": {
+    "velocidade": "20",
+    "aceleracao": "5",
+    "total": "8.00"
+  }
+}

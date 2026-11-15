@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma escada de {dados-calculo.escada} m está apoiada numa parede formando {dados-calculo.angulo}° com o chão. A que altura, em metros, ela toca a parede? (duas casas decimais)",
+    "fr": "Une échelle de {dados-calculo.escada} m est appuyée contre un mur en formant {dados-calculo.angulo}° avec le sol. À quelle hauteur, en mètres, touche-t-elle le mur ? (deux décimales)",
+    "en": "A {dados-calculo.escada} m ladder leans against a wall at {dados-calculo.angulo}° to the ground. At what height, in metres, does it touch the wall? (two decimal places)"
+  },
+  "dados-calculo": {
+    "escada": "6",
+    "angulo": "60",
+    "total": "5.20"
+  }
+}

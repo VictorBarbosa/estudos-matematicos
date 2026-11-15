@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.a} servidores processam um lote em {dados-calculo.b} minutos. Em quantos minutos {dados-calculo.c} servidores iguais processam o mesmo lote?",
+    "fr": "{dados-calculo.a} serveurs traitent un lot en {dados-calculo.b} minutes. En combien de minutes {dados-calculo.c} serveurs identiques traitent-ils le même lot ?",
+    "en": "{dados-calculo.a} servers process a batch in {dados-calculo.b} minutes. In how many minutes do {dados-calculo.c} identical servers process the same batch?"
+  }
+}

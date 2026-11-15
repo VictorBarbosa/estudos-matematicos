@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma população cresce continuamente a uma taxa de {dados-calculo.taxa} por ano, no modelo com a constante e. Em quantos anos ela triplica? (três casas decimais)",
+    "fr": "Une population croît continûment au taux de {dados-calculo.taxa} par an, dans le modèle avec la constante e. En combien d’années triple-t-elle ? (trois décimales)",
+    "en": "A population grows continuously at a rate of {dados-calculo.taxa} per year, in the model with the constant e. In how many years does it triple? (three decimal places)"
+  },
+  "dados-calculo": {
+    "taxa": "0.04",
+    "total": "27.465"
+  }
+}

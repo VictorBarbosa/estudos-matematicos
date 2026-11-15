@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Na combustão completa do metano, CH₄ + 2 O₂ → CO₂ + 2 H₂O, que massa de água, em gramas, se forma a partir de {dados-calculo.massa} g de metano? (duas casas decimais)",
+    "fr": "Dans la combustion complète du méthane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, quelle masse d’eau, en grammes, se forme à partir de {dados-calculo.massa} g de méthane ? (deux décimales)",
+    "en": "In the complete combustion of methane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, what mass of water, in grams, forms from {dados-calculo.massa} g of methane? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "16.05",
+    "total": "36.04"
+  }
+}

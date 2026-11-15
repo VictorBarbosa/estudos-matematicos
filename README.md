@@ -751,18 +751,35 @@ que precisa de três vereditos — `bateu`, `não bateu` e **`não sei conferir`
 
 ## Os enunciados: um arquivo, duas naturezas
 
-**O texto dos enunciados vive em `core/enunciados/enunciados/`, um arquivo por tópico.** As
-perguntas de Frações estão em `fracoes.json`, as de Cálculo 3 em `derivadas-parciais.json`, e
-assim por diante — 128 arquivos. Acrescentar ou reescrever uma pergunta é editar o arquivo do
-tópico; o maior tem 30 KB e o menor, 200 bytes.
+**O texto dos enunciados vive em `core/enunciados/enunciados/`, um arquivo por pergunta.** A
+árvore é tópico, depois nível:
 
-Eram todos um arquivo só, de meio megabyte: achar a pergunta que se queria editar era rolar
-por milhares de linhas, e duas pessoas mexendo em tópicos diferentes brigavam pelo mesmo
-arquivo.
+```
+enunciados/
+  retas-e-planos/
+    facil/01.json          ← uma pergunta pronta, com os números escritos
+    medio/01.json
+    dificil/01.json
+    extremo/01.json
+    moldes/forma-1.json    ← o texto que o gerador veste com os números
+  razao-proporcao/
+    moldes/direta/01.json  ← quando a forma tem VÁRIOS moldes, uma pasta para ela
+    moldes/direta/02.json
+  catalogo.ts              ← gerado; a única parte que conhece todos
+```
 
-`enunciados/catalogo.ts` é a única parte que precisa conhecer todos, e ele é conferido por
-`npm run verificar:geradores`: um `.json` novo na pasta que não esteja no catálogo reprova a
-verificação — senão o site simplesmente não veria aquele tópico, sem quebrar e sem avisar.
+São 1 036 arquivos, e editar uma pergunta é abrir o arquivo dela — não rolar um arquivo de
+meio megabyte, como era quando tudo morava junto.
+
+**O caminho é que diz o que a entrada é.** `fracoes/facil/01.json` é pergunta pronta de
+Frações no Fácil; `fracoes/moldes/forma-2.json` é molde. Nível e forma não são escritos dentro
+do arquivo, e por isso não há como o arquivo dizer uma coisa e a pasta dizer outra.
+
+Depois de acrescentar ou remover um arquivo, rode **`npm run enunciados:catalogo`**. O
+`npm run verificar:geradores` reprova quando o catálogo está desatualizado — um `.json` que
+ninguém importa não é uma pergunta a menos, é uma pergunta que o site não enxerga, sem quebrar
+e sem avisar. O mesmo guarda reprova **molde órfão** (está na árvore e nenhum código o pede) e
+**molde inalcançável** (a forma tem dois moldes e o gerador lê só o primeiro).
 
 O arquivo guarda duas naturezas de entrada, e é o que a entrada **traz** que diz qual é:
 

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "A luz sai de {dados-calculo.nome} (n = {dados-calculo.v1}) para {dados-calculo.destino}. A partir de que ângulo com a normal ocorre reflexão total, em graus?{dados-calculo.v2}"
+  }
+}

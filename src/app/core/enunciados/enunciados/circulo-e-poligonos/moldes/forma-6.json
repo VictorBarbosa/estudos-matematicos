@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Qual é o comprimento do arco de uma circunferência de raio {dados-calculo.raio} cm correspondente a um ângulo central de {dados-calculo.anguloGraus}°? (em cm, 2 casas decimais)"
+  }
+}

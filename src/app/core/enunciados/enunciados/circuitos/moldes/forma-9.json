@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um capacitor de {dados-calculo.c} μF, inicialmente descarregado, é carregado por uma fonte de {dados-calculo.v} V através de {dados-calculo.r} kΩ. Qual é a carga dele após {dados-calculo.expressao1} s, em μC? (2 casas decimais)"
+  }
+}

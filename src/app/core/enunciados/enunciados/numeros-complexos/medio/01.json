@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o módulo do número complexo {dados-calculo.a} mais {dados-calculo.b}i? (duas casas decimais)",
+    "fr": "Quel est le module du nombre complexe {dados-calculo.a} plus {dados-calculo.b}i ? (deux décimales)",
+    "en": "What is the modulus of the complex number {dados-calculo.a} plus {dados-calculo.b}i? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "b": "4",
+    "total": "5.00"
+  }
+}

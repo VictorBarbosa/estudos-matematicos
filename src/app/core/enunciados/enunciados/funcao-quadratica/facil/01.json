@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma bola é lançada para cima a {dados-calculo.velocidade} m/s e sua altura, em metros, é essa velocidade vezes o tempo menos {dados-calculo.coeficiente} vezes o tempo ao quadrado. Em quantos segundos ela atinge a altura máxima?",
+    "fr": "Un ballon est lancé vers le haut à {dados-calculo.velocidade} m/s et sa hauteur, en mètres, est cette vitesse fois le temps moins {dados-calculo.coeficiente} fois le temps au carré. En combien de secondes atteint-il sa hauteur maximale ?",
+    "en": "A ball is thrown up at {dados-calculo.velocidade} m/s and its height, in metres, is that speed times the time minus {dados-calculo.coeficiente} times the time squared. In how many seconds does it reach its greatest height?"
+  },
+  "dados-calculo": {
+    "velocidade": "20",
+    "coeficiente": "5",
+    "total": "2"
+  }
+}

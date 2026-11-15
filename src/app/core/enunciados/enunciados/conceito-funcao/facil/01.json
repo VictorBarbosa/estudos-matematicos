@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função devolve a divisão de {dados-calculo.numerador} por (x menos {dados-calculo.b}). Qual é o único valor de x que NÃO pertence ao domínio?",
+    "fr": "Une fonction renvoie la division de {dados-calculo.numerador} par (x moins {dados-calculo.b}). Quelle est la seule valeur de x qui N’APPARTIENT PAS au domaine ?",
+    "en": "A function returns {dados-calculo.numerador} divided by (x minus {dados-calculo.b}). What is the only value of x that is NOT in the domain?"
+  },
+  "dados-calculo": {
+    "numerador": "10",
+    "b": "3",
+    "total": "3"
+  }
+}

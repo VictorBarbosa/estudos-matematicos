@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um gás a {dados-calculo.temperatura1} K ocupa {dados-calculo.volume1} L. À pressão constante, que volume em litros ele ocupa a {dados-calculo.temperatura2} K? (duas casas decimais)",
+    "fr": "Un gaz à {dados-calculo.temperatura1} K occupe {dados-calculo.volume1} L. À pression constante, quel volume en litres occupe-t-il à {dados-calculo.temperatura2} K ? (deux décimales)",
+    "en": "A gas at {dados-calculo.temperatura1} K takes up {dados-calculo.volume1} L. At constant pressure, what volume in litres does it take up at {dados-calculo.temperatura2} K? (two decimal places)"
+  },
+  "dados-calculo": {
+    "temperatura1": "300",
+    "volume1": "10",
+    "temperatura2": "450",
+    "total": "15.00"
+  }
+}

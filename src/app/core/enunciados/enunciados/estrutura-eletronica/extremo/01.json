@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Quantos elétrons há no subnível 3d do átomo neutro de ferro, cujo número atômico é {dados-calculo.z}?",
+    "fr": "Combien d’électrons y a-t-il dans la sous-couche 3d de l’atome neutre de fer, dont le numéro atomique est {dados-calculo.z} ?",
+    "en": "How many electrons are in the 3d subshell of a neutral iron atom, whose atomic number is {dados-calculo.z}?"
+  },
+  "dados-calculo": {
+    "z": "26",
+    "total": "6"
+  }
+}

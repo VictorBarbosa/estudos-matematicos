@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um ciclista já tinha pedalado {dados-calculo.ultimoTrecho} km. Depois disso, pedalou {dados-calculo.porDia} km por dia durante {dados-calculo.dias} dias. Quantos quilômetros pedalou no total?",
+    "fr": "Un cycliste avait déjà roulé {dados-calculo.ultimoTrecho} km. Ensuite, il a roulé {dados-calculo.porDia} km par jour pendant {dados-calculo.dias} jours. Combien de kilomètres a-t-il parcourus en tout ?",
+    "en": "A cyclist had already ridden {dados-calculo.ultimoTrecho} km. After that, he rode {dados-calculo.porDia} km a day for {dados-calculo.dias} days. How many kilometres did he ride in total?"
+  }
+}

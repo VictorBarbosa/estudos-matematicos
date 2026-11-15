@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Que corrente, em ampères, passa por um resistor de {dados-calculo.resistencia} Ω ligado a {dados-calculo.tensao} V?",
+    "fr": "Quel courant, en ampères, traverse une résistance de {dados-calculo.resistencia} Ω branchée à {dados-calculo.tensao} V ?",
+    "en": "What current, in amperes, flows through a {dados-calculo.resistencia} Ω resistor connected to {dados-calculo.tensao} V?"
+  },
+  "dados-calculo": {
+    "resistencia": "8",
+    "tensao": "24",
+    "total": "3"
+  }
+}

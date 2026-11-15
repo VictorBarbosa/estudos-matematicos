@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um azulejo tem a forma de um hexágono regular de lado {dados-calculo.lado} cm. Quantos centímetros quadrados de área ele tem? (duas casas decimais)",
+    "fr": "Un carreau a la forme d’un hexagone régulier de côté {dados-calculo.lado} cm. Combien de centimètres carrés d’aire a-t-il ? (deux décimales)",
+    "en": "A tile is a regular hexagon with side {dados-calculo.lado} cm. How many square centimetres is its area? (two decimal places)"
+  },
+  "dados-calculo": {
+    "lado": "10",
+    "total": "259.81"
+  }
+}

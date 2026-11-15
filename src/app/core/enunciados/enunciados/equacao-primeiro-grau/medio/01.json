@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Carlos tem {dados-calculo.diferenca} anos mais que Marta. Juntos, os dois têm {dados-calculo.soma} anos. Quantos anos tem Marta?",
+    "fr": "Carlos a {dados-calculo.diferenca} ans de plus que Marta. Ensemble, ils ont {dados-calculo.soma} ans. Quel âge a Marta ?",
+    "en": "Carlos is {dados-calculo.diferenca} years older than Marta. Together they are {dados-calculo.soma} years old. How old is Marta?"
+  },
+  "dados-calculo": {
+    "diferenca": "12",
+    "soma": "58",
+    "total": "23"
+  }
+}

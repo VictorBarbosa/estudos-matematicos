@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.v1} kg de {dados-calculo.v2} a {dados-calculo.t1} °C são misturados com {dados-calculo.v3} kg de {dados-calculo.v4} a {dados-calculo.t2} °C, num recipiente isolado. Qual é a temperatura final, em °C? Os calores específicos são {dados-calculo.v5} e {dados-calculo.v6} J/(kg·K). Responda com 3 casas decimais."
+  }
+}

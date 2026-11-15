@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "No desenvolvimento de (a mais b) elevado a {dados-calculo.expoente}, qual é o maior coeficiente binomial?",
+    "fr": "Dans le développement de (a plus b) à la puissance {dados-calculo.expoente}, quel est le plus grand coefficient binomial ?",
+    "en": "In the expansion of (a plus b) to the power of {dados-calculo.expoente}, what is the largest binomial coefficient?"
+  },
+  "dados-calculo": {
+    "expoente": "6",
+    "total": "20"
+  }
+}

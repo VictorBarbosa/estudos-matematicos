@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um rotor gira a {dados-calculo.rpm} rotações por minuto. Qual é a velocidade angular, em rad/s? (três casas decimais)",
+    "fr": "Un rotor tourne à {dados-calculo.rpm} rotations par minute. Quelle est la vitesse angulaire, en rad/s ? (trois décimales)",
+    "en": "A rotor spins at {dados-calculo.rpm} revolutions per minute. What is the angular speed, in rad/s? (three decimal places)"
+  },
+  "dados-calculo": {
+    "rpm": "300",
+    "total": "31.416"
+  }
+}

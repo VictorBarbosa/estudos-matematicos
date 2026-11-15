@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Quantas vezes é preciso multiplicar {dados-calculo.base} por si mesmo para chegar a {dados-calculo.valor}? Esse número é o logaritmo de {dados-calculo.valor} na base {dados-calculo.base}.",
+    "fr": "Combien de fois faut-il multiplier {dados-calculo.base} par lui-même pour atteindre {dados-calculo.valor} ? Ce nombre est le logarithme de {dados-calculo.valor} en base {dados-calculo.base}.",
+    "en": "How many times must {dados-calculo.base} be multiplied by itself to reach {dados-calculo.valor}? That number is the logarithm of {dados-calculo.valor} to base {dados-calculo.base}."
+  },
+  "dados-calculo": {
+    "base": "2",
+    "valor": "1024",
+    "total": "10"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A ferrugem se forma como 4 Fe + 3 O₂ → 2 Fe₂O₃. Que massa de Fe₂O₃, em gramas, se forma a partir de {dados-calculo.massa} g de ferro? (duas casas decimais)",
+    "fr": "La rouille se forme comme 4 Fe + 3 O₂ → 2 Fe₂O₃. Quelle masse de Fe₂O₃, en grammes, se forme à partir de {dados-calculo.massa} g de fer ? (deux décimales)",
+    "en": "Rust forms as 4 Fe + 3 O₂ → 2 Fe₂O₃. What mass of Fe₂O₃, in grams, forms from {dados-calculo.massa} g of iron? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "223.4",
+    "total": "319.40"
+  }
+}

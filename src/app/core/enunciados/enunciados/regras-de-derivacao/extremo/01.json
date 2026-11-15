@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o quadrado de x dividido por x mais {dados-calculo.b}. Quanto vale a sua derivada em x = {dados-calculo.ponto}? Responda como fração.",
+    "fr": "Une fonction vaut le carré de x divisé par x plus {dados-calculo.b}. Combien vaut sa dérivée en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+    "en": "A function is x squared divided by x plus {dados-calculo.b}. What is its derivative at x = {dados-calculo.ponto}? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "b": "1",
+    "ponto": "1",
+    "total": "3/4"
+  }
+}

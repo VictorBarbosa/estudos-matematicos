@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma grandeza satisfaz: a taxa de variação é {dados-calculo.k} vezes a grandeza, e ela vale {dados-calculo.inicial} no instante zero. Quanto ela vale no instante zero?",
+    "fr": "Une grandeur satisfait : le taux de variation est {dados-calculo.k} fois la grandeur, et elle vaut {dados-calculo.inicial} à l’instant zéro. Combien vaut-elle à l’instant zéro ?",
+    "en": "A quantity satisfies: the rate of change is {dados-calculo.k} times the quantity, and it equals {dados-calculo.inicial} at time zero. What is its value at time zero?"
+  },
+  "dados-calculo": {
+    "k": "2",
+    "inicial": "40",
+    "total": "40"
+  }
+}

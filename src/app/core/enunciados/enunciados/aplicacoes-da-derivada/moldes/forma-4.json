@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um balão esférico é inflado e seu raio cresce {dados-calculo.taxaRaio} cm/s. A que taxa o VOLUME cresce no instante em que o raio vale {dados-calculo.raio} cm? (em cm³/s, 2 casas decimais)"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a área sob a curva que vale {dados-calculo.a} vezes o quadrado de x, entre {dados-calculo.inicio} e {dados-calculo.fim}? (duas casas decimais)",
+    "fr": "Quelle est l’aire sous la courbe qui vaut {dados-calculo.a} fois le carré de x, entre {dados-calculo.inicio} et {dados-calculo.fim} ? (deux décimales)",
+    "en": "What is the area under the curve equal to {dados-calculo.a} times x squared, from {dados-calculo.inicio} to {dados-calculo.fim}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "inicio": "1",
+    "fim": "2",
+    "total": "7.00"
+  }
+}

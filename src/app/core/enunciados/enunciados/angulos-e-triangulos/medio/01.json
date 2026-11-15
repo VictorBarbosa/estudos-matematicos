@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Duas retas paralelas são cortadas por uma transversal. Um dos ângulos formados mede {dados-calculo.angulo}°. Quantos graus mede o ângulo colateral interno a ele?",
+    "fr": "Deux droites parallèles sont coupées par une sécante. L’un des angles formés mesure {dados-calculo.angulo}°. Combien de degrés mesure son angle co-intérieur ?",
+    "en": "Two parallel lines are cut by a transversal. One of the angles formed measures {dados-calculo.angulo}°. How many degrees is its co-interior angle?"
+  },
+  "dados-calculo": {
+    "angulo": "115",
+    "total": "65"
+  }
+}

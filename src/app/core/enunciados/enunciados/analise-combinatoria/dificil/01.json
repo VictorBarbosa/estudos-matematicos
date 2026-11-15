@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Quantas senhas de {dados-calculo.posicoes} algarismos existem, usando os dígitos de 0 a 9, podendo repetir?",
+    "fr": "Combien de mots de passe de {dados-calculo.posicoes} chiffres existent, avec les chiffres de 0 à 9, les répétitions permises ?",
+    "en": "How many {dados-calculo.posicoes}-digit passwords are there, using digits 0 to 9, repeats allowed?"
+  },
+  "dados-calculo": {
+    "posicoes": "4",
+    "total": "10000"
+  }
+}

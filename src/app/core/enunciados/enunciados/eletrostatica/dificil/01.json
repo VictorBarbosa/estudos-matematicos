@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é a força, em newtons, sobre uma carga de {dados-calculo.carga} μC colocada num campo elétrico de {dados-calculo.campo} N/C? (duas casas decimais)",
+    "fr": "Quelle est la force, en newtons, sur une charge de {dados-calculo.carga} μC placée dans un champ électrique de {dados-calculo.campo} N/C ? (deux décimales)",
+    "en": "What is the force, in newtons, on a {dados-calculo.carga} μC charge placed in an electric field of {dados-calculo.campo} N/C? (two decimal places)"
+  },
+  "dados-calculo": {
+    "carga": "5",
+    "campo": "200000",
+    "total": "1.00"
+  }
+}

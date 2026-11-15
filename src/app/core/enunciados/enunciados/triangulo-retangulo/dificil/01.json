@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "De um ponto no chão, a {dados-calculo.distancia} m da base de uma árvore, o topo dela é visto sob um ângulo de {dados-calculo.angulo}°. Qual é a altura da árvore, em metros? (duas casas decimais)",
+    "fr": "D’un point au sol, à {dados-calculo.distancia} m du pied d’un arbre, son sommet est vu sous un angle de {dados-calculo.angulo}°. Quelle est la hauteur de l’arbre, en mètres ? (deux décimales)",
+    "en": "From a point on the ground {dados-calculo.distancia} m from the foot of a tree, its top is seen at an angle of {dados-calculo.angulo}°. How tall is the tree, in metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "distancia": "20",
+    "angulo": "35",
+    "total": "14.00"
+  }
+}

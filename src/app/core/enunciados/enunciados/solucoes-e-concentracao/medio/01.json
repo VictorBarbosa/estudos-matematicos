@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Dissolvem-se {dados-calculo.massa} g de NaCl em água até completar {dados-calculo.volume} mL de solução. Qual é a concentração, em mol/L? (duas casas decimais)",
+    "fr": "On dissout {dados-calculo.massa} g de NaCl dans l’eau jusqu’à obtenir {dados-calculo.volume} mL de solution. Quelle est la concentration, en mol/L ? (deux décimales)",
+    "en": "{dados-calculo.massa} g of NaCl is dissolved in water up to {dados-calculo.volume} mL of solution. What is the concentration, in mol/L? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "116.88",
+    "volume": "1000",
+    "total": "2.00"
+  }
+}

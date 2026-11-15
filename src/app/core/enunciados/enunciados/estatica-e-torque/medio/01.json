@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o torque, em N·m, de uma força de {dados-calculo.forca} N aplicada perpendicularmente a {dados-calculo.distancia} m do eixo? (duas casas decimais)",
+    "fr": "Quel est le couple, en N·m, d’une force de {dados-calculo.forca} N appliquée perpendiculairement à {dados-calculo.distancia} m de l’axe ? (deux décimales)",
+    "en": "What is the torque, in N·m, of a {dados-calculo.forca} N force applied perpendicular at {dados-calculo.distancia} m from the axis? (two decimal places)"
+  },
+  "dados-calculo": {
+    "forca": "30",
+    "distancia": "0.4",
+    "total": "12.00"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma medida vale {dados-calculo.valor} com incerteza de {dados-calculo.incerteza}. Qual é a incerteza relativa, em porcentagem? (duas casas decimais)",
+    "fr": "Une mesure vaut {dados-calculo.valor} avec une incertitude de {dados-calculo.incerteza}. Quelle est l’incertitude relative, en pourcentage ? (deux décimales)",
+    "en": "A measurement is {dados-calculo.valor} with an uncertainty of {dados-calculo.incerteza}. What is the relative uncertainty, as a percentage? (two decimal places)"
+  },
+  "dados-calculo": {
+    "valor": "50",
+    "incerteza": "2",
+    "total": "4.00"
+  }
+}

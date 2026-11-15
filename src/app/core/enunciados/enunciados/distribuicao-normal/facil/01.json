@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Numa distribuição normal, que porcentagem dos valores fica a até {dados-calculo.desvios} desvio padrão da média? Responda o número com uma casa decimal.",
+    "fr": "Dans une distribution normale, quel pourcentage des valeurs se trouve à moins de {dados-calculo.desvios} écart-type de la moyenne ? Donnez le nombre avec une décimale.",
+    "en": "In a normal distribution, what percentage of the values lie within {dados-calculo.desvios} standard deviation of the mean? Give the number to one decimal place."
+  },
+  "dados-calculo": {
+    "desvios": "1",
+    "total": "68.3"
+  }
+}

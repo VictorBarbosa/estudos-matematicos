@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Dois círculos concêntricos têm raios {dados-calculo.menor} cm e {dados-calculo.maior} cm. Qual é a área da coroa entre eles? (em cm², 2 casas decimais)"
+  }
+}

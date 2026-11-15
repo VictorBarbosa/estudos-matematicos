@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um corpo de {dados-calculo.volume} L fica totalmente submerso em água, de densidade {dados-calculo.densidade} kg/m³, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é o empuxo, em newtons? (duas casas decimais)",
+    "fr": "Un corps de {dados-calculo.volume} L est entièrement immergé dans l’eau, de densité {dados-calculo.densidade} kg/m³, la gravité valant {dados-calculo.gravidade} m/s². Quelle est la poussée, en newtons ? (deux décimales)",
+    "en": "A body of {dados-calculo.volume} L is fully submerged in water of density {dados-calculo.densidade} kg/m³, with gravity at {dados-calculo.gravidade} m/s². What is the buoyant force, in newtons? (two decimal places)"
+  },
+  "dados-calculo": {
+    "volume": "20",
+    "densidade": "1000",
+    "gravidade": "9.81",
+    "total": "196.20"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um terreno retangular mede {dados-calculo.base} metros de frente por {dados-calculo.altura} metros de fundo. Qual é a área dele, em metros quadrados?",
+    "fr": "Un terrain rectangulaire mesure {dados-calculo.base} mètres de façade sur {dados-calculo.altura} mètres de profondeur. Quelle est son aire, en mètres carrés ?",
+    "en": "A rectangular lot is {dados-calculo.base} metres wide and {dados-calculo.altura} metres deep. What is its area, in square metres?"
+  },
+  "dados-calculo": {
+    "base": "12",
+    "altura": "7.5",
+    "total": "90"
+  }
+}

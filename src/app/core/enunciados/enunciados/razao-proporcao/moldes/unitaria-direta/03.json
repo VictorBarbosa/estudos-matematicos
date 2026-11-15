@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma impressora imprime {dados-calculo.b} páginas em {dados-calculo.a} minutos. Quantas páginas imprime em 1 minuto?",
+    "fr": "Une imprimante imprime {dados-calculo.b} pages en {dados-calculo.a} minutes. Combien de pages imprime-t-elle en 1 minute ?",
+    "en": "A printer prints {dados-calculo.b} pages in {dados-calculo.a} minutes. How many pages does it print in 1 minute?"
+  }
+}

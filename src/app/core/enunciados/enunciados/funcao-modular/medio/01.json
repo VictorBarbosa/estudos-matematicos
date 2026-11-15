@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A distância entre um número x e {dados-calculo.a} é menor que {dados-calculo.distancia}. Qual é o maior número inteiro que x pode ser?",
+    "fr": "La distance entre un nombre x et {dados-calculo.a} est inférieure à {dados-calculo.distancia}. Quel est le plus grand entier que x peut être ?",
+    "en": "The distance between a number x and {dados-calculo.a} is less than {dados-calculo.distancia}. What is the largest whole number x can be?"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "distancia": "3",
+    "total": "6"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "De que valor se aproxima a razão entre o quadrado de x e {dados-calculo.b} vezes o quadrado de x mais x, quando x cresce sem limite? Responda como fração.",
+    "fr": "De quelle valeur s’approche le rapport entre le carré de x et {dados-calculo.b} fois le carré de x plus x, quand x croît sans limite ? Répondez sous forme de fraction.",
+    "en": "What value does the ratio of x squared to {dados-calculo.b} times x squared plus x approach as x grows without bound? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "b": "4",
+    "total": "1/4"
+  }
+}

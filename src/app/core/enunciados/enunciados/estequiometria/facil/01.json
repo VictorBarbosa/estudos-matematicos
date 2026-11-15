@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "O calcário se decompõe como CaCO₃ → CaO + CO₂. Que massa de CO₂, em gramas, sai de {dados-calculo.massa} g de CaCO₃? (duas casas decimais)",
+    "fr": "Le calcaire se décompose comme CaCO₃ → CaO + CO₂. Quelle masse de CO₂, en grammes, provient de {dados-calculo.massa} g de CaCO₃ ? (deux décimales)",
+    "en": "Limestone decomposes as CaCO₃ → CaO + CO₂. What mass of CO₂, in grams, comes from {dados-calculo.massa} g of CaCO₃? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "200.18",
+    "total": "88.02"
+  }
+}

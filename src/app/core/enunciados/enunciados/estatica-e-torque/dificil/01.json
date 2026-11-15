@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma barra de {dados-calculo.comprimento} m, apoiada nas duas pontas, sustenta uma carga de {dados-calculo.carga} N exatamente no centro. Qual é a reação em cada apoio, em newtons? (duas casas decimais)",
+    "fr": "Une barre de {dados-calculo.comprimento} m, appuyée aux deux extrémités, soutient une charge de {dados-calculo.carga} N exactement au centre. Quelle est la réaction à chaque appui, en newtons ? (deux décimales)",
+    "en": "A {dados-calculo.comprimento} m bar, resting on both ends, carries a {dados-calculo.carga} N load exactly at the centre. What is the reaction at each support, in newtons? (two decimal places)"
+  },
+  "dados-calculo": {
+    "comprimento": "4",
+    "carga": "200",
+    "total": "100.00"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um táxi cobra {dados-calculo.fixo} reais fixos mais {dados-calculo.porKm} reais por quilômetro. Para que distância, em quilômetros, a corrida custa {dados-calculo.valor} reais?",
+    "fr": "Un taxi facture {dados-calculo.fixo} reais fixes plus {dados-calculo.porKm} reais par kilomètre. Pour quelle distance, en kilomètres, la course coûte-t-elle {dados-calculo.valor} reais ?",
+    "en": "A taxi charges {dados-calculo.fixo} reais fixed plus {dados-calculo.porKm} reais per kilometre. For what distance, in kilometres, does the ride cost {dados-calculo.valor} reais?"
+  },
+  "dados-calculo": {
+    "fixo": "5",
+    "porKm": "3",
+    "valor": "29",
+    "total": "8"
+  }
+}

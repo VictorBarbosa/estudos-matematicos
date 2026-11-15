@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um remédio tem concentração igual a {dados-calculo.a} vezes o tempo dividido pelo tempo mais {dados-calculo.b}. De que valor a concentração se aproxima depois de muito tempo?",
+    "fr": "Un médicament a une concentration égale à {dados-calculo.a} fois le temps divisé par le temps plus {dados-calculo.b}. De quelle valeur la concentration s’approche-t-elle après très longtemps ?",
+    "en": "A drug has a concentration of {dados-calculo.a} times the time divided by the time plus {dados-calculo.b}. What value does the concentration approach after a long time?"
+  },
+  "dados-calculo": {
+    "a": "12",
+    "b": "4",
+    "total": "12"
+  }
+}

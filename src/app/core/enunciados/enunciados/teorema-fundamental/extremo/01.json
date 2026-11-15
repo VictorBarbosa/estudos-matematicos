@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "A área acumulada sob uma curva, a partir de zero, vale {dados-calculo.area} em x = {dados-calculo.ponto}. Se a curva vale {dados-calculo.valor} nesse ponto, quanto vale a derivada da área acumulada ali?",
+    "fr": "L’aire accumulée sous une courbe, à partir de zéro, vaut {dados-calculo.area} en x = {dados-calculo.ponto}. Si la courbe vaut {dados-calculo.valor} en ce point, combien vaut la dérivée de l’aire accumulée ?",
+    "en": "The area accumulated under a curve from zero equals {dados-calculo.area} at x = {dados-calculo.ponto}. If the curve equals {dados-calculo.valor} there, what is the derivative of the accumulated area at that point?"
+  },
+  "dados-calculo": {
+    "area": "18",
+    "ponto": "3",
+    "valor": "12",
+    "total": "12"
+  }
+}

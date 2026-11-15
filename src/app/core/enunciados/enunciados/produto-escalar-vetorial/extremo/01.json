@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma força de {dados-calculo.forca} N é aplicada perpendicularmente a um deslocamento de {dados-calculo.deslocamento} m. Qual é o trabalho realizado, em joules? (duas casas decimais)",
+    "fr": "Une force de {dados-calculo.forca} N est appliquée perpendiculairement à un déplacement de {dados-calculo.deslocamento} m. Quel est le travail effectué, en joules ? (deux décimales)",
+    "en": "A force of {dados-calculo.forca} N is applied perpendicular to a displacement of {dados-calculo.deslocamento} m. What work is done, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "forca": "40",
+    "deslocamento": "5",
+    "total": "0.00"
+  }
+}

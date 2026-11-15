@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um campo conservativo tem potencial {dados-calculo.valor} num ponto. Qual é o trabalho ao longo de um caminho FECHADO que começa e termina nesse ponto?",
+    "fr": "Un champ conservatif a un potentiel de {dados-calculo.valor} en un point. Quel est le travail le long d’un chemin FERMÉ qui commence et finit en ce point ?",
+    "en": "A conservative field has potential {dados-calculo.valor} at a point. What is the work along a CLOSED path that starts and ends at that point?"
+  },
+  "dados-calculo": {
+    "valor": "15",
+    "total": "0"
+  }
+}

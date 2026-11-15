@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Numa escala logarítmica de base 10, quantas vezes maior é a grandeza de magnitude {dados-calculo.m2} em relação à de magnitude {dados-calculo.m1}?",
+    "fr": "Sur une échelle logarithmique de base 10, combien de fois plus grande est la grandeur de magnitude {dados-calculo.m2} par rapport à celle de magnitude {dados-calculo.m1} ?",
+    "en": "On a base-10 logarithmic scale, how many times larger is a quantity of magnitude {dados-calculo.m2} than one of magnitude {dados-calculo.m1}?"
+  },
+  "dados-calculo": {
+    "m2": "7",
+    "m1": "4",
+    "total": "1000"
+  }
+}

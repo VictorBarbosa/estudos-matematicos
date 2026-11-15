@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Em quantos anos um capital dobra a {dados-calculo.taxa}% ao ano, com juros compostos? (três casas decimais)",
+    "fr": "En combien d’années un capital double-t-il à {dados-calculo.taxa}% par an, en intérêts composés ? (trois décimales)",
+    "en": "In how many years does an amount double at {dados-calculo.taxa}% a year with compound interest? (three decimal places)"
+  },
+  "dados-calculo": {
+    "taxa": "10",
+    "total": "7.273"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma matriz 2 por 2 tem primeira linha {dados-calculo.a} e {dados-calculo.b}, e segunda linha {dados-calculo.c} e k. Para que valor de k o determinante é zero?",
+    "fr": "Une matrice 2 par 2 a pour première ligne {dados-calculo.a} et {dados-calculo.b}, et pour deuxième ligne {dados-calculo.c} et k. Pour quelle valeur de k le déterminant est-il nul ?",
+    "en": "A 2 by 2 matrix has first row {dados-calculo.a} and {dados-calculo.b}, and second row {dados-calculo.c} and k. For what k is the determinant zero?"
+  },
+  "dados-calculo": {
+    "a": "2",
+    "b": "3",
+    "c": "4",
+    "total": "6"
+  }
+}

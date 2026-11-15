@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o limite da razão entre o quadrado de x menos {dados-calculo.a} e x menos {dados-calculo.raiz}, quando x tende a {dados-calculo.raiz}?",
+    "fr": "Quelle est la limite du rapport entre le carré de x moins {dados-calculo.a} et x moins {dados-calculo.raiz}, quand x tend vers {dados-calculo.raiz} ?",
+    "en": "What is the limit of the ratio of x squared minus {dados-calculo.a} to x minus {dados-calculo.raiz}, as x tends to {dados-calculo.raiz}?"
+  },
+  "dados-calculo": {
+    "a": "9",
+    "raiz": "3",
+    "total": "6"
+  }
+}

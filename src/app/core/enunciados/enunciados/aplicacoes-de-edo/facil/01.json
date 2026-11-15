@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um corpo a {dados-calculo.corpo} °C é deixado num ambiente a {dados-calculo.ambiente} °C. De que temperatura, em °C, ele se aproxima depois de muito tempo?",
+    "fr": "Un corps à {dados-calculo.corpo} °C est laissé dans un milieu à {dados-calculo.ambiente} °C. De quelle température, en °C, s’approche-t-il après très longtemps ?",
+    "en": "A body at {dados-calculo.corpo} °C is left in surroundings at {dados-calculo.ambiente} °C. What temperature, in °C, does it approach after a long time?"
+  },
+  "dados-calculo": {
+    "corpo": "77",
+    "ambiente": "22",
+    "total": "22"
+  }
+}

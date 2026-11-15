@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A área sob a curva que vale 1 dividido por x elevado a {dados-calculo.expoente}, de x = 1 até o infinito, é finita. Quanto ela vale? Responda como fração.",
+    "fr": "L’aire sous la courbe qui vaut 1 divisé par x à la puissance {dados-calculo.expoente}, de x = 1 à l’infini, est finie. Combien vaut-elle ? Répondez sous forme de fraction.",
+    "en": "The area under the curve equal to 1 divided by x to the power of {dados-calculo.expoente}, from x = 1 to infinity, is finite. What is it? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "expoente": "3",
+    "total": "1/2"
+  }
+}

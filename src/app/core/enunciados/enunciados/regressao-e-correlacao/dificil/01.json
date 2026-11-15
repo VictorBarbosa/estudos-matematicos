@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois conjuntos de dados estão alinhados numa reta crescente perfeita. Qual é o coeficiente de correlação?",
+    "fr": "Deux ensembles de données sont alignés sur une droite croissante parfaite. Quel est le coefficient de corrélation ?",
+    "en": "Two data sets lie exactly on a perfectly increasing line. What is the correlation coefficient?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

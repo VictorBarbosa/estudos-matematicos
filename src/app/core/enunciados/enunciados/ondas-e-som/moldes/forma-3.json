@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma corda está esticada com tração de {dados-calculo.tracao} N e tem densidade linear de {dados-calculo.muTexto}. Com que velocidade uma onda corre por ela, em m/s?{dados-calculo.expressao1}"
+  }
+}

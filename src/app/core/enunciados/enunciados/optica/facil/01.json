@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um raio de luz passa do ar, de índice {dados-calculo.n1}, para um vidro de índice {dados-calculo.n2}, fazendo {dados-calculo.angulo}° com a normal. Que ângulo, em graus, ele faz com a normal dentro do vidro? (duas casas decimais)",
+    "fr": "Un rayon de lumière passe de l’air, d’indice {dados-calculo.n1}, à un verre d’indice {dados-calculo.n2}, en faisant {dados-calculo.angulo}° avec la normale. Quel angle, en degrés, fait-il avec la normale dans le verre ? (deux décimales)",
+    "en": "A light ray goes from air, index {dados-calculo.n1}, into glass of index {dados-calculo.n2}, making {dados-calculo.angulo}° with the normal. What angle, in degrees, does it make with the normal inside the glass? (two decimal places)"
+  },
+  "dados-calculo": {
+    "n1": "1",
+    "n2": "1.5",
+    "angulo": "45",
+    "total": "28.13"
+  }
+}

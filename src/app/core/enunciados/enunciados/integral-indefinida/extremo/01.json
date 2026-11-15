@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma função tem derivada igual a {dados-calculo.a} e vale {dados-calculo.valor} em x = {dados-calculo.ponto}. Quanto ela vale em x = 0?",
+    "fr": "Une fonction a une dérivée égale à {dados-calculo.a} et vaut {dados-calculo.valor} en x = {dados-calculo.ponto}. Combien vaut-elle en x = 0 ?",
+    "en": "A function has derivative {dados-calculo.a} and equals {dados-calculo.valor} at x = {dados-calculo.ponto}. What is its value at x = 0?"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "valor": "22",
+    "ponto": "4",
+    "total": "2"
+  }
+}

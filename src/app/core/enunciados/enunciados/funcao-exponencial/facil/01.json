@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma colônia começa com {dados-calculo.inicial} bactérias e dobra a cada hora. Quantas bactérias há depois de {dados-calculo.horas} horas?",
+    "fr": "Une colonie commence avec {dados-calculo.inicial} bactéries et double chaque heure. Combien de bactéries y a-t-il après {dados-calculo.horas} heures ?",
+    "en": "A colony starts with {dados-calculo.inicial} bacteria and doubles every hour. How many bacteria are there after {dados-calculo.horas} hours?"
+  },
+  "dados-calculo": {
+    "inicial": "200",
+    "horas": "3",
+    "total": "1600"
+  }
+}

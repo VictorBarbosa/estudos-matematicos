@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma pedra é atirada para cima a {dados-calculo.velocidade} m/s, de uma altura de {dados-calculo.altura} m. Com a gravidade valendo {dados-calculo.gravidade} m/s², em quantos segundos ela chega ao chão?",
+    "fr": "Une pierre est lancée vers le haut à {dados-calculo.velocidade} m/s, depuis une hauteur de {dados-calculo.altura} m. Avec une gravité de {dados-calculo.gravidade} m/s², en combien de secondes atteint-elle le sol ?",
+    "en": "A stone is thrown upwards at {dados-calculo.velocidade} m/s from a height of {dados-calculo.altura} m. With gravity at {dados-calculo.gravidade} m/s², in how many seconds does it reach the ground?"
+  },
+  "dados-calculo": {
+    "velocidade": "20",
+    "altura": "25",
+    "gravidade": "10",
+    "total": "5"
+  }
+}

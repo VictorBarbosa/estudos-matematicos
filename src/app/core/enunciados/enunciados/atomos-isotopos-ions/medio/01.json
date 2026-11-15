@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um íon de ferro tem {dados-calculo.protons} prótons e carga {dados-calculo.carga}+. Quantos elétrons ele tem?",
+    "fr": "Un ion de fer a {dados-calculo.protons} protons et une charge {dados-calculo.carga}+. Combien d’électrons a-t-il ?",
+    "en": "An iron ion has {dados-calculo.protons} protons and charge {dados-calculo.carga}+. How many electrons does it have?"
+  },
+  "dados-calculo": {
+    "protons": "26",
+    "carga": "3",
+    "total": "23"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Qual é a área de um setor circular de raio {dados-calculo.raio} cm e ângulo {dados-calculo.anguloGraus}°? (em cm², 2 casas decimais)"
+  }
+}

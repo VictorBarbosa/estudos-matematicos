@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Pelo método da bisseção, qual é o ponto médio do intervalo entre {dados-calculo.a} e {dados-calculo.b}?",
+    "fr": "Par la méthode de dichotomie, quel est le milieu de l’intervalle entre {dados-calculo.a} et {dados-calculo.b} ?",
+    "en": "By the bisection method, what is the midpoint of the interval between {dados-calculo.a} and {dados-calculo.b}?"
+  },
+  "dados-calculo": {
+    "a": "2",
+    "b": "6",
+    "total": "4"
+  }
+}

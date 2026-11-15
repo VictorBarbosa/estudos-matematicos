@@ -1,0 +1,16 @@
+{
+  "enunciado": {
+    "br": "Calcule o produto escalar entre o deslocamento ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) e a força ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}).",
+    "fr": "Calculez le produit scalaire entre le déplacement ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) et la force ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz}).",
+    "en": "Work out the dot product of the displacement ({dados-calculo.ax}, {dados-calculo.ay}, {dados-calculo.az}) and the force ({dados-calculo.bx}, {dados-calculo.by}, {dados-calculo.bz})."
+  },
+  "dados-calculo": {
+    "ax": "3",
+    "ay": "4",
+    "az": "0",
+    "bx": "2",
+    "by": "5",
+    "bz": "7",
+    "total": "26"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma bola tem raio de {dados-calculo.raio} cm. Quantos centímetros cúbicos de volume ela tem? (duas casas decimais)",
+    "fr": "Un ballon a un rayon de {dados-calculo.raio} cm. Combien de centimètres cubes de volume a-t-il ? (deux décimales)",
+    "en": "A ball has a radius of {dados-calculo.raio} cm. How many cubic centimetres is its volume? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "6",
+    "total": "904.78"
+  }
+}

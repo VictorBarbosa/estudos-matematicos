@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um corpo cai de {dados-calculo.altura} m, partindo do repouso, com a gravidade valendo {dados-calculo.gravidade} m/s² e sem atrito. Com que velocidade, em m/s, ele chega ao chão? (duas casas decimais)",
+    "fr": "Un corps tombe de {dados-calculo.altura} m, au repos au départ, la gravité valant {dados-calculo.gravidade} m/s² et sans frottement. À quelle vitesse, en m/s, atteint-il le sol ? (deux décimales)",
+    "en": "A body falls from {dados-calculo.altura} m from rest, with gravity at {dados-calculo.gravidade} m/s² and no friction. At what speed, in m/s, does it hit the ground? (two decimal places)"
+  },
+  "dados-calculo": {
+    "altura": "20",
+    "gravidade": "9.81",
+    "total": "19.81"
+  }
+}

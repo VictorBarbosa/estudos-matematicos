@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um resistor de {dados-calculo.resistencia} Ω é ligado a {dados-calculo.tensao} V. Quanta potência ele dissipa, em watts? (duas casas decimais)",
+    "fr": "Une résistance de {dados-calculo.resistencia} Ω est branchée à {dados-calculo.tensao} V. Quelle puissance dissipe-t-elle, en watts ? (deux décimales)",
+    "en": "A {dados-calculo.resistencia} Ω resistor is connected to {dados-calculo.tensao} V. How much power does it dissipate, in watts? (two decimal places)"
+  },
+  "dados-calculo": {
+    "resistencia": "12",
+    "tensao": "24",
+    "total": "48.00"
+  }
+}

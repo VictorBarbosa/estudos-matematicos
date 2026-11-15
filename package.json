@@ -4,6 +4,7 @@
   "scripts": {
     "build": "ng build",
     "build:pages": "ng build --base-href /estudos-matematicos/ && node scripts/preparar-pages.mjs",
+    "enunciados:catalogo": "node scripts/gerar-catalogo-enunciados.mjs",
     "gerar:chaves": "node scripts/gerar-chaves-usadas.mjs",
     "gerar:geradores": "node scripts/gerar-registro-geradores.mjs",
     "gerar:icones": "node scripts/gerar-icones.mjs",

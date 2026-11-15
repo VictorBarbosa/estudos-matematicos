@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um foguete com velocidade de exaustão de {dados-calculo.exaustao} m/s tem razão entre a massa inicial e a final igual a {dados-calculo.razao}. Qual é o incremento de velocidade, em m/s? (duas casas decimais)",
+    "fr": "Une fusée avec une vitesse d’éjection de {dados-calculo.exaustao} m/s a un rapport entre masse initiale et finale égal à {dados-calculo.razao}. Quel est l’incrément de vitesse, en m/s ? (deux décimales)",
+    "en": "A rocket with exhaust velocity {dados-calculo.exaustao} m/s has an initial-to-final mass ratio of {dados-calculo.razao}. What is the velocity increment, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "exaustao": "3000",
+    "razao": "3",
+    "total": "3295.84"
+  }
+}

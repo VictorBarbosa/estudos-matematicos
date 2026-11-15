@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma receita para {dados-calculo.a} pessoas pede {dados-calculo.b} g de açúcar. Quantos gramas são necessários para {dados-calculo.c} pessoas?",
+    "fr": "Une recette pour {dados-calculo.a} personnes demande {dados-calculo.b} g de sucre. Combien de grammes faut-il pour {dados-calculo.c} personnes ?",
+    "en": "A recipe for {dados-calculo.a} people calls for {dados-calculo.b} g of sugar. How many grams are needed for {dados-calculo.c} people?"
+  }
+}

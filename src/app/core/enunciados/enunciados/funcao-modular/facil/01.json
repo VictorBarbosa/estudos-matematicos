@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A distância, na reta, entre um número x e {dados-calculo.a} é {dados-calculo.distancia}. Qual é o maior valor possível de x?",
+    "fr": "La distance, sur la droite, entre un nombre x et {dados-calculo.a} est {dados-calculo.distancia}. Quelle est la plus grande valeur possible de x ?",
+    "en": "The distance on the number line between a number x and {dados-calculo.a} is {dados-calculo.distancia}. What is the largest possible value of x?"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "distancia": "5",
+    "total": "8"
+  }
+}

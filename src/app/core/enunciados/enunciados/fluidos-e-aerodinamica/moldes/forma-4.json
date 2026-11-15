@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma asa de {dados-calculo.area} m² tem ar a {dados-calculo.superior} m/s na face superior e {dados-calculo.inferior} m/s na inferior. Qual é a sustentação, em newtons? (2 casas decimais)"
+  }
+}

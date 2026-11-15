@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo, o seno de um ângulo agudo vale {dados-calculo.seno}. Quanto vale o cosseno desse mesmo ângulo? (duas casas decimais)",
+    "fr": "Dans un triangle rectangle, le sinus d’un angle aigu vaut {dados-calculo.seno}. Combien vaut le cosinus de ce même angle ? (deux décimales)",
+    "en": "In a right triangle, the sine of an acute angle is {dados-calculo.seno}. What is the cosine of that same angle? (two decimal places)"
+  },
+  "dados-calculo": {
+    "seno": "0.6",
+    "total": "0.80"
+  }
+}

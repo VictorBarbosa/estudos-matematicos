@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma oficina monta {dados-calculo.x1} bicicletas por dia, durante {dados-calculo.x2} dias. Quantas bicicletas saem no período?",
+    "fr": "Un atelier assemble {dados-calculo.x1} vélos par jour, pendant {dados-calculo.x2} jours. Combien de vélos sortent sur la période ?",
+    "en": "A workshop assembles {dados-calculo.x1} bicycles a day for {dados-calculo.x2} days. How many bicycles come out over that period?"
+  },
+  "dados-calculo": {
+    "x1": "23",
+    "acao": "*",
+    "x2": "14",
+    "total": "322"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma função vale {dados-calculo.esquerda} para x menor que {dados-calculo.ponto} e {dados-calculo.direita} para x maior ou igual a {dados-calculo.ponto}. Qual é o limite pela ESQUERDA em x = {dados-calculo.ponto}?",
+    "fr": "Une fonction vaut {dados-calculo.esquerda} pour x inférieur à {dados-calculo.ponto} et {dados-calculo.direita} pour x supérieur ou égal à {dados-calculo.ponto}. Quelle est la limite à GAUCHE en x = {dados-calculo.ponto} ?",
+    "en": "A function equals {dados-calculo.esquerda} for x less than {dados-calculo.ponto} and {dados-calculo.direita} for x greater than or equal to {dados-calculo.ponto}. What is the limit from the LEFT at x = {dados-calculo.ponto}?"
+  },
+  "dados-calculo": {
+    "esquerda": "5",
+    "ponto": "1",
+    "direita": "3",
+    "total": "5"
+  }
+}

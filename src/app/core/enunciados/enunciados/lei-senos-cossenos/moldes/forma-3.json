@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um triângulo tem lados {dados-calculo.b}, {dados-calculo.c} e {dados-calculo.a}. Quanto mede o MAIOR ângulo, em graus? (2 casas)"
+  }
+}

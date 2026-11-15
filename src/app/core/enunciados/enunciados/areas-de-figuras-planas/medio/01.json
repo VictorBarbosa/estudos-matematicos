@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um salão retangular de {dados-calculo.base} m por {dados-calculo.altura} m será forrado com placas quadradas de {dados-calculo.lado} m de lado. Quantas placas são necessárias?",
+    "fr": "Une salle rectangulaire de {dados-calculo.base} m sur {dados-calculo.altura} m sera recouverte de dalles carrées de {dados-calculo.lado} m de côté. Combien de dalles faut-il ?",
+    "en": "A rectangular hall of {dados-calculo.base} m by {dados-calculo.altura} m will be covered with square tiles {dados-calculo.lado} m on a side. How many tiles are needed?"
+  },
+  "dados-calculo": {
+    "base": "12",
+    "altura": "9",
+    "lado": "3",
+    "total": "12"
+  }
+}

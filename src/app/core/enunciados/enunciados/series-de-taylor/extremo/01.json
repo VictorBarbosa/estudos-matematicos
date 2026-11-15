@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "O polinômio de Maclaurin de grau 2 da função exponencial é 1 mais x mais metade do quadrado de x. Quanto vale essa aproximação em x = {dados-calculo.ponto}? Responda como fração.",
+    "fr": "Le polynôme de Maclaurin de degré 2 de la fonction exponentielle est 1 plus x plus la moitié du carré de x. Combien vaut cette approximation en x = {dados-calculo.ponto} ? Répondez sous forme de fraction.",
+    "en": "The degree 2 Maclaurin polynomial of the exponential function is 1 plus x plus half of x squared. What is that approximation at x = {dados-calculo.ponto}? Answer as a fraction."
+  },
+  "dados-calculo": {
+    "ponto": "1",
+    "total": "5/2"
+  }
+}

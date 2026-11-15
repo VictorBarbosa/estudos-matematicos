@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma escada de {dados-calculo.escada} m está apoiada numa parede, com o pé a {dados-calculo.pe} m da parede. A quantos metros de altura a escada toca a parede?",
+    "fr": "Une échelle de {dados-calculo.escada} m est appuyée contre un mur, le pied à {dados-calculo.pe} m du mur. À quelle hauteur, en mètres, l’échelle touche-t-elle le mur ?",
+    "en": "A {dados-calculo.escada} m ladder leans against a wall with its foot {dados-calculo.pe} m from the wall. How many metres up the wall does the ladder touch?"
+  },
+  "dados-calculo": {
+    "escada": "13",
+    "pe": "5",
+    "total": "12"
+  }
+}

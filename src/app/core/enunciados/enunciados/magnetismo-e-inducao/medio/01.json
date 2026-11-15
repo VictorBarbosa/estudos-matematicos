@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma barra de {dados-calculo.comprimento} m desliza a {dados-calculo.velocidade} m/s, perpendicular a um campo de {dados-calculo.campo} T. Qual é a força eletromotriz induzida, em volts?",
+    "fr": "Une barre de {dados-calculo.comprimento} m glisse à {dados-calculo.velocidade} m/s, perpendiculaire à un champ de {dados-calculo.campo} T. Quelle est la force électromotrice induite, en volts ?",
+    "en": "A bar {dados-calculo.comprimento} m long slides at {dados-calculo.velocidade} m/s, perpendicular to a {dados-calculo.campo} T field. What is the induced electromotive force, in volts?"
+  },
+  "dados-calculo": {
+    "comprimento": "0.5",
+    "velocidade": "10",
+    "campo": "0.2",
+    "total": "1"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Numa distribuição normal de média {dados-calculo.media} e desvio padrão {dados-calculo.desvio}, entre que valor e {dados-calculo.superior} ficam aproximadamente 68% dos casos? Informe o valor INFERIOR.",
+    "fr": "Dans une distribution normale de moyenne {dados-calculo.media} et d’écart-type {dados-calculo.desvio}, entre quelle valeur et {dados-calculo.superior} se trouvent environ 68% des cas ? Donnez la valeur INFÉRIEURE.",
+    "en": "In a normal distribution with mean {dados-calculo.media} and standard deviation {dados-calculo.desvio}, between what value and {dados-calculo.superior} do about 68% of cases fall? Give the LOWER value."
+  },
+  "dados-calculo": {
+    "media": "100",
+    "desvio": "15",
+    "superior": "115",
+    "total": "85"
+  }
+}

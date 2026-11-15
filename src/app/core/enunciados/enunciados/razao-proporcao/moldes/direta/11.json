@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Caminhando sempre no mesmo ritmo, {dados-calculo.a} horas cobrem {dados-calculo.b} km. Quantos quilômetros são cobertos em {dados-calculo.c} horas?",
+    "fr": "En marchant toujours au même rythme, {dados-calculo.a} heures couvrent {dados-calculo.b} km. Combien de kilomètres sont couverts en {dados-calculo.c} heures ?",
+    "en": "Walking at a steady pace, {dados-calculo.a} hours cover {dados-calculo.b} km. How many kilometres are covered in {dados-calculo.c} hours?"
+  }
+}

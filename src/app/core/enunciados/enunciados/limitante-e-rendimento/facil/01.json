@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma reação poderia dar {dados-calculo.teorica} g de produto, e na bancada saíram {dados-calculo.obtida} g. Qual é o rendimento percentual? (duas casas decimais)",
+    "fr": "Une réaction pourrait donner {dados-calculo.teorica} g de produit, et au laboratoire on a obtenu {dados-calculo.obtida} g. Quel est le rendement en pourcentage ? (deux décimales)",
+    "en": "A reaction could give {dados-calculo.teorica} g of product, and {dados-calculo.obtida} g came out at the bench. What is the percent yield? (two decimal places)"
+  },
+  "dados-calculo": {
+    "teorica": "200",
+    "obtida": "150",
+    "total": "75.00"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma figura é formada por um retângulo de {dados-calculo.base} cm por {dados-calculo.alturaRetangulo} cm com um triângulo de mesma base e altura {dados-calculo.alturaTriangulo} cm apoiado em cima. Qual é a área total, em cm²?"
+  }
+}

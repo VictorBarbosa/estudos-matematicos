@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma empresa gasta {dados-calculo.fixo} reais por mês mais {dados-calculo.porHora} reais por hora de máquina, e cobra {dados-calculo.cobra} reais por hora trabalhada. Com quantas horas no mês o faturamento se iguala ao gasto?",
+    "fr": "Une entreprise dépense {dados-calculo.fixo} reais par mois plus {dados-calculo.porHora} reais par heure de machine, et facture {dados-calculo.cobra} reais par heure travaillée. Avec combien d’heures dans le mois le chiffre d’affaires égale-t-il la dépense ?",
+    "en": "A company spends {dados-calculo.fixo} reais per month plus {dados-calculo.porHora} reais per machine hour, and charges {dados-calculo.cobra} reais per hour worked. At how many hours in the month does revenue equal cost?"
+  },
+  "dados-calculo": {
+    "fixo": "2400",
+    "porHora": "35",
+    "cobra": "95",
+    "total": "40"
+  }
+}

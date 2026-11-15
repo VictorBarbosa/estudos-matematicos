@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Derive a função que vale {dados-calculo.a} vezes o quadrado de x mais {dados-calculo.b} vezes x, e informe o coeficiente de x na derivada.",
+    "fr": "Dérivez la fonction qui vaut {dados-calculo.a} fois le carré de x plus {dados-calculo.b} fois x, et donnez le coefficient de x dans la dérivée.",
+    "en": "Differentiate the function that is {dados-calculo.a} times x squared plus {dados-calculo.b} times x, and give the coefficient of x in the derivative."
+  },
+  "dados-calculo": {
+    "a": "3",
+    "b": "5",
+    "total": "6"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Três amigos dividiram um prêmio: o primeiro ficou com {dados-calculo.p1} do total, o segundo com {dados-calculo.p2} e o terceiro com o resto. Que fração do prêmio o terceiro recebeu?",
+    "fr": "Trois amis se sont partagé un prix : le premier a reçu {dados-calculo.p1} du total, le deuxième {dados-calculo.p2} et le troisième le reste. Quelle fraction du prix le troisième a-t-il reçue ?",
+    "en": "Three friends shared a prize: the first took {dados-calculo.p1} of the total, the second {dados-calculo.p2} and the third the rest. What fraction of the prize did the third one get?"
+  },
+  "dados-calculo": {
+    "p1": "2/7",
+    "p2": "1/3",
+    "total": "8/21"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um tubo de {dados-calculo.expressao1} m {dados-calculo.expressao2} ressoa com o som a {dados-calculo.SOM_NO_AR} m/s. Qual é a frequência do {dados-calculo.ordem}º harmônico, em Hz?{dados-calculo.expressao3}"
+  }
+}

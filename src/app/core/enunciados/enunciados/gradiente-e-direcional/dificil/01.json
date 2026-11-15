@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o quadrado de x mais o quadrado de y. Qual é o módulo do gradiente no ponto ({dados-calculo.px}, {dados-calculo.py})?",
+    "fr": "Une fonction vaut le carré de x plus le carré de y. Quel est le module du gradient au point ({dados-calculo.px}, {dados-calculo.py}) ?",
+    "en": "A function equals x squared plus y squared. What is the magnitude of the gradient at the point ({dados-calculo.px}, {dados-calculo.py})?"
+  },
+  "dados-calculo": {
+    "px": "3",
+    "py": "4",
+    "total": "10"
+  }
+}

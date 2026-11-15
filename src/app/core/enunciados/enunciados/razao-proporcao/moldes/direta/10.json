@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma estante com {dados-calculo.a} prateleiras guarda {dados-calculo.b} livros. Quantos livros cabem em {dados-calculo.c} prateleiras iguais?",
+    "fr": "Une étagère de {dados-calculo.a} tablettes contient {dados-calculo.b} livres. Combien de livres tiennent sur {dados-calculo.c} tablettes identiques ?",
+    "en": "A shelf with {dados-calculo.a} boards holds {dados-calculo.b} books. How many books fit on {dados-calculo.c} identical boards?"
+  }
+}

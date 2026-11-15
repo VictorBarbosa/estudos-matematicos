@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um carro passa a {dados-calculo.velocidade} m/s e acelera a {dados-calculo.aceleracao} m/s² durante {dados-calculo.tempo} s. Quantos metros ele percorre nesse tempo? (duas casas decimais)",
+    "fr": "Une voiture passe à {dados-calculo.velocidade} m/s et accélère à {dados-calculo.aceleracao} m/s² pendant {dados-calculo.tempo} s. Combien de mètres parcourt-elle ? (deux décimales)",
+    "en": "A car passes at {dados-calculo.velocidade} m/s and accelerates at {dados-calculo.aceleracao} m/s² for {dados-calculo.tempo} s. How many metres does it cover? (two decimal places)"
+  },
+  "dados-calculo": {
+    "velocidade": "8",
+    "aceleracao": "4",
+    "tempo": "4",
+    "total": "64.00"
+  }
+}

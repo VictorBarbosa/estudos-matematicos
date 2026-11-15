@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um ônibus saiu da garagem com {dados-calculo.x1} passageiros e {dados-calculo.x2} desceram na primeira parada. Quantos seguiram viagem?",
+    "fr": "Un autobus est parti du garage avec {dados-calculo.x1} passagers et {dados-calculo.x2} sont descendus au premier arrêt. Combien ont poursuivi le trajet ?",
+    "en": "A bus left the depot with {dados-calculo.x1} passengers and {dados-calculo.x2} got off at the first stop. How many stayed on?"
+  },
+  "dados-calculo": {
+    "x1": "52",
+    "acao": "-",
+    "x2": "19",
+    "total": "33"
+  }
+}

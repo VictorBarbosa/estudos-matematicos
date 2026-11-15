@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Dois números têm soma {dados-calculo.soma} e produto {dados-calculo.produto}. Qual é o maior dos dois?",
+    "fr": "Deux nombres ont pour somme {dados-calculo.soma} et pour produit {dados-calculo.produto}. Quel est le plus grand des deux ?",
+    "en": "Two numbers have sum {dados-calculo.soma} and product {dados-calculo.produto}. Which is the larger of the two?"
+  },
+  "dados-calculo": {
+    "soma": "11",
+    "produto": "24",
+    "total": "8"
+  }
+}

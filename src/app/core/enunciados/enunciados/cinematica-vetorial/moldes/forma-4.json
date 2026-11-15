@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um barco de {dados-calculo.barco} m/s quer atravessar um rio de correnteza {dados-calculo.rio} m/s chegando exatamente em frente ao ponto de partida. Quantos graus, em relação à perpendicular, ele deve apontar rio acima? Responda com 2 casas decimais."
+  }
+}

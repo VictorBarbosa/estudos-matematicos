@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um tanque com {dados-calculo.volume} L de água recebe {dados-calculo.vazao} L/min de solução a {dados-calculo.expressao1} kg/L e escoa na mesma vazão, bem misturado. Com {dados-calculo.inicial} kg de sal no início, quanto sal há em {dados-calculo.t} min, em kg? Responda com 4 casas decimais."
+  }
+}

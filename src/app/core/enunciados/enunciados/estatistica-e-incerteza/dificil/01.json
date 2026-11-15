@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Para as medidas {dados-calculo.m1}, {dados-calculo.m2} e {dados-calculo.m3}, qual é a mediana? (duas casas decimais)",
+    "fr": "Pour les mesures {dados-calculo.m1}, {dados-calculo.m2} et {dados-calculo.m3}, quelle est la médiane ? (deux décimales)",
+    "en": "For the measurements {dados-calculo.m1}, {dados-calculo.m2} and {dados-calculo.m3}, what is the median? (two decimal places)"
+  },
+  "dados-calculo": {
+    "m1": "7",
+    "m2": "3",
+    "m3": "5",
+    "total": "5.00"
+  }
+}

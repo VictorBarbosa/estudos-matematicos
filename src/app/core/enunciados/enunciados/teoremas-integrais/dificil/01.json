@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o fluxo de um campo constante de módulo {dados-calculo.campo} através de uma superfície plana de área {dados-calculo.area}, quando o campo é PARALELO à superfície?",
+    "fr": "Quel est le flux d’un champ constant de module {dados-calculo.campo} à travers une surface plane d’aire {dados-calculo.area}, quand le champ est PARALLÈLE à la surface ?",
+    "en": "What is the flux of a constant field of magnitude {dados-calculo.campo} through a flat surface of area {dados-calculo.area}, when the field is PARALLEL to the surface?"
+  },
+  "dados-calculo": {
+    "campo": "5",
+    "area": "8",
+    "total": "0"
+  }
+}

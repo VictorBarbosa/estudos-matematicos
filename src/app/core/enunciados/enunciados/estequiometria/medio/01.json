@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Na combustão completa do metano, CH₄ + 2 O₂ → CO₂ + 2 H₂O, que massa de CO₂, em gramas, vem de {dados-calculo.massa} g de metano? (duas casas decimais)",
+    "fr": "Dans la combustion complète du méthane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, quelle masse de CO₂, en grammes, provient de {dados-calculo.massa} g de méthane ? (deux décimales)",
+    "en": "In the complete combustion of methane, CH₄ + 2 O₂ → CO₂ + 2 H₂O, what mass of CO₂, in grams, comes from {dados-calculo.massa} g of methane? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "32.1",
+    "total": "88.02"
+  }
+}

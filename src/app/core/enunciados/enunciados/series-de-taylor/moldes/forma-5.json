@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Aproxime a raiz quadrada de {dados-calculo.expressao1} pelo polinômio de Taylor de grau {dados-calculo.grau} centrado em {dados-calculo.a}. Responda com 5 casas decimais."
+  }
+}

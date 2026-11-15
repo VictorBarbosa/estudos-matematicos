@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um fio de {dados-calculo.v1} m, com corrente de {dados-calculo.i} A, está perpendicular a um campo magnético de {dados-calculo.v2} T. Qual é a força sobre ele, em N? (2 casas decimais)"
+  }
+}

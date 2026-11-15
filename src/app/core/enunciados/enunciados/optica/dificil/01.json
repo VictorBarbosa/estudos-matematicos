@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um objeto está a {dados-calculo.objeto} cm de uma lente e a imagem se forma a {dados-calculo.imagem} cm dela. Qual é o aumento, em módulo?",
+    "fr": "Un objet est à {dados-calculo.objeto} cm d’une lentille et l’image se forme à {dados-calculo.imagem} cm de celle-ci. Quel est le grandissement, en valeur absolue ?",
+    "en": "An object sits {dados-calculo.objeto} cm from a lens and the image forms {dados-calculo.imagem} cm from it. What is the magnification, in absolute value?"
+  },
+  "dados-calculo": {
+    "objeto": "15",
+    "imagem": "30",
+    "total": "2"
+  }
+}

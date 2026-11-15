@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um projétil parte a {dados-calculo.v0} m/s formando {dados-calculo.angulo} graus com a horizontal, com g igual a 9,81 m/s². Qual é o alcance, em m? Responda com 3 casas decimais."
+  }
+}

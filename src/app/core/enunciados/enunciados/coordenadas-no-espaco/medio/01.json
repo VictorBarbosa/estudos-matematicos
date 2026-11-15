@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um ponto tem coordenadas cilíndricas r igual a {dados-calculo.r} e ângulo {dados-calculo.angulo}°. Qual é a sua coordenada x cartesiana?",
+    "fr": "Un point a pour coordonnées cylindriques r égal à {dados-calculo.r} et un angle de {dados-calculo.angulo}°. Quelle est sa coordonnée x cartésienne ?",
+    "en": "A point has cylindrical coordinates r equal to {dados-calculo.r} and angle {dados-calculo.angulo}°. What is its Cartesian x coordinate?"
+  },
+  "dados-calculo": {
+    "r": "6",
+    "angulo": "180",
+    "total": "-6"
+  }
+}

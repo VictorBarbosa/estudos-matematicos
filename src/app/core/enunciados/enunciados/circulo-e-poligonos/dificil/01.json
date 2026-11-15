@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma fatia de pizza é um setor circular de raio {dados-calculo.raio} cm e ângulo {dados-calculo.angulo}°. Quantos centímetros quadrados tem essa fatia? (duas casas decimais)",
+    "fr": "Une part de pizza est un secteur circulaire de rayon {dados-calculo.raio} cm et d’angle {dados-calculo.angulo}°. Combien de centimètres carrés fait cette part ? (deux décimales)",
+    "en": "A pizza slice is a circular sector of radius {dados-calculo.raio} cm and angle {dados-calculo.angulo}°. How many square centimetres is that slice? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "12",
+    "angulo": "60",
+    "total": "75.40"
+  }
+}

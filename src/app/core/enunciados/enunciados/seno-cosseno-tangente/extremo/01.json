@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "O cosseno de um ângulo do primeiro quadrante vale {dados-calculo.cosseno}. Quanto vale a tangente desse ângulo? (duas casas decimais)",
+    "fr": "Le cosinus d’un angle du premier quadrant vaut {dados-calculo.cosseno}. Combien vaut la tangente de cet angle ? (deux décimales)",
+    "en": "The cosine of a first-quadrant angle is {dados-calculo.cosseno}. What is the tangent of that angle? (two decimal places)"
+  },
+  "dados-calculo": {
+    "cosseno": "0.28",
+    "total": "3.43"
+  }
+}

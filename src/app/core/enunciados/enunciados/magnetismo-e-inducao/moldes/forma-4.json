@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.v1} (massa {dados-calculo.v2}, carga 1,6×10⁻¹⁹ C) entra a {dados-calculo.vTexto} m/s, perpendicular, num campo de {dados-calculo.v3} T. Qual é o raio da órbita, em {dados-calculo.unidade}? (2 casas decimais)"
+  }
+}

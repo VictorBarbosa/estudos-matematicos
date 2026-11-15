@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um gás é formado só por carbono e oxigênio, com {dados-calculo.pC}% de carbono e {dados-calculo.pO}% de oxigênio em massa. Qual é a sua fórmula empírica?",
+    "fr": "Un gaz est formé uniquement de carbone et d’oxygène, avec {dados-calculo.pC}% de carbone et {dados-calculo.pO}% d’oxygène en masse. Quelle est sa formule empirique ?",
+    "en": "A gas is made only of carbon and oxygen, with {dados-calculo.pC}% carbon and {dados-calculo.pO}% oxygen by mass. What is its empirical formula?"
+  },
+  "dados-calculo": {
+    "pC": "27.29",
+    "pO": "72.71",
+    "total": "CO2"
+  }
+}

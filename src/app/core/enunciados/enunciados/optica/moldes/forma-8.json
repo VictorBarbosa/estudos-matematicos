@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Duas lentes convergentes estão a {dados-calculo.separacao} cm uma da outra; a primeira tem foco {dados-calculo.f1} cm e a segunda, {dados-calculo.f2} cm. Um objeto está a {dados-calculo.p1} cm antes da primeira. A que distância DEPOIS da segunda lente se forma a imagem final, em cm?{dados-calculo.v1}"
+  }
+}

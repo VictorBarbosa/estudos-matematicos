@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.expressao1} tem {dados-calculo.expressao2} com média {dados-calculo.media} {dados-calculo.expressao3} e desvio padrão {dados-calculo.desvio} {dados-calculo.expressao3}. Qual é o escore z de uma leitura de {dados-calculo.valor} {dados-calculo.expressao3}? Responda com 4 casas decimais."
+  }
+}

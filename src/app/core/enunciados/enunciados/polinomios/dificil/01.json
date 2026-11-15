@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um polinômio de grau 3 tem como raízes {dados-calculo.r1}, {dados-calculo.r2} e {dados-calculo.r3}. Qual é a soma das raízes?",
+    "fr": "Un polynôme de degré 3 a pour racines {dados-calculo.r1}, {dados-calculo.r2} et {dados-calculo.r3}. Quelle est la somme des racines ?",
+    "en": "A degree 3 polynomial has roots {dados-calculo.r1}, {dados-calculo.r2} and {dados-calculo.r3}. What is the sum of the roots?"
+  },
+  "dados-calculo": {
+    "r1": "2",
+    "r2": "-3",
+    "r3": "5",
+    "total": "4"
+  }
+}

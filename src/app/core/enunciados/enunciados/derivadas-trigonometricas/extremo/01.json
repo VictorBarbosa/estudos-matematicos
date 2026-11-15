@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma função vale o seno de x. Quanto vale a sua derivada SEGUNDA no ponto em que o seno de x é {dados-calculo.seno}?",
+    "fr": "Une fonction vaut le sinus de x. Combien vaut sa dérivée SECONDE au point où le sinus de x est {dados-calculo.seno} ?",
+    "en": "A function is the sine of x. What is its SECOND derivative at the point where the sine of x is {dados-calculo.seno}?"
+  },
+  "dados-calculo": {
+    "seno": "0.6",
+    "total": "-0.6"
+  }
+}

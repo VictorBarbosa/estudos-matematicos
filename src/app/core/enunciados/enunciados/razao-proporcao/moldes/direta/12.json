@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um xarope dá {dados-calculo.b} gotas para {dados-calculo.a} kg de peso. Quantas gotas para {dados-calculo.c} kg?",
+    "fr": "Un sirop donne {dados-calculo.b} gouttes pour {dados-calculo.a} kg de poids. Combien de gouttes pour {dados-calculo.c} kg ?",
+    "en": "A syrup gives {dados-calculo.b} drops per {dados-calculo.a} kg of body weight. How many drops for {dados-calculo.c} kg?"
+  }
+}

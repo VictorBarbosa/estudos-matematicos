@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma pedra é atirada verticalmente para cima a {dados-calculo.velocidade} m/s, com a gravidade valendo {dados-calculo.gravidade} m/s². Quantos segundos ela leva para atingir o ponto mais alto? (duas casas decimais)",
+    "fr": "Une pierre est lancée verticalement vers le haut à {dados-calculo.velocidade} m/s, la gravité valant {dados-calculo.gravidade} m/s². Combien de secondes met-elle pour atteindre le point le plus haut ? (deux décimales)",
+    "en": "A stone is thrown straight up at {dados-calculo.velocidade} m/s, with gravity at {dados-calculo.gravidade} m/s². How many seconds does it take to reach the highest point? (two decimal places)"
+  },
+  "dados-calculo": {
+    "velocidade": "20",
+    "gravidade": "9.81",
+    "total": "2.04"
+  }
+}

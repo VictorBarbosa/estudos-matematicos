@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Use o polinômio de Maclaurin de grau {dados-calculo.grau} para aproximar esta função em x = {dados-calculo.expressao1}. Responda com 5 casas decimais."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma circunferência tem centro em ({dados-calculo.cx}, {dados-calculo.cy}) e raio {dados-calculo.raio}. Qual é a abscissa do centro?",
+    "fr": "Un cercle a son centre en ({dados-calculo.cx}, {dados-calculo.cy}) et un rayon de {dados-calculo.raio}. Quelle est l’abscisse du centre ?",
+    "en": "A circle has centre ({dados-calculo.cx}, {dados-calculo.cy}) and radius {dados-calculo.raio}. What is the x-coordinate of the centre?"
+  },
+  "dados-calculo": {
+    "cx": "3",
+    "cy": "-2",
+    "raio": "5",
+    "total": "3"
+  }
+}

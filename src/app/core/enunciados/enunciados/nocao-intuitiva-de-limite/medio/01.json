@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um polígono regular inscrito numa circunferência de raio {dados-calculo.raio} tem o perímetro cada vez mais próximo de um valor, conforme o número de lados cresce. Dividindo esse valor-limite por π, quanto se obtém?",
+    "fr": "Un polygone régulier inscrit dans un cercle de rayon {dados-calculo.raio} a un périmètre de plus en plus proche d’une valeur, à mesure que le nombre de côtés augmente. En divisant cette valeur limite par π, qu’obtient-on ?",
+    "en": "A regular polygon inscribed in a circle of radius {dados-calculo.raio} has a perimeter approaching a value as the number of sides grows. Dividing that limit value by π, what do you get?"
+  },
+  "dados-calculo": {
+    "raio": "7",
+    "total": "14"
+  }
+}

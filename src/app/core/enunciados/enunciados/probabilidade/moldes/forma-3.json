@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Lançando um dado de {dados-calculo.faces} faces {dados-calculo.tentativas} vezes, qual é a probabilidade de sair o maior valor ao menos uma vez?"
+  }
+}

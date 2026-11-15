@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um corpo de {dados-calculo.massa} kg está a {dados-calculo.altura} m do chão, com a gravidade valendo {dados-calculo.gravidade} m/s². Qual é a sua energia potencial, em joules? (duas casas decimais)",
+    "fr": "Un corps de {dados-calculo.massa} kg est à {dados-calculo.altura} m du sol, la gravité valant {dados-calculo.gravidade} m/s². Quelle est son énergie potentielle, en joules ? (deux décimales)",
+    "en": "A {dados-calculo.massa} kg body sits {dados-calculo.altura} m above the ground, with gravity at {dados-calculo.gravidade} m/s². What is its potential energy, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "5",
+    "altura": "10",
+    "gravidade": "9.81",
+    "total": "490.50"
+  }
+}

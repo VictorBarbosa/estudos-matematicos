@@ -1,0 +1,16 @@
+{
+  "enunciado": {
+    "br": "Um sistema tem as equações {dados-calculo.a1}x mais {dados-calculo.b1}y igual a {dados-calculo.c1}, e {dados-calculo.a2}x mais {dados-calculo.b2}y igual a {dados-calculo.c2}. Resolvendo por Cramer, quanto vale y?",
+    "fr": "Un système a les équations {dados-calculo.a1}x plus {dados-calculo.b1}y égal {dados-calculo.c1}, et {dados-calculo.a2}x plus {dados-calculo.b2}y égal {dados-calculo.c2}. En résolvant par Cramer, combien vaut y ?",
+    "en": "A system has the equations {dados-calculo.a1}x plus {dados-calculo.b1}y equals {dados-calculo.c1}, and {dados-calculo.a2}x plus {dados-calculo.b2}y equals {dados-calculo.c2}. Solving by Cramer’s rule, what is y?"
+  },
+  "dados-calculo": {
+    "a1": "2",
+    "b1": "1",
+    "c1": "8",
+    "a2": "1",
+    "b2": "3",
+    "c2": "14",
+    "total": "4"
+  }
+}

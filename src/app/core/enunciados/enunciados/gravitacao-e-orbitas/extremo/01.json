@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Pela terceira lei de Kepler, se o raio da órbita for multiplicado por {dados-calculo.fator}, por quanto o período fica multiplicado?",
+    "fr": "Par la troisième loi de Kepler, si le rayon de l’orbite est multiplié par {dados-calculo.fator}, par combien la période est-elle multipliée ?",
+    "en": "By Kepler’s third law, if the orbital radius is multiplied by {dados-calculo.fator}, by what factor is the period multiplied?"
+  },
+  "dados-calculo": {
+    "fator": "4",
+    "total": "8"
+  }
+}

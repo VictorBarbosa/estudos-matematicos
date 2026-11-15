@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um corpo gira livremente, sem torque externo, com momento de inércia {dados-calculo.v1} kg·m² a {dados-calculo.v2} rad/s. A inércia passa a {dados-calculo.v3}. Qual é a nova velocidade angular, em rad/s? Responda com 3 casas decimais."
+  }
+}

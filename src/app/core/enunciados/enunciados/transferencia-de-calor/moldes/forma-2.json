@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Qual é a resistência térmica de uma camada de {dados-calculo.v1} com {dados-calculo.v2} m de espessura e {dados-calculo.v3} m² de área, em K/W? A condutividade é {dados-calculo.v4} W/(m·K). Responda com 3 casas decimais."
+  }
+}

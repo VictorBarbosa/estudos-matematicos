@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma carga de {dados-calculo.q} μC está no vértice do ângulo reto de um triângulo. Sobre um cateto, a {dados-calculo.expressao1} m, há uma carga de {dados-calculo.q1} μC; sobre o outro, a {dados-calculo.expressao2} m, uma de {dados-calculo.q2} μC. Qual é o módulo da força resultante sobre a primeira, em N? (2 casas decimais)"
+  }
+}

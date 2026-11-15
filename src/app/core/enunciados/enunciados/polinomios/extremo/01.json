@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Um polinômio de grau 3 tem raízes {dados-calculo.r1}, {dados-calculo.r2} e {dados-calculo.r3}, e o coeficiente do termo de maior grau é {dados-calculo.lider}. Quanto vale esse polinômio em x = 0?",
+    "fr": "Un polynôme de degré 3 a pour racines {dados-calculo.r1}, {dados-calculo.r2} et {dados-calculo.r3}, et le coefficient du terme de plus haut degré est {dados-calculo.lider}. Combien vaut ce polynôme en x = 0 ?",
+    "en": "A degree 3 polynomial has roots {dados-calculo.r1}, {dados-calculo.r2} and {dados-calculo.r3}, and the leading coefficient is {dados-calculo.lider}. What is the value of that polynomial at x = 0?"
+  },
+  "dados-calculo": {
+    "r1": "1",
+    "r2": "2",
+    "r3": "3",
+    "lider": "2",
+    "total": "-12"
+  }
+}

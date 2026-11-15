@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma urna tem {dados-calculo.vermelhas} bolas vermelhas e {dados-calculo.azuis} azuis. Retirando duas bolas SEM reposição, qual é a probabilidade de ambas serem vermelhas?"
+  }
+}

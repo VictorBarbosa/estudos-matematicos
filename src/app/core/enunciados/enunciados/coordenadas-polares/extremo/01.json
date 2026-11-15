@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um ponto está sobre o eixo y positivo, a {dados-calculo.distancia} unidades da origem. Qual é o seu ângulo polar, em graus?",
+    "fr": "Un point est sur l’axe des y positif, à {dados-calculo.distancia} unités de l’origine. Quel est son angle polaire, en degrés ?",
+    "en": "A point lies on the positive y-axis, {dados-calculo.distancia} units from the origin. What is its polar angle, in degrees?"
+  },
+  "dados-calculo": {
+    "distancia": "7",
+    "total": "90"
+  }
+}

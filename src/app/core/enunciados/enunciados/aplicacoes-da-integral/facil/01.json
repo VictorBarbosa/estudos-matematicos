@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é a área, entre x = 0 e x = {dados-calculo.fim}, da região entre a reta que vale {dados-calculo.a} vezes x e o eixo x? (três casas decimais)",
+    "fr": "Quelle est l’aire, entre x = 0 et x = {dados-calculo.fim}, de la région entre la droite qui vaut {dados-calculo.a} fois x et l’axe des x ? (trois décimales)",
+    "en": "What is the area, from x = 0 to x = {dados-calculo.fim}, of the region between the line equal to {dados-calculo.a} times x and the x-axis? (three decimal places)"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "fim": "3",
+    "total": "18.000"
+  }
+}

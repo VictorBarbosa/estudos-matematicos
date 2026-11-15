@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um tubo estreita de {dados-calculo.area1} m² para {dados-calculo.area2} m² de área. Se a água entra a {dados-calculo.velocidade} m/s, com que velocidade, em m/s, ela sai? (duas casas decimais)",
+    "fr": "Un tuyau se rétrécit de {dados-calculo.area1} m² à {dados-calculo.area2} m² de section. Si l’eau entre à {dados-calculo.velocidade} m/s, à quelle vitesse, en m/s, sort-elle ? (deux décimales)",
+    "en": "A pipe narrows from {dados-calculo.area1} m² to {dados-calculo.area2} m². If water enters at {dados-calculo.velocidade} m/s, at what speed, in m/s, does it leave? (two decimal places)"
+  },
+  "dados-calculo": {
+    "area1": "0.1",
+    "area2": "0.04",
+    "velocidade": "2",
+    "total": "5.00"
+  }
+}

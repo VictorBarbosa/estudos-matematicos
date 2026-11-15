@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma massa de {dados-calculo.massa} kg numa mola de constante {dados-calculo.constante} N/m oscila com amplitude de {dados-calculo.amplitude} m. Qual é a velocidade máxima, em m/s? (três casas decimais)",
+    "fr": "Une masse de {dados-calculo.massa} kg sur un ressort de constante {dados-calculo.constante} N/m oscille avec une amplitude de {dados-calculo.amplitude} m. Quelle est la vitesse maximale, en m/s ? (trois décimales)",
+    "en": "A {dados-calculo.massa} kg mass on a spring with constant {dados-calculo.constante} N/m oscillates with amplitude {dados-calculo.amplitude} m. What is the maximum speed, in m/s? (three decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "2",
+    "constante": "32",
+    "amplitude": "0.1",
+    "total": "0.400"
+  }
+}

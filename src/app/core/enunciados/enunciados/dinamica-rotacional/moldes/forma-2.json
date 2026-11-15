@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um torque de {dados-calculo.v1} N·m é aplicado a {dados-calculo.v2} {dados-calculo.v3} de {dados-calculo.v4} kg e {dados-calculo.v5} m de raio. Qual é a aceleração angular, em rad/s²? Responda com 3 casas decimais."
+  }
+}

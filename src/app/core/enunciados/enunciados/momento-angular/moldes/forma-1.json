@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.v1} {dados-calculo.v2} de {dados-calculo.v3} kg e {dados-calculo.v4} m de raio gira a {dados-calculo.v5} rad/s. Qual é o momento angular, em kg·m²/s? Responda com 3 casas decimais."
+  }
+}

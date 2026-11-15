@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma função vale a raiz quadrada de ({dados-calculo.a} vezes x). Quanto vale a sua derivada em x = {dados-calculo.ponto}?",
+    "fr": "Une fonction vaut la racine carrée de ({dados-calculo.a} fois x). Combien vaut sa dérivée en x = {dados-calculo.ponto} ?",
+    "en": "A function is the square root of ({dados-calculo.a} times x). What is its derivative at x = {dados-calculo.ponto}?"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "ponto": "1",
+    "total": "1"
+  }
+}

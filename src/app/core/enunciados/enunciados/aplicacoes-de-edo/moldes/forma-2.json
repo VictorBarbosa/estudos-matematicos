@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma amostra de {dados-calculo.inicial} g tem meia-vida de {dados-calculo.meiaVida} anos. Quanto resta depois de {dados-calculo.t} anos, em g? Responda com 4 casas decimais."
+  }
+}

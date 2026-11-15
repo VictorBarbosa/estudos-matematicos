@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Quanta energia, em joules, é preciso para aquecer {dados-calculo.massa} kg de um material de calor específico {dados-calculo.especifico} J/(kg·°C) em {dados-calculo.variacao} °C? (três casas decimais)",
+    "fr": "Combien d’énergie, en joules, faut-il pour chauffer {dados-calculo.massa} kg d’un matériau de chaleur spécifique {dados-calculo.especifico} J/(kg·°C) de {dados-calculo.variacao} °C ? (trois décimales)",
+    "en": "How much energy, in joules, is needed to heat {dados-calculo.massa} kg of a material with specific heat {dados-calculo.especifico} J/(kg·°C) by {dados-calculo.variacao} °C? (three decimal places)"
+  },
+  "dados-calculo": {
+    "massa": "2",
+    "especifico": "500",
+    "variacao": "10",
+    "total": "10000.000"
+  }
+}

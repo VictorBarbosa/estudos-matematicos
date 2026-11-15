@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Uma onda tem comprimento de onda {dados-calculo.expressao1} m e frequência {dados-calculo.f} Hz. Qual é a velocidade dela, em m/s?{dados-calculo.expressao2}"
+  }
+}

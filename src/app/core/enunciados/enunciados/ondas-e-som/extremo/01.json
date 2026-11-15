@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma sirene de {dados-calculo.frequencia} Hz se aproxima a {dados-calculo.velocidadeFonte} m/s, com o som viajando a {dados-calculo.velocidadeSom} m/s. Que frequência, em hertz, um observador parado ouve? (duas casas decimais)",
+    "fr": "Une sirène de {dados-calculo.frequencia} Hz s’approche à {dados-calculo.velocidadeFonte} m/s, le son voyageant à {dados-calculo.velocidadeSom} m/s. Quelle fréquence, en hertz, un observateur immobile entend-il ? (deux décimales)",
+    "en": "A {dados-calculo.frequencia} Hz siren approaches at {dados-calculo.velocidadeFonte} m/s, with sound travelling at {dados-calculo.velocidadeSom} m/s. What frequency, in hertz, does a stationary listener hear? (two decimal places)"
+  },
+  "dados-calculo": {
+    "frequencia": "400",
+    "velocidadeFonte": "40",
+    "velocidadeSom": "340",
+    "total": "453.33"
+  }
+}

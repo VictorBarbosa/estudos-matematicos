@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "De que valor se aproxima {dados-calculo.numerador} dividido por x, quando x cresce sem limite?",
+    "fr": "De quelle valeur s’approche {dados-calculo.numerador} divisé par x, quand x croît sans limite ?",
+    "en": "What value does {dados-calculo.numerador} divided by x approach as x grows without bound?"
+  },
+  "dados-calculo": {
+    "numerador": "7",
+    "total": "0"
+  }
+}

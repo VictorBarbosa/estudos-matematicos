@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um corpo anda a {dados-calculo.velocidade} m/s constantes entre os instantes {dados-calculo.inicio} s e {dados-calculo.fim} s. Quantos metros ele percorre nesse intervalo?",
+    "fr": "Un corps se déplace à {dados-calculo.velocidade} m/s constants entre les instants {dados-calculo.inicio} s et {dados-calculo.fim} s. Combien de mètres parcourt-il dans cet intervalle ?",
+    "en": "A body moves at a constant {dados-calculo.velocidade} m/s between {dados-calculo.inicio} s and {dados-calculo.fim} s. How many metres does it cover in that interval?"
+  },
+  "dados-calculo": {
+    "velocidade": "15",
+    "inicio": "2",
+    "fim": "6",
+    "total": "60"
+  }
+}

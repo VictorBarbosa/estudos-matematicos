@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um número tem parte inteira zero e o algarismo {dados-calculo.d} se repete infinitamente depois da vírgula. Qual é a fração geratriz, na forma irredutível?",
+    "fr": "Un nombre a une partie entière nulle et le chiffre {dados-calculo.d} se répète à l’infini après la virgule. Quelle est la fraction génératrice, sous forme irréductible ?",
+    "en": "A number has whole part zero and the digit {dados-calculo.d} repeating forever after the decimal point. What is the generating fraction, in lowest terms?"
+  },
+  "dados-calculo": {
+    "d": "7",
+    "total": "7/9"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é a integral dupla da função que vale x, sobre o retângulo em que x vai de 0 a {dados-calculo.fimX} e y vai de 0 a {dados-calculo.fimY}?",
+    "fr": "Quelle est l’intégrale double de la fonction qui vaut x, sur le rectangle où x va de 0 à {dados-calculo.fimX} et y de 0 à {dados-calculo.fimY} ?",
+    "en": "What is the double integral of the function equal to x, over the rectangle where x goes from 0 to {dados-calculo.fimX} and y from 0 to {dados-calculo.fimY}?"
+  },
+  "dados-calculo": {
+    "fimX": "2",
+    "fimY": "3",
+    "total": "6"
+  }
+}

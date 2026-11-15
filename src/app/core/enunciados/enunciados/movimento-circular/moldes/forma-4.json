@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um corpo gira em círculo de {dados-calculo.v1} m de raio, com período de {dados-calculo.periodo} s. Qual é a aceleração centrípeta, em m/s ao quadrado? Responda com 3 casas decimais."
+  }
+}

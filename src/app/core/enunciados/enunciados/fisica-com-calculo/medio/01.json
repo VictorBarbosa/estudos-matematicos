@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A velocidade de um corpo, em m/s, é {dados-calculo.a} vezes o tempo. Qual é a aceleração, em m/s², em qualquer instante?",
+    "fr": "La vitesse d’un corps, en m/s, est {dados-calculo.a} fois le temps. Quelle est l’accélération, en m/s², à tout instant ?",
+    "en": "A body’s speed, in m/s, is {dados-calculo.a} times the time. What is the acceleration, in m/s², at any moment?"
+  },
+  "dados-calculo": {
+    "a": "7",
+    "total": "7"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "O gráfico de f corta o eixo x em x = {dados-calculo.zero}. Comprimindo o gráfico horizontalmente por um fator {dados-calculo.fator}, em que valor de x fica o novo zero?",
+    "fr": "Le graphe de f coupe l’axe des x en x = {dados-calculo.zero}. En comprimant le graphe horizontalement d’un facteur {dados-calculo.fator}, à quelle valeur de x se trouve le nouveau zéro ?",
+    "en": "The graph of f crosses the x-axis at x = {dados-calculo.zero}. Compressing the graph horizontally by a factor of {dados-calculo.fator}, at what value of x is the new zero?"
+  },
+  "dados-calculo": {
+    "zero": "8",
+    "fator": "2",
+    "total": "4"
+  }
+}

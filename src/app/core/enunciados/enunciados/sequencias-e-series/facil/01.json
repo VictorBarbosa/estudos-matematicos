@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma série geométrica tem primeiro termo {dados-calculo.primeiro} e razão {dados-calculo.razao}. Ela converge? Responda 1 se converge e 0 se diverge.",
+    "fr": "Une série géométrique a pour premier terme {dados-calculo.primeiro} et pour raison {dados-calculo.razao}. Converge-t-elle ? Répondez 1 si elle converge et 0 si elle diverge.",
+    "en": "A geometric series has first term {dados-calculo.primeiro} and ratio {dados-calculo.razao}. Does it converge? Answer 1 if it converges and 0 if it diverges."
+  },
+  "dados-calculo": {
+    "primeiro": "6",
+    "razao": "1/2",
+    "total": "1"
+  }
+}

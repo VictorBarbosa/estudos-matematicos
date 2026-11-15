@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Use a fórmula da diferença de arcos para calcular o cosseno de ({dados-calculo.a}° − {dados-calculo.b}°). (duas casas decimais)",
+    "fr": "Utilisez la formule de la différence des arcs pour calculer le cosinus de ({dados-calculo.a}° − {dados-calculo.b}°). (deux décimales)",
+    "en": "Use the angle difference formula to work out the cosine of ({dados-calculo.a}° − {dados-calculo.b}°). (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "90",
+    "b": "30",
+    "total": "0.50"
+  }
+}

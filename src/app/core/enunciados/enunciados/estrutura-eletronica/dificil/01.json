@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Quantas camadas eletrônicas ocupadas tem o átomo neutro de cálcio, cujo número atômico é {dados-calculo.z}?",
+    "fr": "Combien de couches électroniques occupées a l’atome neutre de calcium, dont le numéro atomique est {dados-calculo.z} ?",
+    "en": "How many occupied electron shells does a neutral calcium atom have, whose atomic number is {dados-calculo.z}?"
+  },
+  "dados-calculo": {
+    "z": "20",
+    "total": "4"
+  }
+}

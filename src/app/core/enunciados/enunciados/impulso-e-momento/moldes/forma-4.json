@@ -1,0 +1,5 @@
+{
+  "enunciado": {
+    "br": "Um corpo de {dados-calculo.massaA} kg a {dados-calculo.velocidadeA} m/s colide com outro de {dados-calculo.massaB} kg a {dados-calculo.velocidadeB} m/s e os dois seguem juntos. Qual é a velocidade final, em m/s? (2 casas decimais)"
+  }
+}

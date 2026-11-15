@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um corpo tem velocidade igual a {dados-calculo.a} vezes o tempo, em m/s. Quantos metros ele percorre entre os instantes 0 e {dados-calculo.fim} s? (três casas decimais)",
+    "fr": "Un corps a une vitesse égale à {dados-calculo.a} fois le temps, en m/s. Combien de mètres parcourt-il entre les instants 0 et {dados-calculo.fim} s ? (trois décimales)",
+    "en": "A body has speed equal to {dados-calculo.a} times the time, in m/s. How many metres does it cover between 0 and {dados-calculo.fim} s? (three decimal places)"
+  },
+  "dados-calculo": {
+    "a": "6",
+    "fim": "5",
+    "total": "75.000"
+  }
+}

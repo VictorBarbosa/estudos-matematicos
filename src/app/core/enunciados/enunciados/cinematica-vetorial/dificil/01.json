@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um barco aponta perpendicularmente à correnteza, a {dados-calculo.barco} m/s, e a correnteza corre a {dados-calculo.corrente} m/s. Que ângulo, em graus, a velocidade resultante faz com a direção para a qual o barco aponta? (duas casas decimais)",
+    "fr": "Un bateau pointe perpendiculairement au courant, à {dados-calculo.barco} m/s, et le courant coule à {dados-calculo.corrente} m/s. Quel angle, en degrés, la vitesse résultante fait-elle avec la direction du bateau ? (deux décimales)",
+    "en": "A boat points perpendicular to the current at {dados-calculo.barco} m/s, and the current flows at {dados-calculo.corrente} m/s. What angle, in degrees, does the resulting velocity make with the direction the boat points? (two decimal places)"
+  },
+  "dados-calculo": {
+    "barco": "3",
+    "corrente": "4",
+    "total": "53.13"
+  }
+}

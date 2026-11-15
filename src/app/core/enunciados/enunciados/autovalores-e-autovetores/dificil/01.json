@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma matriz 2 por 2 tem autovalores {dados-calculo.l1} e {dados-calculo.l2}. Qual é o determinante dela, que é o produto dos autovalores?",
+    "fr": "Une matrice 2 par 2 a pour valeurs propres {dados-calculo.l1} et {dados-calculo.l2}. Quel est son déterminant, qui est le produit des valeurs propres ?",
+    "en": "A 2 by 2 matrix has eigenvalues {dados-calculo.l1} and {dados-calculo.l2}. What is its determinant, which is the product of the eigenvalues?"
+  },
+  "dados-calculo": {
+    "l1": "3",
+    "l2": "5",
+    "total": "15"
+  }
+}
