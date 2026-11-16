@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para qual valor de k a função definida por x² + k para x < 2 e 6x para x ≥ 2 é contínua em x = 2? (duas casas decimais)",
+    "fr": "Pour quelle valeur de k la fonction définie par x² + k pour x < 2 et 6x pour x ≥ 2 est-elle continue en x = 2 ? (deux décimales)",
+    "en": "For what value of k is the function given by x² + k for x < 2 and 6x for x ≥ 2 continuous at x = 2? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

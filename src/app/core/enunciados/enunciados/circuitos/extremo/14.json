@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um circuito RC tem R = 4.7 kΩ e C = 47 μF. Qual é a constante de tempo, em ms? (duas casas decimais)",
+    "fr": "Un circuit RC a R = 4.7 kΩ et C = 47 μF. Quelle est la constante de temps, en ms ? (deux décimales)",
+    "en": "An RC circuit has R = 4.7 kΩ and C = 47 μF. What is the time constant, in ms? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "220.90"
+  }
+}

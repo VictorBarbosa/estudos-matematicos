@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Luz de 600 nm passa por duas fendas separadas por 0.5 mm, e a tela fica a 2 m. A que distância do centro está a 2ª franja clara, em mm? (duas casas decimais)",
+    "fr": "De la lumière de 600 nm passe par deux fentes séparées de 0.5 mm, et l’écran est à 2 m. À quelle distance du centre se trouve la 2e frange claire, en mm ? (deux décimales)",
+    "en": "Light of 600 nm passes through two slits 0.5 mm apart, and the screen is 2 m away. How far from the centre is the 2th bright fringe, in mm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.80"
+  }
+}

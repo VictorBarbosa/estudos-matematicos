@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive e calcule f'(2) para f(x) = x·e^(0.5x). (duas casas decimais)",
+    "fr": "Dérivez et calculez f'(2) pour f(x) = x·e^(0.5x). (deux décimales)",
+    "en": "Differentiate and calculate f'(2) for f(x) = x·e^(0.5x). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.44"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "No desenvolvimento de (x + 1)^5, qual é o coeficiente do 3º termo, em potências decrescentes de x?",
+    "fr": "Dans le développement de (x + 1)^5, quel est le coefficient du 3e terme, en puissances décroissantes de x ?",
+    "en": "In the expansion of (x + 1)^5, what is the coefficient of the 3th term, in decreasing powers of x?"
+  },
+  "dados-calculo": {
+    "total": "10"
+  }
+}

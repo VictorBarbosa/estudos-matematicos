@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma barra homogênea de 6 m e 300 N está apoiada numa ponta. Uma carga de 150 N está a 2 m desse apoio. Que força vertical na outra ponta mantém o equilíbrio, em N? (duas casas decimais)",
+    "fr": "Une barre homogène de 6 m et 300 N repose sur une extrémité. Une charge de 150 N est à 2 m de cet appui. Quelle force verticale à l’autre extrémité maintient l’équilibre, en N ? (deux décimales)",
+    "en": "A uniform rod of 6 m and 300 N rests on one end. A load of 150 N is 2 m from that support. What vertical force at the other end keeps equilibrium, in N? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "200.00"
+  }
+}

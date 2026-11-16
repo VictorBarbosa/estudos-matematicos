@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com 40 m de cerca, qual é a MAIOR área retangular que se pode cercar? (em m²; duas casas decimais)",
+    "fr": "Avec 40 m de clôture, quelle est la PLUS GRANDE aire rectangulaire que l’on peut clôturer ? (en m² ; deux décimales)",
+    "en": "With 40 m of fence, what is the LARGEST rectangular area that can be enclosed? (in m²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "100.00"
+  }
+}

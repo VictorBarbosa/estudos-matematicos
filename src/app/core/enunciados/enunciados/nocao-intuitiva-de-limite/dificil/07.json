@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x² − 169)/(x − 13) quando x tende a 13, simplificando primeiro.",
+    "fr": "Calculez la limite de (x² − 169)/(x − 13) quand x tend vers 13, en simplifiant d’abord.",
+    "en": "Calculate the limit of (x² − 169)/(x − 13) as x tends to 13, simplifying first."
+  },
+  "dados-calculo": {
+    "total": "26"
+  }
+}

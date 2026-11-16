@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Sabendo que a integral de f de 2 a 5 vale 7, quanto vale a integral de 5 a 2?",
+    "fr": "Sachant que l’intégrale de f de 2 à 5 vaut 7, combien vaut l’intégrale de 5 à 2 ?",
+    "en": "Knowing that the integral of f from 2 to 5 is 7, what is the integral from 5 to 2?"
+  },
+  "dados-calculo": {
+    "total": "-7"
+  }
+}

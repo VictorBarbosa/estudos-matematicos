@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um lote tem 20 peças, das quais 4 são defeituosas. Retirando 2 peças de uma vez, qual é a probabilidade de NENHUMA ser defeituosa? (duas casas decimais)",
+    "fr": "Un lot contient 20 pièces, dont 4 sont défectueuses. En retirant 2 pièces d’un coup, quelle est la probabilité qu’AUCUNE ne soit défectueuse ? (deux décimales)",
+    "en": "A lot has 20 parts, of which 4 are defective. Drawing 2 parts at once, what is the probability that NONE is defective? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.63"
+  }
+}

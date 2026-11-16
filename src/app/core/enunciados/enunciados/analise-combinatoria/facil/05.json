@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos anagramas distintos tem a palavra GATO? (todas as letras diferentes)",
+    "fr": "Combien d’anagrammes distincts le mot CHAT possède-t-il ? (toutes les lettres différentes)",
+    "en": "How many distinct anagrams does the word CAT have? (all letters different)"
+  },
+  "dados-calculo": {
+    "total": "24"
+  }
+}

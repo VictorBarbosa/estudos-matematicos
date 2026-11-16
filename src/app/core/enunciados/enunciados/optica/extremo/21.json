@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num experimento de fenda dupla com fendas separadas por 0.25 mm e tela a 2 m, a 4ª franja clara aparece a 16 mm do centro. Qual é o comprimento de onda, em nm? (duas casas decimais)",
+    "fr": "Dans une expérience à double fente avec des fentes séparées de 0.25 mm et un écran à 2 m, la 4e frange claire apparaît à 16 mm du centre. Quelle est la longueur d’onde, en nm ? (deux décimales)",
+    "en": "In a double-slit experiment with slits 0.25 mm apart and a screen 2 m away, the 4th bright fringe appears 16 mm from the centre. What is the wavelength, in nm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "500.00"
+  }
+}

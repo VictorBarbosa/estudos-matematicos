@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um elevador de 100 kg sobe com aceleração de 5 m/s². Qual é a tração no cabo, em N? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un ascenseur de 100 kg monte avec une accélération de 5 m/s². Quelle est la tension du câble, en N ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A lift of 100 kg rises with acceleration 5 m/s². What is the cable tension, in N? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1481.00"
+  }
+}

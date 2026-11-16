@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para as medidas 100, 102, 104 e 106, qual é o desvio padrão AMOSTRAL (divisor n−1)? (duas casas decimais)",
+    "fr": "Pour les mesures 100, 102, 104 et 106, quel est l’écart-type d’ÉCHANTILLON (diviseur n−1) ? (deux décimales)",
+    "en": "For the measurements 100, 102, 104 and 106, what is the SAMPLE standard deviation (divisor n−1)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.58"
+  }
+}

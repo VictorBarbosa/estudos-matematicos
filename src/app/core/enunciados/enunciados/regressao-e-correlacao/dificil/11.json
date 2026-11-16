@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para os pares (1, 6), (2, 4) e (3, 2), qual é o resíduo do ponto de x = 2 em relação à reta de mínimos quadrados? (duas casas decimais)",
+    "fr": "Pour les paires (1, 6), (2, 4) et (3, 2), quel est le résidu du point d’abscisse 2 par rapport à la droite des moindres carrés ? (deux décimales)",
+    "en": "For the pairs (1, 6), (2, 4) and (3, 2), what is the residual of the point with x = 2 relative to the least-squares line? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

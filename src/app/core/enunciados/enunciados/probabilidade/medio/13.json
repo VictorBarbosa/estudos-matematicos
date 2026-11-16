@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um lote tem 10 peças, das quais 1 são defeituosas. Retirando UMA peça, qual é a probabilidade de ser DEFEITUOSA? (duas casas decimais)",
+    "fr": "Un lot contient 10 pièces, dont 1 sont défectueuses. En retirant UNE pièce, quelle est la probabilité qu’elle soit DÉFECTUEUSE ? (deux décimales)",
+    "en": "A lot has 10 parts, of which 1 are defective. Drawing ONE part, what is the probability it is DEFECTIVE? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.10"
+  }
+}

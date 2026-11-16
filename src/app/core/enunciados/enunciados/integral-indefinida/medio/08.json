@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor da constante C, sabendo que F(2) = 20 para a primitiva de f(x) = 10x? (duas casas decimais)",
+    "fr": "Quelle est la valeur de la constante C, sachant que F(2) = 20 pour la primitive de f(x) = 10x ? (deux décimales)",
+    "en": "What is the value of the constant C, knowing that F(2) = 20 for the antiderivative of f(x) = 10x? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

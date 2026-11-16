@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na curva y² = 36x, qual é o valor de dy/dx no ponto (1, 6)? (duas casas decimais)",
+    "fr": "Sur la courbe y² = 36x, quelle est la valeur de dy/dx au point (1, 6) ? (deux décimales)",
+    "en": "On the curve y² = 36x, what is dy/dx at the point (1, 6)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

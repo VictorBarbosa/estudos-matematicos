@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um foguete tem aceleração a(t) = 10t (m/s²) e parte do repouso. Qual é a velocidade em t = 2 s, em m/s? (duas casas decimais)",
+    "fr": "Une fusée a une accélération a(t) = 10t (m/s²) et part du repos. Quelle est la vitesse à t = 2 s, en m/s ? (deux décimales)",
+    "en": "A rocket has acceleration a(t) = 10t (m/s²) and starts from rest. What is the velocity at t = 2 s, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

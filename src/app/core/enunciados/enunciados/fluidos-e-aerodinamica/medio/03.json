@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de densidade 500 kg/m³ flutua em água. Que fração do volume fica submersa? (duas casas decimais)",
+    "fr": "Un corps de masse volumique 500 kg/m³ flotte dans l’eau. Quelle fraction de son volume est immergée ? (deux décimales)",
+    "en": "A body of density 500 kg/m³ floats in water. What fraction of its volume is submerged? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

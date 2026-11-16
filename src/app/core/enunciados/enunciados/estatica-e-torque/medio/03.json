@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força de 50 N é aplicada a 0.5 m do eixo, formando 90° com o braço. Qual é o torque, em N·m? (duas casas decimais)",
+    "fr": "Une force de 50 N est appliquée à 0.5 m de l’axe, en formant 90° avec le bras. Quel est le couple, en N·m ? (deux décimales)",
+    "en": "A force of 50 N is applied at 0.5 m from the axis, making 90° with the arm. What is the torque, in N·m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "25.00"
+  }
+}

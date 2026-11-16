@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa urna há 6 bolas de uma cor e 4 de outra. Retirando duas SEM reposição, quantos pares distintos (sem ordem) se podem formar?",
+    "fr": "Dans une urne il y a 6 boules d’une couleur et 4 d’une autre. En retirant deux boules SANS remise, combien de paires distinctes (sans ordre) peut-on former ?",
+    "en": "An urn has 6 balls of one colour and 4 of another. Drawing two WITHOUT replacement, how many distinct unordered pairs can be formed?"
+  },
+  "dados-calculo": {
+    "total": "45"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Sabendo que a integral de f vale 8 e a de g vale 2 no intervalo dado, quanto vale a integral de f + 5·g?",
+    "fr": "Sachant que l’intégrale de f vaut 8 et celle de g vaut 2 sur l’intervalle donné, combien vaut l’intégrale de f + 5·g ?",
+    "en": "Knowing the integral of f is 8 and that of g is 2 on the given interval, what is the integral of f + 5·g?"
+  },
+  "dados-calculo": {
+    "total": "18.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de 3 m² e emissividade 0.6 está a 200 °C. Qual é a potência irradiada, em W? (σ = 5,67×10⁻⁸; duas casas decimais)",
+    "fr": "Un corps de 3 m² et d’émissivité 0.6 est à 200 °C. Quelle est la puissance rayonnée, en W ? (σ = 5,67×10⁻⁸ ; deux décimales)",
+    "en": "A body of 3 m² and emissivity 0.6 is at 200 °C. What is the radiated power, in W? (σ = 5.67×10⁻⁸; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5115.06"
+  }
+}

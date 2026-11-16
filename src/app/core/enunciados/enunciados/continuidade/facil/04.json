@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = (x² − 25)/(x − 5) não está definida em x = 5. Que valor deveria ser atribuído ali para torná-la contínua?",
+    "fr": "La fonction f(x) = (x² − 25)/(x − 5) n’est pas définie en x = 5. Quelle valeur faudrait-il y attribuer pour la rendre continue ?",
+    "en": "The function f(x) = (x² − 25)/(x − 5) is not defined at x = 5. What value should be assigned there to make it continuous?"
+  },
+  "dados-calculo": {
+    "total": "10"
+  }
+}

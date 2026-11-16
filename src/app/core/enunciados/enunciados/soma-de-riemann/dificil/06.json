@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Aproxime a área sob f(x) = 4x + 1 no intervalo [0, 2] usando 4 retângulos com altura no ponto DIREITO. (duas casas decimais)",
+    "fr": "Approximez l’aire sous f(x) = 4x + 1 sur [0, 2] avec 4 rectangles et la hauteur au point DROIT. (deux décimales)",
+    "en": "Approximate the area under f(x) = 4x + 1 on [0, 2] using 4 rectangles with the RIGHT endpoint height. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

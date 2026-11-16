@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (√(x + 1) − √1)/x quando x tende a 0. Dê a resposta com duas casas decimais.",
+    "fr": "Calculez la limite de (√(x + 1) − √1)/x quand x tend vers 0. Donnez la réponse avec deux décimales.",
+    "en": "Calculate the limit of (√(x + 1) − √1)/x as x tends to 0. Give the answer to two decimal places."
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

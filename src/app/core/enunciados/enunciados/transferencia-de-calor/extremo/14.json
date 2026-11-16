@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma parede composta tem duas camadas em série, com resistências térmicas 0.4 e 0.6 K/W. Com diferença de 200 K entre as extremidades, qual é o fluxo de calor, em W? (duas casas decimais)",
+    "fr": "Une paroi composée a deux couches en série, de résistances thermiques 0.4 et 0.6 K/W. Avec une différence de 200 K entre les extrémités, quel est le flux de chaleur, en W ? (deux décimales)",
+    "en": "A composite wall has two layers in series, with thermal resistances 0.4 and 0.6 K/W. With a difference of 200 K across it, what is the heat flux, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "200.00"
+  }
+}

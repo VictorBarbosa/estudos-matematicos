@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "2 kg de água a 10 °C são misturados com 1 kg de água a 70 °C. Qual é a temperatura final, em °C? (recipiente isolado; duas casas decimais)",
+    "fr": "2 kg d’eau à 10 °C sont mélangés avec 1 kg d’eau à 70 °C. Quelle est la température finale, en °C ? (récipient isolé ; deux décimales)",
+    "en": "2 kg of water at 10 °C are mixed with 1 kg of water at 70 °C. What is the final temperature, in °C? (insulated container; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "30.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na curva x² + y² = 169, qual é o coeficiente angular da reta tangente no ponto (12, 5)? (duas casas decimais)",
+    "fr": "Sur la courbe x² + y² = 169, quel est le coefficient directeur de la tangente au point (12, 5) ? (deux décimales)",
+    "en": "On the curve x² + y² = 169, what is the slope of the tangent at the point (12, 5)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-2.40"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois corpos de massas 1 e 2×10²⁴ kg estão a 3×10⁶ km um do outro. Qual é a força gravitacional entre eles, em 10¹⁸ N? (G = 6,674×10⁻¹¹; duas casas decimais)",
+    "fr": "Deux corps de masses 1 et 2×10²⁴ kg sont à 3×10⁶ km l’un de l’autre. Quelle est la force gravitationnelle entre eux, en 10¹⁸ N ? (G = 6,674×10⁻¹¹ ; deux décimales)",
+    "en": "Two bodies of masses 1 and 2×10²⁴ kg are 3×10⁶ km apart. What is the gravitational force between them, in 10¹⁸ N? (G = 6.674×10⁻¹¹; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

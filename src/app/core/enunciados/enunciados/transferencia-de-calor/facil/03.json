@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma placa de madeira tem 1 m² de área e 0.05 m de espessura, com diferença de 15 K entre as faces. A condutividade é 0.15 W/(m·K). Qual é o fluxo de calor, em W? (duas casas decimais)",
+    "fr": "Une plaque de madeira a une aire de 1 m² et une épaisseur de 0.05 m, avec une différence de 15 K entre les faces. La conductivité est 0.15 W/(m·K). Quel est le flux de chaleur, en W ? (deux décimales)",
+    "en": "A madeira plate has area 1 m² and thickness 0.05 m, with a difference of 15 K between the faces. The conductivity is 0.15 W/(m·K). What is the heat flux, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "45.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função trabalho do prata é 4.26 eV. Qual é o MAIOR comprimento de onda que ainda arranca elétrons, em nm? (hc = 1240 eV·nm; duas casas decimais)",
+    "fr": "Le travail d’extraction du argent est de 4.26 eV. Quelle est la PLUS GRANDE longueur d’onde qui arrache encore des électrons, en nm ? (hc = 1240 eV·nm ; deux décimales)",
+    "en": "The work function of silver is 4.26 eV. What is the LARGEST wavelength that still ejects electrons, in nm? (hc = 1240 eV·nm; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "291.08"
+  }
+}

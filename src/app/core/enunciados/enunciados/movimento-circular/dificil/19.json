@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma roda de raio 5 m gira a 2 rad/s. Qual é a aceleração centrípeta de um ponto da borda, em m/s²? (duas casas decimais)",
+    "fr": "Une roue de rayon 5 m tourne à 2 rad/s. Quelle est l’accélération centripète d’un point de la jante, en m/s² ? (deux décimales)",
+    "en": "A wheel of radius 5 m spins at 2 rad/s. What is the centripetal acceleration of a point on the rim, in m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

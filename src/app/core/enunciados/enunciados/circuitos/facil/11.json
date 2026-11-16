@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um resistor de 220 Ω está ligado a 220 V. Quanta potência ele dissipa, em W? (duas casas decimais)",
+    "fr": "Une résistance de 220 Ω est branchée sur 220 V. Quelle puissance dissipe-t-elle, en W ? (deux décimales)",
+    "en": "A resistor of 220 Ω is connected to 220 V. How much power does it dissipate, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "220.00"
+  }
+}

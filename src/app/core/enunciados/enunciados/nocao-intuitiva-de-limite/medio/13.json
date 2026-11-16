@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x² − 16)/(x + 4) quando x tende a −4.",
+    "fr": "Calculez la limite de (x² − 16)/(x + 4) quand x tend vers −4.",
+    "en": "Calculate the limit of (x² − 16)/(x + 4) as x tends to −4."
+  },
+  "dados-calculo": {
+    "total": "-8"
+  }
+}

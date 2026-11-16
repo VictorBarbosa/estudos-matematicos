@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Aproxime a área sob f(x) = 5 no intervalo [0, 2] usando 4 retângulos. (duas casas decimais)",
+    "fr": "Approximez l’aire sous f(x) = 5 sur [0, 2] avec 4 rectangles. (deux décimales)",
+    "en": "Approximate the area under f(x) = 5 on [0, 2] using 4 rectangles. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

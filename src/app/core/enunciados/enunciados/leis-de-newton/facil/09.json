@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um bloco recebe 20 N para a direita e sofre 5 N de atrito. Qual é a força resultante, em N?",
+    "fr": "Un bloc reçoit 20 N vers la droite et subit 5 N de frottement. Quelle est la force résultante, en N ?",
+    "en": "A block receives 20 N to the right and experiences 5 N of friction. What is the net force, in N?"
+  },
+  "dados-calculo": {
+    "total": "15"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de 3x² − 0x + 5 quando x tende a 1.",
+    "fr": "Calculez la limite de 3x² − 0x + 5 quand x tend vers 1.",
+    "en": "Calculate the limit of 3x² − 0x + 5 as x tends to 1."
+  },
+  "dados-calculo": {
+    "total": "8"
+  }
+}

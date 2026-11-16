@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive e calcule f'(3) para f(x) = sen(x²), com x em radianos. (duas casas decimais)",
+    "fr": "Dérivez et calculez f'(3) pour f(x) = sin(x²), avec x en radians. (deux décimales)",
+    "en": "Differentiate and calculate f'(3) for f(x) = sin(x²), with x in radians. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-5.47"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma escada de 5 m e 300 N está apoiada numa parede sem atrito, fazendo 45° com o chão. Qual é o módulo da força horizontal que o chão exerce na base, em N? (duas casas decimais)",
+    "fr": "Une échelle de 5 m et 300 N est appuyée contre un mur sans frottement, en faisant 45° avec le sol. Quel est le module de la force horizontale exercée par le sol à la base, en N ? (deux décimales)",
+    "en": "A ladder of 5 m and 300 N leans against a frictionless wall, making 45° with the ground. What is the magnitude of the horizontal force from the ground at the base, in N? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "150.00"
+  }
+}

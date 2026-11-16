@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Lançando um dado de 6 faces 10 vezes, qual é a probabilidade de sair o 6 ao menos uma vez? (duas casas decimais)",
+    "fr": "En lançant un dé à 6 faces 10 fois, quelle est la probabilité d’obtenir un 6 au moins une fois ? (deux décimales)",
+    "en": "Rolling a 6-sided die 10 times, what is the probability of getting a 6 at least once? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.84"
+  }
+}

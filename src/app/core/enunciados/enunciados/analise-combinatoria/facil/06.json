@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos anagramas distintos tem a palavra MAR? (todas as letras diferentes)",
+    "fr": "Combien d’anagrammes distincts le mot MER possède-t-il ? (toutes les lettres différentes)",
+    "en": "How many distinct anagrams does the word SEA have? (all letters different)"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

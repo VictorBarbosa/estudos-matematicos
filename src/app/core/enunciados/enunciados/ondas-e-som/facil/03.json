@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um som de 170 Hz se propaga no ar a 340 m/s. Qual é o comprimento de onda, em metros? (duas casas decimais)",
+    "fr": "Un son de 170 Hz se propage dans l’air à 340 m/s. Quelle est la longueur d’onde, en mètres ? (deux décimales)",
+    "en": "A sound of 170 Hz travels in air at 340 m/s. What is the wavelength, in metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

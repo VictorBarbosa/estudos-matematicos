@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive e calcule f'(0) para f(x) = e^(x²). (duas casas decimais)",
+    "fr": "Dérivez et calculez f'(0) pour f(x) = e^(x²). (deux décimales)",
+    "en": "Differentiate and calculate f'(0) for f(x) = e^(x²). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

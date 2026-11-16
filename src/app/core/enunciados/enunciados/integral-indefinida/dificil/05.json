@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Integre e informe o coeficiente de x³ na primitiva de f(x) = 9x².",
+    "fr": "Intégrez et indiquez le coefficient de x³ dans la primitive de f(x) = 9x².",
+    "en": "Integrate and give the coefficient of x³ in the antiderivative of f(x) = 9x²."
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

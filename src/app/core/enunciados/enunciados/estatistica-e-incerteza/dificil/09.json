@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um experimento produziu os pares (x, y): (1, 2) e (3, 8). Qual é a inclinação da reta ajustada? (duas casas decimais)",
+    "fr": "Une expérience a produit les paires (x, y) : (1, 2) et (3, 8). Quel est le coefficient directeur de la droite ajustée ? (deux décimales)",
+    "en": "An experiment produced the pairs (x, y): (1, 2) and (3, 8). What is the slope of the fitted line? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

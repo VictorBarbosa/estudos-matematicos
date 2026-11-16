@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um circuito RC tem R = 10 kΩ e C = 100 μF. Qual é a constante de tempo, em ms? (duas casas decimais)",
+    "fr": "Un circuit RC a R = 10 kΩ et C = 100 μF. Quelle est la constante de temps, en ms ? (deux décimales)",
+    "en": "An RC circuit has R = 10 kΩ and C = 100 μF. What is the time constant, in ms? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1000.00"
+  }
+}

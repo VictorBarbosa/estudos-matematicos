@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x ≠ 12, f(x) = (x² − 144)/(x − 12); para que f seja contínua em x = 12, qual deve ser f(12)?",
+    "fr": "Si x ≠ 12, f(x) = (x² − 144)/(x − 12) ; pour que f soit continue en x = 12, que doit valoir f(12) ?",
+    "en": "If x ≠ 12, f(x) = (x² − 144)/(x − 12); for f to be continuous at x = 12, what should f(12) be?"
+  },
+  "dados-calculo": {
+    "total": "24"
+  }
+}

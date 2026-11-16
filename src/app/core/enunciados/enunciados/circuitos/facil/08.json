@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um resistor de 10000 Ω está ligado a 12 V. Qual corrente o atravessa, em mA? (duas casas decimais)",
+    "fr": "Une résistance de 10000 Ω est branchée sur 12 V. Quel courant la traverse, en mA ? (deux décimales)",
+    "en": "A resistor of 10000 Ω is connected to 12 V. What current flows through it, in mA? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.20"
+  }
+}

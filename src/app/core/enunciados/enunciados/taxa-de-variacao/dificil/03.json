@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A posição é s(t) = t³ − 12t, com t ≥ 0. Em que instante ele para pela primeira vez? (duas casas decimais)",
+    "fr": "La position est s(t) = t³ − 12t, avec t ≥ 0. À quel instant s’arrête-t-il pour la première fois ? (deux décimales)",
+    "en": "The position is s(t) = t³ − 12t, with t ≥ 0. At what instant does it stop for the first time? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

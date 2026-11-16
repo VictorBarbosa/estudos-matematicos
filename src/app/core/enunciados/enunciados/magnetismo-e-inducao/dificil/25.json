@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma barra de 2 m desliza a 5 m/s sobre trilhos, num campo de 0.2 T perpendicular ao plano. Qual é a fem induzida, em V? (duas casas decimais)",
+    "fr": "Une barre de 2 m glisse à 5 m/s sur des rails, dans un champ de 0.2 T perpendiculaire au plan. Quelle est la fem induite, en V ? (deux décimales)",
+    "en": "A bar of 2 m slides at 5 m/s on rails in a field of 0.2 T perpendicular to the plane. What is the induced emf, in V? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

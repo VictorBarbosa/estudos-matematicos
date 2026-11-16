@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (2x² + 7x + 1)/(1x² + 9) quando x tende ao infinito. (duas casas decimais)",
+    "fr": "Calculez la limite de (2x² + 7x + 1)/(1x² + 9) quand x tend vers l’infini. (deux décimales)",
+    "en": "Calculate the limit of (2x² + 7x + 1)/(1x² + 9) as x tends to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

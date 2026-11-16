@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o potencial elétrico a 2 m de uma carga de 1 μC, em kV? (k = 9×10⁹; duas casas decimais)",
+    "fr": "Quel est le potentiel électrique à 2 m d’une charge de 1 μC, en kV ? (k = 9×10⁹ ; deux décimales)",
+    "en": "What is the electric potential at 2 m from a charge of 1 μC, in kV? (k = 9×10⁹; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.50"
+  }
+}

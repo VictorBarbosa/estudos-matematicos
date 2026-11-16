@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a intensidade do campo elétrico criado por uma carga de 4 μC a 0.2 m dela, em kN/C? (k = 9×10⁹; duas casas decimais)",
+    "fr": "Quelle est l’intensité du champ électrique créé par une charge de 4 μC à 0.2 m d’elle, en kN/C ? (k = 9×10⁹ ; deux décimales)",
+    "en": "What is the strength of the electric field from a charge of 4 μC at 0.2 m, in kN/C? (k = 9×10⁹; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "900.00"
+  }
+}

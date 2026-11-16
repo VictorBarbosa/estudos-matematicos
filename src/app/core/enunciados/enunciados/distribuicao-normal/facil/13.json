@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa normal de média 10 e desvio 2, qual é a proporção ABAIXO de 10? (duas casas decimais)",
+    "fr": "Dans une normale de moyenne 10 et d’écart-type 2, quelle proportion se trouve EN DESSOUS de 10 ? (deux décimales)",
+    "en": "In a normal distribution with mean 10 and standard deviation 2, what proportion lies BELOW 10? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

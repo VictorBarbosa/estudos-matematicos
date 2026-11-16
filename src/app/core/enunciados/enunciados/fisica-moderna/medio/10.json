@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Luz de 300 nm incide sobre zinco, cuja função trabalho é 4.3 eV. Qual é a energia cinética máxima dos elétrons, em eV? (hc = 1240 eV·nm; duas casas decimais)",
+    "fr": "De la lumière de 300 nm incide sur zinc, dont le travail d’extraction est de 4.3 eV. Quelle est l’énergie cinétique maximale des électrons, en eV ? (hc = 1240 eV·nm ; deux décimales)",
+    "en": "Light of 300 nm falls on zinc, whose work function is 4.3 eV. What is the maximum kinetic energy of the electrons, in eV? (hc = 1240 eV·nm; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-0.17"
+  }
+}

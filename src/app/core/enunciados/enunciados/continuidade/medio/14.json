@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual valor de k torna contínua em x = 5 a função que vale 2x + k à esquerda e 3x + 1 à direita? (duas casas decimais)",
+    "fr": "Quelle valeur de k rend continue en x = 5 la fonction qui vaut 2x + k à gauche et 3x + 1 à droite ? (deux décimales)",
+    "en": "What value of k makes continuous at x = 5 the function equal to 2x + k on the left and 3x + 1 on the right? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

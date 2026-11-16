@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Sabendo que a integral de f de 0 a 5 vale 20 e a de 5 a 10 vale 30, quanto vale a integral de 0 a 10?",
+    "fr": "Sachant que l’intégrale de f de 0 à 5 vaut 20 et celle de 5 à 10 vaut 30, combien vaut l’intégrale de 0 à 10 ?",
+    "en": "Knowing that the integral of f from 0 to 5 is 20 and from 5 to 10 is 30, what is the integral from 0 to 10?"
+  },
+  "dados-calculo": {
+    "total": "50"
+  }
+}

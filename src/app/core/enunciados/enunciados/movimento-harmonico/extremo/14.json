@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo em MHS tem período de 3 s e amplitude 2 m. Qual é a velocidade máxima, em m/s? (duas casas decimais)",
+    "fr": "Un corps en MHS a une période de 3 s et une amplitude 2 m. Quelle est la vitesse maximale, en m/s ? (deux décimales)",
+    "en": "A body in SHM has period 3 s and amplitude 2 m. What is the maximum speed, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.19"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um pêndulo de comprimento 9 m oscila com amplitude pequena. Qual é a frequência, em Hz? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un pendule de longueur 9 m oscille avec une petite amplitude. Quelle est la fréquence, en Hz ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A pendulum of length 9 m oscillates with small amplitude. What is the frequency, in Hz? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.17"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de 8 kg a 5 m/s é parado em 0.5 s. Qual é a força média, em N? (duas casas decimais)",
+    "fr": "Un corps de 8 kg à 5 m/s est arrêté en 0.5 s. Quelle est la force moyenne, en N ? (deux décimales)",
+    "en": "A body of 8 kg at 5 m/s is stopped in 0.5 s. What is the average force, in N? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "80.00"
+  }
+}

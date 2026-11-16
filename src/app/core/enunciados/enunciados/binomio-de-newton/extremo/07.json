@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o coeficiente de x^5 no desenvolvimento de (x + 2)^7?",
+    "fr": "Quel est le coefficient de x^5 dans le développement de (x + 2)^7 ?",
+    "en": "What is the coefficient of x^5 in the expansion of (x + 2)^7?"
+  },
+  "dados-calculo": {
+    "total": "84"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois estágios têm massas estruturais iguais de 10 t e propelente de 90 t cada, com exaustão 3000 m/s. Qual é o delta-v TOTAL, em km/s? (duas casas decimais)",
+    "fr": "Deux étages ont des masses structurelles égales de 10 t et du propergol de 90 t chacune, avec une éjection 3000 m/s. Quel est le delta-v TOTAL, en km/s ? (deux décimales)",
+    "en": "Two stages have equal structural masses of 10 t and propellant 90 t each, with exhaust 3000 m/s. What is the TOTAL delta-v, in km/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "13.82"
+  }
+}

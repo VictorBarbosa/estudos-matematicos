@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral imprópria de 3/x² de 1 ao infinito. (duas casas decimais)",
+    "fr": "Calculez l’intégrale impropre de 3/x² de 1 à l’infini. (deux décimales)",
+    "en": "Calculate the improper integral of 3/x² from 1 to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um aro de 8 kg e 0.5 m de raio gira a 3 rad/s em torno do eixo. Qual é o momento angular, em kg·m²/s? (duas casas decimais)",
+    "fr": "Un anneau de 8 kg et 0.5 m de rayon tourne à 3 rad/s autour de l’axe. Quel est le moment cinétique, en kg·m²/s ? (deux décimales)",
+    "en": "A hoop of 8 kg and radius 0.5 m spins at 3 rad/s about its axis. What is the angular momentum, in kg·m²/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

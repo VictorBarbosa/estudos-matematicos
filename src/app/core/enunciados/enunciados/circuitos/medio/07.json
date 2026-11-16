@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma corrente de 0.2 A atravessa um resistor de 1000 Ω. Quanta potência ele dissipa, em W? (duas casas decimais)",
+    "fr": "Un courant de 0.2 A traverse une résistance de 1000 Ω. Quelle puissance dissipe-t-elle, en W ? (deux décimales)",
+    "en": "A current of 0.2 A flows through a resistor of 1000 Ω. How much power does it dissipate, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "40.00"
+  }
+}

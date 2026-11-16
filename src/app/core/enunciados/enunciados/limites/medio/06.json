@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x³ − 125)/(x − 5) quando x tende a 5.",
+    "fr": "Calculez la limite de (x³ − 125)/(x − 5) quand x tend vers 5.",
+    "en": "Calculate the limit of (x³ − 125)/(x − 5) as x tends to 5."
+  },
+  "dados-calculo": {
+    "total": "75"
+  }
+}

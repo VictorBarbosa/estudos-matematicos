@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função trabalho do cobre é 4.7 eV. Qual é o MAIOR comprimento de onda que ainda arranca elétrons, em nm? (hc = 1240 eV·nm; duas casas decimais)",
+    "fr": "Le travail d’extraction du cuivre est de 4.7 eV. Quelle est la PLUS GRANDE longueur d’onde qui arrache encore des électrons, en nm ? (hc = 1240 eV·nm ; deux décimales)",
+    "en": "The work function of copper is 4.7 eV. What is the LARGEST wavelength that still ejects electrons, in nm? (hc = 1240 eV·nm; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "263.83"
+  }
+}

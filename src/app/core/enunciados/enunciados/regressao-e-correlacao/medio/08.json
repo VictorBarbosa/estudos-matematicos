@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para os pares (0, 0), (2, 4) e (4, 8), qual é o coeficiente de correlação de Pearson? (duas casas decimais)",
+    "fr": "Pour les paires (0, 0), (2, 4) et (4, 8), quel est le coefficient de corrélation de Pearson ? (deux décimales)",
+    "en": "For the pairs (0, 0), (2, 4) and (4, 8), what is Pearson’s correlation coefficient? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de 4 kg move-se a 15 m/s. Qual é o momento linear, em kg·m/s?",
+    "fr": "Un corps de 4 kg se déplace à 15 m/s. Quelle est sa quantité de mouvement, en kg·m/s ?",
+    "en": "A body of 4 kg moves at 15 m/s. What is its linear momentum, in kg·m/s?"
+  },
+  "dados-calculo": {
+    "total": "60"
+  }
+}

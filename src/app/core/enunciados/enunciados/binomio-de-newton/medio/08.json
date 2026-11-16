@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o coeficiente de x^4 no desenvolvimento de (x + 1)^9?",
+    "fr": "Quel est le coefficient de x^4 dans le développement de (x + 1)^9 ?",
+    "en": "What is the coefficient of x^4 in the expansion of (x + 1)^9?"
+  },
+  "dados-calculo": {
+    "total": "126"
+  }
+}

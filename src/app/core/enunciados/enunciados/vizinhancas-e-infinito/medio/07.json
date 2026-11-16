@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (8x + 8)/(4x + 4) quando x tende ao infinito. (duas casas decimais)",
+    "fr": "Calculez la limite de (8x + 8)/(4x + 4) quand x tend vers l’infini. (deux décimales)",
+    "en": "Calculate the limit of (8x + 8)/(4x + 4) as x tends to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

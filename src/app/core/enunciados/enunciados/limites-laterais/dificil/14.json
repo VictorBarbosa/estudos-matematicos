@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na função f(x) = |x − 3|/(x − 3), qual é o limite em x = 3 pela ESQUERDA?",
+    "fr": "Dans la fonction f(x) = |x − 3|/(x − 3), quelle est la limite en x = 3 à GAUCHE ?",
+    "en": "For f(x) = |x − 3|/(x − 3), what is the limit at x = 3 from the LEFT?"
+  },
+  "dados-calculo": {
+    "total": "-1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois comprimentos são medidos com incertezas de 0.3 cm e 0.4 cm. Somando os dois, qual é a incerteza do resultado, em cm? (duas casas decimais)",
+    "fr": "Deux longueurs sont mesurées avec des incertitudes de 0.3 cm et 0.4 cm. En les additionnant, quelle est l’incertitude du résultat, en cm ? (deux décimales)",
+    "en": "Two lengths are measured with uncertainties of 0.3 cm and 0.4 cm. Adding them, what is the uncertainty of the result, in cm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.70"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o campo magnético a 1 cm de um fio longo com 1 A, em μT? (μ₀ = 4π×10⁻⁷; duas casas decimais)",
+    "fr": "Quel est le champ magnétique à 1 cm d’un long fil parcouru par 1 A, en μT ? (μ₀ = 4π×10⁻⁷ ; deux décimales)",
+    "en": "What is the magnetic field at 1 cm from a long wire carrying 1 A, in μT? (μ₀ = 4π×10⁻⁷; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

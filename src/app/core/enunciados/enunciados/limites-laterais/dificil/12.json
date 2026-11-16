@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na função f(x) = |x − 1|/(x − 1), qual é o limite em x = 1 pela ESQUERDA?",
+    "fr": "Dans la fonction f(x) = |x − 1|/(x − 1), quelle est la limite en x = 1 à GAUCHE ?",
+    "en": "For f(x) = |x − 1|/(x − 1), what is the limit at x = 1 from the LEFT?"
+  },
+  "dados-calculo": {
+    "total": "-1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = x³ − 75x tem um MÍNIMO local. Em que valor de x ele ocorre? (duas casas decimais)",
+    "fr": "La fonction f(x) = x³ − 75x a un MINIMUM local. En quelle valeur de x se produit-il ? (deux décimales)",
+    "en": "The function f(x) = x³ − 75x has a local MINIMUM. At what value of x does it occur? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-5.00"
+  }
+}

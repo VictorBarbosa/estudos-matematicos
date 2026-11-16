@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor MÉDIO de f(x) = x no intervalo [0, 4]? (duas casas decimais)",
+    "fr": "Quelle est la valeur MOYENNE de f(x) = x sur [0, 4] ? (deux décimales)",
+    "en": "What is the AVERAGE value of f(x) = x on [0, 4]? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

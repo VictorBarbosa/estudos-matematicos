@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma massa de 1 kg oscila presa a uma mola de constante 100 N/m. Qual é a frequência angular, em rad/s? (duas casas decimais)",
+    "fr": "Une masse de 1 kg oscille attachée à un ressort de constante 100 N/m. Quelle est la pulsation, en rad/s ? (deux décimales)",
+    "en": "A mass of 1 kg oscillates on a spring of constant 100 N/m. What is the angular frequency, in rad/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

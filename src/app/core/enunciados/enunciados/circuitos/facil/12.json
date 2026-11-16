@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um resistor de 1000 Ω está ligado a 100 V. Quanta potência ele dissipa, em W? (duas casas decimais)",
+    "fr": "Une résistance de 1000 Ω est branchée sur 100 V. Quelle puissance dissipe-t-elle, en W ? (deux décimales)",
+    "en": "A resistor of 1000 Ω is connected to 100 V. How much power does it dissipate, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

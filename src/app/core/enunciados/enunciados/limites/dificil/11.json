@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x² − 5x)/(x − 5) quando x tende a 5, fatorando o numerador.",
+    "fr": "Calculez la limite de (x² − 5x)/(x − 5) quand x tend vers 5, en factorisant le numérateur.",
+    "en": "Calculate the limit of (x² − 5x)/(x − 5) as x tends to 5, factoring the numerator."
+  },
+  "dados-calculo": {
+    "total": "5"
+  }
+}

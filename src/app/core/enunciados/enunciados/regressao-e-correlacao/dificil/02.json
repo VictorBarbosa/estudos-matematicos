@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para os pares (1, 2), (2, 4) e (3, 6), qual é o valor PREVISTO de y quando x = 4? (duas casas decimais)",
+    "fr": "Pour les paires (1, 2), (2, 4) et (3, 6), quelle est la valeur PRÉVUE de y lorsque x = 4 ? (deux décimales)",
+    "en": "For the pairs (1, 2), (2, 4) and (3, 6), what is the PREDICTED value of y when x = 4? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

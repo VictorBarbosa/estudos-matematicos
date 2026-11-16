@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use a regra do produto e calcule f'(3) para f(x) = (x + 7)(x + 0).",
+    "fr": "Utilisez la règle du produit et calculez f'(3) pour f(x) = (x + 7)(x + 0).",
+    "en": "Use the product rule and calculate f'(3) for f(x) = (x + 7)(x + 0)."
+  },
+  "dados-calculo": {
+    "total": "13"
+  }
+}

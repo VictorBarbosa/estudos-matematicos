@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo gira sem torque externo com inércia 4 kg·m² a 5 rad/s, e a inércia cai para 2. De quanto VARIOU a energia cinética de rotação, em J? (duas casas decimais)",
+    "fr": "Un corps tourne sans couple externe avec une inertie 4 kg·m² à 5 rad/s, et l’inertie tombe à 2. De combien l’énergie cinétique de rotation a-t-elle VARIÉ, en J ? (deux décimales)",
+    "en": "A body spins with no external torque with inertia 4 kg·m² at 5 rad/s, and the inertia drops to 2. By how much did the rotational kinetic energy CHANGE, in J? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "50.00"
+  }
+}

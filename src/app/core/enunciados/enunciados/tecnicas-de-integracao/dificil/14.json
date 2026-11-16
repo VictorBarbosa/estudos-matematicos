@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de x·ln(x) de 1 a 5, usando integração por partes. (duas casas decimais)",
+    "fr": "Calculez l’intégrale de x·ln(x) de 1 à 5, par intégration par parties. (deux décimales)",
+    "en": "Calculate the integral of x·ln(x) from 1 to 5, using integration by parts. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "14.12"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Entre 5 pessoas, de quantos modos se pode formar uma fila de 2, importando a ordem?",
+    "fr": "Parmi 5 personnes, de combien de façons peut-on former une file de 2, en tenant compte de l’ordre ?",
+    "en": "Among 5 people, in how many ways can a queue of 2 be formed, where order matters?"
+  },
+  "dados-calculo": {
+    "total": "20"
+  }
+}

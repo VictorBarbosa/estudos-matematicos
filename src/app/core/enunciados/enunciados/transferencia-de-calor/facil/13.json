@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanta energia, em J, é preciso para aquecer 10 kg de água em 5 K? O calor específico é 4186 J/(kg·K). (duas casas decimais)",
+    "fr": "Quelle énergie, en J, faut-il pour chauffer 10 kg de eau de 5 K ? La chaleur massique est 4186 J/(kg·K). (deux décimales)",
+    "en": "How much energy, in J, is needed to heat 10 kg of water by 5 K? The specific heat is 4186 J/(kg·K). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "209300.00"
+  }
+}

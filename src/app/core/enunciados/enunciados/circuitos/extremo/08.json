@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma única malha tem uma bateria de 3 V e outra de 3 V em série (mesmo sentido), e resistores de 1 Ω e 2 Ω. Qual é a corrente na malha, em A? (duas casas decimais)",
+    "fr": "Une seule maille comporte une batterie de 3 V et une autre de 3 V en série (même sens), et des résistances de 1 Ω et 2 Ω. Quel est le courant dans la maille, en A ? (deux décimales)",
+    "en": "A single loop has a 3 V battery and a 3 V battery in series (same direction), and resistors of 1 Ω and 2 Ω. What is the loop current, in A? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

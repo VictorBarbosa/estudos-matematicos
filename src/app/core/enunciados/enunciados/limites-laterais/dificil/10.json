@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na função f(x) = |x − 0|/(x − 0), qual é o limite em x = 0 pela ESQUERDA?",
+    "fr": "Dans la fonction f(x) = |x − 0|/(x − 0), quelle est la limite en x = 0 à GAUCHE ?",
+    "en": "For f(x) = |x − 0|/(x − 0), what is the limit at x = 0 from the LEFT?"
+  },
+  "dados-calculo": {
+    "total": "-1"
+  }
+}

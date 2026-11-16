@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um radiador de satélite com 4 m² e emissividade 0.7 precisa dissipar 800 W no vácuo. Qual é a temperatura de equilíbrio, em K? (σ = 5,67×10⁻⁸; duas casas decimais)",
+    "fr": "Un radiateur de satellite avec 4 m² et une émissivité 0.7 doit dissiper 800 W dans le vide. Quelle est la température d’équilibre, en K ? (σ = 5,67×10⁻⁸ ; deux décimales)",
+    "en": "A satellite radiator with 4 m² and emissivity 0.7 must dissipate 800 W in vacuum. What is the equilibrium temperature, in K? (σ = 5.67×10⁻⁸; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "266.43"
+  }
+}

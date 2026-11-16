@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanta energia guarda um capacitor de 220 μF carregado a 25 V, em mJ? (duas casas decimais)",
+    "fr": "Quelle énergie emmagasine un condensateur de 220 μF chargé à 25 V, en mJ ? (deux décimales)",
+    "en": "How much energy does a 220 μF capacitor charged to 25 V store, in mJ? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "68.75"
+  }
+}

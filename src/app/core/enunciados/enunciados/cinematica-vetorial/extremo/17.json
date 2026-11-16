@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num instante, um corpo tem velocidade (2, 0) m/s e aceleração (0, 5) m/s². Qual é o raio de curvatura da trajetória, em m? (duas casas decimais)",
+    "fr": "À un instant, un corps a une vitesse (2, 0) m/s et une accélération (0, 5) m/s². Quel est le rayon de courbure de la trajectoire, en m ? (deux décimales)",
+    "en": "At an instant a body has velocity (2, 0) m/s and acceleration (0, 5) m/s². What is the radius of curvature of the path, in m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.80"
+  }
+}

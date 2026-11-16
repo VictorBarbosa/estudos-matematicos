@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Tomando C = 0, qual é o valor de F(2) para F(x) = ∫5x² dx? (duas casas decimais)",
+    "fr": "En prenant C = 0, quelle est la valeur de F(2) pour F(x) = ∫5x² dx ? (deux décimales)",
+    "en": "Taking C = 0, what is the value of F(2) for F(x) = ∫5x² dx? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "13.33"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um som chega com intensidade de 3.16e-10 W/m². Qual é o nível sonoro, em dB? (I₀ = 10⁻¹² W/m²; duas casas decimais)",
+    "fr": "Un son arrive avec une intensité de 3.16e-10 W/m². Quel est le niveau sonore, en dB ? (I₀ = 10⁻¹² W/m² ; deux décimales)",
+    "en": "A sound arrives with intensity 3.16e-10 W/m². What is the sound level, in dB? (I₀ = 10⁻¹² W/m²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "25.00"
+  }
+}

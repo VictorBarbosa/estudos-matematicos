@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de 3 kg desce uma rampa de 8 m de altura e chega com 10 m/s. Quantos joules foram perdidos por atrito? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un corps de 3 kg descend une rampe de 8 m de hauteur et arrive avec 10 m/s. Combien de joules ont été perdus par frottement ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A body of 3 kg slides down a ramp 8 m high and arrives at 10 m/s. How many joules were lost to friction? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "85.44"
+  }
+}

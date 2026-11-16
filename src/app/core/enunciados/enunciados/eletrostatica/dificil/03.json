@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Duas cargas positivas, de 1 μC e 1 μC, estão a 10 cm uma da outra. A que distância da carga de 1 μC o campo é nulo, em cm? (duas casas decimais)",
+    "fr": "Deux charges positives, de 1 μC et 1 μC, sont distantes de 10 cm. À quelle distance de la charge de 1 μC le champ est-il nul, en cm ? (deux décimales)",
+    "en": "Two positive charges, 1 μC and 1 μC, are 10 cm apart. At what distance from the 1 μC charge is the field zero, in cm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

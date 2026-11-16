@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um capacitor de 47 μF, inicialmente descarregado, é carregado por uma fonte de 9 V através de 4.7 kΩ. Qual é a constante de tempo, em ms? (duas casas decimais)",
+    "fr": "Un condensateur de 47 μF, initialement déchargé, est chargé par une source de 9 V à travers 4.7 kΩ. Quelle est la constante de temps, en ms ? (deux décimales)",
+    "en": "A capacitor of 47 μF, initially uncharged, is charged by a 9 V source through 4.7 kΩ. What is the time constant, in ms? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "220.90"
+  }
+}

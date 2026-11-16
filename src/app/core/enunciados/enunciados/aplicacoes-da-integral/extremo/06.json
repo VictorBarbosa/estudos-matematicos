@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o comprimento do arco de y = 0.5x de 0 a 4? (duas casas decimais)",
+    "fr": "Quelle est la longueur de l’arc de y = 0.5x de 0 à 4 ? (deux décimales)",
+    "en": "What is the arc length of y = 0.5x from 0 to 4? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.47"
+  }
+}

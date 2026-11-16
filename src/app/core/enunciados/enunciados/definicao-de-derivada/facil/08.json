@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a inclinação da reta secante que passa pelos pontos de abscissas 2 e 3 da função f(x) = x²? (duas casas decimais)",
+    "fr": "Quel est le coefficient directeur de la sécante qui passe par les points d’abscisses 2 et 3 de la fonction f(x) = x² ? (deux décimales)",
+    "en": "What is the slope of the secant line through the points with x-coordinates 2 and 3 of f(x) = x²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

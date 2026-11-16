@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma máquina de Carnot opera entre 800 K e 400 K. Qual é o rendimento máximo, em %? (duas casas decimais)",
+    "fr": "Une machine de Carnot fonctionne entre 800 K et 400 K. Quel est le rendement maximal, en % ? (deux décimales)",
+    "en": "A Carnot engine works between 800 K and 400 K. What is the maximum efficiency, in %? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "50.00"
+  }
+}

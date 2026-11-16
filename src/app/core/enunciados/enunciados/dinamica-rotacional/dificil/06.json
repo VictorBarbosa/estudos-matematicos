@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um disco maciço de 8 kg e 0.25 m de raio gira a 4 rad/s em torno do eixo. Qual é o momento angular, em kg·m²/s? (duas casas decimais)",
+    "fr": "Un disque plein de 8 kg et 0.25 m de rayon tourne à 4 rad/s autour de l’axe. Quel est le moment cinétique, en kg·m²/s ? (deux décimales)",
+    "en": "A solid disc of 8 kg and radius 0.25 m spins at 4 rad/s about its axis. What is the angular momentum, in kg·m²/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

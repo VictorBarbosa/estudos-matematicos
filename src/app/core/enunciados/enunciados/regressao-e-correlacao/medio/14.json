@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para os pares (1, 3), (2, 1) e (3, 2), que fração da variação de y a reta ajustada explica (r²)? (duas casas decimais)",
+    "fr": "Pour les paires (1, 3), (2, 1) et (3, 2), quelle fraction de la variation de y la droite ajustée explique-t-elle (r²) ? (deux décimales)",
+    "en": "For the pairs (1, 3), (2, 1) and (3, 2), what fraction of the variation in y does the fitted line explain (r²)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.25"
+  }
+}

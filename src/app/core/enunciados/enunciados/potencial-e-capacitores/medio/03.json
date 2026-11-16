@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Capacitores de 10 μF estão ligados em paralelo. Qual é a capacitância equivalente, em μF, de 2 deles? (duas casas decimais)",
+    "fr": "Des condensateurs de 10 μF sont branchés en paralelo. Quelle est la capacité équivalente, en μF, de 2 d’entre eux ? (deux décimales)",
+    "en": "Capacitors of 10 μF are connected in paralelo. What is the equivalent capacitance, in μF, of 2 of them? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

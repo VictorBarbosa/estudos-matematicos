@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (7x + 14)/(x + 2) quando x tende a 0. (duas casas decimais)",
+    "fr": "Calculez la limite de (7x + 14)/(x + 2) quand x tend vers 0. (deux décimales)",
+    "en": "Calculate the limit of (7x + 14)/(x + 2) as x tends to 0. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "7.00"
+  }
+}

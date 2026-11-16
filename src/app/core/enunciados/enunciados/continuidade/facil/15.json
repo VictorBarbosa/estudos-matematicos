@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x ≠ 15, f(x) = (x² − 225)/(x − 15); para que f seja contínua em x = 15, qual deve ser f(15)?",
+    "fr": "Si x ≠ 15, f(x) = (x² − 225)/(x − 15) ; pour que f soit continue en x = 15, que doit valoir f(15) ?",
+    "en": "If x ≠ 15, f(x) = (x² − 225)/(x − 15); for f to be continuous at x = 15, what should f(15) be?"
+  },
+  "dados-calculo": {
+    "total": "30"
+  }
+}

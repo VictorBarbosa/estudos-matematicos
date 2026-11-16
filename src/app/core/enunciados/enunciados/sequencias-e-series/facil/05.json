@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite do termo geral 2n/n quando n tende ao infinito. (duas casas decimais)",
+    "fr": "Calculez la limite du terme général 2n/n quand n tend vers l’infini. (deux décimales)",
+    "en": "Calculate the limit of the general term 2n/n as n tends to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

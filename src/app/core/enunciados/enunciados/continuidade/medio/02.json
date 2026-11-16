@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Pelo teorema do valor intermediário, entre quais inteiros consecutivos está a raiz de f(x) = x³ − 10? Informe o MENOR deles.",
+    "fr": "Par le théorème des valeurs intermédiaires, entre quels entiers consécutifs se trouve la racine de f(x) = x³ − 10 ? Indiquez le PLUS PETIT.",
+    "en": "By the intermediate value theorem, between which consecutive integers is the root of f(x) = x³ − 10? Give the SMALLER one."
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

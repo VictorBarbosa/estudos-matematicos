@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use a regra do quociente e calcule f'(1) para f(x) = (2x)/(x + 1). (duas casas decimais)",
+    "fr": "Utilisez la règle du quotient et calculez f'(1) pour f(x) = (2x)/(x + 1). (deux décimales)",
+    "en": "Use the quotient rule and calculate f'(1) for f(x) = (2x)/(x + 1). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

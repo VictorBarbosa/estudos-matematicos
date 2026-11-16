@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa normal de média 50 e desvio 5, que proporção fica entre 45 e 55? (duas casas decimais)",
+    "fr": "Dans une normale de moyenne 50 et d’écart-type 5, quelle proportion se trouve entre 45 et 55 ? (deux décimales)",
+    "en": "In a normal distribution with mean 50 and standard deviation 5, what proportion lies between 45 and 55? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.68"
+  }
+}

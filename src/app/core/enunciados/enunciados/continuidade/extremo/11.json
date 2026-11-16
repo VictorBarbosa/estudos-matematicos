@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para qual valor de k a função f(x) = (x² − k)/(x − 5) fica contínua em x = 5? (duas casas decimais)",
+    "fr": "Pour quelle valeur de k la fonction f(x) = (x² − k)/(x − 5) devient-elle continue en x = 5 ? (deux décimales)",
+    "en": "For what value of k does f(x) = (x² − k)/(x − 5) become continuous at x = 5? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "25.00"
+  }
+}

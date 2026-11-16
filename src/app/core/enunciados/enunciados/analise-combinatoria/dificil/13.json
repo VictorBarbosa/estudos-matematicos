@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos anagramas distintos tem a palavra PIPOCA, que tem letras repetidas?",
+    "fr": "Combien d’anagrammes distincts le mot POPCORN possède-t-il, sachant qu’il a des lettres répétées ?",
+    "en": "How many distinct anagrams does the word POPCORN have, given its repeated letters?"
+  },
+  "dados-calculo": {
+    "total": "360"
+  }
+}

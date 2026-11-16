@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma bobina de 100 espiras, cada uma com 100 cm², está perpendicular a um campo que passa de 0 T a 1 T em 1 s. Qual é o módulo da fem induzida, em V? (duas casas decimais)",
+    "fr": "Une bobine de 100 spires, chacune de 100 cm², est perpendiculaire à un champ qui passe de 0 T à 1 T en 1 s. Quel est le module de la fem induite, en V ? (deux décimales)",
+    "en": "A coil of 100 turns, each 100 cm², is perpendicular to a field changing from 0 T to 1 T in 1 s. What is the magnitude of the induced emf, in V? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

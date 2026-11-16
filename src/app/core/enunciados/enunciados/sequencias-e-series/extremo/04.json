@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o menor N de termos que garante, pelo teorema da série alternada, erro menor que 10⁻1?",
+    "fr": "Quel est le plus petit N de termes qui garantit, par le théorème des séries alternées, une erreur inférieure à 10⁻1 ?",
+    "en": "What is the smallest N of terms that guarantees, by the alternating series theorem, an error smaller than 10⁻1?"
+  },
+  "dados-calculo": {
+    "total": "10"
+  }
+}

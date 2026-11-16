@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de 1x + 1 quando x tende a 10.",
+    "fr": "Calculez la limite de 1x + 1 quand x tend vers 10.",
+    "en": "Calculate the limit of 1x + 1 as x tends to 10."
+  },
+  "dados-calculo": {
+    "total": "11"
+  }
+}

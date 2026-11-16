@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa normal de média 10 e desvio 2, duas leituras independentes são feitas. Qual é a probabilidade de AMBAS ficarem abaixo de 8? (duas casas decimais)",
+    "fr": "Dans une normale de moyenne 10 et d’écart-type 2, deux lectures indépendantes sont faites. Quelle est la probabilité que les DEUX soient en dessous de 8 ? (deux décimales)",
+    "en": "In a normal distribution with mean 10 and standard deviation 2, two independent readings are taken. What is the probability that BOTH are below 8? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.03"
+  }
+}

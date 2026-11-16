@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num dado honesto de 6 faces, qual é a probabilidade de sair o número 1? (duas casas decimais)",
+    "fr": "Avec un dé honnête à 6 faces, quelle est la probabilité d’obtenir le nombre 1 ? (deux décimales)",
+    "en": "With a fair 6-sided die, what is the probability of rolling 1? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.17"
+  }
+}

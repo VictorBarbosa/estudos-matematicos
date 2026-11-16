@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o raio de convergência R da série de potências de termo x^n/7^n? (duas casas decimais)",
+    "fr": "Quel est le rayon de convergence R de la série entière de terme x^n/7^n ? (deux décimales)",
+    "en": "What is the radius of convergence R of the power series with term x^n/7^n? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "7.00"
+  }
+}

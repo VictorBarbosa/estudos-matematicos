@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma viga de 2 m é sustentada em duas extremidades. Uma carga de 100 N está a 0.5 m da extremidade esquerda. Qual é a reação no apoio ESQUERDO, em N? (despreze o peso da viga; duas casas decimais)",
+    "fr": "Une poutre de 2 m est soutenue à ses deux extrémités. Une charge de 100 N est à 0.5 m de l’extrémité gauche. Quelle est la réaction à l’appui GAUCHE, en N ? (négligez le poids de la poutre ; deux décimales)",
+    "en": "A beam of 2 m is supported at both ends. A load of 100 N is 0.5 m from the left end. What is the reaction at the LEFT support, in N? (ignore the beam’s weight; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "75.00"
+  }
+}

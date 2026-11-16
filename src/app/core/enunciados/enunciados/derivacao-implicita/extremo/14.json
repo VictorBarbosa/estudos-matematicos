@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na curva x³ + y³ = 28, qual é dy/dx no ponto (3, 1)? (duas casas decimais)",
+    "fr": "Sur la courbe x³ + y³ = 28, quel est dy/dx au point (3, 1) ? (deux décimales)",
+    "en": "On the curve x³ + y³ = 28, what is dy/dx at the point (3, 1)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-9.00"
+  }
+}

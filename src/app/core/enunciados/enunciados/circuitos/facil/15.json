@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um resistor de 25 Ω está ligado a 5 V. Quanta potência ele dissipa, em W? (duas casas decimais)",
+    "fr": "Une résistance de 25 Ω est branchée sur 5 V. Quelle puissance dissipe-t-elle, en W ? (deux décimales)",
+    "en": "A resistor of 25 Ω is connected to 5 V. How much power does it dissipate, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

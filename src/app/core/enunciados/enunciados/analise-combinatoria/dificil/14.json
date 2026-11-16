@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos anagramas distintos tem a palavra UVA, que tem letras repetidas?",
+    "fr": "Combien d’anagrammes distincts le mot RAISIN possède-t-il, sachant qu’il a des lettres répétées ?",
+    "en": "How many distinct anagrams does the word GRAPE have, given its repeated letters?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

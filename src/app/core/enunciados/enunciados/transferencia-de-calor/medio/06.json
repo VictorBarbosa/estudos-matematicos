@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a resistência térmica de uma camada de 0.02 m de espessura e 1 m² de área? A condutividade é 205 W/(m·K). (em K/W, duas casas decimais)",
+    "fr": "Quelle est la résistance thermique d’une couche de 0.02 m d’épaisseur et 1 m² d’aire ? La conductivité est 205 W/(m·K). (en K/W, deux décimales)",
+    "en": "What is the thermal resistance of a layer 0.02 m thick with area 1 m²? The conductivity is 205 W/(m·K). (in K/W, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

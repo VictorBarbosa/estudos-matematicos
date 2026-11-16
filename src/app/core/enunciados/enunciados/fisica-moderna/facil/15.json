@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o fator de Lorentz γ para uma velocidade de 0.95c? (duas casas decimais)",
+    "fr": "Quel est le facteur de Lorentz γ pour une vitesse de 0.95c ? (deux décimales)",
+    "en": "What is the Lorentz factor γ for a speed of 0.95c? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.20"
+  }
+}

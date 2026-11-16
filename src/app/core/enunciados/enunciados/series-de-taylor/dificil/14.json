@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Estime, pelo resto de Lagrange, o erro máximo ao aproximar e^(0.5) com o polinômio de grau 3 em [0, 0.5], usando M = e^0.5. (duas casas decimais)",
+    "fr": "Estimez, par le reste de Lagrange, l’erreur maximale en approchant e^(0.5) par le polynôme de degré 3 sur [0, 0.5], avec M = e^0.5. (deux décimales)",
+    "en": "Estimate, by the Lagrange remainder, the maximum error when approximating e^(0.5) with the polynomial of degree 3 on [0, 0.5], using M = e^0.5. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

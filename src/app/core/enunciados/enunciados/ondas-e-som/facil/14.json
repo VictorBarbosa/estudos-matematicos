@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma onda tem comprimento de onda de 5 m e frequência de 60 Hz. Qual é a velocidade, em m/s? (duas casas decimais)",
+    "fr": "Une onde a une longueur d’onde de 5 m et une fréquence de 60 Hz. Quelle est la vitesse, en m/s ? (deux décimales)",
+    "en": "A wave has wavelength 5 m and frequency 60 Hz. What is its speed, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "300.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "De quantos modos 8 pessoas podem se sentar em 8 cadeiras em fila?",
+    "fr": "De combien de façons 8 personnes peuvent-elles s’asseoir sur 8 chaises en file ?",
+    "en": "In how many ways can 8 people sit on 8 chairs in a row?"
+  },
+  "dados-calculo": {
+    "total": "40320"
+  }
+}

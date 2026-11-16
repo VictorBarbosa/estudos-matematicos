@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Usando a definição, qual é a derivada de f(x) = √x em x = 100? (duas casas decimais)",
+    "fr": "En utilisant la définition, quelle est la dérivée de f(x) = √x en x = 100 ? (deux décimales)",
+    "en": "Using the definition, what is the derivative of f(x) = √x at x = 100? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.05"
+  }
+}

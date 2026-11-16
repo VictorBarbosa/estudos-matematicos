@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força de 10 N é aplicada a 4 m do eixo, formando 0° com o braço. Qual é o torque, em N·m? (duas casas decimais)",
+    "fr": "Une force de 10 N est appliquée à 4 m de l’axe, en formant 0° avec le bras. Quel est le couple, en N·m ? (deux décimales)",
+    "en": "A force of 10 N is applied at 4 m from the axis, making 0° with the arm. What is the torque, in N·m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

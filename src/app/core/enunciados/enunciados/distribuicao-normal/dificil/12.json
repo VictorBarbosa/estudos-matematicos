@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa normal de média 0 e desvio 1, que proporção fica a até 1 desvio(s) padrão da média? (duas casas decimais)",
+    "fr": "Dans une normale de moyenne 0 et d’écart-type 1, quelle proportion se trouve à 1 écart(s)-type(s) de la moyenne ? (deux décimales)",
+    "en": "In a normal distribution with mean 0 and standard deviation 1, what proportion lies within 1 standard deviation(s) of the mean? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.68"
+  }
+}

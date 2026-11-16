@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um elétron (energia de repouso 511 keV) se move a 0.1c. Qual é a energia cinética dele, em keV? (duas casas decimais)",
+    "fr": "Un électron (énergie au repos 511 keV) se déplace à 0.1c. Quelle est son énergie cinétique, en keV ? (deux décimales)",
+    "en": "An electron (rest energy 511 keV) moves at 0.1c. What is its kinetic energy, in keV? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.57"
+  }
+}

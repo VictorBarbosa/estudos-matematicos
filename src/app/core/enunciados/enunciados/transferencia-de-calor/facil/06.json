@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma placa de concreto tem 10 m² de área e 0.2 m de espessura, com diferença de 30 K entre as faces. A condutividade é 1.4 W/(m·K). Qual é o fluxo de calor, em W? (duas casas decimais)",
+    "fr": "Une plaque de concreto a une aire de 10 m² et une épaisseur de 0.2 m, avec une différence de 30 K entre les faces. La conductivité est 1.4 W/(m·K). Quel est le flux de chaleur, en W ? (deux décimales)",
+    "en": "A concreto plate has area 10 m² and thickness 0.2 m, with a difference of 30 K between the faces. The conductivity is 1.4 W/(m·K). What is the heat flux, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2100.00"
+  }
+}

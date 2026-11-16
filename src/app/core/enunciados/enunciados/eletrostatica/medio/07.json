@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma carga de 4 μC está num campo elétrico uniforme de 2500 N/C. Qual é o módulo da força sobre ela, em mN? (duas casas decimais)",
+    "fr": "Une charge de 4 μC se trouve dans un champ électrique uniforme de 2500 N/C. Quel est le module de la force sur elle, en mN ? (deux décimales)",
+    "en": "A charge of 4 μC is in a uniform electric field of 2500 N/C. What is the magnitude of the force on it, in mN? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

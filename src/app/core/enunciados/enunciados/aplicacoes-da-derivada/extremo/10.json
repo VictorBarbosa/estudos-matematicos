@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a área MÁXIMA de um retângulo inscrito num círculo de raio 2? (em unidades²; duas casas decimais)",
+    "fr": "Quelle est l’aire MAXIMALE d’un rectangle inscrit dans un cercle de rayon 2 ? (en unités² ; deux décimales)",
+    "en": "What is the MAXIMUM area of a rectangle inscribed in a circle of radius 2? (in units²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

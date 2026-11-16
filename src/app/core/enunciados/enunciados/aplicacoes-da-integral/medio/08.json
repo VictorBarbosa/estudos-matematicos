@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Girando a reta y = 0.5x em torno do eixo x, de 0 a 4, qual é o volume do sólido? (duas casas decimais)",
+    "fr": "En faisant tourner la droite y = 0.5x autour de l’axe x, de 0 à 4, quel est le volume du solide ? (deux décimales)",
+    "en": "Rotating the line y = 0.5x about the x-axis, from 0 to 4, what is the volume of the solid? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "16.76"
+  }
+}

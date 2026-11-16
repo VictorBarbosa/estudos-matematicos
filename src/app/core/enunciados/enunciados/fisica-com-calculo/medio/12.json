@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força F(x) = 6x (em N, x em metros) empurra um corpo de x = 0 a x = 2 m. Qual é o trabalho, em joules? (duas casas decimais)",
+    "fr": "Une force F(x) = 6x (en N, x en mètres) pousse un corps de x = 0 à x = 2 m. Quel est le travail, en joules ? (duas décimales)",
+    "en": "A force F(x) = 6x (in N, x in metres) pushes a body from x = 0 to x = 2 m. What is the work, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

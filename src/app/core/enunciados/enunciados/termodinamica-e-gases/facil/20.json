@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a pressão de 3 mol de gás ideal em 10 L a 100 °C? (em atm, duas casas decimais)",
+    "fr": "Quelle est la pression de 3 mol de gaz parfait dans 10 L à 100 °C ? (en atm, deux décimales)",
+    "en": "What is the pressure of 3 mol of ideal gas in 10 L at 100 °C? (in atm, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "9.19"
+  }
+}

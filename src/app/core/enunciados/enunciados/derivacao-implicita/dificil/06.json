@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na curva y² = 25x, qual é o valor de dy/dx no ponto (1, 5)? (duas casas decimais)",
+    "fr": "Sur la courbe y² = 25x, quelle est la valeur de dy/dx au point (1, 5) ? (deux décimales)",
+    "en": "On the curve y² = 25x, what is dy/dx at the point (1, 5)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.50"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma grandeza tem distribuição normal com média 10 e desvio padrão 2. Qual é o escore z de uma leitura de 13? (duas casas decimais)",
+    "fr": "Une grandeur a une distribution normale de moyenne 10 et d’écart-type 2. Quel est le score z d’une lecture de 13 ? (deux décimales)",
+    "en": "A quantity has a normal distribution with mean 10 and standard deviation 2. What is the z-score of a reading of 13? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.50"
+  }
+}

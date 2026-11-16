@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Somando só os 5 primeiros termos da série alternada, qual é a cota do erro dada pelo teorema? (duas casas decimais)",
+    "fr": "En sommant seulement les 5 premiers termes de la série alternée, quelle est la borne de l’erreur donnée par le théorème ? (deux décimales)",
+    "en": "Summing only the first 5 terms of the alternating series, what is the error bound given by the theorem? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.17"
+  }
+}

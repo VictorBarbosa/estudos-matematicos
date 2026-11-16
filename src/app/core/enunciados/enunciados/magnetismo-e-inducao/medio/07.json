@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma espira de 500 cm² está num campo uniforme de 0.5 T, que forma 30° com a NORMAL da espira. Qual é o fluxo magnético, em mWb? (duas casas decimais)",
+    "fr": "Une spire de 500 cm² se trouve dans un champ uniforme de 0.5 T, qui forme 30° avec la NORMALE de la spire. Quel est le flux magnétique, en mWb ? (deux décimales)",
+    "en": "A loop of 500 cm² is in a uniform field of 0.5 T, which makes 30° with the loop NORMAL. What is the magnetic flux, in mWb? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "21.65"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um tubo de 2 m fechado numa ponta ressoa com o som a 340 m/s. Qual é a frequência do 5º harmônico, em Hz? (duas casas decimais)",
+    "fr": "Un tube de 2 m fermé à une extrémité résonne avec le son à 340 m/s. Quelle est la fréquence de l’harmonique 5, en Hz ? (deux décimales)",
+    "en": "A tube of 2 m closed at one end resonates with sound at 340 m/s. What is the frequency of the 5th harmonic, in Hz? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "212.50"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (1 − cos(2x))/x² quando x tende a 0. (duas casas decimais)",
+    "fr": "Calculez la limite de (1 − cos(2x))/x² quand x tend vers 0. (deux décimales)",
+    "en": "Calculate the limit of (1 − cos(2x))/x² as x tends to 0. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

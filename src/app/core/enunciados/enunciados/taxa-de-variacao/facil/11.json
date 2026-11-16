@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A posição é s(t) = 2t + 7, com t em segundos. Qual é a velocidade, em m/s?",
+    "fr": "La position est s(t) = 2t + 7, avec t en secondes. Quelle est la vitesse, en m/s ?",
+    "en": "The position is s(t) = 2t + 7, with t in seconds. What is the velocity, in m/s?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

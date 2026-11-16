@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma corda está com tração de 64 N e densidade linear de 0.01 kg/m. Com que velocidade uma onda corre por ela, em m/s? (duas casas decimais)",
+    "fr": "Une corde est tendue avec une tension de 64 N et une densité linéique de 0.01 kg/m. À quelle vitesse une onde la parcourt-elle, en m/s ? (deux décimales)",
+    "en": "A string has tension 64 N and linear density 0.01 kg/m. At what speed does a wave travel along it, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "80.00"
+  }
+}

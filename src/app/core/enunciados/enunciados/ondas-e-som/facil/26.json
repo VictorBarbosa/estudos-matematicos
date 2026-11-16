@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma onda tem comprimento de onda de 0.34 m e frequência de 1000 Hz. Qual é a velocidade, em m/s? (duas casas decimais)",
+    "fr": "Une onde a une longueur d’onde de 0.34 m et une fréquence de 1000 Hz. Quelle est la vitesse, en m/s ? (deux décimales)",
+    "en": "A wave has wavelength 0.34 m and frequency 1000 Hz. What is its speed, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "340.00"
+  }
+}

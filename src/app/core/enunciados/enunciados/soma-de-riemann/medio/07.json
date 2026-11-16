@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Aproxime a área sob f(x) = x² no intervalo [0, 1] usando 10 retângulos com altura no ponto DIREITO. (duas casas decimais)",
+    "fr": "Approximez l’aire sous f(x) = x² sur [0, 1] avec 10 rectangles et la hauteur au point DROIT. (deux décimales)",
+    "en": "Approximate the area under f(x) = x² on [0, 1] using 10 rectangles with the RIGHT endpoint height. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.39"
+  }
+}

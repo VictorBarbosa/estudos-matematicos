@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Tomando C = 0, qual é o valor de F(1) para F(x) = ∫e^(2x) dx? (duas casas decimais)",
+    "fr": "En prenant C = 0, quelle est la valeur de F(1) pour F(x) = ∫e^(2x) dx ? (deux décimales)",
+    "en": "Taking C = 0, what is the value of F(1) for F(x) = ∫e^(2x) dx? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.19"
+  }
+}

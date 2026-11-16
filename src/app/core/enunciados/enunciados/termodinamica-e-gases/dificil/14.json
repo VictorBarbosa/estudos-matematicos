@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanta energia é preciso para aquecer 5 kg de água de 4 K? (c = 4186 J/(kg·K); duas casas decimais)",
+    "fr": "Quelle énergie faut-il pour chauffer 5 kg d’eau de 4 K ? (c = 4186 J/(kg·K) ; deux décimales)",
+    "en": "How much energy is needed to heat 5 kg of water by 4 K? (c = 4186 J/(kg·K); two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "83720.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa normal de média 100 e desvio 15, que proporção fica ABAIXO de 115? (duas casas decimais)",
+    "fr": "Dans une normale de moyenne 100 et d’écart-type 15, quelle proportion se trouve EN DESSOUS de 115 ? (deux décimales)",
+    "en": "In a normal distribution with mean 100 and standard deviation 15, what proportion lies BELOW 115? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.84"
+  }
+}

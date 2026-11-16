@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo em MHS tem amplitude 1 m e frequência angular 2 rad/s. Qual é a velocidade MÁXIMA, em m/s? (duas casas decimais)",
+    "fr": "Un corps en MHS a une amplitude 1 m et une pulsation 2 rad/s. Quelle est la vitesse MAXIMALE, en m/s ? (deux décimales)",
+    "en": "A body in SHM has amplitude 1 m and angular frequency 2 rad/s. What is the MAXIMUM speed, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

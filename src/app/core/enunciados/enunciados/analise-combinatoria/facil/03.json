@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos anagramas distintos tem a palavra SOL? (todas as letras diferentes)",
+    "fr": "Combien d’anagrammes distincts le mot SOL possède-t-il ? (toutes les lettres différentes)",
+    "en": "How many distinct anagrams does the word SUN have? (all letters different)"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

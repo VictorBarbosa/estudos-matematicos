@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a soma da série geométrica de primeiro termo 1 e razão 1/4. (duas casas decimais)",
+    "fr": "Calculez la somme de la série géométrique de premier terme 1 et de raison 1/4. (deux décimales)",
+    "en": "Calculate the sum of the geometric series with first term 1 and ratio 1/4. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.33"
+  }
+}

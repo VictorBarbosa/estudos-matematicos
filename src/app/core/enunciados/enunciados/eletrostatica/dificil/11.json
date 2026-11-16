@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma carga é multiplicada por 3, a outra por 3, e a distância é multiplicada por 3. Por quanto fica multiplicada a força? (duas casas decimais)",
+    "fr": "Une charge est multipliée par 3, l’autre par 3, et la distance est multipliée par 3. Par combien la force est-elle multipliée ? (deux décimales)",
+    "en": "One charge is multiplied by 3, the other by 3, and the distance by 3. By how much is the force multiplied? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

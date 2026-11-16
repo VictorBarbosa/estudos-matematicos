@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a pressão de 1 mol de gás ideal em 1 L a 0 °C? (em atm, duas casas decimais)",
+    "fr": "Quelle est la pression de 1 mol de gaz parfait dans 1 L à 0 °C ? (en atm, deux décimales)",
+    "en": "What is the pressure of 1 mol of ideal gas in 1 L at 0 °C? (in atm, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "22.43"
+  }
+}

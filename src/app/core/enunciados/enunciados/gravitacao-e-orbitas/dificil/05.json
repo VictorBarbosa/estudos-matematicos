@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o período orbital de um satélite a 2000 km de altitude? (use GM = 3,986×10⁵ km³/s² e R = 6371 km; em minutos, duas casas decimais)",
+    "fr": "Quelle est la période orbitale d’un satellite à 2000 km d’altitude ? (utilisez GM = 3,986×10⁵ km³/s² et R = 6371 km ; en minutes, deux décimales)",
+    "en": "What is the orbital period of a satellite at an altitude of 2000 km? (use GM = 3.986×10⁵ km³/s² and R = 6371 km; in minutes, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "127.04"
+  }
+}

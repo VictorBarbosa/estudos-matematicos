@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num choque perfeitamente elástico entre massas iguais (0.5 kg), uma bola a 20 m/s atinge a outra parada. Com que velocidade a segunda sai, em m/s?",
+    "fr": "Dans un choc parfaitement élastique entre masses égales (0.5 kg), une balle à 20 m/s heurte l’autre à l’arrêt. À quelle vitesse la seconde part-elle, en m/s ?",
+    "en": "In a perfectly elastic collision between equal masses (0.5 kg), one ball at 20 m/s hits the other at rest. At what speed does the second leave, in m/s?"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

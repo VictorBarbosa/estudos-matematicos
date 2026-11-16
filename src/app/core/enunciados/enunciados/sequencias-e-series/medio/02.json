@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Pelo teste da razão, calcule L = lim |aₙ₊₁/aₙ| para a série de termo 1/2^n. (duas casas decimais)",
+    "fr": "Par le test du rapport, calculez L = lim |aₙ₊₁/aₙ| pour la série de terme 1/2^n. (deux décimales)",
+    "en": "By the ratio test, calculate L = lim |aₙ₊₁/aₙ| for the series with term 1/2^n. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

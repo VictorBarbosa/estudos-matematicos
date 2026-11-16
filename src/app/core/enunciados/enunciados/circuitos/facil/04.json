@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um resistor de 220 Ω está ligado a 9 V. Qual corrente o atravessa, em mA? (duas casas decimais)",
+    "fr": "Une résistance de 220 Ω est branchée sur 9 V. Quel courant la traverse, en mA ? (deux décimales)",
+    "en": "A resistor of 220 Ω is connected to 9 V. What current flows through it, in mA? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "40.91"
+  }
+}

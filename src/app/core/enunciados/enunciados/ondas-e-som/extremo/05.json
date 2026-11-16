@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Duas cordas de 2 m, presas nas pontas, conduzem ondas a 400 m/s e 408 m/s. Tocadas juntas no fundamental, quantos batimentos por segundo se ouvem? (duas casas decimais)",
+    "fr": "Deux cordes de 2 m, fixées aux extrémités, conduisent des ondes à 400 m/s et 408 m/s. Jouées ensemble dans le fondamental, combien de battements par seconde entend-on ? (deux décimales)",
+    "en": "Two strings of 2 m, fixed at the ends, carry waves at 400 m/s and 408 m/s. Played together in the fundamental, how many beats per second are heard? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força constante de 10 N empurra um corpo de x = 0 a x = 3 m. Qual é o trabalho, em joules? (duas casas decimais)",
+    "fr": "Une force constante de 10 N pousse un corps de x = 0 à x = 3 m. Quel est le travail, en joules ? (deux décimales)",
+    "en": "A constant force of 10 N pushes a body from x = 0 to x = 3 m. What is the work, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "30.00"
+  }
+}

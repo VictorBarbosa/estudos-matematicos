@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de 8 kg cai de 80 m, partindo do repouso e sem atrito. Com que velocidade chega ao solo, em m/s? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un corps de 8 kg tombe de 80 m, en partant du repos et sans frottement. À quelle vitesse arrive-t-il au sol, en m/s ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A body of 8 kg falls from 80 m, starting from rest without friction. At what speed does it reach the ground, in m/s? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "39.62"
+  }
+}

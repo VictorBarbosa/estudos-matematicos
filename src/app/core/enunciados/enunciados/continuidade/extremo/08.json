@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para qual valor de k a função definida por x² + k para x < 3 e 9x para x ≥ 3 é contínua em x = 3? (duas casas decimais)",
+    "fr": "Pour quelle valeur de k la fonction définie par x² + k pour x < 3 et 9x pour x ≥ 3 est-elle continue en x = 3 ? (deux décimales)",
+    "en": "For what value of k is the function given by x² + k for x < 3 and 9x for x ≥ 3 continuous at x = 3? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "18.00"
+  }
+}

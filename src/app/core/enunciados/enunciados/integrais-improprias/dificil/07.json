@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral imprópria de 4/x^3 de 1 ao infinito, com p = 3. (duas casas decimais)",
+    "fr": "Calculez l’intégrale impropre de 4/x^3 de 1 à l’infini, avec p = 3. (deux décimales)",
+    "en": "Calculate the improper integral of 4/x^3 from 1 to infinity, with p = 3. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

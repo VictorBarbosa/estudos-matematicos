@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o limite pela DIREITA de f(x) = 6x + 1 em x = 2? (duas casas decimais)",
+    "fr": "Quelle est la limite à DROITE de f(x) = 6x + 1 en x = 2 ? (deux décimales)",
+    "en": "What is the RIGHT-hand limit of f(x) = 6x + 1 at x = 2? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "13.00"
+  }
+}

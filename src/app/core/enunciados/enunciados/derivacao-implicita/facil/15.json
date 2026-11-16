@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na curva x² + y² = 81, em que ponto do primeiro quadrante a tangente é HORIZONTAL? Informe a ordenada y.",
+    "fr": "Sur la courbe x² + y² = 81, en quel point du premier quadrant la tangente est-elle HORIZONTALE ? Indiquez l’ordonnée y.",
+    "en": "On the curve x² + y² = 81, at which first-quadrant point is the tangent HORIZONTAL? Give the y-coordinate."
+  },
+  "dados-calculo": {
+    "total": "9"
+  }
+}

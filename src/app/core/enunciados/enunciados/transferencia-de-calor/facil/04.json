@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma placa de aço tem 0.5 m² de área e 0.01 m de espessura, com diferença de 100 K entre as faces. A condutividade é 50 W/(m·K). Qual é o fluxo de calor, em W? (duas casas decimais)",
+    "fr": "Une plaque de aço a une aire de 0.5 m² et une épaisseur de 0.01 m, avec une différence de 100 K entre les faces. La conductivité est 50 W/(m·K). Quel est le flux de chaleur, en W ? (deux décimales)",
+    "en": "A aço plate has area 0.5 m² and thickness 0.01 m, with a difference of 100 K between the faces. The conductivity is 50 W/(m·K). What is the heat flux, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "250000.00"
+  }
+}

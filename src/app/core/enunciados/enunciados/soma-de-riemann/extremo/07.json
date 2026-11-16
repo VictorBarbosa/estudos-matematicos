@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Aproxime a área sob f(x) = 1/x no intervalo [1, 2] usando 8 retângulos com altura no ponto DIREITO. (duas casas decimais)",
+    "fr": "Approximez l’aire sous f(x) = 1/x sur [1, 2] avec 8 rectangles et la hauteur au point DROIT. (deux décimales)",
+    "en": "Approximate the area under f(x) = 1/x on [1, 2] using 8 rectangles with the RIGHT endpoint height. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.66"
+  }
+}

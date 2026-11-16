@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a pressão de 2 mol de gás ideal em 20 L a 25 °C? (em atm, duas casas decimais)",
+    "fr": "Quelle est la pression de 2 mol de gaz parfait dans 20 L à 25 °C ? (en atm, deux décimales)",
+    "en": "What is the pressure of 2 mol of ideal gas in 20 L at 25 °C? (in atm, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.45"
+  }
+}

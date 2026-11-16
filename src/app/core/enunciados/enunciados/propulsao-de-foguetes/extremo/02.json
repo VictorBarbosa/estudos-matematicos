@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um foguete de 100 t tem delta-v de 3 km/s. Qual é a massa final, em toneladas, com exaustão de 3000 m/s? (duas casas decimais)",
+    "fr": "Une fusée de 100 t a un delta-v de 3 km/s. Quelle est la masse finale, en tonnes, avec une éjection de 3000 m/s ? (deux décimales)",
+    "en": "A rocket of 100 t has a delta-v of 3 km/s. What is the final mass, in tonnes, with exhaust at 3000 m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "36.79"
+  }
+}

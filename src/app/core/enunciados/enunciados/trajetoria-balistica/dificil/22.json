@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um projétil é lançado a 8 m/s formando 0° com a horizontal, de uma altura de 3 m. Qual é o alcance horizontal, em m? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un projectile est lancé à 8 m/s en formant 0° avec l’horizontale, depuis une hauteur de 3 m. Quelle est la portée horizontale, en m ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A projectile is launched at 8 m/s making 0° with the horizontal, from a height of 3 m. What is the horizontal range, in m? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.26"
+  }
+}

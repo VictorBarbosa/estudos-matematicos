@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use a regra da cadeia e calcule f'(4) para f(x) = (2x + 3)².",
+    "fr": "Utilisez la règle de la chaîne et calculez f'(4) pour f(x) = (2x + 3)².",
+    "en": "Use the chain rule and calculate f'(4) for f(x) = (2x + 3)²."
+  },
+  "dados-calculo": {
+    "total": "44"
+  }
+}

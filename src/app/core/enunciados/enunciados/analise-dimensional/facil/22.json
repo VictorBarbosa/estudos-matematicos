@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos litros há em 10 m³?",
+    "fr": "Combien de litres y a-t-il dans 10 m³ ?",
+    "en": "How many litres are there in 10 m³?"
+  },
+  "dados-calculo": {
+    "total": "10000"
+  }
+}

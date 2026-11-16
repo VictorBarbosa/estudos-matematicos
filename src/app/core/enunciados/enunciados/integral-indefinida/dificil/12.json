@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor da constante C, sabendo que F(3) = 18 para a primitiva de f(x) = 2x²? (duas casas decimais)",
+    "fr": "Quelle est la valeur de la constante C, sachant que F(3) = 18 pour la primitive de f(x) = 2x² ? (deux décimales)",
+    "en": "What is the value of the constant C, knowing that F(3) = 18 for the antiderivative of f(x) = 2x²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

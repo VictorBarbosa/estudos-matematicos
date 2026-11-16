@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Converta 20 m/s para km/h. (duas casas decimais)",
+    "fr": "Convertissez 20 m/s en km/h. (deux décimales)",
+    "en": "Convert 20 m/s to km/h. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "72.00"
+  }
+}

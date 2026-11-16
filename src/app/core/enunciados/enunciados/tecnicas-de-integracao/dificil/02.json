@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de x·e^x de 0 a 1, usando integração por partes. (duas casas decimais)",
+    "fr": "Calculez l’intégrale de x·e^x de 0 à 1, par intégration par parties. (deux décimales)",
+    "en": "Calculate the integral of x·e^x from 0 to 1, using integration by parts. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

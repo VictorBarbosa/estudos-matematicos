@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um bloco de 10 kg repousa num plano inclinado de 30°. Qual é a força normal, em N? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un bloc de 10 kg repose sur un plan incliné de 30°. Quelle est la force normale, en N ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A block of 10 kg rests on an incline of 30°. What is the normal force, in N? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "84.96"
+  }
+}

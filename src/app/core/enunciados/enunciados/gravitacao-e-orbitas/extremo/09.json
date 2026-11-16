@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um satélite está a 7 mil km do centro da Terra e passa a 14 mil km, na mesma órbita elíptica. Se a velocidade era 7.5 km/s, qual é a nova velocidade? (duas casas decimais)",
+    "fr": "Un satellite est à 7 mille km du centre de la Terre et passe à 14 mille km, sur la même orbite elliptique. Si la vitesse était 7.5 km/s, quelle est la nouvelle vitesse ? (deux décimales)",
+    "en": "A satellite is 7 thousand km from Earth’s centre and moves to 14 thousand km on the same elliptical orbit. If the speed was 7.5 km/s, what is the new speed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.75"
+  }
+}

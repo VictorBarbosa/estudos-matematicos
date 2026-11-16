@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um disco de momento de inércia 4 kg·m² gira a 1.5 rad/s. Qual é o momento angular, em kg·m²/s? (duas casas decimais)",
+    "fr": "Un disque de moment d’inertie 4 kg·m² tourne à 1.5 rad/s. Quel est le moment cinétique, en kg·m²/s ? (deux décimales)",
+    "en": "A disc with moment of inertia 4 kg·m² spins at 1.5 rad/s. What is the angular momentum, in kg·m²/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

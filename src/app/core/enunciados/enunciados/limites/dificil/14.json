@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x² − 4x)/(x − 4) quando x tende a 4, fatorando o numerador.",
+    "fr": "Calculez la limite de (x² − 4x)/(x − 4) quand x tend vers 4, en factorisant le numérateur.",
+    "en": "Calculate the limit of (x² − 4x)/(x − 4) as x tends to 4, factoring the numerator."
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

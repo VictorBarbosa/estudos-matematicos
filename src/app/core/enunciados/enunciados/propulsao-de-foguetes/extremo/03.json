@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um foguete de 50 t tem delta-v de 5 km/s. Qual é a massa final, em toneladas, com exaustão de 2500 m/s? (duas casas decimais)",
+    "fr": "Une fusée de 50 t a un delta-v de 5 km/s. Quelle est la masse finale, en tonnes, avec une éjection de 2500 m/s ? (deux décimales)",
+    "en": "A rocket of 50 t has a delta-v of 5 km/s. What is the final mass, in tonnes, with exhaust at 2500 m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.77"
+  }
+}

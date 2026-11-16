@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o coeficiente de x^8 no desenvolvimento de (x + 2)^10?",
+    "fr": "Quel est le coefficient de x^8 dans le développement de (x + 2)^10 ?",
+    "en": "What is the coefficient of x^8 in the expansion of (x + 2)^10?"
+  },
+  "dados-calculo": {
+    "total": "180"
+  }
+}

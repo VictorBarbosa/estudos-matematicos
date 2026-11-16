@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A posição de um corpo é s(t) = 2t², com t em segundos. Qual é a velocidade em t = 1 s, em m/s?",
+    "fr": "La position d’un corps est s(t) = 2t², avec t en secondes. Quelle est la vitesse en t = 1 s, en m/s ?",
+    "en": "A body’s position is s(t) = 2t², with t in seconds. What is the velocity at t = 1 s, in m/s?"
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

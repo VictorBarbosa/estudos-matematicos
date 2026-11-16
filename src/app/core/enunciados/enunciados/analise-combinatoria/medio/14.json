@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Entre 9 pessoas, de quantos modos se pode formar uma fila de 3, importando a ordem?",
+    "fr": "Parmi 9 personnes, de combien de façons peut-on former une file de 3, en tenant compte de l’ordre ?",
+    "en": "Among 9 people, in how many ways can a queue of 3 be formed, where order matters?"
+  },
+  "dados-calculo": {
+    "total": "504"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um bloco de 10 kg e densidade 500 kg/m³ está submerso em água. Que força vertical é necessária para mantê-lo parado, em N? (ρ = 1000 kg/m³, g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un bloc de 10 kg et de masse volumique 500 kg/m³ est immergé dans l’eau. Quelle force verticale faut-il pour le maintenir immobile, en N ? (ρ = 1000 kg/m³, g = 9,81 m/s² ; deux décimales)",
+    "en": "A block of 10 kg and density 500 kg/m³ is submerged in water. What vertical force is needed to hold it in place, in N? (ρ = 1000 kg/m³, g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "98.10"
+  }
+}

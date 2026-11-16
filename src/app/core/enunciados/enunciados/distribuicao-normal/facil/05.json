@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma grandeza tem distribuição normal com média 200 e desvio padrão 20. Qual é o escore z de uma leitura de 240? (duas casas decimais)",
+    "fr": "Une grandeur a une distribution normale de moyenne 200 et d’écart-type 20. Quel est le score z d’une lecture de 240 ? (deux décimales)",
+    "en": "A quantity has a normal distribution with mean 200 and standard deviation 20. What is the z-score of a reading of 240? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor MÉDIO de f(x) = x² no intervalo [0, 15]? (duas casas decimais)",
+    "fr": "Quelle est la valeur MOYENNE de f(x) = x² sur [0, 15] ? (deux décimales)",
+    "en": "What is the AVERAGE value of f(x) = x² on [0, 15]? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "75.00"
+  }
+}

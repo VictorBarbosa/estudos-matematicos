@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de 5 no intervalo de 1 a 4.",
+    "fr": "Calculez l’intégrale de 5 sur l’intervalle de 1 à 4.",
+    "en": "Calculate the integral of 5 from 1 to 4."
+  },
+  "dados-calculo": {
+    "total": "15.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive f(x) = 4x² + 3x + 7 e calcule f'(2).",
+    "fr": "Dérivez f(x) = 4x² + 3x + 7 et calculez f'(2).",
+    "en": "Differentiate f(x) = 4x² + 3x + 7 and calculate f'(2)."
+  },
+  "dados-calculo": {
+    "total": "19"
+  }
+}

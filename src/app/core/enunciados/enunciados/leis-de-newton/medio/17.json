@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um bloco de 5 kg desliza num plano de 45° com coeficiente de atrito 0.3. Qual é a aceleração, em m/s²? (duas casas decimais)",
+    "fr": "Un bloc de 5 kg glisse sur un plan de 45° avec un coefficient de frottement 0.3. Quelle est l’accélération, en m/s² ? (deux décimales)",
+    "en": "A block of 5 kg slides on a plane of 45° with friction coefficient 0.3. What is the acceleration, in m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.86"
+  }
+}

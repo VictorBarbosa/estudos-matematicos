@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use o Teorema Fundamental para calcular a integral de x² de 0 a 12. (duas casas decimais)",
+    "fr": "Utilisez le théorème fondamental pour calculer l’intégrale de x² de 0 à 12. (deux décimales)",
+    "en": "Use the Fundamental Theorem to calculate the integral of x² from 0 to 12. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "576.00"
+  }
+}

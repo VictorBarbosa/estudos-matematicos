@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (6x² + 1)/(x² + 2) quando x tende ao infinito: é o valor que torna a função contínua \"no infinito\". (duas casas decimais)",
+    "fr": "Calculez la limite de (6x² + 1)/(x² + 2) quand x tend vers l’infini : c’est la valeur qui rend la fonction continue « à l’infini ». (deux décimales)",
+    "en": "Calculate the limit of (6x² + 1)/(x² + 2) as x tends to infinity: it is the value making the function continuous \"at infinity\". (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

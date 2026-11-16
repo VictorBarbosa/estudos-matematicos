@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um pêndulo simples tem comprimento de 0.5 m. Qual é o período de oscilação, em s? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un pendule simple a une longueur de 0.5 m. Quelle est la période d’oscillation, en s ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A simple pendulum is 0.5 m long. What is its period of oscillation, in s? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.42"
+  }
+}

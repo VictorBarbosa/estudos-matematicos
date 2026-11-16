@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na curva x² + xy + y² = 7, qual é dy/dx no ponto (2, 1)? (duas casas decimais)",
+    "fr": "Sur la courbe x² + xy + y² = 7, quel est dy/dx au point (2, 1) ? (deux décimales)",
+    "en": "On the curve x² + xy + y² = 7, what is dy/dx at the point (2, 1)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-1.25"
+  }
+}

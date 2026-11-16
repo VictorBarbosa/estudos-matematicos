@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral imprópria de 1/x^4 de 1 ao infinito, com p = 4. (duas casas decimais)",
+    "fr": "Calculez l’intégrale impropre de 1/x^4 de 1 à l’infini, avec p = 4. (deux décimales)",
+    "en": "Calculate the improper integral of 1/x^4 from 1 to infinity, with p = 4. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.33"
+  }
+}

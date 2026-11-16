@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com coeficiente de atrito estático 0.1, a partir de que ângulo de inclinação o bloco começa a deslizar? (em graus, duas casas decimais)",
+    "fr": "Avec un coefficient de frottement statique 0.1, à partir de quel angle d’inclinaison le bloc commence-t-il à glisser ? (en degrés, deux décimales)",
+    "en": "With static friction coefficient 0.1, from what angle of inclination does the block start to slide? (in degrees, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.71"
+  }
+}

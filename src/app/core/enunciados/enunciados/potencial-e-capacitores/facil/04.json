@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um capacitor de 100 μF é ligado a uma bateria de 9 V. Qual carga ele armazena, em μC? (duas casas decimais)",
+    "fr": "Un condensateur de 100 μF est branché sur une batterie de 9 V. Quelle charge stocke-t-il, en μC ? (deux décimales)",
+    "en": "A capacitor of 100 μF is connected to a 9 V battery. What charge does it store, in μC? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "900.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para os pares (1, 2), (3, 5), (5, 8) e (7, 10), qual é a inclinação da reta de mínimos quadrados? (duas casas decimais)",
+    "fr": "Pour les paires (1, 2), (3, 5), (5, 8) et (7, 10), quel est le coefficient directeur de la droite des moindres carrés ? (deux décimales)",
+    "en": "For the pairs (1, 2), (3, 5), (5, 8) and (7, 10), what is the slope of the least-squares line? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.35"
+  }
+}

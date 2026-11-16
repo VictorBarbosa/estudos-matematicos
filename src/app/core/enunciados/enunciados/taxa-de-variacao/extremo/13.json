@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma escada de 13 m escorrega: o pé se afasta da parede a 1 m/s. A que taxa o topo desce quando o pé está a 12 m da parede? (em m/s, duas casas decimais)",
+    "fr": "Une échelle de 13 m glisse : le pied s’éloigne du mur à 1 m/s. À quel taux le haut descend-il quand le pied est à 12 m du mur ? (en m/s, duas casas decimais)",
+    "en": "A 13 m ladder slides: the foot moves away from the wall at 1 m/s. At what rate does the top descend when the foot is 12 m from the wall? (in m/s, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.40"
+  }
+}

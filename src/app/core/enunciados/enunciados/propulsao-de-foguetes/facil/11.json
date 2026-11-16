@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um motor tem velocidade de exaustão de 2000 m/s. Qual é o impulso específico, em segundos? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un moteur a une vitesse d’éjection de 2000 m/s. Quel est son impulsion spécifique, en secondes ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "An engine has exhaust velocity 2000 m/s. What is its specific impulse, in seconds? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "203.87"
+  }
+}

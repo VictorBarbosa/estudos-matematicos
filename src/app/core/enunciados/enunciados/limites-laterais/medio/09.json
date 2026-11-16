@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 2, f(x) = 3x + 0; se x ≥ 2, f(x) = 5x + 1. Qual é o limite pela DIREITA em x = 2? (duas casas decimais)",
+    "fr": "Si x < 2, f(x) = 3x + 0 ; si x ≥ 2, f(x) = 5x + 1. Quelle est la limite à DROITE en x = 2 ? (deux décimales)",
+    "en": "If x < 2, f(x) = 3x + 0; if x ≥ 2, f(x) = 5x + 1. What is the RIGHT-hand limit at x = 2? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "11.00"
+  }
+}

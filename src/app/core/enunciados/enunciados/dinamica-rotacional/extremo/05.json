@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um cilindro maciço rola sem deslizar do repouso, descendo 0.5 m de desnível. Qual é a velocidade do centro de massa no fim, em m/s? (duas casas decimais)",
+    "fr": "Un cylindre plein roule sans glisser depuis le repos, en descendant 0.5 m de dénivelé. Quelle est la vitesse du centre de masse à la fin, en m/s ? (deux décimales)",
+    "en": "A solid cylinder rolls without slipping from rest, descending 0.5 m. What is the centre-of-mass speed at the end, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.56"
+  }
+}

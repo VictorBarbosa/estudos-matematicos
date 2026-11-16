@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (6x + 0)/(3x + 1) quando x tende ao infinito. (duas casas decimais)",
+    "fr": "Calculez la limite de (6x + 0)/(3x + 1) quand x tend vers l’infini. (deux décimales)",
+    "en": "Calculate the limit of (6x + 0)/(3x + 1) as x tends to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

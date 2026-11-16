@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um torque de 6 N·m age sobre um corpo de momento de inércia 3 kg·m². Qual é a aceleração angular, em rad/s²? (duas casas decimais)",
+    "fr": "Un couple de 6 N·m agit sur un corps de moment d’inertie 3 kg·m². Quelle est l’accélération angulaire, en rad/s² ? (deux décimales)",
+    "en": "A torque of 6 N·m acts on a body with moment of inertia 3 kg·m². What is the angular acceleration, in rad/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

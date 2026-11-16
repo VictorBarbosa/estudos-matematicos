@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma partícula de carga 1 μC atravessa a 1000 m/s um campo de 1 T, formando 90° com ele. Qual é o módulo da força magnética, em mN? (duas casas decimais)",
+    "fr": "Une particule de charge 1 μC traverse à 1000 m/s un champ de 1 T, en formant 90° avec lui. Quel est le module de la force magnétique, en mN ? (deux décimales)",
+    "en": "A particle of charge 1 μC crosses at 1000 m/s a field of 1 T, making 90° with it. What is the magnitude of the magnetic force, in mN? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

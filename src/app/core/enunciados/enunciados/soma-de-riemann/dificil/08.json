@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Aproxime a área sob f(x) = 5x + 2 no intervalo [0, 2] usando 2 retângulos com altura no ponto DIREITO. (duas casas decimais)",
+    "fr": "Approximez l’aire sous f(x) = 5x + 2 sur [0, 2] avec 2 rectangles et la hauteur au point DROIT. (deux décimales)",
+    "en": "Approximate the area under f(x) = 5x + 2 on [0, 2] using 2 rectangles with the RIGHT endpoint height. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "19.00"
+  }
+}

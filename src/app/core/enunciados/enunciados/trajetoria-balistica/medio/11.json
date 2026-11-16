@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um projétil é lançado a 30 m/s formando 60° com a horizontal. Qual é a componente HORIZONTAL da velocidade inicial, em m/s? (duas casas decimais)",
+    "fr": "Un projectile est lancé à 30 m/s en formant 60° avec l’horizontale. Quelle est la composante HORIZONTALE de la vitesse initiale, en m/s ? (deux décimales)",
+    "en": "A projectile is launched at 30 m/s making 60° with the horizontal. What is the HORIZONTAL component of the initial velocity, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "15.00"
+  }
+}

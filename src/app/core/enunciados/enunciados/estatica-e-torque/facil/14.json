@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma alavanca tem 4 m de um lado e 8 m do outro. Que força do lado 8 equilibra 50 N aplicados do lado 4? (duas casas decimais)",
+    "fr": "Un levier a 4 m d’un côté et 8 m de l’autre. Quelle force du côté 8 équilibre 50 N appliqués du côté 4 ? (deux décimales)",
+    "en": "A lever has 4 m on one side and 8 m on the other. What force on the 8 side balances 50 N applied on the 4 side? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "25.00"
+  }
+}

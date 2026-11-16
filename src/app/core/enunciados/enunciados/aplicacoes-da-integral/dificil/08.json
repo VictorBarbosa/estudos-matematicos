@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a área entre y = 4 e y = x² no intervalo de −1 a 1? (duas casas decimais)",
+    "fr": "Quelle est l’aire entre y = 4 et y = x² sur l’intervalle de −1 à 1 ? (deux décimales)",
+    "en": "What is the area between y = 4 and y = x² on the interval from −1 to 1? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "7.33"
+  }
+}

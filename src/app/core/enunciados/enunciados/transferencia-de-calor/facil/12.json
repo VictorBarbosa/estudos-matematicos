@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanta energia, em J, é preciso para aquecer 3 kg de cobre em 15 K? O calor específico é 385 J/(kg·K). (duas casas decimais)",
+    "fr": "Quelle énergie, en J, faut-il pour chauffer 3 kg de cuivre de 15 K ? La chaleur massique est 385 J/(kg·K). (deux décimales)",
+    "en": "How much energy, in J, is needed to heat 3 kg of copper by 15 K? The specific heat is 385 J/(kg·K). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "17325.00"
+  }
+}

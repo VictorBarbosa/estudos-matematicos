@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resistores de 100 Ω estão ligados em paralelo. Qual é a resistência equivalente, em Ω, de 5 deles? (duas casas decimais)",
+    "fr": "Des résistances de 100 Ω sont branchées en paralelo. Quelle est la résistance équivalente, en Ω, de 5 d’entre elles ? (deux décimales)",
+    "en": "Resistors of 100 Ω are connected in paralelo. What is the equivalent resistance, in Ω, of 5 of them? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

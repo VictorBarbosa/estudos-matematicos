@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive f(x) = 7x² + 9x e informe o coeficiente de x na derivada.",
+    "fr": "Dérivez f(x) = 7x² + 9x et indiquez le coefficient de x dans la dérivée.",
+    "en": "Differentiate f(x) = 7x² + 9x and give the coefficient of x in the derivative."
+  },
+  "dados-calculo": {
+    "total": "9"
+  }
+}

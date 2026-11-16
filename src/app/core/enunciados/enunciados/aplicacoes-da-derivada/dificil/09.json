@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O lado de um quadrado cresce 2 cm/s. A que taxa a ÁREA cresce quando o lado mede 5 cm? (em cm²/s, duas casas decimais)",
+    "fr": "Le côté d’un carré croît de 2 cm/s. À quel taux l’AIRE croît-elle quand le côté mesure 5 cm ? (en cm²/s, deux décimales)",
+    "en": "The side of a square grows 2 cm/s. At what rate is the AREA growing when the side is 5 cm? (in cm²/s, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

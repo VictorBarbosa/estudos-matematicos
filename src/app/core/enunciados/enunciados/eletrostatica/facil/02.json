@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Duas cargas pontuais de 1 μC e 1 μC estão a 1 m uma da outra. Qual é o módulo da força elétrica, em N? (k = 9×10⁹; duas casas decimais)",
+    "fr": "Deux charges ponctuelles de 1 μC et 1 μC sont à 1 m l’une de l’autre. Quel est le module de la force électrique, en N ? (k = 9×10⁹ ; deux décimales)",
+    "en": "Two point charges of 1 μC and 1 μC are 1 m apart. What is the magnitude of the electric force, in N? (k = 9×10⁹; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.01"
+  }
+}

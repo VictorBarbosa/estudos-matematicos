@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (5x + 2)/(1x + 4) quando x tende a 0. (duas casas decimais)",
+    "fr": "Calculez la limite de (5x + 2)/(1x + 4) quand x tend vers 0. (deux décimales)",
+    "en": "Calculate the limit of (5x + 2)/(1x + 4) as x tends to 0. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

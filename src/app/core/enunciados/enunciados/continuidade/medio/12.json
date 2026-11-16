@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual valor de k torna contínua em x = 4 a função que vale 3x + k à esquerda e 1x + 0 à direita? (duas casas decimais)",
+    "fr": "Quelle valeur de k rend continue en x = 4 la fonction qui vaut 3x + k à gauche et 1x + 0 à droite ? (deux décimales)",
+    "en": "What value of k makes continuous at x = 4 the function equal to 3x + k on the left and 1x + 0 on the right? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-8.00"
+  }
+}

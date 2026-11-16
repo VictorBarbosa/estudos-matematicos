@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Duas cargas de 5 μC estão nos vértices opostos de um retângulo de 3 cm por 4 cm. Qual é o módulo da força entre elas, em N? (k = 9×10⁹; duas casas decimais)",
+    "fr": "Deux charges de 5 μC sont aux sommets opposés d’un rectangle de 3 cm sur 4 cm. Quel est le module de la force entre elles, en N ? (k = 9×10⁹ ; deux décimales)",
+    "en": "Two charges of 5 μC sit at opposite corners of a rectangle 3 cm by 4 cm. What is the magnitude of the force between them, in N? (k = 9×10⁹; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "90.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de 3x + 3 de 0 a 2. (duas casas decimais)",
+    "fr": "Calculez l’intégrale de 3x + 3 de 0 à 2. (deux décimales)",
+    "en": "Calculate the integral of 3x + 3 from 0 to 2. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

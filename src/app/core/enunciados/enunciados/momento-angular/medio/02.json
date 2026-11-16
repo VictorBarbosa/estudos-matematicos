@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma partícula de 2 kg passa a 4 m de um ponto, com velocidade de 3 m/s formando 90 graus com o raio. Qual é o módulo do momento angular, em kg·m²/s? (duas casas decimais)",
+    "fr": "Une particule de 2 kg passe à 4 m d’un point, avec une vitesse de 3 m/s formant 90 degrés avec le rayon. Quel est le module du moment cinétique, en kg·m²/s ? (deux décimales)",
+    "en": "A particle of 2 kg passes 4 m from a point, with speed 3 m/s at 90 degrees to the radius. What is the magnitude of the angular momentum, in kg·m²/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "24.00"
+  }
+}

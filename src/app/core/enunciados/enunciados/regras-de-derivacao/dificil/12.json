@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive f(x) = x³ + 6x² + 1x e informe o coeficiente de x² na derivada.",
+    "fr": "Dérivez f(x) = x³ + 6x² + 1x et indiquez le coefficient de x² dans la dérivée.",
+    "en": "Differentiate f(x) = x³ + 6x² + 1x and give the coefficient of x² in the derivative."
+  },
+  "dados-calculo": {
+    "total": "18"
+  }
+}

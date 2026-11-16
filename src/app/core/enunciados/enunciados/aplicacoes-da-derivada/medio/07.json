@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Esta função tem dois pontos críticos: f(x) = x³ − 108x. Informe o MAIOR deles. (duas casas decimais)",
+    "fr": "Cette fonction a deux points critiques : f(x) = x³ − 108x. Indiquez le PLUS GRAND. (deux décimales)",
+    "en": "This function has two critical points: f(x) = x³ − 108x. Give the LARGER one. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

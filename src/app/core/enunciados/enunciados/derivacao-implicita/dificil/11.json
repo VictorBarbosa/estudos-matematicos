@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na curva x·y = 20, qual é o valor de dy/dx no ponto (4, 5)? (duas casas decimais)",
+    "fr": "Sur la courbe x·y = 20, quelle est la valeur de dy/dx au point (4, 5) ? (deux décimales)",
+    "en": "On the curve x·y = 20, what is dy/dx at the point (4, 5)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-1.25"
+  }
+}

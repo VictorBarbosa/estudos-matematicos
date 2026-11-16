@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos anagramas distintos tem a palavra REI? (todas as letras diferentes)",
+    "fr": "Combien d’anagrammes distincts le mot ROI possède-t-il ? (toutes les lettres différentes)",
+    "en": "How many distinct anagrams does the word KING have? (all letters different)"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

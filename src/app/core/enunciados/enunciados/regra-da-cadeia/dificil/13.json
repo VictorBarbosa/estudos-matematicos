@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use a regra da cadeia e calcule f'(4) para f(x) = 1/(1x + 4). (duas casas decimais)",
+    "fr": "Utilisez la règle de la chaîne et calculez f'(4) pour f(x) = 1/(1x + 4). (deux décimales)",
+    "en": "Use the chain rule and calculate f'(4) for f(x) = 1/(1x + 4). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-0.02"
+  }
+}

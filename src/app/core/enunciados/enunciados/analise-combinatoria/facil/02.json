@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos anagramas distintos tem a palavra AMOR? (todas as letras diferentes)",
+    "fr": "Combien d’anagrammes distincts le mot AMOUR possède-t-il ? (toutes les lettres différentes)",
+    "en": "How many distinct anagrams does the word LOVE have? (all letters different)"
+  },
+  "dados-calculo": {
+    "total": "24"
+  }
+}

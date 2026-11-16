@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma barra de 5 m tem densidade linear λ(x) = 0.5x, com x de uma ponta. Onde fica o centro de massa, em metros dessa ponta? (duas casas decimais)",
+    "fr": "Une barre de 5 m a une densité linéique λ(x) = 0.5x, avec x depuis une extrémité. Où se trouve le centre de masse, en mètres depuis cette extrémité ? (deux décimales)",
+    "en": "A rod of 5 m has linear density λ(x) = 0.5x, with x from one end. Where is the centre of mass, in metres from that end? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.33"
+  }
+}

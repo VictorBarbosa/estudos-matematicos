@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x² − 100)/(x − 10) quando x tende a 10, simplificando primeiro.",
+    "fr": "Calculez la limite de (x² − 100)/(x − 10) quand x tend vers 10, en simplifiant d’abord.",
+    "en": "Calculate the limit of (x² − 100)/(x − 10) as x tends to 10, simplifying first."
+  },
+  "dados-calculo": {
+    "total": "20"
+  }
+}

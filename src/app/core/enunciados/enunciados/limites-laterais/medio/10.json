@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 1, f(x) = 2x + 3; se x ≥ 1, f(x) = 4x + 0. Qual é o limite pela DIREITA em x = 1? (duas casas decimais)",
+    "fr": "Si x < 1, f(x) = 2x + 3 ; si x ≥ 1, f(x) = 4x + 0. Quelle est la limite à DROITE en x = 1 ? (deux décimales)",
+    "en": "If x < 1, f(x) = 2x + 3; if x ≥ 1, f(x) = 4x + 0. What is the RIGHT-hand limit at x = 1? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.00"
+  }
+}

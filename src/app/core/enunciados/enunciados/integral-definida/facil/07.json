@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de 4 no intervalo de -1 a 1.",
+    "fr": "Calculez l’intégrale de 4 sur l’intervalle de -1 à 1.",
+    "en": "Calculate the integral of 4 from -1 to 1."
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

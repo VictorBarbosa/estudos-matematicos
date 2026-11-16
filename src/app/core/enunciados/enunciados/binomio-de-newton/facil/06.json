@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanto vale C(3, 1), o número na linha 3, posição 1 do triângulo de Pascal (contando do 0)?",
+    "fr": "Combien vaut C(3, 1), le nombre de la ligne 3, position 1 du triangle de Pascal (en comptant à partir de 0) ?",
+    "en": "What is C(3, 1), the number in row 3, position 1 of Pascal’s triangle (counting from 0)?"
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

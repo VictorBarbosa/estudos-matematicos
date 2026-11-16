@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um próton (massa 1,67×10⁻²⁷ kg, carga 1,6×10⁻¹⁹ C), partindo do repouso, é acelerado por 200 V e entra perpendicular num campo de 0.02 T. Qual é o raio da órbita, em cm? (duas casas decimais)",
+    "fr": "Un proton (masse 1,67×10⁻²⁷ kg, charge 1,6×10⁻¹⁹ C), partant du repos, est accéléré par 200 V et entre perpendiculairement dans un champ de 0.02 T. Quel est le rayon de l’orbite, en cm ? (deux décimales)",
+    "en": "A proton (mass 1.67×10⁻²⁷ kg, charge 1.6×10⁻¹⁹ C), starting from rest, is accelerated by 200 V and enters perpendicularly into a field of 0.02 T. What is the orbital radius, in cm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.22"
+  }
+}

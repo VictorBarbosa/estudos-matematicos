@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive f(x) = 5x² + 1x + 2 e calcule f'(1).",
+    "fr": "Dérivez f(x) = 5x² + 1x + 2 et calculez f'(1).",
+    "en": "Differentiate f(x) = 5x² + 1x + 2 and calculate f'(1)."
+  },
+  "dados-calculo": {
+    "total": "11"
+  }
+}

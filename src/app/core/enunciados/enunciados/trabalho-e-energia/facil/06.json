@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de 1 kg move-se a 1 m/s. Qual é a energia cinética, em J? (duas casas decimais)",
+    "fr": "Un corps de 1 kg se déplace à 1 m/s. Quelle est l’énergie cinétique, en J ? (deux décimales)",
+    "en": "A body of 1 kg moves at 1 m/s. What is the kinetic energy, in J? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

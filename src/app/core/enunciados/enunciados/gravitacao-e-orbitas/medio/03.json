@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a aceleração da gravidade a 2000 km de altitude? (use g₀ = 9,81 m/s² e R = 6371 km; duas casas decimais)",
+    "fr": "Quelle est l’accélération de la gravité à 2000 km d’altitude ? (utilisez g₀ = 9,81 m/s² et R = 6371 km ; deux décimales)",
+    "en": "What is the gravitational acceleration at an altitude of 2000 km? (use g₀ = 9.81 m/s² and R = 6371 km; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.68"
+  }
+}

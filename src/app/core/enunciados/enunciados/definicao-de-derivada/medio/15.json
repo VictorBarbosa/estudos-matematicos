@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Usando a definição, calcule f'(x) para f(x) = 7x² em x = 1.",
+    "fr": "En utilisant la définition, calculez f'(x) pour f(x) = 7x² en x = 1.",
+    "en": "Using the definition, calculate f'(x) for f(x) = 7x² at x = 1."
+  },
+  "dados-calculo": {
+    "total": "14"
+  }
+}

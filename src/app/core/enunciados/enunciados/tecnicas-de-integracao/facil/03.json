@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de 4x + 0 de 0 a 2. (duas casas decimais)",
+    "fr": "Calculez l’intégrale de 4x + 0 de 0 à 2. (deux décimales)",
+    "en": "Calculate the integral of 4x + 0 from 0 to 2. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

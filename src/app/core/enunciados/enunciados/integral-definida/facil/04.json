@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de 1 no intervalo de 0 a 10.",
+    "fr": "Calculez l’intégrale de 1 sur l’intervalle de 0 à 10.",
+    "en": "Calculate the integral of 1 from 0 to 10."
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

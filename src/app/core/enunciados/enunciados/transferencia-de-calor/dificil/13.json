@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "4 kg de água a 30 °C são misturados com 2 kg de água a 60 °C. Qual é a temperatura final, em °C? (recipiente isolado; duas casas decimais)",
+    "fr": "4 kg d’eau à 30 °C sont mélangés avec 2 kg d’eau à 60 °C. Quelle est la température finale, en °C ? (récipient isolé ; deux décimales)",
+    "en": "4 kg of water at 30 °C are mixed with 2 kg of water at 60 °C. What is the final temperature, in °C? (insulated container; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "40.00"
+  }
+}

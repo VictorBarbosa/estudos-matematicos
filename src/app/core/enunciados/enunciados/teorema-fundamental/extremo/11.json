@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use o Teorema Fundamental para calcular a integral de 1/x de 1 a 2.7183, com b > 0. (duas casas decimais)",
+    "fr": "Utilisez le théorème fondamental pour calculer l’intégrale de 1/x de 1 à 2.7183, avec b > 0. (deux décimales)",
+    "en": "Use the Fundamental Theorem to calculate the integral of 1/x from 1 to 2.7183, with b > 0. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

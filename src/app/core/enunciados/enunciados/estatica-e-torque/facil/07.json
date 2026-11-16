@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força de 8 N é aplicada perpendicularmente a 1.5 m do eixo. Qual é o torque, em N·m? (duas casas decimais)",
+    "fr": "Une force de 8 N est appliquée perpendiculairement à 1.5 m de l’axe. Quel est le couple, en N·m ? (deux décimales)",
+    "en": "A force of 8 N is applied perpendicularly at 1.5 m from the axis. What is the torque, in N·m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

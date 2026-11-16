@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um foguete tem razão de massas 1.5 e velocidade de exaustão de 3000 m/s. Qual é o delta-v disponível, em km/s? (duas casas decimais)",
+    "fr": "Une fusée a un rapport de masses 1.5 et une vitesse d’éjection de 3000 m/s. Quel est le delta-v disponible, en km/s ? (deux décimales)",
+    "en": "A rocket has mass ratio 1.5 and exhaust velocity 3000 m/s. What is the available delta-v, in km/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.22"
+  }
+}

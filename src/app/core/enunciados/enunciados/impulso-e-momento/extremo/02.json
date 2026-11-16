@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma bola de 1 kg chega a 10 m/s e volta com a mesma velocidade. Qual é o módulo do impulso recebido, em N·s?",
+    "fr": "Une balle de 1 kg arrive à 10 m/s et repart avec la même vitesse. Quel est le module de l’impulsion reçue, en N·s ?",
+    "en": "A ball of 1 kg arrives at 10 m/s and bounces back with the same speed. What is the magnitude of the impulse received, in N·s?"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

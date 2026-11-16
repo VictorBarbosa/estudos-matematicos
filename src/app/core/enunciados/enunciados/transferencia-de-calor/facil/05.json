@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma placa de vidro tem 3 m² de área e 0.005 m de espessura, com diferença de 10 K entre as faces. A condutividade é 0.8 W/(m·K). Qual é o fluxo de calor, em W? (duas casas decimais)",
+    "fr": "Une plaque de vidro a une aire de 3 m² et une épaisseur de 0.005 m, avec une différence de 10 K entre les faces. La conductivité est 0.8 W/(m·K). Quel est le flux de chaleur, en W ? (deux décimales)",
+    "en": "A vidro plate has area 3 m² and thickness 0.005 m, with a difference of 10 K between the faces. The conductivity is 0.8 W/(m·K). What is the heat flux, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4800.00"
+  }
+}

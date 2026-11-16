@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Tomando C = 0, qual é o valor de F(3) para F(x) = ∫1/x dx, com x > 0? (duas casas decimais)",
+    "fr": "En prenant C = 0, quelle est la valeur de F(3) pour F(x) = ∫1/x dx, avec x > 0 ? (deux décimales)",
+    "en": "Taking C = 0, what is the value of F(3) for F(x) = ∫1/x dx, with x > 0? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.10"
+  }
+}

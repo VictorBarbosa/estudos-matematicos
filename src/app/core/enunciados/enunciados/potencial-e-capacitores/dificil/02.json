@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual trabalho um agente externo realiza para levar uma carga de 1 μC de 0 V a 100 V, em mJ? (duas casas decimais)",
+    "fr": "Quel travail un agent extérieur effectue-t-il pour amener une charge de 1 μC de 0 V à 100 V, en mJ ? (deux décimales)",
+    "en": "What work does an external agent do to move a charge of 1 μC from 0 V to 100 V, in mJ? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.10"
+  }
+}

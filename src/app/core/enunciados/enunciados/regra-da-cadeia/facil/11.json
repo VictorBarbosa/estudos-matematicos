@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use a regra da cadeia e calcule f'(0) para f(x) = (3x + 1)³.",
+    "fr": "Utilisez la règle de la chaîne et calculez f'(0) pour f(x) = (3x + 1)³.",
+    "en": "Use the chain rule and calculate f'(0) for f(x) = (3x + 1)³."
+  },
+  "dados-calculo": {
+    "total": "9"
+  }
+}

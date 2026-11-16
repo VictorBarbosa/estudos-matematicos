@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de 2/x quando x tende ao infinito. (duas casas decimais)",
+    "fr": "Calculez la limite de 2/x quand x tend vers l’infini. (deux décimales)",
+    "en": "Calculate the limit of 2/x as x tends to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

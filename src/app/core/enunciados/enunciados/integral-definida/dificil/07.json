@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Sabendo que a integral de f de 1 a 2 vale 3, quanto vale a integral de 4·f no mesmo intervalo?",
+    "fr": "Sachant que l’intégrale de f de 1 à 2 vaut 3, combien vaut l’intégrale de 4·f sur le même intervalle ?",
+    "en": "Knowing that the integral of f from 1 to 2 is 3, what is the integral of 4·f over the same interval?"
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

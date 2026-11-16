@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma patinadora com inércia 10 kg·m² a 2 rad/s recolhe os braços até 5 kg·m². Qual é a nova velocidade angular, em rad/s? (duas casas decimais)",
+    "fr": "Une patineuse avec une inertie 10 kg·m² à 2 rad/s ramène les bras jusqu’à 5 kg·m². Quelle est la nouvelle vitesse angulaire, en rad/s ? (deux décimales)",
+    "en": "A skater with inertia 10 kg·m² at 2 rad/s pulls her arms in to 5 kg·m². What is the new angular velocity, in rad/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.00"
+  }
+}

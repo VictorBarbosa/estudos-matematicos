@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um projétil é lançado a 10 m/s formando 30° com a horizontal. Quanto tempo fica no ar, em s? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un projectile est lancé à 10 m/s en formant 30° avec l’horizontale. Combien de temps reste-t-il en l’air, en s ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A projectile is launched at 10 m/s making 30° with the horizontal. How long does it stay in the air, in s? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.02"
+  }
+}

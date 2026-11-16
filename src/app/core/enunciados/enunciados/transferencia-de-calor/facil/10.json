@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanta energia, em J, é preciso para aquecer 2 kg de ferro em 20 K? O calor específico é 450 J/(kg·K). (duas casas decimais)",
+    "fr": "Quelle énergie, en J, faut-il pour chauffer 2 kg de fer de 20 K ? La chaleur massique est 450 J/(kg·K). (deux décimales)",
+    "en": "How much energy, in J, is needed to heat 2 kg of iron by 20 K? The specific heat is 450 J/(kg·K). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "18000.00"
+  }
+}

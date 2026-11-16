@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um satélite em órbita circular de raio 10000 km tem período de 6 horas. Qual é a velocidade orbital, em km/h? (duas casas decimais)",
+    "fr": "Un satellite en orbite circulaire de rayon 10000 km a une période de 6 heures. Quelle est la vitesse orbitale, en km/h ? (deux décimales)",
+    "en": "A satellite in a circular orbit of radius 10000 km has a period of 6 hours. What is the orbital speed, in km/h? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10471.98"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use a regra da cadeia e calcule f'(2) para f(x) = √(8x + 0). (duas casas decimais)",
+    "fr": "Utilisez la règle de la chaîne et calculez f'(2) pour f(x) = √(8x + 0). (deux décimales)",
+    "en": "Use the chain rule and calculate f'(2) for f(x) = √(8x + 0). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

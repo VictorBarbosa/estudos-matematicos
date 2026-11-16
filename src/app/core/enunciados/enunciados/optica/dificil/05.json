@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um objeto de 5 cm de altura está a 40 cm de uma lente convergente de foco 20 cm. Qual é a altura da imagem, em cm? (negativa se invertida; duas casas decimais)",
+    "fr": "Un objet de 5 cm de hauteur est à 40 cm d’une lentille convergente de focale 20 cm. Quelle est la hauteur de l’image, en cm ? (négative si renversée ; deux décimales)",
+    "en": "An object of height 5 cm is 40 cm from a converging lens of focal length 20 cm. What is the image height, in cm? (negative if inverted; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-5.00"
+  }
+}

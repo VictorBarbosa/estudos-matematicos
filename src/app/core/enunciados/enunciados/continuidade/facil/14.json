@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x ≠ 13, f(x) = (x² − 169)/(x − 13); para que f seja contínua em x = 13, qual deve ser f(13)?",
+    "fr": "Si x ≠ 13, f(x) = (x² − 169)/(x − 13) ; pour que f soit continue en x = 13, que doit valoir f(13) ?",
+    "en": "If x ≠ 13, f(x) = (x² − 169)/(x − 13); for f to be continuous at x = 13, what should f(13) be?"
+  },
+  "dados-calculo": {
+    "total": "26"
+  }
+}

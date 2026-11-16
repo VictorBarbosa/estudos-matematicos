@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Aproxime a raiz quadrada de 9.2 pelo polinômio de Taylor de grau 1 centrado em 9. (duas casas decimais)",
+    "fr": "Approximez la racine carrée de 9.2 par le polynôme de Taylor de degré 1 centré en 9. (deux décimales)",
+    "en": "Approximate the square root of 9.2 by the Taylor polynomial of degree 1 centred at 9. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.03"
+  }
+}

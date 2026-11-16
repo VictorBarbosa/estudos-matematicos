@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o limite do termo geral aₙ = 1/n^5 quando n tende ao infinito?",
+    "fr": "Quelle est la limite du terme général aₙ = 1/n^5 quand n tend vers l’infini ?",
+    "en": "What is the limit of the general term aₙ = 1/n^5 as n tends to infinity?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

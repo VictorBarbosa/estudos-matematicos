@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força de 60 N é aplicada a 1.5 m do eixo, formando 60° com o braço. Qual é o torque, em N·m? (duas casas decimais)",
+    "fr": "Une force de 60 N est appliquée à 1.5 m de l’axe, en formant 60° avec le bras. Quel est le couple, en N·m ? (deux décimales)",
+    "en": "A force of 60 N is applied at 1.5 m from the axis, making 60° with the arm. What is the torque, in N·m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "77.94"
+  }
+}

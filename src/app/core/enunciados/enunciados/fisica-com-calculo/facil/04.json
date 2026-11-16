@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um carro tem velocidade v(t) = 1t (m/s). Quanto se desloca entre t = 0 s e t = 10 s, em metros? (duas casas decimais)",
+    "fr": "Une voiture a une vitesse v(t) = 1t (m/s). De combien se déplace-t-elle entre t = 0 s et t = 10 s, en mètres ? (deux décimales)",
+    "en": "A car has velocity v(t) = 1t (m/s). How far does it travel between t = 0 s and t = 10 s, in metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "50.00"
+  }
+}

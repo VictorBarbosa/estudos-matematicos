@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A área de um círculo cresce a uma taxa de 6.28 cm²/s. A que taxa o raio cresce quando ele vale 10 cm? (em cm/s, duas casas decimais)",
+    "fr": "L’aire d’un cercle croît à un taux de 6.28 cm²/s. À quel taux le rayon croît-il quand il vaut 10 cm ? (en cm/s, deux décimales)",
+    "en": "A circle’s area grows at 6.28 cm²/s. At what rate is the radius growing when it is 10 cm? (in cm/s, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.10"
+  }
+}

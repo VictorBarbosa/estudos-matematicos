@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a energia de um fóton de 500 nm, em eV? (use hc = 1240 eV·nm; duas casas decimais)",
+    "fr": "Quelle est l’énergie d’un photon de 500 nm, en eV ? (utilisez hc = 1240 eV·nm ; deux décimales)",
+    "en": "What is the energy of a photon of 500 nm, in eV? (use hc = 1240 eV·nm; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.48"
+  }
+}

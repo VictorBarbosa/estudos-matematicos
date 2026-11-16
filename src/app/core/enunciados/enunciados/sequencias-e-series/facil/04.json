@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite do termo geral n/(n+1) quando n tende ao infinito. (duas casas decimais)",
+    "fr": "Calculez la limite du terme général n/(n+1) quand n tend vers l’infini. (deux décimales)",
+    "en": "Calculate the limit of the general term n/(n+1) as n tends to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

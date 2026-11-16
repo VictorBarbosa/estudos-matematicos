@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (8x + 4)/(2x + 0) quando x tende a 1. (duas casas decimais)",
+    "fr": "Calculez la limite de (8x + 4)/(2x + 0) quand x tend vers 1. (deux décimales)",
+    "en": "Calculate the limit of (8x + 4)/(2x + 0) as x tends to 1. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

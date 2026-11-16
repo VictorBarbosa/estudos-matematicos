@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use o polinômio de Maclaurin de grau 1 para aproximar sen(1), com x em radianos. (duas casas decimais)",
+    "fr": "Utilisez le polynôme de Maclaurin de degré 1 pour approcher sin(1), avec x en radians. (deux décimales)",
+    "en": "Use the Maclaurin polynomial of degree 1 to approximate sin(1), with x in radians. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

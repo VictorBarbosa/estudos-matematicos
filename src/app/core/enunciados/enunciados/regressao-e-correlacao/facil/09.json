@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para os pares (1, 2), (2, 4) e (3, 6), qual é o intercepto da reta de mínimos quadrados? (duas casas decimais)",
+    "fr": "Pour les paires (1, 2), (2, 4) et (3, 6), quel est l’ordonnée à l’origine de la droite des moindres carrés ? (deux décimales)",
+    "en": "For the pairs (1, 2), (2, 4) and (3, 6), what is the intercept of the least-squares line? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

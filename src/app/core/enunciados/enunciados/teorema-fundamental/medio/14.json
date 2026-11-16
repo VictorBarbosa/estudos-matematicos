@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Sendo A(x) a área acumulada a partir de 0 sob f(t) = t², quanto vale A'(10)?",
+    "fr": "A(x) étant l’aire accumulée à partir de 0 sous f(t) = t², combien vaut A'(10) ?",
+    "en": "With A(x) the accumulated area from 0 under f(t) = t², what is A'(10)?"
+  },
+  "dados-calculo": {
+    "total": "100.00"
+  }
+}

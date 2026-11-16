@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Capacitores de 6 μF estão ligados em série. Qual é a capacitância equivalente, em μF, de 3 deles? (duas casas decimais)",
+    "fr": "Des condensateurs de 6 μF sont branchés en série. Quelle est la capacité équivalente, en μF, de 3 d’entre eux ? (deux décimales)",
+    "en": "Capacitors of 6 μF are connected in série. What is the equivalent capacitance, in μF, of 3 of them? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

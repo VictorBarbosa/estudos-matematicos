@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um balão esférico é inflado e o raio cresce 4 cm/s. A que taxa o VOLUME cresce quando o raio vale 5 cm? (em cm³/s, duas casas decimais)",
+    "fr": "Un ballon sphérique est gonflé et le rayon croît de 4 cm/s. À quel taux le VOLUME croît-il quand le rayon vaut 5 cm ? (en cm³/s, deux décimales)",
+    "en": "A spherical balloon is inflated and the radius grows 4 cm/s. At what rate is the VOLUME growing when the radius is 5 cm? (in cm³/s, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1256.64"
+  }
+}

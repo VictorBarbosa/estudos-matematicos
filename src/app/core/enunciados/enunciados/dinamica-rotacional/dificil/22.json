@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um aro de 6 kg e 0.25 m de raio rola sem deslizar a 1 m/s. Qual é a energia cinética TOTAL, em J? (duas casas decimais)",
+    "fr": "Un anneau de 6 kg et 0.25 m de rayon roule sans glisser à 1 m/s. Quelle est l’énergie cinétique TOTALE, en J ? (deux décimales)",
+    "en": "A hoop of 6 kg and radius 0.25 m rolls without slipping at 1 m/s. What is the TOTAL kinetic energy, in J? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

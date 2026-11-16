@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para qual valor de k a função definida por x² + k para x < 4 e 7x para x ≥ 4 é contínua em x = 4? (duas casas decimais)",
+    "fr": "Pour quelle valeur de k la fonction définie par x² + k pour x < 4 et 7x pour x ≥ 4 est-elle continue en x = 4 ? (deux décimales)",
+    "en": "For what value of k is the function given by x² + k for x < 4 and 7x for x ≥ 4 continuous at x = 4? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

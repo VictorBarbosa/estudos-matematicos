@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma corrente de 3 A atravessa um resistor de 4 Ω. Quanta potência ele dissipa, em W? (duas casas decimais)",
+    "fr": "Un courant de 3 A traverse une résistance de 4 Ω. Quelle puissance dissipe-t-elle, en W ? (deux décimales)",
+    "en": "A current of 3 A flows through a resistor of 4 Ω. How much power does it dissipate, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "36.00"
+  }
+}

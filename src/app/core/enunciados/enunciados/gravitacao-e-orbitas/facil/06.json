@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se a distância entre dois corpos for multiplicada por 10, a força gravitacional fica dividida por quanto?",
+    "fr": "Si la distance entre deux corps est multipliée par 10, par combien la force gravitationnelle est-elle divisée ?",
+    "en": "If the distance between two bodies is multiplied by 10, by how much is the gravitational force divided?"
+  },
+  "dados-calculo": {
+    "total": "100"
+  }
+}

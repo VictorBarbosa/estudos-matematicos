@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (√(x² + 25) − x) quando x tende ao infinito. (duas casas decimais)",
+    "fr": "Calculez la limite de (√(x² + 25) − x) quand x tend vers l’infini. (deux décimales)",
+    "en": "Calculate the limit of (√(x² + 25) − x) as x tends to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

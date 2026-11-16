@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um objeto de 5 kg está a 3 m do apoio, do lado direito. Que contrapeso, a 1 m do apoio do lado esquerdo, o equilibra? (use g = 9,81 m/s²; em kg; duas casas decimais)",
+    "fr": "Un objet de 5 kg est à 3 m de l’appui, du côté droit. Quel contrepoids, à 1 m de l’appui du côté gauche, l’équilibre-t-il ? (utilisez g = 9,81 m/s² ; en kg ; deux décimales)",
+    "en": "An object of 5 kg is 3 m from the fulcrum on the right. What counterweight, 1 m from the fulcrum on the left, balances it? (use g = 9.81 m/s²; in kg; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "15.00"
+  }
+}

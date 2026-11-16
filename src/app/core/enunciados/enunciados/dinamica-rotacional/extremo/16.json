@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um aro de 2 kg e 0.5 m de raio tem torque de 1 N·m. Qual é a aceleração angular, em rad/s²? (duas casas decimais)",
+    "fr": "Un anneau de 2 kg et 0.5 m de rayon subit un couple de 1 N·m. Quelle est l’accélération angulaire, en rad/s² ? (deux décimales)",
+    "en": "A hoop of 2 kg and radius 0.5 m has a torque of 1 N·m. What is the angular acceleration, in rad/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

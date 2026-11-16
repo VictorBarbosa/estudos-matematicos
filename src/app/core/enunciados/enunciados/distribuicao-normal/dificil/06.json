@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa normal de média 200 e desvio 20, que proporção fica entre 180 e 220? (duas casas decimais)",
+    "fr": "Dans une normale de moyenne 200 et d’écart-type 20, quelle proportion se trouve entre 180 et 220 ? (deux décimales)",
+    "en": "In a normal distribution with mean 200 and standard deviation 20, what proportion lies between 180 and 220? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.68"
+  }
+}

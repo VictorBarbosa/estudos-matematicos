@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = (2x + 1)/(x − 3) tem uma assíntota vertical. Em que valor de x ela está?",
+    "fr": "La fonction f(x) = (2x + 1)/(x − 3) a une asymptote verticale. En quelle valeur de x se trouve-t-elle ?",
+    "en": "The function f(x) = (2x + 1)/(x − 3) has a vertical asymptote. At what value of x is it?"
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

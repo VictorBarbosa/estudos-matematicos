@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O integrando explode em zero. Calcule a integral imprópria de 1/√x de 0 a 1. (duas casas decimais)",
+    "fr": "L’intégrande explose en zéro. Calculez l’intégrale impropre de 1/√x de 0 à 1. (deux décimales)",
+    "en": "The integrand blows up at zero. Calculate the improper integral of 1/√x from 0 to 1. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

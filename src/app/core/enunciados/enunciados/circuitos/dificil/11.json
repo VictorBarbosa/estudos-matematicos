@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "R₁ = 6 Ω está em série com o paralelo de R₂ = 3 Ω e R₃ = 3 Ω, tudo ligado a 12 V. Qual corrente sai da fonte, em A? (duas casas decimais)",
+    "fr": "R₁ = 6 Ω est en série avec le parallèle de R₂ = 3 Ω et R₃ = 3 Ω, le tout branché sur 12 V. Quel courant sort de la source, en A ? (deux décimales)",
+    "en": "R₁ = 6 Ω is in series with the parallel pair R₂ = 3 Ω and R₃ = 3 Ω, all connected to 12 V. What current leaves the source, in A? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.60"
+  }
+}

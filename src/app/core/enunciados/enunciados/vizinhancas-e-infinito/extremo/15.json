@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de x·sen(4/x) quando x tende ao infinito, com a em radianos.",
+    "fr": "Calculez la limite de x·sin(4/x) quand x tend vers l’infini, avec a en radians.",
+    "en": "Calculate the limit of x·sin(4/x) as x tends to infinity, with a in radians."
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

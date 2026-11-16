@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanta energia, em J, é preciso para aquecer 4 kg de chumbo em 25 K? O calor específico é 128 J/(kg·K). (duas casas decimais)",
+    "fr": "Quelle énergie, en J, faut-il pour chauffer 4 kg de plomb de 25 K ? La chaleur massique est 128 J/(kg·K). (deux décimales)",
+    "en": "How much energy, in J, is needed to heat 4 kg of lead by 25 K? The specific heat is 128 J/(kg·K). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12800.00"
+  }
+}

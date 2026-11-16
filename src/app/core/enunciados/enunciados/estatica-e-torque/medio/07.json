@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força de 80 N é aplicada a 0.25 m do eixo, formando 53° com o braço. Qual é o torque, em N·m? (duas casas decimais)",
+    "fr": "Une force de 80 N est appliquée à 0.25 m de l’axe, en formant 53° avec le bras. Quel est le couple, en N·m ? (deux décimales)",
+    "en": "A force of 80 N is applied at 0.25 m from the axis, making 53° with the arm. What is the torque, in N·m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "15.97"
+  }
+}

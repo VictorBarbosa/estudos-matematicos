@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A curva x² + y² = 169 passa por (12, 5). Onde a reta tangente nesse ponto corta o eixo y? (duas casas decimais)",
+    "fr": "La courbe x² + y² = 169 passe par (12, 5). Où la tangente en ce point coupe-t-elle l’axe y ? (deux décimales)",
+    "en": "The curve x² + y² = 169 passes through (12, 5). Where does the tangent there cross the y-axis? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "33.80"
+  }
+}

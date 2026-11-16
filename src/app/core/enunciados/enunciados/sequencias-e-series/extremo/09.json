@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dos dois extremos do intervalo de convergência, quantos pertencem a ele, para a série de termo x^n/2^n? Responda 0, 1 ou 2.",
+    "fr": "Des deux extrémités de l’intervalle de convergence, combien y appartiennent, pour la série de terme x^n/2^n ? Répondez 0, 1 ou 2.",
+    "en": "Of the two endpoints of the convergence interval, how many belong to it, for the series with term x^n/2^n? Answer 0, 1 or 2."
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

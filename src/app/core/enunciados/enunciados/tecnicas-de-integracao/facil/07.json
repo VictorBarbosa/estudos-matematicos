@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de 8x + 1 de 0 a 1. (duas casas decimais)",
+    "fr": "Calculez l’intégrale de 8x + 1 de 0 à 1. (deux décimales)",
+    "en": "Calculate the integral of 8x + 1 from 0 to 1. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

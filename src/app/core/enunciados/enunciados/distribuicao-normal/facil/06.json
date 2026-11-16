@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma grandeza tem distribuição normal com média 0 e desvio padrão 1. Qual é o escore z de uma leitura de 1.5? (duas casas decimais)",
+    "fr": "Une grandeur a une distribution normale de moyenne 0 et d’écart-type 1. Quel est le score z d’une lecture de 1.5 ? (deux décimales)",
+    "en": "A quantity has a normal distribution with mean 0 and standard deviation 1. What is the z-score of a reading of 1.5? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.50"
+  }
+}

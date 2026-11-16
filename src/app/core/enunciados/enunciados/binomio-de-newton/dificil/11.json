@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o coeficiente de x^3 no desenvolvimento de (2x + 1)^5?",
+    "fr": "Quel est le coefficient de x^3 dans le développement de (2x + 1)^5 ?",
+    "en": "What is the coefficient of x^3 in the expansion of (2x + 1)^5?"
+  },
+  "dados-calculo": {
+    "total": "80"
+  }
+}

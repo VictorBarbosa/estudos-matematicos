@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo é lançado verticalmente para cima a 15 m/s. Qual é a altura máxima, em m? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un corps est lancé verticalement vers le haut à 15 m/s. Quelle est la hauteur maximale, en m ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A body is launched vertically upwards at 15 m/s. What is the maximum height, in m? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "11.47"
+  }
+}

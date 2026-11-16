@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para qual valor de k a função f(x) = (x² − k)/(x − 3) fica contínua em x = 3? (duas casas decimais)",
+    "fr": "Pour quelle valeur de k la fonction f(x) = (x² − k)/(x − 3) devient-elle continue en x = 3 ? (deux décimales)",
+    "en": "For what value of k does f(x) = (x² − k)/(x − 3) become continuous at x = 3? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "9.00"
+  }
+}

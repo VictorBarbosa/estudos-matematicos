@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use o Teorema Fundamental para calcular a integral de 3 de 0 a 4. (duas casas decimais)",
+    "fr": "Utilisez le théorème fondamental pour calculer l’intégrale de 3 de 0 à 4. (deux décimales)",
+    "en": "Use the Fundamental Theorem to calculate the integral of 3 from 0 to 4. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

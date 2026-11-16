@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use o polinômio de Maclaurin de grau 3 para aproximar sen(0.2), com x em radianos. (duas casas decimais)",
+    "fr": "Utilisez le polynôme de Maclaurin de degré 3 pour approcher sin(0.2), avec x en radians. (deux décimales)",
+    "en": "Use the Maclaurin polynomial of degree 3 to approximate sin(0.2), with x in radians. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.20"
+  }
+}

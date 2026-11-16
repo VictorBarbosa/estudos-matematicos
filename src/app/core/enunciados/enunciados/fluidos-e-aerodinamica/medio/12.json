@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Ar escoa de 0 para 30 m/s num duto horizontal. De quanto CAI a pressão, em Pa? (ρ = 1,2 kg/m³; duas casas decimais)",
+    "fr": "L’air s’écoule de 0 à 30 m/s dans une conduite horizontale. De combien la pression CHUTE-t-elle, en Pa ? (ρ = 1,2 kg/m³ ; deux décimales)",
+    "en": "Air flows from 0 to 30 m/s in a horizontal duct. By how much does the pressure DROP, in Pa? (ρ = 1.2 kg/m³; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "540.00"
+  }
+}

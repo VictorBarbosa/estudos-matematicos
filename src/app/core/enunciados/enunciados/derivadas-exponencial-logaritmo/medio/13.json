@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive e calcule f'(3) para f(x) = ln(x² + 9). (duas casas decimais)",
+    "fr": "Dérivez et calculez f'(3) pour f(x) = ln(x² + 9). (deux décimales)",
+    "en": "Differentiate and calculate f'(3) for f(x) = ln(x² + 9). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.33"
+  }
+}

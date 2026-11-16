@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanta energia, em J, é preciso para aquecer 0.2 kg de vidro em 50 K? O calor específico é 840 J/(kg·K). (duas casas decimais)",
+    "fr": "Quelle énergie, en J, faut-il pour chauffer 0.2 kg de verre de 50 K ? La chaleur massique est 840 J/(kg·K). (deux décimales)",
+    "en": "How much energy, in J, is needed to heat 0.2 kg of glass by 50 K? The specific heat is 840 J/(kg·K). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8400.00"
+  }
+}

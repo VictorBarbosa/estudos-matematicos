@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use o Teorema Fundamental para calcular a integral de 2x de 1 a 5. (duas casas decimais)",
+    "fr": "Utilisez le théorème fondamental pour calculer l’intégrale de 2x de 1 à 5. (deux décimales)",
+    "en": "Use the Fundamental Theorem to calculate the integral of 2x from 1 to 5. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "24.00"
+  }
+}

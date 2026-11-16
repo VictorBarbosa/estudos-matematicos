@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma alavanca tem 0.5 m de um lado e 1.5 m do outro. Que força do lado 1.5 equilibra 90 N aplicados do lado 0.5? (duas casas decimais)",
+    "fr": "Un levier a 0.5 m d’un côté et 1.5 m de l’autre. Quelle force du côté 1.5 équilibre 90 N appliqués du côté 0.5 ? (deux décimales)",
+    "en": "A lever has 0.5 m on one side and 1.5 m on the other. What force on the 1.5 side balances 90 N applied on the 0.5 side? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "30.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma medida vale 200 ± 2. Qual é a incerteza RELATIVA, em %? (duas casas decimais)",
+    "fr": "Une mesure vaut 200 ± 2. Quelle est l’incertitude RELATIVE, en % ? (deux décimales)",
+    "en": "A measurement is 200 ± 2. What is the RELATIVE uncertainty, in %? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

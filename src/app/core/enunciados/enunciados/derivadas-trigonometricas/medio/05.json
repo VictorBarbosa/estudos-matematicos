@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive e calcule f'(3.1416) para f(x) = sen(x) + cos(x), com x em radianos. (duas casas decimais)",
+    "fr": "Dérivez et calculez f'(3.1416) pour f(x) = sin(x) + cos(x), avec x en radians. (deux décimales)",
+    "en": "Differentiate and calculate f'(3.1416) for f(x) = sin(x) + cos(x), with x in radians. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-1.00"
+  }
+}

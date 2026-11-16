@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use a regra do quociente e calcule f'(2) para f(x) = (6x)/(x + 2). (duas casas decimais)",
+    "fr": "Utilisez la règle du quotient et calculez f'(2) pour f(x) = (6x)/(x + 2). (deux décimales)",
+    "en": "Use the quotient rule and calculate f'(2) for f(x) = (6x)/(x + 2). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.75"
+  }
+}

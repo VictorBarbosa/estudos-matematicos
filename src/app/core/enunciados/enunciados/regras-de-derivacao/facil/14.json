@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive f(x) = 6x² + 0x + 1 e calcule f'(1).",
+    "fr": "Dérivez f(x) = 6x² + 0x + 1 et calculez f'(1).",
+    "en": "Differentiate f(x) = 6x² + 0x + 1 and calculate f'(1)."
+  },
+  "dados-calculo": {
+    "total": "12"
+  }
+}

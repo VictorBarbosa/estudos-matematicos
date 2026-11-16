@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma barra de 10 m tem densidade linear λ(x) = 1x (kg/m), com x medido de uma ponta. Qual é a MASSA total, em kg? (duas casas decimais)",
+    "fr": "Une barre de 10 m a une densité linéique λ(x) = 1x (kg/m), avec x mesuré depuis une extrémité. Quelle est la MASSE totale, en kg ? (deux décimales)",
+    "en": "A rod of 10 m has linear density λ(x) = 1x (kg/m), with x measured from one end. What is the total MASS, in kg? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "50.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um gás expande de 2 L para 5 L à pressão constante de 2 atm. Qual é o trabalho realizado pelo gás, em J? (1 L·atm = 101,325 J; duas casas decimais)",
+    "fr": "Un gaz se détend de 2 L à 5 L à pression constante de 2 atm. Quel est le travail effectué par le gaz, en J ? (1 L·atm = 101,325 J ; deux décimales)",
+    "en": "A gas expands from 2 L to 5 L at constant pressure 2 atm. What is the work done by the gas, in J? (1 L·atm = 101.325 J; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "607.95"
+  }
+}

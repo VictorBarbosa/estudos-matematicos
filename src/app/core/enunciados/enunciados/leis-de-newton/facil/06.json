@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força resultante de 6 N age sobre um corpo de 3 kg. Qual é a aceleração, em m/s²? (duas casas decimais)",
+    "fr": "Une force résultante de 6 N agit sur un corps de 3 kg. Quelle est l’accélération, en m/s² ? (deux décimales)",
+    "en": "A net force of 6 N acts on a body of 3 kg. What is the acceleration, in m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

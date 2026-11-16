@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A posição de um carro, em metros, é s(t) = t². Qual é a velocidade média entre t = 3 s e t = 6 s, em m/s? (duas casas decimais)",
+    "fr": "La position d’une voiture, en mètres, est s(t) = t². Quelle est la vitesse moyenne entre t = 3 s et t = 6 s, en m/s ? (deux décimales)",
+    "en": "A car’s position, in metres, is s(t) = t². What is the average velocity between t = 3 s and t = 6 s, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "9.00"
+  }
+}

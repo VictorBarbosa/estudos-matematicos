@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (√(x + 6) − 3)/(x − 3) quando x tende a 3. (duas casas decimais)",
+    "fr": "Calculez la limite de (√(x + 6) − 3)/(x − 3) quand x tend vers 3. (deux décimales)",
+    "en": "Calculate the limit of (√(x + 6) − 3)/(x − 3) as x tends to 3. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.17"
+  }
+}

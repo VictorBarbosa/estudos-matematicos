@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de 20 L está totalmente submerso em água. Qual é o empuxo, em N? (ρ = 1000 kg/m³, g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un corps de 20 L est totalement immergé dans l’eau. Quelle est la poussée d’Archimède, en N ? (ρ = 1000 kg/m³, g = 9,81 m/s² ; deux décimales)",
+    "en": "A body of 20 L is fully submerged in water. What is the buoyant force, in N? (ρ = 1000 kg/m³, g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "196.20"
+  }
+}

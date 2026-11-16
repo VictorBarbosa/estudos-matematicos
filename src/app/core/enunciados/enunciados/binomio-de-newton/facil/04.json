@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanto vale C(6, 3), o número na linha 6, posição 3 do triângulo de Pascal (contando do 0)?",
+    "fr": "Combien vaut C(6, 3), le nombre de la ligne 6, position 3 du triangle de Pascal (en comptant à partir de 0) ?",
+    "en": "What is C(6, 3), the number in row 6, position 3 of Pascal’s triangle (counting from 0)?"
+  },
+  "dados-calculo": {
+    "total": "20"
+  }
+}

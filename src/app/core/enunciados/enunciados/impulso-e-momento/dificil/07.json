@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de 2 kg a 5 m/s colide com outro de 8 kg a -5 m/s e os dois seguem juntos. Qual é a velocidade final, em m/s? (duas casas decimais)",
+    "fr": "Un corps de 2 kg à 5 m/s entre en collision avec un autre de 8 kg à -5 m/s et les deux continuent ensemble. Quelle est la vitesse finale, en m/s ? (deux décimales)",
+    "en": "A body of 2 kg at 5 m/s collides with another of 8 kg at -5 m/s and the two move on together. What is the final velocity, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-3.00"
+  }
+}

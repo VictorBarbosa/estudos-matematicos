@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral imprópria de 100/x de 1 ao infinito, ou escreva \"diverge\".",
+    "fr": "Calculez l’intégrale impropre de 100/x de 1 à l’infini, ou écrivez « diverge ».",
+    "en": "Calculate the improper integral of 100/x from 1 to infinity, or write \"diverge\"."
+  },
+  "dados-calculo": {
+    "total": "diverge"
+  }
+}

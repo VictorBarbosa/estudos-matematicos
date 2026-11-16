@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um motor realiza 750 J de trabalho em 3 s. Qual é a potência média, em W? (duas casas decimais)",
+    "fr": "Un moteur effectue 750 J de travail en 3 s. Quelle est la puissance moyenne, en W ? (deux décimales)",
+    "en": "A motor does 750 J of work in 3 s. What is the average power, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "250.00"
+  }
+}

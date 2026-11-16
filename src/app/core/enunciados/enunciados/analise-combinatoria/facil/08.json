@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos anagramas distintos tem a palavra FLOR? (todas as letras diferentes)",
+    "fr": "Combien d’anagrammes distincts le mot FLEUR possède-t-il ? (toutes les lettres différentes)",
+    "en": "How many distinct anagrams does the word FLOWER have? (all letters different)"
+  },
+  "dados-calculo": {
+    "total": "24"
+  }
+}

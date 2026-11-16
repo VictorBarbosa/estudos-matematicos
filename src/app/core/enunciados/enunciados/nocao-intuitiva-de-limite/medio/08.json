@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x² − 49)/(x − 7) quando x tende a 7.",
+    "fr": "Calculez la limite de (x² − 49)/(x − 7) quand x tend vers 7.",
+    "en": "Calculate the limit of (x² − 49)/(x − 7) as x tends to 7."
+  },
+  "dados-calculo": {
+    "total": "14"
+  }
+}

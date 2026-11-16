@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 3, f(x) = x²; se x ≥ 3, f(x) = cx + 0. Qual valor de c torna a função contínua em x = 3? (duas casas decimais)",
+    "fr": "Si x < 3, f(x) = x² ; si x ≥ 3, f(x) = cx + 0. Quelle valeur de c rend la fonction continue en x = 3 ? (deux décimales)",
+    "en": "If x < 3, f(x) = x²; if x ≥ 3, f(x) = cx + 0. What value of c makes the function continuous at x = 3? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

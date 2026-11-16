@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "C₁ = 10 μF está em série com o paralelo de C₂ = 5 μF e C₃ = 5 μF. Qual é a capacitância equivalente, em μF? (duas casas decimais)",
+    "fr": "C₁ = 10 μF est en série avec le parallèle de C₂ = 5 μF et C₃ = 5 μF. Quelle est la capacité équivalente, en μF ? (deux décimales)",
+    "en": "C₁ = 10 μF is in series with the parallel combination of C₂ = 5 μF and C₃ = 5 μF. What is the equivalent capacitance, in μF? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

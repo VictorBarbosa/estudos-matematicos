@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na função f(x) = |x − 9|/(x − 9), qual é o limite em x = 9 pela ESQUERDA?",
+    "fr": "Dans la fonction f(x) = |x − 9|/(x − 9), quelle est la limite en x = 9 à GAUCHE ?",
+    "en": "For f(x) = |x − 9|/(x − 9), what is the limit at x = 9 from the LEFT?"
+  },
+  "dados-calculo": {
+    "total": "-1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Sabendo que a integral de f de 0 a 1 vale 2 e a de 1 a 4 vale 6, quanto vale a integral de 0 a 4?",
+    "fr": "Sachant que l’intégrale de f de 0 à 1 vaut 2 et celle de 1 à 4 vaut 6, combien vaut l’intégrale de 0 à 4 ?",
+    "en": "Knowing that the integral of f from 0 to 1 is 2 and from 1 to 4 is 6, what is the integral from 0 to 4?"
+  },
+  "dados-calculo": {
+    "total": "8"
+  }
+}

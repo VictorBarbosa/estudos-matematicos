@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral imprópria de e^(−2x) de 0 ao infinito. (duas casas decimais)",
+    "fr": "Calculez l’intégrale impropre de e^(−2x) de 0 à l’infini. (deux décimales)",
+    "en": "Calculate the improper integral of e^(−2x) from 0 to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

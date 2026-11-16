@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de x³ de 0 a 4. (duas casas decimais)",
+    "fr": "Calculez l’intégrale de x³ de 0 à 4. (deux décimales)",
+    "en": "Calculate the integral of x³ from 0 to 4. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "64.00"
+  }
+}

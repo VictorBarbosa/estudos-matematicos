@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanta energia, em J, é preciso para aquecer 0.5 kg de alumínio em 40 K? O calor específico é 900 J/(kg·K). (duas casas decimais)",
+    "fr": "Quelle énergie, en J, faut-il pour chauffer 0.5 kg de aluminium de 40 K ? La chaleur massique est 900 J/(kg·K). (deux décimales)",
+    "en": "How much energy, in J, is needed to heat 0.5 kg of aluminium by 40 K? The specific heat is 900 J/(kg·K). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "18000.00"
+  }
+}

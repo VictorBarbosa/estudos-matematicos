@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Decida pelo teste da comparação se a integral de 1/(x² + 1) de 1 ao infinito converge ou diverge. Responda \"converge\" ou \"diverge\".",
+    "fr": "Décidez par le test de comparaison si l’intégrale de 1/(x² + 1) de 1 à l’infini converge ou diverge. Répondez « converge » ou « diverge ».",
+    "en": "Decide by the comparison test whether the integral of 1/(x² + 1) from 1 to infinity converges or diverges. Answer \"converge\" or \"diverge\"."
+  },
+  "dados-calculo": {
+    "total": "converge"
+  }
+}

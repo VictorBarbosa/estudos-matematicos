@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para obter 7 km/s de delta-v com exaustão a 3500 m/s, qual razão de massas é necessária? (duas casas decimais)",
+    "fr": "Pour obtenir 7 km/s de delta-v avec une éjection à 3500 m/s, quel rapport de masses faut-il ? (deux décimales)",
+    "en": "To obtain 7 km/s of delta-v with exhaust at 3500 m/s, what mass ratio is needed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "7.39"
+  }
+}

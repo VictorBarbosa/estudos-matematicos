@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Sendo A(x) a área acumulada a partir de 0 sob f(t) = 10t, quanto vale A'(2)? (duas casas decimais)",
+    "fr": "A(x) étant l’aire accumulée à partir de 0 sous f(t) = 10t, combien vaut A'(2) ? (deux décimales)",
+    "en": "With A(x) the accumulated area from 0 under f(t) = 10t, what is A'(2)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

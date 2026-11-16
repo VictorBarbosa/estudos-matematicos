@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um capacitor de 100 μF, inicialmente descarregado, é carregado por uma fonte de 10 V através de 1 kΩ. Qual é a constante de tempo, em ms? (duas casas decimais)",
+    "fr": "Un condensateur de 100 μF, initialement déchargé, est chargé par une source de 10 V à travers 1 kΩ. Quelle est la constante de temps, en ms ? (deux décimales)",
+    "en": "A capacitor of 100 μF, initially uncharged, is charged by a 10 V source through 1 kΩ. What is the time constant, in ms? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "100.00"
+  }
+}

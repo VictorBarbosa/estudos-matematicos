@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois blocos de 4 kg e 6 kg estão ligados por um fio e puxados por uma força de 15 N. Qual é a aceleração do conjunto, em m/s²? (duas casas decimais)",
+    "fr": "Deux blocs de 4 kg et 6 kg sont reliés par un fil et tirés par une force de 15 N. Quelle est l’accélération de l’ensemble, en m/s² ? (deux décimales)",
+    "en": "Two blocks of 4 kg and 6 kg are linked by a string and pulled by a force of 15 N. What is the acceleration of the pair, in m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.50"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A posição é s(t) = t³. Qual é a velocidade INSTANTÂNEA em t = 5 s, em m/s?",
+    "fr": "La position est s(t) = t³. Quelle est la vitesse INSTANTANÉE en t = 5 s, en m/s ?",
+    "en": "The position is s(t) = t³. What is the INSTANTANEOUS velocity at t = 5 s, in m/s?"
+  },
+  "dados-calculo": {
+    "total": "75"
+  }
+}

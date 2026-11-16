@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força de 100 N age por 1 s sobre um corpo. Qual é o impulso, em N·s?",
+    "fr": "Une force de 100 N agit pendant 1 s sur un corps. Quelle est l’impulsion, en N·s ?",
+    "en": "A force of 100 N acts for 1 s on a body. What is the impulse, in N·s?"
+  },
+  "dados-calculo": {
+    "total": "100.00"
+  }
+}

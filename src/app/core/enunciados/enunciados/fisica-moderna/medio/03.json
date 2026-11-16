@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma nave mede 100 m em repouso. Passando a 0.8c, que comprimento tem para um observador na Terra, em metros? (duas casas decimais)",
+    "fr": "Un vaisseau mesure 100 m au repos. Passant à 0.8c, quelle longueur a-t-il pour un observateur sur Terre, en mètres ? (deux décimales)",
+    "en": "A ship measures 100 m at rest. Moving at 0.8c, what length does it have for an Earth observer, in metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "60.00"
+  }
+}

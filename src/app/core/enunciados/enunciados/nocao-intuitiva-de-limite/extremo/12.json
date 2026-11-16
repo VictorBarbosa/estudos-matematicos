@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de sen(7x)/x quando x tende a 0, com a em radianos.",
+    "fr": "Calculez la limite de sin(7x)/x quand x tend vers 0, avec a en radians.",
+    "en": "Calculate the limit of sin(7x)/x as x tends to 0, with a in radians."
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para as medidas 10, 12, 14 e 16, qual é o desvio padrão AMOSTRAL (divisor n−1)? (duas casas decimais)",
+    "fr": "Pour les mesures 10, 12, 14 et 16, quel est l’écart-type d’ÉCHANTILLON (diviseur n−1) ? (deux décimales)",
+    "en": "For the measurements 10, 12, 14 and 16, what is the SAMPLE standard deviation (divisor n−1)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.58"
+  }
+}

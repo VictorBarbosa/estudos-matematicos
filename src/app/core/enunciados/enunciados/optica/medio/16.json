@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A luz sai do vidro (n = 1.5) para o ar. A partir de que ângulo com a normal ocorre reflexão total, em graus? (duas casas decimais)",
+    "fr": "La lumière sort du verre (n = 1.5) vers l’air. À partir de quel angle avec la normale se produit la réflexion totale, en degrés ? (deux décimales)",
+    "en": "Light leaves glass (n = 1.5) into air. From what angle with the normal does total internal reflection occur, in degrees? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "41.81"
+  }
+}

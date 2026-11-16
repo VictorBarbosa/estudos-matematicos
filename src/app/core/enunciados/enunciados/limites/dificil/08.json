@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (√(x + 9) − 4)/(x − 7) quando x tende a 7. (duas casas decimais)",
+    "fr": "Calculez la limite de (√(x + 9) − 4)/(x − 7) quand x tend vers 7. (deux décimales)",
+    "en": "Calculate the limit of (√(x + 9) − 4)/(x − 7) as x tends to 7. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.12"
+  }
+}

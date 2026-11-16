@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa urna há 7 bolas vermelhas e 3 azuis. Retirando duas COM reposição, qual é a probabilidade de ambas serem azuis? (duas casas decimais)",
+    "fr": "Dans une urne il y a 7 boules rouges et 3 bleues. En retirant deux boules AVEC remise, quelle est la probabilité que les deux soient bleues ? (deux décimales)",
+    "en": "An urn has 7 red balls and 3 blue ones. Drawing two WITH replacement, what is the probability both are blue? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.09"
+  }
+}

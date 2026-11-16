@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x ≠ 8, f(x) = (x² − 64)/(x − 8); para que f seja contínua em x = 8, qual deve ser f(8)?",
+    "fr": "Si x ≠ 8, f(x) = (x² − 64)/(x − 8) ; pour que f soit continue en x = 8, que doit valoir f(8) ?",
+    "en": "If x ≠ 8, f(x) = (x² − 64)/(x − 8); for f to be continuous at x = 8, what should f(8) be?"
+  },
+  "dados-calculo": {
+    "total": "16"
+  }
+}

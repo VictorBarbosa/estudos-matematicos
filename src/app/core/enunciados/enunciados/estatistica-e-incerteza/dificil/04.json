@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um retângulo tem base 5 ± 0.5 cm e altura 4 ± 0.5 cm. Qual é a incerteza da área, em cm²? (duas casas decimais)",
+    "fr": "Un rectangle a une base 5 ± 0.5 cm et une hauteur 4 ± 0.5 cm. Quelle est l’incertitude de l’aire, en cm² ? (deux décimales)",
+    "en": "A rectangle has base 5 ± 0.5 cm and height 4 ± 0.5 cm. What is the uncertainty of the area, in cm²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.50"
+  }
+}

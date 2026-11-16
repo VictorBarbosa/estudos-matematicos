@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma massa de 0.5 kg oscila numa mola de constante 8 N/m. Qual é o período, em s? (duas casas decimais)",
+    "fr": "Une masse de 0.5 kg oscille sur un ressort de constante 8 N/m. Quelle est la période, en s ? (deux décimales)",
+    "en": "A mass of 0.5 kg oscillates on a spring of constant 8 N/m. What is the period, in s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.57"
+  }
+}

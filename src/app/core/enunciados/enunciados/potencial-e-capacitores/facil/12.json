@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanta energia guarda um capacitor de 1000 μF carregado a 12 V, em mJ? (duas casas decimais)",
+    "fr": "Quelle énergie emmagasine un condensateur de 1000 μF chargé à 12 V, en mJ ? (deux décimales)",
+    "en": "How much energy does a 1000 μF capacitor charged to 12 V store, in mJ? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "72.00"
+  }
+}

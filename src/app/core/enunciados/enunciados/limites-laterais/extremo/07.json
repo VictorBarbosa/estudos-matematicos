@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 6, f(x) = x²; se x ≥ 6, f(x) = cx + 0. Qual valor de c torna a função contínua em x = 6? (duas casas decimais)",
+    "fr": "Si x < 6, f(x) = x² ; si x ≥ 6, f(x) = cx + 0. Quelle valeur de c rend la fonction continue en x = 6 ? (deux décimales)",
+    "en": "If x < 6, f(x) = x²; if x ≥ 6, f(x) = cx + 0. What value of c makes the function continuous at x = 6? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

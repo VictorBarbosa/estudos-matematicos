@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x³ − 8)/(x − 2) quando x tende a 2.",
+    "fr": "Calculez la limite de (x³ − 8)/(x − 2) quand x tend vers 2.",
+    "en": "Calculate the limit of (x³ − 8)/(x − 2) as x tends to 2."
+  },
+  "dados-calculo": {
+    "total": "12"
+  }
+}

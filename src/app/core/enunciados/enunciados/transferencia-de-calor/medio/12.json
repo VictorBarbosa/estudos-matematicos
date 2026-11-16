@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma superfície de 10 m² está 5 K acima do ar, com coeficiente de convecção 12 W/(m²·K). Qual é o fluxo de calor, em W? (duas casas decimais)",
+    "fr": "Une surface de 10 m² est à 5 K au-dessus de l’air, avec un coefficient de convection 12 W/(m²·K). Quel est le flux de chaleur, en W ? (deux décimales)",
+    "en": "A surface of 10 m² is 5 K above the air, with convection coefficient 12 W/(m²·K). What is the heat flux, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "600.00"
+  }
+}

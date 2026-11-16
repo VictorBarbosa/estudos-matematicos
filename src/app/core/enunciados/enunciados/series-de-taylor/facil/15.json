@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use o polinômio de Maclaurin de grau 1 para aproximar e^(0.5). (duas casas decimais)",
+    "fr": "Utilisez le polynôme de Maclaurin de degré 1 pour approcher e^(0.5). (deux décimales)",
+    "en": "Use the Maclaurin polynomial of degree 1 to approximate e^(0.5). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.50"
+  }
+}

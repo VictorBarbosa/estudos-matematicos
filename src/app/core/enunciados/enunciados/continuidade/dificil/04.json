@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (2x² + 7)/(x² + 1) quando x tende ao infinito: é o valor que torna a função contínua \"no infinito\". (duas casas decimais)",
+    "fr": "Calculez la limite de (2x² + 7)/(x² + 1) quand x tend vers l’infini : c’est la valeur qui rend la fonction continue « à l’infini ». (deux décimales)",
+    "en": "Calculate the limit of (2x² + 7)/(x² + 1) as x tends to infinity: it is the value making the function continuous \"at infinity\". (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa normal de média 10 e desvio 2, que valor deixa 84% das observações abaixo dele? (duas casas decimais)",
+    "fr": "Dans une normale de moyenne 10 et d’écart-type 2, quelle valeur laisse 84% des observations en dessous d’elle ? (deux décimales)",
+    "en": "In a normal distribution with mean 10 and standard deviation 2, what value leaves 84% of observations below it? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

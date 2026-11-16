@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um barco aponta perpendicularmente à margem a 8 m/s, num rio cuja correnteza é de 8 m/s. Quantos graus, em relação à perpendicular, a velocidade resultante faz? (duas casas decimais)",
+    "fr": "Un bateau pointe perpendiculairement à la rive à 8 m/s, dans un fleuve dont le courant est de 8 m/s. Combien de degrés, par rapport à la perpendiculaire, fait la vitesse résultante ? (deux décimales)",
+    "en": "A boat heads perpendicular to the bank at 8 m/s in a river whose current is 8 m/s. How many degrees from the perpendicular does the resultant velocity make? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "45.00"
+  }
+}

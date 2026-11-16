@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo gira livremente, sem torque externo, com inércia 1 kg·m² a 12 rad/s. A inércia passa a 0.5. Qual é a nova velocidade angular, em rad/s? (duas casas decimais)",
+    "fr": "Un corps tourne librement, sans couple externe, avec une inertie 1 kg·m² à 12 rad/s. L’inertie passe à 0.5. Quelle est la nouvelle vitesse angulaire, en rad/s ? (deux décimales)",
+    "en": "A body spins freely, with no external torque, with inertia 1 kg·m² at 12 rad/s. The inertia becomes 0.5. What is the new angular velocity, in rad/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "24.00"
+  }
+}

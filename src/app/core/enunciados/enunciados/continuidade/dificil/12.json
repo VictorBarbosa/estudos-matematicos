@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = 1/(x − 1) é contínua em x = 1? Responda 1 se sim e 0 se não.",
+    "fr": "La fonction f(x) = 1/(x − 1) est-elle continue en x = 1 ? Répondez 1 si oui et 0 si non.",
+    "en": "Is the function f(x) = 1/(x − 1) continuous at x = 1? Answer 1 if yes and 0 if no."
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (2x + 1)/(1x + 2) quando x tende a 1. (duas casas decimais)",
+    "fr": "Calculez la limite de (2x + 1)/(1x + 2) quand x tend vers 1. (deux décimales)",
+    "en": "Calculate the limit of (2x + 1)/(1x + 2) as x tends to 1. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

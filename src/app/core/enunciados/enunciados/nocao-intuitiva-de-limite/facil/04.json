@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de 5x + -2 quando x tende a 1.",
+    "fr": "Calculez la limite de 5x + -2 quand x tend vers 1.",
+    "en": "Calculate the limit of 5x + -2 as x tends to 1."
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

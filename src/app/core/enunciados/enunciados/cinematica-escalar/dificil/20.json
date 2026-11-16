@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo parte a 0 m/s e acelera a 9.81 m/s². Qual é a velocidade após percorrer 20 m? (duas casas decimais)",
+    "fr": "Un corps part à 0 m/s et accélère à 9.81 m/s². Quelle est la vitesse après avoir parcouru 20 m ? (deux décimales)",
+    "en": "A body starts at 0 m/s and accelerates at 9.81 m/s². What is the velocity after covering 20 m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "19.81"
+  }
+}

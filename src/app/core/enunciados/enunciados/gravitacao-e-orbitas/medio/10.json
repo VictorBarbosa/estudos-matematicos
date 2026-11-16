@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a velocidade de um satélite em órbita circular a 1000 km de altitude? (use GM = 3,986×10⁵ km³/s² e R = 6371 km; em km/s, duas casas decimais)",
+    "fr": "Quelle est la vitesse d’un satellite en orbite circulaire à 1000 km d’altitude ? (utilisez GM = 3,986×10⁵ km³/s² et R = 6371 km ; en km/s, deux décimales)",
+    "en": "What is the speed of a satellite in circular orbit at an altitude of 1000 km? (use GM = 3.986×10⁵ km³/s² and R = 6371 km; in km/s, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "7.35"
+  }
+}

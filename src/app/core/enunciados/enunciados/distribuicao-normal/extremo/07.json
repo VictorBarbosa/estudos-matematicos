@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa normal de média 200 e desvio 20, que valor deixa 50% das observações abaixo dele? (duas casas decimais)",
+    "fr": "Dans une normale de moyenne 200 et d’écart-type 20, quelle valeur laisse 50% des observations en dessous d’elle ? (deux décimales)",
+    "en": "In a normal distribution with mean 200 and standard deviation 20, what value leaves 50% of observations below it? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "200.00"
+  }
+}

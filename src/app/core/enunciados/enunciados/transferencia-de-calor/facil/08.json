@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma placa de tijolo tem 5 m² de área e 0.15 m de espessura, com diferença de 25 K entre as faces. A condutividade é 0.7 W/(m·K). Qual é o fluxo de calor, em W? (duas casas decimais)",
+    "fr": "Une plaque de tijolo a une aire de 5 m² et une épaisseur de 0.15 m, avec une différence de 25 K entre les faces. La conductivité est 0.7 W/(m·K). Quel est le flux de chaleur, en W ? (deux décimales)",
+    "en": "A tijolo plate has area 5 m² and thickness 0.15 m, with a difference of 25 K between the faces. The conductivity is 0.7 W/(m·K). What is the heat flux, in W? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "583.33"
+  }
+}

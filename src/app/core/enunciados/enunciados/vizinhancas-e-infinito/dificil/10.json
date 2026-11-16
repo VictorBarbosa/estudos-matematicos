@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = (5x + 0)/(x − 1) tem uma assíntota vertical. Em que valor de x ela está?",
+    "fr": "La fonction f(x) = (5x + 0)/(x − 1) a une asymptote verticale. En quelle valeur de x se trouve-t-elle ?",
+    "en": "The function f(x) = (5x + 0)/(x − 1) has a vertical asymptote. At what value of x is it?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

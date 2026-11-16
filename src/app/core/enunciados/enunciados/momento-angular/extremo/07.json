@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um satélite em órbita circular de raio 20000 km com velocidade 4.5 km/s tem momento angular específico (por unidade de massa) de quanto, em km²/s? (duas casas decimais)",
+    "fr": "Un satellite en orbite circulaire de rayon 20000 km avec une vitesse de 4.5 km/s a un moment cinétique spécifique (par unité de masse) de combien, en km²/s ? (deux décimales)",
+    "en": "A satellite in a circular orbit of radius 20000 km with speed 4.5 km/s has a specific angular momentum (per unit mass) of what, in km²/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "90000.00"
+  }
+}

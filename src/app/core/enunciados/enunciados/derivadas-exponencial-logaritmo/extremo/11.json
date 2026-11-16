@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive e calcule f'(1) para f(x) = x^(3)·ln(x), com x > 0. (duas casas decimais)",
+    "fr": "Dérivez et calculez f'(1) pour f(x) = x^(3)·ln(x), avec x > 0. (deux décimales)",
+    "en": "Differentiate and calculate f'(1) for f(x) = x^(3)·ln(x), with x > 0. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

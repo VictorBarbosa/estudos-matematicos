@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um projétil é lançado a 40 m/s formando 45° com a horizontal. Qual é o ALCANCE, em m? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un projectile est lancé à 40 m/s en formant 45° avec l’horizontale. Quelle est la PORTÉE, en m ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A projectile is launched at 40 m/s making 45° with the horizontal. What is the RANGE, in m? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "163.10"
+  }
+}

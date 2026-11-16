@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um solenoide de 50 cm tem 2000 espiras e corrente de 0.5 A. Qual é o campo no interior, em mT? (μ₀ = 4π×10⁻⁷; duas casas decimais)",
+    "fr": "Un solénoïde de 50 cm a 2000 spires et un courant de 0.5 A. Quel est le champ à l’intérieur, en mT ? (μ₀ = 4π×10⁻⁷ ; deux décimales)",
+    "en": "A solenoid of 50 cm has 2000 turns and current 0.5 A. What is the field inside, in mT? (μ₀ = 4π×10⁻⁷; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.51"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de momento de inércia 3 kg·m² gira a 4 rad/s. Qual é a energia cinética de rotação, em J? (duas casas decimais)",
+    "fr": "Un corps de moment d’inertie 3 kg·m² tourne à 4 rad/s. Quelle est l’énergie cinétique de rotation, en J ? (deux décimales)",
+    "en": "A body with moment of inertia 3 kg·m² spins at 4 rad/s. What is the rotational kinetic energy, in J? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "24.00"
+  }
+}

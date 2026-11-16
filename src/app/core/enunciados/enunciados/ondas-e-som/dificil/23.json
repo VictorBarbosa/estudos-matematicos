@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma sirene de 500 Hz se aproxima de um ouvinte parado a 34 m/s. Com o som a 340 m/s, que frequência o ouvinte escuta, em Hz? (duas casas decimais)",
+    "fr": "Une sirène de 500 Hz s’approche d’un auditeur immobile à 34 m/s. Avec le son à 340 m/s, quelle fréquence l’auditeur entend-il, en Hz ? (deux décimales)",
+    "en": "A siren of 500 Hz approaches a stationary listener at 34 m/s. With sound at 340 m/s, what frequency does the listener hear, in Hz? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "555.56"
+  }
+}

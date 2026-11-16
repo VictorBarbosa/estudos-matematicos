@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um projétil é lançado a 20 m/s formando 45° com a horizontal. Qual é a altura MÁXIMA, em m? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un projectile est lancé à 20 m/s en formant 45° avec l’horizontale. Quelle est la hauteur MAXIMALE, en m ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A projectile is launched at 20 m/s making 45° with the horizontal. What is the MAXIMUM height, in m? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.19"
+  }
+}

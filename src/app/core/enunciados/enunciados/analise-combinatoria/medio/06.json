@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "De quantos modos se pode escolher uma equipe de 1 pessoas entre 7 candidatos, sem distinguir cargos?",
+    "fr": "De combien de façons peut-on choisir une équipe de 1 personnes parmi 7 candidats, sans distinguer les postes ?",
+    "en": "In how many ways can a team of 1 people be chosen from 7 candidates, regardless of roles?"
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

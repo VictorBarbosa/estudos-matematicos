@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num ciclo, um gás recebe 1000 J de calor e realiza 300 J de trabalho. Qual é o rendimento da máquina, em %? (duas casas decimais)",
+    "fr": "Dans un cycle, un gaz reçoit 1000 J de chaleur et effectue 300 J de travail. Quel est le rendement de la machine, en % ? (deux décimales)",
+    "en": "In a cycle a gas receives 1000 J of heat and does 300 J of work. What is the efficiency, in %? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "30.00"
+  }
+}

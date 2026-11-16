@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de sen²(x) de 0 a π/2, usando a identidade do arco duplo. (duas casas decimais)",
+    "fr": "Calculez l’intégrale de sin²(x) de 0 à π/2, en utilisant l’identité de l’angle double. (deux décimales)",
+    "en": "Calculate the integral of sin²(x) from 0 to π/2, using the double-angle identity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.79"
+  }
+}

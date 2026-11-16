@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o coeficiente de x^1 na série de Maclaurin de cos(x)? Responda com 5 casas decimais, com sinal.",
+    "fr": "Quel est le coefficient de x^1 dans la série de Maclaurin de cos(x) ? Répondez avec 5 décimales, avec signe.",
+    "en": "What is the coefficient of x^1 in the Maclaurin series of cos(x)? Answer with 5 decimal places, with sign."
+  },
+  "dados-calculo": {
+    "total": "0.0"
+  }
+}

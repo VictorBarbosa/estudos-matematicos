@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o momento de inércia, em kg·m², de um disco maciço de 6 kg e 0.3 m de raio? (duas casas decimais)",
+    "fr": "Quel est le moment d’inertie, en kg·m², d’un disque plein de 6 kg et de 0.3 m de rayon ? (deux décimales)",
+    "en": "What is the moment of inertia, in kg·m², of a solid disc of 6 kg and radius 0.3 m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.27"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Sendo A(x) = ∫ de 0 a x de (t² + 5) dt, quanto vale A'(1)? (duas casas decimais)",
+    "fr": "A(x) = ∫ de 0 à x de (t² + 5) dt étant donné, combien vaut A'(1) ? (deux décimales)",
+    "en": "With A(x) = ∫ from 0 to x of (t² + 5) dt, what is A'(1)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanto vale C(10, 5), o número na linha 10, posição 5 do triângulo de Pascal (contando do 0)?",
+    "fr": "Combien vaut C(10, 5), le nombre de la ligne 10, position 5 du triangle de Pascal (en comptant à partir de 0) ?",
+    "en": "What is C(10, 5), the number in row 10, position 5 of Pascal’s triangle (counting from 0)?"
+  },
+  "dados-calculo": {
+    "total": "252"
+  }
+}

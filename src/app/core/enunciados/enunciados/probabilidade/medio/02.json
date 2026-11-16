@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma urna tem 3 bolas vermelhas e 2 azuis. Retirando duas SEM reposição, qual é a probabilidade de ambas serem vermelhas? (duas casas decimais)",
+    "fr": "Une urne a 3 boules rouges et 2 bleues. En retirant deux boules SANS remise, quelle est la probabilité que les deux soient rouges ? (deux décimales)",
+    "en": "An urn has 3 red balls and 2 blue ones. Drawing two WITHOUT replacement, what is the probability both are red? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.30"
+  }
+}

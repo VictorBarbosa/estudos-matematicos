@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive e calcule f'(1) para f(x) = cos(1x), com x em radianos. (duas casas decimais)",
+    "fr": "Dérivez et calculez f'(1) pour f(x) = cos(1x), avec x en radians. (deux décimales)",
+    "en": "Differentiate and calculate f'(1) for f(x) = cos(1x), with x in radians. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-0.84"
+  }
+}

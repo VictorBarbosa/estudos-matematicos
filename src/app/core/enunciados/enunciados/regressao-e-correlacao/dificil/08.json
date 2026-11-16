@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para os pares (0, 0), (2, 4) e (4, 8), qual é o valor PREVISTO de y quando x = 10? (duas casas decimais)",
+    "fr": "Pour les paires (0, 0), (2, 4) et (4, 8), quelle est la valeur PRÉVUE de y lorsque x = 10 ? (deux décimales)",
+    "en": "For the pairs (0, 0), (2, 4) and (4, 8), what is the PREDICTED value of y when x = 10? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa urna há 5 bolas vermelhas e 5 azuis. Retirando UMA bola, qual é a probabilidade de ser vermelha? (duas casas decimais)",
+    "fr": "Dans une urne il y a 5 boules rouges et 5 bleues. En retirant UNE boule, quelle est la probabilité qu’elle soit rouge ? (deux décimales)",
+    "en": "An urn has 5 red balls and 5 blue ones. Drawing ONE ball, what is the probability it is red? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

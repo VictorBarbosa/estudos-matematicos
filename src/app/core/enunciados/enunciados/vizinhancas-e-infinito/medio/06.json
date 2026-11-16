@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (10x + 1)/(5x + 2) quando x tende ao infinito. (duas casas decimais)",
+    "fr": "Calculez la limite de (10x + 1)/(5x + 2) quand x tend vers l’infini. (deux décimales)",
+    "en": "Calculate the limit of (10x + 1)/(5x + 2) as x tends to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

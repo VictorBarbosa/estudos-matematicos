@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos anagramas distintos tem a palavra LUA? (todas as letras diferentes)",
+    "fr": "Combien d’anagrammes distincts le mot LUNE possède-t-il ? (toutes les lettres différentes)",
+    "en": "How many distinct anagrams does the word MOON have? (all letters different)"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

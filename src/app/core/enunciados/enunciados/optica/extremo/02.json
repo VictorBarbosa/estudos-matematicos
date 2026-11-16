@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Duas lentes convergentes estão a 30 cm uma da outra, com focos 10 cm e 10 cm. Um objeto está a 15 cm antes da primeira. A que distância DEPOIS da segunda lente se forma a imagem final, em cm? (duas casas decimais)",
+    "fr": "Deux lentilles convergentes sont à 30 cm l’une de l’autre, avec des focales 10 cm et 10 cm. Un objet est à 15 cm avant la première. À quelle distance APRÈS la seconde lentille se forme l’image finale, en cm ? (deux décimales)",
+    "en": "Two converging lenses are 30 cm apart, with focal lengths 10 cm and 10 cm. An object is 15 cm in front of the first. At what distance BEYOND the second lens is the final image formed, in cm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-0.00"
+  }
+}

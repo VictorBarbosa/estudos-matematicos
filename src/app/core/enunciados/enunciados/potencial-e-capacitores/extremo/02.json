@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um ponto P está a 1 m de uma carga de 1 μC e a 1 m de outra de 1 μC. Qual é o potencial em P, em kV? (k = 9×10⁹; duas casas decimais)",
+    "fr": "Un point P est à 1 m d’une charge de 1 μC et à 1 m d’une autre de 1 μC. Quel est le potentiel en P, en kV ? (k = 9×10⁹ ; deux décimales)",
+    "en": "A point P is 1 m from a charge of 1 μC and 1 m from another of 1 μC. What is the potential at P, in kV? (k = 9×10⁹; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "18.00"
+  }
+}

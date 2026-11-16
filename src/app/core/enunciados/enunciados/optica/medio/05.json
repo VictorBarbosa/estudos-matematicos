@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um raio de luz passa do ar (n = 1,00) para o vidro (n = 1.33) com ângulo de 60° com a normal. Qual é o ângulo refratado, em graus? (duas casas decimais)",
+    "fr": "Un rayon de lumière passe de l’air (n = 1,00) au verre (n = 1.33) avec un angle de 60° avec la normale. Quel est l’angle réfracté, en degrés ? (deux décimales)",
+    "en": "A light ray goes from air (n = 1.00) into glass (n = 1.33) at 60° from the normal. What is the refracted angle, in degrees? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "40.63"
+  }
+}

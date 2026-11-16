@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa normal de média 3 e desvio 7, qual é a proporção ABAIXO de 3? (duas casas decimais)",
+    "fr": "Dans une normale de moyenne 3 et d’écart-type 7, quelle proportion se trouve EN DESSOUS de 3 ? (deux décimales)",
+    "en": "In a normal distribution with mean 3 and standard deviation 7, what proportion lies BELOW 3? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

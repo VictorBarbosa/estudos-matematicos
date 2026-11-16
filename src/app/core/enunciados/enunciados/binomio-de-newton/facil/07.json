@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanto vale C(8, 4), o número na linha 8, posição 4 do triângulo de Pascal (contando do 0)?",
+    "fr": "Combien vaut C(8, 4), le nombre de la ligne 8, position 4 du triangle de Pascal (en comptant à partir de 0) ?",
+    "en": "What is C(8, 4), the number in row 8, position 4 of Pascal’s triangle (counting from 0)?"
+  },
+  "dados-calculo": {
+    "total": "70"
+  }
+}

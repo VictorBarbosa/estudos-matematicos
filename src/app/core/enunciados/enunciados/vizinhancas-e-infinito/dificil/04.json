@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (5x² + 3x + 2)/(5x² + 7) quando x tende ao infinito. (duas casas decimais)",
+    "fr": "Calculez la limite de (5x² + 3x + 2)/(5x² + 7) quand x tend vers l’infini. (deux décimales)",
+    "en": "Calculate the limit of (5x² + 3x + 2)/(5x² + 7) as x tends to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

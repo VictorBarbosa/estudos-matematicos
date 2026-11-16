@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (1x² + 1x)/x quando x tende a 0.",
+    "fr": "Calculez la limite de (1x² + 1x)/x quand x tend vers 0.",
+    "en": "Calculate the limit of (1x² + 1x)/x as x tends to 0."
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

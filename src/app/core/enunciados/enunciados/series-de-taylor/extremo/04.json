@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Aproxime a raiz quadrada de 16.4 pelo polinômio de Taylor de grau 1 centrado em 16. (duas casas decimais)",
+    "fr": "Approximez la racine carrée de 16.4 par le polynôme de Taylor de degré 1 centré en 16. (deux décimales)",
+    "en": "Approximate the square root of 16.4 by the Taylor polynomial of degree 1 centred at 16. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.05"
+  }
+}

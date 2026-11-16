@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força de 100 N é aplicada perpendicularmente a 0.2 m do eixo. Qual é o torque, em N·m? (duas casas decimais)",
+    "fr": "Une force de 100 N est appliquée perpendiculairement à 0.2 m de l’axe. Quel est le couple, en N·m ? (deux décimales)",
+    "en": "A force of 100 N is applied perpendicularly at 0.2 m from the axis. What is the torque, in N·m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

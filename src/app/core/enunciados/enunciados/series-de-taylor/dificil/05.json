@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Aproximando e^(0.5) pelo polinômio de Maclaurin de grau 2, de quanto é o erro cometido? (duas casas decimais)",
+    "fr": "En approchant e^(0.5) par le polynôme de Maclaurin de degré 2, quelle est l’erreur commise ? (deux décimales)",
+    "en": "Approximating e^(0.5) by the Maclaurin polynomial of degree 2, how large is the error? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.02"
+  }
+}

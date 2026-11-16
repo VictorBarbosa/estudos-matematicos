@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma asa de 5 m² tem ar a 80 m/s na face superior e 70 m/s na inferior. Qual é a sustentação, em N? (ρ = 1,2 kg/m³; duas casas decimais)",
+    "fr": "Une aile de 5 m² a de l’air à 80 m/s sur la face supérieure et à 70 m/s sur l’inférieure. Quelle est la portance, en N ? (ρ = 1,2 kg/m³ ; deux décimales)",
+    "en": "A wing of 5 m² has air at 80 m/s on the upper surface and 70 m/s on the lower. What is the lift, in N? (ρ = 1.2 kg/m³; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4500.00"
+  }
+}

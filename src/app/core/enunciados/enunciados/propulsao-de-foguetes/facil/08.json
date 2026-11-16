@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um motor queima 20 kg/s de propelente com velocidade de exaustão de 2800 m/s. Qual é o empuxo, em kN? (duas casas decimais)",
+    "fr": "Un moteur brûle 20 kg/s de propergol avec une vitesse d’éjection de 2800 m/s. Quelle est la poussée, en kN ? (deux décimales)",
+    "en": "An engine burns 20 kg/s of propellant with exhaust velocity 2800 m/s. What is the thrust, in kN? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "56.00"
+  }
+}

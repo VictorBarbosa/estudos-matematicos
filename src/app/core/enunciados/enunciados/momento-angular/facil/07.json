@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma partícula de 2 kg passa a 3 m de um ponto, com velocidade de 8 m/s perpendicular ao raio. Qual é o módulo do momento angular em relação a esse ponto, em kg·m²/s? (duas casas decimais)",
+    "fr": "Une particule de 2 kg passe à 3 m d’un point, avec une vitesse de 8 m/s perpendiculaire au rayon. Quel est le module du moment cinétique par rapport à ce point, en kg·m²/s ? (deux décimales)",
+    "en": "A particle of 2 kg passes 3 m from a point, with speed 8 m/s perpendicular to the radius. What is the magnitude of its angular momentum about that point, in kg·m²/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "48.00"
+  }
+}

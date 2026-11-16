@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um projétil é lançado a 8 m/s formando 0° com a horizontal, de uma altura de 3 m. Quanto tempo leva para chegar ao solo, em s? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un projectile est lancé à 8 m/s en formant 0° avec l’horizontale, depuis une hauteur de 3 m. Combien de temps met-il pour atteindre le sol, en s ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A projectile is launched at 8 m/s making 0° with the horizontal, from a height of 3 m. How long does it take to reach the ground, in s? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.78"
+  }
+}

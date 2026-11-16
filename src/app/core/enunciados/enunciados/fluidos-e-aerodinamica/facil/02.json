@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a pressão total a 10 m de profundidade na água? (em kPa, duas casas decimais; considere a atmosfera de 101,325 kPa e ρ = 1000 kg/m³)",
+    "fr": "Quelle est la pression totale à 10 m de profondeur dans l’eau ? (en kPa, deux décimales ; considérez une atmosphère de 101,325 kPa et ρ = 1000 kg/m³)",
+    "en": "What is the total pressure at a depth of 10 m in water? (in kPa, two decimal places; take the atmosphere as 101.325 kPa and ρ = 1000 kg/m³)"
+  },
+  "dados-calculo": {
+    "total": "199.43"
+  }
+}

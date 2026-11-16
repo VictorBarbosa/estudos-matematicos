@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x² − 64)/(x − 8) quando x tende a 8, simplificando primeiro.",
+    "fr": "Calculez la limite de (x² − 64)/(x − 8) quand x tend vers 8, en simplifiant d’abord.",
+    "en": "Calculate the limit of (x² − 64)/(x − 8) as x tends to 8, simplifying first."
+  },
+  "dados-calculo": {
+    "total": "16"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma corda de 1.5 m, presa nas duas pontas, conduz ondas a 450 m/s. Qual é a frequência do 1º harmônico, em Hz? (duas casas decimais)",
+    "fr": "Une corde de 1.5 m, fixée aux deux extrémités, conduit des ondes à 450 m/s. Quelle est la fréquence de l’harmonique 1, en Hz ? (deux décimales)",
+    "en": "A string of 1.5 m, fixed at both ends, carries waves at 450 m/s. What is the frequency of the 1th harmonic, in Hz? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "150.00"
+  }
+}

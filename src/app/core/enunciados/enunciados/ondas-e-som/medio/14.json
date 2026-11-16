@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma corda de 0.8 m, presa nas duas pontas, conduz ondas a 320 m/s. Qual é a frequência do 4º harmônico, em Hz? (duas casas decimais)",
+    "fr": "Une corde de 0.8 m, fixée aux deux extrémités, conduit des ondes à 320 m/s. Quelle est la fréquence de l’harmonique 4, en Hz ? (deux décimales)",
+    "en": "A string of 0.8 m, fixed at both ends, carries waves at 320 m/s. What is the frequency of the 4th harmonic, in Hz? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "800.00"
+  }
+}

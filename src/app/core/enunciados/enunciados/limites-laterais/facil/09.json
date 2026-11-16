@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o limite pela ESQUERDA de f(x) = 3x + 2 em x = 4? (duas casas decimais)",
+    "fr": "Quelle est la limite à GAUCHE de f(x) = 3x + 2 en x = 4 ? (deux décimales)",
+    "en": "What is the LEFT-hand limit of f(x) = 3x + 2 at x = 4? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "14.00"
+  }
+}

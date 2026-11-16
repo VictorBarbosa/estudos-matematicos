@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "De quantos modos se pode distribuir 3 objetos distintos em 5 caixas distintas, com no máximo 1 objeto por caixa?",
+    "fr": "De combien de façons peut-on répartir 3 objets distincts dans 5 boîtes distinctes, avec au plus 1 objet par boîte ?",
+    "en": "In how many ways can 3 distinct objects be placed in 5 distinct boxes, with at most 1 object per box?"
+  },
+  "dados-calculo": {
+    "total": "60"
+  }
+}

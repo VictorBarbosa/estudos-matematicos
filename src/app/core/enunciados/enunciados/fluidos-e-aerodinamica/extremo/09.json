@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma vazão de 10 L/s passa por um tubo de 10 cm de diâmetro que estreita para 5 cm. Qual é a velocidade na parte estreita, em m/s? (duas casas decimais)",
+    "fr": "Un débit de 10 L/s passe dans un tube de 10 cm de diamètre qui se rétrécit à 5 cm. Quelle est la vitesse dans la partie étroite, en m/s ? (deux décimales)",
+    "en": "A flow of 10 L/s goes through a pipe of 10 cm diameter narrowing to 5 cm. What is the speed in the narrow part, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.09"
+  }
+}

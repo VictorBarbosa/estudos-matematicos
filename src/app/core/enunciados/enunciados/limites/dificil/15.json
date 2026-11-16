@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x² − 6x)/(x − 6) quando x tende a 6, fatorando o numerador.",
+    "fr": "Calculez la limite de (x² − 6x)/(x − 6) quand x tend vers 6, en factorisant le numérateur.",
+    "en": "Calculate the limit of (x² − 6x)/(x − 6) as x tends to 6, factoring the numerator."
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

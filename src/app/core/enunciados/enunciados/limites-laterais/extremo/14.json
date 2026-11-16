@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 0, f(x) = 6x + 1; se x ≥ 0, f(x) = 7x + k. Para qual valor da constante k (o termo independente da direita) a função é contínua em x = 0?",
+    "fr": "Si x < 0, f(x) = 6x + 1 ; si x ≥ 0, f(x) = 7x + k. Pour quelle valeur de la constante k la fonction est-elle continue en x = 0 ?",
+    "en": "If x < 0, f(x) = 6x + 1; if x ≥ 0, f(x) = 7x + k. For what value of the constant k is the function continuous at x = 0?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Derive e calcule f'(0) para f(x) = x·e^(2x). (duas casas decimais)",
+    "fr": "Dérivez et calculez f'(0) pour f(x) = x·e^(2x). (deux décimales)",
+    "en": "Differentiate and calculate f'(0) for f(x) = x·e^(2x). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O volume de uma esfera decresce a 314.16 cm³/s. A que taxa o raio decresce quando ele vale 5 cm? (em cm/s, duas casas decimais)",
+    "fr": "Le volume d’une sphère décroît à 314.16 cm³/s. À quel taux le rayon décroît-il quand il vaut 5 cm ? (en cm/s, deux décimales)",
+    "en": "A sphere’s volume decreases at 314.16 cm³/s. At what rate is the radius decreasing when it is 5 cm? (in cm/s, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

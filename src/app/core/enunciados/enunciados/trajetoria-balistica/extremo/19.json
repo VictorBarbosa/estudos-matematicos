@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um projétil é lançado a 15 m/s formando 37° com a horizontal. Qual é a velocidade dele no ponto MAIS ALTO, em m/s? (duas casas decimais)",
+    "fr": "Un projectile est lancé à 15 m/s en formant 37° avec l’horizontale. Quelle est sa vitesse au point le PLUS HAUT, en m/s ? (deux décimales)",
+    "en": "A projectile is launched at 15 m/s making 37° with the horizontal. What is its speed at the HIGHEST point, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "11.98"
+  }
+}

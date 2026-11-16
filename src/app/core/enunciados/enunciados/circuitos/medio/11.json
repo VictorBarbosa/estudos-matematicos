@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resistores de 6 Ω estão ligados em série. Qual é a resistência equivalente, em Ω, de 3 deles? (duas casas decimais)",
+    "fr": "Des résistances de 6 Ω sont branchées en série. Quelle est la résistance équivalente, en Ω, de 3 d’entre elles ? (deux décimales)",
+    "en": "Resistors of 6 Ω are connected in série. What is the equivalent resistance, in Ω, of 3 of them? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "18.00"
+  }
+}

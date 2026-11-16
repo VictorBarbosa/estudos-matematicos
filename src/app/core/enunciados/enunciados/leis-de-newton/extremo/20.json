@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num elevador que desce com aceleração de 0.5 m/s², uma pessoa de 90 kg está sobre uma balança. Que peso a balança indica, em N? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Dans un ascenseur qui descend avec une accélération de 0.5 m/s², une personne de 90 kg est sur une balance. Quel poids la balance indique-t-elle, en N ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "In a lift descending with acceleration 0.5 m/s², a 90 kg person stands on a scale. What weight does the scale read, in N? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "837.90"
+  }
+}

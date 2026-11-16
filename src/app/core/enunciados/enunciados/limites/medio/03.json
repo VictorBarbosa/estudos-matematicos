@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x³ − 27)/(x − 3) quando x tende a 3.",
+    "fr": "Calculez la limite de (x³ − 27)/(x − 3) quand x tend vers 3.",
+    "en": "Calculate the limit of (x³ − 27)/(x − 3) as x tends to 3."
+  },
+  "dados-calculo": {
+    "total": "27"
+  }
+}

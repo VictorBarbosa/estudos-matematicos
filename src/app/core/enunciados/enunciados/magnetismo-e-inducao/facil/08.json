@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um fio de 1 m, com corrente de 10 A, está perpendicular a um campo magnético de 0.01 T. Qual é a força sobre ele, em N? (duas casas decimais)",
+    "fr": "Un fil de 1 m, parcouru par un courant de 10 A, est perpendiculaire à un champ magnétique de 0.01 T. Quelle est la force sur lui, en N ? (deux décimales)",
+    "en": "A wire of 1 m, carrying 10 A, is perpendicular to a magnetic field of 0.01 T. What is the force on it, in N? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.10"
+  }
+}

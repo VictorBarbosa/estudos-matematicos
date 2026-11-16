@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num divisor de tensão, R₁ = 5 kΩ e R₂ = 5 kΩ estão em série com uma fonte de 9 V. Qual é a tensão sobre R₂, em V? (duas casas decimais)",
+    "fr": "Dans un diviseur de tension, R₁ = 5 kΩ et R₂ = 5 kΩ sont en série avec une source de 9 V. Quelle est la tension aux bornes de R₂, en V ? (deux décimales)",
+    "en": "In a voltage divider, R₁ = 5 kΩ and R₂ = 5 kΩ are in series with a 9 V source. What is the voltage across R₂, in V? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.50"
+  }
+}

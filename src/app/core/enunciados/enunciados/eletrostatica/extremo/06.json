@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Três cargas estão alinhadas: A = 9 μC à esquerda, M = 1 μC no meio e B = 4 μC à direita, com M a 3 m de A e a 2 m de B. Qual é a força resultante sobre M, em N, com sinal positivo para a direita? (k = 9×10⁹; duas casas decimais)",
+    "fr": "Trois charges sont alignées : A = 9 μC à gauche, M = 1 μC au milieu et B = 4 μC à droite, M étant à 3 m de A et à 2 m de B. Quelle est la force résultante sur M, en N, avec un signe positif vers la droite ? (k = 9×10⁹ ; deux décimales)",
+    "en": "Three charges lie in a line: A = 9 μC on the left, M = 1 μC in the middle and B = 4 μC on the right, with M at 3 m from A and 2 m from B. What is the net force on M, in N, positive to the right? (k = 9×10⁹; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

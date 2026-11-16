@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de 6 no intervalo de 1 a 3.",
+    "fr": "Calculez l’intégrale de 6 sur l’intervalle de 1 à 3.",
+    "en": "Calculate the integral of 6 from 1 to 3."
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

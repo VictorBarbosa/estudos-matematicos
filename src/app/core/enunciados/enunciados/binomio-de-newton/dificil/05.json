@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o termo independente de x (o termo sem x) no desenvolvimento de (x + 1/x)^8?",
+    "fr": "Quel est le terme indépendant de x (le terme sans x) dans le développement de (x + 1/x)^8 ?",
+    "en": "What is the x-independent term (the term without x) in the expansion of (x + 1/x)^8?"
+  },
+  "dados-calculo": {
+    "total": "70"
+  }
+}

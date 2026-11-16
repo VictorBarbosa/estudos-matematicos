@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força resultante de 100 N age sobre um corpo de 4 kg. Qual é a aceleração, em m/s²? (duas casas decimais)",
+    "fr": "Une force résultante de 100 N agit sur un corps de 4 kg. Quelle est l’accélération, en m/s² ? (deux décimales)",
+    "en": "A net force of 100 N acts on a body of 4 kg. What is the acceleration, in m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "25.00"
+  }
+}

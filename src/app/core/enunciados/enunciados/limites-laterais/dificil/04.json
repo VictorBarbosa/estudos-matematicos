@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o salto do gráfico em x = 0, isto é, o limite pela direita menos o limite pela esquerda? Use f(x) = 5x + 2 à esquerda e 1x + 3 à direita. (duas casas decimais)",
+    "fr": "Quel est le saut du graphique en x = 0, c’est-à-dire la limite à droite moins la limite à gauche ? Utilisez f(x) = 5x + 2 à gauche et 1x + 3 à droite. (deux décimales)",
+    "en": "What is the jump of the graph at x = 0, that is, the right limit minus the left limit? Use f(x) = 5x + 2 on the left and 1x + 3 on the right. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

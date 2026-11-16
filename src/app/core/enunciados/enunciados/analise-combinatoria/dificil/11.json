@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos anagramas distintos tem a palavra CASA, que tem letras repetidas?",
+    "fr": "Combien d’anagrammes distincts le mot CASA possède-t-il, sachant qu’il a des lettres répétées ?",
+    "en": "How many distinct anagrams does the word HOUSE have, given its repeated letters?"
+  },
+  "dados-calculo": {
+    "total": "12"
+  }
+}

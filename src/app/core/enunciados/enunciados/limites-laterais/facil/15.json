@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o limite pela ESQUERDA de f(x) = 7x + 1 em x = 1? (duas casas decimais)",
+    "fr": "Quelle est la limite à GAUCHE de f(x) = 7x + 1 en x = 1 ? (deux décimales)",
+    "en": "What is the LEFT-hand limit of f(x) = 7x + 1 at x = 1? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

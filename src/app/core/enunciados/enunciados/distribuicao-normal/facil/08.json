@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma grandeza tem distribuição normal com média 500 e desvio padrão 50. Qual é o escore z de uma leitura de 450? (duas casas decimais)",
+    "fr": "Une grandeur a une distribution normale de moyenne 500 et d’écart-type 50. Quel est le score z d’une lecture de 450 ? (deux décimales)",
+    "en": "A quantity has a normal distribution with mean 500 and standard deviation 50. What is the z-score of a reading of 450? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-1.00"
+  }
+}

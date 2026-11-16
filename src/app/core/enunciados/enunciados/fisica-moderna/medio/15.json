@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Luz de 350 nm incide sobre potássio, cuja função trabalho é 2.3 eV. Qual é a energia cinética máxima dos elétrons, em eV? (hc = 1240 eV·nm; duas casas decimais)",
+    "fr": "De la lumière de 350 nm incide sur potassium, dont le travail d’extraction est de 2.3 eV. Quelle est l’énergie cinétique maximale des électrons, en eV ? (hc = 1240 eV·nm ; deux décimales)",
+    "en": "Light of 350 nm falls on potassium, whose work function is 2.3 eV. What is the maximum kinetic energy of the electrons, in eV? (hc = 1240 eV·nm; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.24"
+  }
+}

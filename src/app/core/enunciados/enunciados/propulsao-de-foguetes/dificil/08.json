@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um foguete parte com 30 t e termina a queima com 10 t. Qual é a razão de massas? (duas casas decimais)",
+    "fr": "Une fusée part avec 30 t et termine la combustion avec 10 t. Quel est le rapport de masses ? (deux décimales)",
+    "en": "A rocket starts at 30 t and ends the burn at 10 t. What is the mass ratio? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

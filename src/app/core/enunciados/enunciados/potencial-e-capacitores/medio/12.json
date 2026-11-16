@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um capacitor tem placas de 1000 cm² separadas por 1 mm de ar. Qual é a capacitância, em pF? (ε₀ = 8,85×10⁻¹²; duas casas decimais)",
+    "fr": "Un condensateur a des plaques de 1000 cm² séparées par 1 mm d’air. Quelle est sa capacité, en pF ? (ε₀ = 8,85×10⁻¹² ; deux décimales)",
+    "en": "A capacitor has plates of 1000 cm² separated by 1 mm of air. What is its capacitance, in pF? (ε₀ = 8.85×10⁻¹²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "885.00"
+  }
+}

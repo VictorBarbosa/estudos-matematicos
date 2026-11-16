@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a área da região entre as curvas y = x e y = x², de 0 a 1? (duas casas decimais)",
+    "fr": "Quelle est l’aire de la région entre les courbes y = x et y = x², de 0 à 1 ? (deux décimales)",
+    "en": "What is the area of the region between y = x and y = x², from 0 to 1? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.17"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Usando 2 retângulos com altura no ponto DIREITO, qual é o ERRO da aproximação da área sob f(x) = x² em [0, 2]? (duas casas decimais)",
+    "fr": "Avec 2 rectangles et la hauteur au point DROIT, quelle est l’ERREUR de l’approximation de l’aire sous f(x) = x² sur [0, 2] ? (deux décimales)",
+    "en": "Using 2 rectangles with the RIGHT endpoint height, what is the ERROR of the area approximation under f(x) = x² on [0, 2]? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.33"
+  }
+}

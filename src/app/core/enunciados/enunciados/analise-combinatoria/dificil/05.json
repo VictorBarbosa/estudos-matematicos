@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma comissão terá 3 entre 6 engenheiros e 0 entre 5 engenheiras. Quantas comissões diferentes são possíveis?",
+    "fr": "Une commission comptera 3 parmi 6 ingénieurs et 0 parmi 5 ingénieures. Combien de commissions différentes sont possibles ?",
+    "en": "A committee will have 3 of 6 male engineers and 0 of 5 female engineers. How many different committees are possible?"
+  },
+  "dados-calculo": {
+    "total": "20"
+  }
+}

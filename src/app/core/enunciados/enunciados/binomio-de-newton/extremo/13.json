@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a soma dos coeficientes de x^{pares} no desenvolvimento de (1 + x)^6? Responda como potência de 2 elevada a n−1.",
+    "fr": "Quelle est la somme des coefficients des puissances PAIRES de x dans le développement de (1 + x)^6 ? Répondez comme puissance de 2 exposant n−1.",
+    "en": "What is the sum of the coefficients of EVEN powers of x in the expansion of (1 + x)^6? Answer as a power of 2 with exponent n−1."
+  },
+  "dados-calculo": {
+    "total": "32"
+  }
+}

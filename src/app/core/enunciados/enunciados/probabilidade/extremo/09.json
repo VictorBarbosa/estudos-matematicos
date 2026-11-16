@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois eventos independentes têm probabilidades 0.5 e 0.5. Qual é a probabilidade de ambos ocorrerem? (duas casas decimais)",
+    "fr": "Deux événements indépendants ont des probabilités 0.5 et 0.5. Quelle est la probabilité que les deux se produisent ? (deux décimales)",
+    "en": "Two independent events have probabilities 0.5 and 0.5. What is the probability that both occur? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.25"
+  }
+}

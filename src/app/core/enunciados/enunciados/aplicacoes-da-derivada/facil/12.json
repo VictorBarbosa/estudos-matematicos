@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor do MÁXIMO local de f(x) = −x² + 2x? (duas casas decimais)",
+    "fr": "Quelle est la valeur du MAXIMUM local de f(x) = −x² + 2x ? (deux décimales)",
+    "en": "What is the value of the local MAXIMUM of f(x) = −x² + 2x? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

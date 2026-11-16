@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma alavanca tem 1 m de um lado e 3 m do outro. Que força do lado 3 equilibra 60 N aplicados do lado 1? (duas casas decimais)",
+    "fr": "Un levier a 1 m d’un côté et 3 m de l’autre. Quelle force du côté 3 équilibre 60 N appliqués du côté 1 ? (deux décimales)",
+    "en": "A lever has 1 m on one side and 3 m on the other. What force on the 3 side balances 60 N applied on the 1 side? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

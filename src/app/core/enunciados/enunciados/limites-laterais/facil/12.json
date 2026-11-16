@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o limite pela ESQUERDA de f(x) = 1x + 8 em x = 2? (duas casas decimais)",
+    "fr": "Quelle est la limite à GAUCHE de f(x) = 1x + 8 en x = 2 ? (deux décimales)",
+    "en": "What is the LEFT-hand limit of f(x) = 1x + 8 at x = 2? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

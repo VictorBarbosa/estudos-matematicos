@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo vai do ponto (0, 5) ao ponto (15, 5) em 5 s. Qual é a componente x da velocidade média, em m/s? (duas casas decimais)",
+    "fr": "Un corps va du point (0, 5) au point (15, 5) en 5 s. Quelle est la composante x de la vitesse moyenne, en m/s ? (deux décimales)",
+    "en": "A body goes from (0, 5) to (15, 5) in 5 s. What is the x-component of the average velocity, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

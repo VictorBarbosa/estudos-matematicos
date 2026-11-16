@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A luz atravessa um material a 1.24×10⁸ m/s. Qual é o índice de refração dele? (duas casas decimais)",
+    "fr": "La lumière traverse un matériau à 1.24×10⁸ m/s. Quel est son indice de réfraction ? (deux décimales)",
+    "en": "Light travels through a material at 1.24×10⁸ m/s. What is its refractive index? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.42"
+  }
+}

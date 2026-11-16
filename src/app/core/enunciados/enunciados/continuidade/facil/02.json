@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = (x² − 9)/(x − 3) não está definida em x = 3. Que valor deveria ser atribuído ali para torná-la contínua?",
+    "fr": "La fonction f(x) = (x² − 9)/(x − 3) n’est pas définie en x = 3. Quelle valeur faudrait-il y attribuer pour la rendre continue ?",
+    "en": "The function f(x) = (x² − 9)/(x − 3) is not defined at x = 3. What value should be assigned there to make it continuous?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

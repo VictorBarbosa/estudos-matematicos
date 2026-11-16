@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma massa de 5 kg oscila numa mola de constante 80 N/m com amplitude 0.05 m. Qual é a energia TOTAL, em J? (duas casas decimais)",
+    "fr": "Une masse de 5 kg oscille sur un ressort de constante 80 N/m avec une amplitude 0.05 m. Quelle est l’énergie TOTALE, en J ? (deux décimales)",
+    "en": "A mass of 5 kg oscillates on a spring of constant 80 N/m with amplitude 0.05 m. What is the TOTAL energy, in J? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.10"
+  }
+}

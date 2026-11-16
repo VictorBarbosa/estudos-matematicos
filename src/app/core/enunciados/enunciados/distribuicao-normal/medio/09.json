@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa normal de média 100 e desvio 10, que proporção fica ACIMA de 110? (duas casas decimais)",
+    "fr": "Dans une normale de moyenne 100 et d’écart-type 10, quelle proportion se trouve AU-DESSUS de 110 ? (deux décimales)",
+    "en": "In a normal distribution with mean 100 and standard deviation 10, what proportion lies ABOVE 110? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.16"
+  }
+}

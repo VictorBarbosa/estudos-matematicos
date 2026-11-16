@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x ≠ 10, f(x) = (x² − 100)/(x − 10); para que f seja contínua em x = 10, qual deve ser f(10)?",
+    "fr": "Si x ≠ 10, f(x) = (x² − 100)/(x − 10) ; pour que f soit continue en x = 10, que doit valoir f(10) ?",
+    "en": "If x ≠ 10, f(x) = (x² − 100)/(x − 10); for f to be continuous at x = 10, what should f(10) be?"
+  },
+  "dados-calculo": {
+    "total": "20"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um objeto está a 40 cm de uma lente convergente de foco 20 cm. A que distância da lente se forma a imagem, em cm? (duas casas decimais)",
+    "fr": "Un objet est à 40 cm d’une lentille convergente de focale 20 cm. À quelle distance de la lentille se forme l’image, en cm ? (deux décimales)",
+    "en": "An object is 40 cm from a convergente lens of focal length 20 cm. At what distance from the lens is the image formed, in cm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "40.00"
+  }
+}

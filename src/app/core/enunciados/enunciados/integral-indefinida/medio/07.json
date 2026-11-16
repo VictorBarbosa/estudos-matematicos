@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor da constante C, sabendo que F(4) = 24 para a primitiva de f(x) = 3x? (duas casas decimais)",
+    "fr": "Quelle est la valeur de la constante C, sachant que F(4) = 24 pour la primitive de f(x) = 3x ? (deux décimales)",
+    "en": "What is the value of the constant C, knowing that F(4) = 24 for the antiderivative of f(x) = 3x? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

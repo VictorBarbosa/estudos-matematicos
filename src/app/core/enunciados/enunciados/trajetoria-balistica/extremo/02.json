@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um projétil a 30 m/s formando 45° precisa atingir um alvo a 80 m de distância, no mesmo nível. Qual é o ângulo MENOR possível, em graus? (use g = 9,81 m/s²; duas casas decimais)",
+    "fr": "Un projectile à 30 m/s formant 45° doit atteindre une cible à 80 m de distance, au même niveau. Quel est le plus PETIT angle possible, en degrés ? (utilisez g = 9,81 m/s² ; deux décimales)",
+    "en": "A projectile at 30 m/s must hit a target 80 m away at the same level. What is the SMALLEST possible angle, in degrees? (use g = 9.81 m/s²; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "30.35"
+  }
+}

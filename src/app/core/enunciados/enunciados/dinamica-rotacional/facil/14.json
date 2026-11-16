@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o momento de inércia, em kg·m², de um aro de 1 kg e 0.1 m de raio? (duas casas decimais)",
+    "fr": "Quel est le moment d’inertie, en kg·m², d’un anneau de 1 kg et de 0.1 m de rayon ? (deux décimales)",
+    "en": "What is the moment of inertia, in kg·m², of a hoop of 1 kg and radius 0.1 m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.01"
+  }
+}

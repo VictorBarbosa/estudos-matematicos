@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (e^(5x) − 1)/x quando x tende a 0.",
+    "fr": "Calculez la limite de (e^(5x) − 1)/x quand x tend vers 0.",
+    "en": "Calculate the limit of (e^(5x) − 1)/x as x tends to 0."
+  },
+  "dados-calculo": {
+    "total": "5"
+  }
+}

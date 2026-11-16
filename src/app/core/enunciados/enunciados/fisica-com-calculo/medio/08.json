@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma mola de constante k = 500 N/m é esticada de x = 0 até x = 0.1 m. Qual é o trabalho, em joules? (duas casas decimais)",
+    "fr": "Un ressort de constante k = 500 N/m est étiré de x = 0 jusqu’à x = 0.1 m. Quel est le travail, en joules ? (deux décimales)",
+    "en": "A spring of constant k = 500 N/m is stretched from x = 0 to x = 0.1 m. What is the work, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.50"
+  }
+}

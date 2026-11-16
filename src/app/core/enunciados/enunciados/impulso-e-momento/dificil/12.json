@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo de 5 kg a 6 m/s atinge outro de 5 kg parado, e os dois seguem juntos. Quanta energia cinética foi perdida, em J? (duas casas decimais)",
+    "fr": "Un corps de 5 kg à 6 m/s heurte un autre de 5 kg à l’arrêt, et les deux continuent ensemble. Quelle énergie cinétique a été perdue, en J ? (deux décimales)",
+    "en": "A body of 5 kg at 6 m/s hits another of 5 kg at rest, and the two move on together. How much kinetic energy was lost, in J? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "45.00"
+  }
+}

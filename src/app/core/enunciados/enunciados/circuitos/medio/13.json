@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resistores de 4 Ω estão ligados em série. Qual é a resistência equivalente, em Ω, de 5 deles? (duas casas decimais)",
+    "fr": "Des résistances de 4 Ω sont branchées en série. Quelle est la résistance équivalente, en Ω, de 5 d’entre elles ? (deux décimales)",
+    "en": "Resistors of 4 Ω are connected in série. What is the equivalent resistance, in Ω, of 5 of them? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

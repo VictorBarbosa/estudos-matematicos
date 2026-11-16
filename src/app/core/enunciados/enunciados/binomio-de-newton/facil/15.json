@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a soma de todos os coeficientes do desenvolvimento de (x + 1)^1?",
+    "fr": "Quelle est la somme de tous les coefficients du développement de (x + 1)^1 ?",
+    "en": "What is the sum of all coefficients in the expansion of (x + 1)^1?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma partícula instável vive 3 vezes mais no laboratório do que no próprio referencial. Qual é a velocidade dela, em fração de c? (duas casas decimais)",
+    "fr": "Une particule instable vit 3 fois plus longtemps au laboratoire que dans son propre référentiel. Quelle est sa vitesse, en fraction de c ? (deux décimales)",
+    "en": "An unstable particle lives 3 times longer in the lab than in its own frame. What is its speed, as a fraction of c? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.94"
+  }
+}

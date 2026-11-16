@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral de 1/(x·ln(x)) de e a 20.0855, usando substituição. (duas casas decimais)",
+    "fr": "Calculez l’intégrale de 1/(x·ln(x)) de e à 20.0855, par substitution. (deux décimales)",
+    "en": "Calculate the integral of 1/(x·ln(x)) from e to 20.0855, using substitution. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.10"
+  }
+}

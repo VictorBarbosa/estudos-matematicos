@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (6x² + 1x + 0)/(2x² + 3) quando x tende ao infinito. (duas casas decimais)",
+    "fr": "Calculez la limite de (6x² + 1x + 0)/(2x² + 3) quand x tend vers l’infini. (deux décimales)",
+    "en": "Calculate the limit of (6x² + 1x + 0)/(2x² + 3) as x tends to infinity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

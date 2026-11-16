@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Luz de 400 nm passa por duas fendas separadas por 0.2 mm, e a tela fica a 1 m. A que distância do centro está a 3ª franja clara, em mm? (duas casas decimais)",
+    "fr": "De la lumière de 400 nm passe par deux fentes séparées de 0.2 mm, et l’écran est à 1 m. À quelle distance du centre se trouve la 3e frange claire, en mm ? (deux décimales)",
+    "en": "Light of 400 nm passes through two slits 0.2 mm apart, and the screen is 1 m away. How far from the centre is the 3th bright fringe, in mm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

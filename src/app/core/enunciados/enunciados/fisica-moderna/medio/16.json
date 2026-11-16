@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Luz de 400 nm incide sobre sódio, cuja função trabalho é 2.28 eV. Qual é a energia cinética máxima dos elétrons, em eV? (hc = 1240 eV·nm; duas casas decimais)",
+    "fr": "De la lumière de 400 nm incide sur sodium, dont le travail d’extraction est de 2.28 eV. Quelle est l’énergie cinétique maximale des électrons, en eV ? (hc = 1240 eV·nm ; deux décimales)",
+    "en": "Light of 400 nm falls on sodium, whose work function is 2.28 eV. What is the maximum kinetic energy of the electrons, in eV? (hc = 1240 eV·nm; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.82"
+  }
+}

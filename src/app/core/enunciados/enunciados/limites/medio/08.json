@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x³ − 1000)/(x − 10) quando x tende a 10.",
+    "fr": "Calculez la limite de (x³ − 1000)/(x − 10) quand x tend vers 10.",
+    "en": "Calculate the limit of (x³ − 1000)/(x − 10) as x tends to 10."
+  },
+  "dados-calculo": {
+    "total": "300"
+  }
+}

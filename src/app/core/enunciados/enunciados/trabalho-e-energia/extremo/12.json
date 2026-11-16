@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma mola de constante k = 1000 N/m é esticada de 0.05 m a partir do repouso. Que energia ela armazena, em J? (duas casas decimais)",
+    "fr": "Un ressort de constante k = 1000 N/m est étiré de 0.05 m à partir du repos. Quelle énergie emmagasine-t-il, en J ? (deux décimales)",
+    "en": "A spring of constant k = 1000 N/m is stretched by 0.05 m from rest. How much energy does it store, in J? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.25"
+  }
+}

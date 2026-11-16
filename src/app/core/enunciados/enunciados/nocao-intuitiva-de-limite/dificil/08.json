@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite de (x² − 225)/(x − 15) quando x tende a 15, simplificando primeiro.",
+    "fr": "Calculez la limite de (x² − 225)/(x − 15) quand x tend vers 15, en simplifiant d’abord.",
+    "en": "Calculate the limit of (x² − 225)/(x − 15) as x tends to 15, simplifying first."
+  },
+  "dados-calculo": {
+    "total": "30"
+  }
+}

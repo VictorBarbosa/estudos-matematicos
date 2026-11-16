@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um binário é formado por duas forças de 10 N em sentidos opostos, separadas por 1 m. Qual é o torque resultante, em N·m? (duas casas decimais)",
+    "fr": "Un couple est formé de deux forces de 10 N en sens opposés, séparées de 1 m. Quel est le couple résultant, en N·m ? (deux décimales)",
+    "en": "A couple is formed by two opposite forces of 10 N separated by 1 m. What is the resulting torque, in N·m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

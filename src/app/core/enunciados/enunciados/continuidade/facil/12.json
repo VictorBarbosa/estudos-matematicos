@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x ≠ 11, f(x) = (x² − 121)/(x − 11); para que f seja contínua em x = 11, qual deve ser f(11)?",
+    "fr": "Si x ≠ 11, f(x) = (x² − 121)/(x − 11) ; pour que f soit continue en x = 11, que doit valoir f(11) ?",
+    "en": "If x ≠ 11, f(x) = (x² − 121)/(x − 11); for f to be continuous at x = 11, what should f(11) be?"
+  },
+  "dados-calculo": {
+    "total": "22"
+  }
+}

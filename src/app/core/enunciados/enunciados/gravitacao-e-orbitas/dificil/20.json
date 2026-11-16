@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a velocidade de escape da superfície de um corpo de massa M = 6.42×10²⁴ kg e raio 3390 km? (G = 6,674×10⁻¹¹; em km/s, duas casas decimais)",
+    "fr": "Quelle est la vitesse de libération de la surface d’un corps de masse M = 6.42×10²⁴ kg et de rayon 3390 km ? (G = 6,674×10⁻¹¹ ; en km/s, deux décimales)",
+    "en": "What is the escape velocity from the surface of a body of mass M = 6.42×10²⁴ kg and radius 3390 km? (G = 6.674×10⁻¹¹; in km/s, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "15.90"
+  }
+}

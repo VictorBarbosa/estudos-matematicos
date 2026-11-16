@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um foguete parte com 200 t e termina a queima com 50 t. Que fração da massa inicial era propelente? (duas casas decimais)",
+    "fr": "Une fusée part avec 200 t et termine la combustion avec 50 t. Quelle fraction de la masse initiale était du propergol ? (deux décimales)",
+    "en": "A rocket starts at 200 t and ends the burn at 50 t. What fraction of the initial mass was propellant? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.75"
+  }
+}
