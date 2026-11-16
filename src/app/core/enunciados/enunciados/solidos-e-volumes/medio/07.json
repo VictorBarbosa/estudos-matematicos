@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma caixa tem 10 cm por 2 cm por 5 cm. Quantos centímetros cúbicos ela comporta?",
+    "fr": "Une boîte mesure 10 cm sur 2 cm sur 5 cm. Combien de centimètres cubes contient-elle ?",
+    "en": "A box measures 10 cm by 2 cm by 5 cm. How many cubic centimetres does it hold?"
+  },
+  "dados-calculo": {
+    "total": "100"
+  }
+}

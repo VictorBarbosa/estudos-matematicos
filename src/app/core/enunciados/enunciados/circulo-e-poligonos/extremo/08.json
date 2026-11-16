@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um arco de circunferência tem raio de 8 cm e ângulo central de 135°. Quantos centímetros mede o arco? (duas casas decimais)",
+    "fr": "Un arc de cercle a un rayon de 8 cm et un angle au centre de 135°. Combien de centimètres mesure l’arc ? (deux décimales)",
+    "en": "An arc of a circle has radius 8 cm and central angle 135°. How many centimetres is the arc? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "18.85"
+  }
+}

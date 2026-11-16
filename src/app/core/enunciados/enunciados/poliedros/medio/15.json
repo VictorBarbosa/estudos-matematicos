@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma pirâmide tem base com 20 lados. Quantas arestas ela tem?",
+    "fr": "Une pyramide a une base de 20 côtés. Combien d’arêtes a-t-elle ?",
+    "en": "A pyramid has a base with 20 sides. How many edges does it have?"
+  },
+  "dados-calculo": {
+    "total": "40"
+  }
+}

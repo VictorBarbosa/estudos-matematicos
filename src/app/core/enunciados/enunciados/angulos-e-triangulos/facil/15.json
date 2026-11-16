@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois ângulos internos de um triângulo medem 110° e 35°. Quantos graus mede o terceiro?",
+    "fr": "Deux angles intérieurs d’un triangle mesurent 110° et 35°. Combien de degrés mesure le troisième ?",
+    "en": "Two interior angles of a triangle measure 110° and 35°. How many degrees is the third?"
+  },
+  "dados-calculo": {
+    "total": "35"
+  }
+}

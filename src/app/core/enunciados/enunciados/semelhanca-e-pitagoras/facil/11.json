@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um triângulo retângulo tem catetos de 20 cm e 21 cm. Quantos centímetros mede a hipotenusa?",
+    "fr": "Un triangle rectangle a des cathètes de 20 cm et 21 cm. Combien de centimètres mesure l’hypoténuse ?",
+    "en": "A right triangle has legs of 20 cm and 21 cm. How many centimetres is the hypotenuse?"
+  },
+  "dados-calculo": {
+    "total": "29"
+  }
+}

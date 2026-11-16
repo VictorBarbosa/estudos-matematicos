@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um retângulo mede 18 m por 3 m. Qual é a área dele, em metros quadrados?",
+    "fr": "Un rectangle mesure 18 m sur 3 m. Quelle est son aire, en mètres carrés ?",
+    "en": "A rectangle measures 18 m by 3 m. What is its area, in square metres?"
+  },
+  "dados-calculo": {
+    "total": "54"
+  }
+}

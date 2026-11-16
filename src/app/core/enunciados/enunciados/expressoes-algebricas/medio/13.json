@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de 4(x + 3) − 1x para x = 5.",
+    "fr": "Calculez la valeur numérique de 4(x + 3) − 1x pour x = 5.",
+    "en": "Calculate the numerical value of 4(x + 3) − 1x for x = 5."
+  },
+  "dados-calculo": {
+    "total": "27"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Cada ângulo interno de um polígono regular mede 120°. Quantos lados ele tem?",
+    "fr": "Chaque angle intérieur d’un polygone régulier mesure 120°. Combien de côtés a-t-il ?",
+    "en": "Each interior angle of a regular polygon measures 120°. How many sides does it have?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

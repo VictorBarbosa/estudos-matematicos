@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num triângulo isósceles, o ângulo do vértice mede 90°. Quantos graus mede cada ângulo da base?",
+    "fr": "Dans un triangle isocèle, l’angle au sommet mesure 90°. Combien de degrés mesure chaque angle de la base ?",
+    "en": "In an isosceles triangle the apex angle is 90°. How many degrees is each base angle?"
+  },
+  "dados-calculo": {
+    "total": "45"
+  }
+}

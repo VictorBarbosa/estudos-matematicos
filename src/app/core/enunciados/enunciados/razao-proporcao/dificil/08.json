@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "5 máquinas produzem 150 peças em 3 horas. Mantendo o mesmo ritmo, quantas peças 10 máquinas produzem em 6 horas?",
+    "fr": "5 machines produisent 150 pièces en 3 heures. Au même rythme, combien de pièces 10 machines produisent-elles en 6 heures ?",
+    "en": "5 machines make 150 parts in 3 hours. At the same pace, how many parts do 10 machines make in 6 hours?"
+  },
+  "dados-calculo": {
+    "total": "600"
+  }
+}

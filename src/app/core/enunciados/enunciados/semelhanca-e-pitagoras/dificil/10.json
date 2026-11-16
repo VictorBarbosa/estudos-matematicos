@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois terrenos triangulares são semelhantes. No menor, o lado que mede 4 m corresponde ao lado de 6 m do maior. Se o menor tem 20 m², quantos metros quadrados tem o maior?",
+    "fr": "Deux terrains triangulaires sont semblables. Dans le plus petit, le côté qui mesure 4 m correspond au côté de 6 m du plus grand. Si le plus petit a 20 m², combien de mètres carrés a le plus grand ?",
+    "en": "Two triangular plots are similar. In the smaller one, the side of 4 m corresponds to the 6 m side of the larger. If the smaller one has 20 m², how many square metres is the larger one?"
+  },
+  "dados-calculo": {
+    "total": "45"
+  }
+}

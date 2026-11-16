@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação x² = 9 e informe a raiz POSITIVA.",
+    "fr": "Résolvez l’équation x² = 9 et indiquez la racine POSITIVE.",
+    "en": "Solve x² = 9 and give the POSITIVE root."
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

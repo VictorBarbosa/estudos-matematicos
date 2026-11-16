@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 3x² − 13x + 12 = 0 e informe a MAIOR raiz.",
+    "fr": "Résolvez l’équation 3x² − 13x + 12 = 0 et indiquez la PLUS GRANDE racine.",
+    "en": "Solve 3x² − 13x + 12 = 0 and give the LARGEST root."
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

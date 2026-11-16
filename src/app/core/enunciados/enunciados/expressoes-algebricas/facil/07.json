@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de 5x + 1 para x = 2.",
+    "fr": "Calculez la valeur numérique de 5x + 1 pour x = 2.",
+    "en": "Calculate the numerical value of 5x + 1 for x = 2."
+  },
+  "dados-calculo": {
+    "total": "11"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um disco tem 20 cm de diâmetro. Quantos centímetros quadrados tem a área dele? (duas casas decimais)",
+    "fr": "Un disque a 20 cm de diamètre. Combien de centimètres carrés a son aire ? (deux décimales)",
+    "en": "A disc is 20 cm across. How many square centimetres is its area? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "314.16"
+  }
+}

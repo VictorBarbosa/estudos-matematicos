@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule (7/10 + 1/5) × 5/9 e dê o resultado irredutível.",
+    "fr": "Calculez (7/10 + 1/5) × 5/9 et donnez le résultat irréductible.",
+    "en": "Work out (7/10 + 1/5) × 5/9 and give the result in lowest terms."
+  },
+  "dados-calculo": {
+    "total": "1/2"
+  }
+}

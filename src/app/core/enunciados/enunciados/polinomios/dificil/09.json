@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Divida 4x³ + 3x² + 8x + 2 por (x − 1). No quociente, qual é o coeficiente de x²?",
+    "fr": "Divisez 4x³ + 3x² + 8x + 2 par (x − 1). Dans le quotient, quel est le coefficient de x² ?",
+    "en": "Divide 4x³ + 3x² + 8x + 2 by (x − 1). In the quotient, what is the coefficient of x²?"
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

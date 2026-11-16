@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Encontre a fração geratriz da dízima periódica 0,454545454545...",
+    "fr": "Trouvez la fraction génératrice du nombre périodique 0,454545454545...",
+    "en": "Find the generating fraction of the repeating decimal 0.454545454545..."
+  },
+  "dados-calculo": {
+    "total": "5/11"
+  }
+}

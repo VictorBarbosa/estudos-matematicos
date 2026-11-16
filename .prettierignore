@@ -1,0 +1,8 @@
+# Índices de enunciado GERADOS por `npm run enunciados:catalogo`.
+#
+# Cada entrada cabe numa linha de propósito: são dados, não código, e uma
+# entrada por linha é o que deixa `grep` e o diff funcionarem. O Prettier
+# quebraria cada uma em três, e o arquivo de um tópico passaria de 140 para
+# 500 linhas — que é justamente o problema que a segmentação veio resolver.
+src/app/core/enunciados/enunciados/catalogo.ts
+src/app/core/enunciados/catalogos/*.ts

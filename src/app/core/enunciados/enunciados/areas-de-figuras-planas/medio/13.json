@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um triângulo tem base de 9 cm e altura de 8 cm. Qual é a área dele, em centímetros quadrados?",
+    "fr": "Un triangle a une base de 9 cm et une hauteur de 8 cm. Quelle est son aire, en centimètres carrés ?",
+    "en": "A triangle has base 9 cm and height 8 cm. What is its area, in square centimetres?"
+  },
+  "dados-calculo": {
+    "total": "36"
+  }
+}

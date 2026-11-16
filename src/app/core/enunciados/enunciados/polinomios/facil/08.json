@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para P(x) = 4x² + 2x + 0, qual é o valor de P(2)?",
+    "fr": "Pour P(x) = 4x² + 2x + 0, quelle est la valeur de P(2) ?",
+    "en": "For P(x) = 4x² + 2x + 0, what is the value of P(2)?"
+  },
+  "dados-calculo": {
+    "total": "20"
+  }
+}

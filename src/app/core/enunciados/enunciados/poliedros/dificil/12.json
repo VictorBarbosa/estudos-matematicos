@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um poliedro convexo tem 14 faces e 24 vértices. Quantas arestas ele tem?",
+    "fr": "Un polyèdre convexe a 14 faces et 24 sommets. Combien d’arêtes a-t-il ?",
+    "en": "A convex polyhedron has 14 faces and 24 vertices. How many edges does it have?"
+  },
+  "dados-calculo": {
+    "total": "36"
+  }
+}

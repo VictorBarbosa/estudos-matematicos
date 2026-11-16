@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A soma dos ângulos internos de um polígono convexo é 720°. Quantos lados ele tem?",
+    "fr": "La somme des angles intérieurs d’un polygone convexe est 720°. Combien de côtés a-t-il ?",
+    "en": "The sum of the interior angles of a convex polygon is 720°. How many sides does it have?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de 7(x + 2) − 6x para x = 1.",
+    "fr": "Calculez la valeur numérique de 7(x + 2) − 6x pour x = 1.",
+    "en": "Calculate the numerical value of 7(x + 2) − 6x for x = 1."
+  },
+  "dados-calculo": {
+    "total": "15"
+  }
+}

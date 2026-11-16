@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um pacote de 3 kg de café custa R$ 12,00. Mantendo o preço por quilo, quanto custam 9 kg?",
+    "fr": "Un paquet de 3 kg de café coûte 12,00 R$. En gardant le prix au kilo, combien coûtent 9 kg ?",
+    "en": "A 3 kg bag of coffee costs R$ 12,00. At the same price per kilo, how much do 9 kg cost?"
+  },
+  "dados-calculo": {
+    "total": "36"
+  }
+}

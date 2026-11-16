@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação x² − 9x − 10 = 0 e informe a MAIOR raiz.",
+    "fr": "Résolvez l’équation x² − 9x − 10 = 0 et indiquez la PLUS GRANDE racine.",
+    "en": "Solve x² − 9x − 10 = 0 and give the LARGEST root."
+  },
+  "dados-calculo": {
+    "total": "10"
+  }
+}

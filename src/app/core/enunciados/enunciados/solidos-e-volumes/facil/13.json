@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um cubo tem aresta de 10 cm. Quantos centímetros cúbicos de volume ele tem?",
+    "fr": "Un cube a une arête de 10 cm. Combien de centimètres cubes de volume a-t-il ?",
+    "en": "A cube has edge 10 cm. How many cubic centimetres is its volume?"
+  },
+  "dados-calculo": {
+    "total": "1000"
+  }
+}

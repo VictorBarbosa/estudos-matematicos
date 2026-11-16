@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Encontre a fração geratriz da dízima periódica 3,1666...",
+    "fr": "Trouvez la fraction génératrice du nombre périodique 3,1666...",
+    "en": "Find the generating fraction of the repeating decimal 3.1666..."
+  },
+  "dados-calculo": {
+    "total": "19/6"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule (5/8 + 1/8) × 2/3 e dê o resultado irredutível.",
+    "fr": "Calculez (5/8 + 1/8) × 2/3 et donnez le résultat irréductible.",
+    "en": "Work out (5/8 + 1/8) × 2/3 and give the result in lowest terms."
+  },
+  "dados-calculo": {
+    "total": "1/2"
+  }
+}

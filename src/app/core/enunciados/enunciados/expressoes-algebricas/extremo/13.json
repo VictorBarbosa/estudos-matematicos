@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de 3x² − 4xy + 2y² para x = 2 e y = 1.",
+    "fr": "Calculez la valeur numérique de 3x² − 4xy + 2y² pour x = 2 et y = 1.",
+    "en": "Calculate the numerical value of 3x² − 4xy + 2y² for x = 2 and y = 1."
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

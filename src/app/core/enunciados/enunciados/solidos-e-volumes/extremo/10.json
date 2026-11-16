@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um cone tem raio de 4 cm e altura de 9 cm. Quantos centímetros cúbicos de volume ele tem? (duas casas decimais)",
+    "fr": "Un cône a un rayon de 4 cm et une hauteur de 9 cm. Combien de centimètres cubes de volume a-t-il ? (deux décimales)",
+    "en": "A cone has radius 4 cm and height 9 cm. How many cubic centimetres is its volume? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "150.80"
+  }
+}

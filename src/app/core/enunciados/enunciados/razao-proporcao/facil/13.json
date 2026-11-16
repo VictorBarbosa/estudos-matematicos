@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um pacote de 7 kg de café custa R$ 21,00. Mantendo o preço por quilo, quanto custam 5 kg?",
+    "fr": "Un paquet de 7 kg de café coûte 21,00 R$. En gardant le prix au kilo, combien coûtent 5 kg ?",
+    "en": "A 7 kg bag of coffee costs R$ 21,00. At the same price per kilo, how much do 5 kg cost?"
+  },
+  "dados-calculo": {
+    "total": "15"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 4(x − 2) = 8 e informe o valor exato de x.",
+    "fr": "Résolvez l’équation 4(x − 2) = 8 et indiquez la valeur exacte de x.",
+    "en": "Solve 4(x − 2) = 8 and give the exact value of x."
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

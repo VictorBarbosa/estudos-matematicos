@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para P(x) = 2x² + 3x + 1, qual é o valor de P(2)?",
+    "fr": "Pour P(x) = 2x² + 3x + 1, quelle est la valeur de P(2) ?",
+    "en": "For P(x) = 2x² + 3x + 1, what is the value of P(2)?"
+  },
+  "dados-calculo": {
+    "total": "15"
+  }
+}

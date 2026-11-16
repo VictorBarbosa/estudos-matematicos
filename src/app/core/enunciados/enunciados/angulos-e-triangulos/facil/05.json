@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois ângulos internos de um triângulo medem 50° e 60°. Quantos graus mede o terceiro?",
+    "fr": "Deux angles intérieurs d’un triangle mesurent 50° et 60°. Combien de degrés mesure le troisième ?",
+    "en": "Two interior angles of a triangle measure 50° and 60°. How many degrees is the third?"
+  },
+  "dados-calculo": {
+    "total": "70"
+  }
+}

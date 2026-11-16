@@ -18,6 +18,7 @@ import { join } from 'node:path';
 
 const PASTA = 'src/app/core/enunciados/enunciados';
 const CATALOGO = join(PASTA, 'catalogo.ts');
+const CATALOGOS = 'src/app/core/enunciados/catalogos';
 const RAIZ = 'src/app';
 
 function todosOsArquivos(diretorio) {
@@ -50,9 +51,19 @@ function todosOsJson(diretorio) {
 
 const naArvore = todosOsJson(PASTA).sort();
 
-const fonteCatalogo = readFileSync(CATALOGO, 'utf8');
-const noCatalogo = [...fonteCatalogo.matchAll(/enunciados\/enunciados\/([^']+\.json)'/g)]
-  .map((achado) => achado[1])
+/*
+ * O catálogo é uma pilha de índices, um por tópico, e os imports dos JSON
+ * estão nos índices. A conferência varre os DOIS níveis: o índice geral e os
+ * arquivos de `catalogos/`. Ler só o geral diria que nenhum arquivo está no
+ * catálogo, e o guarda acusaria a árvore inteira.
+ */
+const fontesDoCatalogo = [CATALOGO, ...readdirSync(CATALOGOS).map((nome) => join(CATALOGOS, nome))];
+const noCatalogo = fontesDoCatalogo
+  .flatMap((caminho) =>
+    [...readFileSync(caminho, 'utf8').matchAll(/enunciados\/enunciados\/([^']+\.json)'/g)].map(
+      (achado) => achado[1],
+    ),
+  )
   .sort();
 
 const faltando = naArvore.filter((nome) => !noCatalogo.includes(nome));

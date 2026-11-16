@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 2x² − 15x + 7 = 0 e informe a MAIOR raiz.",
+    "fr": "Résolvez l’équation 2x² − 15x + 7 = 0 et indiquez la PLUS GRANDE racine.",
+    "en": "Solve 2x² − 15x + 7 = 0 and give the LARGEST root."
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

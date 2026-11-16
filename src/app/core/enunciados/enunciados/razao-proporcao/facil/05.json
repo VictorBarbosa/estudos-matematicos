@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um pacote de 2 kg de café custa R$ 10,00. Mantendo o preço por quilo, quanto custam 6 kg?",
+    "fr": "Un paquet de 2 kg de café coûte 10,00 R$. En gardant le prix au kilo, combien coûtent 6 kg ?",
+    "en": "A 2 kg bag of coffee costs R$ 10,00. At the same price per kilo, how much do 6 kg cost?"
+  },
+  "dados-calculo": {
+    "total": "30"
+  }
+}

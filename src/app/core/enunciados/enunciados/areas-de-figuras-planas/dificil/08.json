@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um terreno em forma de trapézio tem bases de 20 m e 12 m e altura de 5 m. Quantos metros quadrados ele tem?",
+    "fr": "Un terrain en forme de trapèze a des bases de 20 m et 12 m et une hauteur de 5 m. Combien de mètres carrés fait-il ?",
+    "en": "A trapezium-shaped plot has bases of 20 m and 12 m and height 5 m. How many square metres is it?"
+  },
+  "dados-calculo": {
+    "total": "80"
+  }
+}

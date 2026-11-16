@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule 7² + 2 × 8 − 1.",
+    "fr": "Calculez 7² + 2 × 8 − 1.",
+    "en": "Calculate 7² + 2 × 8 − 1."
+  },
+  "dados-calculo": {
+    "total": "64"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma torneira enche um tanque em 2 h, outra em 3 h, e um ralo o esvazia em 6 h. Com as duas torneiras e o ralo abertos, em quantas horas o tanque enche? (duas casas decimais)",
+    "fr": "Un robinet remplit un réservoir en 2 h, un autre en 3 h, et une vidange le vide en 6 h. Avec les deux robinets et la vidange ouverts, en combien d’heures le réservoir se remplit-il ? (deux décimales)",
+    "en": "One tap fills a tank in 2 h, another in 3 h, and a drain empties it in 6 h. With both taps and the drain open, in how many hours does the tank fill? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.50"
+  }
+}

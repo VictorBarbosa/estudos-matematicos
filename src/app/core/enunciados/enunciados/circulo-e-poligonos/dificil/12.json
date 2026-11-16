@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um setor circular tem raio de 9 cm e ângulo central de 40°. Quantos centímetros quadrados tem a área dele? (duas casas decimais)",
+    "fr": "Un secteur circulaire a un rayon de 9 cm et un angle au centre de 40°. Combien de centimètres carrés a son aire ? (deux décimales)",
+    "en": "A circular sector has radius 9 cm and central angle 40°. How many square centimetres is its area? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "28.27"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o resto da divisão de x³ − 6x + 1 por (x − 3)?",
+    "fr": "Quel est le reste de la division de x³ − 6x + 1 par (x − 3) ?",
+    "en": "What is the remainder of dividing x³ − 6x + 1 by (x − 3)?"
+  },
+  "dados-calculo": {
+    "total": "10"
+  }
+}

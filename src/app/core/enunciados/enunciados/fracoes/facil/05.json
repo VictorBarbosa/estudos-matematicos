@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Some as frações 1/5 e 2/5 e dê o resultado irredutível.",
+    "fr": "Additionnez les fractions 1/5 et 2/5 et donnez le résultat irréductible.",
+    "en": "Add the fractions 1/5 and 2/5 and give the result in lowest terms."
+  },
+  "dados-calculo": {
+    "total": "3/5"
+  }
+}

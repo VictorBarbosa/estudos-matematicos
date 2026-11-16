@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um prisma tem como base um polígono de 10 lados. Quantas faces ele tem?",
+    "fr": "Un prisme a pour base un polygone de 10 côtés. Combien de faces a-t-il ?",
+    "en": "A prism has a polygon with 10 sides as its base. How many faces does it have?"
+  },
+  "dados-calculo": {
+    "total": "12"
+  }
+}

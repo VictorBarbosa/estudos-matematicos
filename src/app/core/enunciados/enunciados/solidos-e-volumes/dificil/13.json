@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um cilindro tem raio de 3 cm e altura de 7 cm. Quantos centímetros cúbicos de volume ele tem? (duas casas decimais)",
+    "fr": "Un cylindre a un rayon de 3 cm et une hauteur de 7 cm. Combien de centimètres cubes de volume a-t-il ? (deux décimales)",
+    "en": "A cylinder has radius 3 cm and height 7 cm. How many cubic centimetres is its volume? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "197.92"
+  }
+}

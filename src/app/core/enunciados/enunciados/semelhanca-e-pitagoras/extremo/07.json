@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo, as projeções dos catetos sobre a hipotenusa medem 1 cm e 4 cm. Quantos centímetros mede a altura relativa à hipotenusa?",
+    "fr": "Dans un triangle rectangle, les projections des cathètes sur l’hypoténuse mesurent 1 cm et 4 cm. Combien de centimètres mesure la hauteur relative à l’hypoténuse ?",
+    "en": "In a right triangle the projections of the legs onto the hypotenuse measure 1 cm and 4 cm. How many centimetres is the height drawn to the hypotenuse?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

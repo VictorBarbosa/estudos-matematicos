@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule 6 + 5 × 2.",
+    "fr": "Calculez 6 + 5 × 2.",
+    "en": "Calculate 6 + 5 × 2."
+  },
+  "dados-calculo": {
+    "total": "16"
+  }
+}

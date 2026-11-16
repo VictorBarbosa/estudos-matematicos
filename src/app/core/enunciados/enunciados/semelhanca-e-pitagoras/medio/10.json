@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo, a hipotenusa mede 15 cm e um cateto mede 9 cm. Quantos centímetros mede o outro cateto?",
+    "fr": "Dans un triangle rectangle, l’hypoténuse mesure 15 cm et un cathète mesure 9 cm. Combien de centimètres mesure l’autre cathète ?",
+    "en": "In a right triangle the hypotenuse is 15 cm and one leg is 9 cm. How many centimetres is the other leg?"
+  },
+  "dados-calculo": {
+    "total": "12"
+  }
+}

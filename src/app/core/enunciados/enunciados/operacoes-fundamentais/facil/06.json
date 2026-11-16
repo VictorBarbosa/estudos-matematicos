@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa caixa há 4 fileiras com 6 ovos cada, mais 2 ovos soltos. Quantos ovos há ao todo?",
+    "fr": "Dans une boîte il y a 4 rangées de 6 œufs chacune, plus 2 œufs isolés. Combien d’œufs y a-t-il en tout ?",
+    "en": "In a box there are 4 rows of 6 eggs each, plus 2 loose eggs. How many eggs are there in total?"
+  },
+  "dados-calculo": {
+    "total": "26"
+  }
+}

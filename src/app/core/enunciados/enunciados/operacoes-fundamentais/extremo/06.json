@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule 5² + 2 × 3 − 1.",
+    "fr": "Calculez 5² + 2 × 3 − 1.",
+    "en": "Calculate 5² + 2 × 3 − 1."
+  },
+  "dados-calculo": {
+    "total": "30"
+  }
+}

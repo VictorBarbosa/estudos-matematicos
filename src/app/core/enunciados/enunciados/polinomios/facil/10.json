@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para P(x) = 5x² + 1x + 1, qual é o valor de P(2)?",
+    "fr": "Pour P(x) = 5x² + 1x + 1, quelle est la valeur de P(2) ?",
+    "en": "For P(x) = 5x² + 1x + 1, what is the value of P(2)?"
+  },
+  "dados-calculo": {
+    "total": "23"
+  }
+}

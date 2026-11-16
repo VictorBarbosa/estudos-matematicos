@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O triplo de um número menos 5 é igual ao dobro desse número mais 4. Qual é o número?",
+    "fr": "Le triple d’un nombre moins 5 est égal au double de ce nombre plus 4. Quel est ce nombre ?",
+    "en": "Three times a number minus 5 equals twice that number plus 4. What is the number?"
+  },
+  "dados-calculo": {
+    "total": "9"
+  }
+}

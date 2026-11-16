@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois círculos concêntricos têm raios de 20 cm e 16 cm. Qual é a área da coroa entre eles, em centímetros quadrados? (duas casas decimais)",
+    "fr": "Deux cercles concentriques ont des rayons de 20 cm et 16 cm. Quelle est l’aire de la couronne comprise entre eux, en centimètres carrés ? (deux décimales)",
+    "en": "Two concentric circles have radii 20 cm and 16 cm. What is the area of the ring between them, in square centimetres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "452.39"
+  }
+}

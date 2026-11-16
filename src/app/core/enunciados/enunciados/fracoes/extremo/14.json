@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule (3/5 + 2/5) × 5/1 e dê o resultado irredutível.",
+    "fr": "Calculez (3/5 + 2/5) × 5/1 et donnez le résultat irréductible.",
+    "en": "Work out (3/5 + 2/5) × 5/1 and give the result in lowest terms."
+  },
+  "dados-calculo": {
+    "total": "5"
+  }
+}

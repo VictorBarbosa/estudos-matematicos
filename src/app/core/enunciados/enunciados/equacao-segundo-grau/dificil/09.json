@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação x² − 7x − 8 = 0 e informe a MAIOR raiz.",
+    "fr": "Résolvez l’équation x² − 7x − 8 = 0 et indiquez la PLUS GRANDE racine.",
+    "en": "Solve x² − 7x − 8 = 0 and give the LARGEST root."
+  },
+  "dados-calculo": {
+    "total": "8"
+  }
+}

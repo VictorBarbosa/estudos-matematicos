@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de 5x² − 2xy + 1y² para x = 1 e y = 3.",
+    "fr": "Calculez la valeur numérique de 5x² − 2xy + 1y² pour x = 1 et y = 3.",
+    "en": "Calculate the numerical value of 5x² − 2xy + 1y² for x = 1 and y = 3."
+  },
+  "dados-calculo": {
+    "total": "8"
+  }
+}

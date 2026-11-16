@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de 2x + 7 para x = 3.",
+    "fr": "Calculez la valeur numérique de 2x + 7 pour x = 3.",
+    "en": "Calculate the numerical value of 2x + 7 for x = 3."
+  },
+  "dados-calculo": {
+    "total": "13"
+  }
+}

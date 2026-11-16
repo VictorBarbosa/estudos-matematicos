@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma circunferência tem raio de 5 cm. Quantos centímetros mede o comprimento dela? (duas casas decimais)",
+    "fr": "Une circonférence a un rayon de 5 cm. Combien de centimètres mesure sa longueur ? (deux décimales)",
+    "en": "A circle has radius 5 cm. How many centimetres is its circumference? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "31.42"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o resto da divisão de 3x⁴ + 1x³ + 2x + 4 por (x + 1)?",
+    "fr": "Quel est le reste de la division de 3x⁴ + 1x³ + 2x + 4 par (x + 1) ?",
+    "en": "What is the remainder of dividing 3x⁴ + 1x³ + 2x + 4 by (x + 1)?"
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

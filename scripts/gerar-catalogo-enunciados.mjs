@@ -1,5 +1,16 @@
 /**
- * Gera `enunciados/catalogo.ts` a partir da árvore de arquivos.
+ * Gera os catálogos de enunciados a partir da árvore de arquivos.
+ *
+ * São DOIS níveis de arquivo, e o segundo existe porque o primeiro cresceu
+ * até ficar impossível de abrir:
+ *
+ *   catalogos/<tópico>.ts     → os imports e as entradas de UM tópico;
+ *   enunciados/catalogo.ts    → importa os índices e concatena.
+ *
+ * O site continua lendo uma lista plana só (`ENTRADAS_DE_ENUNCIADO`), como
+ * antes; o que muda é onde ela é montada. Um tópico novo ganha o seu arquivo
+ * sozinho, e um diff de enunciado mexe num arquivo de vinte linhas em vez de
+ * num de dezesseis mil.
  *
  * O texto está espalhado em um arquivo por pergunta — `fracoes/facil/01.json`,
  * `retas-e-planos/moldes/forma-3.json` —, e alguém tem de juntá-los para o
@@ -11,10 +22,11 @@
  * arquivo. `npm run verificar:geradores` reprova quando o catálogo está
  * desatualizado, para que o esquecimento apareça antes de ir para o ar.
  */
-import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const PASTA = 'src/app/core/enunciados/enunciados';
+const CATALOGOS = 'src/app/core/enunciados/catalogos';
 const NIVEIS = ['facil', 'medio', 'dificil', 'extremo'];
 
 /** Os arquivos de um tópico, na ordem em que o site deve lê-los. */
@@ -92,7 +104,82 @@ const topicos = readdirSync(PASTA)
   .filter((nome) => existe(join(PASTA, nome)))
   .sort();
 
-const linhas = [
+mkdirSync(CATALOGOS, { recursive: true });
+
+/** `analise-combinatoria` → `ENTRADAS_DE_ANALISE_COMBINATORIA`. */
+function constanteDoTopico(topico) {
+  return `ENTRADAS_DE_${topico.toUpperCase().replace(/-/g, '_')}`;
+}
+
+const indices = [];
+let total = 0;
+
+for (const topico of topicos) {
+  const arquivos = arquivosDoTopico(topico);
+  const constante = constanteDoTopico(topico);
+
+  const linhas = [
+    '/**',
+    ` * Os enunciados de ${topico}, para o catálogo juntar.`,
+    ' *',
+    ' * ARQUIVO GERADO por `npm run enunciados:catalogo`. Não edite à mão: o que',
+    ` * se edita são os arquivos de \`enunciados/${topico}/<nível>/\` e de`,
+    ` * \`enunciados/${topico}/moldes/\`, e este índice se refaz a partir deles.`,
+    ' */',
+    '',
+  ];
+
+  if (arquivos.length > 0) {
+    // O import precisa vir antes do tipo, como em qualquer arquivo TS.
+    const imports = [];
+    const entradas = [];
+
+    for (const arquivo of arquivos) {
+      const nome = identificador(arquivo.caminho);
+      imports.push(`import ${nome} from '@core/enunciados/enunciados/${arquivo.caminho}';`);
+
+      const partes = [`topico: '${topico}'`];
+      if (arquivo.nivel !== undefined) {
+        partes.push(`nivel: '${arquivo.nivel}'`);
+      }
+      if (arquivo.forma !== undefined) {
+        partes.push(`forma: '${arquivo.forma}'`);
+      }
+      partes.push(`conteudo: ${nome}`);
+      entradas.push(`  { ${partes.join(', ')} },`);
+    }
+
+    linhas.push(
+      ...imports,
+      "import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';",
+      '',
+      `export const ${constante}: readonly EntradaDeEnunciado[] = [`,
+      ...entradas,
+      '];',
+      '',
+    );
+  } else {
+    linhas.push(
+      "import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';",
+      '',
+      `export const ${constante}: readonly EntradaDeEnunciado[] = [];`,
+      '',
+    );
+  }
+
+  writeFileSync(join(CATALOGOS, `${topico}.ts`), linhas.join('\n'), 'utf8');
+  indices.push({ topico, constante });
+  total += arquivos.length;
+}
+
+/*
+ * O índice geral: só imports e uma concatenação.
+ *
+ * Ele NÃO repete o cabeçalho longo de antes. Quem quer saber de onde vem o
+ * nível e a forma de cada entrada lê `enunciados/<tópico>/` — é lá que o
+ * caminho diz, e é isso que os guardas conferem.
+ */
+const linhasIndice = [
   '/**',
   ' * Os enunciados de todos os tópicos, reunidos para o site ler.',
   ' *',
@@ -100,49 +187,30 @@ const linhas = [
   ' * se edita são os arquivos de `enunciados/<tópico>/<nível>/` e de',
   ' * `enunciados/<tópico>/moldes/`, e o catálogo se refaz a partir deles.',
   ' *',
-  ' * O nível e a forma vêm do CAMINHO do arquivo, não de um campo escrito',
-  ' * dentro dele: `fracoes/facil/01.json` é uma pergunta pronta de Frações no',
-  ' * Fácil, e `fracoes/moldes/forma-2.json` é um molde. Assim não há como o',
-  ' * arquivo dizer uma coisa e a pasta dizer outra.',
+  ' * Cada tópico tem o seu índice em `core/enunciados/catalogos/<tópico>.ts`,',
+  ' * com os imports e as entradas daquele tópico. Aqui só se juntam, para o',
+  ' * resto do site continuar vendo uma lista plana.',
   ' */',
+  '',
+  ...indices.map(
+    ({ topico, constante }) =>
+      `import { ${constante} } from '@core/enunciados/catalogos/${topico}';`,
+  ),
+  '',
+  "import type { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';",
+  '',
+  // Reexportado porque o catálogo era o dono do tipo até a segmentação, e
+  // quem importava daqui continua importando daqui.
+  "export type { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';",
+  '',
+  'export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [',
+  ...indices.map(({ constante }) => `  ...${constante},`),
+  '];',
   '',
 ];
 
-const entradas = [];
-for (const topico of topicos) {
-  for (const arquivo of arquivosDoTopico(topico)) {
-    const nome = identificador(arquivo.caminho);
-    linhas.push(`import ${nome} from '@core/enunciados/enunciados/${arquivo.caminho}';`);
-    entradas.push({ ...arquivo, nome, topico });
-  }
-}
-
-linhas.push(
-  '',
-  '/** Uma entrada do arquivo, com o que o caminho dela diz. */',
-  'export interface EntradaDeEnunciado {',
-  '  readonly topico: string;',
-  '  readonly nivel?: string;',
-  '  readonly forma?: string;',
-  '  readonly conteudo: unknown;',
-  '}',
-  '',
-  'export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [',
+writeFileSync(join(PASTA, 'catalogo.ts'), linhasIndice.join('\n'), 'utf8');
+console.log(
+  `Catálogo gerado: ${total} entradas em ${topicos.length} tópicos, ` +
+    `mais os ${topicos.length} índices por tópico.`,
 );
-
-for (const entrada of entradas) {
-  const partes = [`topico: '${entrada.topico}'`];
-  if (entrada.nivel !== undefined) {
-    partes.push(`nivel: '${entrada.nivel}'`);
-  }
-  if (entrada.forma !== undefined) {
-    partes.push(`forma: '${entrada.forma}'`);
-  }
-  partes.push(`conteudo: ${entrada.nome}`);
-  linhas.push(`  { ${partes.join(', ')} },`);
-}
-
-linhas.push('];', '');
-
-writeFileSync(join(PASTA, 'catalogo.ts'), linhas.join('\n'), 'utf8');
-console.log(`Catálogo gerado: ${entradas.length} entradas em ${topicos.length} tópicos.`);

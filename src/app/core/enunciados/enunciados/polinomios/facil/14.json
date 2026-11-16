@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para P(x) = 6x² + 3x + 2, qual é o valor de P(1)?",
+    "fr": "Pour P(x) = 6x² + 3x + 2, quelle est la valeur de P(1) ?",
+    "en": "For P(x) = 6x² + 3x + 2, what is the value of P(1)?"
+  },
+  "dados-calculo": {
+    "total": "11"
+  }
+}

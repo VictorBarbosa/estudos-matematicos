@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um poliedro convexo tem todas as faces triangulares e 60 arestas. Quantos vértices ele tem?",
+    "fr": "Un polyèdre convexe a toutes ses faces triangulaires et 60 arêtes. Combien de sommets a-t-il ?",
+    "en": "A convex polyhedron has all triangular faces and 60 edges. How many vertices does it have?"
+  },
+  "dados-calculo": {
+    "total": "22"
+  }
+}
