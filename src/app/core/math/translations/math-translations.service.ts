@@ -1,5 +1,10 @@
 import { Injectable, computed, effect, inject, signal } from '@angular/core';
 import { I18nService } from '@core/i18n/services/i18n.service';
+import {
+  normalizarTexto,
+  numerosDe,
+  vestirCuringas,
+} from '@core/math/translations/texto-normalizado';
 
 /**
  * Entrada no dicionário de traduções do motor matemático.
@@ -16,20 +21,25 @@ interface EntradaTraducao {
 /**
  * Traduz os textos do motor matemático conforme o idioma da interface.
  *
- * O dicionário é um mapeamento direto: string em português → {fr, en}.
- * Cada string do motor (`descricao` e `nota` de cada `Passo`) foi extraída
- * e traduzida manualmente para francês e inglês. Strings com templates
- * (`${...}`) receberam tradução literal (mesmo texto em todas as línguas)
- * — elas serão ajustadas conforme necessidade.
+ * O dicionário é `texto em português com os números trocados por # → {fr, en}`.
+ * A normalização existe porque estas frases carregam os dados: «Substituímos x
+ * por 3 em cada termo» tem uma variante por valor de x, e indexar pelo texto
+ * literal exigiria uma entrada por variante. Com o curinga, uma entrada cobre
+ * todas — e a tradução devolve os números do texto original nos lugares certos.
  *
- * A tradução é O(1) por chamada: o dicionário é um objeto normal onde
- * cada string em português é uma chave. Se uma string não for encontrada
- * (ex: strings novas adicionadas depois da geração), o próprio texto em
- * português é devolvido como fallback.
+ * A mesma tabela serve às descrições de passo, às notas, às dicas e aos
+ * diagnósticos de erro: os quatro são texto corrido em português, e os quatro
+ * aparecem na tela.
  *
- * O serviço é injetado pelo `PassoAPasso` para traduzir cada passo
- * antes de exibir. Nenhum texto fica em branco — o português sempre
- * serve como rede de segurança.
+ * A tradução é O(1): normalizar a frase é uma passada de regex, e a busca é um
+ * acesso a objeto. Quando a frase não está no dicionário — porque o gerador
+ * mudou depois —, o texto em português volta como rede de segurança: uma frase
+ * na língua errada atrapalha menos que uma tela vazia. O guarda
+ * `traducoes-de-resolucao.spec.ts` mede o que ainda falta e reprova quando a
+ * cobertura cai.
+ *
+ * O dicionário é baixado só quando alguém estuda em francês ou inglês: são
+ * centenas de kB, e quem estuda em português nunca os consulta.
  */
 type Dicionario = Readonly<Record<string, EntradaTraducao>>;
 
@@ -70,7 +80,30 @@ export class MathTranslationsService {
    * devolvido como fallback.
    */
   traduzir(textoPT: string): string {
-    const idioma = this.i18n.idioma();
-    return this.dicionario()[textoPT]?.[idioma] ?? textoPT;
+    return this.traduzirCom(this.dicionario(), textoPT, this.i18n.idioma());
+  }
+
+  /**
+   * A tradução de um texto, dado o dicionário e o idioma.
+   *
+   * Separado do `traduzir` para o guarda poder exercitar a MESMA lógica sem
+   * passar pelo Angular: um teste que reimplementasse a busca estaria medindo a
+   * reimplementação, não o serviço.
+   */
+  traduzirCom(dicionario: Dicionario, textoPT: string, idioma: string): string {
+    const traducao = dicionario[normalizarTexto(textoPT)]?.[idioma as 'fr' | 'en'];
+
+    // Sem entrada, o português volta: é a rede de segurança de sempre. Uma
+    // entrada igual ao português também não serve — seria tradução de fachada.
+    if (traducao === undefined || traducao === textoPT) {
+      return textoPT;
+    }
+
+    return vestirCuringas(traducao, numerosDe(textoPT));
+  }
+
+  /** Exporta o dicionário carregado — o guarda usa isto para medir cobertura. */
+  dicionarioCarregado(): Dicionario {
+    return this.dicionario();
   }
 }

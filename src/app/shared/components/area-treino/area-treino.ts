@@ -23,6 +23,7 @@ import { ProgressoService } from '@core/treino/services/progresso.service';
 import { SessaoTreino } from '@core/treino/sessao-treino/sessao-treino';
 import { ConfiguracaoService } from '@core/configuracao/services/configuracao.service';
 import { I18nService } from '@core/i18n/services/i18n.service';
+import { MathTranslationsService } from '@core/math/translations/math-translations.service';
 import {
   CHAVE_DO_NIVEL,
   GeradorExercicio,
@@ -213,7 +214,26 @@ export class AreaTreino {
     enunciadoEm(this.sessao().exercicio(), this.i18n.idioma()),
   );
 
-  protected readonly dica = computed(() => dicaEm(this.sessao().exercicio(), this.i18n.idioma()));
+  /**
+   * A dica na língua da interface.
+   *
+   * Duas fontes, nesta ordem: a tradução que o GERADOR declarou — escrita à mão,
+   * ao lado da pergunta — e, quando ela não existe, o dicionário do motor. A
+   * dica é texto curto de comando («Resolva a potência antes dos produtos»), e
+   * ficou de fora da tradução por muito tempo: `dicaEm` só olhava o gerador, e
+   * quem não declarasse a tradução via português para sempre. O dicionário
+   * fecha isso sem obrigar cada um dos 130 geradores a repetir a mesma frase.
+   */
+  protected readonly dica = computed(() => {
+    const exercicio = this.sessao().exercicio();
+    const doGerador = dicaEm(exercicio, this.i18n.idioma());
+    if (doGerador === undefined) {
+      return undefined;
+    }
+    return this.tradutor.traduzir(doGerador);
+  });
+
+  private readonly tradutor = inject(MathTranslationsService);
 
   private readonly emFoco = inject(ExercicioEmFocoService);
   private readonly destroi = inject(DestroyRef);
