@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que massa de sal de cozinha, de massa molar 58.44 g/mol, há em 500 mL de solução a 1 mol/L? (em gramas, duas casas decimais)",
+    "fr": "Quelle masse de sel de cuisine, de masse molaire 58.44 g/mol, y a-t-il dans 500 mL de solution à 1 mol/L ? (en grammes, deux décimales)",
+    "en": "What mass of table salt, molar mass 58.44 g/mol, is there in 500 mL of a 1 mol/L solution? (in grams, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "29.22"
+  }
+}

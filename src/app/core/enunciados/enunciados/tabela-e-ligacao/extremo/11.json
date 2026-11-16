@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O composto Al2O3 é formado por um cátion de carga +3 e um ânion. Qual é o módulo da carga do ânion, sabendo que a fórmula tem 3 ânions?",
+    "fr": "Le composé Al2O3 est formé d’un cation de charge +3 et d’un anion. Quel est le module de la charge de l’anion, sachant que la formule contient 3 anion(s) ?",
+    "en": "The compound Al2O3 is made of a cation of charge +3 and an anion. What is the magnitude of the anion’s charge, given that the formula contains 3 anion(s)?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

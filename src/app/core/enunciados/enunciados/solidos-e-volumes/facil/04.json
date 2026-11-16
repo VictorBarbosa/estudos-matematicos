@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um copo cilíndrico tem raio de {dados-calculo.raio} cm e altura de {dados-calculo.altura} cm. Quantos centímetros cúbicos ele comporta? (duas casas decimais)",
+    "fr": "Un verre cylindrique a un rayon de {dados-calculo.raio} cm et une hauteur de {dados-calculo.altura} cm. Combien de centimètres cubes contient-il ? (deux décimales)",
+    "en": "A cylindrical glass has a radius of {dados-calculo.raio} cm and a height of {dados-calculo.altura} cm. How many cubic centimetres does it hold? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "3",
+    "altura": "10",
+    "total": "282.74"
+  }
+}

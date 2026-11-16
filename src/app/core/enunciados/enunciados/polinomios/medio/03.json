@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "As raízes de x³ − 7x + 6 são todas inteiras. Qual é a MENOR delas?",
+    "fr": "Les racines de x³ − 7x + 6 sont toutes entières. Quelle est la PLUS PETITE ?",
+    "en": "The roots of x³ − 7x + 6 are all integers. Which is the SMALLEST?"
+  },
+  "dados-calculo": {
+    "total": "-3"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a concentração, em mol/L, de uma solução que contém 8 g de NaOH (massa molar 40.0 g/mol) em 100 mL? (duas casas decimais)",
+    "fr": "Quelle est la concentration, en mol/L, d’une solution contenant 8 g de NaOH (masse molaire 40.0 g/mol) dans 100 mL ? (deux décimales)",
+    "en": "What is the concentration, in mol/L, of a solution containing 8 g of NaOH (molar mass 40.0 g/mol) in 100 mL? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

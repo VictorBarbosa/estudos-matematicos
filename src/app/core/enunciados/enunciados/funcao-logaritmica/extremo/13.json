@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva log_5(x) = log_5(25) + log_5(5) e informe x.",
+    "fr": "Résolvez log_5(x) = log_5(25) + log_5(5) et indiquez x.",
+    "en": "Solve log_5(x) = log_5(25) + log_5(5) and give x."
+  },
+  "dados-calculo": {
+    "total": "125"
+  }
+}

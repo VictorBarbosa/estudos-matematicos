@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de (a + b)² − ab para a = {dados-calculo.a} e b = {dados-calculo.b}.",
+    "fr": "Calculez la valeur numérique de (a + b)² − ab pour a = {dados-calculo.a} et b = {dados-calculo.b}.",
+    "en": "Calculate the numerical value of (a + b)² − ab for a = {dados-calculo.a} and b = {dados-calculo.b}."
+  },
+  "dados-calculo": {
+    "a": "2",
+    "b": "5",
+    "total": "39"
+  }
+}

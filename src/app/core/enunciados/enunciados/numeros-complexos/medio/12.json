@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Multiplique (3 + 0i) por (0 + 4i). Qual é a parte real do resultado?",
+    "fr": "Multipliez (3 + 0i) par (0 + 4i). Quelle est la partie réelle du résultat ?",
+    "en": "Multiply (3 + 0i) by (0 + 4i). What is the real part of the result?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

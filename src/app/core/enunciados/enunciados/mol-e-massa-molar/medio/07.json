@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa molar do amônia? A fórmula é NH3. (duas casas decimais)",
+    "fr": "Quelle est la masse molaire du ammoniac ? La formule est NH3. (deux décimales)",
+    "en": "What is the molar mass of ammonia? The formula is NH3. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "17.03"
+  }
+}

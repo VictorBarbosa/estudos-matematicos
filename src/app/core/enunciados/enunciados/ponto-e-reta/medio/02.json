@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "A reta que passa por A({dados-calculo.ax}, {dados-calculo.ay}) e B({dados-calculo.bx}, {dados-calculo.by}) tem equação y = mx + n. Qual é o valor de n?",
+    "fr": "La droite passant par A({dados-calculo.ax}, {dados-calculo.ay}) et B({dados-calculo.bx}, {dados-calculo.by}) a pour équation y = mx + n. Quelle est la valeur de n ?",
+    "en": "The line through A({dados-calculo.ax}, {dados-calculo.ay}) and B({dados-calculo.bx}, {dados-calculo.by}) has equation y = mx + n. What is n?"
+  },
+  "dados-calculo": {
+    "ax": "0",
+    "ay": "3",
+    "bx": "2",
+    "by": "7",
+    "total": "3"
+  }
+}

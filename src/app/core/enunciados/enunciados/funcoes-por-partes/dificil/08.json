@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 3, f(x) = 4x + -9; se x ≥ 3, f(x) = 1x. Qual valor da constante c torna a função contínua em x = 3? (duas casas decimais)",
+    "fr": "Si x < 3, f(x) = 4x + -9 ; si x ≥ 3, f(x) = 1x. Quelle valeur de la constante c rend la fonction continue en x = 3 ? (deux décimales)",
+    "en": "If x < 3, f(x) = 4x + -9; if x ≥ 3, f(x) = 1x. What value of the constant c makes the function continuous at x = 3? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-9.00"
+  }
+}

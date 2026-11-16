@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma população cresce como P(t) = 10·2^t, com t em horas. Qual é a população em t = 4?",
+    "fr": "Une population croît comme P(t) = 10·2^t, avec t en heures. Quelle est la population à t = 4 ?",
+    "en": "A population grows as P(t) = 10·2^t, with t in hours. What is the population at t = 4?"
+  },
+  "dados-calculo": {
+    "total": "160"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = {dados-calculo.a} · cos({dados-calculo.k}x) tem valor máximo M e mínimo m. Qual é o valor de M − m?",
+    "fr": "La fonction f(x) = {dados-calculo.a} · cos({dados-calculo.k}x) a pour maximum M et pour minimum m. Quelle est la valeur de M − m ?",
+    "en": "The function f(x) = {dados-calculo.a} · cos({dados-calculo.k}x) has maximum M and minimum m. What is M − m?"
+  },
+  "dados-calculo": {
+    "a": "7",
+    "k": "3",
+    "total": "14"
+  }
+}

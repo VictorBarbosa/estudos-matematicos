@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo parte a 5 m/s e acelera a 2 m/s². Que distância percorre em 4 s? (duas casas decimais)",
+    "fr": "Un corps part à 5 m/s et accélère à 2 m/s². Quelle distance parcourt-il en 4 s ? (deux décimales)",
+    "en": "A body starts at 5 m/s and accelerates at 2 m/s². What distance does it cover in 4 s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "36.00"
+  }
+}

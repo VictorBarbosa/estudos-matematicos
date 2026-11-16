@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um triângulo tem lados de {dados-calculo.a} km, {dados-calculo.b} km e {dados-calculo.c} km. Quantos quilômetros mede a mediana relativa ao maior lado? (duas casas decimais)",
+    "fr": "Un triangle a des côtés de {dados-calculo.a} km, {dados-calculo.b} km et {dados-calculo.c} km. Combien de kilomètres mesure la médiane relative au plus grand côté ? (deux décimales)",
+    "en": "A triangle has sides of {dados-calculo.a} km, {dados-calculo.b} km and {dados-calculo.c} km. How many kilometres is the median to the longest side? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "9",
+    "b": "10",
+    "c": "17",
+    "total": "4.27"
+  }
+}

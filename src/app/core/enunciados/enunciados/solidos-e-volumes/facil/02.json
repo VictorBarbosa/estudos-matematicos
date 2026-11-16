@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma caixa de papelão mede {dados-calculo.a} cm por {dados-calculo.b} cm por {dados-calculo.c} cm. Quantos centímetros cúbicos ela comporta?",
+    "fr": "Une boîte en carton mesure {dados-calculo.a} cm sur {dados-calculo.b} cm sur {dados-calculo.c} cm. Combien de centimètres cubes contient-elle ?",
+    "en": "A cardboard box measures {dados-calculo.a} cm by {dados-calculo.b} cm by {dados-calculo.c} cm. How many cubic centimetres does it hold?"
+  },
+  "dados-calculo": {
+    "a": "20",
+    "b": "15",
+    "c": "10",
+    "total": "3000"
+  }
+}

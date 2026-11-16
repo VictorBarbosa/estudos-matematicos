@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o comprimento da corda comum às circunferências x² + y² = {dados-calculo.r2} e (x − {dados-calculo.d})² + y² = {dados-calculo.r2}? (duas casas decimais)",
+    "fr": "Quelle est la longueur de la corde commune aux cercles x² + y² = {dados-calculo.r2} et (x − {dados-calculo.d})² + y² = {dados-calculo.r2} ? (deux décimales)",
+    "en": "What is the length of the common chord of the circles x² + y² = {dados-calculo.r2} and (x − {dados-calculo.d})² + y² = {dados-calculo.r2}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "r2": "25",
+    "d": "6",
+    "total": "8.00"
+  }
+}

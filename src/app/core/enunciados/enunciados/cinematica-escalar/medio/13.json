@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo a 25 m/s freia com desaceleração de 5 m/s². Em quantos segundos ele para? (duas casas decimais)",
+    "fr": "Un corps à 25 m/s freine avec une décélération de 5 m/s². En combien de secondes s’arrête-t-il ? (deux décimales)",
+    "en": "A body at 25 m/s brakes with a deceleration of 5 m/s². In how many seconds does it stop? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

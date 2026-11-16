@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é a área da região limitada pela curva polar r = {dados-calculo.k} (uma circunferência)? (duas casas decimais)",
+    "fr": "Quelle est l’aire de la région limitée par la courbe polaire r = {dados-calculo.k} (un cercle) ? (deux décimales)",
+    "en": "What is the area of the region bounded by the polar curve r = {dados-calculo.k} (a circle)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "k": "3",
+    "total": "28.27"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma escada de {dados-calculo.comprimento} m está apoiada numa parede e o pé dela fica a {dados-calculo.base} m da parede. Qual é o ângulo que a escada faz com o chão, em graus? (duas casas decimais)",
+    "fr": "Une échelle de {dados-calculo.comprimento} m est appuyée contre un mur et son pied est à {dados-calculo.base} m du mur. Quel est l’angle que l’échelle fait avec le sol, en degrés ? (deux décimales)",
+    "en": "A ladder {dados-calculo.comprimento} m long leans against a wall with its foot {dados-calculo.base} m from the wall. What angle does the ladder make with the ground, in degrees? (two decimal places)"
+  },
+  "dados-calculo": {
+    "comprimento": "10",
+    "base": "4",
+    "total": "66.42"
+  }
+}

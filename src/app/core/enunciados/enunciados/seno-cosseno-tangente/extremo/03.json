@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor de sen {dados-calculo.a}° · cos {dados-calculo.a}° para o ângulo dado. (duas casas decimais)",
+    "fr": "Calculez la valeur de sin {dados-calculo.a}° · cos {dados-calculo.a}° pour l’angle donné. (deux décimales)",
+    "en": "Calculate the value of sin {dados-calculo.a}° · cos {dados-calculo.a}° for the given angle. (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "15",
+    "total": "0.25"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = {dados-calculo.b} · sen({dados-calculo.k}x) tem amplitude e período. Qual é o PRODUTO dos dois? (duas casas decimais)",
+    "fr": "La fonction f(x) = {dados-calculo.b} · sin({dados-calculo.k}x) a une amplitude et une période. Quel est le PRODUIT des deux ? (deux décimales)",
+    "en": "The function f(x) = {dados-calculo.b} · sin({dados-calculo.k}x) has an amplitude and a period. What is the PRODUCT of the two? (two decimal places)"
+  },
+  "dados-calculo": {
+    "b": "3",
+    "k": "2",
+    "total": "9.42"
+  }
+}

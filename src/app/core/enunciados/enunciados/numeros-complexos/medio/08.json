@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Some os números complexos (-3 + 2i) e (3 + 2i). Qual é a parte imaginária do resultado?",
+    "fr": "Additionnez les nombres complexes (-3 + 2i) et (3 + 2i). Quelle est la partie imaginaire du résultat ?",
+    "en": "Add the complex numbers (-3 + 2i) and (3 + 2i). What is the imaginary part of the result?"
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

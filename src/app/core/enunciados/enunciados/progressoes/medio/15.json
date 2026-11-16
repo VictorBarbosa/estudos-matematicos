@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a soma dos 100 primeiros números ímpares positivos?",
+    "fr": "Quelle est la somme des 100 premiers nombres impairs positifs ?",
+    "en": "What is the sum of the first 100 positive odd numbers?"
+  },
+  "dados-calculo": {
+    "total": "10000"
+  }
+}

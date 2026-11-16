@@ -1,0 +1,15 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância do ponto P({dados-calculo.px}, {dados-calculo.py}) à reta {dados-calculo.a}x + {dados-calculo.b}y + {dados-calculo.c} = 0? (duas casas decimais)",
+    "fr": "Quelle est la distance du point P({dados-calculo.px}, {dados-calculo.py}) à la droite {dados-calculo.a}x + {dados-calculo.b}y + {dados-calculo.c} = 0 ? (deux décimales)",
+    "en": "What is the distance from point P({dados-calculo.px}, {dados-calculo.py}) to the line {dados-calculo.a}x + {dados-calculo.b}y + {dados-calculo.c} = 0? (two decimal places)"
+  },
+  "dados-calculo": {
+    "px": "0",
+    "py": "0",
+    "a": "3",
+    "b": "4",
+    "c": "-10",
+    "total": "2.00"
+  }
+}

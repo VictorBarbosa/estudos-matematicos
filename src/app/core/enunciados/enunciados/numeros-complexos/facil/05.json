@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o módulo do número complexo 0 + 7i? (duas casas decimais)",
+    "fr": "Quel est le module du nombre complexe 0 + 7i ? (deux décimales)",
+    "en": "What is the modulus of the complex number 0 + 7i? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "7.00"
+  }
+}

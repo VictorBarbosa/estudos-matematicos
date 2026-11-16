@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma bicicleta tem rodas de {dados-calculo.diametro} cm de diâmetro. Quantas voltas completas cada roda dá para percorrer {dados-calculo.distancia} m? (duas casas decimais)",
+    "fr": "Un vélo a des roues de {dados-calculo.diametro} cm de diamètre. Combien de tours complets chaque roue fait-elle pour parcourir {dados-calculo.distancia} m ? (deux décimales)",
+    "en": "A bicycle has wheels {dados-calculo.diametro} cm across. How many full turns does each wheel make to cover {dados-calculo.distancia} m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "diametro": "70",
+    "distancia": "1100",
+    "total": "500.20"
+  }
+}

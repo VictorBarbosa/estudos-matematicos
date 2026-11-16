@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que massa de ácido sulfúrico, de massa molar 98.08 g/mol, há em 200 mL de solução a 0.5 mol/L? (em gramas, duas casas decimais)",
+    "fr": "Quelle masse de acide sulfurique, de masse molaire 98.08 g/mol, y a-t-il dans 200 mL de solution à 0.5 mol/L ? (en grammes, deux décimales)",
+    "en": "What mass of sulfuric acid, molar mass 98.08 g/mol, is there in 200 mL of a 0.5 mol/L solution? (in grams, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "9.81"
+  }
+}

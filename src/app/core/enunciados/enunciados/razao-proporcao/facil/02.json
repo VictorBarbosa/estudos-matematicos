@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Numa receita vão {dados-calculo.ovos} ovos para cada {dados-calculo.xicaras} xícaras de farinha. Mantendo a proporção, quantas xícaras de farinha acompanham {dados-calculo.ovos2} ovos?",
+    "fr": "Dans une recette, on met {dados-calculo.ovos} œufs pour {dados-calculo.xicaras} tasses de farine. En gardant la proportion, combien de tasses de farine accompagnent {dados-calculo.ovos2} œufs ?",
+    "en": "A recipe uses {dados-calculo.ovos} eggs for every {dados-calculo.xicaras} cups of flour. Keeping the ratio, how many cups of flour go with {dados-calculo.ovos2} eggs?"
+  },
+  "dados-calculo": {
+    "ovos": "3",
+    "xicaras": "2",
+    "ovos2": "9",
+    "total": "6"
+  }
+}

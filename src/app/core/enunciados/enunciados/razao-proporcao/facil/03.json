@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um carro percorre {dados-calculo.km} km com 1 litro de combustível. Quantos quilômetros ele percorre com {dados-calculo.litros} litros?",
+    "fr": "Une voiture parcourt {dados-calculo.km} km avec 1 litre de carburant. Combien de kilomètres parcourt-elle avec {dados-calculo.litros} litres ?",
+    "en": "A car travels {dados-calculo.km} km on 1 litre of fuel. How many kilometres does it travel on {dados-calculo.litros} litres?"
+  },
+  "dados-calculo": {
+    "km": "12",
+    "litros": "8",
+    "total": "96"
+  }
+}

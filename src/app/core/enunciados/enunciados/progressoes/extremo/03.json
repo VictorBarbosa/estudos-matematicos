@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa PA de razão 3 e primeiro termo 0, qual é o menor n para o qual o termo supera 30?",
+    "fr": "Dans une PA de raison 3 et de premier terme 0, quel est le plus petit n pour lequel le terme dépasse 30 ?",
+    "en": "In an AP with ratio 3 and first term 0, what is the smallest n for which the term exceeds 30?"
+  },
+  "dados-calculo": {
+    "total": "12"
+  }
+}

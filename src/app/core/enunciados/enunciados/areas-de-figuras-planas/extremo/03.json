@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um quadrado tem a mesma área que um retângulo de {dados-calculo.a} m por {dados-calculo.b} m. Quantos metros mede o lado desse quadrado? (duas casas decimais)",
+    "fr": "Un carré a la même aire qu’un rectangle de {dados-calculo.a} m sur {dados-calculo.b} m. Combien de mètres mesure le côté de ce carré ? (deux décimales)",
+    "en": "A square has the same area as a rectangle of {dados-calculo.a} m by {dados-calculo.b} m. How many metres is the side of that square? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "15",
+    "b": "6",
+    "total": "9.49"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para a função f(x) = 5x + -2, qual é o valor de f(3)?",
+    "fr": "Pour la fonction f(x) = 5x + -2, quelle est la valeur de f(3) ?",
+    "en": "For the function f(x) = 5x + -2, what is the value of f(3)?"
+  },
+  "dados-calculo": {
+    "total": "13"
+  }
+}

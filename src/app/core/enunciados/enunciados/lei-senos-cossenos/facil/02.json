@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Dois lados de um triângulo medem {dados-calculo.a} cm e {dados-calculo.b} cm e formam entre si um ângulo de {dados-calculo.angulo}°. Quantos centímetros mede o terceiro lado? (duas casas decimais)",
+    "fr": "Deux côtés d’un triangle mesurent {dados-calculo.a} cm et {dados-calculo.b} cm et forment entre eux un angle de {dados-calculo.angulo}°. Combien de centimètres mesure le troisième côté ? (deux décimales)",
+    "en": "Two sides of a triangle measure {dados-calculo.a} cm and {dados-calculo.b} cm and form an angle of {dados-calculo.angulo}° between them. How many centimetres is the third side? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "7",
+    "b": "8",
+    "angulo": "60",
+    "total": "7.55"
+  }
+}

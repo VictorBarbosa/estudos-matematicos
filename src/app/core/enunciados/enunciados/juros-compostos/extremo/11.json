@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um empréstimo de R$ 2000,00 é pago em 2 parcelas iguais a juros de 5% ao período. Qual é o valor da parcela? (duas casas decimais)",
+    "fr": "Un emprunt de 2000,00 R$ est remboursé en 2 mensualités égales à un taux de 5% par période. Quel est le montant de la mensualité ? (deux décimales)",
+    "en": "A loan of R$ 2000,00 is repaid in 2 equal instalments at 5% per period. What is the instalment amount? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1075.61"
+  }
+}

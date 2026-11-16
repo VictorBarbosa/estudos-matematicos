@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o volume do paralelepípedo formado pelos três vetores dados ao lado? (duas casas decimais)",
+    "fr": "Quel est le volume du parallélépipède formé par les trois vecteurs donnés à côté ? (deux décimales)",
+    "en": "What is the volume of the parallelepiped formed by the three vectors given alongside? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.00"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Quantas soluções tem a equação sen x = {dados-calculo.valor} em [0°, 360°)? Responda com um número.",
+    "fr": "Combien de solutions a l’équation sin x = {dados-calculo.valor} sur [0°, 360°) ? Répondez par un nombre.",
+    "en": "How many solutions does sin x = {dados-calculo.valor} have on [0°, 360°)? Answer with a number."
+  },
+  "dados-calculo": {
+    "valor": "0.5",
+    "total": "2"
+  }
+}

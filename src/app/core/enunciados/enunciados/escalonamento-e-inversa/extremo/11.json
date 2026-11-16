@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para que valor POSITIVO de k a matriz [[k, 3], [3, k]] deixa de ser invertível? (o determinante se anula)",
+    "fr": "Pour quelle valeur POSITIVE de k la matrice [[k, 3], [3, k]] cesse-t-elle d’être inversible ? (le déterminant s’annule)",
+    "en": "For what POSITIVE value of k does the matrix [[k, 3], [3, k]] stop being invertible? (the determinant vanishes)"
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

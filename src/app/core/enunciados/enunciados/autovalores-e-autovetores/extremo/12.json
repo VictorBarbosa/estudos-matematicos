@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o maior autovalor da matriz [[1, 3], [3, 1]]? (duas casas decimais)",
+    "fr": "Quel est le plus grand autovalor de la matrice [[1, 3], [3, 1]] ? (deux décimales)",
+    "en": "What is the largest eigenvalue of the matrix [[1, 3], [3, 1]]? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.00"
+  }
+}

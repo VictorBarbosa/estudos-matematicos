@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A reação é Zn + 2HCl → ZnCl₂ + H₂. Que massa de H₂ se forma a partir de 65.38 g de Zn? (duas casas decimais)",
+    "fr": "La réaction est Zn + 2HCl → ZnCl₂ + H₂. Quelle masse de H₂ se forme à partir de 65.38 g de Zn ? (deux décimales)",
+    "en": "The reaction is Zn + 2HCl → ZnCl₂ + H₂. What mass of H₂ forms from 65.38 g of Zn? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.02"
+  }
+}

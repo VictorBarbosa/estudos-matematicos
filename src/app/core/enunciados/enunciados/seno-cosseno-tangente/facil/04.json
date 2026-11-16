@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor de tg {dados-calculo.graus}°. (duas casas decimais)",
+    "fr": "Calculez la valeur de tan {dados-calculo.graus}°. (deux décimales)",
+    "en": "Calculate the value of tan {dados-calculo.graus}°. (two decimal places)"
+  },
+  "dados-calculo": {
+    "graus": "45",
+    "total": "1.00"
+  }
+}

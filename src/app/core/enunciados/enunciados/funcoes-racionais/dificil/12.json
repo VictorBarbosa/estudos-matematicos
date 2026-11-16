@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Esta função tem assíntota oblíqua. Qual é o coeficiente angular dela, se f(x) = (x² + 1x + 1)/(x + 1)? (duas casas decimais)",
+    "fr": "Cette fonction a une asymptote oblique. Quel est son coefficient directeur, si f(x) = (x² + 1x + 1)/(x + 1) ? (deux décimales)",
+    "en": "This function has a slant asymptote. What is its slope, if f(x) = (x² + 1x + 1)/(x + 1)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

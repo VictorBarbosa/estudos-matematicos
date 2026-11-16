@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um hemisfério de pedra tem raio de {dados-calculo.raio} cm. Quantos centímetros cúbicos ele tem? (duas casas decimais)",
+    "fr": "Un hémisphère de pierre a un rayon de {dados-calculo.raio} cm. Combien de centimètres cubes a-t-il ? (deux décimales)",
+    "en": "A stone hemisphere has a radius of {dados-calculo.raio} cm. How many cubic centimetres does it have? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "9",
+    "total": "1526.81"
+  }
+}

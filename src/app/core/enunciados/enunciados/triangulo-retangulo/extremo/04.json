@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um triângulo retângulo tem um ângulo de {dados-calculo.angulo}° e o cateto adjacente a ele mede {dados-calculo.adjacente} cm. Quantos centímetros mede a hipotenusa? (duas casas decimais)",
+    "fr": "Un triangle rectangle a un angle de {dados-calculo.angulo}° et le cathète adjacent mesure {dados-calculo.adjacente} cm. Combien de centimètres mesure l’hypoténuse ? (deux décimales)",
+    "en": "A right triangle has an angle of {dados-calculo.angulo}° and the adjacent leg measures {dados-calculo.adjacente} cm. How many centimetres is the hypotenuse? (two decimal places)"
+  },
+  "dados-calculo": {
+    "angulo": "25",
+    "adjacente": "9",
+    "total": "9.93"
+  }
+}

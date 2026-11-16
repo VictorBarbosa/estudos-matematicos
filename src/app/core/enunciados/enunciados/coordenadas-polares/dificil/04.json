@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A curva polar r = {dados-calculo.a} + {dados-calculo.b}cos θ é uma limaçon. Qual é o valor MÁXIMO de r?",
+    "fr": "La courbe polaire r = {dados-calculo.a} + {dados-calculo.b}cos θ est une limaçon. Quelle est la valeur MAXIMALE de r ?",
+    "en": "The polar curve r = {dados-calculo.a} + {dados-calculo.b}cos θ is a limaçon. What is the MAXIMUM value of r?"
+  },
+  "dados-calculo": {
+    "a": "2",
+    "b": "3",
+    "total": "5"
+  }
+}

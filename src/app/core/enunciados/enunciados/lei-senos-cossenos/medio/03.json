@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Dois lados de um triângulo medem {dados-calculo.a} cm e {dados-calculo.b} cm e formam um ângulo de {dados-calculo.angulo}°. Quantos centímetros quadrados tem a área dele? (duas casas decimais)",
+    "fr": "Deux côtés d’un triangle mesurent {dados-calculo.a} cm et {dados-calculo.b} cm et forment un angle de {dados-calculo.angulo}°. Combien de centimètres carrés a son aire ? (deux décimales)",
+    "en": "Two sides of a triangle measure {dados-calculo.a} cm and {dados-calculo.b} cm and form an angle of {dados-calculo.angulo}°. How many square centimetres is its area? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "6",
+    "b": "10",
+    "angulo": "30",
+    "total": "15.00"
+  }
+}

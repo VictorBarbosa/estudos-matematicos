@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o traço da matriz [[5, 1], [1, 2]], isto é, a soma dos autovalores?",
+    "fr": "Quelle est la trace de la matrice [[5, 1], [1, 2]], c’est-à-dire la somme des autovalors ?",
+    "en": "What is the trace of the matrix [[5, 1], [1, 2]], that is, the sum of the eigenvalues?"
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

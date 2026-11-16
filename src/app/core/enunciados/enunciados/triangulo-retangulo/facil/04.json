@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo, a hipotenusa mede {dados-calculo.hipotenusa} cm e um cateto mede {dados-calculo.cateto} cm. Quantos centímetros mede o outro cateto? (duas casas decimais)",
+    "fr": "Dans un triangle rectangle, l’hypoténuse mesure {dados-calculo.hipotenusa} cm et un cathète mesure {dados-calculo.cateto} cm. Combien de centimètres mesure l’autre cathète ? (deux décimales)",
+    "en": "In a right triangle the hypotenuse is {dados-calculo.hipotenusa} cm and one leg is {dados-calculo.cateto} cm. How many centimetres is the other leg? (two decimal places)"
+  },
+  "dados-calculo": {
+    "hipotenusa": "13",
+    "cateto": "5",
+    "total": "12.00"
+  }
+}

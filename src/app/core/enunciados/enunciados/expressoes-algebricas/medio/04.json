@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de 4x − 2y para x = {dados-calculo.x} e y = {dados-calculo.y}.",
+    "fr": "Calculez la valeur numérique de 4x − 2y pour x = {dados-calculo.x} et y = {dados-calculo.y}.",
+    "en": "Calculate the numerical value of 4x − 2y for x = {dados-calculo.x} and y = {dados-calculo.y}."
+  },
+  "dados-calculo": {
+    "x": "7",
+    "y": "9",
+    "total": "10"
+  }
+}

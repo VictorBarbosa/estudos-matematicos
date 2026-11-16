@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação 2Al + 6HCl → 2AlCl₃ + 3H₂, cada mol de Al consome 3 mol de HCl. Partindo de 2 mol de Al, quantos mols de HCl são necessários? (duas casas decimais)",
+    "fr": "Dans la réaction 2Al + 6HCl → 2AlCl₃ + 3H₂, chaque mole de Al consomme 3 mol de HCl. En partant de 2 mol de Al, combien de moles de HCl faut-il ? (deux décimales)",
+    "en": "In the reaction 2Al + 6HCl → 2AlCl₃ + 3H₂, each mole of Al consumes 3 mol of HCl. Starting from 2 mol of Al, how many moles of HCl are needed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

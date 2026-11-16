@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A composição centesimal de um composto é: 82,24% de nitrogênio e 17,76% de hidrogênio. Qual é a massa molar mínima possível, em g/mol, a partir do número de mols de cada elemento em 100 g? (duas casas decimais)",
+    "fr": "La composition centésimale d’un composé est : 82,24% d’azote et 17,76% d’hydrogène. Quelle est la masse molaire minimale possible, en g/mol, à partir du nombre de moles de chaque élément dans 100 g ? (deux décimales)",
+    "en": "The percentage composition of a compound is: 82.24% nitrogen and 17.76% hydrogen. What is the minimum possible molar mass, in g/mol, from the number of moles of each element in 100 g? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "17.03"
+  }
+}

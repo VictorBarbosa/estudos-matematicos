@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma mistura contém 2 mol de gás num volume de 5 L a 100 °C. Qual é a pressão PARCIAL de um gás que corresponde a 0.75 da quantidade total? (em atm, duas casas decimais)",
+    "fr": "Un mélange contient 2 mol de gaz dans un volume de 5 L à 100 °C. Quelle est la pression PARTIELLE d’un gaz qui correspond à 0.75 de la quantité totale ? (en atm, deux décimales)",
+    "en": "A mixture contains 2 mol of gas in a volume of 5 L at 100 °C. What is the PARTIAL pressure of a gas that accounts for 0.75 of the total amount? (in atm, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "9.19"
+  }
+}

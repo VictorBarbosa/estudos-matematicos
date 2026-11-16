@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma bola de metal de raio {dados-calculo.raioEsfera} cm é fundida e todo o material é moldado num cone de altura {dados-calculo.altura} cm. Quantos centímetros mede o raio da base desse cone? (duas casas decimais)",
+    "fr": "Une boule de métal de rayon {dados-calculo.raioEsfera} cm est fondue et toute la matière est moulée en un cône de hauteur {dados-calculo.altura} cm. Combien de centimètres mesure le rayon de la base de ce cône ? (deux décimales)",
+    "en": "A metal ball of radius {dados-calculo.raioEsfera} cm is melted and all the material is cast into a cone of height {dados-calculo.altura} cm. How many centimetres is the radius of that cone’s base? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raioEsfera": "3",
+    "altura": "9",
+    "total": "3.46"
+  }
+}

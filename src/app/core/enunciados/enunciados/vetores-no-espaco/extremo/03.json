@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância entre os pontos (1, 1, 1) e (4, 5, 13)? (duas casas decimais)",
+    "fr": "Quelle est la distance entre les points (1, 1, 1) et (4, 5, 13) ? (deux décimales)",
+    "en": "What is the distance between the points (1, 1, 1) and (4, 5, 13)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "13.00"
+  }
+}

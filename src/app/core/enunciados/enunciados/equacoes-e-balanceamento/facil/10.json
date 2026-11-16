@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na equação N₂ + H₂ → NH₃, balanceada com os menores inteiros, qual é a soma de todos os coeficientes?",
+    "fr": "Dans l’équation N₂ + H₂ → NH₃, équilibrée avec les plus petits entiers, quelle est la somme de tous les coefficients ?",
+    "en": "In the equation N₂ + H₂ → NH₃, balanced with the smallest integers, what is the sum of all coefficients?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A uma taxa de 50% por período, em quantos períodos um capital DOBRA? (duas casas decimais)",
+    "fr": "À un taux de 50% par période, en combien de périodes un capital DOUBLE-t-il ? (deux décimales)",
+    "en": "At a rate of 50% per period, in how many periods does a capital DOUBLE? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.71"
+  }
+}

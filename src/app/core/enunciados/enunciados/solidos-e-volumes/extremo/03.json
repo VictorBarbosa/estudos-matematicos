@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um cone de raio {dados-calculo.raioCone} cm e altura {dados-calculo.altura} cm é derretido e todo o material é moldado num cilindro de raio {dados-calculo.raioCilindro} cm. Quantos centímetros de altura tem esse cilindro? (duas casas decimais)",
+    "fr": "Un cône de rayon {dados-calculo.raioCone} cm et de hauteur {dados-calculo.altura} cm est fondu et toute la matière est moulée en un cylindre de rayon {dados-calculo.raioCilindro} cm. Combien de centimètres de hauteur a ce cylindre ? (deux décimales)",
+    "en": "A cone of radius {dados-calculo.raioCone} cm and height {dados-calculo.altura} cm is melted and all the material is cast into a cylinder of radius {dados-calculo.raioCilindro} cm. How many centimetres tall is that cylinder? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raioCone": "9",
+    "altura": "18",
+    "raioCilindro": "6",
+    "total": "13.50"
+  }
+}

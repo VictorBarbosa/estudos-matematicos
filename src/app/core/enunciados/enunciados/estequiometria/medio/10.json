@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A reação é 2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O. Que massa de Na₂SO₄ se forma a partir de 80 g de NaOH? (duas casas decimais)",
+    "fr": "La réaction est 2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O. Quelle masse de Na₂SO₄ se forme à partir de 80 g de NaOH ? (deux décimales)",
+    "en": "The reaction is 2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O. What mass of Na₂SO₄ forms from 80 g of NaOH? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "284.08"
+  }
+}

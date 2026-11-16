@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa reação, a concentração é C(t) = 30t/(t + 6), com t em minutos. Para qual valor a concentração tende quando t cresce muito? (duas casas decimais)",
+    "fr": "Dans une réaction, la concentration est C(t) = 30t/(t + 6), avec t en minutes. Vers quelle valeur la concentration tend-elle lorsque t devient très grand ? (deux décimales)",
+    "en": "In a reaction the concentration is C(t) = 30t/(t + 6), with t in minutes. What value does the concentration approach as t grows large? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "30.00"
+  }
+}

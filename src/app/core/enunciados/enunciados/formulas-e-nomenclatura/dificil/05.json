@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do fosfato de cálcio?",
+    "fr": "Quelle est la formule du phosphate de calcium ?",
+    "en": "What is the formula of calcium phosphate?"
+  },
+  "dados-calculo": {
+    "total": "Ca3(PO4)2"
+  }
+}

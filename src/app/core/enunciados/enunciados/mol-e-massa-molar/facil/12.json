@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa, em gramas, de 3 mol de gás carbônico? (duas casas decimais)",
+    "fr": "Quelle est la masse, en grammes, de 3 mol de dioxyde de carbone ? (deux décimales)",
+    "en": "What is the mass, in grams, of 3 mol of carbon dioxide? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "132.03"
+  }
+}

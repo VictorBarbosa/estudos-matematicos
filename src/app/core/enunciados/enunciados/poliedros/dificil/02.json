@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Num poliedro convexo todas as faces são pentágonos, e ele tem {dados-calculo.faces} faces. Quantas arestas ele tem?",
+    "fr": "Dans un polyèdre convexe toutes les faces sont des pentagones, et il a {dados-calculo.faces} faces. Combien d’arêtes a-t-il ?",
+    "en": "In a convex polyhedron every face is a pentagon, and it has {dados-calculo.faces} faces. How many edges does it have?"
+  },
+  "dados-calculo": {
+    "faces": "12",
+    "total": "30"
+  }
+}

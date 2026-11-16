@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o coeficiente linear (o valor de b) da função f(x) = 2x + 7?",
+    "fr": "Quel est le coefficient linéaire (la valeur de b) de la fonction f(x) = 2x + 7 ?",
+    "en": "What is the constant term (the value of b) of the function f(x) = 2x + 7?"
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

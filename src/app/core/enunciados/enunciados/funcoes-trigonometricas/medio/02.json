@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor MÍNIMO que a função f(x) = {dados-calculo.a} + {dados-calculo.b} · cos(x) atinge?",
+    "fr": "Quelle est la valeur MINIMALE que la fonction f(x) = {dados-calculo.a} + {dados-calculo.b} · cos(x) atteint ?",
+    "en": "What is the MINIMUM value the function f(x) = {dados-calculo.a} + {dados-calculo.b} · cos(x) reaches?"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "b": "3",
+    "total": "2"
+  }
+}

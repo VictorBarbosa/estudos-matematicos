@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a área do paralelogramo formado pelos vetores (5, 2) e (1, 4)? (duas casas decimais)",
+    "fr": "Quelle est l’aire du parallélogramme formé par les vecteurs (5, 2) et (1, 4) ? (deux décimales)",
+    "en": "What is the area of the parallelogram formed by the vectors (5, 2) and (1, 4)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "18.00"
+  }
+}

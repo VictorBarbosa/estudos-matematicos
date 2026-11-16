@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto de massa molar 17.03 g/mol contém 3 átomos de hidrogênio por molécula. Quantas gramas de hidrogênio há em 1 mol? (duas casas decimais)",
+    "fr": "Un composé de masse molaire 17.03 g/mol contient 3 atomes de hydrogène par molécule. Combien de grammes de hydrogène y a-t-il dans 1 mol ? (deux décimales)",
+    "en": "A compound of molar mass 17.03 g/mol contains 3 atoms of hydrogen per molecule. How many grams of hydrogen are in 1 mol? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.02"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com f(x) = 6x e g(x) = x + 3, qual é o valor de f(g(2))?",
+    "fr": "Avec f(x) = 6x et g(x) = x + 3, quelle est la valeur de f(g(2)) ?",
+    "en": "With f(x) = 6x and g(x) = x + 3, what is the value of f(g(2))?"
+  },
+  "dados-calculo": {
+    "total": "30"
+  }
+}

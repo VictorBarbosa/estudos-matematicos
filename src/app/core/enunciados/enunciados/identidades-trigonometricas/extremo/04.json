@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Simplifique a expressão (1 − cos 2θ)/2 para θ = {dados-calculo.graus}°. (duas casas decimais)",
+    "fr": "Simplifiez l’expression (1 − cos 2θ)/2 pour θ = {dados-calculo.graus}°. (deux décimales)",
+    "en": "Simplify the expression (1 − cos 2θ)/2 for θ = {dados-calculo.graus}°. (two decimal places)"
+  },
+  "dados-calculo": {
+    "graus": "30",
+    "total": "0.25"
+  }
+}

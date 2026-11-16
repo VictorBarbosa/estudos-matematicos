@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Os três ângulos internos de um triângulo estão em progressão aritmética. O menor deles mede {dados-calculo.a}°. Quantos graus mede o MAIOR?",
+    "fr": "Les trois angles intérieurs d’un triangle sont en progression arithmétique. Le plus petit mesure {dados-calculo.a}°. Combien de degrés mesure le PLUS GRAND ?",
+    "en": "The three interior angles of a triangle are in arithmetic progression. The smallest measures {dados-calculo.a}°. How many degrees is the LARGEST?"
+  },
+  "dados-calculo": {
+    "a": "42",
+    "total": "78"
+  }
+}

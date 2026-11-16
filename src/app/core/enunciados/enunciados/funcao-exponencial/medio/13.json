@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma substância tem meia-vida de 3 anos. Começando com 90 g, quantos gramas restam após 9 anos? (duas casas decimais)",
+    "fr": "Une substance a une demi-vie de 3 ans. En partant de 90 g, combien de grammes restent après 9 ans ? (deux décimales)",
+    "en": "A substance has a half-life of 3 years. Starting with 90 g, how many grams remain after 9 years? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "11.25"
+  }
+}

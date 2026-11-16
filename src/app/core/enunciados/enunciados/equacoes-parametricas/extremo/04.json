@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um projétil segue x(t) = {dados-calculo.v0}t e y(t) = {dados-calculo.h} − {dados-calculo.g}t². Em que instante ele atinge o solo? (duas casas decimais)",
+    "fr": "Un projectile suit x(t) = {dados-calculo.v0}t et y(t) = {dados-calculo.h} − {dados-calculo.g}t². À quel instant atteint-il le sol ? (deux décimales)",
+    "en": "A projectile follows x(t) = {dados-calculo.v0}t and y(t) = {dados-calculo.h} − {dados-calculo.g}t². At what time does it reach the ground? (two decimal places)"
+  },
+  "dados-calculo": {
+    "v0": "10",
+    "h": "20",
+    "g": "5",
+    "total": "2.00"
+  }
+}

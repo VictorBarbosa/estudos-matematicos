@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do composto iônico formado por sódio e flúor?",
+    "fr": "Quelle est la formule du composé ionique formé par sodium et fluor ?",
+    "en": "What is the formula of the ionic compound formed by sodium and fluorine?"
+  },
+  "dados-calculo": {
+    "total": "NaF"
+  }
+}

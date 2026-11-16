@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva |3x − 1| = 4 e informe a MAIOR solução. Dê a fração irredutível.",
+    "fr": "Résolvez |3x − 1| = 4 et indiquez la PLUS GRANDE solution. Donnez la fraction irréductible.",
+    "en": "Solve |3x − 1| = 4 and give the LARGEST solution. Give the irreducible fraction."
+  },
+  "dados-calculo": {
+    "total": "5/3"
+  }
+}

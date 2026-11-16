@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Misturam-se 12 g de C com 32 g de O₂ na reação C + O₂ → CO₂. Quantos mols de CO₂ se formam? (duas casas decimais)",
+    "fr": "On mélange 12 g de C avec 32 g de O₂ dans la réaction C + O₂ → CO₂. Combien de moles de CO₂ se forment ? (deux décimales)",
+    "en": "You mix 12 g of C with 32 g of O₂ in the reaction C + O₂ → CO₂. How many moles of CO₂ form? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo, os dois catetos medem {dados-calculo.a} cm e {dados-calculo.b} cm. Quantos graus mede o ângulo oposto ao MAIOR cateto? (duas casas decimais)",
+    "fr": "Dans un triangle rectangle, les deux cathètes mesurent {dados-calculo.a} cm et {dados-calculo.b} cm. Combien de degrés mesure l’angle opposé au PLUS GRAND cathète ? (deux décimales)",
+    "en": "In a right triangle the two legs are {dados-calculo.a} cm and {dados-calculo.b} cm. How many degrees is the angle opposite the LARGER leg? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "b": "12",
+    "total": "67.38"
+  }
+}

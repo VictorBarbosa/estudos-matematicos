@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Em que valor de x está a assíntota vertical da função f(x) = 8/(x − 0)? (duas casas decimais)",
+    "fr": "En quelle valeur de x se trouve l’asymptote verticale de la fonction f(x) = 8/(x − 0) ? (deux décimales)",
+    "en": "At what value of x is the vertical asymptote of f(x) = 8/(x − 0)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

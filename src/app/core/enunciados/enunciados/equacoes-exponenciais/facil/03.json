@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 3^x = 27 e informe x.",
+    "fr": "Résolvez l’équation 3^x = 27 et indiquez x.",
+    "en": "Solve 3^x = 27 and give x."
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

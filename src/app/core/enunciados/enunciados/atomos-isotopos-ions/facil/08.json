@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um átomo de alumínio tem 13 prótons e 14 nêutrons. Qual é o seu número de massa?",
+    "fr": "Un atome de aluminium a 13 protons et 14 neutrons. Quel est son nombre de masse ?",
+    "en": "A aluminium atom has 13 protons and 14 neutrons. What is its mass number?"
+  },
+  "dados-calculo": {
+    "total": "27"
+  }
+}

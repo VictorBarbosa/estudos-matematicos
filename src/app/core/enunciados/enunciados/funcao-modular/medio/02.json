@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quais são as soluções de |x − 3| = 5? Informe a MENOR.",
+    "fr": "Quelles sont les solutions de |x − 3| = 5 ? Indiquez la PLUS PETITE.",
+    "en": "What are the solutions of |x − 3| = 5? Give the SMALLEST."
+  },
+  "dados-calculo": {
+    "total": "-2"
+  }
+}

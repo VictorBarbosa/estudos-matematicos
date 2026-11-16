@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força de módulo 50 N atua na direção do vetor (4, 3) e o deslocamento é (8, 6) m. Qual é o trabalho realizado, em joules? (duas casas decimais)",
+    "fr": "Une force de module 50 N agit dans la direction du vecteur (4, 3) et le déplacement est (8, 6) m. Quel est le travail effectué, en joules ? (deux décimales)",
+    "en": "A force of magnitude 50 N acts along the vector (4, 3) and the displacement is (8, 6) m. What is the work done, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "500.00"
+  }
+}

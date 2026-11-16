@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O gráfico de f ocupa uma largura de 12 unidades no eixo x. Qual largura o gráfico de g(x) = f(6x) ocupa? (duas casas decimais)",
+    "fr": "Le graphique de f occupe une largeur de 12 unités sur l’axe x. Quelle largeur le graphique de g(x) = f(6x) occupe-t-il ? (deux décimales)",
+    "en": "The graph of f occupies a width of 12 units on the x-axis. What width does the graph of g(x) = f(6x) occupy? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

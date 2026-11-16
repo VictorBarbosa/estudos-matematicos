@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Sabendo que sen θ − cos θ = {dados-calculo.diferenca}, qual é o valor de sen(2θ)? (duas casas decimais)",
+    "fr": "Sachant que sin θ − cos θ = {dados-calculo.diferenca}, quelle est la valeur de sin(2θ) ? (deux décimales)",
+    "en": "Given sin θ − cos θ = {dados-calculo.diferenca}, what is sin(2θ)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "diferenca": "0.5",
+    "total": "0.75"
+  }
+}

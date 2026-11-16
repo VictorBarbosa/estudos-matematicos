@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma solução tem concentração de 1.5 mol/L e densidade de 1.2 g/mL. A massa molar do soluto é 58.44 g/mol. Qual é a porcentagem em massa do soluto? (em %, duas casas decimais)",
+    "fr": "Une solution a une concentration de 1.5 mol/L et une densité de 1.2 g/mL. La masse molaire du soluté est 58.44 g/mol. Quel est le pourcentage en masse du soluté ? (en %, deux décimales)",
+    "en": "A solution has concentration 1.5 mol/L and density 1.2 g/mL. The solute’s molar mass is 58.44 g/mol. What is the mass percentage of the solute? (in %, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "7.31"
+  }
+}

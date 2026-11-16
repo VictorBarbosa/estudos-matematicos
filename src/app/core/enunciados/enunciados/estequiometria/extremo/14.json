@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, cada mol de C₃H₈ consome 5 mol de O₂. Partindo de 1.5 mol de C₃H₈, quantos mols de O₂ são necessários? (duas casas decimais)",
+    "fr": "Dans la réaction C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, chaque mole de C₃H₈ consomme 5 mol de O₂. En partant de 1.5 mol de C₃H₈, combien de moles de O₂ faut-il ? (deux décimales)",
+    "en": "In the reaction C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, each mole of C₃H₈ consumes 5 mol of O₂. Starting from 1.5 mol of C₃H₈, how many moles of O₂ are needed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "7.50"
+  }
+}

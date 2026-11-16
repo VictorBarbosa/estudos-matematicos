@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor da função f(x) = 15/(x − 5) em x = 8? (duas casas decimais)",
+    "fr": "Quelle est la valeur de la fonction f(x) = 15/(x − 5) en x = 8 ? (deux décimales)",
+    "en": "What is the value of f(x) = 15/(x − 5) at x = 8? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dissolvem-se 58.44 g de sal de cozinha, de massa molar 58.44 g/mol, em água até completar 1000 mL. Qual é a concentração, em mol/L? (duas casas decimais)",
+    "fr": "On dissout 58.44 g de sel de cuisine, de masse molaire 58.44 g/mol, dans de l’eau jusqu’à compléter 1000 mL. Quelle est la concentration, en mol/L ? (deux décimales)",
+    "en": "You dissolve 58.44 g of table salt, molar mass 58.44 g/mol, in water up to 1000 mL. What is the concentration, in mol/L? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

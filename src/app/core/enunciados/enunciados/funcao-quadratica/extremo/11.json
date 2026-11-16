@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função lucro é L(x) = −x² + 8x − 0, com x em centenas de peças. Quantas centenas de peças maximizam o lucro? (duas casas decimais)",
+    "fr": "La fonction profit est L(x) = −x² + 8x − 0, avec x en centaines de pièces. Combien de centaines de pièces maximisent le profit ? (deux décimales)",
+    "en": "The profit function is L(x) = −x² + 8x − 0, with x in hundreds of parts. How many hundreds of parts maximise profit? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.00"
+  }
+}

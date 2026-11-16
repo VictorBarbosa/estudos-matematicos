@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use a propriedade do produto: log_5(5) + log_5(125) vale quanto?",
+    "fr": "Utilisez la propriété du produit : log_5(5) + log_5(125) vaut combien ?",
+    "en": "Use the product property: log_5(5) + log_5(125) equals what?"
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

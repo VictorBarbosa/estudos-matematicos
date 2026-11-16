@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é o deslocamento horizontal (fase) da função f(x) = sen(x − {dados-calculo.fase}), em radianos? (duas casas decimais)",
+    "fr": "Quel est le décalage horizontal (phase) de la fonction f(x) = sin(x − {dados-calculo.fase}), en radians ? (deux décimales)",
+    "en": "What is the horizontal shift (phase) of f(x) = sin(x − {dados-calculo.fase}), in radians? (two decimal places)"
+  },
+  "dados-calculo": {
+    "fase": "0.5",
+    "total": "0.50"
+  }
+}

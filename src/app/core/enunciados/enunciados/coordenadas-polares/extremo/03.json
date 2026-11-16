@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A curva polar r² = {dados-calculo.k}cos 2θ é uma lemniscata. Qual é o valor MÁXIMO de r? (duas casas decimais)",
+    "fr": "La courbe polaire r² = {dados-calculo.k}cos 2θ est une lemniscate. Quelle est la valeur MAXIMALE de r ? (deux décimales)",
+    "en": "The polar curve r² = {dados-calculo.k}cos 2θ is a lemniscate. What is the MAXIMUM value of r? (two decimal places)"
+  },
+  "dados-calculo": {
+    "k": "16",
+    "total": "4.00"
+  }
+}

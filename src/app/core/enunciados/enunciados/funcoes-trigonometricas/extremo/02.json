@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é o número de soluções de sen({dados-calculo.k}x) = 0 no intervalo [0, 2π]?",
+    "fr": "Quel est le nombre de solutions de sin({dados-calculo.k}x) = 0 sur l’intervalle [0, 2π] ?",
+    "en": "How many solutions does sin({dados-calculo.k}x) = 0 have in the interval [0, 2π]?"
+  },
+  "dados-calculo": {
+    "k": "2",
+    "total": "5"
+  }
+}

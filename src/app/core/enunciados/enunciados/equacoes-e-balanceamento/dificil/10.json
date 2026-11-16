@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Balanceada com os menores inteiros, a equação Al + HCl → AlCl₃ + H₂ tem 4 coeficientes. Qual é a soma deles?",
+    "fr": "Équilibrée avec les plus petits entiers, l’équation Al + HCl → AlCl₃ + H₂ a 4 coefficients. Quelle est leur somme ?",
+    "en": "Balanced with the smallest integers, the equation Al + HCl → AlCl₃ + H₂ has 4 coefficients. What is their sum?"
+  },
+  "dados-calculo": {
+    "total": "12"
+  }
+}

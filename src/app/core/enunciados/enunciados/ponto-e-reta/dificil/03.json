@@ -1,0 +1,16 @@
+{
+  "enunciado": {
+    "br": "Os pontos A({dados-calculo.ax}, {dados-calculo.ay}), B({dados-calculo.bx}, {dados-calculo.by}) e C({dados-calculo.cx}, {dados-calculo.cy}) estão alinhados? Responda 1 se sim e 0 se não.",
+    "fr": "Les points A({dados-calculo.ax}, {dados-calculo.ay}), B({dados-calculo.bx}, {dados-calculo.by}) et C({dados-calculo.cx}, {dados-calculo.cy}) sont-ils alignés ? Répondez 1 si oui et 0 si non.",
+    "en": "Are points A({dados-calculo.ax}, {dados-calculo.ay}), B({dados-calculo.bx}, {dados-calculo.by}) and C({dados-calculo.cx}, {dados-calculo.cy}) collinear? Answer 1 if yes and 0 if no."
+  },
+  "dados-calculo": {
+    "ax": "0",
+    "ay": "0",
+    "bx": "2",
+    "by": "4",
+    "cx": "3",
+    "cy": "6",
+    "total": "1"
+  }
+}

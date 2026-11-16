@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Em que valor de x está a assíntota vertical da função f(x) = 1/(x − 3)? (duas casas decimais)",
+    "fr": "En quelle valeur de x se trouve l’asymptote verticale de la fonction f(x) = 1/(x − 3) ? (deux décimales)",
+    "en": "At what value of x is the vertical asymptote of f(x) = 1/(x − 3)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

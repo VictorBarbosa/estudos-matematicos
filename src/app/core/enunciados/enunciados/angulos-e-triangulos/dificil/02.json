@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Num triângulo, os ângulos internos são proporcionais a {dados-calculo.r1}, {dados-calculo.r2} e {dados-calculo.r3}. Quantos graus mede o MAIOR deles?",
+    "fr": "Dans un triangle, les angles intérieurs sont proportionnels à {dados-calculo.r1}, {dados-calculo.r2} et {dados-calculo.r3}. Combien de degrés mesure le PLUS GRAND ?",
+    "en": "In a triangle, the interior angles are in the ratio {dados-calculo.r1} : {dados-calculo.r2} : {dados-calculo.r3}. How many degrees is the LARGEST of them?"
+  },
+  "dados-calculo": {
+    "r1": "2",
+    "r2": "3",
+    "r3": "4",
+    "total": "80"
+  }
+}

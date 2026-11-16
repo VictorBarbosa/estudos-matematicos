@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "g(x) = f(8x). Se o gráfico de f tem um zero em x = 4, em que valor de x o gráfico de g cruza o eixo? (duas casas decimais)",
+    "fr": "g(x) = f(8x). Si le graphique de f a un zéro en x = 4, en quelle valeur de x le graphique de g coupe-t-il l’axe ? (deux décimales)",
+    "en": "g(x) = f(8x). If the graph of f has a zero at x = 4, at what value of x does the graph of g cross the axis? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

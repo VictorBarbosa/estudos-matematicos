@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um capital dobra em 2 períodos. Qual é a taxa por período, em %? (duas casas decimais)",
+    "fr": "Un capital double en 2 périodes. Quel est le taux par période, en % ? (deux décimales)",
+    "en": "A capital doubles in 2 periods. What is the rate per period, in %? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "41.42"
+  }
+}

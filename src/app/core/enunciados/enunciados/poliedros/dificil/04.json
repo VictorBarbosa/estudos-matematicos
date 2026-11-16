@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um poliedro convexo tem {dados-calculo.triangulares} faces triangulares e {dados-calculo.quadradas} faces quadradas, e nenhuma outra. Quantas arestas ele tem?",
+    "fr": "Un polyèdre convexe a {dados-calculo.triangulares} faces triangulaires et {dados-calculo.quadradas} faces quadrilatères, et aucune autre. Combien d’arêtes a-t-il ?",
+    "en": "A convex polyhedron has {dados-calculo.triangulares} triangular faces and {dados-calculo.quadradas} quadrilateral faces, and no others. How many edges does it have?"
+  },
+  "dados-calculo": {
+    "triangulares": "8",
+    "quadradas": "6",
+    "total": "24"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = 20/(x − 4) está definida para todo x real, exceto um. Qual é o valor de f(2)? (duas casas decimais)",
+    "fr": "La fonction f(x) = 20/(x − 4) est définie pour tout x réel, sauf un. Quelle est la valeur de f(2) ? (deux décimales)",
+    "en": "The function f(x) = 20/(x − 4) is defined for every real x except one. What is the value of f(2)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-10.00"
+  }
+}

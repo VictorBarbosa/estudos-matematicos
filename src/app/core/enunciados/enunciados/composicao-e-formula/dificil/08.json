@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A análise de um composto deu 43.39% de sódio e o resto de oxigênio, com massa molar 105.99 g/mol. Qual é a massa de sódio em 1 mol, em gramas? (duas casas decimais)",
+    "fr": "L’analyse d’un composé a donné 43.39% de sodium et le reste d’oxygène, avec une masse molaire de 105.99 g/mol. Quelle est la masse de sodium dans 1 mol, en grammes ? (deux décimales)",
+    "en": "Analysis of a compound gave 43.39% sodium and the rest oxygen, with molar mass 105.99 g/mol. What is the mass of sodium in 1 mol, in grams? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "45.99"
+  }
+}

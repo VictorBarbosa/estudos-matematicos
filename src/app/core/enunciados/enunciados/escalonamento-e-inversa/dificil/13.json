@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Aplicando a operação L2 ← L2 − 4·L1 na matriz [[1, 2], [3, 8]], qual é a nova entrada da linha 2 na coluna 1?",
+    "fr": "En appliquant l’opération L2 ← L2 − 4·L1 à la matrice [[1, 2], [3, 8]], quelle est la nouvelle entrée de la ligne 2 dans la colonne 1 ?",
+    "en": "Applying L2 ← L2 − 4·L1 to the matrix [[1, 2], [3, 8]], what is the new entry in row 2, column 1?"
+  },
+  "dados-calculo": {
+    "total": "-1"
+  }
+}

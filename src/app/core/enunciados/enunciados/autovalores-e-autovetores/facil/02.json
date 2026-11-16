@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o maior autovalor da matriz diagonal [[4, 0], [0, 7]]?",
+    "fr": "Quel est le plus grand autovalor de la matrice diagonale [[4, 0], [0, 7]] ?",
+    "en": "What is the largest eigenvalue of the diagonal matrix [[4, 0], [0, 7]]?"
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

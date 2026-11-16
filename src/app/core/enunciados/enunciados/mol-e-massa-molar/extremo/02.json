@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra de 100 g de CaCO3 contém quantos átomos de oxigênio? (em unidades de 10²³, duas casas decimais)",
+    "fr": "Un échantillon de 100 g de CaCO3 contient combien d’atomes d’oxygène ? (en unités de 10²³, deux décimales)",
+    "en": "A sample of 100 g of CaCO3 contains how many oxygen atoms? (in units of 10²³, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "18.04"
+  }
+}

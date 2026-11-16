@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação sen x = {dados-calculo.valor} em [0°, 360°) e informe a MENOR solução, em graus.",
+    "fr": "Résolvez l’équation sin x = {dados-calculo.valor} sur [0°, 360°) et indiquez la PLUS PETITE solution, en degrés.",
+    "en": "Solve sin x = {dados-calculo.valor} on [0°, 360°) and give the SMALLEST solution, in degrees."
+  },
+  "dados-calculo": {
+    "valor": "0.5",
+    "total": "30"
+  }
+}

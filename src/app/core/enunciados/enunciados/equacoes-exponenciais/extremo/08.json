@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva 3^(2x) − 12·3^x + 27 = 0 e informe a MAIOR solução para x. (três casas decimais)",
+    "fr": "Résolvez 3^(2x) − 12·3^x + 27 = 0 et indiquez la PLUS GRANDE solution pour x. (trois décimales)",
+    "en": "Solve 3^(2x) − 12·3^x + 27 = 0 and give the LARGEST solution for x. (three decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

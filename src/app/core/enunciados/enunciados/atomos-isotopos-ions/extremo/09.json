@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um elemento tem dois isótopos: 75% de massa 35 u e o resto de massa 37 u. Qual é a massa atômica média, em u? (duas casas decimais)",
+    "fr": "Un élément a deux isotopes : 75% de masse 35 u et le reste de masse 37 u. Quelle est la masse atomique moyenne, en u ? (deux décimales)",
+    "en": "An element has two isotopes: 75% of mass 35 u and the rest of mass 37 u. What is the average atomic mass, in u? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "35.50"
+  }
+}

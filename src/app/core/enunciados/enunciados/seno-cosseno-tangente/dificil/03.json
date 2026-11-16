@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Se sen θ = {dados-calculo.seno} e θ está no 2º quadrante, qual é o valor de cos θ? (duas casas decimais)",
+    "fr": "Si sin θ = {dados-calculo.seno} et que θ est dans le 2e quadrant, quelle est la valeur de cos θ ? (deux décimales)",
+    "en": "If sin θ = {dados-calculo.seno} and θ is in the 2nd quadrant, what is cos θ? (two decimal places)"
+  },
+  "dados-calculo": {
+    "seno": "0.6",
+    "total": "-0.80"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um investimento rende 20% ao ano. Começando com R$ 500,00, qual é o montante após 2 anos? (duas casas decimais)",
+    "fr": "Un placement rapporte 20% par an. En partant de 500,00 R$, quel est le montant après 2 ans ? (deux décimales)",
+    "en": "An investment yields 20% per year. Starting with R$ 500,00, what is the amount after 2 years? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "720.00"
+  }
+}

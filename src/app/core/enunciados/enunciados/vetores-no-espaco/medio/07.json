@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a componente z do produto vetorial a × b, com a = (6, 1, 2) e b = (2, 3, 9).",
+    "fr": "Calculez la composante z du produit vectoriel a × b, avec a = (6, 1, 2) et b = (2, 3, 9).",
+    "en": "Calculate the z-component of the cross product a × b, with a = (6, 1, 2) and b = (2, 3, 9)."
+  },
+  "dados-calculo": {
+    "total": "16"
+  }
+}

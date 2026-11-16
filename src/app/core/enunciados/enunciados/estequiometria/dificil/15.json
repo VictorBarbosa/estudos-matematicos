@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação C + O₂ → CO₂, partindo de 24 g de C, qual é o número de mols de CO₂ formado? (duas casas decimais)",
+    "fr": "Dans la réaction C + O₂ → CO₂, à partir de 24 g de C, quel est le nombre de moles de CO₂ formé ? (deux décimales)",
+    "en": "In the reaction C + O₂ → CO₂, starting from 24 g of C, what is the number of moles of CO₂ formed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

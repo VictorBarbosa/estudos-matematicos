@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A reação é NaOH + HCl → NaCl + H₂O. Que massa de NaCl se forma a partir de 40 g de NaOH? (duas casas decimais)",
+    "fr": "La réaction est NaOH + HCl → NaCl + H₂O. Quelle masse de NaCl se forme à partir de 40 g de NaOH ? (deux décimales)",
+    "en": "The reaction is NaOH + HCl → NaCl + H₂O. What mass of NaCl forms from 40 g of NaOH? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "58.44"
+  }
+}

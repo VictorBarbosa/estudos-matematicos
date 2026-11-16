@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um átomo de cloro tem 17 prótons e 18 nêutrons. Qual é o seu número de massa?",
+    "fr": "Un atome de chlore a 17 protons et 18 neutrons. Quel est son nombre de masse ?",
+    "en": "A chlorine atom has 17 protons and 18 neutrons. What is its mass number?"
+  },
+  "dados-calculo": {
+    "total": "35"
+  }
+}

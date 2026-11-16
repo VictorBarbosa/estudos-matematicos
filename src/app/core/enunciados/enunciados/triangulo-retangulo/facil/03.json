@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um poste de {dados-calculo.altura} m projeta uma sombra quando o sol está a {dados-calculo.angulo}° acima do horizonte. Qual é o comprimento da sombra, em metros? (duas casas decimais)",
+    "fr": "Un poteau de {dados-calculo.altura} m projette une ombre lorsque le soleil est à {dados-calculo.angulo}° au-dessus de l’horizon. Quelle est la longueur de l’ombre, en mètres ? (deux décimales)",
+    "en": "A {dados-calculo.altura} m pole casts a shadow when the sun is {dados-calculo.angulo}° above the horizon. How long is the shadow, in metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "altura": "6",
+    "angulo": "40",
+    "total": "7.15"
+  }
+}

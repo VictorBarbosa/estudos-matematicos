@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 10^(x+2) = 1000 e informe x.",
+    "fr": "Résolvez l’équation 10^(x+2) = 1000 et indiquez x.",
+    "en": "Solve 10^(x+2) = 1000 and give x."
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

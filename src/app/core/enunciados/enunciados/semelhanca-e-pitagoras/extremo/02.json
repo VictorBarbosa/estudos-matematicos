@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um retângulo tem diagonal de {dados-calculo.d} cm e um dos lados mede {dados-calculo.a} cm. Quantos centímetros tem o perímetro dele?",
+    "fr": "Un rectangle a une diagonale de {dados-calculo.d} cm et l’un de ses côtés mesure {dados-calculo.a} cm. Combien de centimètres fait son périmètre ?",
+    "en": "A rectangle has a diagonal of {dados-calculo.d} cm and one of its sides measures {dados-calculo.a} cm. How many centimetres is its perimeter?"
+  },
+  "dados-calculo": {
+    "d": "25",
+    "a": "7",
+    "total": "62"
+  }
+}

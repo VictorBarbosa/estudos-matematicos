@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o módulo do vetor diferença entre (0, 0) e (6, 8)? (duas casas decimais)",
+    "fr": "Quel est le module du vecteur différence entre (0, 0) et (6, 8) ? (deux décimales)",
+    "en": "What is the magnitude of the difference vector between (0, 0) and (6, 8)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

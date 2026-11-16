@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um cubo de concreto tem aresta de {dados-calculo.aresta} cm. Quantos centímetros cúbicos de concreto ele leva?",
+    "fr": "Un cube de béton a une arête de {dados-calculo.aresta} cm. Combien de centimètres cubes de béton faut-il ?",
+    "en": "A concrete cube has an edge of {dados-calculo.aresta} cm. How many cubic centimetres of concrete does it need?"
+  },
+  "dados-calculo": {
+    "aresta": "7",
+    "total": "343"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "O polinômio P(x) = x³ + ax + 6 tem {dados-calculo.raiz} como raiz. Qual é o valor de a?",
+    "fr": "Le polynôme P(x) = x³ + ax + 6 a {dados-calculo.raiz} pour racine. Quelle est la valeur de a ?",
+    "en": "The polynomial P(x) = x³ + ax + 6 has {dados-calculo.raiz} as a root. What is the value of a?"
+  },
+  "dados-calculo": {
+    "raiz": "2",
+    "total": "-7"
+  }
+}

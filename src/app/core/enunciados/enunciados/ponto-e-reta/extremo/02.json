@@ -1,0 +1,16 @@
+{
+  "enunciado": {
+    "br": "Qual é a área do triângulo de vértices A({dados-calculo.ax}, {dados-calculo.ay}), B({dados-calculo.bx}, {dados-calculo.by}) e C({dados-calculo.cx}, {dados-calculo.cy})? (duas casas decimais)",
+    "fr": "Quelle est l’aire du triangle de sommets A({dados-calculo.ax}, {dados-calculo.ay}), B({dados-calculo.bx}, {dados-calculo.by}) et C({dados-calculo.cx}, {dados-calculo.cy}) ? (deux décimales)",
+    "en": "What is the area of the triangle with vertices A({dados-calculo.ax}, {dados-calculo.ay}), B({dados-calculo.bx}, {dados-calculo.by}) and C({dados-calculo.cx}, {dados-calculo.cy})? (two decimal places)"
+  },
+  "dados-calculo": {
+    "ax": "0",
+    "ay": "0",
+    "bx": "4",
+    "by": "0",
+    "cx": "0",
+    "cy": "3",
+    "total": "6.00"
+  }
+}

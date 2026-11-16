@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um rotor gira a 30 rotações por minuto. Qual é a velocidade angular, em rad/s? (duas casas decimais)",
+    "fr": "Un rotor tourne à 30 tours par minute. Quelle est la vitesse angulaire, en rad/s ? (deux décimales)",
+    "en": "A rotor spins at 30 revolutions per minute. What is the angular velocity, in rad/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.14"
+  }
+}

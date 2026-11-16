@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a ordenada (coordenada y) do centro da circunferência de equação (x − {dados-calculo.cx})² + (y + {dados-calculo.cyabs})² = {dados-calculo.r2}?",
+    "fr": "Quelle est l’ordonnée (coordonnée y) du centre du cercle d’équation (x − {dados-calculo.cx})² + (y + {dados-calculo.cyabs})² = {dados-calculo.r2} ?",
+    "en": "What is the y-coordinate of the centre of the circle (x − {dados-calculo.cx})² + (y + {dados-calculo.cyabs})² = {dados-calculo.r2}?"
+  },
+  "dados-calculo": {
+    "cx": "3",
+    "cyabs": "4",
+    "r2": "25",
+    "total": "-4"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um estacionamento cobra 8 reais pela primeira hora e 5 reais por hora adicional (proporcional). Quanto se paga por 4 horas e 15 minutos? (duas casas decimais)",
+    "fr": "Un parking facture 8 réaux la première heure et 5 réaux par heure supplémentaire (au prorata). Combien paie-t-on pour 4 heures et 15 minutes ? (deux décimales)",
+    "en": "A car park charges 8 reais for the first hour and 5 reais per additional hour (pro rata). How much do you pay for 4 hours and 15 minutes? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "24.25"
+  }
+}

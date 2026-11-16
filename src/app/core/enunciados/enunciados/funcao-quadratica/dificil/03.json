@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quais são as raízes de x² − 7x + 12 = 0? Informe a MAIOR delas.",
+    "fr": "Quelles sont les racines de x² − 7x + 12 = 0 ? Indiquez la PLUS GRANDE.",
+    "en": "What are the roots of x² − 7x + 12 = 0? Give the LARGER one."
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

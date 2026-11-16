@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é o período da função f(x) = {dados-calculo.a} · sen({dados-calculo.k}x + {dados-calculo.fase}), em radianos? (duas casas decimais)",
+    "fr": "Quelle est la période de la fonction f(x) = {dados-calculo.a} · sin({dados-calculo.k}x + {dados-calculo.fase}), en radians ? (deux décimales)",
+    "en": "What is the period of f(x) = {dados-calculo.a} · sin({dados-calculo.k}x + {dados-calculo.fase}), in radians? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "2",
+    "k": "3",
+    "fase": "1",
+    "total": "2.09"
+  }
+}

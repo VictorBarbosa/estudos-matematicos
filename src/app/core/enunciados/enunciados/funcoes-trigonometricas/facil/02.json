@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = {dados-calculo.amplitude} · sen(x) tem qual amplitude?",
+    "fr": "La fonction f(x) = {dados-calculo.amplitude} · sin(x) a quelle amplitude ?",
+    "en": "The function f(x) = {dados-calculo.amplitude} · sin(x) has what amplitude?"
+  },
+  "dados-calculo": {
+    "amplitude": "4",
+    "total": "4"
+  }
+}

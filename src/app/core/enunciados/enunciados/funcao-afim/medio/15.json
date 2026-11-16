@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para f(x) = 2x + 5, qual é o valor de x tal que f(x) = 1?",
+    "fr": "Pour f(x) = 2x + 5, quelle est la valeur de x telle que f(x) = 1 ?",
+    "en": "For f(x) = 2x + 5, what is the value of x such that f(x) = 1?"
+  },
+  "dados-calculo": {
+    "total": "-2"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um investimento rende 8% ao ano. Começando com R$ 1500,00, qual é o montante após 1 anos? (duas casas decimais)",
+    "fr": "Un placement rapporte 8% par an. En partant de 1500,00 R$, quel est le montant après 1 ans ? (deux décimales)",
+    "en": "An investment yields 8% per year. Starting with R$ 1500,00, what is the amount after 1 years? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1620.00"
+  }
+}

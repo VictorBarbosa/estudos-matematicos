@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Ana tem o triplo da idade de Bia e, juntas, as duas somam {dados-calculo.soma} anos. Quantos anos Bia tem hoje?",
+    "fr": "Ana a le triple de l’âge de Bia et, ensemble, elles totalisent {dados-calculo.soma} ans. Quel âge Bia a-t-elle aujourd’hui ?",
+    "en": "Ana is three times Bia’s age, and together they add up to {dados-calculo.soma} years. How old is Bia today?"
+  },
+  "dados-calculo": {
+    "soma": "48",
+    "total": "12"
+  }
+}

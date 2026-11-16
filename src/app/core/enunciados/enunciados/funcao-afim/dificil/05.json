@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma corrida custa R$ 10,00 de bandeirada mais R$ 5,00 por quilômetro. Quantos quilômetros foram rodados se a corrida custou R$ 60,00?",
+    "fr": "Une course coûte 10,00 R$ de prise en charge plus 5,00 R$ par kilomètre. Combien de kilomètres ont été parcourus si la course a coûté 60,00 R$ ?",
+    "en": "A ride costs R$ 10,00 as a base fare plus R$ 5,00 per kilometre. How many kilometres were travelled if the ride cost R$ 60,00?"
+  },
+  "dados-calculo": {
+    "total": "10"
+  }
+}

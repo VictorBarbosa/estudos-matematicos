@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Em qual quadrante está o ângulo de {dados-calculo.graus}°? Responda com 1, 2, 3 ou 4.",
+    "fr": "Dans quel quadrant se trouve l’angle de {dados-calculo.graus}° ? Répondez par 1, 2, 3 ou 4.",
+    "en": "Which quadrant is the angle of {dados-calculo.graus}° in? Answer with 1, 2, 3 or 4."
+  },
+  "dados-calculo": {
+    "graus": "150",
+    "total": "2"
+  }
+}

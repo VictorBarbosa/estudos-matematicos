@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule (7 − 2)² ÷ 5 + 3 × (8 − 2³) − 1.",
+    "fr": "Calculez (7 − 2)² ÷ 5 + 3 × (8 − 2³) − 1.",
+    "en": "Calculate (7 − 2)² ÷ 5 + 3 × (8 − 2³) − 1."
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

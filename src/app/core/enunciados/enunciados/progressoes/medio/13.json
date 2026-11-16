@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a soma dos 7 primeiros números ímpares positivos?",
+    "fr": "Quelle est la somme des 7 premiers nombres impairs positifs ?",
+    "en": "What is the sum of the first 7 positive odd numbers?"
+  },
+  "dados-calculo": {
+    "total": "49"
+  }
+}

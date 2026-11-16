@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação CH₄ + 2O₂ → CO₂ + 2H₂O, cada mol de CH₄ consome 2 mol de O₂. Partindo de 3 mol de CH₄, quantos mols de O₂ são necessários? (duas casas decimais)",
+    "fr": "Dans la réaction CH₄ + 2O₂ → CO₂ + 2H₂O, chaque mole de CH₄ consomme 2 mol de O₂. En partant de 3 mol de CH₄, combien de moles de O₂ faut-il ? (deux décimales)",
+    "en": "In the reaction CH₄ + 2O₂ → CO₂ + 2H₂O, each mole of CH₄ consumes 2 mol of O₂. Starting from 3 mol of CH₄, how many moles of O₂ are needed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

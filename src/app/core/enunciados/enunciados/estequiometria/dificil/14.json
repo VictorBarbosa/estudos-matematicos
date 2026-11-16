@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação Zn + 2HCl → ZnCl₂ + H₂, partindo de 130.8 g de Zn, qual é o número de mols de H₂ formado? (duas casas decimais)",
+    "fr": "Dans la réaction Zn + 2HCl → ZnCl₂ + H₂, à partir de 130.8 g de Zn, quel est le nombre de moles de H₂ formé ? (deux décimales)",
+    "en": "In the reaction Zn + 2HCl → ZnCl₂ + H₂, starting from 130.8 g of Zn, what is the number of moles of H₂ formed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

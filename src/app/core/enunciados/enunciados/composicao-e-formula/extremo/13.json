@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto tem fórmula mínima CH2O e massa molar 180.16 g/mol. Qual é o número de unidades da fórmula mínima por molécula?",
+    "fr": "Un composé a pour formule minimale CH2O et une masse molaire de 180.16 g/mol. Quel est le nombre d’unités de la formule minimale par molécule ?",
+    "en": "A compound has empirical formula CH2O and molar mass 180.16 g/mol. How many empirical units are there per molecule?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

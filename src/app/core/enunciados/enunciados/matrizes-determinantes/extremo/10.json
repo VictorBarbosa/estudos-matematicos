@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se o determinante de A é -1 e o de B é 5, qual é o determinante do produto A·B?",
+    "fr": "Si le déterminant de A est -1 et celui de B est 5, quel est le déterminant du produit A·B ?",
+    "en": "If the determinant of A is -1 and that of B is 5, what is the determinant of the product A·B?"
+  },
+  "dados-calculo": {
+    "total": "-5"
+  }
+}

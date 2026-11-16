@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Reduza o ângulo de {dados-calculo.graus}° ao primeiro quadrante e informe o ângulo equivalente, em graus.",
+    "fr": "Réduisez l’angle de {dados-calculo.graus}° au premier quadrant et indiquez l’angle équivalent, en degrés.",
+    "en": "Reduce the angle of {dados-calculo.graus}° to the first quadrant and give the equivalent angle, in degrees."
+  },
+  "dados-calculo": {
+    "graus": "200",
+    "total": "20"
+  }
+}

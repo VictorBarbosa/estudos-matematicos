@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o único valor que NÃO pertence ao domínio de f(x) = (x + -1)/(x − -2)?",
+    "fr": "Quelle est la seule valeur qui n’appartient PAS au domaine de f(x) = (x + -1)/(x − -2) ?",
+    "en": "What is the only value that does NOT belong to the domain of f(x) = (x + -1)/(x − -2)?"
+  },
+  "dados-calculo": {
+    "total": "-2"
+  }
+}

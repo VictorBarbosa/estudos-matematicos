@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa PA de razão 10 e primeiro termo 10, qual é o menor n para o qual o termo supera 100?",
+    "fr": "Dans une PA de raison 10 et de premier terme 10, quel est le plus petit n pour lequel le terme dépasse 100 ?",
+    "en": "In an AP with ratio 10 and first term 10, what is the smallest n for which the term exceeds 100?"
+  },
+  "dados-calculo": {
+    "total": "11"
+  }
+}

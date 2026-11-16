@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com f(x) = 4x e g(x) = x + 2, qual é o valor de f(g(1))?",
+    "fr": "Avec f(x) = 4x et g(x) = x + 2, quelle est la valeur de f(g(1)) ?",
+    "en": "With f(x) = 4x and g(x) = x + 2, what is the value of f(g(1))?"
+  },
+  "dados-calculo": {
+    "total": "12"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto de massa molar 58.44 g/mol contém 1 átomos de cloro por molécula. Quantas gramas de cloro há em 1 mol? (duas casas decimais)",
+    "fr": "Un composé de masse molaire 58.44 g/mol contient 1 atomes de chlore par molécule. Combien de grammes de chlore y a-t-il dans 1 mol ? (deux décimales)",
+    "en": "A compound of molar mass 58.44 g/mol contains 1 atoms of chlorine per molecule. How many grams of chlorine are in 1 mol? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "35.45"
+  }
+}

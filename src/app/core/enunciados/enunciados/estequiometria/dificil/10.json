@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação 2H₂O → 2H₂ + O₂, partindo de 36 g de H₂O, qual é o número de mols de O₂ formado? (duas casas decimais)",
+    "fr": "Dans la réaction 2H₂O → 2H₂ + O₂, à partir de 36 g de H₂O, quel est le nombre de moles de O₂ formé ? (deux décimales)",
+    "en": "In the reaction 2H₂O → 2H₂ + O₂, starting from 36 g of H₂O, what is the number of moles of O₂ formed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa molar do água, em g/mol? (duas casas decimais)",
+    "fr": "Quelle est la masse molaire du eau, en g/mol ? (deux décimales)",
+    "en": "What is the molar mass of water, in g/mol? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "18.02"
+  }
+}

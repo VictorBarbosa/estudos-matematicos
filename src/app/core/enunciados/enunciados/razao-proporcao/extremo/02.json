@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma torneira enche um tanque em {dados-calculo.h1} horas e outra em {dados-calculo.h2} horas. Abertas juntas, em quantas horas enchem o tanque? (duas casas decimais)",
+    "fr": "Un robinet remplit un réservoir en {dados-calculo.h1} heures et un autre en {dados-calculo.h2} heures. Ouverts ensemble, en combien d’heures remplissent-ils le réservoir ? (deux décimales)",
+    "en": "One tap fills a tank in {dados-calculo.h1} hours and another in {dados-calculo.h2} hours. Opened together, in how many hours do they fill it? (two decimal places)"
+  },
+  "dados-calculo": {
+    "h1": "6",
+    "h2": "4",
+    "total": "2.40"
+  }
+}

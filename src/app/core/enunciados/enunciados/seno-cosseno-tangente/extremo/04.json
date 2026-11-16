@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma sombra tem comprimento igual a {dados-calculo.vezes} vezes a altura do objeto que a projeta. Qual é o ângulo do sol com o horizonte, em graus? (duas casas decimais)",
+    "fr": "Une ombre a une longueur égale à {dados-calculo.vezes} fois la hauteur de l’objet qui la projette. Quel est l’angle du soleil avec l’horizon, en degrés ? (deux décimales)",
+    "en": "A shadow is {dados-calculo.vezes} times as long as the height of the object casting it. What is the sun’s angle above the horizon, in degrees? (two decimal places)"
+  },
+  "dados-calculo": {
+    "vezes": "3",
+    "total": "18.43"
+  }
+}

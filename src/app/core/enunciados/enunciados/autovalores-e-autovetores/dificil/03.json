@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A matriz [[9, 1], [0, 2]] é triangular. Qual é o maior autovalor dela?",
+    "fr": "La matrice [[9, 1], [0, 2]] est triangulaire. Quel est son plus grand autovalor ?",
+    "en": "The matrix [[9, 1], [0, 2]] is triangular. What is its largest eigenvalue?"
+  },
+  "dados-calculo": {
+    "total": "9"
+  }
+}

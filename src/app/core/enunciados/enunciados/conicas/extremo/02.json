@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma elipse tem excentricidade {dados-calculo.e} e semieixo maior {dados-calculo.a}. Qual é a distância entre os dois focos? (duas casas decimais)",
+    "fr": "Une ellipse a pour excentricité {dados-calculo.e} et demi-grand axe {dados-calculo.a}. Quelle est la distance entre les deux foyers ? (deux décimales)",
+    "en": "An ellipse has eccentricity {dados-calculo.e} and semi-major axis {dados-calculo.a}. What is the distance between the two foci? (two decimal places)"
+  },
+  "dados-calculo": {
+    "e": "0.5",
+    "a": "10",
+    "total": "10.00"
+  }
+}

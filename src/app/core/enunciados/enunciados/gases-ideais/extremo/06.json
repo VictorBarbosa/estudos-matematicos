@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que massa de metano (massa molar 16.04 g/mol) há em 10 L desse gás a 2 atm e 27 °C? (em gramas, duas casas decimais)",
+    "fr": "Quelle masse de méthane (masse molaire 16.04 g/mol) y a-t-il dans 10 L de ce gaz à 2 atm et 27 °C ? (en grammes, deux décimales)",
+    "en": "What mass of methane (molar mass 16.04 g/mol) is there in 10 L of this gas at 2 atm and 27 °C? (in grams, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "13.02"
+  }
+}

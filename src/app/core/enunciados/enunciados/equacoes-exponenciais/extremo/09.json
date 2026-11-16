@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma população cresce como P(t) = 100·e^(0.1t), com t em horas. Em quantas horas ela chega a 200? (duas casas decimais)",
+    "fr": "Une population croît comme P(t) = 100·e^(0.1t), avec t en heures. En combien d’heures atteint-elle 200 ? (deux décimales)",
+    "en": "A population grows as P(t) = 100·e^(0.1t), with t in hours. In how many hours does it reach 200? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.93"
+  }
+}

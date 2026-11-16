@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor da expressão 4 × (10 − 3) − 2³ + 12 ÷ 4.",
+    "fr": "Calculez la valeur de l’expression 4 × (10 − 3) − 2³ + 12 ÷ 4.",
+    "en": "Calculate the value of 4 × (10 − 3) − 2³ + 12 ÷ 4."
+  },
+  "dados-calculo": {
+    "total": "23"
+  }
+}

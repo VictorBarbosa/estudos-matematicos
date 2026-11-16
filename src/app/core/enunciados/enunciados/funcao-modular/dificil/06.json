@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva |x + 3| = 1 e informe a MAIOR solução.",
+    "fr": "Résolvez |x + 3| = 1 et indiquez la PLUS GRANDE solution.",
+    "en": "Solve |x + 3| = 1 and give the LARGEST solution."
+  },
+  "dados-calculo": {
+    "total": "-2"
+  }
+}

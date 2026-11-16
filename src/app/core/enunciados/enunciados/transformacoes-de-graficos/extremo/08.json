@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "g(x) = −f(x) + 3. Se f(2) = 9, qual é g(2)?",
+    "fr": "g(x) = −f(x) + 3. Si f(2) = 9, quelle est g(2) ?",
+    "en": "g(x) = −f(x) + 3. If f(2) = 9, what is g(2)?"
+  },
+  "dados-calculo": {
+    "total": "-6"
+  }
+}

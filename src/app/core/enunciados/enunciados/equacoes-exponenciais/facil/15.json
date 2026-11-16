@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 2^(x+4) = 8 e informe x.",
+    "fr": "Résolvez l’équation 2^(x+4) = 8 et indiquez x.",
+    "en": "Solve 2^(x+4) = 8 and give x."
+  },
+  "dados-calculo": {
+    "total": "-1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma substância tem meia-vida de 1 anos. Começando com 50 g, quantos gramas restam após 4 anos? (duas casas decimais)",
+    "fr": "Une substance a une demi-vie de 1 ans. En partant de 50 g, combien de grammes restent après 4 ans ? (deux décimales)",
+    "en": "A substance has a half-life of 1 years. Starting with 50 g, how many grams remain after 4 years? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.12"
+  }
+}

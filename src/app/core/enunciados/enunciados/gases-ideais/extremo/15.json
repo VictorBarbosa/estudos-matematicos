@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma mistura contém 1 mol de gás num volume de 22.4 L a 0 °C. Qual é a pressão PARCIAL de um gás que corresponde a 1 da quantidade total? (em atm, duas casas decimais)",
+    "fr": "Un mélange contient 1 mol de gaz dans un volume de 22.4 L à 0 °C. Quelle est la pression PARTIELLE d’un gaz qui correspond à 1 de la quantité totale ? (en atm, deux décimales)",
+    "en": "A mixture contains 1 mol of gas in a volume of 22.4 L at 0 °C. What is the PARTIAL pressure of a gas that accounts for 1 of the total amount? (in atm, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Um terreno retangular de {dados-calculo.B} m por {dados-calculo.H} m tem um recorte retangular de {dados-calculo.b} m por {dados-calculo.h} m ocupado pela casa. Quantos metros quadrados restam livres?",
+    "fr": "Un terrain rectangulaire de {dados-calculo.B} m sur {dados-calculo.H} m comporte un découpage rectangulaire de {dados-calculo.b} m sur {dados-calculo.h} m occupé par la maison. Combien de mètres carrés restent libres ?",
+    "en": "A rectangular plot of {dados-calculo.B} m by {dados-calculo.H} m has a rectangular {dados-calculo.b} m by {dados-calculo.h} m cut-out taken by the house. How many square metres are left free?"
+  },
+  "dados-calculo": {
+    "B": "30",
+    "H": "20",
+    "b": "8",
+    "h": "5",
+    "total": "560"
+  }
+}

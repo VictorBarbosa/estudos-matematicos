@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um capital de R$ 10000,00 é aplicado a 1% ao período, por 3 períodos, a juros compostos. Qual é o montante? (duas casas decimais)",
+    "fr": "Un capital de 10000,00 R$ est placé à 1% par période, pendant 3 périodes, à intérêts composés. Quel est le montant ? (deux décimales)",
+    "en": "A capital of R$ 10000,00 is invested at 1% per period, for 3 periods, at compound interest. What is the amount? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10303.01"
+  }
+}

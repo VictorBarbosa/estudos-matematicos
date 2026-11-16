@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 5, f(x) = 2x + 5; se x ≥ 5, f(x) = 3x. Qual valor da constante c torna a função contínua em x = 5? (duas casas decimais)",
+    "fr": "Si x < 5, f(x) = 2x + 5 ; si x ≥ 5, f(x) = 3x. Quelle valeur de la constante c rend la fonction continue en x = 5 ? (deux décimales)",
+    "en": "If x < 5, f(x) = 2x + 5; if x ≥ 5, f(x) = 3x. What value of the constant c makes the function continuous at x = 5? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

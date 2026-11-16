@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma maquete é construída na escala 1:{dados-calculo.k}. O reservatório do projeto real tem {dados-calculo.volume} m³. Quantos metros cúbicos tem o reservatório da maquete? (duas casas decimais)",
+    "fr": "Une maquette est construite à l’échelle 1:{dados-calculo.k}. Le réservoir du projet réel a {dados-calculo.volume} m³. Combien de mètres cubes a le réservoir de la maquette ? (deux décimales)",
+    "en": "A scale model is built at 1:{dados-calculo.k}. The tank in the real project holds {dados-calculo.volume} m³. How many cubic metres does the tank in the model hold? (two decimal places)"
+  },
+  "dados-calculo": {
+    "k": "4",
+    "volume": "320",
+    "total": "5.00"
+  }
+}

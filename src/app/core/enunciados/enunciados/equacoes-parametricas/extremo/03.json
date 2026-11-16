@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um móvel segue x(t) = {dados-calculo.vx}t e y(t) = {dados-calculo.vy}t². Qual é o módulo da velocidade no instante t = {dados-calculo.t}? (duas casas decimais)",
+    "fr": "Un mobile suit x(t) = {dados-calculo.vx}t et y(t) = {dados-calculo.vy}t². Quel est le module de la vitesse à l’instant t = {dados-calculo.t} ? (deux décimales)",
+    "en": "A body follows x(t) = {dados-calculo.vx}t and y(t) = {dados-calculo.vy}t². What is the magnitude of the velocity at time t = {dados-calculo.t}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "vx": "3",
+    "vy": "1",
+    "t": "2",
+    "total": "5.00"
+  }
+}

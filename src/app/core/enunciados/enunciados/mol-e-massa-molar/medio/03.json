@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa molar do nitrato de sódio? A fórmula é NaNO3. (duas casas decimais)",
+    "fr": "Quelle est la masse molaire du nitrate de sodium ? La formule est NaNO3. (deux décimales)",
+    "en": "What is the molar mass of sodium nitrate? The formula is NaNO3. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "84.99"
+  }
+}

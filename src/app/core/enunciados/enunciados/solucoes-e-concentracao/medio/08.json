@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma solução tem 0.1 mol/L de glicose. Quantos mililitros dela contêm 0.05 mol do soluto? (duas casas decimais)",
+    "fr": "Une solution contient 0.1 mol/L de glucose. Combien de millilitres en contiennent 0.05 mol du soluté ? (deux décimales)",
+    "en": "A solution contains 0.1 mol/L of glucose. How many millilitres of it contain 0.05 mol of solute? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "500.00"
+  }
+}

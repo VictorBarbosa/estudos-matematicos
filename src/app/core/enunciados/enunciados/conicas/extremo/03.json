@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma hipérbole equilátera tem semieixo real {dados-calculo.a}. Qual é a excentricidade dela? (duas casas decimais)",
+    "fr": "Une hyperbole équilatère a pour demi-axe réel {dados-calculo.a}. Quelle est son excentricité ? (deux décimales)",
+    "en": "An equilateral hyperbola has real semi-axis {dados-calculo.a}. What is its eccentricity? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "4",
+    "total": "1.41"
+  }
+}

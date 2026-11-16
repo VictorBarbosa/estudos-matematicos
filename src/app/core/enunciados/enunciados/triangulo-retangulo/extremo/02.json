@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Dois observadores estão a {dados-calculo.distancia} m um do outro, na mesma reta de um balão. Os ângulos de elevação medidos são de {dados-calculo.a1}° e {dados-calculo.a2}°. Qual é a altura do balão, em metros? (duas casas decimais)",
+    "fr": "Deux observateurs sont à {dados-calculo.distancia} m l’un de l’autre, sur la même droite d’un ballon. Les angles d’élévation mesurés sont de {dados-calculo.a1}° et {dados-calculo.a2}°. Quelle est la hauteur du ballon, en mètres ? (deux décimales)",
+    "en": "Two observers are {dados-calculo.distancia} m apart on the same line from a balloon. The measured elevation angles are {dados-calculo.a1}° and {dados-calculo.a2}°. How high is the balloon, in metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "distancia": "100",
+    "a1": "30",
+    "a2": "45",
+    "total": "136.60"
+  }
+}

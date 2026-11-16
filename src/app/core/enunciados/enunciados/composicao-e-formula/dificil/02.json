@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A análise de um composto deu 40% de cálcio e o resto de oxigênio, com massa molar 100.09 g/mol. Qual é a massa de cálcio em 1 mol, em gramas? (duas casas decimais)",
+    "fr": "L’analyse d’un composé a donné 40% de calcium et le reste d’oxygène, avec une masse molaire de 100.09 g/mol. Quelle est la masse de calcium dans 1 mol, en grammes ? (deux décimales)",
+    "en": "Analysis of a compound gave 40% calcium and the rest oxygen, with molar mass 100.09 g/mol. What is the mass of calcium in 1 mol, in grams? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "40.04"
+  }
+}

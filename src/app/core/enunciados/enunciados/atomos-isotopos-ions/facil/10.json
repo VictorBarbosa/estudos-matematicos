@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um átomo neutro tem 8 prótons. Quantos elétrons ele possui?",
+    "fr": "Un atome neutre a 8 protons. Combien d’électrons possède-t-il ?",
+    "en": "A neutral atom has 8 protons. How many electrons does it have?"
+  },
+  "dados-calculo": {
+    "total": "8"
+  }
+}

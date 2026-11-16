@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = {dados-calculo.a} · sen({dados-calculo.k}x) + {dados-calculo.c} atinge que valor em x = 0?",
+    "fr": "La fonction f(x) = {dados-calculo.a} · sin({dados-calculo.k}x) + {dados-calculo.c} atteint quelle valeur en x = 0 ?",
+    "en": "The function f(x) = {dados-calculo.a} · sin({dados-calculo.k}x) + {dados-calculo.c} reaches what value at x = 0?"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "k": "2",
+    "c": "3",
+    "total": "3"
+  }
+}

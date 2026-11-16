@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma pirâmide tem base com {dados-calculo.lados} lados. Quantas faces ela tem ao todo?",
+    "fr": "Une pyramide a une base de {dados-calculo.lados} côtés. Combien de faces a-t-elle au total ?",
+    "en": "A pyramid has a base with {dados-calculo.lados} sides. How many faces does it have in total?"
+  },
+  "dados-calculo": {
+    "lados": "10",
+    "total": "11"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um arco de circunferência tem raio de {dados-calculo.raio} cm e ângulo central de {dados-calculo.angulo}°. Quantos centímetros mede esse arco? (duas casas decimais)",
+    "fr": "Un arc de cercle a un rayon de {dados-calculo.raio} cm et un angle au centre de {dados-calculo.angulo}°. Combien de centimètres mesure cet arc ? (deux décimales)",
+    "en": "An arc of a circle has radius {dados-calculo.raio} cm and central angle {dados-calculo.angulo}°. How many centimetres long is that arc? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "9",
+    "angulo": "80",
+    "total": "12.57"
+  }
+}

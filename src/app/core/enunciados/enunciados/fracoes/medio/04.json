@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Multiplique as frações {dados-calculo.a} e {dados-calculo.b} e dê o resultado irredutível.",
+    "fr": "Multipliez les fractions {dados-calculo.a} et {dados-calculo.b} et donnez le résultat irréductible.",
+    "en": "Multiply the fractions {dados-calculo.a} and {dados-calculo.b} and give the result in lowest terms."
+  },
+  "dados-calculo": {
+    "a": "2/5",
+    "b": "15/8",
+    "total": "3/4"
+  }
+}

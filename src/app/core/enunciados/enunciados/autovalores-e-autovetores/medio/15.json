@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A matriz [[1, 0], [0, -1]] tem autovalores iguais a 1 e -1. Qual é o determinante dela?",
+    "fr": "La matrice [[1, 0], [0, -1]] a pour autovalors 1 et -1. Quel est son déterminant ?",
+    "en": "The matrix [[1, 0], [0, -1]] has eigenvalues 1 and -1. What is its determinant?"
+  },
+  "dados-calculo": {
+    "total": "-1"
+  }
+}

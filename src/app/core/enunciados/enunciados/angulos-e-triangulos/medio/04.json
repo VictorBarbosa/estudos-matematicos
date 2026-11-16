@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um terreno tem a forma de um polígono convexo de {dados-calculo.n} lados. Qual é a soma dos ângulos internos dele, em graus?",
+    "fr": "Un terrain a la forme d’un polygone convexe de {dados-calculo.n} côtés. Quelle est la somme de ses angles intérieurs, en degrés ?",
+    "en": "A plot is shaped like a convex polygon with {dados-calculo.n} sides. What is the sum of its interior angles, in degrees?"
+  },
+  "dados-calculo": {
+    "n": "6",
+    "total": "720"
+  }
+}

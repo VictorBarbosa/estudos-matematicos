@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o comprimento da corda que a reta y = {dados-calculo.reta} determina na circunferência x² + y² = {dados-calculo.r2}? (duas casas decimais)",
+    "fr": "Quelle est la longueur de la corde que la droite y = {dados-calculo.reta} détermine dans le cercle x² + y² = {dados-calculo.r2} ? (deux décimales)",
+    "en": "What is the length of the chord that the line y = {dados-calculo.reta} cuts off in the circle x² + y² = {dados-calculo.r2}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "reta": "3",
+    "r2": "25",
+    "total": "8.00"
+  }
+}

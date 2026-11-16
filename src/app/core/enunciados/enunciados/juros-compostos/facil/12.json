@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um capital de R$ 100,00 rende 10% ao período, a juros compostos. Qual é o valor dos JUROS após 3 períodos? (duas casas decimais)",
+    "fr": "Un capital de 100,00 R$ rapporte 10% par période, à intérêts composés. Quel est le montant des INTÉRÊTS après 3 périodes ? (deux décimales)",
+    "en": "A capital of R$ 100,00 earns 10% per period at compound interest. How much INTEREST is earned after 3 periods? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "33.10"
+  }
+}

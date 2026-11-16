@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo gira em círculo de 4 m de raio com período de 0.5 s. Qual é a aceleração centrípeta, em m/s²? (duas casas decimais)",
+    "fr": "Un corps tourne en cercle de 4 m de rayon avec une période de 0.5 s. Quelle est l’accélération centripète, en m/s² ? (deux décimales)",
+    "en": "A body moves in a circle of radius 4 m with a period of 0.5 s. What is the centripetal acceleration, in m/s²? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "631.65"
+  }
+}

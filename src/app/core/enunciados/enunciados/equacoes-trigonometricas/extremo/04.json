@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação cos 2x = cos x em [0°, 360°) e informe a MENOR solução positiva, em graus.",
+    "fr": "Résolvez l’équation cos 2x = cos x sur [0°, 360°) et indiquez la PLUS PETITE solution positive, en degrés.",
+    "en": "Solve cos 2x = cos x on [0°, 360°) and give the SMALLEST positive solution, in degrees."
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

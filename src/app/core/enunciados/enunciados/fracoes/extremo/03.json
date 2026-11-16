@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um tanque estava com {dados-calculo.inicial} da capacidade e recebeu mais {dados-calculo.recebido}. Que fração da capacidade ele tem agora?",
+    "fr": "Un réservoir était à {dados-calculo.inicial} de sa capacité et a reçu {dados-calculo.recebido} de plus. Quelle fraction de la capacité contient-il maintenant ?",
+    "en": "A tank was at {dados-calculo.inicial} of its capacity and received another {dados-calculo.recebido}. What fraction of the capacity does it hold now?"
+  },
+  "dados-calculo": {
+    "inicial": "5/8",
+    "recebido": "1/6",
+    "total": "19/24"
+  }
+}

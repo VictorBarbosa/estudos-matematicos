@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Dois terrenos triangulares são semelhantes. Os lados correspondentes estão na razão {dados-calculo.a} : {dados-calculo.b}. Se o menor tem {dados-calculo.area} m² de área, quantos metros quadrados tem o maior?",
+    "fr": "Deux terrains triangulaires sont semblables. Les côtés correspondants sont dans le rapport {dados-calculo.a} : {dados-calculo.b}. Si le plus petit a une aire de {dados-calculo.area} m², combien de mètres carrés a le plus grand ?",
+    "en": "Two triangular plots are similar. Corresponding sides are in the ratio {dados-calculo.a} : {dados-calculo.b}. If the smaller one has area {dados-calculo.area} m², how many square metres is the larger one?"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "b": "5",
+    "area": "45",
+    "total": "125"
+  }
+}

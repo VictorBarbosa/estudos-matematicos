@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um triângulo isósceles tem cada ângulo da base medindo {dados-calculo.base}°. Quantos graus mede o ângulo do vértice?",
+    "fr": "Un triangle isocèle a chaque angle de la base qui mesure {dados-calculo.base}°. Combien de degrés mesure l’angle au sommet ?",
+    "en": "An isosceles triangle has each base angle measuring {dados-calculo.base}°. How many degrees is the apex angle?"
+  },
+  "dados-calculo": {
+    "base": "52",
+    "total": "76"
+  }
+}

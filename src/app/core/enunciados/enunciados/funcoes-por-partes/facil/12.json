@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 0, f(x) = 2x + 1; se x ≥ 0, f(x) = 5x + 0. Qual é o valor de f(2)? (duas casas decimais)",
+    "fr": "Si x < 0, f(x) = 2x + 1 ; si x ≥ 0, f(x) = 5x + 0. Quelle est la valeur de f(2) ? (deux décimales)",
+    "en": "If x < 0, f(x) = 2x + 1; if x ≥ 0, f(x) = 5x + 0. What is the value of f(2)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

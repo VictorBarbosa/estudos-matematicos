@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A massa atômica do cloro é 35.45 u, e ele tem dois isótopos: um de massa 35 u e outro de massa 37 u. Qual é a porcentagem do isótopo mais LEVE? (duas casas decimais)",
+    "fr": "La masse atomique du chlore est 35.45 u, et il a deux isotopes : un de masse 35 u et un autre de masse 37 u. Quel est le pourcentage de l’isotope le plus LÉGER ? (deux décimales)",
+    "en": "The atomic mass of chlorine is 35.45 u, and it has two isotopes: one of mass 35 u and another of mass 37 u. What percentage is the LIGHTER isotope? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "77.50"
+  }
+}

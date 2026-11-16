@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o argumento do número complexo 1 + 0i, em graus, medido no sentido anti-horário? (duas casas decimais)",
+    "fr": "Quel est l’argument du nombre complexe 1 + 0i, en degrés, mesuré dans le sens anti-horaire ? (deux décimales)",
+    "en": "What is the argument of the complex number 1 + 0i, in degrees, measured counterclockwise? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

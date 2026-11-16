@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com f(x) = 7x + 0 e g(x) = x − 1, qual é o valor de f(g(2))?",
+    "fr": "Avec f(x) = 7x + 0 et g(x) = x − 1, quelle est la valeur de f(g(2)) ?",
+    "en": "With f(x) = 7x + 0 and g(x) = x − 1, what is the value of f(g(2))?"
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

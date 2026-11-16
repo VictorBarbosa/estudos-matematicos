@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um gás a 250 K ocupa 2.5 L. A pressão constante, qual é o volume a 500 K? (duas casas decimais)",
+    "fr": "Un gaz à 250 K occupe 2.5 L. À pression constante, quel est le volume à 500 K ? (deux décimales)",
+    "en": "A gas at 250 K occupies 2.5 L. At constant pressure, what is the volume at 500 K? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

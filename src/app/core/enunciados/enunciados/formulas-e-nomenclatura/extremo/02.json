@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do bicarbonato de sódio?",
+    "fr": "Quelle est la formule du bicarbonate de sodium ?",
+    "en": "What is the formula of sodium bicarbonate?"
+  },
+  "dados-calculo": {
+    "total": "NaHCO3"
+  }
+}

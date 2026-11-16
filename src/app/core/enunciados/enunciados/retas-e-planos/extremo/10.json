@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Os vetores (1, 0, 0), (0, 1, 0) e (1, 1, 1) são coplanares quando o determinante se anula. Qual é o determinante para o valor dado de k?",
+    "fr": "Les vecteurs (1, 0, 0), (0, 1, 0) et (1, 1, 1) sont coplanaires lorsque le déterminant s’annule. Quel est le déterminant pour la valeur donnée de k ?",
+    "en": "The vectors (1, 0, 0), (0, 1, 0) and (1, 1, 1) are coplanar when the determinant vanishes. What is the determinant for the given value of k?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

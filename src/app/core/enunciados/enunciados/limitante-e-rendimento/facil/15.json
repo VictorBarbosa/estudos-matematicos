@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O rendimento de uma reação foi de 60% e o produto teórico era de 50 g. Quantos gramas se obtiveram? (duas casas decimais)",
+    "fr": "Le rendement d’une réaction a été de 60% et le produit théorique était de 50 g. Combien de grammes a-t-on obtenus ? (deux décimales)",
+    "en": "The yield of a reaction was 60% and the theoretical product was 50 g. How many grams were obtained? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "30.00"
+  }
+}

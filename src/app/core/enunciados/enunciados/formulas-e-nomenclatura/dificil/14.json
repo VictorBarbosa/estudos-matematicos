@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa molar do glicose, em g/mol? (duas casas decimais)",
+    "fr": "Quelle est la masse molaire du glucose, en g/mol ? (deux décimales)",
+    "en": "What is the molar mass of glucose, in g/mol? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "180.16"
+  }
+}

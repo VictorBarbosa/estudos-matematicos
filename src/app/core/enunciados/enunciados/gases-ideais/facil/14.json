@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o volume ocupado por 3 mol de gás ideal a 1.5 atm e 27 °C? (em litros, duas casas decimais)",
+    "fr": "Quel est le volume occupé par 3 mol de gaz parfait à 1.5 atm et 27 °C ? (en litres, deux décimales)",
+    "en": "What volume do 3 mol of ideal gas occupy at 1.5 atm and 27 °C? (in litres, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "49.28"
+  }
+}

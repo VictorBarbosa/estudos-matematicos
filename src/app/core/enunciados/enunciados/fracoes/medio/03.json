@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Subtraia {dados-calculo.b} de {dados-calculo.a} e dê o resultado irredutível.",
+    "fr": "Soustrayez {dados-calculo.b} de {dados-calculo.a} et donnez le résultat irréductible.",
+    "en": "Subtract {dados-calculo.b} from {dados-calculo.a} and give the result in lowest terms."
+  },
+  "dados-calculo": {
+    "a": "3/4",
+    "b": "1/6",
+    "total": "7/12"
+  }
+}

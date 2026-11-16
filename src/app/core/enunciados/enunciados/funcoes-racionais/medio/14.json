@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Esta função tem um buraco e uma assíntota vertical. Em que valor de x está o BURACO, se f(x) = (x² − 36)/(x − 6)? (duas casas decimais)",
+    "fr": "Cette fonction a un trou et une asymptote verticale. En quelle valeur de x se trouve le TROU, si f(x) = (x² − 36)/(x − 6) ? (deux décimales)",
+    "en": "This function has a hole and a vertical asymptote. At what value of x is the HOLE, if f(x) = (x² − 36)/(x − 6)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-6.00"
+  }
+}

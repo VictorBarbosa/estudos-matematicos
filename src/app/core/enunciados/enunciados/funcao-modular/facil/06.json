@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para f(x) = |x − 0|, qual é o valor de f(7)?",
+    "fr": "Pour f(x) = |x − 0|, quelle est la valeur de f(7) ?",
+    "en": "For f(x) = |x − 0|, what is the value of f(7)?"
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

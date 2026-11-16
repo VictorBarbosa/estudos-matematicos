@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma pipa está presa por uma linha de {dados-calculo.linha} m que faz {dados-calculo.angulo}° com a horizontal. A quantos metros do chão está a pipa? (duas casas decimais)",
+    "fr": "Un cerf-volant est retenu par une ficelle de {dados-calculo.linha} m qui fait {dados-calculo.angulo}° avec l’horizontale. À combien de mètres du sol se trouve le cerf-volant ? (deux décimales)",
+    "en": "A kite is held by a {dados-calculo.linha} m string making {dados-calculo.angulo}° with the horizontal. How many metres above the ground is the kite? (two decimal places)"
+  },
+  "dados-calculo": {
+    "linha": "50",
+    "angulo": "35",
+    "total": "28.68"
+  }
+}

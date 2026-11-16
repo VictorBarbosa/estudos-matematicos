@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para que valor de k o sistema [[1, 6], [6, k]] deixa de ter solução única?",
+    "fr": "Pour quelle valeur de k le système [[1, 6], [6, k]] cesse-t-il d’avoir une solution unique ?",
+    "en": "For what value of k does the system [[1, 6], [6, k]] stop having a unique solution?"
+  },
+  "dados-calculo": {
+    "total": "36"
+  }
+}

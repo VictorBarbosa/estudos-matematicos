@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a projeção de (9, 12) sobre a direção de (3, 4)? (duas casas decimais)",
+    "fr": "Quelle est la projection de (9, 12) sur la direction de (3, 4) ? (deux décimales)",
+    "en": "What is the projection of (9, 12) onto the direction of (3, 4)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "15.00"
+  }
+}

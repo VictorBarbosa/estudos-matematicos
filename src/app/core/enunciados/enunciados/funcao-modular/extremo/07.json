@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um forno aceita temperaturas que se afastam no máximo 30 graus da temperatura ideal 160. Qual é a MENOR temperatura aceitável?",
+    "fr": "Un four accepte des températures qui s’écartent au maximum de 30 degrés de la température idéale 160. Quelle est la PLUS PETITE température acceptable ?",
+    "en": "An oven accepts temperatures that deviate at most 30 degrees from the ideal temperature 160. What is the LOWEST acceptable temperature?"
+  },
+  "dados-calculo": {
+    "total": "130"
+  }
+}

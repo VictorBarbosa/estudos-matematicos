@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um piso é revestido com peças em forma de polígono regular, e cada ângulo interno dessas peças mede {dados-calculo.angulo}°. Quantos lados tem cada peça?",
+    "fr": "Un sol est recouvert de pièces en forme de polygone régulier, et chaque angle intérieur de ces pièces mesure {dados-calculo.angulo}°. Combien de côtés a chaque pièce ?",
+    "en": "A floor is covered with tiles shaped like a regular polygon, and each interior angle of those tiles measures {dados-calculo.angulo}°. How many sides does each tile have?"
+  },
+  "dados-calculo": {
+    "angulo": "156",
+    "total": "15"
+  }
+}

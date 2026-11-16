@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa, em gramas, de 0.25 mol de glicose? (duas casas decimais)",
+    "fr": "Quelle est la masse, en grammes, de 0.25 mol de glucose ? (deux décimales)",
+    "en": "What is the mass, in grams, of 0.25 mol of glucose? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "45.04"
+  }
+}

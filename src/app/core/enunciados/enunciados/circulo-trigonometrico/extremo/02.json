@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Quantos graus tem um arco de {dados-calculo.radianos} radianos? (duas casas decimais)",
+    "fr": "Combien de degrés a un arc de {dados-calculo.radianos} radians ? (deux décimales)",
+    "en": "How many degrees is an arc of {dados-calculo.radianos} radians? (two decimal places)"
+  },
+  "dados-calculo": {
+    "radianos": "2.5",
+    "total": "143.24"
+  }
+}

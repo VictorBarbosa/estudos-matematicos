@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma roda tem {dados-calculo.diametro} cm de diâmetro. Quantos centímetros ela percorre em uma volta completa? (duas casas decimais)",
+    "fr": "Une roue a {dados-calculo.diametro} cm de diamètre. Combien de centimètres parcourt-elle en un tour complet ? (deux décimales)",
+    "en": "A wheel is {dados-calculo.diametro} cm across. How many centimetres does it cover in one full turn? (two decimal places)"
+  },
+  "dados-calculo": {
+    "diametro": "50",
+    "total": "157.08"
+  }
+}

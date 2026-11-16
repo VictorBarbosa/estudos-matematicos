@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Há 12 mol de B disponíveis, e cada mol de A consome 4 mol de B. Quantos mols de A podem reagir completamente? (duas casas decimais)",
+    "fr": "Il y a 12 mol de B disponibles, et chaque mole de A consomme 4 mol de B. Combien de moles de A peuvent réagir complètement ? (deux décimales)",
+    "en": "There are 12 mol of B available, and each mole of A consumes 4 mol of B. How many moles of A can react completely? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

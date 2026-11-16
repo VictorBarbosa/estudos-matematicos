@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A matriz [[4, 1], [1, 0]] tem inversa. Qual é a entrada da linha 1, coluna 1 dela?",
+    "fr": "La matrice [[4, 1], [1, 0]] a une inverse. Quelle est l’entrée de la ligne 1, colonne 1 ?",
+    "en": "The matrix [[4, 1], [1, 0]] has an inverse. What is the entry in row 1, column 1?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

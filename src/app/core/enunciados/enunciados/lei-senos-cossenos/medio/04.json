@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um terreno triangular tem lados de {dados-calculo.a} m e {dados-calculo.b} m, e o ângulo entre eles mede {dados-calculo.angulo}°. Quantos metros mede o terceiro lado? (duas casas decimais)",
+    "fr": "Un terrain triangulaire a des côtés de {dados-calculo.a} m et {dados-calculo.b} m, et l’angle entre eux mesure {dados-calculo.angulo}°. Combien de mètres mesure le troisième côté ? (deux décimales)",
+    "en": "A triangular plot has sides of {dados-calculo.a} m and {dados-calculo.b} m, and the angle between them is {dados-calculo.angulo}°. How many metres is the third side? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "20",
+    "b": "30",
+    "angulo": "120",
+    "total": "43.59"
+  }
+}

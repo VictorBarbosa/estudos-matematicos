@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Duas tábuas se encontram sobre uma linha reta: uma delas faz {dados-calculo.a}° com essa linha. Quantos graus faz a outra?",
+    "fr": "Deux planches se rencontrent sur une ligne droite : l’une fait {dados-calculo.a}° avec cette ligne. Combien de degrés fait l’autre ?",
+    "en": "Two planks meet on a straight line: one of them makes {dados-calculo.a}° with that line. How many degrees does the other make?"
+  },
+  "dados-calculo": {
+    "a": "118",
+    "total": "62"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo parte a 15 m/s e acelera a 1 m/s². Que distância percorre em 10 s? (duas casas decimais)",
+    "fr": "Un corps part à 15 m/s et accélère à 1 m/s². Quelle distance parcourt-il en 10 s ? (deux décimales)",
+    "en": "A body starts at 15 m/s and accelerates at 1 m/s². What distance does it cover in 10 s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "200.00"
+  }
+}

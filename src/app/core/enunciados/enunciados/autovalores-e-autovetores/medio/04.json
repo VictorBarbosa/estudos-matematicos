@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o produto dos autovalores da matriz [[5, 0], [0, 2]]?",
+    "fr": "Quel est le produit des autovalors de la matrice [[5, 0], [0, 2]] ?",
+    "en": "What is the product of the eigenvalues of the matrix [[5, 0], [0, 2]]?"
+  },
+  "dados-calculo": {
+    "total": "10"
+  }
+}

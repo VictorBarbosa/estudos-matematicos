@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma escora de telhado faz {dados-calculo.a}° com a viga horizontal. Quantos graus faltam para ela ficar na vertical?",
+    "fr": "Un étai de toiture fait {dados-calculo.a}° avec la poutre horizontale. Combien de degrés manque-t-il pour qu’il soit vertical ?",
+    "en": "A roof brace makes {dados-calculo.a}° with the horizontal beam. How many degrees short of vertical is it?"
+  },
+  "dados-calculo": {
+    "a": "34",
+    "total": "56"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do sulfato de alumínio?",
+    "fr": "Quelle est la formule du sulfate d’aluminium ?",
+    "en": "What is the formula of aluminium sulfate?"
+  },
+  "dados-calculo": {
+    "total": "Al2(SO4)3"
+  }
+}

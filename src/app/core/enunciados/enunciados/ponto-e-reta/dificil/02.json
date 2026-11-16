@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a equação da reta que passa por P({dados-calculo.px}, {dados-calculo.py}) e é PERPENDICULAR à reta de coeficiente angular {dados-calculo.m}? Informe o coeficiente angular dela.",
+    "fr": "Quelle est l’équation de la droite passant par P({dados-calculo.px}, {dados-calculo.py}) et PERPENDICULAIRE à la droite de coefficient directeur {dados-calculo.m} ? Indiquez son coefficient directeur.",
+    "en": "What is the equation of the line through P({dados-calculo.px}, {dados-calculo.py}) that is PERPENDICULAR to the line with slope {dados-calculo.m}? Give its slope."
+  },
+  "dados-calculo": {
+    "px": "1",
+    "py": "2",
+    "m": "2",
+    "total": "-0.50"
+  }
+}

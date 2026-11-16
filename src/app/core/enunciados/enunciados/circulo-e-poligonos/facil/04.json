@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma placa é um pentágono regular de {dados-calculo.lado} cm de lado. Quantos centímetros tem o contorno dela?",
+    "fr": "Une plaque est un pentagone régulier de {dados-calculo.lado} cm de côté. Combien de centimètres fait son contour ?",
+    "en": "A plate is a regular pentagon with side {dados-calculo.lado} cm. How many centimetres is its outline?"
+  },
+  "dados-calculo": {
+    "lado": "12",
+    "total": "60"
+  }
+}

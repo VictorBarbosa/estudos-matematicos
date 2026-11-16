@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com f(x) = 5x e g(x) = x + 0, qual é o valor de f(g(3))?",
+    "fr": "Avec f(x) = 5x et g(x) = x + 0, quelle est la valeur de f(g(3)) ?",
+    "en": "With f(x) = 5x and g(x) = x + 0, what is the value of f(g(3))?"
+  },
+  "dados-calculo": {
+    "total": "15"
+  }
+}

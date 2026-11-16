@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Converta 25 m/s para km/h. (duas casas decimais)",
+    "fr": "Convertissez 25 m/s en km/h. (deux décimales)",
+    "en": "Convert 25 m/s to km/h. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "90.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação tg x = −1 em [0°, 360°) e informe a MENOR solução, em graus.",
+    "fr": "Résolvez l’équation tan x = −1 sur [0°, 360°) et indiquez la PLUS PETITE solution, en degrés.",
+    "en": "Solve tan x = −1 on [0°, 360°) and give the SMALLEST solution, in degrees."
+  },
+  "dados-calculo": {
+    "total": "135"
+  }
+}

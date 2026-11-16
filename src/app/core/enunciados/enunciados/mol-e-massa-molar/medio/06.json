@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa molar do cloreto de potássio? A fórmula é KCl. (duas casas decimais)",
+    "fr": "Quelle est la masse molaire du chlorure de potassium ? La formule est KCl. (deux décimales)",
+    "en": "What is the molar mass of potassium chloride? The formula is KCl. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "74.55"
+  }
+}

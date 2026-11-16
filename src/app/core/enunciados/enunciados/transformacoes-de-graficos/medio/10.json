@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "g(x) = 3·f(x). Se f(1) = 5, qual é g(1)?",
+    "fr": "g(x) = 3·f(x). Si f(1) = 5, quelle est g(1) ?",
+    "en": "g(x) = 3·f(x). If f(1) = 5, what is g(1)?"
+  },
+  "dados-calculo": {
+    "total": "15"
+  }
+}

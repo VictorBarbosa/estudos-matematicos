@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantas unidades de x são necessárias para que 2^x valha 256?",
+    "fr": "Combien d’unités de x faut-il pour que 2^x vaille 256 ?",
+    "en": "How many units of x are needed for 2^x to equal 256?"
+  },
+  "dados-calculo": {
+    "total": "8"
+  }
+}

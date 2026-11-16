@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Calcule sen²{dados-calculo.graus}° + cos²{dados-calculo.graus}°, usando a relação fundamental. (duas casas decimais)",
+    "fr": "Calculez sin²{dados-calculo.graus}° + cos²{dados-calculo.graus}°, en utilisant la relation fondamentale. (deux décimales)",
+    "en": "Calculate sin²{dados-calculo.graus}° + cos²{dados-calculo.graus}°, using the fundamental identity. (two decimal places)"
+  },
+  "dados-calculo": {
+    "graus": "37",
+    "total": "1.00"
+  }
+}

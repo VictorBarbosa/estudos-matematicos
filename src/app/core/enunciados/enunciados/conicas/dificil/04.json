@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A hipérbole x²/{dados-calculo.a2} − y²/{dados-calculo.b2} = 1 tem assíntotas y = ±kx. Qual é o valor de k? (duas casas decimais)",
+    "fr": "L’hyperbole x²/{dados-calculo.a2} − y²/{dados-calculo.b2} = 1 a pour asymptotes y = ±kx. Quelle est la valeur de k ? (deux décimales)",
+    "en": "The hyperbola x²/{dados-calculo.a2} − y²/{dados-calculo.b2} = 1 has asymptotes y = ±kx. What is k? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a2": "16",
+    "b2": "9",
+    "total": "0.75"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um setor circular tem arco de {dados-calculo.arco} cm e raio de {dados-calculo.raio} cm. Quantos centímetros quadrados tem a área desse setor? (duas casas decimais)",
+    "fr": "Un secteur circulaire a un arc de {dados-calculo.arco} cm et un rayon de {dados-calculo.raio} cm. Combien de centimètres carrés a l’aire de ce secteur ? (deux décimales)",
+    "en": "A circular sector has an arc of {dados-calculo.arco} cm and radius {dados-calculo.raio} cm. How many square centimetres is the area of that sector? (two decimal places)"
+  },
+  "dados-calculo": {
+    "arco": "15",
+    "raio": "8",
+    "total": "60.00"
+  }
+}

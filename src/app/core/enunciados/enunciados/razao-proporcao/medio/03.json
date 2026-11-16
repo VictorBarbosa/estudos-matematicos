@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um ônibus percorre {dados-calculo.km} km em {dados-calculo.horas} horas. Qual é a velocidade média dele, em km/h?",
+    "fr": "Un autocar parcourt {dados-calculo.km} km en {dados-calculo.horas} heures. Quelle est sa vitesse moyenne, en km/h ?",
+    "en": "A coach travels {dados-calculo.km} km in {dados-calculo.horas} hours. What is its average speed, in km/h?"
+  },
+  "dados-calculo": {
+    "km": "150",
+    "horas": "2.5",
+    "total": "60"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para f(x) = 7x + 3, qual é o valor de f(2)?",
+    "fr": "Pour f(x) = 7x + 3, quelle est la valeur de f(2) ?",
+    "en": "For f(x) = 7x + 3, what is the value of f(2)?"
+  },
+  "dados-calculo": {
+    "total": "17"
+  }
+}

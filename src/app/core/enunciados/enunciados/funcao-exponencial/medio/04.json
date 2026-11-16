@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra decai como N(t) = 200·(1/2)^t, com t em anos. Quantos gramas restam em t = 1? (duas casas decimais)",
+    "fr": "Un échantillon décroît comme N(t) = 200·(1/2)^t, avec t en années. Combien de grammes reste-t-il à t = 1 ? (deux décimales)",
+    "en": "A sample decays as N(t) = 200·(1/2)^t, with t in years. How many grams remain at t = 1? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "100.00"
+  }
+}

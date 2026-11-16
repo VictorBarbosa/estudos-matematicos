@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dois corpos partem do mesmo ponto: A a 30 m/s constante e B do repouso com 3 m/s². Em quantos segundos B alcança A? (duas casas decimais)",
+    "fr": "Deux corps partent du même point : A à 30 m/s constant et B du repos avec 3 m/s². En combien de secondes B rattrape-t-il A ? (deux décimales)",
+    "en": "Two bodies start from the same point: A at constant 30 m/s and B from rest with 3 m/s². In how many seconds does B catch A? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

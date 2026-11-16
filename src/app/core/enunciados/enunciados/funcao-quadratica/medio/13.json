@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor MÁXIMO da função f(x) = −x² + 8x + 5? (duas casas decimais)",
+    "fr": "Quelle est la valeur MAXIMALE de la fonction f(x) = −x² + 8x + 5 ? (deux décimales)",
+    "en": "What is the MAXIMUM value of the function f(x) = −x² + 8x + 5? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "21.00"
+  }
+}

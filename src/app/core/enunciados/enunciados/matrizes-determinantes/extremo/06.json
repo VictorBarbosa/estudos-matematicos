@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "No sistema resolvido por Cramer, o determinante da matriz principal é 10 e o da matriz de x é 5. Qual é o valor de x? (duas casas decimais)",
+    "fr": "Dans le système résolu par Cramer, le déterminant de la matrice principale est 10 et celui de la matrice de x est 5. Quelle est la valeur de x ? (deux décimales)",
+    "en": "In the system solved by Cramer, the main matrix determinant is 10 and the x-matrix determinant is 5. What is the value of x? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

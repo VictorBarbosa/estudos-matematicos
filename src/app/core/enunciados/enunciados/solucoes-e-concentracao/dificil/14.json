@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a concentração, em mol/L, de uma solução que contém 16.8 g de NaHCO3 (massa molar 84.01 g/mol) em 500 mL? (duas casas decimais)",
+    "fr": "Quelle est la concentration, en mol/L, d’une solution contenant 16.8 g de NaHCO3 (masse molaire 84.01 g/mol) dans 500 mL ? (deux décimales)",
+    "en": "What is the concentration, in mol/L, of a solution containing 16.8 g of NaHCO3 (molar mass 84.01 g/mol) in 500 mL? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.40"
+  }
+}

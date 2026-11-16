@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um móvel segue x(t) = t² e y(t) = {dados-calculo.vy}t. Qual é a coordenada y no instante em que x = {dados-calculo.x}? (duas casas decimais)",
+    "fr": "Un mobile suit x(t) = t² et y(t) = {dados-calculo.vy}t. Quelle est la coordonnée y à l’instant où x = {dados-calculo.x} ? (deux décimales)",
+    "en": "A body follows x(t) = t² and y(t) = {dados-calculo.vy}t. What is the y-coordinate when x = {dados-calculo.x}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "vy": "2",
+    "x": "9",
+    "total": "6.00"
+  }
+}

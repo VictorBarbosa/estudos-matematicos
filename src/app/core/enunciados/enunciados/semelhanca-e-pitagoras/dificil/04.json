@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma placa triangular equilátera tem lados de {dados-calculo.a} cm. Quantos centímetros mede a altura dessa placa? (duas casas decimais)",
+    "fr": "Une plaque triangulaire équilatérale a des côtés de {dados-calculo.a} cm. Combien de centimètres mesure la hauteur de cette plaque ? (deux décimales)",
+    "en": "An equilateral triangular plate has sides of {dados-calculo.a} cm. How many centimetres tall is that plate? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "14",
+    "total": "12.12"
+  }
+}

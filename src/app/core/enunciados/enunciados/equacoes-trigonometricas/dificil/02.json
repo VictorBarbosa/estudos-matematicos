@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 2 sen x − 1 = 0 em [0°, 360°) e informe a MAIOR solução, em graus.",
+    "fr": "Résolvez l’équation 2 sin x − 1 = 0 sur [0°, 360°) et indiquez la PLUS GRANDE solution, en degrés.",
+    "en": "Solve 2 sin x − 1 = 0 on [0°, 360°) and give the LARGEST solution, in degrees."
+  },
+  "dados-calculo": {
+    "total": "150"
+  }
+}

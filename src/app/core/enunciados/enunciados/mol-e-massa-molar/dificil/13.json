@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra tem 3 mol de NaHCO3. Quantas gramas ela pesa? (duas casas decimais)",
+    "fr": "Un échantillon contient 3 mol de NaHCO3. Combien de grammes pèse-t-il ? (deux décimales)",
+    "en": "A sample contains 3 mol of NaHCO3. How many grams does it weigh? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "252.03"
+  }
+}

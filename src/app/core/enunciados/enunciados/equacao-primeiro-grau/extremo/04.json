@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.numerador}/{dados-calculo.denominador} de um número menos {dados-calculo.subtraido} é igual a {dados-calculo.resultado}. Qual é o número?",
+    "fr": "{dados-calculo.numerador}/{dados-calculo.denominador} d’un nombre moins {dados-calculo.subtraido} est égal à {dados-calculo.resultado}. Quel est ce nombre ?",
+    "en": "{dados-calculo.numerador}/{dados-calculo.denominador} of a number minus {dados-calculo.subtraido} equals {dados-calculo.resultado}. What is that number?"
+  },
+  "dados-calculo": {
+    "numerador": "5",
+    "denominador": "6",
+    "subtraido": "10",
+    "resultado": "15",
+    "total": "30"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A análise de um composto deu 77.73% de cobre e o resto de oxigênio, com massa molar 79.545 g/mol. Qual é a massa de cobre em 1 mol, em gramas? (duas casas decimais)",
+    "fr": "L’analyse d’un composé a donné 77.73% de cuivre et le reste d’oxygène, avec une masse molaire de 79.545 g/mol. Quelle est la masse de cuivre dans 1 mol, en grammes ? (deux décimales)",
+    "en": "Analysis of a compound gave 77.73% copper and the rest oxygen, with molar mass 79.545 g/mol. What is the mass of copper in 1 mol, in grams? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "61.83"
+  }
+}

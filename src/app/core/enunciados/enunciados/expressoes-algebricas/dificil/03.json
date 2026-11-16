@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de (2x + 1)/(x − 1) para x = {dados-calculo.x}. (duas casas decimais)",
+    "fr": "Calculez la valeur numérique de (2x + 1)/(x − 1) pour x = {dados-calculo.x}. (deux décimales)",
+    "en": "Calculate the numerical value of (2x + 1)/(x − 1) for x = {dados-calculo.x}. (two decimal places)"
+  },
+  "dados-calculo": {
+    "x": "3",
+    "total": "3.50"
+  }
+}

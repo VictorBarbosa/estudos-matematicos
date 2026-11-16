@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A matriz aumentada já está escalonada como [[1, 0 | 6], [0, 1 | 6]]. Qual é o valor de y?",
+    "fr": "La matrice augmentée est déjà échelonnée sous la forme [[1, 0 | 6], [0, 1 | 6]]. Quelle est la valeur de y ?",
+    "en": "The augmented matrix is already in echelon form as [[1, 0 | 6], [0, 1 | 6]]. What is the value of y?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

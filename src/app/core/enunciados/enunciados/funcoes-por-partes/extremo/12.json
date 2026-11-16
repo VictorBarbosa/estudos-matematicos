@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O imposto é 0 até 1500, e depois 25% sobre o que excede 1500. Sobre uma renda de 2500, quanto é o imposto? (duas casas decimais)",
+    "fr": "L’impôt est nul jusqu’à 1500, puis de 25% sur ce qui dépasse 1500. Sur un revenu de 2500, quel est l’impôt ? (deux décimales)",
+    "en": "Tax is zero up to 1500, then 25% on the amount above 1500. On an income of 2500, how much is the tax? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "250.00"
+  }
+}

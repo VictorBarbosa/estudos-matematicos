@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância máxima de um ponto da circunferência x² + y² = {dados-calculo.r2} ao ponto ({dados-calculo.px}, {dados-calculo.py})? (duas casas decimais)",
+    "fr": "Quelle est la distance maximale d’un point du cercle x² + y² = {dados-calculo.r2} au point ({dados-calculo.px}, {dados-calculo.py}) ? (deux décimales)",
+    "en": "What is the greatest distance from a point on the circle x² + y² = {dados-calculo.r2} to the point ({dados-calculo.px}, {dados-calculo.py})? (two decimal places)"
+  },
+  "dados-calculo": {
+    "r2": "9",
+    "px": "10",
+    "py": "0",
+    "total": "13.00"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um satélite descreve r = {dados-calculo.p}/(1 + {dados-calculo.e}cos θ), em milhares de km. Qual é a distância no PERIÉLIO? (duas casas decimais)",
+    "fr": "Un satellite décrit r = {dados-calculo.p}/(1 + {dados-calculo.e}cos θ), en milliers de km. Quelle est la distance au PÉRIHÉLIE ? (deux décimales)",
+    "en": "A satellite follows r = {dados-calculo.p}/(1 + {dados-calculo.e}cos θ), in thousands of km. What is the distance at PERIAPSIS? (two decimal places)"
+  },
+  "dados-calculo": {
+    "p": "12",
+    "e": "0.5",
+    "total": "8.00"
+  }
+}

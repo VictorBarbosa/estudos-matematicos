@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um número somado com o seu dobro dá {dados-calculo.soma}. Qual é esse número?",
+    "fr": "Un nombre additionné à son double donne {dados-calculo.soma}. Quel est ce nombre ?",
+    "en": "A number plus its double gives {dados-calculo.soma}. What is that number?"
+  },
+  "dados-calculo": {
+    "soma": "45",
+    "total": "15"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o produto escalar de (3, 4) por (4, 3)?",
+    "fr": "Quel est le produit scalaire de (3, 4) par (4, 3) ?",
+    "en": "What is the dot product of (3, 4) and (4, 3)?"
+  },
+  "dados-calculo": {
+    "total": "24"
+  }
+}

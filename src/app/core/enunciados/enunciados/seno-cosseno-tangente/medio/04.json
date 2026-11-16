@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Calcule sen {dados-calculo.a}° · cos {dados-calculo.b}°. (duas casas decimais)",
+    "fr": "Calculez sin {dados-calculo.a}° · cos {dados-calculo.b}°. (deux décimales)",
+    "en": "Calculate sin {dados-calculo.a}° · cos {dados-calculo.b}°. (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "30",
+    "b": "60",
+    "total": "0.25"
+  }
+}

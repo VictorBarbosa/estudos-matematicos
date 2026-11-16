@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 0, f(x) = 5x + 2; se x ≥ 0, f(x) = 1x + 3. Qual é o limite pela ESQUERDA em x = 0? (duas casas decimais)",
+    "fr": "Si x < 0, f(x) = 5x + 2 ; si x ≥ 0, f(x) = 1x + 3. Quelle est la limite à GAUCHE en x = 0 ? (deux décimales)",
+    "en": "If x < 0, f(x) = 5x + 2; if x ≥ 0, f(x) = 1x + 3. What is the LEFT-hand limit at x = 0? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

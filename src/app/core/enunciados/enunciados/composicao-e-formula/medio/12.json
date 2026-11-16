@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto tem 27.29% em massa de carbono. Em 44 g do composto, quantos gramas de carbono existem? (duas casas decimais)",
+    "fr": "Un composé contient 27.29% en masse de carbone. Dans 44 g du composé, combien de grammes de carbone y a-t-il ? (deux décimales)",
+    "en": "A compound is 27.29% by mass carbon. In 44 g of the compound, how many grams of carbon are there? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.01"
+  }
+}

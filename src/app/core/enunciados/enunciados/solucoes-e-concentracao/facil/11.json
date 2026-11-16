@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dissolvem-se 20 g de hidróxido de sódio, de massa molar 40.0 g/mol, em água até completar 250 mL. Qual é a concentração, em mol/L? (duas casas decimais)",
+    "fr": "On dissout 20 g de hydroxyde de sodium, de masse molaire 40.0 g/mol, dans de l’eau jusqu’à compléter 250 mL. Quelle est la concentration, en mol/L ? (deux décimales)",
+    "en": "You dissolve 20 g of sodium hydroxide, molar mass 40.0 g/mol, in water up to 250 mL. What is the concentration, in mol/L? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

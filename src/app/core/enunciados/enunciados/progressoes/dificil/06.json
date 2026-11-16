@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A soma dos infinitos termos de uma PG de primeiro termo 3 e razão 0.5 é quanto? (duas casas decimais)",
+    "fr": "La somme des termes infinis d’une PG de premier terme 3 et de raison 0.5 vaut combien ? (deux décimales)",
+    "en": "The sum of the infinite terms of a GP with first term 3 and ratio 0.5 is what? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

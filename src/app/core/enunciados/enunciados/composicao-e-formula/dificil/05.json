@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A análise de um composto deu 32.69% de enxofre e o resto de oxigênio, com massa molar 98.08 g/mol. Qual é a massa de enxofre em 1 mol, em gramas? (duas casas decimais)",
+    "fr": "L’analyse d’un composé a donné 32.69% de soufre et le reste d’oxygène, avec une masse molaire de 98.08 g/mol. Quelle est la masse de soufre dans 1 mol, en grammes ? (deux décimales)",
+    "en": "Analysis of a compound gave 32.69% sulfur and the rest oxygen, with molar mass 98.08 g/mol. What is the mass of sulfur in 1 mol, in grams? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "32.06"
+  }
+}

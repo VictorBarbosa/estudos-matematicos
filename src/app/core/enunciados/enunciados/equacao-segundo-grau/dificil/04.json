@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um terreno quadrado foi ampliado em {dados-calculo.aumento} m de cada lado e passou a ter {dados-calculo.area} m². Quantos metros media o lado original?",
+    "fr": "Un terrain carré a été agrandi de {dados-calculo.aumento} m de chaque côté et a maintenant {dados-calculo.area} m². Combien de mètres mesurait le côté d’origine ?",
+    "en": "A square plot was enlarged by {dados-calculo.aumento} m on each side and now has {dados-calculo.area} m². How many metres was the original side?"
+  },
+  "dados-calculo": {
+    "aumento": "3",
+    "area": "64",
+    "total": "5"
+  }
+}

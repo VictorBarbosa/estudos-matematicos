@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um gás a 1 atm e 273 K ocupa 22.4 L. Levado a 1 atm e 546 K, que volume passa a ocupar? (duas casas decimais)",
+    "fr": "Un gaz à 1 atm et 273 K occupe 22.4 L. Amené à 1 atm et 546 K, quel volume occupe-t-il ? (deux décimales)",
+    "en": "A gas at 1 atm and 273 K occupies 22.4 L. Taken to 1 atm and 546 K, what volume does it occupy? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "44.80"
+  }
+}

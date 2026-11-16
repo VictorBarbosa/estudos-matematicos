@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma placa quadrada tem {dados-calculo.a} cm de lado. Quantos centímetros quadrados de área ela tem?",
+    "fr": "Une plaque carrée a {dados-calculo.a} cm de côté. Combien de centimètres carrés d’aire a-t-elle ?",
+    "en": "A square plate is {dados-calculo.a} cm on a side. How many square centimetres is its area?"
+  },
+  "dados-calculo": {
+    "a": "15",
+    "total": "225"
+  }
+}

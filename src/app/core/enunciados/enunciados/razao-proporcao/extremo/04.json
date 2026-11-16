@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Misturam-se {dados-calculo.la} litros de tinta a R$ {dados-calculo.pa} o litro com {dados-calculo.lb} litros de outra a R$ {dados-calculo.pb} o litro. Qual é o custo médio por litro da mistura, em reais?",
+    "fr": "On mélange {dados-calculo.la} litres de peinture à {dados-calculo.pa} R$ le litre avec {dados-calculo.lb} litres d’une autre à {dados-calculo.pb} R$ le litre. Quel est le coût moyen par litre du mélange, en réaux ?",
+    "en": "You mix {dados-calculo.la} litres of paint at R$ {dados-calculo.pa} per litre with {dados-calculo.lb} litres of another at R$ {dados-calculo.pb} per litre. What is the average cost per litre of the mixture, in reais?"
+  },
+  "dados-calculo": {
+    "la": "3",
+    "pa": "12",
+    "lb": "5",
+    "pb": "20",
+    "total": "17"
+  }
+}

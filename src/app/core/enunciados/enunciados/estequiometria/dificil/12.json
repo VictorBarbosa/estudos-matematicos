@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação N₂ + 3H₂ → 2NH₃, partindo de 28 g de N₂, qual é o número de mols de NH₃ formado? (duas casas decimais)",
+    "fr": "Dans la réaction N₂ + 3H₂ → 2NH₃, à partir de 28 g de N₂, quel est le nombre de moles de NH₃ formé ? (deux décimales)",
+    "en": "In the reaction N₂ + 3H₂ → 2NH₃, starting from 28 g of N₂, what is the number of moles of NH₃ formed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

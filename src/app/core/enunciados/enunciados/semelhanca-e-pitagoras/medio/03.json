@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Dois triângulos são semelhantes. No menor, um lado mede {dados-calculo.a} cm e o perímetro é de {dados-calculo.p1} cm. No maior, o lado correspondente mede {dados-calculo.b} cm. Quantos centímetros tem o perímetro do maior?",
+    "fr": "Deux triangles sont semblables. Dans le plus petit, un côté mesure {dados-calculo.a} cm et le périmètre est de {dados-calculo.p1} cm. Dans le plus grand, le côté correspondant mesure {dados-calculo.b} cm. Combien de centimètres fait le périmètre du plus grand ?",
+    "en": "Two triangles are similar. In the smaller one a side measures {dados-calculo.a} cm and the perimeter is {dados-calculo.p1} cm. In the larger one the corresponding side measures {dados-calculo.b} cm. How many centimetres is the perimeter of the larger one?"
+  },
+  "dados-calculo": {
+    "a": "6",
+    "b": "9",
+    "p1": "24",
+    "total": "36"
+  }
+}

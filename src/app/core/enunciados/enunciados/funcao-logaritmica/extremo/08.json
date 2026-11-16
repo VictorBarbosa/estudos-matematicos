@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Sabendo que log 2 = 0.30 e log 3 = 0.477, qual é o valor de log 6? (duas casas decimais)",
+    "fr": "Sachant que log 2 = 0.30 et log 3 = 0.477, quelle est la valeur de log 6 ? (deux décimales)",
+    "en": "Given that log 2 = 0.30 and log 3 = 0.477, what is the value of log 6? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.78"
+  }
+}

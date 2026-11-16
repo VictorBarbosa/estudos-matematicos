@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a parte real do número complexo 9 + 0i?",
+    "fr": "Quelle est la partie réelle du nombre complexe 9 + 0i ?",
+    "en": "What is the real part of the complex number 9 + 0i?"
+  },
+  "dados-calculo": {
+    "total": "9"
+  }
+}

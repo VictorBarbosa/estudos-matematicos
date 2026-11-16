@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma matriz 2×2 tem autovalores -2 e -3. Qual é o determinante dela?",
+    "fr": "Une matrice 2×2 a pour autovalors -2 et -3. Quel est son déterminant ?",
+    "en": "A 2×2 matrix has eigenvalues -2 and -3. What is its determinant?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

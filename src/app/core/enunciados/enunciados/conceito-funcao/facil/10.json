@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para a função f(x) = 3x + 1, qual é o valor de f(2)?",
+    "fr": "Pour la fonction f(x) = 3x + 1, quelle est la valeur de f(2) ?",
+    "en": "For the function f(x) = 3x + 1, what is the value of f(2)?"
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

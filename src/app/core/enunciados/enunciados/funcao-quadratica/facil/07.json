@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para f(x) = x² + 5x + 6, qual é o valor de f(2)?",
+    "fr": "Pour f(x) = x² + 5x + 6, quelle est la valeur de f(2) ?",
+    "en": "For f(x) = x² + 5x + 6, what is the value of f(2)?"
+  },
+  "dados-calculo": {
+    "total": "20"
+  }
+}

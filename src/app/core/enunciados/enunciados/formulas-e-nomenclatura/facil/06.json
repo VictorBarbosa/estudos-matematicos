@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do óxido de magnésio, composto por magnésio e oxigênio?",
+    "fr": "Quelle est la formule du oxyde de magnésium, composé de magnésium et oxygène ?",
+    "en": "What is the formula of magnesium oxide, made of magnesium and oxygen?"
+  },
+  "dados-calculo": {
+    "total": "MgO"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 2^(x) = 7 e informe x com três casas decimais.",
+    "fr": "Résolvez l’équation 2^(x) = 7 et indiquez x avec trois décimales.",
+    "en": "Solve 2^(x) = 7 and give x to three decimal places."
+  },
+  "dados-calculo": {
+    "total": "2.81"
+  }
+}

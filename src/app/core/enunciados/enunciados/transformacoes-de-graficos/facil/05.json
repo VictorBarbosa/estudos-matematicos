@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O gráfico de f foi deslocado 2 unidades para CIMA, dando g(x) = f(x) + 2. Se f(3) = 7, qual é g(3)?",
+    "fr": "Le graphique de f a été décalé de 2 unités vers le HAUT, donnant g(x) = f(x) + 2. Si f(3) = 7, quelle est g(3) ?",
+    "en": "The graph of f was shifted 2 units UP, giving g(x) = f(x) + 2. If f(3) = 7, what is g(3)?"
+  },
+  "dados-calculo": {
+    "total": "9"
+  }
+}

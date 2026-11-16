@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um vitral triangular tem {dados-calculo.area} cm² de área e base de {dados-calculo.base} cm. Quantos centímetros mede a altura dele?",
+    "fr": "Un vitrail triangulaire a une aire de {dados-calculo.area} cm² et une base de {dados-calculo.base} cm. Combien de centimètres mesure sa hauteur ?",
+    "en": "A triangular stained-glass panel has area {dados-calculo.area} cm² and base {dados-calculo.base} cm. How many centimetres tall is it?"
+  },
+  "dados-calculo": {
+    "area": "96",
+    "base": "12",
+    "total": "16"
+  }
+}

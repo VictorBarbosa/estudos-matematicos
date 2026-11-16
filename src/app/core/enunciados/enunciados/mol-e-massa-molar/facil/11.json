@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa, em gramas, de 0.5 mol de sal de cozinha? (duas casas decimais)",
+    "fr": "Quelle est la masse, en grammes, de 0.5 mol de sel de cuisine ? (deux décimales)",
+    "en": "What is the mass, in grams, of 0.5 mol of table salt? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "29.22"
+  }
+}

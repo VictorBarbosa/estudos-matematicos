@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Misturam-se 46 g de Na com 71 g de Cl₂ na reação 2Na + Cl₂ → 2NaCl. Quantos mols de NaCl se formam? (duas casas decimais)",
+    "fr": "On mélange 46 g de Na avec 71 g de Cl₂ dans la réaction 2Na + Cl₂ → 2NaCl. Combien de moles de NaCl se forment ? (deux décimales)",
+    "en": "You mix 46 g of Na with 71 g of Cl₂ in the reaction 2Na + Cl₂ → 2NaCl. How many moles of NaCl form? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

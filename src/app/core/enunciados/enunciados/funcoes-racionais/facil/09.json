@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor da função f(x) = 12/(x − 2) em x = 4? (duas casas decimais)",
+    "fr": "Quelle est la valeur de la fonction f(x) = 12/(x − 2) en x = 4 ? (deux décimales)",
+    "en": "What is the value of f(x) = 12/(x − 2) at x = 4? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

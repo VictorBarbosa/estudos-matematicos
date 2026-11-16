@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto tem fórmula mínima NO2 e massa molar 92.01 g/mol. Qual é o número de unidades da fórmula mínima por molécula?",
+    "fr": "Un composé a pour formule minimale NO2 et une masse molaire de 92.01 g/mol. Quel est le nombre d’unités de la formule minimale par molécule ?",
+    "en": "A compound has empirical formula NO2 and molar mass 92.01 g/mol. How many empirical units are there per molecule?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

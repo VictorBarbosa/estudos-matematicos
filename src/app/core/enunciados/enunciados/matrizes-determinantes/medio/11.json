@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "No produto A·B, com A = [[1, 4], [0, 1]] e B = [[2, 0], [1, 1]], qual é a entrada da linha 1, coluna 1?",
+    "fr": "Dans le produit A·B, avec A = [[1, 4], [0, 1]] et B = [[2, 0], [1, 1]], quelle est l’entrée de la ligne 1, colonne 1 ?",
+    "en": "In the product A·B, with A = [[1, 4], [0, 1]] and B = [[2, 0], [1, 1]], what is the entry in row 1, column 1?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

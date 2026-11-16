@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto de massa molar 100.09 g/mol contém 1 átomos de cálcio por molécula. Quantas gramas de cálcio há em 1 mol? (duas casas decimais)",
+    "fr": "Un composé de masse molaire 100.09 g/mol contient 1 atomes de calcium par molécule. Combien de grammes de calcium y a-t-il dans 1 mol ? (deux décimales)",
+    "en": "A compound of molar mass 100.09 g/mol contains 1 atoms of calcium per molecule. How many grams of calcium are in 1 mol? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "40.08"
+  }
+}

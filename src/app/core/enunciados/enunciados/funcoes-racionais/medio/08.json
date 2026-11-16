@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor da assíntota HORIZONTAL da função f(x) = (10x + 5)/(x + 2)? (duas casas decimais)",
+    "fr": "Quelle est la valeur de l’asymptote HORIZONTALE de la fonction f(x) = (10x + 5)/(x + 2) ? (deux décimales)",
+    "en": "What is the value of the HORIZONTAL asymptote of f(x) = (10x + 5)/(x + 2)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

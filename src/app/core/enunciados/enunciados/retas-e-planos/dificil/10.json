@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O plano passa por A, B e C. Escrito como ax + by + cz = d com a > 0, quanto vale d para o plano coordenado z = 5?",
+    "fr": "Le plan passe par A, B et C. Écrit sous la forme ax + by + cz = d avec a > 0, combien vaut d pour le plan de coordonnée z = 5 ?",
+    "en": "The plane passes through A, B and C. Written as ax + by + cz = d with a > 0, what is d for the coordinate plane z = 5?"
+  },
+  "dados-calculo": {
+    "total": "5"
+  }
+}

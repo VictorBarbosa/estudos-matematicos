@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação 2KClO₃ → 2KCl + 3O₂, partindo de 245.1 g de KClO₃, qual é o número de mols de O₂ formado? (duas casas decimais)",
+    "fr": "Dans la réaction 2KClO₃ → 2KCl + 3O₂, à partir de 245.1 g de KClO₃, quel est le nombre de moles de O₂ formé ? (deux décimales)",
+    "en": "In the reaction 2KClO₃ → 2KCl + 3O₂, starting from 245.1 g of KClO₃, what is the number of moles of O₂ formed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

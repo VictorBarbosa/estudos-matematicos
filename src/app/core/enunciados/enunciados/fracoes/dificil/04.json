@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Quanto é {dados-calculo.fracao} de {dados-calculo.todo} reais?",
+    "fr": "Combien font {dados-calculo.fracao} de {dados-calculo.todo} réaux ?",
+    "en": "How much is {dados-calculo.fracao} of {dados-calculo.todo} reais?"
+  },
+  "dados-calculo": {
+    "fracao": "3/5",
+    "todo": "45",
+    "total": "27"
+  }
+}

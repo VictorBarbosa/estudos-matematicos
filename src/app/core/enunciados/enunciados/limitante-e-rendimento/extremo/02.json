@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa reação com 10% de excesso de A, são necessários 100 g dele na proporção estequiométrica. Quantos gramas devem ser postos? (duas casas decimais)",
+    "fr": "Dans une réaction avec 10% d’excès de A, il faut 100 g de ce réactif dans la proportion stœchiométrique. Combien de grammes doit-on mettre ? (deux décimales)",
+    "en": "In a reaction with 10% excess of A, 100 g of it are needed stoichiometrically. How many grams should be added? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "110.00"
+  }
+}

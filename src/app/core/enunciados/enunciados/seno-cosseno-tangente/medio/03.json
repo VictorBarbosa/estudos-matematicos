@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Se cos θ = {dados-calculo.cosseno} e θ está no 1º quadrante, qual é o valor de tg θ? (duas casas decimais)",
+    "fr": "Si cos θ = {dados-calculo.cosseno} et que θ est dans le 1er quadrant, quelle est la valeur de tan θ ? (deux décimales)",
+    "en": "If cos θ = {dados-calculo.cosseno} and θ is in the 1st quadrant, what is tan θ? (two decimal places)"
+  },
+  "dados-calculo": {
+    "cosseno": "0.6",
+    "total": "1.33"
+  }
+}

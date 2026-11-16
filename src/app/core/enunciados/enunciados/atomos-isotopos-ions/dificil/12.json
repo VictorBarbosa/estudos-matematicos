@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um átomo tem número de massa 56 e 30 nêutrons. Qual é o número atômico dele?",
+    "fr": "Un atome a pour nombre de masse 56 et 30 neutrons. Quel est son numéro atomique ?",
+    "en": "An atom has mass number 56 and 30 neutrons. What is its atomic number?"
+  },
+  "dados-calculo": {
+    "total": "26"
+  }
+}

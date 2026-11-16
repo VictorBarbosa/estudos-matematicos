@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o ângulo entre (2, 2) e (2, 0)? (em graus, duas casas decimais)",
+    "fr": "Quel est l’angle entre (2, 2) et (2, 0) ? (en degrés, deux décimales)",
+    "en": "What is the angle between (2, 2) and (2, 0)? (in degrees, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "45.00"
+  }
+}

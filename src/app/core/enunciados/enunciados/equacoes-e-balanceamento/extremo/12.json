@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Balanceada com os menores inteiros, a equação H₂ + O₂ → H₂O tem o mesmo número de átomos de oxigênio em cada lado. Qual é esse número?",
+    "fr": "Équilibrée avec les plus petits entiers, l’équation H₂ + O₂ → H₂O a le même nombre d’atomes d’oxygène de chaque côté. Quel est ce nombre ?",
+    "en": "Balanced with the smallest integers, the equation H₂ + O₂ → H₂O has the same number of oxygen atoms on each side. What is that number?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

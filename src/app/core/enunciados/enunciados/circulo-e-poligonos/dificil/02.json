@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma fatia de bolo é um setor circular de raio {dados-calculo.raio} cm e ângulo central de {dados-calculo.angulo}°. Quantos centímetros mede o contorno completo da fatia, isto é, os dois raios mais o arco? (duas casas decimais)",
+    "fr": "Une part de gâteau est un secteur circulaire de rayon {dados-calculo.raio} cm et d’angle au centre {dados-calculo.angulo}°. Combien de centimètres mesure le contour complet de la part, c’est-à-dire les deux rayons plus l’arc ? (deux décimales)",
+    "en": "A slice of cake is a circular sector of radius {dados-calculo.raio} cm and central angle {dados-calculo.angulo}°. How many centimetres is the full outline of the slice, that is, the two radii plus the arc? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "10",
+    "angulo": "72",
+    "total": "32.57"
+  }
+}

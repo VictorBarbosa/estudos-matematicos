@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um móvel segue x(t) = {dados-calculo.vx}t e y(t) = {dados-calculo.vy}t. Qual é a coordenada y no instante t = {dados-calculo.t}?",
+    "fr": "Un mobile suit x(t) = {dados-calculo.vx}t et y(t) = {dados-calculo.vy}t. Quelle est la coordonnée y à l’instant t = {dados-calculo.t} ?",
+    "en": "A body follows x(t) = {dados-calculo.vx}t and y(t) = {dados-calculo.vy}t. What is the y-coordinate at time t = {dados-calculo.t}?"
+  },
+  "dados-calculo": {
+    "vx": "2",
+    "vy": "5",
+    "t": "3",
+    "total": "15"
+  }
+}

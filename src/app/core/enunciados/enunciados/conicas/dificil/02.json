@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma elipse tem focos em ({dados-calculo.c}, 0) e (−{dados-calculo.c}, 0) e semieixo maior {dados-calculo.a}. Qual é o semieixo menor b? (duas casas decimais)",
+    "fr": "Une ellipse a ses foyers en ({dados-calculo.c}, 0) et (−{dados-calculo.c}, 0) et un demi-grand axe {dados-calculo.a}. Quel est le demi-petit axe b ? (deux décimales)",
+    "en": "An ellipse has foci at ({dados-calculo.c}, 0) and (−{dados-calculo.c}, 0) and semi-major axis {dados-calculo.a}. What is the semi-minor axis b? (two decimal places)"
+  },
+  "dados-calculo": {
+    "c": "4",
+    "a": "5",
+    "total": "3.00"
+  }
+}

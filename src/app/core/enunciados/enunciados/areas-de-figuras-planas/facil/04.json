@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma bandeira tem a forma de paralelogramo com base de {dados-calculo.base} cm e altura de {dados-calculo.altura} cm. Qual é a área dela, em centímetros quadrados?",
+    "fr": "Un drapeau a la forme d’un parallélogramme de base {dados-calculo.base} cm et de hauteur {dados-calculo.altura} cm. Quelle est son aire, en centimètres carrés ?",
+    "en": "A flag is shaped like a parallelogram with base {dados-calculo.base} cm and height {dados-calculo.altura} cm. What is its area, in square centimetres?"
+  },
+  "dados-calculo": {
+    "base": "24",
+    "altura": "13",
+    "total": "312"
+  }
+}

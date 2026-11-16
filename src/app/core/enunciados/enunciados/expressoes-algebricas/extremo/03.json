@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de (a³ − b³)/(a − b) para a = {dados-calculo.a} e b = {dados-calculo.b}.",
+    "fr": "Calculez la valeur numérique de (a³ − b³)/(a − b) pour a = {dados-calculo.a} et b = {dados-calculo.b}.",
+    "en": "Calculate the numerical value of (a³ − b³)/(a − b) for a = {dados-calculo.a} and b = {dados-calculo.b}."
+  },
+  "dados-calculo": {
+    "a": "5",
+    "b": "2",
+    "total": "39"
+  }
+}

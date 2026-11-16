@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do composto iônico formado por alumínio e sulfato?",
+    "fr": "Quelle est la formule du composé ionique formé par aluminium et sulfate ?",
+    "en": "What is the formula of the ionic compound formed by aluminium and sulfate?"
+  },
+  "dados-calculo": {
+    "total": "Al2(SO4)3"
+  }
+}

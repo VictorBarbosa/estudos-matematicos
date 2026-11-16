@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força de módulo 100 N atua na direção do vetor (5, 12) e o deslocamento é (13, 0) m. Qual é o trabalho realizado, em joules? (duas casas decimais)",
+    "fr": "Une force de module 100 N agit dans la direction du vecteur (5, 12) et le déplacement est (13, 0) m. Quel est le travail effectué, en joules ? (deux décimales)",
+    "en": "A force of magnitude 100 N acts along the vector (5, 12) and the displacement is (13, 0) m. What is the work done, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "500.00"
+  }
+}

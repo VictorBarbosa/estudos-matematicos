@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Misturam-se 56 g de N₂ com 32 g de O₂ na reação N₂ + O₂ → 2NO. Quantos mols de NO se formam? (duas casas decimais)",
+    "fr": "On mélange 56 g de N₂ avec 32 g de O₂ dans la réaction N₂ + O₂ → 2NO. Combien de moles de NO se forment ? (deux décimales)",
+    "en": "You mix 56 g of N₂ with 32 g of O₂ in the reaction N₂ + O₂ → 2NO. How many moles of NO form? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

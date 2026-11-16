@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a componente x do vetor unitário na direção de (1, 1, 1)? Arredonde para duas casas decimais.",
+    "fr": "Quelle est la composante x du vecteur unitaire dans la direction de (1, 1, 1) ? Arrondissez à deux décimales.",
+    "en": "What is the x-component of the unit vector in the direction of (1, 1, 1)? Round to two decimal places."
+  },
+  "dados-calculo": {
+    "total": "0.58"
+  }
+}

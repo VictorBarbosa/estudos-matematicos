@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa PG de primeiro termo 1 e razão 10, qual é o 4º termo?",
+    "fr": "Dans une PG de premier terme 1 et de raison 10, quel est le 4e terme ?",
+    "en": "In a GP with first term 1 and ratio 10, what is the 4th term?"
+  },
+  "dados-calculo": {
+    "total": "1000"
+  }
+}

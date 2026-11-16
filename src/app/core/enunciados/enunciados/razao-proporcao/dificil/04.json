@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Divida {dados-calculo.valor} em partes INVERSAMENTE proporcionais a {dados-calculo.p1} e {dados-calculo.p2}. Qual é a MAIOR parte?",
+    "fr": "Partagez {dados-calculo.valor} en parts INVERSEMENT proportionnelles à {dados-calculo.p1} et {dados-calculo.p2}. Quelle est la PLUS GRANDE part ?",
+    "en": "Share {dados-calculo.valor} in parts INVERSELY proportional to {dados-calculo.p1} and {dados-calculo.p2}. What is the LARGER part?"
+  },
+  "dados-calculo": {
+    "valor": "360",
+    "p1": "2",
+    "p2": "3",
+    "total": "216"
+  }
+}

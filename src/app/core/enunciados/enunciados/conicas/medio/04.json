@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma hipérbole tem equação x²/{dados-calculo.a2} − y²/{dados-calculo.b2} = 1. Qual é a excentricidade dela? (duas casas decimais)",
+    "fr": "Une hyperbole a pour équation x²/{dados-calculo.a2} − y²/{dados-calculo.b2} = 1. Quelle est son excentricité ? (deux décimales)",
+    "en": "A hyperbola has equation x²/{dados-calculo.a2} − y²/{dados-calculo.b2} = 1. What is its eccentricity? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a2": "9",
+    "b2": "16",
+    "total": "1.67"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um móvel segue x(t) = t³ − {dados-calculo.k}t e y(t) = t². Qual é a coordenada y no instante em que a coordenada x se anula pela primeira vez, com t > 0? (duas casas decimais)",
+    "fr": "Un mobile suit x(t) = t³ − {dados-calculo.k}t et y(t) = t². Quelle est la coordonnée y à l’instant où la coordonnée x s’annule pour la première fois, avec t > 0 ? (deux décimales)",
+    "en": "A body follows x(t) = t³ − {dados-calculo.k}t and y(t) = t². What is the y-coordinate at the instant x first vanishes, with t > 0? (two decimal places)"
+  },
+  "dados-calculo": {
+    "k": "4",
+    "total": "4.00"
+  }
+}

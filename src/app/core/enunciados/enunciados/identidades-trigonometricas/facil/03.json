@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Use a fórmula do arco duplo para calcular sen {dados-calculo.a}°, sabendo que sen {dados-calculo.a}° = {dados-calculo.seno}. (duas casas decimais)",
+    "fr": "Utilisez la formule de l’angle double pour calculer sin {dados-calculo.a}°, sachant que sin {dados-calculo.a}° = {dados-calculo.seno}. (deux décimales)",
+    "en": "Use the double-angle formula to calculate sin {dados-calculo.a}°, knowing that sin {dados-calculo.a}° = {dados-calculo.seno}. (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "30",
+    "seno": "0.5",
+    "total": "0.87"
+  }
+}

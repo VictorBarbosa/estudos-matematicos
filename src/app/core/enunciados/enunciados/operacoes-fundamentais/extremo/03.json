@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule 5 + 2 × [18 − 3 × (4 + 1)].",
+    "fr": "Calculez 5 + 2 × [18 − 3 × (4 + 1)].",
+    "en": "Calculate 5 + 2 × [18 − 3 × (4 + 1)]."
+  },
+  "dados-calculo": {
+    "total": "11"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a porcentagem em massa de cloro no sal de cozinha, de fórmula NaCl? (em %, duas casas decimais)",
+    "fr": "Quel est le pourcentage en masse de chlore dans sel de cuisine, de formule NaCl ? (en %, deux décimales)",
+    "en": "What is the mass percentage of chlorine in table salt, formula NaCl? (in %, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "60.66"
+  }
+}

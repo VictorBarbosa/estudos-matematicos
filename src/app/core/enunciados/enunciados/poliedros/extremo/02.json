@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Num poliedro convexo, em cada vértice se encontram exatamente {dados-calculo.grau} arestas, e o total de vértices é {dados-calculo.vertices}. Quantas faces ele tem?",
+    "fr": "Dans un polyèdre convexe, exactement {dados-calculo.grau} arêtes se rencontrent à chaque sommet, et le nombre total de sommets est {dados-calculo.vertices}. Combien de faces a-t-il ?",
+    "en": "In a convex polyhedron, exactly {dados-calculo.grau} edges meet at each vertex, and the total number of vertices is {dados-calculo.vertices}. How many faces does it have?"
+  },
+  "dados-calculo": {
+    "grau": "5",
+    "vertices": "12",
+    "total": "20"
+  }
+}

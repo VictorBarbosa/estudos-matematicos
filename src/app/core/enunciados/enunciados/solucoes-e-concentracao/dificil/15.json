@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a concentração, em mol/L, de uma solução que contém 49 g de H2SO4 (massa molar 98.08 g/mol) em 250 mL? (duas casas decimais)",
+    "fr": "Quelle est la concentration, en mol/L, d’une solution contenant 49 g de H2SO4 (masse molaire 98.08 g/mol) dans 250 mL ? (deux décimales)",
+    "en": "What is the concentration, in mol/L, of a solution containing 49 g of H2SO4 (molar mass 98.08 g/mol) in 250 mL? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

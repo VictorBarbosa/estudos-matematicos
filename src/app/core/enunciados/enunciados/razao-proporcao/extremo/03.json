@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Duas engrenagens têm {dados-calculo.d1} e {dados-calculo.d2} dentes. Quando a maior dá {dados-calculo.voltas} voltas, quantas voltas dá a menor?",
+    "fr": "Deux engrenages ont {dados-calculo.d1} et {dados-calculo.d2} dents. Quand le plus grand fait {dados-calculo.voltas} tours, combien de tours fait le plus petit ?",
+    "en": "Two gears have {dados-calculo.d1} and {dados-calculo.d2} teeth. When the larger one turns {dados-calculo.voltas} times, how many turns does the smaller one make?"
+  },
+  "dados-calculo": {
+    "d1": "12",
+    "d2": "18",
+    "voltas": "6",
+    "total": "9"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um losango tem diagonais de {dados-calculo.d1} cm e {dados-calculo.d2} cm. Quantos centímetros mede cada lado dele?",
+    "fr": "Un losange a des diagonales de {dados-calculo.d1} cm et {dados-calculo.d2} cm. Combien de centimètres mesure chacun de ses côtés ?",
+    "en": "A rhombus has diagonals of {dados-calculo.d1} cm and {dados-calculo.d2} cm. How many centimetres is each of its sides?"
+  },
+  "dados-calculo": {
+    "d1": "16",
+    "d2": "30",
+    "total": "17"
+  }
+}

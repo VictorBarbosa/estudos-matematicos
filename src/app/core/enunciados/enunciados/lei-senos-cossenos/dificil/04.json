@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um navio está a {dados-calculo.d1} km de um farol e a {dados-calculo.d2} km de outro, que distam {dados-calculo.entre} km entre si. Quantos graus mede o ângulo sob o qual o navio vê os dois faróis? (duas casas decimais)",
+    "fr": "Un navire est à {dados-calculo.d1} km d’un phare et à {dados-calculo.d2} km d’un autre, distants de {dados-calculo.entre} km. Combien de degrés mesure l’angle sous lequel le navire voit les deux phares ? (deux décimales)",
+    "en": "A ship is {dados-calculo.d1} km from one lighthouse and {dados-calculo.d2} km from another, which are {dados-calculo.entre} km apart. How many degrees is the angle under which the ship sees the two lighthouses? (two decimal places)"
+  },
+  "dados-calculo": {
+    "d1": "8",
+    "d2": "10",
+    "entre": "12",
+    "total": "82.82"
+  }
+}

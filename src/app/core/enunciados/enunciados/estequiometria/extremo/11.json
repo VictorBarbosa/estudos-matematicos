@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação 2H₂ + O₂ → 2H₂O, cada mol de H₂ consome 0.5 mol de O₂. Partindo de 4 mol de H₂, quantos mols de O₂ são necessários? (duas casas decimais)",
+    "fr": "Dans la réaction 2H₂ + O₂ → 2H₂O, chaque mole de H₂ consomme 0.5 mol de O₂. En partant de 4 mol de H₂, combien de moles de O₂ faut-il ? (deux décimales)",
+    "en": "In the reaction 2H₂ + O₂ → 2H₂O, each mole of H₂ consumes 0.5 mol of O₂. Starting from 4 mol of H₂, how many moles of O₂ are needed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

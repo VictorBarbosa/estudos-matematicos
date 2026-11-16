@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma matriz 2×2 tem autovalores -1 e 5. Qual é o traço dela?",
+    "fr": "Une matrice 2×2 a pour autovalors -1 et 5. Quelle est sa trace ?",
+    "en": "A 2×2 matrix has eigenvalues -1 and 5. What is its trace?"
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

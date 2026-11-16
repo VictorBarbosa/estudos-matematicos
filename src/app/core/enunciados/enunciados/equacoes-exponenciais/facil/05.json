@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 5^x = 125 e informe x.",
+    "fr": "Résolvez l’équation 5^x = 125 et indiquez x.",
+    "en": "Solve 5^x = 125 and give x."
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

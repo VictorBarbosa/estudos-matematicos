@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com uma inflação de 5% ao ano, qual é a perda do poder de compra em 3 anos, em %? (duas casas decimais)",
+    "fr": "Avec une inflation de 5% par an, quelle est la perte de pouvoir d’achat en 3 ans, en % ? (deux décimales)",
+    "en": "With inflation of 5% per year, what is the loss of purchasing power in 3 years, in %? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "13.62"
+  }
+}

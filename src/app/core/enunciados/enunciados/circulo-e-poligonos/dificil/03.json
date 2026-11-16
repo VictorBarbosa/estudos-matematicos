@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um azulejo hexagonal regular tem apótema de {dados-calculo.apotema} cm. Quantos centímetros quadrados de área ele tem? (duas casas decimais)",
+    "fr": "Un carreau hexagonal régulier a un apothème de {dados-calculo.apotema} cm. Combien de centimètres carrés d’aire a-t-il ? (deux décimales)",
+    "en": "A regular hexagonal tile has an apothem of {dados-calculo.apotema} cm. How many square centimetres is its area? (two decimal places)"
+  },
+  "dados-calculo": {
+    "apotema": "6",
+    "total": "124.71"
+  }
+}

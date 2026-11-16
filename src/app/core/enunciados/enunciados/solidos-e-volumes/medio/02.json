@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um chapéu de festa tem a forma de cone de raio {dados-calculo.raio} cm e altura {dados-calculo.altura} cm. Quantos centímetros cúbicos de material ele ocupa? (duas casas decimais)",
+    "fr": "Un chapeau de fête a la forme d’un cône de rayon {dados-calculo.raio} cm et de hauteur {dados-calculo.altura} cm. Combien de centimètres cubes de matière occupe-t-il ? (deux décimales)",
+    "en": "A party hat is shaped like a cone of radius {dados-calculo.raio} cm and height {dados-calculo.altura} cm. How many cubic centimetres of material does it occupy? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "6",
+    "altura": "15",
+    "total": "565.49"
+  }
+}

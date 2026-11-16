@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um projétil parte a 10 m/s formando 60° com a horizontal. Qual é a componente VERTICAL da velocidade inicial, em m/s? (duas casas decimais)",
+    "fr": "Un projectile part à 10 m/s en formant 60° avec l’horizontale. Quelle est la composante VERTICALE de la vitesse initiale, en m/s ? (deux décimales)",
+    "en": "A projectile starts at 10 m/s making 60° with the horizontal. What is the VERTICAL component of the initial velocity, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.66"
+  }
+}

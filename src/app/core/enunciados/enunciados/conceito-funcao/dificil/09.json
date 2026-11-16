@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = 12/(x − 2) está definida para todo x real, exceto um. Qual é o valor de f(4)? (duas casas decimais)",
+    "fr": "La fonction f(x) = 12/(x − 2) est définie pour tout x réel, sauf un. Quelle est la valeur de f(4) ? (deux décimales)",
+    "en": "The function f(x) = 12/(x − 2) is defined for every real x except one. What is the value of f(4)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

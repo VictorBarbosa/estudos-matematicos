@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o ângulo entre os vetores (3, 4) e (4, -3), em graus? (duas casas decimais)",
+    "fr": "Quel est l’angle entre les vecteurs (3, 4) et (4, -3), en degrés ? (deux décimales)",
+    "en": "What is the angle between the vectors (3, 4) and (4, -3), in degrees? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "90.00"
+  }
+}

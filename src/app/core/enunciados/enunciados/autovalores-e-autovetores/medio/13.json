@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A matriz [[0, 0], [0, 9]] tem autovalores iguais a 0 e 9. Qual é o determinante dela?",
+    "fr": "La matrice [[0, 0], [0, 9]] a pour autovalors 0 et 9. Quel est son déterminant ?",
+    "en": "The matrix [[0, 0], [0, 9]] has eigenvalues 0 and 9. What is its determinant?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

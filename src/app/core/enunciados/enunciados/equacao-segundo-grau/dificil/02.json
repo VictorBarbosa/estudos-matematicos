@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação x² − 6x + 5 = 0 e informe a MENOR raiz.",
+    "fr": "Résolvez l’équation x² − 6x + 5 = 0 et indiquez la PLUS PETITE racine.",
+    "en": "Solve x² − 6x + 5 = 0 and give the SMALLEST root."
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

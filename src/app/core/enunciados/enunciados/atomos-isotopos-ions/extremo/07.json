@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A massa atômica do lítio é 6.94 u, e ele tem dois isótopos: um de massa 6 u e outro de massa 7 u. Qual é a porcentagem do isótopo mais LEVE? (duas casas decimais)",
+    "fr": "La masse atomique du lithium est 6.94 u, et il a deux isotopes : un de masse 6 u et un autre de masse 7 u. Quel est le pourcentage de l’isotope le plus LÉGER ? (deux décimales)",
+    "en": "The atomic mass of lithium is 6.94 u, and it has two isotopes: one of mass 6 u and another of mass 7 u. What percentage is the LIGHTER isotope? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

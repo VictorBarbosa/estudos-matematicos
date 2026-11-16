@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A parábola y = (x − 3)² + 2 tem vértice em que ponto? Informe a ORDENADA do vértice.",
+    "fr": "La parabole y = (x − 3)² + 2 a son sommet en quel point ? Indiquez l’ORDONNÉE du sommet.",
+    "en": "The parabola y = (x − 3)² + 2 has its vertex at what point? Give the y-coordinate of the vertex."
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

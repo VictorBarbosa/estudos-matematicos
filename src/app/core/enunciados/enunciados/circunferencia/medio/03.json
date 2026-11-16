@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A circunferência tem equação x² + y² − {dados-calculo.doisA}x + {dados-calculo.doisB}y = 0. Qual é a abscissa do centro dela?",
+    "fr": "Le cercle a pour équation x² + y² − {dados-calculo.doisA}x + {dados-calculo.doisB}y = 0. Quelle est l’abscisse de son centre ?",
+    "en": "The circle has equation x² + y² − {dados-calculo.doisA}x + {dados-calculo.doisB}y = 0. What is the x-coordinate of its centre?"
+  },
+  "dados-calculo": {
+    "doisA": "6",
+    "doisB": "8",
+    "total": "3"
+  }
+}

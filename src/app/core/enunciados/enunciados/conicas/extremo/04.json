@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A parábola y² = {dados-calculo.quatroP}x tem foco em (f, 0). Qual é a distância do vértice ao foco? (duas casas decimais)",
+    "fr": "La parabole y² = {dados-calculo.quatroP}x a son foyer en (f, 0). Quelle est la distance du sommet au foyer ? (deux décimales)",
+    "en": "The parabola y² = {dados-calculo.quatroP}x has focus at (f, 0). What is the distance from the vertex to the focus? (two decimal places)"
+  },
+  "dados-calculo": {
+    "quatroP": "16",
+    "total": "4.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se f(x) = (x + 4)/2, qual é o valor de f⁻¹(8)?",
+    "fr": "Si f(x) = (x + 4)/2, quelle est la valeur de f⁻¹(8) ?",
+    "en": "If f(x) = (x + 4)/2, what is the value of f⁻¹(8)?"
+  },
+  "dados-calculo": {
+    "total": "12"
+  }
+}

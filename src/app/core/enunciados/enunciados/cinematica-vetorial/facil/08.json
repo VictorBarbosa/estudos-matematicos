@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo vai do ponto (1, 2) ao ponto (7, 10) em 1 s, com coordenadas em metros. Qual é o módulo da velocidade média, em m/s? (duas casas decimais)",
+    "fr": "Un corps va du point (1, 2) au point (7, 10) en 1 s, avec des coordonnées en mètres. Quel est le module de la vitesse moyenne, en m/s ? (deux décimales)",
+    "en": "A body goes from (1, 2) to (7, 10) in 1 s, with coordinates in metres. What is the magnitude of the average velocity, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a concentração, em mol/L, de uma solução que contém 36 g de C6H12O6 (massa molar 180.16 g/mol) em 250 mL? (duas casas decimais)",
+    "fr": "Quelle est la concentration, en mol/L, d’une solution contenant 36 g de C6H12O6 (masse molaire 180.16 g/mol) dans 250 mL ? (deux décimales)",
+    "en": "What is the concentration, in mol/L, of a solution containing 36 g of C6H12O6 (molar mass 180.16 g/mol) in 250 mL? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.80"
+  }
+}

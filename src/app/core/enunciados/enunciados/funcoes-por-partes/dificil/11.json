@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 1, f(x) = 1x + 2; se x ≥ 1, f(x) = 4x + -1. A função é contínua em x = 1? Responda 1 se sim e 0 se não.",
+    "fr": "Si x < 1, f(x) = 1x + 2 ; si x ≥ 1, f(x) = 4x + -1. La fonction est-elle continue en x = 1 ? Répondez 1 si oui et 0 si non.",
+    "en": "If x < 1, f(x) = 1x + 2; if x ≥ 1, f(x) = 4x + -1. Is the function continuous at x = 1? Answer 1 if yes and 0 if no."
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

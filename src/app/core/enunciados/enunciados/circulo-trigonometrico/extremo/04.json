@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor de sen {dados-calculo.a}° + cos {dados-calculo.b}°? (duas casas decimais)",
+    "fr": "Quelle est la valeur de sin {dados-calculo.a}° + cos {dados-calculo.b}° ? (deux décimales)",
+    "en": "What is the value of sin {dados-calculo.a}° + cos {dados-calculo.b}°? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "30",
+    "b": "120",
+    "total": "0.00"
+  }
+}

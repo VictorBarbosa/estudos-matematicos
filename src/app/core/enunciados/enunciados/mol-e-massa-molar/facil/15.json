@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa, em gramas, de 0.1 mol de ácido sulfúrico? (duas casas decimais)",
+    "fr": "Quelle est la masse, en grammes, de 0.1 mol de acide sulfurique ? (deux décimales)",
+    "en": "What is the mass, in grams, of 0.1 mol of sulfuric acid? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "9.81"
+  }
+}

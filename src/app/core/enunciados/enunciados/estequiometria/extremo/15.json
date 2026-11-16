@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação N₂ + 3H₂ → 2NH₃, cada mol de N₂ consome 3 mol de H₂. Partindo de 0.5 mol de N₂, quantos mols de H₂ são necessários? (duas casas decimais)",
+    "fr": "Dans la réaction N₂ + 3H₂ → 2NH₃, chaque mole de N₂ consomme 3 mol de H₂. En partant de 0.5 mol de N₂, combien de moles de H₂ faut-il ? (deux décimales)",
+    "en": "In the reaction N₂ + 3H₂ → 2NH₃, each mole of N₂ consumes 3 mol of H₂. Starting from 0.5 mol of N₂, how many moles of H₂ are needed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.50"
+  }
+}

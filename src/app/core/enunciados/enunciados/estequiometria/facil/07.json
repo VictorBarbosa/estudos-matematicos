@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação C + O₂ → CO₂, quantos mols de CO₂ se formam a partir de 3 mol de C? (duas casas decimais)",
+    "fr": "Dans la réaction C + O₂ → CO₂, combien de moles de CO₂ se forment à partir de 3 mol de C ? (deux décimales)",
+    "en": "In the reaction C + O₂ → CO₂, how many moles of CO₂ form from 3 mol of C? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

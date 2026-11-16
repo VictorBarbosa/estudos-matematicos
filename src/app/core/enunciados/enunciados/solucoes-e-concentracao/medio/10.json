@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Diluem-se 50 mL de uma solução 1 mol/L até o volume final de 250 mL. Qual é a nova concentração, em mol/L? (duas casas decimais)",
+    "fr": "On dilue 50 mL d’une solution 1 mol/L jusqu’au volume final de 250 mL. Quelle est la nouvelle concentration, en mol/L ? (deux décimales)",
+    "en": "You dilute 50 mL of a 1 mol/L solution to a final volume of 250 mL. What is the new concentration, in mol/L? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.20"
+  }
+}

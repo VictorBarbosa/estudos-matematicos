@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a componente y do produto vetorial a × b, com a = (0, 0, 1) e b = (1, 0, 0)?",
+    "fr": "Quelle est la composante y du produit vectoriel a × b, avec a = (0, 0, 1) et b = (1, 0, 0) ?",
+    "en": "What is the y-component of the cross product a × b, with a = (0, 0, 1) and b = (1, 0, 0)?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação CaCO₃ → CaO + CO₂, partindo de 200 g de CaCO₃, qual é o número de mols de CO₂ formado? (duas casas decimais)",
+    "fr": "Dans la réaction CaCO₃ → CaO + CO₂, à partir de 200 g de CaCO₃, quel est le nombre de moles de CO₂ formé ? (deux décimales)",
+    "en": "In the reaction CaCO₃ → CaO + CO₂, starting from 200 g of CaCO₃, what is the number of moles of CO₂ formed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

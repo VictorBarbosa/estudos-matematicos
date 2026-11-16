@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Num triângulo isósceles, cada ângulo da base mede {dados-calculo.k} vezes o ângulo do vértice. Quantos graus mede o ângulo do vértice?",
+    "fr": "Dans un triangle isocèle, chaque angle de la base vaut {dados-calculo.k} fois l’angle au sommet. Combien de degrés mesure l’angle au sommet ?",
+    "en": "In an isosceles triangle, each base angle is {dados-calculo.k} times the apex angle. How many degrees is the apex angle?"
+  },
+  "dados-calculo": {
+    "k": "2",
+    "total": "36"
+  }
+}

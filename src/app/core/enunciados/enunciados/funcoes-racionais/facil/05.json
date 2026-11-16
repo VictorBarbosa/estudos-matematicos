@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Em que valor de x está a assíntota vertical da função f(x) = 2/(x − -4)? (duas casas decimais)",
+    "fr": "En quelle valeur de x se trouve l’asymptote verticale de la fonction f(x) = 2/(x − -4) ? (deux décimales)",
+    "en": "At what value of x is the vertical asymptote of f(x) = 2/(x − -4)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-4.00"
+  }
+}

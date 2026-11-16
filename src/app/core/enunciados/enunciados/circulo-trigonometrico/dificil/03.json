@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um arco de {dados-calculo.radianos} radianos está em qual quadrante? Responda com 1, 2, 3 ou 4.",
+    "fr": "Un arc de {dados-calculo.radianos} radians se trouve dans quel quadrant ? Répondez par 1, 2, 3 ou 4.",
+    "en": "An arc of {dados-calculo.radianos} radians is in which quadrant? Answer with 1, 2, 3 or 4."
+  },
+  "dados-calculo": {
+    "radianos": "3.5",
+    "total": "3"
+  }
+}

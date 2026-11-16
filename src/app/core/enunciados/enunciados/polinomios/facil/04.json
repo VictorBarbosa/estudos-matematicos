@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Para P(x) = 2x² − 3x + 1, qual é o valor de P({dados-calculo.x})?",
+    "fr": "Pour P(x) = 2x² − 3x + 1, quelle est la valeur de P({dados-calculo.x}) ?",
+    "en": "For P(x) = 2x² − 3x + 1, what is the value of P({dados-calculo.x})?"
+  },
+  "dados-calculo": {
+    "x": "3",
+    "total": "10"
+  }
+}

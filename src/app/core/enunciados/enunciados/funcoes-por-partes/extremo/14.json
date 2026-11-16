@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O imposto é 0 até 2000, e depois 8% sobre o que excede 2000. Sobre uma renda de 4500, quanto é o imposto? (duas casas decimais)",
+    "fr": "L’impôt est nul jusqu’à 2000, puis de 8% sur ce qui dépasse 2000. Sur un revenu de 4500, quel est l’impôt ? (deux décimales)",
+    "en": "Tax is zero up to 2000, then 8% on the amount above 2000. On an income of 4500, how much is the tax? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "200.00"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Use o arco duplo para calcular cos {dados-calculo.a}°, sabendo que cos {dados-calculo.a}° = {dados-calculo.cosseno}. (duas casas decimais)",
+    "fr": "Utilisez l’angle double pour calculer cos {dados-calculo.a}°, sachant que cos {dados-calculo.a}° = {dados-calculo.cosseno}. (deux décimales)",
+    "en": "Use the double angle to calculate cos {dados-calculo.a}°, knowing that cos {dados-calculo.a}° = {dados-calculo.cosseno}. (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "30",
+    "cosseno": "0.87",
+    "total": "0.50"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um pai tem o triplo da idade do filho. Daqui a {dados-calculo.anos} anos terá o dobro. Quantos anos o filho tem hoje?",
+    "fr": "Un père a le triple de l’âge de son fils. Dans {dados-calculo.anos} ans il en aura le double. Quel âge le fils a-t-il aujourd’hui ?",
+    "en": "A father is three times his son’s age. In {dados-calculo.anos} years he will be twice as old. How old is the son today?"
+  },
+  "dados-calculo": {
+    "anos": "12",
+    "total": "12"
+  }
+}

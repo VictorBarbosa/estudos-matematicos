@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto de massa molar 180.16 g/mol contém 6 átomos de carbono por molécula. Quantas gramas de carbono há em 1 mol? (duas casas decimais)",
+    "fr": "Un composé de masse molaire 180.16 g/mol contient 6 atomes de carbone par molécule. Combien de grammes de carbone y a-t-il dans 1 mol ? (deux décimales)",
+    "en": "A compound of molar mass 180.16 g/mol contains 6 atoms of carbon per molecule. How many grams of carbon are in 1 mol? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "72.07"
+  }
+}

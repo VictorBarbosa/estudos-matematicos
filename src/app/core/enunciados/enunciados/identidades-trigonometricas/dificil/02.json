@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Simplifique sen(90° − θ) para θ agudo e informe o valor quando θ = {dados-calculo.graus}°. (duas casas decimais)",
+    "fr": "Simplifiez sin(90° − θ) pour θ aigu et indiquez la valeur lorsque θ = {dados-calculo.graus}°. (deux décimales)",
+    "en": "Simplify sin(90° − θ) for acute θ and give its value when θ = {dados-calculo.graus}°. (two decimal places)"
+  },
+  "dados-calculo": {
+    "graus": "35",
+    "total": "0.82"
+  }
+}

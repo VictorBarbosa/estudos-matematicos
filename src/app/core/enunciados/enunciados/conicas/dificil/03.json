@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma parábola tem foco em ({dados-calculo.f}, 0) e diretriz x = −{dados-calculo.f}. Qual é o parâmetro p dela? (duas casas decimais)",
+    "fr": "Une parabole a son foyer en ({dados-calculo.f}, 0) et pour directrice x = −{dados-calculo.f}. Quel est son paramètre p ? (deux décimales)",
+    "en": "A parabola has focus at ({dados-calculo.f}, 0) and directrix x = −{dados-calculo.f}. What is its parameter p? (two decimal places)"
+  },
+  "dados-calculo": {
+    "f": "3",
+    "total": "6.00"
+  }
+}

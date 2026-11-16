@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância do ponto P(0, 5, 0) ao plano 0x + 1y + 0z = 0? (duas casas decimais)",
+    "fr": "Quelle est la distance du point P(0, 5, 0) au plan 0x + 1y + 0z = 0 ? (deux décimales)",
+    "en": "What is the distance from point P(0, 5, 0) to the plane 0x + 1y + 0z = 0? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

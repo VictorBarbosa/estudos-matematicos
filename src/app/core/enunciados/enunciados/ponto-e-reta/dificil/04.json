@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é o coeficiente linear (onde corta o eixo y) da reta que passa por A({dados-calculo.ax}, {dados-calculo.ay}) e é perpendicular à reta de coeficiente angular {dados-calculo.m}?",
+    "fr": "Quel est le coefficient linéaire (où elle coupe l’axe y) de la droite passant par A({dados-calculo.ax}, {dados-calculo.ay}) et perpendiculaire à la droite de coefficient directeur {dados-calculo.m} ?",
+    "en": "What is the y-intercept of the line through A({dados-calculo.ax}, {dados-calculo.ay}) that is perpendicular to the line with slope {dados-calculo.m}?"
+  },
+  "dados-calculo": {
+    "ax": "2",
+    "ay": "1",
+    "m": "2",
+    "total": "2.00"
+  }
+}

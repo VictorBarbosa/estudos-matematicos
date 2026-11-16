@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para f(x) = |x| + 5, qual é o valor de f(3)?",
+    "fr": "Pour f(x) = |x| + 5, quelle est la valeur de f(3) ?",
+    "en": "For f(x) = |x| + 5, what is the value of f(3)?"
+  },
+  "dados-calculo": {
+    "total": "8"
+  }
+}

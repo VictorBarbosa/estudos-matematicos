@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma substância tem meia-vida de 4 anos. Começando com 200 g, quantos gramas restam após 4 anos? (duas casas decimais)",
+    "fr": "Une substance a une demi-vie de 4 ans. En partant de 200 g, combien de grammes restent après 4 ans ? (deux décimales)",
+    "en": "A substance has a half-life of 4 years. Starting with 200 g, how many grams remain after 4 years? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "100.00"
+  }
+}

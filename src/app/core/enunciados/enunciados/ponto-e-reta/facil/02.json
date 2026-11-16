@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância entre os pontos A({dados-calculo.ax}, {dados-calculo.ay}) e B({dados-calculo.bx}, {dados-calculo.by})? (duas casas decimais)",
+    "fr": "Quelle est la distance entre les points A({dados-calculo.ax}, {dados-calculo.ay}) et B({dados-calculo.bx}, {dados-calculo.by}) ? (deux décimales)",
+    "en": "What is the distance between points A({dados-calculo.ax}, {dados-calculo.ay}) and B({dados-calculo.bx}, {dados-calculo.by})? (two decimal places)"
+  },
+  "dados-calculo": {
+    "ax": "0",
+    "ay": "0",
+    "bx": "6",
+    "by": "8",
+    "total": "10.00"
+  }
+}

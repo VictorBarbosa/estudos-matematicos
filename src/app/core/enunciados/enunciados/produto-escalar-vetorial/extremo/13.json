@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o ângulo entre os vetores (6, 8) e (8, -6), em graus? (duas casas decimais)",
+    "fr": "Quel est l’angle entre les vecteurs (6, 8) et (8, -6), en degrés ? (deux décimales)",
+    "en": "What is the angle between the vectors (6, 8) and (8, -6), in degrees? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "90.00"
+  }
+}

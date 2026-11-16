@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um bolo foi cortado em {dados-calculo.fatias} fatias iguais e {dados-calculo.servidas} foram servidas. Que fração do bolo sobrou?",
+    "fr": "Un gâteau a été coupé en {dados-calculo.fatias} parts égales et {dados-calculo.servidas} ont été servies. Quelle fraction du gâteau reste-t-il ?",
+    "en": "A cake was cut into {dados-calculo.fatias} equal slices and {dados-calculo.servidas} were served. What fraction of the cake is left?"
+  },
+  "dados-calculo": {
+    "fatias": "8",
+    "servidas": "5",
+    "total": "3/8"
+  }
+}

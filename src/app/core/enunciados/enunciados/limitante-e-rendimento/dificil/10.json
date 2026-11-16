@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O rendimento de uma reação é de 50%. Para obter 25 g de produto, quantos gramas do produto TEÓRICO são necessários? (duas casas decimais)",
+    "fr": "Le rendement d’une réaction est de 50%. Pour obtenir 25 g de produit, combien de grammes du produit THÉORIQUE faut-il ? (deux décimales)",
+    "en": "The yield of a reaction is 50%. To obtain 25 g of product, how many grams of the THEORETICAL product are needed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "50.00"
+  }
+}

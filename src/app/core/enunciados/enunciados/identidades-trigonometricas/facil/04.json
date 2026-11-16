@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Calcule sen({dados-calculo.a}° + {dados-calculo.b}°) usando a fórmula da soma de arcos. (duas casas decimais)",
+    "fr": "Calculez sin({dados-calculo.a}° + {dados-calculo.b}°) en utilisant la formule d’addition des arcs. (deux décimales)",
+    "en": "Calculate sen({dados-calculo.a}° + {dados-calculo.b}°) using the angle-sum formula. (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "30",
+    "b": "45",
+    "total": "0.97"
+  }
+}

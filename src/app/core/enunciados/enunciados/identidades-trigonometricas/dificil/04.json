@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Se tg θ = {dados-calculo.tangente}, qual é o valor de tg(2θ)? (duas casas decimais)",
+    "fr": "Si tan θ = {dados-calculo.tangente}, quelle est la valeur de tan(2θ) ? (deux décimales)",
+    "en": "If tan θ = {dados-calculo.tangente}, what is tan(2θ)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "tangente": "0.5",
+    "total": "1.33"
+  }
+}

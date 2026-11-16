@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um projétil segue x(t) = {dados-calculo.v0}t e y(t) = {dados-calculo.v0}t − {dados-calculo.g}t². Qual é a altura máxima atingida? (duas casas decimais)",
+    "fr": "Un projectile suit x(t) = {dados-calculo.v0}t et y(t) = {dados-calculo.v0}t − {dados-calculo.g}t². Quelle est la hauteur maximale atteinte ? (deux décimales)",
+    "en": "A projectile follows x(t) = {dados-calculo.v0}t and y(t) = {dados-calculo.v0}t − {dados-calculo.g}t². What is the maximum height reached? (two decimal places)"
+  },
+  "dados-calculo": {
+    "v0": "20",
+    "g": "5",
+    "total": "20.00"
+  }
+}

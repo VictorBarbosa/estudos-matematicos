@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o ângulo entre o vetor n = (2, 0, 0) e o vetor m = (0, 0, 2), em graus? (duas casas decimais)",
+    "fr": "Quel est l’angle entre le vecteur n = (2, 0, 0) et le vecteur m = (0, 0, 2), en degrés ? (deux décimales)",
+    "en": "What is the angle between the vector n = (2, 0, 0) and the vector m = (0, 0, 2), in degrees? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "90.00"
+  }
+}

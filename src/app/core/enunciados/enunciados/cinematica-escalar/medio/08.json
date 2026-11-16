@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo a 40 m/s freia com desaceleração de 8 m/s². Quantos metros percorre até parar? (duas casas decimais)",
+    "fr": "Un corps à 40 m/s freine avec une décélération de 8 m/s². Combien de mètres parcourt-il jusqu’à l’arrêt ? (deux décimales)",
+    "en": "A body at 40 m/s brakes with a deceleration of 8 m/s². How many metres does it cover before stopping? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "100.00"
+  }
+}

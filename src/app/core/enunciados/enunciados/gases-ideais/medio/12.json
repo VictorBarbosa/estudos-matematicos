@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um gás ocupa 1 L a 3 atm. A temperatura constante, qual é o volume quando a pressão passa a 1 atm? (duas casas decimais)",
+    "fr": "Un gaz occupe 1 L à 3 atm. À température constante, quel est le volume lorsque la pression passe à 1 atm ? (deux décimales)",
+    "en": "A gas occupies 1 L at 3 atm. At constant temperature, what is the volume when the pressure becomes 1 atm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

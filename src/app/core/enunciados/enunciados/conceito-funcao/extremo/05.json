@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Considere f(x) = √(x − -2). Qual é o MENOR valor de x que pertence ao domínio?",
+    "fr": "Considérez f(x) = √(x − -2). Quelle est la PLUS PETITE valeur de x qui appartient au domaine ?",
+    "en": "Consider f(x) = √(x − -2). What is the SMALLEST value of x that belongs to the domain?"
+  },
+  "dados-calculo": {
+    "total": "-2"
+  }
+}

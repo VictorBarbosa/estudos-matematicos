@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a parte imaginária do produto (1 + 1i) por (1 + 1i)?",
+    "fr": "Quelle est la partie imaginaire du produit (1 + 1i) par (1 + 1i) ?",
+    "en": "What is the imaginary part of the product (1 + 1i) by (1 + 1i)?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma praça quadrada tem {dados-calculo.a} m de lado. Quantos metros percorre quem a atravessa em linha reta de um canto ao canto oposto? (duas casas decimais)",
+    "fr": "Une place carrée a {dados-calculo.a} m de côté. Combien de mètres parcourt celui qui la traverse en ligne droite d’un coin au coin opposé ? (deux décimales)",
+    "en": "A square plaza is {dados-calculo.a} m on a side. How many metres does someone cover walking straight from one corner to the opposite one? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "50",
+    "total": "70.71"
+  }
+}

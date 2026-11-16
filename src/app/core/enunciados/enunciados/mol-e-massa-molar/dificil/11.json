@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra tem 0.25 mol de CaCO3. Quantas gramas ela pesa? (duas casas decimais)",
+    "fr": "Un échantillon contient 0.25 mol de CaCO3. Combien de grammes pèse-t-il ? (deux décimales)",
+    "en": "A sample contains 0.25 mol of CaCO3. How many grams does it weigh? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "25.02"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra tem 1.5 mol de H2SO4. Quantas gramas ela pesa? (duas casas decimais)",
+    "fr": "Un échantillon contient 1.5 mol de H2SO4. Combien de grammes pèse-t-il ? (deux décimales)",
+    "en": "A sample contains 1.5 mol of H2SO4. How many grams does it weigh? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "147.12"
+  }
+}

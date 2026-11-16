@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma substância tem meia-vida de 10 anos. Começando com 80 g, quantos gramas restam após 30 anos? (duas casas decimais)",
+    "fr": "Une substance a une demi-vie de 10 ans. En partant de 80 g, combien de grammes restent après 30 ans ? (deux décimales)",
+    "en": "A substance has a half-life of 10 years. Starting with 80 g, how many grams remain after 30 years? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

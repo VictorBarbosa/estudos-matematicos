@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 2^(2x) = 16 e informe x. Dê a fração irredutível.",
+    "fr": "Résolvez l’équation 2^(2x) = 16 et indiquez x. Donnez la fraction irréductible.",
+    "en": "Solve 2^(2x) = 16 and give x. Give the irreducible fraction."
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

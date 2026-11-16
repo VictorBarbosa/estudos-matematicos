@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Duas polias ligadas por correia têm raios 2 cm e 4 cm. Se a menor gira a 30 rad/s, qual é a velocidade angular da maior? (duas casas decimais)",
+    "fr": "Deux poulies reliées par une courroie ont des rayons 2 cm et 4 cm. Si la plus petite tourne à 30 rad/s, quelle est la vitesse angulaire de la plus grande ? (deux décimales)",
+    "en": "Two pulleys linked by a belt have radii 2 cm and 4 cm. If the smaller spins at 30 rad/s, what is the angular velocity of the larger? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "15.00"
+  }
+}

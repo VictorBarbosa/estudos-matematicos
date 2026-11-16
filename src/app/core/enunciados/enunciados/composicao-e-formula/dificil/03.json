@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A análise de um composto deu 52.94% de alumínio e o resto de oxigênio, com massa molar 101.96 g/mol. Qual é a massa de alumínio em 1 mol, em gramas? (duas casas decimais)",
+    "fr": "L’analyse d’un composé a donné 52.94% de aluminium et le reste d’oxygène, avec une masse molaire de 101.96 g/mol. Quelle est la masse de aluminium dans 1 mol, en grammes ? (deux décimales)",
+    "en": "Analysis of a compound gave 52.94% aluminium and the rest oxygen, with molar mass 101.96 g/mol. What is the mass of aluminium in 1 mol, in grams? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "53.98"
+  }
+}

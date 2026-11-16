@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma solução tem 4 mol/L de hidróxido de sódio. Quantos mililitros dela contêm 2 mol do soluto? (duas casas decimais)",
+    "fr": "Une solution contient 4 mol/L de hydroxyde de sodium. Combien de millilitres en contiennent 2 mol du soluté ? (deux décimales)",
+    "en": "A solution contains 4 mol/L of sodium hydroxide. How many millilitres of it contain 2 mol of solute? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "500.00"
+  }
+}

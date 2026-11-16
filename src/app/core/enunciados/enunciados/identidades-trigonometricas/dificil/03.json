@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Calcule tg({dados-calculo.a}° + {dados-calculo.b}°) usando a fórmula da soma. (duas casas decimais)",
+    "fr": "Calculez tan({dados-calculo.a}° + {dados-calculo.b}°) en utilisant la formule de la somme. (deux décimales)",
+    "en": "Calculate tan({dados-calculo.a}° + {dados-calculo.b}°) using the sum formula. (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "30",
+    "b": "45",
+    "total": "3.73"
+  }
+}

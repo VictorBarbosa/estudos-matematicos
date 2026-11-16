@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do composto iônico formado por sódio e enxofre?",
+    "fr": "Quelle est la formule du composé ionique formé par sodium et soufre ?",
+    "en": "What is the formula of the ionic compound formed by sodium and sulfur?"
+  },
+  "dados-calculo": {
+    "total": "Na2S"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor de cos {dados-calculo.graus}°? (duas casas decimais)",
+    "fr": "Quelle est la valeur de cos {dados-calculo.graus}° ? (deux décimales)",
+    "en": "What is the value of cos {dados-calculo.graus}°? (two decimal places)"
+  },
+  "dados-calculo": {
+    "graus": "270",
+    "total": "0.00"
+  }
+}

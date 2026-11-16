@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um espelho circular tem {dados-calculo.raio} cm de raio. Quantos centímetros quadrados de área ele tem? (duas casas decimais)",
+    "fr": "Un miroir circulaire a un rayon de {dados-calculo.raio} cm. Combien de centimètres carrés d’aire a-t-il ? (deux décimales)",
+    "en": "A round mirror has a radius of {dados-calculo.raio} cm. How many square centimetres is its area? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "15",
+    "total": "706.86"
+  }
+}

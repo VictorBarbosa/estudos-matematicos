@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Calcule tg {dados-calculo.graus}°, sabendo que esse ângulo está no 3º quadrante e que a tangente é positiva. (duas casas decimais)",
+    "fr": "Calculez tan {dados-calculo.graus}°, sachant que cet angle est dans le 3e quadrant et que la tangente est positive. (deux décimales)",
+    "en": "Calculate tan {dados-calculo.graus}°, knowing that this angle is in the 3rd quadrant and the tangent is positive. (two decimal places)"
+  },
+  "dados-calculo": {
+    "graus": "210",
+    "total": "0.58"
+  }
+}

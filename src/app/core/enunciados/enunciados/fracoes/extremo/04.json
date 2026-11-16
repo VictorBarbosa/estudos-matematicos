@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Numa turma de {dados-calculo.alunos} alunos, {dados-calculo.meninos} são meninos. Que fração irredutível da turma isso representa?",
+    "fr": "Dans une classe de {dados-calculo.alunos} élèves, {dados-calculo.meninos} sont des garçons. Quelle fraction irréductible de la classe cela représente-t-il ?",
+    "en": "In a class of {dados-calculo.alunos} pupils, {dados-calculo.meninos} are boys. What irreducible fraction of the class is that?"
+  },
+  "dados-calculo": {
+    "alunos": "84",
+    "meninos": "36",
+    "total": "3/7"
+  }
+}

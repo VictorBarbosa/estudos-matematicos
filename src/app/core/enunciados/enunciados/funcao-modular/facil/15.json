@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para f(x) = |x| + 9, qual é o valor de f(-9)?",
+    "fr": "Pour f(x) = |x| + 9, quelle est la valeur de f(-9) ?",
+    "en": "For f(x) = |x| + 9, what is the value of f(-9)?"
+  },
+  "dados-calculo": {
+    "total": "18"
+  }
+}

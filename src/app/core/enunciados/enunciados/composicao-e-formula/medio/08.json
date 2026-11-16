@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a porcentagem em massa de sódio no hidróxido de sódio, de fórmula NaOH? (em %, duas casas decimais)",
+    "fr": "Quel est le pourcentage en masse de sodium dans hydroxyde de sodium, de formule NaOH ? (en %, deux décimales)",
+    "en": "What is the mass percentage of sodium in sodium hydroxide, formula NaOH? (in %, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "57.48"
+  }
+}

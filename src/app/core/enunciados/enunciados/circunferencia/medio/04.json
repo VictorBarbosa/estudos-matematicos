@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A circunferência tem equação x² + y² − {dados-calculo.doisA}x + {dados-calculo.doisB}y = 0. Qual é o raio dela?",
+    "fr": "Le cercle a pour équation x² + y² − {dados-calculo.doisA}x + {dados-calculo.doisB}y = 0. Quel est son rayon ?",
+    "en": "The circle has equation x² + y² − {dados-calculo.doisA}x + {dados-calculo.doisB}y = 0. What is its radius?"
+  },
+  "dados-calculo": {
+    "doisA": "6",
+    "doisB": "8",
+    "total": "5"
+  }
+}

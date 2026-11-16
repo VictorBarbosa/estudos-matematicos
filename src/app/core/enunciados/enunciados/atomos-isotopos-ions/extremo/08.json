@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A massa atômica do silício é 28.09 u, e ele tem dois isótopos: um de massa 28 u e outro de massa 30 u. Qual é a porcentagem do isótopo mais LEVE? (duas casas decimais)",
+    "fr": "La masse atomique du silicium est 28.09 u, et il a deux isotopes : un de masse 28 u et un autre de masse 30 u. Quel est le pourcentage de l’isotope le plus LÉGER ? (deux décimales)",
+    "en": "The atomic mass of silicon is 28.09 u, and it has two isotopes: one of mass 28 u and another of mass 30 u. What percentage is the LIGHTER isotope? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "95.50"
+  }
+}

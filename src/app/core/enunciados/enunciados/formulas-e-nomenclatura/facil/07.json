@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do sulfeto de cálcio, composto por cálcio e enxofre?",
+    "fr": "Quelle est la formule du sulfure de calcium, composé de calcium et soufre ?",
+    "en": "What is the formula of calcium sulfide, made of calcium and sulfur?"
+  },
+  "dados-calculo": {
+    "total": "CaS"
+  }
+}

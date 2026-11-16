@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "g(x) = −f(x) + 8. Se f(4) = 5, qual é g(4)?",
+    "fr": "g(x) = −f(x) + 8. Si f(4) = 5, quelle est g(4) ?",
+    "en": "g(x) = −f(x) + 8. If f(4) = 5, what is g(4)?"
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

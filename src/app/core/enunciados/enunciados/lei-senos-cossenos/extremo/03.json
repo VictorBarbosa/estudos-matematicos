@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um triângulo tem lados {dados-calculo.a} m e {dados-calculo.b} m e a área dele é de {dados-calculo.area} m². Qual é o ângulo entre esses dois lados, em graus? (duas casas decimais)",
+    "fr": "Un triangle a des côtés de {dados-calculo.a} m et {dados-calculo.b} m et son aire est de {dados-calculo.area} m². Quel est l’angle entre ces deux côtés, en degrés ? (deux décimales)",
+    "en": "A triangle has sides {dados-calculo.a} m and {dados-calculo.b} m and its area is {dados-calculo.area} m². What is the angle between those two sides, in degrees? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "10",
+    "b": "12",
+    "area": "30",
+    "total": "30.00"
+  }
+}

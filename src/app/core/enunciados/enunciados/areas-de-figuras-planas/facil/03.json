@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um terreno triangular tem base de {dados-calculo.base} m e altura de {dados-calculo.altura} m. Quantos metros quadrados ele tem?",
+    "fr": "Un terrain triangulaire a une base de {dados-calculo.base} m et une hauteur de {dados-calculo.altura} m. Combien de mètres carrés fait-il ?",
+    "en": "A triangular plot has a base of {dados-calculo.base} m and a height of {dados-calculo.altura} m. How many square metres is it?"
+  },
+  "dados-calculo": {
+    "base": "10",
+    "altura": "7",
+    "total": "35"
+  }
+}

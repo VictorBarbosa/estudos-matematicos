@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma elipse tem equação x²/{dados-calculo.a2} + y²/{dados-calculo.b2} = 1. Qual é o semieixo MAIOR?",
+    "fr": "Une ellipse a pour équation x²/{dados-calculo.a2} + y²/{dados-calculo.b2} = 1. Quel est le demi-grand axe ?",
+    "en": "An ellipse has equation x²/{dados-calculo.a2} + y²/{dados-calculo.b2} = 1. What is the semi-major axis?"
+  },
+  "dados-calculo": {
+    "a2": "25",
+    "b2": "9",
+    "total": "5"
+  }
+}

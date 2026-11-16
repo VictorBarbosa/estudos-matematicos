@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma reação poderia dar 200 g de produto, e na bancada saíram 150 g. Qual é o rendimento percentual? (duas casas decimais)",
+    "fr": "Une réaction pourrait donner 200 g de produit, et au laboratoire on en a obtenu 150 g. Quel est le rendement en pourcentage ? (deux décimales)",
+    "en": "A reaction could give 200 g of product, and in the lab 150 g came out. What is the percentage yield? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "75.00"
+  }
+}

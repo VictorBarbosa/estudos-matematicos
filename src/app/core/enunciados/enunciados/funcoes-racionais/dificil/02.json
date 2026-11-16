@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O denominador é (x − 2)(x − 5). Em que valor de x está a assíntota vertical MENOR? (duas casas decimais)",
+    "fr": "Le dénominateur est (x − 2)(x − 5). En quelle valeur de x se trouve la PLUS PETITE asymptote verticale ? (deux décimales)",
+    "en": "The denominator is (x − 2)(x − 5). At what value of x is the SMALLER vertical asymptote? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

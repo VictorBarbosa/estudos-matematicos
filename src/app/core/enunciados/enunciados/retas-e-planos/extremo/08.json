@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para que valor de k os vetores (1, 0, 0), (0, 1, 0) e (1, 1, k) são linearmente dependentes?",
+    "fr": "Pour quelle valeur de k les vecteurs (1, 0, 0), (0, 1, 0) et (1, 1, k) sont-ils linéairement dépendants ?",
+    "en": "For what value of k are the vectors (1, 0, 0), (0, 1, 0) and (1, 1, k) linearly dependent?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

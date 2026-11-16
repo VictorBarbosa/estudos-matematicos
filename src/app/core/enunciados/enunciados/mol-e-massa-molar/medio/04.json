@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa molar do hidróxido de sódio? A fórmula é NaOH. (duas casas decimais)",
+    "fr": "Quelle est la masse molaire du hydroxyde de sodium ? La formule est NaOH. (deux décimales)",
+    "en": "What is the molar mass of sodium hydroxide? The formula is NaOH. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "40.00"
+  }
+}

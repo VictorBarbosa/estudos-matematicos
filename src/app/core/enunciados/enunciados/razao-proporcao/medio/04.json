@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma obra é feita por {dados-calculo.operarios} operários em {dados-calculo.dias} dias. Mantendo o mesmo ritmo, em quantos dias {dados-calculo.operarios2} operários fariam a mesma obra?",
+    "fr": "Un ouvrage est réalisé par {dados-calculo.operarios} ouvriers en {dados-calculo.dias} jours. Au même rythme, en combien de jours {dados-calculo.operarios2} ouvriers feraient-ils le même ouvrage ?",
+    "en": "A job is done by {dados-calculo.operarios} workers in {dados-calculo.dias} days. At the same pace, in how many days would {dados-calculo.operarios2} workers do the same job?"
+  },
+  "dados-calculo": {
+    "operarios": "12",
+    "dias": "15",
+    "operarios2": "18",
+    "total": "10"
+  }
+}

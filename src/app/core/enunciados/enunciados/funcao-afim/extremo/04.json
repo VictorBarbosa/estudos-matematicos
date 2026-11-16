@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Duas funções afins se cruzam: f(x) = 4x + 2 e g(x) = 2x + 8. Qual é a abscissa do ponto de encontro?",
+    "fr": "Deux fonctions affines se croisent : f(x) = 4x + 2 et g(x) = 2x + 8. Quelle est l’abscisse du point de rencontre ?",
+    "en": "Two linear functions cross: f(x) = 4x + 2 and g(x) = 2x + 8. What is the x-coordinate of their meeting point?"
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

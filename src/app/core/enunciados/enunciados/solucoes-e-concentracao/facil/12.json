@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dissolvem-se 18 g de glicose, de massa molar 180.16 g/mol, em água até completar 500 mL. Qual é a concentração, em mol/L? (duas casas decimais)",
+    "fr": "On dissout 18 g de glucose, de masse molaire 180.16 g/mol, dans de l’eau jusqu’à compléter 500 mL. Quelle est la concentration, en mol/L ? (deux décimales)",
+    "en": "You dissolve 18 g of glucose, molar mass 180.16 g/mol, in water up to 500 mL. What is the concentration, in mol/L? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.20"
+  }
+}

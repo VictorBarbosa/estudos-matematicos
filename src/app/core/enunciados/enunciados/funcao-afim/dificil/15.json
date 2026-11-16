@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função afim tem taxa de variação 2 e f(0) = 5. Qual é o valor de f(10)?",
+    "fr": "La fonction affine a un taux de variation 2 et f(0) = 5. Quelle est la valeur de f(10) ?",
+    "en": "The linear function has rate of change 2 and f(0) = 5. What is the value of f(10)?"
+  },
+  "dados-calculo": {
+    "total": "25"
+  }
+}

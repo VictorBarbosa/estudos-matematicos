@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é o resto da divisão de x⁴ − 1 por (x + {dados-calculo.raiz})?",
+    "fr": "Quel est le reste de la division de x⁴ − 1 par (x + {dados-calculo.raiz}) ?",
+    "en": "What is the remainder of dividing x⁴ − 1 by (x + {dados-calculo.raiz})?"
+  },
+  "dados-calculo": {
+    "raiz": "1",
+    "total": "0"
+  }
+}

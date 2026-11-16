@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que massa de gás carbônico (massa molar 44.01 g/mol) há em 44.8 L desse gás a 1 atm e 0 °C? (em gramas, duas casas decimais)",
+    "fr": "Quelle masse de dioxyde de carbone (masse molaire 44.01 g/mol) y a-t-il dans 44.8 L de ce gaz à 1 atm et 0 °C ? (en grammes, deux décimales)",
+    "en": "What mass of carbon dioxide (molar mass 44.01 g/mol) is there in 44.8 L of this gas at 1 atm and 0 °C? (in grams, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "87.92"
+  }
+}

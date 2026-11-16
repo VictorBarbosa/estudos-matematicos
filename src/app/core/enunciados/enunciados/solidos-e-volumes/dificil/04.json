@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um reservatório cilíndrico de raio {dados-calculo.raio} m deve comportar {dados-calculo.volume} m³. Quantos metros de altura ele precisa ter? (duas casas decimais)",
+    "fr": "Un réservoir cylindrique de rayon {dados-calculo.raio} m doit contenir {dados-calculo.volume} m³. Combien de mètres de hauteur doit-il avoir ? (deux décimales)",
+    "en": "A cylindrical tank of radius {dados-calculo.raio} m must hold {dados-calculo.volume} m³. How many metres tall must it be? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "2",
+    "volume": "100",
+    "total": "7.96"
+  }
+}

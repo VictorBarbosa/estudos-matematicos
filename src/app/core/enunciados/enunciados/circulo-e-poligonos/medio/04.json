@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma janela tem a forma de semicírculo de raio {dados-calculo.raio} m. Quantos metros quadrados de vidro ela leva? (duas casas decimais)",
+    "fr": "Une fenêtre a la forme d’un demi-cercle de rayon {dados-calculo.raio} m. Combien de mètres carrés de verre faut-il ? (deux décimales)",
+    "en": "A window is shaped like a semicircle of radius {dados-calculo.raio} m. How many square metres of glass does it need? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "2",
+    "total": "6.28"
+  }
+}

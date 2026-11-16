@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o logaritmo: log_2(8).",
+    "fr": "Calculez le logarithme : log_2(8).",
+    "en": "Calculate the logarithm: log_2(8)."
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

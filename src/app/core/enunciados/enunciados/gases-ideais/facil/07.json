@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos mols de gás há num recipiente de 10 L, a 2 atm e 27 °C? (duas casas decimais)",
+    "fr": "Combien de moles de gaz y a-t-il dans un récipient de 10 L, à 2 atm et 27 °C ? (deux décimales)",
+    "en": "How many moles of gas are there in a 10 L vessel at 2 atm and 27 °C? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.81"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um gás a 200 K ocupa 5 L. A pressão constante, qual é o volume a 400 K? (duas casas decimais)",
+    "fr": "Un gaz à 200 K occupe 5 L. À pression constante, quel est le volume à 400 K ? (deux décimales)",
+    "en": "A gas at 200 K occupies 5 L. At constant pressure, what is the volume at 400 K? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

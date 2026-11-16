@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que massa de nitrato de sódio, massa molar 84.99 g/mol, é preciso para preparar 500 mL de solução a 0.1 mol/L? (em gramas, duas casas decimais)",
+    "fr": "Quelle masse de nitrate de sodium, masse molaire 84.99 g/mol, faut-il pour préparer 500 mL de solution à 0.1 mol/L ? (en grammes, deux décimales)",
+    "en": "What mass of sodium nitrate, molar mass 84.99 g/mol, is needed to prepare 500 mL of a 0.1 mol/L solution? (in grams, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.25"
+  }
+}

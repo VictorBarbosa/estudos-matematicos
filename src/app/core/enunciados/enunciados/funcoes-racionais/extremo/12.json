@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função f(x) = (x² + 2x + 1)/(x + 1) tem assíntota oblíqua y = x + m. Qual é o valor de m? (duas casas decimais)",
+    "fr": "La fonction f(x) = (x² + 2x + 1)/(x + 1) a pour asymptote oblique y = x + m. Quelle est la valeur de m ? (deux décimales)",
+    "en": "The function f(x) = (x² + 2x + 1)/(x + 1) has a slant asymptote y = x + m. What is the value of m? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

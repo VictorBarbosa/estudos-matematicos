@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Numa planta em escala 1:200, uma parede mede {dados-calculo.desenhado} cm. Quantos centímetros ela mede na obra?",
+    "fr": "Sur un plan à l’échelle 1:200, un mur mesure {dados-calculo.desenhado} cm. Combien de centimètres mesure-t-il sur le chantier ?",
+    "en": "On a 1:200 scale drawing a wall measures {dados-calculo.desenhado} cm. How many centimetres is it on site?"
+  },
+  "dados-calculo": {
+    "desenhado": "5",
+    "total": "1000"
+  }
+}

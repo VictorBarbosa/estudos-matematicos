@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos átomos de hidrogênio há do lado ESQUERDO da equação C₃H₈ + O₂ → CO₂ + H₂O, quando ela está balanceada com os menores inteiros?",
+    "fr": "Combien d’atomes d’hydrogène y a-t-il du côté GAUCHE de l’équation C₃H₈ + O₂ → CO₂ + H₂O, lorsqu’elle est équilibrée avec les plus petits entiers ?",
+    "en": "How many hydrogen atoms are on the LEFT side of the equation C₃H₈ + O₂ → CO₂ + H₂O when it is balanced with the smallest integers?"
+  },
+  "dados-calculo": {
+    "total": "8"
+  }
+}

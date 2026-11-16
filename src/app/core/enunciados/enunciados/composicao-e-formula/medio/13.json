@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto tem 60.66% em massa de cloro. Em 58.44 g do composto, quantos gramas de cloro existem? (duas casas decimais)",
+    "fr": "Un composé contient 60.66% en masse de chlore. Dans 58.44 g du composé, combien de grammes de chlore y a-t-il ? (deux décimales)",
+    "en": "A compound is 60.66% by mass chlorine. In 58.44 g of the compound, how many grams of chlorine are there? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "35.45"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A parábola y = (x − 1)² + 7 tem vértice em que ponto? Informe a ORDENADA do vértice.",
+    "fr": "La parabole y = (x − 1)² + 7 a son sommet en quel point ? Indiquez l’ORDONNÉE du sommet.",
+    "en": "The parabola y = (x − 1)² + 7 has its vertex at what point? Give the y-coordinate of the vertex."
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

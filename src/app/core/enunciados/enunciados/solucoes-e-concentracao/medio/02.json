@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma solução tem 2 mol/L de sal de cozinha. Quantos mililitros dela contêm 0.5 mol do soluto? (duas casas decimais)",
+    "fr": "Une solution contient 2 mol/L de sel de cuisine. Combien de millilitres en contiennent 0.5 mol du soluté ? (deux décimales)",
+    "en": "A solution contains 2 mol/L of table salt. How many millilitres of it contain 0.5 mol of solute? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "250.00"
+  }
+}

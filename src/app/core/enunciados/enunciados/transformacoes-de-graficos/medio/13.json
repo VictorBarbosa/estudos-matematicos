@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "g(x) = 4·f(x). Se f(4) = 0, qual é g(4)?",
+    "fr": "g(x) = 4·f(x). Si f(4) = 0, quelle est g(4) ?",
+    "en": "g(x) = 4·f(x). If f(4) = 0, what is g(4)?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "enunciado": {
+    "br": "Uma sala retangular de {dados-calculo.comprimento} m por {dados-calculo.largura} m tem pé-direito de {dados-calculo.altura} m, uma porta de {dados-calculo.porta} m² e duas janelas de {dados-calculo.janela} m² cada. Quantos metros quadrados de parede sobram para pintar?",
+    "fr": "Une salle rectangulaire de {dados-calculo.comprimento} m sur {dados-calculo.largura} m a une hauteur sous plafond de {dados-calculo.altura} m, une porte de {dados-calculo.porta} m² et deux fenêtres de {dados-calculo.janela} m² chacune. Combien de mètres carrés de mur reste-t-il à peindre ?",
+    "en": "A rectangular room {dados-calculo.comprimento} m by {dados-calculo.largura} m has a ceiling height of {dados-calculo.altura} m, one door of {dados-calculo.porta} m² and two windows of {dados-calculo.janela} m² each. How many square metres of wall remain to be painted?"
+  },
+  "dados-calculo": {
+    "comprimento": "5",
+    "largura": "4",
+    "altura": "2.8",
+    "porta": "1.8",
+    "janela": "1.5",
+    "total": "45.60"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 5^(x+1) = 25 e informe x.",
+    "fr": "Résolvez l’équation 5^(x+1) = 25 et indiquez x.",
+    "en": "Solve 5^(x+1) = 25 and give x."
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

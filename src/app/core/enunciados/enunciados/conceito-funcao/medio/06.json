@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o MENOR valor que a função f(x) = (x − 5)² + 1 pode assumir?",
+    "fr": "Quelle est la PLUS PETITE valeur que la fonction f(x) = (x − 5)² + 1 peut prendre ?",
+    "en": "What is the SMALLEST value the function f(x) = (x − 5)² + 1 can take?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um vitral é um polígono regular de {dados-calculo.n} lados. Quantos graus mede cada ângulo externo desse polígono?",
+    "fr": "Un vitrail est un polygone régulier de {dados-calculo.n} côtés. Combien de degrés mesure chaque angle extérieur de ce polygone ?",
+    "en": "A stained-glass window is a regular polygon with {dados-calculo.n} sides. How many degrees is each exterior angle of that polygon?"
+  },
+  "dados-calculo": {
+    "n": "15",
+    "total": "24"
+  }
+}

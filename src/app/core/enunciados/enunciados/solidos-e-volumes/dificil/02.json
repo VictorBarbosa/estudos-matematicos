@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma tenda tem a forma de pirâmide de base quadrada, com lado {dados-calculo.lado} m e altura {dados-calculo.altura} m. Quantos metros cúbicos de ar cabem dentro dela? (duas casas decimais)",
+    "fr": "Une tente a la forme d’une pyramide à base carrée, de côté {dados-calculo.lado} m et de hauteur {dados-calculo.altura} m. Combien de mètres cubes d’air contient-elle ? (deux décimales)",
+    "en": "A tent is shaped like a pyramid with a square base, side {dados-calculo.lado} m, and height {dados-calculo.altura} m. How many cubic metres of air fit inside? (two decimal places)"
+  },
+  "dados-calculo": {
+    "lado": "6",
+    "altura": "4",
+    "total": "48.00"
+  }
+}

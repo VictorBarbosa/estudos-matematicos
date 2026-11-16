@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A curva polar r = {dados-calculo.k}cos θ é uma circunferência. Qual é o diâmetro dela?",
+    "fr": "La courbe polaire r = {dados-calculo.k}cos θ est un cercle. Quel est son diamètre ?",
+    "en": "The polar curve r = {dados-calculo.k}cos θ is a circle. What is its diameter?"
+  },
+  "dados-calculo": {
+    "k": "8",
+    "total": "8"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto tem fórmula mínima C2H3 e massa molar 54.09 g/mol. Qual é o número de unidades da fórmula mínima por molécula?",
+    "fr": "Un composé a pour formule minimale C2H3 et une masse molaire de 54.09 g/mol. Quel est le nombre d’unités de la formule minimale par molécule ?",
+    "en": "A compound has empirical formula C2H3 and molar mass 54.09 g/mol. How many empirical units are there per molecule?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma receita pede {dados-calculo.xicaras} de xícara de açúcar. Fazendo metade da receita, que fração de xícara é necessária?",
+    "fr": "Une recette demande {dados-calculo.xicaras} de tasse de sucre. En faisant la moitié de la recette, quelle fraction de tasse faut-il ?",
+    "en": "A recipe calls for {dados-calculo.xicaras} of a cup of sugar. Making half the recipe, what fraction of a cup is needed?"
+  },
+  "dados-calculo": {
+    "xicaras": "3/4",
+    "total": "3/8"
+  }
+}

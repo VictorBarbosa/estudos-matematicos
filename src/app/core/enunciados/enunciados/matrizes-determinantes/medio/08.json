@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A matriz [[5, 10], [1, 2]] é invertível? Responda 1 se sim e 0 se não.",
+    "fr": "La matrice [[5, 10], [1, 2]] est-elle inversible ? Répondez 1 si oui et 0 si non.",
+    "en": "Is the matrix [[5, 10], [1, 2]] invertible? Answer 1 if yes and 0 if no."
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a pressão exercida por 1 mol de gás ideal em 24.5 L a 25 °C? (em atm, duas casas decimais)",
+    "fr": "Quelle est la pression exercée par 1 mol de gaz parfait dans 24.5 L à 25 °C ? (en atm, deux décimales)",
+    "en": "What pressure do 1 mol of ideal gas exert in 24.5 L at 25 °C? (in atm, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

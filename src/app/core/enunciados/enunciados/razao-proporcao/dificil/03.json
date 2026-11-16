@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Num mapa de escala 1:{dados-calculo.escala}, a distância entre duas cidades é de {dados-calculo.cm} cm. Quantos quilômetros há entre elas?",
+    "fr": "Sur une carte à l’échelle 1:{dados-calculo.escala}, la distance entre deux villes est de {dados-calculo.cm} cm. Combien de kilomètres les sépare ?",
+    "en": "On a map at 1:{dados-calculo.escala}, the distance between two towns is {dados-calculo.cm} cm. How many kilometres apart are they?"
+  },
+  "dados-calculo": {
+    "escala": "50000",
+    "cm": "4",
+    "total": "2"
+  }
+}

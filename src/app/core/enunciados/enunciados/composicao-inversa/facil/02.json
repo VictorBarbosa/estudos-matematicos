@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se f(x) = 2x + 3, qual é o valor de f⁻¹(11)?",
+    "fr": "Si f(x) = 2x + 3, quelle est la valeur de f⁻¹(11) ?",
+    "en": "If f(x) = 2x + 3, what is the value of f⁻¹(11)?"
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

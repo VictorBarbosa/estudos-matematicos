@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Misturam-se 24 g de Mg com 32 g de O₂ na reação 2Mg + O₂ → 2MgO. Quantos mols de MgO se formam? (duas casas decimais)",
+    "fr": "On mélange 24 g de Mg avec 32 g de O₂ dans la réaction 2Mg + O₂ → 2MgO. Combien de moles de MgO se forment ? (deux décimales)",
+    "en": "You mix 24 g of Mg with 32 g of O₂ in the reaction 2Mg + O₂ → 2MgO. How many moles of MgO form? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

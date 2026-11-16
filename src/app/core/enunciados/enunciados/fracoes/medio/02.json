@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Some as frações {dados-calculo.a} e {dados-calculo.b} e dê o resultado irredutível.",
+    "fr": "Additionnez les fractions {dados-calculo.a} et {dados-calculo.b} et donnez le résultat irréductible.",
+    "en": "Add the fractions {dados-calculo.a} and {dados-calculo.b} and give the result in lowest terms."
+  },
+  "dados-calculo": {
+    "a": "1/2",
+    "b": "1/3",
+    "total": "5/6"
+  }
+}

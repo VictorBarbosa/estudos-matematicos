@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com f(x) = 2x + 1 e g(x) = x − 4, qual é o valor de f(g(8))?",
+    "fr": "Avec f(x) = 2x + 1 et g(x) = x − 4, quelle est la valeur de f(g(8)) ?",
+    "en": "With f(x) = 2x + 1 and g(x) = x − 4, what is the value of f(g(8))?"
+  },
+  "dados-calculo": {
+    "total": "9"
+  }
+}

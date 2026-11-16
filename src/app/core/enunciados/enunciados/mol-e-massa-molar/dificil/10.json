@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra tem 2 mol de NaCl. Quantas gramas ela pesa? (duas casas decimais)",
+    "fr": "Un échantillon contient 2 mol de NaCl. Combien de grammes pèse-t-il ? (deux décimales)",
+    "en": "A sample contains 2 mol of NaCl. How many grams does it weigh? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "116.88"
+  }
+}

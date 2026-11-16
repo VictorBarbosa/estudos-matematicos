@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o volume ocupado por 0.5 mol de gás ideal a 1 atm e 0 °C? (em litros, duas casas decimais)",
+    "fr": "Quel est le volume occupé par 0.5 mol de gaz parfait à 1 atm et 0 °C ? (en litres, deux décimales)",
+    "en": "What volume do 0.5 mol of ideal gas occupy at 1 atm and 0 °C? (in litres, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "11.21"
+  }
+}

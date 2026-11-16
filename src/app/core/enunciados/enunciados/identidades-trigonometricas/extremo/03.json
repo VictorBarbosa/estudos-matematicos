@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Calcule sen {dados-calculo.graus}° decomposto em soma de dois arcos, usando as fórmulas de adição. (duas casas decimais)",
+    "fr": "Calculez sin {dados-calculo.graus}° décomposé en somme de deux arcs, en utilisant les formules d’addition. (deux décimales)",
+    "en": "Calculate sin {dados-calculo.graus}° decomposed as a sum of two angles, using the addition formulas. (two decimal places)"
+  },
+  "dados-calculo": {
+    "graus": "105",
+    "total": "0.97"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o volume do paralelepípedo formado pelos vetores (4, 0, 0), (0, 4, 0) e (0, 0, 4)? (duas casas decimais)",
+    "fr": "Quel est le volume du parallélépipède formé par les vecteurs (4, 0, 0), (0, 4, 0) et (0, 0, 4) ? (deux décimales)",
+    "en": "What is the volume of the parallelepiped formed by the vectors (4, 0, 0), (0, 4, 0) and (0, 0, 4)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "64.00"
+  }
+}

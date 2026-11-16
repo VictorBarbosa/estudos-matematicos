@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um móvel segue x(t) = {dados-calculo.a}cos t e y(t) = {dados-calculo.b}sen t. Qual é a equação cartesiana da trajetória? Responda o número de opções: 1 para elipse, 2 para circunferência, 3 para hipérbole.",
+    "fr": "Un mobile suit x(t) = {dados-calculo.a}cos t et y(t) = {dados-calculo.b}sin t. Quelle est l’équation cartésienne de la trajectoire ? Répondez le numéro : 1 pour ellipse, 2 pour cercle, 3 pour hyperbole.",
+    "en": "A body follows x(t) = {dados-calculo.a}cos t and y(t) = {dados-calculo.b}sin t. What is the Cartesian equation of the path? Answer the number: 1 for ellipse, 2 for circle, 3 for hyperbola."
+  },
+  "dados-calculo": {
+    "a": "5",
+    "b": "3",
+    "total": "1"
+  }
+}

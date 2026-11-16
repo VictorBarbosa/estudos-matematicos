@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa molar do amônia, em g/mol? (duas casas decimais)",
+    "fr": "Quelle est la masse molaire du ammoniac, en g/mol ? (deux décimales)",
+    "en": "What is the molar mass of ammonia, in g/mol? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "17.03"
+  }
+}

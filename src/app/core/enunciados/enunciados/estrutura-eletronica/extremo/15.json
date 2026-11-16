@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um átomo neutro tem 8 elétrons. Quantos elétrons faltam para completar a última camada, se ela precisa de 8 elétrons para ficar cheia e já tem 6?",
+    "fr": "Un atome neutre a 8 électrons. Combien d’électrons manquent pour compléter la dernière couche, si elle a besoin de 8 électrons pour être pleine et en a déjà 6 ?",
+    "en": "A neutral atom has 8 electrons. How many electrons are missing to complete the outermost shell, if it needs 8 electrons to be full and already has 6?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A matriz [[-3, 1], [0, 1]] é triangular. Qual é o maior autovalor dela?",
+    "fr": "La matrice [[-3, 1], [0, 1]] est triangulaire. Quel est son plus grand autovalor ?",
+    "en": "The matrix [[-3, 1], [0, 1]] is triangular. What is its largest eigenvalue?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

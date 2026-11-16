@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que massa de glicose, massa molar 180.16 g/mol, é preciso para preparar 50 mL de solução a 0.5 mol/L? (em gramas, duas casas decimais)",
+    "fr": "Quelle masse de glucose, masse molaire 180.16 g/mol, faut-il pour préparer 50 mL de solution à 0.5 mol/L ? (en grammes, deux décimales)",
+    "en": "What mass of glucose, molar mass 180.16 g/mol, is needed to prepare 50 mL of a 0.5 mol/L solution? (in grams, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.50"
+  }
+}

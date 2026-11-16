@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma tarifa é 6 reais por 10 unidades e 1 reais por unidade excedente. Qual é o valor total para 20 unidades? (duas casas decimais)",
+    "fr": "Un tarif est de 6 réaux pour 10 unités et de 1 réaux par unité excédentaire. Quel est le montant total pour 20 unités ? (deux décimales)",
+    "en": "A tariff is 6 reais for 10 units and 1 reais per extra unit. What is the total for 20 units? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "16.00"
+  }
+}

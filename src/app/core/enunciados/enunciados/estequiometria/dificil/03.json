@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Misturam-se 28 g de N₂ com 6 g de H₂ na reação N₂ + 3H₂ → 2NH₃. Quantos mols de NH₃ se formam? (duas casas decimais)",
+    "fr": "On mélange 28 g de N₂ avec 6 g de H₂ dans la réaction N₂ + 3H₂ → 2NH₃. Combien de moles de NH₃ se forment ? (deux décimales)",
+    "en": "You mix 28 g of N₂ with 6 g of H₂ in the reaction N₂ + 3H₂ → 2NH₃. How many moles of NH₃ form? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

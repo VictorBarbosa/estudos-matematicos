@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O gráfico de f foi deslocado 2 unidades para a DIREITA, dando g(x) = f(x − 2). Se f(0) = 0, qual é g(2)?",
+    "fr": "Le graphique de f a été décalé de 2 unités vers la DROITE, donnant g(x) = f(x − 2). Si f(0) = 0, quelle est g(2) ?",
+    "en": "The graph of f was shifted 2 units RIGHT, giving g(x) = f(x − 2). If f(0) = 0, what is g(2)?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

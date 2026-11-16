@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a porcentagem em massa de enxofre no ácido sulfúrico, de fórmula H2SO4? (em %, duas casas decimais)",
+    "fr": "Quel est le pourcentage en masse de soufre dans acide sulfurique, de formule H2SO4 ? (en %, deux décimales)",
+    "en": "What is the mass percentage of sulfur in sulfuric acid, formula H2SO4? (in %, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "32.69"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma circunferência mede {dados-calculo.comprimento} cm de comprimento. Quantos centímetros quadrados tem o círculo limitado por ela? (duas casas decimais)",
+    "fr": "Une circonférence mesure {dados-calculo.comprimento} cm de longueur. Combien de centimètres carrés a le disque qu’elle délimite ? (deux décimales)",
+    "en": "A circle has circumference {dados-calculo.comprimento} cm. How many square centimetres is the disc it encloses? (two decimal places)"
+  },
+  "dados-calculo": {
+    "comprimento": "37.70",
+    "total": "113.10"
+  }
+}

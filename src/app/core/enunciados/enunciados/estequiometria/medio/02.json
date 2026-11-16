@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que VOLUME de CO₂, medido nas CNTP, sai da queima de 1 mol de CH₄? Considere 22,4 L/mol. (duas casas decimais)",
+    "fr": "Quel VOLUME de CO₂, mesuré dans les CNTP, provient de la combustion de 1 mol de CH₄ ? Considérez 22,4 L/mol. (deux décimales)",
+    "en": "What VOLUME of CO₂, measured at STP, comes from burning 1 mol of CH₄? Take 22.4 L/mol. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "22.40"
+  }
+}

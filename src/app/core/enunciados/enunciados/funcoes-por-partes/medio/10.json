@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 1, f(x) = 2x + 3; se x ≥ 1, f(x) = 4x + 0. Qual é o SALTO em x = 1 (limite à direita menos à esquerda)? (duas casas decimais)",
+    "fr": "Si x < 1, f(x) = 2x + 3 ; si x ≥ 1, f(x) = 4x + 0. Quel est le SAUT en x = 1 (limite à droite moins à gauche) ? (deux décimales)",
+    "en": "If x < 1, f(x) = 2x + 3; if x ≥ 1, f(x) = 4x + 0. What is the JUMP at x = 1 (right limit minus left limit)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-1.00"
+  }
+}

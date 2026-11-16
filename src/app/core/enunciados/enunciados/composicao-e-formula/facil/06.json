@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a porcentagem em massa de sódio no sal de cozinha, de fórmula NaCl? (em %, duas casas decimais)",
+    "fr": "Quel est le pourcentage en masse de sodium dans sel de cuisine, de formule NaCl ? (en %, deux décimales)",
+    "en": "What is the mass percentage of sodium in table salt, formula NaCl? (in %, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "39.34"
+  }
+}

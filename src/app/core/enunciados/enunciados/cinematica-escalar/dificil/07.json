@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo parte a 8 m/s e acelera a 2 m/s². Que distância percorre em 6 s? (duas casas decimais)",
+    "fr": "Un corps part à 8 m/s et accélère à 2 m/s². Quelle distance parcourt-il en 6 s ? (deux décimales)",
+    "en": "A body starts at 8 m/s and accelerates at 2 m/s². What distance does it cover in 6 s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "84.00"
+  }
+}

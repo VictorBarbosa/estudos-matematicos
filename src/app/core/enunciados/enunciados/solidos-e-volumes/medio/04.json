@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um tanque cilíndrico tem raio de {dados-calculo.raio} dm e altura de {dados-calculo.altura} dm. Quantos litros ele comporta? (duas casas decimais)",
+    "fr": "Un réservoir cylindrique a un rayon de {dados-calculo.raio} dm et une hauteur de {dados-calculo.altura} dm. Combien de litres contient-il ? (deux décimales)",
+    "en": "A cylindrical tank has a radius of {dados-calculo.raio} dm and a height of {dados-calculo.altura} dm. How many litres does it hold? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "4",
+    "altura": "10",
+    "total": "502.65"
+  }
+}

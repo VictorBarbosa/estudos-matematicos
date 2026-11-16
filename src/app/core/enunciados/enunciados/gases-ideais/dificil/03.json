@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um gás a 273 K ocupa 22.4 L. A pressão constante, qual é o volume a 546 K? (duas casas decimais)",
+    "fr": "Un gaz à 273 K occupe 22.4 L. À pression constante, quel est le volume à 546 K ? (deux décimales)",
+    "en": "A gas at 273 K occupies 22.4 L. At constant pressure, what is the volume at 546 K? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "44.80"
+  }
+}

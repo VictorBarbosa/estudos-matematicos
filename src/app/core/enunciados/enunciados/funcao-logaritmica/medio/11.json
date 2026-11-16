@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação log_10(x) = 2 e informe x.",
+    "fr": "Résolvez l’équation log_10(x) = 2 et indiquez x.",
+    "en": "Solve log_10(x) = 2 and give x."
+  },
+  "dados-calculo": {
+    "total": "100"
+  }
+}

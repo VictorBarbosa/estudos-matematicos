@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na equação Al + HCl → AlCl₃ + H₂, balanceada com os menores inteiros, qual é o coeficiente do HCl?",
+    "fr": "Dans l’équation Al + HCl → AlCl₃ + H₂, équilibrée avec les plus petits entiers, quel est le coefficient de HCl ?",
+    "en": "In the equation Al + HCl → AlCl₃ + H₂, balanced with the smallest integers, what is the coefficient of HCl?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

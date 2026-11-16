@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância r do ponto ({dados-calculo.x}, {dados-calculo.y}) até a origem?",
+    "fr": "Quelle est la distance r du point ({dados-calculo.x}, {dados-calculo.y}) à l’origine ?",
+    "en": "What is the distance r from the point ({dados-calculo.x}, {dados-calculo.y}) to the origin?"
+  },
+  "dados-calculo": {
+    "x": "6",
+    "y": "8",
+    "total": "10"
+  }
+}

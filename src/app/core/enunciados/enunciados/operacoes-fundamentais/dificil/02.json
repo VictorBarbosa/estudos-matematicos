@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule 20 − 3 × (4 + 2) ÷ 6 + 5².",
+    "fr": "Calculez 20 − 3 × (4 + 2) ÷ 6 + 5².",
+    "en": "Calculate 20 − 3 × (4 + 2) ÷ 6 + 5²."
+  },
+  "dados-calculo": {
+    "total": "42"
+  }
+}

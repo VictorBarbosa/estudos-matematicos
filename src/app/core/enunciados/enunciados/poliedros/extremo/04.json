@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um poliedro convexo tem {dados-calculo.quadradas} faces quadradas e {dados-calculo.hexagonais} faces hexagonais, e nenhuma outra. Quantos vértices ele tem?",
+    "fr": "Un polyèdre convexe a {dados-calculo.quadradas} faces quadrilatères et {dados-calculo.hexagonais} faces hexagonales, et aucune autre. Combien de sommets a-t-il ?",
+    "en": "A convex polyhedron has {dados-calculo.quadradas} quadrilateral faces and {dados-calculo.hexagonais} hexagonal faces, and no others. How many vertices does it have?"
+  },
+  "dados-calculo": {
+    "quadradas": "6",
+    "hexagonais": "8",
+    "total": "24"
+  }
+}

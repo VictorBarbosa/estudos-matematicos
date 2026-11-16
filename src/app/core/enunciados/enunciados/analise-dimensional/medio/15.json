@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Converta 1 m/s para km/h. (duas casas decimais)",
+    "fr": "Convertissez 1 m/s en km/h. (deux décimales)",
+    "en": "Convert 1 m/s to km/h. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.60"
+  }
+}

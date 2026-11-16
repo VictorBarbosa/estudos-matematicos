@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação N₂ + 3H₂ → 2NH₃, quantos mols de NH₃ se formam a partir de 0.5 mol de N₂? (duas casas decimais)",
+    "fr": "Dans la réaction N₂ + 3H₂ → 2NH₃, combien de moles de NH₃ se forment à partir de 0.5 mol de N₂ ? (deux décimales)",
+    "en": "In the reaction N₂ + 3H₂ → 2NH₃, how many moles of NH₃ form from 0.5 mol of N₂? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

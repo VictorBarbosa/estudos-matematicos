@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma parábola tem equação y² = {dados-calculo.quatroP}x. Qual é o parâmetro p dela? (duas casas decimais)",
+    "fr": "Une parabole a pour équation y² = {dados-calculo.quatroP}x. Quel est son paramètre p ? (deux décimales)",
+    "en": "A parabola has equation y² = {dados-calculo.quatroP}x. What is its parameter p? (two decimal places)"
+  },
+  "dados-calculo": {
+    "quatroP": "12",
+    "total": "3.00"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo, o cateto oposto a um ângulo mede {dados-calculo.oposto} cm e a hipotenusa mede {dados-calculo.hipotenusa} cm. Quantos graus mede esse ângulo? (duas casas decimais)",
+    "fr": "Dans un triangle rectangle, le cathète opposé à un angle mesure {dados-calculo.oposto} cm et l’hypoténuse mesure {dados-calculo.hipotenusa} cm. Combien de degrés mesure cet angle ? (deux décimales)",
+    "en": "In a right triangle the leg opposite an angle is {dados-calculo.oposto} cm and the hypotenuse is {dados-calculo.hipotenusa} cm. How many degrees is that angle? (two decimal places)"
+  },
+  "dados-calculo": {
+    "oposto": "7",
+    "hipotenusa": "14",
+    "total": "30.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um avião voa a 120 m/s para o norte e o vento sopra a 90 m/s para leste. Qual é o módulo da velocidade em relação ao solo, em m/s? (duas casas decimais)",
+    "fr": "Un avion vole à 120 m/s vers le nord et le vent souffle à 90 m/s vers l’est. Quel est le module de la vitesse par rapport au sol, en m/s ? (deux décimales)",
+    "en": "A plane flies at 120 m/s north and the wind blows at 90 m/s east. What is the magnitude of the ground velocity, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "150.00"
+  }
+}

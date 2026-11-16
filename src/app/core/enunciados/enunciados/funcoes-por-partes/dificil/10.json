@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 2, f(x) = 2x + 1; se x ≥ 2, f(x) = 3x + 0. A função é contínua em x = 2? Responda 1 se sim e 0 se não.",
+    "fr": "Si x < 2, f(x) = 2x + 1 ; si x ≥ 2, f(x) = 3x + 0. La fonction est-elle continue en x = 2 ? Répondez 1 si oui et 0 si non.",
+    "en": "If x < 2, f(x) = 2x + 1; if x ≥ 2, f(x) = 3x + 0. Is the function continuous at x = 2? Answer 1 if yes and 0 if no."
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

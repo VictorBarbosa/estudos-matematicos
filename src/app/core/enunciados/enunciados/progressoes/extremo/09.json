@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num investimento, o saldo dobra a cada período: 100 no início, 100·2 no segundo, e assim por diante. Qual é o saldo no 4º período?",
+    "fr": "Dans un placement, le solde double à chaque période : 100 au début, 100·2 à la deuxième, et ainsi de suite. Quel est le solde à la 4e période ?",
+    "en": "In an investment the balance doubles each period: 100 at the start, 100·2 at the second, and so on. What is the balance in the 4th period?"
+  },
+  "dados-calculo": {
+    "total": "800"
+  }
+}

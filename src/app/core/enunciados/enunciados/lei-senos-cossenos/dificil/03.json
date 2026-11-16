@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um triângulo tem lados de {dados-calculo.a} m, {dados-calculo.b} m e {dados-calculo.c} m. Quantos metros quadrados tem a área dele, pela fórmula de Heron? (duas casas decimais)",
+    "fr": "Un triangle a des côtés de {dados-calculo.a} m, {dados-calculo.b} m et {dados-calculo.c} m. Combien de mètres carrés a son aire, par la formule de Héron ? (deux décimales)",
+    "en": "A triangle has sides of {dados-calculo.a} m, {dados-calculo.b} m and {dados-calculo.c} m. How many square metres is its area, by Heron’s formula? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "13",
+    "b": "14",
+    "c": "15",
+    "total": "84.00"
+  }
+}

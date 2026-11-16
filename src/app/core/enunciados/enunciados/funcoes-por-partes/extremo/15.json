@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O imposto é 0 até 5000, e depois 12% sobre o que excede 5000. Sobre uma renda de 8000, quanto é o imposto? (duas casas decimais)",
+    "fr": "L’impôt est nul jusqu’à 5000, puis de 12% sur ce qui dépasse 5000. Sur un revenu de 8000, quel est l’impôt ? (deux décimales)",
+    "en": "Tax is zero up to 5000, then 12% on the amount above 5000. On an income of 8000, how much is the tax? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "360.00"
+  }
+}

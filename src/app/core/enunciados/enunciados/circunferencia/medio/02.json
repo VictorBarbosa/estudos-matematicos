@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância do centro da circunferência (x − {dados-calculo.cx})² + (y − {dados-calculo.cy})² = {dados-calculo.r2} até a origem (0, 0)? (duas casas decimais)",
+    "fr": "Quelle est la distance du centre du cercle (x − {dados-calculo.cx})² + (y − {dados-calculo.cy})² = {dados-calculo.r2} à l’origine (0, 0) ? (deux décimales)",
+    "en": "What is the distance from the centre of the circle (x − {dados-calculo.cx})² + (y − {dados-calculo.cy})² = {dados-calculo.r2} to the origin (0, 0)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "cx": "3",
+    "cy": "4",
+    "r2": "25",
+    "total": "5.00"
+  }
+}

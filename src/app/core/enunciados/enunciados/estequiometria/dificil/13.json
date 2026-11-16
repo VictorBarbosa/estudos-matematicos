@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação 2Mg + O₂ → 2MgO, partindo de 48.6 g de Mg, qual é o número de mols de MgO formado? (duas casas decimais)",
+    "fr": "Dans la réaction 2Mg + O₂ → 2MgO, à partir de 48.6 g de Mg, quel est le nombre de moles de MgO formé ? (deux décimales)",
+    "en": "In the reaction 2Mg + O₂ → 2MgO, starting from 48.6 g of Mg, what is the number of moles of MgO formed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Misturam-se 4 g de H₂ com 16 g de O₂ na reação 2H₂ + O₂ → 2H₂O. Quantos mols de H₂O se formam? (duas casas decimais)",
+    "fr": "On mélange 4 g de H₂ avec 16 g de O₂ dans la réaction 2H₂ + O₂ → 2H₂O. Combien de moles de H₂O se forment ? (deux décimales)",
+    "en": "You mix 4 g of H₂ with 16 g of O₂ in the reaction 2H₂ + O₂ → 2H₂O. How many moles of H₂O form? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

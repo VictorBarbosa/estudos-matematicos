@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma horta tem a forma de triângulo retângulo, com catetos de {dados-calculo.a} m e {dados-calculo.b} m. Quantos metros de cerca são necessários para cercar todo o contorno dela?",
+    "fr": "Un potager a la forme d’un triangle rectangle, avec des cathètes de {dados-calculo.a} m et {dados-calculo.b} m. Combien de mètres de clôture faut-il pour entourer tout son contour ?",
+    "en": "A vegetable garden is a right triangle with legs of {dados-calculo.a} m and {dados-calculo.b} m. How many metres of fence are needed to enclose its whole outline?"
+  },
+  "dados-calculo": {
+    "a": "9",
+    "b": "12",
+    "total": "36"
+  }
+}

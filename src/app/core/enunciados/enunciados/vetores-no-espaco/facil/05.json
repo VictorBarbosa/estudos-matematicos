@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o produto escalar dos vetores (-1, 2, 0) e (3, 1, 5)?",
+    "fr": "Quel est le produit scalaire des vecteurs (-1, 2, 0) et (3, 1, 5) ?",
+    "en": "What is the dot product of the vectors (-1, 2, 0) and (3, 1, 5)?"
+  },
+  "dados-calculo": {
+    "total": "-1"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um mosaico usa um polígono regular de {dados-calculo.n} lados. Qual é a soma dos ângulos internos desse polígono, em graus?",
+    "fr": "Une mosaïque utilise un polygone régulier de {dados-calculo.n} côtés. Quelle est la somme des angles intérieurs de ce polygone, en degrés ?",
+    "en": "A mosaic uses a regular polygon with {dados-calculo.n} sides. What is the sum of the interior angles of that polygon, in degrees?"
+  },
+  "dados-calculo": {
+    "n": "9",
+    "total": "1260"
+  }
+}

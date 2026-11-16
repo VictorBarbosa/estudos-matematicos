@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que massa de oxigênio (massa molar 32.0 g/mol) há em 50 L desse gás a 1.5 atm e 25 °C? (em gramas, duas casas decimais)",
+    "fr": "Quelle masse de oxygène (masse molaire 32.0 g/mol) y a-t-il dans 50 L de ce gaz à 1.5 atm et 25 °C ? (en grammes, deux décimales)",
+    "en": "What mass of oxygen (molar mass 32.0 g/mol) is there in 50 L of this gas at 1.5 atm and 25 °C? (in grams, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "98.05"
+  }
+}

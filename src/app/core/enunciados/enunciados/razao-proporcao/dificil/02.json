@@ -1,0 +1,15 @@
+{
+  "enunciado": {
+    "br": "{dados-calculo.maquinas} máquinas produzem {dados-calculo.pecas} peças em {dados-calculo.horas} horas. Quantas peças {dados-calculo.maquinas2} máquinas produzem em {dados-calculo.horas2} horas?",
+    "fr": "{dados-calculo.maquinas} machines produisent {dados-calculo.pecas} pièces en {dados-calculo.horas} heures. Combien de pièces {dados-calculo.maquinas2} machines produisent-elles en {dados-calculo.horas2} heures ?",
+    "en": "{dados-calculo.maquinas} machines make {dados-calculo.pecas} parts in {dados-calculo.horas} hours. How many parts do {dados-calculo.maquinas2} machines make in {dados-calculo.horas2} hours?"
+  },
+  "dados-calculo": {
+    "maquinas": "4",
+    "pecas": "600",
+    "horas": "5",
+    "maquinas2": "6",
+    "horas2": "8",
+    "total": "1440"
+  }
+}

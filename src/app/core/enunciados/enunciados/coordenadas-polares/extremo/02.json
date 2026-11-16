@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A curva polar r = {dados-calculo.a} + {dados-calculo.b}cos θ é uma limaçon. Quantas vezes ela passa pela origem?",
+    "fr": "La courbe polaire r = {dados-calculo.a} + {dados-calculo.b}cos θ est une limaçon. Combien de fois passe-t-elle par l’origine ?",
+    "en": "The polar curve r = {dados-calculo.a} + {dados-calculo.b}cos θ is a limaçon. How many times does it pass through the origin?"
+  },
+  "dados-calculo": {
+    "a": "2",
+    "b": "2",
+    "total": "1"
+  }
+}

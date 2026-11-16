@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor numérico de 3x + 5 para x = {dados-calculo.x}.",
+    "fr": "Calculez la valeur numérique de 3x + 5 pour x = {dados-calculo.x}.",
+    "en": "Calculate the numerical value of 3x + 5 for x = {dados-calculo.x}."
+  },
+  "dados-calculo": {
+    "x": "4",
+    "total": "17"
+  }
+}

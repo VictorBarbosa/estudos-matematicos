@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Um móvel segue x(t) = {dados-calculo.a}cos t e y(t) = {dados-calculo.a}sen t. Qual é o raio da trajetória circular?",
+    "fr": "Un mobile suit x(t) = {dados-calculo.a}cos t et y(t) = {dados-calculo.a}sin t. Quel est le rayon de la trajectoire circulaire ?",
+    "en": "A body follows x(t) = {dados-calculo.a}cos t and y(t) = {dados-calculo.a}sin t. What is the radius of the circular path?"
+  },
+  "dados-calculo": {
+    "a": "7",
+    "total": "7"
+  }
+}

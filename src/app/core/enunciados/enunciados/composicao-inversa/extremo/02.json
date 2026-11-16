@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com f(x) = 2x + 1 e g(x) = 3x + 0, qual é o valor de f(g(x)) para x = 2?",
+    "fr": "Avec f(x) = 2x + 1 et g(x) = 3x + 0, quelle est la valeur de f(g(x)) pour x = 2 ?",
+    "en": "With f(x) = 2x + 1 and g(x) = 3x + 0, what is the value of f(g(x)) for x = 2?"
+  },
+  "dados-calculo": {
+    "total": "13"
+  }
+}

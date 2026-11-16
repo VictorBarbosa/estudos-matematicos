@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa bandeja há 4 fileiras com 5 pães cada, mais 3 pães soltos. Quantos pães há?",
+    "fr": "Sur un plateau il y a 4 rangées de 5 pains chacune, plus 3 pains isolés. Combien de pains y a-t-il ?",
+    "en": "On a tray there are 4 rows of 5 bread rolls each, plus 3 loose rolls. How many rolls are there?"
+  },
+  "dados-calculo": {
+    "total": "23"
+  }
+}

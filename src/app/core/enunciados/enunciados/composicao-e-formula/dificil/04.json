@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A análise de um composto deu 69.94% de ferro e o resto de oxigênio, com massa molar 159.69 g/mol. Qual é a massa de ferro em 1 mol, em gramas? (duas casas decimais)",
+    "fr": "L’analyse d’un composé a donné 69.94% de fer et le reste d’oxygène, avec une masse molaire de 159.69 g/mol. Quelle est la masse de fer dans 1 mol, en grammes ? (deux décimales)",
+    "en": "Analysis of a compound gave 69.94% iron and the rest oxygen, with molar mass 159.69 g/mol. What is the mass of iron in 1 mol, in grams? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "111.69"
+  }
+}

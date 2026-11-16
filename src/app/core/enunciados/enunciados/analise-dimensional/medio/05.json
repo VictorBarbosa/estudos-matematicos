@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Converta 18 km/h para m/s. (duas casas decimais)",
+    "fr": "Convertissez 18 km/h en m/s. (deux décimales)",
+    "en": "Convert 18 km/h to m/s. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

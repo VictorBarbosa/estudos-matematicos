@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância entre os pontos (0, 0, 0) e (9, 12, 20)? (duas casas decimais)",
+    "fr": "Quelle est la distance entre les points (0, 0, 0) et (9, 12, 20) ? (deux décimales)",
+    "en": "What is the distance between the points (0, 0, 0) and (9, 12, 20)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "25.00"
+  }
+}

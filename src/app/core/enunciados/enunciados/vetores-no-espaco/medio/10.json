@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o ângulo entre os vetores (0, 0, 1) e (0, 1, 0), em graus? Arredonde para duas casas decimais.",
+    "fr": "Quel est l’angle entre les vecteurs (0, 0, 1) et (0, 1, 0), en degrés ? Arrondissez à deux décimales.",
+    "en": "What is the angle between the vectors (0, 0, 1) and (0, 1, 0), in degrees? Round to two decimal places."
+  },
+  "dados-calculo": {
+    "total": "90.00"
+  }
+}

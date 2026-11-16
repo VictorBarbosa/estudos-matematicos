@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância entre as retas paralelas y = {dados-calculo.m}x + {dados-calculo.n1} e y = {dados-calculo.m}x + {dados-calculo.n2}? (duas casas decimais)",
+    "fr": "Quelle est la distance entre les droites parallèles y = {dados-calculo.m}x + {dados-calculo.n1} et y = {dados-calculo.m}x + {dados-calculo.n2} ? (deux décimales)",
+    "en": "What is the distance between the parallel lines y = {dados-calculo.m}x + {dados-calculo.n1} and y = {dados-calculo.m}x + {dados-calculo.n2}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "m": "1",
+    "n1": "0",
+    "n2": "4",
+    "total": "2.83"
+  }
+}

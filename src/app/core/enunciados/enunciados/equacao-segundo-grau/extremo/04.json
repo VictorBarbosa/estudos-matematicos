@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A diferença entre dois números positivos é {dados-calculo.diferenca} e o produto deles é {dados-calculo.produto}. Qual é o MAIOR deles?",
+    "fr": "La différence entre deux nombres positifs est {dados-calculo.diferenca} et leur produit est {dados-calculo.produto}. Quel est le PLUS GRAND ?",
+    "en": "The difference between two positive numbers is {dados-calculo.diferenca} and their product is {dados-calculo.produto}. What is the LARGER one?"
+  },
+  "dados-calculo": {
+    "diferenca": "3",
+    "produto": "40",
+    "total": "8"
+  }
+}

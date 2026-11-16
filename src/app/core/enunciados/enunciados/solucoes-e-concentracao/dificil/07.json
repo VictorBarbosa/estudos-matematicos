@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que massa de sulfato de cálcio, massa molar 136.14 g/mol, é preciso para preparar 400 mL de solução a 0.25 mol/L? (em gramas, duas casas decimais)",
+    "fr": "Quelle masse de sulfate de calcium, masse molaire 136.14 g/mol, faut-il pour préparer 400 mL de solution à 0.25 mol/L ? (en grammes, deux décimales)",
+    "en": "What mass of calcium sulfate, molar mass 136.14 g/mol, is needed to prepare 400 mL of a 0.25 mol/L solution? (in grams, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "13.61"
+  }
+}

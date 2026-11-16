@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Dissolvem-se 17 g de nitrato de prata, de massa molar 169.87 g/mol, em água até completar 1000 mL. Qual é a concentração, em mol/L? (duas casas decimais)",
+    "fr": "On dissout 17 g de nitrate d’argent, de masse molaire 169.87 g/mol, dans de l’eau jusqu’à compléter 1000 mL. Quelle est la concentration, en mol/L ? (deux décimales)",
+    "en": "You dissolve 17 g of silver nitrate, molar mass 169.87 g/mol, in water up to 1000 mL. What is the concentration, in mol/L? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.10"
+  }
+}

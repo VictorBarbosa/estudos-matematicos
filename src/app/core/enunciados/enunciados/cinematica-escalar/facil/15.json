@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo parte do repouso e acelera a 4 m/s². Que distância percorre em 10 s? (duas casas decimais)",
+    "fr": "Un corps part du repos et accélère à 4 m/s². Quelle distance parcourt-il en 10 s ? (deux décimales)",
+    "en": "A body starts from rest and accelerates at 4 m/s². What distance does it cover in 10 s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "200.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação H₂ + ½O₂ → H₂O, quantos mols de H₂O se formam a partir de 3 mol de H₂? (duas casas decimais)",
+    "fr": "Dans la réaction H₂ + ½O₂ → H₂O, combien de moles de H₂O se forment à partir de 3 mol de H₂ ? (deux décimales)",
+    "en": "In the reaction H₂ + ½O₂ → H₂O, how many moles of H₂O form from 3 mol of H₂? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

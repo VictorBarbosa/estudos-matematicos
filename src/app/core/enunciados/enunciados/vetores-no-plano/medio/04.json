@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um vetor de módulo 50 forma 37° com o eixo x. Qual é a componente y dele? (duas casas decimais)",
+    "fr": "Un vecteur de module 50 forme 37° avec l’axe x. Quelle est sa composante y ? (deux décimales)",
+    "en": "A vector of magnitude 50 makes 37° with the x-axis. What is its y-component? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "30.09"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor MÁXIMO que a função f(x) = {dados-calculo.a} + {dados-calculo.b} · sen(x) atinge?",
+    "fr": "Quelle est la valeur MAXIMALE que la fonction f(x) = {dados-calculo.a} + {dados-calculo.b} · sin(x) atteint ?",
+    "en": "What is the MAXIMUM value the function f(x) = {dados-calculo.a} + {dados-calculo.b} · sin(x) reaches?"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "b": "2",
+    "total": "5"
+  }
+}

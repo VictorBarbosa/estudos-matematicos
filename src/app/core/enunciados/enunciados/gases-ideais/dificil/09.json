@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um gás a 1 atm e 300 K ocupa 2 L. Levado a 2 atm e 300 K, que volume passa a ocupar? (duas casas decimais)",
+    "fr": "Un gaz à 1 atm et 300 K occupe 2 L. Amené à 2 atm et 300 K, quel volume occupe-t-il ? (deux décimales)",
+    "en": "A gas at 1 atm and 300 K occupies 2 L. Taken to 2 atm and 300 K, what volume does it occupy? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

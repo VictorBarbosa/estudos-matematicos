@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o maior valor que a função f(x) = -3 − x² pode assumir?",
+    "fr": "Quelle est la plus grande valeur que la fonction f(x) = -3 − x² peut prendre ?",
+    "en": "What is the largest value the function f(x) = -3 − x² can take?"
+  },
+  "dados-calculo": {
+    "total": "-3"
+  }
+}

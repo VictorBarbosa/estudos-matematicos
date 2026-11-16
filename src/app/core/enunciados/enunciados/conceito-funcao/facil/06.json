@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o único valor de x que NÃO pertence ao domínio da função f(x) = 8/(x − 1)?",
+    "fr": "Quelle est la seule valeur de x qui n’appartient PAS au domaine de la fonction f(x) = 8/(x − 1) ?",
+    "en": "What is the only value of x that does NOT belong to the domain of f(x) = 8/(x − 1)?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

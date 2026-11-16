@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra de 98 g de H2SO4 contém quantos átomos de oxigênio? (em unidades de 10²³, duas casas decimais)",
+    "fr": "Un échantillon de 98 g de H2SO4 contient combien d’atomes d’oxygène ? (en unités de 10²³, deux décimales)",
+    "en": "A sample of 98 g of H2SO4 contains how many oxygen atoms? (in units of 10²³, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "24.06"
+  }
+}

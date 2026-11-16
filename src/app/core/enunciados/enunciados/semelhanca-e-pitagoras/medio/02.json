@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um portão retangular tem {dados-calculo.a} m de largura e a diagonal dele mede {dados-calculo.d} m. Quantos metros tem a altura do portão?",
+    "fr": "Un portail rectangulaire a {dados-calculo.a} m de largeur et sa diagonale mesure {dados-calculo.d} m. Combien de mètres fait la hauteur du portail ?",
+    "en": "A rectangular gate is {dados-calculo.a} m wide and its diagonal measures {dados-calculo.d} m. How many metres tall is the gate?"
+  },
+  "dados-calculo": {
+    "a": "9",
+    "d": "15",
+    "total": "12"
+  }
+}

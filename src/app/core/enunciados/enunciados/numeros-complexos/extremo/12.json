@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Divida (4 + 2i) por (2 + 0i). Qual é a parte real do resultado? (duas casas decimais)",
+    "fr": "Divisez (4 + 2i) par (2 + 0i). Quelle est la partie réelle du résultat ? (deux décimales)",
+    "en": "Divide (4 + 2i) by (2 + 0i). What is the real part of the result? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

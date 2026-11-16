@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se f(x) = x² com x ≥ 0, qual é o valor de f⁻¹(1)? (duas casas decimais)",
+    "fr": "Si f(x) = x² avec x ≥ 0, quelle est la valeur de f⁻¹(1) ? (deux décimales)",
+    "en": "If f(x) = x² with x ≥ 0, what is the value of f⁻¹(1)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

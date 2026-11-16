@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Qual é o sinal de cos {dados-calculo.graus}°? Responda 1 se for positivo e -1 se for negativo.",
+    "fr": "Quel est le signe de cos {dados-calculo.graus}° ? Répondez 1 si c’est positif et -1 si c’est négatif.",
+    "en": "What is the sign of cos {dados-calculo.graus}°? Answer 1 if it is positive and -1 if it is negative."
+  },
+  "dados-calculo": {
+    "graus": "200",
+    "total": "-1"
+  }
+}

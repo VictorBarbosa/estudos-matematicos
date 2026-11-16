@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa PA, o primeiro termo é 10 e o último é 2. Quantos termos tem a PA, se a razão é -2?",
+    "fr": "Dans une PA, le premier terme est 10 et le dernier est 2. Combien de termes a la PA, si la raison est -2 ?",
+    "en": "In an AP the first term is 10 and the last is 2. How many terms does the AP have if the common difference is -2?"
+  },
+  "dados-calculo": {
+    "total": "5"
+  }
+}

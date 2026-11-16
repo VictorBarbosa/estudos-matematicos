@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a área do paralelogramo formado pelos vetores (6, 0) e (0, 2)? (duas casas decimais)",
+    "fr": "Quelle est l’aire du parallélogramme formé par les vecteurs (6, 0) et (0, 2) ? (deux décimales)",
+    "en": "What is the area of the parallelogram formed by the vectors (6, 0) and (0, 2)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

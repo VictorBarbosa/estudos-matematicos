@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma rampa tem {dados-calculo.hipotenusa} m de comprimento e faz {dados-calculo.angulo}° com o chão. Quantos metros de altura ela vence? (duas casas decimais)",
+    "fr": "Une rampe a {dados-calculo.hipotenusa} m de longueur et fait {dados-calculo.angulo}° avec le sol. Combien de mètres de hauteur franchit-elle ? (deux décimales)",
+    "en": "A ramp is {dados-calculo.hipotenusa} m long and makes {dados-calculo.angulo}° with the ground. How many metres of height does it gain? (two decimal places)"
+  },
+  "dados-calculo": {
+    "hipotenusa": "12",
+    "angulo": "30",
+    "total": "6.00"
+  }
+}

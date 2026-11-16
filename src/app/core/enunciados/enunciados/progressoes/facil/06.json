@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa PA de primeiro termo 1 e razão 1, qual é o 20º termo?",
+    "fr": "Dans une PA de premier terme 1 et de raison 1, quel est le 20e terme ?",
+    "en": "In an AP with first term 1 and common difference 1, what is the 20th term?"
+  },
+  "dados-calculo": {
+    "total": "20"
+  }
+}

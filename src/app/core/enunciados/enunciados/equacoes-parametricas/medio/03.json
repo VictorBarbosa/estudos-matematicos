@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um móvel segue x(t) = {dados-calculo.vx}t e y(t) = {dados-calculo.vy}t. Eliminando t, qual é a coordenada y quando x = {dados-calculo.x}?",
+    "fr": "Un mobile suit x(t) = {dados-calculo.vx}t et y(t) = {dados-calculo.vy}t. En éliminant t, quelle est la coordonnée y lorsque x = {dados-calculo.x} ?",
+    "en": "A body follows x(t) = {dados-calculo.vx}t and y(t) = {dados-calculo.vy}t. Eliminating t, what is y when x = {dados-calculo.x}?"
+  },
+  "dados-calculo": {
+    "vx": "2",
+    "vy": "6",
+    "x": "8",
+    "total": "24"
+  }
+}

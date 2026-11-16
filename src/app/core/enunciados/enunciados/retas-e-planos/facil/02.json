@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O plano passa por P(1, 2, 3) e tem vetor normal n = (1, 1, 1). Escrito como ax + by + cz = d, quanto vale d?",
+    "fr": "Le plan passe par P(1, 2, 3) et a pour vecteur normal n = (1, 1, 1). Écrit sous la forme ax + by + cz = d, combien vaut d ?",
+    "en": "The plane passes through P(1, 2, 3) and has normal vector n = (1, 1, 1). Written as ax + by + cz = d, what is d?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

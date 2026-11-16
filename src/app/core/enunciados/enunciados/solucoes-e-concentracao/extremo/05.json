@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Misturam-se 250 mL de solução 1 mol/L com 250 mL de solução 3 mol/L do mesmo soluto. Qual é a concentração final, em mol/L? (duas casas decimais)",
+    "fr": "On mélange 250 mL de solution 1 mol/L avec 250 mL de solution 3 mol/L du même soluté. Quelle est la concentration finale, en mol/L ? (deux décimales)",
+    "en": "You mix 250 mL of a 1 mol/L solution with 250 mL of a 3 mol/L solution of the same solute. What is the final concentration, in mol/L? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

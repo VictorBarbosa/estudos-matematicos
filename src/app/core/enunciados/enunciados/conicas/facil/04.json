@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma hipérbole tem semieixo real {dados-calculo.a} e semieixo imaginário {dados-calculo.b}. Qual é a distância focal c? (duas casas decimais)",
+    "fr": "Une hyperbole a pour demi-axe réel {dados-calculo.a} et demi-axe imaginaire {dados-calculo.b}. Quelle est la distance focale c ? (deux décimales)",
+    "en": "A hyperbola has real semi-axis {dados-calculo.a} and imaginary semi-axis {dados-calculo.b}. What is the focal distance c? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "3",
+    "b": "4",
+    "total": "5.00"
+  }
+}

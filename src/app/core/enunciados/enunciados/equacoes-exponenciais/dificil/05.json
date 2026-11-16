@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 5^(2x) = 625 e informe x. Dê a fração irredutível.",
+    "fr": "Résolvez l’équation 5^(2x) = 625 et indiquez x. Donnez la fraction irréductible.",
+    "en": "Solve 5^(2x) = 625 and give x. Give the irreducible fraction."
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

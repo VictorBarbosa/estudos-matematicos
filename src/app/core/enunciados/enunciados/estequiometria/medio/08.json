@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que VOLUME de CO₂, medido nas CNTP, sai da queima de 1.5 mol de C₄H₁₀? Considere 22,4 L/mol. (duas casas decimais)",
+    "fr": "Quel VOLUME de CO₂, mesuré dans les CNTP, provient de la combustion de 1.5 mol de C₄H₁₀ ? Considérez 22,4 L/mol. (deux décimales)",
+    "en": "What VOLUME of CO₂, measured at STP, comes from burning 1.5 mol of C₄H₁₀? Take 22.4 L/mol. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "134.40"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um barco de 12 m/s quer atravessar um rio de correnteza 6 m/s chegando exatamente em frente. Quantos graus rio acima ele deve apontar? (duas casas decimais)",
+    "fr": "Un bateau de 12 m/s veut traverser un fleuve de courant 6 m/s en arrivant exactement en face. De combien de degrés vers l’amont doit-il pointer ? (deux décimales)",
+    "en": "A boat of 12 m/s wants to cross a river with current 6 m/s, arriving exactly opposite. How many degrees upstream must it point? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "30.00"
+  }
+}

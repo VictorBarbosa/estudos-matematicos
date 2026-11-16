@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 3^(2x) = 81 e informe x. Dê a fração irredutível.",
+    "fr": "Résolvez l’équation 3^(2x) = 81 et indiquez x. Donnez la fraction irréductible.",
+    "en": "Solve 3^(2x) = 81 and give x. Give the irreducible fraction."
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

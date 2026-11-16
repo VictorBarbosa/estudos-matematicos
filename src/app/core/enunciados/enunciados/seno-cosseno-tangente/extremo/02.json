@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Se tg θ = {dados-calculo.tangente} e θ está no 1º quadrante, qual é o valor de sen θ? (duas casas decimais)",
+    "fr": "Si tan θ = {dados-calculo.tangente} et que θ est dans le 1er quadrant, quelle est la valeur de sin θ ? (deux décimales)",
+    "en": "If tan θ = {dados-calculo.tangente} and θ is in the 1st quadrant, what is sin θ? (two decimal places)"
+  },
+  "dados-calculo": {
+    "tangente": "0.75",
+    "total": "0.60"
+  }
+}

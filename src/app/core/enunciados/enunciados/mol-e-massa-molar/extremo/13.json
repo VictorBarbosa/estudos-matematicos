@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra contém 1 mol de C6H12O6. Quantos átomos de hidrogênio ela tem? (em unidades de 10²³, duas casas decimais)",
+    "fr": "Un échantillon contient 1 mol de C6H12O6. Combien d’atomes d’hydrogène a-t-il ? (en unités de 10²³, deux décimales)",
+    "en": "A sample contains 1 mol of C6H12O6. How many hydrogen atoms does it have? (in units of 10²³, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "72.24"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Misturam-se 2 mol de A com 3 mol de B. Cada mol de A consome 2 mol de B. Qual é o REAGENTE LIMITANTE? Responda 1 para A e 2 para B.",
+    "fr": "On mélange 2 mol de A avec 3 mol de B. Chaque mole de A consomme 2 mol de B. Quel est le RÉACTIF LIMITANT ? Répondez 1 pour A et 2 pour B.",
+    "en": "You mix 2 mol of A with 3 mol of B. Each mole of A consumes 2 mol of B. Which is the LIMITING reactant? Answer 1 for A and 2 for B."
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

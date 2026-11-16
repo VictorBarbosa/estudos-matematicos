@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa PA de primeiro termo 5 e razão 5, qual é a soma dos 4 primeiros termos?",
+    "fr": "Dans une PA de premier terme 5 et de raison 5, quelle est la somme des 4 premiers termes ?",
+    "en": "In an AP with first term 5 and common difference 5, what is the sum of the first 4 terms?"
+  },
+  "dados-calculo": {
+    "total": "50"
+  }
+}

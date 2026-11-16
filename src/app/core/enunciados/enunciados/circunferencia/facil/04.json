@@ -1,0 +1,15 @@
+{
+  "enunciado": {
+    "br": "O ponto ({dados-calculo.px}, {dados-calculo.py}) pertence à circunferência de centro ({dados-calculo.cx}, {dados-calculo.cy}) e raio {dados-calculo.raio}? Responda 1 se sim e 0 se não.",
+    "fr": "Le point ({dados-calculo.px}, {dados-calculo.py}) appartient-il au cercle de centre ({dados-calculo.cx}, {dados-calculo.cy}) et de rayon {dados-calculo.raio} ? Répondez 1 si oui et 0 si non.",
+    "en": "Does the point ({dados-calculo.px}, {dados-calculo.py}) lie on the circle with centre ({dados-calculo.cx}, {dados-calculo.cy}) and radius {dados-calculo.raio}? Answer 1 if yes and 0 if no."
+  },
+  "dados-calculo": {
+    "px": "5",
+    "py": "0",
+    "cx": "0",
+    "cy": "0",
+    "raio": "5",
+    "total": "1"
+  }
+}

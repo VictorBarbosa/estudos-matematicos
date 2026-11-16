@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Num triângulo, dois ângulos medem {dados-calculo.anguloA}° e {dados-calculo.anguloB}°, e o lado oposto ao primeiro mede {dados-calculo.a} cm. Qual é o lado oposto ao segundo? (duas casas decimais)",
+    "fr": "Dans un triangle, deux angles mesurent {dados-calculo.anguloA}° et {dados-calculo.anguloB}°, et le côté opposé au premier mesure {dados-calculo.a} cm. Quel est le côté opposé au second ? (deux décimales)",
+    "en": "In a triangle, two angles measure {dados-calculo.anguloA}° and {dados-calculo.anguloB}°, and the side opposite the first is {dados-calculo.a} cm. How long is the side opposite the second? (two decimal places)"
+  },
+  "dados-calculo": {
+    "anguloA": "45",
+    "anguloB": "60",
+    "a": "12",
+    "total": "14.70"
+  }
+}

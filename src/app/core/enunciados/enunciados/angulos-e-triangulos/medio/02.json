@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Num triângulo, dois ângulos internos medem {dados-calculo.a}° e {dados-calculo.b}°. Quantos graus mede o ângulo externo relativo ao terceiro ângulo?",
+    "fr": "Dans un triangle, deux angles intérieurs mesurent {dados-calculo.a}° et {dados-calculo.b}°. Combien de degrés mesure l’angle extérieur relatif au troisième angle ?",
+    "en": "In a triangle, two interior angles measure {dados-calculo.a}° and {dados-calculo.b}°. How many degrees is the exterior angle at the third vertex?"
+  },
+  "dados-calculo": {
+    "a": "54",
+    "b": "71",
+    "total": "125"
+  }
+}

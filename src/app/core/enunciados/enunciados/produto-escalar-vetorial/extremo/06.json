@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma força de 8 N é aplicada a 30° do deslocamento, que vale 10 m. Qual é o trabalho realizado, em joules? (duas casas decimais)",
+    "fr": "Une force de 8 N est appliquée à 30° du déplacement, qui vaut 10 m. Quel est le travail effectué, en joules ? (deux décimales)",
+    "en": "A force of 8 N is applied at 30° to the displacement, which is 10 m. What is the work done, in joules? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "69.28"
+  }
+}

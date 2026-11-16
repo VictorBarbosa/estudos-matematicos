@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A reta passa por (-1, 0) e tem coeficiente angular 1. Qual é o valor de y quando x = 2?",
+    "fr": "La droite passe par (-1, 0) et a pour coefficient directeur 1. Quelle est la valeur de y lorsque x = 2 ?",
+    "en": "The line passes through (-1, 0) and has slope 1. What is y when x = 2?"
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

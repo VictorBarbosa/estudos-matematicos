@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação 4^(2x) = 64 e informe x. Dê a fração irredutível.",
+    "fr": "Résolvez l’équation 4^(2x) = 64 et indiquez x. Donnez la fraction irréductible.",
+    "en": "Solve 4^(2x) = 64 and give x. Give the irreducible fraction."
+  },
+  "dados-calculo": {
+    "total": "3/2"
+  }
+}

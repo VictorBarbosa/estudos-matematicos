@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma pipa tem a forma de losango, com diagonais de {dados-calculo.d1} cm e {dados-calculo.d2} cm. Quantos centímetros quadrados de tecido ela leva?",
+    "fr": "Un cerf-volant a la forme d’un losange, avec des diagonales de {dados-calculo.d1} cm et {dados-calculo.d2} cm. Combien de centimètres carrés de tissu faut-il ?",
+    "en": "A kite is shaped like a rhombus, with diagonals of {dados-calculo.d1} cm and {dados-calculo.d2} cm. How many square centimetres of fabric does it need?"
+  },
+  "dados-calculo": {
+    "d1": "18",
+    "d2": "24",
+    "total": "216"
+  }
+}

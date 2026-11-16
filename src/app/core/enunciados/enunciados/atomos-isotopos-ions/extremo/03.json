@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A massa atômica do bromo é 79.90 u, e ele tem dois isótopos: um de massa 79 u e outro de massa 81 u. Qual é a porcentagem do isótopo mais LEVE? (duas casas decimais)",
+    "fr": "La masse atomique du brome est 79.90 u, et il a deux isotopes : un de masse 79 u et un autre de masse 81 u. Quel est le pourcentage de l’isotope le plus LÉGER ? (deux décimales)",
+    "en": "The atomic mass of bromine is 79.90 u, and it has two isotopes: one of mass 79 u and another of mass 81 u. What percentage is the LIGHTER isotope? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "55.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo é lançado para cima a 15 m/s. Quanto tempo leva para voltar ao ponto de partida? (duas casas decimais)",
+    "fr": "Un corps est lancé vers le haut à 15 m/s. Combien de temps met-il pour revenir au point de départ ? (deux décimales)",
+    "en": "A body is thrown upwards at 15 m/s. How long does it take to return to the starting point? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.06"
+  }
+}

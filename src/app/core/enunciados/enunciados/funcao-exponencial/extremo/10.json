@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma grandeza obedece a N(t) = N₀·e^(−0.05t), com t em anos. Qual é a meia-vida dela, em anos? (duas casas decimais)",
+    "fr": "Une grandeur obéit à N(t) = N₀·e^(−0.05t), avec t en années. Quelle est sa demi-vie, en années ? (deux décimales)",
+    "en": "A quantity obeys N(t) = N₀·e^(−0.05t), with t in years. What is its half-life, in years? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "13.86"
+  }
+}

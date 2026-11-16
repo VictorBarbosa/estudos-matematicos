@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O gráfico de f foi deslocado 3 unidades para a DIREITA, dando g(x) = f(x − 3). Se f(2) = 1, qual é g(5)?",
+    "fr": "Le graphique de f a été décalé de 3 unités vers la DROITE, donnant g(x) = f(x − 3). Si f(2) = 1, quelle est g(5) ?",
+    "en": "The graph of f was shifted 3 units RIGHT, giving g(x) = f(x − 3). If f(2) = 1, what is g(5)?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

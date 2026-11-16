@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma escada encostada numa parede forma {dados-calculo.angulo}° com o chão. Se o pé dela se afasta {dados-calculo.afasta} m da parede, a escada escorrega. Qual era o comprimento da escada, em metros, se o topo desceu exatamente até o chão? (duas casas decimais)",
+    "fr": "Une échelle appuyée contre un mur forme {dados-calculo.angulo}° avec le sol. Si son pied s’éloigne de {dados-calculo.afasta} m du mur, elle glisse. Quelle était la longueur de l’échelle, en mètres, si le haut est descendu exactement jusqu’au sol ? (deux décimales)",
+    "en": "A ladder against a wall makes {dados-calculo.angulo}° with the ground. If its foot moves {dados-calculo.afasta} m away from the wall, the ladder slides. What was the ladder’s length, in metres, if the top came down exactly to the ground? (two decimal places)"
+  },
+  "dados-calculo": {
+    "angulo": "60",
+    "afasta": "3",
+    "total": "6.00"
+  }
+}

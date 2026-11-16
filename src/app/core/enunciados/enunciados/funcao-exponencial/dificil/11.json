@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor da função f(x) = 1·10^x em x = 0?",
+    "fr": "Quelle est la valeur de la fonction f(x) = 1·10^x en x = 0 ?",
+    "en": "What is the value of the function f(x) = 1·10^x at x = 0?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

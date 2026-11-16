@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um objeto lançado tem altura h(t) = −4t² + 16t, em metros, com t em segundos. Qual é a altura MÁXIMA atingida? (duas casas decimais)",
+    "fr": "Un objet lancé a une hauteur h(t) = −4t² + 16t, en mètres, avec t en secondes. Quelle est la hauteur MAXIMALE atteinte ? (deux décimales)",
+    "en": "A thrown object has height h(t) = −4t² + 16t, in metres, with t in seconds. What is the MAXIMUM height reached? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "16.00"
+  }
+}

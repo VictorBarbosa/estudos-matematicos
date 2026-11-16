@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Uma barraca tem a forma de uma pirâmide de base com {dados-calculo.lados} lados. Quantas arestas ela tem?",
+    "fr": "Une tente a la forme d’une pyramide à base de {dados-calculo.lados} côtés. Combien d’arêtes a-t-elle ?",
+    "en": "A tent is shaped like a pyramid whose base has {dados-calculo.lados} sides. How many edges does it have?"
+  },
+  "dados-calculo": {
+    "lados": "6",
+    "total": "12"
+  }
+}

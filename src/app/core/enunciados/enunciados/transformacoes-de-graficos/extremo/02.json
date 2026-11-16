@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "g(x) = −f(x) + 5. Se f(2) = 3, qual é g(2)?",
+    "fr": "g(x) = −f(x) + 5. Si f(2) = 3, quelle est g(2) ?",
+    "en": "g(x) = −f(x) + 5. If f(2) = 3, what is g(2)?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

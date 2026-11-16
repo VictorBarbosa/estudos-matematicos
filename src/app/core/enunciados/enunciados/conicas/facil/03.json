@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Uma elipse tem semieixo maior {dados-calculo.a}. Qual é a excentricidade dela, sabendo que a distância focal é {dados-calculo.c}? (duas casas decimais)",
+    "fr": "Une ellipse a pour demi-grand axe {dados-calculo.a}. Quelle est son excentricité, sachant que la distance focale est {dados-calculo.c} ? (deux décimales)",
+    "en": "An ellipse has semi-major axis {dados-calculo.a}. What is its eccentricity, given that the focal distance is {dados-calculo.c}? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "10",
+    "c": "6",
+    "total": "0.60"
+  }
+}

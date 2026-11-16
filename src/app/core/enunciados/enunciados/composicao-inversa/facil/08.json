@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se f(x) = 7x + 0, qual é o valor de f⁻¹(21)?",
+    "fr": "Si f(x) = 7x + 0, quelle est la valeur de f⁻¹(21) ?",
+    "en": "If f(x) = 7x + 0, what is the value of f⁻¹(21)?"
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

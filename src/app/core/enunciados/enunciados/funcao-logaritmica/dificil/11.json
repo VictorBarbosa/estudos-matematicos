@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule log_2(512), sabendo que 512 é potência de 2.",
+    "fr": "Calculez log_2(512), sachant que 512 est une puissance de 2.",
+    "en": "Calculate log_2(512), knowing that 512 is a power of 2."
+  },
+  "dados-calculo": {
+    "total": "9"
+  }
+}

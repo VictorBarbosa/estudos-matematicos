@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um ponto descreve uma circunferência com período de 0.5 s. Qual é a velocidade angular, em rad/s? (duas casas decimais)",
+    "fr": "Un point décrit une circonférence avec une période de 0.5 s. Quelle est la vitesse angulaire, en rad/s ? (deux décimales)",
+    "en": "A point moves along a circle with a period of 0.5 s. What is the angular velocity, in rad/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.57"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação 4Fe + 3O₂ → 2Fe₂O₃, cada mol de Fe consome 0.75 mol de O₂. Partindo de 8 mol de Fe, quantos mols de O₂ são necessários? (duas casas decimais)",
+    "fr": "Dans la réaction 4Fe + 3O₂ → 2Fe₂O₃, chaque mole de Fe consomme 0.75 mol de O₂. En partant de 8 mol de Fe, combien de moles de O₂ faut-il ? (deux décimales)",
+    "en": "In the reaction 4Fe + 3O₂ → 2Fe₂O₃, each mole of Fe consumes 0.75 mol of O₂. Starting from 8 mol of Fe, how many moles of O₂ are needed? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.00"
+  }
+}

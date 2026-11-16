@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um ponto a 0.2 m do eixo completa uma volta em 0.4 s. Qual é a velocidade tangencial, em m/s? (duas casas decimais)",
+    "fr": "Un point à 0.2 m de l’axe effectue un tour en 0.4 s. Quelle est la vitesse tangentielle, en m/s ? (deux décimales)",
+    "en": "A point 0.2 m from the axis completes one turn in 0.4 s. What is the tangential speed, in m/s? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.14"
+  }
+}

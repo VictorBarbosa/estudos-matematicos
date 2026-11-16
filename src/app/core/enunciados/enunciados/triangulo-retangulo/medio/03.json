@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Do alto de uma torre de {dados-calculo.altura} m, uma pessoa vê um ponto no chão sob um ângulo de {dados-calculo.angulo}° com a vertical. A que distância da base da torre está esse ponto, em metros? (duas casas decimais)",
+    "fr": "Du haut d’une tour de {dados-calculo.altura} m, une personne voit un point au sol sous un angle de {dados-calculo.angulo}° avec la verticale. À quelle distance de la base de la tour se trouve ce point, en mètres ? (deux décimales)",
+    "en": "From the top of a {dados-calculo.altura} m tower, a person sees a point on the ground at an angle of {dados-calculo.angulo}° from the vertical. How far from the tower’s base is that point, in metres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "altura": "45",
+    "angulo": "60",
+    "total": "77.94"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a pressão exercida por 0.5 mol de gás ideal em 5 L a 100 °C? (em atm, duas casas decimais)",
+    "fr": "Quelle est la pression exercée par 0.5 mol de gaz parfait dans 5 L à 100 °C ? (en atm, deux décimales)",
+    "en": "What pressure do 0.5 mol of ideal gas exert in 5 L at 100 °C? (in atm, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.06"
+  }
+}

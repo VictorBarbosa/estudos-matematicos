@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a concentração, em mol/L, de uma solução que contém 100 g de CaCO3 (massa molar 100.09 g/mol) em 500 mL? (duas casas decimais)",
+    "fr": "Quelle est la concentration, en mol/L, d’une solution contenant 100 g de CaCO3 (masse molaire 100.09 g/mol) dans 500 mL ? (deux décimales)",
+    "en": "What is the concentration, in mol/L, of a solution containing 100 g of CaCO3 (molar mass 100.09 g/mol) in 500 mL? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.00"
+  }
+}

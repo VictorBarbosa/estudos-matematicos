@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um átomo neutro tem a configuração terminando em 4s¹. Quantos elétrons há na última camada?",
+    "fr": "Un atome neutre a une configuration se terminant par 4s¹. Combien d’électrons y a-t-il dans la dernière couche ?",
+    "en": "A neutral atom has a configuration ending in 4s¹. How many electrons are in the outermost shell?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

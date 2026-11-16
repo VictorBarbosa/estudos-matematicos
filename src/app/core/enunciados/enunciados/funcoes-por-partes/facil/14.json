@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se x < 3, f(x) = 4x + 0; se x ≥ 3, f(x) = 1x + 9. Qual é o valor de f(2)? (duas casas decimais)",
+    "fr": "Si x < 3, f(x) = 4x + 0 ; si x ≥ 3, f(x) = 1x + 9. Quelle est la valeur de f(2) ? (deux décimales)",
+    "en": "If x < 3, f(x) = 4x + 0; if x ≥ 3, f(x) = 1x + 9. What is the value of f(2)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

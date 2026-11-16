@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a área do círculo de equação x² + y² − {dados-calculo.doisA}x − {dados-calculo.doisB}y + {dados-calculo.termo} = 0? (duas casas decimais)",
+    "fr": "Quelle est l’aire du cercle d’équation x² + y² − {dados-calculo.doisA}x − {dados-calculo.doisB}y + {dados-calculo.termo} = 0 ? (deux décimales)",
+    "en": "What is the area of the circle x² + y² − {dados-calculo.doisA}x − {dados-calculo.doisB}y + {dados-calculo.termo} = 0? (two decimal places)"
+  },
+  "dados-calculo": {
+    "doisA": "6",
+    "doisB": "8",
+    "termo": "21",
+    "total": "12.57"
+  }
+}

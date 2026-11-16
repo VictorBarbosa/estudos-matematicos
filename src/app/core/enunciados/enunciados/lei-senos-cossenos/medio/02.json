@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Um triângulo tem lados de {dados-calculo.a} cm, {dados-calculo.b} cm e {dados-calculo.c} cm. Quantos graus mede o ângulo oposto ao lado de {dados-calculo.c} cm? (duas casas decimais)",
+    "fr": "Un triangle a des côtés de {dados-calculo.a} cm, {dados-calculo.b} cm et {dados-calculo.c} cm. Combien de degrés mesure l’angle opposé au côté de {dados-calculo.c} cm ? (deux décimales)",
+    "en": "A triangle has sides of {dados-calculo.a} cm, {dados-calculo.b} cm and {dados-calculo.c} cm. How many degrees is the angle opposite the side of {dados-calculo.c} cm? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "5",
+    "b": "7",
+    "c": "8",
+    "total": "81.79"
+  }
+}

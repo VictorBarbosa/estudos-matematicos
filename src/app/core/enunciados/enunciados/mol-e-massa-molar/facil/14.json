@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a massa, em gramas, de 5 mol de metano? (duas casas decimais)",
+    "fr": "Quelle est la masse, en grammes, de 5 mol de méthane ? (deux décimales)",
+    "en": "What is the mass, in grams, of 5 mol of methane? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "80.20"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma caixa d’água cilíndrica de raio {dados-calculo.raio} m e altura {dados-calculo.altura} m é enchida por uma torneira que despeja {dados-calculo.vazao} litros por minuto. Quantos minutos leva para enchê-la? (duas casas decimais)",
+    "fr": "Un réservoir cylindrique de rayon {dados-calculo.raio} m et de hauteur {dados-calculo.altura} m est rempli par un robinet qui verse {dados-calculo.vazao} litres par minute. Combien de minutes faut-il pour le remplir ? (deux décimales)",
+    "en": "A cylindrical water tank of radius {dados-calculo.raio} m and height {dados-calculo.altura} m is filled by a tap pouring {dados-calculo.vazao} litres per minute. How many minutes does it take to fill? (two decimal places)"
+  },
+  "dados-calculo": {
+    "raio": "1.5",
+    "altura": "2",
+    "vazao": "30",
+    "total": "471.24"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "A vela de um barco tem a forma de triângulo. Dois dos ângulos internos dela medem {dados-calculo.a}° e {dados-calculo.b}°. Quantos graus mede o terceiro ângulo?",
+    "fr": "La voile d’un bateau a la forme d’un triangle. Deux de ses angles intérieurs mesurent {dados-calculo.a}° et {dados-calculo.b}°. Combien de degrés mesure le troisième angle ?",
+    "en": "A boat’s sail is shaped like a triangle. Two of its interior angles measure {dados-calculo.a}° and {dados-calculo.b}°. How many degrees is the third angle?"
+  },
+  "dados-calculo": {
+    "a": "48",
+    "b": "67",
+    "total": "65"
+  }
+}

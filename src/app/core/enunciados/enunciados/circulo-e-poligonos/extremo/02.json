@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Num jardim quadrado de {dados-calculo.lado} m de lado há um canteiro circular inscrito, que ocupa toda a largura do jardim. Quantos metros quadrados sobram de grama? (duas casas decimais)",
+    "fr": "Dans un jardin carré de {dados-calculo.lado} m de côté se trouve un massif circulaire inscrit, qui occupe toute la largeur du jardin. Combien de mètres carrés de pelouse restent ? (deux décimales)",
+    "en": "In a square garden {dados-calculo.lado} m on a side there is an inscribed circular bed that spans the garden’s full width. How many square metres of lawn are left? (two decimal places)"
+  },
+  "dados-calculo": {
+    "lado": "10",
+    "total": "21.46"
+  }
+}

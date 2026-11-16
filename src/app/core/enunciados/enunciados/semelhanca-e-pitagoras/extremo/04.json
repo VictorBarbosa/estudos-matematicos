@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo, as projeções dos dois catetos sobre a hipotenusa medem {dados-calculo.m} cm e {dados-calculo.n} cm. Quantos centímetros mede a altura relativa à hipotenusa?",
+    "fr": "Dans un triangle rectangle, les projections des deux cathètes sur l’hypoténuse mesurent {dados-calculo.m} cm et {dados-calculo.n} cm. Combien de centimètres mesure la hauteur relative à l’hypoténuse ?",
+    "en": "In a right triangle, the projections of the two legs onto the hypotenuse measure {dados-calculo.m} cm and {dados-calculo.n} cm. How many centimetres is the height drawn to the hypotenuse?"
+  },
+  "dados-calculo": {
+    "m": "4",
+    "n": "9",
+    "total": "6"
+  }
+}

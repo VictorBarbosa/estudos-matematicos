@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva o sistema pela matriz aumentada [[5, 20], [0, 1]] e informe o valor de x. (duas casas decimais)",
+    "fr": "Résolvez le système par la matrice augmentée [[5, 20], [0, 1]] et indiquez la valeur de x. (deux décimales)",
+    "en": "Solve the system using the augmented matrix [[5, 20], [0, 1]] and give the value of x. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.00"
+  }
+}

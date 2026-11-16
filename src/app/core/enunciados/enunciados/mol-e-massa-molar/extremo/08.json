@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra de 80 g de NaOH contém quantos átomos de oxigênio? (em unidades de 10²³, duas casas decimais)",
+    "fr": "Un échantillon de 80 g de NaOH contient combien d’atomes d’oxygène ? (en unités de 10²³, deux décimales)",
+    "en": "A sample of 80 g of NaOH contains how many oxygen atoms? (in units of 10²³, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.04"
+  }
+}

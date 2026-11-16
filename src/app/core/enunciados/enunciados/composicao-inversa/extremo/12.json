@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se f(x) = (ax + 7)/(x + 7), para qual valor de a a função é a sua própria inversa? Informe o valor de a.",
+    "fr": "Si f(x) = (ax + 7)/(x + 7), pour quelle valeur de a la fonction est-elle sa propre inverse ? Indiquez la valeur de a.",
+    "en": "If f(x) = (ax + 7)/(x + 7), for what value of a is the function its own inverse? Give the value of a."
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma matriz 2×2 tem autovalores 7 e 7. Qual é o traço dela?",
+    "fr": "Une matrice 2×2 a pour autovalors 7 et 7. Quelle est sa trace ?",
+    "en": "A 2×2 matrix has eigenvalues 7 and 7. What is its trace?"
+  },
+  "dados-calculo": {
+    "total": "14"
+  }
+}

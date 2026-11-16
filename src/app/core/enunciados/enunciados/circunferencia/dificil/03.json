@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Qual é a equação da reta TANGENTE à circunferência x² + y² = {dados-calculo.r2} no ponto ({dados-calculo.px}, {dados-calculo.py})? Informe o coeficiente angular dela.",
+    "fr": "Quelle est l’équation de la droite TANGENTE au cercle x² + y² = {dados-calculo.r2} au point ({dados-calculo.px}, {dados-calculo.py}) ? Indiquez son coefficient directeur.",
+    "en": "What is the equation of the line TANGENT to the circle x² + y² = {dados-calculo.r2} at the point ({dados-calculo.px}, {dados-calculo.py})? Give its slope."
+  },
+  "dados-calculo": {
+    "r2": "25",
+    "px": "3",
+    "py": "4",
+    "total": "-0.75"
+  }
+}

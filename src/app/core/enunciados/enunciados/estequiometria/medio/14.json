@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A reação é AgNO₃ + NaCl → AgCl + NaNO₃. Que massa de AgCl se forma a partir de 58.44 g de NaCl? (duas casas decimais)",
+    "fr": "La réaction est AgNO₃ + NaCl → AgCl + NaNO₃. Quelle masse de AgCl se forme à partir de 58.44 g de NaCl ? (deux décimales)",
+    "en": "The reaction is AgNO₃ + NaCl → AgCl + NaNO₃. What mass of AgCl forms from 58.44 g of NaCl? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "143.32"
+  }
+}

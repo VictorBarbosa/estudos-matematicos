@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto de massa molar 44.01 g/mol contém 2 átomos de oxigênio por molécula. Quantas gramas de oxigênio há em 1 mol? (duas casas decimais)",
+    "fr": "Un composé de masse molaire 44.01 g/mol contient 2 atomes de oxygène par molécule. Combien de grammes de oxygène y a-t-il dans 1 mol ? (deux décimales)",
+    "en": "A compound of molar mass 44.01 g/mol contains 2 atoms of oxygen per molecule. How many grams of oxygen are in 1 mol? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "32.00"
+  }
+}

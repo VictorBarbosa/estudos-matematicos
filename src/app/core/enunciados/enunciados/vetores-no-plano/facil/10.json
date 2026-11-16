@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Somando os vetores (-4, 2) e (7, 3), qual é a componente x do resultado?",
+    "fr": "En additionnant les vecteurs (-4, 2) et (7, 3), quelle est la composante x du résultat ?",
+    "en": "Adding the vectors (-4, 2) and (7, 3), what is the x-component of the result?"
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

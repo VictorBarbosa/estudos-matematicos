@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "g(x) = -1·f(x). Se f(2) = 7, qual é g(2)?",
+    "fr": "g(x) = -1·f(x). Si f(2) = 7, quelle est g(2) ?",
+    "en": "g(x) = -1·f(x). If f(2) = 7, what is g(2)?"
+  },
+  "dados-calculo": {
+    "total": "-7"
+  }
+}

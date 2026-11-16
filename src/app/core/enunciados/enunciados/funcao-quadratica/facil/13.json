@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a abscissa do vértice da parábola y = x² − 1x + 2? (duas casas decimais)",
+    "fr": "Quelle est l’abscisse du sommet de la parabole y = x² − 1x + 2 ? (deux décimales)",
+    "en": "What is the x-coordinate of the vertex of the parabola y = x² − 1x + 2? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.50"
+  }
+}

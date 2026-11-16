@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Os vetores (1, 1) e (2, 2) são perpendiculares? Responda 1 se sim e 0 se não.",
+    "fr": "Les vecteurs (1, 1) et (2, 2) sont-ils perpendiculaires ? Répondez 1 si oui et 0 si non.",
+    "en": "Are the vectors (1, 1) and (2, 2) perpendicular? Answer 1 if yes and 0 if no."
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

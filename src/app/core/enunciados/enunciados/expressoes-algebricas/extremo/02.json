@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "A área de um terreno é dada por x² + 3x, com x em metros. Quantos metros quadrados ele tem quando x = {dados-calculo.x}?",
+    "fr": "L’aire d’un terrain est donnée par x² + 3x, avec x en mètres. Combien de mètres carrés a-t-il lorsque x = {dados-calculo.x} ?",
+    "en": "A plot’s area is given by x² + 3x, with x in metres. How many square metres is it when x = {dados-calculo.x}?"
+  },
+  "dados-calculo": {
+    "x": "7",
+    "total": "70"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Encontre a fração geratriz da dízima periódica {dados-calculo.valor}.",
+    "fr": "Trouvez la fraction génératrice du nombre périodique {dados-calculo.valor}.",
+    "en": "Find the generating fraction of the repeating decimal {dados-calculo.valor}."
+  },
+  "dados-calculo": {
+    "valor": "0,8333...",
+    "total": "5/6"
+  }
+}

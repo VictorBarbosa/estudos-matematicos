@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A massa atômica do boro é 10.81 u, e ele tem dois isótopos: um de massa 10 u e outro de massa 11 u. Qual é a porcentagem do isótopo mais LEVE? (duas casas decimais)",
+    "fr": "La masse atomique du bore est 10.81 u, et il a deux isotopes : un de masse 10 u et un autre de masse 11 u. Quel est le pourcentage de l’isotope le plus LÉGER ? (deux décimales)",
+    "en": "The atomic mass of boron is 10.81 u, and it has two isotopes: one of mass 10 u and another of mass 11 u. What percentage is the LIGHTER isotope? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "19.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "g(x) = 2·f(x). Se f(5) = 8, qual é g(5)?",
+    "fr": "g(x) = 2·f(x). Si f(5) = 8, quelle est g(5) ?",
+    "en": "g(x) = 2·f(x). If f(5) = 8, what is g(5)?"
+  },
+  "dados-calculo": {
+    "total": "16"
+  }
+}

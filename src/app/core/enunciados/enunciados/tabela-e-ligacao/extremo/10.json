@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O composto MgCl2 é formado por um cátion de carga +2 e um ânion. Qual é o módulo da carga do ânion, sabendo que a fórmula tem 2 ânions?",
+    "fr": "Le composé MgCl2 est formé d’un cation de charge +2 et d’un anion. Quel est le module de la charge de l’anion, sachant que la formule contient 2 anion(s) ?",
+    "en": "The compound MgCl2 is made of a cation of charge +2 and an anion. What is the magnitude of the anion’s charge, given that the formula contains 2 anion(s)?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

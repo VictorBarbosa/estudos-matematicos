@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "O perímetro de um terreno retangular é de {dados-calculo.p} m e um dos lados mede {dados-calculo.a} m. Qual é a área do terreno, em metros quadrados?",
+    "fr": "Le périmètre d’un terrain rectangulaire est de {dados-calculo.p} m et l’un des côtés mesure {dados-calculo.a} m. Quelle est l’aire du terrain, en mètres carrés ?",
+    "en": "The perimeter of a rectangular plot is {dados-calculo.p} m and one of its sides is {dados-calculo.a} m. What is the plot’s area, in square metres?"
+  },
+  "dados-calculo": {
+    "p": "28",
+    "a": "6",
+    "total": "48"
+  }
+}

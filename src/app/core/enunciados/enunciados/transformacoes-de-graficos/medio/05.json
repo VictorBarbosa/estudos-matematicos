@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "g(x) = f(x + 3). Se o gráfico de f tem um zero em x = 7, em que valor de x o gráfico de g cruza o eixo horizontal?",
+    "fr": "g(x) = f(x + 3). Si le graphique de f a un zéro en x = 7, en quelle valeur de x le graphique de g coupe-t-il l’axe horizontal ?",
+    "en": "g(x) = f(x + 3). If the graph of f has a zero at x = 7, at what value of x does the graph of g cross the horizontal axis?"
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

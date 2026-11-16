@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto tem fórmula mínima CH e massa molar 78.11 g/mol. Qual é o número de unidades da fórmula mínima por molécula?",
+    "fr": "Un composé a pour formule minimale CH et une masse molaire de 78.11 g/mol. Quel est le nombre d’unités de la formule minimale par molécule ?",
+    "en": "A compound has empirical formula CH and molar mass 78.11 g/mol. How many empirical units are there per molecule?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

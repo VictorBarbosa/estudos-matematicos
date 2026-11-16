@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se f(x) = 2x + 5, qual é o valor de f⁻¹(1)?",
+    "fr": "Si f(x) = 2x + 5, quelle est la valeur de f⁻¹(1) ?",
+    "en": "If f(x) = 2x + 5, what is the value of f⁻¹(1)?"
+  },
+  "dados-calculo": {
+    "total": "-2"
+  }
+}

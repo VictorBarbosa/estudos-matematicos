@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o produto escalar dos vetores (2, 3) e (4, 1)?",
+    "fr": "Quel est le produit scalaire des vecteurs (2, 3) et (4, 1) ?",
+    "en": "What is the dot product of the vectors (2, 3) and (4, 1)?"
+  },
+  "dados-calculo": {
+    "total": "11"
+  }
+}

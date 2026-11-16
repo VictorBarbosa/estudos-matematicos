@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o determinante da matriz identidade de ordem 3?",
+    "fr": "Quel est le déterminant de la matrice identité d’ordre 3 ?",
+    "en": "What is the determinant of the identity matrix of order 3?"
+  },
+  "dados-calculo": {
+    "total": "1"
+  }
+}

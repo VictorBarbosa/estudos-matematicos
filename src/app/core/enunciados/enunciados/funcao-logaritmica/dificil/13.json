@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule log_10(100000), sabendo que 100000 é potência de 10.",
+    "fr": "Calculez log_10(100000), sachant que 100000 est une puissance de 10.",
+    "en": "Calculate log_10(100000), knowing that 100000 is a power of 10."
+  },
+  "dados-calculo": {
+    "total": "5"
+  }
+}

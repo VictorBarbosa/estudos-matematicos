@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a concentração, em mol/L, de uma solução que contém 24 g de NaCl (massa molar 58.44 g/mol) em 200 mL? (duas casas decimais)",
+    "fr": "Quelle est la concentration, en mol/L, d’une solution contenant 24 g de NaCl (masse molaire 58.44 g/mol) dans 200 mL ? (deux décimales)",
+    "en": "What is the concentration, in mol/L, of a solution containing 24 g of NaCl (molar mass 58.44 g/mol) in 200 mL? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.05"
+  }
+}

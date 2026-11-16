@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Na reação 2H₂ + O₂ → 2H₂O, o reagente limitante fornece 2 mol dele. Cada mol do limitante produz 2 mol de H₂O, cuja massa molar é 18.015 g/mol. Qual é a massa de produto obtida, em gramas? (duas casas decimais)",
+    "fr": "Dans la réaction 2H₂ + O₂ → 2H₂O, le réactif limitant fournit 2 mol de celui-ci. Chaque mole du limitant produit 2 mol de H₂O, dont la masse molaire est 18.015 g/mol. Quelle est la masse de produit obtenue, en grammes ? (deux décimales)",
+    "en": "In the reaction 2H₂ + O₂ → 2H₂O, the limiting reactant supplies 2 mol of it. Each mole of the limiting reactant produces 2 mol of H₂O, whose molar mass is 18.015 g/mol. What mass of product is obtained, in grams? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "72.06"
+  }
+}

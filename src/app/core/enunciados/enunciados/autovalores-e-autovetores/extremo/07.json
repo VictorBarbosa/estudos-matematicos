@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma matriz 2×2 tem autovalores 10 e 1. Qual é o determinante dela?",
+    "fr": "Une matrice 2×2 a pour autovalors 10 et 1. Quel est son déterminant ?",
+    "en": "A 2×2 matrix has eigenvalues 10 and 1. What is its determinant?"
+  },
+  "dados-calculo": {
+    "total": "10"
+  }
+}

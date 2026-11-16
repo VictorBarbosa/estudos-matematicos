@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva a equação x² − 4x + 1 = 0 e informe a MAIOR raiz, com duas casas decimais.",
+    "fr": "Résolvez l’équation x² − 4x + 1 = 0 et indiquez la PLUS GRANDE racine, avec deux décimales.",
+    "en": "Solve x² − 4x + 1 = 0 and give the LARGEST root, to two decimal places."
+  },
+  "dados-calculo": {
+    "total": "3.73"
+  }
+}

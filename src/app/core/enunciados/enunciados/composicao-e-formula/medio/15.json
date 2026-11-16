@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto tem 11.19% em massa de hidrogênio. Em 180 g do composto, quantos gramas de hidrogênio existem? (duas casas decimais)",
+    "fr": "Un composé contient 11.19% en masse de hydrogène. Dans 180 g du composé, combien de grammes de hydrogène y a-t-il ? (deux décimales)",
+    "en": "A compound is 11.19% by mass hydrogen. In 180 g of the compound, how many grams of hydrogen are there? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.14"
+  }
+}

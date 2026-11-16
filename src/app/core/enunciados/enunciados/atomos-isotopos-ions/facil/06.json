@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um átomo de cálcio tem 20 prótons e 20 nêutrons. Qual é o seu número de massa?",
+    "fr": "Un atome de calcium a 20 protons et 20 neutrons. Quel est son nombre de masse ?",
+    "en": "A calcium atom has 20 protons and 20 neutrons. What is its mass number?"
+  },
+  "dados-calculo": {
+    "total": "40"
+  }
+}

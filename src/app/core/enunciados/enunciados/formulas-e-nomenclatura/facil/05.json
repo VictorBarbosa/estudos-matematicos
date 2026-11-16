@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do fluoreto de sódio, composto por sódio e flúor?",
+    "fr": "Quelle est la formule du fluorure de sodium, composé de sodium et fluor ?",
+    "en": "What is the formula of sodium fluoride, made of sodium and fluorine?"
+  },
+  "dados-calculo": {
+    "total": "NaF"
+  }
+}

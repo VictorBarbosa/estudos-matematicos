@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Num triângulo, um lado de {dados-calculo.a} cm é oposto a um ângulo de {dados-calculo.anguloA}°. Qual é o raio da circunferência circunscrita, em centímetros? (duas casas decimais)",
+    "fr": "Dans un triangle, un côté de {dados-calculo.a} cm est opposé à un angle de {dados-calculo.anguloA}°. Quel est le rayon du cercle circonscrit, en centimètres ? (deux décimales)",
+    "en": "In a triangle, a side of {dados-calculo.a} cm is opposite an angle of {dados-calculo.anguloA}°. What is the radius of the circumscribed circle, in centimetres? (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "10",
+    "anguloA": "30",
+    "total": "10.00"
+  }
+}

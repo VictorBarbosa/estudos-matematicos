@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A análise de um composto deu 27.29% de carbono e o resto de oxigênio, com massa molar 44.01 g/mol. Qual é a massa de carbono em 1 mol, em gramas? (duas casas decimais)",
+    "fr": "L’analyse d’un composé a donné 27.29% de carbone et le reste d’oxygène, avec une masse molaire de 44.01 g/mol. Quelle est la masse de carbone dans 1 mol, en grammes ? (deux décimales)",
+    "en": "Analysis of a compound gave 27.29% carbon and the rest oxygen, with molar mass 44.01 g/mol. What is the mass of carbon in 1 mol, in grams? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.01"
+  }
+}

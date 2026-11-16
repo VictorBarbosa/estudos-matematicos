@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se f(x) = (x + 3)/6, qual é o valor de f⁻¹(15)?",
+    "fr": "Si f(x) = (x + 3)/6, quelle est la valeur de f⁻¹(15) ?",
+    "en": "If f(x) = (x + 3)/6, what is the value of f⁻¹(15)?"
+  },
+  "dados-calculo": {
+    "total": "87"
+  }
+}

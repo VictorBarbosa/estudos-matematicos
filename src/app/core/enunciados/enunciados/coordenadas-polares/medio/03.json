@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Qual é o ângulo polar θ do ponto ({dados-calculo.x}, {dados-calculo.y}), em graus, com 0° ≤ θ < 360°?",
+    "fr": "Quel est l’angle polaire θ du point ({dados-calculo.x}, {dados-calculo.y}), en degrés, avec 0° ≤ θ < 360° ?",
+    "en": "What is the polar angle θ of the point ({dados-calculo.x}, {dados-calculo.y}), in degrees, with 0° ≤ θ < 360°?"
+  },
+  "dados-calculo": {
+    "x": "-1",
+    "y": "1",
+    "total": "135"
+  }
+}

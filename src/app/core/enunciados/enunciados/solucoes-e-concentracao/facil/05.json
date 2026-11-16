@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Que massa de glicose, de massa molar 180.16 g/mol, há em 100 mL de solução a 0.1 mol/L? (em gramas, duas casas decimais)",
+    "fr": "Quelle masse de glucose, de masse molaire 180.16 g/mol, y a-t-il dans 100 mL de solution à 0.1 mol/L ? (en grammes, deux décimales)",
+    "en": "What mass of glucose, molar mass 180.16 g/mol, is there in 100 mL of a 0.1 mol/L solution? (in grams, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.80"
+  }
+}

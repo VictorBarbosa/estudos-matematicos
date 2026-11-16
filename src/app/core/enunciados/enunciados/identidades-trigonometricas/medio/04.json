@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Sabendo que sen θ = {dados-calculo.seno}, qual é o valor de sen(2θ) se θ está no 1º quadrante? (duas casas decimais)",
+    "fr": "Sachant que sin θ = {dados-calculo.seno}, quelle est la valeur de sin(2θ) si θ est dans le 1er quadrant ? (deux décimales)",
+    "en": "Given sin θ = {dados-calculo.seno}, what is sin(2θ) if θ is in the 1st quadrant? (two decimal places)"
+  },
+  "dados-calculo": {
+    "seno": "0.6",
+    "total": "0.96"
+  }
+}

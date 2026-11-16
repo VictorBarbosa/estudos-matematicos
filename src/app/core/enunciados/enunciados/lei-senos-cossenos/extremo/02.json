@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Num triângulo, o lado de {dados-calculo.a} cm é oposto ao ângulo de {dados-calculo.anguloA}°, e outro lado mede {dados-calculo.b} cm. Quantos graus mede o ângulo oposto a esse lado? Se houver dois, informe o MAIOR. (duas casas decimais)",
+    "fr": "Dans un triangle, le côté de {dados-calculo.a} cm est opposé à l’angle de {dados-calculo.anguloA}°, et un autre côté mesure {dados-calculo.b} cm. Combien de degrés mesure l’angle opposé à ce côté ? S’il y en a deux, indiquez le PLUS GRAND. (deux décimales)",
+    "en": "In a triangle, the side of {dados-calculo.a} cm is opposite the angle of {dados-calculo.anguloA}°, and another side is {dados-calculo.b} cm. How many degrees is the angle opposite that side? If there are two, give the LARGER. (two decimal places)"
+  },
+  "dados-calculo": {
+    "a": "10",
+    "anguloA": "30",
+    "b": "16",
+    "total": "126.87"
+  }
+}

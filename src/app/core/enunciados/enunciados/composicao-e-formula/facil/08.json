@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a porcentagem em massa de carbono no metano, de fórmula CH4? (em %, duas casas decimais)",
+    "fr": "Quel est le pourcentage en masse de carbone dans méthane, de formule CH4 ? (en %, deux décimales)",
+    "en": "What is the mass percentage of carbon in methane, formula CH4? (in %, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "74.87"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com f(x) = 2x e g(x) = x + 9, qual é o valor de f(g(0))?",
+    "fr": "Avec f(x) = 2x et g(x) = x + 9, quelle est la valeur de f(g(0)) ?",
+    "en": "With f(x) = 2x and g(x) = x + 9, what is the value of f(g(0))?"
+  },
+  "dados-calculo": {
+    "total": "18"
+  }
+}

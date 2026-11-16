@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra contém 0.25 mol de H3PO4. Quantos átomos de hidrogênio ela tem? (em unidades de 10²³, duas casas decimais)",
+    "fr": "Un échantillon contient 0.25 mol de H3PO4. Combien d’atomes d’hydrogène a-t-il ? (en unités de 10²³, deux décimales)",
+    "en": "A sample contains 0.25 mol of H3PO4. How many hydrogen atoms does it have? (in units of 10²³, two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.51"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa papelaria, 3 cadernos custam R$ 6 cada e uma caneta custa R$ 4. Quanto se gasta no total?",
+    "fr": "Dans une papeterie, 3 cahiers coûtent 6 R$ chacun et un stylo coûte 4 R$. Combien dépense-t-on au total ?",
+    "en": "At a stationery shop, 3 notebooks cost R$ 6 each and a pen costs R$ 4. How much is spent in total?"
+  },
+  "dados-calculo": {
+    "total": "22"
+  }
+}

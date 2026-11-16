@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto tem 40% em massa de cálcio. Em 100 g do composto, quantos gramas de cálcio existem? (duas casas decimais)",
+    "fr": "Un composé contient 40% en masse de calcium. Dans 100 g du composé, combien de grammes de calcium y a-t-il ? (deux décimales)",
+    "en": "A compound is 40% by mass calcium. In 100 g of the compound, how many grams of calcium are there? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "40.00"
+  }
+}

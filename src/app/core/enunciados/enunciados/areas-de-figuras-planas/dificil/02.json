@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "A fachada de uma casa é um retângulo de {dados-calculo.base} m por {dados-calculo.altura} m com um triângulo de mesma base e altura {dados-calculo.triangulo} m em cima. Qual é a área total da fachada, em metros quadrados?",
+    "fr": "La façade d’une maison est un rectangle de {dados-calculo.base} m sur {dados-calculo.altura} m surmonté d’un triangle de même base et de hauteur {dados-calculo.triangulo} m. Quelle est l’aire totale de la façade, en mètres carrés ?",
+    "en": "A house facade is a rectangle of {dados-calculo.base} m by {dados-calculo.altura} m with a triangle of the same base and height {dados-calculo.triangulo} m on top. What is the total area of the facade, in square metres?"
+  },
+  "dados-calculo": {
+    "base": "8",
+    "altura": "3",
+    "triangulo": "3.5",
+    "total": "38"
+  }
+}

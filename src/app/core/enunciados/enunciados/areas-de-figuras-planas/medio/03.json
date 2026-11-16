@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um vitral triangular tem base de {dados-calculo.base} m e altura de {dados-calculo.altura} m. Quantos metros quadrados de vidro ele leva? (duas casas decimais)",
+    "fr": "Un vitrail triangulaire a une base de {dados-calculo.base} m et une hauteur de {dados-calculo.altura} m. Combien de mètres carrés de verre faut-il ? (deux décimales)",
+    "en": "A triangular stained-glass panel has a base of {dados-calculo.base} m and a height of {dados-calculo.altura} m. How many square metres of glass does it need? (two decimal places)"
+  },
+  "dados-calculo": {
+    "base": "9.5",
+    "altura": "6",
+    "total": "28.50"
+  }
+}

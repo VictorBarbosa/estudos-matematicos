@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa reação com 100% de excesso de C, são necessários 30 g dele na proporção estequiométrica. Quantos gramas devem ser postos? (duas casas decimais)",
+    "fr": "Dans une réaction avec 100% d’excès de C, il faut 30 g de ce réactif dans la proportion stœchiométrique. Combien de grammes doit-on mettre ? (deux décimales)",
+    "en": "In a reaction with 100% excess of C, 30 g of it are needed stoichiometrically. How many grams should be added? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "60.00"
+  }
+}

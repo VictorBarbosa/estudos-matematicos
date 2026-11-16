@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Calcule o valor de sen {dados-calculo.graus}°. (duas casas decimais)",
+    "fr": "Calculez la valeur de sin {dados-calculo.graus}°. (deux décimales)",
+    "en": "Calculate the value of sin {dados-calculo.graus}°. (two decimal places)"
+  },
+  "dados-calculo": {
+    "graus": "30",
+    "total": "0.50"
+  }
+}

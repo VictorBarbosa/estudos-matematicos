@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um composto tem fórmula mínima HO e massa molar 34.01 g/mol. Qual é o número de unidades da fórmula mínima por molécula?",
+    "fr": "Un composé a pour formule minimale HO et une masse molaire de 34.01 g/mol. Quel est le nombre d’unités de la formule minimale par molécule ?",
+    "en": "A compound has empirical formula HO and molar mass 34.01 g/mol. How many empirical units are there per molecule?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

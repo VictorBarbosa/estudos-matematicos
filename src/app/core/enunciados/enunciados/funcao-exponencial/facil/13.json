@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Numa cultura, a população dobra a cada 5 horas. Começando com 1000 bactérias, quantas haverá depois de 5 horas?",
+    "fr": "Dans une culture, la population double toutes les 5 heures. En partant de 1000 bactéries, combien y en aura-t-il après 5 heures ?",
+    "en": "In a culture the population doubles every 5 hours. Starting with 1000 bacteria, how many are there after 5 hours?"
+  },
+  "dados-calculo": {
+    "total": "2000"
+  }
+}

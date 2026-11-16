@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se o determinante de A é 2 e o de B é 3, qual é o determinante do produto A·B?",
+    "fr": "Si le déterminant de A est 2 et celui de B est 3, quel est le déterminant du produit A·B ?",
+    "en": "If the determinant of A is 2 and that of B is 3, what is the determinant of the product A·B?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

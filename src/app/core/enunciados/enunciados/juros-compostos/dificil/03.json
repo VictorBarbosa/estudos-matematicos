@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um capital de R$ 1000,00 foi aplicado a juros compostos e virou R$ 1331,00 após 3 períodos. Qual foi a taxa por período, em %? (duas casas decimais)",
+    "fr": "Un capital de 1000,00 R$ a été placé à intérêts composés et est devenu 1331,00 R$ après 3 périodes. Quel a été le taux par période, en % ? (deux décimales)",
+    "en": "A capital of R$ 1000,00 was invested at compound interest and became R$ 1331,00 after 3 periods. What was the rate per period, in %? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

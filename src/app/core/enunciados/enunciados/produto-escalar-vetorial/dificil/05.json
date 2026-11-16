@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a área do paralelogramo formado por (3, 2) e (1, 4)? (duas casas decimais)",
+    "fr": "Quelle est l’aire du parallélogramme formé par (3, 2) et (1, 4) ? (deux décimales)",
+    "en": "What is the area of the parallelogram formed by (3, 2) and (1, 4)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.00"
+  }
+}

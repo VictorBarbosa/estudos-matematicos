@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A reta passa por (5, 0) e tem coeficiente angular 3. Qual é o valor de y quando x = 7?",
+    "fr": "La droite passe par (5, 0) et a pour coefficient directeur 3. Quelle est la valeur de y lorsque x = 7 ?",
+    "en": "The line passes through (5, 0) and has slope 3. What is y when x = 7?"
+  },
+  "dados-calculo": {
+    "total": "6"
+  }
+}

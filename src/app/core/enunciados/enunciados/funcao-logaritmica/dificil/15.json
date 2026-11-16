@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule log_4(256), sabendo que 256 é potência de 4.",
+    "fr": "Calculez log_4(256), sachant que 256 est une puissance de 4.",
+    "en": "Calculate log_4(256), knowing that 256 is a power of 4."
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

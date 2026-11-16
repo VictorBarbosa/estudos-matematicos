@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o ângulo que o vetor (0, 5) forma com o eixo x positivo, em graus? (duas casas decimais)",
+    "fr": "Quel est l’angle que le vecteur (0, 5) forme avec l’axe x positif, en degrés ? (deux décimales)",
+    "en": "What angle does the vector (0, 5) make with the positive x-axis, in degrees? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "90.00"
+  }
+}

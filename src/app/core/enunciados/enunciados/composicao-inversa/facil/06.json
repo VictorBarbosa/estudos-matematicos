@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se f(x) = 6x + 2, qual é o valor de f⁻¹(20)?",
+    "fr": "Si f(x) = 6x + 2, quelle est la valeur de f⁻¹(20) ?",
+    "en": "If f(x) = 6x + 2, what is the value of f⁻¹(20)?"
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

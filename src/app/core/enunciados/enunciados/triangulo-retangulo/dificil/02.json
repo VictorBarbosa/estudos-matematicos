@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um avião decola sob um ângulo constante de {dados-calculo.angulo}° e percorre {dados-calculo.distancia} m em linha reta. Quantos metros de altitude ele atinge? (duas casas decimais)",
+    "fr": "Un avion décolle sous un angle constant de {dados-calculo.angulo}° et parcourt {dados-calculo.distancia} m en ligne droite. Combien de mètres d’altitude atteint-il ? (deux décimales)",
+    "en": "A plane takes off at a constant {dados-calculo.angulo}° and covers {dados-calculo.distancia} m in a straight line. How many metres of altitude does it reach? (two decimal places)"
+  },
+  "dados-calculo": {
+    "angulo": "15",
+    "distancia": "2000",
+    "total": "517.64"
+  }
+}

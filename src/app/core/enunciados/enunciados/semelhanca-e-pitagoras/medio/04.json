@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "Uma foto de {dados-calculo.a} cm por {dados-calculo.b} cm é ampliada sem deformar, até o lado maior ficar com {dados-calculo.c} cm. Quantos centímetros passa a medir o lado menor?",
+    "fr": "Une photo de {dados-calculo.a} cm sur {dados-calculo.b} cm est agrandie sans déformation, jusqu’à ce que le plus grand côté fasse {dados-calculo.c} cm. Combien de centimètres mesure alors le plus petit côté ?",
+    "en": "A photo measuring {dados-calculo.a} cm by {dados-calculo.b} cm is enlarged without distortion until the longer side is {dados-calculo.c} cm. How many centimetres does the shorter side then measure?"
+  },
+  "dados-calculo": {
+    "a": "10",
+    "b": "15",
+    "c": "24",
+    "total": "16"
+  }
+}

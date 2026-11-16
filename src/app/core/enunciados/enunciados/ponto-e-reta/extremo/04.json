@@ -1,0 +1,13 @@
+{
+  "enunciado": {
+    "br": "A reta r tem coeficiente angular {dados-calculo.m} e passa por P({dados-calculo.px}, {dados-calculo.py}). Qual é a distância da origem (0, 0) a essa reta? (duas casas decimais)",
+    "fr": "La droite r a pour coefficient directeur {dados-calculo.m} et passe par P({dados-calculo.px}, {dados-calculo.py}). Quelle est la distance de l’origine (0, 0) à cette droite ? (deux décimales)",
+    "en": "Line r has slope {dados-calculo.m} and passes through P({dados-calculo.px}, {dados-calculo.py}). What is the distance from the origin (0, 0) to that line? (two decimal places)"
+  },
+  "dados-calculo": {
+    "m": "2",
+    "px": "0",
+    "py": "5",
+    "total": "2.24"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra tem 0.2 mol de NaOH. Quantas gramas ela pesa? (duas casas decimais)",
+    "fr": "Un échantillon contient 0.2 mol de NaOH. Combien de grammes pèse-t-il ? (deux décimales)",
+    "en": "A sample contains 0.2 mol of NaOH. How many grams does it weigh? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

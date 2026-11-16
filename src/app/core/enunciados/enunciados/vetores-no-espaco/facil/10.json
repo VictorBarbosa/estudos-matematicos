@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o módulo do vetor (2, 3, 6)? (duas casas decimais)",
+    "fr": "Quel est le module du vecteur (2, 3, 6) ? (deux décimales)",
+    "en": "What is the magnitude of the vector (2, 3, 6)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "7.00"
+  }
+}

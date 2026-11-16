@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do metano?",
+    "fr": "Quelle est la formule du méthane ?",
+    "en": "What is the formula of methane?"
+  },
+  "dados-calculo": {
+    "total": "CH4"
+  }
+}

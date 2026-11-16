@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "O ponto tem coordenadas polares (r, θ) = ({dados-calculo.r}, {dados-calculo.theta}°). Qual é a coordenada y dele? (duas casas decimais)",
+    "fr": "Le point a pour coordonnées polaires (r, θ) = ({dados-calculo.r}, {dados-calculo.theta}°). Quelle est sa coordonnée y ? (deux décimales)",
+    "en": "The point has polar coordinates (r, θ) = ({dados-calculo.r}, {dados-calculo.theta}°). What is its y-coordinate? (two decimal places)"
+  },
+  "dados-calculo": {
+    "r": "10",
+    "theta": "30",
+    "total": "5.00"
+  }
+}

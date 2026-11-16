@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a fórmula do cloreto de sódio, composto por sódio e cloro?",
+    "fr": "Quelle est la formule du chlorure de sodium, composé de sodium et chlore ?",
+    "en": "What is the formula of sodium chloride, made of sodium and chlorine?"
+  },
+  "dados-calculo": {
+    "total": "NaCl"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "O sistema tem 4 incógnitas e o escalonamento deixou 1 pivôs, sem linhas impossíveis. Quantas soluções ele tem? Responda 0, 1 ou 2 (infinitas).",
+    "fr": "Le système a 4 inconnues et l’échelonnement a laissé 1 pivots, sans ligne impossible. Combien de solutions a-t-il ? Répondez 0, 1 ou 2 (infinité).",
+    "en": "The system has 4 unknowns and row reduction left 1 pivots, with no impossible row. How many solutions does it have? Answer 0, 1 or 2 (infinitely many)."
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

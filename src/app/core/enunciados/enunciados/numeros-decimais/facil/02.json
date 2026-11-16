@@ -1,0 +1,11 @@
+{
+  "enunciado": {
+    "br": "Escreva o número decimal {dados-calculo.valor} como fração irredutível.",
+    "fr": "Écrivez le nombre décimal {dados-calculo.valor} sous forme de fraction irréductible.",
+    "en": "Write the decimal {dados-calculo.valor} as an irreducible fraction."
+  },
+  "dados-calculo": {
+    "valor": "0,75",
+    "total": "3/4"
+  }
+}

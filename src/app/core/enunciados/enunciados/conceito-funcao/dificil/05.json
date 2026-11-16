@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para f(x) = x² − 1x + 1, qual é o valor de f(3)?",
+    "fr": "Pour f(x) = x² − 1x + 1, quelle est la valeur de f(3) ?",
+    "en": "For f(x) = x² − 1x + 1, what is the value of f(3)?"
+  },
+  "dados-calculo": {
+    "total": "7"
+  }
+}

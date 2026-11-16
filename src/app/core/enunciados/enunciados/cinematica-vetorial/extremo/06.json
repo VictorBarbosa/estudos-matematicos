@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num instante, um corpo tem velocidade (4, 3) m/s e aceleração (4, -3) m/s². Qual é a componente TANGENCIAL da aceleração? (duas casas decimais)",
+    "fr": "À un instant, un corps a une vitesse (4, 3) m/s et une accélération (4, -3) m/s². Quelle est la composante TANGENTIELLE de l’accélération ? (deux décimales)",
+    "en": "At an instant a body has velocity (4, 3) m/s and acceleration (4, -3) m/s². What is the TANGENTIAL component of the acceleration? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.40"
+  }
+}

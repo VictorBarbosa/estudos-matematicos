@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma reação tem rendimento de 70% na primeira etapa e de 60% na segunda. Qual é o rendimento global, em %? (duas casas decimais)",
+    "fr": "Une réaction a un rendement de 70% à la première étape et de 60% à la seconde. Quel est le rendement global, en % ? (deux décimales)",
+    "en": "A reaction has a yield of 70% in the first step and 60% in the second. What is the overall yield, in %? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "42.00"
+  }
+}

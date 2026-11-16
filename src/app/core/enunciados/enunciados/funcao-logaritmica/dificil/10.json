@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule log_3(243), sabendo que 243 é potência de 3.",
+    "fr": "Calculez log_3(243), sachant que 243 est une puissance de 3.",
+    "en": "Calculate log_3(243), knowing that 243 is a power of 3."
+  },
+  "dados-calculo": {
+    "total": "5"
+  }
+}

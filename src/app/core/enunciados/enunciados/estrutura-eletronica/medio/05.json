@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o número total de elétrons do átomo neutro de número atômico 16?",
+    "fr": "Quel est le nombre total d’électrons de l’atome neutre de numéro atomique 16 ?",
+    "en": "What is the total number of electrons in the neutral atom with atomic number 16?"
+  },
+  "dados-calculo": {
+    "total": "16"
+  }
+}

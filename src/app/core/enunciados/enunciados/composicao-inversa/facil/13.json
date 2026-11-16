@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Se f(x) = x + 10, qual é o valor de f⁻¹(25)?",
+    "fr": "Si f(x) = x + 10, quelle est la valeur de f⁻¹(25) ?",
+    "en": "If f(x) = x + 10, what is the value of f⁻¹(25)?"
+  },
+  "dados-calculo": {
+    "total": "15"
+  }
+}

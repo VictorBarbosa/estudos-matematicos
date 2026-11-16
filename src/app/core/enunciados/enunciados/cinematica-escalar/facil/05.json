@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo parte do repouso e acelera a 9.81 m/s². Qual é a velocidade após 3 s?",
+    "fr": "Un corps part du repos et accélère à 9.81 m/s². Quelle est la vitesse après 3 s ?",
+    "en": "A body starts from rest and accelerates at 9.81 m/s². What is the velocity after 3 s?"
+  },
+  "dados-calculo": {
+    "total": "29.43"
+  }
+}

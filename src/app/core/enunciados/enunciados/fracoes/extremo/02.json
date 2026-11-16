@@ -1,0 +1,14 @@
+{
+  "enunciado": {
+    "br": "Calcule ({dados-calculo.a} + {dados-calculo.b}) dividido por ({dados-calculo.c} − {dados-calculo.d}) e dê a fração irredutível.",
+    "fr": "Calculez ({dados-calculo.a} + {dados-calculo.b}) divisé par ({dados-calculo.c} − {dados-calculo.d}) et donnez la fraction irréductible.",
+    "en": "Work out ({dados-calculo.a} + {dados-calculo.b}) divided by ({dados-calculo.c} − {dados-calculo.d}) and give the irreducible fraction."
+  },
+  "dados-calculo": {
+    "a": "3/4",
+    "b": "1/2",
+    "c": "5/8",
+    "d": "1/4",
+    "total": "10/3"
+  }
+}
