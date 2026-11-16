@@ -16,9 +16,6 @@ import { avaliarExpressao } from '@core/treino/resposta-simbolica/resposta-simbo
 
 export type ModoCalculadora = 'basica' | 'cientifica' | 'mmc-mdc' | 'soma-produto';
 
-/** As duas contas da aba de inteiros. */
-export type OperacaoInteiros = 'mmc' | 'mdc';
-
 /**
  * Um erro pronto para traduzir.
  *
@@ -366,23 +363,51 @@ export interface LinhaDecomposicao {
   readonly comum: boolean;
 }
 
-/** O que a aba de MMC e MDC mostra. */
+/**
+ * Uma linha da simplificação: um número de entrada dividido pelo MDC.
+ *
+ * `12, 18, 24` com MDC 6 vira `12 ÷ 6 = 2`, `18 ÷ 6 = 3`, `24 ÷ 6 = 4`. O
+ * divisor aparece em cada linha, e não só no cabeçalho, porque é ele que
+ * explica de onde saiu cada resultado — e porque a tela mostra a conta feita.
+ */
+export interface LinhaDeSimplificacao {
+  readonly original: number;
+  readonly divisor: number;
+  readonly resultado: number;
+}
+
+/**
+ * O que a aba de MMC e MDC mostra.
+ *
+ * As duas contas vêm JUNTAS, e não escolhidas por um botão. Elas são duas
+ * leituras da mesma divisão simultânea — o MMC é o produto de todos os
+ * divisores da coluna, o MDC o dos que couberam em todos os números —, e quem
+ * está aprendendo precisa ver as duas lado a lado para enxergar isso.
+ */
 export interface ContaDeInteiros {
   /** Os números lidos da entrada, na ordem em que foram escritos. */
   readonly numeros: readonly number[];
-  readonly valor: number | null;
+  readonly mmc: number | null;
+  readonly mdc: number | null;
   /** A decomposição, linha a linha, até todos virarem 1. */
   readonly decomposicao: readonly LinhaDecomposicao[];
-  /** `2³ · 3² = 72`: de onde o resultado sai. */
-  readonly montagem: string | null;
+  /** `2³ · 3² = 72`: de onde o MMC sai. */
+  readonly montagemMmc: string | null;
+  /** `2 · 3 = 6`: de onde o MDC sai. Nulo quando o MDC é 1. */
+  readonly montagemMdc: string | null;
+  /** Cada número de entrada dividido pelo MDC. Vazia quando não há conta. */
+  readonly simplificacao: readonly LinhaDeSimplificacao[];
   readonly erro: ErroDaConta | null;
 }
 
 const CONTA_VAZIA: ContaDeInteiros = {
   numeros: [],
-  valor: null,
+  mmc: null,
+  mdc: null,
   decomposicao: [],
-  montagem: null,
+  montagemMmc: null,
+  montagemMdc: null,
+  simplificacao: [],
   erro: null,
 };
 
@@ -398,16 +423,22 @@ const SEPARADORES = /[,;\s]+/;
 const LIMITE = 1_000_000_000;
 
 /**
- * O MMC ou o MDC dos números escritos na aba de inteiros.
+ * O MMC, o MDC e a simplificação dos números escritos na aba de inteiros.
  *
  * Aqui a vírgula separa números, e não casas decimais: MMC e MDC só existem
  * entre inteiros, então não há ambiguidade a resolver.
+ *
+ * As três respostas saem da MESMA conta. O MMC é o produto de todos os
+ * divisores da divisão simultânea; o MDC, o produto só dos que couberam em
+ * todos os números. A simplificação é cada número dividido por esse MDC — é o
+ * que se faz com uma fração, e é a razão de as duas contas andarem juntas:
+ * quem achou o MDC de 12 e 18 já tem o que precisa para reduzir 12/18 a 2/3.
  *
  * As fatorações vêm junto de propósito. O resultado sozinho não ensina nada —
  * é ver que 12 = 2²·3 e 18 = 2·3² que explica por que o MMC é 2²·3² e o MDC é
  * 2·3.
  */
-export function calcularInteiros(entrada: string, operacao: OperacaoInteiros): ContaDeInteiros {
+export function calcularInteiros(entrada: string): ContaDeInteiros {
   const partes = entrada
     .trim()
     .split(SEPARADORES)
@@ -436,18 +467,30 @@ export function calcularInteiros(entrada: string, operacao: OperacaoInteiros): C
     return { ...CONTA_VAZIA, numeros, erro: { chave: 'calculadora.aoMenosDois' } };
   }
 
-  const valor = operacao === 'mmc' ? mmcLista(numeros) : mdcLista(numeros);
-  if (!Number.isSafeInteger(valor)) {
+  const mdc = mdcLista(numeros);
+  const mmc = mmcLista(numeros);
+
+  // O MMC de três números grandes passa do que o `double` conta exato, e um
+  // resultado arredondado aqui seria uma resposta errada com cara de certa.
+  if (!Number.isSafeInteger(mmc)) {
     return { ...CONTA_VAZIA, numeros, erro: { chave: 'calculadora.passaDoExato' } };
   }
 
   return {
     numeros,
-    valor,
+    mmc,
+    mdc,
     decomposicao: decompor(numeros),
-    // A fatoração do próprio resultado é, por construção, o produto dos
-    // divisores que o formaram — não há como as duas contas discordarem.
-    montagem: valor > 1 ? `${fatoracaoParaTexto(valor)} = ${valor}` : null,
+    // A fatoração de cada resultado é, por construção, o produto dos divisores
+    // que o formaram — não há como as duas contas discordarem.
+    montagemMmc: mmc > 1 ? `${fatoracaoParaTexto(mmc)} = ${mmc}` : null,
+    // MDC 1 não se escreve como produto de primos; a tela diz isso em palavras.
+    montagemMdc: mdc > 1 ? `${fatoracaoParaTexto(mdc)} = ${mdc}` : null,
+    simplificacao: numeros.map((original) => ({
+      original,
+      divisor: mdc,
+      resultado: original / mdc,
+    })),
     erro: null,
   };
 }

@@ -403,9 +403,54 @@ $operador: #ff9f0a;
   }
 }
 
-/* No MDC, só contam as linhas em que o divisor coube em todos. */
-.decomposicao.mdc .comum .divisor {
+/*
+ * As linhas em que o divisor coube em TODOS os números.
+ *
+ * Elas são os fatores do MDC, e por isso ficam destacadas o tempo todo — não
+ * há mais um modo «MDC» que ligue o destaque. Vendo o destaque junto com a
+ * coluna inteira, entende-se a diferença: o MMC pega tudo, o MDC só isto.
+ */
+.decomposicao .comum .divisor {
   color: $operador;
+}
+
+/*
+ * As duas contas no visor.
+ *
+ * Uma conta normal devolve um número grande; esta devolve dois, e cada um
+ * precisa do seu nome ao lado. Ficam lado a lado porque a tela é larga, e o
+ * corpo da fonte de cada um sai da própria quantidade de dígitos.
+ */
+.par-de-contas {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  padding: 0.2rem 0;
+}
+
+.conta-resultado {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+
+  .nome {
+    color: $funcao;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .numero {
+    font-weight: 300;
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+    @include corpo-que-cabe(2.25rem, 1.1rem);
+  }
+}
+
+/* De onde cada resultado sai: `MMC = 2³ · 3² = 72` e `MDC = 2 · 3 = 6`. */
+.montagens {
+  display: grid;
+  gap: 0.1rem;
 }
 
 /* O caminho da conversão, passo a passo. */
@@ -447,6 +492,26 @@ $operador: #ff9f0a;
   margin: 0;
   font-size: 1rem;
   font-variant-numeric: tabular-nums;
+
+  /* MDC = 1 não se escreve como produto de primos: a frase ocupa o lugar. */
+  &.sem {
+    color: $funcao;
+    font-size: 0.95rem;
+  }
+}
+
+/* A simplificação: cada número dividido pelo MDC. */
+.simplificacao {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 1rem;
+    margin: 0.2rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+  }
 }
 
 /* As raízes andam junto da fatoração, mas são outra resposta: outra cor. */

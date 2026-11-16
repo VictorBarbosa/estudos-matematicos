@@ -34,7 +34,7 @@
     "camposTrocados": "Com os campos trocados há par inteiro: {a} e {b} dão soma {soma} e produto {produto}. Em x² + bx + c, a soma é b, o número que acompanha o x.",
     "cientifica": "Científica",
     "deFatores": "Produto {produto}, soma {soma}",
-    "deNumeros": "{operacao} de {numeros}",
+    "deNumeros": "MMC e MDC de {numeros}",
     "dividindo": "Dividindo todos ao mesmo tempo",
     "explicacaoFatores": "Dois números cuja soma e cujo produto são estes — o passo que fatora x² + bx + c, na ordem em que a expressão se lê. As raízes são os opostos deles.",
     "fatorar": "Fatorar",
@@ -57,13 +57,13 @@
     "pedidoFatores": "Escreva o produto e a soma.",
     "pedidoInteiros": "Dois ou mais inteiros, separados por vírgula.",
     "produto": "Produto",
-    "qualConta": "Qual conta fazer",
     "raizes": "Raízes: x = {a} ou x = {b}",
     "semComum": "Nenhum divisor comum: MDC = 1.",
     "semParInteiro": "Nenhum par de inteiros serve",
     "semParInteiroLongo": "Nenhum par de inteiros tem esse produto e essa soma; os dois números acima são o par exato.",
     "semParReal": "Não existem dois números reais com esse produto e essa soma.",
     "semZero": "O zero fica de fora: use inteiros maiores que zero.",
+    "simplificando": "Simplificando pelo MDC",
     "soma": "Soma"
   },
   "campo": {

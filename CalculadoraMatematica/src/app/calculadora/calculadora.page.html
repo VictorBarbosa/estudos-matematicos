@@ -9,6 +9,30 @@
 
 <ion-content [fullscreen]="true">
   <section class="calculadora" [class.com-campos]="!emTeclado()">
+    <!--
+      Duas formas de resultado, porque são duas coisas diferentes: uma conta
+      devolve UM número, e a aba de MMC e MDC devolve DOIS. Escrever «72 · 6»
+      numa linha só pediria ao aluno que adivinhasse qual é qual.
+    -->
+    @if (emInteiros()) {
+    <div class="visor" role="status" aria-live="polite">
+      <p class="legenda" [style.--digitos]="digitosDaLegenda()"><span>{{ legenda() }}</span></p>
+      @if (conta().mmc !== null && conta().mdc !== null) {
+      <div class="par-de-contas">
+        <p class="conta-resultado">
+          <span class="nome">MMC</span>
+          <span class="numero" [style.--digitos]="digitosDe(conta().mmc)">{{ conta().mmc }}</span>
+        </p>
+        <p class="conta-resultado">
+          <span class="nome">MDC</span>
+          <span class="numero" [style.--digitos]="digitosDe(conta().mdc)">{{ conta().mdc }}</span>
+        </p>
+      </div>
+      } @else {
+      <p class="valor"><span>—</span></p>
+      }
+    </div>
+    } @else {
     <div class="visor" role="status" aria-live="polite">
       <!-- O texto vai dentro de um `span`: o bloco é rtl para que uma conta
            longa seja cortada pela ESQUERDA, onde está o que já passou, e o
@@ -16,30 +40,10 @@
       <p class="legenda" [style.--digitos]="digitosDaLegenda()"><span>{{ legenda() }}</span></p>
       <p class="valor" [style.--digitos]="digitosDoVisor()"><span>{{ visor() }}</span></p>
     </div>
+    }
 
     @if (emInteiros()) {
     <div class="campos">
-      <div class="escolha" role="group" aria-label="Qual conta fazer">
-        <button
-          type="button"
-          class="funcao"
-          [class.ativo]="operacao() === 'mmc'"
-          [attr.aria-pressed]="operacao() === 'mmc'"
-          (click)="escolher('mmc')"
-        >
-          MMC
-        </button>
-        <button
-          type="button"
-          class="funcao"
-          [class.ativo]="operacao() === 'mdc'"
-          [attr.aria-pressed]="operacao() === 'mdc'"
-          (click)="escolher('mdc')"
-        >
-          MDC
-        </button>
-      </div>
-
       <label class="campo">
         <span class="rotulo">Números, separados por vírgula</span>
         <!-- O teclado numérico do iPhone não traz vírgula: ela vem ao lado. -->
@@ -71,7 +75,7 @@
 
       <!-- A divisão simultânea: o caminho até a resposta, e não só ela. -->
       @if (conta().decomposicao.length > 0) {
-      <table class="decomposicao" [class.mdc]="operacao() === 'mdc'">
+      <table class="decomposicao">
         <caption class="rotulo">
           Dividindo todos ao mesmo tempo
         </caption>
@@ -93,11 +97,30 @@
         </tbody>
       </table>
 
-      @if (conta().montagem; as montagem) {
-      <p class="montagem">{{ nomeDaOperacao() }} = {{ montagem }}</p>
-      } @else {
-      <p class="montagem">Nenhum divisor comum: MDC = 1.</p>
-      } }
+      <!-- De onde cada resultado sai. O MMC é o produto de TODA a coluna de
+           divisores; o MDC, só das linhas marcadas. Ver os dois lado a lado é
+           o que explica por que um é maior que o outro. -->
+      <div class="montagens">
+        @if (conta().montagemMmc; as montagem) {
+        <p class="montagem">MMC = {{ montagem }}</p>
+        } @if (conta().montagemMdc; as montagem) {
+        <p class="montagem">MDC = {{ montagem }}</p>
+        } @else {
+        <p class="montagem sem">Nenhum divisor comum: MDC = 1.</p>
+        }
+      </div>
+
+      <!-- E a razão de as duas contas andarem juntas: dividido pelo MDC, o par
+           vira a fração irredutível. -->
+      <div class="simplificacao">
+        <p class="rotulo">Simplificando pelo MDC</p>
+        <ul>
+          @for (linha of conta().simplificacao; track $index) {
+          <li>{{ linha.original }} ÷ {{ linha.divisor }} = {{ linha.resultado }}</li>
+          }
+        </ul>
+      </div>
+      }
     </div>
     } @else if (emFatores()) {
     <div class="campos">

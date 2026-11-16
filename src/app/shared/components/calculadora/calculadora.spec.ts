@@ -242,18 +242,25 @@ describe('Calculadora: MMC e MDC', () => {
     await fixture.whenStable();
   }
 
+  /** O número que aparece ao lado de `MMC` (ou de `MDC`) no visor. */
+  function resultado(rotulo: string): string {
+    const contas = [...fixture.nativeElement.querySelectorAll('.conta-resultado')].map(
+      (conta) => ({
+        nome: (conta.querySelector('.nome') as HTMLElement).textContent!.trim(),
+        numero: (conta.querySelector('.numero') as HTMLElement).textContent!.trim(),
+      }),
+    );
+    return contas.find((c) => c.nome === rotulo)?.numero ?? '(ausente)';
+  }
+
+  /** O visor mostra as duas contas ao mesmo tempo. */
   function visor(): string {
-    return (fixture.nativeElement.querySelector('.valor') as HTMLElement).textContent!.trim();
+    const valor = fixture.nativeElement.querySelector('.visor .valor');
+    return valor === null ? '' : (valor as HTMLElement).textContent!.trim();
   }
 
   function legenda(): string {
     return (fixture.nativeElement.querySelector('.legenda') as HTMLElement).textContent!.trim();
-  }
-
-  function escolha(rotulo: string): HTMLButtonElement {
-    return [...fixture.nativeElement.querySelectorAll('.escolha button')].find(
-      (botao) => (botao as HTMLButtonElement).textContent?.trim() === rotulo,
-    ) as HTMLButtonElement;
   }
 
   beforeEach(async () => {
@@ -281,20 +288,31 @@ describe('Calculadora: MMC e MDC', () => {
     expect(fixture.nativeElement.querySelector('.teclado')).toBeNull();
   });
 
-  it('mostra o MMC dos números escritos', async () => {
+  it('mostra o MMC e o MDC juntos, sem escolher entre eles', async () => {
     await escrever('12, 18, 24');
 
-    expect(visor()).toBe('72');
-    expect(legenda()).toBe('MMC de 12, 18, 24');
+    expect(resultado('MMC')).toBe('72');
+    expect(resultado('MDC')).toBe('6');
+    expect(legenda()).toBe('MMC e MDC de 12, 18, 24');
   });
 
-  it('trocar para MDC recalcula o mesmo que está escrito', async () => {
-    await escrever('12, 18, 24');
-    escolha('MDC').click();
-    await fixture.whenStable();
+  it('não há mais botão para escolher a conta', () => {
+    // O botão escondia o que as duas contas têm em comum: são duas leituras da
+    // mesma divisão simultânea.
+    expect(fixture.nativeElement.querySelector('.escolha')).toBeNull();
+  });
 
-    expect(visor()).toBe('6');
-    expect(legenda()).toContain('MDC');
+  it('o exemplo de 4 e 2 mostra MMC 4, MDC 2 e a simplificação', async () => {
+    await escrever('4, 2');
+
+    expect(resultado('MMC')).toBe('4');
+    expect(resultado('MDC')).toBe('2');
+
+    const linhas = [...fixture.nativeElement.querySelectorAll('.simplificacao li')].map((li) =>
+      (li as HTMLElement).textContent!.trim(),
+    );
+
+    expect(linhas).toEqual(['4 ÷ 2 = 2', '2 ÷ 2 = 1']);
   });
 
   it('mostra a decomposição até todos chegarem a 1', async () => {
@@ -308,25 +326,36 @@ describe('Calculadora: MMC e MDC', () => {
     expect(linhas).toEqual(['12 18 2', '6 9 2', '3 9 3', '1 3 3', '1 1 ']);
   });
 
-  it('mostra de onde o resultado sai', async () => {
+  it('mostra de onde cada resultado sai', async () => {
     await escrever('12, 18');
 
-    expect(
-      (fixture.nativeElement.querySelector('.montagem') as HTMLElement).textContent!.trim(),
-    ).toBe('MMC = 2² · 3² = 36');
+    const montagens = [...fixture.nativeElement.querySelectorAll('.montagem')].map((linha) =>
+      (linha as HTMLElement).textContent!.trim(),
+    );
+
+    expect(montagens).toEqual(['MMC = 2² · 3² = 36', 'MDC = 2 · 3 = 6']);
   });
 
-  it('no MDC, destaca as linhas que couberam em todos', async () => {
+  it('destaca as linhas que couberam em todos, sempre', async () => {
+    // O destaque deixou de ser um modo: as linhas comuns são os fatores do
+    // MDC e aparecem marcadas ao lado da coluna inteira, que é o MMC.
     await escrever('12, 18');
-    escolha('MDC').click();
-    await fixture.whenStable();
 
     const comuns = [...fixture.nativeElement.querySelectorAll('.decomposicao tr.comum')].map(
       (linha) => (linha as HTMLElement).querySelector('.divisor')!.textContent!.trim(),
     );
 
     expect(comuns).toEqual(['2', '3']);
-    expect(fixture.nativeElement.querySelector('.decomposicao')!.classList).toContain('mdc');
+  });
+
+  it('MDC 1 diz em palavras por que não há montagem', async () => {
+    await escrever('8, 9');
+
+    const linhas = [...fixture.nativeElement.querySelectorAll('.montagem')].map((linha) =>
+      (linha as HTMLElement).textContent!.trim(),
+    );
+
+    expect(linhas[1]).toContain('Nenhum divisor comum');
   });
 
   it('entrada inválida vira recado, não resultado', async () => {

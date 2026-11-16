@@ -19,7 +19,6 @@ import {
   ESTADO_INICIAL,
   EstadoCalculadora,
   ModoCalculadora,
-  OperacaoInteiros,
   alternarSinal,
   apagar,
   calcular,
@@ -43,10 +42,9 @@ const CHAVE = 'calculadora-matematica.estado.v1';
  */
 interface Preferencias {
   readonly angulo: Angulo;
-  readonly operacao: OperacaoInteiros;
 }
 
-const PADRAO: Preferencias = { angulo: 'rad', operacao: 'mmc' };
+const PADRAO: Preferencias = { angulo: 'rad' };
 
 /** Como cada modo se chama no menu e no título. */
 export const NOME_DO_MODO: Readonly<Record<Modo, string>> = {
@@ -79,7 +77,6 @@ export class CalculadoraPage {
 
   protected readonly modo = this.modos.modo;
   protected readonly angulo = computed(() => this.preferencias().angulo);
-  protected readonly operacao = computed(() => this.preferencias().operacao);
   protected readonly titulo = computed(() => NOME_DO_MODO[this.modo()]);
 
   private readonly estado = signal<EstadoCalculadora>(ESTADO_INICIAL);
@@ -102,13 +99,16 @@ export class CalculadoraPage {
     () => !this.emInteiros() && !this.emFatores() && !this.emDecimal(),
   );
 
-  protected readonly conta = computed(() => calcularInteiros(this.numeros(), this.operacao()));
+  /**
+   * O MMC, o MDC e a simplificação do que está escrito.
+   *
+   * As três vêm juntas: são leituras da mesma divisão simultânea, e é vendo as
+   * duas lado a lado que se entende por que o MMC pega todos os divisores e o
+   * MDC só os que couberam em todos os números.
+   */
+  protected readonly conta = computed(() => calcularInteiros(this.numeros()));
   protected readonly fatores = computed(() => calcularFatores(this.produto(), this.soma()));
   protected readonly conversao = computed<ContaDeDecimal>(() => decimalEmFracao(this.decimal()));
-
-  protected readonly nomeDaOperacao = computed(() =>
-    this.operacao() === 'mmc' ? 'MMC' : 'MDC',
-  );
 
   /** A linha pequena: a conta que gerou o resultado, ou o aviso de erro. */
   protected readonly legenda = computed(() => {
@@ -139,7 +139,7 @@ export class CalculadoraPage {
         return traduzirErro(erro.chave, erro.valores);
       }
       return numeros.length >= 2
-        ? `${this.nomeDaOperacao()} de ${numeros.join(', ')}`
+        ? `MMC e MDC de ${numeros.join(', ')}`
         : 'Dois ou mais inteiros, separados por vírgula.';
     }
 
@@ -162,11 +162,6 @@ export class CalculadoraPage {
       return parExato.length === 2 ? `${parExato[0]} e ${parExato[1]}` : '—';
     }
 
-    if (this.emInteiros()) {
-      const { valor } = this.conta();
-      return valor === null ? '—' : String(valor);
-    }
-
     const { expressao, resultado } = this.estado();
     return resultado ?? (expressao === '' ? '0' : expressao);
   });
@@ -185,12 +180,19 @@ export class CalculadoraPage {
   /** A legenda tem o mesmo problema, com a conta inteira escrita nela. */
   protected readonly digitosDaLegenda = computed(() => Math.max(1, this.legenda().length));
 
-  constructor() {
-    effect(() => salvar(this.preferencias()));
+  /**
+   * Quantos dígitos tem cada uma das duas contas.
+   *
+   * No modo de inteiros o visor mostra dois números, e cada um encolhe por
+   * conta própria: o MMC de 12, 18 e 24 tem dois dígitos, o de 999 e 998 tem
+   * seis, e uma fonte só para os dois estouraria num deles.
+   */
+  protected digitosDe(valor: number | null): number {
+    return Math.max(1, String(valor ?? 0).length);
   }
 
-  protected escolher(operacao: OperacaoInteiros): void {
-    this.preferencias.update((atual) => ({ ...atual, operacao }));
+  constructor() {
+    effect(() => salvar(this.preferencias()));
   }
 
   protected pressionar(acao: Acao): void {
@@ -337,7 +339,6 @@ function carregar(): Preferencias {
     const salvo = JSON.parse(bruto) as Partial<Preferencias>;
     return {
       angulo: salvo.angulo === 'deg' ? 'deg' : 'rad',
-      operacao: salvo.operacao === 'mdc' ? 'mdc' : 'mmc',
     };
   } catch {
     return PADRAO;

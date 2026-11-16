@@ -34,7 +34,7 @@
     "camposTrocados": "Swapping the fields gives a whole-number pair: {a} and {b} have sum {soma} and product {produto}. In x² + bx + c, the sum is b, the number next to the x.",
     "cientifica": "Scientific",
     "deFatores": "Product {produto}, sum {soma}",
-    "deNumeros": "{operacao} of {numeros}",
+    "deNumeros": "LCM and GCD of {numeros}",
     "dividindo": "Dividing them all at once",
     "explicacaoFatores": "Two numbers with this sum and this product — the step that factors x² + bx + c, in the order the expression reads. The roots are their opposites.",
     "fatorar": "Factor",
@@ -57,13 +57,13 @@
     "pedidoFatores": "Write the product and the sum.",
     "pedidoInteiros": "Two or more whole numbers, separated by commas.",
     "produto": "Product",
-    "qualConta": "Which calculation",
     "raizes": "Roots: x = {a} or x = {b}",
     "semComum": "No common divisor: GCD = 1.",
     "semParInteiro": "No pair of integers fits",
     "semParInteiroLongo": "No pair of integers has that product and that sum; the two numbers above are the exact pair.",
     "semParReal": "There are no two real numbers with that product and that sum.",
     "semZero": "Zero is left out: use whole numbers greater than zero.",
+    "simplificando": "Simplifying by the GCD",
     "soma": "Sum"
   },
   "campo": {

@@ -24,7 +24,7 @@ const MODOS: readonly Modo[] = [
  *
  * Mora fora da página porque quem o troca é o menu lateral, do outro lado da
  * árvore — e é lembrado entre aberturas pela mesma razão que a calculadora do
- * site lembra: quem usa a aba de MMC todo dia não quer reescolhê-la.
+ * site lembra: quem usa a aba de MMC e MDC todo dia não quer reescolhê-la.
  */
 @Injectable({ providedIn: 'root' })
 export class ModoService {

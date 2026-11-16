@@ -14,6 +14,15 @@ describe('CalculadoraPage', () => {
   let modos: ModoService;
 
   const texto = (): string => fixture.nativeElement.textContent.replace(/\s+/g, ' ');
+  /** O número que aparece ao lado de `MMC` (ou de `MDC`) no visor. */
+  const resultado = (rotulo: string): string => {
+    const contas = [...fixture.nativeElement.querySelectorAll('.conta-resultado')].map((conta) => ({
+      nome: (conta.querySelector('.nome') as HTMLElement).textContent!.trim(),
+      numero: (conta.querySelector('.numero') as HTMLElement).textContent!.trim(),
+    }));
+    return contas.find((c) => c.nome === rotulo)?.numero ?? '(ausente)';
+  };
+
   const visor = (): string => (fixture.nativeElement.querySelector('.valor') as HTMLElement).textContent!.trim();
   const legenda = (): string => (fixture.nativeElement.querySelector('.legenda') as HTMLElement).textContent!.trim();
 
@@ -119,16 +128,43 @@ describe('CalculadoraPage', () => {
     expect(texto()).toContain('DEG');
   });
 
-  it('o modo de inteiros mostra o MMC e a divisão simultânea', async () => {
+  it('o modo de inteiros mostra o MMC e o MDC juntos, sem escolher', async () => {
     modos.definir('mmc-mdc');
     await fixture.whenStable();
     fixture.detectChanges();
 
     await escrever(0, '12, 18, 24');
 
-    expect(visor()).toBe('72');
-    expect(legenda()).toBe('MMC de 12, 18, 24');
+    expect(resultado('MMC')).toBe('72');
+    expect(resultado('MDC')).toBe('6');
+    expect(legenda()).toBe('MMC e MDC de 12, 18, 24');
     expect(fixture.nativeElement.querySelectorAll('.decomposicao tr').length).toBeGreaterThan(3);
+  });
+
+  it('não há mais botão para escolher a conta', async () => {
+    // O botão escondia o que as duas contas têm em comum: são duas leituras da
+    // mesma divisão simultânea.
+    modos.definir('mmc-mdc');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('.escolha')).toBeNull();
+  });
+
+  it('4 e 2 mostram MMC 4, MDC 2 e a simplificação', async () => {
+    modos.definir('mmc-mdc');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(0, '4, 2');
+
+    expect(resultado('MMC')).toBe('4');
+    expect(resultado('MDC')).toBe('2');
+
+    const linhas = [...fixture.nativeElement.querySelectorAll('.simplificacao li')].map((li) =>
+      (li as HTMLElement).textContent!.trim(),
+    );
+    expect(linhas).toEqual(['4 ÷ 2 = 2', '2 ÷ 2 = 1']);
   });
 
   it('pede a soma antes do produto, na ordem em que a expressão se lê', async () => {
@@ -205,8 +241,9 @@ describe('CalculadoraPage', () => {
     expect(campo.value).toBe('80, ');
 
     await escrever(0, '80, 90');
-    expect(visor()).toBe('720');
-    expect(legenda()).toBe('MMC de 80, 90');
+    expect(resultado('MMC')).toBe('720');
+    expect(resultado('MDC')).toBe('10');
+    expect(legenda()).toBe('MMC e MDC de 80, 90');
   });
 
   it('a vírgula não se repete nem abre a lista', async () => {

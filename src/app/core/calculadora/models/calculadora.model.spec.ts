@@ -281,70 +281,117 @@ describe('teclas impossíveis', () => {
  *
  * Aqui a vírgula separa números, e não casas decimais: as duas contas só
  * existem entre inteiros, então não há ambiguidade a resolver.
+ *
+ * As duas saem da MESMA chamada. Elas eram abas separadas, escolhidas por um
+ * botão, e a escolha escondia justamente o que as une: o MMC é o produto de
+ * todos os divisores da divisão simultânea, o MDC o dos que couberam em todos
+ * os números — e a divisão que mostra um mostra o outro.
  */
 describe('MMC e MDC', () => {
   it('calcula o MMC de dois números', () => {
-    expect(calcularInteiros('12, 18', 'mmc').valor).toBe(36);
+    expect(calcularInteiros('12, 18').mmc).toBe(36);
+  });
+
+  it('devolve as duas contas na mesma chamada', () => {
+    // Era o ponto da fusão: quem digita «12, 18» quer ver 36 e 6, não escolher
+    // entre eles antes de saber a resposta.
+    const conta = calcularInteiros('12, 18');
+
+    expect(conta.mmc).toBe(36);
+    expect(conta.mdc).toBe(6);
+  });
+
+  it('simplifica cada número pelo MDC', () => {
+    // 12 ÷ 6 = 2 e 18 ÷ 6 = 3: é o que reduz a fração 12/18 a 2/3, e é a
+    // razão de as duas contas andarem juntas na mesma tela.
+    expect(calcularInteiros('12, 18').simplificacao).toEqual([
+      { original: 12, divisor: 6, resultado: 2 },
+      { original: 18, divisor: 6, resultado: 3 },
+    ]);
+  });
+
+  it('o exemplo do enunciado: 4 e 2 viram 2 e 1', () => {
+    const conta = calcularInteiros('4, 2');
+
+    expect(conta.mmc).toBe(4);
+    expect(conta.mdc).toBe(2);
+    expect(conta.simplificacao.map((l) => l.resultado)).toEqual([2, 1]);
+  });
+
+  it('coprimos simplificam por 1, sem mudar nada', () => {
+    const conta = calcularInteiros('8, 9');
+
+    expect(conta.mdc).toBe(1);
+    expect(conta.simplificacao).toEqual([
+      { original: 8, divisor: 1, resultado: 8 },
+      { original: 9, divisor: 1, resultado: 9 },
+    ]);
+  });
+
+  it('a simplificação de três números usa o MDC dos três', () => {
+    expect(calcularInteiros('12, 18, 24').simplificacao.map((l) => l.resultado)).toEqual([2, 3, 4]);
   });
 
   it('calcula o MDC de dois números', () => {
-    expect(calcularInteiros('12, 18', 'mdc').valor).toBe(6);
+    expect(calcularInteiros('12, 18').mdc).toBe(6);
   });
 
   it('aceita mais de dois números', () => {
-    expect(calcularInteiros('12, 18, 24', 'mmc').valor).toBe(72);
-    expect(calcularInteiros('12, 18, 24', 'mdc').valor).toBe(6);
+    expect(calcularInteiros('12, 18, 24').mmc).toBe(72);
+    expect(calcularInteiros('12, 18, 24').mdc).toBe(6);
   });
 
   it('separa por vírgula, ponto e vírgula ou espaço', () => {
     for (const entrada of ['12,18', '12; 18', '12 18', '  12 ,  18  ']) {
-      expect(calcularInteiros(entrada, 'mdc').valor, entrada).toBe(6);
+      expect(calcularInteiros(entrada).mdc, entrada).toBe(6);
     }
   });
 
-  it('mostra a montagem do resultado', () => {
-    expect(calcularInteiros('12, 18, 24', 'mmc').montagem).toBe('2³ · 3² = 72');
-    expect(calcularInteiros('12, 18, 24', 'mdc').montagem).toBe('2 · 3 = 6');
+  it('mostra a montagem de cada resultado', () => {
+    const conta = calcularInteiros('12, 18, 24');
+
+    expect(conta.montagemMmc).toBe('2³ · 3² = 72');
+    expect(conta.montagemMdc).toBe('2 · 3 = 6');
   });
 
   it('sem divisor comum, não há montagem a mostrar', () => {
     // MDC 1 não se escreve como produto de primos; a tela diz isso em palavras.
-    expect(calcularInteiros('8, 9', 'mdc').montagem).toBeNull();
+    expect(calcularInteiros('8, 9').montagemMdc).toBeNull();
   });
 
   it('coprimos têm MDC 1 e MMC igual ao produto', () => {
-    expect(calcularInteiros('8, 9', 'mdc').valor).toBe(1);
-    expect(calcularInteiros('8, 9', 'mmc').valor).toBe(72);
+    expect(calcularInteiros('8, 9').mdc).toBe(1);
+    expect(calcularInteiros('8, 9').mmc).toBe(72);
   });
 
   it('a tela vazia não é erro', () => {
-    const vazia = calcularInteiros('   ', 'mmc');
+    const vazia = calcularInteiros('   ');
 
-    expect(vazia.valor).toBeNull();
+    expect(vazia.mmc).toBeNull();
     expect(vazia.erro).toBeNull();
   });
 
   it('um número só pede o segundo', () => {
-    expect(calcularInteiros('7', 'mmc').erro?.chave).toBe('calculadora.aoMenosDois');
+    expect(calcularInteiros('7').erro?.chave).toBe('calculadora.aoMenosDois');
   });
 
   it('o que não é inteiro é recusado pelo nome', () => {
     // A parte recusada viaja no erro para aparecer na frase, em qualquer idioma.
-    expect(calcularInteiros('12, abc', 'mmc').erro?.valores).toEqual({ parte: 'abc' });
-    expect(calcularInteiros('12, 1.5', 'mmc').erro?.valores).toEqual({ parte: '1.5' });
-    expect(calcularInteiros('12, -4', 'mdc').erro?.valores).toEqual({ parte: '-4' });
+    expect(calcularInteiros('12, abc').erro?.valores).toEqual({ parte: 'abc' });
+    expect(calcularInteiros('12, 1.5').erro?.valores).toEqual({ parte: '1.5' });
+    expect(calcularInteiros('12, -4').erro?.valores).toEqual({ parte: '-4' });
   });
 
   it('o zero fica de fora', () => {
     // mdc(0, n) = n e mmc(n, 0) = 0: respostas verdadeiras e inúteis para
     // quem está aprendendo o que as duas contas significam.
-    expect(calcularInteiros('0, 12', 'mmc').erro?.chave).toBe('calculadora.semZero');
+    expect(calcularInteiros('0, 12').erro?.chave).toBe('calculadora.semZero');
   });
 
   it('não devolve resultado que o ponto flutuante não aguenta', () => {
-    const gigante = calcularInteiros('999999937, 999999893, 999999929', 'mmc');
+    const gigante = calcularInteiros('999999937, 999999893, 999999929');
 
-    expect(gigante.valor).toBeNull();
+    expect(gigante.mmc).toBeNull();
     expect(gigante.erro?.chave).toBe('calculadora.passaDoExato');
   });
 });
@@ -359,7 +406,7 @@ describe('MMC e MDC', () => {
 describe('divisão simultânea', () => {
   /** A tabela como ela se lê: `12 18 24 | 2`. */
   function tabela(entrada: string): readonly string[] {
-    return calcularInteiros(entrada, 'mmc').decomposicao.map(
+    return calcularInteiros(entrada).decomposicao.map(
       (linha) => `${linha.valores.join(' ')} | ${linha.divisor}`,
     );
   }
@@ -376,11 +423,11 @@ describe('divisão simultânea', () => {
 
   it('divide quem dá e deixa quem não dá como está', () => {
     // Na terceira linha o 9 não é divisível por 2 e desce inteiro.
-    expect(calcularInteiros('12, 18, 24', 'mmc').decomposicao[2]!.valores).toEqual([3, 9, 6]);
+    expect(calcularInteiros('12, 18, 24').decomposicao[2]!.valores).toEqual([3, 9, 6]);
   });
 
   it('marca as linhas em que o divisor coube em todos', () => {
-    const marcadas = calcularInteiros('12, 18, 24', 'mmc')
+    const marcadas = calcularInteiros('12, 18, 24')
       .decomposicao.filter((linha) => linha.comum)
       .map((linha) => linha.divisor);
 
@@ -389,23 +436,23 @@ describe('divisão simultânea', () => {
   });
 
   it('coprimos não têm nenhuma linha comum', () => {
-    expect(calcularInteiros('8, 9', 'mmc').decomposicao.every((l) => !l.comum)).toBe(true);
+    expect(calcularInteiros('8, 9').decomposicao.every((l) => !l.comum)).toBe(true);
   });
 
   it('o produto dos divisores é o MMC', () => {
-    const conta = calcularInteiros('6, 8, 15', 'mmc');
+    const conta = calcularInteiros('6, 8, 15');
     const produto = conta.decomposicao.reduce((total, linha) => total * linha.divisor, 1);
 
-    expect(produto).toBe(conta.valor);
+    expect(produto).toBe(conta.mmc);
   });
 
   it('o produto das linhas comuns é o MDC', () => {
-    const conta = calcularInteiros('24, 36, 60', 'mdc');
+    const conta = calcularInteiros('24, 36, 60');
     const produto = conta.decomposicao
       .filter((linha) => linha.comum)
       .reduce((total, linha) => total * linha.divisor, 1);
 
-    expect(produto).toBe(conta.valor);
+    expect(produto).toBe(conta.mdc);
   });
 
   it('números iguais descem juntos', () => {
@@ -415,9 +462,9 @@ describe('divisão simultânea', () => {
   it('um primo grande não faz o divisor subir de um em um', () => {
     // Sem o atalho pela raiz, 999983 levaria um milhão de voltas.
     const comecou = Date.now();
-    const conta = calcularInteiros('999983, 2', 'mmc');
+    const conta = calcularInteiros('999983, 2');
 
-    expect(conta.valor).toBe(1999966);
+    expect(conta.mmc).toBe(1999966);
     expect(conta.decomposicao.map((l) => l.divisor)).toEqual([2, 999983]);
     expect(Date.now() - comecou).toBeLessThan(500);
   });

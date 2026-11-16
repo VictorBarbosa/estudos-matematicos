@@ -75,41 +75,47 @@
       </button>
     </header>
 
-    <div class="visor" role="status" aria-live="polite">
-      <!-- O texto vai dentro de um `span`: o bloco é rtl para que uma conta
-           longa seja cortada pela ESQUERDA, onde está o que já passou, e o
-           `span` é ltr para que a conta não seja lida de trás para a frente. -->
-      <p class="legenda">
-        <span>{{ legenda() }}</span>
-      </p>
-      <p class="valor" [class.apertado]="visorApertado()">
-        <span>{{ visor() }}</span>
-      </p>
-    </div>
+    <!--
+      Duas formas de resultado, porque são duas coisas diferentes: uma conta
+      devolve UM número, e a aba de MMC e MDC devolve DOIS. Escrever «72 · 6»
+      numa linha só pediria ao aluno que adivinhasse qual é qual.
+    -->
+    @if (emInteiros()) {
+      <div class="visor" role="status" aria-live="polite">
+        <p class="legenda">
+          <span>{{ legenda() }}</span>
+        </p>
+        @if (conta().mmc !== null && conta().mdc !== null) {
+          <div class="par-de-contas">
+            <p class="conta-resultado">
+              <span class="nome">{{ i18n.t('calculadora.mmc') }}</span>
+              <span class="numero">{{ conta().mmc }}</span>
+            </p>
+            <p class="conta-resultado">
+              <span class="nome">{{ i18n.t('calculadora.mdc') }}</span>
+              <span class="numero">{{ conta().mdc }}</span>
+            </p>
+          </div>
+        } @else {
+          <p class="valor"><span>—</span></p>
+        }
+      </div>
+    } @else {
+      <div class="visor" role="status" aria-live="polite">
+        <!-- O texto vai dentro de um `span`: o bloco é rtl para que uma conta
+             longa seja cortada pela ESQUERDA, onde está o que já passou, e o
+             `span` é ltr para que a conta não seja lida de trás para a frente. -->
+        <p class="legenda">
+          <span>{{ legenda() }}</span>
+        </p>
+        <p class="valor" [class.apertado]="visorApertado()">
+          <span>{{ visor() }}</span>
+        </p>
+      </div>
+    }
 
     @if (emInteiros()) {
       <div class="inteiros">
-        <div class="escolha" role="group" [attr.aria-label]="i18n.t('calculadora.qualConta')">
-          <button
-            type="button"
-            class="funcao"
-            [class.ativo]="calculadora.operacao() === 'mmc'"
-            [attr.aria-pressed]="calculadora.operacao() === 'mmc'"
-            (click)="escolher('mmc')"
-          >
-            {{ i18n.t('calculadora.mmc') }}
-          </button>
-          <button
-            type="button"
-            class="funcao"
-            [class.ativo]="calculadora.operacao() === 'mdc'"
-            [attr.aria-pressed]="calculadora.operacao() === 'mdc'"
-            (click)="escolher('mdc')"
-          >
-            {{ i18n.t('calculadora.mdc') }}
-          </button>
-        </div>
-
         <label class="campo">
           <span class="rotulo">{{ i18n.t('calculadora.numeros') }}</span>
           <input
@@ -127,7 +133,7 @@
              é o produto de toda a coluna da direita; o MDC, só das linhas em
              que o divisor coube em todos os números. -->
         @if (conta().decomposicao.length > 0) {
-          <table class="decomposicao" [class.mdc]="calculadora.operacao() === 'mdc'">
+          <table class="decomposicao">
             <caption class="rotulo">
               {{
                 i18n.t('calculadora.dividindo')
@@ -151,15 +157,35 @@
             </tbody>
           </table>
 
-          @if (conta().montagem; as montagem) {
-            <p class="montagem">
-              {{
-                i18n.t('calculadora.montagem', { operacao: nomeDaOperacao(), montagem: montagem })
-              }}
-            </p>
-          } @else {
-            <p class="montagem">{{ i18n.t('calculadora.semComum') }}</p>
-          }
+          <!-- De onde cada resultado sai. O MMC é o produto de TODA a coluna
+               de divisores; o MDC, só das linhas marcadas. Ver os dois lado a
+               lado é o que explica por que um é maior que o outro. -->
+          <div class="montagens">
+            @if (conta().montagemMmc; as montagem) {
+              <p class="montagem">
+                {{ i18n.t('calculadora.montagem', { operacao: i18n.t('calculadora.mmc'), montagem }) }}
+              </p>
+            }
+            @if (conta().montagemMdc; as montagem) {
+              <p class="montagem">
+                {{ i18n.t('calculadora.montagem', { operacao: i18n.t('calculadora.mdc'), montagem }) }}
+              </p>
+            } @else {
+              <!-- MDC 1 não se escreve como produto de primos. -->
+              <p class="montagem sem">{{ i18n.t('calculadora.semComum') }}</p>
+            }
+          </div>
+
+          <!-- E a razão de as duas contas andarem juntas: dividido pelo MDC,
+               o par vira a fração irredutível. -->
+          <div class="simplificacao">
+            <p class="rotulo">{{ i18n.t('calculadora.simplificando') }}</p>
+            <ul>
+              @for (linha of conta().simplificacao; track $index) {
+                <li>{{ linha.original }} ÷ {{ linha.divisor }} = {{ linha.resultado }}</li>
+              }
+            </ul>
+          </div>
         }
       </div>
     } @else if (emFatores()) {

@@ -10,7 +10,7 @@ com abas, uma página inteira com os modos num menu lateral.
 | --- | --- |
 | **Básica** | As quatro operações, porcentagem e troca de sinal |
 | **Científica** | Seno, cosseno, tangente, logaritmos, potências, raiz, π e *e* |
-| **MMC e MDC** | Dois ou mais inteiros, com a divisão simultânea passo a passo |
+| **MMC e MDC** | Dois ou mais inteiros: as duas contas juntas, com a divisão simultânea e a simplificação pelo MDC |
 | **Fatorar** | Dois números por produto e soma, com a fatoração e as raízes |
 | **Decimal em fração** | `0,375` vira `3/8`; `0,1(6)` vira `1/6`, com a conta à vista |
 

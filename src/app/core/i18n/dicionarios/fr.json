@@ -34,7 +34,7 @@
     "camposTrocados": "En échangeant les champs, il y a une paire entière : {a} et {b} donnent la somme {soma} et le produit {produto}. Dans x² + bx + c, la somme est b, le nombre devant le x.",
     "cientifica": "Scientifique",
     "deFatores": "Produit {produto}, somme {soma}",
-    "deNumeros": "{operacao} de {numeros}",
+    "deNumeros": "PPCM et PGCD de {numeros}",
     "dividindo": "En divisant tous en même temps",
     "explicacaoFatores": "Deux nombres dont la somme et le produit sont ceux-ci — l’étape qui factorise x² + bx + c, dans l’ordre où l’expression se lit. Les racines en sont les opposés.",
     "fatorar": "Factoriser",
@@ -57,13 +57,13 @@
     "pedidoFatores": "Écrivez le produit et la somme.",
     "pedidoInteiros": "Deux entiers ou plus, séparés par des virgules.",
     "produto": "Produit",
-    "qualConta": "Quel calcul faire",
     "raizes": "Racines : x = {a} ou x = {b}",
     "semComum": "Aucun diviseur commun : PGCD = 1.",
     "semParInteiro": "Aucune paire d’entiers ne convient",
     "semParInteiroLongo": "Aucune paire d’entiers n’a ce produit et cette somme ; les deux nombres ci-dessus sont la paire exacte.",
     "semParReal": "Il n’existe pas deux nombres réels avec ce produit et cette somme.",
     "semZero": "Le zéro est exclu : utilisez des entiers supérieurs à zéro.",
+    "simplificando": "En simplifiant par le PGCD",
     "soma": "Somme"
   },
   "campo": {

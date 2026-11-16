@@ -12,7 +12,6 @@ import { I18nService } from '@core/i18n/services/i18n.service';
 import {
   ESTADO_INICIAL,
   EstadoCalculadora,
-  OperacaoInteiros,
   alternarSinal,
   apagar,
   calcular,
@@ -154,10 +153,14 @@ export class Calculadora {
   /** Os números escritos na aba de MMC e MDC. */
   protected readonly numeros = signal('');
 
-  /** O MMC ou o MDC do que está escrito, com as fatorações. */
-  protected readonly conta = computed(() =>
-    calcularInteiros(this.numeros(), this.calculadora.operacao()),
-  );
+  /**
+   * O MMC, o MDC e a simplificação do que está escrito.
+   *
+   * As três vêm juntas: são leituras da mesma divisão simultânea, e é vendo as
+   * duas lado a lado que se entende por que o MMC pega todos os divisores e o
+   * MDC só os que couberam em todos os números.
+   */
+  protected readonly conta = computed(() => calcularInteiros(this.numeros()));
 
   protected readonly emInteiros = computed(() => this.calculadora.modo() === 'mmc-mdc');
 
@@ -172,11 +175,6 @@ export class Calculadora {
 
   /** As abas de entrada por campo, onde o teclado da calculadora não aparece. */
   protected readonly emCampos = computed(() => this.emInteiros() || this.emFatores());
-
-  /** MMC e MDC viram PPCM/PGCD em francês e LCM/GCD em inglês. */
-  protected readonly nomeDaOperacao = computed(() =>
-    this.i18n.t(this.calculadora.operacao() === 'mmc' ? 'calculadora.mmc' : 'calculadora.mdc'),
-  );
 
   /** A linha pequena: a conta que gerou o resultado, ou o aviso de erro. */
   protected readonly legenda = computed(() => {
@@ -199,10 +197,7 @@ export class Calculadora {
         return this.i18n.t(erro.chave, erro.valores);
       }
       return numeros.length >= 2
-        ? this.i18n.t('calculadora.deNumeros', {
-            operacao: this.nomeDaOperacao(),
-            numeros: numeros.join(', '),
-          })
+        ? this.i18n.t('calculadora.deNumeros', { numeros: numeros.join(', ') })
         : this.i18n.t('calculadora.pedidoInteiros');
     }
 
@@ -220,11 +215,6 @@ export class Calculadora {
       return parExato.length === 2
         ? this.i18n.t('calculadora.parEncontrado', { a: parExato[0]!, b: parExato[1]! })
         : '—';
-    }
-
-    if (this.emInteiros()) {
-      const { valor } = this.conta();
-      return valor === null ? '—' : String(valor);
     }
 
     const { expressao, resultado } = this.estado();
@@ -293,10 +283,6 @@ export class Calculadora {
 
   protected definirSoma(valor: string): void {
     this.soma.set(valor);
-  }
-
-  protected escolher(operacao: OperacaoInteiros): void {
-    this.calculadora.definirOperacao(operacao);
   }
 
   protected aoDigitar(evento: KeyboardEvent): void {
