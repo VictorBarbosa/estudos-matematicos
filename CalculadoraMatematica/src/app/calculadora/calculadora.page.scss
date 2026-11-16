@@ -500,8 +500,19 @@ $operador: #ff9f0a;
   }
 }
 
-/* A simplificação: cada número dividido pelo MDC. */
+/*
+ * A simplificação.
+ *
+ * Com dois números ela vira uma FRAÇÃO, e fração se lê empilhada: numerador
+ * em cima, um traço, denominador embaixo. Escrita numa linha só — `12/18` —
+ * o olho lê «doze barra dezoito» e não a razão entre os dois. O resultado fica
+ * maior que o resto porque é a resposta, não o meio.
+ */
 .simplificacao {
+  .rotulo {
+    font-size: 0.95rem;
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -509,8 +520,46 @@ $operador: #ff9f0a;
     margin: 0.2rem 0 0;
     padding: 0;
     list-style: none;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-variant-numeric: tabular-nums;
+  }
+}
+
+.fracao-simplificada {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0.25rem 0 0;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+
+  .sinal {
+    color: $funcao;
+    font-size: 1.3rem;
+  }
+}
+
+.fracao {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  .numerador {
+    padding: 0 0.3em 0.1em;
+    border-bottom: 2px solid currentColor;
+  }
+
+  .denominador {
+    padding: 0.1em 0.3em 0;
+  }
+
+  /* O resultado da conta é o que se procura: um degrau acima do ponto de
+     partida, para o olho cair nele primeiro. */
+  &.resultado {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: $operador;
   }
 }
 
@@ -520,4 +569,64 @@ $operador: #ff9f0a;
   color: $operador;
   font-size: 1rem;
   font-variant-numeric: tabular-nums;
+}
+
+/*
+ * A faixa de teclas, colada no topo do teclado do sistema.
+ *
+ * Ela mora FORA do `ion-content` de propósito: o Ionic aplica `contain` no
+ * contêiner de rolagem, e um `position: fixed` lá dentro passa a se posicionar
+ * em relação a ele, não à tela — a faixa apareceria no fim do conteúdo, e não
+ * acima do teclado.
+ *
+ * O teclado do iPhone não aceita botão novo; o que o iOS dá é a *input
+ * accessory view*, e é esta faixa. Ela fica `fixed` no rodapé e sobe pela
+ * altura que o `TecladoService` mede — assim a vírgula fica onde o polegar
+ * está, e não do outro lado do campo.
+ *
+ * A altura da própria faixa entra como `--altura-da-barra` no conteúdo, para
+ * que o fim da página não fique escondido embaixo dela: sem isso, o último
+ * item da lista some justamente quando o teclado abre.
+ */
+.barra-do-teclado {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: #2c2c2e;
+  border-top: 1px solid #3a3a3c;
+  /* O teclado já anima ao abrir; a faixa acompanha para não ficar um degrau. */
+  transition: bottom 0.18s ease-out;
+}
+
+.tecla-da-barra {
+  min-width: 3.2rem;
+  min-height: 2.5rem;
+  padding: 0 0.9rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #48484a;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 500;
+  font-family: inherit;
+
+  &:active {
+    background: #636366;
+  }
+}
+
+/*
+ * Com a faixa na tela, as teclas ao lado do campo saem.
+ *
+ * São as mesmas teclas, e duas cópias da mesma vírgula a um dedo de distância
+ * confundem mais do que ajudam. A da faixa ganha porque está onde o polegar
+ * já está; as do campo voltam quando o teclado fecha.
+ */
+.calculadora.com-barra .tecla-do-campo {
+  display: none;
 }

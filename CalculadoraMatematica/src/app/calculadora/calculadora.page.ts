@@ -24,6 +24,7 @@ import {
   calcular,
   calcularFatores,
   calcularInteiros,
+  fracaoSimplificada,
   digitar,
   inverso,
   limpar,
@@ -31,6 +32,7 @@ import {
 } from '@core/calculadora/models/calculadora.model';
 import { ContaDeDecimal, decimalEmFracao } from './decimal-em-fracao';
 import { Modo, ModoService } from './modo.service';
+import { TecladoService } from './teclado.service';
 import { Acao, BASICAS, CIENTIFICAS, Tecla, rotuloLimpar } from './teclas';
 
 const CHAVE = 'calculadora-matematica.estado.v1';
@@ -75,6 +77,28 @@ export class CalculadoraPage {
   private readonly modos = inject(ModoService);
   private readonly preferencias = signal<Preferencias>(carregar());
 
+  /** Onde o teclado do sistema termina — é o que posiciona a faixa de teclas. */
+  protected readonly teclado = inject(TecladoService);
+
+  /**
+   * Qual campo está com o cursor — e o elemento dele.
+   *
+   * A faixa acima do teclado mostra as teclas DAQUELE campo: a vírgula em MMC
+   * e MDC, o `±` em Fatorar, e as quatro do decimal. Um campo por vez, porque
+   * o teclado também é um só.
+   *
+   * O ELEMENTO viaja junto porque a faixa é desenhada FORA do bloco onde o
+   * campo está: a referência de template (`#entradaNumeros`) só vale dentro
+   * do `@if` que a declara, e a faixa mora no fim da página. Guardar o próprio
+   * input no foco resolve isso sem `viewChild` por campo.
+   */
+  protected readonly foco = signal<FocoDoCampo | null>(null);
+
+  /** Teclas na faixa: precisa de teclado aberto E de um campo em foco. */
+  protected readonly comBarra = computed(
+    () => this.teclado.aberto() && this.foco() !== null,
+  );
+
   protected readonly modo = this.modos.modo;
   protected readonly angulo = computed(() => this.preferencias().angulo);
   protected readonly titulo = computed(() => NOME_DO_MODO[this.modo()]);
@@ -107,6 +131,9 @@ export class CalculadoraPage {
    * MDC só os que couberam em todos os números.
    */
   protected readonly conta = computed(() => calcularInteiros(this.numeros()));
+
+  /** A simplificação empilhada — só quando são dois números, que é uma fração. */
+  protected readonly fracao = computed(() => fracaoSimplificada(this.conta()));
   protected readonly fatores = computed(() => calcularFatores(this.produto(), this.soma()));
   protected readonly conversao = computed<ContaDeDecimal>(() => decimalEmFracao(this.decimal()));
 
@@ -201,6 +228,46 @@ export class CalculadoraPage {
 
   protected rotuloDe(tecla: Tecla): string {
     return tecla.acao.tipo === 'angulo' ? this.angulo().toUpperCase() : tecla.rotulo;
+  }
+
+  /**
+   * O campo ganhou ou perdeu o cursor.
+   *
+   * `pointerdown` barrado nas teclas da faixa mantém o foco no campo, então o
+   * teclado não fecha ao tocar na vírgula — e é por isso que o `blur` só
+   * acontece quando o aluno realmente sai do campo.
+   */
+  protected focar(campo: CampoDoCampo | null, entrada?: HTMLInputElement): void {
+    this.foco.set(campo === null || entrada === undefined ? null : { campo, entrada });
+  }
+
+  /** A vírgula da faixa: separa os números do campo em foco. */
+  protected separarDoFoco(): void {
+    const entrada = this.foco()?.entrada;
+    if (entrada !== undefined) {
+      this.acrescentarSeparador(entrada);
+    }
+  }
+
+  /** O `±` da faixa: troca o sinal do campo em foco. */
+  protected sinalDoFoco(): void {
+    const alvo = this.foco();
+    if (alvo === null) {
+      return;
+    }
+    if (alvo.campo === 'decimal') {
+      this.alternarSinalDoDecimal(alvo.entrada);
+    } else if (alvo.campo === 'soma' || alvo.campo === 'produto') {
+      this.alternarSinalDoCampo(alvo.campo, alvo.entrada);
+    }
+  }
+
+  /** Uma tecla de texto da faixa (`,`, `(`, `)`) no campo decimal. */
+  protected textoNoDecimal(texto: string): void {
+    const entrada = this.foco()?.entrada;
+    if (entrada !== undefined) {
+      this.acrescentarAoDecimal(texto, entrada);
+    }
   }
 
   protected definirNumeros(valor: string): void {
@@ -351,4 +418,13 @@ function salvar(preferencias: Preferencias): void {
   } catch {
     // Sem armazenamento: as preferências valem só para esta sessão.
   }
+}
+
+/** O campo de texto que a faixa de teclas serve. */
+type CampoDoCampo = 'numeros' | 'soma' | 'produto' | 'decimal';
+
+/** O campo de texto que a faixa de teclas serve, e o elemento dele. */
+interface FocoDoCampo {
+  readonly campo: CampoDoCampo;
+  readonly entrada: HTMLInputElement;
 }

@@ -1,6 +1,7 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CalculadoraService } from '@core/calculadora/services/calculadora.service';
+import { TecladoService } from '@core/calculadora/services/teclado.service';
 import { Calculadora } from '@shared/components/calculadora/calculadora';
 
 describe('Calculadora', () => {
@@ -302,17 +303,49 @@ describe('Calculadora: MMC e MDC', () => {
     expect(fixture.nativeElement.querySelector('.escolha')).toBeNull();
   });
 
-  it('o exemplo de 4 e 2 mostra MMC 4, MDC 2 e a simplificação', async () => {
+  it('o exemplo de 4 e 2 mostra MMC 4, MDC 2 e a fração 4/2 = 2/1', async () => {
     await escrever('4, 2');
 
     expect(resultado('MMC')).toBe('4');
     expect(resultado('MDC')).toBe('2');
 
+    // Dois números são uma FRAÇÃO: ela aparece empilhada, não escrita numa
+    // linha só — `4/2` se lê «quatro barra dois», e o que se quer é a razão.
+    const fracoes = [...fixture.nativeElement.querySelectorAll('.fracao')].map((fracao) => ({
+      numerador: (fracao.querySelector('.numerador') as HTMLElement).textContent!.trim(),
+      denominador: (fracao.querySelector('.denominador') as HTMLElement).textContent!.trim(),
+    }));
+
+    expect(fracoes).toEqual([
+      { numerador: '4', denominador: '2' },
+      { numerador: '2', denominador: '1' },
+    ]);
+  });
+
+  it('a fração de 12 e 18 é 12/18 = 2/3', async () => {
+    await escrever('12, 18');
+
+    const numeradores = [...fixture.nativeElement.querySelectorAll('.fracao .numerador')].map(
+      (e) => (e as HTMLElement).textContent!.trim(),
+    );
+    const denominadores = [
+      ...fixture.nativeElement.querySelectorAll('.fracao .denominador'),
+    ].map((e) => (e as HTMLElement).textContent!.trim());
+
+    expect(numeradores).toEqual(['12', '2']);
+    expect(denominadores).toEqual(['18', '3']);
+  });
+
+  it('com três números não há fração, e sim as linhas divididas', async () => {
+    // 12, 18 e 24 não formam uma fração; a tela mostra o MDC aplicado a cada um.
+    await escrever('12, 18, 24');
+
+    expect(fixture.nativeElement.querySelector('.fracao-simplificada')).toBeNull();
+
     const linhas = [...fixture.nativeElement.querySelectorAll('.simplificacao li')].map((li) =>
       (li as HTMLElement).textContent!.trim(),
     );
-
-    expect(linhas).toEqual(['4 ÷ 2 = 2', '2 ÷ 2 = 1']);
+    expect(linhas).toEqual(['12 ÷ 6 = 2', '18 ÷ 6 = 3', '24 ÷ 6 = 4']);
   });
 
   it('mostra a decomposição até todos chegarem a 1', async () => {
@@ -515,5 +548,109 @@ describe('Calculadora: soma e produto', () => {
     TestBed.configureTestingModule({ providers: [provideZonelessChangeDetection()] });
 
     expect(TestBed.inject(CalculadoraService).modo()).toBe('soma-produto');
+  });
+});
+
+/**
+ * A faixa de teclas acima do teclado do sistema.
+ *
+ * O teclado numérico do aparelho não tem vírgula, e sem vírgula não há como
+ * escrever «12, 18» em MMC e MDC — no celular, a conta era impossível. Aqui o
+ * teclado é fingido (`TecladoService` devolve altura 300) e o que se prova é o
+ * resto: a faixa aparece com o campo em foco, a tecla escreve no campo certo, e
+ * ela não abre a lista com vírgula nem repete a que já está lá.
+ */
+describe('Calculadora: faixa de teclas do teclado', () => {
+  let fixture: ComponentFixture<Calculadora>;
+  let servico: CalculadoraService;
+
+  const tecladoAberto = { altura: () => 300, aberto: () => true };
+
+  const barra = (): HTMLElement | null =>
+    fixture.nativeElement.querySelector('.barra-do-teclado');
+
+  const campoDeNumeros = (): HTMLInputElement =>
+    fixture.nativeElement.querySelector('.campo input') as HTMLInputElement;
+
+  async function escribir(valor: string): Promise<void> {
+    const campo = campoDeNumeros();
+    campo.value = valor;
+    campo.dispatchEvent(new Event('input'));
+    await fixture.whenStable();
+  }
+
+  async function focar(): Promise<void> {
+    campoDeNumeros().dispatchEvent(new Event('focus'));
+    await fixture.whenStable();
+  }
+
+  async function tocar(): Promise<void> {
+    (barra()!.querySelector('.tecla-da-barra') as HTMLButtonElement).click();
+    await fixture.whenStable();
+  }
+
+  beforeEach(async () => {
+    localStorage.clear();
+    await TestBed.configureTestingModule({
+      imports: [Calculadora],
+      providers: [
+        provideZonelessChangeDetection(),
+        { provide: TecladoService, useValue: tecladoAberto },
+      ],
+    }).compileComponents();
+
+    servico = TestBed.inject(CalculadoraService);
+    servico.alternar();
+    servico.definirModo('mmc-mdc');
+    fixture = TestBed.createComponent(Calculadora);
+    await fixture.whenStable();
+  });
+
+  it('sem foco não há faixa: não há campo a servir', () => {
+    expect(barra()).toBeNull();
+  });
+
+  it('com o campo em foco, a vírgula aparece na faixa', async () => {
+    await focar();
+
+    expect(barra()).not.toBeNull();
+    expect(barra()!.textContent!.trim()).toBe(',');
+    expect(barra()!.style.bottom).toBe('300px');
+  });
+
+  it('a tecla separa os números do campo em foco', async () => {
+    await escribir('12');
+    await focar();
+    await tocar();
+
+    expect(campoDeNumeros().value).toBe('12, ');
+  });
+
+  it('não abre a lista com vírgula', async () => {
+    await focar();
+    await tocar();
+
+    expect(campoDeNumeros().value).toBe('');
+  });
+
+  it('não repete a vírgula que já está lá', async () => {
+    await escribir('12,');
+    await focar();
+    await tocar();
+
+    expect(campoDeNumeros().value).toBe('12,');
+  });
+
+  it('a conta continua funcionando depois da tecla', async () => {
+    await escribir('12');
+    await focar();
+    await tocar();
+
+    await escribir('12, 18');
+    const resultado = [...fixture.nativeElement.querySelectorAll('.conta-resultado')].map((c) =>
+      (c.querySelector('.numero') as HTMLElement).textContent!.trim(),
+    );
+
+    expect(resultado).toEqual(['36', '6']);
   });
 });

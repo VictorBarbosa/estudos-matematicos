@@ -2,6 +2,7 @@ import {
   ESTADO_INICIAL,
   calcularFatores,
   calcularInteiros,
+  fracaoSimplificada,
   EstadoCalculadora,
   alternarSinal,
   apagar,
@@ -316,6 +317,26 @@ describe('MMC e MDC', () => {
     expect(conta.mmc).toBe(4);
     expect(conta.mdc).toBe(2);
     expect(conta.simplificacao.map((l) => l.resultado)).toEqual([2, 1]);
+  });
+
+  it('com dois números, a simplificação também sai como fração', () => {
+    // Dois números SÃO uma fração: 12/18 reduzida pelo MDC 6 dá 2/3.
+    expect(fracaoSimplificada(calcularInteiros('12, 18'))).toEqual({
+      antes: [12, 18],
+      depois: [2, 3],
+    });
+  });
+
+  it('a fração de 4 e 2 é 4/2, que vira 2/1', () => {
+    expect(fracaoSimplificada(calcularInteiros('4, 2'))).toEqual({
+      antes: [4, 2],
+      depois: [2, 1],
+    });
+  });
+
+  it('com três números não há fração a mostrar', () => {
+    // 12, 18 e 24 não formam uma fração; a tela mostra as linhas uma a uma.
+    expect(fracaoSimplificada(calcularInteiros('12, 18, 24'))).toBeNull();
   });
 
   it('coprimos simplificam por 1, sem mudar nada', () => {

@@ -18,11 +18,13 @@ import {
   calcularFatores,
   calcularInteiros,
   digitar,
+  fracaoSimplificada,
   inverso,
   limpar,
   porcentagem,
 } from '@core/calculadora/models/calculadora.model';
 import { CalculadoraService } from '@core/calculadora/services/calculadora.service';
+import { TecladoService } from '@core/calculadora/services/teclado.service';
 
 /** O que uma tecla faz. */
 type Acao =
@@ -154,6 +156,26 @@ export class Calculadora {
   protected readonly numeros = signal('');
 
   /**
+   * Onde o teclado do sistema termina — é o que posiciona a faixa de teclas.
+   *
+   * O campo dos números abre o teclado numérico do aparelho, que não tem
+   * vírgula: sem esta faixa, no celular não há como separar 12 de 18.
+   */
+  protected readonly teclado = inject(TecladoService);
+
+  /**
+   * Qual campo está com o cursor, e o elemento dele.
+   *
+   * O ELEMENTO viaja junto porque a faixa é desenhada fora do bloco onde o
+   * campo está — a referência de template só vale dentro do `@if` que a
+   * declara, e a faixa mora no fim da janela.
+   */
+  protected readonly foco = signal<FocoDoCampo | null>(null);
+
+  /** Teclas na faixa: precisa de teclado aberto E de um campo em foco. */
+  protected readonly comBarra = computed(() => this.teclado.aberto() && this.foco() !== null);
+
+  /**
    * O MMC, o MDC e a simplificação do que está escrito.
    *
    * As três vêm juntas: são leituras da mesma divisão simultânea, e é vendo as
@@ -161,6 +183,9 @@ export class Calculadora {
    * MDC só os que couberam em todos os números.
    */
   protected readonly conta = computed(() => calcularInteiros(this.numeros()));
+
+  /** A simplificação empilhada — só quando são dois números, que é uma fração. */
+  protected readonly fracao = computed(() => fracaoSimplificada(this.conta()));
 
   protected readonly emInteiros = computed(() => this.calculadora.modo() === 'mmc-mdc');
 
@@ -273,6 +298,52 @@ export class Calculadora {
     this.estado.update((atual) => this.aplicar(atual, acao));
   }
 
+  /** O campo ganhou ou perdeu o cursor. */
+  protected focar(campo: CampoDoCampo | null, entrada?: HTMLInputElement): void {
+    this.foco.set(campo === null || entrada === undefined ? null : { campo, entrada });
+  }
+
+  /**
+   * A vírgula da faixa: separa os números do campo em foco.
+   *
+   * Três recusas, as mesmas da tecla que existia ao lado do campo: não abre a
+   * lista com vírgula, não repete a que já está lá, e não deixa dois
+   * separadores seguidos virarem um número vazio.
+   */
+  protected separarNoFoco(): void {
+    const entrada = this.foco()?.entrada;
+    if (entrada === undefined) {
+      return;
+    }
+
+    const atual = entrada.value.trimEnd();
+    if (atual === '' || atual.endsWith(',') || atual.endsWith(';')) {
+      return;
+    }
+
+    const novo = `${entrada.value}, `;
+    entrada.value = novo;
+    entrada.dispatchEvent(new Event('input'));
+
+    // O cursor volta para o fim, senão o próximo dígito entra no meio.
+    entrada.setSelectionRange(novo.length, novo.length);
+    entrada.focus();
+  }
+
+  /** O `±` da faixa: troca o sinal do campo em foco. */
+  protected sinalNoFoco(): void {
+    const alvo = this.foco();
+    if (alvo === null) {
+      return;
+    }
+
+    const valor = alvo.entrada.value.trim();
+    const novo = valor.startsWith('-') ? valor.slice(1) : `-${valor === '' ? '0' : valor}`;
+    alvo.entrada.value = novo;
+    alvo.entrada.dispatchEvent(new Event('input'));
+    alvo.entrada.focus();
+  }
+
   protected definirNumeros(valor: string): void {
     this.numeros.set(valor);
   }
@@ -379,3 +450,12 @@ export class Calculadora {
     };
   }
 }
+
+/** O campo de texto que a faixa de teclas serve, e o elemento dele. */
+interface FocoDoCampo {
+  readonly campo: CampoDoCampo;
+  readonly entrada: HTMLInputElement;
+}
+
+/** Os campos que a faixa atende: os dois de número da calculadora. */
+type CampoDoCampo = 'numeros' | 'soma' | 'produto';

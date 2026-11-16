@@ -64,7 +64,10 @@
     "semParReal": "There are no two real numbers with that product and that sum.",
     "semZero": "Zero is left out: use whole numbers greater than zero.",
     "simplificando": "Simplifying by the GCD",
-    "soma": "Sum"
+    "soma": "Sum",
+    "teclasDoCampo": "Field keys",
+    "trocarSinal": "toggle sign",
+    "virgula": "comma"
   },
   "campo": {
     "simbolos": "Symbols for the answer"

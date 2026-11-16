@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { ComponentFixture } from '@angular/core/testing';
 import { CalculadoraPage } from './calculadora.page';
 import { ModoService } from './modo.service';
+import { TecladoService } from './teclado.service';
 
 /**
  * A mecânica da conta já é testada no modelo copiado do site, com 81 casos.
@@ -151,7 +152,7 @@ describe('CalculadoraPage', () => {
     expect(fixture.nativeElement.querySelector('.escolha')).toBeNull();
   });
 
-  it('4 e 2 mostram MMC 4, MDC 2 e a simplificação', async () => {
+  it('4 e 2 mostram MMC 4, MDC 2 e a fração 4/2 = 2/1', async () => {
     modos.definir('mmc-mdc');
     await fixture.whenStable();
     fixture.detectChanges();
@@ -161,10 +162,32 @@ describe('CalculadoraPage', () => {
     expect(resultado('MMC')).toBe('4');
     expect(resultado('MDC')).toBe('2');
 
+    // Dois números são uma FRAÇÃO: aparece empilhada, e não escrita numa linha
+    // só — `4/2` se lê «quatro barra dois», e o que se quer é a razão.
+    const fracoes = [...fixture.nativeElement.querySelectorAll('.fracao')].map((fracao) => ({
+      numerador: (fracao.querySelector('.numerador') as HTMLElement).textContent!.trim(),
+      denominador: (fracao.querySelector('.denominador') as HTMLElement).textContent!.trim(),
+    }));
+
+    expect(fracoes).toEqual([
+      { numerador: '4', denominador: '2' },
+      { numerador: '2', denominador: '1' },
+    ]);
+  });
+
+  it('com três números não há fração, e sim as linhas divididas', async () => {
+    modos.definir('mmc-mdc');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    await escrever(0, '12, 18, 24');
+
+    expect(fixture.nativeElement.querySelector('.fracao-simplificada')).toBeNull();
+
     const linhas = [...fixture.nativeElement.querySelectorAll('.simplificacao li')].map((li) =>
       (li as HTMLElement).textContent!.trim(),
     );
-    expect(linhas).toEqual(['4 ÷ 2 = 2', '2 ÷ 2 = 1']);
+    expect(linhas).toEqual(['12 ÷ 6 = 2', '18 ÷ 6 = 3', '24 ÷ 6 = 4']);
   });
 
   it('pede a soma antes do produto, na ordem em que a expressão se lê', async () => {
@@ -404,5 +427,115 @@ describe('CalculadoraPage', () => {
     fixture.detectChanges();
 
     expect(texto()).toContain('DEG');
+  });
+});
+
+/**
+ * A faixa de teclas acima do teclado.
+ *
+ * O teclado do iPhone não aceita botão novo, então a vírgula mora numa faixa
+ * colada nele. Aqui o teclado é fingido — `TecladoService` devolve altura 300 —
+ * e o que se prova é o resto: a faixa aparece com o campo em foco, a tecla
+ * escreve no campo certo, e as teclas ao lado do campo saem de cena enquanto
+ * ela está na tela.
+ */
+describe('CalculadoraPage: faixa de teclas', () => {
+  let fixture: ComponentFixture<CalculadoraPage>;
+  let modos: ModoService;
+
+  /** Um teclado aberto, sem depender do `visualViewport` do navegador. */
+  const tecladoAberto = { altura: () => 300, aberto: () => true };
+
+  const barra = (): HTMLElement | null =>
+    fixture.nativeElement.querySelector('.barra-do-teclado');
+
+  const teclasDaBarra = (): readonly string[] =>
+    [...(barra()?.querySelectorAll('.tecla-da-barra') ?? [])].map((t) =>
+      (t as HTMLElement).textContent!.trim(),
+    );
+
+  const campoDeNumeros = (): HTMLInputElement =>
+    fixture.nativeElement.querySelector('.campo input') as HTMLInputElement;
+
+  async function focarNumeros(): Promise<void> {
+    campoDeNumeros().dispatchEvent(new Event('focus'));
+    await fixture.whenStable();
+    fixture.detectChanges();
+  }
+
+  async function montar(comTeclado: boolean): Promise<void> {
+    localStorage.clear();
+    TestBed.resetTestingModule();
+    await TestBed.configureTestingModule({
+      imports: [CalculadoraPage],
+      providers: comTeclado ? [{ provide: TecladoService, useValue: tecladoAberto }] : [],
+    }).compileComponents();
+
+    modos = TestBed.inject(ModoService);
+    modos.definir('mmc-mdc');
+    fixture = TestBed.createComponent(CalculadoraPage);
+    await fixture.whenStable();
+    fixture.detectChanges();
+  }
+
+  it('sem teclado aberto não há faixa: as teclas ficam ao lado do campo', async () => {
+    await montar(false);
+    await focarNumeros();
+
+    expect(barra()).toBeNull();
+    expect(fixture.nativeElement.querySelector('.tecla-do-campo')).not.toBeNull();
+  });
+
+  it('com o campo em foco e o teclado aberto, a vírgula aparece na faixa', async () => {
+    await montar(true);
+
+    // Antes do foco, nenhuma faixa: não há campo a servir.
+    expect(barra()).toBeNull();
+
+    await focarNumeros();
+
+    expect(barra()).not.toBeNull();
+    expect(teclasDaBarra()).toEqual([',']);
+    expect(barra()!.style.bottom).toBe('300px');
+  });
+
+  it('a tecla da faixa escreve no campo em foco', async () => {
+    await montar(true);
+
+    const campo = campoDeNumeros();
+    campo.value = '12';
+    campo.dispatchEvent(new Event('input'));
+    await focarNumeros();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    (barra()!.querySelector('.tecla-da-barra') as HTMLButtonElement).click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(campoDeNumeros().value).toBe('12, ');
+  });
+
+  it('com a faixa na tela, a tecla ao lado do campo sai', async () => {
+    // Duas cópias da mesma vírgula a um dedo de distância confundem; a da
+    // faixa ganha porque está onde o polegar já está.
+    await montar(true);
+    await focarNumeros();
+
+    expect(fixture.nativeElement.querySelector('.calculadora').classList).toContain('com-barra');
+  });
+
+  it('a faixa mostra as teclas do campo decimal quando é ele que está em foco', async () => {
+    await montar(true);
+    modos.definir('decimal-fracao');
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    const campo = fixture.nativeElement.querySelector('.campo input') as HTMLInputElement;
+    campo.dispatchEvent(new Event('focus'));
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(teclasDaBarra()).toEqual([',', '(', ')', '±']);
   });
 });

@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <section class="calculadora" [class.com-campos]="!emTeclado()">
+  <section class="calculadora" [class.com-campos]="!emTeclado()" [class.com-barra]="comBarra()">
     <!--
       Duas formas de resultado, porque são duas coisas diferentes: uma conta
       devolve UM número, e a aba de MMC e MDC devolve DOIS. Escrever «72 · 6»
@@ -57,6 +57,8 @@
             placeholder="12, 18, 24"
             [value]="numeros()"
             (input)="definirNumeros($any($event.target).value)"
+            (focus)="focar('numeros', entradaNumeros)"
+            (blur)="focar(null)"
           />
           <!-- `pointerdown` barrado: sem isso o toque tira o foco do campo
                  e o iPhone fecha o teclado a cada vírgula. -->
@@ -111,14 +113,31 @@
       </div>
 
       <!-- E a razão de as duas contas andarem juntas: dividido pelo MDC, o par
-           vira a fração irredutível. -->
+           vira a fração irredutível. Com dois números a resposta é uma fração,
+           e fração se lê EMPILHADA — numerador em cima, denominador embaixo.
+           Com três ou mais não há fração: mostra-se cada número dividido. -->
       <div class="simplificacao">
         <p class="rotulo">Simplificando pelo MDC</p>
+
+        @if (fracao(); as fracao) {
+        <p class="fracao-simplificada">
+          <span class="fracao">
+            <span class="numerador">{{ fracao.antes[0] }}</span>
+            <span class="denominador">{{ fracao.antes[1] }}</span>
+          </span>
+          <span class="sinal">=</span>
+          <span class="fracao resultado">
+            <span class="numerador">{{ fracao.depois[0] }}</span>
+            <span class="denominador">{{ fracao.depois[1] }}</span>
+          </span>
+        </p>
+        } @else {
         <ul>
           @for (linha of conta().simplificacao; track $index) {
           <li>{{ linha.original }} ÷ {{ linha.divisor }} = {{ linha.resultado }}</li>
           }
         </ul>
+        }
       </div>
       }
     </div>
@@ -145,6 +164,8 @@
               placeholder="11"
               [value]="soma()"
               (input)="definirSoma($any($event.target).value)"
+              (focus)="focar('soma', entradaSoma)"
+              (blur)="focar(null)"
             />
             <button
               type="button"
@@ -171,6 +192,8 @@
               placeholder="24"
               [value]="produto()"
               (input)="definirProduto($any($event.target).value)"
+              (focus)="focar('produto', entradaProduto)"
+              (blur)="focar(null)"
             />
             <button
               type="button"
@@ -251,6 +274,8 @@
             placeholder="0,1(6)"
             [value]="decimal()"
             (input)="definirDecimal($any($event.target).value)"
+            (focus)="focar('decimal', entradaDecimal)"
+            (blur)="focar(null)"
           />
           <button
             type="button"
@@ -343,3 +368,104 @@
     }
   </section>
 </ion-content>
+
+<!--
+    A faixa de teclas, logo acima do teclado do sistema.
+
+    O teclado do iPhone não aceita botão novo — não há como pôr a vírgula entre
+    as teclas dele. O que o iOS oferece é a *input accessory view*, uma faixa
+    colada no topo do teclado, e é este o lugar dela: aqui a vírgula está onde
+    o polegar já está, e não do outro lado do campo, que é onde ela ficava.
+
+    `pointerdown` barrado em cada tecla: sem isso o toque tira o foco do campo,
+    o teclado fecha, e a faixa desaparece embaixo do dedo.
+  -->
+  @if (comBarra()) {
+  <div
+    class="barra-do-teclado"
+    [style.bottom.px]="teclado.altura()"
+    role="toolbar"
+    aria-label="teclas do campo"
+  >
+    @switch (foco()?.campo) {
+      @case ('numeros') {
+        <button
+          type="button"
+          class="tecla-da-barra"
+          tabindex="-1"
+          aria-label="separar números"
+          (pointerdown)="$event.preventDefault()"
+          (click)="separarDoFoco()"
+        >
+          ,
+        </button>
+      }
+      @case ('soma') {
+        <button
+          type="button"
+          class="tecla-da-barra"
+          tabindex="-1"
+          aria-label="trocar o sinal da soma"
+          (pointerdown)="$event.preventDefault()"
+          (click)="sinalDoFoco()"
+        >
+          ±
+        </button>
+      }
+      @case ('produto') {
+        <button
+          type="button"
+          class="tecla-da-barra"
+          tabindex="-1"
+          aria-label="trocar o sinal do produto"
+          (pointerdown)="$event.preventDefault()"
+          (click)="sinalDoFoco()"
+        >
+          ±
+        </button>
+      }
+      @case ('decimal') {
+        <button
+          type="button"
+          class="tecla-da-barra"
+          tabindex="-1"
+          aria-label="vírgula"
+          (pointerdown)="$event.preventDefault()"
+          (click)="textoNoDecimal(',')"
+        >
+          ,
+        </button>
+        <button
+          type="button"
+          class="tecla-da-barra"
+          tabindex="-1"
+          aria-label="abrir o período"
+          (pointerdown)="$event.preventDefault()"
+          (click)="textoNoDecimal('(')"
+        >
+          (
+        </button>
+        <button
+          type="button"
+          class="tecla-da-barra"
+          tabindex="-1"
+          aria-label="fechar o período"
+          (pointerdown)="$event.preventDefault()"
+          (click)="textoNoDecimal(')')"
+        >
+          )
+        </button>
+        <button
+          type="button"
+          class="tecla-da-barra"
+          tabindex="-1"
+          aria-label="trocar o sinal"
+          (pointerdown)="$event.preventDefault()"
+          (click)="sinalDoFoco()"
+        >
+          ±
+        </button>
+      }
+    }
+  </div>
+  }

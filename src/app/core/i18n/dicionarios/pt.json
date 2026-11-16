@@ -64,7 +64,10 @@
     "semParReal": "Não existem dois números reais com esse produto e essa soma.",
     "semZero": "O zero fica de fora: use inteiros maiores que zero.",
     "simplificando": "Simplificando pelo MDC",
-    "soma": "Soma"
+    "soma": "Soma",
+    "teclasDoCampo": "Teclas do campo",
+    "trocarSinal": "trocar o sinal",
+    "virgula": "vírgula"
   },
   "campo": {
     "simbolos": "Símbolos para a resposta"

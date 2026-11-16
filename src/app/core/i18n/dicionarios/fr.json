@@ -64,7 +64,10 @@
     "semParReal": "Il n’existe pas deux nombres réels avec ce produit et cette somme.",
     "semZero": "Le zéro est exclu : utilisez des entiers supérieurs à zéro.",
     "simplificando": "En simplifiant par le PGCD",
-    "soma": "Somme"
+    "soma": "Somme",
+    "teclasDoCampo": "Touches du champ",
+    "trocarSinal": "changer le signe",
+    "virgula": "virgule"
   },
   "campo": {
     "simbolos": "Symboles pour la réponse"

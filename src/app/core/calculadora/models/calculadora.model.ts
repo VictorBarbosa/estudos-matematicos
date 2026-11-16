@@ -400,6 +400,20 @@ export interface ContaDeInteiros {
   readonly erro: ErroDaConta | null;
 }
 
+/**
+ * A simplificação quando há EXATAMENTE dois números.
+ *
+ * Dois números são uma fração, e uma fração se lê empilhada — numerador em
+ * cima, denominador embaixo. Com três ou mais não há fração a mostrar: o que
+ * se mostra é cada número dividido pelo MDC, um a um.
+ */
+export interface FracaoSimplificada {
+  /** Os números como foram digitados: 12 e 18. */
+  readonly antes: readonly [number, number];
+  /** Os mesmos números divididos pelo MDC: 2 e 3. */
+  readonly depois: readonly [number, number];
+}
+
 const CONTA_VAZIA: ContaDeInteiros = {
   numeros: [],
   mmc: null,
@@ -805,4 +819,21 @@ function escreverFatoracao(soma: number, produto: number, par: ParDeFatores): st
 
   const esquerda = `x²${termo(soma, 'x')}${termo(produto, '')}`;
   return `${esquerda} = ${fator(par.a)}${fator(par.b)}`;
+}
+
+/**
+ * A simplificação em forma de fração, quando os números são dois.
+ *
+ * Existe para a tela não refazer a divisão: o `depois` sai do MESMO MDC que
+ * gerou a lista de simplificação, então a fração e as linhas não têm como
+ * discordar.
+ */
+export function fracaoSimplificada(conta: ContaDeInteiros): FracaoSimplificada | null {
+  if (conta.numeros.length !== 2 || conta.mdc === null) {
+    return null;
+  }
+
+  const [a, b] = conta.numeros as [number, number];
+
+  return { antes: [a, b], depois: [a / conta.mdc, b / conta.mdc] };
 }

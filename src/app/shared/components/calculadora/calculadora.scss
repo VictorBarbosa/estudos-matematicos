@@ -295,8 +295,19 @@ $tecla: 3.25rem;
   }
 }
 
-/* A simplificação: cada número dividido pelo MDC. */
+/*
+ * A simplificação.
+ *
+ * Com dois números ela vira uma FRAÇÃO, e fração se lê empilhada: numerador
+ * em cima, um traço, denominador embaixo. Escrita numa linha só — `12/18` —
+ * o olho lê «doze barra dezoito» e não a razão entre os dois. O resultado fica
+ * maior que o resto porque é a resposta, não o meio.
+ */
 .simplificacao {
+  .rotulo {
+    font-size: 0.85rem;
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -305,9 +316,47 @@ $tecla: 3.25rem;
     padding: 0;
     list-style: none;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-variant-numeric: tabular-nums;
   }
+}
+
+.fracao-simplificada {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.2rem 0 0;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.fracao {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  .numerador {
+    padding: 0 0.3em 0.1em;
+    border-bottom: 2px solid currentColor;
+  }
+
+  .denominador {
+    padding: 0.1em 0.3em 0;
+  }
+
+  /* O resultado da conta é o que se procura: um degrau acima do ponto de
+     partida, para o olho cair nele primeiro. */
+  &.resultado {
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+}
+
+.fracao-simplificada .sinal {
+  color: #a5a5a7;
+  font-size: 1.2rem;
 }
 
 /*
@@ -451,3 +500,56 @@ $tecla: 3.25rem;
  * passou para o `DispositivoService`, que olha o tipo de apontador além da
  * largura; aqui não sobra nada a fazer.
  */
+
+/*
+ * A faixa de teclas, colada no topo do teclado do sistema.
+ *
+ * O campo dos números abre o teclado numérico do aparelho, que não tem
+ * vírgula. Esta faixa põe a vírgula onde o polegar já está — antes ela não
+ * existia, e no celular «12, 18» era impossível de escrever.
+ *
+ * O `bottom` vem do `TecladoService`: é ele que sobe a faixa pela altura do
+ * teclado. `position: fixed` porque ela pertence à tela, não à janela da
+ * calculadora: o teclado é do aparelho inteiro.
+ */
+.barra-do-teclado {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: #2c2c2e;
+  border-top: 1px solid #3a3a3c;
+  transition: bottom 0.18s ease-out;
+}
+
+.tecla-da-barra {
+  min-width: 3.2rem;
+  min-height: 2.5rem;
+  padding: 0 0.9rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #48484a;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 500;
+  font-family: inherit;
+
+  &:active {
+    background: #636366;
+  }
+}
+
+/*
+ * Com a faixa na tela, as teclas ao lado do campo saem.
+ *
+ * No site não há tecla ao lado do campo; a regra existe para o dia em que
+ * houver, e para o mesmo motivo do aplicativo: duas cópias da mesma tecla a
+ * um dedo de distância confundem mais do que ajudam.
+ */
+.janela.com-barra .tecla-do-campo {
+  display: none;
+}

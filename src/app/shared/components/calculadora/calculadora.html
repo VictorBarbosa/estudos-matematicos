@@ -10,6 +10,7 @@
     [style.top.px]="local()?.y ?? null"
     [class.sem-posicao]="local() === null"
     (keydown)="aoDigitar($event)"
+    [class.com-barra]="comBarra()"
   >
     <!-- A barra é a alça: é por ela que a janela se arrasta. -->
     <header
@@ -126,6 +127,8 @@
             placeholder="12, 18, 24"
             [value]="numeros()"
             (input)="definirNumeros($any($event.target).value)"
+            (focus)="focar('numeros', $any($event.target))"
+            (blur)="focar(null)"
           />
         </label>
 
@@ -177,14 +180,32 @@
           </div>
 
           <!-- E a razão de as duas contas andarem juntas: dividido pelo MDC,
-               o par vira a fração irredutível. -->
+               o par vira a fração irredutível. Com dois números a resposta é
+               uma fração, e fração se lê EMPILHADA — numerador em cima,
+               denominador embaixo. Com três ou mais não há fração: mostra-se
+               cada número dividido pelo MDC. -->
           <div class="simplificacao">
             <p class="rotulo">{{ i18n.t('calculadora.simplificando') }}</p>
-            <ul>
-              @for (linha of conta().simplificacao; track $index) {
-                <li>{{ linha.original }} ÷ {{ linha.divisor }} = {{ linha.resultado }}</li>
-              }
-            </ul>
+
+            @if (fracao(); as fracao) {
+              <p class="fracao-simplificada">
+                <span class="fracao">
+                  <span class="numerador">{{ fracao.antes[0] }}</span>
+                  <span class="denominador">{{ fracao.antes[1] }}</span>
+                </span>
+                <span class="sinal">=</span>
+                <span class="fracao resultado">
+                  <span class="numerador">{{ fracao.depois[0] }}</span>
+                  <span class="denominador">{{ fracao.depois[1] }}</span>
+                </span>
+              </p>
+            } @else {
+              <ul>
+                @for (linha of conta().simplificacao; track $index) {
+                  <li>{{ linha.original }} ÷ {{ linha.divisor }} = {{ linha.resultado }}</li>
+                }
+              </ul>
+            }
           </div>
         }
       </div>
@@ -206,6 +227,8 @@
               placeholder="11"
               [value]="soma()"
               (input)="definirSoma($any($event.target).value)"
+              (focus)="focar('soma', $any($event.target))"
+              (blur)="focar(null)"
             />
           </label>
           <label class="campo">
@@ -218,6 +241,8 @@
               placeholder="24"
               [value]="produto()"
               (input)="definirProduto($any($event.target).value)"
+              (focus)="focar('produto', $any($event.target))"
+              (blur)="focar(null)"
             />
           </label>
         </div>
@@ -315,5 +340,52 @@
         </div>
       </div>
     }
-  </section>
+  
+  <!--
+    A faixa de teclas, logo acima do teclado do sistema.
+
+    O teclado numérico do aparelho não tem vírgula — e sem vírgula não há como
+    escrever «12, 18» em MMC e MDC. O teclado do sistema não aceita botão novo;
+    o que dá para fazer é esta faixa, colada no topo dele, onde o polegar já
+    está.
+
+    `pointerdown` barrado em cada tecla: sem isso o toque tira o foco do campo,
+    o teclado fecha, e a faixa desaparece embaixo do dedo.
+  -->
+  @if (comBarra()) {
+    <div
+      class="barra-do-teclado"
+      [style.bottom.px]="teclado.altura()"
+      role="toolbar"
+      [attr.aria-label]="i18n.t('calculadora.teclasDoCampo')"
+    >
+      @switch (foco()?.campo) {
+        @case ('numeros') {
+          <button
+            type="button"
+            class="tecla-da-barra"
+            tabindex="-1"
+            [attr.aria-label]="i18n.t('calculadora.virgula')"
+            (pointerdown)="$event.preventDefault()"
+            (click)="separarNoFoco()"
+          >
+            ,
+          </button>
+        }
+        @default {
+          <button
+            type="button"
+            class="tecla-da-barra"
+            tabindex="-1"
+            [attr.aria-label]="i18n.t('calculadora.trocarSinal')"
+            (pointerdown)="$event.preventDefault()"
+            (click)="sinalNoFoco()"
+          >
+            ±
+          </button>
+        }
+      }
+    </div>
+  }
+</section>
 }
