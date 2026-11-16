@@ -19,6 +19,14 @@
   "fr": "A = |aₓb_y − a_ybₓ| : le déterminant des composantes, en module.",
   "en": "A = |aₓb_y − a_ybₓ|: the determinant of the components, in absolute value."
  },
+ "A MAIOR parte é a do maior número da razão.": {
+  "fr": "La PLUS GRANDE part revient au plus grand nombre du rapport.",
+  "en": "The LARGEST share goes to the largest number in the ratio."
+ },
+ "A MENOR parte é a do menor número da razão.": {
+  "fr": "La PLUS PETITE part revient au plus petit nombre du rapport.",
+  "en": "The SMALLEST share goes to the smallest number in the ratio."
+ },
  "A abscissa do vértice é −b dividido por #a.": {
   "fr": "L’abscisse du sommet est −b divisé par #a.",
   "en": "The vertex’s x-coordinate is −b divided by #a."
@@ -54,6 +62,10 @@
  "A barra da fração é uma divisão: basta efetuá-la.": {
   "fr": "La barre de fraction est une division : il suffit de la calculer.",
   "en": "The fraction bar is a division: simply perform it."
+ },
+ "A base é um círculo: a área dela é πr².": {
+  "fr": "La base est un cercle : son aire est πr².",
+  "en": "The base is a circle: its area is πr²."
  },
  "A cada período, o montante é multiplicado pelo mesmo fator.": {
   "fr": "Chaque période, le montant est multiplié par le même facteur.",
@@ -267,6 +279,10 @@
   "fr": "La formule est donnée : c’est une parabole, et le signe du coefficient de x² décide si elle s’ouvre vers le haut ou vers le bas.",
   "en": "The formula is given: it is a parabola, and the sign of the x² coefficient decides which way it opens."
  },
+ "A fórmula que resolve a pergunta.": {
+  "fr": "La formule qui résout la question.",
+  "en": "The formula that solves the question."
+ },
  "A hipotenusa é a raiz dessa soma — e só a raiz positiva tem sentido aqui.": {
   "fr": "L'hypoténuse est la racine de cette somme — et seule la racine positive a du sens ici.",
   "en": "The hypotenuse is the square root of this sum — and only the positive root makes sense here."
@@ -326,6 +342,10 @@
  "A luz chega em pacotes de energia E = hf = hc/λ. Com λ em nm, hc vale # eV·nm.": {
   "fr": "La lumière arrive en paquets d’énergie E = hf = hc/λ. Avec λ en nm, hc vaut # eV·nm.",
   "en": "Light arrives in packets of energy E = hf = hc/λ. With λ in nm, hc is # eV·nm."
+ },
+ "A maior parte fica com o menor peso.": {
+  "fr": "La plus grande part revient au plus petit poids.",
+  "en": "The larger share goes to the smaller weight."
  },
  "A massa aparece em todos os termos e se cancela.": {
   "fr": "La masse apparaît dans tous les termes et s'annule.",
@@ -387,6 +407,10 @@
   "fr": "La perpendiculaire serre le bloc contre la surface et définit la normale.",
   "en": "The perpendicular presses the block against the surface and defines the normal."
  },
+ "A pirâmide tem as arestas da base e mais uma subindo de cada vértice.": {
+  "fr": "La pyramide a les arêtes de la base et une de plus montant de chaque sommet.",
+  "en": "The pyramid has the base edges plus one rising from each vertex."
+ },
  "A potência está por fora e a função trigonométrica por dentro.": {
   "fr": "La puissance est à l'extérieur et la fonction trigonométrique à l'intérieur.",
   "en": "The power is outside and the trigonometric function is inside."
@@ -430,6 +454,10 @@
  "A projeção é o módulo de a vezes o cosseno do ângulo entre eles.": {
   "fr": "La projection est le module de a fois le cosinus de l'angle entre eux.",
   "en": "The projection is the magnitude of a times the cosine of the angle between them."
+ },
+ "A proporção é xícaras por ovo.": {
+  "fr": "La proportion est en tasses par œuf.",
+  "en": "The ratio is cups per egg."
  },
  "A propriedade da potência baixa o expoente para fora do logaritmo.": {
   "fr": "La propriété de la puissance abaisse l'exposant à l'extérieur du logarithme.",
@@ -495,9 +523,17 @@
   "fr": "La règle de la puissance : l'exposant descend en multipliant et diminue de un.",
   "en": "The power rule: the exponent comes down multiplying and decreases by one."
  },
+ "A relação de Euler é F + V = A + 2.": {
+  "fr": "La relation d’Euler est F + V = A + 2.",
+  "en": "Euler’s relation is F + V = E + 2."
+ },
  "A resistência térmica é o análogo da resistência elétrica.": {
   "fr": "La résistance thermique est l'analogue de la résistance électrique.",
   "en": "Thermal resistance is the analogue of electrical resistance."
+ },
+ "A resposta.": {
+  "fr": "La réponse.",
+  "en": "The answer."
  },
  "A resultante é essa soma.": {
   "fr": "La résultante est cette somme.",
@@ -534,6 +570,14 @@
  "A soma das partes tem de dar o total, o que determina k.": {
   "fr": "La somme des parties doit donner le total, ce qui détermine k.",
   "en": "The sum of the parts must equal the total, which determines k."
+ },
+ "A soma dos ângulos internos de um triângulo é 180°.": {
+  "fr": "La somme des angles intérieurs d’un triangle est 180°.",
+  "en": "The interior angles of a triangle add up to 180°."
+ },
+ "A soma dos ângulos internos é (n − 2) · 180°.": {
+  "fr": "La somme des angles intérieurs est (n − 2) · 180°.",
+  "en": "The interior angles add up to (n − 2) · 180°."
  },
  "A superfície da esfera equivale a quatro círculos máximos.": {
   "fr": "La surface de la sphère équivaut à quatre grands cercles.",
@@ -599,9 +643,29 @@
   "fr": "L'aire à l'intérieur de celui-ci.",
   "en": "The area inside it."
  },
+ "A área do losango é metade do produto das diagonais.": {
+  "fr": "L’aire du losange est la moitié du produit des diagonales.",
+  "en": "A rhombus area is half the product of its diagonals."
+ },
+ "A área do paralelogramo é base vezes altura.": {
+  "fr": "L’aire du parallélogramme est base fois hauteur.",
+  "en": "A parallelogram area is base times height."
+ },
  "A área do retângulo é a definição de área: quantos quadradinhos cabem.": {
   "fr": "L'aire du rectangle est la définition d'aire : combien de petits carrés rentrent.",
   "en": "The rectangle's area is the definition of area: how many little squares fit."
+ },
+ "A área do retângulo é base vezes altura.": {
+  "fr": "L’aire du rectangle est base fois hauteur.",
+  "en": "A rectangle area is base times height."
+ },
+ "A área do trapézio é a média das bases vezes a altura.": {
+  "fr": "L’aire du trapèze est la moyenne des bases fois la hauteur.",
+  "en": "A trapezium area is the average of the bases times the height."
+ },
+ "A área do triângulo é base vezes altura dividido por dois.": {
+  "fr": "L’aire du triangle est base fois hauteur divisé par deux.",
+  "en": "A triangle area is base times height divided by two."
  },
  "A área entre elas é a diferença das acumuladas.": {
   "fr": "L'aire entre elles est la différence des accumulées.",
@@ -610,6 +674,10 @@
  "A área é a integral da função no intervalo.": {
   "fr": "L’aire est l’intégrale de la fonction sur l’intervalle.",
   "en": "The area is the integral of the function over the interval."
+ },
+ "A área é a média das bases vezes a altura.": {
+  "fr": "L’aire est la moyenne des bases fois la hauteur.",
+  "en": "The area is the average of the bases times the height."
  },
  "A área é o valor absoluto — o sinal indica apenas a orientação.": {
   "fr": "L'aire est la valeur absolue — le signe indique seulement l'orientation.",
@@ -775,6 +843,10 @@
   "fr": "Les équations sont multiples l'une de l'autre : elles décrivent la MÊME droite.",
   "en": "The equations are multiples of each other: they describe the SAME line."
  },
+ "As faces são a base mais um triângulo por lado, e os vértices são os da base mais o ápice.": {
+  "fr": "Les faces sont la base plus un triangle par côté, et les sommets sont ceux de la base plus le sommet.",
+  "en": "The faces are the base plus one triangle per side, and the vertices are those of the base plus the apex."
+ },
  "As grandezas são diretamente proporcionais: as duas crescem juntas.": {
   "fr": "Les grandeurs sont directement proportionnelles : les deux croissent ensemble.",
   "en": "The quantities are directly proportional: both grow together."
@@ -782,6 +854,10 @@
  "As grandezas são inversamente proporcionais: quando uma cresce, a outra diminui.": {
   "fr": "Les grandeurs sont inversement proportionnelles : quand l’une croît, l’autre diminue.",
   "en": "The quantities are inversely proportional: when one grows, the other shrinks."
+ },
+ "As horas viram minutos: 1 h = 60 min.": {
+  "fr": "Les heures deviennent des minutes : 1 h = 60 min.",
+  "en": "Hours become minutes: 1 h = 60 min."
  },
  "As ordens encaixam: colunas da primeira igualam linhas da segunda.": {
   "fr": "Les ordres s'imbriquent : les colonnes du premier égalent les lignes du second.",
@@ -863,6 +939,10 @@
   "fr": "Chaque rang décimal vaut une division par dix : dixièmes, centièmes, millièmes.",
   "en": "Each decimal place is a division by ten: tenths, hundredths, thousandths."
  },
+ "Cada centímetro do mapa vale a escala em centímetros reais.": {
+  "fr": "Chaque centimètre de la carte vaut l’échelle en centimètres réels.",
+  "en": "Each centimetre on the map is worth the scale in real centimetres."
+ },
  "Cada coeficiente é a derivada de ordem n em zero, dividida pelo fatorial.": {
   "fr": "Chaque coefficient est la dérivée d'ordre n en zéro, divisée par la factorielle.",
   "en": "Each coefficient is the nth derivative at zero, divided by the factorial."
@@ -919,6 +999,10 @@
   "fr": "Chaque isotope entre avec le poids de son abondance.",
   "en": "Each isotope enters with the weight of its abundance."
  },
+ "Cada litro rende os quilômetros dados.": {
+  "fr": "Chaque litre donne les kilomètres indiqués.",
+  "en": "Each litre gives the stated kilometres."
+ },
  "Cada parcela é o expoente que leva a base até o número.": {
   "fr": "Chaque terme est l’exposant qui mène la base jusqu’au nombre.",
   "en": "Each term is the exponent that takes the base up to the number."
@@ -930,6 +1014,10 @@
  "Cada passo combina quatro inclinações numa média ponderada, com peso dobrado no meio.": {
   "fr": "Chaque pas combine quatre pentes en une moyenne pondérée, avec un poids doublé au milieu.",
   "en": "Each step combines four slopes into a weighted average, with double weight in the middle."
+ },
+ "Cada pedaço vale o valor dividido por essa soma.": {
+  "fr": "Chaque part vaut la valeur divisée par cette somme.",
+  "en": "Each share is the value divided by that sum."
  },
  "Cada potência é a base repetida; juntando os dois grupos, continuamos multiplicando a mesma base.": {
   "fr": "Chaque puissance est la base répétée ; en joignant les deux groupes, nous continuons à multiplier la même base.",
@@ -946,6 +1034,14 @@
  "Cada termo de dentro troca de sinal, não apenas o primeiro.": {
   "fr": "Chaque terme à l’intérieur change de signe, pas seulement le premier.",
   "en": "Every term inside changes sign, not only the first."
+ },
+ "Cada torneira enche uma fração do tanque por hora; o ralo tira a dele.": {
+  "fr": "Chaque robinet remplit une fraction du réservoir par heure ; la vidange retire la sienne.",
+  "en": "Each tap fills a fraction of the tank per hour; the drain removes its own."
+ },
+ "Cada torneira tem uma vazão: a primeira enche 1/h1 do tanque por hora.": {
+  "fr": "Chaque robinet a un débit : le premier remplit 1/h1 du réservoir par heure.",
+  "en": "Each tap has a rate: the first fills 1/h1 of the tank per hour."
  },
  "Cada triângulo contribui com #°, e nada se repete nem sobra.": {
   "fr": "Chaque triangle contribue avec #°, et rien ne se répète ni ne reste.",
@@ -1255,6 +1351,10 @@
   "fr": "Comme la parabole s’ouvre vers le haut, le sommet est un MINIMUM : c’est la plus petite valeur prise par la fonction.",
   "en": "Since the parabola opens upwards, the vertex is a MINIMUM: the smallest value the function takes."
  },
+ "Como os externos somam 360°, basta dividir.": {
+  "fr": "Comme les angles extérieurs font 360°, il suffit de diviser.",
+  "en": "Since the exterior angles add up to 360°, just divide."
+ },
  "Como os fatores se multiplicam e a ordem não altera o produto, cada grandeza pode ser tratada isoladamente.": {
   "fr": "Comme les facteurs se multiplient et que l’ordre ne change pas le produit, chaque grandeur peut être traitée séparément.",
   "en": "Since the factors multiply and the order does not change the product, each quantity can be handled on its own."
@@ -1327,6 +1427,10 @@
   "fr": "Convertissez en haut (# g = # kg) et en bas (# cm³ = # au cube fois plus petit que # m³) séparément.",
   "en": "Convert the top (# g = # kg) and the bottom (# cm³ = # cubed times smaller than # m³) separately."
  },
+ "Convertendo para quilômetros (1 km = 100 000 cm).": {
+  "fr": "En convertissant en kilomètres (1 km = 100 000 cm).",
+  "en": "Converting to kilometres (1 km = 100,000 cm)."
+ },
  "Cortando um triângulo de um lado e colando no outro, surge um retângulo.": {
   "fr": "En coupant un triangle d'un côté et en le collant de l'autre, un rectangle apparaît.",
   "en": "Cutting a triangle from one side and pasting it on the other, a rectangle emerges."
@@ -1374,6 +1478,22 @@
  "Depois o que age na vertical.": {
   "fr": "Ensuite ce qui agit sur la verticale.",
   "en": "Then what acts vertically."
+ },
+ "Depois, a área da base vezes a altura.": {
+  "fr": "Ensuite, l’aire de la base fois la hauteur.",
+  "en": "Then the base area times the height."
+ },
+ "Depois, multiplicamos pelas máquinas e horas novas.": {
+  "fr": "Ensuite, nous multiplions par les nouvelles machines et heures.",
+  "en": "Then we multiply by the new machines and hours."
+ },
+ "Depois, multiplicamos pelas pessoas pedidas.": {
+  "fr": "Ensuite, nous multiplions par les personnes demandées.",
+  "en": "Then we multiply by the requested people."
+ },
+ "Depois, tiramos os doados.": {
+  "fr": "Ensuite, nous retirons les exemplaires donnés.",
+  "en": "Then we take away the donated ones."
  },
  "Derivada de fora, aplicada no miolo, vezes a derivada do miolo.": {
   "fr": "Dérivée de l’extérieur, appliquée au noyau, fois la dérivée du noyau.",
@@ -1511,9 +1631,17 @@
   "fr": "En divisant h par p, et en passant aux nanomètres (# nm = #⁻⁹ m).",
   "en": "Dividing h by p, and converting to nanometres (# nm = #⁻⁹ m)."
  },
+ "Dividindo o custo total pelos litros, sai o preço médio.": {
+  "fr": "En divisant le coût total par les litres, on obtient le prix moyen.",
+  "en": "Dividing the total cost by the litres gives the average price."
+ },
  "Dividindo pelos dois desvios padrão, o resultado perde a unidade.": {
   "fr": "En divisant par les deux écarts-types, le résultat perd l'unité.",
   "en": "Dividing by the two standard deviations, the result loses the unit."
+ },
+ "Dividindo pelos dois ângulos da base.": {
+  "fr": "En divisant par les deux angles de la base.",
+  "en": "Dividing by the two base angles."
  },
  "Dividindo tudo pela maior potência, os termos constantes somem.": {
   "fr": "En divisant tout par la plus grande puissance, les termes constants disparaissent.",
@@ -1699,9 +1827,29 @@
   "fr": "Nous effectuons les produits et additionnons.",
   "en": "We carry out the products and add."
  },
+ "Efetuando a conta.": {
+  "fr": "En effectuant le calcul.",
+  "en": "Carrying out the calculation."
+ },
+ "Efetuando a divisão.": {
+  "fr": "En effectuant la division.",
+  "en": "Carrying out the division."
+ },
+ "Efetuando a subtração.": {
+  "fr": "En effectuant la soustraction.",
+  "en": "Carrying out the subtraction."
+ },
+ "Efetuando na ordem em que se lê.": {
+  "fr": "En effectuant dans l’ordre de lecture.",
+  "en": "Carrying out in reading order."
+ },
  "Efetuando, com os valores notáveis do arco.": {
   "fr": "En effectuant, avec les valeurs remarquables de l'angle.",
   "en": "Evaluating, with the notable values of the angle."
+ },
+ "Efetuando.": {
+  "fr": "En effectuant.",
+  "en": "Carrying out."
  },
  "Ela aponta sempre para o centro, e é ela que curva a trajetória.": {
   "fr": "Elle pointe toujours vers le centre, et c’est elle qui courbe la trajectoire.",
@@ -1834,6 +1982,10 @@
  "Entre esses pontos, a reta está acima da parábola.": {
   "fr": "Entre ces points, la droite est au-dessus de la parabole.",
   "en": "Between those points the line is above the parabola."
+ },
+ "Escala 1:200 quer dizer que cada centímetro do desenho vale 200 cm reais.": {
+  "fr": "L’échelle 1:200 veut dire que chaque centimètre du dessin vaut 200 cm réels.",
+  "en": "A 1:200 scale means each centimetre on the drawing is 200 cm in reality."
  },
  "Escapar significa chegar ao infinito com velocidade nula.": {
   "fr": "S'échapper signifie atteindre l'infini avec une vitesse nulle.",
@@ -2027,6 +2179,10 @@
   "fr": "En intégrant par la règle de la puissance.",
   "en": "Integrating with the power rule."
  },
+ "Inversamente proporcional é proporcional ao INVERSO: os pesos são 1/p1 e 1/p2.": {
+  "fr": "Inversement proportionnel, c’est proportionnel à l’INVERSE : les poids sont 1/p1 et 1/p2.",
+  "en": "Inversely proportional means proportional to the INVERSE: the weights are 1/p1 and 1/p2."
+ },
  "Isolamos a quarta potência da temperatura.": {
   "fr": "Nous isolons la quatrième puissance de la température.",
   "en": "We isolate the fourth power of the temperature."
@@ -2067,6 +2223,10 @@
   "fr": "Nous isolons x. Le dénominateur garde un # par chiffre de la période et un # par chiffre non périodique.",
   "en": "We isolate x. The denominator keeps one # for each repeating digit and one # for each non-repeating digit."
  },
+ "Isolando A.": {
+  "fr": "En isolant A.",
+  "en": "Isolating A."
+ },
  "Isolando C e escrevendo o diâmetro como #r.": {
   "fr": "En isolant C et en écrivant le diamètre comme #r.",
   "en": "Isolating C and writing the diameter as #r."
@@ -2075,9 +2235,21 @@
   "fr": "En isolant C.",
   "en": "Isolating C."
  },
+ "Isolando F.": {
+  "fr": "En isolant F.",
+  "en": "Isolating F."
+ },
+ "Isolando V.": {
+  "fr": "En isolant V.",
+  "en": "Isolating V."
+ },
  "Isolando a aceleração angular.": {
   "fr": "En isolant l'accélération angulaire.",
   "en": "Isolating the angular acceleration."
+ },
+ "Isolando a altura.": {
+  "fr": "En isolant la hauteur.",
+  "en": "Isolating the height."
  },
  "Isolando a distância procurada.": {
   "fr": "En isolant la distance recherchée.",
@@ -2118,6 +2290,14 @@
  "Isolando o seno do ângulo.": {
   "fr": "En isolant le sinus de l'angle.",
   "en": "Isolating the sine of the angle."
+ },
+ "Isolando x, a menor gira mais.": {
+  "fr": "En isolant x : la plus petite tourne plus.",
+  "en": "Isolating x: the smaller one turns more."
+ },
+ "Isolando x.": {
+  "fr": "En isolant x.",
+  "en": "Isolating x."
  },
  "Isso não é um valor: é um aviso de que falta simplificar.": {
   "fr": "Ce n’est pas une valeur : c’est un avertissement qu’il reste à simplifier.",
@@ -2162,6 +2342,10 @@
  "Mais a base circular.": {
   "fr": "Plus la base circulaire.",
   "en": "Plus the circular base."
+ },
+ "Mais operários, menos dias: o produto operários × dias se conserva.": {
+  "fr": "Plus d’ouvriers, moins de jours : le produit ouvriers × jours se conserve.",
+  "en": "More workers, fewer days: the product workers × days stays the same."
  },
  "Mais tração acelera a onda; mais massa por metro a freia.": {
   "fr": "Plus de tension accélère l’onde ; plus de masse par mètre la freine.",
@@ -2239,6 +2423,14 @@
   "fr": "En multipliant par la pression.",
   "en": "Multiplying by the pressure."
  },
+ "Multiplicando pelas máquinas e horas novas.": {
+  "fr": "En multipliant par les nouvelles machines et heures.",
+  "en": "Multiplying by the new machines and hours."
+ },
+ "Multiplicando pelas máquinas e pelos minutos.": {
+  "fr": "En multipliant par les machines et par les minutes.",
+  "en": "Multiplying by the machines and by the minutes."
+ },
  "Multiplicando pelo braço.": {
   "fr": "En multipliant par le bras.",
   "en": "Multiplying by the arm."
@@ -2246,6 +2438,26 @@
  "Multiplicando pelo deslocamento.": {
   "fr": "En multipliant par le déplacement.",
   "en": "Multiplying by the displacement."
+ },
+ "Multiplicando pelo novo número de pessoas.": {
+  "fr": "En multipliant par le nouveau nombre de personnes.",
+  "en": "Multiplying by the new number of people."
+ },
+ "Multiplicando pelos ovos pedidos.": {
+  "fr": "En multipliant par les œufs demandés.",
+  "en": "Multiplying by the requested eggs."
+ },
+ "Multiplicando pelos quilos pedidos.": {
+  "fr": "En multipliant par les kilos demandés.",
+  "en": "Multiplying by the requested kilos."
+ },
+ "Multiplicando, temos a medida real em centímetros.": {
+  "fr": "En multipliant, nous obtenons la mesure réelle en centimètres.",
+  "en": "Multiplying gives the real measurement in centimetres."
+ },
+ "Multiplicando.": {
+  "fr": "En multipliant.",
+  "en": "Multiplying."
  },
  "Multiplicar dimensões soma os expoentes.": {
   "fr": "Multiplier les dimensions ajoute les exposants.",
@@ -2315,6 +2527,10 @@
   "fr": "Dans le cas équiprobable, la probabilité est le rapport entre les comptages.",
   "en": "In the equally likely case, the probability is the ratio between the counts."
  },
+ "No cilindro, a área da base se repete em cada fatia: vezes a altura.": {
+  "fr": "Dans le cylindre, l’aire de la base se répète à chaque tranche : fois la hauteur.",
+  "en": "In a cylinder the base area repeats in every slice: times the height."
+ },
  "No equilíbrio a derivada zera — e isso transforma a EDO numa equação comum.": {
   "fr": "À l’équilibre la dérivée s’annule — et cela transforme l’EDO en une équation ordinaire.",
   "en": "At equilibrium the derivative vanishes — and that turns the ODE into an ordinary equation."
@@ -2351,6 +2567,10 @@
   "fr": "Dans le plan, il se réduit à un déterminant #×#.",
   "en": "In the plane, it reduces to a #×# determinant."
  },
+ "No quadrado, base e altura são o mesmo lado.": {
+  "fr": "Dans le carré, base et hauteur sont le même côté.",
+  "en": "In a square, base and height are the same side."
+ },
  "No triângulo retângulo, os quadrados dos catetos somam o da hipotenusa.": {
   "fr": "Dans le triangle rectangle, les carrés des cathètes somment celui de l'hypoténuse.",
   "en": "In the right triangle, the squares of the legs sum to that of the hypotenuse."
@@ -2370,6 +2590,10 @@
  "Nos juros simples, os rendimentos não rendem — o crescimento é linear.": {
   "fr": "Aux intérêts simples, les rendements ne rapportent pas — la croissance est linéaire.",
   "en": "With simple interest, the returns don't earn — the growth is linear."
+ },
+ "Num polígono regular, basta dividir pelo número de lados.": {
+  "fr": "Dans un polygone régulier, il suffit de diviser par le nombre de côtés.",
+  "en": "In a regular polygon, just divide by the number of sides."
  },
  "Num ponto crítico, as duas parciais zeram ao mesmo tempo.": {
   "fr": "En un point critique, les deux dérivées partielles s'annulent en même temps.",
@@ -2418,6 +2642,10 @@
  "Não há fatoração com coeficientes inteiros para este polinômio.": {
   "fr": "Il n'y a pas de factorisation avec des coefficients entiers pour ce polynôme.",
   "en": "There is no factorization with integer coefficients for this polynomial."
+ },
+ "Não há metade a tirar: o paralelogramo já é o retângulo inteiro.": {
+  "fr": "Il n’y a pas de moitié à retirer : le parallélogramme est déjà le rectangle entier.",
+  "en": "There is no half to take away: the parallelogram is already the whole rectangle."
  },
  "Não há nenhum fator primo em comum, então os números são primos entre si.": {
   "fr": "Il n’y a aucun facteur premier commun, donc les nombres sont premiers entre eux.",
@@ -2539,6 +2767,10 @@
   "fr": "La longueur mesurée en mouvement est la longueur propre divisée par γ.",
   "en": "The length measured in motion is the proper length divided by γ."
  },
+ "O cone é um terço do cilindro de mesma base e altura.": {
+  "fr": "Le cône est un tiers du cylindre de même base et hauteur.",
+  "en": "A cone is one third of the cylinder with the same base and height."
+ },
  "O cone é uma pirâmide de base circular, e vale o mesmo um terço.": {
   "fr": "Le cône est une pyramide de base circulaire, et vaut le même un tiers.",
   "en": "The cone is a circular-base pyramid, and the same one-third applies."
@@ -2550,6 +2782,10 @@
  "O cubo é o quadrado multiplicado mais uma vez pelo binômio.": {
   "fr": "Le cube est le carré multiplié encore une fois par le binôme.",
   "en": "The cube is the square multiplied once more by the binomial."
+ },
+ "O custo total é o de cada tinta, e os litros também se somam.": {
+  "fr": "Le coût total est celui de chaque peinture, et les litres s’additionnent aussi.",
+  "en": "The total cost is that of each paint, and the litres add up too."
  },
  "O decimal é uma dízima periódica.": {
   "fr": "La décimale est une décimale périodique.",
@@ -2755,6 +2991,10 @@
   "fr": "Le numéro atomique est le décompte même des protons.",
   "en": "The atomic number is the proton count itself."
  },
+ "O número de dentes vezes as voltas é o mesmo nas duas: é o que a corrente impõe.": {
+  "fr": "Le nombre de dents fois les tours est le même pour les deux : c’est ce que la chaîne impose.",
+  "en": "Teeth times turns is the same for both: that is what the chain imposes."
+ },
  "O número de massa conta prótons e nêutrons; os nêutrons são a diferença.": {
   "fr": "Le nombre de masse compte protons et neutrons ; les neutrons sont la différence.",
   "en": "The mass number counts protons and neutrons; the neutrons are the difference."
@@ -2802,6 +3042,14 @@
  "O ponto é a fronteira ENTRE as duas raízes, onde a parábola cruza o eixo.": {
   "fr": "Le point est la frontière ENTRE les deux racines, où la parabole coupe l’axe.",
   "en": "The point is the boundary BETWEEN the two roots, where the parabola crosses the axis."
+ },
+ "O preço de um quilo é o do pacote dividido pelos quilos dele.": {
+  "fr": "Le prix d’un kilo est celui du paquet divisé par ses kilos.",
+  "en": "The price of one kilo is the pack price divided by its kilos."
+ },
+ "O prisma tem duas bases e uma face lateral por lado do polígono.": {
+  "fr": "Le prisme a deux bases et une face latérale par côté du polygone.",
+  "en": "A prism has two bases and one side face per polygon side."
  },
  "O produto dos dois é igual ao produto dos números originais.": {
   "fr": "Le produit des deux est égal au produit des nombres originaux.",
@@ -2887,6 +3135,22 @@
   "fr": "Le secteur est une fraction du cercle, proportionnelle à l'angle.",
   "en": "The sector is a fraction of the circle, proportional to the angle."
  },
+ "O sinal da operação é \"*\", então multiplicamos.": {
+  "fr": "Le signe de l’opération est « × », donc on multiplie.",
+  "en": "The operation sign is \"×\", so we multiply."
+ },
+ "O sinal da operação é \"+\", então somamos.": {
+  "fr": "Le signe de l’opération est « + », donc on additionne.",
+  "en": "The operation sign is \"+\", so we add."
+ },
+ "O sinal da operação é \"-\", então subtraímos.": {
+  "fr": "Le signe de l’opération est « − », donc on soustrait.",
+  "en": "The operation sign is \"−\", so we subtract."
+ },
+ "O sinal da operação é \"/\", então dividimos.": {
+  "fr": "Le signe de l’opération est « ÷ », donc on divise.",
+  "en": "The operation sign is \"÷\", so we divide."
+ },
  "O sinal de menos distribui sobre TODOS os termos do segundo parêntese.": {
   "fr": "Le signe moins se distribue sur TOUS les termes de la seconde parenthèse.",
   "en": "The minus sign distributes over ALL terms of the second bracket."
@@ -2902,6 +3166,10 @@
  "O tempo depende só da velocidade que aponta para a outra margem.": {
   "fr": "Le temps ne dépend que de la vitesse qui pointe vers l’autre rive.",
   "en": "The time depends only on the velocity pointing to the other bank."
+ },
+ "O tempo para encher é o inverso dessa vazão líquida.": {
+  "fr": "Le temps pour remplir est l’inverse de ce débit net.",
+  "en": "The time to fill is the inverse of that net rate."
  },
  "O termo com i² muda de natureza: i² = −#, então ele vira real.": {
   "fr": "Le terme avec i² change de nature : i² = −#, donc il devient réel.",
@@ -2931,9 +3199,17 @@
   "fr": "Le couple mesure la capacité d'une force de produire une rotation.",
   "en": "Torque measures the ability of a force to produce rotation."
  },
+ "O trabalho total é o mesmo: operários × dias não muda.": {
+  "fr": "Le travail total est le même : ouvriers × jours ne change pas.",
+  "en": "The total work is the same: workers × days does not change."
+ },
  "O trabalho é a integral do campo projetado no deslocamento.": {
   "fr": "Le travail est l'intégrale du champ projeté sur le déplacement.",
   "en": "The work is the integral of the field projected on the displacement."
+ },
+ "O triângulo é metade do retângulo de mesma base e altura.": {
+  "fr": "Le triangle est la moitié du rectangle de même base et hauteur.",
+  "en": "The triangle is half the rectangle of the same base and height."
  },
  "O unitário é o vetor dividido pelo próprio módulo.": {
   "fr": "L'unitaire est le vecteur divisé par son propre module.",
@@ -2954,6 +3230,10 @@
  "O volume depende de três dimensões.": {
   "fr": "Le volume dépend de trois dimensions.",
   "en": "The volume depends on three dimensions."
+ },
+ "O volume do cubo é a aresta ao cubo.": {
+  "fr": "Le volume du cube est l’arête au cube.",
+  "en": "A cube’s volume is the edge cubed."
  },
  "O volume é o módulo do determinante #×# com u, v e w nas linhas. Calcule v × w e depois o escalar com u.": {
   "fr": "Le volume est le module du déterminant #×# avec u, v et w sur les lignes. Calculez v × w puis le scalaire avec u.",
@@ -2987,9 +3267,21 @@
   "fr": "L’atome est neutre, donc il y a un électron pour chaque proton.",
   "en": "The atom is neutral, so there is one electron per proton."
  },
+ "O ângulo EXTERNO é o suplemento do interno.": {
+  "fr": "L’angle EXTÉRIEUR est le supplémentaire de l’intérieur.",
+  "en": "The EXTERIOR angle is the supplement of the interior one."
+ },
+ "O ângulo externo é o suplemento do interno do mesmo vértice.": {
+  "fr": "L’angle extérieur est le supplémentaire de l’intérieur du même sommet.",
+  "en": "The exterior angle is the supplement of the interior one at the same vertex."
+ },
  "Os coeficientes saem das derivadas em zero, divididas pelo fatorial da ordem.": {
   "fr": "Les coefficients viennent des dérivées en zéro, divisées par la factorielle de l'ordre.",
   "en": "The coefficients come from the derivatives at zero, divided by the factorial of the order."
+ },
+ "Os dados do enunciado.": {
+  "fr": "Les données de l’énoncé.",
+  "en": "The data from the statement."
  },
  "Os denominadores já são iguais, então nada precisa ser convertido.": {
   "fr": "Les dénominateurs sont déjà égaux, donc rien n'a besoin d'être converti.",
@@ -3006,6 +3298,10 @@
  "Os dois zeram: o fator se cancela e sobra um ponto removido.": {
   "fr": "Les deux s'annulent : le facteur s'annule et il reste un point supprimé.",
   "en": "Both are zero: the factor cancels and a removable point remains."
+ },
+ "Os dois ângulos da base são iguais; sobram 180° menos o vértice.": {
+  "fr": "Les deux angles de la base sont égaux ; il reste 180° moins le sommet.",
+  "en": "Both base angles are equal; what is left is 180° minus the apex."
  },
  "Os inteiros que sobram são estes.": {
   "fr": "Les entiers qui restent sont ceux-ci.",
@@ -3026,6 +3322,10 @@
  "Os três coincidem: a função é contínua nesse ponto.": {
   "fr": "Les trois coïncident : la fonction est continue en ce point.",
   "en": "The three coincide: the function is continuous at this point."
+ },
+ "Os vértices são duas cópias dos da base, e cada vértice dá três arestas contadas duas vezes.": {
+  "fr": "Les sommets sont deux copies de ceux de la base, et chaque sommet donne trois arêtes comptées deux fois.",
+  "en": "The vertices are two copies of the base ones, and each vertex gives three edges counted twice."
  },
  "Os zeros da função são as raízes do numerador que sobrevivem.": {
   "fr": "Les zéros de la fonction sont les racines du numérateur qui survivent.",
@@ -3247,6 +3547,10 @@
   "fr": "D’abord la pente b ; ensuite l’ordonnée à l’origine sort de a = ȳ − b·x̄, puisque la droite passe par le point des moyennes.",
   "en": "First the slope b; then the intercept comes from a = ȳ − b·x̄, because the line passes through the point of the means."
  },
+ "Primeiro a área da base: comprimento vezes largura.": {
+  "fr": "D’abord l’aire de la base : longueur fois largeur.",
+  "en": "First the base area: length times width."
+ },
  "Primeiro achamos onde as curvas se cruzam.": {
   "fr": "D’abord nous trouvons où les courbes se croisent.",
   "en": "First we find where the curves cross."
@@ -3271,6 +3575,18 @@
   "fr": "D’abord les ouvriers seuls : deux fois plus d’ouvriers prennent deux fois moins de temps, la proportion est donc inverse.",
   "en": "First the workers alone: twice the workers take half the time, so the proportion is inverse."
  },
+ "Primeiro, quanto UMA máquina produz por hora.": {
+  "fr": "D’abord, ce qu’UNE machine produit par heure.",
+  "en": "First, what ONE machine makes per hour."
+ },
+ "Primeiro, quanto cada pessoa consome.": {
+  "fr": "D’abord, ce que chaque personne consomme.",
+  "en": "First, what each person consumes."
+ },
+ "Primeiro, quantos livros vieram: caixas × livros por caixa.": {
+  "fr": "D’abord, combien de livres sont arrivés : caisses × livres par caisse.",
+  "en": "First, how many books arrived: boxes × books per box."
+ },
  "Primeiro, μ em kg/m: # g = # kg.": {
   "fr": "D’abord, μ en kg/m : # g = # kg.",
   "en": "First, μ in kg/m: # g = # kg."
@@ -3291,6 +3607,10 @@
   "fr": "Cherchez le facteur qui apparaît en haut et en bas en même temps.",
   "en": "Look for the factor that appears both above and below."
  },
+ "Produção por máquina e por hora.": {
+  "fr": "Production par machine et par heure.",
+  "en": "Production per machine and per hour."
+ },
  "Qual número multiplicado por ele mesmo dá esse valor?": {
   "fr": "Quel nombre multiplié par lui-même donne cette valeur ?",
   "en": "Which number multiplied by itself gives that value?"
@@ -3303,9 +3623,21 @@
   "fr": "Quand le dénominateur croît plus vite, la fraction tend vers zéro.",
   "en": "When the denominator grows faster, the fraction tends to zero."
  },
+ "Quanto UMA máquina enche por minuto.": {
+  "fr": "Combien UNE machine remplit par minute.",
+  "en": "How much ONE machine fills per minute."
+ },
+ "Quanto cada pessoa consome.": {
+  "fr": "Combien chaque personne consomme.",
+  "en": "How much each person consumes."
+ },
  "Quanto vale qualquer número elevado a zero?": {
   "fr": "Combien vaut n’importe quel nombre élevé à zéro ?",
   "en": "What is any number raised to zero worth?"
+ },
+ "Que é a soma dos dois ângulos internos opostos.": {
+  "fr": "Qui est la somme des deux angles intérieurs opposés.",
+  "en": "Which is the sum of the two opposite interior angles."
  },
  "Quem vê o relógio passar mede um intervalo γ vezes maior que o tempo próprio.": {
   "fr": "Celui qui voit l’horloge passer mesure un intervalle γ fois plus grand que le temps propre.",
@@ -3403,6 +3735,10 @@
   "fr": "Runge-Kutta utilise quatre, et fait une moyenne pondérée d'elles.",
   "en": "Runge-Kutta uses four, and makes a weighted average of them."
  },
+ "Saíram os que desceram nas duas paradas e entraram os que subiram.": {
+  "fr": "Sont sortis ceux qui sont descendus aux deux arrêts, et sont entrés ceux qui sont montés.",
+  "en": "Those who got off at both stops left, and those who got on entered."
+ },
  "Se errar a direção de uma delas, o erro aparece como um fator trocado — nunca some.": {
   "fr": "Une erreur sur le sens de l’une d’elles apparaît comme un facteur inversé — elle ne disparaît jamais.",
   "en": "Getting the direction of one of them wrong shows up as an inverted factor — it never vanishes."
@@ -3471,6 +3807,10 @@
   "fr": "Il reste des facteurs au dénominateur, et l'exposant négatif enregistre exactement cela.",
   "en": "Factors remain in the denominator, and the negative exponent records exactly this."
  },
+ "Somamos as bases: é o lado do retângulo equivalente.": {
+  "fr": "Nous additionnons les bases : c’est le côté du rectangle équivalent.",
+  "en": "We add the bases: it is the side of the equivalent rectangle."
+ },
  "Somamos as duas bases.": {
   "fr": "Nous additionnons les deux bases.",
   "en": "We add the two bases."
@@ -3478,6 +3818,14 @@
  "Somamos as forças com seus sinais, conforme o sentido.": {
   "fr": "Nous additionnons les forces avec leurs signes, selon le sens.",
   "en": "We add the forces with their signs, according to the direction."
+ },
+ "Somamos as partes da razão: é em quantos pedaços o valor se divide.": {
+  "fr": "Nous additionnons les parts du rapport : c’est en combien de morceaux la valeur se divise.",
+  "en": "We add the parts of the ratio: that is how many pieces the value splits into."
+ },
+ "Somamos as vazões e o tempo é o inverso da soma.": {
+  "fr": "Nous additionnons les débits et le temps est l’inverse de la somme.",
+  "en": "We add the rates and the time is the inverse of the sum."
  },
  "Somamos as áreas dos retângulos.": {
   "fr": "Nous additionnons les aires des rectangles.",
@@ -3602,6 +3950,10 @@
  "Substituindo o ponto na expressão simplificada.": {
   "fr": "En substituant le point dans l’expression simplifiée.",
   "en": "Substituting the point into the simplified expression."
+ },
+ "Substituindo os valores do enunciado.": {
+  "fr": "En remplaçant par les valeurs de l’énoncé.",
+  "en": "Substituting the values from the statement."
  },
  "Substituindo os valores.": {
   "fr": "En remplaçant les valeurs.",
@@ -3875,6 +4227,10 @@
   "fr": "Variation de la position sur variation du temps.",
   "en": "Change in position over change in time."
  },
+ "Velocidade média é distância dividida por tempo.": {
+  "fr": "La vitesse moyenne est la distance divisée par le temps.",
+  "en": "Average speed is distance divided by time."
+ },
  "Velocidade é deslocamento por tempo.": {
   "fr": "La vitesse est le déplacement par temps.",
   "en": "Velocity is displacement per time."
@@ -3910,6 +4266,10 @@
  "À esquerda ela é negativa, e o módulo espelha a reta para cima.": {
   "fr": "À gauche elle est négative, et le module reflète la droite vers le haut.",
   "en": "To the left it is negative, and the absolute value reflects the line upward."
+ },
+ "Ângulos colaterais internos são suplementares: somam 180°.": {
+  "fr": "Les angles co-intérieurs sont supplémentaires : ils font 180°.",
+  "en": "Co-interior angles are supplementary: they add up to 180°."
  },
  "É Pitágoras duas vezes, como no módulo de um vetor no espaço.": {
   "fr": "C’est Pythagore deux fois, comme pour le module d’un vecteur dans l’espace.",

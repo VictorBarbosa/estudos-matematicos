@@ -3,6 +3,7 @@ import { numeroEscrito } from '@core/treino/textos/numero-escrito';
 import { Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
 import { Rng } from '@core/treino/rng/rng';
 import { ENTRADAS_DE_ENUNCIADO } from '@core/enunciados/enunciados/catalogo';
+import { passosDoBanco } from '@core/enunciados/models/passos-do-banco';
 
 /**
  * O banco de enunciados escritos à mão.
@@ -239,13 +240,14 @@ export function exercicioDoBanco<T>(
     resolucao: {
       resultado: gabarito,
       passos: [
-        {
-          descricao: 'Os dados do enunciado.',
-          tex: Object.entries(dados)
-            .filter(([nome]) => nome !== CHAVE_DO_TOTAL)
-            .map(([nome, valor]) => `${nome} = ${valor}`)
-            .join(' \\qquad '),
-        },
+        /*
+         * A trilha vem do resolvedor da forma, quando ele conhece esta — é o
+         * que transforma «a resposta é 30» em «some as partes da razão, divida
+         * o valor por essa soma e multiplique». Sem resolvedor, ficam os dados
+         * e a resposta: pouco para aprender, mas nunca nada.
+         */
+        ...(passosDoBanco(entrada.topico, semTotal(dados), emPortugues)?.passos ??
+          dadosDoEnunciado(dados)),
         {
           descricao: 'A resposta.',
           tex: `${gerador.formatar(gabarito)}`,
@@ -280,4 +282,28 @@ export function sortearDoBanco<T>(
   const indice = ENTRADAS.indexOf(entrada);
 
   return exercicioDoBanco(gerador, entrada, indice);
+}
+
+/**
+ * O passo com os dados da entrada, quando nenhuma regra reconhece a forma.
+ *
+ * Devolve lista VAZIA quando não há dado nenhum além do `total` — e é o caso
+ * comum: a maior parte do banco guarda os números só no texto. Antes, o passo
+ * aparecia com a fórmula vazia, e o aluno via um título sem conta embaixo.
+ */
+function dadosDoEnunciado(
+  dados: Readonly<Record<string, string>>,
+): readonly { readonly descricao: string; readonly tex: string }[] {
+  const tex = Object.entries(dados)
+    .filter(([nome]) => nome !== CHAVE_DO_TOTAL)
+    .map(([nome, valor]) => `${nome} = ${valor}`)
+    .join(' \\qquad ');
+
+  return tex === '' ? [] : [{ descricao: 'Os dados do enunciado.', tex }];
+}
+
+/** Os dados sem o `total`, que é a resposta e não entra na conta. */
+function semTotal(dados: Readonly<Record<string, string>>): Readonly<Record<string, string>> {
+  const { [CHAVE_DO_TOTAL]: _fora, ...resto } = dados;
+  return resto;
 }

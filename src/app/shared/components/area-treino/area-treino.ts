@@ -35,6 +35,7 @@ import {
 } from '@core/treino/models/treino.model';
 import { BotaoTeoria } from '@shared/components/botao-teoria/botao-teoria';
 import { CampoResposta } from '@shared/components/campo-resposta/campo-resposta';
+import { EnunciadoRico } from '@shared/components/enunciado-rico/enunciado-rico';
 import { Formula } from '@shared/components/formula/formula';
 import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
 
@@ -48,7 +49,7 @@ import { PassoAPasso } from '@shared/components/passo-a-passo/passo-a-passo';
 @Component({
   selector: 'app-area-treino',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [BotaoTeoria, CampoResposta, Formula, PassoAPasso, RouterLink],
+  imports: [BotaoTeoria, CampoResposta, EnunciadoRico, Formula, PassoAPasso, RouterLink],
   templateUrl: './area-treino.html',
   styleUrl: './area-treino.scss',
 })

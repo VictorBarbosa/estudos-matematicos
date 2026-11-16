@@ -48,7 +48,10 @@
   }
 
   <div class="enunciado">
-    <p>{{ enunciado() }}</p>
+    <!-- A conta dentro do enunciado é desenhada: `(x + 1)/(x − 2)` lido como
+         texto parece divisão de duas quantias, e não a fração que a questão
+         pede. -->
+    <p><app-enunciado-rico [texto]="enunciado()" /></p>
     <!-- Sem fórmula quando o exercício é só o enunciado: montar a expressão
            a partir do texto é parte da pergunta. -->
     @if (exercicio.enunciadoTex !== '') {

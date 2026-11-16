@@ -1,0 +1,249 @@
+import { PI, fracao, mdc, type Regra } from '@core/enunciados/models/regras-de-passos';
+
+/**
+ * As regras de funções de várias variáveis, teoremas integrais e a leitura de
+ * decimais como fração.
+ */
+
+/** A fração geratriz de um decimal escrito com vírgula, com ou sem repetição. */
+function geratrizDoDecimal(texto: string): string {
+  // A dízima é escrita com reticências, e o número de pontos varia.
+  const limpo = texto.replace(/\.+$/, '').replace(/\s/g, '');
+  const [inteira, decimal = ''] = limpo.split(',');
+
+  const mdc = (a: number, b: number): number => (b === 0 ? Math.abs(a) : mdc(b, a % b));
+
+  // Dízima composta: parte que não repete seguida de um bloco repetido.
+  const prefixo = /(\d*)(\d)\2+/.exec(decimal);
+  if (prefixo !== null && decimal.length > 0) {
+    const naoRepete = prefixo[1] ?? '';
+    const bloco = (decimal.slice(naoRepete.length) || '0').replace(/(.)\1*/g, '$1');
+    const numerador =
+      Number(`${inteira}${naoRepete}${bloco}`) - Number(`${inteira}${naoRepete || '0'}`);
+    const denominador = 9 * 10 ** naoRepete.length;
+    const d = mdc(numerador, denominador) || 1;
+    return fracao(numerador / d, denominador / d);
+  }
+
+  const casas = decimal.length;
+  const d = mdc(Number(`${inteira}${decimal}`), 10 ** casas) || 1;
+  return fracao(Number(`${inteira}${decimal}`) / d, 10 ** casas / d);
+}
+
+export const REGRAS_AVANCADO_2: Readonly<Record<string, readonly Regra[]>> = {
+  'funcoes-de-varias-variaveis': [
+    [
+      'A temperatura de uma chapa é # vezes x mais # vezes y. Quanto ela vale no ponto (#, #)?',
+      'f(x, y) = ax + by',
+      'f(#, #) = # \\cdot # + # \\cdot #',
+      (v) => v[0]! * v[2]! + v[1]! * v[3]!,
+    ],
+    [
+      'Uma superfície vale o quadrado de x mais o quadrado de y. Quanto ela vale no ponto (#, #)?',
+      'f(x, y) = x^2 + y^2',
+      'f(#, #) = #^2 + #^2',
+      (v) => v[0]! ** 2 + v[1]! ** 2,
+    ],
+    [
+      'Quanto vale f(x, y) = x² + y² no ponto (#, #)?',
+      'f(x, y) = x^2 + y^2',
+      'f(#, #) = #^2 + #^2',
+      (v) => v[0]! ** 2 + v[1]! ** 2,
+    ],
+    [
+      'Quanto vale f(x, y) = x·y no ponto (#, #)?',
+      'f(x, y) = xy',
+      'f(#, #) = # \\cdot #',
+      (v) => v[0]! * v[1]!,
+    ],
+    [
+      'Quanto vale f(x, y) = #x² + #y no ponto (#, #)?',
+      'f(x, y) = ax^2 + by',
+      'f(#, #) = # \\cdot #^2 + # \\cdot #',
+      (v) => v[0]! * v[2]! ** 2 + v[1]! * v[3]!,
+    ],
+    [
+      'Uma função vale o produto de x por y. Qual é o valor de k da curva de nível que passa por (#, #)?',
+      'k = x \\cdot y',
+      'k = # \\cdot #',
+      (v) => v[0]! * v[1]!,
+    ],
+    [
+      'Qual é o valor de k da curva de nível de f(x, y) = x² + y² que passa pelo ponto (#, #)?',
+      'k = x^2 + y^2',
+      'k = #^2 + #^2',
+      (v) => v[0]! ** 2 + v[1]! ** 2,
+    ],
+    [
+      'No domínio de f(x, y) = √(# − x² − y²), qual é o raio máximo do domínio? (duas casas decimais)',
+      'r = \\sqrt{a}',
+      'r = \\sqrt{#}',
+      (v) => Math.sqrt(v[0]!),
+      2,
+    ],
+    [
+      'No domínio de f(x, y) = ln(# − x − y), qual é o maior valor que x pode assumir quando y = #? (duas casas decimais)',
+      'a - x - y > 0 \\Rightarrow x < a - y',
+      'x_{max} = # - #',
+      (v) => v[0]! - v[1]!,
+      2,
+    ],
+    [
+      'Cortando a superfície z = x² + #y² pelo plano y = #, sobra uma parábola em x. Qual é a abscissa do vértice dela?',
+      'z = x^2 + k \\Rightarrow x_v = 0',
+      'x_v = 0',
+      () => 0,
+    ],
+    [
+      'O volume de um cilindro depende do raio e da altura. Para raio # e altura #, qual é o volume? Responda o número que multiplica π.',
+      'V = \\pi r^2 h',
+      'V = #^2 \\cdot #',
+      (v) => v[0]! ** 2 * v[1]!,
+    ],
+    [
+      'Qual é o valor MÍNIMO da função f(x, y) = x² + y² − #x − #y? (duas casas decimais)',
+      'f_{min} = -\\frac{a^2 + b^2}{4}',
+      'f_{min} = -\\frac{#^2 + #^2}{4}',
+      (v) => -(v[0]! ** 2 + v[1]! ** 2) / 4,
+      2,
+    ],
+  ],
+
+  'teoremas-integrais': [
+    [
+      'Qual é a área do pedaço de um plano horizontal que fica acima de um retângulo de lados # e #?',
+      'A = a \\cdot b',
+      'A = # \\cdot #',
+      (v) => v[0]! * v[1]!,
+    ],
+    [
+      'Calcule o divergente do campo F = (#x, #y, #z) no ponto (#, #, #).',
+      '\\nabla\\cdot F = a + b + c',
+      '\\nabla\\cdot F = # + # + #',
+      (v) => v[0]! + v[1]! + v[2]!,
+    ],
+    [
+      'Calcule a componente z do rotacional do campo plano F = (−#y, #x) no ponto (#, #).',
+      '(\\nabla\\times F)_z = \\frac{\\partial F_y}{\\partial x} - \\frac{\\partial F_x}{\\partial y} = a + b',
+      '(\\nabla\\times F)_z = # + #',
+      (v) => v[0]! + v[1]!,
+    ],
+    [
+      'Qual é o fluxo de um campo constante de módulo #, perpendicular a uma superfície plana de área #?',
+      '\\Phi = E \\cdot A',
+      '\\Phi = # \\cdot #',
+      (v) => v[0]! * v[1]!,
+    ],
+    [
+      'Qual é o fluxo de um campo constante de módulo # através de uma superfície plana de área #, quando o campo é PARALELO à superfície?',
+      '\\Phi = E A \\cos 90^\\circ = 0',
+      '\\Phi = # \\cdot # \\cdot \\cos 90^\\circ',
+      () => 0,
+    ],
+    [
+      'Pelo teorema da divergência, qual é o fluxo do campo F = (#x, #y, #z) para fora da esfera de raio #? (duas casas decimais)',
+      '\\Phi = \\iiint \\nabla\\cdot F\,dV = 3a \\cdot \\frac{4}{3}\\pi r^3',
+      '\\Phi = 3 \\cdot # \\cdot \\frac{4}{3}\\pi \\cdot #^3',
+      (v) => 3 * v[0]! * ((4 / 3) * PI * v[1]! ** 3),
+      2,
+    ],
+    [
+      'Qual é a área da superfície de uma esfera de raio #? Responda o número que multiplica π.',
+      'A = 4\\pi r^2',
+      'A = 4 \\cdot #^2',
+      (v) => 4 * v[0]! ** 2,
+    ],
+    [
+      'Pelo teorema da divergência, qual é o fluxo do campo F = (x, y, #z) para fora do cilindro x² + y² ≤ #, # ≤ z ≤ #, com as tampas? (duas casas decimais)',
+      '\\Phi = \\iiint (2 + k)\,dV',
+      '\\Phi = (2 + #1) \\cdot \\pi \\cdot #4 \\cdot (#2 - #3)',
+      (v) => (2 + v[0]!) * PI * v[1]! * (v[3]! - v[2]!),
+      2,
+    ],
+    [
+      'Use o teorema de Green para calcular a circulação de F = (−y, x) na borda do retângulo # ≤ x ≤ #, # ≤ y ≤ #, no sentido anti-horário. (duas casas decimais)',
+      '\\oint F\\cdot dr = \\iint 2\,dA = 2(b-a)(d-c)',
+      '= 2 \\cdot (# - #) \\cdot (# - #)',
+      (v) => 2 * (v[1]! - v[0]!) * (v[3]! - v[2]!),
+      2,
+    ],
+    [
+      'Pelo teorema de Green com F = (−y/#, x/#), calcule a área da região limitada pela circunferência de raio #. (duas casas decimais)',
+      'A = \\pi r^2',
+      'A = \\pi \\cdot #^2',
+      (v) => PI * v[v.length - 1]! ** 2,
+      2,
+    ],
+  ],
+
+  'numeros-decimais': [
+    [
+      'Escreva o número decimal # como fração irredutível.',
+      'd = \\frac{N}{10^{n}}',
+      '# = \\frac{#}{10^n}',
+      (_v, texto) =>
+        geratrizDoDecimal((/decimal ([0-9.,]+)/.exec(texto)?.[1] ?? '0').replace('.', ',')),
+    ],
+    [
+      'Escreva # como fração irredutível.',
+      'd = \\frac{N}{10^{n}}',
+      '# = \\frac{#}{10^n}',
+      (_v, texto) =>
+        geratrizDoDecimal((/Escreva ([0-9.,]+) como/.exec(texto)?.[1] ?? '0').replace('.', ',')),
+    ],
+    [
+      'Um número tem parte inteira zero e o algarismo # se repete infinitamente depois da vírgula. Qual é a fração geratriz, na forma irredutível?',
+      '0{,}\\overline{d} = \\frac{d}{9}',
+      '\\frac{#}{9}',
+      (v) => fracao(v[0]!, 9),
+    ],
+    [
+      'Num número de parte inteira zero, o par de algarismos # se repete infinitamente depois da vírgula. Escreva a fração irredutível.',
+      '0{,}\\overline{pp} = \\frac{pp}{99}',
+      '\\frac{#}{99}',
+      (v) => fracao(v[0]!, 99),
+    ],
+    [
+      'Um número tem parte inteira zero, o algarismo # logo depois da vírgula e, em seguida, o algarismo # repetindo-se para sempre. Escreva a fração irredutível.',
+      '0{,}a\\overline{d} = \\frac{10a + d - a}{90}',
+      '\\frac{# \\cdot 10 + # - #}{90}',
+      (v) => fracao(v[0]! * 10 + v[1]! - v[0]!, 90),
+    ],
+    [
+      'Encontre a fração geratriz da dízima periódica #....',
+      '\text{geratriz: } 9 \text{ por algarismo que repete}',
+      '\text{geratriz da dízima}',
+      (_v, texto) => {
+        const valor = /dízima periódica ([0-9.,]+)/.exec(texto)?.[1] ?? '0';
+        return geratrizDoDecimal(valor);
+      },
+    ],
+    [
+      'Encontre a fração geratriz da dízima periódica #...',
+      '\text{geratriz: } 9 \text{ por algarismo que repete}',
+      '\text{geratriz da dízima}',
+      (_v, texto) => {
+        const valor = /dízima periódica ([0-9.,]+)/.exec(texto)?.[1] ?? '0';
+        return geratrizDoDecimal(valor);
+      },
+    ],
+    [
+      'Encontre a fração geratriz da dízima periódica composta #....',
+      '\text{geratriz: parte que repete sobre } 9, \text{ deslocada}',
+      '\text{geratriz da dízima composta}',
+      (_v, texto) => {
+        const valor = /dízima periódica composta ([0-9.,]+)/.exec(texto)?.[1] ?? '0';
+        return geratrizDoDecimal(valor);
+      },
+    ],
+    [
+      'Encontre a fração geratriz da dízima periódica #..., com repetição.',
+      '\\frac{N}{99}',
+      '\\frac{N}{99}',
+      (_v, texto) => {
+        const valor = /dízima (?:periódica|periódica composta) ([0-9.,]+)/.exec(texto)?.[1] ?? '0';
+        return geratrizDoDecimal(valor);
+      },
+    ],
+  ],
+};
