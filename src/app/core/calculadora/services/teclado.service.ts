@@ -22,6 +22,14 @@ import { DestroyRef, Injectable, computed, inject, signal } from '@angular/core'
  * Somar `offsetTop` cobre o terceiro caso: quando o Safari rola a página para o
  * campo não ficar escondido, a área visível se desloca, e sem essa parcela a
  * faixa apareceria DENTRO do teclado.
+ *
+ * ## A medida NÃO decide se a faixa existe
+ *
+ * Isso está escrito com todas as letras porque já falhou uma vez: a primeira
+ * versão exigia medida maior que 80 px para mostrar a faixa, e num WebView que
+ * encolhe junto com o teclado a medida é ZERO — a tecla do separador
+ * desapareceu da tela. Quem decide mostrar é o campo em foco; a altura só diz
+ * ONDE a faixa fica, e sem medida o rodapé já é o lugar certo.
  */
 @Injectable({ providedIn: 'root' })
 export class TecladoService {

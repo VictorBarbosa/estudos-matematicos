@@ -11,6 +11,7 @@
     [class.sem-posicao]="local() === null"
     (keydown)="aoDigitar($event)"
     [class.com-barra]="comBarra()"
+    (pointerdown)="protegerFocoDoCampo($event)"
   >
     <!-- A barra é a alça: é por ela que a janela se arrasta. -->
     <header
@@ -97,6 +98,24 @@
               <span class="numero">{{ conta().mdc }}</span>
             </p>
           </div>
+
+          <!-- A fração simplificada é RESULTADO, e resultado fica no visor —
+               junto do MMC e do MDC, onde o olho já está. Embaixo, depois da
+               tabela, ela era a última coisa da tela, e a mais procurada. -->
+          @if (fracao(); as fracao) {
+            <div class="fracao-no-visor">
+              <span class="nome">{{ i18n.t('calculadora.simplificandoCurto') }}</span>
+              <span class="fracao">
+                <span class="numerador">{{ fracao.antes[0] }}</span>
+                <span class="denominador">{{ fracao.antes[1] }}</span>
+              </span>
+              <span class="sinal">=</span>
+              <span class="fracao resultado">
+                <span class="numerador">{{ fracao.depois[0] }}</span>
+                <span class="denominador">{{ fracao.depois[1] }}</span>
+              </span>
+            </div>
+          }
         } @else {
           <p class="valor"><span>—</span></p>
         }
@@ -119,16 +138,21 @@
       <div class="inteiros">
         <label class="campo">
           <span class="rotulo">{{ i18n.t('calculadora.numeros') }}</span>
+          <!-- `inputmode="numeric"` de propósito: o teclado do aparelho até
+               oferece uma tecla de separador com `decimal`, mas ela é a do
+               separador DECIMAL da língua do aparelho — sem cor, e como `.`
+               num aparelho em inglês, o que se lê como decimal. O separador é
+               o nosso: a barra `|` da faixa abaixo, colorida. -->
           <input
             type="text"
             inputmode="numeric"
             autocomplete="off"
             spellcheck="false"
-            placeholder="12, 18, 24"
+            placeholder="12 | 18 | 24"
             [value]="numeros()"
             (input)="definirNumeros($any($event.target).value)"
             (focus)="focar('numeros', $any($event.target))"
-            (blur)="focar(null)"
+            (blur)="perderFoco('numeros', $any($event.target))"
           />
         </label>
 
@@ -179,34 +203,19 @@
             }
           </div>
 
-          <!-- E a razão de as duas contas andarem juntas: dividido pelo MDC,
-               o par vira a fração irredutível. Com dois números a resposta é
-               uma fração, e fração se lê EMPILHADA — numerador em cima,
-               denominador embaixo. Com três ou mais não há fração: mostra-se
-               cada número dividido pelo MDC. -->
-          <div class="simplificacao">
-            <p class="rotulo">{{ i18n.t('calculadora.simplificando') }}</p>
-
-            @if (fracao(); as fracao) {
-              <p class="fracao-simplificada">
-                <span class="fracao">
-                  <span class="numerador">{{ fracao.antes[0] }}</span>
-                  <span class="denominador">{{ fracao.antes[1] }}</span>
-                </span>
-                <span class="sinal">=</span>
-                <span class="fracao resultado">
-                  <span class="numerador">{{ fracao.depois[0] }}</span>
-                  <span class="denominador">{{ fracao.depois[1] }}</span>
-                </span>
-              </p>
-            } @else {
+          <!-- Com três números ou mais não há fração a mostrar — só o MDC
+               aplicado a cada um. A fração de DOIS números já está no visor,
+               porque ela é resultado, e não passo. -->
+          @if (fracao() === null) {
+            <div class="simplificacao">
+              <p class="rotulo">{{ i18n.t('calculadora.simplificando') }}</p>
               <ul>
                 @for (linha of conta().simplificacao; track $index) {
                   <li>{{ linha.original }} ÷ {{ linha.divisor }} = {{ linha.resultado }}</li>
                 }
               </ul>
-            }
-          </div>
+            </div>
+          }
         }
       </div>
     } @else if (emFatores()) {
@@ -228,7 +237,7 @@
               [value]="soma()"
               (input)="definirSoma($any($event.target).value)"
               (focus)="focar('soma', $any($event.target))"
-              (blur)="focar(null)"
+              (blur)="perderFoco('soma', $any($event.target))"
             />
           </label>
           <label class="campo">
@@ -242,7 +251,7 @@
               [value]="produto()"
               (input)="definirProduto($any($event.target).value)"
               (focus)="focar('produto', $any($event.target))"
-              (blur)="focar(null)"
+              (blur)="perderFoco('produto', $any($event.target))"
             />
           </label>
         </div>
@@ -344,10 +353,12 @@
   <!--
     A faixa de teclas, logo acima do teclado do sistema.
 
-    O teclado numérico do aparelho não tem vírgula — e sem vírgula não há como
-    escrever «12, 18» em MMC e MDC. O teclado do sistema não aceita botão novo;
-    o que dá para fazer é esta faixa, colada no topo dele, onde o polegar já
-    está.
+    Duas razões para ela existir. A primeira é o que o teclado do aparelho não
+    tem: o `±` dos produtos e das somas negativas. A segunda é o separador dos
+    números — o teclado até oferece uma tecla com `inputmode="decimal"`, mas ela
+    é a do separador decimal da língua do aparelho: sem cor, e como `.` num
+    aparelho em inglês. A barra `|` daqui é colorida, e barra não é decimal em
+    língua nenhuma.
 
     `pointerdown` barrado em cada tecla: sem isso o toque tira o foco do campo,
     o teclado fecha, e a faixa desaparece embaixo do dedo.
@@ -363,13 +374,23 @@
         @case ('numeros') {
           <button
             type="button"
-            class="tecla-da-barra"
+            class="tecla-da-barra separador"
             tabindex="-1"
-            [attr.aria-label]="i18n.t('calculadora.virgula')"
+            [attr.aria-label]="i18n.t('calculadora.separarNumeros')"
             (pointerdown)="$event.preventDefault()"
             (click)="separarNoFoco()"
           >
-            ,
+            |
+          </button>
+          <button
+            type="button"
+            class="tecla-da-barra limpar"
+            tabindex="-1"
+            [attr.aria-label]="i18n.t('calculadora.limparNumeros')"
+            (pointerdown)="$event.preventDefault()"
+            (click)="limparNoFoco()"
+          >
+            C
           </button>
         }
         @default {

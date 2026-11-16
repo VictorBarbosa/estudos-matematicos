@@ -41,6 +41,7 @@
     "fechar": "Fechar a calculadora",
     "limite": "Use números até 1 000 000 000.",
     "limiteFatores": "Use números até 1 000 000.",
+    "limparNumeros": "limpar os números",
     "maisPares": "… e outros pares",
     "mdc": "MDC",
     "mmc": "MMC",
@@ -49,13 +50,13 @@
     "montagem": "{operacao} = {montagem}",
     "naoCalcula": "Não dá para calcular isso.",
     "naoInteiro": "\"{parte}\" não é um número inteiro.",
-    "numeros": "Números, separados por vírgula",
+    "numeros": "Números, um a um",
     "par": "Par",
     "parEncontrado": "{a} e {b}",
     "paresTentados": "Pares com esse produto, e o que cada um soma",
     "passaDoExato": "O resultado passa do que dá para calcular exato.",
     "pedidoFatores": "Escreva o produto e a soma.",
-    "pedidoInteiros": "Dois ou mais inteiros, separados por vírgula.",
+    "pedidoInteiros": "Dois ou mais inteiros, separados por barra.",
     "produto": "Produto",
     "raizes": "Raízes: x = {a} ou x = {b}",
     "semComum": "Nenhum divisor comum: MDC = 1.",
@@ -63,11 +64,12 @@
     "semParInteiroLongo": "Nenhum par de inteiros tem esse produto e essa soma; os dois números acima são o par exato.",
     "semParReal": "Não existem dois números reais com esse produto e essa soma.",
     "semZero": "O zero fica de fora: use inteiros maiores que zero.",
+    "separarNumeros": "separar os números",
     "simplificando": "Simplificando pelo MDC",
+    "simplificandoCurto": "Simplificando",
     "soma": "Soma",
     "teclasDoCampo": "Teclas do campo",
-    "trocarSinal": "trocar o sinal",
-    "virgula": "vírgula"
+    "trocarSinal": "trocar o sinal"
   },
   "campo": {
     "simbolos": "Símbolos para a resposta"

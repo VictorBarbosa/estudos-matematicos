@@ -425,8 +425,20 @@ const CONTA_VAZIA: ContaDeInteiros = {
   erro: null,
 };
 
-/** Vírgula, ponto e vírgula ou espaço separam os números — o que vier à mão. */
-const SEPARADORES = /[,;\s]+/;
+/**
+ * O que separa um número do outro.
+ *
+ * A **barra vertical** é o separador que a calculadora escreve, e é o único que
+ * não se confunde com nada: vírgula e ponto são separadores DECIMAIS, e num
+ * campo de inteiros `12,18` fica ambíguo entre «doze e dezoito» e «doze
+ * vírgula dezoito». A barra não tem esse problema.
+ *
+ * Vírgula, ponto e ponto e vírgula continuam aceitos na LEITURA: quem cola
+ * `12, 18` de outro lugar, ou digita no teclado do aparelho, não pode receber
+ * erro por isso. A escrita é que é normalizada para barra, em
+ * {@link normalizarSeparadores}.
+ */
+const SEPARADORES = /[,.;|\s]+/;
 
 /**
  * O maior número aceito na aba.
@@ -836,4 +848,34 @@ export function fracaoSimplificada(conta: ContaDeInteiros): FracaoSimplificada |
   const [a, b] = conta.numeros as [number, number];
 
   return { antes: [a, b], depois: [a / conta.mdc, b / conta.mdc] };
+}
+
+/** O separador que a calculadora escreve no campo. */
+export const SEPARADOR = '|';
+
+/**
+ * Troca vírgula, ponto e ponto e vírgula pela barra vertical.
+ *
+ * Aplicada a cada tecla digitada, para o campo mostrar sempre a mesma coisa —
+ * quem digita `12,18` no teclado do aparelho vê `12 | 18` aparecer. Sem isto, a
+ * mesma lista apareceria de três jeitos conforme o aparelho, e o ponto ainda
+ * seria lido como decimal.
+ *
+ * Três cuidados, e cada um é uma frase que já existiu na tela:
+ *
+ * - a barra ganha um espaço de cada lado, porque `12|18` é apertado demais para
+ *   ler num telefone;
+ * - a barra do FIM fica, e sem o espaço depois: é o que permite continuar
+ *   digitando o próximo número sem a tecla apagar o separador;
+ * - a barra do COMEÇO some, porque uma lista não começa com separador.
+ */
+export function normalizarSeparadores(texto: string): string {
+  const comBarras = texto.replace(/[,.;|]+/g, SEPARADOR);
+  const espacada = comBarras.replace(/\s*\|\s*/g, ` ${SEPARADOR} `);
+
+  // Uma barra no fim vira ` |` — sem o espaço de depois, para o cursor ficar
+  // colado nela e o próximo dígito entrar no lugar certo.
+  const semEspacoNoFim = espacada.replace(new RegExp(` ${'\\|'} $`), ` ${SEPARADOR}`);
+
+  return semEspacoNoFim.replace(/^\s*\|\s*/, '').replace(/\s{2,}/g, ' ');
 }

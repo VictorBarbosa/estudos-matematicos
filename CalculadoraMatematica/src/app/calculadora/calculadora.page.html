@@ -7,8 +7,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <section class="calculadora" [class.com-campos]="!emTeclado()" [class.com-barra]="comBarra()">
+<ion-content [fullscreen]="true" [class.com-barra]="comBarra()">
+  <!-- O `pointerdown` aqui é o que mantém o teclado aberto: tocar na tabela, no
+       visor ou no fundo não tira o foco do campo, e a faixa das teclas fica no
+       lugar enquanto se digita. Ver `protegerFocoDoCampo`. -->
+  <section
+    class="calculadora"
+    [class.com-campos]="!emTeclado()"
+    [class.com-barra]="comBarra()"
+    (pointerdown)="protegerFocoDoCampo($event)"
+  >
     <!--
       Duas formas de resultado, porque são duas coisas diferentes: uma conta
       devolve UM número, e a aba de MMC e MDC devolve DOIS. Escrever «72 · 6»
@@ -28,6 +36,24 @@
           <span class="numero" [style.--digitos]="digitosDe(conta().mdc)">{{ conta().mdc }}</span>
         </p>
       </div>
+
+      <!-- A fração simplificada é RESULTADO, e resultado fica no visor — junto
+           do MMC e do MDC, onde o olho já está. Embaixo, depois da tabela, ela
+           era a última coisa da tela, e a mais procurada. -->
+      @if (fracao(); as fracao) {
+      <div class="fracao-no-visor">
+        <span class="nome">Simplificando</span>
+        <span class="fracao">
+          <span class="numerador">{{ fracao.antes[0] }}</span>
+          <span class="denominador">{{ fracao.antes[1] }}</span>
+        </span>
+        <span class="sinal">=</span>
+        <span class="fracao resultado">
+          <span class="numerador">{{ fracao.depois[0] }}</span>
+          <span class="denominador">{{ fracao.depois[1] }}</span>
+        </span>
+      </div>
+      }
       } @else {
       <p class="valor"><span>—</span></p>
       }
@@ -43,36 +69,26 @@
     }
 
     @if (emInteiros()) {
-    <div class="campos">
+    <div class="campos" #campos>
       <label class="campo">
-        <span class="rotulo">Números, separados por vírgula</span>
-        <!-- O teclado numérico do iPhone não traz vírgula: ela vem ao lado. -->
-        <div class="com-tecla">
-          <input
-            #entradaNumeros
-            type="text"
-            inputmode="numeric"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder="12, 18, 24"
-            [value]="numeros()"
-            (input)="definirNumeros($any($event.target).value)"
-            (focus)="focar('numeros', entradaNumeros)"
-            (blur)="focar(null)"
-          />
-          <!-- `pointerdown` barrado: sem isso o toque tira o foco do campo
-                 e o iPhone fecha o teclado a cada vírgula. -->
-          <button
-            type="button"
-            class="tecla-do-campo"
-            tabindex="-1"
-            aria-label="separar números"
-            (pointerdown)="$event.preventDefault()"
-            (click)="acrescentarSeparador(entradaNumeros)"
-          >
-            ,
-          </button>
-        </div>
+        <span class="rotulo">Números, um a um</span>
+        <!-- `inputmode="numeric"`: o teclado do iPhone até tem uma tecla de
+             separador com `decimal`, mas ela é a do separador decimal da língua
+             do aparelho — vem sem cor, e como `.` num aparelho em inglês, o que
+             se lê como decimal. A tecla do sistema não se reestiliza, então o
+             separador é o nosso: a barra `|` da faixa abaixo, colorida. -->
+        <input
+          #entradaNumeros
+          type="text"
+          inputmode="numeric"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="12 | 18 | 24"
+          [value]="numeros()"
+          (input)="definirNumeros($any($event.target).value)"
+          (focus)="focar('numeros', entradaNumeros)"
+          (blur)="perderFoco('numeros', entradaNumeros)"
+        />
       </label>
 
       <!-- A divisão simultânea: o caminho até a resposta, e não só ela. -->
@@ -112,37 +128,23 @@
         }
       </div>
 
-      <!-- E a razão de as duas contas andarem juntas: dividido pelo MDC, o par
-           vira a fração irredutível. Com dois números a resposta é uma fração,
-           e fração se lê EMPILHADA — numerador em cima, denominador embaixo.
-           Com três ou mais não há fração: mostra-se cada número dividido. -->
+      <!-- Com três números ou mais não há fração a mostrar — só o MDC aplicado
+           a cada um. A fração de DOIS números já está no visor, porque ela é
+           resultado, e não passo. -->
+      @if (fracao() === null) {
       <div class="simplificacao">
         <p class="rotulo">Simplificando pelo MDC</p>
-
-        @if (fracao(); as fracao) {
-        <p class="fracao-simplificada">
-          <span class="fracao">
-            <span class="numerador">{{ fracao.antes[0] }}</span>
-            <span class="denominador">{{ fracao.antes[1] }}</span>
-          </span>
-          <span class="sinal">=</span>
-          <span class="fracao resultado">
-            <span class="numerador">{{ fracao.depois[0] }}</span>
-            <span class="denominador">{{ fracao.depois[1] }}</span>
-          </span>
-        </p>
-        } @else {
         <ul>
           @for (linha of conta().simplificacao; track $index) {
           <li>{{ linha.original }} ÷ {{ linha.divisor }} = {{ linha.resultado }}</li>
           }
         </ul>
-        }
       </div>
+      }
       }
     </div>
     } @else if (emFatores()) {
-    <div class="campos">
+    <div class="campos" #campos>
       <p class="rotulo explicacao">
         Dois números cuja soma e cujo produto são estes — o passo que fatora x² + bx + c, na ordem em que a expressão se
         lê. As raízes são os opostos deles.
@@ -165,7 +167,7 @@
               [value]="soma()"
               (input)="definirSoma($any($event.target).value)"
               (focus)="focar('soma', entradaSoma)"
-              (blur)="focar(null)"
+              (blur)="perderFoco('soma', entradaSoma)"
             />
             <button
               type="button"
@@ -193,7 +195,7 @@
               [value]="produto()"
               (input)="definirProduto($any($event.target).value)"
               (focus)="focar('produto', entradaProduto)"
-              (blur)="focar(null)"
+              (blur)="perderFoco('produto', entradaProduto)"
             />
             <button
               type="button"
@@ -256,7 +258,7 @@
       }
     </div>
     } @else if (emDecimal()) {
-    <div class="campos">
+    <div class="campos" #campos>
       <p class="rotulo explicacao">
         Escreva o decimal e veja a fração exata. Para dízima periódica, ponha o período entre parênteses:
         <strong>0,(3)</strong> é 0,333… e <strong>0,1(6)</strong> é 0,1666…
@@ -268,14 +270,14 @@
           <input
             #entradaDecimal
             type="text"
-            inputmode="numeric"
+            inputmode="decimal"
             autocomplete="off"
             spellcheck="false"
             placeholder="0,1(6)"
             [value]="decimal()"
             (input)="definirDecimal($any($event.target).value)"
             (focus)="focar('decimal', entradaDecimal)"
-            (blur)="focar(null)"
+            (blur)="perderFoco('decimal', entradaDecimal)"
           />
           <button
             type="button"
@@ -391,13 +393,23 @@
       @case ('numeros') {
         <button
           type="button"
-          class="tecla-da-barra"
+          class="tecla-da-barra separador"
           tabindex="-1"
           aria-label="separar números"
           (pointerdown)="$event.preventDefault()"
-          (click)="separarDoFoco()"
+          (click)="separarNoFoco()"
         >
-          ,
+          |
+        </button>
+        <button
+          type="button"
+          class="tecla-da-barra limpar"
+          tabindex="-1"
+          aria-label="limpar os números"
+          (pointerdown)="$event.preventDefault()"
+          (click)="limparNoFoco()"
+        >
+          C
         </button>
       }
       @case ('soma') {
@@ -425,16 +437,6 @@
         </button>
       }
       @case ('decimal') {
-        <button
-          type="button"
-          class="tecla-da-barra"
-          tabindex="-1"
-          aria-label="vírgula"
-          (pointerdown)="$event.preventDefault()"
-          (click)="textoNoDecimal(',')"
-        >
-          ,
-        </button>
         <button
           type="button"
           class="tecla-da-barra"

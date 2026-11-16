@@ -321,15 +321,40 @@ $tecla: 3.25rem;
   }
 }
 
-.fracao-simplificada {
+/*
+ * A fração no visor, junto do MMC e do MDC.
+ *
+ * Ela é RESULTADO, e não passo: com dois números, a simplificação é a resposta
+ * tanto quanto o MMC. Fica alinhada à direita como as outras contas, com o
+ * rótulo em corpo pequeno à esquerda para não competir com os números.
+ */
+.fracao-no-visor {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  margin: 0.2rem 0 0;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.1rem;
   color: #fff;
-  font-size: 1.6rem;
-  line-height: 1.1;
   font-variant-numeric: tabular-nums;
+
+  .nome {
+    color: #a5a5a7;
+    font-size: 0.8rem;
+  }
+
+  .fracao {
+    font-size: 1.35rem;
+    line-height: 1.05;
+
+    &.resultado {
+      font-size: 1.6rem;
+    }
+  }
+
+  .sinal {
+    color: #a5a5a7;
+    font-size: 1rem;
+  }
 }
 
 .fracao {
@@ -540,6 +565,37 @@ $tecla: 3.25rem;
 
   &:active {
     background: #636366;
+  }
+
+  /*
+   * O separador, em cor de operador.
+   *
+   * Ele é a tecla mais usada desta faixa — a lista de números cresce uma barra
+   * por vez —, e a cor é o que o distingue das outras e do teclado cinza
+   * embaixo. Texto escuro porque o laranja é claro: branco sobre laranja some.
+   */
+  &.separador {
+    background: $operador;
+    color: #1c1c1e;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    &:active {
+      background: #ffb340;
+    }
+  }
+
+  /*
+   * O `C` de limpar, ao lado da barra.
+   *
+   * Cinza, e não laranja: a barra é a tecla que se aperta a cada número, e o
+   * `C` é a que se aperta quando se erra a lista inteira. Cores iguais fariam
+   * o dedo procurar a errada.
+   */
+  &.limpar {
+    color: #ff9f0a;
+    font-weight: 600;
+    font-size: 1.15rem;
   }
 }
 

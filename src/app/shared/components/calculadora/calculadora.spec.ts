@@ -1,7 +1,8 @@
-import { provideZonelessChangeDetection } from '@angular/core';
+import { provideZonelessChangeDetection, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CalculadoraService } from '@core/calculadora/services/calculadora.service';
 import { TecladoService } from '@core/calculadora/services/teclado.service';
+import { DispositivoService } from '@core/dispositivo/services/dispositivo.service';
 import { Calculadora } from '@shared/components/calculadora/calculadora';
 
 describe('Calculadora', () => {
@@ -554,33 +555,60 @@ describe('Calculadora: soma e produto', () => {
 /**
  * A faixa de teclas acima do teclado do sistema.
  *
- * O teclado numérico do aparelho não tem vírgula, e sem vírgula não há como
- * escrever «12, 18» em MMC e MDC — no celular, a conta era impossível. Aqui o
- * teclado é fingido (`TecladoService` devolve altura 300) e o que se prova é o
- * resto: a faixa aparece com o campo em foco, a tecla escreve no campo certo, e
- * ela não abre a lista com vírgula nem repete a que já está lá.
+ * Ela existe para o que o teclado do aparelho não tem. O separador saiu dela
+ * quando o campo dos números passou a abrir com `inputmode="decimal"`: a tecla
+ * da vírgula está no próprio teclado, onde a mão já está — e é por isso que,
+ * em MMC e MDC, não há faixa nenhuma.
  */
 describe('Calculadora: faixa de teclas do teclado', () => {
   let fixture: ComponentFixture<Calculadora>;
   let servico: CalculadoraService;
 
-  const tecladoAberto = { altura: () => 300, aberto: () => true };
+  // A altura é um signal para o teste poder levá-la a zero — é o caso do
+  // WebView que encolhe junto com o teclado.
+  const altura = signal(300);
+  const tecladoFingido = {
+    altura: altura.asReadonly(),
+    aberto: () => altura() >= 80,
+  };
 
-  const barra = (): HTMLElement | null =>
-    fixture.nativeElement.querySelector('.barra-do-teclado');
+  /**
+   * O aparelho, fingido.
+   *
+   * No jsdom o `DispositivoService` responde «computador», e no computador o
+   * refoco é desligado de propósito — sem esta troca, o teste mediria o
+   * caminho errado.
+   */
+  const tipo = signal<'celular' | 'tablet' | 'computador'>('celular');
+  const dispositivoFingido = { tipo: tipo.asReadonly() };
 
-  const campoDeNumeros = (): HTMLInputElement =>
-    fixture.nativeElement.querySelector('.campo input') as HTMLInputElement;
+  const barra = (): HTMLElement | null => fixture.nativeElement.querySelector('.barra-do-teclado');
 
-  async function escribir(valor: string): Promise<void> {
-    const campo = campoDeNumeros();
+  const teclasDaBarra = (): readonly string[] =>
+    [...(barra()?.querySelectorAll('.tecla-da-barra') ?? [])].map((t) =>
+      (t as HTMLElement).textContent!.trim(),
+    );
+
+  const campos = (): readonly HTMLInputElement[] => [
+    ...fixture.nativeElement.querySelectorAll('.campo input'),
+  ];
+
+  async function escrever(indice: number, valor: string): Promise<void> {
+    const campo = campos()[indice]!;
     campo.value = valor;
     campo.dispatchEvent(new Event('input'));
     await fixture.whenStable();
   }
 
-  async function focar(): Promise<void> {
-    campoDeNumeros().dispatchEvent(new Event('focus'));
+  /**
+   * Foca de VERDADE, e não com um evento sintético.
+   *
+   * `dispatchEvent(new Event('focus'))` aciona o handler do Angular sem mexer
+   * no `document.activeElement` — e aí um `blur()` depois não dispara nada, e o
+   * teste mede o vazio.
+   */
+  async function focar(indice: number): Promise<void> {
+    campos()[indice]!.focus();
     await fixture.whenStable();
   }
 
@@ -590,67 +618,318 @@ describe('Calculadora: faixa de teclas do teclado', () => {
   }
 
   beforeEach(async () => {
+    // Altura zero é o caso do WebView que encolhe com o teclado — e é o que
+    // prova que a faixa não depende de medida para existir.
+    altura.set(0);
     localStorage.clear();
     await TestBed.configureTestingModule({
       imports: [Calculadora],
       providers: [
         provideZonelessChangeDetection(),
-        { provide: TecladoService, useValue: tecladoAberto },
+        { provide: TecladoService, useValue: tecladoFingido },
+        { provide: DispositivoService, useValue: dispositivoFingido },
       ],
     }).compileComponents();
 
+    tipo.set('celular');
     servico = TestBed.inject(CalculadoraService);
     servico.alternar();
-    servico.definirModo('mmc-mdc');
     fixture = TestBed.createComponent(Calculadora);
     await fixture.whenStable();
   });
 
-  it('sem foco não há faixa: não há campo a servir', () => {
+  it('o campo dos números abre o teclado numérico, e o separador vem da faixa', async () => {
+    // `numeric` de propósito: a tecla de separador que o `decimal` oferece é a
+    // do separador decimal da língua do aparelho — sem cor, e como `.` num
+    // aparelho em inglês. O separador é o nosso, na faixa.
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+
+    expect(campos()[0]!.getAttribute('inputmode')).toBe('numeric');
+  });
+
+  it('em MMC e MDC a faixa traz a barra, que é o separador da calculadora', async () => {
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+    await focar(0);
+
+    // A barra separa, e o `C` recomeça a lista — o par de teclas do campo.
+    expect(teclasDaBarra()).toEqual(['|', 'C']);
+    expect(barra()!.querySelector('.separador')).not.toBeNull();
+  });
+
+  it('perder o foco devolve o foco ao campo, no celular — o teclado não fecha', async () => {
+    /*
+     * Nenhum `preventDefault` segura o teclado do sistema: o que funciona é
+     * DEVOLVER o foco no quadro seguinte.
+     */
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+    await escrever(0, '12 | 18');
+    await focar(0);
+
+    campos()[0]!.blur();
+    await new Promise<void>((pronto) => setTimeout(() => pronto(), 10));
+    await fixture.whenStable();
+
+    expect(document.activeElement).toBe(campos()[0]);
+    expect(barra()).not.toBeNull();
+  });
+
+  it('no computador o foco não é devolvido — prenderia o cursor na calculadora', async () => {
+    // Sem esta guarda, o aluno não conseguiria clicar no exercício ao lado.
+    tipo.set('computador');
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+    await focar(0);
+
+    campos()[0]!.blur();
+    await new Promise<void>((pronto) => setTimeout(() => pronto(), 10));
+    await fixture.whenStable();
+
+    expect(document.activeElement).not.toBe(campos()[0]);
     expect(barra()).toBeNull();
   });
 
-  it('com o campo em foco, a vírgula aparece na faixa', async () => {
-    await focar();
+  it('tocar fora do campo não fecha o teclado', async () => {
+    /*
+     * No celular, tocar na tabela tirava o foco do campo, o teclado recolhia e
+     * a faixa das teclas sumia junto — no meio da digitação.
+     */
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+    await escrever(0, '12 | 18');
+    await focar(0);
 
+    const alvo = fixture.nativeElement.querySelector('.visor') as HTMLElement;
+    const toque = new PointerEvent('pointerdown', { bubbles: true, cancelable: true });
+    alvo.dispatchEvent(toque);
+
+    expect(toque.defaultPrevented).toBe(true);
+    // E o campo continua em foco: a faixa das teclas não some.
     expect(barra()).not.toBeNull();
-    expect(barra()!.textContent!.trim()).toBe(',');
+  });
+
+  it('tocar no próprio campo não é barrado — é assim que se troca de campo', async () => {
+    servico.definirModo('soma-produto');
+    await fixture.whenStable();
+    await focar(0);
+
+    const toque = new PointerEvent('pointerdown', { bubbles: true, cancelable: true });
+    campos()[1]!.dispatchEvent(toque);
+
+    expect(toque.defaultPrevented).toBe(false);
+  });
+
+  it('tocar na barra do topo não é barrado — é a alça de arrastar', async () => {
+    // `preventDefault` no `pointerdown` cancela a captura implícita do ponteiro,
+    // e a janela deixaria de se arrastar no toque.
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+    await focar(0);
+
+    const alca = fixture.nativeElement.querySelector('header.barra') as HTMLElement;
+    const toque = new PointerEvent('pointerdown', { bubbles: true, cancelable: true });
+    alca.dispatchEvent(toque);
+
+    expect(toque.defaultPrevented).toBe(false);
+  });
+
+  it('sem campo em foco, o toque não é barrado', async () => {
+    // No teclado da calculadora não há campo: barrar ali apagaria o estado de
+    // tecla apertada.
+    await fixture.whenStable();
+
+    const tecla = fixture.nativeElement.querySelector('.teclado button') as HTMLElement;
+    const toque = new PointerEvent('pointerdown', { bubbles: true, cancelable: true });
+    tecla.dispatchEvent(toque);
+
+    expect(toque.defaultPrevented).toBe(false);
+  });
+
+  it('o C da faixa limpa o campo em foco', async () => {
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+    await escrever(0, '12 | 18 | 24');
+    await focar(0);
+
+    (barra()!.querySelector('.limpar') as HTMLButtonElement).click();
+    await fixture.whenStable();
+
+    // Sem o `C`, apagar cinco números exigiria cinco toques no apagar do
+    // teclado — e a lista do MMC cresce rápido.
+    expect(campos()[0]!.value).toBe('');
+  });
+
+  it('a barra da faixa separa os números do campo em foco', async () => {
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+    await escrever(0, '12');
+    await focar(0);
+
+    (barra()!.querySelector('.separador') as HTMLButtonElement).click();
+    await fixture.whenStable();
+
+    // Sem o espaço final: a normalização da escrita o tira, para o cursor ficar
+    // colado na barra e o próximo dígito entrar no lugar certo.
+    expect(campos()[0]!.value).toBe('12 |');
+  });
+
+  it('a barra não se repete nem abre a lista', async () => {
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+    await focar(0);
+
+    // Campo vazio: nada a separar.
+    (barra()!.querySelector('.separador') as HTMLButtonElement).click();
+    await fixture.whenStable();
+    expect(campos()[0]!.value).toBe('');
+
+    await escrever(0, '12 |');
+    await focar(0);
+    (barra()!.querySelector('.separador') as HTMLButtonElement).click();
+    await fixture.whenStable();
+    expect(campos()[0]!.value).toBe('12 |');
+  });
+
+  it('o que é digitado vira barra: 12,18 aparece como 12 | 18', async () => {
+    // Sem isto, o mesmo campo mostraria vírgula, ponto ou barra conforme o
+    // aparelho, e o ponto ainda seria lido como decimal.
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+
+    await escrever(0, '12,18');
+
+    expect(campos()[0]!.value).toBe('12 | 18');
+  });
+
+  it('aceita ponto e barra na leitura, e as duas contas saem certas', async () => {
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+
+    const resultado = (): readonly string[] =>
+      [...fixture.nativeElement.querySelectorAll('.conta-resultado')].map((c) =>
+        (c.querySelector('.numero') as HTMLElement).textContent!.trim(),
+      );
+
+    await escrever(0, '80.90');
+    expect(resultado()).toEqual(['720', '10']);
+
+    await escrever(0, '12|18');
+    expect(resultado()).toEqual(['36', '6']);
+  });
+
+  it('no Fatorar a faixa traz o sinal, que o teclado não tem', async () => {
+    servico.definirModo('soma-produto');
+    await fixture.whenStable();
+    await focar(0);
+
+    expect(teclasDaBarra()).toEqual(['±']);
+  });
+
+  it('quando a altura é medida, a faixa sobe até o teclado', async () => {
+    // No site e no Capacitor com `resize: none`, a altura vem do
+    // `visualViewport` (ou do plugin) e a faixa acompanha.
+    altura.set(300);
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+
+    await focar(0);
+
     expect(barra()!.style.bottom).toBe('300px');
   });
 
-  it('a tecla separa os números do campo em foco', async () => {
-    await escribir('12');
-    await focar();
+  it('a tecla da faixa troca o sinal do campo em foco', async () => {
+    servico.definirModo('soma-produto');
+    await fixture.whenStable();
+
+    await escrever(0, '8');
+    await focar(0);
     await tocar();
 
-    expect(campoDeNumeros().value).toBe('12, ');
+    expect(campos()[0]!.value).toBe('-8');
   });
 
-  it('não abre a lista com vírgula', async () => {
-    await focar();
-    await tocar();
+  it('sem foco não há faixa: não há campo a servir', async () => {
+    servico.definirModo('soma-produto');
+    await fixture.whenStable();
 
-    expect(campoDeNumeros().value).toBe('');
+    expect(barra()).toBeNull();
   });
 
-  it('não repete a vírgula que já está lá', async () => {
-    await escribir('12,');
-    await focar();
-    await tocar();
+  it('a faixa aparece mesmo com altura zero — foi o defeito que sumiu com a tecla', async () => {
+    /*
+     * Num WebView que encolhe junto com o teclado a medida é ZERO, e a
+     * primeira versão da faixa exigia altura maior que 80 px para aparecer: o
+     * separador desapareceu da tela. A faixa depende do campo em foco, e só; a
+     * altura diz onde ela fica.
+     */
+    expect(altura()).toBe(0);
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
 
-    expect(campoDeNumeros().value).toBe('12,');
+    await focar(0);
+
+    expect(barra()).not.toBeNull();
+    // Sem medida, o rodapé — que num WebView encolhido já é o topo do teclado.
+    expect(barra()!.style.bottom).toBe('0px');
   });
 
-  it('a conta continua funcionando depois da tecla', async () => {
-    await escribir('12');
-    await focar();
-    await tocar();
+  it('com a faixa na tela, as teclas ao lado do campo saem', async () => {
+    // Duas cópias da mesma tecla a um dedo de distância confundem; a da faixa
+    // ganha porque está onde o polegar já está.
+    servico.definirModo('soma-produto');
+    await fixture.whenStable();
+    await focar(0);
 
-    await escribir('12, 18');
+    expect(fixture.nativeElement.querySelector('.janela').classList).toContain('com-barra');
+  });
+
+  it('a fração simplificada fica no visor, junto do MMC e do MDC', async () => {
+    // Ela é RESULTADO, não passo: com dois números, a simplificação é a
+    // resposta tanto quanto o MMC. Embaixo da tabela era a última coisa da
+    // tela, e a mais procurada.
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+
+    await escrever(0, '12 | 18');
+
+    const noVisor = fixture.nativeElement.querySelector('.visor .fracao-no-visor');
+    expect(noVisor).not.toBeNull();
+
+    const fracoes = [...noVisor.querySelectorAll('.fracao')].map((fracao) => ({
+      numerador: (fracao.querySelector('.numerador') as HTMLElement).textContent!.trim(),
+      denominador: (fracao.querySelector('.denominador') as HTMLElement).textContent!.trim(),
+    }));
+    expect(fracoes).toEqual([
+      { numerador: '12', denominador: '18' },
+      { numerador: '2', denominador: '3' },
+    ]);
+  });
+
+  it('com três números não há fração no visor, e sim as linhas embaixo', async () => {
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+
+    await escrever(0, '12 | 18 | 24');
+
+    expect(fixture.nativeElement.querySelector('.fracao-no-visor')).toBeNull();
+
+    const linhas = [...fixture.nativeElement.querySelectorAll('.simplificacao li')].map((li) =>
+      (li as HTMLElement).textContent!.trim(),
+    );
+    expect(linhas).toEqual(['12 ÷ 6 = 2', '18 ÷ 6 = 3', '24 ÷ 6 = 4']);
+  });
+
+  it('a conta do MMC continua funcionando com a vírgula digitada', async () => {
+    servico.definirModo('mmc-mdc');
+    await fixture.whenStable();
+
+    await escrever(0, '12, 18');
+
     const resultado = [...fixture.nativeElement.querySelectorAll('.conta-resultado')].map((c) =>
       (c.querySelector('.numero') as HTMLElement).textContent!.trim(),
     );
-
     expect(resultado).toEqual(['36', '6']);
   });
 });

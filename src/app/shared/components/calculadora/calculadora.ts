@@ -8,6 +8,7 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
+import { DispositivoService } from '@core/dispositivo/services/dispositivo.service';
 import { I18nService } from '@core/i18n/services/i18n.service';
 import {
   ESTADO_INICIAL,
@@ -19,6 +20,7 @@ import {
   calcularInteiros,
   digitar,
   fracaoSimplificada,
+  normalizarSeparadores,
   inverso,
   limpar,
   porcentagem,
@@ -144,6 +146,7 @@ const FOLGA = 8;
 export class Calculadora {
   protected readonly calculadora = inject(CalculadoraService);
   protected readonly i18n = inject(I18nService);
+  private readonly dispositivo = inject(DispositivoService);
 
   private readonly painel = viewChild<ElementRef<HTMLElement>>('painel');
 
@@ -172,8 +175,15 @@ export class Calculadora {
    */
   protected readonly foco = signal<FocoDoCampo | null>(null);
 
-  /** Teclas na faixa: precisa de teclado aberto E de um campo em foco. */
-  protected readonly comBarra = computed(() => this.teclado.aberto() && this.foco() !== null);
+  /**
+   * A faixa de teclas aparece quando há um campo em foco — e só.
+   *
+   * Ela NÃO depende de medir o teclado: num WebView que encolhe junto com ele
+   * a medida é zero, e exigir medida foi o que fez o separador sumir da tela
+   * no aplicativo. A altura só diz ONDE a faixa fica; sem medida, o rodapé já
+   * é o topo do teclado.
+   */
+  protected readonly comBarra = computed(() => this.foco() !== null);
 
   /**
    * O MMC, o MDC e a simplificação do que está escrito.
@@ -261,6 +271,22 @@ export class Calculadora {
   protected readonly local = computed(() => this.canto() ?? this.calculadora.posicao());
 
   constructor() {
+    /*
+     * Ao SAIR de um modo de campo, o foco é solto.
+     *
+     * Sem isto, trocar para o teclado deixava a faixa das teclas na tela: ela
+     * aparece quando há campo em foco, e o foco ficava apontando para um campo
+     * que não existe mais.
+     */
+    effect(() => {
+      if (this.emCampos()) {
+        return;
+      }
+      const entrada = this.foco()?.entrada;
+      this.foco.set(null);
+      entrada?.blur();
+    });
+
     // Abrir leva o foco para a janela, que é o que faz o teclado físico valer.
     effect(() => {
       if (!this.calculadora.aberta()) {
@@ -304,11 +330,13 @@ export class Calculadora {
   }
 
   /**
-   * A vírgula da faixa: separa os números do campo em foco.
+   * A barra da faixa: separa os números do campo em foco.
    *
-   * Três recusas, as mesmas da tecla que existia ao lado do campo: não abre a
-   * lista com vírgula, não repete a que já está lá, e não deixa dois
-   * separadores seguidos virarem um número vazio.
+   * O teclado do aparelho até tem uma tecla de separador com
+   * `inputmode="decimal"`, mas ela é a do separador DECIMAL da língua do
+   * aparelho — vem sem cor, e como `.` num aparelho em inglês, o que se lê como
+   * decimal. A tecla do sistema não se reestiliza; esta fica ao lado dela,
+   * colorida e com uma barra, que não é decimal em língua nenhuma.
    */
   protected separarNoFoco(): void {
     const entrada = this.foco()?.entrada;
@@ -317,16 +345,129 @@ export class Calculadora {
     }
 
     const atual = entrada.value.trimEnd();
-    if (atual === '' || atual.endsWith(',') || atual.endsWith(';')) {
+    if (atual === '' || atual.endsWith('|')) {
       return;
     }
 
-    const novo = `${entrada.value}, `;
+    const novo = `${atual} | `;
     entrada.value = novo;
     entrada.dispatchEvent(new Event('input'));
 
     // O cursor volta para o fim, senão o próximo dígito entra no meio.
     entrada.setSelectionRange(novo.length, novo.length);
+    entrada.focus();
+  }
+
+  /**
+   * Impede que um toque FORA do campo feche o teclado.
+   *
+   * No celular, tocar fora de um campo tira o foco dele e o teclado recolhe — e
+   * com ele some a faixa das teclas. Quem digita «12 | 18 | 24» e quer conferir
+   * a decomposição toca na tabela, e perdia o teclado no meio da digitação.
+   *
+   * O `preventDefault` no `pointerdown` segura o foco onde está **sem impedir o
+   * `click`**: os botões continuam funcionando, e o navegador só deixa de mudar
+   * o foco. Rolar continua, porque a rolagem é do `touchmove`.
+   *
+   * Três saídas, e cada uma tem um motivo:
+   *
+   * - toque em `input` passa direto — é o que TROCA de campo no Fatorar, que
+   *   tem dois;
+   * - toque na BARRA do topo passa direto, porque é a alça: `preventDefault`
+   *   no `pointerdown` cancela a captura implícita do ponteiro, e a janela
+   *   deixaria de se arrastar no toque;
+   * - sem campo em foco, nada acontece — no teclado da calculadora (básica e
+   *   científica) não há campo, e barrar o `pointerdown` ali apagaria o estado
+   *   de tecla apertada.
+   */
+  protected protegerFocoDoCampo(evento: PointerEvent): void {
+    if (!this.emCampos()) {
+      return;
+    }
+
+    /*
+     * Sem campo em foco, o toque ABRE o teclado em vez de não fazer nada.
+     *
+     * O iOS só deixa o `focus()` abrir o teclado dentro de um gesto do usuário,
+     * e este `pointerdown` é o gesto. No computador não há teclado de tela para
+     * abrir, e o foco automático só atrapalharia — daí a guarda.
+     */
+    if (this.foco() === null) {
+      if (this.temTecladoDeTela()) {
+        this.entradaPrincipal()?.focus({ preventScroll: true });
+      }
+      return;
+    }
+
+    const alvo = evento.target as HTMLElement | null;
+    if (alvo === null || alvo.closest('input, textarea, .barra') !== null) {
+      return;
+    }
+
+    evento.preventDefault();
+  }
+
+  /**
+   * O campo perdeu o cursor — e o teclado de tela NÃO pode fechar junto.
+   *
+   * No celular e no tablet, tocar fora tira o foco e o sistema recolhe o
+   * teclado. Nenhum `preventDefault` segura isso: quem manda no teclado é o
+   * sistema. O que funciona é DEVOLVER o foco no quadro seguinte — o teclado
+   * nunca chega a fechar, e quem digita não perde a lista no meio.
+   *
+   * No computador, nada disso: devolver o foco ali prenderia o cursor na
+   * calculadora, e o aluno não conseguiria clicar no exercício ao lado.
+   */
+  protected perderFoco(campo: CampoDoCampo, entrada: HTMLInputElement): void {
+    if (!this.temTecladoDeTela() || !this.emCampos()) {
+      this.foco.set(null);
+      return;
+    }
+
+    // `setTimeout` e não microtarefa: o sistema recolhe o teclado depois do
+    // quadro, e refocar antes disso é ignorado.
+    setTimeout(() => {
+      if (!this.emCampos() || !this.temTecladoDeTela()) {
+        return;
+      }
+      if (document.activeElement !== entrada) {
+        entrada.focus({ preventScroll: true });
+      }
+      this.foco.set({ campo, entrada });
+    }, 0);
+  }
+
+  /** A primeira entrada da calculadora — é nela que o primeiro toque foca. */
+  private entradaPrincipal(): HTMLInputElement | undefined {
+    return this.painel()?.nativeElement.querySelector('input') ?? undefined;
+  }
+
+  /**
+   * Há teclado de tela para manter aberto?
+   *
+   * Só onde o apontador é dedo ou caneta. Sem esta guarda, o site prenderia o
+   * foco na calculadora em qualquer computador — e o aluno não conseguiria
+   * clicar no exercício ao lado.
+   */
+  private temTecladoDeTela(): boolean {
+    return this.dispositivo.tipo() !== 'computador';
+  }
+
+  /**
+   * O `C` da faixa: limpa o campo em foco.
+   *
+   * Fica ao lado da barra porque é o par dela: a barra separa, o `C` recomeça.
+   * Sem ele, apagar uma lista de cinco números exige cinco toques no apagar do
+   * teclado — e no campo de MMC a lista cresce rápido.
+   */
+  protected limparNoFoco(): void {
+    const entrada = this.foco()?.entrada;
+    if (entrada === undefined) {
+      return;
+    }
+
+    entrada.value = '';
+    entrada.dispatchEvent(new Event('input'));
     entrada.focus();
   }
 
@@ -345,7 +486,9 @@ export class Calculadora {
   }
 
   protected definirNumeros(valor: string): void {
-    this.numeros.set(valor);
+    // Normaliza na ENTRADA: quem digita `12,18` no teclado do aparelho vê
+    // `12 | 18` aparecer, e o ponto não fica parecendo decimal.
+    this.numeros.set(normalizarSeparadores(valor));
   }
 
   protected definirProduto(valor: string): void {

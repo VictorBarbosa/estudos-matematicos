@@ -32,3 +32,23 @@ describe('altura do teclado', () => {
     expect(alturaDoTeclado(800.4, { height: 500.1, offsetTop: 0 })).toBe(300);
   });
 });
+
+/**
+ * O defeito que fez o separador sumir da tela.
+ *
+ * A primeira versão da faixa exigia medida > 80 px para aparecer. No
+ * aplicativo o `@capacitor/keyboard` redimensiona o WebView: janela e área
+ * visível encolhem JUNTAS, a diferença é zero, e a faixa nunca aparecia.
+ *
+ * O conserto não foi medir melhor — foi parar de condicionar a faixa à medida.
+ * Estes casos ficam aqui para a conta não voltar a ser usada como porteiro.
+ */
+describe('altura do teclado: o caso do WebView redimensionado', () => {
+  it('WebView que encolhe dá zero — e é por isso que a faixa não pode depender disto', () => {
+    expect(alturaDoTeclado(500, { height: 500, offsetTop: 0 })).toBe(0);
+  });
+
+  it('com o teclado cobrindo a página, a diferença é a altura dele', () => {
+    expect(alturaDoTeclado(800, { height: 500, offsetTop: 0 })).toBe(300);
+  });
+});

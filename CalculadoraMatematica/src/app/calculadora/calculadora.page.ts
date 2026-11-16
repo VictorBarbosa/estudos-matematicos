@@ -1,10 +1,13 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  DestroyRef,
+  ElementRef,
   computed,
   effect,
   inject,
   signal,
+  viewChild,
 } from '@angular/core';
 import {
   IonButtons,
@@ -25,6 +28,7 @@ import {
   calcularFatores,
   calcularInteiros,
   fracaoSimplificada,
+  normalizarSeparadores,
   digitar,
   inverso,
   limpar,
@@ -80,6 +84,14 @@ export class CalculadoraPage {
   /** Onde o teclado do sistema termina — é o que posiciona a faixa de teclas. */
   protected readonly teclado = inject(TecladoService);
 
+  private readonly destruir = inject(DestroyRef);
+
+  /** O bloco dos campos, para achar a primeira entrada do modo. */
+  private readonly camposRef = viewChild<ElementRef<HTMLElement>>('campos');
+
+  /** Onde começou o último toque. Ver `veioDoTopo`. */
+  private readonly ultimoToque = signal<HTMLElement | null>(null);
+
   /**
    * Qual campo está com o cursor — e o elemento dele.
    *
@@ -94,10 +106,16 @@ export class CalculadoraPage {
    */
   protected readonly foco = signal<FocoDoCampo | null>(null);
 
-  /** Teclas na faixa: precisa de teclado aberto E de um campo em foco. */
-  protected readonly comBarra = computed(
-    () => this.teclado.aberto() && this.foco() !== null,
-  );
+  /**
+   * A faixa de teclas aparece quando há um campo em foco — e só.
+   *
+   * Ela NÃO depende de medir o teclado. A primeira versão dependia, e no
+   * aplicativo a medida dava zero (o plugin redimensiona o WebView, e janela e
+   * área visível encolhem juntas): a faixa nunca aparecia, e o separador sumiu
+   * da tela. A altura só diz ONDE a faixa fica; sem medida, o rodapé da área
+   * visível já é o topo do teclado.
+   */
+  protected readonly comBarra = computed(() => this.foco() !== null);
 
   protected readonly modo = this.modos.modo;
   protected readonly angulo = computed(() => this.preferencias().angulo);
@@ -122,6 +140,9 @@ export class CalculadoraPage {
   protected readonly emTeclado = computed(
     () => !this.emInteiros() && !this.emFatores() && !this.emDecimal(),
   );
+
+  /** O modo tem campo de texto? É o que decide se o teclado deve ficar aberto. */
+  protected readonly emCampos = computed(() => !this.emTeclado());
 
   /**
    * O MMC, o MDC e a simplificação do que está escrito.
@@ -167,7 +188,7 @@ export class CalculadoraPage {
       }
       return numeros.length >= 2
         ? `MMC e MDC de ${numeros.join(', ')}`
-        : 'Dois ou mais inteiros, separados por vírgula.';
+        : 'Dois ou mais inteiros, separados por barra.';
     }
 
     const { expressao, resultado, erro } = this.estado();
@@ -220,6 +241,52 @@ export class CalculadoraPage {
 
   constructor() {
     effect(() => salvar(this.preferencias()));
+
+    /*
+     * O último toque, na fase de captura.
+     *
+     * O `blur` do campo chega DEPOIS de o dedo pousar no novo alvo, e nessa
+     * hora `document.activeElement` já é outro. Guardar o alvo no `pointerdown`
+     * é o que permite saber se o toque veio do cabeçalho — menu, troca de modo
+     * — ou do corpo da calculadora.
+     */
+    const registrar = (evento: PointerEvent): void => {
+      this.ultimoToque.set(evento.target as HTMLElement | null);
+    };
+    document.addEventListener('pointerdown', registrar, true);
+    this.destruir.onDestroy(() =>
+      document.removeEventListener('pointerdown', registrar, true),
+    );
+
+    /*
+     * Ao entrar num modo de campo, o teclado abre sozinho.
+     *
+     * Antes ele só abria com um toque no campo, e quem escolhia «MMC e MDC» no
+     * menu via a calculadora sem teclado e sem as teclas da faixa. O foco é
+     * pedido depois da renderização, porque o campo daquele modo ainda não
+     * existe quando o modo muda.
+     */
+    effect(() => {
+      /*
+       * Ao SAIR de um modo de campo, o foco é solto.
+       *
+       * Sem isto, voltar para o teclado deixava a faixa das teclas na tela:
+       * ela aparece quando há campo em foco, e o foco ficava apontando para um
+       * campo que não existe mais.
+       */
+      if (!this.emCampos()) {
+        this.foco.set(null);
+        return;
+      }
+
+      setTimeout(() => {
+        const entrada = this.entradaPrincipal();
+        if (entrada === undefined || document.activeElement === entrada) {
+          return;
+        }
+        entrada.focus({ preventScroll: true });
+      }, 0);
+    });
   }
 
   protected pressionar(acao: Acao): void {
@@ -230,23 +297,153 @@ export class CalculadoraPage {
     return tecla.acao.tipo === 'angulo' ? this.angulo().toUpperCase() : tecla.rotulo;
   }
 
-  /**
-   * O campo ganhou ou perdeu o cursor.
-   *
-   * `pointerdown` barrado nas teclas da faixa mantém o foco no campo, então o
-   * teclado não fecha ao tocar na vírgula — e é por isso que o `blur` só
-   * acontece quando o aluno realmente sai do campo.
-   */
-  protected focar(campo: CampoDoCampo | null, entrada?: HTMLInputElement): void {
-    this.foco.set(campo === null || entrada === undefined ? null : { campo, entrada });
+  /** O campo ganhou o cursor. */
+  protected focar(campo: CampoDoCampo, entrada: HTMLInputElement): void {
+    this.foco.set({ campo, entrada });
   }
 
-  /** A vírgula da faixa: separa os números do campo em foco. */
-  protected separarDoFoco(): void {
-    const entrada = this.foco()?.entrada;
-    if (entrada !== undefined) {
-      this.acrescentarSeparador(entrada);
+  /**
+   * O campo perdeu o cursor — e o teclado NÃO pode fechar junto.
+   *
+   * Era aqui que o teclado fechava. No iPhone, tocar fora tira o foco e o iOS
+   * recolhe o teclado; nenhum `preventDefault` segura isso, porque quem manda
+   * no teclado é o sistema, não a página. O que funciona é DEVOLVER o foco no
+   * quadro seguinte: o teclado nunca chega a fechar, e quem digita não perde a
+   * lista no meio.
+   *
+   * A exceção é o cabeçalho: abrir o menu ou trocar de modo é sair de
+   * propósito, e aí o teclado pode — e deve — fechar.
+   */
+  protected perderFoco(campo: CampoDoCampo, entrada: HTMLInputElement): void {
+    if (!this.emCampos() || this.veioDoTopo()) {
+      this.foco.set(null);
+      return;
     }
+
+    // `setTimeout` e não microtarefa: o iOS recolhe o teclado depois do quadro,
+    // e refocar antes disso é ignorado.
+    setTimeout(() => {
+      if (!this.emCampos() || this.veioDoTopo()) {
+        return;
+      }
+      if (document.activeElement !== entrada) {
+        entrada.focus({ preventScroll: true });
+      }
+      this.foco.set({ campo, entrada });
+    }, 0);
+  }
+
+  /** A primeira entrada do modo — é nela que o primeiro toque abre o teclado. */
+  private entradaPrincipal(): HTMLInputElement | undefined {
+    return this.camposRef()?.nativeElement.querySelector('input') ?? undefined;
+  }
+
+  /**
+   * O último toque começou no cabeçalho?
+   *
+   * Separa «toquei na tabela para conferir» — e o teclado deve ficar — de «abri
+   * o menu para trocar de modo» — e o teclado deve sair. Gravado na fase de
+   * CAPTURA, antes de qualquer `blur`, porque na hora do `blur` o alvo do toque
+   * já não está disponível.
+   */
+  private veioDoTopo(): boolean {
+    const alvo = this.ultimoToque();
+    return alvo !== null && alvo.closest('ion-toolbar, ion-menu, ion-menu-button') !== null;
+  }
+
+  /**
+   * A barra da faixa: separa os números do campo em foco.
+   *
+   * Ela existe porque a tecla do teclado do iPhone é a do separador DECIMAL da
+   * língua do aparelho — sem cor, e como `.` num aparelho em inglês, o que se
+   * confunde com decimal. A tecla do sistema não se reestiliza; esta fica ao
+   * lado dela, colorida e com uma barra, que não é decimal em língua nenhuma.
+   */
+  protected separarNoFoco(): void {
+    const entrada = this.foco()?.entrada;
+    if (entrada === undefined) {
+      return;
+    }
+
+    const atual = entrada.value.trimEnd();
+    if (atual === '' || atual.endsWith('|')) {
+      return;
+    }
+
+    const novo = `${atual} | `;
+    entrada.value = novo;
+    entrada.dispatchEvent(new Event('input'));
+
+    // O cursor volta para o fim, senão o próximo dígito entra no meio.
+    entrada.setSelectionRange(novo.length, novo.length);
+    entrada.focus();
+  }
+
+  /**
+   * Impede que um toque FORA do campo feche o teclado.
+   *
+   * No iPhone, tocar fora de um campo tira o foco dele e o teclado recolhe — e
+   * com ele some a faixa das teclas. Quem digita «12 | 18 | 24» e quer conferir
+   * a decomposição toca na tabela, e perdia o teclado no meio da digitação,
+   * tendo de tocar no campo outra vez para continuar.
+   *
+   * O `preventDefault` no `pointerdown` segura o foco onde está **sem impedir o
+   * `click`**: os botões continuam funcionando, e o navegador só deixa de mudar
+   * o foco. Rolar a página também continua, porque a rolagem é do `touchmove`,
+   * não daqui.
+   *
+   * Duas saídas de propósito:
+   *
+   * - toque em `input` passa direto — é o que TROCA de campo no Fatorar, que
+   *   tem dois;
+   * - sem campo em foco, nada acontece — no teclado da calculadora (básica e
+   *   científica) não há campo, e barrar o `pointerdown` ali apagaria o estado
+   *   de tecla apertada.
+   *
+   * A barra do topo fica de fora porque está fora da `section`: abrir o menu
+   * fecha o teclado, e é o que se espera de quem vai trocar de modo.
+   */
+  protected protegerFocoDoCampo(evento: PointerEvent): void {
+    if (!this.emCampos()) {
+      return;
+    }
+
+    /*
+     * Sem campo em foco, o toque ABRE o teclado em vez de não fazer nada.
+     *
+     * O iOS só deixa o `focus()` abrir o teclado dentro de um gesto do usuário,
+     * e este `pointerdown` é o gesto: o primeiro toque em qualquer ponto da
+     * calculadora já deixa o campo com o cursor.
+     */
+    if (this.foco() === null) {
+      this.entradaPrincipal()?.focus({ preventScroll: true });
+      return;
+    }
+
+    const alvo = evento.target as HTMLElement | null;
+    if (alvo === null || alvo.closest('input, textarea') !== null) {
+      return;
+    }
+
+    evento.preventDefault();
+  }
+
+  /**
+   * O `C` da faixa: limpa o campo em foco.
+   *
+   * Fica ao lado da barra porque é o par dela: a barra separa, o `C` recomeça.
+   * Sem ele, apagar uma lista de cinco números exige cinco toques no apagar do
+   * teclado — e no campo de MMC a lista cresce rápido.
+   */
+  protected limparNoFoco(): void {
+    const entrada = this.foco()?.entrada;
+    if (entrada === undefined) {
+      return;
+    }
+
+    entrada.value = '';
+    entrada.dispatchEvent(new Event('input'));
+    entrada.focus();
   }
 
   /** O `±` da faixa: troca o sinal do campo em foco. */
@@ -271,7 +468,9 @@ export class CalculadoraPage {
   }
 
   protected definirNumeros(valor: string): void {
-    this.numeros.set(valor);
+    // Normaliza na ENTRADA: quem digita `12,18` no teclado do aparelho vê
+    // `12 | 18` aparecer, e o ponto não fica parecendo decimal.
+    this.numeros.set(normalizarSeparadores(valor));
   }
 
   protected definirProduto(valor: string): void {
@@ -304,21 +503,14 @@ export class CalculadoraPage {
   /*
    * As duas teclas que o teclado numérico do iPhone não tem.
    *
-   * Com `inputmode="numeric"` o aparelho mostra só algarismos: não há vírgula
-   * para separar os números do MMC, nem sinal de menos para um produto
-   * negativo em Fatorar. Em vez de trocar o teclado por um completo — que
-   * traria letras no caminho —, cada campo ganha ao lado a tecla que lhe
-   * falta.
+   * Com `inputmode="numeric"` o aparelho mostra só algarismos: não há sinal de
+   * menos para um produto negativo em Fatorar. Em vez de trocar o
+   * teclado por um completo — que traria letras no caminho —, cada campo ganha
+   * ao lado a tecla que lhe falta.
+   *
+   * O separador dos números do MMC saiu desta lista: ele mora no próprio
+   * teclado desde que o campo passou a abrir com `inputmode="decimal"`.
    */
-
-  /** Acrescenta o separador ao fim da lista de inteiros. */
-  protected acrescentarSeparador(entrada: HTMLInputElement): void {
-    this.numeros.update((atual) => {
-      const limpo = atual.trimEnd();
-      return limpo === '' || limpo.endsWith(',') ? atual : `${limpo}, `;
-    });
-    this.devolverOCursor(entrada);
-  }
 
   /** Troca o sinal de um dos campos de fatorar. */
   protected alternarSinalDoCampo(qual: 'produto' | 'soma', entrada: HTMLInputElement): void {

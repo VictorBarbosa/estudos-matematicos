@@ -10,16 +10,46 @@ com abas, uma página inteira com os modos num menu lateral.
 | --- | --- |
 | **Básica** | As quatro operações, porcentagem e troca de sinal |
 | **Científica** | Seno, cosseno, tangente, logaritmos, potências, raiz, π e *e* |
-| **MMC e MDC** | Dois ou mais inteiros: as duas contas juntas, com a divisão simultânea e a simplificação pelo MDC |
+| **MMC e MDC** | Dois ou mais inteiros: as duas contas juntas no visor, com a divisão simultânea e a fração simplificada |
 | **Fatorar** | Dois números por produto e soma, com a fatoração e as raízes |
 | **Decimal em fração** | `0,375` vira `3/8`; `0,1(6)` vira `1/6`, com a conta à vista |
 
-Os três últimos usam campo de texto com o teclado numérico do iPhone, que não
-traz vírgula, parênteses nem sinal de menos. Cada campo ganha ao lado a tecla
-que lhe falta: `,` para separar os inteiros do MMC, `±` para o produto ou a
-soma negativos do Fatorar, e `,` `(` `)` `±` para escrever a dízima. Tocar
-nessas teclas não fecha o teclado do sistema — o `pointerdown` é barrado, para
-o campo não perder o foco.
+Os três últimos usam campo de texto com o teclado do aparelho. O que o teclado
+não tem vem numa **faixa colada nele** (`TecladoService` mede a altura pelo
+`visualViewport`): a barra `|` que separa os números do MMC com o `C` ao lado,
+que limpa o campo; o `±` do produto ou da soma negativos do Fatorar; e `(` `)`
+`±` para escrever a dízima.
+
+O separador é a barra, e não a vírgula, por dois motivos. Ela é **colorida**, e
+a tecla do teclado do iPhone — a que apareceria com `inputmode="decimal"` — vem
+sem cor e some no cinza. E vírgula e ponto são separadores **decimais**: num
+campo de inteiros, `12,18` fica ambíguo entre «doze e dezoito» e «doze vírgula
+dezoito», e num aparelho em inglês a tecla do sistema mostra justamente `.`. A
+barra não é decimal em língua nenhuma.
+
+Vírgula, ponto e ponto e vírgula continuam aceitos na **leitura** — quem cola
+`12, 18` de outro lugar não recebe erro —, mas a escrita normaliza tudo para
+`12 | 18`.
+
+O teclado fica **sempre aberto** nos modos de campo. Três peças fazem isso, e
+nenhuma delas é `preventDefault` — quem manda no teclado do iPhone é o sistema,
+não a página:
+
+- entrar no modo já foca o campo, então o teclado abre sem um toque;
+- ao perder o foco, o foco é **devolvido** no quadro seguinte — o teclado nunca
+  chega a fechar, e quem confere a decomposição no meio da digitação não perde a
+  lista;
+- tocar em qualquer ponto da calculadora, sem campo em foco, foca o campo — é o
+  gesto que o iOS exige para abrir o teclado.
+
+A exceção é o cabeçalho: abrir o menu ou trocar de modo é sair de propósito, e
+aí o teclado fecha.
+
+A faixa aparece com o campo em foco, e **não** quando o teclado é detectado. A
+primeira versão condicionava a faixa à medida do teclado, e no aplicativo a
+medida é zero — o `@capacitor/keyboard` redimensiona o WebView em vez de cobrir
+a página, e janela e área visível encolhem juntas. Resultado: o separador
+desapareceu da tela. A altura hoje só diz **onde** a faixa fica.
 
 O teclado tem um **apagar** (⌫) que a calculadora da Apple não tem: lá se
 apaga arrastando o dedo sobre o visor, gesto que ninguém descobre, e sem ele

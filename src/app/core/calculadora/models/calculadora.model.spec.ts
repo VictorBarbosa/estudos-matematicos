@@ -3,6 +3,7 @@ import {
   calcularFatores,
   calcularInteiros,
   fracaoSimplificada,
+  normalizarSeparadores,
   EstadoCalculadora,
   alternarSinal,
   apagar,
@@ -362,10 +363,32 @@ describe('MMC e MDC', () => {
     expect(calcularInteiros('12, 18, 24').mdc).toBe(6);
   });
 
-  it('separa por vírgula, ponto e vírgula ou espaço', () => {
-    for (const entrada of ['12,18', '12; 18', '12 18', '  12 ,  18  ']) {
+  it('separa por barra, vírgula, ponto, ponto e vírgula ou espaço', () => {
+    // A barra é o que a calculadora escreve; os outros entram porque quem cola
+    // «12, 18» de outro lugar, ou digita no teclado do aparelho, não pode
+    // receber erro por isso.
+    for (const entrada of ['12|18', '12,18', '12.18', '12; 18', '12 18', '  12 ,  18  ']) {
       expect(calcularInteiros(entrada).mdc, entrada).toBe(6);
     }
+  });
+
+  it('a escrita normaliza o separador para barra', () => {
+    // Vírgula e ponto são separadores DECIMAIS: `12,18` fica ambíguo entre
+    // «doze e dezoito» e «doze vírgula dezoito». A barra não é.
+    expect(normalizarSeparadores('12,18')).toBe('12 | 18');
+    expect(normalizarSeparadores('12.18')).toBe('12 | 18');
+    expect(normalizarSeparadores('12 ; 18')).toBe('12 | 18');
+  });
+
+  it('a normalização deixa continuar digitando', () => {
+    // A barra do fim fica, e sem espaço depois: é o que permite escrever o
+    // próximo número sem apagar o separador.
+    expect(normalizarSeparadores('12,')).toBe('12 |');
+    expect(normalizarSeparadores('12')).toBe('12');
+  });
+
+  it('a normalização não deixa a lista começar com separador', () => {
+    expect(normalizarSeparadores(', 12, 18')).toBe('12 | 18');
   });
 
   it('mostra a montagem de cada resultado', () => {
@@ -399,8 +422,15 @@ describe('MMC e MDC', () => {
   it('o que não é inteiro é recusado pelo nome', () => {
     // A parte recusada viaja no erro para aparecer na frase, em qualquer idioma.
     expect(calcularInteiros('12, abc').erro?.valores).toEqual({ parte: 'abc' });
-    expect(calcularInteiros('12, 1.5').erro?.valores).toEqual({ parte: '1.5' });
     expect(calcularInteiros('12, -4').erro?.valores).toEqual({ parte: '-4' });
+    expect(calcularInteiros('12, 4,5x').erro?.valores).toEqual({ parte: '5x' });
+  });
+
+  it('um decimal digitado vira dois números, porque aqui não há decimal', () => {
+    // `1.5` é ambíguo entre «um e meio» e «1, 5» — e MMC e MDC só existem
+    // entre inteiros, então a leitura possível é a segunda.
+    expect(calcularInteiros('12.18').numeros).toEqual([12, 18]);
+    expect(calcularInteiros('12, 1.5').numeros).toEqual([12, 1, 5]);
   });
 
   it('o zero fica de fora', () => {

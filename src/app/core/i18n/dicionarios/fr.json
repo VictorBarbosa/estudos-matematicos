@@ -41,6 +41,7 @@
     "fechar": "Fermer la calculatrice",
     "limite": "Utilisez des nombres jusqu’à 1 000 000 000.",
     "limiteFatores": "Utilisez des nombres jusqu’à 1 000 000.",
+    "limparNumeros": "effacer les nombres",
     "maisPares": "… et d’autres paires",
     "mdc": "PGCD",
     "mmc": "PPCM",
@@ -49,13 +50,13 @@
     "montagem": "{operacao} = {montagem}",
     "naoCalcula": "Impossible de calculer cela.",
     "naoInteiro": "« {parte} » n’est pas un nombre entier.",
-    "numeros": "Nombres, séparés par des virgules",
+    "numeros": "Nombres, un par un",
     "par": "Paire",
     "parEncontrado": "{a} et {b}",
     "paresTentados": "Paires avec ce produit, et ce que chacune donne en somme",
     "passaDoExato": "Le résultat dépasse ce qui se calcule exactement.",
     "pedidoFatores": "Écrivez le produit et la somme.",
-    "pedidoInteiros": "Deux entiers ou plus, séparés par des virgules.",
+    "pedidoInteiros": "Deux entiers ou plus, séparés par une barre.",
     "produto": "Produit",
     "raizes": "Racines : x = {a} ou x = {b}",
     "semComum": "Aucun diviseur commun : PGCD = 1.",
@@ -63,11 +64,12 @@
     "semParInteiroLongo": "Aucune paire d’entiers n’a ce produit et cette somme ; les deux nombres ci-dessus sont la paire exacte.",
     "semParReal": "Il n’existe pas deux nombres réels avec ce produit et cette somme.",
     "semZero": "Le zéro est exclu : utilisez des entiers supérieurs à zéro.",
+    "separarNumeros": "séparer les nombres",
     "simplificando": "En simplifiant par le PGCD",
+    "simplificandoCurto": "En simplifiant",
     "soma": "Somme",
     "teclasDoCampo": "Touches du champ",
-    "trocarSinal": "changer le signe",
-    "virgula": "virgule"
+    "trocarSinal": "changer le signe"
   },
   "campo": {
     "simbolos": "Symboles pour la réponse"

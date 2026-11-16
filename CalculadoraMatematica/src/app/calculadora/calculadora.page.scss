@@ -525,18 +525,38 @@ $operador: #ff9f0a;
   }
 }
 
-.fracao-simplificada {
+/*
+ * A fração no visor, junto do MMC e do MDC.
+ *
+ * Ela é RESULTADO, e não passo: com dois números, a simplificação é a resposta
+ * tanto quanto o MMC. Fica alinhada à direita como as outras contas, com o
+ * rótulo em corpo pequeno à esquerda para não competir com os números.
+ */
+.fracao-no-visor {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  margin: 0.25rem 0 0;
-  font-size: 1.75rem;
-  line-height: 1.1;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  margin-top: 0.1rem;
   font-variant-numeric: tabular-nums;
+
+  .nome {
+    color: $funcao;
+    font-size: 0.85rem;
+  }
 
   .sinal {
     color: $funcao;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+  }
+
+  .fracao {
+    font-size: 1.5rem;
+    line-height: 1.05;
+
+    &.resultado {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -592,7 +612,9 @@ $operador: #ff9f0a;
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 20;
+  /* Acima do conteúdo e da barra do topo: o teclado é do aparelho inteiro, e
+     a faixa pertence a ele. */
+  z-index: 100;
   display: flex;
   justify-content: center;
   gap: 0.5rem;
@@ -618,6 +640,38 @@ $operador: #ff9f0a;
   &:active {
     background: #636366;
   }
+
+  /*
+   * O separador, em cor de operador.
+   *
+   * Ele é a tecla mais usada desta faixa — a lista de números cresce uma barra
+   * por vez —, e a cor é o que o distingue das outras e do teclado cinza
+   * embaixo. Texto escuro porque o laranja é claro: branco sobre laranja
+   * some.
+   */
+  &.separador {
+    background: $operador;
+    color: #1c1c1e;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    &:active {
+      background: #ffb340;
+    }
+  }
+
+  /*
+   * O `C` de limpar, ao lado da barra.
+   *
+   * Discreto, e não laranja: a barra é a tecla que se aperta a cada número, e
+   * o `C` é a que se aperta quando se erra a lista inteira. Cores iguais fariam
+   * o dedo procurar a errada.
+   */
+  &.limpar {
+    color: $operador;
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
 }
 
 /*
@@ -629,4 +683,15 @@ $operador: #ff9f0a;
  */
 .calculadora.com-barra .tecla-do-campo {
   display: none;
+}
+
+/*
+ * Com a faixa na tela, o conteúdo ganha um respiro embaixo.
+ *
+ * Sem ele, o último item da tabela fica escondido atrás da faixa justamente
+ * quando o aluno está digitando — e é aí que ele quer ver a decomposição
+ * crescer.
+ */
+ion-content.com-barra {
+  --padding-bottom: 3.6rem;
 }

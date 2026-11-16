@@ -3,52 +3,53 @@ import { DestroyRef, Injectable, computed, inject, signal } from '@angular/core'
 /**
  * Onde o teclado do sistema termina, em pixels.
  *
- * O teclado do iPhone não aceita botão novo: não há como pôr a vírgula entre
- * as teclas dele. O que o iOS oferece é a *input accessory view* — uma faixa
- * logo acima do teclado —, e é isso que esta medida permite desenhar aqui.
+ * Existe para uma tecla que o teclado do aparelho não tem: o separador dos
+ * números digitados no MMC e MDC. A faixa que a desenha precisa saber a que
+ * altura ficar, e é isso que este serviço mede.
  *
- * A medida vem do `visualViewport`, e não de um plugin: ele existe no WebView
- * do Capacitor e no Safari, encolhe quando o teclado abre, e não depende de
- * nenhuma permissão. A conta é a diferença entre a janela do layout e a área
- * que o teclado ainda deixa ver.
+ * ## A medida NÃO decide se a faixa existe
  *
- * ## Por que a conta funciona nos dois comportamentos de teclado
+ * Isso está escrito com todas as letras porque já falhou uma vez: a primeira
+ * versão exigia medida maior que 80 px para mostrar a faixa. Num WebView que
+ * encolhe junto com o teclado — o padrão do `@capacitor/keyboard` é
+ * `resize: native` — a medida é **zero**, e o separador desapareceu da tela.
  *
- * O WebView pode reagir ao teclado de duas maneiras, e a fórmula cobre as duas:
+ * Quem decide mostrar é o campo em foco (ver `comBarra` na página). A altura só
+ * diz ONDE a faixa fica: com medida zero, `bottom: 0` já é o topo do teclado,
+ * porque a área visível termina nele.
  *
- * - **O teclado cobre a página** (Safari): a janela continua com 800 px, a
- *   área visível cai para 500 — a diferença são os 300 px do teclado, e a
- *   faixa sobe 300 px.
- * - **O WebView encolhe** (Capacitor com `resize: native`): a janela passa a
- *   500 px e a área visível também — a diferença é zero, e a faixa fica no
- *   rodapé do WebView, que agora termina no teclado.
+ * ## Por que só o `visualViewport`, e não o plugin
  *
- * Somar `offsetTop` é o que cobre o terceiro caso: quando o Safari rola a
- * página para o campo não ficar escondido, a área visível se desloca, e sem
- * essa parcela a faixa apareceria dentro do teclado.
+ * O plugin `@capacitor/keyboard` informa a altura do teclado, mas **não diz se
+ * o WebView encolheu**. Usar essa altura como `bottom` acerta no modo
+ * `resize: none` e erra feio no `native`: a área visível já perdeu os 300 px, e
+ * a faixa subiria outros 300 por cima do conteúdo, no meio da tela.
+ *
+ * O `visualViewport` responde as duas perguntas de uma vez, porque a conta é a
+ * diferença entre a janela e a área visível:
+ *
+ * - **`resize: native`** (aplicativo): janela e área visível encolhem juntas, a
+ *   diferença é zero, e a faixa fica no rodapé — que é o topo do teclado.
+ * - **`resize: none`, ou o teclado cobrindo a página** (Safari): a janela
+ *   mantém o tamanho, a área visível cai, e a diferença é a altura do teclado.
+ *
+ * Somar `offsetTop` cobre o terceiro caso: quando o navegador rola a página
+ * para o campo não ficar escondido, a área visível se desloca, e sem essa
+ * parcela a faixa apareceria DENTRO do teclado.
  */
 @Injectable({ providedIn: 'root' })
 export class TecladoService {
   private readonly alturaEmPixels = signal(0);
 
-  /** A altura do teclado. Zero quando ele está fechado. */
+  /** A altura do teclado. Zero quando ele está fechado ou o WebView encolheu. */
   readonly altura = this.alturaEmPixels.asReadonly();
 
-  /**
-   * Há teclado na tela?
-   *
-   * Abaixo de 80 px não é teclado: é a barra do navegador aparecendo, ou o
-   * `visualViewport` ajustando a área por outro motivo. Tratar isso como
-   * teclado aberto faria a faixa piscar sem motivo.
-   */
+  /** Há teclado medido na tela? Serve de informação; não decide a faixa. */
   readonly aberto = computed(() => this.alturaEmPixels() >= ALTURA_MINIMA);
 
   private readonly destruir = inject(DestroyRef);
 
   constructor() {
-    // O `visualViewport` falta em navegador antigo e nos testes de unidade;
-    // sem ele não há como medir o teclado, e a faixa simplesmente não aparece —
-    // as teclas ao lado do campo continuam valendo.
     const janela = typeof window === 'undefined' ? undefined : window.visualViewport;
     if (janela === undefined || janela === null) {
       return;

@@ -41,6 +41,7 @@
     "fechar": "Close the calculator",
     "limite": "Use numbers up to 1,000,000,000.",
     "limiteFatores": "Use numbers up to 1,000,000.",
+    "limparNumeros": "clear the numbers",
     "maisPares": "… and further pairs",
     "mdc": "GCD",
     "mmc": "LCM",
@@ -49,13 +50,13 @@
     "montagem": "{operacao} = {montagem}",
     "naoCalcula": "That cannot be calculated.",
     "naoInteiro": "\"{parte}\" is not a whole number.",
-    "numeros": "Numbers, separated by commas",
+    "numeros": "Numbers, one at a time",
     "par": "Pair",
     "parEncontrado": "{a} and {b}",
     "paresTentados": "Pairs with that product, and what each one adds up to",
     "passaDoExato": "The result goes past what can be computed exactly.",
     "pedidoFatores": "Write the product and the sum.",
-    "pedidoInteiros": "Two or more whole numbers, separated by commas.",
+    "pedidoInteiros": "Two or more whole numbers, separated by a bar.",
     "produto": "Product",
     "raizes": "Roots: x = {a} or x = {b}",
     "semComum": "No common divisor: GCD = 1.",
@@ -63,11 +64,12 @@
     "semParInteiroLongo": "No pair of integers has that product and that sum; the two numbers above are the exact pair.",
     "semParReal": "There are no two real numbers with that product and that sum.",
     "semZero": "Zero is left out: use whole numbers greater than zero.",
+    "separarNumeros": "separate the numbers",
     "simplificando": "Simplifying by the GCD",
+    "simplificandoCurto": "Simplifying",
     "soma": "Sum",
     "teclasDoCampo": "Field keys",
-    "trocarSinal": "toggle sign",
-    "virgula": "comma"
+    "trocarSinal": "toggle sign"
   },
   "campo": {
     "simbolos": "Symbols for the answer"
