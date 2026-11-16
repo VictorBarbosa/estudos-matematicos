@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o divergente do campo F = (5x, 1y, 2z) no ponto (0, 0, 0).",
+    "fr": "Calculez la divergence du champ F = (5x, 1y, 2z) au point (0, 0, 0).",
+    "en": "Calculate the divergence of the field F = (5x, 1y, 2z) at the point (0, 0, 0)."
+  },
+  "dados-calculo": {
+    "total": "8"
+  }
+}

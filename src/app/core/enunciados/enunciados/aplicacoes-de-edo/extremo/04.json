@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo cai com resistência do ar proporcional à velocidade, com constante 0.1 por segundo, partindo do repouso. Qual é a velocidade terminal, em m/s? (use g = 9,81; duas casas decimais)",
+    "fr": "Un corps tombe avec une résistance de l’air proportionnelle à la vitesse, de constante 0.1 par seconde, en partant du repos. Quelle est la vitesse terminale, en m/s ? (utilisez g = 9,81 ; deux décimales)",
+    "en": "A body falls with air resistance proportional to velocity, with constant 0.1 per second, from rest. What is the terminal velocity, in m/s? (use g = 9.81; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "98.10"
+  }
+}

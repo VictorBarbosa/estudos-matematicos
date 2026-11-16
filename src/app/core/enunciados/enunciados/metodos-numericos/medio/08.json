@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Aplique Euler com passo h = 0.01 e 200 passos para y' = y, partindo de y(0) = 1. Qual é o valor obtido? (duas casas decimais)",
+    "fr": "Appliquez Euler avec un pas h = 0.01 et 200 pas pour y' = y, en partant de y(0) = 1. Quelle est la valeur obtenue ? (deux décimales)",
+    "en": "Apply Euler with step h = 0.01 and 200 steps for y' = y, starting from y(0) = 1. What is the value obtained? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "7.32"
+  }
+}

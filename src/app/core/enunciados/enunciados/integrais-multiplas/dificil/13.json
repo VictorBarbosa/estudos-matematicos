@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Integre a função constante 3 sobre um setor circular de raio 6 e ângulo de 90°, usando coordenadas polares. (duas casas decimais)",
+    "fr": "Intégrez la fonction constante 3 sur un secteur circulaire de rayon 6 et d’angle de 90°, en coordonnées polaires. (deux décimales)",
+    "en": "Integrate the constant function 3 over a circular sector of radius 6 and angle 90°, using polar coordinates. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "84.82"
+  }
+}

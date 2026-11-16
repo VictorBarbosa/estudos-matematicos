@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral tripla da constante 10 sobre o cubo de 0 a 2 em x, y e z. (duas casas decimais)",
+    "fr": "Calculez l’intégrale triple de la constante 10 sur le cube de 0 à 2 en x, y et z. (deux décimales)",
+    "en": "Calculate the triple integral of the constant 10 over the cube from 0 to 2 in x, y and z. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "80.00"
+  }
+}

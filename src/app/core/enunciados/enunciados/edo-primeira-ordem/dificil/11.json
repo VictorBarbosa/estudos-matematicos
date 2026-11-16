@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva y' = 0.3y com y(0) = 10 e calcule y(5). (duas casas decimais)",
+    "fr": "Résolvez y' = 0.3y avec y(0) = 10 et calculez y(5). (deux décimales)",
+    "en": "Solve y' = 0.3y with y(0) = 10 and calculate y(5). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "44.82"
+  }
+}

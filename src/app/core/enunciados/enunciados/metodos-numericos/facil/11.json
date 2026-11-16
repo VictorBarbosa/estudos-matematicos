@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "De quanto é o erro do método de Euler com passo h = 0.5 e 2 passos para y' = y, partindo de y(0) = 1, frente à solução exata? (duas casas decimais)",
+    "fr": "De combien est l’erreur de la méthode d’Euler avec un pas h = 0.5 et 2 pas pour y' = y, en partant de y(0) = 1, par rapport à la solution exacte ? (deux décimales)",
+    "en": "How large is the error of Euler’s method with step h = 0.5 and 2 steps for y' = y, starting from y(0) = 1, compared with the exact solution? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.47"
+  }
+}

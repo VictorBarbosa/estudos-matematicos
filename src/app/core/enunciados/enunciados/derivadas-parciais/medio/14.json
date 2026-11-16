@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a derivada parcial MISTA de f(x, y) = 2x²y³, derivando primeiro em x e depois em y? Responda no ponto (2, 2).",
+    "fr": "Quelle est la dérivée partielle MIXTE de f(x, y) = 2x²y³, en dérivant d’abord en x puis en y ? Répondez au point (2, 2).",
+    "en": "What is the MIXED partial derivative of f(x, y) = 2x²y³, differentiating first in x and then in y? Answer at the point (2, 2)."
+  },
+  "dados-calculo": {
+    "total": "96"
+  }
+}

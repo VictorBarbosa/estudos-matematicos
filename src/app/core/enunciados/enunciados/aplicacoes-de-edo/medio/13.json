@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma massa de 0.5 kg presa a uma mola de constante 4 N/m, com amortecimento 0.2 N·s/m, é solta do repouso a 1 m do equilíbrio. Qual é a posição em t = 1 s? (subamortecido; duas casas decimais)",
+    "fr": "Une masse de 0.5 kg attachée à un ressort de constante 4 N/m, avec un amortissement 0.2 N·s/m, est lâchée du repos à 1 m de l’équilibre. Quelle est la position à t = 1 s ? (sous-amorti ; deux décimales)",
+    "en": "A mass of 0.5 kg on a spring of constant 4 N/m, with damping 0.2 N·s/m, is released from rest at 1 m from equilibrium. What is the position at t = 1 s? (underdamped; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-0.76"
+  }
+}

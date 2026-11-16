@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a derivada parcial de f(x, y) = e^(x·y) em relação a x, no ponto (1, 0)? (duas casas decimais)",
+    "fr": "Quelle est la dérivée partielle de f(x, y) = e^(x·y) par rapport à x, au point (1, 0) ? (deux décimales)",
+    "en": "What is the partial derivative of f(x, y) = e^(x·y) with respect to x at the point (1, 0)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

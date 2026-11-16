@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a derivada parcial de f(x, y) = x² + 5y² em relação a x, no ponto (0, 3)?",
+    "fr": "Quelle est la dérivée partielle de f(x, y) = x² + 5y² par rapport à x, au point (0, 3) ?",
+    "en": "What is the partial derivative of f(x, y) = x² + 5y² with respect to x at the point (0, 3)?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

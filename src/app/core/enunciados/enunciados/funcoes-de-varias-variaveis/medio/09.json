@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "No domínio de f(x, y) = √(1 − x² − y²), qual é o raio máximo do domínio? (duas casas decimais)",
+    "fr": "Dans le domaine de f(x, y) = √(1 − x² − y²), quel est le rayon maximal du domaine ? (deux décimales)",
+    "en": "In the domain of f(x, y) = √(1 − x² − y²), what is the maximum radius of the domain? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

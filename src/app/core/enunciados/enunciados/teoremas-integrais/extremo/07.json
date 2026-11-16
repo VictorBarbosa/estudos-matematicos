@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Pelo teorema da divergência, qual é o fluxo do campo F = (x, y, 2z) para fora do cilindro x² + y² ≤ 1, 0 ≤ z ≤ 2, com as tampas? (duas casas decimais)",
+    "fr": "Par le théorème de la divergence, quel est le flux du champ F = (x, y, 2z) sortant du cylindre x² + y² ≤ 1, 0 ≤ z ≤ 2, avec les bases ? (deux décimales)",
+    "en": "By the divergence theorem, what is the outward flux of F = (x, y, 2z) from the cylinder x² + y² ≤ 1, 0 ≤ z ≤ 2, including the caps? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "25.13"
+  }
+}

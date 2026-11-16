@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Com Euler, partindo de y(0) = 1 e y' = y, integre até t = 1 primeiro com passo 0.1 e depois com metade dele. Por qual fator o erro foi dividido? (duas casas decimais)",
+    "fr": "Avec Euler, en partant de y(0) = 1 et y' = y, intégrez jusqu’à t = 1 d’abord avec un pas 0.1 puis avec la moitié de celui-ci. Par quel facteur l’erreur a-t-elle été divisée ? (deux décimales)",
+    "en": "With Euler, starting from y(0) = 1 and y' = y, integrate up to t = 1 first with step 0.1 and then with half of it. By what factor was the error divided? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.92"
+  }
+}

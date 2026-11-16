@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Resolva y'' − 9y = 0 com y(0) = 1 e y'(0) = 0, e calcule y(1). (duas casas decimais)",
+    "fr": "Résolvez y'' − 9y = 0 avec y(0) = 1 et y'(0) = 0, et calculez y(1). (deux décimales)",
+    "en": "Solve y'' − 9y = 0 with y(0) = 1 and y'(0) = 0, and calculate y(1). (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "10.07"
+  }
+}

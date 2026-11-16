@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule o divergente do campo F = (3x, 0y, 0z) no ponto (0, 0, 0).",
+    "fr": "Calculez la divergence du champ F = (3x, 0y, 0z) au point (0, 0, 0).",
+    "en": "Calculate the divergence of the field F = (3x, 0y, 0z) at the point (0, 0, 0)."
+  },
+  "dados-calculo": {
+    "total": "3"
+  }
+}

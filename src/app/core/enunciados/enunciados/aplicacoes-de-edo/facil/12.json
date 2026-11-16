@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra de 200 g tem meia-vida de 4 anos. Quanto resta depois de 4 anos, em g? (duas casas decimais)",
+    "fr": "Un échantillon de 200 g a une demi-vie de 4 ans. Combien en reste-t-il après 4 ans, en g ? (deux décimales)",
+    "en": "A sample of 200 g has a half-life of 4 years. How much remains after 4 years, in g? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "100.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor MÍNIMO da função f(x, y) = x² + y² − 6x − 8y? (duas casas decimais)",
+    "fr": "Quelle est la valeur MINIMALE de la fonction f(x, y) = x² + y² − 6x − 8y ? (deux décimales)",
+    "en": "What is the MINIMUM value of f(x, y) = x² + y² − 6x − 8y? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-25.00"
+  }
+}

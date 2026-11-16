@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "No domínio de f(x, y) = ln(5 − x − y), qual é o maior valor que x pode assumir quando y = 1? (duas casas decimais)",
+    "fr": "Dans le domaine de f(x, y) = ln(5 − x − y), quelle est la plus grande valeur que x peut prendre lorsque y = 1 ? (deux décimales)",
+    "en": "In the domain of f(x, y) = ln(5 − x − y), what is the largest value x can take when y = 1? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.00"
+  }
+}

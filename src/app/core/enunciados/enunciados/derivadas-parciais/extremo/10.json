@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a derivada parcial MISTA de f(x, y) = x³y² em relação a x e depois a y, no ponto (2, 1)?",
+    "fr": "Quelle est la dérivée partielle MIXTE de f(x, y) = x³y² par rapport à x puis à y, au point (2, 1) ?",
+    "en": "What is the MIXED partial derivative of f(x, y) = x³y² with respect to x and then y at the point (2, 1)?"
+  },
+  "dados-calculo": {
+    "total": "24"
+  }
+}

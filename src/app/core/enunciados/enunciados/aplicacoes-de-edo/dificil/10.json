@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma população cresce segundo P' = 0.01P(1000 − P). Partindo de P(0) = 100, qual é a população em t = 10? (logística; duas casas decimais)",
+    "fr": "Une population croît selon P' = 0.01P(1000 − P). En partant de P(0) = 100, quelle est la population à t = 10 ? (logistique ; deux décimales)",
+    "en": "A population grows as P' = 0.01P(1000 − P). Starting from P(0) = 100, what is the population at t = 10? (logistic; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1000.00"
+  }
+}

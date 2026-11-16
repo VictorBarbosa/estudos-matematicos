@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para onde a solução de y' = 1(1 − y) tende quando o tempo cresce, partindo de y(0) = 0? (duas casas decimais)",
+    "fr": "Vers quoi tend la solution de y' = 1(1 − y) lorsque le temps croît, en partant de y(0) = 0 ? (deux décimales)",
+    "en": "What does the solution of y' = 1(1 − y) tend to as time grows, starting from y(0) = 0? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

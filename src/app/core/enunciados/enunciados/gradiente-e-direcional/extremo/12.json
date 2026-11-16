@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "No ponto (3, 1), o gradiente de f(x, y) = x² + 5y² é (6, 10). Qual é o valor de b?",
+    "fr": "Au point (3, 1), le gradient de f(x, y) = x² + 5y² est (6, 10). Quelle est la valeur de b ?",
+    "en": "At the point (3, 1), the gradient of f(x, y) = x² + 5y² is (6, 10). What is the value of b?"
+  },
+  "dados-calculo": {
+    "total": "5"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o módulo do gradiente de f(x, y) = 5x + 12y? (duas casas decimais)",
+    "fr": "Quel est le module du gradient de f(x, y) = 5x + 12y ? (deux décimales)",
+    "en": "What is the magnitude of the gradient of f(x, y) = 5x + 12y? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "13.00"
+  }
+}

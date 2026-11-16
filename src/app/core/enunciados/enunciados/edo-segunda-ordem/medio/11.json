@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a MENOR raiz da equação característica de y'' + 4y' + 3y = 0? (duas casas decimais)",
+    "fr": "Quelle est la PLUS PETITE racine de l’équation caractéristique de y'' + 4y' + 3y = 0 ? (deux décimales)",
+    "en": "What is the SMALLEST root of the characteristic equation of y'' + 4y' + 3y = 0? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-3.00"
+  }
+}

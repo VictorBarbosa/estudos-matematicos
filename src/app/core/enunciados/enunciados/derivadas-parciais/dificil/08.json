@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a segunda derivada parcial de f(x, y) = 6x⁴ + 4y² em relação a x, duas vezes?",
+    "fr": "Quelle est la dérivée partielle seconde de f(x, y) = 6x⁴ + 4y² par rapport à x, deux fois ?",
+    "en": "What is the second partial derivative of f(x, y) = 6x⁴ + 4y² with respect to x, taken twice?"
+  },
+  "dados-calculo": {
+    "total": "72"
+  }
+}

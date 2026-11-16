@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use o teorema de Stokes para calcular a circulação de F = (−y, x, 0) na circunferência x² + y² = 4, no plano z = 0, no sentido anti-horário. (duas casas decimais)",
+    "fr": "Utilisez le théorème de Stokes pour calculer la circulation de F = (−y, x, 0) sur le cercle x² + y² = 4, dans le plan z = 0, dans le sens anti-horaire. (deux décimales)",
+    "en": "Use Stokes’ theorem to calculate the circulation of F = (−y, x, 0) around the circle x² + y² = 4, in the plane z = 0, counterclockwise. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "25.13"
+  }
+}

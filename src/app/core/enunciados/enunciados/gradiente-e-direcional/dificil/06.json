@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "A função f(x, y) = x² + y² tem um único ponto crítico. Qual é a abscissa dele?",
+    "fr": "La fonction f(x, y) = x² + y² a un unique point critique. Quelle est son abscisse ?",
+    "en": "The function f(x, y) = x² + y² has a single critical point. What is its x-coordinate?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

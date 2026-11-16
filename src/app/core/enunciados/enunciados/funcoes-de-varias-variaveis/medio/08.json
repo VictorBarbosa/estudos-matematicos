@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanto vale f(x, y) = 1x² + 6y no ponto (2, 2)?",
+    "fr": "Combien vaut f(x, y) = 1x² + 6y au point (2, 2) ?",
+    "en": "What is f(x, y) = 1x² + 6y at the point (2, 2)?"
+  },
+  "dados-calculo": {
+    "total": "16"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a MAIOR taxa de variação possível de f(x, y) = x² + y² no ponto (1, 2)? (duas casas decimais)",
+    "fr": "Quel est le plus grand taux de variation possible de f(x, y) = x² + y² au point (1, 2) ? (deux décimales)",
+    "en": "What is the largest possible rate of change of f(x, y) = x² + y² at the point (1, 2)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "4.47"
+  }
+}

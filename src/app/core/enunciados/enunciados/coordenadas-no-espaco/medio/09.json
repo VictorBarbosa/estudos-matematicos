@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um ponto tem coordenadas cilíndricas r = 2, θ = 60° e z = 0. Qual é a coordenada x cartesiana? (duas casas decimais)",
+    "fr": "Un point a pour coordonnées cylindriques r = 2, θ = 60° et z = 0. Quelle est la coordonnée x cartésienne ? (deux décimales)",
+    "en": "A point has cylindrical coordinates r = 2, θ = 60° and z = 0. What is the Cartesian x-coordinate? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

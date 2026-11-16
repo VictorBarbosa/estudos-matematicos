@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral dupla de x sobre o retângulo de 0 a 6 em x e de 0 a 2 em y. (duas casas decimais)",
+    "fr": "Calculez l’intégrale double de x sur le rectangle de 0 à 6 en x et de 0 à 2 en y. (deux décimales)",
+    "en": "Calculate the double integral of x over the rectangle from 0 to 6 in x and 0 to 2 in y. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "36.00"
+  }
+}

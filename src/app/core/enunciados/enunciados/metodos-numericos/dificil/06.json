@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Compare Euler com passo 0.05 (até t = 1) e com metade do passo: por qual fator o erro diminui? (duas casas decimais)",
+    "fr": "Comparez Euler avec un pas 0.05 (jusqu’à t = 1) et avec la moitié du pas : par quel facteur l’erreur diminue-t-elle ? (deux décimales)",
+    "en": "Compare Euler with step 0.05 (up to t = 1) and with half of it: by what factor does the error decrease? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.96"
+  }
+}

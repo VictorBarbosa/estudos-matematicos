@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral dupla de x² sobre o retângulo de 0 a 9 em x e de 0 a 1 em y. (duas casas decimais)",
+    "fr": "Calculez l’intégrale double de x² sur le rectangle de 0 à 9 en x et de 0 à 1 en y. (deux décimales)",
+    "en": "Calculate the double integral of x² over the rectangle from 0 to 9 in x and 0 to 1 in y. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "243.00"
+  }
+}

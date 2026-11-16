@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a derivada parcial de f(x, y) = 2x²y em relação a x, no ponto (3, 2)?",
+    "fr": "Quelle est la dérivée partielle de f(x, y) = 2x²y par rapport à x, au point (3, 2) ?",
+    "en": "What is the partial derivative of f(x, y) = 2x²y with respect to x at the point (3, 2)?"
+  },
+  "dados-calculo": {
+    "total": "24"
+  }
+}

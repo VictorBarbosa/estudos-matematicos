@@ -322,9 +322,65 @@ import eaplicacoesDaIntegralMoldesForma1 from '@core/enunciados/enunciados/aplic
 import eaplicacoesDaIntegralMoldesForma2 from '@core/enunciados/enunciados/aplicacoes-da-integral/moldes/forma-2.json';
 import eaplicacoesDaIntegralMoldesForma3 from '@core/enunciados/enunciados/aplicacoes-da-integral/moldes/forma-3.json';
 import eaplicacoesDeEdoFacil01 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/01.json';
+import eaplicacoesDeEdoFacil02 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/02.json';
+import eaplicacoesDeEdoFacil03 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/03.json';
+import eaplicacoesDeEdoFacil04 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/04.json';
+import eaplicacoesDeEdoFacil05 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/05.json';
+import eaplicacoesDeEdoFacil06 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/06.json';
+import eaplicacoesDeEdoFacil07 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/07.json';
+import eaplicacoesDeEdoFacil08 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/08.json';
+import eaplicacoesDeEdoFacil09 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/09.json';
+import eaplicacoesDeEdoFacil10 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/10.json';
+import eaplicacoesDeEdoFacil11 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/11.json';
+import eaplicacoesDeEdoFacil12 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/12.json';
+import eaplicacoesDeEdoFacil13 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/13.json';
+import eaplicacoesDeEdoFacil14 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/14.json';
+import eaplicacoesDeEdoFacil15 from '@core/enunciados/enunciados/aplicacoes-de-edo/facil/15.json';
 import eaplicacoesDeEdoMedio01 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/01.json';
+import eaplicacoesDeEdoMedio02 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/02.json';
+import eaplicacoesDeEdoMedio03 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/03.json';
+import eaplicacoesDeEdoMedio04 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/04.json';
+import eaplicacoesDeEdoMedio05 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/05.json';
+import eaplicacoesDeEdoMedio06 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/06.json';
+import eaplicacoesDeEdoMedio07 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/07.json';
+import eaplicacoesDeEdoMedio08 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/08.json';
+import eaplicacoesDeEdoMedio09 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/09.json';
+import eaplicacoesDeEdoMedio10 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/10.json';
+import eaplicacoesDeEdoMedio11 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/11.json';
+import eaplicacoesDeEdoMedio12 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/12.json';
+import eaplicacoesDeEdoMedio13 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/13.json';
+import eaplicacoesDeEdoMedio14 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/14.json';
+import eaplicacoesDeEdoMedio15 from '@core/enunciados/enunciados/aplicacoes-de-edo/medio/15.json';
 import eaplicacoesDeEdoDificil01 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/01.json';
+import eaplicacoesDeEdoDificil02 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/02.json';
+import eaplicacoesDeEdoDificil03 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/03.json';
+import eaplicacoesDeEdoDificil04 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/04.json';
+import eaplicacoesDeEdoDificil05 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/05.json';
+import eaplicacoesDeEdoDificil06 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/06.json';
+import eaplicacoesDeEdoDificil07 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/07.json';
+import eaplicacoesDeEdoDificil08 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/08.json';
+import eaplicacoesDeEdoDificil09 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/09.json';
+import eaplicacoesDeEdoDificil10 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/10.json';
+import eaplicacoesDeEdoDificil11 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/11.json';
+import eaplicacoesDeEdoDificil12 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/12.json';
+import eaplicacoesDeEdoDificil13 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/13.json';
+import eaplicacoesDeEdoDificil14 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/14.json';
+import eaplicacoesDeEdoDificil15 from '@core/enunciados/enunciados/aplicacoes-de-edo/dificil/15.json';
 import eaplicacoesDeEdoExtremo01 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/01.json';
+import eaplicacoesDeEdoExtremo02 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/02.json';
+import eaplicacoesDeEdoExtremo03 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/03.json';
+import eaplicacoesDeEdoExtremo04 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/04.json';
+import eaplicacoesDeEdoExtremo05 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/05.json';
+import eaplicacoesDeEdoExtremo06 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/06.json';
+import eaplicacoesDeEdoExtremo07 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/07.json';
+import eaplicacoesDeEdoExtremo08 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/08.json';
+import eaplicacoesDeEdoExtremo09 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/09.json';
+import eaplicacoesDeEdoExtremo10 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/10.json';
+import eaplicacoesDeEdoExtremo11 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/11.json';
+import eaplicacoesDeEdoExtremo12 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/12.json';
+import eaplicacoesDeEdoExtremo13 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/13.json';
+import eaplicacoesDeEdoExtremo14 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/14.json';
+import eaplicacoesDeEdoExtremo15 from '@core/enunciados/enunciados/aplicacoes-de-edo/extremo/15.json';
 import eaplicacoesDeEdoMoldesForma1 from '@core/enunciados/enunciados/aplicacoes-de-edo/moldes/forma-1.json';
 import eaplicacoesDeEdoMoldesForma2 from '@core/enunciados/enunciados/aplicacoes-de-edo/moldes/forma-2.json';
 import eaplicacoesDeEdoMoldesForma3 from '@core/enunciados/enunciados/aplicacoes-de-edo/moldes/forma-3.json';
@@ -1120,9 +1176,65 @@ import econtinuidadeMoldesForma1 from '@core/enunciados/enunciados/continuidade/
 import econtinuidadeMoldesForma2 from '@core/enunciados/enunciados/continuidade/moldes/forma-2.json';
 import econtinuidadeMoldesForma3 from '@core/enunciados/enunciados/continuidade/moldes/forma-3.json';
 import ecoordenadasNoEspacoFacil01 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/01.json';
+import ecoordenadasNoEspacoFacil02 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/02.json';
+import ecoordenadasNoEspacoFacil03 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/03.json';
+import ecoordenadasNoEspacoFacil04 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/04.json';
+import ecoordenadasNoEspacoFacil05 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/05.json';
+import ecoordenadasNoEspacoFacil06 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/06.json';
+import ecoordenadasNoEspacoFacil07 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/07.json';
+import ecoordenadasNoEspacoFacil08 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/08.json';
+import ecoordenadasNoEspacoFacil09 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/09.json';
+import ecoordenadasNoEspacoFacil10 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/10.json';
+import ecoordenadasNoEspacoFacil11 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/11.json';
+import ecoordenadasNoEspacoFacil12 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/12.json';
+import ecoordenadasNoEspacoFacil13 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/13.json';
+import ecoordenadasNoEspacoFacil14 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/14.json';
+import ecoordenadasNoEspacoFacil15 from '@core/enunciados/enunciados/coordenadas-no-espaco/facil/15.json';
 import ecoordenadasNoEspacoMedio01 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/01.json';
+import ecoordenadasNoEspacoMedio02 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/02.json';
+import ecoordenadasNoEspacoMedio03 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/03.json';
+import ecoordenadasNoEspacoMedio04 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/04.json';
+import ecoordenadasNoEspacoMedio05 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/05.json';
+import ecoordenadasNoEspacoMedio06 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/06.json';
+import ecoordenadasNoEspacoMedio07 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/07.json';
+import ecoordenadasNoEspacoMedio08 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/08.json';
+import ecoordenadasNoEspacoMedio09 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/09.json';
+import ecoordenadasNoEspacoMedio10 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/10.json';
+import ecoordenadasNoEspacoMedio11 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/11.json';
+import ecoordenadasNoEspacoMedio12 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/12.json';
+import ecoordenadasNoEspacoMedio13 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/13.json';
+import ecoordenadasNoEspacoMedio14 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/14.json';
+import ecoordenadasNoEspacoMedio15 from '@core/enunciados/enunciados/coordenadas-no-espaco/medio/15.json';
 import ecoordenadasNoEspacoDificil01 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/01.json';
+import ecoordenadasNoEspacoDificil02 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/02.json';
+import ecoordenadasNoEspacoDificil03 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/03.json';
+import ecoordenadasNoEspacoDificil04 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/04.json';
+import ecoordenadasNoEspacoDificil05 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/05.json';
+import ecoordenadasNoEspacoDificil06 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/06.json';
+import ecoordenadasNoEspacoDificil07 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/07.json';
+import ecoordenadasNoEspacoDificil08 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/08.json';
+import ecoordenadasNoEspacoDificil09 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/09.json';
+import ecoordenadasNoEspacoDificil10 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/10.json';
+import ecoordenadasNoEspacoDificil11 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/11.json';
+import ecoordenadasNoEspacoDificil12 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/12.json';
+import ecoordenadasNoEspacoDificil13 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/13.json';
+import ecoordenadasNoEspacoDificil14 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/14.json';
+import ecoordenadasNoEspacoDificil15 from '@core/enunciados/enunciados/coordenadas-no-espaco/dificil/15.json';
 import ecoordenadasNoEspacoExtremo01 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/01.json';
+import ecoordenadasNoEspacoExtremo02 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/02.json';
+import ecoordenadasNoEspacoExtremo03 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/03.json';
+import ecoordenadasNoEspacoExtremo04 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/04.json';
+import ecoordenadasNoEspacoExtremo05 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/05.json';
+import ecoordenadasNoEspacoExtremo06 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/06.json';
+import ecoordenadasNoEspacoExtremo07 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/07.json';
+import ecoordenadasNoEspacoExtremo08 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/08.json';
+import ecoordenadasNoEspacoExtremo09 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/09.json';
+import ecoordenadasNoEspacoExtremo10 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/10.json';
+import ecoordenadasNoEspacoExtremo11 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/11.json';
+import ecoordenadasNoEspacoExtremo12 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/12.json';
+import ecoordenadasNoEspacoExtremo13 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/13.json';
+import ecoordenadasNoEspacoExtremo14 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/14.json';
+import ecoordenadasNoEspacoExtremo15 from '@core/enunciados/enunciados/coordenadas-no-espaco/extremo/15.json';
 import ecoordenadasNoEspacoMoldesForma1 from '@core/enunciados/enunciados/coordenadas-no-espaco/moldes/forma-1.json';
 import ecoordenadasNoEspacoMoldesForma2 from '@core/enunciados/enunciados/coordenadas-no-espaco/moldes/forma-2.json';
 import ecoordenadasNoEspacoMoldesForma3 from '@core/enunciados/enunciados/coordenadas-no-espaco/moldes/forma-3.json';
@@ -1340,9 +1452,65 @@ import ederivadasExponencialLogaritmoMoldesForma4 from '@core/enunciados/enuncia
 import ederivadasExponencialLogaritmoMoldesForma5 from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/forma-5.json';
 import ederivadasExponencialLogaritmoMoldesForma6 from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/forma-6.json';
 import ederivadasParciaisFacil01 from '@core/enunciados/enunciados/derivadas-parciais/facil/01.json';
+import ederivadasParciaisFacil02 from '@core/enunciados/enunciados/derivadas-parciais/facil/02.json';
+import ederivadasParciaisFacil03 from '@core/enunciados/enunciados/derivadas-parciais/facil/03.json';
+import ederivadasParciaisFacil04 from '@core/enunciados/enunciados/derivadas-parciais/facil/04.json';
+import ederivadasParciaisFacil05 from '@core/enunciados/enunciados/derivadas-parciais/facil/05.json';
+import ederivadasParciaisFacil06 from '@core/enunciados/enunciados/derivadas-parciais/facil/06.json';
+import ederivadasParciaisFacil07 from '@core/enunciados/enunciados/derivadas-parciais/facil/07.json';
+import ederivadasParciaisFacil08 from '@core/enunciados/enunciados/derivadas-parciais/facil/08.json';
+import ederivadasParciaisFacil09 from '@core/enunciados/enunciados/derivadas-parciais/facil/09.json';
+import ederivadasParciaisFacil10 from '@core/enunciados/enunciados/derivadas-parciais/facil/10.json';
+import ederivadasParciaisFacil11 from '@core/enunciados/enunciados/derivadas-parciais/facil/11.json';
+import ederivadasParciaisFacil12 from '@core/enunciados/enunciados/derivadas-parciais/facil/12.json';
+import ederivadasParciaisFacil13 from '@core/enunciados/enunciados/derivadas-parciais/facil/13.json';
+import ederivadasParciaisFacil14 from '@core/enunciados/enunciados/derivadas-parciais/facil/14.json';
+import ederivadasParciaisFacil15 from '@core/enunciados/enunciados/derivadas-parciais/facil/15.json';
 import ederivadasParciaisMedio01 from '@core/enunciados/enunciados/derivadas-parciais/medio/01.json';
+import ederivadasParciaisMedio02 from '@core/enunciados/enunciados/derivadas-parciais/medio/02.json';
+import ederivadasParciaisMedio03 from '@core/enunciados/enunciados/derivadas-parciais/medio/03.json';
+import ederivadasParciaisMedio04 from '@core/enunciados/enunciados/derivadas-parciais/medio/04.json';
+import ederivadasParciaisMedio05 from '@core/enunciados/enunciados/derivadas-parciais/medio/05.json';
+import ederivadasParciaisMedio06 from '@core/enunciados/enunciados/derivadas-parciais/medio/06.json';
+import ederivadasParciaisMedio07 from '@core/enunciados/enunciados/derivadas-parciais/medio/07.json';
+import ederivadasParciaisMedio08 from '@core/enunciados/enunciados/derivadas-parciais/medio/08.json';
+import ederivadasParciaisMedio09 from '@core/enunciados/enunciados/derivadas-parciais/medio/09.json';
+import ederivadasParciaisMedio10 from '@core/enunciados/enunciados/derivadas-parciais/medio/10.json';
+import ederivadasParciaisMedio11 from '@core/enunciados/enunciados/derivadas-parciais/medio/11.json';
+import ederivadasParciaisMedio12 from '@core/enunciados/enunciados/derivadas-parciais/medio/12.json';
+import ederivadasParciaisMedio13 from '@core/enunciados/enunciados/derivadas-parciais/medio/13.json';
+import ederivadasParciaisMedio14 from '@core/enunciados/enunciados/derivadas-parciais/medio/14.json';
+import ederivadasParciaisMedio15 from '@core/enunciados/enunciados/derivadas-parciais/medio/15.json';
 import ederivadasParciaisDificil01 from '@core/enunciados/enunciados/derivadas-parciais/dificil/01.json';
+import ederivadasParciaisDificil02 from '@core/enunciados/enunciados/derivadas-parciais/dificil/02.json';
+import ederivadasParciaisDificil03 from '@core/enunciados/enunciados/derivadas-parciais/dificil/03.json';
+import ederivadasParciaisDificil04 from '@core/enunciados/enunciados/derivadas-parciais/dificil/04.json';
+import ederivadasParciaisDificil05 from '@core/enunciados/enunciados/derivadas-parciais/dificil/05.json';
+import ederivadasParciaisDificil06 from '@core/enunciados/enunciados/derivadas-parciais/dificil/06.json';
+import ederivadasParciaisDificil07 from '@core/enunciados/enunciados/derivadas-parciais/dificil/07.json';
+import ederivadasParciaisDificil08 from '@core/enunciados/enunciados/derivadas-parciais/dificil/08.json';
+import ederivadasParciaisDificil09 from '@core/enunciados/enunciados/derivadas-parciais/dificil/09.json';
+import ederivadasParciaisDificil10 from '@core/enunciados/enunciados/derivadas-parciais/dificil/10.json';
+import ederivadasParciaisDificil11 from '@core/enunciados/enunciados/derivadas-parciais/dificil/11.json';
+import ederivadasParciaisDificil12 from '@core/enunciados/enunciados/derivadas-parciais/dificil/12.json';
+import ederivadasParciaisDificil13 from '@core/enunciados/enunciados/derivadas-parciais/dificil/13.json';
+import ederivadasParciaisDificil14 from '@core/enunciados/enunciados/derivadas-parciais/dificil/14.json';
+import ederivadasParciaisDificil15 from '@core/enunciados/enunciados/derivadas-parciais/dificil/15.json';
 import ederivadasParciaisExtremo01 from '@core/enunciados/enunciados/derivadas-parciais/extremo/01.json';
+import ederivadasParciaisExtremo02 from '@core/enunciados/enunciados/derivadas-parciais/extremo/02.json';
+import ederivadasParciaisExtremo03 from '@core/enunciados/enunciados/derivadas-parciais/extremo/03.json';
+import ederivadasParciaisExtremo04 from '@core/enunciados/enunciados/derivadas-parciais/extremo/04.json';
+import ederivadasParciaisExtremo05 from '@core/enunciados/enunciados/derivadas-parciais/extremo/05.json';
+import ederivadasParciaisExtremo06 from '@core/enunciados/enunciados/derivadas-parciais/extremo/06.json';
+import ederivadasParciaisExtremo07 from '@core/enunciados/enunciados/derivadas-parciais/extremo/07.json';
+import ederivadasParciaisExtremo08 from '@core/enunciados/enunciados/derivadas-parciais/extremo/08.json';
+import ederivadasParciaisExtremo09 from '@core/enunciados/enunciados/derivadas-parciais/extremo/09.json';
+import ederivadasParciaisExtremo10 from '@core/enunciados/enunciados/derivadas-parciais/extremo/10.json';
+import ederivadasParciaisExtremo11 from '@core/enunciados/enunciados/derivadas-parciais/extremo/11.json';
+import ederivadasParciaisExtremo12 from '@core/enunciados/enunciados/derivadas-parciais/extremo/12.json';
+import ederivadasParciaisExtremo13 from '@core/enunciados/enunciados/derivadas-parciais/extremo/13.json';
+import ederivadasParciaisExtremo14 from '@core/enunciados/enunciados/derivadas-parciais/extremo/14.json';
+import ederivadasParciaisExtremo15 from '@core/enunciados/enunciados/derivadas-parciais/extremo/15.json';
 import ederivadasParciaisMoldesForma1 from '@core/enunciados/enunciados/derivadas-parciais/moldes/forma-1.json';
 import ederivadasParciaisMoldesForma2 from '@core/enunciados/enunciados/derivadas-parciais/moldes/forma-2.json';
 import ederivadasParciaisMoldesForma3 from '@core/enunciados/enunciados/derivadas-parciais/moldes/forma-3.json';
@@ -1570,17 +1738,129 @@ import edistribuicaoNormalMoldesForma4 from '@core/enunciados/enunciados/distrib
 import edistribuicaoNormalMoldesForma5 from '@core/enunciados/enunciados/distribuicao-normal/moldes/forma-5.json';
 import edistribuicaoNormalMoldesForma6 from '@core/enunciados/enunciados/distribuicao-normal/moldes/forma-6.json';
 import eedoPrimeiraOrdemFacil01 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/01.json';
+import eedoPrimeiraOrdemFacil02 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/02.json';
+import eedoPrimeiraOrdemFacil03 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/03.json';
+import eedoPrimeiraOrdemFacil04 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/04.json';
+import eedoPrimeiraOrdemFacil05 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/05.json';
+import eedoPrimeiraOrdemFacil06 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/06.json';
+import eedoPrimeiraOrdemFacil07 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/07.json';
+import eedoPrimeiraOrdemFacil08 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/08.json';
+import eedoPrimeiraOrdemFacil09 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/09.json';
+import eedoPrimeiraOrdemFacil10 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/10.json';
+import eedoPrimeiraOrdemFacil11 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/11.json';
+import eedoPrimeiraOrdemFacil12 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/12.json';
+import eedoPrimeiraOrdemFacil13 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/13.json';
+import eedoPrimeiraOrdemFacil14 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/14.json';
+import eedoPrimeiraOrdemFacil15 from '@core/enunciados/enunciados/edo-primeira-ordem/facil/15.json';
 import eedoPrimeiraOrdemMedio01 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/01.json';
+import eedoPrimeiraOrdemMedio02 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/02.json';
+import eedoPrimeiraOrdemMedio03 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/03.json';
+import eedoPrimeiraOrdemMedio04 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/04.json';
+import eedoPrimeiraOrdemMedio05 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/05.json';
+import eedoPrimeiraOrdemMedio06 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/06.json';
+import eedoPrimeiraOrdemMedio07 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/07.json';
+import eedoPrimeiraOrdemMedio08 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/08.json';
+import eedoPrimeiraOrdemMedio09 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/09.json';
+import eedoPrimeiraOrdemMedio10 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/10.json';
+import eedoPrimeiraOrdemMedio11 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/11.json';
+import eedoPrimeiraOrdemMedio12 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/12.json';
+import eedoPrimeiraOrdemMedio13 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/13.json';
+import eedoPrimeiraOrdemMedio14 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/14.json';
+import eedoPrimeiraOrdemMedio15 from '@core/enunciados/enunciados/edo-primeira-ordem/medio/15.json';
 import eedoPrimeiraOrdemDificil01 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/01.json';
+import eedoPrimeiraOrdemDificil02 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/02.json';
+import eedoPrimeiraOrdemDificil03 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/03.json';
+import eedoPrimeiraOrdemDificil04 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/04.json';
+import eedoPrimeiraOrdemDificil05 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/05.json';
+import eedoPrimeiraOrdemDificil06 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/06.json';
+import eedoPrimeiraOrdemDificil07 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/07.json';
+import eedoPrimeiraOrdemDificil08 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/08.json';
+import eedoPrimeiraOrdemDificil09 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/09.json';
+import eedoPrimeiraOrdemDificil10 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/10.json';
+import eedoPrimeiraOrdemDificil11 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/11.json';
+import eedoPrimeiraOrdemDificil12 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/12.json';
+import eedoPrimeiraOrdemDificil13 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/13.json';
+import eedoPrimeiraOrdemDificil14 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/14.json';
+import eedoPrimeiraOrdemDificil15 from '@core/enunciados/enunciados/edo-primeira-ordem/dificil/15.json';
 import eedoPrimeiraOrdemExtremo01 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/01.json';
+import eedoPrimeiraOrdemExtremo02 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/02.json';
+import eedoPrimeiraOrdemExtremo03 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/03.json';
+import eedoPrimeiraOrdemExtremo04 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/04.json';
+import eedoPrimeiraOrdemExtremo05 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/05.json';
+import eedoPrimeiraOrdemExtremo06 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/06.json';
+import eedoPrimeiraOrdemExtremo07 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/07.json';
+import eedoPrimeiraOrdemExtremo08 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/08.json';
+import eedoPrimeiraOrdemExtremo09 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/09.json';
+import eedoPrimeiraOrdemExtremo10 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/10.json';
+import eedoPrimeiraOrdemExtremo11 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/11.json';
+import eedoPrimeiraOrdemExtremo12 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/12.json';
+import eedoPrimeiraOrdemExtremo13 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/13.json';
+import eedoPrimeiraOrdemExtremo14 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/14.json';
+import eedoPrimeiraOrdemExtremo15 from '@core/enunciados/enunciados/edo-primeira-ordem/extremo/15.json';
 import eedoPrimeiraOrdemMoldesForma1 from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/forma-1.json';
 import eedoPrimeiraOrdemMoldesForma2 from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/forma-2.json';
 import eedoPrimeiraOrdemMoldesForma3 from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/forma-3.json';
 import eedoPrimeiraOrdemMoldesForma4 from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/forma-4.json';
 import eedoSegundaOrdemFacil01 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/01.json';
+import eedoSegundaOrdemFacil02 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/02.json';
+import eedoSegundaOrdemFacil03 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/03.json';
+import eedoSegundaOrdemFacil04 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/04.json';
+import eedoSegundaOrdemFacil05 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/05.json';
+import eedoSegundaOrdemFacil06 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/06.json';
+import eedoSegundaOrdemFacil07 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/07.json';
+import eedoSegundaOrdemFacil08 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/08.json';
+import eedoSegundaOrdemFacil09 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/09.json';
+import eedoSegundaOrdemFacil10 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/10.json';
+import eedoSegundaOrdemFacil11 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/11.json';
+import eedoSegundaOrdemFacil12 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/12.json';
+import eedoSegundaOrdemFacil13 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/13.json';
+import eedoSegundaOrdemFacil14 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/14.json';
+import eedoSegundaOrdemFacil15 from '@core/enunciados/enunciados/edo-segunda-ordem/facil/15.json';
 import eedoSegundaOrdemMedio01 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/01.json';
+import eedoSegundaOrdemMedio02 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/02.json';
+import eedoSegundaOrdemMedio03 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/03.json';
+import eedoSegundaOrdemMedio04 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/04.json';
+import eedoSegundaOrdemMedio05 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/05.json';
+import eedoSegundaOrdemMedio06 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/06.json';
+import eedoSegundaOrdemMedio07 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/07.json';
+import eedoSegundaOrdemMedio08 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/08.json';
+import eedoSegundaOrdemMedio09 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/09.json';
+import eedoSegundaOrdemMedio10 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/10.json';
+import eedoSegundaOrdemMedio11 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/11.json';
+import eedoSegundaOrdemMedio12 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/12.json';
+import eedoSegundaOrdemMedio13 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/13.json';
+import eedoSegundaOrdemMedio14 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/14.json';
+import eedoSegundaOrdemMedio15 from '@core/enunciados/enunciados/edo-segunda-ordem/medio/15.json';
 import eedoSegundaOrdemDificil01 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/01.json';
+import eedoSegundaOrdemDificil02 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/02.json';
+import eedoSegundaOrdemDificil03 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/03.json';
+import eedoSegundaOrdemDificil04 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/04.json';
+import eedoSegundaOrdemDificil05 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/05.json';
+import eedoSegundaOrdemDificil06 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/06.json';
+import eedoSegundaOrdemDificil07 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/07.json';
+import eedoSegundaOrdemDificil08 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/08.json';
+import eedoSegundaOrdemDificil09 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/09.json';
+import eedoSegundaOrdemDificil10 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/10.json';
+import eedoSegundaOrdemDificil11 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/11.json';
+import eedoSegundaOrdemDificil12 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/12.json';
+import eedoSegundaOrdemDificil13 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/13.json';
+import eedoSegundaOrdemDificil14 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/14.json';
+import eedoSegundaOrdemDificil15 from '@core/enunciados/enunciados/edo-segunda-ordem/dificil/15.json';
 import eedoSegundaOrdemExtremo01 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/01.json';
+import eedoSegundaOrdemExtremo02 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/02.json';
+import eedoSegundaOrdemExtremo03 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/03.json';
+import eedoSegundaOrdemExtremo04 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/04.json';
+import eedoSegundaOrdemExtremo05 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/05.json';
+import eedoSegundaOrdemExtremo06 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/06.json';
+import eedoSegundaOrdemExtremo07 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/07.json';
+import eedoSegundaOrdemExtremo08 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/08.json';
+import eedoSegundaOrdemExtremo09 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/09.json';
+import eedoSegundaOrdemExtremo10 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/10.json';
+import eedoSegundaOrdemExtremo11 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/11.json';
+import eedoSegundaOrdemExtremo12 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/12.json';
+import eedoSegundaOrdemExtremo13 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/13.json';
+import eedoSegundaOrdemExtremo14 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/14.json';
+import eedoSegundaOrdemExtremo15 from '@core/enunciados/enunciados/edo-segunda-ordem/extremo/15.json';
 import eedoSegundaOrdemMoldesForma1 from '@core/enunciados/enunciados/edo-segunda-ordem/moldes/forma-1.json';
 import eedoSegundaOrdemMoldesForma2 from '@core/enunciados/enunciados/edo-segunda-ordem/moldes/forma-2.json';
 import eedoSegundaOrdemMoldesForma3 from '@core/enunciados/enunciados/edo-segunda-ordem/moldes/forma-3.json';
@@ -2871,9 +3151,65 @@ import efuncaoQuadraticaExtremo14 from '@core/enunciados/enunciados/funcao-quadr
 import efuncaoQuadraticaExtremo15 from '@core/enunciados/enunciados/funcao-quadratica/extremo/15.json';
 import efuncaoQuadraticaMoldesForma1 from '@core/enunciados/enunciados/funcao-quadratica/moldes/forma-1.json';
 import efuncoesDeVariasVariaveisFacil01 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/01.json';
+import efuncoesDeVariasVariaveisFacil02 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/02.json';
+import efuncoesDeVariasVariaveisFacil03 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/03.json';
+import efuncoesDeVariasVariaveisFacil04 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/04.json';
+import efuncoesDeVariasVariaveisFacil05 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/05.json';
+import efuncoesDeVariasVariaveisFacil06 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/06.json';
+import efuncoesDeVariasVariaveisFacil07 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/07.json';
+import efuncoesDeVariasVariaveisFacil08 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/08.json';
+import efuncoesDeVariasVariaveisFacil09 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/09.json';
+import efuncoesDeVariasVariaveisFacil10 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/10.json';
+import efuncoesDeVariasVariaveisFacil11 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/11.json';
+import efuncoesDeVariasVariaveisFacil12 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/12.json';
+import efuncoesDeVariasVariaveisFacil13 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/13.json';
+import efuncoesDeVariasVariaveisFacil14 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/14.json';
+import efuncoesDeVariasVariaveisFacil15 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/facil/15.json';
 import efuncoesDeVariasVariaveisMedio01 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/01.json';
+import efuncoesDeVariasVariaveisMedio02 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/02.json';
+import efuncoesDeVariasVariaveisMedio03 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/03.json';
+import efuncoesDeVariasVariaveisMedio04 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/04.json';
+import efuncoesDeVariasVariaveisMedio05 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/05.json';
+import efuncoesDeVariasVariaveisMedio06 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/06.json';
+import efuncoesDeVariasVariaveisMedio07 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/07.json';
+import efuncoesDeVariasVariaveisMedio08 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/08.json';
+import efuncoesDeVariasVariaveisMedio09 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/09.json';
+import efuncoesDeVariasVariaveisMedio10 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/10.json';
+import efuncoesDeVariasVariaveisMedio11 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/11.json';
+import efuncoesDeVariasVariaveisMedio12 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/12.json';
+import efuncoesDeVariasVariaveisMedio13 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/13.json';
+import efuncoesDeVariasVariaveisMedio14 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/14.json';
+import efuncoesDeVariasVariaveisMedio15 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/medio/15.json';
 import efuncoesDeVariasVariaveisDificil01 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/01.json';
+import efuncoesDeVariasVariaveisDificil02 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/02.json';
+import efuncoesDeVariasVariaveisDificil03 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/03.json';
+import efuncoesDeVariasVariaveisDificil04 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/04.json';
+import efuncoesDeVariasVariaveisDificil05 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/05.json';
+import efuncoesDeVariasVariaveisDificil06 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/06.json';
+import efuncoesDeVariasVariaveisDificil07 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/07.json';
+import efuncoesDeVariasVariaveisDificil08 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/08.json';
+import efuncoesDeVariasVariaveisDificil09 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/09.json';
+import efuncoesDeVariasVariaveisDificil10 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/10.json';
+import efuncoesDeVariasVariaveisDificil11 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/11.json';
+import efuncoesDeVariasVariaveisDificil12 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/12.json';
+import efuncoesDeVariasVariaveisDificil13 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/13.json';
+import efuncoesDeVariasVariaveisDificil14 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/14.json';
+import efuncoesDeVariasVariaveisDificil15 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/dificil/15.json';
 import efuncoesDeVariasVariaveisExtremo01 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/01.json';
+import efuncoesDeVariasVariaveisExtremo02 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/02.json';
+import efuncoesDeVariasVariaveisExtremo03 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/03.json';
+import efuncoesDeVariasVariaveisExtremo04 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/04.json';
+import efuncoesDeVariasVariaveisExtremo05 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/05.json';
+import efuncoesDeVariasVariaveisExtremo06 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/06.json';
+import efuncoesDeVariasVariaveisExtremo07 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/07.json';
+import efuncoesDeVariasVariaveisExtremo08 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/08.json';
+import efuncoesDeVariasVariaveisExtremo09 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/09.json';
+import efuncoesDeVariasVariaveisExtremo10 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/10.json';
+import efuncoesDeVariasVariaveisExtremo11 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/11.json';
+import efuncoesDeVariasVariaveisExtremo12 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/12.json';
+import efuncoesDeVariasVariaveisExtremo13 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/13.json';
+import efuncoesDeVariasVariaveisExtremo14 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/14.json';
+import efuncoesDeVariasVariaveisExtremo15 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/extremo/15.json';
 import efuncoesDeVariasVariaveisMoldesForma1 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/moldes/forma-1.json';
 import efuncoesDeVariasVariaveisMoldesForma2 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/moldes/forma-2.json';
 import efuncoesDeVariasVariaveisMoldesForma3 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/moldes/forma-3.json';
@@ -3088,9 +3424,65 @@ import egasesIdeaisExtremo13 from '@core/enunciados/enunciados/gases-ideais/extr
 import egasesIdeaisExtremo14 from '@core/enunciados/enunciados/gases-ideais/extremo/14.json';
 import egasesIdeaisExtremo15 from '@core/enunciados/enunciados/gases-ideais/extremo/15.json';
 import egradienteEDirecionalFacil01 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/01.json';
+import egradienteEDirecionalFacil02 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/02.json';
+import egradienteEDirecionalFacil03 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/03.json';
+import egradienteEDirecionalFacil04 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/04.json';
+import egradienteEDirecionalFacil05 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/05.json';
+import egradienteEDirecionalFacil06 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/06.json';
+import egradienteEDirecionalFacil07 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/07.json';
+import egradienteEDirecionalFacil08 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/08.json';
+import egradienteEDirecionalFacil09 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/09.json';
+import egradienteEDirecionalFacil10 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/10.json';
+import egradienteEDirecionalFacil11 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/11.json';
+import egradienteEDirecionalFacil12 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/12.json';
+import egradienteEDirecionalFacil13 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/13.json';
+import egradienteEDirecionalFacil14 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/14.json';
+import egradienteEDirecionalFacil15 from '@core/enunciados/enunciados/gradiente-e-direcional/facil/15.json';
 import egradienteEDirecionalMedio01 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/01.json';
+import egradienteEDirecionalMedio02 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/02.json';
+import egradienteEDirecionalMedio03 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/03.json';
+import egradienteEDirecionalMedio04 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/04.json';
+import egradienteEDirecionalMedio05 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/05.json';
+import egradienteEDirecionalMedio06 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/06.json';
+import egradienteEDirecionalMedio07 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/07.json';
+import egradienteEDirecionalMedio08 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/08.json';
+import egradienteEDirecionalMedio09 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/09.json';
+import egradienteEDirecionalMedio10 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/10.json';
+import egradienteEDirecionalMedio11 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/11.json';
+import egradienteEDirecionalMedio12 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/12.json';
+import egradienteEDirecionalMedio13 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/13.json';
+import egradienteEDirecionalMedio14 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/14.json';
+import egradienteEDirecionalMedio15 from '@core/enunciados/enunciados/gradiente-e-direcional/medio/15.json';
 import egradienteEDirecionalDificil01 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/01.json';
+import egradienteEDirecionalDificil02 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/02.json';
+import egradienteEDirecionalDificil03 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/03.json';
+import egradienteEDirecionalDificil04 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/04.json';
+import egradienteEDirecionalDificil05 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/05.json';
+import egradienteEDirecionalDificil06 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/06.json';
+import egradienteEDirecionalDificil07 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/07.json';
+import egradienteEDirecionalDificil08 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/08.json';
+import egradienteEDirecionalDificil09 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/09.json';
+import egradienteEDirecionalDificil10 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/10.json';
+import egradienteEDirecionalDificil11 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/11.json';
+import egradienteEDirecionalDificil12 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/12.json';
+import egradienteEDirecionalDificil13 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/13.json';
+import egradienteEDirecionalDificil14 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/14.json';
+import egradienteEDirecionalDificil15 from '@core/enunciados/enunciados/gradiente-e-direcional/dificil/15.json';
 import egradienteEDirecionalExtremo01 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/01.json';
+import egradienteEDirecionalExtremo02 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/02.json';
+import egradienteEDirecionalExtremo03 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/03.json';
+import egradienteEDirecionalExtremo04 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/04.json';
+import egradienteEDirecionalExtremo05 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/05.json';
+import egradienteEDirecionalExtremo06 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/06.json';
+import egradienteEDirecionalExtremo07 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/07.json';
+import egradienteEDirecionalExtremo08 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/08.json';
+import egradienteEDirecionalExtremo09 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/09.json';
+import egradienteEDirecionalExtremo10 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/10.json';
+import egradienteEDirecionalExtremo11 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/11.json';
+import egradienteEDirecionalExtremo12 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/12.json';
+import egradienteEDirecionalExtremo13 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/13.json';
+import egradienteEDirecionalExtremo14 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/14.json';
+import egradienteEDirecionalExtremo15 from '@core/enunciados/enunciados/gradiente-e-direcional/extremo/15.json';
 import egradienteEDirecionalMoldesForma1 from '@core/enunciados/enunciados/gradiente-e-direcional/moldes/forma-1.json';
 import egradienteEDirecionalMoldesForma2 from '@core/enunciados/enunciados/gradiente-e-direcional/moldes/forma-2.json';
 import egradienteEDirecionalMoldesForma3 from '@core/enunciados/enunciados/gradiente-e-direcional/moldes/forma-3.json';
@@ -3303,9 +3695,65 @@ import eimpulsoEMomentoMoldesForma4 from '@core/enunciados/enunciados/impulso-e-
 import eimpulsoEMomentoMoldesForma5 from '@core/enunciados/enunciados/impulso-e-momento/moldes/forma-5.json';
 import einequacoesMoldesForma1 from '@core/enunciados/enunciados/inequacoes/moldes/forma-1.json';
 import eintegraisDeLinhaFacil01 from '@core/enunciados/enunciados/integrais-de-linha/facil/01.json';
+import eintegraisDeLinhaFacil02 from '@core/enunciados/enunciados/integrais-de-linha/facil/02.json';
+import eintegraisDeLinhaFacil03 from '@core/enunciados/enunciados/integrais-de-linha/facil/03.json';
+import eintegraisDeLinhaFacil04 from '@core/enunciados/enunciados/integrais-de-linha/facil/04.json';
+import eintegraisDeLinhaFacil05 from '@core/enunciados/enunciados/integrais-de-linha/facil/05.json';
+import eintegraisDeLinhaFacil06 from '@core/enunciados/enunciados/integrais-de-linha/facil/06.json';
+import eintegraisDeLinhaFacil07 from '@core/enunciados/enunciados/integrais-de-linha/facil/07.json';
+import eintegraisDeLinhaFacil08 from '@core/enunciados/enunciados/integrais-de-linha/facil/08.json';
+import eintegraisDeLinhaFacil09 from '@core/enunciados/enunciados/integrais-de-linha/facil/09.json';
+import eintegraisDeLinhaFacil10 from '@core/enunciados/enunciados/integrais-de-linha/facil/10.json';
+import eintegraisDeLinhaFacil11 from '@core/enunciados/enunciados/integrais-de-linha/facil/11.json';
+import eintegraisDeLinhaFacil12 from '@core/enunciados/enunciados/integrais-de-linha/facil/12.json';
+import eintegraisDeLinhaFacil13 from '@core/enunciados/enunciados/integrais-de-linha/facil/13.json';
+import eintegraisDeLinhaFacil14 from '@core/enunciados/enunciados/integrais-de-linha/facil/14.json';
+import eintegraisDeLinhaFacil15 from '@core/enunciados/enunciados/integrais-de-linha/facil/15.json';
 import eintegraisDeLinhaMedio01 from '@core/enunciados/enunciados/integrais-de-linha/medio/01.json';
+import eintegraisDeLinhaMedio02 from '@core/enunciados/enunciados/integrais-de-linha/medio/02.json';
+import eintegraisDeLinhaMedio03 from '@core/enunciados/enunciados/integrais-de-linha/medio/03.json';
+import eintegraisDeLinhaMedio04 from '@core/enunciados/enunciados/integrais-de-linha/medio/04.json';
+import eintegraisDeLinhaMedio05 from '@core/enunciados/enunciados/integrais-de-linha/medio/05.json';
+import eintegraisDeLinhaMedio06 from '@core/enunciados/enunciados/integrais-de-linha/medio/06.json';
+import eintegraisDeLinhaMedio07 from '@core/enunciados/enunciados/integrais-de-linha/medio/07.json';
+import eintegraisDeLinhaMedio08 from '@core/enunciados/enunciados/integrais-de-linha/medio/08.json';
+import eintegraisDeLinhaMedio09 from '@core/enunciados/enunciados/integrais-de-linha/medio/09.json';
+import eintegraisDeLinhaMedio10 from '@core/enunciados/enunciados/integrais-de-linha/medio/10.json';
+import eintegraisDeLinhaMedio11 from '@core/enunciados/enunciados/integrais-de-linha/medio/11.json';
+import eintegraisDeLinhaMedio12 from '@core/enunciados/enunciados/integrais-de-linha/medio/12.json';
+import eintegraisDeLinhaMedio13 from '@core/enunciados/enunciados/integrais-de-linha/medio/13.json';
+import eintegraisDeLinhaMedio14 from '@core/enunciados/enunciados/integrais-de-linha/medio/14.json';
+import eintegraisDeLinhaMedio15 from '@core/enunciados/enunciados/integrais-de-linha/medio/15.json';
 import eintegraisDeLinhaDificil01 from '@core/enunciados/enunciados/integrais-de-linha/dificil/01.json';
+import eintegraisDeLinhaDificil02 from '@core/enunciados/enunciados/integrais-de-linha/dificil/02.json';
+import eintegraisDeLinhaDificil03 from '@core/enunciados/enunciados/integrais-de-linha/dificil/03.json';
+import eintegraisDeLinhaDificil04 from '@core/enunciados/enunciados/integrais-de-linha/dificil/04.json';
+import eintegraisDeLinhaDificil05 from '@core/enunciados/enunciados/integrais-de-linha/dificil/05.json';
+import eintegraisDeLinhaDificil06 from '@core/enunciados/enunciados/integrais-de-linha/dificil/06.json';
+import eintegraisDeLinhaDificil07 from '@core/enunciados/enunciados/integrais-de-linha/dificil/07.json';
+import eintegraisDeLinhaDificil08 from '@core/enunciados/enunciados/integrais-de-linha/dificil/08.json';
+import eintegraisDeLinhaDificil09 from '@core/enunciados/enunciados/integrais-de-linha/dificil/09.json';
+import eintegraisDeLinhaDificil10 from '@core/enunciados/enunciados/integrais-de-linha/dificil/10.json';
+import eintegraisDeLinhaDificil11 from '@core/enunciados/enunciados/integrais-de-linha/dificil/11.json';
+import eintegraisDeLinhaDificil12 from '@core/enunciados/enunciados/integrais-de-linha/dificil/12.json';
+import eintegraisDeLinhaDificil13 from '@core/enunciados/enunciados/integrais-de-linha/dificil/13.json';
+import eintegraisDeLinhaDificil14 from '@core/enunciados/enunciados/integrais-de-linha/dificil/14.json';
+import eintegraisDeLinhaDificil15 from '@core/enunciados/enunciados/integrais-de-linha/dificil/15.json';
 import eintegraisDeLinhaExtremo01 from '@core/enunciados/enunciados/integrais-de-linha/extremo/01.json';
+import eintegraisDeLinhaExtremo02 from '@core/enunciados/enunciados/integrais-de-linha/extremo/02.json';
+import eintegraisDeLinhaExtremo03 from '@core/enunciados/enunciados/integrais-de-linha/extremo/03.json';
+import eintegraisDeLinhaExtremo04 from '@core/enunciados/enunciados/integrais-de-linha/extremo/04.json';
+import eintegraisDeLinhaExtremo05 from '@core/enunciados/enunciados/integrais-de-linha/extremo/05.json';
+import eintegraisDeLinhaExtremo06 from '@core/enunciados/enunciados/integrais-de-linha/extremo/06.json';
+import eintegraisDeLinhaExtremo07 from '@core/enunciados/enunciados/integrais-de-linha/extremo/07.json';
+import eintegraisDeLinhaExtremo08 from '@core/enunciados/enunciados/integrais-de-linha/extremo/08.json';
+import eintegraisDeLinhaExtremo09 from '@core/enunciados/enunciados/integrais-de-linha/extremo/09.json';
+import eintegraisDeLinhaExtremo10 from '@core/enunciados/enunciados/integrais-de-linha/extremo/10.json';
+import eintegraisDeLinhaExtremo11 from '@core/enunciados/enunciados/integrais-de-linha/extremo/11.json';
+import eintegraisDeLinhaExtremo12 from '@core/enunciados/enunciados/integrais-de-linha/extremo/12.json';
+import eintegraisDeLinhaExtremo13 from '@core/enunciados/enunciados/integrais-de-linha/extremo/13.json';
+import eintegraisDeLinhaExtremo14 from '@core/enunciados/enunciados/integrais-de-linha/extremo/14.json';
+import eintegraisDeLinhaExtremo15 from '@core/enunciados/enunciados/integrais-de-linha/extremo/15.json';
 import eintegraisDeLinhaMoldesForma1 from '@core/enunciados/enunciados/integrais-de-linha/moldes/forma-1.json';
 import eintegraisDeLinhaMoldesForma2 from '@core/enunciados/enunciados/integrais-de-linha/moldes/forma-2.json';
 import eintegraisDeLinhaMoldesForma3 from '@core/enunciados/enunciados/integrais-de-linha/moldes/forma-3.json';
@@ -3376,9 +3824,65 @@ import eintegraisImpropriasMoldesForma3 from '@core/enunciados/enunciados/integr
 import eintegraisImpropriasMoldesForma4 from '@core/enunciados/enunciados/integrais-improprias/moldes/forma-4.json';
 import eintegraisImpropriasMoldesForma5 from '@core/enunciados/enunciados/integrais-improprias/moldes/forma-5.json';
 import eintegraisMultiplasFacil01 from '@core/enunciados/enunciados/integrais-multiplas/facil/01.json';
+import eintegraisMultiplasFacil02 from '@core/enunciados/enunciados/integrais-multiplas/facil/02.json';
+import eintegraisMultiplasFacil03 from '@core/enunciados/enunciados/integrais-multiplas/facil/03.json';
+import eintegraisMultiplasFacil04 from '@core/enunciados/enunciados/integrais-multiplas/facil/04.json';
+import eintegraisMultiplasFacil05 from '@core/enunciados/enunciados/integrais-multiplas/facil/05.json';
+import eintegraisMultiplasFacil06 from '@core/enunciados/enunciados/integrais-multiplas/facil/06.json';
+import eintegraisMultiplasFacil07 from '@core/enunciados/enunciados/integrais-multiplas/facil/07.json';
+import eintegraisMultiplasFacil08 from '@core/enunciados/enunciados/integrais-multiplas/facil/08.json';
+import eintegraisMultiplasFacil09 from '@core/enunciados/enunciados/integrais-multiplas/facil/09.json';
+import eintegraisMultiplasFacil10 from '@core/enunciados/enunciados/integrais-multiplas/facil/10.json';
+import eintegraisMultiplasFacil11 from '@core/enunciados/enunciados/integrais-multiplas/facil/11.json';
+import eintegraisMultiplasFacil12 from '@core/enunciados/enunciados/integrais-multiplas/facil/12.json';
+import eintegraisMultiplasFacil13 from '@core/enunciados/enunciados/integrais-multiplas/facil/13.json';
+import eintegraisMultiplasFacil14 from '@core/enunciados/enunciados/integrais-multiplas/facil/14.json';
+import eintegraisMultiplasFacil15 from '@core/enunciados/enunciados/integrais-multiplas/facil/15.json';
 import eintegraisMultiplasMedio01 from '@core/enunciados/enunciados/integrais-multiplas/medio/01.json';
+import eintegraisMultiplasMedio02 from '@core/enunciados/enunciados/integrais-multiplas/medio/02.json';
+import eintegraisMultiplasMedio03 from '@core/enunciados/enunciados/integrais-multiplas/medio/03.json';
+import eintegraisMultiplasMedio04 from '@core/enunciados/enunciados/integrais-multiplas/medio/04.json';
+import eintegraisMultiplasMedio05 from '@core/enunciados/enunciados/integrais-multiplas/medio/05.json';
+import eintegraisMultiplasMedio06 from '@core/enunciados/enunciados/integrais-multiplas/medio/06.json';
+import eintegraisMultiplasMedio07 from '@core/enunciados/enunciados/integrais-multiplas/medio/07.json';
+import eintegraisMultiplasMedio08 from '@core/enunciados/enunciados/integrais-multiplas/medio/08.json';
+import eintegraisMultiplasMedio09 from '@core/enunciados/enunciados/integrais-multiplas/medio/09.json';
+import eintegraisMultiplasMedio10 from '@core/enunciados/enunciados/integrais-multiplas/medio/10.json';
+import eintegraisMultiplasMedio11 from '@core/enunciados/enunciados/integrais-multiplas/medio/11.json';
+import eintegraisMultiplasMedio12 from '@core/enunciados/enunciados/integrais-multiplas/medio/12.json';
+import eintegraisMultiplasMedio13 from '@core/enunciados/enunciados/integrais-multiplas/medio/13.json';
+import eintegraisMultiplasMedio14 from '@core/enunciados/enunciados/integrais-multiplas/medio/14.json';
+import eintegraisMultiplasMedio15 from '@core/enunciados/enunciados/integrais-multiplas/medio/15.json';
 import eintegraisMultiplasDificil01 from '@core/enunciados/enunciados/integrais-multiplas/dificil/01.json';
+import eintegraisMultiplasDificil02 from '@core/enunciados/enunciados/integrais-multiplas/dificil/02.json';
+import eintegraisMultiplasDificil03 from '@core/enunciados/enunciados/integrais-multiplas/dificil/03.json';
+import eintegraisMultiplasDificil04 from '@core/enunciados/enunciados/integrais-multiplas/dificil/04.json';
+import eintegraisMultiplasDificil05 from '@core/enunciados/enunciados/integrais-multiplas/dificil/05.json';
+import eintegraisMultiplasDificil06 from '@core/enunciados/enunciados/integrais-multiplas/dificil/06.json';
+import eintegraisMultiplasDificil07 from '@core/enunciados/enunciados/integrais-multiplas/dificil/07.json';
+import eintegraisMultiplasDificil08 from '@core/enunciados/enunciados/integrais-multiplas/dificil/08.json';
+import eintegraisMultiplasDificil09 from '@core/enunciados/enunciados/integrais-multiplas/dificil/09.json';
+import eintegraisMultiplasDificil10 from '@core/enunciados/enunciados/integrais-multiplas/dificil/10.json';
+import eintegraisMultiplasDificil11 from '@core/enunciados/enunciados/integrais-multiplas/dificil/11.json';
+import eintegraisMultiplasDificil12 from '@core/enunciados/enunciados/integrais-multiplas/dificil/12.json';
+import eintegraisMultiplasDificil13 from '@core/enunciados/enunciados/integrais-multiplas/dificil/13.json';
+import eintegraisMultiplasDificil14 from '@core/enunciados/enunciados/integrais-multiplas/dificil/14.json';
+import eintegraisMultiplasDificil15 from '@core/enunciados/enunciados/integrais-multiplas/dificil/15.json';
 import eintegraisMultiplasExtremo01 from '@core/enunciados/enunciados/integrais-multiplas/extremo/01.json';
+import eintegraisMultiplasExtremo02 from '@core/enunciados/enunciados/integrais-multiplas/extremo/02.json';
+import eintegraisMultiplasExtremo03 from '@core/enunciados/enunciados/integrais-multiplas/extremo/03.json';
+import eintegraisMultiplasExtremo04 from '@core/enunciados/enunciados/integrais-multiplas/extremo/04.json';
+import eintegraisMultiplasExtremo05 from '@core/enunciados/enunciados/integrais-multiplas/extremo/05.json';
+import eintegraisMultiplasExtremo06 from '@core/enunciados/enunciados/integrais-multiplas/extremo/06.json';
+import eintegraisMultiplasExtremo07 from '@core/enunciados/enunciados/integrais-multiplas/extremo/07.json';
+import eintegraisMultiplasExtremo08 from '@core/enunciados/enunciados/integrais-multiplas/extremo/08.json';
+import eintegraisMultiplasExtremo09 from '@core/enunciados/enunciados/integrais-multiplas/extremo/09.json';
+import eintegraisMultiplasExtremo10 from '@core/enunciados/enunciados/integrais-multiplas/extremo/10.json';
+import eintegraisMultiplasExtremo11 from '@core/enunciados/enunciados/integrais-multiplas/extremo/11.json';
+import eintegraisMultiplasExtremo12 from '@core/enunciados/enunciados/integrais-multiplas/extremo/12.json';
+import eintegraisMultiplasExtremo13 from '@core/enunciados/enunciados/integrais-multiplas/extremo/13.json';
+import eintegraisMultiplasExtremo14 from '@core/enunciados/enunciados/integrais-multiplas/extremo/14.json';
+import eintegraisMultiplasExtremo15 from '@core/enunciados/enunciados/integrais-multiplas/extremo/15.json';
 import eintegraisMultiplasMoldesForma1 from '@core/enunciados/enunciados/integrais-multiplas/moldes/forma-1.json';
 import eintegraisMultiplasMoldesForma2 from '@core/enunciados/enunciados/integrais-multiplas/moldes/forma-2.json';
 import eintegralDefinidaFacil01 from '@core/enunciados/enunciados/integral-definida/facil/01.json';
@@ -4063,9 +4567,65 @@ import ematrizesDeterminantesMoldesForma3 from '@core/enunciados/enunciados/matr
 import ematrizesDeterminantesMoldesForma4 from '@core/enunciados/enunciados/matrizes-determinantes/moldes/forma-4.json';
 import ematrizesDeterminantesMoldesForma5 from '@core/enunciados/enunciados/matrizes-determinantes/moldes/forma-5.json';
 import emetodosNumericosFacil01 from '@core/enunciados/enunciados/metodos-numericos/facil/01.json';
+import emetodosNumericosFacil02 from '@core/enunciados/enunciados/metodos-numericos/facil/02.json';
+import emetodosNumericosFacil03 from '@core/enunciados/enunciados/metodos-numericos/facil/03.json';
+import emetodosNumericosFacil04 from '@core/enunciados/enunciados/metodos-numericos/facil/04.json';
+import emetodosNumericosFacil05 from '@core/enunciados/enunciados/metodos-numericos/facil/05.json';
+import emetodosNumericosFacil06 from '@core/enunciados/enunciados/metodos-numericos/facil/06.json';
+import emetodosNumericosFacil07 from '@core/enunciados/enunciados/metodos-numericos/facil/07.json';
+import emetodosNumericosFacil08 from '@core/enunciados/enunciados/metodos-numericos/facil/08.json';
+import emetodosNumericosFacil09 from '@core/enunciados/enunciados/metodos-numericos/facil/09.json';
+import emetodosNumericosFacil10 from '@core/enunciados/enunciados/metodos-numericos/facil/10.json';
+import emetodosNumericosFacil11 from '@core/enunciados/enunciados/metodos-numericos/facil/11.json';
+import emetodosNumericosFacil12 from '@core/enunciados/enunciados/metodos-numericos/facil/12.json';
+import emetodosNumericosFacil13 from '@core/enunciados/enunciados/metodos-numericos/facil/13.json';
+import emetodosNumericosFacil14 from '@core/enunciados/enunciados/metodos-numericos/facil/14.json';
+import emetodosNumericosFacil15 from '@core/enunciados/enunciados/metodos-numericos/facil/15.json';
 import emetodosNumericosMedio01 from '@core/enunciados/enunciados/metodos-numericos/medio/01.json';
+import emetodosNumericosMedio02 from '@core/enunciados/enunciados/metodos-numericos/medio/02.json';
+import emetodosNumericosMedio03 from '@core/enunciados/enunciados/metodos-numericos/medio/03.json';
+import emetodosNumericosMedio04 from '@core/enunciados/enunciados/metodos-numericos/medio/04.json';
+import emetodosNumericosMedio05 from '@core/enunciados/enunciados/metodos-numericos/medio/05.json';
+import emetodosNumericosMedio06 from '@core/enunciados/enunciados/metodos-numericos/medio/06.json';
+import emetodosNumericosMedio07 from '@core/enunciados/enunciados/metodos-numericos/medio/07.json';
+import emetodosNumericosMedio08 from '@core/enunciados/enunciados/metodos-numericos/medio/08.json';
+import emetodosNumericosMedio09 from '@core/enunciados/enunciados/metodos-numericos/medio/09.json';
+import emetodosNumericosMedio10 from '@core/enunciados/enunciados/metodos-numericos/medio/10.json';
+import emetodosNumericosMedio11 from '@core/enunciados/enunciados/metodos-numericos/medio/11.json';
+import emetodosNumericosMedio12 from '@core/enunciados/enunciados/metodos-numericos/medio/12.json';
+import emetodosNumericosMedio13 from '@core/enunciados/enunciados/metodos-numericos/medio/13.json';
+import emetodosNumericosMedio14 from '@core/enunciados/enunciados/metodos-numericos/medio/14.json';
+import emetodosNumericosMedio15 from '@core/enunciados/enunciados/metodos-numericos/medio/15.json';
 import emetodosNumericosDificil01 from '@core/enunciados/enunciados/metodos-numericos/dificil/01.json';
+import emetodosNumericosDificil02 from '@core/enunciados/enunciados/metodos-numericos/dificil/02.json';
+import emetodosNumericosDificil03 from '@core/enunciados/enunciados/metodos-numericos/dificil/03.json';
+import emetodosNumericosDificil04 from '@core/enunciados/enunciados/metodos-numericos/dificil/04.json';
+import emetodosNumericosDificil05 from '@core/enunciados/enunciados/metodos-numericos/dificil/05.json';
+import emetodosNumericosDificil06 from '@core/enunciados/enunciados/metodos-numericos/dificil/06.json';
+import emetodosNumericosDificil07 from '@core/enunciados/enunciados/metodos-numericos/dificil/07.json';
+import emetodosNumericosDificil08 from '@core/enunciados/enunciados/metodos-numericos/dificil/08.json';
+import emetodosNumericosDificil09 from '@core/enunciados/enunciados/metodos-numericos/dificil/09.json';
+import emetodosNumericosDificil10 from '@core/enunciados/enunciados/metodos-numericos/dificil/10.json';
+import emetodosNumericosDificil11 from '@core/enunciados/enunciados/metodos-numericos/dificil/11.json';
+import emetodosNumericosDificil12 from '@core/enunciados/enunciados/metodos-numericos/dificil/12.json';
+import emetodosNumericosDificil13 from '@core/enunciados/enunciados/metodos-numericos/dificil/13.json';
+import emetodosNumericosDificil14 from '@core/enunciados/enunciados/metodos-numericos/dificil/14.json';
+import emetodosNumericosDificil15 from '@core/enunciados/enunciados/metodos-numericos/dificil/15.json';
 import emetodosNumericosExtremo01 from '@core/enunciados/enunciados/metodos-numericos/extremo/01.json';
+import emetodosNumericosExtremo02 from '@core/enunciados/enunciados/metodos-numericos/extremo/02.json';
+import emetodosNumericosExtremo03 from '@core/enunciados/enunciados/metodos-numericos/extremo/03.json';
+import emetodosNumericosExtremo04 from '@core/enunciados/enunciados/metodos-numericos/extremo/04.json';
+import emetodosNumericosExtremo05 from '@core/enunciados/enunciados/metodos-numericos/extremo/05.json';
+import emetodosNumericosExtremo06 from '@core/enunciados/enunciados/metodos-numericos/extremo/06.json';
+import emetodosNumericosExtremo07 from '@core/enunciados/enunciados/metodos-numericos/extremo/07.json';
+import emetodosNumericosExtremo08 from '@core/enunciados/enunciados/metodos-numericos/extremo/08.json';
+import emetodosNumericosExtremo09 from '@core/enunciados/enunciados/metodos-numericos/extremo/09.json';
+import emetodosNumericosExtremo10 from '@core/enunciados/enunciados/metodos-numericos/extremo/10.json';
+import emetodosNumericosExtremo11 from '@core/enunciados/enunciados/metodos-numericos/extremo/11.json';
+import emetodosNumericosExtremo12 from '@core/enunciados/enunciados/metodos-numericos/extremo/12.json';
+import emetodosNumericosExtremo13 from '@core/enunciados/enunciados/metodos-numericos/extremo/13.json';
+import emetodosNumericosExtremo14 from '@core/enunciados/enunciados/metodos-numericos/extremo/14.json';
+import emetodosNumericosExtremo15 from '@core/enunciados/enunciados/metodos-numericos/extremo/15.json';
 import emetodosNumericosMoldesForma1 from '@core/enunciados/enunciados/metodos-numericos/moldes/forma-1.json';
 import emetodosNumericosMoldesForma2 from '@core/enunciados/enunciados/metodos-numericos/moldes/forma-2.json';
 import emetodosNumericosMoldesForma3 from '@core/enunciados/enunciados/metodos-numericos/moldes/forma-3.json';
@@ -6093,9 +6653,65 @@ import eteoremaFundamentalMoldesForma1 from '@core/enunciados/enunciados/teorema
 import eteoremaFundamentalMoldesForma2 from '@core/enunciados/enunciados/teorema-fundamental/moldes/forma-2.json';
 import eteoremaFundamentalMoldesForma3 from '@core/enunciados/enunciados/teorema-fundamental/moldes/forma-3.json';
 import eteoremasIntegraisFacil01 from '@core/enunciados/enunciados/teoremas-integrais/facil/01.json';
+import eteoremasIntegraisFacil02 from '@core/enunciados/enunciados/teoremas-integrais/facil/02.json';
+import eteoremasIntegraisFacil03 from '@core/enunciados/enunciados/teoremas-integrais/facil/03.json';
+import eteoremasIntegraisFacil04 from '@core/enunciados/enunciados/teoremas-integrais/facil/04.json';
+import eteoremasIntegraisFacil05 from '@core/enunciados/enunciados/teoremas-integrais/facil/05.json';
+import eteoremasIntegraisFacil06 from '@core/enunciados/enunciados/teoremas-integrais/facil/06.json';
+import eteoremasIntegraisFacil07 from '@core/enunciados/enunciados/teoremas-integrais/facil/07.json';
+import eteoremasIntegraisFacil08 from '@core/enunciados/enunciados/teoremas-integrais/facil/08.json';
+import eteoremasIntegraisFacil09 from '@core/enunciados/enunciados/teoremas-integrais/facil/09.json';
+import eteoremasIntegraisFacil10 from '@core/enunciados/enunciados/teoremas-integrais/facil/10.json';
+import eteoremasIntegraisFacil11 from '@core/enunciados/enunciados/teoremas-integrais/facil/11.json';
+import eteoremasIntegraisFacil12 from '@core/enunciados/enunciados/teoremas-integrais/facil/12.json';
+import eteoremasIntegraisFacil13 from '@core/enunciados/enunciados/teoremas-integrais/facil/13.json';
+import eteoremasIntegraisFacil14 from '@core/enunciados/enunciados/teoremas-integrais/facil/14.json';
+import eteoremasIntegraisFacil15 from '@core/enunciados/enunciados/teoremas-integrais/facil/15.json';
 import eteoremasIntegraisMedio01 from '@core/enunciados/enunciados/teoremas-integrais/medio/01.json';
+import eteoremasIntegraisMedio02 from '@core/enunciados/enunciados/teoremas-integrais/medio/02.json';
+import eteoremasIntegraisMedio03 from '@core/enunciados/enunciados/teoremas-integrais/medio/03.json';
+import eteoremasIntegraisMedio04 from '@core/enunciados/enunciados/teoremas-integrais/medio/04.json';
+import eteoremasIntegraisMedio05 from '@core/enunciados/enunciados/teoremas-integrais/medio/05.json';
+import eteoremasIntegraisMedio06 from '@core/enunciados/enunciados/teoremas-integrais/medio/06.json';
+import eteoremasIntegraisMedio07 from '@core/enunciados/enunciados/teoremas-integrais/medio/07.json';
+import eteoremasIntegraisMedio08 from '@core/enunciados/enunciados/teoremas-integrais/medio/08.json';
+import eteoremasIntegraisMedio09 from '@core/enunciados/enunciados/teoremas-integrais/medio/09.json';
+import eteoremasIntegraisMedio10 from '@core/enunciados/enunciados/teoremas-integrais/medio/10.json';
+import eteoremasIntegraisMedio11 from '@core/enunciados/enunciados/teoremas-integrais/medio/11.json';
+import eteoremasIntegraisMedio12 from '@core/enunciados/enunciados/teoremas-integrais/medio/12.json';
+import eteoremasIntegraisMedio13 from '@core/enunciados/enunciados/teoremas-integrais/medio/13.json';
+import eteoremasIntegraisMedio14 from '@core/enunciados/enunciados/teoremas-integrais/medio/14.json';
+import eteoremasIntegraisMedio15 from '@core/enunciados/enunciados/teoremas-integrais/medio/15.json';
 import eteoremasIntegraisDificil01 from '@core/enunciados/enunciados/teoremas-integrais/dificil/01.json';
+import eteoremasIntegraisDificil02 from '@core/enunciados/enunciados/teoremas-integrais/dificil/02.json';
+import eteoremasIntegraisDificil03 from '@core/enunciados/enunciados/teoremas-integrais/dificil/03.json';
+import eteoremasIntegraisDificil04 from '@core/enunciados/enunciados/teoremas-integrais/dificil/04.json';
+import eteoremasIntegraisDificil05 from '@core/enunciados/enunciados/teoremas-integrais/dificil/05.json';
+import eteoremasIntegraisDificil06 from '@core/enunciados/enunciados/teoremas-integrais/dificil/06.json';
+import eteoremasIntegraisDificil07 from '@core/enunciados/enunciados/teoremas-integrais/dificil/07.json';
+import eteoremasIntegraisDificil08 from '@core/enunciados/enunciados/teoremas-integrais/dificil/08.json';
+import eteoremasIntegraisDificil09 from '@core/enunciados/enunciados/teoremas-integrais/dificil/09.json';
+import eteoremasIntegraisDificil10 from '@core/enunciados/enunciados/teoremas-integrais/dificil/10.json';
+import eteoremasIntegraisDificil11 from '@core/enunciados/enunciados/teoremas-integrais/dificil/11.json';
+import eteoremasIntegraisDificil12 from '@core/enunciados/enunciados/teoremas-integrais/dificil/12.json';
+import eteoremasIntegraisDificil13 from '@core/enunciados/enunciados/teoremas-integrais/dificil/13.json';
+import eteoremasIntegraisDificil14 from '@core/enunciados/enunciados/teoremas-integrais/dificil/14.json';
+import eteoremasIntegraisDificil15 from '@core/enunciados/enunciados/teoremas-integrais/dificil/15.json';
 import eteoremasIntegraisExtremo01 from '@core/enunciados/enunciados/teoremas-integrais/extremo/01.json';
+import eteoremasIntegraisExtremo02 from '@core/enunciados/enunciados/teoremas-integrais/extremo/02.json';
+import eteoremasIntegraisExtremo03 from '@core/enunciados/enunciados/teoremas-integrais/extremo/03.json';
+import eteoremasIntegraisExtremo04 from '@core/enunciados/enunciados/teoremas-integrais/extremo/04.json';
+import eteoremasIntegraisExtremo05 from '@core/enunciados/enunciados/teoremas-integrais/extremo/05.json';
+import eteoremasIntegraisExtremo06 from '@core/enunciados/enunciados/teoremas-integrais/extremo/06.json';
+import eteoremasIntegraisExtremo07 from '@core/enunciados/enunciados/teoremas-integrais/extremo/07.json';
+import eteoremasIntegraisExtremo08 from '@core/enunciados/enunciados/teoremas-integrais/extremo/08.json';
+import eteoremasIntegraisExtremo09 from '@core/enunciados/enunciados/teoremas-integrais/extremo/09.json';
+import eteoremasIntegraisExtremo10 from '@core/enunciados/enunciados/teoremas-integrais/extremo/10.json';
+import eteoremasIntegraisExtremo11 from '@core/enunciados/enunciados/teoremas-integrais/extremo/11.json';
+import eteoremasIntegraisExtremo12 from '@core/enunciados/enunciados/teoremas-integrais/extremo/12.json';
+import eteoremasIntegraisExtremo13 from '@core/enunciados/enunciados/teoremas-integrais/extremo/13.json';
+import eteoremasIntegraisExtremo14 from '@core/enunciados/enunciados/teoremas-integrais/extremo/14.json';
+import eteoremasIntegraisExtremo15 from '@core/enunciados/enunciados/teoremas-integrais/extremo/15.json';
 import eteoremasIntegraisMoldesForma1 from '@core/enunciados/enunciados/teoremas-integrais/moldes/forma-1.json';
 import eteoremasIntegraisMoldesForma2 from '@core/enunciados/enunciados/teoremas-integrais/moldes/forma-2.json';
 import eteoremasIntegraisMoldesForma3 from '@core/enunciados/enunciados/teoremas-integrais/moldes/forma-3.json';
@@ -7024,9 +7640,65 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'aplicacoes-da-integral', forma: 'forma-2', conteudo: eaplicacoesDaIntegralMoldesForma2 },
   { topico: 'aplicacoes-da-integral', forma: 'forma-3', conteudo: eaplicacoesDaIntegralMoldesForma3 },
   { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil01 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil02 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil03 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil04 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil05 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil06 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil07 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil08 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil09 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil10 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil11 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil12 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil13 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil14 },
+  { topico: 'aplicacoes-de-edo', nivel: 'facil', conteudo: eaplicacoesDeEdoFacil15 },
   { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio01 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio02 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio03 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio04 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio05 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio06 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio07 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio08 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio09 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio10 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio11 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio12 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio13 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio14 },
+  { topico: 'aplicacoes-de-edo', nivel: 'medio', conteudo: eaplicacoesDeEdoMedio15 },
   { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil01 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil02 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil03 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil04 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil05 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil06 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil07 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil08 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil09 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil10 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil11 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil12 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil13 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil14 },
+  { topico: 'aplicacoes-de-edo', nivel: 'dificil', conteudo: eaplicacoesDeEdoDificil15 },
   { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo01 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo02 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo03 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo04 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo05 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo06 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo07 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo08 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo09 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo10 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo11 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo12 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo13 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo14 },
+  { topico: 'aplicacoes-de-edo', nivel: 'extremo', conteudo: eaplicacoesDeEdoExtremo15 },
   { topico: 'aplicacoes-de-edo', forma: 'forma-1', conteudo: eaplicacoesDeEdoMoldesForma1 },
   { topico: 'aplicacoes-de-edo', forma: 'forma-2', conteudo: eaplicacoesDeEdoMoldesForma2 },
   { topico: 'aplicacoes-de-edo', forma: 'forma-3', conteudo: eaplicacoesDeEdoMoldesForma3 },
@@ -7822,9 +8494,65 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'continuidade', forma: 'forma-2', conteudo: econtinuidadeMoldesForma2 },
   { topico: 'continuidade', forma: 'forma-3', conteudo: econtinuidadeMoldesForma3 },
   { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil01 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil02 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil03 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil04 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil05 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil06 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil07 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil08 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil09 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil10 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil11 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil12 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil13 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil14 },
+  { topico: 'coordenadas-no-espaco', nivel: 'facil', conteudo: ecoordenadasNoEspacoFacil15 },
   { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio01 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio02 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio03 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio04 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio05 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio06 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio07 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio08 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio09 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio10 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio11 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio12 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio13 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio14 },
+  { topico: 'coordenadas-no-espaco', nivel: 'medio', conteudo: ecoordenadasNoEspacoMedio15 },
   { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil01 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil02 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil03 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil04 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil05 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil06 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil07 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil08 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil09 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil10 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil11 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil12 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil13 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil14 },
+  { topico: 'coordenadas-no-espaco', nivel: 'dificil', conteudo: ecoordenadasNoEspacoDificil15 },
   { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo01 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo02 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo03 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo04 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo05 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo06 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo07 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo08 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo09 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo10 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo11 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo12 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo13 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo14 },
+  { topico: 'coordenadas-no-espaco', nivel: 'extremo', conteudo: ecoordenadasNoEspacoExtremo15 },
   { topico: 'coordenadas-no-espaco', forma: 'forma-1', conteudo: ecoordenadasNoEspacoMoldesForma1 },
   { topico: 'coordenadas-no-espaco', forma: 'forma-2', conteudo: ecoordenadasNoEspacoMoldesForma2 },
   { topico: 'coordenadas-no-espaco', forma: 'forma-3', conteudo: ecoordenadasNoEspacoMoldesForma3 },
@@ -8042,9 +8770,65 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'derivadas-exponencial-logaritmo', forma: 'forma-5', conteudo: ederivadasExponencialLogaritmoMoldesForma5 },
   { topico: 'derivadas-exponencial-logaritmo', forma: 'forma-6', conteudo: ederivadasExponencialLogaritmoMoldesForma6 },
   { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil01 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil02 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil03 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil04 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil05 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil06 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil07 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil08 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil09 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil10 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil11 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil12 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil13 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil14 },
+  { topico: 'derivadas-parciais', nivel: 'facil', conteudo: ederivadasParciaisFacil15 },
   { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio01 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio02 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio03 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio04 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio05 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio06 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio07 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio08 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio09 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio10 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio11 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio12 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio13 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio14 },
+  { topico: 'derivadas-parciais', nivel: 'medio', conteudo: ederivadasParciaisMedio15 },
   { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil01 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil02 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil03 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil04 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil05 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil06 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil07 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil08 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil09 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil10 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil11 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil12 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil13 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil14 },
+  { topico: 'derivadas-parciais', nivel: 'dificil', conteudo: ederivadasParciaisDificil15 },
   { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo01 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo02 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo03 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo04 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo05 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo06 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo07 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo08 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo09 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo10 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo11 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo12 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo13 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo14 },
+  { topico: 'derivadas-parciais', nivel: 'extremo', conteudo: ederivadasParciaisExtremo15 },
   { topico: 'derivadas-parciais', forma: 'forma-1', conteudo: ederivadasParciaisMoldesForma1 },
   { topico: 'derivadas-parciais', forma: 'forma-2', conteudo: ederivadasParciaisMoldesForma2 },
   { topico: 'derivadas-parciais', forma: 'forma-3', conteudo: ederivadasParciaisMoldesForma3 },
@@ -8272,17 +9056,129 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'distribuicao-normal', forma: 'forma-5', conteudo: edistribuicaoNormalMoldesForma5 },
   { topico: 'distribuicao-normal', forma: 'forma-6', conteudo: edistribuicaoNormalMoldesForma6 },
   { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil01 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil02 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil03 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil04 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil05 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil06 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil07 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil08 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil09 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil10 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil11 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil12 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil13 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil14 },
+  { topico: 'edo-primeira-ordem', nivel: 'facil', conteudo: eedoPrimeiraOrdemFacil15 },
   { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio01 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio02 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio03 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio04 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio05 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio06 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio07 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio08 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio09 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio10 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio11 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio12 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio13 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio14 },
+  { topico: 'edo-primeira-ordem', nivel: 'medio', conteudo: eedoPrimeiraOrdemMedio15 },
   { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil01 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil02 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil03 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil04 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil05 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil06 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil07 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil08 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil09 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil10 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil11 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil12 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil13 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil14 },
+  { topico: 'edo-primeira-ordem', nivel: 'dificil', conteudo: eedoPrimeiraOrdemDificil15 },
   { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo01 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo02 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo03 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo04 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo05 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo06 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo07 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo08 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo09 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo10 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo11 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo12 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo13 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo14 },
+  { topico: 'edo-primeira-ordem', nivel: 'extremo', conteudo: eedoPrimeiraOrdemExtremo15 },
   { topico: 'edo-primeira-ordem', forma: 'forma-1', conteudo: eedoPrimeiraOrdemMoldesForma1 },
   { topico: 'edo-primeira-ordem', forma: 'forma-2', conteudo: eedoPrimeiraOrdemMoldesForma2 },
   { topico: 'edo-primeira-ordem', forma: 'forma-3', conteudo: eedoPrimeiraOrdemMoldesForma3 },
   { topico: 'edo-primeira-ordem', forma: 'forma-4', conteudo: eedoPrimeiraOrdemMoldesForma4 },
   { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil01 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil02 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil03 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil04 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil05 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil06 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil07 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil08 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil09 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil10 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil11 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil12 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil13 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil14 },
+  { topico: 'edo-segunda-ordem', nivel: 'facil', conteudo: eedoSegundaOrdemFacil15 },
   { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio01 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio02 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio03 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio04 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio05 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio06 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio07 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio08 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio09 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio10 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio11 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio12 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio13 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio14 },
+  { topico: 'edo-segunda-ordem', nivel: 'medio', conteudo: eedoSegundaOrdemMedio15 },
   { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil01 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil02 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil03 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil04 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil05 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil06 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil07 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil08 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil09 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil10 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil11 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil12 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil13 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil14 },
+  { topico: 'edo-segunda-ordem', nivel: 'dificil', conteudo: eedoSegundaOrdemDificil15 },
   { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo01 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo02 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo03 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo04 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo05 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo06 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo07 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo08 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo09 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo10 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo11 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo12 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo13 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo14 },
+  { topico: 'edo-segunda-ordem', nivel: 'extremo', conteudo: eedoSegundaOrdemExtremo15 },
   { topico: 'edo-segunda-ordem', forma: 'forma-1', conteudo: eedoSegundaOrdemMoldesForma1 },
   { topico: 'edo-segunda-ordem', forma: 'forma-2', conteudo: eedoSegundaOrdemMoldesForma2 },
   { topico: 'edo-segunda-ordem', forma: 'forma-3', conteudo: eedoSegundaOrdemMoldesForma3 },
@@ -9573,9 +10469,65 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'funcao-quadratica', nivel: 'extremo', conteudo: efuncaoQuadraticaExtremo15 },
   { topico: 'funcao-quadratica', forma: 'forma-1', conteudo: efuncaoQuadraticaMoldesForma1 },
   { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil01 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil02 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil03 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil04 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil05 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil06 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil07 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil08 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil09 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil10 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil11 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil12 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil13 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil14 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'facil', conteudo: efuncoesDeVariasVariaveisFacil15 },
   { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio01 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio02 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio03 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio04 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio05 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio06 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio07 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio08 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio09 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio10 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio11 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio12 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio13 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio14 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'medio', conteudo: efuncoesDeVariasVariaveisMedio15 },
   { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil01 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil02 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil03 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil04 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil05 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil06 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil07 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil08 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil09 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil10 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil11 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil12 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil13 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil14 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'dificil', conteudo: efuncoesDeVariasVariaveisDificil15 },
   { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo01 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo02 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo03 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo04 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo05 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo06 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo07 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo08 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo09 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo10 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo11 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo12 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo13 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo14 },
+  { topico: 'funcoes-de-varias-variaveis', nivel: 'extremo', conteudo: efuncoesDeVariasVariaveisExtremo15 },
   { topico: 'funcoes-de-varias-variaveis', forma: 'forma-1', conteudo: efuncoesDeVariasVariaveisMoldesForma1 },
   { topico: 'funcoes-de-varias-variaveis', forma: 'forma-2', conteudo: efuncoesDeVariasVariaveisMoldesForma2 },
   { topico: 'funcoes-de-varias-variaveis', forma: 'forma-3', conteudo: efuncoesDeVariasVariaveisMoldesForma3 },
@@ -9790,9 +10742,65 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'gases-ideais', nivel: 'extremo', conteudo: egasesIdeaisExtremo14 },
   { topico: 'gases-ideais', nivel: 'extremo', conteudo: egasesIdeaisExtremo15 },
   { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil01 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil02 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil03 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil04 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil05 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil06 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil07 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil08 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil09 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil10 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil11 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil12 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil13 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil14 },
+  { topico: 'gradiente-e-direcional', nivel: 'facil', conteudo: egradienteEDirecionalFacil15 },
   { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio01 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio02 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio03 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio04 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio05 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio06 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio07 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio08 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio09 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio10 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio11 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio12 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio13 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio14 },
+  { topico: 'gradiente-e-direcional', nivel: 'medio', conteudo: egradienteEDirecionalMedio15 },
   { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil01 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil02 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil03 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil04 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil05 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil06 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil07 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil08 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil09 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil10 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil11 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil12 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil13 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil14 },
+  { topico: 'gradiente-e-direcional', nivel: 'dificil', conteudo: egradienteEDirecionalDificil15 },
   { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo01 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo02 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo03 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo04 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo05 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo06 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo07 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo08 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo09 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo10 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo11 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo12 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo13 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo14 },
+  { topico: 'gradiente-e-direcional', nivel: 'extremo', conteudo: egradienteEDirecionalExtremo15 },
   { topico: 'gradiente-e-direcional', forma: 'forma-1', conteudo: egradienteEDirecionalMoldesForma1 },
   { topico: 'gradiente-e-direcional', forma: 'forma-2', conteudo: egradienteEDirecionalMoldesForma2 },
   { topico: 'gradiente-e-direcional', forma: 'forma-3', conteudo: egradienteEDirecionalMoldesForma3 },
@@ -10005,9 +11013,65 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'impulso-e-momento', forma: 'forma-5', conteudo: eimpulsoEMomentoMoldesForma5 },
   { topico: 'inequacoes', forma: 'forma-1', conteudo: einequacoesMoldesForma1 },
   { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil01 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil02 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil03 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil04 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil05 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil06 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil07 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil08 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil09 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil10 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil11 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil12 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil13 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil14 },
+  { topico: 'integrais-de-linha', nivel: 'facil', conteudo: eintegraisDeLinhaFacil15 },
   { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio01 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio02 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio03 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio04 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio05 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio06 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio07 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio08 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio09 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio10 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio11 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio12 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio13 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio14 },
+  { topico: 'integrais-de-linha', nivel: 'medio', conteudo: eintegraisDeLinhaMedio15 },
   { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil01 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil02 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil03 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil04 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil05 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil06 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil07 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil08 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil09 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil10 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil11 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil12 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil13 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil14 },
+  { topico: 'integrais-de-linha', nivel: 'dificil', conteudo: eintegraisDeLinhaDificil15 },
   { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo01 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo02 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo03 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo04 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo05 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo06 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo07 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo08 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo09 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo10 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo11 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo12 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo13 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo14 },
+  { topico: 'integrais-de-linha', nivel: 'extremo', conteudo: eintegraisDeLinhaExtremo15 },
   { topico: 'integrais-de-linha', forma: 'forma-1', conteudo: eintegraisDeLinhaMoldesForma1 },
   { topico: 'integrais-de-linha', forma: 'forma-2', conteudo: eintegraisDeLinhaMoldesForma2 },
   { topico: 'integrais-de-linha', forma: 'forma-3', conteudo: eintegraisDeLinhaMoldesForma3 },
@@ -10078,9 +11142,65 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'integrais-improprias', forma: 'forma-4', conteudo: eintegraisImpropriasMoldesForma4 },
   { topico: 'integrais-improprias', forma: 'forma-5', conteudo: eintegraisImpropriasMoldesForma5 },
   { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil01 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil02 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil03 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil04 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil05 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil06 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil07 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil08 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil09 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil10 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil11 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil12 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil13 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil14 },
+  { topico: 'integrais-multiplas', nivel: 'facil', conteudo: eintegraisMultiplasFacil15 },
   { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio01 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio02 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio03 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio04 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio05 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio06 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio07 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio08 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio09 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio10 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio11 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio12 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio13 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio14 },
+  { topico: 'integrais-multiplas', nivel: 'medio', conteudo: eintegraisMultiplasMedio15 },
   { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil01 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil02 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil03 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil04 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil05 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil06 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil07 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil08 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil09 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil10 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil11 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil12 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil13 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil14 },
+  { topico: 'integrais-multiplas', nivel: 'dificil', conteudo: eintegraisMultiplasDificil15 },
   { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo01 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo02 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo03 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo04 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo05 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo06 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo07 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo08 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo09 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo10 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo11 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo12 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo13 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo14 },
+  { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo15 },
   { topico: 'integrais-multiplas', forma: 'forma-1', conteudo: eintegraisMultiplasMoldesForma1 },
   { topico: 'integrais-multiplas', forma: 'forma-2', conteudo: eintegraisMultiplasMoldesForma2 },
   { topico: 'integral-definida', nivel: 'facil', conteudo: eintegralDefinidaFacil01 },
@@ -10765,9 +11885,65 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'matrizes-determinantes', forma: 'forma-4', conteudo: ematrizesDeterminantesMoldesForma4 },
   { topico: 'matrizes-determinantes', forma: 'forma-5', conteudo: ematrizesDeterminantesMoldesForma5 },
   { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil01 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil02 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil03 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil04 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil05 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil06 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil07 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil08 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil09 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil10 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil11 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil12 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil13 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil14 },
+  { topico: 'metodos-numericos', nivel: 'facil', conteudo: emetodosNumericosFacil15 },
   { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio01 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio02 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio03 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio04 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio05 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio06 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio07 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio08 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio09 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio10 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio11 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio12 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio13 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio14 },
+  { topico: 'metodos-numericos', nivel: 'medio', conteudo: emetodosNumericosMedio15 },
   { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil01 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil02 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil03 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil04 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil05 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil06 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil07 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil08 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil09 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil10 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil11 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil12 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil13 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil14 },
+  { topico: 'metodos-numericos', nivel: 'dificil', conteudo: emetodosNumericosDificil15 },
   { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo01 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo02 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo03 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo04 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo05 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo06 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo07 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo08 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo09 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo10 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo11 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo12 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo13 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo14 },
+  { topico: 'metodos-numericos', nivel: 'extremo', conteudo: emetodosNumericosExtremo15 },
   { topico: 'metodos-numericos', forma: 'forma-1', conteudo: emetodosNumericosMoldesForma1 },
   { topico: 'metodos-numericos', forma: 'forma-2', conteudo: emetodosNumericosMoldesForma2 },
   { topico: 'metodos-numericos', forma: 'forma-3', conteudo: emetodosNumericosMoldesForma3 },
@@ -12795,9 +13971,65 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   { topico: 'teorema-fundamental', forma: 'forma-2', conteudo: eteoremaFundamentalMoldesForma2 },
   { topico: 'teorema-fundamental', forma: 'forma-3', conteudo: eteoremaFundamentalMoldesForma3 },
   { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil01 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil02 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil03 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil04 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil05 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil06 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil07 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil08 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil09 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil10 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil11 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil12 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil13 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil14 },
+  { topico: 'teoremas-integrais', nivel: 'facil', conteudo: eteoremasIntegraisFacil15 },
   { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio01 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio02 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio03 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio04 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio05 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio06 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio07 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio08 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio09 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio10 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio11 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio12 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio13 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio14 },
+  { topico: 'teoremas-integrais', nivel: 'medio', conteudo: eteoremasIntegraisMedio15 },
   { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil01 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil02 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil03 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil04 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil05 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil06 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil07 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil08 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil09 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil10 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil11 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil12 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil13 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil14 },
+  { topico: 'teoremas-integrais', nivel: 'dificil', conteudo: eteoremasIntegraisDificil15 },
   { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo01 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo02 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo03 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo04 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo05 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo06 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo07 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo08 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo09 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo10 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo11 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo12 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo13 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo14 },
+  { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo15 },
   { topico: 'teoremas-integrais', forma: 'forma-1', conteudo: eteoremasIntegraisMoldesForma1 },
   { topico: 'teoremas-integrais', forma: 'forma-2', conteudo: eteoremasIntegraisMoldesForma2 },
   { topico: 'teoremas-integrais', forma: 'forma-3', conteudo: eteoremasIntegraisMoldesForma3 },

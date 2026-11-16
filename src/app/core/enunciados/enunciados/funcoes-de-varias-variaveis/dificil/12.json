@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Cortando a superfície z = x² + 5y² pelo plano y = 0, sobra uma parábola em x. Qual é a abscissa do vértice dela?",
+    "fr": "En coupant la surface z = x² + 5y² par le plan y = 0, il reste une parabole en x. Quelle est l’abscisse de son sommet ?",
+    "en": "Cutting the surface z = x² + 5y² with the plane y = 0 leaves a parabola in x. What is the x-coordinate of its vertex?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

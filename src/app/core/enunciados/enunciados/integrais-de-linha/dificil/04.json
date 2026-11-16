@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Este campo é conservativo. Qual é o trabalho de F = (4x, 1y) de (0, 0) até (1, 5), por qualquer caminho? (duas casas decimais)",
+    "fr": "Ce champ est conservatif. Quel est le travail de F = (4x, 1y) de (0, 0) jusqu’à (1, 5), par n’importe quel chemin ? (deux décimales)",
+    "en": "This field is conservative. What is the work of F = (4x, 1y) from (0, 0) to (1, 5), along any path? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "14.50"
+  }
+}

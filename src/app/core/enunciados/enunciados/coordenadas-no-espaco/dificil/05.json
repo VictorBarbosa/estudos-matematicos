@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um ponto tem coordenadas esféricas ρ = 1, φ = 90° (do eixo z) e θ = 90°. Qual é a coordenada x cartesiana? (duas casas decimais)",
+    "fr": "Un point a pour coordonnées sphériques ρ = 1, φ = 90° (depuis l’axe z) et θ = 90°. Quelle est la coordonnée x cartésienne ? (deux décimales)",
+    "en": "A point has spherical coordinates ρ = 1, φ = 90° (from the z-axis) and θ = 90°. What is the Cartesian x-coordinate? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

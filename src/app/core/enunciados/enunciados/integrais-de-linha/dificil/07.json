@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Este campo é conservativo. Qual é o trabalho de F = (3x, 3y) de (0, 0) até (4, 0), por qualquer caminho? (duas casas decimais)",
+    "fr": "Ce champ est conservatif. Quel est le travail de F = (3x, 3y) de (0, 0) jusqu’à (4, 0), par n’importe quel chemin ? (deux décimales)",
+    "en": "This field is conservative. What is the work of F = (3x, 3y) from (0, 0) to (4, 0), along any path? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "24.00"
+  }
+}

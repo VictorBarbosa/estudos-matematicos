@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra de 80 g tem meia-vida de 10 anos. Quanto resta depois de 20 anos, em g? (duas casas decimais)",
+    "fr": "Un échantillon de 80 g a une demi-vie de 10 ans. Combien en reste-t-il après 20 ans, en g ? (deux décimales)",
+    "en": "A sample of 80 g has a half-life of 10 years. How much remains after 20 years, in g? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

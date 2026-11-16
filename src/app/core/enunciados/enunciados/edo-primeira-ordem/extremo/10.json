@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um tanque com 200 L recebe 20 L/min de solução a 0.05 kg/L e escoa na mesma vazão, bem misturado, com 0 kg de sal no início. Quanto sal há em 10 min? (duas casas decimais)",
+    "fr": "Un réservoir de 200 L reçoit 20 L/min d’une solution à 0.05 kg/L et se vide au même débit, bien mélangé, avec 0 kg de sel au départ. Combien de sel y a-t-il en 10 min ? (deux décimales)",
+    "en": "A 200 L tank receives 20 L/min of solution at 0.05 kg/L and drains at the same rate, well mixed, with 0 kg of salt initially. How much salt is there at 10 min? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.32"
+  }
+}

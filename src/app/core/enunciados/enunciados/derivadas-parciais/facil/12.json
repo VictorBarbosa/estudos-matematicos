@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a derivada parcial de f(x, y) = 4x²y em relação a y?",
+    "fr": "Quelle est la dérivée partielle de f(x, y) = 4x²y par rapport à y ?",
+    "en": "What is the partial derivative of f(x, y) = 4x²y with respect to y?"
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

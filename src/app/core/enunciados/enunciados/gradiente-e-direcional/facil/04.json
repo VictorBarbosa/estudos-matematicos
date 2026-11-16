@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a componente x do gradiente de f(x, y) = x² + y² no ponto (0, 5)?",
+    "fr": "Quelle est la composante x du gradient de f(x, y) = x² + y² au point (0, 5) ?",
+    "en": "What is the x-component of the gradient of f(x, y) = x² + y² at the point (0, 5)?"
+  },
+  "dados-calculo": {
+    "total": "0"
+  }
+}

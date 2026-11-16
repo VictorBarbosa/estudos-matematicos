@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a MAIOR raiz da equação característica de y'' + 7y' + 12y = 0? (duas casas decimais)",
+    "fr": "Quelle est la PLUS GRANDE racine de l’équation caractéristique de y'' + 7y' + 12y = 0 ? (deux décimales)",
+    "en": "What is the LARGEST root of the characteristic equation of y'' + 7y' + 12y = 0? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-3.00"
+  }
+}

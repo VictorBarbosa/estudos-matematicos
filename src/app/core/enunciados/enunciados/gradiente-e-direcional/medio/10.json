@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é a derivada direcional de f(x, y) = x² + y² no ponto (3, 4), na direção do vetor (0, 1) normalizado? (duas casas decimais)",
+    "fr": "Quelle est la dérivée directionnelle de f(x, y) = x² + y² au point (3, 4), dans la direction du vecteur (0, 1) normalisé ? (deux décimales)",
+    "en": "What is the directional derivative of f(x, y) = x² + y² at the point (3, 4) in the direction of the normalised vector (0, 1)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Pelo teorema da divergência, qual é o fluxo do campo F = (1x, 1y, 1z) para fora da esfera de raio 3 centrada na origem? (duas casas decimais)",
+    "fr": "Par le théorème de la divergence, quel est le flux du champ F = (1x, 1y, 1z) sortant de la sphère de rayon 3 centrée à l’origine ? (deux décimales)",
+    "en": "By the divergence theorem, what is the outward flux of F = (1x, 1y, 1z) from the sphere of radius 3 centred at the origin? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "339.29"
+  }
+}

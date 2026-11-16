@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanto vale f(x, y) = x² + y² no ponto (2, 3)?",
+    "fr": "Combien vaut f(x, y) = x² + y² au point (2, 3) ?",
+    "en": "What is f(x, y) = x² + y² at the point (2, 3)?"
+  },
+  "dados-calculo": {
+    "total": "13"
+  }
+}

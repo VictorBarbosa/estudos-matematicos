@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num circuito com fem 12 V, resistência 100 Ω e indutância 1 H, a corrente tende a um valor estacionário. Qual é, em A? (duas casas decimais)",
+    "fr": "Dans un circuit avec fem 12 V, résistance 100 Ω et inductance 1 H, le courant tend vers une valeur stationnaire. Quelle est-elle, en A ? (deux décimales)",
+    "en": "In a circuit with emf 12 V, resistance 100 Ω and inductance 1 H, the current tends to a steady value. What is it, in A? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.12"
+  }
+}

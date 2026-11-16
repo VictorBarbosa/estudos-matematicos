@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra de 40 g tem meia-vida de 1 anos. Quanto resta depois de 3 anos, em g? (duas casas decimais)",
+    "fr": "Un échantillon de 40 g a une demi-vie de 1 ans. Combien en reste-t-il après 3 ans, en g ? (deux décimales)",
+    "en": "A sample of 40 g has a half-life of 1 years. How much remains after 3 years, in g? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.00"
+  }
+}

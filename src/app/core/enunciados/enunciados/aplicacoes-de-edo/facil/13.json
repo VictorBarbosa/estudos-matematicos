@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma amostra de 64 g tem meia-vida de 8 anos. Quanto resta depois de 24 anos, em g? (duas casas decimais)",
+    "fr": "Un échantillon de 64 g a une demi-vie de 8 ans. Combien en reste-t-il après 24 ans, en g ? (deux décimales)",
+    "en": "A sample of 64 g has a half-life of 8 years. How much remains after 24 years, in g? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

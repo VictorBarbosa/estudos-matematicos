@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma grandeza obedece a y' = 0.5y, com valor inicial 2. Quanto ela vale em t = 2? (duas casas decimais)",
+    "fr": "Une grandeur obéit à y' = 0.5y, avec une valeur initiale 2. Combien vaut-elle à t = 2 ? (deux décimales)",
+    "en": "A quantity obeys y' = 0.5y, with initial value 2. What is its value at t = 2? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.44"
+  }
+}

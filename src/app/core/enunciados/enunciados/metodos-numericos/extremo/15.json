@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quantos passos de Euler com h = 0.5 são necessários para integrar y' = y de 0 a 5?",
+    "fr": "Combien de pas d’Euler avec h = 0.5 sont nécessaires pour intégrer y' = y de 0 à 5 ?",
+    "en": "How many Euler steps with h = 0.5 are needed to integrate y' = y from 0 to 5?"
+  },
+  "dados-calculo": {
+    "total": "10"
+  }
+}

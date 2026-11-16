@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o trabalho do campo F = (4x, 1y) ao longo do segmento de (0, 0) a (1, 5)? (duas casas decimais)",
+    "fr": "Quel est le travail du champ F = (4x, 1y) le long du segment de (0, 0) à (1, 5) ? (deux décimales)",
+    "en": "What is the work of the field F = (4x, 1y) along the segment from (0, 0) to (1, 5)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "14.50"
+  }
+}

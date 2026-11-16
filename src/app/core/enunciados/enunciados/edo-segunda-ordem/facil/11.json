@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o discriminante da equação característica de y'' + 4y' + 3y = 0?",
+    "fr": "Quel est le discriminant de l’équation caractéristique de y'' + 4y' + 3y = 0 ?",
+    "en": "What is the discriminant of the characteristic equation of y'' + 4y' + 3y = 0?"
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

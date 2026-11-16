@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor de k da curva de nível de f(x, y) = x² + y² que passa pelo ponto (1, 1)?",
+    "fr": "Quelle est la valeur de k de la courbe de niveau de f(x, y) = x² + y² qui passe par le point (1, 1) ?",
+    "en": "What is the value of k for the level curve of f(x, y) = x² + y² that passes through the point (1, 1)?"
+  },
+  "dados-calculo": {
+    "total": "2"
+  }
+}

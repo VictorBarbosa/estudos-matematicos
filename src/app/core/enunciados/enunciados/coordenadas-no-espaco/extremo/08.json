@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Converta o ponto (2, 2, 2) para coordenadas cilíndricas e informe o raio r. (duas casas decimais)",
+    "fr": "Convertissez le point (2, 2, 2) en coordonnées cylindriques et indiquez le rayon r. (deux décimales)",
+    "en": "Convert the point (2, 2, 2) to cylindrical coordinates and give the radius r. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.83"
+  }
+}

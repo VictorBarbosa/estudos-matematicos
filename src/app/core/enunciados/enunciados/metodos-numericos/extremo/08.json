@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Estime o erro máximo do método de Euler após 500 passos com passo 0.002 para y' = y, partindo de 1, comparando com a solução exata. (duas casas decimais)",
+    "fr": "Estimez l’erreur maximale de la méthode d’Euler après 500 pas avec un pas 0.002 pour y' = y, en partant de 1, par comparaison avec la solution exacte. (deux décimales)",
+    "en": "Estimate the maximum error of Euler’s method after 500 steps with step 0.002 for y' = y, starting from 1, compared with the exact solution. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.00"
+  }
+}

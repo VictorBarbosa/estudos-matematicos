@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o valor MÍNIMO da função f(x, y) = x² + y² − 2x − 4y? (duas casas decimais)",
+    "fr": "Quelle est la valeur MINIMALE de la fonction f(x, y) = x² + y² − 2x − 4y ? (deux décimales)",
+    "en": "What is the MINIMUM value of f(x, y) = x² + y² − 2x − 4y? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "-5.00"
+  }
+}

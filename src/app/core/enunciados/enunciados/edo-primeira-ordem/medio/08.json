@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma substância decai segundo y' = −0.01y. Qual é a meia-vida dela? (duas casas decimais)",
+    "fr": "Une substance décroît selon y' = −0.01y. Quelle est sa demi-vie ? (deux décimales)",
+    "en": "A substance decays according to y' = −0.01y. What is its half-life? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "69.31"
+  }
+}

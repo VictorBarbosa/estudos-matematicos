@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um ponto tem coordenadas cartesianas (0, 1, 0). Qual é o raio ρ em coordenadas esféricas? (duas casas decimais)",
+    "fr": "Un point a pour coordonnées cartésiennes (0, 1, 0). Quel est le rayon ρ en coordonnées sphériques ? (deux décimales)",
+    "en": "A point has Cartesian coordinates (0, 1, 0). What is the radius ρ in spherical coordinates? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "1.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Uma substância decai segundo y' = −1y, com y(0) = 1. Quanto resta em t = 1? (duas casas decimais)",
+    "fr": "Une substance décroît selon y' = −1y, avec y(0) = 1. Combien en reste-t-il à t = 1 ? (deux décimales)",
+    "en": "A substance decays according to y' = −1y, with y(0) = 1. How much remains at t = 1? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.37"
+  }
+}

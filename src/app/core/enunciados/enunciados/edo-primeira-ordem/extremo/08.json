@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo a 37 °C é deixado num ambiente a 20 °C, com constante 0.1 por minuto. Qual é a temperatura em t = 5 minutos? (duas casas decimais)",
+    "fr": "Un corps à 37 °C est placé dans une ambiance à 20 °C, avec une constante 0.1 par minute. Quelle est la température à t = 5 minutes ? (deux décimales)",
+    "en": "A body at 37 °C is placed in a room at 20 °C, with constant 0.1 per minute. What is the temperature at t = 5 minutes? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "30.31"
+  }
+}

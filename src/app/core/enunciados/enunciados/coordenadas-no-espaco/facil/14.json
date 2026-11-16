@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um ponto tem coordenadas cilíndricas r = 8, θ = 90° e z = 8. Qual é a coordenada y cartesiana? (duas casas decimais)",
+    "fr": "Un point a pour coordonnées cylindriques r = 8, θ = 90° et z = 8. Quelle est la coordonnée y cartésienne ? (deux décimales)",
+    "en": "A point has cylindrical coordinates r = 8, θ = 90° and z = 8. What is the Cartesian y-coordinate? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "8.00"
+  }
+}

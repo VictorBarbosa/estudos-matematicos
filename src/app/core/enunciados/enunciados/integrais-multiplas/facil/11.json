@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral dupla de x sobre o retângulo de 0 a 1 em x e de 0 a 5 em y. (duas casas decimais)",
+    "fr": "Calculez l’intégrale double de x sur le rectangle de 0 à 1 en x et de 0 à 5 en y. (deux décimales)",
+    "en": "Calculate the double integral of x over the rectangle from 0 to 1 in x and 0 to 5 in y. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "2.50"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Quanto vale f(x, y) = x·y no ponto (4, 5)?",
+    "fr": "Combien vaut f(x, y) = x·y au point (4, 5) ?",
+    "en": "What is f(x, y) = x·y at the point (4, 5)?"
+  },
+  "dados-calculo": {
+    "total": "20"
+  }
+}

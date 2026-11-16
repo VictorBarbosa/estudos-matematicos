@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Ao longo do círculo unitário, percorrido no sentido anti-horário, qual é a circulação do campo F = (−y, x)? (duas casas decimais)",
+    "fr": "Le long du cercle unité, parcouru dans le sens anti-horaire, quelle est la circulation du champ F = (−y, x) ? (deux décimales)",
+    "en": "Along the unit circle, traversed counterclockwise, what is the circulation of the field F = (−y, x)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "6.28"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um corpo a 200 °C é deixado num ambiente a 20 °C, com constante 0.01 por minuto. Qual é a temperatura em t = 100 minutos? (duas casas decimais)",
+    "fr": "Un corps à 200 °C est placé dans une ambiance à 20 °C, avec une constante 0.01 par minute. Quelle est la température à t = 100 minutes ? (deux décimales)",
+    "en": "A body at 200 °C is left in a room at 20 °C, with constant 0.01 per minute. What is the temperature at t = 100 minutes? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "86.22"
+  }
+}

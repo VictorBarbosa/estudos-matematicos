@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Use o teorema de Green para calcular a circulação de F = (−y, x) na borda do retângulo 0 ≤ x ≤ 3, 0 ≤ y ≤ 3, no sentido anti-horário. (duas casas decimais)",
+    "fr": "Utilisez le théorème de Green pour calculer la circulation de F = (−y, x) sur le bord du rectangle 0 ≤ x ≤ 3, 0 ≤ y ≤ 3, dans le sens anti-horaire. (deux décimales)",
+    "en": "Use Green’s theorem to calculate the circulation of F = (−y, x) along the boundary of the rectangle 0 ≤ x ≤ 3, 0 ≤ y ≤ 3, counterclockwise. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "18.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Este campo é conservativo. Qual é o trabalho de F = (5x, 5y) de (0, 0) até (2, 2), por qualquer caminho? (duas casas decimais)",
+    "fr": "Ce champ est conservatif. Quel est le travail de F = (5x, 5y) de (0, 0) jusqu’à (2, 2), par n’importe quel chemin ? (deux décimales)",
+    "en": "This field is conservative. What is the work of F = (5x, 5y) from (0, 0) to (2, 2), along any path? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "20.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Pelo teorema da divergência, qual é o fluxo do campo F = (x, y, z) para fora do cubo 0 ≤ x, y, z ≤ 1? (duas casas decimais)",
+    "fr": "Par le théorème de la divergence, quel est le flux du champ F = (x, y, z) sortant du cube 0 ≤ x, y, z ≤ 1 ? (deux décimales)",
+    "en": "By the divergence theorem, what is the outward flux of F = (x, y, z) from the cube 0 ≤ x, y, z ≤ 1? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "3.00"
+  }
+}

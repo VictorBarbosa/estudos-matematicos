@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Qual é o trabalho do campo F = (2x, 2y) ao longo do segmento de (0, 0) a (3, 4)? (duas casas decimais)",
+    "fr": "Quel est le travail du champ F = (2x, 2y) le long du segment de (0, 0) à (3, 4) ? (deux décimales)",
+    "en": "What is the work of the field F = (2x, 2y) along the segment from (0, 0) to (3, 4)? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "25.00"
+  }
+}

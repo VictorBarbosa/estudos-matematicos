@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Num sistema massa-mola amortecido com m = 1, b = 4 e k = 3, qual é o discriminante da equação característica?",
+    "fr": "Dans un système masse-ressort amorti avec m = 1, b = 4 et k = 3, quel est le discriminant de l’équation caractéristique ?",
+    "en": "In a damped mass-spring system with m = 1, b = 4 and k = 3, what is the discriminant of the characteristic equation?"
+  },
+  "dados-calculo": {
+    "total": "4"
+  }
+}

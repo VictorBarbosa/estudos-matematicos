@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Para y'' + 6y' + 8y = 0, com y(0) = 1 e y'(0) = 0, qual é o valor de y(1)? (raízes reais distintas; duas casas decimais)",
+    "fr": "Pour y'' + 6y' + 8y = 0, avec y(0) = 1 et y'(0) = 0, quelle est la valeur de y(1) ? (racines réelles distinctes ; deux décimales)",
+    "en": "For y'' + 6y' + 8y = 0, with y(0) = 1 and y'(0) = 0, what is y(1)? (distinct real roots; two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "0.25"
+  }
+}

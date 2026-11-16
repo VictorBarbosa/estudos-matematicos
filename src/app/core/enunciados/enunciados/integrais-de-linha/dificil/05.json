@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Este campo é conservativo. Qual é o trabalho de F = (2x, 6y) de (0, 0) até (3, 1), por qualquer caminho? (duas casas decimais)",
+    "fr": "Ce champ est conservatif. Quel est le travail de F = (2x, 6y) de (0, 0) jusqu’à (3, 1), par n’importe quel chemin ? (deux décimales)",
+    "en": "This field is conservative. What is the work of F = (2x, 6y) from (0, 0) to (3, 1), along any path? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "12.00"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Pelo teorema de Green com F = (−y/2, x/2), calcule a área da região limitada pela circunferência de raio 10. (duas casas decimais)",
+    "fr": "Par le théorème de Green avec F = (−y/2, x/2), calculez l’aire de la région limitée par le cercle de rayon 10. (deux décimales)",
+    "en": "By Green’s theorem with F = (−y/2, x/2), calculate the area of the region bounded by the circle of radius 10. (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "314.16"
+  }
+}

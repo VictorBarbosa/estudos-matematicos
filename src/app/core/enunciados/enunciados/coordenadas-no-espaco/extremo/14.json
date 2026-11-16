@@ -1,0 +1,10 @@
+{
+  "enunciado": {
+    "br": "Um ponto tem coordenadas esféricas ρ = 8, φ = 45° e θ = 90°. Qual é a coordenada y cartesiana? (duas casas decimais)",
+    "fr": "Un point a pour coordonnées sphériques ρ = 8, φ = 45° et θ = 90°. Quelle est la coordonnée y cartésienne ? (deux décimales)",
+    "en": "A point has spherical coordinates ρ = 8, φ = 45° and θ = 90°. What is the Cartesian y-coordinate? (two decimal places)"
+  },
+  "dados-calculo": {
+    "total": "5.66"
+  }
+}
