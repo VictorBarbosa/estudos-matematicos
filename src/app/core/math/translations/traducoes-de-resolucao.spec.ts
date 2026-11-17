@@ -34,19 +34,20 @@ const AMOSTRAS = 6;
  * para que uma mudança de gerador que invente frases novas apareça aqui, em vez
  * de aparecer na tela de quem estuda em francês.
  *
- * O andamento, para quem for continuar: passos de 759 para 1 087 e dicas de 75
- * para 183, em dez tópicos — Escalonamento e inversa, Equações
+ * O andamento, para quem for continuar: passos de 759 para 1 202 e dicas de
+ * 75 para 229, em dezesseis tópicos — Escalonamento e inversa, Equações
  * trigonométricas, Poliedros, Aplicações da derivada, Superfície e teoremas,
  * Estudo de sinal, Derivadas trigonométricas, Reagente limitante, Ponto e
- * reta, Estequiometria, Análise dimensional e Função afim.
+ * reta, Circuitos, Ângulos e triângulos, Sequências e séries, Limites,
+ * Limites laterais, Estequiometria, Análise dimensional e Função afim.
  *
  * Traduzir um tópico é escrever as frases DELE, e as frases de um tópico são
  * variações de poucos moldes: «Zeramos o resto da coluna #: L₂ ← L₂ − #·L₁»
  * tem trinta irmãs que mudam só a notação. Por isso o trabalho rende por
  * família, e não por linha — e por isso a conta sobe aos saltos.
  */
-const PISO_DOS_PASSOS = 0.345;
-const PISO_DAS_DICAS = 0.162;
+const PISO_DOS_PASSOS = 0.382;
+const PISO_DAS_DICAS = 0.202;
 
 interface Frases {
   readonly passos: Set<string>;

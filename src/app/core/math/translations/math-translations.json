@@ -6186,5 +6186,645 @@
   "A fórmula pede a reta na forma ax + by + c = #. Multiplicamos y = mx + q por # e passamos tudo para um lado.": {
     "fr": "La formule demande la droite sous la forme ax + by + c = #. Nous multiplions y = mx + q par # et passons tout d’un côté.",
     "en": "The formula needs the line as ax + by + c = #. We multiply y = mx + q by # and move everything to one side."
+  },
+  "P = V²/R: #² = #, dividido por #.": {
+    "fr": "P = V²/R : #² = #, divisé par #.",
+    "en": "P = V²/R: #² = #, divided by #."
+  },
+  "I = V/R = # / # em ampères; multiplique por # para mA.": {
+    "fr": "I = V/R = # / # en ampères ; multipliez par # pour des mA.",
+    "en": "I = V/R = # / # in amperes; multiply by # for mA."
+  },
+  "P = R·I²: # vezes #², com a corrente ao quadrado.": {
+    "fr": "P = R·I² : # fois #², avec le courant au carré.",
+    "en": "P = R·I²: # times #², with the current squared."
+  },
+  "Em paralelo: #/R = #/# + #/#; depois inverta. O resultado é menor que # Ω.": {
+    "fr": "En parallèle : #/R = #/# + #/# ; puis inversez. Le résultat est inférieur à # Ω.",
+    "en": "In parallel: #/R = #/# + #/#; then invert. The result is less than # Ω."
+  },
+  "Em série as resistências se somam: # + #.": {
+    "fr": "En série les résistances s’additionnent : # + #.",
+    "en": "In series the resistances add up: # + #."
+  },
+  "Some as fem com sinal (em oposição se subtraem) e divida pela resistência total # + #.": {
+    "fr": "Additionnez les f.é.m. avec leur signe (em oposição se subtraem) et divisez par la résistance totale # + #.",
+    "en": "Add the emfs with their sign (em oposição se subtraem) and divide by the total resistance # + #."
+  },
+  "τ = R·C: # kΩ vezes # μF dá direto em milissegundos (#³ × #⁻⁶ = #⁻³).": {
+    "fr": "τ = R·C : # kΩ fois # μF donne directement des millisecondes (#³ × #⁻⁶ = #⁻³).",
+    "en": "τ = R·C: # kΩ times # μF gives milliseconds directly (#³ × #⁻⁶ = #⁻³)."
+  },
+  "Reduza de dentro para fora: R₂ ∥ R₃ por produto sobre soma; some R₁ = #; depois I = #/R_eq.": {
+    "fr": "Réduisez de l’intérieur vers l’extérieur : R₂ ∥ R₃ par produit sur somme ; ajoutez R₁ = # ; puis I = #/R_eq.",
+    "en": "Reduce from the inside out: R₂ ∥ R₃ by product over sum; add R₁ = #; then I = #/R_eq."
+  },
+  "Some as fem com sinal (no mesmo sentido se somam) e divida pela resistência total # + #.": {
+    "fr": "Additionnez les f.é.m. avec leur signe (no mesmo sentido se somam) et divisez par la résistance totale # + #.",
+    "en": "Add the emfs with their sign (no mesmo sentido se somam) and divide by the total resistance # + #."
+  },
+  "Chame de V o potencial do nó comum. Lei dos nós: (# − V)/# + (# − V)/# = V/#. Ache V e depois I = V/#.": {
+    "fr": "Appelez V le potentiel du nœud commun. Loi des nœuds : (# − V)/# + (# − V)/# = V/#. Trouvez V puis I = V/#.",
+    "en": "Call V the potential of the common node. Node law: (# − V)/# + (# − V)/# = V/#. Find V and then I = V/#."
+  },
+  "Calcule τ = R·C = #×#³ · #×#⁻⁶ s e a carga final Q = #·# μC; depois q = Q·(# − e elevado a −t/τ).": {
+    "fr": "Calculez τ = R·C = #×#³ · #×#⁻⁶ s et la charge finale Q = #·# μC ; puis q = Q·(# − e à la puissance −t/τ).",
+    "en": "Work out τ = R·C = #×#³ · #×#⁻⁶ s and the final charge Q = #·# μC; then q = Q·(# − e to the power −t/τ)."
+  },
+  "Invertendo. O equivalente fica MENOR que o menor dos valores.": {
+    "fr": "En inversant. L’équivalent est PLUS PETIT que la plus petite des valeurs.",
+    "en": "Inverting. The equivalent is SMALLER than the smallest of the values."
+  },
+  "Com a tensão e a resistência: P = V²/R (P = VI com I = V/R).": {
+    "fr": "Avec la tension et la résistance : P = V²/R (P = VI avec I = V/R).",
+    "en": "With the voltage and the resistance: P = V²/R (P = VI with I = V/R)."
+  },
+  "Lei de Ohm: a corrente é a tensão sobre a resistência.": {
+    "fr": "Loi d’Ohm : le courant est la tension sur la résistance.",
+    "en": "Ohm’s law: the current is the voltage over the resistance."
+  },
+  "Substituindo; em ampères, e depois em mA.": {
+    "fr": "En substituant ; en ampères, puis en mA.",
+    "en": "Substituting; in amperes, then in mA."
+  },
+  "A corrente é a mesma nos dois; cada um fica com a fração da tensão igual à sua fração da resistência.": {
+    "fr": "Le courant est le même dans les deux ; chacun prend la fraction de tension égale à sa fraction de résistance.",
+    "en": "The current is the same in both; each takes the share of voltage equal to its share of resistance."
+  },
+  "Substituindo (os kΩ se cancelam).": {
+    "fr": "En substituant (les kΩ se simplifient).",
+    "en": "Substituting (the kΩ cancel out)."
+  },
+  "Com a corrente e a resistência: P = R·I².": {
+    "fr": "Avec le courant et la résistance : P = R·I².",
+    "en": "With the current and the resistance: P = R·I²."
+  },
+  "Em paralelo a corrente ganha caminhos: somam-se os INVERSOS.": {
+    "fr": "En parallèle le courant gagne des chemins : on additionne les INVERSES.",
+    "en": "In parallel the current gains paths: the RECIPROCALS add up."
+  },
+  "Em série a corrente atravessa um depois do outro: as resistências se somam.": {
+    "fr": "En série le courant traverse l’un après l’autre : les résistances s’additionnent.",
+    "en": "In series the current passes one after the other: the resistances add up."
+  },
+  "Kirchhoff das tensões: percorrendo a malha, a soma das fem é igual à soma das quedas RI.": {
+    "fr": "Kirchhoff des tensions : en parcourant la maille, la somme des f.é.m. est égale à la somme des chutes RI.",
+    "en": "Kirchhoff’s voltage law: going round the loop, the sum of the emfs equals the sum of the RI drops."
+  },
+  "Em oposição, as fem se subtraem.": {
+    "fr": "En opposition, les f.é.m. se soustraient.",
+    "en": "In opposition, the emfs subtract."
+  },
+  "A constante de tempo é o produto RC.": {
+    "fr": "La constante de temps est le produit RC.",
+    "en": "The time constant is the product RC."
+  },
+  "kΩ vezes μF: #³ · #⁻⁶ = #⁻³, ou seja, milissegundos.": {
+    "fr": "kΩ fois μF : #³ · #⁻⁶ = #⁻³, c’est-à-dire des millisecondes.",
+    "en": "kΩ times μF: #³ · #⁻⁶ = #⁻³, that is, milliseconds."
+  },
+  "O paralelo, por produto sobre soma.": {
+    "fr": "Le parallèle, par produit sur somme.",
+    "en": "The parallel, by product over sum."
+  },
+  "Em série com R₁, as resistências se somam.": {
+    "fr": "En série avec R₁, les résistances s’additionnent.",
+    "en": "In series with R₁, the resistances add up."
+  },
+  "Ohm no circuito inteiro.": {
+    "fr": "Ohm sur le circuit entier.",
+    "en": "Ohm over the whole circuit."
+  },
+  "No mesmo sentido, as fem se somam.": {
+    "fr": "Dans le même sens, les f.é.m. s’additionnent.",
+    "en": "In the same direction, the emfs add."
+  },
+  "Kirchhoff dos nós no nó de cima, com potencial V: o que chega pelos ramos das fontes sai por R₃.": {
+    "fr": "Kirchhoff des nœuds au nœud du haut, de potentiel V : ce qui arrive par les branches des sources sort par R₃.",
+    "en": "Kirchhoff’s node law at the top node, at potential V: what comes in through the source branches goes out through R₃."
+  },
+  "Ohm no resistor do meio.": {
+    "fr": "Ohm sur la résistance du milieu.",
+    "en": "Ohm on the middle resistor."
+  },
+  "A constante de tempo é RC, com R em ohms e C em farads.": {
+    "fr": "La constante de temps est RC, avec R en ohms et C en farads.",
+    "en": "The time constant is RC, with R in ohms and C in farads."
+  },
+  "A carga final é CV.": {
+    "fr": "La charge finale est CV.",
+    "en": "The final charge is CV."
+  },
+  "A carga cresce como # − e elevado a (−t/τ).": {
+    "fr": "La charge croît comme # − e à la puissance (−t/τ).",
+    "en": "The charge grows as # − e to the power (−t/τ)."
+  },
+  "Os três ângulos somam #°.": {
+    "fr": "Les trois angles font #°.",
+    "en": "The three angles add up to #°."
+  },
+  "A ordem das letras dá a correspondência: E corresponde a B e F a C. Então EF corresponde a qual lado de ABC?": {
+    "fr": "L’ordre des lettres donne la correspondance : E correspond à B et F à C. Alors EF correspond à quel côté de ABC ?",
+    "en": "The order of the letters gives the matching: E matches B and F matches C. So EF matches which side of ABC?"
+  },
+  "Ligue um vértice a todos os outros: o polígono se reparte em # − # triângulos, e cada triângulo traz #°.": {
+    "fr": "Reliez un sommet à tous les autres : le polygone se partage en # − # triangles, et chaque triangle apporte #°.",
+    "en": "Join one vertex to all the others: the polygon splits into # − # triangles, and each triangle brings #°."
+  },
+  "Os quatro ângulos de um quadrilátero somam #°: tire #°, #° e #° de #°.": {
+    "fr": "Les quatre angles d’un quadrilatère font #° : retirez #°, #° et #° de #°.",
+    "en": "The four angles of a quadrilateral add to #°: take #°, #° and #° from #°."
+  },
+  "n = #° ÷ #°. Depois, d = n(n − #)/#.": {
+    "fr": "n = #° ÷ #°. Ensuite, d = n(n − #)/#.",
+    "en": "n = #° ÷ #°. Then d = n(n − #)/#."
+  },
+  "Entre duas paralelas, os dois ângulos do mesmo lado de um lado transversal somam #°.": {
+    "fr": "Entre deux parallèles, les deux angles du même côté d’une sécante font #°.",
+    "en": "Between two parallels, the two angles on the same side of a transversal add to #°."
+  },
+  "Ligando um vértice aos outros, o polígono se reparte em # − # triângulos de #° cada — essa é a soma de todos os internos. Num polígono regular os # ângulos são iguais entre si.": {
+    "fr": "En reliant un sommet aux autres, le polygone se partage en # − # triangles de #° chacun — c’est la somme de tous les angles intérieurs. Dans un polygone régulier les # angles sont égaux entre eux.",
+    "en": "Joining one vertex to the others, the polygon splits into # − # triangles of #° each — that is the sum of all interior angles. In a regular polygon the # angles are equal to one another."
+  },
+  "AB e DE são correspondentes, então são iguais: monte a equação, ache x e substitua em AB.": {
+    "fr": "AB et DE sont correspondants, donc égaux : posez l’équation, trouvez x et substituez dans AB.",
+    "en": "AB and DE match, so they are equal: set up the equation, find x and substitute into AB."
+  },
+  "O ângulo B mede #° menos o ângulo A, e a diagonal BD corta o ângulo B ao meio.": {
+    "fr": "L’angle B mesure #° moins l’angle A, et la diagonale BD coupe l’angle B en deux.",
+    "en": "Angle B is #° minus angle A, and the diagonal BD cuts angle B in half."
+  },
+  "O ângulo E corresponde a B, então B também mede #°. Use a soma #° no triângulo ABC.": {
+    "fr": "L’angle E correspond à B, donc B mesure aussi #°. Utilisez la somme #° dans le triangle ABC.",
+    "en": "Angle E matches B, so B is also #°. Use the #° sum in triangle ABC."
+  },
+  "No vértice, o lado segue em linha reta: o interno e o externo completam #°, então o externo é #° − #°. Andando o contorno inteiro, você gira um externo em cada vértice e termina olhando para o mesmo lado do começo — uma volta completa, #°.": {
+    "fr": "Au sommet, le côté continue en ligne droite : l’intérieur et l’extérieur complètent #°, donc l’extérieur vaut #° − #°. En parcourant tout le contour, vous tournez d’un angle extérieur à chaque sommet et finissez en regardant du même côté qu’au départ — un tour complet, #°.",
+    "en": "At the vertex the side continues in a straight line: the interior and the exterior make up #°, so the exterior is #° − #°. Walking the whole outline, you turn by one exterior angle at each vertex and end up facing the same way as at the start — a full turn, #°."
+  },
+  "Passe ao externo (#° − #°), ache n = #° ÷ externo e use d = n(n − #)/#.": {
+    "fr": "Passez à l’extérieur (#° − #°), trouvez n = #° ÷ extérieur et utilisez d = n(n − #)/#.",
+    "en": "Go to the exterior angle (#° − #°), find n = #° ÷ exterior and use d = n(n − #)/#."
+  },
+  "Resolvendo a equação do #º grau.": {
+    "fr": "En résolvant l’équation du #ᵉ degré.",
+    "en": "Solving the degree # equation."
+  },
+  "A soma dos ângulos internos de qualquer triângulo é #°.": {
+    "fr": "La somme des angles intérieurs de tout triangle est #°.",
+    "en": "The interior angles of any triangle add up to #°."
+  },
+  "Isolamos o ângulo desconhecido.": {
+    "fr": "Nous isolons l’angle inconnu.",
+    "en": "We isolate the unknown angle."
+  },
+  "Em triângulos congruentes, lados correspondentes são iguais. A correspondência vem da ordem das letras.": {
+    "fr": "Dans des triangles congruents, les côtés correspondants sont égaux. La correspondance vient de l’ordre des lettres.",
+    "en": "In congruent triangles, matching sides are equal. The matching comes from the order of the letters."
+  },
+  "Transportamos a medida.": {
+    "fr": "Nous reportons la mesure.",
+    "en": "We carry the measure across."
+  },
+  "Uma diagonal divide o quadrilátero em dois triângulos: a soma é # vezes #°, ou seja, #°.": {
+    "fr": "Une diagonale divise le quadrilatère en deux triangles : la somme est # fois #°, soit #°.",
+    "en": "A diagonal splits the quadrilateral into two triangles: the sum is # times #°, that is #°."
+  },
+  "Isolando o quarto ângulo.": {
+    "fr": "En isolant le quatrième angle.",
+    "en": "Isolating the fourth angle."
+  },
+  "Os externos somam #°: o número de lados é #° dividido pelo externo.": {
+    "fr": "Les angles extérieurs font #° : le nombre de côtés est #° divisé par l’extérieur.",
+    "en": "The exterior angles add to #°: the number of sides is #° divided by the exterior angle."
+  },
+  "De cada vértice saem n − # diagonais (não para ele mesmo nem para os dois vizinhos); cada diagonal foi contada duas vezes.": {
+    "fr": "De chaque sommet partent n − # diagonales (ni vers lui-même ni vers les deux voisins) ; chaque diagonale a été comptée deux fois.",
+    "en": "From each vertex come n − # diagonals (not to itself nor to the two neighbours); each diagonal was counted twice."
+  },
+  "As bases são paralelas: o ângulo da base maior e o da base menor do mesmo lado somam #°.": {
+    "fr": "Les bases sont parallèles : l’angle de la grande base et celui de la petite du même côté font #°.",
+    "en": "The bases are parallel: the angle at the longer base and the one at the shorter base on the same side add to #°."
+  },
+  "Isolando β.": {
+    "fr": "En isolant β.",
+    "en": "Isolating β."
+  },
+  "Sendo regular, todos os ângulos são iguais: dividimos a soma por n.": {
+    "fr": "Étant régulier, tous les angles sont égaux : nous divisons la somme par n.",
+    "en": "Being regular, all the angles are equal: we divide the sum by n."
+  },
+  "AB e DE são lados correspondentes (A↔D, B↔E): têm a mesma medida.": {
+    "fr": "AB et DE sont des côtés correspondants (A↔D, B↔E) : ils ont la même mesure.",
+    "en": "AB and DE are matching sides (A↔D, B↔E): they have the same measure."
+  },
+  "Substituindo x em AB.": {
+    "fr": "En substituant x dans AB.",
+    "en": "Substituting x into AB."
+  },
+  "Ângulos consecutivos do losango (um paralelogramo) somam #°.": {
+    "fr": "Les angles consécutifs du losange (un parallélogramme) font #°.",
+    "en": "Consecutive angles of the rhombus (a parallelogram) add to #°."
+  },
+  "No losango, cada diagonal corta ao meio os ângulos dos vértices que liga.": {
+    "fr": "Dans le losange, chaque diagonale coupe en deux les angles des sommets qu’elle relie.",
+    "en": "In a rhombus, each diagonal bisects the angles of the vertices it joins."
+  },
+  "Ângulos correspondentes são iguais: E corresponde a B.": {
+    "fr": "Les angles correspondants sont égaux : E correspond à B.",
+    "en": "Matching angles are equal: E matches B."
+  },
+  "No triângulo ABC, os três ângulos somam #°.": {
+    "fr": "Dans le triangle ABC, les trois angles font #°.",
+    "en": "In triangle ABC, the three angles add to #°."
+  },
+  "No vértice, o lado segue em linha reta do outro lado: o interno e o externo completam #°.": {
+    "fr": "Au sommet, le côté continue en ligne droite de l’autre côté : l’intérieur et l’extérieur complètent #°.",
+    "en": "At the vertex the side continues straight on the other side: the interior and the exterior make up #°."
+  },
+  "Andando o contorno inteiro, cada vértice faz você girar um ângulo externo — e no fim você está olhando para o mesmo lado do começo.": {
+    "fr": "En parcourant tout le contour, chaque sommet vous fait tourner d’un angle extérieur — et à la fin vous regardez du même côté qu’au départ.",
+    "en": "Walking the whole outline, each vertex turns you by one exterior angle — and at the end you face the same way as at the start."
+  },
+  "Num polígono regular todos os externos são iguais, então contar quantos cabem na volta é contar os vértices.": {
+    "fr": "Dans un polygone régulier tous les angles extérieurs sont égaux, donc compter combien tiennent dans le tour, c’est compter les sommets.",
+    "en": "In a regular polygon all exterior angles are equal, so counting how many fit in the turn is counting the vertices."
+  },
+  "Primeiro o externo, suplementar do interno.": {
+    "fr": "D’abord l’extérieur, supplémentaire de l’intérieur.",
+    "en": "First the exterior angle, supplementary to the interior one."
+  },
+  "Escreva o termo como #/n elevado a p: converge só se p > # (com p = #, a harmônica, diverge).": {
+    "fr": "Écrivez le terme comme #/n à la puissance p : converge seulement si p > # (avec p = #, l’harmonique, diverge).",
+    "en": "Write the term as #/n to the power p: it converges only if p > # (with p = #, the harmonic one, it diverges)."
+  },
+  "Divida tudo pela maior potência de n: sobram só os coeficientes dos termos de maior grau.": {
+    "fr": "Divisez tout par la plus grande puissance de n : il ne reste que les coefficients des termes de plus haut degré.",
+    "en": "Divide everything by the highest power of n: only the coefficients of the highest-degree terms are left."
+  },
+  "Para n grande, despreze as constantes somadas e compare com uma p-série (#/nᵖ) ou uma geométrica.": {
+    "fr": "Pour n grand, négligez les constantes additionnées et comparez à une série de Riemann (#/nᵖ) ou à une géométrique.",
+    "en": "For large n, drop the added constants and compare with a p-series (#/nᵖ) or a geometric one."
+  },
+  "Monte aₙ₊₁/aₙ: potências como bⁿ⁺¹/bⁿ viram b, e frações como (n + #)/n tendem a #.": {
+    "fr": "Formez aₙ₊₁/aₙ : des puissances comme bⁿ⁺¹/bⁿ donnent b, et des fractions comme (n + #)/n tendent vers #.",
+    "en": "Build aₙ₊₁/aₙ: powers like bⁿ⁺¹/bⁿ become b, and fractions like (n + #)/n tend to #."
+  },
+  "Escreva o termo como #/(n + #) − #/(n + #) e veja o que sobra depois que os termos do meio se cancelam.": {
+    "fr": "Écrivez le terme comme #/(n + #) − #/(n + #) et voyez ce qui reste après l’annulation des termes du milieu.",
+    "en": "Write the term as #/(n + #) − #/(n + #) and see what is left once the middle terms cancel."
+  },
+  "Na alternada, o erro de parar no termo # é no máximo o valor absoluto do termo #.": {
+    "fr": "Dans la série alternée, l’erreur en s’arrêtant au terme # vaut au plus la valeur absolue du terme #.",
+    "en": "In the alternating series, the error from stopping at term # is at most the absolute value of term #."
+  },
+  "É uma p-série, Σ #/nᵖ, com p = #.": {
+    "fr": "C’est une série de Riemann, Σ #/nᵖ, avec p = #.",
+    "en": "It is a p-series, Σ #/nᵖ, with p = #."
+  },
+  "p = # ≤ #: os termos caem devagar demais, a série diverge.": {
+    "fr": "p = # ≤ # : les termes décroissent trop lentement, la série diverge.",
+    "en": "p = # ≤ #: the terms fall too slowly, the series diverges."
+  },
+  "p = # > #: os termos caem rápido o bastante, a série converge.": {
+    "fr": "p = # > # : les termes décroissent assez vite, la série converge.",
+    "en": "p = # > #: the terms fall fast enough, the series converges."
+  },
+  "Para n grande, só os termos de maior grau importam em cima e embaixo.": {
+    "fr": "Pour n grand, seuls les termes de plus haut degré comptent en haut et en bas.",
+    "en": "For large n, only the highest-degree terms matter on top and bottom."
+  },
+  "O limite não é #: somar infinitas parcelas perto desse valor explode. A série diverge.": {
+    "fr": "La limite n’est pas # : additionner une infinité de termes proches de cette valeur explose. La série diverge.",
+    "en": "The limit is not #: adding infinitely many terms near that value blows up. The series diverges."
+  },
+  "O limite é #: o teste do termo geral NÃO decide (a harmônica também tem termo indo a # e diverge).": {
+    "fr": "La limite est # : le test du terme général NE décide PAS (l’harmonique a aussi un terme tendant vers # et diverge).",
+    "en": "The limit is #: the term test does NOT decide (the harmonic series also has its term going to # and diverges)."
+  },
+  "Para n grande, ficamos com os termos que dominam e comparamos com uma série conhecida.": {
+    "fr": "Pour n grand, nous gardons les termes dominants et comparons à une série connue.",
+    "en": "For large n, we keep the dominant terms and compare with a known series."
+  },
+  "O termo se comporta como n/n² = #/n; por comparação, a série diverge.": {
+    "fr": "Le terme se comporte comme n/n² = #/n ; par comparaison, la série diverge.",
+    "en": "The term behaves like n/n² = #/n; by comparison, the series diverges."
+  },
+  "O termo se comporta como #/√n, p-série com p = #/#; por comparação, a série diverge.": {
+    "fr": "Le terme se comporte comme #/√n, p-série com p = #/# ; par comparaison, la série diverge.",
+    "en": "The term behaves like #/√n, p-série com p = #/#; by comparison, the series diverges."
+  },
+  "O termo é menor que #/n², p-série com p = #; por comparação, a série converge.": {
+    "fr": "Le terme est plus petit que #/n², série de Riemann avec p = # ; par comparaison, la série converge.",
+    "en": "The term is smaller than #/n², a p-series with p = #; by comparison, the series converges."
+  },
+  "O termo se comporta como #/n, a harmônica; por comparação, a série diverge.": {
+    "fr": "Le terme se comporte comme #/n, a harmônica ; par comparaison, la série diverge.",
+    "en": "The term behaves like #/n, a harmônica; by comparison, the series diverges."
+  },
+  "Dividimos o termo seguinte pelo atual e simplificamos as potências.": {
+    "fr": "Nous divisons le terme suivant par l’actuel et simplifions les puissances.",
+    "en": "We divide the next term by the current one and simplify the powers."
+  },
+  "No limite, o fatorial ganha: #/(n + #) tende a #. L < #: converge.": {
+    "fr": "À la limite, la factorielle l’emporte : #/(n + #) tend vers #. L < # : converge.",
+    "en": "In the limit the factorial wins: #/(n + #) tends to #. L < #: it converges."
+  },
+  "O termo se comporta como n/n³ = #/n²; por comparação, a série converge.": {
+    "fr": "Le terme se comporte comme n/n³ = #/n² ; par comparaison, la série converge.",
+    "en": "The term behaves like n/n³ = #/n²; by comparison, the series converges."
+  },
+  "Separamos em frações parciais: a diferença de dois termos consecutivos.": {
+    "fr": "Nous séparons en fractions partielles : la différence de deux termes consécutifs.",
+    "en": "We split into partial fractions: the difference of two consecutive terms."
+  },
+  "Na soma parcial, cada termo negativo cancela o positivo seguinte; sobram a primeira e a última parcela.": {
+    "fr": "Dans la somme partielle, chaque terme négatif annule le positif suivant ; il reste la première et la dernière part.",
+    "en": "In the partial sum, each negative term cancels the next positive one; the first and last parts are left."
+  },
+  "Com N indo ao infinito, a última parcela some.": {
+    "fr": "Quand N tend vers l’infini, la dernière part disparaît.",
+    "en": "As N goes to infinity, the last part vanishes."
+  },
+  "Aplicamos o teste da razão ao termo, com x fixo.": {
+    "fr": "Nous appliquons le test du rapport au terme, avec x fixé.",
+    "en": "We apply the ratio test to the term, with x fixed."
+  },
+  "No limite o fator com n tende a #; a série converge quando o que sobra é menor que #.": {
+    "fr": "À la limite le facteur en n tend vers # ; la série converge quand ce qui reste est plus petit que #.",
+    "en": "In the limit the factor with n tends to #; the series converges when what is left is smaller than #."
+  },
+  "O raio é a distância máxima ao centro.": {
+    "fr": "Le rayon est la distance maximale au centre.",
+    "en": "The radius is the greatest distance from the centre."
+  },
+  "Os termos decrescem e vão a zero: pelo critério de Leibniz, a série converge.": {
+    "fr": "Les termes décroissent et tendent vers zéro : par le critère de Leibniz, la série converge.",
+    "en": "The terms decrease and go to zero: by Leibniz’s test, the series converges."
+  },
+  "O erro de parar no termo N é no máximo o primeiro termo desprezado, o de ordem N + #.": {
+    "fr": "L’erreur en s’arrêtant au terme N vaut au plus le premier terme négligé, celui d’ordre N + #.",
+    "en": "The error from stopping at term N is at most the first dropped term, the one of order N + #."
+  },
+  "O erro ao parar em N é no máximo o termo N + #; impomos que ele seja menor que a tolerância.": {
+    "fr": "L’erreur en s’arrêtant à N vaut au plus le terme N + # ; nous imposons qu’il soit plus petit que la tolérance.",
+    "en": "The error from stopping at N is at most term N + #; we require it to be smaller than the tolerance."
+  },
+  "Já está isolado.": {
+    "fr": "C’est déjà isolé.",
+    "en": "It is already isolated."
+  },
+  "Como a desigualdade é estrita, N + # precisa ser pelo menos #.": {
+    "fr": "Comme l’inégalité est stricte, N + # doit valoir au moins #.",
+    "en": "Since the inequality is strict, N + # must be at least #."
+  },
+  "Nos extremos o teste da razão dá L = # e não decide: testamos cada um à parte.": {
+    "fr": "Aux extrémités le test du rapport donne L = # et ne décide pas : nous testons chacune à part.",
+    "en": "At the endpoints the ratio test gives L = # and does not decide: we test each one separately."
+  },
+  "Em x = # sobra a p-série Σ #/n² (p = #), que converge; em x = # sobra Σ (−#)ⁿ/n², que converge absolutamente.": {
+    "fr": "En x = # il reste la série de Riemann Σ #/n² (p = #), qui converge ; en x = # il reste Σ (−#)ⁿ/n², qui converge absolument.",
+    "en": "At x = # the p-series Σ #/n² (p = #) is left, which converges; at x = # Σ (−#)ⁿ/n² is left, which converges absolutely."
+  },
+  "Tirando a raiz quadrada.": {
+    "fr": "En prenant la racine carrée.",
+    "en": "Taking the square root."
+  },
+  "Substituir dá #/#. Fatore a diferença de cubos: x³ − # = (x − #)(x² + #x + #).": {
+    "fr": "La substitution donne #/#. Factorisez la différence de cubes : x³ − # = (x − #)(x² + #x + #).",
+    "en": "Substituting gives #/#. Factor the difference of cubes: x³ − # = (x − #)(x² + #x + #)."
+  },
+  "Multiplique e divida por #x: sen(#x)/(#x) tende a # e sobra #x/(x).": {
+    "fr": "Multipliez et divisez par #x : sin(#x)/(#x) tend vers # et il reste #x/(x).",
+    "en": "Multiply and divide by #x: sin(#x)/(#x) tends to # and #x/(x) is left."
+  },
+  "A função é um polinômio, sem divisão por zero: basta substituir x = #.": {
+    "fr": "La fonction est un polynôme, sans division par zéro : il suffit de substituer x = #.",
+    "en": "The function is a polynomial, with no division by zero: just substitute x = #."
+  },
+  "Multiplique e divida por #x: sen(#x)/(#x) tende a # e sobra #x/(#x).": {
+    "fr": "Multipliez et divisez par #x : sin(#x)/(#x) tend vers # et il reste #x/(#x).",
+    "en": "Multiply and divide by #x: sin(#x)/(#x) tends to # and #x/(#x) is left."
+  },
+  "Divida em cima e embaixo pela maior potência de x: sobram só os coeficientes dos termos dominantes.": {
+    "fr": "Divisez en haut et en bas par la plus grande puissance de x : il ne reste que les coefficients des termes dominants.",
+    "en": "Divide top and bottom by the highest power of x: only the coefficients of the dominant terms are left."
+  },
+  "Escreva como [sen(#x)/(#x)]·[(#x)/sen(#x)]·(#x)/(#x): os colchetes tendem a #.": {
+    "fr": "Écrivez comme [sin(#x)/(#x)]·[(#x)/sin(#x)]·(#x)/(#x) : les crochets tendent vers #.",
+    "en": "Write it as [sin(#x)/(#x)]·[(#x)/sin(#x)]·(#x)/(#x): the brackets tend to #."
+  },
+  "Substituir dá #/#. Multiplique em cima e embaixo pelo conjugado, √(x + #) + #, e simplifique o x.": {
+    "fr": "La substitution donne #/#. Multipliez en haut et en bas par le conjugué, √(x + #) + #, et simplifiez le x.",
+    "en": "Substituting gives #/#. Multiply top and bottom by the conjugate, √(x + #) + #, and cancel the x."
+  },
+  "Substitua o ponto. Se der #/#, simplifique ou olhe os dois laterais; se der número/#, é infinito.": {
+    "fr": "Substituez le point. Si cela donne #/#, simplifiez ou regardez les deux limites latérales ; si cela donne nombre/#, c’est l’infini.",
+    "en": "Substitute the point. If it gives #/#, simplify or look at the two one-sided limits; if it gives number/#, it is infinite."
+  },
+  "Use # − cos θ = #·sen²(θ/#) e arrume para aparecer (sen u / u)² com u = #x/#.": {
+    "fr": "Utilisez # − cos θ = #·sin²(θ/#) et arrangez pour faire apparaître (sin u / u)² avec u = #x/#.",
+    "en": "Use # − cos θ = #·sin²(θ/#) and rearrange to get (sin u / u)² with u = #x/#."
+  },
+  "A substituição direta dá #/#.": {
+    "fr": "La substitution directe donne #/#.",
+    "en": "Direct substitution gives #/#."
+  },
+  "A diferença de cubos fatora com um fator (x − a).": {
+    "fr": "La différence de cubes se factorise avec un facteur (x − a).",
+    "en": "The difference of cubes factors with an (x − a) factor."
+  },
+  "Cancelamos o fator comum.": {
+    "fr": "Nous simplifions le facteur commun.",
+    "en": "We cancel the common factor."
+  },
+  "Agora substituímos o ponto.": {
+    "fr": "Maintenant nous substituons le point.",
+    "en": "Now we substitute the point."
+  },
+  "Multiplicamos e dividimos por #x para formar sen(u)/u.": {
+    "fr": "Nous multiplions et divisons par #x pour former sin(u)/u.",
+    "en": "We multiply and divide by #x to form sin(u)/u."
+  },
+  "Cada sen(u)/u tende a #; sobra a razão dos coeficientes.": {
+    "fr": "Chaque sin(u)/u tend vers # ; il reste le rapport des coefficients.",
+    "en": "Each sin(u)/u tends to #; the ratio of the coefficients is left."
+  },
+  "O limite distribui sobre a soma e sobre o produto.": {
+    "fr": "La limite se distribue sur la somme et sur le produit.",
+    "en": "The limit distributes over the sum and over the product."
+  },
+  "Como a função é contínua, substituímos direto.": {
+    "fr": "Comme la fonction est continue, nous substituons directement.",
+    "en": "Since the function is continuous, we substitute directly."
+  },
+  "Substituir direto daria ∞/∞.": {
+    "fr": "Substituer directement donnerait ∞/∞.",
+    "en": "Substituting directly would give ∞/∞."
+  },
+  "Dividimos numerador e denominador por x², a maior potência.": {
+    "fr": "Nous divisons numérateur et dénominateur par x², la plus grande puissance.",
+    "en": "We divide numerator and denominator by x², the highest power."
+  },
+  "Os termos com #/x somem, sobrando os coeficientes líderes.": {
+    "fr": "Les termes en #/x disparaissent, il reste les coefficients dominants.",
+    "en": "The #/x terms vanish, leaving the leading coefficients."
+  },
+  "Multiplicamos numerador e denominador pelo conjugado.": {
+    "fr": "Nous multiplions numérateur et dénominateur par le conjugué.",
+    "en": "We multiply numerator and denominator by the conjugate."
+  },
+  "No numerador aparece uma diferença de quadrados, que simplifica.": {
+    "fr": "Au numérateur apparaît une différence de carrés, qui se simplifie.",
+    "en": "A difference of squares appears in the numerator, which simplifies."
+  },
+  "Cancelando o x e substituindo zero.": {
+    "fr": "En simplifiant le x et en substituant zéro.",
+    "en": "Cancelling the x and substituting zero."
+  },
+  "Em cima #, embaixo um quadrado que tende a # pelos positivos.": {
+    "fr": "En haut #, en bas un carré qui tend vers # par valeurs positives.",
+    "en": "On top #, below a square tending to # from the positive side."
+  },
+  "A função cresce sem limite: o limite é +∞ (assíntota vertical).": {
+    "fr": "La fonction croît sans limite : la limite est +∞ (asymptote verticale).",
+    "en": "The function grows without bound: the limit is +∞ (a vertical asymptote)."
+  },
+  "A identidade do arco metade troca # − cos por um seno ao quadrado.": {
+    "fr": "L’identité de l’arc moitié remplace # − cos par un sinus au carré.",
+    "en": "The half-angle identity swaps # − cos for a sine squared."
+  },
+  "Arrumamos para aparecer sen(u)/u com u = kx/#.": {
+    "fr": "Nous arrangeons pour faire apparaître sin(u)/u avec u = kx/#.",
+    "en": "We rearrange to get sin(u)/u with u = kx/#."
+  },
+  "Com sen(u)/u → #.": {
+    "fr": "Avec sin(u)/u → #.",
+    "en": "With sin(u)/u → #."
+  },
+  "Pela direita, |x − a| = x − a e a fração vale #; pela esquerda, |x − a| = −(x − a) e vale −#.": {
+    "fr": "À droite, |x − a| = x − a et la fraction vaut # ; à gauche, |x − a| = −(x − a) et elle vaut −#.",
+    "en": "From the right, |x − a| = x − a and the fraction is #; from the left, |x − a| = −(x − a) and it is −#."
+  },
+  "Laterais diferentes: o limite não existe.": {
+    "fr": "Limites latérales différentes : la limite n’existe pas.",
+    "en": "Different one-sided limits: the limit does not exist."
+  },
+  "Pela direita, x − # é positivo: o módulo de um número positivo é ele mesmo.": {
+    "fr": "À droite, x − # est positif : la valeur absolue d’un nombre positif est lui-même.",
+    "en": "From the right, x − # is positive: the absolute value of a positive number is itself."
+  },
+  "Pela esquerda, x − # é negativo: o módulo de um número negativo é o oposto dele.": {
+    "fr": "À gauche, x − # est négatif : la valeur absolue d’un nombre négatif est son opposé.",
+    "en": "From the left, x − # is negative: the absolute value of a negative number is its opposite."
+  },
+  "Veja qual das duas sentenças vale do lado pedido.": {
+    "fr": "Regardez laquelle des deux expressions vaut du côté demandé.",
+    "en": "See which of the two pieces applies on the required side."
+  },
+  "Veja o sinal de cada parte: o numerador é #; pela direita, x − # é positivo.": {
+    "fr": "Regardez le signe de chaque partie : le numérateur est # ; à direita, x − # est positivo.",
+    "en": "Look at the sign of each part: the numerator is #; from the direita, x − # is positivo."
+  },
+  "Veja o sinal de cada parte: o numerador é #; pela esquerda, x − # é negativo.": {
+    "fr": "Regardez le signe de chaque partie : le numérateur est # ; à esquerda, x − # est negativo.",
+    "en": "Look at the sign of each part: the numerator is #; from the esquerda, x − # is negativo."
+  },
+  "Veja o sinal de cada parte: o numerador é #; pela esquerda, x − # é negativo, mas elevado a expoente par fica positivo.": {
+    "fr": "Regardez le signe de chaque partie : le numérateur est # ; à gauche, x − # est négatif, mais élevé à une puissance paire il devient positif.",
+    "en": "Look at the sign of each part: the numerator is #; from the left, x − # is negative, but raised to an even power it becomes positive."
+  },
+  "Calcule os dois laterais em x = #: a reta pela esquerda e a parábola (com x ao quadrado) pela direita. O salto é direita menos esquerda.": {
+    "fr": "Calculez les deux limites latérales en x = # : la droite à gauche et la parabole (avec x au carré) à droite. Le saut est la droite moins la gauche.",
+    "en": "Work out both one-sided limits at x = #: the line from the left and the parabola (with x squared) from the right. The jump is right minus left."
+  },
+  "Pela direita, x > #: o que está dentro do módulo é positivo e o módulo não muda nada.": {
+    "fr": "À droite, x > # : ce qui est dans la valeur absolue est positif et elle ne change rien.",
+    "en": "From the right, x > #: what is inside the absolute value is positive and it changes nothing."
+  },
+  "A fração se simplifica num número.": {
+    "fr": "La fraction se simplifie en un nombre.",
+    "en": "The fraction simplifies to a number."
+  },
+  "Somando a constante.": {
+    "fr": "En ajoutant la constante.",
+    "en": "Adding the constant."
+  },
+  "Pela esquerda, x < #: o que está dentro do módulo é negativo e o módulo troca o sinal.": {
+    "fr": "À gauche, x < # : ce qui est dans la valeur absolue est négatif et elle change le signe.",
+    "en": "From the left, x < #: what is inside the absolute value is negative and it flips the sign."
+  },
+  "Pela direita, x é MAIOR que o ponto.": {
+    "fr": "À direita, x est MAIOR que le point.",
+    "en": "From the direita, x is MAIOR than the point."
+  },
+  "Nessa região vale apenas uma das sentenças.": {
+    "fr": "Dans cette région une seule des expressions s’applique.",
+    "en": "In that region only one of the pieces applies."
+  },
+  "Essa sentença é contínua, então basta substituir o ponto.": {
+    "fr": "Cette expression est continue, il suffit donc de substituer le point.",
+    "en": "That piece is continuous, so it is enough to substitute the point."
+  },
+  "Os dois laterais coincidem, então o limite comum existe.": {
+    "fr": "Les deux limites latérales coïncident, donc la limite commune existe.",
+    "en": "The two one-sided limits agree, so the common limit exists."
+  },
+  "Pela esquerda, x é MENOR que o ponto.": {
+    "fr": "À esquerda, x est MENOR que le point.",
+    "en": "From the esquerda, x is MENOR than the point."
+  },
+  "Pela direita, x − # é positivo e pequeno.": {
+    "fr": "À direita, x − # est positivo et petit.",
+    "en": "From the direita, x − # is positivo and small."
+  },
+  "Numerador positivo sobre um denominador positivo quase zero.": {
+    "fr": "Numérateur positivo sur un dénominateur positivo presque nul.",
+    "en": "A positivo numerator over a positivo denominator close to zero."
+  },
+  "Pela esquerda, x − # é negativo e pequeno.": {
+    "fr": "À esquerda, x − # est negativo et petit.",
+    "en": "From the esquerda, x − # is negativo and small."
+  },
+  "Numerador positivo sobre um denominador negativo quase zero.": {
+    "fr": "Numérateur positivo sur un dénominateur negativo presque nul.",
+    "en": "A positivo numerator over a negativo denominator close to zero."
+  },
+  "Os dois laterais discordam, então o limite comum NÃO existe.": {
+    "fr": "Les deux limites latérales divergent, donc la limite commune N’EXISTE PAS.",
+    "en": "The two one-sided limits disagree, so the common limit does NOT exist."
+  },
+  "Pela esquerda, x − # é negativo e pequeno; elevado a #, fica negativo.": {
+    "fr": "À gauche, x − # est négatif et petit ; élevé à #, il devient negativo.",
+    "en": "From the left, x − # is negative and small; raised to #, it becomes negativo."
+  },
+  "Pela esquerda, x − # é negativo e pequeno; elevado a #, fica positivo.": {
+    "fr": "À gauche, x − # est négatif et petit ; élevé à #, il devient positivo.",
+    "en": "From the left, x − # is negative and small; raised to #, it becomes positivo."
+  },
+  "Numerador negativo sobre um denominador positivo quase zero.": {
+    "fr": "Numérateur negativo sur un dénominateur positivo presque nul.",
+    "en": "A negativo numerator over a positivo denominator close to zero."
+  },
+  "Pela direita, x − # é positivo e pequeno; elevado a #, fica positivo.": {
+    "fr": "À droite, x − # est positif et petit ; élevé à #, il reste positif.",
+    "en": "From the right, x − # is positive and small; raised to #, it stays positive."
+  },
+  "Pela esquerda vale a reta: substituímos o ponto.": {
+    "fr": "À gauche c’est la droite qui vaut : nous substituons le point.",
+    "en": "From the left the line applies: we substitute the point."
+  },
+  "Pela direita vale a parábola: primeiro o ponto ao quadrado.": {
+    "fr": "À droite c’est la parabole qui vaut : d’abord le point au carré.",
+    "en": "From the right the parabola applies: first the point squared."
+  },
+  "E então o valor da sentença da direita.": {
+    "fr": "Puis la valeur de l’expression de droite.",
+    "en": "And then the value of the right-hand piece."
+  },
+  "O salto é a diferença, direita menos esquerda.": {
+    "fr": "Le saut est la différence, droite moins gauche.",
+    "en": "The jump is the difference, right minus left."
   }
 }
