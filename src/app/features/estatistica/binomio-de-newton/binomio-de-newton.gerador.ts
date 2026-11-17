@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { combinacoes } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -80,6 +80,7 @@ function pascal(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `binomio-pascal-${n}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('binomio-de-newton', 'forma-1')[0]!, { n, k }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('binomio-de-newton', 'forma-1')[0]!, { n, k }),
     enunciadoTex: `\\binom{${n}}{${k}} = \\;?`,
     gabarito,
     resolucao: {
@@ -131,6 +132,7 @@ function somaCoeficientes(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `binomio-soma-${a}${b}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('binomio-de-newton', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('binomio-de-newton', 'forma-2')[0]!, {}),
     enunciadoTex: `\\left(${binomioTex(a, b)}\\right)^{${n}}`,
     gabarito,
     resolucao: {
@@ -256,6 +258,7 @@ function termo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `binomio-termo-${b}-${n}-${ordem}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('binomio-de-newton', 'forma-4')[0]!, { ordem }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('binomio-de-newton', 'forma-4')[0]!, { ordem }),
     enunciadoTex: `\\left(x ${b >= 0 ? '+' : '-'} ${Math.abs(b)}\\right)^{${n}}`,
     gabarito,
     resolucao: {
@@ -311,6 +314,7 @@ function independente(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `binomio-indep-${q}-${c}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('binomio-de-newton', 'forma-5')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('binomio-de-newton', 'forma-5')[0]!, {}),
     enunciadoTex: `\\left(${primeiro} ${c >= 0 ? '+' : '-'} \\frac{${Math.abs(c)}}{x}\\right)^{${n}}`,
     gabarito,
     resolucao: {

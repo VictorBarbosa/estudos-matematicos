@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -29,6 +29,7 @@ export const geradorConceito: GeradorExercicio<number> = {
         id: `conceito-dominio-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('conceito-funcao', 'forma-1')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('conceito-funcao', 'forma-1')[0]!, {}),
         enunciadoTex: `f(x) = \\frac{1}{x ${k >= 0 ? '-' : '+'} ${Math.abs(k)}}`,
         gabarito,
         resolucao: {
@@ -91,6 +92,7 @@ export const geradorConceito: GeradorExercicio<number> = {
         id: `conceito-imagem-${a}-${h}-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('conceito-funcao', 'forma-2')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('conceito-funcao', 'forma-2')[0]!, {}),
         enunciadoTex: `f(x) = ${corpo} ${k >= 0 ? '+' : '-'} ${Math.abs(k)}`,
         gabarito,
         resolucao: {
@@ -149,6 +151,7 @@ export const geradorConceito: GeradorExercicio<number> = {
       id: `conceito-avaliar-${a}-${b}-${x}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('conceito-funcao', 'forma-3')[0]!, { x }, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('conceito-funcao', 'forma-3')[0]!, { x }),
       enunciadoTex: `f(x) = ${a === 1 ? '' : a}x^{2} ${b >= 0 ? '+' : '-'} ${Math.abs(b)}`,
       gabarito,
       resolucao: {

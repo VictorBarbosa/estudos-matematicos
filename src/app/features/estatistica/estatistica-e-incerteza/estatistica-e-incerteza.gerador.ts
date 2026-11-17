@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   ajustarRetaComPassos,
   desvioPadraoComPassos,
@@ -196,6 +196,7 @@ function exercicioPropagarSoma(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `inc-soma-${incertezas.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('estatistica-e-incerteza', 'forma-2')[0]!, { texto }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('estatistica-e-incerteza', 'forma-2')[0]!, { texto }),
     enunciadoTex: incertezas
       .map((valor, indice) => `\\sigma_${indice + 1} = ${String(valor).replace('.', '{,}')}`)
       .join(' \\qquad '),

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -113,6 +113,7 @@ function divergenteNoPonto(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `teor-div-${monoTex(p)}-${monoTex(q)}-${monoTex(r)}-${x0}${y0}${z0}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('teoremas-integrais', 'forma-1')[0]!, { x0, y0, z0 }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('teoremas-integrais', 'forma-1')[0]!, { x0, y0, z0 }),
     enunciadoTex: campo3(p, q, r),
     gabarito,
     resolucao: {
@@ -249,6 +250,7 @@ function rotacionalNoPonto(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `teor-rot-${monoTex(pXY)}-${monoTex(qXY)}-${x0}${y0}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('teoremas-integrais', 'forma-2')[0]!, { x0, y0 }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('teoremas-integrais', 'forma-2')[0]!, { x0, y0 }),
     enunciadoTex: campo2(pXY, qXY),
     gabarito,
     resolucao: {
@@ -380,6 +382,7 @@ function divergenciaCuboOuEsfera(nivel: Nivel, rng: Rng): Exercicio<number> {
       id: `teor-fluxo-esfera-${a}${b}${c}-${R}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('teoremas-integrais', 'forma-3')[0]!, { R }, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('teoremas-integrais', 'forma-3')[0]!, { R }),
       enunciadoTex: campo3(mono(a, 1), mono(b, 0, 1), mono(c, 0, 0, 1)),
       gabarito,
       resolucao: {
@@ -622,6 +625,7 @@ function areaPorGreen(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `teor-areagreen-${a}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('teoremas-integrais', 'forma-6')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('teoremas-integrais', 'forma-6')[0]!, {}),
     enunciadoTex: `\\frac{x^{2}}{${a * a}} + \\frac{y^{2}}{${b * b}} = 1`,
     gabarito,
     resolucao: {

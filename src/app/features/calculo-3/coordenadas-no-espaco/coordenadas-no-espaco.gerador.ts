@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { cilindricasComPassos, esfericasComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {

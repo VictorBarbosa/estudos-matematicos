@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Fracao,
   decimalParaFracaoComPassos,
@@ -56,6 +56,7 @@ function exercicioDecimalFinito(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     id: `decimais-finito-${numerador}-${potencia}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('numeros-decimais', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('numeros-decimais', 'forma-1')[0]!, {}),
     enunciadoTex: `${String(decimal).replace('.', '{,}')} = \\;?`,
     gabarito,
     resolucao,
@@ -95,6 +96,7 @@ function exercicioDizimaSimples(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     id: `decimais-dizima-${periodo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('numeros-decimais', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('numeros-decimais', 'forma-2')[0]!, {}),
     enunciadoTex: `0{,}\\overline{${periodo}} = \\;?`,
     gabarito,
     resolucao,
@@ -136,6 +138,7 @@ function exercicioDizimaComposta(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
     id: `decimais-dizima-composta-${naoPeriodica}-${periodo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('numeros-decimais', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('numeros-decimais', 'forma-3')[0]!, {}),
     enunciadoTex: `0{,}${naoPeriodica}\\overline{${periodo}} = \\;?`,
     gabarito,
     resolucao,

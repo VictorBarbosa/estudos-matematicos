@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Polinomio,
   dividirComPassos,
@@ -140,6 +140,7 @@ function exercicioGrauQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `poli-grau-${grauP}-${grauD}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('polinomios', 'forma-2')[0]!, { grauP, grauD }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('polinomios', 'forma-2')[0]!, { grauP, grauD }),
     enunciadoTex: `\\frac{${p.paraTex()}}{${d.paraTex()}}`,
     gabarito,
     resolucao: {
@@ -221,6 +222,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `poli-raiz-${raizes.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('polinomios', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('polinomios', 'forma-3')[0]!, {}),
     enunciadoTex: `P(x) = ${p.paraTex()}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },

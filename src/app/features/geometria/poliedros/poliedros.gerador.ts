@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -434,6 +434,7 @@ function facesMistas(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `poli-mistas-${m.faces.flat().join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('poliedros', 'forma-4')[0]!, { descreve }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('poliedros', 'forma-4')[0]!, { descreve }),
     enunciadoTex: `F = ${f} \\qquad ${m.faces.map(([q, l]) => `${q} \\times ${l}\\text{ lados}`).join(',\\; ')}`,
     gabarito: v,
     resolucao: {
@@ -501,6 +502,7 @@ function grau(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `poli-grau-${o.f}-${o.k}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('poliedros', 'forma-5')[0]!, { v1: o.f, v2: o.k }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('poliedros', 'forma-5')[0]!, { v1: o.f, v2: o.k }),
     enunciadoTex: `F = ${o.f} \\qquad \\text{${o.k} arestas por vértice}`,
     gabarito: v,
     resolucao: {

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, TipoProdutoNotavel, enunciadoParaTex, expandirComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -159,6 +159,7 @@ function exercicioInverso(nivel: Nivel, rng: Rng, forma: Inverso): Exercicio<num
       id: `produtos-inv-dif-${p}-${q}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('produtos-notaveis', 'forma-1')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('produtos-notaveis', 'forma-1')[0]!, {}),
       enunciadoTex: `${polinomio.paraTex()} = (px + q)(px - q)`,
       gabarito: q,
       resolucao: {
@@ -214,6 +215,7 @@ function exercicioInverso(nivel: Nivel, rng: Rng, forma: Inverso): Exercicio<num
       id: `produtos-inv-cubo-${p}-${q}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('produtos-notaveis', 'forma-2')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('produtos-notaveis', 'forma-2')[0]!, {}),
       enunciadoTex: `${polinomio.paraTex()} = \\left(${p === 1 ? '' : 'p'}x + q\\right)^{3}`,
       gabarito: q,
       resolucao: {

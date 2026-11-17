@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -136,6 +136,7 @@ function raio(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `polar-raio-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-2')[0]!, { x, y }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('coordenadas-polares', 'forma-2')[0]!, { x, y }),
     enunciadoTex: `(x, y) = (${x},\\; ${y}) \\;\\to\\; r = \\;?`,
     gabarito: r,
     resolucao: {
@@ -191,6 +192,7 @@ function angulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `polar-angulo-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-3')[0]!, { x, y }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('coordenadas-polares', 'forma-3')[0]!, { x, y }),
     enunciadoTex: `(x, y) = (${x},\\; ${y}) \\;\\to\\; \\theta = \\;?`,
     gabarito,
     resolucao: {
@@ -256,6 +258,7 @@ function circunferencia(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `polar-circ-${d}-${cosseno ? 'c' : 's'}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-4')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('coordenadas-polares', 'forma-4')[0]!, {}),
     enunciadoTex: `r = ${d}${trig}\\theta`,
     gabarito,
     resolucao: {
@@ -385,6 +388,7 @@ function orbita(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `polar-orbita-${p}-${e}-${pede}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('coordenadas-polares', 'forma-6')[0]!, { nome }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('coordenadas-polares', 'forma-6')[0]!, { nome }),
     enunciadoTex: `r = \\frac{${p}}{1 + ${eTex}\\cos\\theta}`,
     gabarito,
     resolucao: {

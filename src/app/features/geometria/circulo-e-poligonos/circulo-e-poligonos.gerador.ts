@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { areaComPassos, perimetroCirculoComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -89,6 +89,7 @@ function exercicioComprimento(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-comp-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-1')[0]!, { raio }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('circulo-e-poligonos', 'forma-1')[0]!, { raio }),
     enunciadoTex: `r = ${raio}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -125,6 +126,7 @@ function exercicioAreaCirculo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-area-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-2')[0]!, { raio }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('circulo-e-poligonos', 'forma-2')[0]!, { raio }),
     enunciadoTex: `r = ${raio}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -402,6 +404,7 @@ function exercicioCoroa(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-coroa-${menor}-${maior}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('circulo-e-poligonos', 'forma-7')[0]!, { menor, maior }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('circulo-e-poligonos', 'forma-7')[0]!, { menor, maior }),
     enunciadoTex: `R = ${maior} \\qquad r = ${menor}`,
     gabarito: resultado,
     resolucao: {

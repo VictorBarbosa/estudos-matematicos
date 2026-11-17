@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -53,6 +53,7 @@ function exercicioAvaliar(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `expressoes-avaliar-${a}${b}${c}-${x}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('expressoes-algebricas', 'forma-1')[0]!, { x }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('expressoes-algebricas', 'forma-1')[0]!, { x }),
     enunciadoTex: `${polinomio.paraTex()} \\quad \\text{com} \\quad x = ${x}`,
     gabarito,
     resolucao: {
@@ -123,6 +124,7 @@ function exercicioReduzir(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `expressoes-reduzir-${primeira.paraTex()}-${operador}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('expressoes-algebricas', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('expressoes-algebricas', 'forma-2')[0]!, {}),
     enunciadoTex,
     gabarito,
     resolucao: {
@@ -213,6 +215,7 @@ function exercicioDistribuir(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `expressoes-distribuir-${k}-${pTex}-${d}${e}${fCoef}${g}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('expressoes-algebricas', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('expressoes-algebricas', 'forma-3')[0]!, {}),
     enunciadoTex,
     gabarito,
     resolucao: {

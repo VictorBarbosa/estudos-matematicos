@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Fracao, mmcLista, observarSimplificacao, resolverLinearComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -158,6 +158,7 @@ function exercicioFracoes(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       id: `equacao1-fracoes-${p}${r}-${k}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-1')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('equacao-primeiro-grau', 'forma-1')[0]!, {}),
       enunciadoTex: `\\frac{x}{${p}} + \\frac{x}{${r}} = ${k}`,
       gabarito,
       resolucao: {

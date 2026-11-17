@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { movimentoUniformementeVariado, torricelliComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -60,6 +60,7 @@ function exercicioVelocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `cin-vel-${v0}-${a}-${t}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('cinematica-escalar', 'forma-1')[0]!, { v0, a, t }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-escalar', 'forma-1')[0]!, { v0, a, t }),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = ${a}\\,\\text{m/s}^{2} \\qquad t = ${t}\\,\\text{s}`,
     gabarito: velocidade,
     resolucao: {
@@ -111,6 +112,7 @@ function exercicioPosicao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `cin-pos-${v0}-${a}-${t}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('cinematica-escalar', 'forma-2')[0]!, { v0, a, t }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-escalar', 'forma-2')[0]!, { v0, a, t }),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = ${a}\\,\\text{m/s}^{2} \\qquad t = ${t}\\,\\text{s}`,
     gabarito: posicao,
     resolucao: {

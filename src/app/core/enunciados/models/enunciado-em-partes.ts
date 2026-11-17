@@ -228,22 +228,15 @@ function converterAtomo(atomo: string): string {
   if (limpo.startsWith('√')) {
     const dentro = limpo.slice(1).trim();
     const semParen = dentro.startsWith('(') ? dentro.slice(1, -1) : dentro;
-    const tokens = [...semParen.matchAll(new RegExp(TOKEN.source, 'g'))].map((achado) => achado[0]);
-    return `\\sqrt{${converterTokens(tokens)}}`;
+    return `\\sqrt{${converterTokens(tokensInternos(semParen))}}`;
   }
 
   if (limpo.startsWith('|') && limpo.endsWith('|')) {
-    const tokens = [...limpo.slice(1, -1).matchAll(new RegExp(TOKEN.source, 'g'))].map(
-      (achado) => achado[0],
-    );
-    return `\\left|${converterTokens(tokens)}\\right|`;
+    return `\\left|${converterTokens(tokensInternos(limpo.slice(1, -1)))}\\right|`;
   }
 
   if (limpo.startsWith('(') && limpo.endsWith(')')) {
-    const tokens = [...limpo.slice(1, -1).matchAll(new RegExp(TOKEN.source, 'g'))].map(
-      (achado) => achado[0],
-    );
-    return `\\left(${converterTokens(tokens)}\\right)`;
+    return `\\left(${converterTokens(tokensInternos(limpo.slice(1, -1)))}\\right)`;
   }
 
   return decimal(normalizar(limpo));
@@ -251,6 +244,24 @@ function converterAtomo(atomo: string): string {
 
 /** Um token: ou um átomo, ou um operador. */
 const TOKEN = new RegExp(`(${ATOMO_AGRUPADO})|([-+−·×*/^=<>≤≥:])`, 'g');
+
+/**
+ * O token de DENTRO de um grupo, onde letras coladas são produto.
+ *
+ * Fora, o átomo de letra exige fronteira de palavra, senão `duas` viraria
+ * d·u·a·s. Dentro de `(ax + 2)` — que já foi reconhecido como conta — a
+ * fronteira some: sem isto, o `x` de `ax` não casava e a fórmula saía
+ * `\left(a + 2\right)`, que é OUTRA conta, não um defeito de desenho.
+ */
+const TOKEN_INTERNO = new RegExp(
+  `(${[RAIZ, MODULO, GRUPO, `\\d+(?:[.,]\\d+)?${LETRA}${POTENCIA}?`, NUMERO, `(?:${FUNCOES.join('|')})\\s*\\([^()]*\\)`, `${LETRA}${POTENCIA}?(?:\\s*\\([^()]*\\))?`].join('|')})|([-+−·×*/^=<>≤≥:])`,
+  'g',
+);
+
+/** Os tokens de dentro de um grupo, já sem os parênteses. */
+function tokensInternos(conteudo: string): readonly string[] {
+  return [...conteudo.matchAll(new RegExp(TOKEN_INTERNO.source, 'g'))].map((achado) => achado[0]);
+}
 
 /** Os operadores que aparecem na tela como símbolo. */
 const SIMBOLO: Readonly<Record<string, string>> = {
@@ -291,7 +302,28 @@ function converterTokens(tokens: readonly string[]): string {
       continue;
     }
 
-    if (token === '=' || token === '^' || token === '*') {
+    /*
+     * O `^` muda a estrutura, como a barra.
+     *
+     * Em LaTeX o expoente precisa de chaves: `e^{2x}`. Tratar `^` como símbolo
+     * solto produzia `e ^ \left(2x\right)`, que o KaTeX RECUSA — e o aluno via
+     * a expressão crua, com as barras invertidas à mostra, no meio da frase.
+     * Eram 161 fórmulas assim no banco.
+     */
+    if (token === '^') {
+      const base = saida.pop();
+      const proximo = tokens[i + 1];
+
+      if (base === undefined || proximo === undefined) {
+        continue;
+      }
+
+      saida.push(`${base}^{${expoente(proximo)}}`);
+      i += 1;
+      continue;
+    }
+
+    if (token === '=' || token === '*') {
       saida.push(SIMBOLO[token] ?? token);
       continue;
     }
@@ -310,6 +342,49 @@ function converterTokens(tokens: readonly string[]): string {
   }
 
   return saida.join(' ');
+}
+
+/**
+ * O conteúdo do expoente, sem os parênteses que só serviam para delimitá-lo.
+ *
+ * `e^(2x)` quer dizer `e^{2x}`: o parêntese é da escrita de teclado, não da
+ * conta. Mantê-lo daria `e^{\left(2x\right)}`, que é válido e feio.
+ */
+function expoente(atomo: string): string {
+  const limpo = atomo.trim();
+
+  if (limpo.startsWith('(') && limpo.endsWith(')')) {
+    return converterTokens(tokensInternos(limpo.slice(1, -1)));
+  }
+
+  return converterAtomo(limpo);
+}
+
+/**
+ * O trecho tem PALAVRA — e então é texto, não conta.
+ *
+ * `(em m²; duas casas decimais)` tem potência e parênteses, e por isso passava
+ * por expressão: ia à tela como `\left(e m^{2} d c d\right)`, cada letra
+ * virando uma variável. A pergunta aparecia com um borrão de fórmula no fim.
+ *
+ * Palavra é sequência de três letras ou mais que não seja função conhecida
+ * (`sen`, `cos`, `log`) nem unidade (`cm`, `mol`). Duas letras continuam
+ * passando, porque `ax` e `xy` são produto.
+ */
+function temPalavra(trecho: string): boolean {
+  const conhecidas = new Set([...FUNCOES, 'dx', 'dy', 'dz', 'dt']);
+
+  return [...trecho.matchAll(/[A-Za-zÀ-ÿ]{3,}/g)].some((achado) => {
+    const palavra = achado[0].toLowerCase();
+    /*
+     * A lista NOMEADA de unidades, e não a regra de «duas letras ou mais».
+     *
+     * Aquela regra existe para o átomo isolado, onde `cm` só pode ser unidade;
+     * aqui ela diria que `duas` e `casas` são unidades, e o parêntese inteiro
+     * voltaria a virar fórmula.
+     */
+    return !conhecidas.has(palavra) && !UNIDADES.has(palavra) && !UNIDADES.has(achado[0]);
+  });
 }
 
 /** O LaTeX de uma expressão já reconhecida. */
@@ -343,6 +418,11 @@ export function partesDoEnunciado(texto: string): readonly ParteDoEnunciado[] {
 
     // Unidade não é conta: `km/h`, `J/(kg·K)`, `m/s²`.
     if (bruto.split('/').some((fator: string) => ehUnidade(fator))) {
+      continue;
+    }
+
+    // Nem toda coisa entre parênteses é conta.
+    if (temPalavra(bruto)) {
       continue;
     }
 

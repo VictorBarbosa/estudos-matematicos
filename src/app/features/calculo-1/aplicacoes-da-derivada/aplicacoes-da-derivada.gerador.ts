@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -140,6 +140,7 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
         id: `aplic-max-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('aplicacoes-da-derivada', 'forma-2')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('aplicacoes-da-derivada', 'forma-2')[0]!, {}),
         enunciadoTex: `f(x) = ${p.paraTex()}`,
         gabarito,
         resolucao: {
@@ -199,6 +200,7 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
       id: `aplic-critico-${k}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('aplicacoes-da-derivada', 'forma-3')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('aplicacoes-da-derivada', 'forma-3')[0]!, {}),
       enunciadoTex: `f(x) = ${p.paraTex()}`,
       gabarito,
       resolucao: {

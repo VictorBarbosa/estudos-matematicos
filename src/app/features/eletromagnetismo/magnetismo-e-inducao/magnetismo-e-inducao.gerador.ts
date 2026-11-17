@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   MU_0,
   campoFioComPassos,
@@ -225,6 +225,7 @@ function campoFio(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mag-campofio-${i}-${r}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('magnetismo-e-inducao', 'forma-2')[0]!, { r, i }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('magnetismo-e-inducao', 'forma-2')[0]!, { r, i }),
     enunciadoTex: `I = ${i}\\ \\text{A} \\qquad r = ${r}\\ \\text{cm} \\qquad \\mu_0 = 4\\pi \\times 10^{-7}\\ \\text{T·m/A}`,
     gabarito,
     resolucao: {

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { decomporComPassos, direcaoGraus, modulo, somarComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -61,6 +61,7 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `vet-mod-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('vetores-no-plano', 'forma-1')[0]!, { x, y }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('vetores-no-plano', 'forma-1')[0]!, { x, y }),
     enunciadoTex: `\\vec{v} = (${x},\\; ${y})`,
     gabarito: resultado,
     resolucao: {
@@ -241,6 +242,7 @@ function exercicioDirecao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `vet-dir-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('vetores-no-plano', 'forma-4')[0]!, { x, y }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('vetores-no-plano', 'forma-4')[0]!, { x, y }),
     enunciadoTex: `\\vec{v} = (${x},\\; ${y})`,
     gabarito: resultado,
     resolucao: {

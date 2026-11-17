@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { somaComPassos, somaInfinitaComPassos, termoGeral } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -232,6 +232,7 @@ function exercicioSomaInfinita(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prog-inf-${primeiro}-${numerador}_${denominador}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('progressoes', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('progressoes', 'forma-3')[0]!, {}),
     enunciadoTex: `a_1 = ${primeiro} \\qquad q = ${razaoTex}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },

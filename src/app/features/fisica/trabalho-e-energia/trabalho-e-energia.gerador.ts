@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   GRAVIDADE_PADRAO,
   conservacaoEnergiaComPassos,
@@ -177,6 +177,7 @@ function exercicioVelocidadeQueda(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `ene-queda-${massa}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('trabalho-e-energia', 'forma-3')[0]!, { massa, altura }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('trabalho-e-energia', 'forma-3')[0]!, { massa, altura }),
     enunciadoTex: `m = ${massa}\\,\\text{kg} \\qquad h = ${altura}\\,\\text{m}`,
     gabarito: resultado.velocidadeFinal,
     resolucao: { resultado: resultado.velocidadeFinal, passos },
@@ -269,6 +270,7 @@ function exercicioAlturaMaxima(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `ene-altura-${velocidade}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('trabalho-e-energia', 'forma-5')[0]!, { velocidade }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('trabalho-e-energia', 'forma-5')[0]!, { velocidade }),
     enunciadoTex: `v_0 = ${velocidade}\\,\\text{m/s} \\qquad v_{topo} = 0`,
     gabarito: resultado,
     resolucao: {

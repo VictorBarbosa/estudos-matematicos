@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { equacaoParaTex, resolverSistemaComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -49,6 +49,7 @@ export const geradorSistemas: GeradorExercicio<number> = {
       id: `sistemas-${nivel}-${a1}${b1}${c1}-${a2}${b2}${c2}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('sistemas-lineares', 'forma-1')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('sistemas-lineares', 'forma-1')[0]!, {}),
       enunciadoTex: `\\begin{cases} ${equacaoParaTex(a1, b1, c1)} \\\\ ${equacaoParaTex(a2, b2, c2)} \\end{cases}`,
       gabarito: x,
       resolucao: { resultado: x, passos: resolucao.passos },

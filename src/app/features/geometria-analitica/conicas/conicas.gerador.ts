@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { ternosPitagoricos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -51,6 +51,7 @@ export const geradorConicas: GeradorExercicio<number> = {
         id: `conicas-exc-${a}-${b}-${hiperbole}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('conicas', 'forma-1')[0]!, { nome }, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('conicas', 'forma-1')[0]!, { nome }),
         enunciadoTex: equacaoTex,
         gabarito,
         resolucao: {
@@ -110,6 +111,7 @@ export const geradorConicas: GeradorExercicio<number> = {
         id: `conicas-semieixo-${a}-${b}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('conicas', 'forma-2')[0]!, { nome }, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('conicas', 'forma-2')[0]!, { nome }),
         enunciadoTex: equacaoTex,
         gabarito,
         resolucao: {
@@ -150,6 +152,7 @@ export const geradorConicas: GeradorExercicio<number> = {
       id: `conicas-focal-${a}-${b}-${hiperbole}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('conicas', 'forma-3')[0]!, { nome }, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('conicas', 'forma-3')[0]!, { nome }),
       enunciadoTex: equacaoTex,
       gabarito,
       resolucao: {

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { determinante, multiplicarComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -68,6 +68,7 @@ function exercicioDet2(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mat-det2-${a}_${b}_${c}_${d}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('matrizes-determinantes', 'forma-1')[0]!, {}),
     enunciadoTex: matrizTex([
       [a, b],
       [c, d],
@@ -137,6 +138,7 @@ function exercicioDet3(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mat-det3-${m.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('matrizes-determinantes', 'forma-2')[0]!, {}),
     enunciadoTex: matrizTex(m),
     gabarito: resultado,
     resolucao: {
@@ -331,6 +333,7 @@ function exercicioDetProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `mat-detprod-${a.flat().join('')}-${b.flat().join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('matrizes-determinantes', 'forma-5')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('matrizes-determinantes', 'forma-5')[0]!, {}),
     enunciadoTex: `A = ${matrizTex(a)} \\qquad B = ${matrizTex(b)}`,
     gabarito,
     resolucao: {

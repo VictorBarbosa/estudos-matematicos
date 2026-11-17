@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   G,
   MASSA_TERRA,
@@ -268,6 +268,7 @@ function exercicioRazaoForca(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `grav-razao-${fator}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-5')[0]!, { fator }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-5')[0]!, { fator }),
     enunciadoTex: `d \\to ${fator}d \\qquad F \\to \\frac{F}{?}`,
     gabarito: resultado,
     resolucao: {

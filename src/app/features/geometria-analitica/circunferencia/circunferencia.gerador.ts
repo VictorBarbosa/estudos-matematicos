@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -102,6 +102,7 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
         id: `circunf-centro-${a}${b}${raio}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('circunferencia', 'forma-2')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('circunferencia', 'forma-2')[0]!, {}),
         enunciadoTex: geralTex,
         gabarito,
         resolucao: {
@@ -152,6 +153,7 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
       id: `circunf-raio-${a}${b}${raio}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('circunferencia', 'forma-3')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('circunferencia', 'forma-3')[0]!, {}),
       enunciadoTex:
         nivel === 'facil'
           ? `(x ${a >= 0 ? '-' : '+'} ${Math.abs(a)})^{2} + (y ${b >= 0 ? '-' : '+'} ${Math.abs(b)})^{2} = ${raio * raio}`

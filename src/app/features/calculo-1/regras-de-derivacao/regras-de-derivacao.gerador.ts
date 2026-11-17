@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, mdc } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -65,6 +65,7 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
         id: `regras-produto-${a}${b}${c}${d}-${ponto}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('regras-de-derivacao', 'forma-1')[0]!, { ponto }, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('regras-de-derivacao', 'forma-1')[0]!, { ponto }),
         enunciadoTex:
           `f(x) = \\left(${a === 1 ? '' : a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)}\\right)` +
           `\\left(${c === 1 ? '' : c}x ${d >= 0 ? '+' : '-'} ${Math.abs(d)}\\right)`,
@@ -131,6 +132,7 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
         id: `regras-coef-${p.paraTex()}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('regras-de-derivacao', 'forma-2')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('regras-de-derivacao', 'forma-2')[0]!, {}),
         enunciadoTex: `f(x) = ${p.paraTex()}`,
         gabarito,
         resolucao: {
@@ -243,6 +245,7 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
       id: `regras-poli-${p.paraTex()}-${ponto}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('regras-de-derivacao', 'forma-3')[0]!, { ponto }, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('regras-de-derivacao', 'forma-3')[0]!, { ponto }),
       enunciadoTex: `f(x) = ${p.paraTex()}`,
       gabarito,
       resolucao: {

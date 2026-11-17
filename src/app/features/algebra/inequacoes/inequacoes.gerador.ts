@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Relacao, SIMBOLO_RELACAO, resolverInequacaoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -92,6 +92,7 @@ export const geradorInequacoes: GeradorExercicio<ConjuntoSolucao> = {
       id: `inequacoes-${nivel}-${a}-${b}-${c}-${relacao}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('inequacoes', 'forma-1')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('inequacoes', 'forma-1')[0]!, {}),
       enunciadoTex,
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },

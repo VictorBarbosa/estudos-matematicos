@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   GRAVIDADE_PADRAO,
   anguloCriticoComPassos,
@@ -70,6 +70,7 @@ function exercicioResultante(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `new-res-${aFavor}-${contra}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('leis-de-newton', 'forma-1')[0]!, { aFavor, contra }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('leis-de-newton', 'forma-1')[0]!, { aFavor, contra }),
     enunciadoTex: `F = ${aFavor}\\,\\text{N} \\qquad f = ${contra}\\,\\text{N} \\qquad m = ${massa}\\,\\text{kg}`,
     gabarito: resultado.resultante,
     resolucao: { resultado: resultado.resultante, passos },
@@ -112,6 +113,7 @@ function exercicioAceleracao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `new-acel-${forca}-${massa}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('leis-de-newton', 'forma-2')[0]!, { forca, massa }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('leis-de-newton', 'forma-2')[0]!, { forca, massa }),
     enunciadoTex: `F_R = ${forca}\\,\\text{N} \\qquad m = ${massa}\\,\\text{kg}`,
     gabarito: resultado.aceleracao,
     resolucao: { resultado: resultado.aceleracao, passos },
@@ -160,6 +162,7 @@ function exercicioNormalPlano(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `new-normal-${massa}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('leis-de-newton', 'forma-3')[0]!, { massa, angulo }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('leis-de-newton', 'forma-3')[0]!, { massa, angulo }),
     enunciadoTex: `m = ${massa}\\,\\text{kg} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito: resultado.normal,
     resolucao: {

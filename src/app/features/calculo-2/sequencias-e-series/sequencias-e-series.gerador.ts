@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { numeroEmTex, numeroEmTexto } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -113,6 +113,7 @@ function termoGeral(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `series-termo-${a}${b}${c}${d}-${grauMenor ? 'z' : 'n'}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('sequencias-e-series', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('sequencias-e-series', 'forma-1')[0]!, {}),
     enunciadoTex: `\\sum_{n=1}^{\\infty} \\frac{${num}}{${den}} \\qquad \\lim_{n \\to \\infty} a_n = \\;?`,
     gabarito,
     resolucao: {
@@ -368,6 +369,7 @@ function razao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `series-razao-${indice}-${p}${q}${b}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('sequencias-e-series', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('sequencias-e-series', 'forma-2')[0]!, {}),
     enunciadoTex: `\\sum_{n=1}^{\\infty} ${familia.tex}`,
     gabarito,
     resolucao: {
@@ -421,6 +423,7 @@ function telescopica(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `series-tele-${k}-${a}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('sequencias-e-series', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('sequencias-e-series', 'forma-3')[0]!, {}),
     enunciadoTex: `\\sum_{n=1}^{\\infty} \\frac{${k}}{(${f(a)})(${f(a + 1)})}`,
     gabarito,
     resolucao: {
@@ -479,6 +482,7 @@ function alternada(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `series-alt-${p}-${N}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('sequencias-e-series', 'forma-4')[0]!, { N }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('sequencias-e-series', 'forma-4')[0]!, { N }),
     enunciadoTex: `\\sum_{n=1}^{\\infty} (-1)^{n+1}${termo}`,
     gabarito,
     resolucao: {
@@ -563,6 +567,7 @@ function raio(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `series-raio-${indice}-${a}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('sequencias-e-series', 'forma-5')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('sequencias-e-series', 'forma-5')[0]!, {}),
     enunciadoTex: `\\sum_{n=1}^{\\infty} ${familia.tex}`,
     gabarito,
     resolucao: {
@@ -645,6 +650,7 @@ function extremosDoIntervalo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `series-extremos-${a}-${b}-${gabarito}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('sequencias-e-series', 'forma-6')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('sequencias-e-series', 'forma-6')[0]!, {}),
     enunciadoTex: `\\sum_{n=1}^{\\infty} ${familia.tex} \\qquad a = ${a},\\; R = ${b}`,
     gabarito,
     resolucao: {
@@ -697,6 +703,7 @@ function alternadaTermos(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `series-alttermos-${p}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('sequencias-e-series', 'forma-7')[0]!, { potencia }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('sequencias-e-series', 'forma-7')[0]!, { potencia }),
     enunciadoTex: `\\sum_{n=1}^{\\infty} (-1)^{n+1}${termo} \\qquad |S - S_N| < 10^{-${k}}`,
     gabarito,
     resolucao: {

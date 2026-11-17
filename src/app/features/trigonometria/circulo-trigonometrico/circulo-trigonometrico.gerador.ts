@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { paraRadianos, quadrante } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -30,6 +30,7 @@ export const geradorCirculo: GeradorExercicio<number> = {
         id: `circulo-quadrante-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('circulo-trigonometrico', 'forma-1')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('circulo-trigonometrico', 'forma-1')[0]!, {}),
         enunciadoTex: `\\theta = ${graus}°`,
         gabarito,
         resolucao: {
@@ -72,6 +73,7 @@ export const geradorCirculo: GeradorExercicio<number> = {
         id: `circulo-radianos-${graus}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('circulo-trigonometrico', 'forma-2')[0]!, { graus }, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('circulo-trigonometrico', 'forma-2')[0]!, { graus }),
         enunciadoTex: `${graus}° = \\;?\\text{ rad}`,
         gabarito,
         resolucao: {

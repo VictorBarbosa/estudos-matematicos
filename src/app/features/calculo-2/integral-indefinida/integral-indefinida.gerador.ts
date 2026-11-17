@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -97,6 +97,7 @@ export const geradorIndefinida: GeradorExercicio<number> = {
         id: `indef-valor-${a}${b}${c}-${ponto}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('integral-indefinida', 'forma-2')[0]!, { ponto }, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('integral-indefinida', 'forma-2')[0]!, { ponto }),
         enunciadoTex: `F(x) = \\int \\left(${integrando.paraTex()}\\right) dx`,
         gabarito,
         resolucao: {
@@ -144,6 +145,7 @@ export const geradorIndefinida: GeradorExercicio<number> = {
       id: `indef-coef-${a}${b}${c}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('integral-indefinida', 'forma-3')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('integral-indefinida', 'forma-3')[0]!, {}),
       enunciadoTex: `\\int \\left(${integrando.paraTex()}\\right) dx`,
       gabarito,
       resolucao: {

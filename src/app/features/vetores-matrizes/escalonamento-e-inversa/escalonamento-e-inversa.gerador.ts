@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Fracao,
   Matriz,
@@ -368,6 +368,7 @@ function exercicioRetro(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `escal-retro-${m.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('escalonamento-e-inversa', 'forma-3')[0]!, {}),
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -479,6 +480,7 @@ function exercicioClassificarEscalonada(nivel: Nivel, rng: Rng): Exercicio<numbe
     id: `escal-classe-${m.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-4')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('escalonamento-e-inversa', 'forma-4')[0]!, {}),
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -544,6 +546,7 @@ function exercicioClassificarSistema(nivel: Nivel, rng: Rng): Exercicio<number> 
     id: `escal-classe-sis-${aumentada.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-5')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('escalonamento-e-inversa', 'forma-5')[0]!, {}),
     enunciadoTex: sistemaTex(base, b),
     gabarito,
     resolucao: {
@@ -597,6 +600,7 @@ function exercicioGauss(nivel: Nivel, rng: Rng, troca: boolean): Exercicio<numbe
     id: `escal-gauss${troca ? '-troca' : ''}-${A.flat().join('_')}-${b.join('_')}-${pedida}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-6')[0]!, { nome }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('escalonamento-e-inversa', 'forma-6')[0]!, { nome }),
     enunciadoTex: sistemaTex(A, b),
     gabarito,
     resolucao: { resultado: gabarito, passos: gauss.passos },
@@ -751,6 +755,7 @@ function exercicioParametro(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `escal-param-${[...r1, ...r2, a31, a32].join('_')}-${b.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('escalonamento-e-inversa', 'forma-7')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('escalonamento-e-inversa', 'forma-7')[0]!, {}),
     enunciadoTex: sistemaTex([r1, r2, [a31, a32, 'k']], b),
     gabarito,
     resolucao: {

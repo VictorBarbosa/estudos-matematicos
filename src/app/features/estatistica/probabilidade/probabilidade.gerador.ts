@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   aoMenosUmComPassos,
   combinacoes,
@@ -143,6 +143,7 @@ function exercicioSemReposicao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prob-semrep-${vermelhas}-${azuis}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('probabilidade', 'forma-2')[0]!, { vermelhas, azuis }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('probabilidade', 'forma-2')[0]!, { vermelhas, azuis }),
     enunciadoTex: `${vermelhas}\\text{ vermelhas} \\qquad ${azuis}\\text{ azuis}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -191,6 +192,7 @@ function exercicioAoMenosUm(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prob-aomenos-${faces}-${tentativas}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('probabilidade', 'forma-3')[0]!, { faces, tentativas }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('probabilidade', 'forma-3')[0]!, { faces, tentativas }),
     enunciadoTex: `p = \\frac{1}{${faces}} \\qquad n = ${tentativas}`,
     gabarito: resultado,
     resolucao: { resultado, passos },

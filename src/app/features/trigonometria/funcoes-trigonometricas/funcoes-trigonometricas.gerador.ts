@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import {
@@ -46,6 +46,7 @@ export const geradorOndas: GeradorExercicio<number> = {
       periodo: {
         gabarito: periodo,
         enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-1')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('funcoes-trigonometricas', 'forma-1')[0]!, {}),
         passos: [
           {
             descricao: 'O período é 2π dividido pelo coeficiente de x.',
@@ -79,6 +80,7 @@ export const geradorOndas: GeradorExercicio<number> = {
       amplitude: {
         gabarito: Math.abs(amplitude),
         enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-2')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('funcoes-trigonometricas', 'forma-2')[0]!, {}),
         passos: [
           {
             descricao: 'A amplitude é o módulo do coeficiente que multiplica o seno.',
@@ -112,6 +114,7 @@ export const geradorOndas: GeradorExercicio<number> = {
       maximo: {
         gabarito: maximo,
         enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-3')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('funcoes-trigonometricas', 'forma-3')[0]!, {}),
         passos: [
           { descricao: 'O seno vale no máximo 1.', tex: '\\sin(Bx) \\leq 1' },
           {
@@ -142,6 +145,7 @@ export const geradorOndas: GeradorExercicio<number> = {
       minimo: {
         gabarito: minimo,
         enunciado: textoDoMolde(moldesDe('funcoes-trigonometricas', 'forma-4')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('funcoes-trigonometricas', 'forma-4')[0]!, {}),
         passos: [
           { descricao: 'O seno vale no mínimo −1.', tex: '\\sin(Bx) \\geq -1' },
           {

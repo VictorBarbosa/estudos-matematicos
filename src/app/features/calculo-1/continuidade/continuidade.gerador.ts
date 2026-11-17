@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -35,6 +35,7 @@ export const geradorContinuidade: GeradorExercicio<number> = {
         id: `cont-buraco-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('continuidade', 'forma-1')[0]!, { k }, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('continuidade', 'forma-1')[0]!, { k }),
         enunciadoTex: `f(x) = \\frac{x^{2} - ${k * k}}{x - ${k}}`,
         gabarito,
         resolucao: {
@@ -93,6 +94,7 @@ export const geradorContinuidade: GeradorExercicio<number> = {
         id: `cont-tvi-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('continuidade', 'forma-2')[0]!, { k }, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('continuidade', 'forma-2')[0]!, { k }),
         enunciadoTex: `f(x) = x^{3} - ${k}`,
         gabarito,
         resolucao: {
@@ -146,6 +148,7 @@ export const geradorContinuidade: GeradorExercicio<number> = {
       id: `cont-emenda-${ponto}${a}${b}${c}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('continuidade', 'forma-3')[0]!, { ponto }, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('continuidade', 'forma-3')[0]!, { ponto }),
       enunciadoTex:
         `f(x) = \\begin{cases} ${a === 1 ? '' : a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)} & x < ${ponto} \\\\ ` +
         `${c === 1 ? '' : c}x + k & x \\geq ${ponto} \\end{cases}`,

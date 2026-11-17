@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { numeroEmTex, numeroEmTexto } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -81,6 +81,7 @@ function mesmaBase(nivel: Nivel, rng: Rng): Exercicio<number> {
       id: `expeq-base-${base}-${q}-${n}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-1')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('equacoes-exponenciais', 'forma-1')[0]!, {}),
       enunciadoTex: `${base}^{${expoente}} = ${valor}`,
       gabarito,
       resolucao: {
@@ -201,6 +202,7 @@ function comLogaritmo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `expeq-log-${base}-${k}-${c}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-exponenciais', 'forma-2')[0]!, {}),
     enunciadoTex: `${k === 1 ? '' : `${k} \\cdot `}${base}^{x} = ${direita}`,
     gabarito,
     resolucao: {
@@ -291,6 +293,7 @@ function somaDeLogs(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `expeq-somalog-${base}-${r}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-exponenciais', 'forma-3')[0]!, {}),
     enunciadoTex: `\\log_{${base}} x + \\log_{${base}} (x + ${k}) = ${n}`,
     gabarito,
     resolucao: {
@@ -361,6 +364,7 @@ function substituicao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `expeq-subst-${a}-${t1}-${t2}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-4')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-exponenciais', 'forma-4')[0]!, {}),
     enunciadoTex: `${nome}^{x}${termo(p, ` \\cdot ${a}^{x}`)}${termo(q, '')} = 0`,
     gabarito,
     resolucao: {
@@ -493,6 +497,7 @@ function basesDiferentes(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `expeq-bases-${b}-${c}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-6')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-exponenciais', 'forma-6')[0]!, {}),
     enunciadoTex: `${b}^{x} = ${c}^{x - ${k}}`,
     gabarito,
     resolucao: {

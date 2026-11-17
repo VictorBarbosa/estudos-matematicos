@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { resolverQuadraticaComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -55,6 +55,7 @@ export const geradorQuadratica: GeradorExercicio<number> = {
         id: `quadratica-valor-${a}${b}${c}-${x}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('funcao-quadratica', 'forma-1')[0]!, { x }, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('funcao-quadratica', 'forma-1')[0]!, { x }),
         enunciadoTex: `f(x) = ${funcaoTex}`,
         gabarito,
         resolucao: {

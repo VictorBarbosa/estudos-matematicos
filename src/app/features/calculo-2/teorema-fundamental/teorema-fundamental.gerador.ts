@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, teoremaFundamentalComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -43,6 +43,7 @@ export const geradorTfc: GeradorExercicio<number> = {
         id: `tfc-area-${a}${b}-${ponto}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('teorema-fundamental', 'forma-1')[0]!, { ponto }, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('teorema-fundamental', 'forma-1')[0]!, { ponto }),
         enunciadoTex: `A(x) = \\int_{0}^{x} \\left(${p.paraTex('t')}\\right) dt`,
         gabarito,
         resolucao: {
@@ -153,6 +154,7 @@ export const geradorTfc: GeradorExercicio<number> = {
       id: `tfc-integral-${a}${b}-${de}${ate}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('teorema-fundamental', 'forma-3')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('teorema-fundamental', 'forma-3')[0]!, {}),
       enunciadoTex: `\\int_{${de}}^{${ate}} \\left(${p.paraTex()}\\right) dx`,
       gabarito,
       resolucao,

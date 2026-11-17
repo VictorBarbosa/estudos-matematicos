@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Intervalo,
   Resolucao,
@@ -174,6 +174,7 @@ function lerSomatorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
     id: `notacao-soma-${de}-${ate}-${termo.corpo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('notacao-matematica', 'forma-1')[0]!, {}),
     enunciadoTex: `\\sum_{k=${de}}^{${ate}} ${termo.corpo} = \\;?`,
     gabarito: numero(resolucao.resultado),
     resolucao: comoResposta(resolucao),
@@ -215,6 +216,7 @@ function lerProdutorio(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
     id: `notacao-prod-${ate}-${termo.corpo}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('notacao-matematica', 'forma-2')[0]!, {}),
     enunciadoTex: `\\prod_{k=${de}}^{${ate}} ${termo.corpo} = \\;?`,
     gabarito: numero(resolucao.resultado),
     resolucao: comoResposta(resolucao),
@@ -251,6 +253,7 @@ function lerModuloFatorial(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
     id: `notacao-mod-${dentro}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('notacao-matematica', 'forma-3')[0]!, {}),
     enunciadoTex: `\\left|${dentro}\\right| + ${n}! = \\;?`,
     gabarito: numero(resultado),
     resolucao: {
@@ -313,6 +316,7 @@ function lerIntervalo(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
     id: `notacao-intervalo-${de}-${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-4')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('notacao-matematica', 'forma-4')[0]!, {}),
     enunciadoTex: `x \\in ${intervaloParaTex(intervalo)}`,
     gabarito: numero(resolucao.resultado),
     resolucao: comoResposta(resolucao),
@@ -415,6 +419,7 @@ function lerFuncao(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
     id: `notacao-funcao-${a}-${b}-${x}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-6')[0]!, { x }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('notacao-matematica', 'forma-6')[0]!, { x }),
     enunciadoTex: `f: \\mathbb{R} \\to \\mathbb{R}, \\quad f(x) = ${a}x ${sinal} ${Math.abs(b)}`,
     gabarito: numero(resultado),
     resolucao: {
@@ -471,6 +476,7 @@ function escrever(
     id: `notacao-escrever-${conceito}-${canonizarNotacao(gabarito.exibida)}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('notacao-matematica', 'forma-7')[0]!, { texto }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('notacao-matematica', 'forma-7')[0]!, { texto }),
     // Sem fórmula: a notação é a resposta, não a pergunta.
     enunciadoTex: SEM_FORMULA,
     gabarito,

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { paraRadianos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -154,6 +154,7 @@ export const geradorRazoes: GeradorExercicio<number> = {
       id: `razoes-tangente-${graus}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('seno-cosseno-tangente', 'forma-3')[0]!, { graus }, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('seno-cosseno-tangente', 'forma-3')[0]!, { graus }),
       enunciadoTex: `\\tan ${graus}° = \\;?`,
       gabarito,
       resolucao: {

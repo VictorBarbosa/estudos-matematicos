@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, formatar, formatarEmTexto, integralNumerica } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -35,6 +35,7 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
         id: `aplint-vol-${a}${h}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('aplicacoes-da-integral', 'forma-1')[0]!, { h }, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('aplicacoes-da-integral', 'forma-1')[0]!, { h }),
         enunciadoTex: `y = ${a === 1 ? '' : a}x \\qquad 0 \\leq x \\leq ${h}`,
         gabarito,
         resolucao: {
@@ -94,6 +95,7 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
         id: `aplint-entre-${a}_${b}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('aplicacoes-da-integral', 'forma-2')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('aplicacoes-da-integral', 'forma-2')[0]!, {}),
         enunciadoTex: `y = ${a}x \\qquad y = ${b === 1 ? '' : b}x^{2}`,
         gabarito,
         resolucao: {
@@ -168,6 +170,7 @@ export const geradorAplicacoesIntegral: GeradorExercicio<number> = {
       id: `aplint-simples-${a}_${expoente}_${ate}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('aplicacoes-da-integral', 'forma-3')[0]!, { ate }, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('aplicacoes-da-integral', 'forma-3')[0]!, { ate }),
       enunciadoTex: `y = ${p.paraTex()}`,
       gabarito,
       resolucao: {

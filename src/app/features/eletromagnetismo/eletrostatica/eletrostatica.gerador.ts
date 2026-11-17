@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { K_COULOMB, campoPontualComPassos, coulombComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -440,6 +440,7 @@ function pontoNulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `elet-nulo-${q1}-${q2}-${d}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('eletrostatica', 'forma-6')[0]!, { q1, q2, d }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('eletrostatica', 'forma-6')[0]!, { q1, q2, d }),
     enunciadoTex: `q_1 = ${q1}\\ \\mu\\text{C} \\qquad q_2 = ${q2}\\ \\mu\\text{C} \\qquad d = ${d}\\ \\text{cm}`,
     gabarito,
     resolucao: {

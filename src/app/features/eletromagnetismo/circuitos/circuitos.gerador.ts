@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { associacaoComPassos, cargaRcComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -85,6 +85,7 @@ function ohm(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-ohm-${v}-${r}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('circuitos', 'forma-1')[0]!, { r, expressao1: txt(v) }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-1')[0]!, { r, expressao1: txt(v) }),
     enunciadoTex: `V = ${tex(v)}\\ \\text{V} \\qquad R = ${r}\\ \\Omega`,
     gabarito,
     resolucao: {
@@ -170,6 +171,7 @@ function potencia(nivel: Nivel, rng: Rng, porCorrente: boolean): Exercicio<numbe
     id: `circ-pot-v-${r}-${v}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('circuitos', 'forma-3')[0]!, { r, v }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-3')[0]!, { r, v }),
     enunciadoTex: `V = ${v}\\ \\text{V} \\qquad R = ${r}\\ \\Omega`,
     gabarito,
     resolucao: {
@@ -325,6 +327,7 @@ function misto(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-misto-${r1}-${r2}-${r3}-${v}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('circuitos', 'forma-6')[0]!, { r1, r2, r3, v }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-6')[0]!, { r1, r2, r3, v }),
     enunciadoTex: `R_1 + (R_2 \\parallel R_3) \\qquad V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {
@@ -445,6 +448,7 @@ function tau(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-tau-${r}-${c}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('circuitos', 'forma-8')[0]!, { expressao1: txt(r), c }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-8')[0]!, { expressao1: txt(r), c }),
     enunciadoTex: `R = ${tex(r)}\\ \\text{k}\\Omega \\qquad C = ${c}\\ \\mu\\text{F}`,
     gabarito,
     resolucao: {
@@ -549,6 +553,7 @@ function duasMalhas(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `circ-2malhas-${e1}-${e2}-${r1}-${r2}-${r3}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('circuitos', 'forma-10')[0]!, { e1, r1, e2, r2, r3 }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-10')[0]!, { e1, r1, e2, r2, r3 }),
     enunciadoTex: `(\\varepsilon_1 = ${e1}\\ \\text{V},\\; R_1 = ${r1}\\ \\Omega) \\parallel (\\varepsilon_2 = ${e2}\\ \\text{V},\\; R_2 = ${r2}\\ \\Omega) \\parallel R_3 = ${r3}\\ \\Omega`,
     gabarito,
     resolucao: {

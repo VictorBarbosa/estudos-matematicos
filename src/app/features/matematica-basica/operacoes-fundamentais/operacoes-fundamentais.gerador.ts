@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { No, avaliar, expressaoParaTex, numero, op, resolverExpressaoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarValorSimples } from '@core/treino/resposta-numerica/resposta-numerica';

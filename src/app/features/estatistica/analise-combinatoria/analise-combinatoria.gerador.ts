@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   arranjosComPassos,
   combinacoes,
@@ -122,6 +122,7 @@ function exercicioArranjo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `comb-arr-${n}-${p}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('analise-combinatoria', 'forma-2')[0]!, { n, p }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('analise-combinatoria', 'forma-2')[0]!, { n, p }),
     enunciadoTex: `A_{${n},${p}}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -162,6 +163,7 @@ function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `comb-comb-${n}-${p}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('analise-combinatoria', 'forma-3')[0]!, { p, n }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('analise-combinatoria', 'forma-3')[0]!, { p, n }),
     enunciadoTex: `C_{${n},${p}}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -228,6 +230,7 @@ function exercicioAnagrama(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `comb-ana-${palavra}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('analise-combinatoria', 'forma-4')[0]!, { palavra }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('analise-combinatoria', 'forma-4')[0]!, { palavra }),
     enunciadoTex: `\\text{${palavra}}`,
     gabarito: resultado,
     resolucao: { resultado, passos },

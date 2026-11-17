@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -60,6 +60,7 @@ export const geradorLaterais: GeradorExercicio<number> = {
       id: `laterais-${ponto}-${lado}-${a}${b}${c}${d}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('limites-laterais', 'forma-1')[0]!, { lado, ponto }, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('limites-laterais', 'forma-1')[0]!, { lado, ponto }),
       enunciadoTex:
         `f(x) = \\begin{cases} ${esquerdaTex} & x < ${ponto} \\\\ ${direitaTex} & x \\geq ${ponto} \\end{cases}` +
         ` \\qquad \\lim_{x \\to ${ponto}^{${lado === 'esquerda' ? '-' : '+'}}} f(x) = \\;?`,
@@ -144,6 +145,7 @@ function exercicioSalto(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `laterais-salto-${ponto}-${a}${b}${c}${d}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('limites-laterais', 'forma-2')[0]!, { ponto }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('limites-laterais', 'forma-2')[0]!, { ponto }),
     enunciadoTex: `f(x) = \\begin{cases} ${esquerdaTex} & x < ${ponto} \\\\ ${direitaTex} & x \\geq ${ponto} \\end{cases}`,
     gabarito,
     resolucao: {

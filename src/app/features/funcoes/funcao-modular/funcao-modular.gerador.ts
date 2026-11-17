@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Fracao, observarSimplificacao } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -167,6 +167,7 @@ export const geradorModular: GeradorExercicio<Fracao> = {
       id: `modular-valor-${a}-${b}-${x}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('funcao-modular', 'forma-1')[0]!, { x }, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('funcao-modular', 'forma-1')[0]!, { x }),
       enunciadoTex: funcaoTex,
       gabarito,
       resolucao: {

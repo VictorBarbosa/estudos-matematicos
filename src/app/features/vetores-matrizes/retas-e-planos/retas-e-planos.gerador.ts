@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -378,6 +378,7 @@ function determinante(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `planos-det-${u.join('')}-${v.join('')}-${w.join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('retas-e-planos', 'forma-5')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('retas-e-planos', 'forma-5')[0]!, {}),
     enunciadoTex: `\\vec{u} = ${vTex(u)} \\qquad \\vec{v} = ${vTex(v)} \\qquad \\vec{w} = ${vTex(w)}`,
     gabarito,
     resolucao: {
@@ -506,6 +507,7 @@ function planoTresPontos(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `planos-3p-${A.join('')}-${B.join('')}-${C.join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('retas-e-planos', 'forma-6')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('retas-e-planos', 'forma-6')[0]!, {}),
     enunciadoTex: `A = ${vTex(A)} \\qquad B = ${vTex(B)} \\qquad C = ${vTex(C)}`,
     gabarito,
     resolucao: {

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { leiDosCossenosComPassos, leiDosSenosComPassos, paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -164,6 +164,7 @@ function exercicioMaiorAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `leis-maior-angulo-${b}-${c}-${a}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('lei-senos-cossenos', 'forma-3')[0]!, { b, c, a }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('lei-senos-cossenos', 'forma-3')[0]!, { b, c, a }),
     enunciadoTex: `a = ${a} \\qquad b = ${b} \\qquad c = ${c} \\qquad \\hat{A} = \\;?`,
     gabarito,
     resolucao: {

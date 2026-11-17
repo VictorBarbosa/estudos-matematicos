@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import {
@@ -119,6 +119,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
         id: `exponencial-duplicacao-${base}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('funcao-exponencial', 'forma-2')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('funcao-exponencial', 'forma-2')[0]!, {}),
         enunciadoTex: funcaoTex,
         gabarito,
         resolucao: {
@@ -165,6 +166,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
         id: `exponencial-inicial-${inicial}-${base}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('funcao-exponencial', 'forma-3')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('funcao-exponencial', 'forma-3')[0]!, {}),
         enunciadoTex: funcaoTex,
         gabarito,
         resolucao: {
@@ -211,6 +213,7 @@ export const geradorExponencial: GeradorExercicio<number> = {
       id: `exponencial-valor-${inicial}-${base}-${x}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('funcao-exponencial', 'forma-4')[0]!, { x }, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('funcao-exponencial', 'forma-4')[0]!, { x }),
       enunciadoTex: funcaoTex,
       gabarito,
       resolucao: {

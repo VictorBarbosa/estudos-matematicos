@@ -114,6 +114,25 @@ function vestirValores(
   return vestirTexto(texto, comoTexto, idioma);
 }
 
+/**
+ * As traduções do molde, no formato do campo `traducoes` do exercício.
+ *
+ * Existe porque o texto traduzido não serve de nada guardado: os moldes foram
+ * escritos nas três línguas e os geradores pediam só o português, de modo que
+ * a tela mostrava a pergunta em português a quem tinha escolhido francês —
+ * eram 488 chamadas em 111 geradores. Passar as traduções deixou de ser
+ * trabalho extra: é este objeto, ao lado do enunciado.
+ */
+export function traducoesDoMolde(
+  molde: MoldeDeEnunciado,
+  valores: Readonly<Record<string, number | string>>,
+): { readonly fr: { readonly enunciado: string }; readonly en: { readonly enunciado: string } } {
+  return {
+    fr: { enunciado: textoDoMolde(molde, valores, 'fr') },
+    en: { enunciado: textoDoMolde(molde, valores, 'en') },
+  };
+}
+
 /** O texto nas três línguas de uma vez, que é o formato que o exercício usa. */
 export function textosDoMolde(
   molde: MoldeDeEnunciado,

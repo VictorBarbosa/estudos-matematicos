@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   EPSILON_0,
   K_COULOMB,
@@ -284,6 +284,7 @@ function energia(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `pot-energia-${c}-${v}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-5')[0]!, { c, v }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('potencial-e-capacitores', 'forma-5')[0]!, { c, v }),
     enunciadoTex: `C = ${c}\\ \\mu\\text{F} \\qquad V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {

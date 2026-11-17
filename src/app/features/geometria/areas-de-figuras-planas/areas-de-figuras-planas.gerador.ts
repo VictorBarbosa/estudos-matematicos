@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Figura, NOME_FIGURA, areaComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -215,6 +215,7 @@ function exercicioEscala(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `area-escala-${k}-${area}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('areas-de-figuras-planas', 'forma-2')[0]!, { area, k }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('areas-de-figuras-planas', 'forma-2')[0]!, { area, k }),
     enunciadoTex: `A = ${area} \\qquad k = ${k}`,
     gabarito,
     resolucao: {

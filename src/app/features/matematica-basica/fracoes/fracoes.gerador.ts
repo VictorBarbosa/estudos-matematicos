@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Fracao,
   OperacaoFracao,
@@ -217,6 +217,7 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
      * sendo o último passo da resolução, e é o que a dica pede.
      */
     enunciado: textoDoMolde(moldesDe('fracoes', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('fracoes', 'forma-1')[0]!, {}),
     enunciadoTex: `${String(decimal).replace('.', '{,}')} = \\;?`,
     gabarito: resultado,
     resolucao: { resultado, passos },

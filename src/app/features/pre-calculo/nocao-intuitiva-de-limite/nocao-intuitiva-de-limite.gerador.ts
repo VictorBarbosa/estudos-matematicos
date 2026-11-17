@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -30,6 +30,7 @@ export const geradorLimiteIntuitivo: GeradorExercicio<number> = {
         id: `limite-continua-${a}${b}-${ponto}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('nocao-intuitiva-de-limite', 'forma-1')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('nocao-intuitiva-de-limite', 'forma-1')[0]!, {}),
         enunciadoTex: `\\lim_{x \\to ${ponto}} \\left(${a === 1 ? '' : a}x^{2} ${b >= 0 ? '+' : '-'} ${Math.abs(b)}\\right)`,
         gabarito,
         resolucao: {
@@ -72,6 +73,7 @@ export const geradorLimiteIntuitivo: GeradorExercicio<number> = {
         id: `limite-difquad-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
         enunciado: textoDoMolde(moldesDe('nocao-intuitiva-de-limite', 'forma-2')[0]!, {}, 'pt'),
+        traducoes: traducoesDoMolde(moldesDe('nocao-intuitiva-de-limite', 'forma-2')[0]!, {}),
         enunciadoTex: `\\lim_{x \\to ${k}} \\frac{x^{2} - ${k * k}}{x - ${k}}`,
         gabarito,
         resolucao: {
@@ -137,6 +139,7 @@ export const geradorLimiteIntuitivo: GeradorExercicio<number> = {
       id: `limite-fatoravel-${r1}-${r2}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: textoDoMolde(moldesDe('nocao-intuitiva-de-limite', 'forma-3')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('nocao-intuitiva-de-limite', 'forma-3')[0]!, {}),
       enunciadoTex:
         `\\lim_{x \\to ${ponto}} \\frac{(x ${r1 >= 0 ? '-' : '+'} ${Math.abs(r1)})` +
         `(x ${r2 >= 0 ? '-' : '+'} ${Math.abs(r2)})}{x ${r1 >= 0 ? '-' : '+'} ${Math.abs(r1)}}`,

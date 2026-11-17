@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { empuxoDeMotorComPassos, tsiolkovskyComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -107,6 +107,7 @@ function exercicioImpulsoEspecifico(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `prop-isp-${exaustao}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('propulsao-de-foguetes', 'forma-2')[0]!, { exaustao }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('propulsao-de-foguetes', 'forma-2')[0]!, { exaustao }),
     enunciadoTex: `v_e = ${exaustao}\\,\\text{m/s} \\qquad g_0 = 9{,}81\\,\\text{m/s}^{2}`,
     gabarito: resultado,
     resolucao: {

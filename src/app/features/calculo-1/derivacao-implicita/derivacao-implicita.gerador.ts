@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   CurvaImplicita,
   FAMILIAS_IMPLICITAS,
@@ -215,6 +215,7 @@ function montarExercicio(
     id: `implicita-${curva.nome}-${x}-${y}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('derivacao-implicita', 'forma-1')[0]!, { x, y }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('derivacao-implicita', 'forma-1')[0]!, { x, y }),
     enunciadoTex: curvaImplicitaParaTex(curva),
     gabarito,
     resolucao: derivadaImplicitaComPassos(curva, x, y),
@@ -294,6 +295,7 @@ function comoTangente(base: Exercicio<number>, rng: Rng): Exercicio<number> {
     ...base,
     id: base.id.replace('implicita-', 'implicita-tangente-') + `-${rng.inteiro(0, 99)}`,
     enunciado: textoDoMolde(moldesDe('derivacao-implicita', 'forma-2')[0]!, { x, y }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('derivacao-implicita', 'forma-2')[0]!, { x, y }),
     gabarito,
     resolucao: {
       resultado: gabarito,

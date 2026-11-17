@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -86,6 +86,7 @@ function exercicioAreaTrapezio(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `def-trap-${m}_${k}-${de}${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('integral-definida', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('integral-definida', 'forma-1')[0]!, {}),
     enunciadoTex: `\\int_{${de}}^{${ate}} \\left(${retaTex(m, k)}\\right) dx`,
     gabarito,
     resolucao: {
@@ -156,6 +157,7 @@ function exercicioConstante(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `def-const-${valor}-${de}${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('integral-definida', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('integral-definida', 'forma-2')[0]!, {}),
     enunciadoTex: `\\int_{${de}}^{${ate}} ${valor}\\,dx`,
     gabarito,
     resolucao: {
@@ -460,6 +462,7 @@ function exercicioValorMedio(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `def-media-${m}_${k}-${de}${ate}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('integral-definida', 'forma-7')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('integral-definida', 'forma-7')[0]!, {}),
     enunciadoTex:
       `f(x) = ${retaTex(m, k)} \\qquad [${de},\\, ${ate}] \\qquad ` +
       `\\bar{f} = \\frac{1}{b-a}\\int_{a}^{b} f`,

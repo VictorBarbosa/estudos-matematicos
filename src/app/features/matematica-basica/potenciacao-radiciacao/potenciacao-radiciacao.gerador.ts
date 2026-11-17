@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Potencia,
   avaliarPotencia,
@@ -110,6 +110,7 @@ function exercicioProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: identificador('produto', rng),
     nivel,
     enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('potenciacao-radiciacao', 'forma-1')[0]!, {}),
     enunciadoTex: `${potenciaParaTex({ base, expoente: m })} \\cdot ${potenciaParaTex({ base, expoente: n })} = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -167,6 +168,7 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: identificador('quociente', rng),
     nivel,
     enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('potenciacao-radiciacao', 'forma-2')[0]!, {}),
     enunciadoTex: `\\frac{${potenciaParaTex({ base, expoente: m })}}{${potenciaParaTex({ base, expoente: n })}} = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -220,6 +222,7 @@ function exercicioPotenciaDePotencia(nivel: Nivel, rng: Rng): Exercicio<number> 
     id: identificador('potencia-de-potencia', rng),
     nivel,
     enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('potenciacao-radiciacao', 'forma-3')[0]!, {}),
     enunciadoTex: `\\left(${potenciaParaTex({ base, expoente: m })}\\right)^{${n}} = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -262,6 +265,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
       id: identificador('raiz-exata', rng),
       nivel,
       enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-4')[0]!, {}, 'pt'),
+      traducoes: traducoesDoMolde(moldesDe('potenciacao-radiciacao', 'forma-4')[0]!, {}),
       enunciadoTex: `\\sqrt{${radicando}} = \\;?`,
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -296,6 +300,7 @@ function exercicioRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: identificador('raiz-simplificada', rng),
     nivel,
     enunciado: textoDoMolde(moldesDe('potenciacao-radiciacao', 'forma-5')[0]!, { radicando }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('potenciacao-radiciacao', 'forma-5')[0]!, { radicando }),
     enunciadoTex: `\\sqrt{${radicando}} = k\\sqrt{${dentro}} \\qquad k = \\;?`,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },

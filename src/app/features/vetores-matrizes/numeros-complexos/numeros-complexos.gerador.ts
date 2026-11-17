@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   argumentoGraus,
   dividirComplexosComPassos,
@@ -292,6 +292,7 @@ function exercicioPotenciaDeI(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `cpx-poti-${expoente}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('numeros-complexos', 'forma-4')[0]!, { expoente }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('numeros-complexos', 'forma-4')[0]!, { expoente }),
     enunciadoTex: `i^{${expoente}}`,
     gabarito,
     resolucao: {

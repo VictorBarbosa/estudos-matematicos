@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, analisarMovimentoComPassos, taxaMediaComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -207,6 +207,7 @@ function exercicioDeParada(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `taxa-parada-${primeira}-${segunda}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado: textoDoMolde(moldesDe('taxa-de-variacao', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('taxa-de-variacao', 'forma-1')[0]!, {}),
     enunciadoTex: `s(t) = ${s.paraTex('t')}`,
     gabarito: primeira,
     resolucao: {
