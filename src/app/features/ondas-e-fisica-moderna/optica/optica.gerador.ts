@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   anguloLimiteComPassos,
   fendaDuplaComPassos,
@@ -94,6 +94,10 @@ function indice(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: t(v), v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('optica', 'forma-1')[0]!, {
+      v1: t(v),
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `c = 3 \\times 10^{8}\\ \\text{m/s} \\qquad v = ${tex(v)} \\times 10^{8}\\ \\text{m/s}`,
     gabarito,
     resolucao: {
@@ -141,6 +145,12 @@ function snell(nivel: Nivel, rng: Rng): Exercicio<number> {
       { nome, v1: t(n2), theta1, v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('optica', 'forma-2')[0]!, {
+      nome,
+      v1: t(n2),
+      theta1,
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `n_1 = 1{,}00 \\qquad \\theta_1 = ${theta1}^{\\circ} \\qquad n_2 = ${tex(n2)}`,
     gabarito,
     resolucao,
@@ -185,6 +195,12 @@ function critico(nivel: Nivel, rng: Rng): Exercicio<number> {
       { nome, v1: t(n1), destino, v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('optica', 'forma-3')[0]!, {
+      nome,
+      v1: t(n1),
+      destino,
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `n_1 = ${tex(n1)} \\qquad n_2 = ${tex(n2)} \\qquad \\theta_c = \\;?`,
     gabarito,
     resolucao,
@@ -233,6 +249,11 @@ function lente(nivel: Nivel, rng: Rng): Exercicio<number> {
       { p, tipo, v1: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('optica', 'forma-4')[0]!, {
+      p,
+      tipo,
+      v1: casas(gabarito),
+    }),
     enunciadoTex: `f = ${f}\\ \\text{cm} \\qquad p = ${p}\\ \\text{cm} \\qquad p' = \\;?`,
     gabarito,
     resolucao,
@@ -288,6 +309,12 @@ function aumento(nivel: Nivel, rng: Rng): Exercicio<number> {
       { h, v1: t(p), f, v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('optica', 'forma-5')[0]!, {
+      h,
+      v1: t(p),
+      f,
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `f = ${f}\\ \\text{cm} \\qquad p = ${tex(p)}\\ \\text{cm} \\qquad h = ${h}\\ \\text{cm}`,
     gabarito,
     resolucao: {
@@ -347,6 +374,13 @@ function fenda(nivel: Nivel, rng: Rng): Exercicio<number> {
       { lambda, v1: t(d), v2: t(L), ordem, v3: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('optica', 'forma-6')[0]!, {
+      lambda,
+      v1: t(d),
+      v2: t(L),
+      ordem,
+      v3: casas(gabarito),
+    }),
     enunciadoTex: `\\lambda = ${lambda}\\ \\text{nm} \\qquad d = ${tex(d)}\\ \\text{mm} \\qquad L = ${tex(L)}\\ \\text{m} \\qquad m = ${ordem}`,
     gabarito,
     resolucao,
@@ -390,6 +424,13 @@ function fendaLambda(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: t(d), v2: t(L), ordem, v3: t(y), v4: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('optica', 'forma-7')[0]!, {
+      v1: t(d),
+      v2: t(L),
+      ordem,
+      v3: t(y),
+      v4: casas(gabarito),
+    }),
     enunciadoTex: `y_{${ordem}} = ${tex(y)}\\ \\text{mm} \\qquad d = ${tex(d)}\\ \\text{mm} \\qquad L = ${tex(L)}\\ \\text{m}`,
     gabarito,
     resolucao: {
@@ -449,6 +490,13 @@ function lenteDuas(nivel: Nivel, rng: Rng): Exercicio<number> {
       { separacao, f1, f2, p1, v1: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('optica', 'forma-8')[0]!, {
+      separacao,
+      f1,
+      f2,
+      p1,
+      v1: casas(gabarito),
+    }),
     enunciadoTex: `f_1 = ${f1} \\qquad f_2 = ${f2} \\qquad D = ${separacao} \\qquad p_1 = ${p1}\\ (\\text{cm})`,
     gabarito,
     resolucao: {

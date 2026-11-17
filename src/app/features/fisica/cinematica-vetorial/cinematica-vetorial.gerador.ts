@@ -93,6 +93,7 @@ function doDeslocamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('cinematica-vetorial', 'forma-1')[0]!, { tempo }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-vetorial', 'forma-1')[0]!, { tempo }),
     enunciadoTex: `\\vec{r}_{1} = ${vetorParaTex(inicio)} \\qquad \\vec{r}_{2} = ${vetorParaTex(fim)}`,
     gabarito,
     resolucao: deslocamentoVetorialComPassos(inicio, fim, tempo),
@@ -140,6 +141,7 @@ function daRelativa(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('cinematica-vetorial', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-vetorial', 'forma-2')[0]!, {}),
     enunciadoTex: `\\vec{v}_{ar} = ${vetorParaTex(aeronave)} \\qquad \\vec{v}_{vento} = ${vetorParaTex(vento)}`,
     gabarito,
     resolucao: velocidadeRelativaComPassos(aeronave, vento),
@@ -195,6 +197,11 @@ function daTravessia(nivel: Nivel, rng: Rng): Exercicio<number> {
       { largura, barco, rio },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-vetorial', 'forma-3')[0]!, {
+      largura,
+      barco,
+      rio,
+    }),
     enunciadoTex: `v_{barco} = ${barco}\\ \\text{m/s} \\qquad v_{rio} = ${rio}\\ \\text{m/s} \\qquad d = ${largura}\\ \\text{m}`,
     gabarito,
     resolucao: travessiaDeRioComPassos(barco, rio, largura),
@@ -239,6 +246,7 @@ function daCompensacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('cinematica-vetorial', 'forma-4')[0]!, { barco, rio }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-vetorial', 'forma-4')[0]!, { barco, rio }),
     enunciadoTex: `v_{barco}\\operatorname{sen}\\theta = v_{rio}`,
     gabarito,
     resolucao: anguloDeCompensacaoComPassos(barco, rio),
@@ -288,6 +296,7 @@ function dasComponentes(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('cinematica-vetorial', 'forma-5')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-vetorial', 'forma-5')[0]!, {}),
     enunciadoTex: `\\vec{v} = ${vetorParaTex(velocidade)} \\qquad \\vec{a} = ${vetorParaTex(aceleracao)}`,
     gabarito,
     resolucao: componentesDaAceleracaoComPassos(velocidade, aceleracao),
@@ -346,6 +355,7 @@ function daCurvatura(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('cinematica-vetorial', 'forma-6')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-vetorial', 'forma-6')[0]!, {}),
     enunciadoTex: `\\vec{v} = ${vetorParaTex(velocidade)} \\qquad \\vec{a} = ${vetorParaTex(aceleracao)}`,
     gabarito,
     resolucao: raioDeCurvaturaComPassos(velocidade, aceleracao),
@@ -388,6 +398,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -401,6 +413,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

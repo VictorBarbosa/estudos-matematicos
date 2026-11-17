@@ -94,6 +94,7 @@ function doCoeficiente(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('series-de-taylor', 'forma-1')[0]!, { n }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('series-de-taylor', 'forma-1')[0]!, { n }),
     enunciadoTex: FUNCAO_TEX[funcao],
     gabarito,
     resolucao: coeficienteComPassos(funcao, n),
@@ -157,6 +158,10 @@ function daAproximacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { grau, expressao1: String(x).replace('.', ',') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('series-de-taylor', 'forma-2')[0]!, {
+      grau,
+      expressao1: String(x).replace('.', ','),
+    }),
     enunciadoTex: FUNCAO_TEX[funcao],
     gabarito,
     resolucao: maclaurinComPassos(funcao, grau, x),
@@ -213,6 +218,10 @@ function doErro(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: String(x).replace('.', ','), grau },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('series-de-taylor', 'forma-3')[0]!, {
+      expressao1: String(x).replace('.', ','),
+      grau,
+    }),
     enunciadoTex: FUNCAO_TEX[funcao],
     gabarito,
     resolucao: erroDaAproximacaoComPassos(funcao, grau, x),
@@ -328,6 +337,11 @@ function daRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: String(x).replace('.', ','), grau, a },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('series-de-taylor', 'forma-5')[0]!, {
+      expressao1: String(x).replace('.', ','),
+      grau,
+      a,
+    }),
     enunciadoTex: `f(x) = \\sqrt{x} \\quad\\text{em torno de } x = ${a}`,
     gabarito,
     resolucao,
@@ -374,6 +388,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -387,6 +403,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

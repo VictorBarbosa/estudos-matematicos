@@ -86,6 +86,7 @@ function daSeparavel(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('edo-primeira-ordem', 'forma-1')[0]!, { y0, t }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('edo-primeira-ordem', 'forma-1')[0]!, { y0, t }),
     enunciadoTex: `\\frac{dy}{dt} = ${formatar(k)}y, \\qquad y(0) = ${y0}`,
     gabarito,
     resolucao: separavelExponencialComPassos(k, y0, t),
@@ -130,6 +131,7 @@ function daMeiaVida(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('edo-primeira-ordem', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('edo-primeira-ordem', 'forma-2')[0]!, {}),
     enunciadoTex: `\\frac{dy}{dt} = ${formatar(k)}y`,
     gabarito,
     resolucao: meiaVidaComPassos(k),
@@ -180,6 +182,7 @@ function daLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('edo-primeira-ordem', 'forma-3')[0]!, { y0, t }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('edo-primeira-ordem', 'forma-3')[0]!, { y0, t }),
     enunciadoTex: `y' + ${formatar(p)}y = ${formatar(q)}, \\qquad y(0) = ${y0}`,
     gabarito,
     resolucao: linearPrimeiraOrdemComPassos(p, q, y0, t),
@@ -290,6 +293,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -303,6 +308,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

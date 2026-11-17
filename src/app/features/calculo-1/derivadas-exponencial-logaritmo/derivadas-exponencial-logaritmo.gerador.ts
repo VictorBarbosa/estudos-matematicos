@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   derivadaExponencialComPassos,
   derivadaExponencialDeBaseComPassos,
@@ -105,6 +105,7 @@ function daExponencial(nivel: Nivel, rng: Rng): Exercicio<number> {
       { x0 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-exponencial-logaritmo', 'forma-1')[0]!, { x0 }),
     enunciadoTex: `f(x) = ${exponencialParaTex(a, k)}`,
     gabarito,
     resolucao: derivadaExponencialComPassos(a, k, x0),
@@ -156,6 +157,7 @@ function doLogaritmo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { x0 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-exponencial-logaritmo', 'forma-2')[0]!, { x0 }),
     enunciadoTex: `f(x) = ${logaritmoParaTex(a, k)}`,
     gabarito,
     resolucao: derivadaLogaritmoComPassos(a, k, x0),
@@ -208,6 +210,7 @@ function daBaseQualquer(nivel: Nivel, rng: Rng): Exercicio<number> {
       { x0 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-exponencial-logaritmo', 'forma-3')[0]!, { x0 }),
     enunciadoTex: `f(x) = ${a === 1 ? '' : `${a}\\cdot `}${base}^{x}`,
     gabarito,
     resolucao: derivadaExponencialDeBaseComPassos(a, base, x0),
@@ -258,6 +261,7 @@ function doLogaritmoDeBase(nivel: Nivel, rng: Rng): Exercicio<number> {
       { x0 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-exponencial-logaritmo', 'forma-4')[0]!, { x0 }),
     enunciadoTex: `f(x) = ${a === 1 ? '' : a}\\log_{${base}} x`,
     gabarito,
     resolucao: derivadaLogaritmoDeBaseComPassos(a, base, x0),
@@ -300,6 +304,7 @@ function doProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       { x0 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-exponencial-logaritmo', 'forma-5')[0]!, { x0 }),
     enunciadoTex: `f(x) = ${n === 1 ? 'x' : `x^{${n}}`}e^{${k === 1 ? 'x' : k === -1 ? '-x' : `${k}x`}}`,
     gabarito,
     resolucao: derivadaProdutoComExponencialComPassos(n, k, x0),
@@ -349,6 +354,7 @@ function daPotenciaNoLogaritmo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { x0 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-exponencial-logaritmo', 'forma-6')[0]!, { x0 }),
     enunciadoTex: `f(x) = ${a === 1 ? '' : a}\\ln\\left(x^{${n}}\\right)`,
     gabarito,
     resolucao: derivadaLogaritmoDePotenciaComPassos(a, n, x0),
@@ -387,6 +393,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -400,6 +408,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

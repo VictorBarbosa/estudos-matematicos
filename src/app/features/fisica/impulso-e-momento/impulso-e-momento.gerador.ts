@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { colisaoComPassos, energiaCinetica, impulsoComPassos, momentoLinear } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -62,6 +62,10 @@ function exercicioMomento(nivel: Nivel, rng: Rng): Exercicio<number> {
       { massa, velocidade },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('impulso-e-momento', 'forma-1')[0]!, {
+      massa,
+      velocidade,
+    }),
     enunciadoTex: `m = ${massa}\\,\\text{kg} \\qquad v = ${velocidade}\\,\\text{m/s}`,
     gabarito: resultado,
     resolucao: {
@@ -115,6 +119,11 @@ function exercicioImpulso(nivel: Nivel, rng: Rng): Exercicio<number> {
       { forca, tempo, massa },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('impulso-e-momento', 'forma-2')[0]!, {
+      forca,
+      tempo,
+      massa,
+    }),
     enunciadoTex: `F = ${forca}\\,\\text{N} \\qquad \\Delta t = ${tempo}\\,\\text{s} \\qquad m = ${massa}\\,\\text{kg}`,
     gabarito: resultado,
     resolucao: {
@@ -166,6 +175,11 @@ function exercicioForcaMedia(nivel: Nivel, rng: Rng): Exercicio<number> {
       { massa, velocidade, v1: tempo.toLocaleString('pt-BR') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('impulso-e-momento', 'forma-3')[0]!, {
+      massa,
+      velocidade,
+      v1: tempo.toLocaleString('pt-BR'),
+    }),
     enunciadoTex:
       `m = ${massa}\\,\\text{kg} \\qquad v = ${velocidade}\\,\\text{m/s} \\qquad ` +
       `\\Delta t = ${String(tempo).replace('.', '{,}')}\\,\\text{s}`,
@@ -246,6 +260,12 @@ function exercicioColisao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { massaA, velocidadeA, massaB, velocidadeB },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('impulso-e-momento', 'forma-4')[0]!, {
+      massaA,
+      velocidadeA,
+      massaB,
+      velocidadeB,
+    }),
     enunciadoTex: `m_A = ${massaA} \\quad v_A = ${velocidadeA} \\quad m_B = ${massaB} \\quad v_B = ${velocidadeB}`,
     gabarito: resultado.velocidadeFinalA,
     resolucao: { resultado: resultado.velocidadeFinalA, passos },
@@ -308,6 +328,11 @@ function exercicioEnergiaPerdida(nivel: Nivel, rng: Rng): Exercicio<number> {
       { massaA, velocidadeA, massaB },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('impulso-e-momento', 'forma-5')[0]!, {
+      massaA,
+      velocidadeA,
+      massaB,
+    }),
     enunciadoTex: `m_A = ${massaA} \\quad v_A = ${velocidadeA} \\quad m_B = ${massaB} \\quad v_B = 0`,
     gabarito: perdida,
     resolucao: {

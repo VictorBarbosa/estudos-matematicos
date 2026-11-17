@@ -90,6 +90,7 @@ function daAvaliacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-1')[0]!, { x, y }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-1')[0]!, { x, y }),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {
@@ -151,6 +152,7 @@ function daCurvaDeNivel(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-2')[0]!, { x, y }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-2')[0]!, { x, y }),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {
@@ -216,6 +218,7 @@ function doCorte(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-3')[0]!, { y0 }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-3')[0]!, { y0 }),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: corteVerticalComPassos(q, y0),
@@ -303,6 +306,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -316,6 +321,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

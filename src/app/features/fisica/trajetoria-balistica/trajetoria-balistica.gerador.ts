@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { GRAVIDADE, paraRadianos, resolverLancamentoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -104,6 +104,10 @@ export const geradorBalistica: GeradorExercicio<number> = {
         moldesDe('trajetoria-balistica', alturaInicial > 0 ? 'forma-1' : 'forma-2')[0]!,
         { velocidadeInicial, anguloGraus, alturaInicial, nome, unidade },
         'pt',
+      ),
+      traducoes: traducoesDoMolde(
+        moldesDe('trajetoria-balistica', alturaInicial > 0 ? 'forma-1' : 'forma-2')[0]!,
+        { velocidadeInicial, anguloGraus, alturaInicial, nome, unidade },
       ),
       enunciadoTex:
         `v_0 = ${velocidadeInicial}\\text{ m/s} \\qquad \\theta = ${anguloGraus}° \\qquad ` +

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { anguloInternoRegular, somaAngulosInternosComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -107,6 +107,9 @@ function exercicioSomaInternos(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: nomeDe(lados) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('angulos-e-triangulos', 'forma-1')[0]!, {
+      v1: nomeDe(lados),
+    }),
     enunciadoTex: `n = ${lados}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -179,6 +182,10 @@ function exercicioAnguloRegular(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: nomeDe(lados), casas },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('angulos-e-triangulos', 'forma-2')[0]!, {
+      v1: nomeDe(lados),
+      casas,
+    }),
     enunciadoTex: `n = ${lados} \\quad \\text{(regular)}`,
     gabarito: resultado,
     resolucao: {
@@ -231,6 +238,10 @@ function exercicioTerceiroAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { primeiro, segundo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('angulos-e-triangulos', 'forma-3')[0]!, {
+      primeiro,
+      segundo,
+    }),
     enunciadoTex: `\\alpha = ${primeiro}^\\circ \\qquad \\beta = ${segundo}^\\circ`,
     gabarito: resultado,
     resolucao: {
@@ -333,6 +344,9 @@ function exercicioLadosPeloAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: emPortugues(angulo) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('angulos-e-triangulos', 'forma-4')[0]!, {
+      v1: emPortugues(angulo),
+    }),
     enunciadoTex: `a_i = ${angulo}^\\circ`,
     gabarito: lados,
     resolucao: {

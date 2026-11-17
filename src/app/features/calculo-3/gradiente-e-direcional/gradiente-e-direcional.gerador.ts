@@ -141,6 +141,7 @@ function doModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('gradiente-e-direcional', 'forma-1')[0]!, { x, y }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('gradiente-e-direcional', 'forma-1')[0]!, { x, y }),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: gradienteComPassos(q, x, y),
@@ -196,6 +197,12 @@ function daDirecional(nivel: Nivel, rng: Rng): Exercicio<number> {
       { x, y, expressao1: direcao.x, expressao2: direcao.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('gradiente-e-direcional', 'forma-2')[0]!, {
+      x,
+      y,
+      expressao1: direcao.x,
+      expressao2: direcao.y,
+    }),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: derivadaDirecionalComPassos(q, x, y, direcao),
@@ -255,6 +262,7 @@ function doCritico(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('gradiente-e-direcional', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('gradiente-e-direcional', 'forma-3')[0]!, {}),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: pontoCriticoComPassos(q),
@@ -292,6 +300,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -305,6 +315,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { NOME_SOLIDO, Solido, superficieComPassos, volumeComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -285,6 +285,10 @@ function exercicioEscala(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: numeroEmPortugues(volume), v2: numeroEmPortugues(k) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('solidos-e-volumes', 'forma-1')[0]!, {
+      v1: numeroEmPortugues(volume),
+      v2: numeroEmPortugues(k),
+    }),
     enunciadoTex: `V = ${volume} \\qquad k = ${k}`,
     gabarito,
     resolucao: {

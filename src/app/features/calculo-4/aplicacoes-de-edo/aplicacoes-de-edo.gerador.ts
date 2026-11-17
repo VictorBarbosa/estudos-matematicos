@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   linearPrimeiraOrdemComPassos,
   meiaVidaComPassos,
@@ -85,6 +85,12 @@ function doResfriamento(nivel: Nivel, rng: Rng): Exercicio<number> {
       { inicial, ambiente, expressao1: String(k).replace('.', ','), t },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('aplicacoes-de-edo', 'forma-1')[0]!, {
+      inicial,
+      ambiente,
+      expressao1: String(k).replace('.', ','),
+      t,
+    }),
     enunciadoTex: `\\frac{dT}{dt} = -${formatar(k)}\\left(T - ${ambiente}\\right)`,
     gabarito,
     resolucao: linearPrimeiraOrdemComPassos(k, k * ambiente, inicial, t),
@@ -140,6 +146,11 @@ function doDecaimento(nivel: Nivel, rng: Rng): Exercicio<number> {
       { inicial, meiaVida, t },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('aplicacoes-de-edo', 'forma-2')[0]!, {
+      inicial,
+      meiaVida,
+      t,
+    }),
     enunciadoTex: `\\frac{dm}{dt} = -km, \\qquad k = \\frac{\\ln 2}{${meiaVida}}`,
     gabarito,
     resolucao: {
@@ -211,6 +222,12 @@ function doCircuito(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('aplicacoes-de-edo', 'forma-3')[0]!, {
+      resistencia,
+      expressao1: String(indutancia).replace('.', ','),
+      tensao,
+      expressao2: String(t).replace('.', ','),
+    }),
     enunciadoTex: `L\\frac{di}{dt} + Ri = V`,
     gabarito,
     resolucao: linearPrimeiraOrdemComPassos(resistencia / indutancia, tensao / indutancia, 0, t),
@@ -276,6 +293,13 @@ function daMola(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('aplicacoes-de-edo', 'forma-4')[0]!, {
+      massa,
+      rigidez,
+      amortecimento,
+      expressao1: String(x0).replace('.', ','),
+      expressao2: String(t).replace('.', ','),
+    }),
     enunciadoTex: `m\\ddot{x} + c\\dot{x} + kx = 0`,
     gabarito,
     resolucao: segundaOrdemComPassos(b, c, x0, 0, t),
@@ -334,6 +358,13 @@ function doTanque(nivel: Nivel, rng: Rng): Exercicio<number> {
       { volume, vazao, expressao1: String(concentracao).replace('.', ','), inicial, t },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('aplicacoes-de-edo', 'forma-5')[0]!, {
+      volume,
+      vazao,
+      expressao1: String(concentracao).replace('.', ','),
+      inicial,
+      t,
+    }),
     enunciadoTex: `\\frac{dS}{dt} = ${formatar(q)} - \\frac{${vazao}}{${volume}}S`,
     gabarito,
     resolucao: linearPrimeiraOrdemComPassos(p, q, inicial, t),
@@ -377,6 +408,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -390,6 +423,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { centroDeMassaComPassos, equilibrioAlavancaComPassos, torqueComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -66,6 +66,11 @@ function exercicioTorque(anguloFixo: number, nivel: Nivel, rng: Rng): Exercicio<
       { forca, v1: braco.toLocaleString('pt-BR'), angulo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('estatica-e-torque', 'forma-1')[0]!, {
+      forca,
+      v1: braco.toLocaleString('pt-BR'),
+      angulo,
+    }),
     enunciadoTex:
       `F = ${forca}\\,\\text{N} \\qquad r = ${String(braco).replace('.', '{,}')}\\,\\text{m} ` +
       `\\qquad \\theta = ${angulo}^\\circ`,
@@ -114,6 +119,11 @@ function exercicioAlavanca(nivel: Nivel, rng: Rng): Exercicio<number> {
       { forcaA, v1: distanciaA.toLocaleString('pt-BR'), forcaB },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('estatica-e-torque', 'forma-2')[0]!, {
+      forcaA,
+      v1: distanciaA.toLocaleString('pt-BR'),
+      forcaB,
+    }),
     enunciadoTex:
       `F_A = ${forcaA}\\,\\text{N} \\qquad d_A = ${String(distanciaA).replace('.', '{,}')}\\,\\text{m} ` +
       `\\qquad F_B = ${forcaB}\\,\\text{N}`,
@@ -212,6 +222,12 @@ function exercicioForcaEquilibrio(nivel: Nivel, rng: Rng): Exercicio<number> {
       { comprimento, pesoBarra, carga, cargaDistancia },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('estatica-e-torque', 'forma-3')[0]!, {
+      comprimento,
+      pesoBarra,
+      carga,
+      cargaDistancia,
+    }),
     enunciadoTex:
       `L = ${comprimento}\\,\\text{m} \\qquad P = ${pesoBarra}\\,\\text{N} \\qquad ` +
       `Q = ${carga}\\,\\text{N} \\qquad d = ${cargaDistancia}\\,\\text{m}`,

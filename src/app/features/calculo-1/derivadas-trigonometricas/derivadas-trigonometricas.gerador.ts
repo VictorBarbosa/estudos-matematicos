@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   ARCOS_DA_DERIVADA,
   FuncaoTrig,
@@ -111,6 +111,9 @@ function daTabela(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: arcoTexto(arco) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-trigonometricas', 'forma-1')[0]!, {
+      expressao1: arcoTexto(arco),
+    }),
     enunciadoTex: `f(x) = ${trigParaTex(funcao, a, 1)}`,
     gabarito,
     resolucao: derivadaTrigNoPontoComPassos(funcao, a, 1, arco),
@@ -197,6 +200,9 @@ function comCadeia(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: arcoTexto(arco) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-trigonometricas', 'forma-2')[0]!, {
+      expressao1: arcoTexto(arco),
+    }),
     enunciadoTex: `f(x) = ${trigParaTex(funcao, a, b)}`,
     gabarito,
     resolucao: derivadaTrigNoPontoComPassos(funcao, a, b, arco),
@@ -228,6 +234,9 @@ function daTangente(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: arcoTexto(arco) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-trigonometricas', 'forma-3')[0]!, {
+      expressao1: arcoTexto(arco),
+    }),
     enunciadoTex: `f(x) = ${trigParaTex('tan', a, b)}`,
     gabarito,
     resolucao: derivadaTrigNoPontoComPassos('tan', a, b, arco),
@@ -286,6 +295,9 @@ function doProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: arcoTexto(arco) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-trigonometricas', 'forma-4')[0]!, {
+      expressao1: arcoTexto(arco),
+    }),
     enunciadoTex: `f(x) = ${n === 1 ? 'x' : `x^{${n}}`}\\,${funcao === 'sen' ? '\\operatorname{sen}' : '\\cos'}(x)`,
     gabarito,
     resolucao: derivadaProdutoComTrigComPassos(n, funcao, arco),
@@ -342,6 +354,9 @@ function daPotencia(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: arcoTexto(arco) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-trigonometricas', 'forma-5')[0]!, {
+      expressao1: arcoTexto(arco),
+    }),
     enunciadoTex: `f(x) = ${funcao === 'sen' ? '\\operatorname{sen}' : '\\cos'}^{${n}}(x)`,
     gabarito,
     resolucao: derivadaPotenciaTrigComPassos(funcao, n, arco),
@@ -378,6 +393,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -391,6 +408,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

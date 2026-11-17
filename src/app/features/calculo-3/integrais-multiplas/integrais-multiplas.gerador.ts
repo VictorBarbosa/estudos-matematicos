@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   Quadrica,
   avaliarQuadrica,
@@ -174,6 +174,7 @@ function daMedia(nivel: Nivel, rng: Rng): Exercicio<number> {
       { x0, x1, y0, y1 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('integrais-multiplas', 'forma-1')[0]!, { x0, x1, y0, y1 }),
     enunciadoTex: `\\bar{f} = \\frac{1}{A}\\iint_{R} f\\,dA`,
     gabarito,
     resolucao: {
@@ -241,6 +242,11 @@ function daPolar(nivel: Nivel, rng: Rng): Exercicio<number> {
       { constante, raio, doze },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('integrais-multiplas', 'forma-2')[0]!, {
+      constante,
+      raio,
+      doze,
+    }),
     enunciadoTex: `\\iint_{S} ${constante}\\,dA, \\quad dA = r\\,dr\\,d\\theta`,
     gabarito,
     resolucao,
@@ -280,6 +286,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -293,6 +301,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

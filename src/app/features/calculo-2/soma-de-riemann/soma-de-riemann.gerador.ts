@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, integralNumerica, somaDeRiemann } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -41,6 +41,7 @@ export const geradorRiemann: GeradorExercicio<number> = {
         { de, ate, n, tipo },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('soma-de-riemann', 'forma-1')[0]!, { de, ate, n, tipo }),
       enunciadoTex: `f(x) = ${p.paraTex()} \\qquad n = ${n}`,
       gabarito,
       resolucao: {

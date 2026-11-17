@@ -92,6 +92,7 @@ function daAngular(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('movimento-circular', 'forma-1')[0]!, { periodo }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('movimento-circular', 'forma-1')[0]!, { periodo }),
     enunciadoTex: `T = ${periodo}\\ \\text{s} \\qquad \\omega = \\frac{2\\pi}{T}`,
     gabarito,
     resolucao: ate(movimentoCircularComPassos(periodo, raio, 1), 1, gabarito),
@@ -139,6 +140,9 @@ function daFrequencia(nivel: Nivel, rng: Rng): Exercicio<number> {
       { rotacoesPorMinuto },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('movimento-circular', 'forma-2')[0]!, {
+      rotacoesPorMinuto,
+    }),
     enunciadoTex: `n = ${rotacoesPorMinuto}\\ \\text{rpm} \\qquad \\omega = 2\\pi f`,
     gabarito,
     resolucao: daRotacaoPorMinuto(rotacoesPorMinuto, gabarito),
@@ -191,6 +195,10 @@ function daTangencial(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: String(raio).replace('.', ','), periodo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('movimento-circular', 'forma-3')[0]!, {
+      v1: String(raio).replace('.', ','),
+      periodo,
+    }),
     enunciadoTex: `r = ${String(raio).replace('.', '{,}')}\\ \\text{m} \\qquad T = ${periodo}\\ \\text{s}`,
     gabarito,
     resolucao: ate(movimentoCircularComPassos(periodo, raio, 1), 2, gabarito),
@@ -246,6 +254,10 @@ function daCentripeta(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: String(raio).replace('.', ','), periodo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('movimento-circular', 'forma-4')[0]!, {
+      v1: String(raio).replace('.', ','),
+      periodo,
+    }),
     enunciadoTex: `a_{c} = \\frac{v^{2}}{r} = \\omega^{2}r`,
     gabarito,
     resolucao: ate(movimentoCircularComPassos(periodo, raio, 1), 3, gabarito),
@@ -309,6 +321,11 @@ function daForca(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: String(massa).replace('.', ','), v2: String(raio).replace('.', ','), periodo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('movimento-circular', 'forma-5')[0]!, {
+      v1: String(massa).replace('.', ','),
+      v2: String(raio).replace('.', ','),
+      periodo,
+    }),
     enunciadoTex: `F_{c} = m\\frac{v^{2}}{r}`,
     gabarito,
     resolucao: ate(movimentoCircularComPassos(periodo, raio, massa), 4, gabarito),
@@ -366,6 +383,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -379,6 +398,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

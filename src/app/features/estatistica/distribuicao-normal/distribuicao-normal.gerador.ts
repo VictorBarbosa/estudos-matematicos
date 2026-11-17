@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   acumuladaPadrao,
   escoreZ,
@@ -109,6 +109,14 @@ function doEscore(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('distribuicao-normal', 'forma-1')[0]!, {
+      expressao1: cenario.sujeito,
+      expressao2: cenario.grandeza,
+      media,
+      expressao3: cenario.unidade,
+      desvio,
+      valor,
+    }),
     enunciadoTex: `z = \\frac{x - \\mu}{\\sigma}`,
     gabarito,
     resolucao: escoreZComPassos(valor, media, desvio),
@@ -168,6 +176,14 @@ function daAreaAbaixo(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('distribuicao-normal', 'forma-2')[0]!, {
+      expressao1: cenario.sujeito,
+      expressao2: cenario.grandeza,
+      media,
+      expressao3: cenario.unidade,
+      desvio,
+      valor,
+    }),
     enunciadoTex: `P(X < ${valor})`,
     gabarito,
     resolucao: probabilidadeAbaixoComPassos(valor, media, desvio),
@@ -226,6 +242,14 @@ function daAreaAcima(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('distribuicao-normal', 'forma-3')[0]!, {
+      expressao1: cenario.sujeito,
+      expressao2: cenario.grandeza,
+      media,
+      expressao3: cenario.unidade,
+      desvio,
+      valor,
+    }),
     enunciadoTex: `P(X > ${valor}) = 1 - \\Phi(z)`,
     gabarito,
     resolucao: {
@@ -290,6 +314,15 @@ function daAreaEntre(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('distribuicao-normal', 'forma-4')[0]!, {
+      expressao1: cenario.sujeito,
+      expressao2: cenario.grandeza,
+      media,
+      expressao3: cenario.unidade,
+      desvio,
+      de,
+      ate,
+    }),
     enunciadoTex: `P(${de} < X < ${ate})`,
     gabarito,
     resolucao: probabilidadeEntreComPassos(de, ate, media, desvio),
@@ -353,6 +386,14 @@ function doQuantil(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('distribuicao-normal', 'forma-5')[0]!, {
+      expressao1: cenario.sujeito,
+      expressao2: cenario.grandeza,
+      media,
+      expressao3: cenario.unidade,
+      desvio,
+      percentil,
+    }),
     enunciadoTex: `x = \\mu + z\\sigma`,
     gabarito,
     resolucao: valorDoQuantilComPassos(probabilidade, media, desvio),
@@ -412,6 +453,14 @@ function daRegraEmpirica(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('distribuicao-normal', 'forma-6')[0]!, {
+      expressao1: cenario.sujeito,
+      expressao2: cenario.grandeza,
+      media,
+      expressao3: cenario.unidade,
+      desvio,
+      desvios,
+    }),
     enunciadoTex: `P\\left(\\mu - ${desvios}\\sigma < X < \\mu + ${desvios}\\sigma\\right)`,
     gabarito,
     resolucao: regraEmpiricaComPassos(desvios, media, desvio),
@@ -455,6 +504,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -468,6 +519,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

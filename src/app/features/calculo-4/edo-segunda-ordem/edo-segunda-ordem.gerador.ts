@@ -102,6 +102,7 @@ function daRaiz(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('edo-segunda-ordem', 'forma-1')[0]!, {}),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: {
@@ -159,6 +160,11 @@ function doValor(nivel: Nivel, rng: Rng): Exercicio<number> {
       { y0, v0, expressao1: String(t).replace('.', ',') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('edo-segunda-ordem', 'forma-2')[0]!, {
+      y0,
+      v0,
+      expressao1: String(t).replace('.', ','),
+    }),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: segundaOrdemComPassos(b, c, y0, v0, t),
@@ -206,6 +212,7 @@ function doPeriodo(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('edo-segunda-ordem', 'forma-3')[0]!, {}),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: periodoAmortecidoComPassos(b, c),
@@ -251,6 +258,7 @@ function doDiscriminante(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('edo-segunda-ordem', 'forma-4')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('edo-segunda-ordem', 'forma-4')[0]!, {}),
     enunciadoTex: `y'' + ${formatar(b)}y' + ${formatar(c)}y = 0`,
     gabarito,
     resolucao: {
@@ -317,6 +325,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -330,6 +340,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

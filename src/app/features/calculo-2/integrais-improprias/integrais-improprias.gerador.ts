@@ -152,6 +152,7 @@ function noInfinito(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('integrais-improprias', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('integrais-improprias', 'forma-1')[0]!, {}),
     enunciadoTex: `\\int_{${a}}^{\\infty} ${integrandoPotenciaTex(p)}\\,dx`,
     gabarito,
     resolucao,
@@ -184,6 +185,7 @@ function naOrigem(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('integrais-improprias', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('integrais-improprias', 'forma-2')[0]!, {}),
     enunciadoTex: `\\int_{0}^{${b}} ${integrandoPotenciaTex(p)}\\,dx`,
     gabarito,
     resolucao,
@@ -210,6 +212,7 @@ function daExponencial(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('integrais-improprias', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('integrais-improprias', 'forma-3')[0]!, {}),
     enunciadoTex: `\\int_{${a}}^{\\infty} e^{-${k}x}\\,dx`,
     gabarito,
     resolucao,
@@ -261,6 +264,7 @@ function doArcotangente(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('integrais-improprias', 'forma-4')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('integrais-improprias', 'forma-4')[0]!, {}),
     enunciadoTex: `\\int_{${a}}^{\\infty} \\frac{dx}{1 + x^{2}}`,
     gabarito,
     resolucao,
@@ -315,6 +319,7 @@ function daComparacao(nivel: Nivel, rng: Rng): Exercicio<RespostaImpropria> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('integrais-improprias', 'forma-5')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('integrais-improprias', 'forma-5')[0]!, {}),
     enunciadoTex: `\\int_{${a}}^{\\infty} ${caso.tex}\\,dx`,
     gabarito: gabarito,
     resolucao: {
@@ -453,6 +458,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<RespostaImpropria>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: RespostaImpropria;
   readonly resolucao: Resolucao<ValorImproprio> | Resolucao<RespostaImpropria>;
@@ -471,6 +478,7 @@ function montar(pedido: Pedido): Exercicio<RespostaImpropria> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao,

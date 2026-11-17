@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   CONDUTIVIDADES,
   STEFAN_BOLTZMANN,
@@ -117,6 +117,13 @@ function daConducao(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('transferencia-de-calor', 'forma-1')[0]!, {
+      v1: material.material,
+      v2: numero(area),
+      v3: numero(espessura),
+      deltaT,
+      v4: numero(material.k),
+    }),
     enunciadoTex: `\\frac{Q}{t} = \\frac{kA\\,\\Delta T}{L}`,
     gabarito,
     resolucao: conducaoComPassos(material.k, area, deltaT, espessura),
@@ -172,6 +179,12 @@ function daResistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('transferencia-de-calor', 'forma-2')[0]!, {
+      v1: material.material,
+      v2: numero(espessura),
+      v3: numero(area),
+      v4: numero(material.k),
+    }),
     enunciadoTex: `R = \\frac{L}{kA}`,
     gabarito,
     resolucao: resistenciaTermicaComPassos(espessura, material.k, area),
@@ -213,6 +226,11 @@ function daConveccao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: numero(area), deltaT, h },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('transferencia-de-calor', 'forma-3')[0]!, {
+      v1: numero(area),
+      deltaT,
+      h,
+    }),
     enunciadoTex: `\\frac{Q}{t} = hA\\,\\Delta T`,
     gabarito,
     resolucao: conveccaoComPassos(h, area, deltaT),
@@ -258,6 +276,11 @@ function daRadiacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: numero(area), v2: numero(emissividade), celsius },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('transferencia-de-calor', 'forma-4')[0]!, {
+      v1: numero(area),
+      v2: numero(emissividade),
+      celsius,
+    }),
     enunciadoTex: `\\frac{Q}{t} = \\varepsilon\\sigma A T^{4}`,
     gabarito,
     resolucao: radiacaoComPassos(emissividade, area, kelvin),
@@ -364,6 +387,12 @@ function daCalorimetria(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: numero(massa), v2: material.nome, deltaT, v3: material.c },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('transferencia-de-calor', 'forma-5')[0]!, {
+      v1: numero(massa),
+      v2: material.nome,
+      deltaT,
+      v3: material.c,
+    }),
     enunciadoTex: `Q = mc\\,\\Delta T`,
     gabarito,
     resolucao: calorSensivelComPassos(massa, material.c, deltaT),
@@ -426,6 +455,16 @@ function daMistura(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('transferencia-de-calor', 'forma-6')[0]!, {
+      v1: numero(m1),
+      v2: primeiro.nome,
+      t1,
+      v3: numero(m2),
+      v4: segundo.nome,
+      t2,
+      v5: primeiro.c,
+      v6: segundo.c,
+    }),
     enunciadoTex: `Q_{1} + Q_{2} = 0`,
     gabarito,
     resolucao: equilibrioTermicoComPassos(m1, primeiro.c, t1, m2, segundo.c, t2),
@@ -470,6 +509,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -483,6 +524,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

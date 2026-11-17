@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { resolverOscilacaoComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -54,6 +54,12 @@ export const geradorMhs: GeradorExercicio<number> = {
         },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('movimento-harmonico', 'forma-1')[0]!, {
+        v1: numeroEmPortugues(massa),
+        v2: numeroEmPortugues(constante),
+        v3: numeroEmPortugues(amplitude),
+        nome,
+      }),
       enunciadoTex: `m = ${massa}\\text{ kg} \\qquad k = ${constante}\\text{ N/m} \\qquad A = ${amplitude}\\text{ m}`,
       gabarito,
       resolucao: {

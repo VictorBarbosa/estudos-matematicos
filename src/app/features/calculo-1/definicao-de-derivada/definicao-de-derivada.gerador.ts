@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -42,6 +42,10 @@ export const geradorDefinicaoDerivada: GeradorExercicio<number> = {
           { expressao1: numeroEmPortugues(ponto), expressao2: numeroEmPortugues(ponto + h) },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('definicao-de-derivada', 'forma-1')[0]!, {
+          expressao1: numeroEmPortugues(ponto),
+          expressao2: numeroEmPortugues(ponto + h),
+        }),
         enunciadoTex: `f(x) = ${p.paraTex()}`,
         gabarito,
         resolucao: {
@@ -104,6 +108,9 @@ export const geradorDefinicaoDerivada: GeradorExercicio<number> = {
         { expressao1: numeroEmPortugues(ponto) },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('definicao-de-derivada', 'forma-2')[0]!, {
+        expressao1: numeroEmPortugues(ponto),
+      }),
       enunciadoTex: `f(x) = ${p.paraTex()}`,
       gabarito,
       resolucao: {
@@ -206,6 +213,7 @@ function exercicioTaxaMedia(nivel: Nivel, rng: Rng, s: Polinomio): Exercicio<num
       { inicio, fim },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('definicao-de-derivada', 'forma-3')[0]!, { inicio, fim }),
     enunciadoTex: `s(t) = ${s.paraTex('t')}`,
     gabarito,
     resolucao: {

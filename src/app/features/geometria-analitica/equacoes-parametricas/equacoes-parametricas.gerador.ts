@@ -89,6 +89,7 @@ function daReta(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('equacoes-parametricas', 'forma-1')[0]!, { t }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-parametricas', 'forma-1')[0]!, { t }),
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: posicaoNoInstanteComPassos(curva, t),
@@ -189,6 +190,7 @@ function daElipse(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('equacoes-parametricas', 'forma-2')[0]!, { doze }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-parametricas', 'forma-2')[0]!, { doze }),
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: posicaoNoInstanteComPassos(curva, t),
@@ -233,6 +235,11 @@ function doLancamento(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v0, angulo, t },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-parametricas', 'forma-3')[0]!, {
+      v0,
+      angulo,
+      t,
+    }),
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: posicaoNoInstanteComPassos(curva, t).passos },
@@ -318,6 +325,7 @@ function doAlcance(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('equacoes-parametricas', 'forma-4')[0]!, { v0, angulo }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-parametricas', 'forma-4')[0]!, { v0, angulo }),
     enunciadoTex: `t_{voo} = \\frac{2v_{0}\\operatorname{sen}\\theta}{g}`,
     gabarito: resolucao.resultado,
     resolucao,
@@ -358,6 +366,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -371,6 +381,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

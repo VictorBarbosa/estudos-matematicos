@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   CORPOS_RIGIDOS,
   CorpoRigido,
@@ -150,6 +150,12 @@ function daParticula(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: numero(massa), v2: numero(distancia), velocidade, angulo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('momento-angular', 'forma-2')[0]!, {
+      v1: numero(massa),
+      v2: numero(distancia),
+      velocidade,
+      angulo,
+    }),
     enunciadoTex: `L = mvr\\operatorname{sen}\\theta`,
     gabarito,
     resolucao: momentoAngularDePartiComPassos(massa, velocidade, distancia, angulo),
@@ -205,6 +211,11 @@ function daConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('momento-angular', 'forma-3')[0]!, {
+      v1: numero(inerciaInicial),
+      v2: numero(omegaInicial),
+      v3: numero(inerciaFinal),
+    }),
     enunciadoTex: `I_{1}\\omega_{1} = I_{2}\\omega_{2}`,
     gabarito,
     resolucao: conservacaoAngularComPassos(inerciaInicial, omegaInicial, inerciaFinal),
@@ -263,6 +274,11 @@ function daEnergiaNaConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('momento-angular', 'forma-4')[0]!, {
+      v1: numero(inerciaInicial),
+      v2: numero(omegaInicial),
+      v3: numero(inerciaFinal),
+    }),
     enunciadoTex: `\\Delta K = \\frac{1}{2}I_{2}\\omega_{2}^{2} - \\frac{1}{2}I_{1}\\omega_{1}^{2}`,
     gabarito,
     resolucao: {
@@ -332,6 +348,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -345,6 +363,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

@@ -84,6 +84,12 @@ function daCilindrica(nivel: Nivel, rng: Rng, pedirX: boolean): Exercicio<number
       { r, theta, z, expressao1: pedirX ? 'x' : 'y' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('coordenadas-no-espaco', 'forma-1')[0]!, {
+      r,
+      theta,
+      z,
+      expressao1: pedirX ? 'x' : 'y',
+    }),
     enunciadoTex: `x = r\\cos\\theta \\qquad y = r\\operatorname{sen}\\theta \\qquad z = z`,
     gabarito,
     resolucao: {
@@ -142,6 +148,12 @@ function daEsferica(nivel: Nivel, rng: Rng, pedir: 'x' | 'z'): Exercicio<number>
       { rho, phi, theta, pedir },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('coordenadas-no-espaco', 'forma-2')[0]!, {
+      rho,
+      phi,
+      theta,
+      pedir,
+    }),
     enunciadoTex:
       'x = \\rho\\operatorname{sen}\\varphi\\cos\\theta \\qquad ' + 'z = \\rho\\cos\\varphi',
     gabarito,
@@ -198,6 +210,7 @@ function doRaioEsferico(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('coordenadas-no-espaco', 'forma-3')[0]!, { x, y, z }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('coordenadas-no-espaco', 'forma-3')[0]!, { x, y, z }),
     enunciadoTex: `\\rho = \\sqrt{x^{2} + y^{2} + z^{2}}`,
     gabarito,
     resolucao: {
@@ -260,6 +273,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -273,6 +288,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

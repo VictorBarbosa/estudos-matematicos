@@ -6826,5 +6826,765 @@
   "O salto é a diferença, direita menos esquerda.": {
     "fr": "Le saut est la différence, droite moins gauche.",
     "en": "The jump is the difference, right minus left."
+  },
+  "# não é potência exata de #. Tire o ln dos dois lados: x·ln # = ln #.": {
+    "fr": "# n’est pas une puissance exacte de #. Prenez le ln des deux côtés : x·ln # = ln #.",
+    "en": "# is not an exact power of #. Take ln on both sides: x·ln # = ln #."
+  },
+  "Escreva # como uma potência de #: # elevado a quanto dá #?": {
+    "fr": "Écrivez # comme une puissance de # : # à quelle puissance donne # ?",
+    "en": "Write # as a power of #: # to what power gives #?"
+  },
+  "Junte os dois logs num só: log(x) + log(x + #) = log(x·(x + #)). Depois confira se o x achado deixa os logs com argumento positivo.": {
+    "fr": "Réunissez les deux logs en un seul : log(x) + log(x + #) = log(x·(x + #)). Vérifiez ensuite que le x trouvé laisse les logs avec un argument positif.",
+    "en": "Put the two logs into one: log(x) + log(x + #) = log(x·(x + #)). Then check that the x you found keeps the logs with a positive argument."
+  },
+  "Escreva # e o lado direito como potências de #. Uma fração #/# é # elevado a um expoente negativo.": {
+    "fr": "Écrivez # et le côté droit comme des puissances de #. Une fraction #/# est # à un exposant négatif.",
+    "en": "Write # and the right-hand side as powers of #. A fraction #/# is # to a negative exponent."
+  },
+  "Isole a potência primeiro (divida por #), depois tire o ln dos dois lados.": {
+    "fr": "Isolez d’abord la puissance (divisez par #), puis prenez le ln des deux côtés.",
+    "en": "Isolate the power first (divide by #), then take ln on both sides."
+  },
+  "Chame #^x de t: #^x = t². Resolva em t e depois volte a x.": {
+    "fr": "Posez t = #^x : #^x = t². Résolvez en t puis revenez à x.",
+    "en": "Let t = #^x: #^x = t². Solve in t and then go back to x."
+  },
+  "Divida por # para ficar com e^(rt) = #; depois tire o ln dos dois lados.": {
+    "fr": "Divisez par # pour obtenir e^(rt) = # ; prenez ensuite le ln des deux côtés.",
+    "en": "Divide by # to get e^(rt) = #; then take ln on both sides."
+  },
+  "Tire o ln dos dois lados: x·ln # = (x − #)·ln #. Junte os termos com x de um lado.": {
+    "fr": "Prenez le ln des deux côtés : x·ln # = (x − #)·ln #. Réunissez les termes en x d’un côté.",
+    "en": "Take ln on both sides: x·ln # = (x − #)·ln #. Gather the x terms on one side."
+  },
+  "Chame #^x de t e resolva em t. Lembre que #^x nunca é negativo.": {
+    "fr": "Posez t = #^x et résolvez en t. Rappelez-vous que #^x n’est jamais négatif.",
+    "en": "Let t = #^x and solve in t. Remember that #^x is never negative."
+  },
+  "# não é potência exata de #: tiramos o logaritmo natural dos dois lados.": {
+    "fr": "# n’est pas une puissance exacte de # : nous prenons le logarithme naturel des deux côtés.",
+    "en": "# is not an exact power of #: we take the natural logarithm of both sides."
+  },
+  "Dividindo pelos logaritmos.": {
+    "fr": "En divisant par les logarithmes.",
+    "en": "Dividing by the logarithms."
+  },
+  "Escrevemos # como potência de #.": {
+    "fr": "Nous écrivons # comme une puissance de #.",
+    "en": "We write # as a power of #."
+  },
+  "Com a mesma base dos dois lados, os expoentes são iguais.": {
+    "fr": "Avec la même base des deux côtés, les exposants sont égaux.",
+    "en": "With the same base on both sides, the exponents are equal."
+  },
+  "Soma de logaritmos de mesma base é o logaritmo do produto.": {
+    "fr": "Une somme de logarithmes de même base est le logarithme du produit.",
+    "en": "A sum of logarithms with the same base is the logarithm of the product."
+  },
+  "Pela definição, o produto é a base elevada ao resultado.": {
+    "fr": "Par définition, le produit est la base élevée au résultat.",
+    "en": "By definition, the product is the base raised to the result."
+  },
+  "O logaritmo só existe para argumento positivo: x = # daria log de número negativo e é descartado.": {
+    "fr": "Le logarithme n’existe que pour un argument positif : x = # donnerait le log d’un nombre négatif et est écarté.",
+    "en": "The logarithm only exists for a positive argument: x = # would give the log of a negative number and is discarded."
+  },
+  "Os dois lados são potências de #: # = #².": {
+    "fr": "Les deux côtés sont des puissances de # : # = #².",
+    "en": "Both sides are powers of #: # = #²."
+  },
+  "Potência de potência multiplica os expoentes; depois igualamos.": {
+    "fr": "Puissance de puissance multiplie les exposants ; ensuite nous égalons.",
+    "en": "A power of a power multiplies the exponents; then we set them equal."
+  },
+  "Os dois lados são potências de #: # = #³.": {
+    "fr": "Les deux côtés sont des puissances de # : # = #³.",
+    "en": "Both sides are powers of #: # = #³."
+  },
+  "Os dois lados são potências de #: # = #², e uma fração #/algo é expoente negativo.": {
+    "fr": "Les deux côtés sont des puissances de # : # = #², et une fraction #/quelque chose est un exposant négatif.",
+    "en": "Both sides are powers of #: # = #², and a fraction #/something is a negative exponent."
+  },
+  "Primeiro isolamos a potência, dividindo por #.": {
+    "fr": "Nous isolons d’abord la puissance, en divisant par #.",
+    "en": "We first isolate the power, dividing by #."
+  },
+  "#^x = (#^x)²: trocamos #^x por t e a equação vira do #º grau.": {
+    "fr": "#^x = (#^x)² : nous remplaçons #^x par t et l’équation devient du #ᵉ degré.",
+    "en": "#^x = (#^x)²: we replace #^x by t and the equation becomes degree #."
+  },
+  "Soma e produto (ou Bhaskara) em t.": {
+    "fr": "Somme et produit (ou formule quadratique) en t.",
+    "en": "Sum and product (or the quadratic formula) in t."
+  },
+  "Voltamos a x em cada um.": {
+    "fr": "Nous revenons à x pour chacun.",
+    "en": "We go back to x for each one."
+  },
+  "A maior solução.": {
+    "fr": "La plus grande solution.",
+    "en": "The largest solution."
+  },
+  "Dividimos por # para isolar a exponencial.": {
+    "fr": "Nous divisons par # pour isoler l’exponentielle.",
+    "en": "We divide by # to isolate the exponential."
+  },
+  "O ln desfaz o e.": {
+    "fr": "Le ln défait le e.",
+    "en": "The ln undoes the e."
+  },
+  "Dividindo pela taxa.": {
+    "fr": "En divisant par le taux.",
+    "en": "Dividing by the rate."
+  },
+  "# e # não são potências da mesma base: tiramos o ln dos dois lados.": {
+    "fr": "# et # ne sont pas des puissances de la même base : nous prenons le ln des deux côtés.",
+    "en": "# and # are not powers of the same base: we take ln on both sides."
+  },
+  "Distribuímos e juntamos os termos com x.": {
+    "fr": "Nous distribuons et réunissons les termes en x.",
+    "en": "We expand and gather the x terms."
+  },
+  "#^x é sempre positivo: t = # não dá solução. Voltamos a x só com t = #.": {
+    "fr": "#^x est toujours positif : t = # ne donne pas de solution. Nous revenons à x seulement avec t = #.",
+    "en": "#^x is always positive: t = # gives no solution. We go back to x only with t = #."
+  },
+  "Q = C·V: # μF vezes # V dá a carga em μC.": {
+    "fr": "Q = C·V : # μF fois # V donne la charge en μC.",
+    "en": "Q = C·V: # μF times # V gives the charge in μC."
+  },
+  "V = k·q/r, com o sinal da carga: #×#⁹ vezes #×#⁻⁶, dividido por # (sem quadrado). Divida por # para kV.": {
+    "fr": "V = k·q/r, avec le signe de la charge : #×#⁹ fois #×#⁻⁶, divisé par # (sans carré). Divisez par # pour des kV.",
+    "en": "V = k·q/r, with the charge’s sign: #×#⁹ times #×#⁻⁶, divided by # (no square). Divide by # for kV."
+  },
+  "V = k·q/r, com o sinal da carga: #×#⁹ vezes (#)×#⁻⁶, dividido por # (sem quadrado). Divida por # para kV.": {
+    "fr": "V = k·q/r, avec le signe de la charge : #×#⁹ fois (#)×#⁻⁶, divisé par # (sans carré). Divisez par # pour des kV.",
+    "en": "V = k·q/r, with the charge’s sign: #×#⁹ times (#)×#⁻⁶, divided by # (no square). Divide by # for kV."
+  },
+  "C = ε₀·A/d com A em m² (# cm² = #×#⁻⁴ m²) e d em m (# mm = #×#⁻³ m). Depois passe para pF (×#¹²).": {
+    "fr": "C = ε₀·A/d avec A en m² (# cm² = #×#⁻⁴ m²) et d en m (# mm = #×#⁻³ m). Passez ensuite en pF (×#¹²).",
+    "en": "C = ε₀·A/d with A in m² (# cm² = #×#⁻⁴ m²) and d in m (# mm = #×#⁻³ m). Then go to pF (×#¹²)."
+  },
+  "U = ½·C·V²: metade de #×#⁻⁶ F vezes #² = #. O resultado sai em J; para mJ, multiplique por #.": {
+    "fr": "U = ½·C·V² : la moitié de #×#⁻⁶ F fois #² = #. Le résultat est en J ; pour des mJ, multipliez par #.",
+    "en": "U = ½·C·V²: half of #×#⁻⁶ F times #² = #. The result is in J; for mJ, multiply by #."
+  },
+  "W = q·(V_B − V_A) = #×#⁻⁶ vezes (# − #). Em joules; multiplique por # para mJ.": {
+    "fr": "W = q·(V_B − V_A) = #×#⁻⁶ fois (# − #). En joules ; multipliez par # pour des mJ.",
+    "en": "W = q·(V_B − V_A) = #×#⁻⁶ times (# − #). In joules; multiply by # for mJ."
+  },
+  "W = q·(V_B − V_A) = (#)×#⁻⁶ vezes (# − #). Em joules; multiplique por # para mJ.": {
+    "fr": "W = q·(V_B − V_A) = (#)×#⁻⁶ fois (# − #). En joules ; multipliez par # pour des mJ.",
+    "en": "W = q·(V_B − V_A) = (#)×#⁻⁶ times (# − #). In joules; multiply by # for mJ."
+  },
+  "Em paralelo as capacitâncias se somam: # + #.": {
+    "fr": "En parallèle les capacités s’additionnent : # + #.",
+    "en": "In parallel the capacitances add up: # + #."
+  },
+  "Em série: #/C = #/# + #/#. Depois inverta. O resultado é menor que #.": {
+    "fr": "En série : #/C = #/# + #/#. Puis inversez. Le résultat est plus petit que #.",
+    "en": "In series: #/C = #/# + #/#. Then invert. The result is smaller than #."
+  },
+  "Dois passos: C = ε₀·A/d (A = #×#⁻⁴ m², d = #×#⁻³ m) e depois U = ½·C·#². Para nJ, multiplique por #⁹.": {
+    "fr": "Deux étapes : C = ε₀·A/d (A = #×#⁻⁴ m², d = #×#⁻³ m) puis U = ½·C·#². Pour des nJ, multipliez par #⁹.",
+    "en": "Two steps: C = ε₀·A/d (A = #×#⁻⁴ m², d = #×#⁻³ m) and then U = ½·C·#². For nJ, multiply by #⁹."
+  },
+  "Resolva de dentro para fora: C₂ ∥ C₃ soma (# + #); depois a série com C₁ = # é produto sobre soma.": {
+    "fr": "Résolvez de l’intérieur vers l’extérieur : C₂ ∥ C₃ s’additionnent (# + #) ; ensuite la série avec C₁ = # est produit sur somme.",
+    "en": "Work from the inside out: C₂ ∥ C₃ add up (# + #); then the series with C₁ = # is product over sum."
+  },
+  "A capacitância é a carga por volt: Q = CV.": {
+    "fr": "La capacité est la charge par volt : Q = CV.",
+    "en": "Capacitance is charge per volt: Q = CV."
+  },
+  "μF vezes V dá μC diretamente.": {
+    "fr": "μF fois V donne des μC directement.",
+    "en": "μF times V gives μC directly."
+  },
+  "O potencial cai com r (não com r²) e carrega o sinal da carga: é um escalar.": {
+    "fr": "Le potentiel décroît en r (pas en r²) et porte le signe de la charge : c’est un scalaire.",
+    "en": "The potential falls with r (not r²) and carries the charge’s sign: it is a scalar."
+  },
+  "Em kV.": {
+    "fr": "En kV.",
+    "en": "In kV."
+  },
+  "A capacitância cresce com a área e cai com a separação.": {
+    "fr": "La capacité croît avec l’aire et décroît avec la séparation.",
+    "en": "Capacitance grows with the area and falls with the separation."
+  },
+  "Para o SI: # cm² = #⁻⁴ m² e # mm = #⁻³ m.": {
+    "fr": "Pour le SI : # cm² = #⁻⁴ m² et # mm = #⁻³ m.",
+    "en": "For SI: # cm² = #⁻⁴ m² and # mm = #⁻³ m."
+  },
+  "Substituindo, e passando para picofarads (# pF = #⁻¹² F).": {
+    "fr": "En substituant, et en passant aux picofarads (# pF = #⁻¹² F).",
+    "en": "Substituting, and going to picofarads (# pF = #⁻¹² F)."
+  },
+  "A energia é metade de C vezes V ao quadrado.": {
+    "fr": "L’énergie est la moitié de C fois V au carré.",
+    "en": "The energy is half of C times V squared."
+  },
+  "Substituindo, com C em farads.": {
+    "fr": "En substituant, avec C en farads.",
+    "en": "Substituting, with C in farads."
+  },
+  "O trabalho do agente é a variação da energia potencial: carga vezes a diferença de potencial.": {
+    "fr": "Le travail de l’agent est la variation d’énergie potentielle : charge fois la différence de potentiel.",
+    "en": "The agent’s work is the change in potential energy: charge times the potential difference."
+  },
+  "Substituindo, com a ordem final menos inicial.": {
+    "fr": "En substituant, dans l’ordre final moins initial.",
+    "en": "Substituting, in the order final minus initial."
+  },
+  "O potencial é escalar: cada carga contribui com kq/r, com o seu sinal.": {
+    "fr": "Le potentiel est scalaire : chaque charge contribue par kq/r, avec son signe.",
+    "en": "The potential is a scalar: each charge contributes kq/r, with its own sign."
+  },
+  "Somando, sem vetores.": {
+    "fr": "En additionnant, sans vecteurs.",
+    "en": "Adding up, with no vectors."
+  },
+  "Em paralelo as placas se juntam numa área maior: as capacitâncias se somam.": {
+    "fr": "En parallèle les plaques se réunissent en une aire plus grande : les capacités s’additionnent.",
+    "en": "In parallel the plates join into a larger area: the capacitances add up."
+  },
+  "Em série a carga é a mesma em todos: somam-se os INVERSOS.": {
+    "fr": "En série la charge est la même dans tous : on additionne les INVERSES.",
+    "en": "In series the charge is the same in all: the RECIPROCALS add up."
+  },
+  "A capacitância pela geometria, no SI.": {
+    "fr": "La capacité par la géométrie, en SI.",
+    "en": "The capacitance from the geometry, in SI."
+  },
+  "A energia, ½CV².": {
+    "fr": "L’énergie, ½CV².",
+    "en": "The energy, ½CV²."
+  },
+  "Primeiro o paralelo: somam-se.": {
+    "fr": "D’abord le parallèle : elles s’additionnent.",
+    "en": "First the parallel: they add up."
+  },
+  "Depois a série com C₁: produto sobre soma (para dois).": {
+    "fr": "Ensuite la série avec C₁ : produit sur somme (pour deux).",
+    "en": "Then the series with C₁: product over sum (for two)."
+  },
+  "A fonte vê o equivalente: Q = C_eq·V.": {
+    "fr": "La source voit l’équivalent : Q = C_eq·V.",
+    "en": "The source sees the equivalent: Q = C_eq·V."
+  },
+  "n₁·sen θ₁ = n₂·sen θ₂: sen θ₂ = #·sen #° / #. Depois o arco-seno, em graus.": {
+    "fr": "n₁·sin θ₁ = n₂·sin θ₂ : sin θ₂ = #·sin #° / #. Ensuite l’arcsinus, en degrés.",
+    "en": "n₁·sin θ₁ = n₂·sin θ₂: sin θ₂ = #·sin #° / #. Then the arcsine, in degrees."
+  },
+  "n = c/v: divida # por # (os #⁸ se cancelam).": {
+    "fr": "n = c/v : divisez # par # (les #⁸ se simplifient).",
+    "en": "n = c/v: divide # by # (the #⁸ cancel out)."
+  },
+  "No ângulo crítico o refratado sai a #°: sen θc = n₂/n₁ = #/#.": {
+    "fr": "À l’angle critique le réfracté sort à #° : sin θc = n₂/n₁ = #/#.",
+    "en": "At the critical angle the refracted ray leaves at #°: sin θc = n₂/n₁ = #/#."
+  },
+  "#/f = #/p + #/p′, então #/p′ = #/# − #/#; depois inverta.": {
+    "fr": "#/f = #/p + #/p′, donc #/p′ = #/# − #/# ; puis inversez.",
+    "en": "#/f = #/p + #/p′, so #/p′ = #/# − #/#; then invert."
+  },
+  "y = m·λ·L/d com tudo em metros: λ = # × #⁻⁹ m e d = # × #⁻³ m. Depois passe y para mm.": {
+    "fr": "y = m·λ·L/d avec tout en mètres : λ = # × #⁻⁹ m et d = # × #⁻³ m. Passez ensuite y en mm.",
+    "en": "y = m·λ·L/d with everything in metres: λ = # × #⁻⁹ m and d = # × #⁻³ m. Then put y into mm."
+  },
+  "Lente divergente: f = −# cm. Use #/p′ = #/f − #/p.": {
+    "fr": "Lentille divergente : f = −# cm. Utilisez #/p′ = #/f − #/p.",
+    "en": "Diverging lens: f = −# cm. Use #/p′ = #/f − #/p."
+  },
+  "Ache p′ por #/p′ = #/f − #/p; depois h′ = −(p′/p)·h.": {
+    "fr": "Trouvez p′ par #/p′ = #/f − #/p ; puis h′ = −(p′/p)·h.",
+    "en": "Find p′ from #/p′ = #/f − #/p; then h′ = −(p′/p)·h."
+  },
+  "A lei de Snell liga os ângulos medidos a partir da normal nos dois meios.": {
+    "fr": "La loi de Snell relie les angles mesurés à partir de la normale dans les deux milieux.",
+    "en": "Snell’s law links the angles measured from the normal in the two media."
+  },
+  "Isolando o seno do ângulo refratado.": {
+    "fr": "En isolant le sinus de l’angle réfracté.",
+    "en": "Isolating the sine of the refracted angle."
+  },
+  "O ângulo cujo seno é esse.": {
+    "fr": "L’angle dont c’est le sinus.",
+    "en": "The angle whose sine that is."
+  },
+  "O índice de refração é quantas vezes a luz anda mais devagar no meio que no vácuo.": {
+    "fr": "L’indice de réfraction dit combien de fois la lumière va plus lentement dans le milieu que dans le vide.",
+    "en": "The refractive index is how many times slower light moves in the medium than in vacuum."
+  },
+  "As potências de # se cancelam.": {
+    "fr": "Les puissances de # se simplifient.",
+    "en": "The powers of # cancel out."
+  },
+  "No ângulo crítico o raio refratado sai rasante: θ₂ = #°, e sen #° = #.": {
+    "fr": "À l’angle critique le rayon réfracté sort rasant : θ₂ = #°, et sin #° = #.",
+    "en": "At the critical angle the refracted ray leaves along the surface: θ₂ = #°, and sin #° = #."
+  },
+  "Substituindo e invertendo o seno.": {
+    "fr": "En substituant et en inversant le sinus.",
+    "en": "Substituting and inverting the sine."
+  },
+  "A equação de Gauss, que vale para lentes delgadas e espelhos esféricos.": {
+    "fr": "L’équation de conjugaison, valable pour les lentilles minces et les miroirs sphériques.",
+    "en": "The thin-lens equation, which holds for thin lenses and spherical mirrors."
+  },
+  "Isolando #/p′.": {
+    "fr": "En isolant #/p′.",
+    "en": "Isolating #/p′."
+  },
+  "p′ positivo: imagem real, do outro lado da lente.": {
+    "fr": "p′ positif : image réelle, de l’autre côté de la lentille.",
+    "en": "p′ positive: a real image, on the other side of the lens."
+  },
+  "Franja clara: a diferença de caminho é um número inteiro de comprimentos de onda. Para ângulos pequenos, y = m·λ·L/d.": {
+    "fr": "Frange brillante : la différence de chemin est un nombre entier de longueurs d’onde. Pour de petits angles, y = m·λ·L/d.",
+    "en": "Bright fringe: the path difference is a whole number of wavelengths. For small angles, y = m·λ·L/d."
+  },
+  "Tudo em metros: # nm = #⁻⁹ m e # mm = #⁻³ m.": {
+    "fr": "Tout en mètres : # nm = #⁻⁹ m et # mm = #⁻³ m.",
+    "en": "Everything in metres: # nm = #⁻⁹ m and # mm = #⁻³ m."
+  },
+  "Em milímetros.": {
+    "fr": "En millimètres.",
+    "en": "In millimetres."
+  },
+  "p′ negativo: imagem virtual, do mesmo lado do objeto.": {
+    "fr": "p′ négatif : image virtuelle, du même côté que l’objet.",
+    "en": "p′ negative: a virtual image, on the same side as the object."
+  },
+  "Primeiro a posição da imagem, pela equação de Gauss.": {
+    "fr": "D’abord la position de l’image, par l’équation de conjugaison.",
+    "en": "First the image position, from the thin-lens equation."
+  },
+  "O aumento compara as distâncias; o sinal de menos diz se a imagem inverte.": {
+    "fr": "Le grandissement compare les distances ; le signe moins dit si l’image est renversée.",
+    "en": "The magnification compares the distances; the minus sign says whether the image is inverted."
+  },
+  "A altura da imagem é o aumento vezes a altura do objeto.": {
+    "fr": "La hauteur de l’image est le grandissement fois la hauteur de l’objet.",
+    "en": "The image height is the magnification times the object height."
+  },
+  "A primeira lente forma uma imagem intermediária.": {
+    "fr": "La première lentille forme une image intermédiaire.",
+    "en": "The first lens forms an intermediate image."
+  },
+  "Essa imagem é o objeto da segunda lente, à distância que sobra até ela.": {
+    "fr": "Cette image est l’objet de la seconde lentille, à la distance qui reste jusqu’à elle.",
+    "en": "That image is the object of the second lens, at the distance left up to it."
+  },
+  "A segunda lente forma a imagem final.": {
+    "fr": "La seconde lentille forme l’image finale.",
+    "en": "The second lens forms the final image."
+  },
+  "Isolamos λ em y = m·λ·L/d.": {
+    "fr": "Nous isolons λ dans y = m·λ·L/d.",
+    "en": "We isolate λ in y = m·λ·L/d."
+  },
+  "Tudo em metros.": {
+    "fr": "Tout en mètres.",
+    "en": "Everything in metres."
+  },
+  "Em nanômetros (# nm = #⁻⁹ m).": {
+    "fr": "En nanomètres (# nm = #⁻⁹ m).",
+    "en": "In nanometres (# nm = #⁻⁹ m)."
+  },
+  "F = B·I·L: # T vezes # A vezes # m (perpendicular, sen #° = #).": {
+    "fr": "F = B·I·L : # T fois # A fois # m (perpendiculaire, sin #° = #).",
+    "en": "F = B·I·L: # T times # A times # m (perpendicular, sin #° = #)."
+  },
+  "F = |q|·v·B·sen θ, com a carga em coulombs (#×#⁻⁶) e sen #°. Em N; para mN, multiplique por #.": {
+    "fr": "F = |q|·v·B·sin θ, avec la charge en coulombs (#×#⁻⁶) et sin #°. En N ; pour des mN, multipliez par #.",
+    "en": "F = |q|·v·B·sin θ, with the charge in coulombs (#×#⁻⁶) and sin #°. In N; for mN, multiply by #."
+  },
+  "B = μ₀·I/(#π·r): com μ₀ = #π×#⁻⁷ o π cancela e fica #×#⁻⁷·#/# em teslas. Para μT, ×#⁶.": {
+    "fr": "B = μ₀·I/(#π·r) : avec μ₀ = #π×#⁻⁷ le π se simplifie et il reste #×#⁻⁷·#/# en teslas. Pour des μT, ×#⁶.",
+    "en": "B = μ₀·I/(#π·r): with μ₀ = #π×#⁻⁷ the π cancels and #×#⁻⁷·#/# is left, in teslas. For μT, ×#⁶."
+  },
+  "Φ = B·A·cos θ, com A em m² (# cm² = #×#⁻⁴ m²) e o ângulo medido da normal. Em Wb; ×# para mWb.": {
+    "fr": "Φ = B·A·cos θ, avec A en m² (# cm² = #×#⁻⁴ m²) et l’angle mesuré depuis la normale. En Wb ; ×# pour des mWb.",
+    "en": "Φ = B·A·cos θ, with A in m² (# cm² = #×#⁻⁴ m²) and the angle measured from the normal. In Wb; ×# for mWb."
+  },
+  "|ε| = N·ΔΦ/Δt, com ΔΦ = (# − #)·#×#⁻⁴ Wb. Multiplique por # e divida por # s.": {
+    "fr": "|ε| = N·ΔΦ/Δt, avec ΔΦ = (# − #)·#×#⁻⁴ Wb. Multipliez par # et divisez par # s.",
+    "en": "|ε| = N·ΔΦ/Δt, with ΔΦ = (# − #)·#×#⁻⁴ Wb. Multiply by # and divide by # s."
+  },
+  "B = μ₀·n·I com n em espiras por metro: # / # m. Use μ₀ = #π×#⁻⁷; para mT, ×#.": {
+    "fr": "B = μ₀·n·I avec n en spires par mètre : # / # m. Utilisez μ₀ = #π×#⁻⁷ ; pour des mT, ×#.",
+    "en": "B = μ₀·n·I with n in turns per metre: # / # m. Use μ₀ = #π×#⁻⁷; for mT, ×#."
+  },
+  "Iguale a força magnética q·v·B à centrípeta m·v²/r: r = m·v/(q·B). Depois passe de metros para cm.": {
+    "fr": "Égalez la force magnétique q·v·B à la centripète m·v²/r : r = m·v/(q·B). Passez ensuite des mètres aux cm.",
+    "en": "Set the magnetic force q·v·B equal to the centripetal m·v²/r: r = m·v/(q·B). Then go from metres to cm."
+  },
+  "Iguale a força magnética q·v·B à centrípeta m·v²/r: r = m·v/(q·B). Depois passe de metros para mm.": {
+    "fr": "Égalez la force magnétique q·v·B à la centripète m·v²/r : r = m·v/(q·B). Passez ensuite des mètres aux mm.",
+    "en": "Set the magnetic force q·v·B equal to the centripetal m·v²/r: r = m·v/(q·B). Then go from metres to mm."
+  },
+  "Encadeie: fem = B·L·v, corrente = fem/R.": {
+    "fr": "Enchaînez : f.é.m. = B·L·v, courant = f.é.m./R.",
+    "en": "Chain it: emf = B·L·v, current = emf/R."
+  },
+  "Encadeie: fem = B·L·v, corrente = fem/R, força = B·I·L.": {
+    "fr": "Enchaînez : f.é.m. = B·L·v, courant = f.é.m./R, force = B·I·L.",
+    "en": "Chain it: emf = B·L·v, current = emf/R, force = B·I·L."
+  },
+  "Portanto:": {
+    "fr": "Donc :",
+    "en": "So:"
+  },
+  "Substituindo, com a carga em coulombs.": {
+    "fr": "En substituant, avec la charge en coulombs.",
+    "en": "Substituting, with the charge in coulombs."
+  },
+  "Num fio, a força é campo vezes corrente vezes comprimento (vezes sen θ).": {
+    "fr": "Dans un fil, la force est champ fois courant fois longueur (fois sin θ).",
+    "en": "In a wire, the force is field times current times length (times sin θ)."
+  },
+  "Perpendicular: sen #° = #.": {
+    "fr": "Perpendiculaire : sin #° = #.",
+    "en": "Perpendicular: sin #° = #."
+  },
+  "Só a componente da velocidade PERPENDICULAR ao campo conta: por isso o seno.": {
+    "fr": "Seule la composante de la vitesse PERPENDICULAIRE au champ compte : d’où le sinus.",
+    "en": "Only the component of the velocity PERPENDICULAR to the field counts: hence the sine."
+  },
+  "Em mN.": {
+    "fr": "En mN.",
+    "en": "In mN."
+  },
+  "O campo circula em volta do fio e cai com #/r.": {
+    "fr": "Le champ circule autour du fil et décroît en #/r.",
+    "en": "The field circles around the wire and falls as #/r."
+  },
+  "Com μ₀ = #π × #⁻⁷, o π se cancela, e a distância vai em metros.": {
+    "fr": "Avec μ₀ = #π × #⁻⁷, le π se simplifie, et la distance est en mètres.",
+    "en": "With μ₀ = #π × #⁻⁷, the π cancels, and the distance goes in metres."
+  },
+  "O fluxo conta quantas linhas atravessam a espira: o cosseno do ângulo com a normal.": {
+    "fr": "Le flux compte combien de lignes traversent la spire : le cosinus de l’angle avec la normale.",
+    "en": "The flux counts how many lines cross the loop: the cosine of the angle with the normal."
+  },
+  "Com a área em m² (# cm² = #⁻⁴ m²).": {
+    "fr": "Avec l’aire en m² (# cm² = #⁻⁴ m²).",
+    "en": "With the area in m² (# cm² = #⁻⁴ m²)."
+  },
+  "O fluxo é campo vezes área (campo perpendicular à espira).": {
+    "fr": "Le flux est champ fois aire (champ perpendiculaire à la spire).",
+    "en": "The flux is field times area (field perpendicular to the loop)."
+  },
+  "A variação do fluxo, com a área no SI.": {
+    "fr": "La variation du flux, avec l’aire en SI.",
+    "en": "The change in flux, with the area in SI."
+  },
+  "Faraday: a fem é N vezes a taxa de variação do fluxo (o sinal, pela lei de Lenz, só diz o sentido).": {
+    "fr": "Faraday : la f.é.m. est N fois le taux de variation du flux (le signe, par la loi de Lenz, ne dit que le sens).",
+    "en": "Faraday: the emf is N times the rate of change of the flux (the sign, by Lenz’s law, only gives the direction)."
+  },
+  "n é o número de espiras POR METRO.": {
+    "fr": "n est le nombre de spires PAR MÈTRE.",
+    "en": "n is the number of turns PER METRE."
+  },
+  "A força magnética faz o papel de força centrípeta.": {
+    "fr": "La force magnétique joue le rôle de force centripète.",
+    "en": "The magnetic force plays the part of the centripetal force."
+  },
+  "A energia ganha na ddp vira energia cinética: qΔV = ½mv².": {
+    "fr": "L’énergie gagnée dans la d.d.p. devient énergie cinétique : qΔV = ½mv².",
+    "en": "The energy gained in the potential difference becomes kinetic energy: qΔV = ½mv²."
+  },
+  "No campo, a força magnética é a centrípeta: r = mv/(qB).": {
+    "fr": "Dans le champ, la force magnétique est la centripète : r = mv/(qB).",
+    "en": "In the field, the magnetic force is the centripetal one: r = mv/(qB)."
+  },
+  "A área do circuito cresce L·v por segundo: a fem é B·L·v.": {
+    "fr": "L’aire du circuit croît de L·v par seconde : la f.é.m. est B·L·v.",
+    "en": "The circuit’s area grows by L·v per second: the emf is B·L·v."
+  },
+  "A corrente, por Ohm.": {
+    "fr": "Le courant, par Ohm.",
+    "en": "The current, by Ohm."
+  },
+  "Pela lei de Lenz, a força sobre a corrente induzida se opõe ao movimento: F = B·I·L.": {
+    "fr": "Par la loi de Lenz, la force sur le courant induit s’oppose au mouvement : F = B·I·L.",
+    "en": "By Lenz’s law, the force on the induced current opposes the motion: F = B·I·L."
+  },
+  "Os coeficientes são a normal: #x + (#)y + (#)z = d. Ponha as coordenadas de P e calcule d.": {
+    "fr": "Les coefficients sont la normale : #x + (#)y + (#)z = d. Mettez les coordonnées de P et calculez d.",
+    "en": "The coefficients are the normal: #x + (#)y + (#)z = d. Put in P’s coordinates and work out d."
+  },
+  "Coordenada z: # vezes a de u mais (#) vezes a de v.": {
+    "fr": "Coordonnée z : # fois celle de u plus (#) fois celle de v.",
+    "en": "Coordinate z: # times u’s plus (#) times v’s."
+  },
+  "Coordenada x: # vezes a de u mais (#) vezes a de v.": {
+    "fr": "Coordonnée x : # fois celle de u plus (#) fois celle de v.",
+    "en": "Coordinate x: # times u’s plus (#) times v’s."
+  },
+  "Coordenada y: # vezes a de u mais (#) vezes a de v.": {
+    "fr": "Coordonnée y : # fois celle de u plus (#) fois celle de v.",
+    "en": "Coordinate y: # times u’s plus (#) times v’s."
+  },
+  "Distância = |n·P − d| / |n|. Aqui |n| = raiz de #² + #² + #².": {
+    "fr": "Distance = |n·P − d| / |n|. Ici |n| = racine de #² + #² + #².",
+    "en": "Distance = |n·P − d| / |n|. Here |n| = the square root of #² + #² + #²."
+  },
+  "Use as normais: cos θ = |u·v| / (|u|·|v|), com u = (#, #, #) e v = (#, #, #).": {
+    "fr": "Utilisez les normais : cos θ = |u·v| / (|u|·|v|), avec u = (#, #, #) et v = (#, #, #).",
+    "en": "Use the normais: cos θ = |u·v| / (|u|·|v|), with u = (#, #, #) and v = (#, #, #)."
+  },
+  "Use as direções: cos θ = |u·v| / (|u|·|v|), com u = (#, #, #) e v = (#, #, #).": {
+    "fr": "Utilisez les direções : cos θ = |u·v| / (|u|·|v|), avec u = (#, #, #) et v = (#, #, #).",
+    "en": "Use the direções: cos θ = |u·v| / (|u|·|v|), with u = (#, #, #) and v = (#, #, #)."
+  },
+  "Os coeficientes de x, y e z são as coordenadas da normal.": {
+    "fr": "Les coefficients de x, y et z sont les coordonnées de la normale.",
+    "en": "The coefficients of x, y and z are the normal’s coordinates."
+  },
+  "O ponto P está no plano: substituímos para achar d.": {
+    "fr": "Le point P est dans le plan : nous substituons pour trouver d.",
+    "en": "Point P lies on the plane: we substitute to find d."
+  },
+  "O plano.": {
+    "fr": "Le plan.",
+    "en": "The plane."
+  },
+  "Uma combinação linear multiplica cada vetor pelo seu número e soma coordenada a coordenada.": {
+    "fr": "Une combinaison linéaire multiplie chaque vecteur par son nombre et additionne coordonnée par coordonnée.",
+    "en": "A linear combination multiplies each vector by its number and adds coordinate by coordinate."
+  },
+  "Só a coordenada z.": {
+    "fr": "Seulement la coordonnée z.",
+    "en": "Only the z coordinate."
+  },
+  "Só a coordenada x.": {
+    "fr": "Seulement la coordonnée x.",
+    "en": "Only the x coordinate."
+  },
+  "Só a coordenada y.": {
+    "fr": "Seulement la coordonnée y.",
+    "en": "Only the y coordinate."
+  },
+  "A distância é a projeção de P sobre a normal, medida a partir do plano.": {
+    "fr": "La distance est la projection de P sur la normale, mesurée depuis le plan.",
+    "en": "The distance is P’s projection onto the normal, measured from the plane."
+  },
+  "O numerador: P na equação do plano.": {
+    "fr": "Le numérateur : P dans l’équation du plan.",
+    "en": "The numerator: P in the plane’s equation."
+  },
+  "O denominador: o módulo da normal.": {
+    "fr": "Le dénominateur : le module de la normale.",
+    "en": "The denominator: the normal’s magnitude."
+  },
+  "O ângulo entre os planos é o das normais, tomado agudo (módulo do cosseno).": {
+    "fr": "L’angle entre les planos est celui des normais, pris aigu (module du cosinus).",
+    "en": "The angle between the planos is that of the normais, taken as acute (absolute value of the cosine)."
+  },
+  "Produto escalar e módulos das normais.": {
+    "fr": "Produit scalaire et modules des normais.",
+    "en": "Dot product and magnitudes of the normais."
+  },
+  "O cosseno e o ângulo.": {
+    "fr": "Le cosinus et l’angle.",
+    "en": "The cosine and the angle."
+  },
+  "O volume é o módulo do produto misto, que é o determinante dos três vetores.": {
+    "fr": "Le volume est le module du produit mixte, qui est le déterminant des trois vecteurs.",
+    "en": "The volume is the magnitude of the triple product, which is the determinant of the three vectors."
+  },
+  "O produto vetorial de v e w.": {
+    "fr": "Le produit vectoriel de v et w.",
+    "en": "The cross product of v and w."
+  },
+  "O escalar com u, em módulo.": {
+    "fr": "Le scalaire avec u, en module.",
+    "en": "The dot product with u, in absolute value."
+  },
+  "Produto escalar e módulos das direções.": {
+    "fr": "Produit scalaire et modules des direções.",
+    "en": "Dot product and magnitudes of the direções."
+  },
+  "Dois vetores no plano.": {
+    "fr": "Deux vecteurs dans le plan.",
+    "en": "Two vectors in the plane."
+  },
+  "A normal é perpendicular aos dois: o produto vetorial (com a positivo).": {
+    "fr": "La normale est perpendiculaire aux deux : le produit vectoriel (avec a positif).",
+    "en": "The normal is perpendicular to both: the cross product (with a positive)."
+  },
+  "d sai de substituir A.": {
+    "fr": "d vient de la substitution de A.",
+    "en": "d comes from substituting A."
+  },
+  "Dependentes ⟺ volume zero ⟺ determinante zero.": {
+    "fr": "Dépendants ⟺ volume nul ⟺ déterminant nul.",
+    "en": "Dependent ⟺ zero volume ⟺ zero determinant."
+  },
+  "Pelo produto misto: (u × v)·w.": {
+    "fr": "Par le produit mixte : (u × v)·w.",
+    "en": "By the triple product: (u × v)·w."
+  },
+  "Chame de x os quilômetros: o preço é bandeirada + (preço por km)·x. Iguale ao total e resolva.": {
+    "fr": "Appelez x les kilomètres : le prix est la prise en charge + (prix par km)·x. Égalez au total et résolvez.",
+    "en": "Call the kilometres x: the price is the base fare + (price per km)·x. Set it equal to the total and solve."
+  },
+  "Chame de x a idade de Bia. Daqui a alguns anos, os anos passam para as duas.": {
+    "fr": "Appelez x l’âge de Bia. Dans quelques années, les années passent pour les deux.",
+    "en": "Call Bia’s age x. In a few years, the years pass for both of them."
+  },
+  "Primeiro isole o termo com x, depois divida.": {
+    "fr": "Isolez d’abord le terme en x, puis divisez.",
+    "en": "First isolate the x term, then divide."
+  },
+  "Multiplique os dois lados pelo mmc de # e #: as frações viram números inteiros.": {
+    "fr": "Multipliez les deux côtés par le ppcm de # et # : les fractions deviennent des entiers.",
+    "en": "Multiply both sides by the lcm of # and #: the fractions become whole numbers."
+  },
+  "Com largura x, o comprimento é x mais a diferença. O perímetro soma os quatro lados.": {
+    "fr": "Avec une largeur x, la longueur est x plus la différence. Le périmètre additionne les quatre côtés.",
+    "en": "With width x, the length is x plus the difference. The perimeter adds the four sides."
+  },
+  "Multiplique tudo pelo mmc dos denominadores. O menos antes de uma fração vale para o numerador INTEIRO: use parênteses.": {
+    "fr": "Multipliez tout par le ppcm des dénominateurs. Le moins devant une fraction porte sur le numérateur ENTIER : utilisez des parenthèses.",
+    "en": "Multiply everything by the lcm of the denominators. The minus before a fraction applies to the WHOLE numerator: use brackets."
+  },
+  "Chamamos de x os quilômetros rodados. O preço é a bandeirada mais # reais por km.": {
+    "fr": "Nous appelons x les kilomètres parcourus. Le prix est la prise en charge plus # reais par km.",
+    "en": "We call the kilometres driven x. The price is the base fare plus # reais per km."
+  },
+  "Subtraímos a bandeirada dos dois lados.": {
+    "fr": "Nous soustrayons la prise en charge des deux côtés.",
+    "en": "We subtract the base fare from both sides."
+  },
+  "Dividimos por #.": {
+    "fr": "Nous divisons par #.",
+    "en": "We divide by #."
+  },
+  "Chamamos de x a idade de Bia hoje; Ana tem # vezes isso.": {
+    "fr": "Nous appelons x l’âge de Bia aujourd’hui ; Ana a # fois cela.",
+    "en": "We call Bia’s age today x; Ana is # times that."
+  },
+  "Daqui a # anos, CADA uma terá # anos a mais.": {
+    "fr": "Dans # ans, CHACUNE aura # ans de plus.",
+    "en": "In # years, EACH of them will be # years older."
+  },
+  "Juntando os termos semelhantes.": {
+    "fr": "En réunissant les termes semblables.",
+    "en": "Gathering like terms."
+  },
+  "Subtraímos # dos dois lados, para isolar o termo com x.": {
+    "fr": "Nous soustrayons # des deux côtés, pour isoler le terme en x.",
+    "en": "We subtract # from both sides, to isolate the x term."
+  },
+  "Dividimos os dois lados por #, o coeficiente de x.": {
+    "fr": "Nous divisons les deux côtés par #, le coefficient de x.",
+    "en": "We divide both sides by #, the coefficient of x."
+  },
+  "Os denominadores são # e #: o mmc deles é #.": {
+    "fr": "Les dénominateurs sont # et # : leur ppcm est #.",
+    "en": "The denominators are # and #: their lcm is #."
+  },
+  "Multiplicamos TODOS os termos, dos dois lados, por #: as frações somem.": {
+    "fr": "Nous multiplions TOUS les termes, des deux côtés, par # : les fractions disparaissent.",
+    "en": "We multiply ALL the terms, on both sides, by #: the fractions vanish."
+  },
+  "Juntamos os termos em x.": {
+    "fr": "Nous réunissons les termes en x.",
+    "en": "We gather the x terms."
+  },
+  "Chamamos de x a largura.": {
+    "fr": "Nous appelons x la largeur.",
+    "en": "We call the width x."
+  },
+  "O perímetro soma os QUATRO lados: duas larguras e dois comprimentos.": {
+    "fr": "Le périmètre additionne les QUATRE côtés : deux largeurs et deux longueurs.",
+    "en": "The perimeter adds the FOUR sides: two widths and two lengths."
+  },
+  "Distribuindo e juntando.": {
+    "fr": "En distribuant et en réunissant.",
+    "en": "Expanding and gathering."
+  },
+  "Os denominadores são # e #: o mmc é #.": {
+    "fr": "Les dénominateurs sont # et # : le ppcm est #.",
+    "en": "The denominators are # and #: the lcm is #."
+  },
+  "Multiplicamos todos os termos por #. Cada fração vira o numerador vezes # dividido pelo seu denominador.": {
+    "fr": "Nous multiplions tous les termes par #. Chaque fraction devient le numérateur fois # divisé par son dénominateur.",
+    "en": "We multiply every term by #. Each fraction becomes the numerator times # divided by its denominator."
+  },
+  "Distribuímos — o menos troca o sinal dos DOIS termos do segundo parêntese.": {
+    "fr": "Nous distribuons — le moins change le signe des DEUX termes de la seconde parenthèse.",
+    "en": "We expand — the minus flips the sign of BOTH terms in the second bracket."
+  },
+  "Termos em x de um lado, números do outro.": {
+    "fr": "Les termes en x d’un côté, les nombres de l’autre.",
+    "en": "The x terms on one side, the numbers on the other."
+  },
+  "Os denominadores são #, # e #: o mmc é #.": {
+    "fr": "Les dénominateurs sont #, # et # : le ppcm est #.",
+    "en": "The denominators are #, # and #: the lcm is #."
+  },
+  "Troque x por # e resolva a potência primeiro: (#)² = #.": {
+    "fr": "Remplacez x par # et résolvez d’abord la puissance : (#)² = #.",
+    "en": "Replace x by # and do the power first: (#)² = #."
+  },
+  "Comece calculando x_v = −b/(#a), com a = # e b = #.": {
+    "fr": "Commencez par calculer x_v = −b/(#a), avec a = # et b = #.",
+    "en": "Start by working out x_v = −b/(#a), with a = # and b = #."
+  },
+  "A fórmula já está dada: −#t² é o termo quadrático, o número que multiplica t é a velocidade inicial. Comece calculando x_v = −b/(#a), com a = # e b = #.": {
+    "fr": "La formule est déjà donnée : −#t² est le terme quadratique, le nombre qui multiplie t est la vitesse initiale. Commencez par calculer x_v = −b/(#a), avec a = # et b = #.",
+    "en": "The formula is already given: −#t² is the quadratic term, the number multiplying t is the initial speed. Start by working out x_v = −b/(#a), with a = # and b = #."
+  },
+  "Se a largura é x, sobram L − #x metros para o comprimento: a área é x vezes isso. Troque x por # e resolva a potência primeiro.": {
+    "fr": "Si la largeur est x, il reste L − #x mètres pour la longueur : l’aire est x fois cela. Remplacez x par # et résolvez d’abord la puissance.",
+    "en": "If the width is x, L − #x metres are left for the length: the area is x times that. Replace x by # and do the power first."
+  },
+  "O coeficiente de q² é positivo: a parábola abre para cima, então o vértice é um MÍNIMO. Troque x por # e resolva a potência primeiro.": {
+    "fr": "Le coefficient de q² est positif : la parabole est tournée vers le haut, donc le sommet est un MINIMUM. Remplacez x par # et résolvez d’abord la puissance.",
+    "en": "The coefficient of q² is positive: the parabola opens upwards, so the vertex is a MINIMUM. Replace x by # and do the power first."
+  },
+  "A fórmula já está dada: −#t² é o termo quadrático, o número que multiplica t é a velocidade inicial.": {
+    "fr": "La formule est déjà donnée : −#t² est le terme quadratique, le nombre qui multiplie t est la vitesse initiale.",
+    "en": "The formula is already given: −#t² is the quadratic term, the number multiplying t is the initial speed."
+  },
+  "Se a largura é x, sobram L − #x metros para o comprimento: a área é x vezes isso.": {
+    "fr": "Si la largeur est x, il reste L − #x mètres pour la longueur : l’aire est x fois cela.",
+    "en": "If the width is x, L − #x metres are left for the length: the area is x times that."
+  },
+  "O coeficiente de q² é positivo: a parábola abre para cima, então o vértice é um MÍNIMO.": {
+    "fr": "Le coefficient de q² est positif : la parabole est tournée vers le haut, donc le sommet est un MINIMUM.",
+    "en": "The coefficient of q² is positive: the parabola opens upwards, so the vertex is a MINIMUM."
+  },
+  "Ache primeiro x_v = −b/(#a) e depois calcule f(x_v): esse é o valor máximo ou mínimo.": {
+    "fr": "Trouvez d’abord x_v = −b/(#a) puis calculez f(x_v) : c’est la valeur maximale ou minimale.",
+    "en": "First find x_v = −b/(#a) and then work out f(x_v): that is the greatest or smallest value."
+  },
+  "A fórmula já está dada: −#t² é o termo quadrático, o número que multiplica t é a velocidade inicial. Ache primeiro a abscissa do vértice e depois volte com ela à função: esse é o maior ou o menor valor.": {
+    "fr": "La formule est déjà donnée : −#t² est le terme quadratique, le nombre qui multiplie t est la vitesse initiale. Trouvez d’abord l’abscisse du sommet puis reportez-la dans la fonction : c’est la plus grande ou la plus petite valeur.",
+    "en": "The formula is already given: −#t² is the quadratic term, the number multiplying t is the initial speed. First find the vertex’s x-coordinate and then put it back into the function: that is the greatest or the smallest value."
+  },
+  "A forma fatorada mostra os dois preços de lucro zero: o de custo e o que zera a demanda. O máximo fica a meio caminho. Ache primeiro a abscissa do vértice e depois volte com ela à função: esse é o maior ou o menor valor.": {
+    "fr": "La forme factorisée montre les deux prix de profit nul : celui du coût et celui qui annule la demande. Le maximum est à mi-chemin. Trouvez d’abord l’abscisse du sommet puis reportez-la dans la fonction : c’est la plus grande ou la plus petite valeur.",
+    "en": "The factored form shows the two prices of zero profit: the cost one and the one that kills demand. The maximum sits halfway. First find the vertex’s x-coordinate and then put it back into the function: that is the greatest or the smallest value."
+  },
+  "Se a largura é x, sobram L − #x metros para o comprimento: a área é x vezes isso. Ache primeiro a abscissa do vértice e depois volte com ela à função: esse é o maior ou o menor valor.": {
+    "fr": "Si la largeur est x, il reste L − #x mètres pour la longueur : l’aire est x fois cela. Trouvez d’abord l’abscisse du sommet puis reportez-la dans la fonction : c’est la plus grande ou la plus petite valeur.",
+    "en": "If the width is x, L − #x metres are left for the length: the area is x times that. First find the vertex’s x-coordinate and then put it back into the function: that is the greatest or the smallest value."
+  },
+  "Substituímos x por #.": {
+    "fr": "Nous remplaçons x par #.",
+    "en": "We replace x by #."
+  },
+  "Resolvemos a potência primeiro.": {
+    "fr": "Nous résolvons d’abord la puissance.",
+    "en": "We do the power first."
   }
 }

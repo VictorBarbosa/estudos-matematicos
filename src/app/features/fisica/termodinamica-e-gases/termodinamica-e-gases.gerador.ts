@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   R_GASES,
   gasIdealComPassos,
@@ -79,6 +79,10 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
       { mols, temperaturaCelsius },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('termodinamica-e-gases', 'forma-1')[0]!, {
+      mols,
+      temperaturaCelsius,
+    }),
     enunciadoTex: `n = ${mols}\\,\\text{mol} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C} \\qquad p = 1\\,\\text{atm}`,
     gabarito,
     resolucao: {
@@ -141,6 +145,11 @@ function exercicioPressao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { mols, volumeLitros, temperaturaCelsius },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('termodinamica-e-gases', 'forma-2')[0]!, {
+      mols,
+      volumeLitros,
+      temperaturaCelsius,
+    }),
     enunciadoTex: `n = ${mols} \\qquad V = ${volumeLitros}\\,\\text{L} \\qquad T = ${temperaturaCelsius}^\\circ\\text{C}`,
     gabarito,
     resolucao: {
@@ -199,6 +208,13 @@ function exercicioTransformacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { pressao1, volume1, temperatura1, pressao2, temperatura2 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('termodinamica-e-gases', 'forma-3')[0]!, {
+      pressao1,
+      volume1,
+      temperatura1,
+      pressao2,
+      temperatura2,
+    }),
     enunciadoTex:
       `p_1 = ${pressao1} \\quad V_1 = ${volume1} \\quad T_1 = ${temperatura1} \\quad ` +
       `p_2 = ${pressao2} \\quad T_2 = ${temperatura2}`,
@@ -278,6 +294,12 @@ function exercicioEnergiaInterna(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('termodinamica-e-gases', 'forma-4')[0]!, {
+      v1: calor >= 0 ? 'recebe' : 'perde',
+      v2: Math.abs(calor),
+      v3: trabalho >= 0 ? 'realiza' : 'recebe',
+      v4: Math.abs(trabalho),
+    }),
     enunciadoTex: `Q = ${calor}\\,\\text{J} \\qquad W = ${trabalho}\\,\\text{J}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -327,6 +349,11 @@ function exercicioTrabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
       { volumeInicial, volumeFinal, pressaoAtm },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('termodinamica-e-gases', 'forma-5')[0]!, {
+      volumeInicial,
+      volumeFinal,
+      pressaoAtm,
+    }),
     enunciadoTex:
       `p = ${pressaoAtm}\\,\\text{atm} \\qquad V_i = ${volumeInicial}\\,\\text{L} \\qquad ` +
       `V_f = ${volumeFinal}\\,\\text{L}`,

@@ -86,6 +86,7 @@ function daAssintota(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('funcoes-racionais', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('funcoes-racionais', 'forma-1')[0]!, {}),
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito: polo,
     resolucao: ate(analisarRacionalComPassos(f), 2, polo),
@@ -139,6 +140,7 @@ function daHorizontal(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('funcoes-racionais', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('funcoes-racionais', 'forma-2')[0]!, {}),
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: comportamentoNoInfinitoComPassos(f).passos },
@@ -295,6 +297,7 @@ function doValor(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('funcoes-racionais', 'forma-3')[0]!, { ponto }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('funcoes-racionais', 'forma-3')[0]!, { ponto }),
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito,
     resolucao: {
@@ -371,6 +374,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -384,6 +389,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

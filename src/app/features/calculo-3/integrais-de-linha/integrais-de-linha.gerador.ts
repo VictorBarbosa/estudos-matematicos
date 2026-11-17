@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Linear2, avaliarLinear2, linear2ParaTex, trabalhoNoSegmentoComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -79,6 +79,12 @@ function doCampoConstante(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('integrais-de-linha', 'forma-1')[0]!, {
+      expressao1: de.x,
+      expressao2: de.y,
+      expressao3: ate.x,
+      expressao4: ate.y,
+    }),
     enunciadoTex: `\\vec{F} = \\left(${formatar(campoX.k0)},\\; ${formatar(campoY.k0)}\\right)`,
     gabarito,
     resolucao: trabalhoNoSegmentoComPassos(campoX, campoY, de, ate),
@@ -143,6 +149,12 @@ function doCampoLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('integrais-de-linha', 'forma-2')[0]!, {
+      expressao1: de.x,
+      expressao2: de.y,
+      expressao3: ate.x,
+      expressao4: ate.y,
+    }),
     enunciadoTex: `\\vec{F} = \\left(${linear2ParaTex(campoX)},\\; ${linear2ParaTex(campoY)}\\right)`,
     gabarito,
     resolucao,
@@ -204,6 +216,12 @@ function doCaminhoFechado(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('integrais-de-linha', 'forma-3')[0]!, {
+      expressao1: de.x,
+      expressao2: de.y,
+      expressao3: ate.x,
+      expressao4: ate.y,
+    }),
     enunciadoTex: `\\vec{F} = \\left(${linear2ParaTex(campoX)},\\; ${linear2ParaTex(campoY)}\\right)`,
     gabarito,
     resolucao: {
@@ -270,6 +288,12 @@ function doConservativo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: de.x, expressao2: de.y, expressao3: ate.x, expressao4: ate.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('integrais-de-linha', 'forma-4')[0]!, {
+      expressao1: de.x,
+      expressao2: de.y,
+      expressao3: ate.x,
+      expressao4: ate.y,
+    }),
     enunciadoTex: `\\vec{F} = \\left(${a === 1 ? '' : a}x,\\; ${b === 1 ? '' : b}y\\right)`,
     gabarito,
     resolucao: {
@@ -335,6 +359,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -348,6 +374,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

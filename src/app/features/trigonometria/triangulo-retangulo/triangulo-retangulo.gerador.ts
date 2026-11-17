@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { Razao, paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -72,6 +72,11 @@ export const geradorTriangulo: GeradorExercicio<number> = {
         { hipotenusa, anguloGraus, nomeLado },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('triangulo-retangulo', 'forma-1')[0]!, {
+        hipotenusa,
+        anguloGraus,
+        nomeLado,
+      }),
       enunciadoTex: `h = ${hipotenusa} \\qquad \\theta = ${anguloGraus}° \\qquad \\text{cateto } ${nomeLado} = \\;?`,
       gabarito,
       resolucao: {
@@ -156,6 +161,10 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { oposto, adjacente },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('triangulo-retangulo', 'forma-2')[0]!, {
+      oposto,
+      adjacente,
+    }),
     enunciadoTex: `\\text{oposto} = ${oposto} \\qquad \\text{adjacente} = ${adjacente} \\qquad \\theta = \\;?`,
     gabarito,
     resolucao: {

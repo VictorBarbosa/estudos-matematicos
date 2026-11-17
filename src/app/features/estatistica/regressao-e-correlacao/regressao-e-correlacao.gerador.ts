@@ -104,6 +104,7 @@ function daInclinacao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('regressao-e-correlacao', 'forma-1')[0]!, {}),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -148,6 +149,7 @@ function doIntercepto(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-2')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('regressao-e-correlacao', 'forma-2')[0]!, {}),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -190,6 +192,7 @@ function doPearson(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<num
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-3')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('regressao-e-correlacao', 'forma-3')[0]!, {}),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: pearsonComPassos(pares),
@@ -234,6 +237,7 @@ function daDeterminacao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercici
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-4')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('regressao-e-correlacao', 'forma-4')[0]!, {}),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: determinacaoComPassos(r),
@@ -282,6 +286,7 @@ function daPrevisao(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<nu
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('regressao-e-correlacao', 'forma-5')[0]!, { x }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('regressao-e-correlacao', 'forma-5')[0]!, { x }),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: preverComPassos(inclinacao, intercepto, x, faixa),
@@ -324,6 +329,9 @@ function doResiduo(nivel: Nivel, rng: Rng, pares: readonly Par[]): Exercicio<num
       { expressao1: par.x },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('regressao-e-correlacao', 'forma-6')[0]!, {
+      expressao1: par.x,
+    }),
     enunciadoTex: tabelaTex(pares),
     gabarito,
     resolucao: residuoComPassos(inclinacao, intercepto, par),
@@ -373,6 +381,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -386,6 +396,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

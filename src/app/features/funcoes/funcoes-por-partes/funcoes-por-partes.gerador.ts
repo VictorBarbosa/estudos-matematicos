@@ -106,6 +106,7 @@ function daAvaliacao(nivel: Nivel, rng: Rng, naFronteira: boolean): Exercicio<nu
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('funcoes-por-partes', 'forma-1')[0]!, { ponto }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('funcoes-por-partes', 'forma-1')[0]!, { ponto }),
     enunciadoTex: porPartesParaTex(f),
     gabarito,
     resolucao: avaliarPorPartesComPassos(f, ponto),
@@ -153,6 +154,7 @@ function doSalto(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('funcoes-por-partes', 'forma-2')[0]!, { fronteira }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('funcoes-por-partes', 'forma-2')[0]!, { fronteira }),
     enunciadoTex: porPartesParaTex(f),
     gabarito,
     resolucao: continuidadeComPassos(f, fronteira),
@@ -207,6 +209,10 @@ function doLateral(nivel: Nivel, rng: Rng): Exercicio<number> {
       { fronteira, v1: pelaEsquerda ? 'ESQUERDA' : 'DIREITA' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('funcoes-por-partes', 'forma-3')[0]!, {
+      fronteira,
+      v1: pelaEsquerda ? 'ESQUERDA' : 'DIREITA',
+    }),
     enunciadoTex: porPartesParaTex(f),
     gabarito,
     resolucao: {
@@ -255,6 +261,7 @@ function daColagem(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('funcoes-por-partes', 'forma-4')[0]!, { fronteira }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('funcoes-por-partes', 'forma-4')[0]!, { fronteira }),
     enunciadoTex:
       `f(x) = \\begin{cases} ${esquerda.paraTex()}, & x < ${fronteira} \\\\ ` +
       `${direitaSemConstante.paraTex()} + c, & x \\geq ${fronteira} \\end{cases}`,
@@ -296,6 +303,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -309,6 +318,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { comparacaoNumericaComPassos, eulerComPassos, rungeKutta4 } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { exercicioNewton } from '@features/calculo-4/metodos-numericos/metodos-numericos.newton';
@@ -91,6 +91,11 @@ function doEuler(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: String(passo).replace('.', ','), quantos, y0 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('metodos-numericos', 'forma-1')[0]!, {
+      expressao1: String(passo).replace('.', ','),
+      quantos,
+      y0,
+    }),
     enunciadoTex: `y' = ${formatar(k)}y, \\qquad y_{n+1} = y_{n} + h\\,f(t_{n},\\, y_{n})`,
     gabarito: y,
     resolucao: eulerComPassos(k, y0, passo, quantos),
@@ -149,6 +154,11 @@ function doErroDeEuler(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: String(passo).replace('.', ','), quantos, y0 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('metodos-numericos', 'forma-2')[0]!, {
+      expressao1: String(passo).replace('.', ','),
+      quantos,
+      y0,
+    }),
     enunciadoTex: `y' = ${formatar(k)}y, \\qquad y(t) = ${y0}e^{${formatar(k)}t}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: eulerComPassos(k, y0, passo, quantos).passos },
@@ -198,6 +208,11 @@ function doRungeKutta(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: String(passo).replace('.', ','), quantos, y0 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('metodos-numericos', 'forma-3')[0]!, {
+      expressao1: String(passo).replace('.', ','),
+      quantos,
+      y0,
+    }),
     enunciadoTex: `y' = ${formatar(k)}y, \\qquad y_{n+1} = y_{n} + \\frac{h}{6}\\left(k_{1} + 2k_{2} + 2k_{3} + k_{4}\\right)`,
     gabarito,
     resolucao: {
@@ -269,6 +284,11 @@ function daOrdemDoMetodo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { tempo, y0, expressao1: String(passo).replace('.', ',') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('metodos-numericos', 'forma-4')[0]!, {
+      tempo,
+      y0,
+      expressao1: String(passo).replace('.', ','),
+    }),
     enunciadoTex: `y' = ${formatar(k)}y`,
     gabarito,
     resolucao: {
@@ -336,6 +356,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -349,6 +371,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

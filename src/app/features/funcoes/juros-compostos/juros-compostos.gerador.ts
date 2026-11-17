@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { jurosCompostosComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -44,6 +44,10 @@ export const geradorJuros: GeradorExercicio<number> = {
           { taxa, comoTexto },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('juros-compostos', 'forma-1')[0]!, {
+          taxa,
+          comoTexto,
+        }),
         enunciadoTex: `i = ${taxa}\\% \\qquad M = ${comoTexto.replace(',', '{,}')}C`,
         gabarito,
         resolucao: {
@@ -117,6 +121,12 @@ export const geradorJuros: GeradorExercicio<number> = {
         },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('juros-compostos', 'forma-2')[0]!, {
+        capital,
+        taxa,
+        periodos,
+        v1: pergunta === 'montante' ? 'o montante final' : 'o juro total',
+      }),
       enunciadoTex: `C = ${capital} \\qquad i = ${taxa}\\% \\qquad n = ${periodos}`,
       gabarito,
       resolucao: {

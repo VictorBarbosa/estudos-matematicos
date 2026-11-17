@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   anguloEntreComPassos,
   areaParalelogramoComPassos,
@@ -75,6 +75,12 @@ function exercicioEscalar(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: a.x, v2: a.y, v3: b.x, v4: b.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('produto-escalar-vetorial', 'forma-1')[0]!, {
+      v1: a.x,
+      v2: a.y,
+      v3: b.x,
+      v4: b.y,
+    }),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: {
@@ -147,6 +153,12 @@ function exercicioAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: a.x, v2: a.y, v3: b.x, v4: b.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('produto-escalar-vetorial', 'forma-2')[0]!, {
+      v1: a.x,
+      v2: a.y,
+      v3: b.x,
+      v4: b.y,
+    }),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -191,6 +203,12 @@ function exercicioProjecao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: a.x, v2: a.y, v3: b.x, v4: b.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('produto-escalar-vetorial', 'forma-3')[0]!, {
+      v1: a.x,
+      v2: a.y,
+      v3: b.x,
+      v4: b.y,
+    }),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -242,6 +260,12 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: a.x, v2: a.y, v3: b.x, v4: b.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('produto-escalar-vetorial', 'forma-4')[0]!, {
+      v1: a.x,
+      v2: a.y,
+      v3: b.x,
+      v4: b.y,
+    }),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -295,6 +319,11 @@ function exercicioTrabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
       { forca, angulo, deslocamento },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('produto-escalar-vetorial', 'forma-5')[0]!, {
+      forca,
+      angulo,
+      deslocamento,
+    }),
     enunciadoTex: `F = ${forca}\\,\\text{N} \\qquad d = ${deslocamento}\\,\\text{m} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito: resultado,
     resolucao: {

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import { paraRadianos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -53,6 +53,9 @@ export const geradorIdentidades: GeradorExercicio<number> = {
           { v1: numeroEmPortugues(seno) },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('identidades-trigonometricas', 'forma-1')[0]!, {
+          v1: numeroEmPortugues(seno),
+        }),
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\quad \\Rightarrow \\quad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {
@@ -120,6 +123,9 @@ export const geradorIdentidades: GeradorExercicio<number> = {
           { v1: 2 * graus },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('identidades-trigonometricas', 'forma-2')[0]!, {
+          v1: 2 * graus,
+        }),
         enunciadoTex: `\\sin ${2 * graus}° = \\;?`,
         gabarito,
         resolucao: {
@@ -179,6 +185,7 @@ export const geradorIdentidades: GeradorExercicio<number> = {
         { a, b },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('identidades-trigonometricas', 'forma-3')[0]!, { a, b }),
       enunciadoTex: `\\sin(${a}° + ${b}°) = \\;?`,
       gabarito,
       resolucao: {

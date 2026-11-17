@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   CORPOS_RIGIDOS,
   CorpoRigido,
@@ -89,6 +89,12 @@ function daInercia(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: artigo(corpo), v2: corpo.nome, v3: numero(massa), v4: numero(raio) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('dinamica-rotacional', 'forma-1')[0]!, {
+      v1: artigo(corpo),
+      v2: corpo.nome,
+      v3: numero(massa),
+      v4: numero(raio),
+    }),
     enunciadoTex: `I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
     resolucao: ate(segundaLeiRotacionalComPassos(corpo, massa, raio, 1), 1, gabarito),
@@ -149,6 +155,13 @@ function doTorque(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('dinamica-rotacional', 'forma-2')[0]!, {
+      v1: numero(torque),
+      v2: artigo(corpo),
+      v3: corpo.nome,
+      v4: numero(massa),
+      v5: numero(raio),
+    }),
     enunciadoTex: `\\tau = I\\alpha \\qquad I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
     resolucao: segundaLeiRotacionalComPassos(corpo, massa, raio, torque),
@@ -314,6 +327,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -327,6 +342,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

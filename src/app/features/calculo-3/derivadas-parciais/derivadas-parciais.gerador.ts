@@ -143,6 +143,7 @@ function daSegunda(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('derivadas-parciais', 'forma-1')[0]!, { variavel }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('derivadas-parciais', 'forma-1')[0]!, { variavel }),
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {
@@ -280,6 +281,8 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /** As traduções do enunciado, que vêm do mesmo molde. */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -293,6 +296,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

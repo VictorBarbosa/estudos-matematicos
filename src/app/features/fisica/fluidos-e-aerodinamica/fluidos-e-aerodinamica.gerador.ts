@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   DENSIDADE_AGUA,
   DENSIDADE_AR,
@@ -76,6 +76,9 @@ function exercicioPressao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { profundidade },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fluidos-e-aerodinamica', 'forma-1')[0]!, {
+      profundidade,
+    }),
     enunciadoTex: `h = ${profundidade}\\,\\text{m} \\qquad \\rho = 1000\\,\\text{kg/m}^{3}`,
     gabarito,
     resolucao: {
@@ -128,6 +131,9 @@ function exercicioEmpuxo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { volumeLitros },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fluidos-e-aerodinamica', 'forma-2')[0]!, {
+      volumeLitros,
+    }),
     enunciadoTex: `V = ${volumeLitros}\\,\\text{L} \\qquad \\rho_{água} = 1000\\,\\text{kg/m}^{3}`,
     gabarito: resultado.empuxo,
     resolucao: {
@@ -179,6 +185,9 @@ function exercicioFracaoSubmersa(nivel: Nivel, rng: Rng): Exercicio<number> {
       { densidadeCorpo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fluidos-e-aerodinamica', 'forma-3')[0]!, {
+      densidadeCorpo,
+    }),
     enunciadoTex: `\\rho_{corpo} = ${densidadeCorpo} \\qquad \\rho_{água} = 1000\\,\\text{kg/m}^{3}`,
     gabarito: resultado.fracaoSubmersa,
     resolucao: { resultado: resultado.fracaoSubmersa, passos },
@@ -227,6 +236,11 @@ function exercicioSustentacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { area, superior, inferior },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fluidos-e-aerodinamica', 'forma-4')[0]!, {
+      area,
+      superior,
+      inferior,
+    }),
     enunciadoTex: `A = ${area}\\,\\text{m}^{2} \\qquad v_{sup} = ${superior} \\qquad v_{inf} = ${inferior}`,
     gabarito: resultado,
     resolucao: {
@@ -298,6 +312,10 @@ function exercicioBernoulli(nivel: Nivel, rng: Rng): Exercicio<number> {
       { velocidadeA, velocidadeB },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fluidos-e-aerodinamica', 'forma-5')[0]!, {
+      velocidadeA,
+      velocidadeB,
+    }),
     enunciadoTex:
       `v_A = ${velocidadeA} \\qquad v_B = ${velocidadeB} \\qquad ` +
       '\\rho = 1{,}225\\,\\text{kg/m}^{3}',

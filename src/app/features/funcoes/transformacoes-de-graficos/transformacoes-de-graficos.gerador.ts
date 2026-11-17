@@ -88,6 +88,7 @@ function doVertice(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-1')[0]!, {}, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('transformacoes-de-graficos', 'forma-1')[0]!, {}),
     enunciadoTex: parabolaTex(t),
     gabarito: t.h,
     resolucao: verticeTransformadoComPassos(t),
@@ -137,6 +138,10 @@ function doPontoX(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: ponto.x, v2: ponto.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('transformacoes-de-graficos', 'forma-2')[0]!, {
+      v1: ponto.x,
+      v2: ponto.y,
+    }),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito: destino.x,
     resolucao: pontoTransformadoComPassos(ponto, t),
@@ -189,6 +194,10 @@ function doPontoY(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: ponto.x, v2: ponto.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('transformacoes-de-graficos', 'forma-3')[0]!, {
+      v1: ponto.x,
+      v2: ponto.y,
+    }),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito: destino.y,
     resolucao: {
@@ -244,6 +253,7 @@ function daHorizontal(nivel: Nivel, rng: Rng): Exercicio<number> {
       { largura },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('transformacoes-de-graficos', 'forma-4')[0]!, { largura }),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito,
     resolucao: daLargura(largura, b, gabarito),
@@ -281,6 +291,7 @@ function doZeroDeslocado(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     rng,
     enunciado: textoDoMolde(moldesDe('transformacoes-de-graficos', 'forma-5')[0]!, { zero }, 'pt'),
+    traducoes: traducoesDoMolde(moldesDe('transformacoes-de-graficos', 'forma-5')[0]!, { zero }),
     enunciadoTex: `g(x) = ${transformacaoParaTex(t)}`,
     gabarito: destino.x,
     resolucao: pontoTransformadoComPassos({ x: zero, y: 0 }, t),
@@ -364,6 +375,14 @@ interface Pedido {
   readonly nivel: Nivel;
   readonly rng: Rng;
   readonly enunciado: string;
+  /**
+   * As traduções do enunciado, que vêm do mesmo molde.
+   *
+   * Sem este campo o texto chegava aqui só em português, e `montar` criava um
+   * exercício sem traduções: quem escolhia francês lia a pergunta em
+   * português, embora o francês estivesse escrito no arquivo.
+   */
+  readonly traducoes?: Exercicio<number>['traducoes'];
   readonly enunciadoTex: string;
   readonly gabarito: number;
   readonly resolucao: Exercicio<number>['resolucao'];
@@ -377,6 +396,7 @@ function montar(pedido: Pedido): Exercicio<number> {
     id: `${pedido.chave}-${pedido.rng.inteiro(0, 9999)}`,
     nivel: pedido.nivel,
     enunciado: pedido.enunciado,
+    traducoes: pedido.traducoes,
     enunciadoTex: pedido.enunciadoTex,
     gabarito: pedido.gabarito,
     resolucao: pedido.resolucao,

@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   MASSA_ELETRON,
   REPOUSO_ELETRON_KEV,
@@ -113,6 +113,10 @@ function foton(nivel: Nivel, rng: Rng): Exercicio<number> {
       { lambda, v1: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fisica-moderna', 'forma-1')[0]!, {
+      lambda,
+      v1: casas(gabarito),
+    }),
     enunciadoTex: `\\lambda = ${lambda}\\ \\text{nm} \\qquad hc = 1240\\ \\text{eV·nm}`,
     gabarito,
     resolucao,
@@ -153,6 +157,10 @@ function gama(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: exato(beta), v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fisica-moderna', 'forma-2')[0]!, {
+      v1: exato(beta),
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `v = ${tex(beta)}\\,c \\qquad \\gamma = \\;?`,
     gabarito,
     resolucao,
@@ -235,6 +243,11 @@ function contracao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { proprio, v1: exato(beta), v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fisica-moderna', 'forma-3')[0]!, {
+      proprio,
+      v1: exato(beta),
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `L_0 = ${proprio}\\ \\text{m} \\qquad v = ${tex(beta)}\\,c`,
     gabarito,
     resolucao,
@@ -272,6 +285,12 @@ function fotoeletrico(nivel: Nivel, rng: Rng): Exercicio<number> {
       { lambda, metal, v1: t(phi), v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fisica-moderna', 'forma-4')[0]!, {
+      lambda,
+      metal,
+      v1: t(phi),
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `\\lambda = ${lambda}\\ \\text{nm} \\qquad \\phi = ${tex(phi)}\\ \\text{eV}`,
     gabarito,
     resolucao,
@@ -312,6 +331,11 @@ function corte(nivel: Nivel, rng: Rng): Exercicio<number> {
       { metal, v1: t(phi), v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fisica-moderna', 'forma-5')[0]!, {
+      metal,
+      v1: t(phi),
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `\\phi = ${tex(phi)}\\ \\text{eV} \\qquad \\lambda_c = \\;?`,
     gabarito,
     resolucao,
@@ -346,6 +370,10 @@ function deBroglie(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: t(mantissa), v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fisica-moderna', 'forma-6')[0]!, {
+      v1: t(mantissa),
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `m = 9{,}11 \\times 10^{-31}\\ \\text{kg} \\qquad v = ${tex(mantissa)} \\times 10^{6}\\ \\text{m/s}`,
     gabarito,
     resolucao,
@@ -386,6 +414,10 @@ function betaDeGama(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: t(gamaValor), v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fisica-moderna', 'forma-7')[0]!, {
+      v1: t(gamaValor),
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `\\frac{\\Delta t}{\\Delta t_0} = \\gamma = ${tex(gamaValor)} \\qquad \\frac{v}{c} = \\;?`,
     gabarito,
     resolucao: {
@@ -438,6 +470,10 @@ function energiaCinetica(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: exato(beta), v2: casas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fisica-moderna', 'forma-8')[0]!, {
+      v1: exato(beta),
+      v2: casas(gabarito),
+    }),
     enunciadoTex: `mc^{2} = 511\\ \\text{keV} \\qquad v = ${tex(beta)}\\,c`,
     gabarito,
     resolucao: {

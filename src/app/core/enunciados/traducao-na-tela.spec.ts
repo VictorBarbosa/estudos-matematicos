@@ -23,11 +23,19 @@ const SEMENTES = [3, 17, 91];
  * línguas em todas as 7 924 entradas, e os geradores pediam só o português —
  * 488 chamadas em 111 geradores. A tradução existia e não chegava a ninguém.
  *
- * Caiu para 103 quando as chamadas passaram a pedir também `fr` e `en`. O que
- * resta são os geradores cujo texto ainda vive no TypeScript, onde não há o
- * que pedir: para esses, traduzir é primeiro mover o texto para o arquivo.
+ * Caiu para 103 quando as chamadas passaram a pedir também `fr` e `en`, e para
+ * 78 quando os geradores de OBJETO INTERMEDIÁRIO passaram a repassá-las.
+ *
+ * Esse segundo caso foi relatado em uso: «mesmo com os valores no JSON, não
+ * muda quando troco de idioma». O gerador monta um `Pedido` com o texto e só
+ * depois constrói o exercício; o campo de traduções não existia nesse objeto,
+ * então o francês parava ali, escrito no arquivo e sem caminho até a tela.
+ *
+ * O que resta são os geradores cujo texto ainda vive no TypeScript, onde não
+ * há o que pedir: para esses, traduzir é primeiro mover o texto para o
+ * arquivo.
  */
-const SEM_TRADUCAO_MAXIMO = 103;
+const SEM_TRADUCAO_MAXIMO = 78;
 
 describe('tradução na tela', () => {
   it('a conta de tópicos sem tradução só desce', () => {

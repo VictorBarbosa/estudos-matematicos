@@ -1,4 +1,4 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
 import {
   INVERSA_TEX,
   INVERSA_TEXTO,
@@ -267,6 +267,10 @@ function exercicioInversa(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: INVERSA_TEXTO[razao], v2: notavel.texto },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-trigonometricas', 'forma-1')[0]!, {
+      v1: INVERSA_TEXTO[razao],
+      v2: notavel.texto,
+    }),
     enunciadoTex: `${inversa}\\left(${notavel.tex}\\right) = \\;?`,
     gabarito,
     resolucao: {
@@ -331,6 +335,10 @@ function exercicioInversaDecimal(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: INVERSA_TEXTO[razao], valorTexto },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-trigonometricas', 'forma-2')[0]!, {
+      v1: INVERSA_TEXTO[razao],
+      valorTexto,
+    }),
     enunciadoTex: `${INVERSA_TEX[razao]}\\left(${valorTex}\\right) = \\;?`,
     gabarito,
     resolucao: {
@@ -374,6 +382,9 @@ function exercicioBasica(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: PEDIDO_TEXTO[pedido] },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-trigonometricas', 'forma-3')[0]!, {
+      v1: PEDIDO_TEXTO[pedido],
+    }),
     enunciadoTex: `${RAZAO_TEX[razao]} x = ${notavel.tex}`,
     gabarito,
     resolucao: {
@@ -476,6 +487,9 @@ function exercicioLinear(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: PEDIDO_TEXTO[pedido] },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-trigonometricas', 'forma-4')[0]!, {
+      v1: PEDIDO_TEXTO[pedido],
+    }),
     enunciadoTex: equacaoTex,
     gabarito,
     resolucao: {
@@ -518,6 +532,9 @@ function exercicioDecimal(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: PEDIDO_TEXTO[pedido] },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-trigonometricas', 'forma-5')[0]!, {
+      v1: PEDIDO_TEXTO[pedido],
+    }),
     enunciadoTex: `${RAZAO_TEX[razao]} x = ${valorTex}`,
     gabarito,
     resolucao: {
@@ -563,6 +580,10 @@ function exercicioArcoMultiplo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: PEDIDO_TEXTO[pedido], v2: avisoDeCasas(gabarito) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-trigonometricas', 'forma-6')[0]!, {
+      v1: PEDIDO_TEXTO[pedido],
+      v2: avisoDeCasas(gabarito),
+    }),
     enunciadoTex: `${RAZAO_TEX[razao]}(${n}x) = ${notavel.tex}`,
     gabarito,
     resolucao: {
@@ -744,6 +765,9 @@ function exercicioQuadratica(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: PEDIDO_TEXTO[pedido] },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-trigonometricas', 'forma-7')[0]!, {
+      v1: PEDIDO_TEXTO[pedido],
+    }),
     enunciadoTex: equacaoTex,
     gabarito,
     resolucao: { resultado: gabarito, passos },
