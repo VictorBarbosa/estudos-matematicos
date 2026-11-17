@@ -5178,5 +5178,1013 @@
   "O reservatório PERDE água: a taxa entra com sinal negativo. Esvaziar é chegar a zero.": {
     "fr": "Le réservoir PERD de l’eau : le taux entre avec un signe négatif. Se vider, c’est arriver à zéro.",
     "en": "The tank LOSES water: the rate comes in with a negative sign. Emptying means reaching zero."
+  },
+  "Escreva a área em função de um lado só e derive.": {
+    "fr": "Écrivez l’aire en fonction d’un seul côté et dérivez.",
+    "en": "Write the area in terms of one side only and differentiate."
+  },
+  "Derive (#x² − #), iguale a zero e isole x² antes de tirar a raiz.": {
+    "fr": "Dérivez (#x² − #), égalez à zéro et isolez x² avant d’extraire la racine.",
+    "en": "Differentiate (#x² − #), set it to zero and isolate x² before taking the root."
+  },
+  "Em x = # dá # sobre #. Derive só o de cima e só o de baixo, e substitua x = # de novo.": {
+    "fr": "En x = # cela donne # sur #. Dérivez seulement le haut et seulement le bas, puis substituez x = # de nouveau.",
+    "en": "At x = # it gives # over #. Differentiate the top and the bottom separately, then substitute x = # again."
+  },
+  "Inclinação da secante = (f(b) − f(a)) / (b − a). Depois resolva f′(c) igual a ela.": {
+    "fr": "Pente de la sécante = (f(b) − f(a)) / (b − a). Résolvez ensuite f′(c) égale à elle.",
+    "en": "Slope of the secant = (f(b) − f(a)) / (b − a). Then solve f′(c) equal to it."
+  },
+  "Derive, ache onde f′ = # e veja o sinal de f′ entre essas raízes (é um trinômio: sinal contrário ao de a entre as raízes).": {
+    "fr": "Dérivez, trouvez où f′ = # et regardez le signe de f′ entre ces racines (c’est un trinôme : signe contraire à celui de a entre les racines).",
+    "en": "Differentiate, find where f′ = # and look at the sign of f′ between those roots (it is a quadratic: the sign is opposite to a between the roots)."
+  },
+  "Derive V em relação a t antes de substituir o raio.": {
+    "fr": "Dérivez V par rapport à t avant de substituer le rayon.",
+    "en": "Differentiate V with respect to t before substituting the radius."
+  },
+  "Os pontos críticos são ±#. A segunda derivada é #x: onde ela é negativa está o máximo — substitua esse x em f.": {
+    "fr": "Les points critiques sont ±#. La dérivée seconde est #x : là où elle est négative se trouve le maximum — substituez ce x dans f.",
+    "en": "The critical points are ±#. The second derivative is #x: where it is negative lies the maximum — substitute that x into f."
+  },
+  "Derive A = L² em relação ao tempo (dá #L vezes dL/dt) e só depois use L = #.": {
+    "fr": "Dérivez A = L² par rapport au temps (cela donne #L fois dL/dt) et seulement ensuite utilisez L = #.",
+    "en": "Differentiate A = L² with respect to time (it gives #L times dL/dt) and only then use L = #."
+  },
+  "Confira que dá #/# em x = #; depois derive em cima e embaixo e substitua.": {
+    "fr": "Vérifiez que cela donne #/# en x = # ; dérivez ensuite le haut et le bas et substituez.",
+    "en": "Check that it gives #/# at x = #; then differentiate top and bottom and substitute."
+  },
+  "Calcule a inclinação da secante, iguale a f′(c) e resolva. A resposta é c, não a inclinação.": {
+    "fr": "Calculez la pente de la sécante, égalez-la à f′(c) et résolvez. La réponse est c, pas la pente.",
+    "en": "Work out the secant’s slope, set it equal to f′(c) and solve. The answer is c, not the slope."
+  },
+  "Inflexão é onde f″ troca de sinal. Derive duas vezes e resolva f″(x) = #.": {
+    "fr": "L’inflexion est là où f″ change de signe. Dérivez deux fois et résolvez f″(x) = #.",
+    "en": "Inflection is where f″ changes sign. Differentiate twice and solve f″(x) = #."
+  },
+  "Usamos a restrição para escrever um lado em função do outro.": {
+    "fr": "Nous utilisons la contrainte pour écrire un côté en fonction de l’autre.",
+    "en": "We use the constraint to write one side in terms of the other."
+  },
+  "A área fica em função de uma única variável.": {
+    "fr": "L’aire devient fonction d’une seule variable.",
+    "en": "The area becomes a function of a single variable."
+  },
+  "Derivamos e igualamos a zero.": {
+    "fr": "Nous dérivons et égalons à zéro.",
+    "en": "We differentiate and set it to zero."
+  },
+  "A segunda derivada é negativa, confirmando o máximo.": {
+    "fr": "La dérivée seconde est négative, ce qui confirme le maximum.",
+    "en": "The second derivative is negative, confirming the maximum."
+  },
+  "A área máxima é a do quadrado.": {
+    "fr": "L’aire maximale est celle du carré.",
+    "en": "The greatest area is the square’s."
+  },
+  "Pontos críticos são onde a derivada se anula.": {
+    "fr": "Les points critiques sont là où la dérivée s’annule.",
+    "en": "Critical points are where the derivative vanishes."
+  },
+  "Resolvendo a equação.": {
+    "fr": "En résolvant l’équation.",
+    "en": "Solving the equation."
+  },
+  "O maior deles é o pedido.": {
+    "fr": "Le plus grand d’entre eux est celui demandé.",
+    "en": "The largest of them is the one asked for."
+  },
+  "Substituindo x = #, em cima e embaixo dá zero: a forma #/# é indeterminada.": {
+    "fr": "En substituant x = #, le haut et le bas donnent zéro : la forme #/# est indéterminée.",
+    "en": "Substituting x = #, top and bottom give zero: the form #/# is indeterminate."
+  },
+  "L'Hôpital: derivamos o numerador e o denominador SEPARADAMENTE (não é a regra do quociente).": {
+    "fr": "L’Hôpital : nous dérivons le numérateur et le dénominateur SÉPARÉMENT (ce n’est pas la règle du quotient).",
+    "en": "L’Hôpital: we differentiate numerator and denominator SEPARATELY (this is not the quotient rule)."
+  },
+  "Os valores de f nos extremos do intervalo.": {
+    "fr": "Les valeurs de f aux extrémités de l’intervalle.",
+    "en": "The values of f at the ends of the interval."
+  },
+  "A inclinação da secante.": {
+    "fr": "La pente de la sécante.",
+    "en": "The slope of the secant."
+  },
+  "A tangente em c tem de ter a mesma inclinação.": {
+    "fr": "La tangente en c doit avoir la même pente.",
+    "en": "The tangent at c must have the same slope."
+  },
+  "Crescer ou decrescer é o sinal da derivada. Derivamos.": {
+    "fr": "Croître ou décroître, c’est le signe de la dérivée. Nous dérivons.",
+    "en": "Increasing or decreasing is the sign of the derivative. We differentiate."
+  },
+  "Os pontos críticos: onde f′ zera.": {
+    "fr": "Les points critiques : là où f′ s’annule.",
+    "en": "The critical points: where f′ is zero."
+  },
+  "f′ é um trinômio com a = #: negativo ENTRE as raízes, positivo fora delas.": {
+    "fr": "f′ est un trinôme avec a = # : négatif ENTRE les racines, positif en dehors.",
+    "en": "f′ is a quadratic with a = #: negative BETWEEN the roots, positive outside them."
+  },
+  "Então f é decrescente entre os pontos críticos.": {
+    "fr": "Donc f est décroissante entre les points critiques.",
+    "en": "So f is decreasing between the critical points."
+  },
+  "Partimos da relação que vale em qualquer instante.": {
+    "fr": "Nous partons de la relation valable à tout instant.",
+    "en": "We start from the relation that holds at every instant."
+  },
+  "Derivamos os dois lados em relação ao tempo, pela regra da cadeia.": {
+    "fr": "Nous dérivons les deux côtés par rapport au temps, par la règle de la chaîne.",
+    "en": "We differentiate both sides with respect to time, by the chain rule."
+  },
+  "Só agora substituímos os valores do instante pedido.": {
+    "fr": "C’est seulement maintenant que nous substituons les valeurs de l’instant demandé.",
+    "en": "Only now do we substitute the values at the required instant."
+  },
+  "Os pontos críticos são as raízes da derivada.": {
+    "fr": "Les points critiques sont les racines de la dérivée.",
+    "en": "The critical points are the roots of the derivative."
+  },
+  "A segunda derivada classifica cada um.": {
+    "fr": "La dérivée seconde classe chacun d’eux.",
+    "en": "The second derivative classifies each one."
+  },
+  "Avaliamos a função no ponto de máximo.": {
+    "fr": "Nous évaluons la fonction au point de maximum.",
+    "en": "We evaluate the function at the maximum point."
+  },
+  "A área em função do lado.": {
+    "fr": "L’aire en fonction du côté.",
+    "en": "The area in terms of the side."
+  },
+  "Derivando em relação ao tempo.": {
+    "fr": "En dérivant par rapport au temps.",
+    "en": "Differentiating with respect to time."
+  },
+  "Substituindo os valores do instante.": {
+    "fr": "En substituant les valeurs de l’instant.",
+    "en": "Substituting the values at that instant."
+  },
+  "Em x = #, os dois polinômios se anulam.": {
+    "fr": "En x = #, les deux polynômes s’annulent.",
+    "en": "At x = #, both polynomials vanish."
+  },
+  "Derivamos cada um separadamente.": {
+    "fr": "Nous dérivons chacun séparément.",
+    "en": "We differentiate each one separately."
+  },
+  "Substituímos x = # nas derivadas.": {
+    "fr": "Nous substituons x = # dans les dérivées.",
+    "en": "We substitute x = # into the derivatives."
+  },
+  "O limite é a razão das derivadas.": {
+    "fr": "La limite est le rapport des dérivées.",
+    "en": "The limit is the ratio of the derivatives."
+  },
+  "A inclinação da secante entre os extremos.": {
+    "fr": "La pente de la sécante entre les extrémités.",
+    "en": "The slope of the secant between the ends."
+  },
+  "Igualamos a tangente em c à secante.": {
+    "fr": "Nous égalons la tangente en c à la sécante.",
+    "en": "We set the tangent at c equal to the secant."
+  },
+  "Ficamos com a raiz que está dentro de (#, #).": {
+    "fr": "Nous gardons la racine qui est dans (#, #).",
+    "en": "We keep the root that lies inside (#, #)."
+  },
+  "A concavidade é o sinal da SEGUNDA derivada. Derivamos duas vezes.": {
+    "fr": "La concavité est le signe de la dérivée SECONDE. Nous dérivons deux fois.",
+    "en": "Concavity is the sign of the SECOND derivative. We differentiate twice."
+  },
+  "f″ é do #º grau: troca de sinal exatamente onde zera.": {
+    "fr": "f″ est du #ᵉ degré : elle change de signe exactement là où elle s’annule.",
+    "en": "f″ is of degree #: it changes sign exactly where it is zero."
+  },
+  "Em x = # dá #/#.": {
+    "fr": "En x = # cela donne #/#.",
+    "en": "At x = # it gives #/#."
+  },
+  "Primeira aplicação: derivadas de cima e de baixo.": {
+    "fr": "Première application : dérivées du haut et du bas.",
+    "en": "First application: derivatives of top and bottom."
+  },
+  "Segunda aplicação.": {
+    "fr": "Deuxième application.",
+    "en": "Second application."
+  },
+  "Pitágoras vale em todo instante: é a relação a derivar.": {
+    "fr": "Pythagore est vrai à tout instant : c’est la relation à dériver.",
+    "en": "Pythagoras holds at every instant: that is the relation to differentiate."
+  },
+  "Derivamos em relação ao tempo; o lado direito é constante.": {
+    "fr": "Nous dérivons par rapport au temps ; le côté droit est constant.",
+    "en": "We differentiate with respect to time; the right-hand side is constant."
+  },
+  "Isolamos a taxa procurada.": {
+    "fr": "Nous isolons le taux cherché.",
+    "en": "We isolate the rate we want."
+  },
+  "Com x = #, Pitágoras dá y = #.": {
+    "fr": "Avec x = #, Pythagore donne y = #.",
+    "en": "With x = #, Pythagoras gives y = #."
+  },
+  "O fator de inclinação é √(# + #² + #²); multiplique pela área do retângulo, # vezes #.": {
+    "fr": "Le facteur d’inclinaison est √(# + #² + #²) ; multipliez par l’aire du rectangle, # fois #.",
+    "en": "The slant factor is √(# + #² + #²); multiply by the rectangle’s area, # times #."
+  },
+  "Derive x² em x, −#y em y e −#z em z, some e substitua o ponto.": {
+    "fr": "Dérivez x² en x, −#y en y et −#z en z, additionnez et substituez le point.",
+    "en": "Differentiate x² in x, −#y in y and −#z in z, add them and substitute the point."
+  },
+  "Derive −#x² em x, #y em y e z em z, some e substitua o ponto.": {
+    "fr": "Dérivez −#x² en x, #y en y et z en z, additionnez et substituez le point.",
+    "en": "Differentiate −#x² in x, #y in y and z in z, add them and substitute the point."
+  },
+  "Derive −#x² em x, −#y²z em y e #xz² em z, some e substitua o ponto.": {
+    "fr": "Dérivez −#x² en x, −#y²z en y et #xz² en z, additionnez et substituez le point.",
+    "en": "Differentiate −#x² in x, −#y²z in y and #xz² in z, add them and substitute the point."
+  },
+  "Derive x²y em x, y² em y e −#xz² em z, some e substitua o ponto.": {
+    "fr": "Dérivez x²y en x, y² en y et −#xz² en z, additionnez et substituez le point.",
+    "en": "Differentiate x²y in x, y² in y and −#xz² in z, add them and substitute the point."
+  },
+  "Derive x² em x, #y²z em y e −#xz em z, some e substitua o ponto.": {
+    "fr": "Dérivez x² en x, #y²z en y et −#xz en z, additionnez et substituez le point.",
+    "en": "Differentiate x² in x, #y²z in y and −#xz in z, add them and substitute the point."
+  },
+  "Derive Q = −#x em x e P = −#y² em y; a resposta é a primeira menos a segunda.": {
+    "fr": "Dérivez Q = −#x en x et P = −#y² en y ; la réponse est la première moins la seconde.",
+    "en": "Differentiate Q = −#x in x and P = −#y² in y; the answer is the first minus the second."
+  },
+  "Derive Q = −#xy em x e P = −y em y; a resposta é a primeira menos a segunda.": {
+    "fr": "Dérivez Q = −#xy en x et P = −y en y ; la réponse est la première moins la seconde.",
+    "en": "Differentiate Q = −#xy in x and P = −y in y; the answer is the first minus the second."
+  },
+  "Derive Q = −#x² em x e P = −#y em y; a resposta é a primeira menos a segunda.": {
+    "fr": "Dérivez Q = −#x² en x et P = −#y en y ; la réponse est la première moins la seconde.",
+    "en": "Differentiate Q = −#x² in x and P = −#y in y; the answer is the first minus the second."
+  },
+  "Derive Q = #x em x e P = −#y² em y; a resposta é a primeira menos a segunda.": {
+    "fr": "Dérivez Q = #x en x et P = −#y² en y ; la réponse est la première moins la seconde.",
+    "en": "Differentiate Q = #x in x and P = −#y² in y; the answer is the first minus the second."
+  },
+  "Derive x em x, −y² em y e #xz em z, some e substitua o ponto.": {
+    "fr": "Dérivez x en x, −y² en y et #xz en z, additionnez et substituez le point.",
+    "en": "Differentiate x in x, −y² in y and #xz in z, add them and substitute the point."
+  },
+  "Pelo teorema de Green: ∂Q/∂x − ∂P/∂y dá um número constante; multiplique pela área # vezes #.": {
+    "fr": "Par le théorème de Green : ∂Q/∂x − ∂P/∂y donne un nombre constant ; multipliez par l’aire # fois #.",
+    "en": "By Green’s theorem: ∂Q/∂x − ∂P/∂y gives a constant; multiply by the area # times #."
+  },
+  "Derive #x²y em x, −#yz em y e #xz em z, some e substitua o ponto.": {
+    "fr": "Dérivez #x²y en x, −#yz en y et #xz en z, additionnez et substituez le point.",
+    "en": "Differentiate #x²y in x, −#yz in y and #xz in z, add them and substitute the point."
+  },
+  "Derive #x² em x, −#y² em y e −#xz² em z, some e substitua o ponto.": {
+    "fr": "Dérivez #x² en x, −#y² en y et −#xz² en z, additionnez et substituez le point.",
+    "en": "Differentiate #x² in x, −#y² in y and −#xz² in z, add them and substitute the point."
+  },
+  "O divergente é # + # + #, constante: multiplique pelo volume da esfera, (#/#)π·#³.": {
+    "fr": "La divergence est # + # + #, constante : multipliez par le volume de la sphère, (#/#)π·#³.",
+    "en": "The divergence is # + # + #, constant: multiply by the sphere’s volume, (#/#)π·#³."
+  },
+  "Calcule ∂Q/∂x − ∂P/∂y e integre em # ≤ x ≤ #, # ≤ y ≤ #: ∫ xⁿ dx = xⁿ⁺¹/(n + #).": {
+    "fr": "Calculez ∂Q/∂x − ∂P/∂y et intégrez sur # ≤ x ≤ #, # ≤ y ≤ # : ∫ xⁿ dx = xⁿ⁺¹/(n + #).",
+    "en": "Work out ∂Q/∂x − ∂P/∂y and integrate over # ≤ x ≤ #, # ≤ y ≤ #: ∫ xⁿ dx = xⁿ⁺¹/(n + #)."
+  },
+  "Calcule o divergente (∂P/∂x + ∂Q/∂y + ∂R/∂z) e integre no cubo de lado #, termo a termo.": {
+    "fr": "Calculez la divergence (∂P/∂x + ∂Q/∂y + ∂R/∂z) et intégrez sur le cube de côté #, terme à terme.",
+    "en": "Work out the divergence (∂P/∂x + ∂Q/∂y + ∂R/∂z) and integrate over the cube of side #, term by term."
+  },
+  "O divergente é # + # + #z. Integre em z de # a # e multiplique pela área da base, π·#².": {
+    "fr": "La divergence est # + # + #z. Intégrez en z de # à # et multipliez par l’aire de la base, π·#².",
+    "en": "The divergence is # + # + #z. Integrate in z from # to # and multiply by the base area, π·#²."
+  },
+  "Parametrize x = #·cos t, y = #·sen t e calcule (#/#)·∮(x dy − y dx) de # a #π.": {
+    "fr": "Paramétrez x = #·cos t, y = #·sin t et calculez (#/#)·∮(x dy − y dx) de # à #π.",
+    "en": "Parametrise x = #·cos t, y = #·sin t and work out (#/#)·∮(x dy − y dx) from # to #π."
+  },
+  "Stokes: calcule ∂Q/∂x − ∂P/∂y (os termos em x² e y² somem) e multiplique pela área do disco, π·#².": {
+    "fr": "Stokes : calculez ∂Q/∂x − ∂P/∂y (les termes en x² et y² disparaissent) et multipliez par l’aire du disque, π·#².",
+    "en": "Stokes: work out ∂Q/∂x − ∂P/∂y (the x² and y² terms vanish) and multiply by the disc’s area, π·#²."
+  },
+  "Para z = f(x, y), cada pedacinho dA da sombra vira √(# + fx² + fy²)·dA na superfície.": {
+    "fr": "Pour z = f(x, y), chaque petit dA de l’ombre devient √(# + fx² + fy²)·dA sur la surface.",
+    "en": "For z = f(x, y), each small dA of the shadow becomes √(# + fx² + fy²)·dA on the surface."
+  },
+  "As derivadas parciais são constantes: fx = # e fy = #.": {
+    "fr": "Les dérivées partielles sont constantes : fx = # et fy = #.",
+    "en": "The partial derivatives are constant: fx = # and fy = #."
+  },
+  "Fator constante vezes a área do retângulo (# por #).": {
+    "fr": "Facteur constant fois l’aire du rectangle (# par #).",
+    "en": "Constant factor times the rectangle’s area (# by #)."
+  },
+  "O divergente soma a derivada de cada componente na SUA variável.": {
+    "fr": "La divergence additionne la dérivée de chaque composante selon SA variable.",
+    "en": "The divergence adds each component’s derivative in ITS own variable."
+  },
+  "As três derivadas parciais.": {
+    "fr": "Les trois dérivées partielles.",
+    "en": "The three partial derivatives."
+  },
+  "Avaliando em (#, #, #).": {
+    "fr": "En évaluant en (#, #, #).",
+    "en": "Evaluating at (#, #, #)."
+  },
+  "Num campo plano (P, Q), o rotacional aponta em z e mede o giro local.": {
+    "fr": "Dans un champ plan (P, Q), le rotationnel pointe en z et mesure la rotation locale.",
+    "en": "In a plane field (P, Q), the curl points along z and measures the local spin."
+  },
+  "As duas derivadas cruzadas.": {
+    "fr": "Les deux dérivées croisées.",
+    "en": "The two cross derivatives."
+  },
+  "Em (#, #).": {
+    "fr": "En (#, #).",
+    "en": "At (#, #)."
+  },
+  "Green troca a integral na borda pela integral dupla do giro no interior.": {
+    "fr": "Green échange l’intégrale sur le bord contre l’intégrale double de la rotation à l’intérieur.",
+    "en": "Green swaps the boundary integral for the double integral of the spin inside."
+  },
+  "O integrando.": {
+    "fr": "L’intégrande.",
+    "en": "The integrand."
+  },
+  "Integramos cada parte em # ≤ x ≤ #, # ≤ y ≤ #.": {
+    "fr": "Nous intégrons chaque partie sur # ≤ x ≤ #, # ≤ y ≤ #.",
+    "en": "We integrate each part over # ≤ x ≤ #, # ≤ y ≤ #."
+  },
+  "A diferença é a circulação.": {
+    "fr": "La différence est la circulation.",
+    "en": "The difference is the circulation."
+  },
+  "O fluxo pela superfície fechada é a integral do divergente no volume.": {
+    "fr": "Le flux à travers la surface fermée est l’intégrale de la divergence dans le volume.",
+    "en": "The flux through the closed surface is the integral of the divergence over the volume."
+  },
+  "O divergente é constante.": {
+    "fr": "La divergence est constante.",
+    "en": "The divergence is constant."
+  },
+  "Constante vezes o volume da esfera, (#/#)π·#³.": {
+    "fr": "Constante fois le volume de la sphère, (#/#)π·#³.",
+    "en": "Constant times the sphere’s volume, (#/#)π·#³."
+  },
+  "Em vez de seis integrais nas faces, uma integral tripla do divergente.": {
+    "fr": "Au lieu de six intégrales sur les faces, une intégrale triple de la divergence.",
+    "en": "Instead of six integrals over the faces, one triple integral of the divergence."
+  },
+  "O divergente.": {
+    "fr": "La divergence.",
+    "en": "The divergence."
+  },
+  "Integramos cada termo no cubo de lado #.": {
+    "fr": "Nous intégrons chaque terme sur le cube de côté #.",
+    "en": "We integrate each term over the cube of side #."
+  },
+  "O divergente agora depende de z.": {
+    "fr": "La divergence dépend maintenant de z.",
+    "en": "The divergence now depends on z."
+  },
+  "Integramos em fatias horizontais: cada fatia tem área πR².": {
+    "fr": "Nous intégrons par tranches horizontales : chaque tranche a une aire πR².",
+    "en": "We integrate in horizontal slices: each slice has area πR²."
+  },
+  "A integral em z.": {
+    "fr": "L’intégrale en z.",
+    "en": "The integral in z."
+  },
+  "Vezes a área da base.": {
+    "fr": "Fois l’aire de la base.",
+    "en": "Times the base area."
+  },
+  "Com P = −y/# e Q = x/#, o integrando de Green vale #: a integral dupla é a área.": {
+    "fr": "Avec P = −y/# et Q = x/#, l’intégrande de Green vaut # : l’intégrale double est l’aire.",
+    "en": "With P = −y/# and Q = x/#, Green’s integrand is #: the double integral is the area."
+  },
+  "Parametrizamos a elipse: x = #·cos t, y = #·sen t.": {
+    "fr": "Nous paramétrons l’ellipse : x = #·cos t, y = #·sin t.",
+    "en": "We parametrise the ellipse: x = #·cos t, y = #·sin t."
+  },
+  "Integrando de # a #π e dividindo por #.": {
+    "fr": "En intégrant de # à #π et en divisant par #.",
+    "en": "Integrating from # to #π and dividing by #."
+  },
+  "Stokes troca a circulação pela integral do rotacional no disco que a curva cerca.": {
+    "fr": "Stokes échange la circulation contre l’intégrale du rotationnel sur le disque entouré par la courbe.",
+    "en": "Stokes swaps the circulation for the integral of the curl over the disc the curve encloses."
+  },
+  "No disco horizontal, n = k: só a componente z do rotacional conta.": {
+    "fr": "Sur le disque horizontal, n = k : seule la composante z du rotationnel compte.",
+    "en": "On the horizontal disc, n = k: only the z component of the curl counts."
+  },
+  "Constante vezes a área do disco, π·#².": {
+    "fr": "Constante fois l’aire du disque, π·#².",
+    "en": "Constant times the disc’s area, π·#²."
+  },
+  "Cada fator troca de sinal na sua raiz (# e #). Marque as duas na reta e veja o sinal do produto em cada pedaço.": {
+    "fr": "Chaque facteur change de signe à sa racine (# et #). Marquez les deux sur la droite et regardez le signe du produit sur chaque morceau.",
+    "en": "Each factor changes sign at its root (# and #). Mark both on the line and look at the sign of the product on each piece."
+  },
+  "Ache as raízes. Com a positivo, o trinômio é NEGATIVO entre elas e POSITIVO fora delas.": {
+    "fr": "Trouvez les racines. Avec a positif, le trinôme est NÉGATIF entre elles et POSITIF en dehors.",
+    "en": "Find the roots. With a positive, the quadratic is NEGATIVE between them and POSITIVE outside."
+  },
+  "Um produto é negativo quando os fatores têm sinais contrários — isso acontece entre as raízes.": {
+    "fr": "Un produit est négatif quand les facteurs ont des signes contraires — cela arrive entre les racines.",
+    "en": "A product is negative when the factors have opposite signs — that happens between the roots."
+  },
+  "Ache as raízes desse trinômio e teste um valor entre elas: é ali que o custo fica abaixo do limite.": {
+    "fr": "Trouvez les racines de ce trinôme et testez une valeur entre elles : c’est là que le coût passe sous la limite.",
+    "en": "Find the roots of that quadratic and test a value between them: that is where the cost falls below the limit."
+  },
+  "A parábola abre para baixo: o projétil sobe, passa pela altura, desce e volta a passar. O saldo é positivo ENTRE os dois instantes.": {
+    "fr": "La parabole est tournée vers le bas : le projectile monte, passe la hauteur, redescend et repasse. Le bilan est positif ENTRE les deux instants.",
+    "en": "The parabola opens downwards: the projectile rises, passes the height, falls and passes again. The balance is positive BETWEEN the two instants."
+  },
+  "a = # é negativo: a parábola abre para baixo, então o trinômio é POSITIVO entre as raízes.": {
+    "fr": "a = # est négatif : la parabole est tournée vers le bas, donc le trinôme est POSITIF entre les racines.",
+    "en": "a = # is negative: the parabola opens downwards, so the quadratic is POSITIVE between the roots."
+  },
+  "A área cresce até a largura ótima e depois cai: por isso as duas raízes, e a resposta ENTRE elas. Uma largura pequena demais e uma grande demais dão a mesma área.": {
+    "fr": "L’aire croît jusqu’à la largeur optimale puis décroît : d’où les deux racines, et la réponse ENTRE elles. Une largeur trop petite et une trop grande donnent la même aire.",
+    "en": "The area grows up to the best width and then falls: hence the two roots, and the answer BETWEEN them. A width too small and one too large give the same area."
+  },
+  "Δ = #: o trinômio zera num ponto só e é positivo em todo o resto. Esse ponto fica de fora.": {
+    "fr": "Δ = # : le trinôme s’annule en un seul point et est positif partout ailleurs. Ce point reste exclu.",
+    "en": "Δ = #: the quadratic is zero at a single point and positive everywhere else. That point is left out."
+  },
+  "Use Bhaskara: as raízes são frações. Depois, fora delas o trinômio tem o sinal de a.": {
+    "fr": "Utilisez la formule quadratique : les racines sont des fractions. Ensuite, en dehors d’elles le trinôme a le signe de a.",
+    "en": "Use the quadratic formula: the roots are fractions. Then, outside them the quadratic has the sign of a."
+  },
+  "Cada fator zera num preço: # e #. O lucro é nulo nesses dois e positivo entre eles — teste um preço do meio para confirmar.": {
+    "fr": "Chaque facteur s’annule à un prix : # et #. Le profit est nul à ces deux-là et positif entre eux — testez un prix du milieu pour confirmer.",
+    "en": "Each factor is zero at a price: # and #. The profit is nil at those two and positive between them — test a middle price to confirm."
+  },
+  "Com Δ negativo e a positivo, o trinômio nunca fica negativo: o conjunto é VAZIO. «Vazio» é uma resposta, não um erro.": {
+    "fr": "Avec Δ négatif et a positif, le trinôme n’est jamais négatif : l’ensemble est VIDE. « Vide » est une réponse, pas une erreur.",
+    "en": "With Δ negative and a positive, the quadratic is never negative: the set is EMPTY. “Empty” is an answer, not a mistake."
+  },
+  "Calcule Δ primeiro. Se Δ < #, o trinômio tem sempre o sinal de a: a resposta é «todos» ou «vazio».": {
+    "fr": "Calculez Δ d’abord. Si Δ < #, le trinôme a toujours le signe de a : la réponse est « tous » ou « vide ».",
+    "en": "Work out Δ first. If Δ < #, the quadratic always has the sign of a: the answer is “all” or “empty”."
+  },
+  "Faça o quadro de sinais de cima e de baixo. O zero do denominador nunca entra, nem com ≤ ou ≥.": {
+    "fr": "Faites le tableau de signes du haut et du bas. Le zéro du dénominateur n’entre jamais, même avec ≤ ou ≥.",
+    "en": "Build the sign table for top and bottom. The denominator’s zero never belongs, not even with ≤ or ≥."
+  },
+  "O zero de cima (x = #) ENTRA, porque a relação tem «ou igual». O de baixo (x = #) NUNCA entra: ali a fração não existe.": {
+    "fr": "Le zéro du haut (x = #) ENTRE, parce que la relation contient « ou égal ». Celui du bas (x = #) n’entre JAMAIS : là, la fraction n’existe pas.",
+    "en": "The top zero (x = #) IS included, because the relation says “or equal”. The bottom one (x = #) is NEVER: there the fraction does not exist."
+  },
+  "Cada fator do #º grau zera num ponto e troca de sinal ali. Achamos os dois zeros.": {
+    "fr": "Chaque facteur du #ᵉ degré s’annule en un point et y change de signe. Nous trouvons les deux zéros.",
+    "en": "Each degree # factor is zero at one point and changes sign there. We find the two zeros."
+  },
+  "O sinal de cada fator em cada pedaço da reta (à direita do zero, o sinal do coeficiente de x).": {
+    "fr": "Le signe de chaque facteur sur chaque morceau de la droite (à droite du zéro, le signe du coefficient de x).",
+    "en": "The sign of each factor on each piece of the line (to the right of the zero, the sign of the x coefficient)."
+  },
+  "O sinal do produto, pela regra dos sinais, pedaço por pedaço.": {
+    "fr": "Le signe du produit, par la règle des signes, morceau par morceau.",
+    "en": "The sign of the product, by the sign rule, piece by piece."
+  },
+  "Queremos o produto positivo: os pedaços de fora, sem os zeros.": {
+    "fr": "Nous voulons le produit positif : les morceaux extérieurs, sans les zéros.",
+    "en": "We want the product positive: the outer pieces, without the zeros."
+  },
+  "Queremos o produto negativo ou zero: o pedaço do meio, com os zeros incluídos.": {
+    "fr": "Nous voulons le produit négatif ou nul : le morceau du milieu, zéros inclus.",
+    "en": "We want the product negative or zero: the middle piece, zeros included."
+  },
+  "Queremos o produto negativo: o pedaço do meio, sem os zeros.": {
+    "fr": "Nous voulons le produit négatif : le morceau du milieu, sans les zéros.",
+    "en": "We want the product negative: the middle piece, without the zeros."
+  },
+  "Estudamos o sinal do trinômio comparado com zero: primeiro, onde ele ZERA.": {
+    "fr": "Nous étudions le signe du trinôme comparé à zéro : d’abord, où il S’ANNULE.",
+    "en": "We study the sign of the quadratic against zero: first, where it IS ZERO."
+  },
+  "O discriminante diz quantas vezes a parábola toca o eixo x.": {
+    "fr": "Le discriminant dit combien de fois la parabole touche l’axe des x.",
+    "en": "The discriminant tells how many times the parabola meets the x-axis."
+  },
+  "Duas raízes reais, por Bhaskara (em ordem crescente).": {
+    "fr": "Deux racines réelles, par la formule quadratique (en ordre croissant).",
+    "en": "Two real roots, by the quadratic formula (in increasing order)."
+  },
+  "a = #: concavidade para cima. O trinômio tem o sinal de a FORA das raízes e o sinal contrário ENTRE elas.": {
+    "fr": "a = # : concavité vers le cima. Le trinôme a le signe de a EN DEHORS des racines et le signe contraire ENTRE elles.",
+    "en": "a = #: concave cima. The quadratic has the sign of a OUTSIDE the roots and the opposite sign BETWEEN them."
+  },
+  "Queremos o trinômio negativo: o pedaço ENTRE as raízes, sem as raízes.": {
+    "fr": "Nous voulons le trinôme negativo : le morceau ENTRE les racines, sans les racines.",
+    "en": "We want the quadratic negativo: the piece BETWEEN the roots, without the roots."
+  },
+  "a = #: concavidade para baixo. O trinômio tem o sinal de a FORA das raízes e o sinal contrário ENTRE elas.": {
+    "fr": "a = # : concavité vers le baixo. Le trinôme a le signe de a EN DEHORS des racines et le signe contraire ENTRE elles.",
+    "en": "a = #: concave baixo. The quadratic has the sign of a OUTSIDE the roots and the opposite sign BETWEEN them."
+  },
+  "Queremos o trinômio positivo: o pedaço ENTRE as raízes, sem as raízes.": {
+    "fr": "Nous voulons le trinôme positivo : le morceau ENTRE les racines, sans les racines.",
+    "en": "We want the quadratic positivo: the piece BETWEEN the roots, without the roots."
+  },
+  "Queremos o trinômio positivo: os dois pedaços de FORA, sem as raízes.": {
+    "fr": "Nous voulons le trinôme positivo : les deux morceaux EXTÉRIEURS, sans les racines.",
+    "en": "We want the quadratic positivo: the two OUTER pieces, without the roots."
+  },
+  "Queremos o trinômio negativo ou zero: os dois pedaços de FORA, com as raízes incluídas.": {
+    "fr": "Nous voulons le trinôme négatif ou nul : les deux morceaux EXTÉRIEURS, racines incluses.",
+    "en": "We want the quadratic negative or zero: the two OUTER pieces, roots included."
+  },
+  "Queremos o trinômio negativo: os dois pedaços de FORA, sem as raízes.": {
+    "fr": "Nous voulons le trinôme negativo : les deux morceaux EXTÉRIEURS, sans les racines.",
+    "en": "We want the quadratic negativo: the two OUTER pieces, without the roots."
+  },
+  "Δ = #: uma raiz dupla, x = #. A parábola só encosta no eixo ali.": {
+    "fr": "Δ = # : une racine double, x = #. La parabole ne fait qu’effleurer l’axe là.",
+    "en": "Δ = #: a double root, x = #. The parabola only touches the axis there."
+  },
+  "Fora desse ponto, o trinômio tem o sinal de a (positivo).": {
+    "fr": "En dehors de ce point, le trinôme a le signe de a (positif).",
+    "en": "Outside that point, the quadratic has the sign of a (positive)."
+  },
+  "A relação é estrita: a raiz, onde o trinômio vale #, fica de fora.": {
+    "fr": "La relation est stricte : la racine, où le trinôme vaut #, reste exclue.",
+    "en": "The relation is strict: the root, where the quadratic is #, is left out."
+  },
+  "Queremos o produto positivo: o pedaço do meio, sem os zeros.": {
+    "fr": "Nous voulons le produit positif : le morceau du milieu, sans les zéros.",
+    "en": "We want the product positive: the middle piece, without the zeros."
+  },
+  "Δ < #: a parábola não toca o eixo. Com a = #, ela fica inteira ACIMA dele — o trinômio é sempre positivo.": {
+    "fr": "Δ < # : la parabole ne touche pas l’axe. Avec a = #, elle reste entièrement AU-DESSUS — le trinôme est toujours positif.",
+    "en": "Δ < #: the parabola does not meet the axis. With a = #, it stays entirely ABOVE it — the quadratic is always positive."
+  },
+  "O sinal pedido nunca acontece: nenhum número real serve.": {
+    "fr": "Le signe demandé ne se produit jamais : aucun nombre réel ne convient.",
+    "en": "The required sign never happens: no real number works."
+  },
+  "Comparamos a fração com zero. Marcamos onde o numerador zera e onde o denominador zera.": {
+    "fr": "Nous comparons la fraction à zéro. Nous marquons où le numérateur s’annule et où le dénominateur s’annule.",
+    "en": "We compare the fraction with zero. We mark where the numerator is zero and where the denominator is zero."
+  },
+  "O sinal de cada fator em cada pedaço da reta.": {
+    "fr": "Le signe de chaque facteur sur chaque morceau de la droite.",
+    "en": "The sign of each factor on each piece of the line."
+  },
+  "Sinal da fração: regra dos sinais, pedaço por pedaço. No zero do denominador, ela não existe (∄).": {
+    "fr": "Signe de la fraction : règle des signes, morceau par morceau. Au zéro du dénominateur, elle n’existe pas (∄).",
+    "en": "Sign of the fraction: the sign rule, piece by piece. At the denominator’s zero it does not exist (∄)."
+  },
+  "Ficamos com os pedaços de fora. Com desigualdade estrita, nenhuma fronteira entra.": {
+    "fr": "Nous gardons les morceaux extérieurs. Avec une inégalité stricte, aucune frontière n’entre.",
+    "en": "We keep the outer pieces. With a strict inequality, no boundary is included."
+  },
+  "Ficamos com o pedaço do meio. O zero do numerador entra (a fração vale # ali); o do denominador, x = #, nunca.": {
+    "fr": "Nous gardons le morceau du milieu. Le zéro du numérateur entre (la fraction vaut # là) ; celui du dénominateur, x = #, jamais.",
+    "en": "We keep the middle piece. The numerator’s zero is included (the fraction is # there); the denominator’s, x = #, never."
+  },
+  "Ficamos com o pedaço do meio. Com desigualdade estrita, nenhuma fronteira entra.": {
+    "fr": "Nous gardons le morceau du milieu. Avec une inégalité stricte, aucune frontière n’entre.",
+    "en": "We keep the middle piece. With a strict inequality, no boundary is included."
+  },
+  "Ficamos com os pedaços de fora. O zero do numerador entra (a fração vale # ali); o do denominador, x = #, nunca.": {
+    "fr": "Nous gardons les morceaux extérieurs. Le zéro du numérateur entre (la fraction vaut # là) ; celui du dénominateur, x = #, jamais.",
+    "en": "We keep the outer pieces. The numerator’s zero is included (the fraction is # there); the denominator’s, x = #, never."
+  },
+  "Derive duas vezes: seno vira cosseno e depois −seno.": {
+    "fr": "Dérivez deux fois : le sinus devient cosinus puis −sinus.",
+    "en": "Differentiate twice: sine becomes cosine and then −sine."
+  },
+  "Derive duas vezes: cosseno vira −seno e depois −cosseno.": {
+    "fr": "Dérivez deux fois : le cosinus devient −sinus puis −cosinus.",
+    "en": "Differentiate twice: cosine becomes −sine and then −cosine."
+  },
+  "Derive duas vezes: seno vira cosseno e depois −seno, e cada derivada traz um fator # (ao todo #² = #).": {
+    "fr": "Dérivez deux fois : le sinus devient cosinus puis −sinus, et chaque dérivée apporte un facteur # (en tout #² = #).",
+    "en": "Differentiate twice: sine becomes cosine and then −sine, and each derivative brings a factor # (in all #² = #)."
+  },
+  "O argumento não é x: ele traz um fator que precisa sair.": {
+    "fr": "L’argument n’est pas x : il apporte un facteur qui doit sortir.",
+    "en": "The argument is not x: it brings a factor that has to come out."
+  },
+  "A secante é o inverso do cosseno — e o quadrado é dela toda.": {
+    "fr": "La sécante est l’inverse du cosinus — et le carré porte sur elle tout entière.",
+    "en": "The secant is the reciprocal of the cosine — and the square is of the whole of it."
+  },
+  "A reta passa por (x₀, f(x₀)) com inclinação f′(x₀). Em x = #: y = f(x₀) − f′(x₀)·x₀, com x₀ = π em radianos.": {
+    "fr": "La droite passe par (x₀, f(x₀)) avec une pente f′(x₀). En x = # : y = f(x₀) − f′(x₀)·x₀, avec x₀ = π en radians.",
+    "en": "The line goes through (x₀, f(x₀)) with slope f′(x₀). At x = #: y = f(x₀) − f′(x₀)·x₀, with x₀ = π in radians."
+  },
+  "A reta passa por (x₀, f(x₀)) com inclinação f′(x₀). Em x = #: y = f(x₀) − f′(x₀)·x₀, com x₀ = #π/# em radianos.": {
+    "fr": "La droite passe par (x₀, f(x₀)) avec une pente f′(x₀). En x = # : y = f(x₀) − f′(x₀)·x₀, avec x₀ = #π/# en radians.",
+    "en": "The line goes through (x₀, f(x₀)) with slope f′(x₀). At x = #: y = f(x₀) − f′(x₀)·x₀, with x₀ = #π/# in radians."
+  },
+  "A reta passa por (x₀, f(x₀)) com inclinação f′(x₀). Em x = #: y = f(x₀) − f′(x₀)·x₀, com x₀ = π/# em radianos.": {
+    "fr": "La droite passe par (x₀, f(x₀)) avec une pente f′(x₀). En x = # : y = f(x₀) − f′(x₀)·x₀, avec x₀ = π/# en radians.",
+    "en": "The line goes through (x₀, f(x₀)) with slope f′(x₀). At x = #: y = f(x₀) − f′(x₀)·x₀, with x₀ = π/# in radians."
+  },
+  "A primeira derivada: pela tabela, e com o fator # da cadeia.": {
+    "fr": "La dérivée première : par la table, et avec le facteur # de la chaîne.",
+    "en": "The first derivative: from the table, and with the chain factor #."
+  },
+  "Derivando de novo, sai outro fator # e o sinal troca: f″ = −#²·f.": {
+    "fr": "En dérivant de nouveau, un autre facteur # sort et le signe change : f″ = −#²·f.",
+    "en": "Differentiating again, another factor # comes out and the sign flips: f″ = −#²·f."
+  },
+  "Em x = π, o argumento vale π.": {
+    "fr": "En x = π, l’argument vaut π.",
+    "en": "At x = π, the argument is π."
+  },
+  "Em x = π/#, o argumento vale π/#.": {
+    "fr": "En x = π/#, l’argument vaut π/#.",
+    "en": "At x = π/#, the argument is π/#."
+  },
+  "Em x = #, o argumento vale #.": {
+    "fr": "En x = #, l’argument vaut #.",
+    "en": "At x = #, the argument is #."
+  },
+  "Em x = #π/#, o argumento vale #π/#.": {
+    "fr": "En x = #π/#, l’argument vaut #π/#.",
+    "en": "At x = #π/#, the argument is #π/#."
+  },
+  "Pela tabela, a derivada do seno é o cosseno.": {
+    "fr": "Par la table, la dérivée du sinus est le cosinus.",
+    "en": "From the table, the derivative of sine is cosine."
+  },
+  "Substituímos x = #π/# e usamos os valores notáveis.": {
+    "fr": "Nous substituons x = #π/# et utilisons les valeurs remarquables.",
+    "en": "We substitute x = #π/# and use the special values."
+  },
+  "Pela tabela, a derivada do cosseno é menos o seno.": {
+    "fr": "Par la table, la dérivée du cosinus est moins le sinus.",
+    "en": "From the table, the derivative of cosine is minus sine."
+  },
+  "Substituímos x = π e usamos os valores notáveis.": {
+    "fr": "Nous substituons x = π et utilisons les valeurs remarquables.",
+    "en": "We substitute x = π and use the special values."
+  },
+  "Substituímos x = π.": {
+    "fr": "Nous substituons x = π.",
+    "en": "We substitute x = π."
+  },
+  "Substituímos x = π/#.": {
+    "fr": "Nous substituons x = π/#.",
+    "en": "We substitute x = π/#."
+  },
+  "Substituímos x = #π/#.": {
+    "fr": "Nous substituons x = #π/#.",
+    "en": "We substitute x = #π/#."
+  },
+  "Como o argumento é um múltiplo de x, a cadeia acrescenta o fator interno.": {
+    "fr": "Comme l’argument est un multiple de x, la chaîne ajoute le facteur interne.",
+    "en": "Since the argument is a multiple of x, the chain adds the inner factor."
+  },
+  "Substituímos x = π/#, de modo que o argumento vale #π/#.": {
+    "fr": "Nous substituons x = π/#, de sorte que l’argument vaut #π/#.",
+    "en": "We substitute x = π/#, so the argument is #π/#."
+  },
+  "Substituímos x = #π/#, de modo que o argumento vale #π.": {
+    "fr": "Nous substituons x = #π/#, de sorte que l’argument vaut #π.",
+    "en": "We substitute x = #π/#, so the argument is #π."
+  },
+  "Substituímos x = #π/#, de modo que o argumento vale #π/#.": {
+    "fr": "Nous substituons x = #π/#, de sorte que l’argument vaut #π/#.",
+    "en": "We substitute x = #π/#, so the argument is #π/#."
+  },
+  "Pela tabela, a derivada da tangente é a secante ao quadrado.": {
+    "fr": "Par la table, la dérivée de la tangente est la sécante au carré.",
+    "en": "From the table, the derivative of tangent is secant squared."
+  },
+  "No arco π, usamos os valores notáveis.": {
+    "fr": "À l’arc π, nous utilisons les valeurs remarquables.",
+    "en": "At the arc π, we use the special values."
+  },
+  "No arco π/#, usamos os valores notáveis.": {
+    "fr": "À l’arc π/#, nous utilisons les valeurs remarquables.",
+    "en": "At the arc π/#, we use the special values."
+  },
+  "No arco #, usamos os valores notáveis.": {
+    "fr": "À l’arc #, nous utilisons les valeurs remarquables.",
+    "en": "At the arc #, we use the special values."
+  },
+  "No arco #π/#, usamos os valores notáveis.": {
+    "fr": "À l’arc #π/#, nous utilisons les valeurs remarquables.",
+    "en": "At the arc #π/#, we use the special values."
+  },
+  "Substituímos x = π/#, de modo que o argumento vale #π.": {
+    "fr": "Nous substituons x = π/#, de sorte que l’argument vaut #π.",
+    "en": "We substitute x = π/#, so the argument is #π."
+  },
+  "Substituímos x = π, de modo que o argumento vale #π.": {
+    "fr": "Nous substituons x = π, de sorte que l’argument vaut #π.",
+    "en": "We substitute x = π, so the argument is #π."
+  },
+  "O ponto de tangência: o valor da função no arco.": {
+    "fr": "Le point de tangence : la valeur de la fonction à l’arc.",
+    "en": "The point of tangency: the function’s value at the arc."
+  },
+  "A inclinação: a derivada no mesmo arco.": {
+    "fr": "La pente : la dérivée au même arc.",
+    "en": "The slope: the derivative at the same arc."
+  },
+  "Substituímos x = π/#, de modo que o argumento vale π/#.": {
+    "fr": "Nous substituons x = π/#, de sorte que l’argument vaut π/#.",
+    "en": "We substitute x = π/#, so the argument is π/#."
+  },
+  "Substituímos x = #, de modo que o argumento vale #.": {
+    "fr": "Nous substituons x = #, de sorte que l’argument vaut #.",
+    "en": "We substitute x = #, so the argument is #."
+  },
+  "O obtido vai em cima e o teórico embaixo: compara-se o que saiu com o que era possível. O resultado é menor que #%.": {
+    "fr": "L’obtenu va en haut et le théorique en bas : on compare ce qui est sorti avec ce qui était possible. Le résultat est inférieur à # %.",
+    "en": "The obtained goes on top and the theoretical below: you compare what came out with what was possible. The result is less than #%."
+  },
+  "Não é o mais leve nem o de menos massa: compare quantas «receitas» cada um alcança — mols de H₂ e de O₂, cada um DIVIDIDO pelo seu coeficiente.": {
+    "fr": "Ce n’est ni le plus léger ni celui de moindre masse : comparez combien de « recettes » chacun atteint — moles de H₂ et de O₂, chacune DIVISÉE par son coefficient.",
+    "en": "It is not the lightest nor the one with least mass: compare how many “recipes” each one reaches — moles of H₂ and of O₂, each DIVIDED by its coefficient."
+  },
+  "Não é o mais leve nem o de menos massa: compare quantas «receitas» cada um alcança — mols de Fe e de O₂, cada um DIVIDIDO pelo seu coeficiente.": {
+    "fr": "Ce n’est ni le plus léger ni celui de moindre masse : comparez combien de « recettes » chacun atteint — moles de Fe et de O₂, chacune DIVISÉE par son coefficient.",
+    "en": "It is not the lightest nor the one with least mass: compare how many “recipes” each one reaches — moles of Fe and of O₂, each DIVIDED by its coefficient."
+  },
+  "Não é o mais leve nem o de menos massa: compare quantas «receitas» cada um alcança — mols de CaCO₃ e de HCl, cada um DIVIDIDO pelo seu coeficiente.": {
+    "fr": "Ce n’est ni le plus léger ni celui de moindre masse : comparez combien de « recettes » chacun atteint — moles de CaCO₃ et de HCl, chacune DIVISÉE par son coefficient.",
+    "en": "It is not the lightest nor the one with least mass: compare how many “recipes” each one reaches — moles of CaCO₃ and of HCl, each DIVIDED by its coefficient."
+  },
+  "Ache primeiro o limitante. O que sobra é a massa do OUTRO menos o que ele gastou nas receitas que deram certo.": {
+    "fr": "Trouvez d’abord le réactif limitant. Ce qui reste est la masse de L’AUTRE moins ce qu’il a dépensé dans les recettes réalisées.",
+    "en": "Find the limiting reagent first. What is left is the mass of the OTHER minus what it spent on the recipes that went through."
+  },
+  "Não é o mais leve nem o de menos massa: compare quantas «receitas» cada um alcança — mols de N₂ e de H₂, cada um DIVIDIDO pelo seu coeficiente.": {
+    "fr": "Ce n’est ni le plus léger ni celui de moindre masse : comparez combien de « recettes » chacun atteint — moles de N₂ et de H₂, chacune DIVISÉE par son coefficient.",
+    "en": "It is not the lightest nor the one with least mass: compare how many “recipes” each one reaches — moles of N₂ and of H₂, each DIVIDED by its coefficient."
+  },
+  "Não é o mais leve nem o de menos massa: compare quantas «receitas» cada um alcança — mols de CH₄ e de O₂, cada um DIVIDIDO pelo seu coeficiente.": {
+    "fr": "Ce n’est ni le plus léger ni celui de moindre masse : comparez combien de « recettes » chacun atteint — moles de CH₄ et de O₂, chacune DIVISÉE par son coefficient.",
+    "en": "It is not the lightest nor the one with least mass: compare how many “recipes” each one reaches — moles of CH₄ and of O₂, each DIVIDED by its coefficient."
+  },
+  "A massa teórica é o teto: o que sairia de H₂O sem perda nenhuma.": {
+    "fr": "La masse théorique est le plafond : ce qui sortirait de H₂O sans aucune perte.",
+    "en": "The theoretical mass is the ceiling: what would come out of H₂O with no loss at all."
+  },
+  "O rendimento compara o obtido com esse teto.": {
+    "fr": "Le rendement compare l’obtenu à ce plafond.",
+    "en": "The yield compares what was obtained with that ceiling."
+  },
+  "A massa teórica é o teto: o que sairia de NH₃ sem perda nenhuma.": {
+    "fr": "La masse théorique est le plafond : ce qui sortirait de NH₃ sans aucune perte.",
+    "en": "The theoretical mass is the ceiling: what would come out of NH₃ with no loss at all."
+  },
+  "A massa teórica é o teto: o que sairia de CO₂ sem perda nenhuma.": {
+    "fr": "La masse théorique est le plafond : ce qui sortirait de CO₂ sans aucune perte.",
+    "en": "The theoretical mass is the ceiling: what would come out of CO₂ with no loss at all."
+  },
+  "Cada reagente alcança um número de «receitas» da equação.": {
+    "fr": "Chaque réactif atteint un nombre de « recettes » de l’équation.",
+    "en": "Each reagent reaches a number of “recipes” of the equation."
+  },
+  "Para H₂.": {
+    "fr": "Pour H₂.",
+    "en": "For H₂."
+  },
+  "Para O₂.": {
+    "fr": "Pour O₂.",
+    "en": "For O₂."
+  },
+  "O menor manda: O₂ é o limitante, e H₂ sobra.": {
+    "fr": "Le plus petit commande : O₂ est le limitant, et H₂ est en excès.",
+    "en": "The smallest rules: O₂ is the limiting one, and H₂ is left over."
+  },
+  "O produto sai dessa quantidade de receitas.": {
+    "fr": "Le produit sort de cette quantité de recettes.",
+    "en": "The product comes from that number of recipes."
+  },
+  "Para Fe.": {
+    "fr": "Pour Fe.",
+    "en": "For Fe."
+  },
+  "O menor manda: O₂ é o limitante, e Fe sobra.": {
+    "fr": "Le plus petit commande : O₂ est le limitant, et Fe est en excès.",
+    "en": "The smallest rules: O₂ is the limiting one, and Fe is left over."
+  },
+  "Para CaCO₃.": {
+    "fr": "Pour CaCO₃.",
+    "en": "For CaCO₃."
+  },
+  "Para HCl.": {
+    "fr": "Pour HCl.",
+    "en": "For HCl."
+  },
+  "O menor manda: HCl é o limitante, e CaCO₃ sobra.": {
+    "fr": "Le plus petit commande : HCl est le limitant, et CaCO₃ est en excès.",
+    "en": "The smallest rules: HCl is the limiting one, and CaCO₃ is left over."
+  },
+  "A massa teórica é o teto: o que sairia de Fe₂O₃ sem perda nenhuma.": {
+    "fr": "La masse théorique est le plafond : ce qui sortirait de Fe₂O₃ sans aucune perte.",
+    "en": "The theoretical mass is the ceiling: what would come out of Fe₂O₃ with no loss at all."
+  },
+  "O menor manda: H₂ é o limitante, e O₂ sobra.": {
+    "fr": "Le plus petit commande : H₂ est le limitant, et O₂ est en excès.",
+    "en": "The smallest rules: H₂ is the limiting one, and O₂ is left over."
+  },
+  "Para N₂.": {
+    "fr": "Pour N₂.",
+    "en": "For N₂."
+  },
+  "O menor manda: H₂ é o limitante, e N₂ sobra.": {
+    "fr": "Le plus petit commande : H₂ est le limitant, et N₂ est en excès.",
+    "en": "The smallest rules: H₂ is the limiting one, and N₂ is left over."
+  },
+  "O excesso, N₂, gastou só o que as receitas pediram.": {
+    "fr": "L’excès, N₂, n’a dépensé que ce que les recettes demandaient.",
+    "en": "The excess, N₂, only spent what the recipes called for."
+  },
+  "O que sobra é a diferença.": {
+    "fr": "Ce qui reste est la différence.",
+    "en": "What is left is the difference."
+  },
+  "O excesso, H₂, gastou só o que as receitas pediram.": {
+    "fr": "L’excès, H₂, n’a dépensé que ce que les recettes demandaient.",
+    "en": "The excess, H₂, only spent what the recipes called for."
+  },
+  "O menor manda: N₂ é o limitante, e H₂ sobra.": {
+    "fr": "Le plus petit commande : N₂ est le limitant, et H₂ est en excès.",
+    "en": "The smallest rules: N₂ is the limiting one, and H₂ is left over."
+  },
+  "Para CH₄.": {
+    "fr": "Pour CH₄.",
+    "en": "For CH₄."
+  },
+  "O menor manda: CH₄ é o limitante, e O₂ sobra.": {
+    "fr": "Le plus petit commande : CH₄ est le limitant, et O₂ est en excès.",
+    "en": "The smallest rules: CH₄ is the limiting one, and O₂ is left over."
+  },
+  "O excesso, O₂, gastou só o que as receitas pediram.": {
+    "fr": "L’excès, O₂, n’a dépensé que ce que les recettes demandaient.",
+    "en": "The excess, O₂, only spent what the recipes called for."
+  },
+  "O menor manda: CaCO₃ é o limitante, e HCl sobra.": {
+    "fr": "Le plus petit commande : CaCO₃ est le limitant, et HCl est en excès.",
+    "en": "The smallest rules: CaCO₃ is the limiting one, and HCl is left over."
+  },
+  "O excesso, HCl, gastou só o que as receitas pediram.": {
+    "fr": "L’excès, HCl, n’a dépensé que ce que les recettes demandaient.",
+    "en": "The excess, HCl, only spent what the recipes called for."
+  },
+  "O excesso, Fe, gastou só o que as receitas pediram.": {
+    "fr": "L’excès, Fe, n’a dépensé que ce que les recettes demandaient.",
+    "en": "The excess, Fe, only spent what the recipes called for."
+  },
+  "O excesso, CaCO₃, gastou só o que as receitas pediram.": {
+    "fr": "L’excès, CaCO₃, n’a dépensé que ce que les recettes demandaient.",
+    "en": "The excess, CaCO₃, only spent what the recipes called for."
+  },
+  "A abscissa do ponto médio é a média das abscissas: (x_A + x_B) / #.": {
+    "fr": "L’abscisse du milieu est la moyenne des abscisses : (x_A + x_B) / #.",
+    "en": "The midpoint’s x-coordinate is the average of the x-coordinates: (x_A + x_B) / #."
+  },
+  "Desenhe o triângulo retângulo entre os dois pontos.": {
+    "fr": "Dessinez le triangle rectangle entre les deux points.",
+    "en": "Draw the right triangle between the two points."
+  },
+  "Perpendicular: inverta a inclinação e troque o sinal (m′ = −#/m).": {
+    "fr": "Perpendiculaire : inversez la pente et changez le signe (m′ = −#/m).",
+    "en": "Perpendicular: flip the slope and change the sign (m′ = −#/m)."
+  },
+  "Primeiro m = (# − #) / (# − (#)). Depois ponha A em y = mx + q e isole q.": {
+    "fr": "D’abord m = (# − #) / (# − (#)). Ensuite mettez A dans y = mx + q et isolez q.",
+    "en": "First m = (# − #) / (# − (#)). Then put A into y = mx + q and isolate q."
+  },
+  "No cruzamento os dois y são iguais: #x − # = #x − #. Resolva para x.": {
+    "fr": "Au croisement les deux y sont égaux : #x − # = #x − #. Résolvez pour x.",
+    "en": "At the crossing the two y are equal: #x − # = #x − #. Solve for x."
+  },
+  "Use d = |a·x₀ + b·y₀ + c| / √(a² + b²), com a reta na forma ax + by + c = #.": {
+    "fr": "Utilisez d = |a·x₀ + b·y₀ + c| / √(a² + b²), avec la droite sous la forme ax + by + c = #.",
+    "en": "Use d = |a·x₀ + b·y₀ + c| / √(a² + b²), with the line as ax + by + c = #."
+  },
+  "m = Δy / Δx: (# − #) dividido por (# − #), sempre na mesma ordem dos pontos.": {
+    "fr": "m = Δy / Δx : (# − #) divisé par (# − #), toujours dans le même ordre des points.",
+    "en": "m = Δy / Δx: (# − #) divided by (# − #), always in the same order of the points."
+  },
+  "Ache m′ = −#/m. Depois use o ponto: n = y₀ − m′·x₀.": {
+    "fr": "Trouvez m′ = −#/m. Utilisez ensuite le point : n = y₀ − m′·x₀.",
+    "en": "Find m′ = −#/m. Then use the point: n = y₀ − m′·x₀."
+  },
+  "Primeiro m = (# − #) / (# − #). Depois ponha A em y = mx + q e isole q.": {
+    "fr": "D’abord m = (# − #) / (# − #). Ensuite mettez A dans y = mx + q et isolez q.",
+    "en": "First m = (# − #) / (# − #). Then put A into y = mx + q and isolate q."
+  },
+  "Na forma ax + by + c = #, a inclinação é −a/b. A perpendicular tem −# sobre ela.": {
+    "fr": "Sous la forme ax + by + c = #, la pente est −a/b. La perpendiculaire a −# sur elle.",
+    "en": "In the form ax + by + c = #, the slope is −a/b. The perpendicular has −# over it."
+  },
+  "Resolva o sistema das duas equações (eliminação ou Cramer). D = #·# − (#)·(#) = #.": {
+    "fr": "Résolvez le système des deux équations (élimination ou Cramer). D = #·# − (#)·(#) = #.",
+    "en": "Solve the system of the two equations (elimination or Cramer). D = #·# − (#)·(#) = #."
+  },
+  "Passe a reta para a forma ax + by + c = # antes de usar a fórmula da distância.": {
+    "fr": "Mettez la droite sous la forme ax + by + c = # avant d’utiliser la formule de la distance.",
+    "en": "Put the line into the form ax + by + c = # before using the distance formula."
+  },
+  "O ponto médio tem cada coordenada igual à média das coordenadas.": {
+    "fr": "Le milieu a chaque coordonnée égale à la moyenne des coordonnées.",
+    "en": "The midpoint has each coordinate equal to the average of the coordinates."
+  },
+  "As diferenças de coordenadas são os catetos.": {
+    "fr": "Les différences de coordonnées sont les cathètes.",
+    "en": "The coordinate differences are the legs."
+  },
+  "A distância é a hipotenusa.": {
+    "fr": "La distance est l’hypoténuse.",
+    "en": "The distance is the hypotenuse."
+  },
+  "A inclinação da reta dada é o número que multiplica x.": {
+    "fr": "La pente de la droite donnée est le nombre qui multiplie x.",
+    "en": "The slope of the given line is the number multiplying x."
+  },
+  "Perpendiculares: o produto das inclinações é −#.": {
+    "fr": "Perpendiculaires : le produit des pentes est −#.",
+    "en": "Perpendicular: the product of the slopes is −#."
+  },
+  "Invertemos e trocamos o sinal.": {
+    "fr": "Nous inversons et changeons le signe.",
+    "en": "We flip it and change the sign."
+  },
+  "A inclinação é a variação de y sobre a variação de x.": {
+    "fr": "La pente est la variation de y sur la variation de x.",
+    "en": "The slope is the change in y over the change in x."
+  },
+  "Substituímos o ponto A em y = mx + q e isolamos q.": {
+    "fr": "Nous substituons le point A dans y = mx + q et isolons q.",
+    "en": "We substitute point A into y = mx + q and isolate q."
+  },
+  "A reta e o coeficiente linear.": {
+    "fr": "La droite et l’ordonnée à l’origine.",
+    "en": "The line and its intercept."
+  },
+  "No ponto de encontro, as duas retas têm o mesmo y: igualamos.": {
+    "fr": "Au point de rencontre, les deux droites ont le même y : nous égalons.",
+    "en": "At the meeting point the two lines have the same y: we set them equal."
+  },
+  "Substituindo x numa das retas para achar y.": {
+    "fr": "En substituant x dans l’une des droites pour trouver y.",
+    "en": "Substituting x into one of the lines to find y."
+  },
+  "Com a = #, b = # e c = #, a distância do ponto (#, #) à reta é:": {
+    "fr": "Avec a = #, b = # et c = #, la distance du point (#, #) à la droite est :",
+    "en": "With a = #, b = # and c = #, the distance from the point (#, #) to the line is:"
+  },
+  "O numerador: substituímos o ponto na expressão da reta e tiramos o módulo.": {
+    "fr": "Le numérateur : nous substituons le point dans l’expression de la droite et prenons la valeur absolue.",
+    "en": "The numerator: we substitute the point into the line’s expression and take the absolute value."
+  },
+  "O denominador: o comprimento do vetor normal (a, b).": {
+    "fr": "Le dénominateur : la longueur du vecteur normal (a, b).",
+    "en": "The denominator: the length of the normal vector (a, b)."
+  },
+  "A inclinação da reta dada.": {
+    "fr": "La pente de la droite donnée.",
+    "en": "The slope of the given line."
+  },
+  "A perpendicular tem inclinação −#/m.": {
+    "fr": "La perpendiculaire a une pente de −#/m.",
+    "en": "The perpendicular has slope −#/m."
+  },
+  "Ela passa por P(#, #): substituímos em y = m′x + n.": {
+    "fr": "Elle passe par P(#, #) : nous substituons dans y = m′x + n.",
+    "en": "It goes through P(#, #): we substitute into y = m′x + n."
+  },
+  "Isolando n.": {
+    "fr": "En isolant n.",
+    "en": "Isolating n."
+  },
+  "Na forma ax + by + c = #, isolando y a inclinação é −a/b, com a = # e b = #.": {
+    "fr": "Sous la forme ax + by + c = #, en isolant y la pente est −a/b, avec a = # et b = #.",
+    "en": "In the form ax + by + c = #, isolating y the slope is −a/b, with a = # and b = #."
+  },
+  "O ponto de encontro resolve o sistema das duas equações. O determinante dos coeficientes não é zero: há um único ponto.": {
+    "fr": "Le point de rencontre résout le système des deux équations. Le déterminant des coefficients n’est pas nul : il y a un seul point.",
+    "en": "The meeting point solves the system of the two equations. The determinant of the coefficients is not zero: there is a single point."
+  },
+  "Pela regra de Cramer (ou por eliminação).": {
+    "fr": "Par la règle de Cramer (ou par élimination).",
+    "en": "By Cramer’s rule (or by elimination)."
+  },
+  "A coordenada pedida.": {
+    "fr": "La coordonnée demandée.",
+    "en": "The required coordinate."
+  },
+  "A fórmula pede a reta na forma ax + by + c = #. Multiplicamos y = mx + q por # e passamos tudo para um lado.": {
+    "fr": "La formule demande la droite sous la forme ax + by + c = #. Nous multiplions y = mx + q par # et passons tout d’un côté.",
+    "en": "The formula needs the line as ax + by + c = #. We multiply y = mx + q by # and move everything to one side."
   }
 }
