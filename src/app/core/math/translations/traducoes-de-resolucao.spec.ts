@@ -33,9 +33,15 @@ const AMOSTRAS = 6;
  * as fórmulas do exercício. Cada tópico traduzido sobe o número; o piso existe
  * para que uma mudança de gerador que invente frases novas apareça aqui, em vez
  * de aparecer na tela de quem estuda em francês.
+ *
+ * O andamento, para quem for continuar: os passos saíram de 759 para 907 com
+ * Escalonamento e inversa, Equações trigonométricas e Poliedros; as dicas, de
+ * 75 para 122 com Estequiometria, Análise dimensional e Função afim. Traduzir
+ * um tópico é escrever as frases DELE — e as frases de um tópico são variações
+ * de poucos moldes, o que faz o trabalho render por família e não por linha.
  */
-const PISO_DOS_PASSOS = 0.24;
-const PISO_DAS_DICAS = 0.06;
+const PISO_DOS_PASSOS = 0.288;
+const PISO_DAS_DICAS = 0.108;
 
 interface Frases {
   readonly passos: Set<string>;
