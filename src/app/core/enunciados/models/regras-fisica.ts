@@ -637,13 +637,13 @@ export const REGRAS_FISICA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'Uma sirene de # Hz se aproxima a # m/s, com o som viajando a # m/s. Que frequência, em hertz, um observador parado ouve?',
       "f' = f \\frac{v}{v - v_f}",
-      "f' = # \\cdot \\frac{#}{# - #}",
+      "f' = #1 \\cdot \\frac{#3}{#3 - #2}",
       (v) => v[0]! * (v[2]! / (v[2]! - v[1]!)),
     ],
     [
       'Uma sirene de # Hz se aproxima de um ouvinte parado a # m/s. Com o som a # m/s, que frequência o ouvinte escuta, em Hz? (duas casas decimais)',
       "f' = f \\frac{v}{v - v_f}",
-      "f' = # \\cdot \\frac{#}{# - #}",
+      "f' = #1 \\cdot \\frac{#3}{#3 - #2}",
       (v) => v[0]! * (v[2]! / (v[2]! - v[1]!)),
       2,
     ],

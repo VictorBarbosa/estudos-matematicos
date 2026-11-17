@@ -543,19 +543,19 @@ export const REGRAS_ALGEBRA: Readonly<Record<string, readonly Regra[]>> = {
     [
       'De quantos modos # pessoas podem se sentar em # cadeiras em fila?',
       'A(n, k) = \\frac{n!}{(n-k)!}',
-      'A(#, #) = \\frac{#!}{(# - #)!}',
+      'A(#1, #2) = \\frac{#1!}{(#1 - #2)!}',
       (v) => arranjo(v[0]!, v[1]!),
     ],
     [
       'De quantos modos # pessoas podem se sentar em fila, em # cadeiras?',
       'A(n, k) = \\frac{n!}{(n-k)!}',
-      'A(#, #) = \\frac{#!}{(# - #)!}',
+      'A(#1, #2) = \\frac{#1!}{(#1 - #2)!}',
       (v) => arranjo(v[0]!, v[1]!),
     ],
     [
       'Entre # pessoas, de quantos modos se pode formar uma fila de #, importando a ordem?',
       'A(n, k) = \\frac{n!}{(n-k)!}',
-      'A(#, #) = \\frac{#!}{(# - #)!}',
+      'A(#1, #2) = \\frac{#1!}{(#1 - #2)!}',
       (v) => arranjo(v[0]!, v[1]!),
     ],
     [

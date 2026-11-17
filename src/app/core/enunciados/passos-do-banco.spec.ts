@@ -36,8 +36,20 @@ const ENTRADAS = todosOsEnunciados();
  * O número CAIU de 5679 para 5645 quando os passos começaram a rejeitar contas
  * inválidas: antes, uma regra que produzia `NaN` contava como cobertura e o
  * aluno via «= NaN» na tela. O que parece regressão é a mentira que saiu.
+ *
+ * E caiu de novo, de 5645 para 4273 (76,5% → 57,9%), pelo mesmo motivo e com
+ * a mesma honestidade: a trilha passou a ser recusada quando sobra `#` nela.
+ * São 246 formas de fórmula que pedem mais marcadores do que o texto tem — a
+ * conta ia à tela com `\max(0, # - #)`, que não é LaTeX válido, e o KaTeX
+ * mostrava a fórmula CRUA. Essas 1 372 entradas contavam como cobertas e não
+ * estavam: o aluno via defeito, não resolução.
+ *
+ * Cada uma dessas formas consertada — trocar `#` por `#1`, `#2`… onde a
+ * fórmula repete um valor — devolve as entradas dela a este número. As cinco
+ * primeiras (o efeito Doppler, em duas formas, e o arranjo, em três)
+ * devolveram 36 entradas: 4273 → 4309.
  */
-const COBERTURA_MINIMA = 0.7648;
+const COBERTURA_MINIMA = 0.5838;
 
 /**
  * Quantas substituições ainda mostram conta diferente da resposta.

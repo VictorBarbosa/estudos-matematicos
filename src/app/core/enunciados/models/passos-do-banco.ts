@@ -1042,18 +1042,38 @@ export function passosDoBanco(
    * à mão ficam para as formas em que a conta tem etapas próprias.
    */
   const pelasRegras = resolverPorRegras(REGRAS_POR_TOPICO[topico], texto);
-  if (pelasRegras !== null) {
+  if (pelasRegras !== null && semMarcador(pelasRegras)) {
     return pelasRegras;
   }
 
   for (const resolvedor of POR_TOPICO[topico] ?? []) {
     const resolucao = resolvedor(dados, texto);
-    if (resolucao !== null) {
+    if (resolucao !== null && semMarcador(resolucao)) {
       return resolucao;
     }
   }
 
   return null;
+}
+
+/**
+ * A trilha está inteira? Com marcador por preencher, ela não vale.
+ *
+ * As regras escrevem a conta com `#` no lugar de cada número, e quando a
+ * fórmula pede mais marcadores do que o texto tem, os que sobram ficam. Aí
+ * acontece o pior que podia acontecer: `\max(0, # - #)` não é LaTeX válido, o
+ * KaTeX desiste de desenhar, e o aluno vê a fórmula CRUA, com as barras
+ * invertidas à mostra, no lugar da resolução.
+ *
+ * Recusar a trilha devolve aquela entrada ao caminho genérico — os dados e a
+ * resposta. É pouco, e é melhor: uma conta pela metade ensina errado, uma
+ * conta crua não ensina nada e ainda parece defeito, que é o que é.
+ *
+ * `marcador-vazado.spec.ts` conta quantas formas ainda caem aqui, para que o
+ * conserto de cada uma apareça como dívida paga e não como acaso.
+ */
+function semMarcador(resolucao: ResolucaoDoBanco): boolean {
+  return !resolucao.passos.some((passo) => passo.tex.includes('#'));
 }
 
 /** O tópico já tem resolvedor? Serve ao guarda, para medir a cobertura. */
