@@ -7586,5 +7586,457 @@
   "Resolvemos a potência primeiro.": {
     "fr": "Nous résolvons d’abord la puissance.",
     "en": "We do the power first."
+  },
+  "Não precisa achar as raízes: soma = −b/a e produto = c/a.": {
+    "fr": "Pas besoin de trouver les racines : somme = −b/a et produit = c/a.",
+    "en": "No need to find the roots: sum = −b/a and product = c/a."
+  },
+  "Calcule o discriminante antes de aplicar a fórmula.": {
+    "fr": "Calculez le discriminant avant d’appliquer la formule.",
+    "en": "Work out the discriminant before applying the formula."
+  },
+  "Raiz dupla ⟺ Δ = #. Escreva b² − #·a·k = # e isole k.": {
+    "fr": "Racine double ⟺ Δ = #. Écrivez b² − #·a·k = # et isolez k.",
+    "en": "Double root ⟺ Δ = #. Write b² − #·a·k = # and isolate k."
+  },
+  "Raiz dupla ⟺ Δ = #. Escreva b² − #·k·c = # e isole k.": {
+    "fr": "Racine double ⟺ Δ = #. Écrivez b² − #·k·c = # et isolez k.",
+    "en": "Double root ⟺ Δ = #. Write b² − #·k·c = # and isolate k."
+  },
+  "Chame x² de t: fica t² + bt + c = #. Ache t e depois x = ±√t.": {
+    "fr": "Posez t = x² : il reste t² + bt + c = #. Trouvez t puis x = ±√t.",
+    "en": "Let t = x²: it becomes t² + bt + c = #. Find t and then x = ±√t."
+  },
+  "A raiz é irracional: vale escrever a forma exata, como (#+√#)/#, ou o decimal com # casas.": {
+    "fr": "La racine est irrationnelle : on peut écrire la forme exacte, comme (#+√#)/#, ou le décimal avec # décimales.",
+    "en": "The root is irrational: you may write the exact form, like (#+√#)/#, or the decimal with # places."
+  },
+  "Troque x² por t e resolva. Cada t positivo dá duas raízes; t negativo não dá nenhuma.": {
+    "fr": "Remplacez x² par t et résolvez. Chaque t positif donne deux racines ; un t négatif n’en donne aucune.",
+    "en": "Replace x² by t and solve. Each positive t gives two roots; a negative t gives none."
+  },
+  "Não ache as raízes: x₁² + x₂² = (x₁ + x₂)² − #·x₁·x₂, e soma e produto saem de Girard.": {
+    "fr": "Ne cherchez pas les racines : x₁² + x₂² = (x₁ + x₂)² − #·x₁·x₂, et somme et produit viennent de Viète.",
+    "en": "Do not find the roots: x₁² + x₂² = (x₁ + x₂)² − #·x₁·x₂, and sum and product come from Vieta."
+  },
+  "As relações de Girard ligam as raízes aos coeficientes.": {
+    "fr": "Les relations de Viète lient les racines aux coefficients.",
+    "en": "Vieta’s formulas link the roots to the coefficients."
+  },
+  "Os coeficientes: a = #, b = #, c = #.": {
+    "fr": "Les coefficients : a = #, b = #, c = #.",
+    "en": "The coefficients: a = #, b = #, c = #."
+  },
+  "O produto é c sobre a.": {
+    "fr": "Le produit est c sur a.",
+    "en": "The product is c over a."
+  },
+  "A soma é menos b sobre a.": {
+    "fr": "La somme est moins b sur a.",
+    "en": "The sum is minus b over a."
+  },
+  "Raiz dupla acontece exatamente quando o discriminante é zero.": {
+    "fr": "Une racine double se produit exactement quand le discriminant est nul.",
+    "en": "A double root happens exactly when the discriminant is zero."
+  },
+  "Aqui a = #, b = # e c = k.": {
+    "fr": "Ici a = #, b = # et c = k.",
+    "en": "Here a = #, b = # and c = k."
+  },
+  "Aqui a = k, b = # e c = #.": {
+    "fr": "Ici a = k, b = # et c = #.",
+    "en": "Here a = k, b = # and c = #."
+  },
+  "Trocamos x² por t: a biquadrada vira uma equação do #º grau em t.": {
+    "fr": "Nous remplaçons x² par t : la bicarrée devient une équation du #ᵉ degré en t.",
+    "en": "We replace x² by t: the biquadratic becomes a degree # equation in t."
+  },
+  "Resolvemos em t (por soma e produto ou Bhaskara).": {
+    "fr": "Nous résolvons en t (par somme et produit ou par la formule quadratique).",
+    "en": "We solve in t (by sum and product or the quadratic formula)."
+  },
+  "Voltamos a x: x² = t só tem solução real quando t ≥ #.": {
+    "fr": "Nous revenons à x : x² = t n’a de solution réelle que si t ≥ #.",
+    "en": "We go back to x: x² = t only has a real solution when t ≥ #."
+  },
+  "Contamos as raízes reais.": {
+    "fr": "Nous comptons les racines réelles.",
+    "en": "We count the real roots."
+  },
+  "O quadrado da soma tem os dois quadrados mais o dobro do produto.": {
+    "fr": "Le carré de la somme contient les deux carrés plus le double du produit.",
+    "en": "The square of the sum has the two squares plus twice the product."
+  },
+  "Soma e produto por Girard.": {
+    "fr": "Somme et produit par Viète.",
+    "en": "Sum and product by Vieta."
+  },
+  "O grau do quociente é a diferença dos graus.": {
+    "fr": "Le degré du quotient est la différence des degrés.",
+    "en": "The quotient’s degree is the difference of the degrees."
+  },
+  "Pelo teorema do resto, basta calcular P(a).": {
+    "fr": "Par le théorème du reste, il suffit de calculer P(a).",
+    "en": "By the remainder theorem, it is enough to work out P(a)."
+  },
+  "Teste os divisores do termo constante (#) divididos pelos do líder: ache uma raiz, divida e resolva o resto por Bhaskara.": {
+    "fr": "Testez les diviseurs du terme constant (#) divisés par ceux du coefficient dominant : trouvez une racine, divisez et résolvez le reste par la formule quadratique.",
+    "en": "Test the divisors of the constant term (#) over those of the leading one: find a root, divide and solve the rest with the quadratic formula."
+  },
+  "Use Briot-Ruffini com #: desça o primeiro coeficiente, multiplique por # e some ao seguinte, coluna a coluna.": {
+    "fr": "Utilisez Horner avec # : descendez le premier coefficient, multipliez par # et ajoutez au suivant, colonne par colonne.",
+    "en": "Use synthetic division with #: bring down the first coefficient, multiply by # and add to the next, column by column."
+  },
+  "Na identidade da divisão, o produto Q·D precisa alcançar o grau de P.": {
+    "fr": "Dans l’identité de la division, le produit Q·D doit atteindre le degré de P.",
+    "en": "In the division identity, the product Q·D has to reach the degree of P."
+  },
+  "Como multiplicar soma os graus, o grau de Q é a diferença.": {
+    "fr": "Comme multiplier additionne les degrés, le degré de Q est la différence.",
+    "en": "Since multiplying adds the degrees, Q’s degree is the difference."
+  },
+  "Na divisão, P(x) é o dividendo e (x + #) é o divisor. Chamamos o quociente de Q(x) e o resto de R.": {
+    "fr": "Dans la division, P(x) est le dividende et (x + #) le diviseur. Nous appelons le quotient Q(x) et le reste R.",
+    "en": "In the division, P(x) is the dividend and (x + #) the divisor. We call the quotient Q(x) and the remainder R."
+  },
+  "Procuramos o valor de x que zera o divisor: é ele que vai apagar o quociente.": {
+    "fr": "Nous cherchons la valeur de x qui annule le diviseur : c’est elle qui effacera le quotient.",
+    "en": "We look for the value of x that makes the divisor zero: it is what will wipe out the quotient."
+  },
+  "Pondo x = # nos dois lados, o divisor vira # e leva o quociente junto.": {
+    "fr": "En posant x = # des deux côtés, le diviseur devient # et emporte le quotient avec lui.",
+    "en": "Putting x = # on both sides, the divisor becomes # and takes the quotient with it."
+  },
+  "Trocamos x por # em cada termo de P.": {
+    "fr": "Nous remplaçons x par # dans chaque terme de P.",
+    "en": "We replace x by # in each term of P."
+  },
+  "Resolvemos as potências.": {
+    "fr": "Nous résolvons les puissances.",
+    "en": "We work out the powers."
+  },
+  "Fazemos os produtos de cada coeficiente pela sua potência.": {
+    "fr": "Nous faisons les produits de chaque coefficient par sa puissance.",
+    "en": "We multiply each coefficient by its power."
+  },
+  "Somamos as parcelas, duas de cada vez. O que sobra é o resto.": {
+    "fr": "Nous additionnons les termes, deux par deux. Ce qui reste est le reste.",
+    "en": "We add the terms, two at a time. What is left is the remainder."
+  },
+  "Na divisão, P(x) é o dividendo e (x - #) é o divisor. Chamamos o quociente de Q(x) e o resto de R.": {
+    "fr": "Dans la division, P(x) est le dividende et (x - #) le diviseur. Nous appelons le quotient Q(x) et le reste R.",
+    "en": "In the division, P(x) is the dividend and (x - #) the divisor. We call the quotient Q(x) and the remainder R."
+  },
+  "Testamos a candidata x = #.": {
+    "fr": "Nous testons la candidate x = #.",
+    "en": "We test the candidate x = #."
+  },
+  "Dividindo por (x + #), sobra um fator de grau #.": {
+    "fr": "En divisant par (x + #), il reste un facteur de degré #.",
+    "en": "Dividing by (x + #), a factor of degree # is left."
+  },
+  "O que sobrou é do #º grau: aqui Bhaskara resolve de uma vez.": {
+    "fr": "Ce qui reste est du #ᵉ degré : ici la formule quadratique résout d’un coup.",
+    "en": "What is left is of degree #: here the quadratic formula settles it at once."
+  },
+  "Com as raízes em mãos, o fator do #º grau se escreve fatorado.": {
+    "fr": "Les racines en main, le facteur du #ᵉ degré s’écrit factorisé.",
+    "en": "With the roots in hand, the degree # factor can be written factored."
+  },
+  "A fatoração está completa.": {
+    "fr": "La factorisation est complète.",
+    "en": "The factorisation is complete."
+  },
+  "Reunimos TODAS as raízes — a que passou no teste e as que vieram da fórmula. A pergunta pede a menor entre elas.": {
+    "fr": "Nous réunissons TOUTES les racines — celle du test et celles de la formule. La question demande la plus petite d’entre elles.",
+    "en": "We gather ALL the roots — the one from the test and those from the formula. The question asks for the smallest of them."
+  },
+  "O resto já tem grau menor que o divisor, então a divisão termina.": {
+    "fr": "Le reste a déjà un degré plus petit que le diviseur, donc la division s’arrête.",
+    "en": "The remainder already has a lower degree than the divisor, so the division ends."
+  },
+  "Do quociente, o enunciado pede o coeficiente de x.": {
+    "fr": "Du quotient, l’énoncé demande le coeficiente de x.",
+    "en": "From the quotient, the question asks for the coeficiente de x."
+  },
+  "Do quociente, o enunciado pede o termo constante.": {
+    "fr": "Du quotient, l’énoncé demande le termo constante.",
+    "en": "From the quotient, the question asks for the termo constante."
+  },
+  "Do quociente, o enunciado pede o coeficiente de x².": {
+    "fr": "Du quotient, l’énoncé demande le coeficiente de x².",
+    "en": "From the quotient, the question asks for the coeficiente de x²."
+  },
+  "Dividindo por (x - #), sobra um fator de grau #.": {
+    "fr": "En divisant par (x - #), il reste un facteur de degré #.",
+    "en": "Dividing by (x - #), a factor of degree # is left."
+  },
+  "Do quociente, o enunciado pede o coeficiente de x³.": {
+    "fr": "Du quotient, l’énoncé demande le coeficiente de x³.",
+    "en": "From the quotient, the question asks for the coeficiente de x³."
+  },
+  "aₙ = a₁ · qⁿ⁻¹ — atenção ao expoente.": {
+    "fr": "aₙ = a₁ · qⁿ⁻¹ — attention à l’exposant.",
+    "en": "aₙ = a₁ · qⁿ⁻¹ — mind the exponent."
+  },
+  "aₙ = a₁ + (n − #)r — conte os saltos, não os termos.": {
+    "fr": "aₙ = a₁ + (n − #)r — comptez les sauts, pas les termes.",
+    "en": "aₙ = a₁ + (n − #)r — count the steps, not the terms."
+  },
+  "Soma da PG: Sₙ = a₁·(qⁿ − #)/(q − #). Aqui a₁ = #, q = #, n = #.": {
+    "fr": "Somme de la suite géométrique : Sₙ = a₁·(qⁿ − #)/(q − #). Ici a₁ = #, q = #, n = #.",
+    "en": "Sum of the geometric sequence: Sₙ = a₁·(qⁿ − #)/(q − #). Here a₁ = #, q = #, n = #."
+  },
+  "Entre aₚ e a_q há (q − p) razões: r = (a_q − aₚ) / (q − p).": {
+    "fr": "Entre aₚ et a_q il y a (q − p) raisons : r = (a_q − aₚ) / (q − p).",
+    "en": "Between aₚ and a_q there are (q − p) differences: r = (a_q − aₚ) / (q − p)."
+  },
+  "Soma da PA: ache o #º termo e use Sₙ = (a₁ + aₙ)·n/# — a média dos extremos vezes #.": {
+    "fr": "Somme de la suite arithmétique : trouvez le #ᵉ terme et utilisez Sₙ = (a₁ + aₙ)·n/# — la moyenne des extrêmes fois #.",
+    "en": "Sum of the arithmetic sequence: find the #st term and use Sₙ = (a₁ + aₙ)·n/# — the average of the ends times #."
+  },
+  "Ache a razão primeiro, r = (a_q − aₚ) / (q − p); depois volte: a₁ = aₚ − (p − #)r.": {
+    "fr": "Trouvez d’abord la raison, r = (a_q − aₚ) / (q − p) ; puis revenez : a₁ = aₚ − (p − #)r.",
+    "en": "Find the difference first, r = (a_q − aₚ) / (q − p); then go back: a₁ = aₚ − (p − #)r."
+  },
+  "S = a₁ / (# − q), válida porque |q| < #.": {
+    "fr": "S = a₁ / (# − q), valable parce que |q| < #.",
+    "en": "S = a₁ / (# − q), valid because |q| < #."
+  },
+  "Na PG, a_q / aₚ = q elevado a (q − p). Tire a raiz para achar a razão e divida aₚ por ela (p − #) vezes.": {
+    "fr": "Dans la suite géométrique, a_q / aₚ = q à la puissance (q − p). Prenez la racine pour trouver la raison et divisez aₚ par elle (p − #) fois.",
+    "en": "In the geometric sequence, a_q / aₚ = q to the power (q − p). Take the root to find the ratio and divide aₚ by it (p − #) times."
+  },
+  "Escrevemos o termo geral da PG.": {
+    "fr": "Nous écrivons le terme général de la suite PG.",
+    "en": "We write the general term of the PG sequence."
+  },
+  "Substituímos os valores dados.": {
+    "fr": "Nous substituons les valeurs données.",
+    "en": "We substitute the given values."
+  },
+  "Escrevemos o termo geral da PA.": {
+    "fr": "Nous écrivons le terme général de la suite PA.",
+    "en": "We write the general term of the PA sequence."
+  },
+  "Do #º ao #º termo há # saltos de razão.": {
+    "fr": "Du #ᵉ au #ᵉ terme il y a # sauts de raison.",
+    "en": "From the #st to the #nd term there are # steps of the difference."
+  },
+  "Isolando a razão.": {
+    "fr": "En isolant la raison.",
+    "en": "Isolating the difference."
+  },
+  "Voltamos do #º termo ao primeiro: # saltos para trás.": {
+    "fr": "Nous revenons du #ᵉ terme au premier : # sauts en arrière.",
+    "en": "We go back from the #st term to the first: # steps backwards."
+  },
+  "Do #º ao #º termo, a razão multiplica # vezes.": {
+    "fr": "Du #ᵉ au #ᵉ terme, la raison multiplie # fois.",
+    "en": "From the #st to the #nd term, the ratio multiplies # times."
+  },
+  "Raiz cúbica, que preserva o sinal.": {
+    "fr": "Racine cubique, qui conserve le signe.",
+    "en": "Cube root, which keeps the sign."
+  },
+  "Voltamos # passos até o primeiro termo, dividindo pela razão.": {
+    "fr": "Nous revenons de # passos jusqu’au premier terme, en divisant par la raison.",
+    "en": "We go back # passos to the first term, dividing by the ratio."
+  },
+  "Raiz quadrada (a razão positiva, já que os termos têm o mesmo sinal ao longo da sequência dada).": {
+    "fr": "Racine carrée (la raison positive, puisque les termes ont le même signe tout au long de la suite donnée).",
+    "en": "Square root (the positive ratio, since the terms keep the same sign along the given sequence)."
+  },
+  "Voltamos # passo até o primeiro termo, dividindo pela razão.": {
+    "fr": "Nous revenons de # passo jusqu’au premier terme, en divisant par la raison.",
+    "en": "We go back # passo to the first term, dividing by the ratio."
+  },
+  "Substitua x = #: cada termo vira só o seu coeficiente.": {
+    "fr": "Remplacez x par # : chaque terme devient seulement son coefficient.",
+    "en": "Substitute x = #: each term becomes just its coefficient."
+  },
+  "C(#, #) = #! / (#!·#!). Ou some os dois números acima no triângulo.": {
+    "fr": "C(#, #) = #! / (#!·#!). Ou additionnez les deux nombres au-dessus dans le triangle.",
+    "en": "C(#, #) = #! / (#!·#!). Or add the two numbers above in the triangle."
+  },
+  "Substitua x = # no binômio: fica (#) elevado a #.": {
+    "fr": "Remplacez x par # dans le binôme : il reste (#) à la puissance #.",
+    "en": "Substitute x = # into the binomial: it becomes (#) to the power #."
+  },
+  "O termo com x³ é C(#, #)·x³·#¹: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x³ est C(#, #)·x³·#¹ : le # entre # − # = # fois.",
+    "en": "The x³ term is C(#, #)·x³·#¹: the # goes in # − # = # times."
+  },
+  "O termo com x⁴ é C(#, #)·x⁴·#²: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x⁴ est C(#, #)·x⁴·#² : le # entre # − # = # fois.",
+    "en": "The x⁴ term is C(#, #)·x⁴·#²: the # goes in # − # = # times."
+  },
+  "O termo com x⁵ é C(#, #)·x⁵·#²: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x⁵ est C(#, #)·x⁵·#² : le # entre # − # = # fois.",
+    "en": "The x⁵ term is C(#, #)·x⁵·#²: the # goes in # − # = # times."
+  },
+  "O #º termo corresponde a k = # (o #º é k = #). Use C(#, k) vezes (#) elevado a k.": {
+    "fr": "Le #ᵉ terme correspond à k = # (le #ᵉ est k = #). Utilisez C(#, k) fois (#) à la puissance k.",
+    "en": "The #st term matches k = # (the #rd is k = #). Use C(#, k) times (#) to the power k."
+  },
+  "Termo geral: C(#, k)·(#x) elevado a k vezes (#) elevado a # − k. Com k = #, calcule cada potência com o sinal.": {
+    "fr": "Terme général : C(#, k)·(#x) à la puissance k fois (#) à la puissance # − k. Avec k = #, calculez chaque puissance avec le signe.",
+    "en": "General term: C(#, k)·(#x) to the power k times (#) to the power # − k. With k = #, work out each power with its sign."
+  },
+  "Escreva o expoente de x no termo geral em função de k e iguale a zero para achar k.": {
+    "fr": "Écrivez l’exposant de x dans le terme général en fonction de k et égalez à zéro pour trouver k.",
+    "en": "Write the exponent of x in the general term in terms of k and set it to zero to find k."
+  },
+  "Fazer x = # transforma cada termo no seu coeficiente: a soma deles é o valor em x = #.": {
+    "fr": "Poser x = # transforme chaque terme en son coefficient : leur somme est la valeur en x = #.",
+    "en": "Setting x = # turns each term into its coefficient: their sum is the value at x = #."
+  },
+  "Pela fórmula das combinações.": {
+    "fr": "Par la formule des combinaisons.",
+    "en": "By the combinations formula."
+  },
+  "Ou pelo triângulo: cada número é a soma dos dois de cima.": {
+    "fr": "Ou par le triangle : chaque nombre est la somme des deux du dessus.",
+    "en": "Or by the triangle: each number is the sum of the two above it."
+  },
+  "O termo geral: escolhemos k vezes o termo com x e as outras n − k o número.": {
+    "fr": "Le terme général : nous choisissons k fois le terme en x et les n − k autres fois le nombre.",
+    "en": "The general term: we pick the x term k times and the number the other n − k times."
+  },
+  "Para ter x³, k = #; o número entra # vezes.": {
+    "fr": "Pour avoir x³, k = # ; le nombre entre # fois.",
+    "en": "To get x³, k = #; the number goes in # times."
+  },
+  "Calculando cada fator.": {
+    "fr": "En calculant chaque facteur.",
+    "en": "Working out each factor."
+  },
+  "Para ter x⁴, k = #; o número entra # vezes.": {
+    "fr": "Pour avoir x⁴, k = # ; le nombre entre # fois.",
+    "en": "To get x⁴, k = #; the number goes in # times."
+  },
+  "Para ter x⁵, k = #; o número entra # vezes.": {
+    "fr": "Pour avoir x⁵, k = # ; le nombre entre # fois.",
+    "en": "To get x⁵, k = #; the number goes in # times."
+  },
+  "O termo de ordem k + # usa k como índice: o primeiro termo é k = #.": {
+    "fr": "Le terme d’ordre k + # utilise k comme indice : le premier terme est k = #.",
+    "en": "The term of order k + # uses k as its index: the first term is k = #."
+  },
+  "Para ter x², k = #; o número entra # vezes.": {
+    "fr": "Pour avoir x², k = # ; le nombre entre # fois.",
+    "en": "To get x², k = #; the number goes in # times."
+  },
+  "Para ter x¹, k = #; o número entra # vezes.": {
+    "fr": "Pour avoir x¹, k = # ; le nombre entre # fois.",
+    "en": "To get x¹, k = #; the number goes in # times."
+  },
+  "O termo geral, com o expoente de x de cada fator.": {
+    "fr": "Le terme général, avec l’exposant de x de chaque facteur.",
+    "en": "The general term, with the exponent of x from each factor."
+  },
+  "Sem x significa expoente zero.": {
+    "fr": "Sans x signifie exposant nul.",
+    "en": "No x means exponent zero."
+  },
+  "Substituindo k.": {
+    "fr": "En substituant k.",
+    "en": "Substituting k."
+  },
+  "Para ter x⁶, k = #; o número entra # vezes.": {
+    "fr": "Pour avoir x⁶, k = # ; le nombre entre # fois.",
+    "en": "To get x⁶, k = #; the number goes in # times."
+  },
+  "Calcule f nos inteiros perto da raiz cúbica de k: onde o sinal troca, a raiz está no meio.": {
+    "fr": "Calculez f sur les entiers proches de la racine cubique de k : là où le signe change, la racine est au milieu.",
+    "en": "Work out f at the whole numbers near the cube root of k: where the sign changes, the root is in between."
+  },
+  "Calcule o limite: é esse o valor que falta.": {
+    "fr": "Calculez la limite : c’est la valeur qui manque.",
+    "en": "Work out the limit: that is the value that is missing."
+  },
+  "Teste #/#: se o fator que zera embaixo se cancela, é um buraco (removível).": {
+    "fr": "Testez #/# : si le facteur qui annule le bas se simplifie, c’est un trou (removable).",
+    "en": "Test #/#: if the factor that zeroes the bottom cancels, it is a hole (removable)."
+  },
+  "As duas sentenças têm de dar o mesmo valor em x = #: calcule a de cima nesse ponto e iguale a #·# + k.": {
+    "fr": "Les deux expressions doivent donner la même valeur en x = # : calculez celle du haut en ce point et égalez à #·# + k.",
+    "en": "The two pieces must give the same value at x = #: work out the upper one there and set it equal to #·# + k."
+  },
+  "Fatore numerador e denominador. Fator que cancela: removível. Fator que sobra embaixo: infinita.": {
+    "fr": "Factorisez numérateur et dénominateur. Facteur qui se simplifie : removable. Facteur qui reste en bas : infinie.",
+    "en": "Factor numerator and denominator. A factor that cancels: removable. A factor left below: infinite."
+  },
+  "Testamos valores inteiros até encontrar uma troca de sinal.": {
+    "fr": "Nous testons des valeurs entières jusqu’à trouver un changement de signe.",
+    "en": "We test whole values until we find a change of sign."
+  },
+  "A função é contínua e muda de sinal entre esses dois pontos.": {
+    "fr": "La fonction est continue et change de signe entre ces deux points.",
+    "en": "The function is continuous and changes sign between those two points."
+  },
+  "Pelo TVI, existe uma raiz no intervalo.": {
+    "fr": "Par le théorème des valeurs intermédiaires, il existe une racine dans l’intervalle.",
+    "en": "By the intermediate value theorem, there is a root in the interval."
+  },
+  "Para a função ser contínua, o valor no ponto deve igualar o limite.": {
+    "fr": "Pour que la fonction soit continue, la valeur au point doit égaler la limite.",
+    "en": "For the function to be continuous, the value at the point must equal the limit."
+  },
+  "Calculamos o limite fatorando e cancelando.": {
+    "fr": "Nous calculons la limite en factorisant et en simplifiant.",
+    "en": "We work out the limit by factoring and cancelling."
+  },
+  "Definindo esse valor, a descontinuidade é removida.": {
+    "fr": "En définissant cette valeur, la discontinuité est levée.",
+    "en": "By defining that value, the discontinuity is removed."
+  },
+  "Em x = # o denominador zera e o numerador também: forma #/#.": {
+    "fr": "En x = # le dénominateur s’annule et le numérateur aussi : forme #/#.",
+    "en": "At x = # the denominator is zero and so is the numerator: the form #/#."
+  },
+  "Fatorando, o fator que zera se cancela e o limite existe.": {
+    "fr": "En factorisant, le facteur qui s’annule se simplifie et la limite existe.",
+    "en": "Factoring, the vanishing factor cancels and the limit exists."
+  },
+  "O limite existe (vale #), mas f(#) não: é um buraco, que se tapa definindo f(#) = #.": {
+    "fr": "La limite existe (elle vaut #), mais f(#) non : c’est un trou, que l’on bouche en définissant f(#) = #.",
+    "en": "The limit exists (it is #), but f(#) does not: it is a hole, filled by defining f(#) = #."
+  },
+  "A continuidade exige que os dois laterais coincidam.": {
+    "fr": "La continuité exige que les deux limites latérales coïncident.",
+    "en": "Continuity requires the two one-sided limits to agree."
+  },
+  "Calculamos cada lado com sua sentença.": {
+    "fr": "Nous calculons chaque côté avec son expression.",
+    "en": "We work out each side with its own piece."
+  },
+  "Em x = # o denominador zera, mas o numerador não.": {
+    "fr": "En x = # le dénominateur s’annule, mais pas le numérateur.",
+    "en": "At x = # the denominator is zero, but the numerator is not."
+  },
+  "Um número diferente de zero dividido por algo que tende a zero explode: assíntota vertical.": {
+    "fr": "Un nombre différent de zéro divisé par quelque chose qui tend vers zéro explose : asymptote verticale.",
+    "en": "A nonzero number divided by something tending to zero blows up: a vertical asymptote."
+  },
+  "Descontinuidade infinita.": {
+    "fr": "Discontinuité infinita.",
+    "en": "infinita discontinuity."
+  },
+  "O denominador zera em dois pontos, x = # e x = #. Fatoramos em cima e embaixo.": {
+    "fr": "Le dénominateur s’annule en deux points, x = # et x = #. Nous factorisons en haut et en bas.",
+    "en": "The denominator is zero at two points, x = # and x = #. We factor top and bottom."
+  },
+  "Em x = # o fator NÃO se cancela: o numerador simplificado vale #, não zero.": {
+    "fr": "En x = # le facteur NE se simplifie PAS : le numérateur simplifié vaut #, pas zéro.",
+    "en": "At x = # the factor does NOT cancel: the simplified numerator is #, not zero."
+  },
+  "Em x = # o fator se cancela e o limite existe.": {
+    "fr": "En x = # le facteur se simplifie et la limite existe.",
+    "en": "At x = # the factor cancels and the limit exists."
+  },
+  "Descontinuidade removível.": {
+    "fr": "Discontinuité removível.",
+    "en": "removível discontinuity."
   }
 }
