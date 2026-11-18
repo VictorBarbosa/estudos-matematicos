@@ -100,6 +100,10 @@ function exercicioDado(nivel: Nivel, rng: Rng): Exercicio<number> {
       { faces, expressao1: caso.texto },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('probabilidade', 'forma-1')[0]!, {
+      faces,
+      expressao1: caso.texto,
+    }),
     enunciadoTex: `n(\\Omega) = ${faces} \\qquad n(A) = ${favoraveis}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -250,6 +254,9 @@ function exercicioUniao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: caso.texto },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('probabilidade', 'forma-4')[0]!, {
+      expressao1: caso.texto,
+    }),
     enunciadoTex: `n(\\Omega) = ${faces}`,
     gabarito: resultado,
     resolucao: {
@@ -308,6 +315,11 @@ function exercicioComCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { total, defeituosas, retiradas },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('probabilidade', 'forma-5')[0]!, {
+      total,
+      defeituosas,
+      retiradas,
+    }),
     enunciadoTex: `C_{${boas},${retiradas}} / C_{${total},${retiradas}}`,
     gabarito: resultado,
     resolucao: {

@@ -218,6 +218,12 @@ function exercicioOperacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { op, Li, v1: coluna + 1, v2: coluna === 3 ? ' (a dos termos independentes)' : '' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('escalonamento-e-inversa', 'forma-2')[0]!, {
+      op,
+      Li,
+      v1: coluna + 1,
+      v2: coluna === 3 ? ' (a dos termos independentes)' : '',
+    }),
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -839,6 +845,10 @@ function exercicioInversa3(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: i + 1, v2: j + 1 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('escalonamento-e-inversa', 'forma-8')[0]!, {
+      v1: i + 1,
+      v2: j + 1,
+    }),
     enunciadoTex: `A = ${aumentadaParaTex(paraFracoes(A), 3)}`,
     gabarito,
     resolucao: {

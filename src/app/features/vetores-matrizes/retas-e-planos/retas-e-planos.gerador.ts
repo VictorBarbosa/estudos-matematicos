@@ -132,6 +132,12 @@ function combinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { nome, alfa, v1: beta < 0 ? '−' : '+', v2: Math.abs(beta) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('retas-e-planos', 'forma-1')[0]!, {
+      nome,
+      alfa,
+      v1: beta < 0 ? '−' : '+',
+      v2: Math.abs(beta),
+    }),
     enunciadoTex: `\\vec{u} = ${vTex(u)} \\qquad \\vec{v} = ${vTex(v)}`,
     gabarito,
     resolucao: {
@@ -186,6 +192,10 @@ function planoD(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: p.join(', '), v2: n.join(', ') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('retas-e-planos', 'forma-2')[0]!, {
+      v1: p.join(', '),
+      v2: n.join(', '),
+    }),
     enunciadoTex: `P = ${vTex(p)} \\qquad \\vec{n} = ${vTex(n)}`,
     gabarito,
     resolucao: {
@@ -247,6 +257,9 @@ function distancia(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: Number.isInteger(Number(gabarito.toFixed(9))) ? '' : ' (2 casas decimais)' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('retas-e-planos', 'forma-3')[0]!, {
+      v1: Number.isInteger(Number(gabarito.toFixed(9))) ? '' : ' (2 casas decimais)',
+    }),
     enunciadoTex: `P = ${vTex(p)} \\qquad ${planoTex(n, d)}`,
     gabarito,
     resolucao: {
@@ -320,6 +333,9 @@ function anguloEntre(nivel: Nivel, rng: Rng, tipo: 'planos' | 'retas'): Exercici
       { v1: tipo === 'planos' ? 'os dois planos' : 'as duas retas' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('retas-e-planos', 'forma-4')[0]!, {
+      v1: tipo === 'planos' ? 'os dois planos' : 'as duas retas',
+    }),
     enunciadoTex:
       tipo === 'planos'
         ? `\\pi_1:\\; ${planoTex(u, d1)} \\qquad \\pi_2:\\; ${planoTex(v, d2)}`

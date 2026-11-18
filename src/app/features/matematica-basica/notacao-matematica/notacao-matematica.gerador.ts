@@ -372,6 +372,10 @@ function lerConjuntos(rng: Rng, nivel: Nivel): Exercicio<Resposta> {
       { v1: a.join(', '), v2: b.join(', ') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('notacao-matematica', 'forma-5')[0]!, {
+      v1: a.join(', '),
+      v2: b.join(', '),
+    }),
     enunciadoTex: `A ${simbolo} B`,
     gabarito: numero(resolucao.resultado.length),
     resolucao: {

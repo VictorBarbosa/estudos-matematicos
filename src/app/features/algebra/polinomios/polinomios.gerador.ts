@@ -95,6 +95,7 @@ function exercicioResto(nivel: Nivel, rng: Rng): Exercicio<number> {
       { sinal, v1: Math.abs(a) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('polinomios', 'forma-1')[0]!, { sinal, v1: Math.abs(a) }),
     enunciadoTex: `P(x) = ${p.paraTex()}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -291,6 +292,11 @@ function exercicioCoeficienteQuociente(nivel: Nivel, rng: Rng): Exercicio<number
       { sinal, v1: Math.abs(a), termo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('polinomios', 'forma-4')[0]!, {
+      sinal,
+      v1: Math.abs(a),
+      termo,
+    }),
     enunciadoTex: `P(x) = ${p.paraTex()}`,
     gabarito,
     resolucao: {

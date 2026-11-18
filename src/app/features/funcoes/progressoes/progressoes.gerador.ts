@@ -76,6 +76,12 @@ function exercicioTermo(geometrica: boolean, nivel: Nivel, rng: Rng): Exercicio<
       { nome, primeiro, razao, n },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('progressoes', 'forma-1')[0]!, {
+      nome,
+      primeiro,
+      razao,
+      n,
+    }),
     enunciadoTex: `a_1 = ${primeiro} \\qquad ${letraRazao} = ${razao} \\qquad n = ${n}`,
     gabarito,
     resolucao: {
@@ -153,6 +159,12 @@ function exercicioSoma(geometrica: boolean, nivel: Nivel, rng: Rng): Exercicio<n
       { nome, primeiro, razao, n },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('progressoes', 'forma-2')[0]!, {
+      nome,
+      primeiro,
+      razao,
+      n,
+    }),
     enunciadoTex: `a_1 = ${primeiro} \\qquad ${letraRazao} = ${razao} \\qquad n = ${n}`,
     gabarito: resultado,
     resolucao: { resultado, passos },

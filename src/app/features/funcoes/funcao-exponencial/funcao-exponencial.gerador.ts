@@ -56,6 +56,9 @@ export const geradorExponencial: GeradorExercicio<number> = {
           { v1: String(lambda).replace('.', ',') },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('funcao-exponencial', 'forma-1')[0]!, {
+          v1: String(lambda).replace('.', ','),
+        }),
         enunciadoTex: `N(t) = N_0 e^{-${String(lambda).replace('.', '{,}')}\\,t}`,
         gabarito,
         resolucao: {

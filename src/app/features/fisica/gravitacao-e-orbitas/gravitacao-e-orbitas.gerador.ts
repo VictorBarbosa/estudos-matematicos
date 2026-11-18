@@ -73,6 +73,9 @@ function exercicioGravidade(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: altitudeKm.toLocaleString('pt-BR') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-1')[0]!, {
+      v1: altitudeKm.toLocaleString('pt-BR'),
+    }),
     enunciadoTex: `h = ${altitudeKm.toLocaleString('pt-BR').replace(/\./g, '\\,')}\\,\\text{km}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -128,6 +131,9 @@ function exercicioVelocidadeOrbital(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: altitudeKm.toLocaleString('pt-BR') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-2')[0]!, {
+      v1: altitudeKm.toLocaleString('pt-BR'),
+    }),
     enunciadoTex: `h = ${altitudeKm.toLocaleString('pt-BR').replace(/\./g, '\\,')}\\,\\text{km}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -175,6 +181,9 @@ function exercicioPeriodo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: altitudeKm.toLocaleString('pt-BR') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-3')[0]!, {
+      v1: altitudeKm.toLocaleString('pt-BR'),
+    }),
     enunciadoTex: `h = ${altitudeKm.toLocaleString('pt-BR').replace(/\./g, '\\,')}\\,\\text{km}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -230,6 +239,9 @@ function exercicioEscape(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: corpo.nome },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-4')[0]!, {
+      v1: corpo.nome,
+    }),
     enunciadoTex: `M = ${corpo.massa.toExponential(3)}\\,\\text{kg} \\qquad R = ${corpo.raio.toExponential(3)}\\,\\text{m}`,
     gabarito,
     resolucao: { resultado: gabarito, passos },

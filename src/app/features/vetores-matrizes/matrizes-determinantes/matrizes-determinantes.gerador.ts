@@ -204,6 +204,10 @@ function exercicioEntradaProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: i + 1, v2: j + 1 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('matrizes-determinantes', 'forma-3')[0]!, {
+      v1: i + 1,
+      v2: j + 1,
+    }),
     enunciadoTex: `A = ${matrizTex(a)} \\qquad B = ${matrizTex(b)}`,
     gabarito,
     resolucao: {
@@ -274,6 +278,9 @@ function exercicioCramer(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: incognita === 0 ? 'x' : 'y' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('matrizes-determinantes', 'forma-4')[0]!, {
+      v1: incognita === 0 ? 'x' : 'y',
+    }),
     enunciadoTex:
       `\\begin{cases} ${a[0]![0]}x ${a[0]![1]! >= 0 ? '+' : '-'} ${Math.abs(a[0]![1]!)}y = ${constantes[0]} \\\\ ` +
       `${a[1]![0]}x ${a[1]![1]! >= 0 ? '+' : '-'} ${Math.abs(a[1]![1]!)}y = ${constantes[1]} \\end{cases}`,

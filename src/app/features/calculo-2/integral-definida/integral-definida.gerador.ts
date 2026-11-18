@@ -241,6 +241,13 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
         { a, b, primeira, c, segunda },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('integral-definida', 'forma-3')[0]!, {
+        a,
+        b,
+        primeira,
+        c,
+        segunda,
+      }),
       enunciadoTex:
         `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${b}}^{${c}} f = ${segunda} ` +
         `\\qquad \\int_{${a}}^{${c}} f = \\;?`,
@@ -298,6 +305,7 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
         { a, b, primeira },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('integral-definida', 'forma-4')[0]!, { a, b, primeira }),
       enunciadoTex: `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${b}}^{${a}} f = \\;?`,
       gabarito,
       resolucao: {
@@ -353,6 +361,12 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
         { a, b, primeira, fator },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('integral-definida', 'forma-5')[0]!, {
+        a,
+        b,
+        primeira,
+        fator,
+      }),
       enunciadoTex: `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${a}}^{${b}} ${fator}f = \\;?`,
       gabarito,
       resolucao: {
@@ -402,6 +416,13 @@ function exercicioPropriedades(nivel: Nivel, rng: Rng): Exercicio<number> {
       { primeira, segunda, a, b, fator },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('integral-definida', 'forma-6')[0]!, {
+      primeira,
+      segunda,
+      a,
+      b,
+      fator,
+    }),
     enunciadoTex:
       `\\int_{${a}}^{${b}} f = ${primeira} \\qquad \\int_{${a}}^{${b}} g = ${segunda} ` +
       `\\qquad \\int_{${a}}^{${b}} (f + ${fator}g) = \\;?`,

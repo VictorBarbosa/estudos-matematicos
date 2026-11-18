@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um retângulo tem base {dados-calculo.base} cm e altura {dados-calculo.altura} cm. Qual é sua área, em cm²?",
+    "fr": "Un rectangle a une base de {dados-calculo.base} cm et une hauteur de {dados-calculo.altura} cm. Quelle est son aire, en cm² ?",
+    "en": "A rectangle has base {dados-calculo.base} cm and height {dados-calculo.altura} cm. What is its area, in cm²?"
+  }
+}

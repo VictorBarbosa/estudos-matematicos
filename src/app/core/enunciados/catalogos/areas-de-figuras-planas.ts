@@ -70,6 +70,13 @@ import eareasDeFigurasPlanasMoldesForma1 from '@core/enunciados/enunciados/areas
 import eareasDeFigurasPlanasMoldesForma2 from '@core/enunciados/enunciados/areas-de-figuras-planas/moldes/forma-2.json';
 import eareasDeFigurasPlanasMoldesForma3 from '@core/enunciados/enunciados/areas-de-figuras-planas/moldes/forma-3.json';
 import eareasDeFigurasPlanasMoldesForma4 from '@core/enunciados/enunciados/areas-de-figuras-planas/moldes/forma-4.json';
+import eareasDeFigurasPlanasMoldesAreaCirculo from '@core/enunciados/enunciados/areas-de-figuras-planas/moldes/area-circulo.json';
+import eareasDeFigurasPlanasMoldesAreaParalelogramo from '@core/enunciados/enunciados/areas-de-figuras-planas/moldes/area-paralelogramo.json';
+import eareasDeFigurasPlanasMoldesAreaPoligonoRegular from '@core/enunciados/enunciados/areas-de-figuras-planas/moldes/area-poligono-regular.json';
+import eareasDeFigurasPlanasMoldesAreaRetangulo from '@core/enunciados/enunciados/areas-de-figuras-planas/moldes/area-retangulo.json';
+import eareasDeFigurasPlanasMoldesAreaSetor from '@core/enunciados/enunciados/areas-de-figuras-planas/moldes/area-setor.json';
+import eareasDeFigurasPlanasMoldesAreaTrapezio from '@core/enunciados/enunciados/areas-de-figuras-planas/moldes/area-trapezio.json';
+import eareasDeFigurasPlanasMoldesAreaTriangulo from '@core/enunciados/enunciados/areas-de-figuras-planas/moldes/area-triangulo.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_AREAS_DE_FIGURAS_PLANAS: readonly EntradaDeEnunciado[] = [
@@ -137,4 +144,11 @@ export const ENTRADAS_DE_AREAS_DE_FIGURAS_PLANAS: readonly EntradaDeEnunciado[] 
   { topico: 'areas-de-figuras-planas', forma: 'forma-2', conteudo: eareasDeFigurasPlanasMoldesForma2 },
   { topico: 'areas-de-figuras-planas', forma: 'forma-3', conteudo: eareasDeFigurasPlanasMoldesForma3 },
   { topico: 'areas-de-figuras-planas', forma: 'forma-4', conteudo: eareasDeFigurasPlanasMoldesForma4 },
+  { topico: 'areas-de-figuras-planas', forma: 'area-circulo', conteudo: eareasDeFigurasPlanasMoldesAreaCirculo },
+  { topico: 'areas-de-figuras-planas', forma: 'area-paralelogramo', conteudo: eareasDeFigurasPlanasMoldesAreaParalelogramo },
+  { topico: 'areas-de-figuras-planas', forma: 'area-poligono-regular', conteudo: eareasDeFigurasPlanasMoldesAreaPoligonoRegular },
+  { topico: 'areas-de-figuras-planas', forma: 'area-retangulo', conteudo: eareasDeFigurasPlanasMoldesAreaRetangulo },
+  { topico: 'areas-de-figuras-planas', forma: 'area-setor', conteudo: eareasDeFigurasPlanasMoldesAreaSetor },
+  { topico: 'areas-de-figuras-planas', forma: 'area-trapezio', conteudo: eareasDeFigurasPlanasMoldesAreaTrapezio },
+  { topico: 'areas-de-figuras-planas', forma: 'area-triangulo', conteudo: eareasDeFigurasPlanasMoldesAreaTriangulo },
 ];

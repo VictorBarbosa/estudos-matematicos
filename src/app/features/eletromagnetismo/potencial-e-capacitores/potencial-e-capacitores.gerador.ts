@@ -94,6 +94,10 @@ function potencial(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: txt(r), v2: par(q) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('potencial-e-capacitores', 'forma-1')[0]!, {
+      v1: txt(r),
+      v2: par(q),
+    }),
     enunciadoTex: `q = ${q}\\ \\mu\\text{C} \\qquad r = ${tex(r)}\\ \\text{m} \\qquad V = \\;?\\ \\text{kV}`,
     gabarito,
     resolucao: {
@@ -139,6 +143,10 @@ function carga(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: txt(c), v },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('potencial-e-capacitores', 'forma-2')[0]!, {
+      v1: txt(c),
+      v,
+    }),
     enunciadoTex: `C = ${tex(c)}\\ \\mu\\text{F} \\qquad V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {
@@ -190,6 +198,11 @@ function trabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: par(q), va, vb },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('potencial-e-capacitores', 'forma-3')[0]!, {
+      v1: par(q),
+      va,
+      vb,
+    }),
     enunciadoTex: `q = ${q}\\ \\mu\\text{C} \\qquad V_A = ${va}\\ \\text{V} \\qquad V_B = ${vb}\\ \\text{V}`,
     gabarito,
     resolucao: {
@@ -243,6 +256,10 @@ function placas(nivel: Nivel, rng: Rng): Exercicio<number> {
       { a, v1: txt(d) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('potencial-e-capacitores', 'forma-4')[0]!, {
+      a,
+      v1: txt(d),
+    }),
     enunciadoTex: `A = ${a}\\ \\text{cm}^{2} \\qquad d = ${tex(d)}\\ \\text{mm} \\qquad \\varepsilon_0 = 8{,}85 \\times 10^{-12}\\ \\text{F/m}`,
     gabarito,
     resolucao: {
@@ -344,6 +361,10 @@ function associacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: valores.join(', '), v2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('potencial-e-capacitores', 'forma-6')[0]!, {
+      v1: valores.join(', '),
+      v2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO',
+    }),
     enunciadoTex: `${valores.map((v, i) => `C_${i + 1} = ${v}`).join(' \\quad ')} \\quad (\\mu\\text{F})`,
     gabarito,
     resolucao: {
@@ -392,6 +413,12 @@ function doisPotenciais(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: txt(r1), v2: par(q1), v3: txt(r2), v4: par(q2) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('potencial-e-capacitores', 'forma-7')[0]!, {
+      v1: txt(r1),
+      v2: par(q1),
+      v3: txt(r2),
+      v4: par(q2),
+    }),
     enunciadoTex: `q_1 = ${q1}\\ \\mu\\text{C},\\; r_1 = ${tex(r1)}\\ \\text{m} \\qquad q_2 = ${q2}\\ \\mu\\text{C},\\; r_2 = ${tex(r2)}\\ \\text{m}`,
     gabarito,
     resolucao: {
@@ -514,6 +541,11 @@ function energiaPlacas(nivel: Nivel, rng: Rng): Exercicio<number> {
       { a, v1: txt(d), v },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('potencial-e-capacitores', 'forma-8')[0]!, {
+      a,
+      v1: txt(d),
+      v,
+    }),
     enunciadoTex: `A = ${a}\\ \\text{cm}^{2} \\qquad d = ${tex(d)}\\ \\text{mm} \\qquad V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {

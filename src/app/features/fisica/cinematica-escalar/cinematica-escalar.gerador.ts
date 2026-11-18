@@ -179,6 +179,11 @@ function exercicioTorricelli(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v0, a, deslocamento },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-escalar', 'forma-3')[0]!, {
+      v0,
+      a,
+      deslocamento,
+    }),
     enunciadoTex: `v_0 = ${v0} \\qquad a = ${a} \\qquad \\Delta s = ${deslocamento}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -223,6 +228,10 @@ function exercicioTempoDeParada(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v0, desaceleracao },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-escalar', 'forma-4')[0]!, {
+      v0,
+      desaceleracao,
+    }),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = -${desaceleracao}\\,\\text{m/s}^{2}`,
     gabarito: resultado,
     resolucao: {
@@ -280,6 +289,10 @@ function exercicioDistanciaFrenagem(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v0, desaceleracao },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('cinematica-escalar', 'forma-5')[0]!, {
+      v0,
+      desaceleracao,
+    }),
     enunciadoTex: `v_0 = ${v0}\\,\\text{m/s} \\qquad a = -${desaceleracao}\\,\\text{m/s}^{2} \\qquad v = 0`,
     gabarito: resultado,
     resolucao: {

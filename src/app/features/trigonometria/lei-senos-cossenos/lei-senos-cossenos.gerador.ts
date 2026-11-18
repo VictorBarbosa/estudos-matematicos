@@ -46,6 +46,11 @@ export const geradorLeis: GeradorExercicio<number> = {
           { b, c, angulo },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('lei-senos-cossenos', 'forma-1')[0]!, {
+          b,
+          c,
+          angulo,
+        }),
         enunciadoTex: `b = ${b} \\qquad c = ${c} \\qquad A = ${angulo}° \\qquad a = \\;?`,
         gabarito,
         resolucao,
@@ -101,6 +106,11 @@ export const geradorLeis: GeradorExercicio<number> = {
         { ladoA, anguloA, anguloB },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('lei-senos-cossenos', 'forma-2')[0]!, {
+        ladoA,
+        anguloA,
+        anguloB,
+      }),
       enunciadoTex: `\\frac{${ladoA}}{\\sin ${anguloA}°} = \\frac{x}{\\sin ${anguloB}°}`,
       gabarito,
       resolucao,

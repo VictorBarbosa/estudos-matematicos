@@ -85,6 +85,11 @@ function paraCartesiano(nivel: Nivel, rng: Rng): Exercicio<number> {
       { r, theta, v1: pedeX ? 'x' : 'y' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('coordenadas-polares', 'forma-1')[0]!, {
+      r,
+      theta,
+      v1: pedeX ? 'x' : 'y',
+    }),
     enunciadoTex: `(r, \\theta) = (${r},\\; ${theta}^{\\circ}) \\;\\to\\; ${pedeX ? 'x' : 'y'} = \\;?`,
     gabarito,
     resolucao: {
@@ -324,6 +329,7 @@ function distancia(nivel: Nivel, rng: Rng): Exercicio<number> {
       { r1, t1, r2, t2 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('coordenadas-polares', 'forma-5')[0]!, { r1, t1, r2, t2 }),
     enunciadoTex: `P_1 = (${r1},\\; ${t1}^{\\circ}) \\qquad P_2 = (${r2},\\; ${t2}^{\\circ})`,
     gabarito,
     resolucao: {

@@ -131,6 +131,11 @@ function mola(nivel: Nivel, rng: Rng): Exercicio<number> {
       { k, expressao1: n(x1), expressao2: n(x2) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('fisica-com-calculo', 'forma-2')[0]!, {
+      k,
+      expressao1: n(x1),
+      expressao2: n(x2),
+    }),
     enunciadoTex: `F(x) = ${k}x \\qquad W = \\int_{${t(x1)}}^{${t(x2)}} ${k}x\\,dx`,
     gabarito,
     resolucao: {

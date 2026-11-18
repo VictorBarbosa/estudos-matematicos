@@ -73,6 +73,9 @@ export const geradorAplicacoesDerivada: GeradorExercicio<number> = {
           { perimetro },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('aplicacoes-da-derivada', 'forma-1')[0]!, {
+          perimetro,
+        }),
         enunciadoTex: `2x + 2y = ${perimetro} \\qquad A = xy`,
         gabarito,
         resolucao: {
@@ -315,6 +318,10 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
         { taxaRaio, raio },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('aplicacoes-da-derivada', 'forma-4')[0]!, {
+        taxaRaio,
+        raio,
+      }),
       enunciadoTex:
         `V = \\frac{4}{3}\\pi r^{3} \\qquad \\frac{dr}{dt} = ${taxaRaio} ` + `\\qquad r = ${raio}`,
       gabarito,
@@ -385,6 +392,10 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
         { taxaLado, lado },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('aplicacoes-da-derivada', 'forma-5')[0]!, {
+        taxaLado,
+        lado,
+      }),
       enunciadoTex: `A = L^{2} \\qquad \\frac{dL}{dt} = ${taxaLado} \\qquad L = ${lado}`,
       gabarito,
       resolucao: {
@@ -457,6 +468,11 @@ function exercicioTaxasRelacionadas(nivel: Nivel, rng: Rng): Exercicio<number> {
       { comprimento, taxaX, x },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('aplicacoes-da-derivada', 'forma-6')[0]!, {
+      comprimento,
+      taxaX,
+      x,
+    }),
     enunciadoTex:
       `x^{2} + y^{2} = ${comprimento}^{2} \\qquad \\frac{dx}{dt} = ${taxaX} ` + `\\qquad x = ${x}`,
     gabarito,

@@ -437,6 +437,11 @@ function tempo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { p0, v1: String(taxa).replace('.', ','), alvo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('equacoes-exponenciais', 'forma-5')[0]!, {
+      p0,
+      v1: String(taxa).replace('.', ','),
+      alvo,
+    }),
     enunciadoTex: `P(t) = ${p0}\\,e^{${t(taxa)}t} = ${alvo}`,
     gabarito,
     resolucao: {

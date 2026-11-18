@@ -503,6 +503,9 @@ function stokesNoDisco(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: R * R },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('teoremas-integrais', 'forma-4')[0]!, {
+      expressao1: R * R,
+    }),
     enunciadoTex: tex,
     gabarito,
     resolucao: {
@@ -568,6 +571,10 @@ function divergenciaCilindro(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: R * R, H },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('teoremas-integrais', 'forma-5')[0]!, {
+      expressao1: R * R,
+      H,
+    }),
     enunciadoTex: campo3(mono(a, 1), mono(b, 0, 1), mono(c, 0, 0, 2)),
     gabarito,
     resolucao: {

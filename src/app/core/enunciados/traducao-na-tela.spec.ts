@@ -31,11 +31,20 @@ const SEMENTES = [3, 17, 91];
  * depois constrói o exercício; o campo de traduções não existia nesse objeto,
  * então o francês parava ali, escrito no arquivo e sem caminho até a tela.
  *
- * O que resta são os geradores cujo texto ainda vive no TypeScript, onde não
- * há o que pedir: para esses, traduzir é primeiro mover o texto para o
- * arquivo.
+ * Caiu para 46 com as chamadas de VÁRIAS LINHAS, que o primeiro script não
+ * reconhecia: 115 delas, em 44 arquivos, pediam o texto ao molde e não
+ * pediam as traduções.
+ *
+ * O que resta tem duas causas, e as duas exigem olhar o tópico:
+ *
+ * - o enunciado é montado como `molde + sufixo escrito em TypeScript`, e
+ *   metade da frase não tem como ser traduzida;
+ * - o enunciado está inteiro no TypeScript, muitas vezes com uma PALAVRA
+ *   injetada — `Um ${NOME_FIGURA[figura]} tem base…`. Áreas de figuras planas
+ *   mostra a saída: um molde por figura, com o nome já escrito nas três
+ *   línguas, em vez de um molde com o nome vindo pronto em português.
  */
-const SEM_TRADUCAO_MAXIMO = 78;
+const SEM_TRADUCAO_MAXIMO = 46;
 
 describe('tradução na tela', () => {
   it('a conta de tópicos sem tradução só desce', () => {

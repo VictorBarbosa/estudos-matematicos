@@ -220,6 +220,11 @@ function exercicioAceleracaoPlano(nivel: Nivel, rng: Rng): Exercicio<number> {
       { massa, angulo, v1: mu.toLocaleString('pt-BR') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('leis-de-newton', 'forma-4')[0]!, {
+      massa,
+      angulo,
+      v1: mu.toLocaleString('pt-BR'),
+    }),
     enunciadoTex: `m = ${massa} \\qquad \\theta = ${angulo}^\\circ \\qquad \\mu = ${String(mu).replace('.', '{,}')}`,
     gabarito: resultado.aceleracao,
     resolucao: { resultado: resultado.aceleracao, passos },
@@ -272,6 +277,9 @@ function exercicioAnguloCritico(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: mu.toLocaleString('pt-BR') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('leis-de-newton', 'forma-5')[0]!, {
+      v1: mu.toLocaleString('pt-BR'),
+    }),
     enunciadoTex: `\\mu = ${String(mu).replace('.', '{,}')}`,
     gabarito: resultado,
     resolucao: { resultado, passos },

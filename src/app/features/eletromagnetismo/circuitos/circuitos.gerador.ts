@@ -137,6 +137,7 @@ function potencia(nivel: Nivel, rng: Rng, porCorrente: boolean): Exercicio<numbe
         { expressao1: txt(i), r },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-2')[0]!, { expressao1: txt(i), r }),
       enunciadoTex: `I = ${tex(i)}\\ \\text{A} \\qquad R = ${r}\\ \\Omega`,
       gabarito,
       resolucao: {
@@ -230,6 +231,10 @@ function equivalente(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: valores.join(', '), expressao2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-4')[0]!, {
+      expressao1: valores.join(', '),
+      expressao2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO',
+    }),
     enunciadoTex: `${valores.map((v, i) => `R_${i + 1} = ${v}`).join(' \\quad ')} \\quad (\\Omega)`,
     gabarito,
     resolucao: {
@@ -274,6 +279,11 @@ function divisor(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: txt(r1), expressao2: txt(r2), v },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-5')[0]!, {
+      expressao1: txt(r1),
+      expressao2: txt(r2),
+      v,
+    }),
     enunciadoTex: `V = ${v}\\ \\text{V} \\qquad R_1 = ${tex(r1)}\\ \\text{k}\\Omega \\qquad R_2 = ${tex(r2)}\\ \\text{k}\\Omega`,
     gabarito,
     resolucao: {
@@ -395,6 +405,13 @@ function malha(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-7')[0]!, {
+      e1,
+      e2,
+      expressao1: oposicao ? 'em OPOSIÇÃO (polos se enfrentando)' : 'no MESMO sentido',
+      r1,
+      r2,
+    }),
     enunciadoTex: `\\varepsilon_1 = ${e1}\\ \\text{V} \\qquad \\varepsilon_2 = ${e2}\\ \\text{V} \\qquad R_1 = ${r1}\\ \\Omega \\qquad R_2 = ${r2}\\ \\Omega`,
     gabarito,
     resolucao: {
@@ -502,6 +519,12 @@ function rc(nivel: Nivel, rng: Rng): Exercicio<number> {
       { c, v, r, expressao1: txt(t) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-9')[0]!, {
+      c,
+      v,
+      r,
+      expressao1: txt(t),
+    }),
     enunciadoTex: `q(t) = Q\\left(1 - e^{-t/RC}\\right) \\qquad R = ${r}\\ \\text{k}\\Omega,\\; C = ${c}\\ \\mu\\text{F},\\; V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {

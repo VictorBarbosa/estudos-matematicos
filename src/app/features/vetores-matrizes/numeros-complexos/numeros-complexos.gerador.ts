@@ -105,6 +105,7 @@ function exercicioModulo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: escrever(z) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('numeros-complexos', 'forma-1')[0]!, { v1: escrever(z) }),
     enunciadoTex: `z = ${escrever(z)}`,
     gabarito: resultado,
     resolucao: {
@@ -169,6 +170,11 @@ function exercicioProduto(parte: 'real' | 'imaginario', nivel: Nivel, rng: Rng):
       { v1: escrever(a), v2: escrever(b), v3: parte === 'real' ? 'REAL' : 'IMAGINÁRIA' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('numeros-complexos', 'forma-2')[0]!, {
+      v1: escrever(a),
+      v2: escrever(b),
+      v3: parte === 'real' ? 'REAL' : 'IMAGINÁRIA',
+    }),
     enunciadoTex: `z_1 = ${escrever(a)} \\qquad z_2 = ${escrever(b)}`,
     gabarito,
     resolucao: {
@@ -234,6 +240,7 @@ function exercicioArgumento(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: escrever(z) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('numeros-complexos', 'forma-3')[0]!, { v1: escrever(z) }),
     enunciadoTex: `z = ${escrever(z)}`,
     gabarito: resultado,
     resolucao: {
@@ -358,6 +365,10 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: escrever(a), v2: escrever(b) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('numeros-complexos', 'forma-5')[0]!, {
+      v1: escrever(a),
+      v2: escrever(b),
+    }),
     enunciadoTex: `\\frac{${escrever(a)}}{${escrever(b)}}`,
     gabarito,
     resolucao: {

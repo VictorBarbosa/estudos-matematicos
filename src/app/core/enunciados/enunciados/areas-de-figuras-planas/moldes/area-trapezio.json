@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um trapézio tem bases {dados-calculo.base} cm e {dados-calculo.baseMenor} cm e altura {dados-calculo.altura} cm. Qual é sua área, em cm²?",
+    "fr": "Un trapèze a des bases de {dados-calculo.base} cm et {dados-calculo.baseMenor} cm et une hauteur de {dados-calculo.altura} cm. Quelle est son aire, en cm² ?",
+    "en": "A trapezium has bases {dados-calculo.base} cm and {dados-calculo.baseMenor} cm and height {dados-calculo.altura} cm. What is its area, in cm²?"
+  }
+}

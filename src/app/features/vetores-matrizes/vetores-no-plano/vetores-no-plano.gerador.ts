@@ -125,6 +125,11 @@ function exercicioComponente(eixo: 'x' | 'y', nivel: Nivel, rng: Rng): Exercicio
       { comprimento, angulo, v1: eixo === 'x' ? 'horizontal' : 'vertical' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('vetores-no-plano', 'forma-2')[0]!, {
+      comprimento,
+      angulo,
+      v1: eixo === 'x' ? 'horizontal' : 'vertical',
+    }),
     enunciadoTex: `|\\vec{v}| = ${comprimento} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito,
     resolucao: {
@@ -185,6 +190,12 @@ function exercicioModuloDaSoma(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: a.x, v2: a.y, v3: b.x, v4: b.y },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('vetores-no-plano', 'forma-3')[0]!, {
+      v1: a.x,
+      v2: a.y,
+      v3: b.x,
+      v4: b.y,
+    }),
     enunciadoTex: `\\vec{a} = (${a.x},\\; ${a.y}) \\qquad \\vec{b} = (${b.x},\\; ${b.y})`,
     gabarito,
     resolucao: {

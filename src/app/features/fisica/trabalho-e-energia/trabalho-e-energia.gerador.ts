@@ -71,6 +71,11 @@ function exercicioTrabalho(nivel: Nivel, rng: Rng): Exercicio<number> {
       { forca, angulo, deslocamento },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('trabalho-e-energia', 'forma-1')[0]!, {
+      forca,
+      angulo,
+      deslocamento,
+    }),
     enunciadoTex: `F = ${forca}\\,\\text{N} \\qquad d = ${deslocamento}\\,\\text{m} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -115,6 +120,10 @@ function exercicioCinetica(nivel: Nivel, rng: Rng): Exercicio<number> {
       { massa, velocidade },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('trabalho-e-energia', 'forma-2')[0]!, {
+      massa,
+      velocidade,
+    }),
     enunciadoTex: `m = ${massa}\\,\\text{kg} \\qquad v = ${velocidade}\\,\\text{m/s}`,
     gabarito: resultado,
     resolucao: {
@@ -231,6 +240,7 @@ function exercicioPotencia(nivel: Nivel, rng: Rng): Exercicio<number> {
       { trabalho, tempo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('trabalho-e-energia', 'forma-4')[0]!, { trabalho, tempo }),
     enunciadoTex: `W = ${trabalho}\\,\\text{J} \\qquad \\Delta t = ${tempo}\\,\\text{s}`,
     gabarito: resultado,
     resolucao: { resultado, passos },

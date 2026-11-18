@@ -132,6 +132,13 @@ function euler(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('poliedros', 'forma-1')[0]!, {
+      v1: p[dados[0]!],
+      v2: nomes[dados[0]!],
+      v3: p[dados[1]!],
+      v4: nomes[dados[1]!],
+      v5: nomes[falta],
+    }),
     enunciadoTex: `V - A + F = 2`,
     gabarito,
     resolucao: {
@@ -207,6 +214,12 @@ function prismaPiramide(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: nomes[pede], v2: ePrisma ? 'um' : 'uma', solido, v3: NOME_BASE[n] },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('poliedros', 'forma-2')[0]!, {
+      v1: nomes[pede],
+      v2: ePrisma ? 'um' : 'uma',
+      solido,
+      v3: NOME_BASE[n],
+    }),
     enunciadoTex: `n = ${n} \\text{ lados na base}`,
     gabarito,
     resolucao: {
@@ -279,6 +292,11 @@ function facesIguais(nivel: Nivel, rng: Rng): Exercicio<number> {
       { f, nomeFace, v1: pedeV ? 'vértices' : 'arestas' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('poliedros', 'forma-3')[0]!, {
+      f,
+      nomeFace,
+      v1: pedeV ? 'vértices' : 'arestas',
+    }),
     enunciadoTex: `F = ${f} \\qquad \\text{cada face com } ${k} \\text{ lados}`,
     gabarito,
     resolucao: {

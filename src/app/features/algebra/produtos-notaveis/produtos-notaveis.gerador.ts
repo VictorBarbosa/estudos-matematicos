@@ -282,6 +282,9 @@ function exercicioInverso(nivel: Nivel, rng: Rng, forma: Inverso): Exercicio<num
       { v1: p === 1 ? '(x + q)²' : '(px + q)², com p positivo,' },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('produtos-notaveis', 'forma-3')[0]!, {
+      v1: p === 1 ? '(x + q)²' : '(px + q)², com p positivo,',
+    }),
     enunciadoTex: `${polinomio.paraTex()} = \\left(${p === 1 ? '' : 'p'}x + q\\right)^{2}`,
     gabarito: q,
     resolucao: {

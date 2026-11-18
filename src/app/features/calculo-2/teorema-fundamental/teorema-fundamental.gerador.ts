@@ -110,6 +110,9 @@ export const geradorTfc: GeradorExercicio<number> = {
           { expressao1: numeroEmPortugues(Number(valor.toFixed(4))) },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('teorema-fundamental', 'forma-2')[0]!, {
+          expressao1: numeroEmPortugues(Number(valor.toFixed(4))),
+        }),
         enunciadoTex: `\\int_{0}^{k} \\left(${p.paraTex()}\\right) dx = ${Number(valor.toFixed(4))}`,
         gabarito,
         resolucao: {

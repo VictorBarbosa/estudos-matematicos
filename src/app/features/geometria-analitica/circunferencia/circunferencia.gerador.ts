@@ -49,6 +49,10 @@ export const geradorCircunferencia: GeradorExercicio<number> = {
           { v1: ponto.x, v2: ponto.y },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('circunferencia', 'forma-1')[0]!, {
+          v1: ponto.x,
+          v2: ponto.y,
+        }),
         enunciadoTex: `(x ${a >= 0 ? '-' : '+'} ${Math.abs(a)})^{2} + (y ${b >= 0 ? '-' : '+'} ${Math.abs(b)})^{2} = ${raio * raio}`,
         gabarito,
         resolucao: {

@@ -33,6 +33,9 @@ export const geradorRazoes: GeradorExercicio<number> = {
           { v1: 90 - graus },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('seno-cosseno-tangente', 'forma-1')[0]!, {
+          v1: 90 - graus,
+        }),
         enunciadoTex: `\\sin(90° - ${graus}°) = \\;?`,
         gabarito,
         resolucao: {
@@ -99,6 +102,9 @@ export const geradorRazoes: GeradorExercicio<number> = {
           { v1: numeroEmPortugues(seno) },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('seno-cosseno-tangente', 'forma-2')[0]!, {
+          v1: numeroEmPortugues(seno),
+        }),
         enunciadoTex: `\\sin\\theta = ${seno.toFixed(2)} \\qquad \\cos\\theta = \\;?`,
         gabarito,
         resolucao: {

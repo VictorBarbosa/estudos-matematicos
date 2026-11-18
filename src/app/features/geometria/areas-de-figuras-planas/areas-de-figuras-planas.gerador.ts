@@ -64,12 +64,16 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
   const dimensoes = { base, altura, baseMenor };
   const { resultado, passos } = areaComPassos(figura, dimensoes);
 
-  const enunciado =
-    figura === 'trapezio'
-      ? `Um trapézio tem bases ${base} cm e ${baseMenor} cm e altura ${altura} cm. ` +
-        'Qual é sua área, em cm²?'
-      : `Um ${NOME_FIGURA[figura]} tem base ${base} cm e altura ${altura} cm. ` +
-        'Qual é sua área, em cm²?';
+  /*
+   * Um molde POR FIGURA, e não um molde com o nome injetado.
+   *
+   * O nome da figura é texto: injetá-lo pronto fazia o enunciado francês sair
+   * com «triângulo» no meio, porque o valor vinha em português das três
+   * línguas. No molde da figura, o nome já está escrito na língua certa.
+   */
+  const molde = moldesDe('areas-de-figuras-planas', `area-${figura}`)[0]!;
+  const valores = { base, altura, baseMenor };
+  const enunciado = textoDoMolde(molde, valores, 'pt');
 
   const enunciadoTex =
     figura === 'trapezio'
@@ -80,6 +84,7 @@ function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
     id: `area-${figura}-${base}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
     enunciado,
+    traducoes: traducoesDoMolde(molde, valores),
     enunciadoTex,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -153,6 +158,11 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('areas-de-figuras-planas', 'forma-1')[0]!, {
+      v1: triangulo ? 'triângulo' : 'retângulo',
+      v2: numeroEmPortugues(area),
+      v3: numeroEmPortugues(base),
+    }),
     enunciadoTex: `A = ${area} \\qquad b = ${base}`,
     gabarito,
     resolucao: {
@@ -286,6 +296,10 @@ function exercicioLosango(nivel: Nivel, rng: Rng): Exercicio<number> {
       { maior, menor },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('areas-de-figuras-planas', 'forma-3')[0]!, {
+      maior,
+      menor,
+    }),
     enunciadoTex: `D = ${maior} \\qquad d = ${menor}`,
     gabarito,
     resolucao: {
@@ -354,6 +368,11 @@ function exercicioComposta(nivel: Nivel, rng: Rng): Exercicio<number> {
       { base, alturaRetangulo, alturaTriangulo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('areas-de-figuras-planas', 'forma-4')[0]!, {
+      base,
+      alturaRetangulo,
+      alturaTriangulo,
+    }),
     enunciadoTex: `b = ${base} \\qquad h_r = ${alturaRetangulo} \\qquad h_t = ${alturaTriangulo}`,
     gabarito,
     resolucao: {

@@ -43,6 +43,10 @@ export const geradorIndefinida: GeradorExercicio<number> = {
           { ponto, condicao },
           'pt',
         ),
+        traducoes: traducoesDoMolde(moldesDe('integral-indefinida', 'forma-1')[0]!, {
+          ponto,
+          condicao,
+        }),
         enunciadoTex: `F(x) = \\int \\left(${integrando.paraTex()}\\right) dx`,
         gabarito,
         resolucao: {

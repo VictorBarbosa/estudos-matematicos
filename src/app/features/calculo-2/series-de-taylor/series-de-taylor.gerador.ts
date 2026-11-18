@@ -284,6 +284,12 @@ function daCota(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('series-de-taylor', 'forma-4')[0]!, {
+      expressao1: NOME_DA_SERIE[funcao],
+      expressao2: String(x).replace('.', ','),
+      grau,
+      expressao3: Number(cota.toFixed(4)).toString().replace('.', ','),
+    }),
     enunciadoTex: `\\left|R_{${grau}}(x)\\right| \\leq \\frac{M\\left|x\\right|^{${grau + 1}}}{(${grau + 1})!}`,
     gabarito,
     resolucao: cotaDeLagrangeComPassos(grau, x, cota),

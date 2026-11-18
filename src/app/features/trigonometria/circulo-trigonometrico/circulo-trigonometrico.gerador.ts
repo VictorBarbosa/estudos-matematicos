@@ -129,6 +129,10 @@ export const geradorCirculo: GeradorExercicio<number> = {
         { v1: ehSeno ? 'sen' : 'cos', graus },
         'pt',
       ),
+      traducoes: traducoesDoMolde(moldesDe('circulo-trigonometrico', 'forma-3')[0]!, {
+        v1: ehSeno ? 'sen' : 'cos',
+        graus,
+      }),
       enunciadoTex: `${nome} ${graus}° = \\;?`,
       gabarito,
       resolucao: {
@@ -252,6 +256,10 @@ function exercicioSinal(nivel: Nivel, rng: Rng, sorteado: number): Exercicio<num
       { funcao, graus },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('circulo-trigonometrico', 'forma-4')[0]!, {
+      funcao,
+      graus,
+    }),
     enunciadoTex: `\\operatorname{${funcao}} ${graus}° \\gtrless 0 \\;?`,
     gabarito,
     resolucao: {

@@ -190,6 +190,9 @@ function coeficiente(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: p === 1 ? '' : elevado(p) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('binomio-de-newton', 'forma-3')[0]!, {
+      expressao1: p === 1 ? '' : elevado(p),
+    }),
     enunciadoTex: `\\left(${binomioTex(a, b)}\\right)^{${n}}`,
     gabarito,
     resolucao: {

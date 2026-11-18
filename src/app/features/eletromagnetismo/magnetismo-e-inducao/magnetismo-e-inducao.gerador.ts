@@ -120,6 +120,12 @@ function lorentz(nivel: Nivel, rng: Rng, comAngulo: boolean): Exercicio<number> 
       { carga: q < 0 ? `(${q})` : q, v, campo: txt(b), angulo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(
+      moldesDe('magnetismo-e-inducao', comAngulo ? 'forma-9' : 'forma-10')[0]!,
+      // A carga negativa vai entre parênteses para não colar no «-» que a
+      // frase já tem; o ângulo só é citado no molde que o menciona.
+      { carga: q < 0 ? `(${q})` : q, v, campo: txt(b), angulo },
+    ),
     enunciadoTex: `q = ${q}\\ \\mu\\text{C} \\qquad v = ${v}\\ \\text{m/s} \\qquad B = ${tex(b)}\\ \\text{T} \\qquad \\theta = ${angulo}^{\\circ}`,
     gabarito,
     resolucao: {
@@ -177,6 +183,11 @@ function forcaFio(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: txt(l), i, v2: txt(b) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('magnetismo-e-inducao', 'forma-1')[0]!, {
+      v1: txt(l),
+      i,
+      v2: txt(b),
+    }),
     enunciadoTex: `I = ${i}\\ \\text{A} \\qquad L = ${tex(l)}\\ \\text{m} \\qquad B = ${tex(b)}\\ \\text{T}`,
     gabarito,
     resolucao: {
@@ -273,6 +284,11 @@ function fluxo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { a, v1: txt(b), angulo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('magnetismo-e-inducao', 'forma-3')[0]!, {
+      a,
+      v1: txt(b),
+      angulo,
+    }),
     enunciadoTex: `B = ${tex(b)}\\ \\text{T} \\qquad A = ${a}\\ \\text{cm}^{2} \\qquad \\theta = ${angulo}^{\\circ}`,
     gabarito,
     resolucao: {
@@ -341,6 +357,13 @@ function raio(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('magnetismo-e-inducao', 'forma-4')[0]!, {
+      v1: qual === 'proton' ? 'Um próton' : 'Um elétron',
+      v2: p.mTexto,
+      vTexto,
+      v3: txt(b),
+      unidade,
+    }),
     enunciadoTex: `r = \\frac{mv}{|q|B}`,
     gabarito,
     resolucao: {
@@ -397,6 +420,13 @@ function faraday(nivel: Nivel, rng: Rng): Exercicio<number> {
       { n, a, v1: txt(b1), v2: txt(b2), v3: txt(dt) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('magnetismo-e-inducao', 'forma-5')[0]!, {
+      n,
+      a,
+      v1: txt(b1),
+      v2: txt(b2),
+      v3: txt(dt),
+    }),
     enunciadoTex: `N = ${n} \\qquad A = ${a}\\ \\text{cm}^{2} \\qquad B: ${tex(b1)} \\to ${tex(b2)}\\ \\text{T} \\qquad \\Delta t = ${tex(dt)}\\ \\text{s}`,
     gabarito,
     resolucao: {
@@ -444,6 +474,11 @@ function solenoide(nivel: Nivel, rng: Rng): Exercicio<number> {
       { comprimento, espiras, v1: txt(i) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('magnetismo-e-inducao', 'forma-6')[0]!, {
+      comprimento,
+      espiras,
+      v1: txt(i),
+    }),
     enunciadoTex: `B = \\mu_0 n I \\qquad N = ${espiras} \\qquad L = ${comprimento}\\ \\text{cm} \\qquad I = ${tex(i)}\\ \\text{A}`,
     gabarito,
     resolucao: {
@@ -574,6 +609,10 @@ function raioAcelerado(nivel: Nivel, rng: Rng): Exercicio<number> {
       { ddp, v1: txt(b) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('magnetismo-e-inducao', 'forma-7')[0]!, {
+      ddp,
+      v1: txt(b),
+    }),
     enunciadoTex: `\\Delta V = ${ddp}\\ \\text{V} \\qquad B = ${tex(b)}\\ \\text{T}`,
     gabarito,
     resolucao: {

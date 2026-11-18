@@ -352,6 +352,11 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: cone ? 'cone' : 'cilindro', raio, v2: numeroEmPortugues(Number(volume.toFixed(2))) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('solidos-e-volumes', 'forma-2')[0]!, {
+      v1: cone ? 'cone' : 'cilindro',
+      raio,
+      v2: numeroEmPortugues(Number(volume.toFixed(2))),
+    }),
     enunciadoTex: `r = ${raio} \\qquad V = ${Number(volume.toFixed(2))}`,
     gabarito: altura,
     resolucao: {

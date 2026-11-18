@@ -140,6 +140,10 @@ function exercicioResumo(
       { expressao1: medidas.map(numeroEmPortugues).join('; '), rotulo },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('estatistica-e-incerteza', 'forma-1')[0]!, {
+      expressao1: medidas.map(numeroEmPortugues).join('; '),
+      rotulo,
+    }),
     enunciadoTex: medidas.map((valor) => String(valor).replace('.', '{,}')).join(',\\; '),
     gabarito,
     resolucao: { resultado: gabarito, passos: completos },
@@ -257,6 +261,12 @@ function exercicioPropagarProduto(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('estatistica-e-incerteza', 'forma-3')[0]!, {
+      base,
+      expressao1: incertezaBase.toLocaleString('pt-BR'),
+      altura,
+      expressao2: incertezaAltura.toLocaleString('pt-BR'),
+    }),
     enunciadoTex:
       `b = ${base} \\pm ${String(incertezaBase).replace('.', '{,}')} \\qquad ` +
       `h = ${altura} \\pm ${String(incertezaAltura).replace('.', '{,}')}`,
@@ -316,6 +326,9 @@ function exercicioInclinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
       { pares: pontos.map((p) => `(${p.x}; ${p.y})`).join(', ') },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('estatistica-e-incerteza', 'forma-4')[0]!, {
+      pares: pontos.map((p) => `(${p.x}; ${p.y})`).join(', '),
+    }),
     enunciadoTex: pontos.map((p) => `(${p.x},\\, ${p.y})`).join(' \\quad '),
     gabarito: resultado.inclinacao,
     resolucao: { resultado: resultado.inclinacao, passos },

@@ -170,6 +170,9 @@ function exercicioRaioPelaArea(nivel: Nivel, rng: Rng): Exercicio<number> {
       { v1: numeroEmPortugues(Number(area.toFixed(2))) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('circulo-e-poligonos', 'forma-3')[0]!, {
+      v1: numeroEmPortugues(Number(area.toFixed(2))),
+    }),
     enunciadoTex: `A = ${Number(area.toFixed(2))}`,
     gabarito: raio,
     resolucao: {
@@ -230,6 +233,10 @@ function exercicioSetor(nivel: Nivel, rng: Rng): Exercicio<number> {
       { raio, anguloGraus },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('circulo-e-poligonos', 'forma-4')[0]!, {
+      raio,
+      anguloGraus,
+    }),
     enunciadoTex: `r = ${raio} \\qquad \\theta = ${anguloGraus}^\\circ`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -287,6 +294,11 @@ function exercicioPoligono(nivel: Nivel, rng: Rng): Exercicio<number> {
       { lados, base, v1: numeroEmPortugues(Number(apotema.toFixed(3))) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('circulo-e-poligonos', 'forma-5')[0]!, {
+      lados,
+      base,
+      v1: numeroEmPortugues(Number(apotema.toFixed(3))),
+    }),
     enunciadoTex: `n = ${lados} \\qquad \\ell = ${base} \\qquad a = ${Number(apotema.toFixed(3))}`,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -335,6 +347,10 @@ function exercicioArco(nivel: Nivel, rng: Rng): Exercicio<number> {
       { raio, anguloGraus },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('circulo-e-poligonos', 'forma-6')[0]!, {
+      raio,
+      anguloGraus,
+    }),
     enunciadoTex: `r = ${raio} \\qquad \\theta = ${anguloGraus}^\\circ`,
     gabarito: resultado,
     resolucao: {

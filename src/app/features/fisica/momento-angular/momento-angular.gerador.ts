@@ -96,6 +96,13 @@ function doCorpoRigido(nivel: Nivel, rng: Rng): Exercicio<number> {
       },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('momento-angular', 'forma-1')[0]!, {
+      v1: capitalizar(artigo(corpo)),
+      v2: corpo.nome,
+      v3: numero(massa),
+      v4: numero(raio),
+      v5: numero(omega),
+    }),
     enunciadoTex: `L = I\\omega \\qquad I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
     resolucao: momentoAngularComPassos(corpo, massa, raio, omega),

@@ -91,6 +91,11 @@ function forca(nivel: Nivel, rng: Rng, emCm: boolean): Exercicio<number> {
       { expressao1: par(q1), expressao2: par(q2), distancia },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('eletrostatica', 'forma-1')[0]!, {
+      expressao1: par(q1),
+      expressao2: par(q2),
+      distancia,
+    }),
     enunciadoTex: `q_1 = ${q1}\\ \\mu\\text{C} \\qquad q_2 = ${q2}\\ \\mu\\text{C} \\qquad r = ${emCm ? `${rCm}\\ \\text{cm}` : `${tex(r)}\\ \\text{m}`}`,
     gabarito,
     resolucao: {
@@ -159,6 +164,10 @@ function campo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: par(q), expressao2: txt(r) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('eletrostatica', 'forma-2')[0]!, {
+      expressao1: par(q),
+      expressao2: txt(r),
+    }),
     enunciadoTex: `q = ${q}\\ \\mu\\text{C} \\qquad r = ${tex(r)}\\ \\text{m} \\qquad E = \\;?\\ \\text{kN/C}`,
     gabarito,
     resolucao: {
@@ -205,6 +214,10 @@ function forcaNoCampo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: par(q), e },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('eletrostatica', 'forma-3')[0]!, {
+      expressao1: par(q),
+      e,
+    }),
     enunciadoTex: `q = ${q}\\ \\mu\\text{C} \\qquad E = ${e}\\ \\text{N/C}`,
     gabarito,
     resolucao: {
@@ -318,6 +331,13 @@ function linha(nivel: Nivel, rng: Rng): Exercicio<number> {
       { expressao1: par(qa), qm, expressao2: par(qb), expressao3: txt(da), expressao4: txt(db) },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('eletrostatica', 'forma-4')[0]!, {
+      expressao1: par(qa),
+      qm,
+      expressao2: par(qb),
+      expressao3: txt(da),
+      expressao4: txt(db),
+    }),
     enunciadoTex: `A\\,(${qa}\\ \\mu\\text{C}) \\;\\xleftrightarrow{${tex(da)}\\ \\text{m}}\\; M\\,(${qm}\\ \\mu\\text{C}) \\;\\xleftrightarrow{${tex(db)}\\ \\text{m}}\\; B\\,(${qb}\\ \\mu\\text{C})`,
     gabarito,
     resolucao: {
@@ -381,6 +401,13 @@ function perpendicular(nivel: Nivel, rng: Rng): Exercicio<number> {
       { q, expressao1: txt(d1), q1, expressao2: txt(d2), q2 },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('eletrostatica', 'forma-5')[0]!, {
+      q,
+      expressao1: txt(d1),
+      q1,
+      expressao2: txt(d2),
+      q2,
+    }),
     enunciadoTex: `F_1 \\perp F_2 \\qquad r_1 = ${tex(d1)}\\ \\text{m} \\qquad r_2 = ${tex(d2)}\\ \\text{m}`,
     gabarito,
     resolucao: {

@@ -71,6 +71,11 @@ function exercicioMultiplicativo(nivel: Nivel, rng: Rng): Exercicio<number> {
       { camisas, calcas, sapatos },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('analise-combinatoria', 'forma-1')[0]!, {
+      camisas,
+      calcas,
+      sapatos,
+    }),
     enunciadoTex: `${camisas} \\times ${calcas} \\times ${sapatos}`,
     gabarito: resultado,
     resolucao: {
@@ -278,6 +283,12 @@ function exercicioComiteMisto(nivel: Nivel, rng: Rng): Exercicio<number> {
       { escolhidosH, homens, escolhidasM, mulheres },
       'pt',
     ),
+    traducoes: traducoesDoMolde(moldesDe('analise-combinatoria', 'forma-5')[0]!, {
+      escolhidosH,
+      homens,
+      escolhidasM,
+      mulheres,
+    }),
     enunciadoTex: `C_{${homens},${escolhidosH}} \\cdot C_{${mulheres},${escolhidasM}}`,
     gabarito: resultado,
     resolucao: {
