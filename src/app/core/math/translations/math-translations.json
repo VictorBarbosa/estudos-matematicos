@@ -1059,9 +1059,17 @@
     "fr": "L’empirique donne la PROPORTION, et non la molécule : seule la masse molaire tranche entre elles.",
     "en": "The empirical formula gives the PROPORTION, not the molecule: only the molar mass chooses between them."
   },
+  "A energia NÃO se conserva aqui. O que se conserva é o momento angular — e recolher a massa exige trabalho, que entra no sistema como energia de rotação.": {
+    "fr": "L’énergie NE se conserve PAS ici. Ce qui se conserve, c’est le moment cinétique — et ramener la masse exige un travail, qui entre dans le système comme énergie de rotation.",
+    "en": "Energy is NOT conserved here. What is conserved is the angular momentum — and pulling the mass in takes work, which enters the system as rotational energy."
+  },
   "A energia antes é só a do corpo em movimento.": {
     "fr": "L’énergie avant n’est que celle du corps en mouvement.",
     "en": "The energy before is only that of the moving body."
+  },
+  "A energia aumentou porque quem recolheu os braços realizou trabalho para isso.": {
+    "fr": "L’énergie a augmenté parce que celui qui a ramené les bras a fourni du travail pour cela.",
+    "en": "The energy went up because whoever pulled the arms in did work to do so."
   },
   "A energia cinética não se conserva: parte virou deformação e calor.": {
     "fr": "L'énergie cinétique ne se conserve pas : une partie est devenue déformation et chaleur.",
@@ -1078,6 +1086,10 @@
   "A energia depois usa a massa total.": {
     "fr": "L’énergie après utilise la masse totale.",
     "en": "The energy after uses the total mass."
+  },
+  "A energia diminuiu: afastar a massa do eixo contra a rotação consome trabalho.": {
+    "fr": "L’énergie a diminué : éloigner la masse de l’axe contre la rotation consomme du travail.",
+    "en": "The energy dropped: moving the mass away from the axis against the rotation costs work."
   },
   "A energia ganha na ddp vira energia cinética: qΔV = ½mv².": {
     "fr": "L’énergie gagnée dans la d.d.p. devient énergie cinétique : qΔV = ½mv².",
@@ -1439,6 +1451,10 @@
     "fr": "L’image de l’arcsin et de l’arctan va de −#° à #° ; celle de l’arccos, de #° à #°.",
     "en": "The range of arcsin and arctan goes from −#° to #°; that of arccos, from #° to #°."
   },
+  "A incerteza da média divide o desvio pela raiz do número de medidas.": {
+    "fr": "L’incertitude de la moyenne divise l’écart type par la racine du nombre de mesures.",
+    "en": "The uncertainty of the mean divides the standard deviation by the root of the number of measurements."
+  },
   "A inclinação da reta dada é o número que multiplica x.": {
     "fr": "La pente de la droite donnée est le nombre qui multiplie x.",
     "en": "The slope of the given line is the number multiplying x."
@@ -1671,6 +1687,10 @@
     "fr": "La masse a pris la place du moment d’inertie. Dans l’énergie de rotation, c’est l’inertie qui apparaît, et elle porte déjà le rayon et le facteur de forme.",
     "en": "The mass took the place of the moment of inertia. In rotational energy it is the inertia that appears, and it already carries the radius and the shape factor."
   },
+  "A massa entrou no lugar do momento de inércia. O momento angular é o análogo do momento linear, e nessa tradução a massa vira inércia.": {
+    "fr": "La masse a pris la place du moment d’inertie. Le moment cinétique est l’analogue de la quantité de mouvement, et dans cette traduction la masse devient inertie.",
+    "en": "The mass went in place of the moment of inertia. Angular momentum is the analogue of linear momentum, and in that translation mass becomes inertia."
+  },
   "A massa molar devolve a quantidade à balança.": {
     "fr": "La masse molaire ramène la quantité à la balance.",
     "en": "The molar mass brings the amount back to the scale."
@@ -1759,6 +1779,10 @@
     "fr": "La matrice de départ.",
     "en": "The starting matrix."
   },
+  "A mediana não se deixa arrastar por um valor extremo.": {
+    "fr": "La médiane ne se laisse pas entraîner par une valeur extrême.",
+    "en": "The median is not dragged along by an extreme value."
+  },
   "A menor delas.": {
     "fr": "La plus petite d’entre elles.",
     "en": "The smallest of them."
@@ -1798,6 +1822,10 @@
   "A média simples só valeria se as duas capacidades térmicas fossem iguais. Cada parcela pesa conforme o produto da massa pelo calor específico.": {
     "fr": "La moyenne simple ne vaudrait que si les deux capacités thermiques étaient égales. Chaque terme pèse selon le produit de la masse par la chaleur massique.",
     "en": "The plain average would only hold if the two heat capacities were equal. Each term weighs according to mass times specific heat."
+  },
+  "A média é o ponto de equilíbrio da amostra.": {
+    "fr": "La moyenne est le point d’équilibre de l’échantillon.",
+    "en": "The mean is the balance point of the sample."
   },
   "A normal é perpendicular aos dois: o produto vetorial (com a positivo).": {
     "fr": "La normale est perpendiculaire aux deux : le produit vectoriel (avec a positif).",
@@ -2415,6 +2443,10 @@
     "fr": "Le rapport est inversé. Comme le corps est moins dense, la fraction immergée est inférieure à #.",
     "en": "The ratio is upside down. Since the body is less dense, the submerged fraction is smaller than #."
   },
+  "A razão está invertida. Diminuir a inércia faz a velocidade angular SUBIR — é a patinadora que acelera ao recolher os braços.": {
+    "fr": "Le rapport est inversé. Diminuer l’inertie fait MONTER la vitesse angulaire — c’est la patineuse qui accélère en ramenant les bras.",
+    "en": "The ratio is upside down. Reducing the inertia makes the angular velocity GO UP — it is the skater who speeds up by pulling the arms in."
+  },
   "A razão está invertida: no equilíbrio, y é o termo constante dividido pelo coeficiente.": {
     "fr": "Le rapport est inversé : à l’équilibre, y est le terme constant divisé par le coefficient.",
     "en": "The ratio is upside down: at equilibrium, y is the constant term divided by the coefficient."
@@ -2831,6 +2863,10 @@
     "fr": "La variation du flux, avec l’aire en SI.",
     "en": "The change in flux, with the area in SI."
   },
+  "A variação é a diferença entre as duas energias.": {
+    "fr": "La variation est l’écart entre les deux énergies.",
+    "en": "The change is the gap between the two energies."
+  },
   "A velocidade acumula a aceleração: v(t) = v(#) + integral de a.": {
     "fr": "La vitesse accumule l’accélération : v(t) = v(#) + intégrale de a.",
     "en": "Velocity accumulates acceleration: v(t) = v(#) + integral of a."
@@ -3027,6 +3063,10 @@
     "fr": "Trouvez d’abord l’hypoténuse, par Pythagore. Utilisez ensuite que le produit des cathètes, # · #, vaut l’hypoténuse fois cette hauteur.",
     "en": "Find the hypotenuse first, by Pythagoras. Then use that the product of the legs, # · #, equals the hypotenuse times that altitude."
   },
+  "Ache a média, some os QUADRADOS dos desvios em relação a ela e divida por n − # = #; depois tire a raiz.": {
+    "fr": "Trouvez la moyenne, additionnez les CARRÉS des écarts par rapport à elle et divisez par n − # = # ; prenez ensuite la racine.",
+    "en": "Find the mean, add the SQUARES of the deviations from it and divide by n − # = #; then take the root."
+  },
   "Ache a razão primeiro, r = (a_q − aₚ) / (q − p); depois volte: a₁ = aₚ − (p − #)r.": {
     "fr": "Trouvez d’abord la raison, r = (a_q − aₚ) / (q − p) ; puis revenez : a₁ = aₚ − (p − #)r.",
     "en": "Find the difference first, r = (a_q − aₚ) / (q − p); then go back: a₁ = aₚ − (p − #)r."
@@ -3062,6 +3102,10 @@
   "Ache p′ por #/p′ = #/f − #/p; depois h′ = −(p′/p)·h.": {
     "fr": "Trouvez p′ par #/p′ = #/f − #/p ; puis h′ = −(p′/p)·h.",
     "en": "Find p′ from #/p′ = #/f − #/p; then h′ = −(p′/p)·h."
+  },
+  "Acima de #: o comportamento é essencialmente linear.": {
+    "fr": "Au-dessus de # : le comportement est essentiellement linéaire.",
+    "en": "Above #: the behaviour is essentially linear."
   },
   "Acrescentamos as duas tampas circulares.": {
     "fr": "Nous ajoutons les deux couvercles circulaires.",
@@ -4275,6 +4319,10 @@
     "fr": "Calculez la pente de la sécante, égalez-la à f′(c) et résolvez. La réponse est c, pas la pente.",
     "en": "Work out the secant’s slope, set it equal to f′(c) and solve. The answer is c, not the slope."
   },
+  "Calcule a inércia primeiro, depois multiplique pela velocidade angular.": {
+    "fr": "Calculez d’abord l’inertie, puis multipliez par la vitesse angulaire.",
+    "en": "Compute the inertia first, then multiply by the angular velocity."
+  },
   "Calcule arctg(#/#) e corrija pelo quadrante: o ponto (#, #) está no #º quadrante.": {
     "fr": "Calculez arctan(#/#) et corrigez selon le quadrant : le point (#, #) est dans le #e quadrant.",
     "en": "Compute arctan(#/#) and correct for the quadrant: the point (#, #) is in quadrant #."
@@ -4291,6 +4339,10 @@
     "fr": "Calculez k·q/r pour chaque charge, avec son signe, et additionnez les deux nombres : le potentiel est scalaire, sans décomposition.",
     "en": "Compute k·q/r for each charge, with its sign, and add the two numbers: potential is scalar, no decomposition."
   },
+  "Calcule o desvio padrão amostral e divida pela raiz de n = #.": {
+    "fr": "Calculez l’écart type de l’échantillon et divisez par la racine de n = #.",
+    "en": "Compute the sample standard deviation and divide by the root of n = #."
+  },
   "Calcule o discriminante antes de aplicar a fórmula.": {
     "fr": "Calculez le discriminant avant d’appliquer la formule.",
     "en": "Work out the discriminant before applying the formula."
@@ -4306,6 +4358,10 @@
   "Calcule o limite: é esse o valor que falta.": {
     "fr": "Calculez la limite : c’est la valeur qui manque.",
     "en": "Work out the limit: that is the value that is missing."
+  },
+  "Calcule o momento angular inicial e divida pela nova inércia.": {
+    "fr": "Calculez le moment cinétique initial et divisez par la nouvelle inertie.",
+    "en": "Compute the initial angular momentum and divide by the new inertia."
   },
   "Calcule os dois laterais em x = #: a reta pela esquerda e a parábola (com x ao quadrado) pela direita. O salto é direita menos esquerda.": {
     "fr": "Calculez les deux limites latérales en x = # : la droite à gauche et la parabole (avec x au carré) à droite. Le saut est la droite moins la gauche.",
@@ -4595,6 +4651,10 @@
     "fr": "Avec la tension et la résistance : P = V²/R (P = VI avec I = V/R).",
     "en": "With the voltage and the resistance: P = V²/R (P = VI with I = V/R)."
   },
+  "Com a velocidade alinhada ao raio o momento angular seria zero.": {
+    "fr": "Avec une vitesse alignée au rayon, le moment cinétique serait nul.",
+    "en": "With the velocity aligned with the radius the angular momentum would be zero."
+  },
   "Com a área em m² (# cm² = #⁻⁴ m²).": {
     "fr": "Avec l’aire en m² (# cm² = #⁻⁴ m²).",
     "en": "With the area in m² (# cm² = #⁻⁴ m²)."
@@ -4783,6 +4843,14 @@
     "fr": "Avec un pas de #, l’erreur vaut ceci.",
     "en": "With step #, the error is this."
   },
+  "Com quantidade par, a mediana é a média dos dois centrais.": {
+    "fr": "Avec un nombre pair, la médiane est la moyenne des deux valeurs centrales.",
+    "en": "With an even count, the median is the average of the two middle values."
+  },
+  "Com quantidade ímpar, a mediana é o valor central.": {
+    "fr": "Avec un nombre impair, la médiane est la valeur centrale.",
+    "en": "With an odd count, the median is the middle value."
+  },
   "Com r igual a # e ângulo de # graus.": {
     "fr": "Avec r égal à # et un angle de # degrés.",
     "en": "With r equal to # and an angle of # degrees."
@@ -4846,6 +4914,10 @@
   "Com ângulo de #°, o cosseno zera e sobra o teorema de Pitágoras.": {
     "fr": "Avec un angle de #°, le cosinus s'annule et il reste le théorème de Pythagore.",
     "en": "With an angle of #°, cosine is zero and only Pythagoras' theorem remains."
+  },
+  "Com ângulo reto o braço é o próprio raio, e o momento angular é máximo.": {
+    "fr": "À angle droit, le bras est le rayon lui-même, et le moment cinétique est maximal.",
+    "en": "At a right angle the arm is the radius itself, and the angular momentum is at its largest."
   },
   "Com Δ negativo e a positivo, o trinômio nunca fica negativo: o conjunto é VAZIO. «Vazio» é uma resposta, não um erro.": {
     "fr": "Avec Δ négatif et a positif, le trinôme n’est jamais négatif : l’ensemble est VIDE. « Vide » est une réponse, pas une erreur.",
@@ -6251,6 +6323,10 @@
     "fr": "Diviser par une fraction est le même que multiplier par son inverse.",
     "en": "Dividing by a fraction is the same as multiplying by its reciprocal."
   },
+  "Dividir y por x de um único ponto só daria a inclinação se a reta passasse pela origem. Com intercepto não nulo, é preciso comparar variações.": {
+    "fr": "Diviser y par x à partir d’un seul point ne donnerait la pente que si la droite passait par l’origine. Avec une ordonnée à l’origine non nulle, il faut comparer des variations.",
+    "en": "Dividing y by x from a single point would only give the slope if the line passed through the origin. With a nonzero intercept, you have to compare changes."
+  },
   "Do #º ao #º termo há # saltos de razão.": {
     "fr": "Du #ᵉ au #ᵉ terme il y a # sauts de raison.",
     "en": "From the #st to the #nd term there are # steps of the difference."
@@ -7435,6 +7511,10 @@
     "fr": "Toute l’accélération est entrée au dénominateur. Ce qui courbe la trajectoire n’est que la composante NORMALE — la tangentielle ne change que la rapidité.",
     "en": "The whole acceleration went into the denominator. What bends the path is only the NORMAL component — the tangential one only changes the speed."
   },
+  "Entrou cosseno no lugar do seno. É o seno que mede a parte perpendicular — com velocidade alinhada ao raio o momento angular é zero, e o cosseno daria o máximo.": {
+    "fr": "Le cosinus a pris la place du sinus. C’est le sinus qui mesure la part perpendiculaire — avec une vitesse alignée au rayon, le moment cinétique est nul, alors que le cosinus donnerait le maximum.",
+    "en": "Cosine went in place of sine. It is the sine that measures the perpendicular part — with the velocity aligned with the radius the angular momentum is zero, and the cosine would give the maximum."
+  },
   "Entrou um termo a mais do que o grau # permite. A aproximação fica melhor, mas não é a que o enunciado pediu.": {
     "fr": "Un terme de trop est entré par rapport au degré #. L’approximation est meilleure, mais ce n’est pas celle que l’énoncé demandait.",
     "en": "One term more than degree # allows got in. The approximation is better, but it is not the one the question asked for."
@@ -7827,6 +7907,10 @@
     "fr": "C’est la LARGEUR de l’intervalle, et non le nombre d’entiers qu’il contient. De # à #, la distance vaut #, mais les entiers #, #, # et # sont au nombre de quatre.",
     "en": "That is the WIDTH of the interval, not how many integers fit in it. From # to # the distance is #, but the integers #, #, # and # are four."
   },
+  "Essa é a MEDIANA, o valor central. A média soma tudo e divide pela quantidade.": {
+    "fr": "C’est la MÉDIANE, la valeur centrale. La moyenne additionne tout et divise par le nombre.",
+    "en": "That is the MEDIAN, the middle value. The mean adds everything and divides by the count."
+  },
   "Essa é a MENOR das duas ordenadas.": {
     "fr": "C’est la PLUS PETITE des deux ordonnées.",
     "en": "That is the SMALLER of the two y-coordinates."
@@ -7834,6 +7918,10 @@
   "Essa é a MENOR raiz. As duas estão corretas como solução da equação, mas o enunciado pede a maior delas.": {
     "fr": "C’est la PLUS PETITE racine. Les deux sont des solutions correctes de l’équation, mais l’énoncé demande la plus grande.",
     "en": "That is the SMALLER root. Both are correct solutions of the equation, but the question asks for the larger one."
+  },
+  "Essa é a MÉDIA. A pergunta pedia outra medida da amostra.": {
+    "fr": "C’est la MOYENNE. La question portait sur une autre mesure de l’échantillon.",
+    "en": "That is the MEAN. The question asked for a different measure of the sample."
   },
   "Essa é a PROJEÇÃO de um cateto sobre a hipotenusa, não a altura.": {
     "fr": "C’est la PROJECTION d’une cathète sur l’hypoténuse, et non la hauteur.",
@@ -7854,6 +7942,10 @@
   "Essa é a SUPERFÍCIE da esfera, #πr². O volume usa r³ e tem o fator #/#.": {
     "fr": "C’est la SURFACE de la sphère, #πr². Le volume utilise r³ et porte le facteur #/#.",
     "en": "That is the SURFACE of the sphere, #πr². The volume uses r³ and carries the factor #/#."
+  },
+  "Essa é a amplitude (maior menos menor). Ela usa só dois valores e ignora como os demais se distribuem.": {
+    "fr": "C’est l’étendue (le plus grand moins le plus petit). Elle n’utilise que deux valeurs et ignore la répartition des autres.",
+    "en": "That is the range (largest minus smallest). It uses only two values and ignores how the others are spread."
   },
   "Essa é a camada de dentro, a penúltima. A última é a de maior n que recebeu elétrons.": {
     "fr": "C’est la couche intérieure, l’avant-dernière. La dernière est celle de plus grand n qui a reçu des électrons.",
@@ -7927,6 +8019,14 @@
     "fr": "C’est l’énergie TOTALE avant la collision. La perte est l’écart entre avant et après.",
     "en": "That is the TOTAL energy before the collision. The loss is the gap between before and after."
   },
+  "Essa é a energia de rotação, em J. O momento angular não tem o fator um meio nem o quadrado — ele é linear na velocidade angular.": {
+    "fr": "C’est l’énergie de rotation, en J. Le moment cinétique n’a ni le facteur un demi ni le carré — il est linéaire en vitesse angulaire.",
+    "en": "That is the rotational energy, in J. Angular momentum has neither the factor of one half nor the square — it is linear in the angular velocity."
+  },
+  "Essa é a energia final. O enunciado pede a VARIAÇÃO, que é a diferença entre as duas.": {
+    "fr": "C’est l’énergie finale. L’énoncé demande la VARIATION, c’est-à-dire l’écart entre les deux.",
+    "en": "That is the final energy. The question asks for the CHANGE, the gap between the two."
+  },
   "Essa é a energia que SOBROU, não a que se perdeu.": {
     "fr": "C’est l’énergie qui RESTE, et non celle qui a été perdue.",
     "en": "That is the energy LEFT OVER, not the one lost."
@@ -7970,6 +8070,10 @@
   "Essa é a hipotenusa inteira, um passo intermediário da conta.": {
     "fr": "C’est l’hypoténuse entière, une étape intermédiaire du calcul.",
     "en": "That is the whole hypotenuse, an intermediate step of the computation."
+  },
+  "Essa é a incerteza da MÉDIA, que já foi dividida por √n. O desvio padrão descreve a dispersão das medidas individuais.": {
+    "fr": "C’est l’incertitude de la MOYENNE, déjà divisée par √n. L’écart type décrit la dispersion des mesures individuelles.",
+    "en": "That is the uncertainty of the MEAN, already divided by √n. The standard deviation describes the spread of the individual measurements."
   },
   "Essa é a inclinação da secante. O pedido é o PONTO c onde a tangente a iguala.": {
     "fr": "C’est la pente de la sécante. Ce qui est demandé, c’est le POINT c où la tangente l’égale.",
@@ -8267,6 +8371,10 @@
     "fr": "C’est la LONGUEUR du cercle. L’aire dépend de r², et non de r.",
     "en": "That is the LENGTH of the circle. The area depends on r², not on r."
   },
+  "Esse é o INTERCEPTO, onde a reta corta o eixo y. A inclinação é a taxa de variação de y por x.": {
+    "fr": "C’est l’ORDONNÉE À L’ORIGINE, là où la droite coupe l’axe des ordonnées. La pente est le taux de variation de y par x.",
+    "en": "That is the INTERCEPT, where the line crosses the y-axis. The slope is the rate of change of y per x."
+  },
   "Esse é o LADO do retângulo ótimo. A pergunta é pela área, que é o produto dos dois lados.": {
     "fr": "C’est le CÔTÉ du rectangle optimal. La question porte sur l’aire, qui est le produit des deux côtés.",
     "en": "That is the SIDE of the optimal rectangle. The question asks for the area, which is the product of the two sides."
@@ -8359,6 +8467,10 @@
     "fr": "C’est le dénominateur de l’équation, qui vaut a². Le demi-axe en est la racine carrée.",
     "en": "That is the denominator of the equation, which is a². The semi-axis is its square root."
   },
+  "Esse é o desvio padrão das medidas. A incerteza da média ainda divide por √n.": {
+    "fr": "C’est l’écart type des mesures. L’incertitude de la moyenne divise encore par √n.",
+    "en": "That is the standard deviation of the measurements. The uncertainty of the mean divides further by √n."
+  },
   "Esse é o discriminante, que decide o regime, mas não é uma raiz.": {
     "fr": "C’est le discriminant, qui décide du régime, mais ce n’est pas une racine.",
     "en": "That is the discriminant, which decides the regime, but it is not a root."
@@ -8406,6 +8518,10 @@
   "Esse é o menor dos dois pontos críticos; o enunciado pede o maior.": {
     "fr": "C’est le plus petit des deux points critiques ; l’énoncé demande le plus grand.",
     "en": "That is the smaller of the two critical points; the question asks for the larger."
+  },
+  "Esse é o momento angular conservado, não a nova velocidade angular. Falta dividir pela nova inércia.": {
+    "fr": "C’est le moment cinétique conservé, et non la nouvelle vitesse angulaire. Il reste à diviser par la nouvelle inertie.",
+    "en": "That is the conserved angular momentum, not the new angular velocity. Dividing by the new inertia is still missing."
   },
   "Esse é o momento total, em kg·m/s. Falta dividir pela massa somada para obter a velocidade.": {
     "fr": "C’est la quantité de mouvement totale, en kg·m/s. Il reste à diviser par la masse totale pour obtenir la vitesse.",
@@ -8742,6 +8858,10 @@
   "Esse é só o divergente; falta multiplicar pelo volume.": {
     "fr": "Ce n’est que la divergence ; il reste à multiplier par le volume.",
     "en": "That is only the divergence; it still has to be multiplied by the volume."
+  },
+  "Esse é só o momento de inércia. Falta multiplicar pela velocidade angular.": {
+    "fr": "Ce n’est que le moment d’inertie. Il reste à multiplier par la vitesse angulaire.",
+    "en": "That is only the moment of inertia. Multiplying by the angular velocity is still missing."
   },
   "Esse é só o numerador. Falta dividir pela massa total.": {
     "fr": "Ce n’est que le numérateur. Il reste à diviser par la masse totale.",
@@ -9267,6 +9387,10 @@
     "fr": "Il manque le facteur un demi, que la formule de l’énergie cinétique porte toujours.",
     "en": "The factor of one half, which the kinetic-energy formula always carries, is missing."
   },
+  "Faltou o seno de # graus. Só a parte da velocidade perpendicular ao raio contribui para o giro; a parte alinhada com ele não gira nada.": {
+    "fr": "Il manque le sinus de # degrés. Seule la part de la vitesse perpendiculaire au rayon contribue à la rotation ; la part alignée avec lui ne fait rien tourner.",
+    "en": "The sine of # degrees is missing. Only the part of the velocity perpendicular to the radius contributes to the turning; the part aligned with it turns nothing."
+  },
   "Faltou o sinal negativo ao isolar x. Ao passar b para o outro lado da igualdade, ele troca de sinal.": {
     "fr": "Il manque le signe négatif en isolant x. En passant b de l’autre côté de l’égalité, il change de signe.",
     "en": "The negative sign is missing when isolating x. Moving b to the other side of the equation flips its sign."
@@ -9638,6 +9762,10 @@
   "Incertezas independentes não se somam direto: some os QUADRADOS e tire a raiz — σ = √(σ₁² + σ₂²).": {
     "fr": "Les incertitudes indépendantes ne s’additionnent pas directement : additionnez les CARRÉS et prenez la racine — σ = √(σ₁² + σ₂²).",
     "en": "Independent uncertainties do not add directly: add the SQUARES and take the root — σ = √(σ₁² + σ₂²)."
+  },
+  "Incertezas nunca se cancelam: elas sempre aumentam a incerteza do resultado, jamais a reduzem.": {
+    "fr": "Les incertitudes ne s’annulent jamais : elles augmentent toujours l’incertitude du résultat, elles ne la réduisent jamais.",
+    "en": "Uncertainties never cancel: they always increase the uncertainty of the result, never reduce it."
   },
   "Inclinação da secante = (f(b) − f(a)) / (b − a). Depois resolva f′(c) igual a ela.": {
     "fr": "Pente de la sécante = (f(b) − f(a)) / (b − a). Résolvez ensuite f′(c) égale à elle.",
@@ -10051,6 +10179,10 @@
     "fr": "C’est la divergence (∂P/∂x + ∂Q/∂y). Le rotationnel utilise les dérivées CROISÉES.",
     "en": "That is the divergence (∂P/∂x + ∂Q/∂y). The curl uses the CROSS derivatives."
   },
+  "Isso é o momento linear. Para virar momento angular ainda falta a distância perpendicular ao ponto de referência.": {
+    "fr": "C’est la quantité de mouvement. Pour devenir un moment cinétique, il manque encore la distance perpendiculaire au point de référence.",
+    "en": "That is the linear momentum. To become angular momentum, the perpendicular distance to the reference point is still missing."
+  },
   "Isso é um comprimento, em cm. A coroa é uma área, em cm².": {
     "fr": "C’est une longueur, en cm. La couronne est une aire, en cm².",
     "en": "That is a length, in cm. The annulus is an area, in cm²."
@@ -10102,6 +10234,10 @@
   "Kirchhoff dos nós no nó de cima, com potencial V: o que chega pelos ramos das fontes sai por R₃.": {
     "fr": "Kirchhoff des nœuds au nœud du haut, de potentiel V : ce qui arrive par les branches des sources sort par R₃.",
     "en": "Kirchhoff’s node law at the top node, at potential V: what comes in through the source branches goes out through R₃."
+  },
+  "L = m·v·r·sen θ: com o ângulo de #°, o braço é a própria distância de # m.": {
+    "fr": "L = m·v·r·sin θ : avec l’angle de #°, le bras est la distance elle-même, de # m.",
+    "en": "L = m·v·r·sin θ: with the angle of #°, the arm is the distance itself, # m."
   },
   "L não aparece: a grandeza não depende dessa dimensão de base.": {
     "fr": "L n’apparaît pas : la grandeur ne dépend pas de cette dimension de base.",
@@ -10314,6 +10450,10 @@
   "Mais a base circular.": {
     "fr": "Plus la base circulaire.",
     "en": "Plus the circular base."
+  },
+  "Mais medidas melhoram a média, mesmo sem reduzir a dispersão.": {
+    "fr": "Plus de mesures améliorent la moyenne, même sans réduire la dispersion.",
+    "en": "More measurements improve the mean, even without reducing the spread."
   },
   "Mais operários, menos dias: o produto operários × dias se conserva.": {
     "fr": "Plus d’ouvriers, moins de jours : le produit ouvriers × jours se conserve.",
@@ -10610,6 +10750,10 @@
   "Multiplicar as grandezas soma os expoentes correspondentes.": {
     "fr": "Multiplier les grandeurs additionne les exposants correspondants.",
     "en": "Multiplying the quantities adds the corresponding exponents."
+  },
+  "Multiplicar as incertezas não tem sentido dimensional nem numérico. Num produto, somam-se em quadratura as incertezas RELATIVAS.": {
+    "fr": "Multiplier les incertitudes n’a de sens ni dimensionnel ni numérique. Dans un produit, ce sont les incertitudes RELATIVES qui s’additionnent en quadrature.",
+    "en": "Multiplying the uncertainties makes no dimensional or numerical sense. In a product, it is the RELATIVE uncertainties that add in quadrature."
   },
   "Multiplicar dimensões soma os expoentes.": {
     "fr": "Multiplier les dimensions ajoute les exposants.",
@@ -11475,6 +11619,10 @@
     "fr": "En un point critique, les deux dérivées partielles s'annulent en même temps.",
     "en": "At a critical point, both partial derivatives are zero at the same time."
   },
+  "Num produto somam-se as incertezas RELATIVAS ao quadrado: (#/#)² + (#/#)²; tire a raiz e multiplique pela área.": {
+    "fr": "Dans un produit, on additionne les incertitudes RELATIVES au carré : (#/#)² + (#/#)² ; prenez la racine et multipliez par l’aire.",
+    "en": "In a product you add the squared RELATIVE uncertainties: (#/#)² + (#/#)²; take the root and multiply by the area."
+  },
   "Num retângulo, a integral dupla vira duas integrais simples.": {
     "fr": "Dans un rectangle, l'intégrale double devient deux intégrales simples.",
     "en": "In a rectangle, the double integral becomes two simple integrals."
@@ -11894,6 +12042,10 @@
   "O bloco começa a deslizar quando a componente do peso iguala o atrito máximo.": {
     "fr": "Le bloc commence à glisser quand la composante du poids égale le frottement maximum.",
     "en": "The block starts to slide when the weight component equals the maximum friction."
+  },
+  "O braço efetivo é o raio vezes o seno de # graus.": {
+    "fr": "Le bras effectif est le rayon fois le sinus de # degrés.",
+    "en": "The effective arm is the radius times the sine of # degrees."
   },
   "O c entra AO QUADRADO no discriminante: Δ = c² − #mk.": {
     "fr": "Le c entre AU CARRÉ dans le discriminant : Δ = c² − #mk.",
@@ -12751,6 +12903,10 @@
     "fr": "Le moment (le numérateur) : nous intégrons x fois λ.",
     "en": "The moment (the numerator): we integrate x times λ."
   },
+  "O momento angular se conserva, a energia não: quem recolheu a massa puxou contra a força centrífuga e realizou trabalho.": {
+    "fr": "Le moment cinétique se conserve, l’énergie non : celui qui a ramené la masse a tiré contre la force centrifuge et fourni du travail.",
+    "en": "Angular momentum is conserved, energy is not: whoever pulled the mass in pulled against the centrifugal force and did work."
+  },
   "O momento angular é o análogo rotacional do momento linear.": {
     "fr": "Le moment angulaire est l'analogue rotatif du moment linéaire.",
     "en": "The angular momentum is the rotational analogue of linear momentum."
@@ -12759,21 +12915,41 @@
     "fr": "Le moment d’inertie de la coque cylindrique a une formule fermée.",
     "en": "The moment of inertia of the cylindrical shell has a closed formula."
   },
+  "O momento de inércia de casca cilíndrica.": {
+    "fr": "Le moment d’inertie de la coque cylindrique.",
+    "en": "The moment of inertia of the cylindrical shell."
+  },
   "O momento de inércia de casca esférica tem fórmula fechada.": {
     "fr": "Le moment d’inertie de la coque sphérique a une formule fermée.",
     "en": "The moment of inertia of the spherical shell has a closed formula."
+  },
+  "O momento de inércia de casca esférica.": {
+    "fr": "Le moment d’inertie de la coque sphérique.",
+    "en": "The moment of inertia of the spherical shell."
   },
   "O momento de inércia de disco ou cilindro maciço tem fórmula fechada.": {
     "fr": "Le moment d’inertie de le disque ou cylindre plein a une formule fermée.",
     "en": "The moment of inertia of the solid disk or cylinder has a closed formula."
   },
+  "O momento de inércia de disco ou cilindro maciço.": {
+    "fr": "Le moment d’inertie du disque ou cylindre plein.",
+    "en": "The moment of inertia of the solid disk or cylinder."
+  },
   "O momento de inércia de esfera maciça tem fórmula fechada.": {
     "fr": "Le moment d’inertie de la sphère pleine a une formule fermée.",
     "en": "The moment of inertia of the solid sphere has a closed formula."
   },
+  "O momento de inércia de esfera maciça.": {
+    "fr": "Le moment d’inertie de la sphère pleine.",
+    "en": "The moment of inertia of the solid sphere."
+  },
   "O momento de inércia de partícula tem fórmula fechada.": {
     "fr": "Le moment d’inertie de la particule a une formule fermée.",
     "en": "The moment of inertia of the particle has a closed formula."
+  },
+  "O momento de inércia de partícula.": {
+    "fr": "Le moment d’inertie de la particule.",
+    "en": "The moment of inertia of the particle."
   },
   "O momento linear total se conserva, sempre.": {
     "fr": "Le moment linéaire total se conserve, toujours.",
@@ -13211,6 +13387,10 @@
     "fr": "Ce qu’on ajuste, ce sont les COEFFICIENTS, jamais les indices : toucher à un indice change la substance dont on parle.",
     "en": "What gets adjusted are the COEFFICIENTS, never the subscripts: touching a subscript changes which substance you are talking about."
   },
+  "O que se conserva é o PRODUTO da inércia pela velocidade angular, não a velocidade angular sozinha. Mudar a inércia obriga a velocidade angular a mudar junto.": {
+    "fr": "Ce qui se conserve est le PRODUIT de l’inertie par la vitesse angulaire, et non la vitesse angulaire seule. Changer l’inertie oblige la vitesse angulaire à changer avec.",
+    "en": "What is conserved is the PRODUCT of inertia and angular velocity, not the angular velocity alone. Changing the inertia forces the angular velocity to change with it."
+  },
   "O que sobra do lado esquerdo é só o termo com x.": {
     "fr": "Ce qui reste du côté gauche n'est que le terme avec x.",
     "en": "What remains on the left is only the term with x."
@@ -13534,6 +13714,10 @@
   "O sinal ficou invertido. Para desfazer a padronização, soma-se z vezes o desvio — o próprio z já traz o sinal certo.": {
     "fr": "Le signe est inversé. Pour défaire la standardisation, on ajoute z fois l’écart type — le z porte déjà le bon signe.",
     "en": "The sign is flipped. To undo the standardisation you add z times the standard deviation — the z already carries the right sign."
+  },
+  "O sinal ficou invertido. Recolher a massa aumenta a velocidade angular ao quadrado mais do que diminui a inércia, de modo que a energia sobe.": {
+    "fr": "Le signe est inversé. Ramener la masse augmente le carré de la vitesse angulaire plus qu’elle ne diminue l’inertie, de sorte que l’énergie monte.",
+    "en": "The sign is flipped. Pulling the mass in raises the square of the angular velocity more than it lowers the inertia, so the energy goes up."
   },
   "O sinal ficou invertido: o resíduo é o OBSERVADO menos o previsto. Positivo quer dizer que o ponto está acima da reta.": {
     "fr": "Le signe est inversé : le résidu est l’OBSERVÉ moins le prédit. Positif veut dire que le point est au-dessus de la droite.",
@@ -14210,6 +14394,10 @@
   "Ordem trocada: é ∂Q/∂x MENOS ∂P/∂y, não o contrário.": {
     "fr": "Ordre inversé : c’est ∂Q/∂x MOINS ∂P/∂y, et non l’inverse.",
     "en": "Order swapped: it is ∂Q/∂x MINUS ∂P/∂y, not the other way round."
+  },
+  "Ordenamos as medidas.": {
+    "fr": "Nous ordonnons les mesures.",
+    "en": "We sort the measurements."
   },
   "Os botões abaixo do campo escrevem os símbolos.": {
     "fr": "Les boutons sous le champ écrivent les symboles.",
@@ -15331,6 +15519,14 @@
     "fr": "En posant x = # des deux côtés, le diviseur devient # et emporte le quotient avec lui.",
     "en": "Putting x = # on both sides, the divisor becomes # and takes the quotient with it."
   },
+  "Ponha as # medidas em ordem; a mediana é a do meio.": {
+    "fr": "Mettez les # mesures en ordre ; la médiane est celle du milieu.",
+    "en": "Put the # measurements in order; the median is the middle one."
+  },
+  "Ponha as # medidas em ordem; com quantidade par, a mediana é a média das duas do meio.": {
+    "fr": "Mettez les # mesures en ordre ; avec un nombre pair, la médiane est la moyenne des deux du milieu.",
+    "en": "Put the # measurements in order; with an even count, the median is the average of the two in the middle."
+  },
   "Pontas iguais (corda presa ou tubo aberto): cabem n meios comprimentos de onda em L.": {
     "fr": "Extrémités identiques (corde fixée ou tube ouvert) : il tient n demi-longueurs d’onde en L.",
     "en": "Identical ends (fixed string or open tube): n half-wavelengths fit in L."
@@ -15426,6 +15622,10 @@
   "Primeiro a inclinação b; depois o intercepto sai de a = ȳ − b·x̄, porque a reta passa pelo ponto das médias.": {
     "fr": "D’abord la pente b ; ensuite l’ordonnée à l’origine sort de a = ȳ − b·x̄, puisque la droite passe par le point des moyennes.",
     "en": "First the slope b; then the intercept comes from a = ȳ − b·x̄, because the line passes through the point of the means."
+  },
+  "Primeiro a nova velocidade angular, pela conservação: I·ω não muda. Depois compare ½·I·ω² antes e depois.": {
+    "fr": "D’abord la nouvelle vitesse angulaire, par la conservation : I·ω ne change pas. Comparez ensuite ½·I·ω² avant et après.",
+    "en": "First the new angular velocity, from conservation: I·ω does not change. Then compare ½·I·ω² before and after."
   },
   "Primeiro a posição da imagem, pela equação de Gauss.": {
     "fr": "D’abord la position de l’image, par l’équation de conjugaison.",
@@ -15606,6 +15806,10 @@
   "Q = m × c × ΔT: # kg vezes # J/(kg·K) vezes # K.": {
     "fr": "Q = m × c × ΔT : # kg fois # J/(kg·K) fois # K.",
     "en": "Q = m × c × ΔT: # kg times # J/(kg·K) times # K."
+  },
+  "Quadrados, de novo, para que erros para cima e para baixo não se cancelem.": {
+    "fr": "Des carrés, de nouveau, pour que les erreurs vers le haut et vers le bas ne s’annulent pas.",
+    "en": "Squares again, so that errors up and down do not cancel."
   },
   "Qual número multiplicado por ele mesmo dá esse valor?": {
     "fr": "Quel nombre multiplié par lui-même donne cette valeur ?",
@@ -16359,9 +16563,25 @@
     "fr": "Ajouter # au dénominateur ne fait que diminuer l’intégrande.",
     "en": "Adding # to the denominator only makes the integrand smaller."
   },
+  "Somar as incertezas diretamente supõe que as duas medidas erram para o mesmo lado. Sendo independentes, elas se combinam em quadratura, e o total é menor.": {
+    "fr": "Additionner les incertitudes directement suppose que les deux mesures se trompent dans le même sens. Étant indépendantes, elles se combinent en quadrature, et le total est plus petit.",
+    "en": "Adding the uncertainties directly assumes both measurements err in the same direction. Being independent, they combine in quadrature, and the total is smaller."
+  },
   "Somar dentro dos parênteses desloca para a esquerda, e multiplicar comprime.": {
     "fr": "Additionner dans les parenthèses décale vers la gauche, et multiplier comprime.",
     "en": "Adding inside the brackets shifts left, and multiplying compresses."
+  },
+  "Somar diretamente superestimaria o erro: seria supor que todos erram junto.": {
+    "fr": "Additionner directement surestimerait l’erreur : ce serait supposer que toutes se trompent ensemble.",
+    "en": "Adding directly would overestimate the error: it would assume they all err together."
+  },
+  "Somar incertezas absolutas é a regra da SOMA, não do produto. Aqui o que se combina são os erros proporcionais.": {
+    "fr": "Additionner des incertitudes absolues est la règle de la SOMME, et non du produit. Ici ce qui se combine, ce sont les erreurs proportionnelles.",
+    "en": "Adding absolute uncertainties is the rule for a SUM, not for a product. Here what combines are the proportional errors."
+  },
+  "Somar os desvios sem elevar daria exatamente zero, sempre.": {
+    "fr": "Additionner les écarts sans les élever au carré donnerait exactement zéro, toujours.",
+    "en": "Adding the deviations without squaring them would give exactly zero, every time."
   },
   "Somar os dois números não é a relação. Arestas entram com sinal de menos: V − A + F = #.": {
     "fr": "Additionner les deux nombres n’est pas la relation. Les arêtes entrent avec un signe moins : V − A + F = #.",
@@ -16378,6 +16598,10 @@
   "Some a massa atômica de cada elemento multiplicada pelo seu índice. O índice conta átomos, e por isso multiplica.": {
     "fr": "Additionnez la masse atomique de chaque élément multipliée par son indice. L’indice compte des atomes, et multiplie donc.",
     "en": "Add each element’s atomic mass multiplied by its subscript. The subscript counts atoms, and so it multiplies."
+  },
+  "Some as # medidas e divida por #.": {
+    "fr": "Additionnez les # mesures et divisez par #.",
+    "en": "Add the # measurements and divide by #."
   },
   "Some as fem com sinal (em oposição se subtraem) e divida pela resistência total # + #.": {
     "fr": "Additionnez les f.é.m. avec leur signe (em oposição se subtraem) et divisez par la résistance totale # + #.",
@@ -16986,6 +17210,10 @@
   "Só a envoltória exponencial foi considerada. A solução completa tem ainda as duas constantes ajustadas às condições iniciais.": {
     "fr": "Seule l’enveloppe exponentielle a été prise en compte. La solution complète comporte aussi les deux constantes ajustées aux conditions initiales.",
     "en": "Only the exponential envelope was taken into account. The full solution also has the two constants fitted to the initial conditions."
+  },
+  "Só a parte da velocidade perpendicular ao raio contribui para o giro.": {
+    "fr": "Seule la part de la vitesse perpendiculaire au rayon contribue à la rotation.",
+    "en": "Only the part of the velocity perpendicular to the radius contributes to the turning."
   },
   "Só a primeira parcela foi escrita: a potência derivada vezes a exponencial. Falta a parcela em que a exponencial é que deriva.": {
     "fr": "Seul le premier terme a été écrit : la puissance dérivée fois l’exponentielle. Il manque le terme où c’est l’exponentielle qui se dérive.",
@@ -17623,6 +17851,10 @@
     "fr": "Une fonction bornée au bout est ce qui garantit la convergence ici.",
     "en": "A function bounded at the end is what guarantees convergence here."
   },
+  "Uma grandeza elevada ao quadrado contribui com o dobro da sua incerteza relativa.": {
+    "fr": "Une grandeur élevée au carré contribue au double de son incertitude relative.",
+    "en": "A quantity raised to the square contributes twice its relative uncertainty."
+  },
   "Uma soma de quadrados pede a tangente.": {
     "fr": "Une somme de carrés appelle la tangente.",
     "en": "A sum of squares calls for the tangent."
@@ -17950,6 +18182,10 @@
   "Você usou só a base maior. O trapézio usa a média das duas bases.": {
     "fr": "Vous n’avez utilisé que la grande base. Le trapèze utilise la moyenne des deux bases.",
     "en": "You used only the longer base. The trapezoid uses the average of the two bases."
+  },
+  "Você usou só a incerteza relativa da base. A da altura também contribui, em quadratura.": {
+    "fr": "Vous n’avez utilisé que l’incertitude relative de la base. Celle de la hauteur contribue aussi, en quadrature.",
+    "en": "You used only the relative uncertainty of the base. The height’s contributes too, in quadrature."
   },
   "Você usou um retângulo de altura f(b). Como a reta é inclinada, a região é um trapézio: a altura muda ao longo do intervalo.": {
     "fr": "Vous avez utilisé un rectangle de hauteur f(b). Comme la droite est inclinée, la région est un trapèze : la hauteur change le long de l’intervalle.",
@@ -18802,6 +19038,10 @@
   "É a mesma expressão de antes, agora com número no lugar da letra.": {
     "fr": "C’est la même expression qu’avant, avec un nombre à la place de la lettre.",
     "en": "It is the same expression as before, now with a number in place of the letter."
+  },
+  "É a mesma ideia da conservação do momento linear, aplicada ao giro.": {
+    "fr": "C’est la même idée que la conservation de la quantité de mouvement, appliquée à la rotation.",
+    "en": "It is the same idea as the conservation of linear momentum, applied to turning."
   },
   "É a média das bases multiplicada pela altura.": {
     "fr": "C’est la moyenne des bases multipliée par la hauteur.",
