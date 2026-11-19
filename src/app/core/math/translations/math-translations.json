@@ -471,6 +471,10 @@
     "fr": "La borne problématique est celle du bas : zéro n’appartient pas au domaine de l’intégrande.",
     "en": "The bad edge is the lower one: zero is not in the domain of the integrand."
   },
+  "A cada # m de água, a pressão aumenta aproximadamente # atmosfera.": {
+    "fr": "Tous les # m d’eau, la pression augmente d’environ # atmosphère.",
+    "en": "Every # m of water, the pressure rises by roughly # atmosphere."
+  },
   "A cada período, o montante é multiplicado pelo mesmo fator.": {
     "fr": "Chaque période, le montant est multiplié par le même facteur.",
     "en": "Each period, the amount is multiplied by the same factor."
@@ -615,6 +619,10 @@
     "fr": "Le calcul s’est arrêté à la dérivée du côté gauche. Il reste à isoler dy/dx, ce que l’énoncé demande.",
     "en": "The computation stopped at the derivative of the left side. Isolating dy/dx, which is what the question asks for, is still missing."
   },
+  "A conta é a diferença dos QUADRADOS das velocidades, não o quadrado da diferença. São coisas bem diferentes.": {
+    "fr": "Le calcul porte sur la différence des CARRÉS des vitesses, et non sur le carré de la différence. Ce sont deux choses bien distinctes.",
+    "en": "The computation is the difference of the SQUARES of the speeds, not the square of the difference. They are quite different things."
+  },
   "A conta é só de leitura, depois de distribuir na ordem certa.": {
     "fr": "Le calcul se réduit à une lecture, une fois la répartition faite dans le bon ordre.",
     "en": "The computation is just a reading, once the filling is done in the right order."
@@ -682,6 +690,10 @@
   "A covariância soma os produtos dos desvios.": {
     "fr": "La covariance somme les produits des écarts.",
     "en": "Covariance sums the products of deviations."
+  },
+  "A densidade tem de estar em kg/m: # g/m = # kg/m. Sem converter, a velocidade sai cerca de # vezes menor.": {
+    "fr": "La masse linéique doit être en kg/m : # g/m = # kg/m. Sans conversion, la vitesse sort environ # fois trop petite.",
+    "en": "The linear density has to be in kg/m: # g/m = # kg/m. Without converting, the speed comes out about # times too small."
   },
   "A derivada da tangente é a secante AO QUADRADO. Sem o quadrado o valor muda, e o sinal pode até ficar negativo — coisa que a derivada da tangente nunca é.": {
     "fr": "La dérivée de la tangente est la sécante AU CARRÉ. Sans le carré la valeur change, et le signe peut même devenir négatif — ce que la dérivée de la tangente n’est jamais.",
@@ -766,6 +778,10 @@
   "A diferença de cubos fatora com um fator (x − a).": {
     "fr": "La différence de cubes se factorise avec un facteur (x − a).",
     "en": "The difference of cubes factors with an (x − a) factor."
+  },
+  "A diferença dos QUADRADOS não é o quadrado da diferença: v_B² − v_A² ≠ (v_B − v_A)².": {
+    "fr": "La différence des CARRÉS n’est pas le carré de la différence : v_B² − v_A² ≠ (v_B − v_A)².",
+    "en": "The difference of the SQUARES is not the square of the difference: v_B² − v_A² ≠ (v_B − v_A)²."
   },
   "A diferença é a circulação.": {
     "fr": "La différence est la circulation.",
@@ -922,6 +938,10 @@
   "A divisão está invertida. Procura-se quantos mols CABEM na massa dada, então a massa vai em cima e a massa molar embaixo.": {
     "fr": "La division est inversée. On cherche combien de moles TIENNENT dans la masse donnée, donc la masse va au-dessus et la masse molaire en dessous.",
     "en": "The division is upside down. You want how many moles FIT in the given mass, so the mass goes on top and the molar mass below."
+  },
+  "A divisão está invertida: λ = v/f, não f/v.": {
+    "fr": "La division est inversée : λ = v/f, et non f/v.",
+    "en": "The division is upside down: λ = v/f, not f/v."
   },
   "A divisão termina com resto zero, então o decimal é finito.": {
     "fr": "La division se termine avec un reste nul, donc la décimale est finie.",
@@ -1775,6 +1795,10 @@
     "fr": "La question porte sur la valeur en un point : on remplace x par le nombre donné.",
     "en": "The question asks for the value at a point: we replace x by the given number."
   },
+  "A pergunta é pela força de sustentação.": {
+    "fr": "La question porte sur la force de portance.",
+    "en": "The question asks for the lift force."
+  },
   "A pergunta é pela parte imaginária.": {
     "fr": "La question porte sur la partie imaginaire.",
     "en": "The question asks for the imaginary part."
@@ -1790,6 +1814,10 @@
   "A pergunta é pelo JURO, que é o montante menos o capital aplicado.": {
     "fr": "La question porte sur l’INTÉRÊT, qui est le montant moins le capital placé.",
     "en": "The question asks for the INTEREST, which is the amount minus the capital invested."
+  },
+  "A pergunta é pelo empuxo, não pela força resultante sobre o corpo.": {
+    "fr": "La question porte sur la poussée, et non sur la force résultante sur le corps.",
+    "en": "The question asks for the buoyant force, not the net force on the body."
   },
   "A pergunta é pelo montante final.": {
     "fr": "La question porte sur le montant final.",
@@ -1842,6 +1870,10 @@
   "A potência foi derivada corretamente, mas faltou multiplicar pela derivada da função de dentro. É a cadeia: a camada interna sempre contribui com um fator.": {
     "fr": "La puissance a été dérivée correctement, mais il manque la multiplication par la dérivée de la fonction intérieure. C’est la chaîne : la couche interne apporte toujours un facteur.",
     "en": "The power was differentiated correctly, but the multiplication by the derivative of the inner function is missing. That is the chain: the inner layer always contributes a factor."
+  },
+  "A pressão muda sim: parte da energia de pressão virou energia cinética do escoamento.": {
+    "fr": "La pression change bel et bien : une part de l’énergie de pression est devenue énergie cinétique de l’écoulement.",
+    "en": "The pressure does change: part of the pressure energy became kinetic energy of the flow."
   },
   "A pressão numa profundidade é a atmosférica mais o peso da coluna de fluido.": {
     "fr": "La pression à une profondeur est la pression atmosphérique plus le poids de la colonne de fluide.",
@@ -2223,6 +2255,10 @@
     "fr": "Le rapport est inversé. L’excentricité vaut c/a — la distance focale divisée par le demi-axe, et non l’inverse.",
     "en": "The ratio is upside down. The eccentricity is c/a — the focal distance divided by the semi-axis, not the other way round."
   },
+  "A razão está invertida. Como o corpo é menos denso, a fração submersa é menor que #.": {
+    "fr": "Le rapport est inversé. Comme le corps est moins dense, la fraction immergée est inférieure à #.",
+    "en": "The ratio is upside down. Since the body is less dense, the submerged fraction is smaller than #."
+  },
   "A razão está invertida: no equilíbrio, y é o termo constante dividido pelo coeficiente.": {
     "fr": "Le rapport est inversé : à l’équilibre, y est le terme constant divisé par le coefficient.",
     "en": "The ratio is upside down: at equilibrium, y is the constant term divided by the coefficient."
@@ -2310,6 +2346,10 @@
   "A resistência térmica é o análogo da resistência elétrica.": {
     "fr": "La résistance thermique est l'analogue de la résistance électrique.",
     "en": "Thermal resistance is the analogue of electrical resistance."
+  },
+  "A resposta é pedida em kPa.": {
+    "fr": "La réponse est demandée en kPa.",
+    "en": "The answer is asked for in kPa."
   },
   "A resposta.": {
     "fr": "La réponse.",
@@ -2474,6 +2514,10 @@
   "A superfície, por sua vez, cresceria apenas k² = # vezes.": {
     "fr": "La surface, elle, ne croîtrait que de k² = # fois.",
     "en": "The surface, in turn, would grow only k² = # times."
+  },
+  "A sustentação cresce com o QUADRADO da velocidade: dobrar a velocidade a quadruplica.": {
+    "fr": "La portance croît avec le CARRÉ de la vitesse : doubler la vitesse la quadruple.",
+    "en": "Lift grows with the SQUARE of the speed: doubling the speed quadruples it."
   },
   "A sustentação é a diferença de pressão aplicada sobre a área.": {
     "fr": "La portance est la différence de pression appliquée sur la surface.",
@@ -2746,6 +2790,10 @@
   "AB e DE são lados correspondentes (A↔D, B↔E): têm a mesma medida.": {
     "fr": "AB et DE sont des côtés correspondants (A↔D, B↔E) : ils ont la même mesure.",
     "en": "AB and DE are matching sides (A↔D, B↔E): they have the same measure."
+  },
+  "Aberto nas duas pontas: fₙ = n·v/(#L), como na corda.": {
+    "fr": "Ouvert aux deux extrémités : fₙ = n·v/(#L), comme sur la corde.",
+    "en": "Open at both ends: fₙ = n·v/(#L), as on the string."
   },
   "Aceleração é variação de velocidade por tempo.": {
     "fr": "L'accélération est la variation de vitesse par temps.",
@@ -3435,6 +3483,10 @@
     "fr": "Be neutre a # électrons, autant que de protons.",
     "en": "Neutral Be has # electrons, as many as protons."
   },
+  "Bernoulli dá a diferença de pressão, (ρ/#)·(#² − #²); a sustentação é essa diferença vezes a área de # m².": {
+    "fr": "Bernoulli donne la différence de pression, (ρ/#)·(#² − #²) ; la portance est cette différence fois l’aire de # m².",
+    "en": "Bernoulli gives the pressure difference, (ρ/#)·(#² − #²); the lift is that difference times the # m² area."
+  },
   "Bernoulli é conservação de energia por unidade de volume.": {
     "fr": "Bernoulli est la conservation de l'énergie par unité de volume.",
     "en": "Bernoulli is energy conservation per unit volume."
@@ -3923,6 +3975,10 @@
     "fr": "Calculez F₁ et F₂ par Coulomb ; comme elles sont perpendiculaires, la résultante est √(F₁² + F₂²), comme dans un triangle rectangle.",
     "en": "Compute F₁ and F₂ with Coulomb’s law; since they are perpendicular, the resultant is √(F₁² + F₂²), as in a right triangle."
   },
+  "Calcule I/I₀ (divida por #⁻¹²), tire o log decimal e multiplique por #.": {
+    "fr": "Calculez I/I₀ (divisez par #⁻¹²), prenez le log décimal et multipliez par #.",
+    "en": "Compute I/I₀ (divide by #⁻¹²), take the base-ten log and multiply by #."
+  },
   "Calcule a força de A e a de B sobre M separadamente; dê a cada uma o sinal do seu sentido (repulsão afasta, atração aproxima) e some.": {
     "fr": "Calculez la force de A et celle de B sur M séparément ; donnez à chacune le signe de son sens (répulsion éloigne, attraction rapproche) et additionnez.",
     "en": "Compute the force from A and from B on M separately; give each the sign of its direction (repulsion pushes away, attraction pulls) and add."
@@ -3954,6 +4010,10 @@
   "Calcule o divergente (∂P/∂x + ∂Q/∂y + ∂R/∂z) e integre no cubo de lado #, termo a termo.": {
     "fr": "Calculez la divergence (∂P/∂x + ∂Q/∂y + ∂R/∂z) et intégrez sur le cube de côté #, terme à terme.",
     "en": "Work out the divergence (∂P/∂x + ∂Q/∂y + ∂R/∂z) and integrate over the cube of side #, term by term."
+  },
+  "Calcule o fundamental de cada corda (v/(#L)) e subtraia: os batimentos são |f₂ − f₁|.": {
+    "fr": "Calculez le fondamental de chaque corde (v/(#L)) et soustrayez : les battements valent |f₂ − f₁|.",
+    "en": "Compute the fundamental of each string (v/(#L)) and subtract: the beats are |f₂ − f₁|."
   },
   "Calcule o limite: é esse o valor que falta.": {
     "fr": "Calculez la limite : c’est la valeur qui manque.",
@@ -4319,6 +4379,10 @@
     "fr": "Avec la moitié du pas, et le double d’itérations.",
     "en": "With half the step, and twice as many iterations."
   },
+  "Com movimento relativo a frequência ouvida muda: é o efeito Doppler.": {
+    "fr": "Avec un mouvement relatif, la fréquence entendue change : c’est l’effet Doppler.",
+    "en": "With relative motion the frequency heard changes: that is the Doppler effect."
+  },
   "Com muitos lados, isso se aproxima de πr² — o círculo é o limite.": {
     "fr": "Avec beaucoup de côtés, cela s’approche de πr² — le cercle est la limite.",
     "en": "With many sides, this approaches πr² — the circle is the limit."
@@ -4558,6 +4622,10 @@
   "Como o argumento é um múltiplo de x, a cadeia acrescenta o fator interno.": {
     "fr": "Comme l’argument est un multiple de x, la chaîne ajoute le facteur interne.",
     "en": "Since the argument is a multiple of x, the chain adds the inner factor."
+  },
+  "Como o volume aparece nos dois, a comparação se reduz às densidades.": {
+    "fr": "Comme le volume apparaît des deux côtés, la comparaison se réduit aux masses volumiques.",
+    "en": "Since the volume appears on both sides, the comparison reduces to the densities."
   },
   "Como os externos somam 360°, basta dividir.": {
     "fr": "Comme les angles extérieurs font 360°, il suffit de diviser.",
@@ -4914,6 +4982,10 @@
   "De cada vértice saem n − # diagonais (não para ele mesmo nem para os dois vizinhos); cada diagonal foi contada duas vezes.": {
     "fr": "De chaque sommet partent n − # diagonales (ni vers lui-même ni vers les deux voisins) ; chaque diagonale a été comptée deux fois.",
     "en": "From each vertex come n − # diagonals (not to itself nor to the two neighbours); each diagonal was counted twice."
+  },
+  "De v = λ·f sai λ = v/f: divida # por #.": {
+    "fr": "De v = λ·f on tire λ = v/f : divisez # par #.",
+    "en": "From v = λ·f comes λ = v/f: divide # by #."
   },
   "De v = λ·f, isolamos λ.": {
     "fr": "De v = λ·f, nous isolons λ.",
@@ -5879,6 +5951,10 @@
     "fr": "E = k·|q|/r² : #×#⁻⁶ fois #×#⁹, divisé par (#)². Divisez ensuite par # pour des kN/C.",
     "en": "E = k·|q|/r²: #×#⁻⁶ times #×#⁹, divided by (#)². Then divide by # for kN/C."
   },
+  "E = ρ_fluido · V · g (# L = # m³)": {
+    "fr": "E = ρ_fluide · V · g (# L = # m³)",
+    "en": "E = ρ_fluid · V · g (# L = # m³)"
+  },
   "E a aceleração centrípeta sai da velocidade e do raio.": {
     "fr": "Et l’accélération centripète vient de la vitesse et du rayon.",
     "en": "And the centripetal acceleration comes from the speed and the radius."
@@ -6555,6 +6631,10 @@
     "fr": "Dans chaque groupe, le facteur commun en évidence : x² dans le premier, −# dans le second.",
     "en": "In each group, the common factor pulled out: x² in the first, −# in the second."
   },
+  "Em cada oscilação a onda anda um λ, e há # oscilações por segundo: v = # × #.": {
+    "fr": "À chaque oscillation l’onde avance d’un λ, et il y a # oscillations par seconde : v = # × #.",
+    "en": "With each oscillation the wave moves one λ, and there are # oscillations per second: v = # × #."
+  },
   "Em cada passo, seguimos a tangente e recomeçamos.": {
     "fr": "Chaque étape, nous suivons la tangente et recommençons.",
     "en": "At each step, we follow the tangent and start over."
@@ -6622,6 +6702,10 @@
   "Em dimensões, a divisão subtrai os expoentes.": {
     "fr": "En dimensions, la soustraction soustrait les exposants.",
     "en": "In dimensions, division subtracts the exponents."
+  },
+  "Em equilíbrio flutuando, a fração submersa é a razão das densidades.": {
+    "fr": "À l’équilibre en flottaison, la fraction immergée est le rapport des masses volumiques.",
+    "en": "In floating equilibrium, the submerged fraction is the ratio of the densities."
   },
   "Em escores, ele é simétrico em torno de zero.": {
     "fr": "En scores, il est symétrique autour de zéro.",
@@ -7403,6 +7487,10 @@
     "fr": "C’est la fraction en MASSE. Ce qui pousse la paroi, c’est la particule, pas le gramme : la fraction qui vaut ici est la molaire.",
     "en": "That is the fraction by MASS. What pushes the wall is particles, not grams: the fraction that counts here is the molar one."
   },
+  "Essa é a fração que fica FORA da água. A submersa é a razão direta entre as densidades.": {
+    "fr": "C’est la fraction qui reste HORS de l’eau. La fraction immergée est le rapport direct entre les masses volumiques.",
+    "en": "That is the fraction that stays OUT of the water. The submerged one is the direct ratio of the densities."
+  },
   "Essa é a frequência NATURAL, sem amortecimento. O atrito alonga o período, e a frequência amortecida é menor que a natural.": {
     "fr": "C’est la pulsation NATURELLE, sans amortissement. Le frottement allonge la période, et la pulsation amortie est plus petite que la naturelle.",
     "en": "That is the NATURAL frequency, without damping. Friction lengthens the period, and the damped frequency is smaller than the natural one."
@@ -7486,6 +7574,10 @@
   "Essa é a média de y. O intercepto só coincide com ela quando a média de x é zero, o que aqui não acontece.": {
     "fr": "C’est la moyenne de y. L’ordonnée à l’origine ne coïncide avec elle que si la moyenne de x est nulle, ce qui n’est pas le cas ici.",
     "en": "That is the mean of y. The intercept only coincides with it when the mean of x is zero, which is not the case here."
+  },
+  "Essa é a nota que se ouve (a média). Os batimentos por segundo são a DIFERENÇA.": {
+    "fr": "C’est la note qu’on entend (la moyenne). Les battements par seconde sont la DIFFÉRENCE.",
+    "en": "That is the note you hear (the average). The beats per second are the DIFFERENCE."
   },
   "Essa é a outra solução, a menor. A equação modular tem DUAS respostas, e o enunciado pede a maior.": {
     "fr": "C’est l’autre solution, la plus petite. L’équation avec valeur absolue a DEUX réponses, et l’énoncé demande la plus grande.",
@@ -7607,6 +7699,10 @@
     "fr": "Ce n’est que la partie réelle. Le module tient compte des deux coordonnées du point.",
     "en": "That is only the real part. The modulus takes both coordinates of the point into account."
   },
+  "Essa é só a pressão da COLUNA de água. A pressão total inclui também a atmosfera que pesa sobre a superfície.": {
+    "fr": "Ce n’est que la pression de la COLONNE d’eau. La pression totale comprend aussi l’atmosphère qui pèse sur la surface.",
+    "en": "That is only the pressure of the water COLUMN. The total pressure also includes the atmosphere pressing on the surface."
+  },
   "Essa é só a primeira parcela: a potência foi derivada e a função trigonométrica, mantida. Falta a segunda, que deriva a trigonométrica.": {
     "fr": "Ce n’est que le premier terme : la puissance a été dérivée et la fonction trigonométrique gardée. Il manque le second, qui dérive la trigonométrique.",
     "en": "That is only the first term: the power was differentiated and the trigonometric function kept. The second one, which differentiates the trigonometric function, is missing."
@@ -7618,6 +7714,10 @@
   "Esse número sai inteiro, e sair inteiro é a confirmação de que a empírica estava certa.": {
     "fr": "Ce nombre sort entier, et sortir entier confirme que l’empirique était juste.",
     "en": "That number comes out whole, and coming out whole confirms the empirical formula was right."
+  },
+  "Esse valor está em kPa; o enunciado pede a queda em Pa.": {
+    "fr": "Cette valeur est en kPa ; l’énoncé demande la chute en Pa.",
+    "en": "That value is in kPa; the question asks for the drop in Pa."
   },
   "Esse ângulo dá o mesmo valor de cosseno, mas está fora da imagem do arccos, que é [#°, #°]. A inversa devolve um ângulo só, o que está dentro dessa faixa.": {
     "fr": "Cet angle donne la même valeur, mais il est hors de l’image de l’arccos, qui vaut [#°, #°]. La fonction inverse ne rend qu’un seul angle, celui qui est dans cette plage.",
@@ -7670,6 +7770,10 @@
   "Esse é o PERÍMETRO (soma dos lados), não a área. Área se mede em unidades quadradas.": {
     "fr": "C’est le PÉRIMÈTRE (la somme des côtés), et non l’aire. L’aire se mesure en unités carrées.",
     "en": "That is the PERIMETER (the sum of the sides), not the area. Area is measured in square units."
+  },
+  "Esse é o PESO do corpo, que usa a densidade DELE. O empuxo usa a densidade do FLUIDO deslocado.": {
+    "fr": "C’est le POIDS du corps, qui utilise SA masse volumique. La poussée utilise la masse volumique du FLUIDE déplacé.",
+    "en": "That is the WEIGHT of the body, which uses ITS density. The buoyant force uses the density of the displaced FLUID."
   },
   "Esse é o VOLUME no instante, não a taxa com que ele cresce. A pergunta é por dV/dt, que sai de derivar a relação.": {
     "fr": "C’est le VOLUME à cet instant, et non le taux auquel il croît. La question porte sur dV/dt, qui sort de la dérivation de la relation.",
@@ -8055,6 +8159,10 @@
     "fr": "C’est le dernier terme ADDITIONNÉ (le #e). La borne est le premier terme négligé, le #e.",
     "en": "That is the last term ADDED (the #th). The bound is the first dropped one, the #th."
   },
+  "Esse é o Δp, em pascal. Falta multiplicar pela área da asa para obter a força.": {
+    "fr": "C’est le Δp, en pascals. Il reste à multiplier par l’aire de l’aile pour obtenir la force.",
+    "en": "That is the Δp, in pascals. Multiplying by the wing area to get the force is still missing."
+  },
   "Esse é quanto a camada # CABE, não quanto ela tem. Capacidade e ocupação só coincidem quando a camada está cheia, e a última raramente está.": {
     "fr": "C’est ce que la couche # PEUT contenir, et non ce qu’elle contient. Capacité et occupation ne coïncident que lorsque la couche est pleine, et la dernière l’est rarement.",
     "en": "That is how much shell # CAN hold, not how much it holds. Capacity and occupancy only match when the shell is full, and the last one rarely is."
@@ -8251,6 +8359,10 @@
     "fr": "Il manque l’émissivité, qui vaut #. Seul un corps noir parfait rayonne avec une émissivité de #.",
     "en": "The emissivity, which is #, is missing. Only a perfect black body radiates with emissivity #."
   },
+  "Faltou a gravidade: a pressão vem do PESO da coluna, não da massa.": {
+    "fr": "Il manque la gravité : la pression vient du POIDS de la colonne, et non de la masse.",
+    "en": "Gravity is missing: the pressure comes from the WEIGHT of the column, not from the mass."
+  },
   "Faltou a parcela que deriva x e mantém a função trigonométrica. A regra do produto sempre soma duas parcelas, nunca uma.": {
     "fr": "Il manque le terme qui dérive x et garde la fonction trigonométrique. La règle du produit additionne toujours deux termes, jamais un seul.",
     "en": "The term that differentiates x and keeps the trigonometric function is missing. The product rule always adds two terms, never one."
@@ -8278,6 +8390,10 @@
   "Faltou a raiz quadrada: # é r², não r.": {
     "fr": "Il manque la racine carrée : # vaut r², et non r.",
     "en": "The square root is missing: # is r², not r."
+  },
+  "Faltou a raiz quadrada: v = √(T/μ).": {
+    "fr": "Il manque la racine carrée : v = √(T/μ).",
+    "en": "The square root is missing: v = √(T/μ)."
   },
   "Faltou a segunda solução. A calculadora devolve só uma, dentro de [#°, #°]; na volta inteira o cosseno assume esse valor em DOIS ângulos.": {
     "fr": "Il manque la seconde solution. La calculatrice n’en rend qu’une, dans [#°, #°] ; sur le tour complet, la fonction prend cette valeur en DEUX angles.",
@@ -8343,6 +8459,10 @@
     "fr": "Il manque la division par la norme de la vitesse. Le produit scalaire seul n’est pas une projection : il doit être normalisé par la direction sur laquelle on projette.",
     "en": "Dividing by the magnitude of the velocity is missing. The dot product alone is not a projection: it has to be normalised by the direction being projected onto."
   },
+  "Faltou dividir por #, que vem do termo ρv²/# de Bernoulli.": {
+    "fr": "Il manque la division par #, qui vient du terme ρv²/# de Bernoulli.",
+    "en": "Dividing by #, which comes from Bernoulli’s ρv²/# term, is missing."
+  },
   "Faltou dividir por #: cada aresta pertence a duas faces e foi contada duas vezes.": {
     "fr": "Il manque la division par # : chaque arête appartient à deux faces et a été comptée deux fois.",
     "en": "The division by # is missing: each edge belongs to two faces and was counted twice."
@@ -8371,6 +8491,10 @@
     "fr": "Il manque la division par # : le triangle est la MOITIÉ du parallélogramme de même base et de même hauteur.",
     "en": "Dividing by # is missing: the triangle is HALF the parallelogram with the same base and height."
   },
+  "Faltou dividir por I₀ = #⁻¹² W/m² antes do log: o decibel compara com o limiar da audição.": {
+    "fr": "Il manque la division par I₀ = #⁻¹² W/m² avant le log : le décibel compare au seuil d’audition.",
+    "en": "Dividing by I₀ = #⁻¹² W/m² before the log is missing: the decibel compares with the threshold of hearing."
+  },
   "Faltou elevar a temperatura à QUARTA potência. É ela que separa a radiação das outras duas formas de transferência.": {
     "fr": "Il manque l’élévation de la température à la puissance QUATRE. C’est elle qui sépare le rayonnement des deux autres modes de transfert.",
     "en": "Raising the temperature to the FOURTH power is missing. It is what sets radiation apart from the other two modes of transfer."
@@ -8394,6 +8518,10 @@
   "Faltou multiplicar pela derivada de dentro, que vale #. O resultado fica # vezes menor que o correto, e é o descuido mais frequente da regra da cadeia.": {
     "fr": "Il manque la multiplication par la dérivée intérieure, qui vaut #. Le résultat est # fois plus petit que le bon, et c’est l’étourderie la plus fréquente de la règle de la chaîne.",
     "en": "The multiplication by the inner derivative, which is #, is missing. The result comes out # times smaller than the right one, and it is the most frequent slip of the chain rule."
+  },
+  "Faltou multiplicar pela gravidade: o empuxo é o PESO do fluido deslocado, em newtons.": {
+    "fr": "Il manque la multiplication par la gravité : la poussée est le POIDS du fluide déplacé, en newtons.",
+    "en": "Multiplying by gravity is missing: the buoyant force is the WEIGHT of the displaced fluid, in newtons."
   },
   "Faltou multiplicar pela largura do intervalo. A integral acumula o valor ao longo de todo o intervalo.": {
     "fr": "Il manque la multiplication par la largeur de l’intervalle. L’intégrale accumule la valeur sur tout l’intervalle.",
@@ -8466,6 +8594,10 @@
   "Faltou o fator #: como a área já havia sido dividida por #, ele volta multiplicando quando isolamos h.": {
     "fr": "Il manque le facteur # : comme l’aire avait déjà été divisée par #, il revient en multipliant lorsqu’on isole h.",
     "en": "The factor # is missing: since the area had already been divided by #, it comes back multiplying when h is isolated."
+  },
+  "Faltou o fator #: β = #·log(I/I₀). O log sozinho dá bels, não decibéis.": {
+    "fr": "Il manque le facteur # : β = #·log(I/I₀). Le log seul donne des bels, pas des décibels.",
+    "en": "The factor # is missing: β = #·log(I/I₀). The log alone gives bels, not decibels."
   },
   "Faltou o fator da cadeia: cada derivada multiplica por #, e duas por #² = #.": {
     "fr": "Il manque le facteur de la chaîne : chaque dérivée multiplie par #, et deux par #² = #.",
@@ -8599,6 +8731,10 @@
     "fr": "Fe neutre a # électrons, autant que de protons.",
     "en": "Neutral Fe has # electrons, as many as protons."
   },
+  "Fechado numa ponta: fₙ = n·v/(#L), só com n ímpar. Aqui n = #.": {
+    "fr": "Fermé à une extrémité : fₙ = n·v/(#L), seulement avec n impair. Ici n = #.",
+    "en": "Closed at one end: fₙ = n·v/(#L), with odd n only. Here n = #."
+  },
   "Ficamos com a raiz que está dentro de (#, #).": {
     "fr": "Nous gardons la racine qui est dans (#, #).",
     "en": "We keep the root that lies inside (#, #)."
@@ -8639,6 +8775,10 @@
     "fr": "Supposez # g : chaque pourcentage devient des grammes. Convertissez-les en moles, divisez tous par le PLUS PETIT et, s’il reste un demi, multipliez tous par deux.",
     "en": "Pretend # g: each percentage turns into grams. Convert each to moles, divide them all by the SMALLEST and, if a half is left over, multiply them all by two."
   },
+  "Flutuando, o peso iguala o empuxo; o volume se cancela e a fração submersa é a razão das densidades: # sobre #.": {
+    "fr": "En flottaison, le poids égale la poussée ; le volume se simplifie et la fraction immergée est le rapport des masses volumiques : # sur #.",
+    "en": "Floating, the weight equals the buoyant force; the volume cancels and the submerged fraction is the ratio of the densities: # over #."
+  },
   "Fora da diagonal o elemento fica no lugar, mas troca de SINAL.": {
     "fr": "Hors de la diagonale, l’élément reste en place, mais change de SIGNE.",
     "en": "Off the diagonal the entry stays in place, but flips its SIGN."
@@ -8678,6 +8818,10 @@
   "Franja clara: a diferença de caminho é um número inteiro de comprimentos de onda. Para ângulos pequenos, y = m·λ·L/d.": {
     "fr": "Frange brillante : la différence de chemin est un nombre entier de longueurs d’onde. Pour de petits angles, y = m·λ·L/d.",
     "en": "Bright fringe: the path difference is a whole number of wavelengths. For small angles, y = m·λ·L/d."
+  },
+  "Gelo em água: densidade #, logo #% submerso — a ponta do iceberg é mesmo pequena.": {
+    "fr": "Glace dans l’eau : masse volumique #, donc #% immergé — la pointe de l’iceberg est bien petite.",
+    "en": "Ice in water: density #, so #% submerged — the tip of the iceberg really is small."
   },
   "Geometricamente, é a área de um quadrado de lado (a + b).": {
     "fr": "Géométriquement, c'est l'aire d'un carré de côté (a + b).",
@@ -8738,6 +8882,38 @@
   "I neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "I neutre a # électrons, autant que de protons.",
     "en": "Neutral I has # electrons, as many as protons."
+  },
+  "I/I₀ = #⁻² / #⁻¹² = #¹⁰. O log de # elevado a k é k; depois multiplique por #.": {
+    "fr": "I/I₀ = #⁻² / #⁻¹² = #¹⁰. Le log de # élevé à k vaut k ; multipliez ensuite par #.",
+    "en": "I/I₀ = #⁻² / #⁻¹² = #¹⁰. The log of # to the k is k; then multiply by #."
+  },
+  "I/I₀ = #⁻³ / #⁻¹² = #⁹. O log de # elevado a k é k; depois multiplique por #.": {
+    "fr": "I/I₀ = #⁻³ / #⁻¹² = #⁹. Le log de # élevé à k vaut k ; multipliez ensuite par #.",
+    "en": "I/I₀ = #⁻³ / #⁻¹² = #⁹. The log of # to the k is k; then multiply by #."
+  },
+  "I/I₀ = #⁻¹⁰ / #⁻¹² = #². O log de # elevado a k é k; depois multiplique por #.": {
+    "fr": "I/I₀ = #⁻¹⁰ / #⁻¹² = #². Le log de # élevé à k vaut k ; multipliez ensuite par #.",
+    "en": "I/I₀ = #⁻¹⁰ / #⁻¹² = #². The log of # to the k is k; then multiply by #."
+  },
+  "I/I₀ = #⁻⁴ / #⁻¹² = #⁸. O log de # elevado a k é k; depois multiplique por #.": {
+    "fr": "I/I₀ = #⁻⁴ / #⁻¹² = #⁸. Le log de # élevé à k vaut k ; multipliez ensuite par #.",
+    "en": "I/I₀ = #⁻⁴ / #⁻¹² = #⁸. The log of # to the k is k; then multiply by #."
+  },
+  "I/I₀ = #⁻⁵ / #⁻¹² = #⁷. O log de # elevado a k é k; depois multiplique por #.": {
+    "fr": "I/I₀ = #⁻⁵ / #⁻¹² = #⁷. Le log de # élevé à k vaut k ; multipliez ensuite par #.",
+    "en": "I/I₀ = #⁻⁵ / #⁻¹² = #⁷. The log of # to the k is k; then multiply by #."
+  },
+  "I/I₀ = #⁻⁶ / #⁻¹² = #⁶. O log de # elevado a k é k; depois multiplique por #.": {
+    "fr": "I/I₀ = #⁻⁶ / #⁻¹² = #⁶. Le log de # élevé à k vaut k ; multipliez ensuite par #.",
+    "en": "I/I₀ = #⁻⁶ / #⁻¹² = #⁶. The log of # to the k is k; then multiply by #."
+  },
+  "I/I₀ = #⁻⁷ / #⁻¹² = #⁵. O log de # elevado a k é k; depois multiplique por #.": {
+    "fr": "I/I₀ = #⁻⁷ / #⁻¹² = #⁵. Le log de # élevé à k vaut k ; multipliez ensuite par #.",
+    "en": "I/I₀ = #⁻⁷ / #⁻¹² = #⁵. The log of # to the k is k; then multiply by #."
+  },
+  "I/I₀ = #⁻⁹ / #⁻¹² = #³. O log de # elevado a k é k; depois multiplique por #.": {
+    "fr": "I/I₀ = #⁻⁹ / #⁻¹² = #³. Le log de # élevé à k vaut k ; multipliez ensuite par #.",
+    "en": "I/I₀ = #⁻⁹ / #⁻¹² = #³. The log of # to the k is k; then multiply by #."
   },
   "Identificamos as duas camadas: a potência por fora, o binômio por dentro.": {
     "fr": "Nous identifions les deux couches : la puissance dehors, le binôme dedans.",
@@ -9883,6 +10059,14 @@
     "fr": "Dans la convection, le fluide emporte la chaleur.",
     "en": "In convection, the fluid carries the heat away."
   },
+  "Na corda presa cabe MEIA onda no fundamental: λ = #L, então divide-se por #L, não por L.": {
+    "fr": "Sur la corde fixée tient une DEMI-onde au fondamental : λ = #L, on divise donc par #L, et non par L.",
+    "en": "On the fixed string HALF a wave fits at the fundamental: λ = #L, so you divide by #L, not by L."
+  },
+  "Na corda presa cabem n meias ondas: fₙ = n·v/(#L) = #·#/(#·#).": {
+    "fr": "Sur la corde fixée tiennent n demi-ondes : fₙ = n·v/(#L) = #·#/(#·#).",
+    "en": "On the fixed string n half-waves fit: fₙ = n·v/(#L) = #·#/(#·#)."
+  },
   "Na diagonal principal os dois elementos TROCAM de lugar antes de dividir.": {
     "fr": "Sur la diagonale principale, les deux éléments ÉCHANGENT leur place avant la division.",
     "en": "On the main diagonal the two entries SWAP places before dividing."
@@ -10531,6 +10715,10 @@
     "fr": "Notez le #s avant le #d : l’énergie du #s est plus basse, et c’est l’énergie qui commande.",
     "en": "Note the #s before the #d: the #s has lower energy, and energy is what rules."
   },
+  "Note que a pressão não depende da forma do recipiente, apenas da altura.": {
+    "fr": "Notez que la pression ne dépend pas de la forme du récipient, seulement de la hauteur.",
+    "en": "Note that the pressure does not depend on the shape of the container, only on the height."
+  },
   "Nulo: o caso crítico, em que o retorno é o mais rápido possível sem oscilar.": {
     "fr": "Nul : le cas critique, où le retour est le plus rapide possible sans oscillation.",
     "en": "Zero: the critical case, where the return is as fast as possible without oscillating."
@@ -10538,6 +10726,10 @@
   "Num campo plano (P, Q), o rotacional aponta em z e mede o giro local.": {
     "fr": "Dans un champ plan (P, Q), le rotationnel pointe en z et mesure la rotation locale.",
     "en": "In a plane field (P, Q), the curl points along z and measures the local spin."
+  },
+  "Num duto horizontal, a energia de pressão vira energia de movimento: a queda é (ρ/#)·(#² − #²), com ρ do ar = # kg/m³.": {
+    "fr": "Dans un conduit horizontal, l’énergie de pression devient énergie de mouvement : la chute vaut (ρ/#)·(#² − #²), avec ρ de l’air = # kg/m³.",
+    "en": "In a horizontal duct, pressure energy turns into energy of motion: the drop is (ρ/#)·(#² − #²), with ρ of air = # kg/m³."
   },
   "Num fio, a força é campo vezes corrente vezes comprimento (vezes sen θ).": {
     "fr": "Dans un fil, la force est champ fois courant fois longueur (fois sin θ).",
@@ -10731,6 +10923,10 @@
     "fr": "Le # monte en multipliant le volume lorsqu’on isole h.",
     "en": "The # moves up multiplying the volume when h is isolated."
   },
+  "O #L é do tubo fechado numa ponta. Corda presa nas duas pontas usa #L.": {
+    "fr": "Le #L est celui du tuyau fermé à une extrémité. Une corde fixée aux deux bouts utilise #L.",
+    "en": "The #L belongs to the tube closed at one end. A string fixed at both ends uses #L."
+  },
   "O #L é o perímetro dividido por #: crescer o lado acrescenta duas faixas.": {
     "fr": "Le #L est le périmètre divisé par # : agrandir le côté ajoute deux bandes.",
     "en": "The #L is the perimeter divided by #: growing the side adds two strips."
@@ -10806,6 +11002,10 @@
   "O amortecimento alonga o período em relação ao sistema sem atrito.": {
     "fr": "L’amortissement allonge la période par rapport au système sans frottement.",
     "en": "Damping lengthens the period compared with the frictionless system."
+  },
+  "O ar passa mais rápido por cima da asa, e a pressão ali é menor.": {
+    "fr": "L’air passe plus vite au-dessus de l’aile, et la pression y est plus faible.",
+    "en": "The air passes faster over the wing, and the pressure there is lower."
   },
   "O arccos NÃO é ímpar: arccos(−y) = #° − arccos(y), e o resultado fica entre #° e #°, nunca negativo.": {
     "fr": "L’arccos N’EST PAS impair : arccos(−y) = #° − arccos(y), et le résultat reste entre #° et #°, jamais négatif.",
@@ -11339,6 +11539,10 @@
     "fr": "Le domaine est tout l’ensemble des réels, sauf ce point.",
     "en": "The domain is the whole set of reals, except that point."
   },
+  "O duto é horizontal, então os termos de altura se cancelam.": {
+    "fr": "Le conduit est horizontal, donc les termes de hauteur se simplifient.",
+    "en": "The duct is horizontal, so the height terms cancel."
+  },
   "O eixo maior vai do periélio ao afélio; o semieixo é a metade.": {
     "fr": "Le grand axe va du périhélie à l’aphélie ; le demi-axe en est la moitié.",
     "en": "The major axis runs from perihelion to aphelion; the semi-axis is half of it."
@@ -11355,9 +11559,17 @@
     "fr": "L’électron n’entre pas : sa masse est trop petite pour compter ici.",
     "en": "The electron does not count: its mass is far too small to matter here."
   },
+  "O empuxo supera o peso: o corpo flutua.": {
+    "fr": "La poussée dépasse le poids : le corps flotte.",
+    "en": "The buoyant force beats the weight: the body floats."
+  },
   "O empuxo é a taxa com que o motor entrega momento ao gás.": {
     "fr": "La poussée est le taux avec lequel le moteur délivre du moment au gaz.",
     "en": "The thrust is the rate at which the engine delivers momentum to the gas."
+  },
+  "O empuxo é o peso do fluido deslocado pelo corpo.": {
+    "fr": "La poussée d’Archimède est le poids du fluide déplacé par le corps.",
+    "en": "The buoyant force is the weight of the fluid the body displaces."
   },
   "O enunciado pede o FATOR, que é a razão entre os erros, e não a diferença entre eles.": {
     "fr": "L’énoncé demande le FACTEUR, c’est-à-dire le rapport entre les erreurs, et non leur différence.",
@@ -11526,6 +11738,10 @@
   "O fatorial não foi aplicado: n! é o produto de todos os naturais de # a n, não o próprio n.": {
     "fr": "La factorielle n’a pas été appliquée : n! est le produit de tous les entiers naturels de # à n, et non n lui-même.",
     "en": "The factorial was not applied: n! is the product of all the naturals from # to n, not n itself."
+  },
+  "O fluido acelerou, então a pressão caiu — é o princípio da sustentação.": {
+    "fr": "Le fluide a accéléré, donc la pression a chuté — c’est le principe de la portance.",
+    "en": "The fluid sped up, so the pressure dropped — that is the principle of lift."
   },
   "O fluxo conta quantas linhas atravessam a espira: o cosseno do ângulo com a normal.": {
     "fr": "Le flux compte combien de lignes traversent la spire : le cosinus de l’angle avec la normale.",
@@ -11942,6 +12158,10 @@
   "O peso do corpo usa a densidade DELE.": {
     "fr": "Le poids du corps utilise la densité DE LUI.",
     "en": "The body's weight uses ITS density."
+  },
+  "O peso supera o empuxo: o corpo afunda.": {
+    "fr": "Le poids dépasse la poussée : le corps coule.",
+    "en": "The weight beats the buoyant force: the body sinks."
   },
   "O pivô da primeira coluna é a₁₁ = #; a entrada a zerar é #.": {
     "fr": "Le pivot de la première colonne est a₁₁ = # ; l’entrée à annuler est #.",
@@ -12426,6 +12646,10 @@
   "O sinal está invertido: o fator (x - #) zera no número de sinal contrário ao que está dentro dele.": {
     "fr": "Le facteur (x - #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
     "en": "The factor (x - #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
+  "O sinal está invertido: onde o fluido ACELERA, a pressão CAI. A queda pedida é positiva, e vale (v_B² − v_A²), não (v_A² − v_B²).": {
+    "fr": "Le signe est inversé : là où le fluide ACCÉLÈRE, la pression CHUTE. La chute demandée est positive, et vaut (v_B² − v_A²), et non (v_A² − v_B²).",
+    "en": "The sign is flipped: where the fluid SPEEDS UP, the pressure DROPS. The drop asked for is positive, and equals (v_B² − v_A²), not (v_A² − v_B²)."
   },
   "O sinal está trocado. O metal perde elétrons, e por isso o nox dele é positivo; o negativo é do elemento que recebe.": {
     "fr": "Le signe est inversé. Le métal perd des électrons, et son n.o. est donc positif ; le négatif est celui de l’élément qui en reçoit.",
@@ -13383,6 +13607,10 @@
     "fr": "Les signes des parties réelle et imaginaire localisent le point.",
     "en": "The signs of the real and imaginary parts locate the point."
   },
+  "Os sinais estão trocados: aproximar-se AUMENTA a frequência ouvida, afastar-se diminui.": {
+    "fr": "Les signes sont inversés : s’approcher AUGMENTE la fréquence entendue, s’éloigner la diminue.",
+    "en": "The signs are flipped: approaching RAISES the frequency heard, moving away lowers it."
+  },
   "Os subníveis foram preenchidos na ordem dos NÚMEROS, e não na de energia. O #s vem antes do #d: é a energia que manda, não o número da camada.": {
     "fr": "Les sous-couches ont été remplies dans l’ordre des NUMÉROS, et non des énergies. Le #s vient avant le #d : c’est l’énergie qui commande, pas le numéro de la couche.",
     "en": "The subshells were filled in order of NUMBERS, not of energy. The #s comes before the #d: energy is what rules, not the shell number."
@@ -13826,6 +14054,10 @@
   "Passe ao externo (#° − #°), ache n = #° ÷ externo e use d = n(n − #)/#.": {
     "fr": "Passez à l’extérieur (#° − #°), trouvez n = #° ÷ extérieur et utilisez d = n(n − #)/#.",
     "en": "Go to the exterior angle (#° − #°), find n = #° ÷ exterior and use d = n(n − #)/#."
+  },
+  "Passe μ para kg/m (# g/m = # kg/m) e use v = √(T/μ).": {
+    "fr": "Convertissez μ en kg/m (# g/m = # kg/m) et utilisez v = √(T/μ).",
+    "en": "Convert μ to kg/m (# g/m = # kg/m) and use v = √(T/μ)."
   },
   "Pb neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Pb neutre a # électrons, autant que de protons.",
@@ -15499,6 +15731,10 @@
     "fr": "Nous substituons.",
     "en": "We substitute."
   },
+  "Subtraia as FREQUÊNCIAS, não as velocidades: cada uma dividida por #L.": {
+    "fr": "Soustrayez les FRÉQUENCES, et non les vitesses : chacune divisée par #L.",
+    "en": "Subtract the FREQUENCIES, not the speeds: each one divided by #L."
+  },
   "Subtraia as posições e aplique Pitágoras nas componentes.": {
     "fr": "Soustrayez les positions et appliquez Pythagore aux composantes.",
     "en": "Subtract the positions and apply Pythagoras to the components."
@@ -15951,6 +16187,10 @@
     "fr": "Prenez u = ln x. Le bon choix est celui qui se simplifie en dérivant.",
     "en": "Take u = ln x. The right choice is the one that gets simpler when differentiated."
   },
+  "Totalmente submerso, o corpo desce com a resultante.": {
+    "fr": "Entièrement immergé, le corps descend sous l’effet de la résultante.",
+    "en": "Fully submerged, the body goes down under the net force."
+  },
   "Trabalho é força vezes deslocamento.": {
     "fr": "Le travail est la force fois le déplacement.",
     "en": "Work is force times displacement."
@@ -16042,6 +16282,14 @@
   "Três pirâmides de mesma base e altura preenchem exatamente um prisma.": {
     "fr": "Trois pyramides de même base et hauteur remplissent exactement un prisme.",
     "en": "Three pyramids of the same base and height exactly fill a prism."
+  },
+  "Tubo aberto nas duas pontas se comporta como a corda: #L, não #L.": {
+    "fr": "Un tuyau ouvert aux deux extrémités se comporte comme la corde : #L, et non #L.",
+    "en": "A tube open at both ends behaves like the string: #L, not #L."
+  },
+  "Tubo fechado numa ponta tem nó só de um lado: cabe um QUARTO de onda, e divide-se por #L, não por #L.": {
+    "fr": "Un tuyau fermé à une extrémité n’a un nœud que d’un côté : il y tient un QUART d’onde, et on divise par #L, et non par #L.",
+    "en": "A tube closed at one end has a node on one side only: a QUARTER of a wave fits, and you divide by #L, not by #L."
   },
   "Tubo fechado numa ponta: nó na ponta fechada, ventre na aberta. Cabem quartos de onda, e só os harmônicos ímpares existem.": {
     "fr": "Tube fermé à une extrémité : nœud à l’extrémité fermée, ventre à l’ouverte. Il tient des quarts d’onde, et seuls les harmoniques impairs existent.",
@@ -17027,6 +17275,14 @@
     "fr": "f(nombre) veut dire : remplacez tout x par ce nombre et calculez.",
     "en": "f(number) means: replace every x by that number and compute."
   },
+  "f′ = f·(v + vₒ)/(v − v_f): vₒ = # e v_f = # (positivos quando se aproximam).": {
+    "fr": "f′ = f·(v + vₒ)/(v − v_f) : vₒ = # et v_f = # (positifs quand ils s’approchent).",
+    "en": "f′ = f·(v + vₒ)/(v − v_f): vₒ = # and v_f = # (positive when they approach)."
+  },
+  "f′ = f·v/(v − v_f), com v_f = # (positivo se a fonte se aproxima).": {
+    "fr": "f′ = f·v/(v − v_f), avec v_f = # (positif si la source s’approche).",
+    "en": "f′ = f·v/(v − v_f), with v_f = # (positive if the source approaches)."
+  },
   "f′ é um trinômio com a = #: negativo ENTRE as raízes, positivo fora delas.": {
     "fr": "f′ est un trinôme avec a = # : négatif ENTRE les racines, positif en dehors.",
     "en": "f′ is a quadratic with a = #: negative BETWEEN the roots, positive outside them."
@@ -17130,6 +17386,14 @@
   "sen(u)/u → # só quando o ângulo e o denominador são iguais. Aqui o ângulo é #x: falta o fator #.": {
     "fr": "sin(u)/u → # seulement si l’angle et le dénominateur sont identiques. Ici l’angle vaut #x : il manque le facteur #.",
     "en": "sin(u)/u → # only when the angle and the denominator are the same. Here the angle is #x: the factor # is missing."
+  },
+  "v = λ·f: multiplica-se, não se divide.": {
+    "fr": "v = λ·f : on multiplie, on ne divise pas.",
+    "en": "v = λ·f: you multiply, you do not divide."
+  },
+  "v = √(T/μ): divida # por # e tire a raiz quadrada.": {
+    "fr": "v = √(T/μ) : divisez # par # et prenez la racine carrée.",
+    "en": "v = √(T/μ): divide # by # and take the square root."
   },
   "x = # é o CENTRO da série, não o raio. O raio sai da desigualdade |x − a| < R.": {
     "fr": "x = # est le CENTRE de la série, et non le rayon. Le rayon sort de l’inégalité |x − a| < R.",
@@ -17542,6 +17806,10 @@
   "Φ = B·A·cos θ, com A em m² (# cm² = #×#⁻⁴ m²) e o ângulo medido da normal. Em Wb; ×# para mWb.": {
     "fr": "Φ = B·A·cos θ, avec A en m² (# cm² = #×#⁻⁴ m²) et l’angle mesuré depuis la normale. En Wb ; ×# pour des mWb.",
     "en": "Φ = B·A·cos θ, with A in m² (# cm² = #×#⁻⁴ m²) and the angle measured from the normal. In Wb; ×# for mWb."
+  },
+  "λ = v/f: a velocidade se DIVIDE pela frequência. # vezes # daria uma velocidade sem sentido.": {
+    "fr": "λ = v/f : la vitesse se DIVISE par la fréquence. # fois # donnerait une vitesse qui n’a pas de sens.",
+    "en": "λ = v/f: the speed is DIVIDED by the frequency. # times # would give a meaningless speed."
   },
   "λ = y·d/(m·L), com y e d em metros; o resultado em metros vezes #⁹ dá nanômetros.": {
     "fr": "λ = y·d/(m·L), avec y et d en mètres ; le résultat en mètres fois #⁹ donne des nanomètres.",
