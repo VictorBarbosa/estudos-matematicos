@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
@@ -28,10 +33,19 @@ function doisTermosPA(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = pedeRazao ? r : a1;
   const saltos = q - p;
 
+  const texto = enunciadoDoMolde(
+    moldesDe(
+      'progressoes',
+      pedeRazao ? 'pa-razao-por-dois-termos' : 'pa-primeiro-termo-por-dois-termos',
+    )[0]!,
+    { p, ap, q, aq },
+  );
+
   return {
     id: `prog-dois-pa-${a1}-${r}-${p}-${q}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Numa PA, o ${p}º termo é ${ap} e o ${q}º termo é ${aq}. Qual é ${pedeRazao ? 'a razão' : 'o primeiro termo'}?`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `a_{${p}} = ${ap} \\qquad a_{${q}} = ${aq}`,
     gabarito,
     resolucao: {
@@ -101,10 +115,18 @@ function doisTermosPG(nivel: Nivel, rng: Rng): Exercicio<number> {
   const aq = a1 * razao ** (q - 1);
   const quociente = aq / ap;
 
+  const texto = enunciadoDoMolde(moldesDe('progressoes', 'pg-primeiro-termo-por-dois-termos')[0]!, {
+    p,
+    ap,
+    q,
+    aq,
+  });
+
   return {
     id: `prog-dois-pg-${a1}-${razao}-${p}-${q}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Numa PG de termos reais, o ${p}º termo é ${ap} e o ${q}º termo é ${aq}. Qual é o primeiro termo?`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `a_{${p}} = ${ap} \\qquad a_{${q}} = ${aq}`,
     gabarito: a1,
     resolucao: {

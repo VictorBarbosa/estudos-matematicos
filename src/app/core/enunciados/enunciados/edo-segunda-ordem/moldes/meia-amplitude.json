@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma massa de {dados-calculo.m} kg, mola de {dados-calculo.k} N/m e amortecimento {dados-calculo.c} N·s/m. Em quantos segundos a amplitude da oscilação cai à METADE?",
+    "fr": "Une masse de {dados-calculo.m} kg, un ressort de {dados-calculo.k} N/m et un amortissement de {dados-calculo.c} N·s/m. En combien de secondes l’amplitude de l’oscillation tombe-t-elle à la MOITIÉ ?",
+    "en": "A {dados-calculo.m} kg mass, a {dados-calculo.k} N/m spring and {dados-calculo.c} N·s/m damping. In how many seconds does the oscillation amplitude fall to HALF?"
+  }
+}

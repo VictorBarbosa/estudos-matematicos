@@ -69,6 +69,7 @@ import efuncoesRacionaisExtremo15 from '@core/enunciados/enunciados/funcoes-raci
 import efuncoesRacionaisMoldesForma1 from '@core/enunciados/enunciados/funcoes-racionais/moldes/forma-1.json';
 import efuncoesRacionaisMoldesForma2 from '@core/enunciados/enunciados/funcoes-racionais/moldes/forma-2.json';
 import efuncoesRacionaisMoldesForma3 from '@core/enunciados/enunciados/funcoes-racionais/moldes/forma-3.json';
+import efuncoesRacionaisMoldesSufixoCasas3 from '@core/enunciados/enunciados/funcoes-racionais/moldes/sufixo-casas-3.json';
 import efuncoesRacionaisMoldesForma4 from '@core/enunciados/enunciados/funcoes-racionais/moldes/forma-4.json';
 import efuncoesRacionaisMoldesForma5 from '@core/enunciados/enunciados/funcoes-racionais/moldes/forma-5.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
@@ -137,6 +138,7 @@ export const ENTRADAS_DE_FUNCOES_RACIONAIS: readonly EntradaDeEnunciado[] = [
   { topico: 'funcoes-racionais', forma: 'forma-1', conteudo: efuncoesRacionaisMoldesForma1 },
   { topico: 'funcoes-racionais', forma: 'forma-2', conteudo: efuncoesRacionaisMoldesForma2 },
   { topico: 'funcoes-racionais', forma: 'forma-3', conteudo: efuncoesRacionaisMoldesForma3 },
+  { topico: 'funcoes-racionais', forma: 'sufixo-casas-3', conteudo: efuncoesRacionaisMoldesSufixoCasas3 },
   { topico: 'funcoes-racionais', forma: 'forma-4', conteudo: efuncoesRacionaisMoldesForma4 },
   { topico: 'funcoes-racionais', forma: 'forma-5', conteudo: efuncoesRacionaisMoldesForma5 },
 ];

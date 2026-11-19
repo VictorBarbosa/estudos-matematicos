@@ -1,3 +1,4 @@
+import { enunciadoComSufixos, moldesDe } from '@core/enunciados/moldes/moldes.model';
 import {
   ConjuntoSolucaoReal,
   Polinomio,
@@ -186,8 +187,9 @@ function sortearPergunta(nivel: Nivel, rng: Rng): Pergunta {
   }
 }
 
-const ENUNCIADO = 'Resolva a inequação e escreva o conjunto solução.';
-const COMO_FRACAO = ' Fronteiras não inteiras como fração, ex.: 3/2.';
+/** A pergunta e o aviso de formato, os dois vindos do arquivo. */
+const ENUNCIADO = moldesDe('inequacoes-segundo-grau', 'resolva-a-inequacao')[0]!;
+const COMO_FRACAO = moldesDe('inequacoes-segundo-grau', 'sufixo-fronteiras-como-fracao');
 
 /** As armadilhas que valem para qualquer conjunto com duas fronteiras. */
 function armadilhasDeIntervalo(
@@ -296,10 +298,13 @@ function montar(
   fracao = false,
 ): Exercicio<ConjuntoSolucaoReal> {
   const gabarito = resolucao.resultado;
+  const texto = enunciadoComSufixos(ENUNCIADO, fracao ? COMO_FRACAO : []);
+
   return {
     id,
     nivel,
-    enunciado: ENUNCIADO + (fracao ? COMO_FRACAO : ''),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex,
     gabarito,
     resolucao: { resultado: gabarito, passos: resolucao.passos },

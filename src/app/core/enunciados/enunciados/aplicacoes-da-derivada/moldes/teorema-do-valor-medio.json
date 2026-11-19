@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Pelo teorema do valor médio, existe c em ({dados-calculo.a}, {dados-calculo.b}) onde a tangente é paralela à secante pelos extremos do intervalo. Encontre c.",
+    "fr": "D'après le théorème des accroissements finis, il existe c dans ({dados-calculo.a}, {dados-calculo.b}) où la tangente est parallèle à la sécante passant par les bornes de l'intervalle. Trouvez c.",
+    "en": "By the mean value theorem, there is a c in ({dados-calculo.a}, {dados-calculo.b}) where the tangent is parallel to the secant through the interval's endpoints. Find c."
+  }
+}

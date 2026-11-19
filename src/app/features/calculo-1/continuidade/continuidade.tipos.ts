@@ -1,4 +1,6 @@
+import { enunciadoDoMolde, moldesDe } from '@core/enunciados/moldes/moldes.model';
 import { Polinomio } from '@core/math';
+import { EnunciadoTrilingue } from '@core/treino/textos/texto-trilingue';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
@@ -7,9 +9,9 @@ const exato = (a: number, b: number): boolean => a === b;
 type Tipo = 1 | 2 | 3;
 const NOME: Record<Tipo, string> = { 1: 'removível', 2: 'de salto', 3: 'infinita' };
 
-const PERGUNTA =
-  'Classifique a descontinuidade em x = {p}. Responda 1 se for removível, 2 se for de salto, ' +
-  '3 se for infinita.';
+/** A pergunta, igual nos quatro casos, vinda do arquivo nas três línguas. */
+const PERGUNTA = (p: number): EnunciadoTrilingue =>
+  enunciadoDoMolde(moldesDe('continuidade', 'classifique-a-descontinuidade')[0]!, { p });
 
 /** As duas respostas erradas, cada uma com o porquê de não ser. */
 function armadilhas(certo: Tipo, motivo: Record<Tipo, string>) {
@@ -46,10 +48,13 @@ export function exercicioTipoDescontinuidade(nivel: Nivel, rng: Rng): Exercicio<
     let m = rng.inteiro(-5, 5);
     if (m === -p) m += 1;
     const num = Polinomio.de(-p * m, m - p, 1);
+    const texto = PERGUNTA(p);
+
     return {
       id: `cont-tipo-rem-${p}${m}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: PERGUNTA.replace('{p}', String(p)),
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `f(x) = \\frac{${num.paraTex()}}{${Polinomio.de(-p, 1).paraTex()}}`,
       gabarito: 1,
       resolucao: {
@@ -90,10 +95,13 @@ export function exercicioTipoDescontinuidade(nivel: Nivel, rng: Rng): Exercicio<
     if (a * p + b === c * p + d) d += rng.escolher([2, -3]);
     const esq = a * p + b;
     const dir = c * p + d;
+    const texto = PERGUNTA(p);
+
     return {
       id: `cont-tipo-salto-${p}${a}${b}${c}${d}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: PERGUNTA.replace('{p}', String(p)),
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `f(x) = \\begin{cases} ${Polinomio.de(b, a).paraTex()} & x < ${p} \\\\ ${Polinomio.de(d, c).paraTex()} & x \\geq ${p} \\end{cases}`,
       gabarito: 2,
       resolucao: {
@@ -127,10 +135,13 @@ export function exercicioTipoDescontinuidade(nivel: Nivel, rng: Rng): Exercicio<
   // (x + m)/(x − p) com p + m ≠ 0: numerador não zera, assíntota vertical.
   let m = rng.inteiro(-5, 5);
   if (m === -p) m += 2;
+  const texto = PERGUNTA(p);
+
   return {
     id: `cont-tipo-inf-${p}${m}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: PERGUNTA.replace('{p}', String(p)),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = \\frac{${Polinomio.de(m, 1).paraTex()}}{${Polinomio.de(-p, 1).paraTex()}}`,
     gabarito: 3,
     resolucao: {
@@ -176,10 +187,13 @@ function tipoEmRacional(nivel: Nivel, rng: Rng): Exercicio<number> {
   const certo: Tipo = perguntaEmP ? 1 : 3;
   const limiteEmP = (p + m) / (p - q);
 
+  const texto = PERGUNTA(ponto);
+
   return {
     id: `cont-tipo-racional-${p}${q}${m}-${ponto}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: PERGUNTA.replace('{p}', String(ponto)),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = \\frac{${num.paraTex()}}{${den.paraTex()}}`,
     gabarito: certo,
     resolucao: {

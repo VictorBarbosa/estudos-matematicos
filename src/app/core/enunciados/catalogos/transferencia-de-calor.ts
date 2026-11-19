@@ -69,6 +69,7 @@ import etransferenciaDeCalorExtremo15 from '@core/enunciados/enunciados/transfer
 import etransferenciaDeCalorMoldesForma1 from '@core/enunciados/enunciados/transferencia-de-calor/moldes/forma-1.json';
 import etransferenciaDeCalorMoldesForma2 from '@core/enunciados/enunciados/transferencia-de-calor/moldes/forma-2.json';
 import etransferenciaDeCalorMoldesForma3 from '@core/enunciados/enunciados/transferencia-de-calor/moldes/forma-3.json';
+import etransferenciaDeCalorMoldesSufixoCasas3 from '@core/enunciados/enunciados/transferencia-de-calor/moldes/sufixo-casas-3.json';
 import etransferenciaDeCalorMoldesForma4 from '@core/enunciados/enunciados/transferencia-de-calor/moldes/forma-4.json';
 import etransferenciaDeCalorMoldesForma5 from '@core/enunciados/enunciados/transferencia-de-calor/moldes/forma-5.json';
 import etransferenciaDeCalorMoldesForma6 from '@core/enunciados/enunciados/transferencia-de-calor/moldes/forma-6.json';
@@ -139,6 +140,7 @@ export const ENTRADAS_DE_TRANSFERENCIA_DE_CALOR: readonly EntradaDeEnunciado[] =
   { topico: 'transferencia-de-calor', forma: 'forma-1', conteudo: etransferenciaDeCalorMoldesForma1 },
   { topico: 'transferencia-de-calor', forma: 'forma-2', conteudo: etransferenciaDeCalorMoldesForma2 },
   { topico: 'transferencia-de-calor', forma: 'forma-3', conteudo: etransferenciaDeCalorMoldesForma3 },
+  { topico: 'transferencia-de-calor', forma: 'sufixo-casas-3', conteudo: etransferenciaDeCalorMoldesSufixoCasas3 },
   { topico: 'transferencia-de-calor', forma: 'forma-4', conteudo: etransferenciaDeCalorMoldesForma4 },
   { topico: 'transferencia-de-calor', forma: 'forma-5', conteudo: etransferenciaDeCalorMoldesForma5 },
   { topico: 'transferencia-de-calor', forma: 'forma-6', conteudo: etransferenciaDeCalorMoldesForma6 },

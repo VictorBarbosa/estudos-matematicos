@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { areaComPassos, perimetroCirculoComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -487,14 +492,19 @@ function exercicioAnguloInscrito(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const resultado = doCentral ? inscrito : central;
 
+  const texto = enunciadoDoMolde(
+    moldesDe(
+      'circulo-e-poligonos',
+      doCentral ? 'inscrito-a-partir-do-central' : 'central-a-partir-do-inscrito',
+    )[0]!,
+    { angulo: doCentral ? central : inscrito },
+  );
+
   return {
     id: `circ-inscrito-${central}-${doCentral ? 'i' : 'c'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: doCentral
-      ? `Um ângulo central mede ${numeroEmPortugues(central)}°. Quanto mede o ângulo inscrito ` +
-        'que enxerga o mesmo arco? (em graus)'
-      : `Um ângulo inscrito mede ${numeroEmPortugues(inscrito)}°. Quanto mede o ângulo central ` +
-        'que enxerga o mesmo arco? (em graus)',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: doCentral ? `\\hat{C} = ${central}^\\circ` : `\\hat{I} = ${inscrito}^\\circ`,
     gabarito: resultado,
     resolucao: {

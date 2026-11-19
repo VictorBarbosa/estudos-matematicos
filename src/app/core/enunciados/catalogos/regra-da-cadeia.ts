@@ -68,6 +68,9 @@ import eregraDaCadeiaExtremo14 from '@core/enunciados/enunciados/regra-da-cadeia
 import eregraDaCadeiaExtremo15 from '@core/enunciados/enunciados/regra-da-cadeia/extremo/15.json';
 import eregraDaCadeiaMoldesForma1 from '@core/enunciados/enunciados/regra-da-cadeia/moldes/forma-1.json';
 import eregraDaCadeiaMoldesForma2 from '@core/enunciados/enunciados/regra-da-cadeia/moldes/forma-2.json';
+import eregraDaCadeiaMoldesSufixoCasas3 from '@core/enunciados/enunciados/regra-da-cadeia/moldes/sufixo-casas-3.json';
+import eregraDaCadeiaMoldesDerivadaNoPonto from '@core/enunciados/enunciados/regra-da-cadeia/moldes/derivada-no-ponto.json';
+import eregraDaCadeiaMoldesDerivadaSegundaNoPonto from '@core/enunciados/enunciados/regra-da-cadeia/moldes/derivada-segunda-no-ponto.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_REGRA_DA_CADEIA: readonly EntradaDeEnunciado[] = [
@@ -133,4 +136,7 @@ export const ENTRADAS_DE_REGRA_DA_CADEIA: readonly EntradaDeEnunciado[] = [
   { topico: 'regra-da-cadeia', nivel: 'extremo', conteudo: eregraDaCadeiaExtremo15 },
   { topico: 'regra-da-cadeia', forma: 'forma-1', conteudo: eregraDaCadeiaMoldesForma1 },
   { topico: 'regra-da-cadeia', forma: 'forma-2', conteudo: eregraDaCadeiaMoldesForma2 },
+  { topico: 'regra-da-cadeia', forma: 'sufixo-casas-3', conteudo: eregraDaCadeiaMoldesSufixoCasas3 },
+  { topico: 'regra-da-cadeia', forma: 'derivada-no-ponto', conteudo: eregraDaCadeiaMoldesDerivadaNoPonto },
+  { topico: 'regra-da-cadeia', forma: 'derivada-segunda-no-ponto', conteudo: eregraDaCadeiaMoldesDerivadaSegundaNoPonto },
 ];

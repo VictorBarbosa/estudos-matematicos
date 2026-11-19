@@ -73,6 +73,8 @@ import ecirculoEPoligonosMoldesForma4 from '@core/enunciados/enunciados/circulo-
 import ecirculoEPoligonosMoldesForma5 from '@core/enunciados/enunciados/circulo-e-poligonos/moldes/forma-5.json';
 import ecirculoEPoligonosMoldesForma6 from '@core/enunciados/enunciados/circulo-e-poligonos/moldes/forma-6.json';
 import ecirculoEPoligonosMoldesForma7 from '@core/enunciados/enunciados/circulo-e-poligonos/moldes/forma-7.json';
+import ecirculoEPoligonosMoldesCentralAPartirDoInscrito from '@core/enunciados/enunciados/circulo-e-poligonos/moldes/central-a-partir-do-inscrito.json';
+import ecirculoEPoligonosMoldesInscritoAPartirDoCentral from '@core/enunciados/enunciados/circulo-e-poligonos/moldes/inscrito-a-partir-do-central.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_CIRCULO_E_POLIGONOS: readonly EntradaDeEnunciado[] = [
@@ -143,4 +145,6 @@ export const ENTRADAS_DE_CIRCULO_E_POLIGONOS: readonly EntradaDeEnunciado[] = [
   { topico: 'circulo-e-poligonos', forma: 'forma-5', conteudo: ecirculoEPoligonosMoldesForma5 },
   { topico: 'circulo-e-poligonos', forma: 'forma-6', conteudo: ecirculoEPoligonosMoldesForma6 },
   { topico: 'circulo-e-poligonos', forma: 'forma-7', conteudo: ecirculoEPoligonosMoldesForma7 },
+  { topico: 'circulo-e-poligonos', forma: 'central-a-partir-do-inscrito', conteudo: ecirculoEPoligonosMoldesCentralAPartirDoInscrito },
+  { topico: 'circulo-e-poligonos', forma: 'inscrito-a-partir-do-central', conteudo: ecirculoEPoligonosMoldesInscritoAPartirDoCentral },
 ];

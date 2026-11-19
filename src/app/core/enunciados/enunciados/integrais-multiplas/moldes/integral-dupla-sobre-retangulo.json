@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Calcule a integral dupla desta função sobre o retângulo de {dados-calculo.x0} a {dados-calculo.x1} em x e de {dados-calculo.y0} a {dados-calculo.y1} em y.",
+    "fr": "Calculez l'intégrale double de cette fonction sur le rectangle de {dados-calculo.x0} à {dados-calculo.x1} en x et de {dados-calculo.y0} à {dados-calculo.y1} en y.",
+    "en": "Compute the double integral of this function over the rectangle from {dados-calculo.x0} to {dados-calculo.x1} in x and from {dados-calculo.y0} to {dados-calculo.y1} in y."
+  }
+}

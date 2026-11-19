@@ -69,6 +69,7 @@ import econtinuidadeExtremo15 from '@core/enunciados/enunciados/continuidade/ext
 import econtinuidadeMoldesForma1 from '@core/enunciados/enunciados/continuidade/moldes/forma-1.json';
 import econtinuidadeMoldesForma2 from '@core/enunciados/enunciados/continuidade/moldes/forma-2.json';
 import econtinuidadeMoldesForma3 from '@core/enunciados/enunciados/continuidade/moldes/forma-3.json';
+import econtinuidadeMoldesClassifiqueADescontinuidade from '@core/enunciados/enunciados/continuidade/moldes/classifique-a-descontinuidade.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_CONTINUIDADE: readonly EntradaDeEnunciado[] = [
@@ -135,4 +136,5 @@ export const ENTRADAS_DE_CONTINUIDADE: readonly EntradaDeEnunciado[] = [
   { topico: 'continuidade', forma: 'forma-1', conteudo: econtinuidadeMoldesForma1 },
   { topico: 'continuidade', forma: 'forma-2', conteudo: econtinuidadeMoldesForma2 },
   { topico: 'continuidade', forma: 'forma-3', conteudo: econtinuidadeMoldesForma3 },
+  { topico: 'continuidade', forma: 'classifique-a-descontinuidade', conteudo: econtinuidadeMoldesClassifiqueADescontinuidade },
 ];

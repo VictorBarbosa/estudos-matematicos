@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um ângulo inscrito mede {dados-calculo.angulo}°. Quanto mede o ângulo central que enxerga o mesmo arco? (em graus)",
+    "fr": "Un angle inscrit mesure {dados-calculo.angulo}°. Combien mesure l’angle au centre qui intercepte le même arc ? (en degrés)",
+    "en": "An inscribed angle measures {dados-calculo.angulo}°. What does the central angle that sees the same arc measure? (in degrees)"
+  }
+}

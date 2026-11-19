@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   Quadrica,
   avaliarQuadrica,
@@ -256,12 +261,18 @@ function doDominio(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const gabarito = Math.sqrt(raio * raio - y0 * y0);
 
+  const texto = enunciadoComSufixos(
+    moldesDe('funcoes-de-varias-variaveis', 'forma-4')[0]!,
+    moldesDe('funcoes-de-varias-variaveis', 'sufixo-casas-3'),
+    { y0 },
+  );
+
   return montar({
     chave: `dm-${raio}-${y0}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('funcoes-de-varias-variaveis', 'forma-4')[0]!, { y0 }, 'pt') + PEDIDO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x,y) = \\sqrt{${raio * raio} - x^{2} - y^{2}}`,
     gabarito,
     resolucao: dominioDaRaizComPassos(raio, y0),

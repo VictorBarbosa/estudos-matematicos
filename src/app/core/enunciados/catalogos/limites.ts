@@ -68,8 +68,13 @@ import elimitesExtremo14 from '@core/enunciados/enunciados/limites/extremo/14.js
 import elimitesExtremo15 from '@core/enunciados/enunciados/limites/extremo/15.json';
 import elimitesMoldesForma1 from '@core/enunciados/enunciados/limites/moldes/forma-1.json';
 import elimitesMoldesForma2 from '@core/enunciados/enunciados/limites/moldes/forma-2.json';
+import elimitesMoldesSufixoCasas2 from '@core/enunciados/enunciados/limites/moldes/sufixo-casas-2.json';
 import elimitesMoldesForma3 from '@core/enunciados/enunciados/limites/moldes/forma-3.json';
 import elimitesMoldesForma4 from '@core/enunciados/enunciados/limites/moldes/forma-4.json';
+import elimitesMoldesClassifiqueOLimite from '@core/enunciados/enunciados/limites/moldes/classifique-o-limite.json';
+import elimitesMoldesLimiteFundamentalCosseno from '@core/enunciados/enunciados/limites/moldes/limite-fundamental-cosseno.json';
+import elimitesMoldesLimiteFundamentalSeno from '@core/enunciados/enunciados/limites/moldes/limite-fundamental-seno.json';
+import elimitesMoldesSufixoDuasCasasOuFracao from '@core/enunciados/enunciados/limites/moldes/sufixo-duas-casas-ou-fracao.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_LIMITES: readonly EntradaDeEnunciado[] = [
@@ -135,6 +140,11 @@ export const ENTRADAS_DE_LIMITES: readonly EntradaDeEnunciado[] = [
   { topico: 'limites', nivel: 'extremo', conteudo: elimitesExtremo15 },
   { topico: 'limites', forma: 'forma-1', conteudo: elimitesMoldesForma1 },
   { topico: 'limites', forma: 'forma-2', conteudo: elimitesMoldesForma2 },
+  { topico: 'limites', forma: 'sufixo-casas-2', conteudo: elimitesMoldesSufixoCasas2 },
   { topico: 'limites', forma: 'forma-3', conteudo: elimitesMoldesForma3 },
   { topico: 'limites', forma: 'forma-4', conteudo: elimitesMoldesForma4 },
+  { topico: 'limites', forma: 'classifique-o-limite', conteudo: elimitesMoldesClassifiqueOLimite },
+  { topico: 'limites', forma: 'limite-fundamental-cosseno', conteudo: elimitesMoldesLimiteFundamentalCosseno },
+  { topico: 'limites', forma: 'limite-fundamental-seno', conteudo: elimitesMoldesLimiteFundamentalSeno },
+  { topico: 'limites', forma: 'sufixo-duas-casas-ou-fracao', conteudo: elimitesMoldesSufixoDuasCasasOuFracao },
 ];

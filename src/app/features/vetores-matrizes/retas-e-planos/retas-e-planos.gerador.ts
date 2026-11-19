@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -456,12 +461,16 @@ function kDependentes(nivel: Nivel, rng: Rng): Exercicio<number> {
   const c = vetorial(u, v);
   const gabarito = -(c[0] * a + c[1] * b) / c[2] || 0;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('retas-e-planos', 'forma-7')[0]!,
+    Number.isInteger(gabarito) ? [] : moldesDe('retas-e-planos', 'sufixo-fracao-ou-2-casas'),
+  );
+
   return {
     id: `planos-k-${u.join('')}-${v.join('')}-${a}${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('retas-e-planos', 'forma-7')[0]!, {}, 'pt') +
-      (Number.isInteger(gabarito) ? '' : ' Responda como fração ou com 2 casas decimais.'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\vec{u} = ${vTex(u)} \\qquad \\vec{v} = ${vTex(v)} \\qquad \\vec{w} = (${a},\\; ${b},\\; k)`,
     gabarito,
     resolucao: {

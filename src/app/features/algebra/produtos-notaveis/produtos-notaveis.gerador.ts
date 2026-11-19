@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, TipoProdutoNotavel, enunciadoParaTex, expandirComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -43,13 +49,19 @@ export const geradorProdutos: GeradorExercicio<number> = {
     // Em todos os casos perguntamos pelo coeficiente de x.
     const gabarito = expandido.coeficiente(1);
 
+    const texto = enunciadoDoMolde(
+      moldesDe(
+        'produtos-notaveis',
+        tipo === 'diferenca-de-quadrados' ? 'coeficiente-de-x' : 'coeficiente-do-meio',
+      )[0]!,
+      {},
+    );
+
     return {
       id: `produtos-${tipo}-${a}-${b}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        tipo === 'diferenca-de-quadrados'
-          ? 'Expanda e informe o coeficiente de x no resultado.'
-          : 'Expanda e informe o coeficiente do termo em x (o termo do meio).',
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `${enunciadoParaTex(tipo, a, b)} = \\;?`,
       gabarito,
       resolucao: {

@@ -140,7 +140,14 @@ describe('geradorProgressoes — progressão dada por dois termos', () => {
     );
 
   function termos(e: { enunciado: string }) {
-    const [, p, ap, q, aq] = /o (\d+)º termo é (-?\d+) e o (\d+)º termo é (-?\d+)/.exec(
+    /*
+     * «o termo de ordem 4», e não «o 4º termo».
+     *
+     * O ordinal escrito com `º` é português: em francês é `4e` e em inglês
+     * `4th`, e o molde não tem como produzir os três a partir do mesmo texto.
+     * Dizer a ordem por extenso é o que deixa a frase traduzível.
+     */
+    const [, p, ap, q, aq] = /ordem (\d+) é (-?\d+) e o de ordem (\d+) é (-?\d+)/.exec(
       e.enunciado,
     )!;
     return { p: Number(p), ap: Number(ap), q: Number(q), aq: Number(aq) };

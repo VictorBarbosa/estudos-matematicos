@@ -69,6 +69,7 @@ import efuncoesDeVariasVariaveisExtremo15 from '@core/enunciados/enunciados/func
 import efuncoesDeVariasVariaveisMoldesForma1 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/moldes/forma-1.json';
 import efuncoesDeVariasVariaveisMoldesForma2 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/moldes/forma-2.json';
 import efuncoesDeVariasVariaveisMoldesForma3 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/moldes/forma-3.json';
+import efuncoesDeVariasVariaveisMoldesSufixoCasas3 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/moldes/sufixo-casas-3.json';
 import efuncoesDeVariasVariaveisMoldesForma4 from '@core/enunciados/enunciados/funcoes-de-varias-variaveis/moldes/forma-4.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
@@ -136,5 +137,6 @@ export const ENTRADAS_DE_FUNCOES_DE_VARIAS_VARIAVEIS: readonly EntradaDeEnunciad
   { topico: 'funcoes-de-varias-variaveis', forma: 'forma-1', conteudo: efuncoesDeVariasVariaveisMoldesForma1 },
   { topico: 'funcoes-de-varias-variaveis', forma: 'forma-2', conteudo: efuncoesDeVariasVariaveisMoldesForma2 },
   { topico: 'funcoes-de-varias-variaveis', forma: 'forma-3', conteudo: efuncoesDeVariasVariaveisMoldesForma3 },
+  { topico: 'funcoes-de-varias-variaveis', forma: 'sufixo-casas-3', conteudo: efuncoesDeVariasVariaveisMoldesSufixoCasas3 },
   { topico: 'funcoes-de-varias-variaveis', forma: 'forma-4', conteudo: efuncoesDeVariasVariaveisMoldesForma4 },
 ];

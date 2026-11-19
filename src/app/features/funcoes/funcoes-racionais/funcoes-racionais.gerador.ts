@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   FuncaoRacional,
   Passo,
@@ -189,11 +194,17 @@ function doBuraco(nivel: Nivel, rng: Rng): Exercicio<number> {
     denominador: Polinomio.de(-comum, 1).multiplicar(Polinomio.de(-polo, 1)),
   };
 
+  const texto = enunciadoComSufixos(
+    moldesDe('funcoes-racionais', 'forma-4')[0]!,
+    moldesDe('funcoes-racionais', 'sufixo-casas-3'),
+  );
+
   return montar({
     chave: `bur-${comum}-${polo}-${zero}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('funcoes-racionais', 'forma-4')[0]!, {}, 'pt') + PEDIDO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito: comum,
     resolucao: { resultado: comum, passos: assintotaOuBuracoComPassos(f, comum).passos },
@@ -238,11 +249,17 @@ function daObliqua(nivel: Nivel, rng: Rng): Exercicio<number> {
   // O coeficiente angular da assíntota oblíqua é a razão dos líderes.
   const gabarito = a / d;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('funcoes-racionais', 'forma-5')[0]!,
+    moldesDe('funcoes-racionais', 'sufixo-casas-3'),
+  );
+
   return montar({
     chave: `obl-${a}${b}${c}-${d}${e}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('funcoes-racionais', 'forma-5')[0]!, {}, 'pt') + PEDIDO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${racionalParaTex(f)}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: comportamentoNoInfinitoComPassos(f).passos },

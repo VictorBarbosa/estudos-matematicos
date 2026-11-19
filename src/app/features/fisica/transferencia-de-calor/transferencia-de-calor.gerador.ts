@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   CONDUTIVIDADES,
   STEFAN_BOLTZMANN,
@@ -326,16 +331,18 @@ function doEquilibrioRadiativo(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const gabarito = (potencia / (emissividade * STEFAN_BOLTZMANN * area)) ** 0.25;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('transferencia-de-calor', 'forma-7')[0]!,
+    moldesDe('transferencia-de-calor', 'sufixo-casas-3'),
+    { expressao1: numero(area), expressao2: numero(emissividade), potencia },
+  );
+
   return montar({
     chave: `eqr-${potencia}-${emissividade}-${area}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(
-        moldesDe('transferencia-de-calor', 'forma-7')[0]!,
-        { expressao1: numero(area), expressao2: numero(emissividade), potencia },
-        'pt',
-      ) + PEDIDO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `P = \\varepsilon\\sigma A T^{4}`,
     gabarito,
     resolucao: equilibrioRadiativoComPassos(potencia, emissividade, area),

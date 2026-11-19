@@ -76,6 +76,7 @@ import { ENTRADAS_DE_GRAVITACAO_E_ORBITAS } from '@core/enunciados/catalogos/gra
 import { ENTRADAS_DE_IDENTIDADES_TRIGONOMETRICAS } from '@core/enunciados/catalogos/identidades-trigonometricas';
 import { ENTRADAS_DE_IMPULSO_E_MOMENTO } from '@core/enunciados/catalogos/impulso-e-momento';
 import { ENTRADAS_DE_INEQUACOES } from '@core/enunciados/catalogos/inequacoes';
+import { ENTRADAS_DE_INEQUACOES_SEGUNDO_GRAU } from '@core/enunciados/catalogos/inequacoes-segundo-grau';
 import { ENTRADAS_DE_INTEGRAIS_DE_LINHA } from '@core/enunciados/catalogos/integrais-de-linha';
 import { ENTRADAS_DE_INTEGRAIS_IMPROPRIAS } from '@core/enunciados/catalogos/integrais-improprias';
 import { ENTRADAS_DE_INTEGRAIS_MULTIPLAS } from '@core/enunciados/catalogos/integrais-multiplas';
@@ -90,6 +91,7 @@ import { ENTRADAS_DE_LIMITES_LATERAIS } from '@core/enunciados/catalogos/limites
 import { ENTRADAS_DE_MAGNETISMO_E_INDUCAO } from '@core/enunciados/catalogos/magnetismo-e-inducao';
 import { ENTRADAS_DE_MATRIZES_DETERMINANTES } from '@core/enunciados/catalogos/matrizes-determinantes';
 import { ENTRADAS_DE_METODOS_NUMERICOS } from '@core/enunciados/catalogos/metodos-numericos';
+import { ENTRADAS_DE_MMC_MDC } from '@core/enunciados/catalogos/mmc-mdc';
 import { ENTRADAS_DE_MOL_E_MASSA_MOLAR } from '@core/enunciados/catalogos/mol-e-massa-molar';
 import { ENTRADAS_DE_MOMENTO_ANGULAR } from '@core/enunciados/catalogos/momento-angular';
 import { ENTRADAS_DE_MOVIMENTO_CIRCULAR } from '@core/enunciados/catalogos/movimento-circular';
@@ -210,6 +212,7 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   ...ENTRADAS_DE_IDENTIDADES_TRIGONOMETRICAS,
   ...ENTRADAS_DE_IMPULSO_E_MOMENTO,
   ...ENTRADAS_DE_INEQUACOES,
+  ...ENTRADAS_DE_INEQUACOES_SEGUNDO_GRAU,
   ...ENTRADAS_DE_INTEGRAIS_DE_LINHA,
   ...ENTRADAS_DE_INTEGRAIS_IMPROPRIAS,
   ...ENTRADAS_DE_INTEGRAIS_MULTIPLAS,
@@ -224,6 +227,7 @@ export const ENTRADAS_DE_ENUNCIADO: readonly EntradaDeEnunciado[] = [
   ...ENTRADAS_DE_MAGNETISMO_E_INDUCAO,
   ...ENTRADAS_DE_MATRIZES_DETERMINANTES,
   ...ENTRADAS_DE_METODOS_NUMERICOS,
+  ...ENTRADAS_DE_MMC_MDC,
   ...ENTRADAS_DE_MOL_E_MASSA_MOLAR,
   ...ENTRADAS_DE_MOMENTO_ANGULAR,
   ...ENTRADAS_DE_MOVIMENTO_CIRCULAR,

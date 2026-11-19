@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Calcule o limite pela esquerda no ponto x = {dados-calculo.a}.",
+    "fr": "Calculez la limite à gauche au point x = {dados-calculo.a}.",
+    "en": "Calculate the left-hand limit at x = {dados-calculo.a}."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Classifique o limite: responda 1 se ele existe (é um número), 2 se é infinito (+∞ ou −∞), 3 se não existe porque os laterais são diferentes.",
+    "fr": "Classez la limite : répondez 1 si elle existe (c'est un nombre), 2 si elle est infinie (+∞ ou −∞), 3 si elle n'existe pas parce que les limites latérales diffèrent.",
+    "en": "Classify the limit: answer 1 if it exists (is a number), 2 if it is infinite (+∞ or −∞), 3 if it does not exist because the one-sided limits differ."
+  }
+}

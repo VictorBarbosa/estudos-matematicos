@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "A função é decrescente num único intervalo limitado (a, b). Informe b, o extremo direito.",
+    "fr": "La fonction est décroissante sur un seul intervalle borné (a, b). Indiquez b, la borne droite.",
+    "en": "The function is decreasing on a single bounded interval (a, b). Give b, the right endpoint."
+  }
+}

@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { resolverQuadraticaComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -66,12 +71,16 @@ export const geradorEquacao2: GeradorExercicio<number> = {
 
     const gabarito = semRaizes ? delta : Math.max(...raizes);
 
+    const texto = enunciadoDoMolde(
+      moldesDe('equacao-segundo-grau', semRaizes ? 'discriminante-sem-raizes' : 'maior-raiz')[0]!,
+      {},
+    );
+
     return {
       id: `equacao2-${nivel}-${a}-${b}-${c}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: semRaizes
-        ? 'Esta equação não tem raízes reais. Informe o valor do discriminante Δ.'
-        : 'Resolva a equação e informe a MAIOR raiz.',
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `${equacaoTex} = 0`,
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },

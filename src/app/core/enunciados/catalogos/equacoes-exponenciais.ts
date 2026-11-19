@@ -73,6 +73,7 @@ import eequacoesExponenciaisMoldesForma4 from '@core/enunciados/enunciados/equac
 import eequacoesExponenciaisMoldesForma5 from '@core/enunciados/enunciados/equacoes-exponenciais/moldes/forma-5.json';
 import eequacoesExponenciaisMoldesForma6 from '@core/enunciados/enunciados/equacoes-exponenciais/moldes/forma-6.json';
 import eequacoesExponenciaisMoldesForma7 from '@core/enunciados/enunciados/equacoes-exponenciais/moldes/forma-7.json';
+import eequacoesExponenciaisMoldesSufixoComoFracao from '@core/enunciados/enunciados/equacoes-exponenciais/moldes/sufixo-como-fracao.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_EQUACOES_EXPONENCIAIS: readonly EntradaDeEnunciado[] = [
@@ -143,4 +144,5 @@ export const ENTRADAS_DE_EQUACOES_EXPONENCIAIS: readonly EntradaDeEnunciado[] = 
   { topico: 'equacoes-exponenciais', forma: 'forma-5', conteudo: eequacoesExponenciaisMoldesForma5 },
   { topico: 'equacoes-exponenciais', forma: 'forma-6', conteudo: eequacoesExponenciaisMoldesForma6 },
   { topico: 'equacoes-exponenciais', forma: 'forma-7', conteudo: eequacoesExponenciaisMoldesForma7 },
+  { topico: 'equacoes-exponenciais', forma: 'sufixo-como-fracao', conteudo: eequacoesExponenciaisMoldesSufixoComoFracao },
 ];

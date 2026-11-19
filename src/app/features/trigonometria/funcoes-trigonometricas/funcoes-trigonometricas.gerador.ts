@@ -171,6 +171,7 @@ export const geradorOndas: GeradorExercicio<number> = {
       id: `ondas-${pergunta}-${amplitude}-${frequencia}-${deslocamento}-${rng.inteiro(0, 9999)}`,
       nivel,
       enunciado: config.enunciado,
+      traducoes: config.traducoes,
       enunciadoTex: funcaoTex,
       gabarito: config.gabarito,
       resolucao: { resultado: config.gabarito, passos: [...config.passos] },

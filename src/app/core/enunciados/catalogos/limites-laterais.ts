@@ -68,6 +68,10 @@ import elimitesLateraisExtremo14 from '@core/enunciados/enunciados/limites-later
 import elimitesLateraisExtremo15 from '@core/enunciados/enunciados/limites-laterais/extremo/15.json';
 import elimitesLateraisMoldesForma1 from '@core/enunciados/enunciados/limites-laterais/moldes/forma-1.json';
 import elimitesLateraisMoldesForma2 from '@core/enunciados/enunciados/limites-laterais/moldes/forma-2.json';
+import elimitesLateraisMoldesInfinitoPelaDireita from '@core/enunciados/enunciados/limites-laterais/moldes/infinito-pela-direita.json';
+import elimitesLateraisMoldesInfinitoPelaEsquerda from '@core/enunciados/enunciados/limites-laterais/moldes/infinito-pela-esquerda.json';
+import elimitesLateraisMoldesLimitePelaDireita from '@core/enunciados/enunciados/limites-laterais/moldes/limite-pela-direita.json';
+import elimitesLateraisMoldesLimitePelaEsquerda from '@core/enunciados/enunciados/limites-laterais/moldes/limite-pela-esquerda.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_LIMITES_LATERAIS: readonly EntradaDeEnunciado[] = [
@@ -133,4 +137,8 @@ export const ENTRADAS_DE_LIMITES_LATERAIS: readonly EntradaDeEnunciado[] = [
   { topico: 'limites-laterais', nivel: 'extremo', conteudo: elimitesLateraisExtremo15 },
   { topico: 'limites-laterais', forma: 'forma-1', conteudo: elimitesLateraisMoldesForma1 },
   { topico: 'limites-laterais', forma: 'forma-2', conteudo: elimitesLateraisMoldesForma2 },
+  { topico: 'limites-laterais', forma: 'infinito-pela-direita', conteudo: elimitesLateraisMoldesInfinitoPelaDireita },
+  { topico: 'limites-laterais', forma: 'infinito-pela-esquerda', conteudo: elimitesLateraisMoldesInfinitoPelaEsquerda },
+  { topico: 'limites-laterais', forma: 'limite-pela-direita', conteudo: elimitesLateraisMoldesLimitePelaDireita },
+  { topico: 'limites-laterais', forma: 'limite-pela-esquerda', conteudo: elimitesLateraisMoldesLimitePelaEsquerda },
 ];

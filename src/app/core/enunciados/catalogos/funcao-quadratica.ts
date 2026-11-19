@@ -67,6 +67,8 @@ import efuncaoQuadraticaExtremo13 from '@core/enunciados/enunciados/funcao-quadr
 import efuncaoQuadraticaExtremo14 from '@core/enunciados/enunciados/funcao-quadratica/extremo/14.json';
 import efuncaoQuadraticaExtremo15 from '@core/enunciados/enunciados/funcao-quadratica/extremo/15.json';
 import efuncaoQuadraticaMoldesForma1 from '@core/enunciados/enunciados/funcao-quadratica/moldes/forma-1.json';
+import efuncaoQuadraticaMoldesAbscissaDoVertice from '@core/enunciados/enunciados/funcao-quadratica/moldes/abscissa-do-vertice.json';
+import efuncaoQuadraticaMoldesOrdenadaDoVertice from '@core/enunciados/enunciados/funcao-quadratica/moldes/ordenada-do-vertice.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_FUNCAO_QUADRATICA: readonly EntradaDeEnunciado[] = [
@@ -131,4 +133,6 @@ export const ENTRADAS_DE_FUNCAO_QUADRATICA: readonly EntradaDeEnunciado[] = [
   { topico: 'funcao-quadratica', nivel: 'extremo', conteudo: efuncaoQuadraticaExtremo14 },
   { topico: 'funcao-quadratica', nivel: 'extremo', conteudo: efuncaoQuadraticaExtremo15 },
   { topico: 'funcao-quadratica', forma: 'forma-1', conteudo: efuncaoQuadraticaMoldesForma1 },
+  { topico: 'funcao-quadratica', forma: 'abscissa-do-vertice', conteudo: efuncaoQuadraticaMoldesAbscissaDoVertice },
+  { topico: 'funcao-quadratica', forma: 'ordenada-do-vertice', conteudo: efuncaoQuadraticaMoldesOrdenadaDoVertice },
 ];

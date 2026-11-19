@@ -69,9 +69,13 @@ import ederivadasExponencialLogaritmoExtremo15 from '@core/enunciados/enunciados
 import ederivadasExponencialLogaritmoMoldesForma1 from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/forma-1.json';
 import ederivadasExponencialLogaritmoMoldesForma2 from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/forma-2.json';
 import ederivadasExponencialLogaritmoMoldesForma3 from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/forma-3.json';
+import ederivadasExponencialLogaritmoMoldesSufixoCasas3 from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/sufixo-casas-3.json';
+import ederivadasExponencialLogaritmoMoldesSufixoFracaoOu3Casas from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/sufixo-fracao-ou-3-casas.json';
 import ederivadasExponencialLogaritmoMoldesForma4 from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/forma-4.json';
 import ederivadasExponencialLogaritmoMoldesForma5 from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/forma-5.json';
 import ederivadasExponencialLogaritmoMoldesForma6 from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/forma-6.json';
+import ederivadasExponencialLogaritmoMoldesDerivadaSegundaNoPonto from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/derivada-segunda-no-ponto.json';
+import ederivadasExponencialLogaritmoMoldesTangenteCortaEixoY from '@core/enunciados/enunciados/derivadas-exponencial-logaritmo/moldes/tangente-corta-eixo-y.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_DERIVADAS_EXPONENCIAL_LOGARITMO: readonly EntradaDeEnunciado[] = [
@@ -138,7 +142,11 @@ export const ENTRADAS_DE_DERIVADAS_EXPONENCIAL_LOGARITMO: readonly EntradaDeEnun
   { topico: 'derivadas-exponencial-logaritmo', forma: 'forma-1', conteudo: ederivadasExponencialLogaritmoMoldesForma1 },
   { topico: 'derivadas-exponencial-logaritmo', forma: 'forma-2', conteudo: ederivadasExponencialLogaritmoMoldesForma2 },
   { topico: 'derivadas-exponencial-logaritmo', forma: 'forma-3', conteudo: ederivadasExponencialLogaritmoMoldesForma3 },
+  { topico: 'derivadas-exponencial-logaritmo', forma: 'sufixo-casas-3', conteudo: ederivadasExponencialLogaritmoMoldesSufixoCasas3 },
+  { topico: 'derivadas-exponencial-logaritmo', forma: 'sufixo-fracao-ou-3-casas', conteudo: ederivadasExponencialLogaritmoMoldesSufixoFracaoOu3Casas },
   { topico: 'derivadas-exponencial-logaritmo', forma: 'forma-4', conteudo: ederivadasExponencialLogaritmoMoldesForma4 },
   { topico: 'derivadas-exponencial-logaritmo', forma: 'forma-5', conteudo: ederivadasExponencialLogaritmoMoldesForma5 },
   { topico: 'derivadas-exponencial-logaritmo', forma: 'forma-6', conteudo: ederivadasExponencialLogaritmoMoldesForma6 },
+  { topico: 'derivadas-exponencial-logaritmo', forma: 'derivada-segunda-no-ponto', conteudo: ederivadasExponencialLogaritmoMoldesDerivadaSegundaNoPonto },
+  { topico: 'derivadas-exponencial-logaritmo', forma: 'tangente-corta-eixo-y', conteudo: ederivadasExponencialLogaritmoMoldesTangenteCortaEixoY },
 ];

@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { numeroEmTex, numeroEmTexto } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -131,12 +136,16 @@ function mesmaBase(nivel: Nivel, rng: Rng): Exercicio<number> {
   const n = rng.inteiro(1, 4) * (rng.booleano() ? -1 : 1);
   const lado = n > 0 ? `${familia.b ** n}` : `\\frac{1}{${familia.b ** -n}}`;
   const gabarito = n / familia.m;
+  const texto = enunciadoComSufixos(
+    moldesDe('equacoes-exponenciais', 'forma-7')[0]!,
+    Number.isInteger(gabarito) ? [] : moldesDe('equacoes-exponenciais', 'sufixo-como-fracao'),
+  );
+
   return {
     id: `expeq-base2-${familia.nome}-${n}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('equacoes-exponenciais', 'forma-7')[0]!, {}, 'pt') +
-      (Number.isInteger(gabarito) ? '' : ' Responda como fração.'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `${familia.nome}^{x} = ${lado}`,
     gabarito,
     resolucao: {

@@ -70,6 +70,9 @@ import emetodosNumericosMoldesForma1 from '@core/enunciados/enunciados/metodos-n
 import emetodosNumericosMoldesForma2 from '@core/enunciados/enunciados/metodos-numericos/moldes/forma-2.json';
 import emetodosNumericosMoldesForma3 from '@core/enunciados/enunciados/metodos-numericos/moldes/forma-3.json';
 import emetodosNumericosMoldesForma4 from '@core/enunciados/enunciados/metodos-numericos/moldes/forma-4.json';
+import emetodosNumericosMoldesSufixoCasas5 from '@core/enunciados/enunciados/metodos-numericos/moldes/sufixo-casas-5.json';
+import emetodosNumericosMoldesNewtonDuasIteracoes from '@core/enunciados/enunciados/metodos-numericos/moldes/newton-duas-iteracoes.json';
+import emetodosNumericosMoldesNewtonUmaIteracao from '@core/enunciados/enunciados/metodos-numericos/moldes/newton-uma-iteracao.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_METODOS_NUMERICOS: readonly EntradaDeEnunciado[] = [
@@ -137,4 +140,7 @@ export const ENTRADAS_DE_METODOS_NUMERICOS: readonly EntradaDeEnunciado[] = [
   { topico: 'metodos-numericos', forma: 'forma-2', conteudo: emetodosNumericosMoldesForma2 },
   { topico: 'metodos-numericos', forma: 'forma-3', conteudo: emetodosNumericosMoldesForma3 },
   { topico: 'metodos-numericos', forma: 'forma-4', conteudo: emetodosNumericosMoldesForma4 },
+  { topico: 'metodos-numericos', forma: 'sufixo-casas-5', conteudo: emetodosNumericosMoldesSufixoCasas5 },
+  { topico: 'metodos-numericos', forma: 'newton-duas-iteracoes', conteudo: emetodosNumericosMoldesNewtonDuasIteracoes },
+  { topico: 'metodos-numericos', forma: 'newton-uma-iteracao', conteudo: emetodosNumericosMoldesNewtonUmaIteracao },
 ];

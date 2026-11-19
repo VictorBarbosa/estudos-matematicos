@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Polinomio } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -52,10 +57,16 @@ export function exercicioLHopital(nivel: Nivel, rng: Rng): Exercicio<number> {
   }[casca];
   const emZero = { sen: `${k}\\cos 0`, exp: `${k}e^{0}`, ln: `\\frac{${k}}{1}` }[casca];
 
+  const texto = enunciadoComSufixos(
+    moldesDe('aplicacoes-da-derivada', 'calcule-o-limite')[0]!,
+    moldesDe('aplicacoes-da-derivada', 'sufixo-fracao-ou-3-casas'),
+  );
+
   return {
     id: `aplic-lhopital-${casca}-${k}-${m}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule o limite.${CASAS}`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\lim_{x \\to 0} \\frac{${numerador}}{${m}x}`,
     gabarito,
     resolucao: {
@@ -130,10 +141,16 @@ function lhopitalPolinomios(nivel: Nivel, rng: Rng): Exercicio<number> {
   const base = dQ.avaliar(a);
   const gabarito = topo / base;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('aplicacoes-da-derivada', 'limite-por-lhopital')[0]!,
+    moldesDe('aplicacoes-da-derivada', 'sufixo-fracao-ou-3-casas'),
+  );
+
   return {
     id: `aplic-lhopital-poli-${a}${p}${q}${c}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule o limite usando a regra de L'Hôpital.${CASAS}`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\lim_{x \\to ${a}} \\frac{${P.paraTex()}}{${Q.paraTex()}}`,
     gabarito,
     resolucao: {
@@ -197,10 +214,16 @@ function lhopitalDuasVezes(nivel: Nivel, rng: Rng): Exercicio<number> {
   const primeira = cosseno ? `${k}\\sin(${k}x)` : `${k}e^{${k}x} - ${k}`;
   const segunda = cosseno ? `${k * k}\\cos(${k}x)` : `${k * k}e^{${k}x}`;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('aplicacoes-da-derivada', 'calcule-o-limite')[0]!,
+    moldesDe('aplicacoes-da-derivada', 'sufixo-fracao-ou-3-casas'),
+  );
+
   return {
     id: `aplic-lhopital-dupla-${cosseno ? 'cos' : 'exp'}-${k}-${m}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule o limite.${CASAS}`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\lim_{x \\to 0} \\frac{${numerador}}{${mx}x^{2}}`,
     gabarito,
     resolucao: {
@@ -278,12 +301,17 @@ export function exercicioValorMedio(nivel: Nivel, rng: Rng): Exercicio<number> {
   const quadrado = (a * a + a * b + b * b) / 3;
   const gabarito = Math.sqrt(quadrado);
 
+  const texto = enunciadoComSufixos(
+    moldesDe('aplicacoes-da-derivada', 'teorema-do-valor-medio')[0]!,
+    moldesDe('aplicacoes-da-derivada', 'sufixo-casas-3'),
+    { a, b },
+  );
+
   return {
     id: `aplic-tvm-cubica-${p}${q}-${a}${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Pelo teorema do valor médio, existe c em (${a}, ${b}) onde a tangente é paralela à ` +
-      'secante pelos extremos do intervalo. Encontre c. (3 casas decimais)',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${f.paraTex()} \\qquad x \\in [${a}, ${b}]`,
     gabarito,
     resolucao: {
@@ -355,12 +383,16 @@ function valorMedioParabola(nivel: Nivel, rng: Rng): Exercicio<number> {
   const inclinacao = (fb - fa) / (b - a);
   const gabarito = (a + b) / 2;
 
+  const texto = enunciadoDoMolde(moldesDe('aplicacoes-da-derivada', 'teorema-do-valor-medio')[0]!, {
+    a,
+    b,
+  });
+
   return {
     id: `aplic-tvm-parabola-${p}${q}${r}-${a}${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Pelo teorema do valor médio, existe c em (${a}, ${b}) onde a tangente é paralela à ` +
-      'secante pelos extremos do intervalo. Encontre c.',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${f.paraTex()} \\qquad x \\in [${a}, ${b}]`,
     gabarito,
     resolucao: {

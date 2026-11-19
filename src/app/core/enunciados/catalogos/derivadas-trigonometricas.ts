@@ -69,8 +69,12 @@ import ederivadasTrigonometricasExtremo15 from '@core/enunciados/enunciados/deri
 import ederivadasTrigonometricasMoldesForma1 from '@core/enunciados/enunciados/derivadas-trigonometricas/moldes/forma-1.json';
 import ederivadasTrigonometricasMoldesForma2 from '@core/enunciados/enunciados/derivadas-trigonometricas/moldes/forma-2.json';
 import ederivadasTrigonometricasMoldesForma3 from '@core/enunciados/enunciados/derivadas-trigonometricas/moldes/forma-3.json';
+import ederivadasTrigonometricasMoldesSufixoCasas3 from '@core/enunciados/enunciados/derivadas-trigonometricas/moldes/sufixo-casas-3.json';
+import ederivadasTrigonometricasMoldesSufixoExataOu3Casas from '@core/enunciados/enunciados/derivadas-trigonometricas/moldes/sufixo-exata-ou-3-casas.json';
 import ederivadasTrigonometricasMoldesForma4 from '@core/enunciados/enunciados/derivadas-trigonometricas/moldes/forma-4.json';
 import ederivadasTrigonometricasMoldesForma5 from '@core/enunciados/enunciados/derivadas-trigonometricas/moldes/forma-5.json';
+import ederivadasTrigonometricasMoldesDerivadaSegundaNoArco from '@core/enunciados/enunciados/derivadas-trigonometricas/moldes/derivada-segunda-no-arco.json';
+import ederivadasTrigonometricasMoldesTangenteCortaEixoY from '@core/enunciados/enunciados/derivadas-trigonometricas/moldes/tangente-corta-eixo-y.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_DERIVADAS_TRIGONOMETRICAS: readonly EntradaDeEnunciado[] = [
@@ -137,6 +141,10 @@ export const ENTRADAS_DE_DERIVADAS_TRIGONOMETRICAS: readonly EntradaDeEnunciado[
   { topico: 'derivadas-trigonometricas', forma: 'forma-1', conteudo: ederivadasTrigonometricasMoldesForma1 },
   { topico: 'derivadas-trigonometricas', forma: 'forma-2', conteudo: ederivadasTrigonometricasMoldesForma2 },
   { topico: 'derivadas-trigonometricas', forma: 'forma-3', conteudo: ederivadasTrigonometricasMoldesForma3 },
+  { topico: 'derivadas-trigonometricas', forma: 'sufixo-casas-3', conteudo: ederivadasTrigonometricasMoldesSufixoCasas3 },
+  { topico: 'derivadas-trigonometricas', forma: 'sufixo-exata-ou-3-casas', conteudo: ederivadasTrigonometricasMoldesSufixoExataOu3Casas },
   { topico: 'derivadas-trigonometricas', forma: 'forma-4', conteudo: ederivadasTrigonometricasMoldesForma4 },
   { topico: 'derivadas-trigonometricas', forma: 'forma-5', conteudo: ederivadasTrigonometricasMoldesForma5 },
+  { topico: 'derivadas-trigonometricas', forma: 'derivada-segunda-no-arco', conteudo: ederivadasTrigonometricasMoldesDerivadaSegundaNoArco },
+  { topico: 'derivadas-trigonometricas', forma: 'tangente-corta-eixo-y', conteudo: ederivadasTrigonometricasMoldesTangenteCortaEixoY },
 ];

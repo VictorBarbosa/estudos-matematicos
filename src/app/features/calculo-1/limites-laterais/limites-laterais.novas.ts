@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
@@ -21,10 +26,13 @@ export function exercicioLateralModulo(nivel: Nivel, rng: Rng): Exercicio<number
   const gabarito = c + sinal * k;
   const cTex = c === 0 ? '' : ` ${c > 0 ? '+' : '-'} ${Math.abs(c)}`;
 
+  const texto = enunciadoDoMolde(moldesDe('limites-laterais', `limite-pela-${lado}`)[0]!, { a });
+
   return {
     id: `laterais-modulo-${a}${k}${c}-${lado}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule o limite pela ${lado} no ponto x = ${a}.`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex:
       `f(x) = \\frac{${k === 1 ? '' : k}|${xMenos(a)}|}{${xMenos(a)}}${cTex} \\qquad ` +
       `\\lim_{x \\to ${a}^{${sinal > 0 ? '+' : '-'}}} f(x) = \\;?`,
@@ -87,10 +95,13 @@ export function exercicioLateralInfinito(nivel: Nivel, rng: Rng): Exercicio<numb
   const gabarito = positivo ? 1 : 2;
   const pot = n === 1 ? `(${xMenos(a)})` : `(${xMenos(a)})^{${n}}`;
 
+  const texto = enunciadoDoMolde(moldesDe('limites-laterais', `infinito-pela-${lado}`)[0]!, { a });
+
   return {
     id: `laterais-infinito-${a}${k}${n}-${lado}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `O limite pela ${lado} em x = ${a} é infinito. Responda 1 se for +∞ ou 2 se for −∞.`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\lim_{x \\to ${a}^{${lado === 'direita' ? '+' : '-'}}} \\frac{${k}}{${pot}}`,
     gabarito,
     resolucao: {

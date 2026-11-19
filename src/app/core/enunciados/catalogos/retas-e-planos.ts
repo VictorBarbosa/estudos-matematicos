@@ -68,6 +68,7 @@ import eretasEPlanosExtremo14 from '@core/enunciados/enunciados/retas-e-planos/e
 import eretasEPlanosExtremo15 from '@core/enunciados/enunciados/retas-e-planos/extremo/15.json';
 import eretasEPlanosMoldesForma1 from '@core/enunciados/enunciados/retas-e-planos/moldes/forma-1.json';
 import eretasEPlanosMoldesForma2 from '@core/enunciados/enunciados/retas-e-planos/moldes/forma-2.json';
+import eretasEPlanosMoldesSufixoFracaoOu2Casas from '@core/enunciados/enunciados/retas-e-planos/moldes/sufixo-fracao-ou-2-casas.json';
 import eretasEPlanosMoldesForma3 from '@core/enunciados/enunciados/retas-e-planos/moldes/forma-3.json';
 import eretasEPlanosMoldesForma4 from '@core/enunciados/enunciados/retas-e-planos/moldes/forma-4.json';
 import eretasEPlanosMoldesForma5 from '@core/enunciados/enunciados/retas-e-planos/moldes/forma-5.json';
@@ -138,6 +139,7 @@ export const ENTRADAS_DE_RETAS_E_PLANOS: readonly EntradaDeEnunciado[] = [
   { topico: 'retas-e-planos', nivel: 'extremo', conteudo: eretasEPlanosExtremo15 },
   { topico: 'retas-e-planos', forma: 'forma-1', conteudo: eretasEPlanosMoldesForma1 },
   { topico: 'retas-e-planos', forma: 'forma-2', conteudo: eretasEPlanosMoldesForma2 },
+  { topico: 'retas-e-planos', forma: 'sufixo-fracao-ou-2-casas', conteudo: eretasEPlanosMoldesSufixoFracaoOu2Casas },
   { topico: 'retas-e-planos', forma: 'forma-3', conteudo: eretasEPlanosMoldesForma3 },
   { topico: 'retas-e-planos', forma: 'forma-4', conteudo: eretasEPlanosMoldesForma4 },
   { topico: 'retas-e-planos', forma: 'forma-5', conteudo: eretasEPlanosMoldesForma5 },

@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { K_COULOMB, campoPontualComPassos, coulombComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -265,12 +270,17 @@ function escala(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = (a * b) / (d * d);
   const fracao = !Number.isInteger(gabarito);
 
+  const texto = enunciadoComSufixos(
+    moldesDe('eletrostatica', 'forma-7')[0]!,
+    fracao ? moldesDe('eletrostatica', 'sufixo-fracao-ou-2-casas') : [],
+    { a, b, expressao1: txt(d) },
+  );
+
   return {
     id: `elet-escala-${a}-${b}-${d}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('eletrostatica', 'forma-7')[0]!, { a, b, expressao1: txt(d) }, 'pt') +
-      (fracao ? ' Responda como fração ou com 2 casas decimais.' : ''),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `q_1 \\to ${a}q_1 \\qquad q_2 \\to ${b}q_2 \\qquad r \\to ${tex(d)}r`,
     gabarito,
     resolucao: {

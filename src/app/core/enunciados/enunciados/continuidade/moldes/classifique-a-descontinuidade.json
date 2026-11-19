@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Classifique a descontinuidade em x = {dados-calculo.p}. Responda 1 se for removível, 2 se for de salto, 3 se for infinita.",
+    "fr": "Classez la discontinuité en x = {dados-calculo.p}. Répondez 1 si elle est éliminable, 2 si elle est par saut, 3 si elle est infinie.",
+    "en": "Classify the discontinuity at x = {dados-calculo.p}. Answer 1 if it is removable, 2 if it is a jump, 3 if it is infinite."
+  }
+}

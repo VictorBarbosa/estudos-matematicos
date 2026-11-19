@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma massa de {dados-calculo.m} kg tem amortecimento c = {dados-calculo.c} N·s/m. A partir de que rigidez k, em N/m, o sistema passa a OSCILAR?",
+    "fr": "Une masse de {dados-calculo.m} kg a un amortissement c = {dados-calculo.c} N·s/m. À partir de quelle raideur k, en N/m, le système se met-il à OSCILLER ?",
+    "en": "A {dados-calculo.m} kg mass has damping c = {dados-calculo.c} N·s/m. From which stiffness k, in N/m, does the system start to OSCILLATE?"
+  }
+}

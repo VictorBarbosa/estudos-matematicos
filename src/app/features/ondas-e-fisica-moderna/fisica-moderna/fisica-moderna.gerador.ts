@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   MASSA_ELETRON,
   REPOUSO_ELETRON_KEV,
@@ -195,13 +200,17 @@ function dilatacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   const proprio = muon ? 2.2 : rng.inteiro(1, 10);
   const resolucao = dilatacaoDoTempoComPassos(proprio, beta);
   const gabarito = resolucao.resultado;
-  const enunciado = muon
-    ? `Um múon vive em média 2,2 µs no próprio referencial. Viajando a ${exato(beta)}c, quanto tempo ele dura para quem o vê passar, em µs?`
-    : `Um relógio a bordo de uma nave que viaja a ${exato(beta)}c marca ${proprio} h. Quanto tempo passa para quem ficou na Terra, em horas?`;
+  const texto = enunciadoComSufixos(
+    moldesDe('fisica-moderna', muon ? 'dilatacao-do-muon' : 'dilatacao-do-relogio-da-nave')[0]!,
+    // O aviso de formato só entra quando a resposta não é inteira.
+    casas(gabarito) === '' ? [] : moldesDe('fisica-moderna', 'sufixo-casas-2'),
+    { beta: exato(beta), proprio },
+  );
   return {
     id: `moderna-dilat-${beta}-${proprio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: enunciado + casas(gabarito),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\Delta t_0 = ${tex(proprio)}\\ \\text{${muon ? 'µs' : 'h'}} \\qquad v = ${tex(beta, 3)}\\,c`,
     gabarito,
     resolucao,

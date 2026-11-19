@@ -66,6 +66,15 @@ import eequacaoSegundoGrauExtremo12 from '@core/enunciados/enunciados/equacao-se
 import eequacaoSegundoGrauExtremo13 from '@core/enunciados/enunciados/equacao-segundo-grau/extremo/13.json';
 import eequacaoSegundoGrauExtremo14 from '@core/enunciados/enunciados/equacao-segundo-grau/extremo/14.json';
 import eequacaoSegundoGrauExtremo15 from '@core/enunciados/enunciados/equacao-segundo-grau/extremo/15.json';
+import eequacaoSegundoGrauMoldesDiscriminanteSemRaizes from '@core/enunciados/enunciados/equacao-segundo-grau/moldes/discriminante-sem-raizes.json';
+import eequacaoSegundoGrauMoldesMaiorRaizBiquadrada from '@core/enunciados/enunciados/equacao-segundo-grau/moldes/maior-raiz-biquadrada.json';
+import eequacaoSegundoGrauMoldesMaiorRaiz from '@core/enunciados/enunciados/equacao-segundo-grau/moldes/maior-raiz.json';
+import eequacaoSegundoGrauMoldesProdutoDasRaizes from '@core/enunciados/enunciados/equacao-segundo-grau/moldes/produto-das-raizes.json';
+import eequacaoSegundoGrauMoldesQuantasRaizesBiquadrada from '@core/enunciados/enunciados/equacao-segundo-grau/moldes/quantas-raizes-biquadrada.json';
+import eequacaoSegundoGrauMoldesSomaDasRaizes from '@core/enunciados/enunciados/equacao-segundo-grau/moldes/soma-das-raizes.json';
+import eequacaoSegundoGrauMoldesSomaDosQuadradosDasRaizes from '@core/enunciados/enunciados/equacao-segundo-grau/moldes/soma-dos-quadrados-das-raizes.json';
+import eequacaoSegundoGrauMoldesSufixoComoFracao from '@core/enunciados/enunciados/equacao-segundo-grau/moldes/sufixo-como-fracao.json';
+import eequacaoSegundoGrauMoldesValorDeKRaizDupla from '@core/enunciados/enunciados/equacao-segundo-grau/moldes/valor-de-k-raiz-dupla.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_EQUACAO_SEGUNDO_GRAU: readonly EntradaDeEnunciado[] = [
@@ -129,4 +138,13 @@ export const ENTRADAS_DE_EQUACAO_SEGUNDO_GRAU: readonly EntradaDeEnunciado[] = [
   { topico: 'equacao-segundo-grau', nivel: 'extremo', conteudo: eequacaoSegundoGrauExtremo13 },
   { topico: 'equacao-segundo-grau', nivel: 'extremo', conteudo: eequacaoSegundoGrauExtremo14 },
   { topico: 'equacao-segundo-grau', nivel: 'extremo', conteudo: eequacaoSegundoGrauExtremo15 },
+  { topico: 'equacao-segundo-grau', forma: 'discriminante-sem-raizes', conteudo: eequacaoSegundoGrauMoldesDiscriminanteSemRaizes },
+  { topico: 'equacao-segundo-grau', forma: 'maior-raiz-biquadrada', conteudo: eequacaoSegundoGrauMoldesMaiorRaizBiquadrada },
+  { topico: 'equacao-segundo-grau', forma: 'maior-raiz', conteudo: eequacaoSegundoGrauMoldesMaiorRaiz },
+  { topico: 'equacao-segundo-grau', forma: 'produto-das-raizes', conteudo: eequacaoSegundoGrauMoldesProdutoDasRaizes },
+  { topico: 'equacao-segundo-grau', forma: 'quantas-raizes-biquadrada', conteudo: eequacaoSegundoGrauMoldesQuantasRaizesBiquadrada },
+  { topico: 'equacao-segundo-grau', forma: 'soma-das-raizes', conteudo: eequacaoSegundoGrauMoldesSomaDasRaizes },
+  { topico: 'equacao-segundo-grau', forma: 'soma-dos-quadrados-das-raizes', conteudo: eequacaoSegundoGrauMoldesSomaDosQuadradosDasRaizes },
+  { topico: 'equacao-segundo-grau', forma: 'sufixo-como-fracao', conteudo: eequacaoSegundoGrauMoldesSufixoComoFracao },
+  { topico: 'equacao-segundo-grau', forma: 'valor-de-k-raiz-dupla', conteudo: eequacaoSegundoGrauMoldesValorDeKRaizDupla },
 ];

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Use o método de Newton-Raphson partindo de x₀ = {dados-calculo.x0} e informe x₂ (duas iterações).",
+    "fr": "Utilisez la méthode de Newton-Raphson en partant de x₀ = {dados-calculo.x0} et indiquez x₂ (deux itérations).",
+    "en": "Use the Newton-Raphson method starting from x₀ = {dados-calculo.x0} and give x₂ (two iterations)."
+  }
+}

@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
@@ -21,10 +26,15 @@ export function exercicioSegundaCadeia(nivel: Nivel, rng: Rng): Exercicio<number
   const u = a * ponto + b;
   const gabarito = n * (n - 1) * a * a * u ** (n - 2);
 
+  const texto = enunciadoDoMolde(moldesDe('regra-da-cadeia', 'derivada-segunda-no-ponto')[0]!, {
+    ponto,
+  });
+
   return {
     id: `cadeia-segunda-${a}${b}${n}-${ponto}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule a derivada SEGUNDA f''(${ponto}).`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = \\left(${binomio(a, b)}\\right)^{${n}}`,
     gabarito,
     resolucao: {
@@ -86,10 +96,17 @@ export function exercicioTresCamadas(nivel: Nivel, rng: Rng): Exercicio<number> 
   const u = a * ponto + b;
   const gabarito = (2 * u * a) / (1 + u * u);
 
+  const texto = enunciadoComSufixos(
+    moldesDe('regra-da-cadeia', 'derivada-no-ponto')[0]!,
+    moldesDe('regra-da-cadeia', 'sufixo-casas-3'),
+    { ponto },
+  );
+
   return {
     id: `cadeia-tres-${a}${b}-${ponto}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule f'(${ponto}). (3 casas decimais)`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = \\ln\\left(1 + \\left(${binomio(a, b)}\\right)^{2}\\right)`,
     gabarito,
     resolucao: {

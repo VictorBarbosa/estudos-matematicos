@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Numa PA, o termo de ordem {dados-calculo.p} é {dados-calculo.ap} e o de ordem {dados-calculo.q} é {dados-calculo.aq}. Qual é o primeiro termo?",
+    "fr": "Dans une suite arithmétique, le terme de rang {dados-calculo.p} vaut {dados-calculo.ap} et celui de rang {dados-calculo.q} vaut {dados-calculo.aq}. Quel est le premier terme ?",
+    "en": "In an arithmetic sequence, the term of index {dados-calculo.p} is {dados-calculo.ap} and the one of index {dados-calculo.q} is {dados-calculo.aq}. What is the first term?"
+  }
+}

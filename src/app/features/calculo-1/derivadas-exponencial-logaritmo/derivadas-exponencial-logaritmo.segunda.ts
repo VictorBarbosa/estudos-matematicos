@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -25,10 +30,17 @@ export function exercicioSegundaExpLog(nivel: Nivel, rng: Rng): Exercicio<number
     const x0 = rng.escolher([0, 1, -1]);
     const gabarito = a * k * k * Math.exp(k * x0);
     const primeira = a * k * Math.exp(k * x0);
+    const texto = enunciadoComSufixos(
+      moldesDe('derivadas-exponencial-logaritmo', 'derivada-segunda-no-ponto')[0]!,
+      moldesDe('derivadas-exponencial-logaritmo', 'sufixo-casas-3'),
+      { x0 },
+    );
+
     return {
       id: `explog-segunda-exp-${a}${k}-${x0}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Calcule a derivada SEGUNDA f''(${x0}). Responda com 3 casas decimais.`,
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `f(x) = ${expTex(a, k)}`,
       gabarito,
       resolucao: {
@@ -73,10 +85,17 @@ export function exercicioSegundaExpLog(nivel: Nivel, rng: Rng): Exercicio<number
 
   const x0 = rng.inteiro(1, 5);
   const gabarito = -a / (x0 * x0);
+  const texto = enunciadoComSufixos(
+    moldesDe('derivadas-exponencial-logaritmo', 'derivada-segunda-no-ponto')[0]!,
+    moldesDe('derivadas-exponencial-logaritmo', 'sufixo-fracao-ou-3-casas'),
+    { x0 },
+  );
+
   return {
     id: `explog-segunda-ln-${a}-${x0}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule a derivada SEGUNDA f''(${x0}). Responda com 3 casas decimais ou como fração.`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${a === 1 ? '' : a}\\ln x`,
     gabarito,
     resolucao: {
@@ -130,12 +149,17 @@ export function exercicioRetaTangenteExpLog(nivel: Nivel, rng: Rng): Exercicio<n
   const gabarito = f0 - m * x0;
   const fTex = exponencial ? expTex(a, k) : `${a === 1 ? '' : a}\\ln x`;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('derivadas-exponencial-logaritmo', 'tangente-corta-eixo-y')[0]!,
+    moldesDe('derivadas-exponencial-logaritmo', 'sufixo-casas-3'),
+    { x0 },
+  );
+
   return {
     id: `explog-reta-${exponencial ? 'e' : 'l'}-${a}${k}-${x0}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Encontre a reta tangente ao gráfico em x = ${x0} e informe onde ela corta o eixo y. ` +
-      '(3 casas decimais)',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${fTex}`,
     gabarito,
     resolucao: {

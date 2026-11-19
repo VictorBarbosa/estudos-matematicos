@@ -25,6 +25,7 @@ import eequacoesParametricasExtremo04 from '@core/enunciados/enunciados/equacoes
 import eequacoesParametricasMoldesForma1 from '@core/enunciados/enunciados/equacoes-parametricas/moldes/forma-1.json';
 import eequacoesParametricasMoldesForma2 from '@core/enunciados/enunciados/equacoes-parametricas/moldes/forma-2.json';
 import eequacoesParametricasMoldesForma3 from '@core/enunciados/enunciados/equacoes-parametricas/moldes/forma-3.json';
+import eequacoesParametricasMoldesSufixoCasas3 from '@core/enunciados/enunciados/equacoes-parametricas/moldes/sufixo-casas-3.json';
 import eequacoesParametricasMoldesForma4 from '@core/enunciados/enunciados/equacoes-parametricas/moldes/forma-4.json';
 import eequacoesParametricasMoldesForma5 from '@core/enunciados/enunciados/equacoes-parametricas/moldes/forma-5.json';
 import eequacoesParametricasMoldesForma6 from '@core/enunciados/enunciados/equacoes-parametricas/moldes/forma-6.json';
@@ -50,6 +51,7 @@ export const ENTRADAS_DE_EQUACOES_PARAMETRICAS: readonly EntradaDeEnunciado[] = 
   { topico: 'equacoes-parametricas', forma: 'forma-1', conteudo: eequacoesParametricasMoldesForma1 },
   { topico: 'equacoes-parametricas', forma: 'forma-2', conteudo: eequacoesParametricasMoldesForma2 },
   { topico: 'equacoes-parametricas', forma: 'forma-3', conteudo: eequacoesParametricasMoldesForma3 },
+  { topico: 'equacoes-parametricas', forma: 'sufixo-casas-3', conteudo: eequacoesParametricasMoldesSufixoCasas3 },
   { topico: 'equacoes-parametricas', forma: 'forma-4', conteudo: eequacoesParametricasMoldesForma4 },
   { topico: 'equacoes-parametricas', forma: 'forma-5', conteudo: eequacoesParametricasMoldesForma5 },
   { topico: 'equacoes-parametricas', forma: 'forma-6', conteudo: eequacoesParametricasMoldesForma6 },

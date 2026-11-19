@@ -67,6 +67,9 @@ import etaxaDeVariacaoExtremo13 from '@core/enunciados/enunciados/taxa-de-variac
 import etaxaDeVariacaoExtremo14 from '@core/enunciados/enunciados/taxa-de-variacao/extremo/14.json';
 import etaxaDeVariacaoExtremo15 from '@core/enunciados/enunciados/taxa-de-variacao/extremo/15.json';
 import etaxaDeVariacaoMoldesForma1 from '@core/enunciados/enunciados/taxa-de-variacao/moldes/forma-1.json';
+import etaxaDeVariacaoMoldesAceleracaoNoInstante from '@core/enunciados/enunciados/taxa-de-variacao/moldes/aceleracao-no-instante.json';
+import etaxaDeVariacaoMoldesVelocidadeInstantanea from '@core/enunciados/enunciados/taxa-de-variacao/moldes/velocidade-instantanea.json';
+import etaxaDeVariacaoMoldesVelocidadeMedia from '@core/enunciados/enunciados/taxa-de-variacao/moldes/velocidade-media.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_TAXA_DE_VARIACAO: readonly EntradaDeEnunciado[] = [
@@ -131,4 +134,7 @@ export const ENTRADAS_DE_TAXA_DE_VARIACAO: readonly EntradaDeEnunciado[] = [
   { topico: 'taxa-de-variacao', nivel: 'extremo', conteudo: etaxaDeVariacaoExtremo14 },
   { topico: 'taxa-de-variacao', nivel: 'extremo', conteudo: etaxaDeVariacaoExtremo15 },
   { topico: 'taxa-de-variacao', forma: 'forma-1', conteudo: etaxaDeVariacaoMoldesForma1 },
+  { topico: 'taxa-de-variacao', forma: 'aceleracao-no-instante', conteudo: etaxaDeVariacaoMoldesAceleracaoNoInstante },
+  { topico: 'taxa-de-variacao', forma: 'velocidade-instantanea', conteudo: etaxaDeVariacaoMoldesVelocidadeInstantanea },
+  { topico: 'taxa-de-variacao', forma: 'velocidade-media', conteudo: etaxaDeVariacaoMoldesVelocidadeMedia },
 ];

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "O limite pela esquerda em x = {dados-calculo.a} é infinito. Responda 1 se for +∞ ou 2 se for −∞.",
+    "fr": "La limite à gauche en x = {dados-calculo.a} est infinie. Répondez 1 si elle vaut +∞ ou 2 si elle vaut −∞.",
+    "en": "The left-hand limit at x = {dados-calculo.a} is infinite. Answer 1 for +∞ or 2 for −∞."
+  }
+}

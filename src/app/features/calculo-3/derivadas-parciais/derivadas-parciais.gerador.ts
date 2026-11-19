@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   Quadrica,
   avaliarLinear2,
@@ -88,13 +93,18 @@ function daParcial(nivel: Nivel, rng: Rng, emX: boolean): Exercicio<number> {
   const aOutra = avaliarLinear2(emX ? parcialY(q) : parcialX(q), x, y);
   const variavel = emX ? 'x' : 'y';
 
+  const texto = enunciadoComSufixos(
+    moldesDe('derivadas-parciais', 'forma-2')[0]!,
+    moldesDe('derivadas-parciais', 'sufixo-casas-3'),
+    { variavel, x, y },
+  );
+
   return montar({
     chave: `p${variavel}-${q.a}${q.b}${q.c}${q.d}${q.e}-${x}-${y}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('derivadas-parciais', 'forma-2')[0]!, { variavel, x, y }, 'pt') +
-      PEDIDO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: parcialComPassos(q, x, y, emX),
@@ -204,11 +214,17 @@ function daMista(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const gabarito = q.c;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('derivadas-parciais', 'forma-3')[0]!,
+    moldesDe('derivadas-parciais', 'sufixo-casas-3'),
+  );
+
   return montar({
     chave: `mx-${q.a}${q.b}${q.c}${q.d}${q.e}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('derivadas-parciais', 'forma-3')[0]!, {}, 'pt') + PEDIDO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {

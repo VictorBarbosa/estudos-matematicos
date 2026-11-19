@@ -1,3 +1,4 @@
+import { enunciadoComSufixos, moldesDe } from '@core/enunciados/moldes/moldes.model';
 import { Passo } from '@core/math/tipos/tipos';
 import { Rng } from '@core/treino/rng/rng';
 import { numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -148,12 +149,17 @@ export function exercicioNewton(nivel: Nivel, rng: Rng): Exercicio<number> {
     });
   }
 
+  const texto = enunciadoComSufixos(
+    moldesDe('metodos-numericos', segunda ? 'newton-duas-iteracoes' : 'newton-uma-iteracao')[0]!,
+    moldesDe('metodos-numericos', 'sufixo-casas-5'),
+    { x0 },
+  );
+
   return {
     id: `newton-${nivel}-${fn.fTex.replace(/\W/g, '')}-${x0}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Use o método de Newton-Raphson partindo de x₀ = ${x0} e informe ` +
-      `${segunda ? 'x₂ (duas iterações)' : 'x₁ (uma iteração)'}. ${PEDIDO}`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${fn.fTex} \\qquad x_{n+1} = x_{n} - \\frac{f(x_{n})}{f'(x_{n})}`,
     gabarito,
     resolucao: {

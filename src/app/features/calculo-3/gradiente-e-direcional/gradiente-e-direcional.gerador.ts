@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   Quadrica,
   classificarCritico,
@@ -90,16 +95,18 @@ function daComponente(nivel: Nivel, rng: Rng): Exercicio<number> {
   const g = gradienteEm(q, x, y);
   const gabarito = emX ? g.x : g.y;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('gradiente-e-direcional', emX ? 'forma-4' : 'forma-5')[0]!,
+    moldesDe('gradiente-e-direcional', 'sufixo-casas-3'),
+    { x, y },
+  );
+
   return montar({
     chave: `cp-${q.a}${q.b}${q.c}${q.d}${q.e}-${x}${y}-${emX}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(
-        moldesDe('gradiente-e-direcional', emX ? 'forma-4' : 'forma-5')[0]!,
-        { x, y },
-        'pt',
-      ) + PEDIDO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao: {

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um múon vive em média 2,2 µs no próprio referencial. Viajando a {dados-calculo.beta}c, quanto tempo ele dura para quem o vê passar, em µs?",
+    "fr": "Un muon vit en moyenne 2,2 µs dans son propre référentiel. Voyageant à {dados-calculo.beta}c, combien de temps dure-t-il pour qui le voit passer, en µs ?",
+    "en": "A muon lives on average 2.2 µs in its own frame. Travelling at {dados-calculo.beta}c, how long does it last for someone watching it go by, in µs?"
+  }
+}

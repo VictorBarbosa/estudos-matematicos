@@ -68,6 +68,7 @@ import eeletrostaticaExtremo14 from '@core/enunciados/enunciados/eletrostatica/e
 import eeletrostaticaExtremo15 from '@core/enunciados/enunciados/eletrostatica/extremo/15.json';
 import eeletrostaticaMoldesForma1 from '@core/enunciados/enunciados/eletrostatica/moldes/forma-1.json';
 import eeletrostaticaMoldesForma2 from '@core/enunciados/enunciados/eletrostatica/moldes/forma-2.json';
+import eeletrostaticaMoldesSufixoFracaoOu2Casas from '@core/enunciados/enunciados/eletrostatica/moldes/sufixo-fracao-ou-2-casas.json';
 import eeletrostaticaMoldesForma3 from '@core/enunciados/enunciados/eletrostatica/moldes/forma-3.json';
 import eeletrostaticaMoldesForma4 from '@core/enunciados/enunciados/eletrostatica/moldes/forma-4.json';
 import eeletrostaticaMoldesForma5 from '@core/enunciados/enunciados/eletrostatica/moldes/forma-5.json';
@@ -138,6 +139,7 @@ export const ENTRADAS_DE_ELETROSTATICA: readonly EntradaDeEnunciado[] = [
   { topico: 'eletrostatica', nivel: 'extremo', conteudo: eeletrostaticaExtremo15 },
   { topico: 'eletrostatica', forma: 'forma-1', conteudo: eeletrostaticaMoldesForma1 },
   { topico: 'eletrostatica', forma: 'forma-2', conteudo: eeletrostaticaMoldesForma2 },
+  { topico: 'eletrostatica', forma: 'sufixo-fracao-ou-2-casas', conteudo: eeletrostaticaMoldesSufixoFracaoOu2Casas },
   { topico: 'eletrostatica', forma: 'forma-3', conteudo: eeletrostaticaMoldesForma3 },
   { topico: 'eletrostatica', forma: 'forma-4', conteudo: eeletrostaticaMoldesForma4 },
   { topico: 'eletrostatica', forma: 'forma-5', conteudo: eeletrostaticaMoldesForma5 },

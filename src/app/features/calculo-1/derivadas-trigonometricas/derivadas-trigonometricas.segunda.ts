@@ -1,4 +1,9 @@
 import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
+import {
   ARCOS_DA_DERIVADA,
   FuncaoTrig,
   arcoTex,
@@ -45,10 +50,17 @@ export function exercicioSegundaTrig(nivel: Nivel, rng: Rng): Exercicio<number> 
       : -a * b * exatoValor(senoExato(interno));
   const exato = exatoTex({ ...valor, num: valor.num * fator });
 
+  const texto = enunciadoComSufixos(
+    moldesDe('derivadas-trigonometricas', 'derivada-segunda-no-arco')[0]!,
+    moldesDe('derivadas-trigonometricas', 'sufixo-exata-ou-3-casas'),
+    { arco: arcoTexto(arco) },
+  );
+
   return {
     id: `trig-segunda-${funcao}-${a}${b}-${arco.k}${arco.m}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Calcule a derivada SEGUNDA f''(${arcoTexto(arco)}). ${PEDIDO}`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${trigParaTex(funcao, a, b)}`,
     gabarito,
     resolucao: {
@@ -128,12 +140,17 @@ export function exercicioRetaTangenteTrig(nivel: Nivel, rng: Rng): Exercicio<num
       : -a * b * exatoValor(senoExato(interno));
   const gabarito = f0 - m * x0;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('derivadas-trigonometricas', 'tangente-corta-eixo-y')[0]!,
+    moldesDe('derivadas-trigonometricas', 'sufixo-casas-3'),
+    { arco: arcoTexto(arco) },
+  );
+
   return {
     id: `trig-reta-${funcao}-${a}${b}-${arco.k}${arco.m}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Encontre a reta tangente ao gráfico em x = ${arcoTexto(arco)} e informe onde ela corta o eixo y. ` +
-      '(3 casas decimais)',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${trigParaTex(funcao, a, b)}`,
     gabarito,
     resolucao: {

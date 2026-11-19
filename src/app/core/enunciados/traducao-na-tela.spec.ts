@@ -57,7 +57,7 @@ const SEMENTES = Array.from({ length: 60 }, (_, indice) => indice * 7 + 1);
  * primeira entrega, que acabou com `pedindoFracao` — a função que colava
  * « Responda como fração.» em português ao enunciado de quatro tópicos.
  */
-const SEM_TRADUCAO_MAXIMO = 48;
+const SEM_TRADUCAO_MAXIMO = 19;
 
 describe('tradução na tela', () => {
   it('a conta de tópicos sem tradução só desce', () => {

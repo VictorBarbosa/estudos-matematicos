@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   alcanceDoLancamentoComPassos,
   cicloideParametrica,
@@ -134,12 +139,18 @@ function daCircunferencia(nivel: Nivel, rng: Rng): Exercicio<number> {
   const curva = circunferenciaParametrica(cx, cy, raio);
   const gabarito = curva.y(t);
 
+  const texto = enunciadoComSufixos(
+    moldesDe('equacoes-parametricas', 'forma-5')[0]!,
+    moldesDe('equacoes-parametricas', 'sufixo-casas-3'),
+    { doze },
+  );
+
   return montar({
     chave: `cir-${cx}${cy}-${raio}-${doze}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('equacoes-parametricas', 'forma-5')[0]!, { doze }, 'pt') + PEDIDO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito,
     resolucao: { resultado: gabarito, passos: posicaoNoInstanteComPassos(curva, t).passos },
@@ -285,12 +296,18 @@ function daVelocidade(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const resolucao = velocidadeParametricaComPassos(curva, t);
 
+  const texto = enunciadoComSufixos(
+    moldesDe('equacoes-parametricas', 'forma-6')[0]!,
+    moldesDe('equacoes-parametricas', 'sufixo-casas-3'),
+    { doze },
+  );
+
   return montar({
     chave: `vel-${curva.tipo}-${raio}-${doze}`,
     nivel,
     rng,
-    enunciado:
-      textoDoMolde(moldesDe('equacoes-parametricas', 'forma-6')[0]!, { doze }, 'pt') + PEDIDO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\begin{cases} ${curva.xTex} \\\\ ${curva.yTex} \\end{cases}`,
     gabarito: resolucao.resultado,
     resolucao,

@@ -69,6 +69,9 @@ import eprogressoesExtremo15 from '@core/enunciados/enunciados/progressoes/extre
 import eprogressoesMoldesForma1 from '@core/enunciados/enunciados/progressoes/moldes/forma-1.json';
 import eprogressoesMoldesForma2 from '@core/enunciados/enunciados/progressoes/moldes/forma-2.json';
 import eprogressoesMoldesForma3 from '@core/enunciados/enunciados/progressoes/moldes/forma-3.json';
+import eprogressoesMoldesPaPrimeiroTermoPorDoisTermos from '@core/enunciados/enunciados/progressoes/moldes/pa-primeiro-termo-por-dois-termos.json';
+import eprogressoesMoldesPaRazaoPorDoisTermos from '@core/enunciados/enunciados/progressoes/moldes/pa-razao-por-dois-termos.json';
+import eprogressoesMoldesPgPrimeiroTermoPorDoisTermos from '@core/enunciados/enunciados/progressoes/moldes/pg-primeiro-termo-por-dois-termos.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_PROGRESSOES: readonly EntradaDeEnunciado[] = [
@@ -135,4 +138,7 @@ export const ENTRADAS_DE_PROGRESSOES: readonly EntradaDeEnunciado[] = [
   { topico: 'progressoes', forma: 'forma-1', conteudo: eprogressoesMoldesForma1 },
   { topico: 'progressoes', forma: 'forma-2', conteudo: eprogressoesMoldesForma2 },
   { topico: 'progressoes', forma: 'forma-3', conteudo: eprogressoesMoldesForma3 },
+  { topico: 'progressoes', forma: 'pa-primeiro-termo-por-dois-termos', conteudo: eprogressoesMoldesPaPrimeiroTermoPorDoisTermos },
+  { topico: 'progressoes', forma: 'pa-razao-por-dois-termos', conteudo: eprogressoesMoldesPaRazaoPorDoisTermos },
+  { topico: 'progressoes', forma: 'pg-primeiro-termo-por-dois-termos', conteudo: eprogressoesMoldesPgPrimeiroTermoPorDoisTermos },
 ];

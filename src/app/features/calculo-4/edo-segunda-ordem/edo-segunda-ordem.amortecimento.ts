@@ -1,3 +1,9 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
+import { EnunciadoTrilingue } from '@core/treino/textos/texto-trilingue';
 import { Rng } from '@core/treino/rng/rng';
 import { numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Armadilha, Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -20,7 +26,7 @@ const EDO = (m: number | string, c: number | string, k: number | string): string
 function montar(
   id: string,
   nivel: Nivel,
-  enunciado: string,
+  texto: EnunciadoTrilingue,
   enunciadoTex: string,
   gabarito: number,
   passos: Exercicio<number>['resolucao']['passos'],
@@ -30,7 +36,8 @@ function montar(
   return {
     id,
     nivel,
-    enunciado,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex,
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -55,8 +62,7 @@ export function exercicioAmortecimentoCritico(nivel: Nivel, rng: Rng): Exercicio
   return montar(
     `amort-critico-${m}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
-    `Uma massa de ${m} kg está presa a uma mola de rigidez ${k} N/m. Qual coeficiente de ` +
-      'amortecimento c, em N·s/m, deixa o sistema CRITICAMENTE amortecido?',
+    enunciadoDoMolde(moldesDe('edo-segunda-ordem', 'amortecimento-critico')[0]!, { m, k }),
     EDO(m, 'c', k),
     gabarito,
     [
@@ -110,9 +116,11 @@ export function exercicioRigidezLimite(nivel: Nivel, rng: Rng): Exercicio<number
   return montar(
     `amort-rigidez-${m}-${c}-${rng.inteiro(0, 9999)}`,
     nivel,
-    `Uma massa de ${m} kg tem amortecimento c = ${c} N·s/m. A partir de que rigidez k, em N/m, ` +
-      'o sistema passa a OSCILAR?' +
-      (inteiro ? '' : ' Responda com 4 casas decimais.'),
+    enunciadoComSufixos(
+      moldesDe('edo-segunda-ordem', 'rigidez-para-oscilar')[0]!,
+      inteiro ? [] : moldesDe('edo-segunda-ordem', 'sufixo-casas-4'),
+      { m, c },
+    ),
     EDO(m, c, 'k'),
     gabarito,
     [
@@ -169,8 +177,11 @@ export function exercicioMeiaAmplitude(nivel: Nivel, rng: Rng): Exercicio<number
   return montar(
     `amort-meia-${m}-${c}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
-    `Uma massa de ${m} kg, mola de ${k} N/m e amortecimento ${c} N·s/m. Em quantos segundos a ` +
-      'amplitude da oscilação cai à METADE? Responda com 4 casas decimais.',
+    enunciadoComSufixos(
+      moldesDe('edo-segunda-ordem', 'meia-amplitude')[0]!,
+      moldesDe('edo-segunda-ordem', 'sufixo-casas-4'),
+      { m, k, c },
+    ),
     EDO(m, c, k),
     gabarito,
     [

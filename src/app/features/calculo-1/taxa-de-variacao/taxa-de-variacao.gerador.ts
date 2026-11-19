@@ -1,5 +1,11 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, analisarMovimentoComPassos, taxaMediaComPassos } from '@core/math';
+import { EnunciadoTrilingue } from '@core/treino/textos/texto-trilingue';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -74,10 +80,13 @@ function exercicioDeMovimento(
         ? resultado.aceleracao
         : media.resultado;
 
+  const texto = enunciadoDe(pergunta, t0, t1);
+
   return {
     id: `taxa-${pergunta}-${a}${b}${c}${d}-${t0}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: enunciadoDe(pergunta, t0, t1),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `s(t) = ${s.paraTex('t')}`,
     gabarito,
     resolucao: {
@@ -102,17 +111,22 @@ function exercicioDeMovimento(
   };
 }
 
-function enunciadoDe(pergunta: Exclude<Pergunta, 'parada'>, t0: number, t1: number): string {
-  const corpo = 'A posição de um corpo, em metros, é dada em função do tempo em segundos.';
+/** O molde de cada pergunta: o texto está no arquivo, nas três línguas. */
+const MOLDE_DA_PERGUNTA: Readonly<Record<Exclude<Pergunta, 'parada'>, string>> = {
+  velocidade: 'velocidade-instantanea',
+  aceleracao: 'aceleracao-no-instante',
+  media: 'velocidade-media',
+};
 
-  switch (pergunta) {
-    case 'velocidade':
-      return `${corpo} Qual é a velocidade instantânea em t = ${t0} s?`;
-    case 'aceleracao':
-      return `${corpo} Qual é a aceleração em t = ${t0} s?`;
-    case 'media':
-      return `${corpo} Qual é a velocidade média entre t = ${t0} s e t = ${t1} s?`;
-  }
+function enunciadoDe(
+  pergunta: Exclude<Pergunta, 'parada'>,
+  t0: number,
+  t1: number,
+): EnunciadoTrilingue {
+  return enunciadoDoMolde(moldesDe('taxa-de-variacao', MOLDE_DA_PERGUNTA[pergunta])[0]!, {
+    t0,
+    t1,
+  });
 }
 
 function armadilhasDe(

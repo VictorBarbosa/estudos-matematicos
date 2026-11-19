@@ -68,6 +68,9 @@ import eintegraisMultiplasExtremo14 from '@core/enunciados/enunciados/integrais-
 import eintegraisMultiplasExtremo15 from '@core/enunciados/enunciados/integrais-multiplas/extremo/15.json';
 import eintegraisMultiplasMoldesForma1 from '@core/enunciados/enunciados/integrais-multiplas/moldes/forma-1.json';
 import eintegraisMultiplasMoldesForma2 from '@core/enunciados/enunciados/integrais-multiplas/moldes/forma-2.json';
+import eintegraisMultiplasMoldesSufixoCasas3 from '@core/enunciados/enunciados/integrais-multiplas/moldes/sufixo-casas-3.json';
+import eintegraisMultiplasMoldesIntegralDuplaSobreRetangulo from '@core/enunciados/enunciados/integrais-multiplas/moldes/integral-dupla-sobre-retangulo.json';
+import eintegraisMultiplasMoldesVolumeSobreRetangulo from '@core/enunciados/enunciados/integrais-multiplas/moldes/volume-sobre-retangulo.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_INTEGRAIS_MULTIPLAS: readonly EntradaDeEnunciado[] = [
@@ -133,4 +136,7 @@ export const ENTRADAS_DE_INTEGRAIS_MULTIPLAS: readonly EntradaDeEnunciado[] = [
   { topico: 'integrais-multiplas', nivel: 'extremo', conteudo: eintegraisMultiplasExtremo15 },
   { topico: 'integrais-multiplas', forma: 'forma-1', conteudo: eintegraisMultiplasMoldesForma1 },
   { topico: 'integrais-multiplas', forma: 'forma-2', conteudo: eintegraisMultiplasMoldesForma2 },
+  { topico: 'integrais-multiplas', forma: 'sufixo-casas-3', conteudo: eintegraisMultiplasMoldesSufixoCasas3 },
+  { topico: 'integrais-multiplas', forma: 'integral-dupla-sobre-retangulo', conteudo: eintegraisMultiplasMoldesIntegralDuplaSobreRetangulo },
+  { topico: 'integrais-multiplas', forma: 'volume-sobre-retangulo', conteudo: eintegraisMultiplasMoldesVolumeSobreRetangulo },
 ];

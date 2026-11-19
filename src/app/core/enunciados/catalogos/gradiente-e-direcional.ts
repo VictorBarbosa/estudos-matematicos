@@ -69,6 +69,7 @@ import egradienteEDirecionalExtremo15 from '@core/enunciados/enunciados/gradient
 import egradienteEDirecionalMoldesForma1 from '@core/enunciados/enunciados/gradiente-e-direcional/moldes/forma-1.json';
 import egradienteEDirecionalMoldesForma2 from '@core/enunciados/enunciados/gradiente-e-direcional/moldes/forma-2.json';
 import egradienteEDirecionalMoldesForma3 from '@core/enunciados/enunciados/gradiente-e-direcional/moldes/forma-3.json';
+import egradienteEDirecionalMoldesSufixoCasas3 from '@core/enunciados/enunciados/gradiente-e-direcional/moldes/sufixo-casas-3.json';
 import egradienteEDirecionalMoldesForma4 from '@core/enunciados/enunciados/gradiente-e-direcional/moldes/forma-4.json';
 import egradienteEDirecionalMoldesForma5 from '@core/enunciados/enunciados/gradiente-e-direcional/moldes/forma-5.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
@@ -137,6 +138,7 @@ export const ENTRADAS_DE_GRADIENTE_E_DIRECIONAL: readonly EntradaDeEnunciado[] =
   { topico: 'gradiente-e-direcional', forma: 'forma-1', conteudo: egradienteEDirecionalMoldesForma1 },
   { topico: 'gradiente-e-direcional', forma: 'forma-2', conteudo: egradienteEDirecionalMoldesForma2 },
   { topico: 'gradiente-e-direcional', forma: 'forma-3', conteudo: egradienteEDirecionalMoldesForma3 },
+  { topico: 'gradiente-e-direcional', forma: 'sufixo-casas-3', conteudo: egradienteEDirecionalMoldesSufixoCasas3 },
   { topico: 'gradiente-e-direcional', forma: 'forma-4', conteudo: egradienteEDirecionalMoldesForma4 },
   { topico: 'gradiente-e-direcional', forma: 'forma-5', conteudo: egradienteEDirecionalMoldesForma5 },
 ];

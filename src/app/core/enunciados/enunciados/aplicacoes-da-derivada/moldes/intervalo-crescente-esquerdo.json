@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "A função é crescente num único intervalo limitado (a, b). Informe a, o extremo esquerdo.",
+    "fr": "La fonction est croissante sur un seul intervalle borné (a, b). Indiquez a, la borne gauche.",
+    "en": "The function is increasing on a single bounded interval (a, b). Give a, the left endpoint."
+  }
+}

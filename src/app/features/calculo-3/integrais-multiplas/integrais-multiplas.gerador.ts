@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   Quadrica,
   avaliarQuadrica,
@@ -107,15 +113,21 @@ function doRetangulo(nivel: Nivel, rng: Rng, comoVolume: boolean): Exercicio<num
   const gabarito = resolucao.resultado;
   const area = (x1 - x0) * (y1 - y0);
 
+  const texto = enunciadoComSufixos(
+    moldesDe(
+      'integrais-multiplas',
+      comoVolume ? 'volume-sobre-retangulo' : 'integral-dupla-sobre-retangulo',
+    )[0]!,
+    moldesDe('integrais-multiplas', 'sufixo-casas-3'),
+    { x0, x1, y0, y1 },
+  );
+
   return montar({
     chave: `${comoVolume ? 'vl' : 'rt'}-${q.a}${q.b}${q.c}${q.d}${q.e}${q.f0}-${x0}${x1}${y0}${y1}`,
     nivel,
     rng,
-    enunciado: comoVolume
-      ? `Qual é o volume sob esta superfície e acima do retângulo de ${x0} a ${x1} em x e de ` +
-        `${y0} a ${y1} em y? ${PEDIDO}`
-      : `Calcule a integral dupla desta função sobre o retângulo de ${x0} a ${x1} em x e de ` +
-        `${y0} a ${y1} em y. ${PEDIDO}`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x,y) = ${quadricaParaTex(q)}`,
     gabarito,
     resolucao,

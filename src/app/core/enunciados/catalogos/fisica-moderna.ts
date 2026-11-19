@@ -96,12 +96,15 @@ import efisicaModernaExtremo21 from '@core/enunciados/enunciados/fisica-moderna/
 import efisicaModernaExtremo22 from '@core/enunciados/enunciados/fisica-moderna/extremo/22.json';
 import efisicaModernaMoldesForma1 from '@core/enunciados/enunciados/fisica-moderna/moldes/forma-1.json';
 import efisicaModernaMoldesForma2 from '@core/enunciados/enunciados/fisica-moderna/moldes/forma-2.json';
+import efisicaModernaMoldesSufixoCasas2 from '@core/enunciados/enunciados/fisica-moderna/moldes/sufixo-casas-2.json';
 import efisicaModernaMoldesForma3 from '@core/enunciados/enunciados/fisica-moderna/moldes/forma-3.json';
 import efisicaModernaMoldesForma4 from '@core/enunciados/enunciados/fisica-moderna/moldes/forma-4.json';
 import efisicaModernaMoldesForma5 from '@core/enunciados/enunciados/fisica-moderna/moldes/forma-5.json';
 import efisicaModernaMoldesForma6 from '@core/enunciados/enunciados/fisica-moderna/moldes/forma-6.json';
 import efisicaModernaMoldesForma7 from '@core/enunciados/enunciados/fisica-moderna/moldes/forma-7.json';
 import efisicaModernaMoldesForma8 from '@core/enunciados/enunciados/fisica-moderna/moldes/forma-8.json';
+import efisicaModernaMoldesDilatacaoDoMuon from '@core/enunciados/enunciados/fisica-moderna/moldes/dilatacao-do-muon.json';
+import efisicaModernaMoldesDilatacaoDoRelogioDaNave from '@core/enunciados/enunciados/fisica-moderna/moldes/dilatacao-do-relogio-da-nave.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_FISICA_MODERNA: readonly EntradaDeEnunciado[] = [
@@ -195,10 +198,13 @@ export const ENTRADAS_DE_FISICA_MODERNA: readonly EntradaDeEnunciado[] = [
   { topico: 'fisica-moderna', nivel: 'extremo', conteudo: efisicaModernaExtremo22 },
   { topico: 'fisica-moderna', forma: 'forma-1', conteudo: efisicaModernaMoldesForma1 },
   { topico: 'fisica-moderna', forma: 'forma-2', conteudo: efisicaModernaMoldesForma2 },
+  { topico: 'fisica-moderna', forma: 'sufixo-casas-2', conteudo: efisicaModernaMoldesSufixoCasas2 },
   { topico: 'fisica-moderna', forma: 'forma-3', conteudo: efisicaModernaMoldesForma3 },
   { topico: 'fisica-moderna', forma: 'forma-4', conteudo: efisicaModernaMoldesForma4 },
   { topico: 'fisica-moderna', forma: 'forma-5', conteudo: efisicaModernaMoldesForma5 },
   { topico: 'fisica-moderna', forma: 'forma-6', conteudo: efisicaModernaMoldesForma6 },
   { topico: 'fisica-moderna', forma: 'forma-7', conteudo: efisicaModernaMoldesForma7 },
   { topico: 'fisica-moderna', forma: 'forma-8', conteudo: efisicaModernaMoldesForma8 },
+  { topico: 'fisica-moderna', forma: 'dilatacao-do-muon', conteudo: efisicaModernaMoldesDilatacaoDoMuon },
+  { topico: 'fisica-moderna', forma: 'dilatacao-do-relogio-da-nave', conteudo: efisicaModernaMoldesDilatacaoDoRelogioDaNave },
 ];

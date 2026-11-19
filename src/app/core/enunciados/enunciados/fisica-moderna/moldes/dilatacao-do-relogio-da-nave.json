@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um relógio a bordo de uma nave que viaja a {dados-calculo.beta}c marca {dados-calculo.proprio} h. Quanto tempo passa para quem ficou na Terra, em horas?",
+    "fr": "Une horloge à bord d’un vaisseau voyageant à {dados-calculo.beta}c indique {dados-calculo.proprio} h. Combien de temps s’écoule pour qui est resté sur Terre, en heures ?",
+    "en": "A clock aboard a ship travelling at {dados-calculo.beta}c reads {dados-calculo.proprio} h. How much time passes for someone who stayed on Earth, in hours?"
+  }
+}

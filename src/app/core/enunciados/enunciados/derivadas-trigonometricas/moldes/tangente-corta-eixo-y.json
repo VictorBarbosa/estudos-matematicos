@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Encontre a reta tangente ao gráfico em x = {dados-calculo.arco} e informe onde ela corta o eixo y.",
+    "fr": "Trouvez la tangente au graphe en x = {dados-calculo.arco} et indiquez où elle coupe l'axe des ordonnées.",
+    "en": "Find the tangent line to the graph at x = {dados-calculo.arco} and give where it crosses the y-axis."
+  }
+}

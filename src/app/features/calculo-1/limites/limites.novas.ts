@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
@@ -19,10 +24,16 @@ export function exercicioLimiteFundamental(nivel: Nivel, rng: Rng): Exercicio<nu
 
   if (nivel === 'extremo') {
     const gabarito = (k * k) / 2;
+    const texto = enunciadoComSufixos(
+      moldesDe('limites', 'limite-fundamental-cosseno')[0]!,
+      moldesDe('limites', 'sufixo-casas-2'),
+    );
+
     return {
       id: `lim-fund-cos-${k}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: 'Calcule o limite usando o limite fundamental. (2 casas decimais)',
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `\\lim_{x \\to 0} \\frac{1 - \\cos(${k}x)}{x^{2}}`,
       gabarito,
       resolucao: {
@@ -76,12 +87,16 @@ export function exercicioLimiteFundamental(nivel: Nivel, rng: Rng): Exercicio<nu
   const gabarito = k / den;
   const denTex = forma === 'x' ? 'x' : forma === 'mx' ? `${m}x` : `\\sin(${m}x)`;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('limites', 'limite-fundamental-seno')[0]!,
+    Number.isInteger(gabarito) ? [] : moldesDe('limites', 'sufixo-duas-casas-ou-fracao'),
+  );
+
   return {
     id: `lim-fund-${forma}-${k}-${m}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'Calcule o limite usando o limite fundamental sen(u)/u → 1.' +
-      (Number.isInteger(gabarito) ? '' : ' (2 casas decimais, ou como fração)'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\lim_{x \\to 0} \\frac{\\sin(${k}x)}{${denTex}}`,
     gabarito,
     resolucao: {
@@ -191,12 +206,13 @@ export function exercicioLimiteExiste(nivel: Nivel, rng: Rng): Exercicio<number>
     ],
   }[caso];
 
+  const texto = enunciadoDoMolde(moldesDe('limites', 'classifique-o-limite')[0]!, {});
+
   return {
     id: `lim-existe-${caso}-${a}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'Classifique o limite: responda 1 se ele existe (é um número), 2 se é infinito ' +
-      '(+∞ ou −∞), 3 se não existe porque os laterais são diferentes.',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: tex,
     gabarito: codigo,
     resolucao: { resultado: codigo, passos },

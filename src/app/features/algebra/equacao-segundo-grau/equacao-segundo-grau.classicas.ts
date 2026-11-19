@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -37,12 +42,16 @@ export function exercicioSomaProduto(nivel: Nivel, rng: Rng): Exercicio<number> 
   const gabarito = pedeSoma ? soma : produto;
   const fracao = !Number.isInteger(gabarito);
 
+  const texto = enunciadoComSufixos(
+    moldesDe('equacao-segundo-grau', pedeSoma ? 'soma-das-raizes' : 'produto-das-raizes')[0]!,
+    fracao ? moldesDe('equacao-segundo-grau', 'sufixo-como-fracao') : [],
+  );
+
   return {
     id: `equacao2-girard-${pedeSoma ? 's' : 'p'}-${a}${b}${c}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Sem resolver a equação, informe ${pedeSoma ? 'a SOMA' : 'o PRODUTO'} das raízes.` +
-      (fracao ? ' Responda como fração.' : ''),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `${trinomioTex(a, b, c)} = 0`,
     gabarito,
     resolucao: {
@@ -115,12 +124,16 @@ export function exercicioRaizDupla(nivel: Nivel, rng: Rng): Exercicio<number> {
   if (noA) {
     // kx² + bx + c = 0: Δ = b² − 4kc = 0 ⟹ k = b²/(4c).
     const gabarito = (b * b) / (4 * c);
+    const texto = enunciadoComSufixos(
+      moldesDe('equacao-segundo-grau', 'valor-de-k-raiz-dupla')[0]!,
+      Number.isInteger(gabarito) ? [] : moldesDe('equacao-segundo-grau', 'sufixo-como-fracao'),
+    );
+
     return {
       id: `equacao2-kdupla-a-${b}${c}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        'Para que valor de k a equação tem uma raiz dupla (duas raízes iguais)?' +
-        (Number.isInteger(gabarito) ? '' : ' Responda como fração.'),
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `kx^{2} ${b > 0 ? '+' : '-'} ${Math.abs(b)}x + ${c} = 0`,
       gabarito,
       resolucao: {
@@ -166,10 +179,13 @@ export function exercicioRaizDupla(nivel: Nivel, rng: Rng): Exercicio<number> {
   }
 
   const gabarito = (b * b) / 4;
+  const texto = enunciadoDoMolde(moldesDe('equacao-segundo-grau', 'valor-de-k-raiz-dupla')[0]!, {});
+
   return {
     id: `equacao2-kdupla-c-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Para que valor de k a equação tem uma raiz dupla (duas raízes iguais)?',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `x^{2} ${b > 0 ? '+' : '-'} ${Math.abs(b)}x + k = 0`,
     gabarito,
     resolucao: {
@@ -234,12 +250,19 @@ export function exercicioBiquadrada(nivel: Nivel, rng: Rng): Exercicio<number> {
   const raizes = positivos.flatMap((t) => [Math.sqrt(t), -Math.sqrt(t)]);
   const gabarito = contar ? raizes.length : Math.max(...raizes);
 
+  const texto = enunciadoDoMolde(
+    moldesDe(
+      'equacao-segundo-grau',
+      contar ? 'quantas-raizes-biquadrada' : 'maior-raiz-biquadrada',
+    )[0]!,
+    {},
+  );
+
   return {
     id: `equacao2-biq-${b}${c}-${contar ? 'n' : 'max'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: contar
-      ? 'Quantas raízes reais tem a equação biquadrada?'
-      : 'Resolva a equação biquadrada e informe a MAIOR raiz real.',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `${trinomioTex(1, b, c, 'x^{4}', 'x^{2}')} = 0`,
     gabarito,
     resolucao: {
@@ -323,12 +346,16 @@ export function exercicioSomaDosQuadrados(nivel: Nivel, rng: Rng): Exercicio<num
   const p = c / a;
   const gabarito = s * s - 2 * p;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('equacao-segundo-grau', 'soma-dos-quadrados-das-raizes')[0]!,
+    Number.isInteger(gabarito) ? [] : moldesDe('equacao-segundo-grau', 'sufixo-como-fracao'),
+  );
+
   return {
     id: `equacao2-quadrados-${a}${b}${c}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'Sendo x₁ e x₂ as raízes, calcule x₁² + x₂² sem resolver a equação.' +
-      (Number.isInteger(gabarito) ? '' : ' Responda como fração.'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `${trinomioTex(a, b, c)} = 0`,
     gabarito,
     resolucao: {

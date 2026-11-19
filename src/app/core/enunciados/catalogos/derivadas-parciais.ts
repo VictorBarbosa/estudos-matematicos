@@ -69,6 +69,7 @@ import ederivadasParciaisExtremo15 from '@core/enunciados/enunciados/derivadas-p
 import ederivadasParciaisMoldesForma1 from '@core/enunciados/enunciados/derivadas-parciais/moldes/forma-1.json';
 import ederivadasParciaisMoldesForma2 from '@core/enunciados/enunciados/derivadas-parciais/moldes/forma-2.json';
 import ederivadasParciaisMoldesForma3 from '@core/enunciados/enunciados/derivadas-parciais/moldes/forma-3.json';
+import ederivadasParciaisMoldesSufixoCasas3 from '@core/enunciados/enunciados/derivadas-parciais/moldes/sufixo-casas-3.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_DERIVADAS_PARCIAIS: readonly EntradaDeEnunciado[] = [
@@ -135,4 +136,5 @@ export const ENTRADAS_DE_DERIVADAS_PARCIAIS: readonly EntradaDeEnunciado[] = [
   { topico: 'derivadas-parciais', forma: 'forma-1', conteudo: ederivadasParciaisMoldesForma1 },
   { topico: 'derivadas-parciais', forma: 'forma-2', conteudo: ederivadasParciaisMoldesForma2 },
   { topico: 'derivadas-parciais', forma: 'forma-3', conteudo: ederivadasParciaisMoldesForma3 },
+  { topico: 'derivadas-parciais', forma: 'sufixo-casas-3', conteudo: ederivadasParciaisMoldesSufixoCasas3 },
 ];

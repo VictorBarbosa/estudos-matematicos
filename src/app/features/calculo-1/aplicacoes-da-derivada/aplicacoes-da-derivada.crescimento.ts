@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, numeroEmTex } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -25,12 +30,19 @@ export function exercicioCrescimento(nivel: Nivel, rng: Rng): Exercicio<number> 
   const pedeDireita = rng.booleano();
   const gabarito = pedeDireita ? c2 : c1;
 
+  const texto = enunciadoDoMolde(
+    moldesDe(
+      'aplicacoes-da-derivada',
+      `intervalo-${verbo}-${pedeDireita ? 'direito' : 'esquerdo'}`,
+    )[0]!,
+    {},
+  );
+
   return {
     id: `aplic-cresc-${a}${c1}${c2}${d}-${pedeDireita ? 'b' : 'a'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `A função é ${verbo} num único intervalo limitado (a, b). Informe ` +
-      `${pedeDireita ? 'b, o extremo direito' : 'a, o extremo esquerdo'}.`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${f.paraTex()}`,
     gabarito,
     resolucao: {
@@ -95,12 +107,16 @@ export function exercicioInflexao(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = -b / (3 * a);
   const fracao = !Number.isInteger(gabarito);
 
+  const texto = enunciadoComSufixos(
+    moldesDe('aplicacoes-da-derivada', 'ponto-de-inflexao')[0]!,
+    fracao ? moldesDe('aplicacoes-da-derivada', 'sufixo-fracao-ou-3-casas') : [],
+  );
+
   return {
     id: `aplic-inflexao-${a}${b}${c}${d}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'Em que x a função tem ponto de inflexão (onde a concavidade muda)?' +
-      (fracao ? ' Responda como fração ou com 3 casas decimais.' : ''),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `f(x) = ${f.paraTex()}`,
     gabarito,
     resolucao: {

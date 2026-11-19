@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "A posição de um corpo, em metros, é dada em função do tempo em segundos. Qual é a aceleração em t = {dados-calculo.t0} s?",
+    "fr": "La position d'un corps, en mètres, est donnée en fonction du temps en secondes. Quelle est l’accélération à t = {dados-calculo.t0} s ?",
+    "en": "A body's position, in metres, is given as a function of time in seconds. What is the acceleration at t = {dados-calculo.t0} s?"
+  }
+}

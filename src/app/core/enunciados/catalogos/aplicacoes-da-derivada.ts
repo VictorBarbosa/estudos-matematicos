@@ -69,9 +69,19 @@ import eaplicacoesDaDerivadaExtremo15 from '@core/enunciados/enunciados/aplicaco
 import eaplicacoesDaDerivadaMoldesForma1 from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/forma-1.json';
 import eaplicacoesDaDerivadaMoldesForma2 from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/forma-2.json';
 import eaplicacoesDaDerivadaMoldesForma3 from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/forma-3.json';
+import eaplicacoesDaDerivadaMoldesSufixoCasas3 from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/sufixo-casas-3.json';
+import eaplicacoesDaDerivadaMoldesSufixoFracaoOu3Casas from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/sufixo-fracao-ou-3-casas.json';
 import eaplicacoesDaDerivadaMoldesForma4 from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/forma-4.json';
 import eaplicacoesDaDerivadaMoldesForma5 from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/forma-5.json';
 import eaplicacoesDaDerivadaMoldesForma6 from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/forma-6.json';
+import eaplicacoesDaDerivadaMoldesCalculeOLimite from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/calcule-o-limite.json';
+import eaplicacoesDaDerivadaMoldesIntervaloCrescenteDireito from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/intervalo-crescente-direito.json';
+import eaplicacoesDaDerivadaMoldesIntervaloCrescenteEsquerdo from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/intervalo-crescente-esquerdo.json';
+import eaplicacoesDaDerivadaMoldesIntervaloDecrescenteDireito from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/intervalo-decrescente-direito.json';
+import eaplicacoesDaDerivadaMoldesIntervaloDecrescenteEsquerdo from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/intervalo-decrescente-esquerdo.json';
+import eaplicacoesDaDerivadaMoldesLimitePorLhopital from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/limite-por-lhopital.json';
+import eaplicacoesDaDerivadaMoldesPontoDeInflexao from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/ponto-de-inflexao.json';
+import eaplicacoesDaDerivadaMoldesTeoremaDoValorMedio from '@core/enunciados/enunciados/aplicacoes-da-derivada/moldes/teorema-do-valor-medio.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_APLICACOES_DA_DERIVADA: readonly EntradaDeEnunciado[] = [
@@ -138,7 +148,17 @@ export const ENTRADAS_DE_APLICACOES_DA_DERIVADA: readonly EntradaDeEnunciado[] =
   { topico: 'aplicacoes-da-derivada', forma: 'forma-1', conteudo: eaplicacoesDaDerivadaMoldesForma1 },
   { topico: 'aplicacoes-da-derivada', forma: 'forma-2', conteudo: eaplicacoesDaDerivadaMoldesForma2 },
   { topico: 'aplicacoes-da-derivada', forma: 'forma-3', conteudo: eaplicacoesDaDerivadaMoldesForma3 },
+  { topico: 'aplicacoes-da-derivada', forma: 'sufixo-casas-3', conteudo: eaplicacoesDaDerivadaMoldesSufixoCasas3 },
+  { topico: 'aplicacoes-da-derivada', forma: 'sufixo-fracao-ou-3-casas', conteudo: eaplicacoesDaDerivadaMoldesSufixoFracaoOu3Casas },
   { topico: 'aplicacoes-da-derivada', forma: 'forma-4', conteudo: eaplicacoesDaDerivadaMoldesForma4 },
   { topico: 'aplicacoes-da-derivada', forma: 'forma-5', conteudo: eaplicacoesDaDerivadaMoldesForma5 },
   { topico: 'aplicacoes-da-derivada', forma: 'forma-6', conteudo: eaplicacoesDaDerivadaMoldesForma6 },
+  { topico: 'aplicacoes-da-derivada', forma: 'calcule-o-limite', conteudo: eaplicacoesDaDerivadaMoldesCalculeOLimite },
+  { topico: 'aplicacoes-da-derivada', forma: 'intervalo-crescente-direito', conteudo: eaplicacoesDaDerivadaMoldesIntervaloCrescenteDireito },
+  { topico: 'aplicacoes-da-derivada', forma: 'intervalo-crescente-esquerdo', conteudo: eaplicacoesDaDerivadaMoldesIntervaloCrescenteEsquerdo },
+  { topico: 'aplicacoes-da-derivada', forma: 'intervalo-decrescente-direito', conteudo: eaplicacoesDaDerivadaMoldesIntervaloDecrescenteDireito },
+  { topico: 'aplicacoes-da-derivada', forma: 'intervalo-decrescente-esquerdo', conteudo: eaplicacoesDaDerivadaMoldesIntervaloDecrescenteEsquerdo },
+  { topico: 'aplicacoes-da-derivada', forma: 'limite-por-lhopital', conteudo: eaplicacoesDaDerivadaMoldesLimitePorLhopital },
+  { topico: 'aplicacoes-da-derivada', forma: 'ponto-de-inflexao', conteudo: eaplicacoesDaDerivadaMoldesPontoDeInflexao },
+  { topico: 'aplicacoes-da-derivada', forma: 'teorema-do-valor-medio', conteudo: eaplicacoesDaDerivadaMoldesTeoremaDoValorMedio },
 ];

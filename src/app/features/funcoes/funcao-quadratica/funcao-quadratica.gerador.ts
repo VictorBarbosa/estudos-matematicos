@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { resolverQuadraticaComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -95,13 +101,19 @@ export const geradorQuadratica: GeradorExercicio<number> = {
 
     const gabarito = pergunta === 'vertice-x' ? vertice.x : vertice.y;
 
+    const texto = enunciadoDoMolde(
+      moldesDe(
+        'funcao-quadratica',
+        pergunta === 'vertice-x' ? 'abscissa-do-vertice' : 'ordenada-do-vertice',
+      )[0]!,
+      {},
+    );
+
     return {
       id: `quadratica-${pergunta}-${a}${b}${c}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        pergunta === 'vertice-x'
-          ? 'Qual é a abscissa do vértice (o valor de x onde ocorre o máximo ou o mínimo)?'
-          : 'Qual é o valor máximo ou mínimo da função, ou seja, a ordenada do vértice?',
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `f(x) = ${funcaoTex}`,
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },

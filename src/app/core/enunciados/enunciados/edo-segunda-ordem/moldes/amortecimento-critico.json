@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma massa de {dados-calculo.m} kg está presa a uma mola de rigidez {dados-calculo.k} N/m. Qual coeficiente de amortecimento c, em N·s/m, deixa o sistema CRITICAMENTE amortecido?",
+    "fr": "Une masse de {dados-calculo.m} kg est fixée à un ressort de raideur {dados-calculo.k} N/m. Quel coefficient d’amortissement c, en N·s/m, rend le système CRITIQUEMENT amorti ?",
+    "en": "A {dados-calculo.m} kg mass is attached to a spring of stiffness {dados-calculo.k} N/m. Which damping coefficient c, in N·s/m, makes the system CRITICALLY damped?"
+  }
+}

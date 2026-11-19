@@ -70,6 +70,10 @@ import eedoSegundaOrdemMoldesForma1 from '@core/enunciados/enunciados/edo-segund
 import eedoSegundaOrdemMoldesForma2 from '@core/enunciados/enunciados/edo-segunda-ordem/moldes/forma-2.json';
 import eedoSegundaOrdemMoldesForma3 from '@core/enunciados/enunciados/edo-segunda-ordem/moldes/forma-3.json';
 import eedoSegundaOrdemMoldesForma4 from '@core/enunciados/enunciados/edo-segunda-ordem/moldes/forma-4.json';
+import eedoSegundaOrdemMoldesSufixoCasas4 from '@core/enunciados/enunciados/edo-segunda-ordem/moldes/sufixo-casas-4.json';
+import eedoSegundaOrdemMoldesAmortecimentoCritico from '@core/enunciados/enunciados/edo-segunda-ordem/moldes/amortecimento-critico.json';
+import eedoSegundaOrdemMoldesMeiaAmplitude from '@core/enunciados/enunciados/edo-segunda-ordem/moldes/meia-amplitude.json';
+import eedoSegundaOrdemMoldesRigidezParaOscilar from '@core/enunciados/enunciados/edo-segunda-ordem/moldes/rigidez-para-oscilar.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_EDO_SEGUNDA_ORDEM: readonly EntradaDeEnunciado[] = [
@@ -137,4 +141,8 @@ export const ENTRADAS_DE_EDO_SEGUNDA_ORDEM: readonly EntradaDeEnunciado[] = [
   { topico: 'edo-segunda-ordem', forma: 'forma-2', conteudo: eedoSegundaOrdemMoldesForma2 },
   { topico: 'edo-segunda-ordem', forma: 'forma-3', conteudo: eedoSegundaOrdemMoldesForma3 },
   { topico: 'edo-segunda-ordem', forma: 'forma-4', conteudo: eedoSegundaOrdemMoldesForma4 },
+  { topico: 'edo-segunda-ordem', forma: 'sufixo-casas-4', conteudo: eedoSegundaOrdemMoldesSufixoCasas4 },
+  { topico: 'edo-segunda-ordem', forma: 'amortecimento-critico', conteudo: eedoSegundaOrdemMoldesAmortecimentoCritico },
+  { topico: 'edo-segunda-ordem', forma: 'meia-amplitude', conteudo: eedoSegundaOrdemMoldesMeiaAmplitude },
+  { topico: 'edo-segunda-ordem', forma: 'rigidez-para-oscilar', conteudo: eedoSegundaOrdemMoldesRigidezParaOscilar },
 ];

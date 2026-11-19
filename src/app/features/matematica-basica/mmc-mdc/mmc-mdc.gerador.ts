@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { fatorar, mdc, mdcComPassos, mmc, mmcComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { Armadilha, Exercicio, GeradorExercicio, Nivel } from '@core/treino/models/treino.model';
@@ -21,13 +26,16 @@ export const geradorMmcMdc: GeradorExercicio<number> = {
 
     const resolucao = alvo === 'mdc' ? mdcComPassos(a, b) : mmcComPassos(a, b);
 
+    const texto = enunciadoDoMolde(
+      moldesDe('mmc-mdc', alvo === 'mdc' ? 'mdc-dos-dois' : 'mmc-dos-dois')[0]!,
+      {},
+    );
+
     return {
       id: `mmc-mdc-${nivel}-${alvo}-${a}-${b}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        alvo === 'mdc'
-          ? 'Qual é o máximo divisor comum dos dois números?'
-          : 'Qual é o mínimo múltiplo comum dos dois números?',
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `\\operatorname{${alvo}}(${a}, ${b}) = \\;?`,
       gabarito: resolucao.resultado,
       resolucao,
