@@ -1,7 +1,91 @@
 {
+  "# = # e # = # · #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # e # = # · #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # e # = # · #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = # e # = #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # e # = #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # e # = #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = # e # = #² · #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # e # = #² · #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # e # = #² · #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = # e # = #². O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # e # = #². Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # e # = #². The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = # e # = #³. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # e # = #³. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # e # = #³. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = # · # e # = #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # · # e # = #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # · # e # = #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = # · # e # = #² · #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # · # e # = #² · #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # · # e # = #² · #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = # · # e # = #². O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # · # e # = #². Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # · # e # = #². The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = # · # e # = #³. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # · # e # = #³. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # · # e # = #³. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = # · # e # = #⁴. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # · # e # = #⁴. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # · # e # = #⁴. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = # · #² e # = # · #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = # · #² e # = # · #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = # · #² e # = # · #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = #² e # = # · #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = #² e # = # · #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = #² e # = # · #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = #² e # = #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = #² e # = #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = #² e # = #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = #² e # = #² · #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = #² e # = #² · #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = #² e # = #² · #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = #² e # = #². O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = #² e # = #². Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = #² e # = #². The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = #² e # = #³. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = #² e # = #³. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = #² e # = #³. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = #² · # e # = #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = #² · # e # = #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = #² · # e # = #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = #³ e # = # · #. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = #³ e # = # · #. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = #³ e # = # · #. The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = #³ e # = #². O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = #³ e # = #². Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = #³ e # = #². The LCM takes each prime factor with the largest exponent that appears."
+  },
+  "# = #³ e # = #⁴. O MMC toma cada fator primo com o maior expoente que aparece.": {
+    "fr": "# = #³ e # = #⁴. Le PPCM prend chaque facteur premier avec le plus grand exposant qui apparaît.",
+    "en": "# = #³ e # = #⁴. The LCM takes each prime factor with the largest exponent that appears."
+  },
   "# L = # dm³, e # m³ tem #³ dm³.": {
     "fr": "# L = # dm³, et # m³ contient #³ dm³.",
     "en": "# L = # dm³, and # m³ holds #³ dm³."
+  },
+  "# dividido por # dá # com resto #. As duas formas valem como resposta: #/# ou # #/#.": {
+    "fr": "# divisé par # donne # avec un reste de #. Les deux écritures valent comme réponse : #/# ou # #/#.",
+    "en": "# divided by # gives # with remainder #. Both forms count as the answer: #/# or # #/#."
   },
   "# e # não são potências da mesma base: tiramos o ln dos dois lados.": {
     "fr": "# et # ne sont pas des puissances de la même base : nous prenons le ln des deux côtés.",
@@ -51,6 +135,14 @@
     "fr": "# vaut # unités entières, c’est-à-dire # parts de taille #. Écrit ainsi, il entre dans le calcul comme n’importe quelle autre fraction — et il devient clair que son dénominateur est #, et non celui de l’autre fraction.",
     "en": "# is # whole units, that is, # parts of size #. Written this way, it enters the computation like any other fraction — and it becomes clear that its denominator is #, not the other fraction’s."
   },
+  "# é um cubo perfeito (#³). Use u³ + v³ = (u + v)(u² - uv + v²) e iguale o primeiro fator a zero.": {
+    "fr": "# est un cube parfait (#³). Utilisez u³ + v³ = (u + v)(u² - uv + v²) et annulez le premier facteur.",
+    "en": "# is a perfect cube (#³). Use u³ + v³ = (u + v)(u² - uv + v²) and set the first factor to zero."
+  },
+  "# é um cubo perfeito (#³). Use u³ - v³ = (u - v)(u² + uv + v²) e iguale o primeiro fator a zero.": {
+    "fr": "# est un cube parfait (#³). Utilisez u³ - v³ = (u - v)(u² + uv + v²) et annulez le premier facteur.",
+    "en": "# is a perfect cube (#³). Use u³ - v³ = (u - v)(u² + uv + v²) and set the first factor to zero."
+  },
   "#/f = #/p + #/p′, então #/p′ = #/# − #/#; depois inverta.": {
     "fr": "#/f = #/p + #/p′, donc #/p′ = #/# − #/# ; puis inversez.",
     "en": "#/f = #/p + #/p′, so #/p′ = #/# − #/#; then invert."
@@ -62,6 +154,14 @@
   "#^x é sempre positivo: t = # não dá solução. Voltamos a x só com t = #.": {
     "fr": "#^x est toujours positif : t = # ne donne pas de solution. Nous revenons à x seulement avec t = #.",
     "en": "#^x is always positive: t = # gives no solution. We go back to x only with t = #."
+  },
+  "#x³ é o cubo de #x e # é o cubo de #. O fator (#x + #) dá a raiz: iguale-o a zero e deixe como fração.": {
+    "fr": "#x³ est le cube de #x et # est le cube de #. Le facteur (#x + #) donne la racine : annulez-le et laissez le résultat en fraction.",
+    "en": "#x³ is the cube of #x and # is the cube of #. The factor (#x + #) gives the root: set it to zero and leave the answer as a fraction."
+  },
+  "#x³ é o cubo de #x e # é o cubo de #. O fator (#x - #) dá a raiz: iguale-o a zero e deixe como fração.": {
+    "fr": "#x³ est le cube de #x et # est le cube de #. Le facteur (#x - #) donne la racine : annulez-le et laissez le résultat en fraction.",
+    "en": "#x³ is the cube of #x and # is the cube of #. The factor (#x - #) gives the root: set it to zero and leave the answer as a fraction."
   },
   "A # graus o alcance é máximo, e é só nesse ângulo.": {
     "fr": "À # degrés la portée est maximale, et seulement à cet angle.",
@@ -187,6 +287,10 @@
     "fr": "La charge croît comme # − e à la puissance (−t/τ).",
     "en": "The charge grows as # − e to the power (−t/τ)."
   },
+  "A carga do metal vem do grupo dele na tabela. Cruze com a do ânion e reduza.": {
+    "fr": "La charge du métal vient de son groupe dans le tableau. Croisez-la avec celle de l’anion et réduisez.",
+    "en": "The metal’s charge comes from its group in the table. Cross it with the anion’s and reduce."
+  },
   "A carga final é CV.": {
     "fr": "La charge finale est CV.",
     "en": "The final charge is CV."
@@ -198,6 +302,10 @@
   "A carga positiva é elétron que falta: subtraímos do número de prótons.": {
     "fr": "La charge positive est un électron manquant : nous le retranchons du nombre de protons.",
     "en": "A positive charge is a missing electron: we subtract it from the proton count."
+  },
+  "A carga total do outro elemento não foi dividida pelo índice do metal. Se há dois átomos do metal, eles repartem a conta entre si.": {
+    "fr": "La charge totale de l’autre élément n’a pas été divisée par l’indice du métal. S’il y a deux atomes de métal, ils se partagent le compte.",
+    "en": "The other element’s total charge was not divided by the metal’s subscript. If there are two metal atoms, they share the count between them."
   },
   "A circunferência esticada; a derivada carrega a razão dos eixos.": {
     "fr": "Le cercle étiré ; la dérivée porte le rapport des axes.",
@@ -250,6 +358,14 @@
   "A constante de tempo é o produto RC.": {
     "fr": "La constante de temps est le produit RC.",
     "en": "The time constant is the product RC."
+  },
+  "A conta é só de leitura, depois de distribuir na ordem certa.": {
+    "fr": "Le calcul se réduit à une lecture, une fois la répartition faite dans le bon ordre.",
+    "en": "The computation is just a reading, once the filling is done in the right order."
+  },
+  "A contagem é a quantidade de mols vezes esse número.": {
+    "fr": "Le compte est le nombre de moles multiplié par ce nombre.",
+    "en": "The count is the number of moles times that number."
   },
   "A continuidade exige que os dois laterais coincidam.": {
     "fr": "La continuité exige que les deux limites latérales coïncident.",
@@ -403,6 +519,10 @@
     "fr": "La distance est mesurée du CENTRE : rayon de la planète plus altitude.",
     "en": "Distance is measured from the CENTER: planetary radius plus altitude."
   },
+  "A divisão está invertida. Procura-se quantos mols CABEM na massa dada, então a massa vai em cima e a massa molar embaixo.": {
+    "fr": "La division est inversée. On cherche combien de moles TIENNENT dans la masse donnée, donc la masse va au-dessus et la masse molaire en dessous.",
+    "en": "The division is upside down. You want how many moles FIT in the given mass, so the mass goes on top and the molar mass below."
+  },
   "A divisão termina com resto zero, então o decimal é finito.": {
     "fr": "La division se termine avec un reste nul, donc la décimale est finie.",
     "en": "The division ends with zero remainder, so the decimal is finite."
@@ -410,6 +530,10 @@
   "A elipse soma os dois termos.": {
     "fr": "L'ellipse somme les deux termes.",
     "en": "The ellipse sums the two terms."
+  },
+  "A empírica dá a PROPORÇÃO, e não a molécula: só a massa molar escolhe entre elas.": {
+    "fr": "L’empirique donne la PROPORTION, et non la molécule : seule la masse molaire tranche entre elles.",
+    "en": "The empirical formula gives the PROPORTION, not the molecule: only the molar mass chooses between them."
   },
   "A energia cinética não se conserva: parte virou deformação e calor.": {
     "fr": "L'énergie cinétique ne se conserve pas : une partie est devenue déformation et chaleur.",
@@ -523,9 +647,17 @@
     "fr": "La force est GMm/r². La primitive de #/r² est −#/r : W = GMm·(#/R − #/(R + h)), avec les distances en mètres.",
     "en": "The force is GMm/r². The antiderivative of #/r² is −#/r: W = GMm·(#/R − #/(R + h)), with distances in metres."
   },
+  "A fração está invertida, e por isso passou de #%. A parte vai em cima e o todo embaixo: nenhum elemento é mais que o composto inteiro.": {
+    "fr": "La fraction est inversée, et c’est pourquoi elle dépasse #%. La partie va au-dessus et le tout en dessous : aucun élément n’est plus que le composé entier.",
+    "en": "The fraction is upside down, which is why it went past #%. The part goes on top and the whole below: no element is more than the whole compound."
+  },
   "A fração explicada é r²: calcule o coeficiente de Pearson e eleve ao quadrado.": {
     "fr": "La fraction expliquée est r² : calculez le coefficient de Pearson et élevez-le au carré.",
     "en": "The explained fraction is r²: compute Pearson’s coefficient and square it."
+  },
+  "A fração invertida foi a primeira. Na divisão, quem se inverte é o divisor, ou seja, a segunda fração.": {
+    "fr": "C’est la première fraction qui a été inversée. Dans la division, c’est le diviseur qui s’inverse, c’est-à-dire la seconde fraction.",
+    "en": "The flipped fraction was the first one. In division, the one that flips is the divisor, that is, the second fraction."
   },
   "A fração já está na forma irredutível.": {
     "fr": "La fraction est déjà sous forme irréductible.",
@@ -739,6 +871,14 @@
     "fr": "La masse apparaît dans tous les termes et s'annule.",
     "en": "The mass appears in all terms and cancels out."
   },
+  "A massa atômica entrou crua, sem o índice. Se a fórmula traz dois átomos desse elemento, eles pesam duas vezes — o índice conta átomos, e por isso multiplica.": {
+    "fr": "La masse atomique est entrée brute, sans l’indice. Si la formule comporte deux atomes de cet élément, ils pèsent deux fois — l’indice compte des atomes, et multiplie donc.",
+    "en": "The atomic mass went in raw, without the subscript. If the formula has two atoms of that element, they weigh twice — the subscript counts atoms, and so it multiplies."
+  },
+  "A massa da fórmula empírica sai da tabela, como qualquer massa molar.": {
+    "fr": "La masse de la formule empirique se lit dans le tableau, comme toute masse molaire.",
+    "en": "The mass of the empirical formula comes from the table, like any molar mass."
+  },
   "A massa divide por # e o volume por #⁻⁶: sobra o fator #.": {
     "fr": "La masse divise par # et le volume par #⁻⁶ : il reste le facteur #.",
     "en": "Mass divides by # and volume by #⁻⁶: the factor # is what remains."
@@ -759,6 +899,58 @@
     "fr": "La masse et le rayon s’annulent : seul le format décide qui arrive en premier.",
     "en": "Mass and radius cancel out: only the shape decides which one arrives first."
   },
+  "A massa molar diz quanto pesa UM mol. Divida os # g por ela para saber quantos cabem.": {
+    "fr": "La masse molaire dit combien pèse UNE mole. Divisez les # g par elle pour savoir combien il y en a.",
+    "en": "The molar mass says how much ONE mole weighs. Divide the # g by it to find how many fit."
+  },
+  "A massa molar diz quanto pesa um mol de amônia.": {
+    "fr": "La masse molaire dit combien pèse une mole de ammoniac.",
+    "en": "The molar mass says how much one mole of ammonia weighs."
+  },
+  "A massa molar diz quanto pesa um mol de carbonato de cálcio.": {
+    "fr": "La masse molaire dit combien pèse une mole de carbonate de calcium.",
+    "en": "The molar mass says how much one mole of calcium carbonate weighs."
+  },
+  "A massa molar diz quanto pesa um mol de glicose.": {
+    "fr": "La masse molaire dit combien pèse une mole de glucose.",
+    "en": "The molar mass says how much one mole of glucose weighs."
+  },
+  "A massa molar diz quanto pesa um mol de gás carbônico.": {
+    "fr": "La masse molaire dit combien pèse une mole de dioxyde de carbone.",
+    "en": "The molar mass says how much one mole of carbon dioxide weighs."
+  },
+  "A massa molar diz quanto pesa um mol de metano.": {
+    "fr": "La masse molaire dit combien pèse une mole de méthane.",
+    "en": "The molar mass says how much one mole of methane weighs."
+  },
+  "A massa molar diz quanto pesa um mol de sal de cozinha.": {
+    "fr": "La masse molaire dit combien pèse une mole de sel de table.",
+    "en": "The molar mass says how much one mole of table salt weighs."
+  },
+  "A massa molar diz quanto pesa um mol de sulfato de cobre.": {
+    "fr": "La masse molaire dit combien pèse une mole de sulfate de cuivre.",
+    "en": "The molar mass says how much one mole of copper sulfate weighs."
+  },
+  "A massa molar diz quanto pesa um mol de ácido sulfúrico.": {
+    "fr": "La masse molaire dit combien pèse une mole de acide sulfurique.",
+    "en": "The molar mass says how much one mole of sulfuric acid weighs."
+  },
+  "A massa molar diz quanto pesa um mol de água.": {
+    "fr": "La masse molaire dit combien pèse une mole de eau.",
+    "en": "The molar mass says how much one mole of water weighs."
+  },
+  "A massa molar diz quanto pesa um mol de óxido de ferro(III).": {
+    "fr": "La masse molaire dit combien pèse une mole de oxyde de fer(III).",
+    "en": "The molar mass says how much one mole of iron(III) oxide weighs."
+  },
+  "A massa molar sai em gramas por mol.": {
+    "fr": "La masse molaire s’exprime en grammes par mole.",
+    "en": "The molar mass comes out in grams per mole."
+  },
+  "A massa molar é a soma de todas as parcelas.": {
+    "fr": "La masse molaire est la somme de toutes les parts.",
+    "en": "The molar mass is the sum of all the parts."
+  },
   "A massa teórica é o teto: o que sairia de CO₂ sem perda nenhuma.": {
     "fr": "La masse théorique est le plafond : ce qui sortirait de CO₂ sans aucune perte.",
     "en": "The theoretical mass is the ceiling: what would come out of CO₂ with no loss at all."
@@ -774,6 +966,10 @@
   "A massa teórica é o teto: o que sairia de NH₃ sem perda nenhuma.": {
     "fr": "La masse théorique est le plafond : ce qui sortirait de NH₃ sans aucune perte.",
     "en": "The theoretical mass is the ceiling: what would come out of NH₃ with no loss at all."
+  },
+  "A massa é a quantidade vezes o que cada mol pesa.": {
+    "fr": "La masse est la quantité multipliée par ce que pèse chaque mole.",
+    "en": "The mass is the amount times what each mole weighs."
   },
   "A matriz de partida.": {
     "fr": "La matrice de départ.",
@@ -855,9 +1051,17 @@
     "fr": "L’ordre est : parenthèses, puis puissances, puis multiplication et division, et enfin addition et soustraction.",
     "en": "The order is: brackets, then powers, then multiplication and division, and finally addition and subtraction."
   },
+  "A parte em cima: nenhum elemento pesa mais que o composto inteiro.": {
+    "fr": "La partie au-dessus : aucun élément ne pèse plus que le composé entier.",
+    "en": "The part on top: no element weighs more than the whole compound."
+  },
   "A parte imaginária das raízes é a frequência angular da oscilação.": {
     "fr": "La partie imaginaire des racines est la pulsation de l’oscillation.",
     "en": "The imaginary part of the roots is the angular frequency of the oscillation."
+  },
+  "A parte inteira não pode ficar de fora: é ela que some quando o resultado vem pequeno demais.": {
+    "fr": "La partie entière ne peut pas rester de côté : c’est elle qui disparaît quand le résultat sort trop petit.",
+    "en": "The whole part cannot be left out: it is what goes missing when the result comes out too small."
   },
   "A parábola abre para baixo: o projétil sobe, passa pela altura, desce e volta a passar. O saldo é positivo ENTRE os dois instantes.": {
     "fr": "La parabole est tournée vers le bas : le projectile monte, passe la hauteur, redescend et repasse. Le bilan est positif ENTRE les deux instants.",
@@ -894,6 +1098,10 @@
   "A pirâmide tem as arestas da base e mais uma subindo de cada vértice.": {
     "fr": "La pyramide a les arêtes de la base et une de plus montant de chaque sommet.",
     "en": "The pyramid has the base edges plus one rising from each vertex."
+  },
+  "A porcentagem é a parte sobre o todo.": {
+    "fr": "Le pourcentage, c’est la partie sur le tout.",
+    "en": "The percentage is the part over the whole."
   },
   "A potência está por fora e a função trigonométrica por dentro.": {
     "fr": "La puissance est à l'extérieur et la fonction trigonométrique à l'intérieur.",
@@ -1086,6 +1294,14 @@
   "A proporção da equação vale em mols, não em gramas. Vá por O₂ em gramas → mols → mols de H₂O₂ → gramas.": {
     "fr": "La proportion de l’équation vaut en moles, pas en grammes. Passez par O₂ en grammes → moles → moles de H₂O₂ → grammes.",
     "en": "The equation’s ratio holds in moles, not in grams. Go through O₂ in grams → moles → moles of H₂O₂ → grams."
+  },
+  "A proporção já saiu inteira, e é a fórmula empírica.": {
+    "fr": "La proportion est sortie entière, et c’est la formule empirique.",
+    "en": "The proportion came out whole, and it is the empirical formula."
+  },
+  "A proporção não depende de quanto se tem, e # g é o número que facilita a conta.": {
+    "fr": "La proportion ne dépend pas de la quantité, et # g est le nombre qui simplifie le calcul.",
+    "en": "The proportion does not depend on how much there is, and # g is the number that makes the computation easy."
   },
   "A proporção é xícaras por ovo.": {
     "fr": "La proportion est en tasses par œuf.",
@@ -1303,6 +1519,10 @@
     "fr": "La somme des parties doit donner le total, ce qui détermine k.",
     "en": "The sum of the parts must equal the total, which determines k."
   },
+  "A soma dos nox de um composto neutro é ZERO. Comece pelo elemento de nox conhecido — oxigênio −#, halogênio −# — e não esqueça de multiplicar cada um pelo seu índice.": {
+    "fr": "La somme des n.o. d’un composé neutre est NULLE. Commencez par l’élément au n.o. connu — oxygène −#, halogène −# — et n’oubliez pas de multiplier chacun par son indice.",
+    "en": "The oxidation numbers of a neutral compound add to ZERO. Start with the element whose number is known — oxygen −#, halogen −# — and do not forget to multiply each by its subscript."
+  },
   "A soma dos ângulos internos de qualquer triângulo é #°.": {
     "fr": "La somme des angles intérieurs de tout triangle est #°.",
     "en": "The interior angles of any triangle add up to #°."
@@ -1471,6 +1691,10 @@
     "fr": "La dernière ligne n’a qu’une seule inconnue.",
     "en": "The last row has only one unknown."
   },
+  "A única raiz real vem do primeiro fator.": {
+    "fr": "La seule racine réelle vient du premier facteur.",
+    "en": "The only real root comes from the first factor."
+  },
   "AB e DE são correspondentes, então são iguais: monte a equação, ache x e substitua em AB.": {
     "fr": "AB et DE sont correspondants, donc égaux : posez l’équation, trouvez x et substituez dans AB.",
     "en": "AB and DE match, so they are equal: set up the equation, find x and substitute into AB."
@@ -1555,9 +1779,17 @@
     "fr": "Nous regroupons les termes de même degré et additionnons les coefficients.",
     "en": "We group terms of the same degree and add the coefficients."
   },
+  "Agrupamos os termos dois a dois.": {
+    "fr": "Nous groupons les termes deux par deux.",
+    "en": "We group the terms two by two."
+  },
   "Agrupamos partes reais e imaginárias.": {
     "fr": "Nous regroupons les parties réelles et imaginaires.",
     "en": "We group real and imaginary parts."
+  },
+  "Al neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Al neutre a # électrons, autant que de protons.",
+    "en": "Neutral Al has # electrons, as many as protons."
   },
   "Alguma coluna ficou sem pivô: a variável dela é livre, e o sistema tem infinitas soluções.": {
     "fr": "Une colonne est restée sans pivot : sa variable est libre, et le système a une infinité de solutions.",
@@ -1706,6 +1938,10 @@
   "Aqui não há massa no caminho: a pergunta já veio e já sai em mols.": {
     "fr": "Ici il n’y a pas de masse en chemin : la question part et arrive en moles.",
     "en": "There is no mass along the way here: the question starts and ends in moles."
+  },
+  "Ar neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Ar neutre a # électrons, autant que de protons.",
+    "en": "Neutral Ar has # electrons, as many as protons."
   },
   "Arrumamos para aparecer sen(u)/u com u = kx/#.": {
     "fr": "Nous arrangeons pour faire apparaître sin(u)/u avec u = kx/#.",
@@ -1907,13 +2143,29 @@
     "fr": "B = μ₀·n·I avec n en spires par mètre : # / # m. Utilisez μ₀ = #π×#⁻⁷ ; pour des mT, ×#.",
     "en": "B = μ₀·n·I with n in turns per metre: # / # m. Use μ₀ = #π×#⁻⁷; for mT, ×#."
   },
+  "B neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "B neutre a # électrons, autant que de protons.",
+    "en": "Neutral B has # electrons, as many as protons."
+  },
+  "Ba neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Ba neutre a # électrons, autant que de protons.",
+    "en": "Neutral Ba has # electrons, as many as protons."
+  },
   "Basta avaliar o integrando no ponto.": {
     "fr": "Il suffit d’évaluer l’intégrande au point.",
     "en": "It is enough to evaluate the integrand at the point."
   },
+  "Be neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Be neutre a # électrons, autant que de protons.",
+    "en": "Neutral Be has # electrons, as many as protons."
+  },
   "Bernoulli é conservação de energia por unidade de volume.": {
     "fr": "Bernoulli est la conservation de l'énergie par unité de volume.",
     "en": "Bernoulli is energy conservation per unit volume."
+  },
+  "Br neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Br neutre a # électrons, autant que de protons.",
+    "en": "Neutral Br has # electrons, as many as protons."
   },
   "Buscamos a reta que minimiza a soma dos quadrados dos resíduos.": {
     "fr": "Nous cherchons la droite qui minimise la somme des carrés des résidus.",
@@ -1927,9 +2179,17 @@
     "fr": "C = ε₀·A/d avec A en m² (# cm² = #×#⁻⁴ m²) et d en m (# mm = #×#⁻³ m). Passez ensuite en pF (×#¹²).",
     "en": "C = ε₀·A/d with A in m² (# cm² = #×#⁻⁴ m²) and d in m (# mm = #×#⁻³ m). Then go to pF (×#¹²)."
   },
+  "C neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "C neutre a # électrons, autant que de protons.",
+    "en": "Neutral C has # electrons, as many as protons."
+  },
   "C(#, #) = #! / (#!·#!). Ou some os dois números acima no triângulo.": {
     "fr": "C(#, #) = #! / (#!·#!). Ou additionnez les deux nombres au-dessus dans le triangle.",
     "en": "C(#, #) = #! / (#!·#!). Or add the two numbers above in the triangle."
+  },
+  "Ca neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Ca neutre a # électrons, autant que de protons.",
+    "en": "Neutral Ca has # electrons, as many as protons."
   },
   "Cada aresta liga dois vértices: somando # arestas por vértice, cada uma foi contada duas vezes.": {
     "fr": "Chaque arête relie deux sommets : en additionnant # arêtes par sommet, chacune a été comptée deux fois.",
@@ -1971,6 +2231,54 @@
     "fr": "Chaque axe est indépendant de l'autre.",
     "en": "Each axis is independent of the other."
   },
+  "Cada elemento de CH₄ entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément de CH₄ entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element of CH₄ enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento de CO₂ entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément de CO₂ entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element of CO₂ enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento de CaCO₃ entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément de CaCO₃ entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element of CaCO₃ enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento de CuSO₄ entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément de CuSO₄ entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element of CuSO₄ enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento de C₆H₁₂O₆ entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément de C₆H₁₂O₆ entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element of C₆H₁₂O₆ enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento de Fe₂O₃ entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément de Fe₂O₃ entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element of Fe₂O₃ enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento de H₂O entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément de H₂O entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element of H₂O enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento de H₂SO₄ entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément de H₂SO₄ entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element of H₂SO₄ enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento de NH₃ entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément de NH₃ entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element of NH₃ enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento de NaCl entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément de NaCl entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element of NaCl enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento entra com a sua massa atômica, vezes o índice.": {
+    "fr": "Chaque élément entre avec sa masse atomique, multipliée par l’indice.",
+    "en": "Each element enters with its atomic mass, times the subscript."
+  },
+  "Cada elemento ficou com o próprio número como índice. É o contrário: o índice de um é a carga do OUTRO — é isso que faz o composto sair neutro.": {
+    "fr": "Chaque élément a gardé son propre nombre comme indice. C’est l’inverse : l’indice de l’un est la charge de l’AUTRE — c’est ce qui rend le composé neutre.",
+    "en": "Each element kept its own number as its subscript. It is the other way round: one’s subscript is the OTHER’s charge — that is what makes the compound neutral."
+  },
   "Cada entrada do produto é a linha de A vezes a coluna de B, termo a termo.": {
     "fr": "Chaque entrée du produit est la ligne de A fois la colonne de B, terme à terme.",
     "en": "Each entry of the product is the row of A times the column of B, term by term."
@@ -1995,6 +2303,14 @@
     "fr": "Chaque facteur entre avec sa propre dérivée.",
     "en": "Each factor enters with its own derivative."
   },
+  "Cada fator nulo dá uma raiz; o enunciado pede a maior delas.": {
+    "fr": "Chaque facteur nul donne une racine ; l’énoncé demande la plus grande.",
+    "en": "Each zero factor gives a root; the question asks for the largest."
+  },
+  "Cada fator nulo dá uma raiz; o enunciado pede a maior.": {
+    "fr": "Chaque facteur nul donne une racine ; l’énoncé demande la plus grande.",
+    "en": "Each zero factor gives a root; the question asks for the largest."
+  },
   "Cada fator troca de sinal na sua raiz (# e #). Marque as duas na reta e veja o sinal do produto em cada pedaço.": {
     "fr": "Chaque facteur change de signe à sa racine (# et #). Marquez les deux sur la droite et regardez le signe du produit sur chaque morceau.",
     "en": "Each factor changes sign at its root (# and #). Mark both on the line and look at the sign of the product on each piece."
@@ -2014,6 +2330,18 @@
   "Cada litro rende os quilômetros dados.": {
     "fr": "Chaque litre donne les kilomètres indiqués.",
     "en": "Each litre gives the stated kilometres."
+  },
+  "Cada massa vira quantidade, pela massa atômica.": {
+    "fr": "Chaque masse devient une quantité de matière, par la masse atomique.",
+    "en": "Each mass becomes an amount of substance, through the atomic mass."
+  },
+  "Cada mol pesa a massa molar: multiplique-a por #.": {
+    "fr": "Chaque mole pèse la masse molaire : multipliez-la par #.",
+    "en": "Each mole weighs the molar mass: multiply it by #."
+  },
+  "Cada número misto vira uma fração imprópria: o inteiro multiplica o denominador e o numerador se soma a ele.": {
+    "fr": "Chaque nombre fractionnaire devient une fraction impropre : l’entier multiplie le dénominateur et le numérateur s’y ajoute.",
+    "en": "Each mixed number becomes an improper fraction: the whole part multiplies the denominator and the numerator is added to it."
   },
   "Cada operação de linha que transforma A em I transforma I em A⁻¹.": {
     "fr": "Chaque opération de ligne qui transforme A en I transforme I en A⁻¹.",
@@ -2050,6 +2378,10 @@
   "Cada sen(u)/u tende a #; sobra a razão dos coeficientes.": {
     "fr": "Chaque sin(u)/u tend vers # ; il reste le rapport des coefficients.",
     "en": "Each sin(u)/u tends to #; the ratio of the coefficients is left."
+  },
+  "Cada subnível só recebe o seguinte depois de encher.": {
+    "fr": "Chaque sous-couche ne passe à la suivante qu’une fois remplie.",
+    "en": "Each subshell only passes to the next once it is full."
   },
   "Cada termo contribui com sua derivada; a constante vira zero.": {
     "fr": "Chaque terme contribue avec sa dérivée ; la constante devient zéro.",
@@ -2090,6 +2422,10 @@
   "Cada volta vale # pi radianos.": {
     "fr": "Chaque tour vaut # pi radians.",
     "en": "Each turn is # pi radians."
+  },
+  "Cada índice multiplica o nox do seu elemento, porque são tantos átomos.": {
+    "fr": "Chaque indice multiplie le n.o. de son élément, parce qu’il y a autant d’atomes.",
+    "en": "Each subscript multiplies its element’s oxidation number, because there are that many atoms."
   },
   "Calculamos #·L₁, entrada por entrada.": {
     "fr": "Nous calculons #·L₁, terme par terme.",
@@ -2335,6 +2671,14 @@
     "fr": "Les cylindriques sont des polaires dans le plan, avec z intact.",
     "en": "Cylindrical coordinates are polar in the plane, with z untouched."
   },
+  "Cl neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Cl neutre a # électrons, autant que de protons.",
+    "en": "Neutral Cl has # electrons, as many as protons."
+  },
+  "Co neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Co neutre a # électrons, autant que de protons.",
+    "en": "Neutral Co has # electrons, as many as protons."
+  },
   "Colchete inclui a ponta; parêntese não.": {
     "fr": "Le crochet inclut l’extrémité ; la parenthèse non.",
     "en": "A bracket includes the endpoint; a parenthesis does not."
@@ -2463,6 +2807,14 @@
     "fr": "Avec le plus petit exposant, le résultat divise encore les deux ; avec un exposant plus grand, il cesserait de diviser l’un d’eux.",
     "en": "With the smallest exponent the result still divides both; with any larger exponent it would stop dividing one of them."
   },
+  "Com o mesmo denominador, basta somar os numeradores.": {
+    "fr": "Avec le même dénominateur, il suffit de combiner les numérateurs.",
+    "en": "With the same denominator, it is enough to combine the numerators."
+  },
+  "Com o mesmo denominador, basta subtrair os numeradores.": {
+    "fr": "Avec le même dénominateur, il suffit de combiner les numérateurs.",
+    "en": "With the same denominator, it is enough to combine the numerators."
+  },
   "Com o numerador de grau menor, a função tende a zero.": {
     "fr": "Avec le numérateur de degré inférieur, la fonction tend vers zéro.",
     "en": "With the numerator of lower degree, the function tends to zero."
@@ -2490,6 +2842,14 @@
   "Com sen(u)/u → #.": {
     "fr": "Avec sin(u)/u → #.",
     "en": "With sin(u)/u → #."
+  },
+  "Com u = #x e v = #.": {
+    "fr": "Avec u = #x et v = #.",
+    "en": "With u = #x and v = #."
+  },
+  "Com u = x e v = #.": {
+    "fr": "Avec u = x et v = #.",
+    "en": "With u = x and v = #."
   },
   "Com um múltiplo de x no expoente, a cadeia acrescenta o fator interno.": {
     "fr": "Avec un multiple de x dans l'exposant, la chaîne ajoute le facteur interne.",
@@ -2526,6 +2886,10 @@
   "Comece calculando x_v = −b/(#a), com a = # e b = #.": {
     "fr": "Commencez par calculer x_v = −b/(#a), avec a = # et b = #.",
     "en": "Start by working out x_v = −b/(#a), with a = # and b = #."
+  },
+  "Comece comparando os denominadores.": {
+    "fr": "Commencez par comparer les dénominateurs.",
+    "en": "Start by comparing the denominators."
   },
   "Comece pela tabela: seno vira cosseno, cosseno vira menos seno.": {
     "fr": "Commencez par le tableau : sinus devient cosinus, cosinus devient moins sinus.",
@@ -2711,6 +3075,10 @@
     "fr": "Compter \"au moins un\" cas par cas est fastidieux ; le complémentaire est simple.",
     "en": "Counting \"at least one\" case by case is tedious; the complement is simple."
   },
+  "Conte as camadas (os valores de n) que receberam elétrons, e não os subníveis. Esse número é o período do elemento na tabela.": {
+    "fr": "Comptez les couches (les valeurs de n) qui ont reçu des électrons, et non les sous-couches. Ce nombre est la période de l’élément dans le tableau.",
+    "en": "Count the shells (the values of n) that received electrons, not the subshells. That number is the element’s period in the table."
+  },
   "Conte as faces que servem, sem contar a mesma face duas vezes, e divida por #.": {
     "fr": "Comptez les faces qui conviennent, sans compter deux fois la même face, et divisez par #.",
     "en": "Count the faces that qualify, without counting the same face twice, and divide by #."
@@ -2798,6 +3166,10 @@
   "Depois a série com C₁: produto sobre soma (para dois).": {
     "fr": "Ensuite la série avec C₁ : produit sur somme (pour deux).",
     "en": "Then the series with C₁: product over sum (for two)."
+  },
+  "Depois da redução — e vale # quando não aparece escrito.": {
+    "fr": "Après la réduction — et il vaut # quand il n’est pas écrit.",
+    "en": "After reducing — and it is # when it is not written."
   },
   "Depois integramos o que sobrou em y.": {
     "fr": "Ensuite nous intégrons ce qui reste en y.",
@@ -3279,9 +3651,17 @@
     "fr": "Différence (A − B) : les éléments de A qui NE sont PAS dans B.",
     "en": "Difference (A − B): the elements of A that are NOT in B."
   },
+  "Diferença de cubos: o primeiro fator leva −, e o segundo tem + no meio.": {
+    "fr": "Cubes : le premier facteur porte −, et le second a + au milieu.",
+    "en": "Cubes: the first factor carries −, and the second has + in the middle."
+  },
   "Diferença de quadrados é o produto da soma pela diferença.": {
     "fr": "La différence de carrés est le produit de la somme par la différence.",
     "en": "The difference of squares is the product of the sum by the difference."
+  },
+  "Distribua os elétrons na ordem de energia e olhe só a ÚLTIMA camada — não o total de elétrons do átomo.": {
+    "fr": "Répartissez les électrons dans l’ordre des énergies et ne regardez que la DERNIÈRE couche — pas le total d’électrons de l’atome.",
+    "en": "Fill the electrons in order of energy and look only at the LAST shell — not the atom’s total number of electrons."
   },
   "Distribuindo e juntando.": {
     "fr": "En distribuant et en réunissant.",
@@ -3314,6 +3694,10 @@
   "Distância = |n·P − d| / |n|. Aqui |n| = raiz de #² + #² + #².": {
     "fr": "Distance = |n·P − d| / |n|. Ici |n| = racine de #² + #² + #².",
     "en": "Distance = |n·P − d| / |n|. Here |n| = the square root of #² + #² + #²."
+  },
+  "Divida a massa molar pela massa da fórmula empírica: o resultado é um número inteiro, e é por ele que todos os índices se multiplicam.": {
+    "fr": "Divisez la masse molaire par la masse de la formule empirique : le résultat est un entier, et c’est par lui que tous les indices se multiplient.",
+    "en": "Divide the molar mass by the mass of the empirical formula: the result is a whole number, and it is what all the subscripts are multiplied by."
   },
   "Divida em cima e embaixo pela maior potência de x: sobram só os coeficientes dos termos dominantes.": {
     "fr": "Divisez en haut et en bas par la plus grande puissance de x : il ne reste que les coefficients des termes dominants.",
@@ -3451,6 +3835,10 @@
     "fr": "En divisant par (x - #), il reste un facteur de degré #.",
     "en": "Dividing by (x - #), a factor of degree # is left."
   },
+  "Dividindo todos pelo MENOR, os mols viram proporção.": {
+    "fr": "En divisant tous par le PLUS PETIT, les moles deviennent une proportion.",
+    "en": "Dividing them all by the SMALLEST, the moles become a proportion."
+  },
   "Dividindo tudo pela maior potência, os termos constantes somem.": {
     "fr": "En divisant tout par la plus grande puissance, les termes constants disparaissent.",
     "en": "Dividing everything by the highest power, the constant terms vanish."
@@ -3510,6 +3898,10 @@
   "Dois pontos do gráfico original, separados pela largura dada.": {
     "fr": "Deux points du graphique d’origine, séparés par la largeur donnée.",
     "en": "Two points of the original graph, separated by the given width."
+  },
+  "Dois quadrados subtraídos: x² − r² = (x − r)(x + r). Qual número ao quadrado dá o termo solto?": {
+    "fr": "Deux carrés soustraits : x² − r² = (x − r)(x + r). Quel nombre au carré donne le terme constant ?",
+    "en": "Two squares subtracted: x² − r² = (x − r)(x + r). Which number squared gives the constant term?"
   },
   "Dois terços desse cilindro é o volume da esfera.": {
     "fr": "Les deux tiers de ce cylindre sont le volume de la sphère.",
@@ -3723,6 +4115,10 @@
     "fr": "Elle passe par P(#, #) : nous substituons dans y = m′x + n.",
     "en": "It goes through P(#, #): we substitute into y = m′x + n."
   },
+  "Ela sai da soma das massas atômicas da fórmula, lidas na tabela periódica.": {
+    "fr": "Elle vient de la somme des masses atomiques de la formule, lues dans le tableau périodique.",
+    "en": "It comes from the sum of the atomic masses in the formula, read off the periodic table."
+  },
   "Ele é a fração da variação de y que a reta consegue explicar.": {
     "fr": "Il est la fraction de la variation de y que la droite peut expliquer.",
     "en": "It is the fraction of y's variation that the line can explain."
@@ -3734,6 +4130,10 @@
   "Elementos repetidos produzem ordens indistinguíveis.": {
     "fr": "Les éléments répétés produisent des ordres indistinguables.",
     "en": "Repeated elements produce indistinguishable orders."
+  },
+  "Eles ocupam os subníveis em ordem de ENERGIA, não de número.": {
+    "fr": "Ils occupent les sous-couches dans l’ordre de l’ÉNERGIE, et non des numéros.",
+    "en": "They fill the subshells in order of ENERGY, not of number."
   },
   "Eles se cancelam, e sobra apenas a diferença dos quadrados.": {
     "fr": "Ils s'annulent, et il ne reste que la différence des carrés.",
@@ -3975,6 +4375,174 @@
     "fr": "En (#, #).",
     "en": "At (#, #)."
   },
+  "Em AgBr, o nox é +#.": {
+    "fr": "Dans AgBr, le n.o. vaut +#.",
+    "en": "In AgBr, the oxidation number is +#."
+  },
+  "Em AgI, o nox é +#.": {
+    "fr": "Dans AgI, le n.o. vaut +#.",
+    "en": "In AgI, the oxidation number is +#."
+  },
+  "Em AlBr₃, o nox é +#.": {
+    "fr": "Dans AlBr₃, le n.o. vaut +#.",
+    "en": "In AlBr₃, the oxidation number is +#."
+  },
+  "Em AlF₃, o nox é +#.": {
+    "fr": "Dans AlF₃, le n.o. vaut +#.",
+    "en": "In AlF₃, the oxidation number is +#."
+  },
+  "Em AlI₃, o nox é +#.": {
+    "fr": "Dans AlI₃, le n.o. vaut +#.",
+    "en": "In AlI₃, the oxidation number is +#."
+  },
+  "Em Al₂S₃, o nox é +#.": {
+    "fr": "Dans Al₂S₃, le n.o. vaut +#.",
+    "en": "In Al₂S₃, the oxidation number is +#."
+  },
+  "Em BaBr₂, o nox é +#.": {
+    "fr": "Dans BaBr₂, le n.o. vaut +#.",
+    "en": "In BaBr₂, the oxidation number is +#."
+  },
+  "Em BaCl₂, o nox é +#.": {
+    "fr": "Dans BaCl₂, le n.o. vaut +#.",
+    "en": "In BaCl₂, the oxidation number is +#."
+  },
+  "Em BaI₂, o nox é +#.": {
+    "fr": "Dans BaI₂, le n.o. vaut +#.",
+    "en": "In BaI₂, the oxidation number is +#."
+  },
+  "Em CaF₂, o nox é +#.": {
+    "fr": "Dans CaF₂, le n.o. vaut +#.",
+    "en": "In CaF₂, the oxidation number is +#."
+  },
+  "Em CaS, o nox é +#.": {
+    "fr": "Dans CaS, le n.o. vaut +#.",
+    "en": "In CaS, the oxidation number is +#."
+  },
+  "Em CuCl, o nox é +#.": {
+    "fr": "Dans CuCl, le n.o. vaut +#.",
+    "en": "In CuCl, the oxidation number is +#."
+  },
+  "Em CuF, o nox é +#.": {
+    "fr": "Dans CuF, le n.o. vaut +#.",
+    "en": "In CuF, the oxidation number is +#."
+  },
+  "Em CuI₂, o nox é +#.": {
+    "fr": "Dans CuI₂, le n.o. vaut +#.",
+    "en": "In CuI₂, the oxidation number is +#."
+  },
+  "Em Cu₂O, o nox é +#.": {
+    "fr": "Dans Cu₂O, le n.o. vaut +#.",
+    "en": "In Cu₂O, the oxidation number is +#."
+  },
+  "Em FeBr₃, o nox é +#.": {
+    "fr": "Dans FeBr₃, le n.o. vaut +#.",
+    "en": "In FeBr₃, the oxidation number is +#."
+  },
+  "Em KBr, o nox é +#.": {
+    "fr": "Dans KBr, le n.o. vaut +#.",
+    "en": "In KBr, the oxidation number is +#."
+  },
+  "Em KCl, o nox é +#.": {
+    "fr": "Dans KCl, le n.o. vaut +#.",
+    "en": "In KCl, the oxidation number is +#."
+  },
+  "Em KI, o nox é +#.": {
+    "fr": "Dans KI, le n.o. vaut +#.",
+    "en": "In KI, the oxidation number is +#."
+  },
+  "Em K₃N, o nox é +#.": {
+    "fr": "Dans K₃N, le n.o. vaut +#.",
+    "en": "In K₃N, the oxidation number is +#."
+  },
+  "Em LiBr, o nox é +#.": {
+    "fr": "Dans LiBr, le n.o. vaut +#.",
+    "en": "In LiBr, the oxidation number is +#."
+  },
+  "Em Li₂S, o nox é +#.": {
+    "fr": "Dans Li₂S, le n.o. vaut +#.",
+    "en": "In Li₂S, the oxidation number is +#."
+  },
+  "Em MgCl₂, o nox é +#.": {
+    "fr": "Dans MgCl₂, le n.o. vaut +#.",
+    "en": "In MgCl₂, the oxidation number is +#."
+  },
+  "Em MgF₂, o nox é +#.": {
+    "fr": "Dans MgF₂, le n.o. vaut +#.",
+    "en": "In MgF₂, the oxidation number is +#."
+  },
+  "Em MgO, o nox é +#.": {
+    "fr": "Dans MgO, le n.o. vaut +#.",
+    "en": "In MgO, the oxidation number is +#."
+  },
+  "Em MgS, o nox é +#.": {
+    "fr": "Dans MgS, le n.o. vaut +#.",
+    "en": "In MgS, the oxidation number is +#."
+  },
+  "Em Mg₃N₂, o nox é +#.": {
+    "fr": "Dans Mg₃N₂, le n.o. vaut +#.",
+    "en": "In Mg₃N₂, the oxidation number is +#."
+  },
+  "Em NaBr, o nox é +#.": {
+    "fr": "Dans NaBr, le n.o. vaut +#.",
+    "en": "In NaBr, the oxidation number is +#."
+  },
+  "Em NaF, o nox é +#.": {
+    "fr": "Dans NaF, le n.o. vaut +#.",
+    "en": "In NaF, the oxidation number is +#."
+  },
+  "Em Na₂S, o nox é +#.": {
+    "fr": "Dans Na₂S, le n.o. vaut +#.",
+    "en": "In Na₂S, the oxidation number is +#."
+  },
+  "Em PbCl₄, o nox é +#.": {
+    "fr": "Dans PbCl₄, le n.o. vaut +#.",
+    "en": "In PbCl₄, the oxidation number is +#."
+  },
+  "Em PbF₄, o nox é +#.": {
+    "fr": "Dans PbF₄, le n.o. vaut +#.",
+    "en": "In PbF₄, the oxidation number is +#."
+  },
+  "Em PbO, o nox é +#.": {
+    "fr": "Dans PbO, le n.o. vaut +#.",
+    "en": "In PbO, the oxidation number is +#."
+  },
+  "Em PbO₂, o nox é +#.": {
+    "fr": "Dans PbO₂, le n.o. vaut +#.",
+    "en": "In PbO₂, the oxidation number is +#."
+  },
+  "Em PbS, o nox é +#.": {
+    "fr": "Dans PbS, le n.o. vaut +#.",
+    "en": "In PbS, the oxidation number is +#."
+  },
+  "Em PbS₂, o nox é +#.": {
+    "fr": "Dans PbS₂, le n.o. vaut +#.",
+    "en": "In PbS₂, the oxidation number is +#."
+  },
+  "Em SnBr₂, o nox é +#.": {
+    "fr": "Dans SnBr₂, le n.o. vaut +#.",
+    "en": "In SnBr₂, the oxidation number is +#."
+  },
+  "Em SnBr₄, o nox é +#.": {
+    "fr": "Dans SnBr₄, le n.o. vaut +#.",
+    "en": "In SnBr₄, the oxidation number is +#."
+  },
+  "Em ZnO, o nox é +#.": {
+    "fr": "Dans ZnO, le n.o. vaut +#.",
+    "en": "In ZnO, the oxidation number is +#."
+  },
+  "Em Zn₃N₂, o nox é +#.": {
+    "fr": "Dans Zn₃N₂, le n.o. vaut +#.",
+    "en": "In Zn₃N₂, the oxidation number is +#."
+  },
+  "Em cada grupo, o fator comum em evidência: x² no primeiro, # no segundo.": {
+    "fr": "Dans chaque groupe, le facteur commun en évidence : x² dans le premier, # dans le second.",
+    "en": "In each group, the common factor pulled out: x² in the first, # in the second."
+  },
+  "Em cada grupo, o fator comum em evidência: x² no primeiro, −# no segundo.": {
+    "fr": "Dans chaque groupe, le facteur commun en évidence : x² dans le premier, −# dans le second.",
+    "en": "In each group, the common factor pulled out: x² in the first, −# in the second."
+  },
   "Em cada passo, seguimos a tangente e recomeçamos.": {
     "fr": "Chaque étape, nous suivons la tangente et recommençons.",
     "en": "At each step, we follow the tangent and start over."
@@ -3986,6 +4554,58 @@
   "Em cima #, embaixo um quadrado que tende a # pelos positivos.": {
     "fr": "En haut #, en bas un carré qui tend vers # par valeurs positives.",
     "en": "On top #, below a square tending to # from the positive side."
+  },
+  "Em cima vai a massa de TODOS os átomos de Ag da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de Ag de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the Ag atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de B da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de B de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the B atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de C da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de C de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the C atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de Ca da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de Ca de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the Ca atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de Cl da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de Cl de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the Cl atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de H da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de H de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the H atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de K da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de K de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the K atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de Mg da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de Mg de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the Mg atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de Mn da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de Mn de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the Mn atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de N da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de N de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the N atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de O da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de O de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the O atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de S da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de S de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the S atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
+  },
+  "Em cima vai a massa de TODOS os átomos de Zn da fórmula — massa atômica vezes o índice. Embaixo, a massa molar inteira.": {
+    "fr": "Au-dessus va la masse de TOUS les atomes de Zn de la formule — masse atomique multipliée par l’indice. En dessous, la masse molaire entière.",
+    "en": "On top goes the mass of ALL the Zn atoms in the formula — atomic mass times the subscript. Below, the whole molar mass."
   },
   "Em dimensões, a divisão subtrai os expoentes.": {
     "fr": "En dimensions, la soustraction soustrait les exposants.",
@@ -4547,17 +5167,61 @@
     "fr": "C’est la LARGEUR de l’intervalle, et non le nombre d’entiers qu’il contient. De # à #, la distance vaut #, mais les entiers #, #, # et # sont au nombre de quatre.",
     "en": "That is the WIDTH of the interval, not how many integers fit in it. From # to # the distance is #, but the integers #, #, # and # are four."
   },
+  "Essa é a camada de dentro, a penúltima. A última é a de maior n que recebeu elétrons.": {
+    "fr": "C’est la couche intérieure, l’avant-dernière. La dernière est celle de plus grand n qui a reçu des électrons.",
+    "en": "That is the inner shell, the next to last. The last one is the one with the largest n that received electrons."
+  },
+  "Essa é a carga do próprio ânion. O índice dele é a carga do OUTRO, reduzida — é o cruzamento.": {
+    "fr": "C’est la charge de l’anion lui-même. Son indice est la charge de l’AUTRE, réduite — c’est le croisement.",
+    "en": "That is the anion’s own charge. Its subscript is the charge of the OTHER one, reduced — that is the crossing."
+  },
+  "Essa é a contagem de átomos da fórmula, não a massa deles. Cada átomo entra com a massa do seu elemento.": {
+    "fr": "C’est le nombre d’atomes de la formule, et non leur masse. Chaque atome entre avec la masse de son élément.",
+    "en": "That is the count of atoms in the formula, not their mass. Each atom enters with its element’s mass."
+  },
   "Essa é a entrada da própria A. A inversa é o bloco da DIREITA ao fim do escalonamento.": {
     "fr": "C’est l’entrée de A elle-même. L’inverse est le bloc de DROITE à la fin de l’échelonnement.",
     "en": "That is an entry of A itself. The inverse is the RIGHT block at the end of the reduction."
+  },
+  "Essa é a fórmula MOLECULAR, e a porcentagem não consegue distingui-la da empírica: C₆H₁₂O₆ e CH₂O têm exatamente a mesma composição. Sem a massa molar, a resposta é a proporção mais simples.": {
+    "fr": "C’est la formule MOLÉCULAIRE, et le pourcentage ne peut pas la distinguer de l’empirique : C₆H₁₂O₆ et CH₂O ont exactement la même composition. Sans la masse molaire, la réponse est la proportion la plus simple.",
+    "en": "That is the MOLECULAR formula, and the percentage cannot tell it from the empirical one: C₆H₁₂O₆ and CH₂O have exactly the same composition. Without the molar mass, the answer is the simplest proportion."
+  },
+  "Essa é a fórmula empírica, que o enunciado já deu. A massa molar diz quantas vezes ela cabe na molécula — e é por esse número que todos os índices se multiplicam.": {
+    "fr": "C’est la formule empirique, que l’énoncé a déjà donnée. La masse molaire dit combien de fois elle tient dans la molécule — et c’est par ce nombre que tous les indices se multiplient.",
+    "en": "That is the empirical formula, which the question already gave. The molar mass says how many times it fits in the molecule — and that number is what all the subscripts are multiplied by."
+  },
+  "Essa é a massa de UM mol. O enunciado pede a massa de #, então ainda falta multiplicar.": {
+    "fr": "C’est la masse d’UNE mole. L’énoncé demande la masse de #, il reste donc à multiplier.",
+    "en": "That is the mass of ONE mole. The question asks for the mass of #, so a multiplication is still missing."
+  },
+  "Essa é a menor das raízes. As duas anulam a expressão, mas o enunciado pede a maior.": {
+    "fr": "C’est la plus petite des racines. Elles annulent toutes l’expression, mais l’énoncé demande la plus grande.",
+    "en": "That is the smallest root. They all make the expression zero, but the question asks for the largest."
+  },
+  "Essa é a menor das raízes. Todas anulam a expressão, mas o enunciado pede a maior.": {
+    "fr": "C’est la plus petite des racines. Elles annulent toutes l’expression, mais l’énoncé demande la plus grande.",
+    "en": "That is the smallest root. They all make the expression zero, but the question asks for the largest."
   },
   "Essa é a área da SOMBRA no plano xy. O plano é inclinado: multiplique por √(# + #² + #²).": {
     "fr": "C’est l’aire de l’OMBRE dans le plan xy. Le plan est incliné : multipliez par √(# + #² + #²).",
     "en": "That is the area of the SHADOW in the xy-plane. The plane is slanted: multiply by √(# + #² + #²)."
   },
+  "Esse número sai inteiro, e sair inteiro é a confirmação de que a empírica estava certa.": {
+    "fr": "Ce nombre sort entier, et sortir entier confirme que l’empirique était juste.",
+    "en": "That number comes out whole, and coming out whole confirms the empirical formula was right."
+  },
   "Esse ângulo está dentro da imagem, então é ele.": {
     "fr": "Cet angle est dans l’image, c’est donc lui.",
     "en": "That angle is inside the range, so it is the one."
+  },
+  "Esse é o número atômico, o total de elétrons. As camadas ocupadas são poucas: uma camada acomoda muitos elétrons.": {
+    "fr": "C’est le numéro atomique, le total d’électrons. Les couches occupées sont peu nombreuses : une couche accueille beaucoup d’électrons.",
+    "en": "That is the atomic number, the total of electrons. The occupied shells are few: one shell holds many electrons."
+  },
+  "Esse é o número de Avogadro, que vale para UM mol. O enunciado dá outra quantidade, e ela multiplica.": {
+    "fr": "C’est le nombre d’Avogadro, qui vaut pour UNE mole. L’énoncé donne une autre quantité, et elle multiplie.",
+    "en": "That is Avogadro’s number, which is for ONE mole. The question gives another amount, and it multiplies."
   },
   "Esse é o número de MOLS do reagente — o primeiro trecho do trajeto. Ainda faltam a proporção e a volta para gramas.": {
     "fr": "C’est le nombre de MOLES du réactif — le premier segment du trajet. Il reste la proportion et le retour aux grammes.",
@@ -4567,9 +5231,29 @@
     "fr": "C’est le pi majuscule, qui MULTIPLIE. Additionner, c’est le sigma, ∑.",
     "en": "That is the capital pi, which MULTIPLIES. Adding is the sigma, ∑."
   },
+  "Esse é o que o subnível #d CABE. Ele só está cheio se os elétrons tiverem chegado até lá.": {
+    "fr": "C’est ce que la sous-couche #d PEUT contenir. Elle n’est pleine que si les électrons y sont parvenus.",
+    "en": "That is what subshell #d CAN hold. It is only full if the electrons got that far."
+  },
+  "Esse é o que o subnível #p CABE. Ele só está cheio se os elétrons tiverem chegado até lá.": {
+    "fr": "C’est ce que la sous-couche #p PEUT contenir. Elle n’est pleine que si les électrons y sont parvenus.",
+    "en": "That is what subshell #p CAN hold. It is only full if the electrons got that far."
+  },
+  "Esse é o que o subnível #s CABE. Ele só está cheio se os elétrons tiverem chegado até lá.": {
+    "fr": "C’est ce que la sous-couche #s PEUT contenir. Elle n’est pleine que si les électrons y sont parvenus.",
+    "en": "That is what subshell #s CAN hold. It is only full if the electrons got that far."
+  },
   "Esse é o termo independente da última linha, que decide entre impossível e indeterminado — mas é o pivô, com k, que decide se a solução é única.": {
     "fr": "C’est le terme constant de la dernière ligne, qui décide entre incompatible et indéterminé — mais c’est le pivot, avec k, qui décide si la solution est unique.",
     "en": "That is the constant term of the last row, which decides between inconsistent and underdetermined — but it is the pivot, with k, that decides whether the solution is unique."
+  },
+  "Esse é o termo solto dividido por #, sem tirar a raiz cúbica. O cubo de qual número dá #?": {
+    "fr": "C’est le terme constant divisé par #, sans extraire la racine cubique. Le cube de quel nombre donne # ?",
+    "en": "That is the constant term divided by #, without taking the cube root. The cube of which number gives #?"
+  },
+  "Esse é o total de elétrons do átomo, que é o número atômico. A pergunta é sobre a ÚLTIMA camada — as de dentro não contam.": {
+    "fr": "C’est le total d’électrons de l’atome, c’est-à-dire le numéro atomique. La question porte sur la DERNIÈRE couche — celles de l’intérieur ne comptent pas.",
+    "en": "That is the atom’s total number of electrons, the atomic number. The question is about the LAST shell — the inner ones do not count."
   },
   "Esse é o valor de x; o pedido é y. Confira qual coluna é de qual variável.": {
     "fr": "C’est la valeur de x ; c’est y qui est demandé. Vérifiez quelle colonne correspond à quelle variable.",
@@ -4603,6 +5287,14 @@
     "fr": "C’est la valeur de z ; c’est y qui est demandé. Vérifiez quelle colonne correspond à quelle variable.",
     "en": "That is the value of z; the question asks for y. Check which column belongs to which variable."
   },
+  "Esse é o índice antes da redução — a carga do metal, crua. Depois de dividir pelos fatores comuns, o índice é outro.": {
+    "fr": "C’est l’indice avant la réduction — la charge du métal, brute. Après division par les facteurs communs, l’indice est autre.",
+    "en": "That is the subscript before reducing — the metal’s raw charge. After dividing by the common factors, the subscript is different."
+  },
+  "Esse é quanto a camada # CABE, não quanto ela tem. Capacidade e ocupação só coincidem quando a camada está cheia, e a última raramente está.": {
+    "fr": "C’est ce que la couche # PEUT contenir, et non ce qu’elle contient. Capacité et occupation ne coïncident que lorsque la couche est pleine, et la dernière l’est rarement.",
+    "en": "That is how much shell # CAN hold, not how much it holds. Capacity and occupancy only match when the shell is full, and the last one rarely is."
+  },
   "Esse é só o divergente; falta multiplicar pelo volume.": {
     "fr": "Ce n’est que la divergence ; il reste à multiplier par le volume.",
     "en": "That is only the divergence; it still has to be multiplied by the volume."
@@ -4610,6 +5302,10 @@
   "Esse é só o ÚLTIMO termo. O número em cima do sigma diz onde a soma para, não o que somar: é preciso somar todos os termos de k inicial até ele.": {
     "fr": "C’est seulement le DERNIER terme. Le nombre au-dessus du sigma dit où la somme s’arrête, pas ce qu’il faut additionner : il faut additionner tous les termes depuis le k initial jusqu’à lui.",
     "en": "That is only the LAST term. The number above the sigma says where the sum stops, not what to add: you have to add every term from the starting k up to it."
+  },
+  "Esses são os SUBNÍVEIS ocupados, não as camadas. Uma camada reúne vários subníveis: a camada # tem o #s e o #p.": {
+    "fr": "Ce sont les SOUS-COUCHES occupées, et non les couches. Une couche réunit plusieurs sous-couches : la couche # contient le #s et le #p.",
+    "en": "Those are the occupied SUBSHELLS, not the shells. A shell gathers several subshells: shell # holds the #s and the #p."
   },
   "Estudamos o sinal do trinômio comparado com zero: primeiro, onde ele ZERA.": {
     "fr": "Nous étudions le signe du trinôme comparé à zéro : d’abord, où il S’ANNULE.",
@@ -4626,6 +5322,10 @@
   "Expandimos pela primeira linha, alternando os sinais.": {
     "fr": "Nous développons par la première ligne, en alternant les signes.",
     "en": "We expand along the first row, alternating signs."
+  },
+  "Expandindo de volta, os termos do meio se cancelam e confirmam a identidade.": {
+    "fr": "En développant de nouveau, les termes du milieu s’annulent et confirment l’identité.",
+    "en": "Expanding back, the middle terms cancel and confirm the identity."
   },
   "Expandindo e simplificando, o h do denominador se cancela.": {
     "fr": "En développant et en simplifiant, le h du dénominateur s’annule.",
@@ -4671,6 +5371,10 @@
     "fr": "F = |q|·v·B·sin θ, avec la charge en coulombs (#×#⁻⁶) et sin #°. En N ; pour des mN, multipliez par #.",
     "en": "F = |q|·v·B·sin θ, with the charge in coulombs (#×#⁻⁶) and sin #°. In N; for mN, multiply by #."
   },
+  "F neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "F neutre a # électrons, autant que de protons.",
+    "en": "Neutral F has # electrons, as many as protons."
+  },
   "Faltou a parcela que vem da L₂: a L₃ é combinação das DUAS linhas de cima.": {
     "fr": "Il manque le terme qui vient de la L₂ : la L₃ est une combinaison des DEUX lignes du dessus.",
     "en": "The part coming from L₂ is missing: L₃ is a combination of BOTH rows above."
@@ -4686,6 +5390,22 @@
   "Faltou dividir pelo determinante, que vale #: A⁻¹ = (#/det)·adj A.": {
     "fr": "Il manque la division par le déterminant, qui vaut # : A⁻¹ = (#/det)·adj A.",
     "en": "The division by the determinant, which is #, is missing: A⁻¹ = (#/det)·adj A."
+  },
+  "Faltou dividir por #: o fator é #x + #, então x = #/#.": {
+    "fr": "Il manque la division par # : le facteur est #x + #, donc x = #/#.",
+    "en": "The division by # is missing: the factor is #x + #, so x = #/#."
+  },
+  "Faltou dividir por #: o fator é #x + #, então x = −#/#.": {
+    "fr": "Il manque la division par # : le facteur est #x + #, donc x = −#/#.",
+    "en": "The division by # is missing: the factor is #x + #, so x = −#/#."
+  },
+  "Faltou dividir por #: o fator é #x - #, então x = #/#.": {
+    "fr": "Il manque la division par # : le facteur est #x - #, donc x = #/#.",
+    "en": "The division by # is missing: the factor is #x - #, so x = #/#."
+  },
+  "Faltou dividir por #: o fator é x - #, então x = #/#.": {
+    "fr": "Il manque la division par # : le facteur est x - #, donc x = #/#.",
+    "en": "The division by # is missing: the factor is x - #, so x = #/#."
   },
   "Faltou multiplicar a L₁ por # antes de subtrair.": {
     "fr": "Il manque la multiplication de la L₁ par # avant la soustraction.",
@@ -4739,6 +5459,10 @@
     "fr": "Faites le tableau de signes du haut et du bas. Le zéro du dénominateur n’entre jamais, même avec ≤ ou ≥.",
     "en": "Build the sign table for top and bottom. The denominator’s zero never belongs, not even with ≤ or ≥."
   },
+  "Fe neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Fe neutre a # électrons, autant que de protons.",
+    "en": "Neutral Fe has # electrons, as many as protons."
+  },
   "Ficamos com a raiz que está dentro de (#, #).": {
     "fr": "Nous gardons la racine qui est dans (#, #).",
     "en": "We keep the root that lies inside (#, #)."
@@ -4758,6 +5482,14 @@
   "Ficamos com os pedaços de fora. O zero do numerador entra (a fração vale # ali); o do denominador, x = #, nunca.": {
     "fr": "Nous gardons les morceaux extérieurs. Le zéro du numérateur entre (la fraction vaut # là) ; celui du dénominateur, x = #, jamais.",
     "en": "We keep the outer pieces. The numerator’s zero is included (the fraction is # there); the denominator’s, x = #, never."
+  },
+  "Fingindo # g do composto, cada porcentagem vira gramas.": {
+    "fr": "En supposant # g du composé, chaque pourcentage devient des grammes.",
+    "en": "Pretending there are # g of the compound, each percentage turns into grams."
+  },
+  "Finja # g: cada porcentagem vira gramas. Passe cada um a mols, divida todos pelo MENOR e, se sobrar meio, multiplique todos por dois.": {
+    "fr": "Supposez # g : chaque pourcentage devient des grammes. Convertissez-les en moles, divisez tous par le PLUS PETIT et, s’il reste un demi, multipliez tous par deux.",
+    "en": "Pretend # g: each percentage turns into grams. Convert each to moles, divide them all by the SMALLEST and, if a half is left over, multiply them all by two."
   },
   "Fora da diagonal o elemento fica no lugar, mas troca de SINAL.": {
     "fr": "Hors de la diagonale, l’élément reste en place, mais change de SIGNE.",
@@ -4787,9 +5519,21 @@
     "fr": "Green échange l’intégrale sur le bord contre l’intégrale double de la rotation à l’intérieur.",
     "en": "Green swaps the boundary integral for the double integral of the spin inside."
   },
+  "H neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "H neutre a # électrons, autant que de protons.",
+    "en": "Neutral H has # electrons, as many as protons."
+  },
+  "He neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "He neutre a # électrons, autant que de protons.",
+    "en": "Neutral He has # electrons, as many as protons."
+  },
   "Hertz é voltas por segundo, e é a unidade que entra na fórmula.": {
     "fr": "Le hertz est un tour par seconde, et c’est l’unité qui entre dans la formule.",
     "en": "Hertz is turns per second, and it is the unit that enters the formula."
+  },
+  "Hg neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Hg neutre a # électrons, autant que de protons.",
+    "en": "Neutral Hg has # electrons, as many as protons."
   },
   "Há # casa decimal, então o denominador é # elevado a #.": {
     "fr": "Il y a # rang décimal, donc le dénominateur est # élevé à #.",
@@ -4810,6 +5554,10 @@
   "I = V/R = # / # em ampères; multiplique por # para mA.": {
     "fr": "I = V/R = # / # en ampères ; multipliez par # pour des mA.",
     "en": "I = V/R = # / # in amperes; multiply by # for mA."
+  },
+  "I neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "I neutre a # électrons, autant que de protons.",
+    "en": "Neutral I has # electrons, as many as protons."
   },
   "Identificamos as duas camadas: a potência por fora, o binômio por dentro.": {
     "fr": "Nous identifions les deux couches : la puissance dehors, le binôme dedans.",
@@ -4919,6 +5667,18 @@
     "fr": "Inversement proportionnel, c’est proportionnel à l’INVERSE : les poids sont 1/p1 et 1/p2.",
     "en": "Inversely proportional means proportional to the INVERSE: the weights are 1/p1 and 1/p2."
   },
+  "Invertemos a segunda fração: # vira #/#.": {
+    "fr": "Nous inversons la seconde fraction : # devient #/#.",
+    "en": "We flip the second fraction: # becomes #/#."
+  },
+  "Invertemos a segunda fração: #/# vira #.": {
+    "fr": "Nous inversons la seconde fraction : #/# devient #.",
+    "en": "We flip the second fraction: #/# becomes #."
+  },
+  "Invertemos a segunda fração: #/# vira #/#.": {
+    "fr": "Nous inversons la seconde fraction : #/# devient #/#.",
+    "en": "We flip the second fraction: #/# becomes #/#."
+  },
   "Invertemos e trocamos o sinal.": {
     "fr": "Nous inversons et changeons le signe.",
     "en": "We flip it and change the sign."
@@ -4926,6 +5686,10 @@
   "Invertendo. O equivalente fica MENOR que o menor dos valores.": {
     "fr": "En inversant. L’équivalent est PLUS PETIT que la plus petite des valeurs.",
     "en": "Inverting. The equivalent is SMALLER than the smallest of the values."
+  },
+  "Inverter o decimal não é convertê-lo: # é # centésimos, ou seja #/# — o fato de dar #/# vem da simplificação, não de dividir # pelo número.": {
+    "fr": "Inverser le décimal n’est pas le convertir : # vaut # centièmes, soit #/# — le fait d’obtenir #/# vient de la simplification, pas d’une division de # par le nombre.",
+    "en": "Flipping the decimal is not converting it: # is # hundredths, that is #/# — getting #/# comes from simplifying, not from dividing # by the number."
   },
   "Isolamos a quarta potência da temperatura.": {
     "fr": "Nous isolons la quatrième puissance de la température.",
@@ -5107,6 +5871,10 @@
     "fr": "En isolant β.",
     "en": "Isolating β."
   },
+  "Isolando.": {
+    "fr": "En isolant.",
+    "en": "Isolating."
+  },
   "Isole a potência primeiro (divida por #), depois tire o ln dos dois lados.": {
     "fr": "Isolez d’abord la puissance (divisez par #), puis prenez le ln des deux côtés.",
     "en": "Isolate the power first (divide by #), then take ln on both sides."
@@ -5143,6 +5911,10 @@
     "fr": "En réunissant les termes semblables.",
     "en": "Gathering like terms."
   },
+  "Juntando por camada, aparece o período e a última camada.": {
+    "fr": "En regroupant par couche, la période et la dernière couche apparaissent.",
+    "en": "Grouping by shell, the period and the last shell show up."
+  },
   "Juntando, chega-se à forma polar.": {
     "fr": "En regroupant, on arrive à la forme polaire.",
     "en": "Combining, we arrive at the polar form."
@@ -5154,6 +5926,10 @@
   "Já está isolado.": {
     "fr": "C’est déjà isolé.",
     "en": "It is already isolated."
+  },
+  "K neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "K neutre a # électrons, autant que de protons.",
+    "en": "Neutral K has # electrons, as many as protons."
   },
   "Kirchhoff das tensões: percorrendo a malha, a soma das fem é igual à soma das quedas RI.": {
     "fr": "Kirchhoff des tensions : en parcourant la maille, la somme des f.é.m. est égale à la somme des chutes RI.",
@@ -5255,6 +6031,18 @@
     "fr": "Nous lisons les extrémités : le crochet inclut l'extrémité, la parenthèse non.",
     "en": "We read the endpoints: bracket includes the endpoint, parenthesis does not."
   },
+  "Lendo o #d na distribuição.": {
+    "fr": "Lecture du #d dans la configuration.",
+    "en": "Reading the #d in the configuration."
+  },
+  "Lendo o #p na distribuição.": {
+    "fr": "Lecture du #p dans la configuration.",
+    "en": "Reading the #p in the configuration."
+  },
+  "Lendo o #s na distribuição.": {
+    "fr": "Lecture du #s dans la configuration.",
+    "en": "Reading the #s in the configuration."
+  },
   "Lendo o expoente de L.": {
     "fr": "Nous lisons l’exposant de L.",
     "en": "Reading the exponent of L."
@@ -5270,6 +6058,10 @@
   "Lente divergente: f = −# cm. Use #/p′ = #/f − #/p.": {
     "fr": "Lentille divergente : f = −# cm. Utilisez #/p′ = #/f − #/p.",
     "en": "Diverging lens: f = −# cm. Use #/p′ = #/f − #/p."
+  },
+  "Li neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Li neutre a # électrons, autant que de protons.",
+    "en": "Neutral Li has # electrons, as many as protons."
   },
   "Ligamos o centro aos vértices: surgem n triângulos iguais.": {
     "fr": "Nous reliions le centre aux sommets : apparaissent n triangles égaux.",
@@ -5343,6 +6135,14 @@
     "fr": "La moitié de cela est l'aire du trapèze.",
     "en": "Half of this is the trapezoid's area."
   },
+  "Mg neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Mg neutre a # électrons, autant que de protons.",
+    "en": "Neutral Mg has # electrons, as many as protons."
+  },
+  "Mn neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Mn neutre a # électrons, autant que de protons.",
+    "en": "Neutral Mn has # electrons, as many as protons."
+  },
   "Montamos a divisão, os dois polinômios ordenados pelo maior grau.": {
     "fr": "Nous montons la division, les deux polynômes ordonnés par le plus haut degré.",
     "en": "We set up the division, the two polynomials ordered by highest degree."
@@ -5354,6 +6154,10 @@
   "Monte a equação: valor fixo mais (taxa × número de unidades) igual ao total pedido. Isole o número de unidades.": {
     "fr": "Posez l’équation : valeur fixe plus (taux × nombre d’unités) égale au total demandé. Isolez le nombre d’unités.",
     "en": "Set up the equation: fixed amount plus (rate × number of units) equals the required total. Isolate the number of units."
+  },
+  "Monte a fórmula primeiro: cruze as cargas e reduza. O índice pedido é o que sobra depois da redução, e vale # quando não se escreve.": {
+    "fr": "Formez d’abord la formule : croisez les charges et réduisez. L’indice demandé est celui qui reste après la réduction, et il vaut # quand il ne s’écrit pas.",
+    "en": "Build the formula first: cross the charges and reduce. The subscript asked for is the one left after reducing, and it is # when it is not written."
   },
   "Monte a matriz aumentada, zere a primeira coluna abaixo do pivô, depois a segunda, e resolva de baixo para cima.": {
     "fr": "Formez la matrice augmentée, annulez la première colonne sous le pivot, puis la deuxième, et résolvez de bas en haut.",
@@ -5519,9 +6323,29 @@
     "fr": "Multipliez tout par le ppcm des dénominateurs. Le moins devant une fraction porte sur le numérateur ENTIER : utilisez des parenthèses.",
     "en": "Multiply everything by the lcm of the denominators. The minus before a fraction applies to the WHOLE numerator: use brackets."
   },
+  "N neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "N neutre a # électrons, autant que de protons.",
+    "en": "Neutral N has # electrons, as many as protons."
+  },
+  "Na DIFERENÇA de cubos o primeiro fator é (#x - #), e ele zera num x POSITIVO.": {
+    "fr": "Dans la DIFFÉRENCE de cubes, le premier facteur est (#x - #), et il s’annule pour un x POSITIF.",
+    "en": "In the DIFFERENCE of cubes the first factor is (#x - #), and it vanishes at a POSITIVE x."
+  },
+  "Na DIFERENÇA de cubos o primeiro fator é (x - #), e ele zera num x POSITIVO.": {
+    "fr": "Dans la DIFFÉRENCE de cubes, le premier facteur est (x - #), et il s’annule pour un x POSITIF.",
+    "en": "In the DIFFERENCE of cubes the first factor is (x - #), and it vanishes at a POSITIVE x."
+  },
   "Na PG, a_q / aₚ = q elevado a (q − p). Tire a raiz para achar a razão e divida aₚ por ela (p − #) vezes.": {
     "fr": "Dans la suite géométrique, a_q / aₚ = q à la puissance (q − p). Prenez la racine pour trouver la raison et divisez aₚ par elle (p − #) fois.",
     "en": "In the geometric sequence, a_q / aₚ = q to the power (q − p). Take the root to find the ratio and divide aₚ by it (p − #) times."
+  },
+  "Na SOMA de cubos o primeiro fator é (#x + #), e ele zera num x NEGATIVO.": {
+    "fr": "Dans la SOMME de cubes, le premier facteur est (#x + #), et il s’annule pour un x NÉGATIF.",
+    "en": "In the SUM of cubes the first factor is (#x + #), and it vanishes at a NEGATIVE x."
+  },
+  "Na SOMA de cubos o primeiro fator é (x + #), e ele zera num x NEGATIVO.": {
+    "fr": "Dans la SOMME de cubes, le premier facteur est (x + #), et il s’annule pour un x NÉGATIF.",
+    "en": "In the SUM of cubes the first factor is (x + #), and it vanishes at a NEGATIVE x."
   },
   "Na alternada, o erro de parar no termo # é no máximo o valor absoluto do termo #.": {
     "fr": "Dans la série alternée, l’erreur en s’arrêtant au terme # vaut au plus la valeur absolue du terme #.",
@@ -5571,6 +6395,58 @@
     "fr": "Dans la formule de la somme finie, le terme avec qⁿ disparaît.",
     "en": "In the finite sum formula, the term with qⁿ disappears."
   },
+  "Na fórmula há # átomo(s) de Ag, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de Ag, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of Ag, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de B, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de B, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of B, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de C, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de C, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of C, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de Ca, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de Ca, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of Ca, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de Cl, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de Cl, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of Cl, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de H, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de H, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of H, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de K, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de K, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of K, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de Mg, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de Mg, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of Mg, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de Mn, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de Mn, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of Mn, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de N, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de N, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of N, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de O, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de O, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of O, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de S, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de S, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of S, and they weigh together."
+  },
+  "Na fórmula há # átomo(s) de Zn, e eles pesam juntos.": {
+    "fr": "La formule contient # atome(s) de Zn, et ils pèsent ensemble.",
+    "en": "The formula has # atom(s) of Zn, and they weigh together."
+  },
   "Na horizontal, a conta é o avesso do que está escrito: o x precisa compensar para que o argumento chegue ao mesmo valor.": {
     "fr": "Sur l’horizontale, le calcul est l’inverse de ce qui est écrit : x doit compenser pour que l’argument atteigne la même valeur.",
     "en": "Horizontally, the calculation is the reverse of what is written: x must compensate for the argument to reach the same value."
@@ -5582,6 +6458,10 @@
   "Na multiplicação não é preciso denominador comum: multiplicamos em linha.": {
     "fr": "Dans la multiplication, il n'est pas nécessaire d'avoir un dénominateur commun : nous multiplions en ligne.",
     "en": "In multiplication there is no need for a common denominator: we multiply in line."
+  },
+  "Na neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Na neutre a # électrons, autant que de protons.",
+    "en": "Neutral Na has # electrons, as many as protons."
   },
   "Na primeira volta, a solução.": {
     "fr": "Au premier tour, la solution.",
@@ -5667,6 +6547,10 @@
     "fr": "Dans les deux premières colonnes, la L₃ est une combinaison de celles du dessus : (#) fois la L₁ plus (#) fois la L₂.",
     "en": "In the first two columns, L₃ is a combination of the ones above: (#) times L₁ plus (#) times L₂."
   },
+  "Ne neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Ne neutre a # électrons, autant que de protons.",
+    "en": "Neutral Ne has # electrons, as many as protons."
+  },
   "Nela, a distância focal satisfaz c² = a² + b².": {
     "fr": "Là, la distance focale satisfait c² = a² + b².",
     "en": "There, the focal distance satisfies c² = a² + b²."
@@ -5694,6 +6578,10 @@
   "Nesse tempo, a correnteza arrasta o barco rio abaixo.": {
     "fr": "Dans ce temps, le courant entraîne le bateau rivière en aval.",
     "en": "In that time, the current drags the boat downstream."
+  },
+  "Ni neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Ni neutre a # électrons, autant que de protons.",
+    "en": "Neutral Ni has # electrons, as many as protons."
   },
   "No #º quadrante o cosseno é positivo, então ficamos com a raiz positiva.": {
     "fr": "Dans le #e quadrant le cosinus est positif, donc nous gardons la racine positive.",
@@ -5783,6 +6671,10 @@
     "fr": "Dans le même sens, les f.é.m. s’additionnent.",
     "en": "In the same direction, the emfs add."
   },
+  "No misto negativo o sinal vale para o número todo: # #/# é -(# + #/#), ou seja #/# — e não # + #/#.": {
+    "fr": "Dans un nombre fractionnaire négatif, le signe porte sur tout le nombre : # #/# vaut -(# + #/#), soit #/# — et non # + #/#.",
+    "en": "In a negative mixed number the sign applies to the whole number: # #/# is -(# + #/#), that is #/# — and not # + #/#."
+  },
   "No numerador aparece uma diferença de quadrados, que simplifica.": {
     "fr": "Au numérateur apparaît une différence de carrés, qui se simplifie.",
     "en": "A difference of squares appears in the numerator, which simplifies."
@@ -5843,6 +6735,10 @@
     "fr": "Aux intérêts simples, les rendements ne rapportent pas — la croissance est linéaire.",
     "en": "With simple interest, the returns don't earn — the growth is linear."
   },
+  "Note o #s antes do #d: a energia do #s é menor, e é a energia que manda.": {
+    "fr": "Notez le #s avant le #d : l’énergie du #s est plus basse, et c’est l’énergie qui commande.",
+    "en": "Note the #s before the #d: the #s has lower energy, and energy is what rules."
+  },
   "Num campo plano (P, Q), o rotacional aponta em z e mede o giro local.": {
     "fr": "Dans un champ plan (P, Q), le rotationnel pointe en z et mesure la rotation locale.",
     "en": "In a plane field (P, Q), the curl points along z and measures the local spin."
@@ -5898,6 +6794,10 @@
   "Numa soma ou subtração, as incertezas ABSOLUTAS se combinam.": {
     "fr": "Dans une somme ou une soustraction, les incertitudes ABSOLUES se combinent.",
     "en": "In a sum or subtraction, ABSOLUTE uncertainties combine."
+  },
+  "Numerador com numerador, denominador com denominador.": {
+    "fr": "Numérateur avec numérateur, dénominateur avec dénominateur.",
+    "en": "Numerator with numerator, denominator with denominator."
   },
   "Numerador e denominador têm o mesmo grau.": {
     "fr": "Numérateur et dénominateur ont le même degré.",
@@ -5979,6 +6879,22 @@
     "fr": "Le #ᵉ terme correspond à k = # (le #ᵉ est k = #). Utilisez C(#, k) fois (#) à la puissance k.",
     "en": "The #st term matches k = # (the #rd is k = #). Use C(#, k) times (#) to the power k."
   },
+  "O Br é a âncora: em composto binário o nox dele é conhecido.": {
+    "fr": "Le Br est l’ancre : dans un composé binaire, son n.o. est connu.",
+    "en": "Br is the anchor: in a binary compound its oxidation number is known."
+  },
+  "O Cl é a âncora: em composto binário o nox dele é conhecido.": {
+    "fr": "Le Cl est l’ancre : dans un composé binaire, son n.o. est connu.",
+    "en": "Cl is the anchor: in a binary compound its oxidation number is known."
+  },
+  "O F é a âncora: em composto binário o nox dele é conhecido.": {
+    "fr": "Le F est l’ancre : dans un composé binaire, son n.o. est connu.",
+    "en": "F is the anchor: in a binary compound its oxidation number is known."
+  },
+  "O I é a âncora: em composto binário o nox dele é conhecido.": {
+    "fr": "Le I est l’ancre : dans un composé binaire, son n.o. est connu.",
+    "en": "I is the anchor: in a binary compound its oxidation number is known."
+  },
   "O MDC toma apenas os primos comuns, cada um com o MENOR expoente.": {
     "fr": "Le PGCD ne prend que les premiers communs, chacun avec le PLUS PETIT exposant.",
     "en": "The GCD takes only the common primes, each with the SMALLEST exponent."
@@ -5987,9 +6903,21 @@
     "fr": "Le PPCM prend TOUS les premiers qui apparaissent, chacun avec le PLUS GRAND exposant.",
     "en": "The LCM takes ALL primes that appear, each with the LARGEST exponent."
   },
+  "O N é a âncora: em composto binário o nox dele é conhecido.": {
+    "fr": "Le N est l’ancre : dans un composé binaire, son n.o. est connu.",
+    "en": "N is the anchor: in a binary compound its oxidation number is known."
+  },
+  "O O é a âncora: em composto binário o nox dele é conhecido.": {
+    "fr": "Le O est l’ancre : dans un composé binaire, son n.o. est connu.",
+    "en": "O is the anchor: in a binary compound its oxidation number is known."
+  },
   "O R² indica a fração da variação explicada pela reta.": {
     "fr": "Le R² indique la fraction de la variation expliquée par la droite.",
     "en": "R² indicates the fraction of variation explained by the line."
+  },
+  "O S é a âncora: em composto binário o nox dele é conhecido.": {
+    "fr": "Le S est l’ancre : dans un composé binaire, son n.o. est connu.",
+    "en": "S is the anchor: in a binary compound its oxidation number is known."
   },
   "O Teorema Fundamental diz que a integral é a variação de F nos extremos.": {
     "fr": "Le théorème fondamental dit que l’intégrale est la variation de F aux extrémités.",
@@ -6107,9 +7035,21 @@
     "fr": "Le coefficient de x est ce que l’énoncé demande.",
     "en": "The coefficient of x is what the question asks for."
   },
+  "O coeficiente de x² não é #: procure dois números que somem b e multipliquem a·c, e agrupe.": {
+    "fr": "Le coefficient de x² n’est pas # : cherchez deux nombres dont la somme vaut b et le produit a·c, puis groupez.",
+    "en": "The coefficient of x² is not #: look for two numbers adding to b and multiplying to a·c, then group."
+  },
   "O coeficiente é o original dividido pelo novo expoente.": {
     "fr": "Le coefficient est l’original divisé par le nouvel exposant.",
     "en": "The coefficient is the original divided by the new exponent."
+  },
+  "O coeficiente é o que se multiplica; a potência fica.": {
+    "fr": "Le coefficient est ce qu’on multiplie ; la puissance reste.",
+    "en": "The coefficient is what gets multiplied; the power stays."
+  },
+  "O composto é neutro: a soma dos nox, contando os índices, é zero.": {
+    "fr": "Le composé est neutre : la somme des n.o., en comptant les indices, est nulle.",
+    "en": "The compound is neutral: the sum of the oxidation numbers, counting the subscripts, is zero."
   },
   "O comprimento medido em movimento é o próprio dividido por γ.": {
     "fr": "La longueur mesurée en mouvement est la longueur propre divisée par γ.",
@@ -6138,6 +7078,10 @@
   "O cosseno se repete no ângulo simétrico em relação ao eixo horizontal: #° − x₀.": {
     "fr": "Le cosinus se répète à l’angle symétrique par rapport à l’axe horizontal : #° − x₀.",
     "en": "The cosine repeats at the angle mirrored about the horizontal axis: #° − x₀."
+  },
+  "O cruzamento está certo e falta reduzir. A fórmula é uma proporção: Mg²⁺ com O²⁻ dá MgO, não Mg#O#.": {
+    "fr": "Le croisement est juste, il reste à réduire. La formule est une proportion : Mg²⁺ avec O²⁻ donne MgO, et non Mg#O#.",
+    "en": "The crossing is right and the reducing is missing. The formula is a proportion: Mg²⁺ with O²⁻ gives MgO, not Mg#O#."
   },
   "O cubo é o quadrado multiplicado mais uma vez pelo binômio.": {
     "fr": "Le cube est le carré multiplié encore une fois par le binôme.",
@@ -6171,9 +7115,17 @@
     "fr": "Le dénominateur s’annule en deux points, x = # et x = #. Nous factorisons en haut et en bas.",
     "en": "The denominator is zero at two points, x = # and x = #. We factor top and bottom."
   },
+  "O denominador é # elevado ao número de CASAS decimais, não # sempre. Com # casas, ele vale #.": {
+    "fr": "Le dénominateur est # élevé au nombre de DÉCIMALES, et non # à chaque fois. Avec # décimales, il vaut #.",
+    "en": "The denominator is # raised to the number of decimal PLACES, not # every time. With # places, it is #."
+  },
   "O denominador é constante, então ele só divide a derivada do natural.": {
     "fr": "Le dénominateur est constant, donc il ne divise que la dérivée du naturel.",
     "en": "The denominator is constant, so it only divides the derivative of the natural."
+  },
+  "O denominador é mantido: o tamanho das partes não mudou.": {
+    "fr": "Le dénominateur est conservé : la taille des parts n’a pas changé.",
+    "en": "The denominator stays: the size of the parts has not changed."
   },
   "O denominador: o comprimento do vetor normal (a, b).": {
     "fr": "Le dénominateur : la longueur du vecteur normal (a, b).",
@@ -6331,6 +7283,22 @@
     "fr": "L’exposant # multiplie les exposants du second facteur avant l’addition. Additionner les dimensions directement ignore la puissance.",
     "en": "The exponent # multiplies the exponents of the second factor before the sum. Adding the dimensions directly ignores the power."
   },
+  "O fator (#x + #) zera no número de sinal contrário ao que está dentro dele.": {
+    "fr": "Le facteur (#x + #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
+    "en": "The factor (#x + #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
+  "O fator (#x - #) zera no número de sinal contrário ao que está dentro dele.": {
+    "fr": "Le facteur (#x - #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
+    "en": "The factor (#x - #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
+  "O fator (x + #) zera no número de sinal contrário ao que está dentro dele.": {
+    "fr": "Le facteur (x + #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
+    "en": "The factor (x + #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
+  "O fator (x - #) zera no número de sinal contrário ao que está dentro dele.": {
+    "fr": "Le facteur (x - #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
+    "en": "The factor (x - #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
   "O fator de Lorentz mede o quanto o tempo e o espaço se deformam a velocidade v.": {
     "fr": "Le facteur de Lorentz mesure combien le temps et l’espace se déforment à la vitesse v.",
     "en": "The Lorentz factor measures how much time and space deform at speed v."
@@ -6370,6 +7338,10 @@
   "O fluxo é campo vezes área (campo perpendicular à espira).": {
     "fr": "Le flux est champ fois aire (champ perpendiculaire à la spire).",
     "en": "The flux is field times area (field perpendicular to the loop)."
+  },
+  "O flúor é sempre −# e o oxigênio é −# fora dos peróxidos. É a partir de um valor sabido que o outro sai.": {
+    "fr": "Le fluor vaut toujours −# et l’oxygène −# hors des peroxydes. C’est à partir d’une valeur connue que l’autre se déduit.",
+    "en": "Fluorine is always −# and oxygen is −# outside peroxides. It is from a known value that the other one follows."
   },
   "O foguete acelera expelindo massa: é conservação de momento linear.": {
     "fr": "La fusée accélère en expulsant de la masse : c'est la conservation du moment linéaire.",
@@ -6459,6 +7431,10 @@
     "fr": "Le plus proche est avec cos θ = # et le plus loin avec cos θ = −# : substituez et calculez p/(# + e) et p/(# − e).",
     "en": "Closest is with cos θ = # and farthest with cos θ = −#: substitute and compute p/(# + e) and p/(# − e)."
   },
+  "O mdc entre # e # é #.": {
+    "fr": "Le PGCD de # et # vaut #.",
+    "en": "The gcd of # and # is #."
+  },
   "O menor manda: CH₄ é o limitante, e O₂ sobra.": {
     "fr": "Le plus petit commande : CH₄ est le limitant, et O₂ est en excès.",
     "en": "The smallest rules: CH₄ is the limiting one, and O₂ is left over."
@@ -6494,6 +7470,14 @@
   "O mesmo fator aparece em cima e embaixo, e pode ser cancelado.": {
     "fr": "Le même facteur apparaît en haut et en bas, et peut être annulé.",
     "en": "The same factor appears above and below, and can be cancelled."
+  },
+  "O mesmo número vale como massa de uma molécula em unidades atômicas.": {
+    "fr": "Le même nombre vaut comme masse d’une molécule en unités atomiques.",
+    "en": "The same number works as the mass of one molecule in atomic units."
+  },
+  "O mesmo parêntese aparece nos dois grupos: ele vira o fator comum.": {
+    "fr": "La même parenthèse apparaît dans les deux groupes : elle devient le facteur commun.",
+    "en": "The same parenthesis shows up in both groups: it becomes the common factor."
   },
   "O momento angular é o análogo rotacional do momento linear.": {
     "fr": "Le moment angulaire est l'analogue rotatif du moment linéaire.",
@@ -6547,6 +7531,14 @@
     "fr": "Le module est la racine de la somme des carrés des trois composantes.",
     "en": "The magnitude is the root of the sum of the squares of the three components."
   },
+  "O neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "O neutre a # électrons, autant que de protons.",
+    "en": "Neutral O has # electrons, as many as protons."
+  },
+  "O numerador é multiplicado pelo mesmo fator que o denominador, por isso o valor da fração não muda.": {
+    "fr": "Le numérateur est multiplié par le même facteur que le dénominateur, c’est pourquoi la valeur de la fraction ne change pas.",
+    "en": "The numerator is multiplied by the same factor as the denominator, which is why the value of the fraction does not change."
+  },
   "O numerador é uma diferença de quadrados.": {
     "fr": "Le numérateur est une différence de carrés.",
     "en": "The numerator is a difference of squares."
@@ -6559,9 +7551,17 @@
     "fr": "Le numérateur : nous substituons le point dans l’expression de la droite et prenons la valeur absolue.",
     "en": "The numerator: we substitute the point into the line’s expression and take the absolute value."
   },
+  "O numeral romano É a carga do metal. Com ela e a do ânion, cruze os índices e reduza.": {
+    "fr": "Le chiffre romain EST la charge du métal. Avec elle et celle de l’anion, croisez les indices et réduisez.",
+    "en": "The Roman numeral IS the metal’s charge. With it and the anion’s, cross the subscripts and reduce."
+  },
   "O número atômico é a própria contagem de prótons.": {
     "fr": "Le numéro atomique est le décompte même des protons.",
     "en": "The atomic number is the proton count itself."
+  },
+  "O número de camadas ocupadas é o período; os elétrons da última explicam o grupo, e por que elementos de última camada parecida reagem parecido.": {
+    "fr": "Le nombre de couches occupées est la période ; les électrons de la dernière expliquent le groupe, et pourquoi des éléments à dernière couche semblable réagissent de façon semblable.",
+    "en": "The number of occupied shells is the period; the electrons in the last one explain the group, and why elements with a similar outer shell react alike."
   },
   "O número de dentes vezes as voltas é o mesmo nas duas: é o que a corrente impõe.": {
     "fr": "Le nombre de dents fois les tours est le même pour les deux : c’est ce que la chaîne impose.",
@@ -6574,6 +7574,14 @@
   "O número de massa soma prótons e nêutrons.": {
     "fr": "Le nombre de masse additionne protons et neutrons.",
     "en": "The mass number adds protons and neutrons."
+  },
+  "O número misto vira uma fração imprópria: o inteiro multiplica o denominador e o numerador se soma a ele.": {
+    "fr": "Le nombre fractionnaire devient une fraction impropre : l’entier multiplie le dénominateur et le numérateur s’y ajoute.",
+    "en": "The mixed number becomes an improper fraction: the whole part multiplies the denominator and the numerator is added to it."
+  },
+  "O número é grande porque a unidade de massa é pequena, não por capricho.": {
+    "fr": "Le nombre est grand parce que l’unité de masse est petite, et non par caprice.",
+    "en": "The number is large because the unit of mass is small, not out of whim."
   },
   "O observado foi outro.": {
     "fr": "L'observé était autre.",
@@ -6811,6 +7819,18 @@
     "fr": "Le salaire fixe est la valeur de f(#) : il existe même sans aucune vente. Ce sont # unités : multipliez # par le taux puis ajoutez la valeur fixe.",
     "en": "The fixed salary is the value of f(#): it is there even with no sales. There are # units: multiply # by the rate and then add the fixed amount."
   },
+  "O segundo fator nunca zera: o discriminante dele é negativo.": {
+    "fr": "Le second facteur ne s’annule jamais : son discriminant est négatif.",
+    "en": "The second factor never vanishes: its discriminant is negative."
+  },
+  "O segundo fator é diferença de quadrados: x² − # = (x − #)(x + #).": {
+    "fr": "Le second facteur est une différence de carrés : x² − # = (x − #)(x + #).",
+    "en": "The second factor is a difference of squares: x² − # = (x − #)(x + #)."
+  },
+  "O segundo fator, x² + #, é sempre positivo: não dá raiz real.": {
+    "fr": "Le second facteur, x² + #, est toujours positif : il ne donne pas de racine réelle.",
+    "en": "The second factor, x² + #, is always positive: it gives no real root."
+  },
   "O seno do complemento é o cosseno do ângulo.": {
     "fr": "Le sinus du complément est le cosinus de l’angle.",
     "en": "The sine of the complement is the cosine of the angle."
@@ -6878,6 +7898,30 @@
   "O sinal está invertido. Expoente negativo significa que a dimensão está no denominador — confira a definição da grandeza.": {
     "fr": "Le signe est inversé. Un exposant négatif signifie que la dimension est au dénominateur — vérifiez la définition de la grandeur.",
     "en": "The sign is flipped. A negative exponent means the dimension is in the denominator — check the definition of the quantity."
+  },
+  "O sinal está invertido. No fator (x − r), a raiz é +r, porque é esse valor que faz o fator valer zero. Confira substituindo de volta.": {
+    "fr": "Le signe est inversé. Dans le facteur (x − r), la racine est +r, car c’est cette valeur qui annule le facteur. Vérifiez en remplaçant.",
+    "en": "The sign is flipped. In the factor (x − r), the root is +r, because that is the value making the factor zero. Check by substituting back."
+  },
+  "O sinal está invertido: o fator (#x + #) zera no número de sinal contrário ao que está dentro dele.": {
+    "fr": "Le facteur (#x + #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
+    "en": "The factor (#x + #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
+  "O sinal está invertido: o fator (#x - #) zera no número de sinal contrário ao que está dentro dele.": {
+    "fr": "Le facteur (#x - #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
+    "en": "The factor (#x - #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
+  "O sinal está invertido: o fator (x + #) zera no número de sinal contrário ao que está dentro dele.": {
+    "fr": "Le facteur (x + #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
+    "en": "The factor (x + #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
+  "O sinal está invertido: o fator (x - #) zera no número de sinal contrário ao que está dentro dele.": {
+    "fr": "Le facteur (x - #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
+    "en": "The factor (x - #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
+  "O sinal está trocado. O metal perde elétrons, e por isso o nox dele é positivo; o negativo é do elemento que recebe.": {
+    "fr": "Le signe est inversé. Le métal perd des électrons, et son n.o. est donc positif ; le négatif est celui de l’élément qui en reçoit.",
+    "en": "The sign is flipped. The metal loses electrons, so its oxidation number is positive; the negative one belongs to the element that gains them."
   },
   "O sinal ficou trocado. Como a operação já subtrai k·L₁, k tem o MESMO sinal da razão entre a entrada e o pivô.": {
     "fr": "Le signe est inversé. Comme l’opération soustrait déjà k·L₁, k a le MÊME signe que le rapport entre l’entrée et le pivot.",
@@ -7131,9 +8175,45 @@
     "fr": "L’angle extérieur est le supplémentaire de l’intérieur du même sommet.",
     "en": "The exterior angle is the supplement of the interior one at the same vertex."
   },
+  "O índice conta átomos na fórmula, e por isso multiplica a massa.": {
+    "fr": "L’indice compte les atomes de la formule, et multiplie donc la masse.",
+    "en": "The subscript counts atoms in the formula, and so it multiplies the mass."
+  },
+  "O índice conta átomos, e por isso multiplica a massa atômica.": {
+    "fr": "L’indice compte des atomes, et multiplie donc la masse atomique.",
+    "en": "The subscript counts atoms, and so it multiplies the atomic mass."
+  },
   "O índice de refração é quantas vezes a luz anda mais devagar no meio que no vácuo.": {
     "fr": "L’indice de réfraction dit combien de fois la lumière va plus lentement dans le milieu que dans le vide.",
     "en": "The refractive index is how many times slower light moves in the medium than in vacuum."
+  },
+  "O índice do Br na fórmula.": {
+    "fr": "L’indice de Br dans la formule.",
+    "en": "The subscript of Br in the formula."
+  },
+  "O índice do Cl na fórmula.": {
+    "fr": "L’indice de Cl dans la formule.",
+    "en": "The subscript of Cl in the formula."
+  },
+  "O índice do F na fórmula.": {
+    "fr": "L’indice de F dans la formule.",
+    "en": "The subscript of F in the formula."
+  },
+  "O índice do I na fórmula.": {
+    "fr": "L’indice de I dans la formule.",
+    "en": "The subscript of I in the formula."
+  },
+  "O índice do N na fórmula.": {
+    "fr": "L’indice de N dans la formule.",
+    "en": "The subscript of N in the formula."
+  },
+  "O índice do O na fórmula.": {
+    "fr": "L’indice de O dans la formule.",
+    "en": "The subscript of O in the formula."
+  },
+  "O índice do S na fórmula.": {
+    "fr": "L’indice de S dans la formule.",
+    "en": "The subscript of S in the formula."
   },
   "O índice embaixo diz onde começa; o número em cima, onde para.": {
     "fr": "L’indice du bas dit où cela commence ; le nombre du haut, où cela s’arrête.",
@@ -7443,6 +8523,14 @@
     "fr": "Les deux points ont la même abscisse, donc la droite est verticale.",
     "en": "The two points have the same abscissa, so the line is vertical."
   },
+  "Os dois termos são cubos perfeitos: #x³ é o cubo de #x e # é o cubo de #.": {
+    "fr": "Les deux termes sont des cubes parfaits : #x³ est le cube de #x et # est le cube de #.",
+    "en": "Both terms are perfect cubes: #x³ is the cube of #x and # is the cube of #."
+  },
+  "Os dois termos são cubos perfeitos: #x³ é o cubo de x e # é o cubo de #.": {
+    "fr": "Les deux termes sont des cubes parfaits : #x³ est le cube de x et # est le cube de #.",
+    "en": "Both terms are perfect cubes: #x³ is the cube of x and # is the cube of #."
+  },
   "Os dois zeram: o fator se cancela e sobra um ponto removido.": {
     "fr": "Les deux s'annulent : le facteur s'annule et il reste un point supprimé.",
     "en": "Both are zero: the factor cancels and a removable point remains."
@@ -7499,6 +8587,10 @@
     "fr": "Les demi-axes sont # et # (les racines de # et #), et non les carrés.",
     "en": "The semi-axes are # and # (the roots of # and #), not the squares."
   },
+  "Os subníveis foram preenchidos na ordem dos NÚMEROS, e não na de energia. O #s vem antes do #d: é a energia que manda, não o número da camada.": {
+    "fr": "Les sous-couches ont été remplies dans l’ordre des NUMÉROS, et non des énergies. Le #s vient avant le #d : c’est l’énergie qui commande, pas le numéro de la couche.",
+    "en": "The subshells were filled in order of NUMBERS, not of energy. The #s comes before the #d: energy is what rules, not the shell number."
+  },
   "Os termos #x² e #y² não giram: suas derivadas cruzadas são zero.": {
     "fr": "Les termes #x² et #y² ne tournent pas : leurs dérivées croisées sont nulles.",
     "en": "The terms #x² and #y² do not rotate: their cross derivatives are zero."
@@ -7531,6 +8623,10 @@
     "fr": "Les zéros de la fonction sont les racines du numérateur qui survivent.",
     "en": "The zeros of the function are the surviving roots of the numerator."
   },
+  "Os índices ficaram de fora. Eles contam átomos: cada um multiplica a massa atômica do seu elemento antes da soma.": {
+    "fr": "Les indices ont été oubliés. Ils comptent des atomes : chacun multiplie la masse atomique de son élément avant l’addition.",
+    "en": "The subscripts were left out. They count atoms: each one multiplies its element’s atomic mass before the sum."
+  },
   "Ou pelo triângulo: cada número é a soma dos dois de cima.": {
     "fr": "Ou par le triangle : chaque nombre est la somme des deux du dessus.",
     "en": "Or by the triangle: each number is the sum of the two above it."
@@ -7546,6 +8642,10 @@
   "P = favoráveis / possíveis": {
     "fr": "P = favorables / possibles",
     "en": "P = favourable / possible"
+  },
+  "P neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "P neutre a # électrons, autant que de protons.",
+    "en": "Neutral P has # electrons, as many as protons."
   },
   "Padronizamos as duas bordas.": {
     "fr": "Nous standardisons les deux bords.",
@@ -7659,6 +8759,18 @@
     "fr": "Paramétrez x = #·cos t, y = #·sin t et calculez (#/#)·∮(x dy − y dx) de # à #π.",
     "en": "Parametrise x = #·cos t, y = #·sin t and work out (#/#)·∮(x dy − y dx) from # to #π."
   },
+  "Parece que você somou numeradores com numeradores e denominadores com denominadores. O denominador indica o tamanho das partes, não uma quantidade a ser somada — por isso ele não entra na conta. Repare que #/# + #/# daria #/#, ou seja #/#, quando o resultado é #.": {
+    "fr": "Il semble que vous ayez combiné numérateurs avec numérateurs et dénominateurs avec dénominateurs. Le dénominateur indique la taille des parts, pas une quantité à additionner — il n’entre donc pas dans le calcul. Remarquez que #/# + #/# donnerait #/#, soit #/#, alors que le résultat vaut #.",
+    "en": "It looks like you combined numerators with numerators and denominators with denominators. The denominator says the size of the parts, not an amount to add — so it does not take part in the computation. Notice that #/# + #/# would give #/#, that is #/#, when the result is #."
+  },
+  "Parece que você subtraiu numeradores com numeradores e denominadores com denominadores. O denominador indica o tamanho das partes, não uma quantidade a ser somada — por isso ele não entra na conta. Repare que #/# + #/# daria #/#, ou seja #/#, quando o resultado é #.": {
+    "fr": "Il semble que vous ayez combiné numérateurs avec numérateurs et dénominateurs avec dénominateurs. Le dénominateur indique la taille des parts, pas une quantité à additionner — il n’entre donc pas dans le calcul. Remarquez que #/# + #/# donnerait #/#, soit #/#, alors que le résultat vaut #.",
+    "en": "It looks like you combined numerators with numerators and denominators with denominators. The denominator says the size of the parts, not an amount to add — so it does not take part in the computation. Notice that #/# + #/# would give #/#, that is #/#, when the result is #."
+  },
+  "Partimos da divisão proposta.": {
+    "fr": "Nous partons de l’opération proposée.",
+    "en": "We start from the operation given."
+  },
   "Partimos da equação geral.": {
     "fr": "Nous partons de l'équation générale.",
     "en": "We start from the general equation."
@@ -7687,6 +8799,10 @@
     "fr": "Nous partons de l’inéquation.",
     "en": "We start from the inequality."
   },
+  "Partimos da multiplicação proposta.": {
+    "fr": "Nous partons de l’opération proposée.",
+    "en": "We start from the operation given."
+  },
   "Partimos da posição em função do tempo.": {
     "fr": "Nous partons de la position en fonction du temps.",
     "en": "We start from the position as a function of time."
@@ -7698,6 +8814,14 @@
   "Partimos da relação que vale em qualquer instante.": {
     "fr": "Nous partons de la relation valable à tout instant.",
     "en": "We start from the relation that holds at every instant."
+  },
+  "Partimos da soma proposta.": {
+    "fr": "Nous partons de l’opération proposée.",
+    "en": "We start from the operation given."
+  },
+  "Partimos da subtração proposta.": {
+    "fr": "Nous partons de l’opération proposée.",
+    "en": "We start from the operation given."
   },
   "Partimos das duas equações do movimento uniformemente variado.": {
     "fr": "Nous partons des deux équations du mouvement uniformément varié.",
@@ -7762,6 +8886,10 @@
   "Passe ao externo (#° − #°), ache n = #° ÷ externo e use d = n(n − #)/#.": {
     "fr": "Passez à l’extérieur (#° − #°), trouvez n = #° ÷ extérieur et utilisez d = n(n − #)/#.",
     "en": "Go to the exterior angle (#° − #°), find n = #° ÷ exterior and use d = n(n − #)/#."
+  },
+  "Pb neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Pb neutre a # électrons, autant que de protons.",
+    "en": "Neutral Pb has # electrons, as many as protons."
   },
   "Pela definição, o produto é a base elevada ao resultado.": {
     "fr": "Par définition, le produit est la base élevée au résultat.",
@@ -8015,6 +9143,10 @@
     "fr": "La puissance est l'énergie par temps.",
     "en": "Power is energy per time."
   },
+  "Preencha na ordem de ENERGIA, não na ordem dos números: o #s vem antes do #d. Um subnível vazio tem zero, e isso também é resposta.": {
+    "fr": "Remplissez dans l’ordre de l’ÉNERGIE, et non des numéros : le #s vient avant le #d. Une sous-couche vide vaut zéro, et c’est aussi une réponse.",
+    "en": "Fill in order of ENERGY, not of numbers: the #s comes before the #d. An empty subshell holds zero, and that is an answer too."
+  },
   "Pressão é força por área.": {
     "fr": "La pression est la force par aire.",
     "en": "Pressure is force per area."
@@ -8119,6 +9251,10 @@
     "fr": "Nous cherchons la valeur de x qui annule le diviseur : c’est elle qui effacera le quotient.",
     "en": "We look for the value of x that makes the divisor zero: it is what will wipe out the quotient."
   },
+  "Procure dois números cuja soma e produto batam com a expressão.": {
+    "fr": "Cherchez deux nombres dont la somme et le produit correspondent à l’expression.",
+    "en": "Look for two numbers whose sum and product match the expression."
+  },
   "Procure o fator que aparece em cima e embaixo ao mesmo tempo.": {
     "fr": "Cherchez le facteur qui apparaît en haut et en bas en même temps.",
     "en": "Look for the factor that appears both above and below."
@@ -8155,6 +9291,14 @@
     "fr": "Quand le dénominateur croît plus vite, la fraction tend vers zéro.",
     "en": "When the denominator grows faster, the fraction tends to zero."
   },
+  "Quantas casas depois da vírgula? Esse é o expoente do #. Simplifique no fim.": {
+    "fr": "Combien de décimales ? C’est l’exposant du #. Simplifiez à la fin.",
+    "en": "How many decimal places? That is the exponent of #. Simplify at the end."
+  },
+  "Quantas vezes ela cabe na massa molar do composto.": {
+    "fr": "Combien de fois elle tient dans la masse molaire du composé.",
+    "en": "How many times it fits into the compound’s molar mass."
+  },
   "Quanto UMA máquina enche por minuto.": {
     "fr": "Combien UNE machine remplit par minute.",
     "en": "How much ONE machine fills per minute."
@@ -8166,6 +9310,10 @@
   "Quanto vale qualquer número elevado a zero?": {
     "fr": "Combien vaut n’importe quel nombre élevé à zéro ?",
     "en": "What is any number raised to zero worth?"
+  },
+  "Quantos mols cabem na massa dada é uma divisão.": {
+    "fr": "Combien de moles tiennent dans la masse donnée est une division.",
+    "en": "How many moles fit in the given mass is a division."
   },
   "Que é a soma dos dois ângulos internos opostos.": {
     "fr": "Qui est la somme des deux angles intérieurs opposés.",
@@ -8246,6 +9394,10 @@
   "Reduzimos o ângulo a uma volta e voltamos à forma algébrica.": {
     "fr": "Nous ramenons l'angle à un tour et revenons à la forme algébrique.",
     "en": "We reduce the angle to one turn and return to algebraic form."
+  },
+  "Reescrevemos as duas frações com denominador #.": {
+    "fr": "Nous réécrivons les deux fractions avec le dénominateur #.",
+    "en": "We rewrite both fractions with denominator #."
   },
   "Refinando a partição, a aproximação melhora.": {
     "fr": "En affinant la partition, l'approximation s'améliore.",
@@ -8379,6 +9531,10 @@
     "fr": "S = a₁ / (# − q), valable parce que |q| < #.",
     "en": "S = a₁ / (# − q), valid because |q| < #."
   },
+  "S neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "S neutre a # électrons, autant que de protons.",
+    "en": "Neutral S has # electrons, as many as protons."
+  },
   "Saíram os que desceram nas duas paradas e entraram os que subiram.": {
     "fr": "Sont sortis ceux qui sont descendus aux deux arrêts, et sont entrés ceux qui sont montés.",
     "en": "Those who got off at both stops left, and those who got on entered."
@@ -8447,9 +9603,17 @@
     "fr": "Nous séparons ce qui est dans l'argument de ce qui est à l'extérieur.",
     "en": "We separate what is inside the argument from what is outside."
   },
+  "Separe os quatro termos em dois pares e tire o fator comum de cada par: o mesmo parêntese deve aparecer nos dois.": {
+    "fr": "Séparez les quatre termes en deux paires et sortez le facteur commun de chaque paire : la même parenthèse doit apparaître dans les deux.",
+    "en": "Split the four terms into two pairs and pull the common factor out of each pair: the same parenthesis must appear in both."
+  },
   "Servem a tudo que tem eixo de simetria: tubos, tanques, bocais.": {
     "fr": "Ils servent à tout ce qui a un axe de symétrie : tubes, réservoirs, tuyères.",
     "en": "They serve everything with an axis of symmetry: pipes, tanks, nozzles."
+  },
+  "Si neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Si neutre a # électrons, autant que de protons.",
+    "en": "Neutral Si has # electrons, as many as protons."
   },
   "Simplificamos dividindo numerador e denominador pelo mdc.": {
     "fr": "Nous simplifions en divisant numérateur et dénominateur par le pgcd.",
@@ -8495,6 +9659,10 @@
     "fr": "Système compatible et indéterminé, une infinité de solutions.",
     "en": "Consistent and indeterminate system, infinitely many solutions."
   },
+  "Sn neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Sn neutre a # électrons, autant que de protons.",
+    "en": "Neutral Sn has # electrons, as many as protons."
+  },
   "Sobram apenas os coeficientes dos termos dominantes.": {
     "fr": "Il ne reste que les coefficients des termes dominants.",
     "en": "Only the coefficients of the dominant terms remain."
@@ -8507,6 +9675,10 @@
     "fr": "Il reste des facteurs au dénominateur, et l'exposant négatif enregistre exactement cela.",
     "en": "Factors remain in the denominator, and the negative exponent records exactly this."
   },
+  "Sobrou meio átomo, e meio átomo não existe: multiplicam-se todos para inteirar.": {
+    "fr": "Il reste un demi-atome, et un demi-atome n’existe pas : on multiplie tous les indices pour les rendre entiers.",
+    "en": "Half an atom is left over, and half an atom does not exist: all the subscripts are multiplied to make them whole."
+  },
   "Sobrou uma linha que diz # = número diferente de zero: o sistema é impossível.": {
     "fr": "Il reste une ligne qui dit # = un nombre différent de zéro : le système est impossible.",
     "en": "A row is left saying # = a number other than zero: the system is inconsistent."
@@ -8518,6 +9690,10 @@
   "Soma da PG: Sₙ = a₁·(qⁿ − #)/(q − #). Aqui a₁ = #, q = #, n = #.": {
     "fr": "Somme de la suite géométrique : Sₙ = a₁·(qⁿ − #)/(q − #). Ici a₁ = #, q = #, n = #.",
     "en": "Sum of the geometric sequence: Sₙ = a₁·(qⁿ − #)/(q − #). Here a₁ = #, q = #, n = #."
+  },
+  "Soma de cubos: o primeiro fator leva +, e o segundo tem − no meio.": {
+    "fr": "Cubes : le premier facteur porte +, et le second a − au milieu.",
+    "en": "Cubes: the first factor carries +, and the second has − in the middle."
   },
   "Soma de logaritmos de mesma base é o logaritmo do produto.": {
     "fr": "Une somme de logarithmes de même base est le logarithme du produit.",
@@ -8663,6 +9839,10 @@
     "fr": "Additionner dans les parenthèses décale vers la gauche, et multiplier comprime.",
     "en": "Adding inside the brackets shifts left, and multiplying compresses."
   },
+  "Some a massa atômica de cada elemento multiplicada pelo seu índice. O índice conta átomos, e por isso multiplica.": {
+    "fr": "Additionnez la masse atomique de chaque élément multipliée par son indice. L’indice compte des atomes, et multiplie donc.",
+    "en": "Add each element’s atomic mass multiplied by its subscript. The subscript counts atoms, and so it multiplies."
+  },
   "Some as fem com sinal (em oposição se subtraem) e divida pela resistência total # + #.": {
     "fr": "Additionnez les f.é.m. avec leur signe (em oposição se subtraem) et divisez par la résistance totale # + #.",
     "en": "Add the emfs with their sign (em oposição se subtraem) and divide by the total resistance # + #."
@@ -8671,9 +9851,53 @@
     "fr": "Additionnez les f.é.m. avec leur signe (no mesmo sentido se somam) et divisez par la résistance totale # + #.",
     "en": "Add the emfs with their sign (no mesmo sentido se somam) and divide by the total resistance # + #."
   },
+  "Some as massas atômicas de CH₄, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
+    "fr": "Additionnez les masses atomiques de CH₄, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
+    "en": "Add the atomic masses of CH₄, but each one TIMES its subscript — the small number counts atoms."
+  },
+  "Some as massas atômicas de CO₂, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
+    "fr": "Additionnez les masses atomiques de CO₂, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
+    "en": "Add the atomic masses of CO₂, but each one TIMES its subscript — the small number counts atoms."
+  },
+  "Some as massas atômicas de CaCO₃, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
+    "fr": "Additionnez les masses atomiques de CaCO₃, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
+    "en": "Add the atomic masses of CaCO₃, but each one TIMES its subscript — the small number counts atoms."
+  },
+  "Some as massas atômicas de CuSO₄, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
+    "fr": "Additionnez les masses atomiques de CuSO₄, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
+    "en": "Add the atomic masses of CuSO₄, but each one TIMES its subscript — the small number counts atoms."
+  },
+  "Some as massas atômicas de C₆H₁₂O₆, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
+    "fr": "Additionnez les masses atomiques de C₆H₁₂O₆, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
+    "en": "Add the atomic masses of C₆H₁₂O₆, but each one TIMES its subscript — the small number counts atoms."
+  },
+  "Some as massas atômicas de Fe₂O₃, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
+    "fr": "Additionnez les masses atomiques de Fe₂O₃, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
+    "en": "Add the atomic masses of Fe₂O₃, but each one TIMES its subscript — the small number counts atoms."
+  },
+  "Some as massas atômicas de H₂O, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
+    "fr": "Additionnez les masses atomiques de H₂O, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
+    "en": "Add the atomic masses of H₂O, but each one TIMES its subscript — the small number counts atoms."
+  },
+  "Some as massas atômicas de H₂SO₄, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
+    "fr": "Additionnez les masses atomiques de H₂SO₄, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
+    "en": "Add the atomic masses of H₂SO₄, but each one TIMES its subscript — the small number counts atoms."
+  },
+  "Some as massas atômicas de NH₃, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
+    "fr": "Additionnez les masses atomiques de NH₃, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
+    "en": "Add the atomic masses of NH₃, but each one TIMES its subscript — the small number counts atoms."
+  },
+  "Some as massas atômicas de NaCl, mas cada uma VEZES o seu índice — o número pequeno conta átomos.": {
+    "fr": "Additionnez les masses atomiques de NaCl, mais chacune MULTIPLIÉE par son indice — le petit nombre compte des atomes.",
+    "en": "Add the atomic masses of NaCl, but each one TIMES its subscript — the small number counts atoms."
+  },
   "Some componente com componente (x com x, y com y) e só então calcule o módulo do resultado.": {
     "fr": "Additionnez composante par composante (x avec x, y avec y) et seulement ensuite calculez le module du résultat.",
     "en": "Add component by component (x with x, y with y) and only then compute the magnitude of the result."
+  },
+  "Some os elétrons de todos os subníveis com n = #. A camada pode estar incompleta: o que ela CABE não é o que ela tem.": {
+    "fr": "Additionnez les électrons de toutes les sous-couches avec n = #. La couche peut être incomplète : ce qu’elle PEUT contenir n’est pas ce qu’elle contient.",
+    "en": "Add the electrons of every subshell with n = #. The shell may be incomplete: what it CAN hold is not what it holds."
   },
   "Soprar sobre a superfície aumenta h, e com ele o fluxo.": {
     "fr": "Souffler sur la surface augmente h, et avec lui le flux.",
@@ -9019,6 +10243,10 @@
     "fr": "Nous soustrayons de L₃, terme par terme.",
     "en": "We subtract from L₃, entry by entry."
   },
+  "São as relações de Girard, que evitam recorrer a Bhaskara.": {
+    "fr": "Ce sont les relations de Viète, qui évitent de recourir à la formule quadratique.",
+    "en": "These are Vieta’s formulas, which spare you the quadratic formula."
+  },
   "São dois quadrados perfeitos subtraídos.": {
     "fr": "Ce sont deux carrés parfaits soustraits.",
     "en": "These are two perfect squares subtracted."
@@ -9070,6 +10298,14 @@
   "Só o termo que tem x e y ao mesmo tempo sobrevive às duas derivadas.": {
     "fr": "Seul le terme qui a x et y en même temps survit aux deux dérivées.",
     "en": "Only the term that has x and y at the same time survives both derivatives."
+  },
+  "Só um dos números está em forma mista: # #/# é (#·# + #)/#. O outro já está pronto para a conta.": {
+    "fr": "Un seul des nombres est fractionnaire : # #/# vaut (#·# + #)/#. L’autre est déjà prêt pour le calcul.",
+    "en": "Only one of the numbers is mixed: # #/# is (#·# + #)/#. The other is already ready for the computation."
+  },
+  "Só é possível somar ou subtrair partes do mesmo tamanho.": {
+    "fr": "On ne peut additionner ou soustraire que des parts de même taille.",
+    "en": "Only parts of the same size can be added or subtracted."
   },
   "T não aparece: a grandeza não depende dessa dimensão de base.": {
     "fr": "T n’apparaît pas : la grandeur ne dépend pas de cette dimension de base.",
@@ -9251,6 +10487,10 @@
     "fr": "Testez les diviseurs du terme constant (#) divisés par ceux du coefficient dominant : trouvez une racine, divisez et résolvez le reste par la formule quadratique.",
     "en": "Test the divisors of the constant term (#) over those of the leading one: find a root, divide and solve the rest with the quadratic formula."
   },
+  "Ti neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Ti neutre a # électrons, autant que de protons.",
+    "en": "Neutral Ti has # electrons, as many as protons."
+  },
   "Tirando a raiz quadrada.": {
     "fr": "En prenant la racine carrée.",
     "en": "Taking the square root."
@@ -9258,6 +10498,14 @@
   "Tire o ln dos dois lados: x·ln # = (x − #)·ln #. Junte os termos com x de um lado.": {
     "fr": "Prenez le ln des deux côtés : x·ln # = (x − #)·ln #. Réunissez les termes en x d’un côté.",
     "en": "Take ln on both sides: x·ln # = (x − #)·ln #. Gather the x terms on one side."
+  },
+  "Tire x² do primeiro par e # do segundo: sobra o parêntese (#x + #) nos dois. Compare as raízes de cada fator.": {
+    "fr": "Sortez x² de la première paire et # de la seconde : la parenthèse (#x + #) reste dans les deux. Comparez les racines de chaque facteur.",
+    "en": "Pull x² out of the first pair and # out of the second: the parenthesis (#x + #) is left in both. Compare the roots of each factor."
+  },
+  "Tire x² do primeiro par e # do segundo: sobra o parêntese (#x - #) nos dois. Compare as raízes de cada fator.": {
+    "fr": "Sortez x² de la première paire et # de la seconde : la parenthèse (#x - #) reste dans les deux. Comparez les racines de chaque facteur.",
+    "en": "Pull x² out of the first pair and # out of the second: the parenthesis (#x - #) is left in both. Compare the roots of each factor."
   },
   "Toda a energia potencial vira cinética, repartida entre transladar e girar.": {
     "fr": "Toute l'énergie potentielle devient cinétique, répartie entre se déplacer et tourner.",
@@ -9286,6 +10534,10 @@
   "Todos os termos compartilham um fator — ele sai em evidência.": {
     "fr": "Tous les termes partagent un facteur — il sort en évidence.",
     "en": "All terms share a factor — it comes out in evidence."
+  },
+  "Todos os índices se multiplicam por ele.": {
+    "fr": "Tous les indices se multiplient par lui.",
+    "en": "Every subscript is multiplied by it."
   },
   "Tomamos o arco-cosseno.": {
     "fr": "Nous prenons l'arc-cosinus.",
@@ -9375,13 +10627,69 @@
     "fr": "U = ½·C·V² : la moitié de #×#⁻⁶ F fois #² = #. Le résultat est en J ; pour des mJ, multipliez par #.",
     "en": "U = ½·C·V²: half of #×#⁻⁶ F times #² = #. The result is in J; for mJ, multiply by #."
   },
+  "Um inteiro é uma fração de denominador #: # é #/#. O denominador dele não se multiplica nem se soma com o da outra fração.": {
+    "fr": "Un entier est une fraction de dénominateur # : # vaut #/#. Son dénominateur ne se multiplie ni ne s’additionne avec celui de l’autre fraction.",
+    "en": "A whole number is a fraction with denominator #: # is #/#. Its denominator is neither multiplied nor added with the other fraction’s."
+  },
   "Um litro é um decímetro cúbico. # m = # dm, e o volume tem três dimensões: # ao cubo.": {
     "fr": "Un litre est un décimètre cube. # m = # dm, et le volume a trois dimensions : # au cube.",
     "en": "A litre is a cubic decimetre. # m = # dm, and volume has three dimensions: # cubed."
   },
+  "Um mol de amônia pesa a massa molar.": {
+    "fr": "Une mole de ammoniac pèse la masse molaire.",
+    "en": "One mole of ammonia weighs the molar mass."
+  },
+  "Um mol de carbonato de cálcio pesa a massa molar.": {
+    "fr": "Une mole de carbonate de calcium pèse la masse molaire.",
+    "en": "One mole of calcium carbonate weighs the molar mass."
+  },
+  "Um mol de glicose pesa a massa molar.": {
+    "fr": "Une mole de glucose pèse la masse molaire.",
+    "en": "One mole of glucose weighs the molar mass."
+  },
+  "Um mol de gás carbônico pesa a massa molar.": {
+    "fr": "Une mole de dioxyde de carbone pèse la masse molaire.",
+    "en": "One mole of carbon dioxide weighs the molar mass."
+  },
+  "Um mol de metano pesa a massa molar.": {
+    "fr": "Une mole de méthane pèse la masse molaire.",
+    "en": "One mole of methane weighs the molar mass."
+  },
+  "Um mol de sal de cozinha pesa a massa molar.": {
+    "fr": "Une mole de sel de table pèse la masse molaire.",
+    "en": "One mole of table salt weighs the molar mass."
+  },
+  "Um mol de sulfato de cobre pesa a massa molar.": {
+    "fr": "Une mole de sulfate de cuivre pèse la masse molaire.",
+    "en": "One mole of copper sulfate weighs the molar mass."
+  },
+  "Um mol de ácido sulfúrico pesa a massa molar.": {
+    "fr": "Une mole de acide sulfurique pèse la masse molaire.",
+    "en": "One mole of sulfuric acid weighs the molar mass."
+  },
+  "Um mol de água pesa a massa molar.": {
+    "fr": "Une mole de eau pèse la masse molaire.",
+    "en": "One mole of water weighs the molar mass."
+  },
+  "Um mol de óxido de ferro(III) pesa a massa molar.": {
+    "fr": "Une mole de oxyde de fer(III) pèse la masse molaire.",
+    "en": "One mole of iron(III) oxide weighs the molar mass."
+  },
+  "Um mol tem # × #²³ partículas. Multiplique esse # por # e a potência fica.": {
+    "fr": "Une mole contient # × #²³ particules. Multipliez ce # par # et la puissance reste.",
+    "en": "One mole holds # × #²³ particles. Multiply that # by # and the power stays."
+  },
+  "Um mol tem o número de Avogadro de partículas.": {
+    "fr": "Une mole contient le nombre d’Avogadro de particules.",
+    "en": "One mole holds Avogadro’s number of particles."
+  },
   "Um número diferente de zero dividido por algo que tende a zero explode: assíntota vertical.": {
     "fr": "Un nombre différent de zéro divisé par quelque chose qui tend vers zéro explose : asymptote verticale.",
     "en": "A nonzero number divided by something tending to zero blows up: a vertical asymptote."
+  },
+  "Um número misto vira fração: # #/# é (#·# + #)/#. Converta os dois antes de operar.": {
+    "fr": "Un nombre fractionnaire devient une fraction : # #/# vaut (#·# + #)/#. Convertissez les deux avant de calculer.",
+    "en": "A mixed number becomes a fraction: # #/# is (#·# + #)/#. Convert both before operating."
   },
   "Um período é um TEMPO: procure a opção cuja dimensão é só T¹ — sem M, sem L.": {
     "fr": "Une période est un TEMPS : cherchez l’option dont la dimension est seulement T¹ — sans M, sans L.",
@@ -9491,6 +10799,10 @@
     "fr": "V = k·q/r, avec le signe de la charge : #×#⁹ fois (#)×#⁻⁶, divisé par # (sans carré). Divisez par # pour des kV.",
     "en": "V = k·q/r, with the charge’s sign: #×#⁹ times (#)×#⁻⁶, divided by # (no square). Divide by # for kV."
   },
+  "Vale para toda soma ou diferença de cubos: o fator do #º grau não tem raiz real.": {
+    "fr": "Cela vaut pour toute somme ou différence de cubes : le facteur de degré # n’a pas de racine réelle.",
+    "en": "It holds for every sum or difference of cubes: the degree-# factor has no real root."
+  },
   "Variação da posição sobre variação do tempo.": {
     "fr": "Variation de la position sur variation du temps.",
     "en": "Change in position over change in time."
@@ -9543,6 +10855,22 @@
     "fr": "Vous avez compté combien il y a de termes, et non ce qu’ils totalisent. La somme renvoie le total des valeurs, pas leur nombre.",
     "en": "You counted how many terms there are, not what they add up to. The sum returns the total of the values, not how many there are."
   },
+  "Você dividiu pelo número de mols. Mais mols significam MAIS partículas, então a quantidade multiplica.": {
+    "fr": "Vous avez divisé par le nombre de moles. Plus de moles signifie PLUS de particules, donc la quantité multiplie.",
+    "en": "You divided by the number of moles. More moles mean MORE particles, so the amount multiplies."
+  },
+  "Você dividiu. Dividir responde «quantos mols há nesta massa» — e aqui a quantidade já é conhecida; o que falta é quanto ela pesa.": {
+    "fr": "Vous avez divisé. Diviser répond à « combien de moles dans cette masse » — et ici la quantité est déjà connue ; ce qui manque, c’est combien elle pèse.",
+    "en": "You divided. Dividing answers “how many moles are in this mass” — and here the amount is already known; what is missing is how much it weighs."
+  },
+  "Você encontrou o denominador comum correto (#), mas manteve os numeradores originais. Ao multiplicar o denominador por um fator, o numerador precisa ser multiplicado pelo mesmo fator — é isso que preserva o valor da fração.": {
+    "fr": "Vous avez trouvé le bon dénominateur commun (#), mais gardé les numérateurs d’origine. En multipliant le dénominateur par un facteur, il faut multiplier le numérateur par le même facteur — c’est ce qui préserve la valeur de la fraction.",
+    "en": "You found the right common denominator (#), but kept the original numerators. When the denominator is multiplied by a factor, the numerator has to be multiplied by the same factor — that is what preserves the value of the fraction."
+  },
+  "Você igualou os denominadores antes de multiplicar. Isso é necessário na soma e na subtração, mas na multiplicação não — e aqui altera o resultado.": {
+    "fr": "Vous avez égalisé les dénominateurs avant de multiplier. C’est nécessaire pour l’addition et la soustraction, mais pas pour la multiplication — et ici cela change le résultat.",
+    "en": "You made the denominators equal before multiplying. That is needed for addition and subtraction, but not for multiplication — and here it changes the result."
+  },
   "Você manteve a quantidade. Ela só não muda quando os dois coeficientes são iguais — e aqui eles não são.": {
     "fr": "Vous avez gardé la quantité telle quelle. Elle ne reste la même que si les deux coefficients sont égaux — et ici ils ne le sont pas.",
     "en": "You kept the amount unchanged. It only stays the same when the two coefficients are equal — and here they are not."
@@ -9551,6 +10879,22 @@
     "fr": "Vous avez multiplié # en haut et en bas. Le dénominateur d’un entier est # : # vaut #/#, donc seul le numérateur est multiplié. Remarquez que multiplier les deux termes par le même nombre ne change pas la fraction — le résultat serait resté celui de l’énoncé.",
     "en": "You multiplied # on top and on the bottom. A whole number’s denominator is #: # is #/#, so only the numerator is multiplied. Notice that multiplying both terms by the same number does not change the fraction — the result would have stayed the one in the question."
   },
+  "Você multiplicou as duas frações diretamente, sem inverter a segunda. Dividir por c/d é multiplicar por d/c, porque esse é o número que, multiplicado por c/d, resulta em #.": {
+    "fr": "Vous avez multiplié les deux fractions directement, sans inverser la seconde. Diviser par c/d, c’est multiplier par d/c, car c’est le nombre qui, multiplié par c/d, donne #.",
+    "en": "You multiplied the two fractions directly, without flipping the second. Dividing by c/d is multiplying by d/c, because that is the number which, times c/d, gives #."
+  },
+  "Você multiplicou em cruz, o que equivale a inverter a segunda fração. Esse é o procedimento da divisão; na multiplicação é em linha: numerador com numerador, denominador com denominador.": {
+    "fr": "Vous avez multiplié en croix, ce qui revient à inverser la seconde fraction. C’est la méthode de la division ; dans la multiplication, c’est en ligne : numérateur avec numérateur, dénominateur avec dénominateur.",
+    "en": "You cross-multiplied, which amounts to flipping the second fraction. That is the division procedure; in multiplication it is straight across: numerator with numerator, denominator with denominator."
+  },
+  "Você multiplicou. Multiplicar daria a massa de tantos mols — e aqui a massa já é conhecida; o que falta é a quantidade.": {
+    "fr": "Vous avez multiplié. Multiplier donnerait la masse de tant de moles — et ici la masse est déjà connue ; ce qui manque, c’est la quantité.",
+    "en": "You multiplied. Multiplying would give the mass of that many moles — and here the mass is already known; what is missing is the amount."
+  },
+  "Você somou as massas atômicas sem multiplicar pelos índices. O número pequeno da fórmula conta ÁTOMOS, e cada um deles pesa.": {
+    "fr": "Vous avez additionné les masses atomiques sans multiplier par les indices. Le petit nombre de la formule compte des ATOMES, et chacun pèse.",
+    "en": "You added the atomic masses without multiplying by the subscripts. The small number in the formula counts ATOMS, and each one weighs."
+  },
   "Você somou. O pi maiúsculo manda MULTIPLICAR — é o sigma que soma. Os dois têm o mesmo arranjo de índices, e é só a operação que muda.": {
     "fr": "Vous avez additionné. Le pi majuscule demande de MULTIPLIER — c’est le sigma qui additionne. Les deux ont la même disposition d’indices, et seule l’opération change.",
     "en": "You added. The capital pi tells you to MULTIPLY — it is the sigma that adds. Both have the same index layout, and only the operation changes."
@@ -9558,6 +10902,10 @@
   "Você usou o fator LINEAR. Numa unidade de área ou volume, ele precisa ser elevado ao expoente correspondente.": {
     "fr": "Vous avez utilisé le facteur LINÉAIRE. Dans une unité d’aire ou de volume, il doit être élevé à l’exposant correspondant.",
     "en": "You used the LINEAR factor. In a unit of area or volume, it has to be raised to the matching exponent."
+  },
+  "Você usou o produto dos denominadores (#) como denominador comum — isso é válido, embora o MMC (#) deixe os números menores. O problema é que os numeradores não foram convertidos junto.": {
+    "fr": "Vous avez utilisé le produit des dénominateurs (#) comme dénominateur commun — c’est valable, même si le PPCM (#) donne des nombres plus petits. Le problème est que les numérateurs n’ont pas été convertis avec.",
+    "en": "You used the product of the denominators (#) as the common denominator — that is valid, though the LCM (#) keeps the numbers smaller. The problem is that the numerators were not converted along with it."
   },
   "Voltamos # passo até o primeiro termo, dividindo pela razão.": {
     "fr": "Nous revenons de # passo jusqu’au premier terme, en divisant par la raison.",
@@ -9971,6 +11319,14 @@
     "fr": "Nous annulons le reste de la colonne # : L₃ ← L₃ − L₂.",
     "en": "We clear the rest of column #: L₃ ← L₃ − L₂."
   },
+  "Zero é resposta: este subnível ainda não começou a receber elétrons.": {
+    "fr": "Zéro est une réponse : cette sous-couche n’a pas encore commencé à recevoir des électrons.",
+    "en": "Zero is an answer: this subshell has not started receiving electrons yet."
+  },
+  "Zn neutro tem # elétrons, tantos quantos prótons.": {
+    "fr": "Zn neutre a # électrons, autant que de protons.",
+    "en": "Neutral Zn has # electrons, as many as protons."
+  },
   "`#x` quer dizer # vezes x, não # mais x. A multiplicação entre número e letra é escrita sem sinal nenhum.": {
     "fr": "« #x » veut dire # fois x, et non # plus x. La multiplication entre un nombre et une lettre s’écrit sans aucun signe.",
     "en": "“#x” means # times x, not # plus x. Multiplication between a number and a letter is written with no sign at all."
@@ -10035,6 +11391,10 @@
     "fr": "m = Δy / Δx : (# − #) divisé par (# − #), toujours dans le même ordre des points.",
     "en": "m = Δy / Δx: (# − #) divided by (# − #), always in the same order of the points."
   },
+  "mdc(#, #) = #.": {
+    "fr": "PGCD(#, #) = #.",
+    "en": "gcd(#, #) = #."
+  },
   "n = #° ÷ #°. Depois, d = n(n − #)/#.": {
     "fr": "n = #° ÷ #°. Ensuite, d = n(n − #)/#.",
     "en": "n = #° ÷ #°. Then d = n(n − #)/#."
@@ -10070,6 +11430,10 @@
   "r = Σ(x − x̄)(y − ȳ) / √[Σ(x − x̄)² · Σ(y − ȳ)²]: comece pelas médias e pelos desvios de cada ponto.": {
     "fr": "r = Σ(x − x̄)(y − ȳ) / √[Σ(x − x̄)² · Σ(y − ȳ)²] : commencez par les moyennes et les écarts de chaque point.",
     "en": "r = Σ(x − x̄)(y − ȳ) / √[Σ(x − x̄)² · Σ(y − ȳ)²]: start with the means and the deviations of each point."
+  },
+  "x² + # não é diferença de quadrados: com +, ele não se anula para nenhum x real.": {
+    "fr": "x² + # n’est pas une différence de carrés : avec +, il ne s’annule pour aucun x réel.",
+    "en": "x² + # is not a difference of squares: with +, it vanishes for no real x."
   },
   "y = m·λ·L/d com tudo em metros: λ = # × #⁻⁹ m e d = # × #⁻³ m. Depois passe y para mm.": {
     "fr": "y = m·λ·L/d avec tout en mètres : λ = # × #⁻⁹ m et d = # × #⁻³ m. Passez ensuite y en mm.",
@@ -10139,6 +11503,10 @@
     "fr": "C’est la convention de la physique et de l’ingénierie ; en mathématiques pures on l’échange parfois.",
     "en": "It is the physics and engineering convention; in pure mathematics it is sometimes swapped."
   },
+  "É a distributiva lida de trás para frente.": {
+    "fr": "C’est la distributivité lue à l’envers.",
+    "en": "It is distributivity read backwards."
+  },
   "É a fórmula do volume do cone, obtida por integração.": {
     "fr": "C’est la formule du volume du cône, obtenue par intégration.",
     "en": "It is the cone volume formula, obtained by integration."
@@ -10158,6 +11526,10 @@
   "É este cancelamento que transforma um problema infinito numa equação simples.": {
     "fr": "C’est cette annulation qui transforme un problème infini en une équation simple.",
     "en": "It is this cancellation that turns an infinite problem into a simple equation."
+  },
+  "É este passo que transforma quantidade em fórmula.": {
+    "fr": "C’est cette étape qui transforme la quantité en formule.",
+    "en": "It is this step that turns the amount into a formula."
   },
   "É média ponderada: o isótopo mais abundante puxa o resultado para si.": {
     "fr": "C’est une moyenne pondérée : l’isotope le plus abondant tire le résultat vers lui.",
