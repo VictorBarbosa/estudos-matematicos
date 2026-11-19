@@ -671,6 +671,10 @@
     "fr": "La constante de temps est le produit RC.",
     "en": "The time constant is the product RC."
   },
+  "A constante desaparece: ela não varia.": {
+    "fr": "La constante disparaît : elle ne varie pas.",
+    "en": "The constant vanishes: it does not vary."
+  },
   "A constante não desaparece: ela multiplica todo o resultado.": {
     "fr": "La constante ne disparaît pas : elle multiplie tout le résultat.",
     "en": "The constant does not vanish: it multiplies the whole result."
@@ -755,6 +759,10 @@
     "fr": "La masse linéique doit être en kg/m : # g/m = # kg/m. Sans conversion, la vitesse sort environ # fois trop petite.",
     "en": "The linear density has to be in kg/m: # g/m = # kg/m. Without converting, the speed comes out about # times too small."
   },
+  "A derivada completa.": {
+    "fr": "La dérivée complète.",
+    "en": "The complete derivative."
+  },
   "A derivada da tangente é a secante AO QUADRADO. Sem o quadrado o valor muda, e o sinal pode até ficar negativo — coisa que a derivada da tangente nunca é.": {
     "fr": "La dérivée de la tangente est la sécante AU CARRÉ. Sans le carré la valeur change, et le signe peut même devenir négatif — ce que la dérivée de la tangente n’est jamais.",
     "en": "The derivative of tangent is secant SQUARED. Without the square the value changes, and the sign can even turn negative — which the derivative of tangent never is."
@@ -783,6 +791,10 @@
     "fr": "La dérivée de ln x vaut #/x = x⁻¹. Dérivez de nouveau par la règle de la puissance : l’exposant −# descend.",
     "en": "The derivative of ln x is #/x = x⁻¹. Differentiate again by the power rule: the exponent −# comes down."
   },
+  "A derivada de um produto NÃO é o produto das derivadas. Teste com x·x: a derivada é #x, e não #·# = #.": {
+    "fr": "La dérivée d’un produit N’EST PAS le produit des dérivées. Testez avec x·x : la dérivée vaut #x, et non #·# = #.",
+    "en": "The derivative of a product is NOT the product of the derivatives. Try it with x·x: the derivative is #x, not #·# = #."
+  },
   "A derivada de um produto não é o produto das derivadas. São duas parcelas somadas.": {
     "fr": "La dérivée d’un produit n’est pas le produit des dérivées. Ce sont deux termes additionnés.",
     "en": "The derivative of a product is not the product of the derivatives. It is two terms added."
@@ -790,6 +802,10 @@
   "A derivada de um produto não é o produto das derivadas. São duas parcelas: a derivada do primeiro vezes o segundo, mais o primeiro vezes a derivada do segundo.": {
     "fr": "La dérivée d’un produit n’est pas le produit des dérivées. Ce sont deux termes : la dérivée du premier fois le second, plus le premier fois la dérivée du second.",
     "en": "The derivative of a product is not the product of the derivatives. It is two terms: the derivative of the first times the second, plus the first times the derivative of the second."
+  },
+  "A derivada de um quociente NÃO é o quociente das derivadas — o mesmo engano do produto. Use a regra completa.": {
+    "fr": "La dérivée d’un quotient N’EST PAS le quotient des dérivées — la même méprise que pour le produit. Utilisez la règle complète.",
+    "en": "The derivative of a quotient is NOT the quotient of the derivatives — the same slip as with the product. Use the full rule."
   },
   "A derivada de x² é #x: o # do expoente desce e fica no denominador.": {
     "fr": "La dérivée de x² est #x : le # de l’exposant descend et reste au dénominateur.",
@@ -1199,6 +1215,10 @@
     "fr": "La forme factorisée montre les deux prix de profit nul : celui du coût et celui qui annule la demande. Le maximum est à mi-chemin. Trouvez d’abord l’abscisse du sommet puis reportez-la dans la fonction : c’est la plus grande ou la plus petite valeur.",
     "en": "The factored form shows the two prices of zero profit: the cost one and the one that kills demand. The maximum sits halfway. First find the vertex’s x-coordinate and then put it back into the function: that is the greatest or the smallest value."
   },
+  "A força da mola cresce com x (lei de Hooke): o trabalho é a integral, não força × distância.": {
+    "fr": "La force du ressort croît avec x (loi de Hooke) : le travail est l’intégrale, et non force × distance.",
+    "en": "The spring force grows with x (Hooke’s law): the work is the integral, not force × distance."
+  },
   "A força da mola é proporcional ao deslocamento, e aponta de volta ao centro.": {
     "fr": "La force du ressort est proportionnelle au déplacement, et pointe vers le centre.",
     "en": "The spring force is proportional to the displacement, pointing back to the centre."
@@ -1210,6 +1230,10 @@
   "A força magnética faz o papel de força centrípeta.": {
     "fr": "La force magnétique joue le rôle de force centripète.",
     "en": "The magnetic force plays the part of the centripetal force."
+  },
+  "A força é #x. Integre de # a #: W = (#/#)·(x₂² − x₁²).": {
+    "fr": "La force vaut #x. Intégrez de # à # : W = (#/#)·(x₂² − x₁²).",
+    "en": "The force is #x. Integrate from # to #: W = (#/#)·(x₂² − x₁²)."
   },
   "A força é GMm/r². A primitiva de #/r² é −#/r: W = GMm·(#/R − #/(R + h)), com as distâncias em metros.": {
     "fr": "La force est GMm/r². La primitive de #/r² est −#/r : W = GMm·(#/R − #/(R + h)), avec les distances en mètres.",
@@ -1370,6 +1394,10 @@
   "A fórmula que resolve a pergunta.": {
     "fr": "La formule qui résout la question.",
     "en": "The formula that solves the question."
+  },
+  "A gravidade cai com o quadrado da distância ao centro: integramos de R até R + h.": {
+    "fr": "La gravité décroît avec le carré de la distance au centre : nous intégrons de R à R + h.",
+    "en": "Gravity falls with the square of the distance to the centre: we integrate from R to R + h."
   },
   "A hipotenusa # corresponde ao #: a unidade vale #.": {
     "fr": "L’hypoténuse # correspond au # : l’unité vaut #.",
@@ -1719,6 +1747,10 @@
     "fr": "La masse théorique est le plafond : ce qui sortirait de NH₃ sans aucune perte.",
     "en": "The theoretical mass is the ceiling: what would come out of NH₃ with no loss at all."
   },
+  "A massa total (denominador).": {
+    "fr": "La masse totale (le dénominateur).",
+    "en": "The total mass (the denominator)."
+  },
   "A massa é a quantidade vezes o que cada mol pesa.": {
     "fr": "La masse est la quantité multipliée par ce que pèse chaque mole.",
     "en": "The mass is the amount times what each mole weighs."
@@ -1834,6 +1866,10 @@
   "A ordem ficou invertida: é a L₃ menos o múltiplo da L₁, não o contrário.": {
     "fr": "L’ordre est inversé : c’est la L₃ moins le multiple de la L₁, et non l’inverse.",
     "en": "The order is reversed: it is L₃ minus the multiple of L₁, not the other way round."
+  },
+  "A ordem importa: começa pela derivada de CIMA.": {
+    "fr": "L’ordre compte : on commence par la dérivée du HAUT.",
+    "en": "The order matters: it starts with the derivative of the TOP."
   },
   "A ordem importa: f(g(x)) em geral é diferente de g(f(x)).": {
     "fr": "L’ordre compte : f(g(x)) est en général différent de g(f(x)).",
@@ -2447,6 +2483,14 @@
     "fr": "La règle de la puissance : l'exposant descend en multipliant et diminue de un.",
     "en": "The power rule: the exponent comes down multiplying and decreases by one."
   },
+  "A regra do produto tem DOIS termos.": {
+    "fr": "La règle du produit comporte DEUX termes.",
+    "en": "The product rule has TWO terms."
+  },
+  "A regra do quociente: menos no meio, denominador ao quadrado.": {
+    "fr": "La règle du quotient : un moins au milieu, le dénominateur au carré.",
+    "en": "The quotient rule: minus in the middle, denominator squared."
+  },
   "A relação de Euler é F + V = A + 2.": {
     "fr": "La relation d’Euler est F + V = A + 2.",
     "en": "Euler’s relation is F + V = E + 2."
@@ -2786,6 +2830,10 @@
   "A variação do fluxo, com a área no SI.": {
     "fr": "La variation du flux, avec l’aire en SI.",
     "en": "The change in flux, with the area in SI."
+  },
+  "A velocidade acumula a aceleração: v(t) = v(#) + integral de a.": {
+    "fr": "La vitesse accumule l’accélération : v(t) = v(#) + intégrale de a.",
+    "en": "Velocity accumulates acceleration: v(t) = v(#) + integral of a."
   },
   "A velocidade angular entra ao QUADRADO, exatamente como a velocidade na energia de translação.": {
     "fr": "La vitesse angulaire entre au CARRÉ, exactement comme la vitesse dans l’énergie de translation.",
@@ -3243,6 +3291,10 @@
     "fr": "Nous appliquons la règle à chaque terme séparément.",
     "en": "We apply the rule to each term separately."
   },
+  "Aplicamos a regra da potência a cada termo.": {
+    "fr": "Nous appliquons la règle de la puissance à chaque terme.",
+    "en": "We apply the power rule to each term."
+  },
   "Aplicamos ao valor.": {
     "fr": "Nous appliquons à la valeur.",
     "en": "We apply it to the value."
@@ -3386,6 +3438,10 @@
   "As constantes como #π são adimensionais e não entram na conta.": {
     "fr": "Les constantes comme #π sont adimensionnelles et n’entrent pas dans le calcul.",
     "en": "Constants such as #π are dimensionless and do not enter the computation."
+  },
+  "As derivadas de cada fator são os próprios coeficientes de x.": {
+    "fr": "Les dérivées de chaque facteur sont les coefficients de x eux-mêmes.",
+    "en": "The derivatives of each factor are the coefficients of x themselves."
   },
   "As derivadas parciais são constantes: fx = # e fy = #.": {
     "fr": "Les dérivées partielles sont constantes : fx = # et fy = #.",
@@ -3627,6 +3683,14 @@
     "fr": "En évaluant aux deux points.",
     "en": "Evaluating at both points."
   },
+  "Avaliando nos extremos e subtraindo.": {
+    "fr": "En évaluant aux bornes et en soustrayant.",
+    "en": "Evaluating at the ends and subtracting."
+  },
+  "Avaliando nos extremos.": {
+    "fr": "En évaluant aux bornes.",
+    "en": "Evaluating at the ends."
+  },
   "Avaliando nos limites (e ln # = #).": {
     "fr": "En évaluant aux bornes (et ln # = #).",
     "en": "Evaluating at the limits (and ln # = #)."
@@ -3638,6 +3702,10 @@
   "Avaliando nos limites.": {
     "fr": "En évaluant aux bornes.",
     "en": "Evaluating at the bounds."
+  },
+  "Avaliando tudo em x = #.": {
+    "fr": "En évaluant le tout en x = #.",
+    "en": "Evaluating everything at x = #."
   },
   "Avaliando, o termo em t tende a zero porque a exponencial negativa desaba.": {
     "fr": "En évaluant, le terme en t tend vers zéro car l'exponentielle négative s'effondre.",
@@ -4475,6 +4543,10 @@
     "fr": "Avec P = −y/# et Q = x/#, l’intégrande de Green vaut # : l’intégrale double est l’aire.",
     "en": "With P = −y/# and Q = x/#, Green’s integrand is #: the double integral is the area."
   },
+  "Com R = # km e R + h = # km.": {
+    "fr": "Avec R = # km et R + h = # km.",
+    "en": "With R = # km and R + h = # km."
+  },
   "Com Runge-Kutta de quarta ordem, a razão seria bem outra.": {
     "fr": "Avec Runge-Kutta d’ordre quatre, le rapport serait tout autre.",
     "en": "With fourth-order Runge-Kutta, the ratio would be quite different."
@@ -4502,6 +4574,10 @@
   "Com a corrente e a resistência: P = R·I².": {
     "fr": "Avec le courant et la résistance : P = R·I².",
     "en": "With the current and the resistance: P = R·I²."
+  },
+  "Com a força variando, o trabalho é a integral da força ao longo do caminho.": {
+    "fr": "La force variant, le travail est l’intégrale de la force le long du chemin.",
+    "en": "With the force varying, the work is the integral of the force along the path."
   },
   "Com a identidade à esquerda, cada linha já é uma variável isolada.": {
     "fr": "Avec l’identité à gauche, chaque ligne est déjà une variable isolée.",
@@ -4570,6 +4646,10 @@
   "Com forças perpendiculares ao braço, isso é força vezes distância.": {
     "fr": "Avec des forces perpendiculaires au bras, c'est force fois distance.",
     "en": "With forces perpendicular to the arm, this is force times distance."
+  },
+  "Com g constante daria m·g·h = # GJ — mais que o certo, porque g diminui com a altura.": {
+    "fr": "Avec g constant cela donnerait m·g·h = # GJ — plus que le bon résultat, parce que g diminue avec l’altitude.",
+    "en": "With g constant it would give m·g·h = # GJ — more than the right value, because g decreases with height."
   },
   "Com graus iguais, sobra a razão dos coeficientes líderes.": {
     "fr": "Avec des degrés égaux, il reste le rapport des coefficients dominants.",
@@ -5263,6 +5343,10 @@
     "fr": "De chaque sommet partent n − # diagonales (ni vers lui-même ni vers les deux voisins) ; chaque diagonale a été comptée deux fois.",
     "en": "From each vertex come n − # diagonals (not to itself nor to the two neighbours); each diagonal was counted twice."
   },
+  "De cima e de baixo, cada função e sua derivada.": {
+    "fr": "Du haut et du bas, chaque fonction et sa dérivée.",
+    "en": "Top and bottom, each function and its derivative."
+  },
   "De v = λ·f sai λ = v/f: divida # por #.": {
     "fr": "De v = λ·f on tire λ = v/f : divisez # par #.",
     "en": "From v = λ·f comes λ = v/f: divide # by #."
@@ -5682,6 +5766,18 @@
   "Derive os dois lados. Mesma receita, sinal trocado — e dois ramos separados.": {
     "fr": "Dérivez les deux côtés. Même recette, signe changé — et deux branches séparées.",
     "en": "Differentiate both sides. Same recipe, flipped sign — and two separate branches."
+  },
+  "Derive termo a termo (o expoente desce e diminui em um) e só depois substitua x = #.": {
+    "fr": "Dérivez terme par terme (l’exposant descend et diminue de un) et ne remplacez x = # qu’ensuite.",
+    "en": "Differentiate term by term (the exponent comes down and drops by one) and only then substitute x = #."
+  },
+  "Derive termo a termo: o termo em x da derivada vem do termo em x² da função (# vezes o coeficiente dele).": {
+    "fr": "Dérivez terme par terme : le terme en x de la dérivée vient du terme en x² de la fonction (# fois son coefficient).",
+    "en": "Differentiate term by term: the x term of the derivative comes from the x² term of the function (# times its coefficient)."
+  },
+  "Derive um termo por vez (o expoente desce e diminui em um) e escreva a soma; a constante some.": {
+    "fr": "Dérivez un terme à la fois (l’exposant descend et diminue de un) et écrivez la somme ; la constante disparaît.",
+    "en": "Differentiate one term at a time (the exponent comes down and drops by one) and write the sum; the constant vanishes."
   },
   "Derive x em x, #yz em y e #xz em z, some e substitua o ponto.": {
     "fr": "Dérivez x en x, #yz en y et #xz en z, additionnez et remplacez le point.",
@@ -7063,6 +7159,10 @@
     "fr": "Pour les fonctions continues, limite et valeur au point coïncident.",
     "en": "For continuous functions, the limit and the value at the point coincide."
   },
+  "Em gigajoules (#⁹ J).": {
+    "fr": "En gigajoules (#⁹ J).",
+    "en": "In gigajoules (#⁹ J)."
+  },
   "Em kN/C (dividindo por #).": {
     "fr": "En kN/C (en divisant par #).",
     "en": "In kN/C (dividing by #)."
@@ -7855,6 +7955,10 @@
     "fr": "C’est la pulsation amortie, en radians par unité de temps. La période est un tour complet divisé par elle.",
     "en": "That is the damped angular frequency, in radians per unit time. The period is one full turn divided by it."
   },
+  "Essa é a função original: ela não foi derivada.": {
+    "fr": "C’est la fonction d’origine : elle n’a pas été dérivée.",
+    "en": "That is the original function: it was not differentiated."
+  },
   "Essa é a fórmula MOLECULAR, e a porcentagem não consegue distingui-la da empírica: C₆H₁₂O₆ e CH₂O têm exatamente a mesma composição. Sem a massa molar, a resposta é a proporção mais simples.": {
     "fr": "C’est la formule MOLÉCULAIRE, et le pourcentage ne peut pas la distinguer de l’empirique : C₆H₁₂O₆ et CH₂O ont exactement la même composition. Sans la masse molaire, la réponse est la proportion la plus simple.",
     "en": "That is the MOLECULAR formula, and the percentage cannot tell it from the empirical one: C₆H₁₂O₆ and CH₂O have exactly the same composition. Without the molar mass, the answer is the simplest proportion."
@@ -8235,6 +8339,10 @@
     "fr": "C’est le coefficient d’une autre substance de l’équation. La question en nomme une : vérifiez laquelle.",
     "en": "That is the coefficient of another substance in the equation. The question names one: check which."
   },
+  "Esse é o coeficiente de x na função ORIGINAL. Depois de derivar, o termo em x vem do termo em x² da função.": {
+    "fr": "C’est le coefficient de x dans la fonction D’ORIGINE. Après dérivation, le terme en x vient du terme en x² de la fonction.",
+    "en": "That is the coefficient of x in the ORIGINAL function. After differentiating, the x term comes from the function’s x² term."
+  },
   "Esse é o coeficiente de x², que vale #p²q. O pedido é o próprio q.": {
     "fr": "C’est le coefficient de x², qui vaut #p²q. Ce qui est demandé, c’est q lui-même.",
     "en": "That is the coefficient of x², which is #p²q. What is asked for is q itself."
@@ -8455,6 +8563,10 @@
     "fr": "C’est la valeur de la fonction au point. La droite ne coupe l’axe des ordonnées là que si x₀ = #.",
     "en": "That is the value of the function at the point. The line only crosses the y-axis there if x₀ = #."
   },
+  "Esse é o valor da função, não da derivada.": {
+    "fr": "C’est la valeur de la fonction, et non de la dérivée.",
+    "en": "That is the value of the function, not of the derivative."
+  },
   "Esse é o valor da integral, não o valor médio. Falta dividir pela largura do intervalo, que vale #.": {
     "fr": "C’est la valeur de l’intégrale, et non la valeur moyenne. Il reste à diviser par la largeur de l’intervalle, qui vaut #.",
     "en": "That is the value of the integral, not the average value. Dividing by the width of the interval, which is #, is still missing."
@@ -8630,6 +8742,10 @@
   "Esse é só o divergente; falta multiplicar pelo volume.": {
     "fr": "Ce n’est que la divergence ; il reste à multiplier par le volume.",
     "en": "That is only the divergence; it still has to be multiplied by the volume."
+  },
+  "Esse é só o numerador. Falta dividir pela massa total.": {
+    "fr": "Ce n’est que le numérateur. Il reste à diviser par la masse totale.",
+    "en": "That is only the numerator. Dividing by the total mass is still missing."
   },
   "Esse é só o número de nêutrons. Falta somar os prótons.": {
     "fr": "Ce n’est que le nombre de neutrons. Il reste à ajouter les protons.",
@@ -9015,6 +9131,10 @@
     "fr": "Il manque l’élévation de la température à la puissance QUATRE. C’est elle qui sépare le rayonnement des deux autres modes de transfert.",
     "en": "Raising the temperature to the FOURTH power is missing. It is what sets radiation apart from the other two modes of transfer."
   },
+  "Faltou elevar o denominador ao quadrado: divide-se por (#)² = #, não por #.": {
+    "fr": "Il manque l’élévation du dénominateur au carré : on divise par (#)² = #, et non par #.",
+    "en": "Squaring the denominator is missing: you divide by (#)² = #, not by #."
+  },
   "Faltou extrair a raiz QUARTA. O valor obtido é a temperatura elevada à quarta potência, não a temperatura.": {
     "fr": "Il manque l’extraction de la racine QUATRIÈME. La valeur obtenue est la température à la puissance quatre, et non la température.",
     "en": "Taking the FOURTH root is missing. The value obtained is the temperature to the fourth power, not the temperature."
@@ -9163,6 +9283,10 @@
     "fr": "Il manque l’addition de la hauteur des yeux (# m) : le triangle commence là, et non au sol.",
     "en": "Adding the eye height (# m) is missing: the triangle starts there, not at the ground."
   },
+  "Faltou somar a velocidade inicial de # m/s.": {
+    "fr": "Il manque l’addition de la vitesse initiale de # m/s.",
+    "en": "Adding the initial velocity of # m/s is missing."
+  },
   "Faltou somar o intercepto, que é o valor da reta em x igual a zero.": {
     "fr": "Il manque l’addition de l’ordonnée à l’origine, qui est la valeur de la droite en x égal à zéro.",
     "en": "Adding the intercept, which is the value of the line at x equal to zero, is missing."
@@ -9170,6 +9294,10 @@
   "Faltou subtrair F(#). Mesmo com ln # = #, o termo −x²/# em x = # não é zero.": {
     "fr": "Il manque la soustraction de F(#). Même avec ln # = #, le terme −x²/# en x = # n’est pas nul.",
     "en": "Subtracting F(#) is missing. Even with ln # = #, the term −x²/# at x = # is not zero."
+  },
+  "Faltou subtrair o valor em t = #: a integral definida é F(#) − F(#).": {
+    "fr": "Il manque la soustraction de la valeur en t = # : l’intégrale définie est F(#) − F(#).",
+    "en": "Subtracting the value at t = # is missing: the definite integral is F(#) − F(#)."
   },
   "Faltou subtrair o valor no limite inferior. A integral definida continua sendo F(b) − F(a), mesmo depois da substituição.": {
     "fr": "Il manque la soustraction de la valeur à la borne inférieure. L’intégrale définie reste F(b) − F(a), même après la substitution.",
@@ -9350,6 +9478,14 @@
   "Força de B sobre M: repulsão, empurra M para a ESQUERDA.": {
     "fr": "Force de B sur M : répulsion, elle pousse M vers la GAUCHE.",
     "en": "Force of B on M: repulsion, it pushes M to the LEFT."
+  },
+  "Força final × distância supõe força constante igual a #·#. Ela cresce desde #·#: integre.": {
+    "fr": "Force finale × distance suppose une force constante égale à #·#. Elle croît depuis #·# : intégrez.",
+    "en": "Final force × distance assumes a constant force equal to #·#. It grows from #·#: integrate."
+  },
+  "Força × distância usa uma força constante. Aqui F depende de x: integre.": {
+    "fr": "Force × distance suppose une force constante. Ici F dépend de x : intégrez.",
+    "en": "Force × distance assumes a constant force. Here F depends on x: integrate."
   },
   "Forças perpendiculares não se somam direto: a resultante é √(F₁² + F₂²).": {
     "fr": "Des forces perpendiculaires ne s’additionnent pas directement : la résultante vaut √(F₁² + F₂²).",
@@ -9563,6 +9699,10 @@
     "fr": "En intégrant de # à #π et en divisant par #.",
     "en": "Integrating from # to #π and dividing by #."
   },
+  "Integrando e avaliando.": {
+    "fr": "En intégrant et en évaluant.",
+    "en": "Integrating and evaluating."
+  },
   "Integrando e isolando y.": {
     "fr": "En intégrant et en isolant y.",
     "en": "Integrating and isolating y."
@@ -9582,6 +9722,10 @@
   "Integre M em x, some uma g(y) e ache g comparando a derivada em y com N. Depois substitua o ponto.": {
     "fr": "Intégrez M en x, ajoutez une g(y) et trouvez g en comparant la dérivée en y avec N. Remplacez ensuite le point.",
     "en": "Integrate M in x, add a g(y) and find g by comparing the derivative in y with N. Then substitute the point."
+  },
+  "Integre v(t): a primitiva de #t + # é #t²/# + #t. Avalie em # e em # e subtraia.": {
+    "fr": "Intégrez v(t) : la primitive de #t + # est #t²/# + #t. Évaluez en # et en # et soustrayez.",
+    "en": "Integrate v(t): the antiderivative of #t + # is #t²/# + #t. Evaluate at # and at # and subtract."
   },
   "Integrou as componentes do campo. O teorema integra o DIVERGENTE.": {
     "fr": "Vous avez intégré les composantes du champ. Le théorème intègre la DIVERGENCE.",
@@ -11819,6 +11963,10 @@
     "fr": "La cathète opposée se relie à l’hypoténuse par le sinus.",
     "en": "The opposite leg relates to the hypotenuse through the sine."
   },
+  "O centro de massa é a média das posições pesada pela massa de cada pedacinho.": {
+    "fr": "Le centre de masse est la moyenne des positions pondérée par la masse de chaque petit morceau.",
+    "en": "The centre of mass is the average of the positions weighted by the mass of each little piece."
+  },
   "O centro de massa é a média das posições, ponderada pelas massas.": {
     "fr": "Le centre de masse est la moyenne des positions, pondérée par les masses.",
     "en": "The center of mass is the average of positions, weighted by the masses."
@@ -11874,6 +12022,10 @@
   "O coeficiente de x foi multiplicado por # (de # para #).": {
     "fr": "Le coefficient de x a été multiplié par # (de # à #).",
     "en": "The coefficient of x was multiplied by # (from # to #)."
+  },
+  "O coeficiente de x é o pedido.": {
+    "fr": "Le coefficient de x est ce qui est demandé.",
+    "en": "The coefficient of x is what is asked for."
   },
   "O coeficiente de x é o que o enunciado pede.": {
     "fr": "Le coefficient de x est ce que l’énoncé demande.",
@@ -12066,6 +12218,10 @@
   "O deslocamento é a diferença entre as posições, componente a componente.": {
     "fr": "Le déplacement est la différence entre les positions, composante par composante.",
     "en": "The displacement is the difference between the positions, component by component."
+  },
+  "O deslocamento é a área sob a velocidade: a integral de v no intervalo.": {
+    "fr": "Le déplacement est l’aire sous la vitesse : l’intégrale de v sur l’intervalle.",
+    "en": "The displacement is the area under the velocity: the integral of v over the interval."
   },
   "O determinante dos coeficientes decide o tipo de sistema.": {
     "fr": "Le déterminant des coefficients décide du type de système.",
@@ -12262,6 +12418,10 @@
   "O expoente # multiplica os expoentes do segundo fator antes da soma. Somar as dimensões diretamente ignora a potência.": {
     "fr": "L’exposant # multiplie les exposants du second facteur avant l’addition. Additionner les dimensions directement ignore la puissance.",
     "en": "The exponent # multiplies the exponents of the second factor before the sum. Adding the dimensions directly ignores the power."
+  },
+  "O expoente desce como fator E diminui em um: de x³ sai #x², não #x³.": {
+    "fr": "L’exposant descend comme facteur ET diminue de un : de x³ sort #x², et non #x³.",
+    "en": "The exponent comes down as a factor AND drops by one: from x³ comes #x², not #x³."
   },
   "O expoente deve AUMENTAR em um ao integrar. Aqui ele foi mantido, o que corresponderia a derivar.": {
     "fr": "L’exposant doit AUGMENTER de un en intégrant. Ici il a été gardé, ce qui reviendrait à dériver.",
@@ -12531,6 +12691,10 @@
     "fr": "Le PGCD de # et # vaut #.",
     "en": "The gcd of # and # is #."
   },
+  "O meio da barra só é o centro de massa se ela for homogênea. Aqui a densidade cresce com x: o centro se desloca para o lado mais pesado.": {
+    "fr": "Le milieu de la barre n’est le centre de masse que si elle est homogène. Ici la densité croît avec x : le centre se déplace vers le côté le plus lourd.",
+    "en": "The middle of the rod is the centre of mass only if it is uniform. Here the density grows with x: the centre shifts towards the heavier side."
+  },
   "O menor manda: CH₄ é o limitante, e O₂ sobra.": {
     "fr": "Le plus petit commande : CH₄ est le limitant, et O₂ est en excès.",
     "en": "The smallest rules: CH₄ is the limiting one, and O₂ is left over."
@@ -12582,6 +12746,10 @@
   "O mnemônico: no #º tudo é positivo; no #º só o seno; no #º só a tangente; no #º só o cosseno.": {
     "fr": "Le moyen mnémotechnique : au #e tout est positif ; au #e seul le sinus ; au #e seule la tangente ; au #e seul le cosinus.",
     "en": "The mnemonic: in the #st everything is positive; in the #nd only the sine; in the #rd only the tangent; in the #th only the cosine."
+  },
+  "O momento (numerador): integramos x vezes λ.": {
+    "fr": "Le moment (le numérateur) : nous intégrons x fois λ.",
+    "en": "The moment (the numerator): we integrate x times λ."
   },
   "O momento angular é o análogo rotacional do momento linear.": {
     "fr": "Le moment angulaire est l'analogue rotatif du moment linéaire.",
@@ -13423,6 +13591,10 @@
     "fr": "Le signe est inversé : vérifiez les opérations de ligne faites dans le bloc de l’identité.",
     "en": "The sign is flipped: check the row operations done in the identity block."
   },
+  "O sinal saiu trocado: o numerador é f′g − fg′, nessa ordem. Começa pela derivada de CIMA vezes o de baixo.": {
+    "fr": "Le signe est inversé : le numérateur est f′g − fg′, dans cet ordre. On commence par la dérivée du HAUT fois le bas.",
+    "en": "The sign is flipped: the numerator is f′g − fg′, in that order. It starts with the derivative of the TOP times the bottom."
+  },
   "O sinal saiu trocado: o pivô é k + #, que zera em k = #.": {
     "fr": "Le signe est inversé : le pivot est k + #, qui s’annule en k = #.",
     "en": "The sign is flipped: the pivot is k + #, which vanishes at k = #."
@@ -13546,6 +13718,14 @@
   "O termo com x⁶ é C(#, #)·x⁶·#¹: o # entra # − # = # vezes.": {
     "fr": "Le terme en x⁶ vaut C(#, #)·x⁶·#¹ : le # entre # − # = # fois.",
     "en": "The x⁶ term is C(#, #)·x⁶·#¹: the # enters # − # = # times."
+  },
+  "O termo constante some ao derivar — ele não varia, então sua derivada é zero.": {
+    "fr": "Le terme constant disparaît en dérivant — il ne varie pas, donc sa dérivée est nulle.",
+    "en": "The constant term vanishes on differentiating — it does not vary, so its derivative is zero."
+  },
+  "O termo constante some ao derivar: ele não varia, então sua derivada é zero.": {
+    "fr": "Le terme constant disparaît en dérivant : il ne varie pas, donc sa dérivée est nulle.",
+    "en": "The constant term vanishes on differentiating: it does not vary, so its derivative is zero."
   },
   "O termo constante é o único que some ao derivar. Todos os outros contribuem.": {
     "fr": "Le terme constant est le seul qui disparaît en dérivant. Tous les autres contribuent.",
@@ -14483,6 +14663,10 @@
     "fr": "Les valeurs de f aux extrémités de l’intervalle.",
     "en": "The values of f at the ends of the interval."
   },
+  "Os valores em x = #.": {
+    "fr": "Les valeurs en x = #.",
+    "en": "The values at x = #."
+  },
   "Os vértices são duas cópias dos da base, e cada vértice dá três arestas contadas duas vezes.": {
     "fr": "Les sommets sont deux copies de ceux de la base, et chaque sommet donne trois arêtes comptées deux fois.",
     "en": "The vertices are two copies of the base ones, and each vertex gives three edges counted twice."
@@ -14998,6 +15182,10 @@
   "Pela regra da potência invertida, o expoente sobe e divide.": {
     "fr": "Par la règle de la puissance inversée, l’exposant monte et divise.",
     "en": "By the inverted power rule, the exponent goes up and divides."
+  },
+  "Pela regra da potência, o expoente desce e diminui em um.": {
+    "fr": "Par la règle de la puissance, l’exposant descend et diminue de un.",
+    "en": "By the power rule, the exponent comes down and drops by one."
   },
   "Pela regra de Cramer (ou por eliminação).": {
     "fr": "Par la règle de Cramer (ou par élimination).",
@@ -15611,6 +15799,14 @@
     "fr": "Règle #–#–# : à #, # et # écarts-types de la moyenne restent environ #%, #% et #%.",
     "en": "The #–#–# rule: within #, # and # standard deviations of the mean lie about #%, #% and #%."
   },
+  "Regra do produto: derive o primeiro fator e mantenha o segundo, depois o contrário, e some.": {
+    "fr": "Règle du produit : dérivez le premier facteur et gardez le second, puis l’inverse, et additionnez.",
+    "en": "Product rule: differentiate the first factor and keep the second, then the other way round, and add."
+  },
+  "Regra do quociente: (f′·g − f·g′) dividido por g ao quadrado. Calcule f, g, f′ e g′ no ponto antes.": {
+    "fr": "Règle du quotient : (f′·g − f·g′) divisé par g au carré. Calculez d’abord f, g, f′ et g′ au point.",
+    "en": "Quotient rule: (f′·g − f·g′) divided by g squared. Compute f, g, f′ and g′ at the point first."
+  },
   "Regra rápida: «fora, sinal de a; entre, contrário de a».": {
     "fr": "Règle rapide : « à l’extérieur, le signe de a ; entre les racines, l’opposé de a ».",
     "en": "Quick rule: “outside, the sign of a; between, the opposite of a”."
@@ -15910,6 +16106,10 @@
   "Simplificamos dividindo pelo mdc.": {
     "fr": "Nous simplifions en divisant par le pgcd.",
     "en": "We simplify by dividing by the GCD."
+  },
+  "Simplificando a fração.": {
+    "fr": "En simplifiant la fraction.",
+    "en": "Simplifying the fraction."
   },
   "Simplificando, chegamos à fração geratriz.": {
     "fr": "En simplifiant, nous arrivons à la fraction génératrice.",
@@ -16523,6 +16723,10 @@
     "fr": "Nous substituons l'hypoténuse et le cathète connu.",
     "en": "We substitute the hypotenuse and the known leg."
   },
+  "Substituímos na regra.": {
+    "fr": "Nous remplaçons dans la règle.",
+    "en": "We substitute into the rule."
+  },
   "Substituímos o ponto (#, #), que está sobre a curva.": {
     "fr": "Nous remplaçons le point (#, #), qui est sur la courbe.",
     "en": "We substitute the point (#, #), which lies on the curve."
@@ -16994,6 +17198,10 @@
   "Terceiro trecho: a quantidade volta a ser massa.": {
     "fr": "Troisième segment : la quantité de matière redevient une masse.",
     "en": "Third leg: the amount of substance becomes a mass again."
+  },
+  "Termo a termo, e a constante desaparece.": {
+    "fr": "Terme par terme, et la constante disparaît.",
+    "en": "Term by term, and the constant vanishes."
   },
   "Termo a termo, sobra uma expressão linear.": {
     "fr": "Terme à terme, il reste une expression linéaire.",
@@ -17567,6 +17775,10 @@
     "fr": "La vitesse moyenne est la distance divisée par le temps.",
     "en": "Average speed is distance divided by time."
   },
+  "Velocidade × tempo só vale com velocidade constante. Aqui ela varia: integre.": {
+    "fr": "Vitesse × temps ne vaut qu’à vitesse constante. Ici elle varie : intégrez.",
+    "en": "Speed × time only holds at constant speed. Here it varies: integrate."
+  },
   "Velocidade é deslocamento por tempo.": {
     "fr": "La vitesse est le déplacement par temps.",
     "en": "Velocity is displacement per time."
@@ -17603,6 +17815,10 @@
     "fr": "Vous avez compté combien il y a de termes, et non ce qu’ils totalisent. La somme renvoie le total des valeurs, pas leur nombre.",
     "en": "You counted how many terms there are, not what they add up to. The sum returns the total of the values, not how many there are."
   },
+  "Você derivou a força. O trabalho é a integral (a primitiva), não a derivada.": {
+    "fr": "Vous avez dérivé la force. Le travail est l’intégrale (la primitive), et non la dérivée.",
+    "en": "You differentiated the force. The work is the integral (the antiderivative), not the derivative."
+  },
   "Você deu o cosseno. O seno é a coordenada VERTICAL do ponto.": {
     "fr": "Vous avez donné le cosinus. Le sinus est la coordonnée VERTICALE du point.",
     "en": "You gave the cosine. The sine is the VERTICAL coordinate of the point."
@@ -17622,6 +17838,10 @@
   "Você encontrou o denominador comum correto (#), mas manteve os numeradores originais. Ao multiplicar o denominador por um fator, o numerador precisa ser multiplicado pelo mesmo fator — é isso que preserva o valor da fração.": {
     "fr": "Vous avez trouvé le bon dénominateur commun (#), mais gardé les numérateurs d’origine. En multipliant le dénominateur par un facteur, il faut multiplier le numérateur par le même facteur — c’est ce qui préserve la valeur de la fraction.",
     "en": "You found the right common denominator (#), but kept the original numerators. When the denominator is multiplied by a factor, the numerator has to be multiplied by the same factor — that is what preserves the value of the fraction."
+  },
+  "Você escreveu só o primeiro termo da regra. Falta somar f·g′, que trata da variação do segundo fator.": {
+    "fr": "Vous n’avez écrit que le premier terme de la règle. Il reste à ajouter f·g′, qui traite de la variation du second facteur.",
+    "en": "You wrote only the first term of the rule. Adding f·g′, which handles the variation of the second factor, is still missing."
   },
   "Você esqueceu que i² = −#: o produto das partes imaginárias entra SUBTRAINDO na parte real.": {
     "fr": "Vous avez oublié que i² = −# : le produit des parties imaginaires entre en SOUSTRACTION dans la partie réelle.",
@@ -17794,6 +18014,10 @@
   "Vá por concentração × volume em litros → mols → vezes a massa molar → gramas. O caminho é o mesmo da definição, de trás para a frente.": {
     "fr": "Passez par concentration × volume en litres → moles → fois la masse molaire → grammes. Le chemin est celui de la définition, pris à l’envers.",
     "en": "Go through concentration × volume in litres → moles → times the molar mass → grams. The route is the definition, read backwards."
+  },
+  "W = integral de F(x) de # a #. A primitiva de x² é x³/#.": {
+    "fr": "W = intégrale de F(x) de # à #. La primitive de x² est x³/#.",
+    "en": "W = integral of F(x) from # to #. The antiderivative of x² is x³/#."
   },
   "W = q·(V_B − V_A) = #×#⁻⁶ vezes (# − #). Em joules; multiplique por # para mJ.": {
     "fr": "W = q·(V_B − V_A) = #×#⁻⁶ fois (# − #). En joules ; multipliez par # pour des mJ.",
@@ -18215,6 +18439,10 @@
     "fr": "a·b = aₓbₓ + a_yb_y : multipliez x par x, y par y, et additionnez.",
     "en": "a·b = aₓbₓ + a_yb_y: multiply x by x, y by y, and add."
   },
+  "a·t só vale com aceleração constante. Aqui ela muda: integre.": {
+    "fr": "a·t ne vaut qu’à accélération constante. Ici elle change : intégrez.",
+    "en": "a·t only holds at constant acceleration. Here it changes: integrate."
+  },
   "aₙ = a₁ + (n − #)r — conte os saltos, não os termos.": {
     "fr": "aₙ = a₁ + (n − #)r — comptez les sauts, pas les termes.",
     "en": "aₙ = a₁ + (n − #)r — count the steps, not the terms."
@@ -18303,6 +18531,10 @@
     "fr": "PGCD(#, #) = #.",
     "en": "gcd(#, #) = #."
   },
+  "m·g·h supõe g = # em todo o caminho. Longe da superfície g é menor: integre GMm/r².": {
+    "fr": "m·g·h suppose g = # sur tout le trajet. Loin de la surface, g est plus petit : intégrez GMm/r².",
+    "en": "m·g·h assumes g = # along the whole path. Far from the surface g is smaller: integrate GMm/r²."
+  },
   "n = #° ÷ #°. Depois, d = n(n − #)/#.": {
     "fr": "n = #° ÷ #°. Ensuite, d = n(n − #)/#.",
     "en": "n = #° ÷ #°. Then d = n(n − #)/#."
@@ -18375,6 +18607,10 @@
     "fr": "v = √(T/μ) : divisez # par # et prenez la racine carrée.",
     "en": "v = √(T/μ): divide # by # and take the square root."
   },
+  "v(#) = # + integral de a(t) de # a #. A primitiva de t² é t³/#.": {
+    "fr": "v(#) = # + intégrale de a(t) de # à #. La primitive de t² est t³/#.",
+    "en": "v(#) = # + integral of a(t) from # to #. The antiderivative of t² is t³/#."
+  },
   "x = # zera o DENOMINADOR: ali a fração não existe, então essa fronteira fica de fora mesmo com «ou igual». Só a do numerador (x = #) entra.": {
     "fr": "x = # annule le DÉNOMINATEUR : la fraction n’y existe pas, cette borne reste donc dehors même avec « ou égal ». Seule celle du numérateur (x = #) entre.",
     "en": "x = # makes the DENOMINATOR zero: the fraction does not exist there, so that boundary stays out even with “or equal”. Only the numerator’s (x = #) is included."
@@ -18394,6 +18630,10 @@
   "x é a projeção no eixo horizontal (cosseno) e y no vertical (seno).": {
     "fr": "x est la projection sur l’axe horizontal (cosinus) et y sur le vertical (sinus).",
     "en": "x is the projection on the horizontal axis (cosine) and y on the vertical one (sine)."
+  },
+  "x_cm = (integral de x·λ) ÷ (integral de λ), ambas de # a #. Calcule a massa primeiro.": {
+    "fr": "x_cm = (intégrale de x·λ) ÷ (intégrale de λ), toutes deux de # à #. Calculez d’abord la masse.",
+    "en": "x_cm = (integral of x·λ) ÷ (integral of λ), both from # to #. Compute the mass first."
   },
   "x² + # não é diferença de quadrados: com +, ele não se anula para nenhum x real.": {
     "fr": "x² + # n’est pas une différence de carrés : avec +, il ne s’annule pour aucun x réel.",
@@ -18514,6 +18754,10 @@
   "É Z que identifica o elemento: mudá-lo muda o elemento, não o isótopo.": {
     "fr": "C’est Z qui identifie l’élément : le changer change l’élément, pas l’isotope.",
     "en": "It is Z that identifies the element: changing it changes the element, not the isotope."
+  },
+  "É a DIFERENÇA #/R − #/(R + h), não só o termo do ponto final.": {
+    "fr": "C’est la DIFFÉRENCE #/R − #/(R + h), et non le seul terme du point final.",
+    "en": "It is the DIFFERENCE #/R − #/(R + h), not just the term at the end point."
   },
   "É a altura do retângulo que teria a MESMA área: numa reta, coincide com o valor no ponto médio do intervalo.": {
     "fr": "C’est la hauteur du rectangle qui aurait la MÊME aire : sur une droite, elle coïncide avec la valeur au milieu de l’intervalle.",
@@ -18802,6 +19046,10 @@
   "É uma parábola, e o vértice está na fórmula de sempre.": {
     "fr": "C'est une parabole, et le sommet est dans la formule de toujours.",
     "en": "It is a parabola, and the vertex is in the usual formula."
+  },
+  "É x₂² − x₁², não (x₂ − x₁)²: a mola já estava esticada no começo.": {
+    "fr": "C’est x₂² − x₁², et non (x₂ − x₁)² : le ressort était déjà étiré au départ.",
+    "en": "It is x₂² − x₁², not (x₂ − x₁)²: the spring was already stretched at the start."
   },
   "Δ < #: a parábola não toca o eixo. Com a = #, ela fica inteira ABAIXO dele — o trinômio é sempre negativo.": {
     "fr": "Δ < # : la parabole ne touche pas l’axe. Avec a = #, elle reste entièrement EN DESSOUS — le trinôme est toujours négatif.",
