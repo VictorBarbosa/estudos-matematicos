@@ -947,6 +947,10 @@
     "fr": "L'équation est sous la forme standard.",
     "en": "The equation is in standard form."
   },
+  "A equação passa a ter uma incógnita só, que é o ponto do método.": {
+    "fr": "L’équation n’a plus qu’une seule inconnue, ce qui est tout l’intérêt de la méthode.",
+    "en": "The equation now has a single unknown, which is the whole point of the method."
+  },
   "A equação reduzida da reta.": {
     "fr": "L'équation réduite de la droite.",
     "en": "The reduced equation of the line."
@@ -1346,6 +1350,10 @@
   "A luz chega em pacotes de energia E = hf = hc/λ. Com λ em nm, hc vale # eV·nm.": {
     "fr": "La lumière arrive en paquets d’énergie E = hf = hc/λ. Avec λ en nm, hc vaut # eV·nm.",
     "en": "Light arrives in packets of energy E = hf = hc/λ. With λ in nm, hc is # eV·nm."
+  },
+  "A maior delas é a resposta pedida.": {
+    "fr": "La plus grande des deux est la réponse demandée.",
+    "en": "The larger of them is the answer asked for."
   },
   "A maior parte fica com o menor peso.": {
     "fr": "La plus grande part revient au plus petit poids.",
@@ -2587,6 +2595,10 @@
     "fr": "Maintenant les heures par jour seules, en partant des # jours : plus d’heures par jour, moins de jours.",
     "en": "Now the hours a day alone, starting from the # days: more hours a day, fewer days."
   },
+  "Agora x está escrito em função de y: é essa expressão que entra no lugar do x da outra equação.": {
+    "fr": "Maintenant x est écrit en fonction de y : c’est cette expression qui prend la place du x de l’autre équation.",
+    "en": "Now x is written as a function of y: that expression is what goes in place of the x in the other equation."
+  },
   "Agora é o logaritmo natural multiplicado por uma constante.": {
     "fr": "Maintenant c'est le logarithme naturel multiplié par une constante.",
     "en": "Now it is the natural logarithm multiplied by a constant."
@@ -2886,6 +2898,10 @@
   "As bases são paralelas: o ângulo da base maior e o da base menor do mesmo lado somam #°.": {
     "fr": "Les bases sont parallèles : l’angle de la grande base et celui de la petite du même côté font #°.",
     "en": "The bases are parallel: the angle at the longer base and the one at the shorter base on the same side add to #°."
+  },
+  "As bordas foram tratadas ao contrário. Os que NÃO satisfazem ficam entre as bordas, e uma borda só é excluída da contagem se ela satisfaz a inequação.": {
+    "fr": "Les bornes ont été traitées à l’envers. Ceux qui NE satisfont PAS se trouvent entre les bornes, et une borne n’est exclue du compte que si elle satisfait l’inéquation.",
+    "en": "The ends were handled the wrong way round. The ones that do NOT satisfy it lie between the ends, and an end is only left out of the count if it does satisfy the inequality."
   },
   "As constantes como #π são adimensionais e não entram na conta.": {
     "fr": "Les constantes comme #π sont adimensionnelles et n’entrent pas dans le calcul.",
@@ -3547,6 +3563,10 @@
     "fr": "Nous calculons le produit scalaire par les composantes.",
     "en": "We calculate the dot product by components."
   },
+  "Calculamos o que está dentro.": {
+    "fr": "Nous calculons ce qui est à l’intérieur.",
+    "en": "We compute what is inside."
+  },
   "Calculamos o valor.": {
     "fr": "Nous calculons la valeur.",
     "en": "We calculate the value."
@@ -3618,6 +3638,10 @@
   "Calcule os dois laterais em x = #: a reta pela esquerda e a parábola (com x ao quadrado) pela direita. O salto é direita menos esquerda.": {
     "fr": "Calculez les deux limites latérales en x = # : la droite à gauche et la parabole (avec x au carré) à droite. Le saut est la droite moins la gauche.",
     "en": "Work out both one-sided limits at x = #: the line from the left and the parabola (with x squared) from the right. The jump is right minus left."
+  },
+  "Calcule primeiro o de dentro com x = #; o módulo só tira o sinal de menos, se houver.": {
+    "fr": "Calculez d’abord l’intérieur avec x = # ; la valeur absolue ne fait qu’enlever le signe moins, s’il y en a un.",
+    "en": "Compute the inside first with x = #; the absolute value only removes the minus sign, if there is one."
   },
   "Calcule Δ primeiro. Se Δ < #, o trinômio tem sempre o sinal de a: a resposta é «todos» ou «vazio».": {
     "fr": "Calculez Δ d’abord. Si Δ < #, le trinôme a toujours le signe de a : la réponse est « tous » ou « vide ».",
@@ -3699,6 +3723,10 @@
     "fr": "Nous appelons x la largeur.",
     "en": "We call the width x."
   },
+  "Chamamos de x a primeira quantidade do enunciado e de y a segunda. Uma equação conta, a outra pondera.": {
+    "fr": "Nous appelons x la première quantité de l’énoncé et y la seconde. Une équation compte, l’autre pondère.",
+    "en": "We call x the first quantity in the question and y the second. One equation counts, the other weighs."
+  },
   "Chamamos de x os quilômetros rodados. O preço é a bandeirada mais # reais por km.": {
     "fr": "Nous appelons x les kilomètres parcourus. Le prix est la prise en charge plus # reais par km.",
     "en": "We call the kilometres driven x. The price is the base fare plus # reais per km."
@@ -3778,6 +3806,10 @@
   "Colchete inclui o extremo. Para deixar as pontas de fora, o desenho é o parêntese.": {
     "fr": "Le crochet inclut la borne. Pour laisser les extrémités dehors, le dessin est la parenthèse.",
     "en": "A bracket includes the endpoint. To leave the ends out, the shape is the parenthesis."
+  },
+  "Com <, as bordas NÃO entram: nelas o módulo vale exatamente c.": {
+    "fr": "Avec <, les bornes N’entrent PAS : en elles la valeur absolue vaut exactement c.",
+    "en": "With <, the ends are NOT in: at them the absolute value is exactly c."
   },
   "Com A = #: # − # + # = #. É o antiprisma de base com # lados.": {
     "fr": "Avec A = # : # − # + # = #. C’est l’antiprisme à base de # côtés.",
@@ -3906,6 +3938,10 @@
   "Com h tendendo a zero, sobra apenas o termo constante.": {
     "fr": "Quand h tend vers zéro, il ne reste que le terme constant.",
     "en": "As h tends to zero, only the constant term remains."
+  },
+  "Com k = #, a segunda equação teria lado direito # × # = # se fosse a mesma reta; é #, então são paralelas distintas.": {
+    "fr": "Avec k = #, la seconde équation aurait pour côté droit # × # = # s’il s’agissait de la même droite ; il vaut #, elles sont donc parallèles distinctes.",
+    "en": "With k = #, the second equation would have right-hand side # × # = # if it were the same line; it is #, so they are distinct parallels."
   },
   "Com k conhecido, cada parte fica determinada.": {
     "fr": "Avec k connu, chaque partie est déterminée.",
@@ -4062,6 +4098,10 @@
   "Com μ₀ = #π × #⁻⁷, o π se cancela, e a distância vai em metros.": {
     "fr": "Avec μ₀ = #π × #⁻⁷, le π se simplifie, et la distance est en mètres.",
     "en": "With μ₀ = #π × #⁻⁷, the π cancels, and the distance goes in metres."
+  },
+  "Com ≤, as bordas entram: elas satisfazem |u| = c. Conte-as também.": {
+    "fr": "Avec ≤, les bornes entrent : elles satisfont |u| = c. Comptez-les aussi.",
+    "en": "With ≤, the ends are in: they satisfy |u| = c. Count them as well."
   },
   "Combinando em quadratura e voltando à incerteza absoluta.": {
     "fr": "En combinant en quadrature et en revenant à l'incertitude absolue.",
@@ -4231,6 +4271,10 @@
     "fr": "Conductivité faible : c’est de cela que sont faits les isolants.",
     "en": "Low conductivity: that is what insulators are made of."
   },
+  "Conferimos que não é a mesma reta: o termo independente NÃO segue a proporção.": {
+    "fr": "Nous vérifions que ce n’est pas la même droite : le terme constant NE suit PAS la proportion.",
+    "en": "We check that it is not the same line: the constant term does NOT follow the proportion."
+  },
   "Conferimos que é exata: as derivadas cruzadas são iguais.": {
     "fr": "Nous vérifions qu’elle est exacte : les dérivées croisées sont égales.",
     "en": "We check that it is exact: the cross derivatives are equal."
@@ -4318,6 +4362,10 @@
   "Contamos os elementos que sobraram.": {
     "fr": "Nous comptons les éléments qui restent.",
     "en": "We count the elements that are left."
+  },
+  "Contamos os inteiros desse intervalo.": {
+    "fr": "Nous comptons les entiers de cet intervalle.",
+    "en": "We count the integers in that interval."
   },
   "Contamos.": {
     "fr": "Nous comptons.",
@@ -4410,6 +4458,10 @@
   "Da igualdade das áreas sai a altura.": {
     "fr": "De l’égalité des aires sort la hauteur.",
     "en": "The altitude comes out of the equality of areas."
+  },
+  "Da primeira, y em função de x.": {
+    "fr": "De la première, y en fonction de x.",
+    "en": "From the first, y as a function of x."
   },
   "Da órbita circular, v² = GM/r, e v = #πr/T.": {
     "fr": "De l'orbite circulaire, v² = GM/r, et v = #πr/T.",
@@ -5095,6 +5147,10 @@
     "fr": "Nous divisons le terme suivant par l’actuel et simplifions les puissances.",
     "en": "We divide the next term by the current one and simplify the powers."
   },
+  "Dividimos os dois lados por #, isolando x.": {
+    "fr": "Nous divisons les deux côtés par #, isolant x.",
+    "en": "We divide both sides by #, isolating x."
+  },
   "Dividimos os dois lados por #, o coeficiente de x.": {
     "fr": "Nous divisons les deux côtés par #, le coefficient de x.",
     "en": "We divide both sides by #, the coefficient of x."
@@ -5118,6 +5174,10 @@
   "Dividimos pelo coeficiente de x.": {
     "fr": "On divise par le coefficient de x.",
     "en": "We divide by the coefficient of x."
+  },
+  "Dividimos por # e achamos y.": {
+    "fr": "Nous divisons par # et trouvons y.",
+    "en": "We divide by # and find y."
   },
   "Dividimos por # para isolar a exponencial.": {
     "fr": "Nous divisons par # pour isoler l’exponentielle.",
@@ -5206,6 +5266,10 @@
   "Dividir # pela taxa daria o tempo nos juros SIMPLES. Nos compostos o capital rende sobre si mesmo, e dobra antes disso.": {
     "fr": "Diviser # par le taux donnerait le temps en intérêts SIMPLES. En composés, le capital rapporte sur lui-même, et double avant cela.",
     "en": "Dividing # by the rate would give the time for SIMPLE interest. With compound interest the capital earns on itself, and doubles sooner."
+  },
+  "Dividir o total por # supõe que só existe a primeira quantidade. São duas incógnitas: monte as duas equações.": {
+    "fr": "Diviser le total par # suppose qu’il n’existe que la première quantité. Il y a deux inconnues : montez les deux équations.",
+    "en": "Dividing the total by # assumes only the first quantity exists. There are two unknowns: set up both equations."
   },
   "Dividir parte por parte não funciona. É preciso multiplicar numerador e denominador pelo conjugado do denominador.": {
     "fr": "Diviser partie par partie ne marche pas. Il faut multiplier numérateur et dénominateur par le conjugué du dénominateur.",
@@ -5314,6 +5378,10 @@
   "Duas cópias do triângulo, uma girada, montam um paralelogramo.": {
     "fr": "Deux copies du triangle, une tournée, montent un parallélogramme.",
     "en": "Two copies of the triangle, one turned, form a parallelogram."
+  },
+  "Duas equações: uma soma as quantidades (x + y = #), a outra soma os valores (#x + #y = #).": {
+    "fr": "Deux équations : l’une additionne les quantités (x + y = #), l’autre additionne les valeurs (#x + #y = #).",
+    "en": "Two equations: one adds the quantities (x + y = #), the other adds the values (#x + #y = #)."
   },
   "Duas grandezas mudam ao mesmo tempo. Resolvemos uma de cada vez, mantendo a outra fixa.": {
     "fr": "Deux grandeurs changent en même temps. Nous en résolvons une à la fois, en gardant l’autre fixe.",
@@ -5490,6 +5558,14 @@
   "E usamos essa razão para o lado procurado.": {
     "fr": "Et nous utilisons ce rapport pour le côté recherché.",
     "en": "And we use this ratio for the sought side."
+  },
+  "E y = # − # = #. Conferindo: #·# + #·# = #.": {
+    "fr": "Et y = # − # = #. Vérification : #·# + #·# = #.",
+    "en": "And y = # − # = #. Checking: #·# + #·# = #."
+  },
+  "E y = # − # = #. Conferindo: #·# − #·# = #.": {
+    "fr": "Et y = # − # = #. Vérification : #·# − #·# = #.",
+    "en": "And y = # − # = #. Checking: #·# − #·# = #."
   },
   "E é o sinal dele que decide o comportamento do sistema.": {
     "fr": "Et c’est son signe qui décide du comportement du système.",
@@ -6711,6 +6787,10 @@
     "fr": "C’est la PROJECTION d’une cathète sur l’hypoténuse, et non la hauteur.",
     "en": "That is the PROJECTION of a leg onto the hypotenuse, not the altitude."
   },
+  "Essa é a SEGUNDA quantidade, a que o enunciado cita depois. A pergunta é pela primeira — as duas somam o total, e é fácil trocá-las no fim da conta.": {
+    "fr": "C’est la SECONDE quantité, celle que l’énoncé cite ensuite. La question porte sur la première — les deux font le total, et il est facile de les intervertir à la fin du calcul.",
+    "en": "That is the SECOND quantity, the one the question mentions later. The question asks for the first — the two add up to the total, and they are easy to swap at the end."
+  },
   "Essa é a SOMBRA do prédio. A altura só coincidiria com ela se a vara também tivesse altura igual à sua sombra.": {
     "fr": "C’est l’OMBRE de l’immeuble. La hauteur ne coïnciderait avec elle que si la perche avait aussi une hauteur égale à son ombre.",
     "en": "That is the building’s SHADOW. The height would only match it if the pole’s height also equalled its shadow."
@@ -6830,6 +6910,10 @@
   "Essa é a média das duas alturas, não a área. Falta multiplicar pela largura do intervalo, que vale #.": {
     "fr": "C’est la moyenne des deux hauteurs, et non l’aire. Il reste à multiplier par la largeur de l’intervalle, qui vaut #.",
     "en": "That is the average of the two heights, not the area. Multiplying by the width of the interval, which is #, is still missing."
+  },
+  "Essa é a outra solução, a menor. A equação modular tem DUAS respostas, e o enunciado pede a maior.": {
+    "fr": "C’est l’autre solution, la plus petite. L’équation avec valeur absolue a DEUX réponses, et l’énoncé demande la plus grande.",
+    "en": "That is the other solution, the smaller one. The absolute-value equation has TWO answers, and the question asks for the larger."
   },
   "Essa é a projeção do OUTRO cateto. Cada projeção usa o seu próprio.": {
     "fr": "C’est la projection de l’AUTRE cathète. Chaque projection utilise la sienne.",
@@ -7047,6 +7131,10 @@
     "fr": "C’est le foyer. La directrice est de l’autre côté du sommet : y = k − p.",
     "en": "That is the focus. The directrix is on the other side of the vertex: y = k − p."
   },
+  "Esse é o k. O pedido é m, o termo independente da segunda equação.": {
+    "fr": "C’est le k. Ce qui est demandé, c’est m, le terme constant de la seconde équation.",
+    "en": "That is the k. What is asked for is m, the constant term of the second equation."
+  },
   "Esse é o limite no infinito sozinho. Falta subtrair o arco-tangente em #, que é a borda de baixo da integral.": {
     "fr": "C’est la limite à l’infini toute seule. Il reste à soustraire l’arc tangente en #, qui est la borne inférieure de l’intégrale.",
     "en": "That is the limit at infinity on its own. Subtracting the arctangent at #, the lower edge of the integral, is still missing."
@@ -7206,6 +7294,10 @@
   "Esse é o valor de y. Falta substituir na primeira linha para achar x.": {
     "fr": "C’est la valeur de y. Il reste à la substituer dans la première ligne pour trouver x.",
     "en": "That is the value of y. It still has to be substituted into the first row to find x."
+  },
+  "Esse é o valor de y. Os dois fazem parte da solução, mas o enunciado pede x — depois de achar y, volte à expressão de x e substitua.": {
+    "fr": "C’est la valeur de y. Les deux font partie de la solution, mais l’énoncé demande x — après avoir trouvé y, revenez à l’expression de x et remplacez.",
+    "en": "That is the value of y. Both are part of the solution, but the question asks for x — after finding y, go back to the expression for x and substitute."
   },
   "Esse é o valor de y; o pedido é x. Confira qual coluna é de qual variável.": {
     "fr": "C’est la valeur de y ; c’est x qui est demandé. Vérifiez quelle colonne correspond à quelle variable.",
@@ -7671,6 +7763,10 @@
     "fr": "Il manque le facteur un demi, que la formule de l’énergie cinétique porte toujours.",
     "en": "The factor of one half, which the kinetic-energy formula always carries, is missing."
   },
+  "Faltou o sinal negativo ao isolar x. Ao passar b para o outro lado da igualdade, ele troca de sinal.": {
+    "fr": "Il manque le signe négatif en isolant x. En passant b de l’autre côté de l’égalité, il change de signe.",
+    "en": "The negative sign is missing when isolating x. Moving b to the other side of the equation flips its sign."
+  },
   "Faltou o terço: um sólido que afina até um vértice tem #/# do volume do prisma ou cilindro de mesma base e altura.": {
     "fr": "Il manque le tiers : un solide qui s’effile jusqu’à un sommet vaut #/# du volume du prisme ou du cylindre de même base et de même hauteur.",
     "en": "The third is missing: a solid tapering to a vertex has #/# of the volume of the prism or cylinder with the same base and height."
@@ -7867,6 +7963,14 @@
     "fr": "Hg neutre a # électrons, autant que de protons.",
     "en": "Neutral Hg has # electrons, as many as protons."
   },
+  "Houve troca de sinal ao isolar x. Confira: o termo constante passa para o outro lado com o sinal trocado.": {
+    "fr": "Il y a eu un changement de signe en isolant x. Vérifiez : le terme constant passe de l’autre côté avec le signe changé.",
+    "en": "A sign got flipped when isolating x. Check: the constant term moves to the other side with its sign flipped."
+  },
+  "Houve uma troca de sinal ao isolar x. O termo que estava somando de um lado passa subtraindo do outro, e só ele muda de sinal.": {
+    "fr": "Il y a eu un changement de signe en isolant x. Le terme qui s’additionnait d’un côté passe en soustraction de l’autre, et lui seul change de signe.",
+    "en": "A sign got flipped when isolating x. The term that was adding on one side passes as a subtraction to the other, and only it changes sign."
+  },
   "Há # casa decimal, então o denominador é # elevado a #.": {
     "fr": "Il y a # rang décimal, donc le dénominateur est # élevé à #.",
     "en": "There is # decimal place, so the denominator is # raised to #."
@@ -7946,6 +8050,14 @@
   "Inclinação da secante = (f(b) − f(a)) / (b − a). Depois resolva f′(c) igual a ela.": {
     "fr": "Pente de la sécante = (f(b) − f(a)) / (b − a). Résolvez ensuite f′(c) égale à elle.",
     "en": "Slope of the secant = (f(b) − f(a)) / (b − a). Then solve f′(c) equal to it."
+  },
+  "Infinitas soluções: a segunda equação é a primeira multiplicada por um número. Ache esse número pelo coeficiente de x.": {
+    "fr": "Une infinité de solutions : la seconde équation est la première multipliée par un nombre. Trouvez ce nombre par le coefficient de x.",
+    "en": "Infinitely many solutions: the second equation is the first multiplied by a number. Find that number from the coefficient of x."
+  },
+  "Infinitas soluções: as duas equações são a MESMA reta — uma é múltipla da outra.": {
+    "fr": "Une infinité de solutions : les deux équations sont la MÊME droite — l’une est un multiple de l’autre.",
+    "en": "Infinitely many solutions: the two equations are the SAME line — one is a multiple of the other."
   },
   "Inflexão é onde f″ troca de sinal. Derive duas vezes e resolva f″(x) = #.": {
     "fr": "L’inflexion est là où f″ change de signe. Dérivez deux fois et résolvez f″(x) = #.",
@@ -8107,6 +8219,14 @@
     "fr": "Nous isolons tg x, comme dans une équation du #ᵉ degré.",
     "en": "We isolate tg x, as in a degree # equation."
   },
+  "Isolamos x nos dois extremos (subtrair #, dividir por #).": {
+    "fr": "Nous isolons x aux deux bornes (soustraire #, diviser par #).",
+    "en": "We isolate x at both ends (subtract #, divide by #)."
+  },
+  "Isolamos x nos dois extremos (subtrair #, dividir por #, o que inverte as desigualdades).": {
+    "fr": "Nous isolons x aux deux bornes (soustraire #, diviser par #, ce qui inverse les inégalités).",
+    "en": "We isolate x at both ends (subtract #, divide by #, which flips the inequalities)."
+  },
   "Isolamos x, que é o que a inversa precisa devolver.": {
     "fr": "Nous isolons x, qui est ce que l’inverse doit rendre.",
     "en": "We isolate x, which is what the inverse must return."
@@ -8255,6 +8375,10 @@
     "fr": "Isolez d’abord la puissance (divisez par #), puis prenez le ln des deux côtés.",
     "en": "Isolate the power first (divide by #), then take ln on both sides."
   },
+  "Isole x numa das equações e troque essa expressão na outra.": {
+    "fr": "Isolez x dans l’une des équations et remplacez cette expression dans l’autre.",
+    "en": "Isolate x in one of the equations and substitute that expression into the other."
+  },
   "Isso equivale a # graus Celsius.": {
     "fr": "Cela équivaut à # degrés Celsius.",
     "en": "That amounts to # degrees Celsius."
@@ -8306,6 +8430,10 @@
   "Juntamos os termos em x.": {
     "fr": "Nous réunissons les termes en x.",
     "en": "We gather the x terms."
+  },
+  "Juntamos os termos em y.": {
+    "fr": "Nous regroupons les termes en y.",
+    "en": "We gather the y terms."
   },
   "Juntando as soluções das raízes válidas.": {
     "fr": "En réunissant les solutions des racines valables.",
@@ -8739,6 +8867,10 @@
     "fr": "Nous multiplions le tout par le dénominateur commun.",
     "en": "We multiply everything by the common denominator."
   },
+  "Multiplicamos tudo por # para tirar a fração.": {
+    "fr": "Nous multiplions le tout par # pour enlever la fraction.",
+    "en": "We multiply everything by # to clear the fraction."
+  },
   "Multiplicamos x por potências de dez escolhidas para alinhar as caudas periódicas.": {
     "fr": "Nous multiplions x par des puissances de dix choisies pour aligner les queues périodiques.",
     "en": "We multiply x by powers of ten chosen to align the repeating tails."
@@ -8906,6 +9038,14 @@
   "Multiplique tudo pelo mmc dos denominadores. O menos antes de uma fração vale para o numerador INTEIRO: use parênteses.": {
     "fr": "Multipliez tout par le ppcm des dénominateurs. Le moins devant une fraction porte sur le numérateur ENTIER : utilisez des parenthèses.",
     "en": "Multiply everything by the lcm of the denominators. The minus before a fraction applies to the WHOLE numerator: use brackets."
+  },
+  "Módulo maior que #: o que está dentro fica LONGE de zero, abaixo de −# ou acima de #.": {
+    "fr": "Valeur absolue supérieure à # : ce qui est à l’intérieur reste LOIN de zéro, en dessous de −# ou au-dessus de #.",
+    "en": "Absolute value greater than #: what is inside stays FAR from zero, below −# or above #."
+  },
+  "Módulo menor que #: o que está dentro fica PERTO de zero, entre −# e #.": {
+    "fr": "Valeur absolue inférieure à # : ce qui est à l’intérieur reste PRÈS de zéro, entre −# et #.",
+    "en": "Absolute value less than #: what is inside stays CLOSE to zero, between −# and #."
   },
   "N neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "N neutre a # électrons, autant que de protons.",
@@ -9130,6 +9270,10 @@
   "Na parte imaginária os dois termos SOMAM: a·d + b·c. A subtração acontece na parte real, por causa de i².": {
     "fr": "Dans la partie imaginaire, les deux termes s’ADDITIONNENT : a·d + b·c. La soustraction se produit dans la partie réelle, à cause de i².",
     "en": "In the imaginary part the two terms ADD: a·d + b·c. The subtraction happens in the real part, because of i²."
+  },
+  "Na primeira equação, passamos o termo em y para o outro lado.": {
+    "fr": "Dans la première équation, nous faisons passer le terme en y de l’autre côté.",
+    "en": "In the first equation, we move the y term to the other side."
   },
   "Na primeira volta, a solução.": {
     "fr": "Au premier tour, la solution.",
@@ -9923,6 +10067,38 @@
     "fr": "Le grandissement compare les distances ; le signe moins dit si l’image est renversée.",
     "en": "The magnification compares the distances; the minus sign says whether the image is inverted."
   },
+  "O bico fica onde a expressão DENTRO do módulo se anula.": {
+    "fr": "Le sommet anguleux se trouve là où l’expression À L’INTÉRIEUR de la valeur absolue s’annule.",
+    "en": "The corner sits where the expression INSIDE the absolute value vanishes."
+  },
+  "O bico só fica em x = # quando a expressão interna é apenas |ax|. Com um termo somado dentro do módulo, o V se desloca horizontalmente.": {
+    "fr": "Le sommet n’est en x = # que si l’expression intérieure se réduit à |ax|. Avec un terme ajouté à l’intérieur, le V se déplace horizontalement.",
+    "en": "The corner is only at x = # when the inner expression is just |ax|. With a term added inside, the V shifts sideways."
+  },
+  "O bico é onde o de dentro zera: resolva #x + # = #.": {
+    "fr": "Le sommet anguleux est là où l’intérieur s’annule : résolvez #x + # = #.",
+    "en": "The corner is where the inside vanishes: solve #x + # = #."
+  },
+  "O bico é onde o de dentro zera: resolva #x - # = #.": {
+    "fr": "Le sommet anguleux est là où l’intérieur s’annule : résolvez #x - # = #.",
+    "en": "The corner is where the inside vanishes: solve #x - # = #."
+  },
+  "O bico é onde o de dentro zera: resolva -x + # = #.": {
+    "fr": "Le sommet anguleux est là où l’intérieur s’annule : résolvez -x + # = #.",
+    "en": "The corner is where the inside vanishes: solve -x + # = #."
+  },
+  "O bico é onde o de dentro zera: resolva -x - # = #.": {
+    "fr": "Le sommet anguleux est là où l’intérieur s’annule : résolvez -x - # = #.",
+    "en": "The corner is where the inside vanishes: solve -x - # = #."
+  },
+  "O bico é onde o de dentro zera: resolva x + # = #.": {
+    "fr": "Le sommet anguleux est là où l’intérieur s’annule : résolvez x + # = #.",
+    "en": "The corner is where the inside vanishes: solve x + # = #."
+  },
+  "O bico é onde o de dentro zera: resolva x - # = #.": {
+    "fr": "Le sommet anguleux est là où l’intérieur s’annule : résolvez x - # = #.",
+    "en": "The corner is where the inside vanishes: solve x - # = #."
+  },
   "O bloco começa a deslizar quando a componente do peso iguala o atrito máximo.": {
     "fr": "Le bloc commence à glisser quand la composante du poids égale le frottement maximum.",
     "en": "The block starts to slide when the weight component equals the maximum friction."
@@ -10039,6 +10215,10 @@
     "fr": "Le coefficient de x élevé à # est celui qui accompagne ce terme.",
     "en": "The coefficient of x to the # is the one going with that term."
   },
+  "O coeficiente de x foi multiplicado por # (de # para #).": {
+    "fr": "Le coefficient de x a été multiplié par # (de # à #).",
+    "en": "The coefficient of x was multiplied by # (from # to #)."
+  },
   "O coeficiente de x é o que o enunciado pede.": {
     "fr": "Le coefficient de x est ce que l’énoncé demande.",
     "en": "The coefficient of x is what the question asks for."
@@ -10086,6 +10266,10 @@
   "O conjugado existe justamente para isso — eliminar o i de baixo.": {
     "fr": "Le conjugué existe précisément pour cela — éliminer le i du dénominateur.",
     "en": "The conjugate exists precisely for that — to get rid of the i downstairs."
+  },
+  "O conjunto solução é o intervalo entre os extremos.": {
+    "fr": "L’ensemble solution est l’intervalle entre les bornes.",
+    "en": "The solution set is the interval between the ends."
   },
   "O conjunto solução é um intervalo da reta.": {
     "fr": "L’ensemble solution est un intervalle de la droite.",
@@ -10651,6 +10835,10 @@
     "fr": "Le même facteur apparaît en haut et en bas, et peut être annulé.",
     "en": "The same factor appears above and below, and can be cancelled."
   },
+  "O mesmo fator vale para y e para o termo independente.": {
+    "fr": "Le même facteur vaut pour y et pour le terme constant.",
+    "en": "The same factor applies to y and to the constant term."
+  },
   "O mesmo número vale como massa de uma molécula em unidades atômicas.": {
     "fr": "Le même nombre vaut comme masse d’une molécule en unités atomiques.",
     "en": "The same number works as the mass of one molecule in atomic units."
@@ -10734,6 +10922,10 @@
   "O módulo foi ignorado: as barras tiram o sinal. |−#| é #, e não −# — é a distância até zero, que não tem como ser negativa.": {
     "fr": "La valeur absolue a été ignorée : les barres enlèvent le signe. |−#| vaut #, et non −# — c’est la distance à zéro, qui ne peut pas être négative.",
     "en": "The absolute value was ignored: the bars remove the sign. |−#| is #, not −# — it is the distance to zero, which cannot be negative."
+  },
+  "O módulo nunca devolve um número negativo — ele é uma DISTÂNCIA até zero. Aqui o valor interno é #, cuja distância até a origem é #.": {
+    "fr": "La valeur absolue ne rend jamais un nombre négatif — c’est une DISTANCE à zéro. Ici la valeur intérieure vaut #, dont la distance à l’origine est #.",
+    "en": "The absolute value never returns a negative number — it is a DISTANCE to zero. Here the inner value is #, whose distance to the origin is #."
   },
   "O módulo nunca é negativo: é uma distância.": {
     "fr": "Le module n’est jamais négatif : c’est une distance.",
@@ -11027,6 +11219,22 @@
     "fr": "Ce qui décide est le numérateur au même point.",
     "en": "What decides is the numerator at the same point."
   },
+  "O que está somando de um lado passa subtraindo do outro: o + #y sai da esquerda e entra na direita com o sinal trocado.": {
+    "fr": "Ce qui s’additionne d’un côté passe en soustraction de l’autre : le + #y quitte la gauche et entre à droite avec le signe changé.",
+    "en": "What is adding on one side passes as a subtraction to the other: the + #y leaves the left and enters the right with its sign flipped."
+  },
+  "O que está somando de um lado passa subtraindo do outro: o + y sai da esquerda e entra na direita com o sinal trocado.": {
+    "fr": "Ce qui s’additionne d’un côté passe en soustraction de l’autre : le + y quitte la gauche et entre à droite avec le signe changé.",
+    "en": "What is adding on one side passes as a subtraction to the other: the + y leaves the left and enters the right with its sign flipped."
+  },
+  "O que está somando de um lado passa subtraindo do outro: o - #y sai da esquerda e entra na direita com o sinal trocado.": {
+    "fr": "Ce qui s’additionne d’un côté passe en soustraction de l’autre : le - #y quitte la gauche et entre à droite avec le signe changé.",
+    "en": "What is adding on one side passes as a subtraction to the other: the - #y leaves the left and enters the right with its sign flipped."
+  },
+  "O que está somando de um lado passa subtraindo do outro: o - y sai da esquerda e entra na direita com o sinal trocado.": {
+    "fr": "Ce qui s’additionne d’un côté passe en soustraction de l’autre : le - y quitte la gauche et entre à droite avec le signe changé.",
+    "en": "What is adding on one side passes as a subtraction to the other: the - y leaves the left and enters the right with its sign flipped."
+  },
   "O que o texto pede, símbolo a símbolo.": {
     "fr": "Ce que le texte demande, symbole par symbole.",
     "en": "What the text asks for, symbol by symbol."
@@ -11098,6 +11306,14 @@
   "O resultado foi dividido por mil, como se fosse quilojoule. O enunciado pede joules.": {
     "fr": "Le résultat a été divisé par mille, comme s’il s’agissait de kilojoules. L’énoncé demande des joules.",
     "en": "The result was divided by a thousand, as if it were kilojoules. The question asks for joules."
+  },
+  "O resultado interno já é positivo, e o módulo não muda nada.": {
+    "fr": "Le résultat intérieur est déjà positif, et la valeur absolue ne change rien.",
+    "en": "The inner result is already positive, and the absolute value changes nothing."
+  },
+  "O resultado interno é negativo, e o módulo o torna positivo.": {
+    "fr": "Le résultat intérieur est négatif, et la valeur absolue le rend positif.",
+    "en": "The inner result is negative, and the absolute value turns it positive."
   },
   "O resultado não depende da massa nem do raio: só do formato.": {
     "fr": "Le résultat ne dépend ni de la masse ni du rayon : seulement de la forme.",
@@ -11414,6 +11630,10 @@
   "O termo independente sobre # não é o k do vértice: falta tirar o h² = # que entrou ao completar o quadrado.": {
     "fr": "Le terme constant divisé par # n’est pas le k du sommet : il faut retirer le h² = # entré en complétant le carré.",
     "en": "The constant term over # is not the vertex’s k: the h² = # that came in when completing the square still has to be taken out."
+  },
+  "O termo independente também é multiplicado por #: a segunda equação inteira é # vezes a primeira.": {
+    "fr": "Le terme constant est lui aussi multiplié par # : toute la seconde équation vaut # fois la première.",
+    "en": "The constant term is multiplied by # as well: the whole second equation is # times the first."
   },
   "O termo se comporta como #/n, a harmônica; por comparação, a série diverge.": {
     "fr": "Le terme se comporte comme #/n, a harmônica ; par comparaison, la série diverge.",
@@ -12106,6 +12326,14 @@
   "Os quatro ângulos de um quadrilátero somam #°: tire #°, #° e #° de #°.": {
     "fr": "Les quatre angles d’un quadrilatère font #° : retirez #°, #° et #° de #°.",
     "en": "The four angles of a quadrilateral add to #°: take #°, #° and #° from #°."
+  },
+  "Os que NÃO satisfazem formam o intervalo do meio.": {
+    "fr": "Ceux qui NE satisfont PAS forment l’intervalle du milieu.",
+    "en": "The ones that do NOT satisfy it form the middle interval."
+  },
+  "Os que NÃO satisfazem são os do meio: a distância até zero é menor que c.": {
+    "fr": "Ceux qui NE satisfont PAS sont ceux du milieu : leur distance à zéro est inférieure à c.",
+    "en": "The ones that do NOT satisfy it are the middle ones: their distance to zero is less than c."
   },
   "Os raios de sol chegam paralelos, então os dois triângulos são semelhantes.": {
     "fr": "Les rayons du soleil arrivent parallèles, donc les deux triangles sont semblables.",
@@ -13155,6 +13383,10 @@
     "fr": "Nous résolvons l’addition.",
     "en": "We work out the addition."
   },
+  "Resolvemos a equação do #º grau.": {
+    "fr": "Nous résolvons l’équation du #º degré.",
+    "en": "We solve the degree-# equation."
+  },
   "Resolvemos a igualdade para achar o valor proibido.": {
     "fr": "Nous résolvons l’égalité pour trouver la valeur interdite.",
     "en": "We solve the equality to find the forbidden value."
@@ -13186,6 +13418,10 @@
   "Resolvemos as potências.": {
     "fr": "Nous résolvons les puissances.",
     "en": "We work out the powers."
+  },
+  "Resolvemos cada caso separadamente.": {
+    "fr": "Nous résolvons chaque cas séparément.",
+    "en": "We solve each case separately."
   },
   "Resolvemos cos x = # na volta.": {
     "fr": "Nous résolvons cos x = # sur le tour.",
@@ -13239,6 +13475,10 @@
     "fr": "Résidu = y observé − y prévu par la droite à ce x.",
     "en": "Residual = observed y − y predicted by the line at that x."
   },
+  "Retas paralelas têm coeficientes PROPORCIONAIS, não iguais: x foi multiplicado por #, então y também.": {
+    "fr": "Des droites parallèles ont des coefficients PROPORTIONNELS, et non égaux : x a été multiplié par #, donc y aussi.",
+    "en": "Parallel lines have PROPORTIONAL coefficients, not equal ones: x was multiplied by #, so y was too."
+  },
   "Reunimos TODAS as raízes — a que passou no teste e as que vieram da fórmula. A pergunta pede a menor entre elas.": {
     "fr": "Nous réunissons TOUTES les racines — celle du test et celles de la formule. La question demande la plus petite d’entre elles.",
     "en": "We gather ALL the roots — the one from the test and those from the formula. The question asks for the smallest of them."
@@ -13283,6 +13523,10 @@
     "fr": "Une erreur sur le sens de l’une d’elles apparaît comme un facteur inversé — elle ne disparaît jamais.",
     "en": "Getting the direction of one of them wrong shows up as an inverted factor — it never vanishes."
   },
+  "Se o módulo vale k, o que está dentro pode ser +k ou −k.": {
+    "fr": "Si la valeur absolue vaut k, ce qui est à l’intérieur peut valoir +k ou −k.",
+    "en": "If the absolute value is k, what is inside can be +k or −k."
+  },
   "Se os dois zerassem juntos, haveria um buraco em vez de assíntota.": {
     "fr": "Si les deux s’annulaient ensemble, il y aurait un trou au lieu d’une asymptote.",
     "en": "If both vanished together, there would be a hole instead of an asymptote."
@@ -13314,6 +13558,14 @@
   "Sem repetições, há n! ordens possíveis.": {
     "fr": "Sans répétitions, il y a n! ordres possibles.",
     "en": "Without repetitions, there are n! possible orders."
+  },
+  "Sem solução = retas paralelas = determinante zero: a₁·k − a₂·b₁ = #.": {
+    "fr": "Sans solution = droites parallèles = déterminant nul : a₁·k − a₂·b₁ = #.",
+    "en": "No solution = parallel lines = zero determinant: a₁·k − a₂·b₁ = #."
+  },
+  "Sem solução: retas paralelas, o que exige determinante zero.": {
+    "fr": "Sans solution : des droites parallèles, ce qui exige un déterminant nul.",
+    "en": "No solution: parallel lines, which requires a zero determinant."
   },
   "Sem torque externo, o momento angular total não muda.": {
     "fr": "Sans couple externe, le moment angulaire total ne change pas.",
@@ -13410,6 +13662,10 @@
   "Sinal trocado ao isolar x em f″ = #.": {
     "fr": "Signe inversé au moment d’isoler x dans f″ = #.",
     "en": "Sign flipped when isolating x in f″ = #."
+  },
+  "Sinal trocado: D = a₁b₂ − a₂b₁ = # dá a₁k = a₂b₁.": {
+    "fr": "Signe inversé : D = a₁b₂ − a₂b₁ = # donne a₁k = a₂b₁.",
+    "en": "Sign flipped: D = a₁b₂ − a₂b₁ = # gives a₁k = a₂b₁."
   },
   "Sinal trocado: anti-horário com n = k para cima dá ∂Q/∂x − ∂P/∂y.": {
     "fr": "Signe inversé : le sens antihoraire avec n = k vers le haut donne ∂Q/∂x − ∂P/∂y.",
@@ -13787,6 +14043,10 @@
     "fr": "En remplaçant dans la moyenne pondérée.",
     "en": "Substituting into the weighted average."
   },
+  "Substituindo na segunda.": {
+    "fr": "En remplaçant dans la seconde.",
+    "en": "Substituting into the second."
+  },
   "Substituindo o gradiente no ponto.": {
     "fr": "En substituant le gradient au point.",
     "en": "Substituting the gradient at the point."
@@ -13951,6 +14211,10 @@
     "fr": "On remplace cette abscisse dans la fonction pour obtenir l’ordonnée du sommet.",
     "en": "We substitute that x back into the function to get the vertex’s y-coordinate."
   },
+  "Substituímos esse x na segunda equação.": {
+    "fr": "Nous remplaçons ce x dans la seconde équation.",
+    "en": "We substitute that x into the second equation."
+  },
   "Substituímos hipotenusa e cateto conhecido.": {
     "fr": "Nous substituons l'hypoténuse et le cathète connu.",
     "en": "We substitute the hypotenuse and the known leg."
@@ -14063,6 +14327,10 @@
     "fr": "Nous substituons x dans l'une des équations originales pour trouver y.",
     "en": "We substitute x into one of the original equations to find y."
   },
+  "Substituímos x por # dentro do módulo.": {
+    "fr": "Nous remplaçons x par # à l’intérieur de la valeur absolue.",
+    "en": "We replace x by # inside the absolute value."
+  },
   "Substituímos x por # em cada termo.": {
     "fr": "Nous remplaçons x par # dans chaque terme.",
     "en": "We replace x by # in each term."
@@ -14154,6 +14422,10 @@
   "São n pares, e a soma dobrada precisa ser dividida por dois.": {
     "fr": "Ce sont n paires, et la somme doublée doit être divisée par deux.",
     "en": "There are n pairs, and the doubled sum must be divided by two."
+  },
+  "São os dois pontos que ficam à mesma distância da origem.": {
+    "fr": "Ce sont les deux points situés à la même distance de l’origine.",
+    "en": "They are the two points at the same distance from the origin."
   },
   "Só a componente da força alinhada ao deslocamento realiza trabalho.": {
     "fr": "Seule la composante de la force alignée avec le déplacement réalise du travail.",
@@ -14498,6 +14770,10 @@
   "Trocamos a borda infinita por um limite.": {
     "fr": "Nous remplaçons la bordure infinie par une limite.",
     "en": "We replace the infinite edge with a limit."
+  },
+  "Trocamos o sinal dos dois lados, isolando x.": {
+    "fr": "Nous changeons le signe des deux côtés, isolant x.",
+    "en": "We flip the sign of both sides, isolating x."
   },
   "Trocamos os nomes das variáveis, por convenção.": {
     "fr": "Nous échangeons les noms des variables, par convention.",
@@ -15018,6 +15294,10 @@
   "Voltamos do #º termo ao primeiro: # saltos para trás.": {
     "fr": "Nous revenons du #ᵉ terme au premier : # sauts en arrière.",
     "en": "We go back from the #st term to the first: # steps backwards."
+  },
+  "Voltamos à expressão de x e trocamos y pelo valor encontrado.": {
+    "fr": "Nous revenons à l’expression de x et remplaçons y par la valeur trouvée.",
+    "en": "We go back to the expression for x and replace y by the value found."
   },
   "Voltando para x, com θ = arcsen(x/a).": {
     "fr": "Retour à x, avec θ = arcsin(x/a).",
@@ -15639,6 +15919,22 @@
     "fr": "|#| enlève le signe ; #! vaut # × # × #.",
     "en": "|#| removes the sign; #! is # × # × #."
   },
+  "|algo| = # quer dizer algo = # ou algo = #. Resolva os dois casos e fique com o maior x.": {
+    "fr": "|quelque chose| = # veut dire quelque chose = # ou quelque chose = #. Résolvez les deux cas et gardez le plus grand x.",
+    "en": "|something| = # means something = # or something = #. Solve both cases and keep the larger x."
+  },
+  "|u| < c é o mesmo que −c < u < c: resolva a dupla desigualdade e conte os inteiros.": {
+    "fr": "|u| < c revient à −c < u < c : résolvez la double inégalité et comptez les entiers.",
+    "en": "|u| < c is the same as −c < u < c: solve the double inequality and count the integers."
+  },
+  "|u| > c vale para u < −c ou u > c. Os que NÃO satisfazem estão no meio, entre −c e c: ache esse intervalo e conte os inteiros.": {
+    "fr": "|u| > c vaut pour u < −c ou u > c. Ceux qui NE satisfont PAS sont au milieu, entre −c et c : trouvez cet intervalle et comptez les entiers.",
+    "en": "|u| > c holds for u < −c or u > c. The ones that do NOT satisfy it are in the middle, between −c and c: find that interval and count the integers."
+  },
+  "|u| > c é «u LONGE de zero»: a solução são duas semirretas, e quem fica de fora é o intervalo do meio.": {
+    "fr": "|u| > c signifie « u LOIN de zéro » : la solution est formée de deux demi-droites, et ce qui reste dehors est l’intervalle du milieu.",
+    "en": "|u| > c means “u FAR from zero”: the solution is two rays, and what is left out is the middle interval."
+  },
   "|z| é a distância à origem: some os QUADRADOS das partes, (#)² + (#)², e tire a raiz.": {
     "fr": "|z| est la distance à l’origine : additionnez les CARRÉS des parties, (#)² + (#)², et prenez la racine.",
     "en": "|z| is the distance to the origin: add the SQUARES of the parts, (#)² + (#)², and take the root."
@@ -15727,6 +16023,10 @@
     "fr": "C’est la largeur qui exploite le mieux la clôture disponible.",
     "en": "It is the width that makes the best use of the available fence."
   },
+  "É a mesma expressão de antes, agora com número no lugar da letra.": {
+    "fr": "C’est la même expression qu’avant, avec un nombre à la place de la lettre.",
+    "en": "It is the same expression as before, now with a number in place of the letter."
+  },
   "É a média das bases multiplicada pela altura.": {
     "fr": "C’est la moyenne des bases multipliée par la hauteur.",
     "en": "It is the average of the bases times the height."
@@ -15734,6 +16034,10 @@
   "É a quantidade que minimiza o custo de produção.": {
     "fr": "C’est la quantité qui minimise le coût de production.",
     "en": "It is the quantity that minimises production cost."
+  },
+  "É ali que a reta deixa de descer e passa a subir.": {
+    "fr": "C’est là que la droite cesse de descendre et se met à monter.",
+    "en": "That is where the line stops going down and starts going up."
   },
   "É como se projeta uma suspensão: volta o mais rápido possível sem oscilar.": {
     "fr": "C’est ainsi qu’on conçoit une suspension : elle revient le plus vite possible sans osciller.",
