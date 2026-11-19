@@ -239,14 +239,6 @@
     "fr": "A = D·d/#, avec D et d les diagonales.",
     "en": "A = D·d/#, with D and d the diagonals."
   },
-  "A = b·h": {
-    "fr": "A = b·h",
-    "en": "A = b·h"
-  },
-  "A = b·h / #": {
-    "fr": "A = b·h / #",
-    "en": "A = b·h / #"
-  },
   "A = b·h / #, então h = #·A / b = # · # / #.": {
     "fr": "A = b·h / #, donc h = #·A / b = # · # / #.",
     "en": "A = b·h / #, so h = #·A / b = # · # / #."
