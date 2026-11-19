@@ -1138,9 +1138,11 @@
     "vejaTambem": "Veja também"
   },
   "tipoFracao": {
+    "comInteiro": "operação com inteiro",
     "decimal": "decimal em fração",
     "divisao": "divisão",
     "divisaoMista": "divisão com mistos",
+    "mistaComFracao": "misto com fração",
     "multiplicacao": "multiplicação",
     "multiplicacaoMista": "multiplicação com mistos",
     "soma": "soma",

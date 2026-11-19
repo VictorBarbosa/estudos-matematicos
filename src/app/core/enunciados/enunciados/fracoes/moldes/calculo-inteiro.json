@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Um dos números é inteiro. Calcule e escreva o resultado na forma mais simples.",
+    "fr": "L’un des nombres est un entier. Calculez et écrivez le résultat sous sa forme la plus simple.",
+    "en": "One of the numbers is a whole number. Compute and write the result in its simplest form."
+  },
+  "dica": {
+    "br": "Um inteiro é uma fração de denominador 1: 5 é 5/1. O denominador dele não se multiplica nem se soma com o da outra fração.",
+    "fr": "Un entier est une fraction de dénominateur 1 : 5 vaut 5/1. Son dénominateur ne se multiplie ni ne s’ajoute à celui de l’autre fraction.",
+    "en": "A whole number is a fraction with denominator 1: 5 is 5/1. Its denominator is neither multiplied nor added to the other fraction's."
+  }
+}

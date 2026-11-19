@@ -16,6 +16,25 @@ Partes de um inteiro, equivalência, simplificação e as quatro operações.
 A matemática em si vai em `src/app/core/math/`, nunca nesta pasta, para que
 outros tópicos possam reaproveitá-la.
 
+## As formas de escrita dos operandos
+
+Um operando aparece de três maneiras, e cada combinação é um tipo de exercício
+com conceito próprio:
+
+| Combinação | Exemplo | Conceito |
+|---|---|---|
+| fração com fração | `3/4 + 2/5` | `fracoes.soma` … |
+| fração com inteiro | `3/4 × 5` | `fracoes.inteiro` |
+| misto com fração | `2½ + ¾` | `fracoes.mista-fracao` |
+| misto com misto | `2½ × 1⅓` | `fracoes.mista-soma` … |
+
+O texto de cada uma vive em `core/enunciados/enunciados/fracoes/moldes/`, nas
+três línguas — o gerador escolhe o molde pela combinação, não por um `if` com
+a frase escrita dentro.
+
+O inteiro nunca é 1: multiplicar ou dividir por 1 devolve o próprio enunciado,
+e a lição — que todo inteiro é uma fração de denominador 1 — ficaria invisível.
+
 ## Ao concluir
 
 1. Registre a rota em `src/app/features/matematica-basica/matematica-basica.routes.ts`.

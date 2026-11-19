@@ -5,30 +5,152 @@ import { PI, fracao, mdc, type Regra } from '@core/enunciados/models/regras-de-p
  * decimais como fração.
  */
 
-/** A fração geratriz de um decimal escrito com vírgula, com ou sem repetição. */
-function geratrizDoDecimal(texto: string): string {
+/**
+ * A dízima desmontada nos números que a conta usa.
+ *
+ * O método é o dos deslocamentos, que é como a geratriz se demonstra: de
+ * 1,2555… tiram-se 1255,5… e 125,5…, cuja diferença é um inteiro — 1130 —
+ * porque as duas têm a mesma cauda infinita. Daí x = 1130/900.
+ *
+ * `naoRepete` guarda um algarismo repetido a mais do que o olho vê («25» em
+ * 1,2555…), e isso é de propósito: é o que faz o deslocamento maior cair
+ * exatamente no fim de um período, e o denominador sair 9 seguido de zeros.
+ */
+interface PartesDaDizima {
+  /** 1255: o número todo, sem vírgula, até o fim do primeiro período. */
+  readonly completo: number;
+  /** 125: o mesmo número sem o período. */
+  readonly semPeriodo: number;
+  /** 10: o fator do deslocamento menor. */
+  readonly deslocamentoMenor: number;
+  /** 900: a diferença entre os dois deslocamentos. */
+  readonly denominador: number;
+  readonly numerador: number;
+}
+
+/** Desmonta a dízima, ou devolve `null` quando o decimal não se repete. */
+function partesDaDizima(texto: string): PartesDaDizima | null {
   // A dízima é escrita com reticências, e o número de pontos varia.
   const limpo = texto.replace(/\.+$/, '').replace(/\s/g, '');
   const [inteira, decimal = ''] = limpo.split(',');
 
-  const mdc = (a: number, b: number): number => (b === 0 ? Math.abs(a) : mdc(b, a % b));
-
   // Dízima composta: parte que não repete seguida de um bloco repetido.
   const prefixo = /(\d*)(\d)\2+/.exec(decimal);
-  if (prefixo !== null && decimal.length > 0) {
-    const naoRepete = prefixo[1] ?? '';
-    const bloco = (decimal.slice(naoRepete.length) || '0').replace(/(.)\1*/g, '$1');
-    const numerador =
-      Number(`${inteira}${naoRepete}${bloco}`) - Number(`${inteira}${naoRepete || '0'}`);
-    const denominador = 9 * 10 ** naoRepete.length;
-    const d = mdc(numerador, denominador) || 1;
-    return fracao(numerador / d, denominador / d);
+  if (prefixo === null || decimal.length === 0) {
+    return null;
+  }
+
+  const naoRepete = prefixo[1] ?? '';
+  const bloco = (decimal.slice(naoRepete.length) || '0').replace(/(.)\1*/g, '$1');
+
+  const completo = Number(`${inteira}${naoRepete}${bloco}`);
+  const semPeriodo = Number(`${inteira}${naoRepete || '0'}`);
+
+  return {
+    completo,
+    semPeriodo,
+    deslocamentoMenor: 10 ** naoRepete.length,
+    denominador: 9 * 10 ** naoRepete.length,
+    numerador: completo - semPeriodo,
+  };
+}
+
+/** A fração geratriz de um decimal escrito com vírgula, com ou sem repetição. */
+function geratrizDoDecimal(texto: string): string {
+  const limpo = texto.replace(/\.+$/, '').replace(/\s/g, '');
+  const [inteira, decimal = ''] = limpo.split(',');
+
+  const partes = partesDaDizima(texto);
+  if (partes !== null) {
+    const d = mdc(partes.numerador, partes.denominador);
+    return fracao(partes.numerador / d, partes.denominador / d);
   }
 
   const casas = decimal.length;
-  const d = mdc(Number(`${inteira}${decimal}`), 10 ** casas) || 1;
-  return fracao(Number(`${inteira}${decimal}`) / d, 10 ** casas / d);
+  const inteiroTodo = Number(`${inteira}${decimal}`);
+  const d = mdc(inteiroTodo, 10 ** casas);
+  return fracao(inteiroTodo / d, 10 ** casas / d);
 }
+
+/**
+ * A conta da geratriz escrita com os números deste caso.
+ *
+ * Era uma frase dentro da fórmula — «geratriz: parte que repete sobre 9,
+ * deslocada» —, que não é fórmula, não se traduz e não mostra de onde sai o
+ * resultado. Aqui aparecem os dois deslocamentos, a diferença e a fração.
+ */
+function contaDaGeratriz(texto: string): string {
+  const partes = partesDaDizima(texto);
+  if (partes === null) {
+    return contaDoDecimalFinito(texto);
+  }
+
+  const { completo, semPeriodo, deslocamentoMenor, denominador, numerador } = partes;
+  const deslocamentoMaior = deslocamentoMenor * 10;
+  const irredutivel = fracao(
+    numerador / mdc(numerador, denominador),
+    denominador / mdc(numerador, denominador),
+  );
+  const [n, d] = irredutivel.split('/');
+
+  const simplificada = d === undefined || `${numerador}` === n ? '' : ` = \\frac{${n}}{${d}}`;
+
+  return (
+    `${deslocamentoMaior}x - ${deslocamentoMenor}x = ${completo} - ${semPeriodo} = ${numerador}` +
+    ` \\;\\Rightarrow\\; x = \\frac{${numerador}}{${denominador}}${simplificada}`
+  );
+}
+
+/**
+ * O decimal que ACABA, que não precisa de deslocamento nenhum.
+ *
+ * A pergunta é a mesma — «qual é a fração?» —, e o enunciado nem sempre avisa
+ * qual dos dois casos ele traz. Aqui o denominador é a potência de dez que a
+ * última casa indica, e o resto é simplificar.
+ */
+function contaDoDecimalFinito(texto: string): string {
+  const limpo = texto.replace(/\.+$/, '').replace(/\s/g, '');
+  const [inteira = '0', decimal = ''] = limpo.split(',');
+
+  const casas = decimal.length;
+  const numerador = Number(`${inteira}${decimal}`);
+  const denominador = 10 ** casas;
+
+  if (!Number.isFinite(numerador)) {
+    throw new Error('não é um decimal');
+  }
+
+  const divisor = mdc(numerador, denominador);
+  const [n, d] = fracao(numerador / divisor, denominador / divisor).split('/');
+
+  const simplificada = d === undefined || `${numerador}` === n ? '' : ` = \\frac{${n}}{${d}}`;
+
+  return `x = \\frac{${numerador}}{10^{${casas}}} = \\frac{${numerador}}{${denominador}}${simplificada}`;
+}
+
+/**
+ * A fórmula do caso que o texto traz: dízima periódica ou decimal exato.
+ *
+ * Recebe o ENUNCIADO inteiro e tira dele o número, porque cada regra escreve
+ * a pergunta de um jeito e o caso não está na forma, está no número.
+ */
+function formulaDaGeratriz(enunciado: string): string {
+  const valor = /\d+[.,]\d+/.exec(enunciado)?.[0] ?? '0';
+
+  return partesDaDizima(valor) === null ? 'x = \\frac{N}{10^{n}}' : FORMULA_DA_GERATRIZ;
+}
+
+/**
+ * O método, em símbolos: dois deslocamentos cuja diferença é inteira.
+ *
+ * `a` é quantos algarismos ficam entre a vírgula e o período, `p` quantos
+ * algarismos o período tem. Multiplicar por 10^(a+p) e por 10^a põe as duas
+ * caudas infinitas em fase — e elas se cancelam na subtração, que é a única
+ * razão de o método funcionar.
+ */
+const FORMULA_DA_GERATRIZ =
+  '10^{a+p}x - 10^{a}x = \\overline{IAP} - \\overline{IA} \\;\\Rightarrow\\; ' +
+  'x = \\frac{\\overline{IAP} - \\overline{IA}}{10^{a+p} - 10^{a}}';
 
 export const REGRAS_AVANCADO_2: Readonly<Record<string, readonly Regra[]>> = {
   'funcoes-de-varias-variaveis': [
@@ -211,8 +333,8 @@ export const REGRAS_AVANCADO_2: Readonly<Record<string, readonly Regra[]>> = {
     ],
     [
       'Encontre a fração geratriz da dízima periódica #....',
-      '\text{geratriz: } 9 \text{ por algarismo que repete}',
-      '\text{geratriz da dízima}',
+      (_v, texto) => formulaDaGeratriz(texto),
+      (_v, texto) => contaDaGeratriz(/dízima periódica ([0-9.,]+)/.exec(texto)?.[1] ?? '0'),
       (_v, texto) => {
         const valor = /dízima periódica ([0-9.,]+)/.exec(texto)?.[1] ?? '0';
         return geratrizDoDecimal(valor);
@@ -220,8 +342,8 @@ export const REGRAS_AVANCADO_2: Readonly<Record<string, readonly Regra[]>> = {
     ],
     [
       'Encontre a fração geratriz da dízima periódica #...',
-      '\text{geratriz: } 9 \text{ por algarismo que repete}',
-      '\text{geratriz da dízima}',
+      (_v, texto) => formulaDaGeratriz(texto),
+      (_v, texto) => contaDaGeratriz(/dízima periódica ([0-9.,]+)/.exec(texto)?.[1] ?? '0'),
       (_v, texto) => {
         const valor = /dízima periódica ([0-9.,]+)/.exec(texto)?.[1] ?? '0';
         return geratrizDoDecimal(valor);
@@ -229,8 +351,9 @@ export const REGRAS_AVANCADO_2: Readonly<Record<string, readonly Regra[]>> = {
     ],
     [
       'Encontre a fração geratriz da dízima periódica composta #....',
-      '\text{geratriz: parte que repete sobre } 9, \text{ deslocada}',
-      '\text{geratriz da dízima composta}',
+      (_v, texto) => formulaDaGeratriz(texto),
+      (_v, texto) =>
+        contaDaGeratriz(/dízima periódica composta ([0-9.,]+)/.exec(texto)?.[1] ?? '0'),
       (_v, texto) => {
         const valor = /dízima periódica composta ([0-9.,]+)/.exec(texto)?.[1] ?? '0';
         return geratrizDoDecimal(valor);
@@ -238,8 +361,11 @@ export const REGRAS_AVANCADO_2: Readonly<Record<string, readonly Regra[]>> = {
     ],
     [
       'Encontre a fração geratriz da dízima periódica #..., com repetição.',
-      '\\frac{N}{99}',
-      '\\frac{N}{99}',
+      (_v, texto) => formulaDaGeratriz(texto),
+      (_v, texto) =>
+        contaDaGeratriz(
+          /dízima (?:periódica|periódica composta) ([0-9.,]+)/.exec(texto)?.[1] ?? '0',
+        ),
       (_v, texto) => {
         const valor = /dízima (?:periódica|periódica composta) ([0-9.,]+)/.exec(texto)?.[1] ?? '0';
         return geratrizDoDecimal(valor);

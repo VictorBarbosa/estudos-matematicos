@@ -70,27 +70,39 @@ describe('consistência dos exercícios', () => {
 });
 
 describe('calibração dos níveis', () => {
+  /**
+   * Os denominadores que o enunciado mostra.
+   *
+   * Um operando escrito como INTEIRO não traz `\frac` nenhum: o denominador
+   * dele é 1, e só aparece na resolução. As travas abaixo falam da relação
+   * entre dois denominadores, então elas valem onde há dois.
+   */
+  function denominadores(tex: string): readonly number[] {
+    return [...tex.matchAll(/\\frac\{-?\d+\}\{(\d+)\}/g)].map((encontro) => Number(encontro[1]));
+  }
+
   it('no fácil, um denominador é múltiplo do outro e o resultado não é negativo', () => {
     for (const exercicio of operacoes('facil')) {
-      const [, esquerda, direita] = /\\frac\{-?\d+\}\{(\d+)\}.*\\frac\{-?\d+\}\{(\d+)\}/.exec(
-        exercicio.enunciadoTex,
-      ) ?? [undefined, undefined, undefined];
+      const [d1, d2] = denominadores(exercicio.enunciadoTex);
 
-      const d1 = Number(esquerda);
-      const d2 = Number(direita);
-      expect(Math.max(d1, d2) % Math.min(d1, d2)).toBe(0);
+      if (d1 !== undefined && d2 !== undefined) {
+        expect(Math.max(d1, d2) % Math.min(d1, d2)).toBe(0);
+      }
       expect(exercicio.gabarito.ehNegativa).toBe(false);
     }
   });
 
   it('no médio, os denominadores são coprimos, exigindo o cálculo real do MMC', () => {
     for (const exercicio of operacoes('medio')) {
-      const encontrados = [...exercicio.enunciadoTex.matchAll(/\\frac\{-?\d+\}\{(\d+)\}/g)].map(
-        (encontro) => Number(encontro[1]),
-      );
+      const encontrados = denominadores(exercicio.enunciadoTex);
 
-      expect(encontrados.length).toBe(2);
-      expect(mdc(encontrados[0]!, encontrados[1]!)).toBe(1);
+      // Com um inteiro de um dos lados sobra um `\frac` só, e o denominador
+      // comum é o da própria fração — não há MMC a calcular.
+      if (encontrados.length === 2) {
+        expect(mdc(encontrados[0]!, encontrados[1]!)).toBe(1);
+      } else {
+        expect(encontrados.length).toBe(1);
+      }
     }
   });
 
@@ -395,15 +407,25 @@ describe('conversão de decimal em fração', () => {
 });
 
 describe('tipos de fração exigidos pela etapa', () => {
-  /** O conceito de tipo que o exercício declara — sempre o primeiro. */
-  function tipoDe(exercicio: { readonly conceitos: readonly string[] }): string {
-    return exercicio.conceitos[0]!;
+  const EXIGIDOS = new Set(REQUISITOS_POR_TOPICO['fracoes']!.map((r) => r.conceito));
+
+  /**
+   * Os tipos que o exercício declara.
+   *
+   * Eram sempre o primeiro conceito, porque cada exercício pertencia a um tipo
+   * só. Com as formas de escrita um exercício pode pertencer a dois — «soma»
+   * e «operação com inteiro» —, e os dois contam.
+   */
+  function tiposDe(exercicio: { readonly conceitos: readonly string[] }): readonly string[] {
+    return exercicio.conceitos.filter((conceito) => EXIGIDOS.has(conceito));
   }
 
-  it('os nove tipos da exigência são produzidos pelo gerador', () => {
+  it('os onze tipos da exigência são produzidos pelo gerador', () => {
     const vistos = new Set<string>();
     for (const nivel of NIVEIS) {
-      for (const exercicio of amostra(nivel, 600)) vistos.add(tipoDe(exercicio));
+      for (const exercicio of amostra(nivel, 600)) {
+        for (const tipo of tiposDe(exercicio)) vistos.add(tipo);
+      }
     }
 
     for (const requisito of REQUISITOS_POR_TOPICO['fracoes']!) {
@@ -414,7 +436,9 @@ describe('tipos de fração exigidos pela etapa', () => {
   it('cada operação aparece nas duas formas, simples e com mistos', () => {
     const vistos = new Set<string>();
     for (const nivel of ['medio', 'dificil'] as const) {
-      for (const exercicio of amostra(nivel, 600)) vistos.add(tipoDe(exercicio));
+      for (const exercicio of amostra(nivel, 600)) {
+        for (const tipo of tiposDe(exercicio)) vistos.add(tipo);
+      }
     }
 
     for (const operacao of ['somar', 'subtrair', 'multiplicar', 'dividir'] as const) {
@@ -426,9 +450,10 @@ describe('tipos de fração exigidos pela etapa', () => {
   it('o exercício com mistos declara o conceito misto, não o simples', () => {
     for (const nivel of ['medio', 'dificil'] as const) {
       for (const exercicio of amostra(nivel, 300)) {
-        if (!exercicio.enunciado.includes('mistos')) continue;
+        // «os números mistos», no plural: os dois operandos em forma mista.
+        if (!exercicio.enunciado.includes('números mistos')) continue;
 
-        expect(Object.values(CONCEITO_DA_OPERACAO_MISTA)).toContain(tipoDe(exercicio));
+        expect(Object.values(CONCEITO_DA_OPERACAO_MISTA)).toContain(exercicio.conceitos[0]);
         for (const simples of Object.values(CONCEITO_DA_OPERACAO)) {
           expect(exercicio.conceitos).not.toContain(simples);
         }
@@ -439,7 +464,10 @@ describe('tipos de fração exigidos pela etapa', () => {
   it('o fácil não produz tipos com mistos', () => {
     // Eles são a recompensa de subir de nível: no Fácil não aparecem.
     for (const exercicio of amostra('facil', 400)) {
-      expect(Object.values(CONCEITO_DA_OPERACAO_MISTA)).not.toContain(tipoDe(exercicio));
+      for (const tipo of tiposDe(exercicio)) {
+        expect(Object.values(CONCEITO_DA_OPERACAO_MISTA)).not.toContain(tipo);
+      }
+      expect(exercicio.conceitos).not.toContain('fracoes.mista-fracao');
     }
   });
 });
@@ -727,6 +755,120 @@ describe('sorteio do que falta', () => {
 
     for (const cumprido of ['fracoes.soma', 'fracoes.decimais', 'fracoes.divisao']) {
       expect(vistos.has(cumprido), cumprido).toBe(false);
+    }
+  });
+});
+
+/**
+ * As formas de escrita dos operandos.
+ *
+ * O tópico só sabia propor fração com fração — ou, no misto, misto com misto.
+ * Faltavam as duas contas que aparecem mais na vida do que qualquer outra:
+ * fração com número inteiro («3/4 de 20») e misto com fração («2½ + ¾»).
+ */
+describe('formas de escrita dos operandos', () => {
+  /** Os operandos do enunciado, separados pelo sinal da operação. */
+  function operandosDe(tex: string): readonly string[] {
+    return tex
+      .replace(' = \;?', '')
+      .split(/ [+\-] | \\times | \\div /)
+      .map((parte) => parte.trim().replace(/^\\left\(|\\right\)$/g, ''));
+  }
+
+  /** O operando está escrito como número inteiro, sem fração nenhuma? */
+  const ehInteiro = (operando: string): boolean => /^-?\d+$/.test(operando);
+
+  /** `2\frac{1}{3}`: um inteiro colado numa fração. */
+  const ehMisto = (operando: string): boolean => /^-?\d+\\frac\{/.test(operando);
+
+  it('o inteiro aparece em todos os níveis, de um lado só', () => {
+    for (const nivel of NIVEIS) {
+      const comInteiro = operacoes(nivel, 400).filter((exercicio) =>
+        operandosDe(exercicio.enunciadoTex).some(ehInteiro),
+      );
+
+      expect(comInteiro.length, `${nivel} nunca propõe conta com inteiro`).toBeGreaterThan(0);
+
+      for (const exercicio of comInteiro) {
+        const inteiros = operandosDe(exercicio.enunciadoTex).filter(ehInteiro);
+        // Dois inteiros não seriam exercício de fração nenhum.
+        expect(inteiros.length, exercicio.enunciadoTex).toBe(1);
+        expect(exercicio.conceitos).toContain('fracoes.inteiro');
+      }
+    }
+  });
+
+  it('o misto aparece ao lado de uma fração comum, do Médio para cima', () => {
+    for (const nivel of ['medio', 'dificil', 'extremo'] as const) {
+      const misturados = operacoes(nivel, 400).filter((exercicio) => {
+        const operandos = operandosDe(exercicio.enunciadoTex);
+        return operandos.some(ehMisto) && operandos.some((o) => !ehMisto(o) && !ehInteiro(o));
+      });
+
+      expect(misturados.length, `${nivel} nunca propõe misto com fração`).toBeGreaterThan(0);
+      for (const exercicio of misturados) {
+        expect(exercicio.conceitos).toContain('fracoes.mista-fracao');
+      }
+    }
+  });
+
+  it('a resolução com inteiro mostra que ele vale sobre 1', () => {
+    const comInteiro = NIVEIS.flatMap((nivel) =>
+      operacoes(nivel, 200).filter((exercicio) =>
+        operandosDe(exercicio.enunciadoTex).some(ehInteiro),
+      ),
+    );
+
+    for (const exercicio of comInteiro.slice(0, 60)) {
+      const passos = exercicio.resolucao.passos.map((passo) => passo.tex);
+      expect(
+        passos.some((tex) => /\\frac\{-?\d+\}\{1\}/.test(tex)),
+        exercicio.enunciadoTex,
+      ).toBe(true);
+    }
+  });
+
+  it('cada forma traz o seu enunciado, nas três línguas', () => {
+    const enunciados = new Set<string>();
+
+    for (const nivel of NIVEIS) {
+      for (const exercicio of operacoes(nivel, 400)) {
+        enunciados.add(exercicio.enunciado);
+
+        // Nenhum enunciado chega à tela só em português.
+        const traducoes = exercicio.traducoes;
+        expect(traducoes, exercicio.enunciado).toBeDefined();
+        expect(traducoes?.fr?.enunciado, exercicio.enunciado).toBeTruthy();
+        expect(traducoes?.en?.enunciado, exercicio.enunciado).toBeTruthy();
+        expect(traducoes?.fr?.enunciado).not.toBe(exercicio.enunciado);
+      }
+    }
+
+    // Quatro formas, quatro enunciados: frações, inteiro, misto e misto com fração.
+    expect(enunciados.size).toBe(4);
+  });
+});
+
+/**
+ * O inteiro sorteado nunca é 1.
+ *
+ * Multiplicar ou dividir por 1 não é exercício nenhum: o resultado é o próprio
+ * enunciado, e a lição — que o inteiro tem denominador 1 — fica invisível.
+ */
+describe('o inteiro sorteado', () => {
+  it('nunca vale 1 nem -1', () => {
+    for (const nivel of NIVEIS) {
+      for (const exercicio of operacoes(nivel, 400)) {
+        const inteiros = exercicio.enunciadoTex
+          .replace(' = \;?', '')
+          .split(/ [+\-] | \\times | \\div /)
+          .map((parte) => parte.trim().replace(/^\\left\(|\\right\)$/g, ''))
+          .filter((parte) => /^-?\d+$/.test(parte));
+
+        for (const inteiro of inteiros) {
+          expect(Math.abs(Number(inteiro)), exercicio.enunciadoTex).toBeGreaterThan(1);
+        }
+      }
     }
   });
 });

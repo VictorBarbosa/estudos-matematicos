@@ -114,14 +114,17 @@ for (const achado of codigo.matchAll(/moldesDe\(\s*'([^']+)'\s*,([^)]*)\)/g)) {
 }
 
 /**
- * Tópicos em que a forma vem de uma VARIÁVEL: `moldesDe('x', forma)`.
+ * Tópicos em que a forma vem de uma VARIÁVEL ou de uma CHAMADA.
  *
- * Aí não há como saber estaticamente quais formas são pedidas, e acusar órfão
- * seria acusar o inocente. O tópico sai da conta — e é por isso que este
+ * `moldesDe('x', forma)` e `moldesDe('x', formaDoMolde(escritas))` são o mesmo
+ * caso: não há como saber estaticamente quais formas são pedidas, e acusar
+ * órfão seria acusar o inocente. O tópico sai da conta — e é por isso que este
  * guarda não substitui `lacunas-preenchidas.spec.ts`, que executa de verdade.
  */
 const porVariavel = new Set();
-for (const achado of codigo.matchAll(/moldesDe\(\s*'([^']+)'\s*,\s*([A-Za-z_$][\w$]*)\s*\)/g)) {
+for (const achado of codigo.matchAll(
+  /moldesDe\(\s*'([^']+)'\s*,\s*[A-Za-z_$][\w$]*\s*(?:\([^)]*\))?\s*\)/g,
+)) {
   porVariavel.add(achado[1]);
 }
 

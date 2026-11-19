@@ -22,6 +22,25 @@ export const NOME_OPERACAO: Readonly<Record<OperacaoFracao, string>> = {
 };
 
 /**
+ * Em que forma cada operando é ESCRITO no enunciado.
+ *
+ * Era um booleano só, valendo para os dois ao mesmo tempo — e por isso o site
+ * só sabia propor `fração ⊕ fração` ou `misto ⊕ misto`. Mas «2½ + ¾» é uma
+ * conta que existe, e é justamente nela que a conversão do misto se mostra
+ * necessária: o aluno vê um operando que precisa ser convertido ao lado de um
+ * que não precisa. Um par resolve isso sem mudar quem já passava `true`.
+ *
+ * O INTEIRO não precisa de forma própria: `Fracao` de denominador 1 já se
+ * escreve `5`, e não `\frac{5}{1}`, nas duas formas.
+ */
+export type EscritaMista = boolean | readonly [boolean, boolean];
+
+/** O par explícito, para quem passou um booleano só. */
+function parDeEscritas(misto: EscritaMista): readonly [boolean, boolean] {
+  return typeof misto === 'boolean' ? [misto, misto] : misto;
+}
+
+/**
  * Escreve `a ⊕ b` em LaTeX.
  *
  * O segundo operando ganha parênteses quando é negativo: sem eles, a
@@ -36,11 +55,16 @@ export function operacaoParaTex(
   a: Fracao,
   operacao: OperacaoFracao,
   b: Fracao,
-  misto = false,
+  misto: EscritaMista = false,
 ): string {
-  const escrever = (fracao: Fracao): string => (misto ? fracao.paraTexMisto() : fracao.paraTex());
+  const [mistoA, mistoB] = parDeEscritas(misto);
+  const escrever = (fracao: Fracao, emMisto: boolean): string =>
+    emMisto ? fracao.paraTexMisto() : fracao.paraTex();
 
-  return `${escrever(a)} ${SIMBOLO_TEX[operacao]} ${aDireita(escrever(b), b.ehNegativa)}`;
+  return (
+    `${escrever(a, mistoA)} ${SIMBOLO_TEX[operacao]} ` +
+    `${aDireita(escrever(b, mistoB), b.ehNegativa)}`
+  );
 }
 
 /**
@@ -95,15 +119,17 @@ export function resolverComPassos(
   entradaA: Fracao,
   operacao: OperacaoFracao,
   entradaB: Fracao,
-  misto = false,
+  misto: EscritaMista = false,
 ): Resolucao<Fracao> {
+  const [mistoA, mistoB] = parDeEscritas(misto);
+
   /*
    * Em forma mista o enunciado já mostra a fração reduzida — `2\frac{1}{2}`,
    * nunca `\frac{10}{4}`. Reduzir os operandos aqui é o que mantém a conta
    * escrita com os mesmos números que o aluno está lendo.
    */
-  const a = misto ? entradaA.simplificar() : entradaA;
-  const b = misto ? entradaB.simplificar() : entradaB;
+  const a = mistoA ? entradaA.simplificar() : entradaA;
+  const b = mistoB ? entradaB.simplificar() : entradaB;
 
   const passos: Passo[] = [
     {
@@ -112,11 +138,15 @@ export function resolverComPassos(
     },
   ];
 
-  if (misto) {
-    const conversao = passoDeConversao(a, b);
-    if (conversao !== null) {
-      passos.push(conversao);
-    }
+  const inteiro = passoDoInteiro(a, b);
+  if (inteiro !== null) {
+    passos.push(inteiro);
+  }
+
+  const escritosEmMisto = [...(mistoA ? [a] : []), ...(mistoB ? [b] : [])];
+  const conversao = passoDeConversao(escritosEmMisto);
+  if (conversao !== null) {
+    passos.push(conversao);
   }
 
   const resultado =
@@ -126,7 +156,7 @@ export function resolverComPassos(
         ? resolverMultiplicacao(a, b, passos)
         : resolverDivisao(a, b, passos);
 
-  if (misto) {
+  if (mistoA || mistoB) {
     const volta = passoDeVolta(resultado);
     if (volta !== null) {
       passos.push(volta);
@@ -143,6 +173,33 @@ export function ehNumeroMisto(fracao: Fracao): boolean {
 }
 
 /**
+ * O passo que falta quando um dos operandos é um número inteiro.
+ *
+ * `\frac{3}{4} \times 5` parece outra conta, e é a mesma: 5 é 5/1. Sem dizer
+ * isso, o passo seguinte — «multiplicamos em linha» — aparece com um
+ * denominador 1 que o aluno não viu em lugar nenhum do enunciado, e o erro
+ * clássico (multiplicar o 5 também embaixo, chegando a 15/20) fica sem
+ * resposta.
+ */
+function passoDoInteiro(a: Fracao, b: Fracao): Passo | null {
+  const inteiros = [a, b].filter((fracao) => fracao.denominador === 1);
+  if (inteiros.length === 0 || inteiros.length === 2) {
+    return null;
+  }
+
+  const inteiro = inteiros[0]!;
+
+  return {
+    descricao: 'Todo número inteiro é uma fração de denominador 1.',
+    tex: `${inteiro.paraTex()} = \\frac{${inteiro.numerador}}{1}`,
+    nota:
+      `${inteiro.numerador} é ${inteiro.numerador} inteiros, ou seja ${inteiro.numerador} ` +
+      'partes de tamanho 1. Escrito assim, ele entra na conta como qualquer outra fração — ' +
+      'e fica claro que o denominador dele é 1, e não o da outra fração.',
+  };
+}
+
+/**
  * A conversão que o enunciado em forma mista exige antes de qualquer conta.
  *
  * Sem este passo a resolução começava já com `\frac{14}{9}`, um número que não
@@ -150,8 +207,8 @@ export function ehNumeroMisto(fracao: Fracao): boolean {
  * precisa ver, e a que ele erra. Mostrar `1\frac{5}{9} = \frac{1 \times 9 + 5}{9}`
  * é mostrar de onde vêm os quatorze nonos.
  */
-function passoDeConversao(a: Fracao, b: Fracao): Passo | null {
-  const mistos = [a, b].filter(ehNumeroMisto);
+function passoDeConversao(escritosEmMisto: readonly Fracao[]): Passo | null {
+  const mistos = escritosEmMisto.filter(ehNumeroMisto);
   if (mistos.length === 0) {
     return null;
   }
@@ -242,14 +299,20 @@ function resolverAditiva(
       nota: 'Só é possível somar ou subtrair partes do mesmo tamanho.',
     });
   } else {
+    const comInteiro = a.denominador === 1 || b.denominador === 1;
+
     passos.push({
-      descricao: 'Procuramos o menor denominador comum, que é o MMC dos denominadores.',
+      descricao: comInteiro
+        ? 'O denominador comum é o da própria fração: o inteiro só precisa ser reescrito nele.'
+        : 'Procuramos o menor denominador comum, que é o MMC dos denominadores.',
       tex: `\\operatorname{mmc}(${a.denominador}, ${b.denominador}) = ${denominadorComum}`,
       // Texto corrido, não LaTeX: a nota é renderizada como parágrafo.
-      nota:
-        `${a.denominador} = ${fatoracaoParaTexto(a.denominador)} e ` +
-        `${b.denominador} = ${fatoracaoParaTexto(b.denominador)}. ` +
-        'O MMC toma cada fator primo com o maior expoente que aparece.',
+      nota: comInteiro
+        ? `Qualquer número é múltiplo de 1, então o MMC entre 1 e ${denominadorComum} é ` +
+          `${denominadorComum}. Nenhum denominador novo aparece aqui.`
+        : `${a.denominador} = ${fatoracaoParaTexto(a.denominador)} e ` +
+          `${b.denominador} = ${fatoracaoParaTexto(b.denominador)}. ` +
+          'O MMC toma cada fator primo com o maior expoente que aparece.',
     });
 
     const fatorA = denominadorComum / a.denominador;

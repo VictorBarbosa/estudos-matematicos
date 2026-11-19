@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Calcule e escreva o resultado na forma mais simples.",
+    "fr": "Calculez et écrivez le résultat sous sa forme la plus simple.",
+    "en": "Compute and write the result in its simplest form."
+  },
+  "dica": {
+    "br": "Comece comparando os denominadores.",
+    "fr": "Commencez par comparer les dénominateurs.",
+    "en": "Start by comparing the denominators."
+  }
+}

@@ -568,4 +568,80 @@ export const TEORIA_FRACOES: readonly Teoria[] = [
     ],
     vejaTambem: ['fracoes.mistas', 'fracoes.divisao', 'fracoes.mista-multiplicacao'],
   },
+  {
+    id: 'fracoes.inteiro',
+    titulo: 'Operar com um número inteiro',
+    resumo: 'Todo inteiro é uma fração de denominador 1.',
+    definicao:
+      'Metade das contas com fração que aparecem na vida tem um inteiro do outro lado: 3/4 de ' +
+      '20 reais, o dobro de 2/5 de xícara, 5 pizzas divididas em 1/3. Não há regra nova — 5 é ' +
+      '5/1 —, e é justamente por ser simples que o erro passa despercebido: multiplicar o ' +
+      'inteiro em cima E embaixo deixa a fração igual ao que era, e somar o inteiro direto no ' +
+      'numerador trata 5 como se fossem 5 partes, não 5 unidades.',
+    formulas: [
+      {
+        tex: 'n = \\frac{n}{1}',
+        legenda: 'O denominador 1 é o que torna o inteiro uma fração como as outras.',
+      },
+      {
+        tex: '\\frac{a}{b} \\times n = \\frac{a \\times n}{b}',
+        legenda: 'Só o numerador é multiplicado: o denominador do inteiro é 1.',
+      },
+      {
+        tex: '\\frac{a}{b} + n = \\frac{a}{b} + \\frac{n \\times b}{b} = \\frac{a + nb}{b}',
+        legenda: 'Na soma, o inteiro é reescrito com o denominador da fração.',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'O inteiro entra na conta como fração de denominador 1.',
+        tex: '\\frac{3}{4} \\times 5 = \\frac{3}{4} \\times \\frac{5}{1} = \\frac{15}{4}',
+        nota:
+          'Multiplicar o 5 embaixo também daria 15/20, que é 3/4 de novo — ou seja, multiplicar ' +
+          'por 5 não teria mudado nada. É o sinal de que a conta saiu errada.',
+      },
+      {
+        descricao: 'Na soma, o denominador comum é o da própria fração.',
+        tex: '\\frac{3}{4} + 5 = \\frac{3}{4} + \\frac{20}{4} = \\frac{23}{4}',
+        nota: '5 inteiros são 20 quartos, e não 5 quartos.',
+      },
+    ],
+    exemplo: {
+      enunciado: 'Quanto é 3/4 × 5?',
+      passos: resolverComPassos(Fracao.criar(3, 4), 'multiplicar', Fracao.criar(5, 1)).passos,
+    },
+    vejaTambem: ['fracoes.operacoes', 'fracoes.multiplicacao', 'fracoes.mmc'],
+  },
+  {
+    id: 'fracoes.mista-fracao',
+    titulo: 'Misto com fração',
+    resumo: 'Converter o que precisa ser convertido, e só isso.',
+    definicao:
+      'Quando um dos números está em forma mista e o outro não, a conta é a mesma: converte-se ' +
+      'o misto em fração imprópria e opera-se normalmente. O que muda é o descuido possível — ' +
+      'com dois mistos, esquecer a conversão salta aos olhos; com um só, é fácil operar a parte ' +
+      'inteira de um lado com a fração do outro, que são quantidades de tamanhos diferentes.',
+    formulas: [
+      { tex: 'n\\frac{a}{b} + \\frac{c}{d} = \\frac{nb + a}{b} + \\frac{c}{d}' },
+      {
+        tex: '2\\frac{1}{2} + \\frac{3}{4} = \\frac{5}{2} + \\frac{3}{4} = \\frac{13}{4} = 3\\frac{1}{4}',
+      },
+    ],
+    demonstracao: [
+      {
+        descricao: 'Só o misto é convertido; a outra fração já está pronta.',
+        tex: '2\\frac{1}{2} = \\frac{5}{2} \\qquad \\frac{3}{4} = \\frac{3}{4}',
+      },
+      {
+        descricao: 'Igualamos os denominadores e somamos.',
+        tex: '\\frac{10}{4} + \\frac{3}{4} = \\frac{13}{4}',
+      },
+      {
+        descricao: 'E o resultado volta à forma mista.',
+        tex: '\\frac{13}{4} = 3\\frac{1}{4}',
+        nota: 'Somar 2 com 3/4 e deixar 1/2 de fora dá 2 3/4 — a metade some.',
+      },
+    ],
+    vejaTambem: ['fracoes.mistas', 'fracoes.mista-soma', 'fracoes.mmc'],
+  },
 ];

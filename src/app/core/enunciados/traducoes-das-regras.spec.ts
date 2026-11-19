@@ -123,7 +123,9 @@ describe('tradução das regras do banco', () => {
     const comPortugues: string[] = [];
 
     for (const { topico, regra } of TODAS_AS_REGRAS) {
-      for (const tex of [regra[1], regra[2]]) {
+      // A linha calculada depende dos números do caso; quem a confere é o
+      // teste seguinte, que passa pelas entradas reais do banco.
+      for (const tex of [regra[1], regra[2]].filter((parte) => typeof parte === 'string')) {
         if (temPalavraEmPortugues(tex)) {
           comPortugues.push(`${topico}: ${tex.slice(0, 70)}`);
         }
@@ -133,6 +135,49 @@ describe('tradução das regras do banco', () => {
     expect(
       comPortugues.slice(0, 6),
       `${comPortugues.length} fórmulas com texto que não se traduz`,
+    ).toEqual([]);
+  });
+
+  /**
+   * Nenhuma fórmula traz um escape perdido.
+   *
+   * `'\text{geratriz}'` em TypeScript não é o que parece: `\t` é a TABULAÇÃO,
+   * e o que sobra — `ext{geratriz}` — vai inteiro para o KaTeX, que o desenha
+   * como o produto das letras e·x·t vezes um grupo de letras em itálico. Na
+   * tela saía «extgeratriz: parte que repete sobre 9», e nada reclamava: o
+   * LaTeX era válido, e o guarda de palavra em português procurava `\text{`,
+   * que já não estava lá.
+   *
+   * Um caractere de controle dentro de uma fórmula é sempre isso: uma barra
+   * que o compilador comeu. Aqui ele aparece.
+   */
+  it('nenhuma fórmula traz escape perdido', () => {
+    const CONTROLE = /[\u0000-\u0008\u000b-\u001f]/;
+    const comControle: string[] = [];
+
+    for (const { topico, regra } of TODAS_AS_REGRAS) {
+      for (const tex of [regra[1], regra[2]].filter((parte) => typeof parte === 'string')) {
+        if (CONTROLE.test(tex)) {
+          comControle.push(`${topico}: ${JSON.stringify(tex.slice(0, 60))}`);
+        }
+      }
+    }
+
+    // E o mesmo no caminho de verdade, que também cobre as linhas calculadas.
+    for (const entrada of todosOsEnunciados()) {
+      const { total: _fora, ...dados } = entrada['dados-calculo'] ?? {};
+      const texto = vestirTexto(entrada.enunciado.br, entrada['dados-calculo'] ?? {}, 'pt');
+
+      for (const passo of passosDoBanco(entrada.topico, dados, texto)?.passos ?? []) {
+        if (CONTROLE.test(passo.tex)) {
+          comControle.push(`${entrada.topico}: ${JSON.stringify(passo.tex.slice(0, 60))}`);
+        }
+      }
+    }
+
+    expect(
+      [...new Set(comControle)].slice(0, 6),
+      `${comControle.length} fórmulas com escape perdido`,
     ).toEqual([]);
   });
 });

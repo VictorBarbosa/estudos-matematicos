@@ -136,7 +136,7 @@ export interface RequisitoDeConceito {
 /**
  * Quantos acertos cada tipo de exercício exige para a etapa abrir.
  *
- * Frações tem nove tipos, então o número multiplica: com cinco, eram 45
+ * Frações tem onze tipos, então o número multiplica: com cinco, eram 55
  * acertos só de cobertura, antes mesmo das exigências de janela. Três mantém o
  * que a regra existe para garantir — que nenhuma operação passe sem ser
  * praticada — sem transformar a etapa numa maratona.
@@ -163,6 +163,8 @@ const TIPOS_POR_TOPICO: Readonly<Record<string, readonly { conceito: string; rot
       { conceito: 'fracoes.mista-subtracao', rotulo: 'tipoFracao.subtracaoMista' },
       { conceito: 'fracoes.mista-multiplicacao', rotulo: 'tipoFracao.multiplicacaoMista' },
       { conceito: 'fracoes.mista-divisao', rotulo: 'tipoFracao.divisaoMista' },
+      { conceito: 'fracoes.inteiro', rotulo: 'tipoFracao.comInteiro' },
+      { conceito: 'fracoes.mista-fracao', rotulo: 'tipoFracao.mistaComFracao' },
       { conceito: 'fracoes.decimais', rotulo: 'tipoFracao.decimal' },
     ],
   };

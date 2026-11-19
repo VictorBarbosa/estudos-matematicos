@@ -309,12 +309,14 @@ describe('ProgressaoService', () => {
     expect(liberou / simulacoes).toBeLessThan(0.25);
   }, 30_000);
 
-  it('frações exige acertos em cada um dos nove tipos', () => {
+  it('frações exige acertos em cada um dos onze tipos', () => {
     const fracoes = 'fracoes';
     const operacoes = REQUISITOS_POR_TOPICO[fracoes]!;
 
     // Quatro operações com frações simples, as mesmas quatro com números
-    // mistos — que têm armadilhas próprias — e a conversão de decimal.
+    // mistos — que têm armadilhas próprias —, as duas formas de escrita que
+    // faltavam (inteiro de um lado, misto ao lado de fração) e a conversão de
+    // decimal.
     expect(operacoes.map((requisito) => requisito.rotulo)).toEqual([
       'tipoFracao.soma',
       'tipoFracao.subtracao',
@@ -324,6 +326,8 @@ describe('ProgressaoService', () => {
       'tipoFracao.subtracaoMista',
       'tipoFracao.multiplicacaoMista',
       'tipoFracao.divisaoMista',
+      'tipoFracao.comInteiro',
+      'tipoFracao.mistaComFracao',
       'tipoFracao.decimal',
     ]);
 

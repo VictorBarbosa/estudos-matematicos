@@ -1138,9 +1138,11 @@
     "vejaTambem": "Voir aussi"
   },
   "tipoFracao": {
+    "comInteiro": "opération avec un entier",
     "decimal": "décimal en fraction",
     "divisao": "division",
     "divisaoMista": "division de nombres fractionnaires",
+    "mistaComFracao": "nombre fractionnaire avec fraction",
     "multiplicacao": "multiplication",
     "multiplicacaoMista": "multiplication de nombres fractionnaires",
     "soma": "addition",

@@ -32,11 +32,24 @@ export const DESCRICAO_DA_FORMULA = 'A fórmula que resolve a pergunta.';
 export const DESCRICAO_DA_SUBSTITUICAO = 'Substituindo os valores do enunciado.';
 export const DESCRICAO_DA_CONTA = 'Efetuando a conta.';
 
+/**
+ * A fórmula ou a substituição, escrita ou calculada.
+ *
+ * Quase sempre é uma string com `#` nos lugares dos números. Mas há contas em
+ * que a substituição precisa de pedaços que não estão no enunciado: na fração
+ * geratriz de 1,2555… o que entra na conta é 25, 2 e 90 — e nenhum dos três é
+ * um número que se possa capturar do texto. Esses casos eram escritos como
+ * frases dentro da fórmula («geratriz: parte que repete sobre 9, deslocada»),
+ * o que não é fórmula nenhuma e não ensina a chegar ao resultado. Com a
+ * função, a regra calcula a própria linha.
+ */
+export type TexDaRegra = string | ((valores: readonly number[], texto: string) => string);
+
 /** Uma regra: forma, fórmula, substituição, conta, casas decimais. */
 export type Regra = readonly [
   forma: string,
-  formula: string,
-  substituir: string,
+  formula: TexDaRegra,
+  substituir: TexDaRegra,
   /**
    * A conta.
    *
@@ -164,11 +177,28 @@ export function passosDaRegra(
 
   const valor = formatar(resultado, casas);
 
+  /*
+   * A linha escrita veste os `#`; a calculada já vem pronta.
+   *
+   * Uma linha calculada que estoura derruba a regra inteira, como a conta: é
+   * melhor cair nas etapas genéricas do que mostrar uma fórmula pela metade.
+   */
+  let texDaFormula: string;
+  let texDaSubstituicao: string;
+
+  try {
+    texDaFormula = typeof formula === 'string' ? formula : formula(valores, limpo);
+    texDaSubstituicao =
+      typeof substituir === 'string' ? vestir(substituir, valores) : substituir(valores, limpo);
+  } catch {
+    return null;
+  }
+
   return {
     valor,
     passos: [
-      { descricao: DESCRICAO_DA_FORMULA, tex: formula },
-      { descricao: DESCRICAO_DA_SUBSTITUICAO, tex: vestir(substituir, valores) },
+      { descricao: DESCRICAO_DA_FORMULA, tex: texDaFormula },
+      { descricao: DESCRICAO_DA_SUBSTITUICAO, tex: texDaSubstituicao },
       { descricao: DESCRICAO_DA_CONTA, tex: `= ${valor}` },
     ],
   };

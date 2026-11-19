@@ -583,7 +583,7 @@ describe('AreaTreino: quanto falta no placar', () => {
     await fixture.whenStable();
   }
 
-  it('conta as quatro condições e os nove tipos', async () => {
+  it('conta as quatro condições e os onze tipos', async () => {
     await montar();
 
     const total = 4 + REQUISITOS_POR_TOPICO['fracoes']!.length;
@@ -595,12 +595,15 @@ describe('AreaTreino: quanto falta no placar', () => {
     await montar();
 
     /*
-     * De 13 para 10, e não para 12: os mesmos cinco acertos que cumpriram a
+     * De 15 para 12, e não para 14: os mesmos cinco acertos que cumpriram a
      * soma também cumpriram duas das quatro condições da janela — os três
      * acertos no Difícil e os três seguidos. A conta é do que falta, não do
      * que foi feito.
+     *
+     * Eram 13 e 10 antes de as formas de escrita entrarem: dois tipos novos,
+     * dois a mais a cumprir.
      */
-    expect(quanto()).toBe('10');
+    expect(quanto()).toBe('12');
     expect(bloco().getAttribute('title')).not.toContain(
       `soma ${ACERTOS_POR_TIPO}/${ACERTOS_POR_TIPO}`,
     );

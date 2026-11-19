@@ -1,0 +1,12 @@
+{
+  "enunciado": {
+    "br": "Converta o número misto em fração, calcule e simplifique.",
+    "fr": "Convertissez le nombre fractionnaire en fraction, calculez et simplifiez.",
+    "en": "Turn the mixed number into a fraction, compute and simplify."
+  },
+  "dica": {
+    "br": "Só um dos números está em forma mista: 2 1/3 é (2·3 + 1)/3. O outro já está pronto para a conta.",
+    "fr": "Un seul des nombres est fractionnaire : 2 1/3 vaut (2·3 + 1)/3. L’autre est déjà prêt pour le calcul.",
+    "en": "Only one of the numbers is mixed: 2 1/3 is (2·3 + 1)/3. The other is already ready for the computation."
+  }
+}

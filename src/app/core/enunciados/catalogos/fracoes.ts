@@ -67,6 +67,10 @@ import efracoesExtremo13 from '@core/enunciados/enunciados/fracoes/extremo/13.js
 import efracoesExtremo14 from '@core/enunciados/enunciados/fracoes/extremo/14.json';
 import efracoesExtremo15 from '@core/enunciados/enunciados/fracoes/extremo/15.json';
 import efracoesMoldesForma1 from '@core/enunciados/enunciados/fracoes/moldes/forma-1.json';
+import efracoesMoldesCalculoInteiro from '@core/enunciados/enunciados/fracoes/moldes/calculo-inteiro.json';
+import efracoesMoldesCalculoMistoFracao from '@core/enunciados/enunciados/fracoes/moldes/calculo-misto-fracao.json';
+import efracoesMoldesCalculoMisto from '@core/enunciados/enunciados/fracoes/moldes/calculo-misto.json';
+import efracoesMoldesCalculo from '@core/enunciados/enunciados/fracoes/moldes/calculo.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_FRACOES: readonly EntradaDeEnunciado[] = [
@@ -131,4 +135,8 @@ export const ENTRADAS_DE_FRACOES: readonly EntradaDeEnunciado[] = [
   { topico: 'fracoes', nivel: 'extremo', conteudo: efracoesExtremo14 },
   { topico: 'fracoes', nivel: 'extremo', conteudo: efracoesExtremo15 },
   { topico: 'fracoes', forma: 'forma-1', conteudo: efracoesMoldesForma1 },
+  { topico: 'fracoes', forma: 'calculo-inteiro', conteudo: efracoesMoldesCalculoInteiro },
+  { topico: 'fracoes', forma: 'calculo-misto-fracao', conteudo: efracoesMoldesCalculoMistoFracao },
+  { topico: 'fracoes', forma: 'calculo-misto', conteudo: efracoesMoldesCalculoMisto },
+  { topico: 'fracoes', forma: 'calculo', conteudo: efracoesMoldesCalculo },
 ];

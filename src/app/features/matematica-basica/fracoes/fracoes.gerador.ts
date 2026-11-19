@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   Fracao,
   OperacaoFracao,
@@ -66,6 +71,29 @@ export const CONCEITO_DA_OPERACAO_MISTA: Readonly<Record<OperacaoFracao, string>
   dividir: 'fracoes.mista-divisao',
 };
 
+/**
+ * Operar com um número INTEIRO.
+ *
+ * O site só propunha fração com fração, e isso deixava de fora a conta mais
+ * comum das duas: 3/4 de 20, meia dúzia de 1/3, o dobro de 2/5. O erro é
+ * próprio — multiplicar o inteiro também no denominador, chegando a 15/20 em
+ * vez de 15/4 — e por isso ele é um tipo à parte, e não uma variação.
+ *
+ * É um conceito só para as quatro operações: o que se aprende aqui é que o
+ * inteiro tem denominador 1, e isso vale igual na soma e na divisão.
+ */
+export const CONCEITO_DO_INTEIRO = 'fracoes.inteiro';
+
+/**
+ * Misto de um lado, fração do outro.
+ *
+ * `comMista` valia para os dois operandos ao mesmo tempo, então ou os dois
+ * eram mistos ou nenhum era. Mas é em «2½ + ¾» que a conversão se mostra
+ * necessária: há um número que precisa ser convertido ao lado de um que já
+ * está pronto, e esquecer a conversão de um só é o erro que aparece.
+ */
+export const CONCEITO_DA_MISTA_COM_FRACAO = 'fracoes.mista-fracao';
+
 export const geradorFracoes: GeradorExercicio<Fracao> = {
   topicoId: 'fracoes',
   formatoResposta: 'ex.: 3/4, -2/5, 7 ou o misto 2 1/3',
@@ -93,19 +121,26 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
       rng,
       exigido === null ? null : (CONCEITO_DO_ALVO.get(exigido) ?? null),
     );
-    const { operacao, comMista } = sorteio;
+    const { operacao, escritas } = sorteio;
 
     /*
      * Em forma mista o enunciado mostra a fração já reduzida — `2\frac{1}{2}`,
      * nunca `\frac{10}{4}`. Reduzir aqui faz a resolução e as armadilhas
      * partirem dos mesmos números que o aluno está lendo.
      */
-    const a = comMista ? sorteio.a.simplificar() : sorteio.a;
-    const b = comMista ? sorteio.b.simplificar() : sorteio.b;
+    const a = escritas[0] === 'mista' ? sorteio.a.simplificar() : sorteio.a;
+    const b = escritas[1] === 'mista' ? sorteio.b.simplificar() : sorteio.b;
 
-    // `misto` acrescenta à resolução a conversão inicial e a volta à forma
-    // mista no fim — as duas passagens que o enunciado em misto exige.
-    const resolucao = resolverComPassos(a, operacao, b, comMista);
+    /*
+     * O par diz quais operandos estão escritos em forma mista.
+     *
+     * Era um booleano só, e por isso o site nunca propunha «2½ + ¾»: ou os
+     * dois eram mistos, ou nenhum era. Com o par, a resolução converte só o
+     * que precisa ser convertido.
+     */
+    const misto = [escritas[0] === 'mista', escritas[1] === 'mista'] as const;
+
+    const resolucao = resolverComPassos(a, operacao, b, misto);
 
     /*
      * Quando há fração imprópria em jogo, o enunciado mostra o número misto.
@@ -113,31 +148,33 @@ export const geradorFracoes: GeradorExercicio<Fracao> = {
      * terço" — e a que aparece em receita, régua e planta baixa; ler e operar
      * nessa forma é parte do assunto, não enfeite.
      */
-    const enunciadoTex = `${operacaoParaTex(a, operacao, b, comMista)} = \\;?`;
+    const enunciadoTex = `${operacaoParaTex(a, operacao, b, misto)} = \\;?`;
+
+    const texto = enunciadoDoMolde(moldesDe('fracoes', formaDoMolde(escritas))[0]!, {});
 
     return {
       id: `fracoes-${nivel}-${a}-${operacao}-${b}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: comMista
-        ? 'Converta os números mistos em frações, calcule e simplifique.'
-        : 'Calcule e escreva o resultado na forma mais simples.',
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex,
       gabarito: resolucao.resultado,
       resolucao,
-      conceitos: conceitosDe(operacao, a, b, comMista),
+      conceitos: conceitosDe(operacao, a, b, escritas),
       armadilhas: armadilhasDe(
         a,
         b,
         operacao,
         resolucao.resultado,
-        deslocamentoMisto(a, b, comMista),
+        deslocamentoDosPassos(a, b, escritas),
       ),
-      // O misto estreia no Médio: a dica dele vale em qualquer nível.
-      dica: comMista
-        ? 'Um número misto vira fração: 2 1/3 é (2·3 + 1)/3. Converta os dois antes de operar.'
-        : nivel === 'facil'
-          ? 'Comece comparando os denominadores.'
-          : undefined,
+      /*
+       * A dica da conta entre duas frações é para quem está começando; a das
+       * outras formas vale em qualquer nível, porque o que ela explica — o
+       * inteiro com denominador 1, o misto que vira fração — é justamente o
+       * que muda a conta.
+       */
+      dica: formaDoMolde(escritas) === 'calculo' && nivel !== 'facil' ? undefined : texto.dica,
     };
   },
 
@@ -251,12 +288,35 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
   };
 }
 
+/**
+ * Em que FORMA cada operando aparece escrito no enunciado.
+ *
+ * `fracao` é a fração como ela se escreve, própria ou imprópria; `mista` é
+ * `2\frac{1}{3}`; `inteiro` é um número sem denominador visível, que na conta
+ * vale 5/1. São três escritas do mesmo tipo de número — e são três contas
+ * diferentes para quem está aprendendo.
+ */
+type Escrita = 'fracao' | 'mista' | 'inteiro';
+
+/** As formas dos dois operandos, na ordem em que eles aparecem. */
+type Escritas = readonly [Escrita, Escrita];
+
 interface Sorteio {
   readonly a: Fracao;
   readonly b: Fracao;
   readonly operacao: OperacaoFracao;
-  /** O enunciado mostra os operandos como números mistos? */
-  readonly comMista: boolean;
+  readonly escritas: Escritas;
+}
+
+/** O molde de enunciado que cada combinação de formas pede. */
+function formaDoMolde(escritas: Escritas): string {
+  if (escritas.includes('inteiro')) {
+    return 'calculo-inteiro';
+  }
+
+  const mistas = escritas.filter((escrita) => escrita === 'mista').length;
+
+  return mistas === 2 ? 'calculo-misto' : mistas === 1 ? 'calculo-misto-fracao' : 'calculo';
 }
 
 /**
@@ -269,22 +329,86 @@ interface Sorteio {
  */
 const OPERACOES: readonly OperacaoFracao[] = ['somar', 'subtrair', 'multiplicar', 'dividir'];
 
-/** O tipo de exercício que a etapa ainda está esperando. */
+/**
+ * As combinações de formas que o sorteio conhece.
+ *
+ * `fracoes` é a conta entre duas frações, que era a única que existia;
+ * `com-inteiro` põe um número inteiro de um dos lados; `mista-e-fracao` deixa
+ * um misto ao lado de uma fração pronta; `mistas` é o par de mistos.
+ */
+type Combinacao = 'fracoes' | 'com-inteiro' | 'mista-e-fracao' | 'mistas';
+
+/**
+ * O peso de cada combinação por nível.
+ *
+ * O Fácil não tem mistos — eles são a recompensa de subir —, mas tem inteiro
+ * desde o começo: «3/4 de 20» é mais comum na vida do que qualquer conta entre
+ * duas frações, e não é mais difícil. Nos níveis de cima a conta entre duas
+ * frações perde espaço para as formas que exigem converter antes de operar.
+ */
+const PESOS_DA_COMBINACAO: Readonly<Record<Nivel, Readonly<Record<Combinacao, number>>>> = {
+  facil: { fracoes: 0.7, 'com-inteiro': 0.3, 'mista-e-fracao': 0, mistas: 0 },
+  medio: { fracoes: 0.4, 'com-inteiro': 0.2, 'mista-e-fracao': 0.2, mistas: 0.2 },
+  dificil: { fracoes: 0.3, 'com-inteiro': 0.15, 'mista-e-fracao': 0.25, mistas: 0.3 },
+  extremo: { fracoes: 0.25, 'com-inteiro': 0.1, 'mista-e-fracao': 0.25, mistas: 0.4 },
+};
+
+/** Sorteia a combinação respeitando os pesos do nível. */
+function sortearCombinacao(nivel: Nivel, rng: Rng): Combinacao {
+  const pesos = PESOS_DA_COMBINACAO[nivel];
+  const combinacoes = Object.keys(pesos) as Combinacao[];
+
+  const total = combinacoes.reduce((soma, chave) => soma + pesos[chave], 0);
+  let sorteado = rng.proximo() * total;
+
+  for (const combinacao of combinacoes) {
+    sorteado -= pesos[combinacao];
+    if (sorteado < 0) {
+      return combinacao;
+    }
+  }
+
+  return 'fracoes';
+}
+
+/** As formas dos dois operandos, com a posição do diferente sorteada. */
+function escritasDa(combinacao: Combinacao, rng: Rng): Escritas {
+  switch (combinacao) {
+    case 'fracoes':
+      return ['fracao', 'fracao'];
+    case 'mistas':
+      return ['mista', 'mista'];
+    case 'com-inteiro':
+      return rng.booleano() ? ['inteiro', 'fracao'] : ['fracao', 'inteiro'];
+    case 'mista-e-fracao':
+      return rng.booleano() ? ['mista', 'fracao'] : ['fracao', 'mista'];
+  }
+}
+
+/**
+ * O tipo de exercício que a etapa ainda está esperando.
+ *
+ * A operação é `null` nos tipos que não dependem dela: operar com um inteiro
+ * é a mesma lição na soma e na divisão, e exigir as quatro separadamente
+ * transformaria a etapa numa maratona sem ensinar mais.
+ */
 interface Alvo {
-  readonly operacao: OperacaoFracao;
-  readonly comMista: boolean;
+  readonly operacao: OperacaoFracao | null;
+  readonly combinacao: Combinacao;
 }
 
 /** O conceito de cada tipo, do jeito que a progressão o conta. */
 const CONCEITO_DO_ALVO = new Map<string, Alvo>([
   ...OPERACOES.map((operacao): [string, Alvo] => [
     CONCEITO_DA_OPERACAO[operacao],
-    { operacao, comMista: false },
+    { operacao, combinacao: 'fracoes' },
   ]),
   ...OPERACOES.map((operacao): [string, Alvo] => [
     CONCEITO_DA_OPERACAO_MISTA[operacao],
-    { operacao, comMista: true },
+    { operacao, combinacao: 'mistas' },
   ]),
+  [CONCEITO_DO_INTEIRO, { operacao: null, combinacao: 'com-inteiro' }],
+  [CONCEITO_DA_MISTA_COM_FRACAO, { operacao: null, combinacao: 'mista-e-fracao' }],
 ]);
 
 /** O conceito da conversão de decimal, que não é operação entre frações. */
@@ -302,84 +426,140 @@ function produzNoNivel(conceito: string, nivel: Nivel): boolean {
   }
 
   const alvo = CONCEITO_DO_ALVO.get(conceito);
-  return alvo !== undefined && (!alvo.comMista || nivel !== 'facil');
+  return alvo !== undefined && PESOS_DA_COMBINACAO[nivel][alvo.combinacao] > 0;
 }
 
 function sortear(nivel: Nivel, rng: Rng, alvo: Alvo | null): Sorteio {
   const operacao = alvo?.operacao ?? rng.escolher(OPERACOES);
+  const escritas = escritasDa(alvo?.combinacao ?? sortearCombinacao(nivel, rng), rng);
 
   switch (nivel) {
     case 'facil':
-      return sortearFacil(rng, operacao);
+      return sortearFacil(rng, operacao, escritas);
     case 'medio':
-      return sortearMedio(rng, operacao, alvo?.comMista ?? rng.booleano(0.35));
+      return sortearMedio(rng, operacao, escritas);
     case 'dificil':
-      return sortearDificil(rng, operacao, alvo?.comMista ?? rng.booleano(0.5));
+      return sortearDificil(rng, operacao, escritas);
     case 'extremo':
-      return sortearExtremo(rng, operacao, alvo?.comMista ?? rng.booleano(0.6));
+      return sortearExtremo(rng, operacao, escritas);
   }
+}
+
+/**
+ * O numerador de um operando, de acordo com a forma em que ele será escrito.
+ *
+ * `inteiro` é o caso que não existia: denominador 1, e o número que aparece na
+ * tela é o próprio numerador. `mista` precisa de uma fração imprópria — sem
+ * parte inteira não há misto nenhum para converter.
+ */
+function montarOperando(
+  rng: Rng,
+  escrita: Escrita,
+  denominador: number,
+  inteiros: readonly [number, number],
+  proprio: number,
+): Fracao {
+  if (escrita === 'inteiro') {
+    return Fracao.criar(rng.inteiro(inteiros[0], inteiros[1]), 1);
+  }
+
+  const numerador =
+    escrita === 'mista' ? rng.inteiro(inteiros[0], inteiros[1]) * denominador + proprio : proprio;
+
+  return Fracao.criar(numerador, denominador);
+}
+
+/** Troca os operandos de lado, levando junto a forma de cada um. */
+function trocados(sorteio: Sorteio): Sorteio {
+  return {
+    ...sorteio,
+    a: sorteio.b,
+    b: sorteio.a,
+    escritas: [sorteio.escritas[1], sorteio.escritas[0]],
+  };
 }
 
 /**
  * Fácil: denominadores em que um é múltiplo do outro, de modo que o
  * denominador comum é o próprio maior deles. Tudo positivo, sem mistas.
  */
-function sortearFacil(rng: Rng, operacao: OperacaoFracao): Sorteio {
+function sortearFacil(rng: Rng, operacao: OperacaoFracao, escritas: Escritas): Sorteio {
   const base = rng.escolher([2, 3, 4, 5, 6, 8]);
   const fator = rng.escolher([1, 2, 3]);
   const maior = base * fator;
 
-  let a = Fracao.criar(rng.inteiro(1, base - 1 || 1), base);
-  let b = Fracao.criar(rng.inteiro(1, maior - 1), maior);
+  const INTEIROS: readonly [number, number] = [2, 9];
 
-  // Na subtração, a maior fração vem primeiro para o resultado não ficar
-  // negativo: o sinal entra no Médio, com a reta numérica já discutida.
-  if (operacao === 'subtrair' && a.comparar(b) < 0) {
-    [a, b] = [b, a];
-  }
+  const a = montarOperando(rng, escritas[0], base, INTEIROS, rng.inteiro(1, base - 1 || 1));
+  const b = montarOperando(rng, escritas[1], maior, INTEIROS, rng.inteiro(1, maior - 1));
 
-  return { a, b, operacao, comMista: false };
+  const sorteio: Sorteio = { a, b, operacao, escritas };
+
+  // Na subtração, o maior vem primeiro para o resultado não ficar negativo: o
+  // sinal entra no Médio, com a reta numérica já discutida.
+  return operacao === 'subtrair' && a.comparar(b) < 0 ? trocados(sorteio) : sorteio;
 }
 
 /**
  * Médio: denominadores coprimos — o MMC é o produto, e não há como escapar de
  * converter as duas frações. Entram os negativos e os primeiros mistos.
  */
-function sortearMedio(rng: Rng, operacao: OperacaoFracao, comMista: boolean): Sorteio {
+function sortearMedio(rng: Rng, operacao: OperacaoFracao, escritas: Escritas): Sorteio {
   const [d1, d2] = rng.escolher(PARES_COPRIMOS);
   const ordenados = rng.booleano() ? [d1, d2] : [d2, d1];
 
   const negativos = rng.booleano(0.3);
 
-  const montar = (denominador: number): Fracao => {
-    const proprio = rng.inteiro(1, denominador - 1 || 1);
+  const montar = (denominador: number, escrita: Escrita): Fracao => {
     // Misto: uma ou duas unidades inteiras somadas à parte própria.
-    const numerador = comMista ? rng.inteiro(1, 2) * denominador + proprio : proprio;
-    return Fracao.criar(negativos && rng.booleano() ? -numerador : numerador, denominador);
+    const fracao = montarOperando(
+      rng,
+      escrita,
+      denominador,
+      // O inteiro nunca é 1: multiplicar ou dividir por 1 não é exercício.
+      escrita === 'inteiro' ? [2, 12] : [1, 2],
+      rng.inteiro(1, denominador - 1 || 1),
+    );
+
+    return negativos && rng.booleano()
+      ? Fracao.criar(-fracao.numerador, fracao.denominador)
+      : fracao;
   };
 
-  return { a: montar(ordenados[0]!), b: montar(ordenados[1]!), operacao, comMista };
+  return {
+    a: montar(ordenados[0]!, escritas[0]),
+    b: montar(ordenados[1]!, escritas[1]),
+    operacao,
+    escritas,
+  };
 }
 
 /** Difícil: as quatro operações, com negativos e mistos em qualquer posição. */
-function sortearDificil(rng: Rng, operacao: OperacaoFracao, comMista: boolean): Sorteio {
-  const criar = (permitirZero: boolean): Fracao => {
+function sortearDificil(rng: Rng, operacao: OperacaoFracao, escritas: Escritas): Sorteio {
+  const criar = (escrita: Escrita, permitirZero: boolean): Fracao => {
     const denominador = rng.inteiro(2, 12);
-    const proprio = rng.inteiro(1, denominador - 1 || 1);
-    const magnitude = comMista ? rng.inteiro(1, 3) * denominador + proprio : rng.inteiro(1, 15);
+    const base = montarOperando(
+      rng,
+      escrita,
+      denominador,
+      escrita === 'inteiro' ? [2, 12] : [1, 3],
+      // Fora do misto, a fração pode ser imprópria: o numerador não se prende
+      // ao denominador.
+      escrita === 'fracao' ? rng.inteiro(1, 15) : rng.inteiro(1, denominador - 1 || 1),
+    );
 
-    let numerador = magnitude * rng.sinal();
+    let numerador = base.numerador * rng.sinal();
     if (!permitirZero && numerador === 0) {
-      numerador = magnitude || 1;
+      numerador = base.numerador || 1;
     }
-    return Fracao.criar(numerador, denominador);
+    return Fracao.criar(numerador, base.denominador);
   };
 
-  const a = criar(true);
+  const a = criar(escritas[0], true);
   // O divisor nunca pode ser zero.
-  const b = criar(false);
+  const b = criar(escritas[1], false);
 
-  return { a, b, operacao, comMista };
+  return { a, b, operacao, escritas };
 }
 
 /**
@@ -390,7 +570,7 @@ function sortearDificil(rng: Rng, operacao: OperacaoFracao, comMista: boolean): 
  * dois, e a conta deixa de caber de cabeça. Os mistos ficam maiores, e o sinal
  * negativo passa a ser frequente nos dois operandos.
  */
-function sortearExtremo(rng: Rng, operacao: OperacaoFracao, comMista: boolean): Sorteio {
+function sortearExtremo(rng: Rng, operacao: OperacaoFracao, escritas: Escritas): Sorteio {
   // Primos entre si: o MMC é o produto, e não um dos dois.
   const PARES: readonly (readonly [number, number])[] = [
     [7, 9],
@@ -405,23 +585,28 @@ function sortearExtremo(rng: Rng, operacao: OperacaoFracao, comMista: boolean): 
   const [um, outro] = rng.escolher(PARES);
   const denominadores = rng.booleano() ? [um, outro] : [outro, um];
 
-  const criar = (denominador: number, permitirZero: boolean): Fracao => {
-    const proprio = rng.inteiro(1, denominador - 1);
-    const magnitude = comMista ? rng.inteiro(2, 6) * denominador + proprio : rng.inteiro(1, 40);
+  const criar = (denominador: number, escrita: Escrita, permitirZero: boolean): Fracao => {
+    const base = montarOperando(
+      rng,
+      escrita,
+      denominador,
+      escrita === 'inteiro' ? [2, 40] : [2, 6],
+      escrita === 'fracao' ? rng.inteiro(1, 40) : rng.inteiro(1, denominador - 1),
+    );
 
-    let numerador = magnitude * rng.sinal();
+    let numerador = base.numerador * rng.sinal();
     if (!permitirZero && numerador === 0) {
-      numerador = magnitude || 1;
+      numerador = base.numerador || 1;
     }
-    return Fracao.criar(numerador, denominador);
+    return Fracao.criar(numerador, base.denominador);
   };
 
   return {
-    a: criar(denominadores[0]!, true),
+    a: criar(denominadores[0]!, escritas[0], true),
     // O divisor nunca pode ser zero.
-    b: criar(denominadores[1]!, false),
+    b: criar(denominadores[1]!, escritas[1], false),
     operacao,
-    comMista,
+    escritas,
   };
 }
 
@@ -436,11 +621,27 @@ function conceitosDe(
   operacao: OperacaoFracao,
   a: Fracao,
   b: Fracao,
-  comMista: boolean,
+  escritas: Escritas,
 ): readonly string[] {
-  const conceitos = comMista
-    ? [CONCEITO_DA_OPERACAO_MISTA[operacao], 'fracoes.mistas', 'fracoes.operacoes']
-    : [CONCEITO_DA_OPERACAO[operacao], 'fracoes.operacoes'];
+  const mistas = escritas.filter((escrita) => escrita === 'mista').length;
+
+  const conceitos =
+    mistas === 2
+      ? [CONCEITO_DA_OPERACAO_MISTA[operacao], 'fracoes.mistas', 'fracoes.operacoes']
+      : [CONCEITO_DA_OPERACAO[operacao], 'fracoes.operacoes'];
+
+  /*
+   * O tipo da FORMA entra logo depois da operação.
+   *
+   * A progressão conta todos os conceitos do exercício, mas o primeiro é o que
+   * nomeia o exercício onde só cabe um — e ali o que vale é a operação, que é
+   * o que a etapa exige praticar nas quatro.
+   */
+  if (escritas.includes('inteiro')) {
+    conceitos.splice(1, 0, CONCEITO_DO_INTEIRO);
+  } else if (mistas === 1) {
+    conceitos.splice(1, 0, CONCEITO_DA_MISTA_COM_FRACAO, 'fracoes.mistas');
+  }
 
   // O MMC só está em jogo quando há denominadores diferentes a igualar.
   if ((operacao === 'somar' || operacao === 'subtrair') && a.denominador !== b.denominador) {
@@ -473,12 +674,14 @@ function armadilhasDe(
   gabarito: Fracao,
   deslocamento: number,
 ): readonly Armadilha<Fracao>[] {
-  const candidatas =
-    operacao === 'somar' || operacao === 'subtrair'
+  const candidatas = [
+    ...(operacao === 'somar' || operacao === 'subtrair'
       ? armadilhasAditivas(a, b, operacao)
       : operacao === 'multiplicar'
         ? armadilhasMultiplicacao(a, b)
-        : armadilhasDivisao(a, b);
+        : armadilhasDivisao(a, b)),
+    ...armadilhasComInteiro(a, b, operacao),
+  ];
 
   const reposicionadas = candidatas.map((armadilha) => ({
     ...armadilha,
@@ -489,14 +692,21 @@ function armadilhasDe(
 }
 
 /**
- * Quantos passos a conversão inicial empurra os demais.
+ * Quantos passos as conversões iniciais empurram os demais.
  *
  * As armadilhas apontam o passo em que o aluno se perdeu. Com o enunciado em
  * forma mista, a resolução ganha um passo antes de todos os outros — e sem
  * este deslocamento o dedo passaria a apontar o passo errado.
  */
-function deslocamentoMisto(a: Fracao, b: Fracao, comMista: boolean): number {
-  return comMista && (ehNumeroMisto(a) || ehNumeroMisto(b)) ? 1 : 0;
+function deslocamentoDosPassos(a: Fracao, b: Fracao, escritas: Escritas): number {
+  const mistoConvertido =
+    (escritas[0] === 'mista' && ehNumeroMisto(a)) || (escritas[1] === 'mista' && ehNumeroMisto(b));
+
+  // O inteiro também ganha um passo só seu — o que mostra que 5 é 5/1 —, e
+  // ele vem antes de todos os outros.
+  const comInteiro = escritas.includes('inteiro');
+
+  return (mistoConvertido ? 1 : 0) + (comInteiro ? 1 : 0);
 }
 
 /**
@@ -521,6 +731,84 @@ function semColisoesDeFracao(
     vistas.push(armadilha.resposta);
     return true;
   });
+}
+
+/**
+ * Os erros que só existem quando um dos operandos é um número inteiro.
+ *
+ * São dois, e os dois vêm da mesma ideia: tratar o inteiro como se ele
+ * tivesse o denominador da outra fração. Na multiplicação isso vira
+ * 3/4 × 5 = 15/20 — que é 3/4 de novo, ou seja, multiplicar por 5 não mudou
+ * nada; na soma vira 3/4 + 5 = 8/4, somando o inteiro direto no numerador.
+ *
+ * Vazio quando não há inteiro nenhum, ou quando os dois são inteiros — aí não
+ * há fração com que confundir.
+ */
+function armadilhasComInteiro(
+  a: Fracao,
+  b: Fracao,
+  operacao: OperacaoFracao,
+): readonly Armadilha<Fracao>[] {
+  const aEhInteiro = a.denominador === 1;
+  const bEhInteiro = b.denominador === 1;
+
+  if (aEhInteiro === bEhInteiro) {
+    return [];
+  }
+
+  const fracao = aEhInteiro ? b : a;
+  const inteiro = (aEhInteiro ? a : b).numerador;
+
+  if (operacao === 'multiplicar') {
+    const nosDois = tentar(() =>
+      Fracao.criar(fracao.numerador * inteiro, fracao.denominador * inteiro),
+    );
+
+    return nosDois === null
+      ? []
+      : [
+          {
+            resposta: nosDois,
+            diagnostico:
+              `Você multiplicou ${inteiro} em cima e embaixo. O denominador de um inteiro é 1: ` +
+              `${inteiro} é ${inteiro}/1, então só o numerador é multiplicado. Repare que ` +
+              'multiplicar os dois termos pelo mesmo número não muda a fração — o resultado ' +
+              'teria ficado igual ao que estava no enunciado.',
+            passo: 1,
+            conceito: CONCEITO_DO_INTEIRO,
+          },
+        ];
+  }
+
+  if (operacao === 'somar' || operacao === 'subtrair') {
+    // Na subtração a ordem importa: quem é subtraído de quem.
+    const numerador = aEhInteiro
+      ? operacao === 'somar'
+        ? inteiro + fracao.numerador
+        : inteiro - fracao.numerador
+      : operacao === 'somar'
+        ? fracao.numerador + inteiro
+        : fracao.numerador - inteiro;
+
+    const noNumerador = tentar(() => Fracao.criar(numerador, fracao.denominador));
+
+    return noNumerador === null
+      ? []
+      : [
+          {
+            resposta: noNumerador,
+            diagnostico:
+              `${inteiro} foi somado direto ao numerador, como se fosse ${inteiro} partes de ` +
+              `tamanho 1/${fracao.denominador}. Ele vale ${inteiro} INTEIROS, ou seja ` +
+              `${inteiro * fracao.denominador}/${fracao.denominador} — é assim que ele entra ` +
+              'na conta.',
+            passo: 1,
+            conceito: CONCEITO_DO_INTEIRO,
+          },
+        ];
+  }
+
+  return [];
 }
 
 function armadilhasAditivas(

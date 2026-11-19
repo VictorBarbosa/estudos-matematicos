@@ -1138,9 +1138,11 @@
     "vejaTambem": "See also"
   },
   "tipoFracao": {
+    "comInteiro": "operation with a whole number",
     "decimal": "decimal to fraction",
     "divisao": "division",
     "divisaoMista": "division with mixed numbers",
+    "mistaComFracao": "mixed number with fraction",
     "multiplicacao": "multiplication",
     "multiplicacaoMista": "multiplication with mixed numbers",
     "soma": "addition",
