@@ -44,7 +44,7 @@ const SEMENTES = [3, 17, 91];
  *   mostra a saída: um molde por figura, com o nome já escrito nas três
  *   línguas, em vez de um molde com o nome vindo pronto em português.
  */
-const SEM_TRADUCAO_MAXIMO = 46;
+const SEM_TRADUCAO_MAXIMO = 45;
 
 describe('tradução na tela', () => {
   it('a conta de tópicos sem tradução só desce', () => {
