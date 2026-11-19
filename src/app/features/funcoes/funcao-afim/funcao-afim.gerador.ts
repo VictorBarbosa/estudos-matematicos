@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  MoldeDeEnunciado,
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { Fracao, observarSimplificacao } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -6,10 +12,22 @@ import {
   GeradorExercicio,
   Nivel,
   SEM_FORMULA,
-  pedindoFracao,
   semColisoes,
 } from '@core/treino/models/treino.model';
 import { Historia, historiaPara } from '@features/funcoes/funcao-afim/funcao-afim.contextos';
+
+/**
+ * O aviso que entra quando a resposta não é inteira.
+ *
+ * Era uma string em português — `pedindoFracao` a colava ao enunciado — e
+ * chegava assim à tela de quem estuda em francês. Agora é um molde, como a
+ * própria pergunta.
+ */
+const COMO_FRACAO = moldesDe('funcao-afim', 'sufixo-como-fracao');
+
+/** Os sufixos de uma pergunta cuja resposta pode não ser inteira. */
+const sufixosDe = (gabarito: { readonly ehInteira: boolean }): readonly MoldeDeEnunciado[] =>
+  gabarito.ehInteira ? [] : COMO_FRACAO;
 
 const saoEquivalentes = (a: Fracao, b: Fracao): boolean => a.igualA(b);
 
@@ -47,13 +65,13 @@ export const geradorAfim: GeradorExercicio<Fracao> = {
       case 'raiz': {
         const gabarito = Fracao.criar(-b, a).simplificar();
 
+        const texto = enunciadoComSufixos(moldesDe('funcao-afim', 'raiz')[0]!, sufixosDe(gabarito));
+
         return {
           id: `afim-raiz-${a}-${b}-${rng.inteiro(0, 9999)}`,
           nivel,
-          enunciado: pedindoFracao(
-            'Qual é a raiz da função, isto é, o valor de x em que ela se anula?',
-            gabarito,
-          ),
+          enunciado: texto.enunciado,
+          traducoes: texto.traducoes,
           enunciadoTex: funcaoTex,
           gabarito,
           resolucao: {

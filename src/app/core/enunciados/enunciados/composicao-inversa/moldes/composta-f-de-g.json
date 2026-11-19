@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Calcule f(g({dados-calculo.x})).",
+    "fr": "Calculez f(g({dados-calculo.x})).",
+    "en": "Compute f(g({dados-calculo.x}))."
+  }
+}

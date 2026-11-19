@@ -1,12 +1,25 @@
+import {
+  MoldeDeEnunciado,
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Fracao, comporComPassos, inverterComPassos, observarSimplificacao } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
-import {
-  Exercicio,
-  GeradorExercicio,
-  Nivel,
-  pedindoFracao,
-  semColisoes,
-} from '@core/treino/models/treino.model';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+
+/**
+ * O aviso que entra quando a resposta não é inteira.
+ *
+ * Era uma string em português — `pedindoFracao` a colava ao enunciado — e
+ * chegava assim à tela de quem estuda em francês. Agora é um molde, como a
+ * própria pergunta.
+ */
+const COMO_FRACAO = moldesDe('composicao-inversa', 'sufixo-como-fracao');
+
+/** Os sufixos de uma pergunta cuja resposta pode não ser inteira. */
+const sufixosDe = (gabarito: { readonly ehInteira: boolean }): readonly MoldeDeEnunciado[] =>
+  gabarito.ehInteira ? [] : COMO_FRACAO;
 
 const saoEquivalentes = (a: Fracao, b: Fracao): boolean => a.igualA(b);
 
@@ -37,10 +50,17 @@ export const geradorComposicao: GeradorExercicio<Fracao> = {
       const inversa = resolucao.resultado;
       const gabarito = Fracao.criar(x - f.b, f.a).simplificar();
 
+      const texto = enunciadoComSufixos(
+        moldesDe('composicao-inversa', 'inversa-no-ponto')[0]!,
+        sufixosDe(gabarito),
+        { x },
+      );
+
       return {
         id: `composicao-inversa-${f.a}-${f.b}-${x}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: pedindoFracao(`Encontre a inversa de f e calcule f⁻¹(${x}).`, gabarito),
+        enunciado: texto.enunciado,
+        traducoes: texto.traducoes,
         enunciadoTex: fTex,
         gabarito,
         resolucao: {
@@ -99,10 +119,18 @@ export const geradorComposicao: GeradorExercicio<Fracao> = {
 
     const outraOrdem = direta ? comporComPassos(g, f).resultado : comporComPassos(f, g).resultado;
 
+    // A ordem da composição escolhe o molde: f(g(x)) e g(f(x)) são perguntas
+    // diferentes, e cada uma tem o seu texto nas três línguas.
+    const composta_ = enunciadoDoMolde(
+      moldesDe('composicao-inversa', direta ? 'composta-f-de-g' : 'composta-g-de-f')[0]!,
+      { x },
+    );
+
     return {
       id: `composicao-${direta ? 'fg' : 'gf'}-${f.a}${f.b}-${g.a}${g.b}-${x}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: direta ? `Calcule f(g(${x})).` : `Calcule g(f(${x})).`,
+      enunciado: composta_.enunciado,
+      traducoes: composta_.traducoes,
       enunciadoTex: `${fTex} \\qquad ${gTex}`,
       gabarito,
       resolucao: {

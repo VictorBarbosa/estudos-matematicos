@@ -66,6 +66,10 @@ import ecomposicaoInversaExtremo12 from '@core/enunciados/enunciados/composicao-
 import ecomposicaoInversaExtremo13 from '@core/enunciados/enunciados/composicao-inversa/extremo/13.json';
 import ecomposicaoInversaExtremo14 from '@core/enunciados/enunciados/composicao-inversa/extremo/14.json';
 import ecomposicaoInversaExtremo15 from '@core/enunciados/enunciados/composicao-inversa/extremo/15.json';
+import ecomposicaoInversaMoldesCompostaFDeG from '@core/enunciados/enunciados/composicao-inversa/moldes/composta-f-de-g.json';
+import ecomposicaoInversaMoldesCompostaGDeF from '@core/enunciados/enunciados/composicao-inversa/moldes/composta-g-de-f.json';
+import ecomposicaoInversaMoldesInversaNoPonto from '@core/enunciados/enunciados/composicao-inversa/moldes/inversa-no-ponto.json';
+import ecomposicaoInversaMoldesSufixoComoFracao from '@core/enunciados/enunciados/composicao-inversa/moldes/sufixo-como-fracao.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_COMPOSICAO_INVERSA: readonly EntradaDeEnunciado[] = [
@@ -129,4 +133,8 @@ export const ENTRADAS_DE_COMPOSICAO_INVERSA: readonly EntradaDeEnunciado[] = [
   { topico: 'composicao-inversa', nivel: 'extremo', conteudo: ecomposicaoInversaExtremo13 },
   { topico: 'composicao-inversa', nivel: 'extremo', conteudo: ecomposicaoInversaExtremo14 },
   { topico: 'composicao-inversa', nivel: 'extremo', conteudo: ecomposicaoInversaExtremo15 },
+  { topico: 'composicao-inversa', forma: 'composta-f-de-g', conteudo: ecomposicaoInversaMoldesCompostaFDeG },
+  { topico: 'composicao-inversa', forma: 'composta-g-de-f', conteudo: ecomposicaoInversaMoldesCompostaGDeF },
+  { topico: 'composicao-inversa', forma: 'inversa-no-ponto', conteudo: ecomposicaoInversaMoldesInversaNoPonto },
+  { topico: 'composicao-inversa', forma: 'sufixo-como-fracao', conteudo: ecomposicaoInversaMoldesSufixoComoFracao },
 ];

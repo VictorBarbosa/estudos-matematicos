@@ -1,3 +1,4 @@
+import { enunciadoDoMolde, moldesDe } from '@core/enunciados/moldes/moldes.model';
 import { Fracao } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -74,12 +75,24 @@ export function exercicioInequacaoModular(nivel: Nivel, rng: Rng): Exercicio<Fra
     });
   }
 
+  /*
+   * A pergunta tem duas versões — quantos satisfazem, quantos NÃO satisfazem —
+   * e cada uma é um molde. Escritas como texto no código, as duas chegavam em
+   * português a quem estuda em francês.
+   */
+  const texto = enunciadoDoMolde(
+    moldesDe(
+      'funcao-modular',
+      fora ? 'inteiros-que-nao-satisfazem' : 'inteiros-que-satisfazem',
+    )[0]!,
+    {},
+  );
+
   return {
     id: `modular-ineq-${fora ? 'fora' : 'dentro'}-${a}${b}${c}${inclui ? 'f' : 'a'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: fora
-      ? 'Quantos números inteiros NÃO satisfazem a inequação?'
-      : 'Quantos números inteiros satisfazem a inequação?',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\left|${interna}\\right| ${fora ? maior : menor} ${c}`,
     gabarito,
     resolucao: {

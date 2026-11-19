@@ -14,7 +14,15 @@ import { criarRng } from '@core/treino/rng/rng';
  * número só pode descer.
  */
 
-const SEMENTES = [3, 17, 91];
+/**
+ * As sementes da varredura.
+ *
+ * Eram três, e três não bastavam: um gerador com seis ramos mostra cada um em
+ * uma fração dos sorteios, e o ramo sem tradução simplesmente não saía. A
+ * conta dizia 45 tópicos; com sessenta sementes eram 53. O guarda não estava
+ * errado — estava olhando pouco.
+ */
+const SEMENTES = Array.from({ length: 60 }, (_, indice) => indice * 7 + 1);
 
 /**
  * Quantos tópicos ainda não mostram tradução.
@@ -44,7 +52,12 @@ const SEMENTES = [3, 17, 91];
  *   mostra a saída: um molde por figura, com o nome já escrito nas três
  *   línguas, em vez de um molde com o nome vindo pronto em português.
  */
-const SEM_TRADUCAO_MAXIMO = 45;
+/*
+ * 53 quando a varredura passou a olhar sessenta sementes; 48 depois da
+ * primeira entrega, que acabou com `pedindoFracao` — a função que colava
+ * « Responda como fração.» em português ao enunciado de quatro tópicos.
+ */
+const SEM_TRADUCAO_MAXIMO = 48;
 
 describe('tradução na tela', () => {
   it('a conta de tópicos sem tradução só desce', () => {

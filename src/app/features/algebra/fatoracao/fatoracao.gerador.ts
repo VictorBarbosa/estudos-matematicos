@@ -1,4 +1,8 @@
-import { moldesDe, textoDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  MoldeDeEnunciado,
+  enunciadoComSufixos,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, fatorarComPassos, formatar, mdc } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -16,7 +20,18 @@ type Pergunta =
   | 'cubos'
   | 'agrupamento';
 
-const COMO_FRACAO = ' Responda como fração, ex.: 5/2.';
+/**
+ * O aviso que entra quando a raiz não é inteira.
+ *
+ * Era uma string em português colada ao enunciado, e chegava assim à tela de
+ * quem estuda em francês. Agora é um molde como qualquer outro: o texto está
+ * no arquivo, nas três línguas, e `enunciadoComSufixos` o junta à pergunta.
+ */
+const COMO_FRACAO = moldesDe('fatoracao', 'sufixo-como-fracao');
+
+/** Os sufixos de uma pergunta cuja resposta pode não ser inteira. */
+const sufixosDe = (gabarito: number): readonly MoldeDeEnunciado[] =>
+  Number.isInteger(gabarito) ? [] : COMO_FRACAO;
 
 /**
  * Exercícios de fatoração.
@@ -45,12 +60,13 @@ export const geradorFatoracao: GeradorExercicio<number> = {
     const resolucao = fatorarComPassos(polinomio);
     const gabarito = Math.max(...raizes);
 
+    const texto = enunciadoComSufixos(moldesDe('fatoracao', 'forma-1')[0]!, sufixosDe(gabarito));
+
     return {
       id: `fatoracao-${nivel}-${polinomio.paraTex()}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        textoDoMolde(moldesDe('fatoracao', 'forma-1')[0]!, {}, 'pt') +
-        (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `${polinomio.paraTex()} = 0`,
       gabarito,
       resolucao: {
@@ -155,12 +171,13 @@ function exercicioCubos(nivel: Nivel, rng: Rng): Exercicio<number> {
   const fatorQuadratico = `${a === 1 ? '' : a * a}x^{2} ${opMeio} ${coefMeio}x + ${b * b}`;
   const delta = (a * b) ** 2 - 4 * a * a * b * b;
 
+  const texto = enunciadoComSufixos(moldesDe('fatoracao', 'forma-2')[0]!, sufixosDe(gabarito));
+
   return {
     id: `fatoracao-cubos-${a}${op}${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('fatoracao', 'forma-2')[0]!, {}, 'pt') +
-      (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `${polinomio.paraTex()} = 0`,
     gabarito,
     resolucao: {
@@ -257,12 +274,13 @@ function exercicioAgrupamento(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = Math.max(...raizes);
   const gabaritoTex = gabarito === raizLinear ? fracaoTex(-b, a) : `${gabarito}`;
 
+  const texto = enunciadoComSufixos(moldesDe('fatoracao', 'forma-3')[0]!, sufixosDe(gabarito));
+
   return {
     id: `fatoracao-agrupamento-${a}${b}${s * k2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('fatoracao', 'forma-3')[0]!, {}, 'pt') +
-      (Number.isInteger(gabarito) ? '' : COMO_FRACAO),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `${polinomio.paraTex()} = 0`,
     gabarito,
     resolucao: {

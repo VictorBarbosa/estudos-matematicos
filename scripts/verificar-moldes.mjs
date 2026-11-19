@@ -114,16 +114,17 @@ for (const achado of codigo.matchAll(/moldesDe\(\s*'([^']+)'\s*,([^)]*)\)/g)) {
 }
 
 /**
- * Tópicos em que a forma vem de uma VARIÁVEL ou de uma CHAMADA.
+ * Tópicos em que a forma vem de uma VARIÁVEL, de uma CHAMADA ou de um ÍNDICE.
  *
- * `moldesDe('x', forma)` e `moldesDe('x', formaDoMolde(escritas))` são o mesmo
- * caso: não há como saber estaticamente quais formas são pedidas, e acusar
- * órfão seria acusar o inocente. O tópico sai da conta — e é por isso que este
- * guarda não substitui `lacunas-preenchidas.spec.ts`, que executa de verdade.
+ * `moldesDe('x', forma)`, `moldesDe('x', formaDoMolde(escritas))` e
+ * `moldesDe('x', MOLDE_DO_MULTIPLO[m - 2]!)` são o mesmo caso: não há como
+ * saber estaticamente quais formas são pedidas, e acusar órfão seria acusar o
+ * inocente. O tópico sai da conta — e é por isso que este guarda não
+ * substitui `lacunas-preenchidas.spec.ts`, que executa de verdade.
  */
 const porVariavel = new Set();
 for (const achado of codigo.matchAll(
-  /moldesDe\(\s*'([^']+)'\s*,\s*[A-Za-z_$][\w$]*\s*(?:\([^)]*\))?\s*\)/g,
+  /moldesDe\(\s*'([^']+)'\s*,\s*[A-Za-z_$][\w$]*\s*(?:\([^)]*\)|\[[^\]]*\]!?)?\s*\)/g,
 )) {
   porVariavel.add(achado[1]);
 }

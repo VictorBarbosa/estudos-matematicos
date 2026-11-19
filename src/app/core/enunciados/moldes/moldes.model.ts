@@ -176,3 +176,42 @@ export function enunciadoDoMolde(
     },
   };
 }
+
+/**
+ * O enunciado com um ou mais SUFIXOS, cada um também vindo do arquivo.
+ *
+ * Dezenas de geradores montam a pergunta como `molde + sufixo escrito em
+ * TypeScript`: «Fatore a expressão e informe a MAIOR raiz.» mais, quando a
+ * raiz não é inteira, « Responda como fração, ex.: 5/2.». O molde está nas
+ * três línguas e o sufixo não está em nenhuma — então metade da frase chegava
+ * à tela em português a quem escolheu francês.
+ *
+ * Duplicar o enunciado inteiro num segundo molde resolveria, e multiplicaria
+ * por dois o texto a manter: mudar a pergunta exigiria mudar as duas cópias, e
+ * uma delas ficaria para trás. O sufixo é um molde próprio, com a sua forma, e
+ * entra por aqui — o texto continua inteiro no arquivo, sem repetição.
+ *
+ * Os sufixos são opcionais e entram na ordem dada, separados por um espaço.
+ */
+export function enunciadoComSufixos(
+  molde: MoldeDeEnunciado,
+  sufixos: readonly MoldeDeEnunciado[],
+  valores: Readonly<Record<string, number | string>> = {},
+): EnunciadoTrilingue {
+  const juntar = (idioma: Idioma): string =>
+    [molde, ...sufixos]
+      .map((parte) => textoDoMolde(parte, valores, idioma).trim())
+      .filter((texto) => texto.length > 0)
+      .join(' ');
+
+  const base = enunciadoDoMolde(molde, valores);
+
+  return {
+    enunciado: juntar('pt'),
+    dica: base.dica,
+    traducoes: {
+      fr: { enunciado: juntar('fr'), dica: base.traducoes.fr?.dica },
+      en: { enunciado: juntar('en'), dica: base.traducoes.en?.dica },
+    },
+  };
+}

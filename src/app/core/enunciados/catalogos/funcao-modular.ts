@@ -67,6 +67,11 @@ import efuncaoModularExtremo13 from '@core/enunciados/enunciados/funcao-modular/
 import efuncaoModularExtremo14 from '@core/enunciados/enunciados/funcao-modular/extremo/14.json';
 import efuncaoModularExtremo15 from '@core/enunciados/enunciados/funcao-modular/extremo/15.json';
 import efuncaoModularMoldesForma1 from '@core/enunciados/enunciados/funcao-modular/moldes/forma-1.json';
+import efuncaoModularMoldesBicoDoGrafico from '@core/enunciados/enunciados/funcao-modular/moldes/bico-do-grafico.json';
+import efuncaoModularMoldesEquacaoModular from '@core/enunciados/enunciados/funcao-modular/moldes/equacao-modular.json';
+import efuncaoModularMoldesInteirosQueNaoSatisfazem from '@core/enunciados/enunciados/funcao-modular/moldes/inteiros-que-nao-satisfazem.json';
+import efuncaoModularMoldesInteirosQueSatisfazem from '@core/enunciados/enunciados/funcao-modular/moldes/inteiros-que-satisfazem.json';
+import efuncaoModularMoldesSufixoComoFracao from '@core/enunciados/enunciados/funcao-modular/moldes/sufixo-como-fracao.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_FUNCAO_MODULAR: readonly EntradaDeEnunciado[] = [
@@ -131,4 +136,9 @@ export const ENTRADAS_DE_FUNCAO_MODULAR: readonly EntradaDeEnunciado[] = [
   { topico: 'funcao-modular', nivel: 'extremo', conteudo: efuncaoModularExtremo14 },
   { topico: 'funcao-modular', nivel: 'extremo', conteudo: efuncaoModularExtremo15 },
   { topico: 'funcao-modular', forma: 'forma-1', conteudo: efuncaoModularMoldesForma1 },
+  { topico: 'funcao-modular', forma: 'bico-do-grafico', conteudo: efuncaoModularMoldesBicoDoGrafico },
+  { topico: 'funcao-modular', forma: 'equacao-modular', conteudo: efuncaoModularMoldesEquacaoModular },
+  { topico: 'funcao-modular', forma: 'inteiros-que-nao-satisfazem', conteudo: efuncaoModularMoldesInteirosQueNaoSatisfazem },
+  { topico: 'funcao-modular', forma: 'inteiros-que-satisfazem', conteudo: efuncaoModularMoldesInteirosQueSatisfazem },
+  { topico: 'funcao-modular', forma: 'sufixo-como-fracao', conteudo: efuncaoModularMoldesSufixoComoFracao },
 ];

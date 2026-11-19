@@ -1,4 +1,12 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  MoldeDeEnunciado,
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
+import { EnunciadoTrilingue } from '@core/treino/textos/texto-trilingue';
 import { Fracao, mmcLista, observarSimplificacao, resolverLinearComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -6,9 +14,21 @@ import {
   Exercicio,
   GeradorExercicio,
   Nivel,
-  pedindoFracao,
   semColisoes,
 } from '@core/treino/models/treino.model';
+
+/**
+ * O aviso que entra quando a resposta não é inteira.
+ *
+ * Era uma string em português — `pedindoFracao` a colava ao enunciado — e
+ * chegava assim à tela de quem estuda em francês. Agora é um molde, como a
+ * própria pergunta.
+ */
+const COMO_FRACAO = moldesDe('equacao-primeiro-grau', 'sufixo-como-fracao');
+
+/** Os sufixos de uma pergunta cuja resposta pode não ser inteira. */
+const sufixosDe = (gabarito: { readonly ehInteira: boolean }): readonly MoldeDeEnunciado[] =>
+  gabarito.ehInteira ? [] : COMO_FRACAO;
 
 const saoEquivalentes = (a: Fracao, b: Fracao): boolean => a.igualA(b);
 
@@ -58,10 +78,16 @@ export const geradorEquacao1: GeradorExercicio<Fracao> = {
     const resolucao = resolverLinearComPassos(a, b, c);
     const gabarito = resolucao.resultado.raiz;
 
+    const texto = enunciadoComSufixos(
+      moldesDe('equacao-primeiro-grau', 'resolva-x')[0]!,
+      sufixosDe(gabarito),
+    );
+
     return {
       id: `equacao1-${nivel}-${a}-${b}-${c}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: pedindoFracao('Resolva a equação e informe o valor exato de x.', gabarito),
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `${a === 1 ? '' : a === -1 ? '-' : a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)} = ${c}`,
       gabarito,
       resolucao: { resultado: gabarito, passos: resolucao.passos },
@@ -235,10 +261,16 @@ function exercicioFracoes(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
   const ladoDireitoTex = extremo ? `\\frac{x}{${t}} ${k === 0 ? '' : sg(k)}` : `${k}`;
   const ladoDireitoMult = extremo ? `${C}x ${k === 0 ? '' : sg(k * L)}` : `${k * L}`;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('equacao-primeiro-grau', 'resolva-x')[0]!,
+    sufixosDe(gabarito),
+  );
+
   return {
     id: `equacao1-fracoes-${p}${r}${extremo ? t : ''}-${m}${n}${k}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: pedindoFracao('Resolva a equação e informe o valor exato de x.', gabarito),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\frac{${binomio(m)}}{${p}} - \\frac{${binomio(n)}}{${r}} = ${ladoDireitoTex}`,
     gabarito,
     resolucao: {
@@ -296,7 +328,8 @@ function exercicioFracoes(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
 
 type Cenario = 'taxi' | 'idades' | 'perimetro' | 'consecutivos';
 
-const VEZES = ['dobro', 'triplo', 'quádruplo'] as const;
+/** O molde de cada múltiplo: a palavra está escrita dentro dele, em três línguas. */
+const MOLDE_DO_MULTIPLO = ['idades-dobro', 'idades-triplo', 'idades-quadruplo'] as const;
 
 /**
  * Problema de enunciado que vira equação do 1º grau.
@@ -313,7 +346,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
         : ['perimetro', 'consecutivos', 'idades'],
   );
 
-  let enunciado: string;
+  let texto: EnunciadoTrilingue;
   let resposta: number;
   let passos: { descricao: string; tex: string; nota?: string }[];
   let erradas: Armadilha<Fracao>[];
@@ -328,7 +361,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const x = rng.inteiro(3, 25);
       const T = b + p * x;
       resposta = x;
-      enunciado = textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-2')[0]!, { b, p, T }, 'pt');
+      texto = enunciadoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-2')[0]!, { b, p, T });
       dados =
         `\\text{bandeirada} = \\text{R}\\$\\,${b} \\qquad \\text{por km} = \\text{R}\\$\\,${p} ` +
         `\\qquad \\text{total} = \\text{R}\\$\\,${T}`;
@@ -366,11 +399,17 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const k = rng.inteiro(2, 10);
       const S = (m + 1) * x + 2 * k;
       resposta = x;
-      enunciado = textoDoMolde(
-        moldesDe('equacao-primeiro-grau', 'forma-3')[0]!,
-        { v1: VEZES[m - 2], k, S },
-        'pt',
-      );
+      /*
+       * O múltiplo escolhe o MOLDE, e não um valor dentro dele.
+       *
+       * «o dobro» era passado como dado — e atravessava a tradução intacta:
+       * o enunciado inglês dizia «Ana has the dobro of Bia's age». Cada
+       * múltiplo tem o seu molde, com a palavra escrita nas três línguas.
+       */
+      texto = enunciadoDoMolde(moldesDe('equacao-primeiro-grau', MOLDE_DO_MULTIPLO[m - 2]!)[0]!, {
+        k,
+        S,
+      });
       dados = `\\text{Ana} = ${m} \\times \\text{Bia} \\qquad \\text{daqui a } ${k} \\text{ anos: soma} = ${S} \\text{ anos}`;
       passos = [
         {
@@ -418,7 +457,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const x = rng.inteiro(2, 20);
       const P = 4 * x + 2 * d;
       resposta = x;
-      enunciado = textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-4')[0]!, { d, P }, 'pt');
+      texto = enunciadoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-4')[0]!, { d, P });
       dados = `\\text{comprimento} = \\text{largura} + ${d}\\,\\text{cm} \\qquad P = ${P}\\,\\text{cm}`;
       passos = [
         {
@@ -459,7 +498,7 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
       const x = rng.inteiro(3, 40);
       const S = 3 * x + 3;
       resposta = x + 2;
-      enunciado = textoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-5')[0]!, { S }, 'pt');
+      texto = enunciadoDoMolde(moldesDe('equacao-primeiro-grau', 'forma-5')[0]!, { S });
       dados = `\\text{3 quantidades consecutivas} \\qquad \\text{soma} = ${S} \\text{ livros}`;
       passos = [
         {
@@ -502,7 +541,8 @@ function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<Fracao> {
   return {
     id: `equacao1-problema-${cenario}-${resposta}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: dados,
     gabarito,
     resolucao: { resultado: gabarito, passos },

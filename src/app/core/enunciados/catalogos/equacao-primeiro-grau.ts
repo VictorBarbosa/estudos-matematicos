@@ -68,9 +68,13 @@ import eequacaoPrimeiroGrauExtremo14 from '@core/enunciados/enunciados/equacao-p
 import eequacaoPrimeiroGrauExtremo15 from '@core/enunciados/enunciados/equacao-primeiro-grau/extremo/15.json';
 import eequacaoPrimeiroGrauMoldesForma1 from '@core/enunciados/enunciados/equacao-primeiro-grau/moldes/forma-1.json';
 import eequacaoPrimeiroGrauMoldesForma2 from '@core/enunciados/enunciados/equacao-primeiro-grau/moldes/forma-2.json';
-import eequacaoPrimeiroGrauMoldesForma3 from '@core/enunciados/enunciados/equacao-primeiro-grau/moldes/forma-3.json';
 import eequacaoPrimeiroGrauMoldesForma4 from '@core/enunciados/enunciados/equacao-primeiro-grau/moldes/forma-4.json';
 import eequacaoPrimeiroGrauMoldesForma5 from '@core/enunciados/enunciados/equacao-primeiro-grau/moldes/forma-5.json';
+import eequacaoPrimeiroGrauMoldesIdadesDobro from '@core/enunciados/enunciados/equacao-primeiro-grau/moldes/idades-dobro.json';
+import eequacaoPrimeiroGrauMoldesIdadesQuadruplo from '@core/enunciados/enunciados/equacao-primeiro-grau/moldes/idades-quadruplo.json';
+import eequacaoPrimeiroGrauMoldesIdadesTriplo from '@core/enunciados/enunciados/equacao-primeiro-grau/moldes/idades-triplo.json';
+import eequacaoPrimeiroGrauMoldesResolvaX from '@core/enunciados/enunciados/equacao-primeiro-grau/moldes/resolva-x.json';
+import eequacaoPrimeiroGrauMoldesSufixoComoFracao from '@core/enunciados/enunciados/equacao-primeiro-grau/moldes/sufixo-como-fracao.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_EQUACAO_PRIMEIRO_GRAU: readonly EntradaDeEnunciado[] = [
@@ -136,7 +140,11 @@ export const ENTRADAS_DE_EQUACAO_PRIMEIRO_GRAU: readonly EntradaDeEnunciado[] = 
   { topico: 'equacao-primeiro-grau', nivel: 'extremo', conteudo: eequacaoPrimeiroGrauExtremo15 },
   { topico: 'equacao-primeiro-grau', forma: 'forma-1', conteudo: eequacaoPrimeiroGrauMoldesForma1 },
   { topico: 'equacao-primeiro-grau', forma: 'forma-2', conteudo: eequacaoPrimeiroGrauMoldesForma2 },
-  { topico: 'equacao-primeiro-grau', forma: 'forma-3', conteudo: eequacaoPrimeiroGrauMoldesForma3 },
   { topico: 'equacao-primeiro-grau', forma: 'forma-4', conteudo: eequacaoPrimeiroGrauMoldesForma4 },
   { topico: 'equacao-primeiro-grau', forma: 'forma-5', conteudo: eequacaoPrimeiroGrauMoldesForma5 },
+  { topico: 'equacao-primeiro-grau', forma: 'idades-dobro', conteudo: eequacaoPrimeiroGrauMoldesIdadesDobro },
+  { topico: 'equacao-primeiro-grau', forma: 'idades-quadruplo', conteudo: eequacaoPrimeiroGrauMoldesIdadesQuadruplo },
+  { topico: 'equacao-primeiro-grau', forma: 'idades-triplo', conteudo: eequacaoPrimeiroGrauMoldesIdadesTriplo },
+  { topico: 'equacao-primeiro-grau', forma: 'resolva-x', conteudo: eequacaoPrimeiroGrauMoldesResolvaX },
+  { topico: 'equacao-primeiro-grau', forma: 'sufixo-como-fracao', conteudo: eequacaoPrimeiroGrauMoldesSufixoComoFracao },
 ];

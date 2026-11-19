@@ -68,6 +68,8 @@ import efuncaoAfimExtremo14 from '@core/enunciados/enunciados/funcao-afim/extrem
 import efuncaoAfimExtremo15 from '@core/enunciados/enunciados/funcao-afim/extremo/15.json';
 import efuncaoAfimMoldesForma1 from '@core/enunciados/enunciados/funcao-afim/moldes/forma-1.json';
 import efuncaoAfimMoldesForma2 from '@core/enunciados/enunciados/funcao-afim/moldes/forma-2.json';
+import efuncaoAfimMoldesRaiz from '@core/enunciados/enunciados/funcao-afim/moldes/raiz.json';
+import efuncaoAfimMoldesSufixoComoFracao from '@core/enunciados/enunciados/funcao-afim/moldes/sufixo-como-fracao.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_FUNCAO_AFIM: readonly EntradaDeEnunciado[] = [
@@ -133,4 +135,6 @@ export const ENTRADAS_DE_FUNCAO_AFIM: readonly EntradaDeEnunciado[] = [
   { topico: 'funcao-afim', nivel: 'extremo', conteudo: efuncaoAfimExtremo15 },
   { topico: 'funcao-afim', forma: 'forma-1', conteudo: efuncaoAfimMoldesForma1 },
   { topico: 'funcao-afim', forma: 'forma-2', conteudo: efuncaoAfimMoldesForma2 },
+  { topico: 'funcao-afim', forma: 'raiz', conteudo: efuncaoAfimMoldesRaiz },
+  { topico: 'funcao-afim', forma: 'sufixo-como-fracao', conteudo: efuncaoAfimMoldesSufixoComoFracao },
 ];

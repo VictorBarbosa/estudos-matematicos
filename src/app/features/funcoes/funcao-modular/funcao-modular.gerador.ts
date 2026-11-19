@@ -1,15 +1,28 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  MoldeDeEnunciado,
+  enunciadoComSufixos,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { Fracao, observarSimplificacao } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
-import {
-  Exercicio,
-  GeradorExercicio,
-  Nivel,
-  pedindoFracao,
-  semColisoes,
-} from '@core/treino/models/treino.model';
+import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 import { exercicioInequacaoModular } from '@features/funcoes/funcao-modular/funcao-modular.inequacoes';
+
+/**
+ * O aviso que entra quando a resposta não é inteira.
+ *
+ * Era uma string em português — `pedindoFracao` a colava ao enunciado — e
+ * chegava assim à tela de quem estuda em francês. Agora é um molde, como a
+ * própria pergunta.
+ */
+const COMO_FRACAO = moldesDe('funcao-modular', 'sufixo-como-fracao');
+
+/** Os sufixos de uma pergunta cuja resposta pode não ser inteira. */
+const sufixosDe = (gabarito: { readonly ehInteira: boolean }): readonly MoldeDeEnunciado[] =>
+  gabarito.ehInteira ? [] : COMO_FRACAO;
 
 const saoEquivalentes = (a: Fracao, b: Fracao): boolean => a.igualA(b);
 
@@ -37,10 +50,16 @@ export const geradorModular: GeradorExercicio<Fracao> = {
     if (pergunta === 'bico') {
       const gabarito = Fracao.criar(-b, a).simplificar();
 
+      const texto = enunciadoComSufixos(
+        moldesDe('funcao-modular', 'bico-do-grafico')[0]!,
+        sufixosDe(gabarito),
+      );
+
       return {
         id: `modular-bico-${a}-${b}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: pedindoFracao('Em que valor de x fica o "bico" do gráfico?', gabarito),
+        enunciado: texto.enunciado,
+        traducoes: texto.traducoes,
         enunciadoTex: funcaoTex,
         gabarito,
         resolucao: {
@@ -102,13 +121,16 @@ export const geradorModular: GeradorExercicio<Fracao> = {
         a,
       ).simplificar();
 
+      const texto = enunciadoComSufixos(
+        moldesDe('funcao-modular', 'equacao-modular')[0]!,
+        sufixosDe(gabarito),
+      );
+
       return {
         id: `modular-equacao-${a}-${b}-${k}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: pedindoFracao(
-          'Resolva a equação modular e informe a MAIOR das soluções.',
-          gabarito,
-        ),
+        enunciado: texto.enunciado,
+        traducoes: texto.traducoes,
         enunciadoTex: `\\left|${interna}\\right| = ${k}`,
         gabarito,
         resolucao: {
