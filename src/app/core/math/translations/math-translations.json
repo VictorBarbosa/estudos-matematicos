@@ -631,6 +631,30 @@
     "fr": "La couronne est ce qui reste du grand cercle une fois le petit retiré.",
     "en": "The annulus is what is left of the larger circle once the smaller is removed."
   },
+  "A correlação é desprezível.": {
+    "fr": "La corrélation est négligeable.",
+    "en": "The correlation is negligible."
+  },
+  "A correlação é forte e negativa.": {
+    "fr": "La corrélation est forte et négative.",
+    "en": "The correlation is strong and negative."
+  },
+  "A correlação é forte e positiva.": {
+    "fr": "La corrélation est forte et positive.",
+    "en": "The correlation is strong and positive."
+  },
+  "A correlação é moderada e positiva.": {
+    "fr": "La corrélation est modérée et positive.",
+    "en": "The correlation is moderate and positive."
+  },
+  "A correlação é muito forte e negativa.": {
+    "fr": "La corrélation est très forte et négative.",
+    "en": "The correlation is very strong and negative."
+  },
+  "A correlação é muito forte e positiva.": {
+    "fr": "La corrélation est très forte et positive.",
+    "en": "The correlation is very strong and positive."
+  },
   "A corrente é a mesma nos dois; cada um fica com a fração da tensão igual à sua fração da resistência.": {
     "fr": "Le courant est le même dans les deux ; chacun prend la fraction de tension égale à sa fraction de résistance.",
     "en": "The current is the same in both; each takes the share of voltage equal to its share of resistance."
@@ -826,6 +850,10 @@
   "A diretriz é y = −p.": {
     "fr": "La directrice est y = −p.",
     "en": "The directrix is y = −p."
+  },
+  "A direção efetiva é de # graus, e não a que o nariz aponta.": {
+    "fr": "La direction effective est de # degrés, et non celle que pointe le nez de l’appareil.",
+    "en": "The effective heading is # degrees, not the one the nose points at."
   },
   "A direção precisa ser unitária, senão a taxa sai escalada.": {
     "fr": "La direction doit être unitaire, sinon le taux est décalé.",
@@ -1587,6 +1615,10 @@
     "fr": "La normale est perpendiculaire aux deux : le produit vectoriel (avec a positif).",
     "en": "The normal is perpendicular to both: the cross product (with a positive)."
   },
+  "A normalização ficou pela metade: é preciso dividir pelos DOIS desvios padrão, o de x e o de y.": {
+    "fr": "La normalisation est restée à moitié faite : il faut diviser par les DEUX écarts types, celui de x et celui de y.",
+    "en": "The normalisation was left half done: you have to divide by BOTH standard deviations, x’s and y’s."
+  },
   "A operação ficou invertida: para achar o cateto, MULTIPLICAMOS a hipotenusa pela razão. Dividir seria o caminho para encontrar a hipotenusa a partir do cateto.": {
     "fr": "L’opération est inversée : pour trouver la cathète, on MULTIPLIE l’hypoténuse par le rapport. Diviser serait le chemin pour trouver l’hypoténuse à partir de la cathète.",
     "en": "The operation is backwards: to find the leg, you MULTIPLY the hypotenuse by the ratio. Dividing would be the way to find the hypotenuse from the leg."
@@ -1662,6 +1694,10 @@
   "A origem e os dois pontos formam um triângulo: lados r₁ e r₂ com o ângulo Δθ entre eles.": {
     "fr": "L’origine et les deux points forment un triangle : les côtés r₁ et r₂ avec l’angle Δθ entre eux.",
     "en": "The origin and the two points form a triangle: sides r₁ and r₂ with the angle Δθ between them."
+  },
+  "A parte do barco que aponta rio acima tem de anular a correnteza: #·sen θ = #.": {
+    "fr": "La part du bateau dirigée vers l’amont doit annuler le courant : #·sin θ = #.",
+    "en": "The part of the boat aimed upstream has to cancel the current: #·sin θ = #."
   },
   "A parte em cima: nenhum elemento pesa mais que o composto inteiro.": {
     "fr": "La partie au-dessus : aucun élément ne pèse plus que le composé entier.",
@@ -2075,6 +2111,10 @@
     "fr": "Le rapport entre l’intensité et celle de référence.",
     "en": "The ratio between the intensity and the reference one."
   },
+  "A razão entre as velocidades é um SENO, não uma tangente: a velocidade do barco é a hipotenusa do triângulo, e a correnteza é o cateto a ser anulado.": {
+    "fr": "Le rapport entre les vitesses est un SINUS, et non une tangente : la vitesse du bateau est l’hypoténuse du triangle, et le courant la cathète à annuler.",
+    "en": "The ratio of the speeds is a SINE, not a tangent: the boat’s speed is the hypotenuse of the triangle, and the current the leg to be cancelled."
+  },
   "A razão entre dois números é o quociente entre eles.": {
     "fr": "Le rapport entre deux nombres est le quotient entre eux.",
     "en": "The ratio between two numbers is their quotient."
@@ -2166,6 +2206,10 @@
   "A razão k multiplica COMPRIMENTOS. O volume tem três dimensões, então o fator é k³.": {
     "fr": "Le rapport k multiplie des LONGUEURS. Le volume a trois dimensions, donc le facteur est k³.",
     "en": "The ratio k multiplies LENGTHS. Volume has three dimensions, so the factor is k³."
+  },
+  "A razão precisa caber entre # e # para que exista ângulo.": {
+    "fr": "Le rapport doit tenir entre # et # pour qu’un angle existe.",
+    "en": "The ratio has to fit between # and # for an angle to exist."
   },
   "A razão saiu invertida: a derivada do numerador vai em cima.": {
     "fr": "Le rapport est inversé : la dérivée du numérateur va en haut.",
@@ -2387,6 +2431,10 @@
     "fr": "Le tableau donne l'aire à gauche de ce z.",
     "en": "The table gives the area to the left of this z."
   },
+  "A tangencial é a projeção da aceleração na direção da velocidade: produto escalar a·v, dividido pelo módulo de v.": {
+    "fr": "La tangentielle est la projection de l’accélération dans la direction de la vitesse : produit scalaire a·v, divisé par la norme de v.",
+    "en": "The tangential one is the projection of the acceleration onto the direction of the velocity: dot product a·v, divided by the magnitude of v."
+  },
   "A tangente em c tem de ter a mesma inclinação.": {
     "fr": "La tangente en c doit avoir la même pente.",
     "en": "The tangent at c must have the same slope."
@@ -2494,6 +2542,14 @@
   "A velocidade angular é uma volta inteira dividida pelo período.": {
     "fr": "La vitesse angulaire est un tour complet divisé par la période.",
     "en": "Angular velocity is one full turn divided by the period."
+  },
+  "A velocidade em relação ao solo é a aeronave mais o vento.": {
+    "fr": "La vitesse par rapport au sol est celle de l’avion plus celle du vent.",
+    "en": "The ground speed is the aircraft plus the wind."
+  },
+  "A velocidade entra ao QUADRADO. É a mesma relação do movimento circular, em que a aceleração centrípeta é v ao quadrado sobre o raio.": {
+    "fr": "La vitesse entre au CARRÉ. C’est la même relation que dans le mouvement circulaire, où l’accélération centripète vaut v au carré sur le rayon.",
+    "en": "The speed enters SQUARED. It is the same relation as in circular motion, where the centripetal acceleration is v squared over the radius."
   },
   "A velocidade inicial foi ignorada. Uma EDO de segunda ordem precisa de DUAS condições, e a segunda é justamente a derivada em zero.": {
     "fr": "La vitesse initiale a été ignorée. Une EDO du second ordre a besoin de DEUX conditions, et la seconde est précisément la dérivée en zéro.",
@@ -2754,6 +2810,10 @@
   "Ajustamos ao quadrante: somamos #°.": {
     "fr": "Nous ajustons au quadrant : nous ajoutons #°.",
     "en": "We adjust to the quadrant: we add #°."
+  },
+  "Ajuste a reta (inclinação e intercepto) e substitua o x pedido nela.": {
+    "fr": "Ajustez la droite (pente et ordonnée à l’origine) et remplacez-y le x demandé.",
+    "en": "Fit the line (slope and intercept) and substitute the requested x into it."
   },
   "Al neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Al neutre a # électrons, autant que de protons.",
@@ -3031,6 +3091,10 @@
     "fr": "Les bornes ont été traitées à l’envers. Ceux qui NE satisfont PAS se trouvent entre les bornes, et une borne n’est exclue du compte que si elle satisfait l’inéquation.",
     "en": "The ends were handled the wrong way round. The ones that do NOT satisfy it lie between the ends, and an end is only left out of the count if it does satisfy the inequality."
   },
+  "As componentes foram somadas em módulo, como se o corpo andasse pelos catetos. O deslocamento é a hipotenusa: vale Pitágoras, não soma simples.": {
+    "fr": "Les composantes ont été additionnées en valeur absolue, comme si le corps marchait le long des cathètes. Le déplacement est l’hypoténuse : c’est Pythagore, et non une simple somme.",
+    "en": "The components were added in magnitude, as if the body walked along the legs. The displacement is the hypotenuse: Pythagoras applies, not a plain sum."
+  },
   "As constantes como #π são adimensionais e não entram na conta.": {
     "fr": "Les constantes comme #π sont adimensionnelles et n’entrent pas dans le calcul.",
     "en": "Constants such as #π are dimensionless and do not enter the computation."
@@ -3150,6 +3214,10 @@
   "As porcentagens viram frações da unidade.": {
     "fr": "Les pourcentages deviennent des fractions de l’unité.",
     "en": "The percentages become fractions of one."
+  },
+  "As posições foram somadas em vez de subtraídas. Deslocamento é a posição final MENOS a inicial.": {
+    "fr": "Les positions ont été additionnées au lieu d’être soustraites. Le déplacement est la position finale MOINS l’initiale.",
+    "en": "The positions were added instead of subtracted. Displacement is the final position MINUS the initial one."
   },
   "As potências de # se cancelam.": {
     "fr": "Les puissances de # se simplifient.",
@@ -4751,6 +4819,10 @@
     "fr": "En définissant cette valeur, la discontinuité est levée.",
     "en": "By defining that value, the discontinuity is removed."
   },
+  "Dentro da faixa, a reta interpola — que é o uso para o qual ela foi ajustada.": {
+    "fr": "Dans la plage, la droite interpole — c’est l’usage pour lequel elle a été ajustée.",
+    "en": "Inside the range, the line interpolates — which is the use it was fitted for."
+  },
   "Dentro do argumento, multiplicar comprime e dividir estica.": {
     "fr": "À l’intérieur de l’argument, multiplier comprime et diviser étire.",
     "en": "Inside the argument, multiplying compresses and dividing stretches."
@@ -5499,6 +5571,10 @@
     "fr": "En divisant par le taux.",
     "en": "Dividing by the rate."
   },
+  "Dividindo pelo tempo de # segundos.": {
+    "fr": "En divisant par le temps de # secondes.",
+    "en": "Dividing by the time of # seconds."
+  },
   "Dividindo pelos dois desvios padrão, o resultado perde a unidade.": {
     "fr": "En divisant par les deux écarts-types, le résultat perd l'unité.",
     "en": "Dividing by the two standard deviations, the result loses the unit."
@@ -5735,6 +5811,10 @@
     "fr": "Puis la valeur de l’expression de droite.",
     "en": "And then the value of the right-hand piece."
   },
+  "E esse x está dentro da faixa observada.": {
+    "fr": "Et ce x se trouve dans la plage observée.",
+    "en": "And that x lies inside the observed range."
+  },
   "E extraindo a raiz.": {
     "fr": "Et en extrayant la racine.",
     "en": "And taking the root."
@@ -5879,6 +5959,10 @@
     "fr": "Elle converge bel et bien, mais l’exercice demande la valeur. Dire qu’elle existe n’est pas la calculer.",
     "en": "It does converge, but the exercise asks for the value. Saying it exists is not computing it."
   },
+  "Ela já diz o SENTIDO da relação, mas o valor depende das unidades.": {
+    "fr": "Elle dit déjà le SENS de la relation, mais la valeur dépend des unités.",
+    "en": "It already tells the DIRECTION of the relation, but its value depends on the units."
+  },
   "Ela mede o afastamento máximo em relação ao eixo da oscilação.": {
     "fr": "Elle mesure l’écart maximal par rapport à l’axe de l’oscillation.",
     "en": "It measures the maximum distance from the axis of oscillation."
@@ -5898,6 +5982,10 @@
   "Elas dividem o losango em quatro triângulos retângulos iguais.": {
     "fr": "Elles partagent le losange en quatre triangles rectangles égaux.",
     "en": "They split the rhombus into four equal right triangles."
+  },
+  "Ele não depende do caminho: só de onde se começou e onde se terminou.": {
+    "fr": "Il ne dépend pas du chemin : seulement d’où l’on est parti et où l’on est arrivé.",
+    "en": "It does not depend on the path: only on where you started and where you ended."
   },
   "Ele é a fração da variação de y que a reta consegue explicar.": {
     "fr": "Il est la fraction de la variation de y que la droite peut expliquer.",
@@ -6691,6 +6779,10 @@
     "fr": "Entre quels multiples de #° l’angle se trouve-t-il ?",
     "en": "Between which multiples of #° does the angle lie?"
   },
+  "Entrou a aceleração inteira no denominador. Quem curva a trajetória é só a componente NORMAL — a tangencial apenas muda a rapidez.": {
+    "fr": "Toute l’accélération est entrée au dénominateur. Ce qui courbe la trajectoire n’est que la composante NORMALE — la tangentielle ne change que la rapidité.",
+    "en": "The whole acceleration went into the denominator. What bends the path is only the NORMAL component — the tangential one only changes the speed."
+  },
   "Entrou um termo a mais do que o grau # permite. A aproximação fica melhor, mas não é a que o enunciado pediu.": {
     "fr": "Un terme de trop est entré par rapport au degré #. L’approximation est meilleure, mais ce n’est pas celle que l’énoncé demandait.",
     "en": "One term more than degree # allows got in. The approximation is better, but it is not the one the question asked for."
@@ -7103,6 +7195,14 @@
     "fr": "C’est la charge de l’anion lui-même. Son indice est la charge de l’AUTRE, réduite — c’est le croisement.",
     "en": "That is the anion’s own charge. Its subscript is the charge of the OTHER one, reduced — that is the crossing."
   },
+  "Essa é a componente NORMAL, que curva a trajetória. A tangencial é a que acelera ou freia o movimento.": {
+    "fr": "C’est la composante NORMALE, qui courbe la trajectoire. La tangentielle est celle qui accélère ou freine le mouvement.",
+    "en": "That is the NORMAL component, which bends the path. The tangential one is what speeds up or slows down the motion."
+  },
+  "Essa é a componente normal da aceleração, não o raio. Falta dividir o quadrado da velocidade por ela.": {
+    "fr": "C’est la composante normale de l’accélération, et non le rayon. Il reste à diviser le carré de la vitesse par elle.",
+    "en": "That is the normal component of the acceleration, not the radius. Dividing the square of the speed by it is still missing."
+  },
   "Essa é a constante de tempo (cai a #/e ≈ #%). Para cair à metade, entra ln #.": {
     "fr": "C’est la constante de temps (chute à #/e ≈ #%). Pour tomber à la moitié, c’est ln # qui intervient.",
     "en": "That is the time constant (it falls to #/e ≈ #%). To fall to half, ln # comes in."
@@ -7110,6 +7210,14 @@
   "Essa é a contagem de átomos da fórmula, não a massa deles. Cada átomo entra com a massa do seu elemento.": {
     "fr": "C’est le nombre d’atomes de la formule, et non leur masse. Chaque atome entre avec la masse de son élément.",
     "en": "That is the count of atoms in the formula, not their mass. Each atom enters with its element’s mass."
+  },
+  "Essa é a covariância, que ainda carrega as unidades das duas variáveis. A inclinação é ela dividida pela variância de x.": {
+    "fr": "C’est la covariance, qui porte encore les unités des deux variables. La pente en est le quotient par la variance de x.",
+    "en": "That is the covariance, which still carries the units of both variables. The slope is it divided by the variance of x."
+  },
+  "Essa é a covariância, que depende das unidades. O Pearson é ela normalizada pelos dois desvios padrão, e por isso cabe sempre entre menos um e um.": {
+    "fr": "C’est la covariance, qui dépend des unités. Le Pearson en est la version normalisée par les deux écarts types, et il tient donc toujours entre moins un et un.",
+    "en": "That is the covariance, which depends on the units. Pearson’s is it normalised by the two standard deviations, which is why it always fits between minus one and one."
   },
   "Essa é a derivada PRIMEIRA, a/x. Falta derivar mais uma vez.": {
     "fr": "C’est la dérivée PREMIÈRE, a/x. Il reste à dériver une fois de plus.",
@@ -7151,6 +7259,10 @@
     "fr": "C’est l’entrée de A elle-même. L’inverse est le bloc de DROITE à la fin de l’échelonnement.",
     "en": "That is an entry of A itself. The inverse is the RIGHT block at the end of the reduction."
   },
+  "Essa é a fração NÃO explicada, que é o que sobra para os resíduos.": {
+    "fr": "C’est la fraction NON expliquée, celle qui reste aux résidus.",
+    "en": "That is the UNexplained fraction, what is left for the residuals."
+  },
   "Essa é a fração em MASSA. O que empurra a parede é partícula, não grama: a fração que vale aqui é a molar.": {
     "fr": "C’est la fraction en MASSE. Ce qui pousse la paroi, c’est la particule, pas le gramme : la fraction qui vaut ici est la molaire.",
     "en": "That is the fraction by MASS. What pushes the wall is particles, not grams: the fraction that counts here is the molar one."
@@ -7182,6 +7294,10 @@
   "Essa é a inclinação m. Falta montar a reta e achar onde ela corta o eixo y.": {
     "fr": "C’est la pente m. Il reste à monter la droite et à trouver où elle coupe l’axe des ordonnées.",
     "en": "That is the slope m. Building the line and finding where it crosses the y-axis is still missing."
+  },
+  "Essa é a inclinação, não o intercepto.": {
+    "fr": "C’est la pente, et non l’ordonnée à l’origine.",
+    "en": "That is the slope, not the intercept."
   },
   "Essa é a lateral. Faltam as duas tampas circulares.": {
     "fr": "C’est la latérale. Il manque les deux couvercles circulaires.",
@@ -7218,6 +7334,14 @@
   "Essa é a média das duas alturas, não a área. Falta multiplicar pela largura do intervalo, que vale #.": {
     "fr": "C’est la moyenne des deux hauteurs, et non l’aire. Il reste à multiplier par la largeur de l’intervalle, qui vaut #.",
     "en": "That is the average of the two heights, not the area. Multiplying by the width of the interval, which is #, is still missing."
+  },
+  "Essa é a média de y, que seria a melhor previsão se não houvesse relação nenhuma com x. A reta existe justamente para fazer melhor que isso.": {
+    "fr": "C’est la moyenne de y, qui serait la meilleure prévision s’il n’y avait aucune relation avec x. La droite existe justement pour faire mieux que cela.",
+    "en": "That is the mean of y, which would be the best prediction if there were no relation with x at all. The line exists precisely to do better than that."
+  },
+  "Essa é a média de y. O intercepto só coincide com ela quando a média de x é zero, o que aqui não acontece.": {
+    "fr": "C’est la moyenne de y. L’ordonnée à l’origine ne coïncide avec elle que si la moyenne de x est nulle, ce qui n’est pas le cas ici.",
+    "en": "That is the mean of y. The intercept only coincides with it when the mean of x is zero, which is not the case here."
   },
   "Essa é a outra solução, a menor. A equação modular tem DUAS respostas, e o enunciado pede a maior.": {
     "fr": "C’est l’autre solution, la plus petite. L’équation avec valeur absolue a DEUX réponses, et l’énoncé demande la plus grande.",
@@ -7286,6 +7410,10 @@
   "Essa é a velocidade de um corpo que apenas desliza, sem girar. Quem rola precisa gastar parte da energia para girar, e por isso chega mais devagar.": {
     "fr": "C’est la vitesse d’un corps qui ne fait que glisser, sans tourner. Ce qui roule doit dépenser une part de l’énergie pour tourner, et arrive donc plus lentement.",
     "en": "That is the speed of a body that only slides, without turning. What rolls has to spend part of the energy turning, and so arrives more slowly."
+  },
+  "Essa é a velocidade em relação ao ar, que é o que o instrumento de bordo mostra. O solo vê outra coisa, porque o próprio ar está se movendo.": {
+    "fr": "C’est la vitesse par rapport à l’air, celle qu’affiche l’instrument de bord. Le sol en voit une autre, parce que l’air lui-même se déplace.",
+    "en": "That is the airspeed, which is what the onboard instrument shows. The ground sees something else, because the air itself is moving."
   },
   "Essa é a ÁREA, que se mede em unidades quadradas. O comprimento é uma medida linear: C = #πr.": {
     "fr": "C’est l’AIRE, qui se mesure en unités carrées. La longueur est une mesure linéaire : C = #πr.",
@@ -7419,9 +7547,21 @@
     "fr": "C’est l’arc tangente brut. Le point est dans le #e quadrant : nous ajoutons #°.",
     "en": "That is the raw arctangent. The point is in quadrant #: we add #°."
   },
+  "Esse é o coeficiente de CORRELAÇÃO. A fração explicada é o quadrado dele — e é por isso que uma correlação de # explica menos da metade da variação.": {
+    "fr": "C’est le coefficient de CORRÉLATION. La fraction expliquée en est le carré — et c’est pourquoi une corrélation de # explique moins de la moitié de la variation.",
+    "en": "That is the CORRELATION coefficient. The explained fraction is its square — which is why a correlation of # explains less than half the variation."
+  },
   "Esse é o coeficiente de N, comparado direto com o de M. A condição compara as DERIVADAS: ∂M/∂y com ∂N/∂x.": {
     "fr": "C’est le coefficient de N, comparé directement à celui de M. La condition compare les DÉRIVÉES : ∂M/∂y et ∂N/∂x.",
     "en": "That is the coefficient of N, compared straight with M’s. The condition compares the DERIVATIVES: ∂M/∂y with ∂N/∂x."
+  },
+  "Esse é o coeficiente de correlação. Ele e a inclinação têm sempre o mesmo SINAL, mas medem coisas diferentes: um mede a taxa, o outro mede o alinhamento.": {
+    "fr": "C’est le coefficient de corrélation. Lui et la pente ont toujours le même SIGNE, mais mesurent des choses différentes : l’un mesure le taux, l’autre l’alignement.",
+    "en": "That is the correlation coefficient. It and the slope always have the same SIGN, but they measure different things: one measures the rate, the other the alignment."
+  },
+  "Esse é o coeficiente de determinação, que é o QUADRADO do de correlação. Ele nunca é negativo, e por isso perde a informação de sentido.": {
+    "fr": "C’est le coefficient de détermination, qui est le CARRÉ de celui de corrélation. Il n’est jamais négatif, et perd donc l’information de sens.",
+    "en": "That is the coefficient of determination, the SQUARE of the correlation one. It is never negative, and so it loses the information about direction."
   },
   "Esse é o coeficiente de outra substância da equação. A pergunta nomeia uma: confira qual.": {
     "fr": "C’est le coefficient d’une autre substance de l’équation. La question en nomme une : vérifiez laquelle.",
@@ -7430,6 +7570,10 @@
   "Esse é o comprimento do ARCO, uma medida linear. A área do setor usa πr², não #πr.": {
     "fr": "C’est la longueur de l’ARC, une mesure linéaire. L’aire du secteur utilise πr², et non #πr.",
     "en": "That is the length of the ARC, a linear measure. The sector area uses πr², not #πr."
+  },
+  "Esse é o comprimento do caminho percorrido em diagonal. A pergunta é só o quanto ele desceu rio abaixo.": {
+    "fr": "C’est la longueur du chemin parcouru en diagonale. La question ne porte que sur la distance descendue vers l’aval.",
+    "en": "That is the length of the diagonal path travelled. The question only asks how far downstream it drifted."
   },
   "Esse é o denominador da equação, que vale a². O semieixo é a raiz quadrada dele.": {
     "fr": "C’est le dénominateur de l’équation, qui vaut a². Le demi-axe en est la racine carrée.",
@@ -7451,6 +7595,10 @@
     "fr": "C’est le foyer. La directrice est de l’autre côté du sommet : y = k − p.",
     "en": "That is the focus. The directrix is on the other side of the vertex: y = k − p."
   },
+  "Esse é o intercepto, que é onde a reta corta o eixo vertical. A inclinação é o quanto y muda por unidade de x.": {
+    "fr": "C’est l’ordonnée à l’origine, là où la droite coupe l’axe vertical. La pente, c’est de combien y change par unité de x.",
+    "en": "That is the intercept, where the line crosses the vertical axis. The slope is how much y changes per unit of x."
+  },
   "Esse é o k. O pedido é m, o termo independente da segunda equação.": {
     "fr": "C’est le k. Ce qui est demandé, c’est m, le terme constant de la seconde équation.",
     "en": "That is the k. What is asked for is m, the constant term of the second equation."
@@ -7466,6 +7614,14 @@
   "Esse é o menor dos dois pontos críticos; o enunciado pede o maior.": {
     "fr": "C’est le plus petit des deux points critiques ; l’énoncé demande le plus grand.",
     "en": "That is the smaller of the two critical points; the question asks for the larger."
+  },
+  "Esse é o módulo da aceleração inteira. Só a parte dela alinhada com a velocidade muda a rapidez; a parte perpendicular muda a direção.": {
+    "fr": "C’est la norme de toute l’accélération. Seule sa part alignée avec la vitesse change la rapidité ; la part perpendiculaire change la direction.",
+    "en": "That is the magnitude of the whole acceleration. Only its part aligned with the velocity changes the speed; the perpendicular part changes the direction."
+  },
+  "Esse é o módulo do deslocamento em m. Falta dividir pelos # s.": {
+    "fr": "C’est la norme du déplacement en m. Il reste à diviser par les # s.",
+    "en": "That is the magnitude of the displacement in m. Dividing by the # s is still missing."
   },
   "Esse é o módulo, não o ângulo. São as duas coordenadas polares do ponto.": {
     "fr": "C’est le module, et non l’angle. Ce sont les deux coordonnées polaires du point.",
@@ -7507,6 +7663,10 @@
     "fr": "C’est le pi majuscule, qui MULTIPLIE. Additionner, c’est le sigma, ∑.",
     "en": "That is the capital pi, which MULTIPLIES. Adding is the sigma, ∑."
   },
+  "Esse é o primeiro valor observado. O intercepto é o valor PREVISTO em x igual a zero, que costuma estar fora da faixa medida.": {
+    "fr": "C’est la première valeur observée. L’ordonnée à l’origine est la valeur PRÉDITE en x égal à zéro, qui se trouve souvent hors de la plage mesurée.",
+    "en": "That is the first observed value. The intercept is the PREDICTED value at x equal to zero, which usually lies outside the measured range."
+  },
   "Esse é o que o subnível #d CABE. Ele só está cheio se os elétrons tiverem chegado até lá.": {
     "fr": "C’est ce que la sous-couche #d PEUT contenir. Elle n’est pleine que si les électrons y sont parvenus.",
     "en": "That is what subshell #d CAN hold. It is only full if the electrons got that far."
@@ -7531,6 +7691,10 @@
     "fr": "C’est le résultat en degrés Celsius. L’énoncé demande des kelvins, l’échelle dans laquelle la loi de Stefan-Boltzmann est valable.",
     "en": "That is the result in degrees Celsius. The question asks for kelvin, the scale in which the Stefan-Boltzmann law holds."
   },
+  "Esse é o resíduo ao quadrado — o que se soma no critério dos mínimos quadrados. O resíduo em si tem sinal.": {
+    "fr": "C’est le résidu au carré — ce qu’on additionne dans le critère des moindres carrés. Le résidu lui-même a un signe.",
+    "en": "That is the residual squared — what gets added in the least-squares criterion. The residual itself has a sign."
+  },
   "Esse é o retângulo que contém o losango. O losango é exatamente metade dele — falta dividir por #.": {
     "fr": "C’est le rectangle qui contient le losange. Le losange en est exactement la moitié — il reste à diviser par #.",
     "en": "That is the rectangle holding the rhombus. The rhombus is exactly half of it — dividing by # is still missing."
@@ -7538,6 +7702,10 @@
   "Esse é o tempo característico, em que resta uma fração #/e do inicial. A meia-vida traz um fator logaritmo de #.": {
     "fr": "C’est le temps caractéristique, où il reste une fraction #/e de l’initial. La demi-vie porte un facteur logarithme de #.",
     "en": "That is the characteristic time, when a fraction #/e of the initial amount is left. Half-life carries a factor of the logarithm of #."
+  },
+  "Esse é o tempo de travessia em segundos, não a distância em m.": {
+    "fr": "C’est le temps de traversée en secondes, et non la distance en m.",
+    "en": "That is the crossing time in seconds, not the distance in m."
   },
   "Esse é o termo independente da última linha, que decide entre impossível e indeterminado — mas é o pivô, com k, que decide se a solução é única.": {
     "fr": "C’est le terme constant de la dernière ligne, qui décide entre incompatible et indéterminé — mais c’est le pivot, avec k, qui décide si la solution est unique.",
@@ -7666,6 +7834,10 @@
   "Esse é o valor no extremo direito. O valor médio pondera todo o intervalo.": {
     "fr": "C’est la valeur à la borne de droite. La valeur moyenne pondère tout l’intervalle.",
     "en": "That is the value at the right end. The average value weighs the whole interval."
+  },
+  "Esse é o valor previsto pela reta, não o resíduo.": {
+    "fr": "C’est la valeur prédite par la droite, et non le résidu.",
+    "en": "That is the value predicted by the line, not the residual."
   },
   "Esse é o x do ponto. A pergunta é a ordenada y, que vem de y = #x.": {
     "fr": "C’est le x du point. La question porte sur l’ordonnée y, qui vient de y = #x.",
@@ -7798,6 +7970,10 @@
   "Extraindo a raiz, com r medido do centro.": {
     "fr": "En extrayant la racine, avec r mesuré depuis le centre.",
     "en": "Taking the root, with r measured from the center."
+  },
+  "Extrapolar supõe que o padrão continua lá fora, e nada no ajuste garante isso.": {
+    "fr": "Extrapoler suppose que le motif se poursuit au-delà, et rien dans l’ajustement ne le garantit.",
+    "en": "Extrapolating assumes the pattern continues out there, and nothing in the fit guarantees it."
   },
   "Extraímos a raiz com o sinal do quadrante.": {
     "fr": "Nous extrayons la racine avec le signe du quadrant.",
@@ -7959,6 +8135,10 @@
     "fr": "Il manque la division par le facteur # de l’exposant, que la primitive de l’exponentielle apporte.",
     "en": "Dividing by the factor # from the exponent, which the antiderivative of the exponential brings, is missing."
   },
+  "Faltou dividir pelo módulo da velocidade. O produto escalar sozinho não é uma projeção: ele precisa ser normalizado pela direção sobre a qual se projeta.": {
+    "fr": "Il manque la division par la norme de la vitesse. Le produit scalaire seul n’est pas une projection : il doit être normalisé par la direction sur laquelle on projette.",
+    "en": "Dividing by the magnitude of the velocity is missing. The dot product alone is not a projection: it has to be normalised by the direction being projected onto."
+  },
   "Faltou dividir por #: cada aresta pertence a duas faces e foi contada duas vezes.": {
     "fr": "Il manque la division par # : chaque arête appartient à deux faces et a été comptée deux fois.",
     "en": "The division by # is missing: each edge belongs to two faces and was counted twice."
@@ -8110,6 +8290,10 @@
   "Faltou somar a altura dos olhos (# m): o triângulo começa nela, não no chão.": {
     "fr": "Il manque l’addition de la hauteur des yeux (# m) : le triangle commence là, et non au sol.",
     "en": "Adding the eye height (# m) is missing: the triangle starts there, not at the ground."
+  },
+  "Faltou somar o intercepto, que é o valor da reta em x igual a zero.": {
+    "fr": "Il manque l’addition de l’ordonnée à l’origine, qui est la valeur de la droite en x égal à zéro.",
+    "en": "Adding the intercept, which is the value of the line at x equal to zero, is missing."
   },
   "Faltou subtrair F(#). Mesmo com ln # = #, o termo −x²/# em x = # não é zero.": {
     "fr": "Il manque la soustraction de F(#). Même avec ln # = #, le terme −x²/# en x = # n’est pas nul.",
@@ -8967,6 +9151,10 @@
     "fr": "Nous localisons le nombre dans le plan : la partie réelle sur l'axe x, l'imaginaires sur y.",
     "en": "We locate the number in the plane: the real part on the x-axis, the imaginary on y."
   },
+  "Localmente, qualquer curva se parece com um arco de círculo.": {
+    "fr": "Localement, toute courbe ressemble à un arc de cercle.",
+    "en": "Locally, any curve looks like an arc of a circle."
+  },
   "Logo a área do triângulo é a metade.": {
     "fr": "Donc l'aire du triangle est la moitié.",
     "en": "Therefore the triangle area is half."
@@ -8994,6 +9182,10 @@
   "Longe da origem, só o termo de maior grau de cada lado importa.": {
     "fr": "Loin de l'origine, seul le terme de plus haut degré de chaque côté importe.",
     "en": "Far from the origin, only the highest degree term on each side matters."
+  },
+  "Longe de #: a reta pode não ser o modelo adequado.": {
+    "fr": "Loin de # : la droite n’est peut-être pas le bon modèle.",
+    "en": "Far from #: the line may not be the right model."
   },
   "Longe do centro o erro cresce depressa, e é preciso mais termos.": {
     "fr": "Loin du centre, l’erreur croît vite, et il faut davantage de termes.",
@@ -9034,6 +9226,10 @@
   "Mais área e mais diferença aumentam o fluxo; mais espessura o reduz.": {
     "fr": "Plus d’aire et plus d’écart augmentent le flux ; plus d’épaisseur le réduit.",
     "en": "More area and more difference raise the flux; more thickness lowers it."
+  },
+  "Mas esse x está fora da faixa observada.": {
+    "fr": "Mais ce x se trouve hors de la plage observée.",
+    "en": "But that x lies outside the observed range."
   },
   "Massa vira momento de inércia, força vira torque, aceleração vira aceleração angular.": {
     "fr": "La masse devient moment d’inertie, la force devient moment de force, l’accélération devient accélération angulaire.",
@@ -10455,6 +10651,10 @@
     "fr": "Le grandissement compare les distances ; le signe moins dit si l’image est renversée.",
     "en": "The magnification compares the distances; the minus sign says whether the image is inverted."
   },
+  "O barco aponta rio acima nesse ângulo, e a resultante sai perpendicular à margem.": {
+    "fr": "Le bateau pointe vers l’amont sous cet angle, et la résultante sort perpendiculaire à la rive.",
+    "en": "The boat points upstream at that angle, and the resultant comes out perpendicular to the bank."
+  },
   "O bico fica onde a expressão DENTRO do módulo se anula.": {
     "fr": "Le sommet anguleux se trouve là où l’expression À L’INTÉRIEUR de la valeur absolue s’annule.",
     "en": "The corner sits where the expression INSIDE the absolute value vanishes."
@@ -11667,6 +11867,10 @@
     "fr": "Ce qui reste est la différence.",
     "en": "What is left is the difference."
   },
+  "O que sobra é a variação que o modelo linear não captura.": {
+    "fr": "Ce qui reste est la variation que le modèle linéaire ne capture pas.",
+    "en": "What is left is the variation the linear model does not capture."
+  },
   "O que sobrou é do #º grau: aqui Bhaskara resolve de uma vez.": {
     "fr": "Ce qui reste est du #ᵉ degré : ici la formule quadratique résout d’un coup.",
     "en": "What is left is of degree #: here the quadratic formula settles it at once."
@@ -11762,6 +11966,10 @@
   "O retângulo não tem divisão por # — esse fator é do triângulo.": {
     "fr": "Le rectangle n’a pas de division par # — ce facteur est celui du triangle.",
     "en": "The rectangle has no division by # — that factor belongs to the triangle."
+  },
+  "O rio não atrasa nem adianta a travessia: ele age numa direção que não é a dela.": {
+    "fr": "Le fleuve ne retarde ni n’accélère la traversée : il agit dans une direction qui n’est pas la sienne.",
+    "en": "The river neither delays nor speeds the crossing: it acts in a direction that is not the crossing’s."
   },
   "O salto é a diferença, direita menos esquerda.": {
     "fr": "Le saut est la différence, droite moins gauche.",
@@ -11935,6 +12143,10 @@
     "fr": "Le signe est inversé. En isolant, le terme sans dy/dx passe de l’autre côté de l’égalité, et c’est ce passage qui produit le moins devant la fraction.",
     "en": "The sign is flipped. When isolating, the term without dy/dx moves to the other side of the equation, and that move is what produces the minus in front of the fraction."
   },
+  "O sinal ficou invertido: o resíduo é o OBSERVADO menos o previsto. Positivo quer dizer que o ponto está acima da reta.": {
+    "fr": "Le signe est inversé : le résidu est l’OBSERVÉ moins le prédit. Positif veut dire que le point est au-dessus de la droite.",
+    "en": "The sign is flipped: the residual is the OBSERVED minus the predicted. Positive means the point is above the line."
+  },
   "O sinal ficou trocado. Como a operação já subtrai k·L₁, k tem o MESMO sinal da razão entre a entrada e o pivô.": {
     "fr": "Le signe est inversé. Comme l’opération soustrait déjà k·L₁, k a le MÊME signe que le rapport entre l’entrée et le pivot.",
     "en": "The sign is flipped. Since the operation already subtracts k·L₁, k has the SAME sign as the ratio of the entry to the pivot."
@@ -12014,6 +12226,10 @@
   "O tempo depende só da velocidade que aponta para a outra margem.": {
     "fr": "Le temps ne dépend que de la vitesse qui pointe vers l’autre rive.",
     "en": "The time depends only on the velocity pointing to the other bank."
+  },
+  "O tempo foi calculado com a velocidade resultante. Mas só a componente perpendicular atravessa o rio — a correnteza não aproxima nem afasta da outra margem.": {
+    "fr": "Le temps a été calculé avec la vitesse résultante. Mais seule la composante perpendiculaire traverse le fleuve — le courant ne rapproche ni n’éloigne de l’autre rive.",
+    "en": "The time was computed with the resultant velocity. But only the perpendicular component crosses the river — the current neither brings the far bank closer nor pushes it away."
   },
   "O tempo não entrou no expoente: ele multiplica a taxa, e o produto é que vai lá em cima.": {
     "fr": "Le temps n’est pas entré dans l’exposant : il multiplie le taux, et c’est le produit qui monte en haut.",
@@ -12191,6 +12407,14 @@
     "fr": "La valeur moyenne est cette aire divisée par la largeur.",
     "en": "The average value is that area divided by the width."
   },
+  "O vento carrega o ar inteiro: some os dois vetores componente a componente e só então calcule o módulo.": {
+    "fr": "Le vent emporte tout l’air : additionnez les deux vecteurs composante par composante et calculez ensuite la norme.",
+    "en": "The wind carries the whole air mass: add the two vectors component by component and only then compute the magnitude."
+  },
+  "O vento foi subtraído. Para achar a velocidade em relação ao solo ele se SOMA: é o ar inteiro que se desloca, carregando a aeronave junto.": {
+    "fr": "Le vent a été soustrait. Pour trouver la vitesse par rapport au sol il s’AJOUTE : c’est tout l’air qui se déplace, en emportant l’avion avec lui.",
+    "en": "The wind was subtracted. To find the ground speed it is ADDED: it is the whole air mass that moves, carrying the aircraft along."
+  },
   "O vetor e suas componentes formam um triângulo retângulo.": {
     "fr": "Le vecteur et ses composantes forment un triangle rectangle.",
     "en": "The vector and its components form a right triangle."
@@ -12338,6 +12562,10 @@
   "O ângulo externo é o suplemento do interno do mesmo vértice.": {
     "fr": "L’angle extérieur est le supplémentaire de l’intérieur du même sommet.",
     "en": "The exterior angle is the supplement of the interior one at the same vertex."
+  },
+  "O ângulo foi medido a partir da margem, e não da perpendicular. O enunciado pede o desvio em relação à travessia reta.": {
+    "fr": "L’angle a été mesuré depuis la rive, et non depuis la perpendiculaire. L’énoncé demande l’écart par rapport à la traversée droite.",
+    "en": "The angle was measured from the bank, not from the perpendicular. The question asks for the deviation from the straight crossing."
   },
   "O ângulo foi medido da altura dos olhos: somamos os # m.": {
     "fr": "L’angle a été mesuré depuis la hauteur des yeux : nous ajoutons les # m.",
@@ -12766,6 +12994,10 @@
   "Os limites laterais discordam: há um salto.": {
     "fr": "Les limites latérales ne concordent pas : il y a un saut.",
     "en": "The one-sided limits disagree: there is a jump."
+  },
+  "Os módulos foram somados. Isso só valeria se vento e rumo estivessem perfeitamente alinhados — vetores se somam componente a componente, nunca módulo com módulo.": {
+    "fr": "Les normes ont été additionnées. Cela ne vaudrait que si le vent et le cap étaient parfaitement alignés — les vecteurs s’additionnent composante par composante, jamais norme avec norme.",
+    "en": "The magnitudes were added. That would only hold if wind and heading were perfectly aligned — vectors add component by component, never magnitude with magnitude."
   },
   "Os números encontrados são as raízes, e cada uma gera um fator.": {
     "fr": "Les nombres trouvés sont les racines, et chacune génère un facteur.",
@@ -13839,6 +14071,10 @@
     "fr": "Nous voulons le trinôme positivo : les deux morceaux EXTÉRIEURS, sans les racines.",
     "en": "We want the quadratic positivo: the two OUTER pieces, without the roots."
   },
+  "Raio pequeno é curva fechada; raio grande é curva suave.": {
+    "fr": "Un petit rayon donne un virage serré ; un grand rayon, un virage doux.",
+    "en": "A small radius is a tight bend; a large radius, a gentle one."
+  },
   "Raiz cúbica, que preserva o sinal.": {
     "fr": "Racine cubique, qui conserve le signe.",
     "en": "Cube root, which keeps the sign."
@@ -13894,6 +14130,10 @@
   "Regra #–#–#: a até #, # e # desvios da média ficam cerca de #%, #% e #%.": {
     "fr": "Règle #–#–# : à #, # et # écarts-types de la moyenne restent environ #%, #% et #%.",
     "en": "The #–#–# rule: within #, # and # standard deviations of the mean lie about #%, #% and #%."
+  },
+  "Repare em que faixa de x os dados foram medidos antes de confiar na previsão.": {
+    "fr": "Regardez dans quelle plage de x les données ont été mesurées avant de vous fier à la prévision.",
+    "en": "Look at which range of x the data were measured in before trusting the prediction."
   },
   "Repare no sinal: subtrair h dentro dos parênteses desloca h para a DIREITA.": {
     "fr": "Notez le signe : soustraire h dans les parenthèses décale h vers la DROITE.",
@@ -14014,6 +14254,14 @@
   "Resíduo = y observado − y previsto pela reta naquele x.": {
     "fr": "Résidu = y observé − y prévu par la droite à ce x.",
     "en": "Residual = observed y − y predicted by the line at that x."
+  },
+  "Resíduo negativo: o ponto está abaixo da reta.": {
+    "fr": "Résidu négatif : le point est en dessous de la droite.",
+    "en": "Negative residual: the point is below the line."
+  },
+  "Resíduo positivo: o ponto observado está ACIMA da reta.": {
+    "fr": "Résidu positif : le point observé est AU-DESSUS de la droite.",
+    "en": "Positive residual: the observed point is ABOVE the line."
   },
   "Retas paralelas têm coeficientes PROPORCIONAIS, não iguais: x foi multiplicado por #, então y também.": {
     "fr": "Des droites parallèles ont des coefficients PROPORTIONNELS, et non égaux : x a été multiplié par #, donc y aussi.",
@@ -14431,6 +14679,10 @@
     "fr": "Additionner les normes n’est valable que si les deux forces pointent du même côté. Regardez le sens de chacune.",
     "en": "Adding the magnitudes only works if both forces point the same way. Look at the direction of each one."
   },
+  "Somar vetores é somar componente a componente, nunca módulo com módulo.": {
+    "fr": "Additionner des vecteurs, c’est additionner composante par composante, jamais norme avec norme.",
+    "en": "Adding vectors means adding component by component, never magnitude with magnitude."
+  },
   "Some a massa atômica de cada elemento multiplicada pelo seu índice. O índice conta átomos, e por isso multiplica.": {
     "fr": "Additionnez la masse atomique de chaque élément multipliée par son indice. L’indice compte des atomes, et multiplie donc.",
     "en": "Add each element’s atomic mass multiplied by its subscript. The subscript counts atoms, and so it multiplies."
@@ -14642,6 +14894,10 @@
   "Substituindo x em AB.": {
     "fr": "En substituant x dans AB.",
     "en": "Substituting x into AB."
+  },
+  "Substituindo x igual a #.": {
+    "fr": "En remplaçant x égal à #.",
+    "en": "Substituting x equal to #."
   },
   "Substituindo x numa das retas para achar y.": {
     "fr": "En substituant x dans l’une des droites pour trouver y.",
@@ -14895,6 +15151,10 @@
     "fr": "Nous substituons.",
     "en": "We substitute."
   },
+  "Subtraia as posições e aplique Pitágoras nas componentes.": {
+    "fr": "Soustrayez les positions et appliquez Pythagore aux composantes.",
+    "en": "Subtract the positions and apply Pythagoras to the components."
+  },
   "Subtraindo de #.": {
     "fr": "En soustrayant de #.",
     "en": "Subtracting from #."
@@ -14978,6 +15238,10 @@
   "São os dois pontos que ficam à mesma distância da origem.": {
     "fr": "Ce sont les deux points situés à la même distance de l’origine.",
     "en": "They are the two points at the same distance from the origin."
+  },
+  "Só a componente da aceleração perpendicular à velocidade curva a trajetória. Com ela, r = v²/aₙ, e aqui v = #.": {
+    "fr": "Seule la composante de l’accélération perpendiculaire à la vitesse courbe la trajectoire. Avec elle, r = v²/aₙ, et ici v = #.",
+    "en": "Only the component of the acceleration perpendicular to the velocity bends the path. With it, r = v²/aₙ, and here v = #."
   },
   "Só a componente da força alinhada ao deslocamento realiza trabalho.": {
     "fr": "Seule la composante de la force alignée avec le déplacement réalise du travail.",
@@ -15175,6 +15439,14 @@
     "fr": "C’est aussi exactement la latérale du cylindre qui l’enveloppe.",
     "en": "It is also exactly the lateral surface of the cylinder around it."
   },
+  "Tangencial negativa: o movimento está freando.": {
+    "fr": "Tangentielle négative : le mouvement freine.",
+    "en": "Negative tangential: the motion is braking."
+  },
+  "Tangencial positiva: o movimento está acelerando.": {
+    "fr": "Tangentielle positive : le mouvement accélère.",
+    "en": "Positive tangential: the motion is speeding up."
+  },
   "Tangente horizontal: dy/dx = #, ou seja, o numerador da derivada zera. Resolva isso junto com a equação da curva.": {
     "fr": "Tangente horizontale : dy/dx = #, c’est-à-dire que le numérateur de la dérivée s’annule. Résolvez cela avec l’équation de la courbe.",
     "en": "Horizontal tangent: dy/dx = #, that is, the numerator of the derivative vanishes. Solve that together with the equation of the curve."
@@ -15310,6 +15582,10 @@
   "Tomando o arco-tangente.": {
     "fr": "En prenant l'arc-tangente.",
     "en": "Taking the arctangent."
+  },
+  "Tomar o módulo remove o sinal, mas não é isso que o quadrado faz. A fração explicada é r ao quadrado, que é sempre menor que o módulo quando r está entre # e #.": {
+    "fr": "Prendre la valeur absolue enlève le signe, mais ce n’est pas ce que fait le carré. La fraction expliquée est r au carré, toujours plus petite que la valeur absolue lorsque r est entre # et #.",
+    "en": "Taking the absolute value removes the sign, but that is not what squaring does. The explained fraction is r squared, which is always smaller than the absolute value when r is between # and #."
   },
   "Tome u = ln x. A escolha certa é a que simplifica ao derivar.": {
     "fr": "Prenez u = ln x. Le bon choix est celui qui se simplifie en dérivant.",
@@ -15706,6 +15982,10 @@
   "Veja qual das duas sentenças vale do lado pedido.": {
     "fr": "Regardez laquelle des deux expressions vaut du côté demandé.",
     "en": "See which of the two pieces applies on the required side."
+  },
+  "Velocidade média vetorial usa o deslocamento, nunca a distância percorrida.": {
+    "fr": "La vitesse moyenne vectorielle utilise le déplacement, jamais la distance parcourue.",
+    "en": "Average velocity uses the displacement, never the distance travelled."
   },
   "Velocidade média é distância dividida por tempo.": {
     "fr": "La vitesse moyenne est la distance divisée par le temps.",
@@ -16634,6 +16914,10 @@
   "É daqui que vem o sinal de menos na parte real do produto.": {
     "fr": "C’est de là que vient le signe moins dans la partie réelle du produit.",
     "en": "That is where the minus sign in the real part of the product comes from."
+  },
+  "É ela, e só ela, que muda o módulo da velocidade.": {
+    "fr": "C’est elle, et elle seule, qui change la norme de la vitesse.",
+    "en": "It is that one, and only that one, that changes the magnitude of the velocity."
   },
   "É essa condição que torna o problema resolvível com uma incógnita só.": {
     "fr": "C’est cette condition qui rend le problème soluble avec une seule inconnue.",
