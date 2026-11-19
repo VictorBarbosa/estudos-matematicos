@@ -271,6 +271,14 @@
     "fr": "#° vaut π radians : multipliez # par π et divisez par #.",
     "en": "#° is π radians: multiply # by π and divide by #."
   },
+  "#ⁿ só vale para (x + #)ⁿ. Aqui, com x = #, a base é # + # = #.": {
+    "fr": "#ⁿ ne vaut que pour (x + #)ⁿ. Ici, avec x = #, la base est # + # = #.",
+    "en": "#ⁿ only holds for (x + #)ⁿ. Here, with x = #, the base is # + # = #."
+  },
+  "#ⁿ só vale para (x + #)ⁿ. Aqui, com x = #, a base é # − # = #.": {
+    "fr": "#ⁿ ne vaut que pour (x + #)ⁿ. Ici, avec x = #, la base est # − # = #.",
+    "en": "#ⁿ only holds for (x + #)ⁿ. Here, with x = #, the base is # − # = #."
+  },
   "A # graus o alcance é máximo, e é só nesse ângulo.": {
     "fr": "À # degrés la portée est maximale, et seulement à cet angle.",
     "en": "At # degrees the range is maximum, and only at that angle."
@@ -1579,6 +1587,10 @@
     "fr": "La plus grande des deux est la réponse demandée.",
     "en": "The larger of them is the answer asked for."
   },
+  "A maior delas.": {
+    "fr": "La plus grande des deux.",
+    "en": "The larger of them."
+  },
   "A maior parte fica com o menor peso.": {
     "fr": "La plus grande part revient au plus petit poids.",
     "en": "The larger share goes to the smaller weight."
@@ -1731,6 +1743,10 @@
     "fr": "La moitié entre dans le logarithme, et non comme facteur. Résoudre l’équation exponentielle exige d’appliquer le logarithme aux deux côtés.",
     "en": "The half goes inside the logarithm, not as a factor. Solving the exponential equation requires taking the logarithm of both sides."
   },
+  "A mista só seria zero se não houvesse termo com x e y juntos. Aqui há, e é ele que resta depois das duas derivadas.": {
+    "fr": "La mixte ne serait nulle que s’il n’y avait pas de terme avec x et y ensemble. Ici il y en a un, et c’est lui qui reste après les deux dérivations.",
+    "en": "The mixed partial would only be zero if there were no term with x and y together. Here there is one, and it is what is left after the two differentiations."
+  },
   "A molaridade é a quantidade dividida pelo volume da solução.": {
     "fr": "La molarité est la quantité de matière divisée par le volume de la solution.",
     "en": "Molarity is the amount of substance divided by the volume of the solution."
@@ -1874,6 +1890,14 @@
   "A parábola foi deslocada: o vértice é (#, #), não a origem. Some o deslocamento k = #.": {
     "fr": "La parabole a été déplacée : le sommet est (#, #), et non l’origine. Ajoutez le déplacement k = #.",
     "en": "The parabola was shifted: the vertex is (#, #), not the origin. Add the shift k = #."
+  },
+  "A parábola não cruza o eixo x: ela fica inteiramente acima ou abaixo dele.": {
+    "fr": "La parabole ne croise pas l’axe des abscisses : elle reste entièrement au-dessus ou en dessous.",
+    "en": "The parabola does not cross the x-axis: it stays entirely above or below it."
+  },
+  "A parábola toca o eixo x em um único ponto, que é o próprio vértice.": {
+    "fr": "La parabole touche l’axe des abscisses en un seul point, qui est le sommet lui-même.",
+    "en": "The parabola touches the x-axis at a single point, which is the vertex itself."
   },
   "A pergunta é o valor em um ponto: substituímos x pelo número dado.": {
     "fr": "La question porte sur la valeur en un point : on remplace x par le nombre donné.",
@@ -3699,6 +3723,10 @@
     "fr": "C(#, #) = #! / (#!·#!). Ou additionnez les deux nombres au-dessus dans le triangle.",
     "en": "C(#, #) = #! / (#!·#!). Or add the two numbers above in the triangle."
   },
+  "C(#, #) é só parte do coeficiente: falta multiplicar pelas potências de # e de #.": {
+    "fr": "C(#, #) n’est qu’une partie du coefficient : il reste à multiplier par les puissances de # et de #.",
+    "en": "C(#, #) is only part of the coefficient: multiplying by the powers of # and # is still missing."
+  },
   "Ca neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Ca neutre a # électrons, autant que de protons.",
     "en": "Neutral Ca has # electrons, as many as protons."
@@ -3970,6 +3998,10 @@
   "Cada subnível só recebe o seguinte depois de encher.": {
     "fr": "Chaque sous-couche ne passe à la suivante qu’une fois remplie.",
     "en": "Each subshell only passes to the next once it is full."
+  },
+  "Cada t positivo dá DUAS raízes, x = +√t e x = −√t. Não esqueça a negativa.": {
+    "fr": "Chaque t positif donne DEUX racines, x = +√t et x = −√t. N’oubliez pas la négative.",
+    "en": "Each positive t gives TWO roots, x = +√t and x = −√t. Do not forget the negative one."
   },
   "Cada tampa é um círculo, e aí o raio vai ao quadrado.": {
     "fr": "Chaque couvercle est un cercle, et là le rayon passe au carré.",
@@ -4447,6 +4479,10 @@
     "fr": "Avec Runge-Kutta d’ordre quatre, le rapport serait tout autre.",
     "en": "With fourth-order Runge-Kutta, the ratio would be quite different."
   },
+  "Com a < # a parábola abre para baixo, e o vértice é o ponto de máximo.": {
+    "fr": "Avec a < #, la parabole s’ouvre vers le bas, et le sommet est le point maximum.",
+    "en": "With a < # the parabola opens downwards, and the vertex is the maximum point."
+  },
   "Com a = # a função é constante: uma reta horizontal.": {
     "fr": "Avec a = # la fonction est constante : une droite horizontale.",
     "en": "With a = # the function is constant: a horizontal line."
@@ -4458,6 +4494,10 @@
   "Com a = #°.": {
     "fr": "Avec a = #°.",
     "en": "With a = #°."
+  },
+  "Com a > # a parábola abre para cima, e o vértice é o ponto de mínimo.": {
+    "fr": "Avec a > #, la parabole s’ouvre vers le haut, et le sommet est le point minimum.",
+    "en": "With a > # the parabola opens upwards, and the vertex is the minimum point."
   },
   "Com a corrente e a resistência: P = R·I².": {
     "fr": "Avec le courant et la résistance : P = R·I².",
@@ -4702,6 +4742,10 @@
   "Com x a distância de B até a torre, as duas visadas dão duas equações.": {
     "fr": "Avec x la distance de B à la tour, les deux visées donnent deux équations.",
     "en": "With x the distance from B to the tower, the two sightings give two equations."
+  },
+  "Com x² no primeiro termo, o expoente é #(# − k) − k, não (# − k) − k: o meio do desenvolvimento não é o termo sem x.": {
+    "fr": "Avec x² au premier terme, l’exposant vaut #(# − k) − k, et non (# − k) − k : le milieu du développement n’est pas le terme sans x.",
+    "en": "With x² in the first term, the exponent is #(# − k) − k, not (# − k) − k: the middle of the expansion is not the term without x."
   },
   "Com y(#) igual a # e y'(#) igual a #, avaliamos em t igual a #.": {
     "fr": "Avec y(#) égal à # et y'(#) égal à #, nous évaluons en t égal à #.",
@@ -5002,6 +5046,14 @@
   "Conferindo: tg(#°) ≈ #.": {
     "fr": "Vérification : tg(#°) ≈ #.",
     "en": "Checking: tg(#°) ≈ #."
+  },
+  "Conferindo: x² + #x + # = (x + #)², um quadrado perfeito.": {
+    "fr": "Vérification : x² + #x + # = (x + #)², un carré parfait.",
+    "en": "Checking: x² + #x + # = (x + #)², a perfect square."
+  },
+  "Conferindo: x² − #x + # = (x − #)², um quadrado perfeito.": {
+    "fr": "Vérification : x² − #x + # = (x − #)², un carré parfait.",
+    "en": "Checking: x² − #x + # = (x − #)², a perfect square."
   },
   "Confira o resto da divisão por #: restos # e # dão resultados puramente imaginários, cuja parte real é zero.": {
     "fr": "Vérifiez le reste de la division par # : les restes # et # donnent des résultats purement imaginaires, dont la partie réelle est nulle.",
@@ -6471,6 +6523,10 @@
     "fr": "Il est le carré d'un seul binôme.",
     "en": "It is the square of a single binomial."
   },
+  "Ele é o que está sob a raiz quadrada na fórmula — daí seu poder de decisão.": {
+    "fr": "C’est lui qui se trouve sous la racine carrée dans la formule — d’où son pouvoir de décision.",
+    "en": "It is what sits under the square root in the formula — hence its deciding power."
+  },
   "Elementos repetidos produzem ordens indistinguíveis.": {
     "fr": "Les éléments répétés produisent des ordres indistinguables.",
     "en": "Repeated elements produce indistinguishable orders."
@@ -7675,6 +7731,10 @@
     "fr": "C’est la PLUS PETITE des deux ordonnées.",
     "en": "That is the SMALLER of the two y-coordinates."
   },
+  "Essa é a MENOR raiz. As duas estão corretas como solução da equação, mas o enunciado pede a maior delas.": {
+    "fr": "C’est la PLUS PETITE racine. Les deux sont des solutions correctes de l’équation, mais l’énoncé demande la plus grande.",
+    "en": "That is the SMALLER root. Both are correct solutions of the equation, but the question asks for the larger one."
+  },
   "Essa é a PROJEÇÃO de um cateto sobre a hipotenusa, não a altura.": {
     "fr": "C’est la PROJECTION d’une cathète sur l’hypoténuse, et non la hauteur.",
     "en": "That is the PROJECTION of a leg onto the hypotenuse, not the altitude."
@@ -7682,6 +7742,10 @@
   "Essa é a SEGUNDA quantidade, a que o enunciado cita depois. A pergunta é pela primeira — as duas somam o total, e é fácil trocá-las no fim da conta.": {
     "fr": "C’est la SECONDE quantité, celle que l’énoncé cite ensuite. La question porte sur la première — les deux font le total, et il est facile de les intervertir à la fin du calcul.",
     "en": "That is the SECOND quantity, the one the question mentions later. The question asks for the first — the two add up to the total, and they are easy to swap at the end."
+  },
+  "Essa é a SOMA (−b/a). O produto usa c: c/a.": {
+    "fr": "C’est la SOMME (−b/a). Le produit utilise c : c/a.",
+    "en": "That is the SUM (−b/a). The product uses c: c/a."
   },
   "Essa é a SOMBRA do prédio. A altura só coincidiria com ela se a vara também tivesse altura igual à sua sombra.": {
     "fr": "C’est l’OMBRE de l’immeuble. La hauteur ne coïnciderait avec elle que si la perche avait aussi une hauteur égale à son ombre.",
@@ -8119,6 +8183,10 @@
     "fr": "C’est le POIDS du corps, qui utilise SA masse volumique. La poussée utilise la masse volumique du FLUIDE déplacé.",
     "en": "That is the WEIGHT of the body, which uses ITS density. The buoyant force uses the density of the displaced FLUID."
   },
+  "Esse é o PRODUTO (c/a). A soma usa b: −b/a.": {
+    "fr": "C’est le PRODUIT (c/a). La somme utilise b : −b/a.",
+    "en": "That is the PRODUCT (c/a). The sum uses b: −b/a."
+  },
   "Esse é o VOLUME no instante, não a taxa com que ele cresce. A pergunta é por dV/dt, que sai de derivar a relação.": {
     "fr": "C’est le VOLUME à cet instant, et non le taux auquel il croît. La question porte sur dV/dt, qui sort de la dérivation de la relation.",
     "en": "That is the VOLUME at the instant, not the rate at which it grows. The question asks for dV/dt, which comes from differentiating the relation."
@@ -8275,6 +8343,14 @@
     "fr": "C’est le nombre de protons. Dans un atome neutre il est égal à celui des électrons — mais pas à celui des neutrons, qui ne coïncide que pour quelques éléments légers.",
     "en": "That is the number of protons. In a neutral atom it equals the number of electrons — but not the number of neutrons, which only matches for a few light elements."
   },
+  "Esse é o número dentro do quadrado, (x + #)². O k é ele AO QUADRADO.": {
+    "fr": "C’est le nombre à l’intérieur du carré, (x + #)². Le k en est le CARRÉ.",
+    "en": "That is the number inside the square, (x + #)². The k is it SQUARED."
+  },
+  "Esse é o número dentro do quadrado, (x − #)². O k é ele AO QUADRADO.": {
+    "fr": "C’est le nombre à l’intérieur du carré, (x − #)². Le k en est le CARRÉ.",
+    "en": "That is the number inside the square, (x − #)². The k is it SQUARED."
+  },
   "Esse é o outro extremo do intervalo. O pedido é o da direita (o maior).": {
     "fr": "C’est l’autre borne de l’intervalle. Celle qui est demandée est celle de droite (la plus grande).",
     "en": "That is the other end of the interval. The one asked for is the right one (the larger)."
@@ -8422,6 +8498,10 @@
   "Esse é o valor da tangente em π/#, não o da sua derivada.": {
     "fr": "C’est la valeur de la tangente en π/#, et non celle de sa dérivée.",
     "en": "That is the value of the tangent at π/#, not of its derivative."
+  },
+  "Esse é o valor de t = x². Falta voltar a x: x = √#.": {
+    "fr": "C’est la valeur de t = x². Il reste à revenir à x : x = √#.",
+    "en": "That is the value of t = x². Going back to x is still missing: x = √#."
   },
   "Esse é o valor de x; o pedido é y. Confira qual coluna é de qual variável.": {
     "fr": "C’est la valeur de x ; c’est y qui est demandé. Vérifiez quelle colonne correspond à quelle variable.",
@@ -8655,6 +8735,14 @@
     "fr": "Exposant négatif : T est au dénominateur.",
     "en": "Negative exponent: T is in the denominator."
   },
+  "Expoentes trocados: o #x vai à potência # (a do x pedido) e o # à #.": {
+    "fr": "Exposants intervertis : le #x va à la puissance # (celle du x demandé) et le # à #.",
+    "en": "Exponents swapped: the #x goes to the power # (the one of the requested x) and the # to #."
+  },
+  "Expoentes trocados: o x vai à potência # (a do x pedido) e o # à #.": {
+    "fr": "Exposants intervertis : le x va à la puissance # (celle du x demandé) et le # à #.",
+    "en": "Exponents swapped: the x goes to the power # (the one of the requested x) and the # to #."
+  },
   "Exponenciando, a constante vira um fator multiplicativo.": {
     "fr": "En exponentiant, la constante devient un facteur multiplicatif.",
     "en": "Exponentiating, the constant becomes a multiplicative factor."
@@ -8766,6 +8854,34 @@
   "Faltou a parte que só depende de y. Integrar M em x deixa uma «constante» g(y), que se acha comparando ∂F/∂y com N.": {
     "fr": "Il manque la partie qui ne dépend que de y. Intégrer M en x laisse une « constante » g(y), qu’on trouve en comparant ∂F/∂y avec N.",
     "en": "The part that depends only on y is missing. Integrating M in x leaves a “constant” g(y), found by comparing ∂F/∂y with N."
+  },
+  "Faltou a potência do segundo termo: (#)².": {
+    "fr": "Il manque la puissance du second terme : (#)².",
+    "en": "The power of the second term is missing: (#)²."
+  },
+  "Faltou a potência do segundo termo: (#)³.": {
+    "fr": "Il manque la puissance du second terme : (#)³.",
+    "en": "The power of the second term is missing: (#)³."
+  },
+  "Faltou a potência do segundo termo: (#)¹.": {
+    "fr": "Il manque la puissance du second terme : (#)¹.",
+    "en": "The power of the second term is missing: (#)¹."
+  },
+  "Faltou a potência do segundo termo: (#)⁴.": {
+    "fr": "Il manque la puissance du second terme : (#)⁴.",
+    "en": "The power of the second term is missing: (#)⁴."
+  },
+  "Faltou a potência do segundo termo: (#)⁵.": {
+    "fr": "Il manque la puissance du second terme : (#)⁵.",
+    "en": "The power of the second term is missing: (#)⁵."
+  },
+  "Faltou a potência do segundo termo: (#)⁶.": {
+    "fr": "Il manque la puissance du second terme : (#)⁶.",
+    "en": "The power of the second term is missing: (#)⁶."
+  },
+  "Faltou a potência do segundo termo: (#)⁷.": {
+    "fr": "Il manque la puissance du second terme : (#)⁷.",
+    "en": "The power of the second term is missing: (#)⁷."
   },
   "Faltou a raiz quadrada no fator √(# + fx² + fy²).": {
     "fr": "Il manque la racine carrée dans le facteur √(# + fx² + fy²).",
@@ -8879,9 +8995,21 @@
     "fr": "Il manque la division par # : le triangle est la MOITIÉ du parallélogramme de même base et de même hauteur.",
     "en": "Dividing by # is missing: the triangle is HALF the parallelogram with the same base and height."
   },
+  "Faltou dividir por #: Δ = b² − #·#·k, então k = b²/#.": {
+    "fr": "Il manque la division par # : Δ = b² − #·#·k, donc k = b²/#.",
+    "en": "Dividing by # is missing: Δ = b² − #·#·k, so k = b²/#."
+  },
+  "Faltou dividir por #a. A fórmula inteira é (−b ± √Δ) / #a, e aqui #a = #.": {
+    "fr": "Il manque la division par #a. La formule entière est (−b ± √Δ) / #a, et ici #a = #.",
+    "en": "Dividing by #a is missing. The whole formula is (−b ± √Δ) / #a, and here #a = #."
+  },
   "Faltou dividir por I₀ = #⁻¹² W/m² antes do log: o decibel compara com o limiar da audição.": {
     "fr": "Il manque la division par I₀ = #⁻¹² W/m² avant le log : le décibel compare au seuil d’audition.",
     "en": "Dividing by I₀ = #⁻¹² W/m² before the log is missing: the decibel compares with the threshold of hearing."
+  },
+  "Faltou dividir por a = #. As relações só dão −b e c direto quando a = #.": {
+    "fr": "Il manque la division par a = #. Les relations ne donnent −b et c directement que si a = #.",
+    "en": "Dividing by a = # is missing. The relations only give −b and c directly when a = #."
   },
   "Faltou elevar a temperatura à QUARTA potência. É ela que separa a radiação das outras duas formas de transferência.": {
     "fr": "Il manque l’élévation de la température à la puissance QUATRE. C’est elle qui sépare le rayonnement des deux autres modes de transfert.",
@@ -8927,9 +9055,17 @@
     "fr": "Il manque le # du double comptage : #A = k·V, car chaque arête a deux extrémités.",
     "en": "The # from the double count is missing: #E = k·V, because each edge has two ends."
   },
+  "Faltou o # de #ac: Δ = b² − #·k·c.": {
+    "fr": "Il manque le # de #ac : Δ = b² − #·k·c.",
+    "en": "The # of #ac is missing: Δ = b² − #·k·c."
+  },
   "Faltou o # de #mk ao isolar k.": {
     "fr": "Il manque le # de #mk au moment d’isoler k.",
     "en": "The # of #mk was dropped when isolating k."
+  },
+  "Faltou o # elevado a #: o número junto do #/x também entra no termo.": {
+    "fr": "Il manque le # élevé à # : le nombre accompagnant le #/x entre aussi dans le terme.",
+    "en": "The # to the power # is missing: the number alongside the #/x also enters the term."
   },
   "Faltou o #/# que vem de #·(#/#): # − cos θ = #·sen²(θ/#).": {
     "fr": "Il manque le #/# qui vient de #·(#/#) : # − cos θ = #·sin²(θ/#).",
@@ -9038,6 +9174,10 @@
   "Faltou subtrair o valor no limite inferior. A integral definida continua sendo F(b) − F(a), mesmo depois da substituição.": {
     "fr": "Il manque la soustraction de la valeur à la borne inférieure. L’intégrale définie reste F(b) − F(a), même après la substitution.",
     "en": "Subtracting the value at the lower limit is missing. The definite integral is still F(b) − F(a), even after the substitution."
+  },
+  "Faltou tirar #P: (x₁ + x₂)² também tem o termo #x₁x₂.": {
+    "fr": "Il manque le retrait de #P : (x₁ + x₂)² comporte aussi le terme #x₁x₂.",
+    "en": "Subtracting #P is missing: (x₁ + x₂)² also has the term #x₁x₂."
   },
   "Faltou tirar a raiz: com #/n², (N + #)² > #ᵏ dá N + # maior que a raiz de #ᵏ.": {
     "fr": "Il manque l’extraction de la racine : avec #/n², (N + #)² > #ᵏ donne N + # supérieur à la racine de #ᵏ.",
@@ -9638,6 +9778,10 @@
   "Isolando faces e substituindo.": {
     "fr": "En isolant les faces et en substituant.",
     "en": "Isolating the faces and substituting."
+  },
+  "Isolando k.": {
+    "fr": "En isolant k.",
+    "en": "Isolating k."
   },
   "Isolando k: a entrada a zerar dividida pelo pivô.": {
     "fr": "En isolant k : l’entrée à annuler divisée par le pivot.",
@@ -11379,9 +11523,17 @@
     "fr": "Le #L est le périmètre divisé par # : agrandir le côté ajoute deux bandes.",
     "en": "The #L is the perimeter divided by #: growing the side adds two strips."
   },
+  "O #P é SUBTRAÍDO: x₁² + x₂² = S² − #P.": {
+    "fr": "Le #P est SOUSTRAIT : x₁² + x₂² = S² − #P.",
+    "en": "The #P is SUBTRACTED: x₁² + x₂² = S² − #P."
+  },
   "O #º termo corresponde a k = # (o #º é k = #). Use C(#, k) vezes (#) elevado a k.": {
     "fr": "Le #ᵉ terme correspond à k = # (le #ᵉ est k = #). Utilisez C(#, k) fois (#) à la puissance k.",
     "en": "The #st term matches k = # (the #rd is k = #). Use C(#, k) times (#) to the power k."
+  },
+  "O #º termo é k = #, não k = #: a contagem dos termos começa em k = #.": {
+    "fr": "Le #e terme correspond à k = #, et non k = # : le compte des termes commence à k = #.",
+    "en": "The #th term is k = #, not k = #: the count of terms starts at k = #."
   },
   "O Br é a âncora: em composto binário o nox dele é conhecido.": {
     "fr": "Le Br est l’ancre : dans un composé binaire, son n.o. est connu.",
@@ -11942,6 +12094,10 @@
   "O discriminante vale #, e é ele que decide o regime.": {
     "fr": "Le discriminant vaut #, et c’est lui qui décide du régime.",
     "en": "The discriminant is #, and it is what decides the regime."
+  },
+  "O discriminante é b² − #ac, com SUBTRAÇÃO. Trocar o sinal muda completamente a conclusão sobre o número de raízes.": {
+    "fr": "Le discriminant est b² − #ac, avec une SOUSTRACTION. Changer le signe modifie complètement la conclusion sur le nombre de racines.",
+    "en": "The discriminant is b² − #ac, with a SUBTRACTION. Flipping the sign changes the conclusion about the number of roots completely."
   },
   "O discriminante é negativo, e não existe raiz quadrada real de número negativo.": {
     "fr": "Le discriminant est négatif, et il n'existe pas de racine carrée réelle de nombre négatif.",
@@ -12547,6 +12703,10 @@
     "fr": "O neutre a # électrons, autant que de protons.",
     "en": "Neutral O has # electrons, as many as protons."
   },
+  "O numerador começa com −b, e não com b. Se b já é negativo, −b fica positivo — é um dos erros de sinal mais frequentes do tema.": {
+    "fr": "Le numérateur commence par −b, et non par b. Si b est déjà négatif, −b devient positif — c’est l’une des erreurs de signe les plus fréquentes du sujet.",
+    "en": "The numerator starts with −b, not with b. If b is already negative, −b becomes positive — one of the most frequent sign mistakes in this topic."
+  },
   "O numerador oscila entre # e #, e o denominador manda no comportamento.": {
     "fr": "Le numérateur oscille entre # et #, et c’est le dénominateur qui commande le comportement.",
     "en": "The numerator swings between # and #, and the denominator governs the behaviour."
@@ -12834,6 +12994,10 @@
   "O produto é c sobre a.": {
     "fr": "Le produit est c sur a.",
     "en": "The product is c over a."
+  },
+  "O produto é c/a, sem sinal de menos — o menos fica só na soma.": {
+    "fr": "Le produit vaut c/a, sans signe moins — le moins ne concerne que la somme.",
+    "en": "The product is c/a, with no minus sign — the minus belongs only to the sum."
   },
   "O produtório manda multiplicar, com k indo de # a #.": {
     "fr": "Le produit demande de multiplier, avec k allant de # à #.",
@@ -13251,6 +13415,10 @@
     "fr": "Le signe est inversé : l’opération SOUSTRAIT # fois la L₁. Vérifiez le calcul sur la première colonne — elle doit s’annuler.",
     "en": "The sign is flipped: the operation SUBTRACTS # times L₁. Check the computation on the first column — it must become zero."
   },
+  "O sinal saiu trocado: a soma é −b/a, com o MENOS na frente.": {
+    "fr": "Le signe est inversé : la somme vaut −b/a, avec le MOINS devant.",
+    "en": "The sign is flipped: the sum is −b/a, with the MINUS in front."
+  },
   "O sinal saiu trocado: confira as operações de linha feitas no bloco da identidade.": {
     "fr": "Le signe est inversé : vérifiez les opérations de ligne faites dans le bloc de l’identité.",
     "en": "The sign is flipped: check the row operations done in the identity block."
@@ -13262,6 +13430,14 @@
   "O sinal saiu trocado: o pivô é k - #, que zera em k = #.": {
     "fr": "Le signe est inversé : le pivot est k - #, qui s’annule en k = #.",
     "en": "The sign is flipped: the pivot is k - #, which vanishes at k = #."
+  },
+  "O sinal: (#) elevado a # é NEGATIVO.": {
+    "fr": "Le signe : (#) élevé à # est NÉGATIF.",
+    "en": "The sign: (#) to the power # is NEGATIVE."
+  },
+  "O sinal: (#) elevado a # é positivo.": {
+    "fr": "Le signe : (#) élevé à # est positif.",
+    "en": "The sign: (#) to the power # is positive."
   },
   "O sinal: duas derivadas de seno (ou de cosseno) devolvem a função com o sinal TROCADO — seno → cosseno → −seno.": {
     "fr": "Le signe : deux dérivées de sinus (ou de cosinus) rendent la fonction avec le signe INVERSÉ — sinus → cosinus → −sinus.",
@@ -13315,17 +13491,61 @@
     "fr": "Le terme avec i² change de nature : i² = −#, donc il devient réel.",
     "en": "The term with i² changes nature: i² = −#, so it becomes real."
   },
+  "O termo com x² é C(#, #)·x²·#³: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x² vaut C(#, #)·x²·#³ : le # entre # − # = # fois.",
+    "en": "The x² term is C(#, #)·x²·#³: the # enters # − # = # times."
+  },
+  "O termo com x² é C(#, #)·x²·#⁴: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x² vaut C(#, #)·x²·#⁴ : le # entre # − # = # fois.",
+    "en": "The x² term is C(#, #)·x²·#⁴: the # enters # − # = # times."
+  },
+  "O termo com x² é C(#, #)·x²·#⁵: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x² vaut C(#, #)·x²·#⁵ : le # entre # − # = # fois.",
+    "en": "The x² term is C(#, #)·x²·#⁵: the # enters # − # = # times."
+  },
+  "O termo com x³ é C(#, #)·x³·#²: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x³ vaut C(#, #)·x³·#² : le # entre # − # = # fois.",
+    "en": "The x³ term is C(#, #)·x³·#²: the # enters # − # = # times."
+  },
   "O termo com x³ é C(#, #)·x³·#¹: o # entra # − # = # vezes.": {
     "fr": "Le terme en x³ est C(#, #)·x³·#¹ : le # entre # − # = # fois.",
     "en": "The x³ term is C(#, #)·x³·#¹: the # goes in # − # = # times."
+  },
+  "O termo com x³ é C(#, #)·x³·#⁴: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x³ vaut C(#, #)·x³·#⁴ : le # entre # − # = # fois.",
+    "en": "The x³ term is C(#, #)·x³·#⁴: the # enters # − # = # times."
+  },
+  "O termo com x¹ é C(#, #)·x¹·#³: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x¹ vaut C(#, #)·x¹·#³ : le # entre # − # = # fois.",
+    "en": "The x¹ term is C(#, #)·x¹·#³: the # enters # − # = # times."
+  },
+  "O termo com x¹ é C(#, #)·x¹·#⁴: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x¹ vaut C(#, #)·x¹·#⁴ : le # entre # − # = # fois.",
+    "en": "The x¹ term is C(#, #)·x¹·#⁴: the # enters # − # = # times."
+  },
+  "O termo com x¹ é C(#, #)·x¹·#⁵: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x¹ vaut C(#, #)·x¹·#⁵ : le # entre # − # = # fois.",
+    "en": "The x¹ term is C(#, #)·x¹·#⁵: the # enters # − # = # times."
   },
   "O termo com x⁴ é C(#, #)·x⁴·#²: o # entra # − # = # vezes.": {
     "fr": "Le terme en x⁴ est C(#, #)·x⁴·#² : le # entre # − # = # fois.",
     "en": "The x⁴ term is C(#, #)·x⁴·#²: the # goes in # − # = # times."
   },
+  "O termo com x⁴ é C(#, #)·x⁴·#¹: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x⁴ vaut C(#, #)·x⁴·#¹ : le # entre # − # = # fois.",
+    "en": "The x⁴ term is C(#, #)·x⁴·#¹: the # enters # − # = # times."
+  },
   "O termo com x⁵ é C(#, #)·x⁵·#²: o # entra # − # = # vezes.": {
     "fr": "Le terme en x⁵ est C(#, #)·x⁵·#² : le # entre # − # = # fois.",
     "en": "The x⁵ term is C(#, #)·x⁵·#²: the # goes in # − # = # times."
+  },
+  "O termo com x⁵ é C(#, #)·x⁵·#¹: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x⁵ vaut C(#, #)·x⁵·#¹ : le # entre # − # = # fois.",
+    "en": "The x⁵ term is C(#, #)·x⁵·#¹: the # enters # − # = # times."
+  },
+  "O termo com x⁶ é C(#, #)·x⁶·#¹: o # entra # − # = # vezes.": {
+    "fr": "Le terme en x⁶ vaut C(#, #)·x⁶·#¹ : le # entre # − # = # fois.",
+    "en": "The x⁶ term is C(#, #)·x⁶·#¹: the # enters # − # = # times."
   },
   "O termo constante é o único que some ao derivar. Todos os outros contribuem.": {
     "fr": "Le terme constant est le seul qui disparaît en dérivant. Tous les autres contribuent.",
@@ -13386,6 +13606,10 @@
   "O termo misto foi esquecido. Ao derivar em uma variável, o produto xy deixa a OUTRA variável como coeficiente — ele não desaparece.": {
     "fr": "Le terme mixte a été oublié. En dérivant par rapport à une variable, le produit xy laisse l’AUTRE variable comme coefficient — il ne disparaît pas.",
     "en": "The mixed term was forgotten. When differentiating with respect to one variable, the product xy leaves the OTHER variable as a coefficient — it does not vanish."
+  },
+  "O termo misto é linear em cada variável, então não aparece fator #: derivar xy em x dá y, e derivar y em y dá #.": {
+    "fr": "Le terme mixte est linéaire en chaque variable, donc aucun facteur # n’apparaît : dériver xy en x donne y, et dériver y en y donne #.",
+    "en": "The mixed term is linear in each variable, so no factor of # appears: differentiating xy in x gives y, and differentiating y in y gives #."
   },
   "O termo se comporta como #/n, a harmônica; por comparação, a série diverge.": {
     "fr": "Le terme se comporte comme #/n, a harmônica ; par comparaison, la série diverge.",
@@ -14063,6 +14287,10 @@
     "fr": "Les dénominateurs sont #, # et # : le ppcm est #.",
     "en": "The denominators are #, # and #: the lcm is #."
   },
+  "Os dois de cima se SOMAM, não se multiplicam.": {
+    "fr": "Les deux du dessus s’ADDITIONNENT, ils ne se multiplient pas.",
+    "en": "The two above ADD, they do not multiply."
+  },
   "Os dois lados convergem para o mesmo valor, então o limite existe.": {
     "fr": "Les deux côtés convergent vers la même valeur, donc la limite existe.",
     "en": "Both sides converge to the same value, so the limit exists."
@@ -14494,6 +14722,10 @@
   "Para ter x⁶, k = #; o número entra # vezes.": {
     "fr": "Pour avoir x⁶, k = # ; le nombre entre # fois.",
     "en": "To get x⁶, k = #; the number goes in # times."
+  },
+  "Para ter x⁸, k = #; o número entra # vezes.": {
+    "fr": "Pour obtenir x⁸, k = # ; le nombre entre # fois.",
+    "en": "To get x⁸, k = #; the number enters # times."
   },
   "Para uma partícula, o momento angular usa a distância perpendicular.": {
     "fr": "Pour une particule, le moment angulaire utilise la distance perpendiculaire.",
@@ -14966,6 +15198,10 @@
   "Positivo: duas raízes reais, e o sistema volta ao repouso sem oscilar.": {
     "fr": "Positif : deux racines réelles, et le système revient au repos sans osciller.",
     "en": "Positive: two real roots, and the system returns to rest without oscillating."
+  },
+  "Posição deslocada: no triângulo de Pascal a contagem começa do # (o # da ponta é a posição #).": {
+    "fr": "Position décalée : dans le triangle de Pascal, le compte commence à # (le # du bord est la position #).",
+    "en": "Position off by one: in Pascal’s triangle the count starts at # (the # at the edge is position #)."
   },
   "Posição trocada: essa é a entrada da linha #, coluna #.": {
     "fr": "Position inversée : c’est l’entrée de la ligne #, colonne #.",
@@ -16511,6 +16747,10 @@
     "fr": "Ce sont n paires, et la somme doublée doit être divisée par deux.",
     "en": "There are n pairs, and the doubled sum must be divided by two."
   },
+  "São os dois pontos em que a parábola cruza o eixo x.": {
+    "fr": "Ce sont les deux points où la parabole croise l’axe des abscisses.",
+    "en": "They are the two points where the parabola crosses the x-axis."
+  },
   "São os dois pontos que ficam à mesma distância da origem.": {
     "fr": "Ce sont les deux points situés à la même distance de l’origine.",
     "en": "They are the two points at the same distance from the origin."
@@ -17983,6 +18223,10 @@
     "fr": "aₙ = a₁ · qⁿ⁻¹ — attention à l’exposant.",
     "en": "aₙ = a₁ · qⁿ⁻¹ — mind the exponent."
   },
+  "b precisa ir AO QUADRADO no discriminante: b² − #ac.": {
+    "fr": "b doit être AU CARRÉ dans le discriminant : b² − #ac.",
+    "en": "b has to be SQUARED in the discriminant: b² − #ac."
+  },
   "cos θ = a·b / (|a| |b|): calcule o escalar, os dois módulos, divida e tire o arco-cosseno.": {
     "fr": "cos θ = a·b / (|a| |b|) : calculez le scalaire, les deux modules, divisez et prenez l’arc cosinus.",
     "en": "cos θ = a·b / (|a| |b|): compute the scalar, both lengths, divide and take the arc cosine."
@@ -18026,6 +18270,10 @@
   "f″ é do #º grau: troca de sinal exatamente onde zera.": {
     "fr": "f″ est du #ᵉ degré : elle change de signe exactement là où elle s’annule.",
     "en": "f″ is of degree #: it changes sign exactly where it is zero."
+  },
+  "k = # não serve: sem o x², a equação nem seria do #º grau.": {
+    "fr": "k = # ne convient pas : sans le x², l’équation ne serait même pas du #º degré.",
+    "en": "k = # does not work: without the x², the equation would not even be of degree #."
   },
   "k² é o fator da ÁREA. Volume tem três dimensões: k³.": {
     "fr": "k² est le facteur de l’AIRE. Le volume a trois dimensions : k³.",
@@ -18151,6 +18399,10 @@
     "fr": "x² + # n’est pas une différence de carrés : avec +, il ne s’annule pour aucun x réel.",
     "en": "x² + # is not a difference of squares: with +, it vanishes for no real x."
   },
+  "x² = # não tem solução real: um quadrado nunca é negativo. Só t positivo dá raízes.": {
+    "fr": "x² = # n’a pas de solution réelle : un carré n’est jamais négatif. Seul un t positif donne des racines.",
+    "en": "x² = # has no real solution: a square is never negative. Only a positive t gives roots."
+  },
   "x² foi tratado como #x na substituição.": {
     "fr": "x² a été traité comme #x lors de la substitution.",
     "en": "x² was treated as #x in the substitution."
@@ -18250,6 +18502,10 @@
   "Ângulos correspondentes são iguais: E corresponde a B.": {
     "fr": "Les angles correspondants sont égaux : E correspond à B.",
     "en": "Matching angles are equal: E matches B."
+  },
+  "É (#) ELEVADO a #, não vezes #.": {
+    "fr": "C’est (#) ÉLEVÉ à #, et non multiplié par #.",
+    "en": "It is (#) RAISED to #, not times #."
   },
   "É Pitágoras duas vezes, como no módulo de um vetor no espaço.": {
     "fr": "C’est Pythagore deux fois, comme pour le module d’un vecteur dans l’espace.",
@@ -18578,6 +18834,10 @@
   "Δ = #: uma raiz dupla, x = #. A parábola só encosta no eixo ali.": {
     "fr": "Δ = # : une racine double, x = #. La parabole ne fait qu’effleurer l’axe là.",
     "en": "Δ = #: a double root, x = #. The parabola only touches the axis there."
+  },
+  "Δ = b² − #ac com a = #, b = #, c = #. Se der negativo, é ele mesmo a resposta.": {
+    "fr": "Δ = b² − #ac avec a = #, b = #, c = #. S’il est négatif, c’est lui-même la réponse.",
+    "en": "Δ = b² − #ac with a = #, b = #, c = #. If it comes out negative, it is itself the answer."
   },
   "Φ = B·A·cos θ, com A em m² (# cm² = #×#⁻⁴ m²) e o ângulo medido da normal. Em Wb; ×# para mWb.": {
     "fr": "Φ = B·A·cos θ, avec A en m² (# cm² = #×#⁻⁴ m²) et l’angle mesuré depuis la normale. En Wb ; ×# pour des mWb.",
