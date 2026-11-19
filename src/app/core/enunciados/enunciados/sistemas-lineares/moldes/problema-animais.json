@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Há {dados-calculo.n} animais no total, entre galinhas e coelhos. Cada galinha tem {dados-calculo.p} patas e cada coelho, {dados-calculo.q} patas; o total de patas é {dados-calculo.t}. Quantas são as galinhas?",
+    "fr": "Il y a {dados-calculo.n} animaux en tout, entre poules et lapins. Chaque poule a {dados-calculo.p} pattes et chaque lapin, {dados-calculo.q} pattes ; le total de pattes est {dados-calculo.t}. Combien y a-t-il de poules ?",
+    "en": "There are {dados-calculo.n} animals in all, between hens and rabbits. Each hen has {dados-calculo.p} legs and each rabbit, {dados-calculo.q} legs; the total number of legs is {dados-calculo.t}. How many hens are there?"
+  }
+}

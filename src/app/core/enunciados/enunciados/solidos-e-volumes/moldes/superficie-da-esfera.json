@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Qual é a área da superfície de uma esfera de raio {dados-calculo.raio} cm? (em cm²)",
+    "fr": "Quelle est l’aire de la surface d’une sphère de rayon {dados-calculo.raio} cm ? (en cm²)",
+    "en": "What is the surface area of a sphere of radius {dados-calculo.raio} cm? (in cm²)"
+  }
+}

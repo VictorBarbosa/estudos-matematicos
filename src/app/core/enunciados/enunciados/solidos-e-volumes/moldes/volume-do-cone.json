@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Qual é o volume de um cone de raio {dados-calculo.raio} cm e altura {dados-calculo.altura} cm? (em cm³)",
+    "fr": "Quel est le volume d’un cône de rayon {dados-calculo.raio} cm et de hauteur {dados-calculo.altura} cm ? (en cm³)",
+    "en": "What is the volume of a cone of radius {dados-calculo.raio} cm and height {dados-calculo.altura} cm? (in cm³)"
+  }
+}

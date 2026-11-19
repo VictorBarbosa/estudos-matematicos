@@ -73,6 +73,7 @@ import esequenciasESeriesMoldesForma4 from '@core/enunciados/enunciados/sequenci
 import esequenciasESeriesMoldesForma5 from '@core/enunciados/enunciados/sequencias-e-series/moldes/forma-5.json';
 import esequenciasESeriesMoldesForma6 from '@core/enunciados/enunciados/sequencias-e-series/moldes/forma-6.json';
 import esequenciasESeriesMoldesForma7 from '@core/enunciados/enunciados/sequencias-e-series/moldes/forma-7.json';
+import esequenciasESeriesMoldesConvergeOuDiverge from '@core/enunciados/enunciados/sequencias-e-series/moldes/converge-ou-diverge.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_SEQUENCIAS_E_SERIES: readonly EntradaDeEnunciado[] = [
@@ -143,4 +144,5 @@ export const ENTRADAS_DE_SEQUENCIAS_E_SERIES: readonly EntradaDeEnunciado[] = [
   { topico: 'sequencias-e-series', forma: 'forma-5', conteudo: esequenciasESeriesMoldesForma5 },
   { topico: 'sequencias-e-series', forma: 'forma-6', conteudo: esequenciasESeriesMoldesForma6 },
   { topico: 'sequencias-e-series', forma: 'forma-7', conteudo: esequenciasESeriesMoldesForma7 },
+  { topico: 'sequencias-e-series', forma: 'converge-ou-diverge', conteudo: esequenciasESeriesMoldesConvergeOuDiverge },
 ];

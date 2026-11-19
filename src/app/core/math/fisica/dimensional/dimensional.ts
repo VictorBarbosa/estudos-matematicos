@@ -20,6 +20,17 @@ export const ADIMENSIONAL: Dimensao = { M: 0, L: 0, T: 0 };
 
 export interface Grandeza {
   readonly nome: string;
+  /**
+   * O nome nas outras duas línguas.
+   *
+   * O nome é CONTEÚDO do enunciado — «qual é o expoente de M na dimensão de
+   * potência?» —, e escrito só em português ele atravessava a tradução
+   * intacto. São vinte e três grandezas: um molde por nome seria vinte e três
+   * arquivos para dizer a mesma frase, então o nome viaja com a grandeza e o
+   * molde o recebe já na língua certa.
+   */
+  readonly nomeFr: string;
+  readonly nomeEn: string;
   readonly simbolo: string;
   readonly unidade: string;
   readonly dimensao: Dimensao;
@@ -27,34 +38,190 @@ export interface Grandeza {
 
 /** As grandezas que o currículo usa, com dimensão e unidade do SI. */
 export const GRANDEZAS: readonly Grandeza[] = [
-  { nome: 'comprimento', simbolo: 'L', unidade: 'm', dimensao: { M: 0, L: 1, T: 0 } },
-  { nome: 'massa', simbolo: 'm', unidade: 'kg', dimensao: { M: 1, L: 0, T: 0 } },
-  { nome: 'tempo', simbolo: 't', unidade: 's', dimensao: { M: 0, L: 0, T: 1 } },
-  { nome: 'área', simbolo: 'A', unidade: 'm²', dimensao: { M: 0, L: 2, T: 0 } },
-  { nome: 'volume', simbolo: 'V', unidade: 'm³', dimensao: { M: 0, L: 3, T: 0 } },
-  { nome: 'velocidade', simbolo: 'v', unidade: 'm/s', dimensao: { M: 0, L: 1, T: -1 } },
-  { nome: 'aceleração', simbolo: 'a', unidade: 'm/s²', dimensao: { M: 0, L: 1, T: -2 } },
-  { nome: 'força', simbolo: 'F', unidade: 'N', dimensao: { M: 1, L: 1, T: -2 } },
-  { nome: 'pressão', simbolo: 'p', unidade: 'Pa', dimensao: { M: 1, L: -1, T: -2 } },
-  { nome: 'energia', simbolo: 'E', unidade: 'J', dimensao: { M: 1, L: 2, T: -2 } },
-  { nome: 'potência', simbolo: 'P', unidade: 'W', dimensao: { M: 1, L: 2, T: -3 } },
-  { nome: 'momento linear', simbolo: 'p', unidade: 'kg·m/s', dimensao: { M: 1, L: 1, T: -1 } },
-  { nome: 'densidade', simbolo: 'ρ', unidade: 'kg/m³', dimensao: { M: 1, L: -3, T: 0 } },
-  { nome: 'frequência', simbolo: 'f', unidade: 'Hz', dimensao: { M: 0, L: 0, T: -1 } },
-  { nome: 'torque', simbolo: 'τ', unidade: 'N·m', dimensao: { M: 1, L: 2, T: -2 } },
-  { nome: 'impulso', simbolo: 'J', unidade: 'N·s', dimensao: { M: 1, L: 1, T: -1 } },
-  { nome: 'vazão', simbolo: 'Q', unidade: 'm³/s', dimensao: { M: 0, L: 3, T: -1 } },
-  { nome: 'vazão mássica', simbolo: 'ṁ', unidade: 'kg/s', dimensao: { M: 1, L: 0, T: -1 } },
-  { nome: 'tensão superficial', simbolo: 'γ', unidade: 'N/m', dimensao: { M: 1, L: 0, T: -2 } },
-  { nome: 'constante elástica', simbolo: 'k', unidade: 'N/m', dimensao: { M: 1, L: 0, T: -2 } },
+  {
+    nome: 'comprimento',
+    nomeFr: 'longueur',
+    nomeEn: 'length',
+    simbolo: 'L',
+    unidade: 'm',
+    dimensao: { M: 0, L: 1, T: 0 },
+  },
+  {
+    nome: 'massa',
+    nomeFr: 'masse',
+    nomeEn: 'mass',
+    simbolo: 'm',
+    unidade: 'kg',
+    dimensao: { M: 1, L: 0, T: 0 },
+  },
+  {
+    nome: 'tempo',
+    nomeFr: 'temps',
+    nomeEn: 'time',
+    simbolo: 't',
+    unidade: 's',
+    dimensao: { M: 0, L: 0, T: 1 },
+  },
+  {
+    nome: 'área',
+    nomeFr: 'aire',
+    nomeEn: 'area',
+    simbolo: 'A',
+    unidade: 'm²',
+    dimensao: { M: 0, L: 2, T: 0 },
+  },
+  {
+    nome: 'volume',
+    nomeFr: 'volume',
+    nomeEn: 'volume',
+    simbolo: 'V',
+    unidade: 'm³',
+    dimensao: { M: 0, L: 3, T: 0 },
+  },
+  {
+    nome: 'velocidade',
+    nomeFr: 'vitesse',
+    nomeEn: 'speed',
+    simbolo: 'v',
+    unidade: 'm/s',
+    dimensao: { M: 0, L: 1, T: -1 },
+  },
+  {
+    nome: 'aceleração',
+    nomeFr: 'accélération',
+    nomeEn: 'acceleration',
+    simbolo: 'a',
+    unidade: 'm/s²',
+    dimensao: { M: 0, L: 1, T: -2 },
+  },
+  {
+    nome: 'força',
+    nomeFr: 'force',
+    nomeEn: 'force',
+    simbolo: 'F',
+    unidade: 'N',
+    dimensao: { M: 1, L: 1, T: -2 },
+  },
+  {
+    nome: 'pressão',
+    nomeFr: 'pression',
+    nomeEn: 'pressure',
+    simbolo: 'p',
+    unidade: 'Pa',
+    dimensao: { M: 1, L: -1, T: -2 },
+  },
+  {
+    nome: 'energia',
+    nomeFr: 'énergie',
+    nomeEn: 'energy',
+    simbolo: 'E',
+    unidade: 'J',
+    dimensao: { M: 1, L: 2, T: -2 },
+  },
+  {
+    nome: 'potência',
+    nomeFr: 'puissance',
+    nomeEn: 'power',
+    simbolo: 'P',
+    unidade: 'W',
+    dimensao: { M: 1, L: 2, T: -3 },
+  },
+  {
+    nome: 'momento linear',
+    nomeFr: 'quantité de mouvement',
+    nomeEn: 'linear momentum',
+    simbolo: 'p',
+    unidade: 'kg·m/s',
+    dimensao: { M: 1, L: 1, T: -1 },
+  },
+  {
+    nome: 'densidade',
+    nomeFr: 'masse volumique',
+    nomeEn: 'density',
+    simbolo: 'ρ',
+    unidade: 'kg/m³',
+    dimensao: { M: 1, L: -3, T: 0 },
+  },
+  {
+    nome: 'frequência',
+    nomeFr: 'fréquence',
+    nomeEn: 'frequency',
+    simbolo: 'f',
+    unidade: 'Hz',
+    dimensao: { M: 0, L: 0, T: -1 },
+  },
+  {
+    nome: 'torque',
+    nomeFr: 'moment de force',
+    nomeEn: 'torque',
+    simbolo: 'τ',
+    unidade: 'N·m',
+    dimensao: { M: 1, L: 2, T: -2 },
+  },
+  {
+    nome: 'impulso',
+    nomeFr: 'impulsion',
+    nomeEn: 'impulse',
+    simbolo: 'J',
+    unidade: 'N·s',
+    dimensao: { M: 1, L: 1, T: -1 },
+  },
+  {
+    nome: 'vazão',
+    nomeFr: 'débit volumique',
+    nomeEn: 'volumetric flow rate',
+    simbolo: 'Q',
+    unidade: 'm³/s',
+    dimensao: { M: 0, L: 3, T: -1 },
+  },
+  {
+    nome: 'vazão mássica',
+    nomeFr: 'débit massique',
+    nomeEn: 'mass flow rate',
+    simbolo: 'ṁ',
+    unidade: 'kg/s',
+    dimensao: { M: 1, L: 0, T: -1 },
+  },
+  {
+    nome: 'tensão superficial',
+    nomeFr: 'tension superficielle',
+    nomeEn: 'surface tension',
+    simbolo: 'γ',
+    unidade: 'N/m',
+    dimensao: { M: 1, L: 0, T: -2 },
+  },
+  {
+    nome: 'constante elástica',
+    nomeFr: 'constante de raideur',
+    nomeEn: 'spring constant',
+    simbolo: 'k',
+    unidade: 'N/m',
+    dimensao: { M: 1, L: 0, T: -2 },
+  },
   {
     nome: 'densidade superficial',
+    nomeFr: 'masse surfacique',
+    nomeEn: 'surface density',
     simbolo: 'σ',
     unidade: 'kg/m²',
     dimensao: { M: 1, L: -2, T: 0 },
   },
-  { nome: 'aceleração angular', simbolo: 'α', unidade: 'rad/s²', dimensao: { M: 0, L: 0, T: -2 } },
-  { nome: 'momento de inércia', simbolo: 'I', unidade: 'kg·m²', dimensao: { M: 1, L: 2, T: 0 } },
+  {
+    nome: 'aceleração angular',
+    nomeFr: 'accélération angulaire',
+    nomeEn: 'angular acceleration',
+    simbolo: 'α',
+    unidade: 'rad/s²',
+    dimensao: { M: 0, L: 0, T: -2 },
+  },
+  {
+    nome: 'momento de inércia',
+    nomeFr: "moment d'inertie",
+    nomeEn: 'moment of inertia',
+    simbolo: 'I',
+    unidade: 'kg·m²',
+    dimensao: { M: 1, L: 2, T: 0 },
+  },
 ];
 
 export function grandezaPorNome(nome: string): Grandeza | undefined {

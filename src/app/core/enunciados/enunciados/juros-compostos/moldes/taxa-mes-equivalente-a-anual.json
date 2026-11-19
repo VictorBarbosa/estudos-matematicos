@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma aplicação rende {dados-calculo.anual}% ao ano em juros compostos. Qual é a taxa MENSAL equivalente?",
+    "fr": "Un placement rapporte {dados-calculo.anual}% par an en intérêts composés. Quel est le taux MENSUEL équivalent ?",
+    "en": "An investment yields {dados-calculo.anual}% per year under compound interest. What is the equivalent MONTHLY rate?"
+  }
+}

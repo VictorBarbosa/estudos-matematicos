@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   Fracao,
   Matriz,
@@ -295,13 +301,17 @@ function exercicioMultiplicador(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = alvo / pivo;
   const Li = nomeDaLinha(destino);
 
+  const texto = enunciadoComSufixos(
+    moldesDe('escalonamento-e-inversa', 'k-que-zera-a-entrada')[0]!,
+    ehInteiro(gabarito) ? [] : moldesDe('escalonamento-e-inversa', 'sufixo-como-fracao'),
+    { linha: Li },
+  );
+
   return {
     id: `escal-mult-${m.flat().join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: comFracao(
-      `Na operação ${Li} ← ${Li} − k·L₁, qual valor de k zera a primeira entrada da ${Li}?`,
-      gabarito,
-    ),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: aumentadaParaTex(paraFracoes(m), 3),
     gabarito,
     resolucao: {
@@ -673,13 +683,17 @@ function exercicioInversa2(nivel: Nivel, rng: Rng): Exercicio<number> {
   const inversa = inversaComPassos(A);
   const diagonal = i === j;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('escalonamento-e-inversa', 'entrada-da-inversa')[0]!,
+    ehInteiro(gabarito) ? [] : moldesDe('escalonamento-e-inversa', 'sufixo-como-fracao'),
+    { linha: i + 1, coluna: j + 1 },
+  );
+
   return {
     id: `escal-inv2-${p}_${q}_${r}_${s}-${i}${j}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: comFracao(
-      `Qual é a entrada da linha ${i + 1}, coluna ${j + 1} da matriz inversa A⁻¹?`,
-      gabarito,
-    ),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `A = \\begin{pmatrix} ${p} & ${q} \\\\ ${r} & ${s} \\end{pmatrix}`,
     gabarito,
     resolucao: {

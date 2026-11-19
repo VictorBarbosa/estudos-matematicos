@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Qual é a entrada da linha {dados-calculo.linha}, coluna {dados-calculo.coluna} da matriz inversa A⁻¹?",
+    "fr": "Quelle est l'entrée de la ligne {dados-calculo.linha}, colonne {dados-calculo.coluna} de la matrice inverse A⁻¹ ?",
+    "en": "What is the entry in row {dados-calculo.linha}, column {dados-calculo.coluna} of the inverse matrix A⁻¹?"
+  }
+}

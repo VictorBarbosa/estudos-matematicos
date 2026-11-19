@@ -1,5 +1,12 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { numeroEmTex, numeroEmTexto } from '@core/math';
+import { EnunciadoTrilingue } from '@core/treino/textos/texto-trilingue';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import {
@@ -23,7 +30,9 @@ type Pergunta =
   | 'extremos-do-intervalo'
   | 'alternada-termos';
 
-const CODIGO = 'A série converge ou diverge? Responda 1 se converge, 2 se diverge.';
+/** A pergunta do código 1/2, vinda do arquivo nas três línguas. */
+const CODIGO = (): EnunciadoTrilingue =>
+  enunciadoDoMolde(moldesDe('sequencias-e-series', 'converge-ou-diverge')[0]!, {});
 const CONVERGE = 1;
 const DIVERGE = 2;
 
@@ -184,10 +193,13 @@ function pSerie(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = p > 1 ? CONVERGE : DIVERGE;
   const pTexto = String(p).replace('.', ',');
 
+  const texto = CODIGO();
+
   return {
     id: `series-p-${p}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: CODIGO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\sum_{n=1}^{\\infty} ${tex}`,
     gabarito,
     resolucao: {
@@ -277,10 +289,13 @@ function comparacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   const familia = familias[indice]!;
   const gabarito = familia.converge ? CONVERGE : DIVERGE;
 
+  const texto = CODIGO();
+
   return {
     id: `series-comp-${indice}-${k}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: CODIGO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\sum_{n=1}^{\\infty} ${familia.tex}`,
     gabarito,
     resolucao: {

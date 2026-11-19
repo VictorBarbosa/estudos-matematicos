@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Armadilha, Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -102,10 +107,13 @@ export function exercicioExataK(nivel: Nivel, rng: Rng): Exercicio<number> {
     },
   ];
 
+  const texto = enunciadoDoMolde(moldesDe('edo-primeira-ordem', 'valor-de-k-exata')[0]!, {});
+
   return {
     id: `exata-k-${p}${q}${c}${b}${d}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Para que valor de k esta equação diferencial é exata?',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\left(${mTex}\\right)dx + \\left(${nTex}\\right)dy = 0`,
     gabarito,
     resolucao: {
@@ -216,13 +224,17 @@ export function exercicioExataConstante(nivel: Nivel, rng: Rng): Exercicio<numbe
     },
   ];
 
+  const texto = enunciadoComSufixos(
+    moldesDe('edo-primeira-ordem', 'constante-c-da-solucao')[0]!,
+    inteiro ? [] : moldesDe('edo-primeira-ordem', 'sufixo-casas-4'),
+    { x0, y0 },
+  );
+
   return {
     id: `exata-c-${nivel}-${termos.map((t) => t.c).join('_')}-${x0}${y0}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `A equação é exata e sua solução tem a forma F(x, y) = C. Qual é o valor de C para a ` +
-      `curva que passa pelo ponto (${x0}, ${y0})?` +
-      (inteiro ? '' : ' Responda com 4 casas decimais.'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\left(${somaTex(M)}\\right)dx + \\left(${somaTex(N)}\\right)dy = 0`,
     gabarito,
     resolucao: {

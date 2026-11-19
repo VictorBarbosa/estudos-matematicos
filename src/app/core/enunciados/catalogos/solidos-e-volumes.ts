@@ -68,6 +68,14 @@ import esolidosEVolumesExtremo14 from '@core/enunciados/enunciados/solidos-e-vol
 import esolidosEVolumesExtremo15 from '@core/enunciados/enunciados/solidos-e-volumes/extremo/15.json';
 import esolidosEVolumesMoldesForma1 from '@core/enunciados/enunciados/solidos-e-volumes/moldes/forma-1.json';
 import esolidosEVolumesMoldesForma2 from '@core/enunciados/enunciados/solidos-e-volumes/moldes/forma-2.json';
+import esolidosEVolumesMoldesSufixoCasas2 from '@core/enunciados/enunciados/solidos-e-volumes/moldes/sufixo-casas-2.json';
+import esolidosEVolumesMoldesAreaTotalDoCilindro from '@core/enunciados/enunciados/solidos-e-volumes/moldes/area-total-do-cilindro.json';
+import esolidosEVolumesMoldesAreaTotalDoCone from '@core/enunciados/enunciados/solidos-e-volumes/moldes/area-total-do-cone.json';
+import esolidosEVolumesMoldesSuperficieDaEsfera from '@core/enunciados/enunciados/solidos-e-volumes/moldes/superficie-da-esfera.json';
+import esolidosEVolumesMoldesVolumeDaEsfera from '@core/enunciados/enunciados/solidos-e-volumes/moldes/volume-da-esfera.json';
+import esolidosEVolumesMoldesVolumeDaPiramide from '@core/enunciados/enunciados/solidos-e-volumes/moldes/volume-da-piramide.json';
+import esolidosEVolumesMoldesVolumeDoCilindro from '@core/enunciados/enunciados/solidos-e-volumes/moldes/volume-do-cilindro.json';
+import esolidosEVolumesMoldesVolumeDoCone from '@core/enunciados/enunciados/solidos-e-volumes/moldes/volume-do-cone.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_SOLIDOS_E_VOLUMES: readonly EntradaDeEnunciado[] = [
@@ -133,4 +141,12 @@ export const ENTRADAS_DE_SOLIDOS_E_VOLUMES: readonly EntradaDeEnunciado[] = [
   { topico: 'solidos-e-volumes', nivel: 'extremo', conteudo: esolidosEVolumesExtremo15 },
   { topico: 'solidos-e-volumes', forma: 'forma-1', conteudo: esolidosEVolumesMoldesForma1 },
   { topico: 'solidos-e-volumes', forma: 'forma-2', conteudo: esolidosEVolumesMoldesForma2 },
+  { topico: 'solidos-e-volumes', forma: 'sufixo-casas-2', conteudo: esolidosEVolumesMoldesSufixoCasas2 },
+  { topico: 'solidos-e-volumes', forma: 'area-total-do-cilindro', conteudo: esolidosEVolumesMoldesAreaTotalDoCilindro },
+  { topico: 'solidos-e-volumes', forma: 'area-total-do-cone', conteudo: esolidosEVolumesMoldesAreaTotalDoCone },
+  { topico: 'solidos-e-volumes', forma: 'superficie-da-esfera', conteudo: esolidosEVolumesMoldesSuperficieDaEsfera },
+  { topico: 'solidos-e-volumes', forma: 'volume-da-esfera', conteudo: esolidosEVolumesMoldesVolumeDaEsfera },
+  { topico: 'solidos-e-volumes', forma: 'volume-da-piramide', conteudo: esolidosEVolumesMoldesVolumeDaPiramide },
+  { topico: 'solidos-e-volumes', forma: 'volume-do-cilindro', conteudo: esolidosEVolumesMoldesVolumeDoCilindro },
+  { topico: 'solidos-e-volumes', forma: 'volume-do-cone', conteudo: esolidosEVolumesMoldesVolumeDoCone },
 ];

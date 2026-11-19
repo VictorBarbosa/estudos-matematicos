@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um triângulo retângulo isósceles (ângulos de 45°) tem catetos de {dados-calculo.k} cm. Quanto mede a hipotenusa, em cm?",
+    "fr": "Un triangle rectangle isocèle (angles de 45°) a des cathètes de {dados-calculo.k} cm. Combien mesure l'hypoténuse, en cm ?",
+    "en": "An isosceles right triangle (45° angles) has legs of {dados-calculo.k} cm. How long is the hypotenuse, in cm?"
+  }
+}

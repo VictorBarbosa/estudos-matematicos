@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Num triângulo retângulo com ângulos de 30° e 60°, a hipotenusa mede {dados-calculo.h} cm. Quanto mede o cateto oposto ao ângulo de 60°, em cm?",
+    "fr": "Dans un triangle rectangle avec des angles de 30° et 60°, l'hypoténuse mesure {dados-calculo.h} cm. Combien mesure la cathète opposée à l'angle de 60°, en cm ?",
+    "en": "In a right triangle with 30° and 60° angles, the hypotenuse is {dados-calculo.h} cm. How long is the leg opposite the 60° angle, in cm?"
+  }
+}

@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -40,12 +45,17 @@ export function exercicioSegundaImplicita(nivel: Nivel, rng: Rng): Exercicio<num
   const ta = a === 1 ? '' : a;
   const tb = b === 1 ? '' : b;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('derivacao-implicita', 'derivada-segunda-no-ponto')[0]!,
+    moldesDe('derivacao-implicita', 'sufixo-fracao-ou-4-casas'),
+    { x, y },
+  );
+
   return {
     id: `implicita-segunda-${a}${b}-${x}${y}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `A curva passa pelo ponto (${x}, ${y}). Calcule a derivada SEGUNDA d²y/dx² nesse ponto. ` +
-      'Responda como fração ou com 4 casas decimais.',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `${ta}x^{2} + ${tb}y^{2} = ${c}`,
     gabarito,
     resolucao: {
@@ -127,11 +137,16 @@ export function exercicioTangenteHorizontal(nivel: Nivel, rng: Rng): Exercicio<n
   const mais = s > 0 ? '+' : '-';
   const menosSe = s > 0 ? '-' : '';
 
+  const texto = enunciadoDoMolde(
+    moldesDe('derivacao-implicita', 'maior-ordenada-tangente-horizontal')[0]!,
+    {},
+  );
+
   return {
     id: `implicita-horizontal-${s}-${k}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      'Em dois pontos da curva a reta tangente é horizontal. Qual é a MAIOR ordenada y entre eles?',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `x^{2} ${mais} xy + y^{2} = ${c}`,
     gabarito,
     resolucao: {

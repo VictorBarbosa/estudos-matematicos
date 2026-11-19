@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -29,12 +34,18 @@ function congruenciaLado(nivel: Nivel, rng: Rng): Exercicio<number> {
   let bc = rng.inteiro(4, 12);
   if (bc === ab) bc += 2;
   const anguloB = rng.inteiro(35, 110);
+  const texto = enunciadoDoMolde(moldesDe('angulos-e-triangulos', 'congruencia-pelo-caso')[0]!, {
+    caso,
+    ab,
+    bc,
+    anguloB,
+  });
+
   return {
     id: `ang-congr-lado-${caso}-${ab}-${bc}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Os triângulos ABC e DEF são congruentes pelo caso ${caso}, com A↔D, B↔E e C↔F. ` +
-      `Se AB = ${ab} cm, BC = ${bc} cm e o ângulo B mede ${anguloB}°, quanto mede EF (em cm)?`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex:
       '\\triangle ABC \\cong \\triangle DEF \\qquad A \\leftrightarrow D,\\; B \\leftrightarrow E,\\; C \\leftrightarrow F',
     gabarito: bc,
@@ -85,12 +96,19 @@ function congruenciaAlgebrica(nivel: Nivel, rng: Rng): Exercicio<number> {
   const sTex = s >= 0 ? `+ ${s}` : `- ${Math.abs(s)}`;
   const sTexto = s >= 0 ? `+ ${s}` : `− ${Math.abs(s)}`;
   const pTexto = p === 1 ? '' : String(p);
+  const texto = enunciadoDoMolde(
+    moldesDe('angulos-e-triangulos', 'congruencia-com-incognita')[0]!,
+    {
+      expressao1: `${pTexto}x + ${q}`,
+      expressao2: `${r}x ${sTexto}`,
+    },
+  );
+
   return {
     id: `ang-congr-alg-${p}${q}${r}${s}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Os triângulos ABC e DEF são congruentes, com A↔D, B↔E e C↔F. Sabendo que ` +
-      `AB = ${pTexto}x + ${q} cm e DE = ${r}x ${sTexto} cm, quanto mede AB (em cm)?`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `AB = ${pTexto}x + ${q} \\qquad DE = ${r}x ${sTex}`,
     gabarito: lado,
     resolucao: {
@@ -131,12 +149,19 @@ function congruenciaAngulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   const a = rng.inteiro(30, 80);
   const e = rng.inteiro(30, 80);
   const f = 180 - a - e;
+  const texto = enunciadoDoMolde(
+    moldesDe('angulos-e-triangulos', 'congruencia-terceiro-angulo')[0]!,
+    {
+      a,
+      e,
+    },
+  );
+
   return {
     id: `ang-congr-ang-${a}-${e}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Os triângulos ABC e DEF são congruentes, com A↔D, B↔E e C↔F. O ângulo A mede ${a}° ` +
-      `e o ângulo E mede ${e}°. Quanto mede o ângulo C? (em graus)`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\hat{A} = ${a}^\\circ \\qquad \\hat{E} = ${e}^\\circ \\qquad \\hat{C} = \\;?`,
     gabarito: f,
     resolucao: {
@@ -190,10 +215,20 @@ export function exercicioQuadrilatero(nivel: Nivel, rng: Rng): Exercicio<number>
     const b = rng.inteiro(60, 120);
     const c = rng.inteiro(50, Math.min(150, 330 - a - b));
     const d = 360 - a - b - c;
+    const texto = enunciadoDoMolde(
+      moldesDe('angulos-e-triangulos', 'quarto-angulo-do-quadrilatero')[0]!,
+      {
+        a,
+        b,
+        c,
+      },
+    );
+
     return {
       id: `ang-quad-quarto-${a}${b}${c}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `Três ângulos de um quadrilátero medem ${a}°, ${b}° e ${c}°. Quanto mede o quarto? (em graus)`,
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `${a}^\\circ + ${b}^\\circ + ${c}^\\circ + x = 360^\\circ`,
       gabarito: d,
       resolucao: {
@@ -230,14 +265,20 @@ export function exercicioQuadrilatero(nivel: Nivel, rng: Rng): Exercicio<number>
   if (tipo === 'paralelogramo' || tipo === 'trapezio') {
     const alfa = rng.inteiro(40, 85);
     const resposta = 180 - alfa;
-    const enunciado =
-      tipo === 'paralelogramo'
-        ? `Num paralelogramo, um ângulo mede ${alfa}°. Quanto mede o ângulo vizinho (consecutivo)? (em graus)`
-        : `Num trapézio isósceles, cada ângulo da base maior mede ${alfa}°. Quanto mede cada ângulo da base menor? (em graus)`;
+    const texto = enunciadoDoMolde(
+      moldesDe(
+        'angulos-e-triangulos',
+        tipo === 'paralelogramo'
+          ? 'angulo-vizinho-no-paralelogramo'
+          : 'angulo-da-base-menor-do-trapezio',
+      )[0]!,
+      { alfa },
+    );
     return {
       id: `ang-quad-${tipo}-${alfa}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado,
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `\\alpha = ${alfa}^\\circ \\qquad \\beta = \\;?`,
       gabarito: resposta,
       resolucao: {
@@ -287,10 +328,18 @@ export function exercicioQuadrilatero(nivel: Nivel, rng: Rng): Exercicio<number>
   const alfa = rng.inteiro(20, 80) * 2;
   const anguloB = 180 - alfa;
   const resposta = anguloB / 2;
+  const texto = enunciadoDoMolde(
+    moldesDe('angulos-e-triangulos', 'angulo-da-diagonal-do-losango')[0]!,
+    {
+      alfa,
+    },
+  );
+
   return {
     id: `ang-quad-losango-${alfa}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Num losango ABCD, o ângulo do vértice A mede ${alfa}°. Que ângulo a diagonal BD forma com o lado AB? (em graus)`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\hat{A} = ${alfa}^\\circ \\qquad A\\hat{B}D = \\;?`,
     gabarito: resposta,
     resolucao: {
@@ -338,10 +387,19 @@ export function exercicioDiagonais(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = (n * (n - 3)) / 2;
   const angulo = pelaInterno ? interno : externo;
 
+  const texto = enunciadoDoMolde(
+    moldesDe(
+      'angulos-e-triangulos',
+      pelaInterno ? 'diagonais-pelo-angulo-interno' : 'diagonais-pelo-angulo-externo',
+    )[0]!,
+    { angulo },
+  );
+
   return {
     id: `ang-diag-${n}-${pelaInterno ? 'i' : 'e'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um polígono regular tem ângulo ${pelaInterno ? 'interno' : 'externo'} de ${numTexto(angulo)}°. Quantas diagonais ele tem?`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `a_${pelaInterno ? 'i' : 'e'} = ${numTex(angulo)}^\\circ`,
     gabarito,
     resolucao: {

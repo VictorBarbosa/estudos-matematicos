@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Três ângulos de um quadrilátero medem {dados-calculo.a}°, {dados-calculo.b}° e {dados-calculo.c}°. Quanto mede o quarto? (em graus)",
+    "fr": "Trois angles d’un quadrilatère mesurent {dados-calculo.a}°, {dados-calculo.b}° et {dados-calculo.c}°. Combien mesure le quatrième ? (en degrés)",
+    "en": "Three angles of a quadrilateral measure {dados-calculo.a}°, {dados-calculo.b}° and {dados-calculo.c}°. What does the fourth measure? (in degrees)"
+  }
+}

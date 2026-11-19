@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Num losango ABCD, o ângulo do vértice A mede {dados-calculo.alfa}°. Que ângulo a diagonal BD forma com o lado AB? (em graus)",
+    "fr": "Dans un losange ABCD, l’angle au sommet A mesure {dados-calculo.alfa}°. Quel angle la diagonale BD forme-t-elle avec le côté AB ? (en degrés)",
+    "en": "In a rhombus ABCD, the angle at vertex A measures {dados-calculo.alfa}°. What angle does the diagonal BD make with the side AB? (in degrees)"
+  }
+}

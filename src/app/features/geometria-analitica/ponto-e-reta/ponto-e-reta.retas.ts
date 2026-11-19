@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { numeroEmTex } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -96,10 +101,17 @@ export function exercicioDistanciaPontoReta(nivel: Nivel, rng: Rng): Exercicio<n
     },
   ];
 
+  const texto = enunciadoComSufixos(
+    moldesDe('ponto-e-reta', 'distancia-do-ponto-a-reta')[0]!,
+    moldesDe('ponto-e-reta', 'sufixo-casas-2'),
+    { x0, y0 },
+  );
+
   return {
     id: `ponto-reta-distreta-${a}${b}${c}-${x0}${y0}-${reduzida ? 'r' : 'g'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Qual é a distância do ponto P(${x0}, ${y0}) à reta? (2 casas decimais)`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: reduzida ? retaReduzidaTex(m, q) : retaGeralTex(a, b, c),
     gabarito,
     resolucao: { resultado: gabarito, passos },
@@ -153,12 +165,16 @@ export function exercicioPerpendicular(nivel: Nivel, rng: Rng): Exercicio<number
     if (m === 0) m = 2;
     const q = rng.inteiro(-6, 6);
     const gabarito = -1 / m;
+    const texto = enunciadoComSufixos(
+      moldesDe('ponto-e-reta', 'coeficiente-angular-da-perpendicular')[0]!,
+      Number.isInteger(gabarito) ? [] : moldesDe('ponto-e-reta', 'sufixo-fracao-ou-2-casas'),
+    );
+
     return {
       id: `ponto-reta-perp-m-${m}${q}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        'Qual é o coeficiente angular de uma reta perpendicular a esta?' +
-        (Number.isInteger(gabarito) ? '' : ' Responda como fração ou com 2 casas decimais.'),
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: retaReduzidaTex(m, q),
       gabarito,
       resolucao: {
@@ -233,13 +249,17 @@ export function exercicioPerpendicular(nivel: Nivel, rng: Rng): Exercicio<number
   const mp = -1 / m;
   const gabarito = y0 - mp * x0;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('ponto-e-reta', 'coeficiente-linear-da-perpendicular')[0]!,
+    Number.isInteger(gabarito) ? [] : moldesDe('ponto-e-reta', 'sufixo-fracao-ou-2-casas'),
+    { x0, y0 },
+  );
+
   return {
     id: `ponto-reta-perp-q-${numeroEmTex(m)}-${x0}${y0}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `A reta perpendicular a esta que passa por P(${x0}, ${y0}) tem equação y = m′x + n. ` +
-      'Qual é o coeficiente linear n?' +
-      (Number.isInteger(gabarito) ? '' : ' Responda como fração ou com 2 casas decimais.'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex,
     gabarito,
     resolucao: {

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Num paralelogramo, um ângulo mede {dados-calculo.alfa}°. Quanto mede o ângulo vizinho (consecutivo)? (em graus)",
+    "fr": "Dans un parallélogramme, un angle mesure {dados-calculo.alfa}°. Combien mesure l’angle voisin (consécutif) ? (en degrés)",
+    "en": "In a parallelogram, one angle measures {dados-calculo.alfa}°. What does the neighbouring (consecutive) angle measure? (in degrees)"
+  }
+}

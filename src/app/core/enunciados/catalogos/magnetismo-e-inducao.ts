@@ -124,6 +124,7 @@ import emagnetismoEInducaoExtremo28 from '@core/enunciados/enunciados/magnetismo
 import emagnetismoEInducaoExtremo29 from '@core/enunciados/enunciados/magnetismo-e-inducao/extremo/29.json';
 import emagnetismoEInducaoMoldesForma1 from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/forma-1.json';
 import emagnetismoEInducaoMoldesForma2 from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/forma-2.json';
+import emagnetismoEInducaoMoldesSufixoCasas2 from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/sufixo-casas-2.json';
 import emagnetismoEInducaoMoldesForma3 from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/forma-3.json';
 import emagnetismoEInducaoMoldesForma4 from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/forma-4.json';
 import emagnetismoEInducaoMoldesForma5 from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/forma-5.json';
@@ -132,6 +133,8 @@ import emagnetismoEInducaoMoldesForma7 from '@core/enunciados/enunciados/magneti
 import emagnetismoEInducaoMoldesForma8 from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/forma-8.json';
 import emagnetismoEInducaoMoldesForma9 from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/forma-9.json';
 import emagnetismoEInducaoMoldesForma10 from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/forma-10.json';
+import emagnetismoEInducaoMoldesCorrenteInduzida from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/corrente-induzida.json';
+import emagnetismoEInducaoMoldesForcaQueFreiaABarra from '@core/enunciados/enunciados/magnetismo-e-inducao/moldes/forca-que-freia-a-barra.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_MAGNETISMO_E_INDUCAO: readonly EntradaDeEnunciado[] = [
@@ -253,6 +256,7 @@ export const ENTRADAS_DE_MAGNETISMO_E_INDUCAO: readonly EntradaDeEnunciado[] = [
   { topico: 'magnetismo-e-inducao', nivel: 'extremo', conteudo: emagnetismoEInducaoExtremo29 },
   { topico: 'magnetismo-e-inducao', forma: 'forma-1', conteudo: emagnetismoEInducaoMoldesForma1 },
   { topico: 'magnetismo-e-inducao', forma: 'forma-2', conteudo: emagnetismoEInducaoMoldesForma2 },
+  { topico: 'magnetismo-e-inducao', forma: 'sufixo-casas-2', conteudo: emagnetismoEInducaoMoldesSufixoCasas2 },
   { topico: 'magnetismo-e-inducao', forma: 'forma-3', conteudo: emagnetismoEInducaoMoldesForma3 },
   { topico: 'magnetismo-e-inducao', forma: 'forma-4', conteudo: emagnetismoEInducaoMoldesForma4 },
   { topico: 'magnetismo-e-inducao', forma: 'forma-5', conteudo: emagnetismoEInducaoMoldesForma5 },
@@ -261,4 +265,6 @@ export const ENTRADAS_DE_MAGNETISMO_E_INDUCAO: readonly EntradaDeEnunciado[] = [
   { topico: 'magnetismo-e-inducao', forma: 'forma-8', conteudo: emagnetismoEInducaoMoldesForma8 },
   { topico: 'magnetismo-e-inducao', forma: 'forma-9', conteudo: emagnetismoEInducaoMoldesForma9 },
   { topico: 'magnetismo-e-inducao', forma: 'forma-10', conteudo: emagnetismoEInducaoMoldesForma10 },
+  { topico: 'magnetismo-e-inducao', forma: 'corrente-induzida', conteudo: emagnetismoEInducaoMoldesCorrenteInduzida },
+  { topico: 'magnetismo-e-inducao', forma: 'forca-que-freia-a-barra', conteudo: emagnetismoEInducaoMoldesForcaQueFreiaABarra },
 ];

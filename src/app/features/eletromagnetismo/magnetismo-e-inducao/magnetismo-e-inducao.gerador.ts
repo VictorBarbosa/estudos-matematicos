@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   MU_0,
   campoFioComPassos,
@@ -530,18 +536,23 @@ function barra(nivel: Nivel, rng: Rng): Exercicio<number> {
   const pede = rng.escolher(['corrente', 'forca'] as const);
   const gabarito = pede === 'corrente' ? i : forca;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('magnetismo-e-inducao', 'forma-8')[0]!,
+    [
+      moldesDe(
+        'magnetismo-e-inducao',
+        pede === 'corrente' ? 'corrente-induzida' : 'forca-que-freia-a-barra',
+      )[0]!,
+      moldesDe('magnetismo-e-inducao', 'sufixo-casas-2')[0]!,
+    ],
+    { expressao1: txt(l), v, expressao2: txt(b), expressao3: txt(r) },
+  );
+
   return {
     id: `mag-barra-${b}-${l}-${v}-${r}-${pede}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(
-        moldesDe('magnetismo-e-inducao', 'forma-8')[0]!,
-        { expressao1: txt(l), v, expressao2: txt(b), expressao3: txt(r) },
-        'pt',
-      ) +
-      (pede === 'corrente'
-        ? 'Qual é a corrente induzida, em A? (2 casas decimais)'
-        : 'Qual é a força magnética que freia a barra, em N? (2 casas decimais)'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `B = ${tex(b)}\\ \\text{T} \\qquad L = ${tex(l)}\\ \\text{m} \\qquad v = ${v}\\ \\text{m/s} \\qquad R = ${tex(r)}\\ \\Omega`,
     gabarito,
     resolucao: {

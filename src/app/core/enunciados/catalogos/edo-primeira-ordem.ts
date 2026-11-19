@@ -69,7 +69,11 @@ import eedoPrimeiraOrdemExtremo15 from '@core/enunciados/enunciados/edo-primeira
 import eedoPrimeiraOrdemMoldesForma1 from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/forma-1.json';
 import eedoPrimeiraOrdemMoldesForma2 from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/forma-2.json';
 import eedoPrimeiraOrdemMoldesForma3 from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/forma-3.json';
+import eedoPrimeiraOrdemMoldesSufixoCasas3 from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/sufixo-casas-3.json';
 import eedoPrimeiraOrdemMoldesForma4 from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/forma-4.json';
+import eedoPrimeiraOrdemMoldesSufixoCasas4 from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/sufixo-casas-4.json';
+import eedoPrimeiraOrdemMoldesConstanteCDaSolucao from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/constante-c-da-solucao.json';
+import eedoPrimeiraOrdemMoldesValorDeKExata from '@core/enunciados/enunciados/edo-primeira-ordem/moldes/valor-de-k-exata.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_EDO_PRIMEIRA_ORDEM: readonly EntradaDeEnunciado[] = [
@@ -136,5 +140,9 @@ export const ENTRADAS_DE_EDO_PRIMEIRA_ORDEM: readonly EntradaDeEnunciado[] = [
   { topico: 'edo-primeira-ordem', forma: 'forma-1', conteudo: eedoPrimeiraOrdemMoldesForma1 },
   { topico: 'edo-primeira-ordem', forma: 'forma-2', conteudo: eedoPrimeiraOrdemMoldesForma2 },
   { topico: 'edo-primeira-ordem', forma: 'forma-3', conteudo: eedoPrimeiraOrdemMoldesForma3 },
+  { topico: 'edo-primeira-ordem', forma: 'sufixo-casas-3', conteudo: eedoPrimeiraOrdemMoldesSufixoCasas3 },
   { topico: 'edo-primeira-ordem', forma: 'forma-4', conteudo: eedoPrimeiraOrdemMoldesForma4 },
+  { topico: 'edo-primeira-ordem', forma: 'sufixo-casas-4', conteudo: eedoPrimeiraOrdemMoldesSufixoCasas4 },
+  { topico: 'edo-primeira-ordem', forma: 'constante-c-da-solucao', conteudo: eedoPrimeiraOrdemMoldesConstanteCDaSolucao },
+  { topico: 'edo-primeira-ordem', forma: 'valor-de-k-exata', conteudo: eedoPrimeiraOrdemMoldesValorDeKExata },
 ];

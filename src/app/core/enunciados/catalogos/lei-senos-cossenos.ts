@@ -24,7 +24,10 @@ import eleiSenosCossenosExtremo03 from '@core/enunciados/enunciados/lei-senos-co
 import eleiSenosCossenosExtremo04 from '@core/enunciados/enunciados/lei-senos-cossenos/extremo/04.json';
 import eleiSenosCossenosMoldesForma1 from '@core/enunciados/enunciados/lei-senos-cossenos/moldes/forma-1.json';
 import eleiSenosCossenosMoldesForma2 from '@core/enunciados/enunciados/lei-senos-cossenos/moldes/forma-2.json';
+import eleiSenosCossenosMoldesSufixoCasas2 from '@core/enunciados/enunciados/lei-senos-cossenos/moldes/sufixo-casas-2.json';
 import eleiSenosCossenosMoldesForma3 from '@core/enunciados/enunciados/lei-senos-cossenos/moldes/forma-3.json';
+import eleiSenosCossenosMoldesAreaPorDoisLadosEAngulo from '@core/enunciados/enunciados/lei-senos-cossenos/moldes/area-por-dois-lados-e-angulo.json';
+import eleiSenosCossenosMoldesAreaPorTresLados from '@core/enunciados/enunciados/lei-senos-cossenos/moldes/area-por-tres-lados.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_LEI_SENOS_COSSENOS: readonly EntradaDeEnunciado[] = [
@@ -46,5 +49,8 @@ export const ENTRADAS_DE_LEI_SENOS_COSSENOS: readonly EntradaDeEnunciado[] = [
   { topico: 'lei-senos-cossenos', nivel: 'extremo', conteudo: eleiSenosCossenosExtremo04 },
   { topico: 'lei-senos-cossenos', forma: 'forma-1', conteudo: eleiSenosCossenosMoldesForma1 },
   { topico: 'lei-senos-cossenos', forma: 'forma-2', conteudo: eleiSenosCossenosMoldesForma2 },
+  { topico: 'lei-senos-cossenos', forma: 'sufixo-casas-2', conteudo: eleiSenosCossenosMoldesSufixoCasas2 },
   { topico: 'lei-senos-cossenos', forma: 'forma-3', conteudo: eleiSenosCossenosMoldesForma3 },
+  { topico: 'lei-senos-cossenos', forma: 'area-por-dois-lados-e-angulo', conteudo: eleiSenosCossenosMoldesAreaPorDoisLadosEAngulo },
+  { topico: 'lei-senos-cossenos', forma: 'area-por-tres-lados', conteudo: eleiSenosCossenosMoldesAreaPorTresLados },
 ];

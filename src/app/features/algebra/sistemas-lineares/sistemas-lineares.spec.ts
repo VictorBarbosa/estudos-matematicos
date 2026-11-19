@@ -63,8 +63,13 @@ describe('geradorSistemas — problema e classificação', () => {
     const casos = lote('medio').filter((e) => e.enunciado.startsWith('Há '));
     expect(casos.length).toBeGreaterThan(0);
     for (const e of casos) {
-      const [, total] = /^Há (\d+)/.exec(e.enunciado)!;
-      const [, p, q, t] = /vale (-?\d+) .*?, (-?\d+) [a-z]+; .*? é (-?\d+)/.exec(e.enunciado)!;
+      /*
+       * Os quatro números na ordem em que o enunciado os diz: o total, o peso
+       * de cada um dos primeiros, o peso de cada um dos segundos e o total
+       * ponderado. A ordem é a mesma nos quatro cenários — e é por isso que
+       * eles podem ser quatro moldes diferentes sem que o teste mude.
+       */
+      const [total, p, q, t] = [...e.enunciado.matchAll(/-?\d+/g)].map((m) => Number(m[0]));
       const x = e.gabarito;
       const y = Number(total) - x;
       expect(y).toBeGreaterThan(0);

@@ -96,8 +96,10 @@ import eestaticaETorqueExtremo21 from '@core/enunciados/enunciados/estatica-e-to
 import eestaticaETorqueExtremo22 from '@core/enunciados/enunciados/estatica-e-torque/extremo/22.json';
 import eestaticaETorqueMoldesForma1 from '@core/enunciados/enunciados/estatica-e-torque/moldes/forma-1.json';
 import eestaticaETorqueMoldesForma2 from '@core/enunciados/enunciados/estatica-e-torque/moldes/forma-2.json';
+import eestaticaETorqueMoldesSufixoCasas2 from '@core/enunciados/enunciados/estatica-e-torque/moldes/sufixo-casas-2.json';
 import eestaticaETorqueMoldesForma3 from '@core/enunciados/enunciados/estatica-e-torque/moldes/forma-3.json';
 import eestaticaETorqueMoldesForma4 from '@core/enunciados/enunciados/estatica-e-torque/moldes/forma-4.json';
+import eestaticaETorqueMoldesCentroDeMassaDosCorpos from '@core/enunciados/enunciados/estatica-e-torque/moldes/centro-de-massa-dos-corpos.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_ESTATICA_E_TORQUE: readonly EntradaDeEnunciado[] = [
@@ -191,6 +193,8 @@ export const ENTRADAS_DE_ESTATICA_E_TORQUE: readonly EntradaDeEnunciado[] = [
   { topico: 'estatica-e-torque', nivel: 'extremo', conteudo: eestaticaETorqueExtremo22 },
   { topico: 'estatica-e-torque', forma: 'forma-1', conteudo: eestaticaETorqueMoldesForma1 },
   { topico: 'estatica-e-torque', forma: 'forma-2', conteudo: eestaticaETorqueMoldesForma2 },
+  { topico: 'estatica-e-torque', forma: 'sufixo-casas-2', conteudo: eestaticaETorqueMoldesSufixoCasas2 },
   { topico: 'estatica-e-torque', forma: 'forma-3', conteudo: eestaticaETorqueMoldesForma3 },
   { topico: 'estatica-e-torque', forma: 'forma-4', conteudo: eestaticaETorqueMoldesForma4 },
+  { topico: 'estatica-e-torque', forma: 'centro-de-massa-dos-corpos', conteudo: eestaticaETorqueMoldesCentroDeMassaDosCorpos },
 ];

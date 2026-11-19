@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
@@ -37,12 +42,16 @@ export function exercicioParabola(nivel: Nivel, rng: Rng): Exercicio<number> {
     const gabarito = pedeDiretriz ? -p : p;
     const enunciadoTex = comoFracao ? `y = \\frac{x^{2}}{${quatroP}}` : `x^{2} = ${quatroP}y`;
 
+    const texto = enunciadoDoMolde(
+      moldesDe('conicas', pedeDiretriz ? 'diretriz-da-parabola' : 'ordenada-do-foco')[0]!,
+      {},
+    );
+
     return {
       id: `conicas-parabola-${nivel}-${p}-${pedeDiretriz ? 'd' : 'f'}${comoFracao ? 'q' : ''}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: pedeDiretriz
-        ? 'A diretriz desta parábola é a reta horizontal y = d. Qual é o valor de d?'
-        : 'Qual é a ordenada (coordenada y) do foco desta parábola?',
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex,
       gabarito,
       resolucao: {
@@ -129,12 +138,16 @@ export function exercicioParabola(nivel: Nivel, rng: Rng): Exercicio<number> {
   ];
 
   if (nivel === 'dificil') {
+    const texto = enunciadoDoMolde(
+      moldesDe('conicas', pedeDiretriz ? 'diretriz-da-parabola' : 'ordenada-do-foco')[0]!,
+      {},
+    );
+
     return {
       id: `conicas-parabola-transl-${h}${k}${p}-${pedeDiretriz ? 'd' : 'f'}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: pedeDiretriz
-        ? 'A diretriz desta parábola é a reta horizontal y = d. Qual é o valor de d?'
-        : 'Qual é a ordenada (coordenada y) do foco desta parábola?',
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `${quadradoTex(h)} = ${quatroP}${linearTex(k)}`,
       gabarito,
       resolucao: { resultado: gabarito, passos: passosFinais },
@@ -176,12 +189,16 @@ export function exercicioParabola(nivel: Nivel, rng: Rng): Exercicio<number> {
     `x^{2}${termoX === 0 ? '' : ` ${termoX > 0 ? '+' : '-'} ${Math.abs(termoX)}x`}` +
     `${constante === 0 ? '' : ` ${constante > 0 ? '+' : '-'} ${Math.abs(constante)}`}`;
 
+  const texto = enunciadoDoMolde(
+    moldesDe('conicas', pedeDiretriz ? 'diretriz-da-parabola' : 'ordenada-do-foco')[0]!,
+    {},
+  );
+
   return {
     id: `conicas-parabola-exp-${h}${k}${p}-${pedeDiretriz ? 'd' : 'f'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: pedeDiretriz
-      ? 'A diretriz desta parábola é a reta horizontal y = d. Qual é o valor de d?'
-      : 'Qual é a ordenada (coordenada y) do foco desta parábola?',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `y = \\frac{${numerador}}{${quatroP}}`,
     gabarito,
     resolucao: {

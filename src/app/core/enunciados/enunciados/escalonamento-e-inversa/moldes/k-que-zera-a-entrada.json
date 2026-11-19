@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Na operação {dados-calculo.linha} ← {dados-calculo.linha} − k·L₁, qual valor de k zera a primeira entrada da {dados-calculo.linha}?",
+    "fr": "Dans l'opération {dados-calculo.linha} ← {dados-calculo.linha} − k·L₁, quelle valeur de k annule la première entrée de la {dados-calculo.linha} ?",
+    "en": "In the operation {dados-calculo.linha} ← {dados-calculo.linha} − k·L₁, which value of k zeroes the first entry of {dados-calculo.linha}?"
+  }
+}

@@ -89,7 +89,9 @@ describe('geradorTorque', () => {
     expect(exercicios.length).toBeGreaterThan(0);
 
     for (const exercicio of exercicios) {
-      const corpos = [...exercicio.enunciado.matchAll(/(\d+) kg em x = (\d+) m/g)].map((m) => ({
+      // «5 kg, x = 2 m»: a lista é notação, e não «5 kg EM x = 2 m» — a
+      // preposição era a única palavra portuguesa que o molde não traduzia.
+      const corpos = [...exercicio.enunciado.matchAll(/(\d+) kg, x = (\d+) m/g)].map((m) => ({
         massa: Number(m[1]),
         posicao: Number(m[2]),
       }));

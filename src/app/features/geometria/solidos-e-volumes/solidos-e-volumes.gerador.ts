@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { NOME_SOLIDO, Solido, superficieComPassos, volumeComPassos } from '@core/math';
 import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
@@ -70,14 +76,24 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
   const dimensoes = { raio, altura, areaBase };
   const { resultado, passos } = volumeComPassos(solido, dimensoes);
 
-  const enunciado =
-    solido === 'esfera'
-      ? `Qual é o volume de uma esfera de raio ${raio} cm? (em cm³, 2 casas decimais)`
-      : solido === 'piramide'
-        ? `Uma pirâmide tem área da base ${areaBase} cm² e altura ${altura} cm. ` +
-          'Qual é seu volume, em cm³?'
-        : `Qual é o volume de um ${NOME_SOLIDO[solido]} de raio ${raio} cm e altura ` +
-          `${altura} cm? (em cm³, 2 casas decimais)`;
+  /*
+   * O nome do sólido escolhe o MOLDE, e não entra como dado.
+   *
+   * `NOME_SOLIDO[solido]` é uma palavra portuguesa: injetada no texto, ela
+   * atravessava a tradução intacta — «What is the volume of a cilindro…».
+   */
+  const texto = enunciadoComSufixos(
+    moldesDe(
+      'solidos-e-volumes',
+      solido === 'esfera'
+        ? 'volume-da-esfera'
+        : solido === 'piramide'
+          ? 'volume-da-piramide'
+          : `volume-do-${solido}`,
+    )[0]!,
+    solido === 'piramide' ? [] : moldesDe('solidos-e-volumes', 'sufixo-casas-2'),
+    { raio, altura, areaBase },
+  );
 
   const enunciadoTex =
     solido === 'esfera'
@@ -143,7 +159,8 @@ function exercicioVolume(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `sol-vol-${solido}-${raio}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex,
     gabarito: resultado,
     resolucao: { resultado, passos },
@@ -183,15 +200,18 @@ function exercicioSuperficie(nivel: Nivel, rng: Rng): Exercicio<number> {
   const dimensoes = { raio, altura, geratriz };
   const { resultado, passos } = superficieComPassos(solido, dimensoes);
 
-  const enunciado =
-    solido === 'esfera'
-      ? `Qual é a área da superfície de uma esfera de raio ${raio} cm? ` +
-        '(em cm², 2 casas decimais)'
-      : solido === 'cone'
-        ? `Um cone tem raio ${raio} cm e geratriz ${geratriz} cm. ` +
-          'Qual é sua área total, em cm²? (2 casas)'
-        : `Um cilindro tem raio ${raio} cm e altura ${altura} cm. ` +
-          'Qual é sua área total, em cm²? (2 casas)';
+  const texto = enunciadoComSufixos(
+    moldesDe(
+      'solidos-e-volumes',
+      solido === 'esfera'
+        ? 'superficie-da-esfera'
+        : solido === 'cone'
+          ? 'area-total-do-cone'
+          : 'area-total-do-cilindro',
+    )[0]!,
+    moldesDe('solidos-e-volumes', 'sufixo-casas-2'),
+    { raio, altura, geratriz },
+  );
 
   const enunciadoTex =
     solido === 'esfera'
@@ -253,7 +273,8 @@ function exercicioSuperficie(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `sol-sup-${solido}-${raio}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex,
     gabarito: resultado,
     resolucao: { resultado, passos },

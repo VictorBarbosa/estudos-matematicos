@@ -215,3 +215,43 @@ export function enunciadoComSufixos(
     },
   };
 }
+
+/** Os valores de uma lacuna, escritos em cada língua. */
+export type ValoresPorIdioma = Readonly<Record<Idioma, Readonly<Record<string, number | string>>>>;
+
+/**
+ * O molde vestido com valores que MUDAM de língua para língua.
+ *
+ * A lacuna costuma receber um número, que atravessa as três línguas sem
+ * tradução. Mas há enunciados em que ela recebe uma PALAVRA — o nome de uma
+ * grandeza física, o nome de uma figura —, e aí o valor em português ia
+ * inteiro para a tela francesa: «Dans la dimension de potência…».
+ *
+ * Um molde por palavra resolve quando as palavras são poucas. Quando são
+ * dezenas — as grandezas da análise dimensional são dezenove —, o que falta é
+ * poder dar à mesma lacuna o valor de cada língua, e é isto.
+ */
+export function enunciadoDoMoldePorIdioma(
+  molde: MoldeDeEnunciado,
+  valores: ValoresPorIdioma,
+): EnunciadoTrilingue {
+  const texto = (idioma: Idioma): string => textoDoMolde(molde, valores[idioma], idioma);
+
+  const dica = (idioma: Idioma): string | undefined =>
+    molde.dica === undefined
+      ? undefined
+      : vestirValores(
+          idioma === 'pt' ? molde.dica.br : (molde.dica[idioma] ?? molde.dica.br),
+          valores[idioma],
+          idioma,
+        );
+
+  return {
+    enunciado: texto('pt'),
+    dica: dica('pt'),
+    traducoes: {
+      fr: { enunciado: texto('fr'), dica: dica('fr') },
+      en: { enunciado: texto('en'), dica: dica('en') },
+    },
+  };
+}

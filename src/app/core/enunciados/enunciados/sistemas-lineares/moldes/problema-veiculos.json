@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Há {dados-calculo.n} veículos no total, entre carros e motos. Cada carro tem {dados-calculo.p} rodas e cada moto, {dados-calculo.q} rodas; o total de rodas é {dados-calculo.t}. Quantos são os carros?",
+    "fr": "Il y a {dados-calculo.n} véhicules en tout, entre voitures et motos. Chaque voiture a {dados-calculo.p} roues et chaque moto, {dados-calculo.q} roues ; le total de roues est {dados-calculo.t}. Combien y a-t-il de voitures ?",
+    "en": "There are {dados-calculo.n} vehicles in all, between cars and motorcycles. Each car has {dados-calculo.p} wheels and each motorcycle, {dados-calculo.q} wheels; the total number of wheels is {dados-calculo.t}. How many cars are there?"
+  }
+}

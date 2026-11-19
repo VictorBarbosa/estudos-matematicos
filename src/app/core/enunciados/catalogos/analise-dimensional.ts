@@ -102,6 +102,8 @@ import eanaliseDimensionalMoldesForma5 from '@core/enunciados/enunciados/analise
 import eanaliseDimensionalMoldesForma6 from '@core/enunciados/enunciados/analise-dimensional/moldes/forma-6.json';
 import eanaliseDimensionalMoldesForma7 from '@core/enunciados/enunciados/analise-dimensional/moldes/forma-7.json';
 import eanaliseDimensionalMoldesForma8 from '@core/enunciados/enunciados/analise-dimensional/moldes/forma-8.json';
+import eanaliseDimensionalMoldesPeriodoDoPendulo from '@core/enunciados/enunciados/analise-dimensional/moldes/periodo-do-pendulo.json';
+import eanaliseDimensionalMoldesProdutoComExpoente from '@core/enunciados/enunciados/analise-dimensional/moldes/produto-com-expoente.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_ANALISE_DIMENSIONAL: readonly EntradaDeEnunciado[] = [
@@ -201,4 +203,6 @@ export const ENTRADAS_DE_ANALISE_DIMENSIONAL: readonly EntradaDeEnunciado[] = [
   { topico: 'analise-dimensional', forma: 'forma-6', conteudo: eanaliseDimensionalMoldesForma6 },
   { topico: 'analise-dimensional', forma: 'forma-7', conteudo: eanaliseDimensionalMoldesForma7 },
   { topico: 'analise-dimensional', forma: 'forma-8', conteudo: eanaliseDimensionalMoldesForma8 },
+  { topico: 'analise-dimensional', forma: 'periodo-do-pendulo', conteudo: eanaliseDimensionalMoldesPeriodoDoPendulo },
+  { topico: 'analise-dimensional', forma: 'produto-com-expoente', conteudo: eanaliseDimensionalMoldesProdutoComExpoente },
 ];

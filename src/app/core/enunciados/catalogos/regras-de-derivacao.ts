@@ -70,6 +70,8 @@ import eregrasDeDerivacaoMoldesForma1 from '@core/enunciados/enunciados/regras-d
 import eregrasDeDerivacaoMoldesForma2 from '@core/enunciados/enunciados/regras-de-derivacao/moldes/forma-2.json';
 import eregrasDeDerivacaoMoldesForma3 from '@core/enunciados/enunciados/regras-de-derivacao/moldes/forma-3.json';
 import eregrasDeDerivacaoMoldesForma4 from '@core/enunciados/enunciados/regras-de-derivacao/moldes/forma-4.json';
+import eregrasDeDerivacaoMoldesDeriveAExpressao from '@core/enunciados/enunciados/regras-de-derivacao/moldes/derive-a-expressao.json';
+import eregrasDeDerivacaoMoldesSufixoComoFracaoExemplo from '@core/enunciados/enunciados/regras-de-derivacao/moldes/sufixo-como-fracao-exemplo.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_REGRAS_DE_DERIVACAO: readonly EntradaDeEnunciado[] = [
@@ -137,4 +139,6 @@ export const ENTRADAS_DE_REGRAS_DE_DERIVACAO: readonly EntradaDeEnunciado[] = [
   { topico: 'regras-de-derivacao', forma: 'forma-2', conteudo: eregrasDeDerivacaoMoldesForma2 },
   { topico: 'regras-de-derivacao', forma: 'forma-3', conteudo: eregrasDeDerivacaoMoldesForma3 },
   { topico: 'regras-de-derivacao', forma: 'forma-4', conteudo: eregrasDeDerivacaoMoldesForma4 },
+  { topico: 'regras-de-derivacao', forma: 'derive-a-expressao', conteudo: eregrasDeDerivacaoMoldesDeriveAExpressao },
+  { topico: 'regras-de-derivacao', forma: 'sufixo-como-fracao-exemplo', conteudo: eregrasDeDerivacaoMoldesSufixoComoFracaoExemplo },
 ];

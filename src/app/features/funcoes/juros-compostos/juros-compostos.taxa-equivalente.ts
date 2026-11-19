@@ -1,12 +1,17 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
 
 const PERIODOS = [
-  { nome: 'mês', adjetivo: 'mensal', porAno: 12 },
-  { nome: 'trimestre', adjetivo: 'trimestral', porAno: 4 },
-  { nome: 'semestre', adjetivo: 'semestral', porAno: 2 },
+  { nome: 'mês', adjetivo: 'mensal', porAno: 12, molde: 'mes' },
+  { nome: 'trimestre', adjetivo: 'trimestral', porAno: 4, molde: 'trimestre' },
+  { nome: 'semestre', adjetivo: 'semestral', porAno: 2, molde: 'semestre' },
 ] as const;
 
 const pct = (v: number, casas = 2): string => v.toFixed(casas).replace('.', ',');
@@ -33,12 +38,17 @@ export function exercicioTaxaEquivalente(nivel: Nivel, rng: Rng): Exercicio<numb
     const fator = (1 + taxa / 100) ** k;
     const gabarito = (fator - 1) * 100;
 
+    const texto = enunciadoComSufixos(
+      moldesDe('juros-compostos', `anual-equivalente-ao-${periodo.molde}`)[0]!,
+      moldesDe('juros-compostos', 'sufixo-percentual-2-casas'),
+      { taxa: pct(taxa, taxa % 1 === 0 ? 0 : 1) },
+    );
+
     return {
       id: `juros-equiv-anual-${k}-${taxa}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        `Qual taxa ANUAL, em juros compostos, equivale a ${pct(taxa, taxa % 1 === 0 ? 0 : 1)}% ao ${periodo.nome}? ` +
-        'Responda em %, com 2 casas decimais.',
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `i_{\\text{${periodo.adjetivo}}} = ${pctTex(taxa, taxa % 1 === 0 ? 0 : 1)}\\% \\qquad i_{\\text{anual}} = \\;?`,
       gabarito,
       resolucao: {
@@ -95,12 +105,17 @@ export function exercicioTaxaEquivalente(nivel: Nivel, rng: Rng): Exercicio<numb
   const fatorAnual = 1 + anual / 100;
   const gabarito = (fatorAnual ** (1 / k) - 1) * 100;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('juros-compostos', `taxa-${periodo.molde}-equivalente-a-anual`)[0]!,
+    moldesDe('juros-compostos', 'sufixo-percentual-2-casas'),
+    { anual: pct(anual) },
+  );
+
   return {
     id: `juros-equiv-periodo-${k}-${anual}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Uma aplicação rende ${pct(anual)}% ao ano em juros compostos. Qual é a taxa ${periodo.adjetivo.toUpperCase()} ` +
-      'equivalente? Responda em %, com 2 casas decimais.',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `i_{\\text{anual}} = ${pctTex(anual)}\\% \\qquad i_{\\text{${periodo.adjetivo}}} = \\;?`,
     gabarito,
     resolucao: {

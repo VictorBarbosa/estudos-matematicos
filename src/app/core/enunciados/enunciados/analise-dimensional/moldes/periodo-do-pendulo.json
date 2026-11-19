@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Qual das expressões abaixo pode representar o PERÍODO de um pêndulo? Responda o número da opção.\n{dados-calculo.opcoes}",
+    "fr": "Laquelle des expressions ci-dessous peut représenter la PÉRIODE d'un pendule ? Répondez par le numéro de l'option.\n{dados-calculo.opcoes}",
+    "en": "Which of the expressions below can represent the PERIOD of a pendulum? Answer with the number of the option.\n{dados-calculo.opcoes}"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "O ponto P({dados-calculo.px}, {dados-calculo.py}) está na circunferência. Qual é o coeficiente angular da reta tangente à circunferência em P?",
+    "fr": "Le point P({dados-calculo.px}, {dados-calculo.py}) est sur le cercle. Quel est le coefficient directeur de la tangente au cercle en P ?",
+    "en": "The point P({dados-calculo.px}, {dados-calculo.py}) is on the circle. What is the slope of the tangent line to the circle at P?"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Os triângulos ABC e DEF são congruentes, com A↔D, B↔E e C↔F. O ângulo A mede {dados-calculo.a}° e o ângulo E mede {dados-calculo.e}°. Quanto mede o ângulo C? (em graus)",
+    "fr": "Les triangles ABC et DEF sont congruents, avec A↔D, B↔E et C↔F. L’angle A mesure {dados-calculo.a}° et l’angle E mesure {dados-calculo.e}°. Combien mesure l’angle C ? (en degrés)",
+    "en": "Triangles ABC and DEF are congruent, with A↔D, B↔E and C↔F. Angle A measures {dados-calculo.a}° and angle E measures {dados-calculo.e}°. What does angle C measure? (in degrees)"
+  }
+}

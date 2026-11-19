@@ -68,6 +68,9 @@ import ederivacaoImplicitaExtremo14 from '@core/enunciados/enunciados/derivacao-
 import ederivacaoImplicitaExtremo15 from '@core/enunciados/enunciados/derivacao-implicita/extremo/15.json';
 import ederivacaoImplicitaMoldesForma1 from '@core/enunciados/enunciados/derivacao-implicita/moldes/forma-1.json';
 import ederivacaoImplicitaMoldesForma2 from '@core/enunciados/enunciados/derivacao-implicita/moldes/forma-2.json';
+import ederivacaoImplicitaMoldesSufixoFracaoOu4Casas from '@core/enunciados/enunciados/derivacao-implicita/moldes/sufixo-fracao-ou-4-casas.json';
+import ederivacaoImplicitaMoldesDerivadaSegundaNoPonto from '@core/enunciados/enunciados/derivacao-implicita/moldes/derivada-segunda-no-ponto.json';
+import ederivacaoImplicitaMoldesMaiorOrdenadaTangenteHorizontal from '@core/enunciados/enunciados/derivacao-implicita/moldes/maior-ordenada-tangente-horizontal.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_DERIVACAO_IMPLICITA: readonly EntradaDeEnunciado[] = [
@@ -133,4 +136,7 @@ export const ENTRADAS_DE_DERIVACAO_IMPLICITA: readonly EntradaDeEnunciado[] = [
   { topico: 'derivacao-implicita', nivel: 'extremo', conteudo: ederivacaoImplicitaExtremo15 },
   { topico: 'derivacao-implicita', forma: 'forma-1', conteudo: ederivacaoImplicitaMoldesForma1 },
   { topico: 'derivacao-implicita', forma: 'forma-2', conteudo: ederivacaoImplicitaMoldesForma2 },
+  { topico: 'derivacao-implicita', forma: 'sufixo-fracao-ou-4-casas', conteudo: ederivacaoImplicitaMoldesSufixoFracaoOu4Casas },
+  { topico: 'derivacao-implicita', forma: 'derivada-segunda-no-ponto', conteudo: ederivacaoImplicitaMoldesDerivadaSegundaNoPonto },
+  { topico: 'derivacao-implicita', forma: 'maior-ordenada-tangente-horizontal', conteudo: ederivacaoImplicitaMoldesMaiorOrdenadaTangenteHorizontal },
 ];

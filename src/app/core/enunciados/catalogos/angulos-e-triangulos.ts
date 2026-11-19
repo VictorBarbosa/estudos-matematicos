@@ -70,6 +70,15 @@ import eangulosETriangulosMoldesForma1 from '@core/enunciados/enunciados/angulos
 import eangulosETriangulosMoldesForma2 from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/forma-2.json';
 import eangulosETriangulosMoldesForma3 from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/forma-3.json';
 import eangulosETriangulosMoldesForma4 from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/forma-4.json';
+import eangulosETriangulosMoldesAnguloDaBaseMenorDoTrapezio from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/angulo-da-base-menor-do-trapezio.json';
+import eangulosETriangulosMoldesAnguloDaDiagonalDoLosango from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/angulo-da-diagonal-do-losango.json';
+import eangulosETriangulosMoldesAnguloVizinhoNoParalelogramo from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/angulo-vizinho-no-paralelogramo.json';
+import eangulosETriangulosMoldesCongruenciaComIncognita from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/congruencia-com-incognita.json';
+import eangulosETriangulosMoldesCongruenciaPeloCaso from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/congruencia-pelo-caso.json';
+import eangulosETriangulosMoldesCongruenciaTerceiroAngulo from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/congruencia-terceiro-angulo.json';
+import eangulosETriangulosMoldesDiagonaisPeloAnguloExterno from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/diagonais-pelo-angulo-externo.json';
+import eangulosETriangulosMoldesDiagonaisPeloAnguloInterno from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/diagonais-pelo-angulo-interno.json';
+import eangulosETriangulosMoldesQuartoAnguloDoQuadrilatero from '@core/enunciados/enunciados/angulos-e-triangulos/moldes/quarto-angulo-do-quadrilatero.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_ANGULOS_E_TRIANGULOS: readonly EntradaDeEnunciado[] = [
@@ -137,4 +146,13 @@ export const ENTRADAS_DE_ANGULOS_E_TRIANGULOS: readonly EntradaDeEnunciado[] = [
   { topico: 'angulos-e-triangulos', forma: 'forma-2', conteudo: eangulosETriangulosMoldesForma2 },
   { topico: 'angulos-e-triangulos', forma: 'forma-3', conteudo: eangulosETriangulosMoldesForma3 },
   { topico: 'angulos-e-triangulos', forma: 'forma-4', conteudo: eangulosETriangulosMoldesForma4 },
+  { topico: 'angulos-e-triangulos', forma: 'angulo-da-base-menor-do-trapezio', conteudo: eangulosETriangulosMoldesAnguloDaBaseMenorDoTrapezio },
+  { topico: 'angulos-e-triangulos', forma: 'angulo-da-diagonal-do-losango', conteudo: eangulosETriangulosMoldesAnguloDaDiagonalDoLosango },
+  { topico: 'angulos-e-triangulos', forma: 'angulo-vizinho-no-paralelogramo', conteudo: eangulosETriangulosMoldesAnguloVizinhoNoParalelogramo },
+  { topico: 'angulos-e-triangulos', forma: 'congruencia-com-incognita', conteudo: eangulosETriangulosMoldesCongruenciaComIncognita },
+  { topico: 'angulos-e-triangulos', forma: 'congruencia-pelo-caso', conteudo: eangulosETriangulosMoldesCongruenciaPeloCaso },
+  { topico: 'angulos-e-triangulos', forma: 'congruencia-terceiro-angulo', conteudo: eangulosETriangulosMoldesCongruenciaTerceiroAngulo },
+  { topico: 'angulos-e-triangulos', forma: 'diagonais-pelo-angulo-externo', conteudo: eangulosETriangulosMoldesDiagonaisPeloAnguloExterno },
+  { topico: 'angulos-e-triangulos', forma: 'diagonais-pelo-angulo-interno', conteudo: eangulosETriangulosMoldesDiagonaisPeloAnguloInterno },
+  { topico: 'angulos-e-triangulos', forma: 'quarto-angulo-do-quadrilatero', conteudo: eangulosETriangulosMoldesQuartoAnguloDoQuadrilatero },
 ];

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma pessoa, com os olhos a {dados-calculo.olho} m do chão, está a {dados-calculo.distancia} m de um prédio e vê o topo sob um ângulo de elevação de {dados-calculo.angulo}°. Qual é a altura do prédio, em metros?",
+    "fr": "Une personne, les yeux à {dados-calculo.olho} m du sol, se trouve à {dados-calculo.distancia} m d'un immeuble et voit le sommet sous un angle d'élévation de {dados-calculo.angulo}°. Quelle est la hauteur de l'immeuble, en mètres ?",
+    "en": "A person, with eyes {dados-calculo.olho} m above the ground, stands {dados-calculo.distancia} m from a building and sees the top at an elevation angle of {dados-calculo.angulo}°. How tall is the building, in metres?"
+  }
+}

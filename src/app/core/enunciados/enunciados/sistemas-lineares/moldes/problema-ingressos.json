@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Há {dados-calculo.n} ingressos no total, entre inteiros e meias-entradas. Cada inteiro custa {dados-calculo.p} reais e cada meia-entrada, {dados-calculo.q} reais; a arrecadação total é {dados-calculo.t} reais. Quantos são os ingressos inteiros?",
+    "fr": "Il y a {dados-calculo.n} billets en tout, entre plein tarif et demi-tarif. Chaque plein tarif coûte {dados-calculo.p} reais et chaque demi-tarif, {dados-calculo.q} reais ; la recette totale est de {dados-calculo.t} reais. Combien y a-t-il de billets plein tarif ?",
+    "en": "There are {dados-calculo.n} tickets in all, between full price and half price. Each full-price ticket costs {dados-calculo.p} reais and each half-price one, {dados-calculo.q} reais; the total takings are {dados-calculo.t} reais. How many full-price tickets are there?"
+  }
+}

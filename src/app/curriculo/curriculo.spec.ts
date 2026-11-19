@@ -1,6 +1,11 @@
 import { Routes } from '@angular/router';
 import { routes } from '../app-routes/app.routes';
-import { CURRICULO, rotaDoTopico, totalDeTopicos, totalDeTopicosProntos } from '@curriculo/curriculo';
+import {
+  CURRICULO,
+  rotaDoTopico,
+  totalDeTopicos,
+  totalDeTopicosProntos,
+} from '@curriculo/curriculo';
 import { GLOSSARIO } from '@curriculo/glossario';
 
 /**
@@ -91,8 +96,10 @@ describe('currículo', () => {
       const caminhos = new Set((carregadas as Routes).map((rota) => rota.path));
 
       for (const topico of prontos) {
-        expect(caminhos.has(topico.id), `${area.id}/${topico.id} está pronto mas não tem rota`)
-          .toBe(true);
+        expect(
+          caminhos.has(topico.id),
+          `${area.id}/${topico.id} está pronto mas não tem rota`,
+        ).toBe(true);
       }
     }
   }, 30_000);
@@ -115,8 +122,10 @@ describe('currículo', () => {
           continue;
         }
 
-        expect(prontos.has(rota.path ?? ''), `${area.id}/${rota.path} tem rota mas não está pronto`)
-          .toBe(true);
+        expect(
+          prontos.has(rota.path ?? ''),
+          `${area.id}/${rota.path} tem rota mas não está pronto`,
+        ).toBe(true);
       }
     }
   }, 30_000);

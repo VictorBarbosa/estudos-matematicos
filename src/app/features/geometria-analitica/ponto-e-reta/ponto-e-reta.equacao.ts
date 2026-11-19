@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { numeroEmTex } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -46,13 +51,17 @@ export function exercicioRetaPorDoisPontos(nivel: Nivel, rng: Rng): Exercicio<nu
   const Q = Y1 - M * x1;
   const gabarito = Q;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('ponto-e-reta', 'coeficiente-linear-por-dois-pontos')[0]!,
+    Number.isInteger(gabarito) ? [] : moldesDe('ponto-e-reta', 'sufixo-fracao-ou-2-casas'),
+    { x1, y1: Y1, x2, y2: Y2 },
+  );
+
   return {
     id: `ponto-reta-dois-${x1}${Y1}-${x2}${Y2}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `A reta passa por A(${x1}, ${Y1}) e B(${x2}, ${Y2}). Escrita como y = mx + q, quanto vale q, ` +
-      'o ponto onde ela corta o eixo y?' +
-      (Number.isInteger(gabarito) ? '' : ' Responda como fração ou com 2 casas decimais.'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `A(${x1},\\; ${Y1}) \\qquad B(${x2},\\; ${Y2}) \\qquad y = mx + q`,
     gabarito,
     resolucao: {
@@ -121,10 +130,16 @@ export function exercicioIntersecao(nivel: Nivel, rng: Rng): Exercicio<number> {
     const q2 = y - m2 * x;
     const gabarito = pedeX ? x : y;
 
+    const texto = enunciadoDoMolde(
+      moldesDe('ponto-e-reta', `coordenada-${pedeX ? 'x' : 'y'}-do-cruzamento`)[0]!,
+      {},
+    );
+
     return {
       id: `ponto-reta-inter-${m1}${q1}-${m2}${q2}-${pedeX ? 'x' : 'y'}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: `As retas r e s se cruzam num ponto P. Qual é a coordenada ${pedeX ? 'x' : 'y'} de P?`,
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `r:\\; ${reduzidaTex(m1, q1)} \\qquad s:\\; ${reduzidaTex(m2, q2)}`,
       gabarito,
       resolucao: {
@@ -183,12 +198,16 @@ export function exercicioIntersecao(nivel: Nivel, rng: Rng): Exercicio<number> {
   const y = (a1 * c2 - a2 * c1) / det;
   const gabarito = pedeX ? x : y;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('ponto-e-reta', `coordenada-${pedeX ? 'x' : 'y'}-do-cruzamento`)[0]!,
+    Number.isInteger(gabarito) ? [] : moldesDe('ponto-e-reta', 'sufixo-fracao-ou-2-casas'),
+  );
+
   return {
     id: `ponto-reta-inter-geral-${a1}${b1}${c1}-${a2}${b2}${c2}-${pedeX ? 'x' : 'y'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `As retas r e s se cruzam num ponto P. Qual é a coordenada ${pedeX ? 'x' : 'y'} de P?` +
-      (Number.isInteger(gabarito) ? '' : ' Responda como fração ou com 2 casas decimais.'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `r:\\; ${geralTex(a1, b1, c1)} \\qquad s:\\; ${geralTex(a2, b2, c2)}`,
     gabarito,
     resolucao: {

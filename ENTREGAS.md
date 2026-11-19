@@ -1,7 +1,7 @@
 # Entregas pendentes
 
-Medido em 19 de novembro de 2026. Última atualização: entrega 1/12 da frente 1
-fechada.
+Medido em 19 de novembro de 2026. Última atualização: **frente 1 fechada por
+inteiro** — todo enunciado do site troca de idioma.
 
 Cada número aqui saiu de um comando, não de estimativa. A coluna **como medir**
 é o comando que refaz a conta — use-a para conferir o progresso em vez de
@@ -11,58 +11,50 @@ confiar neste arquivo, que envelhece.
 
 | # | Frente | Falta | Entregas |
 |---|---|---|---|
-| 1 | Enunciado que não troca de idioma na tela | 48 tópicos | **11** |
+| 1 | ~~Enunciado que não troca de idioma na tela~~ | **0** | ✅ |
 | 2 | Descrições de passo sem tradução | 1 734 frases | **9** |
 | 3 | Dicas sem tradução | 805 frases | **5** |
 | 4 | Diagnósticos sem tradução | 1 640 frases | **8** |
 | 5 | Texto de exercício ainda em TypeScript | 19 arquivos, 3 832 linhas | **5** |
-| 6 | Palavra em português injetada no molde | 33 ocorrências, 13 arquivos | **2** |
+| 6 | Palavra em português injetada no molde | 55 ocorrências, 14 arquivos | **2** |
 | 7 | Entrada do banco sem resolução própria | 3 071 entradas, 113 tópicos | **10** |
 | 8 | Legenda que explica o termo do enunciado | não começou | **2** |
-| | **Total** | | **52** |
+| | **Total** | | **34** |
 
 Uma «entrega» é uma rodada de trabalho que fecha um pedaço verificável e deixa
 a suíte verde. Pelo ritmo das últimas sessões, cada uma leva de uma a duas
 horas. O número é o que eu consigo prever; ele muda quando a frente revela o
 que ainda não se vê.
 
-## 1 · Enunciado que não troca de idioma — 48 tópicos, 11 entregas
+## 1 · Enunciado que não troca de idioma — **fechada**
 
-> **Entrega 1 de 12, fechada.** A varredura olhava três sementes, e três não
-> bastavam: um gerador com seis ramos mostra cada ramo numa fração dos
-> sorteios, e o ramo sem tradução não saía. Com sessenta sementes eram 53
-> tópicos, não 45 — o guarda não estava errado, estava olhando pouco.
->
-> A entrega acabou com `pedindoFracao`, a função que colava « Responda como
-> fração.» em português ao enunciado de quatro tópicos, e fechou cinco:
-> `fatoracao`, `funcao-afim`, `funcao-modular`, `equacao-primeiro-grau` e
-> `composicao-inversa` — este último nem usava moldes. De 53 para **48**.
->
-> O que ficou para as próximas: `enunciadoComSufixos`, que junta a pergunta e
-> os sufixos pelo arquivo, nas três línguas, sem duplicar o enunciado. É o
-> mecanismo que as outras entregas desta frente vão usar.
+Eram 113 tópicos no começo deste trabalho, 53 quando a varredura passou a olhar
+sessenta sementes em vez de três, e **zero** agora. O piso de
+`traducao-na-tela.spec.ts` está em 0 e só pode descer — se subir, é um ramo
+novo que nasceu falando só português.
 
-O texto está no arquivo, nas três línguas, mas a tela mostra português a quem
-escolheu francês. São duas causas, e a proporção importa porque elas custam
-diferente:
+O que fechou a conta não foi traduzir texto: o texto já estava traduzido nos
+moldes. Foi tirar do TypeScript as três coisas que o molde não alcançava.
 
-| Causa | Tópicos | O que fazer |
+| O que ficava em código | Exemplo | A saída |
 |---|---|---|
-| Enunciado é `molde + sufixo escrito em TypeScript` | 45 | dobrar o sufixo para dentro do molde |
-| Enunciado inteiro em TypeScript | 3 | criar os moldes do zero |
+| o SUFIXO colado ao fim da frase | « Responda como fração.» | `enunciadoComSufixos` junta pergunta e sufixos pelo arquivo |
+| a PALAVRA escolhida por um `if` | «o dobro», «cilindro», «esquerda» | um molde por variação, com a palavra escrita em cada língua |
+| a HISTÓRIA inteira escrita em código | os cenários dos sistemas lineares | um molde por cenário; o código fica com os pesos |
 
-Os três do segundo grupo: `equacao-segundo-grau`, `inequacoes-segundo-grau`,
-`mmc-mdc`. Atenção: `mmc-mdc` **não está na lista dos 122 tópicos**
-autorizados, então ele só pode receber moldes, nunca perguntas prontas — o que
-vale também para `fatoracao`, que já foi fechado assim.
+Para o caso em que as variações são dezenas — as grandezas da análise
+dimensional são vinte e três —, um molde por palavra seria vinte e três
+arquivos dizendo a mesma frase. Para esses, `enunciadoDoMoldePorIdioma` dá à
+mesma lacuna o valor de cada língua, e o nome viaja com a grandeza.
 
-Não há mais atalho de script aqui — os 115 casos que um script resolveu já
-foram. Cada tópico é uma leitura e uma decisão sobre onde a frase se parte, a
-uns cinco por entrega.
+Duas frases de resolução também mudaram de propósito, porque não tinham como
+ser traduzidas como estavam: «o 4º termo» virou «o termo de ordem 4» (o
+ordinal com `º` é português) e «5 kg em x = 2 m» virou «5 kg, x = 2 m» (a
+preposição era a única palavra na lista).
 
 **Como medir:** baixar `SEM_TRADUCAO_MAXIMO` para 0 em
-`src/app/core/enunciados/traducao-na-tela.spec.ts` e rodar o spec; a mensagem
-lista os tópicos. O piso hoje é 48 e só pode descer.
+`src/app/core/enunciados/traducao-na-tela.spec.ts` — ele já está em 0, então o
+spec verde é a medida.
 
 ## 2, 3 e 4 · O dicionário de frases — 4 179 frases, 22 entregas
 
@@ -103,7 +95,7 @@ mais `semelhanca-e-pitagoras`, `equacao-segundo-grau`, `inequacoes-segundo-grau`
 `find src/app/features -name "*.textos.ts" -o -name "*.contextos.ts" | wc -l`
 e `grep -L "moldes.model" $(find src/app/features -name "*.gerador.ts") | wc -l`.
 
-## 6 · Palavra em português injetada no molde — 33 ocorrências, 2 entregas
+## 6 · Palavra em português injetada no molde — 55 ocorrências, 2 entregas
 
 O molde está nas três línguas, mas recebe do TypeScript um valor que é uma
 palavra portuguesa — `'retângulo'`, `'PARALELO'`, `'no MESMO sentido'` —, e ela
@@ -112,7 +104,9 @@ português no meio.
 
 A saída é a de Áreas de figuras planas, repetida agora em
 `equacao-primeiro-grau`, onde «o dobro» virava «Ana has the dobro of Bia's
-age»: um molde por variação, com a palavra já escrita em cada língua. Estão em 13 arquivos; alguns dos 33 são notação
+age»: um molde por variação, com a palavra já escrita em cada língua. Estão em 14 arquivos; parte das 55 já é legítima — quando o gerador usa
+`enunciadoDoMoldePorIdioma`, o valor em português é o da tela portuguesa, e as
+outras duas línguas têm o seu. Separar um caso do outro
 (`cos`), que não se traduz, e a primeira entrega é separar um do outro.
 
 **Como medir:** o script em
@@ -157,4 +151,6 @@ Para não recontar o que foi feito:
   reprova;
 - frações com as quatro formas de operando (fração, inteiro, misto, misto com
   fração);
-- fração geratriz mostrando o método dos deslocamentos.
+- fração geratriz mostrando o método dos deslocamentos;
+- **todo enunciado do site nas três línguas**, em todos os níveis e ramos, com
+  729 moldes alcançáveis em 8 109 arquivos.

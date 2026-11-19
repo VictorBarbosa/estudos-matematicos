@@ -25,6 +25,8 @@ import econicasExtremo04 from '@core/enunciados/enunciados/conicas/extremo/04.js
 import econicasMoldesForma1 from '@core/enunciados/enunciados/conicas/moldes/forma-1.json';
 import econicasMoldesForma2 from '@core/enunciados/enunciados/conicas/moldes/forma-2.json';
 import econicasMoldesForma3 from '@core/enunciados/enunciados/conicas/moldes/forma-3.json';
+import econicasMoldesDiretrizDaParabola from '@core/enunciados/enunciados/conicas/moldes/diretriz-da-parabola.json';
+import econicasMoldesOrdenadaDoFoco from '@core/enunciados/enunciados/conicas/moldes/ordenada-do-foco.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_CONICAS: readonly EntradaDeEnunciado[] = [
@@ -47,4 +49,6 @@ export const ENTRADAS_DE_CONICAS: readonly EntradaDeEnunciado[] = [
   { topico: 'conicas', forma: 'forma-1', conteudo: econicasMoldesForma1 },
   { topico: 'conicas', forma: 'forma-2', conteudo: econicasMoldesForma2 },
   { topico: 'conicas', forma: 'forma-3', conteudo: econicasMoldesForma3 },
+  { topico: 'conicas', forma: 'diretriz-da-parabola', conteudo: econicasMoldesDiretrizDaParabola },
+  { topico: 'conicas', forma: 'ordenada-do-foco', conteudo: econicasMoldesOrdenadaDoFoco },
 ];

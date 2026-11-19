@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -184,11 +190,17 @@ function areaDoPlano(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = fator * L * M;
   const plano = `z = ${a}x ${b >= 0 ? '+' : '-'} ${Math.abs(b)}y ${c >= 0 ? '+' : '-'} ${Math.abs(c)}`;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('teoremas-integrais', 'forma-7')[0]!,
+    casas(gabarito) === '' ? [] : moldesDe('teoremas-integrais', 'sufixo-casas-2'),
+    { L, M },
+  );
+
   return {
     id: `teor-area-${a}${b}${c}-${L}${M}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('teoremas-integrais', 'forma-7')[0]!, { L, M }, 'pt') + casas(gabarito),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: plano,
     gabarito,
     resolucao: {
@@ -313,11 +325,17 @@ function greenNoRetangulo(nivel: Nivel, rng: Rng): Exercicio<number> {
   const ip = integrarRetangulo(dp, L, M);
   const gabarito = iq - ip;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('teoremas-integrais', 'forma-8')[0]!,
+    casas(gabarito) === '' ? [] : moldesDe('teoremas-integrais', 'sufixo-casas-2'),
+    { L, M },
+  );
+
   return {
     id: `teor-green-${monoTex(p)}-${monoTex(q)}-${L}${M}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('teoremas-integrais', 'forma-8')[0]!, { L, M }, 'pt') + casas(gabarito),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: campo2(p, q),
     gabarito,
     resolucao: {
@@ -434,11 +452,17 @@ function divergenciaCuboOuEsfera(nivel: Nivel, rng: Rng): Exercicio<number> {
   const integrais = partes.map((m) => integrarCubo(m, L));
   const gabarito = integrais[0]! + integrais[1]! + integrais[2]!;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('teoremas-integrais', 'forma-9')[0]!,
+    casas(gabarito) === '' ? [] : moldesDe('teoremas-integrais', 'sufixo-casas-2'),
+    { L },
+  );
+
   return {
     id: `teor-fluxo-cubo-${monoTex(p)}-${monoTex(q)}-${monoTex(r)}-${L}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('teoremas-integrais', 'forma-9')[0]!, { L }, 'pt') + casas(gabarito),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: campo3(p, q, r),
     gabarito,
     resolucao: {

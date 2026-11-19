@@ -74,6 +74,9 @@ import eescalonamentoEInversaMoldesForma5 from '@core/enunciados/enunciados/esca
 import eescalonamentoEInversaMoldesForma6 from '@core/enunciados/enunciados/escalonamento-e-inversa/moldes/forma-6.json';
 import eescalonamentoEInversaMoldesForma7 from '@core/enunciados/enunciados/escalonamento-e-inversa/moldes/forma-7.json';
 import eescalonamentoEInversaMoldesForma8 from '@core/enunciados/enunciados/escalonamento-e-inversa/moldes/forma-8.json';
+import eescalonamentoEInversaMoldesEntradaDaInversa from '@core/enunciados/enunciados/escalonamento-e-inversa/moldes/entrada-da-inversa.json';
+import eescalonamentoEInversaMoldesKQueZeraAEntrada from '@core/enunciados/enunciados/escalonamento-e-inversa/moldes/k-que-zera-a-entrada.json';
+import eescalonamentoEInversaMoldesSufixoComoFracao from '@core/enunciados/enunciados/escalonamento-e-inversa/moldes/sufixo-como-fracao.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_ESCALONAMENTO_E_INVERSA: readonly EntradaDeEnunciado[] = [
@@ -145,4 +148,7 @@ export const ENTRADAS_DE_ESCALONAMENTO_E_INVERSA: readonly EntradaDeEnunciado[] 
   { topico: 'escalonamento-e-inversa', forma: 'forma-6', conteudo: eescalonamentoEInversaMoldesForma6 },
   { topico: 'escalonamento-e-inversa', forma: 'forma-7', conteudo: eescalonamentoEInversaMoldesForma7 },
   { topico: 'escalonamento-e-inversa', forma: 'forma-8', conteudo: eescalonamentoEInversaMoldesForma8 },
+  { topico: 'escalonamento-e-inversa', forma: 'entrada-da-inversa', conteudo: eescalonamentoEInversaMoldesEntradaDaInversa },
+  { topico: 'escalonamento-e-inversa', forma: 'k-que-zera-a-entrada', conteudo: eescalonamentoEInversaMoldesKQueZeraAEntrada },
+  { topico: 'escalonamento-e-inversa', forma: 'sufixo-como-fracao', conteudo: eescalonamentoEInversaMoldesSufixoComoFracao },
 ];

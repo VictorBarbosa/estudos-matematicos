@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { centroDeMassaComPassos, equilibrioAlavancaComPassos, torqueComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -165,13 +171,22 @@ function exercicioCentroMassa(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const { resultado, passos } = centroDeMassaComPassos(corpos);
 
+  const texto = enunciadoComSufixos(
+    moldesDe('estatica-e-torque', 'forma-4')[0]!,
+    [
+      moldesDe('estatica-e-torque', 'centro-de-massa-dos-corpos')[0]!,
+      moldesDe('estatica-e-torque', 'sufixo-casas-2')[0]!,
+    ],
+    // A lista é notação — massa e posição com as unidades —, e não texto:
+    // ela atravessa as três línguas sem tradução.
+    { expressao1: corpos.map((c) => `${c.massa} kg, x = ${c.posicao} m`).join('; ') },
+  );
+
   return {
     id: `tor-cm-${corpos.map((c) => `${c.massa}@${c.posicao}`).join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('estatica-e-torque', 'forma-4')[0]!, {}, 'pt') +
-      corpos.map((c) => `${c.massa} kg em x = ${c.posicao} m`).join(', ') +
-      '. Onde fica o centro de massa, em metros? (2 casas decimais)',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: corpos.map((c) => `m = ${c.massa},\\; x = ${c.posicao}`).join(' \\quad '),
     gabarito: resultado,
     resolucao: { resultado, passos },

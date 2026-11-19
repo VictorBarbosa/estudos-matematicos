@@ -24,6 +24,15 @@ import etrianguloRetanguloExtremo03 from '@core/enunciados/enunciados/triangulo-
 import etrianguloRetanguloExtremo04 from '@core/enunciados/enunciados/triangulo-retangulo/extremo/04.json';
 import etrianguloRetanguloMoldesForma1 from '@core/enunciados/enunciados/triangulo-retangulo/moldes/forma-1.json';
 import etrianguloRetanguloMoldesForma2 from '@core/enunciados/enunciados/triangulo-retangulo/moldes/forma-2.json';
+import etrianguloRetanguloMoldesSufixoCasas2 from '@core/enunciados/enunciados/triangulo-retangulo/moldes/sufixo-casas-2.json';
+import etrianguloRetanguloMoldesSufixoExataOu2Casas from '@core/enunciados/enunciados/triangulo-retangulo/moldes/sufixo-exata-ou-2-casas.json';
+import etrianguloRetanguloMoldesCatetoOpostoA30 from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cateto-oposto-a-30.json';
+import etrianguloRetanguloMoldesCatetoOpostoA60 from '@core/enunciados/enunciados/triangulo-retangulo/moldes/cateto-oposto-a-60.json';
+import etrianguloRetanguloMoldesAlturaDaTorrePorDoisAngulos from '@core/enunciados/enunciados/triangulo-retangulo/moldes/altura-da-torre-por-dois-angulos.json';
+import etrianguloRetanguloMoldesAlturaDoPoste from '@core/enunciados/enunciados/triangulo-retangulo/moldes/altura-do-poste.json';
+import etrianguloRetanguloMoldesAlturaDoPredio from '@core/enunciados/enunciados/triangulo-retangulo/moldes/altura-do-predio.json';
+import etrianguloRetanguloMoldesIsoscelesCateto from '@core/enunciados/enunciados/triangulo-retangulo/moldes/isosceles-cateto.json';
+import etrianguloRetanguloMoldesIsoscelesHipotenusa from '@core/enunciados/enunciados/triangulo-retangulo/moldes/isosceles-hipotenusa.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_TRIANGULO_RETANGULO: readonly EntradaDeEnunciado[] = [
@@ -45,4 +54,13 @@ export const ENTRADAS_DE_TRIANGULO_RETANGULO: readonly EntradaDeEnunciado[] = [
   { topico: 'triangulo-retangulo', nivel: 'extremo', conteudo: etrianguloRetanguloExtremo04 },
   { topico: 'triangulo-retangulo', forma: 'forma-1', conteudo: etrianguloRetanguloMoldesForma1 },
   { topico: 'triangulo-retangulo', forma: 'forma-2', conteudo: etrianguloRetanguloMoldesForma2 },
+  { topico: 'triangulo-retangulo', forma: 'sufixo-casas-2', conteudo: etrianguloRetanguloMoldesSufixoCasas2 },
+  { topico: 'triangulo-retangulo', forma: 'sufixo-exata-ou-2-casas', conteudo: etrianguloRetanguloMoldesSufixoExataOu2Casas },
+  { topico: 'triangulo-retangulo', forma: 'cateto-oposto-a-30', conteudo: etrianguloRetanguloMoldesCatetoOpostoA30 },
+  { topico: 'triangulo-retangulo', forma: 'cateto-oposto-a-60', conteudo: etrianguloRetanguloMoldesCatetoOpostoA60 },
+  { topico: 'triangulo-retangulo', forma: 'altura-da-torre-por-dois-angulos', conteudo: etrianguloRetanguloMoldesAlturaDaTorrePorDoisAngulos },
+  { topico: 'triangulo-retangulo', forma: 'altura-do-poste', conteudo: etrianguloRetanguloMoldesAlturaDoPoste },
+  { topico: 'triangulo-retangulo', forma: 'altura-do-predio', conteudo: etrianguloRetanguloMoldesAlturaDoPredio },
+  { topico: 'triangulo-retangulo', forma: 'isosceles-cateto', conteudo: etrianguloRetanguloMoldesIsoscelesCateto },
+  { topico: 'triangulo-retangulo', forma: 'isosceles-hipotenusa', conteudo: etrianguloRetanguloMoldesIsoscelesHipotenusa },
 ];

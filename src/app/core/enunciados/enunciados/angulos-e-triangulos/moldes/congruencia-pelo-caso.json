@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Os triângulos ABC e DEF são congruentes pelo caso {dados-calculo.caso}, com A↔D, B↔E e C↔F. Se AB = {dados-calculo.ab} cm, BC = {dados-calculo.bc} cm e o ângulo B mede {dados-calculo.anguloB}°, quanto mede EF (em cm)?",
+    "fr": "Les triangles ABC et DEF sont congruents par le cas {dados-calculo.caso}, avec A↔D, B↔E et C↔F. Si AB = {dados-calculo.ab} cm, BC = {dados-calculo.bc} cm et l’angle B mesure {dados-calculo.anguloB}°, combien mesure EF (en cm) ?",
+    "en": "Triangles ABC and DEF are congruent by case {dados-calculo.caso}, with A↔D, B↔E and C↔F. If AB = {dados-calculo.ab} cm, BC = {dados-calculo.bc} cm and angle B measures {dados-calculo.anguloB}°, how long is EF (in cm)?"
+  }
+}

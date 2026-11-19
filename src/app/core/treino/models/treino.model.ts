@@ -128,7 +128,6 @@ export interface Exercicio<T> {
   readonly exigeFracao?: boolean;
 }
 
-
 /**
  * Uma tecla de símbolo do campo de resposta.
  *

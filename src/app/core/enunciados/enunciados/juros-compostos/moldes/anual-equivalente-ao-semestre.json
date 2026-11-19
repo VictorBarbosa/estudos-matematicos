@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Qual taxa ANUAL, em juros compostos, equivale a {dados-calculo.taxa}% ao semestre?",
+    "fr": "Quel taux ANNUEL, en intérêts composés, équivaut à {dados-calculo.taxa}% par semestre ?",
+    "en": "Which ANNUAL rate, under compound interest, is equivalent to {dados-calculo.taxa}% per half-year?"
+  }
+}

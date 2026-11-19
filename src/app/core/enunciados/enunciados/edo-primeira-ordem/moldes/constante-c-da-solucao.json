@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "A equação é exata e sua solução tem a forma F(x, y) = C. Qual é o valor de C para a curva que passa pelo ponto ({dados-calculo.x0}, {dados-calculo.y0})?",
+    "fr": "L'équation est exacte et sa solution a la forme F(x, y) = C. Quelle est la valeur de C pour la courbe qui passe par le point ({dados-calculo.x0}, {dados-calculo.y0}) ?",
+    "en": "The equation is exact and its solution has the form F(x, y) = C. What is the value of C for the curve through the point ({dados-calculo.x0}, {dados-calculo.y0})?"
+  }
+}

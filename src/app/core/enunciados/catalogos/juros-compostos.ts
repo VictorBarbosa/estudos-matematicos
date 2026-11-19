@@ -68,6 +68,13 @@ import ejurosCompostosExtremo14 from '@core/enunciados/enunciados/juros-composto
 import ejurosCompostosExtremo15 from '@core/enunciados/enunciados/juros-compostos/extremo/15.json';
 import ejurosCompostosMoldesForma1 from '@core/enunciados/enunciados/juros-compostos/moldes/forma-1.json';
 import ejurosCompostosMoldesForma2 from '@core/enunciados/enunciados/juros-compostos/moldes/forma-2.json';
+import ejurosCompostosMoldesSufixoPercentual2Casas from '@core/enunciados/enunciados/juros-compostos/moldes/sufixo-percentual-2-casas.json';
+import ejurosCompostosMoldesAnualEquivalenteAoMes from '@core/enunciados/enunciados/juros-compostos/moldes/anual-equivalente-ao-mes.json';
+import ejurosCompostosMoldesAnualEquivalenteAoSemestre from '@core/enunciados/enunciados/juros-compostos/moldes/anual-equivalente-ao-semestre.json';
+import ejurosCompostosMoldesAnualEquivalenteAoTrimestre from '@core/enunciados/enunciados/juros-compostos/moldes/anual-equivalente-ao-trimestre.json';
+import ejurosCompostosMoldesTaxaMesEquivalenteAAnual from '@core/enunciados/enunciados/juros-compostos/moldes/taxa-mes-equivalente-a-anual.json';
+import ejurosCompostosMoldesTaxaSemestreEquivalenteAAnual from '@core/enunciados/enunciados/juros-compostos/moldes/taxa-semestre-equivalente-a-anual.json';
+import ejurosCompostosMoldesTaxaTrimestreEquivalenteAAnual from '@core/enunciados/enunciados/juros-compostos/moldes/taxa-trimestre-equivalente-a-anual.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_JUROS_COMPOSTOS: readonly EntradaDeEnunciado[] = [
@@ -133,4 +140,11 @@ export const ENTRADAS_DE_JUROS_COMPOSTOS: readonly EntradaDeEnunciado[] = [
   { topico: 'juros-compostos', nivel: 'extremo', conteudo: ejurosCompostosExtremo15 },
   { topico: 'juros-compostos', forma: 'forma-1', conteudo: ejurosCompostosMoldesForma1 },
   { topico: 'juros-compostos', forma: 'forma-2', conteudo: ejurosCompostosMoldesForma2 },
+  { topico: 'juros-compostos', forma: 'sufixo-percentual-2-casas', conteudo: ejurosCompostosMoldesSufixoPercentual2Casas },
+  { topico: 'juros-compostos', forma: 'anual-equivalente-ao-mes', conteudo: ejurosCompostosMoldesAnualEquivalenteAoMes },
+  { topico: 'juros-compostos', forma: 'anual-equivalente-ao-semestre', conteudo: ejurosCompostosMoldesAnualEquivalenteAoSemestre },
+  { topico: 'juros-compostos', forma: 'anual-equivalente-ao-trimestre', conteudo: ejurosCompostosMoldesAnualEquivalenteAoTrimestre },
+  { topico: 'juros-compostos', forma: 'taxa-mes-equivalente-a-anual', conteudo: ejurosCompostosMoldesTaxaMesEquivalenteAAnual },
+  { topico: 'juros-compostos', forma: 'taxa-semestre-equivalente-a-anual', conteudo: ejurosCompostosMoldesTaxaSemestreEquivalenteAAnual },
+  { topico: 'juros-compostos', forma: 'taxa-trimestre-equivalente-a-anual', conteudo: ejurosCompostosMoldesTaxaTrimestreEquivalenteAAnual },
 ];

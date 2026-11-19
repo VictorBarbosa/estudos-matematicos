@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um cone tem raio {dados-calculo.raio} cm e geratriz {dados-calculo.geratriz} cm. Qual é sua área total, em cm²?",
+    "fr": "Un cône a un rayon de {dados-calculo.raio} cm et une génératrice de {dados-calculo.geratriz} cm. Quelle est son aire totale, en cm² ?",
+    "en": "A cone has radius {dados-calculo.raio} cm and slant height {dados-calculo.geratriz} cm. What is its total area, in cm²?"
+  }
+}

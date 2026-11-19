@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "A reta passa por A({dados-calculo.x1}, {dados-calculo.y1}) e B({dados-calculo.x2}, {dados-calculo.y2}). Escrita como y = mx + q, quanto vale q, o ponto onde ela corta o eixo y?",
+    "fr": "La droite passe par A({dados-calculo.x1}, {dados-calculo.y1}) et B({dados-calculo.x2}, {dados-calculo.y2}). Écrite y = mx + q, combien vaut q, le point où elle coupe l'axe des ordonnées ?",
+    "en": "The line passes through A({dados-calculo.x1}, {dados-calculo.y1}) and B({dados-calculo.x2}, {dados-calculo.y2}). Written as y = mx + q, what is q, where it crosses the y-axis?"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "O ponto P({dados-calculo.px}, {dados-calculo.py}) está na circunferência. A reta tangente em P, escrita como y = mx + q, corta o eixo y em que valor q?",
+    "fr": "Le point P({dados-calculo.px}, {dados-calculo.py}) est sur le cercle. La tangente en P, écrite y = mx + q, coupe l'axe des ordonnées en quelle valeur q ?",
+    "en": "The point P({dados-calculo.px}, {dados-calculo.py}) is on the circle. The tangent line at P, written y = mx + q, crosses the y-axis at which value q?"
+  }
+}

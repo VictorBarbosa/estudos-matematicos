@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um triângulo tem lados de {dados-calculo.x} cm, {dados-calculo.y} cm e {dados-calculo.z} cm. Qual é a área, em cm²?",
+    "fr": "Un triangle a des côtés de {dados-calculo.x} cm, {dados-calculo.y} cm et {dados-calculo.z} cm. Quelle est son aire, en cm² ?",
+    "en": "A triangle has sides of {dados-calculo.x} cm, {dados-calculo.y} cm and {dados-calculo.z} cm. What is its area, in cm²?"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Os triângulos ABC e DEF são congruentes, com A↔D, B↔E e C↔F. Sabendo que AB = {dados-calculo.expressao1} cm e DE = {dados-calculo.expressao2} cm, quanto mede AB (em cm)?",
+    "fr": "Les triangles ABC et DEF sont congruents, avec A↔D, B↔E et C↔F. Sachant que AB = {dados-calculo.expressao1} cm et DE = {dados-calculo.expressao2} cm, combien mesure AB (en cm) ?",
+    "en": "Triangles ABC and DEF are congruent, with A↔D, B↔E and C↔F. Given AB = {dados-calculo.expressao1} cm and DE = {dados-calculo.expressao2} cm, how long is AB (in cm)?"
+  }
+}

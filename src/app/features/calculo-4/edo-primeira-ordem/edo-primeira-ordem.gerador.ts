@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   linearPrimeiraOrdemComPassos,
   meiaVidaComPassos,
@@ -228,11 +234,18 @@ function doEquilibrio(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const gabarito = q / p;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('edo-primeira-ordem', 'forma-4')[0]!,
+    moldesDe('edo-primeira-ordem', 'sufixo-casas-3'),
+    { y0 },
+  );
+
   return montar({
     chave: `eq-${p}-${q}-${y0}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(moldesDe('edo-primeira-ordem', 'forma-4')[0]!, { y0 }, 'pt') + PEDIDO,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `y' + ${formatar(p)}y = ${formatar(q)}`,
     gabarito,
     resolucao: {

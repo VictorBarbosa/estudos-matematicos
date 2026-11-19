@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "De um ponto A, o topo de uma torre é visto sob {dados-calculo.alfa}°. Andando {dados-calculo.d} m em direção à torre, até B, o ângulo passa a {dados-calculo.beta}°. Qual é a altura da torre, em metros?",
+    "fr": "D'un point A, le sommet d'une tour est vu sous {dados-calculo.alfa}°. En avançant {dados-calculo.d} m vers la tour, jusqu'à B, l'angle devient {dados-calculo.beta}°. Quelle est la hauteur de la tour, en mètres ?",
+    "en": "From a point A, the top of a tower is seen at {dados-calculo.alfa}°. Walking {dados-calculo.d} m towards the tower, to B, the angle becomes {dados-calculo.beta}°. How tall is the tower, in metres?"
+  }
+}

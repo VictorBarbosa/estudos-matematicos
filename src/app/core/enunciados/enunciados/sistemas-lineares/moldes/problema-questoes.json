@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Há {dados-calculo.n} questões no total, entre certas e erradas. Cada questão certa vale {dados-calculo.p} pontos e cada errada, {dados-calculo.q} pontos; a pontuação total é {dados-calculo.t} pontos. Quantas são as questões certas?",
+    "fr": "Il y a {dados-calculo.n} questions en tout, entre justes et fausses. Chaque question juste vaut {dados-calculo.p} points et chaque fausse, {dados-calculo.q} points ; le score total est de {dados-calculo.t} points. Combien y a-t-il de questions justes ?",
+    "en": "There are {dados-calculo.n} questions in all, between right and wrong. Each right question is worth {dados-calculo.p} points and each wrong one, {dados-calculo.q} points; the total score is {dados-calculo.t} points. How many questions are right?"
+  }
+}

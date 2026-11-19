@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "A curva passa pelo ponto ({dados-calculo.x}, {dados-calculo.y}). Calcule a derivada SEGUNDA d²y/dx² nesse ponto.",
+    "fr": "La courbe passe par le point ({dados-calculo.x}, {dados-calculo.y}). Calculez la dérivée SECONDE d²y/dx² en ce point.",
+    "en": "The curve passes through the point ({dados-calculo.x}, {dados-calculo.y}). Compute the SECOND derivative d²y/dx² at that point."
+  }
+}

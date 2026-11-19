@@ -53,11 +53,28 @@ const SEMENTES = Array.from({ length: 60 }, (_, indice) => indice * 7 + 1);
  *   línguas, em vez de um molde com o nome vindo pronto em português.
  */
 /*
- * 53 quando a varredura passou a olhar sessenta sementes; 48 depois da
- * primeira entrega, que acabou com `pedindoFracao` — a função que colava
- * « Responda como fração.» em português ao enunciado de quatro tópicos.
+ * ZERO, e daqui não sobe.
+ *
+ * Foram 113 tópicos, depois 53 quando a varredura passou a olhar sessenta
+ * sementes em vez de três, e agora nenhum: todo gerador do site entrega o
+ * enunciado nas três línguas, em todos os níveis e em todos os ramos.
+ *
+ * O que fechou a conta não foi traduzir texto — o texto já estava traduzido
+ * nos moldes —, foi tirar do TypeScript as três coisas que o molde não
+ * alcançava: o SUFIXO colado ao fim da frase («Responda como fração.»), a
+ * PALAVRA escolhida por um `if` («o dobro», «cilindro», «esquerda») e a
+ * HISTÓRIA inteira escrita em código (os cenários dos sistemas lineares).
+ *
+ * Cada um ganhou o seu caminho: `enunciadoComSufixos` junta a pergunta e os
+ * sufixos pelo arquivo; um molde por variação resolve a palavra escolhida; e
+ * `enunciadoDoMoldePorIdioma` dá à mesma lacuna o valor de cada língua, para
+ * quando as variações são dezenas — as grandezas da análise dimensional são
+ * vinte e três.
+ *
+ * Este guarda só desce. Se ele subir, é um ramo novo que nasceu falando só
+ * português.
  */
-const SEM_TRADUCAO_MAXIMO = 19;
+const SEM_TRADUCAO_MAXIMO = 0;
 
 describe('tradução na tela', () => {
   it('a conta de tópicos sem tradução só desce', () => {

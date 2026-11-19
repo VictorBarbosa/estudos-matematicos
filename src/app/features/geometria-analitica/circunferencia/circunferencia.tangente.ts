@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { numeroEmTex } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -43,15 +48,20 @@ export function exercicioTangente(nivel: Nivel, rng: Rng): Exercicio<number> {
   const pedeQ = nivel === 'extremo';
   const gabarito = pedeQ ? q : mTangente;
 
+  const texto = enunciadoComSufixos(
+    moldesDe(
+      'circunferencia',
+      pedeQ ? 'tangente-corta-eixo-y' : 'coeficiente-angular-da-tangente',
+    )[0]!,
+    Number.isInteger(gabarito) ? [] : moldesDe('circunferencia', 'sufixo-fracao-ou-2-casas'),
+    { px, py },
+  );
+
   return {
     id: `circunf-tangente-${a}${b}-${dx}${dy}-${pedeQ ? 'q' : 'm'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `O ponto P(${px}, ${py}) está na circunferência. ` +
-      (pedeQ
-        ? 'A reta tangente em P, escrita como y = mx + q, corta o eixo y em que valor q?'
-        : 'Qual é o coeficiente angular da reta tangente à circunferência em P?') +
-      (Number.isInteger(gabarito) ? '' : ' Responda como fração ou com 2 casas decimais.'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: reduzidaTex(a, b, r2),
     gabarito,
     resolucao: {
@@ -135,10 +145,13 @@ export function exercicioRaioComCoeficiente(nivel: Nivel, rng: Rng): Exercicio<n
     coef === 0 ? '' : ` ${coef > 0 ? '+' : '-'} ${Math.abs(coef)}${resto}`;
   const tex = `${k}x^{2} + ${k}y^{2}${termo(k * d, 'x')}${termo(k * e, 'y')}${termo(k * f, '')} = 0`;
 
+  const texto = enunciadoDoMolde(moldesDe('circunferencia', 'raio-desta-circunferencia')[0]!, {});
+
   return {
     id: `circunf-raio-k-${k}-${a}${b}${r}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Qual é o raio desta circunferência?',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: tex,
     gabarito: r,
     resolucao: {

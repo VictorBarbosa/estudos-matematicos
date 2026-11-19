@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { Polinomio, mdc } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import {
@@ -171,10 +177,13 @@ export const geradorRegras: GeradorExercicio<Simbolica> = {
     if (pergunta === 'expressao') {
       const gabarito = simbolica(derivada.paraTex(), (x) => derivada.avaliar(x));
 
+      const texto = enunciadoDoMolde(moldesDe('regras-de-derivacao', 'derive-a-expressao')[0]!, {});
+
       return {
         id: `regras-expr-${p.paraTex()}-${rng.inteiro(0, 9999)}`,
         nivel,
-        enunciado: "Derive e escreva f'(x) — a expressão inteira, não um valor.",
+        enunciado: texto.enunciado,
+        traducoes: texto.traducoes,
         enunciadoTex: `f(x) = ${p.paraTex()}`,
         gabarito,
         resolucao: {
@@ -353,12 +362,17 @@ function exercicioQuociente(nivel: Nivel, rng: Rng): Exercicio<Simbolica> {
   const gabarito = simbolica(texto, () => valor);
   const fracao = (n: number, q: number): Simbolica => simbolica(fracaoTexto(n, q), () => n / q);
 
+  const pergunta = enunciadoComSufixos(
+    moldesDe('regras-de-derivacao', 'forma-4')[0]!,
+    Number.isInteger(valor) ? [] : moldesDe('regras-de-derivacao', 'sufixo-como-fracao-exemplo'),
+    { ponto },
+  );
+
   return {
     id: `regras-quociente-${a}${b}${c}${d}-${ponto}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('regras-de-derivacao', 'forma-4')[0]!, { ponto }, 'pt') +
-      (Number.isInteger(valor) ? '' : ' Responda como fração, ex.: -7/16.'),
+    enunciado: pergunta.enunciado,
+    traducoes: pergunta.traducoes,
     enunciadoTex: `f(x) = \\frac{${binomio(a, b)}}{${binomio(c, d)}}`,
     gabarito,
     resolucao: {

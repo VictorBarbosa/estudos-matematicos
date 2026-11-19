@@ -1,56 +1,28 @@
+import { enunciadoDoMolde, moldesDe } from '@core/enunciados/moldes/moldes.model';
 import { equacaoParaTex } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 1e-9;
 
+/**
+ * Um cenário é só a CONTA; a história dele está no arquivo.
+ *
+ * Antes o cenário trazia as palavras — «carros», «rodas», «veículos» — e elas
+ * eram coladas ao enunciado em português, atravessando a tradução intactas.
+ * Agora cada cenário aponta para o seu molde, escrito nas três línguas.
+ */
 interface Cenario {
-  readonly coisaA: string;
-  readonly coisaB: string;
+  readonly molde: string;
   readonly pesoA: number;
   readonly pesoB: number;
-  readonly total: string;
-  readonly medida: string;
-  readonly unidade: string;
 }
 
 const CENARIOS: readonly Cenario[] = [
-  {
-    coisaA: 'carros',
-    coisaB: 'motos',
-    pesoA: 4,
-    pesoB: 2,
-    total: 'veículos',
-    medida: 'rodas',
-    unidade: 'rodas',
-  },
-  {
-    coisaA: 'ingressos inteiros',
-    coisaB: 'meias-entradas',
-    pesoA: 40,
-    pesoB: 20,
-    total: 'ingressos',
-    medida: 'arrecadação',
-    unidade: 'reais',
-  },
-  {
-    coisaA: 'galinhas',
-    coisaB: 'coelhos',
-    pesoA: 2,
-    pesoB: 4,
-    total: 'animais',
-    medida: 'patas',
-    unidade: 'patas',
-  },
-  {
-    coisaA: 'questões certas',
-    coisaB: 'questões erradas',
-    pesoA: 5,
-    pesoB: -2,
-    total: 'questões',
-    medida: 'pontuação',
-    unidade: 'pontos',
-  },
+  { molde: 'problema-veiculos', pesoA: 4, pesoB: 2 },
+  { molde: 'problema-ingressos', pesoA: 40, pesoB: 20 },
+  { molde: 'problema-animais', pesoA: 2, pesoB: 4 },
+  { molde: 'problema-questoes', pesoA: 5, pesoB: -2 },
 ];
 
 /**
@@ -66,21 +38,29 @@ export function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<number> {
   const t = cenario.pesoA * a + cenario.pesoB * b;
   const { pesoA: p, pesoB: q } = cenario;
 
+  const texto = enunciadoDoMolde(moldesDe('sistemas-lineares', cenario.molde)[0]!, {
+    n,
+    p,
+    q,
+    t,
+  });
+
   return {
-    id: `sistemas-problema-${cenario.medida}-${a}-${b}-${rng.inteiro(0, 9999)}`,
+    id: `sistemas-problema-${cenario.molde}-${a}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Há ${n} ${cenario.total} no total, entre ${cenario.coisaA} e ${cenario.coisaB}. ` +
-      `Cada um dos ${cenario.coisaA} vale ${p} ${cenario.unidade} e cada um dos ${cenario.coisaB}, ` +
-      `${q} ${cenario.unidade}; a ${cenario.medida} total é ${t} ${cenario.unidade}. ` +
-      `Quantos são os ${cenario.coisaA}?`,
-    enunciadoTex: `\\text{${cenario.total}: } ${n} \\qquad \\text{${cenario.medida}: } ${t}\\ \\text{${cenario.unidade}}`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
+    // Notação, e não palavra: o tex não tem campo de tradução, e «veículos»
+    // escrito aqui chegaria em português às três telas.
+    enunciadoTex: `n = ${n} \\qquad T = ${t}`,
     gabarito: a,
     resolucao: {
       resultado: a,
       passos: [
         {
-          descricao: `Chamamos de x os ${cenario.coisaA} e de y os ${cenario.coisaB}. Uma equação conta, a outra pondera.`,
+          descricao:
+            'Chamamos de x a primeira quantidade do enunciado e de y a segunda. Uma equação ' +
+            'conta, a outra pondera.',
           tex: `\\begin{cases} x + y = ${n} \\\\ ${equacaoParaTex(p, q, t)} \\end{cases}`,
         },
         {
@@ -103,13 +83,17 @@ export function exercicioProblema(nivel: Nivel, rng: Rng): Exercicio<number> {
       [
         {
           resposta: b,
-          diagnostico: `Essa é a quantidade de ${cenario.coisaB}. O enunciado pergunta pelos ${cenario.coisaA}.`,
+          diagnostico:
+            'Essa é a SEGUNDA quantidade, a que o enunciado cita depois. A pergunta é pela ' +
+            'primeira — as duas somam o total, e é fácil trocá-las no fim da conta.',
           passo: 3,
           conceito: 'sistemas.metodos',
         },
         {
           resposta: t / p,
-          diagnostico: `Dividir o total por ${p} supõe que só há ${cenario.coisaA}. São duas incógnitas: monte as duas equações.`,
+          diagnostico:
+            `Dividir o total por ${p} supõe que só existe a primeira quantidade. São duas ` +
+            'incógnitas: monte as duas equações.',
           passo: 0,
           conceito: 'sistemas.metodos',
         },
@@ -139,11 +123,16 @@ export function exercicioClassificacao(nivel: Nivel, rng: Rng): Exercicio<number
 
   if (nivel === 'extremo') {
     const m = c1 * r;
+    const texto = enunciadoDoMolde(
+      moldesDe('sistemas-lineares', 'infinitas-solucoes-valor-de-m')[0]!,
+      {},
+    );
+
     return {
       id: `sistemas-indet-${a1}${b1}${c1}-${r}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado:
-        'Para que valores de k e m o sistema tem INFINITAS soluções? Informe o valor de m.',
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: `\\begin{cases} ${equacaoParaTex(a1, b1, c1)} \\\\ ${a2}x + ky = m \\end{cases}`,
       gabarito: m,
       resolucao: {
@@ -188,10 +177,16 @@ export function exercicioClassificacao(nivel: Nivel, rng: Rng): Exercicio<number
   }
 
   const c2 = c1 * r + rng.escolher([1, 2, -1, 3]);
+  const texto = enunciadoDoMolde(
+    moldesDe('sistemas-lineares', 'sistema-impossivel-valor-de-k')[0]!,
+    {},
+  );
+
   return {
     id: `sistemas-impossivel-${a1}${b1}${c1}-${r}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: 'Para que valor de k o sistema NÃO tem solução (é impossível)?',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\begin{cases} ${equacaoParaTex(a1, b1, c1)} \\\\ ${a2}x + ky = ${c2} \\end{cases}`,
     gabarito: k,
     resolucao: {

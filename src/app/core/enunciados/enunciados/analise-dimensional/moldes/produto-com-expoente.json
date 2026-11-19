@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Considere o produto de {dados-calculo.v1} por {dados-calculo.v2}{dados-calculo.expoente}. Na dimensão do resultado, qual é o expoente de {dados-calculo.base}? (responda 0 se não aparece)",
+    "fr": "Considérez le produit de {dados-calculo.v1} par {dados-calculo.v2}{dados-calculo.expoente}. Dans la dimension du résultat, quel est l’exposant de {dados-calculo.base} ? (répondez 0 s’il n’apparaît pas)",
+    "en": "Consider the product of {dados-calculo.v1} and {dados-calculo.v2}{dados-calculo.expoente}. In the dimension of the result, what is the exponent of {dados-calculo.base}? (answer 0 if it does not appear)"
+  }
+}

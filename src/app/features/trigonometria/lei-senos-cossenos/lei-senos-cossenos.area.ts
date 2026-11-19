@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -34,12 +39,17 @@ export function exercicioArea(nivel: Nivel, rng: Rng): Exercicio<number> {
   const seno = Math.sin(paraRadianos(angulo));
   const gabarito = 0.5 * a * b * seno;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('lei-senos-cossenos', 'area-por-dois-lados-e-angulo')[0]!,
+    moldesDe('lei-senos-cossenos', 'sufixo-casas-2'),
+    { a, b, angulo },
+  );
+
   return {
     id: `leis-area-${a}-${b}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Um triângulo tem lados de ${a} cm e ${b} cm, com ângulo de ${angulo}° entre eles. ` +
-      'Qual é a área, em cm²? (2 casas)',
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `a = ${a}\\ \\text{cm} \\qquad b = ${b}\\ \\text{cm} \\qquad C = ${angulo}^{\\circ}`,
     gabarito,
     resolucao: {
@@ -99,10 +109,17 @@ function areaPorTresLados(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = 0.5 * x * y * Math.sin(C);
   const graus = (C * 180) / Math.PI;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('lei-senos-cossenos', 'area-por-tres-lados')[0]!,
+    moldesDe('lei-senos-cossenos', 'sufixo-casas-2'),
+    { x, y, z },
+  );
+
   return {
     id: `leis-area3-${x}-${y}-${z}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: `Um triângulo tem lados de ${x} cm, ${y} cm e ${z} cm. Qual é a área, em cm²? (2 casas)`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `a = ${x}\\ \\text{cm} \\qquad b = ${y}\\ \\text{cm} \\qquad c = ${z}\\ \\text{cm}`,
     gabarito,
     resolucao: {

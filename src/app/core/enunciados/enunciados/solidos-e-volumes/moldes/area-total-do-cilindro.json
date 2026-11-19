@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um cilindro tem raio {dados-calculo.raio} cm e altura {dados-calculo.altura} cm. Qual é sua área total, em cm²?",
+    "fr": "Un cylindre a un rayon de {dados-calculo.raio} cm et une hauteur de {dados-calculo.altura} cm. Quelle est son aire totale, en cm² ?",
+    "en": "A cylinder has radius {dados-calculo.raio} cm and height {dados-calculo.altura} cm. What is its total area, in cm²?"
+  }
+}

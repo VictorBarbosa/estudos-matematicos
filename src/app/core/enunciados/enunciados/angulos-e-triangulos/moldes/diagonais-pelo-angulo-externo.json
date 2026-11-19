@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Um polígono regular tem ângulo externo de {dados-calculo.angulo}°. Quantas diagonais ele tem?",
+    "fr": "Un polygone régulier a un angle externe de {dados-calculo.angulo}°. Combien de diagonales a-t-il ?",
+    "en": "A regular polygon has exterior angle {dados-calculo.angulo}°. How many diagonals does it have?"
+  }
+}

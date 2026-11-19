@@ -1,7 +1,7 @@
 {
   "enunciado": {
-    "br": "Três corpos sobre uma barra: ",
-    "fr": "Trois corps sur une barre : ",
-    "en": "Three bodies on a bar: "
+    "br": "Três corpos sobre uma barra: {dados-calculo.expressao1}.",
+    "fr": "Trois corps sur une barre : {dados-calculo.expressao1}.",
+    "en": "Three bodies on a bar: {dados-calculo.expressao1}."
   }
 }

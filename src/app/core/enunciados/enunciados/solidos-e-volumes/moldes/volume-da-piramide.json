@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Uma pirâmide tem área da base {dados-calculo.areaBase} cm² e altura {dados-calculo.altura} cm. Qual é seu volume, em cm³?",
+    "fr": "Une pyramide a une base d’aire {dados-calculo.areaBase} cm² et une hauteur de {dados-calculo.altura} cm. Quel est son volume, en cm³ ?",
+    "en": "A pyramid has base area {dados-calculo.areaBase} cm² and height {dados-calculo.altura} cm. What is its volume, in cm³?"
+  }
+}

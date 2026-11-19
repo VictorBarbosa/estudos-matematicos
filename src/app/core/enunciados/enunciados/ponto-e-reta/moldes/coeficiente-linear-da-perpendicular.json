@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "A reta perpendicular a esta que passa por P({dados-calculo.x0}, {dados-calculo.y0}) tem equação y = m′x + n. Qual é o coeficiente linear n?",
+    "fr": "La droite perpendiculaire à celle-ci passant par P({dados-calculo.x0}, {dados-calculo.y0}) a pour équation y = m′x + n. Quelle est l’ordonnée à l’origine n ?",
+    "en": "The line perpendicular to this one through P({dados-calculo.x0}, {dados-calculo.y0}) has equation y = m′x + n. What is the intercept n?"
+  }
+}

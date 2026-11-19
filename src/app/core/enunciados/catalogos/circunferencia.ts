@@ -24,7 +24,11 @@ import ecircunferenciaExtremo03 from '@core/enunciados/enunciados/circunferencia
 import ecircunferenciaExtremo04 from '@core/enunciados/enunciados/circunferencia/extremo/04.json';
 import ecircunferenciaMoldesForma1 from '@core/enunciados/enunciados/circunferencia/moldes/forma-1.json';
 import ecircunferenciaMoldesForma2 from '@core/enunciados/enunciados/circunferencia/moldes/forma-2.json';
+import ecircunferenciaMoldesSufixoFracaoOu2Casas from '@core/enunciados/enunciados/circunferencia/moldes/sufixo-fracao-ou-2-casas.json';
 import ecircunferenciaMoldesForma3 from '@core/enunciados/enunciados/circunferencia/moldes/forma-3.json';
+import ecircunferenciaMoldesCoeficienteAngularDaTangente from '@core/enunciados/enunciados/circunferencia/moldes/coeficiente-angular-da-tangente.json';
+import ecircunferenciaMoldesRaioDestaCircunferencia from '@core/enunciados/enunciados/circunferencia/moldes/raio-desta-circunferencia.json';
+import ecircunferenciaMoldesTangenteCortaEixoY from '@core/enunciados/enunciados/circunferencia/moldes/tangente-corta-eixo-y.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_CIRCUNFERENCIA: readonly EntradaDeEnunciado[] = [
@@ -46,5 +50,9 @@ export const ENTRADAS_DE_CIRCUNFERENCIA: readonly EntradaDeEnunciado[] = [
   { topico: 'circunferencia', nivel: 'extremo', conteudo: ecircunferenciaExtremo04 },
   { topico: 'circunferencia', forma: 'forma-1', conteudo: ecircunferenciaMoldesForma1 },
   { topico: 'circunferencia', forma: 'forma-2', conteudo: ecircunferenciaMoldesForma2 },
+  { topico: 'circunferencia', forma: 'sufixo-fracao-ou-2-casas', conteudo: ecircunferenciaMoldesSufixoFracaoOu2Casas },
   { topico: 'circunferencia', forma: 'forma-3', conteudo: ecircunferenciaMoldesForma3 },
+  { topico: 'circunferencia', forma: 'coeficiente-angular-da-tangente', conteudo: ecircunferenciaMoldesCoeficienteAngularDaTangente },
+  { topico: 'circunferencia', forma: 'raio-desta-circunferencia', conteudo: ecircunferenciaMoldesRaioDestaCircunferencia },
+  { topico: 'circunferencia', forma: 'tangente-corta-eixo-y', conteudo: ecircunferenciaMoldesTangenteCortaEixoY },
 ];

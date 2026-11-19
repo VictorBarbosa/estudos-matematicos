@@ -246,12 +246,10 @@ describe('Calculadora: MMC e MDC', () => {
 
   /** O número que aparece ao lado de `MMC` (ou de `MDC`) no visor. */
   function resultado(rotulo: string): string {
-    const contas = [...fixture.nativeElement.querySelectorAll('.conta-resultado')].map(
-      (conta) => ({
-        nome: (conta.querySelector('.nome') as HTMLElement).textContent!.trim(),
-        numero: (conta.querySelector('.numero') as HTMLElement).textContent!.trim(),
-      }),
-    );
+    const contas = [...fixture.nativeElement.querySelectorAll('.conta-resultado')].map((conta) => ({
+      nome: (conta.querySelector('.nome') as HTMLElement).textContent!.trim(),
+      numero: (conta.querySelector('.numero') as HTMLElement).textContent!.trim(),
+    }));
     return contas.find((c) => c.nome === rotulo)?.numero ?? '(ausente)';
   }
 
@@ -326,12 +324,12 @@ describe('Calculadora: MMC e MDC', () => {
   it('a fração de 12 e 18 é 12/18 = 2/3', async () => {
     await escrever('12, 18');
 
-    const numeradores = [...fixture.nativeElement.querySelectorAll('.fracao .numerador')].map(
+    const numeradores = [...fixture.nativeElement.querySelectorAll('.fracao .numerador')].map((e) =>
+      (e as HTMLElement).textContent!.trim(),
+    );
+    const denominadores = [...fixture.nativeElement.querySelectorAll('.fracao .denominador')].map(
       (e) => (e as HTMLElement).textContent!.trim(),
     );
-    const denominadores = [
-      ...fixture.nativeElement.querySelectorAll('.fracao .denominador'),
-    ].map((e) => (e as HTMLElement).textContent!.trim());
 
     expect(numeradores).toEqual(['12', '2']);
     expect(denominadores).toEqual(['18', '3']);

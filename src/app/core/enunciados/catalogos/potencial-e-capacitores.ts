@@ -68,6 +68,7 @@ import epotencialECapacitoresExtremo14 from '@core/enunciados/enunciados/potenci
 import epotencialECapacitoresExtremo15 from '@core/enunciados/enunciados/potencial-e-capacitores/extremo/15.json';
 import epotencialECapacitoresMoldesForma1 from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/forma-1.json';
 import epotencialECapacitoresMoldesForma2 from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/forma-2.json';
+import epotencialECapacitoresMoldesSufixoCasas2 from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/sufixo-casas-2.json';
 import epotencialECapacitoresMoldesForma3 from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/forma-3.json';
 import epotencialECapacitoresMoldesForma4 from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/forma-4.json';
 import epotencialECapacitoresMoldesForma5 from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/forma-5.json';
@@ -75,6 +76,8 @@ import epotencialECapacitoresMoldesForma6 from '@core/enunciados/enunciados/pote
 import epotencialECapacitoresMoldesForma7 from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/forma-7.json';
 import epotencialECapacitoresMoldesForma8 from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/forma-8.json';
 import epotencialECapacitoresMoldesForma9 from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/forma-9.json';
+import epotencialECapacitoresMoldesCapacitanciaEquivalente from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/capacitancia-equivalente.json';
+import epotencialECapacitoresMoldesCargaDaFonte from '@core/enunciados/enunciados/potencial-e-capacitores/moldes/carga-da-fonte.json';
 import { EntradaDeEnunciado } from '@core/enunciados/models/entrada-de-enunciado';
 
 export const ENTRADAS_DE_POTENCIAL_E_CAPACITORES: readonly EntradaDeEnunciado[] = [
@@ -140,6 +143,7 @@ export const ENTRADAS_DE_POTENCIAL_E_CAPACITORES: readonly EntradaDeEnunciado[] 
   { topico: 'potencial-e-capacitores', nivel: 'extremo', conteudo: epotencialECapacitoresExtremo15 },
   { topico: 'potencial-e-capacitores', forma: 'forma-1', conteudo: epotencialECapacitoresMoldesForma1 },
   { topico: 'potencial-e-capacitores', forma: 'forma-2', conteudo: epotencialECapacitoresMoldesForma2 },
+  { topico: 'potencial-e-capacitores', forma: 'sufixo-casas-2', conteudo: epotencialECapacitoresMoldesSufixoCasas2 },
   { topico: 'potencial-e-capacitores', forma: 'forma-3', conteudo: epotencialECapacitoresMoldesForma3 },
   { topico: 'potencial-e-capacitores', forma: 'forma-4', conteudo: epotencialECapacitoresMoldesForma4 },
   { topico: 'potencial-e-capacitores', forma: 'forma-5', conteudo: epotencialECapacitoresMoldesForma5 },
@@ -147,4 +151,6 @@ export const ENTRADAS_DE_POTENCIAL_E_CAPACITORES: readonly EntradaDeEnunciado[] 
   { topico: 'potencial-e-capacitores', forma: 'forma-7', conteudo: epotencialECapacitoresMoldesForma7 },
   { topico: 'potencial-e-capacitores', forma: 'forma-8', conteudo: epotencialECapacitoresMoldesForma8 },
   { topico: 'potencial-e-capacitores', forma: 'forma-9', conteudo: epotencialECapacitoresMoldesForma9 },
+  { topico: 'potencial-e-capacitores', forma: 'capacitancia-equivalente', conteudo: epotencialECapacitoresMoldesCapacitanciaEquivalente },
+  { topico: 'potencial-e-capacitores', forma: 'carga-da-fonte', conteudo: epotencialECapacitoresMoldesCargaDaFonte },
 ];

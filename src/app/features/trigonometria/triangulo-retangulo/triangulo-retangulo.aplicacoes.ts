@@ -1,3 +1,8 @@
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+} from '@core/enunciados/moldes/moldes.model';
 import { paraRadianos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { Exercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -19,12 +24,17 @@ export function exercicioNotavel(nivel: Nivel, rng: Rng): Exercicio<number> {
     // Catetos k, hipotenusa k√2. Pergunta a hipotenusa ou, no Médio, o cateto dada a hipotenusa.
     const pedeCateto = nivel !== 'facil' && rng.booleano();
     const gabarito = pedeCateto ? k : k * Math.SQRT2;
+    const texto = enunciadoComSufixos(
+      moldesDe('triangulo-retangulo', pedeCateto ? 'isosceles-cateto' : 'isosceles-hipotenusa')[0]!,
+      pedeCateto ? [] : moldesDe('triangulo-retangulo', 'sufixo-exata-ou-2-casas'),
+      { k },
+    );
+
     return {
       id: `triangulo-notavel-45-${k}-${pedeCateto ? 'c' : 'h'}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: pedeCateto
-        ? `Um triângulo retângulo isósceles (ângulos de 45°) tem hipotenusa ${k}√2 cm. Quanto mede cada cateto, em cm?`
-        : `Um triângulo retângulo isósceles (ângulos de 45°) tem catetos de ${k} cm. Quanto mede a hipotenusa, em cm? (forma exata, ex.: 3√2, ou 2 casas decimais)`,
+      enunciado: texto.enunciado,
+      traducoes: texto.traducoes,
       enunciadoTex: pedeCateto
         ? `45^{\\circ}\\text{-}45^{\\circ}\\text{-}90^{\\circ} \\qquad h = ${k}\\sqrt{2}\\ \\text{cm}`
         : `45^{\\circ}\\text{-}45^{\\circ}\\text{-}90^{\\circ} \\qquad c = ${k}\\ \\text{cm}`,
@@ -80,13 +90,20 @@ export function exercicioNotavel(nivel: Nivel, rng: Rng): Exercicio<number> {
   const pedido = rng.escolher(['curto', 'longo'] as const);
   const gabarito = pedido === 'curto' ? k : k * Math.sqrt(3);
   const h = 2 * k;
+  const texto = enunciadoComSufixos(
+    moldesDe(
+      'triangulo-retangulo',
+      pedido === 'curto' ? 'cateto-oposto-a-30' : 'cateto-oposto-a-60',
+    )[0]!,
+    pedido === 'longo' ? moldesDe('triangulo-retangulo', 'sufixo-exata-ou-2-casas') : [],
+    { h },
+  );
+
   return {
     id: `triangulo-notavel-30-${k}-${pedido}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `Num triângulo retângulo com ângulos de 30° e 60°, a hipotenusa mede ${h} cm. ` +
-      `Quanto mede o cateto oposto ao ângulo de ${pedido === 'curto' ? '30°' : '60°'}, em cm?` +
-      (pedido === 'longo' ? ' (forma exata, ex.: 4√3, ou 2 casas decimais)' : ''),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `30^{\\circ}\\text{-}60^{\\circ}\\text{-}90^{\\circ} \\qquad h = ${h}\\ \\text{cm}`,
     gabarito,
     resolucao: {
@@ -148,13 +165,17 @@ export function exercicioAltura(nivel: Nivel, rng: Rng): Exercicio<number> {
   const subida = distancia * tg;
   const gabarito = subida + olho;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('triangulo-retangulo', olho > 0 ? 'altura-do-predio' : 'altura-do-poste')[0]!,
+    moldesDe('triangulo-retangulo', 'sufixo-casas-2'),
+    { olho, distancia, angulo },
+  );
+
   return {
     id: `triangulo-altura-${angulo}-${distancia}-${olho}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      olho > 0
-        ? `Uma pessoa, com os olhos a ${String(olho).replace('.', ',')} m do chão, está a ${distancia} m de um prédio e vê o topo sob um ângulo de elevação de ${angulo}°. Qual é a altura do prédio, em metros? (2 casas decimais)`
-        : `Um poste projeta uma sombra de ${distancia} m quando os raios do sol fazem ${angulo}° com o chão. Qual é a altura do poste, em metros? (2 casas decimais)`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\tan ${angulo}^{\\circ} = \\frac{\\text{altura}}{${distancia}\\ \\text{m}}`,
     gabarito,
     resolucao: {
@@ -237,12 +258,17 @@ export function exercicioDuasVisadas(nivel: Nivel, rng: Rng): Exercicio<number> 
   const gabarito = (d * ta * tb) / (tb - ta);
   const x = gabarito / tb;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('triangulo-retangulo', 'altura-da-torre-por-dois-angulos')[0]!,
+    moldesDe('triangulo-retangulo', 'sufixo-casas-2'),
+    { alfa, d, beta },
+  );
+
   return {
     id: `triangulo-duas-${alfa}-${beta}-${d}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      `De um ponto A, o topo de uma torre é visto sob ${alfa}°. Andando ${d} m em direção à torre, ` +
-      `até B, o ângulo passa a ${beta}°. Qual é a altura da torre, em metros? (2 casas decimais)`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\tan ${alfa}^{\\circ} = \\frac{h}{x + ${d}} \\qquad \\tan ${beta}^{\\circ} = \\frac{h}{x}`,
     gabarito,
     resolucao: {

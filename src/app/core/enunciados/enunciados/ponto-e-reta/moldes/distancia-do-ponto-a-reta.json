@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Qual é a distância do ponto P({dados-calculo.x0}, {dados-calculo.y0}) à reta?",
+    "fr": "Quelle est la distance du point P({dados-calculo.x0}, {dados-calculo.y0}) à la droite ?",
+    "en": "What is the distance from the point P({dados-calculo.x0}, {dados-calculo.y0}) to the line?"
+  }
+}

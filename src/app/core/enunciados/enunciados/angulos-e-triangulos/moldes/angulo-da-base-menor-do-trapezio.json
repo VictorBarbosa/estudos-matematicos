@@ -1,0 +1,7 @@
+{
+  "enunciado": {
+    "br": "Num trapézio isósceles, cada ângulo da base maior mede {dados-calculo.alfa}°. Quanto mede cada ângulo da base menor? (em graus)",
+    "fr": "Dans un trapèze isocèle, chaque angle de la grande base mesure {dados-calculo.alfa}°. Combien mesure chaque angle de la petite base ? (en degrés)",
+    "en": "In an isosceles trapezoid, each angle at the longer base measures {dados-calculo.alfa}°. What does each angle at the shorter base measure? (in degrees)"
+  }
+}

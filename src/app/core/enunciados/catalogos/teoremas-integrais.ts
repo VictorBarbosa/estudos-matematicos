@@ -68,6 +68,7 @@ import eteoremasIntegraisExtremo14 from '@core/enunciados/enunciados/teoremas-in
 import eteoremasIntegraisExtremo15 from '@core/enunciados/enunciados/teoremas-integrais/extremo/15.json';
 import eteoremasIntegraisMoldesForma1 from '@core/enunciados/enunciados/teoremas-integrais/moldes/forma-1.json';
 import eteoremasIntegraisMoldesForma2 from '@core/enunciados/enunciados/teoremas-integrais/moldes/forma-2.json';
+import eteoremasIntegraisMoldesSufixoCasas2 from '@core/enunciados/enunciados/teoremas-integrais/moldes/sufixo-casas-2.json';
 import eteoremasIntegraisMoldesForma3 from '@core/enunciados/enunciados/teoremas-integrais/moldes/forma-3.json';
 import eteoremasIntegraisMoldesForma4 from '@core/enunciados/enunciados/teoremas-integrais/moldes/forma-4.json';
 import eteoremasIntegraisMoldesForma5 from '@core/enunciados/enunciados/teoremas-integrais/moldes/forma-5.json';
@@ -140,6 +141,7 @@ export const ENTRADAS_DE_TEOREMAS_INTEGRAIS: readonly EntradaDeEnunciado[] = [
   { topico: 'teoremas-integrais', nivel: 'extremo', conteudo: eteoremasIntegraisExtremo15 },
   { topico: 'teoremas-integrais', forma: 'forma-1', conteudo: eteoremasIntegraisMoldesForma1 },
   { topico: 'teoremas-integrais', forma: 'forma-2', conteudo: eteoremasIntegraisMoldesForma2 },
+  { topico: 'teoremas-integrais', forma: 'sufixo-casas-2', conteudo: eteoremasIntegraisMoldesSufixoCasas2 },
   { topico: 'teoremas-integrais', forma: 'forma-3', conteudo: eteoremasIntegraisMoldesForma3 },
   { topico: 'teoremas-integrais', forma: 'forma-4', conteudo: eteoremasIntegraisMoldesForma4 },
   { topico: 'teoremas-integrais', forma: 'forma-5', conteudo: eteoremasIntegraisMoldesForma5 },

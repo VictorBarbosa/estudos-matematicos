@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoComSufixos,
+  enunciadoDoMolde,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   EPSILON_0,
   K_COULOMB,
@@ -469,14 +475,23 @@ function misto(nivel: Nivel, rng: Rng): Exercicio<number> {
   const pedeCarga = rng.booleano();
   const gabarito = pedeCarga ? ceq * v : ceq;
 
+  const texto = enunciadoComSufixos(
+    moldesDe('potencial-e-capacitores', 'forma-9')[0]!,
+    [
+      moldesDe(
+        'potencial-e-capacitores',
+        pedeCarga ? 'carga-da-fonte' : 'capacitancia-equivalente',
+      )[0]!,
+      moldesDe('potencial-e-capacitores', 'sufixo-casas-2')[0]!,
+    ],
+    { c1, c2, c3, v },
+  );
+
   return {
     id: `pot-misto-${c1}-${c2}-${c3}-${v}-${pedeCarga ? 'q' : 'c'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('potencial-e-capacitores', 'forma-9')[0]!, { c1, c2, c3, v }, 'pt') +
-      (pedeCarga
-        ? 'Qual é a carga fornecida pela fonte, em μC? (2 casas decimais)'
-        : 'Qual é a capacitância equivalente, em μF? (2 casas decimais)'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `C_1 \\;\\text{em série com}\\; (C_2 \\parallel C_3) \\qquad V = ${v}\\ \\text{V}`,
     gabarito,
     resolucao: {

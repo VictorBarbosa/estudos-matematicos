@@ -1,4 +1,10 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMolde,
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   Dimensao,
   GRANDEZAS,
@@ -70,14 +76,17 @@ function exercicioExpoente(base: keyof Dimensao, nivel: Nivel, rng: Rng): Exerci
   const grandeza = rng.escolher(derivadas);
   const gabarito = grandeza.dimensao[base];
 
+  const texto = enunciadoDoMoldePorIdioma(moldesDe('analise-dimensional', 'forma-1')[0]!, {
+    pt: { v1: grandeza.nome, v2: grandeza.unidade, base },
+    fr: { v1: grandeza.nomeFr, v2: grandeza.unidade, base },
+    en: { v1: grandeza.nomeEn, v2: grandeza.unidade, base },
+  });
+
   return {
     id: `dim-exp-${base}-${grandeza.nome}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('analise-dimensional', 'forma-1')[0]!,
-      { v1: grandeza.nome, v2: grandeza.unidade, base },
-      'pt',
-    ),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `[\\text{${grandeza.nome}}] = ?`,
     gabarito,
     resolucao: {
@@ -139,27 +148,44 @@ function exercicioConsistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
   /** Candidatas a "fórmula do período": só uma fecha dimensionalmente. */
   const candidatas: readonly {
     readonly tex: string;
-    readonly descricao: string;
+    /** A descrição em cada língua: ela é lida na tela, ao lado da fórmula. */
+    readonly descricao: Readonly<Record<'pt' | 'fr' | 'en', string>>;
     readonly dimensao: Dimensao;
   }[] = [
     {
       tex: '2\\pi\\sqrt{\\frac{L}{g}}',
-      descricao: 'raiz de comprimento sobre gravidade',
+      descricao: {
+        pt: 'raiz de comprimento sobre gravidade',
+        fr: 'racine de longueur sur gravité',
+        en: 'root of length over gravity',
+      },
       dimensao: { M: 0, L: 0, T: 1 },
     },
     {
       tex: '2\\pi\\sqrt{\\frac{g}{L}}',
-      descricao: 'raiz de gravidade sobre comprimento',
+      descricao: {
+        pt: 'raiz de gravidade sobre comprimento',
+        fr: 'racine de gravité sur longueur',
+        en: 'root of gravity over length',
+      },
       dimensao: { M: 0, L: 0, T: -1 },
     },
     {
       tex: '2\\pi\\sqrt{Lg}',
-      descricao: 'raiz do produto',
+      descricao: {
+        pt: 'raiz do produto',
+        fr: 'racine du produit',
+        en: 'root of the product',
+      },
       dimensao: { M: 0, L: 1, T: -1 },
     },
     {
       tex: '2\\pi\\frac{L}{g}',
-      descricao: 'comprimento sobre gravidade',
+      descricao: {
+        pt: 'comprimento sobre gravidade',
+        fr: 'longueur sur gravité',
+        en: 'length over gravity',
+      },
       dimensao: { M: 0, L: 0, T: 2 },
     },
   ];
@@ -186,12 +212,26 @@ function exercicioConsistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const gabarito = correta + 1;
 
+  /** As opções numeradas, na língua pedida. */
+  const opcoes = (idioma: 'pt' | 'fr' | 'en'): string =>
+    embaralhadas
+      .map((candidata, indice) => `${indice + 1}) ${candidata.descricao[idioma]}`)
+      .join('\n');
+
+  const texto = enunciadoDoMoldePorIdioma(
+    moldesDe('analise-dimensional', 'periodo-do-pendulo')[0]!,
+    {
+      pt: { opcoes: opcoes('pt') },
+      fr: { opcoes: opcoes('fr') },
+      en: { opcoes: opcoes('en') },
+    },
+  );
+
   return {
-    id: `dim-cons-${embaralhadas.map((c) => c.descricao[0]).join('')}-${rng.inteiro(0, 9999)}`,
+    id: `dim-cons-${embaralhadas.map((c) => c.descricao.pt[0]).join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(moldesDe('analise-dimensional', 'forma-7')[0]!, {}, 'pt') +
-      embaralhadas.map((candidata, indice) => `${indice + 1}) ${candidata.descricao}`).join('\n'),
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: embaralhadas
       .map((candidata, indice) => `${indice + 1})\\; ${candidata.tex}`)
       .join(' \\qquad '),
@@ -240,42 +280,43 @@ function exercicioConsistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
 
 function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<number> {
   const casos: readonly {
-    readonly enunciado: string;
+    /** A forma do molde que traz a pergunta, nas três línguas. */
+    readonly molde: string;
     readonly tex: string;
     readonly fator: number;
     readonly nota: string;
     readonly dica: string;
   }[] = [
     {
-      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-2')[0]!, {}, 'pt'),
+      molde: 'forma-2',
       tex: '1\\,\\text{m}^{3} = ?\\,\\text{L}',
       fator: 1000,
       nota: '1 L = 1 dm³, e 1 m³ tem 10³ dm³.',
       dica: 'Um litro é um decímetro cúbico. 1 m = 10 dm, e o volume tem três dimensões: 10 ao cubo.',
     },
     {
-      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-3')[0]!, {}, 'pt'),
+      molde: 'forma-3',
       tex: '1\\,\\text{m}^{2} = ?\\,\\text{cm}^{2}',
       fator: 10000,
       nota: 'O fator linear 100 entra ao quadrado: 100² = 10 000.',
       dica: '1 m = 100 cm em cada lado; a área multiplica dois lados, então o fator entra ao quadrado.',
     },
     {
-      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-4')[0]!, {}, 'pt'),
+      molde: 'forma-4',
       tex: '1\\,\\text{m}^{3} = ?\\,\\text{cm}^{3}',
       fator: 1e6,
       nota: 'O fator linear 100 entra ao cubo: 100³ = 10⁶.',
       dica: '1 m = 100 cm em cada aresta; o volume multiplica três arestas, então o fator entra ao cubo.',
     },
     {
-      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-5')[0]!, {}, 'pt'),
+      molde: 'forma-5',
       tex: '36\\,\\text{km/h} = ?\\,\\text{m/s}',
       fator: 10,
       nota: 'Dividir por 3,6 converte km/h em m/s.',
       dica: '1 km = 1000 m e 1 h = 3600 s: cada km/h vale 1000/3600 m/s, isto é, divida por 3,6.',
     },
     {
-      enunciado: textoDoMolde(moldesDe('analise-dimensional', 'forma-6')[0]!, {}, 'pt'),
+      molde: 'forma-6',
       tex: '1\\,\\text{g/cm}^{3} = ?\\,\\text{kg/m}^{3}',
       fator: 1000,
       nota: 'A massa divide por 1000 e o volume por 10⁻⁶: sobra o fator 1000.',
@@ -285,10 +326,15 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<number> {
 
   const caso = rng.escolher(casos);
 
+  // A conversão é um caso da tabela; o texto dele vem do arquivo, como
+  // qualquer outro enunciado.
+  const texto = enunciadoDoMolde(moldesDe('analise-dimensional', caso.molde)[0]!, {});
+
   return {
     id: `dim-conv-${caso.fator}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: caso.enunciado,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: caso.tex,
     gabarito: caso.fator,
     resolucao: {
@@ -339,6 +385,18 @@ function exercicioConversao(nivel: Nivel, rng: Rng): Exercicio<number> {
  * uma grandeza tabelada esgota a tabela em poucas dezenas de exercícios, mas
  * combinar duas grandezas multiplica o espaço pelo tamanho da tabela.
  */
+/**
+ * «ao quadrado», «ao cubo» — e nada quando o expoente é 1.
+ *
+ * É a única parte da frase que depende do expoente, e ela é uma PALAVRA: fora
+ * do arquivo, ela chegava em português às três telas.
+ */
+const EXPOENTE_ESCRITO: Readonly<Record<'pt' | 'fr' | 'en', Readonly<Record<number, string>>>> = {
+  pt: { 1: '', 2: ' elevado ao quadrado', 3: ' elevado ao cubo' },
+  fr: { 1: '', 2: ' au carré', 3: ' au cube' },
+  en: { 1: '', 2: ' squared', 3: ' cubed' },
+};
+
 function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   const primeira = rng.escolher(GRANDEZAS);
   const segunda = rng.escolher(GRANDEZAS);
@@ -353,17 +411,30 @@ function exercicioCombinacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   const gabarito = dimensao[base];
   const potencia = expoente === 1 ? '' : `^{${expoente}}`;
 
+  const texto = enunciadoDoMoldePorIdioma(
+    moldesDe('analise-dimensional', 'produto-com-expoente')[0]!,
+    {
+      pt: { v1: primeira.nome, v2: segunda.nome, expoente: EXPOENTE_ESCRITO.pt[expoente]!, base },
+      fr: {
+        v1: primeira.nomeFr,
+        v2: segunda.nomeFr,
+        expoente: EXPOENTE_ESCRITO.fr[expoente]!,
+        base,
+      },
+      en: {
+        v1: primeira.nomeEn,
+        v2: segunda.nomeEn,
+        expoente: EXPOENTE_ESCRITO.en[expoente]!,
+        base,
+      },
+    },
+  );
+
   return {
     id: `dim-comb-${primeira.nome}-${segunda.nome}-${expoente}-${base}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado:
-      textoDoMolde(
-        moldesDe('analise-dimensional', 'forma-8')[0]!,
-        { expressao1: primeira.nome, expressao2: segunda.nome },
-        'pt',
-      ) +
-      `${expoente === 1 ? '' : ` elevado${expoente === 2 ? ' ao quadrado' : ' ao cubo'}`}. ` +
-      `Na dimensão do resultado, qual é o expoente de ${base}? (responda 0 se não aparece)`,
+    enunciado: texto.enunciado,
+    traducoes: texto.traducoes,
     enunciadoTex: `\\left[\\text{${primeira.simbolo}} \\cdot \\text{${segunda.simbolo}}${potencia}\\right] = ?`,
     gabarito,
     resolucao: {
