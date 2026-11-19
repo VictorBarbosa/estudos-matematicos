@@ -127,6 +127,10 @@
     "fr": "# m = # cm sur chaque côté ; l’aire multiplie deux côtés, donc le facteur entre au carré.",
     "en": "# m = # cm on each side; area multiplies two sides, so the factor enters squared."
   },
+  "# m é quanto se andou, não a distância de B até a torre. É preciso montar as duas equações.": {
+    "fr": "# m est la distance parcourue, et non la distance de B à la tour. Il faut monter les deux équations.",
+    "en": "# m is how far you walked, not the distance from B to the tower. You have to set up both equations."
+  },
   "# não é potência exata de #. Tire o ln dos dois lados: x·ln # = ln #.": {
     "fr": "# n’est pas une puissance exacte de #. Prenez le ln des deux côtés : x·ln # = ln #.",
     "en": "# is not an exact power of #. Take ln on both sides: x·ln # = ln #."
@@ -211,6 +215,10 @@
     "fr": "A = πr² + πrg — la base a r² ; la latérale, r fois la génératrice.",
     "en": "A = πr² + πrg — the base has r²; the lateral surface, r times the slant height."
   },
+  "A = πr²: divida a área por π e tire a raiz quadrada para voltar ao raio.": {
+    "fr": "A = πr² : divisez l’aire par π et prenez la racine carrée pour revenir au rayon.",
+    "en": "A = πr²: divide the area by π and take the square root to get back to the radius."
+  },
   "A MAIOR parte é a do maior número da razão.": {
     "fr": "La PLUS GRANDE part revient au plus grand nombre du rapport.",
     "en": "The LARGEST share goes to the largest number in the ratio."
@@ -235,9 +243,17 @@
     "fr": "L’adjointe de la #×# : échange les éléments de la diagonale principale et change le signe des deux autres.",
     "en": "The adjugate of the #×#: swap the main diagonal entries and flip the sign of the other two."
   },
+  "A altura acima dos olhos é #·tg #°; depois some a altura dos olhos.": {
+    "fr": "La hauteur au-dessus des yeux vaut #·tan #° ; ajoutez ensuite la hauteur des yeux.",
+    "en": "The height above the eyes is #·tan #°; then add the eye height."
+  },
   "A altura da imagem é o aumento vezes a altura do objeto.": {
     "fr": "La hauteur de l’image est le grandissement fois la hauteur de l’objet.",
     "en": "The image height is the magnification times the object height."
+  },
+  "A altura pela visada de B.": {
+    "fr": "La hauteur par la visée depuis B.",
+    "en": "The height from the sighting at B."
   },
   "A altura reparte o triângulo em dois semelhantes ao original.": {
     "fr": "La hauteur partage le triangle en deux triangles semblables à l’original.",
@@ -246,6 +262,14 @@
   "A altura volta a zero quando o parâmetro satisfaz a equação de y.": {
     "fr": "La hauteur revient à zéro quand le paramètre satisfait l’équation de y.",
     "en": "The height returns to zero when the parameter satisfies the equation for y."
+  },
+  "A altura é o cateto OPOSTO ao ângulo e a distância no chão é o ADJACENTE: a razão é a tangente.": {
+    "fr": "La hauteur est la cathète OPPOSÉE à l’angle et la distance au sol est l’ADJACENTE : le rapport est la tangente.",
+    "en": "The height is the leg OPPOSITE the angle and the ground distance is the ADJACENT one: the ratio is the tangent."
+  },
+  "A altura é o cateto oposto e a sombra, o adjacente: altura = #·tg #°.": {
+    "fr": "La hauteur est la cathète opposée et l’ombre, l’adjacente : hauteur = #·tan #°.",
+    "en": "The height is the opposite leg and the shadow, the adjacent one: height = #·tan #°."
   },
   "A amplitude decai como e elevado a −c·t/(#m). Iguale a #/# e isole t.": {
     "fr": "L’amplitude décroît comme e élevé à −c·t/(#m). Égalez à #/# et isolez t.",
@@ -467,6 +491,14 @@
     "fr": "La coordonnée demandée.",
     "en": "The required coordinate."
   },
+  "A coroa é o círculo grande menos o pequeno: π·#² − π·#².": {
+    "fr": "La couronne est le grand cercle moins le petit : π·#² − π·#².",
+    "en": "The annulus is the large circle minus the small one: π·#² − π·#²."
+  },
+  "A coroa é o que sobra do círculo maior ao tirar o menor.": {
+    "fr": "La couronne est ce qui reste du grand cercle une fois le petit retiré.",
+    "en": "The annulus is what is left of the larger circle once the smaller is removed."
+  },
   "A corrente é a mesma nos dois; cada um fica com a fração da tensão igual à sua fração da resistência.": {
     "fr": "Le courant est le même dans les deux ; chacun prend la fraction de tension égale à sa fraction de résistance.",
     "en": "The current is the same in both; each takes the share of voltage equal to its share of resistance."
@@ -534,6 +566,10 @@
   "A diferença é a circulação.": {
     "fr": "La différence est la circulation.",
     "en": "The difference is the circulation."
+  },
+  "A diferença é a área procurada.": {
+    "fr": "La différence est l’aire cherchée.",
+    "en": "The difference is the area sought."
   },
   "A diferença, em módulo, é o erro cometido.": {
     "fr": "La différence, en valeur absolue, est l'erreur commise.",
@@ -867,6 +903,10 @@
     "fr": "La fraction se simplifie en un nombre.",
     "en": "The fraction simplifies to a number."
   },
+  "A fração é θ/#°, porque a volta completa tem #°. Dividir por #° dobraria o setor.": {
+    "fr": "La fraction vaut θ/#°, parce que le tour complet fait #°. Diviser par #° doublerait le secteur.",
+    "en": "The fraction is θ/#°, because the full turn is #°. Dividing by #° would double the sector."
+  },
   "A fronteira entra na solução, por isso o colchete e a bolinha preenchida.": {
     "fr": "La borne entre dans la solution, d’où le crochet et le point plein.",
     "en": "The boundary is included, hence the bracket and the filled dot."
@@ -943,6 +983,10 @@
     "fr": "La formule qui résout la question.",
     "en": "The formula that solves the question."
   },
+  "A hipotenusa # corresponde ao #: a unidade vale #.": {
+    "fr": "L’hypoténuse # correspond au # : l’unité vaut #.",
+    "en": "The hypotenuse # matches the #: the unit is #."
+  },
   "A hipotenusa ao quadrado é a soma dos catetos ao quadrado: #² + #² = # + #. Depois tire a raiz.": {
     "fr": "L’hypoténuse au carré est la somme des cathètes au carré : #² + #² = # + #. Prenez ensuite la racine.",
     "en": "The hypotenuse squared is the sum of the legs squared: #² + #² = # + #. Then take the root."
@@ -950,6 +994,14 @@
   "A hipotenusa é a raiz dessa soma — e só a raiz positiva tem sentido aqui.": {
     "fr": "L'hypoténuse est la racine de cette somme — et seule la racine positive a du sens ici.",
     "en": "The hypotenuse is the square root of this sum — and only the positive root makes sense here."
+  },
+  "A hipotenusa é o # da proporção, não o #: a unidade é # ÷ # = #.": {
+    "fr": "L’hypoténuse est le # du rapport, et non le # : l’unité vaut # ÷ # = #.",
+    "en": "The hypotenuse is the # in the ratio, not the #: the unit is # ÷ # = #."
+  },
+  "A hipotenusa é o lado MAIOR: o cateto é ela dividida por √#, não multiplicada.": {
+    "fr": "L’hypoténuse est le PLUS GRAND côté : la cathète en est le quotient par √#, et non le produit.",
+    "en": "The hypotenuse is the LONGEST side: the leg is it divided by √#, not multiplied."
   },
   "A hipérbole tem um sinal de MENOS entre os termos.": {
     "fr": "L'hyperbole a un signe MOINS entre les termes.",
@@ -1223,6 +1275,10 @@
     "fr": "La normale est perpendiculaire aux deux : le produit vectoriel (avec a positif).",
     "en": "The normal is perpendicular to both: the cross product (with a positive)."
   },
+  "A operação ficou invertida: para achar o cateto, MULTIPLICAMOS a hipotenusa pela razão. Dividir seria o caminho para encontrar a hipotenusa a partir do cateto.": {
+    "fr": "L’opération est inversée : pour trouver la cathète, on MULTIPLIE l’hypoténuse par le rapport. Diviser serait le chemin pour trouver l’hypoténuse à partir de la cathète.",
+    "en": "The operation is backwards: to find the leg, you MULTIPLY the hypotenuse by the ratio. Dividing would be the way to find the hypotenuse from the leg."
+  },
   "A operação troca a L₂ por ela mesma mais # vezes a L₁ — a L₁ não muda.": {
     "fr": "L’opération remplace la L₂ par elle-même plus # fois la L₁ — la L₁ ne change pas.",
     "en": "The operation replaces L₂ by itself plus # times L₁ — L₁ does not change."
@@ -1426,6 +1482,10 @@
   "A projeção é o módulo de a vezes o cosseno do ângulo entre eles.": {
     "fr": "La projection est le module de a fois le cosinus de l'angle entre eux.",
     "en": "The projection is the magnitude of a times the cosine of the angle between them."
+  },
+  "A proporção # : # : √# é a do triângulo de #°; # : √# : # é a do ###.": {
+    "fr": "Le rapport # : # : √# est celui du triangle de #° ; # : √# : # est celui du ###.",
+    "en": "The ratio # : # : √# belongs to the #° triangle; # : √# : # belongs to the ###."
   },
   "A proporção da equação vale em mols, não em gramas. Vá por CH₄ em gramas → mols → mols de CO₂ → gramas.": {
     "fr": "La proportion de l’équation vaut en moles, pas en grammes. Passez par CH₄ en grammes → moles → moles de CO₂ → grammes.",
@@ -1751,6 +1811,10 @@
     "fr": "La relation d’Euler est F + V = A + 2.",
     "en": "Euler’s relation is F + V = E + 2."
   },
+  "A relação está invertida: quem vale o DOBRO é o central. O inscrito, com o vértice na circunferência, enxerga o mesmo arco por metade do ângulo.": {
+    "fr": "La relation est inversée : c’est l’angle au CENTRE qui vaut le double. L’inscrit, dont le sommet est sur le cercle, voit le même arc sous la moitié de l’angle.",
+    "en": "The relation is backwards: it is the CENTRAL angle that is twice. The inscribed one, with its vertex on the circle, sees the same arc at half the angle."
+  },
   "A relação é estrita: a raiz, onde o trinômio vale #, fica de fora.": {
     "fr": "La relation est stricte : la racine, où le trinôme vaut #, reste exclue.",
     "en": "The relation is strict: the root, where the quadratic is #, is left out."
@@ -1915,6 +1979,10 @@
     "fr": "La tangente en c doit avoir la même pente.",
     "en": "The tangent at c must have the same slope."
   },
+  "A tangente relaciona os dois CATETOS entre si, sem envolver a hipotenusa. Quando a hipotenusa aparece no problema, a razão é seno ou cosseno.": {
+    "fr": "La tangente relie les deux CATHÈTES entre elles, sans faire intervenir l’hypoténuse. Quand l’hypoténuse apparaît dans le problème, le rapport est le sinus ou le cosinus.",
+    "en": "The tangent relates the two LEGS to each other, without involving the hypotenuse. When the hypotenuse appears in the problem, the ratio is sine or cosine."
+  },
   "A tangente se repete a cada #°.": {
     "fr": "La tangente se répète tous les #°.",
     "en": "The tangent repeats every #°."
@@ -1987,6 +2055,14 @@
     "fr": "La verticale est le cathète opposé.",
     "en": "The vertical is the opposite leg."
   },
+  "A volta completa tem #°, não #°. Dividir por # dobra o arco.": {
+    "fr": "Le tour complet fait #°, et non #°. Diviser par # double l’arc.",
+    "en": "The full turn is #°, not #°. Dividing by # doubles the arc."
+  },
+  "A volta inteira tem #°, e o arco é a fração que o ângulo recorta.": {
+    "fr": "Le tour complet fait #°, et l’arc est la fraction que l’angle découpe.",
+    "en": "The full turn is #°, and the arc is the fraction the angle cuts out."
+  },
   "A área abaixo dela se parte num retângulo e num triângulo.": {
     "fr": "L'aire en dessous se découpe en un rectangle et un triangle.",
     "en": "The area below it breaks into a rectangle and a triangle."
@@ -2055,6 +2131,10 @@
     "fr": "L’aire est la moyenne des bases fois la hauteur.",
     "en": "The area is the average of the bases times the height."
   },
+  "A área é o perímetro vezes o apótema, dividido por #. O perímetro é # lados de #.": {
+    "fr": "L’aire est le périmètre fois l’apothème, divisé par #. Le périmètre vaut # côtés de #.",
+    "en": "The area is the perimeter times the apothem, divided by #. The perimeter is # sides of #."
+  },
   "A área é o valor absoluto — o sinal indica apenas a orientação.": {
     "fr": "L'aire est la valeur absolue — le signe indique seulement l'orientation.",
     "en": "The area is the absolute value — the sign indicates only the orientation."
@@ -2062,6 +2142,10 @@
   "A área é um produto de dois comprimentos, então k entra duas vezes.": {
     "fr": "L'aire est un produit de deux longueurs, donc k intervient deux fois.",
     "en": "The area is a product of two lengths, so k enters twice."
+  },
+  "A área é π vezes o raio AO QUADRADO: π·#², ou seja, π·#.": {
+    "fr": "L’aire vaut π fois le rayon AU CARRÉ : π·#², soit π·#.",
+    "en": "The area is π times the radius SQUARED: π·#², that is, π·#."
   },
   "A última linha tem uma incógnita só.": {
     "fr": "La dernière ligne n’a qu’une seule inconnue.",
@@ -2214,6 +2298,10 @@
   "Ao derivar uma potência o expoente desce e DIMINUI em um. Aqui ele desceu, mas continuou o mesmo lá em cima.": {
     "fr": "En dérivant une puissance, l’exposant descend et DIMINUE de un. Ici il est descendu, mais il est resté le même en haut.",
     "en": "When differentiating a power the exponent comes down and DROPS by one. Here it came down, but stayed the same up top."
+  },
+  "Ao menor ângulo (#°) se opõe o menor lado. O oposto a #° é o maior cateto, √# vezes o outro.": {
+    "fr": "Au plus petit angle (#°) s’oppose le plus petit côté. L’opposé à #° est la plus grande cathète, √# fois l’autre.",
+    "en": "The smallest angle (#°) faces the shortest side. The one opposite #° is the longer leg, √# times the other."
   },
   "Ao passar o # para o outro lado, o sinal dele troca. Isole cos x com cuidado antes de procurar os ângulos.": {
     "fr": "En faisant passer le # de l’autre côté, son signe change. Isolez cos x avec soin avant de chercher les angles.",
@@ -2991,6 +3079,10 @@
     "fr": "Nous calculons l'aire de la base.",
     "en": "We calculate the base area."
   },
+  "Calculamos as duas áreas com os raios dados.": {
+    "fr": "Nous calculons les deux aires avec les rayons donnés.",
+    "en": "We compute both areas with the given radii."
+  },
   "Calculamos cada lado com sua sentença.": {
     "fr": "Nous calculons chaque côté avec son expression.",
     "en": "We work out each side with its own piece."
@@ -3030,6 +3122,10 @@
   "Calculamos o módulo e dividimos cada componente por ele.": {
     "fr": "Nous calculons le module et divisons chaque composante par lui.",
     "en": "We calculate the magnitude and divide each component by it."
+  },
+  "Calculamos o perímetro da circunferência inteira.": {
+    "fr": "Nous calculons le périmètre du cercle entier.",
+    "en": "We compute the perimeter of the whole circle."
   },
   "Calculamos o produto escalar pelas componentes.": {
     "fr": "Nous calculons le produit scalaire par les composantes.",
@@ -3198,6 +3294,10 @@
   "Chame de V o potencial do nó comum. Lei dos nós: (# − V)/# + (# − V)/# = V/#. Ache V e depois I = V/#.": {
     "fr": "Appelez V le potentiel du nœud commun. Loi des nœuds : (# − V)/# + (# − V)/# = V/#. Trouvez V puis I = V/#.",
     "en": "Call V the potential of the common node. Node law: (# − V)/# + (# − V)/# = V/#. Find V and then I = V/#."
+  },
+  "Chame de x a distância de B à torre: h = x·tg #° e h = (x + #)·tg #°. Iguale e ache x.": {
+    "fr": "Posez x la distance de B à la tour : h = x·tan #° et h = (x + #)·tan #°. Égalez et trouvez x.",
+    "en": "Let x be the distance from B to the tower: h = x·tan #° and h = (x + #)·tan #°. Equate and find x."
   },
   "Chame de x a idade de Bia. Daqui a alguns anos, os anos passam para as duas.": {
     "fr": "Appelez x l’âge de Bia. Dans quelques années, les années passent pour les deux.",
@@ -3387,6 +3487,14 @@
     "fr": "Avec une masse de # kilogrammes, la force qui maintient la rotation est celle-ci.",
     "en": "With a mass of # kilograms, the force keeping the spin is this one."
   },
+  "Com muitos lados, isso se aproxima de πr² — o círculo é o limite.": {
+    "fr": "Avec beaucoup de côtés, cela s’approche de πr² — le cercle est la limite.",
+    "en": "With many sides, this approaches πr² — the circle is the limit."
+  },
+  "Com o central conhecido, basta dividir por dois.": {
+    "fr": "L’angle au centre étant connu, il suffit de diviser par deux.",
+    "en": "With the central angle known, it is enough to divide by two."
+  },
   "Com o expoente a partir de #, o termo em épsilon cresce sem parar.": {
     "fr": "Avec l’exposant à partir de #, le terme en epsilon croît sans fin.",
     "en": "With the exponent from # on, the epsilon term grows without end."
@@ -3402,6 +3510,10 @@
   "Com o expoente até #, o termo em t cresce sem parar.": {
     "fr": "Avec l'exposant jusqu'à #, le terme en t croît sans s'arrêter.",
     "en": "With the exponent up to #, the t term grows without stopping."
+  },
+  "Com o inscrito conhecido, o central é o dobro.": {
+    "fr": "L’inscrit étant connu, l’angle au centre en est le double.",
+    "en": "With the inscribed angle known, the central one is twice it."
   },
   "Com o maior expoente, o resultado é múltiplo de ambos; com qualquer expoente menor, deixaria de ser múltiplo de um deles.": {
     "fr": "Avec le plus grand exposant, le résultat est multiple des deux ; avec un exposant plus petit, il cesserait d’être multiple de l’un d’eux.",
@@ -3462,6 +3574,10 @@
   "Com x = #, Pitágoras dá y = #.": {
     "fr": "Avec x = #, Pythagore donne y = #.",
     "en": "With x = #, Pythagoras gives y = #."
+  },
+  "Com x a distância de B até a torre, as duas visadas dão duas equações.": {
+    "fr": "Avec x la distance de B à la tour, les deux visées donnent deux équations.",
+    "en": "With x the distance from B to the tower, the two sightings give two equations."
   },
   "Com y(#) igual a # e y'(#) igual a #, avaliamos em t igual a #.": {
     "fr": "Avec y(#) égal à # et y'(#) égal à #, nous évaluons en t égal à #.",
@@ -4419,6 +4535,10 @@
     "fr": "Nous divisons L₃ par #, pour que le pivot devienne #.",
     "en": "We divide L₃ by #, so the pivot becomes #."
   },
+  "Dividimos a hipotenusa por √#.": {
+    "fr": "Nous divisons l’hypoténuse par √#.",
+    "en": "We divide the hypotenuse by √#."
+  },
   "Dividimos cada parte pelo denominador real.": {
     "fr": "Nous divisons chaque partie par le dénominateur réel.",
     "en": "We divide each part by the real denominator."
@@ -4558,6 +4678,10 @@
   "Dividir por # é o avesso de multiplicar por # dentro do argumento.": {
     "fr": "Diviser par # est l’inverse de multiplier par # à l’intérieur de l’argument.",
     "en": "Dividing by # is the reverse of multiplying by # inside the argument."
+  },
+  "Dividir por #π é o caminho para achar o raio a partir do COMPRIMENTO, não da área.": {
+    "fr": "Diviser par #π est le chemin pour trouver le rayon à partir de la LONGUEUR, et non de l’aire.",
+    "en": "Dividing by #π is the way to find the radius from the LENGTH, not from the area."
   },
   "Dividir por uma fração é o mesmo que multiplicar pelo seu inverso.": {
     "fr": "Diviser par une fraction est le même que multiplier par son inverse.",
@@ -5379,6 +5503,10 @@
     "fr": "En sphériques, l’angle polaire se mesure à partir de l’axe z.",
     "en": "In spherical coordinates the polar angle is measured from the z-axis."
   },
+  "Em fator comum: π(R² − r²) = π(#² − #²).": {
+    "fr": "En facteur commun : π(R² − r²) = π(#² − #²).",
+    "en": "Factored: π(R² − r²) = π(#² − #²)."
+  },
   "Em forma polar, os módulos multiplicam e os argumentos somam.": {
     "fr": "En forme polaire, les modules multiplient et les arguments s'additionnent.",
     "en": "In polar form, the magnitudes multiply and the arguments add."
@@ -5967,6 +6095,10 @@
     "fr": "Cette image est l’objet de la seconde lentille, à la distance qui reste jusqu’à elle.",
     "en": "That image is the object of the second lens, at the distance left up to it."
   },
+  "Essa razão não depende do tamanho do círculo; é isso que faz dela uma constante.": {
+    "fr": "Ce rapport ne dépend pas de la taille du cercle ; c’est ce qui en fait une constante.",
+    "en": "That ratio does not depend on the size of the circle; that is what makes it a constant."
+  },
   "Essa sentença é contínua, então basta substituir o ponto.": {
     "fr": "Cette expression est continue, il suffit donc de substituer le point.",
     "en": "That piece is continuous, so it is enough to substitute the point."
@@ -6055,6 +6187,10 @@
     "fr": "C’est la masse d’UNE mole. L’énoncé demande la masse de #, il reste donc à multiplier.",
     "en": "That is the mass of ONE mole. The question asks for the mass of #, so a multiplication is still missing."
   },
+  "Essa é a medida que o enunciado já deu. O outro ângulo é a metade dela.": {
+    "fr": "C’est la mesure que l’énoncé a déjà donnée. L’autre angle en est la moitié.",
+    "en": "That is the measure the question already gave. The other angle is half of it."
+  },
   "Essa é a menor das raízes. As duas anulam a expressão, mas o enunciado pede a maior.": {
     "fr": "C’est la plus petite des racines. Elles annulent toutes l’expression, mais l’énoncé demande la plus grande.",
     "en": "That is the smallest root. They all make the expression zero, but the question asks for the largest."
@@ -6099,9 +6235,17 @@
     "fr": "C’est la somme des carrés des deux autres côtés. La question porte sur le carré du PLUS GRAND côté — ce sont les deux membres de la comparaison.",
     "en": "That is the sum of the squares of the other two sides. The question asks for the square of the LONGEST side — they are the two ends of the comparison."
   },
+  "Essa é a tangente, não o ângulo. Falta aplicar o arco-tangente.": {
+    "fr": "C’est la tangente, et non l’angle. Il reste à appliquer l’arc tangente.",
+    "en": "That is the tangent, not the angle. Applying the arctangent is still missing."
+  },
   "Essa é a taxa do PERÍMETRO: dP/dt = #·dL/dt. A pergunta é pela área.": {
     "fr": "C’est le taux du PÉRIMÈTRE : dP/dt = #·dL/dt. La question porte sur l’aire.",
     "en": "That is the rate of the PERIMETER: dP/dt = #·dL/dt. The question asks about the area."
+  },
+  "Essa é a ÁREA, que se mede em unidades quadradas. O comprimento é uma medida linear: C = #πr.": {
+    "fr": "C’est l’AIRE, qui se mesure en unités carrées. La longueur est une mesure linéaire : C = #πr.",
+    "en": "That is the AREA, measured in square units. The length is a linear measure: C = #πr."
   },
   "Essa é a área LATERAL do cilindro. O volume usa a área da base, πr².": {
     "fr": "C’est l’aire LATÉRALE du cylindre. Le volume utilise l’aire de la base, πr².",
@@ -6110,6 +6254,22 @@
   "Essa é a área da SOMBRA no plano xy. O plano é inclinado: multiplique por √(# + #² + #²).": {
     "fr": "C’est l’aire de l’OMBRE dans le plan xy. Le plan est incliné : multipliez par √(# + #² + #²).",
     "en": "That is the area of the SHADOW in the xy-plane. The plane is slanted: multiply by √(# + #² + #²)."
+  },
+  "Essa é a área de UM dos triângulos. Falta multiplicar pelos n triângulos que compõem o polígono.": {
+    "fr": "C’est l’aire d’UN des triangles. Il reste à multiplier par les n triangles qui composent le polygone.",
+    "en": "That is the area of ONE of the triangles. Multiplying by the n triangles that make up the polygon is still missing."
+  },
+  "Essa é a área do SETOR, que se mede em cm². O arco é a borda curva, e sai do perímetro #πr.": {
+    "fr": "C’est l’aire du SECTEUR, qui se mesure en cm². L’arc est le bord courbe, et vient du périmètre #πr.",
+    "en": "That is the area of the SECTOR, measured in cm². The arc is the curved edge, and comes from the perimeter #πr."
+  },
+  "Essa é a área do círculo INTEIRO. O setor é apenas a fração correspondente ao ângulo.": {
+    "fr": "C’est l’aire du cercle ENTIER. Le secteur n’est que la fraction correspondant à l’angle.",
+    "en": "That is the area of the WHOLE circle. The sector is only the fraction matching the angle."
+  },
+  "Essa é a área do círculo maior inteiro, com o buraco do meio incluído.": {
+    "fr": "C’est l’aire du grand cercle entier, trou du milieu compris.",
+    "en": "That is the area of the whole larger circle, with the hole in the middle included."
   },
   "Essa é só a outra parcela. Faltou o termo com o arco-seno.": {
     "fr": "Ce n’est que l’autre terme. Il manque celui avec l’arc sinus.",
@@ -6155,9 +6315,17 @@
     "fr": "C’est c², et non c : il reste à prendre la racine carrée.",
     "en": "That is c², not c: taking the square root is still missing."
   },
+  "Esse é o COMPRIMENTO da circunferência. A área depende de r², não de r.": {
+    "fr": "C’est la LONGUEUR du cercle. L’aire dépend de r², et non de r.",
+    "en": "That is the LENGTH of the circle. The area depends on r², not on r."
+  },
   "Esse é o LADO do retângulo ótimo. A pergunta é pela área, que é o produto dos dois lados.": {
     "fr": "C’est le CÔTÉ du rectangle optimal. La question porte sur l’aire, qui est le produit des deux côtés.",
     "en": "That is the SIDE of the optimal rectangle. The question asks for the area, which is the product of the two sides."
+  },
+  "Esse é o OUTRO ângulo agudo: a razão ficou invertida. A tangente é oposto sobre adjacente, vistos a partir do ângulo pedido.": {
+    "fr": "C’est l’AUTRE angle aigu : le rapport est inversé. La tangente, c’est l’opposée sur l’adjacente, vues depuis l’angle demandé.",
+    "en": "That is the OTHER acute angle: the ratio came out upside down. The tangent is opposite over adjacent, seen from the angle asked about."
   },
   "Esse é o VOLUME no instante, não a taxa com que ele cresce. A pergunta é por dV/dt, que sai de derivar a relação.": {
     "fr": "C’est le VOLUME à cet instant, et non le taux auquel il croît. La question porte sur dV/dt, qui sort de la dérivation de la relation.",
@@ -6178,6 +6346,10 @@
   "Esse é o coeficiente de N, comparado direto com o de M. A condição compara as DERIVADAS: ∂M/∂y com ∂N/∂x.": {
     "fr": "C’est le coefficient de N, comparé directement à celui de M. La condition compare les DÉRIVÉES : ∂M/∂y et ∂N/∂x.",
     "en": "That is the coefficient of N, compared straight with M’s. The condition compares the DERIVATIVES: ∂M/∂y with ∂N/∂x."
+  },
+  "Esse é o comprimento do ARCO, uma medida linear. A área do setor usa πr², não #πr.": {
+    "fr": "C’est la longueur de l’ARC, une mesure linéaire. L’aire du secteur utilise πr², et non #πr.",
+    "en": "That is the length of the ARC, a linear measure. The sector area uses πr², not #πr."
   },
   "Esse é o denominador da equação, que vale a². O semieixo é a raiz quadrada dele.": {
     "fr": "C’est le dénominateur de l’équation, qui vaut a². Le demi-axe en est la racine carrée.",
@@ -6226,6 +6398,10 @@
   "Esse é o outro extremo do intervalo. O pedido é o da esquerda (o menor).": {
     "fr": "C’est l’autre borne de l’intervalle. Celle qui est demandée est celle de gauche (la plus petite).",
     "en": "That is the other end of the interval. The one asked for is the left one (the smaller)."
+  },
+  "Esse é o perímetro INTEIRO. O arco é só a fração θ/# dele.": {
+    "fr": "C’est le périmètre ENTIER. L’arc n’en est que la fraction θ/#.",
+    "en": "That is the WHOLE perimeter. The arc is only the fraction θ/# of it."
   },
   "Esse é o perímetro dado. A área é outra grandeza — o produto dos lados, não a soma deles.": {
     "fr": "C’est le périmètre donné. L’aire est une autre grandeur — le produit des côtés, et non leur somme.",
@@ -6367,6 +6543,10 @@
     "fr": "C’est le x où se produit le maximum, et non la valeur maximale. Il reste à remplacer ce x dans la fonction.",
     "en": "That is the x where the maximum occurs, not the maximum value. Substituting that x back into the function is still missing."
   },
+  "Esse é o ângulo em RADIANOS. A calculadora estava no modo errado: passe para graus.": {
+    "fr": "C’est l’angle en RADIANS. La calculatrice était dans le mauvais mode : passez en degrés.",
+    "en": "That is the angle in RADIANS. The calculator was in the wrong mode: switch to degrees."
+  },
   "Esse é o ângulo em RADIANOS. O enunciado pede graus: confira o modo da calculadora (DEG, e não RAD).": {
     "fr": "C’est l’angle en RADIANS. L’énoncé demande des degrés : vérifiez le mode de la calculatrice (DEG, et non RAD).",
     "en": "That is the angle in RADIANS. The question asks for degrees: check the calculator mode (DEG, not RAD)."
@@ -6390,6 +6570,10 @@
   "Esse é um único círculo máximo. A esfera tem superfície equivalente a QUATRO deles.": {
     "fr": "C’est un seul grand cercle. La sphère a une surface équivalente à QUATRE d’entre eux.",
     "en": "That is a single great circle. The sphere has a surface equal to FOUR of them."
+  },
+  "Esse é x, a distância de B até a torre. Falta multiplicar pela tangente para achar a altura.": {
+    "fr": "C’est x, la distance de B à la tour. Il reste à multiplier par la tangente pour trouver la hauteur.",
+    "en": "That is x, the distance from B to the tower. Multiplying by the tangent to find the height is still missing."
   },
   "Esses são os SUBNÍVEIS ocupados, não as camadas. Uma camada reúne vários subníveis: a camada # tem o #s e o #p.": {
     "fr": "Ce sont les SOUS-COUCHES occupées, et non les couches. Une couche réunit plusieurs sous-couches : la couche # contient le #s et le #p.",
@@ -6458,6 +6642,10 @@
   "Extraímos a raiz com o sinal do quadrante.": {
     "fr": "Nous extrayons la racine avec le signe du quadrant.",
     "en": "We take the root with the quadrant’s sign."
+  },
+  "Extraímos a raiz quadrada.": {
+    "fr": "Nous extrayons la racine carrée.",
+    "en": "We take the square root."
   },
   "Extraímos a raiz, tomando o sinal do quadrante.": {
     "fr": "Nous extrayons la racine, en prenant le signe du quadrant.",
@@ -6591,6 +6779,10 @@
     "fr": "Il manque la division par # : chaque arête appartient à deux faces et a été comptée deux fois.",
     "en": "The division by # is missing: each edge belongs to two faces and was counted twice."
   },
+  "Faltou dividir por #: cada um dos n triângulos tem área ℓ·a/#, não ℓ·a.": {
+    "fr": "Il manque la division par # : chacun des n triangles a pour aire ℓ·a/#, et non ℓ·a.",
+    "en": "The division by # is missing: each of the n triangles has area ℓ·a/#, not ℓ·a."
+  },
   "Faltou dividir por #: o fator é #x + #, então x = #/#.": {
     "fr": "Il manque la division par # : le facteur est #x + #, donc x = #/#.",
     "en": "The division by # is missing: the factor is #x + #, so x = #/#."
@@ -6639,6 +6831,10 @@
     "fr": "Il manque le # : de c² = #mk on tire c = #√(mk), et non √(mk).",
     "en": "The # is missing: from c² = #mk comes c = #√(mk), not √(mk)."
   },
+  "Faltou o #: π multiplica o DIÂMETRO, que é o dobro do raio. C = πd = #πr.": {
+    "fr": "Il manque le # : π multiplie le DIAMÈTRE, qui vaut le double du rayon. C = πd = #πr.",
+    "en": "The # is missing: π multiplies the DIAMETER, which is twice the radius. C = πd = #πr."
+  },
   "Faltou o fator # pi: uma volta completa não é # radiano.": {
     "fr": "Il manque le facteur # pi : un tour complet ne fait pas # radian.",
     "en": "The factor # pi is missing: a full turn is not # radian."
@@ -6666,6 +6862,10 @@
   "Faltou passar # cm para # m: com r em centímetros, r² fica # # vezes maior.": {
     "fr": "Il manque la conversion de # cm en # m : avec r en centimètres, r² devient # # fois plus grand.",
     "en": "Converting # cm to # m is missing: with r in centimetres, r² comes out # # times larger."
+  },
+  "Faltou somar a altura dos olhos (# m): o triângulo começa nela, não no chão.": {
+    "fr": "Il manque l’addition de la hauteur des yeux (# m) : le triangle commence là, et non au sol.",
+    "en": "Adding the eye height (# m) is missing: the triangle starts there, not at the ground."
   },
   "Faltou subtrair F(#). Mesmo com ln # = #, o termo −x²/# em x = # não é zero.": {
     "fr": "Il manque la soustraction de F(#). Même avec ln # = #, le terme −x²/# en x = # n’est pas nul.",
@@ -6758,6 +6958,10 @@
   "Ficar ACIMA de algo que diverge garante divergência. A desigualdade só serve no sentido em que ela aponta.": {
     "fr": "Rester AU-DESSUS de quelque chose qui diverge garantit la divergence. L’inégalité ne sert que dans le sens où elle pointe.",
     "en": "Staying ABOVE something that diverges guarantees divergence. The inequality only works in the direction it points."
+  },
+  "Ficou invertido: tg = altura ÷ distância, então a altura é distância VEZES tg.": {
+    "fr": "C’est inversé : tan = hauteur ÷ distance, donc la hauteur est la distance FOIS tan.",
+    "en": "It is backwards: tan = height ÷ distance, so the height is distance TIMES tan."
   },
   "Fingindo # g do composto, cada porcentagem vira gramas.": {
     "fr": "En supposant # g du composé, chaque pourcentage devient des grammes.",
@@ -6870,6 +7074,10 @@
   "Igualamos os dois pontos do escoamento.": {
     "fr": "Nous égalisons les deux points de l'écoulement.",
     "en": "We equate the two flow points."
+  },
+  "Igualando e isolando x.": {
+    "fr": "En égalant puis en isolant x.",
+    "en": "Equating and isolating x."
   },
   "Igualando os coeficientes.": {
     "fr": "En égalant les coefficients.",
@@ -7018,6 +7226,10 @@
   "Isolamos cos x, como numa equação do #º grau.": {
     "fr": "Nous isolons cos x, comme dans une équation du #ᵉ degré.",
     "en": "We isolate cos x, as in a degree # equation."
+  },
+  "Isolamos o cateto multiplicando pela hipotenusa.": {
+    "fr": "Nous isolons la cathète en multipliant par l’hypoténuse.",
+    "en": "We isolate the leg by multiplying by the hypotenuse."
   },
   "Isolamos o cosseno ao quadrado.": {
     "fr": "Nous isolons le cosinus au carré.",
@@ -7222,6 +7434,10 @@
   "Isso é o divergente (∂P/∂x + ∂Q/∂y). O rotacional usa as derivadas CRUZADAS.": {
     "fr": "C’est la divergence (∂P/∂x + ∂Q/∂y). Le rotationnel utilise les dérivées CROISÉES.",
     "en": "That is the divergence (∂P/∂x + ∂Q/∂y). The curl uses the CROSS derivatives."
+  },
+  "Isso é um comprimento, em cm. A coroa é uma área, em cm².": {
+    "fr": "C’est une longueur, en cm. La couronne est une aire, en cm².",
+    "en": "That is a length, in cm. The annulus is an area, in cm²."
   },
   "Juntamos os termos em x.": {
     "fr": "Nous réunissons les termes en x.",
@@ -7555,6 +7771,10 @@
     "fr": "Nous multiplions numérateur et dénominateur par le conjugué.",
     "en": "We multiply numerator and denominator by the conjugate."
   },
+  "Multiplicamos o cateto por √#.": {
+    "fr": "Nous multiplions la cathète par √#.",
+    "en": "We multiply the leg by √#."
+  },
   "Multiplicamos o volume original por esse fator.": {
     "fr": "Nous multiplions le volume d’origine par ce facteur.",
     "en": "We multiply the original volume by that factor."
@@ -7738,6 +7958,10 @@
   "Na alternada, o erro de parar no termo # é no máximo o valor absoluto do termo #.": {
     "fr": "Dans la série alternée, l’erreur en s’arrêtant au terme # vaut au plus la valeur absolue du terme #.",
     "en": "In the alternating series, the error from stopping at term # is at most the absolute value of term #."
+  },
+  "Na calculadora: tan⁻¹, com o modo em GRAUS.": {
+    "fr": "Sur la calculatrice : tan⁻¹, en mode DEGRÉS.",
+    "en": "On the calculator: tan⁻¹, with the mode in DEGREES."
   },
   "Na colisão elástica, momento E energia cinética se conservam.": {
     "fr": "Dans la collision élastique, le moment ET l'énergie cinétique se conservent.",
@@ -8087,6 +8311,14 @@
     "fr": "Ni neutre a # électrons, autant que de protons.",
     "en": "Neutral Ni has # electrons, as many as protons."
   },
+  "No ### o cateto oposto a #° é metade da hipotenusa (# ÷ #), e o oposto a #° é esse valor vezes √#.": {
+    "fr": "Dans le ###, la cathète opposée à #° vaut la moitié de l’hypoténuse (# ÷ #), et celle opposée à #° vaut cette valeur fois √#.",
+    "en": "In the ###, the leg opposite #° is half the hypotenuse (# ÷ #), and the one opposite #° is that value times √#."
+  },
+  "No ###, os lados estão na proporção # : √# : # (oposto a #°, oposto a #°, hipotenusa).": {
+    "fr": "Dans le ###, les côtés sont dans le rapport # : √# : # (opposé à #°, opposé à #°, hypoténuse).",
+    "en": "In the ###, the sides are in the ratio # : √# : # (opposite #°, opposite #°, hypotenuse)."
+  },
   "No #º quadrante o cosseno é positivo, então ficamos com a raiz positiva.": {
     "fr": "Dans le #e quadrant le cosinus est positif, donc nous gardons la racine positive.",
     "en": "In the #st quadrant the cosine is positive, so we keep the positive root."
@@ -8234,6 +8466,22 @@
   "No triângulo ABC, os três ângulos somam #°.": {
     "fr": "Dans le triangle ABC, les trois angles font #°.",
     "en": "In triangle ABC, the three angles add to #°."
+  },
+  "No triângulo de #° a hipotenusa é o cateto vezes √#. Aqui ela é #√#.": {
+    "fr": "Dans le triangle de #°, l’hypoténuse est la cathète fois √#. Ici elle vaut #√#.",
+    "en": "In the #° triangle the hypotenuse is the leg times √#. Here it is #√#."
+  },
+  "No triângulo de #° a hipotenusa é o cateto vezes √#: # vezes √#.": {
+    "fr": "Dans le triangle de #°, l’hypoténuse est la cathète fois √# : # fois √#.",
+    "en": "In the #° triangle the hypotenuse is the leg times √#: # times √#."
+  },
+  "No triângulo de #° os dois catetos são iguais, mas a hipotenusa é maior: cateto vezes √#.": {
+    "fr": "Dans le triangle de #°, les deux cathètes sont égales, mais l’hypoténuse est plus grande : la cathète fois √#.",
+    "en": "In the #° triangle both legs are equal, but the hypotenuse is larger: leg times √#."
+  },
+  "No triângulo de #°, os lados estão na proporção # : # : √#.": {
+    "fr": "Dans le triangle de #°, les côtés sont dans le rapport # : # : √#.",
+    "en": "In the #° triangle, the sides are in the ratio # : # : √#."
   },
   "No triângulo retângulo, os quadrados dos catetos somam o da hipotenusa.": {
     "fr": "Dans le triangle rectangle, les carrés des cathètes somment celui de l'hypoténuse.",
@@ -8523,6 +8771,18 @@
     "fr": "L’arccos renvoie l’angle de l’image [#°, #°] qui a cette valeur de cosseno.",
     "en": "The arccos returns the angle in the range [#°, #°] with that cosseno value."
   },
+  "O arco é a fração #/# da volta inteira, que mede #·π·#.": {
+    "fr": "L’arc est la fraction #/# du tour complet, qui mesure #·π·#.",
+    "en": "The arc is the fraction #/# of the full turn, which measures #·π·#."
+  },
+  "O arco é essa fração do perímetro.": {
+    "fr": "L’arc est cette fraction du périmètre.",
+    "en": "The arc is that fraction of the perimeter."
+  },
+  "O arco é um comprimento — mede-se em cm, não em cm².": {
+    "fr": "L’arc est une longueur — il se mesure en cm, et non en cm².",
+    "en": "The arc is a length — it is measured in cm, not in cm²."
+  },
   "O arco-tangente tem assíntota horizontal, e é por isso que o limite existe.": {
     "fr": "L'arc-tangente a une asymptote horizontale, et c'est pourquoi la limite existe.",
     "en": "The arctangent has a horizontal asymptote, and that is why the limit exists."
@@ -8579,6 +8839,10 @@
     "fr": "L'argument est l'angle avec l'axe réel.",
     "en": "The argument is the angle with the real axis."
   },
+  "O arranjo tende a um retângulo de base metade do perímetro e altura r.": {
+    "fr": "L’arrangement tend vers un rectangle de base la moitié du périmètre et de hauteur r.",
+    "en": "The arrangement tends to a rectangle with base half the perimeter and height r."
+  },
   "O atrito dá conta da componente do peso: o bloco fica parado.": {
     "fr": "Le frottement fait face à la composante du poids : le bloc reste immobile.",
     "en": "Friction handles the weight component: the block stays still."
@@ -8631,9 +8895,29 @@
     "fr": "L’annulation vaut pour tout x différent du point — et c’est tout ce dont la limite a besoin.",
     "en": "The cancellation holds for every x other than the point — and that is all the limit needs."
   },
+  "O cateto adjacente se relaciona com a hipotenusa pelo cosseno.": {
+    "fr": "La cathète adjacente se relie à l’hypoténuse par le cosinus.",
+    "en": "The adjacent leg relates to the hypotenuse through the cosine."
+  },
   "O cateto ao quadrado é a hipotenusa ao quadrado menos o outro cateto ao quadrado: #² − #². Depois tire a raiz.": {
     "fr": "La cathète au carré est l’hypoténuse au carré moins l’autre cathète au carré : #² − #². Prenez ensuite la racine.",
     "en": "The leg squared is the hypotenuse squared minus the other leg squared: #² − #². Then take the root."
+  },
+  "O cateto está à frente do ângulo ou encostado nele?": {
+    "fr": "La cathète est-elle face à l’angle ou adjacente à lui ?",
+    "en": "Is the leg across from the angle or next to it?"
+  },
+  "O cateto oposto a #° é a unidade vezes √#.": {
+    "fr": "La cathète opposée à #° est l’unité fois √#.",
+    "en": "The leg opposite #° is the unit times √#."
+  },
+  "O cateto oposto a #° é a unidade.": {
+    "fr": "La cathète opposée à #° est l’unité.",
+    "en": "The leg opposite #° is the unit."
+  },
+  "O cateto oposto se relaciona com a hipotenusa pelo seno.": {
+    "fr": "La cathète opposée se relie à l’hypoténuse par le sinus.",
+    "en": "The opposite leg relates to the hypotenuse through the sine."
   },
   "O centro de massa é a média das posições, ponderada pelas massas.": {
     "fr": "Le centre de masse est la moyenne des positions, pondérée par les masses.",
@@ -8702,6 +8986,10 @@
   "O comprimento medido em movimento é o próprio dividido por γ.": {
     "fr": "La longueur mesurée en mouvement est la longueur propre divisée par γ.",
     "en": "The length measured in motion is the proper length divided by γ."
+  },
+  "O comprimento é #·π·r: aqui, #·π·#.": {
+    "fr": "La longueur vaut #·π·r : ici, #·π·#.",
+    "en": "The length is #·π·r: here, #·π·#."
   },
   "O cone é um terço do cilindro de mesma base e altura.": {
     "fr": "Le cône est un tiers du cylindre de même base et hauteur.",
@@ -9082,6 +9370,10 @@
   "O impulso é a força multiplicada pelo tempo de aplicação.": {
     "fr": "L'impulsion est la force multipliée par le temps d'application.",
     "en": "The impulse is the force multiplied by the application time."
+  },
+  "O inscrito é metade do central que vê o mesmo arco.": {
+    "fr": "L’inscrit vaut la moitié de l’angle au centre qui voit le même arc.",
+    "en": "The inscribed angle is half the central angle seeing the same arc."
   },
   "O integrando explode em zero, então afastamos a borda com um limite.": {
     "fr": "L'intégrande explose en zéro, donc on éloigne la bordure avec une limite.",
@@ -9639,6 +9931,10 @@
     "fr": "La fonction prend la même valeur en x et en #° − x.",
     "en": "The function takes the same value at x and at #° − x."
   },
+  "O seno usaria a hipotenusa (a linha de visada), que não foi dada. Com a distância no chão, que é o cateto adjacente, a razão é a tangente.": {
+    "fr": "Le sinus utiliserait l’hypoténuse (la ligne de visée), qui n’est pas donnée. Avec la distance au sol, qui est la cathète adjacente, le rapport est la tangente.",
+    "en": "The sine would use the hypotenuse (the line of sight), which was not given. With the ground distance, which is the adjacent leg, the ratio is the tangent."
+  },
   "O seno vale no máximo #.": {
     "fr": "Le sinus vaut au plus #.",
     "en": "The sine is at most #."
@@ -9650,6 +9946,10 @@
   "O sentido da conversão está invertido: trocar por uma unidade menor aumenta o número.": {
     "fr": "Le sens de la conversion est inversé : passer à une unité plus petite augmente le nombre.",
     "en": "The direction of the conversion is reversed: switching to a smaller unit increases the number."
+  },
+  "O setor é a fração #/# do círculo inteiro: calcule π · #² e multiplique por essa fração.": {
+    "fr": "Le secteur est la fraction #/# du cercle entier : calculez π · #² et multipliez par cette fraction.",
+    "en": "The sector is the fraction #/# of the whole circle: compute π · #² and multiply by that fraction."
   },
   "O setor é uma fração do círculo, proporcional ao ângulo.": {
     "fr": "Le secteur est une fraction du cercle, proportionnelle à l'angle.",
@@ -9991,6 +10291,10 @@
     "fr": "Le vol se termine quand la hauteur revient à zéro.",
     "en": "The flight ends when the height returns to zero."
   },
+  "O vértice do central é o centro; o do inscrito está na própria circunferência.": {
+    "fr": "Le sommet de l’angle au centre est le centre ; celui de l’inscrit est sur le cercle même.",
+    "en": "The vertex of the central angle is the centre; the inscribed one sits on the circle itself."
+  },
   "O vértice fica na média das raízes, no eixo de simetria da parábola.": {
     "fr": "Le sommet se trouve à la moyenne des racines, sur l'axe de symétrie de la parabole.",
     "en": "The vertex lies at the average of the roots, on the axis of symmetry of the parabola."
@@ -10062,6 +10366,10 @@
   "O ângulo externo é o suplemento do interno do mesmo vértice.": {
     "fr": "L’angle extérieur est le supplémentaire de l’intérieur du même sommet.",
     "en": "The exterior angle is the supplement of the interior one at the same vertex."
+  },
+  "O ângulo foi medido da altura dos olhos: somamos os # m.": {
+    "fr": "L’angle a été mesuré depuis la hauteur des yeux : nous ajoutons les # m.",
+    "en": "The angle was measured from eye height: we add the # m."
   },
   "O ângulo oposto ao maior lado é reto.": {
     "fr": "L’angle opposé au plus grand côté est droit.",
@@ -10138,6 +10446,14 @@
   "Olhe a última linha: # = # deixa uma variável livre; # igual a um número diferente de zero é contradição.": {
     "fr": "Regardez la dernière ligne : # = # laisse une variable libre ; # égal à un nombre non nul est une contradiction.",
     "en": "Look at the last row: # = # leaves a free variable; # equal to a nonzero number is a contradiction."
+  },
+  "Oposto e adjacente juntos dão a tangente do ângulo.": {
+    "fr": "L’opposée et l’adjacente ensemble donnent la tangente de l’angle.",
+    "en": "Opposite and adjacent together give the tangent of the angle."
+  },
+  "Oposto sobre adjacente é a tangente: tg θ = #/#. O ângulo é o arco tangente disso, em graus.": {
+    "fr": "Opposée sur adjacente, c’est la tangente : tan θ = #/#. L’angle en est l’arc tangente, en degrés.",
+    "en": "Opposite over adjacent is the tangent: tan θ = #/#. The angle is the arctangent of that, in degrees."
   },
   "Ordem trocada: é ∂Q/∂x MENOS ∂P/∂y, não o contrário.": {
     "fr": "Ordre inversé : c’est ∂Q/∂x MOINS ∂P/∂y, et non l’inverse.",
@@ -10439,6 +10755,10 @@
     "fr": "Les deux angles de la base sont égaux ; il reste 180° moins le sommet.",
     "en": "Both base angles are equal; what is left is 180° minus the apex."
   },
+  "Os dois ângulos enxergam o mesmo arco, e o inscrito vale metade.": {
+    "fr": "Les deux angles interceptent le même arc, et l’inscrit en vaut la moitié.",
+    "en": "Both angles see the same arc, and the inscribed one is half."
+  },
   "Os elementos repetidos foram contados duas vezes. Num conjunto cada elemento aparece uma vez só, mesmo que esteja nos dois.": {
     "fr": "Les éléments répétés ont été comptés deux fois. Dans un ensemble, chaque élément n’apparaît qu’une fois, même s’il est dans les deux.",
     "en": "Repeated elements were counted twice. In a set each element appears only once, even if it is in both."
@@ -10667,6 +10987,10 @@
     "fr": "Pour une particule, le moment angulaire utilise la distance perpendiculaire.",
     "en": "For a particle, the angular momentum uses the perpendicular distance."
   },
+  "Para voltar da razão ao ângulo, usamos a função inversa, o arco-tangente.": {
+    "fr": "Pour revenir du rapport à l’angle, nous utilisons la fonction inverse, l’arc tangente.",
+    "en": "To go back from the ratio to the angle, we use the inverse function, the arctangent."
+  },
   "Para x grande, a raiz de x mais um se comporta como a raiz de x.": {
     "fr": "Pour x grand, la racine de x plus un se comporte comme la racine de x.",
     "en": "For large x, the root of x plus one behaves like the root of x."
@@ -10762,6 +11086,10 @@
   "Partimos da subtração proposta.": {
     "fr": "Nous partons de l’opération proposée.",
     "en": "We start from the operation given."
+  },
+  "Partimos da área e isolamos o raio ao quadrado.": {
+    "fr": "Nous partons de l’aire et isolons le rayon au carré.",
+    "en": "We start from the area and isolate the radius squared."
   },
   "Partimos das duas equações do movimento uniformemente variado.": {
     "fr": "Nous partons des deux équations du mouvement uniformément varié.",
@@ -12339,6 +12667,10 @@
     "fr": "Soustraire le pivot une seule fois n’annule l’entrée que si elle lui est égale. Il faut diviser.",
     "en": "Subtracting the pivot once only clears the entry if it equals the pivot. You have to divide."
   },
+  "Subtrair os RAIOS e depois elevar ao quadrado dá outra coisa: π(R − r)² não é πR² − πr². O que se subtrai são as áreas.": {
+    "fr": "Soustraire les RAYONS puis élever au carré donne autre chose : π(R − r)² n’est pas πR² − πr². Ce qu’on soustrait, ce sont les aires.",
+    "en": "Subtracting the RADII and then squaring gives something else: π(R − r)² is not πR² − πr². What gets subtracted are the areas."
+  },
   "Subtrair só vale para forças em sentidos opostos na mesma reta. Aqui elas formam #°.": {
     "fr": "La soustraction ne vaut que pour des forces de sens opposés sur la même droite. Ici elles forment #°.",
     "en": "Subtracting only works for forces in opposite directions on the same line. Here they make #°."
@@ -12406,6 +12738,10 @@
   "Só a envoltória exponencial foi considerada. A solução completa tem ainda as duas constantes ajustadas às condições iniciais.": {
     "fr": "Seule l’enveloppe exponentielle a été prise en compte. La solution complète comporte aussi les deux constantes ajustées aux conditions initiales.",
     "en": "Only the exponential envelope was taken into account. The full solution also has the two constants fitted to the initial conditions."
+  },
+  "Só a raiz positiva interessa: raio negativo não existe.": {
+    "fr": "Seule la racine positive compte : un rayon négatif n’existe pas.",
+    "en": "Only the positive root matters: a negative radius does not exist."
   },
   "Só agora substituímos os valores do instante pedido.": {
     "fr": "C’est seulement maintenant que nous substituons les valeurs de l’instant demandé.",
@@ -13087,6 +13423,10 @@
     "fr": "Vous avez multiplié. Multiplier donnerait la masse de tant de moles — et ici la masse est déjà connue ; ce qui manque, c’est la quantité.",
     "en": "You multiplied. Multiplying would give the mass of that many moles — and here the mass is already known; what is missing is the amount."
   },
+  "Você parou em r². Falta extrair a raiz quadrada para chegar ao raio.": {
+    "fr": "Vous vous êtes arrêté à r². Il reste à extraire la racine carrée pour arriver au rayon.",
+    "en": "You stopped at r². Taking the square root to reach the radius is still missing."
+  },
   "Você parou no uv e não subtraiu ∫v du. A fórmula tem os dois termos: uv − ∫v du.": {
     "fr": "Vous vous êtes arrêté à uv sans soustraire ∫v du. La formule comporte les deux termes : uv − ∫v du.",
     "en": "You stopped at uv and did not subtract ∫v du. The formula has both terms: uv − ∫v du."
@@ -13119,6 +13459,14 @@
     "fr": "Vous avez utilisé c² = a² − b², qui est la relation de l’ELLIPSE. Dans l’hyperbole les termes s’additionnent : c² = a² + b².",
     "en": "You used c² = a² − b², which is the ELLIPSE relation. In the hyperbola the terms add: c² = a² + b²."
   },
+  "Você usou o cosseno. O cateto OPOSTO ao ângulo se relaciona pelo seno; o cosseno trata do cateto adjacente.": {
+    "fr": "Vous avez utilisé le cosinus. La cathète OPPOSÉE à l’angle se relie par le sinus ; le cosinus concerne la cathète adjacente.",
+    "en": "You used the cosine. The leg OPPOSITE the angle relates through the sine; the cosine deals with the adjacent leg."
+  },
+  "Você usou o diâmetro no lugar do raio. Com o diâmetro, a fórmula seria πd²/#.": {
+    "fr": "Vous avez utilisé le diamètre à la place du rayon. Avec le diamètre, la formule serait πd²/#.",
+    "en": "You used the diameter instead of the radius. With the diameter, the formula would be πd²/#."
+  },
   "Você usou o fator LINEAR. Numa unidade de área ou volume, ele precisa ser elevado ao expoente correspondente.": {
     "fr": "Vous avez utilisé le facteur LINÉAIRE. Dans une unité d’aire ou de volume, il doit être élevé à l’exposant correspondant.",
     "en": "You used the LINEAR factor. In a unit of area or volume, it has to be raised to the matching exponent."
@@ -13126,6 +13474,10 @@
   "Você usou o produto dos denominadores (#) como denominador comum — isso é válido, embora o MMC (#) deixe os números menores. O problema é que os numeradores não foram convertidos junto.": {
     "fr": "Vous avez utilisé le produit des dénominateurs (#) comme dénominateur commun — c’est valable, même si le PPCM (#) donne des nombres plus petits. Le problème est que les numérateurs n’ont pas été convertis avec.",
     "en": "You used the product of the denominators (#) as the common denominator — that is valid, though the LCM (#) keeps the numbers smaller. The problem is that the numerators were not converted along with it."
+  },
+  "Você usou o seno. O cateto ADJACENTE ao ângulo se relaciona pelo cosseno; o seno trata do oposto.": {
+    "fr": "Vous avez utilisé le sinus. La cathète ADJACENTE à l’angle se relie par le cosinus ; le sinus concerne l’opposée.",
+    "en": "You used the sine. The leg ADJACENT to the angle relates through the cosine; the sine deals with the opposite one."
   },
   "Voltamos # passo até o primeiro termo, dividindo pela razão.": {
     "fr": "Nous revenons de # passo jusqu’au premier terme, en divisant par la raison.",
@@ -13798,6 +14150,14 @@
   "É este passo que transforma quantidade em fórmula.": {
     "fr": "C’est cette étape qui transforme la quantité en formule.",
     "en": "It is this step that turns the amount into a formula."
+  },
+  "É metade de um quadrado: a hipotenusa é a diagonal, lado vezes √#.": {
+    "fr": "C’est la moitié d’un carré : l’hypoténuse est la diagonale, le côté fois √#.",
+    "en": "It is half a square: the hypotenuse is the diagonal, side times √#."
+  },
+  "É metade de um triângulo equilátero: o lado menor é metade da hipotenusa.": {
+    "fr": "C’est la moitié d’un triangle équilatéral : le plus petit côté vaut la moitié de l’hypoténuse.",
+    "en": "It is half an equilateral triangle: the shortest side is half the hypotenuse."
   },
   "É média ponderada: o isótopo mais abundante puxa o resultado para si.": {
     "fr": "C’est une moyenne pondérée : l’isotope le plus abondant tire le résultat vers lui.",
