@@ -895,6 +895,10 @@
     "fr": "La sphère tient dans un cylindre de même hauteur et de même rayon, dont elle occupe les deux tiers.",
     "en": "The sphere fits in a cylinder of the same height and radius, taking up two thirds of it."
   },
+  "A espessura DIVIDE, não multiplica. Quanto mais grossa a parede, menor o fluxo — é assim que um isolante funciona.": {
+    "fr": "L’épaisseur DIVISE, elle ne multiplie pas. Plus le mur est épais, plus le flux est faible — c’est ainsi qu’un isolant fonctionne.",
+    "en": "The thickness DIVIDES, it does not multiply. The thicker the wall, the smaller the flux — that is how an insulator works."
+  },
   "A excentricidade mede o achatamento.": {
     "fr": "L'excentricité mesure l'aplatissement.",
     "en": "Eccentricity measures the flattening."
@@ -978,6 +982,10 @@
   "A fração está invertida, e por isso passou de #%. A parte vai em cima e o todo embaixo: nenhum elemento é mais que o composto inteiro.": {
     "fr": "La fraction est inversée, et c’est pourquoi elle dépasse #%. La partie va au-dessus et le tout en dessous : aucun élément n’est plus que le composé entier.",
     "en": "The fraction is upside down, which is why it went past #%. The part goes on top and the whole below: no element is more than the whole compound."
+  },
+  "A fração está invertida: isso é a CONDUTÂNCIA, que é o inverso da resistência.": {
+    "fr": "La fraction est inversée : c’est la CONDUCTANCE, qui est l’inverse de la résistance.",
+    "en": "The fraction is upside down: that is the CONDUCTANCE, the reciprocal of the resistance."
   },
   "A fração explicada é r²: calcule o coeficiente de Pearson e eleve ao quadrado.": {
     "fr": "La fraction expliquée est r² : calculez le coefficient de Pearson et élevez-le au carré.",
@@ -1323,6 +1331,10 @@
     "fr": "La masse entre dans le calcul : c = #√(m·k), avec m = #.",
     "en": "The mass takes part: c = #√(m·k), with m = #."
   },
+  "A massa entrou no lugar do momento de inércia. Na energia de rotação quem aparece é a inércia, que já carrega o raio e o fator de forma.": {
+    "fr": "La masse a pris la place du moment d’inertie. Dans l’énergie de rotation, c’est l’inertie qui apparaît, et elle porte déjà le rayon et le facteur de forme.",
+    "en": "The mass took the place of the moment of inertia. In rotational energy it is the inertia that appears, and it already carries the radius and the shape factor."
+  },
   "A massa molar devolve a quantidade à balança.": {
     "fr": "La masse molaire ramène la quantité à la balance.",
     "en": "The molar mass brings the amount back to the scale."
@@ -1379,6 +1391,10 @@
     "fr": "La masse molaire est la somme de toutes les parts.",
     "en": "The molar mass is the sum of all the parts."
   },
+  "A massa se concentra ainda mais perto do centro.": {
+    "fr": "La masse se concentre encore plus près du centre.",
+    "en": "The mass gathers even closer to the centre."
+  },
   "A massa teórica é o teto: o que sairia de CO₂ sem perda nenhuma.": {
     "fr": "La masse théorique est le plafond : ce qui sortirait de CO₂ sans aucune perte.",
     "en": "The theoretical mass is the ceiling: what would come out of CO₂ with no loss at all."
@@ -1407,6 +1423,10 @@
     "fr": "La plus petite d’entre elles.",
     "en": "The smallest of them."
   },
+  "A mesma forma de meia massa vezes velocidade ao quadrado.": {
+    "fr": "La même forme de demi-masse fois vitesse au carré.",
+    "en": "The same shape of half mass times speed squared."
+  },
   "A mesma quantidade, espalhada em mais litros, dá concentração menor.": {
     "fr": "La même quantité, répartie dans plus de litres, donne une concentration plus faible.",
     "en": "The same amount, spread over more litres, gives a lower concentration."
@@ -1422,6 +1442,10 @@
   "A mudança de base escreve o logaritmo como um múltiplo do natural.": {
     "fr": "Le changement de base écrit le logarithme comme un multiple du naturel.",
     "en": "Change of base writes the logarithm as a multiple of the natural one."
+  },
+  "A média simples só valeria se as duas capacidades térmicas fossem iguais. Cada parcela pesa conforme o produto da massa pelo calor específico.": {
+    "fr": "La moyenne simple ne vaudrait que si les deux capacités thermiques étaient égales. Chaque terme pèse selon le produit de la masse par la chaleur massique.",
+    "en": "The plain average would only hold if the two heat capacities were equal. Each term weighs according to mass times specific heat."
   },
   "A normal é perpendicular aos dois: o produto vetorial (com a positivo).": {
     "fr": "La normale est perpendiculaire aux deux : le produit vectoriel (avec a positif).",
@@ -1586,6 +1610,10 @@
   "A pirâmide vale um terço do prisma de mesma base: multiplique a área da base # pela altura # e divida por #.": {
     "fr": "La pyramide vaut un tiers du prisme de même base : multipliez l’aire de la base # par la hauteur # et divisez par #.",
     "en": "The pyramid is a third of the prism with the same base: multiply the base area # by the height # and divide by #."
+  },
+  "A ponderação usou só as massas. O peso correto é a capacidade térmica, que é massa VEZES calor específico.": {
+    "fr": "La pondération n’a utilisé que les masses. Le bon poids est la capacité thermique, qui vaut masse FOIS chaleur massique.",
+    "en": "The weighting used only the masses. The right weight is the heat capacity, which is mass TIMES specific heat."
   },
   "A porcentagem é a parte sobre o todo.": {
     "fr": "Le pourcentage, c’est la partie sur le tout.",
@@ -1855,6 +1883,10 @@
     "fr": "La racine appelle x = #·sin θ : alors √(# − x²) devient #·cos θ.",
     "en": "The root calls for x = #·sin θ: then √(# − x²) becomes #·cos θ."
   },
+  "A raiz tirada foi a quadrada. Como a temperatura entra com expoente #, é a raiz quarta que desfaz a conta.": {
+    "fr": "La racine prise était la carrée. Comme la température entre avec l’exposant #, c’est la racine quatrième qui défait le calcul.",
+    "en": "The root taken was the square one. Since the temperature enters with exponent #, it is the fourth root that undoes the computation."
+  },
   "A raiz vira um cosseno.": {
     "fr": "La racine devient un cosinus.",
     "en": "The root turns into a cosine."
@@ -2014,6 +2046,10 @@
   "A relação é estrita: a raiz, onde o trinômio vale #, fica de fora.": {
     "fr": "La relation est stricte : la racine, où le trinôme vaut #, reste exclue.",
     "en": "The relation is strict: the root, where the quadratic is #, is left out."
+  },
+  "A relação é torque IGUAL a inércia vezes aceleração angular. Para achar a aceleração, divide-se o torque pela inércia.": {
+    "fr": "La relation est moment de force ÉGAL à inertie fois accélération angulaire. Pour trouver l’accélération, on divise le moment de force par l’inertie.",
+    "en": "The relation is torque EQUALS inertia times angular acceleration. To find the acceleration, you divide the torque by the inertia."
   },
   "A resistência térmica é o análogo da resistência elétrica.": {
     "fr": "La résistance thermique est l'analogue de la résistance électrique.",
@@ -2227,6 +2263,14 @@
     "fr": "Le taux est de combien le total change par unité supplémentaire : c’est le coefficient a.",
     "en": "The rate is how much the total changes per extra unit: it is the coefficient a."
   },
+  "A temperatura entrou em Celsius. A lei exige kelvin, e com a quarta potência o erro é enorme — não é um deslocamento, é um fator de muitas vezes.": {
+    "fr": "La température est entrée en Celsius. La loi exige des kelvins, et avec la puissance quatre l’erreur est énorme — ce n’est pas un décalage, c’est un facteur de plusieurs fois.",
+    "en": "The temperature went in as Celsius. The law requires kelvin, and with the fourth power the error is huge — it is not a shift, it is a factor of many times."
+  },
+  "A temperatura precisa estar em kelvin: a quarta potência não perdoa escala errada.": {
+    "fr": "La température doit être en kelvins : la puissance quatre ne pardonne pas une échelle fausse.",
+    "en": "The temperature has to be in kelvin: the fourth power does not forgive a wrong scale."
+  },
   "A troca de nomes é o que reflete o gráfico na reta y = x.": {
     "fr": "L’échange des noms est ce qui reflète le graphique par rapport à la droite y = x.",
     "en": "Swapping the names is what reflects the graph across the line y = x."
@@ -2234,6 +2278,10 @@
   "A variação do fluxo, com a área no SI.": {
     "fr": "La variation du flux, avec l’aire en SI.",
     "en": "The change in flux, with the area in SI."
+  },
+  "A velocidade angular entra ao QUADRADO, exatamente como a velocidade na energia de translação.": {
+    "fr": "La vitesse angulaire entre au CARRÉ, exactement comme la vitesse dans l’énergie de translation.",
+    "en": "The angular velocity enters SQUARED, exactly like the speed in translational energy."
   },
   "A velocidade angular é uma volta inteira dividida pelo período.": {
     "fr": "La vitesse angulaire est un tour complet divisé par la période.",
@@ -2266,6 +2314,10 @@
   "A volta inteira tem #°, e o arco é a fração que o ângulo recorta.": {
     "fr": "Le tour complet fait #°, et l’arc est la fraction que l’angle découpe.",
     "en": "The full turn is #°, and the arc is the fraction the angle cuts out."
+  },
+  "A água tem um dos maiores de todos, e é por isso que ela serve de refrigerante.": {
+    "fr": "L’eau en a l’une des plus élevées, et c’est pourquoi elle sert de réfrigérant.",
+    "en": "Water has one of the highest of all, which is why it works as a coolant."
   },
   "A área abaixo dela se parte num retângulo e num triângulo.": {
     "fr": "L'aire en dessous se découpe en un rectangle et un triangle.",
@@ -3027,6 +3079,10 @@
     "fr": "Chaque arête a deux extrémités : #A = #·V. Remplacez A dans V − A + F = # et résolvez pour V.",
     "en": "Each edge has two ends: #E = #·V. Substitute E in V − E + F = # and solve for V."
   },
+  "Cada capacidade térmica: m₁c₁ = # J/K e m₂c₂ = # J/K.": {
+    "fr": "Chaque capacité thermique : m₁c₁ = # J/K et m₂c₂ = # J/K.",
+    "en": "Each heat capacity: m₁c₁ = # J/K and m₂c₂ = # J/K."
+  },
   "Cada carga leva #⁻⁶: o produto q₁q₂ leva #⁻¹², não #⁻⁶.": {
     "fr": "Chaque charge porte #⁻⁶ : le produit q₁q₂ porte #⁻¹², et non #⁻⁶.",
     "en": "Each charge carries #⁻⁶: the product q₁q₂ carries #⁻¹², not #⁻⁶."
@@ -3699,6 +3755,10 @@
     "fr": "Avec l’aire en m² (# cm² = #⁻⁴ m²).",
     "en": "With the area in m² (# cm² = #⁻⁴ m²)."
   },
+  "Com altura de # metros.": {
+    "fr": "Avec une hauteur de # mètres.",
+    "en": "With a height of # metres."
+  },
   "Com altura inicial zero, o alcance é máximo em #°.": {
     "fr": "Avec une hauteur initiale nulle, la portée est maximale à #°.",
     "en": "With zero initial height, range is maximum at #°."
@@ -3810,6 +3870,22 @@
   "Com o mesmo denominador, basta subtrair os numeradores.": {
     "fr": "Avec le même dénominateur, il suffit de combiner les numérateurs.",
     "en": "With the same denominator, it is enough to combine the numerators."
+  },
+  "Com o momento de inércia de casca cilíndrica, a massa e o raio se cancelam.": {
+    "fr": "Avec le moment d’inertie de la coque cylindrique, la masse et le rayon se simplifient.",
+    "en": "With the moment of inertia of the cylindrical shell, the mass and the radius cancel."
+  },
+  "Com o momento de inércia de casca esférica, a massa e o raio se cancelam.": {
+    "fr": "Avec le moment d’inertie de la coque sphérique, la masse et le rayon se simplifient.",
+    "en": "With the moment of inertia of the spherical shell, the mass and the radius cancel."
+  },
+  "Com o momento de inércia de disco ou cilindro maciço, a massa e o raio se cancelam.": {
+    "fr": "Avec le moment d’inertie de le disque ou cylindre plein, la masse et le rayon se simplifient.",
+    "en": "With the moment of inertia of the solid disk or cylinder, the mass and the radius cancel."
+  },
+  "Com o momento de inércia de esfera maciça, a massa e o raio se cancelam.": {
+    "fr": "Avec le moment d’inertie de la sphère pleine, la masse et le rayon se simplifient.",
+    "en": "With the moment of inertia of the solid sphere, the mass and the radius cancel."
   },
   "Com o numerador de grau menor, a função tende a zero.": {
     "fr": "Avec le numérateur de degré inférieur, la fonction tend vers zéro.",
@@ -3923,6 +3999,26 @@
     "fr": "Nous commençons par les deux moyennes.",
     "en": "We start with the two averages."
   },
+  "Começamos pelo momento de inércia de casca cilíndrica.": {
+    "fr": "Nous commençons par le moment d’inertie de la coque cylindrique.",
+    "en": "We start from the moment of inertia of the cylindrical shell."
+  },
+  "Começamos pelo momento de inércia de casca esférica.": {
+    "fr": "Nous commençons par le moment d’inertie de la coque sphérique.",
+    "en": "We start from the moment of inertia of the spherical shell."
+  },
+  "Começamos pelo momento de inércia de disco ou cilindro maciço.": {
+    "fr": "Nous commençons par le moment d’inertie de le disque ou cylindre plein.",
+    "en": "We start from the moment of inertia of the solid disk or cylinder."
+  },
+  "Começamos pelo momento de inércia de esfera maciça.": {
+    "fr": "Nous commençons par le moment d’inertie de la sphère pleine.",
+    "en": "We start from the moment of inertia of the solid sphere."
+  },
+  "Começamos pelo momento de inércia de partícula.": {
+    "fr": "Nous commençons par le moment d’inertie de la particule.",
+    "en": "We start from the moment of inertia of the particle."
+  },
   "Como C = #πr, metade do perímetro é πr.": {
     "fr": "Comme C = #πr, la moitié du périmètre est πr.",
     "en": "Since C = #πr, half the perimeter is πr."
@@ -3947,6 +4043,10 @@
     "fr": "Comme multiplier additionne les degrés, le degré de Q est la différence.",
     "en": "Since multiplying adds the degrees, Q’s degree is the difference."
   },
+  "Como na resistência elétrica: espessura sobre (condutividade × área), isto é, # dividido por # vezes #.": {
+    "fr": "Comme pour la résistance électrique : épaisseur sur (conductivité × aire), soit # divisé par # fois #.",
+    "en": "As with electrical resistance: thickness over (conductivity × area), that is, # divided by # times #."
+  },
   "Como o argumento é um múltiplo de x, a cadeia acrescenta o fator interno.": {
     "fr": "Comme l’argument est un multiple de x, la chaîne ajoute le facteur interne.",
     "en": "Since the argument is a multiple of x, the chain adds the inner factor."
@@ -3958,6 +4058,10 @@
   "Como os fatores se multiplicam e a ordem não altera o produto, cada grandeza pode ser tratada isoladamente.": {
     "fr": "Comme les facteurs se multiplient et que l’ordre ne change pas le produit, chaque grandeur peut être traitée séparément.",
     "en": "Since the factors multiply and the order does not change the product, each quantity can be handled on its own."
+  },
+  "Como ½mv², mas com a inércia no lugar da massa: ½·I·ω², com ω = # rad/s ao quadrado.": {
+    "fr": "Comme ½mv², mais avec l’inertie à la place de la masse : ½·I·ω², avec ω = # rad/s au carré.",
+    "en": "Like ½mv², but with the inertia in place of the mass: ½·I·ω², with ω = # rad/s squared."
   },
   "Comparamos a fração com zero. Marcamos onde o numerador zera e onde o denominador zera.": {
     "fr": "Nous comparons la fraction à zéro. Nous marquons où le numérateur s’annule et où le dénominateur s’annule.",
@@ -4018,6 +4122,14 @@
   "Compor f com g é substituir TODA a expressão de g no lugar do x de f.": {
     "fr": "Composer f avec g, c’est substituer TOUTE l’expression de g à la place du x de f.",
     "en": "Composing f with g means substituting the WHOLE expression of g for the x of f."
+  },
+  "Condutividade alta: o material conduz bem e isola mal.": {
+    "fr": "Conductivité élevée : le matériau conduit bien et isole mal.",
+    "en": "High conductivity: the material conducts well and insulates badly."
+  },
+  "Condutividade baixa: é disso que são feitos os isolantes.": {
+    "fr": "Conductivité faible : c’est de cela que sont faits les isolants.",
+    "en": "Low conductivity: that is what insulators are made of."
   },
   "Conferimos que é exata: as derivadas cruzadas são iguais.": {
     "fr": "Nous vérifions qu’elle est exacte : les dérivées croisées sont égales.",
@@ -4771,6 +4883,10 @@
     "fr": "La différence de carrés est le produit de la somme par la différence.",
     "en": "The difference of squares is the product of the sum by the difference."
   },
+  "Diferença de temperatura faz o papel da tensão, e o fluxo, o da corrente.": {
+    "fr": "L’écart de température joue le rôle de la tension, et le flux celui du courant.",
+    "en": "The temperature difference plays the role of voltage, and the flux that of current."
+  },
   "Distribua os elétrons na ordem de energia e olhe só a ÚLTIMA camada — não o total de elétrons do átomo.": {
     "fr": "Répartissez les électrons dans l’ordre des énergies et ne regardez que la DERNIÈRE couche — pas le total d’électrons de l’atome.",
     "en": "Fill the electrons in order of energy and look only at the LAST shell — not the atom’s total number of electrons."
@@ -5022,6 +5138,14 @@
   "Do quociente, o enunciado pede o termo constante.": {
     "fr": "Du quotient, l’énoncé demande le termo constante.",
     "en": "From the quotient, the question asks for the termo constante."
+  },
+  "Do total, # por cento da energia ficou na rotação.": {
+    "fr": "Du total, # pour cent de l’énergie est restée dans la rotation.",
+    "en": "Of the total, # per cent of the energy stayed in the rotation."
+  },
+  "Dobrar a temperatura em kelvin multiplica a emissão por dezesseis.": {
+    "fr": "Doubler la température en kelvins multiplie l’émission par seize.",
+    "en": "Doubling the temperature in kelvin multiplies the emission by sixteen."
   },
   "Dobrar o lado não dobra a área: quadruplica.": {
     "fr": "Doubler le côté ne double pas l’aire : elle quadruple.",
@@ -6487,6 +6611,10 @@
     "fr": "C’est la dérivée du logarithme NATUREL. En base #, il reste à diviser par le logarithme naturel de #, qui vient du changement de base.",
     "en": "That is the derivative of the NATURAL logarithm. With base #, dividing by the natural logarithm of #, which comes from the change of base, is still missing."
   },
+  "Essa é a diferença entre as temperaturas iniciais. A final fica entre as duas, mais perto de quem tem maior capacidade térmica.": {
+    "fr": "C’est l’écart entre les températures initiales. La finale se situe entre les deux, plus près de celui qui a la plus grande capacité thermique.",
+    "en": "That is the gap between the initial temperatures. The final one lies between them, closer to the one with the larger heat capacity."
+  },
   "Essa é a diretriz. O foco fica do lado da abertura: y = k + p.": {
     "fr": "C’est la directrice. Le foyer est du côté de l’ouverture : y = k + p.",
     "en": "That is the directrix. The focus is on the side it opens: y = k + p."
@@ -6618,6 +6746,10 @@
   "Essa é a variação da função, não a área sob ela. Integrar acumula valores; subtrair extremos é o que a DERIVADA desfaz.": {
     "fr": "C’est la variation de la fonction, et non l’aire sous elle. Intégrer accumule des valeurs ; soustraire les extrémités est ce que la DÉRIVÉE défait.",
     "en": "That is the change in the function, not the area under it. Integrating accumulates values; subtracting endpoints is what the DERIVATIVE undoes."
+  },
+  "Essa é a velocidade de um corpo que apenas desliza, sem girar. Quem rola precisa gastar parte da energia para girar, e por isso chega mais devagar.": {
+    "fr": "C’est la vitesse d’un corps qui ne fait que glisser, sans tourner. Ce qui roule doit dépenser une part de l’énergie pour tourner, et arrive donc plus lentement.",
+    "en": "That is the speed of a body that only slides, without turning. What rolls has to spend part of the energy turning, and so arrives more slowly."
   },
   "Essa é a ÁREA, que se mede em unidades quadradas. O comprimento é uma medida linear: C = #πr.": {
     "fr": "C’est l’AIRE, qui se mesure en unités carrées. La longueur est une mesure linéaire : C = #πr.",
@@ -6830,6 +6962,10 @@
   "Esse é o regime permanente, que só é atingido quando t tende ao infinito. Em tempo finito ainda sobra o transiente.": {
     "fr": "C’est le régime permanent, atteint seulement quand t tend vers l’infini. En temps fini, il reste encore le transitoire.",
     "en": "That is the steady state, reached only as t goes to infinity. In finite time the transient is still there."
+  },
+  "Esse é o resultado em graus Celsius. O enunciado pede kelvin, que é a escala em que a lei de Stefan-Boltzmann vale.": {
+    "fr": "C’est le résultat en degrés Celsius. L’énoncé demande des kelvins, l’échelle dans laquelle la loi de Stefan-Boltzmann est valable.",
+    "en": "That is the result in degrees Celsius. The question asks for kelvin, the scale in which the Stefan-Boltzmann law holds."
   },
   "Esse é o tempo característico, em que resta uma fração #/e do inicial. A meia-vida traz um fator logaritmo de #.": {
     "fr": "C’est le temps caractéristique, où il reste une fraction #/e de l’initial. La demi-vie porte un facteur logarithme de #.",
@@ -7147,6 +7283,14 @@
     "fr": "Il manque la condition initiale. Elle multiplie l’exponentielle, et vaut ici #.",
     "en": "The initial condition is missing. It multiplies the exponential, and here it is #."
   },
+  "Faltou a condutividade do material. É ela que distingue o cobre da lã de vidro, e a diferença entre os dois passa de quatro ordens de grandeza.": {
+    "fr": "Il manque la conductivité du matériau. C’est elle qui distingue le cuivre de la laine de verre, et l’écart entre les deux dépasse quatre ordres de grandeur.",
+    "en": "The conductivity of the material is missing. It is what tells copper from glass wool, and the gap between the two is over four orders of magnitude."
+  },
+  "Faltou a emissividade, que vale #. Só um corpo negro perfeito irradia com emissividade #.": {
+    "fr": "Il manque l’émissivité, qui vaut #. Seul un corps noir parfait rayonne avec une émissivité de #.",
+    "en": "The emissivity, which is #, is missing. Only a perfect black body radiates with emissivity #."
+  },
   "Faltou a parcela que deriva x e mantém a função trigonométrica. A regra do produto sempre soma duas parcelas, nunca uma.": {
     "fr": "Il manque le terme qui dérive x et garde la fonction trigonométrique. La règle du produit additionne toujours deux termes, jamais un seul.",
     "en": "The term that differentiates x and keeps the trigonometric function is missing. The product rule always adds two terms, never one."
@@ -7187,6 +7331,14 @@
     "fr": "Il manque la seconde solution : la tangente se répète tous les #°, donc x₀ + #° convient aussi.",
     "en": "The second solution is missing: the tangent repeats every #°, so x₀ + #° works too."
   },
+  "Faltou a área, que são # m². Dobrar a área dobra o fluxo.": {
+    "fr": "Il manque l’aire, qui vaut # m². Doubler l’aire double le flux.",
+    "en": "The area, which is # m², is missing. Doubling the area doubles the flux."
+  },
+  "Faltou a área: o fluxo é proporcional à superfície exposta.": {
+    "fr": "Il manque l’aire : le flux est proportionnel à la surface exposée.",
+    "en": "The area is missing: the flux is proportional to the exposed surface."
+  },
   "Faltou avaliar no limite inferior: ln(# + m) não é zero, a menos que m seja #.": {
     "fr": "Il manque l’évaluation à la borne inférieure : ln(# + m) n’est pas nul, sauf si m vaut #.",
     "en": "Evaluating at the lower limit is missing: ln(# + m) is not zero, unless m is #."
@@ -7206,6 +7358,10 @@
   "Faltou dividir pela sombra da vara: a razão é altura/sombra.": {
     "fr": "Il manque la division par l’ombre de la perche : le rapport est hauteur/ombre.",
     "en": "The division by the pole’s shadow is missing: the ratio is height/shadow."
+  },
+  "Faltou dividir pela área também — ela está no denominador junto com k.": {
+    "fr": "Il manque aussi la division par l’aire — elle est au dénominateur avec k.",
+    "en": "Dividing by the area is also missing — it sits in the denominator along with k."
   },
   "Faltou dividir pelo coeficiente interno #. Ao trocar dx por du, aparece um fator #/# que precisa acompanhar toda a integral.": {
     "fr": "Il manque la division par le coefficient intérieur #. En remplaçant dx par du, un facteur #/# apparaît et doit accompagner toute l’intégrale.",
@@ -7243,6 +7399,18 @@
     "fr": "Il manque la division par # : le facteur est x - #, donc x = #/#.",
     "en": "The division by # is missing: the factor is x - #, so x = #/#."
   },
+  "Faltou elevar a temperatura à QUARTA potência. É ela que separa a radiação das outras duas formas de transferência.": {
+    "fr": "Il manque l’élévation de la température à la puissance QUATRE. C’est elle qui sépare le rayonnement des deux autres modes de transfert.",
+    "en": "Raising the temperature to the FOURTH power is missing. It is what sets radiation apart from the other two modes of transfer."
+  },
+  "Faltou extrair a raiz QUARTA. O valor obtido é a temperatura elevada à quarta potência, não a temperatura.": {
+    "fr": "Il manque l’extraction de la racine QUATRIÈME. La valeur obtenue est la température à la puissance quatre, et non la température.",
+    "en": "Taking the FOURTH root is missing. The value obtained is the temperature to the fourth power, not the temperature."
+  },
+  "Faltou extrair a raiz quadrada: isso tem unidade de velocidade ao quadrado.": {
+    "fr": "Il manque l’extraction de la racine carrée : cela a l’unité d’une vitesse au carré.",
+    "en": "Taking the square root is missing: that has units of speed squared."
+  },
   "Faltou multiplicar a L₁ por # antes de subtrair.": {
     "fr": "Il manque la multiplication de la L₁ par # avant la soustraction.",
     "en": "The multiplication of L₁ by # before subtracting is missing."
@@ -7258,6 +7426,10 @@
   "Faltou multiplicar pela largura do intervalo. A integral acumula o valor ao longo de todo o intervalo.": {
     "fr": "Il manque la multiplication par la largeur de l’intervalle. L’intégrale accumule la valeur sur tout l’intervalle.",
     "en": "Multiplying by the width of the interval is missing. The integral accumulates the value over the whole interval."
+  },
+  "Faltou multiplicar pela massa, que são # kg.": {
+    "fr": "Il manque la multiplication par la masse, qui vaut # kg.",
+    "en": "Multiplying by the mass, which is # kg, is missing."
   },
   "Faltou multiplicar por dr/dt. A regra da cadeia dá dV/dt = (dV/dr)·(dr/dt), e aqui dr/dt = #.": {
     "fr": "Il manque la multiplication par dr/dt. La règle de la chaîne donne dV/dt = (dV/dr)·(dr/dt), et ici dr/dt = #.",
@@ -7315,6 +7487,10 @@
     "fr": "Il manque le facteur de la chaîne : chaque dérivée multiplie par #, et deux par #² = #.",
     "en": "The chain factor is missing: each derivative multiplies by #, and two by #² = #."
   },
+  "Faltou o fator de forma. Só uma partícula, ou um aro, tem a massa toda à distância r do eixo; nos demais corpos parte dela está mais perto, e o fator desconta isso.": {
+    "fr": "Il manque le facteur de forme. Seule une particule, ou un anneau, a toute sa masse à la distance r de l’axe ; dans les autres corps une partie est plus près, et le facteur en tient compte.",
+    "en": "The shape factor is missing. Only a particle, or a hoop, has all its mass at distance r from the axis; in other bodies part of it is closer, and the factor accounts for that."
+  },
   "Faltou o fator interno #, que a cadeia traz para fora junto com a secante.": {
     "fr": "Il manque le facteur intérieur #, que la chaîne sort avec la sécante.",
     "en": "The inner factor #, which the chain brings out along with the secant, is missing."
@@ -7322,6 +7498,10 @@
   "Faltou o fator que vem da mudança de base. Só com base e esse fator vale #; com base # ele é o logaritmo natural de #.": {
     "fr": "Il manque le facteur qui vient du changement de base. Seulement en base e ce facteur vaut # ; en base # il vaut le logarithme naturel de #.",
     "en": "The factor coming from the change of base is missing. Only with base e is that factor #; with base # it is the natural logarithm of #."
+  },
+  "Faltou o fator um meio, que a fórmula da energia cinética sempre traz.": {
+    "fr": "Il manque le facteur un demi, que la formule de l’énergie cinétique porte toujours.",
+    "en": "The factor of one half, which the kinetic-energy formula always carries, is missing."
   },
   "Faltou o terço: um sólido que afina até um vértice tem #/# do volume do prisma ou cilindro de mesma base e altura.": {
     "fr": "Il manque le tiers : un solide qui s’effile jusqu’à un sommet vaut #/# du volume du prisme ou du cylindre de même base et de même hauteur.",
@@ -7526,6 +7706,10 @@
   "I = V/R = # / # em ampères; multiplique por # para mA.": {
     "fr": "I = V/R = # / # en ampères ; multipliez par # pour des mA.",
     "en": "I = V/R = # / # in amperes; multiply by # for mA."
+  },
+  "I = fator de forma × m × r²: o raio # m entra ao quadrado.": {
+    "fr": "I = facteur de forme × m × r² : le rayon # m entre au carré.",
+    "en": "I = shape factor × m × r²: the radius # m enters squared."
   },
   "I neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "I neutre a # électrons, autant que de protons.",
@@ -7891,6 +8075,10 @@
     "fr": "Isolez d’abord la puissance (divisez par #), puis prenez le ln des deux côtés.",
     "en": "Isolate the power first (divide by #), then take ln on both sides."
   },
+  "Isso equivale a # graus Celsius.": {
+    "fr": "Cela équivaut à # degrés Celsius.",
+    "en": "That amounts to # degrees Celsius."
+  },
   "Isso não é um valor: é um aviso de que falta simplificar.": {
     "fr": "Ce n’est pas une valeur : c’est un avertissement qu’il reste à simplifier.",
     "en": "That is not a value: it is a warning that something must be simplified."
@@ -7902,6 +8090,10 @@
   "Isso usa o comprimento da circunferência. Stokes integra o rotacional na ÁREA do disco: πR².": {
     "fr": "Cela utilise la longueur du cercle. Stokes intègre le rotationnel sur l’AIRE du disque : πR².",
     "en": "That uses the length of the circle. Stokes integrates the curl over the AREA of the disk: πR²."
+  },
+  "Isso é a capacidade térmica do corpo, em joules por kelvin. Falta multiplicar pela variação de temperatura pedida.": {
+    "fr": "C’est la capacité thermique du corps, en joules par kelvin. Il reste à multiplier par la variation de température demandée.",
+    "en": "That is the heat capacity of the body, in joules per kelvin. Multiplying by the temperature change asked about is still missing."
   },
   "Isso é a concentração em GRAMAS por litro. A molaridade conta partículas, e por isso a massa precisa virar mols pela massa molar antes da divisão.": {
     "fr": "C’est la concentration en GRAMMES par litre. La molarité compte des particules, et la masse doit donc devenir des moles par la masse molaire avant la division.",
@@ -7982,6 +8174,10 @@
   "Lei de Ohm: a corrente é a tensão sobre a resistência.": {
     "fr": "Loi d’Ohm : le courant est la tension sur la résistance.",
     "en": "Ohm’s law: the current is the voltage over the resistance."
+  },
+  "Lei de resfriamento de Newton: o fluxo é o produto direto h × A × ΔT, aqui # × # × #.": {
+    "fr": "Loi de refroidissement de Newton : le flux est le produit direct h × A × ΔT, ici # × # × #.",
+    "en": "Newton’s law of cooling: the flux is the straight product h × A × ΔT, here # × # × #."
   },
   "Lei dos cossenos no triângulo com a origem: d² = #² + #² − #·#·#·cos #°.": {
     "fr": "Loi des cosinus dans le triangle avec l’origine : d² = #² + #² − #·#·#·cos #°.",
@@ -8171,6 +8367,18 @@
     "fr": "Plus de tension accélère l’onde ; plus de masse par mètre la freine.",
     "en": "More tension speeds the wave up; more mass per metre slows it down."
   },
+  "Mais área e mais diferença aumentam o fluxo; mais espessura o reduz.": {
+    "fr": "Plus d’aire et plus d’écart augmentent le flux ; plus d’épaisseur le réduit.",
+    "en": "More area and more difference raise the flux; more thickness lowers it."
+  },
+  "Massa vira momento de inércia, força vira torque, aceleração vira aceleração angular.": {
+    "fr": "La masse devient moment d’inertie, la force devient moment de force, l’accélération devient accélération angulaire.",
+    "en": "Mass becomes moment of inertia, force becomes torque, acceleration becomes angular acceleration."
+  },
+  "Massa é a resistência à aceleração em linha reta. Na rotação quem faz esse papel é o momento de inércia, que leva em conta a distribuição da massa.": {
+    "fr": "La masse est la résistance à l’accélération en ligne droite. En rotation, ce rôle revient au moment d’inertie, qui tient compte de la répartition de la masse.",
+    "en": "Mass is the resistance to acceleration in a straight line. In rotation that role falls to the moment of inertia, which accounts for how the mass is spread."
+  },
   "Massa → mols → mols → massa: o trajeto é sempre este.": {
     "fr": "Masse → moles → moles → masse : le trajet est toujours celui-là.",
     "en": "Mass → moles → moles → mass: the route is always this one."
@@ -8194,6 +8402,14 @@
   "Mesmo arranjo do somatório; o que muda é a operação.": {
     "fr": "Même disposition que la somme ; ce qui change, c’est l’opération.",
     "en": "Same layout as the sum; what changes is the operation."
+  },
+  "Mesmo raio, massa toda na superfície — fator maior que o da esfera maciça.": {
+    "fr": "Même rayon, toute la masse en surface — facteur plus grand que celui de la sphère pleine.",
+    "en": "Same radius, all the mass on the surface — a larger factor than the solid sphere’s."
+  },
+  "Metade da massa está perto do eixo, e por isso o fator cai.": {
+    "fr": "La moitié de la masse est près de l’axe, et le facteur baisse donc.",
+    "en": "Half the mass is near the axis, so the factor drops."
   },
   "Metade disso é a área do trapézio.": {
     "fr": "La moitié de cela est l'aire du trapèze.",
@@ -8422,6 +8638,10 @@
   "Multiplicar por um negativo espelha a reta numérica: o que era maior passa a ser menor. Confira com um exemplo: # < #, mas −# > −#.": {
     "fr": "Multiplier par un négatif reflète la droite numérique : ce qui était plus grand devient plus petit. Vérifiez avec un exemple : # < #, mais −# > −#.",
     "en": "Multiplying by a negative mirrors the number line: what was larger becomes smaller. Check with an example: # < #, but −# > −#."
+  },
+  "Multiplique a condutividade (#), a área e a diferença de # K; divida pela espessura.": {
+    "fr": "Multipliez la conductivité (#), l’aire et l’écart de # K ; divisez par l’épaisseur.",
+    "en": "Multiply the conductivity (#), the area and the # K difference; divide by the thickness."
   },
   "Multiplique cada entrada da L₁ por # e some à L₂, coluna por coluna.": {
     "fr": "Multipliez chaque entrée de la L₁ par # et ajoutez-la à la L₂, colonne par colonne.",
@@ -8799,6 +9019,10 @@
     "fr": "Dans la règle, nous remplaçons x par #.",
     "en": "In the rule, we replace x by #."
   },
+  "Na rotação quem divide o torque é o momento de inércia, não a massa. É o dicionário do tópico: massa vira inércia, força vira torque, aceleração vira aceleração angular.": {
+    "fr": "En rotation, c’est le moment d’inertie qui divise le moment de force, et non la masse. C’est le dictionnaire du sujet : la masse devient inertie, la force devient moment de force, l’accélération devient accélération angulaire.",
+    "en": "In rotation it is the moment of inertia that divides the torque, not the mass. It is the dictionary of this topic: mass becomes inertia, force becomes torque, acceleration becomes angular acceleration."
+  },
   "Na segunda derivada o fator # sai de novo pela cadeia: fica #·# = #, não #.": {
     "fr": "À la dérivée seconde, le facteur # sort de nouveau par la chaîne : cela fait #·# = #, et non #.",
     "en": "In the second derivative the factor # comes out again by the chain: it makes #·# = #, not #."
@@ -9107,6 +9331,10 @@
     "fr": "Dans le vide il n’y a ni conduction ni convection : seule le rayonnement dissipe.",
     "en": "In vacuum there is neither conduction nor convection: only radiation dissipates."
   },
+  "No vácuo não há condução nem convecção: só sobra a radiação.": {
+    "fr": "Dans le vide il n’y a ni conduction ni convection : il ne reste que le rayonnement.",
+    "en": "In vacuum there is neither conduction nor convection: only radiation is left."
+  },
   "No vértice, o lado segue em linha reta do outro lado: o interno e o externo completam #°.": {
     "fr": "Au sommet, le côté continue en ligne droite de l’autre côté : l’intérieur et l’extérieur complètent #°.",
     "en": "At the vertex the side continues straight on the other side: the interior and the exterior make up #°."
@@ -9234,6 +9462,10 @@
   "Não ache as raízes: x₁² + x₂² = (x₁ + x₂)² − #·x₁·x₂, e soma e produto saem de Girard.": {
     "fr": "Ne cherchez pas les racines : x₁² + x₂² = (x₁ + x₂)² − #·x₁·x₂, et somme et produit viennent de Viète.",
     "en": "Do not find the roots: x₁² + x₂² = (x₁ + x₂)² − #·x₁·x₂, and sum and product come from Vieta."
+  },
+  "Não há fator um meio aqui. A lei de resfriamento de Newton é um produto direto dos três fatores.": {
+    "fr": "Il n’y a pas de facteur un demi ici. La loi de refroidissement de Newton est un produit direct des trois facteurs.",
+    "en": "There is no factor of one half here. Newton’s law of cooling is a straight product of the three factors."
   },
   "Não há fatoração com coeficientes inteiros para este polinômio.": {
     "fr": "Il n'y a pas de factorisation avec des coefficients entiers pour ce polynôme.",
@@ -9611,6 +9843,10 @@
     "fr": "Le coefficient de x² n’est pas # : cherchez deux nombres dont la somme vaut b et le produit a·c, puis groupez.",
     "en": "The coefficient of x² is not #: look for two numbers adding to b and multiplying to a·c, then group."
   },
+  "O coeficiente h não é propriedade do material: depende do escoamento.": {
+    "fr": "Le coefficient h n’est pas une propriété du matériau : il dépend de l’écoulement.",
+    "en": "The coefficient h is not a property of the material: it depends on the flow."
+  },
   "O coeficiente só é zero quando a paridade da função elimina o termo: o seno não tem potências pares, o cosseno não tem ímpares. Fora disso, há coeficiente.": {
     "fr": "Le coefficient n’est nul que lorsque la parité de la fonction élimine le terme : le sinus n’a pas de puissances paires, le cosinus pas d’impaires. En dehors de cela, il y a un coefficient.",
     "en": "The coefficient is only zero when the parity of the function kills the term: sine has no even powers, cosine no odd ones. Otherwise, there is a coefficient."
@@ -9983,6 +10219,14 @@
     "fr": "Le facteur de Lorentz.",
     "en": "The Lorentz factor."
   },
+  "O fator de forma do corpo ficou de fora do momento de inércia.": {
+    "fr": "Le facteur de forme du corps a été laissé hors du moment d’inertie.",
+    "en": "The body’s shape factor was left out of the moment of inertia."
+  },
+  "O fator de forma está no lugar errado. Ele entra somando # no denominador: o # é a translação, e o fator é a rotação.": {
+    "fr": "Le facteur de forme est à la mauvaise place. Il s’ajoute au # du dénominateur : le # est la translation, et le facteur est la rotation.",
+    "en": "The shape factor is in the wrong place. It adds to the # in the denominator: the # is the translation, and the factor is the rotation."
+  },
   "O fator de inclinação é √(# + #² + #²); multiplique pela área do retângulo, # vezes #.": {
     "fr": "Le facteur d’inclinaison est √(# + #² + #²) ; multipliez par l’aire du rectangle, # fois #.",
     "en": "The slant factor is √(# + #² + #²); multiply by the rectangle’s area, # times #."
@@ -10207,6 +10451,26 @@
     "fr": "Le moment angulaire est l'analogue rotatif du moment linéaire.",
     "en": "The angular momentum is the rotational analogue of linear momentum."
   },
+  "O momento de inércia de casca cilíndrica tem fórmula fechada.": {
+    "fr": "Le moment d’inertie de la coque cylindrique a une formule fermée.",
+    "en": "The moment of inertia of the cylindrical shell has a closed formula."
+  },
+  "O momento de inércia de casca esférica tem fórmula fechada.": {
+    "fr": "Le moment d’inertie de la coque sphérique a une formule fermée.",
+    "en": "The moment of inertia of the spherical shell has a closed formula."
+  },
+  "O momento de inércia de disco ou cilindro maciço tem fórmula fechada.": {
+    "fr": "Le moment d’inertie de le disque ou cylindre plein a une formule fermée.",
+    "en": "The moment of inertia of the solid disk or cylinder has a closed formula."
+  },
+  "O momento de inércia de esfera maciça tem fórmula fechada.": {
+    "fr": "Le moment d’inertie de la sphère pleine a une formule fermée.",
+    "en": "The moment of inertia of the solid sphere has a closed formula."
+  },
+  "O momento de inércia de partícula tem fórmula fechada.": {
+    "fr": "Le moment d’inertie de la particule a une formule fermée.",
+    "en": "The moment of inertia of the particle has a closed formula."
+  },
   "O momento linear total se conserva, sempre.": {
     "fr": "Le moment linéaire total se conserve, toujours.",
     "en": "The total linear momentum is always conserved."
@@ -10366,6 +10630,10 @@
   "O período é um tempo, então a expressão precisa ter dimensão T.": {
     "fr": "La période est un temps, donc l’expression doit avoir la dimension T.",
     "en": "The period is a time, so the expression must have dimension T."
+  },
+  "O peso de cada corpo é a sua capacidade térmica, não a sua massa sozinha.": {
+    "fr": "Le poids de chaque corps est sa capacité thermique, et non sa masse seule.",
+    "en": "The weight of each body is its heat capacity, not its mass alone."
   },
   "O peso do corpo usa a densidade DELE.": {
     "fr": "Le poids du corps utilise la densité DE LUI.",
@@ -10571,6 +10839,10 @@
     "fr": "Le rayon entre au CARRÉ, parce qu’il mesure la base, qui est une aire. La hauteur n’entre qu’une fois.",
     "en": "The radius enters SQUARED, because it measures the base, which is an area. The height enters only once."
   },
+  "O raio entra ao QUADRADO. É essa potência que faz afastar a massa do eixo pesar tanto na resistência ao giro.": {
+    "fr": "Le rayon entre au CARRÉ. C’est cette puissance qui fait qu’éloigner la masse de l’axe pèse tant sur la résistance à la rotation.",
+    "en": "The radius enters SQUARED. That power is what makes moving mass away from the axis weigh so much in the resistance to turning."
+  },
   "O raio esférico é a distância até a origem.": {
     "fr": "Le rayon sphérique est la distance à l’origine.",
     "en": "The spherical radius is the distance to the origin."
@@ -10606,6 +10878,14 @@
   "O resto usa a ordem SEGUINTE: expoente # e fatorial de #. Usar a própria ordem do polinômio superestima bastante o erro.": {
     "fr": "Le reste utilise l’ordre SUIVANT : exposant # et factorielle de #. Utiliser l’ordre du polynôme lui-même surestime nettement l’erreur.",
     "en": "The remainder uses the NEXT order: exponent # and factorial of #. Using the polynomial’s own order overestimates the error considerably."
+  },
+  "O resultado foi dividido por mil, como se fosse quilojoule. O enunciado pede joules.": {
+    "fr": "Le résultat a été divisé par mille, comme s’il s’agissait de kilojoules. L’énoncé demande des joules.",
+    "en": "The result was divided by a thousand, as if it were kilojoules. The question asks for joules."
+  },
+  "O resultado não depende da massa nem do raio: só do formato.": {
+    "fr": "Le résultat ne dépend ni de la masse ni du rayon : seulement de la forme.",
+    "en": "The result depends on neither the mass nor the radius: only on the shape."
   },
   "O resultado quase nunca é inteiro — e não é a massa de nenhum átomo isolado.": {
     "fr": "Le résultat n’est presque jamais entier — et ce n’est la masse d’aucun atome isolé.",
@@ -11983,6 +12263,10 @@
     "fr": "Nous passons à la forme polaire.",
     "en": "We switch to polar form."
   },
+  "Passe # °C para kelvin (some #) ANTES de elevar à quarta potência.": {
+    "fr": "Convertissez # °C en kelvins (ajoutez #) AVANT d’élever à la puissance quatre.",
+    "en": "Convert # °C to kelvin (add #) BEFORE raising to the fourth power."
+  },
   "Passe a reta para a forma ax + by + c = # antes de usar a fórmula da distância.": {
     "fr": "Mettez la droite sous la forme ax + by + c = # avant d’utiliser la formule de la distance.",
     "en": "Put the line into the form ax + by + c = # before using the distance formula."
@@ -12351,6 +12635,10 @@
     "fr": "D’abord l’extérieur, supplémentaire de l’intérieur.",
     "en": "First the exterior angle, supplementary to the interior one."
   },
+  "Primeiro o momento de inércia (fator de forma × # × #²); depois divida o torque por ele, como a = F/m.": {
+    "fr": "D’abord le moment d’inertie (facteur de forme × # × #²) ; divisez ensuite le moment de force par lui, comme a = F/m.",
+    "en": "First the moment of inertia (shape factor × # × #²); then divide the torque by it, like a = F/m."
+  },
   "Primeiro o paralelo: somam-se.": {
     "fr": "D’abord le parallèle : elles s’additionnent.",
     "en": "First the parallel: they add up."
@@ -12443,6 +12731,10 @@
     "fr": "Q = C·V : # μF fois # V donne la charge en μC.",
     "en": "Q = C·V: # μF times # V gives the charge in μC."
   },
+  "Q = m × c × ΔT: # kg vezes # J/(kg·K) vezes # K.": {
+    "fr": "Q = m × c × ΔT : # kg fois # J/(kg·K) fois # K.",
+    "en": "Q = m × c × ΔT: # kg times # J/(kg·K) times # K."
+  },
   "Qual número multiplicado por ele mesmo dá esse valor?": {
     "fr": "Quel nombre multiplié par lui-même donne cette valeur ?",
     "en": "Which number multiplied by itself gives that value?"
@@ -12498,6 +12790,10 @@
   "Que é a soma dos dois ângulos internos opostos.": {
     "fr": "Qui est la somme des deux angles intérieurs opposés.",
     "en": "Which is the sum of the two opposite interior angles."
+  },
+  "Quem esfria cede exatamente o que quem esquenta recebe.": {
+    "fr": "Ce que cède celui qui refroidit est exactement ce que reçoit celui qui chauffe.",
+    "en": "What the cooling one gives up is exactly what the warming one takes in."
   },
   "Quem vê o relógio passar mede um intervalo γ vezes maior que o tempo próprio.": {
     "fr": "Celui qui voit l’horloge passer mesure un intervalle γ fois plus grand que le temps propre.",
@@ -13243,6 +13539,10 @@
     "fr": "En substituant k.",
     "en": "Substituting k."
   },
+  "Substituindo na média ponderada.": {
+    "fr": "En remplaçant dans la moyenne pondérée.",
+    "en": "Substituting into the weighted average."
+  },
   "Substituindo o gradiente no ponto.": {
     "fr": "En substituant le gradient au point.",
     "en": "Substituting the gradient at the point."
@@ -13871,6 +14171,10 @@
     "fr": "Toute l'énergie potentielle devient cinétique, répartie entre se déplacer et tourner.",
     "en": "All potential energy becomes kinetic, shared between translating and rotating."
   },
+  "Toda a massa à distância r do eixo — é o caso de referência.": {
+    "fr": "Toute la masse à la distance r de l’axe — c’est le cas de référence.",
+    "en": "All the mass at distance r from the axis — it is the reference case."
+  },
   "Toda exponencial se escreve na base e, e daí sai o fator que sobra.": {
     "fr": "Toute exponentielle s'écrit à la base e, et de là sort le facteur qui reste.",
     "en": "Every exponential is written in base e, and from that comes the remaining factor."
@@ -14014,6 +14318,10 @@
   "U = ½·C·V²: metade de #×#⁻⁶ F vezes #² = #. O resultado sai em J; para mJ, multiplique por #.": {
     "fr": "U = ½·C·V² : la moitié de #×#⁻⁶ F fois #² = #. Le résultat est en J ; pour des mJ, multipliez par #.",
     "en": "U = ½·C·V²: half of #×#⁻⁶ F times #² = #. The result is in J; for mJ, multiply by #."
+  },
+  "Um aro, ou um tubo de parede fina: tudo na borda.": {
+    "fr": "Un anneau, ou un tube à paroi mince : tout est sur le bord.",
+    "en": "A hoop, or a thin-walled tube: everything on the rim."
   },
   "Um inteiro é uma fração de denominador #: # é #/#. O denominador dele não se multiplica nem se soma com o da outra fração.": {
     "fr": "Un entier est une fraction de dénominateur # : # vaut #/#. Son dénominateur ne se multiplie ni ne s’additionne avec celui de l’autre fraction.",
@@ -15127,6 +15435,10 @@
     "fr": "C’est de là que vient le signe moins dans la partie réelle du produit.",
     "en": "That is where the minus sign in the real part of the product comes from."
   },
+  "É essa condição que torna o problema resolvível com uma incógnita só.": {
+    "fr": "C’est cette condition qui rend le problème soluble avec une seule inconnue.",
+    "en": "It is that condition that makes the problem solvable with a single unknown."
+  },
   "É esta frase que vira a fórmula da diluição, e não o contrário.": {
     "fr": "C’est cette phrase qui devient la formule de la dilution, et non l’inverse.",
     "en": "It is this sentence that becomes the dilution formula, not the other way round."
@@ -15287,6 +15599,10 @@
     "fr": "C’est le tetraedro.",
     "en": "It is the tetraedro."
   },
+  "É por isso que assoprar a comida esfria mais rápido que apenas esperar.": {
+    "fr": "C’est pourquoi souffler sur un plat le refroidit plus vite que d’attendre.",
+    "en": "That is why blowing on food cools it faster than just waiting."
+  },
   "É por isso que massa e peso crescem muito mais rápido que a altura.": {
     "fr": "C’est pour cela que la masse et le poids croissent bien plus vite que la hauteur.",
     "en": "That is why mass and weight grow much faster than height."
@@ -15294,6 +15610,10 @@
   "É por isso que meia-vida é propriedade do material, e não da amostra.": {
     "fr": "C’est pourquoi la demi-vie est une propriété du matériau, et non de l’échantillon.",
     "en": "That is why half-life is a property of the material, not of the sample."
+  },
+  "É por isso que uma parede dupla isola muito mais que uma simples do mesmo total.": {
+    "fr": "C’est pourquoi un mur double isole bien plus qu’un simple de même épaisseur totale.",
+    "en": "That is why a double wall insulates far better than a single one of the same total thickness."
   },
   "É sempre «o que se quer zerar, sobre o pivô».": {
     "fr": "C’est toujours « ce qu’on veut annuler, sur le pivot ».",
