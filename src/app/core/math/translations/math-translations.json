@@ -155,6 +155,10 @@
     "fr": "# vaut #p, et non p. Divisez par # : p = #.",
     "en": "# is #p, not p. Divide by #: p = #."
   },
+  "# é o DIÂMETRO: a curva passa pela origem e pelo ponto a # dela, do lado oposto.": {
+    "fr": "# est le DIAMÈTRE : la courbe passe par l’origine et par le point à # de celle-ci, du côté opposé.",
+    "en": "# is the DIAMETER: the curve passes through the origin and through the point # away from it, on the other side."
+  },
   "# é o número de arestas. Use Euler para chegar aos vértices.": {
     "fr": "# est le nombre d’arêtes. Utilisez Euler pour arriver aux sommets.",
     "en": "# is the number of edges. Use Euler to get to the vertices."
@@ -367,6 +371,10 @@
     "fr": "Chaque période, le montant est multiplié par le même facteur.",
     "en": "Each period, the amount is multiplied by the same factor."
   },
+  "A calculadora devolve arctg entre −#° e #° — só certo nos quadrantes I e IV.": {
+    "fr": "La calculatrice rend un arc tangente entre −#° et #° — correct seulement dans les quadrants I et IV.",
+    "en": "The calculator returns an arctangent between −#° and #° — right only in quadrants I and IV."
+  },
   "A calculadora dá só uma solução, a da imagem da inversa. A outra vem do ângulo simétrico na volta.": {
     "fr": "La calculatrice ne donne qu’une solution, celle de l’image de la fonction inverse. L’autre vient de l’angle symétrique sur le tour.",
     "en": "The calculator gives only one solution, the one in the range of the inverse. The other comes from the symmetric angle on the turn."
@@ -506,6 +514,10 @@
   "A corrente, por Ohm.": {
     "fr": "Le courant, par Ohm.",
     "en": "The current, by Ohm."
+  },
+  "A cota é sempre generosa: o erro real costuma ser bem menor que ela.": {
+    "fr": "La borne est toujours généreuse : l’erreur réelle est en général bien plus petite.",
+    "en": "The bound is always generous: the real error is usually much smaller."
   },
   "A covariância soma os produtos dos desvios.": {
     "fr": "La covariance somme les produits des écarts.",
@@ -682,6 +694,10 @@
   "A distância focal sai de c² = (maior)² − (menor)².": {
     "fr": "La distance focale vient de c² = (majeur)² − (mineur)².",
     "en": "The focal distance comes from c² = (major)² − (minor)²."
+  },
+  "A distância não é a soma dos catetos: é a hipotenusa, √(x² + y²).": {
+    "fr": "La distance n’est pas la somme des cathètes : c’est l’hypoténuse, √(x² + y²).",
+    "en": "The distance is not the sum of the legs: it is the hypotenuse, √(x² + y²)."
   },
   "A distância vai em metros.": {
     "fr": "La distance s’exprime en mètres.",
@@ -1347,6 +1363,10 @@
     "fr": "L’ordonnée du foyer vaut p.",
     "en": "The y-coordinate of the focus is p."
   },
+  "A origem e os dois pontos formam um triângulo: lados r₁ e r₂ com o ângulo Δθ entre eles.": {
+    "fr": "L’origine et les deux points forment un triangle : les côtés r₁ et r₂ avec l’angle Δθ entre eux.",
+    "en": "The origin and the two points form a triangle: sides r₁ and r₂ with the angle Δθ between them."
+  },
   "A parte em cima: nenhum elemento pesa mais que o composto inteiro.": {
     "fr": "La partie au-dessus : aucun élément ne pèse plus que le composé entier.",
     "en": "The part on top: no element weighs more than the whole compound."
@@ -1778,6 +1798,10 @@
   "A razão está invertida: no equilíbrio, y é o termo constante dividido pelo coeficiente.": {
     "fr": "Le rapport est inversé : à l’équilibre, y est le terme constant divisé par le coefficient.",
     "en": "The ratio is upside down: at equilibrium, y is the constant term divided by the coefficient."
+  },
+  "A razão está invertida: tg θ = y/x (oposto sobre adjacente).": {
+    "fr": "Le rapport est inversé : tan θ = y/x (opposée sur adjacente).",
+    "en": "The ratio is upside down: tan θ = y/x (opposite over adjacent)."
   },
   "A razão k multiplica COMPRIMENTOS. A área depende de # dimensões, então o fator é k².": {
     "fr": "Le rapport k multiplie des LONGUEURS. L’aire dépend de # dimensions, donc le facteur est k².",
@@ -2262,6 +2286,14 @@
   "Agrupamos partes reais e imaginárias.": {
     "fr": "Nous regroupons les parties réelles et imaginaires.",
     "en": "We group real and imaginary parts."
+  },
+  "Ajustamos ao quadrante: nada a ajustar.": {
+    "fr": "Nous ajustons au quadrant : rien à ajuster.",
+    "en": "We adjust to the quadrant: nothing to adjust."
+  },
+  "Ajustamos ao quadrante: somamos #°.": {
+    "fr": "Nous ajustons au quadrant : nous ajoutons #°.",
+    "en": "We adjust to the quadrant: we add #°."
   },
   "Al neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Al neutre a # électrons, autant que de protons.",
@@ -2995,6 +3027,10 @@
     "fr": "Chaque couvercle est un cercle, et là le rayon passe au carré.",
     "en": "Each cap is a circle, and there the radius goes squared."
   },
+  "Cada termo a mais costuma derrubar o erro por um fator grande, perto do centro.": {
+    "fr": "Chaque terme supplémentaire fait en général chuter l’erreur d’un grand facteur, près du centre.",
+    "en": "Each extra term usually drops the error by a large factor, near the centre."
+  },
   "Cada termo contribui com sua derivada; a constante vira zero.": {
     "fr": "Chaque terme contribue avec sa dérivée ; la constante devient zéro.",
     "en": "Each term contributes its derivative; the constant becomes zero."
@@ -3259,6 +3295,14 @@
     "fr": "Charge positive : le champ pointe VERS L’EXTÉRIEUR.",
     "en": "Positive charge: the field points OUT of it."
   },
+  "Centramos em #, onde a raiz é conhecida.": {
+    "fr": "Nous centrons en #, où la racine est connue.",
+    "en": "We centre at #, where the root is known."
+  },
+  "Centro (#; #) e raio igual à metade de #.": {
+    "fr": "Centre (# ; #) et rayon égal à la moitié de #.",
+    "en": "Centre (#, #) and radius equal to half of #."
+  },
   "Chamamos a dízima de x.": {
     "fr": "Nous appelons la dízime x.",
     "en": "We call the repeating decimal x."
@@ -3378,6 +3422,10 @@
   "Com B = #.": {
     "fr": "Avec B = #.",
     "en": "With B = #."
+  },
+  "Com M igual a # e x igual a #.": {
+    "fr": "Avec M égal à # et x égal à #.",
+    "en": "With M equal to # and x equal to #."
   },
   "Com N indo ao infinito, a última parcela some.": {
     "fr": "Quand N tend vers l’infini, la dernière part disparaît.",
@@ -3726,6 +3774,10 @@
   "Completamos o quadrado: somamos h² = # dos dois lados (h é metade de #).": {
     "fr": "Nous complétons le carré : nous ajoutons h² = # des deux côtés (h est la moitié de #).",
     "en": "We complete the square: we add h² = # to both sides (h is half of #)."
+  },
+  "Completando o quadrado.": {
+    "fr": "En complétant le carré.",
+    "en": "Completing the square."
   },
   "Complete o quadrado até chegar a (x − h)² = #p(y − k); aí o foco é (h, k + p) e a diretriz, y = k − p.": {
     "fr": "Complétez le carré jusqu’à (x − h)² = #p(y − k) ; alors le foyer est (h, k + p) et la directrice, y = k − p.",
@@ -5603,6 +5655,10 @@
     "fr": "Dans tout polyèdre convexe, la relation d’Euler est vraie.",
     "en": "Euler’s relation holds in every convex polyhedron."
   },
+  "Em torno de #: √# = # e a derivada da raiz é # sobre (#√x). Use x − # como o pequeno passo.": {
+    "fr": "Autour de # : √# = # et la dérivée de la racine vaut # sur (#√x). Utilisez x − # comme petit pas.",
+    "en": "About #: √# = # and the derivative of the root is # over (#√x). Use x − # as the small step."
+  },
   "Em triângulos congruentes, lados correspondentes são iguais. A correspondência vem da ordem das letras.": {
     "fr": "Dans des triangles congruents, les côtés correspondants sont égaux. La correspondance vient de l’ordre des lettres.",
     "en": "In congruent triangles, matching sides are equal. The matching comes from the order of the letters."
@@ -5755,6 +5811,10 @@
     "fr": "Entre ces points, la droite est au-dessus de la parabole.",
     "en": "Between those points the line is above the parabola."
   },
+  "Entrou um termo a mais do que o grau # permite. A aproximação fica melhor, mas não é a que o enunciado pediu.": {
+    "fr": "Un terme de trop est entré par rapport au degré #. L’approximation est meilleure, mais ce n’est pas celle que l’énoncé demandait.",
+    "en": "One term more than degree # allows got in. The approximation is better, but it is not the one the question asked for."
+  },
   "Então f é crescente entre os pontos críticos.": {
     "fr": "Donc f est croissante entre les points critiques.",
     "en": "So f is increasing between the critical points."
@@ -5806,6 +5866,10 @@
   "Escreva (A | I) e escalone até a esquerda virar a identidade; faça cada operação também no bloco da direita.": {
     "fr": "Écrivez (A | I) et échelonnez jusqu’à ce que la gauche devienne l’identité ; faites chaque opération aussi dans le bloc de droite.",
     "en": "Write (A | I) and row-reduce until the left becomes the identity; do each operation in the right block too."
+  },
+  "Escreva a série até o termo de grau # e substitua x = # em cada termo antes de somar.": {
+    "fr": "Écrivez la série jusqu’au terme de degré # et remplacez x = # dans chaque terme avant d’additionner.",
+    "en": "Write the series up to the degree-# term and substitute x = # in each term before adding."
   },
   "Escreva a unidade Hz só com kg, m e s e leia o expoente de L (m); se não aparecer, é #.": {
     "fr": "Écrivez l’unité Hz uniquement avec kg, m et s, puis lisez l’exposant de L (m) ; s’il n’apparaît pas, il vaut #.",
@@ -6027,6 +6091,10 @@
     "fr": "Écrivez le terme comme #/n à la puissance p : converge seulement si p > # (avec p = #, l’harmonique, diverge).",
     "en": "Write the term as #/n to the power p: it converges only if p > # (with p = #, the harmonic one, it diverges)."
   },
+  "Escreva os primeiros termos da série e localize o termo pedido.": {
+    "fr": "Écrivez les premiers termes de la série et repérez le terme demandé.",
+    "en": "Write the first terms of the series and locate the term asked for."
+  },
   "Escrevemos # como potência de #.": {
     "fr": "Nous écrivons # comme une puissance de #.",
     "en": "We write # as a power of #."
@@ -6211,6 +6279,10 @@
     "fr": "C’est la projection de l’AUTRE cathète. Chaque projection utilise la sienne.",
     "en": "That is the projection of the OTHER leg. Each projection uses its own."
   },
+  "Essa é a raiz do centro, que é só o primeiro termo. Falta a correção proporcional ao afastamento, que é o que a derivada traz.": {
+    "fr": "C’est la racine du centre, qui n’est que le premier terme. Il manque la correction proportionnelle à l’écart, qu’apporte la dérivée.",
+    "en": "That is the root at the centre, which is only the first term. The correction proportional to the offset, which the derivative brings, is missing."
+  },
   "Essa é a raiz do discriminante, que aparece na fórmula das raízes. O discriminante em si é o que está dentro dela.": {
     "fr": "C’est la racine du discriminant, qui apparaît dans la formule des racines. Le discriminant lui-même est ce qui se trouve à l’intérieur.",
     "en": "That is the square root of the discriminant, which shows up in the root formula. The discriminant itself is what sits inside it."
@@ -6307,6 +6379,10 @@
     "fr": "Cet angle est dans l’image, c’est donc lui.",
     "en": "That angle is inside the range, so it is the one."
   },
+  "Esse é R². Falta a raiz.": {
+    "fr": "C’est R². Il manque la racine.",
+    "en": "That is R². The root is missing."
+  },
   "Esse é a área no instante, não a taxa com que ela cresce.": {
     "fr": "C’est l’aire à cet instant, et non le taux auquel elle croît.",
     "en": "That is the area at the instant, not the rate at which it grows."
@@ -6343,6 +6419,10 @@
     "fr": "C’est l’arcsen de la valeur. Les deux inverses se complètent jusqu’à #° : vérifiez laquelle des deux fonctions était demandée.",
     "en": "That is the arcsen of the value. The two inverses add up to #°: check which of the two was asked for."
   },
+  "Esse é o arctg cru. O ponto está no #º quadrante: somamos #°.": {
+    "fr": "C’est l’arc tangente brut. Le point est dans le #e quadrant : nous ajoutons #°.",
+    "en": "That is the raw arctangent. The point is in quadrant #: we add #°."
+  },
   "Esse é o coeficiente de N, comparado direto com o de M. A condição compara as DERIVADAS: ∂M/∂y com ∂N/∂x.": {
     "fr": "C’est le coefficient de N, comparé directement à celui de M. La condition compare les DÉRIVÉES : ∂M/∂y et ∂N/∂x.",
     "en": "That is the coefficient of N, compared straight with M’s. The condition compares the DERIVATIVES: ∂M/∂y with ∂N/∂x."
@@ -6358,6 +6438,10 @@
   "Esse é o discriminante, que decide o regime, mas não é uma raiz.": {
     "fr": "C’est le discriminant, qui décide du régime, mais ce n’est pas une racine.",
     "en": "That is the discriminant, which decides the regime, but it is not a root."
+  },
+  "Esse é o erro do polinômio de grau #, um termo além do pedido. Repare como ele é bem menor — é esse ganho que justifica cada termo a mais.": {
+    "fr": "C’est l’erreur du polynôme de degré #, un terme au-delà de ce qui est demandé. Remarquez combien elle est plus petite — c’est ce gain qui justifie chaque terme supplémentaire.",
+    "en": "That is the error of the degree-# polynomial, one term beyond what was asked. Notice how much smaller it is — that gain is what justifies each extra term."
   },
   "Esse é o foco. A diretriz fica do lado OPOSTO, à mesma distância do vértice: y = −p.": {
     "fr": "C’est le foyer. La directrice est du côté OPPOSÉ, à la même distance du sommet : y = −p.",
@@ -6535,6 +6619,14 @@
     "fr": "C’est la valeur en newtons ; l’énoncé demande des mN (multipliez par #).",
     "en": "That is the value in newtons; the question asks for mN (multiply by #)."
   },
+  "Esse é o valor exato da função, não o da aproximação. O exercício pede o que o polinômio devolve, justamente para que a diferença entre os dois fique visível.": {
+    "fr": "C’est la valeur exacte de la fonction, et non celle de l’approximation. L’exercice demande ce que rend le polynôme, justement pour rendre visible l’écart entre les deux.",
+    "en": "That is the exact value of the function, not of the approximation. The exercise asks what the polynomial returns, precisely so that the gap between the two shows."
+  },
+  "Esse é o valor exato da raiz, não o da aproximação. O exercício pede o que o polinômio devolve.": {
+    "fr": "C’est la valeur exacte de la racine, et non celle de l’approximation. L’exercice demande ce que rend le polynôme.",
+    "en": "That is the exact value of the root, not of the approximation. The exercise asks what the polynomial returns."
+  },
   "Esse é o valor inicial. O sistema evolui a partir dele, e em t positivo já se moveu.": {
     "fr": "C’est la valeur initiale. Le système évolue à partir d’elle, et pour t positif il a déjà bougé.",
     "en": "That is the initial value. The system evolves from it, and at positive t it has already moved."
@@ -6542,6 +6634,14 @@
   "Esse é o x onde ocorre o máximo, não o valor máximo. Falta substituir esse x de volta na função.": {
     "fr": "C’est le x où se produit le maximum, et non la valeur maximale. Il reste à remplacer ce x dans la fonction.",
     "en": "That is the x where the maximum occurs, not the maximum value. Substituting that x back into the function is still missing."
+  },
+  "Esse é o x: y usa o SENO.": {
+    "fr": "C’est le x : y utilise le SINUS.",
+    "en": "That is the x: y uses the SINE."
+  },
+  "Esse é o y: x usa o COSSENO.": {
+    "fr": "C’est le y : x utilise le COSINUS.",
+    "en": "That is the y: x uses the COSINE."
   },
   "Esse é o ângulo em RADIANOS. A calculadora estava no modo errado: passe para graus.": {
     "fr": "C’est l’angle en RADIANS. La calculatrice était dans le mauvais mode : passez en degrés.",
@@ -6562,6 +6662,10 @@
   "Esse é só o divergente; falta multiplicar pelo volume.": {
     "fr": "Ce n’est que la divergence ; il reste à multiplier par le volume.",
     "en": "That is only the divergence; it still has to be multiplied by the volume."
+  },
+  "Esse é só o primeiro termo desprezado. Ele costuma dominar o erro, mas não é o erro: depois dele ainda vem toda a cauda da série.": {
+    "fr": "Ce n’est que le premier terme négligé. Il domine souvent l’erreur, mais il n’est pas l’erreur : après lui vient encore toute la queue de la série.",
+    "en": "That is only the first dropped term. It usually dominates the error, but it is not the error: after it comes the whole tail of the series."
   },
   "Esse é só o ÚLTIMO termo. O número em cima do sigma diz onde a soma para, não o que somar: é preciso somar todos os termos de k inicial até ele.": {
     "fr": "C’est seulement le DERNIER terme. Le nombre au-dessus du sigma dit où la somme s’arrête, pas ce qu’il faut additionner : il faut additionner tous les termes depuis le k initial jusqu’à lui.",
@@ -6586,6 +6690,10 @@
   "Esta é a solução GERAL: uma família inteira de funções.": {
     "fr": "C’est la solution GÉNÉRALE : toute une famille de fonctions.",
     "en": "This is the GENERAL solution: a whole family of functions."
+  },
+  "Este termo não aparece na série: o coeficiente é zero, por simetria da função.": {
+    "fr": "Ce terme n’apparaît pas dans la série : le coefficient est nul, par symétrie de la fonction.",
+    "en": "This term does not appear in the series: the coefficient is zero, by symmetry of the function."
   },
   "Estudamos o sinal do trinômio comparado com zero: primeiro, onde ele ZERA.": {
     "fr": "Nous étudions le signe du trinôme comparé à zéro : d’abord, où il S’ANNULE.",
@@ -6731,6 +6839,10 @@
     "fr": "Il manque la racine carrée dans le facteur √(# + fx² + fy²).",
     "en": "The square root in the factor √(# + fx² + fy²) is missing."
   },
+  "Faltou a raiz quadrada: # é r², não r.": {
+    "fr": "Il manque la racine carrée : # vaut r², et non r.",
+    "en": "The square root is missing: # is r², not r."
+  },
   "Faltou a segunda solução. A calculadora devolve só uma, dentro de [#°, #°]; na volta inteira o cosseno assume esse valor em DOIS ângulos.": {
     "fr": "Il manque la seconde solution. La calculatrice n’en rend qu’une, dans [#°, #°] ; sur le tour complet, la fonction prend cette valeur en DEUX angles.",
     "en": "The second solution is missing. The calculator returns only one, inside [#°, #°]; over the full turn the function takes that value at TWO angles."
@@ -6802,6 +6914,10 @@
   "Faltou multiplicar a L₁ por # antes de subtrair.": {
     "fr": "Il manque la multiplication de la L₁ par # avant la soustraction.",
     "en": "The multiplication of L₁ by # before subtracting is missing."
+  },
+  "Faltou multiplicar pela cota M da derivada. Com M igual a # dá no mesmo, mas na exponencial ela é bem maior que #.": {
+    "fr": "Il manque la multiplication par la borne M de la dérivée. Avec M égal à # cela revient au même, mais pour l’exponentielle elle est bien plus grande que #.",
+    "en": "Multiplying by the bound M of the derivative is missing. With M equal to # it comes out the same, but for the exponential it is much larger than #."
   },
   "Faltou multiplicar pela derivada de dentro, que vale #. O resultado fica # vezes menor que o correto, e é o descuido mais frequente da regra da cadeia.": {
     "fr": "Il manque la multiplication par la dérivée intérieure, qui vaut #. Le résultat est # fois plus petit que le bon, et c’est l’étourderie la plus fréquente de la règle de la chaîne.",
@@ -7427,6 +7543,10 @@
     "fr": "Cela utilise la longueur du cercle. Stokes intègre le rotationnel sur l’AIRE du disque : πR².",
     "en": "That uses the length of the circle. Stokes integrates the curl over the AREA of the disk: πR²."
   },
+  "Isso é a derivada de ordem n em zero, e não o coeficiente. Falta dividir pelo fatorial da ordem, que é o que a fórmula manda.": {
+    "fr": "C’est la dérivée d’ordre n en zéro, et non le coefficient. Il manque la division par la factorielle de l’ordre, comme la formule l’exige.",
+    "en": "That is the order-n derivative at zero, not the coefficient. Dividing by the factorial of the order, as the formula requires, is missing."
+  },
   "Isso é a soma das componentes. O divergente soma as DERIVADAS de cada uma.": {
     "fr": "C’est la somme des composantes. La divergence additionne les DÉRIVÉES de chacune.",
     "en": "That is the sum of the components. The divergence adds the DERIVATIVES of each one."
@@ -7494,6 +7614,10 @@
   "Lei de Ohm: a corrente é a tensão sobre a resistência.": {
     "fr": "Loi d’Ohm : le courant est la tension sur la résistance.",
     "en": "Ohm’s law: the current is the voltage over the resistance."
+  },
+  "Lei dos cossenos no triângulo com a origem: d² = #² + #² − #·#·#·cos #°.": {
+    "fr": "Loi des cosinus dans le triangle avec l’origine : d² = #² + #² − #·#·#·cos #°.",
+    "en": "Law of cosines in the triangle with the origin: d² = #² + #² − #·#·#·cos #°."
   },
   "Leia os coeficientes da equação: eles dão a razão entre CH₄ e CO₂ diretamente, sem passar por gramas.": {
     "fr": "Lisez les coefficients de l’équation : ils donnent le rapport entre CH₄ et CO₂ directement, sans passer par les grammes.",
@@ -7639,6 +7763,10 @@
     "fr": "Loin de l'origine, seul le terme de plus haut degré de chaque côté importe.",
     "en": "Far from the origin, only the highest degree term on each side matters."
   },
+  "Longe do centro o erro cresce depressa, e é preciso mais termos.": {
+    "fr": "Loin du centre, l’erreur croît vite, et il faut davantage de termes.",
+    "en": "Far from the centre the error grows fast, and more terms are needed."
+  },
   "M dx + N dy = # é exata quando as derivadas cruzadas coincidem.": {
     "fr": "M dx + N dy = # est exacte quand les dérivées croisées coïncident.",
     "en": "M dx + N dy = # is exact when the cross derivatives agree."
@@ -7646,6 +7774,10 @@
   "M não aparece: a grandeza não depende dessa dimensão de base.": {
     "fr": "M n’apparaît pas : la grandeur ne dépend pas de cette dimension de base.",
     "en": "M does not appear: the quantity does not depend on that base dimension."
+  },
+  "M é uma cota para a derivada de ordem seguinte no intervalo.": {
+    "fr": "M est une borne pour la dérivée d’ordre suivant sur l’intervalle.",
+    "en": "M is a bound for the next-order derivative on the interval."
   },
   "Maior que algo que diverge também diverge.": {
     "fr": "Plus grand que quelque chose qui diverge diverge aussi.",
@@ -7658,6 +7790,10 @@
   "Mais operários, menos dias: o produto operários × dias se conserva.": {
     "fr": "Plus d’ouvriers, moins de jours : le produit ouvriers × jours se conserve.",
     "en": "More workers, fewer days: the product workers × days stays the same."
+  },
+  "Mais perto quando cos θ = # (θ = #°); mais longe quando cos θ = −# (θ = #°).": {
+    "fr": "Plus près quand cos θ = # (θ = #°) ; plus loin quand cos θ = −# (θ = #°).",
+    "en": "Closest when cos θ = # (θ = #°); farthest when cos θ = −# (θ = #°)."
   },
   "Mais tração acelera a onda; mais massa por metro a freia.": {
     "fr": "Plus de tension accélère l’onde ; plus de masse par mètre la freine.",
@@ -7786,6 +7922,10 @@
   "Multiplicamos os dois lados por # para chegar à forma x² = #py.": {
     "fr": "Nous multiplions les deux côtés par # pour arriver à la forme x² = #py.",
     "en": "We multiply both sides by # to reach the form x² = #py."
+  },
+  "Multiplicamos os dois lados por r para usar r² = x² + y².": {
+    "fr": "Nous multiplions les deux côtés par r pour utiliser r² = x² + y².",
+    "en": "We multiply both sides by r in order to use r² = x² + y²."
   },
   "Multiplicamos pela altura e tomamos um terço.": {
     "fr": "Nous multiplions par la hauteur et prenons un tiers.",
@@ -7926,6 +8066,14 @@
   "Multiplique os dois lados pelo mmc de # e #: as frações viram números inteiros.": {
     "fr": "Multipliez les deux côtés par le ppcm de # et # : les fractions deviennent des entiers.",
     "en": "Multiply both sides by the lcm of # and #: the fractions become whole numbers."
+  },
+  "Multiplique por r: r² = #·r·cos θ vira x² + y² = #x. Complete o quadrado.": {
+    "fr": "Multipliez par r : r² = #·r·cos θ devient x² + y² = #x. Complétez le carré.",
+    "en": "Multiply by r: r² = #·r·cos θ becomes x² + y² = #x. Complete the square."
+  },
+  "Multiplique por r: r² = #·r·sen θ vira x² + y² = #y. Complete o quadrado.": {
+    "fr": "Multipliez par r : r² = #·r·sin θ devient x² + y² = #y. Complétez le carré.",
+    "en": "Multiply by r: r² = #·r·sin θ becomes x² + y² = #y. Complete the square."
   },
   "Multiplique tudo pelo mmc dos denominadores. O menos antes de uma fração vale para o numerador INTEIRO: use parênteses.": {
     "fr": "Multipliez tout par le ppcm des dénominateurs. Le moins devant une fraction porte sur le numérateur ENTIER : utilisez des parenthèses.",
@@ -8114,6 +8262,10 @@
   "Na lateral o raio entra uma vez só, multiplicado pela geratriz.": {
     "fr": "Dans la latérale le rayon n’entre qu’une fois, multiplié par la génératrice.",
     "en": "In the lateral surface the radius enters only once, multiplied by the slant height."
+  },
+  "Na lei dos cossenos o termo #r₁r₂cos Δθ é SUBTRAÍDO.": {
+    "fr": "Dans la loi des cosinus, le terme #r₁r₂cos Δθ est SOUSTRAIT.",
+    "en": "In the law of cosines the term #r₁r₂cos Δθ is SUBTRACTED."
   },
   "Na multiplicação não é preciso denominador comum: multiplicamos em linha.": {
     "fr": "Dans la multiplication, il n'est pas nécessaire d'avoir un dénominateur commun : nous multiplions en ligne.",
@@ -8799,6 +8951,10 @@
     "fr": "L’arcsen renvoie l’angle de l’image [−#°, #°] qui a cette valeur de seno.",
     "en": "The arcsen returns the angle in the range [−#°, #°] with that seno value."
   },
+  "O arctg aponta para o quadrante oposto: com x negativo, some #°, não #°.": {
+    "fr": "L’arc tangente pointe vers le quadrant opposé : avec x négatif, ajoutez #°, et non #°.",
+    "en": "The arctangent points to the opposite quadrant: with x negative, add #°, not #°."
+  },
   "O arctg de um valor negativo é um ângulo NEGATIVO, entre −#° e #°. Somar #° dá um ângulo com o mesmo valor de tangente, mas fora da imagem da inversa.": {
     "fr": "L’arctg d’une valeur négative est un angle NÉGATIF, entre −#° et #°. Ajouter #° donne un angle de même valeur, mais hors de l’image de la fonction inverse.",
     "en": "The arctg of a negative value is a NEGATIVE angle, between −#° and #°. Adding #° gives an angle with the same value, but outside the range of the inverse."
@@ -8963,6 +9119,10 @@
     "fr": "Le coefficient de x comprime l'onde : la période est #π divisé par lui.",
     "en": "The x coefficient compresses the wave: the period is #π divided by it."
   },
+  "O coeficiente de x elevado a # é o que acompanha esse termo.": {
+    "fr": "Le coefficient de x élevé à # est celui qui accompagne ce terme.",
+    "en": "The coefficient of x to the # is the one going with that term."
+  },
   "O coeficiente de x é o que o enunciado pede.": {
     "fr": "Le coefficient de x est ce que l’énoncé demande.",
     "en": "The coefficient of x is what the question asks for."
@@ -8970,6 +9130,10 @@
   "O coeficiente de x² não é #: procure dois números que somem b e multipliquem a·c, e agrupe.": {
     "fr": "Le coefficient de x² n’est pas # : cherchez deux nombres dont la somme vaut b et le produit a·c, puis groupez.",
     "en": "The coefficient of x² is not #: look for two numbers adding to b and multiplying to a·c, then group."
+  },
+  "O coeficiente só é zero quando a paridade da função elimina o termo: o seno não tem potências pares, o cosseno não tem ímpares. Fora disso, há coeficiente.": {
+    "fr": "Le coefficient n’est nul que lorsque la parité de la fonction élimine le terme : le sinus n’a pas de puissances paires, le cosinus pas d’impaires. En dehors de cela, il y a un coefficient.",
+    "en": "The coefficient is only zero when the parity of the function kills the term: sine has no even powers, cosine no odd ones. Otherwise, there is a coefficient."
   },
   "O coeficiente é o original dividido pelo novo expoente.": {
     "fr": "Le coefficient est l’original divisé par le nouvel exposant.",
@@ -9055,9 +9219,17 @@
     "fr": "Le dénominateur du terme en x est a AU CARRÉ.",
     "en": "The denominator of the x term is a SQUARED."
   },
+  "O denominador do termo linear é # vezes a RAIZ do centro, e não # vezes o centro. A derivada da raiz traz uma raiz no denominador.": {
+    "fr": "Le dénominateur du terme linéaire vaut # fois la RACINE du centre, et non # fois le centre. La dérivée de la racine apporte une racine au dénominateur.",
+    "en": "The denominator of the linear term is # times the ROOT of the centre, not # times the centre. The derivative of the root brings a root into the denominator."
+  },
   "O denominador fica real: é o módulo ao quadrado.": {
     "fr": "Le dénominateur devient réel : c'est le module au carré.",
     "en": "The denominator becomes real: it is the magnitude squared."
+  },
+  "O denominador nem sempre é # fatorial. No logaritmo e na geométrica ele é outro, porque as derivadas sucessivas seguem um padrão diferente.": {
+    "fr": "Le dénominateur n’est pas toujours # factorielle. Dans le logarithme et la géométrique il est autre, parce que les dérivées successives suivent un schéma différent.",
+    "en": "The denominator is not always # factorial. In the logarithm and the geometric series it is different, because the successive derivatives follow another pattern."
   },
   "O denominador tem grau maior que o numerador.": {
     "fr": "Le dénominateur a un degré plus grand que le numérateur.",
@@ -9191,6 +9363,10 @@
     "fr": "Le domaine est tout l’ensemble des réels, sauf ce point.",
     "en": "The domain is the whole set of reals, except that point."
   },
+  "O eixo maior vai do periélio ao afélio; o semieixo é a metade.": {
+    "fr": "Le grand axe va du périhélie à l’aphélie ; le demi-axe en est la moitié.",
+    "en": "The major axis runs from perihelion to aphelion; the semi-axis is half of it."
+  },
   "O elemento de volume aqui é rho ao quadrado vezes o seno do ângulo polar.": {
     "fr": "L’élément de volume ici est rho au carré fois le sinus de l’angle polaire.",
     "en": "The volume element here is rho squared times the sine of the polar angle."
@@ -9222,6 +9398,14 @@
   "O erro é a distância entre a função e o polinômio que a imita.": {
     "fr": "L'erreur est la distance entre la fonction et le polynôme qui l'imita.",
     "en": "The error is the distance between the function and the polynomial that imitates it."
+  },
+  "O erro é a distância entre o valor exato da função e o polinômio de grau #: calcule os dois em x = # e subtraia.": {
+    "fr": "L’erreur est l’écart entre la valeur exacte de la fonction et le polynôme de degré # : calculez les deux en x = # et soustrayez.",
+    "en": "The error is the gap between the exact value of the function and the degree-# polynomial: compute both at x = # and subtract."
+  },
+  "O erro é medido em módulo. O sinal diria apenas se o polinômio ficou acima ou abaixo da função, e não é isso que se pergunta.": {
+    "fr": "L’erreur se mesure en valeur absolue. Le signe dirait seulement si le polynôme est passé au-dessus ou en dessous de la fonction, et ce n’est pas la question.",
+    "en": "The error is measured in absolute value. The sign would only say whether the polynomial went above or below the function, and that is not what is asked."
   },
   "O erro é no máximo o primeiro termo desprezado: imponha #/(N + #)ᵖ < tolerância e isole N.": {
     "fr": "L’erreur est au plus le premier terme négligé : imposez #/(N + #)ᵖ < tolérance et isolez N.",
@@ -9266,6 +9450,10 @@
   "O expoente deve AUMENTAR em um ao integrar. Aqui ele foi mantido, o que corresponderia a derivar.": {
     "fr": "L’exposant doit AUGMENTER de un en intégrant. Ici il a été gardé, ce qui reviendrait à dériver.",
     "en": "The exponent must GO UP by one when integrating. Here it was kept, which would amount to differentiating."
+  },
+  "O expoente está certo, mas o fatorial ficou um atrás: o denominador é # fatorial, o mesmo número do expoente.": {
+    "fr": "L’exposant est juste, mais la factorielle est en retard d’un : le dénominateur est # factorielle, le même nombre que l’exposant.",
+    "en": "The exponent is right, but the factorial is one behind: the denominator is # factorial, the same number as the exponent."
   },
   "O expoente é #, não #: volume é uma grandeza de três dimensões.": {
     "fr": "L’exposant est #, et non # : le volume est une grandeur à trois dimensions.",
@@ -9683,6 +9871,18 @@
     "fr": "Le plan.",
     "en": "The plane."
   },
+  "O polinômio de Taylor de grau # em torno de #.": {
+    "fr": "Le polynôme de Taylor de degré # autour de #.",
+    "en": "The degree-# Taylor polynomial about #."
+  },
+  "O polinômio de grau # vale isto no ponto.": {
+    "fr": "Le polynôme de degré # vaut ceci au point.",
+    "en": "The degree-# polynomial is worth this at the point."
+  },
+  "O polinômio parou um grau antes. Grau # inclui o termo de ordem #, e é justamente o último termo que mais muda o resultado.": {
+    "fr": "Le polynôme s’est arrêté un degré trop tôt. Le degré # comprend le terme d’ordre #, et c’est justement le dernier terme qui change le plus le résultat.",
+    "en": "The polynomial stopped one degree early. Degree # includes the order-# term, and it is precisely the last term that changes the result most."
+  },
   "O polígono se reparte em triângulos — sempre dois a menos que os lados.": {
     "fr": "Le polygone se divise en triangles — toujours deux de moins que les côtés.",
     "en": "The polygon divides into triangles — always two fewer than the sides."
@@ -9706,6 +9906,22 @@
   "O ponto de tangência: o valor da função no arco.": {
     "fr": "Le point de tangence : la valeur de la fonction à l’arc.",
     "en": "The point of tangency: the function’s value at the arc."
+  },
+  "O ponto está no #º quadrante (x < #, y < #).": {
+    "fr": "Le point est dans le #e quadrant (x < #, y < #).",
+    "en": "The point is in quadrant # (x < #, y < #)."
+  },
+  "O ponto está no #º quadrante (x < #, y > #).": {
+    "fr": "Le point est dans le #e quadrant (x < #, y > #).",
+    "en": "The point is in quadrant # (x < #, y > #)."
+  },
+  "O ponto está no #º quadrante (x > #, y < #).": {
+    "fr": "Le point est dans le #e quadrant (x > #, y < #).",
+    "en": "The point is in quadrant # (x > #, y < #)."
+  },
+  "O ponto está no #º quadrante (x > #, y > #).": {
+    "fr": "Le point est dans le #e quadrant (x > #, y > #).",
+    "en": "The point is in quadrant # (x > #, y > #)."
   },
   "O ponto fica mais perto da carga MENOR — a maior precisa de mais distância para enfraquecer.": {
     "fr": "Le point se trouve plus près de la PLUS PETITE charge — la plus grande a besoin de plus de distance pour s’affaiblir.",
@@ -9863,6 +10079,10 @@
     "fr": "Le reste a la forme du terme suivant de la série, avec M à la place de la dérivée.",
     "en": "The remainder has the shape of the next term of the series, with M in place of the derivative."
   },
+  "O resto usa a ordem SEGUINTE: expoente # e fatorial de #. Usar a própria ordem do polinômio superestima bastante o erro.": {
+    "fr": "Le reste utilise l’ordre SUIVANT : exposant # et factorielle de #. Utiliser l’ordre du polynôme lui-même surestime nettement l’erreur.",
+    "en": "The remainder uses the NEXT order: exponent # and factorial of #. Using the polynomial’s own order overestimates the error considerably."
+  },
   "O resultado quase nunca é inteiro — e não é a massa de nenhum átomo isolado.": {
     "fr": "Le résultat n’est presque jamais entier — et ce n’est la masse d’aucun atome isolé.",
     "en": "The result is almost never a whole number — and it is no single atom’s mass."
@@ -9954,6 +10174,10 @@
   "O setor é uma fração do círculo, proporcional ao ângulo.": {
     "fr": "Le secteur est une fraction du cercle, proportionnelle à l'angle.",
     "en": "The sector is a fraction of the circle, proportional to the angle."
+  },
+  "O sinal alterna, e a ordem do termo decide qual é. Vale escrever os primeiros termos da série e conferir em qual deles o sinal vira.": {
+    "fr": "Le signe alterne, et l’ordre du terme décide lequel c’est. Il vaut la peine d’écrire les premiers termes et de voir où le signe bascule.",
+    "en": "The sign alternates, and the order of the term decides which it is. Worth writing the first terms and checking where the sign turns."
   },
   "O sinal da operação é \"*\", então multiplicamos.": {
     "fr": "Le signe de l’opération est « × », donc on multiplie.",
@@ -10342,6 +10566,14 @@
   "O átomo é neutro, então há um elétron para cada próton.": {
     "fr": "L’atome est neutre, donc il y a un électron pour chaque proton.",
     "en": "The atom is neutral, so there is one electron per proton."
+  },
+  "O ângulo #° está no #º quadrante: confira o sinal de cos ali.": {
+    "fr": "L’angle #° est dans le #e quadrant : vérifiez le signe du cosinus là.",
+    "en": "The angle #° is in quadrant #: check the sign of the cosine there."
+  },
+  "O ângulo #° está no #º quadrante: confira o sinal de sen ali.": {
+    "fr": "L’angle #° est dans le #e quadrant : vérifiez le signe du sinus là.",
+    "en": "The angle #° is in quadrant #: check the sign of the sine there."
   },
   "O ângulo B mede #° menos o ângulo A, e a diagonal BD corta o ângulo B ao meio.": {
     "fr": "L’angle B mesure #° moins l’angle A, et la diagonale BD coupe l’angle B en deux.",
@@ -10935,9 +11167,33 @@
     "fr": "Pour vérifier : A·A⁻¹ doit donner l’identité.",
     "en": "To check: A·A⁻¹ must give the identity."
   },
+  "Para cosseno, o padrão das derivadas em zero é conhecido.": {
+    "fr": "Pour le cosinus, le schéma des dérivées en zéro est connu.",
+    "en": "For the cosine, the pattern of the derivatives at zero is known."
+  },
+  "Para cosseno, o polinômio de grau # é este.": {
+    "fr": "Pour le cosinus, le polynôme de degré # est celui-ci.",
+    "en": "For the cosine, the degree-# polynomial is this one."
+  },
   "Para eliminar y, multiplicamos cada equação pelo coeficiente de y da outra.": {
     "fr": "Pour éliminer y, nous multiplions chaque équation par le coefficient de y de l'autre.",
     "en": "To eliminate y, we multiply each equation by the y-coefficient of the other."
+  },
+  "Para exponencial, o padrão das derivadas em zero é conhecido.": {
+    "fr": "Pour l’exponentielle, le schéma des dérivées en zéro est connu.",
+    "en": "For the exponential, the pattern of the derivatives at zero is known."
+  },
+  "Para exponencial, o polinômio de grau # é este.": {
+    "fr": "Pour l’exponentielle, le polynôme de degré # est celui-ci.",
+    "en": "For the exponential, the degree-# polynomial is this one."
+  },
+  "Para logaritmo de # mais x, o padrão das derivadas em zero é conhecido.": {
+    "fr": "Pour le logarithme de # plus x, le schéma des dérivées en zéro est connu.",
+    "en": "For the logarithm of # plus x, the pattern of the derivatives at zero is known."
+  },
+  "Para logaritmo de # mais x, o polinômio de grau # é este.": {
+    "fr": "Pour le logarithme de # plus x, le polynôme de degré # est celui-ci.",
+    "en": "For the logarithm of # plus x, the degree-# polynomial is this one."
   },
   "Para n grande, despreze as constantes somadas e compare com uma p-série (#/nᵖ) ou uma geométrica.": {
     "fr": "Pour n grand, négligez les constantes additionnées et comparez à une série de Riemann (#/nᵖ) ou à une géométrique.",
@@ -10954,6 +11210,22 @@
   "Para o SI: # cm² = #⁻⁴ m² e # mm = #⁻³ m.": {
     "fr": "Pour le SI : # cm² = #⁻⁴ m² et # mm = #⁻³ m.",
     "en": "For SI: # cm² = #⁻⁴ m² and # mm = #⁻³ m."
+  },
+  "Para seno, o padrão das derivadas em zero é conhecido.": {
+    "fr": "Pour le sinus, le schéma des dérivées en zéro est connu.",
+    "en": "For the sine, the pattern of the derivatives at zero is known."
+  },
+  "Para seno, o polinômio de grau # é este.": {
+    "fr": "Pour le sinus, le polynôme de degré # est celui-ci.",
+    "en": "For the sine, the degree-# polynomial is this one."
+  },
+  "Para série geométrica, o padrão das derivadas em zero é conhecido.": {
+    "fr": "Pour la série géométrique, le schéma des dérivées en zéro est connu.",
+    "en": "For the geometric series, the pattern of the derivatives at zero is known."
+  },
+  "Para série geométrica, o polinômio de grau # é este.": {
+    "fr": "Pour la série géométrique, le polynôme de degré # est celui-ci.",
+    "en": "For the geometric series, the degree-# polynomial is this one."
   },
   "Para t grande, a solução tende a #.": {
     "fr": "Pour t grand, la solution tend vers #.",
@@ -11359,6 +11631,10 @@
     "fr": "Perpendiculaires : le produit des pentes est −#.",
     "en": "Perpendicular: the product of the slopes is −#."
   },
+  "Perto do centro, poucos termos já bastam.": {
+    "fr": "Près du centre, peu de termes suffisent.",
+    "en": "Near the centre, a few terms are enough."
+  },
   "Pitágoras vale em todo instante: é a relação a derivar.": {
     "fr": "Pythagore est vrai à tout instant : c’est la relation à dériver.",
     "en": "Pythagoras holds at every instant: that is the relation to differentiate."
@@ -11639,6 +11915,10 @@
     "fr": "Plus l’écart est grand, plus l’angle opposé au plus grand côté est ouvert.",
     "en": "The larger the gap, the wider the angle opposite the longest side."
   },
+  "Quanto mais perto do centro, melhor a aproximação — é sempre local.": {
+    "fr": "Plus on est près du centre, meilleure est l’approximation — elle est toujours locale.",
+    "en": "The closer to the centre, the better the approximation — it is always local."
+  },
   "Quanto vale qualquer número elevado a zero?": {
     "fr": "Combien vaut n’importe quel nombre élevé à zéro ?",
     "en": "What is any number raised to zero worth?"
@@ -11714,6 +11994,10 @@
   "Raiz quadrada (a razão positiva, já que os termos têm o mesmo sinal ao longo da sequência dada).": {
     "fr": "Racine carrée (la raison positive, puisque les termes ont le même signe tout au long de la suite donnée).",
     "en": "Square root (the positive ratio, since the terms keep the same sign along the given sequence)."
+  },
+  "Raiz quadrada.": {
+    "fr": "Racine carrée.",
+    "en": "Square root."
   },
   "Raízes complexas: o sistema oscila enquanto a amplitude decai.": {
     "fr": "Racines complexes : le système oscille tandis que l'amplitude décroît.",
@@ -12395,6 +12679,10 @@
     "fr": "En remplaçant les valeurs.",
     "en": "Substituting the values."
   },
+  "Substituindo r e θ; o sinal vem do quadrante do ângulo.": {
+    "fr": "En remplaçant r et θ ; le signe vient du quadrant de l’angle.",
+    "en": "Substituting r and θ; the sign comes from the quadrant of the angle."
+  },
   "Substituindo uma exponencial, a EDO vira uma equação do segundo grau.": {
     "fr": "En remplaçant par une exponentielle, l’EDO devient une équation du second degré.",
     "en": "Substituting an exponential, the ODE becomes a quadratic equation."
@@ -12406,6 +12694,10 @@
   "Substituindo vazão e velocidade de exaustão.": {
     "fr": "En substituant le débit et la vitesse d'échappement.",
     "en": "Substituting flow rate and exhaust velocity."
+  },
+  "Substituindo x = #, com afastamento #.": {
+    "fr": "En remplaçant x = #, avec un écart de #.",
+    "en": "Substituting x = #, with an offset of #."
   },
   "Substituindo x = #, em cima e embaixo dá zero: a forma #/# é indeterminada.": {
     "fr": "En substituant x = #, le haut et le bas donnent zéro : la forme #/# est indéterminée.",
@@ -12454,6 +12746,10 @@
   "Substituindo; em ampères, e depois em mA.": {
     "fr": "En substituant ; en ampères, puis en mA.",
     "en": "Substituting; in amperes, then in mA."
+  },
+  "Substituindo; os quadrados apagam os sinais.": {
+    "fr": "En remplaçant ; les carrés effacent les signes.",
+    "en": "Substituting; the squares wipe out the signs."
   },
   "Substituir direto anula numerador e denominador.": {
     "fr": "Substituer directement annule numérateur et dénominateur.",
@@ -12670,6 +12966,10 @@
   "Subtrair os RAIOS e depois elevar ao quadrado dá outra coisa: π(R − r)² não é πR² − πr². O que se subtrai são as áreas.": {
     "fr": "Soustraire les RAYONS puis élever au carré donne autre chose : π(R − r)² n’est pas πR² − πr². Ce qu’on soustrait, ce sont les aires.",
     "en": "Subtracting the RADII and then squaring gives something else: π(R − r)² is not πR² − πr². What gets subtracted are the areas."
+  },
+  "Subtrair os r só vale se os pontos estão na mesma direção. Aqui o ângulo entre eles conta.": {
+    "fr": "Soustraire les r n’est valable que si les points sont dans la même direction. Ici l’angle entre eux compte.",
+    "en": "Subtracting the r values only works if the points lie in the same direction. Here the angle between them counts."
   },
   "Subtrair só vale para forças em sentidos opostos na mesma reta. Aqui elas formam #°.": {
     "fr": "La soustraction ne vaut que pour des forces de sens opposés sur la même droite. Ici elles forment #°.",
@@ -13055,6 +13355,10 @@
     "fr": "Changer l’ordre des équations ne change pas les solutions.",
     "en": "Changing the order of the equations does not change the solutions."
   },
+  "Trocou periélio e afélio: com # + e·cos θ no denominador, o MAIOR denominador (cos θ = #) dá o MENOR r.": {
+    "fr": "Périhélie et aphélie ont été intervertis : avec # + e·cos θ au dénominateur, le PLUS GRAND dénominateur (cos θ = #) donne le PLUS PETIT r.",
+    "en": "Perihelion and aphelion were swapped: with # + e·cos θ in the denominator, the LARGEST denominator (cos θ = #) gives the SMALLEST r."
+  },
   "Troque cos x por s, resolva a equação do #º grau e descarte o s que estiver fora de [−#, #].": {
     "fr": "Remplacez cos x par s, résolvez l’équation du #º degré et écartez le s qui sort de [−#, #].",
     "en": "Replace cos x by s, solve the degree-# equation and discard the s that falls outside [−#, #]."
@@ -13334,6 +13638,10 @@
   "Variáveis trocadas: P deriva em x, Q em y e R em z.": {
     "fr": "Variables interverties : P se dérive en x, Q en y et R en z.",
     "en": "Variables swapped: P is differentiated in x, Q in y and R in z."
+  },
+  "Veja o quadrante pelos sinais de x e y. arctg(#/#) dá um ângulo entre −#° e #°; ajuste somando #° ou #°.": {
+    "fr": "Repérez le quadrant par les signes de x et y. arctan(#/#) donne un angle entre −#° et #° ; ajustez en ajoutant #° ou #°.",
+    "en": "Find the quadrant from the signs of x and y. arctan(#/#) gives an angle between −#° and #°; adjust by adding #° or #°."
   },
   "Veja o sinal de cada parte: o numerador é #; pela direita, x − # é positivo.": {
     "fr": "Regardez le signe de chaque partie : le numérateur est # ; à direita, x − # est positivo.",
@@ -14031,6 +14339,10 @@
     "fr": "p positif : la parabole s’ouvre vers le haut.",
     "en": "p positive: the parabola opens upwards."
   },
+  "p é a distância em θ = #° (o semilatus rectum), não o periélio nem o afélio.": {
+    "fr": "p est la distance à θ = #° (le semi-latus rectum), et non le périhélie ni l’aphélie.",
+    "en": "p is the distance at θ = #° (the semi-latus rectum), neither the perihelion nor the aphelion."
+  },
   "p′ negativo: imagem virtual, do mesmo lado do objeto.": {
     "fr": "p′ négatif : image virtuelle, du même côté que l’objet.",
     "en": "p′ negative: a virtual image, on the same side as the object."
@@ -14043,6 +14355,26 @@
     "fr": "r = Σ(x − x̄)(y − ȳ) / √[Σ(x − x̄)² · Σ(y − ȳ)²] : commencez par les moyennes et les écarts de chaque point.",
     "en": "r = Σ(x − x̄)(y − ȳ) / √[Σ(x − x̄)² · Σ(y − ȳ)²]: start with the means and the deviations of each point."
   },
+  "r = √(x² + y²): some #² e #² e tire a raiz.": {
+    "fr": "r = √(x² + y²) : additionnez #² et #², puis prenez la racine.",
+    "en": "r = √(x² + y²): add #² and #², then take the root."
+  },
+  "r é a hipotenusa do triângulo de catetos |x| e |y|.": {
+    "fr": "r est l’hypoténuse du triangle de cathètes |x| et |y|.",
+    "en": "r is the hypotenuse of the triangle with legs |x| and |y|."
+  },
+  "x = r·cos θ. Em #° o cosseno tem sinal próprio do quadrante.": {
+    "fr": "x = r·cos θ. À #°, le cosinus porte le signe propre au quadrant.",
+    "en": "x = r·cos θ. At #° the cosine carries the sign of its quadrant."
+  },
+  "x = r·cos θ: multiplique # pelo cosseno de #°.": {
+    "fr": "x = r·cos θ : multipliez # par le cosinus de #°.",
+    "en": "x = r·cos θ: multiply # by the cosine of #°."
+  },
+  "x é a projeção no eixo horizontal (cosseno) e y no vertical (seno).": {
+    "fr": "x est la projection sur l’axe horizontal (cosinus) et y sur le vertical (sinus).",
+    "en": "x is the projection on the horizontal axis (cosine) and y on the vertical one (sine)."
+  },
   "x² + # não é diferença de quadrados: com +, ele não se anula para nenhum x real.": {
     "fr": "x² + # n’est pas une différence de carrés : avec +, il ne s’annule pour aucun x réel.",
     "en": "x² + # is not a difference of squares: with +, it vanishes for no real x."
@@ -14050,6 +14382,14 @@
   "y = m·λ·L/d com tudo em metros: λ = # × #⁻⁹ m e d = # × #⁻³ m. Depois passe y para mm.": {
     "fr": "y = m·λ·L/d avec tout en mètres : λ = # × #⁻⁹ m et d = # × #⁻³ m. Passez ensuite y en mm.",
     "en": "y = m·λ·L/d with everything in metres: λ = # × #⁻⁹ m and d = # × #⁻³ m. Then put y into mm."
+  },
+  "y = r·sen θ. Em #° o seno tem sinal próprio do quadrante.": {
+    "fr": "y = r·sin θ. À #°, le sinus porte le signe propre au quadrant.",
+    "en": "y = r·sin θ. At #° the sine carries the sign of its quadrant."
+  },
+  "y = r·sen θ: multiplique # pelo seno de #°.": {
+    "fr": "y = r·sin θ : multipliez # par le sinus de #°.",
+    "en": "y = r·sin θ: multiply # by the sine of #°."
   },
   "|#| tira o sinal; #! é # × # × # × # × #.": {
     "fr": "|#| enlève le signe ; #! vaut # × # × # × # × #.",
@@ -14326,6 +14666,10 @@
   "Δ = #: uma raiz dupla, x = #. A parábola só encosta no eixo ali.": {
     "fr": "Δ = # : une racine double, x = #. La parabole ne fait qu’effleurer l’axe là.",
     "en": "Δ = #: a double root, x = #. The parabola only touches the axis there."
+  },
+  "Δθ = #° − #° = #°.": {
+    "fr": "Δθ = #° − #° = #°.",
+    "en": "Δθ = #° − #° = #°."
   },
   "Φ = B·A·cos θ, com A em m² (# cm² = #×#⁻⁴ m²) e o ângulo medido da normal. Em Wb; ×# para mWb.": {
     "fr": "Φ = B·A·cos θ, avec A en m² (# cm² = #×#⁻⁴ m²) et l’angle mesuré depuis la normale. En Wb ; ×# pour des mWb.",
