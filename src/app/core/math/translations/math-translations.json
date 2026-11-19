@@ -943,6 +943,10 @@
     "fr": "L'équation d'état relie les quatre grandeurs.",
     "en": "The state equation relates the four quantities."
   },
+  "A equação diz que o volume é proporcional à temperatura, e proporção precisa de uma escala cujo zero seja o zero de verdade.": {
+    "fr": "L’équation dit que le volume est proportionnel à la température, et une proportion exige une échelle dont le zéro est le vrai zéro.",
+    "en": "The equation says volume is proportional to temperature, and proportion needs a scale whose zero is the real zero."
+  },
   "A equação está na forma padrão.": {
     "fr": "L'équation est sous la forme standard.",
     "en": "The equation is in standard form."
@@ -1066,6 +1070,30 @@
   "A fração já está na forma irredutível.": {
     "fr": "La fraction est déjà sous forme irréductible.",
     "en": "The fraction is already in lowest terms."
+  },
+  "A fração molar de Ar é a parte dele na contagem total de partículas.": {
+    "fr": "La fraction molaire de Ar est sa part dans le compte total de particules.",
+    "en": "The mole fraction of Ar is its share of the total particle count."
+  },
+  "A fração molar de CH₄ é a parte dele na contagem total de partículas.": {
+    "fr": "La fraction molaire de CH₄ est sa part dans le compte total de particules.",
+    "en": "The mole fraction of CH₄ is its share of the total particle count."
+  },
+  "A fração molar de CO₂ é a parte dele na contagem total de partículas.": {
+    "fr": "La fraction molaire de CO₂ est sa part dans le compte total de particules.",
+    "en": "The mole fraction of CO₂ is its share of the total particle count."
+  },
+  "A fração molar de He é a parte dele na contagem total de partículas.": {
+    "fr": "La fraction molaire de He est sa part dans le compte total de particules.",
+    "en": "The mole fraction of He is its share of the total particle count."
+  },
+  "A fração molar de N₂ é a parte dele na contagem total de partículas.": {
+    "fr": "La fraction molaire de N₂ est sa part dans le compte total de particules.",
+    "en": "The mole fraction of N₂ is its share of the total particle count."
+  },
+  "A fração molar de O₂ é a parte dele na contagem total de partículas.": {
+    "fr": "La fraction molaire de O₂ est sa part dans le compte total de particules.",
+    "en": "The mole fraction of O₂ is its share of the total particle count."
   },
   "A fração saiu de cabeça para baixo: a derivada de CIMA vai em cima, a de baixo, embaixo.": {
     "fr": "La fraction est à l’envers : la dérivée du HAUT va en haut, celle du bas, en bas.",
@@ -1935,6 +1963,14 @@
     "fr": "La propriété du logarithme sépare la constante, et une constante dérivée disparaît.",
     "en": "The logarithm property splits off the constant, and a differentiated constant vanishes."
   },
+  "A quantidade de gás não mudou, e por isso o nR some dos dois lados.": {
+    "fr": "La quantité de gaz n’a pas changé, et le nR disparaît donc des deux côtés.",
+    "en": "The amount of gas did not change, so the nR drops from both sides."
+  },
+  "A quantidade de gás não mudou, então PV/T é a mesma antes e depois. Converta as DUAS temperaturas para kelvin antes de montar a razão.": {
+    "fr": "La quantité de gaz n’a pas changé, donc PV/T est la même avant et après. Convertissez les DEUX températures en kelvins avant de former le rapport.",
+    "en": "The amount of gas did not change, so PV/T is the same before and after. Convert BOTH temperatures to kelvin before setting up the ratio."
+  },
   "A quantidade inicial se cancela — a meia-vida não depende dela.": {
     "fr": "La quantité initiale s'annule — la demi-vie n'en dépend pas.",
     "en": "The initial amount cancels — the half-life does not depend on it."
@@ -2099,6 +2135,10 @@
     "fr": "Le rapport est la propriété de la puissance de puissance.",
     "en": "The ratio is the power-of-power property."
   },
+  "A reação rearranja átomos, não os cria nem os destrói.": {
+    "fr": "La réaction réarrange les atomes, elle ne les crée ni ne les détruit.",
+    "en": "The reaction rearranges atoms, it neither creates nor destroys them."
+  },
   "A região é um retângulo de altura constante.": {
     "fr": "La région est un rectangle de hauteur constante.",
     "en": "The region is a rectangle of constant height."
@@ -2235,6 +2275,10 @@
     "fr": "La solution est y = y₀·e élevé à (−kt). La demi-vie, c’est quand il en reste la moitié : résolvez e^(−kt) = #/#, ce qui donne t = ln # divisé par k.",
     "en": "The solution is y = y₀·e to the (−kt). Half-life is when half is left: solve e^(−kt) = #/#, which gives t = ln # divided by k."
   },
+  "A solução é única a menos de escala, e a convenção é usar os menores inteiros.": {
+    "fr": "La solution est unique à une échelle près, et la convention est d’utiliser les plus petits entiers.",
+    "en": "The solution is unique up to scale, and the convention is to use the smallest integers."
+  },
   "A soma cresce sem limite: a série diverge.": {
     "fr": "La somme croît sans limite : la série diverge.",
     "en": "The sum grows without limit: the series diverges."
@@ -2262,6 +2306,10 @@
   "A soma dos ângulos internos é (n − 2) · 180°.": {
     "fr": "La somme des angles intérieurs est (n − 2) · 180°.",
     "en": "The interior angles add up to (n − 2) · 180°."
+  },
+  "A soma leva os dois lados, e o coeficiente # conta.": {
+    "fr": "La somme prend les deux côtés, et le coefficient # compte.",
+    "en": "The sum takes both sides, and the coefficient # counts."
   },
   "A soma é menos b sobre a.": {
     "fr": "La somme est moins b sur a.",
@@ -2347,9 +2395,25 @@
     "fr": "Le taux est de combien le total change par unité supplémentaire : c’est le coefficient a.",
     "en": "The rate is how much the total changes per extra unit: it is the coefficient a."
   },
+  "A temperatura entra em kelvin, sempre.": {
+    "fr": "La température s’exprime en kelvins, toujours.",
+    "en": "The temperature goes in kelvin, always."
+  },
+  "A temperatura entra em kelvin: some # aos graus Celsius. A equação diz que o volume é proporcional a T, e proporção precisa de uma escala cujo zero seja o zero de verdade.": {
+    "fr": "La température s’exprime en kelvins : ajoutez # aux degrés Celsius. L’équation dit que le volume est proportionnel à T, et une proportion exige une échelle dont le zéro est le vrai zéro.",
+    "en": "Temperature goes in kelvin: add # to the Celsius reading. The equation says volume is proportional to T, and proportion needs a scale whose zero is the real zero."
+  },
   "A temperatura entrou em Celsius. A lei exige kelvin, e com a quarta potência o erro é enorme — não é um deslocamento, é um fator de muitas vezes.": {
     "fr": "La température est entrée en Celsius. La loi exige des kelvins, et avec la puissance quatre l’erreur est énorme — ce n’est pas un décalage, c’est un facteur de plusieurs fois.",
     "en": "The temperature went in as Celsius. The law requires kelvin, and with the fourth power the error is huge — it is not a shift, it is a factor of many times."
+  },
+  "A temperatura entrou em graus Celsius. Passe para kelvin somando # — a razão entre temperaturas só faz sentido na escala absoluta.": {
+    "fr": "La température est entrée en degrés Celsius. Convertissez en kelvins en ajoutant # — le rapport entre températures n’a de sens que sur l’échelle absolue.",
+    "en": "The temperature went in as Celsius. Convert to kelvin by adding # — the ratio of temperatures only makes sense on the absolute scale."
+  },
+  "A temperatura ficou em graus Celsius. A equação diz que o volume é proporcional a T, e isso só vale numa escala cujo zero é o zero de verdade: some #.": {
+    "fr": "La température est restée en degrés Celsius. L’équation dit que le volume est proportionnel à T, et cela n’est vrai que sur une échelle dont le zéro est le vrai zéro : ajoutez #.",
+    "en": "The temperature stayed in Celsius. The equation says volume is proportional to T, and that only holds on a scale whose zero is the real zero: add #."
   },
   "A temperatura precisa estar em kelvin: a quarta potência não perdoa escala errada.": {
     "fr": "La température doit être en kelvins : la puissance quatre ne pardonne pas une échelle fausse.",
@@ -2967,6 +3031,14 @@
     "fr": "Les deux taux ne sont pas égaux en valeur absolue. Ils sont liés par x/y, qui change à mesure que l’échelle glisse — et près du sol le sommet descend bien plus vite.",
     "en": "The two rates are not equal in magnitude. They are related by x/y, which changes as the ladder slides — and near the ground the top drops much faster."
   },
+  "As duas temperaturas trocaram de lugar. Aquecer expande: T₂ vai em cima, junto com o estado final.": {
+    "fr": "Les deux températures ont été interverties. Chauffer dilate : T₂ va en haut, avec l’état final.",
+    "en": "The two temperatures got swapped. Heating expands: T₂ goes on top, along with the final state."
+  },
+  "As duas temperaturas, em kelvin.": {
+    "fr": "Les deux températures, en kelvins.",
+    "en": "Both temperatures, in kelvin."
+  },
   "As duas têm exatamente a mesma parte decimal infinita.": {
     "fr": "Les deux ont exactement la même partie décimale infinie.",
     "en": "Both have exactly the same infinite decimal part."
@@ -3050,6 +3122,10 @@
   "As retas são paralelas distintas e nunca se cruzam.": {
     "fr": "Les droites sont parallèles distinctes et ne se croisent jamais.",
     "en": "The lines are distinct parallels and never cross."
+  },
+  "As temperaturas ficaram em graus Celsius. Aqui o estrago é dobrado: a razão T₂/T₁ em Celsius não tem relação com a razão verdadeira.": {
+    "fr": "Les températures sont restées en degrés Celsius. Ici le dégât est double : le rapport T₂/T₁ en Celsius n’a aucun lien avec le vrai rapport.",
+    "en": "The temperatures stayed in Celsius. Here the damage is twofold: the ratio T₂/T₁ in Celsius has no relation to the true ratio."
   },
   "As três camadas, de fora para dentro.": {
     "fr": "Les trois couches, de l’extérieur vers l’intérieur.",
@@ -3142,6 +3218,10 @@
   "Ba neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Ba neutre a # électrons, autant que de protons.",
     "en": "Neutral Ba has # electrons, as many as protons."
+  },
+  "Balanceie primeiro, e não esqueça o coeficiente #, que não se escreve mas conta na soma. Os dois lados entram.": {
+    "fr": "Équilibrez d’abord, et n’oubliez pas le coefficient #, qui ne s’écrit pas mais compte dans la somme. Les deux côtés entrent.",
+    "en": "Balance first, and do not forget the coefficient #, which is not written but counts in the sum. Both sides take part."
   },
   "Base e altura são ambas multiplicadas por k.": {
     "fr": "La base et la hauteur sont toutes deux multipliées par k.",
@@ -3291,6 +3371,10 @@
     "fr": "Chaque élément de NaCl entre avec sa masse atomique, multipliée par l’indice.",
     "en": "Each element of NaCl enters with its atomic mass, times the subscript."
   },
+  "Cada elemento dá uma condição, e os coeficientes saem dela.": {
+    "fr": "Chaque élément donne une condition, et les coefficients en découlent.",
+    "en": "Each element gives one condition, and the coefficients follow from it."
+  },
   "Cada elemento entra com a sua massa atômica, vezes o índice.": {
     "fr": "Chaque élément entre avec sa masse atomique, multipliée par l’indice.",
     "en": "Each element enters with its atomic mass, times the subscript."
@@ -3350,6 +3434,34 @@
   "Cada grupo de quatro é uma volta completa: multiplicar por i é girar #°.": {
     "fr": "Chaque groupe de quatre est un tour complet : multiplier par i, c’est tourner de #°.",
     "en": "Each group of four is a full turn: multiplying by i is a #° rotation."
+  },
+  "Cada gás contribui com essa fração da pressão total.": {
+    "fr": "Chaque gaz contribue par cette fraction de la pression totale.",
+    "en": "Each gas contributes that fraction of the total pressure."
+  },
+  "Cada gás empurra como se estivesse sozinho. A parcela de Ar é a fração MOLAR dele — mols do gás sobre mols totais — vezes a pressão total.": {
+    "fr": "Chaque gaz pousse comme s’il était seul. La part de Ar est sa fraction MOLAIRE — moles du gaz sur moles totales — fois la pression totale.",
+    "en": "Each gas pushes as if it were alone. The share of Ar is its MOLE fraction — moles of the gas over total moles — times the total pressure."
+  },
+  "Cada gás empurra como se estivesse sozinho. A parcela de CH₄ é a fração MOLAR dele — mols do gás sobre mols totais — vezes a pressão total.": {
+    "fr": "Chaque gaz pousse comme s’il était seul. La part de CH₄ est sa fraction MOLAIRE — moles du gaz sur moles totales — fois la pression totale.",
+    "en": "Each gas pushes as if it were alone. The share of CH₄ is its MOLE fraction — moles of the gas over total moles — times the total pressure."
+  },
+  "Cada gás empurra como se estivesse sozinho. A parcela de CO₂ é a fração MOLAR dele — mols do gás sobre mols totais — vezes a pressão total.": {
+    "fr": "Chaque gaz pousse comme s’il était seul. La part de CO₂ est sa fraction MOLAIRE — moles du gaz sur moles totales — fois la pression totale.",
+    "en": "Each gas pushes as if it were alone. The share of CO₂ is its MOLE fraction — moles of the gas over total moles — times the total pressure."
+  },
+  "Cada gás empurra como se estivesse sozinho. A parcela de He é a fração MOLAR dele — mols do gás sobre mols totais — vezes a pressão total.": {
+    "fr": "Chaque gaz pousse comme s’il était seul. La part de He est sa fraction MOLAIRE — moles du gaz sur moles totales — fois la pression totale.",
+    "en": "Each gas pushes as if it were alone. The share of He is its MOLE fraction — moles of the gas over total moles — times the total pressure."
+  },
+  "Cada gás empurra como se estivesse sozinho. A parcela de N₂ é a fração MOLAR dele — mols do gás sobre mols totais — vezes a pressão total.": {
+    "fr": "Chaque gaz pousse comme s’il était seul. La part de N₂ est sa fraction MOLAIRE — moles du gaz sur moles totales — fois la pression totale.",
+    "en": "Each gas pushes as if it were alone. The share of N₂ is its MOLE fraction — moles of the gas over total moles — times the total pressure."
+  },
+  "Cada gás empurra como se estivesse sozinho. A parcela de O₂ é a fração MOLAR dele — mols do gás sobre mols totais — vezes a pressão total.": {
+    "fr": "Chaque gaz pousse comme s’il était seul. La part de O₂ est sa fraction MOLAIRE — moles du gaz sur moles totales — fois la pression totale.",
+    "en": "Each gas pushes as if it were alone. The share of O₂ is its MOLE fraction — moles of the gas over total moles — times the total pressure."
   },
   "Cada isótopo entra com o peso da sua abundância.": {
     "fr": "Chaque isotope entre avec le poids de son abondance.",
@@ -3907,6 +4019,10 @@
     "fr": "En base e ce facteur vaudrait # et disparaîtrait ; en base # il vaut environ #.",
     "en": "With base e that factor would be # and vanish; with base # it is about #."
   },
+  "Com coeficiente # essa substância não fecha a conta: conte os átomos dela nos dois lados e veja que faltam. O coeficiente # é o que não se escreve, não o que sempre serve.": {
+    "fr": "Avec le coefficient #, cette substance ne boucle pas le compte : comptez ses atomes des deux côtés et voyez qu’il en manque. Le coefficient # est celui qu’on n’écrit pas, pas celui qui convient toujours.",
+    "en": "With coefficient # that substance does not balance: count its atoms on both sides and see that some are missing. The coefficient # is the one you do not write, not the one that always fits."
+  },
   "Com discriminante zero, o ± deixa de fazer diferença: há uma única raiz.": {
     "fr": "Avec discriminant nul, le ± cesse de faire la différence : il n'y a qu'une seule racine.",
     "en": "With discriminant zero, the ± ceases to matter: there is only one root."
@@ -4303,6 +4419,10 @@
     "fr": "En vérifiant par Pythagore, les composantes reconstruisent le module.",
     "en": "Checking by Pythagoras, the components reconstruct the magnitude."
   },
+  "Conferindo átomo por átomo, os dois lados fecham.": {
+    "fr": "En vérifiant atome par atome, les deux côtés concordent.",
+    "en": "Checking atom by atom, both sides match."
+  },
   "Conferindo: compor a função com sua inversa devolve o próprio x.": {
     "fr": "Vérification : composer la fonction avec son inverse redonne x lui-même.",
     "en": "Checking: composing the function with its inverse returns x itself."
@@ -4395,6 +4515,50 @@
     "fr": "Nous comptons : # sur la base plus le sommet.",
     "en": "We count: # on the base plus the apex."
   },
+  "Contando Al de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de Al d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting Al on one side: coefficient times subscript, added up."
+  },
+  "Contando C de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de C d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting C on one side: coefficient times subscript, added up."
+  },
+  "Contando Cl de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de Cl d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting Cl on one side: coefficient times subscript, added up."
+  },
+  "Contando Fe de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de Fe d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting Fe on one side: coefficient times subscript, added up."
+  },
+  "Contando H de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de H d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting H on one side: coefficient times subscript, added up."
+  },
+  "Contando K de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de K d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting K on one side: coefficient times subscript, added up."
+  },
+  "Contando Mg de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de Mg d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting Mg on one side: coefficient times subscript, added up."
+  },
+  "Contando N de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de N d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting N on one side: coefficient times subscript, added up."
+  },
+  "Contando Na de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de Na d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting Na on one side: coefficient times subscript, added up."
+  },
+  "Contando O de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de O d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting O on one side: coefficient times subscript, added up."
+  },
+  "Contando S de um lado: coeficiente vezes índice, somado.": {
+    "fr": "Comptage de S d’un côté : coefficient fois indice, additionné.",
+    "en": "Counting S on one side: coefficient times subscript, added up."
+  },
   "Contar \"ao menos um\" caso a caso é trabalhoso; o complementar é simples.": {
     "fr": "Compter \"au moins un\" cas par cas est fastidieux ; le complémentaire est simple.",
     "en": "Counting \"at least one\" case by case is tedious; the complement is simple."
@@ -4406,6 +4570,10 @@
   "Conte as faces que servem, sem contar a mesma face duas vezes, e divida por #.": {
     "fr": "Comptez les faces qui conviennent, sans compter deux fois la même face, et divisez par #.",
     "en": "Count the faces that qualify, without counting the same face twice, and divide by #."
+  },
+  "Conte os átomos de cada elemento nos dois lados e ajuste só os COEFICIENTES, os números da frente. Mexer num índice trocaria a substância.": {
+    "fr": "Comptez les atomes de chaque élément des deux côtés et n’ajustez que les COEFFICIENTS, les nombres de devant. Toucher à un indice changerait la substance.",
+    "en": "Count the atoms of each element on both sides and adjust only the COEFFICIENTS, the numbers in front. Touching a subscript would change the substance."
   },
   "Converta em cima (# g = # kg) e embaixo (# cm³ = # ao cubo vezes menor que # m³) separadamente.": {
     "fr": "Convertissez en haut (# g = # kg) et en bas (# cm³ = # au cube fois plus petit que # m³) séparément.",
@@ -5943,6 +6111,10 @@
     "fr": "Dans CaS, le n.o. vaut +#.",
     "en": "In CaS, the oxidation number is +#."
   },
+  "Em Celsius, a razão entre as duas seria outra — e a resposta, outra também.": {
+    "fr": "En Celsius, le rapport entre les deux serait autre — et la réponse aussi.",
+    "en": "In Celsius, the ratio of the two would be different — and so would the answer."
+  },
   "Em CuCl, o nox é +#.": {
     "fr": "Dans CuCl, le n.o. vaut +#.",
     "en": "In CuCl, the oxidation number is +#."
@@ -6170,6 +6342,10 @@
   "Em milímetros.": {
     "fr": "En millimètres.",
     "en": "In millimetres."
+  },
+  "Em mols, não em gramas: o que empurra a parede é partícula, não massa.": {
+    "fr": "En moles, et non en grammes : ce qui pousse la paroi, c’est la particule, pas la masse.",
+    "en": "In moles, not in grams: what pushes the wall is particles, not mass."
   },
   "Em nanômetros (# nm = #⁻⁹ m).": {
     "fr": "En nanomètres (# nm = #⁻⁹ m).",
@@ -6847,6 +7023,10 @@
     "fr": "C’est l’entrée de A elle-même. L’inverse est le bloc de DROITE à la fin de l’échelonnement.",
     "en": "That is an entry of A itself. The inverse is the RIGHT block at the end of the reduction."
   },
+  "Essa é a fração em MASSA. O que empurra a parede é partícula, não grama: a fração que vale aqui é a molar.": {
+    "fr": "C’est la fraction en MASSE. Ce qui pousse la paroi, c’est la particule, pas le gramme : la fraction qui vaut ici est la molaire.",
+    "en": "That is the fraction by MASS. What pushes the wall is particles, not grams: the fraction that counts here is the molar one."
+  },
   "Essa é a frequência NATURAL, sem amortecimento. O atrito alonga o período, e a frequência amortecida é menor que a natural.": {
     "fr": "C’est la pulsation NATURELLE, sans amortissement. Le frottement allonge la période, et la pulsation amortie est plus petite que la naturelle.",
     "en": "That is the NATURAL frequency, without damping. Friction lengthens the period, and the damped frequency is smaller than the natural one."
@@ -6915,6 +7095,10 @@
     "fr": "C’est l’autre solution, la plus petite. L’équation avec valeur absolue a DEUX réponses, et l’énoncé demande la plus grande.",
     "en": "That is the other solution, the smaller one. The absolute-value equation has TWO answers, and the question asks for the larger."
   },
+  "Essa é a pressão parcial do OUTRO gás. A fração molar usa os mols do gás que a pergunta nomeia.": {
+    "fr": "C’est la pression partielle de l’AUTRE gaz. La fraction molaire utilise les moles du gaz que la question nomme.",
+    "en": "That is the partial pressure of the OTHER gas. The mole fraction uses the moles of the gas the question names."
+  },
   "Essa é a projeção do OUTRO cateto. Cada projeção usa o seu próprio.": {
     "fr": "C’est la projection de l’AUTRE cathète. Chaque projection utilise la sienne.",
     "en": "That is the projection of the OTHER leg. Each projection uses its own."
@@ -6954,6 +7138,10 @@
   "Essa é a soma dos quadrados dos outros dois lados. A pergunta é pelo quadrado do MAIOR lado — são as duas pontas da comparação.": {
     "fr": "C’est la somme des carrés des deux autres côtés. La question porte sur le carré du PLUS GRAND côté — ce sont les deux membres de la comparaison.",
     "en": "That is the sum of the squares of the other two sides. The question asks for the square of the LONGEST side — they are the two ends of the comparison."
+  },
+  "Essa é a soma só do lado esquerdo. A pergunta pede os dois lados — e os coeficientes dos produtos fazem parte do balanceamento tanto quanto os outros.": {
+    "fr": "C’est la somme du côté gauche seulement. La question demande les deux côtés — et les coefficients des produits font partie de l’équilibrage autant que les autres.",
+    "en": "That is the sum of the left side only. The question asks for both sides — and the coefficients of the products are as much part of the balancing as the others."
   },
   "Essa é a tangente, não o ângulo. Falta aplicar o arco-tangente.": {
     "fr": "C’est la tangente, et non l’angle. Il reste à appliquer l’arc tangente.",
@@ -7106,6 +7294,10 @@
   "Esse é o coeficiente de N, comparado direto com o de M. A condição compara as DERIVADAS: ∂M/∂y com ∂N/∂x.": {
     "fr": "C’est le coefficient de N, comparé directement à celui de M. La condition compare les DÉRIVÉES : ∂M/∂y et ∂N/∂x.",
     "en": "That is the coefficient of N, compared straight with M’s. The condition compares the DERIVATIVES: ∂M/∂y with ∂N/∂x."
+  },
+  "Esse é o coeficiente de outra substância da equação. A pergunta nomeia uma: confira qual.": {
+    "fr": "C’est le coefficient d’une autre substance de l’équation. La question en nomme une : vérifiez laquelle.",
+    "en": "That is the coefficient of another substance in the equation. The question names one: check which."
   },
   "Esse é o comprimento do ARCO, uma medida linear. A área do setor usa πr², não #πr.": {
     "fr": "C’est la longueur de l’ARC, une mesure linéaire. L’aire du secteur utilise πr², et non #πr.",
@@ -7402,6 +7594,10 @@
   "Esses são os valores de u = #x. Falta dividir por # para chegar a x.": {
     "fr": "Ce sont les valeurs de u = #x. Il reste à diviser par # pour arriver à x.",
     "en": "Those are the values of u = #x. Dividing by # to get to x is still missing."
+  },
+  "Esta contagem é a prova, e é ela que se faz para conferir a própria resposta.": {
+    "fr": "Ce comptage est la preuve, et c’est lui qu’on fait pour vérifier sa propre réponse.",
+    "en": "That count is the proof, and it is what you do to check your own answer."
   },
   "Esta é a solução GERAL: uma família inteira de funções.": {
     "fr": "C’est la solution GÉNÉRALE : toute une famille de fonctions.",
@@ -8283,6 +8479,10 @@
     "fr": "En isolant la pression au second point.",
     "en": "Isolating the pressure at the second point."
   },
+  "Isolando a quantidade na equação dos gases.": {
+    "fr": "En isolant la quantité de matière dans l’équation des gaz.",
+    "en": "Isolating the amount of substance in the gas equation."
+  },
   "Isolando a razão.": {
     "fr": "En isolant la raison.",
     "en": "Isolating the difference."
@@ -8346,6 +8546,14 @@
   "Isolando o seno do ângulo.": {
     "fr": "En isolant le sinus de l'angle.",
     "en": "Isolating the sine of the angle."
+  },
+  "Isolando o volume final.": {
+    "fr": "En isolant le volume final.",
+    "en": "Isolating the final volume."
+  },
+  "Isolando o volume.": {
+    "fr": "En isolant le volume.",
+    "en": "Isolating the volume."
   },
   "Isolando vértices e substituindo.": {
     "fr": "En isolant les vértices et en substituant.",
@@ -9723,6 +9931,10 @@
     "fr": "Dans un fil, la force est champ fois courant fois longueur (fois sin θ).",
     "en": "In a wire, the force is field times current times length (times sin θ)."
   },
+  "Num gás ideal as partículas não se enxergam, e as pressões simplesmente se somam.": {
+    "fr": "Dans un gaz parfait les particules ne se voient pas, et les pressions s’additionnent simplement.",
+    "en": "In an ideal gas the particles do not see each other, and the pressures simply add."
+  },
   "Num polígono regular todos os externos são iguais, então contar quantos cabem na volta é contar os vértices.": {
     "fr": "Dans un polygone régulier tous les angles extérieurs sont égaux, donc compter combien tiennent dans le tour, c’est compter les sommets.",
     "en": "In a regular polygon all exterior angles are equal, so counting how many fit in the turn is counting the vertices."
@@ -9883,6 +10095,10 @@
     "fr": "Le # n’apparaît pas dans la dérivée : il est devenu un terme constant, et non un facteur.",
     "en": "The # does not show up in the derivative: it became a constant term, not a factor."
   },
+  "O # não se escreve na equação, mas existe.": {
+    "fr": "Le # ne s’écrit pas dans l’équation, mais il existe.",
+    "en": "The # is not written in the equation, but it is there."
+  },
   "O # sobe multiplicando a área, não dividindo.": {
     "fr": "Le # monte en multipliant l’aire, et non en divisant.",
     "en": "The # moves up multiplying the area, not dividing."
@@ -9930,6 +10146,10 @@
   "O O é a âncora: em composto binário o nox dele é conhecido.": {
     "fr": "Le O est l’ancre : dans un composé binaire, son n.o. est connu.",
     "en": "O is the anchor: in a binary compound its oxidation number is known."
+  },
+  "O R acabou multiplicando em vez de dividir. Na forma n = PV/RT ele está embaixo, junto com a temperatura.": {
+    "fr": "Le R a fini par multiplier au lieu de diviser. Dans la forme n = PV/RT il est en bas, avec la température.",
+    "en": "The R ended up multiplying instead of dividing. In the form n = PV/RT it sits below, along with the temperature."
   },
   "O R² indica a fração da variação explicada pela reta.": {
     "fr": "Le R² indique la fraction de la variation expliquée par la droite.",
@@ -11011,6 +11231,10 @@
     "fr": "L’obtenu va en haut et le théorique en bas : on compare ce qui est sorti avec ce qui était possible. Le résultat est inférieur à # %.",
     "en": "The obtained goes on top and the theoretical below: you compare what came out with what was possible. The result is less than #%."
   },
+  "O outro lado dá o mesmo número, e é nisso que o balanceamento se confere.": {
+    "fr": "L’autre côté donne le même nombre, et c’est ainsi que l’équilibrage se vérifie.",
+    "en": "The other side gives the same number, and that is how the balancing is checked."
+  },
   "O ouvido percebe razões, não diferenças: a escala é logarítmica, com I₀ = #⁻¹² W/m².": {
     "fr": "L’oreille perçoit des rapports, pas des différences : l’échelle est logarithmique, avec I₀ = #⁻¹² W/m².",
     "en": "The ear perceives ratios, not differences: the scale is logarithmic, with I₀ = #⁻¹² W/m²."
@@ -11238,6 +11462,10 @@
   "O que o texto pede, símbolo a símbolo.": {
     "fr": "Ce que le texte demande, symbole par symbole.",
     "en": "What the text asks for, symbol by symbol."
+  },
+  "O que se ajusta são os COEFICIENTES, nunca os índices: mexer num índice troca a substância de que se está falando.": {
+    "fr": "Ce qu’on ajuste, ce sont les COEFFICIENTS, jamais les indices : toucher à un indice change la substance dont on parle.",
+    "en": "What gets adjusted are the COEFFICIENTS, never the subscripts: touching a subscript changes which substance you are talking about."
   },
   "O que sobra do lado esquerdo é só o termo com x.": {
     "fr": "Ce qui reste du côté gauche n'est que le terme avec x.",
@@ -11979,6 +12207,10 @@
     "fr": "Les cathètes ne s’additionnent pas directement : ce sont les CARRÉS qui s’additionnent. Sinon, le chemin droit aurait la même longueur que le chemin en L.",
     "en": "The legs do not add directly: it is the SQUARES that add. If they did, the straight path would be as long as the L-shaped one."
   },
+  "Os coeficientes # ficaram de fora. Eles não se escrevem na equação, mas existem: uma molécula de cada substância é uma, não zero.": {
+    "fr": "Les coefficients # ont été laissés de côté. Ils ne s’écrivent pas dans l’équation, mais ils existent : une molécule de chaque substance, c’est une, et non zéro.",
+    "en": "The coefficients # were left out. They are not written in the equation, but they are there: one molecule of each substance is one, not zero."
+  },
   "Os coeficientes de x, y e z são as coordenadas da normal.": {
     "fr": "Les coefficients de x, y et z sont les coordonnées de la normale.",
     "en": "The coefficients of x, y and z are the normal’s coordinates."
@@ -12303,6 +12535,10 @@
     "fr": "Les nombres trouvés sont les racines, et chacune génère un facteur.",
     "en": "The numbers found are the roots, and each generates a factor."
   },
+  "Os papéis de n e de P trocaram de lugar. O volume é nRT dividido pela pressão: mais gás ocupa mais, mais pressão comprime.": {
+    "fr": "Les rôles de n et de P ont été intervertis. Le volume vaut nRT divisé par la pression : plus de gaz occupe plus, plus de pression comprime.",
+    "en": "The roles of n and P got swapped. The volume is nRT divided by the pressure: more gas takes up more room, more pressure squeezes."
+  },
   "Os pedaços guardam a mesma razão nas duas transversais: # está para # como # está para o pedaço que falta. Multiplique cruzado.": {
     "fr": "Les segments gardent le même rapport sur les deux transversales : # est à # comme # est au segment manquant. Multipliez en croix.",
     "en": "The pieces keep the same ratio on both transversals: # is to # as # is to the missing piece. Cross-multiply."
@@ -12395,6 +12631,10 @@
     "fr": "Les indices ont été oubliés. Ils comptent des atomes : chacun multiplie la masse atomique de son élément avant l’addition.",
     "en": "The subscripts were left out. They count atoms: each one multiplies its element’s atomic mass before the sum."
   },
+  "Os índices foram somados sem os coeficientes. O coeficiente diz quantas moléculas há, e cada uma traz os seus átomos: os dois se multiplicam.": {
+    "fr": "Les indices ont été additionnés sans les coefficients. Le coefficient dit combien il y a de molécules, et chacune apporte ses atomes : les deux se multiplient.",
+    "en": "The subscripts were added without the coefficients. The coefficient says how many molecules there are, and each brings its own atoms: the two multiply."
+  },
   "Oscila quando as raízes da característica são complexas: discriminante negativo.": {
     "fr": "Il oscille quand les racines de la caractéristique sont complexes : discriminant négatif.",
     "en": "It oscillates when the roots of the characteristic equation are complex: negative discriminant."
@@ -12462,6 +12702,50 @@
   "Para a resultante ficar perpendicular, a componente rio acima deve anular a correnteza.": {
     "fr": "Pour que la résultante soit perpendiculaire, la composante rivière doit annuler le courant.",
     "en": "For the resultant to be perpendicular, the upriver component must cancel the current."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de Al e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de Al et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of Al and add. Both sides give the same number — that is what “balanced” means."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de C e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de C et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of C and add. Both sides give the same number — that is what “balanced” means."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de Cl e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de Cl et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of Cl and add. Both sides give the same number — that is what “balanced” means."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de Fe e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de Fe et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of Fe and add. Both sides give the same number — that is what “balanced” means."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de H e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de H et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of H and add. Both sides give the same number — that is what “balanced” means."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de K e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de K et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of K and add. Both sides give the same number — that is what “balanced” means."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de Mg e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de Mg et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of Mg and add. Both sides give the same number — that is what “balanced” means."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de N e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de N et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of N and add. Both sides give the same number — that is what “balanced” means."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de Na e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de Na et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of Na and add. Both sides give the same number — that is what “balanced” means."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de O e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de O et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of O and add. Both sides give the same number — that is what “balanced” means."
+  },
+  "Para cada substância, multiplique o coeficiente pelo índice de S e some. Os dois lados dão o mesmo número — é isso que «balanceada» quer dizer.": {
+    "fr": "Pour chaque substance, multipliez le coefficient par l’indice de S et additionnez. Les deux côtés donnent le même nombre — c’est ce que « équilibrée » veut dire.",
+    "en": "For each substance, multiply the coefficient by the subscript of S and add. Both sides give the same number — that is what “balanced” means."
   },
   "Para colar as pontas, os dois limites laterais precisam coincidir.": {
     "fr": "Pour coller les extrémités, les deux limites latérales doivent coïncider.",
@@ -13054,6 +13338,10 @@
   "Primeiro a posição da imagem, pela equação de Gauss.": {
     "fr": "D’abord la position de l’image, par l’équation de conjugaison.",
     "en": "First the image position, from the thin-lens equation."
+  },
+  "Primeiro a temperatura, em kelvin.": {
+    "fr": "D’abord la température, en kelvins.",
+    "en": "First the temperature, in kelvin."
   },
   "Primeiro a área da base: comprimento vezes largura.": {
     "fr": "D’abord l’aire de la base : longueur fois largeur.",
@@ -15023,6 +15311,10 @@
     "fr": "En utilisant la définition du produit scalaire, c'est le scalaire divisé par le module de b.",
     "en": "Using the definition of the dot product, this is the scalar divided by the magnitude of b."
   },
+  "Usar graus Celsius aqui não erra por pouco: muda a resposta inteira.": {
+    "fr": "Utiliser des degrés Celsius ici ne se trompe pas de peu : cela change toute la réponse.",
+    "en": "Using Celsius here is not off by a little: it changes the whole answer."
+  },
   "Use # − cos θ = #·sen²(θ/#) e arrume para aparecer (sen u / u)² com u = #x/#.": {
     "fr": "Utilisez # − cos θ = #·sin²(θ/#) et arrangez pour faire apparaître (sin u / u)² avec u = #x/#.",
     "en": "Use # − cos θ = #·sin²(θ/#) and rearrange to get (sin u / u)² with u = #x/#."
@@ -16010,6 +16302,10 @@
   "É a distributiva lida de trás para frente.": {
     "fr": "C’est la distributivité lue à l’envers.",
     "en": "It is distributivity read backwards."
+  },
+  "É a equação dos gases escrita duas vezes, e não uma lei à parte.": {
+    "fr": "C’est l’équation des gaz écrite deux fois, et non une loi à part.",
+    "en": "It is the gas equation written twice, not a separate law."
   },
   "É a fórmula do volume do cone, obtida por integração.": {
     "fr": "C’est la formule du volume du cône, obtenue par intégration.",
