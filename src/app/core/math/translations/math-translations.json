@@ -175,9 +175,29 @@
     "fr": "# est le DIAMÈTRE : la courbe passe par l’origine et par le point à # de celle-ci, du côté opposé.",
     "en": "# is the DIAMETER: the curve passes through the origin and through the point # away from it, on the other side."
   },
+  "# é o coeficiente do termo do meio, #pq. Divida por #p para chegar a q.": {
+    "fr": "# est le coefficient du terme du milieu, #pq. Divisez par #p pour arriver à q.",
+    "en": "# is the coefficient of the middle term, #pq. Divide by #p to reach q."
+  },
   "# é o número de arestas. Use Euler para chegar aos vértices.": {
     "fr": "# est le nombre d’arêtes. Utilisez Euler pour arriver aux sommets.",
     "en": "# is the number of edges. Use Euler to get to the vertices."
+  },
+  "# é p, o que multiplica x (#x² = (#x)²). O pedido é q.": {
+    "fr": "# est p, ce qui multiplie x (#x² = (#x)²). Ce qui est demandé, c’est q.",
+    "en": "# is p, what multiplies x (#x² = (#x)²). What is asked for is q."
+  },
+  "# é q², o termo solto. q é a sua raiz quadrada, com o sinal do termo do meio.": {
+    "fr": "# est q², le terme constant. q en est la racine carrée, avec le signe du terme du milieu.",
+    "en": "# is q², the constant term. q is its square root, with the sign of the middle term."
+  },
+  "# é q², o termo solto. q é o número que, ao quadrado, dá #.": {
+    "fr": "# est q², le terme constant. q est le nombre dont le carré vaut #.",
+    "en": "# is q², the constant term. q is the number whose square is #."
+  },
+  "# é q³, o termo solto. q é a sua raiz CÚBICA.": {
+    "fr": "# est q³, le terme constant. q en est la racine CUBIQUE.",
+    "en": "# is q³, the constant term. q is its CUBE root."
   },
   "# é um cubo perfeito (#³). Use u³ + v³ = (u + v)(u² - uv + v²) e iguale o primeiro fator a zero.": {
     "fr": "# est un cube parfait (#³). Utilisez u³ + v³ = (u + v)(u² - uv + v²) et annulez le premier facteur.",
@@ -263,6 +283,14 @@
     "fr": "A = #πr² — quatre grands cercles.",
     "en": "A = #πr² — four great circles."
   },
+  "A = -x - # e B = x - #.": {
+    "fr": "A = -x - # et B = x - #.",
+    "en": "A = -x - # and B = x - #."
+  },
+  "A = -x - # e B = x.": {
+    "fr": "A = -x - # et B = x.",
+    "en": "A = -x - # and B = x."
+  },
   "A = D·d/#, com D e d as diagonais.": {
     "fr": "A = D·d/#, avec D et d les diagonales.",
     "en": "A = D·d/#, with D and d the diagonals."
@@ -274,6 +302,30 @@
   "A = b·h, então h = A / b = # / #.": {
     "fr": "A = b·h, donc h = A / b = # / #.",
     "en": "A = b·h, so h = A / b = # / #."
+  },
+  "A = x + # e B = x + #.": {
+    "fr": "A = x + # et B = x + #.",
+    "en": "A = x + # and B = x + #."
+  },
+  "A = x + # e B = x - #.": {
+    "fr": "A = x + # et B = x - #.",
+    "en": "A = x + # and B = x - #."
+  },
+  "A = x + # e B = x.": {
+    "fr": "A = x + # et B = x.",
+    "en": "A = x + # and B = x."
+  },
+  "A = x - # e B = -x + #.": {
+    "fr": "A = x - # et B = -x + #.",
+    "en": "A = x - # and B = -x + #."
+  },
+  "A = x - # e B = x - #.": {
+    "fr": "A = x - # et B = x - #.",
+    "en": "A = x - # and B = x - #."
+  },
+  "A = x e B = x - #.": {
+    "fr": "A = x et B = x - #.",
+    "en": "A = x and B = x - #."
   },
   "A = |aₓb_y − a_ybₓ|: o determinante das componentes, em módulo.": {
     "fr": "A = |aₓb_y − a_ybₓ| : le déterminant des composantes, en module.",
@@ -1327,6 +1379,10 @@
     "fr": "L’identité de l’arc moitié remplace # − cos par un sinus au carré.",
     "en": "The half-angle identity swaps # − cos for a sine squared."
   },
+  "A identidade lida de trás para frente.": {
+    "fr": "L’identité lue à l’envers.",
+    "en": "The identity read backwards."
+  },
   "A imagem do arcsen e do arctg vai de −#° a #°; a do arccos, de #° a #°.": {
     "fr": "L’image de l’arcsin et de l’arctan va de −#° à #° ; celle de l’arccos, de #° à #°.",
     "en": "The range of arcsin and arctan goes from −#° to #°; that of arccos, from #° to #°."
@@ -2123,6 +2179,10 @@
     "fr": "La quatrième puissance de la température absolue.",
     "en": "The fourth power of the absolute temperature."
   },
+  "A raiz cúbica conserva o sinal: o cubo de um negativo é negativo. Confira o sinal do termo solto.": {
+    "fr": "La racine cubique conserve le signe : le cube d’un négatif est négatif. Vérifiez le signe du terme constant.",
+    "en": "The cube root keeps the sign: the cube of a negative is negative. Check the sign of the constant term."
+  },
   "A raiz de uma diferença de quadrados pede o seno.": {
     "fr": "La racine d’une différence de carrés appelle le sinus.",
     "en": "The root of a difference of squares calls for the sine."
@@ -2334,6 +2394,10 @@
   "A relação está invertida: quem vale o DOBRO é o central. O inscrito, com o vértice na circunferência, enxerga o mesmo arco por metade do ângulo.": {
     "fr": "La relation est inversée : c’est l’angle au CENTRE qui vaut le double. L’inscrit, dont le sommet est sur le cercle, voit le même arc sous la moitié de l’angle.",
     "en": "The relation is backwards: it is the CENTRAL angle that is twice. The inscribed one, with its vertex on the circle, sees the same arc at half the angle."
+  },
+  "A relação inclui o zero, e ele acontece na raiz dupla.": {
+    "fr": "La relation inclut le zéro, et il se produit à la racine double.",
+    "en": "The relation includes zero, and it happens at the double root."
   },
   "A relação é estrita: a raiz, onde o trinômio vale #, fica de fora.": {
     "fr": "La relation est stricte : la racine, où le trinôme vaut #, reste exclue.",
@@ -3295,6 +3359,18 @@
     "fr": "Les forces sont perpendiculaires : la résultante est l’hypoténuse.",
     "en": "The forces are perpendicular: the resultant is the hypotenuse."
   },
+  "As fronteiras estão certas, mas o lado não. Na situação, pergunte-se o que acontece COM A GRANDEZA no meio do intervalo — não no meio da conta: teste um valor entre as raízes na expressão e veja se o resultado é o que o enunciado pede.": {
+    "fr": "Les bornes sont justes, mais pas le côté. Dans la situation, demandez-vous ce qui arrive À LA GRANDEUR au milieu de l’intervalle — et non au milieu du calcul : testez une valeur entre les racines dans l’expression et voyez si le résultat est celui que l’énoncé demande.",
+    "en": "The boundaries are right, but the side is not. In the situation, ask what happens TO THE QUANTITY in the middle of the interval — not in the middle of the computation: test a value between the roots in the expression and see whether the result is what the question asks for."
+  },
+  "As fronteiras estão certas, mas o pedaço não: a solução fica ENTRE as raízes. Teste um número de cada pedaço na expressão para conferir o sinal.": {
+    "fr": "Les bornes sont justes, mais pas le morceau : la solution se trouve ENTRE les racines. Testez un nombre de chaque morceau dans l’expression pour vérifier le signe.",
+    "en": "The boundaries are right, but the piece is not: the solution lies BETWEEN the roots. Test a number from each piece in the expression to check the sign."
+  },
+  "As fronteiras estão certas, mas o pedaço não: a solução fica FORA das raízes. Teste um número de cada pedaço na expressão para conferir o sinal.": {
+    "fr": "Les bornes sont justes, mais pas le morceau : la solution se trouve EN DEHORS des racines. Testez un nombre de chaque morceau dans l’expression pour vérifier le signe.",
+    "en": "The boundaries are right, but the piece is not: the solution lies OUTSIDE the roots. Test a number from each piece in the expression to check the sign."
+  },
   "As grandezas são diretamente proporcionais: as duas crescem juntas.": {
     "fr": "Les grandeurs sont directement proportionnelles : les deux croissent ensemble.",
     "en": "The quantities are directly proportional: both grow together."
@@ -3478,6 +3554,10 @@
   "Basta avaliar o integrando no ponto.": {
     "fr": "Il suffit d’évaluer l’intégrande au point.",
     "en": "It is enough to evaluate the integrand at the point."
+  },
+  "Batem os quatro termos: é o cubo do binômio.": {
+    "fr": "Les quatre termes concordent : c’est le cube du binôme.",
+    "en": "All four terms match: it is the cube of the binomial."
   },
   "Be neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Be neutre a # électrons, autant que de protons.",
@@ -4030,6 +4110,10 @@
   "Calcule Δ primeiro. Se Δ < #, o trinômio tem sempre o sinal de a: a resposta é «todos» ou «vazio».": {
     "fr": "Calculez Δ d’abord. Si Δ < #, le trinôme a toujours le signe de a : la réponse est « tous » ou « vide ».",
     "en": "Work out Δ first. If Δ < #, the quadratic always has the sign of a: the answer is “all” or “empty”."
+  },
+  "Calcule Δ. Se ele for negativo, o trinômio tem SEMPRE o sinal de a — e a resposta é «todos» ou «vazio».": {
+    "fr": "Calculez Δ. S’il est négatif, le trinôme porte TOUJOURS le signe de a — et la réponse est « tous » ou « vide ».",
+    "en": "Compute Δ. If it is negative, the quadratic ALWAYS has the sign of a — and the answer is “all” or “empty”."
   },
   "Calcule τ = R·C = #×#³ · #×#⁻⁶ s e a carga final Q = #·# μC; depois q = Q·(# − e elevado a −t/τ).": {
     "fr": "Calculez τ = R·C = #×#³ · #×#⁻⁶ s et la charge finale Q = #·# μC ; puis q = Q·(# − e à la puissance −t/τ).",
@@ -4706,6 +4790,10 @@
   "Condutividade baixa: é disso que são feitos os isolantes.": {
     "fr": "Conductivité faible : c’est de cela que sont faits les isolants.",
     "en": "Low conductivity: that is what insulators are made of."
+  },
+  "Conferimos os termos do meio com #u²v e #uv².": {
+    "fr": "Nous vérifions les termes du milieu avec #u²v et #uv².",
+    "en": "We check the middle terms with #u²v and #uv²."
   },
   "Conferimos que não é a mesma reta: o termo independente NÃO segue a proporção.": {
     "fr": "Nous vérifions que ce n’est pas la même droite : le terme constant NE suit PAS la proportion.",
@@ -5895,9 +5983,21 @@
     "fr": "Deux points du graphique d’origine, séparés par la largeur donnée.",
     "en": "Two points of the original graph, separated by the given width."
   },
+  "Dois quadrados subtraídos: #x² é (#x)² e # é o quadrado de quem?": {
+    "fr": "Deux carrés soustraits : #x² vaut (#x)² et # est le carré de quoi ?",
+    "en": "Two squares subtracted: #x² is (#x)² and # is the square of what?"
+  },
   "Dois quadrados subtraídos: x² − r² = (x − r)(x + r). Qual número ao quadrado dá o termo solto?": {
     "fr": "Deux carrés soustraits : x² − r² = (x − r)(x + r). Quel nombre au carré donne le terme constant ?",
     "en": "Two squares subtracted: x² − r² = (x − r)(x + r). Which number squared gives the constant term?"
+  },
+  "Dois retângulos de área ab aparecem nos cantos — eles são o termo do meio.": {
+    "fr": "Deux rectangles d’aire ab apparaissent dans les coins — ce sont eux, le terme du milieu.",
+    "en": "Two rectangles of area ab show up in the corners — they are the middle term."
+  },
+  "Dois termos, os dois quadrados perfeitos, subtraídos: é diferença de quadrados.": {
+    "fr": "Deux termes, tous deux carrés parfaits, soustraits : c’est une différence de carrés.",
+    "en": "Two terms, both perfect squares, subtracted: it is a difference of squares."
   },
   "Dois terços desse cilindro é o volume da esfera.": {
     "fr": "Les deux tiers de ce cylindre sont le volume de la sphère.",
@@ -6450,6 +6550,10 @@
   "Em (#, #).": {
     "fr": "En (#, #).",
     "en": "At (#, #)."
+  },
+  "Em (a + b)(a − b) os dois termos cruzados se cancelam. O que sobra no termo em x?": {
+    "fr": "Dans (a + b)(a − b), les deux termes croisés s’annulent. Que reste-t-il dans le terme en x ?",
+    "en": "In (a + b)(a − b) the two cross terms cancel. What is left in the x term?"
   },
   "Em (y − k), o k aparece com sinal trocado: (y + #) quer dizer k = #.": {
     "fr": "Dans (y − k), le k apparaît avec le signe inversé : (y + #) veut dire k = #.",
@@ -7819,6 +7923,10 @@
     "fr": "C’est le coefficient d’une autre substance de l’équation. La question en nomme une : vérifiez laquelle.",
     "en": "That is the coefficient of another substance in the equation. The question names one: check which."
   },
+  "Esse é o coeficiente de x², que vale #p²q. O pedido é o próprio q.": {
+    "fr": "C’est le coefficient de x², qui vaut #p²q. Ce qui est demandé, c’est q lui-même.",
+    "en": "That is the coefficient of x², which is #p²q. What is asked for is q itself."
+  },
   "Esse é o comprimento do ARCO, uma medida linear. A área do setor usa πr², não #πr.": {
     "fr": "C’est la longueur de l’ARC, une mesure linéaire. L’aire du secteur utilise πr², et non #πr.",
     "en": "That is the length of the ARC, a linear measure. The sector area uses πr², not #πr."
@@ -8210,6 +8318,10 @@
   "Esta é a solução GERAL: uma família inteira de funções.": {
     "fr": "C’est la solution GÉNÉRALE : toute une famille de fonctions.",
     "en": "This is the GENERAL solution: a whole family of functions."
+  },
+  "Esta é a única identidade em que o termo do meio desaparece.": {
+    "fr": "C’est la seule identité où le terme du milieu disparaît.",
+    "en": "This is the only identity in which the middle term disappears."
   },
   "Este termo não aparece na série: o coeficiente é zero, por simetria da função.": {
     "fr": "Ce terme n’apparaît pas dans la série : le coefficient est nul, par symétrie de la fonction.",
@@ -8782,6 +8894,10 @@
   "Fora da diagonal o elemento fica no lugar, mas troca de SINAL.": {
     "fr": "Hors de la diagonale, l’élément reste en place, mais change de SIGNE.",
     "en": "Off the diagonal the entry stays in place, but flips its SIGN."
+  },
+  "Fora desse ponto, o trinômio tem o sinal de a (negativo).": {
+    "fr": "En dehors de ce point, le trinôme porte le signe de a (négatif).",
+    "en": "Away from that point, the quadratic has the sign of a (negative)."
   },
   "Fora desse ponto, o trinômio tem o sinal de a (positivo).": {
     "fr": "En dehors de ce point, le trinôme a le signe de a (positif).",
@@ -9987,6 +10103,10 @@
     "fr": "Multipliez en haut et en bas par le conjugué du dénominateur, -i : en bas il reste (#)² + (#)², un nombre réel.",
     "en": "Multiply top and bottom by the conjugate of the denominator, -i: below you get (#)² + (#)², a real number."
   },
+  "Multiplique o binômio por ele mesmo e some os termos semelhantes.": {
+    "fr": "Multipliez le binôme par lui-même et additionnez les termes semblables.",
+    "en": "Multiply the binomial by itself and add the like terms."
+  },
   "Multiplique os dois lados pelo mmc de # e #: as frações viram números inteiros.": {
     "fr": "Multipliez les deux côtés par le ppcm de # et # : les fractions deviennent des entiers.",
     "en": "Multiply both sides by the lcm of # and #: the fractions become whole numbers."
@@ -10855,6 +10975,10 @@
     "fr": "Pas besoin de multiplier les matrices : det(A·B) = det A × det B. Calculez chacun (ad − bc) et multipliez.",
     "en": "No need to multiply the matrices: det(A·B) = det A × det B. Compute each one (ad − bc) and multiply."
   },
+  "Não se multiplica cruzado: o sinal do denominador é desconhecido, e o sentido poderia inverter.": {
+    "fr": "On ne multiplie pas en croix : le signe du dénominateur est inconnu, et le sens pourrait s’inverser.",
+    "en": "You do not cross-multiply: the sign of the denominator is unknown, and the direction could flip."
+  },
   "Não é o mais leve nem o de menos massa: compare quantas «receitas» cada um alcança — mols de CH₄ e de O₂, cada um DIVIDIDO pelo seu coeficiente.": {
     "fr": "Ce n’est ni le plus léger ni celui de moindre masse : comparez combien de « recettes » chacun atteint — moles de CH₄ et de O₂, chacune DIVISÉE par son coefficient.",
     "en": "It is not the lightest nor the one with least mass: compare how many “recipes” each one reaches — moles of CH₄ and of O₂, each DIVIDED by its coefficient."
@@ -11571,6 +11695,10 @@
     "fr": "La poussée d’Archimède est le poids du fluide déplacé par le corps.",
     "en": "The buoyant force is the weight of the fluid the body displaces."
   },
+  "O enunciado pede apenas o coeficiente do termo em x.": {
+    "fr": "L’énoncé ne demande que le coefficient du terme en x.",
+    "en": "The question only asks for the coefficient of the x term."
+  },
   "O enunciado pede o FATOR, que é a razão entre os erros, e não a diferença entre eles.": {
     "fr": "L’énoncé demande le FACTEUR, c’est-à-dire le rapport entre les erreurs, et non leur différence.",
     "en": "The question asks for the FACTOR, the ratio between the errors, not the difference between them."
@@ -11682,6 +11810,10 @@
   "O fator (x - #) zera no número de sinal contrário ao que está dentro dele.": {
     "fr": "Le facteur (x - #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
     "en": "The factor (x - #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
+  "O fator -x - # tem coeficiente de x negativo: ele é POSITIVO à esquerda da raiz.": {
+    "fr": "Le facteur -x - # a un coefficient de x négatif : il est POSITIF à gauche de la racine.",
+    "en": "The factor -x - # has a negative coefficient of x: it is POSITIVE to the left of the root."
   },
   "O fator com n tende a #, mas o que importa é o que sobra além dele.": {
     "fr": "Le facteur en n tend vers #, mais ce qui compte est ce qui reste au-delà.",
@@ -12131,6 +12263,14 @@
     "fr": "Le parallèle, par produit sur somme.",
     "en": "The parallel, by product over sum."
   },
+  "O pedaço está certo, mas as fronteiras ENTRAM: a relação tem «ou igual», e nelas a expressão vale #.": {
+    "fr": "Le morceau est juste, mais les bornes ENTRENT : la relation comporte « ou égal », et l’expression y vaut #.",
+    "en": "The piece is right, but the boundaries ARE included: the relation has “or equal”, and the expression is # at them."
+  },
+  "O pedaço está certo, mas as fronteiras NÃO entram: a desigualdade é estrita, e nelas a expressão vale #.": {
+    "fr": "Le morceau est juste, mais les bornes N’entrent PAS : l’inégalité est stricte, et l’expression y vaut #.",
+    "en": "The piece is right, but the boundaries are NOT included: the inequality is strict, and the expression is # at them."
+  },
   "O perímetro soma os QUATRO lados: duas larguras e dois comprimentos.": {
     "fr": "Le périmètre additionne les QUATRE côtés : deux largeurs et deux longueurs.",
     "en": "The perimeter adds the FOUR sides: two widths and two lengths."
@@ -12271,6 +12411,14 @@
     "fr": "Le prix d’un kilo est celui du paquet divisé par ses kilos.",
     "en": "The price of one kilo is the pack price divided by its kilos."
   },
+  "O primeiro e o último termo são cubos. A raiz cúbica conserva o sinal.": {
+    "fr": "Le premier et le dernier terme sont des cubes. La racine cubique conserve le signe.",
+    "en": "The first and last terms are cubes. The cube root keeps the sign."
+  },
+  "O primeiro e o último termo são quadrados perfeitos.": {
+    "fr": "Le premier et le dernier terme sont des carrés parfaits.",
+    "en": "The first and last terms are perfect squares."
+  },
   "O primeiro pivô é zero: troque a L₁ com uma linha que tenha a primeira entrada diferente de zero, e só então elimine.": {
     "fr": "Le premier pivot est nul : échangez la L₁ avec une ligne dont la première entrée est non nulle, et éliminez seulement ensuite.",
     "en": "The first pivot is zero: swap L₁ with a row whose first entry is nonzero, and only then eliminate."
@@ -12278,6 +12426,10 @@
   "O primeiro termo deixado de fora é o #º, não o #º.": {
     "fr": "Le premier terme laissé de côté est le #e, et non le #e.",
     "en": "The first term left out is the #th, not the #th."
+  },
+  "O primeiro termo é (#x)², então p = #. O último é q²: tire a raiz e dê a q o sinal do termo do meio.": {
+    "fr": "Le premier terme vaut (#x)², donc p = #. Le dernier vaut q² : prenez la racine et donnez à q le signe du terme du milieu.",
+    "en": "The first term is (#x)², so p = #. The last is q²: take the root and give q the sign of the middle term."
   },
   "O prisma tem duas bases de # lados ligadas por # faces laterais.": {
     "fr": "Le prisme a deux bases de # côtés reliées par # faces latérales.",
@@ -12607,6 +12759,10 @@
     "fr": "Le signe moins est ce qu’on oublie : le cosinus commence par descendre.",
     "en": "The minus sign is the part people forget: the cosine starts by going down."
   },
+  "O sinal de q é o sinal do termo do meio.": {
+    "fr": "Le signe de q est celui du terme du milieu.",
+    "en": "The sign of q is the sign of the middle term."
+  },
   "O sinal de ∫v du é NEGATIVO na fórmula de integração por partes.": {
     "fr": "Le signe de ∫v du est NÉGATIF dans la formule d’intégration par parties.",
     "en": "The sign of ∫v du is NEGATIVE in the integration-by-parts formula."
@@ -12618,6 +12774,10 @@
   "O sinal do segundo termo está errado: o discriminante é b ao quadrado MENOS quatro vezes o produto.": {
     "fr": "Le signe du second terme est faux : le discriminant est b au carré MOINS quatre fois le produit.",
     "en": "The sign of the second term is wrong: the discriminant is b squared MINUS four times the product."
+  },
+  "O sinal do termo do meio acompanha o sinal da parcela do binômio. Confira se está diante de uma soma ou de uma diferença.": {
+    "fr": "Le signe du terme du milieu suit le signe du terme du binôme. Vérifiez si vous êtes devant une somme ou une différence.",
+    "en": "The sign of the middle term follows the sign of the binomial’s term. Check whether you are facing a sum or a difference."
   },
   "O sinal está invertido. Com b e c positivos, as duas raízes são negativas — é isso que faz o sistema voltar ao repouso.": {
     "fr": "Le signe est inversé. Avec b et c positifs, les deux racines sont négatives — c’est ce qui ramène le système au repos.",
@@ -12698,6 +12858,10 @@
   "O sinal pedido nunca acontece: nenhum número real serve.": {
     "fr": "Le signe demandé ne se produit jamais : aucun nombre réel ne convient.",
     "en": "The required sign never happens: no real number works."
+  },
+  "O sinal pedido é o que ele tem sempre: todo número real serve.": {
+    "fr": "Le signe demandé est celui qu’il a toujours : tout nombre réel convient.",
+    "en": "The sign asked for is the one it always has: every real number works."
   },
   "O sinal saiu trocado. Confira o determinante, ad − bc, e o sinal da adjunta.": {
     "fr": "Le signe est inversé. Vérifiez le déterminant, ad − bc, et le signe de l’adjointe.",
@@ -12782,6 +12946,26 @@
   "O termo de ordem k + # usa k como índice: o primeiro termo é k = #.": {
     "fr": "Le terme d’ordre k + # utilise k comme indice : le premier terme est k = #.",
     "en": "The term of order k + # uses k as its index: the first term is k = #."
+  },
+  "O termo do meio confirma: # vezes #x vezes #.": {
+    "fr": "Le terme du milieu confirme : # fois #x fois #.",
+    "en": "The middle term confirms it: # times #x times #."
+  },
+  "O termo do meio confirma: # vezes x vezes #.": {
+    "fr": "Le terme du milieu confirme : # fois x fois #.",
+    "en": "The middle term confirms it: # times x times #."
+  },
+  "O termo do meio é negativo, então o binômio é uma DIFERENÇA: q tem esse sinal.": {
+    "fr": "Le terme du milieu est négatif, donc le binôme est une DIFFÉRENCE : q porte ce signe.",
+    "en": "The middle term is negative, so the binomial is a DIFFERENCE: q carries that sign."
+  },
+  "O termo do meio é o que se perde ao escrever, erradamente, apenas a² + b².": {
+    "fr": "Le terme du milieu est ce qu’on perd en écrivant, à tort, seulement a² + b².",
+    "en": "The middle term is what gets lost when you wrongly write just a² + b²."
+  },
+  "O termo do meio é positivo, então o binômio é uma SOMA: q tem esse sinal.": {
+    "fr": "Le terme du milieu est positif, donc le binôme est une SOMME : q porte ce signe.",
+    "en": "The middle term is positive, so the binomial is a SUM: q carries that sign."
   },
   "O termo em x vem de dois produtos cruzados: #·# e #·#.": {
     "fr": "Le terme en x vient de deux produits croisés : #·# et #·#.",
@@ -13171,6 +13355,10 @@
     "fr": "L’indice du bas dit où cela commence ; le nombre du haut, où cela s’arrête.",
     "en": "The index below says where it starts; the number above, where it stops."
   },
+  "O último termo é q²: tire a raiz quadrada. O sinal de q é o sinal do termo do meio.": {
+    "fr": "Le dernier terme vaut q² : prenez la racine carrée. Le signe de q est celui du terme du milieu.",
+    "en": "The last term is q²: take the square root. The sign of q is the sign of the middle term."
+  },
   "O Π multiplica: troque k por #, #, …, # e multiplique os termos um a um.": {
     "fr": "Le Π multiplie : remplacez k par #, #, …, # et multipliez les termes un à un.",
     "en": "The Π multiplies: replace k by #, #, …, # and multiply the terms one by one."
@@ -13222,6 +13410,10 @@
   "Os coeficientes # ficaram de fora. Eles não se escrevem na equação, mas existem: uma molécula de cada substância é uma, não zero.": {
     "fr": "Les coefficients # ont été laissés de côté. Ils ne s’écrivent pas dans l’équation, mais ils existent : une molécule de chaque substance, c’est une, et non zéro.",
     "en": "The coefficients # were left out. They are not written in the equation, but they are there: one molecule of each substance is one, not zero."
+  },
+  "Os coeficientes #, #, #, # são a quarta linha do triângulo de Pascal.": {
+    "fr": "Les coefficients #, #, #, # forment la quatrième ligne du triangle de Pascal.",
+    "en": "The coefficients #, #, #, # are the fourth row of Pascal’s triangle."
   },
   "Os coeficientes de x, y e z são as coordenadas da normal.": {
     "fr": "Les coefficients de x, y et z sont les coordonnées de la normale.",
@@ -13494,6 +13686,10 @@
   "Os dois pontos têm a mesma abscissa, então a reta é vertical.": {
     "fr": "Les deux points ont la même abscisse, donc la droite est verticale.",
     "en": "The two points have the same abscissa, so the line is vertical."
+  },
+  "Os dois termos do meio são iguais — é daí que sai o \"#ab\".": {
+    "fr": "Les deux termes du milieu sont égaux — c’est de là que vient le « #ab ».",
+    "en": "The two middle terms are equal — that is where the “#ab” comes from."
   },
   "Os dois termos são cubos perfeitos: #x³ é o cubo de #x e # é o cubo de #.": {
     "fr": "Les deux termes sont des cubes parfaits : #x³ est le cube de #x et # est le cube de #.",
@@ -14607,9 +14803,25 @@
     "fr": "Nous voulons le produit négatif ou nul : le morceau du milieu, zéros inclus.",
     "en": "We want the product negative or zero: the middle piece, zeros included."
   },
+  "Queremos o produto negativo ou zero: os pedaços de fora, com os zeros incluídos.": {
+    "fr": "Nous voulons le produit négatif ou nul : les morceaux extérieurs, zéros compris.",
+    "en": "We want the product negative or zero: the outer pieces, with the zeros included."
+  },
   "Queremos o produto negativo: o pedaço do meio, sem os zeros.": {
     "fr": "Nous voulons le produit négatif : le morceau du milieu, sans les zéros.",
     "en": "We want the product negative: the middle piece, without the zeros."
+  },
+  "Queremos o produto negativo: os pedaços de fora, sem os zeros.": {
+    "fr": "Nous voulons le produit négatif : les morceaux extérieurs, sans les zéros.",
+    "en": "We want the product negative: the outer pieces, without the zeros."
+  },
+  "Queremos o produto positivo ou zero: o pedaço do meio, com os zeros incluídos.": {
+    "fr": "Nous voulons le produit positif ou nul : le morceau du milieu, zéros compris.",
+    "en": "We want the product positive or zero: the middle piece, with the zeros included."
+  },
+  "Queremos o produto positivo ou zero: os pedaços de fora, com os zeros incluídos.": {
+    "fr": "Nous voulons le produit positif ou nul : les morceaux extérieurs, zéros compris.",
+    "en": "We want the product positive or zero: the outer pieces, with the zeros included."
   },
   "Queremos o produto positivo: o pedaço do meio, sem os zeros.": {
     "fr": "Nous voulons le produit positif : le morceau du milieu, sans les zéros.",
@@ -14618,6 +14830,10 @@
   "Queremos o produto positivo: os pedaços de fora, sem os zeros.": {
     "fr": "Nous voulons le produit positif : les morceaux extérieurs, sans les zéros.",
     "en": "We want the product positive: the outer pieces, without the zeros."
+  },
+  "Queremos o trinômio negativo ou zero: o pedaço ENTRE as raízes, com as raízes incluídas.": {
+    "fr": "Nous voulons le trinôme négatif ou nul : le morceau ENTRE les racines, bornes comprises.",
+    "en": "We want the quadratic negative or zero: the piece BETWEEN the roots, with the roots included."
   },
   "Queremos o trinômio negativo ou zero: os dois pedaços de FORA, com as raízes incluídas.": {
     "fr": "Nous voulons le trinôme négatif ou nul : les deux morceaux EXTÉRIEURS, racines incluses.",
@@ -14630,6 +14846,14 @@
   "Queremos o trinômio negativo: os dois pedaços de FORA, sem as raízes.": {
     "fr": "Nous voulons le trinôme negativo : les deux morceaux EXTÉRIEURS, sans les racines.",
     "en": "We want the quadratic negativo: the two OUTER pieces, without the roots."
+  },
+  "Queremos o trinômio positivo ou zero: o pedaço ENTRE as raízes, com as raízes incluídas.": {
+    "fr": "Nous voulons le trinôme positif ou nul : le morceau ENTRE les racines, bornes comprises.",
+    "en": "We want the quadratic positive or zero: the piece BETWEEN the roots, with the roots included."
+  },
+  "Queremos o trinômio positivo ou zero: os dois pedaços de FORA, com as raízes incluídas.": {
+    "fr": "Nous voulons le trinôme positif ou nul : les deux morceaux EXTÉRIEURS, bornes comprises.",
+    "en": "We want the quadratic positive or zero: the two OUTER pieces, with the roots included."
   },
   "Queremos o trinômio positivo: o pedaço ENTRE as raízes, sem as raízes.": {
     "fr": "Nous voulons le trinôme positivo : le morceau ENTRE les racines, sans les racines.",
@@ -14698,6 +14922,10 @@
   "Regra #–#–#: a até #, # e # desvios da média ficam cerca de #%, #% e #%.": {
     "fr": "Règle #–#–# : à #, # et # écarts-types de la moyenne restent environ #%, #% et #%.",
     "en": "The #–#–# rule: within #, # and # standard deviations of the mean lie about #%, #% and #%."
+  },
+  "Regra rápida: «fora, sinal de a; entre, contrário de a».": {
+    "fr": "Règle rapide : « à l’extérieur, le signe de a ; entre les racines, l’opposé de a ».",
+    "en": "Quick rule: “outside, the sign of a; between, the opposite of a”."
   },
   "Repare em que faixa de x os dados foram medidos antes de confiar na previsão.": {
     "fr": "Regardez dans quelle plage de x les données ont été mesurées avant de vous fier à la prévision.",
@@ -16119,6 +16347,10 @@
     "fr": "En prenant la racine carrée.",
     "en": "Taking the square root."
   },
+  "Tire a raiz cúbica do primeiro e do último termo, mantendo o sinal; depois confira os do meio com #u²v e #uv².": {
+    "fr": "Prenez la racine cubique du premier et du dernier terme, en gardant le signe ; vérifiez ensuite ceux du milieu avec #u²v et #uv².",
+    "en": "Take the cube root of the first and last terms, keeping the sign; then check the middle ones with #u²v and #uv²."
+  },
   "Tire o ln dos dois lados: x·ln # = (x − #)·ln #. Junte os termos com x de um lado.": {
     "fr": "Prenez le ln des deux côtés : x·ln # = (x − #)·ln #. Réunissez les termes en x d’un côté.",
     "en": "Take ln on both sides: x·ln # = (x − #)·ln #. Gather the x terms on one side."
@@ -16630,6 +16862,10 @@
   "Você contou como se as duas pontas fossem fechadas. Parêntese deixa o extremo de fora; colchete o inclui — e é só esse desenho que muda a conta.": {
     "fr": "Vous avez compté comme si les deux extrémités étaient fermées. La parenthèse laisse la borne dehors ; le crochet l’inclut — et c’est ce seul dessin qui change le compte.",
     "en": "You counted as if both ends were closed. A parenthesis leaves the endpoint out; a bracket includes it — and that shape alone changes the count."
+  },
+  "Você contou o termo cruzado uma vez só. Na distribuição ele aparece DUAS vezes — por isso o coeficiente é #ab = #, e não ab.": {
+    "fr": "Vous n’avez compté le terme croisé qu’une fois. Dans le développement il apparaît DEUX fois — d’où le coefficient #ab = #, et non ab.",
+    "en": "You counted the cross term only once. In the expansion it appears TWICE — hence the coefficient #ab = #, not ab."
   },
   "Você contou quantas parcelas existem, não quanto elas somam. O somatório devolve a soma dos valores, não a quantidade deles.": {
     "fr": "Vous avez compté combien il y a de termes, et non ce qu’ils totalisent. La somme renvoie le total des valeurs, pas leur nombre.",
@@ -17215,6 +17451,10 @@
     "fr": "Nous annulons le reste de la colonne # : L₃ ← L₃ − L₂.",
     "en": "We clear the rest of column #: L₃ ← L₃ − L₂."
   },
+  "Zero seria o caso de a identidade não ter termo do meio — o que só acontece na diferença de quadrados. No quadrado de um binômio, os dois termos cruzados se SOMAM em vez de se cancelar.": {
+    "fr": "Zéro correspondrait au cas où l’identité n’a pas de terme du milieu — ce qui n’arrive que pour la différence de carrés. Dans le carré d’un binôme, les deux termes croisés s’ADDITIONNENT au lieu de s’annuler.",
+    "en": "Zero would be the case where the identity has no middle term — which only happens in the difference of squares. In the square of a binomial, the two cross terms ADD instead of cancelling."
+  },
   "Zero é resposta: este subnível ainda não começou a receber elétrons.": {
     "fr": "Zéro est une réponse : cette sous-couche n’a pas encore commencé à recevoir des électrons.",
     "en": "Zero is an answer: this subshell has not started receiving electrons yet."
@@ -17394,6 +17634,10 @@
   "v = √(T/μ): divida # por # e tire a raiz quadrada.": {
     "fr": "v = √(T/μ) : divisez # par # et prenez la racine carrée.",
     "en": "v = √(T/μ): divide # by # and take the square root."
+  },
+  "x = # zera o DENOMINADOR: ali a fração não existe, então essa fronteira fica de fora mesmo com «ou igual». Só a do numerador (x = #) entra.": {
+    "fr": "x = # annule le DÉNOMINATEUR : la fraction n’y existe pas, cette borne reste donc dehors même avec « ou égal ». Seule celle du numérateur (x = #) entre.",
+    "en": "x = # makes the DENOMINATOR zero: the fraction does not exist there, so that boundary stays out even with “or equal”. Only the numerator’s (x = #) is included."
   },
   "x = # é o CENTRO da série, não o raio. O raio sai da desigualdade |x − a| < R.": {
     "fr": "x = # est le CENTRE de la série, et non le rayon. Le rayon sort de l’inégalité |x − a| < R.",
@@ -17791,9 +18035,29 @@
     "fr": "C'est une parabole, et le sommet est dans la formule de toujours.",
     "en": "It is a parabola, and the vertex is in the usual formula."
   },
+  "Δ < #: a parábola não toca o eixo. Com a = #, ela fica inteira ABAIXO dele — o trinômio é sempre negativo.": {
+    "fr": "Δ < # : la parabole ne touche pas l’axe. Avec a = #, elle reste entièrement EN DESSOUS — le trinôme est toujours négatif.",
+    "en": "Δ < #: the parabola does not touch the axis. With a = #, it stays entirely BELOW it — the quadratic is always negative."
+  },
   "Δ < #: a parábola não toca o eixo. Com a = #, ela fica inteira ACIMA dele — o trinômio é sempre positivo.": {
     "fr": "Δ < # : la parabole ne touche pas l’axe. Avec a = #, elle reste entièrement AU-DESSUS — le trinôme est toujours positif.",
     "en": "Δ < #: the parabola does not meet the axis. With a = #, it stays entirely ABOVE it — the quadratic is always positive."
+  },
+  "Δ < #: o trinômio tem SEMPRE o sinal de a (negativo). A resposta é tudo ou nada.": {
+    "fr": "Δ < # : le trinôme porte TOUJOURS le signe de a (négatif). La réponse est tout ou rien.",
+    "en": "Δ < #: the quadratic ALWAYS has the sign of a (negative). The answer is all or nothing."
+  },
+  "Δ < #: o trinômio tem SEMPRE o sinal de a (positivo). A resposta é tudo ou nada.": {
+    "fr": "Δ < # : le trinôme porte TOUJOURS le signe de a (positif). La réponse est tout ou rien.",
+    "en": "Δ < #: the quadratic ALWAYS has the sign of a (positive). The answer is all or nothing."
+  },
+  "Δ = #: o trinômio só vale # em x = #; fora dali tem o sinal de a. Decida se o ponto x = # entra pela relação: com «ou igual», entra.": {
+    "fr": "Δ = # : le trinôme ne vaut # qu’en x = # ; ailleurs il porte le signe de a. Décidez si le point x = # entre selon la relation : avec « ou égal », il entre.",
+    "en": "Δ = #: the quadratic is only # at x = #; elsewhere it has the sign of a. Decide whether the point x = # is included from the relation: with “or equal”, it is included."
+  },
+  "Δ = #: o trinômio só vale # em x = #; fora dali tem o sinal de a. Decida se o ponto x = # entra pela relação: estrita, não entra.": {
+    "fr": "Δ = # : le trinôme ne vaut # qu’en x = # ; ailleurs il porte le signe de a. Décidez si le point x = # entre selon la relation : stricte, il n’entre pas.",
+    "en": "Δ = #: the quadratic is only # at x = #; elsewhere it has the sign of a. Decide whether the point x = # is included from the relation: strict, it is not included."
   },
   "Δ = #: o trinômio zera num ponto só e é positivo em todo o resto. Esse ponto fica de fora.": {
     "fr": "Δ = # : le trinôme s’annule en un seul point et est positif partout ailleurs. Ce point reste exclu.",
