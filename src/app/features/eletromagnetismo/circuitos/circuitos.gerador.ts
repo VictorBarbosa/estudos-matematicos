@@ -1,8 +1,33 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { associacaoComPassos, cargaRcComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+
+/**
+ * «em SÉRIE» e «em PARALELO», nas três línguas.
+ *
+ * A palavra era escolhida por um `if` e entrava no molde já em português —
+ * e saía assim na tela francesa. O molde continua um só; o que muda é que o
+ * valor da lacuna chega na língua de quem lê.
+ */
+const LIGACAO = {
+  pt: { serie: 'SÉRIE', paralelo: 'PARALELO' },
+  fr: { serie: 'SÉRIE', paralelo: 'PARALLÈLE' },
+  en: { serie: 'SERIES', paralelo: 'PARALLEL' },
+} as const;
+
+/** Duas pilhas ligadas no mesmo sentido, ou uma contra a outra. */
+const SENTIDO = {
+  pt: { mesmo: 'no MESMO sentido', oposicao: 'em OPOSIÇÃO (polos se enfrentando)' },
+  fr: { mesmo: 'dans le MÊME sens', oposicao: 'en OPPOSITION (pôles face à face)' },
+  en: { mesmo: 'in the SAME direction', oposicao: 'in OPPOSITION (poles facing each other)' },
+} as const;
 
 const { saoEquivalentes: proximos, formatar } = numeroComCasas(2, 1e-4);
 const tex = (v: number): string => formatar(v).replace(',', '{,}');
@@ -226,14 +251,10 @@ function equivalente(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-eq-${tipo}-${valores.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('circuitos', 'forma-4')[0]!,
-      { expressao1: valores.join(', '), expressao2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO' },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-4')[0]!, {
-      expressao1: valores.join(', '),
-      expressao2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO',
+    ...enunciadoDoMoldePorIdioma(moldesDe('circuitos', 'forma-4')[0]!, {
+      pt: { expressao1: valores.join(', '), expressao2: LIGACAO.pt[tipo] },
+      fr: { expressao1: valores.join(', '), expressao2: LIGACAO.fr[tipo] },
+      en: { expressao1: valores.join(', '), expressao2: LIGACAO.en[tipo] },
     }),
     enunciadoTex: `${valores.map((v, i) => `R_${i + 1} = ${v}`).join(' \\quad ')} \\quad (\\Omega)`,
     gabarito,
@@ -394,23 +415,10 @@ function malha(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `circ-malha-${e1}-${e2}-${r1}-${r2}-${oposicao ? 'op' : 'fa'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('circuitos', 'forma-7')[0]!,
-      {
-        e1,
-        e2,
-        expressao1: oposicao ? 'em OPOSIÇÃO (polos se enfrentando)' : 'no MESMO sentido',
-        r1,
-        r2,
-      },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('circuitos', 'forma-7')[0]!, {
-      e1,
-      e2,
-      expressao1: oposicao ? 'em OPOSIÇÃO (polos se enfrentando)' : 'no MESMO sentido',
-      r1,
-      r2,
+    ...enunciadoDoMoldePorIdioma(moldesDe('circuitos', 'forma-7')[0]!, {
+      pt: { e1, e2, expressao1: SENTIDO.pt[oposicao ? 'oposicao' : 'mesmo'], r1, r2 },
+      fr: { e1, e2, expressao1: SENTIDO.fr[oposicao ? 'oposicao' : 'mesmo'], r1, r2 },
+      en: { e1, e2, expressao1: SENTIDO.en[oposicao ? 'oposicao' : 'mesmo'], r1, r2 },
     }),
     enunciadoTex: `\\varepsilon_1 = ${e1}\\ \\text{V} \\qquad \\varepsilon_2 = ${e2}\\ \\text{V} \\qquad R_1 = ${r1}\\ \\Omega \\qquad R_2 = ${r2}\\ \\Omega`,
     gabarito,

@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   FuncaoPorPartes,
   Polinomio,
@@ -23,6 +28,13 @@ import {
   Nivel,
   semColisoes,
 } from '@core/treino/models/treino.model';
+
+/** O lado por onde o limite se aproxima, na língua de quem lê. */
+const LADO = {
+  pt: { esquerda: 'ESQUERDA', direita: 'DIREITA' },
+  fr: { esquerda: 'GAUCHE', direita: 'DROITE' },
+  en: { esquerda: 'LEFT', direita: 'RIGHT' },
+} as const;
 
 /**
  * Exercícios de função definida por partes.
@@ -204,14 +216,10 @@ function doLateral(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `lat-${fronteira}-${pelaEsquerda}-${esquerda.toString()}-${direita.toString()}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('funcoes-por-partes', 'forma-3')[0]!,
-      { fronteira, v1: pelaEsquerda ? 'ESQUERDA' : 'DIREITA' },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('funcoes-por-partes', 'forma-3')[0]!, {
-      fronteira,
-      v1: pelaEsquerda ? 'ESQUERDA' : 'DIREITA',
+    ...enunciadoDoMoldePorIdioma(moldesDe('funcoes-por-partes', 'forma-3')[0]!, {
+      pt: { fronteira, v1: LADO.pt[pelaEsquerda ? 'esquerda' : 'direita'] },
+      fr: { fronteira, v1: LADO.fr[pelaEsquerda ? 'esquerda' : 'direita'] },
+      en: { fronteira, v1: LADO.en[pelaEsquerda ? 'esquerda' : 'direita'] },
     }),
     enunciadoTex: porPartesParaTex(f),
     gabarito,

@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   CORPOS_RIGIDOS,
   CorpoRigido,
@@ -85,23 +90,28 @@ function doCorpoRigido(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `rig-${corpo.nome}-${massa}-${raio}-${omega}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('momento-angular', 'forma-1')[0]!,
-      {
-        v1: capitalizar(artigo(corpo)),
-        v2: corpo.nome,
+    ...enunciadoDoMoldePorIdioma(moldesDe('momento-angular', 'forma-1')[0]!, {
+      pt: {
+        v1: capitalizar(corpoNa('pt', corpo)[0]),
+        v2: corpoNa('pt', corpo)[1],
         v3: numero(massa),
         v4: numero(raio),
         v5: numero(omega),
       },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('momento-angular', 'forma-1')[0]!, {
-      v1: capitalizar(artigo(corpo)),
-      v2: corpo.nome,
-      v3: numero(massa),
-      v4: numero(raio),
-      v5: numero(omega),
+      fr: {
+        v1: capitalizar(corpoNa('fr', corpo)[0]),
+        v2: corpoNa('fr', corpo)[1],
+        v3: numero(massa),
+        v4: numero(raio),
+        v5: numero(omega),
+      },
+      en: {
+        v1: capitalizar(corpoNa('en', corpo)[0]),
+        v2: corpoNa('en', corpo)[1],
+        v3: numero(massa),
+        v4: numero(raio),
+        v5: numero(omega),
+      },
     }),
     enunciadoTex: `L = I\\omega \\qquad I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
@@ -152,16 +162,10 @@ function daParticula(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `par-${massa}-${velocidade}-${distancia}-${angulo}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('momento-angular', 'forma-2')[0]!,
-      { v1: numero(massa), v2: numero(distancia), velocidade, angulo },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('momento-angular', 'forma-2')[0]!, {
-      v1: numero(massa),
-      v2: numero(distancia),
-      velocidade,
-      angulo,
+    ...enunciadoDoMoldePorIdioma(moldesDe('momento-angular', 'forma-2')[0]!, {
+      pt: { v1: numero(massa), v2: numero(distancia), velocidade, angulo },
+      fr: { v1: numero(massa), v2: numero(distancia), velocidade, angulo },
+      en: { v1: numero(massa), v2: numero(distancia), velocidade, angulo },
     }),
     enunciadoTex: `L = mvr\\operatorname{sen}\\theta`,
     gabarito,
@@ -213,15 +217,10 @@ function daConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `cons-${inerciaInicial}-${omegaInicial}-${fator}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('momento-angular', 'forma-3')[0]!,
-      { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('momento-angular', 'forma-3')[0]!, {
-      v1: numero(inerciaInicial),
-      v2: numero(omegaInicial),
-      v3: numero(inerciaFinal),
+    ...enunciadoDoMoldePorIdioma(moldesDe('momento-angular', 'forma-3')[0]!, {
+      pt: { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
+      fr: { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
+      en: { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
     }),
     enunciadoTex: `I_{1}\\omega_{1} = I_{2}\\omega_{2}`,
     gabarito,
@@ -276,15 +275,10 @@ function daEnergiaNaConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ene-${inerciaInicial}-${omegaInicial}-${fator}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('momento-angular', 'forma-4')[0]!,
-      { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('momento-angular', 'forma-4')[0]!, {
-      v1: numero(inerciaInicial),
-      v2: numero(omegaInicial),
-      v3: numero(inerciaFinal),
+    ...enunciadoDoMoldePorIdioma(moldesDe('momento-angular', 'forma-4')[0]!, {
+      pt: { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
+      fr: { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
+      en: { v1: numero(inerciaInicial), v2: numero(omegaInicial), v3: numero(inerciaFinal) },
     }),
     enunciadoTex: `\\Delta K = \\frac{1}{2}I_{2}\\omega_{2}^{2} - \\frac{1}{2}I_{1}\\omega_{1}^{2}`,
     gabarito,
@@ -336,6 +330,20 @@ function daEnergiaNaConservacao(nivel: Nivel, rng: Rng): Exercicio<number> {
 
 function numeroTex(valor: number): string {
   return Number(valor.toFixed(4)).toString().replace('.', '{,}');
+}
+
+/**
+ * O artigo e o nome do corpo, na língua de quem lê.
+ *
+ * O enunciado tem uma lacuna para cada um — «de {artigo} {nome}» —, porque o
+ * gênero muda com a palavra e o francês não o deduz do português.
+ */
+function corpoNa(idioma: 'pt' | 'fr' | 'en', corpo: CorpoRigido): [string, string] {
+  return idioma === 'pt'
+    ? [corpo.artigo, corpo.nome]
+    : idioma === 'fr'
+      ? [corpo.artigoFr, corpo.nomeFr]
+      : [corpo.artigoEn, corpo.nomeEn];
 }
 
 function artigo(corpo: CorpoRigido): string {

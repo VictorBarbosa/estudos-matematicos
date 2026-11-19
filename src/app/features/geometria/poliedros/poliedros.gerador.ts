@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
@@ -25,7 +30,67 @@ const NOME_BASE: Readonly<Record<number, string>> = {
   10: 'decagonal',
 };
 
+/**
+ * As palavras do enunciado, nas três línguas.
+ *
+ * Elas eram escolhidas por um `if` e entravam no molde já em português —
+ * «Combien de vértices a um prisma de base triangular ?». O molde continua um
+ * só; o que muda é que a lacuna recebe a palavra da língua de quem lê.
+ */
+const PALAVRAS = {
+  pt: {
+    elemento: { v: 'vértices', a: 'arestas', f: 'faces' },
+    solido: { prisma: 'um prisma', piramide: 'uma pirâmide' },
+    base: NOME_BASE,
+    face: { 3: 'triangulares', 4: 'quadrangulares', 5: 'pentagonais' } as Record<number, string>,
+  },
+  fr: {
+    elemento: { v: 'sommets', a: 'arêtes', f: 'faces' },
+    solido: { prisma: 'un prisme', piramide: 'une pyramide' },
+    base: {
+      3: 'triangulaire',
+      4: 'quadrangulaire',
+      5: 'pentagonale',
+      6: 'hexagonale',
+      7: 'heptagonale',
+      8: 'octogonale',
+      10: 'décagonale',
+    } as Record<number, string>,
+    face: { 3: 'triangulaires', 4: 'quadrangulaires', 5: 'pentagonales' } as Record<number, string>,
+  },
+  en: {
+    elemento: { v: 'vertices', a: 'edges', f: 'faces' },
+    solido: { prisma: 'a prism', piramide: 'a pyramid' },
+    base: {
+      3: 'triangular',
+      4: 'quadrilateral',
+      5: 'pentagonal',
+      6: 'hexagonal',
+      7: 'heptagonal',
+      8: 'octagonal',
+      10: 'decagonal',
+    } as Record<number, string>,
+    face: { 3: 'triangular', 4: 'quadrilateral', 5: 'pentagonal' } as Record<number, string>,
+  },
+} as const;
+
 const BASES = [3, 4, 5, 6, 7, 8, 10];
+
+/** Os dados do enunciado do prisma ou da pirâmide, numa língua. */
+function dadosDoSolido(
+  idioma: 'pt' | 'fr' | 'en',
+  pede: 'v' | 'a' | 'f',
+  ePrisma: boolean,
+  n: number,
+): Readonly<Record<string, string>> {
+  const palavras = PALAVRAS[idioma];
+
+  return {
+    v1: palavras.elemento[pede],
+    solido: palavras.solido[ePrisma ? 'prisma' : 'piramide'],
+    v3: palavras.base[n]!,
+  };
+}
 
 function catalogo(nivel: Nivel): Exemplo[] {
   // Nos níveis altos, famílias com bases de até 20 lados: os números crescem e
@@ -209,16 +274,10 @@ function prismaPiramide(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-pp-${solido}-${n}-${pede}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('poliedros', 'forma-2')[0]!,
-      { v1: nomes[pede], v2: ePrisma ? 'um' : 'uma', solido, v3: NOME_BASE[n] },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('poliedros', 'forma-2')[0]!, {
-      v1: nomes[pede],
-      v2: ePrisma ? 'um' : 'uma',
-      solido,
-      v3: NOME_BASE[n],
+    ...enunciadoDoMoldePorIdioma(moldesDe('poliedros', 'forma-2')[0]!, {
+      pt: dadosDoSolido('pt', pede, ePrisma, n),
+      fr: dadosDoSolido('fr', pede, ePrisma, n),
+      en: dadosDoSolido('en', pede, ePrisma, n),
     }),
     enunciadoTex: `n = ${n} \\text{ lados na base}`,
     gabarito,
@@ -287,15 +346,10 @@ function facesIguais(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `poli-iguais-${k}-${f}-${pedeV ? 'v' : 'a'}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('poliedros', 'forma-3')[0]!,
-      { f, nomeFace, v1: pedeV ? 'vértices' : 'arestas' },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('poliedros', 'forma-3')[0]!, {
-      f,
-      nomeFace,
-      v1: pedeV ? 'vértices' : 'arestas',
+    ...enunciadoDoMoldePorIdioma(moldesDe('poliedros', 'forma-3')[0]!, {
+      pt: { f, nomeFace: PALAVRAS.pt.face[k]!, v1: PALAVRAS.pt.elemento[pedeV ? 'v' : 'a'] },
+      fr: { f, nomeFace: PALAVRAS.fr.face[k]!, v1: PALAVRAS.fr.elemento[pedeV ? 'v' : 'a'] },
+      en: { f, nomeFace: PALAVRAS.en.face[k]!, v1: PALAVRAS.en.elemento[pedeV ? 'v' : 'a'] },
     }),
     enunciadoTex: `F = ${f} \\qquad \\text{cada face com } ${k} \\text{ lados}`,
     gabarito,

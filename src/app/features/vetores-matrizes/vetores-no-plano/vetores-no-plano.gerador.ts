@@ -1,8 +1,20 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { decomporComPassos, direcaoGraus, modulo, somarComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+
+/** A direção da componente pedida, na língua de quem lê. */
+const DIRECAO = {
+  pt: { x: 'horizontal', y: 'vertical' },
+  fr: { x: 'horizontale', y: 'verticale' },
+  en: { x: 'horizontal', y: 'vertical' },
+} as const;
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
 
@@ -120,15 +132,10 @@ function exercicioComponente(eixo: 'x' | 'y', nivel: Nivel, rng: Rng): Exercicio
   return {
     id: `vet-comp-${eixo}-${comprimento}-${angulo}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('vetores-no-plano', 'forma-2')[0]!,
-      { comprimento, angulo, v1: eixo === 'x' ? 'horizontal' : 'vertical' },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('vetores-no-plano', 'forma-2')[0]!, {
-      comprimento,
-      angulo,
-      v1: eixo === 'x' ? 'horizontal' : 'vertical',
+    ...enunciadoDoMoldePorIdioma(moldesDe('vetores-no-plano', 'forma-2')[0]!, {
+      pt: { comprimento, angulo, v1: DIRECAO.pt[eixo] },
+      fr: { comprimento, angulo, v1: DIRECAO.fr[eixo] },
+      en: { comprimento, angulo, v1: DIRECAO.en[eixo] },
     }),
     enunciadoTex: `|\\vec{v}| = ${comprimento} \\qquad \\theta = ${angulo}^\\circ`,
     gabarito,

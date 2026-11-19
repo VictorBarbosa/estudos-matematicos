@@ -16,10 +16,10 @@ confiar neste arquivo, que envelhece.
 | 3 | Dicas sem tradução | 805 frases | **5** |
 | 4 | Diagnósticos sem tradução | 1 640 frases | **8** |
 | 5 | Texto de exercício ainda em TypeScript | 19 arquivos, 3 832 linhas | **5** |
-| 6 | Palavra em português injetada no molde | 55 ocorrências, 14 arquivos | **2** |
+| 6 | ~~Palavra em português injetada no molde~~ | **0** | ✅ |
 | 7 | Entrada do banco sem resolução própria | 3 071 entradas, 113 tópicos | **10** |
-| 8 | Legenda que explica o termo do enunciado | não começou | **2** |
-| | **Total** | | **34** |
+| 8 | ~~Legenda que explica o termo do enunciado~~ | **0** | ✅ |
+| | **Total** | | **30** |
 
 Uma «entrega» é uma rodada de trabalho que fecha um pedaço verificável e deixa
 a suíte verde. Pelo ritmo das últimas sessões, cada uma leva de uma a duas
@@ -95,23 +95,24 @@ mais `semelhanca-e-pitagoras`, `equacao-segundo-grau`, `inequacoes-segundo-grau`
 `find src/app/features -name "*.textos.ts" -o -name "*.contextos.ts" | wc -l`
 e `grep -L "moldes.model" $(find src/app/features -name "*.gerador.ts") | wc -l`.
 
-## 6 · Palavra em português injetada no molde — 55 ocorrências, 2 entregas
+## 6 · Palavra em português injetada no molde — **fechada**
 
-O molde está nas três línguas, mas recebe do TypeScript um valor que é uma
-palavra portuguesa — `'retângulo'`, `'PARALELO'`, `'no MESMO sentido'` —, e ela
-atravessa a tradução intacta. O enunciado francês sai com a palavra em
-português no meio.
+O molde estava nas três línguas, mas a lacuna recebia o que o gerador mandava
+— «retângulo», «SÉRIE», «o dobro», «uma esfera maciça» —, e a palavra no meio
+da frase traduzida ficava em português.
 
-A saída é a de Áreas de figuras planas, repetida agora em
-`equacao-primeiro-grau`, onde «o dobro» virava «Ana has the dobro of Bia's
-age»: um molde por variação, com a palavra já escrita em cada língua. Estão em 14 arquivos; parte das 55 já é legítima — quando o gerador usa
-`enunciadoDoMoldePorIdioma`, o valor em português é o da tela portuguesa, e as
-outras duas línguas têm o seu. Separar um caso do outro
-(`cos`), que não se traduz, e a primeira entrega é separar um do outro.
+Catorze arquivos, duas saídas. Quando as variações são poucas, um molde por
+variação; quando são dezenas, `enunciadoDoMoldePorIdioma`, que dá à mesma
+lacuna o valor de cada língua. Os catálogos do core — grandezas, corpos
+rígidos, materiais, astros — passaram a guardar o nome nas três línguas, e o
+artigo junto, porque o gênero muda com a palavra e o francês não o deduz do
+português.
 
-**Como medir:** o script em
-`$CLAUDE_JOB_DIR/tmp` que varre as chamadas a `textoDoMolde` procurando valores
-que são string literal; ou, à mão, `grep -n "': '" nos geradores da lista`.
+`scripts/verificar-palavras-injetadas.mjs` reprova quem voltar ao caminho
+antigo: um literal com espaço ou acento dentro de uma chamada de molde, ou um
+valor lido de um campo de nome. Roda em `npm run verificar:geradores`.
+
+**Como medir:** `npm run verificar:geradores`.
 
 ## 7 · Entrada do banco sem resolução própria — 3 071 entradas, 10 entregas
 
@@ -126,31 +127,17 @@ formas dele se parecem.
 **Como medir:** subir `COBERTURA_MINIMA` em
 `src/app/core/enunciados/passos-do-banco.spec.ts` para 1.1 e rodar.
 
-## 8 · Legenda que explica o termo — não começou, 2 entregas
+## 8 · Legenda que explica o termo — **fechada**
 
-«Qual é a abscissa do vértice?» não diz o que é uma abscissa. O pedido foi uma
-legenda no próprio exercício.
+Quinze termos — abscissa, ordenada, vértice, diretriz, discriminante,
+assíntota, geratriz, dízima periódica… — ganham um pontilhado no enunciado e
+a explicação ao lado do cursor, nas três línguas: a palavra a reconhecer na
+tela francesa é «abscisse», não «abscissa».
 
-O que existe hoje é `src/app/curriculo/glossario.ts`: 231 termos em três
-línguas, mostrados na home por área. Falta tudo o que liga um ao outro — não há
-campo de definição (só tradução), «abscissa» e «ordenada» não estão lá, e nada
-no enunciado aponta para o glossário.
+O catálogo está em `core/enunciados/glossario/termos-do-enunciado.json`, e o
+guarda confere que cada termo cadastrado aparece de verdade em algum enunciado
+do site — um glossário que ninguém vê é peso morto. A explicação nunca é
+necessária para resolver, só para entender: em toque, a dica do navegador não
+abre.
 
-Duas entregas: a primeira dá ao glossário uma definição por termo e acrescenta
-os que faltam; a segunda liga o enunciado a ele, marcando o termo no texto.
-
-## O que já está fechado
-
-Para não recontar o que foi feito:
-
-- banco de enunciados em JSON, 7 935 arquivos, um por pergunta, separados por
-  tópico e nível;
-- 555 moldes alcançáveis, todos com guarda contra órfão e inalcançável;
-- 93 723 testes, 241 arquivos, verdes;
-- fórmulas do banco renderizadas com KaTeX no teste, e escape perdido agora
-  reprova;
-- frações com as quatro formas de operando (fração, inteiro, misto, misto com
-  fração);
-- fração geratriz mostrando o método dos deslocamentos;
-- **todo enunciado do site nas três línguas**, em todos os níveis e ramos, com
-  729 moldes alcançáveis em 8 109 arquivos.
+**Como medir:** `npm test -- --watch=false --include=app/core/enunciados/glossario/`.

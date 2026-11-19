@@ -1,9 +1,21 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { Figura, NOME_FIGURA, areaComPassos } from '@core/math';
-import { numeroEmPortugues } from '@core/treino/textos/numero-escrito';
+import { numeroEmPortugues, numeroEscrito } from '@core/treino/textos/numero-escrito';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+
+/** A figura, na língua de quem lê. */
+const FIGURA = {
+  pt: { triangulo: 'triângulo', retangulo: 'retângulo' },
+  fr: { triangulo: 'triangle', retangulo: 'rectangle' },
+  en: { triangulo: 'triangle', retangulo: 'rectangle' },
+} as const;
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.01;
 
@@ -149,19 +161,22 @@ function exercicioAlturaFaltante(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `area-alt-${triangulo ? 'tri' : 'ret'}-${base}-${altura}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('areas-de-figuras-planas', 'forma-1')[0]!,
-      {
-        v1: triangulo ? 'triângulo' : 'retângulo',
-        v2: numeroEmPortugues(area),
-        v3: numeroEmPortugues(base),
+    ...enunciadoDoMoldePorIdioma(moldesDe('areas-de-figuras-planas', 'forma-1')[0]!, {
+      pt: {
+        v1: FIGURA.pt[triangulo ? 'triangulo' : 'retangulo'],
+        v2: numeroEscrito(area, 'pt'),
+        v3: numeroEscrito(base, 'pt'),
       },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('areas-de-figuras-planas', 'forma-1')[0]!, {
-      v1: triangulo ? 'triângulo' : 'retângulo',
-      v2: numeroEmPortugues(area),
-      v3: numeroEmPortugues(base),
+      fr: {
+        v1: FIGURA.fr[triangulo ? 'triangulo' : 'retangulo'],
+        v2: numeroEscrito(area, 'fr'),
+        v3: numeroEscrito(base, 'fr'),
+      },
+      en: {
+        v1: FIGURA.en[triangulo ? 'triangulo' : 'retangulo'],
+        v2: numeroEscrito(area, 'en'),
+        v3: numeroEscrito(base, 'en'),
+      },
     }),
     enunciadoTex: `A = ${area} \\qquad b = ${base}`,
     gabarito,

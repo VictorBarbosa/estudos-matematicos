@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   argumentoGraus,
   dividirComplexosComPassos,
@@ -9,6 +14,13 @@ import {
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+
+/** A parte do complexo que a pergunta quer, na língua de quem lê. */
+const PARTE = {
+  pt: { real: 'REAL', imaginario: 'IMAGINÁRIA' },
+  fr: { real: 'RÉELLE', imaginario: 'IMAGINAIRE' },
+  en: { real: 'REAL', imaginario: 'IMAGINARY' },
+} as const;
 
 /**
  * Igualdade numérica, com uma concessão: a diferença de 360.
@@ -165,15 +177,10 @@ function exercicioProduto(parte: 'real' | 'imaginario', nivel: Nivel, rng: Rng):
   return {
     id: `cpx-prod-${parte}-${a.real}_${a.imaginario}-${b.real}_${b.imaginario}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('numeros-complexos', 'forma-2')[0]!,
-      { v1: escrever(a), v2: escrever(b), v3: parte === 'real' ? 'REAL' : 'IMAGINÁRIA' },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('numeros-complexos', 'forma-2')[0]!, {
-      v1: escrever(a),
-      v2: escrever(b),
-      v3: parte === 'real' ? 'REAL' : 'IMAGINÁRIA',
+    ...enunciadoDoMoldePorIdioma(moldesDe('numeros-complexos', 'forma-2')[0]!, {
+      pt: { v1: escrever(a), v2: escrever(b), v3: PARTE.pt[parte] },
+      fr: { v1: escrever(a), v2: escrever(b), v3: PARTE.fr[parte] },
+      en: { v1: escrever(a), v2: escrever(b), v3: PARTE.en[parte] },
     }),
     enunciadoTex: `z_1 = ${escrever(a)} \\qquad z_2 = ${escrever(b)}`,
     gabarito,

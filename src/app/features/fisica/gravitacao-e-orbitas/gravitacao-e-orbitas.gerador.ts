@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   G,
   MASSA_TERRA,
@@ -70,11 +75,11 @@ function exercicioGravidade(nivel: Nivel, rng: Rng): Exercicio<number> {
     nivel,
     enunciado: textoDoMolde(
       moldesDe('gravitacao-e-orbitas', 'forma-1')[0]!,
-      { v1: altitudeKm.toLocaleString('pt-BR') },
+      { v1: altitudeKm },
       'pt',
     ),
     traducoes: traducoesDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-1')[0]!, {
-      v1: altitudeKm.toLocaleString('pt-BR'),
+      v1: altitudeKm,
     }),
     enunciadoTex: `h = ${altitudeKm.toLocaleString('pt-BR').replace(/\./g, '\\,')}\\,\\text{km}`,
     gabarito: resultado,
@@ -217,14 +222,17 @@ function exercicioPeriodo(nivel: Nivel, rng: Rng): Exercicio<number> {
 function exercicioEscape(nivel: Nivel, rng: Rng): Exercicio<number> {
   /** Corpos do sistema solar, com massa em kg e raio em m. */
   const corpos: readonly {
+    /** O nome do astro em cada língua: «a Lua» é «la Lune» e «the Moon». */
     readonly nome: string;
+    readonly nomeFr: string;
+    readonly nomeEn: string;
     readonly massa: number;
     readonly raio: number;
   }[] = [
-    { nome: 'a Terra', massa: 5.972e24, raio: 6.371e6 },
-    { nome: 'a Lua', massa: 7.342e22, raio: 1.737e6 },
-    { nome: 'Marte', massa: 6.417e23, raio: 3.39e6 },
-    { nome: 'Júpiter', massa: 1.898e27, raio: 6.9911e7 },
+    { nome: 'a Terra', nomeFr: 'la Terre', nomeEn: 'Earth', massa: 5.972e24, raio: 6.371e6 },
+    { nome: 'a Lua', nomeFr: 'la Lune', nomeEn: 'the Moon', massa: 7.342e22, raio: 1.737e6 },
+    { nome: 'Marte', nomeFr: 'Mars', nomeEn: 'Mars', massa: 6.417e23, raio: 3.39e6 },
+    { nome: 'Júpiter', nomeFr: 'Jupiter', nomeEn: 'Jupiter', massa: 1.898e27, raio: 6.9911e7 },
   ];
 
   const corpo = rng.escolher(corpos);
@@ -234,13 +242,10 @@ function exercicioEscape(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `grav-esc-${corpo.nome}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('gravitacao-e-orbitas', 'forma-4')[0]!,
-      { v1: corpo.nome },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('gravitacao-e-orbitas', 'forma-4')[0]!, {
-      v1: corpo.nome,
+    ...enunciadoDoMoldePorIdioma(moldesDe('gravitacao-e-orbitas', 'forma-4')[0]!, {
+      pt: { v1: corpo.nome },
+      fr: { v1: corpo.nomeFr },
+      en: { v1: corpo.nomeEn },
     }),
     enunciadoTex: `M = ${corpo.massa.toExponential(3)}\\,\\text{kg} \\qquad R = ${corpo.raio.toExponential(3)}\\,\\text{m}`,
     gabarito,

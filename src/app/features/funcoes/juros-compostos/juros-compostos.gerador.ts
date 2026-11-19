@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import { jurosCompostosComPassos } from '@core/math';
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
@@ -7,6 +12,13 @@ import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/mo
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.05;
 
 import { exercicioTaxaEquivalente } from '@features/funcoes/juros-compostos/juros-compostos.taxa-equivalente';
+
+/** «o montante final» ou «o juro total», na língua de quem lê. */
+const O_QUE_SE_PEDE = {
+  pt: { montante: 'o montante final', juro: 'o juro total' },
+  fr: { montante: 'le montant final', juro: "l'intérêt total" },
+  en: { montante: 'the final amount', juro: 'the total interest' },
+} as const;
 
 type Pergunta = 'montante' | 'juro' | 'tempo-para-dobrar' | 'taxa-equivalente';
 
@@ -111,21 +123,10 @@ export const geradorJuros: GeradorExercicio<number> = {
     return {
       id: `juros-${pergunta}-${capital}${taxa}${periodos}-${rng.inteiro(0, 9999)}`,
       nivel,
-      enunciado: textoDoMolde(
-        moldesDe('juros-compostos', 'forma-2')[0]!,
-        {
-          capital,
-          taxa,
-          periodos,
-          v1: pergunta === 'montante' ? 'o montante final' : 'o juro total',
-        },
-        'pt',
-      ),
-      traducoes: traducoesDoMolde(moldesDe('juros-compostos', 'forma-2')[0]!, {
-        capital,
-        taxa,
-        periodos,
-        v1: pergunta === 'montante' ? 'o montante final' : 'o juro total',
+      ...enunciadoDoMoldePorIdioma(moldesDe('juros-compostos', 'forma-2')[0]!, {
+        pt: { capital, taxa, periodos, v1: O_QUE_SE_PEDE.pt[pergunta] },
+        fr: { capital, taxa, periodos, v1: O_QUE_SE_PEDE.fr[pergunta] },
+        en: { capital, taxa, periodos, v1: O_QUE_SE_PEDE.en[pergunta] },
       }),
       enunciadoTex: `C = ${capital} \\qquad i = ${taxa}\\% \\qquad n = ${periodos}`,
       gabarito,

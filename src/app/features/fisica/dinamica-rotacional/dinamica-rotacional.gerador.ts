@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   CORPOS_RIGIDOS,
   CorpoRigido,
@@ -84,16 +89,25 @@ function daInercia(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ine-${corpo.nome}-${massa}-${raio}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('dinamica-rotacional', 'forma-1')[0]!,
-      { v1: artigo(corpo), v2: corpo.nome, v3: numero(massa), v4: numero(raio) },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('dinamica-rotacional', 'forma-1')[0]!, {
-      v1: artigo(corpo),
-      v2: corpo.nome,
-      v3: numero(massa),
-      v4: numero(raio),
+    ...enunciadoDoMoldePorIdioma(moldesDe('dinamica-rotacional', 'forma-1')[0]!, {
+      pt: {
+        v1: corpoNa('pt', corpo)[0],
+        v2: corpoNa('pt', corpo)[1],
+        v3: numero(massa),
+        v4: numero(raio),
+      },
+      fr: {
+        v1: corpoNa('fr', corpo)[0],
+        v2: corpoNa('fr', corpo)[1],
+        v3: numero(massa),
+        v4: numero(raio),
+      },
+      en: {
+        v1: corpoNa('en', corpo)[0],
+        v2: corpoNa('en', corpo)[1],
+        v3: numero(massa),
+        v4: numero(raio),
+      },
     }),
     enunciadoTex: `I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
@@ -144,23 +158,28 @@ function doTorque(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `tor-${corpo.nome}-${massa}-${raio}-${torque}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('dinamica-rotacional', 'forma-2')[0]!,
-      {
+    ...enunciadoDoMoldePorIdioma(moldesDe('dinamica-rotacional', 'forma-2')[0]!, {
+      pt: {
         v1: numero(torque),
-        v2: artigo(corpo),
-        v3: corpo.nome,
+        v2: corpoNa('pt', corpo)[0],
+        v3: corpoNa('pt', corpo)[1],
         v4: numero(massa),
         v5: numero(raio),
       },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('dinamica-rotacional', 'forma-2')[0]!, {
-      v1: numero(torque),
-      v2: artigo(corpo),
-      v3: corpo.nome,
-      v4: numero(massa),
-      v5: numero(raio),
+      fr: {
+        v1: numero(torque),
+        v2: corpoNa('fr', corpo)[0],
+        v3: corpoNa('fr', corpo)[1],
+        v4: numero(massa),
+        v5: numero(raio),
+      },
+      en: {
+        v1: numero(torque),
+        v2: corpoNa('en', corpo)[0],
+        v3: corpoNa('en', corpo)[1],
+        v4: numero(massa),
+        v5: numero(raio),
+      },
     }),
     enunciadoTex: `\\tau = I\\alpha \\qquad I = ${corpo.fatorTex}mr^{2}`,
     gabarito,
@@ -209,23 +228,28 @@ function daEnergia(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `ene-${corpo.nome}-${massa}-${raio}-${omega}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('dinamica-rotacional', 'forma-3')[0]!,
-      {
-        v1: capitalizar(artigo(corpo)),
-        v2: corpo.nome,
+    ...enunciadoDoMoldePorIdioma(moldesDe('dinamica-rotacional', 'forma-3')[0]!, {
+      pt: {
+        v1: capitalizar(corpoNa('pt', corpo)[0]),
+        v2: corpoNa('pt', corpo)[1],
         v3: numero(massa),
         v4: numero(raio),
         v5: numero(omega),
       },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('dinamica-rotacional', 'forma-3')[0]!, {
-      v1: capitalizar(artigo(corpo)),
-      v2: corpo.nome,
-      v3: numero(massa),
-      v4: numero(raio),
-      v5: numero(omega),
+      fr: {
+        v1: capitalizar(corpoNa('fr', corpo)[0]),
+        v2: corpoNa('fr', corpo)[1],
+        v3: numero(massa),
+        v4: numero(raio),
+        v5: numero(omega),
+      },
+      en: {
+        v1: capitalizar(corpoNa('en', corpo)[0]),
+        v2: corpoNa('en', corpo)[1],
+        v3: numero(massa),
+        v4: numero(raio),
+        v5: numero(omega),
+      },
     }),
     enunciadoTex: `K_{rot} = \\frac{1}{2}I\\omega^{2}`,
     gabarito,
@@ -271,15 +295,22 @@ function doRolamento(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `rol-${corpo.nome}-${altura}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('dinamica-rotacional', 'forma-4')[0]!,
-      { v1: capitalizar(artigo(corpo)), v2: corpo.nome, v3: numero(altura) },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('dinamica-rotacional', 'forma-4')[0]!, {
-      v1: capitalizar(artigo(corpo)),
-      v2: corpo.nome,
-      v3: numero(altura),
+    ...enunciadoDoMoldePorIdioma(moldesDe('dinamica-rotacional', 'forma-4')[0]!, {
+      pt: {
+        v1: capitalizar(corpoNa('pt', corpo)[0]),
+        v2: corpoNa('pt', corpo)[1],
+        v3: numero(altura),
+      },
+      fr: {
+        v1: capitalizar(corpoNa('fr', corpo)[0]),
+        v2: corpoNa('fr', corpo)[1],
+        v3: numero(altura),
+      },
+      en: {
+        v1: capitalizar(corpoNa('en', corpo)[0]),
+        v2: corpoNa('en', corpo)[1],
+        v3: numero(altura),
+      },
     }),
     enunciadoTex: `mgh = \\frac{1}{2}mv^{2} + \\frac{1}{2}I\\omega^{2} \\qquad \\omega = \\frac{v}{r}`,
     gabarito,
@@ -320,6 +351,20 @@ function ate(
   gabarito: number,
 ): Exercicio<number>['resolucao'] {
   return { resultado: gabarito, passos: base.passos.slice(0, passos) };
+}
+
+/**
+ * O artigo e o nome do corpo, na língua de quem lê.
+ *
+ * O enunciado tem uma lacuna para cada um — «de {artigo} {nome}» —, porque o
+ * gênero muda com a palavra e o francês não o deduz do português.
+ */
+function corpoNa(idioma: 'pt' | 'fr' | 'en', corpo: CorpoRigido): [string, string] {
+  return idioma === 'pt'
+    ? [corpo.artigo, corpo.nome]
+    : idioma === 'fr'
+      ? [corpo.artigoFr, corpo.nomeFr]
+      : [corpo.artigoEn, corpo.nomeEn];
 }
 
 function artigo(corpo: CorpoRigido): string {

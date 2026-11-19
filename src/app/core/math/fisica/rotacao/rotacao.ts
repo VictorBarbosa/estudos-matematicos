@@ -17,6 +17,18 @@ import { formatar, formatarEmTexto } from '@core/math/algebra/polinomio/polinomi
 /** Um corpo rígido cujo momento de inércia tem fórmula fechada. */
 export interface CorpoRigido {
   readonly nome: string;
+  /**
+   * O corpo nas outras duas línguas, e o artigo de cada uma.
+   *
+   * «uma esfera maciça» vira «une sphère pleine» e «a solid sphere»: o artigo
+   * não se deduz do português, porque o gênero muda com a palavra — e o
+   * enunciado o mostra numa lacuna própria, antes do nome.
+   */
+  readonly nomeFr: string;
+  readonly nomeEn: string;
+  readonly artigo: string;
+  readonly artigoFr: string;
+  readonly artigoEn: string;
   /** O fator k de `I = k·m·r²`. */
   readonly fator: number;
   readonly fatorTex: string;
@@ -32,42 +44,77 @@ export interface CorpoRigido {
 export const CORPOS_RIGIDOS: readonly CorpoRigido[] = [
   {
     nome: 'partícula',
+    nomeFr: 'particule',
+    nomeEn: 'particle',
+    artigo: 'uma',
+    artigoFr: 'une',
+    artigoEn: 'a',
     fator: 1,
     fatorTex: '1',
     observacao: 'Toda a massa à distância r do eixo — é o caso de referência.',
   },
   {
     nome: 'casca cilíndrica',
+    nomeFr: 'coque cylindrique',
+    nomeEn: 'cylindrical shell',
+    artigo: 'uma',
+    artigoFr: 'une',
+    artigoEn: 'a',
     fator: 1,
     fatorTex: '1',
     observacao: 'Um aro, ou um tubo de parede fina: tudo na borda.',
   },
   {
     nome: 'disco ou cilindro maciço',
+    nomeFr: 'disque ou cylindre plein',
+    nomeEn: 'solid disk or cylinder',
+    artigo: 'um',
+    artigoFr: 'un',
+    artigoEn: 'a',
     fator: 0.5,
     fatorTex: '\\frac{1}{2}',
     observacao: 'Metade da massa está perto do eixo, e por isso o fator cai.',
   },
   {
     nome: 'esfera maciça',
+    nomeFr: 'sphère pleine',
+    nomeEn: 'solid sphere',
+    artigo: 'uma',
+    artigoFr: 'une',
+    artigoEn: 'a',
     fator: 0.4,
     fatorTex: '\\frac{2}{5}',
     observacao: 'A massa se concentra ainda mais perto do centro.',
   },
   {
     nome: 'casca esférica',
+    nomeFr: 'coque sphérique',
+    nomeEn: 'spherical shell',
+    artigo: 'uma',
+    artigoFr: 'une',
+    artigoEn: 'a',
     fator: 2 / 3,
     fatorTex: '\\frac{2}{3}',
     observacao: 'Mesmo raio, massa toda na superfície — fator maior que o da esfera maciça.',
   },
   {
     nome: 'barra pelo centro',
+    nomeFr: 'barre par le centre',
+    nomeEn: 'rod about its centre',
+    artigo: 'uma',
+    artigoFr: 'une',
+    artigoEn: 'a',
     fator: 1 / 12,
     fatorTex: '\\frac{1}{12}',
     observacao: 'Aqui r é o comprimento total, e não a distância ao eixo.',
   },
   {
     nome: 'barra pela ponta',
+    nomeFr: 'barre par une extrémité',
+    nomeEn: 'rod about one end',
+    artigo: 'uma',
+    artigoFr: 'une',
+    artigoEn: 'a',
     fator: 1 / 3,
     fatorTex: '\\frac{1}{3}',
     observacao: 'A mesma barra girando pela extremidade resiste quatro vezes mais.',

@@ -1,6 +1,7 @@
 import {
   enunciadoComSufixos,
   enunciadoDoMolde,
+  enunciadoDoMoldePorIdioma,
   moldesDe,
   textoDoMolde,
   traducoesDoMolde,
@@ -15,6 +16,18 @@ import {
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+
+/**
+ * «em SÉRIE» e «em PARALELO», nas três línguas.
+ *
+ * A palavra era escolhida por um `if` e entrava no molde já em português —
+ * e saía assim na tela francesa.
+ */
+const LIGACAO = {
+  pt: { serie: 'SÉRIE', paralelo: 'PARALELO' },
+  fr: { serie: 'SÉRIE', paralelo: 'PARALLÈLE' },
+  en: { serie: 'SERIES', paralelo: 'PARALLEL' },
+} as const;
 
 const { saoEquivalentes: proximos, formatar } = numeroComCasas(2, 1e-4);
 const tex = (v: number): string => formatar(v).replace(',', '{,}');
@@ -362,14 +375,10 @@ function associacao(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `pot-assoc-${tipo}-${valores.join('_')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('potencial-e-capacitores', 'forma-6')[0]!,
-      { v1: valores.join(', '), v2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO' },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('potencial-e-capacitores', 'forma-6')[0]!, {
-      v1: valores.join(', '),
-      v2: tipo === 'serie' ? 'SÉRIE' : 'PARALELO',
+    ...enunciadoDoMoldePorIdioma(moldesDe('potencial-e-capacitores', 'forma-6')[0]!, {
+      pt: { v1: valores.join(', '), v2: LIGACAO.pt[tipo] },
+      fr: { v1: valores.join(', '), v2: LIGACAO.fr[tipo] },
+      en: { v1: valores.join(', '), v2: LIGACAO.en[tipo] },
     }),
     enunciadoTex: `${valores.map((v, i) => `C_${i + 1} = ${v}`).join(' \\quad ')} \\quad (\\mu\\text{F})`,
     gabarito,

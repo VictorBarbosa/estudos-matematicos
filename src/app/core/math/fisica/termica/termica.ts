@@ -24,15 +24,31 @@ export const STEFAN_BOLTZMANN = 5.670374419e-8;
 export const ZERO_CELSIUS = 273.15;
 
 /** Condutividades típicas, em W/(m·K) — a faixa cobre quatro ordens de grandeza. */
-export const CONDUTIVIDADES: readonly { readonly material: string; readonly k: number }[] = [
-  { material: 'cobre', k: 401 },
-  { material: 'alumínio', k: 237 },
-  { material: 'aço inoxidável', k: 16 },
-  { material: 'vidro', k: 0.8 },
-  { material: 'água', k: 0.6 },
-  { material: 'madeira', k: 0.12 },
-  { material: 'lã de vidro', k: 0.04 },
-  { material: 'ar parado', k: 0.026 },
+export const CONDUTIVIDADES: readonly {
+  readonly material: string;
+  /**
+   * O nome do material nas outras duas línguas.
+   *
+   * O material é conteúdo do enunciado — «uma placa de cobre» —, e escrito só
+   * em português ele atravessava a tradução intacto.
+   */
+  readonly materialFr: string;
+  readonly materialEn: string;
+  readonly k: number;
+}[] = [
+  { material: 'cobre', materialFr: 'cuivre', materialEn: 'copper', k: 401 },
+  { material: 'alumínio', materialFr: 'aluminium', materialEn: 'aluminium', k: 237 },
+  {
+    material: 'aço inoxidável',
+    materialFr: 'acier inoxydable',
+    materialEn: 'stainless steel',
+    k: 16,
+  },
+  { material: 'vidro', materialFr: 'verre', materialEn: 'glass', k: 0.8 },
+  { material: 'água', materialFr: 'eau', materialEn: 'water', k: 0.6 },
+  { material: 'madeira', materialFr: 'bois', materialEn: 'wood', k: 0.12 },
+  { material: 'lã de vidro', materialFr: 'laine de verre', materialEn: 'glass wool', k: 0.04 },
+  { material: 'ar parado', materialFr: 'air immobile', materialEn: 'still air', k: 0.026 },
 ];
 
 export function condutividadeDe(material: string): number | undefined {

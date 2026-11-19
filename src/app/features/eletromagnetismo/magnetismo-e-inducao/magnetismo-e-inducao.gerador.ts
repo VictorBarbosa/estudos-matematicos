@@ -1,6 +1,7 @@
 import {
   enunciadoComSufixos,
   enunciadoDoMolde,
+  enunciadoDoMoldePorIdioma,
   moldesDe,
   textoDoMolde,
   traducoesDoMolde,
@@ -15,6 +16,13 @@ import {
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+
+/** A partícula que entra no campo, na língua de quem lê. */
+const PARTICULA = {
+  pt: { proton: 'Um próton', eletron: 'Um elétron' },
+  fr: { proton: 'Un proton', eletron: 'Un électron' },
+  en: { proton: 'A proton', eletron: 'An electron' },
+} as const;
 
 const { saoEquivalentes: proximos, formatar } = numeroComCasas(2, 1e-4);
 const tex = (v: number): string => formatar(v).replace(',', '{,}');
@@ -352,23 +360,10 @@ function raio(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `mag-raio-${qual}-${v}-${b}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('magnetismo-e-inducao', 'forma-4')[0]!,
-      {
-        v1: qual === 'proton' ? 'Um próton' : 'Um elétron',
-        v2: p.mTexto,
-        vTexto,
-        v3: txt(b),
-        unidade,
-      },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('magnetismo-e-inducao', 'forma-4')[0]!, {
-      v1: qual === 'proton' ? 'Um próton' : 'Um elétron',
-      v2: p.mTexto,
-      vTexto,
-      v3: txt(b),
-      unidade,
+    ...enunciadoDoMoldePorIdioma(moldesDe('magnetismo-e-inducao', 'forma-4')[0]!, {
+      pt: { v1: PARTICULA.pt[qual], v2: p.mTexto, vTexto, v3: txt(b), unidade },
+      fr: { v1: PARTICULA.fr[qual], v2: p.mTexto, vTexto, v3: txt(b), unidade },
+      en: { v1: PARTICULA.en[qual], v2: p.mTexto, vTexto, v3: txt(b), unidade },
     }),
     enunciadoTex: `r = \\frac{mv}{|q|B}`,
     gabarito,

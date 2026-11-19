@@ -1,5 +1,6 @@
 import {
   enunciadoComSufixos,
+  enunciadoDoMoldePorIdioma,
   moldesDe,
   textoDoMolde,
   traducoesDoMolde,
@@ -43,13 +44,23 @@ const { saoEquivalentes, formatar } = numeroComCasas(CASAS);
 
 const PEDIDO = 'Responda com 3 casas decimais.';
 
-/** Calores específicos usuais, em J/(kg·K). */
-const CALORES: readonly { readonly nome: string; readonly c: number }[] = [
-  { nome: 'água', c: 4186 },
-  { nome: 'alumínio', c: 900 },
-  { nome: 'ferro', c: 450 },
-  { nome: 'cobre', c: 385 },
-  { nome: 'vidro', c: 840 },
+/**
+ * Calores específicos usuais, em J/(kg·K).
+ *
+ * A substância é conteúdo do enunciado — «500 g de água a 20 °C» —, e por
+ * isso o nome dela viaja nas três línguas, como a condutividade do core.
+ */
+const CALORES: readonly {
+  readonly nome: string;
+  readonly nomeFr: string;
+  readonly nomeEn: string;
+  readonly c: number;
+}[] = [
+  { nome: 'água', nomeFr: 'eau', nomeEn: 'water', c: 4186 },
+  { nome: 'alumínio', nomeFr: 'aluminium', nomeEn: 'aluminium', c: 900 },
+  { nome: 'ferro', nomeFr: 'fer', nomeEn: 'iron', c: 450 },
+  { nome: 'cobre', nomeFr: 'cuivre', nomeEn: 'copper', c: 385 },
+  { nome: 'vidro', nomeFr: 'verre', nomeEn: 'glass', c: 840 },
 ];
 
 type Tipo =
@@ -98,6 +109,84 @@ export const geradorTransferenciaDeCalor: GeradorExercicio<number> = {
   formatar,
 };
 
+/** O material na língua pedida: é ele que muda de uma tela para outra. */
+function materialEscrito(
+  idioma: 'pt' | 'fr' | 'en',
+  material: { readonly material: string; readonly materialFr: string; readonly materialEn: string },
+): string {
+  return idioma === 'pt'
+    ? material.material
+    : idioma === 'fr'
+      ? material.materialFr
+      : material.materialEn;
+}
+
+/** A substância na língua pedida, para os exercícios de calorimetria. */
+function substanciaEscrita(
+  idioma: 'pt' | 'fr' | 'en',
+  substancia: { readonly nome: string; readonly nomeFr: string; readonly nomeEn: string },
+): string {
+  return idioma === 'pt'
+    ? substancia.nome
+    : idioma === 'fr'
+      ? substancia.nomeFr
+      : substancia.nomeEn;
+}
+
+/** Os dados do enunciado da condução, numa língua. */
+function dadosDaConducao(
+  idioma: 'pt' | 'fr' | 'en',
+  material: (typeof CONDUTIVIDADES)[number],
+  area: number,
+  espessura: number,
+  deltaT: number,
+): Readonly<Record<string, string | number>> {
+  return {
+    v1: materialEscrito(idioma, material),
+    v2: numero(area),
+    v3: numero(espessura),
+    deltaT,
+    v4: numero(material.k),
+  };
+}
+
+/** Os dados do enunciado da resistência térmica, numa língua. */
+function dadosDaResistencia(
+  idioma: 'pt' | 'fr' | 'en',
+  material: (typeof CONDUTIVIDADES)[number],
+  espessura: number,
+  area: number,
+): Readonly<Record<string, string | number>> {
+  return {
+    v1: materialEscrito(idioma, material),
+    v2: numero(espessura),
+    v3: numero(area),
+    v4: numero(material.k),
+  };
+}
+
+/** Os dados do enunciado da mistura, numa língua. */
+function dadosDaMistura(
+  idioma: 'pt' | 'fr' | 'en',
+  m1: number,
+  primeiro: (typeof CALORES)[number],
+  t1: number,
+  m2: number,
+  segundo: (typeof CALORES)[number],
+  t2: number,
+): Readonly<Record<string, string | number>> {
+  return {
+    v1: numero(m1),
+    v2: substanciaEscrita(idioma, primeiro),
+    t1,
+    v3: numero(m2),
+    v4: substanciaEscrita(idioma, segundo),
+    t2,
+    v5: primeiro.c,
+    v6: segundo.c,
+  };
+}
+
 /** Fluxo por condução, pela lei de Fourier. */
 function daConducao(nivel: Nivel, rng: Rng): Exercicio<number> {
   const material = rng.escolher(CONDUTIVIDADES);
@@ -111,23 +200,10 @@ function daConducao(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `cond-${material.material}-${area}-${deltaT}-${espessura}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('transferencia-de-calor', 'forma-1')[0]!,
-      {
-        v1: material.material,
-        v2: numero(area),
-        v3: numero(espessura),
-        deltaT,
-        v4: numero(material.k),
-      },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('transferencia-de-calor', 'forma-1')[0]!, {
-      v1: material.material,
-      v2: numero(area),
-      v3: numero(espessura),
-      deltaT,
-      v4: numero(material.k),
+    ...enunciadoDoMoldePorIdioma(moldesDe('transferencia-de-calor', 'forma-1')[0]!, {
+      pt: dadosDaConducao('pt', material, area, espessura, deltaT),
+      fr: dadosDaConducao('fr', material, area, espessura, deltaT),
+      en: dadosDaConducao('en', material, area, espessura, deltaT),
     }),
     enunciadoTex: `\\frac{Q}{t} = \\frac{kA\\,\\Delta T}{L}`,
     gabarito,
@@ -174,21 +250,10 @@ function daResistencia(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `res-${material.material}-${area}-${espessura}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('transferencia-de-calor', 'forma-2')[0]!,
-      {
-        v1: material.material,
-        v2: numero(espessura),
-        v3: numero(area),
-        v4: numero(material.k),
-      },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('transferencia-de-calor', 'forma-2')[0]!, {
-      v1: material.material,
-      v2: numero(espessura),
-      v3: numero(area),
-      v4: numero(material.k),
+    ...enunciadoDoMoldePorIdioma(moldesDe('transferencia-de-calor', 'forma-2')[0]!, {
+      pt: dadosDaResistencia('pt', material, espessura, area),
+      fr: dadosDaResistencia('fr', material, espessura, area),
+      en: dadosDaResistencia('en', material, espessura, area),
     }),
     enunciadoTex: `R = \\frac{L}{kA}`,
     gabarito,
@@ -389,16 +454,10 @@ function daCalorimetria(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `cal-${material.nome}-${massa}-${deltaT}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('transferencia-de-calor', 'forma-5')[0]!,
-      { v1: numero(massa), v2: material.nome, deltaT, v3: material.c },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('transferencia-de-calor', 'forma-5')[0]!, {
-      v1: numero(massa),
-      v2: material.nome,
-      deltaT,
-      v3: material.c,
+    ...enunciadoDoMoldePorIdioma(moldesDe('transferencia-de-calor', 'forma-5')[0]!, {
+      pt: { v1: numero(massa), v2: substanciaEscrita('pt', material), deltaT, v3: material.c },
+      fr: { v1: numero(massa), v2: substanciaEscrita('fr', material), deltaT, v3: material.c },
+      en: { v1: numero(massa), v2: substanciaEscrita('en', material), deltaT, v3: material.c },
     }),
     enunciadoTex: `Q = mc\\,\\Delta T`,
     gabarito,
@@ -448,29 +507,10 @@ function daMistura(nivel: Nivel, rng: Rng): Exercicio<number> {
     chave: `mis-${primeiro.nome}${m1}${t1}-${segundo.nome}${m2}${t2}`,
     nivel,
     rng,
-    enunciado: textoDoMolde(
-      moldesDe('transferencia-de-calor', 'forma-6')[0]!,
-      {
-        v1: numero(m1),
-        v2: primeiro.nome,
-        t1,
-        v3: numero(m2),
-        v4: segundo.nome,
-        t2,
-        v5: primeiro.c,
-        v6: segundo.c,
-      },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('transferencia-de-calor', 'forma-6')[0]!, {
-      v1: numero(m1),
-      v2: primeiro.nome,
-      t1,
-      v3: numero(m2),
-      v4: segundo.nome,
-      t2,
-      v5: primeiro.c,
-      v6: segundo.c,
+    ...enunciadoDoMoldePorIdioma(moldesDe('transferencia-de-calor', 'forma-6')[0]!, {
+      pt: dadosDaMistura('pt', m1, primeiro, t1, m2, segundo, t2),
+      fr: dadosDaMistura('fr', m1, primeiro, t1, m2, segundo, t2),
+      en: dadosDaMistura('en', m1, primeiro, t1, m2, segundo, t2),
     }),
     enunciadoTex: `Q_{1} + Q_{2} = 0`,
     gabarito,

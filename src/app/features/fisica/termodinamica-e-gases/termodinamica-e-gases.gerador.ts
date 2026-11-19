@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   R_GASES,
   gasIdealComPassos,
@@ -8,6 +13,27 @@ import {
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+
+/** O que o gás faz com o calor e com o trabalho, na língua de quem lê. */
+const TROCA = {
+  pt: { recebe: 'recebe', perde: 'perde', realiza: 'realiza' },
+  fr: { recebe: 'reçoit', perde: 'perd', realiza: 'effectue' },
+  en: { recebe: 'receives', perde: 'loses', realiza: 'performs' },
+} as const;
+
+/** Os dados do enunciado da primeira lei, numa língua. */
+function dadosDaTroca(
+  idioma: 'pt' | 'fr' | 'en',
+  calor: number,
+  trabalho: number,
+): Readonly<Record<string, string | number>> {
+  return {
+    v1: TROCA[idioma][calor >= 0 ? 'recebe' : 'perde'],
+    v2: Math.abs(calor),
+    v3: TROCA[idioma][trabalho >= 0 ? 'realiza' : 'recebe'],
+    v4: Math.abs(trabalho),
+  };
+}
 
 const proximos = (a: number, b: number): boolean => {
   if (a === b) {
@@ -284,21 +310,10 @@ function exercicioEnergiaInterna(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `ter-u-${calor}-${trabalho}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('termodinamica-e-gases', 'forma-4')[0]!,
-      {
-        v1: calor >= 0 ? 'recebe' : 'perde',
-        v2: Math.abs(calor),
-        v3: trabalho >= 0 ? 'realiza' : 'recebe',
-        v4: Math.abs(trabalho),
-      },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('termodinamica-e-gases', 'forma-4')[0]!, {
-      v1: calor >= 0 ? 'recebe' : 'perde',
-      v2: Math.abs(calor),
-      v3: trabalho >= 0 ? 'realiza' : 'recebe',
-      v4: Math.abs(trabalho),
+    ...enunciadoDoMoldePorIdioma(moldesDe('termodinamica-e-gases', 'forma-4')[0]!, {
+      pt: dadosDaTroca('pt', calor, trabalho),
+      fr: dadosDaTroca('fr', calor, trabalho),
+      en: dadosDaTroca('en', calor, trabalho),
     }),
     enunciadoTex: `Q = ${calor}\\,\\text{J} \\qquad W = ${trabalho}\\,\\text{J}`,
     gabarito: resultado,

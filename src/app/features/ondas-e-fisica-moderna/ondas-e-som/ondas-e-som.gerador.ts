@@ -1,4 +1,9 @@
-import { moldesDe, textoDoMolde, traducoesDoMolde } from '@core/enunciados/moldes/moldes.model';
+import {
+  enunciadoDoMoldePorIdioma,
+  moldesDe,
+  textoDoMolde,
+  traducoesDoMolde,
+} from '@core/enunciados/moldes/moldes.model';
 import {
   dopplerComPassos,
   harmonicoComPassos,
@@ -10,6 +15,33 @@ import {
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero, numeroComCasas } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+
+/** O tubo, na língua de quem lê. */
+const TUBO = {
+  pt: { fechado: 'fechado numa ponta e aberto na outra', aberto: 'aberto nas duas pontas' },
+  fr: {
+    fechado: "fermé à une extrémité et ouvert à l'autre",
+    aberto: 'ouvert aux deux extrémités',
+  },
+  en: { fechado: 'closed at one end and open at the other', aberto: 'open at both ends' },
+} as const;
+
+/** Os dados do enunciado do tubo, numa língua. */
+function dadosDoTubo(
+  idioma: 'pt' | 'fr' | 'en',
+  comprimento: string,
+  fechado: boolean,
+  ordem: number,
+  expressao3: string,
+): Readonly<Record<string, string | number>> {
+  return {
+    expressao1: comprimento,
+    expressao2: TUBO[idioma][fechado ? 'fechado' : 'aberto'],
+    SOM_NO_AR,
+    ordem,
+    expressao3,
+  };
+}
 
 const { saoEquivalentes: proximos, formatar } = numeroComCasas(2, 1e-3);
 
@@ -359,23 +391,10 @@ function tubo(nivel: Nivel, rng: Rng): Exercicio<number> {
   return {
     id: `onda-tubo-${fechado ? 'f' : 'a'}-${ordem}-${L}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('ondas-e-som', 'forma-6')[0]!,
-      {
-        expressao1: t(L),
-        expressao2: fechado ? 'fechado numa ponta e aberto na outra' : 'aberto nas duas pontas',
-        SOM_NO_AR,
-        ordem,
-        expressao3: casas(gabarito),
-      },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('ondas-e-som', 'forma-6')[0]!, {
-      expressao1: t(L),
-      expressao2: fechado ? 'fechado numa ponta e aberto na outra' : 'aberto nas duas pontas',
-      SOM_NO_AR,
-      ordem,
-      expressao3: casas(gabarito),
+    ...enunciadoDoMoldePorIdioma(moldesDe('ondas-e-som', 'forma-6')[0]!, {
+      pt: dadosDoTubo('pt', t(L), fechado, ordem, casas(gabarito)),
+      fr: dadosDoTubo('fr', t(L), fechado, ordem, casas(gabarito)),
+      en: dadosDoTubo('en', t(L), fechado, ordem, casas(gabarito)),
     }),
     enunciadoTex: `L = ${numeroOnda(L)}\\ \\text{m} \\qquad v = ${SOM_NO_AR}\\ \\text{m/s} \\qquad n = ${ordem}`,
     gabarito,

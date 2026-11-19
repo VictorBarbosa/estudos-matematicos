@@ -1,5 +1,6 @@
 import {
   enunciadoComSufixos,
+  enunciadoDoMoldePorIdioma,
   moldesDe,
   textoDoMolde,
   traducoesDoMolde,
@@ -7,6 +8,13 @@ import {
 import { Rng } from '@core/treino/rng/rng';
 import { analisarNumero } from '@core/treino/resposta-numerica/resposta-numerica';
 import { Exercicio, GeradorExercicio, Nivel, semColisoes } from '@core/treino/models/treino.model';
+
+/** «os dois planos» ou «as duas retas», na língua de quem lê. */
+const OBJETOS = {
+  pt: { planos: 'os dois planos', retas: 'as duas retas' },
+  fr: { planos: 'les deux plans', retas: 'les deux droites' },
+  en: { planos: 'the two planes', retas: 'the two lines' },
+} as const;
 
 const proximos = (a: number, b: number): boolean => Math.abs(a - b) < 0.02;
 const dec = (v: number, casas = 2): string => v.toFixed(casas).replace('.', '{,}');
@@ -333,13 +341,10 @@ function anguloEntre(nivel: Nivel, rng: Rng, tipo: 'planos' | 'retas'): Exercici
   return {
     id: `planos-ang-${tipo}-${u.join('')}-${v.join('')}-${rng.inteiro(0, 9999)}`,
     nivel,
-    enunciado: textoDoMolde(
-      moldesDe('retas-e-planos', 'forma-4')[0]!,
-      { v1: tipo === 'planos' ? 'os dois planos' : 'as duas retas' },
-      'pt',
-    ),
-    traducoes: traducoesDoMolde(moldesDe('retas-e-planos', 'forma-4')[0]!, {
-      v1: tipo === 'planos' ? 'os dois planos' : 'as duas retas',
+    ...enunciadoDoMoldePorIdioma(moldesDe('retas-e-planos', 'forma-4')[0]!, {
+      pt: { v1: OBJETOS.pt[tipo] },
+      fr: { v1: OBJETOS.fr[tipo] },
+      en: { v1: OBJETOS.en[tipo] },
     }),
     enunciadoTex:
       tipo === 'planos'
