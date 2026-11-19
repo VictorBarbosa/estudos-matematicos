@@ -14667,10 +14667,6 @@
     "fr": "Δ = # : une racine double, x = #. La parabole ne fait qu’effleurer l’axe là.",
     "en": "Δ = #: a double root, x = #. The parabola only touches the axis there."
   },
-  "Δθ = #° − #° = #°.": {
-    "fr": "Δθ = #° − #° = #°.",
-    "en": "Δθ = #° − #° = #°."
-  },
   "Φ = B·A·cos θ, com A em m² (# cm² = #×#⁻⁴ m²) e o ângulo medido da normal. Em Wb; ×# para mWb.": {
     "fr": "Φ = B·A·cos θ, avec A en m² (# cm² = #×#⁻⁴ m²) et l’angle mesuré depuis la normale. En Wb ; ×# pour des mWb.",
     "en": "Φ = B·A·cos θ, with A in m² (# cm² = #×#⁻⁴ m²) and the angle measured from the normal. In Wb; ×# for mWb."
