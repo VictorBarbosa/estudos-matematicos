@@ -1447,6 +1447,10 @@
     "fr": "La partie réelle contrôle la décroissance ; l’imaginaire, la fréquence.",
     "en": "The real part controls the decay; the imaginary one, the frequency."
   },
+  "A parte real desse valor.": {
+    "fr": "La partie réelle de cette valeur.",
+    "en": "The real part of that value."
+  },
   "A parábola abre para baixo: o projétil sobe, passa pela altura, desce e volta a passar. O saldo é positivo ENTRE os dois instantes.": {
     "fr": "La parabole est tournée vers le bas : le projectile monte, passe la hauteur, redescend et repasse. Le bilan est positif ENTRE les deux instants.",
     "en": "The parabola opens downwards: the projectile rises, passes the height, falls and passes again. The balance is positive BETWEEN the two instants."
@@ -1462,6 +1466,18 @@
   "A pergunta é o valor em um ponto: substituímos x pelo número dado.": {
     "fr": "La question porte sur la valeur en un point : on remplace x par le nombre donné.",
     "en": "The question asks for the value at a point: we replace x by the given number."
+  },
+  "A pergunta é pela parte imaginária.": {
+    "fr": "La question porte sur la partie imaginaire.",
+    "en": "The question asks for the imaginary part."
+  },
+  "A pergunta é pela parte real do quociente.": {
+    "fr": "La question porte sur la partie réelle du quotient.",
+    "en": "The question asks for the real part of the quotient."
+  },
+  "A pergunta é pela parte real.": {
+    "fr": "La question porte sur la partie réelle.",
+    "en": "The question asks for the real part."
   },
   "A pergunta é por a frequência angular ω, em rad/s.": {
     "fr": "La question porte sur la pulsation ω, en rad/s.",
@@ -2715,6 +2731,10 @@
     "fr": "Les parallèles garantissent que les rapports entre segments correspondents soient égaux.",
     "en": "The parallels ensure that the ratios between corresponding segments are equal."
   },
+  "As partes real e imaginária não se somam — elas são perpendiculares no plano. O módulo vem de Pitágoras.": {
+    "fr": "Les parties réelle et imaginaire ne s’additionnent pas — elles sont perpendiculaires dans le plan. Le module vient de Pythagore.",
+    "en": "The real and imaginary parts do not add — they are perpendicular in the plane. The modulus comes from Pythagoras."
+  },
   "As porcentagens viram frações da unidade.": {
     "fr": "Les pourcentages deviennent des fractions de l’unité.",
     "en": "The percentages become fractions of one."
@@ -2722,6 +2742,18 @@
   "As potências de # se cancelam.": {
     "fr": "Les puissances de # se simplifient.",
     "en": "The powers of # cancel out."
+  },
+  "As potências de i não crescem: elas giram. O resultado é sempre #, −#, i ou −i.": {
+    "fr": "Les puissances de i ne croissent pas : elles tournent. Le résultat vaut toujours #, −#, i ou −i.",
+    "en": "The powers of i do not grow: they rotate. The result is always #, −#, i or −i."
+  },
+  "As potências de i repetem de # em #: divida # por # e olhe o resto.": {
+    "fr": "Les puissances de i se répètent de # en # : divisez # par # et regardez le reste.",
+    "en": "The powers of i repeat every # out of #: divide # by # and look at the remainder."
+  },
+  "As potências de i se repetem de quatro em quatro.": {
+    "fr": "Les puissances de i se répètent de quatre en quatre.",
+    "en": "The powers of i repeat every four."
   },
   "As razões comparam dois lados do triângulo em relação ao ângulo escolhido.": {
     "fr": "Les rapports comparent deux côtés du triangle par rapport à l'angle choisi.",
@@ -3027,6 +3059,10 @@
     "fr": "Chaque photon remet toute son énergie à un électron ; φ est le coût pour l’arracher au métal, et le reste devient énergie cinétique.",
     "en": "Each photon hands all its energy to one electron; φ is the cost of tearing it from the metal, and the rest becomes kinetic energy."
   },
+  "Cada grupo de quatro é uma volta completa: multiplicar por i é girar #°.": {
+    "fr": "Chaque groupe de quatre est un tour complet : multiplier par i, c’est tourner de #°.",
+    "en": "Each group of four is a full turn: multiplying by i is a #° rotation."
+  },
   "Cada isótopo entra com o peso da sua abundância.": {
     "fr": "Chaque isotope entre avec le poids de son abondance.",
     "en": "Each isotope enters with the weight of its abundance."
@@ -3278,6 +3314,10 @@
   "Calcule a inclinação da secante, iguale a f′(c) e resolva. A resposta é c, não a inclinação.": {
     "fr": "Calculez la pente de la sécante, égalez-la à f′(c) et résolvez. La réponse est c, pas la pente.",
     "en": "Work out the secant’s slope, set it equal to f′(c) and solve. The answer is c, not the slope."
+  },
+  "Calcule arctg(#/#) e corrija pelo quadrante: o ponto (#, #) está no #º quadrante.": {
+    "fr": "Calculez arctan(#/#) et corrigez selon le quadrant : le point (#, #) est dans le #e quadrant.",
+    "en": "Compute arctan(#/#) and correct for the quadrant: the point (#, #) is in quadrant #."
   },
   "Calcule f nos inteiros perto da raiz cúbica de k: onde o sinal troca, a raiz está no meio.": {
     "fr": "Calculez f sur les entiers proches de la racine cubique de k : là où le signe change, la racine est au milieu.",
@@ -3915,6 +3955,10 @@
     "fr": "Vérification : tg(#°) ≈ #.",
     "en": "Checking: tg(#°) ≈ #."
   },
+  "Confira o resto da divisão por #: restos # e # dão resultados puramente imaginários, cuja parte real é zero.": {
+    "fr": "Vérifiez le reste de la division par # : les restes # et # donnent des résultats purement imaginaires, dont la partie réelle est nulle.",
+    "en": "Check the remainder of the division by #: remainders # and # give purely imaginary results, whose real part is zero."
+  },
   "Confira que dá #/# em x = #; depois derive em cima e embaixo e substitua.": {
     "fr": "Vérifiez que cela donne #/# en x = # ; dérivez ensuite le haut et le bas et substituez.",
     "en": "Check that it gives #/# at x = #; then differentiate top and bottom and substitute."
@@ -4002,6 +4046,10 @@
   "Coordenada z: # vezes a de u mais (#) vezes a de v.": {
     "fr": "Coordonnée z : # fois celle de u plus (#) fois celle de v.",
     "en": "Coordinate z: # times u’s plus (#) times v’s."
+  },
+  "Corrigindo pelo quadrante.": {
+    "fr": "En corrigeant selon le quadrant.",
+    "en": "Correcting for the quadrant."
   },
   "Cortando um triângulo de um lado e colando no outro, surge um retângulo.": {
     "fr": "En coupant un triangle d'un côté et en le collant de l'autre, un rectangle apparaît.",
@@ -4599,6 +4647,14 @@
     "fr": "Répartissez les électrons dans l’ordre des énergies et ne regardez que la DERNIÈRE couche — pas le total d’électrons de l’atome.",
     "en": "Fill the electrons in order of energy and look only at the LAST shell — not the atom’s total number of electrons."
   },
+  "Distribua os quatro produtos. Lembre que i·i = i² = −#: o termo (#i)(#i) vai para a parte REAL com o sinal trocado.": {
+    "fr": "Distribuez les quatre produits. Rappelez-vous que i·i = i² = −# : le terme (#i)(#i) passe dans la partie RÉELLE avec le signe changé.",
+    "en": "Expand the four products. Remember that i·i = i² = −#: the term (#i)(#i) goes to the REAL part with its sign flipped."
+  },
+  "Distribua os quatro produtos; a parte imaginária junta os dois termos cruzados: (#)(#) + (#)(#).": {
+    "fr": "Distribuez les quatre produits ; la partie imaginaire réunit les deux termes croisés : (#)(#) + (#)(#).",
+    "en": "Expand the four products; the imaginary part gathers the two cross terms: (#)(#) + (#)(#)."
+  },
   "Distribuindo e juntando.": {
     "fr": "En distribuant et en réunissant.",
     "en": "Expanding and gathering."
@@ -4794,6 +4850,10 @@
   "Dividindo.": {
     "fr": "En divisant.",
     "en": "Dividing."
+  },
+  "Dividir parte por parte não funciona. É preciso multiplicar numerador e denominador pelo conjugado do denominador.": {
+    "fr": "Diviser partie par partie ne marche pas. Il faut multiplier numérateur et dénominateur par le conjugué du dénominateur.",
+    "en": "Dividing part by part does not work. You have to multiply numerator and denominator by the conjugate of the denominator."
   },
   "Dividir por # converte km/h em m/s.": {
     "fr": "Diviser par # convertit les km/h en m/s.",
@@ -5887,6 +5947,10 @@
     "fr": "Un terme de trop est entré par rapport au degré #. L’approximation est meilleure, mais ce n’est pas celle que l’énoncé demandait.",
     "en": "One term more than degree # allows got in. The approximation is better, but it is not the one the question asked for."
   },
+  "Então basta o resto da divisão do expoente por #.": {
+    "fr": "Il suffit donc du reste de la division de l’exposant par #.",
+    "en": "So the remainder of the exponent divided by # is enough."
+  },
   "Então f é crescente entre os pontos críticos.": {
     "fr": "Donc f est croissante entre les points critiques.",
     "en": "So f is increasing between the critical points."
@@ -6435,6 +6499,10 @@
     "fr": "Ce n’est que le terme de l’arc. L’intégrale de cos²θ a DEUX termes : θ/# et sin(#θ)/# — le second devient (k/#)·√(a² − k²).",
     "en": "That is only the arc term. The integral of cos²θ has TWO terms: θ/# and sin(#θ)/# — the second one becomes (k/#)·√(a² − k²)."
   },
+  "Essa é só a parte real. O módulo leva em conta as duas coordenadas do ponto.": {
+    "fr": "Ce n’est que la partie réelle. Le module tient compte des deux coordonnées du point.",
+    "en": "That is only the real part. The modulus takes both coordinates of the point into account."
+  },
   "Essa é só a primeira parcela: a potência foi derivada e a função trigonométrica, mantida. Falta a segunda, que deriva a trigonométrica.": {
     "fr": "Ce n’est que le premier terme : la puissance a été dérivée et la fonction trigonométrique gardée. Il manque le second, qui dérive la trigonométrique.",
     "en": "That is only the first term: the power was differentiated and the trigonometric function kept. The second one, which differentiates the trigonometric function, is missing."
@@ -6499,6 +6567,10 @@
     "fr": "C’est l’arccos de la valeur. Les deux inverses se complètent jusqu’à #° : vérifiez laquelle des deux fonctions était demandée.",
     "en": "That is the arccos of the value. The two inverses add up to #°: check which of the two was asked for."
   },
+  "Esse é o arco-tangente sem correção, sempre entre −#° e #°. O quadrante precisa ser levado em conta.": {
+    "fr": "C’est l’arc tangente sans correction, toujours entre −#° et #°. Le quadrant doit être pris en compte.",
+    "en": "That is the uncorrected arctangent, always between −#° and #°. The quadrant has to be taken into account."
+  },
   "Esse é o arcsen do valor. As duas inversas se completam até #°: confira qual das duas razões foi pedida.": {
     "fr": "C’est l’arcsen de la valeur. Les deux inverses se complètent jusqu’à #° : vérifiez laquelle des deux fonctions était demandée.",
     "en": "That is the arcsen of the value. The two inverses add up to #°: check which of the two was asked for."
@@ -6546,6 +6618,10 @@
   "Esse é o menor dos dois pontos críticos; o enunciado pede o maior.": {
     "fr": "C’est le plus petit des deux points critiques ; l’énoncé demande le plus grand.",
     "en": "That is the smaller of the two critical points; the question asks for the larger."
+  },
+  "Esse é o módulo, não o ângulo. São as duas coordenadas polares do ponto.": {
+    "fr": "C’est le module, et non l’angle. Ce sont les deux coordonnées polaires du point.",
+    "en": "That is the modulus, not the angle. They are the two polar coordinates of the point."
   },
   "Esse é o número atômico, o total de elétrons. As camadas ocupadas são poucas: uma camada acomoda muitos elétrons.": {
     "fr": "C’est le numéro atomique, le total d’électrons. Les couches occupées sont peu nombreuses : une couche accueille beaucoup d’électrons.",
@@ -8123,9 +8199,17 @@
     "fr": "Multiplier des grandeurs additionne les exposants de chaque dimension.",
     "en": "Multiplying quantities adds the exponents of each dimension."
   },
+  "Multiplicar parte por parte não funciona: a distributiva produz quatro termos, e eles se misturam entre real e imaginário.": {
+    "fr": "Multiplier partie par partie ne marche pas : la distributivité produit quatre termes, et ils se mélangent entre réel et imaginaire.",
+    "en": "Multiplying part by part does not work: expanding produces four terms, and they mix between real and imaginary."
+  },
   "Multiplicar por ele transforma o lado esquerdo na derivada de um produto.": {
     "fr": "Le multiplier transforme le côté gauche en dérivée d’un produit.",
     "en": "Multiplying by it turns the left-hand side into the derivative of a product."
+  },
+  "Multiplicar por um complexo é esticar e girar — não há outra leitura mais útil.": {
+    "fr": "Multiplier par un complexe, c’est étirer et tourner — il n’y a pas de lecture plus utile.",
+    "en": "Multiplying by a complex number is stretching and rotating — there is no more useful reading."
   },
   "Multiplicar por um negativo espelha a reta numérica: o que era maior passa a ser menor. Confira com um exemplo: # < #, mas −# > −#.": {
     "fr": "Multiplier par un négatif reflète la droite numérique : ce qui était plus grand devient plus petit. Vérifiez avec un exemple : # < #, mais −# > −#.",
@@ -8154,6 +8238,34 @@
   "Multiplique e divida por #x: sen(#x)/(#x) tende a # e sobra #x/(x).": {
     "fr": "Multipliez et divisez par #x : sin(#x)/(#x) tend vers # et il reste #x/(x).",
     "en": "Multiply and divide by #x: sin(#x)/(#x) tends to # and #x/(x) is left."
+  },
+  "Multiplique em cima e embaixo pelo conjugado do denominador, # + #i: embaixo fica (#)² + (#)², um número real.": {
+    "fr": "Multipliez en haut et en bas par le conjugué du dénominateur, # + #i : en bas il reste (#)² + (#)², un nombre réel.",
+    "en": "Multiply top and bottom by the conjugate of the denominator, # + #i: below you get (#)² + (#)², a real number."
+  },
+  "Multiplique em cima e embaixo pelo conjugado do denominador, # + i: embaixo fica (#)² + (#)², um número real.": {
+    "fr": "Multipliez en haut et en bas par le conjugué du dénominateur, # + i : en bas il reste (#)² + (#)², un nombre réel.",
+    "en": "Multiply top and bottom by the conjugate of the denominator, # + i: below you get (#)² + (#)², a real number."
+  },
+  "Multiplique em cima e embaixo pelo conjugado do denominador, # - #i: embaixo fica (#)² + (#)², um número real.": {
+    "fr": "Multipliez en haut et en bas par le conjugué du dénominateur, # - #i : en bas il reste (#)² + (#)², un nombre réel.",
+    "en": "Multiply top and bottom by the conjugate of the denominator, # - #i: below you get (#)² + (#)², a real number."
+  },
+  "Multiplique em cima e embaixo pelo conjugado do denominador, # - i: embaixo fica (#)² + (#)², um número real.": {
+    "fr": "Multipliez en haut et en bas par le conjugué du dénominateur, # - i : en bas il reste (#)² + (#)², un nombre réel.",
+    "en": "Multiply top and bottom by the conjugate of the denominator, # - i: below you get (#)² + (#)², a real number."
+  },
+  "Multiplique em cima e embaixo pelo conjugado do denominador, #: embaixo fica (#)² + (#)², um número real.": {
+    "fr": "Multipliez en haut et en bas par le conjugué du dénominateur, # : en bas il reste (#)² + (#)², un nombre réel.",
+    "en": "Multiply top and bottom by the conjugate of the denominator, #: below you get (#)² + (#)², a real number."
+  },
+  "Multiplique em cima e embaixo pelo conjugado do denominador, #i: embaixo fica (#)² + (#)², um número real.": {
+    "fr": "Multipliez en haut et en bas par le conjugué du dénominateur, #i : en bas il reste (#)² + (#)², un nombre réel.",
+    "en": "Multiply top and bottom by the conjugate of the denominator, #i: below you get (#)² + (#)², a real number."
+  },
+  "Multiplique em cima e embaixo pelo conjugado do denominador, -i: embaixo fica (#)² + (#)², um número real.": {
+    "fr": "Multipliez en haut et en bas par le conjugué du dénominateur, -i : en bas il reste (#)² + (#)², un nombre réel.",
+    "en": "Multiply top and bottom by the conjugate of the denominator, -i: below you get (#)² + (#)², a real number."
   },
   "Multiplique os dois lados pelo mmc de # e #: as frações viram números inteiros.": {
     "fr": "Multipliez les deux côtés par le ppcm de # et # : les fractions deviennent des entiers.",
@@ -8390,6 +8502,10 @@
   "Na origem o critério é o oposto do critério no infinito: converge quando o expoente fica ABAIXO de #. Aqui ele vale #/#.": {
     "fr": "À l’origine, le critère est l’inverse de celui à l’infini : elle converge quand l’exposant reste EN DESSOUS de #. Ici il vaut #/#.",
     "en": "At the origin the criterion is the opposite of the one at infinity: it converges when the exponent stays BELOW #. Here it is #/#."
+  },
+  "Na parte imaginária os dois termos SOMAM: a·d + b·c. A subtração acontece na parte real, por causa de i².": {
+    "fr": "Dans la partie imaginaire, les deux termes s’ADDITIONNENT : a·d + b·c. La soustraction se produit dans la partie réelle, à cause de i².",
+    "en": "In the imaginary part the two terms ADD: a·d + b·c. The subtraction happens in the real part, because of i²."
   },
   "Na primeira volta, a solução.": {
     "fr": "Au premier tour, la solution.",
@@ -8694,6 +8810,10 @@
   "No numerador aparece uma diferença de quadrados, que simplifica.": {
     "fr": "Au numérateur apparaît une différence de carrés, qui se simplifie.",
     "en": "A difference of squares appears in the numerator, which simplifies."
+  },
+  "No numerador, ao multiplicar pelo CONJUGADO, o produto das partes imaginárias entra somando — o sinal do conjugado já inverteu uma vez.": {
+    "fr": "Au numérateur, en multipliant par le CONJUGUÉ, le produit des parties imaginaires entre en addition — le signe du conjugué a déjà inversé une fois.",
+    "en": "In the numerator, multiplying by the CONJUGATE, the product of the imaginary parts enters by addition — the conjugate’s sign already flipped it once."
   },
   "No plano, ele se reduz a um determinante #×#.": {
     "fr": "Dans le plan, il se réduit à un déterminant #×#.",
@@ -9063,6 +9183,10 @@
     "fr": "L’arc est une longueur — il se mesure en cm, et non en cm².",
     "en": "The arc is a length — it is measured in cm, not in cm²."
   },
+  "O arco-tangente cru não distingue o quadrante.": {
+    "fr": "L’arc tangente brut ne distingue pas le quadrant.",
+    "en": "The raw arctangent does not tell the quadrant apart."
+  },
   "O arco-tangente tem assíntota horizontal, e é por isso que o limite existe.": {
     "fr": "L'arc-tangente a une asymptote horizontale, et c'est pourquoi la limite existe.",
     "en": "The arctangent has a horizontal asymptote, and that is why the limit exists."
@@ -9122,6 +9246,10 @@
   "O argumento é o ângulo com o eixo real.": {
     "fr": "L'argument est l'angle avec l'axe réel.",
     "en": "The argument is the angle with the real axis."
+  },
+  "O argumento é o ângulo do ponto com o eixo real positivo.": {
+    "fr": "L’argument est l’angle du point avec l’axe réel positif.",
+    "en": "The argument is the angle of the point with the positive real axis."
   },
   "O arranjo tende a um retângulo de base metade do perímetro e altura r.": {
     "fr": "L’arrangement tend vers un rectangle de base la moitié du périmètre et de hauteur r.",
@@ -9290,6 +9418,10 @@
   "O cone é uma pirâmide de base circular, e vale o mesmo um terço.": {
     "fr": "Le cône est une pyramide de base circulaire, et vaut le même un tiers.",
     "en": "The cone is a circular-base pyramid, and the same one-third applies."
+  },
+  "O conjugado existe justamente para isso — eliminar o i de baixo.": {
+    "fr": "Le conjugué existe précisément pour cela — éliminer le i du dénominateur.",
+    "en": "The conjugate exists precisely for that — to get rid of the i downstairs."
   },
   "O conjunto solução é um intervalo da reta.": {
     "fr": "L’ensemble solution est un intervalle de la droite.",
@@ -9879,6 +10011,14 @@
     "fr": "La valeur absolue a été ignorée : les barres enlèvent le signe. |−#| vaut #, et non −# — c’est la distance à zéro, qui ne peut pas être négative.",
     "en": "The absolute value was ignored: the bars remove the sign. |−#| is #, not −# — it is the distance to zero, which cannot be negative."
   },
+  "O módulo nunca é negativo: é uma distância.": {
+    "fr": "Le module n’est jamais négatif : c’est une distance.",
+    "en": "The modulus is never negative: it is a distance."
+  },
+  "O módulo é a distância até a origem no plano complexo.": {
+    "fr": "Le module est la distance à l’origine dans le plan complexe.",
+    "en": "The modulus is the distance to the origin in the complex plane."
+  },
   "O módulo é a distância até a origem, por Pitágoras.": {
     "fr": "Le module est la distance à l'origine, par Pythagore.",
     "en": "The magnitude is the distance to the origin, by Pythagoras."
@@ -10198,6 +10338,10 @@
   "O resto de Lagrange tem a forma do termo seguinte, com a derivada num ponto intermediário.": {
     "fr": "Le reste de Lagrange a la forme du terme suivant, avec la dérivée en un point intermédiaire.",
     "en": "The Lagrange remainder has the form of the next term, with the derivative at an intermediate point."
+  },
+  "O resto identifica o valor.": {
+    "fr": "Le reste identifie la valeur.",
+    "en": "The remainder identifies the value."
   },
   "O resto já tem grau menor que o divisor, então a divisão termina.": {
     "fr": "Le reste a déjà un degré plus petit que le diviseur, donc la division s’arrête.",
@@ -11198,6 +11342,10 @@
   "Os semieixos são # e # (as raízes de # e #), não os quadrados.": {
     "fr": "Les demi-axes sont # et # (les racines de # et #), et non les carrés.",
     "en": "The semi-axes are # and # (the roots of # and #), not the squares."
+  },
+  "Os sinais das partes real e imaginária localizam o ponto.": {
+    "fr": "Les signes des parties réelle et imaginaire localisent le point.",
+    "en": "The signs of the real and imaginary parts locate the point."
   },
   "Os subníveis foram preenchidos na ordem dos NÚMEROS, e não na de energia. O #s vem antes do #d: é a energia que manda, não o número da camada.": {
     "fr": "Les sous-couches ont été remplies dans l’ordre des NUMÉROS, et non des énergies. Le #s vient avant le #d : c’est l’énergie qui commande, pas le numéro de la couche.",
@@ -12951,6 +13099,10 @@
     "fr": "Nous substituons les mesures.",
     "en": "We substitute the measures."
   },
+  "Substituímos as partes real e imaginária.": {
+    "fr": "Nous remplaçons les parties réelle et imaginaire.",
+    "en": "We substitute the real and imaginary parts."
+  },
   "Substituímos cada x por #.": {
     "fr": "Nous remplaçons chaque x par #.",
     "en": "We replace each x by #."
@@ -13863,6 +14015,10 @@
     "fr": "Vous avez trouvé le bon dénominateur commun (#), mais gardé les numérateurs d’origine. En multipliant le dénominateur par un facteur, il faut multiplier le numérateur par le même facteur — c’est ce qui préserve la valeur de la fraction.",
     "en": "You found the right common denominator (#), but kept the original numerators. When the denominator is multiplied by a factor, the numerator has to be multiplied by the same factor — that is what preserves the value of the fraction."
   },
+  "Você esqueceu que i² = −#: o produto das partes imaginárias entra SUBTRAINDO na parte real.": {
+    "fr": "Vous avez oublié que i² = −# : le produit des parties imaginaires entre en SOUSTRACTION dans la partie réelle.",
+    "en": "You forgot that i² = −#: the product of the imaginary parts enters the real part by SUBTRACTION."
+  },
   "Você igualou os denominadores antes de multiplicar. Isso é necessário na soma e na subtração, mas na multiplicação não — e aqui altera o resultado.": {
     "fr": "Vous avez égalisé les dénominateurs avant de multiplier. C’est nécessaire pour l’addition et la soustraction, mais pas pour la multiplication — et ici cela change le résultat.",
     "en": "You made the denominators equal before multiplying. That is needed for addition and subtraction, but not for multiplication — and here it changes the result."
@@ -14567,6 +14723,10 @@
     "fr": "|#| enlève le signe ; #! vaut # × # × #.",
     "en": "|#| removes the sign; #! is # × # × #."
   },
+  "|z| é a distância à origem: some os QUADRADOS das partes, (#)² + (#)², e tire a raiz.": {
+    "fr": "|z| est la distance à l’origine : additionnez les CARRÉS des parties, (#)² + (#)², et prenez la racine.",
+    "en": "|z| is the distance to the origin: add the SQUARES of the parts, (#)² + (#)², and take the root."
+  },
   "|ε| = N·ΔΦ/Δt, com ΔΦ = (# − #)·#×#⁻⁴ Wb. Multiplique por # e divida por # s.": {
     "fr": "|ε| = N·ΔΦ/Δt, avec ΔΦ = (# − #)·#×#⁻⁴ Wb. Multipliez par # et divisez par # s.",
     "en": "|ε| = N·ΔΦ/Δt, with ΔΦ = (# − #)·#×#⁻⁴ Wb. Multiply by # and divide by # s."
@@ -14646,6 +14806,10 @@
   "É como se projeta uma suspensão: volta o mais rápido possível sem oscilar.": {
     "fr": "C’est ainsi qu’on conçoit une suspension : elle revient le plus vite possible sans osciller.",
     "en": "That is how a suspension is designed: it returns as fast as possible without oscillating."
+  },
+  "É daqui que vem o sinal de menos na parte real do produto.": {
+    "fr": "C’est de là que vient le signe moins dans la partie réelle du produit.",
+    "en": "That is where the minus sign in the real part of the product comes from."
   },
   "É esta frase que vira a fórmula da diluição, e não o contrário.": {
     "fr": "C’est cette phrase qui devient la formule de la dilution, et non l’inverse.",
