@@ -167,6 +167,10 @@
     "fr": "# vaut #p, et non p. Divisez par # : p = #.",
     "en": "# is #p, not p. Divide by #: p = #."
   },
+  "# é a razão dos termos soltos, o valor perto de n = #. No infinito mandam os termos de maior grau.": {
+    "fr": "# est le rapport des termes constants, la valeur près de n = #. À l’infini, ce sont les termes de plus haut degré qui commandent.",
+    "en": "# is the ratio of the constant terms, the value near n = #. At infinity the highest-degree terms are what rule."
+  },
   "# é o DIÂMETRO: a curva passa pela origem e pelo ponto a # dela, do lado oposto.": {
     "fr": "# est le DIAMÈTRE : la courbe passe par l’origine et par le point à # de celle-ci, du côté opposé.",
     "en": "# is the DIAMETER: the curve passes through the origin and through the point # away from it, on the other side."
@@ -202,6 +206,10 @@
   "#/# não é zero — é uma forma indeterminada. Derive em cima e embaixo antes de substituir.": {
     "fr": "#/# n’est pas zéro — c’est une forme indéterminée. Dérivez en haut et en bas avant de remplacer.",
     "en": "#/# is not zero — it is an indeterminate form. Differentiate top and bottom before substituting."
+  },
+  "#/# é a razão dos termos soltos, o valor perto de n = #. No infinito mandam os termos de maior grau.": {
+    "fr": "#/# est le rapport des termes constants, la valeur près de n = #. À l’infini, ce sont les termes de plus haut degré qui commandent.",
+    "en": "#/# is the ratio of the constant terms, the value near n = #. At infinity the highest-degree terms are what rule."
   },
   "#/f = #/p + #/p′, então #/p′ = #/# − #/#; depois inverta.": {
     "fr": "#/f = #/p + #/p′, donc #/p′ = #/# − #/# ; puis inversez.",
@@ -691,6 +699,10 @@
     "fr": "La dérivée de #x² est #x : le # de l’exposant descend et reste au dénominateur.",
     "en": "The derivative of #x² is #x: the # from the exponent comes down and stays in the denominator."
   },
+  "A derivada de eˣ − a é eˣ. Use e elevado a x₀ com várias casas antes de arredondar.": {
+    "fr": "La dérivée de eˣ − a est eˣ. Utilisez e élevé à x₀ avec plusieurs décimales avant d’arrondir.",
+    "en": "The derivative of eˣ − a is eˣ. Use e to the x₀ with several decimals before rounding."
+  },
   "A derivada de ln x é #/x = x⁻¹. Derive de novo pela regra da potência: o expoente −# desce.": {
     "fr": "La dérivée de ln x vaut #/x = x⁻¹. Dérivez de nouveau par la règle de la puissance : l’exposant −# descend.",
     "en": "The derivative of ln x is #/x = x⁻¹. Differentiate again by the power rule: the exponent −# comes down."
@@ -1162,6 +1174,14 @@
   "A fração saiu de cabeça para baixo: o pivô vai no DENOMINADOR.": {
     "fr": "La fraction est à l’envers : le pivot va au DÉNOMINATEUR.",
     "en": "The fraction is upside down: the pivot goes in the DENOMINATOR."
+  },
+  "A fração saiu de cabeça para baixo: é f sobre f′, a altura dividida pela inclinação.": {
+    "fr": "La fraction est à l’envers : c’est f sur f′, la hauteur divisée par la pente.",
+    "en": "The fraction is upside down: it is f over f′, the height divided by the slope."
+  },
+  "A fração saiu invertida: o coeficiente de cima vai em cima.": {
+    "fr": "La fraction est inversée : le coefficient du haut va en haut.",
+    "en": "The fraction came out upside down: the top coefficient goes on top."
   },
   "A fração se simplifica num número.": {
     "fr": "La fraction se simplifie en un nombre.",
@@ -2119,6 +2139,10 @@
     "fr": "Le rapport entre deux nombres est le quotient entre eux.",
     "en": "The ratio between two numbers is their quotient."
   },
+  "A razão entre os dois erros.": {
+    "fr": "Le rapport entre les deux erreurs.",
+    "en": "The ratio between the two errors."
+  },
   "A razão entre os tempos é o próprio γ. Invertemos a fórmula de γ.": {
     "fr": "Le rapport entre les temps est γ lui-même. Nous inversons la formule de γ.",
     "en": "The ratio of the times is γ itself. We invert the formula for γ."
@@ -2218,6 +2242,10 @@
   "A razão é a propriedade da potência de potência.": {
     "fr": "Le rapport est la propriété de la puissance de puissance.",
     "en": "The ratio is the power-of-power property."
+  },
+  "A razão é aₙ₊₁ sobre aₙ, nessa ordem — e as potências de n se cancelam no limite, não o número elevado a n.": {
+    "fr": "Le rapport est aₙ₊₁ sur aₙ, dans cet ordre — et ce sont les puissances de n qui se simplifient à la limite, pas le nombre élevé à n.",
+    "en": "The ratio is aₙ₊₁ over aₙ, in that order — and it is the powers of n that cancel in the limit, not the number raised to n."
   },
   "A reação rearranja átomos, não os cria nem os destrói.": {
     "fr": "La réaction réarrange les atomes, elle ne les crée ni ne les détruit.",
@@ -2363,6 +2391,10 @@
     "fr": "La solution est unique à une échelle près, et la convention est d’utiliser les plus petits entiers.",
     "en": "The solution is unique up to scale, and the convention is to use the smallest integers."
   },
+  "A soma começa em n = #: a primeira parcela que sobra é #/#, não #/#.": {
+    "fr": "La somme commence en n = # : le premier terme qui reste vaut #/#, et non #/#.",
+    "en": "The sum starts at n = #: the first term left is #/#, not #/#."
+  },
   "A soma cresce sem limite: a série diverge.": {
     "fr": "La somme croît sans limite : la série diverge.",
     "en": "The sum grows without limit: the series diverges."
@@ -2438,6 +2470,10 @@
   "A tangente em c tem de ter a mesma inclinação.": {
     "fr": "La tangente en c doit avoir la même pente.",
     "en": "The tangent at c must have the same slope."
+  },
+  "A tangente em xₙ corta o eixo x em xₙ₊₁ — por isso a fórmula.": {
+    "fr": "La tangente en xₙ coupe l’axe des abscisses en xₙ₊₁ — d’où la formule.",
+    "en": "The tangent at xₙ crosses the x-axis at xₙ₊₁ — hence the formula."
   },
   "A tangente relaciona os dois CATETOS entre si, sem envolver a hipotenusa. Quando a hipotenusa aparece no problema, a razão é seno ou cosseno.": {
     "fr": "La tangente relie les deux CATHÈTES entre elles, sans faire intervenir l’hypoténuse. Quand l’hypoténuse apparaît dans le problème, le rapport est le sinus ou le cosinus.",
@@ -2951,6 +2987,10 @@
     "fr": "Nous appliquons la formule ∫u dv = uv − ∫v du.",
     "en": "We apply the formula ∫u dv = uv − ∫v du."
   },
+  "Aplicamos a fórmula: o ponto atual menos f sobre f′.": {
+    "fr": "Nous appliquons la formule : le point actuel moins f sur f′.",
+    "en": "We apply the formula: the current point minus f over f′."
+  },
   "Aplicamos a regra a cada termo separadamente.": {
     "fr": "Nous appliquons la règle à chaque terme séparément.",
     "en": "We apply the rule to each term separately."
@@ -3330,6 +3370,10 @@
   "Avaliando, o termo em t tende a zero porque a exponencial negativa desaba.": {
     "fr": "En évaluant, le terme en t tend vers zéro car l'exponentielle négative s'effondre.",
     "en": "Evaluating, the t term tends to zero because the negative exponential collapses."
+  },
+  "Avaliar a inclinação no meio do passo corrige quase toda a curvatura.": {
+    "fr": "Évaluer la pente au milieu du pas corrige presque toute la courbure.",
+    "en": "Evaluating the slope at the middle of the step corrects almost all the curvature."
   },
   "Avaliar nas raízes do denominador é mais rápido que montar o sistema.": {
     "fr": "Évaluer aux racines du dénominateur est plus rapide que de monter le système.",
@@ -3779,6 +3823,14 @@
     "fr": "Nous calculons cette inclinaison avec h de plus en plus petit.",
     "en": "We calculate this slope with h getting smaller and smaller."
   },
+  "Calculamos f e f′ em x₀ = #.": {
+    "fr": "Nous calculons f et f′ en x₀ = #.",
+    "en": "We compute f and f′ at x₀ = #."
+  },
+  "Calculamos f e f′ em x₁ = #.": {
+    "fr": "Nous calculons f et f′ en x₁ = #.",
+    "en": "We compute f and f′ at x₁ = #."
+  },
   "Calculamos o MDC e o MMC.": {
     "fr": "Nous calculons le PGCD et le PPCM.",
     "en": "We calculate the GCD and LCM."
@@ -4095,6 +4147,14 @@
     "fr": "Avec M égal à # et x égal à #.",
     "en": "With M equal to # and x equal to #."
   },
+  "Com N = #, o primeiro termo desprezado é #/#, que é IGUAL à tolerância, não menor.": {
+    "fr": "Avec N = #, le premier terme négligé vaut #/#, ce qui est ÉGAL à la tolérance, et non plus petit.",
+    "en": "With N = #, the first dropped term is #/#, which EQUALS the tolerance, not smaller."
+  },
+  "Com N = #, o primeiro termo desprezado é #/#², que é IGUAL à tolerância, não menor.": {
+    "fr": "Avec N = #, le premier terme négligé vaut #/#², ce qui est ÉGAL à la tolérance, et non plus petit.",
+    "en": "With N = #, the first dropped term is #/#², which EQUALS the tolerance, not smaller."
+  },
   "Com N indo ao infinito, a última parcela some.": {
     "fr": "Quand N tend vers l’infini, la dernière part disparaît.",
     "en": "As N goes to infinity, the last part vanishes."
@@ -4102,6 +4162,10 @@
   "Com P = −y/# e Q = x/#, o integrando de Green vale #: a integral dupla é a área.": {
     "fr": "Avec P = −y/# et Q = x/#, l’intégrande de Green vaut # : l’intégrale double est l’aire.",
     "en": "With P = −y/# and Q = x/#, Green’s integrand is #: the double integral is the area."
+  },
+  "Com Runge-Kutta de quarta ordem, a razão seria bem outra.": {
+    "fr": "Avec Runge-Kutta d’ordre quatre, le rapport serait tout autre.",
+    "en": "With fourth-order Runge-Kutta, the ratio would be quite different."
   },
   "Com a = # a função é constante: uma reta horizontal.": {
     "fr": "Avec a = # la fonction est constante : une droite horizontale.",
@@ -4187,6 +4251,10 @@
     "fr": "Avec des degrés égaux, il reste le rapport des coefficients dominants.",
     "en": "With equal degrees, only the ratio of leading coefficients remains."
   },
+  "Com h igual a # e f igual a #y.": {
+    "fr": "Avec h égal à # et f égal à #y.",
+    "en": "With h equal to # and f equal to #y."
+  },
   "Com h menor, essa inclinação se aproximaria da derivada.": {
     "fr": "Avec h plus petit, cette pente s’approcherait de la dérivée.",
     "en": "With a smaller h, that slope would approach the derivative."
@@ -4218,6 +4286,10 @@
   "Com massa de # quilogramas, a força que mantém o giro é esta.": {
     "fr": "Avec une masse de # kilogrammes, la force qui maintient la rotation est celle-ci.",
     "en": "With a mass of # kilograms, the force keeping the spin is this one."
+  },
+  "Com metade do passo, e o dobro de iterações.": {
+    "fr": "Avec la moitié du pas, et le double d’itérations.",
+    "en": "With half the step, and twice as many iterations."
   },
   "Com muitos lados, isso se aproxima de πr² — o círculo é o limite.": {
     "fr": "Avec beaucoup de côtés, cela s’approche de πr² — le cercle est la limite.",
@@ -4290,6 +4362,14 @@
   "Com o numerador um grau acima, a assíntota é uma reta inclinada.": {
     "fr": "Avec le numérateur un degré au-dessus, l'asymptote est une droite inclinée.",
     "en": "With the numerator one degree higher, the asymptote is a slanted line."
+  },
+  "Com p = # > # a p-série converge; só diverge quando p ≤ #.": {
+    "fr": "Avec p = # > #, la série de Riemann converge ; elle ne diverge que si p ≤ #.",
+    "en": "With p = # > # the p-series converges; it only diverges when p ≤ #."
+  },
+  "Com passo #, o erro é este.": {
+    "fr": "Avec un pas de #, l’erreur vaut ceci.",
+    "en": "With step #, the error is this."
   },
   "Com r igual a # e ângulo de # graus.": {
     "fr": "Avec r égal à # et un angle de # degrés.",
@@ -4847,6 +4927,10 @@
     "fr": "Après la réduction — et il vaut # quand il n’est pas écrit.",
     "en": "After reducing — and it is # when it is not written."
   },
+  "Depois de # passos.": {
+    "fr": "Après # pas.",
+    "en": "After # steps."
+  },
   "Depois de trocar por u, não esqueça o fator que vem de dx = du/a.": {
     "fr": "Après le changement en u, n’oubliez pas le facteur qui vient de dx = du/a.",
     "en": "After switching to u, do not forget the factor coming from dx = du/a."
@@ -5374,6 +5458,10 @@
   "Dez vezes o logaritmo decimal.": {
     "fr": "Dix fois le logarithme décimal.",
     "en": "Ten times the decimal logarithm."
+  },
+  "Dezesseis é o fator de um método de QUARTA ordem, como o Runge-Kutta. Euler é de primeira, e por isso o erro cai só pela metade.": {
+    "fr": "Seize est le facteur d’une méthode d’ordre QUATRE, comme Runge-Kutta. Euler est d’ordre un, et l’erreur ne tombe donc que de moitié.",
+    "en": "Sixteen is the factor of a FOURTH-order method, like Runge-Kutta. Euler is first order, so the error only halves."
   },
   "Diferença (A − B): os elementos de A que NÃO estão em B.": {
     "fr": "Différence (A − B) : les éléments de A qui NE sont PAS dans B.",
@@ -6671,6 +6759,14 @@
     "fr": "En x = #, B sort.",
     "en": "At x = #, B comes out."
   },
+  "Em x = # sobra # + # + # + …, que diverge; em x = # sobra # − # + # − …, que diverge porque o termo não vai a #.": {
+    "fr": "En x = # il reste # + # + # + …, qui diverge ; en x = # il reste # − # + # − …, qui diverge parce que le terme ne tend pas vers #.",
+    "en": "At x = # what is left is # + # + # + …, which diverges; at x = # what is left is # − # + # − …, which diverges because the term does not go to #."
+  },
+  "Em x = # sobra a harmônica Σ #/n, que diverge; em x = # sobra a alternada Σ (−#)ⁿ/n, que converge.": {
+    "fr": "En x = # il reste l’harmonique Σ #/n, qui diverge ; en x = # il reste l’alternée Σ (−#)ⁿ/n, qui converge.",
+    "en": "At x = # the harmonic series Σ #/n is left, which diverges; at x = # the alternating Σ (−#)ⁿ/n is left, which converges."
+  },
   "Em x = # sobra a p-série Σ #/n² (p = #), que converge; em x = # sobra Σ (−#)ⁿ/n², que converge absolutamente.": {
     "fr": "En x = # il reste la série de Riemann Σ #/n² (p = #), qui converge ; en x = # il reste Σ (−#)ⁿ/n², qui converge absolument.",
     "en": "At x = # the p-series Σ #/n² (p = #) is left, which converges; at x = # Σ (−#)ⁿ/n² is left, which converges absolutely."
@@ -7067,6 +7163,10 @@
     "fr": "Écrivez le terme comme #/(n + #) − #/(n + #) et voyez ce qui reste après l’annulation des termes du milieu.",
     "en": "Write the term as #/(n + #) − #/(n + #) and see what is left once the middle terms cancel."
   },
+  "Escreva o termo como #/(n) − #/(n + #) e veja o que sobra depois que os termos do meio se cancelam.": {
+    "fr": "Écrivez le terme sous la forme #/(n) − #/(n + #) et regardez ce qui reste une fois les termes du milieu annulés.",
+    "en": "Write the term as #/(n) − #/(n + #) and see what is left after the middle terms cancel."
+  },
   "Escreva o termo como #/n elevado a p: converge só se p > # (com p = #, a harmônica, diverge).": {
     "fr": "Écrivez le terme comme #/n à la puissance p : converge seulement si p > # (avec p = #, l’harmonique, diverge).",
     "en": "Write the term as #/n to the power p: it converges only if p > # (with p = #, the harmonic one, it diverges)."
@@ -7443,6 +7543,10 @@
     "fr": "C’est l’aire du grand cercle entier, trou du milieu compris.",
     "en": "That is the area of the whole larger circle, with the hole in the middle included."
   },
+  "Essa é só a correção f/f′. O novo ponto é o anterior MENOS ela.": {
+    "fr": "Ce n’est que la correction f/f′. Le nouveau point est le précédent MOINS elle.",
+    "en": "That is only the correction f/f′. The new point is the previous one MINUS it."
+  },
   "Essa é só a outra parcela. Faltou o termo com o arco-seno.": {
     "fr": "Ce n’est que l’autre terme. Il manque celui avec l’arc sinus.",
     "en": "That is only the other term. The arcsine term is missing."
@@ -7583,6 +7687,10 @@
     "fr": "C’est le discriminant, qui décide du régime, mais ce n’est pas une racine.",
     "en": "That is the discriminant, which decides the regime, but it is not a root."
   },
+  "Esse é o erro RELATIVO. O enunciado pede o erro absoluto, na mesma unidade da grandeza.": {
+    "fr": "C’est l’erreur RELATIVE. L’énoncé demande l’erreur absolue, dans l’unité de la grandeur.",
+    "en": "That is the RELATIVE error. The question asks for the absolute error, in the same unit as the quantity."
+  },
   "Esse é o erro do polinômio de grau #, um termo além do pedido. Repare como ele é bem menor — é esse ganho que justifica cada termo a mais.": {
     "fr": "C’est l’erreur du polynôme de degré #, un terme au-delà de ce qui est demandé. Remarquez combien elle est plus petite — c’est ce gain qui justifie chaque terme supplémentaire.",
     "en": "That is the error of the degree-# polynomial, one term beyond what was asked. Notice how much smaller it is — that gain is what justifies each extra term."
@@ -7683,6 +7791,10 @@
     "fr": "C’est le régime permanent, atteint seulement quand t tend vers l’infini. En temps fini, il reste encore le transitoire.",
     "en": "That is the steady state, reached only as t goes to infinity. In finite time the transient is still there."
   },
+  "Esse é o resultado de Euler. Runge-Kutta avalia a inclinação quatro vezes por passo, e por isso acerta muitas casas a mais.": {
+    "fr": "C’est le résultat d’Euler. Runge-Kutta évalue la pente quatre fois par pas, et gagne donc bien plus de décimales justes.",
+    "en": "That is Euler’s result. Runge-Kutta evaluates the slope four times per step, and so gets many more digits right."
+  },
   "Esse é o resultado dos juros SIMPLES, em que só o capital inicial rende. Nos compostos o montante inteiro rende a cada período, e o crescimento é exponencial.": {
     "fr": "C’est le résultat des intérêts SIMPLES, où seul le capital initial rapporte. En composés, tout le montant rapporte à chaque période, et la croissance est exponentielle.",
     "en": "That is the result for SIMPLE interest, where only the initial capital earns. With compound interest the whole amount earns each period, and the growth is exponential."
@@ -7718,6 +7830,14 @@
   "Esse é o total de elétrons do átomo, que é o número atômico. A pergunta é sobre a ÚLTIMA camada — as de dentro não contam.": {
     "fr": "C’est le total d’électrons de l’atome, c’est-à-dire le numéro atomique. La question porte sur la DERNIÈRE couche — celles de l’intérieur ne comptent pas.",
     "en": "That is the atom’s total number of electrons, the atomic number. The question is about the LAST shell — the inner ones do not count."
+  },
+  "Esse é o valor EXATO da solução. O exercício pede o que o método de Euler devolve, que é diferente — e a diferença é justamente o que o tópico estuda.": {
+    "fr": "C’est la valeur EXACTE de la solution. L’exercice demande ce que rend la méthode d’Euler, qui est différent — et cet écart est justement ce que le sujet étudie.",
+    "en": "That is the EXACT value of the solution. The exercise asks what Euler’s method returns, which is different — and that gap is precisely what this topic studies."
+  },
+  "Esse é o valor aproximado, não o erro. O erro é a diferença até o exato.": {
+    "fr": "C’est la valeur approchée, et non l’erreur. L’erreur est l’écart jusqu’à la valeur exacte.",
+    "en": "That is the approximate value, not the error. The error is the gap to the exact one."
   },
   "Esse é o valor da derivada PRIMEIRA. Falta derivar mais uma vez.": {
     "fr": "C’est la valeur de la dérivée PREMIÈRE. Il reste à dériver une fois de plus.",
@@ -7827,6 +7947,10 @@
     "fr": "C’est la valeur exacte de la racine, et non celle de l’approximation. L’exercice demande ce que rend le polynôme.",
     "en": "That is the exact value of the root, not of the approximation. The exercise asks what the polynomial returns."
   },
+  "Esse é o valor exato. Runge-Kutta chega muito perto dele, mas não é igual — o erro existe, só é pequeno.": {
+    "fr": "C’est la valeur exacte. Runge-Kutta s’en approche beaucoup, mais ne l’égale pas — l’erreur existe, elle est seulement petite.",
+    "en": "That is the exact value. Runge-Kutta gets very close to it, but is not equal — the error is there, it is just small."
+  },
   "Esse é o valor inicial. O sistema evolui a partir dele, e em t positivo já se moveu.": {
     "fr": "C’est la valeur initiale. Le système évolue à partir d’elle, et pour t positif il a déjà bougé.",
     "en": "That is the initial value. The system evolves from it, and at positive t it has already moved."
@@ -7871,6 +7995,10 @@
     "fr": "C’est l’indice avant la réduction — la charge du métal, brute. Après division par les facteurs communs, l’indice est autre.",
     "en": "That is the subscript before reducing — the metal’s raw charge. After dividing by the common factors, the subscript is different."
   },
+  "Esse é o último termo SOMADO (o #º). A cota é o primeiro desprezado, o #º.": {
+    "fr": "C’est le dernier terme ADDITIONNÉ (le #e). La borne est le premier terme négligé, le #e.",
+    "en": "That is the last term ADDED (the #th). The bound is the first dropped one, the #th."
+  },
   "Esse é quanto a camada # CABE, não quanto ela tem. Capacidade e ocupação só coincidem quando a camada está cheia, e a última raramente está.": {
     "fr": "C’est ce que la couche # PEUT contenir, et non ce qu’elle contient. Capacité et occupation ne coïncident que lorsque la couche est pleine, et la dernière l’est rarement.",
     "en": "That is how much shell # CAN hold, not how much it holds. Capacity and occupancy only match when the shell is full, and the last one rarely is."
@@ -7894,6 +8022,10 @@
   "Esse é x, a distância de B até a torre. Falta multiplicar pela tangente para achar a altura.": {
     "fr": "C’est x, la distance de B à la tour. Il reste à multiplier par la tangente pour trouver la hauteur.",
     "en": "That is x, the distance from B to the tower. Multiplying by the tangent to find the height is still missing."
+  },
+  "Esse é x₁. O pedido é x₂: repita a fórmula partindo de x₁.": {
+    "fr": "C’est x₁. Ce qui est demandé est x₂ : répétez la formule en partant de x₁.",
+    "en": "That is x₁. What is asked for is x₂: repeat the formula starting from x₁."
   },
   "Esses são os SUBNÍVEIS ocupados, não as camadas. Uma camada reúne vários subníveis: a camada # tem o #s e o #p.": {
     "fr": "Ce sont les SOUS-COUCHES occupées, et non les couches. Une couche réunit plusieurs sous-couches : la couche # contient le #s et le #p.",
@@ -7930,6 +8062,14 @@
   "Euler usa uma inclinação por passo.": {
     "fr": "Euler utilise une inclinaison par étape.",
     "en": "Euler uses one slope per step."
+  },
+  "Euler é de primeira ordem: o erro cai na mesma proporção do passo. Calcule os dois erros e divida um pelo outro.": {
+    "fr": "Euler est d’ordre un : l’erreur décroît dans la même proportion que le pas. Calculez les deux erreurs et divisez l’une par l’autre.",
+    "en": "Euler is first order: the error falls in the same proportion as the step. Compute both errors and divide one by the other."
+  },
+  "Euler é de primeira ordem; RK# é de quarta: metade do passo divide o erro por #.": {
+    "fr": "Euler est d’ordre un ; RK# est d’ordre quatre : la moitié du pas divise l’erreur par #.",
+    "en": "Euler is first order; RK# is fourth: half the step divides the error by #."
   },
   "Exata quer dizer ∂M/∂y = ∂N/∂x. Derive M em y, N em x, e iguale os coeficientes.": {
     "fr": "Exacte veut dire ∂M/∂y = ∂N/∂x. Dérivez M en y, N en x, et égalez les coefficients.",
@@ -8303,6 +8443,10 @@
     "fr": "Il manque la soustraction de la valeur à la borne inférieure. L’intégrale définie reste F(b) − F(a), même après la substitution.",
     "en": "Subtracting the value at the lower limit is missing. The definite integral is still F(b) − F(a), even after the substitution."
   },
+  "Faltou tirar a raiz: com #/n², (N + #)² > #ᵏ dá N + # maior que a raiz de #ᵏ.": {
+    "fr": "Il manque l’extraction de la racine : avec #/n², (N + #)² > #ᵏ donne N + # supérieur à la racine de #ᵏ.",
+    "en": "Taking the root is missing: with #/n², (N + #)² > #ᵏ gives N + # greater than the root of #ᵏ."
+  },
   "Faltou tirar o # do fator: a raiz dá # + i, não i.": {
     "fr": "Il manque le retrait du # du facteur : la racine donne # + i, et non i.",
     "en": "Taking the # out of the factor is missing: the root gives # + i, not i."
@@ -8367,9 +8511,17 @@
     "fr": "Faites AB et AC, la normale est AB × AC (changez le signe si la première coordonnée sort négative) et d = n·A.",
     "en": "Take AB and AC, the normal is AB × AC (flip the sign if the first coordinate comes out negative) and d = n·A."
   },
+  "Faça a primeira iteração, guarde x₁ com todas as casas e repita a fórmula a partir dele.": {
+    "fr": "Faites la première itération, gardez x₁ avec toutes ses décimales et répétez la formule à partir de lui.",
+    "en": "Do the first iteration, keep x₁ with all its digits and repeat the formula from it."
+  },
   "Faça o quadro de sinais de cima e de baixo. O zero do denominador nunca entra, nem com ≤ ou ≥.": {
     "fr": "Faites le tableau de signes du haut et du bas. Le zéro du dénominateur n’entre jamais, même avec ≤ ou ≥.",
     "en": "Build the sign table for top and bottom. The denominator’s zero never belongs, not even with ≤ or ≥."
+  },
+  "Faça os # passos de Euler com h = #, calcule a solução exata no mesmo instante e subtraia.": {
+    "fr": "Faites les # pas d’Euler avec h = #, calculez la solution exacte au même instant et soustrayez.",
+    "en": "Do the # Euler steps with h = #, compute the exact solution at the same instant and subtract."
   },
   "Fe neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Fe neutre a # électrons, autant que de protons.",
@@ -8683,6 +8835,10 @@
     "fr": "Inverser le décimal n’est pas le convertir : # vaut # centièmes, soit #/# — le fait d’obtenir #/# vient de la simplification, pas d’une division de # par le nombre.",
     "en": "Flipping the decimal is not converting it: # is # hundredths, that is #/# — getting #/# comes from simplifying, not from dividing # by the number."
   },
+  "Invertido: de |x − a|/b < # sai R = b; de b·|x − a| < # sai R = #/b.": {
+    "fr": "Inversé : de |x − a|/b < # on tire R = b ; de b·|x − a| < # on tire R = #/b.",
+    "en": "Flipped: from |x − a|/b < # comes R = b; from b·|x − a| < # comes R = #/b."
+  },
   "Isolamos a quarta potência da temperatura.": {
     "fr": "Nous isolons la quatrième puissance de la température.",
     "en": "We isolate the fourth power of the temperature."
@@ -8910,6 +9066,10 @@
   "Isole x numa das equações e troque essa expressão na outra.": {
     "fr": "Isolez x dans l’une des équations et remplacez cette expression dans l’autre.",
     "en": "Isolate x in one of the equations and substitute that expression into the other."
+  },
+  "Isso aplicaria a fórmula de um passo só, com o tempo total. Euler reaplica a tangente a cada passo, sempre a partir do novo valor.": {
+    "fr": "Cela appliquerait la formule d’un seul pas, avec le temps total. Euler réapplique la tangente à chaque pas, toujours à partir de la nouvelle valeur.",
+    "en": "That would apply the one-step formula with the total time. Euler reapplies the tangent at each step, always from the new value."
   },
   "Isso equivale a # graus Celsius.": {
     "fr": "Cela équivaut à # degrés Celsius.",
@@ -9286,6 +9446,10 @@
   "Metade disso é a área do trapézio.": {
     "fr": "La moitié de cela est l'aire du trapèze.",
     "en": "Half of this is the trapezoid's area."
+  },
+  "Metade do passo costuma dar metade do erro: Euler é de primeira ordem.": {
+    "fr": "La moitié du pas donne en général la moitié de l’erreur : Euler est d’ordre un.",
+    "en": "Half the step usually gives half the error: Euler is first order."
   },
   "Mg neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Mg neutre a # électrons, autant que de protons.",
@@ -10119,6 +10283,14 @@
     "fr": "À la limite le facteur en n tend vers # ; la série converge quand ce qui reste est plus petit que #.",
     "en": "In the limit the factor with n tends to #; the series converges when what is left is smaller than #."
   },
+  "No limite, (n + #)/n tende a #; sobra #/#. L < #: converge.": {
+    "fr": "À la limite, (n + #)/n tend vers # ; il reste #/#. L < # : converge.",
+    "en": "In the limit, (n + #)/n tends to #; what is left is #/#. L < #: it converges."
+  },
+  "No limite, (n + #)²/n² tende a #; sobra #/#. L < #: converge.": {
+    "fr": "À la limite, (n + #)²/n² tend vers # ; il reste #/#. L < # : converge.",
+    "en": "In the limit, (n + #)²/n² tends to #; what is left is #/#. L < #: it converges."
+  },
   "No limite, a secante vira a reta tangente, e sua inclinação é a derivada.": {
     "fr": "À la limite, la sécante devient la tangente, et son inclinaison est la dérivée.",
     "en": "In the limit, the secant becomes the tangent, and its slope is the derivative."
@@ -10126,6 +10298,14 @@
   "No limite, a soma converge para a área exata.": {
     "fr": "À la limite, la somme converge vers l'aire exacte.",
     "en": "In the limit, the sum converges to the exact area."
+  },
+  "No limite, n/(n + #) tende a #; sobra #/#. L < #: converge.": {
+    "fr": "À la limite, n/(n + #) tend vers # ; il reste #/#. L < # : converge.",
+    "en": "In the limit, n/(n + #) tends to #; what is left is #/#. L < #: it converges."
+  },
+  "No limite, n/(n + #) tende a #; sobra #/#. L > #: diverge.": {
+    "fr": "À la limite, n/(n + #) tend vers # ; il reste #/#. L > # : diverge.",
+    "en": "In the limit, n/(n + #) tends to #; what is left is #/#. L > #: it diverges."
   },
   "No limite, o fatorial ganha: #/(n + #) tende a #. L < #: converge.": {
     "fr": "À la limite, la factorielle l’emporte : #/(n + #) tend vers #. L < # : converge.",
@@ -10362,6 +10542,10 @@
   "Numerador e denominador têm o mesmo grau.": {
     "fr": "Numérateur et dénominateur ont le même degré.",
     "en": "Numerator and denominator have the same degree."
+  },
+  "Numerador e denominador têm o mesmo grau: o limite é a razão dos coeficientes, #/#, não #.": {
+    "fr": "Numérateur et dénominateur ont le même degré : la limite est le rapport des coefficients, #/#, et non #.",
+    "en": "Numerator and denominator have the same degree: the limit is the ratio of the coefficients, #/#, not #."
   },
   "Numerador negativo sobre um denominador positivo quase zero.": {
     "fr": "Numérateur negativo sur un dénominateur positivo presque nul.",
@@ -10722,6 +10906,10 @@
   "O campo é a força por unidade de carga de prova: não depende de quem o mede.": {
     "fr": "Le champ est la force par unité de charge d’épreuve : il ne dépend pas de qui le mesure.",
     "en": "The field is the force per unit test charge: it does not depend on who measures it."
+  },
+  "O cancelamento não é total: a primeira parcela não tem par para cancelá-la.": {
+    "fr": "L’annulation n’est pas totale : le premier terme n’a pas de partenaire pour l’annuler.",
+    "en": "The cancellation is not complete: the first term has no partner to cancel it."
   },
   "O cancelamento vale para todo x diferente do ponto — e é só disso que o limite precisa.": {
     "fr": "L’annulation vaut pour tout x différent du point — et c’est tout ce dont la limite a besoin.",
@@ -11091,6 +11279,10 @@
     "fr": "La poussée est le taux avec lequel le moteur délivre du moment au gaz.",
     "en": "The thrust is the rate at which the engine delivers momentum to the gas."
   },
+  "O enunciado pede o FATOR, que é a razão entre os erros, e não a diferença entre eles.": {
+    "fr": "L’énoncé demande le FACTEUR, c’est-à-dire le rapport entre les erreurs, et non leur différence.",
+    "en": "The question asks for the FACTOR, the ratio between the errors, not the difference between them."
+  },
   "O erro ao parar em N é no máximo o termo N + #; impomos que ele seja menor que a tolerância.": {
     "fr": "L’erreur en s’arrêtant à N vaut au plus le terme N + # ; nous imposons qu’il soit plus petit que la tolérance.",
     "en": "The error from stopping at N is at most term N + #; we require it to be smaller than the tolerance."
@@ -11198,6 +11390,10 @@
   "O fator (x - #) zera no número de sinal contrário ao que está dentro dele.": {
     "fr": "Le facteur (x - #) s’annule au nombre de signe opposé à celui qui est écrit dedans.",
     "en": "The factor (x - #) vanishes at the number whose sign is opposite to the one written inside it."
+  },
+  "O fator com n tende a #, mas o que importa é o que sobra além dele.": {
+    "fr": "Le facteur en n tend vers #, mais ce qui compte est ce qui reste au-delà.",
+    "en": "The factor with n tends to #, but what matters is what is left beyond it."
   },
   "O fator de Lorentz mede o quanto o tempo e o espaço se deformam a velocidade v.": {
     "fr": "Le facteur de Lorentz mesure combien le temps et l’espace se déforment à la vitesse v.",
@@ -11767,6 +11963,10 @@
     "fr": "Le premier pivot est nul : échangez la L₁ avec une ligne dont la première entrée est non nulle, et éliminez seulement ensuite.",
     "en": "The first pivot is zero: swap L₁ with a row whose first entry is nonzero, and only then eliminate."
   },
+  "O primeiro termo deixado de fora é o #º, não o #º.": {
+    "fr": "Le premier terme laissé de côté est le #e, et non le #e.",
+    "en": "The first term left out is the #th, not the #th."
+  },
   "O prisma tem duas bases de # lados ligadas por # faces laterais.": {
     "fr": "Le prisme a deux bases de # côtés reliées par # faces latérales.",
     "en": "The prism has two #-sided bases joined by # lateral faces."
@@ -12055,6 +12255,10 @@
     "fr": "Le signe alterne, et l’ordre du terme décide lequel c’est. Il vaut la peine d’écrire les premiers termes et de voir où le signe bascule.",
     "en": "The sign alternates, and the order of the term decides which it is. Worth writing the first terms and checking where the sign turns."
   },
+  "O sinal da correção saiu trocado: a fórmula SUBTRAI f/f′ do ponto atual.": {
+    "fr": "Le signe de la correction est inversé : la formule SOUSTRAIT f/f′ du point actuel.",
+    "en": "The sign of the correction is flipped: the formula SUBTRACTS f/f′ from the current point."
+  },
   "O sinal da operação é \"*\", então multiplicamos.": {
     "fr": "Le signe de l’opération est « × », donc on multiplie.",
     "en": "The operation sign is \"×\", so we multiply."
@@ -12303,17 +12507,49 @@
     "fr": "Le terme se comporte comme n/n² = #/n ; par comparaison, la série diverge.",
     "en": "The term behaves like n/n² = #/n; by comparison, the series diverges."
   },
+  "O termo se comporta como n/n³ = #/n², que converge: a constante somada não muda o comportamento.": {
+    "fr": "Le terme se comporte comme n/n³ = #/n², qui converge : la constante ajoutée ne change pas le comportement.",
+    "en": "The term behaves like n/n³ = #/n², which converges: the added constant does not change the behaviour."
+  },
   "O termo se comporta como n/n³ = #/n²; por comparação, a série converge.": {
     "fr": "Le terme se comporte comme n/n³ = #/n² ; par comparaison, la série converge.",
     "en": "The term behaves like n/n³ = #/n²; by comparison, the series converges."
+  },
+  "O termo vai a zero, mas isso não basta: com p = # ≤ # a soma cresce sem limite.": {
+    "fr": "Le terme tend vers zéro, mais cela ne suffit pas : avec p = # ≤ #, la somme croît sans limite.",
+    "en": "The term goes to zero, but that is not enough: with p = # ≤ # the sum grows without bound."
+  },
+  "O termo vai a zero, mas se comporta como #/n, a harmônica, que diverge.": {
+    "fr": "Le terme tend vers zéro, mais se comporte comme #/n, l’harmonique, qui diverge.",
+    "en": "The term goes to zero, but behaves like #/n, the harmonic series, which diverges."
+  },
+  "O termo vai a zero, mas se comporta como #/√n, p-série com p = #/#, que diverge.": {
+    "fr": "Le terme tend vers zéro, mais se comporte comme #/√n, série de Riemann avec p = #/#, qui diverge.",
+    "en": "The term goes to zero, but behaves like #/√n, a p-series with p = #/#, which diverges."
+  },
+  "O termo vai a zero, mas se comporta como n/n² = #/n, que diverge.": {
+    "fr": "Le terme tend vers zéro, mais se comporte comme n/n² = #/n, qui diverge.",
+    "en": "The term goes to zero, but behaves like n/n² = #/n, which diverges."
   },
   "O termo xy gira a cônica, e nenhum isolamento é razoável.": {
     "fr": "Le terme xy fait tourner la conique, et aucun isolement n'est raisonnable.",
     "en": "The xy term rotates the conic, and no isolation is reasonable."
   },
+  "O termo é menor que #/n², p-série com p = #, que converge: a constante somada não muda o comportamento.": {
+    "fr": "Le terme est plus petit que #/n², série de Riemann avec p = #, qui converge : la constante ajoutée ne change pas le comportement.",
+    "en": "The term is smaller than #/n², a p-series with p = #, which converges: the added constant does not change the behaviour."
+  },
   "O termo é menor que #/n², p-série com p = #; por comparação, a série converge.": {
     "fr": "Le terme est plus petit que #/n², série de Riemann avec p = # ; par comparaison, la série converge.",
     "en": "The term is smaller than #/n², a p-series with p = #; by comparison, the series converges."
+  },
+  "O termo é menor que (#/#)ⁿ, geométrica de razão #/#, que converge: a constante somada não muda o comportamento.": {
+    "fr": "Le terme est plus petit que (#/#)ⁿ, géométrique de raison #/#, qui converge : la constante ajoutée ne change pas le comportement.",
+    "en": "The term is smaller than (#/#)ⁿ, a geometric series of ratio #/#, which converges: the added constant does not change the behaviour."
+  },
+  "O termo é menor que (#/#)ⁿ, geométrica de razão #/#; por comparação, a série converge.": {
+    "fr": "Le terme est plus petit que (#/#)ⁿ, géométrique de raison #/# ; par comparaison, la série converge.",
+    "en": "The term is smaller than (#/#)ⁿ, a geometric series of ratio #/#; by comparison, the series converges."
   },
   "O terço vale para cone e pirâmide. O cilindro tem seção constante: é área da base vezes altura, sem divisão.": {
     "fr": "Le tiers vaut pour le cône et la pyramide. Le cylindre a une section constante : c’est l’aire de la base fois la hauteur, sans division.",
@@ -13703,6 +13939,10 @@
     "fr": "Perpendiculaires : le produit des pentes est −#.",
     "en": "Perpendicular: the product of the slopes is −#."
   },
+  "Perto de #: Euler é de primeira ordem, e o erro cai junto com o passo.": {
+    "fr": "Près de # : Euler est d’ordre un, et l’erreur décroît en même temps que le pas.",
+    "en": "Near #: Euler is first order, and the error falls along with the step."
+  },
   "Perto do centro, poucos termos já bastam.": {
     "fr": "Près du centre, peu de termes suffisent.",
     "en": "Near the centre, a few terms are enough."
@@ -14023,6 +14263,10 @@
     "fr": "Presque : la valeur moyenne d’une fonction LINÉAIRE est exactement la moyenne des hauteurs aux extrémités. Vérifiez le calcul.",
     "en": "Almost: the average value of a LINEAR function is exactly the average of the heights at the ends. Check the arithmetic."
   },
+  "Quatro seria um método de segunda ordem. A ordem de Euler é #, e o fator correspondente é #.": {
+    "fr": "Quatre correspondrait à une méthode d’ordre deux. L’ordre d’Euler est #, et le facteur correspondant est #.",
+    "en": "Four would be a second-order method. Euler’s order is #, and the matching factor is #."
+  },
   "Que é a soma dos dois ângulos internos opostos.": {
     "fr": "Qui est la somme des deux angles intérieurs opposés.",
     "en": "Which is the sum of the two opposite interior angles."
@@ -14142,6 +14386,10 @@
   "Repetindo para todas as posições.": {
     "fr": "En répétant pour toutes les positions.",
     "en": "Repeating for all positions."
+  },
+  "Repita a conta passo a passo, sempre usando o y mais recente.": {
+    "fr": "Répétez le calcul pas à pas, en utilisant toujours le y le plus récent.",
+    "en": "Repeat the computation step by step, always using the most recent y."
   },
   "Resolva a potência antes dos produtos e das somas.": {
     "fr": "Résolvez la puissance avant les produits et les sommes.",
@@ -15511,6 +15759,18 @@
     "fr": "Testez les diviseurs du terme constant (#) divisés par ceux du coefficient dominant : trouvez une racine, divisez et résolvez le reste par la formule quadratique.",
     "en": "Test the divisors of the constant term (#) over those of the leading one: find a root, divide and solve the rest with the quadratic formula."
   },
+  "Teste os dois extremos separadamente: em x = # sobra # + # + # + …, que diverge; em x = #, # − # + # − …, que diverge porque o termo não vai a #.": {
+    "fr": "Testez les deux bornes séparément : en x = # il reste # + # + # + …, qui diverge ; en x = #, # − # + # − …, qui diverge parce que le terme ne tend pas vers #.",
+    "en": "Test both ends separately: at x = # what is left is # + # + # + …, which diverges; at x = #, # − # + # − …, which diverges because the term does not go to #."
+  },
+  "Teste os dois extremos separadamente: em x = # sobra a harmônica Σ #/n, que diverge; em x = #, a alternada Σ (−#)ⁿ/n, que converge.": {
+    "fr": "Testez les deux bornes séparément : en x = # il reste l’harmonique Σ #/n, qui diverge ; en x = #, l’alternée Σ (−#)ⁿ/n, qui converge.",
+    "en": "Test both ends separately: at x = # the harmonic Σ #/n is left, which diverges; at x = #, the alternating Σ (−#)ⁿ/n, which converges."
+  },
+  "Teste os dois extremos separadamente: em x = # sobra a p-série Σ #/n² (p = #), que converge; em x = #, Σ (−#)ⁿ/n², que converge absolutamente.": {
+    "fr": "Testez les deux bornes séparément : en x = # il reste la série de Riemann Σ #/n² (p = #), qui converge ; en x = #, Σ (−#)ⁿ/n², qui converge absolument.",
+    "en": "Test both ends separately: at x = # the p-series Σ #/n² (p = #) is left, which converges; at x = #, Σ (−#)ⁿ/n², which converges absolutely."
+  },
   "Ti neutro tem # elétrons, tantos quantos prótons.": {
     "fr": "Ti neutre a # électrons, autant que de protons.",
     "en": "Neutral Ti has # electrons, as many as protons."
@@ -16707,6 +16967,10 @@
     "fr": "p = # > # : les termes décroissent assez vite, la série converge.",
     "en": "p = # > #: the terms fall fast enough, the series converges."
   },
+  "p = # ≤ #: os termos caem devagar demais, a série diverge (é a harmônica).": {
+    "fr": "p = # ≤ # : les termes décroissent trop lentement, la série diverge (c’est l’harmonique).",
+    "en": "p = # ≤ #: the terms fall too slowly, the series diverges (it is the harmonic one)."
+  },
   "p = # ≤ #: os termos caem devagar demais, a série diverge.": {
     "fr": "p = # ≤ # : les termes décroissent trop lentement, la série diverge.",
     "en": "p = # ≤ #: the terms fall too slowly, the series diverges."
@@ -16743,6 +17007,10 @@
     "fr": "r est l’hypoténuse du triangle de cathètes |x| et |y|.",
     "en": "r is the hypotenuse of the triangle with legs |x| and |y|."
   },
+  "x = # é o CENTRO da série, não o raio. O raio sai da desigualdade |x − a| < R.": {
+    "fr": "x = # est le CENTRE de la série, et non le rayon. Le rayon sort de l’inégalité |x − a| < R.",
+    "en": "x = # is the CENTRE of the series, not the radius. The radius comes from the inequality |x − a| < R."
+  },
   "x = r·cos θ. Em #° o cosseno tem sinal próprio do quadrante.": {
     "fr": "x = r·cos θ. À #°, le cosinus porte le signe propre au quadrant.",
     "en": "x = r·cos θ. At #° the cosine carries the sign of its quadrant."
@@ -16758,6 +17026,10 @@
   "x² + # não é diferença de quadrados: com +, ele não se anula para nenhum x real.": {
     "fr": "x² + # n’est pas une différence de carrés : avec +, il ne s’annule pour aucun x réel.",
     "en": "x² + # is not a difference of squares: with +, it vanishes for no real x."
+  },
+  "x₁ = x₀ − f(x₀)/f′(x₀). Calcule f e f′ no ponto de partida e substitua.": {
+    "fr": "x₁ = x₀ − f(x₀)/f′(x₀). Calculez f et f′ au point de départ et remplacez.",
+    "en": "x₁ = x₀ − f(x₀)/f′(x₀). Compute f and f′ at the starting point and substitute."
   },
   "y = m·λ·L/d com tudo em metros: λ = # × #⁻⁹ m e d = # × #⁻³ m. Depois passe y para mm.": {
     "fr": "y = m·λ·L/d avec tout en mètres : λ = # × #⁻⁹ m et d = # × #⁻³ m. Passez ensuite y en mm.",
@@ -16871,6 +17143,10 @@
     "fr": "C’est la courbe de Gauss, qui n’a pas de primitive en fonctions élémentaires.",
     "en": "It is the Gaussian curve, which has no antiderivative in elementary functions."
   },
+  "É a definição de derivada lida ao contrário, com h finito em vez de infinitesimal.": {
+    "fr": "C’est la définition de la dérivée lue à l’envers, avec h fini au lieu d’infinitésimal.",
+    "en": "It is the definition of the derivative read backwards, with h finite instead of infinitesimal."
+  },
   "É a distributiva lida de trás para frente.": {
     "fr": "C’est la distributivité lue à l’envers.",
     "en": "It is distributivity read backwards."
@@ -16934,6 +17210,10 @@
   "É este passo que transforma quantidade em fórmula.": {
     "fr": "C’est cette étape qui transforme la quantité en formule.",
     "en": "It is this step that turns the amount into a formula."
+  },
+  "É isso que quer dizer \"ordem do método\": o expoente com que o erro responde ao passo.": {
+    "fr": "C’est ce que veut dire « ordre de la méthode » : l’exposant avec lequel l’erreur répond au pas.",
+    "en": "That is what “order of the method” means: the exponent with which the error responds to the step."
   },
   "É metade de um quadrado: a hipotenusa é a diagonal, lado vezes √#.": {
     "fr": "C’est la moitié d’un carré : l’hypoténuse est la diagonale, le côté fois √#.",
