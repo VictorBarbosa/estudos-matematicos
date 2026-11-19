@@ -207,6 +207,10 @@
     "fr": "#/# n’est pas zéro — c’est une forme indéterminée. Dérivez en haut et en bas avant de remplacer.",
     "en": "#/# is not zero — it is an indeterminate form. Differentiate top and bottom before substituting."
   },
+  "#/# não é zero: é uma indeterminação a desfazer.": {
+    "fr": "#/# n’est pas zéro : c’est une indétermination à lever.",
+    "en": "#/# is not zero: it is an indeterminate form to resolve."
+  },
   "#/# é a razão dos termos soltos, o valor perto de n = #. No infinito mandam os termos de maior grau.": {
     "fr": "#/# est le rapport des termes constants, la valeur près de n = #. À l’infini, ce sont les termes de plus haut degré qui commandent.",
     "en": "#/# is the ratio of the constant terms, the value near n = #. At infinity the highest-degree terms are what rule."
@@ -1183,6 +1187,10 @@
     "fr": "La fraction est inversée : le coefficient du haut va en haut.",
     "en": "The fraction came out upside down: the top coefficient goes on top."
   },
+  "A fração saiu invertida: o coeficiente do seno de cima vai em cima.": {
+    "fr": "La fraction est inversée : le coefficient du sinus du haut va en haut.",
+    "en": "The fraction came out upside down: the coefficient of the top sine goes on top."
+  },
   "A fração se simplifica num número.": {
     "fr": "La fraction se simplifie en un nombre.",
     "en": "The fraction simplifies to a number."
@@ -1346,6 +1354,14 @@
   "A inclinação: a derivada no mesmo arco.": {
     "fr": "La pente : la dérivée au même arc.",
     "en": "The slope: the derivative at the same arc."
+  },
+  "A indeterminação #/# não vale zero. Depois de racionalizar, o limite é perfeitamente finito e diferente de zero.": {
+    "fr": "L’indétermination #/# ne vaut pas zéro. Après rationalisation, la limite est parfaitement finie et non nulle.",
+    "en": "The indeterminate form #/# is not zero. After rationalising, the limit is perfectly finite and nonzero."
+  },
+  "A indeterminação #/# não é zero: é um aviso de que falta fatorar.": {
+    "fr": "L’indétermination #/# n’est pas zéro : c’est un avertissement qu’il reste à factoriser.",
+    "en": "The indeterminate form #/# is not zero: it is a warning that factoring is still needed."
   },
   "A integral de uma constante c de a até b é a área de um retângulo: c vezes (b − a).": {
     "fr": "L’intégrale d’une constante c de a à b est l’aire d’un rectangle : c fois (b − a).",
@@ -2214,6 +2230,10 @@
   "A razão está invertida: tg θ = y/x (oposto sobre adjacente).": {
     "fr": "Le rapport est inversé : tan θ = y/x (opposée sur adjacente).",
     "en": "The ratio is upside down: tan θ = y/x (opposite over adjacent)."
+  },
+  "A razão está invertida: é o coeficiente de cima sobre o de baixo.": {
+    "fr": "Le rapport est inversé : c’est le coefficient du haut sur celui du bas.",
+    "en": "The ratio is upside down: it is the top coefficient over the bottom one."
   },
   "A razão k multiplica COMPRIMENTOS. A área depende de # dimensões, então o fator é k².": {
     "fr": "Le rapport k multiplie des LONGUEURS. L’aire dépend de # dimensions, donc le facteur est k².",
@@ -3991,6 +4011,10 @@
     "fr": "Charge #− : le déséquilibre entre protons et électrons.",
     "en": "Charge #−: the imbalance between protons and electrons."
   },
+  "Carga negativa é elétron a MAIS: some # ao número de prótons.": {
+    "fr": "Une charge négative, c’est un électron en PLUS : ajoutez # au nombre de protons.",
+    "en": "A negative charge is an EXTRA electron: add # to the number of protons."
+  },
   "Carga negativa: força no sentido OPOSTO ao do campo.": {
     "fr": "Charge négative : force dans le sens OPPOSÉ au champ.",
     "en": "Negative charge: force in the OPPOSITE direction to the field."
@@ -3998,6 +4022,10 @@
   "Carga negativa: o campo aponta para DENTRO dela.": {
     "fr": "Charge négative : le champ pointe VERS elle.",
     "en": "Negative charge: the field points INTO it."
+  },
+  "Carga positiva é elétron que FALTA: tire # do número de prótons.": {
+    "fr": "Une charge positive, c’est un électron qui MANQUE : retirez # du nombre de protons.",
+    "en": "A positive charge is a MISSING electron: take # off the number of protons."
   },
   "Carga positiva: força no sentido do campo.": {
     "fr": "Charge positive : force dans le sens du champ.",
@@ -4871,6 +4899,10 @@
     "fr": "Dans # ans, CHACUNE aura # ans de plus.",
     "en": "In # years, EACH of them will be # years older."
   },
+  "Dar #/# na substituição não decide nada. Aqui, depois de fatorar, o fator que zera se cancela e o limite é um número.": {
+    "fr": "Obtenir #/# à la substitution ne décide de rien. Ici, après factorisation, le facteur qui s’annule se simplifie et la limite est un nombre.",
+    "en": "Getting #/# on substitution decides nothing. Here, after factoring, the vanishing factor cancels and the limit is a number."
+  },
   "Daí a variação de velocidade produzida.": {
     "fr": "D'où la variation de vitesse produite.",
     "en": "Hence the change in velocity produced."
@@ -4930,6 +4962,10 @@
   "Depois de # passos.": {
     "fr": "Après # pas.",
     "en": "After # steps."
+  },
+  "Depois de cancelar sobram TRÊS termos, todos iguais a a² no ponto — o resultado é #a², não a².": {
+    "fr": "Après simplification il reste TROIS termes, tous égaux à a² au point — le résultat vaut #a², et non a².",
+    "en": "After cancelling, THREE terms are left, all equal to a² at the point — the result is #a², not a²."
   },
   "Depois de trocar por u, não esqueça o fator que vem de dx = du/a.": {
     "fr": "Après le changement en u, n’oubliez pas le facteur qui vient de dx = du/a.",
@@ -7407,6 +7443,10 @@
     "fr": "C’est la masse d’UNE mole. L’énoncé demande la masse de #, il reste donc à multiplier.",
     "en": "That is the mass of ONE mole. The question asks for the mass of #, so a multiplication is still missing."
   },
+  "Essa é a massa do isótopo mais abundante. A média fica PERTO dela, mas não nela: o outro isótopo também pesa.": {
+    "fr": "C’est la masse de l’isotope le plus abondant. La moyenne en est PROCHE, sans s’y confondre : l’autre isotope pèse aussi.",
+    "en": "That is the mass of the most abundant isotope. The average is CLOSE to it, but not at it: the other isotope weighs too."
+  },
   "Essa é a medida que o enunciado já deu. O outro ângulo é a metade dela.": {
     "fr": "C’est la mesure que l’énoncé a déjà donnée. L’autre angle en est la moitié.",
     "en": "That is the measure the question already gave. The other angle is half of it."
@@ -7430,6 +7470,10 @@
   "Essa é a média SIMPLES das concentrações, e ela só acerta quando os dois volumes são iguais. Aqui um frasco traz mais solução que o outro, e por isso pesa mais no resultado.": {
     "fr": "C’est la moyenne SIMPLE des concentrations, et elle ne tombe juste que si les deux volumes sont égaux. Ici un flacon contient plus de solution que l’autre, et pèse donc davantage dans le résultat.",
     "en": "That is the PLAIN average of the concentrations, and it is only right when the two volumes are equal. Here one flask holds more solution than the other, so it weighs more in the result."
+  },
+  "Essa é a média SIMPLES, que trataria os dois isótopos como igualmente comuns. A abundância é peso: o isótopo mais frequente puxa o resultado para si.": {
+    "fr": "C’est la moyenne SIMPLE, qui traiterait les deux isotopes comme aussi fréquents l’un que l’autre. L’abondance est un poids : l’isotope le plus fréquent tire le résultat vers lui.",
+    "en": "That is the PLAIN average, which would treat both isotopes as equally common. Abundance is a weight: the more frequent isotope pulls the result towards itself."
   },
   "Essa é a média das duas alturas, não a área. Falta multiplicar pela largura do intervalo, que vale #.": {
     "fr": "C’est la moyenne des deux hauteurs, et non l’aire. Il reste à multiplier par la largeur de l’intervalle, qui vaut #.",
@@ -7743,9 +7787,21 @@
     "fr": "C’est le nombre d’Avogadro, qui vaut pour UNE mole. L’énoncé donne une autre quantité, et elle multiplie.",
     "en": "That is Avogadro’s number, which is for ONE mole. The question gives another amount, and it multiplies."
   },
+  "Esse é o número de MASSA, que conta prótons e nêutrons juntos. Os nêutrons são o que sobra quando se tiram os prótons.": {
+    "fr": "C’est le nombre de MASSE, qui compte protons et neutrons ensemble. Les neutrons sont ce qui reste quand on retire les protons.",
+    "en": "That is the MASS number, which counts protons and neutrons together. The neutrons are what is left once the protons are taken out."
+  },
   "Esse é o número de MOLS do reagente — o primeiro trecho do trajeto. Ainda faltam a proporção e a volta para gramas.": {
     "fr": "C’est le nombre de MOLES du réactif — le premier segment du trajet. Il reste la proportion et le retour aux grammes.",
     "en": "That is the number of MOLES of the reactant — the first leg of the route. The proportion and the way back to grams are still missing."
+  },
+  "Esse é o número de prótons, que é o de elétrons apenas no átomo NEUTRO. Aqui há carga, e é justamente o desequilíbrio entre os dois que a produz.": {
+    "fr": "C’est le nombre de protons, qui n’égale celui des électrons que dans l’atome NEUTRE. Ici il y a une charge, et c’est justement le déséquilibre entre les deux qui la produit.",
+    "en": "That is the number of protons, which equals the number of electrons only in a NEUTRAL atom. Here there is a charge, and it is precisely the imbalance between the two that produces it."
+  },
+  "Esse é o número de prótons. Num átomo neutro ele é igual ao de elétrons — mas não ao de nêutrons, que só coincide em alguns elementos leves.": {
+    "fr": "C’est le nombre de protons. Dans un atome neutre il est égal à celui des électrons — mais pas à celui des neutrons, qui ne coïncide que pour quelques éléments légers.",
+    "en": "That is the number of protons. In a neutral atom it equals the number of electrons — but not the number of neutrons, which only matches for a few light elements."
   },
   "Esse é o outro extremo do intervalo. O pedido é o da direita (o maior).": {
     "fr": "C’est l’autre borne de l’intervalle. Celle qui est demandée est celle de droite (la plus grande).",
@@ -8007,6 +8063,10 @@
     "fr": "Ce n’est que la divergence ; il reste à multiplier par le volume.",
     "en": "That is only the divergence; it still has to be multiplied by the volume."
   },
+  "Esse é só o número de nêutrons. Falta somar os prótons.": {
+    "fr": "Ce n’est que le nombre de neutrons. Il reste à ajouter les protons.",
+    "en": "That is only the number of neutrons. Adding the protons is still missing."
+  },
   "Esse é só o primeiro termo desprezado. Ele costuma dominar o erro, mas não é o erro: depois dele ainda vem toda a cauda da série.": {
     "fr": "Ce n’est que le premier terme négligé. Il domine souvent l’erreur, mais il n’est pas l’erreur : après lui vient encore toute la queue de la série.",
     "en": "That is only the first dropped term. It usually dominates the error, but it is not the error: after it comes the whole tail of the series."
@@ -8255,6 +8315,10 @@
     "fr": "Il manque la division de la somme des côtés par # : chaque arête est la frontière de deux faces.",
     "en": "The division of the sum of sides by # is missing: each edge is the border of two faces."
   },
+  "Faltou dividir as porcentagens por #. Abundância de #% entra como #, e não como # — senão o resultado fica cem vezes maior.": {
+    "fr": "Il manque la division des pourcentages par #. Une abondance de #% entre comme #, et non comme # — sinon le résultat est cent fois trop grand.",
+    "en": "Dividing the percentages by # is missing. An abundance of #% goes in as #, not as # — otherwise the result comes out a hundred times too large."
+  },
   "Faltou dividir pela sombra da vara: a razão é altura/sombra.": {
     "fr": "Il manque la division par l’ombre de la perche : le rapport est hauteur/ombre.",
     "en": "The division by the pole’s shadow is missing: the ratio is height/shadow."
@@ -8351,6 +8415,10 @@
     "fr": "Il manque le # de #mk au moment d’isoler k.",
     "en": "The # of #mk was dropped when isolating k."
   },
+  "Faltou o #/# que vem de #·(#/#): # − cos θ = #·sen²(θ/#).": {
+    "fr": "Il manque le #/# qui vient de #·(#/#) : # − cos θ = #·sin²(θ/#).",
+    "en": "The #/# coming from #·(#/#) is missing: # − cos θ = #·sin²(θ/#)."
+  },
   "Faltou o #/#: com F = (−y/#, x/#) a circulação já é a área; ∮(x dy − y dx) é o DOBRO dela.": {
     "fr": "Il manque le #/# : avec F = (−y/#, x/#) la circulation est déjà l’aire ; ∮(x dy − y dx) en vaut le DOUBLE.",
     "en": "The #/# is missing: with F = (−y/#, x/#) the circulation is already the area; ∮(x dy − y dx) is TWICE it."
@@ -8370,6 +8438,10 @@
   "Faltou o fator # multiplicando a integral de g.": {
     "fr": "Il manque le facteur # multipliant l’intégrale de g.",
     "en": "The factor # multiplying the integral of g is missing."
+  },
+  "Faltou o fator # no denominador: ao substituir x = #, as duas raízes do conjugado ficam iguais e se somam.": {
+    "fr": "Il manque le facteur # au dénominateur : en remplaçant x = #, les deux racines du conjugué deviennent égales et s’additionnent.",
+    "en": "The factor # in the denominator is missing: substituting x = #, the two roots of the conjugate become equal and add up."
   },
   "Faltou o fator # pi: uma volta completa não é # radiano.": {
     "fr": "Il manque le facteur # pi : un tour complet ne fait pas # radian.",
@@ -10635,6 +10707,10 @@
     "fr": "Le # à l’intérieur du logarithme ne survit pas à la dérivée : par la propriété du produit, il devient un terme constant, et une constante dérivée donne zéro.",
     "en": "The # inside the logarithm does not survive differentiation: by the product property it becomes a constant term, and a differentiated constant is zero."
   },
+  "O # entra ao QUADRADO: ele aparece dentro do seno, e o seno está ao quadrado.": {
+    "fr": "Le # entre au CARRÉ : il apparaît dans le sinus, et le sinus est au carré.",
+    "en": "The # enters SQUARED: it appears inside the sine, and the sine is squared."
+  },
   "O # entrou com o sinal trocado. Confira: V − A + F = #, então A = V + F − #.": {
     "fr": "Le # est entré avec le signe inversé. Vérifiez : V − A + F = #, donc A = V + F − #.",
     "en": "The # went in with the wrong sign. Check: V − E + F = #, so E = V + F − #."
@@ -11275,6 +11351,10 @@
     "fr": "L’électron reste dehors : sa masse est trop petite pour compter ici.",
     "en": "The electron stays out: its mass is too small to count here."
   },
+  "O elétron não entra: ele tem massa pequena demais para contar aqui.": {
+    "fr": "L’électron n’entre pas : sa masse est trop petite pour compter ici.",
+    "en": "The electron does not count: its mass is far too small to matter here."
+  },
   "O empuxo é a taxa com que o motor entrega momento ao gás.": {
     "fr": "La poussée est le taux avec lequel le moteur délivre du moment au gaz.",
     "en": "The thrust is the rate at which the engine delivers momentum to the gas."
@@ -11531,6 +11611,10 @@
     "fr": "La limite existe (elle vaut #), mais f(#) non : c’est un trou, que l’on bouche en définissant f(#) = #.",
     "en": "The limit exists (it is #), but f(#) does not: it is a hole, filled by defining f(#) = #."
   },
+  "O limite existe e vale #.": {
+    "fr": "La limite existe et vaut #.",
+    "en": "The limit exists and is #."
+  },
   "O limite não é #: somar infinitas parcelas perto desse valor explode. A série diverge.": {
     "fr": "La limite n’est pas # : additionner une infinité de termes proches de cette valeur explose. La série diverge.",
     "en": "The limit is not #: adding infinitely many terms near that value blows up. The series diverges."
@@ -11723,6 +11807,10 @@
     "fr": "La valeur absolue a été ignorée : les barres enlèvent le signe. |−#| vaut #, et non −# — c’est la distance à zéro, qui ne peut pas être négative.",
     "en": "The absolute value was ignored: the bars remove the sign. |−#| is #, not −# — it is the distance to zero, which cannot be negative."
   },
+  "O módulo muda de sinal no ponto: os laterais são opostos. Laterais diferentes = limite inexistente, mesmo sem nada ir ao infinito.": {
+    "fr": "La valeur absolue change de signe au point : les limites latérales sont opposées. Latérales différentes = limite inexistante, même si rien ne part à l’infini.",
+    "en": "The absolute value flips sign at the point: the one-sided limits are opposite. Different one-sided limits = no limit, even with nothing going to infinity."
+  },
   "O módulo nunca devolve um número negativo — ele é uma DISTÂNCIA até zero. Aqui o valor interno é #, cuja distância até a origem é #.": {
     "fr": "La valeur absolue ne rend jamais un nombre négatif — c’est une DISTANCE à zéro. Ici la valeur intérieure vaut #, dont la distance à l’origine est #.",
     "en": "The absolute value never returns a negative number — it is a DISTANCE to zero. Here the inner value is #, whose distance to the origin is #."
@@ -11786,6 +11874,10 @@
   "O número de dentes vezes as voltas é o mesmo nas duas: é o que a corrente impõe.": {
     "fr": "Le nombre de dents fois les tours est le même pour les deux : c’est ce que la chaîne impose.",
     "en": "Teeth times turns is the same for both: that is what the chain imposes."
+  },
+  "O número de massa conta prótons e nêutrons juntos: tire os # prótons dos #.": {
+    "fr": "Le nombre de masse compte protons et neutrons ensemble : retirez les # protons des #.",
+    "en": "The mass number counts protons and neutrons together: take the # protons out of the #."
   },
   "O número de massa conta prótons e nêutrons; os nêutrons são a diferença.": {
     "fr": "Le nombre de masse compte protons et neutrons ; les neutrons sont la différence.",
@@ -15063,6 +15155,10 @@
     "fr": "En substituant directement, nous arrivons à une indétermination.",
     "en": "Substituting directly gives an indeterminate form."
   },
+  "Substituindo dá #/#: fatoramos.": {
+    "fr": "La substitution donne #/# : nous factorisons.",
+    "en": "Substituting gives #/#: we factor."
+  },
   "Substituindo e calculando.": {
     "fr": "En substituant et en calculant.",
     "en": "Substituting and calculating."
@@ -15210,6 +15306,10 @@
   "Substituir dá #/#. Multiplique em cima e embaixo pelo conjugado, √(x + #) + #, e simplifique o x.": {
     "fr": "La substitution donne #/#. Multipliez en haut et en bas par le conjugué, √(x + #) + #, et simplifiez le x.",
     "en": "Substituting gives #/#. Multiply top and bottom by the conjugate, √(x + #) + #, and cancel the x."
+  },
+  "Substituir x = # dá #/#, que não é zero: é preciso o limite fundamental.": {
+    "fr": "Remplacer x = # donne #/#, ce qui n’est pas zéro : il faut la limite fondamentale.",
+    "en": "Substituting x = # gives #/#, which is not zero: the fundamental limit is needed."
   },
   "Substituir y igual a e elevado a rt transforma a EDO numa equação do segundo grau.": {
     "fr": "Remplacer y par e élevé à rt transforme l’EDO en une équation du second degré.",
@@ -16027,6 +16127,10 @@
     "fr": "Un nombre différent de zéro divisé par quelque chose qui tend vers zéro explose : asymptote verticale.",
     "en": "A nonzero number divided by something tending to zero blows up: a vertical asymptote."
   },
+  "Um número diferente de zero sobre algo que tende a zero não tem limite finito. Como o denominador é um quadrado, ele é positivo dos dois lados: o limite é +∞.": {
+    "fr": "Un nombre non nul sur quelque chose qui tend vers zéro n’a pas de limite finie. Comme le dénominateur est un carré, il est positif des deux côtés : la limite vaut +∞.",
+    "en": "A nonzero number over something tending to zero has no finite limit. Since the denominator is a square, it is positive on both sides: the limit is +∞."
+  },
   "Um número misto vira fração: # #/# é (#·# + #)/#. Converta os dois antes de operar.": {
     "fr": "Un nombre fractionnaire devient une fraction : # #/# vaut (#·# + #)/#. Convertissez les deux avant de calculer.",
     "en": "A mixed number becomes a fraction: # #/# is (#·# + #)/#. Convert both before operating."
@@ -16343,17 +16447,33 @@
     "fr": "Vous vous êtes arrêté à la valeur de #x². Il reste à diviser par # et à extraire la racine pour arriver à x.",
     "en": "You stopped at the value of #x². Dividing by # and taking the root to reach x is still missing."
   },
+  "Você somou a carga. Carga positiva é elétron que FALTA: ela entra subtraindo.": {
+    "fr": "Vous avez additionné la charge. Une charge positive, c’est un électron qui MANQUE : elle entre en soustraction.",
+    "en": "You added the charge. A positive charge is a MISSING electron: it enters by subtraction."
+  },
   "Você somou as massas atômicas sem multiplicar pelos índices. O número pequeno da fórmula conta ÁTOMOS, e cada um deles pesa.": {
     "fr": "Vous avez additionné les masses atomiques sans multiplier par les indices. Le petit nombre de la formule compte des ATOMES, et chacun pèse.",
     "en": "You added the atomic masses without multiplying by the subscripts. The small number in the formula counts ATOMS, and each one weighs."
+  },
+  "Você somou em vez de subtrair. A = Z + n, então n = A − Z.": {
+    "fr": "Vous avez additionné au lieu de soustraire. A = Z + n, donc n = A − Z.",
+    "en": "You added instead of subtracting. A = Z + n, so n = A − Z."
   },
   "Você somou. O pi maiúsculo manda MULTIPLICAR — é o sigma que soma. Os dois têm o mesmo arranjo de índices, e é só a operação que muda.": {
     "fr": "Vous avez additionné. Le pi majuscule demande de MULTIPLIER — c’est le sigma qui additionne. Les deux ont la même disposition d’indices, et seule l’opération change.",
     "en": "You added. The capital pi tells you to MULTIPLY — it is the sigma that adds. Both have the same index layout, and only the operation changes."
   },
+  "Você subtraiu a carga. Carga negativa é elétron a MAIS: ela entra somando.": {
+    "fr": "Vous avez soustrait la charge. Une charge négative, c’est un électron en PLUS : elle entre en addition.",
+    "en": "You subtracted the charge. A negative charge is an EXTRA electron: it enters by addition."
+  },
   "Você subtraiu os quadrados. Isso serve para achar um CATETO quando a hipotenusa é conhecida — aqui os quadrados somam.": {
     "fr": "Vous avez soustrait les carrés. Cela sert à trouver une CATHÈTE quand l’hypoténuse est connue — ici les carrés s’additionnent.",
     "en": "You subtracted the squares. That is for finding a LEG when the hypotenuse is known — here the squares add."
+  },
+  "Você supôs que há tantos nêutrons quanto prótons. Isso vale em alguns elementos leves e falha no resto — o enunciado dá o número de nêutrons.": {
+    "fr": "Vous avez supposé qu’il y a autant de neutrons que de protons. Cela vaut pour quelques éléments légers et échoue pour les autres — l’énoncé donne le nombre de neutrons.",
+    "en": "You assumed there are as many neutrons as protons. That holds for a few light elements and fails for the rest — the question gives the number of neutrons."
   },
   "Você tratou √(a² − x²) como (a − x). A raiz de uma diferença não é a diferença das raízes — é justamente por isso que a troca trigonométrica existe.": {
     "fr": "Vous avez traité √(a² − x²) comme (a − x). La racine d’une différence n’est pas la différence des racines — c’est précisément pour cela que le changement trigonométrique existe.",
@@ -17007,6 +17127,10 @@
     "fr": "r est l’hypoténuse du triangle de cathètes |x| et |y|.",
     "en": "r is the hypotenuse of the triangle with legs |x| and |y|."
   },
+  "sen(u)/u → # só quando o ângulo e o denominador são iguais. Aqui o ângulo é #x: falta o fator #.": {
+    "fr": "sin(u)/u → # seulement si l’angle et le dénominateur sont identiques. Ici l’angle vaut #x : il manque le facteur #.",
+    "en": "sin(u)/u → # only when the angle and the denominator are the same. Here the angle is #x: the factor # is missing."
+  },
   "x = # é o CENTRO da série, não o raio. O raio sai da desigualdade |x − a| < R.": {
     "fr": "x = # est le CENTRE de la série, et non le rayon. Le rayon sort de l’inégalité |x − a| < R.",
     "en": "x = # is the CENTRE of the series, not the radius. The radius comes from the inequality |x − a| < R."
@@ -17026,6 +17150,10 @@
   "x² + # não é diferença de quadrados: com +, ele não se anula para nenhum x real.": {
     "fr": "x² + # n’est pas une différence de carrés : avec +, il ne s’annule pour aucun x réel.",
     "en": "x² + # is not a difference of squares: with +, it vanishes for no real x."
+  },
+  "x² foi tratado como #x na substituição.": {
+    "fr": "x² a été traité comme #x lors de la substitution.",
+    "en": "x² was treated as #x in the substitution."
   },
   "x₁ = x₀ − f(x₀)/f′(x₀). Calcule f e f′ no ponto de partida e substitua.": {
     "fr": "x₁ = x₀ − f(x₀)/f′(x₀). Calculez f et f′ au point de départ et remplacez.",
@@ -17226,6 +17354,10 @@
   "É média ponderada pelos volumes: a média simples só acerta se eles forem iguais.": {
     "fr": "C’est une moyenne pondérée par les volumes : la moyenne simple ne tombe juste que s’ils sont égaux.",
     "en": "It is a volume-weighted average: the plain average is only right if they are equal."
+  },
+  "É média ponderada, não média simples: cada massa entra vezes a sua fração — # × #, e o mesmo para a outra.": {
+    "fr": "C’est une moyenne pondérée, et non simple : chaque masse entre multipliée par sa fraction — # × #, et de même pour l’autre.",
+    "en": "It is a weighted average, not a plain one: each mass enters times its fraction — # × #, and likewise for the other."
   },
   "É média ponderada: o isótopo mais abundante puxa o resultado para si.": {
     "fr": "C’est une moyenne pondérée : l’isotope le plus abondant tire le résultat vers lui.",
@@ -17438,6 +17570,10 @@
   "∈ liga um ELEMENTO a um conjunto; ⊂ liga um conjunto a outro. A é um conjunto, então o símbolo é ⊂.": {
     "fr": "∈ relie un ÉLÉMENT à un ensemble ; ⊂ relie un ensemble à un autre. A est un ensemble, donc le symbole est ⊂.",
     "en": "∈ links an ELEMENT to a set; ⊂ links a set to another set. A is a set, so the symbol is ⊂."
+  },
+  "∞/∞ não vale #. O resultado depende dos coeficientes dos termos dominantes.": {
+    "fr": "∞/∞ ne vaut pas #. Le résultat dépend des coefficients des termes dominants.",
+    "en": "∞/∞ is not #. The result depends on the coefficients of the dominant terms."
   },
   "⊂ liga um conjunto a outro; # é um elemento, não um conjunto. Para elemento o símbolo é ∈.": {
     "fr": "⊂ relie un ensemble à un autre ; # est un élément, pas un ensemble. Pour un élément, le symbole est ∈.",
